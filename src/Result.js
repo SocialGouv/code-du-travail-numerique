@@ -73,27 +73,33 @@ const SectionSeparator = styled.div`
 `;
 
 const Result = ({ onResetClick, theme }) => {
+  const hasFaqEntry = hasFaq(theme);
+  const hasFicheEntry = hasFiche(theme);
   return (
     <div style={{ marginTop: 20 }}>
-      <SectionSeparator>F.A.Q. et fiches</SectionSeparator>
+      {(hasFaqEntry || hasFicheEntry) && (
+          <div>
+            <SectionSeparator>F.A.Q. et fiches</SectionSeparator>
 
-      {hasFaq(theme) && (
-        <Block>
-          <BlockTitle>
-            <Feather.HelpCircle size="20" /> F.A.Q. Code du travail
-          </BlockTitle>
-          <FAQ theme={theme} />
-        </Block>
-      )}
+            {hasFaqEntry && (
+              <Block>
+                <BlockTitle>
+                  <Feather.HelpCircle size="20" /> F.A.Q. Code du travail
+                </BlockTitle>
+                <FAQ theme={theme} />
+              </Block>
+            )}
 
-      {hasFiche(theme) && (
-        <Block>
-          <BlockTitle>
-            <Feather.FileText size="20" /> Fiches pratiques
-          </BlockTitle>
-          <Fiches theme={theme} />
-        </Block>
-      )}
+            {hasFicheEntry && (
+              <Block>
+                <BlockTitle>
+                  <Feather.FileText size="20" /> Fiches pratiques
+                </BlockTitle>
+                <Fiches theme={theme} />
+              </Block>
+            )}
+          </div>
+        )}
 
       <SectionSeparator>Textes officiels</SectionSeparator>
 

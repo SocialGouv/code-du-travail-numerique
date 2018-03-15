@@ -52,11 +52,10 @@ const parseThemesStr = str =>
     .map(trimmed)
     .filter(isSomething);
 
-// build the basic tree
-const parseThemes = textContent => {
+export const parseRows = textContent => {
   const rows = textContent.split("\n").filter(isSomething);
 
-  const parsedRows = rows
+  return rows
     .map(row => {
       //console.log(row.match(ROW_PARSE));
 
@@ -74,6 +73,11 @@ const parseThemes = textContent => {
       }
     })
     .filter(Boolean);
+};
+
+// build the basic tree
+const parseThemes = textContent => {
+  const parsedRows = parseRows(textContent);
 
   // 10897 articles !
   // const allArticles = parsedRows.reduce((articles, row) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 
@@ -45,27 +46,42 @@ const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
   return (
-    <ThemeProvider theme={themeBlue}>
-      <div>
-        <GitHubForkRibbon
-          href="//github.com/SocialGouv/code-du-travail-explorer"
-          target="_blank"
-          position="right"
-          color="green"
-        >
-          version bêta
-        </GitHubForkRibbon>
-        <AppContainer>
-          <Title onClick={() => explorer.reset()}>
-            Code du travail numérique
-          </Title>
-          <Baseline>
-            Trouvez les réponses à vos questions sur le droit du travail
-          </Baseline>
-          <Explorer ref={node => (explorer = node)} />
-        </AppContainer>
-      </div>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={themeBlue}>
+        <div>
+          <GitHubForkRibbon
+            href="//github.com/SocialGouv/code-du-travail-explorer"
+            target="_blank"
+            position="right"
+            color="green"
+          >
+            version bêta
+          </GitHubForkRibbon>
+          <AppContainer>
+            <Title onClick={() => explorer.reset()}>
+              Code du travail numérique
+            </Title>
+            <Baseline>
+              Trouvez les réponses à vos questions sur le droit du travail
+            </Baseline>
+            <Route
+              exact={true}
+              path={`/`}
+              render={props => <Explorer ref={node => (explorer = node)} />}
+            />
+            <Route
+              path={`/themes/:themeId`}
+              render={props => (
+                <Explorer
+                  ref={node => (explorer = node)}
+                  themeId={props.match.params.themeId}
+                />
+              )}
+            />
+          </AppContainer>
+        </div>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 };
 render(<App />, document.getElementById("root"));

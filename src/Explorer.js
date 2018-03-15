@@ -5,7 +5,7 @@ import BreadCrumbs from "./BreadCrumbs";
 import ThemeSelector from "./ThemeSelector";
 import Result from "./Result";
 
-import parseThemes from "./parse-themes";
+import parseThemes, { parseRows } from "./parse-themes";
 import rawThemes from "./data/themes.js";
 
 import "./theme.css";
@@ -13,11 +13,16 @@ import "./theme.css";
 // convert themes.js at runtime for easy editing
 const themes = parseThemes(rawThemes);
 
-//
-// Fil d'ariane (BreadCrumbs)
-// + Choix du thème (ThemeSelector)
-// + résultats (Result)
-//
+const getPathFromThemeId = id => {
+  const theme = parseRows(rawThemes).find(t => t.id === id);
+  return (
+    (theme &&
+      theme.themes.map(title => ({
+        title
+      }))) ||
+    []
+  );
+};
 
 const ExplorerContainer = styled.div`padding: 20px;`;
 
@@ -46,15 +51,19 @@ const Teaser = () => (
 );
 
 class Explorer extends React.Component {
-  state = {
-    selection: [
-      /*
-      { title: "Contrat de travail" },
-      { title: "Congés autres" },
-      { title: "Champ d'application" }
-      */
-    ]
-  };
+  constructor(props, ...args) {
+    super(props, ...args);
+    if (props.themeId) {
+      // initalize with the given theme
+      this.state = {
+        selection: getPathFromThemeId(parseInt(props.themeId))
+      };
+    } else {
+      this.state = {
+        selection: []
+      };
+    }
+  }
   reset = () => {
     this.setState({ selection: [] });
   };
