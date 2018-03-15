@@ -2,23 +2,60 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/dialogue-social/representants-du-personnel/",
+      "http://travail-emploi.gouv.fr/dialogue-social/representants-du-personnel/article/les-delegues-syndicaux",
     title: "Les délégués syndicaux",
-    themes: [41, 42, 43]
+    themes: [
+      94800,
+      94900,
+      95000,
+      95100,
+      95200,
+      95300,
+      95400,
+      95500,
+      95600,
+      95700,
+      95800,
+      95900,
+      96000,
+      96100,
+      96200,
+      96300,
+      96400,
+      96500,
+      96600,
+      96700,
+      96800,
+      96900,
+      97000,
+      97100,
+      97200,
+      97300,
+      97400,
+      97500,
+      97600,
+      97700,
+      97800,
+      97900,
+      98000,
+      98100,
+      98200,
+      99500
+    ]
   },
   {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/",
     title: "Le suivi de l’état de santé des salariés",
-    themes: [41, 42, 43]
+    themes: [147200]
   },
   {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/emploi/accompagnement-des-mutations-economiques/appui-aux-mutations-economiques/",
     title: "Gestion prévisionnelle de l’emploi et des compétences (GPEC)",
-    themes: [41, 42, 43, 45, 46]
+    themes: []
   },
   {
     source: "Ministère du travail",
@@ -42,15 +79,25 @@ export default [
   },
   {
     source: "Ministère du travail",
-    href: "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/",
+    href:
+      "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/article/la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee",
     title:
-      "La rupture conventionnelle du contrat de travail à durée indéterminée"
+      "La rupture conventionnelle du contrat de travail à durée indéterminée",
+    themes: [17000]
+  },
+  {
+    source: "Ministère du travail",
+    href:
+      "http://travail-emploi.gouv.fr/demarches-et-fiches-pratiques/formulaires-et-teledeclarations/salaries/article/rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee",
+    title:
+      "Formulaire de rupture conventionnelle du contrat de travail à durée indéterminée",
+    themes: [17000]
   },
   {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/licenciement/",
-    title: "L’allocation  temporaire dégressive"
+    title: "L’allocation temporaire dégressive"
   },
   {
     source: "Ministère du travail",
@@ -82,25 +129,29 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/",
     title:
-      "La reconnaissance de l’inaptitude médicale au travail et ses conséquences"
+      "La reconnaissance de l’inaptitude médicale au travail et ses conséquences",
+    themes: [34200]
   },
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/conges-et-absences/",
-    title: "Le compte épargne-temps (CET)"
+      "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/conges-et-absences/article/le-compte-epargne-temps-cet",
+    title: "Le compte épargne-temps (CET)",
+    themes: [5700]
   },
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/contrats-de-travail/",
-    title: "Le contrat à durée indéterminée de chantier ou d’opération"
+      "http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/contrats-de-travail/article/le-contrat-a-duree-indeterminee-de-chantier-ou-d-operation/",
+    title: "Le contrat à durée indéterminée de chantier ou d’opération",
+    themes: [12800]
   },
   {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/formation-professionnelle/se-former-en-alternance/l-apprentissage-160/",
-    title: "Le contrat d’apprentissage"
+    title: "Le contrat d’apprentissage",
+    themes: [57100]
   },
   {
     source: "Ministère du travail",
@@ -153,9 +204,35 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/licenciement/",
+      "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/licenciement/article/les-documents-remis-aux-salaries-lors-de-la-rupture-du-contrat-de-travail",
     title:
-      "Les documents remis aux salariés lors de la rupture du contrat de travail"
+      "Les documents remis aux salariés lors de la rupture du contrat de travail",
+    themes: [
+      100,
+      110,
+      120,
+      130,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1100,
+      1200,
+      1300,
+      1400,
+      1500,
+      1600,
+      1700,
+      1800,
+      1900,
+      2000,
+      2100
+    ]
   },
   {
     source: "Ministère du travail",
@@ -166,8 +243,9 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/dialogue-social/representants-du-personnel/",
-    title: "Les règles de décompte des effectifs"
+      "http://travail-emploi.gouv.fr/dialogue-social/representants-du-personnel/article/les-regles-de-decompte-des-effectifs",
+    title: "Les règles de décompte des effectifs",
+    themes: [114400, 114500, 114600]
   },
   {
     source: "Ministère du travail",
@@ -233,7 +311,8 @@ export default [
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/conges-et-absences/",
-    title: "Les congés payés"
+    title: "Les congés payés",
+    themes: [6510, 6520, 6530]
   },
   {
     source: "Ministère du travail",
@@ -878,8 +957,9 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/temps-de-travail/",
-    title: "Le travail de nuit"
+      "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/temps-de-travail/article/le-travail-de-nuit",
+    title: "Le travail de nuit",
+    themes: [216]
   },
   {
     source: "Ministère du travail",
@@ -1134,13 +1214,15 @@ export default [
   {
     source: "Ministère du travail",
     href: "http://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/",
-    title: "5 questions/réponses sur la santé au travail"
+    title: "5 questions/réponses sur la santé au travail",
+    themes: [155400, 155500, 155600, 155700, 155800, 155900, 156000, 156100]
   },
   {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/relations-au-travail/pouvoir-de-direction/",
-    title: "La sanction disciplinaire"
+    title: "La sanction disciplinaire",
+    themes: [101800]
   },
   {
     source: "Ministère du travail",
@@ -1160,7 +1242,8 @@ export default [
   {
     source: "Ministère du travail",
     href: "http://travail-emploi.gouv.fr/archives/archives-courantes/",
-    title: "5 questions sur le congé de proche aidant"
+    title: "5 questions sur le congé de proche aidant",
+    themes: [4600]
   },
   {
     source: "Ministère du travail",
@@ -1189,8 +1272,25 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/litiges-individuels-et-conflits-collectifs/",
-    title: "L’inspection du travail"
+      "http://travail-emploi.gouv.fr/droit-du-travail/litiges-individuels-et-conflits-collectifs/article/l-inspection-du-travail",
+    title: "L’inspection du travail",
+    themes: [
+      114700,
+      114800,
+      115000,
+      115100,
+      115200,
+      115300,
+      115400,
+      115500,
+      115600,
+      115700,
+      115800,
+      115900,
+      116000,
+      116100,
+      116200
+    ]
   },
   {
     source: "Ministère du travail",

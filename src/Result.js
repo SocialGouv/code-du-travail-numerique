@@ -135,10 +135,17 @@ const Result = ({ onResetClick, theme }) => {
             <Feather.Phone size="20" /> Vos interlocuteurs
           </BlockTitle>
           <li>
-            <a href="#">Services de renseignement</a>
+            <a href="http://grand-est.direccte.gouv.fr/Presentation-de-l-unite-departementale-Nous-contacter-17713">
+              Services de renseignement
+            </a>
           </li>
           <li>
-            <a href="#">Médecine du travail</a>
+            <a href="https://www.ast67.org/">Médecine du travail</a>
+          </li>
+          <li>
+            <a href="https://www.defenseurdesdroits.fr/office">
+              Défenseur des droits
+            </a>
           </li>
         </Block>
 
