@@ -1,6 +1,9 @@
 import React from "react";
 
 import { THEMES_L22531, THEMES_L22532 } from "./data/L2253";
+import suppletives from "./data/suppletives";
+
+import Article from "./Article";
 
 const getAllThemes = themes =>
   Array.from(
@@ -12,6 +15,21 @@ const getAllThemes = themes =>
 const isInL22531 = id => getAllThemes(THEMES_L22531).indexOf(id) > -1;
 
 const isInL22532 = id => getAllThemes(THEMES_L22532).indexOf(id) > -1;
+
+const DispositionsSuppletives = ({ theme }) => {
+  const dispos = suppletives[theme.id];
+  if (dispos) {
+    return (
+      <div>
+        <br />
+        <b>Dispositions supplétives associées</b>
+        <br />
+        {dispos.map(article => <Article key={article} id={article} />)}
+      </div>
+    );
+  }
+  return <div />;
+};
 
 // retourne un texte pour un thème donné
 const getArticulation = ({ theme }) => {
@@ -47,7 +65,10 @@ const getArticulation = ({ theme }) => {
 };
 
 const Articulation = ({ theme }) => (
-  <div dangerouslySetInnerHTML={{ __html: getArticulation({ theme }) }} />
+  <div>
+    <div dangerouslySetInnerHTML={{ __html: getArticulation({ theme }) }} />
+    <DispositionsSuppletives theme={theme} />
+  </div>
 );
 
 export default Articulation;

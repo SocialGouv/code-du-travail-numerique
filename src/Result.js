@@ -22,6 +22,7 @@ const Block = styled.div`
   padding: 10px;
   background: ${props => props.theme.light3};
   border-radius: 2px;
+  vertical-align: top;
   margin: 1em 10px;
   font-size: 0.9em;
   li {
