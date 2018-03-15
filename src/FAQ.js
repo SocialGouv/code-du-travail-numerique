@@ -13,10 +13,15 @@ import "react-accessible-accordion/dist/minimal-example.css";
 
 const faq = require("./data/faq.json");
 
-const isTheme = themeId => entry =>
-  entry.themes && entry.themes.indexOf(themeId) > -1;
+const hasCommonItem = (arr1, arr2) => arr1.some(r => arr2.includes(r));
 
-export const hasFaq = theme => faq.find(isTheme(theme.id));
+const isTheme = theme => entry =>
+  (entry.themes && entry.themes.indexOf(theme.id) > -1) ||
+  (entry.articles &&
+    theme.articles &&
+    hasCommonItem(entry.articles, theme.articles));
+
+export const hasFaq = theme => faq.find(isTheme(theme));
 
 const LinkText = styled.div`
   display: inline-block;
@@ -74,6 +79,6 @@ class Entry extends React.Component {
 }
 
 const FAQ = ({ theme }) =>
-  faq.filter(isTheme(theme.id)).map(e => <Entry key={e.question} {...e} />);
+  faq.filter(isTheme(theme)).map(e => <Entry key={e.question} {...e} />);
 
 export default FAQ;

@@ -5,6 +5,7 @@
     "theme": "CONTRAT DE TRAVAIL ET EMBAUCHE",
     "branche": "BOULANGERIES-PÂTISSERIES ARTISANALES",
     "themes": [3700],
+    "articles": ["L1411-1", "R1412-1"],
     "question":
       "Je viens d’être embauché comme pâtissier chez un boulanger-pâtissier. Je suis mis à l’essai pendant deux mois. On me dit que la convention collective de la boulangerie prévoit un maximum de 30 jours. Est-ce vrai ?"
   },
@@ -14,6 +15,7 @@
     "theme": "CONTRAT DE TRAVAIL ET EMBAUCHE",
     "branche": "ASSISTANT.E.S MATERNEL.LE.S",
     "themes": [3700],
+    "articles": ["R1431-6", "R1412-1"],
     "question":
       "Je fais garder mes deux enfants par le même assistant maternel, puis-je établir un seul contrat ?"
   },
