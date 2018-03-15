@@ -30,7 +30,7 @@ const BreadCrumbs = ({ entries, onClick, style }) => {
     <div style={style}>
       {allEntries.map((entry, i) => (
         <BreadCrumbEntry
-          key={entry.title}
+          key={entry.title + i}
           onClick={() => onClick(entry, i)}
           isLast={i === allEntries.length - 1}
           {...entry}
