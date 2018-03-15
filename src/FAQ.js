@@ -8,8 +8,8 @@ import {
   AccordionItemBody
 } from "react-accessible-accordion";
 
-//import "react-accessible-accordion/dist/minimal-example.css";
-import "react-accessible-accordion/dist/fancy-example.css";
+import "react-accessible-accordion/dist/minimal-example.css";
+//import "react-accessible-accordion/dist/fancy-example.css";
 
 const faq = require("./data/faq.json");
 
@@ -27,6 +27,28 @@ const LinkText = styled.div`
   xtext-overflow: ellipsis;
 `;
 
+const StyledAccordion = styled(Accordion)`
+  background-color: white;
+  border: 1px solid ${props => props.theme.light2};
+  margin: 5px;
+  line-height: 1.8em;
+  .accordion__title {
+    color: #444;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
+  .accordion__body {
+    padding: 0 30px;
+    font-size: 1.2em;
+    text-align: justify;
+  }
+`;
+
 class Entry extends React.Component {
   state = {
     toggled: false
@@ -38,16 +60,14 @@ class Entry extends React.Component {
     const { question, reponse } = this.props;
     return (
       <div>
-        <Accordion>
+        <StyledAccordion>
           <AccordionItem>
             <AccordionItemTitle>
               <LinkText>«&nbsp;{question}&nbsp;»</LinkText>
             </AccordionItemTitle>
-            <AccordionItemBody>
-              <div dangerouslySetInnerHTML={{ __html: reponse }} />
-            </AccordionItemBody>
+            <AccordionItemBody dangerouslySetInnerHTML={{ __html: reponse }} />
           </AccordionItem>
-        </Accordion>
+        </StyledAccordion>
       </div>
     );
   }

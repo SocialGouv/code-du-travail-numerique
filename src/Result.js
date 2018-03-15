@@ -20,7 +20,7 @@ const Center = styled.div`text-align: center;`;
 
 const Block = styled.div`
   padding: 10px;
-  background: #f7f7f7;
+  background: ${props => props.theme.light3};
   border-radius: 2px;
   margin: 1em 10px;
   font-size: 0.9em;
@@ -44,13 +44,13 @@ const color = "#0e4d52";
 
 const BlockTitle = styled.div`
   font-size: 1.2em;
-  color: ${color};
+  color: ${props => props.theme.primary};
   svg {
     vertical-align: bottom;
   }
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 2px solid ${color};
+  border-bottom: 2px solid ${props => props.theme.primary};
 `;
 
 const TwoCols = styled.div`
@@ -63,31 +63,23 @@ const TwoCols = styled.div`
   }
 `;
 
+const SectionSeparator = styled.div`
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: ${props => props.theme.light2};
+`;
+
 const Result = ({ onResetClick, theme }) => {
   return (
     <div style={{ marginTop: 20 }}>
-      {theme.articles.length && (
-        <Block>
-          <BlockTitle>
-            <Feather.Book size="20" /> Code du Travail Articles
-          </BlockTitle>
-          <Articles theme={theme} />
-        </Block>
-      )}
-
-      <Block>
-        <BlockTitle>
-          <Feather.AlertTriangle size="20" /> Textes applicables
-        </BlockTitle>
-        <Articulation theme={theme} />
-        {/*Attention, dans votre entreprise va s'appliquer également des
-        conventions et accords de branche ou d'entreprise.*/}
-      </Block>
+      <SectionSeparator>F.A.Q. et fiches</SectionSeparator>
 
       {hasFaq(theme) && (
         <Block>
           <BlockTitle>
-            <Feather.HelpCircle size="20" /> FAQ Code du travail
+            <Feather.HelpCircle size="20" /> F.A.Q. Code du travail
           </BlockTitle>
           <FAQ theme={theme} />
         </Block>
@@ -101,6 +93,17 @@ const Result = ({ onResetClick, theme }) => {
           <Fiches theme={theme} />
         </Block>
       )}
+
+      <SectionSeparator>Textes officiels</SectionSeparator>
+
+      <Block>
+        <BlockTitle>
+          <Feather.AlertTriangle size="20" /> Textes applicables
+        </BlockTitle>
+        <Articulation theme={theme} />
+        {/*Attention, dans votre entreprise va s'appliquer également des
+        conventions et accords de branche ou d'entreprise.*/}
+      </Block>
 
       <Block>
         <BlockTitle>
@@ -120,14 +123,27 @@ const Result = ({ onResetClick, theme }) => {
         </li>
       </Block>
 
+      {theme.articles &&
+        theme.articles.length && (
+          <Block>
+            <BlockTitle>
+              <Feather.Book size="20" /> Code du Travail Articles
+            </BlockTitle>
+            <Articles theme={theme} />
+          </Block>
+        )}
+
+      <SectionSeparator>Voir aussi</SectionSeparator>
+
+      {/*
       <Block>
         <BlockTitle>
-          <Feather.Plus size="20" /> Voir aussi
+          <Feather.Plus size="20" /> Liens externes
         </BlockTitle>
         <li>
           <a href="#">Liens vers thèmes similaires</a>
         </li>
-      </Block>
+      </Block>*/}
 
       <TwoCols>
         <Block>
