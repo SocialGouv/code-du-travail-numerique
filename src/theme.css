@@ -1,0 +1,22 @@
+body {
+  font-size: 12px;
+}
+* {
+  font-family: Helvetica, Verdana, arial;
+}
+a {
+  color: royalblue;
+}
+
+.highlight {
+  background: #f9ff5e;
+  padding: 0 2px;
+}
+
+.FadeDelay-ready-false {
+  opacity: 0;
+}
+
+.FadeDelay-ready-true {
+  opacity: 1;
+}
