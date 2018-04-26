@@ -108,7 +108,10 @@ const Result = ({ onResetClick, theme }) => {
         <br />
         <ConventionPicker />
         <li>
-          <a href="#">
+          <a
+            target="_blank"
+            href="https://www.legifrance.gouv.fr/initRechAccordsEntreprise.do"
+          >
             Trouver votre accord d'entreprise <Feather.Search size="12" />
           </a>
         </li>
