@@ -1,5 +1,7 @@
 # Code-du-travail Explorer [![CircleCI](https://circleci.com/gh/SocialGouv/code-du-travail-explorer.svg?style=svg)](https://circleci.com/gh/SocialGouv/code-du-travail-explorer)
 
+Demo : https://socialgouv.github.io/code-du-travail-explorer/
+
  - Actuellement les datas sont en dur dans `/src/data` et ce sera sûrement remplacé par Elastic Search à un moment
     - Les IDs poseidon servent de lien
     - eposeidon-articles : extrait des articles eposeidon.json
