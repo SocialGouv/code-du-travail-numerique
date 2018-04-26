@@ -2,6 +2,8 @@
 
 Demo : https://socialgouv.github.io/code-du-travail-explorer/
 
+💡 La mise à jour de la branche `master` déclenche une mise à jour sur la démo
+
  - Actuellement les datas sont en dur dans `/src/data` et ce sera sûrement remplacé par Elastic Search à un moment
     - Les IDs poseidon servent de lien
     - eposeidon-articles : extrait des articles eposeidon.json
