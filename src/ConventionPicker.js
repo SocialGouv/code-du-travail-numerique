@@ -2,7 +2,7 @@ import React from "react";
 import { Search, X, Download } from "react-feather";
 
 import FuseInput from "./lib/FuseInput";
-import idcc from "../data/idcc.json";
+import idcc from "./data/idcc.json";
 
 // Input qui permet de selectionner une CC
 
@@ -39,15 +39,8 @@ class ConventionPicker extends React.Component {
     if (this.state.selected) {
       return (
         <div>
-          <ConventionPreview
-            style={{ marginTop: 10 }}
-            convention={this.state.selected}
-          />
-          <X
-            size="16"
-            onClick={this.reset}
-            style={{ marginLeft: 5, cursor: "pointer" }}
-          />
+          <ConventionPreview style={{ marginTop: 10 }} convention={this.state.selected} />
+          <X size="16" onClick={this.reset} style={{ marginLeft: 5, cursor: "pointer" }} />
         </div>
       );
     }
@@ -60,10 +53,7 @@ class ConventionPicker extends React.Component {
           placeholder="Convention collective ou code NAF"
         />
         {this.state.selected && (
-          <ConventionPreview
-            style={{ marginTop: 10 }}
-            convention={this.state.selected}
-          />
+          <ConventionPreview style={{ marginTop: 10 }} convention={this.state.selected} />
         )}
       </div>
     );

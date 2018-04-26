@@ -6,12 +6,12 @@ import ThemeSelector from "./ThemeSelector";
 import Result from "./Result";
 
 import parseThemes from "./parse-themes";
-import rawThemes from "../data/themes.js";
+import rawThemes from "./data/themes.js";
+
+import "./theme.css";
 
 // convert themes.js at runtime for easy editing
 const themes = parseThemes(rawThemes);
-
-import "./theme.css";
 
 //
 // Fil d'ariane (BreadCrumbs)
@@ -19,9 +19,7 @@ import "./theme.css";
 // + résultats (Result)
 //
 
-const ExplorerContainer = styled.div`
-  padding: 20px;
-`;
+const ExplorerContainer = styled.div`padding: 20px;`;
 
 const IntroContainer = styled.div`
   margin: 40px 20px;
@@ -32,12 +30,10 @@ const IntroContainer = styled.div`
 
 const Intro = () => (
   <IntroContainer>
-    Choisissez un thème pour explorer les ressources du code du travail
-    numérique
+    Choisissez un thème pour explorer les ressources du code du travail numérique
     <br />
     <br />
-    1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
-    réponses
+    1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50 réponses
   </IntroContainer>
 );
 

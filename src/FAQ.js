@@ -2,10 +2,9 @@ import React from "react";
 import { ExternalLink } from "react-feather";
 import styled from "styled-components";
 
-const faq = require("../data/faq.json");
+const faq = require("./data/faq.json");
 
-const isTheme = themeId => entry =>
-  entry.themes && entry.themes.indexOf(themeId) > -1;
+const isTheme = themeId => entry => entry.themes && entry.themes.indexOf(themeId) > -1;
 
 export const hasFaq = theme => faq.find(isTheme(theme.id));
 

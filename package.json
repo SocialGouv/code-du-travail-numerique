@@ -2,6 +2,7 @@
   "name": "cdtn-explorer-demo",
   "version": "1.0.0",
   "description": "Some React+Breadcrumbs+Thematic exploration PoC",
+  "homepage": "https://socialgouv.github.io/code-du-travail-explorer",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

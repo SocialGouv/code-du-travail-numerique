@@ -1,6 +1,6 @@
 # Code-du-travail Explorer
 
- - Actuellement les datas sont en dur dans /data et ce sera sûrement remplacé par Elastic Search à un moment
+ - Actuellement les datas sont en dur dans `/src/data` et ce sera sûrement remplacé par Elastic Search à un moment
     - Les IDs poseidon servent de lien
     - eposeidon-articles : extrait des articles eposeidon.json
     - faq.json : FAQ avec en plus un lien vers IDs poseidon
@@ -22,7 +22,7 @@ Les résultats sont affichés par `src/Result.js` qui contient tous les "blocs".
  - FAQ :
    - associer id eposeidon dans faq.json
    - enrichir avec les ODR --> discourse ?
- - Fiches pratiques : 
+ - Fiches pratiques :
    - associer id eposeidon dans fiches.js
  - textes conventionnels :
    - IDCCs:
@@ -53,4 +53,4 @@ A priori Elastic devrait à terme remplacer toutes les sources de données stati
  - API code/numero article
  - FAQ : a terme, discourse ou autre outil de federation des questions réponses dans les UD
 
-### 
+###

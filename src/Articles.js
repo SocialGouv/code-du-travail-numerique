@@ -1,7 +1,7 @@
 import React from "react";
 //import styled from "styled-components";
 
-import articles from "../data/eposeidon-articles";
+import articles from "./data/eposeidon-articles";
 
 // add article text from eposeidon-articles.js
 const enhanceArticles = refs =>
