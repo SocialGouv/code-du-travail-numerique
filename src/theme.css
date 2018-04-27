@@ -20,3 +20,10 @@ a {
 .FadeDelay-ready-true {
   opacity: 1;
 }
+
+.accordion {
+  margin-bottom: 10px;
+}
+.accordion__title {
+  box-sizing: border-box;
+}

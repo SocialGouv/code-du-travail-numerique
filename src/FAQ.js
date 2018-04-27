@@ -1,7 +1,16 @@
 import React from "react";
 import { ExternalLink } from "react-feather";
 import styled from "styled-components";
-import { Collapse } from "react-collapse";
+//import { Collapse } from "react-collapse";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemTitle,
+  AccordionItemBody
+} from "react-accessible-accordion";
+
+//import "react-accessible-accordion/dist/minimal-example.css";
+import "react-accessible-accordion/dist/fancy-example.css";
 
 const faq = require("./data/faq.json");
 
@@ -21,11 +30,11 @@ const Link = styled.a`
 
 const LinkText = styled.div`
   display: inline-block;
-  width: 90%;
-  overflow: hidden;
+  width: 100%;
+  xoverflow: hidden;
   cursor: pointer;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  xwhite-space: nowrap;
+  xtext-overflow: ellipsis;
 `;
 
 class Entry extends React.Component {
@@ -39,12 +48,16 @@ class Entry extends React.Component {
     const { question, reponse } = this.props;
     return (
       <div>
-        <Link onClick={this.toggle} key={question} title={question}>
-          <LinkText>« {question} » </LinkText>
-        </Link>
-        <Collapse isOpened={this.state.toggled}>
-          <div dangerouslySetInnerHTML={{ __html: reponse }} />
-        </Collapse>
+        <Accordion>
+          <AccordionItem>
+            <AccordionItemTitle>
+              <LinkText>«&nbsp;{question}&nbsp;»</LinkText>
+            </AccordionItemTitle>
+            <AccordionItemBody>
+              <div dangerouslySetInnerHTML={{ __html: reponse }} />
+            </AccordionItemBody>
+          </AccordionItem>
+        </Accordion>
       </div>
     );
   }
