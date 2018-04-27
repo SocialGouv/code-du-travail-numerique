@@ -1,6 +1,7 @@
 import React from "react";
 import { ExternalLink } from "react-feather";
 import styled from "styled-components";
+import { Collapse } from "react-collapse";
 
 const faq = require("./data/faq.json");
 
@@ -22,16 +23,34 @@ const LinkText = styled.div`
   display: inline-block;
   width: 90%;
   overflow: hidden;
+  cursor: pointer;
   white-space: nowrap;
   text-overflow: ellipsis;
 `;
 
+class Entry extends React.Component {
+  state = {
+    toggled: false
+  };
+  toggle = () => {
+    this.setState(curState => ({ toggled: !curState.toggled }));
+  };
+  render() {
+    const { question, reponse } = this.props;
+    return (
+      <div>
+        <Link onClick={this.toggle} key={question} title={question}>
+          <LinkText>« {question} » </LinkText>
+        </Link>
+        <Collapse isOpened={this.state.toggled}>
+          <div dangerouslySetInnerHTML={{ __html: reponse }} />
+        </Collapse>
+      </div>
+    );
+  }
+}
+
 const FAQ = ({ theme }) =>
-  faq.filter(isTheme(theme.id)).map(entry => (
-    <Link key={entry.question} href="#" title={entry.question}>
-      <LinkText>« {entry.question} » </LinkText>
-      <ExternalLink style={{ verticalAlign: "top" }} size="12" />
-    </Link>
-  ));
+  faq.filter(isTheme(theme.id)).map(e => <Entry key={e.question} {...e} />);
 
 export default FAQ;
