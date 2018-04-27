@@ -19,9 +19,10 @@ const ButtonReset = styled.button`
 const Center = styled.div`text-align: center;`;
 
 const Block = styled.div`
-  border: 1px solid #eee;
   padding: 10px;
-  margin: 10px;
+  background: #f7f7f7;
+  border-radius: 2px;
+  margin: 1em 10px;
   font-size: 0.9em;
   li {
     margin: 10px 0;
@@ -39,14 +40,17 @@ const Block = styled.div`
   }
 `;
 
+const color = "#0e4d52";
+
 const BlockTitle = styled.div`
   font-size: 1.2em;
+  color: ${color};
   svg {
     vertical-align: bottom;
   }
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid ${color};
 `;
 
 const TwoCols = styled.div`
@@ -61,12 +65,11 @@ const TwoCols = styled.div`
 
 const Result = ({ onResetClick, theme }) => {
   return (
-    <div>
+    <div style={{ marginTop: 20 }}>
       {theme.articles.length && (
         <Block>
           <BlockTitle>
-            <Feather.Book size="20" /> Code du Travail : {theme.articles.length}{" "}
-            Articles
+            <Feather.Book size="20" /> Code du Travail Articles
           </BlockTitle>
           <Articles theme={theme} />
         </Block>

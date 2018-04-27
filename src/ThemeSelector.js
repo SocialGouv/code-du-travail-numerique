@@ -15,6 +15,7 @@ const ThemeButton = styled.a`
   border-radius: 2px;
   margin: 5px;
   cursor: pointer;
+  user-select: none;
   transition: all 0.2s ease-out;
   &:hover {
     background-color: #dedede;
