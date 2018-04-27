@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const faq = require("./data/faq.json");
 
-const isTheme = themeId => entry => entry.themes && entry.themes.indexOf(themeId) > -1;
+const isTheme = themeId => entry =>
+  entry.themes && entry.themes.indexOf(themeId) > -1;
 
 export const hasFaq = theme => faq.find(isTheme(theme.id));
 
@@ -27,7 +28,7 @@ const LinkText = styled.div`
 
 const FAQ = ({ theme }) =>
   faq.filter(isTheme(theme.id)).map(entry => (
-    <Link href="#" title={entry.question}>
+    <Link key={entry.question} href="#" title={entry.question}>
       <LinkText>« {entry.question} » </LinkText>
       <ExternalLink style={{ verticalAlign: "top" }} size="12" />
     </Link>

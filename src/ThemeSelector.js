@@ -21,14 +21,14 @@ const ThemeButton = styled.a`
   }
 `;
 
-const ThemeSelectorContainer = styled.div`
-  text-align: center;
-`;
+const ThemeSelectorContainer = styled.div`text-align: center;`;
 
 const ThemeSelector = ({ node, onSelect }) => (
   <ThemeSelectorContainer>
     {node.children.map(child => (
-      <ThemeButton onClick={() => onSelect(child)}>{child.title}</ThemeButton>
+      <ThemeButton key={child.title} onClick={() => onSelect(child)}>
+        {child.title}
+      </ThemeButton>
     ))}
   </ThemeSelectorContainer>
 );

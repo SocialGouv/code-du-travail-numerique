@@ -2,17 +2,29 @@ import React from "react";
 import { Search, X, Download } from "react-feather";
 
 import FuseInput from "./lib/FuseInput";
+
+import kali from "./data/kali.json";
 import idcc from "./data/idcc.json";
 
-// Input qui permet de selectionner une CC
-
-const conventions = Object.keys(idcc).map(k => ({
-  label: `${k}: ${idcc[k]}`,
-  id: k
-}));
+const conventions = []
+  // use https://www.legifrance.gouv.fr/rechConvColl.do?reprise=true&page=1
+  .concat(
+    kali.map(c => ({
+      ...c,
+      label: c.titre
+    }))
+  )
+  // use http://travail-emploi.gouv.fr/dialogue-social/negociation-collective/conventions-collectives/article/conventions-collectives-nomenclatures#2
+  .concat(
+    Object.keys(idcc).map(k => ({
+      label: `${k}: ${idcc[k]}`,
+      id: k,
+      url: `https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${k}` // TODO: better
+    }))
+  );
 
 const ConventionPreview = ({ convention }) => (
-  <a href="#">
+  <a target="_blank" href={convention.url}>
     <Download
       alt="Télécharger la convention"
       title="Télécharger la convention"
@@ -39,8 +51,15 @@ class ConventionPicker extends React.Component {
     if (this.state.selected) {
       return (
         <div>
-          <ConventionPreview style={{ marginTop: 10 }} convention={this.state.selected} />
-          <X size="16" onClick={this.reset} style={{ marginLeft: 5, cursor: "pointer" }} />
+          <ConventionPreview
+            style={{ marginTop: 10 }}
+            convention={this.state.selected}
+          />
+          <X
+            size="16"
+            onClick={this.reset}
+            style={{ marginLeft: 5, cursor: "pointer" }}
+          />
         </div>
       );
     }
@@ -53,7 +72,10 @@ class ConventionPicker extends React.Component {
           placeholder="Convention collective ou code NAF"
         />
         {this.state.selected && (
-          <ConventionPreview style={{ marginTop: 10 }} convention={this.state.selected} />
+          <ConventionPreview
+            style={{ marginTop: 10 }}
+            convention={this.state.selected}
+          />
         )}
       </div>
     );

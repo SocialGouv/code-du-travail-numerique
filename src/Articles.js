@@ -18,7 +18,7 @@ const enhanceArticles = refs =>
     }));
 
 const PreviewArticle = ({ id, title, text }) => (
-  <div style={{ marginBottom: 5 }}>
+  <div key={id} style={{ marginBottom: 5 }}>
     <b>{title}</b>
     <br />
     <div dangerouslySetInnerHTML={{ __html: text }} />
