@@ -7,8 +7,6 @@ set -e
 # show where we are on the machine
 pwd
 
-npm run build
-
 remote=$(git config remote.origin.url)
 
 siteSource="$1"

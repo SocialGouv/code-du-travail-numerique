@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:8
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+  deploy:
+    machine:
+        enabled: true
+    steps:
+      - checkout
+      - run:
+          command: |
+            ./deploy.sh build
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
