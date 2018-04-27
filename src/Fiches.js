@@ -12,7 +12,7 @@ export const hasFiche = theme => fichesDgt.find(isTheme(theme.id));
 const FicheDgt = ({ source, title, href }) => (
   <li key={href}>
     {source} : &nbsp;
-    <a href={href}>
+    <a href={href} target="_blank">
       {title}
       <ExternalLink style={{ marginLeft: 5, verticalAlign: "top" }} size="12" />
     </a>
