@@ -1,29 +1,64 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - gh-pages
     docker:
-      - image: node:8
+      - image: circleci/node:8
+    working_directory: ~/repo
     steps:
       - checkout
-      - run: npm install
-      - run: npm run build
-  deploy:
-    machine:
-        enabled: true
-    steps:
-      - checkout
+      - restore_cache:
+          keys:
+          - dependencies-{{ checksum "package.json" }}
+          - dependencies-
       - run:
-          command: |
-            ./deploy.sh build
-
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-      - build
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-{{ checksum "package.json" }}
       - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+          name: Deploy
+          command: |
+              set -e
+              npm install
+              CI="" npm run build
+
+              remote=$(git config remote.origin.url)
+
+              siteSource="build"
+
+              if [ ! -d "$siteSource" ]
+              then
+                  echo "Usage: $0 <site source dir>"
+                  exit 1
+              fi
+
+              mkdir gh-pages-branch
+              cd gh-pages-branch
+              git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
+              git config --global user.name "$GH_NAME" > /dev/null 2>&1
+              git init
+              git remote add --fetch origin "$remote"
+
+              if git rev-parse --verify origin/gh-pages > /dev/null 2>&1
+              then
+                  git checkout gh-pages
+                  git rm -rf .
+              else
+                  git checkout --orphan gh-pages
+              fi
+
+              cp -a "../${siteSource}/." .
+
+              git add -A
+              git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
+              git push --force --quiet origin gh-pages > /dev/null 2>&1
+
+              cd ..
+              rm -rf gh-pages-branch
+
+              echo "Finished Deployment!"

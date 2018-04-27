@@ -7,9 +7,12 @@ set -e
 # show where we are on the machine
 pwd
 
+npm i
+CI="" npm run build
+
 remote=$(git config remote.origin.url)
 
-siteSource="$1"
+siteSource="build"
 
 if [ ! -d "$siteSource" ]
 then
