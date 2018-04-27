@@ -8,6 +8,7 @@ import ConventionPicker from "./ConventionPicker";
 import Articles from "./Articles";
 import Fiches, { hasFiche } from "./Fiches";
 import FAQ, { hasFaq } from "./FAQ";
+import Articulation from "./Articulation";
 
 // page de résultats
 
@@ -15,9 +16,7 @@ const ButtonReset = styled.button`
   padding: 10px 20px;
   cursor: pointer;
 `;
-const Center = styled.div`
-  text-align: center;
-`;
+const Center = styled.div`text-align: center;`;
 
 const Block = styled.div`
   border: 1px solid #eee;
@@ -77,8 +76,9 @@ const Result = ({ onResetClick, theme }) => {
         <BlockTitle>
           <Feather.AlertTriangle size="20" /> Textes applicables
         </BlockTitle>
-        Attention, dans votre entreprise va s'appliquer également des
-        conventions et accords de branche ou d'entreprise.
+        <Articulation theme={theme} />
+        {/*Attention, dans votre entreprise va s'appliquer également des
+        conventions et accords de branche ou d'entreprise.*/}
       </Block>
 
       {hasFaq(theme) && (
