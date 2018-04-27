@@ -11,7 +11,7 @@ const enhanceArticles = refs =>
       ...articles[ref]
     }))
     .filter(Boolean)
-    .map((article, i) => ({
+    .map(article => ({
       id: article.id,
       title: `Article ${article.id}`,
       text: articles[article.id] && articles[article.id][0].Texte

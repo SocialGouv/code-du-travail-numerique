@@ -21,9 +21,9 @@ Les résultats sont affichés par `src/Result.js` qui contient tous les "blocs".
 ### Data
  - Completer les fichiers dans [data](./data)
  - enrichir les datas pour anticiper des tests de rechecrhe
- - IDCCs:
-    - se procurer
-
+ - contacts : se procurer liste des contacts par theme/région
+ - liens/outils : se procurer liste des contacts par theme/région
+ - form feedback
 
 ### Tech
  - futur : eposeidon-articles.js : remplacer par une API pour requeter par ID de code/article car +10k articles. voir quelle source de données on utilise pour ça ?
@@ -34,21 +34,6 @@ Les résultats sont affichés par `src/Result.js` qui contient tous les "blocs".
 
 ### Ideas
  - enrichissement de la FAQ via discourse ou autre outil collaboratif ?
-
-
- - textes conventionnels :
-   - IDCCs:
-      - verifier/corriger ce fichier qui vient de http://travail-emploi.gouv.fr/dialogue-social/negociation-collective/conventions-collectives/article/conventions-collectives-nomenclatures#2
-      - ⚠ la liste ne correspond pas exactement à ce qu'il y a sur https://www.legifrance.gouv.fr/initRechConvColl.do
-      - enrichir idcc.json pour inclure des tags et autres pour faciliter la recherche
-      - établir mapping NAF<->IDCC
-   - QUID recherche accord entreprise ?
- - contacts:
-   - établir listing contacts par id eposeidon + region (+geoloc ?)
- - Liens, outils
-   - établir listing de sites + mapping des themes + region (+geoloc ?)
- - form feedback : formspree ?
- - améliorer hierarchie des normes
 
 ## Intégration Elastic :
 

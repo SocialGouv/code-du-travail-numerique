@@ -30,10 +30,12 @@ const IntroContainer = styled.div`
 
 const Intro = () => (
   <IntroContainer>
-    Choisissez un thème pour explorer les ressources du code du travail numérique
+    Choisissez un thème pour explorer les ressources du code du travail
+    numérique
     <br />
     <br />
-    1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50 réponses
+    1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
+    réponses
   </IntroContainer>
 );
 
@@ -53,7 +55,7 @@ class Explorer extends React.Component {
       */
     ]
   };
-  reset = node => {
+  reset = () => {
     this.setState({ selection: [] });
   };
   onSelectNode = node => {

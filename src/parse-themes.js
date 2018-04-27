@@ -76,10 +76,10 @@ const parseThemes = textContent => {
     .filter(Boolean);
 
   // 10897 articles !
-  const allArticles = parsedRows.reduce((articles, row) => {
-    articles = articles.concat(row.articles);
-    return articles;
-  }, []);
+  // const allArticles = parsedRows.reduce((articles, row) => {
+  //   articles = articles.concat(row.articles);
+  //   return articles;
+  // }, []);
 
   const tree = parsedRows.reduce(
     (tree, row) => {

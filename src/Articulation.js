@@ -1,10 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 
 import { THEMES_L22531, THEMES_L22532 } from "./data/L2253";
 
 const getAllThemes = themes =>
-  Array.from(new Set(Object.keys(themes).reduce((uniques, c) => [...uniques, ...themes[c]], [])));
+  Array.from(
+    new Set(
+      Object.keys(themes).reduce((uniques, c) => [...uniques, ...themes[c]], [])
+    )
+  );
 
 const isInL22531 = id => getAllThemes(THEMES_L22531).indexOf(id) > -1;
 

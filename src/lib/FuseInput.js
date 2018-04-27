@@ -58,34 +58,6 @@ const FuseHighLighter = ({ suggestion, query, style }) => {
     />
   );
 };
-/*
-const onSuggestionSelected = (
-  event,
-  { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }
-) => {
-  console.log(
-    "xxx",
-    suggestion,
-    suggestionValue,
-    suggestionIndex,
-    sectionIndex,
-    method
-  );
-};
-*/
-const getSuggestions1 = ({ data, value, fuseOptions = {} }) => {
-  const allFuseOptions = {
-    ...DEFAULT_FUSE_OPTIONS,
-    ...fuseOptions
-  };
-  const query = value.toLowerCase();
-  const fuse = new Fuse(data, allFuseOptions);
-  const res = fuse
-    .search(query)
-    .filter(q => q.matches.length)
-    .slice(0, 25);
-  return res;
-};
 
 const getSuggestionValue = suggestion => suggestion.item.label;
 

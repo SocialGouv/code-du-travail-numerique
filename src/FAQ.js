@@ -1,5 +1,4 @@
 import React from "react";
-import { ExternalLink } from "react-feather";
 import styled from "styled-components";
 //import { Collapse } from "react-collapse";
 import {
@@ -18,15 +17,6 @@ const isTheme = themeId => entry =>
   entry.themes && entry.themes.indexOf(themeId) > -1;
 
 export const hasFaq = theme => faq.find(isTheme(theme.id));
-
-const Link = styled.a`
-  display: block;
-  text-decoration: none;
-  margin: 10px 0;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 const LinkText = styled.div`
   display: inline-block;
