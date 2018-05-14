@@ -27,6 +27,11 @@ Les résultats sont affichés par `src/Result.js` qui contient tous les "blocs".
 
 ### Tech
  - futur : eposeidon-articles.js : remplacer par une API pour requeter par ID de code/article car +10k articles. voir quelle source de données on utilise pour ça ?
+ - connecter les données à une API + ElasticSearch
+ - elastic search :
+  - importer les différentes sources
+  - deployer une version + https://github.com/appbaseio/mirage ?
+
 
 ### Divers
  - documenter [src/Articulation.js](./src/Articulation.js)
@@ -34,6 +39,9 @@ Les résultats sont affichés par `src/Result.js` qui contient tous les "blocs".
 
 ### Ideas
  - enrichissement de la FAQ via discourse ou autre outil collaboratif ?
+ - analyse des textes de loi :
+    - https://github.com/digitalbazaar/jsonld.js ?
+    -
 
 ## Intégration Elastic :
 
