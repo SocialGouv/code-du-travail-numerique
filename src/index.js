@@ -46,7 +46,7 @@ const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
   return (
-    <HashRouter>
+    <HashRouter basename="/code-du-travail-explorer">
       <ThemeProvider theme={themeBlue}>
         <div>
           <GitHubForkRibbon
