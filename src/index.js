@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 
@@ -46,7 +46,7 @@ const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider theme={themeBlue}>
         <div>
           <GitHubForkRibbon
@@ -81,7 +81,7 @@ const App = () => {
           </AppContainer>
         </div>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 render(<App />, document.getElementById("root"));
