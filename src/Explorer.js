@@ -55,6 +55,7 @@ class Explorer extends React.Component {
     super(props, ...args);
     if (props.themeId) {
       // initalize with the given theme
+      // todo: make consistent routes
       this.state = {
         selection: getPathFromThemeId(parseInt(props.themeId))
       };
@@ -78,7 +79,6 @@ class Explorer extends React.Component {
         }
       ]
     }));
-    window.state = this.state;
   };
   onBreadCrumbClick = (item, idx) => {
     this.setState(curState => ({

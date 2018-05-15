@@ -1,5 +1,6 @@
 import React from "react";
 import { Search, X, Download } from "react-feather";
+import Delay from "react-delay";
 
 import FuseInput from "./lib/FuseInput";
 
@@ -66,11 +67,13 @@ class ConventionPicker extends React.Component {
     return (
       <div>
         <Search size="16" style={{ marginRight: 5, verticalAlign: "top" }} />
-        <FuseInput
-          data={conventions}
-          onSuggestionSelected={this.onSuggestionSelected}
-          placeholder="Convention collective ou code NAF"
-        />
+        <Delay wait={250}>
+          <FuseInput
+            data={conventions}
+            onSuggestionSelected={this.onSuggestionSelected}
+            placeholder="Convention collective ou code NAF"
+          />
+        </Delay>
         {this.state.selected && (
           <ConventionPreview
             style={{ marginTop: 10 }}
