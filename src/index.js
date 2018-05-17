@@ -64,7 +64,8 @@ const App = () => {
             <Baseline>
               Trouvez les réponses à vos questions sur le droit du travail
             </Baseline>
-            <Route
+            <h1> Votre question porte sur:</h1>            
+<Route
               exact={true}
               path={`/`}
               render={props => <Explorer ref={node => (explorer = node)} />}
