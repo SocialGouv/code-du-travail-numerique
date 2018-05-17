@@ -36,21 +36,18 @@ const getArticulation = ({ theme }) => {
   if (isInL22531(theme.id)) {
     // article entre dans le champ du L.2253-1
     return `
-    Consultez votre <b>convention collective</b>: sur ce thème, ses dipositions quand elles existent s'appliquent pour votre question.<p></p>
-    Vérifiez aussi votre <b>accord d'entreprise</b> : S'il contient sur ce sujet des <i>"dispositions au moins équivalentes"</i> sur ce thème: les clauses sur ce thème de l'accord d'netreprise s'appliquent dans votre cas sur les autres textes.
+    Consultez votre convention collective de branche: ses dispositions sur ce thème s'appliquent pour votre question.
+Vérifiez aussi votre accord d'entreprise : S'il prévoit sur ce sujet des " garanties au moins équivalentes" , ces clauses s'appliquent dans votre cas.
+
     `;
   } else if (isInL22532(theme.id)) {
     // article entre dans le champ du L.2253-2
     return `
-            Consultez votre convention collective <u>et</u> votre accord d'entreprise:
-      Votre <b>accord d'entreprise</b> devrait normallement vous permettre de répondre à cette question.
-      <b>Attention</b>, sur ce thème la convention collective peut décider qu'elle prime sur l'accord d'entreprise.
-      Votre accord d'entreprise prévoit des "garanties au moins équivalentes"? S'il est plus récent que la date d'effet de la conveiton collective: les dispositions qu'il prévoit s'appliquent!
-      Silence de la convention collective? Votre accord d'entreprise s'applique même s'il est moins favorabale.
-      <br><br>
-      Sinon, l'accord d'entreprise s'applique, même s'il est moins favorable.
-      <br><br>
-      Et si l'accord d'entreprise a été signé posterieurement à la date d'entrée en vigueur de l'accord de branche, et dispose de garanties au moins équivalentes, elles prévalent sur celles de l'accord de branche.`;
+            Consultez votre accord d'entreprise dont les clauses à ce sujet s’appliquent à votre situation.
+<b>Attention</b>, sur ce thème la convention collective de branche peut décider qu'elle prime sur l'accord d'entreprise. Si c’est le cas :
+-	Votre accord d'entreprise a été signé avant la convention collective de branche ? Les clauses de votre accord d’entreprise s’appliquent même si elles sont moins favorables que celles de la convention collective de branche.
+-	Votre accord d'entreprise a été signé après la convention collective de branche Les clauses de votre accord d’entreprise s’appliquent si elles offrent des "garanties au moins équivalentes" sur ce sujet. Sinon, il faut vous référer aux clauses de la convention collective de branche. 
+`;
   } else {
     // autres cas
     return `
