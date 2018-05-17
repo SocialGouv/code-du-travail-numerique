@@ -158,16 +158,21 @@ const Result = ({ onResetClick, theme }) => {
             <Feather.Phone size="20" /> Vos interlocuteurs
           </BlockTitle>
           <li>
-            <a href="http://grand-est.direccte.gouv.fr/Presentation-de-l-unite-departementale-Nous-contacter-17713">
-              Services de renseignement
+            <a
+              target="_blank"
+              href="http://grand-est.direccte.gouv.fr/Presentation-de-l-unite-departementale-Nous-contacter-17713"
+            >
+              Services de renseignement <Feather.ExternalLink size="12" />
             </a>
           </li>
           <li>
-            <a href="https://www.ast67.org/">Médecine du travail</a>
+            <a target="_blank" href="https://www.ast67.org/">
+              Médecine du travail <Feather.ExternalLink size="12" />
+            </a>
           </li>
           <li>
-            <a href="https://www.defenseurdesdroits.fr/office">
-              Défenseur des droits
+            <a target="_blank" href="https://www.defenseurdesdroits.fr/office">
+              Défenseur des droits <Feather.ExternalLink size="12" />
             </a>
           </li>
         </Block>
