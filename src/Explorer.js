@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import BreadCrumbs from "./BreadCrumbs";
-import ThemeSelector from "./ThemeSelector";
 import Result from "./Result";
+import ThemeFilter from "./ThemeFilter";
+import ThemeSelector from "./ThemeSelector";
 
 import parseThemes, { parseRows } from "./parse-themes";
 import rawThemes from "./data/themes.js";
@@ -103,6 +104,7 @@ class Explorer extends React.Component {
     const isLeaf = currentTheme.children.length === 0;
     return (
       <ExplorerContainer>
+        <ThemeFilter />
         <BreadCrumbs
           style={{ marginBottom: 10, marginLeft: 10 }}
           entries={breadcrumbs}
