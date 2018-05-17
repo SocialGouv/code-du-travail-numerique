@@ -130,7 +130,7 @@ export default [
       "http://travail-emploi.gouv.fr/sante-au-travail/suivi-de-la-sante-au-travail-10727/",
     title:
       "La reconnaissance de l’inaptitude médicale au travail et ses conséquences",
-    themes: [34200]
+    themes: [34200],
   },
   {
     source: "Ministère du travail",
@@ -144,14 +144,15 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/contrats-de-travail/article/le-contrat-a-duree-indeterminee-de-chantier-ou-d-operation/",
     title: "Le contrat à durée indéterminée de chantier ou d’opération",
-    themes: [12800]
+    themes: [12800],
+
   },
   {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/formation-professionnelle/se-former-en-alternance/l-apprentissage-160/",
     title: "Le contrat d’apprentissage",
-    themes: [57100]
+    themes: [57100],
   },
   {
     source: "Ministère du travail",
@@ -312,7 +313,7 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/conges-et-absences/",
     title: "Les congés payés",
-    themes: [6510, 6520, 6530]
+    themes:[6510,6520,6530],
   },
   {
     source: "Ministère du travail",
@@ -1226,9 +1227,10 @@ export default [
     source: "Ministère du travail",
     href: "http://travail-emploi.gouv.fr/actualites/l-actualite-du-ministere/",
     title: "5 questions/réponses sur la santé au travail",
-    themes: [155400, 155500, 155600, 155700, 155800, 155900, 156000, 156100]
+    themes:[155400,155500,155600,155700,155800,155900,156000,156100]
+
   },
-  {
+ {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/relations-au-travail/pouvoir-de-direction/",
@@ -1254,7 +1256,7 @@ export default [
     source: "Ministère du travail",
     href: "http://travail-emploi.gouv.fr/archives/archives-courantes/",
     title: "5 questions sur le congé de proche aidant",
-    themes: [4600]
+    themes:[4600]
   },
   {
     source: "Ministère du travail",
@@ -1283,25 +1285,10 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/litiges-individuels-et-conflits-collectifs/article/l-inspection-du-travail",
+    "http://travail-emploi.gouv.fr/droit-du-travail/litiges-individuels-et-conflits-collectifs/article/l-inspection-du-travail",
     title: "L’inspection du travail",
-    themes: [
-      114700,
-      114800,
-      115000,
-      115100,
-      115200,
-      115300,
-      115400,
-      115500,
-      115600,
-      115700,
-      115800,
-      115900,
-      116000,
-      116100,
-      116200
-    ]
+    themes:[114700,114800,115000, 115100, 115200, 115300,115400,115500,115600,115700,
+115800,115900,116000,116100,116200]
   },
   {
     source: "Ministère du travail",
