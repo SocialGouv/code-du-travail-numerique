@@ -62,10 +62,9 @@ const App = () => {
               Code du travail numérique
             </Title>
             <Baseline>
-              Trouvez les réponses à vos questions sur le droit du travail Votre
-              question porte sur:
+              Trouvez les réponses à vos questions sur le droit du travail
+              <h1>Votre question porte sur:</h1>
             </Baseline>
-            <h1> Votre question porte sur:</h1>
             <Route
               exact={true}
               path={`/`}
