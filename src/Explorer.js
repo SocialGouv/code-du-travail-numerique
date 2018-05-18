@@ -56,7 +56,7 @@ class Explorer extends React.Component {
   constructor(props, ...args) {
     super(props, ...args);
     this.state = {
-      filter: null,
+      filters: [],
     };
     if (props.themeId) {
       // initalize with the given theme
@@ -105,7 +105,7 @@ class Explorer extends React.Component {
 
     // Filter nodes.
     let nodeCopy = JSON.parse(JSON.stringify(node));  // Deep copy.
-    if (this.state.filter) {
+    if (this.state.filter && this.state.filter.value) {
       // https://stackoverflow.com/a/38132582
       let ids = this.state.filter.ids;
       nodeCopy.children = nodeCopy.children.filter(function recursiveFilter(element) {
