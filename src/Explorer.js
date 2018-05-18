@@ -52,23 +52,29 @@ const Teaser = () => (
 );
 
 class Explorer extends React.Component {
+
   constructor(props, ...args) {
     super(props, ...args);
+    this.state = {
+      filter: null,
+    };
     if (props.themeId) {
       // initalize with the given theme
       // todo: make consistent routes
-      this.state = {
-        selection: getPathFromThemeId(parseInt(props.themeId))
-      };
+      this.state.selection = getPathFromThemeId(parseInt(props.themeId));
     } else {
-      this.state = {
-        selection: []
-      };
+      this.state.selection = [];
     }
   }
+
   reset = () => {
     this.setState({ selection: [] });
   };
+
+  onThemeFilterChange = (filter) => {
+    this.setState({ filter: filter });
+  };
+
   onSelectNode = node => {
     this.setState(curState => ({
       selection: [
@@ -81,11 +87,13 @@ class Explorer extends React.Component {
       ]
     }));
   };
+
   onBreadCrumbClick = (item, idx) => {
     this.setState(curState => ({
       selection: curState.selection.slice(0, idx)
     }));
   };
+
   getCurrentTheme = () => {
     let node = themes;
     this.state.selection.forEach(theme => {
@@ -94,7 +102,23 @@ class Explorer extends React.Component {
         node = subNode;
       }
     });
-    return node;
+
+    // Filter nodes.
+    let nodeCopy = JSON.parse(JSON.stringify(node));  // Deep copy.
+    if (this.state.filter) {
+      // https://stackoverflow.com/a/38132582
+      let ids = this.state.filter.ids;
+      nodeCopy.children = nodeCopy.children.filter(function recursiveFilter(element) {
+        if (element.id && ids.includes(element.id)) {
+          return true;
+        }
+        if (element.children) {
+          return (element.children = element.children.filter(recursiveFilter)).length
+        }
+      });
+    };
+
+    return nodeCopy;
   };
 
   render() {
@@ -104,7 +128,7 @@ class Explorer extends React.Component {
     const isLeaf = currentTheme.children.length === 0;
     return (
       <ExplorerContainer>
-        <ThemeFilter />
+        <ThemeFilter onFilterChange={this.onThemeFilterChange} />
         <BreadCrumbs
           style={{ marginBottom: 10, marginLeft: 10 }}
           entries={breadcrumbs}
@@ -117,6 +141,7 @@ class Explorer extends React.Component {
       </ExplorerContainer>
     );
   }
+
 }
 
 export default Explorer;

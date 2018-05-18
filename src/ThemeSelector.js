@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import filterEmitter from "./events-bus";
-
 //
 // boutons de selection du thème
 // prend un noeud de "syntax-tree" {children:[]} en entrée

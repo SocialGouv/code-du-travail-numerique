@@ -1,20 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-import filterEmitter from "./events-bus";
-
 const tagsFilters = [
   {
+    type: 'contract',
     value: 'cdi',
     label: 'Contrat à durée indéterminée (CDI)',
     ids: [600, 1900, 3720],
   },
   {
+    type: 'contract',
     value: 'cdd',
     label: 'Contrat à durée déterminée (CDD)',
     ids: [49700, 50200, 51000],
   },
   {
+    type: 'contract',
     value: 'ctt',
     label: 'Contrat à temps partiel (CTT)',
     ids: [51400, 51800, 52100],
@@ -27,26 +28,19 @@ const StyledThemeFilter = styled.div`
 
 class ThemeFilter extends React.Component {
 
-  changeFilter = (item) => {
-    filterEmitter.emit('FILTER_CHANGED', item);
-  };
-
-  cancelFilter = (item) => {
-    filterEmitter.emit('FILTER_CANCELED');
-  };
-
   render() {
+    const onFilterChange = this.props.onFilterChange;
     return (
       <StyledThemeFilter>
         <ul>
           <li>
             <label for="none">Aucun</label>
-            <input name="contract" type="radio" id="none" onChange={this.cancelFilter} />
+            <input name="contract" type="radio" id="none" onChange={() => onFilterChange()} />
           </li>
           {tagsFilters.map(item =>
             <li>
               <label for={item.value}>{item.label}</label>
-              <input name="contract" type="radio" id={item.value} onChange={() => this.changeFilter(item)} />
+              <input name="contract" type="radio" id={item.value} onChange={() => onFilterChange(item)} />
             </li>
           )}
         </ul>
