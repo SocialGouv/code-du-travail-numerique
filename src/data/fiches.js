@@ -55,7 +55,7 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/emploi/accompagnement-des-mutations-economiques/appui-aux-mutations-economiques/",
     title: "Gestion prévisionnelle de l’emploi et des compétences (GPEC)",
-    themes: []
+    themes: [123412]
   },
   {
     source: "Ministère du travail",
