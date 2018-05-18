@@ -56,7 +56,7 @@ class Explorer extends React.Component {
   constructor(props, ...args) {
     super(props, ...args);
     this.state = {
-      filter: [],
+      filter: {},
     };
     if (props.themeId) {
       // initalize with the given theme
@@ -92,6 +92,13 @@ class Explorer extends React.Component {
     this.setState(curState => ({
       selection: curState.selection.slice(0, idx)
     }));
+    // Reset filter.
+    if (this.state.filter.showInPath) {
+      let currentPath = this.state.selection.slice(0, idx).map(elem => { return elem.title; }).join(' > ');
+      if (!currentPath.startsWith(this.state.filter.showInPath)) {
+        this.setState({ filter: {} });
+      }
+    }
   };
 
   getCurrentTheme = () => {
