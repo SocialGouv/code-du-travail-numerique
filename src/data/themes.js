@@ -206,15 +206,15 @@ export default `
 32300	Contrat de travail > Maternité, Paternité > Protection grossesse, maternité > Embauche, Mutation, Licenciement	L1225-3-1; L1225-6; L1225-1; L1225-2; L1225-4; L1225-4-1; L1225-5; L1225-3; R1225-1; R1225-2; R1225-3
 32400	Contrat de travail > Maternité, Paternité > Protection grossesse, maternité > Emploi pré et post natal	L1225-29
 32500	Contrat de travail > Maternité, Paternité > Protection grossesse, maternité > Texte prévoyant un décret	L1225-72
-3700	Contrat de travail > période d'essai > Période d'essai	L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26
-3710	Contrat de travail > période d'essai > Période d'essai > Définition	L1221-20; L1221-23;
-3720	Contrat de travail > période d'essai > Période d'essai > Délai de prévenance et Rupture par le salarié	L1221-26
-3730	Contrat de travail > période d'essai > Période d'essai > Délai de prévenance et Rupture par l'employeur	L1221-25
-3740	Contrat de travail > période d'essai > Période d'essai > Durée maximale par catégories de salariés	L1221-19; L1221-22; L1221-23; 
-3750	Contrat de travail > période d'essai > Période d'essai > Exceptions relatives à la durée	L1221-22;
-3760	Contrat de travail > période d'essai > Période d'essai > Renouvellements : possibilités et durée	L1221-22; L1221-21; L1221-23; 
-3770	Contrat de travail > période d'essai > Période d'essai > stagiaire 	L1221-24;
-3780	Contrat de travail > période d'essai > Période d'essai > Une clause nécessaire du contrat de travail	L1221-23;
+3700	Contrat de travail > Période d'essai > Généralités L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26
+3710	Contrat de travail > Période d'essai > Définition	L1221-20; L1221-23;
+3720	Contrat de travail > Période d'essai > Délai de prévenance et Rupture par le salarié	L1221-26
+3730	Contrat de travail > Période d'essai > Délai de prévenance et Rupture par l'employeur	L1221-25
+3740	Contrat de travail > Période d'essai > Durée maximale par catégories de salariés	L1221-19; L1221-22; L1221-23;
+3750	Contrat de travail > Période d'essai > Exceptions relatives à la durée	L1221-22;
+3760	Contrat de travail > Période d'essai > Renouvellements : possibilités et durée	L1221-22; L1221-21; L1221-23;
+3770	Contrat de travail > Période d'essai > stagiaire 	L1221-24;
+3780	Contrat de travail > Période d'essai > Une clause nécessaire du contrat de travail	L1221-23;
 32700	Contrat de travail > Professions particulières > Agences de mannequins > Garantie financière	L7123-22; L7123-20; L7123-21; L7123-19
 32800	Contrat de travail > Professions particulières > Agences de mannequins > Licence	L7123-12; L7123-13; L7123-14; L7123-15; L7123-11
 32900	Contrat de travail > Professions particulières > Agences de mannequins > Mise à disposition	L7123-17; L7123-18
@@ -295,12 +295,12 @@ export default `
 40500	Contrat de travail > Professions particulières > VRP(voyageur, représentant et placier) > Présomption salariat	L7313-3; L7313-2; L7313-1; L7313-4
 40600	Contrat de travail > Professions particulières > VRP(voyageur, représentant et placier) > Rémunération, congés	L7313-12; L7313-11; L7313-16; L7313-14; L7313-15; L7313-13; L7313-17; L7313-9; L7313-10
 40700	Contrat de travail > Professions particulières > VRP(voyageur, représentant et placier) > Rupture contrat	D7313-1; L7313-7; L7313-8
-120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Cas de force majeur	L1234-12; L1234-13; 
+120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Cas de force majeur	L1234-12; L1234-13;
 1800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Contrat de chantier ou d'opération	L1236-8
 810	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > licenciement d'un salarié mis à disposition d'une filiale étrangère	L1231-5;
 1300	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L1532-1
 830	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Principes de la rupture, plusieurs employeur	L1231-3
-800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Prorogation des délais de procédure 	R1231-1; 
+800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Prorogation des délais de procédure 	R1231-1;
 1900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers> Contrat de mission à exportation	L1236-7
 130	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Cas particuliers > Dispositions applicables à certains salariés (secteur public…)	L1234-14;
 600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Contestations, sanctions licenciement irrégulier > Contestations, Sanctions	L1235-3; L1235-5; L1235-3-1; L1235-1; L1235-3-2; L1235-2; L1235-2-1; L1235-6;
@@ -388,7 +388,7 @@ export default `
 6300	Durée du travail et congés > Congés payés > Indemnités de congés payés	D3141-7; D3141-8; L3141-24; L3141-25; L3141-26; L3141-27; L3141-28; L3141-29; L3141-30; L3141-31
 6500	Durée du travail et congés > Congés payés > Organisation de la prise de congés payés > Règles générales de la prise de congés	 D3141-5; D3141-6; L3141-12; L3141-14; L3141-13
 6510	Durée du travail et congés > Congés payés > Organisation de la prise de congés payés > Règles spécifiées par l'accord d'entreprise ou d'établissement	L3141-15;
-6520	Durée du travail et congés > Congés payés > Organisation de la prise de congés payés > Règles spécifiques applicables en l'absence d'accord	L3141-16; 
+6520	Durée du travail et congés > Congés payés > Organisation de la prise de congés payés > Règles spécifiques applicables en l'absence d'accord	L3141-16;
 19700	Durée du travail et congés > Durée du travail > Aménagement Temps de Travail > Horaires individualisés et récupération des heures perdues	L3121-51; L3121-52; R3121-30; R3121-34; R3121-35; L3121-48; L3121-49; L3121-50; R3121-29; R3121-31; R3121-32; R3121-33; R3124-3
 19600	Durée du travail et congés > Durée du travail > Aménagement Temps de Travail > Période supérieure à la semaine	R3124-3; L3121-44; L3121-45; L3121-46; L3121-47; D3121-27; D3121-28; L3121-41; L3121-42; L3121-43; D3121-25; R3121-26
 19800	Durée du travail et congés > Durée du travail > Astreintes, travail effectif et équivalences > Astreintes	L3121-11; L3121-12; R3121-3; L3121-10; L3121-9; R3121-2; R3124-4
@@ -825,8 +825,8 @@ export default `
 92100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Implication salariés société européen. accord groupe spécial de négociation (GSN)	L2352-20; L2352-17; L2352-18; L2352-7; L2352-16; L2352-8; L2352-11; L2352-5; L2352-19; L2352-12; L2352-9; R2352-5; D2352-6; D2352-7; D2352-8; D2352-9; D2352-10; D2352-11; D2352-12; D2352-13; L2352-3; L2352-13; R2352-18; R2352-19; D2352-14; D2352-15; D2352-16; R2352-17; D2352-1; D2352-2; D2352-3; D2352-4; L2352-1; L2352-2; L2352-14; L2352-15; L2352-6; L2352-4; L2352-10
 92200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Pénal	L2355-1
 92300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Vidéo conférence	D2341-1; D2353-6; L2353-27-1; L2341-12
-92400	Institutions représentatives du personnel > Comité d'entreprise > Attributions > Attributions générales	
-92500	Institutions représentatives du personnel > Comité d'entreprise > Champ d'application > Champ d'application	
+92400	Institutions représentatives du personnel > Comité d'entreprise > Attributions > Attributions générales
+92500	Institutions représentatives du personnel > Comité d'entreprise > Champ d'application > Champ d'application
 164600	Institutions représentatives du personnel > Comité social et économique > Champ d'application	L2311-1; L2311-2
 164700	Institutions représentatives du personnel > Comité social et économique > CSE attributions	L2312-5; L2312-6; L2312-7; R2312-1; R2312-2; R2312-3; L2312-1; L2312-2; L2312-3; L2312-4; R2312-60; R2312-61
 164800	Institutions représentatives du personnel > Comité social et économique > CSE attributions > Attributions entreprises 50 salariés et +	L2312-78; L2312-79; L2312-80; L2312-81; L2312-82; L2312-83; L2312-84; R2312-35; R2312-36; R2312-37; R2312-38; R2312-39; R2312-40; R2312-41; R2312-42; R2312-43; R2312-44; R2312-45; R2312-46; R2312-47; R2312-48; R2312-49; R2312-50; R2312-51; R2312-52; R2312-53; R2312-54; R2312-55; R2312-56; R2312-57; R2312-58; R2312-59; L2312-8; L2312-9; L2312-10; R2312-4; L2312-11; L2312-12; L2312-13; L2312-14; L2312-15; L2312-16; R2312-5; R2312-6; R2312-25; R2312-26; R2312-27; R2312-28; L2312-37; L2312-38; L2312-39; L2312-40; L2312-41; L2312-42; L2312-43; L2312-44; L2312-45; L2312-46; L2312-47; L2312-48; L2312-49; L2312-50; L2312-51; L2312-52; L2312-53; L2312-54; L2312-55; L2312-56; L2312-57; L2312-58; R2312-21; R2312-22; R2312-23; R2312-24; L2312-17; L2312-18; L2312-19; L2312-20; L2312-21; L2312-22; L2312-23; L2312-24; L2312-26; L2312-27; L2312-28; L2312-29; L2312-30; L2312-31; L2312-32; L2312-33; L2312-34; L2312-35; L2312-36; R2312-7; R2312-8; R2312-9; R2312-10; R2312-11; R2312-12; R2312-13; R2312-14; R2312-15; R2312-16; R2312-17; R2312-18; R2312-19; R2312-20; L2312-59; L2312-60; L2312-63; L2312-64; L2312-65; L2312-66; L2312-67; L2312-68; L2312-69; L2312-70; L2312-71; R2312-29; R2312-30; L2312-72; L2312-73; L2312-74; L2312-75; L2312-76; L2312-77; R2312-31; R2312-33; R2312-32; R2312-34
@@ -842,7 +842,7 @@ export default `
 93000	Institutions représentatives du personnel > Défenseur syndical > Obligations	L1453-8
 93100	Institutions représentatives du personnel > Défenseur syndical > Sanction	L1453-9; L2411-24
 92700	Institutions représentatives du personnel > Délégation Unique du personnel ( DUP) > Délégation Unique du personnel ( DUP) > Pénal	L2433-1; L2434-1; L2432-1; L2437-1; L2438-1; L2439-1; L243-10-1; L2435-1; L2436-1
-93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > entreprise50 salariés et + sans comité d'entreprise (CE) ou comité d’hygiène, de sécurité et des conditions de travail (CHSCT)	
+93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > entreprise50 salariés et + sans comité d'entreprise (CE) ou comité d’hygiène, de sécurité et des conditions de travail (CHSCT)
 94800	Institutions représentatives du personnel > Délégué syndical > Congé formation économique, sociale et syndicale	L2145-6; L2145-7; L2145-8; L2145-9; L2145-10; L2145-11; L2145-12; L2145-13; R2145-3; R2145-4; R2145-5; R2145-6; R2145-7; R2145-8; L2145-5
 94900	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Attributions complémentaire entreprise. -300 salariés	L2143-22
 95000	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Conditions de désignation	L2143-1; L2143-2; L2143-8; R2143-5; L2143-6; L2143-3; L2143-4; L2143-5; L2143-7; D2143-4; L2143-12; R2143-3; R2143-2; R2143-1
@@ -1046,13 +1046,13 @@ export default `
 100900	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Actions en justice	L1134-6; L1134-8; L1134-9; L1134-10; L1134-7; L1134-1; L1134-3; L1134-4; L1134-5; L1134-2
 101000	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Champ d'application	L1131-2; L1131-1
 101100	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Différences de traitement autorisées	L1133-1; L1133-2; L1133-3; L1133-4; L1133-5; L1133-6
-101210	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Exercice du droit de grève	L1132-2; 
-101230	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > jury	L1132-3-1; 
+101210	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Exercice du droit de grève	L1132-2;
+101230	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > jury	L1132-3-1;
 101250	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > lanceur d'alerte	L1132-3-3;
 101260	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Nullité de l'acte discriminatoire	 L1132-4;
-101200	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Principe de non-discrimination	L1132-1; 
-101240	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > refus mutation Etat discriminant l'homosexualité	L1132-3-2; 
-101220	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > témoin d'un agissement discriminatoire	L1132-3; 
+101200	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Principe de non-discrimination	L1132-1;
+101240	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > refus mutation Etat discriminant l'homosexualité	L1132-3-2;
+101220	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > témoin d'un agissement discriminatoire	L1132-3;
 101500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > garantie disciplinaire	L1332-1; L1332-2; L1332-3; R1332-1; R1332-2; R1332-3
 101800	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > Sanction disciplinaire	L1331-1; L1331-2
 101900	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droits et liberté, corruption > Droits et libertés > Droits des personnes, libertés individuelles, collectives	L1121-1
@@ -1716,7 +1716,7 @@ export default `
 155439	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visites de reprise et de pré-reprise > Visite de pré reprise	R4624-29; R4624-30
 155440	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visites de reprise et de pré-reprise > Visite de reprise	R4624-31; R4624-32
 156105	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Accès au poste de travail: coordination des Services de santé	R4625-7
-156104	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Agrément du service de santé au travail	R4625-3; R4625-4; R4625-5; R4625-6; 
+156104	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Agrément du service de santé au travail	R4625-3; R4625-4; R4625-5; R4625-6;
 156112	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Communication entre l'entreprise de travail temporaire et l'entreprise utilisatrice 	R4625-18; R4625-19;R4625-20
 156111	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Dossier médical	R4625-17
 156107	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Inaptitude et poste à risque : coordination des services de santé	R4625-9

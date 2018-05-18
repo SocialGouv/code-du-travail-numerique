@@ -42,6 +42,13 @@ const themeBlue = {
   background: "white"
 };
 
+const BaselineBottom = styled.div`
+  font-size: 1.1em;
+  text-align: left;
+  padding-left: 30px;
+  margin-top: 50px;
+`;
+
 const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
@@ -63,7 +70,7 @@ const App = () => {
             </Title>
             <Baseline>
               Trouvez les réponses à vos questions sur le droit du travail
-              <h1>Votre question porte sur:</h1>
+              <BaselineBottom>Votre question porte sur:</BaselineBottom>
             </Baseline>
             <Route
               exact={true}
