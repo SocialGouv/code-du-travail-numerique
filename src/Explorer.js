@@ -56,7 +56,7 @@ class Explorer extends React.Component {
   constructor(props, ...args) {
     super(props, ...args);
     this.state = {
-      filters: [],
+      filter: [],
     };
     if (props.themeId) {
       // initalize with the given theme
@@ -128,7 +128,7 @@ class Explorer extends React.Component {
     const isLeaf = currentTheme.children.length === 0;
     return (
       <ExplorerContainer>
-        <ThemeFilter onFilterChange={this.onThemeFilterChange} />
+        <ThemeFilter onFilterChange={this.onThemeFilterChange} breadcrumbs={breadcrumbs} />
         <BreadCrumbs
           style={{ marginBottom: 10, marginLeft: 10 }}
           entries={breadcrumbs}

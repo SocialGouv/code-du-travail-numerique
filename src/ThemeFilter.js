@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-const filters = {
-  contract: {
+// Permet de filtrer la liste des catégories.
+
+const filters = [
+  {
+    id: "contract",
     label: "Choisissez votre type de contrat : ",
+    tag: "select",
+    showInPath: "Contrat de travail",
     options: [
       {
         type: 'contract',
         value: null,
-        label: 'Tous',
+        label: '----',
         ids: [],
       },
       {
@@ -30,8 +35,34 @@ const filters = {
         ids: [51400, 51800, 52100],
       },
     ]
-  }
-};
+  },
+  {
+    id: "duration",
+    label: "Précisez la durée de votre contrat de travail : ",
+    tag: "select",
+    showInPath: "Emploi - Formation > Apprentissage > Examen",
+    options: [
+      {
+        type: 'duration',
+        value: null,
+        label: '----',
+        ids: [],
+      },
+      {
+        type: 'duration',
+        value: 'full-time',
+        label: 'Temps plein',
+        ids: [156101, 156102, 156103],
+      },
+      {
+        type: 'duration',
+        value: 'partial-time',
+        label: 'Temps partiel',
+        ids: [58100],
+      },
+    ]
+  },
+];
 
 const StyledThemeFilter = styled.div`
   display: block;
@@ -44,16 +75,32 @@ class ThemeFilter extends React.Component {
   }
 
   render() {
+
+    // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
+    let currentPath = this.props.breadcrumbs.map(elem => { return elem.title; }).join(' > ');
+
+    // Render some filters as <select> elements depending on the current path.
+    let content = filters.map(item => {
+      if (currentPath && currentPath.startsWith(item.showInPath)) {
+        return (
+          <div key={item.id}>
+            <label htmlFor={item.id}>{item.label}</label>
+            <select id={item.id} onChange={this.handleChange}>
+              {item.options.map(option => (
+                <option key={option.value} value={JSON.stringify(option)}>{option.label}</option>
+              ))}
+            </select>
+          </div>
+        )
+      }
+    });
+
     return (
       <StyledThemeFilter>
-        <label for="contract">{filters.contract.label}</label>
-        <select id="contract" onChange={this.handleChange}>
-          {filters.contract.options.map(item => (
-            <option key={item.value} value={JSON.stringify(item)}>{item.label}</option>
-          ))}
-        </select>
+        {content}
       </StyledThemeFilter>
     );
+
   }
 
 };
