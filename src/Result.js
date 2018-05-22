@@ -123,6 +123,7 @@ const Result = ({ onResetClick, theme }) => {
         <li>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.legifrance.gouv.fr/initRechAccordsEntreprise.do"
           >
             Trouver votre accord d'entreprise <Feather.Search size="12" />
@@ -160,18 +161,19 @@ const Result = ({ onResetClick, theme }) => {
           <li>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="http://grand-est.direccte.gouv.fr/Presentation-de-l-unite-departementale-Nous-contacter-17713"
             >
               Services de renseignement <Feather.ExternalLink size="12" />
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://www.ast67.org/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.ast67.org/">
               Médecine du travail <Feather.ExternalLink size="12" />
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://www.defenseurdesdroits.fr/office">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.defenseurdesdroits.fr/office">
               Défenseur des droits <Feather.ExternalLink size="12" />
             </a>
           </li>
