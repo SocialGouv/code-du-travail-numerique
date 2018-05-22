@@ -75,10 +75,11 @@ class ThemeFilter extends React.Component {
              
             <select id={item.id} onChange={this.handleChange}>
               {item.options.map(option => {
-                option.ids = option.ids.concat(item.idsCommonToAll)
-                option.showInPath = item.showInPath
+                let newOption = JSON.parse(JSON.stringify(option));  // Deep copy.
+                newOption.ids = newOption.ids.concat(item.idsCommonToAll)
+                newOption.showInPath = item.showInPath
                 return (
-                  <option key={option.value} value={JSON.stringify(option)}>{option.label}</option>
+                  <option key={newOption.value} value={JSON.stringify(newOption)}>{newOption.label}</option>
                 )
               })}
             </select>
