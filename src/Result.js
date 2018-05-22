@@ -182,8 +182,8 @@ const Result = ({ onResetClick, theme }) => {
             <Feather.Link size="20" /> Liens et outils
           </BlockTitle>
           <li>
-            <a href="#">
-              Lien 1 <Feather.ExternalLink size="12" />
+            <a href="https://socialgouv.github.io/faq-code-du-travail/">
+              Question-Réponse des services de renseignement <Feather.ExternalLink size="12" />
             </a>
           </li>
           <li>
