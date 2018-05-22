@@ -124,6 +124,7 @@ class Explorer extends React.Component {
         if (element.children) {
           return (element.children = element.children.filter(recursiveFilter)).length
         }
+        return false;
       });
     };
 
