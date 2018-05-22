@@ -86,7 +86,7 @@ class ThemeFilter extends React.Component {
         )
       });
 
-    if (content.length === 1 && !content[0]) {
+    if (!content.length) {
       return (null)  // Hide filters if there is nothing to show.
     }
 
