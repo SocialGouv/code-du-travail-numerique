@@ -94,6 +94,7 @@ class Explorer extends React.Component {
     }));
     // Reset filter.
     if (this.state.filter.showInPath) {
+      // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
       let currentPath = this.state.selection.slice(0, idx).map(elem => { return elem.title; }).join(' > ');
       if (!currentPath.startsWith(this.state.filter.showInPath)) {
         this.setState({ filter: {} });

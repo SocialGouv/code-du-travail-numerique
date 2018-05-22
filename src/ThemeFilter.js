@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 // Permet de filtrer la liste des catégories.
 
-// TODO: find a way to avoid duplication of showInPath props.
 const filters = [
   {
     id: "contract",
@@ -12,32 +11,24 @@ const filters = [
     showInPath: "Contrat de travail",
     options: [
       {
-        type: 'contract',
         value: null,
         label: '----',
         ids: [],
-        showInPath: "Contrat de travail",
       },
       {
-        type: 'contract',
         value: 'cdi',
         label: 'Contrat à durée indéterminée (CDI)',
         ids: [600, 1900, 3720],
-        showInPath: "Contrat de travail",
       },
       {
-        type: 'contract',
         value: 'cdd',
         label: 'Contrat à durée déterminée (CDD)',
         ids: [49700, 50200, 51000],
-        showInPath: "Contrat de travail",
       },
       {
-        type: 'contract',
         value: 'ctt',
         label: 'Contrat à temps partiel (CTT)',
         ids: [51400, 51800, 52100],
-        showInPath: "Contrat de travail",
       },
     ]
   },
@@ -48,25 +39,19 @@ const filters = [
     showInPath: "Emploi - Formation > Apprentissage > Examen",
     options: [
       {
-        type: 'duration',
         value: null,
         label: '----',
         ids: [],
-        showInPath: "Emploi - Formation > Apprentissage > Examen",
       },
       {
-        type: 'duration',
         value: 'full-time',
         label: 'Temps plein',
         ids: [156101, 156102, 156103],
-        showInPath: "Emploi - Formation > Apprentissage > Examen",
       },
       {
-        type: 'duration',
         value: 'partial-time',
         label: 'Temps partiel',
         ids: [58100],
-        showInPath: "Emploi - Formation > Apprentissage > Examen",
       },
     ]
   },
@@ -94,9 +79,12 @@ class ThemeFilter extends React.Component {
           <div key={item.id}>
             <label htmlFor={item.id}>{item.label}</label>
             <select id={item.id} onChange={this.handleChange}>
-              {item.options.map(option => (
-                <option key={option.value} value={JSON.stringify(option)}>{option.label}</option>
-              ))}
+              {item.options.map(option => {
+                option.showInPath = item.showInPath
+                return (
+                  <option key={option.value} value={JSON.stringify(option)}>{option.label}</option>
+                )
+              })}
             </select>
           </div>
         )
