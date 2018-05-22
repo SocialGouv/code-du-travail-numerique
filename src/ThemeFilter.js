@@ -62,10 +62,13 @@ class ThemeFilter extends React.Component {
     // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
     let currentPath = this.props.breadcrumbs.map(elem => { return elem.title; }).join(' > ');
 
-    // Render some filters as <select> elements.
-    let content = filters.map(item => {
-      // Show filters depending on the current path.
-      if (currentPath && currentPath.startsWith(item.showInPath)) {
+    let content = filters
+      .filter(item => {
+        // Only show filters that can be displayed in the current path.
+        return currentPath && currentPath.startsWith(item.showInPath);
+      })
+      .map(item => {
+        // Render some filters as <select> elements.
         return (
           <div key={item.id}>
             <label htmlFor={item.id}>{item.label}</label>
@@ -81,8 +84,7 @@ class ThemeFilter extends React.Component {
             </select>
           </div>
         )
-      }
-    });
+      });
 
     if (content.length === 1 && !content[0]) {
       return (null)  // Hide filters if there is nothing to show.
