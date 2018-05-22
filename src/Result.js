@@ -76,9 +76,9 @@ const Result = ({ onResetClick, theme }) => {
   const hasFaqEntry = hasFaq(theme);
   const hasFicheEntry = hasFiche(theme);
   return (
-    <div style={{ marginTop: 20 }}>
+    <div style={{ marginTop: 20 }} role="article">
       {(hasFaqEntry || hasFicheEntry) && (
-          <div>
+          <React.Fragment>
             <SectionSeparator>F.A.Q. et fiches</SectionSeparator>
 
             {hasFaqEntry && (
@@ -98,7 +98,7 @@ const Result = ({ onResetClick, theme }) => {
                 <Fiches theme={theme} />
               </Block>
             )}
-          </div>
+          </React.Fragment>
         )}
 
       <SectionSeparator>Textes officiels</SectionSeparator>

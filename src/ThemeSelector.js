@@ -6,7 +6,7 @@ import styled from "styled-components";
 // prend un noeud de "syntax-tree" {children:[]} en entrée
 //
 
-const ThemeButton = styled.a`
+const ThemeButton = styled.button`
   display: inline-block;
   border: 1px solid #ddd;
   background-color: #efefef;
@@ -27,7 +27,12 @@ const ThemeSelectorContainer = styled.div`text-align: center;`;
 const ThemeSelector = ({ node, onSelect }) => (
   <ThemeSelectorContainer>
     {node.children.map(child => (
-      <ThemeButton key={child.title} onClick={() => onSelect(child)}>
+      <ThemeButton
+        role="button"
+        tabIndex={0}
+        key={child.title}
+        onClick={() => onSelect(child)}
+      >
         {child.title}
       </ThemeButton>
     ))}
