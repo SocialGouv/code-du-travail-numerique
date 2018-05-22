@@ -92,11 +92,12 @@ class Explorer extends React.Component {
     this.setState(curState => ({
       selection: curState.selection.slice(0, idx)
     }));
-    // Reset filter.
+    // Check if the filter must be canceled.
     if (this.state.filter.showInPath) {
       // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
       let currentPath = this.state.selection.slice(0, idx).map(elem => { return elem.title; }).join(' > ');
       if (!currentPath.startsWith(this.state.filter.showInPath)) {
+        // Cancel filter.
         this.setState({ filter: {} });
       }
     }
@@ -136,12 +137,12 @@ class Explorer extends React.Component {
     const isLeaf = currentTheme.children.length === 0;
     return (
       <ExplorerContainer>
-        <ThemeFilter onFilterChange={this.onThemeFilterChange} breadcrumbs={breadcrumbs} />
         <BreadCrumbs
           style={{ marginBottom: 10, marginLeft: 10 }}
           entries={breadcrumbs}
           onClick={this.onBreadCrumbClick}
         />
+        <ThemeFilter onFilterChange={this.onThemeFilterChange} breadcrumbs={breadcrumbs} />
         <ThemeSelector node={currentTheme} onSelect={this.onSelectNode} />
         {isLeaf && <Result onResetClick={this.reset} theme={currentTheme} />}
         {!isStarted && <Intro />}

@@ -6,7 +6,7 @@ import styled from "styled-components";
 const filters = [
   {
     id: "contract",
-    label: "Choisissez votre type de contrat : ",
+    label: "Quel est le type de votre contrat ?",
     tag: "select",
     showInPath: "Contrat de travail",
     idsCommonToAll: [29700, 29400, 29500, 29900, 29300, 29800, 30000, 27900, 28100, 28000, 28200, 28300, 28400, 28500, 28600, 28700, 28800, 28900, 29000, 29100, 27400, 27500, 27600, 27700, 27800, 30100, 30200, 30300, 30400, 30500, 30600, 30700, 30800, 30900, 31000, 31100, 31200, 31300, 31500, 31400, 31600, 32600, 31700, 31800, 31900, 32000, 32100, 32200, 32300, 32400, 32500, 3700, 710, 720, 730, 740, 750, 760, 770, 780, 2700, 32800, 32900, 33000, 33100, 33200, 33300, 33400, 33500, 33600, 33700, 33800, 33900, 34000, 34100, 34200, 34300, 34400, 34500, 34600, 35000, 34700, 34800, 34900, 35100, 35200, 35300, 35400, 35500, 35600, 35700, 35800, 35900, 36000, 36100, 36200, 36300, 36400, 36500, 36600, 36700, 36800, 37000, 37100, 37200, 37300, 37400, 37500, 37600, 37700, 37900, 37800, 38000, 38100, 38200, 38300, 38400, 38500, 38600, 38700, 38800, 38900, 39000, 39100, 39200, 39300, 39400, 39500, 39600, 39700, 39800, 39900, 40000, 40100, 40200, 40300, 40400, 40500, 40600, 40700, 120, 1800],
@@ -33,7 +33,7 @@ const filters = [
       },
       {
         value: 'foreigner',
-        label: 'Salariés étrangers',
+        label: 'Contrat pour salariés étrangers',
         ids: [46400, 46500, 46600, 46700, 46800, 46900, 47000, 47100, 47200, 47300, 47400, 47500, 47600, 47700, 47800, 47900, 48000, 48100, 48200, 48300, 48400, 48500, 48600, 48700, 48800, 48900, 49000, 53500, 53600, 53700, 53800, 53900, 54000, 54100, 54200, 54300, 54400, 54500, 54600, 54700, 54800, 54900],
       },
       {
@@ -47,6 +47,8 @@ const filters = [
 
 const StyledThemeFilter = styled.div`
   display: block;
+  margin: 0 0 20px 0;
+  padding: 10px;
 `;
 
 class ThemeFilter extends React.Component {
@@ -60,12 +62,14 @@ class ThemeFilter extends React.Component {
     // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
     let currentPath = this.props.breadcrumbs.map(elem => { return elem.title; }).join(' > ');
 
-    // Render some filters as <select> elements depending on the current path.
+    // Render some filters as <select> elements.
     let content = filters.map(item => {
+      // Show filters depending on the current path.
       if (currentPath && currentPath.startsWith(item.showInPath)) {
         return (
           <div key={item.id}>
             <label htmlFor={item.id}>{item.label}</label>
+             
             <select id={item.id} onChange={this.handleChange}>
               {item.options.map(option => {
                 option.ids = option.ids.concat(item.idsCommonToAll)
@@ -79,6 +83,10 @@ class ThemeFilter extends React.Component {
         )
       }
     });
+
+    if (content.length === 1 && !content[0]) {
+      return (null)  // Hide filters if there is nothing to show.
+    }
 
     return (
       <StyledThemeFilter>
