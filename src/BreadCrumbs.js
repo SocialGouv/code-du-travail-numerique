@@ -3,18 +3,30 @@ import styled from "styled-components";
 
 // génère le fil d'ariane depuis une liste type [{title: 'page 1'}, {title: 'page 2'}]
 
-const StyledBread = styled.span`
+const StyledBread = styled.button`
   cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: black;
   text-decoration: ${props => props.underline && "underline"};
 `;
 
 const BreadCrumbEntry = ({ title, onClick, isLast, separator = " > " }) => (
-  <span>
-    <StyledBread underline={!isLast} onClick={onClick} title={title}>
+  <React.Fragment>
+    <StyledBread
+      role={isLast ? null : "button"}
+      tabIndex={isLast ? null : 0}
+      disabled={isLast}
+      underline={!isLast}
+      onClick={onClick}
+      title={title}
+    >
       {title}
     </StyledBread>
     {!isLast && separator}
-  </span>
+  </React.Fragment>
 );
 
 const BreadCrumbs = ({ entries, onClick, style }) => {

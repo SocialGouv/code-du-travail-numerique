@@ -43,7 +43,7 @@ const themeBlue = {
 };
 
 const BaselineBottom = styled.div`
-  font-size: 1.1em;
+  font-size: 1.4em;
   text-align: left;
   padding-left: 30px;
   margin-top: 50px;
@@ -64,18 +64,22 @@ const App = () => {
           >
             version bêta
           </GitHubForkRibbon>
-          <AppContainer>
+          <AppContainer role="main">
             <Title onClick={() => explorer.reset()}>
               Code du travail numérique
             </Title>
             <Baseline>
               Trouvez les réponses à vos questions sur le droit du travail
-              <BaselineBottom>Votre question porte sur:</BaselineBottom>
             </Baseline>
             <Route
               exact={true}
               path={`/`}
-              render={props => <Explorer ref={node => (explorer = node)} />}
+              render={props => (
+                <React.Fragment>
+                  <BaselineBottom>Votre question porte sur:</BaselineBottom>
+                  <Explorer ref={node => (explorer = node)} />
+                </React.Fragment>
+              )}
             />
             <Route
               path={`/themes/:themeId`}
