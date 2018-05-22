@@ -41,8 +41,6 @@ const Block = styled.div`
   }
 `;
 
-const color = "#0e4d52";
-
 const BlockTitle = styled.div`
   font-size: 1.2em;
   color: ${props => props.theme.primary};

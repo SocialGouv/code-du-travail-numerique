@@ -26,14 +26,6 @@ const AppContainer = styled.div`
   margin: 0 auto;
 `;
 
-const themeGreen = {
-  primary: "#0e4d52",
-  light1: "#99c3c5",
-  light2: "#e2f0f1",
-  light3: "#fafdfd",
-  background: "white"
-};
-
 const themeBlue = {
   primary: "#000",
   light1: "#e4f2ff",
