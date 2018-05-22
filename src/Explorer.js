@@ -95,7 +95,7 @@ class Explorer extends React.Component {
     // Check if the filter must be canceled.
     if (this.state.filter.showInPath) {
       // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
-      let currentPath = this.state.selection.slice(0, idx).map(elem => { return elem.title; }).join(' > ');
+      let currentPath = this.state.selection.slice(0, idx).map(elem => elem.title).join(' > ');
       if (!currentPath.startsWith(this.state.filter.showInPath)) {
         // Cancel filter.
         this.setState({ filter: {} });

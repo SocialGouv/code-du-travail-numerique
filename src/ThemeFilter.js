@@ -60,7 +60,7 @@ class ThemeFilter extends React.Component {
   render() {
 
     // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
-    let currentPath = this.props.breadcrumbs.map(elem => { return elem.title; }).join(' > ');
+    let currentPath = this.props.breadcrumbs.map(elem => elem.title).join(' > ');
 
     let content = filters
       .filter(item => {
