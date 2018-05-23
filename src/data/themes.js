@@ -413,9 +413,9 @@ export default `
 21100	Durée du travail et congés > Durée du travail > Repos et temps de pause > Repos quotidien	L3131-2; D3131-4; D3131-5; D3131-6; L3131-3; D3131-7; L3131-1; D3131-1; D3131-2; D3131-3; R3135-1
 21200	Durée du travail et congés > Durée du travail > Repos et temps de pause > Repos, jours fériés Moselle, Bas - Rhin, Haut - Rhin	R3134-1; R3134-2; R3134-3; R3134-4; D3134-5; L3134-1; L3134-2; L3134-3; L3134-4; L3134-5; L3134-6; L3134-7; L3134-8; L3134-9; L3134-10; L3134-11; L3134-12; L3134-13; L3134-14; L3134-15; L3134-16; R3135-4
 21400	Durée du travail et congés > Durée du travail > Repos et temps de pause > Temps de pause	L3121-17; L3121-16
-21500	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Temps partiel	L3123-17; L3123-18; L3123-19; L3123-20; L3123-21; L3123-22; L3123-24; L3123-25; L3123-23; L3123-32; L3123-26; L3123-28; L3123-29; L3123-30; L3123-31; L3123-27; D3123-2; D3123-3; L3123-2; L3123-1; L3123-6; L3123-7; L3123-8; L3123-9; L3123-10; L3123-3; L3123-5; L3123-11; L3123-12; L3123-13; L3123-14; L3123-15; L3123-16; L3123-4; R3123-1; R3124-8; R3124-9; R3124-10; R3124-5
-21600	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Travail de nuit	R3124-15; L3122-15; L3122-16; L3122-17; L3122-18; L3122-19; R3122-7; R3122-8; L3122-20; L3122-21; L3122-22; L3122-23; L3122-24; R3122-9; R3122-10; R3122-11; L3122-1; L3122-2; L3122-3; L3122-4; L3122-5; L3122-6; L3122-7; L3122-8; L3122-9; L3122-10; L3122-11; L3122-12; L3122-13; L3122-14; R3122-1; R3122-2; R3122-3; R3122-4; R3122-5; R3122-6; R3122-12; R3122-13; R3122-14; R3122-15
-21800	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Travail intermittent	R3124-8; R3124-5; L3123-38; D3123-4; L3123-33; L3123-34; L3123-35; L3123-36; L3123-37
+21500	Durée du travail et congés > Durée du travail > Temps partiel	L3123-17; L3123-18; L3123-19; L3123-20; L3123-21; L3123-22; L3123-24; L3123-25; L3123-23; L3123-32; L3123-26; L3123-28; L3123-29; L3123-30; L3123-31; L3123-27; D3123-2; D3123-3; L3123-2; L3123-1; L3123-6; L3123-7; L3123-8; L3123-9; L3123-10; L3123-3; L3123-5; L3123-11; L3123-12; L3123-13; L3123-14; L3123-15; L3123-16; L3123-4; R3123-1; R3124-8; R3124-9; R3124-10; R3124-5
+21600	Durée du travail et congés > Durée du travail > Travail de nuit	R3124-15; L3122-15; L3122-16; L3122-17; L3122-18; L3122-19; R3122-7; R3122-8; L3122-20; L3122-21; L3122-22; L3122-23; L3122-24; R3122-9; R3122-10; R3122-11; L3122-1; L3122-2; L3122-3; L3122-4; L3122-5; L3122-6; L3122-7; L3122-8; L3122-9; L3122-10; L3122-11; L3122-12; L3122-13; L3122-14; R3122-1; R3122-2; R3122-3; R3122-4; R3122-5; R3122-6; R3122-12; R3122-13; R3122-14; R3122-15
+21800	Durée du travail et congés > Durée du travail > Travail intermittent	R3124-8; R3124-5; L3123-38; D3123-4; L3123-33; L3123-34; L3123-35; L3123-36; L3123-37
 21000	Durée du travail et congés > Durée du travail > Travail du dimanche	L3132-27-2; L3132-29; L3132-30; R3132-22; R3132-23; L3132-28; L3132-4; L3132-5; L3132-6; L3132-7; L3132-8; L3132-9; L3132-10; L3132-11; R3132-1; R3132-2; R3132-3; R3132-4; R3132-9; R3132-10; R3132-11; R3132-12; R3132-13; R3132-14; R3132-15; L3132-14; L3132-15; L3132-16; L3132-17; L3132-18; L3132-19; L3132-26; L3132-26-1; L3132-27; L3132-27-1; R3132-21; L3132-20; L3132-21; L3132-22; L3132-23; R3132-16; R3132-17; R3132-19; R3132-20; R3132-20-1; L3132-12; L3132-13; R3132-5; R3132-6; R3132-7; R3132-8; L3132-24; L3132-25; L3132-25-1; L3132-25-2; L3132-25-3; L3132-25-4; L3132-25-5; L3132-25-6; R3132-21-1; L3132-1; L3132-2; L3132-3; L3132-3-1; R3135-2
 16000	Durée du travail et congés > Spécificités jeunes > Congés annuels > nombre jours de congé, indemnité Décret	L3164-9
 16100	Durée du travail et congés > Spécificités jeunes > Congés annuels > Pénal: Non-respect L3164-8	R3165-6
@@ -425,34 +425,34 @@ export default `
 16500	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Pénal: Non-respect L3162-3	R3165-2
 16700	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Temps de formation	L3162-2
 16600	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Temps Travail effectif ininterrompu maxi	L3162-3
-16800	Durée du travail et congés > Spécificités jeunes >Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
-16900	Durée du travail et congés > Spécificités jeunes >Définition > jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
-17000	Durée du travail et congés > Spécificités jeunes >Jours fériés > Industries en continue	L3164-7
-17100	Durée du travail et congés > Spécificités jeunes >Jours fériés > Non travaillés	L3164-6
-17200	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-6	R3165-4
-17300	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-7 + décret	R3165-5
-17400	Durée du travail et congés > Spécificités jeunes >Jours fériés > Secteurs autorisés emploi jeunes	R3164-2
-17500	Durée du travail et congés > Spécificités jeunes >Jours fériés > Secteurs particuliers - Décret	L3164-8
-17700	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > 2 jours consécutifs, dérogations	L3164-2
-17800	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Apprentis dimanche certains secteurs	L3164-5
-17900	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Emploi apprentis - 18 ans	R3164-1
-18000	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Industries bénéficiant dérogation- Décret	L3164-4
-18100	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Non application dérogation L3132-4 et 8	L3164-3
-18200	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Pénal: Non-respect L3164-2 à 4	R3135-5
-18300	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Pénal: Non-respect L3164-5	R3165-3
-18400	Durée du travail et congés > Spécificités jeunes >Repos quotidien > Durée	L3164-1
-17600	Durée du travail et congés > Spécificités jeunes >Repos quotidien > Pénal: Non-respect L3164-1	R3165-7
-18500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Avis Conseil Supérieur prévention risques professionnels	R3163-6
-18600	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Boulangerie, pâtisserie	R3163-3
-18700	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Décision Inspecteur du travail	R3163-5
-18800	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Définition travail de nuit jeunes	L3163-1
-19000	Durée du travail et congés > Spécificités jeunes >Travail de nuit > hôtels, cafés restaurants (HCR)	R3163-2
-18900	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Interdiction, dérogations Inspection du Travail - décret	L3163-2
-19100	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Pénal: Non-respect L3163-1 et 2	R3124-15
-19200	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Pénal: Non-respect L3163-3	R3124-16
-19300	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Secteurs dérogatoires	R3163-1
-19400	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Spectacles, courses hippiques	R3163-4
-19500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Travaux extrême urgence	L3163-3
+16800	Durée du travail et congés > Spécificités jeunes > Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
+16900	Durée du travail et congés > Spécificités jeunes > Définition > jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
+17000	Durée du travail et congés > Spécificités jeunes > Jours fériés > Industries en continue	L3164-7
+17100	Durée du travail et congés > Spécificités jeunes > Jours fériés > Non travaillés	L3164-6
+17200	Durée du travail et congés > Spécificités jeunes > Jours fériés > Pénal: Non-respect L3164-6	R3165-4
+17300	Durée du travail et congés > Spécificités jeunes > Jours fériés > Pénal: Non-respect L3164-7 + décret	R3165-5
+17400	Durée du travail et congés > Spécificités jeunes > Jours fériés > Secteurs autorisés emploi jeunes	R3164-2
+17500	Durée du travail et congés > Spécificités jeunes > Jours fériés > Secteurs particuliers - Décret	L3164-8
+17700	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > 2 jours consécutifs, dérogations	L3164-2
+17800	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Apprentis dimanche certains secteurs	L3164-5
+17900	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Emploi apprentis - 18 ans	R3164-1
+18000	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Industries bénéficiant dérogation- Décret	L3164-4
+18100	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Non application dérogation L3132-4 et 8	L3164-3
+18200	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Pénal: Non-respect L3164-2 à 4	R3135-5
+18300	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Pénal: Non-respect L3164-5	R3165-3
+18400	Durée du travail et congés > Spécificités jeunes > Repos quotidien > Durée	L3164-1
+17600	Durée du travail et congés > Spécificités jeunes > Repos quotidien > Pénal: Non-respect L3164-1	R3165-7
+18500	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Avis Conseil Supérieur prévention risques professionnels	R3163-6
+18600	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Boulangerie, pâtisserie	R3163-3
+18700	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Décision Inspecteur du travail	R3163-5
+18800	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Définition travail de nuit jeunes	L3163-1
+19000	Durée du travail et congés > Spécificités jeunes > Travail de nuit > hôtels, cafés restaurants (HCR)	R3163-2
+18900	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Interdiction, dérogations Inspection du Travail - décret	L3163-2
+19100	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Pénal: Non-respect L3163-1 et 2	R3124-15
+19200	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Pénal: Non-respect L3163-3	R3124-16
+19300	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Secteurs dérogatoires	R3163-1
+19400	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Spectacles, courses hippiques	R3163-4
+19500	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Travaux extrême urgence	L3163-3
 55100	Emploi - Formation > Aide au maintien dans l'emploi > Activité partielle > Activité partielle	R5122-2; R5122-4; R5122-5; R5122-1; R5122-3; R5122-6; R5122-7; R5122-8; R5122-9; R5122-10; R5122-11; R5122-12; D5122-13; R5122-14; R5122-16; R5122-17; R5122-18; R5122-19; D5221-2-1; L5122-1; L5122-2; L5122-4; L5122-5; R5122-20; R5122-21; R5122-22; R5122-23; R5122-24; R5122-25; R5122-26
 55200	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > Contrat d'apprentissage	R6261-3; R6261-4; R6261-5; R6261-6; R6261-7; R6261-8
 55900	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > dispositions générales	R6261-1; R6261-2
