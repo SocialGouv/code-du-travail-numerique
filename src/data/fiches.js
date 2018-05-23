@@ -1409,8 +1409,8 @@ export default [
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/",
-    title: "La démission"
-    themes:[2000],
+    title: "La démission",
+    themes:[2000]
   },
   {
     source: "Ministère du travail",
