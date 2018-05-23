@@ -94,13 +94,18 @@ class Explorer extends React.Component {
     }));
     // Check if the filter must be canceled.
     if (this.state.filter.showInPath) {
-      // Current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
-      let currentPath = this.state.selection.slice(0, idx).map(elem => elem.title).join(' > ');
+      let updatedSelection = this.state.selection.slice(0, idx);
+      let currentPath = this.getCurrentPath(updatedSelection);
       if (!currentPath.startsWith(this.state.filter.showInPath)) {
         // Cancel filter.
         this.setState({ filter: {} });
       }
     }
+  };
+
+  getCurrentPath = (selection = this.state.selection) => {
+    // Return the current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
+    return selection.map(elem => elem.title).join(' > ');
   };
 
   getCurrentTheme = () => {
@@ -135,6 +140,7 @@ class Explorer extends React.Component {
     const breadcrumbs = this.state.selection;
     const isStarted = breadcrumbs.length;
     const currentTheme = this.getCurrentTheme();
+    const currentPath = this.getCurrentPath();
     const isLeaf = currentTheme.children.length === 0;
     return (
       <ExplorerContainer>
@@ -143,8 +149,8 @@ class Explorer extends React.Component {
           entries={breadcrumbs}
           onClick={this.onBreadCrumbClick}
         />
-        <ThemeFilter onFilterChange={this.onThemeFilterChange} breadcrumbs={breadcrumbs} />
-        <ThemeSelector node={currentTheme} onSelect={this.onSelectNode} />
+        <ThemeFilter onFilterChange={this.onThemeFilterChange} currentPath={currentPath} />
+        <ThemeSelector node={currentTheme} onSelect={this.onSelectNode} currentPath={currentPath} />
         {isLeaf && <Result onResetClick={this.reset} theme={currentTheme} />}
         {!isStarted && <Intro />}
         {(isStarted && !isLeaf && <Teaser />) || null}

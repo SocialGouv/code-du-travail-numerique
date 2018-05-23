@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import ordering from "./data/themes-ordering.js";
+
+
 //
 // boutons de selection du thème
 // prend un noeud de "syntax-tree" {children:[]} en entrée
@@ -24,19 +27,61 @@ const ThemeButton = styled.button`
 
 const ThemeSelectorContainer = styled.div`text-align: center;`;
 
-const ThemeSelector = ({ node, onSelect }) => (
-  <ThemeSelectorContainer>
-    {node.children.map(child => (
-      <ThemeButton
-        role="button"
-        tabIndex={0}
-        key={child.title}
-        onClick={() => onSelect(child)}
-      >
-        {child.title}
-      </ThemeButton>
-    ))}
-  </ThemeSelectorContainer>
-);
+const GroupContainer = styled.div`padding: 5px 0;`;
+
+
+class ThemeSelector extends React.Component {
+
+  render() {
+
+    // Props.
+    let currentPath = this.props.currentPath;
+    let node = this.props.node;
+    let onSelect = this.props.onSelect;
+
+    let groups = [];
+    let nodeOrdering = ordering[currentPath];
+
+    // Do we have a custom order for items of the current path?
+    if (nodeOrdering) {
+      // If so, order `node.children` according to `themes-ordering.js`.
+      nodeOrdering.forEach(group => {
+        groups.push(
+          group
+            // Replace the title found in `themes-ordering.js` by the original node child.
+            .map(title => node.children.find(child => child.title.toLowerCase() === title.toLowerCase()))
+            // We may find `undefined` elements when a filter has been applied: remove them.
+            .filter(elem => elem !== undefined)
+        )
+      });
+    }
+
+    if (!groups.length) {
+      // Use only 1 group when no ordering has been explicitly defined.
+      groups.push(node.children);
+    }
+
+    return (
+      <ThemeSelectorContainer>
+        {groups.map(group => (
+          <GroupContainer>
+            {group.map(child => (
+              <ThemeButton
+                role="button"
+                tabIndex={0}
+                key={child.title}
+                onClick={() => onSelect(child)}
+              >
+                {child.title}
+              </ThemeButton>
+            ))}
+          </GroupContainer>
+        ))}
+      </ThemeSelectorContainer>
+    )
+
+  }
+
+};
 
 export default ThemeSelector;
