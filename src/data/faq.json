@@ -3,7 +3,7 @@
     "reponse":
       "La durée quotidienne maximale est de 10 heures. Une convention ou un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche peut prévoir le dépassement de cette durée dans la limite de 12 heures. Des dérogations peuvent également être accordées par l’Inspection du Travail, ce en cas d’urgence.",
     "theme": "Durée du travail",
-    "branche": "TEST,
+    "branche": "TEST",
     "themes": [20400],
     "question": "Combien d'heures puis-je occuper mes salariés au plus par jour?"
   },{
