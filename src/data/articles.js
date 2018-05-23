@@ -56,11 +56,8 @@ export default {
     texte:
       "Le fait de méconnaître les dispositions relatives à la durée légale hebdomadaire et à la durée quotidienne maximale du travail prévues par les articles L. 3121-10 et L. 3121-34 ainsi que celles des décrets prévus par les articles L. 3121-52 et L. 3122-46, est puni de l'amende prévue pour les contraventions de la quatrième classe. Les contraventions donnent lieu à autant d'amendes qu'il y a de salariés indûment employés."
       },
-      
    "D3121-7": {
     texte:
       "Les recours hiérarchiques contre les décisions prévues aux articles D. 3121-5 et D. 3121-6 sont formés devant le directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi dans le délai d'un mois suivant la date à laquelle les intéressés en ont reçu notification."
-
+      },
 };
-
-//
