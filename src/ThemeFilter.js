@@ -28,7 +28,7 @@ const filters = [
       },
       {
         value: 'ctt',
-        label: 'Contrat à temps partiel (CTT)',
+        label: 'Contrat de travail temporaire (CTT)',
         ids: [51300, 51400, 51500, 51600, 51700, 51800, 51900, 52000, 52100, 52200, 52300, 52400, 52500, 52600, 52700, 52800, 52900, 53000, 53100, 53200, 53300, 53400],
       },
       {
