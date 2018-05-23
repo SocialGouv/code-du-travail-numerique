@@ -32,6 +32,34 @@ const GroupContainer = styled.div`padding: 5px 0;`;
 
 class ThemeSelector extends React.Component {
 
+  getOrderedChildren = (children, currentPath) => {
+
+    let groups = [];
+    let nodeOrdering = ordering[currentPath];
+
+    // Do we have a custom order for items of the current path?
+    if (nodeOrdering) {
+      // If so, order `children` according to `themes-ordering.js`.
+      nodeOrdering.forEach(group => {
+        groups.push(
+          group
+            // Replace the title found in `themes-ordering.js` by the original node child.
+            .map(title => children.find(child => child.title.toLowerCase() === title.toLowerCase()))
+            // We may find `undefined` elements when a filter has been applied: remove them.
+            .filter(elem => elem !== undefined)
+        )
+      });
+    }
+
+    if (groups.length) {
+      return groups;
+    }
+
+    groups.push(children);  // Otherwise, use only 1 group.
+    return groups;
+
+  }
+
   render() {
 
     // Props.
@@ -39,27 +67,7 @@ class ThemeSelector extends React.Component {
     let node = this.props.node;
     let onSelect = this.props.onSelect;
 
-    let groups = [];
-    let nodeOrdering = ordering[currentPath];
-
-    // Do we have a custom order for items of the current path?
-    if (nodeOrdering) {
-      // If so, order `node.children` according to `themes-ordering.js`.
-      nodeOrdering.forEach(group => {
-        groups.push(
-          group
-            // Replace the title found in `themes-ordering.js` by the original node child.
-            .map(title => node.children.find(child => child.title.toLowerCase() === title.toLowerCase()))
-            // We may find `undefined` elements when a filter has been applied: remove them.
-            .filter(elem => elem !== undefined)
-        )
-      });
-    }
-
-    if (!groups.length) {
-      // Use only 1 group when no ordering has been explicitly defined.
-      groups.push(node.children);
-    }
+    let groups = this.getOrderedChildren(node.children, currentPath);
 
     return (
       <ThemeSelectorContainer>
