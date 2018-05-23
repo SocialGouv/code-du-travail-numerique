@@ -1410,6 +1410,7 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/",
     title: "La démission"
+    themes:[2000],
   },
   {
     source: "Ministère du travail",
@@ -1439,13 +1440,14 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/",
-    title: "Le droit aux allocations chômage du salarié démissionnaire"
+      "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/article/le-droit-aux-allocations-chomage-du-salarie-demissionnaire",
+    title: "Le droit aux allocations chômage du salarié démissionnaire",
+    themes:[2000]
   },
   {
     source: "service-public.fr",
     href: "=https://www.service-public.fr/particuliers/vosdroits/N518",
     title: "Représentation du personnel dans l'entreprise",
-    themes: [41, 42, 43]
+    themes: []
   }
 ];
