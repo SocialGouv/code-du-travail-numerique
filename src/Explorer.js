@@ -68,7 +68,7 @@ class Explorer extends React.Component {
   }
 
   reset = () => {
-    this.setState({ selection: [] });
+    this.setState({ selection: [], filter: {} });
   };
 
   onThemeFilterChange = (filter) => {
