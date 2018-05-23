@@ -1,6 +1,5 @@
 export default `
 
-51200	Contrat de travail > Autres cas de mise à disposition > Portage salarial > Portage salarial	L1254-1; L1254-2; L1254-3; L1254-4; L1254-5; L1254-6; L1254-7; L1254-8; L1254-9; L1254-10; L1254-11; L1254-12; L1254-13; L1254-14; L1254-15; L1254-16; L1254-17; L1254-18; L1254-19; L1254-20; L1254-21; L1254-22; L1254-23; L1254-24; L1254-25; L1254-26; L1254-27; L1254-28; L1254-29; L1254-30; L1254-31
 6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attributions du conseil de prud'hommes (CPH) > Compétence en raison de la matière	L1411-1; L1411-2; L1411-3; L1411-4; L1411-5; L1411-6
 6700	Contrat de travail > Conseil de prud'hommes (CPH) > Attributions du conseil de prud'hommes (CPH) > Compétence territoriale	R1412-1; R1412-2; R1412-3; R1412-4; R1412-5
 6800	Contrat de travail > Conseil de prud'hommes (CPH) > Conseil Supérieur Prud'homie > Composition, mission	R1431-4; R1431-5; R1431-6; R1431-7; R1431-8; L1431-1; R1431-1; R1431-2; R1431-3; R1431-3-1
@@ -51,6 +50,50 @@ export default `
 11300	Contrat de travail > Conseil de prud'hommes (CPH) > Procédure > Stagiaires	L1454-5
 11500	Contrat de travail > Conseil de prud'hommes (CPH) > Procédure > Tribunal instance	R1451-3
 11600	Contrat de travail > Conseil de prud'hommes (CPH) > Voies de recours > Voies de recours	R1461-1; R1461-2; R1462-1; R1462-2; R1463-1; Annexe Tableau; R1471-1; R1471-2; D1462-3
+49100	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Actions en justice > Actions en justice	D1247-2; D1247-1; L1247-1
+49200	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Champ d'application > Champ d'application	L1241-1
+49300	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Conditions de recours	L1242-16; L1242-14; L1242-15
+49400	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Conditions d'exécution du contrat	L1242-4; L1242-2; D1242-2; D1242-3; D1242-1; L1242-6; L1242-5; D1242-4; D1242-5; L1242-1; L1242-3
+49500	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Fixation du terme, durée du contrat	L1242-8-2; L1242-9; D1242-7; D1242-6; L1242-8; L1242-8-1; L1242-7
+49600	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Forme, contenu, transmission du contrat	L1242-12-1; L1242-13; L1242-12
+49700	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Information sur postes à pourvoir	L1242-17
+49800	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Pénal	L1248-1; L1248-6; L1248-7; L1248-8; L1248-2; L1248-3; L1248-4; L1248-5
+49900	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Période d'essai	L1242-10; L1242-11
+50000	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Règles de contrôle > Règles particulières de contrôle	R1245-1
+50100	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Requalification du contrat	L1245-2; L1245-1
+50200	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Requalification du contrat > Requalification du contrat	L1243-11; L1243-12
+50300	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Échéance du terme	L1248-9; L1248-10
+50400	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Pénal	L1243-13; L1243-13-1
+50500	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Poursuite après échéance	L1243-1; L1243-4; L1243-3; L1243-2; D1243-1
+50600	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Renouvellement du contrat	L1243-5; L1243-9; L1243-8; L1243-10; L1243-7; L1243-6
+50700	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Rupture anticipée	L1246-1
+50800	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Succession de contrats > Contrats successifs avec le même salarié	L1244-1; L1244-2; L1244-2-1; L1244-2-2
+50900	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Succession de contrats > Contrats successifs sur le même poste	L1244-4; L1244-4-1; L1244-3; L1244-3-1
+51000	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Contrat à Durée Déterminée (CDD) Succession de contrats > Pénal	L1248-11
+51100	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Fonction publique > Employeur public	L1251-63; L1251-62; L1251-61; L1251-60
+51200	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Portage salarial > Portage salarial	L1254-1; L1254-2; L1254-3; L1254-4; L1254-5; L1254-6; L1254-7; L1254-8; L1254-9; L1254-10; L1254-11; L1254-12; L1254-13; L1254-14; L1254-15; L1254-16; L1254-17; L1254-18; L1254-19; L1254-20; L1254-21; L1254-22; L1254-23; L1254-24; L1254-25; L1254-26; L1254-27; L1254-28; L1254-29; L1254-30; L1254-31
+51300	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice	D1251-33; L1251-59; D1251-32
+51400	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Conditions de recours > Cas de recours	L1251-6; D1251-1; L1251-7; L1251-5; L1251-8
+51500	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Conditions de recours > Interdictions	L1251-9; L1251-10; D1251-2
+51600	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Conditions de travail	L1251-24; L1251-21; L1251-23; L1251-22
+51700	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Contenu et transmission	L1251-16; L1251-17
+52700	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Échéance du terme	L1251-30; L1251-34; L1251-32; L1251-33; L1251-31; L1251-29
+51800	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Embauche en fin de mission	L1251-38
+51900	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Fixation du terme, durée du contrat	L1251-11; L1251-13; L1251-12; L1251-12-1
+52000	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Information poste à pourvoir	L1251-25
+52100	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Période d'essai	L1251-14; L1251-15
+52200	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Rémunération	L1251-35; L1251-35-1
+52300	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Renouvellement	D1251-3; L1251-41; L1251-40; L1251-39
+52400	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Requalification du contrat	L1251-27; L1251-26; L1251-28
+52500	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Rupture anticipée	L1251-20; L1251-19; L1251-18
+52600	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat de mission > Succession de contrats	L1251-36; L1251-36-1; L1251-37; L1251-37-1
+52800	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Contrat mise à disposition > Contrat mise à disposition	L1251-44; L1251-43; L1251-42
+52900	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Définitions > Définitions	L1251-4; L1251-3; L1251-2; L1251-1
+53000	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Entreprise de Travail Temporaire > Garantie financière, Défaillance	L1251-51; L1251-50; R1251-11; R1251-12; R1251-13; R1251-14; R1251-15; R1251-16; R1251-17; R1251-18; R1251-19; R1251-20; R1251-21; R1251-22; R1251-23; R1251-24; L1251-49; L1251-52; R1251-25; R1251-26; R1251-27; R1251-28; R1251-29; R1251-30; R1251-31; L1251-53
+53100	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Entreprise de Travail Temporaire > Règles de contrôle	R1251-9; R1251-4; R1251-6; R1251-5; L1251-45; R1251-10; L1251-47; R1251-8; R1251-7; L1251-46; L1251-48
+53200	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Entreprise de Travail Temporaire > salariés permanents, temporaires de entreprise travail temporaire (ETT)	L1251-54; L1251-58; L1251-55; L1251-56; L1251-57
+53300	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Pénal > Entreprise de travail temporaire	R1255-3; R1255-4; R1255-5; R1255-6; R1255-7; L1255-2; L1255-1; R1255-1
+53400	Contrat de travail > Contrat à durée déterminée et Contrat de travail temporaire > Travail Temporaire Pénal > Utilisateur	R1255-2; L1255-3; L1255-4; L1255-5; L1255-6; L1255-7; L1255-8; L1255-9; L1255-10; L1255-11; L1255-12
 11700	Contrat de travail > Contrat: exécution, modification, transfert > Exécution, modification > Exécution du contrat	L1222-5; D1222-1; L1222-1; L1222-3; L1222-2; L1222-4
 11800	Contrat de travail > Contrat: exécution, modification, transfert > Exécution, modification > Modification du contrat	L1222-12; L1222-13; L1222-14; L1222-15; L1222-16; L1222-6
 11900	Contrat de travail > Contrat: exécution, modification, transfert > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L1531-1; L1531-2; L1531-3
@@ -163,12 +206,12 @@ export default `
 32300	Contrat de travail > Maternité, Paternité > Protection grossesse, maternité > Embauche, Mutation, Licenciement	L1225-3-1; L1225-6; L1225-1; L1225-2; L1225-4; L1225-4-1; L1225-5; L1225-3; R1225-1; R1225-2; R1225-3
 32400	Contrat de travail > Maternité, Paternité > Protection grossesse, maternité > Emploi pré et post natal	L1225-29
 32500	Contrat de travail > Maternité, Paternité > Protection grossesse, maternité > Texte prévoyant un décret	L1225-72
+3700	Contrat de travail > Période d'essai > Généralités L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26
 3710	Contrat de travail > Période d'essai > Définition	L1221-20; L1221-23;
 3720	Contrat de travail > Période d'essai > Délai de prévenance et Rupture par le salarié	L1221-26
 3730	Contrat de travail > Période d'essai > Délai de prévenance et Rupture par l'employeur	L1221-25
 3740	Contrat de travail > Période d'essai > Durée maximale par catégories de salariés	L1221-19; L1221-22; L1221-23;
 3750	Contrat de travail > Période d'essai > Exceptions relatives à la durée	L1221-22;
-3700	Contrat de travail > Période d'essai > Généralités L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26	
 3760	Contrat de travail > Période d'essai > Renouvellements : possibilités et durée	L1221-22; L1221-21; L1221-23;
 3770	Contrat de travail > Période d'essai > stagiaire 	L1221-24;
 3780	Contrat de travail > Période d'essai > Une clause nécessaire du contrat de travail	L1221-23;
@@ -252,48 +295,6 @@ export default `
 40500	Contrat de travail > Professions particulières > VRP(voyageur, représentant et placier) > Présomption salariat	L7313-3; L7313-2; L7313-1; L7313-4
 40600	Contrat de travail > Professions particulières > VRP(voyageur, représentant et placier) > Rémunération, congés	L7313-12; L7313-11; L7313-16; L7313-14; L7313-15; L7313-13; L7313-17; L7313-9; L7313-10
 40700	Contrat de travail > Professions particulières > VRP(voyageur, représentant et placier) > Rupture contrat	D7313-1; L7313-7; L7313-8
-49100	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Actions en justice > Actions en justice	D1247-2; D1247-1; L1247-1
-49200	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Champ d'application > Champ d'application	L1241-1
-49300	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Conditions de recours	L1242-16; L1242-14; L1242-15
-49400	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Conditions d'exécution du contrat	L1242-4; L1242-2; D1242-2; D1242-3; D1242-1; L1242-6; L1242-5; D1242-4; D1242-5; L1242-1; L1242-3
-49500	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Fixation du terme, durée du contrat	L1242-8-2; L1242-9; D1242-7; D1242-6; L1242-8; L1242-8-1; L1242-7
-49600	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Forme, contenu, transmission du contrat	L1242-12-1; L1242-13; L1242-12
-49700	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Information sur postes à pourvoir	L1242-17
-49800	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Pénal	L1248-1; L1248-6; L1248-7; L1248-8; L1248-2; L1248-3; L1248-4; L1248-5
-49900	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Période d'essai	L1242-10; L1242-11
-50000	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Règles de contrôle > Règles particulières de contrôle	R1245-1
-50100	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Requalification du contrat	L1245-2; L1245-1
-50200	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Requalification du contrat > Requalification du contrat	L1243-11; L1243-12
-50300	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Échéance du terme	L1248-9; L1248-10
-50400	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Pénal	L1243-13; L1243-13-1
-50500	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Poursuite après échéance	L1243-1; L1243-4; L1243-3; L1243-2; D1243-1
-50600	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Renouvellement du contrat	L1243-5; L1243-9; L1243-8; L1243-10; L1243-7; L1243-6
-50700	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Rupture, échéance, renouvellement > Rupture anticipée	L1246-1
-50800	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Succession de contrats > Contrats successifs avec le même salarié	L1244-1; L1244-2; L1244-2-1; L1244-2-2
-50900	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Succession de contrats > Contrats successifs sur le même poste	L1244-4; L1244-4-1; L1244-3; L1244-3-1
-51000	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Succession de contrats > Pénal	L1248-11
-51300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice	D1251-33; L1251-59; D1251-32
-51400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Conditions de recours > Cas de recours	L1251-6; D1251-1; L1251-7; L1251-5; L1251-8
-51500	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Conditions de recours > Interdictions	L1251-9; L1251-10; D1251-2
-51600	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Conditions de travail	L1251-24; L1251-21; L1251-23; L1251-22
-51700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Contenu et transmission	L1251-16; L1251-17
-52700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Échéance du terme	L1251-30; L1251-34; L1251-32; L1251-33; L1251-31; L1251-29
-51800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Embauche en fin de mission	L1251-38
-51900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Fixation du terme, durée du contrat	L1251-11; L1251-13; L1251-12; L1251-12-1
-52000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Information poste à pourvoir	L1251-25
-52100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Période d'essai	L1251-14; L1251-15
-52200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Rémunération	L1251-35; L1251-35-1
-52300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Renouvellement	D1251-3; L1251-41; L1251-40; L1251-39
-52400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Requalification du contrat	L1251-27; L1251-26; L1251-28
-52500	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Rupture anticipée	L1251-20; L1251-19; L1251-18
-52600	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat de mission > Succession de contrats	L1251-36; L1251-36-1; L1251-37; L1251-37-1
-52800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Contrat mise à disposition > Contrat mise à disposition	L1251-44; L1251-43; L1251-42
-52900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Définitions > Définitions	L1251-4; L1251-3; L1251-2; L1251-1
-53000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Entreprise de Travail Temporaire > Garantie financière, Défaillance	L1251-51; L1251-50; R1251-11; R1251-12; R1251-13; R1251-14; R1251-15; R1251-16; R1251-17; R1251-18; R1251-19; R1251-20; R1251-21; R1251-22; R1251-23; R1251-24; L1251-49; L1251-52; R1251-25; R1251-26; R1251-27; R1251-28; R1251-29; R1251-30; R1251-31; L1251-53
-53100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Entreprise de Travail Temporaire > Règles de contrôle	R1251-9; R1251-4; R1251-6; R1251-5; L1251-45; R1251-10; L1251-47; R1251-8; R1251-7; L1251-46; L1251-48
-53200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Entreprise de Travail Temporaire > salariés permanents, temporaires de entreprise travail temporaire (ETT)	L1251-54; L1251-58; L1251-55; L1251-56; L1251-57
-53300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Pénal > Entreprise de travail temporaire	R1255-3; R1255-4; R1255-5; R1255-6; R1255-7; L1255-2; L1255-1; R1255-1
-53400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Pénal > Utilisateur	R1255-2; L1255-3; L1255-4; L1255-5; L1255-6; L1255-7; L1255-8; L1255-9; L1255-10; L1255-11; L1255-12
 120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Cas de force majeur	L1234-12; L1234-13;
 1800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Contrat de chantier ou d'opération	L1236-8
 810	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > licenciement d'un salarié mis à disposition d'une filiale étrangère	L1231-5;
@@ -319,7 +320,7 @@ export default `
 1600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Mise à la retraite	L1237-5-1; L1237-8; L1237-5; L1237-7; L1237-6
 2000	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Démission et préavis	L1237-1
 2100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Rupture abusive	L1237-2; L1237-3
-1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
+1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
 46400	Contrat de travail > Salariés étrangers et déplacés > Amendes administratives Rôle Inspection du Travail > Amendes administratives Rôle Inspection du Travail	L1263-3; L1263-4; L1263-5; L1263-6; L1263-7
 46500	Contrat de travail > Salariés étrangers et déplacés > Détachés : Conditions de détachement	L1262-2-1
 46600	Contrat de travail > Salariés étrangers et déplacés > Détachés : Conditions de détachement > Conditions	L1262-1; R1262-19; L1262-2-2
@@ -347,7 +348,6 @@ export default `
 48800	Contrat de travail > Salariés étrangers et déplacés > Détachés: Pénal > Pénal	R1264-3
 48900	Contrat de travail > Salariés étrangers et déplacés > Détachés: sanctions administratives > Amendes administratives	L1264-4; L1264-1; L1264-2; L1264-3
 49000	Contrat de travail > Salariés étrangers et déplacés > Détachés: sanctions administratives > Suspension de la prestation	L1263-4-1
-51100	Contrat de travail > Travail temporaire et employeur public > Travail temporaire et employeur public > Employeur public	L1251-63; L1251-62; L1251-61; L1251-60
 53500	Contrat de travail > Travailleurs étrangers ou détachés > Agence Nationalité d'accueil étrangers migrations > Missions, exercice des missions	L5223-1; R5223-1; R5223-2; R5223-3
 53600	Contrat de travail > Travailleurs étrangers ou détachés > Agence Nationalité d'accueil étrangers migrations > Ressources	L5223-6; R5223-35; R5223-37; R5223-38; R5223-39
 53700	Contrat de travail > Travailleurs étrangers ou détachés > Agence Nationalité d'accueil étrangers migrations > Statut, organisation, fonctionnement	L5223-3; L5223-2; R5223-33; R5223-34; R5223-5; R5223-6; R5223-7; R5223-8; R5223-9; R5223-10; R5223-11; R5223-12; R5223-13; R5223-14; R5223-15; R5223-16; R5223-17; R5223-20; R5223-21; R5223-23; R5223-24; R5223-18; R5223-22; R5223-4; L5223-5
@@ -413,9 +413,9 @@ export default `
 21100	Durée du travail et congés > Durée du travail > Repos et temps de pause > Repos quotidien	L3131-2; D3131-4; D3131-5; D3131-6; L3131-3; D3131-7; L3131-1; D3131-1; D3131-2; D3131-3; R3135-1
 21200	Durée du travail et congés > Durée du travail > Repos et temps de pause > Repos, jours fériés Moselle, Bas - Rhin, Haut - Rhin	R3134-1; R3134-2; R3134-3; R3134-4; D3134-5; L3134-1; L3134-2; L3134-3; L3134-4; L3134-5; L3134-6; L3134-7; L3134-8; L3134-9; L3134-10; L3134-11; L3134-12; L3134-13; L3134-14; L3134-15; L3134-16; R3135-4
 21400	Durée du travail et congés > Durée du travail > Repos et temps de pause > Temps de pause	L3121-17; L3121-16
-21500	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Temps partiel	L3123-17; L3123-18; L3123-19; L3123-20; L3123-21; L3123-22; L3123-24; L3123-25; L3123-23; L3123-32; L3123-26; L3123-28; L3123-29; L3123-30; L3123-31; L3123-27; D3123-2; D3123-3; L3123-2; L3123-1; L3123-6; L3123-7; L3123-8; L3123-9; L3123-10; L3123-3; L3123-5; L3123-11; L3123-12; L3123-13; L3123-14; L3123-15; L3123-16; L3123-4; R3123-1; R3124-8; R3124-9; R3124-10; R3124-5
-21800	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Travail intermittent	R3124-8; R3124-5; L3123-38; D3123-4; L3123-33; L3123-34; L3123-35; L3123-36; L3123-37
+21500	Durée du travail et congés > Durée du travail > Temps partiel	L3123-17; L3123-18; L3123-19; L3123-20; L3123-21; L3123-22; L3123-24; L3123-25; L3123-23; L3123-32; L3123-26; L3123-28; L3123-29; L3123-30; L3123-31; L3123-27; D3123-2; D3123-3; L3123-2; L3123-1; L3123-6; L3123-7; L3123-8; L3123-9; L3123-10; L3123-3; L3123-5; L3123-11; L3123-12; L3123-13; L3123-14; L3123-15; L3123-16; L3123-4; R3123-1; R3124-8; R3124-9; R3124-10; R3124-5
 21600	Durée du travail et congés > Durée du travail > Travail de nuit	R3124-15; L3122-15; L3122-16; L3122-17; L3122-18; L3122-19; R3122-7; R3122-8; L3122-20; L3122-21; L3122-22; L3122-23; L3122-24; R3122-9; R3122-10; R3122-11; L3122-1; L3122-2; L3122-3; L3122-4; L3122-5; L3122-6; L3122-7; L3122-8; L3122-9; L3122-10; L3122-11; L3122-12; L3122-13; L3122-14; R3122-1; R3122-2; R3122-3; R3122-4; R3122-5; R3122-6; R3122-12; R3122-13; R3122-14; R3122-15
+21800	Durée du travail et congés > Durée du travail > Travail intermittent	R3124-8; R3124-5; L3123-38; D3123-4; L3123-33; L3123-34; L3123-35; L3123-36; L3123-37
 21000	Durée du travail et congés > Durée du travail > Travail du dimanche	L3132-27-2; L3132-29; L3132-30; R3132-22; R3132-23; L3132-28; L3132-4; L3132-5; L3132-6; L3132-7; L3132-8; L3132-9; L3132-10; L3132-11; R3132-1; R3132-2; R3132-3; R3132-4; R3132-9; R3132-10; R3132-11; R3132-12; R3132-13; R3132-14; R3132-15; L3132-14; L3132-15; L3132-16; L3132-17; L3132-18; L3132-19; L3132-26; L3132-26-1; L3132-27; L3132-27-1; R3132-21; L3132-20; L3132-21; L3132-22; L3132-23; R3132-16; R3132-17; R3132-19; R3132-20; R3132-20-1; L3132-12; L3132-13; R3132-5; R3132-6; R3132-7; R3132-8; L3132-24; L3132-25; L3132-25-1; L3132-25-2; L3132-25-3; L3132-25-4; L3132-25-5; L3132-25-6; R3132-21-1; L3132-1; L3132-2; L3132-3; L3132-3-1; R3135-2
 16000	Durée du travail et congés > Spécificités jeunes > Congés annuels > nombre jours de congé, indemnité Décret	L3164-9
 16100	Durée du travail et congés > Spécificités jeunes > Congés annuels > Pénal: Non-respect L3164-8	R3165-6
@@ -425,34 +425,34 @@ export default `
 16500	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Pénal: Non-respect L3162-3	R3165-2
 16700	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Temps de formation	L3162-2
 16600	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Temps Travail effectif ininterrompu maxi	L3162-3
-16800	Durée du travail et congés > Spécificités jeunes >Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
-16900	Durée du travail et congés > Spécificités jeunes >Définition > jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
-17000	Durée du travail et congés > Spécificités jeunes >Jours fériés > Industries en continue	L3164-7
-17100	Durée du travail et congés > Spécificités jeunes >Jours fériés > Non travaillés	L3164-6
-17200	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-6	R3165-4
-17300	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-7 + décret	R3165-5
-17400	Durée du travail et congés > Spécificités jeunes >Jours fériés > Secteurs autorisés emploi jeunes	R3164-2
-17500	Durée du travail et congés > Spécificités jeunes >Jours fériés > Secteurs particuliers - Décret	L3164-8
-17700	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > 2 jours consécutifs, dérogations	L3164-2
-17800	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Apprentis dimanche certains secteurs	L3164-5
-17900	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Emploi apprentis - 18 ans	R3164-1
-18000	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Industries bénéficiant dérogation- Décret	L3164-4
-18100	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Non application dérogation L3132-4 et 8	L3164-3
-18200	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Pénal: Non-respect L3164-2 à 4	R3135-5
-18300	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Pénal: Non-respect L3164-5	R3165-3
-18400	Durée du travail et congés > Spécificités jeunes >Repos quotidien > Durée	L3164-1
-17600	Durée du travail et congés > Spécificités jeunes >Repos quotidien > Pénal: Non-respect L3164-1	R3165-7
-18500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Avis Conseil Supérieur prévention risques professionnels	R3163-6
-18600	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Boulangerie, pâtisserie	R3163-3
-18700	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Décision Inspecteur du travail	R3163-5
-18800	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Définition travail de nuit jeunes	L3163-1
-19000	Durée du travail et congés > Spécificités jeunes >Travail de nuit > hôtels, cafés restaurants (HCR)	R3163-2
-18900	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Interdiction, dérogations Inspection du Travail - décret	L3163-2
-19100	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Pénal: Non-respect L3163-1 et 2	R3124-15
-19200	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Pénal: Non-respect L3163-3	R3124-16
-19300	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Secteurs dérogatoires	R3163-1
-19400	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Spectacles, courses hippiques	R3163-4
-19500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Travaux extrême urgence	L3163-3
+16800	Durée du travail et congés > Spécificités jeunes > Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
+16900	Durée du travail et congés > Spécificités jeunes > Définition > jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
+17000	Durée du travail et congés > Spécificités jeunes > Jours fériés > Industries en continue	L3164-7
+17100	Durée du travail et congés > Spécificités jeunes > Jours fériés > Non travaillés	L3164-6
+17200	Durée du travail et congés > Spécificités jeunes > Jours fériés > Pénal: Non-respect L3164-6	R3165-4
+17300	Durée du travail et congés > Spécificités jeunes > Jours fériés > Pénal: Non-respect L3164-7 + décret	R3165-5
+17400	Durée du travail et congés > Spécificités jeunes > Jours fériés > Secteurs autorisés emploi jeunes	R3164-2
+17500	Durée du travail et congés > Spécificités jeunes > Jours fériés > Secteurs particuliers - Décret	L3164-8
+17700	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > 2 jours consécutifs, dérogations	L3164-2
+17800	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Apprentis dimanche certains secteurs	L3164-5
+17900	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Emploi apprentis - 18 ans	R3164-1
+18000	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Industries bénéficiant dérogation- Décret	L3164-4
+18100	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Non application dérogation L3132-4 et 8	L3164-3
+18200	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Pénal: Non-respect L3164-2 à 4	R3135-5
+18300	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Pénal: Non-respect L3164-5	R3165-3
+18400	Durée du travail et congés > Spécificités jeunes > Repos quotidien > Durée	L3164-1
+17600	Durée du travail et congés > Spécificités jeunes > Repos quotidien > Pénal: Non-respect L3164-1	R3165-7
+18500	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Avis Conseil Supérieur prévention risques professionnels	R3163-6
+18600	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Boulangerie, pâtisserie	R3163-3
+18700	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Décision Inspecteur du travail	R3163-5
+18800	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Définition travail de nuit jeunes	L3163-1
+19000	Durée du travail et congés > Spécificités jeunes > Travail de nuit > hôtels, cafés restaurants (HCR)	R3163-2
+18900	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Interdiction, dérogations Inspection du Travail - décret	L3163-2
+19100	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Pénal: Non-respect L3163-1 et 2	R3124-15
+19200	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Pénal: Non-respect L3163-3	R3124-16
+19300	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Secteurs dérogatoires	R3163-1
+19400	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Spectacles, courses hippiques	R3163-4
+19500	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Travaux extrême urgence	L3163-3
 55100	Emploi - Formation > Aide au maintien dans l'emploi > Activité partielle > Activité partielle	R5122-2; R5122-4; R5122-5; R5122-1; R5122-3; R5122-6; R5122-7; R5122-8; R5122-9; R5122-10; R5122-11; R5122-12; D5122-13; R5122-14; R5122-16; R5122-17; R5122-18; R5122-19; D5221-2-1; L5122-1; L5122-2; L5122-4; L5122-5; R5122-20; R5122-21; R5122-22; R5122-23; R5122-24; R5122-25; R5122-26
 55200	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > Contrat d'apprentissage	R6261-3; R6261-4; R6261-5; R6261-6; R6261-7; R6261-8
 55900	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > dispositions générales	R6261-1; R6261-2
@@ -825,8 +825,8 @@ export default `
 92100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Implication salariés société européen. accord groupe spécial de négociation (GSN)	L2352-20; L2352-17; L2352-18; L2352-7; L2352-16; L2352-8; L2352-11; L2352-5; L2352-19; L2352-12; L2352-9; R2352-5; D2352-6; D2352-7; D2352-8; D2352-9; D2352-10; D2352-11; D2352-12; D2352-13; L2352-3; L2352-13; R2352-18; R2352-19; D2352-14; D2352-15; D2352-16; R2352-17; D2352-1; D2352-2; D2352-3; D2352-4; L2352-1; L2352-2; L2352-14; L2352-15; L2352-6; L2352-4; L2352-10
 92200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Pénal	L2355-1
 92300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Vidéo conférence	D2341-1; D2353-6; L2353-27-1; L2341-12
-92400	Institutions représentatives du personnel > Comité d'entreprise > Attributions > Attributions générales	
-92500	Institutions représentatives du personnel > Comité d'entreprise > Champ d'application > Champ d'application	
+92400	Institutions représentatives du personnel > Comité d'entreprise > Attributions > Attributions générales
+92500	Institutions représentatives du personnel > Comité d'entreprise > Champ d'application > Champ d'application
 164600	Institutions représentatives du personnel > Comité social et économique > Champ d'application	L2311-1; L2311-2
 164700	Institutions représentatives du personnel > Comité social et économique > CSE attributions	L2312-5; L2312-6; L2312-7; R2312-1; R2312-2; R2312-3; L2312-1; L2312-2; L2312-3; L2312-4; R2312-60; R2312-61
 164800	Institutions représentatives du personnel > Comité social et économique > CSE attributions > Attributions entreprises 50 salariés et +	L2312-78; L2312-79; L2312-80; L2312-81; L2312-82; L2312-83; L2312-84; R2312-35; R2312-36; R2312-37; R2312-38; R2312-39; R2312-40; R2312-41; R2312-42; R2312-43; R2312-44; R2312-45; R2312-46; R2312-47; R2312-48; R2312-49; R2312-50; R2312-51; R2312-52; R2312-53; R2312-54; R2312-55; R2312-56; R2312-57; R2312-58; R2312-59; L2312-8; L2312-9; L2312-10; R2312-4; L2312-11; L2312-12; L2312-13; L2312-14; L2312-15; L2312-16; R2312-5; R2312-6; R2312-25; R2312-26; R2312-27; R2312-28; L2312-37; L2312-38; L2312-39; L2312-40; L2312-41; L2312-42; L2312-43; L2312-44; L2312-45; L2312-46; L2312-47; L2312-48; L2312-49; L2312-50; L2312-51; L2312-52; L2312-53; L2312-54; L2312-55; L2312-56; L2312-57; L2312-58; R2312-21; R2312-22; R2312-23; R2312-24; L2312-17; L2312-18; L2312-19; L2312-20; L2312-21; L2312-22; L2312-23; L2312-24; L2312-26; L2312-27; L2312-28; L2312-29; L2312-30; L2312-31; L2312-32; L2312-33; L2312-34; L2312-35; L2312-36; R2312-7; R2312-8; R2312-9; R2312-10; R2312-11; R2312-12; R2312-13; R2312-14; R2312-15; R2312-16; R2312-17; R2312-18; R2312-19; R2312-20; L2312-59; L2312-60; L2312-63; L2312-64; L2312-65; L2312-66; L2312-67; L2312-68; L2312-69; L2312-70; L2312-71; R2312-29; R2312-30; L2312-72; L2312-73; L2312-74; L2312-75; L2312-76; L2312-77; R2312-31; R2312-33; R2312-32; R2312-34
@@ -842,7 +842,7 @@ export default `
 93000	Institutions représentatives du personnel > Défenseur syndical > Obligations	L1453-8
 93100	Institutions représentatives du personnel > Défenseur syndical > Sanction	L1453-9; L2411-24
 92700	Institutions représentatives du personnel > Délégation Unique du personnel ( DUP) > Délégation Unique du personnel ( DUP) > Pénal	L2433-1; L2434-1; L2432-1; L2437-1; L2438-1; L2439-1; L243-10-1; L2435-1; L2436-1
-93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > entreprise50 salariés et + sans comité d'entreprise (CE) ou comité d’hygiène, de sécurité et des conditions de travail (CHSCT)	
+93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > entreprise50 salariés et + sans comité d'entreprise (CE) ou comité d’hygiène, de sécurité et des conditions de travail (CHSCT)
 94800	Institutions représentatives du personnel > Délégué syndical > Congé formation économique, sociale et syndicale	L2145-6; L2145-7; L2145-8; L2145-9; L2145-10; L2145-11; L2145-12; L2145-13; R2145-3; R2145-4; R2145-5; R2145-6; R2145-7; R2145-8; L2145-5
 94900	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Attributions complémentaire entreprise. -300 salariés	L2143-22
 95000	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Conditions de désignation	L2143-1; L2143-2; L2143-8; R2143-5; L2143-6; L2143-3; L2143-4; L2143-5; L2143-7; D2143-4; L2143-12; R2143-3; R2143-2; R2143-1
@@ -1729,6 +1729,18 @@ export default `
 156101	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Principe du suivi particulier pour certaines catégories de travailleurs > Principe et renvoi à décret	L4625-1; R4625-1-1;L4625-2
 156113	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Salariés saisonniers > Risques particuliers, et obligation d'un examen médical d'embauche	 D4625-22
 156100	Santé Sécurité > Services santé au travail > Surveillance médicale catégories particulières	R4625-1; L4625-1; L4625-1-1; L4625-2; D4625-22; R4625-2; R4625-3; R4625-4; R4625-5; R4625-6; R4625-7; R4625-8; R4625-9; R4625-10; R4625-11; R4625-12; R4625-13; R4625-14; R4625-15; R4625-16; R4625-17; R4625-18; R4625-19; R4625-20; D4625-23; D4625-24; D4625-25; D4625-26; D4625-27; D4625-28; D4625-29; D4625-30; D4625-31; D4625-32; D4625-33; D4625-34
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
