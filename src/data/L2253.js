@@ -12,7 +12,7 @@ export const THEMES_L22531 = {
   "conditions-durees-renouvellement-periode-essai": [3700,3710,3720,3730,3740,3750,3760,3770],
   "modalites-poursuite-contrats-travail": [12100],
   "mise-a-disposition-salarie-temporaire": [51400],
-  "remuneration-minimale-salarie": [51200]
+  "remuneration-minimale-salarie": [44400]
 };
 
 // https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000036262246&dateTexte=&categorieLien=id
