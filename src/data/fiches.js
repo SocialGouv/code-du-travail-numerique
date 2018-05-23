@@ -1038,7 +1038,14 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/temps-de-travail/article/la-duree-legale-du-travail",
     title: "La durée légale du travail",
-    themes: [20300]
+    themes: [20300,20400]
+  },
+   {
+    source: "Ministère du travail",
+    href:
+      "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/temps-de-travail/article/la-duree-legale-du-travail#Quelles-sont-les-durees-maximales-de-travail",
+    title: "La durée maximale du travail",
+    themes: [20400]
   },
   {
     source: "Ministère du travail",
