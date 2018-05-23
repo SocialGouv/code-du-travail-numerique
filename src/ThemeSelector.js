@@ -49,20 +49,17 @@ class ThemeSelector extends React.Component {
             .filter(elem => elem !== undefined)
         )
       });
-    }
-
-    if (groups.length) {
       return groups;
     }
 
-    groups.push(children);  // Otherwise, use only 1 group.
+    // Otherwise, use only 1 group.
+    groups.push(children);
     return groups;
 
   }
 
   render() {
 
-    // Props.
     let currentPath = this.props.currentPath;
     let node = this.props.node;
     let onSelect = this.props.onSelect;
