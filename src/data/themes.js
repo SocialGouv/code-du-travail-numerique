@@ -320,7 +320,7 @@ export default `
 1600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Mise à la retraite	L1237-5-1; L1237-8; L1237-5; L1237-7; L1237-6
 2000	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Démission et préavis	L1237-1
 2100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Rupture abusive	L1237-2; L1237-3
-1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
+1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
 46400	Contrat de travail > Salariés étrangers et déplacés > Amendes administratives Rôle Inspection du Travail > Amendes administratives Rôle Inspection du Travail	L1263-3; L1263-4; L1263-5; L1263-6; L1263-7
 46500	Contrat de travail > Salariés étrangers et déplacés > Détachés : Conditions de détachement	L1262-2-1
 46600	Contrat de travail > Salariés étrangers et déplacés > Détachés : Conditions de détachement > Conditions	L1262-1; R1262-19; L1262-2-2
