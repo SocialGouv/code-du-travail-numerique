@@ -83,7 +83,7 @@ export default [
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/article/la-rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee",
     title:
       "La rupture conventionnelle du contrat de travail à durée indéterminée",
-    themes: [17000]
+    themes: [1700]
   },
   {
     source: "Ministère du travail",
@@ -91,7 +91,7 @@ export default [
       "http://travail-emploi.gouv.fr/demarches-et-fiches-pratiques/formulaires-et-teledeclarations/salaries/article/rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee",
     title:
       "Formulaire de rupture conventionnelle du contrat de travail à durée indéterminée",
-    themes: [17000]
+    themes: [1700]
   },
   {
     source: "Ministère du travail",
