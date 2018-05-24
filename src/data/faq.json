@@ -1,7 +1,47 @@
 [
+ 
+   // ne pas oublier de nettoyer les ocurences " Test" après la démo et les remplacer par des occurence vérifiées et durables
    {
     "reponse":
-      "La durée quotidienne maximale est de 10 heures. Une convention ou un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche peut prévoir le dépassement de cette durée dans la limite de 12 heures. Des dérogations peuvent également être accordées par l’Inspection du Travail, ce en cas d’urgence.",
+     `"Source CODE BFC (avril 2017)<p>
+     3- DU FAIT DES 2 PARTIES
+LA RUPTURE CONVENTIONNELLE
+Une modalité de rupture à l’amiable du contrat de travail à durée indéterminée
+a)	De quoi s’agit –il ?
+L’employeur et le salarié peuvent décider <b>d’un commun accord</b>  de la rupture du contrat de travail à durée indéterminée : Personne ne peut imposer la rupture conventionnelle et elle ne s’applique  qu’aux seuls CDI.
+Elle permet aux partis de convenir des conditions de la rupture du contrat de travail.
+Le salarié avec ce mode de rupture conserve le bénéfice de ses droits à l’allocation chômage.
+
+b)	Cas particuliers
+•	PSE ou d’un GPEC : Pas de recours à la Rupture conventionnelle  du contrat.
+•	Salariés protégés : La procédure est particulière pour tenir compte de l’autorisation  nécessaire de l’inspecteur du travail.
+c)	La procédure : Comment ça marche ?
+1)	La convention de rupture
+•	Elle doit fixer le montant de l’indemnité de rupture, qui ne pourra en aucun cas être inférieur au montant prévu pour  l’indemnité de licenciement.
+o	Calcul : 1/5è de salaire mensuel (moyenne des douze derniers mois de salaire ou des trois derniers s’ils sont plus favorables) multiplié par année d’ancienneté, auquel s’ajoute au-delà de 10 ans d’ancienneté 1/15è de mois de salaire multiplié par année d’ancienneté.
+•	Elle doit fixer la date de la rupture,  au moins au  lendemain de l’homologation. 
+•	Elle peut fixer d’autres conditions de rupture
+ 
+2)	Les délais à respecter
+•	Délai de rétractation : 15 jours calendaires (samedi, dimanche et jours fériés compris)
+A compter de la signature, ce délai de 15 jours permet l’exercice de la rétractation par l’un ou l’autre signataire. Concrètement, la convention de  rupture ne pourra pas être transmise pour son homologation avant la fin de ce délai. 
+La rétraction doit être formalisée dans un courrier en LRAR.
+•	Délai d’instruction : 15 jours ouvrables (dimanches et jours fériés exclus)
+A compter du 1er jour ouvrable suivant  la réception de la demande, l’administration (la DIRECCTE) dispose de 15 jours ouvrables  pour prendre une décision d’homologation.
+•	Pas de délai de préavis à respecter : contrairement à d’autres modes de rupture
+Attention : Le non-respect de ces délais, peut invalider la rupture (irrecevabilité de la demande, ou refus de l’homologation)
+3)	Validation et homologation de la rupture
+Pour être valide la convention doit être homologuée par la DIRECCTE. Celle-ci  s’assure du respect des conditions de rupture : la liberté de consentement, le montant de l’indemnité, respect es différents délais.  Le silence de l’administration à l’issue du délai d’instruction vaut homologation.
+4)	Possibilités de contestation
+Outre l’exercice du délai de rétractation, la contestation pourra se faire exclusivement devant le Conseil des Prudhommes dans les 12 mois suivant la date d’homologation."`,
+    "theme": "Rupture Conventionnelle",
+    "branche": "TEST",
+    "themes": [1700],
+    "question": "LA RUPTURE CONVENTIONNELLE:Une modalité de rupture à l’amiable du contrat de travail à durée indéterminée"
+  },
+   {
+    "reponse":
+      "test demo - La durée quotidienne maximale est de 10 heures. Une convention ou un accord d’entreprise ou d’établissement ou, à défaut, une convention ou un accord de branche peut prévoir le dépassement de cette durée dans la limite de 12 heures. Des dérogations peuvent également être accordées par l’Inspection du Travail, ce en cas d’urgence.",
     "theme": "Durée du travail",
     "branche": "TEST",
     "themes": [20400],
