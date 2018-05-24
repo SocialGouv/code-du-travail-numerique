@@ -62,9 +62,10 @@ let ordering = {
       "Rupture de contrat à durée Indéterminée (CDI)",
     ],
     [
-      "Contrat à durée déterminée et Contrat de travail temporaire",
-      "Contrats divers",
       "Professions particulières",
+      "Règles spécifiques du Contrat à durée déterminée (CDD)",
+      "Règles spécifiques du Contrat de travail temporaire",
+      "Travail temporaire et employeur public",
     ],
     [
       "Salariés étrangers et déplacés",
@@ -72,6 +73,7 @@ let ordering = {
     ],
     [
       "Conseil de prud'hommes (CPH)",
+      "Autres cas de mise à disposition",
     ],
   ],
 
