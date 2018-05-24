@@ -86,6 +86,14 @@ export default [
     themes: [1700]
   },
   {
+    source: "Fiches Service-Public.fr",
+    href:
+      "https://www.service-public.fr/particuliers/vosdroits/F19030",
+    title:
+      "La rupture conventionnelle du contrat de travail à durée indéterminée",
+    themes: [1700]
+  },
+    {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/demarches-et-fiches-pratiques/formulaires-et-teledeclarations/salaries/article/rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee",
@@ -1048,6 +1056,19 @@ export default [
     themes: [20400]
   },
   {
+    source: "Fiches Service-Public.fr",
+    href:
+      "https://www.service-public.fr/particuliers/vosdroits/F1911",
+    title: "La durée légale du travail",
+    themes: [20300,20400]
+  },
+   {
+    source: "Fiches Service-Public.fr",
+    href:     "https://www.service-public.fr/particuliers/vosdroits/F1911",
+    title: "La durée maximale du travail",
+    themes: [20400]
+  },
+  {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/emploi/insertion-dans-l-emploi/mesures-jeunes/",
@@ -1094,6 +1115,13 @@ export default [
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/article/la-periode-d-essai-100977",
+    title: "La période d’essai",
+    themes: [3700, 3710, 3720, 3730, 3740, 3750, 3760, 3770, 3780, 49900, 52100]
+  },
+   {
+    source: "Fiches Service-Public.fr",
+    href:
+      "https://www.service-public.fr/particuliers/vosdroits/F1643",
     title: "La période d’essai",
     themes: [3700, 3710, 3720, 3730, 3740, 3750, 3760, 3770, 3780, 49900, 52100]
   },
