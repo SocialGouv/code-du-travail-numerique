@@ -72,6 +72,26 @@ const SectionSeparator = styled.div`
 const Result = ({ onResetClick, theme }) => {
   const hasFaqEntry = hasFaq(theme);
   const hasFicheEntry = hasFiche(theme);
+
+  let links = [
+    {
+      href: "https://socialgouv.github.io/faq-code-du-travail/",
+      text: "Question-Réponse des services de renseignement"
+    },
+    {
+      href: "https://socialgouv.github.io/faq-code-du-travail/",
+      text: "Lien 2"
+    },
+  ];
+  if (theme.id === 1700) {
+    links.unshift(
+      {
+        href: "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp",
+        text: "Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
+      },
+    );
+  }
+
   return (
     <div style={{ marginTop: 20 }} role="article">
       {(hasFaqEntry || hasFicheEntry) && (
@@ -180,17 +200,14 @@ const Result = ({ onResetClick, theme }) => {
           <BlockTitle>
             <Feather.Link size="20" /> Liens et outils
           </BlockTitle>
-          <li>
-            <a href="https://socialgouv.github.io/faq-code-du-travail/">
-              Question-Réponse des services de renseignement{" "}
-              <Feather.ExternalLink size="12" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Lien 2 <Feather.ExternalLink size="12" />
-            </a>
-          </li>
+          {links.map(link => (
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href={link.href}>
+                {link.text}{" "}
+                <Feather.ExternalLink size="12" />
+              </a>
+            </li>
+          ))}
         </Block>
       </TwoCols>
 
