@@ -89,6 +89,32 @@ let ordering = {
     ],
   ],
 
+  "Durée du travail et congés > Durée du travail": [
+    [
+      "Durée légale \"35 heures\"",
+      "Décompte de la durée du travail",
+      "Durée maximale du travail",
+      "Jours fériés",
+      "Repos et temps de pause",
+    ],
+    [
+      "Heures supplémentaires",
+      "Aménagement Temps de Travail",
+      "Forfait",
+    ],
+    [
+      "Temps partiel et travail intermittent",
+    ],
+    [
+      "Astreintes, travail effectif et équivalences",
+      "Travail de nuit",
+      "Travail du dimanche",
+    ],
+    [
+      "Outre - mer",
+    ],
+  ],
+
 }
 
 export default ordering;
