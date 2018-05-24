@@ -79,8 +79,8 @@ const Result = ({ onResetClick, theme }) => {
       text: "Question-Réponse des services de renseignement"
     },
     {
-      href: "https://socialgouv.github.io/faq-code-du-travail/",
-      text: "Lien 2"
+      href: "http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible",
+      text: "Le Code BFC: Exemple d'une publication de  DIRECCTE (màj: fév. 2017)"
     },
   ];
   if (theme.id === 1700) {
