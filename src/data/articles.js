@@ -60,4 +60,72 @@ export default {
     texte:
       "Les recours hiérarchiques contre les décisions prévues aux articles D. 3121-5 et D. 3121-6 sont formés devant le directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi dans le délai d'un mois suivant la date à laquelle les intéressés en ont reçu notification."
       },
+  
+  // RC
+  
+  "L1237-11": {
+    texte: "L'employeur et le salarié peuvent convenir en commun des conditions de la rupture du contrat de travail qui les lie.<p>La rupture conventionnelle, exclusive du licenciement ou de la démission, ne peut être imposée par l'une ou l'autre des parties.</p><p>Elle résulte d'une convention signée par les parties au contrat. Elle est soumise aux dispositions de la présente section destinées à garantir la liberté du consentement des parties.</p>"
+      },
+"L1237-12": {
+    texte: "Les parties au contrat conviennent du principe d'une rupture conventionnelle lors d'un ou plusieurs entretiens au cours desquels le salarié peut se faire assister :<br>1° Soit par une personne de son choix appartenant au personnel de l'entreprise, qu'il s'agisse d'un salarié titulaire d'un mandat syndical ou d'un salarié membre d'une institution représentative du personnel ou tout autre salarié ;</> <br>2° Soit, en l'absence d'institution représentative du personnel dans l'entreprise, par un conseiller du salarié choisi sur une liste dressée par l'autorité administrative.<p>Lors du ou des entretiens, l'employeur a la faculté de se faire assister quand le salarié en fait lui-même usage. Le salarié en informe l'employeur auparavant ; si l'employeur souhaite également se faire assister, il en informe à son tour le salarié.</><P>L'employeur peut se faire assister par une personne de son choix appartenant au personnel de l'entreprise ou, dans les entreprises de moins de cinquante salariés, par une personne appartenant à son organisation syndicale d'employeurs ou par un autre employeur relevant de la même branche.</>"
+},
+  "L1237-13": {
+    texte: `La convention de rupture définit les conditions de celle-ci, notamment le montant de l'indemnité spécifique de rupture conventionnelle qui ne peut pas être inférieur à celui de l'indemnité prévue à l'article L. 1234-9.
+
+Elle fixe la date de rupture du contrat de travail, qui ne peut intervenir avant le lendemain du jour de l'homologation.
+
+A compter de la date de sa signature par les deux parties, chacune d'entre elles dispose d'un délai de quinze jours calendaires pour exercer son droit de rétractation. Ce droit est exercé sous la forme d'une lettre adressée par tout moyen attestant de sa date de réception par l'autre partie.`
+      
+  },
+"L1237-14": {
+    texte: `A l'issue du délai de rétractation, la partie la plus diligente adresse une demande d'homologation à l'autorité administrative, avec un exemplaire de la convention de rupture. Un arrêté du ministre chargé du travail fixe le modèle de cette demande.
+
+L'autorité administrative dispose d'un délai d'instruction de quinze jours ouvrables, à compter de la réception de la demande, pour s'assurer du respect des conditions prévues à la présente section et de la liberté de consentement des parties.A défaut de notification dans ce délai, l'homologation est réputée acquise et l'autorité administrative est dessaisie.
+
+La validité de la convention est subordonnée à son homologation.
+
+L'homologation ne peut faire l'objet d'un litige distinct de celui relatif à la convention. Tout litige concernant la convention, l'homologation ou le refus d'homologation relève de la compétence du conseil des prud'hommes, à l'exclusion de tout autre recours contentieux ou administratif. Le recours juridictionnel doit être formé, à peine d'irrecevabilité, avant l'expiration d'un délai de douze mois à compter de la date d'homologation de la convention. `"
+},
+  "L1237-15": {
+  texte:`
+
+Les salariés bénéficiant d'une protection mentionnés aux articles L. 2411-1 et L. 2411-2 peuvent bénéficier des dispositions de la présente section. Par dérogation aux dispositions de l'article L. 1237-14, la rupture conventionnelle est soumise à l'autorisation de l'inspecteur du travail dans les conditions prévues au chapitre Ier du titre Ier du livre IV, à la section 1 du chapitre Ier et au chapitre II du titre II du livre IV de la deuxième partie. Dans ce cas, et par dérogation aux dispositions de l'article L. 1237-13, la rupture du contrat de travail ne peut intervenir que le lendemain du jour de l'autorisation.
+
+Pour les médecins du travail, la rupture conventionnelle est soumise à l'autorisation de l'inspecteur du travail, après avis du médecin inspecteur du travail.
+`
+},
+"L1237-16":{
+  texte:`La présente section n'est pas applicable aux ruptures de contrats de travail résultant :
+
+1° Des accords issus de la négociation mentionnée aux articles L. 2242-20 et L. 2242-21 ;
+
+2° Des plans de sauvegarde de l'emploi dans les conditions définies par l'article L. 1233-61 ;
+
+3° Des accords collectifs mentionnés à l'article L. 1237-17.`
+},
+"R1237-3":{
+  texte: ` 
+
+L'autorité administrative compétente pour l'homologation de la convention de rupture prévue à l'article L. 1237-14 est le directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi du lieu où est établi l'employeur.
+NOTA :
+
+Décret n° 2009-1377 du 10 novembre 2009 article 7 I : Les dispositions du présent décret prennent effet, dans chaque région, à la date de nomination du directeur régional des entreprises, de la concurrence, de la consommation, du travail et de l'emploi (Les arrêtés de nomination de ces directeurs ont été publiés par arrêtés des 30 décembre 2009 et 9 février 2010, parus respectivement au Journal officiel des 5 janvier et 14 février 2010).
+
+Conformément à l'article 15 du même décret elles ne s'appliquent ni à la région Ile-de-France ni aux régions d'outre-mer.
+
+
+Conformément à l'article 2 du décret n° 2010-687 du 24 juin 2010, les dispositions du décret n° 2009-1377 du 10 novembre 2009 s'appliquent à la région Ile-de-France à compter du 1er juillet 2010.
+`
+      },
+  
+  
+  
+  //Démission
+  "L1237-1":{
+    texte: ` En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail.
+
+En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession.
+
+Un décret en Conseil d'Etat détermine les modalités d'application du présent article.`
+  
 };
