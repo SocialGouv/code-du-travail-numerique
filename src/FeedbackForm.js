@@ -66,7 +66,11 @@ class FeedbackForm extends React.Component {
             Accept: "application/json",
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(this.state)
+          body: JSON.stringify({
+            ...this.state,
+            userAgent: typeof navigator !== "undefined" && navigator.userAgent,
+            theme: this.props.theme.id
+          })
         })
           .then(r => r.json())
           .then(data => {
