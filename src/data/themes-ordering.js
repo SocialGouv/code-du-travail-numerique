@@ -115,6 +115,19 @@ let ordering = {
     ],
   ],
 
+  "Contrat de travail > Rupture de contrat à durée Indéterminée (CDI)": [
+    [
+      "Principes de la rupture",
+      "Licenciement",
+      "Rupture conventionnelle",
+      "Rupture à l'initiative du salarié",
+    ],
+    [
+      "Cas particuliers",
+      "Retraite",
+    ],
+  ],
+
 }
 
 export default ordering;
