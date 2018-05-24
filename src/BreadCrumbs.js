@@ -4,16 +4,45 @@ import styled from "styled-components";
 // génère le fil d'ariane depuis une liste type [{title: 'page 1'}, {title: 'page 2'}]
 
 const StyledBread = styled.button`
-  cursor: pointer;
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  color: black;
+
   text-decoration: ${props => props.underline && "underline"};
+  font-weight: ${props => !props.underline && "bold"};
+
+  cursor: pointer;
+  color: #0069cf;
+  margin: 3px 0 0 0;
+  background: #f3f5fa;
+  border: 0;
+  position: relative;
+  padding: 10px 40px;
+  height: 36px;
+  box-sizing: border-box;
+
+  &:focus,
+  &:focus::after,
+  &:hover,
+  &:hover::after {
+    text-decoration: none;
+    background: #cbe6f8;
+  }
+
+  /* Breadcrumbs inspired by https://codepen.io/AxeLVaisper/pen/dqxjb */
+  &::after {
+    background: #f3f5fa;
+    box-shadow: 2px -2px 0 2px #fff;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 36px; 
+    height: 36px;
+    transform: scale(0.707) rotate(45deg);
+    z-index: 1;
+  }
+
 `;
 
-const BreadCrumbEntry = ({ title, onClick, isLast, separator = " > " }) => (
+const BreadCrumbEntry = ({ title, onClick, isLast }) => (
   <React.Fragment>
     <StyledBread
       role={isLast ? null : "button"}
@@ -25,7 +54,7 @@ const BreadCrumbEntry = ({ title, onClick, isLast, separator = " > " }) => (
     >
       {title}
     </StyledBread>
-    {!isLast && separator}
+    {!isLast}
   </React.Fragment>
 );
 
