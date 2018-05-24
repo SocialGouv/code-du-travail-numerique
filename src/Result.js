@@ -1,6 +1,5 @@
 import React from "react";
 import * as Feather from "react-feather";
-import StarRating from "react-star-rating-component";
 import styled from "styled-components";
 
 import FeedbackForm from "./FeedbackForm";
@@ -183,7 +182,8 @@ const Result = ({ onResetClick, theme }) => {
           </BlockTitle>
           <li>
             <a href="https://socialgouv.github.io/faq-code-du-travail/">
-              Question-Réponse des services de renseignement <Feather.ExternalLink size="12" />
+              Question-Réponse des services de renseignement{" "}
+              <Feather.ExternalLink size="12" />
             </a>
           </li>
           <li>
@@ -198,8 +198,6 @@ const Result = ({ onResetClick, theme }) => {
         <BlockTitle>
           <Feather.ThumbsUp size="20" /> Aidez-nous à nous améliorer
         </BlockTitle>
-        Avons-nous répondu à votre question ?
-        <StarRating name="stars" value={null} />
         <FeedbackForm />
       </Block>
 

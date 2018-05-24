@@ -20,7 +20,9 @@ const conventions = []
     Object.keys(idcc).map(k => ({
       label: `${k}: ${idcc[k]}`,
       id: k,
-      url: `https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${k}` // TODO: better
+      url: `https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${parseInt(
+        k
+      )}` // TODO: better
     }))
   );
 
