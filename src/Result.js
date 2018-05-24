@@ -111,7 +111,7 @@ const Result = ({ onResetClick, theme }) => {
         conventions et accords de branche ou d'entreprise.*/}
       </Block>
 
-      <Block>
+      {/*<Block>
         <BlockTitle>
           <Feather.Paperclip size="20" /> Textes conventionnels
         </BlockTitle>
@@ -127,7 +127,7 @@ const Result = ({ onResetClick, theme }) => {
             Trouver votre accord d'entreprise <Feather.Search size="12" />
           </a>
         </li>
-      </Block>
+      </Block>*/}
 
       {theme.articles &&
         theme.articles.length && (

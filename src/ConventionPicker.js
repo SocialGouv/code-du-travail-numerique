@@ -69,7 +69,7 @@ class ConventionPicker extends React.Component {
     return (
       <div>
         <Search size="16" style={{ marginRight: 5, verticalAlign: "top" }} />
-        <Delay wait={250}>
+        <Delay wait={50}>
           <FuseInput
             data={conventions}
             onSuggestionSelected={this.onSuggestionSelected}
