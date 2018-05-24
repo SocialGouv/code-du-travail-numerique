@@ -42,7 +42,8 @@ class FeedbackForm extends React.Component {
     status: null
   };
   submit = () => {
-    const formUrl = "https://formspree.io/xgyvjopx";
+    // contact@code-du-travail.beta.gouv.fr
+    const formUrl = "https://formspree.io/mwbpdywx";
 
     if (
       !this.state.email ||
