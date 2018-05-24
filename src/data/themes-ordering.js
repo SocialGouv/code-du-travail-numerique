@@ -128,6 +128,26 @@ let ordering = {
     ],
   ],
 
+  "Contrat de travail > Période d'essai": [
+    [
+      "Définition",
+      "Une clause nécessaire du contrat de travail",
+      "Généralités",
+    ],
+    [
+      "Durée maximale par catégories de salariés",
+      "Exceptions relatives à la durée",
+      "Renouvellements : possibilités et durée",
+    ],
+    [
+      "Délai de prévenance et Rupture par le salarié",
+      "Délai de prévenance et Rupture par l'employeur",
+    ],
+    [
+      "stagiaire",
+    ],
+  ],
+
 }
 
 export default ordering;
