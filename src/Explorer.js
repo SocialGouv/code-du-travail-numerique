@@ -27,6 +27,25 @@ const getPathFromThemeId = id => {
 
 const ExplorerContainer = styled.div`padding: 20px;`;
 
+const ButtonResetContainer = styled.div`
+  text-align: center;
+  background: #f3f5fa;
+  padding: 10px;
+  margin: 10px 0;
+  & > a {
+    color: #0069cf;
+  }
+  & > a:hover {
+    text-decoration: none;
+  }
+`;
+
+const Reset = ({ onResetClick }) => (
+  <ButtonResetContainer>
+    <a href="#" onClick={onResetClick}>Faire une nouvelle demande</a>
+  </ButtonResetContainer>
+);
+
 const IntroContainer = styled.div`
   margin: 40px 20px;
   font-size: 1.3em;
@@ -145,7 +164,7 @@ class Explorer extends React.Component {
     return (
       <ExplorerContainer>
         <BreadCrumbs
-          style={{ marginBottom: 10, marginLeft: 10 }}
+          style={{ marginBottom: 10 }}
           entries={breadcrumbs}
           onClick={this.onBreadCrumbClick}
         />
@@ -153,6 +172,7 @@ class Explorer extends React.Component {
         <ThemeSelector node={currentTheme} onSelect={this.onSelectNode} currentPath={currentPath} />
         {isLeaf && <Result onResetClick={this.reset} theme={currentTheme} />}
         {!isStarted && <Intro />}
+        {(isStarted && <Reset onResetClick={this.reset} />) || null}
         {(isStarted && !isLeaf && <Teaser />) || null}
       </ExplorerContainer>
     );

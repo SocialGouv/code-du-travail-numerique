@@ -49,6 +49,7 @@ const StyledThemeFilter = styled.div`
   display: block;
   margin: 0 0 20px 0;
   padding: 10px;
+  background: #f3f5fa;
 `;
 
 class ThemeFilter extends React.Component {

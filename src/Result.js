@@ -11,12 +11,6 @@ import Articulation from "./Articulation";
 
 // page de résultats
 
-const ButtonReset = styled.button`
-  padding: 10px 20px;
-  cursor: pointer;
-`;
-const Center = styled.div`text-align: center;`;
-
 const Block = styled.div`
   padding: 10px;
   background: ${props => props.theme.light3};
@@ -218,16 +212,6 @@ const Result = ({ onResetClick, theme }) => {
         <FeedbackForm />
       </Block>
 
-      <Block>
-        <BlockTitle>
-          <Feather.Trash2 size="20" /> Nouvelle demande
-        </BlockTitle>
-        <Center>
-          <ButtonReset onClick={onResetClick}>
-            Faire une nouvelle demande
-          </ButtonReset>
-        </Center>
-      </Block>
     </div>
   );
 };
