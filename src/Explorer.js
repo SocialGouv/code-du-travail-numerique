@@ -42,7 +42,7 @@ const ButtonResetContainer = styled.div`
 
 const Reset = ({ onResetClick }) => (
   <ButtonResetContainer>
-    <a href="#" onClick={onResetClick}>Faire une nouvelle demande</a>
+    <a href="#" onClick={onResetClick}>Retour à l’accueil</a>
   </ButtonResetContainer>
 );
 
