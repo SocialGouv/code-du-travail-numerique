@@ -1,6 +1,7 @@
 import React from "react";
 import * as Feather from "react-feather";
 import Modal from "react-modal";
+import styled from "styled-components";
 
 import servicesDeRenseignement from "./data/services-de-renseignement.json";
 
@@ -20,6 +21,8 @@ const modalStyles = {
     height: 150
   }
 };
+
+const Container = styled.div`display: inline-block;`
 
 class ServiceRenseignementModal extends React.Component {
 
@@ -62,7 +65,7 @@ class ServiceRenseignementModal extends React.Component {
     }
 
     return (
-      <div>
+      <Container>
         <a href="#" onClick={this.openModal}>Trouver votre service de renseignement</a>
         <Modal
           style={modalStyles}
@@ -72,13 +75,13 @@ class ServiceRenseignementModal extends React.Component {
           <h2>Trouver votre service de renseignement</h2>
           <p>
             <label>
-              Saisissez votre numéro de département :
+              Saisissez votre numéro de département : 
               <input type="text" maxlength="3" onChange={this.onDepartmentInput} />
             </label>
           </p>
           {department}
         </Modal>
-      </div>
+      </Container>
     )
   };
 
