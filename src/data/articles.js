@@ -103,4 +103,16 @@ En l'absence de dispositions légales, de convention ou accord collectif de trav
 
 Un décret en Conseil d'Etat détermine les modalités d'application du présent article.`
   },
+  //Principes de la rupture
+  "L1231-1": {
+    texte: `Le contrat de travail à durée indéterminée peut être rompu à l'initiative de l'employeur ou du salarié, ou d'un commun accord, dans les conditions prévues par les dispositions du présent titre.
+
+Ces dispositions ne sont pas applicables pendant la période d'essai.`
+  },
+   "L1231-2": {
+    texte: `Les dispositions du présent titre ne dérogent pas aux dispositions légales assurant une protection particulière à certains salariés.`
+  }, 
+  "L1231-3": {
+    texte: `Les dispositions du présent titre sont applicables lorsque le salarié est lié à plusieurs employeurs par des contrats de travail.`
+  },
 };
