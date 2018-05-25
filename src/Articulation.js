@@ -101,7 +101,7 @@ const getArticulation = ({ theme, onBrancheClick, onEntrepriseClick }) => {
       <div>
         Consultez{" "}
         <span
-          onClick={onBrancheClick}
+          onClick={onEntrepriseClick}
           style={{ cursor: "pointer", textDecoration: "underline" }}
         >
           votre convention
