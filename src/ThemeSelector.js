@@ -68,8 +68,8 @@ class ThemeSelector extends React.Component {
 
     return (
       <ThemeSelectorContainer>
-        {groups.map(group => (
-          <GroupContainer>
+        {groups.map((group, index) => (
+          <GroupContainer key={index}>
             {group.map(child => (
               <ThemeButton
                 role="button"
