@@ -2,12 +2,13 @@ import React from "react";
 import * as Feather from "react-feather";
 import styled from "styled-components";
 
-import FeedbackForm from "./FeedbackForm";
-import ConventionPicker from "./ConventionPicker";
 import Articles from "./Articles";
-import Fiches, { hasFiche } from "./Fiches";
-import FAQ, { hasFaq } from "./FAQ";
 import Articulation from "./Articulation";
+import ConventionPicker from "./ConventionPicker";
+import FAQ, { hasFaq } from "./FAQ";
+import FeedbackForm from "./FeedbackForm";
+import Fiches, { hasFiche } from "./Fiches";
+import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
 // page de résultats
 
@@ -170,13 +171,7 @@ const Result = ({ onResetClick, theme }) => {
             <Feather.Phone size="20" /> Vos interlocuteurs
           </BlockTitle>
           <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://grand-est.direccte.gouv.fr/Presentation-de-l-unite-departementale-Nous-contacter-17713"
-            >
-              Services de renseignement <Feather.ExternalLink size="12" />
-            </a>
+            <ServiceRenseignementModal />
           </li>
           <li>
             <a target="_blank" rel="noopener noreferrer" href="https://www.ast67.org/">
