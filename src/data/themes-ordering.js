@@ -121,7 +121,7 @@ let ordering = {
     [
       "Principes de la rupture",
       "Licenciement",
-      "Rupture conventionnelle",
+      "Rupture conventionnelle (individuelle)",
       "Rupture à l'initiative du salarié",
     ],
     [
