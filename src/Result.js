@@ -74,17 +74,19 @@ const Result = ({ onResetClick, theme }) => {
       text: "Question-Réponse des services de renseignement"
     },
     {
-      href: "http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible",
-      text: "Le Code BFC: Exemple d'une publication de  DIRECCTE (màj: fév. 2017)"
-    },
+      href:
+        "http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible",
+      text:
+        "Le Code BFC: Exemple d'une publication de  DIRECCTE (màj: fév. 2017)"
+    }
   ];
   if (theme.id === 1700) {
-    links.unshift(
-      {
-        href: "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp",
-        text: "Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
-      },
-    );
+    links.unshift({
+      href:
+        "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp",
+      text:
+        "Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
+    });
   }
 
   return (
@@ -174,12 +176,20 @@ const Result = ({ onResetClick, theme }) => {
             <ServiceRenseignementModal />
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.ast67.org/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.ast67.org/"
+            >
               Médecine du travail <Feather.ExternalLink size="12" />
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.defenseurdesdroits.fr/office">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.defenseurdesdroits.fr/office"
+            >
               Défenseur des droits <Feather.ExternalLink size="12" />
             </a>
           </li>
@@ -190,10 +200,9 @@ const Result = ({ onResetClick, theme }) => {
             <Feather.Link size="20" /> Liens et outils
           </BlockTitle>
           {links.map(link => (
-            <li>
+            <li key={link}>
               <a target="_blank" rel="noopener noreferrer" href={link.href}>
-                {link.text}{" "}
-                <Feather.ExternalLink size="12" />
+                {link.text} <Feather.ExternalLink size="12" />
               </a>
             </li>
           ))}
@@ -204,7 +213,7 @@ const Result = ({ onResetClick, theme }) => {
         <BlockTitle>
           <Feather.ThumbsUp size="20" /> Aidez-nous à nous améliorer
         </BlockTitle>
-        <FeedbackForm />
+        <FeedbackForm theme={theme} />
       </Block>
 
     </div>
