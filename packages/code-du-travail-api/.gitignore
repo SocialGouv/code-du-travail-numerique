@@ -1,3 +1,9 @@
+# Editors
+.tm_properties
+
+# Mac Os
+.DS_Store
+
 # Logs
 logs
 *.log
