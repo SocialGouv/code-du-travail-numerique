@@ -77,7 +77,7 @@ const Result = ({ onResetClick, theme }) => {
       href:
         "http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible",
       text:
-        "Le Code BFC: Exemple d'une publication de  DIRECCTE (màj: fév. 2017)"
+        "Exemple de publication:Le Code BFC ( DIRECCTE Bourgogne Franche Comté, màj: fév. 2017), "
     }
   ];
   if (theme.id === 1700) {
@@ -85,7 +85,7 @@ const Result = ({ onResetClick, theme }) => {
       href:
         "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp",
       text:
-        "Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
+        "TELERC: Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
     });
   }
 
