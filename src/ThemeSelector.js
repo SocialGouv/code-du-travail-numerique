@@ -22,10 +22,7 @@ const ThemeButton = styled.button`
 
 const ThemeSelectorContainer = styled.div`text-align: center;`;
 
-const GroupContainer = styled.div`
-  padding: 5px 0;
-  text-align: left;
-`;
+const GroupContainer = styled.div`padding: 5px 0;`;
 
 class ThemeSelector extends React.Component {
   getOrderedChildren = (children, currentPath) => {
