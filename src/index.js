@@ -49,10 +49,10 @@ const BaselineBottom = styled.div`
   margin-top: 50px;
 `;
 
-const Header = () => (
+const Header = ({ onClick }) => (
   <header className="navbar">
     <div className="navbar__container">
-      <div style={{ cursor: "pointer" }}>
+      <div style={{ cursor: "pointer" }} onClick={onClick}>
         <img
           className="navbar__logo"
           src="/images/marianne.svg"
@@ -102,7 +102,7 @@ const App = () => {
         >
           version bêta
         </GitHubForkRibbon>
-        <Header />
+        <Header onClick={() => explorer.reset()} />
         <AppContainer role="main">
           <Explorer ref={node => (explorer = node)} />
         </AppContainer>
