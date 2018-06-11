@@ -49,6 +49,45 @@ const BaselineBottom = styled.div`
   margin-top: 50px;
 `;
 
+const Header = () => (
+  <header className="navbar">
+    <div className="navbar__container">
+      <div style={{ cursor: "pointer" }}>
+        <img
+          className="navbar__logo"
+          src="/images/marianne.svg"
+          alt="Accueil de template.data.gouv.fr"
+          style={{
+            verticalAlign: "top",
+            marginRight: 10,
+            maxHeight: 50,
+            flex: "0 0 120"
+          }}
+        />
+        <div
+          className="navbar__title_container"
+          style={{ display: "inline-block", paddingTop: 5 }}
+        >
+          <div className="navbar__title" style={{ fontSize: "1.5em" }}>
+            Code du travail numérique
+          </div>
+          <div className="navbar__subtitle">
+            Trouvez les réponses à vos questions sur le droit du travail
+          </div>
+        </div>
+      </div>
+      <nav>
+        <ul className="nav__links">
+          <li className="nav__item">
+            <a href="https://socialgouv.github.io/faq-code-du-travail">
+              F.A.Q.
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+);
 const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
@@ -63,13 +102,8 @@ const App = () => {
         >
           version bêta
         </GitHubForkRibbon>
+        <Header />
         <AppContainer role="main">
-          <Title onClick={() => explorer.reset()}>
-            Code du travail numérique
-          </Title>
-          <Baseline>
-            Trouvez les réponses à vos questions sur le droit du travail
-          </Baseline>
           <Explorer ref={node => (explorer = node)} />
         </AppContainer>
       </div>
