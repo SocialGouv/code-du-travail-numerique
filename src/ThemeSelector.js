@@ -60,13 +60,16 @@ class ThemeSelector extends React.Component {
     let currentPath = this.props.currentPath;
     let node = this.props.node;
     let onSelect = this.props.onSelect;
-
     let groups = this.getOrderedChildren(node.children, currentPath);
 
     return (
       (node.children.length && (
         <ThemeSelectorContainer>
-          <Panel title="Précisez le thème">
+          <Panel
+            title={
+              currentPath === "" ? "Choisissez un thème" : "Précisez le thème"
+            }
+          >
             {groups.map((group, index) => (
               <GroupContainer key={index}>
                 {group.map(child => (
