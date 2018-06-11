@@ -13,6 +13,10 @@ import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
 // page de résultats
 
+const Notification = ({ children, className }) => (
+  <div class={`notification ${className || ""}`}>{children}</div>
+);
+
 const Block = styled.div`
   li {
     margin: 10px 0;
@@ -60,6 +64,28 @@ const SectionSeparator = styled.div`
   background-color: ${props => props.theme.light2};
 `;
 
+const InfosRupture = () => (
+  <Panel title="Liens utiles">
+    <li>
+      <a href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp">
+        TELERC : saisie d'une demande d'homologation de R.C.{" "}
+        <Feather.ExternalLink size="10" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page=calculerdelairetractation">
+        TELERC : calcul de retractation <Feather.ExternalLink size="10" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14">
+        TELERC : calcul de l'indemnité légale de rupture conventionnelle{" "}
+        <Feather.ExternalLink size="10" />
+      </a>
+    </li>
+  </Panel>
+);
+
 const Result = ({ onResetClick, theme }) => {
   const hasFaqEntry = hasFaq(theme);
   const hasFicheEntry = hasFiche(theme);
@@ -76,6 +102,8 @@ const Result = ({ onResetClick, theme }) => {
         "Exemple de publication:Le Code BFC ( DIRECCTE Bourgogne Franche Comté, màj: fév. 2017), "
     }
   ];
+
+  // Contrat de travail / Rupture de contrat à durée Indéterminée (CDI) / Rupture conventionnelle (individuelle)
   if (theme.id === 1700) {
     links.unshift({
       href:
@@ -87,6 +115,7 @@ const Result = ({ onResetClick, theme }) => {
 
   return (
     <div style={{ marginTop: 20 }} role="article">
+      {theme.id === 1700 && <InfosRupture />}
       {(hasFaqEntry || hasFicheEntry) && (
           <React.Fragment>
             <Panel title="F.A.Q. et fiches">
@@ -171,7 +200,7 @@ const Result = ({ onResetClick, theme }) => {
               <Feather.Link size="20" /> Liens et outils
             </BlockTitle>
             {links.map(link => (
-              <li key={link}>
+              <li key={link.href}>
                 <a target="_blank" rel="noopener noreferrer" href={link.href}>
                   {link.text} <Feather.ExternalLink size="12" />
                 </a>
