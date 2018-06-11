@@ -215,7 +215,6 @@ const Result = ({ onResetClick, theme }) => {
         </BlockTitle>
         <FeedbackForm theme={theme} />
       </Block>
-
     </div>
   );
 };

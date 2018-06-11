@@ -4,14 +4,13 @@ import styled from "styled-components";
 // génère le fil d'ariane depuis une liste type [{title: 'page 1'}, {title: 'page 2'}]
 
 const StyledBread = styled.button`
-
   text-decoration: ${props => props.underline && "underline"};
   font-weight: ${props => !props.underline && "bold"};
 
   cursor: pointer;
   color: #0069cf;
   margin: 3px 0 0 0;
-  background: #f3f5fa;
+  background: white;
   border: 0;
   position: relative;
   padding: 10px 40px;
@@ -28,18 +27,17 @@ const StyledBread = styled.button`
 
   /* Breadcrumbs inspired by https://codepen.io/AxeLVaisper/pen/dqxjb */
   &::after {
-    background: #f3f5fa;
-    box-shadow: 2px -2px 0 2px #fff;
-    content: '';
+    background: white;
+    box-shadow: 2px -2px 0 2px #eee;
+    content: "";
     position: absolute;
     top: 0;
     right: -18px;
-    width: 36px; 
+    width: 36px;
     height: 36px;
     transform: scale(0.707) rotate(45deg);
     z-index: 1;
   }
-
 `;
 
 const BreadCrumbEntry = ({ title, onClick, isLast }) => (
