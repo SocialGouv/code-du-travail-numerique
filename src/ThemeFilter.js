@@ -421,6 +421,9 @@ class ThemeFilter extends React.Component {
 
   render() {
     let currentPath = this.props.currentPath;
+    if (!this.props.node.children.length) {
+      return null;
+    }
 
     let content = filters
       .filter(item => {
@@ -430,7 +433,7 @@ class ThemeFilter extends React.Component {
       .map(item => {
         // Render some filters as <select> elements.
         return (
-          <div className="panel">
+          <div key={item.id} className="panel">
             <div className="panel__header">
               <h3>{item.label}</h3>
               <small className="panel__header-extra" />

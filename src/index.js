@@ -34,6 +34,14 @@ const themeBlue = {
   background: "white"
 };
 
+const themeNeutral = {
+  primary: "#000",
+  light1: "#ccc",
+  light2: "#ddd",
+  light3: "#eee",
+  background: "white"
+};
+
 const BaselineBottom = styled.div`
   font-size: 1.4em;
   text-align: left;
@@ -45,7 +53,7 @@ const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
   return (
-    <ThemeProvider theme={themeBlue}>
+    <ThemeProvider theme={themeNeutral}>
       <div>
         <GitHubForkRibbon
           href="//github.com/SocialGouv/code-du-travail-explorer"

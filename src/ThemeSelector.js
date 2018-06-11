@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Panel from "./Panel";
 import ordering from "./data/themes-ordering.js";
 
 //
@@ -65,29 +66,23 @@ class ThemeSelector extends React.Component {
     return (
       (node.children.length && (
         <ThemeSelectorContainer>
-          <div className="panel">
-            <div className="panel__header">
-              <h3>Précisez le thème</h3>
-              <small className="panel__header-extra" />
-            </div>
-            <div className="form__group">
-              {groups.map((group, index) => (
-                <GroupContainer key={index}>
-                  {group.map(child => (
-                    <ThemeButton
-                      className="button"
-                      role="button"
-                      tabIndex={0}
-                      key={child.title}
-                      onClick={() => onSelect(child)}
-                    >
-                      {child.title}
-                    </ThemeButton>
-                  ))}
-                </GroupContainer>
-              ))}
-            </div>
-          </div>
+          <Panel title="Précisez le thème">
+            {groups.map((group, index) => (
+              <GroupContainer key={index}>
+                {group.map(child => (
+                  <ThemeButton
+                    className="button"
+                    role="button"
+                    tabIndex={0}
+                    key={child.title}
+                    onClick={() => onSelect(child)}
+                  >
+                    {child.title}
+                  </ThemeButton>
+                ))}
+              </GroupContainer>
+            ))}
+          </Panel>
         </ThemeSelectorContainer>
       )) ||
       null
