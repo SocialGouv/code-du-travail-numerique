@@ -27,7 +27,7 @@ const StyledAccordion = styled(Accordion)`
   line-height: 1.8em;
   .accordion__title {
     color: #444;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     box-sizing: border-box;
     cursor: pointer;
     padding: 12px;
@@ -37,7 +37,7 @@ const StyledAccordion = styled(Accordion)`
   }
   .accordion__body {
     padding: 10px 30px;
-    font-size: 1.2em;
+    font-size: 1.1rem;
     text-align: justify;
   }
 `;

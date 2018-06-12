@@ -22,7 +22,7 @@ const Baseline = styled.div`
 `;
 
 const AppContainer = styled.div`
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 `;
 
@@ -34,6 +34,14 @@ const themeBlue = {
   background: "white"
 };
 
+const themeNeutral = {
+  primary: "#000",
+  light1: "#ccc",
+  light2: "#ddd",
+  light3: "#eee",
+  background: "white"
+};
+
 const BaselineBottom = styled.div`
   font-size: 1.4em;
   text-align: left;
@@ -41,51 +49,65 @@ const BaselineBottom = styled.div`
   margin-top: 50px;
 `;
 
+const Header = ({ onClick }) => (
+  <header className="navbar">
+    <div className="navbar__container">
+      <div style={{ cursor: "pointer" }} onClick={onClick}>
+        <img
+          className="navbar__logo"
+          src="/images/marianne.svg"
+          alt="Accueil de template.data.gouv.fr"
+          style={{
+            verticalAlign: "top",
+            marginRight: 10,
+            maxHeight: 50,
+            flex: "0 0 120"
+          }}
+        />
+        <div
+          className="navbar__title_container"
+          style={{ display: "inline-block", paddingTop: 5 }}
+        >
+          <div className="navbar__title" style={{ fontSize: "1.5em" }}>
+            Code du travail numérique
+          </div>
+          <div className="navbar__subtitle">
+            Trouvez les réponses à vos questions sur le droit du travail
+          </div>
+        </div>
+      </div>
+      <nav>
+        <ul className="nav__links">
+          <li className="nav__item">
+            <a href="https://socialgouv.github.io/faq-code-du-travail">
+              F.A.Q.
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+);
 const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorer;
   return (
-    <HashRouter basename="/code-du-travail-explorer">
-      <ThemeProvider theme={themeBlue}>
-        <div>
-          <GitHubForkRibbon
-            href="//github.com/SocialGouv/code-du-travail-explorer"
-            target="_blank"
-            position="right"
-            color="green"
-          >
-            version bêta
-          </GitHubForkRibbon>
-          <AppContainer role="main">
-            <Title onClick={() => explorer.reset()}>
-              Code du travail numérique
-            </Title>
-            <Baseline>
-              Trouvez les réponses à vos questions sur le droit du travail
-            </Baseline>
-            <Route
-              exact={true}
-              path={`/`}
-              render={props => (
-                <React.Fragment>
-                  <BaselineBottom>Votre question porte sur:</BaselineBottom>
-                  <Explorer ref={node => (explorer = node)} />
-                </React.Fragment>
-              )}
-            />
-            <Route
-              path={`/themes/:themeId`}
-              render={props => (
-                <Explorer
-                  ref={node => (explorer = node)}
-                  themeId={props.match.params.themeId}
-                />
-              )}
-            />
-          </AppContainer>
-        </div>
-      </ThemeProvider>
-    </HashRouter>
+    <ThemeProvider theme={themeNeutral}>
+      <div>
+        <GitHubForkRibbon
+          href="//github.com/SocialGouv/code-du-travail-explorer"
+          target="_blank"
+          position="right"
+          color="green"
+        >
+          version bêta
+        </GitHubForkRibbon>
+        <Header onClick={() => explorer.reset()} />
+        <AppContainer role="main">
+          <Explorer ref={node => (explorer = node)} />
+        </AppContainer>
+      </div>
+    </ThemeProvider>
   );
 };
 render(<App />, document.getElementById("root"));

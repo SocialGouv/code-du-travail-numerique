@@ -29,20 +29,15 @@ const ExplorerContainer = styled.div`padding: 20px;`;
 
 const ButtonResetContainer = styled.div`
   text-align: center;
-  background: #f3f5fa;
-  padding: 10px;
-  margin: 10px 0;
-  & > a {
-    color: #0069cf;
-  }
-  & > a:hover {
-    text-decoration: none;
-  }
+  margin-top: 30px;
+  font-size: 1.2rem;
 `;
 
 const Reset = ({ onResetClick }) => (
   <ButtonResetContainer>
-    <a href="#" onClick={onResetClick}>Retour à l’accueil</a>
+    <a href="#" className="button secondary" onClick={onResetClick}>
+      Retour à l’accueil
+    </a>
   </ButtonResetContainer>
 );
 
@@ -71,11 +66,10 @@ const Teaser = () => (
 );
 
 class Explorer extends React.Component {
-
   constructor(props, ...args) {
     super(props, ...args);
     this.state = {
-      filter: {},
+      filter: {}
     };
     if (props.themeId) {
       // initalize with the given theme
@@ -90,7 +84,7 @@ class Explorer extends React.Component {
     this.setState({ selection: [], filter: {} });
   };
 
-  onThemeFilterChange = (filter) => {
+  onThemeFilterChange = filter => {
     this.setState({ filter: filter });
   };
 
@@ -124,7 +118,7 @@ class Explorer extends React.Component {
 
   getCurrentPath = (selection = this.state.selection) => {
     // Return the current path as string, e.g.: "Emploi - Formation > Apprentissage > Examen".
-    return selection.map(elem => elem.title).join(' > ');
+    return selection.map(elem => elem.title).join(" > ");
   };
 
   getCurrentTheme = () => {
@@ -137,20 +131,23 @@ class Explorer extends React.Component {
     });
 
     // Filter nodes.
-    let nodeCopy = JSON.parse(JSON.stringify(node));  // Deep copy.
+    let nodeCopy = JSON.parse(JSON.stringify(node)); // Deep copy.
     if (this.state.filter && this.state.filter.value) {
       // https://stackoverflow.com/a/38132582
       let ids = this.state.filter.ids;
-      nodeCopy.children = nodeCopy.children.filter(function recursiveFilter(element) {
+      nodeCopy.children = nodeCopy.children.filter(function recursiveFilter(
+        element
+      ) {
         if (element.id && ids.includes(element.id)) {
           return true;
         }
         if (element.children) {
-          return (element.children = element.children.filter(recursiveFilter)).length
+          return (element.children = element.children.filter(recursiveFilter))
+            .length;
         }
         return false;
       });
-    };
+    }
 
     return nodeCopy;
   };
@@ -168,16 +165,22 @@ class Explorer extends React.Component {
           entries={breadcrumbs}
           onClick={this.onBreadCrumbClick}
         />
-        <ThemeFilter onFilterChange={this.onThemeFilterChange} currentPath={currentPath} />
-        <ThemeSelector node={currentTheme} onSelect={this.onSelectNode} currentPath={currentPath} />
+        <ThemeFilter
+          onFilterChange={this.onThemeFilterChange}
+          node={currentTheme}
+          currentPath={currentPath}
+        />
+        <ThemeSelector
+          node={currentTheme}
+          onSelect={this.onSelectNode}
+          currentPath={currentPath}
+        />
         {isLeaf && <Result onResetClick={this.reset} theme={currentTheme} />}
         {!isStarted && <Intro />}
         {(isStarted && <Reset onResetClick={this.reset} />) || null}
-        {(isStarted && !isLeaf && <Teaser />) || null}
       </ExplorerContainer>
     );
   }
-
 }
 
 export default Explorer;
