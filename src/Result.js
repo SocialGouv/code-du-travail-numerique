@@ -115,7 +115,6 @@ const Result = ({ onResetClick, theme }) => {
 
   return (
     <div style={{ marginTop: 20 }} role="article">
-      {theme.id === 1700 && <InfosRupture />}
       {(hasFaqEntry || hasFicheEntry) && (
           <React.Fragment>
             <Panel title="F.A.Q. et fiches">
@@ -138,6 +137,8 @@ const Result = ({ onResetClick, theme }) => {
             </Panel>
           </React.Fragment>
         )}
+
+      {theme.id === 1700 && <InfosRupture />}
 
       <Panel title="Textes officiels">
         <BlockTitle>
