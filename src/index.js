@@ -24,6 +24,10 @@ const Baseline = styled.div`
 const AppContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  /* should be somewhere else */
+  .panel li {
+    line-height: 1.5em;
+  }
 `;
 
 const themeBlue = {
@@ -55,8 +59,8 @@ const Header = ({ onClick }) => (
       <div style={{ cursor: "pointer" }} onClick={onClick}>
         <img
           className="navbar__logo"
-          src="/images/marianne.svg"
-          alt="Accueil de template.data.gouv.fr"
+          src={require("./images/marianne.svg")}
+          alt="Accueil du code du travail numérique"
           style={{
             verticalAlign: "top",
             marginRight: 10,
