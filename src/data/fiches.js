@@ -557,8 +557,14 @@ export default [
   {
     source: "Ministère du travail",
     href:
-      "http://travail-emploi.gouv.fr/droit-du-travail/remuneration-et-participation-financiere/remuneration/",
-    title: "Le SMIC"
+      "http://travail-emploi.gouv.fr/droit-du-travail/remuneration-et-participation-financiere/remuneration/article/le-montant-du-smic-brut-horaire",
+    title: "Le montant du SMIC"
+  },
+  {
+    source: "Ministère du travail",
+    href:
+      "http://travail-emploi.gouv.fr/droit-du-travail/remuneration-et-participation-financiere/remuneration/article/le-smic-374531",
+    title: "Le SMIC "
   },
   {
     source: "Ministère du travail",
