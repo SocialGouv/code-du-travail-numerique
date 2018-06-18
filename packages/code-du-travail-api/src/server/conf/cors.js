@@ -2,7 +2,7 @@
 // https://github.com/koajs/cors/issues/12
 
 const validOrigins = [
-  'http://localhost:1337',
+  'http://localhost:3000', // URL + port of the frontend (in dev mode).
 ]
 
 function originIsValid (origin) {
