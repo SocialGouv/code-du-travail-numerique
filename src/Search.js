@@ -38,16 +38,17 @@ class Search extends React.Component {
     if (!query) {
       return this.setState({ data: null });
     }
-    this.setState({ pendingXHR: true, error: null });
-    fetch(API + query)
-      .then(response => {
-        if (response.ok) {
-          return response.json()
-        }
-        throw new Error('Un problème est survenu.');
-      })
-      .then(data => this.setState({ data, pendingXHR: false }))
-      .catch(error => this.setState({ error, pendingXHR: false }));
+    this.setState({ pendingXHR: true, error: null }, () => {
+      fetch(API + query)
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Un problème est survenu.");
+        })
+        .then(data => this.setState({ data, pendingXHR: false }))
+        .catch(error => this.setState({ error, pendingXHR: false }));
+    });
   }
 
   render() {
