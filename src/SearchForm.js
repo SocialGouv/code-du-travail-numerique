@@ -6,21 +6,18 @@ class SearchForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {query: ''};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange (event) {
+  handleChange = event => {
     this.setState({query: event.target.value});
   }
 
-  handleSubmit (event) {
+  handleSubmit = event => {
     event.preventDefault();
     this.props.fetchResults(this.state.query);
   }
 
-  handleKeyDown (event) {
+  handleKeyDown = event => {
     if (event.keyCode === 27) {
       this.setState({query: ''});
       this.props.fetchResults('');
