@@ -5,6 +5,7 @@ import styled, { ThemeProvider } from "styled-components";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 
 import Explorer from "./Explorer";
+import Search from "./Search";
 
 const Title = styled.div`
   font-size: 2em;
@@ -108,6 +109,7 @@ const App = () => {
         </GitHubForkRibbon>
         <Header onClick={() => explorer.reset()} />
         <AppContainer role="main">
+          <Search />
           <Explorer ref={node => (explorer = node)} />
         </AppContainer>
       </div>
