@@ -13,24 +13,35 @@ async function search (query) {
     body: {
       query: {
         bool: {
-          must: [
+          should: [
             {
-              multi_match: {
-                query: query,
-                fields: [
-                  'bloc_textuel.french^2',
-                  'bloc_textuel.ngram',
-                ],
+              match_phrase: {
+                'bloc_textuel.french': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'bloc_textuel.edge_ngram': {
+                  query: query,
+                },
               },
             },
           ],
         },
       },
       highlight: {
+        order: 'score',
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
           'bloc_textuel.french': {
+            number_of_fragments: 0,
+          },
+          'bloc_textuel.edge_ngram': {
             number_of_fragments: 0,
           },
         },
