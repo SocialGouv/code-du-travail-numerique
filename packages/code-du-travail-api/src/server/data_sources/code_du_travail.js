@@ -8,29 +8,56 @@ const elasticsearchClient = require('../conf/elasticsearch')
  */
 async function search (query) {
 
-  const elasticsearchQuery = {
+  let elasticsearchQuery = {
     index: 'code_du_travail_numerique',
     body: {
       query: {
-        match: {
-          bloc_textuel: {
-            query: query,
-            operator: 'and',
-            fuzziness: 'AUTO',
-          },
+        bool: {
+          must: [
+            {
+              multi_match: {
+                query: query,
+                fields: [
+                  'bloc_textuel.french^2',
+                  'bloc_textuel.ngram',
+                ],
+              },
+            },
+          ],
         },
       },
       highlight: {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          bloc_textuel: {
-            // Highlight the entire field contents.
+          'bloc_textuel.french': {
             number_of_fragments: 0,
           },
         },
       },
+      suggest: {
+        text: query,
+        suggestion: {
+          phrase: {
+            field: 'bloc_textuel',
+          },
+        },
+      },
     },
+  }
+
+  const ARTICLE_REF_REGEX = /^[LRD]\d{1,4}-?\d{1,2}?$/i
+  if (ARTICLE_REF_REGEX.test(query)) {
+    elasticsearchQuery = {
+      index: 'code_du_travail_numerique',
+      body: {
+        query: {
+          term: {
+            num: query,
+          },
+        },
+      },
+    }
   }
 
   try {
