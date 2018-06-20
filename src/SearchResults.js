@@ -54,12 +54,15 @@ class SearchResults extends React.Component {
 
   render() {
 
-    const data = this.props.data;
+    let data = this.props.data;
 
     // No query.
     if (!data) {
       return null;
     }
+
+    // TODO: handle other data sources as they become available.
+    data = data.code_du_travail.results;
 
     // No results for query.
     if (data.hits.total === 0) {
