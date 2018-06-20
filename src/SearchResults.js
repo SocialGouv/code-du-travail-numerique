@@ -24,7 +24,8 @@ class Result extends React.Component {
 
     let article = data._source.bloc_textuel;
     if (data.highlight) {
-      article = data.highlight.bloc_textuel[0];
+      let firstOjectKeyName = Object.keys(data.highlight)[0]
+      article = data.highlight[firstOjectKeyName][0]; // Use 1st available highlight.
     }
     let trailingBrRegex = /^\s*(?:<br\s*\/?\s*>)+|(?:<br\s*\/?\s*>)+\s*$/gi;
     article = article.replace(trailingBrRegex, '');
