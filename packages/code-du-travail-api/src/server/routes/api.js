@@ -11,12 +11,17 @@ const BASE_URL = `/api/v1`
  * http://localhost:1337/api/v1/search?q=incapacité%20travail
  *
  * @param {string} querystring.q A `q` querystring param containing the query to process.
- * @returns {Object} An elasticsearch response.
+ * @returns {Object} Results by data sources.
  */
 router.get(`${BASE_URL}/search`, async (ctx) => {
   try {
     // TODO: use other data sources.
-    ctx.body = await codeDuTravail.search(ctx.request.query.q)
+    ctx.body = {
+      code_du_travail: {
+        results: await codeDuTravail.search(ctx.request.query.q),
+        resultsFormat: 'Elasticsearch response',
+      },
+    }
   } catch (error) {
     console.trace(error.message)
   }
