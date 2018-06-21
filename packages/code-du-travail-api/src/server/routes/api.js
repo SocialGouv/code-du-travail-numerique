@@ -1,5 +1,6 @@
 const Router = require('koa-router')
-const codeDuTravail = require('../data_sources/code_du_travail')
+const codeDuTravail = require('../data_sources/code_du_travail.js')
+const fichesServicePublic = require('../data_sources/fiches_service_public.js')
 
 const router = new Router()
 const BASE_URL = `/api/v1`
@@ -15,10 +16,14 @@ const BASE_URL = `/api/v1`
  */
 router.get(`${BASE_URL}/search`, async (ctx) => {
   try {
-    // TODO: use other data sources.
+    let query = ctx.request.query.q
     ctx.body = {
       code_du_travail: {
-        results: await codeDuTravail.search(ctx.request.query.q),
+        results: await codeDuTravail.search(query, 5),
+        resultsFormat: 'Elasticsearch response',
+      },
+      fiches_service_public: {
+        results: await fichesServicePublic.search(query, 5),
         resultsFormat: 'Elasticsearch response',
       },
     }

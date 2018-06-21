@@ -1,6 +1,6 @@
 const elasticsearchClient = require('../conf/elasticsearch.js')
 
-const elasticsearchIndexName = 'code_du_travail'
+const elasticsearchIndexName = 'fiches_service_public'
 
 /**
  * Return documents matching the given query from Elasticsearch.
@@ -20,7 +20,7 @@ async function search (query, size) {
           should: [
             {
               match_phrase: {
-                'bloc_textuel.french': {
+                'title.french': {
                   query: query,
                   boost: 3,
                   slop: 1,
@@ -29,7 +29,22 @@ async function search (query, size) {
             },
             {
               match: {
-                'bloc_textuel.edge_ngram': {
+                'title.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'tags.french': {
+                  query: query,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'tags.edge_ngram': {
                   query: query,
                 },
               },
@@ -42,10 +57,16 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'bloc_textuel.french': {
+          'title.french': {
             number_of_fragments: 0,
           },
-          'bloc_textuel.edge_ngram': {
+          'title.edge_ngram': {
+            number_of_fragments: 0,
+          },
+          'tags.french': {
+            number_of_fragments: 0,
+          },
+          'tags.edge_ngram': {
             number_of_fragments: 0,
           },
         },
@@ -54,25 +75,11 @@ async function search (query, size) {
         text: query,
         suggestion: {
           phrase: {
-            field: 'bloc_textuel',
+            field: 'title',
           },
         },
       },
     },
-  }
-
-  const ARTICLE_REF_REGEX = /^[LRD]\d{1,4}-?\d{1,2}?$/i
-  if (ARTICLE_REF_REGEX.test(query)) {
-    elasticsearchQuery = {
-      index: elasticsearchIndexName,
-      body: {
-        query: {
-          term: {
-            num: query,
-          },
-        },
-      },
-    }
   }
 
   try {
