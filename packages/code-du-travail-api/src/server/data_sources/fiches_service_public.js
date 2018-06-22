@@ -19,11 +19,12 @@ async function search (query, size) {
       query: {
         bool: {
           should: [
+            // Title.
             {
               match_phrase: {
                 'title.french': {
                   query: query,
-                  boost: 3,
+                  boost: 4,
                   slop: 1,
                 },
               },
@@ -35,6 +36,41 @@ async function search (query, size) {
                 },
               },
             },
+            // Text.
+            {
+              match_phrase: {
+                'text.french': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'text.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            // Sous theme.
+            {
+              match_phrase: {
+                'sous_theme.french': {
+                  query: query,
+                  boost: 2,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'sous_theme.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            // Tags.
             {
               match_phrase: {
                 'tags.french': {
@@ -58,18 +94,14 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'title.french': {
-            number_of_fragments: 0,
-          },
-          'title.edge_ngram': {
-            number_of_fragments: 0,
-          },
-          'tags.french': {
-            number_of_fragments: 0,
-          },
-          'tags.edge_ngram': {
-            number_of_fragments: 0,
-          },
+          'title.french': {},
+          'title.edge_ngram': {},
+          'text.french': {},
+          'text.edge_ngram': {},
+          'sous_theme.french': {},
+          'sous_theme.edge_ngram': {},
+          'tags.french': {},
+          'tags.edge_ngram': {},
         },
       },
       suggest: {

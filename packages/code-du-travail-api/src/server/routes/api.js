@@ -21,7 +21,7 @@ router.get(`${BASE_URL}/search`, async (ctx) => {
     let query = ctx.request.query.q
     ctx.body = {
       code_du_travail: {
-        results: await codeDuTravail.search(query, 10),
+        results: await codeDuTravail.search(query, 5),
         resultsFormat: 'Elasticsearch response',
       },
       fiches_service_public: {
