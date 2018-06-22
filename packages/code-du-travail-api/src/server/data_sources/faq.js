@@ -1,6 +1,6 @@
 const elasticsearchClient = require('../conf/elasticsearch.js')
 
-const elasticsearchIndexName = 'fiches_service_public'
+const elasticsearchIndexName = 'faq'
 
 /**
  * Return documents matching the given query from Elasticsearch.
@@ -21,7 +21,7 @@ async function search (query, size) {
           should: [
             {
               match_phrase: {
-                'title.french': {
+                'question.french': {
                   query: query,
                   boost: 3,
                   slop: 1,
@@ -30,14 +30,14 @@ async function search (query, size) {
             },
             {
               match: {
-                'title.edge_ngram': {
+                'question.edge_ngram': {
                   query: query,
                 },
               },
             },
             {
               match_phrase: {
-                'tags.french': {
+                'reponse.french': {
                   query: query,
                   slop: 1,
                 },
@@ -45,7 +45,35 @@ async function search (query, size) {
             },
             {
               match: {
-                'tags.edge_ngram': {
+                'reponse.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match: {
+                'theme.french': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match: {
+                'theme.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match: {
+                'branche.french': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match: {
+                'branche.edge_ngram': {
                   query: query,
                 },
               },
@@ -58,25 +86,17 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'title.french': {
+          'question.french': {
             number_of_fragments: 0,
           },
-          'title.edge_ngram': {
+          'question.edge_ngram': {
             number_of_fragments: 0,
           },
-          'tags.french': {
+          'reponse.french': {
             number_of_fragments: 0,
           },
-          'tags.edge_ngram': {
+          'reponse.edge_ngram': {
             number_of_fragments: 0,
-          },
-        },
-      },
-      suggest: {
-        text: query,
-        suggestion: {
-          phrase: {
-            field: 'title',
           },
         },
       },
