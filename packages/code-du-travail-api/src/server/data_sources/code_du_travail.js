@@ -20,6 +20,22 @@ async function search (query, size) {
           should: [
             {
               match_phrase: {
+                'tags.french': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'tags.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match_phrase: {
                 'bloc_textuel.french': {
                   query: query,
                   boost: 3,
@@ -42,6 +58,12 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
+          'tags.french': {
+            number_of_fragments: 0,
+          },
+          'tags.edge_ngram': {
+            number_of_fragments: 0,
+          },
           'bloc_textuel.french': {
             number_of_fragments: 0,
           },
