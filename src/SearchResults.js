@@ -25,7 +25,9 @@ class ResultsCodeDuTravailContainer extends React.Component {
     }
     return (
       <div>
-        <p>Environ {data.hits.total} résultats trouvés dans <em>le Code du travail</em> ({data.took / 1000} secondes)</p>
+        <div className="notification info">
+          <p>Environ {data.hits.total} résultats trouvés dans <em>le Code du travail</em> ({data.took / 1000} secondes)</p>
+        </div>
         {data.hits.hits.map(result => <ResultCodeDuTravail data={result} />)}
       </div>
     )
@@ -58,7 +60,7 @@ class ResultCodeDuTravail extends React.Component {
           <h1>{data._source.titre}</h1>
           <p>{tags}</p>
         </header>
-        <blockquote dangerouslySetInnerHTML={{__html:article}}></blockquote>
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:article}}></blockquote>
         <footer>
           <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
         </footer>
@@ -79,7 +81,9 @@ class ResultsFichesServicePublicContainer extends React.Component {
     }
     return (
       <div>
-        <p>Environ {data.hits.total} résultats trouvés dans <em>les fiches Service Public</em> ({data.took / 1000} secondes)</p>
+        <div className="notification info">
+          <p>Environ {data.hits.total} résultats trouvés dans <em>les fiches Service Public</em> ({data.took / 1000} secondes)</p>
+        </div>
         {data.hits.hits.map(result => <ResultFicheServicePublic data={result} />)}
       </div>
     )
@@ -92,15 +96,13 @@ class ResultFicheServicePublic extends React.Component {
   render() {
     let data = this.props.data;
     let firstOjectKeyName = Object.keys(data.highlight)[0]
-    let highlight = data.highlight[firstOjectKeyName];
+    let highlight = data.highlight[firstOjectKeyName][0];
     return (
       <article key={data._id} className={data._type}>
         <header>
           <h1>{data._source.title}</h1>
         </header>
-        <ul>
-          {highlight.map(item => <li dangerouslySetInnerHTML={{__html:item}}></li>)}
-        </ul>
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:highlight}}></blockquote>
         <footer>
           <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir la fiche sur Service Public</a>
         </footer>
@@ -111,7 +113,43 @@ class ResultFicheServicePublic extends React.Component {
 }
 
 
-const ResultsContainer = styled.div`text-align: left;`;
+class ResultsFaqContainer extends React.Component {
+
+  render() {
+    let data = this.props.data;
+    if (data.hits.total === 0) {
+      return (<NoResult source={'la FAQ'}></NoResult>);
+    }
+    return (
+      <div>
+        <div className="notification info">
+          <p>Environ {data.hits.total} résultats trouvés dans <em>la FAQ</em> ({data.took / 1000} secondes)</p>
+        </div>
+        {data.hits.hits.map(result => <ResultFaq data={result} />)}
+      </div>
+    )
+  }
+
+}
+
+class ResultFaq extends React.Component {
+
+  render() {
+    let data = this.props.data;
+    return (
+      <article key={data._id} className={data._type}>
+        <header>
+          <h1>{data._source.question}</h1>
+        </header>
+        <blockquote dangerouslySetInnerHTML={{__html:data._source.reponse}}></blockquote>
+      </article>
+    )
+  }
+
+}
+
+
+const ResultsContainer = styled.div`text-align: left; margin-top: 20px;`;
 
 class SearchResults extends React.Component {
 
@@ -127,6 +165,7 @@ class SearchResults extends React.Component {
     return (
       <ResultsContainer>
         <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
+        <ResultsFaqContainer data={data.faq.results} />
         <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />
       </ResultsContainer>
     );
