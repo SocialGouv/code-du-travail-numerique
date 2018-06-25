@@ -87,16 +87,16 @@ async function search (query, size) {
         post_tags: ['</b>'],
         fields: {
           'question.french': {
-            number_of_fragments: 0,
+            number_of_fragments: 10,
           },
           'question.edge_ngram': {
-            number_of_fragments: 0,
+            number_of_fragments: 10,
           },
           'reponse.french': {
-            number_of_fragments: 0,
+            number_of_fragments: 10,
           },
           'reponse.edge_ngram': {
-            number_of_fragments: 0,
+            number_of_fragments: 10,
           },
         },
       },

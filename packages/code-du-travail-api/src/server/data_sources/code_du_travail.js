@@ -65,10 +65,10 @@ async function search (query, size) {
             number_of_fragments: 0,
           },
           'bloc_textuel.french': {
-            number_of_fragments: 0,
+            number_of_fragments: 10,
           },
           'bloc_textuel.edge_ngram': {
-            number_of_fragments: 0,
+            number_of_fragments: 10,
           },
         },
       },

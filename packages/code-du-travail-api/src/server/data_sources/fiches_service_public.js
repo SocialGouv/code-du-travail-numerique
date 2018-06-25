@@ -94,14 +94,30 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'title.french': {},
-          'title.edge_ngram': {},
-          'text.french': {},
-          'text.edge_ngram': {},
-          'sous_theme.french': {},
-          'sous_theme.edge_ngram': {},
-          'tags.french': {},
-          'tags.edge_ngram': {},
+          'title.french': {
+            number_of_fragments: 10,
+          },
+          'title.edge_ngram': {
+            number_of_fragments: 10,
+          },
+          'text.french': {
+            number_of_fragments: 10,
+          },
+          'text.edge_ngram': {
+            number_of_fragments: 10,
+          },
+          'sous_theme.french': {
+            number_of_fragments: 10,
+          },
+          'sous_theme.edge_ngram': {
+            number_of_fragments: 10,
+          },
+          'tags.french': {
+            number_of_fragments: 10,
+          },
+          'tags.edge_ngram': {
+            number_of_fragments: 10,
+          },
         },
       },
       suggest: {
