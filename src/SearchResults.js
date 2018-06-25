@@ -25,10 +25,10 @@ class ResultsCodeDuTravailContainer extends React.Component {
     }
     return (
       <div>
-        <div className="notification info">
-          <p>Environ {data.hits.total} résultats trouvés dans <em>le Code du travail</em> ({data.took / 1000} secondes)</p>
+        <div className="search-title">
+          <h1>Résultats dans le <em>Code du travail</em></h1>
         </div>
-        {data.hits.hits.map(result => <ResultCodeDuTravail data={result} />)}
+        {data.hits.hits.map(result => <ResultCodeDuTravail key={result['_id']} data={result} />)}
       </div>
     )
   }
@@ -46,21 +46,29 @@ class ResultCodeDuTravail extends React.Component {
     let legifranceBaseUrl = 'https://www.legifrance.gouv.fr/affichCodeArticle.do';
     let legifranceUrl = `${legifranceBaseUrl}?idArticle=${data._source.id}&cidTexte=${data._source.cid}`;
 
-    let article = data._source.bloc_textuel;
+    let excerpt = ''
+    let source = null
+
     if (data.highlight) {
-      let firstOjectKeyName = Object.keys(data.highlight)[0]
-      article = data.highlight[firstOjectKeyName][0]; // Use 1st available highlight.
+      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
+      excerpt = data.highlight[firstHighlightObjectKeyName][0]; // Use 1st available highlight.
+      if (firstHighlightObjectKeyName.includes('tags')) {
+        source = (<p><i>Trouvé dans les tags :</i></p>)
+      } else if (firstHighlightObjectKeyName.includes('bloc_textuel')) {
+        source = (<p><i>Trouvé dans le texte :</i></p>)
+        excerpt += '…';
+      }
     }
-    let trailingBrRegex = /^\s*(?:<br\s*\/?\s*>)+|(?:<br\s*\/?\s*>)+\s*$/gi;
-    article = article.replace(trailingBrRegex, '');
 
     return (
       <article key={data._id} className={data._type}>
         <header>
-          <h1>{data._source.titre}</h1>
-          <p>{tags}</p>
+          <h1>
+            {data._source.titre} - <span>{tags}</span>
+          </h1>
         </header>
-        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:article}}></blockquote>
+        {source}
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
           <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
         </footer>
@@ -81,10 +89,10 @@ class ResultsFichesServicePublicContainer extends React.Component {
     }
     return (
       <div>
-        <div className="notification info">
-          <p>Environ {data.hits.total} résultats trouvés dans <em>les fiches Service Public</em> ({data.took / 1000} secondes)</p>
+        <div className="search-title">
+          <h1>Résultats dans les <em>fiches Service Public</em></h1>
         </div>
-        {data.hits.hits.map(result => <ResultFicheServicePublic data={result} />)}
+        {data.hits.hits.map(result => <ResultFicheServicePublic key={result['_id']} data={result} />)}
       </div>
     )
   }
@@ -95,16 +103,30 @@ class ResultFicheServicePublic extends React.Component {
 
   render() {
     let data = this.props.data;
-    let firstOjectKeyName = Object.keys(data.highlight)[0]
-    let highlight = data.highlight[firstOjectKeyName][0];
+
+    let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
+    let excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
+
+    let source = null
+    if (firstHighlightObjectKeyName.includes('title')) {
+      source = (<p><i>Trouvé dans le titre :</i></p>)
+    } else if (firstHighlightObjectKeyName.includes('text')) {
+      source = (<p><i>Trouvé dans le texte :</i></p>)
+    } else if (firstHighlightObjectKeyName.includes('sous_theme')) {
+      source = (<p><i>Trouvé dans le thème :</i></p>)
+    } else if (firstHighlightObjectKeyName.includes('tags')) {
+      source = (<p><i>Trouvé dans les tags :</i></p>)
+    }
+
     return (
       <article key={data._id} className={data._type}>
         <header>
           <h1>{data._source.title}</h1>
         </header>
-        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:highlight}}></blockquote>
+        {source}
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
-          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir la fiche sur Service Public</a>
+          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Service Public</a>
         </footer>
       </article>
     )
@@ -122,10 +144,10 @@ class ResultsFaqContainer extends React.Component {
     }
     return (
       <div>
-        <div className="notification info">
-          <p>Environ {data.hits.total} résultats trouvés dans <em>la FAQ</em> ({data.took / 1000} secondes)</p>
+        <div className="search-title">
+          <h1>Résultats dans la <em>FAQ</em></h1>
         </div>
-        {data.hits.hits.map(result => <ResultFaq data={result} />)}
+        {data.hits.hits.map(result => <ResultFaq key={result['_id']} data={result} />)}
       </div>
     )
   }
@@ -136,12 +158,24 @@ class ResultFaq extends React.Component {
 
   render() {
     let data = this.props.data;
+
+    let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
+    let excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
+
+    let source = null
+    if (firstHighlightObjectKeyName.includes('question')) {
+      source = (<p><i>Trouvé dans la question :</i></p>)
+    } else if (firstHighlightObjectKeyName.includes('reponse')) {
+      source = (<p><i>Trouvé dans la réponse :</i></p>)
+    }
+
     return (
       <article key={data._id} className={data._type}>
         <header>
           <h1>{data._source.question}</h1>
         </header>
-        <blockquote dangerouslySetInnerHTML={{__html:data._source.reponse}}></blockquote>
+        {source}
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
       </article>
     )
   }
@@ -163,7 +197,7 @@ class SearchResults extends React.Component {
     }
 
     return (
-      <ResultsContainer>
+      <ResultsContainer className="search-results">
         <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
         <ResultsFaqContainer data={data.faq.results} />
         <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />

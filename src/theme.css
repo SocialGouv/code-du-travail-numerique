@@ -24,3 +24,44 @@ body {
 .accordion__title {
   box-sizing: border-box;
 }
+
+/* Search results */
+
+.search-results {
+  background: #f3f3f3;
+  padding: 20px;
+  margin: 20px -24px -24px -24px;
+}
+
+.search-title {
+  box-sizing: border-box;
+  max-width: 95%;
+}
+
+.search-results article {
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 1px solid #f1f1f1;
+  border-radius: 3px;
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.search-results article h1 {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results article h1 span {
+  color: #3b3b3b;
+}
+
+.search-results article blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 10px;
+  background: transparent;
+}
