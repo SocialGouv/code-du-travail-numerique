@@ -53,9 +53,9 @@ class ResultCodeDuTravail extends React.Component {
       let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
       excerpt = data.highlight[firstHighlightObjectKeyName][0]; // Use 1st available highlight.
       if (firstHighlightObjectKeyName.includes('tags')) {
-        source = (<p><i>Trouvé dans les tags :</i></p>)
+        source = (<i>Résultat trouvé dans les tags</i>)
       } else if (firstHighlightObjectKeyName.includes('bloc_textuel')) {
-        source = (<p><i>Trouvé dans le texte :</i></p>)
+        source = (<i>Résultat trouvé dans le texte</i>)
         excerpt += '…';
       }
     }
@@ -63,14 +63,11 @@ class ResultCodeDuTravail extends React.Component {
     return (
       <article key={data._id} className={data._type}>
         <header>
-          <h1>
-            {data._source.titre} - <span>{tags}</span>
-          </h1>
+        <h1>{data._source.titre}</h1>
         </header>
-        {source}
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
-          <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
+          {source} - <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
         </footer>
       </article>
     )
@@ -109,13 +106,13 @@ class ResultFicheServicePublic extends React.Component {
 
     let source = null
     if (firstHighlightObjectKeyName.includes('title')) {
-      source = (<p><i>Trouvé dans le titre :</i></p>)
+      source = (<i>Résultat trouvé dans le titre</i>)
     } else if (firstHighlightObjectKeyName.includes('text')) {
-      source = (<p><i>Trouvé dans le texte :</i></p>)
+      source = (<i>Résultat trouvé dans le texte</i>)
     } else if (firstHighlightObjectKeyName.includes('sous_theme')) {
-      source = (<p><i>Trouvé dans le thème :</i></p>)
+      source = (<i>Résultat trouvé dans le thème</i>)
     } else if (firstHighlightObjectKeyName.includes('tags')) {
-      source = (<p><i>Trouvé dans les tags :</i></p>)
+      source = (<i>Résultat trouvé dans les tags</i>)
     }
 
     return (
@@ -123,10 +120,9 @@ class ResultFicheServicePublic extends React.Component {
         <header>
           <h1>{data._source.title}</h1>
         </header>
-        {source}
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
-          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Service Public</a>
+          {source} - <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Service Public</a>
         </footer>
       </article>
     )
@@ -164,9 +160,9 @@ class ResultFaq extends React.Component {
 
     let source = null
     if (firstHighlightObjectKeyName.includes('question')) {
-      source = (<p><i>Trouvé dans la question :</i></p>)
+      source = (<i>Résultat trouvé dans la question</i>)
     } else if (firstHighlightObjectKeyName.includes('reponse')) {
-      source = (<p><i>Trouvé dans la réponse :</i></p>)
+      source = (<i>Résultat trouvé dans la réponse</i>)
     }
 
     return (
@@ -174,8 +170,10 @@ class ResultFaq extends React.Component {
         <header>
           <h1>{data._source.question}</h1>
         </header>
-        {source}
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+        <footer>
+          {source}
+        </footer>
       </article>
     )
   }

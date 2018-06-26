@@ -44,8 +44,23 @@ body {
   border: 1px solid #f1f1f1;
   border-radius: 3px;
   background: #fff;
-  padding: 20px;
+  padding: 10px 20px;
   margin: 20px auto;
+}
+
+.search-results article.code_du_travail {
+  border-left-width: 6px;
+  border-left-color: #4edc7c;
+}
+
+.search-results article.faq {
+  border-left-width: 6px;
+  border-left-color: #ffc63c;
+}
+
+.search-results article.fiches_service_public {
+  border-left-width: 6px;
+  border-left-color: #ff5252;
 }
 
 .search-results article h1 {
@@ -62,6 +77,15 @@ body {
 .search-results article blockquote {
   margin-left: 0;
   margin-right: 0;
-  padding: 0 10px;
+  padding: 0;
   background: transparent;
+  border: 0;
+  color: #545454;
+}
+
+.search-results article footer {
+  border: 1px solid #e8edf4;
+  border-width: 1px 0 0 0;
+  margin: 10px -20px 0 -20px;
+  padding: 10px 20px 0 20px;
 }
