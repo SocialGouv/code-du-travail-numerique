@@ -3,6 +3,7 @@
 
 const validOrigins = [
   'http://localhost:3000', // URL + port of the frontend (in dev mode).
+  'https://socialgouv.github.io/',
 ]
 
 function originIsValid (origin) {

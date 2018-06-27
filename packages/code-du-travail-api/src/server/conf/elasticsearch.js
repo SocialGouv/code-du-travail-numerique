@@ -2,9 +2,13 @@
 
 const elasticsearch = require('elasticsearch')
 
+const ELASTICSEARCH_URL = process.env.ELASTICSEARCH_URL || 'localhost:9200'
+// Log level can be: warn, info, debug or trace.
+const ELASTICSEARCH_LOG_LEVEL = process.env.ELASTICSEARCH_LOG_LEVEL || 'trace'
+
 const client = new elasticsearch.Client({
-  host: 'localhost:9200',
-  log: 'trace',
+  host: ELASTICSEARCH_URL,
+  log: ELASTICSEARCH_LOG_LEVEL,
 })
 
 module.exports = client
