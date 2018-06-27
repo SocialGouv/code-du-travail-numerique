@@ -43,7 +43,7 @@ class Search extends React.Component {
       return this.setState({ data: null });
     }
     this.setState({ pendingXHR: true, error: null }, () => {
-      fetch(API + query)
+      fetch(API + query, {mode: 'cors'})
         .then(response => {
           if (response.ok) {
             return response.json();
