@@ -196,9 +196,9 @@ class SearchResults extends React.Component {
 
     return (
       <ResultsContainer className="search-results">
-        <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
         <ResultsFaqContainer data={data.faq.results} />
         <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />
+        <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
       </ResultsContainer>
     );
 
