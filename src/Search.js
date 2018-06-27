@@ -6,8 +6,12 @@ import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
 
 
-const API = 'http://localhost:1337/api/v1/search?q=';
+let API = 'https://cdtn-api.num.social.gouv.fr/api/v1/search?q=';
 
+if (window.location.hostname === 'localhost') {
+  console.log('Running in dev mode on localhost')
+  API = 'http://localhost:1337/api/v1/search?q=';
+}
 
 const ErrorXhrContainer = styled.div`margin-top: 20px;`;
 
