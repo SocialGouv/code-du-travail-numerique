@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  node:
+    container_name: code-du-travail-api
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./docker/dev/Dockerfile
+    ports:
+      - 1337:1337
+    restart: always
+    # In development: mount the local source code in the container and
+    # the main process will be run through Nodemon.
+    volumes:
+      - ./src:/app/src
+
+networks:
+
+  default:
+    # The network used by the repository `code-du-travail-data` must be active first.
+    external:
+      name: code-du-travail-data_default

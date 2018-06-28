@@ -6,18 +6,25 @@ Projet Node.js avec `Node v9` et `npm 5`.
 
 ## Installation de l'environnement de développement
 
-### Pour construire l'image Docker :
+Créez un fichier `.env` (utilisé par Docker) :
 
 ```shell
-$ docker build -t code-du-travail-api .
+ELASTICSEARCH_URL=http://code-du-travail-data-elasticsearch:9200
+ELASTICSEARCH_LOG_LEVEL=trace
 ```
 
-### Pour lancer une instance de l'image :
+Note : le serveur Elasticsearch du dépôt de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) doit être actif au préalable. On utilise le réseau par défaut généré par le Compose de `code-du-travail-data` et le nom du conteneur Elasticsearch en tant que valeur de `ELASTICSEARCH_URL`.
 
-Note : le serveur Elasticsearch du dépôt de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) doit être actif au préalable. On utilise le réseau par défaut généré par le Compose de `code-du-travail-data` et le nom du conteneur Elasticsearch en tant que valeur de `ELASTICSEARCH_URL` :
+Puis :
+
+```bash
+$ docker-compose up
+```
+
+## Pour lancer un shell Docker
 
 ```shell
-$ docker run -p 1337:1337 -e 'ELASTICSEARCH_URL=http://code-du-travail-data-elasticsearch:9200' -e 'ELASTICSEARCH_LOG_LEVEL=trace' --network='code-du-travail-data_default' code-du-travail-api
+$ docker exec -ti code-du-travail-api /bin/sh
 ```
 
 ## Exemple d'appel :

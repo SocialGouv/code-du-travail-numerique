@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  # Don't use `volumes` in production: we don't want to mount the local source code in production.
+  node:
+    container_name: code-du-travail-api
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./docker/prod/Dockerfile
+    ports:
+      - 1337:1337
+    restart: always
