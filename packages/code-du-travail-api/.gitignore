@@ -1,3 +1,6 @@
+docker-compose.override.yml
+docker-compose.override.yaml
+
 # Editors
 .tm_properties
 
