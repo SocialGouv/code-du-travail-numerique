@@ -25,6 +25,17 @@ body {
   box-sizing: border-box;
 }
 
+/* Title as button link */
+
+.title-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.title-link:hover,
+.title-link:active {
+  text-decoration: underline;
+}
+
 /* Search results */
 
 .search-results {

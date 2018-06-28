@@ -4,7 +4,7 @@ import { Route, HashRouter } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 
-import Explorer from "./Explorer";
+import ExplorerToggler from "./ExplorerToggler";
 import Search from "./Search";
 
 const Title = styled.div`
@@ -95,7 +95,9 @@ const Header = ({ onClick }) => (
 );
 const App = () => {
   // dirty trick to handle click on main title. todo: routing
-  let explorer;
+  // let explorer;
+  // <Header onClick={() => explorer.reset()} />
+  // <Explorer ref={node => (explorer = node)} />
   return (
     <ThemeProvider theme={themeNeutral}>
       <div>
@@ -107,10 +109,10 @@ const App = () => {
         >
           version bêta
         </GitHubForkRibbon>
-        <Header onClick={() => explorer.reset()} />
+        <Header />
         <AppContainer role="main">
           <Search />
-          <Explorer ref={node => (explorer = node)} />
+          <ExplorerToggler />
         </AppContainer>
       </div>
     </ThemeProvider>
