@@ -61,7 +61,7 @@ class Search extends React.Component {
     const loadingJsx = this.state.pendingXHR ? (<p>Chargement…</p>) : null;
     return (
       <SearchContainer>
-        <Panel title="Rechercher">
+        <Panel title="Posez votre question sur le droit du travail">
           <SearchForm fetchResults={this.fetchResults}></SearchForm>
           {loadingJsx}
           {errorJsx}
