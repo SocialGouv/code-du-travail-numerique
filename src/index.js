@@ -65,6 +65,7 @@ const Header = ({ onClick }) => (
     </div>
   </header>
 );
+
 const App = () => {
   // dirty trick to handle click on main title. todo: routing
   let explorerToggler;
@@ -88,4 +89,5 @@ const App = () => {
     </ThemeProvider>
   );
 };
+
 render(<App />, document.getElementById("root"));
