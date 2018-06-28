@@ -25,12 +25,11 @@ const getPathFromThemeId = id => {
   );
 };
 
-const ExplorerContainer = styled.div`padding: 20px;`;
+const ExplorerContainer = styled.div`margin: 0; padding: 20px;`;
 
 const ButtonResetContainer = styled.div`
   text-align: center;
   margin-top: 30px;
-  font-size: 1.2rem;
 `;
 
 const Reset = ({ onResetClick }) => (
@@ -56,12 +55,6 @@ const Intro = () => (
     <br />
     1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
     réponses
-  </IntroContainer>
-);
-
-const Teaser = () => (
-  <IntroContainer>
-    todo : Afficher les contenus les plus demandés/utiles de ces thèmes ?
   </IntroContainer>
 );
 

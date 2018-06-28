@@ -1,43 +1,22 @@
 import React from "react";
 import { render } from "react-dom";
-import { Route, HashRouter } from "react-router-dom";
+// import { Route, HashRouter } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 
 import ExplorerToggler from "./ExplorerToggler";
 import Search from "./Search";
 
-const Title = styled.div`
-  font-size: 2em;
-  margin: 1em 0 10px;
-  text-align: center;
-  cursor: pointer;
-  color: ${props => props.theme.primary};
-`;
-
-const Baseline = styled.div`
-  font-size: 1.3em;
-  margin: 0 0 1em 0;
-  text-align: center;
-  color: ${props => props.theme.primary};
-`;
 
 const AppContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 40px;
   /* should be somewhere else */
   .panel li {
     line-height: 1.5em;
   }
 `;
-
-const themeBlue = {
-  primary: "#000",
-  light1: "#e4f2ff",
-  light2: "#e4f2ff",
-  light3: "#f8fbff",
-  background: "white"
-};
 
 const themeNeutral = {
   primary: "#000",
@@ -46,13 +25,6 @@ const themeNeutral = {
   light3: "#eee",
   background: "white"
 };
-
-const BaselineBottom = styled.div`
-  font-size: 1.4em;
-  text-align: left;
-  padding-left: 30px;
-  margin-top: 50px;
-`;
 
 const Header = ({ onClick }) => (
   <header className="navbar">

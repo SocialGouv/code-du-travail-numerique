@@ -212,6 +212,7 @@ class Articulation extends React.Component {
           <h2>Accords d'entreprise</h2>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.legifrance.gouv.fr/initRechAccordsEntreprise.do"
           >
             Trouver votre accord d'entreprise sur LegiFrance{" "}

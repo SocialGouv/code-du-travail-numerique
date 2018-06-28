@@ -5,7 +5,7 @@ import Explorer from "./Explorer";
 
 
 const TogglerContainer = styled.div`
-  margin: 20px 20px -38px 20px;
+  margin: 20px 20px 0 20px;
   text-align: center;
 `;
 
@@ -29,8 +29,7 @@ class Toggler extends React.Component {
     });
   }
 
-  toggleHidden (e) {
-    e.preventDefault;
+  toggleHidden () {
     this.setState({
       isHidden: !this.state.isHidden
     });

@@ -5,17 +5,12 @@ import styled from "styled-components";
 import Panel from "./Panel";
 import Articles from "./Articles";
 import Articulation from "./Articulation";
-import ConventionPicker from "./ConventionPicker";
 import FAQ, { hasFaq } from "./FAQ";
 import FeedbackForm from "./FeedbackForm";
 import Fiches, { hasFiche } from "./Fiches";
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
 // page de résultats
-
-const Notification = ({ children, className }) => (
-  <div class={`notification ${className || ""}`}>{children}</div>
-);
 
 const Block = styled.div`
   li {
@@ -54,14 +49,6 @@ const TwoCols = styled.div`
     display: inline-block;
     box-sizing: border-box;
   }
-`;
-
-const SectionSeparator = styled.div`
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5em;
-  background-color: ${props => props.theme.light2};
 `;
 
 const InfosRupture = () => (

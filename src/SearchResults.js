@@ -41,8 +41,6 @@ class ResultCodeDuTravail extends React.Component {
 
     let data = this.props.data;
 
-    let tags = data._source.tags[0].split('/').join(' > ').substring(2);
-
     let legifranceBaseUrl = 'https://www.legifrance.gouv.fr/affichCodeArticle.do';
     let legifranceUrl = `${legifranceBaseUrl}?idArticle=${data._source.id}&cidTexte=${data._source.cid}`;
 
