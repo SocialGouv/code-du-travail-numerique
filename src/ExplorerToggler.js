@@ -19,6 +19,13 @@ class Toggler extends React.Component {
     };
   }
 
+  reset () {
+    this.setState({
+      isHidden: true,
+      profile: '',
+    });
+  }
+
   setProfile (profile) {
     if (profile && profile === this.state.profile) {
       // Reset `profile` when the user click again on the same button.
