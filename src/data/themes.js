@@ -117,7 +117,7 @@ export default `
 3900	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Principe	L1221-13;
 3970	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Salaié détachés	D1221-24-1
 4000	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Sanction	R1227-7
-3920	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Tenue à disposition des délégués du personnel (DP), du comité économique et social ( CSE), de l'Inspection du travail (IT), de l'URSSAF	L1221-15
+3920	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Tenue à disposition des délégués du personnel (DP), du comité économique et social (CSE), de l'Inspection du travail (IT), de l'URSSAF	L1221-15
 3960	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Salariés étrangers	D1221-24
 3950	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Stagiaires	D1221-23-1; L1221-13
 3500	Contrat de travail > Embauche > Relevé mensuel des contrats> Assujetissement aux entreprises de plus de cinquante salariés	D1221-28;
@@ -916,7 +916,7 @@ export default `
 92900	Institutions représentatives du personnel > Défenseur syndical > Formation	L1453-7
 93000	Institutions représentatives du personnel > Défenseur syndical > Obligations	L1453-8
 93100	Institutions représentatives du personnel > Défenseur syndical > Sanction	L1453-9; L2411-24
-92700	Institutions représentatives du personnel > Délégation Unique du personnel ( DUP) > Délégation Unique du personnel ( DUP) > Pénal	L2433-1; L2434-1; L2432-1; L2437-1; L2438-1; L2439-1; L243-10-1; L2435-1; L2435-2; L2435-3; L2435-3; L2436-1
+92700	Institutions représentatives du personnel > Délégation Unique du personnel (DUP) > Délégation Unique du personnel (DUP) > Pénal	L2433-1; L2434-1; L2432-1; L2437-1; L2438-1; L2439-1; L243-10-1; L2435-1; L2435-2; L2435-3; L2435-3; L2436-1
 93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > Entreprise 50 salariés et + sans comité d'entreprise (CE) ou comité d'hygiène, de sécurité et des conditions de travail (CHSCT)	
 94800	Institutions représentatives du personnel > Délégué syndical > Congé formation économique, sociale et syndicale	L2145-6; L2145-7; L2145-8; L2145-9; L2145-10; L2145-11; L2145-12; L2145-13; R2145-3; R2145-4; R2145-5; R2145-6; R2145-7; R2145-8; L2145-5
 94900	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Attributions complémentaire entreprise. -300 salariés	L2143-22
@@ -1695,7 +1695,7 @@ export default `
 155428	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Travailleurs handicapés	R4624-20
 155427	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Femmes enceintes: orientations vers le médecin du travail	R4624-19
 155425	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Objet, travailleurs concernés	R4624-17
-155434	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Avis d'aptitude ou d'inaptitude rendu en fin de visite ( SIR)	R4624-25
+155434	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Avis d'aptitude ou d'inaptitude rendu en fin de visite (SIR)	R4624-25
 155435	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Constitution du dossier médical 	R4624-26
 155436	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Dispense de Visite d'embauche	R4624-27
 155431	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Définition des postes à risques particuliers	R4624-23; R4153-40; R4323-56, R4544-10
@@ -1731,7 +1731,7 @@ export default `
 156109	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Suivi individuel renforcé (SIR): modalités et dispense	R4625-12; R4625-13; R4625-14
 156108	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Visite d'information et de prévention (VIP): modalité et dispense	R4625-10; R4625-11
 156106	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Principe du suivi médical: coordination des services de santé	R4625-8
-156102	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Contrats à durée déterminée ( CDD) > Contrats à durée déterminée ( CDD)	R4625-1
+156102	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Contrats à durée déterminée (CDD) > Contrats à durée déterminée (CDD)	R4625-1
 156101	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Principe du suivi particulier pour certaines catégories de travailleurs > Principe et renvoi à décret	L4625-1; R4625-1-1;L4625-2
 156113	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Salariés saisonniers > Risques particuliers, et obligation d'un examen médical d'embauche	D4625-22
 156100	Santé Sécurité > Services santé au travail > Surveillance médicale catégories particulières	R4625-1; L4625-1; L4625-1-1; L4625-2; D4625-22; R4625-2; R4625-3; R4625-4; R4625-5; R4625-6; R4625-7; R4625-8; R4625-9; R4625-10; R4625-11; R4625-12; R4625-13; R4625-14; R4625-15; R4625-16; R4625-17; R4625-18; R4625-19; R4625-20; D4625-23; D4625-24; D4625-25; D4625-26; D4625-27; D4625-28; D4625-29; D4625-30; D4625-31; D4625-32; D4625-33; D4625-34
