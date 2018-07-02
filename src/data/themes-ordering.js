@@ -123,6 +123,7 @@ let ordering = {
       "Licenciement",
       "Rupture conventionnelle (individuelle)",
       "Rupture à l'initiative du salarié",
+      "Rupture d'un commun accord prévue par un accord collectif",
     ],
     [
       "Cas particuliers",
