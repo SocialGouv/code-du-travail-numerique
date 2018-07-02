@@ -96,11 +96,10 @@ export default `
 3400	Contrat de travail > Embauche > Autres formalités	L1221-16; L1221-17; R1221-32; R1221-33; R1221-34; R1221-35; L1221-18
 2400	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Contrôle administratifs	R1221-12;
 2500	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Documents à remettre au salarié	R1221-9
-2630	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche	L1221-13
-2600	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche Principe	L12221-10
-2700	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche > Pénal	R1227-7; R1227-1; R1227-2
-2610	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche Pénalité en cas de non respect	L1221-11; L1221-12-1
-2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche transmission par voie électronique	L1221-12-1
+2600	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Principe	L1221-10
+2700	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Pénal	R1227-7; R1227-1; R1227-2
+2610	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Pénalité en cas de non respect	L1221-11; L1221-12-1
+2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission par voie électronique	L1221-12-1
 2800	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Mentions obligatoires	R1221-1; R1221-2; L1221-12-1
 2900	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Organisme destinataire	R1221-3; R1221-4; L1221-12-1
 3000	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Preuve de la Déclaration préalable à l'embauche (DPAE)	R1221-7; R1221-8; L1221-12-1
