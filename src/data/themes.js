@@ -52,7 +52,7 @@ export default `
 11700	Contrat de travail > Contrat: exécution, modification, transfert > Exécution, modification > Exécution du contrat	L1222-5; D1222-1; L1222-1; L1222-3; L1222-2; L1222-4
 11800	Contrat de travail > Contrat: exécution, modification, transfert > Exécution, modification > Modification du contrat	L1222-12; L1222-13; L1222-14; L1222-15; L1222-16; L1222-6
 11900	Contrat de travail > Contrat: exécution, modification, transfert > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L1531-1; L1531-2; L1531-3
-11950	Contrat de travail > Contrat: exécution, modification, transfert > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques> Mayotte	L1524-1; L1524-2; L1524-3; L1524-4; L1524-5; L1524-6; L1524-7; L1524-8; L1524-9; L1524-10; L1524-11;
+11950	Contrat de travail > Contrat: exécution, modification, transfert > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques > Mayotte	L1524-1; L1524-2; L1524-3; L1524-4; L1524-5; L1524-6; L1524-7; L1524-8; L1524-9; L1524-10; L1524-11;
 12000	Contrat de travail > Contrat: exécution, modification, transfert > Pénal > Pénal	L1227-1
 12100	Contrat de travail > Contrat: exécution, modification, transfert > Transfert du contrat > Transfert du contrat	L1224-1; L1224-3; L1224-3-2; L1224-2; L1224-3-1; L1224-4
 12200	Contrat de travail > Contrat: exécution, modification, transfert > Télétravail > Télétravail	L1222-11; L1222-9; L1222-10
@@ -96,18 +96,18 @@ export default `
 3400	Contrat de travail > Embauche > Autres formalités	L1221-16; L1221-17; R1221-32; R1221-33; R1221-34; R1221-35; L1221-18
 2400	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Contrôle administratifs	R1221-12;
 2500	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Documents à remettre au salarié	R1221-9
-2630	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche>	L1221-13
-2600	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche> Principe	L12221-10
-2610	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche> Pénalité en cas de non respect	L1221-11; L1221-12-1
-2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche> transmission par voie électronique	L1221-12-1
+2630	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche	L1221-13
+2600	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche Principe	L12221-10
+2610	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche Pénalité en cas de non respect	L1221-11; L1221-12-1
+2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche transmission par voie électronique	L1221-12-1
 2700	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Déclaration préalable à l'embauche > Pénal	R1227-7; R1227-1; R1227-2
 2800	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Mentions obligatoires	R1221-1; R1221-2; L1221-12-1
 2900	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Organisme destinataire	R1221-3; R1221-4; L1221-12-1
 3000	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Preuve de la Déclaration préalable à l'embauche (DPAE)	R1221-7; R1221-8; L1221-12-1
 2450	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Sanctions administratives	R1221-13
 3100	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission	R1221-5; R1221-6; L1221-12-1
-3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE)> Déclaration unique d'embauche (DUE)	R4121-1-1; R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
-3300	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE)> Déclaration unique d'embauche (DUE) Pénal	R1227-3
+3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE)	R4121-1-1; R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
+3300	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE) Pénal	R1227-3
 3800	Contrat de travail > Embauche > Recrutement	L1221-7; L1221-9; L1221-6; L1221-8
 3990	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Accès au docuent de substitution	D1221-27; D8113-2; D8113-3; L2313-6
 3980	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Conservation des données	R1221-26;
@@ -120,10 +120,10 @@ export default `
 4000	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Sanction	R1227-7
 3950	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Stagiaires	D1221-23-1; L1221-13
 3920	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Tenue à disposition des délégués du personnel (DP), du comité économique et social (CSE), de l'Inspection du travail (IT), de l'URSSAF	L1221-15
-3500	Contrat de travail > Embauche > Relevé mensuel des contrats> Assujetissement aux entreprises de plus de cinquante salariés	D1221-28;
-3530	Contrat de travail > Embauche > Relevé mensuel des contrats> Autre oblligation	D1221-31;
-3520	Contrat de travail > Embauche > Relevé mensuel des contrats> Contenu	D1221-30;
-3510	Contrat de travail > Embauche > Relevé mensuel des contrats> Principe	D1221-29;
+3500	Contrat de travail > Embauche > Relevé mensuel des contrats > Assujetissement aux entreprises de plus de cinquante salariés	D1221-28;
+3530	Contrat de travail > Embauche > Relevé mensuel des contrats > Autre oblligation	D1221-31;
+3520	Contrat de travail > Embauche > Relevé mensuel des contrats > Contenu	D1221-30;
+3510	Contrat de travail > Embauche > Relevé mensuel des contrats > Principe	D1221-29;
 3550	Contrat de travail > Embauche > Relevé mensuel des contrats > Pénalités	R1227-4
 3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions	L1221-4; L1221-5;
 3600	Contrat de travail > Généralités > Principes génériques du contrat > Principes	L1221-2; L1221-1
@@ -296,7 +296,7 @@ export default `
 3760	Contrat de travail > Période d'essai > Renouvellements : possibilités et durée	L1221-22; L1221-21; L1221-23;
 3770	Contrat de travail > Période d'essai > Stagiaire	L1221-24;
 3780	Contrat de travail > Période d'essai > Une clause nécessaire du contrat de travail	L1221-23;
-1900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers> Contrat de mission à exportation	L1236-7
+1900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Contrat de mission à exportation	L1236-7
 120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Cas de force majeur	L1234-12; L1234-13;
 1800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Contrat de chantier ou d'opération	L1236-8; L1236-9
 810	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Licenciement d'un salarié mis à disposition d'une filiale étrangère	L1231-5;
@@ -312,17 +312,17 @@ export default `
 300	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Indemnité de licenciement > Indemnité de licenciement	R1234-5; L1234-9; L1234-10; L1234-11; R1234-2; R1234-1; R1234-4;
 1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Notification	R1232-13
 1000	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié	L1232-12; D ; D1232-7; D1232-8; D1232-5; D1232-6; D1232-4; L1232-7; L1232-14; L1238-1; D1232-12; D1232-9; L1232-11; L1232-13; L1232-9; L1232-8; L1232-10
-1030	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> Indmenisation	L1232-10; D1232-8; D1232-9;D1232-10;D1232-11
-1090	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> Listes	D1232-4; D1232-5; D1232-6
-1050	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> autorisation d'absence	L1232-12
-1060	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> obligations du conseiller du salarié	L1232-13
-1040	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> remboursement de l'employeur par l'Etat	L1232-11; D1232-7
-1070	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> salarié protégé	L1232-14
-1080	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> sanction	L1238-1
-1020	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> temps nécessaire à sa mission	L1232-8; L1232-9;
+1030	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Indmenisation	L1232-10; D1232-8; D1232-9;D1232-10;D1232-11
+1090	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Listes	D1232-4; D1232-5; D1232-6
+1050	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Autorisation d'absence	L1232-12
+1060	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Obligations du conseiller du salarié	L1232-13
+1040	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Remboursement de l'employeur par l'Etat	L1232-11; D1232-7
+1070	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Salarié protégé	L1232-14
+1080	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Sanction	L1238-1
+1020	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Temps nécessaire à sa mission	L1232-8; L1232-9;
 1010	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Principe	L1232-7
 1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Convocation	L1232-2; R1232-1;
-1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable> Principe	L1232-3; L1232-2;
+1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Principe	L1232-3; L1232-2;
 1160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Assistance	L1232-4; R1232-2; R1232-3
 1100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Principe: motivation,cause, réelle et sérieuse	L1232-1;
 410	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Durée	L1234-1; L1234-2; L1234-8;
@@ -333,23 +333,23 @@ export default `
 1500	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Départ volontaire à la retraite	D1237-2-1; L1237-9; D1237-2; D1237-1; L1237-10
 1600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Mise à la retraite	L1237-5-1; L1237-8; L1237-5; L1237-7; L1237-6
 1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
-1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle> Principe	L1237-11
-1720	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> entretiens	L1237-12
-1760	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> exceptions	L1237-16;
-1740	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> homologation	L1237-14; R1237-3
-1730	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> indemnité de rupture	L1237-13
-1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> salariés protégés	L1237-15
-2155	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Acceptation du salarié et rupture du contrat de travail	L1237-19-2
-2150	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Accord collectif	L1237-19-1; Article D1237-7; Article R1237-6-1
-2170	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Littiges, recours, contesation	L1237-19-8; R*1237-6
-2175	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Mesures de revitalisation des bassins d'emploi impacté	L1237-19-9; L1237-19-10; L1237-19-11; L1237-19-12; L1237-19-13; L1237-19-14
-2145	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Principe	L1237-19;
-2160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Procédure de validation de l'accord par l'autorité administrative	L1237-19-3; L1237-19-4; L1237-19-5; L1237-19-6; R*1237-6; R1237-7; D1237-8; D1237-9; D1237-10; D1237-11;
-2165	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Suivi de l'accord collectif	L1237-19-7; R*1237-6
-2125	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité> Accord collectif	L1237-18-2;
-2115	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité> Principe	L1237-18;
-2120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité> modalité du congé de mobilité	L1237-18-1;
-2140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité> procédure	D1237-4; D1237-5; L1237-18-5;
+1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Principe	L1237-11
+1720	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Entretiens	L1237-12
+1760	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Exceptions	L1237-16;
+1740	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Homologation	L1237-14; R1237-3
+1730	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Indemnité de rupture	L1237-13
+1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Salariés protégés	L1237-15
+2155	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Acceptation du salarié et rupture du contrat de travail	L1237-19-2
+2150	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Accord collectif	L1237-19-1; Article D1237-7; Article R1237-6-1
+2170	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Littiges, recours, contesation	L1237-19-8; R*1237-6
+2175	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Mesures de revitalisation des bassins d'emploi impacté	L1237-19-9; L1237-19-10; L1237-19-11; L1237-19-12; L1237-19-13; L1237-19-14
+2145	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Principe	L1237-19;
+2160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Procédure de validation de l'accord par l'autorité administrative	L1237-19-3; L1237-19-4; L1237-19-5; L1237-19-6; R*1237-6; R1237-7; D1237-8; D1237-9; D1237-10; D1237-11;
+2165	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Suivi de l'accord collectif	L1237-19-7; R*1237-6
+2125	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Accord collectif	L1237-18-2;
+2115	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Principe	L1237-18;
+2120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Modalité du congé de mobilité	L1237-18-1;
+2140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Procédure	D1237-4; D1237-5; L1237-18-5;
 2135	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Acceptation du salarié et rupture du contrat de travail	L1237-18-4;
 2130	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Rémunération	L1237-18-3;
 2110	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Principe	L1237-17;
@@ -561,7 +561,7 @@ export default `
 58300	Emploi - Formation > Apprentissage > Généralités > Contrat d'objectifs et de moyens	D6211-2
 58400	Emploi - Formation > Apprentissage > Généralités > Généralités	L6211-4; L6211-3; L6211-1; L6211-2
 58500	Emploi - Formation > Apprentissage > Généralités > Rôle des chambres consulaires	D6211-3; D6211-4; D6211-5; R6211-6
-60150	Emploi - Formation > Apprentissage > Mobilité internationele et européenne des apprentis>	L6222-42; L6222-43; L6222-44;
+60150	Emploi - Formation > Apprentissage > Mobilité internationele et européenne des apprentis	L6222-42; L6222-43; L6222-44;
 58600	Emploi - Formation > Apprentissage > Médiateur consulaire > Médiateur consulaire	L6222-39
 58700	Emploi - Formation > Apprentissage > Obligation de l'employeur > Dispositions d'application	L6223-9
 58800	Emploi - Formation > Apprentissage > Obligation de l'employeur > Engagement formation	L6223-4; L6223-3; L6223-2
@@ -971,11 +971,11 @@ export default `
 99200	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement comité d'entreprise européen	L2411-11
 99500	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement comité d'hygiène, de sécurité et des conditions de travail (CHSCT)	L2411-15; L2411-13; L2411-14; R2411-1
 99670	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement membre CSE interentreprise	L2411-10
-99680	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement membre CSE interentreprise> candidat	L2411-10-1
+99680	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement membre CSE interentreprise > Candidat	L2411-10-1
 99700	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement membre commission interprofessionnelle	L2411-25
 99250	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement membre groupe spécial négociation, représentant comité société européenne, représentant comité société coopérative européenne représentant comité société issue fusion transfrontalière	L2411-12
-99660	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement représentant de proximité> candidats	L2411-9
-99650	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement représentant de proximité> élus	L2411-8
+99660	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement représentant de proximité > Candidats	L2411-9
+99650	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement représentant de proximité > Élus	L2411-8
 99050	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement salarié mandaté	L2411-4
 99800	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD)	L2412-5; L2412-6
 99900	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Autres mandats de représentation	L2412-14; L2412-16; L2412-11; L2412-12; L2412-10
@@ -1097,12 +1097,12 @@ export default `
 116500	Obligations diverses > Travail illégal > Cumuls irréguliers > Dérogations	L8261-3
 116600	Obligations diverses > Travail illégal > Cumuls irréguliers > Interdictions	D8261-2; D8261-1; L8261-2; L8261-1
 116700	Obligations diverses > Travail illégal > Cumuls irréguliers > Pénal	R8262-1; R8262-2
-116800	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail> Actions en justice	L8255-1; D8255-1
-116900	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail> Contribution spéciale	L8253-5; L8253-3; R8253-1; R8253-2; R8253-3; R8253-4; L8253-2; L8253-1; L8253-4; L8253-7
-117000	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail> Droits du salarié étranger	R8252-1; L8252-2; R8252-2; R8252-6; R8252-4; R8252-5; R8252-7; R8252-8; R8252-9; R8252-10; R8252-11; R8252-12; R8252-13; L8252-4; L8252-3; L8252-1
-117100	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail> Interdictions	L8251-1; L8251-2
-117200	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail> Pénal	L8256-5; L8256-2; L8256-4; L8256-1; L8256-6; R8256-1; L8256-3; L8256-8; L8256-7; L8256-7-1
-117300	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail> Solidarité financière du donneur d'ordre	D8254-6; L8254-2; L8254-2-1; L8254-2-2; D8254-7; D8254-9; D8254-10; D8254-11; D8254-12; D8254-13; D8254-14; L8254-3; L8254-4; L8254-1; D8254-5; D8254-1; D8254-2; D8254-3; D8254-4
+116800	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail > Actions en justice	L8255-1; D8255-1
+116900	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail > Contribution spéciale	L8253-5; L8253-3; R8253-1; R8253-2; R8253-3; R8253-4; L8253-2; L8253-1; L8253-4; L8253-7
+117000	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail > Droits du salarié étranger	R8252-1; L8252-2; R8252-2; R8252-6; R8252-4; R8252-5; R8252-7; R8252-8; R8252-9; R8252-10; R8252-11; R8252-12; R8252-13; L8252-4; L8252-3; L8252-1
+117100	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail > Interdictions	L8251-1; L8251-2
+117200	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail > Pénal	L8256-5; L8256-2; L8256-4; L8256-1; L8256-6; R8256-1; L8256-3; L8256-8; L8256-7; L8256-7-1
+117300	Obligations diverses > Travail illégal > Emploi salarié sans titre de travail > Solidarité financière du donneur d'ordre	D8254-6; L8254-2; L8254-2-1; L8254-2-2; D8254-7; D8254-9; D8254-10; D8254-11; D8254-12; D8254-13; D8254-14; L8254-3; L8254-4; L8254-1; D8254-5; D8254-1; D8254-2; D8254-3; D8254-4
 117400	Obligations diverses > Travail illégal > Généralités > Généralités	L8211-1
 117500	Obligations diverses > Travail illégal > Marchandage > Actions en justice	D8233-2; D8233-1; L8233-1
 117600	Obligations diverses > Travail illégal > Marchandage > Interdiction	L8231-1
@@ -1145,14 +1145,14 @@ export default `
 101500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > Garantie disciplinaire	L1332-1; L1332-2; L1332-3; R1332-1; R1332-2; R1332-3
 101800	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > Sanction disciplinaire	L1331-1; L1331-2
 101900	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droits et liberté, corruption > Droits et libertés > Droits des personnes, libertés individuelles, collectives	L1121-1
-102000	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Actions en justice > Actions en justice	L1144-2; L1144-1; L1144-3
-102100	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Champ d'application > Champ d'application	L1141-1
-102200	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Dispositions générales > Dispositions générales	L1142-6; L1142-2-1; L1142-2; R1142-1; L1142-4; L1142-3; L1142-5; L1142-1
-102300	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Instances concourant à égalité > Conseil supérieur égalité professionnelle	D1145-7; D1145-8; D1145-9; D1145-10; D1145-11; D1145-12; D1145-1; D1145-2; D1145-4; D1145-5; D1145-6; D1145-4-1; L1145-1; D1145-13; D1145-14; D1145-15; D1145-16; D1145-17; D1145-18; D1145-19
-102400	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Plan et contrat égalité professionnelle > Contrat mixité égalité	D1143-8; D1143-9; D1143-10; D1143-11; D1143-12; D1143-13; D1143-14; D1143-15; D1143-16; D1143-17; D1143-18; D1143-7
-102500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Plan et contrat égalité professionnelle > Convention d'étude	D1143-2; D1143-3; R1143-1; D1143-4; D1143-5
-102600	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Plan et contrat égalité professionnelle > Plan d'égalité professionnelle	L1143-1; D1143-6; L1143-2; L1143-3
-102700	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Pénal > Pénal	L1146-2; L1146-3; L1146-1
+102000	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Actions en justice > Actions en justice	L1144-2; L1144-1; L1144-3
+102100	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Champ d'application > Champ d'application	L1141-1
+102200	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Dispositions générales > Dispositions générales	L1142-6; L1142-2-1; L1142-2; R1142-1; L1142-4; L1142-3; L1142-5; L1142-1
+102300	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Instances concourant à égalité > Conseil supérieur égalité professionnelle	D1145-7; D1145-8; D1145-9; D1145-10; D1145-11; D1145-12; D1145-1; D1145-2; D1145-4; D1145-5; D1145-6; D1145-4-1; L1145-1; D1145-13; D1145-14; D1145-15; D1145-16; D1145-17; D1145-18; D1145-19
+102400	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Plan et contrat égalité professionnelle > Contrat mixité égalité	D1143-8; D1143-9; D1143-10; D1143-11; D1143-12; D1143-13; D1143-14; D1143-15; D1143-16; D1143-17; D1143-18; D1143-7
+102500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Plan et contrat égalité professionnelle > Convention d'étude	D1143-2; D1143-3; R1143-1; D1143-4; D1143-5
+102600	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Plan et contrat égalité professionnelle > Plan d'égalité professionnelle	L1143-1; D1143-6; L1143-2; L1143-3
+102700	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes > Pénal > Pénal	L1146-2; L1146-3; L1146-1
 102800	Pouvoirs de l'employeur, libertés et droits fondamentaux > Harcèlements > Champ d'application > Champ d'application	L1151-1
 102900	Pouvoirs de l'employeur, libertés et droits fondamentaux > Harcèlements > Harcèlement moral > Aucune sanction avoir subi, refus subir, témoigné	L1152-2
 103000	Pouvoirs de l'employeur, libertés et droits fondamentaux > Harcèlements > Harcèlement moral > Définition	L1152-1
@@ -1247,8 +1247,8 @@ export default `
 40800	Rémunération > Salaire > Champ d'application	D3211-1; L3211-1
 40900	Rémunération > Salaire > Chèques - vacances > Prévus articles L411- 1 à 17 code Tourisme	L3263-1
 41000	Rémunération > Salaire > Economats > Economats	L3254-2; L3254-1; L3255-1
-41200	Rémunération > Salaire > Egalité femmes hommes> Principes	L3222-1; L3222-2; R3222-1; R3222-2; R3222-3
-41100	Rémunération > Salaire > Egalité femmes hommes> Pénal	R3221-2; L3221-9; L3221-5; L3221-3; L3221-4; L3221-1; L3221-8; L3221-7; R3221-1; L3221-6; L3221-10; L3221-2
+41200	Rémunération > Salaire > Egalité femmes hommes > Principes	L3222-1; L3222-2; R3222-1; R3222-2; R3222-3
+41100	Rémunération > Salaire > Egalité femmes hommes > Pénal	R3221-2; L3221-9; L3221-5; L3221-3; L3221-4; L3221-1; L3221-8; L3221-7; R3221-1; L3221-6; L3221-10; L3221-2
 41300	Rémunération > Salaire > Frais de transport > Champ d'application	L3261-1
 41400	Rémunération > Salaire > Frais de transport > Frais de transports personnels	R3261-13; R3261-15; L3261-5; R3261-12; D3261-15-2; D3261-15-1
 41500	Rémunération > Salaire > Frais de transport > Frais de transports publics	R3261-6; R3261-3; R3261-7; R3261-10; R3261-4; L3261-4; R3261-1; L3261-2; L3261-3; R3261-5; R3261-8; R3261-14; R3261-9; R3261-11
@@ -1358,8 +1358,8 @@ export default `
 128000	Santé Sécurité > Bâtiment > Travailleurs indépendants > Risque électrique	R4535-12; R4535-11
 127800	Santé Sécurité > Bâtiment > Travailleurs indépendants > Travailleurs indépendants	L4535-1
 127900	Santé Sécurité > Bâtiment > Travailleurs indépendants > Utilisation équipements de Travail, équipement de protection individuelle (EPI)	R4535-6; R4535-7
-131000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI)> Information, formation des travailleurs	R4323-91; R4323-97; R4323-92; R4323-95; R4323-94; R4323-93; R4323-98; R4323-96
-131100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI)> Vérifications périodiques	R4323-105; R4323-106; R4323-104
+131000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI) > Information, formation des travailleurs	R4323-91; R4323-97; R4323-92; R4323-95; R4323-94; R4323-93; R4323-98; R4323-96
+131100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI) > Vérifications périodiques	R4323-105; R4323-106; R4323-104
 128100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Ascenseurs, équipements à habitacle > Ascenseurs, équipements à habitacle	R4323-107; R4323-108; R4323-109
 128200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Autorisation de conduite > Autorisation de conduite	R4323-57; R4323-55; R4323-56
 129000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Equipements anciens > Protecteurs, dispositifs de protection	R4324-7; R4324-3; R4324-6; R4324-5; R4324-4; R4324-1; R4324-2
@@ -1385,20 +1385,20 @@ export default `
 130400	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Travail, accès, circulation en hauteur	R4323-89; R4323-90
 130300	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Travail réalisés au moyen d'équipement de travail	R4323-23; R4323-27; R4323-25; R4323-26; R4323-24
 130500	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Travaux à partir d'un plan de travail	R4323-79; R4323-76; R4323-69; R4323-70; R4323-80; R4323-78; R4323-77; R4323-71; R4323-75; R4323-74; R4323-72; R4323-73
-130600	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Utilisation, maintenance équipement de travail> Utilisation, maintenance équipement de Travail	R4323-87; R4323-81; R4323-88; R4323-82; R4323-86; R4323-83; R4323-84; R4323-85
+130600	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Utilisation, maintenance équipement de travail > Utilisation, maintenance équipement de Travail	R4323-87; R4323-81; R4323-88; R4323-82; R4323-86; R4323-83; R4323-84; R4323-85
 130700	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Vérifications équipement de travail > Vérification initiale	R4323-67; R4323-68; R4323-65; R4323-66
 130800	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Vérifications équipement de travail > Vérification remise en service	R4323-61; R4323-60; R4323-58; R4323-59
 130900	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Vérifications équipement de travail > Vérifications périodiques	R4323-62; R4323-64; R4323-63
-131200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI)> Caractéristiques des équipements de protection individuelle (EPI), utilisation	R4323-99; R4323-101; R4323-100; R4323-102; R4323-103
+131200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI) > Caractéristiques des équipements de protection individuelle (EPI), utilisation	R4323-99; R4323-101; R4323-100; R4323-102; R4323-103
 131300	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > Communication. administration, mesures contrôle	R4313-90
 131500	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > Machines et autres équipements de Travail	R4313-91; R4313-92; R4313-93; R4313-94; R4313-80; R4313-81; R4313-82; R4313-95
 131400	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > Équipement de protection individuelle (EPI)	R4313-75; R4313-76; R4313-77; R4313-78; R4313-79
 131600	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure certification > Organismes notifiés	R4313-83; R4313-84; R4313-85; R4313-86; R4313-87; R4313-88; R4313-89
-131700	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Equipement de Travail et équipement de protection individuelle (EPI)d'occasion	R4313-14; R4313-15
-131800	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Equipements neufs, considérés neufs	R4313-13; R4313-12; R4313-16; R4313-6; R4313-1; R4313-2; R4313-3; R4313-5; R4313-4; L4313-1
-131900	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Evaluation conformité équipement de protection individuelle (EPI)	R4313-62; R4313-63; R4313-64; R4313-65; R4313-66; R4313-67; R4313-68; R4313-69; R4313-70; R4313-71; R4313-72; R4313-73; R4313-74; R4313-57; R4313-58; R4313-59; R4313-60; R4313-61
-132000	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Examen CE de type	R4313-23; R4313-24; R4313-25; R4313-26; R4313-27; R4313-28; R4313-29; R4313-30; R4313-31; R4313-32; R4313-33; R4313-34; R4313-35; R4313-36; R4313-37; R4313-38; R4313-39; R4313-40; R4313-41; R4313-42
-132100	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Système assurance qualité complète	R4313-43; R4313-44; R4313-45; R4313-46; R4313-47; R4313-48; R4313-49; R4313-50; R4313-51; R4313-52; R4313-53; R4313-54; R4313-55; R4313-56
+131700	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché > Equipement de Travail et équipement de protection individuelle (EPI)d'occasion	R4313-14; R4313-15
+131800	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché > Equipements neufs, considérés neufs	R4313-13; R4313-12; R4313-16; R4313-6; R4313-1; R4313-2; R4313-3; R4313-5; R4313-4; L4313-1
+131900	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché > Evaluation conformité équipement de protection individuelle (EPI)	R4313-62; R4313-63; R4313-64; R4313-65; R4313-66; R4313-67; R4313-68; R4313-69; R4313-70; R4313-71; R4313-72; R4313-73; R4313-74; R4313-57; R4313-58; R4313-59; R4313-60; R4313-61
+132000	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché > Examen CE de type	R4313-23; R4313-24; R4313-25; R4313-26; R4313-27; R4313-28; R4313-29; R4313-30; R4313-31; R4313-32; R4313-33; R4313-34; R4313-35; R4313-36; R4313-37; R4313-38; R4313-39; R4313-40; R4313-41; R4313-42
+132100	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché > Système assurance qualité complète	R4313-43; R4313-44; R4313-45; R4313-46; R4313-47; R4313-48; R4313-49; R4313-50; R4313-51; R4313-52; R4313-53; R4313-54; R4313-55; R4313-56
 132200	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure sauvegarde > Interdictions	R4313-17; R4313-18
 132300	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure sauvegarde > Procédure sauvegarde	R4313-7; R4313-8; R4313-9; R4313-10; R4313-11
 132400	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure évaluation conformité > Auto certification CE	R4313-20; R4313-21; R4313-22
@@ -1431,7 +1431,7 @@ export default `
 135100	Santé Sécurité > Institutions Prévention > Agence nationale pour l'amélioration des conditions de travail (ANACT) > Conseil d'administration	R4642-4; R4642-5; R4642-6; R4642-7; R4642-8; R4642-9; R4642-10
 135200	Santé Sécurité > Institutions Prévention > Agence nationale pour l'amélioration des conditions de travail (ANACT) > Missions	L4642-1; L4642-2; R4642-1; R4642-2; R4642-3; L4642-3
 135300	Santé Sécurité > Institutions Prévention > Aide à l'employeur santé sécurité > Aide à l'employeur santé sécurité	L4644-1; R4644-1; R4644-2; R4644-3; R4644-4; R4644-5; D4644-7; D4644-8; D4644-9; D4644-10; D4644-11; D4644-6
-135400	Santé Sécurité > Institutions Prévention > Comités régionaux prévention des risques professionnels (CRPRP)> Missions	L4641-4
+135400	Santé Sécurité > Institutions Prévention > Comités régionaux prévention des risques professionnels (CRPRP) > Missions	L4641-4
 135500	Santé Sécurité > Institutions Prévention > Commissions santé et sécurité > Commissions santé et sécurité	L4643-4
 135600	Santé Sécurité > Institutions Prévention > Conseil orientation conditions de Travail	R4641-15; R4641-16; R4641-17; R4641-18; R4641-19; R4641-20; R4641-9; R4641-10; R4641-11; R4641-12; R4641-13; R4641-14; R4641-5; R4641-6; R4641-7; R4641-8; L4641-1; L4641-2; L4641-3; R4641-1; R4641-2; R4641-3; R4641-4; R4641-21; R4641-22
 135800	Santé Sécurité > Institutions Prévention > Organismes professionnels santé, sécurité et conditions de travail (SSCT) > Organisme Professionnel de Prévention bâtiment et Travaux Publics (OPPBTP): Comité national	R4643-5; R4643-6; R4643-7; R4643-8; R4643-9; R4643-10; R4643-11; R4643-12; R4643-13; R4643-14; R4643-15; R4643-16; R4643-17; R4643-18
