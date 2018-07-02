@@ -96,15 +96,15 @@ export default `
 3400	Contrat de travail > Embauche > Autres formalités	L1221-16; L1221-17; R1221-32; R1221-33; R1221-34; R1221-35; L1221-18
 2400	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Contrôle administratifs	R1221-12;
 2500	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Documents à remettre au salarié	R1221-9
-2600	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Principe	L1221-10
-2700	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Pénal	R1227-7; R1227-1; R1227-2
-2610	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Pénalité en cas de non respect	L1221-11; L1221-12-1
-2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission par voie électronique	L1221-12-1
 2800	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Mentions obligatoires	R1221-1; R1221-2; L1221-12-1
 2900	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Organisme destinataire	R1221-3; R1221-4; L1221-12-1
 3000	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Preuve de la Déclaration préalable à l'embauche (DPAE)	R1221-7; R1221-8; L1221-12-1
+2600	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Principe	L1221-10
+2700	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Pénal	R1227-7; R1227-1; R1227-2
+2610	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Pénalité en cas de non respect	L1221-11; L1221-12-1
 2450	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Sanctions administratives	R1221-13
 3100	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission	R1221-5; R1221-6; L1221-12-1
+2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission par voie électronique	L1221-12-1
 3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE)	R4121-1-1; R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
 3300	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE) Pénal	R1227-3
 3800	Contrat de travail > Embauche > Recrutement	L1221-7; L1221-9; L1221-6; L1221-8
