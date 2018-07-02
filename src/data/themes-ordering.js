@@ -105,7 +105,8 @@ let ordering = {
       "Forfait",
     ],
     [
-      "Temps partiel et travail intermittent",
+      "Temps partiel",
+      "Travail intermittent",
     ],
     [
       "Astreintes, travail effectif et équivalences",
