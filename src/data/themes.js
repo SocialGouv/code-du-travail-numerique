@@ -128,8 +128,8 @@ export default `
 3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions	L1221-4; L1221-5;
 3600	Contrat de travail > Généralités > Principes génériques du contrat > Principes	L1221-2; L1221-1
 3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; R1227-4;
-29300	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation >Indemnité: Calcul	D1226-1
-29800	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation >Indemnité: déduction allocations Sécurité Sociale	D1226-5; D1226-6
+29300	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Calcul	D1226-1
+29800	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: déduction allocations Sécurité Sociale	D1226-5; D1226-6
 29400	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Date de début	D1226-3
 29500	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Durée augmentée ancienneté	D1226-2
 29600	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: absences antérieures	D1226-4
@@ -303,14 +303,14 @@ export default `
 1300	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L1532-1
 830	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Principes de la rupture, plusieurs employeur	L1231-3
 800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Prorogation des délais de procédure	R1231-1;
-900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement >Licenciement pour motif personnel > Cause réelle, sérieuse	L1232-1
+900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Cause réelle, sérieuse	L1232-1
 130	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Cas particuliers > Dispositions applicables à certains salariés (secteur public…)	L1234-14;
 600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Contestations, sanctions licenciement irrégulier > Contestations, Sanctions	L1235-3; L1235-5; L1235-3-1; L1235-1; L1235-3-2; L1235-2; L1235-2-1; L1235-6;
 700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Contestations, sanctions licenciement irrégulier > Remboursement assurance chômage	R1235-11; R1235-10; R1235-4; R1235-5; R1235-14; R1235-15; R1235-6; R1235-8; R1235-7; R1235-9; R1235-12; R1235-13; R1235-17; R1235-1; R1235-2; L1235-4; R1235-16;
 100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Dispositions particulières Alsace Moselle	L1234-15; L1234-16; L1234-17;L1234-17-1;
 200	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Documents remis au salarié > Documents remis au salarié	R1234-10; R1234-9; R1238-7; R1234-12; R1234-11; D1234-6; L1234-19; R1238-3; D1234-8; L1234-20; D1234-7
 300	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Indemnité de licenciement > Indemnité de licenciement	R1234-5; L1234-9; L1234-10; L1234-11; R1234-2; R1234-1; R1234-4;
-1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel >notification	R1232-13
+1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Notification	R1232-13
 1000	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié	L1232-12; D ; D1232-7; D1232-8; D1232-5; D1232-6; D1232-4; L1232-7; L1232-14; L1238-1; D1232-12; D1232-9; L1232-11; L1232-13; L1232-9; L1232-8; L1232-10
 1030	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> Indmenisation	L1232-10; D1232-8; D1232-9;D1232-10;D1232-11
 1090	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> Listes	D1232-4; D1232-5; D1232-6
@@ -321,7 +321,7 @@ export default `
 1080	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> sanction	L1238-1
 1020	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> temps nécessaire à sa mission	L1232-8; L1232-9;
 1010	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Principe	L1232-7
-1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable >Convocation	L1232-2; R1232-1;
+1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Convocation	L1232-2; R1232-1;
 1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable> Principe	L1232-3; L1232-2;
 1160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Assistance	L1232-4; R1232-2; R1232-3
 1100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Principe: motivation,cause, réelle et sérieuse	L1232-1;
@@ -334,11 +334,11 @@ export default `
 1600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Mise à la retraite	L1237-5-1; L1237-8; L1237-5; L1237-7; L1237-6
 1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
 1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle> Principe	L1237-11
-1720	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle>Procédure> entretiens	L1237-12
-1760	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle>Procédure> exceptions	L1237-16;
-1740	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle>Procédure> homologation	L1237-14; R1237-3
-1730	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle>Procédure> indemnité de rupture	L1237-13
-1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle>Procédure> salariés protégés	L1237-15
+1720	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> entretiens	L1237-12
+1760	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> exceptions	L1237-16;
+1740	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> homologation	L1237-14; R1237-3
+1730	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> indemnité de rupture	L1237-13
+1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure> salariés protégés	L1237-15
 2155	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Acceptation du salarié et rupture du contrat de travail	L1237-19-2
 2150	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Accord collectif	L1237-19-1; Article D1237-7; Article R1237-6-1
 2170	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective> Littiges, recours, contesation	L1237-19-8; R*1237-6
@@ -490,34 +490,34 @@ export default `
 21600	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Travail de nuit	R3124-15; L3122-15; L3122-16; L3122-17; L3122-18; L3122-19; R3122-7; R3122-8; L3122-20; L3122-21; L3122-22; L3122-23; L3122-24; R3122-9; R3122-10; R3122-11; L3122-1; L3122-2; L3122-3; L3122-4; L3122-5; L3122-6; L3122-7; L3122-8; L3122-9; L3122-10; L3122-11; L3122-12; L3122-13; L3122-14; R3122-1; R3122-2; R3122-3; R3122-4; R3122-5; R3122-6; R3122-12; R3122-13; R3122-14; R3122-15
 21800	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Travail intermittent	R3124-8; R3124-5; L3123-38; D3123-4; L3123-33; L3123-34; L3123-35; L3123-36; L3123-37
 21000	Durée du travail et congés > Durée du travail > Travail du dimanche	L3132-27-2; L3132-29; L3132-30; R3132-22; R3132-23; L3132-28; L3132-4; L3132-5; L3132-6; L3132-7; L3132-8; L3132-9; L3132-10; L3132-11; R3132-1; R3132-2; R3132-3; R3132-4; R3132-9; R3132-10; R3132-11; R3132-12; R3132-13; R3132-14; R3132-15; L3132-14; L3132-15; L3132-16; L3132-17; L3132-18; L3132-19; L3132-26; L3132-26-1; L3132-27; L3132-27-1; R3132-21; L3132-20; L3132-21; L3132-22; L3132-23; R3132-16; R3132-17; R3132-19; R3132-20; R3132-20-1; L3132-12; L3132-13; R3132-5; R3132-6; R3132-7; R3132-8; L3132-24; L3132-25; L3132-25-1; L3132-25-2; L3132-25-3; L3132-25-4; L3132-25-5; L3132-25-6; R3132-21-1; L3132-1; L3132-2; L3132-3; L3132-3-1; R3135-2
-16800	Durée du travail et congés > Spécificités jeunes >Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
-16900	Durée du travail et congés > Spécificités jeunes >Définition > Jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
-17000	Durée du travail et congés > Spécificités jeunes >Jours fériés > Industries en continue	L3164-7
-17100	Durée du travail et congés > Spécificités jeunes >Jours fériés > Non travaillés	L3164-6
-17200	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-6	R3165-4
-17300	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-7 + décret	R3165-5
-17400	Durée du travail et congés > Spécificités jeunes >Jours fériés > Secteurs autorisés emploi jeunes	R3164-2
-17500	Durée du travail et congés > Spécificités jeunes >Jours fériés > Secteurs particuliers - Décret	L3164-8
-17700	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > 2 jours consécutifs, dérogations	L3164-2
-17800	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Apprentis dimanche certains secteurs	L3164-5
-17900	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Emploi apprentis - 18 ans	R3164-1
-18000	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Industries bénéficiant dérogation- Décret	L3164-4
-18100	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Non application dérogation L3132-4 et 8	L3164-3
-18200	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Pénal: Non-respect L3164-2 à 4	R3135-5
-18300	Durée du travail et congés > Spécificités jeunes >Repos hebdomadaire, dominical > Pénal: Non-respect L3164-5	R3165-3
-18400	Durée du travail et congés > Spécificités jeunes >Repos quotidien > Durée	L3164-1
-17600	Durée du travail et congés > Spécificités jeunes >Repos quotidien > Pénal: Non-respect L3164-1	R3165-7
-18500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Avis Conseil Supérieur prévention risques professionnels	R3163-6
-18600	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Boulangerie, pâtisserie	R3163-3
-18700	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Décision Inspecteur du travail	R3163-5
-18800	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Définition travail de nuit jeunes	L3163-1
-19000	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Hôtels, cafés restaurants (HCR)	R3163-2
-18900	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Interdiction, dérogations Inspection du Travail - décret	L3163-2
-19100	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Pénal: Non-respect L3163-1 et 2	R3124-15
-19200	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Pénal: Non-respect L3163-3	R3124-16
-19300	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Secteurs dérogatoires	R3163-1
-19400	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Spectacles, courses hippiques	R3163-4
-19500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Travaux extrême urgence	L3163-3
+16800	Durée du travail et congés > Spécificités jeunes > Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
+16900	Durée du travail et congés > Spécificités jeunes > Définition > Jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
+17000	Durée du travail et congés > Spécificités jeunes > Jours fériés > Industries en continue	L3164-7
+17100	Durée du travail et congés > Spécificités jeunes > Jours fériés > Non travaillés	L3164-6
+17200	Durée du travail et congés > Spécificités jeunes > Jours fériés > Pénal: Non-respect L3164-6	R3165-4
+17300	Durée du travail et congés > Spécificités jeunes > Jours fériés > Pénal: Non-respect L3164-7 + décret	R3165-5
+17400	Durée du travail et congés > Spécificités jeunes > Jours fériés > Secteurs autorisés emploi jeunes	R3164-2
+17500	Durée du travail et congés > Spécificités jeunes > Jours fériés > Secteurs particuliers - Décret	L3164-8
+17700	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > 2 jours consécutifs, dérogations	L3164-2
+17800	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Apprentis dimanche certains secteurs	L3164-5
+17900	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Emploi apprentis - 18 ans	R3164-1
+18000	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Industries bénéficiant dérogation- Décret	L3164-4
+18100	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Non application dérogation L3132-4 et 8	L3164-3
+18200	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Pénal: Non-respect L3164-2 à 4	R3135-5
+18300	Durée du travail et congés > Spécificités jeunes > Repos hebdomadaire, dominical > Pénal: Non-respect L3164-5	R3165-3
+18400	Durée du travail et congés > Spécificités jeunes > Repos quotidien > Durée	L3164-1
+17600	Durée du travail et congés > Spécificités jeunes > Repos quotidien > Pénal: Non-respect L3164-1	R3165-7
+18500	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Avis Conseil Supérieur prévention risques professionnels	R3163-6
+18600	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Boulangerie, pâtisserie	R3163-3
+18700	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Décision Inspecteur du travail	R3163-5
+18800	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Définition travail de nuit jeunes	L3163-1
+19000	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Hôtels, cafés restaurants (HCR)	R3163-2
+18900	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Interdiction, dérogations Inspection du Travail - décret	L3163-2
+19100	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Pénal: Non-respect L3163-1 et 2	R3124-15
+19200	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Pénal: Non-respect L3163-3	R3124-16
+19300	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Secteurs dérogatoires	R3163-1
+19400	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Spectacles, courses hippiques	R3163-4
+19500	Durée du travail et congés > Spécificités jeunes > Travail de nuit > Travaux extrême urgence	L3163-3
 16000	Durée du travail et congés > Spécificités jeunes > Congés annuels > Nombre jours de congé, indemnité Décret	L3164-9
 16100	Durée du travail et congés > Spécificités jeunes > Congés annuels > Pénal: Non-respect L3164-8	R3165-6
 16200	Durée du travail et congés > Spécificités jeunes > Congés annuels > Pénal: Non-respect L3164-9	R3143-1
@@ -873,14 +873,14 @@ export default `
 89400	Emploi - Formation > Validation des acquis de l'expérience (VAE) > Mise en œuvre > Garanties	L6421-1; R6421-1; L6421-3; L6421-4; L6421-2
 89500	Emploi - Formation > Validation des acquis de l'expérience (VAE) > Objet, régime > Objet	L6411-1
 89600	Emploi - Formation > Validation des acquis de l'expérience (VAE) > Objet, régime > Régime juridique	L6412-2; L6412-1; R6412-1
-91600	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Coop Europ, comité coop. européen > Comité et participation. Absence groupe spécial de négociation (GSN)	L2363-1; L2363-2; L2363-3; L2363-4; L2363-5; L2363-6; L2363-7; R2364-1; L2364-1; L2364-2; L2364-3; L2364-4; L2364-5; L2363-18; L2363-19; L2363-8; L2363-9; L2363-10; L2363-11; L2363-12; L2363-13; L2363-14; L2363-15; L2363-16; L2363-17
-91700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Coop Europ, comité coop. européen > Dispositions générales.	D2361-1; L2361-1; L2361-2; L2361-3; L2361-4; L2361-5; L2361-6
-91800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Comité société européen absence accord	L2353-30; L2353-3; L2353-5; L2353-7; L2353-11; L2353-23; L2353-21; L2353-27; L2353-24; L2353-19; L2353-9; L2353-29; L2353-22; R2353-4; R2353-5; L2353-25; L2353-1; D2353-1; D2353-2; R2353-3; L2353-2; L2353-12; L2353-8; L2353-6; L2353-17; L2353-28; L2353-13; L2353-31; L2353-15; L2353-32; L2353-4; L2353-16; L2353-20; L2353-18; L2353-26; L2353-10; L2353-14
-91900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Dispositions générales	L2351-1; L2351-7; L2351-6; L2351-5; L2351-4; L2351-3; L2351-2; D2351-1
-92000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Dispositions postérieures immatriculation société européenne	L2354-3; L2354-4; R2354-1; L2354-2; L2354-1
-92100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Implication salariés société européen. accord groupe spécial de négociation (GSN)	L2352-20; L2352-17; L2352-18; L2352-7; L2352-16; L2352-8; L2352-11; L2352-5; L2352-19; L2352-12; L2352-9; R2352-5; D2352-6; D2352-7; D2352-8; D2352-9; D2352-10; D2352-11; D2352-12; D2352-13; L2352-3; L2352-13; R2352-18; R2352-19; D2352-14; D2352-15; D2352-16; R2352-17; D2352-1; D2352-2; D2352-3; D2352-4; L2352-1; L2352-2; L2352-14; L2352-15; L2352-6; L2352-4; L2352-10
-92200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Pénal	L2355-1
-92300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Vidéo conférence	D2341-1; D2353-6; L2353-27-1; L2341-12
+91600	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Coop Europ, comité coop. européen > Comité et participation. Absence groupe spécial de négociation (GSN)	L2363-1; L2363-2; L2363-3; L2363-4; L2363-5; L2363-6; L2363-7; R2364-1; L2364-1; L2364-2; L2364-3; L2364-4; L2364-5; L2363-18; L2363-19; L2363-8; L2363-9; L2363-10; L2363-11; L2363-12; L2363-13; L2363-14; L2363-15; L2363-16; L2363-17
+91700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Coop Europ, comité coop. européen > Dispositions générales.	D2361-1; L2361-1; L2361-2; L2361-3; L2361-4; L2361-5; L2361-6
+91800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Européenne, Comité européen. > Comité société européen absence accord	L2353-30; L2353-3; L2353-5; L2353-7; L2353-11; L2353-23; L2353-21; L2353-27; L2353-24; L2353-19; L2353-9; L2353-29; L2353-22; R2353-4; R2353-5; L2353-25; L2353-1; D2353-1; D2353-2; R2353-3; L2353-2; L2353-12; L2353-8; L2353-6; L2353-17; L2353-28; L2353-13; L2353-31; L2353-15; L2353-32; L2353-4; L2353-16; L2353-20; L2353-18; L2353-26; L2353-10; L2353-14
+91900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Européenne, Comité européen. > Dispositions générales	L2351-1; L2351-7; L2351-6; L2351-5; L2351-4; L2351-3; L2351-2; D2351-1
+92000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Européenne, Comité européen. > Dispositions postérieures immatriculation société européenne	L2354-3; L2354-4; R2354-1; L2354-2; L2354-1
+92100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Européenne, Comité européen. > Implication salariés société européen. accord groupe spécial de négociation (GSN)	L2352-20; L2352-17; L2352-18; L2352-7; L2352-16; L2352-8; L2352-11; L2352-5; L2352-19; L2352-12; L2352-9; R2352-5; D2352-6; D2352-7; D2352-8; D2352-9; D2352-10; D2352-11; D2352-12; D2352-13; L2352-3; L2352-13; R2352-18; R2352-19; D2352-14; D2352-15; D2352-16; R2352-17; D2352-1; D2352-2; D2352-3; D2352-4; L2352-1; L2352-2; L2352-14; L2352-15; L2352-6; L2352-4; L2352-10
+92200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Européenne, Comité européen. > Pénal	L2355-1
+92300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société Européenne, Comité européen. > Vidéo conférence	D2341-1; D2353-6; L2353-27-1; L2341-12
 89700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Central d'Entreprise (CCE) Fonctionnement	D2135-34
 90700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise Européen > Pénal	L2331-1; R2331-1; L2331-4; L2331-2; L2331-3; L2331-6; L2331-5; R2331-3; R2331-2; R2331-4
 90800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise Européen > Suppression comité	L2335-1
@@ -902,7 +902,7 @@ export default `
 91500	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Sociétés issues fusions transfrontalières > Pénal	D2372-1; L2375-1
 92400	Institutions représentatives du personnel > Comité d'entreprise > Attributions > Attributions générales	
 92500	Institutions représentatives du personnel > Comité d'entreprise > Champ d'application > Champ d'application	
-165400	Institutions représentatives du personnel > Comité social et économique>Conseil d'entreprise > Conseil d'entreprise	L2321-1; L2321-2; L2321-3; L2321-4; L2321-5; L2321-6; L2321-7; L2321-8; L2321-9; L2321-10; R2321-1
+165400	Institutions représentatives du personnel > Comité social et économique > Conseil d'entreprise > Conseil d'entreprise	L2321-1; L2321-2; L2321-3; L2321-4; L2321-5; L2321-6; L2321-7; L2321-8; L2321-9; L2321-10; R2321-1
 164700	Institutions représentatives du personnel > Comité social et économique > CSE attributions	L2312-5; L2312-6; L2312-7; R2312-1; R2312-2; R2312-3; L2312-1; L2312-2; L2312-3; L2312-4; R2312-60; R2312-61
 164800	Institutions représentatives du personnel > Comité social et économique > CSE attributions > Attributions entreprises 50 salariés et +	L2312-78; L2312-79; L2312-80; L2312-81; L2312-82; L2312-83; L2312-84; R2312-35; R2312-36; R2312-37; R2312-38; R2312-39; R2312-40; R2312-41; R2312-42; R2312-43; R2312-44; R2312-45; R2312-46; R2312-47; R2312-48; R2312-49; R2312-50; R2312-51; R2312-52; R2312-53; R2312-54; R2312-55; R2312-56; R2312-57; R2312-58; R2312-59; L2312-8; L2312-9; L2312-10; R2312-4; L2312-11; L2312-12; L2312-13; L2312-14; L2312-15; L2312-16; R2312-5; R2312-6; R2312-25; R2312-26; R2312-27; R2312-28; L2312-37; L2312-38; L2312-39; L2312-40; L2312-41; L2312-42; L2312-43; L2312-44; L2312-45; L2312-46; L2312-47; L2312-48; L2312-49; L2312-50; L2312-51; L2312-52; L2312-53; L2312-54; L2312-55; L2312-56; L2312-57; L2312-58; R2312-21; R2312-22; R2312-23; R2312-24; L2312-17; L2312-18; L2312-19; L2312-20; L2312-21; L2312-22; L2312-23; L2312-25; L2312-24; L2312-26; L2312-27; L2312-28; L2312-29; L2312-30; L2312-31; L2312-32; L2312-33; L2312-34; L2312-35; L2312-36; R2312-7; R2312-8; R2312-9; R2312-10; R2312-11; R2312-12; R2312-13; R2312-14; R2312-15; R2312-16; R2312-17; R2312-18; R2312-19; R2312-20; L2312-59; L2312-60; L2312-61; L2312-62; L2312-63; L2312-64; L2312-65; L2312-66; L2312-67; L2312-68; L2312-69; L2312-70; L2312-71; R2312-29; R2312-30; L2312-72; L2312-73; L2312-74; L2312-75; L2312-76; L2312-77; R2312-31; R2312-33; R2312-32; R2312-34
 164900	Institutions représentatives du personnel > Comité social et économique > CSE central et établissement	L2316-1; L2316-2; L2316-3; L2316-4; L2316-5; L2316-6; L2316-7; L2316-8; L2316-9; L2316-10; L2316-11; L2316-12; L2316-13; L2316-14; L2316-15; L2316-16; L2316-17; L2316-18; L2316-19; R2316-1; R2316-2; R2316-3; D2316-4; D2316-5; D2316-6; D2316-7; D2316-8; R2316-9; R2316-10; L2316-20; L2316-21; L2316-22; L2316-23; L2316-24; L2316-25; L2316-26
@@ -1012,7 +1012,7 @@ export default `
 108400	Négociations collectives > Dialogue social > Dialogue social > Formation	L2212-1; L2212-2
 108500	Négociations collectives > Dialogue social > Dialogue social > Orientations et calendrier annuels	L3
 108600	Négociations collectives > Dialogue social > Dialogue social > Projets de textes et consultations	L2
-109501	Négociations collectives > Négociation collective, Accords > Applicabilité >Groupe d'expert	L2261-27-1; D2261-4-1;D2261-4-2;D2261-4-3;D2261-4-4;D2261-4-5;D2261-4-6;
+109501	Négociations collectives > Négociation collective, Accords > Applicabilité > Groupe d'expert	L2261-27-1; D2261-4-1;D2261-4-2;D2261-4-3;D2261-4-4;D2261-4-5;D2261-4-6;
 108700	Négociations collectives > Négociation collective, Accords > Applicabilité > Abrogation	D2261-13
 108800	Négociations collectives > Négociation collective, Accords > Applicabilité > Adhésion	L2261-3; L2261-6; L2261-4; L2261-5
 108900	Négociations collectives > Négociation collective, Accords > Applicabilité > Commissions mixtes paritaires	D2261-9; R2261-10; D2261-11; D2261-12
@@ -1302,8 +1302,8 @@ export default `
 46300	Rémunération > Salaire > Titres - restaurant > Utilisation	R3262-4; R3262-5; R3262-6; R3262-7; R3262-8; R3262-9; R3262-10; R3262-11; L3262-4; L3262-5
 122300	Santé Sécurité > Bâtiment > Avant travaux > Dérogations	R4533-6; R4533-7
 122400	Santé Sécurité > Bâtiment > Avant travaux > Voies et réseaux divers	R4533-1; R4533-3; R4533-5; R4533-2; R4533-4
-124500	Santé Sécurité > Bâtiment > Coordination >comité inter-entreprises de santé et de sécurité au travail (CISSCT)	L4532-12; L4532-14; L4532-11; L4532-13; L4532-10; L4532-15
-124600	Santé Sécurité > Bâtiment > Coordination >comité inter-entreprises de santé et de sécurité au travail (CISSCT): Mise en place	R4532-77
+124500	Santé Sécurité > Bâtiment > Coordination > Comité inter-entreprises de santé et de sécurité au travail (CISSCT)	L4532-12; L4532-14; L4532-11; L4532-13; L4532-10; L4532-15
+124600	Santé Sécurité > Bâtiment > Coordination > Comité inter-entreprises de santé et de sécurité au travail (CISSCT): Mise en place	R4532-77
 122500	Santé Sécurité > Bâtiment > Coordination > Catégories d'opérations	R4532-1
 124300	Santé Sécurité > Bâtiment > Coordination > Comité inter-entreprises de santé et de sécurité au travail (CISSCT): Composition	R4532-82; R4532-83; R4532-78; R4532-79; R4532-80; R4532-81
 124400	Santé Sécurité > Bâtiment > Coordination > Comité inter-entreprises de santé et de sécurité au travail (CISSCT): Fonctionnement	R4532-89; R4532-94; R4532-87; R4532-93; R4532-88; R4532-84; R4532-92; R4532-90; R4532-91; R4532-86; R4532-85
@@ -1358,11 +1358,11 @@ export default `
 128000	Santé Sécurité > Bâtiment > Travailleurs indépendants > Risque électrique	R4535-12; R4535-11
 127800	Santé Sécurité > Bâtiment > Travailleurs indépendants > Travailleurs indépendants	L4535-1
 127900	Santé Sécurité > Bâtiment > Travailleurs indépendants > Utilisation équipements de Travail, équipement de protection individuelle (EPI)	R4535-6; R4535-7
-131000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation >équipement de protection individuelle (EPI)> Information, formation des travailleurs	R4323-91; R4323-97; R4323-92; R4323-95; R4323-94; R4323-93; R4323-98; R4323-96
-131100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation >équipement de protection individuelle (EPI)> Vérifications périodiques	R4323-105; R4323-106; R4323-104
+131000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI)> Information, formation des travailleurs	R4323-91; R4323-97; R4323-92; R4323-95; R4323-94; R4323-93; R4323-98; R4323-96
+131100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI)> Vérifications périodiques	R4323-105; R4323-106; R4323-104
 128100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Ascenseurs, équipements à habitacle > Ascenseurs, équipements à habitacle	R4323-107; R4323-108; R4323-109
 128200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Autorisation de conduite > Autorisation de conduite	R4323-57; R4323-55; R4323-56
-129000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Equipements anciens >Protecteurs, dispositifs de protection	R4324-7; R4324-3; R4324-6; R4324-5; R4324-4; R4324-1; R4324-2
+129000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Equipements anciens > Protecteurs, dispositifs de protection	R4324-7; R4324-3; R4324-6; R4324-5; R4324-4; R4324-1; R4324-2
 128300	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Equipements anciens > Dispositifs d'alerte et signalisation	R4324-16; R4324-17
 128400	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Equipements anciens > Eclairage	R4324-23
 128500	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Equipements anciens > Equipements mobiles: dispositions particulières	R4324-46; R4324-47; R4324-48; R4324-49; R4324-50; R4324-51; R4324-52; R4324-53; R4324-33; R4324-42; R4324-40; R4324-38; R4324-34; R4324-39; R4324-35; R4324-37; R4324-32; R4324-30; R4324-45; R4324-44; R4324-36; R4324-31; R4324-41; R4324-43
@@ -1412,11 +1412,11 @@ export default `
 133200	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles générales > Procédure sauvegarde nationale	L4314-1; R4314-1; R4314-2; R4314-3; R4314-4
 133300	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles générales > Recours	R4314-6
 133400	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles générales > Texte prévoyant des décrets	L4311-7
-133800	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques >équipement de protection individuelle (EPI)neufs, considérés neufs	Annexe II à l'article R4312-6; R4312-6
-133900	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques >équipement de protection individuelle (EPI)occasion	R4312-8; R4312-7; R4312-9
-133500	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Equipements Neufs	R4312-1-2; Annexe I à l'article R4312-1; R4312-1
-133600	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Equipements d'occasion	R4312-2-1; R4312-3; R4312-2; R4312-4; R4312-5
-133700	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Equipements neufs: cabines	R4312-1-1
+133800	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Équipement de protection individuelle (EPI)neufs, considérés neufs	Annexe II à l'article R4312-6; R4312-6
+133900	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Équipement de protection individuelle (EPI)occasion	R4312-8; R4312-7; R4312-9
+133500	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Équipements Neufs	R4312-1-2; Annexe I à l'article R4312-1; R4312-1
+133600	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Équipements d'occasion	R4312-2-1; R4312-3; R4312-2; R4312-4; R4312-5
+133700	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Règles techniques > Équipements neufs: cabines	R4312-1-1
 134000	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Champ d'application	L4521-1
 134100	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d'hygiène, de sécurité et des conditions de travail (CHSCT): Attributions particulières	R4524-5; R4524-6; L4524-1; R4524-7; R4524-8; R4524-9; R4524-10; R4524-1; R4524-2; R4524-3; R4524-4
 134200	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d'hygiène, de sécurité et des conditions de travail (CHSCT): Comité élargi	L4522-2; L4522-1
