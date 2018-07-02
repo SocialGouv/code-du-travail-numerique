@@ -118,13 +118,13 @@ export default `
 3970	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Salaié détachés	D1221-24-1
 4000	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Sanction	R1227-7
 3920	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Tenue à disposition des délégués du personnel (DP), du comité économique et social ( CSE), de l'Inspection du travail (IT), de l'URSSAF	L1221-15
-3960	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > salariés étrangers	D1221-24
-3950	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > stagiaires	D1221-23-1; L1221-13
+3960	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Salariés étrangers	D1221-24
+3950	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Stagiaires	D1221-23-1; L1221-13
 3500	Contrat de travail > Embauche > Relevé mensuel des contrats> Assujetissement aux entreprises de plus de cinquante salariés	D1221-28;
 3530	Contrat de travail > Embauche > Relevé mensuel des contrats> Autre oblligation	D1221-31;
 3520	Contrat de travail > Embauche > Relevé mensuel des contrats> Contenu	D1221-30;
 3510	Contrat de travail > Embauche > Relevé mensuel des contrats> Principe	D1221-29;
-3550	Contrat de travail > Embauche > Relevé mensuel des contrats > pénalités	R1227-4
+3550	Contrat de travail > Embauche > Relevé mensuel des contrats > Pénalités	R1227-4
 29300	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation >Indemnité: Calcul	D1226-1
 29800	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation >Indemnité: déduction allocations Sécurité Sociale	D1226-5; D1226-6
 29400	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Date de début	D1226-3
@@ -186,7 +186,7 @@ export default `
 51265	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Procédure > Délais de transmission du contrat au salarié	L1254-16
 51260	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Procédure > Mentions et clause du contrat écrit	L1254-14;L1254-15
 51245	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Terme	L1254-11
-51255	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > report du terme	L1254-13
+51255	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Report du terme	L1254-13
 51275	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Indéterminée (CDI) > Principe	L1254-19
 51280	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Indéterminée (CDI) > Procédure > Mentions	L1254-20
 51285	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Indéterminée (CDI) > Procédurre > Clauses	L1254-21
@@ -203,7 +203,7 @@ export default `
 51215	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Objet du portage	L1254-3;
 51210	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Principe	L1254-2;
 51230	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Rupture du contrat de travail	L1254-8
-51220	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > cas d'exclusion	L1254-4; L1254-5; L1254-6
+51220	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Cas d'exclusion	L1254-4; L1254-5; L1254-6
 32700	Contrat de travail > Professions particulières > Agences de mannequins > Garantie financière	L7123-22; L7123-20; L7123-21; L7123-19
 32800	Contrat de travail > Professions particulières > Agences de mannequins > Licence	L7123-12; L7123-13; L7123-14; L7123-15; L7123-11
 32900	Contrat de travail > Professions particulières > Agences de mannequins > Mise à disposition	L7123-17; L7123-18
@@ -229,8 +229,8 @@ export default `
 35100	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > Interdictions	L7124-16; L7124-20; L7124-17; L7124-18; L7124-13; L7124-14; L7124-15; L7124-19
 35200	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > Pénal	L7124-22; L7124-23; L7124-32; L7124-35; L7124-25; L7124-26; L7124-24; L7124-30; L7124-31; L7124-33; L7124-27; L7124-28; L7124-29; L7124-34
 35300	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > Rémunération	L7124-12; R7124-36; R7124-37; R7124-35; R7124-33; R7124-34; L7124-10; R7124-31; L7124-9; L7124-11; R7124-32
-34700	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > dispositions communes	R7124-19; R7124-20; R7124-21; R7124-22; R7124-23; R7124-24; R7124-25; R7124-26
-35000	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > dérogation enfants agences mannequins	R7124-8; R7124-9; R7124-10; R7124-11; R7124-12; R7124-13; R7124-14; L7124-4; R7124-15; R7124-16; R7124-17; R7124-18; L7124-5
+34700	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > Dispositions communes	R7124-19; R7124-20; R7124-21; R7124-22; R7124-23; R7124-24; R7124-25; R7124-26
+35000	Contrat de travail > Professions particulières > Enfants spectacle, publicité mode > Dérogation enfants agences mannequins	R7124-8; R7124-9; R7124-10; R7124-11; R7124-12; R7124-13; R7124-14; L7124-4; R7124-15; R7124-16; R7124-17; R7124-18; L7124-5
 35400	Contrat de travail > Professions particulières > Entrepreneurs salariés coopérative > Entrepreneurs salariés coopérative	R7331-1; R7331-2; R7331-3; R7331-5; R7331-6; R7331-7; R7331-8; R7331-10; R7331-11; R7331-12; R7331-4; R7331-9; L7331-1; L7331-2; L7331-3; L7332-1; L7332-2; L7332-3; L7332-4; L7332-5; L7332-6; L7332-7
 35600	Contrat de travail > Professions particulières > Entreprises spectacle vivants > Entrepreneurs titulaires licence	L7122-3; L7122-8; L7122-1; R7122-18; R7122-19; R7122-20; R7122-21; R7122-22; R7122-23; L7122-7; D7122-25; L7122-2; L7122-10; L7122-11; L7122-5; L7122-4; L7122-13; R7122-6; R7122-7; R7122-8; R7122-2; R7122-3; R7122-4; R7122-5; R7122-9; R7122-10; R7122-11; L7122-6; R7122-12; R7122-13; R7122-14; R7122-15; R7122-16; R7122-17; L7122-9; L7122-15; D7122-24; L7122-16; L7122-17; L7122-18; R7122-40; R7122-41; L7122-12; L7122-14; D7122-1
 35500	Contrat de travail > Professions particulières > Entreprises spectacle vivants > Entre reprises spectacles occasionnels	L7122-19; L7122-20; R7122-43; R7122-42; R7122-26; R7122-27; R7122-28; L7122-21
@@ -292,14 +292,14 @@ export default `
 3700	Contrat de travail > Période d'essai > Généralités 	L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26
 3760	Contrat de travail > Période d'essai > Renouvellements : possibilités et durée	L1221-22; L1221-21; L1221-23;
 3780	Contrat de travail > Période d'essai > Une clause nécessaire du contrat de travail	L1221-23;
-3770	Contrat de travail > Période d'essai > stagiaire 	L1221-24;
+3770	Contrat de travail > Période d'essai > Stagiaire 	L1221-24;
 1900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers> Contrat de mission à exportation	L1236-7
 120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Cas de force majeur	L1234-12; L1234-13;
 1800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Contrat de chantier ou d'opération	L1236-8; L1236-9
 1300	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L1532-1
 830	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Principes de la rupture, plusieurs employeur	L1231-3
 800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Prorogation des délais de procédure 	R1231-1;
-810	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > licenciement d'un salarié mis à disposition d'une filiale étrangère	L1231-5;
+810	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Licenciement d'un salarié mis à disposition d'une filiale étrangère	L1231-5;
 900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement >Licenciement pour motif personnel > Cause réelle, sérieuse	L1232-1
 130	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Cas particuliers > Dispositions applicables à certains salariés (secteur public…)	L1234-14;
 600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Contestations, sanctions licenciement irrégulier > Contestations, Sanctions	L1235-3; L1235-5; L1235-3-1; L1235-1; L1235-3-2; L1235-2; L1235-2-1; L1235-6;
@@ -317,14 +317,14 @@ export default `
 1080	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> sanction	L1238-1
 1020	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> temps nécessaire à sa mission	L1232-8; L1232-9;
 1010	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié > Principe	L1232-7
-1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > entretien préalable >Convocation	L1232-2; R1232-1;
-1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > entretien préalable> Principe	L1232-3; L1232-2;
-1160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > entretien préalable > Assistance	L1232-4; R1232-2; R1232-3
-1100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > principe: motivation,cause, réelle et sérieuse	L1232-1;
+1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable >Convocation	L1232-2; R1232-1;
+1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable> Principe	L1232-3; L1232-2;
+1160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Assistance	L1232-4; R1232-2; R1232-3
+1100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Principe: motivation,cause, réelle et sérieuse	L1232-1;
 410	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Durée	L1234-1; L1234-2; L1234-8;
 420	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Début	L1234-3;
 430	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Inexécution du préavis	L1234-4; L1234-5;L1234-6;L1234-7;
-100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > dispositions particulières Alsace Moselle	L1234-15; L1234-16; L1234-17;L1234-17-1;
+100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Dispositions particulières Alsace Moselle	L1234-15; L1234-16; L1234-17;L1234-17-1;
 820	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Principes de la rupture	L1231-1; L1231-2; L1231-4;
 1400	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Dispositions générales	L1237-4
 1500	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Départ volontaire à la retraite	D1237-2-1; L1237-9; D1237-2; D1237-1; L1237-10
@@ -368,7 +368,7 @@ export default `
 52900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Définitions > Définitions	L1251-4; L1251-3; L1251-2; L1251-1
 53000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > Garantie financière, Défaillance	L1251-51; L1251-50; R1251-11; R1251-12; R1251-13; R1251-14; R1251-15; R1251-16; R1251-17; R1251-18; R1251-19; R1251-20; R1251-21; R1251-22; R1251-23; R1251-24; L1251-49; L1251-52; R1251-25; R1251-26; R1251-27; R1251-28; R1251-29; R1251-30; R1251-31; L1251-53
 53100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > Règles de contrôle	R1251-9; R1251-4; R1251-6; R1251-5; L1251-45; R1251-10; L1251-47; R1251-8; R1251-7; L1251-46; L1251-48
-53200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > salariés permanents, temporaires de entreprise travail temporaire (ETT)	L1251-54; L1251-58; L1251-55; L1251-56; L1251-57
+53200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > Salariés permanents, temporaires de entreprise travail temporaire (ETT)	L1251-54; L1251-58; L1251-55; L1251-56; L1251-57
 53300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Pénal > Entreprise de travail temporaire	R1255-3; R1255-4; R1255-5; R1255-6; R1255-7; L1255-2; L1255-1; R1255-1
 53400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Pénal > Utilisateur	R1255-2; L1255-3; L1255-4; L1255-5; L1255-6; L1255-7; L1255-8; L1255-9; L1255-10; L1255-11; L1255-12
 49100	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Actions en justice > Actions en justice	D1247-2; D1247-1; L1247-1
@@ -407,7 +407,7 @@ export default `
 48300	Contrat de travail > Salariés étrangers et déplacés > Détachés: Contrôle > Déclaration spécifique entreprise travail temporaire (ETT)	R1263-8; R1263-8-1; R1263-9; R1263-6; R1263-7; R1263-6-1
 48500	Contrat de travail > Salariés étrangers et déplacés > Détachés: Contrôle > Echanges d'informations	L1263-2
 48600	Contrat de travail > Salariés étrangers et déplacés > Détachés: Contrôle > Protection des données personnelles	R1263-2; R1263-1; R1263-2-1
-48400	Contrat de travail > Salariés étrangers et déplacés > Détachés: Contrôle > dispositions communes	L1263-1
+48400	Contrat de travail > Salariés étrangers et déplacés > Détachés: Contrôle > Dispositions communes	L1263-1
 48700	Contrat de travail > Salariés étrangers et déplacés > Détachés: Dispositions générales > Dispositions générales	R1261-2; L1261-3; L1261-2; R1261-1; L1261-1
 48800	Contrat de travail > Salariés étrangers et déplacés > Détachés: Pénal > Pénal	R1264-3
 47500	Contrat de travail > Salariés étrangers et déplacés > Détachés : Réglementation applicable > Dispositions applicables	L1262-4
@@ -433,9 +433,9 @@ export default `
 54700	Contrat de travail > Travailleurs étrangers ou détachés > Emploi d'un salarié étranger > Saisonniers, étudiants, salarié en mission	R5221-26; R5221-27; R5221-28; R5221-23; R5221-24; R5221-25
 54800	Contrat de travail > Travailleurs étrangers ou détachés > Outre - mer > DOM, Saint Barthélemy, Saint - Martin, St Pierre et Miquelon	L5523-1; L5523-3; L5523-4; L5523-5;L5523-2; R5523-3; R5523-4; R5523-5; R5523-6; R5523-7; R5523-8; R5523-9; R5523-10; R5523-11; R5523-12; R5523-13; R5523-14; R5523-15
 54900	Contrat de travail > Travailleurs étrangers ou détachés > Salarié étranger : Interdictions > Interdictions	L5224-2; L5222-2; L5222-1
-3602	Contrat de travail > généralités > Principes génériques du contrat > interdictions 	L1221-4; L1221-5;
-3600	Contrat de travail > généralités > Principes génériques du contrat > principes	L1221-2; L1221-1
-3601	Contrat de travail > généralités > Principes génériques du contrat > un contrat écrit en français	L1221-3; R1227-4;
+3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions 	L1221-4; L1221-5;
+3600	Contrat de travail > Généralités > Principes génériques du contrat > Principes	L1221-2; L1221-1
+3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; R1227-4;
 5700	Durée du travail et congés > Compte épargne temps	L3152-1; L3152-2; L3152-3; L3152-4; L3153-1; L3153-2; D3154-1; D3154-2; D3154-3; D3154-4; D3154-5; D3154-6; L3151-1; L3151-2; L3151-3; L3151-4
 4100	Durée du travail et congés > Congés autres > Champ d'application	L3111-1; R3111-1
 4200	Durée du travail et congés > Congés autres > Congé acquisition de nationalité	L3142-77; L3142-78; R3142-58; L3142-75; L3142-76
@@ -491,7 +491,7 @@ export default `
 21800	Durée du travail et congés > Durée du travail > Temps partiel et travail intermittent > Travail intermittent	R3124-8; R3124-5; L3123-38; D3123-4; L3123-33; L3123-34; L3123-35; L3123-36; L3123-37
 21000	Durée du travail et congés > Durée du travail > Travail du dimanche	L3132-27-2; L3132-29; L3132-30; R3132-22; R3132-23; L3132-28; L3132-4; L3132-5; L3132-6; L3132-7; L3132-8; L3132-9; L3132-10; L3132-11; R3132-1; R3132-2; R3132-3; R3132-4; R3132-9; R3132-10; R3132-11; R3132-12; R3132-13; R3132-14; R3132-15; L3132-14; L3132-15; L3132-16; L3132-17; L3132-18; L3132-19; L3132-26; L3132-26-1; L3132-27; L3132-27-1; R3132-21; L3132-20; L3132-21; L3132-22; L3132-23; R3132-16; R3132-17; R3132-19; R3132-20; R3132-20-1; L3132-12; L3132-13; R3132-5; R3132-6; R3132-7; R3132-8; L3132-24; L3132-25; L3132-25-1; L3132-25-2; L3132-25-3; L3132-25-4; L3132-25-5; L3132-25-6; R3132-21-1; L3132-1; L3132-2; L3132-3; L3132-3-1; R3135-2
 16800	Durée du travail et congés > Spécificités jeunes >Décret repos congés > Décret après avis Conseil supérieur de la prévention des risques professionnels (CSPRP)	R3164-3
-16900	Durée du travail et congés > Spécificités jeunes >Définition > jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
+16900	Durée du travail et congés > Spécificités jeunes >Définition > Jeunes travailleurs Salariés - 18ans, stagiaires - 18 ans	L3161-1
 17000	Durée du travail et congés > Spécificités jeunes >Jours fériés > Industries en continue	L3164-7
 17100	Durée du travail et congés > Spécificités jeunes >Jours fériés > Non travaillés	L3164-6
 17200	Durée du travail et congés > Spécificités jeunes >Jours fériés > Pénal: Non-respect L3164-6	R3165-4
@@ -517,10 +517,10 @@ export default `
 19300	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Secteurs dérogatoires	R3163-1
 19400	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Spectacles, courses hippiques	R3163-4
 19500	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Travaux extrême urgence	L3163-3
-19000	Durée du travail et congés > Spécificités jeunes >Travail de nuit > hôtels, cafés restaurants (HCR)	R3163-2
+19000	Durée du travail et congés > Spécificités jeunes >Travail de nuit > Hôtels, cafés restaurants (HCR)	R3163-2
 16100	Durée du travail et congés > Spécificités jeunes > Congés annuels > Pénal: Non-respect L3164-8	R3165-6
 16200	Durée du travail et congés > Spécificités jeunes > Congés annuels > Pénal: Non-respect L3164-9	R3143-1
-16000	Durée du travail et congés > Spécificités jeunes > Congés annuels > nombre jours de congé, indemnité Décret	L3164-9
+16000	Durée du travail et congés > Spécificités jeunes > Congés annuels > Nombre jours de congé, indemnité Décret	L3164-9
 16300	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Journalière et Hebdo: maxi; dérogation	L3162-1
 16400	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Pénal: Non-respect L3162-1 et 2	R3165-1
 16500	Durée du travail et congés > Spécificités jeunes > Durée du Travail > Pénal: Non-respect L3162-3	R3165-2
@@ -534,7 +534,7 @@ export default `
 55600	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > Inspection apprentissage	R6261-15; R6261-16; R6261-17; R6261-18; R6261-19; R6261-20; R6261-21; R6261-22; R6261-23; R6261-24; R6261-25
 55700	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > Maître d'apprentissage	R6261-9; R6261-10
 55800	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > Texte prévoyant un décret	L6261-2
-55900	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > dispositions générales	R6261-1; R6261-2
+55900	Emploi - Formation > Apprenti Moselle, Bas - Rhin, Haut - Rhin > Moselle, Bas - Rhin, Haut - Rhin > Dispositions générales	R6261-1; R6261-2
 56000	Emploi - Formation > Apprentissage > Aménagements personnes handicapées > Aménagements de la formation	R6222-50; R6222-51; R6222-52; R6222-53
 56100	Emploi - Formation > Apprentissage > Aménagements personnes handicapées > Aménagements personnes handicapé.	L6222-38; L6222-37
 56200	Emploi - Formation > Apprentissage > Aménagements personnes handicapées > Champ d'application	R6222-45
@@ -575,7 +575,7 @@ export default `
 59600	Emploi - Formation > Apprentissage > Opposition, Suspension, interdiction > Suspension	R6225-9
 59700	Emploi - Formation > Apprentissage > Opposition, Suspension, interdiction > Suspension, Interdiction	L6225-6; L6225-7; L6225-5; L6225-4
 59800	Emploi - Formation > Apprentissage > Outre - mer > DOM, Saint Barthélemy, Saint - Martin, St Pierre et Miquelon	L6522-1; L6522-2; D6522-1; D6522-2
-59900	Emploi - Formation > Apprentissage > Pénal > pénal	R6227-1; R6227-2; R6227-3; R6227-4; R6227-5; R6227-6; R6227-7; R6227-8; R6227-9; R6227-10
+59900	Emploi - Formation > Apprentissage > Pénal > Pénal	R6227-1; R6227-2; R6227-3; R6227-4; R6227-5; R6227-6; R6227-7; R6227-8; R6227-9; R6227-10
 60000	Emploi - Formation > Apprentissage > Secteur public	D6271-1; D6271-2; D6271-3; D6272-1; D6272-2; L6227-2; L6227-1; L6227-3; L6227-4; L6227-5; L6227-6; L6227-7; L6227-8; L6227-9; L6227-10; L6227-11; L6227-12
 60100	Emploi - Formation > Apprentissage > Sportif haut niveau > Sportif haut niveau	R6222-59; R6222-60; R6222-61; R6222-62; R6222-63; R6222-64; R6222-65; L6222-41; L6222-40
 60200	Emploi - Formation > Apprentissages: centres > Centres de formation > Création de centres apprentis	R6232-4; R6232-5; R6232-6; R6232-7; R6232-8; R6232-9; R6232-10; R6232-11; R6232-1; R6232-2; R6232-13; R6232-14; R6232-15; R6232-16; L6231-1; L6231-2; L6231-3; L6231-4; L6231-5; L6232-1; L6232-2; L6232-3; L6232-4; L6232-5; L6231-4-2; L6231-4-1
@@ -615,17 +615,17 @@ export default `
 64700	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Redressement judiciaire (RJ) Liquidation judiciaire (LJ) > Redressement judiciaire (RJ) Liquidation judiciaire (LJ) Pénal	R1238-6; L1238-5
 64800	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Sanction des irrégularités > Sanction	L1235-14; L1235-11; L1235-15; L1235-12; L1235-13; L1235-10; L1235-17; L1235-16
 64900	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Sanction des irrégularités > Voies de recours	L1235-7-1
-63500	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Consultation représentants du personnel	L1233-34; L1233-35; R1233-3-1; R1233-3-2; R1233-3-3; L1233-35-1; L1233-36; L1233-37; L1233-28; L1233-29; L1233-30; L1233-31; L1233-32; L1233-33
-63600	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Dispositions générales	L1233-24-4; L1233-26; L1233-27; L1233-25; L1233-21; L1233-22; L1233-23; L1233-24; L1233-24-1; L1233-24-2; L1233-24-3
-63700	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Intervention administration	L1233-53; L1233-56; D1233-11; D1233-12
-63800	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Plan de Sauvegarde de l'Emploi (PSE) et intervention administration	L1233-57-4; L1233-57; L1233-57-1; L1233-57-2; L1233-57-3; L1233-57-5; L1233-57-6; L1233-57-7; L1233-57-8; R*1233-3-4; R1233-3-5; D1233-14; D1233-14-1; D1233-14-2; D1233-14-3; D1233-14-4
-63900	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Plan de Sauvegarde de l'Emploi (PSE) information administration	R1233-7; L1233-49; L1233-46; L1233-48; L1233-50; L1233-51; D1233-4; R1233-6; R1233-9; D1233-10; D1233-5
-64000	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Procédure à l'égard des salariés	L1233-38; L1233-42; L1233-39; L1233-43; L1233-44; L1233-45; L1233-45-1
-64100	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement 10 salariés ou + 30 jours > Pénal	L1238-4; L1238-2; L1238-3; R1238-5
-64200	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement moins 10 salariés 30 jours > Consultation représentants du personnel	L1233-9; L1233-8; L1233-10
-64300	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement moins 10 salariés 30 jours > Entretien préalable	L1233-13; L1233-12; L1233-11; L1233-14
-64400	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement moins 10 salariés 30 jours > Information de l'administration	L1233-19; D1233-3; L1233-20; R1238-2
-64500	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > licenciement moins 10 salariés 30 jours > Notification du licenciement	L1233-16; L1233-15; L1233-17; L1233-18
+63500	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Consultation représentants du personnel	L1233-34; L1233-35; R1233-3-1; R1233-3-2; R1233-3-3; L1233-35-1; L1233-36; L1233-37; L1233-28; L1233-29; L1233-30; L1233-31; L1233-32; L1233-33
+63600	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Dispositions générales	L1233-24-4; L1233-26; L1233-27; L1233-25; L1233-21; L1233-22; L1233-23; L1233-24; L1233-24-1; L1233-24-2; L1233-24-3
+63700	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Intervention administration	L1233-53; L1233-56; D1233-11; D1233-12
+63800	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Plan de Sauvegarde de l'Emploi (PSE) et intervention administration	L1233-57-4; L1233-57; L1233-57-1; L1233-57-2; L1233-57-3; L1233-57-5; L1233-57-6; L1233-57-7; L1233-57-8; R*1233-3-4; R1233-3-5; D1233-14; D1233-14-1; D1233-14-2; D1233-14-3; D1233-14-4
+63900	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Plan de Sauvegarde de l'Emploi (PSE) information administration	R1233-7; L1233-49; L1233-46; L1233-48; L1233-50; L1233-51; D1233-4; R1233-6; R1233-9; D1233-10; D1233-5
+64000	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Procédure à l'égard des salariés	L1233-38; L1233-42; L1233-39; L1233-43; L1233-44; L1233-45; L1233-45-1
+64100	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement 10 salariés ou + 30 jours > Pénal	L1238-4; L1238-2; L1238-3; R1238-5
+64200	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement moins 10 salariés 30 jours > Consultation représentants du personnel	L1233-9; L1233-8; L1233-10
+64300	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement moins 10 salariés 30 jours > Entretien préalable	L1233-13; L1233-12; L1233-11; L1233-14
+64400	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement moins 10 salariés 30 jours > Information de l'administration	L1233-19; D1233-3; L1233-20; R1238-2
+64500	Emploi - Formation > Contrat à durée Indéterminée (CDI): Licenciement économique > Licenciement moins 10 salariés 30 jours > Notification du licenciement	L1233-16; L1233-15; L1233-17; L1233-18
 71400	Emploi - Formation > Formation professionnelle Continue > Bilan de compétences > Conditions d'ancienneté	L6322-42; L6322-43
 71500	Emploi - Formation > Formation professionnelle Continue > Bilan de compétences > Contenu, déroulement	R6322-37; R6322-35; R6322-38; R6322-39; R6322-36
 71600	Emploi - Formation > Formation professionnelle Continue > Bilan de compétences > Convention tripartite	R6322-34; R6322-33; R6322-32
@@ -677,13 +677,13 @@ export default `
 76200	Emploi - Formation > Formation professionnelle Continue > Rôle Régions, Etat, Institutions	D6325-29
 76300	Emploi - Formation > Formation professionnelle Continue > Rôle Régions, Etat, Institutions > Certificat de qualification	L6314-2
 76400	Emploi - Formation > Formation professionnelle Continue > Rôle Régions, Etat, Institutions > Institutions	R6325-21; R6325-20
-76500	Emploi - Formation > Formation professionnelle Continue > Rôle Régions, Etat, Institutions > dispositions groupements employeurs	D6325-28; D6325-27; D6325-26; D6325-25; D6325-24; D6325-23; D6325-22
-76600	Emploi - Formation > Formation professionnelle Continue > formation initiative employeur, plan formation > Actions formation emploi saisonnier	L6321-14; L6321-15; L6321-13
-76700	Emploi - Formation > Formation professionnelle Continue > formation initiative employeur, plan formation > Déroulement des actions de formation	D6321-1; R6321-2; D6321-3
-76800	Emploi - Formation > Formation professionnelle Continue > formation initiative employeur, plan formation > Formation Adaptation au poste	L6321-2
-76900	Emploi - Formation > Formation professionnelle Continue > formation initiative employeur, plan formation > Formation développement des compétences	R6321-4; L6321-10; D6321-5; D6321-6; D6321-7; D6321-8; D6321-9; L6321-12; D6321-10; L6321-8; L6321-6; L6321-11; L6321-7
-77000	Emploi - Formation > Formation professionnelle Continue > formation initiative employeur, plan formation > Obligation employeur, plan de formation	L6321-1
-77100	Emploi - Formation > Formation professionnelle Continue > formation initiative employeur, plan formation > Secteur public	L6321-16
+76500	Emploi - Formation > Formation professionnelle Continue > Rôle Régions, Etat, Institutions > Dispositions groupements employeurs	D6325-28; D6325-27; D6325-26; D6325-25; D6325-24; D6325-23; D6325-22
+76600	Emploi - Formation > Formation professionnelle Continue > Formation initiative employeur, plan formation > Actions formation emploi saisonnier	L6321-14; L6321-15; L6321-13
+76700	Emploi - Formation > Formation professionnelle Continue > Formation initiative employeur, plan formation > Déroulement des actions de formation	D6321-1; R6321-2; D6321-3
+76800	Emploi - Formation > Formation professionnelle Continue > Formation initiative employeur, plan formation > Formation Adaptation au poste	L6321-2
+76900	Emploi - Formation > Formation professionnelle Continue > Formation initiative employeur, plan formation > Formation développement des compétences	R6321-4; L6321-10; D6321-5; D6321-6; D6321-7; D6321-8; D6321-9; L6321-12; D6321-10; L6321-8; L6321-6; L6321-11; L6321-7
+77000	Emploi - Formation > Formation professionnelle Continue > Formation initiative employeur, plan formation > Obligation employeur, plan de formation	L6321-1
+77100	Emploi - Formation > Formation professionnelle Continue > Formation initiative employeur, plan formation > Secteur public	L6321-16
 77200	Emploi - Formation > Formation professionnelle Outre- mer > Outre - mer > DOM, Saint Barthélemy, Saint - Martin, St Pierre et Miquelon	L6521-1; L6521-2; L6521-3; L6523-2; L6523-3; L6523-4; L6523-5; L6523-6; L6523-7; L6523-1; R6523-15; R6523-16; R6523-17; R6523-18; R6523-19; R6523-20; R6523-21; R6523-22; R6523-23; R6523-24; R6523-25; R6523-26; R6523-2; D6523-2-1; D6523-2-2; D6523-2-3; D6523-2-4; R6523-10; R6523-11; R6523-12; R6523-13; R6523-14; R6523-3; R6523-4; R6523-5; R6523-6; R6523-7; R6523-8; D6523-9; R6523-1; L6523-6-2; L6523-6-1; L6524-1
 77250	Emploi - Formation > Formation professionnelle Outre- mer > Outre - mer > DOM, Saint Barthélemy, Saint - Martin, St Pierre et Miquelon > Mayotte	L6523-5-1; L6523-5-2; L6523-5-3; L6523-6-2;
 77300	Emploi - Formation > Formation professionnelle Outre- mer > Outre - mer > Dispositions générales	L6511-1; R6523-27; R6523-28
@@ -766,13 +766,13 @@ export default `
 85700	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Service Public Emploi > Missions locales	L5314-1; L5314-2; L5314-3; L5314-4; D5314-0
 85900	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Service Public Emploi > Organisation et fonctionnement	R5312-1; R5312-2; R5312-3; R5312-4; R5312-5; R5312-6; R5312-7; R5312-8; R5312-9; R5312-10; R5312-11; R5312-12; R5312-13; R5312-14; R5312-15; R5312-16; R5312-17; R5312-18; R5312-19; R5312-20; R5312-21; R5312-22; R5312-23; R5312-24; R5312-25; R5312-26; R5312-27; R5312-28; R5312-29; R5312-30; R5312-1-1
 86000	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Service Public Emploi > Placement accompagnement des demandeurs d'emploi (DE)	L5312-13-1; R5312-42; R5312-43; R5312-44; R5312-45; R5312-46; L5312-1; L5312-2; L5312-3; L5312-4; L5312-5; L5312-6; L5312-7; L5312-8; L5312-9; L5312-10; L5312-12; L5312-12-1; L5312-13; L5312-14; R5312-32; R5312-33; R5312-34; R5312-35; R5312-36; R5312-37; R5312-38; R5312-39; R5312-40; R5312-41
-80400	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > Avance remboursable	R5141-13; R5141-14; R5141-15; R5141-16; R5141-17; R5141-18; R5141-19; R5141-20; R5141-21; R5141-22; R5141-23; R5141-24; R5141-25; R5141-26; R5141-27; L5141-2
-80500	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > Contrat d' appui au projet d'entreprise	R5142-1; R5142-2; R5142-3; R5142-4; R5142-5; R5142-6; L5142-1; L5142-2; L5142-3
-80700	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > Dispositions d'application	L5141-6
-80800	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > Exonération charges	L5141-1; R5141-7; R5141-8; R5141-9; R5141-10; R5141-11; R5141-12
-80900	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > Financement actions conseil, formation, accomplissement.	R5141-34; R5141-31; R5141-32; R5141-33; R5141-29; R5141-30; L5141-5
-81000	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > Maintien d'allocations	L5141-3; L5141-4; R5141-28
-80600	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > aide au chômeur créant ou reprenant une entreprise (ACCRE) > dispositions communes	R5141-1; R5141-2; R5141-3; R5141-4; R5141-5; R5141-6
+80400	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Avance remboursable	R5141-13; R5141-14; R5141-15; R5141-16; R5141-17; R5141-18; R5141-19; R5141-20; R5141-21; R5141-22; R5141-23; R5141-24; R5141-25; R5141-26; R5141-27; L5141-2
+80500	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Contrat d' appui au projet d'entreprise	R5142-1; R5142-2; R5142-3; R5142-4; R5142-5; R5142-6; L5142-1; L5142-2; L5142-3
+80700	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Dispositions d'application	L5141-6
+80800	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Exonération charges	L5141-1; R5141-7; R5141-8; R5141-9; R5141-10; R5141-11; R5141-12
+80900	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Financement actions conseil, formation, accomplissement.	R5141-34; R5141-31; R5141-32; R5141-33; R5141-29; R5141-30; L5141-5
+81000	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Maintien d'allocations	L5141-3; L5141-4; R5141-28
+80600	Emploi - Formation > Politique de l'emploi, Service Public de l’Emploi (SPE), Demandeur d'emploi > Aide au chômeur créant ou reprenant une entreprise (ACCRE) > Dispositions communes	R5141-1; R5141-2; R5141-3; R5141-4; R5141-5; R5141-6
 86100	Emploi - Formation > Travailleurs handicapés > Obligation emploi travailleurs handicapés (TH), assimilés > Actions en justice	L5212-16
 86200	Emploi - Formation > Travailleurs handicapés > Obligation emploi travailleurs handicapés (TH), assimilés > Bénéficiaire	L5212-13
 86300	Emploi - Formation > Travailleurs handicapés > Obligation emploi travailleurs handicapés (TH), assimilés > Bénéficiaires: Calcul	L5212-14; L5212-15
@@ -809,97 +809,97 @@ export default `
 89400	Emploi - Formation > Validation des acquis de l'expérience (VAE) > Mise en œuvre > Garanties	L6421-1; R6421-1; L6421-3; L6421-4; L6421-2
 89500	Emploi - Formation > Validation des acquis de l'expérience (VAE) > Objet, régime > Objet	L6411-1
 89600	Emploi - Formation > Validation des acquis de l'expérience (VAE) > Objet, régime > Régime juridique	L6412-2; L6412-1; R6412-1
-68900	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation	L6353-10
-69000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Centre Formation Professionnelle	D6352-25; D6352-26; R6352-27; D6352-28; D6352-29; D6352-30; D6352-31; D6352-32; D6352-33; D6352-34; R6352-35; D6352-36; D6352-37; D6352-38; D6352-39; D6352-40
-69100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Contrat entre personne physique et organisme	L6353-3; L6353-4; L6353-5; L6353-6; L6353-7
-69200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Convention entre acheteur et organisme	L6353-1; L6353-2
-69300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Déclaration d'activité	L6351-1; L6351-2; L6351-3; L6351-4; L6351-5; L6351-6; L6351-7; L6351-8; L6351-7-1; D6351-12; R6351-8; R6351-9; R6351-10; R6351-11; R6351-6-1; R6351-1; R6351-2; R6351-3; R6351-4; R6351-5; R6351-6; R6351-7
-69400	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Fonctionnement	L6352-11; R6352-22; R6352-23; R6352-24; R6352-3; R6352-4; R6352-5; R6352-6; R6352-7; R6352-8; D6352-16; D6352-17; D6352-18; R6352-19; R6352-20; R6352-21; L6352-6; L6352-7; L6352-8; L6352-9; L6352-10; L6352-1; L6352-2; R6352-9; R6352-10; R6352-11; R6352-12; R6352-13; R6352-14; R6352-15; L6352-3; L6352-4; L6352-5; R6352-1; R6352-2
-69500	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Obligations vis à vis du stagiaire	L6353-8; L6353-9
-69600	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Principes généraux	L6351-1 A
-69700	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Publicité	L6352-12; L6352-13
-69800	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Pénal	L6355-1; L6355-2; L6355-3; L6355-4; L6355-5; L6355-6; L6355-7; L6355-8; L6355-9; L6355-10; L6355-11; L6355-12; L6355-13; L6355-14; L6355-15; L6355-16; L6355-17; L6355-18; L6355-19; L6355-20; L6355-21; L6355-22; L6355-23; L6355-24
-69900	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Réalisation actions	R6353-2; R6353-1; D6353-3; D6353-4
-70000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Sanctions financières	L6354-1; L6354-3
-70100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Egalité accès Représentants du Personnel et Délégués Syndicaux	L6112-4
-70200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Egalité accès personnes Hand.et assimilées	L6112-3
-70300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Egalité d'accès femmes hommes	L6112-1; L6112-2
-70400	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Objectifs, contenu	L6111-3; L6111-8; L6111-1; L6111-2
-70500	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Principes	D6112-1; L6111-4; L6111-5; R6111-1; R6111-2; R6111-3; R6111-4; L6111-6; L6111-7
-70600	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Socle des connaissances	D6113-1; D6113-2; D6113-4; D6113-5; D6113-3
-70700	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Comité paritaire interprofessionnelle régional	L6123-6; L6123-7
-70800	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Institutions	L6123-1; R6123-1; R6123-1-1; R6123-1-2; R6123-1-3; R6123-1-4; R6123-1-5; R6123-1-6; R6123-1-7; L6123-2; R6123-2; R6123-2-1; R6123-2-2; R6123-2-3; R6123-2-4; R6123-2-5; R6123-2-6; R6123-1-8; R6123-1-9; R6123-1-10; R6123-1-11; R6123-3; R6123-3-1; R6123-3-2; R6123-3-3; R6123-3-4; R6123-3-5; R6123-3-6; R6123-3-7; R6123-3-8; R6123-3-9; R6123-3-10; R6123-3-11; R6123-3-12; R6123-3-13; R6123-3-14; R6123-3-15
-70900	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Rôle de l' Etat	D6122-4; D6122-5; D6122-6; Annexe; Annexe III; L6123-3; L6123-4; L6123-5; L6122-1; L6122-2; L6122-3; L6122-4; D6122-1; D6122-2; D6122-3
-71000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Rôle des régions	R6123-5; L6121-1; L6121-2; L6121-3; R6121-9; R6121-10; D6121-11; L6121-2-1; L6121-4; L6121-5; L6121-6; L6121-7; R6121-1; R6121-2; R6121-3; R6121-4; R6121-5; R6121-6; R6121-7; R6121-8; R6123-6; L6123-4-1
-71100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Stagiaire formation professionnelle > Conditions de travail	L6343-1; L6343-2; L6343-3; L6343-4
-71200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Stagiaire formation professionnelle > Protection sociale	L6342-1; L6342-4; L6342-5; L6342-2; L6342-3; R6342-1; R6342-2; R6342-3; R6342-4; L6342-6; L6342-7
-71300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > Stagiaire formation professionnelle > Rémunération	L6341-1; L6341-2; L6341-3; L6341-4; L6341-5; L6341-6; R6341-2; R6341-3; R6341-4; R6341-5; R6341-6; R6341-7; R6341-8; R6341-9; R6341-10; R6341-11; R6341-15; R6341-12; R6341-13; R6341-14; R6341-1; R6341-16; R6341-17; R6341-18; R6341-19; R6341-20; R6341-21; R6341-22; L6341-10; L6341-9; R6341-49; R6341-50; R6341-51; R6341-52; R6341-53; L6341-11; L6341-7; L6341-8; R6341-25; D6341-26; R6341-27; R6341-28; R6341-29; R6341-30; R6341-31; R6341-32; D6341-23; R6341-24; R6341-36; R6341-37; R6341-38; R6341-39; R6341-40; R6341-41; R6341-42; R6341-43; R6341-44; R6341-45; R6341-46; R6341-47; R6341-48; R6341-33; R6341-34; R6341-35; L6341-12
-65000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Accès aux documents et justifications	L6362-1; L6362-2; L6362-3; L6362-4; L6362-5; L6362-6; L6362-7
-65100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Constatation des infractions	L6363-1
-65200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Contrôle des dépenses et activités	L6361-1; L6361-2; L6361-3
-65300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Contrôle du financement des employeurs	L6361-4
-65600	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Déroulement: Sanctions	L6362-12
-65400	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Déroulement contrôle	R6362-1-3; R6362-1-1; R6362-1-2; R6362-1; R6362-2; R6362-3; R6362-4; R6362-5; R6362-6; R6362-7; R6362-8; R6362-9
-65500	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Déroulement contrôle: Décret	L6362-13
-65700	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Objet, agents de contrôle	R6361-2; L6361-5; R6361-1; D6361-3; D6361-4
-65900	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Procédure	L6363-2; R6363-1
-65800	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Pénal	L6362-8; L6362-9; L6362-10; L6362-11
-66000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Remboursements	L6362-7-1; L6362-7-2; L6362-7-3
-66100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Contrôle > Texte prévoyant un décret	L6361-6
-66200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Artistes auteurs	L6331-65; L6331-66; L6331-67; L6331-68
-66300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Calcul des effectifs	R6331-1
-66400	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Dix salariés et +: Contrôle, contentieux	L6331-33
-66500	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Dix salariés et +: Dispositions d'application	L6331-34
-66600	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Dix salariés et +: Déclaration	L6331-32
-66700	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Dix salariés et +: Majoration contribution	L6331-30
-66800	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Dix salariés et +: Montant, Mise en œuvre	L6331-15; L6331-17; L6331-9; L6331-10; L6331-11; L6331-12; L6331-28
-66900	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Employeurs bâtiment, Travaux publics	L6331-35; L6331-36; L6331-37; L6331-38; L6331-39; L6331-40; L6331-41; L6331-42; L6331-43; L6331-44; L6331-45; L6331-46; L6331-47; R6331-36; R6331-37; R6331-38; R6331-39; R6331-40; R6331-41; R6331-42; R6331-43; R6331-44; R6331-45; R6331-46
-67000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Employeurs d'intermittents du spectacle	L6331-55; L6331-56
-67100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Employeurs pêche, culture maritime	L6331-63; L6331-64
-67200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Moins de 10 salariés: Contrôle, Contentieux	L6331-8
-67300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Moins de 10 salariés: Dépenses libératoires	R6331-13; R6331-15; R6331-16
-67400	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Moins de 10 salariés: Majoration contribution	L6331-6
-67500	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Moins de 10 salariés: Montant, Mise en œuvre	R6331-12; R6331-9; L6331-2; R6331-2
-67600	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Obligation de financement	L6331-1
-67700	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Particuliers employeurs	L6331-57; L6331-58; L6331-59; L6331-60; L6331-61; L6331-62
-67800	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Financement employeur > Travailleurs indépendants, professions libérales, non salariés	L6331-51; L6331-48; L6331-50; L6331-52; L6331-53; R6331-47; R6331-48; R6331-49; R6331-50; R6331-51; R6331-52; R6331-53; R6331-54; R6331-55; R6331-56; R6331-57; R6331-58; R6331-59; R6331-60; L6331-48-1; R6331-64; R6331-65; R6331-66; R6331-61; R6331-62; R6331-63; R6331-63-1; R6331-63-2; R6331-63-3; R6331-63-4; R6331-63-5; R6331-63-6; R6331-63-7; R6331-63-9; R6331-63-10; R6331-63-11; R6331-63-12; R6331-63-8
-67900	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Agrément	L6332-2-1; L6332-1; L6332-2; L6332-1-3; L6332-1-2; R6332-1; R6332-2; R6332-3; R6332-4; R6332-5; R6332-7; R6332-8; R6332-9; R6332-11; R6332-12; L6332-1-1; R6332-13; R6332-14; R6332-15
-68000	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Constitution, fonctionnement	R6332-16; R6332-17; R6332-18; R6332-19; R6332-20; R6332-21; R6332-22; R6332-22-1; R6332-22-2; R6332-22-3; R6332-22-4; R6332-22-5; R6332-22-6; R6332-22-7
-68300	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Fonds assurance- formation: Décret	L6332-13
-68100	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Fonds assurance- formation de non- salariés	R6332-63; R6332-64; R6332-65; R6332-66; R6332-67; R6332-72; R6332-73; R6332-74; R6332-75; R6332-76; R6332-77; R6332-77-1; L6332-9; L6332-10; L6332-11; L6332-12; R6332-68; R6332-69; R6332-70; R6332-71
-68200	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Fonds assurance- formation de salariés	L6332-7; L6332-8
-68400	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Fonds paritaire sécurisation des parcours	R6332-106; R6332-107; R6332-108; D6332-106-1; R6332-106-2; R6332-106-3; R6332-106-4; R6332-106-5; D6332-107-1; R6332-104; R6332-105; R6332-104-1; L6332-22; L6332-22-1; L6332-22-2; L6332-18; L6332-19; L6332-21
-68500	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Gestion des fonds	R6332-36; R6332-37; R6332-40; R6332-41; R6332-42; R6332-43; R6332-44; R6332-38; R6332-39; R6332-28; R6332-29; R6332-28-1; R6332-37-2; R6332-37-1; R6332-37-3; R6332-37-4; L6332-5-1; L6332-6; L6332-3; L6332-4; L6332-3-2; L6332-3-3; L6332-3-4; L6332-3-5; L6332-3-6; L6332-3-7; L6332-3-1; R6332-109; R6332-110; R6332-111; R6332-112; R6332-113; R6332-110-1; R6332-23; R6332-24; R6332-25; R6332-26; R6332-27; R6332-26-1; R6332-30; R6332-31; R6332-32; R6332-33; R6332-34; R6332-35-1
-68600	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Information de l'Etat	L6332-23; L6332-24; R6332-114
-68700	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Organisme paritaire agréé compte personnel formation (CPF)	L6332-16; D6332-90; D6332-91; L6332-16-1; L6332-15; L6332-14; L6332-17; R6332-93; R6332-94; R6332-95; R6332-78; R6332-80; R6332-81; R6332-84; D6332-87; D6332-89; D6332-88; D6332-92; D6332-81-1; R6332-79
-68800	Emploi - Formation > formation professionnelle organisationnelle, financière, stagiaires > formation continue: Organismes collecteurs > Organismes agréés Congé individuel de formation (CIF)	R6333-15; L6333-1; L6333-2; L6333-3; L6333-4; L6333-5; L6333-6; L6333-7; L6333-8; R6333-3; R6333-1; R6333-2; R6333-4; R6333-5; R6333-6; R6333-7; R6333-8; R6333-9; R6333-10; R6333-11; R6333-12; R6333-13; R6333-14
-91600	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Coop Europ, comité coop. européen > Comité et participation. Absence groupe spécial de négociation (GSN)	L2363-1; L2363-2; L2363-3; L2363-4; L2363-5; L2363-6; L2363-7; R2364-1; L2364-1; L2364-2; L2364-3; L2364-4; L2364-5; L2363-18; L2363-19; L2363-8; L2363-9; L2363-10; L2363-11; L2363-12; L2363-13; L2363-14; L2363-15; L2363-16; L2363-17
-91700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Coop Europ, comité coop. européen > Dispositions générales.	D2361-1; L2361-1; L2361-2; L2361-3; L2361-4; L2361-5; L2361-6
-91800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Comité société européen absence accord	L2353-30; L2353-3; L2353-5; L2353-7; L2353-11; L2353-23; L2353-21; L2353-27; L2353-24; L2353-19; L2353-9; L2353-29; L2353-22; R2353-4; R2353-5; L2353-25; L2353-1; D2353-1; D2353-2; R2353-3; L2353-2; L2353-12; L2353-8; L2353-6; L2353-17; L2353-28; L2353-13; L2353-31; L2353-15; L2353-32; L2353-4; L2353-16; L2353-20; L2353-18; L2353-26; L2353-10; L2353-14
-91900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Dispositions générales	L2351-1; L2351-7; L2351-6; L2351-5; L2351-4; L2351-3; L2351-2; D2351-1
-92000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Dispositions postérieures immatriculation société européenne	L2354-3; L2354-4; R2354-1; L2354-2; L2354-1
-92100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Implication salariés société européen. accord groupe spécial de négociation (GSN)	L2352-20; L2352-17; L2352-18; L2352-7; L2352-16; L2352-8; L2352-11; L2352-5; L2352-19; L2352-12; L2352-9; R2352-5; D2352-6; D2352-7; D2352-8; D2352-9; D2352-10; D2352-11; D2352-12; D2352-13; L2352-3; L2352-13; R2352-18; R2352-19; D2352-14; D2352-15; D2352-16; R2352-17; D2352-1; D2352-2; D2352-3; D2352-4; L2352-1; L2352-2; L2352-14; L2352-15; L2352-6; L2352-4; L2352-10
-92200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Pénal	L2355-1
-92300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe >société Européenne, Comité européen. > Vidéo conférence	D2341-1; D2353-6; L2353-27-1; L2341-12
-89700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Central d'Entreprise (CCE) Fonctionnement	D2135-34
-90700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Entreprise Européen > Pénal	L2331-1; R2331-1; L2331-4; L2331-2; L2331-3; L2331-6; L2331-5; R2331-3; R2331-2; R2331-4
-90800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Entreprise Européen > Suppression comité	L2335-1
-90300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Entreprise européen > Champ d'application, mise en place	L2344-6; L2344-7; R2344-3; L2344-2; L2344-9; L2344-4; L2344-5; L2344-1; L2344-3; R2344-1; L2344-8
-90400	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Entreprise européen > Comité en absence d'accord	L2332-2; L2332-1
-90500	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Entreprise européen > Comité ou info et consultation. accord	L2333-1; R2332-1; L2333-3; L2333-2; L2333-5; D2332-2; L2333-6; L2333-4
-90600	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité Entreprise européen > dispositions communes absence d'accord	L2334-3; L2334-4; L2334-1; L2334-2; R2333-1; D2333-2
-89800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité de groupe > Attributions	L2346-1
-89900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité de groupe > Composition, élection, mandat	L2345-2; L2345-1; R2345-1
-90000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité de groupe > Fonctionnement	L2341-3; L2341-6; L2341-1; L2341-5; L2341-2; L2341-7; L2341-8; L2341-9; L2341-10; L2341-11; L2341-4
-90100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité de groupe > Mise en place	L2343-19; L2343-2; L2343-4; L2343-5; L2343-12; L2343-17; L2343-14; L2343-7; L2343-15; L2343-1; L2343-6; L2343-3; L2343-13; L2343-18; L2343-8; L2343-10; L2343-9; L2343-11; R2343-1; L2343-16
-90200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Comité de groupe > Pénal	L2342-9; L2342-10; L2342-10-1; L2342-10-2; L2342-3; L2342-2; L2342-8; L2342-7; L2342-4; L2342-1; L2342-5; L2342-6; L2342-11; L2342-12
-90900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Outre-mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L2632-1; L2632-2
-91000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Société coopérative européenne (SCE), comité coop. européen > Implication salariés. Accord groupe spécial de négociation (GSN)	D2363-1; D2363-2; R2363-3; R2363-4; R2363-5; L2362-10; L2362-11; L2362-12; R2362-5; D2362-6; D2362-7; D2362-8; D2362-9; D2362-10; D2362-11; D2362-12; D2362-13; D2362-14; D2362-15; D2362-16; R2362-17; R2362-18; R2362-19; D2362-2; D2362-3; D2362-4; L2362-1; L2362-2; L2362-3; L2362-4; L2362-5; L2362-6; L2362-7; L2362-8; L2362-9; D2362-1
-91100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > Société coopérative européenne (SCE, comité coop. européen > Pénal	L2365-1
-91200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > sociétés issues fusions transfrontalières > Comité et participation Absence groupe spécial de négociation (GSN)	L2373-1; L2373-2; L2373-3; L2374-1; L2374-2; L2374-3; L2374-4; L2373-6; L2373-7; L2373-8; L2373-4; L2373-5
-91300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > sociétés issues fusions transfrontalières > Dispositions générales	L2371-1; L2371-2; L2371-3; L2371-4; L2371-5
-91400	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > sociétés issues fusions transfrontalières > Participation salariés /accord groupe spécial de négociation (GSN)	L2372-6; L2372-7; L2372-8; L2372-1; L2372-2; L2372-3; D2371-1; D2372-2; D2372-3; D2372-4; R2372-5; D2372-6; D2372-7; D2372-8; D2372-9; D2372-10; D2372-11; D2372-12; D2372-13; D2372-14; D2372-15; D2372-16; R2372-17; R2372-18; R2372-19; D2373-1; D2373-2; R2373-3; R2373-4; R2373-5; L2372-4; L2372-5
-91500	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement , Comité groupe, Europe > sociétés issues fusions transfrontalières > Pénal	D2372-1; L2375-1
+68900	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation	L6353-10
+69000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Centre Formation Professionnelle	D6352-25; D6352-26; R6352-27; D6352-28; D6352-29; D6352-30; D6352-31; D6352-32; D6352-33; D6352-34; R6352-35; D6352-36; D6352-37; D6352-38; D6352-39; D6352-40
+69100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Contrat entre personne physique et organisme	L6353-3; L6353-4; L6353-5; L6353-6; L6353-7
+69200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Convention entre acheteur et organisme	L6353-1; L6353-2
+69300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Déclaration d'activité	L6351-1; L6351-2; L6351-3; L6351-4; L6351-5; L6351-6; L6351-7; L6351-8; L6351-7-1; D6351-12; R6351-8; R6351-9; R6351-10; R6351-11; R6351-6-1; R6351-1; R6351-2; R6351-3; R6351-4; R6351-5; R6351-6; R6351-7
+69400	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Fonctionnement	L6352-11; R6352-22; R6352-23; R6352-24; R6352-3; R6352-4; R6352-5; R6352-6; R6352-7; R6352-8; D6352-16; D6352-17; D6352-18; R6352-19; R6352-20; R6352-21; L6352-6; L6352-7; L6352-8; L6352-9; L6352-10; L6352-1; L6352-2; R6352-9; R6352-10; R6352-11; R6352-12; R6352-13; R6352-14; R6352-15; L6352-3; L6352-4; L6352-5; R6352-1; R6352-2
+69500	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Obligations vis à vis du stagiaire	L6353-8; L6353-9
+69600	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Principes généraux	L6351-1 A
+69700	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Publicité	L6352-12; L6352-13
+69800	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Pénal	L6355-1; L6355-2; L6355-3; L6355-4; L6355-5; L6355-6; L6355-7; L6355-8; L6355-9; L6355-10; L6355-11; L6355-12; L6355-13; L6355-14; L6355-15; L6355-16; L6355-17; L6355-18; L6355-19; L6355-20; L6355-21; L6355-22; L6355-23; L6355-24
+69900	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Réalisation actions	R6353-2; R6353-1; D6353-3; D6353-4
+70000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Organismes de formation > Sanctions financières	L6354-1; L6354-3
+70100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Egalité accès Représentants du Personnel et Délégués Syndicaux	L6112-4
+70200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Egalité accès personnes Hand.et assimilées	L6112-3
+70300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Egalité d'accès femmes hommes	L6112-1; L6112-2
+70400	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Objectifs, contenu	L6111-3; L6111-8; L6111-1; L6111-2
+70500	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Principes	D6112-1; L6111-4; L6111-5; R6111-1; R6111-2; R6111-3; R6111-4; L6111-6; L6111-7
+70600	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Principes, organisation institutionnelle > Socle des connaissances	D6113-1; D6113-2; D6113-4; D6113-5; D6113-3
+70700	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Comité paritaire interprofessionnelle régional	L6123-6; L6123-7
+70800	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Institutions	L6123-1; R6123-1; R6123-1-1; R6123-1-2; R6123-1-3; R6123-1-4; R6123-1-5; R6123-1-6; R6123-1-7; L6123-2; R6123-2; R6123-2-1; R6123-2-2; R6123-2-3; R6123-2-4; R6123-2-5; R6123-2-6; R6123-1-8; R6123-1-9; R6123-1-10; R6123-1-11; R6123-3; R6123-3-1; R6123-3-2; R6123-3-3; R6123-3-4; R6123-3-5; R6123-3-6; R6123-3-7; R6123-3-8; R6123-3-9; R6123-3-10; R6123-3-11; R6123-3-12; R6123-3-13; R6123-3-14; R6123-3-15
+70900	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Rôle de l' Etat	D6122-4; D6122-5; D6122-6; Annexe; Annexe III; L6123-3; L6123-4; L6123-5; L6122-1; L6122-2; L6122-3; L6122-4; D6122-1; D6122-2; D6122-3
+71000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Rôle Régions, Etat, Institutions > Rôle des régions	R6123-5; L6121-1; L6121-2; L6121-3; R6121-9; R6121-10; D6121-11; L6121-2-1; L6121-4; L6121-5; L6121-6; L6121-7; R6121-1; R6121-2; R6121-3; R6121-4; R6121-5; R6121-6; R6121-7; R6121-8; R6123-6; L6123-4-1
+71100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Stagiaire formation professionnelle > Conditions de travail	L6343-1; L6343-2; L6343-3; L6343-4
+71200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Stagiaire formation professionnelle > Protection sociale	L6342-1; L6342-4; L6342-5; L6342-2; L6342-3; R6342-1; R6342-2; R6342-3; R6342-4; L6342-6; L6342-7
+71300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Stagiaire formation professionnelle > Rémunération	L6341-1; L6341-2; L6341-3; L6341-4; L6341-5; L6341-6; R6341-2; R6341-3; R6341-4; R6341-5; R6341-6; R6341-7; R6341-8; R6341-9; R6341-10; R6341-11; R6341-15; R6341-12; R6341-13; R6341-14; R6341-1; R6341-16; R6341-17; R6341-18; R6341-19; R6341-20; R6341-21; R6341-22; L6341-10; L6341-9; R6341-49; R6341-50; R6341-51; R6341-52; R6341-53; L6341-11; L6341-7; L6341-8; R6341-25; D6341-26; R6341-27; R6341-28; R6341-29; R6341-30; R6341-31; R6341-32; D6341-23; R6341-24; R6341-36; R6341-37; R6341-38; R6341-39; R6341-40; R6341-41; R6341-42; R6341-43; R6341-44; R6341-45; R6341-46; R6341-47; R6341-48; R6341-33; R6341-34; R6341-35; L6341-12
+65000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Accès aux documents et justifications	L6362-1; L6362-2; L6362-3; L6362-4; L6362-5; L6362-6; L6362-7
+65100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Constatation des infractions	L6363-1
+65200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Contrôle des dépenses et activités	L6361-1; L6361-2; L6361-3
+65300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Contrôle du financement des employeurs	L6361-4
+65600	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Déroulement: Sanctions	L6362-12
+65400	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Déroulement contrôle	R6362-1-3; R6362-1-1; R6362-1-2; R6362-1; R6362-2; R6362-3; R6362-4; R6362-5; R6362-6; R6362-7; R6362-8; R6362-9
+65500	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Déroulement contrôle: Décret	L6362-13
+65700	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Objet, agents de contrôle	R6361-2; L6361-5; R6361-1; D6361-3; D6361-4
+65900	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Procédure	L6363-2; R6363-1
+65800	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Pénal	L6362-8; L6362-9; L6362-10; L6362-11
+66000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Remboursements	L6362-7-1; L6362-7-2; L6362-7-3
+66100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Contrôle > Texte prévoyant un décret	L6361-6
+66200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Artistes auteurs	L6331-65; L6331-66; L6331-67; L6331-68
+66300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Calcul des effectifs	R6331-1
+66400	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Dix salariés et +: Contrôle, contentieux	L6331-33
+66500	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Dix salariés et +: Dispositions d'application	L6331-34
+66600	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Dix salariés et +: Déclaration	L6331-32
+66700	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Dix salariés et +: Majoration contribution	L6331-30
+66800	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Dix salariés et +: Montant, Mise en œuvre	L6331-15; L6331-17; L6331-9; L6331-10; L6331-11; L6331-12; L6331-28
+66900	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Employeurs bâtiment, Travaux publics	L6331-35; L6331-36; L6331-37; L6331-38; L6331-39; L6331-40; L6331-41; L6331-42; L6331-43; L6331-44; L6331-45; L6331-46; L6331-47; R6331-36; R6331-37; R6331-38; R6331-39; R6331-40; R6331-41; R6331-42; R6331-43; R6331-44; R6331-45; R6331-46
+67000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Employeurs d'intermittents du spectacle	L6331-55; L6331-56
+67100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Employeurs pêche, culture maritime	L6331-63; L6331-64
+67200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Moins de 10 salariés: Contrôle, Contentieux	L6331-8
+67300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Moins de 10 salariés: Dépenses libératoires	R6331-13; R6331-15; R6331-16
+67400	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Moins de 10 salariés: Majoration contribution	L6331-6
+67500	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Moins de 10 salariés: Montant, Mise en œuvre	R6331-12; R6331-9; L6331-2; R6331-2
+67600	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Obligation de financement	L6331-1
+67700	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Particuliers employeurs	L6331-57; L6331-58; L6331-59; L6331-60; L6331-61; L6331-62
+67800	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Financement employeur > Travailleurs indépendants, professions libérales, non salariés	L6331-51; L6331-48; L6331-50; L6331-52; L6331-53; R6331-47; R6331-48; R6331-49; R6331-50; R6331-51; R6331-52; R6331-53; R6331-54; R6331-55; R6331-56; R6331-57; R6331-58; R6331-59; R6331-60; L6331-48-1; R6331-64; R6331-65; R6331-66; R6331-61; R6331-62; R6331-63; R6331-63-1; R6331-63-2; R6331-63-3; R6331-63-4; R6331-63-5; R6331-63-6; R6331-63-7; R6331-63-9; R6331-63-10; R6331-63-11; R6331-63-12; R6331-63-8
+67900	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Agrément	L6332-2-1; L6332-1; L6332-2; L6332-1-3; L6332-1-2; R6332-1; R6332-2; R6332-3; R6332-4; R6332-5; R6332-7; R6332-8; R6332-9; R6332-11; R6332-12; L6332-1-1; R6332-13; R6332-14; R6332-15
+68000	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Constitution, fonctionnement	R6332-16; R6332-17; R6332-18; R6332-19; R6332-20; R6332-21; R6332-22; R6332-22-1; R6332-22-2; R6332-22-3; R6332-22-4; R6332-22-5; R6332-22-6; R6332-22-7
+68300	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Fonds assurance- formation: Décret	L6332-13
+68100	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Fonds assurance- formation de non- salariés	R6332-63; R6332-64; R6332-65; R6332-66; R6332-67; R6332-72; R6332-73; R6332-74; R6332-75; R6332-76; R6332-77; R6332-77-1; L6332-9; L6332-10; L6332-11; L6332-12; R6332-68; R6332-69; R6332-70; R6332-71
+68200	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Fonds assurance- formation de salariés	L6332-7; L6332-8
+68400	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Fonds paritaire sécurisation des parcours	R6332-106; R6332-107; R6332-108; D6332-106-1; R6332-106-2; R6332-106-3; R6332-106-4; R6332-106-5; D6332-107-1; R6332-104; R6332-105; R6332-104-1; L6332-22; L6332-22-1; L6332-22-2; L6332-18; L6332-19; L6332-21
+68500	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Gestion des fonds	R6332-36; R6332-37; R6332-40; R6332-41; R6332-42; R6332-43; R6332-44; R6332-38; R6332-39; R6332-28; R6332-29; R6332-28-1; R6332-37-2; R6332-37-1; R6332-37-3; R6332-37-4; L6332-5-1; L6332-6; L6332-3; L6332-4; L6332-3-2; L6332-3-3; L6332-3-4; L6332-3-5; L6332-3-6; L6332-3-7; L6332-3-1; R6332-109; R6332-110; R6332-111; R6332-112; R6332-113; R6332-110-1; R6332-23; R6332-24; R6332-25; R6332-26; R6332-27; R6332-26-1; R6332-30; R6332-31; R6332-32; R6332-33; R6332-34; R6332-35-1
+68600	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Information de l'Etat	L6332-23; L6332-24; R6332-114
+68700	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Organisme paritaire agréé compte personnel formation (CPF)	L6332-16; D6332-90; D6332-91; L6332-16-1; L6332-15; L6332-14; L6332-17; R6332-93; R6332-94; R6332-95; R6332-78; R6332-80; R6332-81; R6332-84; D6332-87; D6332-89; D6332-88; D6332-92; D6332-81-1; R6332-79
+68800	Emploi - Formation > Formation professionnelle organisationnelle, financière, stagiaires > Formation continue: Organismes collecteurs > Organismes agréés Congé individuel de formation (CIF)	R6333-15; L6333-1; L6333-2; L6333-3; L6333-4; L6333-5; L6333-6; L6333-7; L6333-8; R6333-3; R6333-1; R6333-2; R6333-4; R6333-5; R6333-6; R6333-7; R6333-8; R6333-9; R6333-10; R6333-11; R6333-12; R6333-13; R6333-14
+91600	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Coop Europ, comité coop. européen > Comité et participation. Absence groupe spécial de négociation (GSN)	L2363-1; L2363-2; L2363-3; L2363-4; L2363-5; L2363-6; L2363-7; R2364-1; L2364-1; L2364-2; L2364-3; L2364-4; L2364-5; L2363-18; L2363-19; L2363-8; L2363-9; L2363-10; L2363-11; L2363-12; L2363-13; L2363-14; L2363-15; L2363-16; L2363-17
+91700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Coop Europ, comité coop. européen > Dispositions générales.	D2361-1; L2361-1; L2361-2; L2361-3; L2361-4; L2361-5; L2361-6
+91800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Comité société européen absence accord	L2353-30; L2353-3; L2353-5; L2353-7; L2353-11; L2353-23; L2353-21; L2353-27; L2353-24; L2353-19; L2353-9; L2353-29; L2353-22; R2353-4; R2353-5; L2353-25; L2353-1; D2353-1; D2353-2; R2353-3; L2353-2; L2353-12; L2353-8; L2353-6; L2353-17; L2353-28; L2353-13; L2353-31; L2353-15; L2353-32; L2353-4; L2353-16; L2353-20; L2353-18; L2353-26; L2353-10; L2353-14
+91900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Dispositions générales	L2351-1; L2351-7; L2351-6; L2351-5; L2351-4; L2351-3; L2351-2; D2351-1
+92000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Dispositions postérieures immatriculation société européenne	L2354-3; L2354-4; R2354-1; L2354-2; L2354-1
+92100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Implication salariés société européen. accord groupe spécial de négociation (GSN)	L2352-20; L2352-17; L2352-18; L2352-7; L2352-16; L2352-8; L2352-11; L2352-5; L2352-19; L2352-12; L2352-9; R2352-5; D2352-6; D2352-7; D2352-8; D2352-9; D2352-10; D2352-11; D2352-12; D2352-13; L2352-3; L2352-13; R2352-18; R2352-19; D2352-14; D2352-15; D2352-16; R2352-17; D2352-1; D2352-2; D2352-3; D2352-4; L2352-1; L2352-2; L2352-14; L2352-15; L2352-6; L2352-4; L2352-10
+92200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Pénal	L2355-1
+92300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe >société Européenne, Comité européen. > Vidéo conférence	D2341-1; D2353-6; L2353-27-1; L2341-12
+89700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Central d'Entreprise (CCE) Fonctionnement	D2135-34
+90700	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise Européen > Pénal	L2331-1; R2331-1; L2331-4; L2331-2; L2331-3; L2331-6; L2331-5; R2331-3; R2331-2; R2331-4
+90800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise Européen > Suppression comité	L2335-1
+90300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise européen > Champ d'application, mise en place	L2344-6; L2344-7; R2344-3; L2344-2; L2344-9; L2344-4; L2344-5; L2344-1; L2344-3; R2344-1; L2344-8
+90400	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise européen > Comité en absence d'accord	L2332-2; L2332-1
+90500	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise européen > Comité ou info et consultation. accord	L2333-1; R2332-1; L2333-3; L2333-2; L2333-5; D2332-2; L2333-6; L2333-4
+90600	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité Entreprise européen > Dispositions communes absence d'accord	L2334-3; L2334-4; L2334-1; L2334-2; R2333-1; D2333-2
+89800	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité de groupe > Attributions	L2346-1
+89900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité de groupe > Composition, élection, mandat	L2345-2; L2345-1; R2345-1
+90000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité de groupe > Fonctionnement	L2341-3; L2341-6; L2341-1; L2341-5; L2341-2; L2341-7; L2341-8; L2341-9; L2341-10; L2341-11; L2341-4
+90100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité de groupe > Mise en place	L2343-19; L2343-2; L2343-4; L2343-5; L2343-12; L2343-17; L2343-14; L2343-7; L2343-15; L2343-1; L2343-6; L2343-3; L2343-13; L2343-18; L2343-8; L2343-10; L2343-9; L2343-11; R2343-1; L2343-16
+90200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Comité de groupe > Pénal	L2342-9; L2342-10; L2342-10-1; L2342-10-2; L2342-3; L2342-2; L2342-8; L2342-7; L2342-4; L2342-1; L2342-5; L2342-6; L2342-11; L2342-12
+90900	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Outre-mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L2632-1; L2632-2
+91000	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société coopérative européenne (SCE), comité coop. européen > Implication salariés. Accord groupe spécial de négociation (GSN)	D2363-1; D2363-2; R2363-3; R2363-4; R2363-5; L2362-10; L2362-11; L2362-12; R2362-5; D2362-6; D2362-7; D2362-8; D2362-9; D2362-10; D2362-11; D2362-12; D2362-13; D2362-14; D2362-15; D2362-16; R2362-17; R2362-18; R2362-19; D2362-2; D2362-3; D2362-4; L2362-1; L2362-2; L2362-3; L2362-4; L2362-5; L2362-6; L2362-7; L2362-8; L2362-9; D2362-1
+91100	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Société coopérative européenne (SCE, comité coop. européen > Pénal	L2365-1
+91200	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Sociétés issues fusions transfrontalières > Comité et participation Absence groupe spécial de négociation (GSN)	L2373-1; L2373-2; L2373-3; L2374-1; L2374-2; L2374-3; L2374-4; L2373-6; L2373-7; L2373-8; L2373-4; L2373-5
+91300	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Sociétés issues fusions transfrontalières > Dispositions générales	L2371-1; L2371-2; L2371-3; L2371-4; L2371-5
+91400	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Sociétés issues fusions transfrontalières > Participation salariés /accord groupe spécial de négociation (GSN)	L2372-6; L2372-7; L2372-8; L2372-1; L2372-2; L2372-3; D2371-1; D2372-2; D2372-3; D2372-4; R2372-5; D2372-6; D2372-7; D2372-8; D2372-9; D2372-10; D2372-11; D2372-12; D2372-13; D2372-14; D2372-15; D2372-16; R2372-17; R2372-18; R2372-19; D2373-1; D2373-2; R2373-3; R2373-4; R2373-5; L2372-4; L2372-5
+91500	Institutions représentatives du personnel > Comité Central d'Entreprise (CCE) Comité d'Etablissement, Comité groupe, Europe > Sociétés issues fusions transfrontalières > Pénal	D2372-1; L2375-1
 92400	Institutions représentatives du personnel > Comité d'entreprise > Attributions > Attributions générales	
 92500	Institutions représentatives du personnel > Comité d'entreprise > Champ d'application > Champ d'application	
 165400	Institutions représentatives du personnel > Comité social et économique>Conseil d'entreprise > Conseil d'entreprise	L2321-1; L2321-2; L2321-3; L2321-4; L2321-5; L2321-6; L2321-7; L2321-8; L2321-9; L2321-10; R2321-1
@@ -917,7 +917,7 @@ export default `
 93000	Institutions représentatives du personnel > Défenseur syndical > Obligations	L1453-8
 93100	Institutions représentatives du personnel > Défenseur syndical > Sanction	L1453-9; L2411-24
 92700	Institutions représentatives du personnel > Délégation Unique du personnel ( DUP) > Délégation Unique du personnel ( DUP) > Pénal	L2433-1; L2434-1; L2432-1; L2437-1; L2438-1; L2439-1; L243-10-1; L2435-1; L2435-2; L2435-3; L2435-3; L2436-1
-93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > entreprise50 salariés et + sans comité d'entreprise (CE) ou comité d’hygiène, de sécurité et des conditions de travail (CHSCT)	
+93300	Institutions représentatives du personnel > Délégué du Personnel > Attributions > Entreprise 50 salariés et + sans comité d'entreprise (CE) ou comité d’hygiène, de sécurité et des conditions de travail (CHSCT)	
 94800	Institutions représentatives du personnel > Délégué syndical > Congé formation économique, sociale et syndicale	L2145-6; L2145-7; L2145-8; L2145-9; L2145-10; L2145-11; L2145-12; L2145-13; R2145-3; R2145-4; R2145-5; R2145-6; R2145-7; R2145-8; L2145-5
 94900	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Attributions complémentaire entreprise. -300 salariés	L2143-22
 95000	Institutions représentatives du personnel > Délégué syndical > Délégué syndical > Conditions de désignation	L2143-1; L2143-2; L2143-8; R2143-5; L2143-6; L2143-3; L2143-4; L2143-5; L2143-7; D2143-4; L2143-12; R2143-3; R2143-2; R2143-1
@@ -957,12 +957,12 @@ export default `
 98400	Institutions représentatives du personnel > Salariés protégés > Procédure > Procédure interruption ,non-renouvellement temporaire	L2421-10
 98500	Institutions représentatives du personnel > Salariés protégés > Procédure > Procédure pour un salarié en Contrat à Durée Déterminée (CDD)	L2421-8; L2421-8-1; L2421-7
 98250	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > Délégué syndical, salarié mandaté, membre de la délégation du personnel au comité social et économique interentreprises et conseiller du salarié 	R2421-18; R2421-19
-98260	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > délégation du personnel au comité social et économique et représentant de proximité
+98260	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > Délégation du personnel au comité social et économique et représentant de proximité
 	R2421-20; R2421-21;
 98700	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Champ d'application	L2411-1; L2411-2
-99150	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP) ) membres délégation personnel CSE > Salarié organisation élections	L2411-6
-99170	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP) ) membres délégation personnel CSE > candidats	L2411-7;
-99100	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP) ) membres délégation personnel CSE > élus	L2411-5;
+99150	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP)) membres délégation personnel CSE > Salarié organisation élections	L2411-6
+99170	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP)) membres délégation personnel CSE > Candidats	L2411-7;
+99100	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP)) membres délégation personnel CSE > Élus	L2411-5;
 99600	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. membre Comité Entreprise (CE))	L2411-10; L2411-8; L2411-9
 98800	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement Conseiller du salarié	L2411-21
 98900	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement Conseiller prud'homme	L2411-22
@@ -988,7 +988,7 @@ export default `
 100600	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Délégué du personnel (DP)	L2412-3
 100400	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Liste	L2412-1
 100700	Institutions représentatives du personnel > Salariés protégés > Protection: Transfert partiel > Transfert partiel	L2414-1
-98600	Institutions représentatives du personnel > Salariés protégés > Protection contrat de travail Temporaire > travail temporaire	L2413-1
+98600	Institutions représentatives du personnel > Salariés protégés > Protection contrat de travail Temporaire > Travail temporaire	L2413-1
 100800	Institutions représentatives du personnel > Salariés protégés > Pénal > Pénal	L2432-1
 106400	Négociations collectives > Conflits > Droit de grève > Dispositions générales	L2511-1
 106500	Négociations collectives > Conflits > Droit de grève > Dispositions services publics	L2512-1; L2512-3; L2512-2; L2512-5; L2512-4
@@ -1071,9 +1071,9 @@ export default `
 114100	Négociations collectives > Négociation obligatoire entreprise > Modalités > Modalités	R2242-1; L2242-3; L2242-1; L2242-2; L2242-4
 114200	Négociations collectives > Négociation obligatoire entreprise > Pénal > Pénal	L2243-1; L2243-2
 114300	Négociations collectives > Négociation obligatoire entreprise > Rémunération, temps de Travail, partage valeur ajoutée (VA) > Rémunération, temps de Travail, partage Valeur Ajoutée (VA)	L2242-5; L2242-6; L2242-7
-113600	Négociations collectives > négociation de branche, négociation professionnelle > Dispositions supplétives	D2241-1; D2241-3; R2241-4
-113500	Négociations collectives > négociation de branche, négociation professionnelle > Décrets temporaires	L2241-7; L2241-8; L2241-9; L2241-10; L2241-11; L2241-12; L2241-13; L2241-14; L2241-15; L2241-16; L2241-17; L2241-18
-113700	Négociations collectives > négociation de branche, négociation professionnelle > Ordre public	L2241-1; L2241-2; L2241-3
+113600	Négociations collectives > Négociation de branche, négociation professionnelle > Dispositions supplétives	D2241-1; D2241-3; R2241-4
+113500	Négociations collectives > Négociation de branche, négociation professionnelle > Décrets temporaires	L2241-7; L2241-8; L2241-9; L2241-10; L2241-11; L2241-12; L2241-13; L2241-14; L2241-15; L2241-16; L2241-17; L2241-18
+113700	Négociations collectives > Négociation de branche, négociation professionnelle > Ordre public	L2241-1; L2241-2; L2241-3
 114400	Obligations diverses > Effectifs, calculs > Champ d'application > Employeurs, salariés concernés	L1111-1
 114500	Obligations diverses > Effectifs, calculs > Non pris en compte effectif > Exclus	L1111-3
 114600	Obligations diverses > Effectifs, calculs > Pris en compte effectif > Calcul	L1111-2; R1111-1
@@ -1139,12 +1139,12 @@ export default `
 101210	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Exercice du droit de grève	L1132-2;
 101260	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Nullité de l'acte discriminatoire	L1132-4;
 101200	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Principe de non-discrimination	L1132-1;
-101230	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > jury	L1132-3-1;
-101250	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > lanceur d'alerte	L1132-3-3;
-101240	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > refus mutation Etat discriminant l'homosexualité	L1132-3-2;
-101220	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > témoin d'un agissement discriminatoire	L1132-3;
+101230	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Jury	L1132-3-1;
+101250	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Lanceur d'alerte	L1132-3-3;
+101240	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Refus mutation Etat discriminant l'homosexualité	L1132-3-2;
+101220	Pouvoirs de l'employeur, libertés et droits fondamentaux > Discrimination > Témoin d'un agissement discriminatoire	L1132-3;
 101800	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > Sanction disciplinaire	L1331-1; L1331-2
-101500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > garantie disciplinaire	L1332-1; L1332-2; L1332-3; R1332-1; R1332-2; R1332-3
+101500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droit disciplinaire > Garantie disciplinaire	L1332-1; L1332-2; L1332-3; R1332-1; R1332-2; R1332-3
 101900	Pouvoirs de l'employeur, libertés et droits fondamentaux > Droits et liberté, corruption > Droits et libertés > Droits des personnes, libertés individuelles, collectives	L1121-1
 102000	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Actions en justice > Actions en justice	L1144-2; L1144-1; L1144-3
 102100	Pouvoirs de l'employeur, libertés et droits fondamentaux > Egalité femmes hommes> Champ d'application > Champ d'application	L1141-1
@@ -1201,7 +1201,7 @@ export default `
 22700	Rémunération > Intéressement, Participation, Epargne > Intéressement, participation, épargne: dispositions communes > Mise en place groupe entreprise	L3344-1; L3344-2
 22800	Rémunération > Intéressement, Participation, Epargne > Intéressement, participation, épargne: dispositions communes > Participation aux assemblées générales AG actionnaires société	L3341-1; D3341-1; D3341-2
 22900	Rémunération > Intéressement, Participation, Epargne > Intéressement, participation, épargne: dispositions communes > Versement Compte Epargne- temps	L3343-1
-23000	Rémunération > Intéressement, Participation, Epargne > Intéressement, participation, épargne: dispositions communes > formation économique, financières, juridique représentant des salariés	L3341-4; D3341-3; D3341-4; L3341-2; L3341-3
+23000	Rémunération > Intéressement, Participation, Epargne > Intéressement, participation, épargne: dispositions communes > Formation économique, financières, juridique représentant des salariés	L3341-4; D3341-3; D3341-4; L3341-2; L3341-3
 23100	Rémunération > Intéressement, Participation, Epargne > Intéressement: Calculs > Calcul intéressement	L3314-1; L3314-2; L3314-3; L3314-4; D3314-2; D3314-1
 23200	Rémunération > Intéressement, Participation, Epargne > Intéressement: Calculs > Distribution intéressement	L3314-9; L3314-8; L3314-10
 23300	Rémunération > Intéressement, Participation, Epargne > Intéressement: Calculs > Répartition intéressement	R3314-3; L3314-7; L3314-6; L3314-5
@@ -1323,8 +1323,8 @@ export default `
 124000	Santé Sécurité > Bâtiment > Coordination > Registre-journal	R4532-41; R4532-38; R4532-40; R4532-39
 124100	Santé Sécurité > Bâtiment > Coordination > Texte prévoyant un décret	L4532-18
 124200	Santé Sécurité > Bâtiment > Coordination > Travaux d'extrême urgence	L4532-17
-124300	Santé Sécurité > Bâtiment > Coordination > comité inter-entreprises de santé et de sécurité au travail (CISSCT): Composition	R4532-82; R4532-83; R4532-78; R4532-79; R4532-80; R4532-81
-124400	Santé Sécurité > Bâtiment > Coordination > comité inter-entreprises de santé et de sécurité au travail (CISSCT): Fonctionnement	R4532-89; R4532-94; R4532-87; R4532-93; R4532-88; R4532-84; R4532-92; R4532-90; R4532-91; R4532-86; R4532-85
+124300	Santé Sécurité > Bâtiment > Coordination > Comité inter-entreprises de santé et de sécurité au travail (CISSCT): Composition	R4532-82; R4532-83; R4532-78; R4532-79; R4532-80; R4532-81
+124400	Santé Sécurité > Bâtiment > Coordination > Comité inter-entreprises de santé et de sécurité au travail (CISSCT): Fonctionnement	R4532-89; R4532-94; R4532-87; R4532-93; R4532-88; R4532-84; R4532-92; R4532-90; R4532-91; R4532-86; R4532-85
 124700	Santé Sécurité > Bâtiment > Pendant travaux > Affichage, information	R4534-155; R4534-153; R4534-154
 124800	Santé Sécurité > Bâtiment > Pendant travaux > Champ d'application	R4534-1; R4534-2
 124900	Santé Sécurité > Bâtiment > Pendant travaux > Chargement, déchargement hauteur	R4534-21
@@ -1354,11 +1354,11 @@ export default `
 127300	Santé Sécurité > Bâtiment > Pendant travaux > Travaux de démolition	R4534-73; R4534-68; R4534-67; R4534-62; R4534-60; R4534-63; R4534-61; R4534-65; R4534-66; R4534-70; R4534-64; R4534-72; R4534-71; R4534-69
 127400	Santé Sécurité > Bâtiment > Pendant travaux > Travaux sur toitures	R4534-93; R4534-87; R4534-86; R4534-92; R4534-88; R4534-89; R4534-90; R4534-94; R4534-85; R4534-91
 127500	Santé Sécurité > Bâtiment > Pendant travaux > Véhicules, appareils, engins chantier	R4534-13; R4534-11; R4534-10; R4534-12; R4534-14
-127600	Santé Sécurité > Bâtiment > travailleurs indépendants > Prescriptions techniques	R4535-13; R4535-4; R4535-5; R4535-2; R4535-3; R4535-1
-127700	Santé Sécurité > Bâtiment > travailleurs indépendants > Risques chimiques	R4535-10; R4535-9; R4535-8
-127800	Santé Sécurité > Bâtiment > travailleurs indépendants > Travailleurs indépendants	L4535-1
-127900	Santé Sécurité > Bâtiment > travailleurs indépendants > Utilisation équipements de Travail, équipement de protection individuelle (EPI)	R4535-6; R4535-7
-128000	Santé Sécurité > Bâtiment > travailleurs indépendants > risque électrique	R4535-12; R4535-11
+127600	Santé Sécurité > Bâtiment > Travailleurs indépendants > Prescriptions techniques	R4535-13; R4535-4; R4535-5; R4535-2; R4535-3; R4535-1
+127700	Santé Sécurité > Bâtiment > Travailleurs indépendants > Risques chimiques	R4535-10; R4535-9; R4535-8
+127800	Santé Sécurité > Bâtiment > Travailleurs indépendants > Travailleurs indépendants	L4535-1
+127900	Santé Sécurité > Bâtiment > Travailleurs indépendants > Utilisation équipements de Travail, équipement de protection individuelle (EPI)	R4535-6; R4535-7
+128000	Santé Sécurité > Bâtiment > Travailleurs indépendants > Risque électrique	R4535-12; R4535-11
 131000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation >équipement de protection individuelle (EPI)> Information, formation des travailleurs	R4323-91; R4323-97; R4323-92; R4323-95; R4323-94; R4323-93; R4323-98; R4323-96
 131100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation >équipement de protection individuelle (EPI)> Vérifications périodiques	R4323-105; R4323-106; R4323-104
 128100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Ascenseurs, équipements à habitacle > Ascenseurs, équipements à habitacle	R4323-107; R4323-108; R4323-109
@@ -1384,16 +1384,16 @@ export default `
 130700	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Vérifications équipement de travail > Vérification initiale	R4323-67; R4323-68; R4323-65; R4323-66
 130800	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Vérifications équipement de travail > Vérification remise en service	R4323-61; R4323-60; R4323-58; R4323-59
 130900	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Vérifications équipement de travail > Vérifications périodiques	R4323-62; R4323-64; R4323-63
-130000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > travail temporaires en hauteur + équipement en lien > Cordes	R4323-18; R4323-21; R4323-19; R4323-20; R4323-15; R4323-14; R4323-17; R4323-16
-130100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > travail temporaires en hauteur + équipement en lien > Echafaudages	R4323-22
-130200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > travail temporaires en hauteur + équipement en lien > Echelles, escabeaux et marchepieds	R4323-28
-130400	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > travail temporaires en hauteur + équipement en lien > Travail, accès, circulation en hauteur	R4323-89; R4323-90
-130500	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > travail temporaires en hauteur + équipement en lien > Travaux à partir d'un plan de travail	R4323-79; R4323-76; R4323-69; R4323-70; R4323-80; R4323-78; R4323-77; R4323-71; R4323-75; R4323-74; R4323-72; R4323-73
-130300	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > travail temporaires en hauteur + équipement en lien > travail réalisés au moyen d'équipement de travail	R4323-23; R4323-27; R4323-25; R4323-26; R4323-24
-131200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > équipement de protection individuelle (EPI)> Caractéristiques des équipements de protection individuelle (EPI), utilisation	R4323-99; R4323-101; R4323-100; R4323-102; R4323-103
+130000	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Cordes	R4323-18; R4323-21; R4323-19; R4323-20; R4323-15; R4323-14; R4323-17; R4323-16
+130100	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Echafaudages	R4323-22
+130200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Echelles, escabeaux et marchepieds	R4323-28
+130400	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Travail, accès, circulation en hauteur	R4323-89; R4323-90
+130500	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Travaux à partir d'un plan de travail	R4323-79; R4323-76; R4323-69; R4323-70; R4323-80; R4323-78; R4323-77; R4323-71; R4323-75; R4323-74; R4323-72; R4323-73
+130300	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Travail temporaires en hauteur + équipement en lien > Travail réalisés au moyen d'équipement de travail	R4323-23; R4323-27; R4323-25; R4323-26; R4323-24
+131200	Santé Sécurité > Equipement de travail > Equipement de travail: Utilisation > Équipement de protection individuelle (EPI)> Caractéristiques des équipements de protection individuelle (EPI), utilisation	R4323-99; R4323-101; R4323-100; R4323-102; R4323-103
 131300	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > Communication. administration, mesures contrôle	R4313-90
 131500	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > Machines et autres équipements de Travail	R4313-91; R4313-92; R4313-93; R4313-94; R4313-80; R4313-81; R4313-82; R4313-95
-131400	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > équipement de protection individuelle (EPI)	R4313-75; R4313-76; R4313-77; R4313-78; R4313-79
+131400	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure applicable/chaque catégorie > Équipement de protection individuelle (EPI)	R4313-75; R4313-76; R4313-77; R4313-78; R4313-79
 131600	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure certification > Organismes notifiés	R4313-83; R4313-84; R4313-85; R4313-86; R4313-87; R4313-88; R4313-89
 131700	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Equipement de Travail et équipement de protection individuelle (EPI)d'occasion	R4313-14; R4313-15
 131800	Santé Sécurité > Equipement de travail > Equipement de travail: conception > Procédure mise sur le marché> Equipements neufs, considérés neufs	R4313-13; R4313-12; R4313-16; R4313-6; R4313-1; R4313-2; R4313-3; R4313-5; R4313-4; L4313-1
@@ -1423,12 +1423,12 @@ export default `
 134800	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Coordination de la prévention	L4523-6; L4523-7; L4523-7-1;
 134900	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Danger grave, imminent et droit de retrait	L4523-9; L4523-8
 135000	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Incendie, Secours	L4523-10
-134100	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Attributions particulières	R4524-5; R4524-6; L4524-1; R4524-7; R4524-8; R4524-9; R4524-10; R4524-1; R4524-2; R4524-3; R4524-4
-134200	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Comité élargi	L4522-2; L4522-1
-134300	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Comité élargi absence convention	L4526-1
-134400	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Composition	L4525-1
-134500	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Fonctionnement	L4523-2; L4523-1; L4523-4; L4523-5; L4523-3; R4523-1; R4523-2; R4523-3; R4523-4
-134600	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Formation des représentants	L4523-12; L4523-13; L4523-15; L4523-11; L4523-17; L4523-14; R4523-4-1; L4523-16
+134100	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Attributions particulières	R4524-5; R4524-6; L4524-1; R4524-7; R4524-8; R4524-9; R4524-10; R4524-1; R4524-2; R4524-3; R4524-4
+134200	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Comité élargi	L4522-2; L4522-1
+134300	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Comité élargi absence convention	L4526-1
+134400	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Composition	L4525-1
+134500	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Fonctionnement	L4523-2; L4523-1; L4523-4; L4523-5; L4523-3; R4523-1; R4523-2; R4523-3; R4523-4
+134600	Santé Sécurité > Installations classées > Installations nucléaires, installation classée pour la protection de l'environnement (ICPE) 'Seveso II' > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT): Formation des représentants	L4523-12; L4523-13; L4523-15; L4523-11; L4523-17; L4523-14; R4523-4-1; L4523-16
 135100	Santé Sécurité > Institutions Prévention > Agence nationale pour l'amélioration des conditions de travail (ANACT) > Conseil d'administration	R4642-4; R4642-5; R4642-6; R4642-7; R4642-8; R4642-9; R4642-10
 135200	Santé Sécurité > Institutions Prévention > Agence nationale pour l'amélioration des conditions de travail (ANACT) > Missions	L4642-1; L4642-2; R4642-1; R4642-2; R4642-3; L4642-3
 135300	Santé Sécurité > Institutions Prévention > Aide à l'employeur santé sécurité > Aide à l'employeur santé sécurité	L4644-1; R4644-1; R4644-2; R4644-3; R4644-4; R4644-5; D4644-7; D4644-8; D4644-9; D4644-10; D4644-11; D4644-6
@@ -1447,9 +1447,9 @@ export default `
 136700	Santé Sécurité > Interventions équipements élévateurs > Etude de sécurité spécifique > Etude de sécurité spécifique	R4543-2; R4543-3; R4543-4; R4543-5; R4543-6; R4543-7; R4543-8; R4543-9; R4543-10; R4543-11
 136800	Santé Sécurité > Interventions équipements élévateurs > Informations travailleurs intervenants > Informations travailleurs intervenants	R4543-12; R4543-13
 136900	Santé Sécurité > Interventions équipements élévateurs > Organisation de l'intervention > Organisation de l'intervention	R4543-14; R4543-15; R4543-16; R4543-17; R4543-18; R4543-19; R4543-20; R4543-21; R4543-22; R4543-23; R4543-25; R4543-26; R4543-27; R4543-28; R4543-24
-140300	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Ambiance thermique > locaux annexes	R4223-14
-140400	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Ambiance thermique > locaux fermés	R4223-13
-140500	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Ambiance thermique > mesures contre froid, intempéries	R4223-15
+140300	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Ambiance thermique > Locaux annexes	R4223-14
+140400	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Ambiance thermique > Locaux fermés	R4223-13
+140500	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Ambiance thermique > Mesures contre froid, intempéries	R4223-15
 140600	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aménagement postes de travail > Confort au poste de travail	R4225-3; R4225-5; R4225-4; R4225-2
 140700	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aménagement postes de travail > Postes de travail extérieurs	R4225-1
 140800	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aménagement postes de travail > Travailleurs handicapés	R4225-6; R4225-7; R4225-8
@@ -1460,8 +1460,8 @@ export default `
 141300	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > Pollution par eaux usées	R4222-19; R4222-18
 141400	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > Protection individuelle	R4222-25; R4222-26
 141500	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > Travaux en espace confiné	R4222-24; R4222-23
-141600	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > locaux fermés	R4222-1
-141700	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > règles applicables	R4222-2
+141600	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > Locaux fermés	R4222-1
+141700	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Aération, assainissement > Règles applicables	R4222-2
 141800	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Eclairage > Eclairage	R4223-1; R4223-12; R4223-11; R4223-3; R4223-4; R4223-5; R4223-6; R4223-10; R4223-2; R4223-9; R4223-7; R4223-8
 141900	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Electricité arrêtés, décrets > Electricité	R4226-3; R4226-1; R4226-2; R4226-4; R4226-5; R4226-6; R4226-7; R4226-8; R4226-9; R4226-10; R4226-11; R4226-12; R4226-13; R4226-14; R4226-15; R4226-16; R4226-17; R4226-18; R4226-19; R4226-20; R4226-21
 142000	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Hébergement > Hébergement	R4228-37; R4228-34; R4228-27; R4228-29; R4228-30; R4228-35; R4228-33; R4228-26; R4228-32; R4228-36; R4228-31; R4228-28
@@ -1490,9 +1490,9 @@ export default `
 144300	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > Caractéristiques lieux de travail	R4224-4; R4224-6; R4224-3; R4224-7; R4224-5; R4224-1; R4224-2; R4224-8
 144400	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > Portes et portails	R4224-13; R4224-11; R4224-12; R4224-9; R4224-10
 144500	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > Signalisation, matérialisation	R4224-24; R4224-23; R4224-22; R4224-21; R4224-20
-144600	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > dossier de maintenance	R4224-19
-144700	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > installations techniques et de sécurité	R4224-17; R4224-17-1; R4224-17-2
-144800	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > locaux de travail et annexes	R4224-18
+144600	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > Dossier de maintenance	R4224-19
+144700	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > Installations techniques et de sécurité	R4224-17; R4224-17-1; R4224-17-2
+144800	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Sécurité des lieux de travail > Locaux de travail et annexes	R4224-18
 137000	Santé Sécurité > Lieux de travail > Lieux de Travail : conception > Ambiance thermique > Code de la construction	R4213-9
 137100	Santé Sécurité > Lieux de travail > Lieux de Travail : conception > Ambiance thermique > Locaux annexes	R4213-8
 137200	Santé Sécurité > Lieux de travail > Lieux de Travail : conception > Ambiance thermique > Locaux de travail	R4213-7
@@ -1548,9 +1548,9 @@ export default `
 146800	Santé Sécurité > Opérations particulières > Entreprises intervenantes > Phase préalable	R4512-1; R4512-2; R4512-3; R4512-4; R4512-5; R4512-6; R4512-7; R4512-8; R4512-12; R4512-15; R4512-11; R4512-10; R4512-9; R4512-16; R4512-14; R4512-13
 146900	Santé Sécurité > Opérations particulières > Entreprises intervenantes > Surveillance médicale	R4513-13; R4513-11; R4513-12; R4513-9; R4513-10
 147000	Santé Sécurité > Opérations particulières > Entreprises intervenantes > Texte prévoyant un décret	L4511-1
-147300	Santé Sécurité > Opérations particulières > Entreprises intervenantes > comité d’hygiène, de sécurité et des conditions de travail (CHSCT), dispositions communes	R4514-2; R4514-5; R4514-4; R4514-1; R4514-3
-147100	Santé Sécurité > Opérations particulières > Entreprises intervenantes > comité d’hygiène, de sécurité et des conditions de travail (CHSCT) de l'entreprise extérieure	R4514-9; R4514-10; R4514-8
-147200	Santé Sécurité > Opérations particulières > Entreprises intervenantes > comité d’hygiène, de sécurité et des conditions de travail (CHSCT) de l'entreprise utilisatrice	R4514-7; R4514-6; R4514-7-1
+147300	Santé Sécurité > Opérations particulières > Entreprises intervenantes > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT), dispositions communes	R4514-2; R4514-5; R4514-4; R4514-1; R4514-3
+147100	Santé Sécurité > Opérations particulières > Entreprises intervenantes > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT) de l'entreprise extérieure	R4514-9; R4514-10; R4514-8
+147200	Santé Sécurité > Opérations particulières > Entreprises intervenantes > Comité d’hygiène, de sécurité et des conditions de travail (CHSCT) de l'entreprise utilisatrice	R4514-7; R4514-6; R4514-7-1
 148500	Santé Sécurité > Risques d'exposition > Bruit > Dispositions dérogatoires	R4437-2; R4437-1; R4437-3; R4437-4
 148600	Santé Sécurité > Risques d'exposition > Bruit > Dispositions générales	L4431-1
 148700	Santé Sécurité > Risques d'exposition > Bruit > Définitions	R4431-4; R4431-1; R4431-2; R4431-3
@@ -1594,16 +1594,16 @@ export default `
 121900	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Certains agents dangereux > Fixation des valeurs limites d'exposition professionnelle (VLEP)	R4412-152
 122100	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Certains agents dangereux > Plomb et ses composés	R4412-157; R4412-158; R4412-159; R4412-160; R4412-156
 122200	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Certains agents dangereux > Valeurs limites d'exposition professionnelle (VLEP) silice	R4412-154; R4412-155
-120900	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Champ d'application	R4412-59
-121100	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Contrôle VLEP	R4412-82
-121000	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Contrôle valeurs limites biologiques	R4412-77; R4412-80; R4412-76; R4412-78; R4412-79
-121200	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Définitions	R4412-60
-121300	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Evaluation des risques	R4412-63; R4412-64; R4412-65; R4412-61; R4412-62
-121400	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Formation des travailleurs	R4412-87
-121600	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Information, formation des travailleurs	R4412-93; R4412-88; R4412-91; R4412-89; R4412-90; R4412-92
-121500	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Information des travailleurs	R4412-86
-121700	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Mesures en cas d'accidents, incidents	R4412-84; R4412-83; R4412-85
-121800	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Mesures et moyens de prévention	R4412-74; R4412-71; R4412-70; R4412-73; R4412-75; R4412-72; R4412-67; R4412-69; R4412-66; R4412-68
+120900	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Champ d'application	R4412-59
+121100	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Contrôle VLEP	R4412-82
+121000	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Contrôle valeurs limites biologiques	R4412-77; R4412-80; R4412-76; R4412-78; R4412-79
+121200	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Définitions	R4412-60
+121300	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Evaluation des risques	R4412-63; R4412-64; R4412-65; R4412-61; R4412-62
+121400	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Formation des travailleurs	R4412-87
+121600	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Information, formation des travailleurs	R4412-93; R4412-88; R4412-91; R4412-89; R4412-90; R4412-92
+121500	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Information des travailleurs	R4412-86
+121700	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Mesures en cas d'accidents, incidents	R4412-84; R4412-83; R4412-85
+121800	Santé Sécurité > Risques d'exposition > Risque chimique > Amiante, agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR), Plomb, Autres > Agents cancérogènes, mutagènes ou toxiques pour la reproduction (CMR) > Mesures et moyens de prévention	R4412-74; R4412-71; R4412-70; R4412-73; R4412-75; R4412-72; R4412-67; R4412-69; R4412-66; R4412-68
 147400	Santé Sécurité > Risques d'exposition > Risque chimique > Mesures de prévention > Agents chimiques dangereux	R4412-35; R4412-36; R4412-30; R4412-26; R4412-32; R4412-25; R4412-38; R4412-39; R4412-39-1; R4412-24; R4412-23; R4412-27; R4412-33; R4412-37; R4412-34; R4412-31; R4412-51-1; R4412-51-2; R4412-51; R4412-50; R4412-52; R4412-53; R4412-55; R4412-54; R4412-57; R4412-56; R4412-44; R4412-45; R4412-49; R4412-46; R4412-28; R4412-29
 147500	Santé Sécurité > Risques d'exposition > Risque chimique > Mesures de prévention > Champ d'application, définitions	R4412-1; R4412-2; R4412-3; R4412-4; L4412-1
 147600	Santé Sécurité > Risques d'exposition > Risque chimique > Mesures de prévention > Evaluation des risques	R4412-8; R4412-7; R4412-6; R4412-5; R4412-9; R4412-10
@@ -1656,11 +1656,11 @@ export default `
 155406	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Avis du médecin du travail sur l'aménagement travailleurs handicapés	R4624-6
 155401	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Entreprise concernées	R4624-2
 155400	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Etendue	R4624-1
-155404	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Information de l'équipe pluridisciplinaire: produits , analyses	R4624-4-1
+155404	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Information de l'équipe pluridisciplinaire: produits, analyses	R4624-4-1
 155407	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Prélèvements et mesures	R4624-7
 155403	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Temps consacré par le professionnel de santé à ces actions	R4624-4
-155408	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > rapports et résultats d'études	R4624-8
-155409	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > équipe pluri: secret de fabrication et procédés	R4624-9
+155408	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Rapports et résultats d'études	R4624-8
+155409	Santé Sécurité > Services santé au travail > Action sur le milieu du travail > Équipe pluri: secret de fabrication et procédés	R4624-9
 155500	Santé Sécurité > Services santé au travail > Champ d'application	R4621-1; L4621-1
 155463	Santé Sécurité > Services santé au travail > Documents : santé et entreprise > Fiche d'entreprise > Fiche d'entreprise	R4624-46; R4624-47; R4624-48; R4624-49; R4624-50
 155464	Santé Sécurité > Services santé au travail > Documents : santé et entreprise > Rapport annuel d'activité du service de santé au travail > Rapport annuel	R4624-51; R4624-52;R4624-53;R4624-54
@@ -1669,32 +1669,32 @@ export default `
 155800	Santé Sécurité > Services santé au travail > Personnels	R4623-40; R4623-25; R4623-25-1; R4623-25-2; R4623-25-3; R4623-25-4; R4623-25-5; R4623-26; R4623-27; R4623-28; R4623-37; R4623-38; R4623-39; L4623-8; L4623-2; L4623-1; L4623-3; R4623-1; L4623-4; L4623-5; L4623-5-1; L4623-5-2; L4623-5-3; L4623-6; L4623-7; R4623-18; R4623-19; R4623-20; R4623-21; R4623-22; R4623-23; R4623-24; R4623-2; R4623-3; R4623-4; R4623-5; R4623-7; R4623-6; R4623-8; R4623-9; R4623-10; R4623-11; R4623-12; R4623-13; R4623-14; R4623-15; R4623-16; R4623-17; R4623-29; R4623-30; R4623-31; R4623-32; R4623-33; R4623-34; R4623-35; R4623-36
 156000	Santé Sécurité > Services santé au travail > SST établissement. santé, médico. sociaux	R4626-19; R4626-20; R4626-21; D4626-1; R4626-35; R4626-33; R4626-22; R4626-23; R4626-25; R4626-26; R4626-27; R4626-28; R4626-29; R4626-29-1; R4626-30; R4626-31; R4626-9; R4626-10; R4626-11; R4626-12; R4626-13; R4626-14; R4626-15; R4626-16; R4626-17; D4626-32; D4626-2; D4626-3; D4626-4; D4626-5; D4626-5-1; D4626-6; D4626-7; D4626-8
 155900	Santé Sécurité > Services santé au travail > Services santé au travail établissements sociaux médico sociaux > Services santé établissements sociaux médico sociaux	R4626-13-1; D4626-4-1
-155454	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > modèle de fiche d'aptitude ou d'inaptitude	R4624-57
-155453	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > remise formulaire d'indemnisation incapacité temporaire en cas d'inaptitude d'origine professionnelle 	R4624-56
-155452	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > transmission employeur et salarié, conservation, versement au dossier médical	R4624-55
-155449	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Droit à une visite médicale auprès du MT > anticipation du risque d'inaptitude	L4624-1, R4624-34
+155454	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Modèle de fiche d'aptitude ou d'inaptitude	R4624-57
+155453	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Remise formulaire d'indemnisation incapacité temporaire en cas d'inaptitude d'origine professionnelle 	R4624-56
+155452	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Transmission employeur et salarié, conservation, versement au dossier médical	R4624-55
+155449	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Droit à une visite médicale auprès du MT > Anticipation du risque d'inaptitude	L4624-1, R4624-34
 155457	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Le Médecin du travail avant avis peut consulter le Médecin Inspecteur du travail (MIT)	R4624-43
 155461	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Modalité d'intervention du Médecin inspecteur du Travail	R4624-45-1
 155458	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Motifs de l'avis consignés au dossier médical 	R4624-44
-155462	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > absence ou récusation du Médecin Inspecteur du Travail	R4624-45-2
-155455	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > déclaration d'inaptitude : uniquement après constat d'inaptitude	L4624-4; L4624-5; R4624-42
-155459	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > format de la déclaration d'inaptitude	R4624-55; R4624-56; R4624-57
-155456	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > le Médecin du travail avant avis peut procéder à un 2ème examen médical	R4624-42
+155462	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Absence ou récusation du Médecin Inspecteur du Travail	R4624-45-2
+155455	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Déclaration d'inaptitude : uniquement après constat d'inaptitude	L4624-4; L4624-5; R4624-42
+155459	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Format de la déclaration d'inaptitude	R4624-55; R4624-56; R4624-57
+155456	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Le Médecin du travail avant avis peut procéder à un 2ème examen médical	R4624-42
 155446	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déroulement des visites médicales et examens complémentaires > Déroulement	R4624-39
-155448	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déroulement des visites médicales et examens complémentaires > modalités précisés par arrêté non publié	R4624-41
-155447	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déroulement des visites médicales et examens complémentaires > suivi individuel possible dans les établissement de plus de 200 salariés	R4624-40
+155448	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déroulement des visites médicales et examens complémentaires > Modalités précisés par arrêté non publié	R4624-41
+155447	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déroulement des visites médicales et examens complémentaires > Suivi individuel possible dans les établissement de plus de 200 salariés	R4624-40
 155445	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Décision du Médecin Inspecteur en cas de désaccord	R4624-38
 155443	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Modalités pratiques	R4624-36
 155444	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Travailleurs de nuit	R4624-37
-155442	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > dans quel cas? 	R4624-35
+155442	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Dans quel cas? 	R4624-35
 155450	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Mesure individuelles d'adaptation, aménagement, transformation du poste du travail	L4624-3; L4624-5
 155410	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Principe	L4624-1
 155451	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Respect des mesures du MT par l'employeur > L'employeur doit les prendre en compte ou peut contester	L4624-6
 155429	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Orientation vers un suivi renforcé	R4624-21
 155426	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Travailleurs de nuit, travailleurs de moins de 18 ans	R4624-18
 155428	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Travailleurs handicapés	R4624-20
-155427	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > femmes enceintes: orientations vers le médecin du travail	R4624-19
-155425	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > objet, travailleurs concernés	R4624-17
+155427	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Femmes enceintes: orientations vers le médecin du travail	R4624-19
+155425	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Objet, travailleurs concernés	R4624-17
 155434	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Avis d'aptitude ou d'inaptitude rendu en fin de visite ( SIR)	R4624-25
 155435	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Constitution du dossier médical 	R4624-26
 155436	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Dispense de Visite d'embauche	R4624-27
@@ -1702,25 +1702,25 @@ export default `
 155432	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Définition des postes à risques particuliers :Jeunes de moins de 15 ans affectés sur des postes à risques particuliers	R4153-40
 155433	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Examen médical d'aptitude préalable l'embauche	R4624-24
 155430	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Principe et objet	L4624-2; R4624-22
-155437	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > périodicité du suivi : renouvellement, visites intermédiaires	R4624-28
-155438	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > visite médicale avant le départ en retraite	L4624-2-1
+155437	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Périodicité du suivi : renouvellement, visites intermédiaires	R4624-28
+155438	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Visite médicale avant le départ en retraite	L4624-2-1
 155422	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > Orientation sans délai vers le Médecin du Travail	R4624-13
 155424	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > Périodicité de la visite d'information et de prévention et dispense	R4624-15; R4624-16;
-155423	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > attestation de suivi de la visite d'information et de prévention	R4624-14
-155420	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > but- objet	R4624-11
-155421	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > constitution du dossier médical	R4624-12
-155419	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > professionnels de l'équipe pluridisciplinaire pouvant réaliser la VIP	L4624-1; R4624-10
+155423	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > Attestation de suivi de la visite d'information et de prévention	R4624-14
+155420	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > But- objet	R4624-11
+155421	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > Constitution du dossier médical	R4624-12
+155419	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite d'information et de prévention (VIP) > Professionnels de l'équipe pluridisciplinaire pouvant réaliser la VIP	L4624-1; R4624-10
 155418	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale sur demande du salarié, de l'employeur ou du médecin du travail auprès du MT	R4624-11
-155417	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale sur demande du salarié, de l'employeur ou du médecin du travail auprès du MT > cas général - anticipation de l'inaptitude	R4624-34; R4624-11
+155417	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale sur demande du salarié, de l'employeur ou du médecin du travail auprès du MT > Cas général - anticipation de l'inaptitude	R4624-34; R4624-11
 155441	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visites de reprise et de pré-reprise > Information du MT des arrêts de travail de moins de 30 jour en cas d'Accident du travail	R4624-33
 155439	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visites de reprise et de pré-reprise > Visite de pré reprise	R4624-29; R4624-30
 155440	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visites de reprise et de pré-reprise > Visite de reprise	R4624-31; R4624-32
-155416	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > visite médicale et embauche > Dispense de Visite d'embauche - suivi renforcé	R4624-27
-155412	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > visite médicale et embauche > Dispense de Visite d'information et de prévention	R4624-15
-155415	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > visite médicale et embauche > Suivi individuel renforcé: visite préalable à l'embauche	R4624-24
-155411	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > visite médicale et embauche > cas général- Visite d'information et de prévention	L4624-1; R424-10;
-155414	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > visite médicale et embauche > travailleurs de moins de 18 ans: visite préalable à l'embauche	R4624-18
-155413	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > visite médicale et embauche > travailleurs de nuit, visite préalable à l'embauche	R4624-18
+155416	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Dispense de Visite d'embauche - suivi renforcé	R4624-27
+155412	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Dispense de Visite d'information et de prévention	R4624-15
+155415	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Suivi individuel renforcé: visite préalable à l'embauche	R4624-24
+155411	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Cas général- Visite d'information et de prévention	L4624-1; R424-10;
+155414	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Travailleurs de moins de 18 ans: visite préalable à l'embauche	R4624-18
+155413	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Travailleurs de nuit, visite préalable à l'embauche	R4624-18
 156105	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Accès au poste de travail: coordination des Services de santé	R4625-7
 156104	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Agrément du service de santé au travail	R4625-3; R4625-4; R4625-5; R4625-6;
 156112	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Communication entre l'entreprise de travail temporaire et l'entreprise utilisatrice 	R4625-18; R4625-19;R4625-20
@@ -1730,7 +1730,7 @@ export default `
 156110	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Statut règlement, et rapport annuel	R4625-15; R4625-16
 156109	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Suivi individuel renforcé (SIR): modalités et dispense	R4625-12; R4625-13; R4625-14
 156108	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Visite d'information et de prévention (VIP): modalité et dispense	R4625-10; R4625-11
-156106	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > principe du suivi médical: coordination des services de santé	R4625-8
+156106	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Principe du suivi médical: coordination des services de santé	R4625-8
 156102	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Contrats à durée déterminée ( CDD) > Contrats à durée déterminée ( CDD)	R4625-1
 156101	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Principe du suivi particulier pour certaines catégories de travailleurs > Principe et renvoi à décret	L4625-1; R4625-1-1;L4625-2
 156113	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Salariés saisonniers > Risques particuliers, et obligation d'un examen médical d'embauche	D4625-22
@@ -1748,14 +1748,14 @@ export default `
 157300	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > Eclairage	R4722-14; R4722-15; R4722-9; R4722-10; R4722-11
 157400	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > Risques chimiques	R4722-12; R4722-13; R4722-18; R4722-19
 157500	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > Vibrations mécaniques	R4722-29; R4722-30
-157200	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > dispositions Communes	R4722-3; R4722-4
-157600	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > équipement de travail, moyens de protection	R4722-8; R4722-7; R4722-5; R4724-4; R4722-6
+157200	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > Dispositions Communes	R4722-3; R4722-4
+157600	Santé Sécurité > Sécurité: Contrôle > Demande de vérification, analyses, mesures > Équipement de travail, moyens de protection	R4722-8; R4722-7; R4722-5; R4724-4; R4722-6
 157700	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > Affichages	D4711-1
 157800	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > Documents obligatoires	D4711-3; D4711-2
-157900	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > accès aux documents	L4711-4; L4711-3
-158000	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > attestations, rapports de vérification	L4711-1
-158100	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > observations, mises en demeure	L4711-2
-158200	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > registres	L4711-5
+157900	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > Accès aux documents	L4711-4; L4711-3
+158000	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > Attestations, rapports de vérification	L4711-1
+158100	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > Observations, mises en demeure	L4711-2
+158200	Santé Sécurité > Sécurité: Contrôle > Documents, affichages obligatoires > Registres	L4711-5
 158300	Santé Sécurité > Sécurité: Contrôle > Mises en demeure > Mise en demeure préalable arrêt activité	L4721-8; R4721-8; R4721-10; R4721-7; R4721-9; R4721-6
 158400	Santé Sécurité > Sécurité: Contrôle > Mises en demeure > Mise en demeure préalable au Procès-verbal (PV)	L4721-6; L4721-5; L4721-7; L4721-4; R4721-5; R4721-4
 158500	Santé Sécurité > Sécurité: Contrôle > Mises en demeure > Mise en demeure réduction intervalle vérification	R4721-12; R4721-11
@@ -1768,7 +1768,7 @@ export default `
 159200	Santé Sécurité > Sécurité: Contrôle > Procédure urgence jeunes > Retrait affectation à certains travaux	L4733-2; L4733-3; L4733-4; L4733-5; L4733-6; L4733-1
 159300	Santé Sécurité > Sécurité: Contrôle > Procédure urgence jeunes > Sanctions	L4743-3
 159400	Santé Sécurité > Sécurité: Contrôle > Procédure urgence jeunes > Suspension rupture contrat ou convention	L4733-8; L4733-9; L4733-10; L4733-11; L4733-7
-159500	Santé Sécurité > Sécurité: Contrôle > Procédure urgence jeunes > texte prévoyant décret	L4733-12
+159500	Santé Sécurité > Sécurité: Contrôle > Procédure urgence jeunes > Texte prévoyant décret	L4733-12
 159600	Santé Sécurité > Sécurité: Contrôle > Pénal	L8114-5; L8114-4; L8114-6; L8114-7; L8114-8; R8114-3; R8114-4; R8114-5; R8114-6
 159700	Santé Sécurité > Sécurité: Contrôle > Pénal > Bâtiment	L4744-7; L4744-6
 159800	Santé Sécurité > Sécurité: Contrôle > Pénal > Bâtiment : Entrepreneur	L4744-5
@@ -1781,9 +1781,9 @@ export default `
 160400	Santé Sécurité > Sécurité: Contrôle > Pénal > Infractions personne autre que employeur	R4745-1; R4745-3; R4745-5; R4745-6; R4745-4; R4745-2; L4745-1
 160500	Santé Sécurité > Sécurité: Contrôle > Pénal > Infractions règles femmes maternité	L4741-9; L4741-10; R4741-4; R4741-5
 160700	Santé Sécurité > Sécurité: Contrôle > Pénal > Personnes morales	L4741-11; L4741-12; L4741-13; L4741-14
-160800	Santé Sécurité > Sécurité: Contrôle > Recours > contestation demande analyse produit	R4723-5
-160900	Santé Sécurité > Sécurité: Contrôle > Recours > délais	R4723-4; R4723-3; R4723-1; R4723-2
-161000	Santé Sécurité > Sécurité: Contrôle > Recours > mises en demeure et demandes de vérification	L4723-1
+160800	Santé Sécurité > Sécurité: Contrôle > Recours > Contestation demande analyse produit	R4723-5
+160900	Santé Sécurité > Sécurité: Contrôle > Recours > Délais	R4723-4; R4723-3; R4723-1; R4723-2
+161000	Santé Sécurité > Sécurité: Contrôle > Recours > Mises en demeure et demandes de vérification	L4723-1
 161100	Santé Sécurité > Sécurité: Contrôle > Référé > Référé	L4732-2; L4732-1; L4732-3; L4732-4
 161500	Santé Sécurité > Sécurité: Généralités > Champ d'application > Champ d'application	L4154-1; D4154-1
 161200	Santé Sécurité > Sécurité: Généralités > Contrat à Durée Déterminée (CDD), Travail temporaire: dispo communes > Dérogations	L4111-3; L4111-1; L4111-5; L4111-2; L4111-4
@@ -1796,7 +1796,7 @@ export default `
 162000	Santé Sécurité > Sécurité: Généralités > Facteurs de risques pro, pénibilité > Compte professionnel de prévention	D4163-1; D4163-2; D4163-3; R4163-4; R4163-5; R4163-6; R4163-7; R4163-8; L4163-1; L4163-2; L4163-3; L4163-4; L4163-5; L4163-6; L4163-7; L4163-8; L4163-9; L4163-10; L4163-11; L4163-12; L4163-13; L4163-22; D4163-31; D4163-32; D4163-46; D4163-47; D4163-48; L4163-14; L4163-15; L4163-16; L4163-17; L4163-18; L4163-19; L4163-20; L4163-21; R4163-33; R4163-34; R4163-35; R4163-36; R4163-37; R4163-38; R4163-39; R4163-40; R4163-41; R4163-42; R4163-43; R4163-44; R4163-45;
 162100	Santé Sécurité > Sécurité: Généralités > Facteurs de risques pro, pénibilité > Déclaration des expositions	L4161-1; D4161-1
 162200	Santé Sécurité > Sécurité: Généralités > Facteurs de risques pro, pénibilité > Facteurs de risques pro, pénibilité	R4162-1; R4162-2; R4162-3; R4162-4; R4162-5; R4162-6; R4162-7; R4162-8; R4162-9; R4162-10; R4162-11; R4162-12; R4162-13; R4162-14; R4162-15; R4162-16; R4162-17; D4162-18; D4162-19; D4162-20; D4162-21; D4162-22; R4162-23; D4162-24; D4162-25; R4162-26; R4162-27; R4162-28; R4162-29; R4162-30; R4162-31; R4162-32; R4162-33; R4162-34; R4162-35; R4162-36; R4162-37; D4162-38; D4162-39; D4162-40; D4162-41; D4162-42; D4162-43; D4162-44; D4162-45; D4162-46; D4162-47; D4162-48; D4162-49; D4162-50; D4162-51; D4162-52; D4162-53; D4162-54; D4162-55; D4162-56; R4162-57; L4162-1; L4162-2; L4162-3; L4162-4; L4162-5; L4162-6; L4162-7; L4162-8; L4162-9; L4162-10; L4162-22
-162300	Santé Sécurité > Sécurité: Généralités > Femmes , Jeunes, Contrat à Durée Déterminée (CDD), Contrat de travail temporaire (CTT) > Champ d'application	L4151-1
+162300	Santé Sécurité > Sécurité: Généralités > Femmes, Jeunes, Contrat à Durée Déterminée (CDD), Contrat de travail temporaire (CTT) > Champ d'application	L4151-1
 162400	Santé Sécurité > Sécurité: Généralités > Femmes maternité > Agents chimiques dangereux	D4152-11; D4152-9; D4152-10
 162500	Santé Sécurité > Sécurité: Généralités > Femmes maternité > Dispositions générales	R4152-2
 162600	Santé Sécurité > Sécurité: Généralités > Femmes maternité > Exposition agents biologiques	D4152-3
