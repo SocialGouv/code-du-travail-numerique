@@ -181,7 +181,7 @@ export default `
 51290	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat commercial de portage	L1254-22; L1254-23
 51225	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat de travail : principe	L1254-6 L1254-7;
 51250	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Durée maximale	L1254-12
-51270	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Les dipositions du CDD classique qui s'appliquent 	L1254-18; 49300; 49900;50500; 50600
+51270	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Les dipositions du CDD classique qui s'appliquent	L1254-18; 49300; 49900;50500; 50600
 51240	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Principe	L1254-10
 51265	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Procédure > Délais de transmission du contrat au salarié	L1254-16
 51260	Contrat de travail > Portage salarial > Portage salarial > Portage salarial > Contrat à Durée Déterminée (CDD) > Procédure > Mentions et clause du contrat écrit	L1254-14;L1254-15
@@ -289,16 +289,16 @@ export default `
 3730	Contrat de travail > Période d'essai > Délai de prévenance et Rupture par l'employeur	L1221-25
 3720	Contrat de travail > Période d'essai > Délai de prévenance et Rupture par le salarié	L1221-26
 3750	Contrat de travail > Période d'essai > Exceptions relatives à la durée	L1221-22;
-3700	Contrat de travail > Période d'essai > Généralités 	L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26
+3700	Contrat de travail > Période d'essai > Généralités	L1221-23; L1221-24; L1221-19; L1221-22; L1221-20; L1221-21; L1221-25; L1221-26
 3760	Contrat de travail > Période d'essai > Renouvellements : possibilités et durée	L1221-22; L1221-21; L1221-23;
 3780	Contrat de travail > Période d'essai > Une clause nécessaire du contrat de travail	L1221-23;
-3770	Contrat de travail > Période d'essai > Stagiaire 	L1221-24;
+3770	Contrat de travail > Période d'essai > Stagiaire	L1221-24;
 1900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers> Contrat de mission à exportation	L1236-7
 120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Cas de force majeur	L1234-12; L1234-13;
 1800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Contrat de chantier ou d'opération	L1236-8; L1236-9
 1300	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Outre - mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L1532-1
 830	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Principes de la rupture, plusieurs employeur	L1231-3
-800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Prorogation des délais de procédure 	R1231-1;
+800	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Prorogation des délais de procédure	R1231-1;
 810	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Cas particuliers > Licenciement d'un salarié mis à disposition d'une filiale étrangère	L1231-5;
 900	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement >Licenciement pour motif personnel > Cause réelle, sérieuse	L1232-1
 130	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Cas particuliers > Dispositions applicables à certains salariés (secteur public…)	L1234-14;
@@ -311,7 +311,7 @@ export default `
 1030	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> Indmenisation	L1232-10; D1232-8; D1232-9;D1232-10;D1232-11
 1090	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> Listes	D1232-4; D1232-5; D1232-6
 1050	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> autorisation d'absence	L1232-12
-1060	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> obligations du conseiller du salarié 	L1232-13
+1060	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> obligations du conseiller du salarié	L1232-13
 1040	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> remboursement de l'employeur par l'Etat	L1232-11; D1232-7
 1070	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> salarié protégé	L1232-14
 1080	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Conseiller du salarié> sanction	L1238-1
@@ -433,7 +433,7 @@ export default `
 54700	Contrat de travail > Travailleurs étrangers ou détachés > Emploi d'un salarié étranger > Saisonniers, étudiants, salarié en mission	R5221-26; R5221-27; R5221-28; R5221-23; R5221-24; R5221-25
 54800	Contrat de travail > Travailleurs étrangers ou détachés > Outre - mer > DOM, Saint Barthélemy, Saint - Martin, St Pierre et Miquelon	L5523-1; L5523-3; L5523-4; L5523-5;L5523-2; R5523-3; R5523-4; R5523-5; R5523-6; R5523-7; R5523-8; R5523-9; R5523-10; R5523-11; R5523-12; R5523-13; R5523-14; R5523-15
 54900	Contrat de travail > Travailleurs étrangers ou détachés > Salarié étranger : Interdictions > Interdictions	L5224-2; L5222-2; L5222-1
-3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions 	L1221-4; L1221-5;
+3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions	L1221-4; L1221-5;
 3600	Contrat de travail > Généralités > Principes génériques du contrat > Principes	L1221-2; L1221-1
 3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; R1227-4;
 5700	Durée du travail et congés > Compte épargne temps	L3152-1; L3152-2; L3152-3; L3152-4; L3153-1; L3153-2; D3154-1; D3154-2; D3154-3; D3154-4; D3154-5; D3154-6; L3151-1; L3151-2; L3151-3; L3151-4
@@ -956,9 +956,8 @@ export default `
 98300	Institutions représentatives du personnel > Salariés protégés > Procédure > Procédure de transfert	R2421-17; L2421-9
 98400	Institutions représentatives du personnel > Salariés protégés > Procédure > Procédure interruption ,non-renouvellement temporaire	L2421-10
 98500	Institutions représentatives du personnel > Salariés protégés > Procédure > Procédure pour un salarié en Contrat à Durée Déterminée (CDD)	L2421-8; L2421-8-1; L2421-7
-98250	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > Délégué syndical, salarié mandaté, membre de la délégation du personnel au comité social et économique interentreprises et conseiller du salarié 	R2421-18; R2421-19
-98260	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > Délégation du personnel au comité social et économique et représentant de proximité
-	R2421-20; R2421-21;
+98250	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > Délégué syndical, salarié mandaté, membre de la délégation du personnel au comité social et économique interentreprises et conseiller du salarié	R2421-18; R2421-19
+98260	Institutions représentatives du personnel > Salariés protégés > Procédure > Rupture conventionnelle > Délégation du personnel au comité social et économique et représentant de proximité	R2421-20; R2421-21;
 98700	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Champ d'application	L2411-1; L2411-2
 99150	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP)) membres délégation personnel CSE > Salarié organisation élections	L2411-6
 99170	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement (anc. Délégué du personnel (DP)) membres délégation personnel CSE > Candidats	L2411-7;
@@ -1000,7 +999,7 @@ export default `
 107100	Négociations collectives > Conflits > Règlement du conflit: Arbitrage > Arbitre	L2524-9; R2524-1; L2524-8; L2524-10; L2524-6; L2524-7; L2524-2; L2524-1; L2524-3; L2524-5; L2524-4
 107200	Négociations collectives > Conflits > Règlement du conflit: Arbitrage > Cour supérieure d'arbitrage	R2524-2; R2524-3; R2524-4; R2524-5; R2524-6; R2524-7; R2524-8; R2524-9; R2524-10; R2524-11; R2524-12; R2524-13; R2524-14; R2524-15; R2524-16; R2524-17; R2524-18; R2524-19; R2524-20; R2524-21; R2524-22
 107300	Négociations collectives > Conflits > Règlement du conflit: Conciliation > Commissions de conciliation	L2522-7; R2522-11; R2522-10; R2522-8; R2522-9; R2522-16; R2522-12; R2522-13; R2522-14; R2522-15; R2522-3; R2522-4; R2522-5; R2522-6; R2522-7; R2522-20; R2522-21; R2522-18; R2522-19; R2522-17; R2522-23; R2522-22
-107400	Négociations collectives > Conflits > Règlement du conflit: Conciliation > Entreprises publiques, Etablissement public à Caractère Industriel et commercial (EPIC) 	L2522-11; L2522-10; L2522-8; L2522-12; L2522-9
+107400	Négociations collectives > Conflits > Règlement du conflit: Conciliation > Entreprises publiques, Etablissement public à Caractère Industriel et commercial (EPIC)	L2522-11; L2522-10; L2522-8; L2522-12; L2522-9
 107500	Négociations collectives > Conflits > Règlement du conflit: Conciliation > Procédure de conciliation	L2522-4; L2522-3; L2522-6; L2522-2; R2522-2; R2522-1; L2522-5; L2522-1
 107600	Négociations collectives > Conflits > Règlement du conflit: Conciliation > Texte prévoyant un décret	L2524-11
 107700	Négociations collectives > Conflits > Règlement du conflit: Médiation > Désignation du médiateur	R2523-5; L2523-2; R2523-4; L2523-1; L2523-3; R2523-1; R2523-2; R2523-6; R2523-3
@@ -1042,7 +1041,7 @@ export default `
 111200	Négociations collectives > Négociation collective, Accords > Objet, Contenu, Durée > Contenu	L2222-2; L2222-1; L2222-3
 111300	Négociations collectives > Négociation collective, Accords > Objet, Contenu, Durée > Durée	L2222-5-1; L2222-4; L2222-6; L2222-5
 111400	Négociations collectives > Négociation collective, Accords > Objet, Contenu, Durée > Objet	L2221-1; L2221-3; L2221-2
-112850	Négociations collectives > Négociation collective, Accords > Observatoire d'analyse et d'appui au dialogue social et la négociation 	R2234-1; R2234-2; R2234-3; R2234-4; L2234-4; L2234-5; L2234-6; L2234-7;
+112850	Négociations collectives > Négociation collective, Accords > Observatoire d'analyse et d'appui au dialogue social et la négociation	R2234-1; R2234-2; R2234-3; R2234-4; L2234-4; L2234-5; L2234-6; L2234-7;
 111500	Négociations collectives > Négociation collective, Accords > Outre-mer > DOM, Saint Barthélemy, Saint-Martin, St Pierre et Miquelon	L2621-1; L2622-1; L2622-2; L2622-3; D2622-1; D2622-2; D2622-2-3; D2622-4;
 111600	Négociations collectives > Négociation collective, Accords > Outre-mer > Dispositions générales	L2611-1
 111550	Négociations collectives > Négociation collective, Accords > Outre-mer > Mayotte	L2621-2
@@ -1171,7 +1170,7 @@ export default `
 103800	Pouvoirs de l'employeur, libertés et droits fondamentaux > Harcèlements > Harcèlement sexuel > Nullité disposition, acte contraire L1153-1 à 3	L1153-4
 103900	Pouvoirs de l'employeur, libertés et droits fondamentaux > Harcèlements > Harcèlement sexuel > Obligation de prévention	L1153-5
 104000	Pouvoirs de l'employeur, libertés et droits fondamentaux > Harcèlements > Harcèlement sexuel > Sanction disciplinaire	L1153-6
-104500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Règlement intérieur > Champ d'application > Etablissements privés, Etablissement public à Caractère Industriel et commercial (EPIC) 	L1311-1
+104500	Pouvoirs de l'employeur, libertés et droits fondamentaux > Règlement intérieur > Champ d'application > Etablissements privés, Etablissement public à Caractère Industriel et commercial (EPIC)	L1311-1
 104600	Pouvoirs de l'employeur, libertés et droits fondamentaux > Règlement intérieur > Champ d'application > Obligatoire si 20 salariés et +	L1311-2
 104700	Pouvoirs de l'employeur, libertés et droits fondamentaux > Règlement intérieur > Contenu, conditions de validité > Affichage	R1321-1
 104800	Pouvoirs de l'employeur, libertés et droits fondamentaux > Règlement intérieur > Contenu, conditions de validité > Conditions d'entrée en vigueur, Avis délégué du personnel (DP), comité d'entreprise (CE) comité d'hygiène, de sécurité et des conditions de travail (CHSCT)	L1321-4
@@ -1242,7 +1241,7 @@ export default `
 26700	Rémunération > Intéressement, Participation, Epargne > Plan épargne interentreprises > Plan épargne interentreprises	L3333-5; L3333-7; R3333-6; L3331-1; L3333-3; R3333-4; L3333-1; R3333-1; L3333-2; R3333-3; L3333-6; L3333-4; R3333-2; R3333-5; L3333-8
 26800	Rémunération > Intéressement, Participation, Epargne > Plan épargne retraite collective > Composition, gestion du plan	L3334-13; L3334-11; L3334-12
 26900	Rémunération > Intéressement, Participation, Epargne > Plan épargne retraite collective > Dispositions d'application	D3334-3-1; R3334-1-1; R3334-5; R3334-4; R3334-2; R3334-3; R3334-1; R3334-1-2; R3334-1-3; L3334-16
-27000	Rémunération > Intéressement, Participation, Epargne > Plan épargne retraite collective > Indisponibilité, déblocage anticipé, délivrance sommes 	L3334-14; L3334-15; D3334-3-2
+27000	Rémunération > Intéressement, Participation, Epargne > Plan épargne retraite collective > Indisponibilité, déblocage anticipé, délivrance sommes	L3334-14; L3334-15; D3334-3-2
 27100	Rémunération > Intéressement, Participation, Epargne > Plan épargne retraite collective > Mise en place	L3334-5-1; L3334-5; L3334-1; L3334-2; L3334-4; L3334-3
 27200	Rémunération > Intéressement, Participation, Epargne > Plan épargne retraite collective > Versements	L3334-10; L3334-8; L3334-7; L3334-6; L3334-9
 40800	Rémunération > Salaire > Champ d'application	D3211-1; L3211-1
@@ -1441,7 +1440,7 @@ export default `
 136000	Santé Sécurité > Institutions Prévention > Organismes professionnels santé, sécurité et conditions de travail (SSCT) > Organisme Professionnel de Prévention bâtiment et Travaux Publics (OPPBTP): composition	R4643-28; R4643-29; R4643-30; R4643-31; R4643-32; R4643-33; R4643-34
 136100	Santé Sécurité > Institutions Prévention > Organismes professionnels santé, sécurité et conditions de travail (SSCT) > Organisme Professionnel de Prévention bâtiment et Travaux Publics (OPPBTP): dispositions Financières	R4643-4
 136300	Santé Sécurité > Institutions Prévention > Organismes professionnels santé, sécurité et conditions de travail (SSCT) > Organisme Professionnel de Prévention bâtiment et Travaux Publics (OPPBTP): missions	R4643-2; R4643-3
-136400	Santé Sécurité > Institutions Prévention > Organismes professionnels santé, sécurité et conditions de travail (SSCT) > Organismes professionnels santé, sécurité et conditions de travail (SSCT) 	L4643-2; L4643-1; R4643-1; L4643-3
+136400	Santé Sécurité > Institutions Prévention > Organismes professionnels santé, sécurité et conditions de travail (SSCT) > Organismes professionnels santé, sécurité et conditions de travail (SSCT)	L4643-2; L4643-1; R4643-1; L4643-3
 136500	Santé Sécurité > Institutions Prévention > Outre-mer > Mayotte, Wallis et FUTUNA, Terres australes et antarctiques	L4831-1
 136600	Santé Sécurité > Interventions équipements élévateurs > Champ d'application > Champ d'application	R4543-1
 136700	Santé Sécurité > Interventions équipements élévateurs > Etude de sécurité spécifique > Etude de sécurité spécifique	R4543-2; R4543-3; R4543-4; R4543-5; R4543-6; R4543-7; R4543-8; R4543-9; R4543-10; R4543-11
@@ -1467,7 +1466,7 @@ export default `
 142000	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Hébergement > Hébergement	R4228-37; R4228-34; R4228-27; R4228-29; R4228-30; R4228-35; R4228-33; R4228-26; R4228-32; R4228-36; R4228-31; R4228-28
 142100	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Hébergement et donneur d'ordre > Hébergement et donneur d'ordre	L4231-1; R4231-1; R4231-2; R4231-3; R4231-4
 142200	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Installations sanitaires > Cabinets d'aisance	R4228-12; R4228-11; R4228-13; R4228-10; R4228-14; R4228-15
-142300	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Installations sanitaires > Dispenses 	R4228-16; R4228-17; R4228-18
+142300	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Installations sanitaires > Dispenses	R4228-16; R4228-17; R4228-18
 142400	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Installations sanitaires > Dispositions générales	R4228-1
 142500	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Installations sanitaires > Douches	R4228-9; R4228-8
 142600	Santé Sécurité > Lieux de travail > Lieux de Travail : Utilisation > Installations sanitaires > Lavabos	R4228-7
@@ -1670,12 +1669,12 @@ export default `
 156000	Santé Sécurité > Services santé au travail > SST établissement. santé, médico. sociaux	R4626-19; R4626-20; R4626-21; D4626-1; R4626-35; R4626-33; R4626-22; R4626-23; R4626-25; R4626-26; R4626-27; R4626-28; R4626-29; R4626-29-1; R4626-30; R4626-31; R4626-9; R4626-10; R4626-11; R4626-12; R4626-13; R4626-14; R4626-15; R4626-16; R4626-17; D4626-32; D4626-2; D4626-3; D4626-4; D4626-5; D4626-5-1; D4626-6; D4626-7; D4626-8
 155900	Santé Sécurité > Services santé au travail > Services santé au travail établissements sociaux médico sociaux > Services santé établissements sociaux médico sociaux	R4626-13-1; D4626-4-1
 155454	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Modèle de fiche d'aptitude ou d'inaptitude	R4624-57
-155453	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Remise formulaire d'indemnisation incapacité temporaire en cas d'inaptitude d'origine professionnelle 	R4624-56
+155453	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Remise formulaire d'indemnisation incapacité temporaire en cas d'inaptitude d'origine professionnelle	R4624-56
 155452	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Avis d'aptitude ou d'inaptitude > Transmission employeur et salarié, conservation, versement au dossier médical	R4624-55
 155449	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Droit à une visite médicale auprès du MT > Anticipation du risque d'inaptitude	L4624-1, R4624-34
 155457	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Le Médecin du travail avant avis peut consulter le Médecin Inspecteur du travail (MIT)	R4624-43
 155461	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Modalité d'intervention du Médecin inspecteur du Travail	R4624-45-1
-155458	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Motifs de l'avis consignés au dossier médical 	R4624-44
+155458	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Motifs de l'avis consignés au dossier médical	R4624-44
 155462	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Absence ou récusation du Médecin Inspecteur du Travail	R4624-45-2
 155455	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Déclaration d'inaptitude : uniquement après constat d'inaptitude	L4624-4; L4624-5; R4624-42
 155459	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Déclaration d'inaptitude > Format de la déclaration d'inaptitude	R4624-55; R4624-56; R4624-57
@@ -1686,7 +1685,7 @@ export default `
 155445	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Décision du Médecin Inspecteur en cas de désaccord	R4624-38
 155443	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Modalités pratiques	R4624-36
 155444	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Travailleurs de nuit	R4624-37
-155442	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Dans quel cas? 	R4624-35
+155442	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Examens complémentaires > Dans quel cas?	R4624-35
 155450	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Mesure individuelles d'adaptation, aménagement, transformation du poste du travail	L4624-3; L4624-5
 155410	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Principe	L4624-1
 155451	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Respect des mesures du MT par l'employeur > L'employeur doit les prendre en compte ou peut contester	L4624-6
@@ -1696,7 +1695,7 @@ export default `
 155427	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Femmes enceintes: orientations vers le médecin du travail	R4624-19
 155425	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel adapté > Objet, travailleurs concernés	R4624-17
 155434	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Avis d'aptitude ou d'inaptitude rendu en fin de visite (SIR)	R4624-25
-155435	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Constitution du dossier médical 	R4624-26
+155435	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Constitution du dossier médical	R4624-26
 155436	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Dispense de Visite d'embauche	R4624-27
 155431	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Définition des postes à risques particuliers	R4624-23; R4153-40; R4323-56, R4544-10
 155432	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Suivi individuel renforcé (SIR) > Définition des postes à risques particuliers :Jeunes de moins de 15 ans affectés sur des postes à risques particuliers	R4153-40
@@ -1723,7 +1722,7 @@ export default `
 155413	Santé Sécurité > Services santé au travail > Suivi individuel de l'état de santé des travailleurs > Visite médicale et embauche > Travailleurs de nuit, visite préalable à l'embauche	R4624-18
 156105	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Accès au poste de travail: coordination des Services de santé	R4625-7
 156104	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Agrément du service de santé au travail	R4625-3; R4625-4; R4625-5; R4625-6;
-156112	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Communication entre l'entreprise de travail temporaire et l'entreprise utilisatrice 	R4625-18; R4625-19;R4625-20
+156112	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Communication entre l'entreprise de travail temporaire et l'entreprise utilisatrice	R4625-18; R4625-19;R4625-20
 156111	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Dossier médical	R4625-17
 156107	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Inaptitude et poste à risque : coordination des services de santé	R4625-9
 156103	Santé Sécurité > Services santé au travail > Suivi particulier: intérimaires, CDD, saisonniers > Cadre du suivi particulier des salariés temporaires > Principe et objet	R4625-2
