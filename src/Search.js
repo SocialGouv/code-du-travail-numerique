@@ -32,6 +32,7 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      query: null,
       data: null,
       error: null,
       pendingXHR: false,
@@ -40,9 +41,9 @@ class Search extends React.Component {
 
   fetchResults = query => {
     if (!query) {
-      return this.setState({ data: null });
+      return this.setState({ data: null, query: null });
     }
-    this.setState({ pendingXHR: true, error: null }, () => {
+    this.setState({ pendingXHR: true, error: null, query: query }, () => {
       fetch(API + query)
         .then(response => {
           if (response.ok) {
@@ -57,6 +58,7 @@ class Search extends React.Component {
 
   render() {
     const data = this.state.data;
+    const query = this.state.query;
     const errorJsx = this.state.error ? (<ErrorXhr error={this.state.error} />) : null;
     const loadingJsx = this.state.pendingXHR ? (<p>Chargement…</p>) : null;
     return (
@@ -65,7 +67,7 @@ class Search extends React.Component {
           <SearchForm fetchResults={this.fetchResults}></SearchForm>
           {loadingJsx}
           {errorJsx}
-          <SearchResults data={data}></SearchResults>
+          <SearchResults data={data} query={query}></SearchResults>
         </Panel>
       </SearchContainer>
     );

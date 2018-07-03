@@ -35,15 +35,18 @@ const SuccessMessage = styled.div`
 `;
 
 class FeedbackForm extends React.Component {
+
   state = {
     stars: 0,
     email: "",
     message: "",
     status: null
   };
+
   submit = () => {
     // contact@code-du-travail.beta.gouv.fr
     const formUrl = "https://formspree.io/mwbpdywx";
+    const subject = this.props.query || this.props.theme.id
 
     if (
       !this.state.email ||
@@ -69,7 +72,7 @@ class FeedbackForm extends React.Component {
           body: JSON.stringify({
             ...this.state,
             userAgent: typeof navigator !== "undefined" && navigator.userAgent,
-            theme: this.props.theme.id
+            subject: subject
           })
         })
           .then(r => r.json())
@@ -100,12 +103,17 @@ class FeedbackForm extends React.Component {
       }
     );
   };
+
   render() {
+    const title = this.props.query
+      ? (<span>Avons-nous répondu à votre question : <b>{this.props.query}</b> ?</span>)
+      : (<span>Avons-nous répondu à votre question ?</span>);
     return (
       <div>
         <div>
-          Avons-nous répondu à votre question ?{" "}
+          { title }
           <StarRating
+            className="feedback-stars"
             name="stars"
             value={this.state.stars}
             onStarClick={num => this.setState({ stars: num })}
@@ -136,6 +144,7 @@ class FeedbackForm extends React.Component {
       </div>
     );
   }
+
 }
 
 export default FeedbackForm;

@@ -198,7 +198,7 @@ const Result = ({ onResetClick, theme }) => {
         </TwoCols>
       </Panel>
       <Panel title="Aidez-nous à nous améliorer">
-        <FeedbackForm theme={theme} />
+        <FeedbackForm theme={theme.id} />
       </Panel>
     </div>
   );

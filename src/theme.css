@@ -100,3 +100,10 @@ body {
   margin: 10px -20px 0 -20px;
   padding: 10px 20px 0 20px;
 }
+
+/* Search results */
+
+.feedback-stars {
+  top: 9px;
+  left: 5px;
+}

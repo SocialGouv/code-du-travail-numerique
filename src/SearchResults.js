@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import FeedbackForm from "./FeedbackForm.js";
+
 
 const NoResultContainer = styled.div`margin-top: 20px;`;
 
@@ -186,6 +188,7 @@ class SearchResults extends React.Component {
   render() {
 
     let data = this.props.data;
+    let query = this.props.query;
 
     // No query.
     if (!data) {
@@ -197,6 +200,7 @@ class SearchResults extends React.Component {
         <ResultsFaqContainer data={data.faq.results} />
         <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />
         <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
+        <FeedbackForm query={query} />
       </ResultsContainer>
     );
 
