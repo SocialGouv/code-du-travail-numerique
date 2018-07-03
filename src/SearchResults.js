@@ -8,10 +8,9 @@ const NoResultContainer = styled.div`margin-top: 20px;`;
 
 class NoResult extends React.Component {
   render() {
-    const source = this.props.source;
     return (
       <NoResultContainer className="notification error">
-        <p>Pas de résultat dans {source}.</p>
+        <p>{this.props.text}.</p>
       </NoResultContainer>
     )
   }
@@ -23,7 +22,7 @@ class ResultsCodeDuTravailContainer extends React.Component {
   render() {
     let data = this.props.data;
     if (data.hits.total === 0) {
-      return (<NoResult source={'le Code du travail'}></NoResult>);
+      return (<NoResult text={'Pas de résultat dans le Code du travail'}></NoResult>);
     }
     return (
       <div>
@@ -47,17 +46,9 @@ class ResultCodeDuTravail extends React.Component {
     let legifranceUrl = `${legifranceBaseUrl}?idArticle=${data._source.id}&cidTexte=${data._source.cid}`;
 
     let excerpt = ''
-    let source = null
-
     if (data.highlight) {
       let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
       excerpt = data.highlight[firstHighlightObjectKeyName][0]; // Use 1st available highlight.
-      if (firstHighlightObjectKeyName.includes('tags')) {
-        source = (<i>Résultat trouvé dans les tags</i>)
-      } else if (firstHighlightObjectKeyName.includes('bloc_textuel')) {
-        source = (<i>Résultat trouvé dans le texte</i>)
-        excerpt += '…';
-      }
     }
 
     return (
@@ -67,7 +58,7 @@ class ResultCodeDuTravail extends React.Component {
         </header>
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
-          {source} - <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
+          <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
         </footer>
       </article>
     )
@@ -82,7 +73,7 @@ class ResultsFichesServicePublicContainer extends React.Component {
   render() {
     let data = this.props.data;
     if (data.hits.total === 0) {
-      return (<NoResult source={'les fiches Service Public'}></NoResult>);
+      return (<NoResult text={'Pas de résultat dans les fiches Service Public'}></NoResult>);
     }
     return (
       <div>
@@ -104,17 +95,6 @@ class ResultFicheServicePublic extends React.Component {
     let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
     let excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
 
-    let source = null
-    if (firstHighlightObjectKeyName.includes('title')) {
-      source = (<i>Résultat trouvé dans le titre</i>)
-    } else if (firstHighlightObjectKeyName.includes('text')) {
-      source = (<i>Résultat trouvé dans le texte</i>)
-    } else if (firstHighlightObjectKeyName.includes('sous_theme')) {
-      source = (<i>Résultat trouvé dans le thème</i>)
-    } else if (firstHighlightObjectKeyName.includes('tags')) {
-      source = (<i>Résultat trouvé dans les tags</i>)
-    }
-
     return (
       <article key={data._id} className={data._type}>
         <header>
@@ -122,7 +102,7 @@ class ResultFicheServicePublic extends React.Component {
         </header>
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
-          {source} - <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Service Public</a>
+          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Service Public</a>
         </footer>
       </article>
     )
@@ -136,7 +116,7 @@ class ResultsFaqContainer extends React.Component {
   render() {
     let data = this.props.data;
     if (data.hits.total === 0) {
-      return (<NoResult source={'la FAQ'}></NoResult>);
+      return (<NoResult text={'Pas de résultat dans la FAQ'}></NoResult>);
     }
     return (
       <div>
@@ -158,22 +138,13 @@ class ResultFaq extends React.Component {
     let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
     let excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
 
-    let source = null
-    if (firstHighlightObjectKeyName.includes('question')) {
-      source = (<i>Résultat trouvé dans la question</i>)
-    } else if (firstHighlightObjectKeyName.includes('reponse')) {
-      source = (<i>Résultat trouvé dans la réponse</i>)
-    }
-
     return (
       <article key={data._id} className={data._type}>
         <header>
           <h1>{data._source.question}</h1>
         </header>
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-        <footer>
-          {source}
-        </footer>
+        <footer>Voir</footer>
       </article>
     )
   }
