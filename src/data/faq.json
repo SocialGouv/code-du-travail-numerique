@@ -497,5 +497,30 @@
     "branche": "PARTICULIERS EMPLOYEURS",
     "question":
       "Que se passe-t-il pour les salariés du particulier employeur, en cas de décès de celui-ci ?"
+  },
+  {
+    "branche": "INDUSTRIE CHIMIQUE",
+    "question": "Ai je le droit de rechercher un emploi sur mes heures de travail en fin de contrat ? (Industrie chimique)",
+    "reponse": "<p>Dans votre branche d'activité, il est prévu qu'en cours de préavis, des heures soient accordées (et payées par l'employeur).</p><p>En dehors de la période d'essai : par tranches d'heures correspondant à une semaine de travail par mois de préavis.</p><p>En cours de période d'essai (sauf si votre coefficient est inférieur à 160)</p><ul><li><strong>12h</strong>,lorsque le préavis ou la durée de prévenance est d'au moins 6 jours (ouvriers, employés techniciens, groupes I àIII, ayant un coefficient compris entre 140 et 190</li><li><strong>30 h</strong> (dans les autres cas)</li></ul>",
+    "theme": "RUPTURE DU CONTRAT DE TRAVAIL",
+    "themes": [410, 420]
+    }, {
+    "branche": "BOULANGERIE",
+    "question": "Ma période d'essai peut elle être renouvelée ? (Boulangerie)",
+    "reponse": "<p>La période d'essai est renouvelable <strong>une fois</strong> lorsque plusieurs conditions le permettent:</p><p><strong>Le contrat de travail</strong> doit prévoir la période d'essai, et la possibilité de renouvellement.</p><p>La convention collective de la boulangerie ne prévoit pas que la période d'essai soit renouvelée.</p><p>Pour que cette période d'essai puisse être renouvelable <strong>une fois</strong> :</p><ul><li>La convention collective doit prévoir la possibilité du renouvellement</li><li>Le contrat de travail doit avoir prévu la période d'essai</li><li>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</li><li>Le salarié doit avoir donné son accord</li></ul>",
+    "theme": "PERIODE D'ESSAI",
+    "themes": [3760]
+    }, {
+    "branche": "BOULANGERIE",
+    "question": "En cas de licenciement pour inaptitude est ce que je bénéficie d'une indemnisation spécifique ? (Boulangerie)",
+    "reponse": "<p>En cas de licenciement pour <strong>inaptitude</strong>, le code du travail prévoit une <strong>indemnité spécifique</strong> due lorsque l'inaptitude a <strong>une origine professionnelle</strong> ( Accident du travail ou maladie professionnelle).</p><p>Cette indemnité comprend (L1226-14 du code du travail) :</p><ul><li>l'indemnité compensatrice de préavis (L1234-5) : salaire jusqu'à expiration du préavis ( salaire et avantages) et indemnité compensatrice de congés payés.</li><li>l'indemnité spécifique de licenciement (L1234-9) : somme correspondant au double de l'indemnité légale de licenciement.</li></ul><p>L'article 33 de la convention collective de la boulangerie prévoit par ailleurs une indemnité particulière en cas d'inaptitude pour les 55 ans et plus. Dans ce cas, avec les indemnités de licenciement perçues par ailleurs, le salarié se verra reverser une indemnité spécifique: le montant de cet ensemble devant être équivalent à l'indemnité de départ perçue en cas de départ à la retraite.</p>",
+    "theme": "RUPTURE DU CONTRAT DE TRAVAIL",
+    "themes": [300]
+    }, {
+    "branche": "RUPTURE DU CONTRAT DE TRAVAIL",
+    "question": "Mon salarié effectue son préavis de licenciement et vient de retrouver un emploi. Il demande à pouvoir écourter son préavis pour pouvoir débuter rapidement, en a t-il le droit ? (Métallurgie Ingénieur/cadre)",
+    "reponse": "<p>Le salarié peut quitter son emploi en cours du préavis de licenciement (avant la fin donc), s'il a retrouvé un nouvel emploi. Cette possibilité est ouverte à condition, que :</p><ul><li>le <strong>salarié en informe</strong> employeur <strong>au préalable 15 jours avant</strong></li><li>le préavis doit avoir été exécuté à moitié pour ce faire</li></ul><p>Sur <strong>accord de l'employeur</strong>, il est possible de mettre un terme au préavis pour occuper un nouvel emploi avant la fin de la première moitié du préavis.</p>",
+    "theme": "METALLURGIE",
+    "themes": [410, 420, 430]
   }
 ]
