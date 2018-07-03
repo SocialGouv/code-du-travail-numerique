@@ -93,8 +93,11 @@ class ResultFicheServicePublic extends React.Component {
   render() {
     let data = this.props.data;
 
-    let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
-    let excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
+    let excerpt = ''
+    if (data.highlight) {
+      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
+      excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
+    }
 
     return (
       <article key={data._id} className={data._type}>
@@ -136,8 +139,11 @@ class ResultFaq extends React.Component {
   render() {
     let data = this.props.data;
 
-    let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
-    let excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
+    let excerpt = ''
+    if (data.highlight) {
+      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
+      excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
+    }
 
     return (
       <article key={data._id} className={data._type}>
