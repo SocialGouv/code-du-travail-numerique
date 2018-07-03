@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import FaqModal from "./FaqModal.js";
 import FeedbackForm from "./FeedbackForm.js";
 
 
@@ -144,7 +145,9 @@ class ResultFaq extends React.Component {
           <h1>{data._source.question}</h1>
         </header>
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-        <footer>Voir</footer>
+        <footer>
+          <FaqModal text="Voir toute la réponse" question={data._source.question}></FaqModal>
+        </footer>
       </article>
     )
   }
