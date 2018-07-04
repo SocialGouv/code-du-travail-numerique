@@ -32,6 +32,7 @@ async function search (query, size) {
               match: {
                 'question.edge_ngram': {
                   query: query,
+                  minimum_should_match: '100%',
                 },
               },
             },
@@ -47,6 +48,7 @@ async function search (query, size) {
               match: {
                 'reponse.edge_ngram': {
                   query: query,
+                  minimum_should_match: '100%',
                 },
               },
             },
