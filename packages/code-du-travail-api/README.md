@@ -13,15 +13,19 @@ ELASTICSEARCH_URL=http://code-du-travail-data-elasticsearch:9200
 ELASTICSEARCH_LOG_LEVEL=trace
 ```
 
-Note : le serveur Elasticsearch du dépôt de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) doit être actif au préalable. On utilise le réseau par défaut généré par le Compose de `code-du-travail-data` et le nom du conteneur Elasticsearch en tant que valeur de `ELASTICSEARCH_URL`.
-
 Puis :
 
 ```bash
 $ docker-compose up
 ```
 
-## Pour lancer un shell Docker
+**Important** :
+
+- le serveur Elasticsearch du dépôt de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) doit être actif au préalable car on utilise le réseau généré par son Compose et le nom de son conteneur Elasticsearch (`code-du-travail-data-elasticsearch`) en tant que valeur de `ELASTICSEARCH_URL` dans le ficher `.env`
+
+- en mode développement le répertoire du code source est monté dans le conteneur via un volume, et le processus Node principal est lancé via Nodemon de façon à ce qu'un changement dans la base de code soit immédiatement pris en compte par le serveur de développement
+
+## Pour lancer un shell dans le conteneur
 
 ```shell
 $ docker exec -ti code-du-travail-api /bin/sh
