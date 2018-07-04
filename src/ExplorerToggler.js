@@ -11,12 +11,9 @@ const TogglerContainer = styled.div`
 
 class Toggler extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isHidden: true,
-      profile: '',  // Can be empty, `employee` or `employer`.
-    };
+  state = {
+    isHidden: true,
+    profile: '',  // Can be empty, `employee` or `employer`.
   }
 
   reset () {
@@ -37,9 +34,9 @@ class Toggler extends React.Component {
   }
 
   toggleHidden () {
-    this.setState({
-      isHidden: !this.state.isHidden
-    });
+    this.setState(curState => ({
+      isHidden: !curState.isHidden
+    }));
   }
 
   showExplorer (e) {
