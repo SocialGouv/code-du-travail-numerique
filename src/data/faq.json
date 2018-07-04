@@ -518,7 +518,7 @@
     }, {
     "branche": "RUPTURE DU CONTRAT DE TRAVAIL",
     "question": "Mon salarié effectue son préavis de licenciement et vient de retrouver un emploi. Il demande à pouvoir écourter son préavis pour pouvoir débuter rapidement, en a t-il le droit ? (Métallurgie Ingénieur/cadre)",
-    "reponse": "<p>Le salarié peut quitter son emploi en cours du préavis de licenciement (avant la fin donc), s'il a retrouvé un nouvel emploi. Cette possibilité est ouverte à condition, que :</p><ul><li>le <strong>salarié en informe</strong> employeur <strong>au préalable 15 jours avant</strong></li><li>le préavis doit avoir été exécuté à moitié pour ce faire</li></ul><p>Sur <strong>accord de l'employeur</strong>, il est possible de mettre un terme au préavis pour occuper un nouvel emploi avant la fin de la première moitié du préavis.</p>",
+    "reponse": "<p>Le salarié peut quitter son emploi en cours du préavis de licenciement (avant la fin donc), s'il a retrouvé un nouvel emploi. Cette possibilité est ouverte à condition, que :</p><ul><li>le <strong>salarié en informe</strong> l'employeur <strong>au préalable 15 jours avant</strong></li><li>le préavis doit avoir été exécuté à moitié pour ce faire</li></ul><p>Sur <strong>accord de l'employeur</strong>, il est possible de mettre un terme au préavis pour occuper un nouvel emploi avant la fin de la première moitié du préavis.</p>",
     "theme": "METALLURGIE",
     "themes": [410, 420, 430]
   }
