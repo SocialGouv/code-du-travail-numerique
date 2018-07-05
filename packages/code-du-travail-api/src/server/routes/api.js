@@ -2,6 +2,7 @@ const Router = require('koa-router')
 
 const codeDuTravail = require('../data_sources/code_du_travail.js')
 const faq = require('../data_sources/faq.js')
+const fichesMinistereTravail = require('../data_sources/fiches_ministere_travail.js')
 const fichesServicePublic = require('../data_sources/fiches_service_public.js')
 
 const router = new Router()
@@ -26,6 +27,10 @@ router.get(`${BASE_URL}/search`, async (ctx) => {
       },
       fiches_service_public: {
         results: await fichesServicePublic.search(query, 5),
+        resultsFormat: 'Elasticsearch response',
+      },
+      fiches_ministere_travail: {
+        results: await fichesMinistereTravail.search(query, 5),
         resultsFormat: 'Elasticsearch response',
       },
       faq: {
