@@ -44,11 +44,6 @@ body {
   margin: 20px -24px -24px -24px;
 }
 
-.search-title {
-  box-sizing: border-box;
-  max-width: 95%;
-}
-
 .search-results article {
   box-sizing: border-box;
   max-width: 100%;
@@ -72,6 +67,11 @@ body {
 .search-results article.fiches_service_public {
   border-left-width: 6px;
   border-left-color: #ff5252;
+}
+
+.search-results article.fiches_ministere_travail {
+  border-left-width: 6px;
+  border-left-color: #528bff;
 }
 
 .search-results article h1 {

@@ -11,7 +11,7 @@ class NoResult extends React.Component {
   render() {
     return (
       <NoResultContainer className="notification error">
-        <p>{this.props.text}.</p>
+        <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
       </NoResultContainer>
     )
   }
@@ -21,16 +21,9 @@ class NoResult extends React.Component {
 class ResultsCodeDuTravailContainer extends React.Component {
 
   render() {
-    let data = this.props.data;
-    if (data.hits.total === 0) {
-      return (<NoResult text={'Pas de résultat dans le Code du travail'}></NoResult>);
-    }
     return (
       <div>
-        <div className="search-title">
-          <h1>Résultats dans le <em>Code du travail</em></h1>
-        </div>
-        {data.hits.hits.map(result => <ResultCodeDuTravail key={result['_id']} data={result} />)}
+        {this.props.data.hits.hits.map(result => <ResultCodeDuTravail key={result['_id']} data={result} />)}
       </div>
     )
   }
@@ -69,19 +62,52 @@ class ResultCodeDuTravail extends React.Component {
 }
 
 
-class ResultsFichesServicePublicContainer extends React.Component {
+class ResultsFichesMinistereTravailContainer extends React.Component {
+
+  render() {
+    return (
+      <div>
+        {this.props.data.hits.hits.map(result => <ResultFichesMinistereTravail key={result['_id']} data={result} />)}
+      </div>
+    )
+  }
+
+}
+
+
+class ResultFichesMinistereTravail extends React.Component {
 
   render() {
     let data = this.props.data;
-    if (data.hits.total === 0) {
-      return (<NoResult text={'Pas de résultat dans les fiches Service Public'}></NoResult>);
+
+    let excerpt = ''
+    if (data.highlight) {
+      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
+      excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
     }
+
+    return (
+      <article key={data._id} className={data._type}>
+        <header>
+          <h1>{data._source.title}</h1>
+        </header>
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+        <footer>
+          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Ministère du Travail</a>
+        </footer>
+      </article>
+    )
+  }
+
+}
+
+
+class ResultsFichesServicePublicContainer extends React.Component {
+
+  render() {
     return (
       <div>
-        <div className="search-title">
-          <h1>Résultats dans les <em>fiches Service Public</em></h1>
-        </div>
-        {data.hits.hits.map(result => <ResultFicheServicePublic key={result['_id']} data={result} />)}
+        {this.props.data.hits.hits.map(result => <ResultFicheServicePublic key={result['_id']} data={result} />)}
       </div>
     )
   }
@@ -118,16 +144,9 @@ class ResultFicheServicePublic extends React.Component {
 class ResultsFaqContainer extends React.Component {
 
   render() {
-    let data = this.props.data;
-    if (data.hits.total === 0) {
-      return (<NoResult text={'Pas de résultat dans la FAQ'}></NoResult>);
-    }
     return (
       <div>
-        <div className="search-title">
-          <h1>Résultats dans la <em>FAQ</em></h1>
-        </div>
-        {data.hits.hits.map(result => <ResultFaq key={result['_id']} data={result} />)}
+        {this.props.data.hits.hits.map(result => <ResultFaq key={result['_id']} data={result} />)}
       </div>
     )
   }
@@ -152,7 +171,7 @@ class ResultFaq extends React.Component {
         </header>
         <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
         <footer>
-          <FaqModal text="Voir toute la réponse" question={data._source.question}></FaqModal>
+          <FaqModal text="Voir la réponse de la FAQ" question={data._source.question}></FaqModal>
         </footer>
       </article>
     )
@@ -175,10 +194,23 @@ class SearchResults extends React.Component {
       return null;
     }
 
+    // No results.
+    let hits = [
+      data.faq.results.hits.total,
+      data.fiches_service_public.results.hits.total,
+      data.fiches_ministere_travail.results.hits.total,
+      data.code_du_travail.results.hits.total,
+    ]
+    let hitsSum = hits.reduce((x, y) => x + y);
+    if (!hitsSum) {
+      return (<NoResult />)
+    }
+
     return (
       <ResultsContainer className="search-results">
         <ResultsFaqContainer data={data.faq.results} />
         <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />
+        <ResultsFichesMinistereTravailContainer data={data.fiches_ministere_travail.results} />
         <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
         <FeedbackForm query={query} />
       </ResultsContainer>
