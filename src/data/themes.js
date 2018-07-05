@@ -105,7 +105,7 @@ export default `
 2450	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Sanctions administratives	R1221-13
 3100	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission	R1221-5; R1221-6; L1221-12-1
 2620	Contrat de travail > Embauche > Déclaration préalable à l'embauche (DPAE) > Transmission par voie électronique	L1221-12-1
-3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE)	R4121-1-1; R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
+3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE)	R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
 3300	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE) Pénal	R1227-3
 3800	Contrat de travail > Embauche > Recrutement	L1221-7; L1221-9; L1221-6; L1221-8
 3990	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Accès au docuent de substitution	D1221-27; D8113-2; D8113-3; L2313-6
