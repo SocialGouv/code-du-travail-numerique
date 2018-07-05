@@ -7,28 +7,20 @@ import FeedbackForm from "./FeedbackForm.js";
 
 const NoResultContainer = styled.div`margin-top: 20px;`;
 
-class NoResult extends React.Component {
-  render() {
-    return (
-      <NoResultContainer className="notification error">
-        <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
-      </NoResultContainer>
-    )
-  }
-}
+const NoResult = ({ data }) => (
+  <NoResultContainer className="notification error">
+    <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
+  </NoResultContainer>
+);
 
 
-class ResultsCodeDuTravailContainer extends React.Component {
-
-  render() {
-    return (
-      <div>
-        {this.props.data.hits.hits.map(result => <ResultCodeDuTravail key={result['_id']} data={result} />)}
-      </div>
-    )
-  }
-
-}
+const ResultsCodeDuTravailContainer = ({ data }) => (
+  <div>
+    {data.hits.hits.map(result => (
+      <ResultCodeDuTravail key={result['_id']} data={result} />
+    ))}
+  </div>
+);
 
 class ResultCodeDuTravail extends React.Component {
 
@@ -62,18 +54,13 @@ class ResultCodeDuTravail extends React.Component {
 }
 
 
-class ResultsFichesMinistereTravailContainer extends React.Component {
-
-  render() {
-    return (
-      <div>
-        {this.props.data.hits.hits.map(result => <ResultFichesMinistereTravail key={result['_id']} data={result} />)}
-      </div>
-    )
-  }
-
-}
-
+const ResultsFichesMinistereTravailContainer = ({ data }) => (
+  <div>
+    {data.hits.hits.map(result => (
+      <ResultFichesMinistereTravail key={result['_id']} data={result} />
+    ))}
+  </div>
+);
 
 class ResultFichesMinistereTravail extends React.Component {
 
@@ -102,17 +89,13 @@ class ResultFichesMinistereTravail extends React.Component {
 }
 
 
-class ResultsFichesServicePublicContainer extends React.Component {
-
-  render() {
-    return (
-      <div>
-        {this.props.data.hits.hits.map(result => <ResultFicheServicePublic key={result['_id']} data={result} />)}
-      </div>
-    )
-  }
-
-}
+const ResultsFichesServicePublicContainer = ({ data }) => (
+  <div>
+    {data.hits.hits.map(result => (
+      <ResultFicheServicePublic key={result['_id']} data={result} />
+    ))}
+  </div>
+);
 
 class ResultFicheServicePublic extends React.Component {
 
@@ -141,17 +124,13 @@ class ResultFicheServicePublic extends React.Component {
 }
 
 
-class ResultsFaqContainer extends React.Component {
-
-  render() {
-    return (
-      <div>
-        {this.props.data.hits.hits.map(result => <ResultFaq key={result['_id']} data={result} />)}
-      </div>
-    )
-  }
-
-}
+const ResultsFaqContainer = ({ data }) => (
+  <div>
+    {data.hits.hits.map(result => (
+      <ResultFaq key={result['_id']} data={result} />
+    ))}
+  </div>
+);
 
 class ResultFaq extends React.Component {
 
