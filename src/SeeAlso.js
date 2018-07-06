@@ -2,8 +2,10 @@ import React from "react";
 import * as Feather from "react-feather";
 import styled from "styled-components";
 
+import ConventionModal from "./ConventionModal";
 import Panel from "./Panel";
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
+
 
 const Container = styled.div`
   margin: 10px 0;
@@ -109,6 +111,7 @@ const SeeAlso = (theme) => {
                 </a>
               </li>
             ))}
+            <li><ConventionModal /></li>
           </Block>
         </TwoCols>
       </Panel>
