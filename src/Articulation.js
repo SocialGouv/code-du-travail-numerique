@@ -86,10 +86,8 @@ const getArticulation = ({ theme, onEntrepriseClick }) => {
     return (
       <div>
         Consultez{" "}
-        <ConventionModal text="votre convention" />{" "}
-        ou{" "}
         <a onClick={onEntrepriseClick}>
-          accord d'<b>entreprise</b>
+          votre convention ou accord d'<b>entreprise</b>
         </a>.
         <p />
         <u>
