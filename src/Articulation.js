@@ -47,12 +47,9 @@ const getArticulation = ({ theme, onEntrepriseClick }) => {
         <br />
         <br />
         Vérifiez aussi{" "}
-        <span
-          onClick={onEntrepriseClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
+        <a onClick={onEntrepriseClick}>
           votre accord d'entreprise
-        </span>{" "}
+        </a>{" "}
         : S'il prévoit sur ce sujet des "garanties au moins équivalentes" , ces
         clauses s'appliquent dans votre cas.
       </div>
@@ -62,12 +59,9 @@ const getArticulation = ({ theme, onEntrepriseClick }) => {
     return (
       <div>
         Consultez{" "}
-        <span
-          onClick={onEntrepriseClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
+        <a onClick={onEntrepriseClick}>
           votre accord d'entreprise
-        </span>{" "}
+        </a>{" "}
         dont les clauses à ce sujet s’appliquent à votre situation.
         <b>Attention</b>, sur ce thème la{" "}
         <ConventionModal text="convention collective de branche" />{" "}
@@ -94,12 +88,9 @@ const getArticulation = ({ theme, onEntrepriseClick }) => {
         Consultez{" "}
         <ConventionModal text="votre convention" />{" "}
         ou{" "}
-        <span
-          onClick={onEntrepriseClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
+        <a onClick={onEntrepriseClick}>
           accord d'<b>entreprise</b>
-        </span>.
+        </a>.
         <p />
         <u>
           Il n'y a pas de clause sur ce thème au niveau de l'accord

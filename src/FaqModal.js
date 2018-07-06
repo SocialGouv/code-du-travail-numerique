@@ -32,7 +32,8 @@ class FaqModal extends React.Component {
     departmentData: null,
   };
 
-  openModal = () => {
+  openModal = (e) => {
+    e.preventDefault();
     this.setState({
       modalIsOpen: true
     });
@@ -48,7 +49,7 @@ class FaqModal extends React.Component {
     let faqItem = faq.find(item => item['question'] === this.props.question);
     return (
       <Container>
-        <a href="#" onClick={this.openModal}>{this.props.text}</a>
+        <a onClick={this.openModal}>{this.props.text}</a>
         <Modal
           style={modalStyles}
           isOpen={this.state.modalIsOpen}
