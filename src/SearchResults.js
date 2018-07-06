@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import FaqModal from "./FaqModal.js";
 import FeedbackForm from "./FeedbackForm.js";
+import SeeAlso from "./SeeAlso";
 
 
 const NoResultContainer = styled.div`margin-top: 20px;`;
@@ -191,6 +192,7 @@ class SearchResults extends React.Component {
         <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />
         <ResultsFichesMinistereTravailContainer data={data.fiches_ministere_travail.results} />
         <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
+        <SeeAlso />
         <FeedbackForm query={query} />
       </ResultsContainer>
     );

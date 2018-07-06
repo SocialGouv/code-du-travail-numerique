@@ -2,32 +2,15 @@ import React from "react";
 import * as Feather from "react-feather";
 import styled from "styled-components";
 
-import Panel from "./Panel";
 import Articles from "./Articles";
 import Articulation from "./Articulation";
 import FAQ, { hasFaq } from "./FAQ";
 import FeedbackForm from "./FeedbackForm";
 import Fiches, { hasFiche } from "./Fiches";
-import ServiceRenseignementModal from "./ServiceRenseignementModal";
+import Panel from "./Panel";
+import SeeAlso from "./SeeAlso";
 
 // page de résultats
-
-const Block = styled.div`
-  li {
-    margin: 10px 0;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  svg {
-    vertical-align: bottom;
-  }
-  .dv-star-rating {
-    font-size: 1.5em;
-    vertical-align: middle;
-    margin-left: 10px;
-  }
-`;
 
 const BlockTitle = styled.div`
   font-size: 1.2em;
@@ -41,15 +24,6 @@ const BlockTitle = styled.div`
   border-bottom: 2px solid ${props => props.theme.primary};
 `;
 
-const TwoCols = styled.div`
-  width: 100%;
-  > div {
-    width: calc(50% - 20px);
-    margin: 10px;
-    display: inline-block;
-    box-sizing: border-box;
-  }
-`;
 
 const InfosRupture = () => (
   <Panel title="Liens utiles">
@@ -77,31 +51,10 @@ const Result = ({ onResetClick, theme }) => {
   const hasFaqEntry = hasFaq(theme);
   const hasFicheEntry = hasFiche(theme);
 
-  let links = [
-    {
-      href: "https://socialgouv.github.io/faq-code-du-travail/",
-      text: "Question-Réponse des services de renseignement"
-    },
-    {
-      href:
-        "http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible",
-      text:
-        "Exemple de publication:Le Code BFC ( DIRECCTE Bourgogne Franche Comté, màj: fév. 2017), "
-    }
-  ];
-
-  // Contrat de travail / Rupture de contrat à durée Indéterminée (CDI) / Rupture conventionnelle (individuelle)
-  if (theme.id === 1700) {
-    links.unshift({
-      href:
-        "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp",
-      text:
-        "TELERC: Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
-    });
-  }
-
   return (
+
     <div style={{ marginTop: 20 }} role="article">
+
       {(hasFaqEntry || hasFicheEntry) && (
           <React.Fragment>
             <Panel title="F.A.Q. et fiches">
@@ -132,7 +85,6 @@ const Result = ({ onResetClick, theme }) => {
           <Feather.AlertTriangle size="20" /> Textes applicables
         </BlockTitle>
         <Articulation theme={theme} />
-
         {theme.articles &&
           theme.articles.length && (
             <React.Fragment>
@@ -144,63 +96,12 @@ const Result = ({ onResetClick, theme }) => {
           )}
       </Panel>
 
-      <Panel title="Voir aussi">
-        {/*
-      <Block>
-        <BlockTitle>
-          <Feather.Plus size="20" /> Liens externes
-        </BlockTitle>
-        <li>
-          <a href="#">Liens vers thèmes similaires</a>
-        </li>
-      </Block>*/}
+      <SeeAlso />
 
-        <TwoCols>
-          <Block style={{ verticalAlign: "top" }}>
-            <BlockTitle>
-              <Feather.Phone size="20" /> Vos interlocuteurs
-            </BlockTitle>
-            <li>
-              <ServiceRenseignementModal />
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.ast67.org/"
-              >
-                Médecine du travail <Feather.ExternalLink size="12" />
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.defenseurdesdroits.fr/office"
-              >
-                Défenseur des droits <Feather.ExternalLink size="12" />
-              </a>
-            </li>
-          </Block>
+      <FeedbackForm theme={theme.id} />
 
-          <Block style={{ verticalAlign: "top" }}>
-            <BlockTitle>
-              <Feather.Link size="20" /> Liens et outils
-            </BlockTitle>
-            {links.map(link => (
-              <li key={link.href}>
-                <a target="_blank" rel="noopener noreferrer" href={link.href}>
-                  {link.text} <Feather.ExternalLink size="12" />
-                </a>
-              </li>
-            ))}
-          </Block>
-        </TwoCols>
-      </Panel>
-      <Panel title="Aidez-nous à nous améliorer">
-        <FeedbackForm theme={theme.id} />
-      </Panel>
     </div>
+
   );
 };
 export default Result;

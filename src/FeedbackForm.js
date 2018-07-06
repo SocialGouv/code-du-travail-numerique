@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+
+import Panel from "./Panel";
 import StarRating from "react-star-rating-component";
 
 // form de feedback
@@ -105,11 +107,15 @@ class FeedbackForm extends React.Component {
   };
 
   render() {
+
     const title = this.props.query
       ? (<span>Avons-nous répondu à votre question : <b>{this.props.query}</b> ?</span>)
       : (<span>Avons-nous répondu à votre question ?</span>);
+
     return (
-      <div>
+
+      <Panel title="Aidez-nous à nous améliorer">
+
         <div>
           { title }
           <StarRating
@@ -119,18 +125,21 @@ class FeedbackForm extends React.Component {
             onStarClick={num => this.setState({ stars: num })}
           />
         </div>
+
         <FeedBackField
           onChange={e => this.setState({ message: e.target.value })}
           value={this.state.message}
           required={true}
           placeholder="Vos commentaires constructifs nous permettront d'améliorer notre service"
         />
+
         <EmailField
           onChange={e => this.setState({ email: e.target.value })}
           value={this.state.email}
           required={true}
           placeholder="Votre email"
         />
+
         {this.state.status === "sent" ? (
           <SuccessMessage>Message bien envoyé !</SuccessMessage>
         ) : (
@@ -141,8 +150,11 @@ class FeedbackForm extends React.Component {
             Envoyer
           </FeedbackSubmitButton>
         )}
-      </div>
+
+      </Panel>
+
     );
+
   }
 
 }

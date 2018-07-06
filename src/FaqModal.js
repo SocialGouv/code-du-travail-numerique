@@ -1,5 +1,4 @@
 import React from "react";
-import * as Feather from "react-feather";
 import Modal from "react-modal";
 import styled from "styled-components";
 
