@@ -66,7 +66,7 @@ class ServiceRenseignementModal extends React.Component {
 
     return (
       <Container>
-        <a href="#" onClick={this.openModal}>Trouver votre service de renseignement</a>
+        <a onClick={this.openModal}>Trouver votre service de renseignement</a>
         <Modal
           style={modalStyles}
           isOpen={this.state.modalIsOpen}

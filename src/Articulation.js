@@ -2,11 +2,12 @@ import React from "react";
 import Modal from "react-modal";
 import { Search } from "react-feather";
 
-import { THEMES_L22531, THEMES_L22532 } from "./data/L2253";
 import suppletives from "./data/suppletives";
+import { THEMES_L22531, THEMES_L22532 } from "./data/L2253";
 
 import Article from "./Article";
-import ConventionPicker from "./ConventionPicker";
+import ConventionModal from "./ConventionModal";
+
 
 const getAllThemes = themes =>
   Array.from(
@@ -35,18 +36,14 @@ const DispositionsSuppletives = ({ theme }) => {
 };
 
 // retourne un texte pour un thème donné
-const getArticulation = ({ theme, onBrancheClick, onEntrepriseClick }) => {
+const getArticulation = ({ theme, onEntrepriseClick }) => {
   if (isInL22531(theme.id)) {
     // article entre dans le champ du L.2253-1
     return (
       <div>
         Consultez votre{" "}
-        <span
-          onClick={onBrancheClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          convention collective de branche
-        </span>: ses dispositions sur ce thème s'appliquent pour votre question.
+        <ConventionModal text="convention collective de branche" />{" "}
+        ses dispositions sur ce thème s'appliquent pour votre question.
         <br />
         <br />
         Vérifiez aussi{" "}
@@ -73,12 +70,7 @@ const getArticulation = ({ theme, onBrancheClick, onEntrepriseClick }) => {
         </span>{" "}
         dont les clauses à ce sujet s’appliquent à votre situation.
         <b>Attention</b>, sur ce thème la{" "}
-        <span
-          onClick={onBrancheClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          convention collective de branche
-        </span>{" "}
+        <ConventionModal text="convention collective de branche" />{" "}
         peut décider qu'elle prime sur l'accord d'entreprise.
         <br />
         <br />
@@ -100,12 +92,7 @@ const getArticulation = ({ theme, onBrancheClick, onEntrepriseClick }) => {
     return (
       <div>
         Consultez{" "}
-        <span
-          onClick={onBrancheClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          votre convention
-        </span>{" "}
+        <ConventionModal text="votre convention" />{" "}
         ou{" "}
         <span
           onClick={onEntrepriseClick}
@@ -120,12 +107,7 @@ const getArticulation = ({ theme, onBrancheClick, onEntrepriseClick }) => {
         </u>
         <p />
         - Consultez{" "}
-        <span
-          onClick={onBrancheClick}
-          style={{ cursor: "pointer", textDecoration: "underline" }}
-        >
-          votre <b>convention collective</b>
-        </span>{" "}
+        <ConventionModal text="votre <b>convention collective</b>" />{" "}
         ou l'accord à portée plus large: Ils peuvent comporter des clauses sur
         ce thèmes qui vous sont opposables. <p />
         <u>
@@ -155,54 +137,38 @@ const modalStyles = {
 };
 
 class Articulation extends React.Component {
+
   state = {
     modalBrancheIsOpen: false,
     modalEntrepriseIsOpen: false
   };
-  openModalBranche = () => {
-    this.setState({
-      modalBrancheIsOpen: true
-    });
-  };
-  closeModalBranche = () => {
-    this.setState({
-      modalBrancheIsOpen: false
-    });
-  };
+
   openModalEntreprise = () => {
     this.setState({
       modalEntrepriseIsOpen: true
     });
   };
+
   closeModalEntreprise = () => {
     this.setState({
       modalEntrepriseIsOpen: false
     });
   };
+
   render() {
     const { theme } = this.props;
     return (
       <div>
+
         <div>
           {getArticulation({
             theme,
-            onBrancheClick: this.openModalBranche,
             onEntrepriseClick: this.openModalEntreprise
           })}
         </div>
+
         <DispositionsSuppletives theme={theme} />
-        <Modal
-          style={modalStyles}
-          isOpen={this.state.modalBrancheIsOpen}
-          onRequestClose={this.closeModalBranche}
-          contentLabel="Modal Branche"
-        >
-          <h2>Convention collective</h2>
-          Trouvez votre convention collective :
-          <br />
-          <br />
-          <ConventionPicker />
-        </Modal>
+
         <Modal
           style={modalStyles}
           isOpen={this.state.modalEntrepriseIsOpen}
@@ -219,9 +185,11 @@ class Articulation extends React.Component {
             <Search size="12" />
           </a>
         </Modal>
+
       </div>
     );
   }
+
 }
 
 export default Articulation;
