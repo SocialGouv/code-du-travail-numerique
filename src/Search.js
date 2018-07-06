@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import Panel from "./Panel";
-import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
 
 
@@ -29,21 +28,37 @@ const SearchContainer = styled.div`padding: 20px; text-align: center;`;
 
 class Search extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      query: null,
-      data: null,
-      error: null,
-      pendingXHR: false,
-    };
+  state = {
+    query: '',
+    data: null,
+    error: null,
+    pendingXHR: false,
+  }
+
+  reset () {
+    this.setState({data: null, query: ''});
+  }
+
+  handleChange = event => {
+    this.setState({query: event.target.value});
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.fetchResults(this.state.query);
+  }
+
+  handleKeyDown = event => {
+    if (event.keyCode === 27) {
+      this.reset();
+    }
   }
 
   fetchResults = query => {
     if (!query) {
-      return this.setState({ data: null, query: null });
+      return this.reset();
     }
-    this.setState({ pendingXHR: true, error: null, query: query }, () => {
+    this.setState({pendingXHR: true, error: null, query: query}, () => {
       fetch(API + query)
         .then(response => {
           if (response.ok) {
@@ -51,8 +66,8 @@ class Search extends React.Component {
           }
           throw new Error("Un problème est survenu.");
         })
-        .then(data => this.setState({ data, pendingXHR: false }))
-        .catch(error => this.setState({ error, pendingXHR: false }));
+        .then(data => this.setState({data, pendingXHR: false}))
+        .catch(error => this.setState({error, pendingXHR: false}));
     });
   }
 
@@ -64,7 +79,17 @@ class Search extends React.Component {
     return (
       <SearchContainer>
         <Panel title="Posez votre question sur le droit du travail">
-          <SearchForm fetchResults={this.fetchResults}></SearchForm>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              <input
+                type="text"
+                value={this.state.query}
+                onChange={this.handleChange}
+                onKeyDown={this.handleKeyDown}
+              />
+            </label>
+            <button className="button" type="submit">Rechercher</button>
+          </form>
           {loadingJsx}
           {errorJsx}
           <SearchResults data={data} query={query}></SearchResults>

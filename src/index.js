@@ -67,8 +67,9 @@ const Header = ({ onClick }) => (
 );
 
 const App = () => {
-  // dirty trick to handle click on main title. todo: routing
+  // dirty tricks to handle click on main title. todo: routing
   let explorerToggler;
+  let search;
   return (
     <ThemeProvider theme={themeNeutral}>
       <div>
@@ -80,10 +81,10 @@ const App = () => {
         >
           version bêta
         </GitHubForkRibbon>
-        <Header onClick={() => explorerToggler.reset()} />
+        <Header onClick={() => { search.reset(); explorerToggler.reset(); }} />
         <AppContainer role="main">
-          <Search />
-          <ExplorerToggler ref={node => (explorerToggler = node)}  />
+          <Search ref={node => (search = node)} />
+          <ExplorerToggler ref={node => (explorerToggler = node)} />
         </AppContainer>
       </div>
     </ThemeProvider>
