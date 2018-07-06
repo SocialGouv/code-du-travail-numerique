@@ -85,15 +85,6 @@ const SeeAlso = (theme) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.ast67.org/"
-              >
-                Médecine du travail <Feather.ExternalLink size="12" />
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
                 href="https://www.defenseurdesdroits.fr/office"
               >
                 Défenseur des droits <Feather.ExternalLink size="12" />
