@@ -3,7 +3,7 @@
 
 const validOrigins = [
   'http://localhost:3000', // URL + port of the frontend (in dev mode).
-  'https://socialgouv.github.io',
+  'https://code-du-travail.beta.gouv.fr',
 ]
 
 function originIsValid (origin) {
