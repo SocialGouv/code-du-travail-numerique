@@ -39,15 +39,15 @@ class ResultCodeDuTravail extends React.Component {
     }
 
     return (
-      <article key={data._id} className={data._type}>
-        <header>
-        <h1>{data._source.titre}</h1>
-        </header>
-        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-        <footer>
-          <a href={legifranceUrl} target="_blank" rel="noopener noreferrer">Voir sur Legifrance</a>
-        </footer>
-      </article>
+      <a href={legifranceUrl} target="_blank" rel="noopener noreferrer" className="search-results-link">
+        <article key={data._id} className={data._type}>
+          <header>
+          <h1>{data._source.titre}</h1>
+          </header>
+          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+          <footer>Source : Legifrance</footer>
+        </article>
+      </a>
     )
 
   }
@@ -75,15 +75,15 @@ class ResultFichesMinistereTravail extends React.Component {
     }
 
     return (
-      <article key={data._id} className={data._type}>
-        <header>
-          <h1>{data._source.title}</h1>
-        </header>
-        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-        <footer>
-          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Ministère du Travail</a>
-        </footer>
-      </article>
+      <a href={data._source.url} target="_blank" rel="noopener noreferrer" className="search-results-link">
+        <article key={data._id} className={data._type}>
+          <header>
+            <h1>{data._source.title}</h1>
+          </header>
+          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+          <footer>Source : Ministère du Travail</footer>
+        </article>
+      </a>
     )
   }
 
@@ -110,15 +110,15 @@ class ResultFicheServicePublic extends React.Component {
     }
 
     return (
-      <article key={data._id} className={data._type}>
-        <header>
-          <h1>{data._source.title}</h1>
-        </header>
-        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-        <footer>
-          <a href={data._source.url} target="_blank" rel="noopener noreferrer">Voir sur Service Public</a>
-        </footer>
-      </article>
+      <a href={data._source.url} target="_blank" rel="noopener noreferrer" className="search-results-link">
+        <article key={data._id} className={data._type}>
+          <header>
+            <h1>{data._source.title}</h1>
+          </header>
+          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+          <footer>Source : Service Public</footer>
+        </article>
+      </a>
     )
   }
 
@@ -135,7 +135,7 @@ const ResultsFaqContainer = ({ data }) => (
 
 class ResultFaq extends React.Component {
 
-  render() {
+  render () {
     let data = this.props.data;
 
     let excerpt = ''
@@ -145,15 +145,15 @@ class ResultFaq extends React.Component {
     }
 
     return (
-      <article key={data._id} className={data._type}>
-        <header>
-          <h1>{data._source.question}</h1>
-        </header>
-        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-        <footer>
-          <FaqModal text="Voir la réponse de la FAQ" question={data._source.question}></FaqModal>
-        </footer>
-      </article>
+      <FaqModal question={data._source.question}>
+        <article key={data._id} className={data._type}>
+          <header>
+            <h1>{data._source.question}</h1>
+          </header>
+          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+          <footer>Source : FAQ</footer>
+        </article>
+      </FaqModal>
     )
   }
 

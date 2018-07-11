@@ -44,14 +44,28 @@ body {
   margin: 20px -24px -24px -24px;
 }
 
+.search-results-link,
+.search-results-link:link,
+.search-results-link:visited {
+    display: block;
+    margin: 20px auto;
+    color: #1c1c1c;
+    background: #fff;
+}
+
+.search-results-link:focus,
+.search-results-link:hover,
+.search-results-link:active {
+    text-decoration: underline;
+    background: #ebeff3;
+}
+
 .search-results article {
   box-sizing: border-box;
   max-width: 100%;
   border: 1px solid #f1f1f1;
   border-radius: 3px;
-  background: #fff;
   padding: 10px 20px;
-  margin: 20px auto;
 }
 
 .search-results article.code_du_travail {
@@ -101,7 +115,7 @@ body {
   padding: 10px 20px 0 20px;
 }
 
-/* Search results */
+/* Feedback after search results */
 
 .feedback-stars {
   top: 9px;

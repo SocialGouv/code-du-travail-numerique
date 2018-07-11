@@ -1,6 +1,5 @@
 import React from "react";
 import Modal from "react-modal";
-import styled from "styled-components";
 
 const faq = require("./data/faq.json");
 
@@ -22,8 +21,6 @@ const modalStyles = {
     maxHeight: "80%"
   }
 };
-
-const Container = styled.div`display: inline-block;`
 
 class FaqModal extends React.Component {
 
@@ -48,8 +45,8 @@ class FaqModal extends React.Component {
   render () {
     let faqItem = faq.find(item => item['question'] === this.props.question);
     return (
-      <Container>
-        <a onClick={this.openModal}>{this.props.text}</a>
+      <div>
+        <a href="#" onClick={this.openModal} className="search-results-link">{this.props.children}</a>
         <Modal
           style={modalStyles}
           isOpen={this.state.modalIsOpen}
@@ -58,7 +55,7 @@ class FaqModal extends React.Component {
           <h2>{faqItem.question}</h2>
           <div dangerouslySetInnerHTML={{__html:faqItem.reponse}}></div>
         </Modal>
-      </Container>
+      </div>
     )
   };
 
