@@ -16,41 +16,20 @@ async function search (query, size) {
     body: {
       size: size,
       query: {
-        bool: {
-          should: [
-            {
-              match_phrase: {
-                'tags.french': {
-                  query: query,
-                  boost: 3,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'tags.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match_phrase: {
-                'bloc_textuel.french': {
-                  query: query,
-                  boost: 3,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'bloc_textuel.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
+        multi_match: {
+          query: query,
+          fields: [
+            'title.french_heavy',
+            'title.french_light',
+            'title.edge_ngram',
+            'text.french_heavy',
+            'text.french_light^3',
+            'text.edge_ngram',
+            'path.french_heavy',
+            'path.french_light^2',
+            'path.edge_ngram',
           ],
+          type: 'most_fields',
         },
       },
       highlight: {
@@ -58,16 +37,13 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'tags.french': {
-            number_of_fragments: 0,
-          },
-          'tags.edge_ngram': {
-            number_of_fragments: 0,
-          },
-          'bloc_textuel.french': {
+          'text.french_light': {
             number_of_fragments: 10,
           },
-          'bloc_textuel.edge_ngram': {
+          'title.french_light': {
+            number_of_fragments: 10,
+          },
+          'path.french_light': {
             number_of_fragments: 10,
           },
         },
@@ -76,7 +52,7 @@ async function search (query, size) {
         text: query,
         suggestion: {
           phrase: {
-            field: 'bloc_textuel',
+            field: 'text',
           },
         },
       },
@@ -90,7 +66,7 @@ async function search (query, size) {
       body: {
         query: {
           term: {
-            num: query,
+            title: query,
           },
         },
       },

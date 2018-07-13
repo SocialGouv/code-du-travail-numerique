@@ -17,70 +17,17 @@ async function search (query, size) {
       size: size,
       min_score: 5,
       query: {
-        bool: {
-          should: [
-            {
-              match_phrase: {
-                'question.french': {
-                  query: query,
-                  boost: 3,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'question.edge_ngram': {
-                  query: query,
-                  minimum_should_match: '100%',
-                },
-              },
-            },
-            {
-              match_phrase: {
-                'reponse.french': {
-                  query: query,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'reponse.edge_ngram': {
-                  query: query,
-                  minimum_should_match: '100%',
-                },
-              },
-            },
-            {
-              match: {
-                'theme.french': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match: {
-                'theme.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match: {
-                'branche.french': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match: {
-                'branche.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
+        multi_match: {
+          query: query,
+          fields: [
+            'title.french_heavy',
+            'title.french_light',
+            'title.edge_ngram',
+            'text.french_heavy',
+            'text.french_light^3',
+            'text.edge_ngram',
           ],
+          type: 'most_fields',
         },
       },
       highlight: {
@@ -88,16 +35,10 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'question.french': {
+          'text.french_light': {
             number_of_fragments: 10,
           },
-          'question.edge_ngram': {
-            number_of_fragments: 10,
-          },
-          'reponse.french': {
-            number_of_fragments: 10,
-          },
-          'reponse.edge_ngram': {
+          'title.french_light': {
             number_of_fragments: 10,
           },
         },

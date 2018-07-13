@@ -17,76 +17,20 @@ async function search (query, size) {
       size: size,
       min_score: 5,
       query: {
-        bool: {
-          should: [
-            // Title.
-            {
-              match_phrase: {
-                'title.french': {
-                  query: query,
-                  boost: 4,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'title.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
-            // Text.
-            {
-              match_phrase: {
-                'text.french': {
-                  query: query,
-                  boost: 3,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'text.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
-            // Sous theme.
-            {
-              match_phrase: {
-                'sous_theme.french': {
-                  query: query,
-                  boost: 2,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'sous_theme.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
-            // Tags.
-            {
-              match_phrase: {
-                'tags.french': {
-                  query: query,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'tags.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
+        multi_match: {
+          query: query,
+          fields: [
+            'title.french_heavy',
+            'title.french_light^3',
+            'title.edge_ngram',
+            'text.french_heavy',
+            'text.french_light^2',
+            'text.edge_ngram',
+            'tags.french_heavy',
+            'tags.french_light^2',
+            'tags.edge_ngram',
           ],
+          type: 'most_fields',
         },
       },
       highlight: {
@@ -94,28 +38,13 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
-          'title.french': {
+          'text.french_light': {
             number_of_fragments: 10,
           },
-          'title.edge_ngram': {
+          'title.french_light': {
             number_of_fragments: 10,
           },
-          'text.french': {
-            number_of_fragments: 10,
-          },
-          'text.edge_ngram': {
-            number_of_fragments: 10,
-          },
-          'sous_theme.french': {
-            number_of_fragments: 10,
-          },
-          'sous_theme.edge_ngram': {
-            number_of_fragments: 10,
-          },
-          'tags.french': {
-            number_of_fragments: 10,
-          },
-          'tags.edge_ngram': {
+          'tags.french_light': {
             number_of_fragments: 10,
           },
         },
@@ -124,7 +53,7 @@ async function search (query, size) {
         text: query,
         suggestion: {
           phrase: {
-            field: 'title',
+            field: 'text',
           },
         },
       },
