@@ -29,9 +29,6 @@ class ResultCodeDuTravail extends React.Component {
 
     let data = this.props.data;
 
-    let legifranceBaseUrl = 'https://www.legifrance.gouv.fr/affichCodeArticle.do';
-    let legifranceUrl = `${legifranceBaseUrl}?idArticle=${data._source.id}&cidTexte=${data._source.cid}`;
-
     let excerpt = ''
     if (data.highlight) {
       let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
@@ -39,10 +36,10 @@ class ResultCodeDuTravail extends React.Component {
     }
 
     return (
-      <a href={legifranceUrl} target="_blank" rel="noopener noreferrer" className="search-results-link">
+      <a href={data._source.url} target="_blank" rel="noopener noreferrer" className="search-results-link">
         <article key={data._id} className={data._type}>
           <header>
-          <h1>{data._source.titre}</h1>
+          <h1>{data._source.title}</h1>
           </header>
           <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
           <footer>Source : Legifrance</footer>
@@ -145,10 +142,10 @@ class ResultFaq extends React.Component {
     }
 
     return (
-      <FaqModal question={data._source.question}>
+      <FaqModal question={data._source.title}>
         <article key={data._id} className={data._type}>
           <header>
-            <h1>{data._source.question}</h1>
+            <h1>{data._source.title}</h1>
           </header>
           <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
           <footer>Source : FAQ</footer>
