@@ -17,20 +17,84 @@ async function search (query, size) {
       size: size,
       min_score: 5,
       query: {
-        multi_match: {
-          query: query,
-          fields: [
-            'title.french_heavy',
-            'title.french_light^3',
-            'title.edge_ngram',
-            'text.french_heavy',
-            'text.french_light^2',
-            'text.edge_ngram',
-            'tags.french_heavy',
-            'tags.french_light^2',
-            'tags.edge_ngram',
+        bool: {
+          should: [
+            {
+              match_phrase: {
+                'title.french_light': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'title.french_heavy': {
+                  query: query,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'title.edge_ngram': {
+                  query: query,
+                  minimum_should_match: '100%',
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'text.french_light': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'text.french_heavy': {
+                  query: query,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'text.edge_ngram': {
+                  query: query,
+                  minimum_should_match: '100%',
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'tags.french_light': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'tags.french_heavy': {
+                  query: query,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'tags.edge_ngram': {
+                  query: query,
+                  minimum_should_match: '100%',
+                },
+              },
+            },
           ],
-          type: 'most_fields',
         },
       },
       highlight: {
@@ -38,10 +102,19 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
+          'text.french_heavy': {
+            number_of_fragments: 10,
+          },
           'text.french_light': {
             number_of_fragments: 10,
           },
+          'title.french_heavy': {
+            number_of_fragments: 10,
+          },
           'title.french_light': {
+            number_of_fragments: 10,
+          },
+          'tags.french_heavy': {
             number_of_fragments: 10,
           },
           'tags.french_light': {

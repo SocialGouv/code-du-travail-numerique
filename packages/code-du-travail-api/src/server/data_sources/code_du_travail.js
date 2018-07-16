@@ -16,20 +16,57 @@ async function search (query, size) {
     body: {
       size: size,
       query: {
-        multi_match: {
-          query: query,
-          fields: [
-            'title.french_heavy',
-            'title.french_light',
-            'title.edge_ngram',
-            'text.french_heavy',
-            'text.french_light^3',
-            'text.edge_ngram',
-            'path.french_heavy',
-            'path.french_light^2',
-            'path.edge_ngram',
+        bool: {
+          should: [
+            {
+              match_phrase: {
+                'path.french_heavy': {
+                  query: query,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'path.french_light': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'path.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'text.french_heavy': {
+                  query: query,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'text.french_light': {
+                  query: query,
+                  boost: 3,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match: {
+                'text.edge_ngram': {
+                  query: query,
+                },
+              },
+            },
           ],
-          type: 'most_fields',
         },
       },
       highlight: {
@@ -37,13 +74,16 @@ async function search (query, size) {
         pre_tags: ['<b>'],
         post_tags: ['</b>'],
         fields: {
+          'path.french_light': {
+            number_of_fragments: 0,
+          },
+          'path.french_heavy': {
+            number_of_fragments: 0,
+          },
           'text.french_light': {
             number_of_fragments: 10,
           },
-          'title.french_light': {
-            number_of_fragments: 10,
-          },
-          'path.french_light': {
+          'text.french_heavy': {
             number_of_fragments: 10,
           },
         },
@@ -66,7 +106,7 @@ async function search (query, size) {
       body: {
         query: {
           term: {
-            title: query,
+            num: query,
           },
         },
       },
