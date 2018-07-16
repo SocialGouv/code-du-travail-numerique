@@ -15,15 +15,15 @@ const NoResult = ({ data }) => (
 );
 
 
-const ResultsCodeDuTravailContainer = ({ data }) => (
+const ResultsContainer = ({ data }) => (
   <div>
-    {data.hits.hits.map(result => (
-      <ResultCodeDuTravail key={result['_id']} data={result} />
+    {data.map(result => (
+      <Result key={result['_id']} data={result} />
     ))}
   </div>
 );
 
-class ResultCodeDuTravail extends React.Component {
+class Result extends React.Component {
 
   render() {
 
@@ -35,15 +35,42 @@ class ResultCodeDuTravail extends React.Component {
       excerpt = data.highlight[firstHighlightObjectKeyName][0]; // Use 1st available highlight.
     }
 
-    return (
-      <a href={data._source.url} target="_blank" rel="noopener noreferrer" className="search-results-link">
-        <article key={data._id} className={data._type}>
-          <header>
+    let source;
+    if (data._source.source === 'faq') {
+      source = "Source : FAQ";
+    } else if (data._source.source === 'code_du_travail') {
+      source = "Source : Legifrance";
+    } else if (data._source.source === 'fiches_service_public') {
+      source = "Source : Service Public";
+    } else if (data._source.source === 'fiches_ministere_travail') {
+      source = "Source : Ministère du Travail";
+    }
+
+    let body = (
+      <article key={data._id} className={data._source.source}>
+        <header>
           <h1>{data._source.title}</h1>
-          </header>
-          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-          <footer>Source : Legifrance</footer>
-        </article>
+        </header>
+        <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
+        <footer>{source}</footer>
+      </article>
+    )
+
+    if (data._source.source === 'faq') {
+      return (
+        <FaqModal question={data._source.question}>
+          {body}
+        </FaqModal>
+      )
+    }
+
+    return (
+      <a
+        href={data._source.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="search-results-link">
+          {body}
       </a>
     )
 
@@ -52,112 +79,7 @@ class ResultCodeDuTravail extends React.Component {
 }
 
 
-const ResultsFichesMinistereTravailContainer = ({ data }) => (
-  <div>
-    {data.hits.hits.map(result => (
-      <ResultFichesMinistereTravail key={result['_id']} data={result} />
-    ))}
-  </div>
-);
-
-class ResultFichesMinistereTravail extends React.Component {
-
-  render() {
-    let data = this.props.data;
-
-    let excerpt = ''
-    if (data.highlight) {
-      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
-      excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
-    }
-
-    return (
-      <a href={data._source.url} target="_blank" rel="noopener noreferrer" className="search-results-link">
-        <article key={data._id} className={data._type}>
-          <header>
-            <h1>{data._source.title}</h1>
-          </header>
-          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-          <footer>Source : Ministère du Travail</footer>
-        </article>
-      </a>
-    )
-  }
-
-}
-
-
-const ResultsFichesServicePublicContainer = ({ data }) => (
-  <div>
-    {data.hits.hits.map(result => (
-      <ResultFicheServicePublic key={result['_id']} data={result} />
-    ))}
-  </div>
-);
-
-class ResultFicheServicePublic extends React.Component {
-
-  render() {
-    let data = this.props.data;
-
-    let excerpt = ''
-    if (data.highlight) {
-      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
-      excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
-    }
-
-    return (
-      <a href={data._source.url} target="_blank" rel="noopener noreferrer" className="search-results-link">
-        <article key={data._id} className={data._type}>
-          <header>
-            <h1>{data._source.title}</h1>
-          </header>
-          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-          <footer>Source : Service Public</footer>
-        </article>
-      </a>
-    )
-  }
-
-}
-
-
-const ResultsFaqContainer = ({ data }) => (
-  <div>
-    {data.hits.hits.map(result => (
-      <ResultFaq key={result['_id']} data={result} />
-    ))}
-  </div>
-);
-
-class ResultFaq extends React.Component {
-
-  render () {
-    let data = this.props.data;
-
-    let excerpt = ''
-    if (data.highlight) {
-      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
-      excerpt = data.highlight[firstHighlightObjectKeyName][0] + '…'; // Use 1st available highlight.
-    }
-
-    return (
-      <FaqModal question={data._source.title}>
-        <article key={data._id} className={data._type}>
-          <header>
-            <h1>{data._source.title}</h1>
-          </header>
-          <blockquote className="text-quote" dangerouslySetInnerHTML={{__html:excerpt}}></blockquote>
-          <footer>Source : FAQ</footer>
-        </article>
-      </FaqModal>
-    )
-  }
-
-}
-
-
-const ResultsContainer = styled.div`text-align: left; margin-top: 20px;`;
+const ResultsWrapper = styled.div`text-align: left; margin-top: 20px;`;
 
 class SearchResults extends React.Component {
 
@@ -172,26 +94,16 @@ class SearchResults extends React.Component {
     }
 
     // No results.
-    let hits = [
-      data.faq.results.hits.total,
-      data.fiches_service_public.results.hits.total,
-      data.fiches_ministere_travail.results.hits.total,
-      data.code_du_travail.results.hits.total,
-    ]
-    let hitsSum = hits.reduce((x, y) => x + y);
-    if (!hitsSum) {
+    if (!data.hits.total) {
       return (<NoResult />)
     }
 
     return (
-      <ResultsContainer className="search-results">
-        <ResultsFaqContainer data={data.faq.results} />
-        <ResultsFichesServicePublicContainer data={data.fiches_service_public.results} />
-        <ResultsFichesMinistereTravailContainer data={data.fiches_ministere_travail.results} />
-        <ResultsCodeDuTravailContainer data={data.code_du_travail.results} />
+      <ResultsWrapper className="search-results">
+        <ResultsContainer data={data.hits.hits} />
         <SeeAlso />
         <FeedbackForm query={query} />
-      </ResultsContainer>
+      </ResultsWrapper>
     );
 
   }

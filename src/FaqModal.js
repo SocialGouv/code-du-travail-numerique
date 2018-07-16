@@ -43,7 +43,7 @@ class FaqModal extends React.Component {
   };
 
   render () {
-    let faqItem = faq.find(item => item['question'] === this.props.question);
+    let faqItem = faq.find(item => item['title'] === this.props.question);
     return (
       <div>
         <a href="#" onClick={this.openModal} className="search-results-link">{this.props.children}</a>
