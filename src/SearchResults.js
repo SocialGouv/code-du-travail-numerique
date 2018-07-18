@@ -29,10 +29,12 @@ class Result extends React.Component {
 
     let data = this.props.data;
 
-    let excerpt = ''
+    let excerpt = '';
     if (data.highlight) {
-      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
-      excerpt = data.highlight[firstHighlightObjectKeyName][0]; // Use 1st available highlight.
+      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0];
+      // Use the first `n` available highlights as excerpt.
+      const numExcerpts = 3;
+      excerpt = data.highlight[firstHighlightObjectKeyName].slice(0, numExcerpts).join(' … ');
     }
 
     let source;
