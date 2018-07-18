@@ -17,74 +17,63 @@ async function search (query, size) {
       size: size,
       query: {
         bool: {
-          should: [
+          must: [
             {
-              multi_match: {
-                query: query,
-                fields: [
-                  'title.edge_ngram',
-                  'title.french_heavy',
-                  'title.french_light^3',
-                  'text.edge_ngram',
-                  'text.french_heavy',
-                  'text.french_light^3',
-                  'path.edge_ngram',
-                  'path.french_heavy',
-                  'path.french_light',
-                  'tags.edge_ngram',
-                  'tags.french_heavy',
-                  'tags.french_light',
-                ],
-                type: 'most_fields',
-              },
-            },
-            {
-              match_phrase: {
-                'title.french_heavy': {
+              match: {
+                'all_text.french_heavy': {
                   query: query,
-                  boost: 2,
-                  slop: 1,
+                  minimum_should_match: '60%',
                 },
               },
             },
+          ],
+          should: [
             {
               match_phrase: {
                 'title.french_light': {
                   query: query,
-                  boost: 5,
-                  slop: 1,
-                },
-              },
-            },
-            {
-              match: {
-                'title.edge_ngram': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match_phrase: {
-                'text.french_heavy': {
-                  query: query,
-                  boost: 2,
+                  boost: 1000,
                   slop: 1,
                 },
               },
             },
             {
               match_phrase: {
-                'text.french_light': {
+                'all_text.french_light': {
                   query: query,
-                  boost: 5,
+                  boost: 1000,
                   slop: 1,
                 },
               },
             },
             {
-              match: {
-                'text.edge_ngram': {
+              match_phrase: {
+                'all_text.french_heavy': {
                   query: query,
+                  boost: 500,
+                  slop: 1,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'path.french_heavy': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match_phrase: {
+                'path.french_light': {
+                  query: query,
+                },
+              },
+            },
+            {
+              match: {
+                'all_text.french_light': {
+                  query: query,
+                  minimum_should_match: '75%',
                 },
               },
             },
@@ -93,28 +82,26 @@ async function search (query, size) {
       },
       highlight: {
         order: 'score',
-        pre_tags: ['<b>'],
-        post_tags: ['</b>'],
+        pre_tags: ['<mark>'],
+        post_tags: ['</mark>'],
         fields: {
-          'text.french_light': {
-            number_of_fragments: 10,
+          'all_text.french_heavy': {
+            number_of_fragments: 20,
           },
-          'title.french_light': {
-            number_of_fragments: 10,
+          'all_text.french_light': {
+            number_of_fragments: 20,
+          },
+          'all_text.french_shingle': {
+            number_of_fragments: 20,
+          },
+          'path.french_heavy': {
+            number_of_fragments: 20,
           },
           'path.french_light': {
-            number_of_fragments: 10,
+            number_of_fragments: 20,
           },
-          'tags.french_light': {
-            number_of_fragments: 10,
-          },
-        },
-      },
-      suggest: {
-        text: query,
-        suggestion: {
-          phrase: {
-            field: 'text',
+          'title.french_light': {
+            number_of_fragments: 20,
           },
         },
       },
