@@ -60,7 +60,7 @@ class Result extends React.Component {
 
     if (data._source.source === 'faq') {
       return (
-        <FaqModal question={data._source.question}>
+        <FaqModal question={data._source.title}>
           {body}
         </FaqModal>
       )
