@@ -1,6 +1,6 @@
 const elasticsearchClient = require('../conf/elasticsearch.js')
 
-const elasticsearchIndexName = 'all'
+const elasticsearchIndexName = 'code_du_travail_numerique'
 
 /**
  * Return documents matching the given query from Elasticsearch.
