@@ -19,11 +19,14 @@ async function search (query, size) {
         bool: {
           must: [
             {
-              match: {
-                'all_text.french_heavy': {
-                  query: query,
-                  minimum_should_match: '60%',
-                },
+              multi_match: {
+                query: query,
+                fields: [
+                  'all_text.french_heavy',
+                  'all_text.french_light',
+                ],
+                type: 'most_fields',
+                minimum_should_match: '60%',
               },
             },
           ],
@@ -35,25 +38,19 @@ async function search (query, size) {
                   'title.french_heavy',
                   'title.french_light',
                 ],
-                type: 'best_fields',
-                minimum_should_match: '80%',
+                type: 'most_fields',
                 boost: 2000,
               },
             },
             {
-              match_phrase: {
-                'all_text.french_light': {
-                  query: query,
-                  boost: 1500,
-                },
-              },
-            },
-            {
-              match_phrase: {
-                'all_text.french_heavy': {
-                  query: query,
-                  boost: 1000,
-                },
+              multi_match: {
+                query: query,
+                fields: [
+                  'all_text.french_heavy',
+                  'all_text.french_light',
+                ],
+                type: 'phrase',
+                boost: 1000,
               },
             },
             {
@@ -63,8 +60,8 @@ async function search (query, size) {
                   'path.french_heavy',
                   'path.french_light',
                 ],
-                type: 'best_fields',
-                minimum_should_match: '80%',
+                type: 'most_fields',
+                boost: 500,
               },
             },
           ],
@@ -75,22 +72,22 @@ async function search (query, size) {
         pre_tags: ['<mark>'],
         post_tags: ['</mark>'],
         fields: {
+          'title.french_heavy': {
+            number_of_fragments: 20,
+          },
+          'title.french_light': {
+            number_of_fragments: 20,
+          },
           'all_text.french_heavy': {
             number_of_fragments: 20,
           },
           'all_text.french_light': {
             number_of_fragments: 20,
           },
-          'all_text.french_shingle': {
-            number_of_fragments: 20,
-          },
           'path.french_heavy': {
             number_of_fragments: 20,
           },
           'path.french_light': {
-            number_of_fragments: 20,
-          },
-          'title.french_light': {
             number_of_fragments: 20,
           },
         },
