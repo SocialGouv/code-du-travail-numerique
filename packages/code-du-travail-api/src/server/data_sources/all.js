@@ -29,20 +29,22 @@ async function search (query, size) {
           ],
           should: [
             {
-              match_phrase: {
-                'title.french_light': {
-                  query: query,
-                  boost: 1000,
-                  slop: 1,
-                },
+              multi_match: {
+                query: query,
+                fields: [
+                  'title.french_heavy',
+                  'title.french_light',
+                ],
+                type: 'best_fields',
+                minimum_should_match: '80%',
+                boost: 2000,
               },
             },
             {
               match_phrase: {
                 'all_text.french_light': {
                   query: query,
-                  boost: 1000,
-                  slop: 1,
+                  boost: 1500,
                 },
               },
             },
@@ -50,31 +52,19 @@ async function search (query, size) {
               match_phrase: {
                 'all_text.french_heavy': {
                   query: query,
-                  boost: 500,
-                  slop: 1,
+                  boost: 1000,
                 },
               },
             },
             {
-              match_phrase: {
-                'path.french_heavy': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match_phrase: {
-                'path.french_light': {
-                  query: query,
-                },
-              },
-            },
-            {
-              match: {
-                'all_text.french_light': {
-                  query: query,
-                  minimum_should_match: '75%',
-                },
+              multi_match: {
+                query: query,
+                fields: [
+                  'path.french_heavy',
+                  'path.french_light',
+                ],
+                type: 'best_fields',
+                minimum_should_match: '80%',
               },
             },
           ],
