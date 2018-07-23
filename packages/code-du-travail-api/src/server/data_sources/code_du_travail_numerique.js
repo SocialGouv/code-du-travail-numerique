@@ -22,10 +22,11 @@ async function search (query, size) {
               multi_match: {
                 query: query,
                 fields: [
-                  'all_text.french_heavy',
-                  'all_text.french_light',
+                  'all_text.french_stemmed',
+                  'all_text.french_exact',
                 ],
-                type: 'most_fields',
+                operator: 'and',
+                type: 'cross_fields',
                 minimum_should_match: '60%',
               },
             },
@@ -35,30 +36,27 @@ async function search (query, size) {
               multi_match: {
                 query: query,
                 fields: [
-                  'title.french_heavy',
-                  'title.french_light',
+                  'title.french_stemmed',
+                  'title.french_exact',
                 ],
                 type: 'most_fields',
                 boost: 2000,
               },
             },
             {
-              multi_match: {
-                query: query,
-                fields: [
-                  'all_text.french_heavy',
-                  'all_text.french_light',
-                ],
-                type: 'phrase',
-                boost: 1000,
+              match: {
+                'all_text.shingle': {
+                  query: query,
+                  boost: 1500,
+                },
               },
             },
             {
               multi_match: {
                 query: query,
                 fields: [
-                  'path.french_heavy',
-                  'path.french_light',
+                  'path.french_stemmed',
+                  'path.french_exact',
                 ],
                 type: 'most_fields',
                 boost: 500,
@@ -72,22 +70,22 @@ async function search (query, size) {
         pre_tags: ['<mark>'],
         post_tags: ['</mark>'],
         fields: {
-          'title.french_heavy': {
+          'title.french_stemmed': {
             number_of_fragments: 20,
           },
-          'title.french_light': {
+          'title.french_exact': {
             number_of_fragments: 20,
           },
-          'all_text.french_heavy': {
+          'all_text.french_stemmed': {
             number_of_fragments: 20,
           },
-          'all_text.french_light': {
+          'all_text.french_exact': {
             number_of_fragments: 20,
           },
-          'path.french_heavy': {
+          'path.french_stemmed': {
             number_of_fragments: 20,
           },
-          'path.french_light': {
+          'path.french_exact': {
             number_of_fragments: 20,
           },
         },
