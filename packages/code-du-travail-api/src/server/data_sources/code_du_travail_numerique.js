@@ -82,6 +82,9 @@ async function search (query, size) {
           'all_text.french_exact': {
             number_of_fragments: 20,
           },
+          'all_text.shingle': {
+            number_of_fragments: 20,
+          },
           'path.french_stemmed': {
             number_of_fragments: 20,
           },
