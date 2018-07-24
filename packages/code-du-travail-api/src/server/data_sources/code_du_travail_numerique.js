@@ -18,16 +18,44 @@ async function search (query, size) {
       query: {
         bool: {
           must: [
+          // Fuziness is ignored with multi_match's cross_fields.
+          // https://github.com/elastic/elasticsearch/issues/6866
+          // Put multi_match clause in standby, use an inner bool with 2 should clauses instead.
+          // {
+          //   multi_match: {
+          //     query: query,
+          //     fields: [
+          //       'all_text.french_stemmed',
+          //       'all_text.french_exact',
+          //     ],
+          //     operator: 'and',
+          //     cutoff_frequency: 0.0007,
+          //     type: 'cross_fields',
+          //   },
             {
-              multi_match: {
-                query: query,
-                fields: [
-                  'all_text.french_stemmed',
-                  'all_text.french_exact',
+              bool: {
+                should: [
+                  {
+                    match: {
+                      'all_text.french_exact': {
+                        query: query,
+                        operator: 'and',
+                        cutoff_frequency: 0.0007,
+                        fuzziness: 'AUTO',
+                      },
+                    },
+                  },
+                  {
+                    match: {
+                      'all_text.french_stemmed': {
+                        query: query,
+                        operator: 'and',
+                        cutoff_frequency: 0.0007,
+                        fuzziness: 'AUTO',
+                      },
+                    },
+                  },
                 ],
-                operator: 'and',
-                type: 'cross_fields',
-                cutoff_frequency: 0.0007,
               },
             },
           ],
