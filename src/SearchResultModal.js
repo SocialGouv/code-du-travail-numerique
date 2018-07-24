@@ -20,7 +20,7 @@ const modalStyles = {
   }
 };
 
-class SearchResultsModal extends React.Component {
+class SearchResultModal extends React.Component {
 
   state = {
     modalIsOpen: false,
@@ -58,4 +58,4 @@ class SearchResultsModal extends React.Component {
 
 }
 
-export default SearchResultsModal;
+export default SearchResultModal;
