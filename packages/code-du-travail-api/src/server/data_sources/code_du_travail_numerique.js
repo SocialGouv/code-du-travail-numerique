@@ -69,28 +69,15 @@ async function search (query, size) {
         order: 'score',
         pre_tags: ['<mark>'],
         post_tags: ['</mark>'],
+        fragment_size: 40,
         fields: {
-          'title.french_stemmed': {
-            number_of_fragments: 20,
-          },
-          'title.french_exact': {
-            number_of_fragments: 20,
-          },
-          'all_text.french_stemmed': {
-            number_of_fragments: 20,
-          },
-          'all_text.french_exact': {
-            number_of_fragments: 20,
-          },
-          'all_text.shingle': {
-            number_of_fragments: 20,
-          },
-          'path.french_stemmed': {
-            number_of_fragments: 20,
-          },
-          'path.french_exact': {
-            number_of_fragments: 20,
-          },
+          'title.french_stemmed': {},
+          'title.french_exact': {},
+          'all_text.french_stemmed': {},
+          'all_text.french_exact': {},
+          'all_text.shingle': {},
+          'path.french_stemmed': {},
+          'path.french_exact': {},
         },
       },
     },
