@@ -88,6 +88,11 @@ body {
   border-left-color: #528bff;
 }
 
+.search-results article.code_bfc {
+  border-left-width: 6px;
+  border-left-color: #000;
+}
+
 .search-results article h1 {
   font-weight: normal;
   font-size: 14px;

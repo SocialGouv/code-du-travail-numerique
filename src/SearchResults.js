@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import FaqModal from "./FaqModal.js";
 import FeedbackForm from "./FeedbackForm.js";
+import SearchResultModal from "./SearchResultModal.js";
 import SeeAlso from "./SeeAlso";
 
 
@@ -46,6 +46,8 @@ class Result extends React.Component {
       source = "Source : Service Public";
     } else if (data._source.source === 'fiches_ministere_travail') {
       source = "Source : Ministère du Travail";
+    } else if (data._source.source === 'code_bfc') {
+      source = "Source : DIRECCTE Bourgogne-Franche-Comté (Juin 2017)";
     }
 
     let body = (
@@ -58,14 +60,16 @@ class Result extends React.Component {
       </article>
     )
 
-    if (data._source.source === 'faq') {
+    // Modal.
+    if (data._source.source === 'faq' || data._source.source === 'code_bfc') {
       return (
-        <FaqModal question={data._source.title}>
+        <SearchResultModal title={data._source.title} text={data._source.text}>
           {body}
-        </FaqModal>
+        </SearchResultModal>
       )
     }
 
+    // External link.
     return (
       <a
         href={data._source.url}

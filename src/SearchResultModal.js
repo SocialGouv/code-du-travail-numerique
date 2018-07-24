@@ -1,8 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 
-const faq = require("./data/faq.json");
-
 
 Modal.setAppElement(document.getElementById("root"));
 
@@ -22,7 +20,7 @@ const modalStyles = {
   }
 };
 
-class FaqModal extends React.Component {
+class SearchResultsModal extends React.Component {
 
   state = {
     modalIsOpen: false,
@@ -43,7 +41,6 @@ class FaqModal extends React.Component {
   };
 
   render () {
-    let faqItem = faq.find(item => item['question'] === this.props.question);
     return (
       <div>
         <a href="#" onClick={this.openModal} className="search-results-link">{this.props.children}</a>
@@ -52,8 +49,8 @@ class FaqModal extends React.Component {
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
         >
-          <h2>{faqItem.question}</h2>
-          <div dangerouslySetInnerHTML={{__html:faqItem.reponse}}></div>
+          <h2>{this.props.title}</h2>
+          <div dangerouslySetInnerHTML={{__html:this.props.text}}></div>
         </Modal>
       </div>
     )
@@ -61,4 +58,4 @@ class FaqModal extends React.Component {
 
 }
 
-export default FaqModal;
+export default SearchResultsModal;
