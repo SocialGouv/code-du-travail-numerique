@@ -27,7 +27,7 @@ async function search (query, size) {
                 ],
                 operator: 'and',
                 type: 'cross_fields',
-                minimum_should_match: '60%',
+                cutoff_frequency: 0.0007,
               },
             },
           ],
