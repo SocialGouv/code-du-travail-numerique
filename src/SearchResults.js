@@ -48,6 +48,8 @@ class Result extends React.Component {
       source = "Source : Ministère du Travail";
     } else if (data._source.source === 'code_bfc') {
       source = "Source : DIRECCTE Bourgogne-Franche-Comté (Juin 2017)";
+    } else if (data._source.source === 'conventions_collectives') {
+      source = "Source : Legifrance";
     }
 
     let body = (

@@ -73,6 +73,11 @@ body {
   border-left-color: #4edc7c;
 }
 
+.search-results article.conventions_collectives {
+  border-left-width: 6px;
+  border-left-color: #97d8ac;
+}
+
 .search-results article.faq {
   border-left-width: 6px;
   border-left-color: #ffc63c;
