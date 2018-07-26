@@ -90,13 +90,11 @@ async function search (query, size) {
                 boost: 500,
               },
             },
-            // Temporarily put "fonction publique" results in a less prominent position.
+            // Temporarily put "fonction publique" and "agent public" results in a less prominent position.
             {
-              match_phrase: {
-                'title.shingle': {
-                  query: 'fonction publique',
-                  boost: -2000,
-                },
+              query_string: {
+                query: '(title.shingle:"fonction publique") OR (title.shingle:"agent public")',
+                boost: -2000,
               },
             },
           ],
