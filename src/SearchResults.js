@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import FeedbackForm from "./FeedbackForm.js";
-import SearchResultModal from "./SearchResultModal.js";
 import SeeAlso from "./SeeAlso";
+import { Link } from '../routes'
 
 
 const NoResultContainer = styled.div`margin-top: 20px;`;
@@ -62,12 +62,12 @@ class Result extends React.Component {
       </article>
     )
 
-    // Modal.
+    // Internal link.
     if (data._source.source === 'faq' || data._source.source === 'code_bfc') {
       return (
-        <SearchResultModal title={data._source.title} text={data._source.text}>
-          {body}
-        </SearchResultModal>
+        <Link route="index" params={{ type: 'result', id: data._id }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
       )
     }
 

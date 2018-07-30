@@ -1,8 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
 
-
-Modal.setAppElement(document.getElementById("root"));
+if (typeof document !== 'undefined') {
+  Modal.setAppElement(document.getElementById("root"));
+}
 
 const modalStyles = {
   overlay: {
