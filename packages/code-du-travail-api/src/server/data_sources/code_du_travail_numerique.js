@@ -126,6 +126,29 @@ async function search (query, size) {
 
 }
 
+/**
+ * Get a single JSON document from the index based on its id.
+ *
+ * @param {string} id The item ID to fetch.
+ * @returns {Object} An elasticsearch response.
+ */
+async function getSingleItem (id) {
+
+  let elasticsearchQuery = {
+    id: id,
+    index: elasticsearchIndexName,
+    type: '_all',
+  }
+
+  try {
+    return await elasticsearchClient.get(elasticsearchQuery)
+  } catch (error) {
+    console.trace(error.message)
+  }
+
+}
+
 module.exports = {
+  getSingleItem,
   search,
 }
