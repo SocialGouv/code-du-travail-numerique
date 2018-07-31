@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
-import FeedbackForm from "./FeedbackForm.js";
-import SeeAlso from "./SeeAlso";
+import FeedbackForm from './FeedbackForm.js'
+import SeeAlso from './SeeAlso'
 import { Link } from '../routes'
 
 
-const NoResultContainer = styled.div`margin-top: 20px;`;
+const NoResultContainer = styled.div`margin-top: 20px;`
 
 const NoResult = ({ data }) => (
   <NoResultContainer className="notification error">
     <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
   </NoResultContainer>
-);
+)
 
 
 const ResultsContainer = ({ data }) => (
@@ -21,35 +21,35 @@ const ResultsContainer = ({ data }) => (
       <Result key={result['_id']} data={result} />
     ))}
   </div>
-);
+)
 
 class Result extends React.Component {
 
   render() {
 
-    let data = this.props.data;
+    let data = this.props.data
 
-    let excerpt = '';
+    let excerpt = ''
     if (data.highlight) {
-      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0];
+      let firstHighlightObjectKeyName = Object.keys(data.highlight)[0]
       // Use the first `n` available highlights as excerpt.
-      const numExcerpts = 3;
-      excerpt = data.highlight[firstHighlightObjectKeyName].slice(0, numExcerpts).join(' … ');
+      const numExcerpts = 3
+      excerpt = data.highlight[firstHighlightObjectKeyName].slice(0, numExcerpts).join(' … ')
     }
 
-    let source;
+    let source
     if (data._source.source === 'faq') {
-      source = "Source : FAQ";
+      source = "Source : FAQ"
     } else if (data._source.source === 'code_du_travail') {
-      source = "Source : Legifrance";
+      source = "Source : Legifrance"
     } else if (data._source.source === 'fiches_service_public') {
-      source = "Source : Service Public";
+      source = "Source : Service Public"
     } else if (data._source.source === 'fiches_ministere_travail') {
-      source = "Source : Ministère du Travail";
+      source = "Source : Ministère du Travail"
     } else if (data._source.source === 'code_bfc') {
-      source = "Source : DIRECCTE Bourgogne-Franche-Comté (Juin 2017)";
+      source = "Source : DIRECCTE Bourgogne-Franche-Comté (Juin 2017)"
     } else if (data._source.source === 'conventions_collectives') {
-      source = "Source : Legifrance";
+      source = "Source : Legifrance"
     }
 
     let body = (
@@ -65,7 +65,7 @@ class Result extends React.Component {
     // Internal link.
     if (data._source.source === 'faq' || data._source.source === 'code_bfc') {
       return (
-        <Link route="index" params={{ type: 'result', id: data._id }}>
+        <Link route="index" params={{ type: 'questions', id: data._id }}>
           <a className="search-results-link">{body}</a>
         </Link>
       )
@@ -87,18 +87,18 @@ class Result extends React.Component {
 }
 
 
-const ResultsWrapper = styled.div`text-align: left; margin-top: 20px;`;
+const ResultsWrapper = styled.div`margin-top: 20px;`
 
 class SearchResults extends React.Component {
 
   render() {
 
-    let data = this.props.data;
-    let query = this.props.query;
+    let data = this.props.data
+    let query = this.props.query
 
     // No query.
     if (!data) {
-      return null;
+      return null
     }
 
     // No results.
@@ -112,10 +112,10 @@ class SearchResults extends React.Component {
         <SeeAlso />
         <FeedbackForm query={query} />
       </ResultsWrapper>
-    );
+    )
 
   }
 
 }
 
-export default SearchResults;
+export default SearchResults

@@ -1,33 +1,16 @@
-import React from "react";
+import React from 'react'
 import Router from 'next/router'
-import styled from "styled-components";
+import styled from 'styled-components'
 import { withRouter } from 'next/router'
 
-import Panel from "./Panel";
-import SearchResults from "./SearchResults";
+import api from '../conf/api.js'
+import ErrorXhr from './ErrorXhr'
+import Panel from './Panel'
+import SearchResult from './SearchResult'
+import SearchResults from './SearchResults'
 
 
-let API = 'https://cdtn-api.num.social.gouv.fr/api/v1/search?q=';
-
-if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
-  console.log('Running in dev mode on localhost')
-  API = 'http://localhost:1337/api/v1/search?q=';
-}
-
-
-const ErrorXhrContainer = styled.div`margin-top: 20px;`;
-
-class ErrorXhr extends React.Component {
-  render() {
-    const error = this.props.error.message;
-    return (<ErrorXhrContainer className="notification error">
-      <p>{error}</p>
-    </ErrorXhrContainer>)
-  }
-}
-
-
-const SearchContainer = styled.div`padding: 20px; text-align: center;`;
+const SearchContainer = styled.div`padding: 20px;`
 
 class Search extends React.Component {
 
@@ -41,59 +24,58 @@ class Search extends React.Component {
   componentDidMount () {
     if (Router.query && Router.query.q) {
       this.setState({query: decodeURI(Router.query.q)}, () => {
-        this.fetchResults();
+        this.fetchResults()
       })
     }
   }
 
   reset () {
-    this.setState({data: null, query: ''});
+    this.setState({data: null, query: ''})
   }
 
   handleChange = event => {
-    this.setState({query: event.target.value});
+    this.setState({query: event.target.value})
   }
 
   handleSubmit = event => {
-    event.preventDefault();
+    event.preventDefault()
     if (!this.state.query) {
-      return this.reset();
+      return this.reset()
     }
-    Router.push({pathname: '/', query: { q: encodeURI(this.state.query) }});
-    this.fetchResults();
+    Router.push({pathname: '/', query: { q: encodeURI(this.state.query) }})
+    this.fetchResults()
   }
 
   handleKeyDown = event => {
     if (event.keyCode === 27) {
-      this.reset();
+      this.reset()
     }
   }
 
   fetchResults = () => {
     this.setState({pendingXHR: true, error: null}, () => {
-      fetch(API + this.state.query)
+      fetch(`${api.BASE_URL}/search?q=${this.state.query}`)
         .then(response => {
           if (response.ok) {
-            return response.json();
+            return response.json()
           }
-          throw new Error("Un problème est survenu.");
+          throw new Error(api.ERROR_MSG)
         })
         .then(data => this.setState({data, pendingXHR: false}))
-        .catch(error => this.setState({error, pendingXHR: false}));
-    });
+        .catch(error => this.setState({error, pendingXHR: false}))
+    })
   }
 
   render() {
 
-    if (this.props.router.query && this.props.router.query.type === 'result') {
-      console.log('---------------------------------');
-      console.log('Display result');
-    };
+    const errorJsx = this.state.error ? (<ErrorXhr error={this.state.error.message} />) : null
+    const loadingJsx = this.state.pendingXHR ? (<p>Chargement…</p>) : null
+    const showSingleResult = this.props.router.query && this.props.router.query.type === 'questions'
 
-    const data = this.state.data;
-    const query = this.state.query;
-    const errorJsx = this.state.error ? (<ErrorXhr error={this.state.error} />) : null;
-    const loadingJsx = this.state.pendingXHR ? (<p>Chargement…</p>) : null;
+    let content = showSingleResult
+      ? (<SearchResult data={this.state.data} id={this.props.router.query.id} />)
+      : (<SearchResults data={this.state.data} query={this.state.query} />)
+
     return (
       <SearchContainer>
         <Panel title="Posez votre question sur le droit du travail">
@@ -110,11 +92,12 @@ class Search extends React.Component {
           </form>
           {loadingJsx}
           {errorJsx}
-          <SearchResults data={data} query={query} />
+          {content}
         </Panel>
       </SearchContainer>
-    );
+    )
+
   }
 }
 
-export default withRouter(Search);
+export default withRouter(Search)
