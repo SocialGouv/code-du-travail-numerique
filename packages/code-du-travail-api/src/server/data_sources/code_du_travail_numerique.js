@@ -1,6 +1,7 @@
 const elasticsearchClient = require('../conf/elasticsearch.js')
 
 const elasticsearchIndexName = 'code_du_travail_numerique'
+const elasticsearchTypeName = 'code_du_travail_numerique'
 
 /**
  * Return documents matching the given query from Elasticsearch.
@@ -137,7 +138,7 @@ async function getSingleItem (id) {
   let elasticsearchQuery = {
     id: id,
     index: elasticsearchIndexName,
-    type: '_all',
+    type: elasticsearchTypeName,
   }
 
   try {
