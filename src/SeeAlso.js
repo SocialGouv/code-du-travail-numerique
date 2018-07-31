@@ -25,13 +25,12 @@ const Block = styled.div`
 `;
 
 const BlockTitle = styled.div`
-  color: ${props => props.theme.primary};
   svg {
     vertical-align: bottom;
   }
   font-size: 1.2em;
   padding-bottom: 10px;
-  border-bottom: 2px solid ${props => props.theme.primary};
+  border-bottom: 2px solid;
 `;
 
 const TwoCols = styled.div`

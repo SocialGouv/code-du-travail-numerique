@@ -22,7 +22,7 @@ const LinkText = styled.div`
 
 const StyledAccordion = styled(Accordion)`
   background-color: white;
-  border: 1px solid ${props => props.theme.light2};
+  border: 1px solid;
   margin: 5px;
   line-height: 1.8em;
   .accordion__title {

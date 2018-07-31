@@ -14,14 +14,13 @@ import SeeAlso from "./SeeAlso";
 
 const BlockTitle = styled.div`
   font-size: 1.2em;
-  color: ${props => props.theme.primary};
   svg {
     vertical-align: bottom;
   }
   padding-bottom: 10px;
   margin-bottom: 10px;
   margin-top: 20px;
-  border-bottom: 2px solid ${props => props.theme.primary};
+  border-bottom: 2px solid;
 `;
 
 
