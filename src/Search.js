@@ -1,80 +1,84 @@
-import React from 'react'
-import Router from 'next/router'
-import styled from 'styled-components'
-import { withRouter } from 'next/router'
+import React from "react";
+import Router from "next/router";
+import styled from "styled-components";
+import { withRouter } from "next/router";
 
-import api from '../conf/api.js'
-import ErrorXhr from './ErrorXhr'
-import Panel from './Panel'
-import SearchResult from './SearchResult'
-import SearchResults from './SearchResults'
+import api from "../conf/api.js";
+import ErrorXhr from "./ErrorXhr";
+import Panel from "./Panel";
+import SearchResult from "./SearchResult";
+import SearchResults from "./SearchResults";
 
-
-const SearchContainer = styled.div`padding: 20px;`
+const SearchContainer = styled.div`
+  padding: 20px;
+`;
 
 class Search extends React.Component {
-
   state = {
-    query: '',
+    query: "",
     data: null,
     error: null,
-    pendingXHR: false,
-  }
+    pendingXHR: false
+  };
 
-  componentDidMount () {
+  componentDidMount() {
     if (Router.query && Router.query.q) {
-      this.setState({query: decodeURI(Router.query.q)}, () => {
-        this.fetchResults()
-      })
+      this.setState({ query: decodeURI(Router.query.q) }, () => {
+        this.fetchResults();
+      });
     }
   }
 
-  reset () {
-    this.setState({data: null, query: ''})
+  reset() {
+    this.setState({ data: null, query: "" });
   }
 
   handleChange = event => {
-    this.setState({query: event.target.value})
-  }
+    this.setState({ query: event.target.value });
+  };
 
   handleSubmit = event => {
-    event.preventDefault()
+    event.preventDefault();
     if (!this.state.query) {
-      return this.reset()
+      return this.reset();
     }
-    Router.push({pathname: '/', query: { q: encodeURI(this.state.query) }})
-    this.fetchResults()
-  }
+    Router.push({ pathname: "/", query: { q: encodeURI(this.state.query) } });
+    this.fetchResults();
+  };
 
   handleKeyDown = event => {
     if (event.keyCode === 27) {
-      this.reset()
+      this.reset();
     }
-  }
+  };
 
   fetchResults = () => {
-    this.setState({pendingXHR: true, error: null}, () => {
+    this.setState({ pendingXHR: true, error: null }, () => {
       fetch(`${api.BASE_URL}/search?q=${this.state.query}`)
         .then(response => {
           if (response.ok) {
-            return response.json()
+            return response.json();
           }
-          throw new Error(api.ERROR_MSG)
+          throw new Error(api.ERROR_MSG);
         })
-        .then(data => this.setState({data, pendingXHR: false}))
-        .catch(error => this.setState({error, pendingXHR: false}))
-    })
-  }
+        .then(data => this.setState({ data, pendingXHR: false }))
+        .catch(error => this.setState({ error, pendingXHR: false }));
+    });
+  };
 
   render() {
+    const errorJsx = this.state.error ? (
+      <ErrorXhr error={this.state.error.message} />
+    ) : null;
+    const loadingJsx = this.state.pendingXHR ? <p>Chargement…</p> : null;
+    const showSingleResult =
+      this.props.router.query && this.props.router.query.type === "questions";
 
-    const errorJsx = this.state.error ? (<ErrorXhr error={this.state.error.message} />) : null
-    const loadingJsx = this.state.pendingXHR ? (<p>Chargement…</p>) : null
-    const showSingleResult = this.props.router.query && this.props.router.query.type === 'questions'
-
-    let content = showSingleResult
-      ? (<SearchResult data={this.state.data} id={this.props.router.query.id} />)
-      : (<SearchResults data={this.state.data} query={this.state.query} />)
+    let content = showSingleResult ? (
+      <SearchResult data={this.state.data} id={this.props.router.query.id} />
+    ) : (
+      <SearchResults data={this.state.data} query={this.state.query} />
+    );
 
     return (
       <SearchContainer>
@@ -88,16 +92,17 @@ class Search extends React.Component {
                 onKeyDown={this.handleKeyDown}
               />
             </label>
-            <button className="button" type="submit">Rechercher</button>
+            <button className="button" type="submit">
+              Rechercher
+            </button>
           </form>
           {loadingJsx}
           {errorJsx}
           {content}
         </Panel>
       </SearchContainer>
-    )
-
+    );
   }
 }
 
-export default withRouter(Search)
+export default withRouter(Search);
