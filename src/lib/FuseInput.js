@@ -17,7 +17,7 @@ const DEFAULT_FUSE_OPTIONS = {
   //distance: 100,
   maxPatternLength: 16,
   minMatchCharLength: 3,
-  keys: ["labelNormalized"]
+  keys: ["labelNormalized", "ape"]
 };
 
 // normalize strings for i18n

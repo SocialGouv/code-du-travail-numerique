@@ -6,6 +6,9 @@ import FuseInput from "./lib/FuseInput";
 
 import kali from "./data/kali.json";
 import idcc from "./data/idcc.json";
+import apeByIdcc from "./data/apeByIdcc.json";
+
+const normalizeIdcc = idcc => (("" + idcc).length === 4 ? "0" + idcc : idcc);
 
 const conventions = []
   // use https://www.legifrance.gouv.fr/rechConvColl.do?reprise=true&page=1
@@ -18,8 +21,10 @@ const conventions = []
   // use http://travail-emploi.gouv.fr/dialogue-social/negociation-collective/conventions-collectives/article/conventions-collectives-nomenclatures#2
   .concat(
     Object.keys(idcc).map(k => ({
-      label: `${k}: ${idcc[k]}`,
+      label: `IDCC ${k}: ${idcc[k]}`,
       id: k,
+      ape:
+        apeByIdcc[normalizeIdcc(k)] && apeByIdcc[normalizeIdcc(k)].join(", "),
       url: `https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${parseInt(
         k
       )}` // TODO: better
