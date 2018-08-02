@@ -6,7 +6,6 @@ import ErrorXhr from "./ErrorXhr";
 // Display the details of a single result.
 
 class SearchResult extends React.Component {
-
   state = {
     data: null,
     error: null,
@@ -43,28 +42,27 @@ class SearchResult extends React.Component {
   };
 
   render() {
-    if (this.state.pendingXHR) {
+    const { data, error, pendingXHR } = this.state;
+
+    if (pendingXHR) {
       return <p>Chargement…</p>;
     }
 
-    if (this.state.error) {
-      return <ErrorXhr error={this.state.error.message} />;
+    if (error) {
+      return <ErrorXhr error={error.message} />;
     }
 
-    if (!this.state.data) {
+    if (!data) {
       return null;
     }
 
     return (
       <div>
-        <h1>{this.state.data._source.title}</h1>
-        <div
-          dangerouslySetInnerHTML={{ __html: this.state.data._source.text }}
-        />
+        <h1>{data._source.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: data._source.text }} />
       </div>
     );
   }
-
 }
 
 export default SearchResult;
