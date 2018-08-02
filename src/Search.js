@@ -67,17 +67,16 @@ class Search extends React.Component {
   };
 
   render() {
-    const errorJsx = this.state.error ? (
-      <ErrorXhr error={this.state.error.message} />
-    ) : null;
-    const loadingJsx = this.state.pendingXHR ? <p>Chargement…</p> : null;
-    const showSingleResult =
-      this.props.router.query && this.props.router.query.type === "questions";
+    const { data, error, pendingXHR, query } = this.state;
+    const { router } = this.props;
 
+    const errorJsx = error ? <ErrorXhr error={error.message} /> : null;
+    const loadingJsx = pendingXHR ? <p>Chargement…</p> : null;
+    const showSingleResult = router.query && router.query.type === "questions";
     let content = showSingleResult ? (
-      <SearchResult data={this.state.data} id={this.props.router.query.id} />
+      <SearchResult data={data} id={router.query.id} />
     ) : (
-      <SearchResults data={this.state.data} query={this.state.query} />
+      <SearchResults data={data} query={query} />
     );
 
     return (
@@ -87,7 +86,7 @@ class Search extends React.Component {
             <label>
               <input
                 type="text"
-                value={this.state.query}
+                value={query}
                 onChange={this.handleChange}
                 onKeyDown={this.handleKeyDown}
               />
