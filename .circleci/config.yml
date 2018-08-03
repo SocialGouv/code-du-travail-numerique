@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - master 
+        - toto
     docker:
       - image: circleci/node:8
     working_directory: ~/repo
