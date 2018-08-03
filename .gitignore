@@ -25,3 +25,7 @@ node_modules/
 # Next.js #
 ################
 .next
+
+# dotenv environment variables file
+###################################
+.env

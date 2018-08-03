@@ -2,7 +2,21 @@
 
 Demo : https://socialgouv.github.io/code-du-travail-explorer/
 
- - Actuellement les datas sont en dur dans `/src/data` et ce sera sûrement remplacé par Elastic Search à un moment
+## Installation de l'environnement de développement
+
+### Paramétrage du fichier `.env`
+
+    NODE_ENV=development
+
+### Création de l'instance Docker
+
+```bash
+$ docker-compose up
+```
+
+## Navigation par thèmes
+
+ - Actuellement, une partie des datas sont en dur dans `/src/data` :
     - Les IDs poseidon servent de lien
     - articles.js : extrait des articles eposeidon.json
     - faq.json : FAQ avec en plus un lien vers IDs poseidon
@@ -35,7 +49,6 @@ Pour aller sur une fiche thème directement, ajouter`/#/themes/6100` à l'url de
   - importer les différentes sources
   - deployer une version + https://github.com/appbaseio/mirage ?
 
-
 ### Divers
  - documenter [src/Articulation.js](./src/Articulation.js)
  - documenter les [règles](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcblxudGhlbWUtLT5Ye0wyMjUzID99XG5YLS0-MVtMMjI1My0xIDogMTMgdGhlbWVzXVxuWC0tPjJbTDIyNTMtMiA6IDQgdGhlbWVzXVxuWC0tPkF1dHJlXG5cbjEtLT5BMShNZXNzYWdlIEFydGljdWxhdGlvbiAxKVxuMi0tPkEyKE1lc3NhZ2UgQXJ0aWN1bGF0aW9uIDIpXG5BdXRyZS0tPkEzKE1lc3NhZ2UgQXJ0aWN1bGF0aW9uIDMpIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0) ?
@@ -44,7 +57,6 @@ Pour aller sur une fiche thème directement, ajouter`/#/themes/6100` à l'url de
  - enrichissement de la FAQ via discourse ou autre outil collaboratif ?
  - analyse des textes de loi :
     - https://github.com/digitalbazaar/jsonld.js ?
-    -
 
 ## Intégration Elastic :
 
