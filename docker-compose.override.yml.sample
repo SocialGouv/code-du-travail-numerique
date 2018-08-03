@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  node:
+    container_name: code-du-travail-explorer
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./docker/prod/Dockerfile
+    ports:
+      - 3000:3000
+    restart: always
