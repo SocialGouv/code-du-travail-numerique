@@ -15,5 +15,6 @@ services:
     volumes:
       - ./conf:/app/conf
       - ./pages:/app/pages
-      - ./static:/app/static
+      - ./routes.js:/app/routes.js
       - ./src:/app/src
+      - ./static:/app/static
