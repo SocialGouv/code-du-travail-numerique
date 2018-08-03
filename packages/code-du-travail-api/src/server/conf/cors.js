@@ -2,9 +2,14 @@
 // https://github.com/koajs/cors/issues/12
 
 const validOrigins = [
+
   'http://localhost:3000', // URL + port of the frontend (in dev mode).
+
+  'https://codedutravail.num.social.gouv.fr',
+
   'https://code-du-travail.beta.gouv.fr',
   'https://socialgouv.github.io',
+
 ]
 
 function originIsValid (origin) {
