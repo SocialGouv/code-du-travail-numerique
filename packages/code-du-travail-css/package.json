@@ -1,0 +1,20 @@
+{
+  "name": "work-in-france",
+  "version": "0.0.1",
+  "description": "La plateforme de demande d'autorisation provisoires de travail.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SocialGouv/work-in-france.git"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "postcss --config postcss.config.js src/css/styles.css --output src/bundle.css --watch --verbose"
+  },
+  "devDependencies": {
+    "cssnano": "^4.0.5",
+    "postcss-cli": "^6.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-preset-env": "^5.3.0",
+    "svgo": "^1.0.5"
+  }
+}

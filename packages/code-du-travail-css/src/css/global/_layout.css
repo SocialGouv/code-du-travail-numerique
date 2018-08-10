@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    border-top: 5px solid var(--color-blue);
+    font-size: var(--font-size-base);
+}
+
+html {
+    color: var(--color-dark-text);
+    background: var(--color-dark-background);
+    font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: var(--line-height-base);  /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */
+    -webkit-text-size-adjust: 100%;  /* Prevent font scaling in landscape while allowing user zoom. */
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    color: var(--color-light-text);
+    background: var(--color-light-background);
+}
+
+.section-light {
+    padding: var(--spacing-inter-component) 0;
+    background-color: var(--color-light-background);
+}
+
+.section-dark {
+    padding: var(--spacing-inter-component) 0;
+    background-color: var(--color-dark-background);
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+.wrapper-dark {
+    border-radius: var(--border-radius-base);
+    border: 1px solid var(--color-element-border);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--color-dark-background);
+    color: var(--color-dark-text);
+}
+
+.wrapper-light {
+    border-radius: var(--border-radius-base);
+    border: 1px solid var(--color-element-border);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--color-white);
+    color: var(--color-dark-text);
+}
+
+/* Vertical rhythm.
+--------------------------------------------------------------------------- */
+
+address,
+blockquote,
+dl,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+table,
+ul {
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+}

@@ -1,0 +1,49 @@
+/* Forms.
+--------------------------------------------------------------------------- */
+
+label {
+    cursor: pointer;
+}
+
+label + textarea,
+label > textarea {
+    vertical-align: top;
+}
+
+fieldset {
+    border: 1px solid var(--color-element-border);
+    padding: var(--spacing-base);
+}
+
+textarea,
+input:not(
+    [type=button],
+    [type=checkbox],
+    [type=file],
+    [type=hidden],
+    [type=image],
+    [type=radio],
+    [type=range],
+    [type=reset],
+    [type=submit]
+) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    background: var(--color-white);
+    border: 1px solid var(--color-element-border);
+    border-radius: var(--border-radius-base);
+    margin: 0;
+    max-width: 100%;
+    padding: var(--spacing-small) var(--spacing-base);
+}
+
+textarea {
+    min-height: 8rem;
+}

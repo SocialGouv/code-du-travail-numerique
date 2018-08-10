@@ -1,0 +1,61 @@
+.categories {
+    /* Gutters between items. */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
+    --flex-gutter-size: 10px;
+}
+
+.categories header {
+    margin-bottom: var(--spacing-large);
+}
+
+.categories__list {
+    display: flex; /* Flex layout so items have equal height. */
+    list-style-type: none;
+    padding: 0;
+    /* Use negative margins on sides to create gutters that do not also
+    create a gutter at the edges of the container. */
+    margin: calc(var(--flex-gutter-size) * -1);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.categories__list-item {
+
+    width: 200px;
+    flex: auto; /* Sizes the item based on the width/height properties, but makes them fully flexible. */
+    margin: var(--flex-gutter-size); /* Gutters between items. */
+    text-align: center;
+
+    & a,
+    & a:link,
+    & a:visited {
+        display: block;
+        height: 100%;
+        padding: var(--spacing-small) var(--spacing-base);
+        border: 1px solid var(--color-element-border);
+        border-radius: var(--border-radius-base);
+        background: var(--color-white);
+        color: var(--color-light-text);
+        text-decoration: none;
+        transition: all .1s cubic-bezier(0.250, 0.460, 0.450, 0.940), color 0s;
+    }
+
+    & a:focus,
+    & a:hover,
+    & a:active {
+        text-decoration: underline;
+        transform: scale(1.1);
+    }
+
+    & a *:not(img) {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    & a img {
+        display: inline-block;
+        width: 2.5rem;
+        margin: var(--spacing-small) 0;
+    }
+
+}

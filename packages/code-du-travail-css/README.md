@@ -1,2 +1,9 @@
-# code-du-travail-html
-Template HTML et CSS pour le Code du Travail numérique
+# Code du travail - HTML
+
+## Installation de l'environnement de développement
+
+```shell
+npm install
+npm run dev
+cd src/ && python -m SimpleHTTPServer
+```
