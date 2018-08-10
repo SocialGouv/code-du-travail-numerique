@@ -5,5 +5,5 @@
 ```shell
 npm install
 npm run dev
-cd doc/ && python -m SimpleHTTPServer
+cd docs/ && python -m SimpleHTTPServer
 ```

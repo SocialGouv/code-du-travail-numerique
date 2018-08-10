@@ -8,7 +8,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "postcss --config postcss.config.js doc/css/styles.css --output doc/bundle.css --watch --verbose"
+    "dev": "postcss --config postcss.config.js docs/css/styles.css --output docs/bundle.css --watch --verbose"
   },
   "devDependencies": {
     "cssnano": "^4.0.5",
