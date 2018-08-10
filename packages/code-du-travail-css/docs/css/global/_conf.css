@@ -18,8 +18,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(../assets/fonts/muli-latin-400.woff2) format('woff2'),
-       url(../assets/fonts/muli-latin-400.woff) format('woff');
+  src: url(assets/fonts/muli-latin-400.woff2) format('woff2'),
+       url(assets/fonts/muli-latin-400.woff) format('woff');
 }
 
 @font-face {
@@ -27,8 +27,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url(../assets/fonts/muli-latin-700.woff2) format('woff2'),
-       url(../assets/fonts/muli-latin-700.woff) format('woff');
+  src: url(assets/fonts/muli-latin-700.woff2) format('woff2'),
+       url(assets/fonts/muli-latin-700.woff) format('woff');
 }
 
 /* Variables.

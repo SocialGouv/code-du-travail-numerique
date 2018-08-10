@@ -32,7 +32,7 @@ https://webaim.org/techniques/css/invisiblecontent/
 .external-link__before::before {
     content: '';
     display: inline-block;
-    background: url(../assets/icons/external-link.svg) no-repeat 100% 50%;
+    background: url(assets/icons/external-link.svg) no-repeat 100% 50%;
     background-size: 15px;
     width: 15px;
     height: 15px;
@@ -43,7 +43,7 @@ https://webaim.org/techniques/css/invisiblecontent/
 .external-link__after::after {
     content: '';
     display: inline-block;
-    background: url(../assets/icons/external-link.svg) no-repeat 100% 50%;
+    background: url(assets/icons/external-link.svg) no-repeat 100% 50%;
     background-size: 15px;
     width: 15px;
     height: 15px;
