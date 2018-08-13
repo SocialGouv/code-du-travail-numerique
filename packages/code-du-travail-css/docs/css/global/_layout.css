@@ -50,6 +50,12 @@ main {
     color: var(--color-dark-text);
 }
 
+/* Limit characters per line, helps the reader to keep a pleasant and natural pace while reading. */
+.wrapper-narrow {
+    max-width: 38.75rem;
+    margin: 0 auto;
+}
+
 /* Vertical rhythm.
 --------------------------------------------------------------------------- */
 
