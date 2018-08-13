@@ -60,6 +60,7 @@ https://webaim.org/techniques/css/invisiblecontent/
     height: var(--spacing-large);
     margin-right: var(--spacing-small);
     vertical-align: middle;
+    border: 1px solid var(--color-element-border);
 }
 
 .style-guide__color__black::before                  { background: var(--color-black); }
