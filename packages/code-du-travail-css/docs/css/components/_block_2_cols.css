@@ -26,8 +26,4 @@
         margin-right: var(--spacing-small);
     }
 
-    & ul {
-        padding-left: var(--spacing-medium);
-    }
-
 }
