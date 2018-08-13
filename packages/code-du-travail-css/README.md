@@ -10,6 +10,11 @@ Il permet de transformer le code CSS à l'aide de plug-ins JavaScript (voir le f
 - [`postcss-import`](https://github.com/postcss/postcss-import) pour *inliner* les `@import`s CSS et mettre en place un système d'importation de *partials* (à la SASS ou Stylus)
 - [`cssnano`](https://cssnano.co)
 
+## Conseils pour contribuer
+
+- Le résultat doit respecter [les critères RGAA](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html) du référentiel du S.I. de l'État
+- Le HTML [doit être valide](https://html5.validator.nu)
+
 ## Installation de l'environnement de développement
 
 ```shell
