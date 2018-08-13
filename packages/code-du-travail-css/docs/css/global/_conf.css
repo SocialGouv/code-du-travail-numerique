@@ -1,12 +1,3 @@
-/* Box-model.
---------------------------------------------------------------------------- */
-
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
 /* Fonts.
 https://calendar.perfplanet.com/2016/no-font-face-bulletproof-syntax/
 https://fontlibrary.org/fr/font/evolventa
@@ -46,7 +37,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
 
     /* https://webaim.org/resources/contrastchecker/?bcolor=f9f9fc&fcolor=4c5467 */
     --color-light-background: #f9f9fc;
-    --color-light-text: #4c5467;
+    --color-light-text: #4c5467; /* Also used as fill color in SVG files. */
     /* https://webaim.org/resources/contrastchecker/?bcolor=ebeff3&fcolor=434956 */
     --color-dark-background: #ebeff3;
     --color-dark-text: #434956;
