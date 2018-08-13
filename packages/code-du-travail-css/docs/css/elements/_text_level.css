@@ -56,4 +56,5 @@ code {
     font-family: "Consolas", "Monaco", "Menlo", monospace;
     background: var(--color-element-background);
     border: 1px solid var(--color-element-border);
+    word-wrap: break-word;
 }
