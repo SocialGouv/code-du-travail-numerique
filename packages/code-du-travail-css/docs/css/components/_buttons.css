@@ -66,23 +66,23 @@ The <span> element will be moved away from the normal flow of the document.
 
 .btn__img {
 
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 
-  /*
-  Artificially inject an empty text node with a width, otherwise the <button>
-  would be empty (because it's only child has a `.hidden` class) and properties
-  related to text (such as font-size, line-height, etc.) would not be applied.
-  This would result in buttons with incoherent sizes.
-  */
-  &::after {
-    content: ' ';
-    min-width: 1rem;
-    display: inline-block;
-  }
+    /*
+    Artificially inject an empty text node with a width, otherwise the <button>
+    would be empty (because it's only child has a `.hidden` class) and properties
+    related to text (such as font-size, line-height, etc.) would not be applied.
+    This would result in buttons with incoherent sizes.
+    */
+    &::after {
+        content: ' ';
+        min-width: 1rem;
+        display: inline-block;
+    }
 
 }
 
 .btn__img__search {
-  background-image: url(assets/icons/search.svg);
+    background-image: url(assets/icons/search.svg);
 }
