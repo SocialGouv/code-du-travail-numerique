@@ -136,6 +136,7 @@ It is also possible to nest a `.wrapper-narrow` class in a `.wrapper-dark` or
 /* Vertical rhythm.
 --------------------------------------------------------------------------- */
 
+@custom-selector :--vertical-rythm-elements
 address,
 blockquote,
 dl,
@@ -151,7 +152,15 @@ ol,
 p,
 pre,
 table,
-ul {
+ul;
+
+:--vertical-rythm-elements {
     margin-top: 0;
     margin-bottom: var(--spacing-base);
+}
+
+/* Cancel vertical rhythm for last childs in `.container` or `wrapper-*`. */
+.container > :--vertical-rythm-elements:last-child,
+[class^="wrapper-"] > :--vertical-rythm-elements:last-child {
+    margin-bottom: 0;
 }
