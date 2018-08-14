@@ -1,19 +1,15 @@
 import React from "react";
 import Router from "next/router";
-import styled from "styled-components";
 import { withRouter } from "next/router";
 
 import api from "../conf/api.js";
 import ErrorXhr from "./ErrorXhr";
-import Panel from "./Panel";
 import SearchResult from "./SearchResult";
 import SearchResults from "./SearchResults";
 
-const SearchContainer = styled.div`
-  padding: 20px;
-`;
 
 class Search extends React.Component {
+
   state = {
     query: "",
     data: null,
@@ -80,26 +76,34 @@ class Search extends React.Component {
     );
 
     return (
-      <SearchContainer>
-        <Panel title="Posez votre question sur le droit du travail">
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              <input
-                type="text"
-                value={query}
-                onChange={this.handleChange}
-                onKeyDown={this.handleKeyDown}
-              />
-            </label>
-            <button className="button" type="submit">
-              Rechercher
-            </button>
-          </form>
-          {loadingJsx}
-          {errorJsx}
-          {content}
-        </Panel>
-      </SearchContainer>
+      <div>
+        <section class="section-light shadow-bottom">
+          <div class="container">
+            <div class="search">
+              <header>
+                <h1 class="no-margin">Posez votre question sur le droit du travail</h1>
+              </header>
+              <form class="search__form" onSubmit={this.handleSubmit}>
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Posez votre question"
+                  className="search__input"
+                  value={query}
+                  onChange={this.handleChange}
+                  onKeyDown={this.handleKeyDown}
+                />
+                <button type="submit" class="btn btn__img btn__img__search">
+                    <span class="hidden">Rechercher</span>
+                </button>
+              </form>
+              {loadingJsx}
+              {errorJsx}
+            </div>
+          </div>
+        </section>
+        {content}
+      </div>
     );
   }
 }

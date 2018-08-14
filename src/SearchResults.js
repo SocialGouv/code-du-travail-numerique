@@ -1,25 +1,23 @@
 import React from "react";
-import styled from "styled-components";
 
 import FeedbackForm from "./FeedbackForm.js";
 import SeeAlso from "./SeeAlso";
 import { Link } from "../routes";
 
-const NoResultContainer = styled.div`
-  margin-top: 20px;
-`;
 
 const NoResult = ({ data }) => (
-  <NoResultContainer className="notification error">
+  <div className="notification error">
     <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
-  </NoResultContainer>
+  </div>
 );
 
-const ResultsContainer = ({ data }) => (
-  <div>{data.map(result => <Result key={result["_id"]} {...result} />)}</div>
+const Results = ({ data }) => (
+  <ul className="search-results__list">
+    {data.map(result => <ResultItem key={result["_id"]} {...result} />)}
+  </ul>
 );
 
-const Result = ({ _id, _source, highlight }) => {
+const ResultItem = ({ _id, _source, highlight }) => {
   let excerpt = "";
   if (highlight) {
     let firstHighlightObjectKeyName = Object.keys(highlight)[0];
@@ -48,41 +46,45 @@ const Result = ({ _id, _source, highlight }) => {
   let body = (
     <article key={_id} className={_source.source}>
       <header>
-        <h1>{_source.title}</h1>
+        <h3>Une période de chômage permet-elle de valider des trimestres de retraite ?</h3>
       </header>
       <blockquote
         className="text-quote"
         dangerouslySetInnerHTML={{ __html: excerpt }}
       />
-      <footer>{source}</footer>
     </article>
   );
 
   // Internal link.
   if (_source.source === "faq" || _source.source === "code_bfc") {
     return (
-      <Link route="index" params={{ type: "questions", id: _id }}>
-        <a className="search-results-link">{body}</a>
-      </Link>
+      <li className="search-results__item">
+        <Link route="index" params={{ type: "questions", id: _id }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
     );
   }
 
   // External link.
   return (
-    <a
-      href={_source.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="search-results-link"
-    >
-      {body}
-    </a>
+    <li className="search-results__item">
+      <a
+        href={_source.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="search-results-link"
+      >
+        {body}
+      </a>
+    </li>
   );
-};
 
-const ResultsWrapper = styled.div`
-  margin-top: 20px;
-`;
+  // <footer>
+  // <span className="external-link__before">{source}</span>
+  // </footer>
+
+};
 
 class SearchResults extends React.Component {
   render() {
@@ -100,11 +102,17 @@ class SearchResults extends React.Component {
     }
 
     return (
-      <ResultsWrapper className="search-results">
-        <ResultsContainer data={data.hits.hits} />
+      <div>
+        <div class="section-light">
+          <div class="container">
+            <div class="search-results">
+              <Results data={data.hits.hits} />
+            </div>
+          </div>
+        </div>
         <SeeAlso />
         <FeedbackForm query={query} />
-      </ResultsWrapper>
+      </div>
     );
   }
 }

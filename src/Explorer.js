@@ -9,8 +9,6 @@ import ThemeSelector from "./ThemeSelector";
 import parseThemes, { parseRows } from "./parse-themes";
 import rawThemes from "./data/themes.js";
 
-import "./theme.css";
-
 // convert themes.js at runtime for easy editing
 const themes = parseThemes(rawThemes);
 
@@ -25,37 +23,23 @@ const getPathFromThemeId = id => {
   );
 };
 
-const ExplorerContainer = styled.div`margin: 0; padding: 20px;`;
-
-const ButtonResetContainer = styled.div`
-  text-align: center;
-  margin-top: 30px;
-`;
-
 const Reset = ({ onResetClick }) => (
-  <ButtonResetContainer>
+  <div>
     <a href="#" className="button secondary" onClick={onResetClick}>
       Retour à l’accueil
     </a>
-  </ButtonResetContainer>
+  </div>
 );
 
-const IntroContainer = styled.div`
-  margin: 40px 20px;
-  font-size: 1.3em;
-  color: #888;
-  text-align: center;
-`;
-
 const Intro = () => (
-  <IntroContainer>
+  <div>
     Choisissez un thème pour explorer les ressources du code du travail
     numérique
     <br />
     <br />
     1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
     réponses
-  </IntroContainer>
+  </div>
 );
 
 class Explorer extends React.Component {

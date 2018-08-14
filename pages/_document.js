@@ -1,6 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import GitHubForkRibbon from "react-github-fork-ribbon";
 import Header from '../src/Header.js'
+import Footer from '../src/Footer.js'
 import { ServerStyleSheet } from 'styled-components'
 
 
@@ -21,14 +22,16 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
           <title>Code du travail numérique</title>
           <link rel="shortcut icon" href="/static/favicon.ico"/>
-          <link rel="stylesheet" href="/_next/static/style.css"/>
-          <link rel="stylesheet" href="//cdn.rawgit.com/etalab/template.data.gouv.fr/master/src/main.css"/>
+          <link rel="stylesheet" href="/static/bundle.css"/>
           {this.props.styleTags}
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es6,Array.prototype.includes"></script>
         </Head>
         <body>
           <noscript>You need to enable JavaScript to run this app.</noscript>
-          <Header />
+          <nav aria-label="page" class="skip-links">
+              <a href="#main">Contenu principal</a>
+              <a href="#footer">Pied de page</a>
+          </nav>
           <GitHubForkRibbon
             href="//github.com/SocialGouv/code-du-travail-explorer"
             target="_blank"
@@ -37,7 +40,11 @@ export default class MyDocument extends Document {
           >
             version bêta
           </GitHubForkRibbon>
-          <Main />
+          <Header />
+          <main id="main">
+            <Main />
+          </main>
+          <Footer />
           <NextScript />
         </body>
       </html>
