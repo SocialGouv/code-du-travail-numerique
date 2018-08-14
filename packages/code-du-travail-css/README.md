@@ -65,7 +65,7 @@ docs/
     │   │   ├── _conf.css       # Configuration : @font-face, @custom-media, variables
     │   │   └── _layout.css     # Système de mise en page
     │   └── styles.css          # Fichier principal utilisé par le watcher pour générer bundle.css
-    └── bundle.css              # Fichier aplati, concaténé etc. utilisable en production
+    └── bundle.css              # Fichier généré à la volée utilisable en production (hors dépôt de code)
 ```
 
 ## Icônes
