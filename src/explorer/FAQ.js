@@ -2,7 +2,7 @@ import React from "react";
 
 import SimpleAccordion from "./SimpleAccordion";
 
-const faq = require("./data/faq.json");
+const faq = require("../data/faq.json");
 
 const hasCommonItem = (arr1, arr2) => arr1.some(r => arr2.includes(r));
 

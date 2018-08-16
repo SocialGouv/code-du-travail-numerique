@@ -1,6 +1,6 @@
 import React from "react";
 
-import ServiceRenseignementModal from "../ServiceRenseignementModal";
+import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
 const SeeAlso = theme => {
   let links = [

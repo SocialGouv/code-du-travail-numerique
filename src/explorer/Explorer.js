@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import BreadCrumbs from "./BreadCrumbs";
 import Result from "./Result";
@@ -7,7 +6,7 @@ import ThemeFilter from "./ThemeFilter";
 import ThemeSelector from "./ThemeSelector";
 
 import parseThemes, { parseRows } from "./parse-themes";
-import rawThemes from "./data/themes.js";
+import rawThemes from "../data/themes.js";
 
 // convert themes.js at runtime for easy editing
 const themes = parseThemes(rawThemes);
@@ -23,22 +22,18 @@ const getPathFromThemeId = id => {
   );
 };
 
-const Reset = ({ onResetClick }) => (
-  <div>
-    <a href="#" className="button secondary" onClick={onResetClick}>
-      Retour à l’accueil
-    </a>
-  </div>
-);
-
 const Intro = () => (
-  <div>
-    Choisissez un thème pour explorer les ressources du code du travail
-    numérique
-    <br />
-    <br />
-    1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
-    réponses
+  <div className="section-light">
+    <div className="container">
+      <h2>
+        Choisissez un thème pour explorer les ressources du code du travail
+        numérique
+      </h2>
+      <p>
+        1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
+        réponses
+      </p>
+    </div>
   </div>
 );
 
@@ -136,12 +131,8 @@ class Explorer extends React.Component {
     const currentPath = this.getCurrentPath();
     const isLeaf = currentTheme.children.length === 0;
     return (
-      <ExplorerContainer>
-        <BreadCrumbs
-          style={{ marginBottom: 10 }}
-          entries={breadcrumbs}
-          onClick={this.onBreadCrumbClick}
-        />
+      <div>
+        <BreadCrumbs entries={breadcrumbs} onClick={this.onBreadCrumbClick} />
         <ThemeFilter
           onFilterChange={this.onThemeFilterChange}
           node={currentTheme}
@@ -154,8 +145,7 @@ class Explorer extends React.Component {
         />
         {isLeaf && <Result onResetClick={this.reset} theme={currentTheme} />}
         {!isStarted && <Intro />}
-        {(isStarted && <Reset onResetClick={this.reset} />) || null}
-      </ExplorerContainer>
+      </div>
     );
   }
 }

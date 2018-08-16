@@ -2,8 +2,8 @@ import React from "react";
 import Modal from "react-modal";
 import { Search } from "react-feather";
 
-import suppletives from "./data/suppletives";
-import { THEMES_L22531, THEMES_L22532 } from "./data/L2253";
+import suppletives from "../data/suppletives";
+import { THEMES_L22531, THEMES_L22532 } from "../data/L2253";
 
 import Article from "./Article";
 import ConventionModal from "./ConventionModal";

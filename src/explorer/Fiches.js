@@ -1,8 +1,7 @@
 import React from "react";
 import { ExternalLink } from "react-feather";
-//import styled from "styled-components";
 
-import fichesDgt from "./data/fiches";
+import fichesDgt from "../data/fiches";
 
 const hasCommonItem = (arr1, arr2) => arr1.some(r => arr2.includes(r));
 
@@ -28,7 +27,7 @@ const FichesDGT = ({ theme }) => {
   const fiches = fichesDgt.filter(
     fiche => fiche.themes && fiche.themes.indexOf(theme.id) > -1
   );
-  return <div>{fiches.map(FicheDgt)}</div>;
+  return <ul>{fiches.map(FicheDgt)}</ul>;
 };
 
 export default FichesDGT;

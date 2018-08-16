@@ -412,7 +412,9 @@ const filters = [
   }
 ];
 
-const StyledThemeFilter = styled.div`display: block;`;
+const StyledThemeFilter = styled.div`
+  display: block;
+`;
 
 class ThemeFilter extends React.Component {
   handleChange = e => {
@@ -433,27 +435,30 @@ class ThemeFilter extends React.Component {
       .map(item => {
         // Render some filters as <select> elements.
         return (
-          <div key={item.id} className="panel">
-            <div className="panel__header">
-              <h3>{item.label}</h3>
-              <small className="panel__header-extra" />
-            </div>
-            <div className="form__group">
-              <select id={item.id} onChange={this.handleChange}>
-                {item.options.map(option => {
-                  let newOption = JSON.parse(JSON.stringify(option)); // Deep copy.
-                  newOption.ids = newOption.ids.concat(item.idsCommonToAll);
-                  newOption.showInPath = item.showInPath;
-                  return (
-                    <option
-                      key={newOption.value}
-                      value={JSON.stringify(newOption)}
-                    >
-                      {newOption.label}
-                    </option>
-                  );
-                })}
-              </select>
+          <div className="section-light">
+            <div className="container">
+              <div className="wrapper-light">
+                <header>
+                  <h3>{item.label}</h3>
+                </header>
+                <div className="form__group">
+                  <select id={item.id} onChange={this.handleChange}>
+                    {item.options.map(option => {
+                      let newOption = JSON.parse(JSON.stringify(option)); // Deep copy.
+                      newOption.ids = newOption.ids.concat(item.idsCommonToAll);
+                      newOption.showInPath = item.showInPath;
+                      return (
+                        <option
+                          key={newOption.value}
+                          value={JSON.stringify(newOption)}
+                        >
+                          {newOption.label}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         );

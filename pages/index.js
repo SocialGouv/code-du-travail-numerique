@@ -1,4 +1,4 @@
-import ExplorerToggler from "../src/ExplorerToggler";
+import ExplorerToggler from "../src/explorer/ExplorerToggler";
 import Search from "../src/search/Search";
 
 const Home = () => {

@@ -2,11 +2,11 @@ import React from "react";
 import { Search, X, Download } from "react-feather";
 import Delay from "react-delay";
 
-import FuseInput from "./lib/FuseInput";
+import FuseInput from "../lib/FuseInput";
 
-import kali from "./data/kali.json";
-import idcc from "./data/idcc.json";
-import apeByIdcc from "./data/apeByIdcc.json";
+import kali from "../data/kali.json";
+import idcc from "../data/idcc.json";
+import apeByIdcc from "../data/apeByIdcc.json";
 
 const normalizeIdcc = idcc => (("" + idcc).length === 4 ? "0" + idcc : idcc);
 

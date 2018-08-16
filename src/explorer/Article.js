@@ -2,7 +2,7 @@ import React from "react";
 
 import SimpleAccordion from "./SimpleAccordion";
 
-import articles from "./data/articles";
+import articles from "../data/articles";
 
 const getArticleContent = id => articles[id] && articles[id].texte;
 

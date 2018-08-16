@@ -1,28 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import Panel from "./Panel";
-import ordering from "./data/themes-ordering.js";
+import ordering from "../data/themes-ordering.js";
 
 //
 // boutons de selection du thème
 // prend un noeud de "syntax-tree" {children:[]} en entrée
 //
-
-const ThemeButton = styled.button`
-  margin: 5px 5px 5px 0;
-  margin-left: 0 !important;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.2s ease-out;
-  &:hover {
-    background-color: #dedede;
-  }
-`;
-
-const ThemeSelectorContainer = styled.div`text-align: center;`;
-
-const GroupContainer = styled.div`padding: 5px 0;`;
 
 class ThemeSelector extends React.Component {
   getOrderedChildren = (children, currentPath) => {
@@ -59,31 +43,29 @@ class ThemeSelector extends React.Component {
     let onSelect = this.props.onSelect;
     let groups = this.getOrderedChildren(node.children, currentPath);
 
+    // title = currentPath === "" ? "Choisissez un thème" : "Précisez le thème";
+
     return (
       (node.children.length && (
-        <ThemeSelectorContainer>
-          <Panel
-            title={
-              currentPath === "" ? "Choisissez un thème" : "Précisez le thème"
-            }
-          >
-            {groups.map((group, index) => (
-              <GroupContainer key={index}>
-                {group.map(child => (
-                  <ThemeButton
-                    className="button"
-                    role="button"
-                    tabIndex={0}
-                    key={child.title}
-                    onClick={() => onSelect(child)}
-                  >
-                    {child.title}
-                  </ThemeButton>
-                ))}
-              </GroupContainer>
-            ))}
-          </Panel>
-        </ThemeSelectorContainer>
+        <section className="section-light">
+          <div className="container center">
+            <div className="wrapper-light">
+              {groups.map((group, index) => (
+                <div key={index}>
+                  {group.map(child => (
+                    <button
+                      tabIndex={0}
+                      key={child.title}
+                      onClick={() => onSelect(child)}
+                    >
+                      {child.title}
+                    </button>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       )) ||
       null
     );

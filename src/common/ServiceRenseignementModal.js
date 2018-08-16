@@ -3,7 +3,7 @@ import * as Feather from "react-feather";
 import Modal from "react-modal";
 import styled from "styled-components";
 
-import servicesDeRenseignement from "./data/services-de-renseignement.json";
+import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
 const modalStyles = {
   overlay: {
