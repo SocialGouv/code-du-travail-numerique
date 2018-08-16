@@ -2,15 +2,17 @@ import React from "react";
 
 import Explorer from "./Explorer";
 
+// TODO: redirect to `explorer` on button click.
+// import { Link } from "../routes";
+// <Link route="explorer">Navigation par thèmes</Link>
+
 class Toggler extends React.Component {
   state = {
-    isHidden: true,
     profile: "" // Can be empty, `employee` or `employer`.
   };
 
   reset() {
     this.setState({
-      isHidden: true,
       profile: ""
     });
   }
@@ -25,14 +27,8 @@ class Toggler extends React.Component {
     });
   }
 
-  toggleHidden() {
-    this.setState(curState => ({
-      isHidden: !curState.isHidden
-    }));
-  }
-
   showExplorer(e) {
-    return !this.state.isHidden && this.state.profile;
+    return this.state.profile;
   }
 
   render() {
@@ -42,31 +38,35 @@ class Toggler extends React.Component {
       this.state.profile === "employer" ? "btn" : "btn btn-secondary";
     return (
       <div>
-        <div className="section-light">
+        <section className="section-light shadow-bottom">
           <div className="container center">
-            <h3 onClick={this.toggleHidden.bind(this)}>
-              {this.state.isHidden ? "► " : "▼ "}
-              <span className="title-link">Navigation par thèmes</span>
-            </h3>
-            {!this.state.isHidden && (
+            <header>
+              <h3>
+                Choisissez un thème pour explorer les ressources du code du
+                travail numérique
+              </h3>
               <p>
-                <button
-                  className={employeeClassName}
-                  onClick={() => this.setProfile("employee")}
-                >
-                  Je suis salarié
-                </button>
-                 
-                <button
-                  className={employerClassName}
-                  onClick={() => this.setProfile("employer")}
-                >
-                  Je suis employeur
-                </button>
+                1604 thèmes, 10789 articles, 206 fiches pratiques, 680
+                conventions, 50 réponses
               </p>
-            )}
+            </header>
+            <p>
+              <button
+                className={employeeClassName}
+                onClick={() => this.setProfile("employee")}
+              >
+                Je suis salarié
+              </button>
+              <span> </span>
+              <button
+                className={employerClassName}
+                onClick={() => this.setProfile("employer")}
+              >
+                Je suis employeur
+              </button>
+            </p>
           </div>
-        </div>
+        </section>
         {this.showExplorer() && <Explorer />}
       </div>
     );

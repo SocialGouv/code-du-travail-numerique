@@ -5,4 +5,6 @@ module.exports = routes()
   // - http://localhost:3000/
   // - http://localhost:3000/?q=travail
   // - http://localhost:3000/questions/Zm5o72QB0wLMRXWgrAhM
-  .add("index", "/:type(questions)/:id");
+  .add("index", "/:type(questions)/:id")
+
+  .add("explorer", "/explorer");

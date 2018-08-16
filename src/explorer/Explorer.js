@@ -22,21 +22,6 @@ const getPathFromThemeId = id => {
   );
 };
 
-const Intro = () => (
-  <div className="section-light">
-    <div className="container">
-      <h2>
-        Choisissez un thème pour explorer les ressources du code du travail
-        numérique
-      </h2>
-      <p>
-        1604 thèmes, 10789 articles, 206 fiches pratiques, 680 conventions, 50
-        réponses
-      </p>
-    </div>
-  </div>
-);
-
 class Explorer extends React.Component {
   constructor(props, ...args) {
     super(props, ...args);
@@ -127,6 +112,7 @@ class Explorer extends React.Component {
   render() {
     const breadcrumbs = this.state.selection;
     const isStarted = breadcrumbs.length;
+    // {!isStarted && <Intro />}
     const currentTheme = this.getCurrentTheme();
     const currentPath = this.getCurrentPath();
     const isLeaf = currentTheme.children.length === 0;
@@ -144,7 +130,6 @@ class Explorer extends React.Component {
           currentPath={currentPath}
         />
         {isLeaf && <Result onResetClick={this.reset} theme={currentTheme} />}
-        {!isStarted && <Intro />}
       </div>
     );
   }

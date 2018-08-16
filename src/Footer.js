@@ -10,19 +10,13 @@ const Footer = () => (
           <h3>Code du travail numérique</h3>
           <ul>
             <li>
-              <a href="/">Qui sommes-nous ?</a>
-            </li>
-            <li>
-              <a href="/">Mentions légales</a>
+              <Link route="explorer">Navigation par thèmes</Link>
             </li>
           </ul>
         </div>
         <div className="footer__block">
           <h3>Aidez-nous à améliorer cet outil</h3>
           <ul>
-            <li>
-              <a href="/">Vous avez identifié une erreur ?</a>
-            </li>
             <li>
               <a
                 href="https://github.com/SocialGouv/code-du-travail-html/"

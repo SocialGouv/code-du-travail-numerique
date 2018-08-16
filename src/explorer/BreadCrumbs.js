@@ -6,6 +6,7 @@ const BreadCrumbEntry = ({ title, onClick, isLast }) => (
   <React.Fragment>
     <li className="breadcrumb-item">
       <a
+        href="#"
         role={isLast ? null : "button"}
         tabIndex={isLast ? null : 0}
         disabled={isLast}

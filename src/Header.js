@@ -1,16 +1,17 @@
 import React from "react";
 
-import { Link } from '../routes'
-
+import { Link } from "../routes";
 
 const Header = ({ onClick }) => (
-  <header class="section-light">
-    <div class="container">
-      <div class="main-header">
-        <a href="/" class="main-header__logo">
-          <img src={"/static/assets/img/marianne.svg"} alt="" />
-          Code du travail numérique
-        </a>
+  <header className="section-light">
+    <div className="container">
+      <div className="main-header">
+        <Link route="/">
+          <a className="main-header__logo">
+            <img src={"/static/assets/img/marianne.svg"} alt="" />
+            Code du travail numérique
+          </a>
+        </Link>
       </div>
     </div>
   </header>
