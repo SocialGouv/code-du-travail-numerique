@@ -49,10 +49,7 @@ const ResultItem = ({ _id, _source, highlight }) => {
   let body = (
     <article key={_id} className={_source.source}>
       <header>
-        <h3>
-          Une période de chômage permet-elle de valider des trimestres de
-          retraite ?
-        </h3>
+        <h3>{_source.title}</h3>
       </header>
       <blockquote
         className="text-quote"
@@ -89,11 +86,6 @@ class SearchResults extends React.Component {
   render() {
     let data = this.props.data;
     let query = this.props.query;
-
-    // No query.
-    if (!data) {
-      return null;
-    }
 
     // No results.
     if (!data.hits.total) {

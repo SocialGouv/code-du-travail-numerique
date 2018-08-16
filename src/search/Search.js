@@ -6,6 +6,7 @@ import Alert from "../common/Alert";
 import api from "../../conf/api.js";
 import SearchAnswer from "./SearchAnswer";
 import SearchResults from "./SearchResults";
+import Categories from "./Categories";
 
 class Search extends React.Component {
   state = {
@@ -28,7 +29,11 @@ class Search extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({ query: event.target.value });
+    let query = event.target.value;
+    if (!query) {
+      this.reset();
+    }
+    this.setState({ query: query });
   };
 
   handleSubmit = event => {
@@ -71,12 +76,19 @@ class Search extends React.Component {
       </div>
     ) : null;
     const loadingJsx = pendingXHR ? <p>Chargement…</p> : null;
-    const showSingleResult = router.query && router.query.type === "questions";
-    let content = showSingleResult ? (
-      <SearchAnswer data={data} id={router.query.id} />
-    ) : (
-      <SearchResults data={data} query={query} />
-    );
+    const showAnswer = router.query && router.query.type === "questions";
+
+    let content = null;
+    if (showAnswer) {
+      content = <SearchAnswer data={data} id={router.query.id} />;
+    } else {
+      if (!data) {
+        // No query.
+        content = <Categories />;
+      } else {
+        content = <SearchResults data={data} query={query} />;
+      }
+    }
 
     return (
       <div>
@@ -91,7 +103,6 @@ class Search extends React.Component {
               <form className="search__form" onSubmit={this.handleSubmit}>
                 <input
                   type="search"
-                  name="search"
                   placeholder="Posez votre question"
                   className="search__input"
                   value={query}

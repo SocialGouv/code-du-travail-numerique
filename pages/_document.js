@@ -1,7 +1,7 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import GitHubForkRibbon from "react-github-fork-ribbon";
-import Header from "../src/Header.js";
-import Footer from "../src/Footer.js";
+import Header from "../src/layout/Header.js";
+import Footer from "../src/layout/Footer.js";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {

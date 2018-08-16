@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "../routes";
+import { Link } from "../../routes";
 
 const Footer = () => (
   <footer className="section-dark" id="footer">

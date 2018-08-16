@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "../routes";
+import { Link } from "../../routes";
 
 const Header = ({ onClick }) => (
   <header className="section-light">
