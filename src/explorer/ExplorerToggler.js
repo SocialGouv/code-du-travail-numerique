@@ -2,10 +2,6 @@ import React from "react";
 
 import Explorer from "./Explorer";
 
-// TODO: redirect to `explorer` on button click.
-// import { Link } from "../routes";
-// <Link route="explorer">Navigation par thèmes</Link>
-
 class Toggler extends React.Component {
   state = {
     profile: "" // Can be empty, `employee` or `employer`.
@@ -33,9 +29,9 @@ class Toggler extends React.Component {
 
   render() {
     let employeeClassName =
-      this.state.profile === "employee" ? "btn" : "btn btn-secondary";
+      this.state.profile === "employee" ? "btn" : "btn btn__secondary";
     let employerClassName =
-      this.state.profile === "employer" ? "btn" : "btn btn-secondary";
+      this.state.profile === "employer" ? "btn" : "btn btn__secondary";
     return (
       <div>
         <section className="section-light shadow-bottom">

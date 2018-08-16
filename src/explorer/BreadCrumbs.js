@@ -10,7 +10,6 @@ const BreadCrumbEntry = ({ title, onClick, isLast }) => (
         role={isLast ? null : "button"}
         tabIndex={isLast ? null : 0}
         disabled={isLast}
-        underline={!isLast}
         onClick={onClick}
         title={title}
       >
@@ -38,7 +37,7 @@ const BreadCrumbs = ({ entries, onClick }) => {
             {allEntries.map((entry, i) => (
               <BreadCrumbEntry
                 key={entry.title + i}
-                onClick={() => onClick(entry, i)}
+                onClick={(e) => onClick(e, entry, i)}
                 isLast={i === allEntries.length - 1}
                 {...entry}
               />

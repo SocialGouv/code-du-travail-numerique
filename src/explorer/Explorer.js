@@ -58,7 +58,8 @@ class Explorer extends React.Component {
     }));
   };
 
-  onBreadCrumbClick = (item, idx) => {
+  onBreadCrumbClick = (e, item, idx) => {
+    e.preventDefault();
     this.setState(curState => ({
       selection: curState.selection.slice(0, idx)
     }));
@@ -111,14 +112,15 @@ class Explorer extends React.Component {
 
   render() {
     const breadcrumbs = this.state.selection;
-    const isStarted = breadcrumbs.length;
-    // {!isStarted && <Intro />}
     const currentTheme = this.getCurrentTheme();
     const currentPath = this.getCurrentPath();
     const isLeaf = currentTheme.children.length === 0;
     return (
       <div>
-        <BreadCrumbs entries={breadcrumbs} onClick={this.onBreadCrumbClick} />
+        {(breadcrumbs.length && (
+          <BreadCrumbs entries={breadcrumbs} onClick={this.onBreadCrumbClick} />
+        )) ||
+          null}
         <ThemeFilter
           onFilterChange={this.onThemeFilterChange}
           node={currentTheme}

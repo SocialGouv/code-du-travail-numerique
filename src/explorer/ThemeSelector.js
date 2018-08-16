@@ -51,7 +51,7 @@ class ThemeSelector extends React.Component {
           <div className="container center">
             <div className="wrapper-light">
               {groups.map((group, index) => (
-                <div key={index}>
+                <p key={index}>
                   {group.map(child => (
                     <button
                       tabIndex={0}
@@ -61,7 +61,7 @@ class ThemeSelector extends React.Component {
                       {child.title}
                     </button>
                   ))}
-                </div>
+                </p>
               ))}
             </div>
           </div>

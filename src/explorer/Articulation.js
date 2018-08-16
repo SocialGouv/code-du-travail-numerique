@@ -8,7 +8,6 @@ import { THEMES_L22531, THEMES_L22532 } from "../data/L2253";
 import Article from "./Article";
 import ConventionModal from "./ConventionModal";
 
-
 const getAllThemes = themes =>
   Array.from(
     new Set(
@@ -25,10 +24,11 @@ const DispositionsSuppletives = ({ theme }) => {
   if (dispos) {
     return (
       <div>
-        <br />
-        <b>Dispositions supplétives associées</b>
-        <br />
-        {dispos.map(article => <Article key={article} id={article} />)}
+        <p>
+          <b>Dispositions supplétives associées</b>
+          <br />
+          {dispos.map(article => <Article key={article} id={article} />)}
+        </p>
       </div>
     );
   }
@@ -41,71 +41,78 @@ const getArticulation = ({ theme, onEntrepriseClick }) => {
     // article entre dans le champ du L.2253-1
     return (
       <div>
-        Consultez votre{" "}
-        <ConventionModal text="convention collective de branche" />{" "}
-        ses dispositions sur ce thème s'appliquent pour votre question.
-        <br />
-        <br />
-        Vérifiez aussi{" "}
-        <a onClick={onEntrepriseClick}>
-          votre accord d'entreprise
-        </a>{" "}
-        : S'il prévoit sur ce sujet des "garanties au moins équivalentes" , ces
-        clauses s'appliquent dans votre cas.
+        <p>
+          Consultez votre{" "}
+          <ConventionModal text="convention collective de branche" /> ses
+          dispositions sur ce thème s'appliquent pour votre question.
+        </p>
+        <p>
+          Vérifiez aussi{" "}
+          <a onClick={onEntrepriseClick}>votre accord d'entreprise</a> : S'il
+          prévoit sur ce sujet des "garanties au moins équivalentes" , ces
+          clauses s'appliquent dans votre cas.
+        </p>
       </div>
     );
   } else if (isInL22532(theme.id)) {
     // article entre dans le champ du L.2253-2
     return (
       <div>
-        Consultez{" "}
-        <a onClick={onEntrepriseClick}>
-          votre accord d'entreprise
-        </a>{" "}
-        dont les clauses à ce sujet s’appliquent à votre situation.
-        <b>Attention</b>, sur ce thème la{" "}
-        <ConventionModal text="convention collective de branche" />{" "}
-        peut décider qu'elle prime sur l'accord d'entreprise.
-        <br />
-        <br />
-        Si c’est le cas :
-        <br />
-        - Votre accord d'entreprise a été signé avant la convention collective
-        de branche ? Les clauses de votre accord d’entreprise s’appliquent même
-        si elles sont moins favorables que celles de la convention collective de
-        branche.
-        <br />- Votre accord d'entreprise a été signé après la convention
-        collective de branche Les clauses de votre accord d’entreprise
-        s’appliquent si elles offrent des "garanties au moins équivalentes" sur
-        ce sujet. Sinon, il faut vous référer aux clauses de la convention
-        collective de branche.
+        <p>
+          Consultez <a onClick={onEntrepriseClick}>votre accord d'entreprise</a>{" "}
+          dont les clauses à ce sujet s’appliquent à votre situation.
+        </p>
+        <p>
+          <b>Attention</b>, sur ce thème la{" "}
+          <ConventionModal text="convention collective de branche" /> peut
+          décider qu'elle prime sur l'accord d'entreprise.
+        </p>
+        <p>Si c’est le cas :</p>
+        <ul>
+          <li>
+            Votre accord d'entreprise a été signé avant la convention collective
+            de branche ? Les clauses de votre accord d’entreprise s’appliquent
+            même si elles sont moins favorables que celles de la convention
+            collective de branche.
+          </li>
+          <li>
+            Votre accord d'entreprise a été signé après la convention collective
+            de branche Les clauses de votre accord d’entreprise s’appliquent si
+            elles offrent des "garanties au moins équivalentes" sur ce sujet.
+            Sinon, il faut vous référer aux clauses de la convention collective
+            de branche.
+          </li>
+        </ul>
       </div>
     );
   } else {
     // autres cas
     return (
       <div>
-        Consultez{" "}
-        <a onClick={onEntrepriseClick}>
-          votre convention ou accord d'<b>entreprise</b>
-        </a>.
-        <p />
-        <u>
+        <p>
+          Consultez{" "}
+          <a onClick={onEntrepriseClick}>
+            votre convention ou accord d'<b>entreprise</b>
+          </a>.
+        </p>
+        <h4>
           Il n'y a pas de clause sur ce thème au niveau de l'accord
           d'entreprise?
-        </u>
-        <p />
-        - Consultez{" "}
-        <ConventionModal text="votre <b>convention collective</b>" />{" "}
-        ou l'accord à portée plus large: Ils peuvent comporter des clauses sur
-        ce thèmes qui vous sont opposables. <p />
-        <u>
+        </h4>
+        <p>
+          - Consultez{" "}
+          <ConventionModal text="votre <b>convention collective</b>" /> ou
+          l'accord à portée plus large: Ils peuvent comporter des clauses sur ce
+          thèmes qui vous sont opposables.{" "}
+        </p>
+        <h4>
           Il n'y a aucune clause sur ce thème : tant dans l'accord d'entreprise,
           que dans la Convention collective ou l'accord à portée plus large ?
-        </u>
-        <p />
-        - Ce sont les dispositions (dites supplétives) du code du travail, qui
-        s'appliquent par défaut.
+        </h4>
+        <p>
+          - Ce sont les dispositions (dites supplétives) du code du travail, qui
+          s'appliquent par défaut.
+        </p>
       </div>
     );
   }
@@ -126,7 +133,6 @@ const modalStyles = {
 };
 
 class Articulation extends React.Component {
-
   state = {
     modalBrancheIsOpen: false,
     modalEntrepriseIsOpen: false
@@ -148,7 +154,6 @@ class Articulation extends React.Component {
     const { theme } = this.props;
     return (
       <div>
-
         <div>
           {getArticulation({
             theme,
@@ -174,11 +179,9 @@ class Articulation extends React.Component {
             <Search size="12" />
           </a>
         </Modal>
-
       </div>
     );
   }
-
 }
 
 export default Articulation;

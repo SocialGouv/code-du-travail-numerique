@@ -97,14 +97,13 @@ class FeedbackForm extends React.Component {
                   Êtes vous satisfait par les réponses apportées à votre
                   question ?
                 </label>
-                <br />
-                <StarRating
-                  className="feedback-stars"
-                  name="stars"
-                  value={this.state.stars}
-                  onStarClick={num => this.setState({ stars: num })}
-                />
               </p>
+              <StarRating
+                className="feedback-stars"
+                name="stars"
+                value={this.state.stars}
+                onStarClick={num => this.setState({ stars: num })}
+              />
               <p>
                 <label htmlFor="id_message">Votre message :</label>
                 <textarea
