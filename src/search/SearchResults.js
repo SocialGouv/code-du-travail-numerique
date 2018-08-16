@@ -1,19 +1,16 @@
 import React from "react";
 
+import Alert from "../common/Alert";
 import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";
 import { Link } from "../../routes";
 
-const NoResult = ({ data }) => (
-  <div className="notification error">
-    <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
-  </div>
-);
-
 const Results = ({ data }) => (
-  <ul className="search-results__list">
-    {data.map(result => <ResultItem key={result["_id"]} {...result} />)}
-  </ul>
+  <div className="search-results">
+    <ul className="search-results__list">
+      {data.map(result => <ResultItem key={result["_id"]} {...result} />)}
+    </ul>
+  </div>
 );
 
 const ResultItem = ({ _id, _source, highlight }) => {
@@ -100,16 +97,22 @@ class SearchResults extends React.Component {
 
     // No results.
     if (!data.hits.total) {
-      return <NoResult />;
+      return (
+        <div className="section-light">
+          <div className="container">
+            <Alert category="primary">
+              Nous n’avons pas trouvé de résultat pour votre recherche.
+            </Alert>
+          </div>
+        </div>
+      );
     }
 
     return (
       <div>
         <div className="section-light">
           <div className="container">
-            <div className="search-results">
-              <Results data={data.hits.hits} />
-            </div>
+            <Results data={data.hits.hits} />
           </div>
         </div>
         <SeeAlso />

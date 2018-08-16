@@ -1,7 +1,7 @@
 import React from "react";
 
+import Alert from "../common/Alert";
 import api from "../../conf/api.js";
-import ErrorXhr from "../ErrorXhr";
 
 // Display the details of a single result.
 
@@ -49,7 +49,13 @@ class SearchAnswer extends React.Component {
     }
 
     if (error) {
-      return <ErrorXhr error={error.message} />;
+      return (
+        <div className="section-light">
+          <div className="container">
+            <Alert category="danger">{error.message}</Alert>
+          </div>
+        </div>
+      );
     }
 
     if (!data) {

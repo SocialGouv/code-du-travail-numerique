@@ -2,8 +2,8 @@ import React from "react";
 import Router from "next/router";
 import { withRouter } from "next/router";
 
+import Alert from "../common/Alert";
 import api from "../../conf/api.js";
-import ErrorXhr from "../ErrorXhr";
 import SearchAnswer from "./SearchAnswer";
 import SearchResults from "./SearchResults";
 
@@ -63,8 +63,13 @@ class Search extends React.Component {
   render() {
     const { data, error, pendingXHR, query } = this.state;
     const { router } = this.props;
-
-    const errorJsx = error ? <ErrorXhr error={error.message} /> : null;
+    const xhrErrorJsx = error ? (
+      <div className="section-light">
+        <div className="container">
+          <Alert category="danger">{error.message}</Alert>
+        </div>
+      </div>
+    ) : null;
     const loadingJsx = pendingXHR ? <p>Chargement…</p> : null;
     const showSingleResult = router.query && router.query.type === "questions";
     let content = showSingleResult ? (
@@ -98,10 +103,10 @@ class Search extends React.Component {
                 </button>
               </form>
               {loadingJsx}
-              {errorJsx}
             </div>
           </div>
         </section>
+        {xhrErrorJsx}
         {content}
       </div>
     );

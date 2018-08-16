@@ -1,6 +1,8 @@
 import React from "react";
 import StarRating from "react-star-rating-component";
 
+import Alert from "../common/Alert";
+
 class FeedbackForm extends React.Component {
   state = {
     stars: 0,
@@ -91,8 +93,11 @@ class FeedbackForm extends React.Component {
             </header>
             <form>
               <p>
-                <label>Êtes vous satisfait par les réponses apportées à votre question ?</label>
-                <br/>
+                <label>
+                  Êtes vous satisfait par les réponses apportées à votre
+                  question ?
+                </label>
+                <br />
                 <StarRating
                   className="feedback-stars"
                   name="stars"
@@ -127,7 +132,7 @@ class FeedbackForm extends React.Component {
                 />
               </p>
               {this.state.status === "sent" ? (
-                <p>Message bien envoyé !</p>
+                <Alert category="success">Message bien envoyé !</Alert>
               ) : (
                 <p>
                   <button
