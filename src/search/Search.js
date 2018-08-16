@@ -2,14 +2,12 @@ import React from "react";
 import Router from "next/router";
 import { withRouter } from "next/router";
 
-import api from "../conf/api.js";
-import ErrorXhr from "./ErrorXhr";
-import SearchResult from "./SearchResult";
+import api from "../../conf/api.js";
+import ErrorXhr from "../ErrorXhr";
+import SearchAnswer from "./SearchAnswer";
 import SearchResults from "./SearchResults";
 
-
 class Search extends React.Component {
-
   state = {
     query: "",
     data: null,
@@ -70,20 +68,22 @@ class Search extends React.Component {
     const loadingJsx = pendingXHR ? <p>Chargement…</p> : null;
     const showSingleResult = router.query && router.query.type === "questions";
     let content = showSingleResult ? (
-      <SearchResult data={data} id={router.query.id} />
+      <SearchAnswer data={data} id={router.query.id} />
     ) : (
       <SearchResults data={data} query={query} />
     );
 
     return (
       <div>
-        <section class="section-light shadow-bottom">
-          <div class="container">
-            <div class="search">
+        <section className="section-light shadow-bottom">
+          <div className="container">
+            <div className="search">
               <header>
-                <h1 class="no-margin">Posez votre question sur le droit du travail</h1>
+                <h1 className="no-margin">
+                  Posez votre question sur le droit du travail
+                </h1>
               </header>
-              <form class="search__form" onSubmit={this.handleSubmit}>
+              <form className="search__form" onSubmit={this.handleSubmit}>
                 <input
                   type="search"
                   name="search"
@@ -93,8 +93,8 @@ class Search extends React.Component {
                   onChange={this.handleChange}
                   onKeyDown={this.handleKeyDown}
                 />
-                <button type="submit" class="btn btn__img btn__img__search">
-                    <span class="hidden">Rechercher</span>
+                <button type="submit" className="btn btn__img btn__img__search">
+                  <span className="hidden">Rechercher</span>
                 </button>
               </form>
               {loadingJsx}

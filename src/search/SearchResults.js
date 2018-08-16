@@ -1,9 +1,8 @@
 import React from "react";
 
-import FeedbackForm from "./FeedbackForm.js";
-import SeeAlso from "./SeeAlso";
-import { Link } from "../routes";
-
+import FeedbackForm from "../common/FeedbackForm.js";
+import SeeAlso from "../common/SeeAlso";
+import { Link } from "../../routes";
 
 const NoResult = ({ data }) => (
   <div className="notification error">
@@ -43,20 +42,30 @@ const ResultItem = ({ _id, _source, highlight }) => {
     source = "Source : Legifrance";
   }
 
+  let isInternal = ["faq", "code_bfc"].includes(_source.source);
+  let footer = isInternal ? null : (
+    <footer>
+      <span className="external-link__before">{source}</span>
+    </footer>
+  );
+
   let body = (
     <article key={_id} className={_source.source}>
       <header>
-        <h3>Une période de chômage permet-elle de valider des trimestres de retraite ?</h3>
+        <h3>
+          Une période de chômage permet-elle de valider des trimestres de
+          retraite ?
+        </h3>
       </header>
       <blockquote
         className="text-quote"
         dangerouslySetInnerHTML={{ __html: excerpt }}
       />
+      {footer}
     </article>
   );
 
-  // Internal link.
-  if (_source.source === "faq" || _source.source === "code_bfc") {
+  if (isInternal) {
     return (
       <li className="search-results__item">
         <Link route="index" params={{ type: "questions", id: _id }}>
@@ -65,8 +74,6 @@ const ResultItem = ({ _id, _source, highlight }) => {
       </li>
     );
   }
-
-  // External link.
   return (
     <li className="search-results__item">
       <a
@@ -79,11 +86,6 @@ const ResultItem = ({ _id, _source, highlight }) => {
       </a>
     </li>
   );
-
-  // <footer>
-  // <span className="external-link__before">{source}</span>
-  // </footer>
-
 };
 
 class SearchResults extends React.Component {
@@ -103,9 +105,9 @@ class SearchResults extends React.Component {
 
     return (
       <div>
-        <div class="section-light">
-          <div class="container">
-            <div class="search-results">
+        <div className="section-light">
+          <div className="container">
+            <div className="search-results">
               <Results data={data.hits.hits} />
             </div>
           </div>

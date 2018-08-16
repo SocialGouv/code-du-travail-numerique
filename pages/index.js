@@ -1,12 +1,12 @@
 import ExplorerToggler from "../src/ExplorerToggler";
-import Search from "../src/Search";
+import Search from "../src/search/Search";
 
 const Home = () => {
   return (
-      <div>
-        <Search />
-        <ExplorerToggler />
-      </div>
+    <div>
+      <Search />
+      <ExplorerToggler />
+    </div>
   );
 };
 

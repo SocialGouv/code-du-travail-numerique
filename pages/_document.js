@@ -1,36 +1,39 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript } from "next/document";
 import GitHubForkRibbon from "react-github-fork-ribbon";
-import Header from '../src/Header.js'
-import Footer from '../src/Footer.js'
-import { ServerStyleSheet } from 'styled-components'
-
+import Header from "../src/Header.js";
+import Footer from "../src/Footer.js";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
-
-  static getInitialProps ({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   render() {
     return (
       <html>
         <Head>
-          <meta charset="utf-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
           <title>Code du travail numérique</title>
-          <link rel="shortcut icon" href="/static/favicon.ico"/>
-          <link rel="stylesheet" href="/static/bundle.css"/>
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="stylesheet" href="/static/bundle.css" />
           {this.props.styleTags}
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es6,Array.prototype.includes"></script>
+          <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es6,Array.prototype.includes" />
         </Head>
         <body>
           <noscript>You need to enable JavaScript to run this app.</noscript>
-          <nav aria-label="page" class="skip-links">
-              <a href="#main">Contenu principal</a>
-              <a href="#footer">Pied de page</a>
+          <nav aria-label="page" className="skip-links">
+            <a href="#main">Contenu principal</a>
+            <a href="#footer">Pied de page</a>
           </nav>
           <GitHubForkRibbon
             href="//github.com/SocialGouv/code-du-travail-explorer"
@@ -48,7 +51,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
-
 }

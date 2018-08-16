@@ -5,10 +5,10 @@ import styled from "styled-components";
 import Articles from "./Articles";
 import Articulation from "./Articulation";
 import FAQ, { hasFaq } from "./FAQ";
-import FeedbackForm from "./FeedbackForm";
+import FeedbackForm from "./common/FeedbackForm";
 import Fiches, { hasFiche } from "./Fiches";
 import Panel from "./Panel";
-import SeeAlso from "./SeeAlso";
+import SeeAlso from "./common/SeeAlso";
 
 // page de résultats
 

@@ -1,11 +1,11 @@
 import React from "react";
 
-import api from "../conf/api.js";
-import ErrorXhr from "./ErrorXhr";
+import api from "../../conf/api.js";
+import ErrorXhr from "../ErrorXhr";
 
 // Display the details of a single result.
 
-class SearchResult extends React.Component {
+class SearchAnswer extends React.Component {
   state = {
     data: null,
     error: null,
@@ -57,12 +57,16 @@ class SearchResult extends React.Component {
     }
 
     return (
-      <div>
-        <h1>{data._source.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: data._source.text }} />
+      <div className="section-light">
+        <div className="container">
+          <div className="wrapper-light">
+            <h2>{data._source.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: data._source.text }} />
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-export default SearchResult;
+export default SearchAnswer;
