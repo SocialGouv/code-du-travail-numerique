@@ -20,29 +20,89 @@
     font-weight: bold;
     line-height: inherit;
     padding: var(--spacing-small) var(--spacing-base);
-
-    color: var(--color-white);
-    background-color: var(--color-blue);
     border-radius: var(--border-radius-base);
     border: 1px solid transparent;
+
+    /* Fixme: currently use the same colors as `.btn__primary`. */
+    background: var(--color-primary-background);
+    color: var(--color-primary-text);
 
     cursor: pointer;
 
     /* Specific to <a> elements. */
     text-decoration: none;
 
-    &:focus,
-    &:hover {
-        background-color: color-mod(var(--color-blue) lightness(-10%));
-        color: var(--color-white);
-    }
-
     &:active {
         position: relative;
         top: 1px;
         left: 1px;
-        background-color: color-mod(var(--color-blue) lightness(-10%));
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: color-mod(var(--color-primary-background) lightness(-10%));
         color: var(--color-white);
+    }
+
+    &.btn__primary {
+        background: var(--color-primary-background);
+        color: var(--color-primary-text);
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: color-mod(var(--color-primary-background) lightness(-10%));
+        }
+    }
+
+    &.btn__secondary {
+        background-color: var(--color-secondary-background);
+        color: var(--color-secondary-text);
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: color-mod(var(--color-secondary-background) lightness(-10%));
+        }
+    }
+
+    &.btn__warning {
+        background-color: var(--color-warning-background);
+        color: var(--color-warning-text);
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: color-mod(var(--color-warning-background) lightness(-10%));
+        }
+    }
+
+    &.btn__success {
+        background-color: var(--color-success-background);
+        color: var(--color-success-text);
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: color-mod(var(--color-success-background) lightness(-10%));
+        }
+    }
+
+    &.btn__info {
+        background-color: var(--color-info-background);
+        color: var(--color-info-text);
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: color-mod(var(--color-info-background) lightness(-10%));
+        }
+    }
+
+    &.btn__danger {
+        background-color: var(--color-danger-background);
+        color: var(--color-danger-text);
+        &:focus,
+        &:hover,
+        &:active {
+            background-color: color-mod(var(--color-danger-background) lightness(-10%));
+        }
     }
 
     &[disabled] {
