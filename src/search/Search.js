@@ -28,6 +28,14 @@ class Search extends React.Component {
     this.setState({ data: null, query: "" });
   }
 
+  // Automatically get results for the given query.
+  autoFetchForQuery = query => {
+    this.setState({ query: query }, () => {
+      this.fetchResults();
+    });
+  };
+
+  // When the input's value is changed.
   handleChange = event => {
     let query = event.target.value;
     if (!query) {
@@ -36,22 +44,25 @@ class Search extends React.Component {
     this.setState({ query: query });
   };
 
+  // When the form is submitted.
   handleSubmit = event => {
     event.preventDefault();
     if (!this.state.query) {
       return this.reset();
     }
-    Router.push({ pathname: "/", query: { q: encodeURI(this.state.query) } });
     this.fetchResults();
   };
 
+  // Clear the form when pressing esc.
   handleKeyDown = event => {
     if (event.keyCode === 27) {
       this.reset();
     }
   };
 
+  // Get results from the backend.
   fetchResults = () => {
+    Router.push({ pathname: "/", query: { q: encodeURI(this.state.query) } });
     this.setState({ pendingXHR: true, error: null }, () => {
       fetch(`${api.BASE_URL}/search?q=${this.state.query}`)
         .then(response => {
@@ -84,7 +95,7 @@ class Search extends React.Component {
     } else {
       if (!data) {
         // No query.
-        content = <Categories />;
+        content = <Categories autoFetchForQuery={this.autoFetchForQuery} />;
       } else {
         content = <SearchResults data={data} query={query} />;
       }
