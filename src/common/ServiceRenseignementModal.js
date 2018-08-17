@@ -5,7 +5,7 @@ import styled from "styled-components";
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
 if (typeof document !== "undefined") {
-  Modal.setAppElement(document.getElementById("root"));
+  Modal.setAppElement("body");
 }
 
 const modalStyles = {
