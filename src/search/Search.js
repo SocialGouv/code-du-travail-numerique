@@ -117,12 +117,13 @@ class Search extends React.Component {
               </header>
               <form className="search__form" onSubmit={this.handleSubmit}>
                 <input
-                  type="search"
-                  placeholder="Posez votre question"
+                  autoFocus
                   className="search__input"
-                  value={query}
                   onChange={this.handleChange}
                   onKeyDown={this.handleKeyDown}
+                  placeholder="Posez votre question"
+                  type="search"
+                  value={query}
                 />
                 <button type="submit" className="btn btn__img btn__img__search">
                   <span className="hidden">Rechercher</span>

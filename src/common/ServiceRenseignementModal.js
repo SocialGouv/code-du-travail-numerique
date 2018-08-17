@@ -10,7 +10,8 @@ if (typeof document !== "undefined") {
 
 const modalStyles = {
   overlay: {
-    zIndex: 10000
+    zIndex: 10000,
+    backgroundColor: "rgba(0,0,0,0.8)"
   },
   content: {
     top: "50%",
@@ -84,6 +85,7 @@ class ServiceRenseignementModal extends React.Component {
           <p>
             <label>Saisissez votre numéro de département :</label>
             <input
+              autoFocus
               type="text"
               maxLength="3"
               className="full-width"

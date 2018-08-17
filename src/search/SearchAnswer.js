@@ -62,15 +62,27 @@ class SearchAnswer extends React.Component {
       return null;
     }
 
+    let source;
+    if (data._source.source === "faq") {
+      source = "Source : FAQ";
+    } else if (data._source.source === "code_bfc") {
+      source = "Source : DIRECCTE Bourgogne-Franche-Comté (Juin 2017)";
+    }
+
     return (
-      <div className="section-light">
+      <section className="section-light">
         <div className="container">
           <div className="wrapper-light">
-            <h2>{data._source.title}</h2>
+            <header>
+              <h2>{data._source.title}</h2>
+            </header>
             <div dangerouslySetInnerHTML={{ __html: data._source.text }} />
+            <footer>
+              <p>{source}</p>
+            </footer>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
