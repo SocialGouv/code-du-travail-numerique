@@ -1,11 +1,12 @@
 .search {
     text-align: center;
+    position: relative;
 }
 
 .search__form {
 
     display: flex;
-    padding: var(--spacing-small) 0 0 0;
+    padding: var(--spacing-small) 0;
 
     & .search__input {
         flex: 1 1 auto;
@@ -16,4 +17,11 @@
         margin-left: 5px;
     }
 
+}
+
+.search__loading {
+    position: absolute;
+    bottom: -1em;
+    margin: 0;
+    width: 100%;
 }
