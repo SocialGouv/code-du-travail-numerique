@@ -86,7 +86,11 @@ class Search extends React.Component {
         </div>
       </div>
     ) : null;
-    const loadingJsx = pendingXHR ? <p>Chargement…</p> : null;
+    const loadingJsx = pendingXHR ? (
+      <p className="search__loading" role="alert" aria-live="assertive">
+        Chargement…
+      </p>
+    ) : null;
     const showAnswer = router.query && router.query.type === "questions";
 
     let content = null;
