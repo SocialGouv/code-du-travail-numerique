@@ -1,9 +1,12 @@
 import React from "react";
-import * as Feather from "react-feather";
 import Modal from "react-modal";
 import styled from "styled-components";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
+
+if (typeof document !== "undefined") {
+  Modal.setAppElement(document.getElementById("root"));
+}
 
 const modalStyles = {
   overlay: {
@@ -17,21 +20,20 @@ const modalStyles = {
     overflow: "visible",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width: 400,
-    height: 150
+    width: "70%"
   }
 };
 
-const Container = styled.div`display: inline-block;`
+const Container = styled.div``;
 
 class ServiceRenseignementModal extends React.Component {
-
   state = {
     modalIsOpen: false,
-    departmentData: null,
+    departmentData: null
   };
 
-  openModal = () => {
+  openModal = e => {
+    e.preventDefault();
     this.setState({
       modalIsOpen: true
     });
@@ -43,22 +45,26 @@ class ServiceRenseignementModal extends React.Component {
     });
   };
 
-  onDepartmentInput = (e) => {
-    let departmentNum = (e.target.value || '').toLowerCase();
+  onDepartmentInput = e => {
+    let departmentNum = (e.target.value || "").toLowerCase();
     let departmentData = servicesDeRenseignement[departmentNum];
     this.setState({
       departmentData: departmentData
     });
   };
 
-  render () {
-
+  render() {
     let department = null;
     if (this.state.departmentData) {
       department = (
         <p>
-          <a target="_blank" rel="noopener noreferrer" href={this.state.departmentData.url}>
-            {this.state.departmentData.url} <Feather.ExternalLink size="12" />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={this.state.departmentData.url}
+            className="external-link__after"
+          >
+            <mark>{this.state.departmentData.url}</mark>
           </a>
         </p>
       );
@@ -66,7 +72,9 @@ class ServiceRenseignementModal extends React.Component {
 
     return (
       <Container>
-        <a onClick={this.openModal}>Trouver votre service de renseignement</a>
+        <a href="#" role="button" onClick={this.openModal}>
+          Trouver votre service de renseignement
+        </a>
         <Modal
           style={modalStyles}
           isOpen={this.state.modalIsOpen}
@@ -74,17 +82,19 @@ class ServiceRenseignementModal extends React.Component {
         >
           <h2>Trouver votre service de renseignement</h2>
           <p>
-            <label>
-              Saisissez votre numéro de département : 
-              <input type="text" maxlength="3" onChange={this.onDepartmentInput} />
-            </label>
+            <label>Saisissez votre numéro de département :</label>
+            <input
+              type="text"
+              maxLength="3"
+              className="full-width"
+              onChange={this.onDepartmentInput}
+            />
           </p>
           {department}
         </Modal>
       </Container>
-    )
-  };
-
+    );
+  }
 }
 
 export default ServiceRenseignementModal;
