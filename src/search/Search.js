@@ -131,6 +131,7 @@ class Search extends React.Component {
               <form className="search__form" onSubmit={this.handleSubmit}>
                 <input
                   autoFocus
+                  aria-label="Posez votre question"
                   className="search__input"
                   onChange={this.handleChange}
                   onKeyDown={this.handleKeyDown}
