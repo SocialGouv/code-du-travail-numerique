@@ -114,6 +114,19 @@ class Search extends React.Component {
                 <h1 className="no-margin">
                   Posez votre question sur le droit du travail
                 </h1>
+                <p>
+                  Ce site est <b>en cours de construction</b> : les données qui
+                  s'y trouvent peuvent être erronées ou imprécises.
+                  <br />
+                  <a
+                    target="_blank"
+                    className="external-link__after"
+                    rel="noopener noreferrer"
+                    href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+                  >
+                    L'ouverture officielle du site est prévue pour 2020.
+                  </a>
+                </p>
               </header>
               <form className="search__form" onSubmit={this.handleSubmit}>
                 <input
