@@ -14,6 +14,12 @@ Demo : https://socialgouv.github.io/code-du-travail-explorer/
 $ docker-compose up
 ```
 
+### Pour lancer un shell dans le conteneur
+
+```shell
+$ docker exec -ti code-du-travail-explorer /bin/sh
+```
+
 ## Navigation par thèmes
 
  - Actuellement, une partie des datas sont en dur dans `/src/data` :
@@ -27,40 +33,18 @@ $ docker-compose up
     - suppletives.js : liste dispositions supplétives
     - kali.js : extrait du site legifrance https://www.legifrance.gouv.fr/rechConvColl.do
 
-Les résultats sont affichés par `src/Result.js` qui contient tous les "blocs".
+Les résultats sont affichés par `src/explorer/Result.js` qui contient tous les "blocs".
 
-⚠ La mise à jour de la branche `master` déclenche une mise à jour sur la démo. (ajouter `[skip ci]` au message de commit pour ne pas deploy)
+⚠ La mise à jour de la branche `master` déclenche une mise à jour sur la démo. (ajouter `[skip ci]` au message de commit pour ne pas deploy) => **Cette fonctionnalité est désactivée pour le moment en paramétrant une branche `toto` bidon dans la configuration `.circleci/config.yml` car le projet est déployée sur un autre serveur**.
 
-Pour aller sur une fiche thème directement, ajouter`/#/themes/6100` à l'url de base.
-
-## Todo
-
-### Data
- - Completer les fichiers dans [data](./data)
- - enrichir les datas pour anticiper des tests de rechecrhe
- - contacts : se procurer liste des contacts par theme/région
- - liens/outils : se procurer liste des contacts par theme/région
- - form feedback
-
-### Tech
- - futur : articles.js : remplacer par une API pour requeter par ID de code/article car +10k articles. voir quelle source de données on utilise pour ça ?
- - connecter les données à une API + ElasticSearch
- - elastic search :
-  - importer les différentes sources
-  - deployer une version + https://github.com/appbaseio/mirage ?
-
-### Divers
- - documenter [src/Articulation.js](./src/Articulation.js)
+## Divers
+ - documenter [src/explorer/Articulation.js](./src/explorer/Articulation.js)
  - documenter les [règles](https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcblxudGhlbWUtLT5Ye0wyMjUzID99XG5YLS0-MVtMMjI1My0xIDogMTMgdGhlbWVzXVxuWC0tPjJbTDIyNTMtMiA6IDQgdGhlbWVzXVxuWC0tPkF1dHJlXG5cbjEtLT5BMShNZXNzYWdlIEFydGljdWxhdGlvbiAxKVxuMi0tPkEyKE1lc3NhZ2UgQXJ0aWN1bGF0aW9uIDIpXG5BdXRyZS0tPkEzKE1lc3NhZ2UgQXJ0aWN1bGF0aW9uIDMpIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0) ?
 
 ### Ideas
  - enrichissement de la FAQ via discourse ou autre outil collaboratif ?
  - analyse des textes de loi :
     - https://github.com/digitalbazaar/jsonld.js ?
-
-## Intégration Elastic :
-
-A priori Elastic devrait à terme remplacer toutes les sources de données statiques.
 
 ### Tags
 

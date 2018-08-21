@@ -1,5 +1,6 @@
 import React from "react";
 import StarRating from "react-star-rating-component";
+import { UID } from "react-uid";
 
 import Alert from "../common/Alert";
 
@@ -105,30 +106,42 @@ class FeedbackForm extends React.Component {
                 onStarClick={num => this.setState({ stars: num })}
               />
               <p>
-                <label htmlFor="id_message">Votre message :</label>
-                <textarea
-                  onChange={e => this.setState({ message: e.target.value })}
-                  value={this.state.message}
-                  required={true}
-                  className="full-width"
-                  name="message"
-                  id="id_message"
-                  placeholder="Vos commentaires constructifs nous permettront d'améliorer notre service"
-                />
+                <UID name={id => `id_${id}`}>
+                  {id => (
+                    <React.Fragment>
+                      <label htmlFor={id}>Votre message :</label>
+                      <textarea
+                        onChange={e => this.setState({ message: e.target.value })}
+                        value={this.state.message}
+                        required={true}
+                        className="full-width"
+                        name="message"
+                        id={id}
+                        placeholder="Vos commentaires constructifs nous permettront d'améliorer notre service"
+                      />
+                    </React.Fragment>
+                  )}
+                </UID>
               </p>
               <p>
-                <label htmlFor="id_sender">Votre e-mail :</label>
-                <input
-                  onChange={e => this.setState({ email: e.target.value })}
-                  value={this.state.email}
-                  required={true}
-                  placeholder="Votre email"
-                  className="full-width"
-                  type="email"
-                  name="sender"
-                  maxLength="100"
-                  id="id_sender"
-                />
+                <UID name={id => `id_${id}`}>
+                  {id => (
+                    <React.Fragment>
+                      <label htmlFor={id}>Votre e-mail :</label>
+                      <input
+                        onChange={e => this.setState({ email: e.target.value })}
+                        value={this.state.email}
+                        required={true}
+                        placeholder="Votre email"
+                        className="full-width"
+                        type="email"
+                        name="sender"
+                        maxLength="100"
+                        id={id}
+                      />
+                    </React.Fragment>
+                  )}
+                </UID>
               </p>
               {this.state.status === "sent" ? (
                 <Alert category="success">Message bien envoyé !</Alert>

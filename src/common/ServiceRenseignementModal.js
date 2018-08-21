@@ -1,6 +1,7 @@
-import React from "react";
 import Modal from "react-modal";
+import React from "react";
 import styled from "styled-components";
+import { UID } from "react-uid";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
@@ -83,14 +84,22 @@ class ServiceRenseignementModal extends React.Component {
         >
           <h2>Trouver votre service de renseignement</h2>
           <p>
-            <label>Saisissez votre numéro de département :</label>
-            <input
-              autoFocus
-              type="text"
-              maxLength="3"
-              className="full-width"
-              onChange={this.onDepartmentInput}
-            />
+            <UID name={id => `id_${id}`}>
+              {id => (
+                <React.Fragment>
+                  <label htmlFor={id}>
+                    Saisissez votre numéro de département :
+                  </label>
+                  <input
+                    id={id}
+                    type="text"
+                    maxLength="3"
+                    className="full-width"
+                    onChange={this.onDepartmentInput}
+                  />
+                </React.Fragment>
+              )}
+            </UID>
           </p>
           {department}
         </Modal>
