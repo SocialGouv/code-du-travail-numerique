@@ -4,7 +4,7 @@ import Router from "next/router";
 class Categories extends React.Component {
   handleClick = (event, query) => {
     event.preventDefault();
-    this.props.pushUrl(encodeURI(query));
+    this.props.urlUpdate(encodeURI(query));
   };
 
   render() {

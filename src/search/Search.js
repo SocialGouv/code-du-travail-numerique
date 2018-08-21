@@ -18,53 +18,52 @@ class Search extends React.Component {
   };
 
   componentDidMount() {
-    // A query already exists in the URL.
+    // A query already exists in the URL: route was accessed via direct URL.
     if (Router.query && Router.query.q) {
-      this.setState({ query: decodeURI(Router.query.q) }, () => {
-        this.pushUrl(encodeURI(this.state.query));
-      });
+      this.fetchResults(decodeURI(Router.query.q));
     }
     Router.onRouteChangeStart = url => {
-      return this.handleRouteChange(url);
+      return this.onRouteChange(url);
     };
   }
 
-  handleRouteChange(url) {
+  onRouteChange = url => {
     // If there is a `q` parameter in the querystring of the URL, we have a query in the URL.
     let query = nodeUrl.parse(url, true).query.q;
     if (query) {
       return this.fetchResults(decodeURI(query));
     }
-    return this.reset();
-  }
+    return this.setState({ data: null, query: "" });
+  };
 
-  pushUrl = query => {
-    // This will trigger the onRouteChangeStart listener.
-    Router.push({ pathname: "/", query: { q: query } });
+  urlReset = () => {
+    // This will trigger the `onRouteChangeStart` listener.
+    return Router.push({ pathname: "/" });
+  };
+
+  urlUpdate = query => {
+    // This will trigger the `onRouteChangeStart` listener.
+    return Router.push({ pathname: "/", query: { q: query } });
   };
 
   onFormSubmit = event => {
     event.preventDefault();
     if (this.state.query) {
-      this.pushUrl(encodeURI(this.state.query));
+      this.urlUpdate(encodeURI(this.state.query));
     }
   };
-
-  reset() {
-    this.setState({ data: null, query: "" });
-  }
 
   onSearchInputChange = event => {
     let query = event.target.value;
     if (!query) {
-      this.reset();
+      return this.urlReset();
     }
     this.setState({ query: query });
   };
 
   onKeyDown = event => {
     if (event.keyCode === 27) {
-      this.reset();
+      return this.urlReset();
     }
   };
 
@@ -105,7 +104,7 @@ class Search extends React.Component {
     } else {
       if (!data) {
         // No query.
-        content = <Categories pushUrl={this.pushUrl} />;
+        content = <Categories urlUpdate={this.urlUpdate} />;
       } else {
         content = <SearchResults data={data} query={query} />;
       }
