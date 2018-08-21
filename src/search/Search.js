@@ -1,6 +1,7 @@
 import React from "react";
 import Router from "next/router";
 import { withRouter } from "next/router";
+import * as nodeUrl from "url";
 
 import Alert from "../common/Alert";
 import api from "../../conf/api.js";
@@ -17,26 +18,43 @@ class Search extends React.Component {
   };
 
   componentDidMount() {
+    // A query already exists in the URL.
     if (Router.query && Router.query.q) {
       this.setState({ query: decodeURI(Router.query.q) }, () => {
-        this.fetchResults();
+        this.pushUrl(encodeURI(this.state.query));
       });
     }
+    Router.onRouteChangeStart = url => {
+      return this.handleRouteChange(url);
+    };
   }
+
+  handleRouteChange(url) {
+    // If there is a `q` parameter in the querystring of the URL, we have a query in the URL.
+    let query = nodeUrl.parse(url, true).query.q;
+    if (query) {
+      return this.fetchResults(decodeURI(query));
+    }
+    return this.reset();
+  }
+
+  pushUrl = query => {
+    // This will trigger the onRouteChangeStart listener.
+    Router.push({ pathname: "/", query: { q: query } });
+  };
+
+  onFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.query) {
+      this.pushUrl(encodeURI(this.state.query));
+    }
+  };
 
   reset() {
     this.setState({ data: null, query: "" });
   }
 
-  // Automatically get results for the given query.
-  autoFetchForQuery = query => {
-    this.setState({ query: query }, () => {
-      this.fetchResults();
-    });
-  };
-
-  // When the input's value is changed.
-  handleChange = event => {
+  onSearchInputChange = event => {
     let query = event.target.value;
     if (!query) {
       this.reset();
@@ -44,26 +62,14 @@ class Search extends React.Component {
     this.setState({ query: query });
   };
 
-  // When the form is submitted.
-  handleSubmit = event => {
-    event.preventDefault();
-    if (!this.state.query) {
-      return this.reset();
-    }
-    this.fetchResults();
-  };
-
-  // Clear the form when pressing esc.
-  handleKeyDown = event => {
+  onKeyDown = event => {
     if (event.keyCode === 27) {
       this.reset();
     }
   };
 
-  // Get results from the backend.
-  fetchResults = () => {
-    Router.push({ pathname: "/", query: { q: encodeURI(this.state.query) } });
-    this.setState({ pendingXHR: true, error: null }, () => {
+  fetchResults = query => {
+    this.setState({ query, pendingXHR: true, error: null }, () => {
       fetch(`${api.BASE_URL}/search?q=${this.state.query}`)
         .then(response => {
           if (response.ok) {
@@ -99,7 +105,7 @@ class Search extends React.Component {
     } else {
       if (!data) {
         // No query.
-        content = <Categories autoFetchForQuery={this.autoFetchForQuery} />;
+        content = <Categories pushUrl={this.pushUrl} />;
       } else {
         content = <SearchResults data={data} query={query} />;
       }
@@ -128,13 +134,13 @@ class Search extends React.Component {
                   </a>
                 </p>
               </header>
-              <form className="search__form" onSubmit={this.handleSubmit}>
+              <form className="search__form" onSubmit={this.onFormSubmit}>
                 <input
                   autoFocus
                   aria-label="Posez votre question"
                   className="search__input"
-                  onChange={this.handleChange}
-                  onKeyDown={this.handleKeyDown}
+                  onChange={this.onSearchInputChange}
+                  onKeyDown={this.onKeyDown}
                   placeholder="Posez votre question"
                   type="search"
                   value={query}
