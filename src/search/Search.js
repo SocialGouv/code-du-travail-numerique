@@ -1,7 +1,8 @@
+import * as nodeUrl from "url";
+import memoize from "memoize-state";
 import React from "react";
 import Router from "next/router";
 import { withRouter } from "next/router";
-import * as nodeUrl from "url";
 
 import Alert from "../common/Alert";
 import api from "../../conf/api.js";
@@ -67,15 +68,22 @@ class Search extends React.Component {
     }
   };
 
+  // Memoize fetch calls (fetch returns a promise).
+  memoizedFetch = memoize(
+    query => {
+      return fetch(`${api.BASE_URL}/search?q=${query}`).then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error(api.ERROR_MSG);
+      });
+    },
+    { cacheSize: 40 }
+  );
+
   fetchResults = query => {
     this.setState({ query, pendingXHR: true, error: null }, () => {
-      fetch(`${api.BASE_URL}/search?q=${this.state.query}`)
-        .then(response => {
-          if (response.ok) {
-            return response.json();
-          }
-          throw new Error(api.ERROR_MSG);
-        })
+      this.memoizedFetch(query)
         .then(data => this.setState({ data, pendingXHR: false }))
         .catch(error => this.setState({ error, pendingXHR: false }));
     });
