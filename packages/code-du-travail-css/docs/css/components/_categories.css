@@ -10,19 +10,19 @@
 
 .categories__list {
     display: flex; /* Flex layout so items have equal height. */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
     list-style-type: none;
     padding: 0;
     /* Use negative margins on sides to create gutters that do not also
     create a gutter at the edges of the container. */
     margin: calc(var(--flex-gutter-size) * -1);
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .categories__list-item {
 
-    width: 200px;
-    flex: auto; /* Sizes the item based on the width/height properties, but makes them fully flexible. */
+    flex: 1 0 200px;
     margin: var(--flex-gutter-size); /* Gutters between items. */
     text-align: center;
 
