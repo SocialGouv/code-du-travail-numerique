@@ -32,7 +32,7 @@ const normalize = str =>
   });
 
 // render a highlighted html with span.fuse-highlighter from a fuse.js suggestion and a query.
-const FuseHighLighter = ({ suggestion, query, style }) => {
+const FuseHighLighter = ({ suggestion, query }) => {
   let html = suggestion.item.label;
   let offset = 0;
   let newHtml;
@@ -50,8 +50,8 @@ const FuseHighLighter = ({ suggestion, query, style }) => {
     });
   });
   return (
-    <div
-      style={style}
+    <a
+      href="#"
       dangerouslySetInnerHTML={{
         __html: newHtml || html
       }}
@@ -106,6 +106,7 @@ class FuseInput extends React.Component {
 
     const inputProps = {
       value,
+      className: "full-width",
       onChange: this.onChange,
       placeholder: this.props.placeholder
     };

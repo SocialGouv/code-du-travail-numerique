@@ -1,7 +1,4 @@
 import Document, { Head, Main, NextScript } from "next/document";
-import GitHubForkRibbon from "react-github-fork-ribbon";
-import Header from "../src/layout/Header.js";
-import Footer from "../src/layout/Footer.js";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -31,23 +28,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <noscript>You need to enable JavaScript to run this app.</noscript>
-          <nav aria-label="page" className="skip-links">
-            <a href="#main">Contenu principal</a>
-            <a href="#footer">Pied de page</a>
-          </nav>
-          <GitHubForkRibbon
-            href="//github.com/SocialGouv/code-du-travail-explorer"
-            target="_blank"
-            position="right"
-            color="green"
-          >
-            version bêta
-          </GitHubForkRibbon>
-          <Header />
-          <main id="main">
-            <Main />
-          </main>
-          <Footer />
+          <Main />
           <NextScript />
         </body>
       </html>

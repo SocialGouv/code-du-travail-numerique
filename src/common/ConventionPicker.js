@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, X, Download } from "react-feather";
+import { X, Download } from "react-feather";
 import Delay from "react-delay";
 
 import FuseInput from "../lib/FuseInput";
@@ -59,10 +59,7 @@ class ConventionPicker extends React.Component {
     if (this.state.selected) {
       return (
         <div>
-          <ConventionPreview
-            style={{ marginTop: 10 }}
-            convention={this.state.selected}
-          />
+          <ConventionPreview convention={this.state.selected} />
           <X
             size="16"
             onClick={this.reset}
@@ -73,7 +70,6 @@ class ConventionPicker extends React.Component {
     }
     return (
       <div>
-        <Search size="16" style={{ marginRight: 5, verticalAlign: "top" }} />
         <Delay wait={50}>
           <FuseInput
             data={conventions}
@@ -82,10 +78,7 @@ class ConventionPicker extends React.Component {
           />
         </Delay>
         {this.state.selected && (
-          <ConventionPreview
-            style={{ marginTop: 10 }}
-            convention={this.state.selected}
-          />
+          <ConventionPreview convention={this.state.selected} />
         )}
       </div>
     );

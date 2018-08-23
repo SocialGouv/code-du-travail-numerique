@@ -4,32 +4,36 @@ import styled from "styled-components";
 
 import ConventionPicker from "./ConventionPicker";
 
+if (typeof document !== "undefined") {
+  Modal.setAppElement("body");
+}
+
 const modalStyles = {
   overlay: {
-    zIndex: 10000
+    zIndex: 10000,
+    backgroundColor: "rgba(0,0,0,0.8)"
   },
   content: {
     top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
-    overflow: "visible",
+    overflow: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width: 400,
-    height: 150
+    width: "70%",
+    maxHeight: "90%"
   }
 };
 
-const Container = styled.span`display: inline-block;`
+const Container = styled.div``;
 
 class ConventionModal extends React.Component {
-
   state = {
-    modalIsOpen: false,
+    modalIsOpen: false
   };
 
-  openModal = (e) => {
+  openModal = e => {
     e.preventDefault();
     this.setState({
       modalIsOpen: true
@@ -42,26 +46,31 @@ class ConventionModal extends React.Component {
     });
   };
 
-  render () {
-    const text = this.props.text || 'Trouvez votre convention collective';
+  render() {
+    const text = this.props.text || "Trouvez votre convention collective";
     return (
-      <Container>
-        <a onClick={this.openModal} dangerouslySetInnerHTML={{__html:text}}></a>
+      <React.Fragment>
+        <a
+          href="#"
+          onClick={this.openModal}
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
         <Modal
           style={modalStyles}
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
         >
           <h2>Convention collective</h2>
-          Trouvez votre convention collective :
-          <br />
-          <br />
-          <ConventionPicker />
+          <p>
+            <label>
+              Trouvez votre convention collective :
+              <ConventionPicker />
+            </label>
+          </p>
         </Modal>
-      </Container>
-    )
-  };
-
+      </React.Fragment>
+    );
+  }
 }
 
 export default ConventionModal;

@@ -1,5 +1,6 @@
 import React from "react";
 
+import ConventionModal from "../common/ConventionModal";
 import { Link } from "../../routes";
 
 const Footer = () => (
@@ -39,7 +40,7 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <a href="/">Trouvez votre convention collective</a>
+              <ConventionModal text="Trouvez votre convention collective" />
             </li>
           </ul>
         </div>
