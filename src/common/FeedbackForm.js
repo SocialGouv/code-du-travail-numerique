@@ -14,7 +14,7 @@ class FeedbackForm extends React.Component {
 
   submit = () => {
     // contact@code-du-travail.beta.gouv.fr
-    const formUrl = "https://formspree.io/mwbpdywx";
+    const formUrl = "https://formspree.io/xwbdjqem";
     const subject = this.props.query || this.props.theme.id;
 
     if (
