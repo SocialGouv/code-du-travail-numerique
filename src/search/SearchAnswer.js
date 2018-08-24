@@ -2,6 +2,8 @@ import React from "react";
 
 import Alert from "../common/Alert";
 import api from "../../conf/api.js";
+import FeedbackForm from "../common/FeedbackForm.js";
+import SeeAlso from "../common/SeeAlso";
 
 // Display the details of a single result.
 
@@ -70,19 +72,23 @@ class SearchAnswer extends React.Component {
     }
 
     return (
-      <section className="section-light">
-        <div className="container">
-          <div className="wrapper-light">
-            <header>
-              <h2>{data._source.title}</h2>
-            </header>
-            <div dangerouslySetInnerHTML={{ __html: data._source.text }} />
-            <footer>
-              <p>{source}</p>
-            </footer>
+      <React.Fragment>
+        <section className="section-light">
+          <div className="container">
+            <div className="wrapper-light">
+              <header>
+                <h2>{data._source.title}</h2>
+              </header>
+              <div dangerouslySetInnerHTML={{ __html: data._source.text }} />
+              <footer>
+                <p>{source}</p>
+              </footer>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <SeeAlso />
+        <FeedbackForm />
+      </React.Fragment>
     );
   }
 }

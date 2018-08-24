@@ -92,6 +92,7 @@ class Search extends React.Component {
   render() {
     const { data, error, pendingXHR, query } = this.state;
     const { router } = this.props;
+
     const xhrErrorJsx = error ? (
       <div className="section-light">
         <div className="container">
@@ -99,11 +100,13 @@ class Search extends React.Component {
         </div>
       </div>
     ) : null;
+
     const loadingJsx = pendingXHR ? (
       <p className="search__loading" role="alert" aria-live="assertive">
         Chargement…
       </p>
     ) : null;
+
     const showAnswer = router.query && router.query.type === "questions";
 
     let content = null;

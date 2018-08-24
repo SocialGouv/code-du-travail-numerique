@@ -101,7 +101,7 @@ class SearchResults extends React.Component {
     }
 
     return (
-      <div>
+      <React.Fragment>
         <div className="section-light">
           <div className="container">
             <Results data={data.hits.hits} />
@@ -109,7 +109,7 @@ class SearchResults extends React.Component {
         </div>
         <SeeAlso />
         <FeedbackForm query={query} />
-      </div>
+      </React.Fragment>
     );
   }
 }

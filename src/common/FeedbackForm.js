@@ -74,12 +74,12 @@ class FeedbackForm extends React.Component {
   };
 
   render() {
-    const title = this.props.query ? (
-      <span>
+    const intro = this.props.query ? (
+      <p>
         Avons-nous répondu à votre question : <b>{this.props.query}</b> ?
-      </span>
+      </p>
     ) : (
-      <span>Avons-nous répondu à votre question ?</span>
+      <p>Avons-nous répondu à votre question ?</p>
     );
 
     return (
@@ -88,9 +88,7 @@ class FeedbackForm extends React.Component {
           <div className="wrapper-dark">
             <header>
               <h2 className="no-margin">Aidez-nous à nous améliorer</h2>
-              <p>
-                Avons-nous répondu à votre question : <b>chomage</b> ?
-              </p>
+              {intro}
             </header>
             <form>
               <p>
