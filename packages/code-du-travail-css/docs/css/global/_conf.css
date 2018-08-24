@@ -108,3 +108,17 @@ https://fontlibrary.org/fr/font/source-sans-pro
 --------------------------------------------------------------------------- */
 
 @custom-media --breakpoint-mobile (max-width: 600px);
+
+/* Focus ring.
+--------------------------------------------------------------------------- */
+
+:focus {
+    outline: 3px dotted var(--color-dark-text);
+}
+
+/* WebKit gets its native focus styles. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+    :focus {
+        outline: 5px auto var(--color-dark-text);
+    }
+}
