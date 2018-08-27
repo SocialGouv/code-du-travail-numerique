@@ -90,13 +90,16 @@ class SearchResults extends React.Component {
     // No results.
     if (!data.hits.total) {
       return (
-        <div className="section-light">
-          <div className="container">
-            <Alert category="primary">
-              Nous n’avons pas trouvé de résultat pour votre recherche.
-            </Alert>
+        <React.Fragment>
+          <div className="section-light">
+            <div className="container">
+              <Alert category="primary">
+                Nous n’avons pas trouvé de résultat pour votre recherche.
+              </Alert>
+            </div>
           </div>
-        </div>
+          <FeedbackForm query={query} />
+        </React.Fragment>
       );
     }
 
