@@ -29,12 +29,13 @@ class Search extends React.Component {
   }
 
   onRouteChange = url => {
-    // If there is a `q` parameter in the querystring of the URL, we have a query in the URL.
-    let query = nodeUrl.parse(url, true).query.q;
-    if (query) {
-      return this.fetchResults(decodeURI(query));
+    url = nodeUrl.parse(url, true);
+    let isRootSearchPage = url.pathname === "/";
+    if (isRootSearchPage && url.query.q) {
+      return this.fetchResults(decodeURI(url.query.q));
+    } else if (isRootSearchPage) {
+      return this.setState({ data: null, query: "" });
     }
-    return this.setState({ data: null, query: "" });
   };
 
   urlReset = () => {
