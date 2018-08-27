@@ -1,5 +1,4 @@
 import React from "react";
-import Router from "next/router";
 
 class Categories extends React.Component {
   handleClick = (event, query) => {

@@ -1,7 +1,7 @@
 import * as nodeUrl from "url";
 import memoize from "memoize-state";
 import React from "react";
-import Router from "next/router";
+import { Router } from "../../routes";
 import { withRouter } from "next/router";
 
 import Alert from "../common/Alert";
