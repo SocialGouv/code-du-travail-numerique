@@ -146,7 +146,6 @@ class Search extends React.Component {
               </header>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <input
-                  autoFocus
                   aria-label="Posez votre question"
                   className="search__input"
                   onChange={this.onSearchInputChange}
