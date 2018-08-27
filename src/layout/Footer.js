@@ -11,7 +11,9 @@ const Footer = () => (
           <h3>Code du travail numérique</h3>
           <ul>
             <li>
-              <Link route="explorer">Navigation par thèmes</Link>
+              <Link route="explorer">
+                <a>Navigation par thèmes</a>
+              </Link>
             </li>
           </ul>
         </div>
