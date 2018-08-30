@@ -3,6 +3,7 @@
 require('elastic-apm-node').start({
   serviceName: 'code-du-travail-api',
   serverUrl: process.env.APM_SERVER_URL,
+  active: process.env.APM_SERVER_ACTIVE,
 })
 
 const bodyParser = require('koa-bodyparser')
