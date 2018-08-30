@@ -19,6 +19,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-api#readme",
   "dependencies": {
     "@koa/cors": "^2.2.1",
+    "elastic-apm-node": "^1.11.0",
     "elasticsearch": "^15.0.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
