@@ -2,7 +2,7 @@
 // https://www.elastic.co/guide/en/apm/agent/nodejs/current/koa.html
 require('elastic-apm-node').start({
   serviceName: 'code-du-travail-api',
-  serverUrl: 'http://code-du-travail-apm-server:8200',
+  serverUrl: process.env.APM_SERVER_URL,
 })
 
 const bodyParser = require('koa-bodyparser')

@@ -11,6 +11,8 @@ Créez un fichier `.env` (utilisé par Docker) :
 ```shell
 ELASTICSEARCH_URL=http://code-du-travail-data-elasticsearch:9200
 ELASTICSEARCH_LOG_LEVEL=trace
+
+APM_SERVER_URL=http://code-du-travail-apm-server:8200
 ```
 
 Puis :
