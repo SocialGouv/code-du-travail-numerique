@@ -18,7 +18,7 @@ class Categories extends React.Component {
               <li className="categories__list-item">
                 <a
                   href="#"
-                  onClick={e => this.handleClick(e, "embauche et contrat")}
+                  onClick={e => this.handleClick(e, "obligations et embauche")}
                 >
                   <img src="/static/assets/icons/handshake.svg" alt="" />
                   <h3>Embauche et contrat</h3>
