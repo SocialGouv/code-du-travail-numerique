@@ -111,5 +111,5 @@ Quand on veut utiliser une icône, on la copie depuis `docs/assets/icons_source/
 - pouvoir facilement retrouver la provenance d'une icône
 - pouvoir supprimer les icônes inutilisées par l'interface dans `docs/assets/icons/`
 
-[npm-badge]: https://img.shields.io/npm/v/code-du-travail-css.png?style=flat-square
-[npm]: https://www.npmjs.org/package/code-du-travail-css
+[npm-badge]: https://img.shields.io/npm/v/@socialgouv/code-du-travail-css.png?style=flat-square
+[npm]: https://www.npmjs.org/package/@socialgouv/code-du-travail-css
