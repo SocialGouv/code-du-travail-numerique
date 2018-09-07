@@ -10,7 +10,7 @@ export const flavors = [
   "danger"
 ];
 
-// return the 1st truthy prop that is one of a Tag versions
+// return the 1st truthy prop that is one of an Button versions
 const getFlavor = props => {
   const versionProps = Object.keys(props).filter(
     // ensure value is truthy
@@ -19,17 +19,11 @@ const getFlavor = props => {
   return (versionProps.length && versionProps[0]) || "";
 };
 
-const Tag = props => (
-  <div className={`tag tag__${getFlavor(props)}`} {...props} />
+const Badge = props => (
+  <div className={`badge badge__${getFlavor(props)}`} {...props} />
 );
 
-Tag.propTypes = {
-  children: PropTypes.element.isRequired
-};
-
-Tag.defaultProps = {};
-
-Tag.propTypes = {
+Badge.propTypes = {
   /** use .btn.btn__primary */
   primary: PropTypes.bool,
   /** use .btn.btn__secondary */
@@ -45,7 +39,7 @@ Tag.propTypes = {
   style: PropTypes.object
 };
 
-Tag.defaultProps = {
+Badge.defaultProps = {
   primary: false,
   secondary: false,
   warning: false,
@@ -54,4 +48,4 @@ Tag.defaultProps = {
   danger: false
 };
 
-export default Tag;
+export default Badge;

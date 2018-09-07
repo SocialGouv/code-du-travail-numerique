@@ -1,5 +1,5 @@
 {
-  "name": "code-du-travail-ui",
+  "name": "@socialgouv/code-du-travail-ui",
   "version": "1.0.0",
   "description": "Composants ReactJS du Code du travail numérique",
   "main": "lib/index.js",
@@ -13,7 +13,6 @@
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
-    "docz:dev": "docz dev",
     "docz:build": "docz build"
   },
   "dependencies": {},

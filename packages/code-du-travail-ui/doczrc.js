@@ -1,5 +1,6 @@
 export default {
   indexHtml: "doc/index.html",
+  dest: "./doc-build",
   //wrapper: "doc/wrapper.js",
   themeConfig: {
     mode: "light",

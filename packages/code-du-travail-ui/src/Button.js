@@ -32,7 +32,7 @@ Button.propTypes = {
   warning: PropTypes.bool,
   /** use .btn.btn__success */
   success: PropTypes.bool,
-  /** use .btn.btnrt__info */
+  /** use .btn.btn__info */
   info: PropTypes.bool,
   /** use .btn.btn__danger */
   danger: PropTypes.bool,

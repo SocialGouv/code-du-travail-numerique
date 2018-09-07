@@ -5,11 +5,11 @@ fullpage: true
 ---
 
 import { Playground, PropsTable } from "docz";
-import { Alert, Button, BreadCrumbs, Container, LightBox, SearchForm, Support, Tag } from "../src";
+import { Alert, Badge, Button, BreadCrumbs, Categories, Category, Container, LightBox, SearchForm, Section, Support, Tag } from "../src";
 
 ## Documentation des composants React du code du travail numérique
 
-Composants [React](http://reactjs.org/) du site du [Code du travail numérique](https://codedutravail.num.social.gouv.fr).
+Composants [ReactJS](http://reactjs.org/) du site du [Code du travail numérique](https://codedutravail.num.social.gouv.fr).
 
 Le CSS utilisé est celui de [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css), que vous devez importer séparément.
 
@@ -18,8 +18,7 @@ Contribuez au projet ici : [code-du-travail-ui](https://github.com/SocialGouv/co
 ## Usage
 
 ```js
-import "@SocialGouv/code-du-travail-css"
-import { Container, Alert } "@SocialGouv/code-du-travail-ui"
+import { Container, Alert } "@socialgouv/code-du-travail-ui"
 
 const App = (
   <Container>
@@ -28,6 +27,8 @@ const App = (
   </Container>
 )
 ```
+
+> Pour récupérer le CSS, voir le projet [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css).
 
 ## \<Alert/\>
 
@@ -42,6 +43,39 @@ const App = (
 </Playground>
 
 <PropsTable of={Alert} />
+
+## \<Badge/\>
+
+<Playground>
+  <Badge>Badge</Badge>
+  <br/><br/>
+  <Badge primary>Badge primary</Badge>
+  <br/><br/>
+  <Badge secondary>Badge secondary</Badge>
+  <br/><br/>
+  <Badge warning>Badge warning</Badge>
+  <br/><br/>
+  <Badge success>Badge success</Badge>
+  <br/><br/>
+  <Badge info>Badge info</Badge>
+  <br/><br/>
+  <Badge danger>Badge danger</Badge>
+</Playground>
+
+<PropsTable of={Badge} />
+
+
+## \<BreadCrumbs/\>
+
+<Playground>
+  <BreadCrumbs entries={[
+    <a href="/">Accueil</a>,
+    <a href="/contacts">Vos contacts</a>,
+    "En région"
+  ]}/>
+</Playground>
+
+<PropsTable of={BreadCrumbs} />
 
 
 ## \<Button/\>
@@ -63,6 +97,20 @@ const App = (
 </Playground>
 
 <PropsTable of={Button} />
+
+## \<Category/\>
+
+<Playground>
+  <Categories>
+    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg" title="Embauche et contrat"/>
+    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/time.svg" title="Durée de travail et congés"/>
+    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/coins.svg" title="Rémunération"/>
+    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/shield.svg" title="Santé et sécurité"/>
+  </Categories>
+</Playground>
+
+<PropsTable of={Category} />
+
 
 ## \<Container/\>
 
@@ -88,7 +136,7 @@ const App = (
 
 <PropsTable of={LightBox} />
 
-## \<Support\>
+## \<Support/\>
 
 <Playground>
   <Support>
@@ -108,7 +156,7 @@ const App = (
 
 <PropsTable of={Support} />
 
-## \<SearchForm\>
+## \<SearchForm/\>
 
 <Playground>
   <SearchForm placeholder="Comment puis-je vous aider ?" onSubmit={query => alert(query)}/>
@@ -116,27 +164,59 @@ const App = (
 
 <PropsTable of={SearchForm} />
 
-## \<Tag\>
+
+## \<Section/\>
 
 <Playground>
-  <Tag>#styleguide</Tag>
-  <Tag>#css</Tag>
-  <Tag>#a11y</Tag>
+  <Section light>
+    <h2>
+      Quelles sont les obligations de l'employeur en matière de congés payés ?
+    </h2>
+    <div>
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+       consequat.
+    </div>
+  </Section>
+  <Section dark>
+    <h2>
+      Une période de chômage permet-elle de valider des trimestres de retraite ?
+    </h2>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </p>
+    </div>
+  </Section>
+</Playground>
+
+<PropsTable of={Section} />
+
+
+## \<Tag/\>
+
+<Playground>
+  <Tag>Tag</Tag>
+  <br/><br/>
+  <Tag primary>#primary</Tag>
+  <br/><br/>
+  <Tag secondary>#secondary</Tag>
+  <br/><br/>
+  <Tag warning>#warning</Tag>
+  <br/><br/>
+  <Tag success>#success</Tag>
+  <br/><br/>
+  <Tag info>#info</Tag>
+  <br/><br/>
+  <Tag danger>#danger</Tag>
 </Playground>
 
 <PropsTable of={Tag} />
 
 
-## \<BreadCrumbs\>
-
-<Playground>
-  <BreadCrumbs entries={[
-    <a href="/">Accueil</a>,
-    <a href="/contacts">Vos contacts</a>,
-    "En région"
-  ]}/>
-</Playground>
-
-<PropsTable of={BreadCrumbs} />
 
 
