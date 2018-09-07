@@ -13,13 +13,13 @@ Il permet de transformer le code CSS à l'aide de plug-ins JavaScript (voir le f
 ## Usage
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@SocialGouv/code-du-travail-css@latest/docs/bundle.css"/>
+<link rel="stylesheet" href="https://unpkg.com/@socialgouv/code-du-travail-css@latest/docs/bundle.css"/>
 ```
 
 ou avec npm :
 
 ```js
-require("@SocialGouv/code-du-travail-css");
+require("@socialgouv/code-du-travail-css");
 ```
 
 ## Conseils pour contribuer

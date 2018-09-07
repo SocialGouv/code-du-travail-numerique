@@ -1,8 +1,7 @@
 {
-  "name": "@SocialGouv/code-du-travail-css",
+  "name": "@socialgouv/code-du-travail-css",
   "version": "0.0.1",
   "description": "Code du travail numérique - CSS",
-  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SocialGouv/code-du-travail-css.git"
