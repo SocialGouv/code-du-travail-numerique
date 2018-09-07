@@ -3,7 +3,7 @@ https://calendar.perfplanet.com/2016/no-font-face-bulletproof-syntax/
 https://fontlibrary.org/fr/font/evolventa
 https://fontlibrary.org/fr/font/source-sans-pro
 --------------------------------------------------------------------------- */
-
+/*
 @font-face {
   font-family: "Muli";
   font-style: normal;
@@ -21,57 +21,56 @@ https://fontlibrary.org/fr/font/source-sans-pro
   src: url(assets/fonts/muli-latin-700.woff2) format('woff2'),
        url(assets/fonts/muli-latin-700.woff) format('woff');
 }
-
+*/
 /* Variables.
 --------------------------------------------------------------------------- */
 
 :root {
+  /* Colors */
+  --color-black: #0c0c0e;
+  --color-blue: #005c99; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
+  --color-blue-dark: #04234a;
+  --color-element-background: #f5f7fa;
+  --color-element-border: #c9d3df;
+  --color-white: #fff;
 
-    /* Colors */
-    --color-black: #0c0c0e;
-    --color-blue: #005c99; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
-    --color-blue-dark: #04234a;
-    --color-element-background: #f5f7fa;
-    --color-element-border: #c9d3df;
-    --color-white: #fff;
+  /* https://webaim.org/resources/contrastchecker/?bcolor=f9f9fc&fcolor=4c5467 */
+  --color-light-background: #f9f9fc;
+  --color-light-text: #4c5467; /* Also used as fill color in SVG files. */
+  /* https://webaim.org/resources/contrastchecker/?bcolor=ebeff3&fcolor=434956 */
+  --color-dark-background: #ebeff3;
+  --color-dark-text: #434956;
 
-    /* https://webaim.org/resources/contrastchecker/?bcolor=f9f9fc&fcolor=4c5467 */
-    --color-light-background: #f9f9fc;
-    --color-light-text: #4c5467; /* Also used as fill color in SVG files. */
-    /* https://webaim.org/resources/contrastchecker/?bcolor=ebeff3&fcolor=434956 */
-    --color-dark-background: #ebeff3;
-    --color-dark-text: #434956;
+  /* https://webaim.org/resources/contrastchecker/?bcolor=005994&fcolor=ffffff */
+  --color-primary-background: #005994;
+  --color-primary-text: var(--color-white);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=c4c4c4&fcolor=0c0c0e */
+  --color-secondary-background: #c4c4c4;
+  --color-secondary-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=2cb54c&fcolor=0c0c0e */
+  --color-success-background: #2cb54c;
+  --color-success-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=b1e2f8&fcolor=0c0c0e */
+  --color-info-background: #b1e2f8;
+  --color-info-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=ffc107&fcolor=0c0c0e */
+  --color-warning-background: #ffc107;
+  --color-warning-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=aa1d2b&fcolor=ffffff */
+  --color-danger-background: #aa1d2b;
+  --color-danger-text: var(--color-white);
 
-    /* https://webaim.org/resources/contrastchecker/?bcolor=005994&fcolor=ffffff */
-    --color-primary-background: #005994;
-    --color-primary-text: var(--color-white);
-    /* https://webaim.org/resources/contrastchecker/?bcolor=c4c4c4&fcolor=0c0c0e */
-    --color-secondary-background: #c4c4c4;
-    --color-secondary-text: var(--color-black);
-    /* https://webaim.org/resources/contrastchecker/?bcolor=2cb54c&fcolor=0c0c0e */
-    --color-success-background: #2cb54c;
-    --color-success-text: var(--color-black);
-    /* https://webaim.org/resources/contrastchecker/?bcolor=b1e2f8&fcolor=0c0c0e */
-    --color-info-background: #b1e2f8;
-    --color-info-text: var(--color-black);
-    /* https://webaim.org/resources/contrastchecker/?bcolor=ffc107&fcolor=0c0c0e */
-    --color-warning-background: #ffc107;
-    --color-warning-text: var(--color-black);
-    /* https://webaim.org/resources/contrastchecker/?bcolor=aa1d2b&fcolor=ffffff */
-    --color-danger-background: #aa1d2b;
-    --color-danger-text: var(--color-white);
+  /* Border radius */
+  --border-radius-base: 0.25rem;
 
-    /* Border radius */
-    --border-radius-base: 0.25rem;
+  /* Spacing */
+  --spacing-small: 0.625rem;
+  --spacing-base: 1rem;
+  --spacing-medium: 1.25rem;
+  --spacing-large: 2.5em;
+  --spacing-inter-component: var(--spacing-medium);
 
-    /* Spacing */
-    --spacing-small: 0.625rem;
-    --spacing-base: 1rem;
-    --spacing-medium: 1.25rem;
-    --spacing-large: 2.5em;
-    --spacing-inter-component: var(--spacing-medium);
-
-    /* Font-size
+  /* Font-size
     Setting the font size on the body to 1rem sets the text size to the
     browser's default font size: usually 16px.
 
@@ -81,27 +80,26 @@ https://fontlibrary.org/fr/font/source-sans-pro
     10px => 0.625rem
     etc.
     --------------------------------------------------------------------------- */
-    --font-size-base: 1rem;
-    --line-height-base: 1.6;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
 
-    --font-size-small: 0.9rem;
+  --font-size-small: 0.9rem;
 
-    --font-size-h1: 1.6rem;
-    --font-size-h2: 1.5rem;
-    --font-size-h3: 1.4rem;
-    --font-size-h4: 1.3rem;
-    --font-size-h5: 1.2rem;
-    --font-size-h6: 1.1rem;
+  --font-size-h1: 1.6rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.4rem;
+  --font-size-h4: 1.3rem;
+  --font-size-h5: 1.2rem;
+  --font-size-h6: 1.1rem;
 
-    /* Box-shadow: `offset-x offset-y blur-radius spread-radius color`
+  /* Box-shadow: `offset-x offset-y blur-radius spread-radius color`
 
     The first value sets the x-offset of the light source.
     The second value sets y-offset of the light source.
     The third value sets a blur effects (makes the shadow non-uniform).
     The fourth value sets a spread (contract the shadow when negative).
     --------------------------------------------------------------------------- */
-    --box-shadow-bottom: 0 10px 10px -10px #b7bcdf;
-
+  --box-shadow-bottom: 0 10px 10px -10px #b7bcdf;
 }
 
 /* Custom media queries.
@@ -113,12 +111,12 @@ https://fontlibrary.org/fr/font/source-sans-pro
 --------------------------------------------------------------------------- */
 
 :focus {
-    outline: 3px dotted var(--color-dark-text);
+  outline: 3px dotted var(--color-dark-text);
 }
 
 /* WebKit gets its native focus styles. */
 @media (-webkit-min-device-pixel-ratio: 0) {
-    :focus {
-        outline: 5px auto var(--color-dark-text);
-    }
+  :focus {
+    outline: 5px auto var(--color-dark-text);
+  }
 }

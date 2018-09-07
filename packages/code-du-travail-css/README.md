@@ -7,8 +7,20 @@ PostCSS est utilisé pour le développement CSS.
 Il permet de transformer le code CSS à l'aide de plug-ins JavaScript (voir le fichier `postcss.config.js`) :
 
 - [`postcss-preset-env`](https://preset-env.cssdb.org) configuré pour tourner en [stage 0](https://cssdb.org/#staging-process)
-- [`postcss-import`](https://github.com/postcss/postcss-import) pour *inliner* les `@import`s CSS et mettre en place un système d'importation de *partials* (à la SASS ou Stylus)
+- [`postcss-import`](https://github.com/postcss/postcss-import) pour _inliner_ les `@import`s CSS et mettre en place un système d'importation de _partials_ (à la SASS ou Stylus)
 - [`cssnano`](https://cssnano.co)
+
+## Usage
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@SocialGouv/code-du-travail-css@latest/docs/bundle.css"/>
+```
+
+ou avec npm :
+
+```js
+require("@SocialGouv/code-du-travail-css");
+```
 
 ## Conseils pour contribuer
 

@@ -7,109 +7,119 @@
 .btn,
 .btn:link,
 .btn:visited {
+  appearance: none;
 
-    appearance: none;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
 
-    display: inline-block;
-    margin: 0;
-    text-align: center;
-    white-space: nowrap;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  line-height: inherit;
+  padding: var(--spacing-small) var(--spacing-base);
+  border-radius: var(--border-radius-base);
+  border: 1px solid transparent;
 
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    line-height: inherit;
-    padding: var(--spacing-small) var(--spacing-base);
-    border-radius: var(--border-radius-base);
-    border: 1px solid transparent;
+  /* Fixme: currently use the same colors as `.btn__primary`. */
+  background: var(--color-primary-background);
+  color: var(--color-primary-text);
 
-    /* Fixme: currently use the same colors as `.btn__primary`. */
+  cursor: pointer;
+
+  /* Specific to <a> elements. */
+  text-decoration: none;
+
+  &:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(
+      var(--color-primary-background) lightness(-10%)
+    );
+    color: var(--color-white);
+  }
+
+  &.btn__primary {
     background: var(--color-primary-background);
     color: var(--color-primary-text);
-
-    cursor: pointer;
-
-    /* Specific to <a> elements. */
-    text-decoration: none;
-
-    &:active {
-        position: relative;
-        top: 1px;
-        left: 1px;
-    }
-
     &:focus,
     &:hover,
     &:active {
-        background-color: color-mod(var(--color-primary-background) lightness(-10%));
-        color: var(--color-white);
+      background-color: color-mod(
+        var(--color-primary-background) lightness(-10%)
+      );
     }
+  }
 
-    &.btn__primary {
-        background: var(--color-primary-background);
-        color: var(--color-primary-text);
-        &:focus,
-        &:hover,
-        &:active {
-            background-color: color-mod(var(--color-primary-background) lightness(-10%));
-        }
+  &.btn__secondary {
+    background-color: var(--color-secondary-background);
+    color: var(--color-secondary-text);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: color-mod(
+        var(--color-secondary-background) lightness(-10%)
+      );
     }
+  }
 
-    &.btn__secondary {
-        background-color: var(--color-secondary-background);
-        color: var(--color-secondary-text);
-        &:focus,
-        &:hover,
-        &:active {
-            background-color: color-mod(var(--color-secondary-background) lightness(-10%));
-        }
+  &.btn__warning {
+    background-color: var(--color-warning-background);
+    color: var(--color-warning-text);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: color-mod(
+        var(--color-warning-background) lightness(-10%)
+      );
     }
+  }
 
-    &.btn__warning {
-        background-color: var(--color-warning-background);
-        color: var(--color-warning-text);
-        &:focus,
-        &:hover,
-        &:active {
-            background-color: color-mod(var(--color-warning-background) lightness(-10%));
-        }
+  &.btn__success {
+    background-color: var(--color-success-background);
+    color: var(--color-success-text);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: color-mod(
+        var(--color-success-background) lightness(-10%)
+      );
     }
+  }
 
-    &.btn__success {
-        background-color: var(--color-success-background);
-        color: var(--color-success-text);
-        &:focus,
-        &:hover,
-        &:active {
-            background-color: color-mod(var(--color-success-background) lightness(-10%));
-        }
+  &.btn__info {
+    background-color: var(--color-info-background);
+    color: var(--color-info-text);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: color-mod(var(--color-info-background) lightness(-10%));
     }
+  }
 
-    &.btn__info {
-        background-color: var(--color-info-background);
-        color: var(--color-info-text);
-        &:focus,
-        &:hover,
-        &:active {
-            background-color: color-mod(var(--color-info-background) lightness(-10%));
-        }
+  &.btn__danger {
+    background-color: var(--color-danger-background);
+    color: var(--color-danger-text);
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: color-mod(
+        var(--color-danger-background) lightness(-10%)
+      );
     }
+  }
 
-    &.btn__danger {
-        background-color: var(--color-danger-background);
-        color: var(--color-danger-text);
-        &:focus,
-        &:hover,
-        &:active {
-            background-color: color-mod(var(--color-danger-background) lightness(-10%));
-        }
-    }
-
-    &[disabled] {
-        cursor: not-allowed;
-        opacity: .5;
-    }
-
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 /* Buttons containing only 1 image.
@@ -125,24 +135,22 @@ The <span> element will be moved away from the normal flow of the document.
 --------------------------------------------------------------------------- */
 
 .btn__img {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-
-    /*
+  /*
     Artificially inject an empty text node with a width, otherwise the <button>
     would be empty (because it's only child has a `.hidden` class) and properties
     related to text (such as font-size, line-height, etc.) would not be applied.
     This would result in buttons with incoherent sizes.
     */
-    &::after {
-        content: ' ';
-        min-width: 1rem;
-        display: inline-block;
-    }
-
+  &::after {
+    content: " ";
+    min-width: 1rem;
+    display: inline-block;
+  }
 }
 
 .btn__img__search {
-    background-image: url(assets/icons/search.svg);
+  /*background-image: url(assets/icons/search.svg);*/
 }

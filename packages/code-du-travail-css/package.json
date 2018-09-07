@@ -1,14 +1,18 @@
 {
-  "name": "work-in-france",
+  "name": "@SocialGouv/code-du-travail-css",
   "version": "0.0.1",
-  "description": "La plateforme de demande d'autorisation provisoires de travail.",
+  "description": "Code du travail numérique - CSS",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SocialGouv/work-in-france.git"
+    "url": "git+https://github.com/SocialGouv/code-du-travail-css.git"
   },
+  "files": ["docs/*"],
+  "main": "docs/bundle.css",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "postcss --config postcss.config.js docs/css/styles.css --output docs/bundle.css --watch --verbose"
+    "prepublishOnly": "npm run build",
+    "build": "postcss --config postcss.config.js docs/css/styles.css --output docs/bundle.css",
+    "dev": "npm run build -- --watch --verbose"
   },
   "devDependencies": {
     "cssnano": "^4.0.5",
