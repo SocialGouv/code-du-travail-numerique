@@ -1,16 +1,28 @@
 # code-du-travail-ui
 
-[![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
 
-Describe code-du-travail-ui here.
+Démo & Documentation : https://socialgouv.github.io/code-du-travail-ui
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+Composants [React](http://reactjs.org/) du site du [Code du travail numérique](https://codedutravail.num.social.gouv.fr).
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+Le CSS utilisé est celui de [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css), que vous devez importer séparément.
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+Contribuez au projet ici : [code-du-travail-ui](https://github.com/SocialGouv/code-du-travail-ui).
+
+## Usage
+
+```js
+import "@SocialGouv/code-du-travail-css"
+import { Container, Alert } "@SocialGouv/code-du-travail-ui"
+
+const App = (
+  <Container>
+    <Alert primary>Primary alert message</Alert>
+    <Alert secondary>Secondary alert message</Alert>
+  </Container>
+)
+```
+
+[npm-badge]: https://img.shields.io/npm/v/code-du-travail-ui.png?style=flat-square
+[npm]: https://www.npmjs.org/package/code-du-travail-ui

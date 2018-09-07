@@ -1,0 +1,142 @@
+---
+route: /
+order: 1
+fullpage: true
+---
+
+import { Playground, PropsTable } from "docz";
+import { Alert, Button, BreadCrumbs, Container, LightBox, SearchForm, Support, Tag } from "../src";
+
+## Documentation des composants React du code du travail numérique
+
+Composants [React](http://reactjs.org/) du site du [Code du travail numérique](https://codedutravail.num.social.gouv.fr).
+
+Le CSS utilisé est celui de [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css), que vous devez importer séparément.
+
+Contribuez au projet ici : [code-du-travail-ui](https://github.com/SocialGouv/code-du-travail-ui).
+
+## Usage
+
+```js
+import "@SocialGouv/code-du-travail-css"
+import { Container, Alert } "@SocialGouv/code-du-travail-ui"
+
+const App = (
+  <Container>
+    <Alert primary>Primary alert message</Alert>
+    <Alert secondary>Secondary alert message</Alert>
+  </Container>
+)
+```
+
+## \<Alert/\>
+
+<Playground>
+  <Alert>Alert</Alert>
+  <Alert primary>Alert primary</Alert>
+  <Alert secondary>Alert secondary</Alert>
+  <Alert warning>Alert warning</Alert>
+  <Alert success>Alert success</Alert>
+  <Alert info>Alert info</Alert>
+  <Alert danger>Alert danger</Alert>
+</Playground>
+
+<PropsTable of={Alert} />
+
+
+## \<Button/\>
+
+<Playground>
+  <Button>Button</Button>
+  <br/><br/>
+  <Button primary>Button primary</Button>
+  <br/><br/>
+  <Button secondary>Button secondary</Button>
+  <br/><br/>
+  <Button warning>Button warning</Button>
+  <br/><br/>
+  <Button success>Button success</Button>
+  <br/><br/>
+  <Button info>Button info</Button>
+  <br/><br/>
+  <Button danger>Button danger</Button>
+</Playground>
+
+<PropsTable of={Button} />
+
+## \<Container/\>
+
+<Playground>
+  <Container>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</Container>
+</Playground>
+
+## \<LightBox/\>
+
+<Playground>
+  <LightBox title="L'origine du Lorem Ipsum">
+    Il circule des centaines de versions différentes du Lorem ipsum, mais
+    ce texte aurait originellement été tiré de l'ouvrage de Cicéron, De
+    Finibus Bonorum et Malorum (Liber Primus, 32), texte populaire à cette
+    époque, dont l'une des premières phrases est : « Neque porro quisquam
+    est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+    velit... » (« Il n'existe personne qui aime la souffrance pour
+    elle-même, ni qui la recherche ni qui la veuille pour ce qu'elle
+    est... »).
+  </LightBox>
+</Playground>
+
+<PropsTable of={LightBox} />
+
+## \<Support\>
+
+<Playground>
+  <Support>
+    <header>
+      <h2>Besoin d’un accompagnement personnel ?</h2>
+      <p>
+        Les services de renseignement sont ouverts au public gratuitement chaque
+        semaine et vous donnent des conseils adaptés à votre situation.
+      </p>
+    </header>
+    <form className="support__form">
+      <input type="text" placeholder="Code postal" className="support__input" />
+      <input type="submit" value="Envoyer" className="support__submit btn" />
+    </form>
+  </Support>
+</Playground>
+
+<PropsTable of={Support} />
+
+## \<SearchForm\>
+
+<Playground>
+  <SearchForm placeholder="Comment puis-je vous aider ?" onSubmit={query => alert(query)}/>
+</Playground>
+
+<PropsTable of={SearchForm} />
+
+## \<Tag\>
+
+<Playground>
+  <Tag>#styleguide</Tag>
+  <Tag>#css</Tag>
+  <Tag>#a11y</Tag>
+</Playground>
+
+<PropsTable of={Tag} />
+
+
+## \<BreadCrumbs\>
+
+<Playground>
+  <BreadCrumbs entries={[
+    <a href="/">Accueil</a>,
+    <a href="/contacts">Vos contacts</a>,
+    "En région"
+  ]}/>
+</Playground>
+
+<PropsTable of={BreadCrumbs} />
+
+
