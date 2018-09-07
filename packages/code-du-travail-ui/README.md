@@ -1,4 +1,4 @@
-# code-du-travail-ui
+# code-du-travail-ui [![CircleCI](https://circleci.com/gh/SocialGouv/code-du-travail-ui.svg?style=svg)](https://circleci.com/gh/SocialGouv/code-du-travail-ui)
 
 [![npm package][npm-badge]][npm]
 

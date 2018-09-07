@@ -1,23 +1,13 @@
-import expect from 'expect'
-import React from 'react'
-import {render, unmountComponentAtNode} from 'react-dom'
+import expect from "expect";
+import React from "react";
+import { render, unmountComponentAtNode } from "react-dom";
 
-import Component from 'src/'
+describe("Fake test", () => {
+  beforeEach(() => {});
 
-describe('Component', () => {
-  let node
+  afterEach(() => {});
 
-  beforeEach(() => {
-    node = document.createElement('div')
-  })
-
-  afterEach(() => {
-    unmountComponentAtNode(node)
-  })
-
-  it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
-    })
-  })
-})
+  it("should work", () => {
+    expect(1).toEqual(1);
+  });
+});
