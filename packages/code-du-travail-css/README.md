@@ -1,5 +1,7 @@
 # Code du travail - Templates HTML et CSS
 
+[![npm package][npm-badge]][npm]
+
 ## Notes sur les outils utilisés pour le développement CSS
 
 PostCSS est utilisé pour le développement CSS.
@@ -108,3 +110,6 @@ Quand on veut utiliser une icône, on la copie depuis `docs/assets/icons_source/
 
 - pouvoir facilement retrouver la provenance d'une icône
 - pouvoir supprimer les icônes inutilisées par l'interface dans `docs/assets/icons/`
+
+[npm-badge]: https://img.shields.io/npm/v/code-du-travail-ui.png?style=flat-square
+[npm]: https://www.npmjs.org/package/code-du-travail-ui
