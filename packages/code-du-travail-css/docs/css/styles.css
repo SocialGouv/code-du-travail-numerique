@@ -11,6 +11,7 @@ This file is the main CSS file that imports other partial CSS files (a partial i
 Before making any change to any CSS file in this project, ensure that `postcss-cli` is running with the `--watch` option, have a look at the NPM scripts to launch it easily.
 
 */
+
 @import "global/_conf.css";
 @import "global/_classes.css";
 @import "global/_layout.css";
@@ -29,7 +30,12 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "components/_categories.css";
 @import "components/_footer.css";
 @import "components/_header.css";
+@import "components/_tags.css";
+
 @import "components/_search.css";
 @import "components/_search_results.css";
 @import "components/_skip_links.css";
+
 @import "components/_support.css";
+/*
+*/
