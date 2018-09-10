@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Section = ({ light, dark, children }) => {
+const Section = ({ light, dark, style, children }) => {
   const containerClassName = light
     ? "section-light"
     : dark
@@ -13,7 +13,7 @@ const Section = ({ light, dark, children }) => {
       ? "wrapper-dark"
       : "wrapper";
   return (
-    <div className={containerClassName}>
+    <div className={containerClassName} style={style}>
       <div className="container">
         <div className={innerContainerClassName}>{children}</div>
       </div>
@@ -23,6 +23,7 @@ const Section = ({ light, dark, children }) => {
 
 Section.propTypes = {
   children: PropTypes.element.isRequired,
+  style: PropTypes.object,
   light: PropTypes.bool,
   dark: PropTypes.bool
 };

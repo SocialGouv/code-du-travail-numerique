@@ -23,5 +23,5 @@ const App = (
 )
 ```
 
-[npm-badge]: https://img.shields.io/npm/v/code-du-travail-ui.png?style=flat-square
-[npm]: https://www.npmjs.org/package/code-du-travail-ui
+[npm-badge]: https://img.shields.io/npm/v/@socialgouv/code-du-travail-ui.png?style=flat-square
+[npm]: https://www.npmjs.org/package/@socialgouv/code-du-travail-ui
