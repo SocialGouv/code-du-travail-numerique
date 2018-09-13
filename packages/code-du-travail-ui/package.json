@@ -16,10 +16,10 @@
     "test:watch": "nwb test-react --server",
     "docz:build": "docz build"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": "16.x",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "@socialgouv/code-du-travail-css": "^1.0.1"
   },
   "devDependencies": {
     "docz": "^0.11.0",
