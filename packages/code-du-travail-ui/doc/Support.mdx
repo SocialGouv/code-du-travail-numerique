@@ -1,0 +1,27 @@
+---
+
+---
+
+import { Playground, PropsTable } from "docz";
+import { Support } from "../src";
+
+
+## \<Support/\>
+
+<Playground>
+  <Support>
+    <header>
+      <h2>Besoin d’un accompagnement personnel ?</h2>
+      <p>
+        Les services de renseignement sont ouverts au public gratuitement chaque
+        semaine et vous donnent des conseils adaptés à votre situation.
+      </p>
+    </header>
+    <form className="support__form">
+      <input type="text" placeholder="Code postal" className="support__input" />
+      <input type="submit" value="Envoyer" className="support__submit btn" />
+    </form>
+  </Support>
+</Playground>
+
+<PropsTable of={Support} />

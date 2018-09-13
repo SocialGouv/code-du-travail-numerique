@@ -1,7 +1,6 @@
 ---
 route: /code-du-travail-ui
 order: 1
-fullpage: true
 ---
 
 import { Playground, PropsTable } from "docz";
@@ -30,175 +29,22 @@ const App = (
 
 > Pour récupérer le CSS, voir le projet [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css).
 
-## \<Alert/\>
+## Playground
 
 <Playground>
-  <Alert>Alert</Alert>
-  <Alert primary>Alert primary</Alert>
-  <Alert secondary>Alert secondary</Alert>
-  <Alert warning>Alert warning</Alert>
-  <Alert success>Alert success</Alert>
-  <Alert info>Alert info</Alert>
-  <Alert danger>Alert danger</Alert>
+
+  <Container>
+    <Alert primary>Ceci est un message d'information</Alert>
+    <Alert warning>Ceci est un message d'alerte</Alert>
+    <Button primary style={{marginRight:5}}>Button primary</Button>
+    <Button secondary style={{marginRight:5}}>Button secondary</Button>
+    <Button danger style={{marginRight:5}}>Button danger</Button>
+  </Container>
+
 </Playground>
 
-<PropsTable of={Alert} />
-
-## \<Badge/\>
-
-<Playground>
-  <Badge>Badge</Badge>
-  <br/><br/>
-  <Badge primary>Badge primary</Badge>
-  <br/><br/>
-  <Badge secondary>Badge secondary</Badge>
-  <br/><br/>
-  <Badge warning>Badge warning</Badge>
-  <br/><br/>
-  <Badge success>Badge success</Badge>
-  <br/><br/>
-  <Badge info>Badge info</Badge>
-  <br/><br/>
-  <Badge danger>Badge danger</Badge>
-</Playground>
-
-<PropsTable of={Badge} />
 
 
-## \<BreadCrumbs/\>
-
-<Playground>
-  <BreadCrumbs entries={[
-    <a href="/">Accueil</a>,
-    <a href="/contacts">Vos contacts</a>,
-    "En région"
-  ]}/>
-</Playground>
-
-<PropsTable of={BreadCrumbs} />
-
-
-## \<Button/\>
-
-<Playground>
-  <Button>Button</Button>
-  <br/><br/>
-  <Button primary>Button primary</Button>
-  <br/><br/>
-  <Button secondary>Button secondary</Button>
-  <br/><br/>
-  <Button warning>Button warning</Button>
-  <br/><br/>
-  <Button success>Button success</Button>
-  <br/><br/>
-  <Button info>Button info</Button>
-  <br/><br/>
-  <Button danger>Button danger</Button>
-</Playground>
-
-<PropsTable of={Button} />
-
-## \<Category/\>
-
-<Playground>
-  <Categories>
-    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg" title="Embauche et contrat"/>
-    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/time.svg" title="Durée de travail et congés"/>
-    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/coins.svg" title="Rémunération"/>
-    <Category icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/shield.svg" title="Santé et sécurité"/>
-  </Categories>
-</Playground>
-
-<PropsTable of={Category} />
-
-
-## \<Container/\>
-
-<Playground>
-  <Container>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</Container>
-</Playground>
-
-## \<Support/\>
-
-<Playground>
-  <Support>
-    <header>
-      <h2>Besoin d’un accompagnement personnel ?</h2>
-      <p>
-        Les services de renseignement sont ouverts au public gratuitement chaque
-        semaine et vous donnent des conseils adaptés à votre situation.
-      </p>
-    </header>
-    <form className="support__form">
-      <input type="text" placeholder="Code postal" className="support__input" />
-      <input type="submit" value="Envoyer" className="support__submit btn" />
-    </form>
-  </Support>
-</Playground>
-
-<PropsTable of={Support} />
-
-## \<SearchForm/\>
-
-<Playground>
-  <SearchForm placeholder="Comment puis-je vous aider ?" onSubmit={query => alert(query)}/>
-</Playground>
-
-<PropsTable of={SearchForm} />
-
-
-## \<Section/\>
-
-<Playground>
-  <Section light>
-    <h2>
-      Quelles sont les obligations de l'employeur en matière de congés payés ?
-    </h2>
-    <div>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-       consequat.
-    </div>
-  </Section>
-  <Section dark>
-    <h2>
-      Une période de chômage permet-elle de valider des trimestres de retraite ?
-    </h2>
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.
-      </p>
-    </div>
-  </Section>
-</Playground>
-
-<PropsTable of={Section} />
-
-
-## \<Tag/\>
-
-<Playground>
-  <Tag>Tag</Tag>
-  <br/><br/>
-  <Tag primary>#primary</Tag>
-  <br/><br/>
-  <Tag secondary>#secondary</Tag>
-  <br/><br/>
-  <Tag warning>#warning</Tag>
-  <br/><br/>
-  <Tag success>#success</Tag>
-  <br/><br/>
-  <Tag info>#info</Tag>
-  <br/><br/>
-  <Tag danger>#danger</Tag>
-</Playground>
-
-<PropsTable of={Tag} />
 
 
 
