@@ -16,7 +16,6 @@ const BigError = ({ children }) => (
 
 class Question extends React.Component {
   static async getInitialProps({ res, query }) {
-    console.log("getInitialProps", query);
     return await fetch(`${api.BASE_URL}/items/faq/${query.slug}`)
       .then(r => r.json())
       .then(data => ({
