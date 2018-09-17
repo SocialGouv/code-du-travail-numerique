@@ -1,14 +1,45 @@
 import * as nodeUrl from "url";
 import memoize from "memoize-state";
 import React from "react";
-import { Router } from "../../routes";
 import { withRouter } from "next/router";
+import { Alert, Section } from "@socialgouv/code-du-travail-ui";
 
-import Alert from "../common/Alert";
+import { Router } from "../../routes";
 import api from "../../conf/api.js";
-import SearchAnswer from "./SearchAnswer";
 import SearchResults from "./SearchResults";
-import Categories from "./Categories";
+
+const Disclaimer = () => (
+  <p>
+    Ce site est <b>en cours de construction</b> : les données qui s'y trouvent
+    peuvent être erronées ou imprécises.
+    <br />
+    <a
+      target="_blank"
+      className="external-link__after"
+      rel="noopener noreferrer"
+      href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+    >
+      L'ouverture officielle du site est prévue pour 2020.
+    </a>
+  </p>
+);
+
+const SearchForm = ({ query, onChange, onKeyDown, onSubmit }) => (
+  <form className="search__form" onSubmit={onSubmit}>
+    <input
+      aria-label="Posez votre question"
+      className="search__input"
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      placeholder="Posez votre question"
+      type="search"
+      value={query}
+    />
+    <button type="submit" className="btn btn__img btn__img__search">
+      <span className="hidden">Rechercher</span>
+    </button>
+  </form>
+);
 
 class Search extends React.Component {
   state = {
@@ -92,12 +123,13 @@ class Search extends React.Component {
 
   render() {
     const { data, error, pendingXHR, query } = this.state;
-    const { router } = this.props;
+    // const { router } = this.props;
+    // console.log({ data, error, pendingXHR, query });
 
     const xhrErrorJsx = error ? (
       <div className="section-light">
         <div className="container">
-          <Alert category="danger">{error.message}</Alert>
+          <Alert danger>{error.message}</Alert>
         </div>
       </div>
     ) : null;
@@ -108,63 +140,29 @@ class Search extends React.Component {
       </p>
     ) : null;
 
-    const showAnswer = router.query && router.query.type === "questions";
-
-    let content = null;
-    if (showAnswer) {
-      content = <SearchAnswer data={data} id={router.query.id} />;
-    } else {
-      if (!data) {
-        // No query.
-        content = <Categories urlUpdate={this.urlUpdate} />;
-      } else {
-        content = <SearchResults data={data} query={query} />;
-      }
-    }
-
     return (
       <div>
-        <section className="section-light shadow-bottom">
-          <div className="container">
+        <div className=" shadow-bottom">
+          <Section light>
             <div className="search">
               <header>
                 <h1 className="no-margin">
                   Posez votre question sur le droit du travail
                 </h1>
-                <p>
-                  Ce site est <b>en cours de construction</b> : les données qui
-                  s'y trouvent peuvent être erronées ou imprécises.
-                  <br />
-                  <a
-                    target="_blank"
-                    className="external-link__after"
-                    rel="noopener noreferrer"
-                    href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-                  >
-                    L'ouverture officielle du site est prévue pour 2020.
-                  </a>
-                </p>
+                <Disclaimer />
               </header>
-              <form className="search__form" onSubmit={this.onFormSubmit}>
-                <input
-                  aria-label="Posez votre question"
-                  className="search__input"
-                  onChange={this.onSearchInputChange}
-                  onKeyDown={this.onKeyDown}
-                  placeholder="Exemple: mon contrat de travail doit il être écrit?"
-                  type="search"
-                  value={query}
-                />
-                <button type="submit" className="btn btn__img btn__img__search">
-                  <span className="hidden">Rechercher</span>
-                </button>
-              </form>
-              {loadingJsx}
+              <SearchForm
+                query={query}
+                onChange={this.onSearchInputChange}
+                onKeyDown={this.onKeyDown}
+                onSubmit={this.onFormSubmit}
+              />
             </div>
-          </div>
-        </section>
+          </Section>
+        </div>
+        {loadingJsx}
         {xhrErrorJsx}
-        {content}
+        {data && <SearchResults data={data} query={query} />}
       </div>
     );
   }
