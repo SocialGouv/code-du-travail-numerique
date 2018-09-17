@@ -12,6 +12,11 @@ module.exports = routes()
     page: "fiche-service-public",
     pattern: "/fiche-service-public/:slug"
   })
+  .add({
+    name: "fiche-ministere-travail",
+    page: "fiche-ministere-travail",
+    pattern: "/fiche-ministere-travail/:slug"
+  })
 
   .add({ name: "theme", page: "theme", pattern: "/themes/:slug+" }) // slug is an array of slugs
   .add({ name: "themes", page: "theme", pattern: "/themes" })
