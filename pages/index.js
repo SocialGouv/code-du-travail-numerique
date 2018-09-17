@@ -1,9 +1,13 @@
-import Search from "../src/search/Search";
+import React from "react";
 
-const Home = () => {
+import Search from "../src/search/Search";
+import Categories from "../src/Categories";
+
+const Home = ({}) => {
   return (
     <div>
       <Search />
+      <Categories />
     </div>
   );
 };
