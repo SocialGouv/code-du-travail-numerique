@@ -41,8 +41,8 @@ const ResultItem = ({ _id, _source, highlight }) => {
     source = "Source : Legifrance";
   }
 
-  let isInternal = ["faq", "code_bfc"].includes(_source.source);
-  let footer = isInternal ? null : (
+  // let isInternal = ["faq", "code_bfc"].includes(_source.source);
+  let footer = (
     <footer>
       <span className="external-link__before">{source}</span>
     </footer>
@@ -61,17 +61,25 @@ const ResultItem = ({ _id, _source, highlight }) => {
     </article>
   );
 
-  if (isInternal) {
-    if (_source.source === "faq") {
-      return (
-        <li className="search-results__item">
-          <Link route="question" params={{ slug: _source.slug }}>
-            <a className="search-results-link">{body}</a>
-          </Link>
-        </li>
-      );
-    }
+  // if (isInternal) {
+  if (_source.source === "faq") {
+    return (
+      <li className="search-results__item">
+        <Link route="question" params={{ slug: _source.slug }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
+    );
+  } else if (_source.source === "fiches_service_public") {
+    return (
+      <li className="search-results__item">
+        <Link route="fiche-service-public" params={{ slug: _source.slug }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
+    );
   }
+  //  }
   return (
     <li className="search-results__item">
       <a
