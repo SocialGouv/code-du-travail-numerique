@@ -54,6 +54,8 @@ class ThemeSelector extends React.Component {
                 <p key={index}>
                   {group.map(child => (
                     <button
+                      className="btn btn__secondary"
+                      style={{ marginRight: 5, marginBottom: 10 }}
                       tabIndex={0}
                       key={child.title}
                       onClick={() => onSelect(child)}
