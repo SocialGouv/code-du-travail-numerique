@@ -1,29 +1,5 @@
 module.exports = [
   {
-    slug: ["embauche-et-contrat"],
-    title: "Embauche et contrat",
-    icon: "/static/assets/icons/handshake.svg",
-    children: []
-  },
-  {
-    slug: ["duree-du-travail-et-conges"],
-    title: "Durée de travail et congés",
-    icon: "/static/assets/icons/time.svg",
-    children: []
-  },
-  {
-    slug: ["remuneration"],
-    title: "Rémunération",
-    icon: "/static/assets/icons/coins.svg",
-    children: []
-  },
-  {
-    slug: ["sante-et-securite"],
-    title: "Santé et sécurité",
-    icon: "/static/assets/icons/shield.svg",
-    children: []
-  },
-  {
     slug: ["rupture-de-contrat"],
     title: "Rupture de contrat",
     icon: "/static/assets/icons/file-3.svg",
@@ -176,6 +152,30 @@ module.exports = [
         ]
       }
     ]
+  },
+  {
+    slug: ["embauche-et-contrat"],
+    title: "Embauche et contrat",
+    icon: "/static/assets/icons/handshake.svg",
+    children: []
+  },
+  {
+    slug: ["duree-du-travail-et-conges"],
+    title: "Durée de travail et congés",
+    icon: "/static/assets/icons/time.svg",
+    children: []
+  },
+  {
+    slug: ["remuneration"],
+    title: "Rémunération",
+    icon: "/static/assets/icons/coins.svg",
+    children: []
+  },
+  {
+    slug: ["sante-et-securite"],
+    title: "Santé et sécurité",
+    icon: "/static/assets/icons/shield.svg",
+    children: []
   },
   {
     slug: ["formation"],
