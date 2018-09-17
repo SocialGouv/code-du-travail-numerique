@@ -8,7 +8,9 @@ import { Link } from "../../routes";
 const Results = ({ data }) => (
   <div className="search-results">
     <ul className="search-results__list">
-      {data.map(result => <ResultItem key={result["_id"]} {...result} />)}
+      {data.map(result => (
+        <ResultItem key={result["_id"]} {...result} />
+      ))}
     </ul>
   </div>
 );
@@ -60,13 +62,15 @@ const ResultItem = ({ _id, _source, highlight }) => {
   );
 
   if (isInternal) {
-    return (
-      <li className="search-results__item">
-        <Link route="index" params={{ type: "questions", id: _id }}>
-          <a className="search-results-link">{body}</a>
-        </Link>
-      </li>
-    );
+    if (_source.source === "faq") {
+      return (
+        <li className="search-results__item">
+          <Link route="question" params={{ slug: _source.slug }}>
+            <a className="search-results-link">{body}</a>
+          </Link>
+        </li>
+      );
+    }
   }
   return (
     <li className="search-results__item">
