@@ -6,7 +6,7 @@ module.exports = routes()
   // - http://localhost:3000/?q=travail
   // - http://localhost:3000/questions/Zm5o72QB0wLMRXWgrAhM
 
-  .add({ name: "question", page: "question", pattern: "/questions/:slug" })
+  .add({ name: "question", page: "question", pattern: "/question/:slug" })
   .add({
     name: "fiche-service-public",
     page: "fiche-service-public",

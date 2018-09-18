@@ -4,9 +4,11 @@ import React from "react";
 import { withRouter } from "next/router";
 import { Alert, Section } from "@socialgouv/code-du-travail-ui";
 
+import Suggester from "./Suggester";
+import SearchResults from "./SearchResults";
+
 import { Router } from "../../routes";
 import api from "../../conf/api.js";
-import SearchResults from "./SearchResults";
 
 const Disclaimer = () => (
   <p>
@@ -24,7 +26,7 @@ const Disclaimer = () => (
   </p>
 );
 
-const SearchForm = ({ query, onChange, onKeyDown, onSubmit }) => (
+const SearchForm1 = ({ query, onChange, onKeyDown, onSubmit }) => (
   <form className="search__form" onSubmit={onSubmit}>
     <input
       aria-label="Posez votre question"
@@ -36,6 +38,22 @@ const SearchForm = ({ query, onChange, onKeyDown, onSubmit }) => (
       value={query}
     />
     <button type="submit" className="btn btn__img btn__img__search">
+      <span className="hidden">Rechercher</span>
+    </button>
+  </form>
+);
+
+const SearchForm = ({ query, onChange, onKeyDown, onSubmit }) => (
+  <form className="search__form" onSubmit={onSubmit}>
+    <Suggester />
+    <button
+      type="submit"
+      className="btn btn__img btn__img__search"
+      style={{
+        maxHeight: 36,
+        flex: "1 0 38px"
+      }}
+    >
       <span className="hidden">Rechercher</span>
     </button>
   </form>
@@ -123,8 +141,6 @@ class Search extends React.Component {
 
   render() {
     const { data, error, pendingXHR, query } = this.state;
-    // const { router } = this.props;
-    // console.log({ data, error, pendingXHR, query });
 
     const xhrErrorJsx = error ? (
       <div className="section-light">
