@@ -41,7 +41,7 @@
   },
   "scripts": {
     "dev": "node server.js",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build"
   }
 }

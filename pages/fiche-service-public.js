@@ -16,6 +16,7 @@ const BigError = ({ children }) => (
 
 class Fiche extends React.Component {
   static async getInitialProps({ res, query }) {
+    console.log("getInitialProps");
     return await fetch(
       `${api.BASE_URL}/items/fiches_service_public/${query.slug}`
     )

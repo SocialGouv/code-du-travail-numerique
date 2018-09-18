@@ -11,7 +11,7 @@ import themes from "./data/themes2";
 
 const Category = ({ title, slug, icon = "/static/assets/icons/chat.svg" }) => (
   <li className="categories__list-item">
-    <Link route="theme" params={{ slug: slug || "xxxx" }}>
+    <Link route="theme" params={{ slug: slug || "/" }}>
       <a title={title}>
         <img src={icon} alt={title} />
         <h3>{title}</h3>
