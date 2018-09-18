@@ -1,26 +1,44 @@
 const routes = require("next-routes");
 
-module.exports = routes()
-  // The main search route. Parameters are optional. Can be used as:
-  // - http://localhost:3000/
-  // - http://localhost:3000/?q=travail
-  // - http://localhost:3000/questions/Zm5o72QB0wLMRXWgrAhM
+//
+// routes define :
+//  - server-rendered pages for SEO and URL sharing
+//  - client-side-navigation when available
+//
 
+module.exports = routes()
+  // unique item routes
+  //
+  // http://localhost:3000/question/duree-du-travail
   .add({ name: "question", page: "question", pattern: "/question/:slug" })
+  // http://localhost:3000/fiche-service-public/duree-du-travail
   .add({
     name: "fiche-service-public",
     page: "fiche-service-public",
     pattern: "/fiche-service-public/:slug"
   })
+
+  // http://localhost:3000/fiche-ministere-travail/duree-du-travail
   .add({
     name: "fiche-ministere-travail",
     page: "fiche-ministere-travail",
     pattern: "/fiche-ministere-travail/:slug"
   })
 
-  .add({ name: "theme", page: "theme", pattern: "/themes/:slug+" }) // slug is an array of slugs
+  // theme navigation
+  //
+  // http://localhost:3000/themes
   .add({ name: "themes", page: "theme", pattern: "/themes" })
 
+  // http://localhost:3000/theme/rupture-de-contrat
+  // http://localhost:3000/theme/rupture-de-contrat/la-rupture-conventionnelle
+  .add({ name: "theme", page: "theme", pattern: "/themes/:slug+" }) // slug is an array of slugs
+
+  // legacy
   .add({ name: "explorer", page: "explorer", pattern: "/explorer" })
 
+  // The main search route. Parameters are optional.
+  //
+  // http://localhost:3000/
+  // http://localhost:3000/?q=travail
   .add({ name: "index", page: "index", pattern: "/" });
