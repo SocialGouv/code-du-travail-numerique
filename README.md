@@ -13,6 +13,7 @@ Créez un fichier `.env` (utilisé par Docker) :
 
 ```shell
 NODE_ENV=development
+API_URL=https://127.0.0.1:1337
 ```
 
 Puis :
@@ -45,15 +46,15 @@ Le prototype initial était basé sur une navigation par thèmes alors que la ve
 À propos de la navigation par thèmes :
 
 - Actuellement, une partie des datas sont en dur dans `/src/data` :
-    - Les IDs poseidon servent de lien
-    - articles.js : extrait des articles eposeidon.json
-    - faq.json : FAQ avec en plus un lien vers IDs poseidon
-    - idcc.json : extrait de legifrance ?
-    - themes.js : table qui definit les IDs eposeidon, arborescence, articles associés
-    - fiches.js : fiches pratiques
-    - L2253.js : referentiel articulation
-    - suppletives.js : liste dispositions supplétives
-    - kali.js : extrait du site legifrance https://www.legifrance.gouv.fr/rechConvColl.do
+  - Les IDs poseidon servent de lien
+  - articles.js : extrait des articles eposeidon.json
+  - faq.json : FAQ avec en plus un lien vers IDs poseidon
+  - idcc.json : extrait de legifrance ?
+  - themes.js : table qui definit les IDs eposeidon, arborescence, articles associés
+  - fiches.js : fiches pratiques
+  - L2253.js : referentiel articulation
+  - suppletives.js : liste dispositions supplétives
+  - kali.js : extrait du site legifrance https://www.legifrance.gouv.fr/rechConvColl.do
 
 Les résultats sont affichés par `src/explorer/Result.js` qui contient tous les "blocs".
 
@@ -66,10 +67,10 @@ TODO :
 
 - enrichissement de la FAQ via discourse ou autre outil collaboratif ?
 - analyse des textes de loi :
-    - https://github.com/digitalbazaar/jsonld.js ?
+  - https://github.com/digitalbazaar/jsonld.js ?
 
 ### Tags
 
 - la navigation de tags devrait être "intelligente"
-    - proposer en plus des tags/sujets connexes
-    - améliorer les suggestions avec ML Invenis + activité sur le site (questions fréquentes, actu...)
+  - proposer en plus des tags/sujets connexes
+  - améliorer les suggestions avec ML Invenis + activité sur le site (questions fréquentes, actu...)
