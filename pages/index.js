@@ -3,7 +3,7 @@ import React from "react";
 import Search from "../src/search/Search";
 import Categories from "../src/Categories";
 
-const Home = ({ onSuggestionSelected }) => {
+const Home = () => {
   return (
     <div>
       <Search />
@@ -12,4 +12,4 @@ const Home = ({ onSuggestionSelected }) => {
   );
 };
 
-export default props => <Home {...props} onSuggestionSelected={() => {}} />;
+export default props => <Home {...props} />;

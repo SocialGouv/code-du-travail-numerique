@@ -6,7 +6,6 @@ import { Container, Alert } from "@socialgouv/code-du-travail-ui";
 
 import Search from "../src/search/Search";
 import Answer from "../src/search/Answer";
-import api from "../conf/api.js";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -16,7 +15,7 @@ const BigError = ({ children }) => (
 
 class Question extends React.Component {
   static async getInitialProps({ res, query }) {
-    return await fetch(`${api.BASE_URL}/items/faq/${query.slug}`)
+    return await fetch(`${process.env.API_URL}/items/faq/${query.slug}`)
       .then(r => r.json())
       .then(data => ({
         data
