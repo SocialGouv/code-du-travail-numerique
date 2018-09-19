@@ -1,18 +1,20 @@
 {
-  "name": "cdtn-explorer-demo",
+  "name": "code-du-travail-frontend",
   "version": "1.0.0",
-  "description": "Some React+Breadcrumbs+Thematic exploration PoC",
+  "description": "Code du travail frontend",
   "homepage": "https://code-du-travail.beta.gouv.fr/",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@socialgouv/code-du-travail-ui": "^1.0.2",
     "@zeit/next-css": "^0.2.0",
+    "babel-plugin-transform-define": "^1.3.0",
     "express": "^4.16.3",
     "fuse.js": "3.2.0",
     "isomorphic-unfetch": "^2.1.1",
-    "memoize-state": "^2.0.1",
+    "memoizee": "^0.4.14",
     "next": "^6.1.1",
+    "next-images": "^1.0.0",
     "next-routes": "^1.4.2",
     "react": "^16.3.2",
     "react-accessible-accordion": "^2.3.1",
@@ -23,7 +25,6 @@
     "react-feather": "1.1.0",
     "react-github-fork-ribbon": "0.5.1",
     "react-modal": "^3.4.4",
-    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
     "react-star-rating-component": "1.4.1",
     "react-uid": "^2.0.1",
@@ -33,7 +34,6 @@
     "unist-util-parents": "^1.0.1"
   },
   "devDependencies": {
-    "concat-stream": "^1.6.2",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
@@ -42,6 +42,6 @@
   "scripts": {
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
-    "build": "next build"
+    "build": "NODE_ENV=production next build"
   }
 }
