@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class AsyncFetch extends React.Component {
   state = {
@@ -6,8 +7,23 @@ class AsyncFetch extends React.Component {
     result: null
   };
 
+  mounted = false;
+
   componentDidMount() {
-    this.fetch();
+    this.mounted = true;
+    if (this.props.autoFetch) {
+      this.fetch();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.fetch !== prevProps.fetch) {
+      this.fetch();
+    }
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
   }
 
   fetch = args => {
@@ -18,19 +34,20 @@ class AsyncFetch extends React.Component {
       () => {
         this.props
           .fetch(args)
-          .then(r => r.json())
           .then(result => {
-            this.setState({
-              status: "success",
-              result
-            });
+            this.mounted &&
+              this.setState({
+                status: "success",
+                result
+              });
           })
           .catch(e => {
             console.log("e", e);
-            this.setState({
-              status: "error",
-              result: e.message
-            });
+            this.mounted &&
+              this.setState({
+                status: "error",
+                result: e.message
+              });
           });
       }
     );
@@ -50,5 +67,16 @@ class AsyncFetch extends React.Component {
     });
   }
 }
+
+AsyncFetch.propTypes = {
+  autoFetch: PropTypes.bool,
+  // the fetch call function
+  fetch: PropTypes.func.isRequired,
+  render: PropTypes.func.isRequired
+};
+
+AsyncFetch.defaultProps = {
+  autoFetch: false
+};
 
 export default AsyncFetch;

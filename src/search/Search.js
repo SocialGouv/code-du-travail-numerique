@@ -1,14 +1,12 @@
-import * as nodeUrl from "url";
-import memoize from "memoize-state";
+import memoizee from "memoizee";
 import React from "react";
 import { withRouter } from "next/router";
-import { Alert, Section } from "@socialgouv/code-du-travail-ui";
+import { Section } from "@socialgouv/code-du-travail-ui";
 
 import Suggester from "./Suggester";
 import SearchResults from "./SearchResults";
 
 import { Router } from "../../routes";
-import api from "../../conf/api.js";
 
 const Disclaimer = () => (
   <p>
@@ -26,136 +24,94 @@ const Disclaimer = () => (
   </p>
 );
 
-const SearchForm1 = ({ query, onChange, onKeyDown, onSubmit }) => (
-  <form className="search__form" onSubmit={onSubmit}>
-    <input
-      aria-label="Posez votre question"
-      className="search__input"
-      onChange={onChange}
-      onKeyDown={onKeyDown}
-      placeholder="Posez votre question"
-      type="search"
-      value={query}
-    />
-    <button type="submit" className="btn btn__img btn__img__search">
-      <span className="hidden">Rechercher</span>
-    </button>
-  </form>
+const FormSearchButton = () => (
+  <button
+    type="submit"
+    className="btn btn__img btn__img__search"
+    style={{
+      maxHeight: 36,
+      flex: "1 0 38px"
+    }}
+  >
+    <span className="hidden">Rechercher</span>
+  </button>
 );
 
-const SearchForm = ({ query, onChange, onKeyDown, onSubmit }) => (
-  <form className="search__form" onSubmit={onSubmit}>
-    <Suggester />
-    <button
-      type="submit"
-      className="btn btn__img btn__img__search"
-      style={{
-        maxHeight: 36,
-        flex: "1 0 38px"
-      }}
-    >
-      <span className="hidden">Rechercher</span>
-    </button>
-  </form>
+// Memoize fetch calls (fetch returns a promise).
+const fetchResults = (query, endPoint = "search") => {
+  const url = `${process.env.API_URL}/${endPoint}?q=${query}`;
+  return fetch(url).then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error("Un problème est survenu.");
+  });
+};
+
+import AsyncFetch from "../lib/AsyncFetch";
+
+const fetchResultsSearch = memoizee(
+  query => {
+    return fetchResults(query, "search");
+  },
+  { promise: true }
+);
+
+const fetchResultsSuggest = memoizee(
+  query => {
+    return fetchResults(query, "suggest");
+  },
+  { promise: true }
 );
 
 class Search extends React.Component {
   state = {
     query: "",
-    data: null,
-    error: null,
-    pendingXHR: false
+    submitQuery: ""
   };
-
   componentDidMount() {
     // A query already exists in the URL: route was accessed via direct URL.
     if (Router.query && Router.query.q) {
-      this.fetchResults(decodeURI(Router.query.q));
+      //this.fetchResults(decodeURI(Router.query.q));
+      this.setState({
+        query: Router.query.q,
+        submitQuery: Router.query.q
+      });
     }
     Router.onRouteChangeStart = url => {
-      return this.onRouteChange(url);
+      if (url === "/") {
+        this.setState({
+          query: "",
+          submitQuery: ""
+        });
+      }
     };
   }
 
-  onRouteChange = url => {
-    url = nodeUrl.parse(url, true);
-    let isRootSearchPage = url.pathname === "/";
-    if (isRootSearchPage && url.query.q) {
-      return this.fetchResults(decodeURI(url.query.q));
-    } else if (isRootSearchPage) {
-      return this.setState({ data: null, query: "" });
-    }
-  };
-
-  urlReset = () => {
-    // This will trigger the `onRouteChangeStart` listener.
-    return Router.push({ pathname: "/" });
-  };
-
-  urlUpdate = query => {
-    // This will trigger the `onRouteChangeStart` listener.
-    return Router.push({ pathname: "/", query: { q: query } });
-  };
-
-  onFormSubmit = event => {
-    event.preventDefault();
+  submitQuery = () => {
     if (this.state.query) {
-      this.urlUpdate(encodeURI(this.state.query));
-    }
-  };
-
-  onSearchInputChange = event => {
-    let query = event.target.value;
-    if (!query) {
-      return this.urlReset();
-    }
-    this.setState({ query: query });
-  };
-
-  onKeyDown = event => {
-    if (event.keyCode === 27) {
-      return this.urlReset();
-    }
-  };
-
-  // Memoize fetch calls (fetch returns a promise).
-  memoizedFetch = memoize(
-    query => {
-      return fetch(`${api.BASE_URL}/search?q=${query}`).then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error(api.ERROR_MSG);
+      this.setState({ submitQuery: this.state.query });
+      Router.push({
+        pathname: "/",
+        query: { q: this.state.query }
       });
-    },
-    { cacheSize: 40 }
-  );
+    }
+  };
+  onFormSubmit = e => {
+    e.preventDefault();
+    this.submitQuery();
+  };
 
-  fetchResults = query => {
-    this.setState({ query, pendingXHR: true, error: null }, () => {
-      this.memoizedFetch(query)
-        .then(data => this.setState({ data, pendingXHR: false }))
-        .catch(error => this.setState({ error, pendingXHR: false }));
-    });
+  onChange = e => {
+    if (e.target.keyCode === 13) {
+      this.submitQuery();
+    } else {
+      this.setState({ query: e.target.value });
+    }
   };
 
   render() {
-    const { data, error, pendingXHR, query } = this.state;
-
-    const xhrErrorJsx = error ? (
-      <div className="section-light">
-        <div className="container">
-          <Alert danger>{error.message}</Alert>
-        </div>
-      </div>
-    ) : null;
-
-    const loadingJsx = pendingXHR ? (
-      <p className="search__loading" role="alert" aria-live="assertive">
-        Chargement…
-      </p>
-    ) : null;
-
+    const { query, submitQuery } = this.state;
     return (
       <div>
         <div className=" shadow-bottom">
@@ -167,18 +123,35 @@ class Search extends React.Component {
                 </h1>
                 <Disclaimer />
               </header>
-              <SearchForm
-                query={query}
-                onChange={this.onSearchInputChange}
-                onKeyDown={this.onKeyDown}
-                onSubmit={this.onFormSubmit}
-              />
+              <form className="search__form" onSubmit={this.onFormSubmit}>
+                <Suggester
+                  onChange={this.onChange}
+                  query={query}
+                  fetch={() => fetchResultsSuggest(query)}
+                />
+                <FormSearchButton />
+              </form>
             </div>
           </Section>
         </div>
-        {loadingJsx}
-        {xhrErrorJsx}
-        {data && <SearchResults data={data} query={query} />}
+        {(submitQuery && (
+          <AsyncFetch
+            autoFetch={true}
+            fetch={() => fetchResultsSearch(submitQuery)}
+            render={({ status, result, clear }) => (
+              <div>
+                <div style={{ textAlign: "center" }}>
+                  {status === "loading" ? "..." : ""}
+                </div>
+                <div>
+                  {status === "success" &&
+                    result && <SearchResults data={result} />}
+                </div>
+              </div>
+            )}
+          />
+        )) ||
+          null}
       </div>
     );
   }
