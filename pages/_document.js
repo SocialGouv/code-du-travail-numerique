@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="fr">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
           <title>Code du travail numérique</title>
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link rel="stylesheet" href="/static/bundle.css" />
+          <link rel="stylesheet" href="/_next/static/style.css" />
           {this.props.styleTags}
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es6,Array.prototype.includes" />
         </Head>
