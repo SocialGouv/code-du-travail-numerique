@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Category = ({ href, icon, title, text }) => (
-  <li className="categories__list-item">
+const Category = ({ href, icon, title, text, ...props }) => (
+  <li className="categories__list-item" {...props}>
     <a href={href}>
       <img src={icon} alt={title} />
       <h3>{title}</h3>
