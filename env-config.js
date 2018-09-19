@@ -9,5 +9,13 @@ const env = {
       : "http://localhost:1337/api/v1")
 };
 
-console.log("environment:", env);
+console.log(`
+
+  Environment:
+
+    - process.env.NODE_ENV : ${process.env.NODE_ENV}
+    - process.env.API_URL : ${process.env.API_URL}
+
+`);
+
 module.exports = env;
