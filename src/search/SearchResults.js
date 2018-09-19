@@ -108,7 +108,7 @@ class SearchResults extends React.Component {
     let query = this.props.query;
 
     // No results.
-    if (!data.hits.total) {
+    if (!data || !data.hits || !data.hits.total) {
       return (
         <React.Fragment>
           <div className="section-light">

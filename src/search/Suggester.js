@@ -1,164 +1,171 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
+import styled from "styled-components";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import { Router } from "../../routes";
 
-const getSuggestionHtmlTitle = suggestion =>
-  (suggestion.highlight &&
-    suggestion.highlight.title &&
-    suggestion.highlight.title[0]) ||
-  suggestion._source.title;
-
 const getSuggestionValue = suggestion =>
   `${suggestion._source.source} > ${suggestion._source.title}`;
 
-const getSuggestionHtml = suggestion =>
-  `<b>${suggestion._source.source}</b> > ${getSuggestionHtmlTitle(suggestion)}`;
-
-const renderSuggestion = suggestion => (
-  <div
-    dangerouslySetInnerHTML={{
-      __html: getSuggestionHtml(suggestion)
-    }}
-  />
-);
-
-const getElasticSuggestionQuery = query => ({
-  size: 10,
-  query: {
-    bool: {
-      must: [
-        {
-          terms: {
-            source: ["faq", "fiches_service_public", "fiches_ministere_travail"]
-          }
-        }
-      ],
-      should: [
-        {
-          multi_match: {
-            query,
-            fields: ["title", "text"]
-            //analyzer: "french_stemmed"
-          }
-        }
-      ]
-    }
-  },
-  highlight: {
-    number_of_fragments: 1,
-    //fragment_size: 150,
-    pre_tags: ["<mark>"],
-    post_tags: ["</mark>"],
-    fields: {
-      title: {},
-      text: {}
-    }
-  }
-});
-
-const elasticFetch = (endPoint, query) =>
-  fetch(`${endPoint}/_search`, {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(getElasticSuggestionQuery(query))
-  });
+const ellipsisStyle = {
+  whiteSpace: "nowrap",
+  textOverflow: "ellipsis",
+  width: "90%",
+  overflow: "hidden"
+};
 
 const getRouteBySource = source =>
   ({
-    faq: "questions",
+    faq: "question",
     fiches_ministere_travail: "fiche-ministere-travail",
     fiches_service_public: "fiche-service-public"
   }[source]);
 
+const getSourceName = source =>
+  ({
+    faq: "Question",
+    fiches_ministere_travail: "Fiche Ministère du travail",
+    fiches_service_public: "Fiche Service public"
+  }[source]);
+
+const cleanHtml = html =>
+  html
+    .trim()
+    .replace(/^(<br\/?>)+/, "")
+    .replace(/((<br\/?>)+)$/, "")
+    .replace(/^(<p>)+/, "")
+    .replace(/((<\/p>)+)$/, "");
+
+const SuggestionContainer = styled.div`
+  p {
+    margin: 0;
+  }
+`;
+
+const renderSuggestion = suggestion => (
+  <SuggestionContainer style={ellipsisStyle}>
+    <b>
+      {getSourceName(suggestion._source.source)} | {suggestion._source.title}
+    </b>
+    <br />
+    <div
+      dangerouslySetInnerHTML={{
+        __html: cleanHtml(
+          (suggestion.highlight &&
+            suggestion.highlight["all_text.french_exact"] &&
+            suggestion.highlight["all_text.french_exact"][0]) ||
+            ""
+        )
+      }}
+    />
+  </SuggestionContainer>
+);
+
+const SuggestionsContainer = styled.div`
+  li[role="option"]:nth-child(2n + 1) {
+    background: #f7f7f7;
+  }
+`;
+
+const renderSuggestionsContainer = ({ containerProps, children, query }) => (
+  <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
+);
+
 const onSuggestionSelected = (e, suggestion) => {
+  e.preventDefault();
   const url = `/${getRouteBySource(suggestion.suggestion._source.source)}/${
     suggestion.suggestion._source.slug
   }`;
   Router.push(url);
 };
 
-class Suggester extends React.Component {
-  state = {
-    value: ""
-  };
+// see https://github.com/moroshko/react-autosuggest#themeProp
+const suggesterTheme = {
+  container: {
+    flex: "1 0 auto",
+    textAlign: "left",
+    border: 0,
+    width: "calc(100% - 36px)"
+  },
+  suggestionsList: {
+    margin: 0,
+    padding: 0,
+    paddingTop: 10,
+    border: "1px solid silver",
+    background: "white",
+    borderTop: 0,
+    position: "absolute",
+    width: "calc(100% - 36px)"
+  },
+  suggestion: {
+    listStyleType: "none",
+    padding: 5,
+    lineHeight: "2rem",
+    cursor: "pointer"
+  },
+  suggestionHighlighted: {
+    background: "#eee"
+  }
+};
 
-  onChange = (event, { newValue }) => {
-    this.setState({
-      value: newValue
-    });
-  };
+class Suggester extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.query !== this.props.query;
+  }
 
   render() {
-    const { value } = this.state;
+    const { fetch, query, onChange } = this.props;
     const inputProps = {
       placeholder: "Posez votre question",
       "aria-label": "Posez votre question",
       type: "search",
       className: "search__input",
-      value,
-      onChange: this.onChange,
+      value: query,
+      onChange: onChange,
       style: { width: "100%" }
     };
     return (
       <AsyncFetch
-        fetch={() =>
-          elasticFetch("http://127.0.0.1:9200/code_du_travail_numerique", value)
-        }
-        render={({ status, result, fetch, clear }) => {
-          return (
-            <Autosuggest
-              theme={{
-                container: {
-                  flex: "1 0 auto",
-                  // width: "calc(100% - 36px)",
-                  textAlign: "left",
-                  border: 0,
-                  width: "calc(100% - 36px)"
-                },
-                suggestionsList: {
-                  margin: 0,
-                  padding: 0,
-                  paddingTop: 10,
-                  border: "1px solid silver",
-                  background: "white",
-                  borderTop: 0,
-                  position: "absolute"
-                },
-                suggestion: {
-                  listStyleType: "none",
-                  padding: 5,
-                  lineHeight: "2rem",
-                  cursor: "pointer"
-                },
-                suggestionHighlighted: {
-                  background: "#eee"
-                }
-              }}
-              suggestions={
-                (status === "success" &&
-                  result &&
-                  result.hits &&
-                  result.hits.hits) ||
-                []
-              }
-              alwaysRenderSuggestions={false}
-              onSuggestionSelected={onSuggestionSelected}
-              onSuggestionsFetchRequested={fetch}
-              onSuggestionsClearRequested={clear}
-              getSuggestionValue={getSuggestionValue}
-              renderSuggestion={renderSuggestion}
-              inputProps={inputProps}
-            />
-          );
-        }}
+        fetch={() => fetch(query)}
+        render={({ status, result, fetch, clear }) => (
+          <Autosuggest
+            theme={suggesterTheme}
+            suggestions={
+              (status === "success" &&
+                result &&
+                result.hits &&
+                result.hits.hits) ||
+              []
+            }
+            alwaysRenderSuggestions={false}
+            onSuggestionSelected={onSuggestionSelected}
+            onSuggestionsFetchRequested={fetch}
+            onSuggestionsClearRequested={clear}
+            getSuggestionValue={getSuggestionValue}
+            renderSuggestion={renderSuggestion}
+            renderSuggestionsContainer={renderSuggestionsContainer}
+            inputProps={inputProps}
+          />
+        )}
       />
     );
   }
 }
+
+Suggester.propTypes = {
+  // on input DOM change
+  onChange: PropTypes.func,
+  // the fetch call function
+  fetch: PropTypes.func.isRequired,
+  query: PropTypes.string
+};
+
+Suggester.defaultProps = {
+  query: "",
+  fetch: () => {},
+  onChange: () => {}
+};
 
 export default Suggester;
