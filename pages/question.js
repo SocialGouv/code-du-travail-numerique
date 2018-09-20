@@ -32,7 +32,7 @@ class Question extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{data._source.title}</title>
+          <title>FAQ : {data._source.title}</title>
         </Head>
         <Search />
         {!data && <BigError>Cette question n'a pas été trouvée</BigError>}
