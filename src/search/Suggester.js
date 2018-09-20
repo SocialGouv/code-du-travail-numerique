@@ -75,10 +75,9 @@ const renderSuggestionsContainer = ({ containerProps, children, query }) => (
 
 const onSuggestionSelected = (e, suggestion) => {
   e.preventDefault();
-  const url = `/${getRouteBySource(suggestion.suggestion._source.source)}/${
-    suggestion.suggestion._source.slug
-  }`;
-  Router.push(url);
+  Router.pushRoute(getRouteBySource(suggestion.suggestion._source.source), {
+    slug: suggestion.suggestion._source.slug
+  });
 };
 
 // see https://github.com/moroshko/react-autosuggest#themeProp

@@ -72,20 +72,11 @@ class Search extends React.Component {
   componentDidMount() {
     // A query already exists in the URL: route was accessed via direct URL.
     if (Router.query && Router.query.q) {
-      //this.fetchResults(decodeURI(Router.query.q));
       this.setState({
         query: Router.query.q,
         submitQuery: Router.query.q
       });
     }
-    Router.onRouteChangeStart = url => {
-      if (url === "/") {
-        this.setState({
-          query: "",
-          submitQuery: ""
-        });
-      }
-    };
   }
 
   submitQuery = () => {
