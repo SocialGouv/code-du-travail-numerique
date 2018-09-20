@@ -9,11 +9,24 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handler = routes.getRequestHandler(app);
 
+const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || "development";
+const API_URL = process.env.API_URL || "http://127.0.0.1:1337/api/v1";
+
 app.prepare().then(() => {
   express()
     .use(handler)
-    .listen(3000, err => {
+    .listen(PORT, err => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
+      console.log(`
+
+  > Ready on http://localhost:${PORT}
+
+  Environment:
+
+    - process.env.NODE_ENV : ${NODE_ENV}
+    - process.env.API_URL : ${API_URL}
+
+`);
     });
 });
