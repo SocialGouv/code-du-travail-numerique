@@ -8,12 +8,13 @@ services:
       - .env
     build:
       context: .
-      dockerfile: ./docker/dev/Dockerfile
+      dockerfile: ./docker/prod/Dockerfile
       args:
         NODE_ENV: $NODE_ENV
         API_URL: $API_URL
+        PORT: $PORT
     ports:
-      - 3000:3000
+      - $PORT:$PORT
     restart: always
     volumes:
       - ./pages:/app/pages
