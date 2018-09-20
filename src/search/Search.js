@@ -1,7 +1,7 @@
 import memoizee from "memoizee";
 import React from "react";
 import { withRouter } from "next/router";
-import { Section } from "@socialgouv/code-du-travail-ui";
+import { Container } from "@socialgouv/code-du-travail-ui";
 
 import Suggester from "./Suggester";
 import SearchResults from "./SearchResults";
@@ -105,9 +105,9 @@ class Search extends React.Component {
     const { query, submitQuery } = this.state;
     return (
       <div>
-        <div className=" shadow-bottom">
-          <Section light>
-            <div className="search">
+        <div className="shadow-bottom">
+          <Container>
+            <div className="search" style={{ padding: "1em 0" }}>
               <header>
                 <h1 className="no-margin">
                   Posez votre question sur le droit du travail
@@ -123,7 +123,7 @@ class Search extends React.Component {
                 <FormSearchButton />
               </form>
             </div>
-          </Section>
+          </Container>
         </div>
         {(submitQuery && (
           <AsyncFetch
