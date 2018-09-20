@@ -95,7 +95,7 @@ class Theme extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{theme && theme.title}</title>
+          <title>Code du travail numérique : {theme && theme.title}</title>
         </Head>
         <Search />
         <Container>

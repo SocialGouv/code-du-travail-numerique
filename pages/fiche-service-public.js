@@ -34,7 +34,7 @@ class Fiche extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{data._source.title}</title>
+          <title>Fiche service-public.fr : {data._source.title}</title>
         </Head>
         <Search />
         {!data && <BigError>Cette fiche n'a pas été trouvée</BigError>}
