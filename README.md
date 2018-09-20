@@ -28,3 +28,9 @@ L'intégration HTML/CSS est réalisée et documentée dans un autre dépôt de c
 
 Le fichier CSS et certains assets du dépôt de code de l'intégration sont copiés dans le répertoire `static` de ce dépôt de code.
 
+## Build de production
+
+- éditer `.env`
+- éditer `docker-compose.override.yml`
+
+puis `docker-compose up`
