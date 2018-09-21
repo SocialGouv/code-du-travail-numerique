@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/code-du-travail-ui",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Composants ReactJS du Code du travail numérique",
   "main": "lib/index.js",
   "module": "es/index.js",
