@@ -10,6 +10,8 @@ import { Link } from "../routes";
 import Search from "../src/search/Search";
 import Categories from "../src/Categories";
 import themes from "../src/data/themes2";
+import SeeAlso from "../src/common/Html";
+import FeedbackForm from "../src/common/FeedbackForm";
 
 const BigError = ({ children }) => (
   <div
@@ -120,6 +122,8 @@ class Theme extends React.Component {
             </BigError>
           )}
         </Container>
+        <SeeAlso />
+        <FeedbackForm query="" />
       </React.Fragment>
     );
   }
