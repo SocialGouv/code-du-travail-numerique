@@ -4,6 +4,8 @@ import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui";
 
+import SeeAlso from "../src/common/Html";
+import FeedbackForm from "../src/common/FeedbackForm";
 import Html from "../src/common/Html";
 import Search from "../src/search/Search";
 
@@ -43,6 +45,9 @@ class Fiche extends React.Component {
             <Html>{data._source.text}</Html>
           </Article>
         )}
+        )}
+        <SeeAlso />
+        <FeedbackForm query="" />
       </React.Fragment>
     );
   }
