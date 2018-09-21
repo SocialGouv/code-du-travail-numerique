@@ -27,7 +27,7 @@
     "@socialgouv/code-du-travail-css": "^1.0.1"
   },
   "devDependencies": {
-    "docz": "^0.11.0",
+    "docz": "^0.11.2",
     "gh-pages": "^1.2.0",
     "nwb": "0.23.x",
     "react": "^16.5.0",
@@ -41,5 +41,8 @@
   },
   "keywords": [
     "ui"
-  ]
+  ],
+  "dependencies": {
+    "styled-components": "^3.4.9"
+  }
 }
