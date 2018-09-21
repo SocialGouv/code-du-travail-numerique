@@ -2,6 +2,7 @@ export default {
   indexHtml: "doc/index.html",
   base: "https://socialgouv.github.io/code-du-travail-ui",
   dest: "./doc-build",
+  protocol: "http",
   //wrapper: "doc/wrapper.js",
   themeConfig: {
     mode: "light",
