@@ -2,10 +2,10 @@ import React from "react";
 import { withRouter } from "next/router";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { Container, Alert } from "@socialgouv/code-du-travail-ui";
+import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui";
 
+import Html from "../src/common/Html";
 import Search from "../src/search/Search";
-import Answer from "../src/search/Answer";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -37,11 +37,9 @@ class Question extends React.Component {
         <Search />
         {!data && <BigError>Cette question n'a pas été trouvée</BigError>}
         {data && (
-          <Answer
-            title={data._source.title}
-            html={data._source.text}
-            footer="FAQ"
-          />
+          <Article title={data._source.title} footer="FAQ">
+            <Html>{data._source.text}</Html>
+          </Article>
         )}
       </React.Fragment>
     );
