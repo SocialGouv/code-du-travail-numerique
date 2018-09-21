@@ -4,7 +4,7 @@ import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui";
 
-import SeeAlso from "../src/common/Html";
+import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
 import Html from "../src/common/Html";
 import Search from "../src/search/Search";
