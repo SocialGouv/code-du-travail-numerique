@@ -86,7 +86,16 @@ const ResultItem = ({ _id, _source, highlight }) => {
         </Link>
       </li>
     );
+  } else if (_source.source === "code_du_travail") {
+    return (
+      <li className="search-results__item">
+        <Link route="code-du-travail" params={{ slug: _source.slug }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
+    );
   }
+
   //  }
   return (
     <li className="search-results__item">

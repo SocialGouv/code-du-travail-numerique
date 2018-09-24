@@ -19,6 +19,7 @@ const ellipsisStyle = {
 const getRouteBySource = source =>
   ({
     faq: "question",
+    code_du_travail: "code-du-travail",
     fiches_ministere_travail: "fiche-ministere-travail",
     fiches_service_public: "fiche-service-public"
   }[source]);
@@ -26,6 +27,7 @@ const getRouteBySource = source =>
 const getSourceName = source =>
   ({
     faq: "Question",
+    code_du_travail: "Code du travail",
     fiches_ministere_travail: "Fiche Ministère du travail",
     fiches_service_public: "Fiche Service public"
   }[source]);
@@ -86,7 +88,7 @@ const suggesterTheme = {
     flex: "1 0 auto",
     textAlign: "left",
     border: 0,
-    width: "calc(100% - 36px)"
+    width: "calc(100% - 43px)"
   },
   suggestionsList: {
     margin: 0,
@@ -96,7 +98,7 @@ const suggesterTheme = {
     background: "white",
     borderTop: 0,
     position: "absolute",
-    width: "calc(100% - 36px)"
+    width: "calc(100% - 43px)"
   },
   suggestion: {
     listStyleType: "none",

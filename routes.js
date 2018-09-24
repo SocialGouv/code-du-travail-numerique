@@ -25,6 +25,13 @@ module.exports = routes()
     pattern: "/fiche-ministere-travail/:slug"
   })
 
+  // http://localhost:3000/code-du-travail/L2253-1
+  .add({
+    name: "code-du-travail",
+    page: "code-du-travail",
+    pattern: "/code-du-travail/:slug"
+  })
+
   // theme navigation
   //
   // http://localhost:3000/themes
