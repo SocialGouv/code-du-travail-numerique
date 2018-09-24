@@ -1,18 +1,20 @@
 import memoizee from "memoizee";
 import React from "react";
-import { withRouter } from "next/router";
 import { Container } from "@socialgouv/code-du-travail-ui";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import Suggester from "./Suggester";
 import SearchResults from "./SearchResults";
 
-import { Router } from "../../routes";
+import { Router, Link } from "../../routes";
 
 const Disclaimer = () => (
   <p>
-    Ce site est <b>en cours de construction</b> : les données qui s'y trouvent
-    peuvent être erronées ou imprécises.
+    Ce service gouvernemental vous permet d’obtenir des réponses détaillées, des
+    fiches explicatives et les articles de loi correspondants -{" "}
+    <Link route="about">
+      <a>En savoir plus</a>
+    </Link>
     <br />
     <a
       target="_blank"
@@ -147,4 +149,4 @@ class Search extends React.Component {
   }
 }
 
-export default withRouter(Search);
+export default Search;

@@ -44,6 +44,9 @@ module.exports = routes()
   // legacy
   .add({ name: "explorer", page: "explorer", pattern: "/explorer" })
 
+  // http://localhost:3000/a-propos
+  .add({ name: "about", page: "about", pattern: "/a-propos" })
+
   // The main search route. Parameters are optional.
   //
   // http://localhost:3000/
