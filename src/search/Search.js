@@ -3,6 +3,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import { Container } from "@socialgouv/code-du-travail-ui";
 
+import AsyncFetch from "../lib/AsyncFetch";
 import Suggester from "./Suggester";
 import SearchResults from "./SearchResults";
 
@@ -48,8 +49,6 @@ const fetchResults = (query, endPoint = "search") => {
   });
 };
 
-import AsyncFetch from "../lib/AsyncFetch";
-
 const fetchResultsSearch = memoizee(
   query => {
     return fetchResults(query, "search");
@@ -62,6 +61,23 @@ const fetchResultsSuggest = memoizee(
     return fetchResults(query, "suggest");
   },
   { promise: true }
+);
+
+export const SearchQuery = ({ query }) => (
+  <AsyncFetch
+    autoFetch={true}
+    fetch={() => fetchResultsSearch(query)}
+    render={({ status, result, clear }) => (
+      <div>
+        <div style={{ textAlign: "center" }}>
+          {status === "loading" ? "..." : ""}
+        </div>
+        <div>
+          {status === "success" && result && <SearchResults data={result} />}
+        </div>
+      </div>
+    )}
+  />
 );
 
 class Search extends React.Component {
@@ -125,24 +141,7 @@ class Search extends React.Component {
             </div>
           </Container>
         </div>
-        {(submitQuery && (
-          <AsyncFetch
-            autoFetch={true}
-            fetch={() => fetchResultsSearch(submitQuery)}
-            render={({ status, result, clear }) => (
-              <div>
-                <div style={{ textAlign: "center" }}>
-                  {status === "loading" ? "..." : ""}
-                </div>
-                <div>
-                  {status === "success" &&
-                    result && <SearchResults data={result} />}
-                </div>
-              </div>
-            )}
-          />
-        )) ||
-          null}
+        {(submitQuery && <SearchQuery query={submitQuery} />) || null}
       </div>
     );
   }
