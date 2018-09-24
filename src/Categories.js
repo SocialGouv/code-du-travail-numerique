@@ -39,7 +39,7 @@ class _Categories extends React.Component {
               {title}
             </h2>
           )}
-          <Categories style={{ justifyContent: "center" }}>
+          <Categories>
             {themes.map(theme => (
               <Category key={theme.slug + theme.title} {...theme} />
             ))}
