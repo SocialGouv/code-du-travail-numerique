@@ -27,7 +27,10 @@ export default class MyDocument extends Document {
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
         </Head>
         <body>
-          <noscript>You need to enable JavaScript to run this app.</noscript>
+          <noscript>
+            Vous devez activer le JavaScript pour pouvoir profiter pleinement ce
+            site internet.
+          </noscript>
           <Main />
           <NextScript />
         </body>
