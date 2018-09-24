@@ -15,6 +15,19 @@ const BigError = ({ children }) => (
   </Container>
 );
 
+const Source = ({ name }) => (
+  <div
+    style={{
+      background: "var(--color-light-background)",
+      padding: 10,
+      marginTop: 50
+    }}
+  >
+    Informations fournies par vos services de renseignements des DIRECCTE en
+    région
+  </div>
+);
+
 class Question extends React.Component {
   static async getInitialProps({ res, query }) {
     return await fetch(`${process.env.API_URL}/items/faq/${query.slug}`)
@@ -40,7 +53,8 @@ class Question extends React.Component {
         {!data && <BigError>Cette question n'a pas été trouvée</BigError>}
         {data && (
           <Article title={data._source.title} footer="FAQ">
-            <Html>{data._source.text}</Html>
+            <Html>{data._source.html}</Html>
+            <Source name="Services de renseignements des DIRECCTE" />
           </Article>
         )}
         <SeeAlso />
