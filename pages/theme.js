@@ -1,13 +1,12 @@
 import React from "react";
-import { withRouter } from "next/router";
 import Head from "next/head";
 import { BreadCrumbs, Container, Alert } from "@socialgouv/code-du-travail-ui";
 
 import find from "unist-util-find";
 import parents from "unist-util-parents";
 
-import { Link } from "../routes";
-import Search from "../src/search/Search";
+import { Link, Router } from "../routes";
+import Search, { SearchQuery } from "../src/search/Search";
 import Categories from "../src/Categories";
 import themes from "../src/data/themes2";
 import SeeAlso from "../src/common/Html";
@@ -88,6 +87,7 @@ class Theme extends React.Component {
     if (!theme && res) {
       res.statusCode = 404;
     }
+
     return { theme, parents: themeParents };
   }
 
@@ -112,21 +112,19 @@ class Theme extends React.Component {
               Choisissez un thème :
             </h2>
           )}
+
           {(theme &&
             theme.children &&
             theme.children.length && (
               <Categories title={null} themes={theme.children} />
-            )) || (
-            <BigError>
-              Aucun contenu actuellement disponible sur ce thème :/
-            </BigError>
-          )}
+            )) ||
+            null}
+          {theme &&
+            theme.type !== "root" && <SearchQuery query={theme.title} />}
         </Container>
-        <SeeAlso />
-        <FeedbackForm query="" />
       </React.Fragment>
     );
   }
 }
 
-export default withRouter(Theme);
+export default Theme;

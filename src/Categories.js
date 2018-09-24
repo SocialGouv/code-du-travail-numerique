@@ -9,12 +9,18 @@ import {
 
 import themes from "./data/themes2";
 
-const Category = ({ title, slug, icon = "/static/assets/icons/chat.svg" }) => (
-  <li className="categories__list-item">
+const Category = ({
+  title,
+  text,
+  slug,
+  icon = "/static/assets/icons/chat.svg"
+}) => (
+  <li className="categories__list-item" style={{ flexGrow: 0, minHeight: 120 }}>
     <Link route="theme" params={{ slug: slug || "/" }}>
       <a title={title}>
         <img src={icon} alt={title} />
         <h3>{title}</h3>
+        {text}
       </a>
     </Link>
   </li>
@@ -33,7 +39,7 @@ class _Categories extends React.Component {
               {title}
             </h2>
           )}
-          <Categories>
+          <Categories style={{ justifyContent: "center" }}>
             {themes.map(theme => (
               <Category key={theme.slug + theme.title} {...theme} />
             ))}
