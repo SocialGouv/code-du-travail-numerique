@@ -12,10 +12,14 @@ class FeedbackForm extends React.Component {
     status: null
   };
 
-  submit = () => {
+  submit = e => {
+    if (e) {
+      e.preventDefault();
+    }
     // contact@code-du-travail.beta.gouv.fr
     const formUrl = "https://formspree.io/xwbdjqem";
-    const subject = this.props.query || this.props.theme.id;
+    const subject =
+      this.props.query || (this.props.theme && this.props.theme.id);
 
     if (
       !this.state.email ||
@@ -59,6 +63,9 @@ class FeedbackForm extends React.Component {
                   });
                 }
               );
+            } else if (data.error) {
+              console.log("Email send error", data);
+              throw new Error("cannot send form : " + data.error);
             }
           })
           .catch(e => {
@@ -90,7 +97,7 @@ class FeedbackForm extends React.Component {
               <h2 className="no-margin">Aidez-nous à nous améliorer</h2>
               {intro}
             </header>
-            <form>
+            <form onSubmit={this.submit}>
               <p>
                 <label>
                   Êtes vous satisfait par les réponses apportées à votre
@@ -109,7 +116,9 @@ class FeedbackForm extends React.Component {
                     <React.Fragment>
                       <label htmlFor={id}>Votre message :</label>
                       <textarea
-                        onChange={e => this.setState({ message: e.target.value })}
+                        onChange={e =>
+                          this.setState({ message: e.target.value })
+                        }
                         value={this.state.message}
                         required={true}
                         className="full-width"
@@ -145,6 +154,11 @@ class FeedbackForm extends React.Component {
                 <Alert category="success">Message bien envoyé !</Alert>
               ) : (
                 <p>
+                  {this.state.status === "error" ? (
+                    <Alert category="danger">
+                      Impossible d'envoyer votre message
+                    </Alert>
+                  ) : null}
                   <button
                     type="submit"
                     className="btn"
