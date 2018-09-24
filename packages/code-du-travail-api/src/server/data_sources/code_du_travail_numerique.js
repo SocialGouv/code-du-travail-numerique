@@ -15,12 +15,14 @@ async function search({
   size = 10,
   must = [],
   should = [],
-  fragment_size = 40
+  fragment_size = 40,
+  ...others
 }) {
   let elasticsearchQuery = {
     index: elasticsearchIndexName,
     body: {
       size: size,
+      ...others,
       query: {
         bool: {
           must: [

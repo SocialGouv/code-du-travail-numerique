@@ -30,13 +30,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
       query,
       fragment_size: 200,
       size: 5,
-      must: [
-        {
-          terms: {
-            source: ["faq", "fiches_service_public", "fiches_ministere_travail"]
-          }
-        }
-      ]
+      _source: ["title", "source", "slug"]
     });
   } catch (error) {
     console.trace(error.message);

@@ -22,4 +22,4 @@ networks:
   default:
     # The network used by the repository `code-du-travail-data` must be active first.
     external:
-      name: code-du-travail-data_default
+      name: codedutravaildata_default
