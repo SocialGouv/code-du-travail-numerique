@@ -3,6 +3,8 @@ import { withRouter } from "next/router";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui";
+import styled from "styled-components";
+import { ExternalLink } from "react-feather";
 
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
@@ -13,6 +15,24 @@ const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
     <Alert warning>{children}</Alert>
   </Container>
+);
+
+const Source = ({ name, url }) => (
+  <div
+    style={{
+      background: "var(--color-light-background)",
+      padding: 10,
+      marginTop: 50
+    }}
+  >
+    <a href={url} target="_blank">
+      Voir le contenu original sur : {name}{" "}
+      <ExternalLink
+        style={{ verticalAlign: "middle", margin: "0 5px" }}
+        size={16}
+      />
+    </a>
+  </div>
 );
 
 class Fiche extends React.Component {
@@ -33,6 +53,8 @@ class Fiche extends React.Component {
 
   render() {
     const { data } = this.props;
+    // console.log("data", data);
+
     return (
       <React.Fragment>
         <Head>
@@ -42,7 +64,8 @@ class Fiche extends React.Component {
         {!data && <BigError>Cette fiche n'a pas été trouvée</BigError>}
         {data && (
           <Article title={data._source.title}>
-            <Html>{data._source.text}</Html>
+            <Html>{data._source.html}</Html>
+            <Source name="Ministère du travail" url={data._source.url} />
           </Article>
         )}
         <SeeAlso />
