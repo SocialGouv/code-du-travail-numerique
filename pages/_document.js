@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link rel="stylesheet" href="/static/bundle.css" />
           {this.props.styleTags}
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es6,Array.prototype.includes" />
+          <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
         </Head>
         <body>
           <noscript>You need to enable JavaScript to run this app.</noscript>
