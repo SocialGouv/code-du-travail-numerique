@@ -46,7 +46,6 @@ class _Categories extends React.Component {
           </Categories>
           <br />
           <br />
-          <br />
         </Container>
       )) ||
       null
