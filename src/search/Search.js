@@ -151,7 +151,7 @@ class Search extends React.Component {
                   className="search__input"
                   onChange={this.onSearchInputChange}
                   onKeyDown={this.onKeyDown}
-                  placeholder="Exemple: mon contrat de travail doit il être écrit? / L1221-1"
+                  placeholder="Exemple: mon contrat de travail doit il être écrit?"
                   type="search"
                   value={query}
                 />
