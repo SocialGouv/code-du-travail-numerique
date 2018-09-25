@@ -21,7 +21,7 @@ class Categories extends React.Component {
                   onClick={e => this.handleClick(e, "obligations et embauche")}
                 >
                   <img src="/static/assets/icons/handshake.svg" alt="" />
-                  <h3>Embauche et contrat</h3>
+                  <h3>contrat de travail et embauche</h3>
                 </a>
               </li>
               <li className="categories__list-item">
@@ -53,10 +53,10 @@ class Categories extends React.Component {
               <li className="categories__list-item">
                 <a
                   href="#"
-                  onClick={e => this.handleClick(e, "rupture de contrat")}
+                  onClick={e => this.handleClick(e, "rupture du contrat de travail")}
                 >
                   <img src="/static/assets/icons/file-3.svg" alt="" />
-                  <h3>Rupture de contrat</h3>
+                  <h3>Rupture du contrat de travail </h3>
                 </a>
               </li>
               <li className="categories__list-item">
@@ -77,10 +77,10 @@ class Categories extends React.Component {
               <li className="categories__list-item">
                 <a
                   href="#"
-                  onClick={e => this.handleClick(e, "maladies et inaptitudes")}
+                  onClick={e => this.handleClick(e, "maladie et inaptitude")}
                 >
                   <img src="/static/assets/icons/certificate.svg" alt="" />
-                  <h3>Maladies et inaptitudes</h3>
+                  <h3>Maladie et inaptitude</h3>
                 </a>
               </li>
             </ul>
