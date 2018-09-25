@@ -45,20 +45,20 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-primary-background: #005994;
   --color-primary-text: var(--color-white);
   /* https://webaim.org/resources/contrastchecker/?bcolor=c4c4c4&fcolor=0c0c0e */
-  --color-secondary-background: #c4c4c4;
+  --color-secondary-background: #eaeaea;
   --color-secondary-text: var(--color-black);
   /* https://webaim.org/resources/contrastchecker/?bcolor=2cb54c&fcolor=0c0c0e */
-  --color-success-background: #2cb54c;
+  --color-success-background: #e0f2bd;
   --color-success-text: var(--color-black);
   /* https://webaim.org/resources/contrastchecker/?bcolor=b1e2f8&fcolor=0c0c0e */
-  --color-info-background: #b1e2f8;
+  --color-info-background: #d7e8f9;
   --color-info-text: var(--color-black);
   /* https://webaim.org/resources/contrastchecker/?bcolor=ffc107&fcolor=0c0c0e */
-  --color-warning-background: #ffc107;
+  --color-warning-background: #fee5ad;
   --color-warning-text: var(--color-black);
   /* https://webaim.org/resources/contrastchecker/?bcolor=aa1d2b&fcolor=ffffff */
-  --color-danger-background: #aa1d2b;
-  --color-danger-text: var(--color-white);
+  --color-danger-background: #f6bcc2;
+  --color-danger-text: var(--color-black);
 
   /* Form focus */
   --color-focus: #80BDFF;
