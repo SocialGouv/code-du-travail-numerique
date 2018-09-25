@@ -46,6 +46,11 @@
     color: var(--color-white);
   }
 
+  &:focus {
+    border: 1px solid var(--color-focus);
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
+
   &.btn__primary {
     background: var(--color-primary-background);
     color: var(--color-primary-text);

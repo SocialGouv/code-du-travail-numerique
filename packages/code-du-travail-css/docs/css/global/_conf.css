@@ -60,6 +60,10 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-danger-background: #aa1d2b;
   --color-danger-text: var(--color-white);
 
+  /* Form focus */
+  --color-focus: #80BDFF;
+  --color-focus-shadow: #BFDEFF;
+
   /* Border radius */
   --border-radius-base: 0.25rem;
 
@@ -111,12 +115,14 @@ https://fontlibrary.org/fr/font/source-sans-pro
 --------------------------------------------------------------------------- */
 
 :focus {
-  outline: 3px dotted var(--color-dark-text);
+  border: 1px solid var(--color-focus);
+  box-shadow: 0 0 2px 2px var(--color-focus-shadow);
 }
 
 /* WebKit gets its native focus styles. */
-@media (-webkit-min-device-pixel-ratio: 0) {
+/*@media (-webkit-min-device-pixel-ratio: 0) {
   :focus {
-    outline: 5px auto var(--color-dark-text);
+    outline: 1px solid var(--color-outline);
+    box-shadow: 0 0 2px 2px var(--color-outline-shadow);
   }
-}
+}*/
