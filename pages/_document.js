@@ -22,7 +22,11 @@ export default class MyDocument extends Document {
           />
           <title>Code du travail numérique</title>
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <link rel="stylesheet" href="/static/bundle.css" />
+          {/*<link rel="stylesheet" href="/static/bundle.css" />*/}
+          <link
+            rel="stylesheet"
+            href="http://rawgit.com/SocialGouv/code-du-travail-css/master/docs/bundle.css"
+          />
           {this.props.styleTags}
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
         </Head>
