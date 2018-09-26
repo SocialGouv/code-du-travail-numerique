@@ -2,17 +2,20 @@
 --------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--color-blue);
+    color: var(--color-title);
     line-height: var(--line-height-base);
     font-weight: 700;
+    margin: .5rem 0 .2rem 0;
 }
 
 h1 {
     font-size: var(--font-size-h1);
+    font-weight: 400;
 }
 
 h2 {
     font-size: var(--font-size-h2);
+    font-weight: 400;
 }
 
 h3 {
@@ -29,6 +32,12 @@ h5 {
 
 h6 {
     font-size: var(--font-size-h6);
+}
+
+/* Paragraphes.
+--------------------------------------------------------------------------- */
+p {
+    font-size: 1rem;
 }
 
 /* Lists.

@@ -45,19 +45,26 @@
         background: var(--color-white);
         color: var(--color-light-text);
         text-decoration: none;
-        transition: all .1s cubic-bezier(0.250, 0.460, 0.450, 0.940), color 0s;
+        transition: all .2s ease;
     }
 
     & a:focus,
     & a:hover,
     & a:active {
-        text-decoration: underline;
         transform: scale(1.1);
+        border: 1px solid var(--color-focus);
+        box-shadow: 0 0 2px 2px var(--color-focus-shadow);
     }
 
-    & a *:not(img) {
-        font-size: 1rem;
-        margin: 0;
+    & a:focus h3,
+    & a:hover h3,
+    & a:active h3 {
+        /*text-decoration: underline;*/
+
+    }
+
+    & h3, & p {
+        font-size: 0.9375rem;
     }
 
     & a img {

@@ -26,6 +26,7 @@ https://webaim.org/techniques/css/invisiblecontent/
 .shadow-bottom {
   position: relative;
   box-shadow: var(--box-shadow-bottom);
+  margin-bottom: 2rem;
 }
 
 /* Display an external link icon before the text. */
