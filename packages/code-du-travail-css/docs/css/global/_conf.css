@@ -3,7 +3,7 @@ https://calendar.perfplanet.com/2016/no-font-face-bulletproof-syntax/
 https://fontlibrary.org/fr/font/evolventa
 https://fontlibrary.org/fr/font/source-sans-pro
 --------------------------------------------------------------------------- */
-/*
+
 @font-face {
   font-family: "Muli";
   font-style: normal;
@@ -21,7 +21,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
   src: url(assets/fonts/muli-latin-700.woff2) format('woff2'),
        url(assets/fonts/muli-latin-700.woff) format('woff');
 }
-*/
+
 /* Variables.
 --------------------------------------------------------------------------- */
 
