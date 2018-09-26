@@ -25,10 +25,10 @@ export default class MyDocument extends Document {
           {/*<link rel="stylesheet" href="/static/bundle.css" />*/}
           <link
             rel="stylesheet"
-            href="http://rawgit.com/SocialGouv/code-du-travail-css/master/docs/bundle.css"
+            href="//rawgit.com/SocialGouv/code-du-travail-css/master/docs/bundle.css"
           />
           {this.props.styleTags}
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
+          <script src="//cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
         </Head>
         <body>
           <noscript>
