@@ -64,6 +64,12 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-focus: #80BDFF;
   --color-focus-shadow: #BFDEFF;
 
+  /* Breakpoints */
+  --breakpoint-desktop: 1200px;
+  --breakpoint-tablet: 980px;
+  --breakpoint-mobile: 600px;
+
+
   /* Border radius */
   --border-radius-base: 0.25rem;
 

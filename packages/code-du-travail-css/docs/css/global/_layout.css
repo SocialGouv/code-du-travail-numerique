@@ -88,10 +88,11 @@ This class is used to determine the max-width of the interface:
     </div>
 */
 .container {
-    max-width: 980px;
+    max-width: var(--breakpoint-desktop);
     margin: 0 auto;
     padding: 0 var(--spacing-medium);
 }
+
 
 /* 3. Wrapper (optional)
 
