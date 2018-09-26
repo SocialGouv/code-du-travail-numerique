@@ -62,6 +62,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-danger-background: #f6bcc2;
   --color-danger-text: var(--color-black);
 
+  --color-mark-background: #fff28e;
+
   /* Form focus */
   --color-focus: #80BDFF;
   --color-focus-shadow: #BFDEFF;

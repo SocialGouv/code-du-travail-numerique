@@ -67,3 +67,11 @@ code {
     border: 1px solid var(--color-element-border);
     word-wrap: break-word;
 }
+
+/* Mark
+--------------------------------------------------------------------------- */
+
+mark {
+    background: var(--color-mark-background);
+}
+

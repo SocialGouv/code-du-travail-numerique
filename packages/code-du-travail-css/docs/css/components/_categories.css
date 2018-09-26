@@ -73,3 +73,29 @@
         margin: var(--spacing-small) 0;
     }
 }
+
+.categories__list-item--small {
+
+    & a,
+    & a:link,
+    & a:visited {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    & figure {
+        margin: .5rem;
+    }
+
+    & img {
+        width: 2.5rem;
+        margin: .2rem auto;
+    }
+
+    & h3, & p {
+        font-size: .8125rem;
+        margin: .5rem
+    }
+}
