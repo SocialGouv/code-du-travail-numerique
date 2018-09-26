@@ -66,6 +66,12 @@ as a homogeneous spacing between each of them:
     <footer class="section-dark" id="footer">
     </footer>
 */
+
+.section-white {
+    padding: var(--spacing-inter-component) 0;
+    background-color: var(--color-white);
+}
+
 .section-light {
     padding: var(--spacing-inter-component) 0;
     background-color: var(--color-light-background);
