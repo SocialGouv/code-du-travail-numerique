@@ -34,6 +34,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-element-border: #c9d3df;
   --color-white: #fff;
 
+  --color-title: #006AB2; /* https://webaim.org/resources/contrastchecker/?bcolor=006AB2&fcolor=ffffff */
+
   /* https://webaim.org/resources/contrastchecker/?bcolor=f9f9fc&fcolor=4c5467 */
   --color-light-background: #f9f9fc;
   --color-light-text: #4c5467; /* Also used as fill color in SVG files. */
@@ -65,9 +67,13 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-focus-shadow: #BFDEFF;
 
   /* Breakpoints */
-  --breakpoint-desktop: 1200px;
-  --breakpoint-tablet: 980px;
-  --breakpoint-mobile: 600px;
+  @custom-media  --bp-desktop (max-width: 1200px);
+  @custom-media  --bp-tablet (max-width: 980px);
+  @custom-media  --bp-mobile (max-width: 600px);
+
+  --bp-desktop : 1200px;
+  --bp-tablet : 980px;
+  --bp-mobile : 600px;
 
 
   /* Border radius */

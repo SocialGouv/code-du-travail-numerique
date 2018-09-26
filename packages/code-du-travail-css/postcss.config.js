@@ -2,6 +2,8 @@
 module.exports = {
   plugins: {
     "postcss-import": {},
+    "postcss-media-fn": {},
+    "postcss-custom-media": {},
     "postcss-preset-env": {
       browsers: "last 2 versions",
       // https://cssdb.org/#staging-process

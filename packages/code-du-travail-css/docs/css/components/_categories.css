@@ -11,7 +11,7 @@
 .categories__list {
     display: flex; /* Flex layout so items have equal height. */
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-content: flex-start;
     list-style-type: none;
     padding: 0;
@@ -22,8 +22,16 @@
 
 .categories__list-item {
 
-    flex: 1 0 200px;
-    margin: var(--flex-gutter-size); /* Gutters between items. */
+    /*width:calc(100%/4 - 2 * var(--flex-gutter-size)) ;*/
+    /*flex: 0 0 250px;*/
+    /*margin: var(--flex-gutter-size);*/ /* Gutters between items. */
+    width: media(
+        calc(100%/4 - 2 * var(--flex-gutter-size)),
+        (--bp-tablet) calc(100%/3 - 2 * var(--flex-gutter-size)),
+        (--bp-mobile) calc(100% - 2 * var(--flex-gutter-size)),
+    );
+
+    margin: var(--flex-gutter-size);
     text-align: center;
 
     & a,
@@ -57,5 +65,4 @@
         width: 2.5rem;
         margin: var(--spacing-small) 0;
     }
-
 }
