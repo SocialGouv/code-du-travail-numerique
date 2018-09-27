@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "../../routes";
 
 const Header = ({ onClick }) => (
-  <header className="section-light">
+  <header className="section-white">
     <div className="container">
       <div className="main-header">
         <Link route="/">
