@@ -117,7 +117,7 @@ class Search extends React.Component {
     const { query, submitQuery } = this.state;
     return (
       <div>
-        <div className="shadow-bottom">
+        <div className="section-white shadow-bottom">
           <Container>
             <div className="search" style={{ padding: "1em 0" }}>
               <header>
