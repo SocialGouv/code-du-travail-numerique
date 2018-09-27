@@ -29,6 +29,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
   /* Colors */
   --color-black: #0c0c0e;
   --color-blue: #005c99; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
+  --color-blue-light: #007FD8;
   --color-blue-dark: #04234a;
   --color-element-background: #f5f7fa;
   --color-element-border: #c9d3df;

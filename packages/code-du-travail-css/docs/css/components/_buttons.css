@@ -22,8 +22,12 @@
   border-radius: var(--border-radius-base);
   border: 1px solid transparent;
 
+
   /* Fixme: currently use the same colors as `.btn__primary`. */
-  background: var(--color-primary-background);
+  background: var(--color-blue-light);
+  border-bottom: 2px solid color-mod(
+      var(--color-blue-light) lightness(-10%)
+  );
   color: var(--color-primary-text);
 
   cursor: pointer;
@@ -41,7 +45,7 @@
   &:hover,
   &:active {
     background-color: color-mod(
-      var(--color-primary-background) lightness(-10%)
+      var(--color-blue-light) lightness(-10%)
     );
     color: var(--color-white);
   }
@@ -53,6 +57,9 @@
 
   &.btn__primary {
     background: var(--color-primary-background);
+    border-bottom: 2px solid color-mod(
+        var(--color-primary-background) lightness(-10%)
+    );
     color: var(--color-primary-text);
     &:focus,
     &:hover,
@@ -65,6 +72,9 @@
 
   &.btn__secondary {
     background-color: var(--color-secondary-background);
+    border-bottom: 2px solid color-mod(
+        var(--color-secondary-background) lightness(-10%)
+    );
     color: var(--color-secondary-text);
     &:focus,
     &:hover,
@@ -77,6 +87,9 @@
 
   &.btn__warning {
     background-color: var(--color-warning-background);
+    border-bottom: 2px solid color-mod(
+        var(--color-warning-background) lightness(-10%)
+    );
     color: var(--color-warning-text);
     &:focus,
     &:hover,
@@ -89,6 +102,9 @@
 
   &.btn__success {
     background-color: var(--color-success-background);
+    border-bottom: 2px solid color-mod(
+        var(--color-success-background) lightness(-10%)
+    );
     color: var(--color-success-text);
     &:focus,
     &:hover,
@@ -101,6 +117,9 @@
 
   &.btn__info {
     background-color: var(--color-info-background);
+    border-bottom: 2px solid color-mod(
+        var(--color-info-background) lightness(-10%)
+    );
     color: var(--color-info-text);
     &:focus,
     &:hover,
@@ -111,6 +130,9 @@
 
   &.btn__danger {
     background-color: var(--color-danger-background);
+    border-bottom: 2px solid color-mod(
+        var(--color-danger-background) lightness(-10%)
+    );
     color: var(--color-danger-text);
     &:focus,
     &:hover,
@@ -158,4 +180,5 @@ The <span> element will be moved away from the normal flow of the document.
 
 .btn__img__search {
   background-image: url(assets/icons/search.svg);
+  background-position: 50% 65%;
 }
