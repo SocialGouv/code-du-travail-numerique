@@ -6,7 +6,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@socialgouv/code-du-travail-ui": "^1.2.2",
+    "@socialgouv/code-du-travail-ui": "^1.2.3",
     "@zeit/next-css": "^1.0.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
