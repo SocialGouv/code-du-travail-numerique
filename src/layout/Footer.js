@@ -1,7 +1,6 @@
 import React from "react";
 
 import ConventionModal from "../common/ConventionModal";
-import { Link } from "../../routes";
 
 const Footer = () => (
   <footer className="section-dark" id="footer">
@@ -11,9 +10,9 @@ const Footer = () => (
           <h3>Code du travail numérique</h3>
           <ul>
             <li>
-              <Link route="explorer">
-                <a>Navigation par thèmes</a>
-              </Link>
+              <a href="https://code-du-travail.beta.gouv.fr">
+                Navigation par thèmes
+              </a>
             </li>
           </ul>
         </div>

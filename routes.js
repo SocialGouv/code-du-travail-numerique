@@ -41,9 +41,6 @@ module.exports = routes()
   // http://localhost:3000/theme/rupture-de-contrat/la-rupture-conventionnelle
   .add({ name: "theme", page: "theme", pattern: "/themes/:slug+" }) // slug is an array of slugs
 
-  // legacy
-  .add({ name: "explorer", page: "explorer", pattern: "/explorer" })
-
   // http://localhost:3000/a-propos
   .add({ name: "about", page: "about", pattern: "/a-propos" })
 
