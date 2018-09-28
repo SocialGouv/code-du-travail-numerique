@@ -15,12 +15,16 @@ const Category = ({
   slug,
   icon = "/static/assets/icons/chat.svg"
 }) => (
-  <li className="categories__list-item" style={{ flexGrow: 0, minHeight: 120 }}>
+  <li className="categories__list-item categories__list-item--small">
     <Link route="theme" params={{ slug: slug || "/" }}>
       <a title={title}>
-        <img src={icon} alt={title} />
-        <h3>{title}</h3>
-        {text}
+        <figure>
+          <img src={icon} alt={title} />
+        </figure>
+        <div className="categories__list-item-content">
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </div>
       </a>
     </Link>
   </li>
