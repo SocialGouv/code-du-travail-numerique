@@ -28,14 +28,7 @@ const Disclaimer = () => (
 );
 
 const FormSearchButton = () => (
-  <button
-    type="submit"
-    className="btn btn__img btn__img__search"
-    style={{
-      maxHeight: 36,
-      flex: "1 0 38px"
-    }}
-  >
+  <button type="submit" className="btn btn__img btn__img__search">
     <span className="hidden">Rechercher</span>
   </button>
 );
