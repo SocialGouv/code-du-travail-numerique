@@ -116,7 +116,11 @@ class Theme extends React.Component {
           {(theme &&
             theme.children &&
             theme.children.length && (
-              <Categories title={null} themes={theme.children} />
+              <Categories
+                isRoot={parents.length === 0}
+                title={null}
+                themes={theme.children}
+              />
             )) ||
             null}
           {theme &&
