@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "../routes";
 
-import {
-  BreadCrumbs,
-  Container,
-  Categories
-} from "@socialgouv/code-du-travail-ui";
+import { Container, Categories } from "@socialgouv/code-du-travail-ui";
 
 import themes from "./data/themes2";
 
@@ -13,9 +9,14 @@ const Category = ({
   title,
   text,
   slug,
+  small = false,
   icon = "/static/assets/icons/chat.svg"
 }) => (
-  <li className="categories__list-item categories__list-item--small">
+  <li
+    className={`categories__list-item ${(small &&
+      "categories__list-item--small") ||
+      ""}`}
+  >
     <Link route="theme" params={{ slug: slug || "/" }}>
       <a title={title}>
         <figure>
@@ -32,7 +33,7 @@ const Category = ({
 
 class _Categories extends React.Component {
   render() {
-    const { title, themes } = this.props;
+    const { title, themes, isRoot } = this.props;
     return (
       (themes.length && (
         <Container>
@@ -45,7 +46,11 @@ class _Categories extends React.Component {
           )}
           <Categories>
             {themes.map(theme => (
-              <Category key={theme.slug + theme.title} {...theme} />
+              <Category
+                key={theme.slug + theme.title}
+                small={!isRoot}
+                {...theme}
+              />
             ))}
           </Categories>
           <br />
