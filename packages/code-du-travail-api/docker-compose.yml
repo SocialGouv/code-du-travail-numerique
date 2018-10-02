@@ -8,14 +8,10 @@ services:
       - .env
     build:
       context: .
-      dockerfile: ./docker/dev/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
-      - 1337:1337
+      - $PORT:$PORT
     restart: always
-    # In development: mount the local source code in the container and
-    # the main process will be run through Nodemon.
-    volumes:
-      - ./src:/app/src
 
 networks:
 
