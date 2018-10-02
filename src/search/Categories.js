@@ -37,7 +37,7 @@ class Categories extends React.Component {
               </li>
               <li className="categories__list-item">
                 <a href="#" onClick={e => this.handleClick(e, "rémunération")}>
-                  <img src="/static/assets/icons/coins.svg" alt="" />
+                  <img src="/static/assets/icons/remuneration.svg" alt="" />
                   <h3>Rémunération</h3>
                 </a>
               </li>
