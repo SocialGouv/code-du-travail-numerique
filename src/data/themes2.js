@@ -181,7 +181,7 @@ module.exports = [
     slug: ["remuneration"],
     title: "Rémunération",
     text: "Tout tout tout vous saurez tout sur votre fiche de paie",
-    icon: "/static/assets/icons/coins.svg",
+    icon: "/static/assets/icons/remuneration.svg",
     children: []
   },
   {
