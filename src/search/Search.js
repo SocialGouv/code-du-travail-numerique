@@ -9,6 +9,7 @@ import SearchResults from "./SearchResults";
 import { Router, Link } from "../../routes";
 
 const Disclaimer = () => (
+  <div class="wrapper-narrow">
   <p>
     Ce service gouvernemental vous permet d’obtenir des réponses détaillées, des
     fiches explicatives et les articles de loi correspondants -{" "}
@@ -25,6 +26,7 @@ const Disclaimer = () => (
       L'ouverture officielle du site est prévue pour 2020.
     </a>
   </p>
+  </div>
 );
 
 const FormSearchButton = () => (
@@ -117,7 +119,7 @@ class Search extends React.Component {
     const { query, submitQuery } = this.state;
     return (
       <div>
-        <div className="shadow-bottom">
+        <div className="section-white shadow-bottom">
           <Container>
             <div className="search" style={{ padding: "1em 0" }}>
               <header>
