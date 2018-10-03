@@ -64,6 +64,7 @@ class _Categories extends React.Component {
 
 _Categories.defaultProps = {
   themes,
+  isRoot: true,
   title: "Retrouvez nos réponses thématiques"
 };
 
