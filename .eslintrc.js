@@ -29,6 +29,7 @@ module.exports = {
     "react/react-in-jsx-scope": "warn",
     "react/prop-types": "warn",
     "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/anchor-is-valid": "warn", // conflicts with Link/a that sets href at runtime
     "jsx-a11y/no-static-element-interactions": "warn",
     "jsx-a11y/accessible-emoji": "warn",
     "jsx-a11y/href-no-hash": "warn",

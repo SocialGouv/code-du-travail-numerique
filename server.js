@@ -7,25 +7,26 @@ const routes = require("./routes.js");
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
-const handle = routes.getRequestHandler(app);
+const handler = routes.getRequestHandler(app);
 
-app
-  .prepare()
+const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || "development";
+const API_URL = process.env.API_URL || "http://127.0.0.1:1337/api/v1";
 
-  .then(() => {
-    const server = express();
-
-    server.get("*", (req, res) => {
-      return handle(req, res);
-    });
-
-    server.listen(3000, err => {
+app.prepare().then(() => {
+  express()
+    .use(handler)
+    .listen(PORT, err => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
-    });
-  })
+      console.log(`
 
-  .catch(ex => {
-    console.error(ex.stack);
-    process.exit(1);
-  });
+  > Ready on http://localhost:${PORT}
+
+  Environment:
+
+    - process.env.NODE_ENV : ${NODE_ENV}
+    - process.env.API_URL : ${API_URL}
+
+`);
+    });
+});

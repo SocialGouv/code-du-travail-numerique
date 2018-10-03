@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="fr">
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -22,12 +22,19 @@ export default class MyDocument extends Document {
           />
           <title>Code du travail numérique</title>
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          <link rel="stylesheet" href="/static/bundle.css" />
+          {/*<link rel="stylesheet" href="/static/bundle.css" />*/}
+          <link
+            rel="stylesheet"
+            href="//rawgit.com/SocialGouv/code-du-travail-css/master/docs/bundle.css"
+          />
           {this.props.styleTags}
-          <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,es6,Array.prototype.includes" />
+          <script src="//cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
         </Head>
         <body>
-          <noscript>You need to enable JavaScript to run this app.</noscript>
+          <noscript>
+            Vous devez activer le JavaScript pour pouvoir profiter pleinement ce
+            site internet.
+          </noscript>
           <Main />
           <NextScript />
         </body>

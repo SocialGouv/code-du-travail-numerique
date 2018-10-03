@@ -6,7 +6,7 @@ const Header = ({ onClick }) => (
   <header className="section-light">
     <div className="container">
       <div className="main-header">
-        <Link route="/">
+        <Link route="index">
           <a className="main-header__logo">
             <img src={"/static/assets/img/marianne.svg"} alt="" />
             Code du travail numérique

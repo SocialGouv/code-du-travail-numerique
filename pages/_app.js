@@ -20,10 +20,6 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <nav aria-label="page" className="skip-links">
-          <a href="#main">Contenu principal</a>
-          <a href="#footer">Pied de page</a>
-        </nav>
         <GitHubForkRibbon
           href="//github.com/SocialGouv/code-du-travail-explorer"
           target="_blank"

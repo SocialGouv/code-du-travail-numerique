@@ -1,6 +1,7 @@
 import React from "react";
 
-import Alert from "../common/Alert";
+import { Container, Alert } from "@socialgouv/code-du-travail-ui";
+
 import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";
 import { Link } from "../../routes";
@@ -8,7 +9,9 @@ import { Link } from "../../routes";
 const Results = ({ data }) => (
   <div className="search-results">
     <ul className="search-results__list">
-      {data.map(result => <ResultItem key={result["_id"]} {...result} />)}
+      {data.map(result => (
+        <ResultItem key={result["_id"]} {...result} />
+      ))}
     </ul>
   </div>
 );
@@ -39,8 +42,8 @@ const ResultItem = ({ _id, _source, highlight }) => {
     source = "Source : Legifrance";
   }
 
-  let isInternal = ["faq", "code_bfc"].includes(_source.source);
-  let footer = isInternal ? null : (
+  // let isInternal = ["faq", "code_bfc"].includes(_source.source);
+  let footer = (
     <footer>
       <span className="external-link__before">{source}</span>
     </footer>
@@ -59,15 +62,42 @@ const ResultItem = ({ _id, _source, highlight }) => {
     </article>
   );
 
-  if (isInternal) {
+  // if (isInternal) {
+  if (_source.source === "faq") {
     return (
       <li className="search-results__item">
-        <Link route="index" params={{ type: "questions", id: _id }}>
+        <Link route="question" params={{ slug: _source.slug }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
+    );
+  } else if (_source.source === "fiches_service_public") {
+    return (
+      <li className="search-results__item">
+        <Link route="fiche-service-public" params={{ slug: _source.slug }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
+    );
+  } else if (_source.source === "fiches_ministere_travail") {
+    return (
+      <li className="search-results__item">
+        <Link route="fiche-ministere-travail" params={{ slug: _source.slug }}>
+          <a className="search-results-link">{body}</a>
+        </Link>
+      </li>
+    );
+  } else if (_source.source === "code_du_travail") {
+    return (
+      <li className="search-results__item">
+        <Link route="code-du-travail" params={{ slug: _source.slug }}>
           <a className="search-results-link">{body}</a>
         </Link>
       </li>
     );
   }
+
+  //  }
   return (
     <li className="search-results__item">
       <a
@@ -88,7 +118,7 @@ class SearchResults extends React.Component {
     let query = this.props.query;
 
     // No results.
-    if (!data.hits.total) {
+    if (!data || !data.hits || !data.hits.total) {
       return (
         <React.Fragment>
           <div className="section-light">
