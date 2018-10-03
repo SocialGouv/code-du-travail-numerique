@@ -3,7 +3,6 @@ version: '3'
 services:
 
   node:
-    container_name: code-du-travail-api
     env_file:
       - .env
     build:
