@@ -20,7 +20,6 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <title>Code du travail numérique</title>
           <link rel="shortcut icon" href="/static/favicon.ico" />
           {/*<link rel="stylesheet" href="/static/bundle.css" />*/}
           <link
