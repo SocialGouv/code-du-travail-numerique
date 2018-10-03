@@ -1,6 +1,6 @@
-# Code-du-travail Explorer [![CircleCI](https://circleci.com/gh/SocialGouv/code-du-travail-explorer.svg?style=svg)](https://circleci.com/gh/SocialGouv/code-du-travail-explorer)
+# Code-du-travail Frontend [![CircleCI](https://circleci.com/gh/SocialGouv/code-du-travail-explorer.svg?style=svg)](https://circleci.com/gh/SocialGouv/code-du-travail-explorer)
 
-Ce dépôt de code contient le site web du prototype du Code du Travail Numérique.
+Ce dépôt de code contient le frontend du site web du Code du Travail Numérique.
 
 - Prototype dispo sur : https://codedutravail-dev.num.social.gouv.fr
 
@@ -13,6 +13,7 @@ Créez un fichier `.env` :
 ```shell
 NODE_ENV=development
 API_URL=https://127.0.0.1:1337
+PORT=3000
 ```
 
 Puis :
