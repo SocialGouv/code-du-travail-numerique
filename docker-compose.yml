@@ -2,8 +2,7 @@ version: '3'
 
 services:
 
-  node:
-    container_name: code-du-travail-explorer
+  frontend:
     env_file:
       - .env
     build:
