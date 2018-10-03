@@ -9,23 +9,23 @@ import SearchResults from "./SearchResults";
 import { Router, Link } from "../../routes";
 
 const Disclaimer = () => (
-  <div class="wrapper-narrow">
-  <p>
-    Ce service gouvernemental vous permet d’obtenir des réponses détaillées, des
-    fiches explicatives et les articles de loi correspondants -{" "}
-    <Link route="about">
-      <a>En savoir plus</a>
-    </Link>
-    <br />
-    <a
-      target="_blank"
-      className="external-link__after"
-      rel="noopener noreferrer"
-      href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-    >
-      L'ouverture officielle du site est prévue pour 2020.
-    </a>
-  </p>
+  <div className="wrapper-narrow">
+    <p>
+      Ce service gouvernemental vous permet d’obtenir des réponses détaillées,
+      des fiches explicatives et les articles de loi correspondants -{" "}
+      <Link route="about">
+        <a>En savoir plus</a>
+      </Link>
+      <br />
+      <a
+        target="_blank"
+        className="external-link__after"
+        rel="noopener noreferrer"
+        href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+      >
+        L'ouverture officielle du site est prévue pour 2020.
+      </a>
+    </p>
   </div>
 );
 
