@@ -33,7 +33,6 @@ const FormSearchButton = () => (
   </button>
 );
 
-// Memoize fetch calls (fetch returns a promise).
 const fetchResults = (query, endPoint = "search") => {
   const url = `${process.env.API_URL}/${endPoint}?q=${query}`;
   return fetch(url).then(response => {
@@ -44,6 +43,7 @@ const fetchResults = (query, endPoint = "search") => {
   });
 };
 
+// memoize search results
 const fetchResultsSearch = memoizee(
   query => {
     return fetchResults(query, "search");
@@ -51,10 +51,11 @@ const fetchResultsSearch = memoizee(
   { promise: true }
 );
 
+// memoize suggestions results
 const fetchResultsSuggest = memoizee(
-  query => {
-    return fetchResults(query, "suggest");
-  },
+  query =>
+    (query && query.length > 2 && fetchResults(query, "suggest")) ||
+    Promise.resolve(),
   { promise: true }
 );
 
@@ -129,7 +130,7 @@ class Search extends React.Component {
                 <Suggester
                   onChange={this.onChange}
                   query={query}
-                  fetch={() => fetchResultsSuggest(query)}
+                  getResults={() => fetchResultsSuggest(query)}
                 />
                 <FormSearchButton />
               </form>

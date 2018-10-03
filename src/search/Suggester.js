@@ -117,7 +117,7 @@ class Suggester extends React.Component {
   }
 
   render() {
-    const { fetch, query, onChange } = this.props;
+    const { getResults, query, onChange } = this.props;
     const inputProps = {
       placeholder: "Posez votre question",
       "aria-label": "Posez votre question",
@@ -129,7 +129,7 @@ class Suggester extends React.Component {
     };
     return (
       <AsyncFetch
-        fetch={() => fetch(query)}
+        fetch={() => getResults(query)}
         render={({ status, result, fetch, clear }) => (
           <Autosuggest
             theme={suggesterTheme}
@@ -159,13 +159,13 @@ Suggester.propTypes = {
   // on input DOM change
   onChange: PropTypes.func,
   // the fetch call function
-  fetch: PropTypes.func.isRequired,
+  getResults: PropTypes.func.isRequired,
   query: PropTypes.string
 };
 
 Suggester.defaultProps = {
   query: "",
-  fetch: () => {},
+  getResults: () => {},
   onChange: () => {}
 };
 
