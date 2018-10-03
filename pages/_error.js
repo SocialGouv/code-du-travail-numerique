@@ -1,18 +1,46 @@
 import React from "react";
 import Link from "next/link";
 
+let Sentry = require("@sentry/browser");
+
+const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
+
+if (typeof window !== "undefined") {
+  Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
+}
+
+const BrowserException = args => new Error(args);
+
+const notifySentry = err => {
+  if (typeof window === "undefined") {
+    return;
+  }
+  Sentry.configureScope(scope => {
+    scope.setTag(`ssr`, false);
+  });
+
+  Sentry.captureException(err);
+};
+
 export default class Error extends React.Component {
-  static getInitialProps({ res, err }) {
-    const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-    return { statusCode };
+  static async getInitialProps({ req, res, err }) {
+    return { statusCode: res.statusCode };
+  }
+
+  componentDidMount() {
+    let { statusCode } = this.props;
+    if (statusCode && statusCode > 200) {
+      notifySentry(new BrowserException(statusCode));
+    }
   }
 
   render() {
+    const { statusCode } = this.props;
     return (
       <div>
         <p className="center" style={{ padding: "20% 0", fontSize: "2em" }}>
           {this.props.statusCode
-            ? `Une erreur ${this.props.statusCode} est apparue sur le serveur`
+            ? `Une erreur ${statusCode} est apparue sur le serveur`
             : "Une erreur est apparue sur le client"}
           <br />
           <br />

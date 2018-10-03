@@ -12,7 +12,7 @@ import Html from "../src/common/Html";
 import Search from "../src/search/Search";
 
 const BigError = ({ children }) => (
-  <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
+  <Container style={{ fontSize: "1.5em", textAlign: "center", margin: "20%" }}>
     <Alert warning>{children}</Alert>
   </Container>
 );
@@ -58,7 +58,9 @@ class Fiche extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>Fiche ministère du travail : {data._source.title}</title>
+          {data && (
+            <title>Fiche ministère du travail : {data._source.title}</title>
+          )}
         </Head>
         <Search />
         {!data && <BigError>Cette fiche n'a pas été trouvée</BigError>}

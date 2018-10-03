@@ -10,10 +10,12 @@ RUN npm install
 COPY . /app
 
 ARG API_URL
+ARG SENTRY_PUBLIC_DSN
 ARG NODE_ENV
 
 # for javascript browser build
 ENV API_URL=$API_URL
+ENV SENTRY_PUBLIC_DSN=$SENTRY_PUBLIC_DSN
 ENV NODE_ENV=$NODE_ENV
 
 RUN npm run build

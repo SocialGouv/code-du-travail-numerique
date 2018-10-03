@@ -6,6 +6,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@sentry/browser": "^4.0.6",
     "@socialgouv/code-du-travail-ui": "^1.2.3",
     "@zeit/next-css": "^1.0.0",
     "dotenv": "^6.0.0",
