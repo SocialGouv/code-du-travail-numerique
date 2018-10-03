@@ -1,8 +1,11 @@
 import React from "react";
 import Modal from "react-modal";
-import styled from "styled-components";
+import dynamic from "next/dynamic";
 
-import ConventionPicker from "./ConventionPicker";
+// prevent ConventionPicker in initial bundle
+const _ConventionPicker = dynamic(() => import("./ConventionPicker"), {
+  loading: () => <p>Chargement des conventions...</p>
+});
 
 if (typeof document !== "undefined") {
   Modal.setAppElement("body");
@@ -18,15 +21,13 @@ const modalStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    overflow: "auto",
+    overflow: "visible",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     width: "70%",
     maxHeight: "90%"
   }
 };
-
-const Container = styled.div``;
 
 class ConventionModal extends React.Component {
   state = {
@@ -61,12 +62,12 @@ class ConventionModal extends React.Component {
           onRequestClose={this.closeModal}
         >
           <h2>Convention collective</h2>
-          <p>
-            <label>
-              Trouvez votre convention collective :
-              <ConventionPicker />
-            </label>
-          </p>
+          <div>
+            Trouvez votre convention collective :
+            <div style={{ marginTop: 10 }}>
+              <_ConventionPicker />
+            </div>
+          </div>
         </Modal>
       </React.Fragment>
     );

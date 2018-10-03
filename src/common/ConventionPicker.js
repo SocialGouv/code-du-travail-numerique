@@ -10,6 +10,7 @@ import apeByIdcc from "../data/apeByIdcc.json";
 
 const normalizeIdcc = idcc => (("" + idcc).length === 4 ? "0" + idcc : idcc);
 
+// todo: move to ES
 const conventions = []
   // use https://www.legifrance.gouv.fr/rechConvColl.do?reprise=true&page=1
   .concat(
@@ -70,13 +71,11 @@ class ConventionPicker extends React.Component {
     }
     return (
       <div>
-        <Delay wait={50}>
-          <FuseInput
-            data={conventions}
-            onSuggestionSelected={this.onSuggestionSelected}
-            placeholder="Convention collective ou code NAF"
-          />
-        </Delay>
+        <FuseInput
+          data={conventions}
+          onSuggestionSelected={this.onSuggestionSelected}
+          placeholder="Convention collective ou code NAF"
+        />
         {this.state.selected && (
           <ConventionPreview convention={this.state.selected} />
         )}
