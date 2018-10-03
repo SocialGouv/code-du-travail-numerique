@@ -2,6 +2,7 @@ import React from "react";
 import Autosuggest from "react-autosuggest";
 import Fuse from "fuse.js";
 import getSlug from "speakingurl";
+import memoizee from "memoizee";
 
 import "./FuseInput.css";
 
@@ -61,6 +62,18 @@ const FuseHighLighter = ({ suggestion, query }) => {
 
 const getSuggestionValue = suggestion => suggestion.item.label;
 
+const getFuse = memoizee(
+  // init fuse instance with a normalized label
+  data =>
+    new Fuse(
+      data.map(d => ({
+        ...d,
+        labelNormalized: normalize(d.label)
+      })),
+      DEFAULT_FUSE_OPTIONS
+    )
+);
+
 const renderSuggestion = query => suggestion => (
   <FuseHighLighter query={query} suggestion={suggestion} />
 );
@@ -71,11 +84,7 @@ class FuseInput extends React.Component {
     suggestions: []
   };
   componentDidMount() {
-    const data = this.props.data.map(d => ({
-      ...d,
-      labelNormalized: normalize(d.label)
-    }));
-    this.fuse = new Fuse(data, DEFAULT_FUSE_OPTIONS);
+    this.fuse = getFuse(this.props.data);
   }
   onChange = (event, { newValue }) => {
     this.setState({
