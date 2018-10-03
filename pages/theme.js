@@ -9,8 +9,6 @@ import { Link, Router } from "../routes";
 import Search, { SearchQuery } from "../src/search/Search";
 import Categories from "../src/Categories";
 import themes from "../src/data/themes2";
-import SeeAlso from "../src/common/Html";
-import FeedbackForm from "../src/common/FeedbackForm";
 
 const BigError = ({ children }) => (
   <div
