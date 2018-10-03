@@ -12,6 +12,7 @@ const handler = routes.getRequestHandler(app);
 const PORT = process.env.PORT || 3000;
 const NODE_ENV = process.env.NODE_ENV || "development";
 const API_URL = process.env.API_URL || "http://127.0.0.1:1337/api/v1";
+const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
 
 app.prepare().then(() => {
   express()
@@ -26,6 +27,7 @@ app.prepare().then(() => {
 
     - process.env.NODE_ENV : ${NODE_ENV}
     - process.env.API_URL : ${API_URL}
+    - process.env.SENTRY_PUBLIC_DSN : ${SENTRY_PUBLIC_DSN}
 
 `);
     });
