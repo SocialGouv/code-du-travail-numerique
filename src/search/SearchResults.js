@@ -9,16 +9,6 @@ import { Link } from "../../routes";
 
 import { getLabelBySource, getRouteBySource } from "../sources";
 
-const Results = ({ data }) => (
-  <div className="search-results">
-    <ul className="search-results__list">
-      {data.map(result => (
-        <ResultItem key={result["_id"]} {...result} />
-      ))}
-    </ul>
-  </div>
-);
-
 const ContentBody = ({ _source, excerpt, footer = null }) => (
   <article className={_source.source}>
     <header>
@@ -115,7 +105,13 @@ class SearchResults extends React.Component {
       <React.Fragment>
         <div className="section-light">
           <div className="container">
-            <Results data={data.hits.hits} />
+            <div className="search-results">
+              <ul className="search-results__list">
+                {data.hits.hits.map(result => (
+                  <ResultItem key={result["_id"]} {...result} />
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         <SeeAlso />
