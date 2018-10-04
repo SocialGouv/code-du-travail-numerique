@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import { Router } from "../../routes";
+import { getLabelBySource, getRouteBySource } from "../sources";
 
 const getSuggestionValue = suggestion =>
   `${suggestion._source.source} > ${suggestion._source.title}`;
@@ -15,22 +16,6 @@ const ellipsisStyle = {
   width: "90%",
   overflow: "hidden"
 };
-
-const getRouteBySource = source =>
-  ({
-    faq: "question",
-    code_du_travail: "code-du-travail",
-    fiches_ministere_travail: "fiche-ministere-travail",
-    fiches_service_public: "fiche-service-public"
-  }[source]);
-
-const getSourceName = source =>
-  ({
-    faq: "Question",
-    code_du_travail: "Code du travail",
-    fiches_ministere_travail: "Fiche Ministère du travail",
-    fiches_service_public: "Fiche Service public"
-  }[source]);
 
 const cleanHtml = html =>
   html
@@ -49,7 +34,7 @@ const SuggestionContainer = styled.div`
 const renderSuggestion = suggestion => (
   <SuggestionContainer style={ellipsisStyle}>
     <b>
-      {getSourceName(suggestion._source.source)} | {suggestion._source.title}
+      {getLabelBySource(suggestion._source.source)} | {suggestion._source.title}
     </b>
     <br />
     <div
@@ -75,10 +60,12 @@ const renderSuggestionsContainer = ({ containerProps, children, query }) => (
   <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
 );
 
-const onSuggestionSelected = (e, suggestion) => {
+const onSuggestionSelected = (e, suggestion, query) => {
   e.preventDefault();
   Router.pushRoute(getRouteBySource(suggestion.suggestion._source.source), {
-    slug: suggestion.suggestion._source.slug
+    slug: suggestion.suggestion._source.slug,
+    q: query,
+    search: 0
   });
 };
 
@@ -141,7 +128,9 @@ class Suggester extends React.Component {
               []
             }
             alwaysRenderSuggestions={false}
-            onSuggestionSelected={onSuggestionSelected}
+            onSuggestionSelected={(e, suggestion) =>
+              onSuggestionSelected(e, suggestion, query)
+            }
             onSuggestionsFetchRequested={fetch}
             onSuggestionsClearRequested={clear}
             getSuggestionValue={getSuggestionValue}

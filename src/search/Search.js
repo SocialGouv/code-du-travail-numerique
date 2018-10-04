@@ -1,6 +1,7 @@
 import memoizee from "memoizee";
 import React from "react";
 import { Container } from "@socialgouv/code-du-travail-ui";
+import { withRouter } from "next/router";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import Suggester from "./Suggester";
@@ -11,8 +12,8 @@ import { Router, Link } from "../../routes";
 const Disclaimer = () => (
   <div className="wrapper-narrow">
     <p>
-      Ce service gouvernemental vous permet d’obtenir des réponses détaillées,
-      des fiches explicatives et les articles de loi correspondants -{" "}
+      Ce service public vous permet d’obtenir des réponses détaillées, des
+      fiches explicatives et les articles de loi correspondants -{" "}
       <Link route="about">
         <a>En savoir plus</a>
       </Link>
@@ -68,7 +69,7 @@ export const SearchQuery = ({ query }) => (
     render={({ status, result, clear }) => (
       <div>
         <div style={{ textAlign: "center" }}>
-          {status === "loading" ? "..." : ""}
+          {status === "loading" ? "..." : " "}
         </div>
         <div>
           {status === "success" && result && <SearchResults data={result} />}
@@ -78,24 +79,52 @@ export const SearchQuery = ({ query }) => (
   />
 );
 
+// dont set the submitQuery when ?search=0
+const getQueryParam = () =>
+  Router.query.search ? Router.query.search === "0" && "" : Router.query.q;
+
+const getCurrentQueryState = () => ({
+  query: Router.query.q,
+  queryResults: getQueryParam()
+});
+
+// todo: externalize state management
 class Search extends React.Component {
   state = {
+    // query in the input box
     query: "",
-    submitQuery: ""
+    // query to display the search results
+    queryResults: ""
   };
   componentDidMount() {
-    // A query already exists in the URL: route was accessed via direct URL.
-    if (Router.query && Router.query.q) {
+    // when coming on this page with a ?q param
+    if (this.props.router.query.q) {
       this.setState({
-        query: Router.query.q,
-        submitQuery: Router.query.q
+        query: this.props.router.query.q,
+        queryResults: this.props.router.query.search
+          ? this.props.router.query.search === "0" && ""
+          : this.props.router.query.q
       });
     }
+    // listen to route changes
+    Router.events.on("routeChangeComplete", this.handleRouteChange);
   }
-
+  handleRouteChange = url => {
+    // when route change, ensure to update the input box
+    console.log("handleRouteChange", url);
+    this.setState({
+      query: this.props.router.query.q,
+      queryResults: this.props.router.query.search
+        ? this.props.router.query.search === "0" && ""
+        : this.props.router.query.q
+    });
+  };
+  componentWillUnmount() {
+    Router.events.off("routeChangeComplete", this.handleRouteChange);
+  }
   submitQuery = () => {
     if (this.state.query) {
-      this.setState({ submitQuery: this.state.query });
+      this.setState({ queryResults: this.state.query });
       Router.push({
         pathname: "/",
         query: { q: this.state.query }
@@ -116,7 +145,7 @@ class Search extends React.Component {
   };
 
   render() {
-    const { query, submitQuery } = this.state;
+    const { query, queryResults } = this.state;
     return (
       <div>
         <div className="section-white shadow-bottom">
@@ -139,10 +168,12 @@ class Search extends React.Component {
             </div>
           </Container>
         </div>
-        {(submitQuery && <SearchQuery query={submitQuery} />) || null}
+        {(queryResults && <SearchQuery query={queryResults} />) || null}
       </div>
     );
   }
 }
 
-export default Search;
+const _Search = withRouter(Search);
+
+export default _Search;

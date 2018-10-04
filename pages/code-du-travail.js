@@ -1,45 +1,50 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui";
+import { ExternalLink } from "react-feather";
+import { BreadCrumbs } from "@socialgouv/code-du-travail-ui";
+import { format } from "date-fns";
+import frLocale from "date-fns/locale/fr";
 
-import SeeAlso from "../src/common/SeeAlso";
-import FeedbackForm from "../src/common/FeedbackForm";
-import Html from "../src/common/Html";
-import Search from "../src/search/Search";
+import Answer from "../src/search/Answer";
 
-const BigError = ({ children }) => (
-  <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
-    <Alert warning>{children}</Alert>
-  </Container>
-);
+const fetchFiche = ({ slug }) =>
+  fetch(`${process.env.API_URL}/items/code_du_travail/${slug}`).then(r =>
+    r.json()
+  );
 
 const Source = ({ name, url }) => (
-  <div
-    style={{
-      background: "var(--color-light-background)",
-      padding: 10,
-      marginTop: 50
-    }}
-  >
-    Retrouvez la version à jour de cet article sur{" "}
-    <a href="http://legifrance.fr">legifrance.fr</a>
-  </div>
+  <a href={url} target="_blank">
+    Voir le contenu original sur : {name}{" "}
+    <ExternalLink
+      style={{ verticalAlign: "middle", margin: "0 5px" }}
+      size={16}
+    />
+  </a>
 );
 
-class ArticleCode extends React.Component {
+const getFakeBreadCrumb = path =>
+  path
+    .split("/")
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(
+      (part, i, all) =>
+        i === all.length - 1 ? (
+          part
+        ) : (
+          <a key={part} href="#">
+            {part}
+          </a>
+        )
+    );
+
+class Fiche extends React.Component {
   static async getInitialProps({ res, query }) {
-    return await fetch(
-      `${process.env.API_URL}/items/code_du_travail/${query.slug}`
-    )
-      .then(r => r.json())
-      .then(data => {
-        console.log(data);
-        return {
-          data
-        };
-      })
+    return await fetchFiche(query)
+      .then(data => ({
+        data
+      }))
       .catch(e => {
         console.log("e", e);
         res.statusCode = 404;
@@ -49,25 +54,34 @@ class ArticleCode extends React.Component {
 
   render() {
     const { data } = this.props;
-    console.log("data", data);
+
+    const footer = (
+      <Source name="https://www.legifrance.gouv.fr" url={data._source.url} />
+    );
     return (
-      <React.Fragment>
-        <Head>
-          <title>Code du travail : {data._source.title}</title>
-        </Head>
-        <Search />
-        {!data && <BigError>Article introuvable</BigError>}
-        {data && (
-          <Article title={data._source.title} footer="FAQ">
-            <Html>{data._source.html}</Html>
-            <Source />
-          </Article>
-        )}
-        <SeeAlso />
-        <FeedbackForm query="" />
-      </React.Fragment>
+      <Answer
+        title={data._source.title}
+        intro={
+          <React.Fragment>
+            <div
+              style={{ marginTop: -20, marginBottom: 20, fontSize: "0.8em" }}
+            >
+              <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
+            </div>
+            <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
+              Article entré en vigueur le{" "}
+              {format(new Date(data._source.date_debut), "D MMMM YYYY", {
+                locale: frLocale
+              })}
+            </div>
+          </React.Fragment>
+        }
+        emptyMessage="Article introuvable"
+        html={data._source.html}
+        footer={footer}
+      />
     );
   }
 }
 
-export default withRouter(ArticleCode);
+export default withRouter(Fiche);

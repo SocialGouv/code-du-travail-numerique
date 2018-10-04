@@ -63,9 +63,30 @@ class ConventionModal extends React.Component {
         >
           <h2>Convention collective</h2>
           <div>
-            Trouvez votre convention collective :
+            Saisissez l'identifiant de convention collective (IDCC), le nom de
+            la branche, ou le code NAF :
             <div style={{ marginTop: 10 }}>
               <_ConventionPicker />
+            </div>
+            <div>
+              <div style={{ marginTop: 20, fontWeight: "bold" }}>
+                Comment trouver ma convention collective ?
+              </div>
+              <li>
+                Elle doit figurer au <b>bulletin de paie</b>, et sur une notice
+                remise à l’embauche ou <b>sur le contrat de travail</b>
+              </li>
+              <li>
+                Sur l’affichage obligatoire dans l’entreprise (avec les
+                modalités de consultation en entreprise)
+              </li>
+              <div style={{ marginTop: 20, fontWeight: "bold" }}>
+                Quelle est la CCN applicable ?
+              </div>
+              <li>
+                En principe celle relevant de l’activité principale dans
+                l’entreprise pour les cas les plus simples.
+              </li>
             </div>
           </div>
         </Modal>
