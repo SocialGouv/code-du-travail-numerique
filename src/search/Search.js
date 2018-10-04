@@ -92,7 +92,21 @@ class Search extends React.Component {
       });
     }
   }
-
+  componentDidUpdate() {
+    // A query already exists in the URL: route was accessed via direct URL.
+    if (Router.query && Router.query.q && !this.state.submitQuery) {
+      this.setState({
+        query: Router.query.q,
+        submitQuery: Router.query.q
+      });
+    } else if (this.state.submitQuery && Router.query && !Router.query.q) {
+      // empty ?q= reset state
+      this.setState({
+        query: "",
+        submitQuery: ""
+      });
+    }
+  }
   submitQuery = () => {
     if (this.state.query) {
       this.setState({ submitQuery: this.state.query });
