@@ -18,6 +18,7 @@ const BigError = ({ children }) => (
 const Answer = ({
   router,
   title,
+  intro,
   html,
   footer,
   emptyMessage = "Aucun résultat"
@@ -29,19 +30,22 @@ const Answer = ({
     <Search />
     {!html && <BigError>{emptyMessage}</BigError>}
     {html && (
-      <Article title={title}>
+      <React.Fragment>
         <Disclaimer />
-        <Html>{html}</Html>
-        <div
-          style={{
-            background: "var(--color-light-background)",
-            padding: 10,
-            marginTop: 50
-          }}
-        >
-          {footer}
-        </div>
-      </Article>
+        <Article title={title}>
+          {intro}
+          <Html>{html}</Html>
+          <div
+            style={{
+              background: "var(--color-light-background)",
+              padding: 10,
+              marginTop: 50
+            }}
+          >
+            {footer}
+          </div>
+        </Article>
+      </React.Fragment>
     )}
     <SeeAlso />
     <FeedbackForm query={router.query.q} />
