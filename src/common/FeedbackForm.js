@@ -1,7 +1,9 @@
 import React from "react";
 import StarRating from "react-star-rating-component";
 import { UID } from "react-uid";
+import { withRouter } from "next/router";
 
+import { Router } from "../../routes";
 import Alert from "../common/Alert";
 
 class FeedbackForm extends React.Component {
@@ -81,13 +83,15 @@ class FeedbackForm extends React.Component {
   };
 
   render() {
-    const intro = this.props.query ? (
-      <p>
-        Avons-nous répondu à votre question : <b>{this.props.query}</b> ?
-      </p>
-    ) : (
-      <p>Avons-nous répondu à votre question ?</p>
-    );
+    const intro =
+      this.props.router.query && this.props.router.query.q ? (
+        <p>
+          Avons-nous répondu à votre question :{" "}
+          <b>{this.props.router.query.q}</b> ?
+        </p>
+      ) : (
+        <p>Avons-nous répondu à votre question ?</p>
+      );
 
     return (
       <section className="section-light">
@@ -177,4 +181,4 @@ class FeedbackForm extends React.Component {
   }
 }
 
-export default FeedbackForm;
+export default withRouter(FeedbackForm);

@@ -1,10 +1,13 @@
 import React from "react";
+import { withRouter } from "next/router";
 
-import { Container, Alert } from "@socialgouv/code-du-travail-ui";
+import { Alert } from "@socialgouv/code-du-travail-ui";
 
 import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";
 import { Link } from "../../routes";
+
+import { getLabelBySource, getRouteBySource } from "../sources";
 
 const Results = ({ data }) => (
   <div className="search-results">
@@ -16,88 +19,59 @@ const Results = ({ data }) => (
   </div>
 );
 
-const ResultItem = ({ _id, _source, highlight }) => {
-  let excerpt = "";
-  if (highlight) {
+const ContentBody = ({ _source, excerpt, footer = null }) => (
+  <article className={_source.source}>
+    <header>
+      <h3>{_source.title}</h3>
+    </header>
+    <blockquote
+      className="text-quote"
+      dangerouslySetInnerHTML={{ __html: excerpt }}
+    />
+    <footer>
+      <span className="external-link__before">{footer}</span>
+    </footer>
+  </article>
+);
+
+const makeExcerpt = highlight => {
+  if (highlight && Object.keys(highlight).length) {
     let firstHighlightObjectKeyName = Object.keys(highlight)[0];
     // Use the first `n` available highlights as excerpt.
     const numExcerpts = 3;
-    excerpt = highlight[firstHighlightObjectKeyName]
+    return highlight[firstHighlightObjectKeyName]
       .slice(0, numExcerpts)
       .join(" … ");
   }
+  return "";
+};
 
-  let source;
-  if (_source.source === "faq") {
-    source = "Source : FAQ";
-  } else if (_source.source === "code_du_travail") {
-    source = "Source : Legifrance";
-  } else if (_source.source === "fiches_service_public") {
-    source = "Source : Service Public";
-  } else if (_source.source === "fiches_ministere_travail") {
-    source = "Source : Ministère du Travail";
-  } else if (_source.source === "code_bfc") {
-    source = "Source : DIRECCTE Bourgogne-Franche-Comté (Juin 2017)";
-  } else if (_source.source === "conventions_collectives") {
-    source = "Source : Legifrance";
-  }
+const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
+  const excerpt = makeExcerpt(highlight);
 
-  // let isInternal = ["faq", "code_bfc"].includes(_source.source);
-  let footer = (
-    <footer>
-      <span className="external-link__before">{source}</span>
-    </footer>
-  );
+  const route = getRouteBySource(_source.source);
 
-  let body = (
-    <article key={_id} className={_source.source}>
-      <header>
-        <h3>{_source.title}</h3>
-      </header>
-      <blockquote
-        className="text-quote"
-        dangerouslySetInnerHTML={{ __html: excerpt }}
-      />
-      {footer}
-    </article>
-  );
-
-  // if (isInternal) {
-  if (_source.source === "faq") {
+  // internal links
+  if (route) {
     return (
       <li className="search-results__item">
-        <Link route="question" params={{ slug: _source.slug }}>
-          <a className="search-results-link">{body}</a>
-        </Link>
-      </li>
-    );
-  } else if (_source.source === "fiches_service_public") {
-    return (
-      <li className="search-results__item">
-        <Link route="fiche-service-public" params={{ slug: _source.slug }}>
-          <a className="search-results-link">{body}</a>
-        </Link>
-      </li>
-    );
-  } else if (_source.source === "fiches_ministere_travail") {
-    return (
-      <li className="search-results__item">
-        <Link route="fiche-ministere-travail" params={{ slug: _source.slug }}>
-          <a className="search-results-link">{body}</a>
-        </Link>
-      </li>
-    );
-  } else if (_source.source === "code_du_travail") {
-    return (
-      <li className="search-results__item">
-        <Link route="code-du-travail" params={{ slug: _source.slug }}>
-          <a className="search-results-link">{body}</a>
+        <Link
+          route={route}
+          params={{ slug: _source.slug, q: router.query.q, search: 0 }}
+        >
+          <a className="search-results-link">
+            <ContentBody
+              _source={_source}
+              excerpt={excerpt}
+              footer={getLabelBySource(_source.source)}
+            />
+          </a>
         </Link>
       </li>
     );
   }
 
-  //  }
+  // external urls
   return (
     <li className="search-results__item">
       <a
@@ -106,11 +80,15 @@ const ResultItem = ({ _id, _source, highlight }) => {
         rel="noopener noreferrer"
         className="search-results-link"
       >
-        {body}
+        <ContentBody
+          _source={_source}
+          excerpt={excerpt}
+          footer={getLabelBySource(_source.source)}
+        />
       </a>
     </li>
   );
-};
+});
 
 class SearchResults extends React.Component {
   render() {
