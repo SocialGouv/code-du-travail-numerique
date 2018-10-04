@@ -12,8 +12,8 @@ import { Router, Link } from "../../routes";
 const Disclaimer = () => (
   <div className="wrapper-narrow">
     <p>
-      Ce service gouvernemental vous permet d’obtenir des réponses détaillées,
-      des fiches explicatives et les articles de loi correspondants -{" "}
+      Ce service public vous permet d’obtenir des réponses détaillées, des
+      fiches explicatives et les articles de loi correspondants -{" "}
       <Link route="about">
         <a>En savoir plus</a>
       </Link>
