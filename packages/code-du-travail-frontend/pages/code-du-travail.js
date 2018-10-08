@@ -8,10 +8,19 @@ import frLocale from "date-fns/locale/fr";
 
 import Answer from "../src/search/Answer";
 
+// Article du code du travail
+
 const fetchFiche = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/code_du_travail/${slug}`).then(r =>
-    r.json()
-  );
+  fetch(`${process.env.API_URL}/items/code_du_travail/${slug}`)
+    .then(r => r.json())
+    .then(data => ({
+      data
+    }))
+    .catch(e => {
+      console.log("e", e);
+      res.statusCode = 404;
+      throw e;
+    });
 
 const Source = ({ name, url }) => (
   <a href={url} target="_blank">
@@ -41,15 +50,7 @@ const getFakeBreadCrumb = path =>
 
 class Fiche extends React.Component {
   static async getInitialProps({ res, query }) {
-    return await fetchFiche(query)
-      .then(data => ({
-        data
-      }))
-      .catch(e => {
-        console.log("e", e);
-        res.statusCode = 404;
-        throw e;
-      });
+    return await fetchFiche(query);
   }
 
   render() {

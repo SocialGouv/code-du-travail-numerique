@@ -6,9 +6,15 @@ import { ExternalLink } from "react-feather";
 import Answer from "../src/search/Answer";
 
 const fetchFiche = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/fiches_ministere_travail/${slug}`).then(
-    r => r.json()
-  );
+  fetch(`${process.env.API_URL}/items/fiches_ministere_travail/${slug}`)
+    .then(r => r.json())
+    .then(data => ({
+      data
+    }))
+    .catch(e => {
+      console.log("e", e);
+      throw e;
+    });
 
 const Source = ({ name, url }) => (
   <a href={url} target="_blank">
@@ -22,15 +28,7 @@ const Source = ({ name, url }) => (
 
 class Fiche extends React.Component {
   static async getInitialProps({ res, query }) {
-    return await fetchFiche(query)
-      .then(data => ({
-        data
-      }))
-      .catch(e => {
-        console.log("e", e);
-        res.statusCode = 404;
-        throw e;
-      });
+    return await fetchFiche(query);
   }
 
   render() {

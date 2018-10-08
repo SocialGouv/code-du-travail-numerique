@@ -5,10 +5,12 @@ import { BreadCrumbs, Container, Alert } from "@socialgouv/code-du-travail-ui";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
 
-import { Link, Router } from "../routes";
+import { Link } from "../routes";
 import Search, { SearchQuery } from "../src/search/Search";
 import Categories from "../src/Categories";
 import themes from "../src/data/themes2";
+
+// a Theme page
 
 const BigError = ({ children }) => (
   <div
