@@ -7,6 +7,7 @@ import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";
 import DecisionTree from "../lib/decision/DecisionTree";
 import { getLabelBySource, getRouteBySource } from "../sources";
+import ContentComponents from "../content";
 
 const ContentTags = ({ tags }) => {
   return (
@@ -63,19 +64,19 @@ const makeExcerpt = highlight => {
   return "";
 };
 
-const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
+const ResultItem = ({ _id, _source, highlight, query, router }) => {
   const excerpt = makeExcerpt(highlight);
 
-  const route = getRouteBySource(_source.source);
   const anchor = _source.anchor ? _source.anchor.slice(1) : "";
 
+  const sourceRoute = getRouteBySource(_source.source);
   // internal links
-  if (route) {
+  if (sourceRoute) {
     return (
       <li className="search-results__item">
         <Link
           href={{
-            pathname: `${route}/${_source.slug}`,
+            pathname: `/contenu/${sourceRoute}/${_source.slug}`,
             hash: anchor,
             query: { q: router.query.q, search: 0 }
           }}
@@ -109,22 +110,26 @@ const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
       </a>
     </li>
   );
-});
+};
 
-const Results = ({ results }) => (
+const Results = withRouter(({ results, router }) => (
   <div className="search-results">
     <ul className="search-results__list">
       {results.map(result => (
-        <ResultItem key={result._source.slug} {...result} />
+        <ResultItem
+          key={result._source.slug}
+          query={router.query.q}
+          router={router}
+          {...result}
+        />
       ))}
     </ul>
   </div>
-);
+));
 
 class SearchResults extends React.Component {
   render() {
-    let data = this.props.data;
-    let query = this.props.query;
+    const { data, query, filters, router } = this.props;
     // No results.
     if (!data || !data.hits || !data.hits.total) {
       return (
@@ -145,11 +150,17 @@ class SearchResults extends React.Component {
     );
 
     if (filterableResults.length > 1) {
+      // show decision tree and results
       return (
         <DecisionTree
           data={filterableResults}
-          filters={{}}
-          render={({ results }) => {
+          filters={filters}
+          render={({ filters, results }) => {
+            if (results.length === 1) {
+              const data = results[0];
+              const { View } = ContentComponents[data.source];
+              return <View {...data} />;
+            }
             return (
               <Section light>
                 <Results results={results.map(r => ({ _source: r }))} />
@@ -172,4 +183,4 @@ class SearchResults extends React.Component {
   }
 }
 
-export default SearchResults;
+export default withRouter(SearchResults);
