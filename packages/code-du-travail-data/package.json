@@ -1,0 +1,16 @@
+{
+  "name": "code-du-travail-data",
+  "version": "0.0.0",
+  "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SocialGouv/code-du-travail-data.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SocialGouv/code-du-travail-data/issues"
+  },
+  "homepage": "https://github.com/SocialGouv/code-du-travail-data#readme"
+}
