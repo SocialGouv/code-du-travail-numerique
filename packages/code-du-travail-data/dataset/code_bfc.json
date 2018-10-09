@@ -1,0 +1,782 @@
+[
+  {
+    "question": "Le contrat de travail : Qu'est-ce que le contrat de travail ?",
+    "reponse": "<p>Le contrat de travail existe dès l'instant où une personne (le salarié) s'engage à travailler, moyennant rémunération, pour le compte et sous la direction d'une autre personne (l'employeur). Le plus souvent, le contrat de travail doit être écrit. Son exécution entraîne un certain nombre d'obligations, tant pour le salarié que pour l'employeur.</p><p>Le contrat de travail : Le contrat de travail peut-il être non écrit ?</p><p>En l'absence de contrat de travail, l'existence du contrat à durée indéterminée à temps complet est présumée, les bulletins de paie peuvent tendent en effet à prouver l'existence d'une relation de travail.</p>"
+  },
+  {
+    "question": "Le contrat de travail : quelles sont les parties au contrat de travail ?",
+    "reponse": "<p>Le contrat de travail engage l'employeur et le salarié et permet de mettre au point, le plus souvent par écrit, les modalités de la relation de travail. Le salarié doit avoir au moins 16 ans (ou 15 ans dans le cas des contrats d'apprentissage). La seule dérogation possible à cette règle concerne le travail des jeunes de 14 à 16 ans pendant les vacances scolaires, rendue possible sur autorisation de l'Inspecteur du travail.</p>"
+  },
+  {
+    "question": "Le contrat de travail : quels sont les éléments constitutifs du contrat de travail ?",
+    "reponse": "<p>Il y a contrat de travail quand plusieurs éléments constitutifs sont réunis, à savoir :</p><p>• l'autorité du chef d'entreprise : l'exercice du pouvoir de direction de l'employeur ;</p><p>• un travail : l'employeur a une obligation de fournir du travail à son salarié ;</p><p>• une rémunération : la contrepartie du travail réalisé ne doit pas être inférieure au SMIC ou aux minimums légaux. (Code BFC 06/2017)</p>"
+  },
+  {
+    "question": "Le contrat de travail : quels sont les différents types de contrats de travail ?",
+    "reponse": "<p>Un contrat peut être établi sous plusieurs formes :</p><p>• contrat à durée indéterminée à temps complet ;</p><p>• contrat à durée indéterminée à temps partiel ;</p><p>• le contrat à durée déterminée ;</p><p>• le contrat de travail à temps partiel ;</p><p>• le contrat de travail intermittent ;</p><p>• le contrat de travail temporaire ;</p><p>• le contrat de professionnalisation ;</p><p>• le contrat d'apprentissage ;</p><p>• les contrats spécifiques prévus pour les personnes en difficulté, notamment le contrat unique d'insertion, dans sa forme contrat d'accompagnement dans l'emploi ou contrat initiative-emploi ;</p><p>• les contrats conclus avec les groupements d'employeurs ;</p><p>• le « contrat de travail en portage salarial » à durée déterminée, ou à durée indéterminée.</p>"
+  },
+  {
+    "question": "Le contrat de travail : quelle est la forme du contrat de travail ?",
+    "reponse": "<p>Seul le contrat à durée indéterminée (CDI) à temps complet peut être non-écrit. Il est alors qualifié d'oral, de verbal ou de tacite. Toutefois, si le contrat reste verbal, l'employeur a l'obligation de remettre au salarié un document écrit reprenant les informations contenues dans la déclaration préalable à l'embauche (DPAE) adressée à l'URSSAF (ou à la Mutualité sociale agricole - MSA).</p><p>Dès lors, afin d'éviter toute ambiguïté lors de la visites d'organismes de contrôle, et afin d'éviter toute suspicion de travail dissimulé, il est conseillé de formaliser la relation de travail par un contrat de travail écrit. Lorsqu'il est conclu en France, le contrat de travail écrit doit être rédigé en français. Toutefois, lorsque le salarié est étranger et le contrat constaté par écrit, une traduction du contrat est rédigée, à la demande du salarié, dans la langue de ce dernier. L'employeur doit connaître la nationalité du travailleur étranger qu'il souhaite intégrer :</p><ul><li>S'il est ressortissant de la Communauté Economique Européenne: le travailleur est libre de circuler sous réserve de pouvoir prouver qu'il est européen.</li><li>S'il n'est pas ressortissant de la Communauté Economique Européenne: le travailleur doit détenir une autorisation de travail en cours de validité pour travailler en France :</li><li>Une carte de résident : elle est valable 10 ans et renouvelable de plein droit, elle permet de travailler en France métropolitaine sans limitation professionnelle ;</li><li>Une carte ou un visa de séjour temporaire autorisant l'exercice d'une activité professionnelle : sa durée de validité dépend s'il s'agit d'un salarié, d'un travailleur temporaire, d'un travailleur saisonnier ou d'un salarié en mission. Il est à noter que l'autorisation de travail est accordée de droit si l'étranger a été admis à séjourner en France pour conclure un contrat d'apprentissage ou de professionnalisation à durée déterminée.</li></ul>"
+  },
+  {
+    "question": "Le contrat de travail : quel est le contenu du contrat de travail ?",
+    "reponse": "<p>L'employeur et le salarié sont libres de négocier le contenu du contrat de travail, deux règles doivent néanmoins être respectées :</p><ul><li>s'agissant d'un contrat dont la rédaction est imposée (contrat à durée déterminée, contrat de formation en alternance…), il contient obligatoirement les mentions prévues par le Code du travail ;</li><li>toute autre clause peut être insérée (clause de mobilité…) à condition de ne pas être contraire à l'ordre public.</li></ul>"
+  },
+  {
+    "question": "Le contrat de travail : quelles sont les principales clauses possibles du contrat de travail ?",
+    "reponse": "<p>Certaines situations particulières, pour s'imposer à la relation de travail, nécessitent d'être stipulées au contrat de travail. Certaines clauses, telle la clause de célibat sont illégales.</p><ol><li>Clause de dédit formation</li></ol><p>Si l'employeur investit financièrement dans la formation de son salarié, au-delà de ses obligations légales, cette clause lui permet de ne pas voir partir de l'entreprise le nouveau formé. Les modalités de cette clause ne doivent pas être abusives, tel serait le cas si le délai l'exige à rester dans l'entreprise trop longtemps. Cette clause peut s'appliquer même pendant la période d'essai. Elle ne doit pas empêcher le salarié concerné de rompre son contrat de travail.</p><ol><li>Clause de mobilité</li></ol><p>Cette clause permet à l'employeur de changer le lieu de travail de son salarié sans lui demander son accord. Tout nouveau lieu de travail dans un même secteur géographique n'est alors qu'un simple changement des conditions de travail qui ne nécessite pas l'accord expresse du salarié, dès lors qu'il est précisément défini dans cette clause. Cette clause ne doit pas être abusive et elle doit respecter un délai de prévenance, dont la durée peut varier. La jurisprudence n'a jamais défini un délai précis mais vise la « précipitation » de la mise en œuvre de la clause.</p><ol><li>Clause d'exclusivité</li></ol><p>Cette clause permet à l'employeur d'interdire à son salarié, pendant la durée de son contrat de travail, d'exercer une autre activité professionnelle. Pour être valable, cette clause est encadrée : elle doit être justifiée et proportionnée. Elle ne doit dès lors pas porter atteinte à la liberté du travail. Exemple : insérer une telle clause pour un contrat en temps partiel.</p><ol><li>Clause de non-concurrence</li></ol><p>Le but de cette clause est de protéger vos intérêts en étant certain, par cette clause, qu'après le départ de votre salarié, il ne puisse porter atteinte à vos activités. Elle doit être: limitée dans le temps et dans l'espace, et soumise à une contrepartie financière, le but étant de protéger les intérêts légitimes de l'entreprise.</p>"
+  },
+  {
+    "question": "Le contrat de travail : qu'est-ce qu'une Clause de dédit formation ?",
+    "reponse": "<p>Si l'employeur investit financièrement dans la formation de son salarié, au-delà de ses obligations légales, cette clause lui permet de ne pas voir partir de l'entreprise le nouveau formé. Les modalités de cette clause ne doivent pas être abusives, tel serait le cas si le délai l'exige à rester dans l'entreprise trop longtemps. Cette clause peut s'appliquer même pendant la période d'essai. Elle ne doit pas empêcher le salarié concerné de rompre son contrat de travail.</p>"
+  },
+  {
+    "question": "Le contrat de travail : Qu'est-ce qu'une Clause de mobilité ?",
+    "reponse": "<p>Cette clause permet à l'employeur de changer le lieu de travail de son salarié sans lui demander son accord. Tout nouveau lieu de travail dans un même secteur géographique n'est alors qu'un simple changement des conditions de travail qui ne nécessite pas l'accord expresse du salarié, dès lors qu'il est précisément défini dans cette clause. Cette clause ne doit pas être abusive et elle doit respecter un délai de prévenance, dont la durée peut varier. La jurisprudence n'a jamais défini un délai précis mais vise la « précipitation » de la mise en œuvre de la clause.</p>"
+  },
+  {
+    "question": "Le contrat de travail : Qu'est-ce qu'une Clause d'exclusivité ?",
+    "reponse": "<p>Cette clause permet à l'employeur d'interdire à son salarié, pendant la durée de son contrat de travail, d'exercer une autre activité professionnelle. Pour être valable, cette clause est encadrée : elle doit être justifiée et proportionnée. Elle ne doit dès lors pas porter atteinte à la liberté du travail. Exemple : insérer une telle clause pour un contrat en temps partiel.</p>"
+  },
+  {
+    "question": "Le contrat de travail : Qu'est-ce qu'une clause de non-concurrence ?",
+    "reponse": "<p>Le but de cette clause est de protéger vos intérêts en étant certain, par cette clause, qu'après le départ de votre salarié, il ne puisse porter atteinte à vos activités. Elle doit être: limitée dans le temps et dans l'espace, et soumise à une contrepartie financière, le but étant de protéger les intérêts légitimes de l'entreprise.</p>"
+  },
+  {
+    "question": "Le contrat de travail : quelles sont les principales obligations qui découlent du contrat de travail ?",
+    "reponse": "<p>Pour l'employeur</p><ol><li>Déclarer le salarié pour éviter toute suspicion de travail dissimulé :</li></ol><p>Avant l'embauche, l'employeur doit obligatoirement déclarer son salarié par le biais de la déclaration préalable à l'embauche (DPAE) sauf pour les intérimaires, cette obligation revenant aux entreprises de travail temporaire.</p><p>Elle peut se faire par écrit ou directement par internet sur le site de l'URSSAF.</p><p>Sauf en cas de contrats successifs effectués sans interruption, toute nouvelle embauche d'un même salarié doit faire l'objet de cette déclaration.</p><p>Le fait de ne pas procéder à cette déclaration entraîne une pénalité financière dont le montant est égal à 300 fois le SMIC horaire.</p><p>Le fait de ne pas procéder à cette déclaration entraîne une pénalité financière dont le montant est égal à 300 fois le SMIC horaire.</p><ol><li>Rémunérer le salarié : le salarié doit percevoir une contrepartie au travail effectué pour son employeur, telle que prévu au contrat ;</li><li>Fournir du travail au salarié : l'employeur doit fournir du travail à son salarié ;</li><li>Respecter les règles énoncées par le Code du travail.</li></ol><p>Pour le salarié :</p><ol><li>Exécuter le travail demandé : le salarié doit effectuer le travail demandé par son employeur sous condition qu'il ait la compétence et les moyens pour le réaliser ;</li><li>Être loyal : le salarié doit être loyal pendant l'exécution de son contrat de travail même pendant la suspension de son contrat (maladie, congés…)</li><li>Respecter les consignes et les directives données par l'employeur.</li></ol>"
+  },
+  {
+    "question": "Le contrat de travail : quelles sont les principales obligations de l'employeur qui découlent du contrat de travail ?",
+    "reponse": "<ol><li>Déclarer le salarié pour éviter toute suspicion de travail dissimulé :</li></ol><p>Avant l'embauche, l'employeur doit obligatoirement déclarer son salarié par le biais de la déclaration préalable à l'embauche (DPAE) sauf pour les intérimaires, cette obligation revenant aux entreprises de travail temporaire.</p><p>Elle peut se faire par écrit ou directement par internet sur le site de l'URSSAF.</p><p>Sauf en cas de contrats successifs effectués sans interruption, toute nouvelle embauche d'un même salarié doit faire l'objet de cette déclaration.</p><p>Le fait de ne pas procéder à cette déclaration entraîne une pénalité financière dont le montant est égal à 300 fois le SMIC horaire.</p><ol><li>Rémunérer le salarié : le salarié doit percevoir une contrepartie au travail effectué pour son employeur, telle que prévu au contrat ;</li><li>Fournir du travail au salarié : l'employeur doit fournir du travail à son salarié ;</li><li>Respecter les règles énoncées par le Code du travail.</li></ol>"
+  },
+  {
+    "question": "Le contrat de travail : quelles sont les principales obligations du salarie qui découlent du contrat de travail ?",
+    "reponse": "<ol><li>Exécuter le travail demandé : le salarié doit effectuer le travail demandé par son employeur sous condition qu'il ait la compétence et les moyens pour le réaliser ;</li><li>Être loyal : le salarié doit être loyal pendant l'exécution de son contrat de travail même pendant la suspension de son contrat (maladie, congés…)</li><li>Respecter les consignes et les directives données par l'employeur.</li></ol>"
+  },
+  {
+    "question": "Le contrat de travail : comment modifier le contrat de travail ?",
+    "reponse": "<p>La modification du contrat de travail est possible par avenant.</p><p>En l'absence de clause contractuelle sur les heures supplémentaires, le salarié ne peut invoquer une modification de son contrat de travail si l'employeur lui demande de réaliser des heures supplémentaires (excepté abus de droit de ce dernier).</p><p>Le salarié ne peut donc refuser d'effectuer les heures supplémentaires demandées par l'employeur, sauf dans des cas limités.</p><p>Le refus de les effectuer peut, selon les circonstances, constituer une faute.</p><p>De la même façon, même justifié par des impératifs sérieux de fonctionnement de l'activité, le salarié peut refuser la nouvelle répartition des horaires de travail s'il se trouve privé de son repos dominical.</p><p>L'employeur ne pourra en outre <strong>modifier le contrat de travail</strong> sans l'accord de son salarié pour ce qui concerne les <strong>éléments essentiels du contrat de travail</strong>:</p><ol><li>La rémunération et ses modalités de rémunération : (la rémunération ne peut être inférieure au SMIC ou aux minimums légaux);</li><li>Le lieu de travail : secteur géographique différent</li><li>La durée du travail : Elle est à distinguer des horaires. Toutefois, l'accord reste nécessaire si le changement d'horaires bouleverse la vie du salarié comme le passage en heures de nuit. L'accord du salarié n'est pas nécessaire si le contrat contient une clause de mobilité (et que le nouveau lieu est prévu dans cette clause) ou si le nouveau lieu de travail reste dans le secteur géographique.</li><li>Les tâches : elles peuvent être modifiées en cas de changement de fonction du salarié, modifications qui entraînent sa qualification.</li></ol><p>Il ne faut donc pas confondre modification du contrat de travail et de simples changements des conditions de travail où l'accord du salarié n'est pas nécessaire.</p>"
+  },
+  {
+    "question": "Le contrat de travail : Faut-il l'accord du salarié pour changer de lieu de travailler, en cas de clause de mobilité ?",
+    "reponse": "<p>L'accord du salarié n'est pas nécessaire si le contrat contient une clause de mobilité (et que le nouveau lieu est prévu dans cette clause) ou si le nouveau lieu de travail reste dans le secteur géographique</p>"
+  },
+  {
+    "question": "Le contrat de travail : Modification du contrat et des conditions de travail, quelle différence ?",
+    "reponse": "<p>Contrairement à la modification du contrat de travail, le changement des conditions de travail relève du pouvoir de direction de l'employeur. En cas de refus du salarié, le pouvoir disciplinaire est alors applicable.</p>"
+  },
+  {
+    "question": "Le contrat de travail : qu'est-ce qu'un usage ?",
+    "reponse": "<p>Un usage est une pratique générale, fixe et constante qui procure un avantage aux salariés et s'impose à l'employeur.</p><p>Toutefois ce dernier peut revenir sur sa décision et vouloir le supprimer.</p><p>Exemple d'usage : une prime pour les fêtes de fin d'années.</p><p>Attention ! Pour supprimer un usage, aucun motif n'est à apporter.</p>"
+  },
+  {
+    "question": "Le contrat de travail : comment supprimer un usage ?",
+    "reponse": "<p>Pour dénoncer un usage, un délai de prévenance suffisant est à respecter. Il faut en informer préalablement les institutions représentatives du personnel et chaque salarié individuellement par lettre spécifique remise en mains propres contre décharge ou en lettre recommandée avec avis de réception.</p>"
+  },
+  {
+    "question": "Le contrat de travail : qu'est-ce qu'un engagement unilatéral ?",
+    "reponse": "<p>Un engagement unilatéral est une décision prise par l'employeur qui l'engage vis-à-vis de ses salariés.</p><p>De la même façon que l'usage, il peut être supprimé.</p><p>Exemple d'engagements unilatéraux : accorder un jour de congé supplémentaire en plus de ceux prévus légalement lors d'un événement dans la vie du salarié (mariage, décès, …).</p>"
+  },
+  {
+    "question": "Le contrat à durée déterminée (CDD) : quels sont les principaux cas de recours au CDD ?",
+    "reponse": "<p>Les cas de recours au CDD sont encadrés et prévus par le Code du travail. Il s'agit de :</p><ul><li>Remplacement de salariés</li><li>Accroissement de l'activité de l'entreprise</li><li>Emploi à caractère saisonnier</li><li>Remplacement du chef d'entreprise ou d'une exploitation agricole. . Ceux-ci doivent expressément être mentionnés dans le contrat de travail.</li></ul><p><em>Le CDD ne peut avoir pour objet ou pour effet d'occuper durablement un emploi lié à l'activité normale et permanente de l'entreprise sinon il peut être requalifié en CDI par le Conseil des Prud'hommes en plus d'une sanction financière pour l'employeur.</em></p><p><em>Dans certains cas comme la nouvelle absence du salarié remplacé ou les emplois saisonniers, le délai de carence ne s'applique pas</em>.</p>"
+  },
+  {
+    "question": "Le contrat à durée déterminée (CDD) : comment fixer la durée d'un cdd ?",
+    "reponse": "<p>Le CDD peut être à terme précis, c'est-à-dire avec une date de fin, ou à terme imprécis lorsque la fin prendra avec le retour du salarié absent, la fin de la saison, ou lorsque l'objet pour lequel il a été conclu a été réalisé.</p><p>Sa durée maximale est réglementée, celle-ci est de 18 mois.</p><p><em>Des cas spécifiques peuvent la voir restreinte à 9 mois ou la faire évoluer à 24 mois.</em></p>"
+  },
+  {
+    "question": "Le contrat à durée déterminée (CDD) : combien de fois le CDD peut-il en principe être renouvelé ?",
+    "reponse": "<p>Le CDD peut être renouvelé 2 fois.</p><p>En cas de contrats successifs sur le même poste de travail, un délai carence est à respecter entre deux CDD.</p><ol><li>Quand le 1er CDD est d'au moins 14 jours : le délai de carence est égal au tiers de la durée totale du 1er CDD.</li></ol><p>Exemple : CDD de 3 semaines : respect d'une semaine de carence avant de conclure le second CDD.</p><ol><li>Quand le 1er CDD est inférieur à 14 jours : ce délai est de la moitié de la durée totale du 1er CDD.</li></ol><p>Exemple : CDD de 8 jours : respect de 4 jours de carence avant de conclure le second CDD.</p><p>A noter : le délai de carence se calcule en jours d'ouverture de l'entreprise.</p>"
+  },
+  {
+    "question": "Le contrat à durée déterminée (CDD) : dans quels cas peut-on rompre le CDD avant terme?",
+    "reponse": "<p>Le CDD peut être rompu avant l'échéance prévue au contrat par les deux parties lorsque :</p><ul><li>Le salarié justifie d'une embauche en CDI ;</li><li>Il y a un accord écrit entre le salarié et l'employeur ;</li><li>Une inaptitude est constatée par le médecin du travail ;</li><li>En cas de force majeure : c'est-à-dire un événement exceptionnel, imprévisible et insurmontable qui rend impossible l'exécution du contrat de travail ;</li><li>Il y a faute grave d'une des parties (exemple : non-paiement des salaires pour l'employeur ou abandon de poste pour le salarié). En dehors de ces cas, le salarié ou l'employeur devra, en cas de rupture du CDD, verser des dommages et intérêts.</li><li>Pour le salarié : le montant est fixé selon le préjudice réellement subit par l'entreprise.</li><li>Pour l'employeur : le montant est égal à ce que le salarié aurait perçu jusqu'à la fin du CDD.</li></ul><p>Lorsque le CDD arrive à son terme et que par conséquent le contrat se termine, le salarié bénéficie d'une indemnité de précarité d'un montant de 10% de la rémunération totale brute.</p><p>Cette indemnité n'est pas due en fin de contrat </p><ul><li>Pour les CDD d'usage,</li><li>Les emplois saisonniers,</li><li>Les travaux de vendanges,</li><li>S'il concerne le contrat de travail d'un jeune durant une période de vacances scolaires ou universitaires,</li><li>Si le salarié refuse une proposition de poursuite du contrat en CDI</li><li>En cas de rupture anticipée à l'initiative du salarié.</li></ul>"
+  },
+  {
+    "question": "Le contrat à durée déterminée (CDD) : ingénieur et cadre, une modalité spécifique de rupture du CDD ?",
+    "reponse": "<p>Dans le cas d'un recrutement d'ingénieurs et de cadres en vue de la réalisation d'un objet défini lorsqu'un accord de branche étendu ou, à défaut, un accord d'entreprise le prévoit, le CDD peut être rompu par l'une ou l'autre partie, pour un motif réel et sérieux, ce 18 mois après sa conclusion puis à la date anniversaire de sa conclusion.</p>"
+  },
+  {
+    "question": "Le contrat à durée déterminée (CDD) : L'indemnité de fin de contrat peut-elle être limitée?",
+    "reponse": "<p>En vue d'améliorer la formation professionnelle des salariés titulaires de contrat de travail à durée déterminée, une convention ou un accord collectif de branche étendu ou une convention ou un accord d'entreprise ou d'établissement peut également prévoir de limiter le montant de l'indemnité de fin de contrat à hauteur de 6 %, dès lors que des contreparties sont offertes à ces salariés.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : Qui peut être apprenti ?",
+    "reponse": "<p>Le futur apprenti doit avoir entre 16 et 25 ans.</p><p>Il peut être âgé de 15 ans s'il a fini la scolarité du premier cycle de l'enseignement secondaire.</p><p>Le jeune qui atteint l'âge de quinze ans avant le terme de l'année civile peut également être inscrit</p><p>S'il a plus de 25 ans, le jeune peut encore devenir apprenti dans les cas suivants :</p><ol><li>Lorsqu'il se présente comme un second contrat d'apprentissage conduisant à un niveau de diplôme supérieur à celui précédemment obtenu ;</li><li>Lorsqu'il y a eu une rupture d'un précédent contrat d'apprentissage pour des raisons indépendantes de la volonté de l'apprenti ;</li><li>Lorsque le travailleur est reconnu comme handicapé ;</li><li>Lorsque la personne est porteuse d'un projet de création ou de reprise d'entreprise où la formation dispensée en apprentissage est obligatoire ;</li><li>Lorsque le contrat d'apprentissage est souscrit par une personne inscrite en tant que sportif de haut niveau.</li><li>L'âge maximum peut être repoussé à 30 ans notamment dans le cadre d'une expérimentation </li></ol><p><strong>Il n'y a pas de limite d'âge</strong> si l'apprenti est reconnu <a href=\"https://www.service-public.fr/particuliers/vosdroits/F219\">travailleur handicapé</a> ou s'il envisage de créer ou reprendre une entreprise supposant l'obtention d'un diplôme.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : Qui peut être Maitre d'apprentissage ?",
+    "reponse": "<p>Pour être maître d'apprentissage, il faut avoir un diplôme et/ou de l'expérience professionnelle.</p><p>Un maître d'apprentissage ne peut pas accompagner seul plus de deux apprentis en même temps.</p><p>L'employeur permet au maître d'apprentissage de dégager sur son temps de travail les disponibilités nécessaires à l'accompagnement de l'apprenti et aux relations avec le CFA.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : qu'est-ce qu'un maitre d'apprentissage ?",
+    "reponse": "<p>Un maître d'apprentissage est obligatoire.</p><p>Il a pour fonction d'encadrer et de former l'apprenti en lui transmettant son savoir-faire.</p><p>Le maître d'apprentissage est choisi selon sa formation, et son expérience. Il doit justifier :</p><ol><li>D'un diplôme ou d'un titre relevant du domaine professionnel correspondant à la finalité du diplôme ou du titre préparé par l'apprenti et d'un niveau au moins équivalent, justifiant de deux années d'exercice d'une activité professionnelle en relation avec la qualification visée par le diplôme ou le titre préparé ;</li><li>De trois années d'exercice d'une activité professionnelle en relation avec la qualification visée par le diplôme ou le titre préparé et d'un niveau minimal de qualification déterminé par la commission départementale de l'emploi et de l'insertion ;</li><li>D'une expérience professionnelle de trois ans en rapport avec le diplôme ou le titre préparé par l'apprenti après avis du recteur, du directeur régional de l'alimentation, de l'agriculture et de la forêt ou du directeur régional de la jeunesse, des sports et de la cohésion sociale.</li></ol><p>L'absence de réponse dans un délai d'un mois à compter de la saisine de l'autorité compétente vaut avis favorable.</p><p>Il peut encadrer en même temps 2 apprentis.</p><p>Un accord collectif d'entreprise ou de branche peut définir les modalités de mise en œuvre et de prise en charge de ces formations.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : Le maître d'apprentissage doit-il être formé ?",
+    "reponse": "<p>L'employeur doit veiller à ce que le maître d'apprentissage bénéficie de formations lui permettant d'exercer correctement sa mission et de suivre l'évolution du contenu des formations dispensées à l'apprenti et des diplômes qui les valident.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : comment conclure un contrat d'apprentissage ?",
+    "reponse": "<p>Toute entreprise peut engager un apprenti si l'employeur déclare à l'autorité administrative prendre les mesures nécessaires à l'organisation de l'apprentissage et s'il garantit que l'équipement de l'entreprise, les techniques utilisées, les conditions de travail, de santé et de sécurité, les compétences professionnelles et pédagogiques ainsi que la moralité des personnes qui sont responsables de la formation sont de nature à permettre une formation satisfaisante.</p><p>Cette déclaration devient caduque si l'entreprise n'a pas conclu de contrat d'apprentissage dans la période de cinq ans écoulée à compter de sa notification.</p><p>Le contrat d'apprentissage est un contrat écrit spécifique. Il est signé par le représentant légal si l'apprenti est mineur.</p><p>L'employeur doit transmettre un exemplaire du contrat ainsi que la déclaration relative à l'organisation de l'apprentissage à l'organisme chargé de l'enregistrement des contrats d'apprentissage.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : quelle est la durée du contrat ?",
+    "reponse": "<p>En principe, la durée du contrat varie entre 6 mois et 3 ans selon le type de formation préparée. En cas d'échec à l'examen l'apprentissage peut être prolongé d'un an au plus.</p><p>Le renouvellement du contrat est possible pour préparer des diplômes ou titres de même niveau ou non sanctionnant des qualifications différentes.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : quelle rémunération pour l'apprenti ?",
+    "reponse": "<p>Sauf disposition plus favorable, l'apprenti perçoit une rémunération déterminée proportionnellement au SMIC, variant de 25 à 78% du SMIC, selon son âge et son cycle de formation.</p>"
+  },
+  {
+    "question": "Le contrat d'apprentissage : quels sont les cas de rupture du contrat ?",
+    "reponse": "<p>Il existe différents cas de rupture du contrat d'apprentissage.</p><p>Le contrat d'apprentissage peut être rompu par l'une ou l'autre des parties durant les deux premiers mois de l'apprentissage. Passé ce délai, la rupture du contrat ne peut intervenir que sur accord écrit signer des deux parties.</p><p>A défaut, la rupture ne peut être prononcée que par le conseil de prud'hommes en cas de faute grave ou de manquements répétés de l'une des parties à ses obligations ou en raison de l'inaptitude de l'apprenti à exercer le métier auquel il voulait se préparer.</p><p>Une rupture peut également être réalisée en cas d'obtention du diplôme, l'apprenti doit alors avertir par écrit l'employeur deux mois avant.</p>"
+  },
+  {
+    "question": "Le contrat de professionnalisation : à quoi ça sert ?",
+    "reponse": "<p>Le contrat de professionnalisation permet l'acquisition de qualifications en vue d'une insertion ou réinsertion professionnelle.</p>"
+  },
+  {
+    "question": "Le contrat de professionnalisation : quelles conditions le travailleur doit il remplir ?",
+    "reponse": "<p>Ce contrat est ouvert :</p><ol><li>Aux personnes âgées de seize à vingt-cinq ans révolus afin de compléter leur formation initiale ;</li><li>Aux demandeurs d'emploi âgés de vingt-six ans et plus ;</li><li>Aux bénéficiaires du revenu de solidarité active, de l'allocation de solidarité spécifique ou de l'allocation aux adultes handicapés ou aux personnes ayant bénéficié d'un contrat unique d'insertion.</li></ol>"
+  },
+  {
+    "question": "Le contrat de professionnalisation : comment conclure un contrat de professionnalisation?",
+    "reponse": "<p>L'employeur adresse le contrat de professionnalisation à l'organisme collecteur paritaire agréé au titre de la professionnalisation, au plus tard dans les cinq jours qui suivent le début du contrat.</p><p>Un tuteur peut encadrer le travailleur en contrat de professionnalisation. Il doit justifier d'une expérience de 2 ans en lien avec l'objectif de formation.</p><p>Contrairement au maître d'apprentissage, le tuteur n'est pas obligatoire.</p><p>L'employeur peut assurer lui-même le tutorat dès lors qu'il remplit les conditions de qualification et d'expérience.</p>"
+  },
+  {
+    "question": "Le contrat de professionnalisation : quelle est la durée du contrat ?",
+    "reponse": "<p>C'est un contrat à durée déterminée ou indéterminée.</p><p>Le contrat a une durée déterminée qui varie entre 6 et 12 mois voire 24 mois pour certaines catégories de personnes ou lorsque la nature des qualifications prévues l'exige.</p><p>Le contrat peut être renouvelé une fois :</p><ol><li>Si le bénéficiaire, ayant obtenu la qualification visée, prépare une qualification supérieure ou complémentaire ;</li><li>S'il n'a pu obtenir la qualification visée pour cause d'échec aux épreuves d'évaluation de la formation suivie, ou pour cause de maternité, de maladie, d'accident du travail, de maladie professionnelle ou de défaillance de l'organisme de formation.</li></ol>"
+  },
+  {
+    "question": "Le contrat de professionnalisation : quelle rémunération pour le travailleur ?",
+    "reponse": "<p>Sauf disposition plus favorable, l'apprenti perçoit une rémunération déterminée proportionnellement au SMIC, variant de 55% à 100% du SMIC, selon son âge et son niveau de formation initial.</p><p>Pour les salariés de moins de 21 ans et pour ceux de 21 ans et plus, ces rémunérations ne peuvent, respectivement, être inférieures à 65 % et 80 % du salaire minimum de croissance, lorsque le bénéficiaire est titulaire d'une qualification au moins égale à celle d'un baccalauréat professionnel ou d'un titre ou diplôme à finalité professionnelle de même niveau.</p>"
+  },
+  {
+    "question": "Le contrat de professionnalisation : quels sont les cas de rupture du contrat ?",
+    "reponse": "<p>Les causes de rupture (anticipée) du contrat de professionnalisation sont :</p><ol><li>Le commun accord des parties</li><li>La faute grave du salarié ou de l'employeur</li><li>Le cas de force majeure. <em>Les difficultés économiques ne sont pas un cas de force majeure pour les juges.</em></li></ol>"
+  },
+  {
+    "question": "La démission : Comment démissionner ?",
+    "reponse": "<p>La démission est l'acte unilatéral par lequel un salarié sous CDI fait connaître à l'employeur sa décision de rompre son contrat de travail. Elle n'a pas à être motivée.</p><p>La démission n'est soumise à aucune condition de forme, sauf si la convention collective prévoit expressément qu'elle soit faite par écrit.</p><p>Le seul impératif en la matière est la volonté claire et non équivoque du salarié qui doit être exprimée. (L'écrit manuscrit du salarié, par lettre recommandée ou en main propre en échange d'un reçu, est néanmoins recommandé pour couvrir l'employeur de tout litige ultérieur).</p><p>Si la démission est équivoque au moment où elle a été donnée, le juge pourra requalifier la rupture en un licenciement sans cause réelle et sérieuse.</p><p>Il en va de même si le consentement est forcé, la démission sera nulle et la rupture s'analysera en licenciement sans cause réelle et sérieuse.</p><p>En cas de litige, le contrat de travail peut être rompu par le Conseil de Prud'hommes.</p><p><em>Si le salarié exprime la volonté de démissionner sous le coup de la colère, la démission ne sera pas valable. La démission ne se présume pas. Si le salarié ne revient plus travailler, l'employeur ne doit pas le considérer comme démissionnaire. Il doit d'abord lui envoyer une mise en demeure, par lettre recommandée avec accusé de réception, de revenir travailler à son poste, qui devra rester sans réponse s'il veut lancer la procédure de licenciement.</em></p>"
+  },
+  {
+    "question": "La démission : Quel délai de préavis pour le salarié démissionnaire ?",
+    "reponse": "<p>Sauf accord des parties, le salarié démissionnaire doit respecter un préavis afin qu'il puisse retrouver du travail et que l'employeur puisse le remplacer.</p><p>La durée du préavis de démission est fixée :</p><ol><li>Soit par convention collective ou accord collectif ;</li><li>Soit par les usages pratiqués dans la localité et dans la profession, en l'absence d'accord applicable</li></ol><p>Il existe des cas où le préavis n'est pas à respecter.</p><p>Exemples : l'état de grossesse, l'exécution de la période d'essai, le non-paiement des salaires.</p>"
+  },
+  {
+    "question": "La démission : Quelles sont les indemnités pour le salarié démissionnaire ?",
+    "reponse": "<p>La démission n'ouvre pas droit en principe aux indemnités de chômage ni aux indemnités de rupture du contrat de travail.</p><p>Dans les cas de démissions légitimes, les indemnités de chômage sont possibles.</p><p>Exemples : démission de la salariée qui suit son conjoint, démission d'un salarié sous contrat aidé pour un emploi durable, …</p><p>La responsabilité du nouvel employeur peut être engagée en cas de débauchage d'un salarié qui a démissionné de façon abusive.</p>"
+  },
+  {
+    "question": "La prise d'acte de la rupture aux torts de l'employeur: Pour quelles raisons le salarié peut prendre acte de la rupture ?",
+    "reponse": "<p>La prise d'acte n'est possible que pour un salarié sous CDI.</p><p>Le salarié prend acte de la rupture de son contrat de travail lorsqu'il reproche à son employeur des manquements.</p><p>Exemple : Non-paiement des salaires, refus d'accorder des repos, manquement à l'obligation de sécurité …</p><p>La prise d'acte ne répond à aucun formalisme particulier. (Un écrit est tout de même conseillé)</p>"
+  },
+  {
+    "question": "La prise d'acte de la rupture aux torts de l'employeur : Quels sont les effets d'une prise d'acte ?",
+    "reponse": "<p>Elle produit soit les conséquences d'une démission si les faits invoqués sont injustifiés (peu importe ici le caractère équivoque), soit, au contraire, les conséquences d'un licenciement sans cause réelle et sérieuse.</p>"
+  },
+  {
+    "question": "La prise d'acte de la rupture aux torts de l'employeur : La rupture pour faits fautif de l'employeur est-elle possible pour un apprenti ?",
+    "reponse": "<p>Pour le contrat d'apprentissage : la rupture pour des faits fautifs de l'employeur ne peut intervenir que par une résiliation judiciaire du contrat de travail dont la demande sera faite devant les prud'hommes.</p>"
+  },
+  {
+    "question": "La prise d'acte de la rupture aux torts de l'employeur : L'employeur peut-il prendre acte de la rupture pour des faits fautifs du salarié ?",
+    "reponse": "<p>Seul le salarié peut prendre acte de la rupture. L'employeur ne peut pas utiliser ce mode de rupture s'il reproche des manquements à son salarié. Dans un tel cas, cela sera requalifié en licenciement sans cause réelle et sérieuse.</p>"
+  },
+  {
+    "question": "Rupture du contrat : Quels documents donner au salarié à l'issue du contrat ?",
+    "reponse": "<p>Le contrat de travail, pour diverses raisons, peut être rompu à l'initiative du salarié, de l'employeur ou par un accord des deux parties. Dans ces 3 cas, l'employeur doit mettre à disposition du salarié, ce au moment de la rupture du contrat :</p><p>• son certificat de travail ;</p><p>• son attestation ASSEDIC ;</p><p>• son solde de tout compte.</p><p>Pour rompre le contrat de travail du salarié, l'employeur peut opter pour le licenciement ou la rupture conventionnelle.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : qu'est-ce qu'un licenciement pour motif personnel ?",
+    "reponse": "<p>Le licenciement peut avoir un motif personnel, c'est-à-dire pour une raison tenant au salarié (disciplinaire ou non). Le motif du licenciement doit être réel et sérieux.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : qu'est-ce qu'un licenciement pour insuffisance professionnelle?",
+    "reponse": "<p>L'insuffisance professionnelle peut être définie comme un manque de compétence du salarié dans l'exécution de ses tâches de travail, d'où la nécessité d'instaurer une période d'essai pour pouvoir se faire une première idée.</p><p>Exemple : maladresses ou erreurs répétées involontaires.</p><p>L'insuffisance professionnelle doit reposer sur des éléments précis, objectifs et imputables au salarié. Le salarié doit avoir eu les moyens pour réaliser son travail.</p><p>Au contraire, un salarié qui refuse de suivre une formation nécessaire à son poste est un motif de licenciement.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : qu'est-ce qu'un licenciement disciplinaire ?",
+    "reponse": "<p>L'employeur doit distinguer l'erreur de la faute. Suite à une faute commise par le salarié, l'employeur peut alors choisir dans l'échelle des sanctions, la plus grave : le licenciement. Entre temps et par sécurité, une mise à pied conservatoire peut être décidée par l'employeur à l'encontre du salarié. Elle entraîne une suspension du contrat de travail et peut permettre à l'employeur de prendre du recul sur la sanction à donner. Il faut toutefois s'assurer que la faute n'ait pas déjà fait l'objet d'une sanction.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : qu'est-ce qu'un licenciement pour faute grave ?",
+    "reponse": "<p>La faute grave est définie comme celle qui rend impossible le maintien du salarié dans l'entreprise. Elle n'est pas nécessairement intentionnelle.</p><p>Le salarié doit quitter immédiatement l'entreprise. Il n'effectuera donc pas son préavis.</p><p>Exemple : injures, actes d'insubordination, absences répétées, ivresse, harcèlement…</p><p>Entre temps et par sécurité, en cas d'invocation d'une faute grave ou lourde, une mise à pied conservatoire peut être décidée par l'employeur à l'encontre du salarié. Elle entraîne une suspension du contrat de travail et peut permettre à l'employeur de prendre du recul sur la sanction à donner.</p><p>Le salarié licencié pour faute grave sera privé de l'indemnité de licenciement et de l'indemnité compensatrice de préavis et ne percevra que l'indemnité compensatrice de congés payés.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : qu'est-ce qu'un licenciement pour faute lourde ?",
+    "reponse": "<p>La faute lourde est caractérisée par l'intention de nuire à l'employeur ou l'entreprise.</p><p>Exemple : concurrence déloyale, dégradation, violence, séquestration ou lorsque le salarié empêche délibérément d'autres salariés non-grévistes de travailler.</p><p>Le salarié licencié pour faute lourde sera privé de l'indemnité de licenciement et de l'indemnité compensatrice de préavis et ne percevra que l'indemnité compensatrice de congés payés.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : Quel différence y a-t-il entre une mise à pied conservatoire et une mise à pied disciplinaire ?",
+    "reponse": "<p>La mise à pied conservatoire (mesure d'attente préalable à la sanction) est à distinguer de la mise à pied disciplinaire (qui est une sanction disciplinaire).</p><p>La mise à pied disciplinaire ne doit pas être confondue avec la mise à pied conservatoire qui permet d'écarter de l'entreprise le salarié estimé « dangereux » en attendant de se prononcer sur le type de sanction envisagé. Elle interrompt la prescription des 2 mois. Cette période non travaillée ne sera pas payée au salarié s'il en résulte un licenciement pour faute grave ou lourde.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif personnel : Qui peut dire s'il est question d'une faute grave ou lourde ?",
+    "reponse": "<p>La différence entre faute grave et lourde est appréciée par les juges.</p>"
+  },
+  {
+    "question": "Licenciement : quelle est la procédure de licenciement ?",
+    "reponse": "<p>Elle est strictement encadrée et obligatoire :</p><p>a) La convocation à l'entretien préalable</p><p>L'employeur doit envoyer, en lettre recommandée avec accusé de réception ou en main propre en échange d'un reçu, une lettre de convocation à un entretien préalable.</p><p>La convocation doit obligatoirement préciser l'objet, la date, l'heure, le lieu de l'entretien et la possibilité pour le salarié de se faire assister par une personne de l'entreprise de son choix ou par un conseiller du salarié, ainsi que les coordonnées de la Mairie ou de l'Inspection du Travail afin que le salarié puisse s'y procurer la liste des conseillers du salarié.</p><p>Aucun délai n'est imposé pour l'envoi de cette lettre.</p><p>Pour un licenciement disciplinaire, la convocation doit être envoyée le plus rapidement possible. Un délai de prescription de deux mois doit être respecté.</p><p>b) L'entretien individuel avec le salarié</p><p>L'entretien préalable ne peut avoir lieu moins de 5 jours ouvrables après la présentation au salarié de la lettre recommandée de convocation ou sa remise en main propre</p><p>La date de l'entretien peut être fixée en dehors du temps de travail mais le salarié devra alors être rémunéré.</p><p>Le lieu est celui ou s'exécute le travail ou au siège social de l'entreprise.</p><p>A défaut de la mise en place d'institutions représentatives du personnel dans l'entreprise, le salarié peut se faire assister par une personne de l'entreprise ou par un conseiller extérieur : le Conseiller du Salarié, inscrit sur une liste départementale établie par le préfet et disponible à l'Inspection du Travail et dans toutes les mairies.</p><p>Le salarié n'est pas obligé de venir à l'entretien, s'il ne se présente pas, l'employeur peut poursuivre la procédure et notifier son licenciement.</p><p>Sauf abus, les propos tenus par le salarié au cours de l'entretien ne peuvent constituer une cause de licenciement.</p><p>Le décompte est en jours ouvrables et non en jours calendaires.</p><p>Lors de l'entretien, à ce stade, l'employeur doit préciser que le licenciement est envisagé et non définitif puisque tout l'enjeu de l'entretien préalable est l'explication avec la défense du salarié pour éviter d'être licencié.</p><p>c) La notification du licenciement</p><p>A l'issue de l'entretien préalable, l'employeur peut décider de licencier le salarié.</p><p>Pour ce faire, il doit lui notifier son licenciement en lui envoyant une lettre, signée, et en recommandée avec accusé de réception.</p><p>L'employeur doit indiquer le motif précis du licenciement dans la lettre et rappeler le déroulement de la procédure préalable.</p><p>Cette lettre ne peut être expédiée moins de 2 jours ouvrables après la date de l'entretien préalable. La loi ne fixe pas de délai maximal pour l'envoi de la lettre, sauf en cas de licenciement pour motif disciplinaire (1 mois maximum après le jour fixé pour l'entretien préalable).</p><p>La sanction encourue par l'employeur en cas de non-respect de la procédure de licenciement peut aller jusqu'au paiement d'un mois de salaire.</p>"
+  },
+  {
+    "question": "Licenciement : quel préavis respecter en matière de licenciement ?",
+    "reponse": "<p>Lorsque le licenciement n'est pas motivé par une faute grave, le salarié bénéficie d'un préavis variant selon l'ancienneté dans l'entreprise.</p><p>S'il justifie chez le même employeur d'une ancienneté de services continus inférieure à six mois :</p><p>Il bénéficie d'un préavis dont la durée est déterminée par la loi, la convention ou l'accord collectif de travail ou, à défaut, par les usages pratiqués dans la localité et la profession ;</p><p>S'il justifie chez le même employeur d'une ancienneté de services continus comprise entre six mois et moins de deux ans :</p><p>-Il a droit un préavis d'un mois (sauf si un autre texte prévoit des mesures plus favorables);</p><p>S'il justifie chez le même employeur d'une ancienneté de services continus d'au moins deux ans :</p><p>-Il a droit à un préavis de deux mois (sauf si un autre texte prévoit des mesures plus favorables).</p>"
+  },
+  {
+    "question": "Le licenciement pour motif économique : Qu'est-ce qu'un licenciement pour motif économique ?",
+    "reponse": "<p>Un licenciement pour motif économique est un licenciement effectué par un employeur pour un ou plusieurs motifs non liés à la personne du salarié et qui est la conséquence de difficultés économiques.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif économique : Quelle procédure pour un licenciement pour motif économique, de moins de 10 salariés dans une même période de 30 jours ?",
+    "reponse": "<p>Pour effectuer un licenciement de moins de 10 salariés dans une même période de trente jours, l'employeur doit suivre une procédure précise :</p><ol><li>Consulter s'ils existent les délégués du personnel</li></ol><p>(Pour les entreprises dont l'effectif est d'au moins 11 salariés) ou le Comité d'Entreprise (pour les entreprises dont l'effectif est d'au moins 50 salariés).</p><p>La convocation à la réunion s'accompagne de la transmission de tout renseignement utile sur le projet de licenciement collectif à savoir :</p><ul><li>La ou les raisons économiques, financières ou techniques du projet de licenciement ;</li><li>Le nombre de licenciements envisagé ;</li><li>Les catégories professionnelles concernées et les critères proposés pour l'ordre des licenciements ;</li><li>Le nombre de salariés, permanents ou non, employés dans l'établissement ;</li><li>Le calendrier prévisionnel des licenciements ;</li><li>Les mesures de nature économique envisagées.</li></ul><p>L'objet de la réunion, pour l'employeur, est de présenter et de donner des explications sur le projet de licenciement économique et de répondre aux questions et observations des représentants du personnel avant de recueillir leur avis sur le projet.</p><p>Le procès-verbal de cette réunion doit être transmis à l'Inspection du Travail.</p><p>Le licenciement intervenu dans une entreprise dépourvue de comité d'entreprise ou de délégué du personnel alors qu'aucun procès-verbal de carence n'a été établi est irrégulier.</p><ol><li>Mettre en place des entretiens préalables</li></ol><p>Avant toute décision, les salariés concernés par ce licenciement sont convoqués individuellement en vue d'un entretien préalable.</p><p>Il convient d'appliquer des règles identiques à celles de la procédure de licenciement individuelle, exception faite du délai de la notification du licenciement (qui est d'au moins 7 jours entre la date de l'entretien préalable et la date d'envoi de la lettre et 15 jours pour les cadres).</p><ol><li>Notifier le licenciement</li></ol><p>Une fois les offres de reclassement mises en place, l'employeur doit établir l'ordre des licenciements.</p><p>Dès lors, lorsque la décision est prise par l'employeur de licencier un salarié, le licenciement est notifié par lettre recommandée avec avis de réception.</p><p>Les motifs économiques invoqués sont clairement énoncés dans la lettre. La priorité de réembauche est également mentionnée. (Un an à compter de la date de rupture de son contrat si le salarié en fait la demande au cours de ce même délai.)</p><p>Le salarié licencié peut demander à être informé des critères retenus pour fixer l'ordre des licenciements.</p><p>Les critères sont fixés par accord ou convention collective ou, à défaut, par l'employeur après consultation du Comité d'Entreprise (ou des délégués du personnel).</p><p>Ces critères doivent prendre en compte</p><p>Les charges de famille ;</p><p>L'ancienneté du salarié dans l'établissement ;</p><p>La situation sociale des salariés (handicapés, salariés âgés etc.) ;</p><p>Les qualités professionnelles appréciées par catégorie.</p><p>La situation sociale des salariés (handicapés, salariés âgés etc.) Les qualités professionnelles appréciées par catégorie.</p><ol><li>Informer l'autorité administrative</li></ol><p>L'autorité administrative est informée dans les huit jours de l'envoi des lettres de licenciement aux salariés concernés</p><p>Dans les deux cas, entreprises de moins de 50 salariés comme entreprises de plus de 50 salariés, lorsque le licenciement concerne un salarié protégé (délégué du personnel, membre du comité d'entreprise, délégué syndical…), l'employeur doit obtenir une autorisation de l'inspection du travail.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif économique : Quelle est la Procédure à suivre pour les entreprises qui licencient pour motif économique au moins 10 salariés sur une même période de 30 jours ?",
+    "reponse": "<p>Il convient de distinguer deux procédures selon le nombre de salariés présents dans l'entreprise.</p><p>Dans les entreprises comptant moins de 50 salariés</p><ol><li>L'employeur doit consulter les délégués du personnel (DP) préalablement sur l'opération projetée et ses modalités d'application ainsi que sur le projet de licenciement collectif ;</li><li>Il doit adresser aux représentants du personnel, avec la convocation de la réunion, tous les renseignements utiles sur le projet de licenciement collectif (raisons économiques, nombre de licenciements envisagés, calendrier prévisionnel des licenciements, etc.) ainsi que les mesures envisagées pour limiter les licenciements et pour faciliter le reclassement des salariés concernés.</li><li>Les délégués du personnel doivent tenir deux réunions, séparées par un délai qui ne peut être supérieur à 14 jours.</li><li>L'employeur doit informer la DIRECCTE (Direction Régionale de l'Entreprise, de la Concurrence, de la Consommation, du Travail et Emploi) de son projet de licenciement économique.</li><li>La DIRECCTE dispose alors d'un délai de vingt-et-un jours à compter de la date de la notification du projet de licenciement pour procéder au contrôle du respect de ces dispositions.</li></ol>"
+  },
+  {
+    "question": "Le licenciement pour motif économique : Quelle est la Procédure à suivre pour les entreprises qui licencient au moins 10 salariés sur une même période de 30 jours dans les entreprises comptant plus de 50 salariés ?",
+    "reponse": "<p>Un employeur d'une entreprise de 50 personnes et plus qui a l'intention de licencier au moins 10 salariés doit mettre en place un plan de sauvegarde de l'emploi (PSE).</p><p>Pour cela :</p><ol><li>L'employeur doit consulter le comité d'entreprise préalablement, sur l'opération projetée et ses modalités d'application ainsi que sur le projet de licenciement collectif. Dans ce cadre, deux réunions au minimum espacées d'au moins 15 jours doivent être convoquées par l'employeur, sauf en cas de redressement ou liquidation judiciaire.</li></ol><p>Le Comité d'Entreprise peut recourir à l'assistance d'un expert-comptable. Cette demande est faite au cours de la première réunion.</p><p>L'employeur adresse aux représentants du personnel, avec la convocation de la réunion, tous les renseignements utiles sur le projet de licenciement collectif (raisons économiques, nombre de licenciement envisagés, calendrier prévisionnel des licenciements, etc.) et les mesures envisagées pour limiter les licenciements et pour faciliter le reclassement des salariés concernés.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif économique : qu'est-ce que la priorité de réembauchage ?",
+    "reponse": "<p>Le salarié est informé par écrit de l'existence et des conditions de mise en œuvre de la priorité de réembauchage.</p><p>Pour en bénéficier, il doit en faire la demande dans l'année qui suit la date de la rupture de son contrat où il sera informé par l'employeur de tous les postes disponibles et compatibles avec sa qualification.</p><p>En cas de violation d'une liberté fondamentale (discrimination, droit de grève, …), le licenciement prononcé est nul.</p><p>Si l'employeur omet d'informer le salarié de la priorité de réembauchage, l'employeur peut être condamné à des dommages et intérêts.</p><p>Si l'employeur empêche le salarié d'utiliser cette priorité en ne proposant pas un emploi disponible, il encourt à verser au salarié une indemnité égale à 2 mois de salaire si le salarié a une ancienneté de 2 ans dans une entreprise d'au moins 11 salariés.</p>"
+  },
+  {
+    "question": "Le licenciement pour motif économique : quelles sont les conséquences d'un licenciement nul ?",
+    "reponse": "<p>Les conséquences d'un licenciement nul sont : le droit à réintégration (si elle est possible, avec le rappel des salaires) ou aux indemnités de rupture (indemnité légale de licenciement, indemnités de préavis, indemnités congés payés) ainsi qu'une indemnité au moins égale à 6 mois de salaire pour licenciement illicite.</p><p>En cas d'absence ou de nullité du plan de sauvegarde pour l'emploi, le salarié a droit alors à une indemnité au moins égale aux 12 derniers mois de salaire s'il a 2 ans d'ancienneté, ou à la réparation du préjudice subit s'il n'a pas l'ancienneté requise.</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : qu'est-ce que c'est ?",
+    "reponse": "<p>Lors d'une procédure de licenciement pour motif économique, tout employeur d'une entreprise de moins de 1000 personnes ou, dans une entreprise en redressement ou liquidation judiciaire, sans condition d'effectif, doit proposer un suivi en Contrat de Sécurisation Professionnelle (CSP).</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : comment ça marche ?",
+    "reponse": "<p>Le Contrat de Sécurisation Professionnelle concerne :</p><ol><li>Les salariés visés par une procédure de licenciement économique qui totalisent au moins 4 mois d'affiliation à l'assurance chômage sur les 28 derniers mois pour les personnes de moins de 50 ans ;</li><li>Les salariés visés par une procédure de licenciement économique qui totalisent au moins 4 mois d'affiliation à l'assurance chômage sur les 36 derniers mois pour les personnes de plus de 50 ans.</li></ol><p>A compter du lendemain de la date de la remise des documents relatifs au CSP, le salarié a un délai de réflexion de 21 jours pour accepter ou bien refuser le CSP. (Code de procédure civile art. 641) En cas de refus, il est indemnisé au titre de l'allocation d'aide au retour à l'emploi (ARE).</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : comment sont indemnisés les bénéficiaires ?",
+    "reponse": "<p>Le CSP permet de bénéficier, pour les salariés qui justifient d'un an d'ancienneté minimum dans l'entreprise, d'une allocation de sécurisation professionnelle (ASP).</p><p>Le montant de cette dernière est égal à 80% du salaire brut antérieur pendant 12 mois si la date d'engagement de la procédure de licenciement est antérieure au 01/02/2015</p><p>Si la date d'engagement de la procédure de licenciement est postérieure au 01/02/2015 le montant est égal à 75% du salaire brut.</p><p>Attention : Les salariés qui ne totalisent pas un an d'ancienneté mais qui ont travaillé suffisamment pour s'ouvrir des droits à l'allocation d'aide au retour à l'emploi (4 mois de travail dans les 28 derniers mois pour les salariés de moins de 50 ans ou 36 mois pour les personnes de plus de 50 ans) peuvent aussi bénéficier de l'accompagnement renforcé, mais reçoivent une ASP dont le montant et la durée sont équivalents à ceux de l'ARE.</p><p>Le versement de l'allocation est immédiat.</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : quand sont indemnisés les bénéficiaires ?",
+    "reponse": "<p>En CSP, les allocations sont perçues dès la fin du contrat de travail. Le préavis n'est donc pas à effectuer. L'indemnité légale ou conventionnelle de préavis n'est donc pas reçue.</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : Quelles sont les obligations de l'employeur ?",
+    "reponse": "<p>L'employeur a l'obligation de proposer ce dispositif du CSP aux salariés s'ils sont visés par un licenciement économique.</p><p>Dans le cas où l'employeur ne respecterait pas cette obligation, Pôle emploi le met en place.</p><p>L'employeur contribue au financement du dispositif, ce pour les salariés ayant un an ou plus d'ancienneté dans l'entreprise, par le versement d'une somme correspondant à l'indemnité de préavis, dans la limite de 3 mois de salaire.</p><p>En cas d'acceptation du CSP, le contrat de travail du salarié est réputé rompu d'un commun accord au terme du délai de réflexion de 21 jours.</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : Que se passe-t-il en cas de reprise d'activité ?",
+    "reponse": "<p>En cas de reprise d'emploi, les bénéficiaires du CSP peuvent bénéficier sous certaines conditions d'aides au retour à l'emploi.</p>"
+  },
+  {
+    "question": "Le contrat de sécurisation professionnelle : comment se passe le suivi des démarches de reprise d'emploi ?",
+    "reponse": "<p>Le CSP peut durer douze mois afin d'offrir la possibilité d'un retour à l'emploi, notamment au travers d'une formation qualifiante ou d'une reconversion professionnelle.</p><p>Au terme des douze mois, si la recherche d'emploi n'a pas abouti, les allocations ARE doivent être versées dans la limite des droits restants suite à l'inscription comme demandeur d'emploi.</p>"
+  },
+  {
+    "question": "La rupture conventionnelle : qu'est-ce que la rupture conventionnelle individuelle ?",
+    "reponse": "<p>L'employeur et le salarié peuvent décider d'un <strong>commun accord</strong> de la rupture du <strong>contrat de travail à durée indéterminée :</strong> Personne ne peut imposer la rupture conventionnelle et elle ne s'applique <strong>qu'aux seuls CDI.</strong></p><p>Elle permet aux partis de convenir des conditions de la rupture du contrat de travail.</p><p>Le salarié avec ce mode de rupture conserve le bénéfice de ses droits à l'allocation chômage.</p>"
+  },
+  {
+    "question": "La rupture conventionnelle : A qui peut s'appliquer la rupture conventionnelle ?",
+    "reponse": "<p>Elle n'est pas applicable pour les ruptures de contrat suite à une gestion prévisionnelle des emplois et des compétences (GPEC) ou un plan de sauvegarde pour l'emploi (PSE). Elle peut s'appliquer, sous certaines conditions, aux salariés protégés. Elle n'est possible que pour les salariés sous contrat à durée indéterminée.</p>"
+  },
+  {
+    "question": "La rupture conventionnelle : Le salarié peut-il se faire assister pendant la procédure de rupture conventionnelle?",
+    "reponse": "<p>Lors du ou des entretien(s) entre l'employeur et le salarié, ce dernier a la possibilité de se faire assister. L'employeur ne peut pas se faire assister si le salarié ne l'est pas. Le contrat de travail continue à s'exécuter normalement jusqu'à la fin du contrat.</p>"
+  },
+  {
+    "question": "La rupture conventionnelle : Quelle procédure suivre pour faire une rupture conventionnelle?",
+    "reponse": "<p>La convention de rupture définit le montant de l'indemnité qui ne peut être inférieur au montant de l'indemnité légale de licenciement La date de rupture qui ne peut intervenir avant le lendemain du jour de l'homologation. Chaque partie peut se rétracter dans un délai de 15 jours calendaires à partir de la signature de la convention, par lettre recommandée avec accusé de réception ou en main propre en échange d'un reçu. Il est préférable d'avoir plusieurs entretiens préalables pour prouver le consentement libre du salarié. Cette convention est soumise à homologation administrative suite à l'expiration du délai de rétractation. La DIRECCTE a 15 jours ouvrables pour répondre. Son silence vaut acceptation d'homologation. La convention n'est valide que si elle est homologuée. Le conseil de Prud'hommes est compétent en cas de contentieux. Le délai pour agir est de 12 mois. L'avantage pour le salarié est qu'il conserve ses droits au chômage. Aucun préavis n'est à respecter ici, contrairement au licenciement ou à la démission.</p>"
+  },
+  {
+    "question": "La transaction : comment faire une transaction ? à quoi cela sert ?",
+    "reponse": "<p>La transaction sert à régler les conflits liés à la rupture du contrat de travail. Ce n'est donc pas un mode de rupture. Aucun formalisme n'est exigé. Toutefois, un écrit signé en 2 exemplaires est recommandé à titre de preuve. Lors d'une transaction valablement signée, les parties renoncent à toute contestation ultérieure devant le juge prud'homal. La transaction doit reposer sur un consentement libre des deux parties et intervenir qu'après la rupture définitive du contrat de travail. L'indemnité transactionnelle ne doit pas être inférieure au montant de l'indemnité de licenciement.</p>"
+  },
+  {
+    "question": "Le droit à la retraite du salarié : quelle différence entre le départ et la mise à la retraite du salarié ?",
+    "reponse": "<p>Le salarié senior peut partir de lui-même en retraite mais il peut également y être incité.</p><p>Le départ à la retraite s'entend d'un départ volontaire du salarié.</p><p>La mise à la retraite est le départ « forcé » du salarié. L'employeur peut rompre le contrat de travail qui le lie à son salarié lorsque ce dernier atteint l'âge pour partir en retraite.</p><p>Lorsque le salarié est mis à la retraite par l'employeur, l'indemnité versée est calculée dans les mêmes conditions que l'indemnité légale de licenciement.</p><p>L'indemnité conventionnelle ou contractuelle de mise à la retraite est versée à la place de l'indemnité légale si elle est plus favorable.</p>"
+  },
+  {
+    "question": "Le droit à la retraite du salarié : le départ à la retraite. Quel salarié et comment procéder ?",
+    "reponse": "<p>Le départ volontaire à la retraite doit résulter d'une décision claire du salarié de rompre son contrat de travail. En plus de son relevé de carrière tous les 5 ans à partir de 35 ans, le salarié reçoit une estimation sur le montant de sa future retraite à partir de 55 ans. Le montant de l'indemnité est fixé selon l'ancienneté du salarié dans l'entreprise :</p><p>• un demi mois de salaire après 10 ans d'ancienneté ;</p><p>• un mois après 15 ans d'ancienneté ;</p><p>• un mois et demi après 20 ans d'ancienneté ;</p><p>• deux mois après 30 ans d'ancienneté.</p><p>L'âge minimal pour partir à la retraite est de 62 ans pour les personnes nées à partir du 1er janvier 1955. La retraite est fixée à 60 ans pour les salariés nés avant le 1er juillet 1951 et à 62 ans pour ceux nés à partir du 1er janvier 1955. Pour ceux nés entre ces deux dates, il faut rajouter 4 mois par année.</p>"
+  },
+  {
+    "question": "Le droit à la retraite du salarié : le départ anticipé, dans quel cas et comment procéder ?",
+    "reponse": "<p>a) Le départ anticipé pour carrière longue Les personnes ayant commencé à travailler très jeunes, avant 20 ans, peuvent dans certains cas partir à la retraite avant l'âge légal.</p><p>b) Le départ anticipé pour handicap Les personnes reconnues handicapées peuvent partir en retraite à partir de l'âge de 55 ans, à certaines conditions.</p><p>c) Le départ anticipé pour carrière pénible Les personnes justifiant d'une incapacité permanente d'au moins 20% liée à la pénibilité de leur travail, ou d'au moins 10%, sous certaines conditions, peuvent partir en retraite à 60 ans. Elles bénéficient en outre d'une retraite à taux plein quel que soit le nombre de trimestres validés.</p>"
+  },
+  {
+    "question": "Le droit à la retraite du salarié : La mise à la retraite, quel salarié et comment procéder ?",
+    "reponse": "<p>La mise à la retraite est possible pour l'employeur quand son salarié a atteint l'âge de 70 ans. A partir de 65 ans, le salarié bénéficie d'une pension de vieillesse et l'employeur peut alors proposer sa mise à la retraite. Dans les 3 mois avant la date anniversaire entre les 65 et 69 ans du salarié, l'employeur demande par écrit quelles sont les intentions du salarié quant à son départ. Si le salarié ne répond pas ou refuse la mise à la retraite, l'employeur ne peut le contraindre. Il devra renouveler sa demande l'année suivante. Pour notifier la mise à la retraite, l'employeur établit un écrit qui n'a pas à être motivé. Le salarié doit respecter un préavis et a droit à une indemnité de départ à la retraite au moins égale au préavis de licenciement. L'employeur doit établir une déclaration de départ des seniors pour l'URSSAF en cas de mise à la retraite de salariés.</p>"
+  },
+  {
+    "question": "La durée du travail : Les heures supplémentaires, qu'est-ce que c'est ?",
+    "reponse": "<p>Les heures supplémentaires sont les heures de travail réalisées au-delà de la durée légale de travail (35 heures par semaine).</p>"
+  },
+  {
+    "question": "La durée du travail : Heures supplémentaires, à quoi ai-je droit ?",
+    "reponse": "<p>Les heures supplémentaires donnent droit à une <strong>majoration</strong> de salaire ou à un repos compensateur. Une convention ou un accord collectif d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche peut prévoir le ou les taux de majoration des heures supplémentaires, taux qui ne peut être inférieur à 10 %.</p><p>L'accord peut également fixer les modalités des contreparties en repos.</p><p>A défaut d'accord, les heures supplémentaires donnent lieu à une majoration de salaire de 25 % pour chacune des huit premières heures supplémentaires. Les heures suivantes donnent lieu à une majoration de 50 %.</p><p>Le contingent annuel d'heures supplémentaires, est fixé à 220 heures par an sauf dispositions contraires prévues par une convention ou un accord collectif d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche. Le dépassement déclenche un droit à une <strong>contrepartie supplémentaire</strong> sous forme de repos fixé à minima 50% et 100% dans les entreprises de plus de 20 salariés pour chaque heure dépassant ce contingent.</p><p>Attention tout de même aux excès d'heures supplémentaires : il convient de respecter les durées maximales d'heure de travail par jour et par semaines. Les règles concernant le repos quotidien et le repos hebdomadaires ne devront pas non plus être enfreintes.</p>"
+  },
+  {
+    "question": "La durée du travail : Temps partiel et heures complémentaires, comment ça marche ?",
+    "reponse": "<p>Le temps partiel concerne toute durée du travail effectif inférieur à 35 heures par semaine.</p><p>En aucun cas et à aucun moment les heures de travail pour un salarié à temps partiel ne doivent atteindre la durée légale de travail de 35 heures.</p><p>Un contrat écrit est obligatoire : il peut être à durée déterminée ou indéterminée.</p><p>Une durée minimale de 24 heures est prévue par le Code du Travail.</p><p>La mise en place d'une durée moindre peut s'opérer par convention ou un accord de branche étendu qui fixera la durée minimale de travail et déterminera les garanties quant à la mise en œuvre d'horaires réguliers ou permettant au salarié de cumuler plusieurs activités afin d'atteindre une durée globale d'activité correspondant à un temps plein ou au moins égale à 24 heures.</p><p>Les heures complémentaires sont celles réalisées au-delà de la durée prévue dans le contrat à temps partiel. Elles peuvent être réalisées jusque dans la limite du tiers (par accord collectif) ou légalement dans la limite du dixième de la durée prévue au contrat.</p><p>Ces heures complémentaires ne suivent pas le même régime que les heures supplémentaires.</p><p>Elles sont toutes rémunérées à un taux qui, par convention ou accord de branche étendu, ne pourra être inférieur à 10%. A défaut de stipulation conventionnelle, le taux de majoration des heures complémentaires est de 10 % pour chacune des heures complémentaires accomplies dans la limite du dixième des heures prévues au contrat de travail et de 25 % pour chacune des heures accomplies entre le dixième et le tiers des heures prévues au contrat de travail (si la convention permet la limite du tiers).</p>"
+  },
+  {
+    "question": "La durée du travail : Quelle est la durée du travail maximale par semaine ?",
+    "reponse": "<ol><li>La durée hebdomadaire maximale est de 48 heures. Un dépassement est possible en cas de circonstances exceptionnelles, dans la limite de 60 heures, ce après avis du Comité d'entreprise ou à défaut des délégués du personnel, avis qui sera communiqué à l'Inspection du Travail.</li><li>La durée hebdomadaire maximale est de 44 heures lorsqu'elle est calculée sur une période de 12 semaines consécutives. Sous certaines conditions, des dérogations sont rendues possibles par convention ou accord d'entreprise ou d'établissement ou, à défaut, par convention ou un accord de branche. La durée maximale pourra dès lors être portée à 46 heures par semaine.</li></ol><p>Dans certains secteurs la durée de 46 heures peut être dépassée pendant des périodes déterminées.</p>"
+  },
+  {
+    "question": "La durée du travail : Quelle est la durée du travail maximale par jour ?",
+    "reponse": "<ol><li>La durée quotidienne maximale est de 10 heures. Une convention ou un accord d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche peut prévoir le dépassement de cette durée dans la limite de 12 heures.</li></ol><p>Des dérogations peuvent également être accordées par l'Inspection du Travail, ce en cas d'urgence.</p>"
+  },
+  {
+    "question": "La durée du travail : Quelles sont les durées du travail maximales chez les jeunes ?.",
+    "reponse": "<p>La durée quotidienne de travail est fixée à 8 heures et à 35 heures hebdomadaires pour les mineurs. Le travail de nuit et pendant les jours fériés leur est interdit, sauf dérogation prévues par le Code du Travail.</p>"
+  },
+  {
+    "question": "La durée du Travail : C'est quand la pause ?",
+    "reponse": "<p>Sauf disposition plus favorable prévue par accord le salarié a droit à une pause de 20 minutes consécutives dès que le temps de travail quotidien atteint 6 heures.</p><p>Les accords et conventions en vigueur dans l'entreprise peuvent prévoir des temps de pause plus favorable aux salariés, et le paiement de ces pauses.</p><p>Les jeunes travailleurs ont droit à une pause d'une demi-heure après 4h30 de travail en continu.</p><p>Les pauses sont considérées comme du travail effectif si les salariés restent en permanence à la disposition de l'employeur. Dans ce cas, elles doivent être rémunérées.</p>"
+  },
+  {
+    "question": "La durée du Travail : c'est quand les pauses, chez les jeunes travailleurs ?",
+    "reponse": "<p>Les jeunes travailleurs ont droit à une pause d'une demi-heure après 4h30 de travail en continu. Les pauses sont considérées comme du travail effectif si les salariés restent en permanence à la disposition de l'employeur. Dans ce cas, elles doivent être rémunérées.</p>"
+  },
+  {
+    "question": "La durée du travail : le temps d'habillage et de déshabillage est-il payé ?",
+    "reponse": "<p>Le temps d'habillage et de déshabillage doit donner lieu à une compensation (financière ou en repos) pour le salarié si un texte impose le port de la tenue et que l'habillage et le déshabillage doivent être réalisés sur le lieu de travail.</p>"
+  },
+  {
+    "question": "La durée du travail : combien de temps de repos ai-je droit par jour et par semaine ?",
+    "reponse": "<p>En principe, le salarié a droit à :</p><ul><li>11 de repos par jour (entre deux jours de travail)</li><li>35 heures consécutives par semaine (24 heures hebdomadaires + 11 heures de repos quotidiens</li></ul><p>Le salarié ne peut pas travailler plus de 6 jours par semaine.</p><p>De nombreuses dérogations existent en la matière. De même une convention ou un accord collectif peut prévoir des dispositions plus favorables.</p>"
+  },
+  {
+    "question": "La durée du travail : puis-je réclamer à mon employeur le paiement de mon temps de déplacement entre chez moi et mon lieu de travail ?",
+    "reponse": "<p>Le temps de déplacement entre le domicile du salarié et son lieu habituel de travail n'est pas du temps de travail effectif.</p><p>Le temps de déplacement qui va au-delà fait l'objet d'une compensation financière ou en repos.</p>"
+  },
+  {
+    "question": "La durée du travail : qu'est-ce qu'une période d'astreinte ?",
+    "reponse": "<p>Une période d'astreinte est considérée comme un temps durant lequel le salarié doit être en mesure d'intervenir pour le compte de l'entreprise, sans être sur son lieu de travail et sans être à la disposition permanente de l'employeur. L'intervention du salarié pour accomplir un travail au service de l'entreprise et le trajet aller-retour sont alors comptabilisés comme du temps de travail effectif.</p>"
+  },
+  {
+    "question": "La durée du travail : comment mettre en place et organiser une période d'astreinte ?",
+    "reponse": "<p>L'astreinte est mise en place par convention ou accord qui fixe la compensation financière ou en repos pour le salarié. A défaut, elles sont organisées par l'employeur après avoir informé les représentants du personnel s'ils existent, ou après information de l'Inspection du Travail.</p><p>Les salariés concernés par des périodes d'astreinte sont informés de leur programmation individuelle dans un délai raisonnable, fixé à défaut d'accord à quinze jours.</p><p>En fin de mois, l'employeur remet au salarié un récapitulatif du nombre d'heures d'astreinte effectuées ainsi que la compensation correspondante.</p>"
+  },
+  {
+    "question": "La durée du travail : quelles sont les conditions de l'astreinte ?",
+    "reponse": "<p>Une période d'astreinte est considérée comme un temps durant lequel le salarié doit être en mesure d'intervenir pour le compte de l'entreprise, sans être sur son lieu de travail et sans être à la disposition permanente de l'employeur. L'intervention du salarié pour accomplir un travail au service de l'entreprise et le trajet aller-retour sont alors comptabilisés comme du temps de travail effectif.</p><p>L'astreinte est mise en place par convention ou accord qui fixe la compensation financière ou en repos pour le salarié. A défaut, elles sont organisées par l'employeur après avoir informé les représentants du personnel s'ils existent, ou après information de l'Inspection du Travail.</p><p>Les salariés concernés par des périodes d'astreinte sont informés de leur programmation individuelle dans un délai raisonnable, fixé à défaut d'accord à quinze jours.</p><p>En fin de mois, l'employeur remet au salarié un récapitulatif du nombre d'heures d'astreinte effectuées ainsi que la compensation correspondante.</p>"
+  },
+  {
+    "question": "La durée du travail : le régime d'équivalence, qu'est-ce que c'est et comment ça marche ?",
+    "reponse": "<p>Le régime d'équivalence constitue un mode spécifique de détermination du temps de travail effectif et de sa rémunération pour des professions et des emplois déterminés comportant des périodes d'inaction.</p><p>Une durée du travail équivalente à la durée légale peut être ainsi instituée par une convention ou un accord de branche étendu. Ces derniers déterminent la rémunération des périodes d'inaction.</p><p>A défaut d'accord, un tel régime peut être mis en place par décret en conseil d'Etat.</p>"
+  },
+  {
+    "question": "La durée du travail : comment sont comptabilisés les heures de travail, est-ce obligatoire ?",
+    "reponse": "<p>Lorsque les salariés d'un atelier, d'un service ou d'une équipe <strong>ne travaillent pas selon le même horaire collectif de travail</strong> affiché, la durée du travail de chaque salarié concerné est décomptée quotidiennement, par enregistrement, selon tous moyens, des heures de début et de fin de chaque période de travail ou par le relevé du nombre d'heures de travail accomplies. Elle est aussi décomptée chaque semaine, par récapitulation selon tous moyens du nombre d'heures de travail accomplies par chaque salarié.</p><p>Exceptions :</p><ul><li>Les modalités de décompte peuvent être prévues par convention ou accord collectif.</li><li>Les salariés au forfait en heures ne sont pas concernés</li></ul><p>Si un horaire collectif est prévu pour l'ensemble des salariés, aucun d'eux ne peut être employé en dehors de cet horaire, sous réserve des dispositions relatives au contingent annuel d'heures supplémentaires, et des heures de dérogation permanente prévues par un décret.</p><p>Le respect d'un horaire collectif n'interdit pas l'intégration dans l'horaire hebdomadaire d'heures supplémentaires ou la fixation de durées quotidiennes de travail dans le respect de dérogations permanentes prévues par un décret.</p><p>Le bon réflexe : Notez vos heures de travail, cela pourra vous être utile en cas de litige.</p>"
+  },
+  {
+    "question": "La durée du travail : Qu'est-ce qu'un accord ARTT (aménagement et réduction du temps de travail) ?",
+    "reponse": "<p>L'aménagement du temps de travail permet le décompte des heures supplémentaires sur une période supérieure à la semaine par accord collectif d'entreprise ou, à défaut, de branche.</p><p>Ce dispositif dérogatoire peut être mis en œuvre sur une période de référence d'un an, pouvant aller jusqu'à 3 ans par accord de branche.</p><p>L'accord collectif doit prévoir :</p><p>- La période de référence ;</p><p>- Les conditions et délais de prévenance des changements de durées et horaires de travail</p><p>- Les conditions de prise en compte, pour la rémunération des salariés, des périodes incomplètes de travail.</p><p>A défaut d'un accord collectif l'employeur peut fixer unilatéralement la période de référence dans la limite de 4 semaines pour les entreprises de 50 salariés et plus, et à 9 semaines pour les entreprises de moins de 50 salariés</p><p>Lorsque la période d'aménagement de la durée du travail est fixée à un an, les heures supplémentaires sont celles accomplies au-delà de 1 607 heures, sauf si l'accord collectif prévoit une limite plus basse.</p>"
+  },
+  {
+    "question": "La durée du travail : Comment sont calcul les heures supplémentaires, quand l'accord prévoit une période d'aménagement d'un an au plus ?",
+    "reponse": "<p>Si l'aménagement se fait sur une période inférieure ou supérieure à un an, les heures supplémentaires sont calculées sur la base d'une durée hebdomadaire moyenne de 35 heures.</p><p>Si la période de référence est inférieure ou égale à un an, l'accord peut prévoir une limite hebdomadaire de la durée du travail à partir de laquelle les heures supplémentaires seront décomptées.</p>"
+  },
+  {
+    "question": "La durée du travail : Comment sont calcul les heures supplémentaires, quand l'accord prévoit une période d'aménagement de plus d'un an?",
+    "reponse": "<p>Si la période de référence est supérieure à un an, l'accord doit notamment fixer une limite hebdomadaire supérieure à 35 heures, au-delà de laquelle les heures de travail constituent des heures supplémentaires payées avec la rémunération du mois considéré.</p>"
+  },
+  {
+    "question": "La durée du travail : comment les salariés sont informés des changements de répartition des heures de travail (quand il y a un accord ARTT) ?",
+    "reponse": "<p>Dans le cadre de cet aménagement du temps de travail. L'employeur affiche le programme indicatif de la répartition des heures de travail sur la période de référence. Les salariés sont informés des changements dans la répartition de cette durée du travail (durée et horaires) « dans un délai raisonnable » prévu par l'accord collectif), ou fixé à 7 jours à défaut d'accord;</p>"
+  },
+  {
+    "question": "La durée du travail : qu'est-ce qu'un forfait ?",
+    "reponse": "<p>Une convention de forfait peut prévoir une durée du travail supérieure à la durée légale (de 35 heures) ou conventionnelle.</p><p>Ce forfait pourra dès lors être établi en heures (sur la semaine, le mois ou l'année) ou en jours (sur l'année).</p><p>La conclusion de forfait en heures ou en jours à l'année est conditionnée à l'existence préalable d'un accord collectif autorisant ce type de forfait.</p>"
+  },
+  {
+    "question": "La durée du travail : le forfait en jours, comment ça marche ?",
+    "reponse": "<p>La convention individuelle de forfait en jours formalise par écrit les conditions les conditions de travail d'un salarié en « forfait jour ».</p><p>L'accord du salarié est obligatoire pour la mise en place d'une telle convention, cette dernière devant être signée.</p><p>Ce type de convention peut être mis en place par accord collectif d'entreprise ou d'établissement ou, à défaut, par une convention ou un accord de branche.</p><p>Une convention individuelle de forfait en jours sur l'année ne pourra être mise en place que pour :</p><ol><li>Les cadres qui disposent d'une autonomie dans l'organisation de leur emploi du temps</li><li>Les salariés dont la durée du temps de travail ne peut être prédéterminée et qui disposent d'une réelle autonomie dans l'organisation de leur emploi du temps.</li></ol><p>Le salarié en forfait jours est tenu de travailler un nombre de jours dans l'année qui ne peut excéder 218. Un accord collectif d'entreprise ou d'établissement (ou, à défaut, une convention ou un accord de branche) peut toutefois fixer un nombre de jours de travail inférieur.</p><p>Le salarié, par la mise en place de ces conventions, n'est pas soumis au respect des durées maximales quotidienne et hebdomadaire de travail mais les règles relatives au repos quotidien et hebdomadaire, aux congés payés et aux jours fériés chômés dans l'entreprise sont maintenues.</p><p>L'employeur doit donc s'assurer régulièrement que la charge de travail du salarié est raisonnable et qu'elle permet une bonne répartition dans le temps de son travail. Ce suivi sera donc notamment assuré :</p><ul><li>Par la mise en place d'un document de contrôle faisant apparaitre le nombre de jours ou demis –journées travaillées.</li><li>Par la vérification de l'adéquation de la charge de travail avec les temps de repos hebdomadaire et quotidiens</li></ul><p>- Par la réalisation d'un entretien annuel portant sur l'équilibre entre vie privée et vie professionnelle, la charge de travail, l'organisation du travail et sa rémunération.</p>"
+  },
+  {
+    "question": "La durée du travail : le forfait en heures, comment ça marche ?",
+    "reponse": "<p>Cette convention permet de prendre en compte les périodes de forte activité de l'entreprise en intégrant, dans la durée de travail du salarié, des heures supplémentaires.</p><p>Tout comme la convention en jours, l'accord et la signature du salarié sont obligatoires.</p><p>Le forfait en heures est hebdomadaire, mensuel ou annuel.</p><p>Tout salarié peut de bénéficier d'une convention individuelle de forfait en heures prévue sur la semaine ou sur le mois.</p><p>Par contre une convention individuelle de forfait en heures sur l'année n'est envisageable uniquement que :</p><p>. Pour les cadres non soumis à l'horaire collectif en vigueur dans l'atelier, dans le service ou applicable à l'équipe auquel ils sont intégrés ;</p><p>. Pour salariés ayant une réelle autonomie dans l'organisation de leur emploi du temps.</p><p>. Un accord collectif d'entreprise ou d'établissement (ou, à défaut, une convention ou un accord de branche) doit prévoir la mise en place de forfaits en heures sur l'année pour que ces conventions individuelles soient réalisées.</p><p>La durée de travail est fixée dans la convention individuelle de forfait et doit prendre en compte les durées maximales quotidiennes et hebdomadaires de travail.</p><p>La rémunération fixée au contrat doit intégrer les majorations pour les heures supplémentaires contenues dans le forfait.</p><p>Le salarié bénéficie en outre toujours des garanties légales prévues en matière de repos quotidien et hebdomadaire, de congés payés et de jours fériés chômés dans l'entreprise.</p><p>Si le salarié effectue des heures supplémentaires au-delà du forfait, celles-ci sont rémunérées dans les conditions habituelles.</p>"
+  },
+  {
+    "question": "La durée du travail : qu'est-ce que le travail du dimanche ?",
+    "reponse": "<p>Le dimanche est considéré comme un jour de repos prévu par la loi.</p><p>Toutefois ce jour peut être travaillé lorsqu'une dérogation au principe de repos dominical est ouverte à l'entreprise par le Code du Travail. Ces dérogations varient selon le secteur professionnel de l'établissement.</p>"
+  },
+  {
+    "question": "La durée du travail : dans quels cas le travail du dimanche est-il autorisé ?",
+    "reponse": "<p>Contraintes de la production, de l'activité ou les besoins du public</p><p>Le dimanche peut être travaillé dans un établissement si les contraintes de la production, de l'activité ou les besoins du public rendent le fonctionnement ou l'ouverture nécessaire. Cela touche en particulier les établissements de santé et de soins, les activités récréatives, culturelles et sportives (spectacles, musées, expositions, casinos, parcs d'attractions...) ou encore les entreprises de journaux et d'information. Obligation de travail du dimanche A la demande de l'employeur, le salarié ne peut refuser le travail du dimanche dans le cas de cette dérogation permanente.</p><p>Rémunération</p><p>Il n'existe pas légalement, de majorations pour les heures travaillées le dimanche dans le cadre de cette dérogation permanente, sauf si des dispositions conventionnelles ou collectives le prévoient ou en cas d'accord de l'employeur. De la même manière, il n'existe pas de mesures compensatoires, sauf si des dispositions conventionnelles ou collectives le prévoient ou en cas d'accord de l'employeur.</p><p>Dérogation prévue par convention ou accord collectif</p><p>Un établissement peut être autorisé, par la convention collective, à déroger au repos dominical. Dans ce cas les contreparties, notamment salariales, sont fixées par la convention collective.</p>"
+  },
+  {
+    "question": "La durée du travail : le travail du dimanche est-il autorisé pour les apprentis?",
+    "reponse": "<p>Seuls les apprentis de certains secteurs peuvent travailler le dimanche, les moins de 18 ans, au contraire, n'ont pas cette possibilité.</p>"
+  },
+  {
+    "question": "La durée du travail : le travail du dimanche est-il autorisé dans les commerces alimentaires?",
+    "reponse": "<p>Dans le secteur du commerce, des dérogations au repos dominical sont également prévues.</p><p>Selon le type de commerce, le travail du dimanche peut être obligatoire ou facultatif, et impose dans certains cas des mesures compensatoires.</p><p>A) Commerces fabriquant sur place des produits alimentaires destinés à la consommation immédiate</p><p>Cela concerne particulièrement les boulangeries, pâtisseries.</p><p>Les mêmes règles que celles relatives aux établissements ayant des contraintes nécessitant une ouverture le dimanche s'appliquent.</p><p>Par conséquent, il y a un caractère obligatoire du travail du dimanche pour le travailleur, qui ne pourra bénéficier de majorations et de mesures compensatoires (sauf dispositions conventionnelles ou collectives plus favorables).</p><p>B) Autres commerces alimentaires</p><p>Une distinction est à établir entre les surfaces de vente supérieures et inférieures à 400 m2.</p><ol><li>Surfaces de vente supérieures à 400 m2</li></ol><p>Il y a une obligation de travailler le dimanche pour ces établissements, ce jusqu'à 13 heures maximum.</p><p>Toutefois, il est possible de travailler aussi à partir de 13 heures si le commerce est situé dans une zone touristique internationale (ZTI) ou dans une gare connaissant une affluence exceptionnelle.</p><p>Dans ce cas, à partir de 13 heures, le travailleur bénéficie des conditions spécifiques applicables aux commerces situés dans l'une de ces zones.</p><p>Rémunération et mesures compensatoires</p><p>Le salaire doit être majoré d'au moins 30 % et le salarié bénéficier d'une journée entière de repos. Cette journée est fixée par roulement et par quinzaine.</p><ol><li>Surfaces de vente inférieures à 400 m2</li></ol><p>Les mêmes dispositions que les surfaces de vente supérieures à 400 m2 s'appliquent en matière de possibilité d'ouverture (obligation de travailler le dimanche, ce jusqu'à 13 heures maximum, possibilité de travailler aussi à partir de 13 heures si le commerce est situé dans une zone touristique internationale (ZTI) ou dans une gare connaissant une affluence exceptionnelle, et bénéfice dans ce cas des conditions spécifiques applicables aux commerces situés dans l'une de ces zones).</p><p>Rémunération et mesures compensatoires</p><p>Il n'est pas prévu de majoration de salaire pour les surfaces inférieures à 400m2 mais une journée entière de repos doit être attribuée. Cette journée est fixée par roulement et par quinzaine.</p>"
+  },
+  {
+    "question": "La durée du travail : le travail du dimanche est-il obligatoire pour les salariés dans les Hôtels, cafés et restaurant ?",
+    "reponse": "<p>Il y a une obligation pour le salarié de travailler le dimanche. Il n'est pas prévu de majoration de salaire ou de mesures compensatoires sauf si des dispositions conventionnelles ou collectives le prévoient ou en cas d'accord de l'employeur</p>"
+  },
+  {
+    "question": "La durée du travail : le travail du dimanche est–il permis dans le secteur du commerce non-alimentaire ?",
+    "reponse": "<p>Dans ce type de commerces, les jeunes de moins de 18 ans ne peuvent travailler le dimanche. Des dérogations existent toutefois pour les apprentis dans certains secteurs.</p><p>A) Contraintes liées à la production, l'activité ou aux besoins du public</p><p>Cela touche particulièrement certains types d'établissements (bricolage, fleuriste etc.);</p><p>Il y a une obligation pour le salarié de travailler le dimanche;</p><p>Rémunération et mesures compensatoires</p><p>Aucune majoration de salaire, ni aucune mesure compensatoire n'est prévue légalement, sauf si des dispositions conventionnelles ou collectives le prévoient ou en cas d'accord de l'employeur.</p><p>B) Commerce situé dans une zone touristique internationale (ZTI)</p><p>Il est possible de refuser de travailler le dimanche. Ce refus ne constitue pas une faute ou un motif de licenciement.</p><p>Dans le cas contraire, le travailleur doit donner un accord écrit qui peut être remis en cause s'il ne souhaite plus travailler le dimanche ou s'il souhaite travailler moins souvent le dimanche.</p><p>Rémunération et mesures compensatoires</p><p>Le salaire doit être majoré et le taux est défini par un accord collectif.</p><p>Cet accord doit en outre :</p><ol><li>Permettre de faciliter la conciliation entre la vie professionnelle et la vie personnelle ;</li><li>Compenser les éventuelles charges induites pour la garde d'enfants ;</li><li>Prendre en compte l'évolution de la situation personnelle du travailleur.</li></ol><p>C) Commerce situé dans une zone touristique (ZT) définie par arrêté préfectoral</p><p>Les règles d'application sont les mêmes que pour les ZTI.</p><p>Attention tout de même : les dispositions prévues pour le travail dominical dans un commerce situé dans les anciennes communes ou zones touristiques, dans les ZT ne sont applicables qu'à partir du 1er août 2017.</p><p>D) Commerce situé dans une zone commerciale (ZC) définie par arrêté préfectoral</p><p>Les règles d'application sont les mêmes que pour les ZTI et les ZT</p><p>Attention toutefois : les dispositions prévues dans les zones commerciales pour le travail du dimanche dans un commerce situé dans un ancien périmètre d'usage de consommation exceptionnelle ne sont applicables qu'à partir du 1er août 2017 (sauf si c'est une décision de l'employeur qui fixe les conditions de travail dominical).</p><p>E) Commerce situé dans une gare connaissant une affluence exceptionnelle</p><p>Les règles d'application sont les mêmes que pour les ZTI et les ZT et les ZC</p><p>F) Établissement bénéficiant d'une dérogation préfectorale au repos dominical</p><p>Mise en place : Une dérogation préfectorale est accordée, pour 3 ans maximum, s'il est établi que le repos simultané, le dimanche, de tous les salariés d'un établissement préjudiciable au public ou compromet le fonctionnement normal de l'établissement.</p><p>Il n'y a aucune obligation de travailler le dimanche dans ce cas, mais en cas d'accord, un écrit doit être réalisé. Le salarié peut revenir sur cet accord et souhaiter ne plus travailler le dimanche (ou moins souvent).</p><p>L'accord peut fixer les conditions d'un changement d'avis du salarié (par exemple, démarche pour prévenir l'employeur, délai à respecter...).</p><p>Rémunération et mesures compensatoires</p><p>Il doit y avoir une majoration du salaire dont le taux est fixé par l'accord collectif. Ce même accord fixe des contreparties au travail du dimanche et prend en compte l'évolution de la situation personnelle du salarié.</p><p>Contreparties fixées par l'employeur et approuvées par referendum</p><p>S'il n'y a pas d'accord collectif définissant les contreparties, l'employeur doit demander chaque année au travailleur s'il ne souhaite plus travailler le dimanche (ou moins souvent).</p><p>Il est également possible de demander à ne pas travailler 3 dimanches au choix par an, à condition d'en informer l'employeur au moins 1 mois à l'avance.</p><p>Rémunération et mesures compensatoires</p><p>La rémunération doit être au moins égale au double de la rémunération perçue pour une durée de travail équivalente.</p><p>La décision unilatérale de l'employeur doit prévoir des contreparties au travail dominical ainsi qu'une période de repos (dont la durée est fixée par la décision).</p><p>G) Commerce concerné par les dérogations du maire</p><p>Le maire peut prévoir des dérogations au repos dominical (communément appelés les « dimanches du maire ») dans les commerces de détail où tous les salariés sont habituellement en repos le dimanche.</p><p>Ces dérogations ne peuvent pas dépasser 12 dimanches par an.</p><p>Les salariés peuvent refuser de travailler le dimanche. Ce refus ne peut en aucun cas constituer une faute ou un motif de licenciement. Dans le cas contraire ou l'employé donne son accord, celui-ci doit être écrit.</p><p>Rémunération et mesures compensatoires</p><p>La rémunération est au moins doublée par rapport à la rémunération normalement due pour une durée équivalente et le salarié bénéficie également d'un repos supplémentaire équivalent en temps (une journée de travail le dimanche équivaut à une journée de repos en compensation).</p>"
+  },
+  {
+    "question": "La durée du travail : qu'est-ce que le travail de nuit ?",
+    "reponse": "<p>Le recours au travail régulier de nuit doit être exceptionnel et suppose la conclusion préalable d'une convention ou d'un accord collectif de branche étendu ou d'une convention ou accord d'entreprise ou d'établissement.</p><p>A défaut d'un tel accord collectif, l'inspecteur de travail peut toutefois autoriser sous conditions l'affectation de travailleurs à des postes de nuit, à la demande de l'employeur, si ce dernier a engagé des négociations sérieuses et loyales sur ce point.</p><p>Définition du travail de nuit</p><p>Est considéré comme travail de nuit tout travail entre 21 heures et 6 heures.</p><p>Par convention ou accord collectif, cette période 21h-6h peut être remplacée par une autre période, de 9 heures consécutives comprise dans la plage horaire entre 21 heures et 7 heures, et incluant nécessairement l'intervalle compris entre minuit et 5 heures.</p><p>Sans accord, cette autre période peut être demandée par l'employeur auprès de l'inspecteur du travail. Si ce dernier n'a pas répondu dans les 30 jours, la demande d'autorisation est acceptée.</p>"
+  },
+  {
+    "question": "La durée du travail : qu'est-ce que le travail de soirée ?",
+    "reponse": "<p>On parle alors de travail en soirée pour les commerces de vente de détail situés dans les zones touristiques internationales (ZTI), où le début de la période de nuit peut être reporté jusqu'à minuit</p>"
+  },
+  {
+    "question": "La durée du travail : dans quel cas parle-ton de travailleur de nuit ?",
+    "reponse": "<p>Pour être considéré comme travailleur de nuit le salarié il faut accomplir 2 fois au minimum par semaine 3 heures durant la période de travail de nuit définie précédemment ou 270 heures de travail de nuit pendant une période 12 mois consécutifs.</p>"
+  },
+  {
+    "question": "La durée du travail : les jeunes de moins de 18 ans peuvent-ils travailler de nuit ?",
+    "reponse": "<p>A noter également que le travail de nuit des jeunes de moins de 18 ans est interdit sauf dérogation.</p>"
+  },
+  {
+    "question": "La durée du travail : les femmes enceintes peuvent-elles travailler de nuit ?",
+    "reponse": "<p>Les salariées enceintes sont quant à elles autorisées à ne pas travailler de nuit.</p>"
+  },
+  {
+    "question": "La durée du travail : combien de temps par jour peut-on travailler de nuit ?",
+    "reponse": "<p>La durée quotidienne de travail de nuit ne peut pas dépasser 8 heures consécutives</p><p>Des dérogations sont toutefois possibles, par convention ou accord collectif de branche étendu ou, en cas de circonstances exceptionnelles, après autorisation de l'inspecteur du travail. Si l'inspecteur du travail n'a pas répondu dans les 15 jours, la demande de dérogation est acceptée.</p><p>Attention : si l'inspecteur du travail n'a pas répondu dans un délai de 30 jours, la demande de l'employeur est acceptée.</p><p>Attention : dans certains secteurs spécifiques la période de travail de nuit est fixée entre minuit et 7 heures et une autre période de travail de nuit peut être prévue pour ces secteurs, par convention ou accord collectif. Elle doit également comporter la période entre minuit et 5 heures.</p><p>Attention : une convention ou l'accord collectif applicable peut prévoir une autre période de référence et un nombre minimal d'heures de travail de nuit différents.</p>"
+  },
+  {
+    "question": "La durée du travail : le salarié peut –il refuser de travailler de nuit ?",
+    "reponse": "<p>Le salarié peut refuser de travailler de nuit s'il prouve qu'il est incompatible avec ses obligations familiales. Son refus ne peut constituer dans ce cas précis une faute ou un motif de licenciement.</p>"
+  },
+  {
+    "question": "La durée du travail : quelles sont les contreparties du travail de nuit ?",
+    "reponse": "<p>Le travailleur de nuit doit bénéficier d'une contrepartie en repos. Il peut bénéficier d'une compensation financière si des dispositions conventionnelles le prévoient ou que l'employeur l'accepte.</p>"
+  },
+  {
+    "question": "La durée du travail : Quel suivi médical pour le travailleur de nuit ?",
+    "reponse": "<p>Le travailleur de nuit bénéficie d'un suivi individuel adapté qui débute avant l'affectation du salarié sur le poste de nuit et se poursuit à intervalles réguliers. La périodicité est fixée par le médecin du travail.</p><p>Le salarié souhaitant occuper ou reprendre un poste de jour dans le même établissement (ou, à défaut, dans la même entreprise), est prioritaire pour l'attribution d'un emploi correspondant à sa catégorie professionnelle ou un emploi équivalent.</p>"
+  },
+  {
+    "question": "La gestion des absences : que faire en cas d'absence répétées et/ou irrégulières ?",
+    "reponse": "<p>Au préalable, l'employeur doit s'assurer qu'il ne s'agit pas d'une autorisation d'absence, prévue notamment pour les évènements familiaux.</p><p>Le salarié a contractuellement, le devoir d'informer l'employeur de son absence et de ses raisons. S'agissant des arrêts de travail, il disposer d'un délai « raisonnable » pour faire parvenir son arrêt de travail à l'employeur. Il convient donc d'attendre la fin de ce délai avant toute action.</p><p>Sans nouvelles du salarié, l'employeur peut lui envoyer une mise en demeure de revenir travailler.</p><p>En cas de non-retour du salarié, il peut prendre des mesures pour sanctionner le salarié, cela pouvant aller jusqu'au licenciement.</p>"
+  },
+  {
+    "question": "La gestion des absences : que se passe t'il en cas de maladie du salarié ?",
+    "reponse": "<p>Après un congé de maternité, une absence pour cause de maladie professionnelle ou une absence d'au moins trente jours pour cause d'accident du travail, de maladie ou d'accident non professionnel, le salarié bénéficie d'un examen de reprise du travail par le médecin du travail. En cas de doute sur son état de santé, l'employeur peut demander une contre visite en mandatant le médecin de son choix.</p><p>L'employeur pourra toutefois procéder à un licenciement si l'absence prolongée entraîne un réel dysfonctionnement pour l'entreprise.</p>"
+  },
+  {
+    "question": "La gestion des absences : Comment réagir en cas d'abandon de poste de son salarié ?",
+    "reponse": "<p>En cas d'abandon de poste, l'employeur ne doit pas présumer le salarié comme démissionnaire mais préférer engager une procédure pour le licencier après l'avoir mis en demeure de revenir travailler.</p>"
+  },
+  {
+    "question": "Congés payés : qui a le droit aux congés payés ?",
+    "reponse": "<p>Tout salarié, et ce dès son premier jour de travail.</p>"
+  },
+  {
+    "question": "Congés payés : quel risque pour l'employeur qui ne respecte pas les dispositions sur les congés payés ?",
+    "reponse": "<p>En cas de non-respect de la législation concernant les congés payés, l'employeur encourt une amende contraventionnelle de 1500 €. Elle est à payer autant de fois qu'il y a de salariés concernés.</p>"
+  },
+  {
+    "question": "Congés payés : les congés payés peuvent-ils être reportés d'une année sur l'autre ?",
+    "reponse": "<p>Aucun report de congés payés n'est possible d'une année sur l'autre sauf si, en application d'une disposition légale, la durée du travail d'un salarié est décomptée à l'année et qu'une convention ou un accord d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche prévoit que les congés ouverts au titre de l'année de référence peuvent faire l'objet de reports.</p><p>Ces reports peuvent être effectués jusqu'au 31 décembre de l'année suivant celle pendant laquelle la période de prise de ces congés a débuté.</p>"
+  },
+  {
+    "question": "Congés payés : Comment prendre ses congés payés ?",
+    "reponse": "<p>En principe, c'est l'employeur qui décide des dates de départ, mais bien souvent, dans la pratique, le choix est laissé aux salariés eux-mêmes. L'ordre des départs doit être respecté et affiché. Les congés sont pris dans une période qui comprend dans tous les cas la période du 1er mai au 31 octobre de chaque année.</p>"
+  },
+  {
+    "question": "Congés payés : quelle est la durée maximale possible pour un congé ?",
+    "reponse": "<p>La durée des congés pris en une seule fois ne peut dépasser 24 jours ouvrables (des dérogations individuelles existent) sans être inférieure à 12 jours ouvrables continus. Par principe, la 5ème semaine doit être prise séparément. Selon le fractionnement, des jours complémentaires de congés sont possibles.</p>"
+  },
+  {
+    "question": "Congés pays : mon employeur peut-il refuser une demande de congés ?",
+    "reponse": "<p>Un employeur peut décider de refuser une demande de congés. En retour, il est possible pour le salarié de contester cette décision devant le conseil des prud'hommes qui statuera en référé (article L.3142-3 du code du travail).</p>"
+  },
+  {
+    "question": "Congés payés : quels sont les obligations du salarié en matière de congés payés ?",
+    "reponse": "<p>Le salarié doit respecter les dates de congés prévus et ne pas exercer d'activité salariée pendant son congé.</p>"
+  },
+  {
+    "question": "Congés payés : quels sont les obligations de l'employeur en matière de congés payés ?",
+    "reponse": "<p>L'employeur ne peut fractionner les congés compris entre 12 et 24 jours ouvrables sans l'accord du salarié.</p><p>Une des fractions doit alors être au moins égale à 12 jours ouvrables continus pris entre deux jours de repos hebdomadaires.</p><p>Un accord d'entreprise ou d'établissement ou, à défaut, une convention ou un accord de branche fixe :</p><p>1° La période de prise des congés ;</p><p>2° L'ordre des départs pendant cette période ;</p><p>3° Les délais que doit respecter l'employeur s'il entend modifier l'ordre et les dates de départs.</p><p>A défaut, il revient à l'employeur de déterminer la période et l'ordre des départs après avis du Comité d'Entreprise ou des délégués du personnel, si ceux-ci existent au sein de l'entreprise</p>"
+  },
+  {
+    "question": "Congés payés : comment calculer les congés payés ?",
+    "reponse": "<p>Le salarié acquiert des droits à congés, tout au long de l'année à hauteur de 2,5 jours par mois. Cela revient à 5 semaines de congés payés pour une année complète travaillée.</p>"
+  },
+  {
+    "question": "Congés payés : Si mon conjoint travaille dans mon entreprise, peut-on poser nos congés ensemble ?",
+    "reponse": "<p>Les conjoints qui travaillent dans la même entreprise ont droit à un congé simultané.</p>"
+  },
+  {
+    "question": "Congés payés : que se passe t-il si je suis en maladie alors que je dois partir en congés ?",
+    "reponse": "<p>Selon la cour européenne de justice, le salarié qui est empêché de prendre un congé payé en raison de la maladie peut prétendre de droit à son report.</p>"
+  },
+  {
+    "question": "Congés payés : les congés payés compte-t-il dans la durée du préavis ?",
+    "reponse": "<p>Les journées de congés ne peuvent compter dans les journées de préavis (sauf accord des parties).</p>"
+  },
+  {
+    "question": "Rémunération : Comment fixer la rémunération du salarié",
+    "reponse": "<p>La rémunération ne peut être inférieure au SMIC ou au salaire minimal prévu dans les conventions collectives.</p><p>Le montant de la rémunération dépend de la convention collective en fonction, et notamment de la classification du salarié.</p>"
+  },
+  {
+    "question": "Rémunération : Je n'ai pas reçu mes bulletins de salaire est-ce normal ?",
+    "reponse": "<p>Si l'employeur ne remet pas le bulletin de paie au salarié, il encourt une amende de 450 € par bulletin non transmis.</p>"
+  },
+  {
+    "question": "Rémunération : quelles sont les obligations concernant le bulletin de salaire ?",
+    "reponse": "<p>Au moment de verser le salaire, un bulletin de paie doit être adressé au salarié à titre de preuve, celui-ci est quérable mais possibilité est ouverte par le Code du Travail d'une remise dudit bulletin par voie électronique. (Dans des conditions de nature à garantir l'intégrité des données)</p><p>Un double du bulletin de paie doit être conservé par l'employeur pendant 5 ans minimum.</p><ol><li>Certaines mentions du bulletin de salaire sont obligatoires et d'autres mentions sont interdites : il ne doit pas figurer dans le bulletin de paie l'exercice du droit de grève et l'activité de représentation des salariés.</li></ol><p>A noter qu'il existe des dispositifs de simplification administrative (TESE) : www.letese.urssaf.fr</p>"
+  },
+  {
+    "question": "Rémunération : Que risque l'employeur qui ne remet pas au salarié son bulletin de salaire ?",
+    "reponse": "<p>Si l'employeur ne remet pas le bulletin de paie au salarié, il encourt une amende de 450 € par bulletin non transmis.</p>"
+  },
+  {
+    "question": "Affichage obligatoire : qu'est-ce que l'affichage obligatoire dans l'entreprise ?",
+    "reponse": "<p>Le Code du Travail prévoit l'employeur a pour obligation d'afficher un certain nombre d'informations relatives, notamment au fonctionnement de son établissement et aux règles applicables dans celui-ci.</p>"
+  },
+  {
+    "question": "Affichage obligatoire : quels documents sont à afficher dans l'entreprise?",
+    "reponse": "<p>L'affichage obligatoire à destination des salariés doit être installé dans un lieu régulièrement visible par les salariés et distinct d'autres affichages (il ne doit pas être parasité par des petites annonces…) Les documents et informations dont l'affichage présente un caractère obligatoire sont les suivants :</p><ol><li>L'interdiction de fumer dans les locaux de l'entreprise ;</li><li>Les horaires de travail et de repos (en cas d'horaires collectifs);</li><li>Les affichages électoraux ;</li><li>L'adresse, nom et téléphone de l'inspecteur du travail ;</li><li>L'adresse et téléphone du médecin du travail et des services de secours d'urgence ;</li><li>L'intitulé et les modalités de consultation de la convention collective applicable ;</li><li>Le rappel des textes applicables concernant l'égalité professionnelle et l'égalité de rémunération femme homme ;</li><li>Le rappel des textes sur le harcèlement et les discriminations ;</li><li>La liste des membres du CHSCT (pour les entreprises d'au moins 50 salariés) ;</li><li>L'avis présentant les modalités d'accès au document unique d'évaluation des risques ;</li><li>La consigne incendie (applicable à des établissements spécifiques) ;</li><li>Les panneaux syndicaux (le cas échéant) ;</li><li>La procédure d'organisation de l'élection des délégués du personnel (pour les entreprises de plus de 11 salariés, ou du Comité d'Entreprise à partir de 50 salariés) ;</li><li>Le règlement intérieur pour les entreprises de plus de 20 salariés ;</li><li>Les noms des membres du CHSCT et l'emplacement de leur poste de travail (à partir de plus de 50 salariés) ;</li><li>Les accords de participation (pour les entreprises de plus de 50 salariés).</li></ol><p>Tout autre document utile peut être affiché dans les locaux de l'entreprise.</p><p>Pour assurer une parfaite information, il convient de s'assurer que ces textes soient actualisés.</p>"
+  },
+  {
+    "question": "Affichage obligatoire : quels sont les risques pour l'employeur qui ne respecte pas l'obligation obligatoire ?",
+    "reponse": "<p>Le non-respect de la mise en place de ces affichages est sanctionné financièrement. Les amendes s'élèvent de 450 à 1 500 € pour défaut d'affichage dans l'entreprise, sachant que l'amende est doublée en cas de récidive pour certains cas.</p>"
+  },
+  {
+    "question": "Registres : Pourquoi faut-il tenir des registres dans l'entreprise ?",
+    "reponse": "<p>L'employeur est contraint de tenir à jour certains registres obligatoires dans son entreprise. Ils seront nécessaires lors de la visite de l'inspecteur du travail et pour prouver la bonne foi de l'employeur en cas de litiges.</p>"
+  },
+  {
+    "question": "Registres : quels sont les principaux registres à tenir ?",
+    "reponse": "<p>Ces registres sont obligatoires dans les entreprises :</p><ul><li>Le registre unique du personnel</li><li>Le registre des contrôles de sécurité</li></ul><p>D'autres registres sont obligatoires au regard de la situation de l'entreprise :</p><ul><li>Le registre des accidents de travail bénins</li><li>Le registre des délégués du personnel</li></ul>"
+  },
+  {
+    "question": "Registres : comment remplir le RUP ?",
+    "reponse": "<p>Le registre unique du personnel répertorie chaque salarié (nom et prénom, sexe et date de naissance, nationalité, emploi, qualification, adresse ; à temps partiel, en CDD, en intérim, en apprentissage, mise à disposition ou non).</p><p>Il indique en outre sa date d'arrivée puis de sortie de l'entreprise. Le registre doit être rédigé de façon chronologique, et de manière à ce qu'aucune modification ultérieure ne puisse être réalisée. Aucun formalisme n'est imposé par le Code du travail mais ce dernier prévoit qu'une version informatique puisse se substituer à une version papier. Dans ce dernier cas Il doit y avoir des garanties de contrôle équivalent au support papier et l'avis des délégués du personnel de requis, tout comme l'autorisation à la CNIL. Le registre doit être conservé pendant 5 ans après le départ des salariés. Il est tenu à la disposition, notamment, des délégués du personnel et de l'Inspecteur du Travail</p>"
+  },
+  {
+    "question": "Registres : quels sont les risques pour l'employeur qui ne tient pas correctement son RUP ?",
+    "reponse": "<p>Le Code du travail prévoit les mentions obligatoirement renseignées dans le registre du personnel et des sanctions sont applicables pour d'éventuels manquements (750 euros d'amende appliquée autant de fois qu'il y a de personnes concernées).</p>"
+  },
+  {
+    "question": "Registres : qu'est-ce que le registre des contrôles de sécurité ?",
+    "reponse": "<p>Ce registre atteste de la régularité des vérifications périodiques, qui ont été faites pour assurer la sécurité dans l'entreprise. Tel est le cas de l'extincteur... La conservation des éléments dans le registre est d'au moins 5 ans.</p>"
+  },
+  {
+    "question": "Registres : qu'est-ce que le registre des accidents de travail bénins ?",
+    "reponse": "<p>Pour les accidents n'entraînant ni arrêt de travail, ni soins médicaux, l'employeur est autorisé à remplacer la déclaration d'accident du travail par une simple inscription dans ce registre. Ce document est mis en place après autorisation de la CARSAT, et nécessite la présence d'un médecin ou d'un infirmier. Le CHSCT doit être informé de chaque accident. Enfin un poste de secours d'urgence doit être établi dans l'établissement</p>"
+  },
+  {
+    "question": "Registres : qu'est-ce que le registre des délégués du personnel (dans les entreprises d'au moins 11 salariés) ?",
+    "reponse": "<p>Dans les entreprises où le Comité Social Economique n'a pas encore été mis en place.</p><p>Il retranscrit toutes les questions des délégués du personnel. L'employeur est tenu de répondre par écrit à la suite des réunions. Ce registre est tenu à la disposition de l'Inspecteur du Travail et des délégués du personnel en permanence mais également des salariés qui peuvent le consulter une journée tous les 15 jours.</p>"
+  },
+  {
+    "question": "Règlement intérieur : Qu'est-ce qu'un règlement intérieur ?",
+    "reponse": "<p>Le règlement intérieur encadre la vie des salariés dans l'entreprise et participe à garantir la sécurité au travail. Le règlement intérieur est un document écrit rédigé en français par lequel l'employeur fixe un cadre de vie professionnel devant être respecté par son personnel.</p>"
+  },
+  {
+    "question": "Règlement intérieur : Le règlement intérieur est-il obligatoire ?",
+    "reponse": "<p>Le règlement intérieur est obligatoire lorsque l'entreprise compte au moins 20 salariés. En dessous de ce seuil, il est recommandé d'en établir un, sous forme de note de service. Pour être valable, il devra également respecter toutes les formalités pour sa mise en place. En cas de création d'entreprise qui compte déjà 20 salariés, l'entreprise a 3 mois pour établir le règlement intérieur.</p>"
+  },
+  {
+    "question": "Règlement intérieur : quel est le contenu du règlement intérieur ?",
+    "reponse": "<p>Le règlement intérieur indique les mesures :</p><ol><li>En matière de discipline en précisant l'échelle des sanctions ;</li><li>En matière des droits à la défense des salariés dans l'entreprise et à la protection des victimes et témoins de harcèlement sexuel ou moral ;</li><li>En matière d'hygiène et de sécurité. Il convient dans cette partie de rappeler par exemple les textes concernant l'interdiction de fumer dans les locaux à usage collectif et le port éventuel d'une tenue spécifique.</li></ol><p>Les notes de services ou tout autre document relevant prises pour application et complémentaires au règlement intérieur sont considérés comme des adjonctions à celui-ci et doivent donc être jointes au règlement.</p>"
+  },
+  {
+    "question": "Règlement intérieur : comment mettre en place un règlement intérieur ?",
+    "reponse": "<p>Le règlement intérieur est établi par l'employeur.</p><p>Avant de pouvoir s'appliquer, il est soumis à certaines formalités :</p><p>• il doit être consulté par le CSE, ou le comité d'entreprise (ou à défaut par les délégués du personnel) pour avis. Le Comité d'Hygiène de sécurité et des conditions de travail, s'il existe, doit être consulté sur les dispositions concernant l'hygiène et la sécurité;</p><p>Un procès-verbal de réunion est alors établi.</p><p>• Un exemplaire doit être déposé au greffe du Conseil de Prud'hommes.</p><p>• Il doit être affiché dans un endroit visible de tous dans l'entreprise.</p><p>• L'employeur doit envoyer les avis des représentants du personnel et deux exemplaires du règlement intérieur à l'inspection du travail qui vérifie la légalité du contenu.</p><p>Le règlement intérieur s'applique après un délai d'au moins un mois à compter de la dernière formalité de dépôt et d'affichage.</p>"
+  },
+  {
+    "question": "Règlement intérieur : Que risque l'employeur en l'absence de règlement intérieur ?",
+    "reponse": "<p>Le non-respect de la législation sur le règlement intérieur, l'employeur encourt une contravention de 750 €.</p>"
+  },
+  {
+    "question": "Règlement intérieur : Qui contrôle le contenu du RI ?",
+    "reponse": "<p>L'inspecteur du travail dispose d'un pouvoir de contrôle permanent : il peut donc intervenir à tout moment sur le contenu du règlement intérieur.</p>"
+  },
+  {
+    "question": "Règlement intérieur : Comment assurer la validité du règlement intérieur ?",
+    "reponse": "<p>Le règlement intérieur doit être affiché en permanence dans l'entreprise dans un endroit visible par les salariés. Pour s'en assurer, il est recommandé de le placer dans un tableau sous clé.</p><p>Le règlement intérieur s'impose au salarié sans qu'il soit nécessaire de lui faire signer.</p><p>La signature de son contrat de travail suppose le respect du règlement intérieur.</p><p>Pour les personnes extérieures qui viennent travailler dans l'entreprise, ils doivent respecter uniquement les dispositions relatives à l'hygiène et la sécurité.</p>"
+  },
+  {
+    "question": "Règlement intérieur : Comment modifier le règlement intérieur ?",
+    "reponse": "<p>Les formalités pour modifier le règlement intérieur sont les mêmes que celles pour le mettre en place.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : qu'est-ce que le droit disciplinaire ?",
+    "reponse": "<p>Pour assurer la discipline sur le lieu de travail, l'employeur peut prononcer des sanctions disciplinaires, contrôler et surveiller son personnel, le tout sous certaines conditions. Le droit disciplinaire apparaît dès lors dans l'entreprise quand un salarié a commis une faute. La faute doit être imputable au salarié et l'employeur doit être en mesure de détenir des éléments prouvant la réalité de la faute. Le droit disciplinaire est exercé par l'employeur dans le cadre de son pouvoir de direction. La discipline est un des thèmes qui doit être régi par le règlement intérieur ou par une note de service.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : qu'est-ce que qu'une faute ?",
+    "reponse": "<p>La faute doit être imputable au salarié et l'employeur doit être en mesure de détenir des éléments prouvant la réalité de la faute. La faute est à distinguer de l'erreur professionnelle.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : Quand sanctionner ?",
+    "reponse": "<p>L'employeur a un délai de deux mois à compter du moment où il a eu une connaissance exacte des faits fautifs pour sanctionner le salarié.</p><p>L'employeur ne peut prononcer qu'une sanction par fait fautif.</p><p>Exemple : un salarié sanctionné par une mise à pied ne pourra pas, pour le même fait, être licencié.</p><p>L'employeur peut toutefois prendre en compte des faits fautifs déjà sanctionnés précédemment pour sanctionner plus lourdement le salarié d'où l'utilité de conserver les écrits à titre de preuves.</p><p>L'employeur doit sanctionner son salarié proportionnellement à la gravité de la faute commise. En conséquence, il n'a pas à respecter un ordre de sanction.</p><p>Exemple : un salarié qui a volé du matériel de l'entreprise pour une somme conséquente peut être licencié alors même que c'est son premier vol.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : quelle est l'échelle des sanctions dont dispose l'employeur ? Quelles sanctions ?",
+    "reponse": "<p>On distingue les réprimandes et mises en gardes orales des sanctions qui doivent être écrites.</p><p>L'employeur doit choisir la sanction adéquate, c'est-à-dire celle proportionnelle à la gravité de la faute commise par le salarié. En effet, pour être valable, elle ne doit pas être abusive.</p><p>Les différents types de « sanctions » sont les suivants :</p><p>. L'avertissement ou le blâme : il se matérialise par une lettre écrite dans laquelle l'employeur rappelle les faits reprochés et précise qu'il s'agit d'un avertissement.</p><p>Exemple : retards répétés, non-respect des consignes de sécurité…</p><p>. La mise à pied disciplinaire : le contrat de travail est alors suspendu ainsi que la rémunération du salarié. La lettre notifiant la mise à pied disciplinaire doit en indiquer la durée.</p><p>Exemple : détournement du matériel de l'entreprise pour un usage personnel etc.</p><p>. Le licenciement disciplinaire : c'est la sanction sans retour. Il peut être prononcé pour faute constitutive d'une cause réelle et sérieuse ou pour faute grave ou lourde avec des conséquences financières différentes pour le salarié. L'employeur doit respecter scrupuleusement la procédure de licenciement pour motif personnel.</p><p>Exemple de licenciement pour faute pour cause réelle et sérieuse : propos diffamants du salarié à l'égard du chef d'entreprise créant un trouble pour le fonctionnement de l'entreprise.</p><p>Exemple de licenciement pour faute grave : vol du matériel de l'entreprise commis par le salarié.</p><p>Exemple de licenciement pour faute lourde : dégradation volontaire du matériel de l'entreprise par le salarié, menace du salarié avec arme.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : Qu'est-ce qu'une mise à pied disciplinaire ?",
+    "reponse": "<p>La mise à pied disciplinaire ne doit pas être confondue avec la mise à pied conservatoire qui permet d'écarter de l'entreprise le salarié estimé « dangereux » en attendant de se prononcer sur le type de sanction envisagé. Elle interrompt la prescription des 2 mois. Cette période non travaillée ne sera pas payée au salarié s'il en résulte un licenciement pour faute grave ou lourde.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : Quelle est la procédure à suivre pour sanctionner un salarié ?",
+    "reponse": "<p>L'employeur doit respecter la procédure disciplinaire, sauf en cas d'avertissement :</p><p>1) Convoquer le salarié à un entretien par lettre recommandée avec accusé de réception ou en main propre en échange d'un reçu en lui précisant l'objet de la convocation, la date, l'heure, le lieu, la possibilité de se faire assister par une personne de son choix appartenant à l'entreprise ou par un conseiller extérieur.</p><p>2) Pendant l'entretien, l'employeur indique le motif de la sanction envisagée et recueille les explications du salarié.</p><p>3) Suite à l'entretien, l'employeur notifie la sanction. Les motifs énoncés dans la lettre fixent les limites du litige. Il est donc recommandé de ne pas hésiter à justifier la sanction en relevant tous les manquements du salarié.</p><p>L'employeur ne pourra notifier la sanction au salarié, qu'au-delà des deux jours ouvrables suivant l'entretien ou au plus tard dans le mois suivant le jour de l'entretien.</p><p>Exemple : L'entretien a lieu le lundi 1er août 2011, la notification ne se fera pas avant le mercredi 3 août 2011 mais pas après le jeudi 1er septembre. (Si le 1er septembre était tombé un samedi ou dimanche, on aurait reporté au lundi suivant)</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : Comment faire pour sanctionner un salarié ?",
+    "reponse": "<p>L'employeur doit respecter la procédure disciplinaire, sauf en cas d'avertissement :</p><p>1) Convoquer le salarié à un entretien par lettre recommandée avec accusé de réception ou en main propre en échange d'un reçu en lui précisant l'objet de la convocation, la date, l'heure, le lieu, la possibilité de se faire assister par une personne de son choix appartenant à l'entreprise ou par un conseiller extérieur.</p><p>2) Pendant l'entretien, l'employeur indique le motif de la sanction envisagée et recueille les explications du salarié.</p><p>3) Suite à l'entretien, l'employeur notifie la sanction. Les motifs énoncés dans la lettre fixent les limites du litige. Il est donc recommandé de ne pas hésiter à justifier la sanction en relevant tous les manquements du salarié.</p><p>L'employeur ne pourra notifier la sanction au salarié, qu'au-delà des deux jours ouvrables suivant l'entretien ou au plus tard dans le mois suivant le jour de l'entretien.</p><p>Exemple : L'entretien a lieu le lundi 1er août 2011, la notification ne se fera pas avant le mercredi 3 août 2011 mais pas après le jeudi 1er septembre. (Si le 1er septembre était tombé un samedi ou dimanche, on aurait reporté au lundi suivant)</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : Le salarié peut-il refuser la sanction ?",
+    "reponse": "<p>Le salarié peut contester la sanction mais pas son exécution. S'il refuse, une procédure de licenciement peut être envisagée. Exemple : suite à une mise à pied notifiée, le salarié revient sur les lieux de travail : l'employeur peut donc être en mesure de prendre une autre sanction pouvant aller jusqu'au licenciement.</p>"
+  },
+  {
+    "question": "Les sanctions disciplinaires : quelles sont les limites pour l'employeur ?",
+    "reponse": "<p>L'employeur est encadré dans son pouvoir de direction. A ce titre les sanctions pécuniaires sont interdites. Exemple : retenue sur salaire en cas d'erreur de caisse. Toutefois, les sanctions pécuniaires indirectes sont acceptées, tel est le cas d'une rétrogradation ou d'une mise à pied disciplinaire. L'employeur n'a pas à respecter un délai pour faire exécuter la sanction.</p>"
+  },
+  {
+    "question": "Contrôle et surveillance des salariés : L'employeur a-t-il le droit d'installer des caméras de vidéosurveillance dans l'entreprise ?",
+    "reponse": "<p>L'employeur ne peut installer de caméras sur les lieux de travail qu'à des fins de sécurité des biens et des personnes dans le respect de la protection de la vie privée des salariés et non pour contrôler l'activité professionnelle des salariés sauf circonstances particulières (ex manipulation d'argent).</p><p>A ce titre, l'employeur doit informer et consulter (recueillir son avis) le comité d'entreprise.</p><p>La vidéosurveillance est un ensemble de caméras raccordé à un ordinateur destiné à surveiller un espace public ou privé.</p><p>Pour que ce dispositif soit bien accepté par le personnel, l'employeur doit préciser les motifs qui l'ont convaincu d'installer un système de vidéosurveillance (vol de matériel, localisation géographique…).</p><p>Avant d'installer un tel dispositif, l'employeur doit respecter des obligations d'information :</p><ol><li>Informer individuellement et collectivement les salariés ;</li><li>Informer les représentants du personnel.</li></ol><p>Il convient de distinguer les lieux privés des lieux publics.</p><p>Dans les lieux privés, il s'avère nécessaire de faire une déclaration préalable à la Commission Nationale de l'Informatique et des Libertés (CNIL).</p><p>Dans les lieux publics qui accueillent de la clientèle, l'employeur doit demander une autorisation à la préfecture. Le public doit être informé qu'il risque d'être filmé.</p><p>Afin de respecter le droit à l'image et la liberté de circulation des personnes, les bandes enregistrées sont détruites périodiquement. La conservation des images ne doit pas excéder un mois.</p><p>En présence d'un système de vidéosurveillance dans l'entreprise, des affichages sont obligatoires.</p><p>A défaut d'une consultation, le retrait ou la suspension de la vidéosurveillance peut être prononcé par le tribunal de grande instance.</p><p>La mise en place de la vidéosurveillance en entreprise ne peut être opposable aux salariés qu'après déclaration à la CNIL. (Pour chaque lieu de travail). Une autorisation préfectorale est également nécessaire s'agissant de lieux publics.</p>"
+  },
+  {
+    "question": "Contrôle et surveillance des salariés : L'employeur at-il le droit de procéder à des fouilles dans l'entreprise ?",
+    "reponse": "<p>En cas de vols répétés de matériel de l'entreprise, des fouilles des salariés sont possibles (les modalités doivent être prévues dans le règlement intérieur ou la note de service). L'employeur doit avertir le salarié de la possibilité de refuser la fouille. La fouille ne peut avoir lieu que dans des conditions qui préservent l'intimité de l'intéressé(e). Par ailleurs le salarié peut exiger la présence d'un témoin et doit être informé de l'existence de ce droit. Si un vol est constaté, un licenciement pour faute pourra alors être envisagé si le déroulement de la fouille est en règle. En cas de contrôle de l'armoire ou du casier du salarié, celui-ci doit être présent ou préalablement prévenu.</p>"
+  },
+  {
+    "question": "Contrôle et surveillance des salariés : le salarié peut-il refuser la fouille ?",
+    "reponse": "<p>En cas de refus du salarié de faire vérifier son sac, seul un officier de police judiciaire est compétent.</p>"
+  },
+  {
+    "question": "Contrôle et surveillance des salariés : Comment installer un système de badgeage dans l'entreprise ?",
+    "reponse": "<p>Il apparaît utile pour l'employeur de mettre en place une pointeuse avec des badges électroniques pour chaque salarié de son entreprise afin de contrôler le temps de travail. Avant d'installer une pointeuse, l'employeur doit consulter les représentants du personnel et informer chaque salarié individuellement par lettre simple ou recommandé. Cette notification personnelle de l'installation d'une pointeuse doit détailler le fonctionnement de l'outil ainsi que le cadre réglementaire dans lequel il s'inscrit. Il doit par ailleurs faire une déclaration à la Commission nationale de l'informatique et des libertés (CNIL) pour pouvoir communiquer les données de la machine.</p>"
+  },
+  {
+    "question": "Contrôle et surveillance des salariés : L'employeur peut-il à sa guise contrôler le matériel mis à disposition des salariés (un portable, un ordinateur…) ?",
+    "reponse": "<p>Plusieurs types de matériels peuvent être mis à la disposition du salarié (ordinateur, téléphone, véhicule de fonction, courriers, …).</p><p>L'employeur doit concilier le respect de la vie privée du salarié avec son pouvoir de direction.</p><p>Quelle que soit la situation, l'employeur doit :</p><p>• rechercher des informations pertinentes en lien avec l'emploi du salarié ;</p><p>• être transparent sur les moyens de contrôle utilisés. Dans tous les cas, il doit prendre des mesures proportionnées au but recherché</p><p>Exemple : le secret des correspondances limite le pouvoir de contrôle de l'employeur pour le contenu des courriers et des messages électroniques du salarié. La mention « personnel » dans le nom d'un dossier oblige l'employeur à pouvoir l'ouvrir qu'en cas de présence du salarié.</p>"
+  },
+  {
+    "question": "Contrôle et surveillance des salariés : Que risque l'employeur qui abuse de la surveillance des salariés ?",
+    "reponse": "<p>En cas de non-respect de ces dispositions, l'employeur peut être sanctionné pour délit d'atteinte la vie privée et peut encourir une peine d'un an d'emprisonnement et 45 000 € d'amendes.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : qu'est-ce que le document unique d'évaluation des risques professionnels ?",
+    "reponse": "<p>Tenu à une obligation de préserver la santé physique et mentale de ses salariés, l'employeur doit t avoir une démarche de prévention qui se matérialise notamment par la tenue du document unique d'évaluation des risques</p><p>Le document unique recense tous les risques possibles dans l'entreprise et les classe selon leur fréquence et leur gravité. Le but étant à terme de les réduire, ou au mieux de les supprimer par la définition et la mise en œuvre d'actions de prévention.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : le document unique d'évaluation des risques professionnels est-il obligatoire?",
+    "reponse": "<p>Le document unique est obligatoire dans l'entreprise qui compte au moins un salarié, un apprenti ou un stagiaire. Par ailleurs, une mise à jour de ce document doit être effectuée au moins une fois par an et dès lors qu'apparaissent des évolutions des conditions de travail.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Que contient le document unique d'évaluation des risques professionnels ?",
+    "reponse": "<p>Le document unique comprend :</p><ol><li>L'identification des risques par un examen de chaque poste de travail en relevant les dangers existants sur le poste ;</li><li>Les mesures de prévention qui ont été prises, ou sont à prendre.</li></ol><p>L'employeur recueille l'avis des représentants du personnel éventuel et formalise des actions de prévention (formation, nouvelles consignes de travail, réaménagement des équipements ou locaux…)</p><p>Il doit en effet élaborer un programme annuel de prévention des risques professionnels.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : comment se présente le document unique d'évaluation des risques, sous quelle forme, ou quel support ?",
+    "reponse": "<p>Aucune forme n'est exigée. Le document unique peut être écrit ou numérique. S'il est numérique et que des données nominatives sont présentes dans le document, il faut faire une déclaration préalable à la Commission Nationale de l'Informatique et des Libertés (CNIL).</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : comment évaluer les risques ?",
+    "reponse": "<p>L'employeur doit évaluer les risques pour la santé et la sécurité de ses salariés. Il implique de connaître tous les postes de l'entreprise et les risques qui en sont liés.</p><p>L'employeur peut se faire aider par différents acteurs grâce à certains de leurs documents (salariés, médecin du travail, CARSAT, CHSCT …) mais il est lui seul tenu responsable du contenu.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : a qui doit-on tenir le document unique d'évaluation des risques à disposition ?",
+    "reponse": "<p>Les modalités de consultation du document unique sont l'un des affichages obligatoires.</p><p>Le document unique d'évaluation des risques doit être placé dans un endroit accessible si celui-ci est sur support papier.</p><p>Il est tenu à la disposition des salariés, des membres du CHSCT et des délégués du personnel s'ils existent, de l'Inspection du Travail, des organismes de la sécurité sociale et des Inspecteurs de radioprotection pour les installations concernées.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : que risque l'employeur qui ne tient pas le document unique d'évaluation des risques professionnels à disposition des représentants du personnel ?",
+    "reponse": "<p>S'il n'est pas mis volontairement à la disposition des représentants du personnel, il s'agit d'un délit d'entrave puni d'un an d'emprisonnement et d'une amende de 3 750 euros ou de l'une de ces deux peines seulement.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Le document unique d'évaluation des risques doit il être mis à jour ?",
+    "reponse": "<p>L'employeur doit mettre à jour chaque année le document unique de son entreprise et lors de nouveaux aménagements (machines, locaux …) et lorsqu'il est susceptible d'avoir de nouveaux risques.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : quelles sont les responsabilités et sanctions attachés à l'employeur s'agissant du document unique d'évaluation des risques professionnels ?",
+    "reponse": "<p>L'employeur est tenu à une obligation de résultat. L'absence ou l'insuffisance du document unique peut permettre d'établir que l'employeur commet une faute inexcusable : sa responsabilité pénale pourrait donc se voir engagée. En cas d'absence ou de non mise à jour du document, l'employeur risque une contravention de 1500 €.</p><p>S'il n'est pas mis à la disposition des inspecteurs et contrôleurs du travail, il s'agit alors d'un délit d'obstacle à leur mission.</p><p>En cas de blessures ou homicide involontaire, l'absence du document unique peut être considérée comme une circonstance aggravante.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Surveillance médicale, quoi de neuf ?",
+    "reponse": "<p>L'enjeu porté par la loi travail est de permettre à l'ensemble des salariés de bénéficier d'un véritable suivi de leur santé au travail et de de moderniser la médecine du travail en la rendant plus efficace et plus ciblée, dans un contexte où les recrutements de médecins du travail sont de plus en plus difficiles à opérer. Les médecins du travail rencontreront en particulier, en vue d'une « visite d'embauche », les salariés amenés à occuper des postes de sécurité ou à risque. Les autres salariés bénéficieront d'une visite de « sensibilisation et de prévention aux risques professionnels » réalisée par un membre de l'équipe pluridisciplinaire comme un infirmier et qui fera l'objet d'une attestation qui permettra d'assurer un meilleur suivi de chaque salarié. Concernant les travailleurs de nuit, la loi précise qu'ils doivent faire l'objet d'un suivi médical spécifique qui sera défini par décret après une phase de concertation avec les partenaires sociaux. Par ailleurs, les obligations de reclassement en cas d'inaptitude ont été renforcées par rapport à la version initiale, la contestation de l'avis d'inaptitude se passera désormais devant les prud'hommes, le médecin du travail formulera des indications sur l'aptitude du salarié à bénéficier d'une formation le « préparant à occuper un poste adapté.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : qu'est-ce qu'une visite d'information et de prévention ?",
+    "reponse": "<p>Une visite d'information et de prévention est mise en place pour tout travailleur. Elle est réalisée par le médecin du travail, ou par le collaborateur médecin, l'interne en médecine du travail ou encore l'infirmier (article R.4624-10 du Code du Travail). Cette visite doit être réalisée dans les trois mois qui suivent l'embauche, excepté pour les travailleurs de nuit et les jeunes de moins de 18 ans, qui eux l'effectuent préalablement à l'affectation sur leur poste (articles R.4624-18 et 19 du Code du Travail). A la suite de la visite d'information et de prévention, une attestation est désormais délivrée (article R.4624-14 du Code du Travail) Une visite à la demande du salarié est possible (article R.4624-11 et 34 du Code du Travail).</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : comment se passe le suivi individuel des salariés ?",
+    "reponse": "<p>La périodicité des visites est fixée par le médecin du travail. (Article R.4624- 16 du Code du Travail) Elle est de maximum tous les 5 ans pour le suivi individuel de l'état de santé des travailleurs (article R.4624-16 du Code du Travail) Pour les travailleurs ayant des conditions particulières (prenant en compte l'âge, les conditions de travail où les risques professionnels, ex les travailleurs de nuit, ou encore les travailleurs handicapés) et bénéficiant en conséquence d'un suivi adapté, cette périodicité est de maximum 3 ans. (Article R.4624-17 du Code du Travail) Les femmes venant d'accoucher ou allaitantes peuvent, si elles le souhaitent, être orientées vers le médecin du travail pour une éventuelle modification de poste ou une autre affectation (Article R.4624-19 du Code du Travail) Pour les travailleurs handicapés, une orientation, sans délai, est réalisée vers le médecin du travail, ce de par son statut ou s'il déclare avoir une pension d'invalidité (Article R.4624-20 du Code du Travail).</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : comment se passe le suivi individuel renforcé des salariés ?",
+    "reponse": "<p>Un suivi individuel renforcé est mis en place si le travailleur opère sur un poste à risques défini par le Code du Travail (article R.4624-23 du Code du Travail). La liste n'est pas figée, l'employeur peut la compléter (articleR.4624-3 du Code du Travail) Dans le cadre d'un suivi individuel renforcé : l'examen d'aptitude est réalisé par le médecin du travail (article R.4624-24 du Code du Travail). Il rend un avis d'aptitude ou d'inaptitude. Si 2 ans avant l'embauche, le travailleur a déjà eu une visite d'aptitude, il y a une possibilité de ne pas repasser cette visite (dans les conditions du R.4624-27 du Code du Travail).</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : suivi individuel de l'état de santé des travailleurs temporaires",
+    "reponse": "<p>Il y a désormais possibilité de réaliser les visites par le SST de l'entreprise de travail temporaire, par un SST d'un autre secteur ou professionnel proche du lieu de travail du salarié temporaire, ou encore par le service autonome de l'entreprise utilisatrice (article R.4625-8 du Code du Travail). Si en cours de mission, le travailleur est affecté à un poste à risque, et qu'il n'y a pas eu de suivi renforcé, c'est l'entreprise utilisatrice qui procède à un examen médical d'aptitude (article R.4625-9 du Code du Travail). La visite d'information et de prévention ainsi que les examens médicaux d'aptitude sont réalisés pour les travailleurs temporaires dans la limite de trois emplois (R4625-10 et 12 du Code du Travail) Avant toute nouvelle mission, il y a désormais la possibilité de ne pas réaliser la visite d'information et de prévention ou la visite médicale d'aptitude, ce sous certaines conditions (art R.4625-11 et 13)</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Qu'est-ce qu'un accident du travail ?",
+    "reponse": "<p>L'accident de travail est celui qui intervient pendant l'exécution de son contrat de travail. L'accident est présumé d'origine professionnelle dès lors qu'il se produit dans les locaux de l'entreprise, même pendant un temps de pause De plus, l'accident du travail est spontané et provoque une lésion corporelle au salarié, ce qui le distingue de la maladie professionnelle, En pratique, en plus de devoir remplacer le salarié accidenté, l'accident de travail entraîne un taux de cotisation AT/MP à payer, plus élevé pour votre entreprise.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Qu'est-ce qu'un accident de trajet",
+    "reponse": "<p>C'est un accident de travail. C'est celui qui intervient sur le parcours normal aller-retour du salarié entre son lieu de travail et son domicile ou/ et son lieu de travail et le lieu où il prend habituellement ses repas. Le parcours n'est pas forcément le plus direct. En cas de détour, l'accident peut être qualifié en accident de travail lorsqu'il résulte d'un acte de nécessité de la vie courante comme le fait d'aller chercher son pain ou de ramener les enfants de l'école</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Qu'est-ce qu'une maladie professionnelle ?",
+    "reponse": "<p>Une maladie professionnelle résulte de l'exposition, plus ou moins prolongée, d'un risque existant dans l'exercice de la profession. Contrairement à l'accident du travail, elle apparaît progressivement. Il n'est pas facile de la caractériser en pratique. Il existe à ce jour 114 tableaux du régime général et aux 59 tableaux du régime agricole qui correspondent à des symptômes différents.</p><p>Les maladies professionnelles présumées sont uniquement celles qui figurent dans les tableaux de la sécurité sociale. Lorsqu'elle n'apparaît pas dans les tableaux, la victime doit prouver le lien.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : C'est quoi des EPI ?",
+    "reponse": "<p>L'employeur doit fournir gratuitement, en plus du matériel, des équipements individuels de protection adaptés à ses salariés pour qu'ils puissent être en mesure de travailler en toute sécurité, tels que le casque, les lunettes, les chaussures de sécurité, les gants etc.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Est-ce au salarié d'acheter ses équipements de protection individuelles ?",
+    "reponse": "<p>L'employeur doit fournir gratuitement, en plus du matériel, des équipements individuels de protection adaptés à ses salariés pour qu'ils puissent être en mesure de travailler en toute sécurité, tels que le casque, les lunettes, les chaussures de sécurité, les gants etc. L'employeur peut imposer un port d'un uniforme ou insigne particulier à ses salariés par souci de sécurité. Ces équipements doivent être conformes aux normes européennes.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Que faire si un salarié refuse de porter ses EPI (casque, bouchon d'oreille, chaussures de sécurité, appareil de protection respiratoire, combinaison…) ?",
+    "reponse": "<p>En cas de refus d'un salarié à porter ces équipements, l'employeur est en droit de le sanctionner après avoir vérifié de l'avoir bien informé et formé au préalable. Par ce moyen, l'employeur s'exonère de sa responsabilité, l'obligation de sécurité du salarié s'apprécie dès lors en fonction de la formation et information qu'il a reçue mais également selon son poste.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : Que risque l'employeur qui ne fournit pas d'équipement de protection individuelles à un salarié ?",
+    "reponse": "<p>En cas de manquement à la fourniture d'équipements individuels de protection, c'est autant d'amende que de salariés non équipés. Exemple : trois salariés ne portent pas leur casque : 3 750 € x 3 = 11 250 € à payer.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : que se passe-t-il si je quitte mon poste en pensant sauver ma vie ?",
+    "reponse": "<p>Le droit de retrait permet à un salarié de se retirer de sa situation de travail s'il estime qu'elle présente inhabituellement un danger grave et imminent pour sa vie ou sa santé</p><p>Le salarié n'a pas à prouver la réalité du danger. Il peut donc exercer ce droit s'il avait une raison légitime de croire à un danger.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : qu'est-ce que le droit de retrait ?",
+    "reponse": "<p>Un salarié, qui fait face à une situation de danger grave et imminent pour sa santé et sa sécurité, ou qui constate des protections défectueuses, a le droit de s'en extraire sans conséquence sur sa relation de travail : en exerçant son droit de retrait.</p><p>L'exercice de ce droit de se retirer d'une situation qui met en danger sa vie, ne pourra lui être reprochée par son employeur. A l'inverse, le fait de ne pas avoir exercé son droit de retrait ne pourra pas non plus lui être reproché (par exemple en cas de survenance d'un accident de travail). Aucune formalité n'est exigée pour exercer le droit de retrait.</p><p>Le salarié a l'obligation d'alerter l'employeur sur les manquements dangereux qu'il a constaté. Le droit de retrait se prolonge jusqu'à ce que l'employeur ait pris toute mesure pour mettre un terme à la situation dangereuse.</p><p>Attention, ce droit de retrait doit pouvoir être exercé de telle sorte qu'il n'engendre pas une nouvelle situation de danger grave et imminent pour un tiers.</p><p>En cas de contentieux, seuls les juges apprécient le motif.</p><p>En cas de danger grave et imminent, l'employeur doit prendre les mesures nécessaires pour mettre ses salariés en sécurité.</p><p>De plus il a une obligation de sécurité de résultat, c'est-à-dire qu'il est responsable de plein droit à partir du moment où il avait ou aurait dû avoir conscience du danger risqué par le salarié et qu'il n'a pas pris les mesures nécessaires pour l'éviter.</p><p>En cas de manquement, il risque donc de commettre une faute inexcusable et d'engager sa responsabilité pénale.</p><p>L'employeur ne peut sanctionner le salarié qui a exercé son droit de retrait.</p><p>L'employeur commet une faute inexcusable s'il demande à son salarié de revenir à son poste de travail si le danger persiste.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : qu'est-ce que le droit d'alerte ?",
+    "reponse": "<p>Le salarié doit signaler immédiatement à l'employeur toute situation de travail qui lui semble présenter un danger grave et imminent pour sa vie ou sa santé. C'est un droit individuel qui n'exige aucune formalité. L'alerte peut être donnée verbalement. La loi ne précise ni le moment, ni la forme de l'avis que le salarié doit donner à l'employeur. Néanmoins, il est préférable pour des questions de preuve que celui-ci établisse l'alerte par écrit. Le salarié peut également prévenir le CSE ou le CHSCT de l'existence d'un danger, qui devra alors en référer immédiatement à l'employeur.</p><p>Santé et sécurité au travail : si j'exerce mon droit de retrait, mon employeur pourrait me sanctionner ?</p><p>L'employeur ne peut sanctionner le salarié qui a exercé son droit de retrait. L'employeur commet une faute inexcusable s'il demande à son salarié de revenir à son poste de travail si le danger persiste.</p>"
+  },
+  {
+    "question": "Santé et sécurité au travail : quelles sont les obligations de l'employeur en matière de santé et de sécurité au travail ?",
+    "reponse": "<p>L'employeur doit prendre les mesures nécessaires pour assurer la sécurité et protéger la santé physique et mentale de ses salariés. Il a une obligation de sécurité de résultat.</p>"
+  },
+  {
+    "question": "Harcèlement: Qu'est-ce que le harcèlement?",
+    "reponse": "<p>Il faut distinguer le harcèlement moral et le harcèlement sexuel :</p><ul><li>Le harcèlement sexuel est le fait de harceler autrui dans le but d'obtenir des faveurs de nature sexuelle.</li><li>Le harcèlement moral est le fait de harceler autrui entraînant une dégradation des conditions de travail. C'est une infraction propre au monde du travail.</li></ul><p>Pour qu'il y ait harcèlement moral ou sexuel, il faut des actes répétés.</p><p>Le harceleur ou harcelé peut être aussi bien un supérieur hiérarchique un salarié. Il encourt une peine de 2 ans de prison et de 30 000 € d'amende.</p><p>Le chef d'entreprise doit prendre les mesures nécessaires pour assurer la sécurité et protéger la santé physique et mentale des travailleurs.</p><p>Ces mesures comprennent notamment la prévention des risques professionnels en matière de harcèlement.</p><p>L'employeur doit donc réagir dès les premiers signes de suspicion. Il est responsable du harcèlement commis par un de ses salariés parce qu'il est tenu à une obligation de sécurité de résultat, y compris en matière de risques psychosociaux.</p><p>En matière de harcèlement, l'employeur doit notamment veiller à son mode de management pour ne pas être tenu responsable pour « harcèlement managérial ».</p><p>L'employeur doit rappeler les dispositions légales du harcèlement ainsi que celles relatives à l'égalité professionnelle homme femme dans le règlement intérieur.</p>"
+  }
+]
