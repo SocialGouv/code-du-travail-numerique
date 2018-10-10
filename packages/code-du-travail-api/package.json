@@ -1,0 +1,40 @@
+{
+  "name": "code-du-travail-api",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/*",
+    "start": "node ./src/server/index.js",
+    "start.dev": "nodemon ./src/server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SocialGouv/code-du-travail-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SocialGouv/code-du-travail-api/issues"
+  },
+  "homepage": "https://github.com/SocialGouv/code-du-travail-api#readme",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "dotenv": "^6.0.0",
+    "elastic-apm-node": "^1.11.0",
+    "elasticsearch": "^15.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "nodemon": "^1.17.5"
+  }
+}

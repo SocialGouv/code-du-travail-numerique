@@ -1,0 +1,53 @@
+{
+  "name": "code-du-travail-frontend",
+  "version": "1.0.0",
+  "description": "Code du travail frontend",
+  "private": true,
+  "homepage": "https://code-du-travail.beta.gouv.fr/",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@sentry/browser": "^4.1.0",
+    "@socialgouv/code-du-travail-ui": "^1.2.3",
+    "@zeit/next-css": "^1.0.0",
+    "date-fns": "^1.29.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "fuse.js": "3.2.0",
+    "isomorphic-unfetch": "^2.1.1",
+    "memoizee": "^0.4.14",
+    "next": "^7.0.0",
+    "next-images": "^1.0.0",
+    "next-routes": "^1.4.2",
+    "react": "^16.3.2",
+    "react-autosuggest": "9.3.4",
+    "react-delay": "^0.1.0",
+    "react-dom": "16.3.2",
+    "react-feather": "1.1.0",
+    "react-github-fork-ribbon": "0.5.1",
+    "react-modal": "^3.4.4",
+    "react-star-rating-component": "1.4.1",
+    "react-uid": "^2.0.1",
+    "speakingurl": "14.0.1",
+    "styled-components": "3.2.6",
+    "unist-util-find": "^1.0.1",
+    "unist-util-parents": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-define": "^1.3.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "lint": "eslint src/* pages/*",
+    "start": "NODE_ENV=production node server.js",
+    "build": "NODE_ENV=production next build"
+  }
+}

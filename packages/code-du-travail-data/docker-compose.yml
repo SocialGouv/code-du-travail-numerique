@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.4
+    env_file:
+      - .env
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+      - ./docker:/app/docker
+    command:
+      - sh
+      - -c
+      - "cp /app/docker/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml; ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu; docker-entrypoint.sh"
+    ports:
+      - $PORT:9200
+      #- 9300:9300
+    restart: always
+
+  python:
+    depends_on:
+      - elasticsearch
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+
+volumes:
+  esdata:
+    driver: local

@@ -1,38 +1,85 @@
-# Code-du-travail Frontend [![CircleCI](https://circleci.com/gh/SocialGouv/code-du-travail-explorer.svg?style=svg)](https://circleci.com/gh/SocialGouv/code-du-travail-explorer)
 
-Ce dépôt de code contient le frontend du site web du Code du Travail Numérique.
+# Code du travail numérique
 
-- Prototype dispo sur : https://codedutravail-dev.num.social.gouv.fr
+Ce repository regroupe les informations sur les projets du code du travail numérique.
 
-## Installation de l'environnement de développement
+## Sous-projets
 
-**Important** : pour tourner en local ce projet nécessite les serveurs actifs des dépôts de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) (serveur Elasticsearch) et [`code-du-travail-api`](https://github.com/SocialGouv/code-du-travail-api) (serveur API).
+| Projet                                                                             | Scope                                          |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------- |
+| [code-du-travail-css](packages/code-du-travail-css)           | CSS et HTML de base                            |
+| [code-du-travail-ui](packages/code-du-travail-ui)             | composants ReactJS                             |
+| [code-du-travail-data](packages/code-du-travail-data)         | datasets et scripts d'indexation elasticsearch |
+| [code-du-travail-api](packages/code-du-travail-api)           | API                                            |
+| [code-du-travail-frontend](packages/code-du-travail-frontend) | frontend                                       |
 
-Créez un fichier `.env` :
 
-```shell
-NODE_ENV=development
-API_URL=https://127.0.0.1:1337
-SENTRY_PUBLIC_DSN=https://path/to/sentry
-PORT=3000
+Se référer à chaque projet pour les informations spécifiques
+
+## Architecture
+
 ```
++--------+          +----------------+          +-------+
+|        |          |                |          |       |
+|  data  +---------->  elastisearch  +---------->  APM  |
+|        |          |                |          |       |
++--------+          +-------+--------+          +-------+
+                            |
+                            |
+                        +---+---+
+                        |       |
+                        |  API  |
+                        |       |
+                        +---+---+
+                            |
+                            |
+                            |
+                      +-----+------+
+                      |            |
+                      |  frontend  |
+                      |            |
+                      +-----+------+
 
-Puis :
-
-```bash
-$ npm install
-$ npm run dev
 ```
+## URLs
 
-## Intégration HTML/CSS
+### Demos
 
-L'intégration HTML/CSS est réalisée et documentée dans un autre dépôt de code : [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css).
+- Prod - https://codedutravail.num.social.gouv.fr/
+- Dev -  https://codedutravail-dev.num.social.gouv.fr
+- Sprint 1.1 -  https://codedutravail-sprint11.num.social.gouv.fr
+- Sprint 1.2 -  https://codedutravail-sprint12.num.social.gouv.fr
 
-Le fichier CSS et certains assets du dépôt de code de l'intégration sont copiés dans le répertoire `static` de ce dépôt de code.
+### Outils
 
-## Build de production
+ - Slack : https://incubateur-mas.slack.com
+ - Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
+ - Issues GitHub : packages/code-du-travail-frontend/issues
+ 
+## Setup
 
-- éditer `.env`
-- éditer `docker-compose.override.yml`
+### Dev
 
-puis `docker-compose up`
+En dev, on utilise les scripts npm localement et on fait tourner elastic search dans un docker
+
+ - récupérer [code-du-travail-data](packages/code-du-travail-data), ajouter le `.env` et lancer `docker-compose up`
+ - lancer l'indexation ElasticSearch avec la commande indiquée dans le README
+ - récupérer [code-du-travail-api](packages/code-du-travail-api), ajouter le `.env` et lancer `npm i && npm start`
+ - récupérer [code-du-travail-frontend](packages/code-du-travail-frontend), ajouter le `.env` et lancer `npm i && npm run dev`
+
+### Prod
+
+ - récupérer [code-du-travail-data](packages/code-du-travail-data), ajouter le `.env` et lancer `docker-compose up`
+ - lancer l'indexation ElasticSearch avec la commande indiquée dans le README
+ - récupérer [code-du-travail-api](packages/code-du-travail-api), ajouter le `.env` et lancer `docker-compose up`
+ - récupérer [code-du-travail-frontend](packages/code-du-travail-frontend), ajouter le `.env` et lancer `docker-compose up`
+
+### Network
+
+Les environnements dockers doivent être sur le même docker network
+
+## Contributions
+
+ - Travailler sur des features branches
+ - Faire des [commits conventionnels](https://github.com/conventional-changelog/conventional-changelog)
+ - Soumettre des PR sur la branche du sprint en cours

@@ -1,0 +1,27 @@
+.main-header {
+    margin-bottom: calc(var(--spacing-small) * -1);
+}
+
+a.main-header__logo,
+a.main-header__logo:link,
+a.main-header__logo:visited {
+
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-blue-dark);
+    text-decoration: none;
+    font-size: var(--font-size-h5);
+    font-weight: 700;
+
+    &:focus,
+    &:hover,
+    &:active {
+        text-decoration: underline;
+    }
+
+    & img {
+        width: 120px;
+        margin-right: var(--spacing-medium);
+    }
+
+}

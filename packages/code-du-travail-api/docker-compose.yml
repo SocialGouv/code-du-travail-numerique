@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  node:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - $PORT:$PORT
+    restart: always
+
+networks:
+
+  default:
+    # The network used by the repository `code-du-travail-data` must be active first.
+    external:
+      name: codedutravaildata_default

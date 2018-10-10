@@ -1,64 +1,82 @@
+---
+
 version: 2
+
+#
+
+workflows:
+  version: 2
+  do-the-thing:
+    jobs:
+      - install
+      - build:
+          requires:
+            - install
+      - lint:
+          requires:
+            - install
+      - test:
+          requires:
+            - install
+            - build
+
+#
+
+_job: &_job
+  docker:
+    - image: circleci/node:10
+  working_directory: ~/repo
+
+_restore_cache: &_restore_cache
+  name: Restore Yarn Package Cache
+  keys:
+    - yarn-packages-{{ checksum "yarn.lock" }}
+
+_save_cache: &_save_cache
+  name: Save Yarn Package Cache
+  key: yarn-packages-{{ checksum "yarn.lock" }}
+  paths:
+    - ~/.cache/yarn
+
+_install: &_install
+  yarn --frozen-lockfile
+
+_setup: &_setup
+  <<: *_job
+
+
+#
+
 jobs:
-  build:
-    branches:
-      only:
-        - toto
-    docker:
-      - image: circleci/node:8
-    working_directory: ~/repo
+  install:
+    <<: *_setup
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - dependencies-{{ checksum "package.json" }}
-          - dependencies-
-      - run:
-          name: Install dependencies
-          command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: dependencies-{{ checksum "package.json" }}
-      - deploy:
-          name: Deploy
-          command: |
-              set -e
-              npm install
-              CI="" npm run build
+      - restore_cache: *_restore_cache
+      - run: *_install
+      - save_cache: *_save_cache
+  build:
+    <<: *_setup
+    steps:
+      - checkout
+      - restore_cache:  *_restore_cache
+      - run: *_install
+      - save_cache: *_save_cache
+      - run: yarn lerna run --stream build
+  lint:
+    <<: *_setup
+    steps:
+      - checkout
+      - restore_cache:  *_restore_cache
+      - run: *_install
+      - save_cache: *_save_cache
+      - run: yarn lerna run --stream lint
+  test:
+    <<: *_setup
+    steps:
+      - checkout
+      - restore_cache:  *_restore_cache
+      - run: *_install
+      - save_cache: *_save_cache
+      - run: yarn lerna run --stream test
 
-              remote=$(git config remote.origin.url)
-
-              siteSource="build"
-
-              if [ ! -d "$siteSource" ]
-              then
-                  echo "Usage: $0 <site source dir>"
-                  exit 1
-              fi
-
-              mkdir gh-pages-branch
-              cd gh-pages-branch
-              git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
-              git config --global user.name "$GH_NAME" > /dev/null 2>&1
-              git init
-              git remote add --fetch origin "$remote"
-
-              if git rev-parse --verify origin/gh-pages > /dev/null 2>&1
-              then
-                  git checkout gh-pages
-                  git rm -rf .
-              else
-                  git checkout --orphan gh-pages
-              fi
-
-              cp -a "../${siteSource}/." .
-
-              git add -A
-              git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
-              git push --force --quiet origin gh-pages > /dev/null 2>&1
-
-              cd ..
-              rm -rf gh-pages-branch
-
-              echo "Finished Deployment!"

@@ -1,0 +1,37 @@
+.support {
+
+    display: flex;
+
+    & img {
+        min-width: 25%;
+        margin-right: var(--spacing-large);
+    }
+
+}
+
+.support__form {
+
+    display: flex;
+
+    & .support__input {
+        min-width: 2rem;
+    }
+
+    & .support__submit {
+        margin-left: 5px;
+    }
+
+}
+
+@media (--breakpoint-mobile) {
+
+    .support {
+        display: block;
+        padding: var(--spacing-medium);
+    }
+
+    .support img {
+        display: none;
+    }
+
+}

@@ -1,0 +1,29 @@
+.block-2-cols__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+@media (--breakpoint-mobile) {
+    .block-2-cols__row {
+        display: block;
+    }
+}
+
+.block-2-cols__col {
+
+    flex: 0 1 49%;
+
+    & h3 {
+        border-bottom: 1px solid var(--color-dark-text);
+    }
+
+    & h3 > img {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+        margin-right: var(--spacing-small);
+    }
+
+}

@@ -1,0 +1,173 @@
+/* Box-model.
+--------------------------------------------------------------------------- */
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* HTML
+--------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+    border-top: 5px solid var(--color-blue);
+    font-size: var(--font-size-base);
+}
+
+html {
+    color: var(--color-dark-text);
+    background: var(--color-dark-background);
+    font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: var(--line-height-base);  /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */
+    -webkit-text-size-adjust: 100%;  /* Prevent font scaling in landscape while allowing user zoom. */
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    color: var(--color-light-text);
+    background: var(--color-light-background);
+}
+
+/* Layout system
+
+The layout system is built upon 3 elements :
+
+- Section (mandatory)
+- Container (mandatory)
+- Wrapper (optional)
+
+    <div class="section-light">
+        <div class="container">
+            <div class="wrapper-dark">
+                content
+            </div>
+        </div>
+    </div>
+
+--------------------------------------------------------------------------- */
+
+/* 1. Section (mandatory)
+
+Each main section of the interface must have a class of the `.section-*` family.
+
+They make it possible to determine the background color of each section as well
+as a homogeneous spacing between each of them:
+
+    <header class="section-light">
+    </header>
+    <main>
+        <section class="section-light">
+        </section>
+        <div class="section-dark">
+        </div>
+    </main>
+    <footer class="section-dark" id="footer">
+    </footer>
+*/
+
+.section-white {
+    padding: var(--spacing-inter-component) 0;
+    background-color: var(--color-white);
+}
+
+.section-light {
+    padding: var(--spacing-inter-component) 0;
+    background-color: var(--color-light-background);
+}
+
+.section-dark {
+    padding: var(--spacing-inter-component) 0;
+    background-color: var(--color-dark-background);
+}
+
+/* 2. Container (mandatory)
+
+Each `.section-*` must contain a `div` element with a `.container` class.
+This class is used to determine the max-width of the interface:
+
+    <div class="section-light">
+        <div class="container">
+            content
+        </div>
+    </div>
+*/
+.container {
+    max-width: var(--bp-desktop);
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+
+/* 3. Wrapper (optional)
+
+Optionally, it is possible for each `div.container` to contain another `div`
+with one of the classes of the `.wrapper-*` family.
+
+It is also possible to nest a `.wrapper-narrow` class in a `.wrapper-dark` or
+`.wrapper-light` class :
+
+    <div class="section-light">
+        <div class="container">
+            <div class="wrapper-dark">
+                <div class="wrapper-narrow">
+                    content
+                </div>
+            </div>
+        </div>
+    </div>
+*/
+.wrapper-dark {
+    border-radius: var(--border-radius-base);
+    border: 1px solid var(--color-element-border);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--color-dark-background);
+    color: var(--color-dark-text);
+}
+
+.wrapper-light {
+    border-radius: var(--border-radius-base);
+    border: 1px solid var(--color-element-border);
+    padding: var(--spacing-small) var(--spacing-medium);
+    background: var(--color-white);
+    color: var(--color-dark-text);
+}
+
+/* Limit characters per line to keep a pleasant and natural pace while reading. */
+.wrapper-narrow {
+    max-width: 38.75rem;
+    margin: 0 auto;
+}
+
+/* Vertical rhythm.
+--------------------------------------------------------------------------- */
+
+@custom-selector :--vertical-rythm-elements
+address,
+blockquote,
+dl,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+table,
+ul;
+
+:--vertical-rythm-elements {
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+}
+
+/* Cancel vertical rhythm for last childs in `.container` or `wrapper-*`. */
+.container > :--vertical-rythm-elements:last-child,
+[class^="wrapper-"] > :--vertical-rythm-elements:last-child {
+    margin-bottom: 0;
+}

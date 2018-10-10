@@ -1,0 +1,56 @@
+{
+  "name": "@socialgouv/code-du-travail-ui",
+  "version": "1.1.0",
+  "description": "Composants ReactJS du Code du travail numérique",
+  "private": true,
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component --no-demo ",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "lint": "eslint src/* tests/*",
+    "prepublishOnly": "npm run build && npm run gh-pages",
+    "gh-pages": "npm run docz:build && gh-pages -d ./doc-build",
+    "start": "docz dev",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server",
+    "docz:build": "docz build"
+  },
+  "peerDependencies": {
+    "react": "16.x",
+    "prop-types": "^15.6.2",
+    "@socialgouv/code-du-travail-css": "^1.0.1"
+  },
+  "devDependencies": {
+    "docz": "^0.11.2",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^1.2.0",
+    "nwb": "0.23.x",
+    "prettier": "^1.14.3",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "homepage": "https://github.com/SocialGouv/code-du-travail-ui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SocialGouv/code-du-travail-ui.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "dependencies": {
+    "styled-components": "^3.4.9"
+  }
+}

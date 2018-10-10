@@ -1,0 +1,77 @@
+/* Text-level semantics.
+--------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-title);
+    line-height: var(--line-height-base);
+    font-weight: 700;
+    margin: .5rem 0 .2rem 0;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 400;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 400;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+/* Paragraphes.
+--------------------------------------------------------------------------- */
+p {
+    font-size: .9375rem;
+}
+
+/* Lists.
+--------------------------------------------------------------------------- */
+
+ul, ol {
+    padding-left: var(--spacing-medium);
+}
+
+/* Divider.
+--------------------------------------------------------------------------- */
+
+hr {
+    width: 100%;
+    border: 1px solid var(--color-element-border);
+    border-width: 1px 0 0 0;
+}
+
+/* Code.
+--------------------------------------------------------------------------- */
+
+code {
+    padding: 2px;
+    border-radius: 2px;
+    font-family: "Consolas", "Monaco", "Menlo", monospace;
+    background: var(--color-element-background);
+    border: 1px solid var(--color-element-border);
+    word-wrap: break-word;
+}
+
+/* Mark
+--------------------------------------------------------------------------- */
+
+mark {
+    background: var(--color-mark-background);
+}
+
