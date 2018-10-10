@@ -17,5 +17,8 @@
   },
   "bugs": {
     "url": "https://github.com/douglasduteil/code-du-travail/issues"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
