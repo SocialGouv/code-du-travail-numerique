@@ -2,6 +2,7 @@
   "name": "code-du-travail-api",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/*",

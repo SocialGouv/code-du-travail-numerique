@@ -2,6 +2,7 @@
   "name": "code-du-travail-frontend",
   "version": "1.0.0",
   "description": "Code du travail frontend",
+  "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
   "keywords": [],
   "main": "src/index.js",

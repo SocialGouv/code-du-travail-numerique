@@ -2,6 +2,7 @@
   "name": "code-du-travail-data",
   "version": "0.0.0",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
+  "private": true,
   "main": "index.js",
   "scripts": {},
   "repository": {
