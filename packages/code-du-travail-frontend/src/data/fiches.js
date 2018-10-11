@@ -87,13 +87,12 @@ export default [
   },
   {
     source: "Fiches Service-Public.fr",
-    href:
-      "https://www.service-public.fr/particuliers/vosdroits/F19030",
+    href: "https://www.service-public.fr/particuliers/vosdroits/F19030",
     title:
       "La rupture conventionnelle du contrat de travail à durée indéterminée",
     themes: [1700]
   },
-    {
+  {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/demarches-et-fiches-pratiques/formulaires-et-teledeclarations/salaries/article/rupture-conventionnelle-du-contrat-de-travail-a-duree-indeterminee",
@@ -1052,9 +1051,9 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/temps-de-travail/article/la-duree-legale-du-travail",
     title: "La durée légale du travail",
-    themes: [20300,20400]
+    themes: [20300, 20400]
   },
-   {
+  {
     source: "Ministère du travail",
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/temps-de-travail-et-conges/temps-de-travail/article/la-duree-legale-du-travail#Quelles-sont-les-durees-maximales-de-travail",
@@ -1063,14 +1062,13 @@ export default [
   },
   {
     source: "Fiches Service-Public.fr",
-    href:
-      "https://www.service-public.fr/particuliers/vosdroits/F1911",
+    href: "https://www.service-public.fr/particuliers/vosdroits/F1911",
     title: "La durée légale du travail",
-    themes: [20300,20400]
+    themes: [20300, 20400]
   },
-   {
+  {
     source: "Fiches Service-Public.fr",
-    href:     "https://www.service-public.fr/particuliers/vosdroits/F1911",
+    href: "https://www.service-public.fr/particuliers/vosdroits/F1911",
     title: "La durée maximale du travail",
     themes: [20400]
   },
@@ -1124,10 +1122,9 @@ export default [
     title: "La période d’essai",
     themes: [3700, 3710, 3720, 3730, 3740, 3750, 3760, 3770, 3780, 49900, 52100]
   },
-   {
+  {
     source: "Fiches Service-Public.fr",
-    href:
-      "https://www.service-public.fr/particuliers/vosdroits/F1643",
+    href: "https://www.service-public.fr/particuliers/vosdroits/F1643",
     title: "La période d’essai",
     themes: [3700, 3710, 3720, 3730, 3740, 3750, 3760, 3770, 3780, 49900, 52100]
   },
@@ -1444,7 +1441,7 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/",
     title: "La démission",
-    themes:[2000]
+    themes: [2000]
   },
   {
     source: "Ministère du travail",
@@ -1476,7 +1473,7 @@ export default [
     href:
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/article/le-droit-aux-allocations-chomage-du-salarie-demissionnaire",
     title: "Le droit aux allocations chômage du salarié démissionnaire",
-    themes:[2000]
+    themes: [2000]
   },
   {
     source: "service-public.fr",
