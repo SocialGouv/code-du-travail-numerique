@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  # In development, open ES port so host API can connect to it
+  elasticsearch:
+    ports:
+      - 9200:9200
+

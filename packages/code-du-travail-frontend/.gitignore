@@ -26,6 +26,3 @@ node_modules/
 ################
 .next
 
-# dotenv environment variables file
-###################################
-.env
