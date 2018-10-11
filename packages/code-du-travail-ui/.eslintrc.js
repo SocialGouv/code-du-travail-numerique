@@ -32,7 +32,7 @@ module.exports = {
     "jsx-a11y/anchor-is-valid": "warn", // conflicts with Link/a that sets href at runtime
     "jsx-a11y/no-static-element-interactions": "warn",
     "jsx-a11y/accessible-emoji": "warn",
-    "jsx-a11y/href-no-hash": "warn",
+    "jsx-a11y/anchor-is-valid": "warn",
     "react/jsx-no-target-blank": "warn",
     "react/no-unescaped-entities": "warn",
     "react/no-find-dom-node": "warn",
