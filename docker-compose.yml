@@ -11,7 +11,7 @@ services:
         hard: -1
     volumes:
       - esdata:/usr/share/elasticsearch/data
-      - ./docker:/app/docker
+      - ./packages/code-du-travail-data/docker:/app/docker
     command:
       - sh
       - -c
@@ -24,7 +24,7 @@ services:
     environment:
       - PYTHONPATH=.
       - ES_HOST=elasticsearch
-      - PORT=9200
+      - ES_PORT=9200
     build:
       context: ./packages/code-du-travail-data
       dockerfile: ./Dockerfile
