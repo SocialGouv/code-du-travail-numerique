@@ -1,0 +1,67 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
+            - dependencies-
+      - run:
+          name: Install dependencies
+          command: NODE_ENV=development npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run tests
+          command: npm test
+      - deploy:
+          name: Deploy API docs
+          command: |
+              echo "Doc deployment disabled"
+              # set -e
+
+              # mkdir doc-build && npm run docz:build
+
+              # SITE_SOURCE="doc-build"
+              # DEST_BRANCH="gh-pages"
+
+              # remote=$(git config remote.origin.url)
+
+              # if [ ! -d "$SITE_SOURCE" ]
+              # then
+              #     echo "Usage: $0 <site source dir>"
+              #     exit 1
+              # fi
+
+              # mkdir "${DEST_BRANCH}-branch"
+              # cd "${DEST_BRANCH}-branch"
+              # git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
+              # git config --global user.name "$GH_NAME" > /dev/null 2>&1
+              # git init
+              # git remote add origin "$remote"
+
+              # if git rev-parse --verify "origin/${DEST_BRANCH}" > /dev/null 2>&1
+              # then
+              #     git checkout $DEST_BRANCH
+              #     git rm -rf .
+              # else
+              #     git checkout --orphan $DEST_BRANCH
+              # fi
+
+              # cp -a "../${SITE_SOURCE}/." .
+              # touch .nojekyll
+
+              # git add -A
+              # git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
+              # git push --force --quiet origin $DEST_BRANCH > /dev/null 2>&1
+
+              # cd ..
+              # rm -rf "${DEST_BRANCH}-branch"
+
+              # echo "Finished Deployment!"

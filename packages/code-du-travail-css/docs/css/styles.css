@@ -1,0 +1,42 @@
+/*
+
+This file is the main CSS file that imports other partial CSS files (a partial is any file with an underscore `_` preceding the name).
+
+`postcss-cli` is used to watch the main CSS file. A flat CSS file named `bundle.css` is generated as soon as a change to any partial is made. This works thanks to `postcss-import` which inline `@import` rules content. Other PostCSS plugins are used such as `postcss-preset-env`.
+
+- `postcss-cli`: https://github.com/postcss/postcss-cli
+- `postcss-import`: https://github.com/postcss/postcss-import
+- `postcss-preset-env`: https://github.com/csstools/postcss-preset-env
+
+Before making any change to any CSS file in this project, ensure that `postcss-cli` is running with the `--watch` option, have a look at the NPM scripts to launch it easily.
+
+*/
+
+@import "global/_conf.css";
+@import "global/_classes.css";
+@import "global/_layout.css";
+
+@import "elements/_embedded.css";
+@import "elements/_forms.css";
+@import "elements/_link.css";
+@import "elements/_table.css";
+@import "elements/_text_level.css";
+
+@import "components/_alerts.css";
+@import "components/_article.css";
+@import "components/_badges.css";
+@import "components/_block_2_cols.css";
+@import "components/_breadcrumb.css";
+@import "components/_buttons.css";
+@import "components/_categories.css";
+@import "components/_footer.css";
+@import "components/_header.css";
+@import "components/_tags.css";
+
+@import "components/_search.css";
+@import "components/_search_results.css";
+@import "components/_skip_links.css";
+
+@import "components/_support.css";
+/*
+*/

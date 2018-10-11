@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  frontend:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        NODE_ENV: $NODE_ENV
+        API_URL: $API_URL
+        SENTRY_PUBLIC_DSN: $SENTRY_PUBLIC_DSN
+    ports:
+      - $PORT:$PORT
+    restart: always

@@ -1,0 +1,27 @@
+.search {
+    text-align: center;
+    position: relative;
+}
+
+.search__form {
+
+    display: flex;
+    padding: var(--spacing-small) 0;
+
+    & .search__input {
+        flex: 1 1 auto;
+        min-width: 14rem; /* Never shrink so small that we can't read the placeholder. */
+    }
+
+    & button {
+        margin-left: 5px;
+    }
+
+}
+
+.search__loading {
+    position: absolute;
+    bottom: -1em;
+    margin: 0;
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "fiches_ministere_travail",
+  "version": "1.0.0",
+  "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revolunet/fiches_ministere_travail.git"
+  },
+  "homepage": "https://revolunet.github.io/fiches_ministere_travail/",
+  "bugs": {
+    "url": "https://github.com/revolunet/fiches_ministere_travail/issues"
+  },
+  "dependencies": {
+    "jsdom": "^12.0.0",
+    "node-fetch": "^2.2.0",
+    "promise-serial-exec": "^1.0.0"
+  }
+}

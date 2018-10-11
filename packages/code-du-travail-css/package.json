@@ -1,0 +1,29 @@
+{
+  "name": "@socialgouv/code-du-travail-css",
+  "version": "1.0.2",
+  "description": "Code du travail numérique - CSS",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SocialGouv/code-du-travail-css.git"
+  },
+  "main": "docs/bundle.css",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "postcss --config postcss.config.js docs/css/styles.css --output docs/bundle.css",
+    "dev": "npm run build -- --watch --verbose",
+    "prepublishOnly": "npm run build",
+    "start": "yarn run watch",
+    "watch": "chokidar docs/* -i docs/bundle.css  -c \"yarn run build\" --initial --silent"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.1",
+    "cssnano": "^4.0.5",
+    "postcss-cli": "^6.0.0",
+    "postcss-custom-media": "^7.0.4",
+    "postcss-import": "^11.1.0",
+    "postcss-media-fn": "^3.0.0",
+    "postcss-preset-env": "^5.3.0",
+    "svgo": "^1.0.5"
+  }
+}

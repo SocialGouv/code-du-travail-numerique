@@ -1,0 +1,130 @@
+/* Visually hide content, it will still be read by a screen reader.
+https://webaim.org/techniques/css/invisiblecontent/
+--------------------------------------------------------------------------- */
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* https://developer.mozilla.org/fr/docs/Web/HTML/Element/center */
+.center {
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.shadow-bottom {
+  position: relative;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow-bottom);
+    /*
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+
+        left: 10px;
+        right: 10px;
+        bottom: 0;
+        height: 20px;
+
+        background: #000;
+        border-radius: 100%;
+        box-shadow: 0 0 10px #B7BCDF;
+    }*/
+
+}
+
+/* Display an external link icon before the text. */
+.external-link__before::before {
+  content: "";
+  display: inline-block;
+  background: url(assets/icons/external-link.svg) no-repeat 100% 50%;
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+/* Display an external link icon after the text. */
+.external-link__after::after {
+  content: "";
+  display: inline-block;
+  background: url(assets/icons/external-link.svg) no-repeat 100% 50%;
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+/* Style guide.
+--------------------------------------------------------------------------- */
+
+.style-guide__color::before {
+  content: "";
+  display: inline-block;
+  width: var(--spacing-large);
+  height: var(--spacing-large);
+  margin-right: var(--spacing-small);
+  vertical-align: middle;
+  border: 1px solid var(--color-element-border);
+}
+
+.style-guide__color__black::before {
+  background: var(--color-black);
+}
+.style-guide__color__blue-dark::before {
+  background: var(--color-blue-dark);
+}
+.style-guide__color__blue::before {
+  background: var(--color-blue);
+}
+.style-guide__color__danger-background::before {
+  background: var(--color-danger-background);
+}
+.style-guide__color__dark-background::before {
+  background: var(--color-dark-background);
+}
+.style-guide__color__dark-text::before {
+  background: var(--color-dark-text);
+}
+.style-guide__color__element-background::before {
+  background: var(--color-element-background);
+}
+.style-guide__color__element-border::before {
+  background: var(--color-element-border);
+}
+.style-guide__color__info-background::before {
+  background: var(--color-info-background);
+}
+.style-guide__color__light-background::before {
+  background: var(--color-light-background);
+}
+.style-guide__color__light-text::before {
+  background: var(--color-light-text);
+}
+.style-guide__color__primary-background::before {
+  background: var(--color-primary-background);
+}
+.style-guide__color__secondary-background::before {
+  background: var(--color-secondary-background);
+}
+.style-guide__color__success-background::before {
+  background: var(--color-success-background);
+}
+.style-guide__color__warning-background::before {
+  background: var(--color-warning-background);
+}
+.style-guide__color__white::before {
+  background: var(--color-white);
+}
