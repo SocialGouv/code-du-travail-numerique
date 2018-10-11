@@ -8,6 +8,7 @@
     "lerna": "^3.4.1"
   },
   "scripts": {
+    "lint": "lerna run lint --parallel",
     "build": "lerna run build",
     "start": "lerna run start --parallel",
     "test": "lerna run test"
