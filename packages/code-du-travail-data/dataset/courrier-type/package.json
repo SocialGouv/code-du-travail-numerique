@@ -1,0 +1,18 @@
+{
+  "name": "courrier-type",
+  "version": "1.0.0",
+  "description": "generate courrier-type.json",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index > ../export-courriers.json"
+  },
+  "author": "Lionel Breduillieard <lionel@lumographe.fr>",
+  "license": "ISC",
+  "dependencies": {
+    "mammoth": "^1.4.6"
+  }
+}

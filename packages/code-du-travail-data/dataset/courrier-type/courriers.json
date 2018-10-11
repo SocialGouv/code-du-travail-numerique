@@ -1,0 +1,52 @@
+[
+  {
+    "titre": "Modèle de certificat de travail", 
+    "questions": ["comment rédiger un certificat de travail ?"],
+    "theme": "certificat de travail",
+    "type_de_contrat": "CDI",
+    "profil": "employeur",
+    "filename": "Modèle_certificat_de_travail.docx"
+  },
+  {
+    "titre": "Versement de salaire",
+    "questions": ["comment rédiger une demande de versement de salaire ?"],
+    "theme": "salaire",
+    "type_de_contrat": "CDI, CDD",
+    "profil": "salarié",
+    "filename": "Modèle_demande_paiement_salaire_salarié.docx"
+  },
+  {
+    "titre": "Rupture de période d'essai",
+    "questions": ["comment rédiger une rupture de période d'essai ?"],
+    "theme": "période d'essai",
+    "type_de_contrat": "CDI",
+    "profil": "salarié",
+    "filename": "Modèle_fin_période_essai-initiative_du_salarié.docx"
+  },
+  {
+    "titre": "Rupture de période d'essai",
+    "questions": ["comment rédiger une rupture de période d'essai ?"],
+    "theme": "période d'essai",
+    "type_de_contrat": "CDI",
+    "profil": "employeur",
+    "filename": "Modèle_fin_période_essai-initiative_employeur.docx"
+  },
+  {
+    "titre": "Reçu de solde de tout compte",
+    "questions": ["comment rédiger un reçu de solde de tout compte ?"],
+    "theme": "fin de contrat",
+    "type_de_contrat": "CDI, CDD",
+    "profil": "employeur",
+    "filename": "Modèle_Recu_solde_de_tout_compte.docx"
+    
+  },
+  {
+    "titre": "Renouvellement de période d'essai",
+    "questions": ["comment rédiger un renouvellement de période d'essai ?"],
+    "theme": "période d'essai",
+    "type_de_contrat": "CDI",
+    "profil": "employeur",
+    "filename": "Modèle_renouvellement_période_essai-initiative_employeur.docx"
+    
+  }
+]
