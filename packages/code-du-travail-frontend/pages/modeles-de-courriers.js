@@ -49,10 +49,10 @@ class ModeleCourrier extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>Code du travail : {data._source.title}</title>
+          <title>Modèle de courrier : {data._source.title}</title>
         </Head>
         <Search />
-        {!data && <BigError>Article introuvable</BigError>}
+        {!data && <BigError>Modèle de courrier introuvable</BigError>}
         {data && (
           <Article title={data._source.title} >
             <Html>{data._source.html}</Html>
