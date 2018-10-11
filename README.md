@@ -1,6 +1,8 @@
 
 # Code du travail numérique
 
+[![Build Status](https://travis-ci.com/SocialGouv/code-du-travail-numerique.svg?branch=master)](https://travis-ci.com/SocialGouv/code-du-travail-numerique)
+
 > Ce repository regroupe les informations sur les projets du code du travail numérique.
 
 ## Installation
