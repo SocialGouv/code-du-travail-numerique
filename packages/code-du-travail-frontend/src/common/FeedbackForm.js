@@ -103,10 +103,7 @@ class FeedbackForm extends React.Component {
             </header>
             <form onSubmit={this.submit}>
               <p>
-                <label>
-                  Êtes vous satisfait par les réponses apportées à votre
-                  question ?
-                </label>
+                Êtes vous satisfait par les réponses apportées à votre question ?
               </p>
               <StarRating
                 className="feedback-stars"
