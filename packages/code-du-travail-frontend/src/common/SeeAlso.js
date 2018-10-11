@@ -35,8 +35,8 @@ const SeeAlso = theme => {
           <div className="block-2-cols__row">
             <div className="block-2-cols__col">
               <h3>
-                <img src="/static/assets/icons/phone-call.svg" alt="" />Vos
-                interlocuteurs
+                <img src="/static/assets/icons/phone-call.svg" alt="" />
+                Vos interlocuteurs
               </h3>
               <ul>
                 <li>
@@ -56,8 +56,8 @@ const SeeAlso = theme => {
             </div>
             <div className="block-2-cols__col">
               <h3>
-                <img src="/static/assets/icons/line-chart.svg" alt="" />Liens et
-                outils
+                <img src="/static/assets/icons/line-chart.svg" alt="" />
+                Liens et outils
               </h3>
               <ul>
                 {links.map(link => (

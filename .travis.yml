@@ -1,0 +1,22 @@
+---
+dist: trusty
+language: node_js
+sudo: false
+git:
+  depth: 5
+
+node_js: lts/*
+
+cache: yarn
+
+script:
+  - yarn lint
+  - yarn run build
+jobs:
+  include:
+    - stage: Prepare
+      script: yarn lerna run --stream lint
+    -
+      script: yarn lerna run --stream build
+    - stage: test
+      script: yarn lerna run --stream test
