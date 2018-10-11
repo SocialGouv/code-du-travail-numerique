@@ -11,7 +11,10 @@
     "lint": "lerna run lint --parallel",
     "build": "lerna run build",
     "start": "lerna run start --parallel",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "api": "yarn workspace code-du-travail-api dev",
+    "frontend": "yarn workspace code-du-travail-frontend dev",
+    "postinstall": "cp docker-compose.override.dev.yml docker-compose.override.yml"
   },
   "repository": {
     "type": "git",

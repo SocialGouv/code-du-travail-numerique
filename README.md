@@ -52,7 +52,9 @@ $ yarn
 
 ## Setup
 
-Editer `.env` et `docker-compose.override.yml` puis lancer `docker-compose up`
+- ElasticSearch : `docker-compose up`
+- API : `yarn api`
+- FrontEnd : `yarn frontend`
 
 #### Mettre à jour l'index ElasticSearch :
 
