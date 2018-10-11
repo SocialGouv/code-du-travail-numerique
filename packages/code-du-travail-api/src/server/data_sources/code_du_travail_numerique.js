@@ -15,7 +15,7 @@ async function search ({
   size = 10,
   must = [],
   should = [],
-  fragment_size = 40,
+  fragmentSize = 40,
   ...others
 }) {
   let elasticsearchQuery = {
@@ -110,7 +110,7 @@ async function search ({
         order: 'score',
         pre_tags: ['<mark>'],
         post_tags: ['</mark>'],
-        fragment_size: fragment_size,
+        fragment_size: fragmentSize,
         fields: {
           'title.french_stemmed': {},
           'title.french_exact': {},
