@@ -1,7 +1,13 @@
 
 # Code du travail numérique
 
-Ce repository regroupe les informations sur les projets du code du travail numérique.
+> Ce repository regroupe les informations sur les projets du code du travail numérique.
+
+## Installation
+
+```sh
+$ yarn
+```
 
 ## Sous-projets
 
