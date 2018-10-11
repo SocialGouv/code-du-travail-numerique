@@ -31,6 +31,13 @@ module.exports = routes()
     page: "code-du-travail",
     pattern: "/code-du-travail/:slug"
   })
+  
+  // http://localhost:3000/modeles_de_courriers/L2253-1
+  .add({
+    name: "modeles-de-courriers",
+    page: "modeles-de-courriers",
+    pattern: "/modeles-de-courriers/:slug"
+  })
 
   // theme navigation
   //
