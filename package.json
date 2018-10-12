@@ -8,7 +8,7 @@
     "api": "yarn workspace code-du-travail-api dev",
     "build": "lerna run build",
     "dev:docker": "docker-compose up --remove-orphans",
-    "dev:node": "lerna run dev --parallel",
+    "dev:node": "run-p frontend api",
     "dev": "run-p dev:*",
     "frontend": "yarn workspace code-du-travail-frontend dev",
     "lint": "lerna run lint --parallel",
