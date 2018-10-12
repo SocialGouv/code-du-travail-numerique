@@ -28,7 +28,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
     let query = ctx.request.query.q
     ctx.body = await codeDuTravailNumerique.search({
       query,
-      fragment_size: 200,
+      fragmentSize: 200,
       size: 5,
       _source: ['title', 'source', 'slug'],
     })
