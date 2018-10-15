@@ -1,12 +1,16 @@
 #!/bin/sh
 set -e
 
-while ! curl "http://${ES_HOST}:9200/_cat/health?h=status"
+while ! curl "http://elasticsearch:9200/_cat/health?h=status"
 do
     echo "Elasticsearch instance not available: still trying to connect."
     sleep 1
 done
 echo "Elasticsearch instance available: connected successfully."
+
+cd /app
+
+#python ./search/indexing/create_indexes.py;
 
 # Infinite wait: keep the container alive until it is told to stop.
 # Using trap will make the container react immediately to a stop request.
