@@ -126,6 +126,18 @@ def create_documents(index_name, type_name):
                 'all_text': f"{val['question']} {faq_text} {val['theme']} {val['branche']}",
             })
 
+    with open(os.path.join(settings.BASE_DIR, 'dataset/export-courriers.json')) as json_data:
+        data = json.load(json_data)
+        for val in data:
+            body_data.append({
+                'source': 'modeles_de_courriers',
+                'title': val['titre'],
+                'slug': slugify(val['titre'], to_lower=True),
+                'text': ''.join(val['questions']),
+                'html': val["html"],
+                'all_text': f"{val['titre']} {' '.join(val['questions'])} {val['theme']} {val['type_de_contrat']} {val['profil']}",
+          })
+
     # with open(os.path.join(settings.BASE_DIR, 'dataset/code_bfc.json')) as json_data:
     #     data = json.load(json_data)
     #     for val in data:

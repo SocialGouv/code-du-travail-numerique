@@ -12,7 +12,7 @@ Créez un fichier `.env` :
 
 ```shell
 NODE_ENV=development
-API_URL=https://127.0.0.1:1337
+API_URL=https://127.0.0.1:1337/api/v1
 SENTRY_PUBLIC_DSN=https://path/to/sentry
 PORT=3000
 ```
