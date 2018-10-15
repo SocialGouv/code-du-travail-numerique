@@ -11,4 +11,4 @@ $ npm start
 ``` 
 va générer le fichier `/dataset/export-courriers.json` qui sera ensuite indexé par ElasticSearch.
 
-**Important**: Le contenu des fichiers n'est pas indéxé. Seules les metadonnée présentent dans le fichier `/dataset/courriers-type/courriers.json` sont utilisées.
+**Important**: Le contenu des fichiers n'est pas indéxé. Seules les metadonnées présentes dans le fichier `/dataset/courriers-type/courriers.json` sont utilisées.
