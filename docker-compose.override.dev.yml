@@ -6,4 +6,6 @@ services:
   elasticsearch:
     ports:
       - 9200:9200
-
+  python:
+    volumes:
+     - ./packages/code-du-travail-data:/app
