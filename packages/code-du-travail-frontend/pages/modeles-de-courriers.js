@@ -1,9 +1,14 @@
-import React from 'react'
-import { withRouter } from "next/router"
-import PropTypes from 'prop-types'
+import React from "react";
+import { withRouter } from "next/router";
+import PropTypes from "prop-types";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui"
+import {
+  Button,
+  Container,
+  Alert,
+  Article
+} from "@socialgouv/code-du-travail-ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
@@ -24,28 +29,27 @@ const Source = ({ name }) => (
       marginTop: 50
     }}
   >
-  Modèles de courrier fournis par vos services de renseignements des DIRECCTE en
-  région
+    Modèles de courrier fournis par vos services de renseignements des DIRECCTE
+    en région
   </div>
 );
 
 class ModeleCourrier extends React.Component {
-   
-  static async getInitialProps({ res, query }) { 
-    return await fetch(`${process.env.API_URL}/items/modeles_de_courriers/${query.slug}`)
+  static async getInitialProps({ res, query }) {
+    return await fetch(
+      `${process.env.API_URL}/items/modeles_de_courriers/${query.slug}`
+    )
       .then(r => r.json())
-      .then(data => { 
-        return {data}
+      .then(data => {
+        return { data };
       })
       .catch(e => {
-        console.log("e", e);
         res.statusCode = 404;
         throw e;
       });
   }
-
   render() {
-    const { data } = this.props; 
+    const { data } = this.props;
     return (
       <React.Fragment>
         <Head>
@@ -54,15 +58,22 @@ class ModeleCourrier extends React.Component {
         <Search />
         {!data && <BigError>Modèle de courrier introuvable</BigError>}
         {data && (
-          <Article title={data._source.title} >
+          <Article title={data._source.title}>
             <Html>{data._source.html}</Html>
             <Source />
+            <a
+              className="btn"
+              title="Télécharger le courrier type"
+              href={`${process.env.API_URL}/docs/${data._source.filename}`}
+            >
+              Télécharger le document
+            </a>
           </Article>
         )}
         <SeeAlso />
         <FeedbackForm query="" />
       </React.Fragment>
-    )
+    );
   }
 }
 
