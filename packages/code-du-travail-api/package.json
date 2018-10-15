@@ -26,7 +26,9 @@
     "elasticsearch": "^15.0.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-mount": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
