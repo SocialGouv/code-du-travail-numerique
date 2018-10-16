@@ -132,6 +132,7 @@ def create_documents(index_name, type_name):
             body_data.append({
                 'source': 'modeles_de_courriers',
                 'title': val['titre'],
+                'filename': val['filename'],
                 'slug': slugify(val['titre'], to_lower=True),
                 'text': ''.join(val['questions']),
                 'html': val["html"],

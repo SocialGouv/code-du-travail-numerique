@@ -7,13 +7,16 @@ require('elastic-apm-node').start({
 })
 
 require('dotenv').config()
-
+const path = require('path')
 const bodyParser = require('koa-bodyparser')
+const mount = require('koa-mount')
+const send = require('koa-send')
 const cors = require('@koa/cors')
+const DOCS_DIR = '../../../code-du-travail-data/dataset/courrier-type/docx'
 const Koa = require('koa')
-
 // const corsConf = require('./conf/cors')
 const apiRoutes = require('./routes/api')
+const API_BASE_URL = require('./routes/api').BASE_URL
 
 const app = new Koa()
 const PORT = process.env.PORT || 1337
@@ -21,6 +24,11 @@ const PORT = process.env.PORT || 1337
 app.use(cors())
 app.use(bodyParser())
 app.use(apiRoutes.routes())
+
+// Mount '/docs‘ to allow standart mail template download (docx file)
+app.use(mount(`${API_BASE_URL}/docs`, async ctx => {
+  await send(ctx, ctx.path, { root: path.join(__dirname, DOCS_DIR) })
+}))
 
 // Server.
 const server = app.listen(PORT, () => {
