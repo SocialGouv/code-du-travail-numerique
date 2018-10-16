@@ -25,21 +25,10 @@ app.use(cors())
 app.use(bodyParser())
 app.use(apiRoutes.routes())
 
-
+// Mount '/docs‘ to allow standart mail template download (docx file)
 app.use(mount(`${API_BASE_URL}/docs`, async ctx => {
   await send(ctx, ctx.path, { root: path.join(__dirname, DOCS_DIR) })
 }))
-
-// // Handle file download
-// apiRoutes.get(`${API_BASE_URL}/docs/:filename`, async ctx => {
-//   const { filename } = ctx.params
-//   try {
-//     ctx.attachment(filename)
-//     ctx.body = fs.createReadStream(path.join(__dirname, DOCS_DIR, filename))
-//   } catch (error) {
-//     console.trace(error.message)
-//   }
-// })
 
 // Server.
 const server = app.listen(PORT, () => {
