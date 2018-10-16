@@ -107,6 +107,7 @@ def create_documents(index_name, type_name):
             'source': 'fiches_ministere_travail',
             'slug': slugify(val['title'], to_lower=True),
             'text': val['text'],
+            'anchor': val['anchor'],
             'html': val["html"],
             'title': val['title'],
             'all_text': f"{val['title']} {val['text']}",
