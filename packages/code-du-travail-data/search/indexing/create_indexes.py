@@ -177,8 +177,27 @@ def create_documents(index_name, type_name):
                 'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
             })
 
+
+    with open(os.path.join(settings.BASE_DIR, 'dataset/faq-conventions-collectives.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from faq-conventions-collectives.json", len(data))
+        for val in data:
+            faq_text = strip_html(val['reponse'])
+            tags = parse_hash_tags(val.get("tags"))
+            body_data.append({
+                'source': 'faq',
+                'slug': slugify(val['question'], to_lower=True),
+                'text': faq_text,
+                'html': val["reponse"],
+                'title': val['question'],
+                'tags': tags,
+                'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
+            })
+
+
     with open(os.path.join(settings.BASE_DIR, 'dataset/export-courriers.json')) as json_data:
         data = json.load(json_data)
+        logger.info("Load %s documents from export-courriers.json", len(data))
         for val in data:
             body_data.append({
                 'source': 'modeles_de_courriers',
