@@ -2,7 +2,7 @@ import memoizee from "memoizee";
 import React from "react";
 import { Container } from "@socialgouv/code-du-travail-ui";
 import { withRouter } from "next/router";
-import debounce from "lodash.debounce";
+import pDebounce from "p-debounce";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import Suggester from "./Suggester";
@@ -31,14 +31,26 @@ const Disclaimer = () => (
   </div>
 );
 
+// todo: dont cache on server error, let user try again
+const memoFetch = memoizee(
+  url =>
+    fetch(url).then(r => {
+      if (r.status === 200) {
+        return r.json();
+      } else {
+        return Promise.reject("Un problème est survenu.");
+      }
+    }),
+  {
+    promise: true
+  }
+);
+
 const fetchResults = (query, endPoint = "search") => {
-  const url = `${process.env.API_URL}/${endPoint}?q=${query}`;
-  return fetch(url).then(response => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error("Un problème est survenu.");
-  });
+  const url = `${process.env.API_URL}/${endPoint}?q=${encodeURIComponent(
+    query
+  )}`;
+  return memoFetch(url);
 };
 
 // memoize search results
@@ -49,18 +61,15 @@ const fetchResultsSearch = memoizee(
   { promise: true }
 );
 
-const fetchResultsSuggestDebounced = debounce(
+const fetchResultsSuggestDebounced = pDebounce(
   query => fetchResults(query, "suggest"),
   200
 );
 
 // memoize suggestions results
-const fetchResultsSuggest = memoizee(
-  query =>
-    (query && query.length > 2 && fetchResultsSuggestDebounced(query)) ||
-    Promise.resolve(),
-  { promise: true }
-);
+const fetchResultsSuggest = query =>
+  (query && query.length > 2 && fetchResultsSuggestDebounced(query.trim())) ||
+  Promise.resolve();
 
 export class SearchQuery extends React.Component {
   shouldComponentUpdate(nextProps) {
