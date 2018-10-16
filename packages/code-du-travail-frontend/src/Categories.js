@@ -3,7 +3,7 @@ import { Link } from "../routes";
 
 import { Container, Categories } from "@socialgouv/code-du-travail-ui";
 
-import themes from "./data/themes";
+import themes from "./data/themes.json";
 
 const Category = ({
   title,
