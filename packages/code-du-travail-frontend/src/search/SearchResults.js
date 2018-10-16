@@ -5,7 +5,7 @@ import { Alert } from "@socialgouv/code-du-travail-ui";
 
 import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";
-import { Link } from "../../routes";
+import Link from "next/link";
 
 import { getLabelBySource, getRouteBySource } from "../sources";
 
@@ -40,14 +40,18 @@ const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
   const excerpt = makeExcerpt(highlight);
 
   const route = getRouteBySource(_source.source);
+  const anchor = _source.anchor ? _source.anchor.slice(1) : "";
 
   // internal links
   if (route) {
     return (
       <li className="search-results__item">
         <Link
-          route={route}
-          params={{ slug: _source.slug, q: router.query.q, search: 0 }}
+          href={{
+            pathname: `${route}/${_source.slug}`,
+            hash: anchor,
+            query: { q: router.query.q, search: 0 }
+          }}
         >
           <a className="search-results-link">
             <ContentBody

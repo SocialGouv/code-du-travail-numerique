@@ -4,7 +4,7 @@ import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
 
 import AsyncFetch from "../lib/AsyncFetch";
-import { Router } from "../../routes";
+import Router from "next/router";
 import { getLabelBySource, getRouteBySource } from "../sources";
 
 const getSuggestionValue = suggestion =>
@@ -62,10 +62,15 @@ const renderSuggestionsContainer = ({ containerProps, children, query }) => (
 
 const onSuggestionSelected = (e, suggestion, query) => {
   e.preventDefault();
-  Router.pushRoute(getRouteBySource(suggestion.suggestion._source.source), {
-    slug: suggestion.suggestion._source.slug,
-    q: query,
-    search: 0
+  const route = getRouteBySource(suggestion.suggestion._source.source);
+  const anchor = suggestion.suggestion._source.anchor
+    ? suggestion.suggestion._source.anchor.slice(1)
+    : "";
+
+  Router.push({
+    pathname: `/${route}/${suggestion.suggestion._source.slug}`,
+    query: { q: query, search: 0 },
+    hash: anchor
   });
 };
 
