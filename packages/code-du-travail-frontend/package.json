@@ -8,8 +8,8 @@
   "main": "src/index.js",
   "dependencies": {
     "@sentry/browser": "^4.1.0",
-    "@socialgouv/code-du-travail-css": "^1.0.2",
-    "@socialgouv/code-du-travail-ui": "^1.1.0",
+    "@socialgouv/code-du-travail-css": "^1.0.4",
+    "@socialgouv/code-du-travail-ui": "^1.2.4",
     "@zeit/next-css": "^1.0.0",
     "date-fns": "^1.29.0",
     "dotenv": "^6.0.0",
