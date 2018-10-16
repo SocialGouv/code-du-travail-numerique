@@ -7,9 +7,10 @@ require('elastic-apm-node').start({
 })
 
 require('dotenv').config()
-const fs = require('fs')
 const path = require('path')
 const bodyParser = require('koa-bodyparser')
+const mount = require('koa-mount')
+const send = require('koa-send')
 const cors = require('@koa/cors')
 const DOCS_DIR = '../../../code-du-travail-data/dataset/courrier-type/docx'
 const Koa = require('koa')
@@ -24,16 +25,21 @@ app.use(cors())
 app.use(bodyParser())
 app.use(apiRoutes.routes())
 
-// Handle file download
-apiRoutes.get(`${API_BASE_URL}/docs/:filename`, async ctx => {
-  const { filename } = ctx.params
-  try {
-    ctx.attachment(filename)
-    ctx.body = fs.createReadStream(path.join(__dirname, DOCS_DIR, filename))
-  } catch (error) {
-    console.trace(error.message)
-  }
-})
+
+app.use(mount(`${API_BASE_URL}/docs`, async ctx => {
+  await send(ctx, ctx.path, { root: path.join(__dirname, DOCS_DIR) })
+}))
+
+// // Handle file download
+// apiRoutes.get(`${API_BASE_URL}/docs/:filename`, async ctx => {
+//   const { filename } = ctx.params
+//   try {
+//     ctx.attachment(filename)
+//     ctx.body = fs.createReadStream(path.join(__dirname, DOCS_DIR, filename))
+//   } catch (error) {
+//     console.trace(error.message)
+//   }
+// })
 
 // Server.
 const server = app.listen(PORT, () => {
