@@ -11,13 +11,15 @@ and each value is its associated tag, e.g.:
 """
 import os
 import csv
+import logging
 
-from search.settings import BASE_DIR
+from search import settings
+logger = settings.get_logger(__name__)
 
 
 # This file contains tag humanly renamed. Source:
 # https://github.com/SocialGouv/code-du-travail-explorer/blob/5071d9/src/data/themes.js
-TAGS_CSV = os.path.join(BASE_DIR, 'dataset/code_du_travail/themes.csv')
+TAGS_CSV = os.path.join(settings.BASE_DIR, 'dataset/code_du_travail/themes.csv')
 
 
 TAGS_DICT = {}
@@ -29,7 +31,7 @@ def get_cleaned_tags(csv_file=TAGS_CSV):
         tag_reader = csv.reader(csv_data, delimiter='\t')
         for i, row in enumerate(tag_reader):
           if len(row) < 3:
-            print("theme.csv: cannot parse row", i)
+            logger.warn("theme.csv: cannot parse row %d", i)
           else:
             tag = row[1].strip()
             articles = [article.strip() for article in row[2].split(';')]

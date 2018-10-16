@@ -12,8 +12,6 @@ $ yarn
 
 Note, environment files will be created on *postinstall* (see [scripts/setup-env.s](scripts/setup-env.sh))
 
-## Usage
-
 ### Local development
 
 ```sh

@@ -1,0 +1,577 @@
+[
+  {
+    "question": "Je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "L'employeur ne peut vous engager sans qu'un écrit soit nécessaire uniquement pour un CDI à temps plein. Dans tous les autres cas un contrat écrit est nécessaire.- Si vous n'avez pas eu de contrat de travail, vous êtes donc présumé embauché en CDI à temps plein-.  Si votre entreprise dépend d'une branche d'activité en particulier, la convention collective peut prévoir des mesures spécifique en la matière.<p>De plus, l'employeur doit dans tous les cas vous remettre un document comprenant les informations de la déclaration préalable à l'embauche qu'il a du effectué auprès des organismes sociaux (URSSAF ou MSA)</p>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "type_contrat": "CDI"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "Je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "Si vous n'avez pas eu de contrat de travail, vous êtes donc présumé embauché en CDI à temps plein. Vous devrez Si votre entreprise dépend d'une branche d'activité en particulier, la convention collective peut prévoir des mesures spécifique en la matière.<p>De plus, l'employeur doit dans tous les cas vous remettre un document comprenant les informations de la déclaration préalable à l'embauche qu'il a du effectué auprès des organismes sociaux (URSSAF ou MSA)</p>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "type_contrat": ["CDD", "CTT", "autres"]
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "Je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "La rédaction d'une <b>convention de stage</b> entre votre école ( ou autre structure éducative) ou votre organisme de formation, l'entreprise d'accueil et vous même ou votre responsable légal ( parent, tuteur..) est <b>obligatoire</b>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "type_contrat": "stagiaire"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "Je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "La rédaction d'une <b>convention de stage</b> entre votre école ( ou autre structure éducative) ou votre organisme de formation, l'entreprise d'accueil et vous même ou votre responsable légal ( parent, tuteur..) est <b>obligatoire</b>. Si vous avez moins de 16 ans aujourd'hui, et que vous travaillez dans une entreprise, alors que vous n'avez reçu aucun papier ou contrat : contactez immédiatement l'inspection du travail du lieu où se situe l'entreprise.",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "type_contrat": "stagiaire",
+      "travailleur_particulier": "jeune travailleur"
+    },
+    "themes": [3600, 3601, 119000],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "Je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "Si vous avez moins de 16 ans aujourd'hui, et que vous travaillez dans une entreprise, alors que vous n'avez reçu aucun papier: contactez immédiatement l'inspection du travail du lieu où se situe l'entreprise.",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "travailleur_particulier": "jeune travailleur"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "j'ai été engagé par un artisan boulangerie, je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "L'employeur ne peut vous engager sans qu'un écrit soit nécessaire uniquement pour un CDI à temps plein. Dans tous les autres cas un contrat écrit est nécessaire.- Si vous n'avez pas eu de contrat de travail, vous êtes donc présumé embauché en CDI à temps plein-. Dans tous les autres cas un contrat écrit est nécessaire.<p><p>Pour autant, votre convention collective prévoit:</p>que votre employeur doit vous confirmer votre embauche par un écrit, comme une lettre d'engagement. <p><p>De plus, l'employeur doit dans tous les cas vous remettre un document comprenant les informations de la déclaration préalable à l'embauche qu'il a du effectué auprès des organismes sociaux (URSSAF ou MSA)</p>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "j'ai été engagé dans une entreprise de l'industrie chimique, je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "L'employeur ne peut vous engager sans qu'un écrit soit nécessaire uniquement pour un CDI à temps plein. Dans tous les autres cas un contrat écrit est nécessaire.- Si vous n'avez pas eu de contrat de travail, vous êtes donc présumé embauché en CDI à temps plein-. Dans tous les autres cas un contrat écrit est nécessaire.<p>Pour autant, votre convention collective prévoit:</p>que votre employeur doit vous confirmer votre engagement par un écrit: comme une lettre ou un avis. <p><p>De plus, l'employeur doit dans tous les cas vous remettre un document comprenant les informations de la déclaration préalable à l'embauche qu'il a du effectué auprès des organismes sociaux (URSSAF ou MSA)</p>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "branche": "industries chimiques",
+      "type_contrat": "CDI"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "j'ai été engagé dans une entreprise de la branche bureau d'étude technique, je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "L'employeur ne peut vous engager sans qu'un écrit soit nécessaire uniquement pour un CDI à temps plein. Dans tous les autres cas un contrat écrit est nécessaire.- Si vous n'avez pas eu de contrat de travail, vous êtes donc présumé embauché en CDI à temps plein-. Dans tous les autres cas un contrat écrit est nécessaire.<p>Pour autant, votre convention collective prévoit:</p><b>un contrat de travail est remis à tout salarié au moment de engagement</b>. (Il comporte au moins les clauses suivantes :</p><ul> Durée du contrat</ul><ul>Date d’entrée dans l’entreprise</ul><ul>Fonction occupée par l’intéressé</ul><ul>Classification et coefficient hiérarchique</ul><ul>Lieu d’emploi</ul><ul>Conditions d’essai</ul><p><p>De plus, l'employeur doit dans tous les cas vous remettre un document comprenant les informations de la déclaration préalable à l'embauche qu'il a du effectué auprès des organismes sociaux (URSSAF ou MSA)</p>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "branche": "bureau d'étude technique",
+      "type_contrat": "CDI"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "j'ai été engagé dans une entreprise de la branche hôtels, cafés et restaurants, je n'ai pas eu de contrat de travail écrit est-ce normal?",
+    "reponse": "L'employeur ne peut vous engager sans qu'un écrit soit nécessaire uniquement pour un CDI à temps plein. Dans tous les autres cas un contrat écrit est nécessaire.- Si vous n'avez pas eu de contrat de travail, vous êtes donc présumé embauché en CDI à temps plein-. Dans tous les autres cas un contrat écrit est nécessaire.<p>Pour autant, votre convention collective prévoit:</p><b>Un contrat écrit ou à minima une lettre d'engagementt</b>est <b>obligatoirement</b> remis au salarié</b></p><p>De plus, l'employeur doit dans tous les cas vous remettre un document comprenant les informations de la déclaration préalable à l'embauche qu'il a du effectué auprès des organismes sociaux (URSSAF ou MSA)</p>",
+    "tags": {
+      "theme": [
+        "contrat de travail",
+        "principes",
+        "un contrat écrit en français"
+      ],
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI"
+    },
+    "themes": [3600, 3601],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non. Si l'activité de votre entreprise ne relève pas d'une convention collective, la période d'essai ne peut pas être renouvelée. <p> En effet, Pour que cette période d'essai puisse être renouvelable une fois :</p><ul><b>La convention collective doit prévoir la possibilité du renouvellement</b></ul><ul>Le contrat de travail doit avoir prévu la période d'essai</ul><ul>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</ul><ul>Le salarié doit avoir donné son accord</ul><p>vérifiez tout de même, que votre entreprise ne dépend pas d'une conventiontion collective ( affichages obligatoires, contrat de travail, bulletin de salaire)",
+    "tags": {
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, la période d'essai du CDD n'est pas renouvelable.",
+    "tags": {
+      "type_contrat": "CDD",
+      "themes": [3760],
+      "date_redaction": "26/09/2018"
+    },
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, la période d'essai du CTT n'est pas renouvelable.",
+    "tags": {
+      "type_contrat": "CTT",
+      "themes": [3760],
+      "date_redaction": "26/09/2018"
+    },
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, la période d'esai n'est pas renouvelable dans votre branche pour votre catégorie.",
+    "tags": {
+      "categorie": "ouvriers, employés",
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, la période d'esai n'est pas renouvelable dans votre branche pour votre catégorie.",
+    "tags": {
+      "categorie": "ETAM",
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Oui, pour le <b>personnel d'encadrement</b>, dans votre branche prévoit la possibilité du renouvellement <b> une fois</b> de la période d'essai.<p>Pour que cette période d'essai puisse être renouvelable une fois :</p><ul>La convention collective doit prévoir la possibilité du renouvellement</ul><ul>Le contrat de travail doit avoir prévu la période d'essai</ul><ul>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</ul><ul>Le salarié doit avoir donné son accord</ul>",
+    "tags": {
+      "categorie": "cadres",
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, dans votre branche le renouvellement de la période d'essai n'est pas possible.",
+    "tags": {
+      "branche": "industries chimiques",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, dans votre branche le renouvellement de la période d'essai n'est pas possible.",
+    "tags": {
+      "categorie": "ouvriers, employés",
+      "critere_niveau": "niveau 1, échelon 1",
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Oui, pour votre catégorie dans votre branche prévoit la possibilité du renouvellement de la période d'essai.<p>Pour que cette période d'essai puisse être renouvelable une fois :</p><ul>La convention collective doit prévoir la possibilité du renouvellement</ul><ul>Le contrat de travail doit avoir prévu la période d'essai</ul><ul>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</ul><ul>Le salarié doit avoir donné son accord</ul> ",
+    "tags": {
+      "categorie": "ouvriers, employés",
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, dans votre branche  et votre catégorie, le renouvellement de la période d'essai n'est pas possible.",
+    "tags": {
+      "categorie": "cadres",
+      "critere_niveau": "cadre supérieur",
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Oui, pour votre catégorie dans votre branche prévoit la possibilité du renouvellement de la période d'essai.<p>Pour que cette période d'essai puisse être renouvelable une fois :</p><ul>La convention collective doit prévoir la possibilité du renouvellement</ul><ul>Le contrat de travail doit avoir prévu la période d'essai</ul><ul>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</ul><ul>Le salarié doit avoir donné son accord</ul> ",
+    "tags": {
+      "categorie": "cadres",
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Oui, pour votre catégorie dans votre branche prévoit la possibilité du renouvellement de la période d'essai.<p>Pour que cette période d'essai puisse être renouvelable une fois :</p><ul>La convention collective doit prévoir la possibilité du renouvellement</ul><ul>Le contrat de travail doit avoir prévu la période d'essai</ul><ul>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</ul><ul>Le salarié doit avoir donné son accord</ul> ",
+    "tags": {
+      "categorie": "ETAM",
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Non, dans votre branche  et votre catégorie, le renouvellement de la période d'essai n'est pas possible.",
+    "tags": {
+      "categorie": ["employés", "ouvriers"],
+      "branche": "bureau d'étude technique",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai est-elle renouvelable ?",
+    "reponse": "Oui, pour votre catégorie dans votre branche prévoit la possibilité du renouvellement de la période d'essai <b>une fois</b>.<p>Pour que cette période d'essai puisse être renouvelable une fois :</p><ul>La convention collective doit prévoir la possibilité du renouvellement une seule fois</b></ul><ul>Le contrat de travail doit avoir prévu la période d'essai</ul><ul>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</ul><ul>Le salarié doit avoir donné son accord</ul> ",
+    "tags": {
+      "categorie": ["ETAM", "cadres"],
+      "branche": "bureau d'étude technique",
+      "type_contrat": "CDI"
+    },
+    "themes": [3760],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai peut elle être rompue?",
+    "reponse": "Oui. la période d'essai peut etre rompue sans motif et sans formalité. Toutefois, votre branche prévoit qu'en cas derupture de la période d'essai du fait de l'employeur après 5 jours de travail, le salarié bénéficie d'une <b>indemnité de congés payés</b> ",
+    "tags": {
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": ["CDI", "CDD"]
+    },
+    "themes": [3720, 3730, 49900, 52100],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "ma période d'essai peut elle être rompue?",
+    "reponse": "Oui. la période d'essai peut etre rompue sans motif et sans formalité.",
+    "tags": {
+      "type_contrat": ["CDI", "CDD"]
+    },
+    "themes": [3720, 3730, 49900, 52100],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "Oui, si votre employeur est situé dans les départements d'Alsace-Moselle (haut-Rhin, bas-rhin, moselle), votre employeur doit vous laisser un temps raisonnable pour rechercher un emploi en cours de préavis.",
+    "tags": {
+      "particularismes": "Alsace Moselle",
+      "themes": [2000, 410, 420, 110]
+    },
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "Les heures de recherche d'emploi ne sont pas prévues par le code du travail. Un accord collectif de branche ou d'entreprise voire une clause du contrat de travail peut prévoir un tel aménagement.<p>Si votre entreprise ne relève pas d'une branche, un accord collectif au niveau de l'entrperise ou une clause du contrat de trvail peut toutefois prévoir ces heures de recherche d'emploi. </p>",
+    "tags": {
+      "themes": [2000, 410, 420]
+    },
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "Dans votre branche d'activité, la convention collective prévoit : <p> en cas de licenciement, vous avez droit à 2 heures par jour pour rechercher un emploi au cours de la dernière semaine de préavis</p>",
+    "tags": {
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "La convention collective prévoit bien des heures pour recherche d'emploi, comme suit:<p><table><tr><th></th><th>Durée du préavis</th><th>nombre d'heures pour recherche d'emploi</th></tr><tr><td>en cours de période d'essai</td><td>6 jours</td><td>12 heures</td></tr><tr><td>en cours de période d'essai</td><td>15 jours</td><td>3O heures</td></tr><tr><td>hors période d'essai</td><td>durée hebdomadaire du travail x nombre de mois de préavis</td></tr></table></p>",
+    "tags": {
+      "branche": "industries chimiques",
+      "type_contrat": "CDI"
+    },
+    "themes": [2000, 410, 420, 3720, 3730],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "Dans votre branche, la convention collective prévoit que le salarié, à temps complet, a droit à des heures pour rechercher un emploi en cours de préavis, en cas de licenciement sauf faute grave.<p> le salarié a droit à 2 heures de recherche d'emploi par jour. la totalité de ces heures de recherche d'emploi ne doit pas dépasser la durée hebdomadaire de travail du salarié.",
+    "tags": {
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "Dans votre branche, il n'est pas prévu d'heures pour rechercher un emploi pour les salariés à temps partiel",
+    "tags": {
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps partiel"
+    },
+    "themes": [2000, 410, 420, 3720],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "reponse": "Dans votre branche, la convention collective prévoit que le salarié a droit à des heures pour rechercher un emploi, en cas de licenciement, comme suit:<ul> 6 jours ouvrés par mois.</ul><ul> le crédit est pris par demi journées</ul>",
+    "tags": {
+      "branche": "bureau d'étude technique",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "je viens de retrouver un nouvel emploi après un licenciement, ai-je le droit de ne pas executer mon préavis?",
+    "reponse": "Dans votre branche, la convention collective prévoit que le salarié qui retrouve un emploi en cas de licenciement peut être dispensé de préavis",
+    "tags": {
+      "branche": "industries chimiques",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "je viens de retrouver un nouvel emploi après un licenciement, ai-je le droit de ne pas executer mon préavis?",
+    "reponse": "Dans votre branche, la convention collective prévoit que le salarié qui retrouve un emploi en cas de licenciement peut être dispensé de préavis",
+    "tags": {
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "je viens de retrouver un nouvel emploi après un licenciement, ai-je le droit de ne pas executer mon préavis?",
+    "reponse": "Dans votre branche, la convention collective prévoit que le salarié qui retrouve un emploi en cas de licenciement peut être dispensé de préavis",
+    "tags": {
+      "branche": "bureau d'étude technique",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "je viens de retrouver un nouvel emploi après un licenciement, ai-je le droit de ne pas executer mon préavis?",
+    "reponse": "Dans votre branche, la convention collective ne prévoit pas de cas de dispense de préavis spécifique si le salarié retrouve un emploi: il sera toujours possible d'écourter le préavis à condition, que l'employeur vous l'accorde. Si l'employeur ne donne pas son accord, le salarié qui n'execute pas le préavis s'expose au remboursement des indemnités de congés payés, et à des dommages et intérets.",
+    "tags": {
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "je viens de retrouver un nouvel emploi après un licenciement, ai-je le droit de ne pas executer mon préavis?",
+    "reponse": "Dans votre branche, la convention collective ne prévoit pas de cas de dispense de préavis spécifique si le salarié retrouve un emploi: il sera toujours possible d'écourter le préavis à condition, que l'employeur vous l'accorde. Si l'employeur ne donne pas son accord, le salarié qui n'execute pas le préavis s'expose au remboursement des indemnités de congés payés, et à des dommages et intérets.",
+    "tags": {
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "mon patron m'a indiqué qu'il n'a pas de travail pour moi aujourd'hui. En at-il le droit, et serais je payé?",
+    "reponse": "Dans votre branche, la convention collective prévoit pour l'employeur une indemnité dite de chou blanc, qui permet à l'employeur de donner congé à son salarié qui se présente à sa prise de poste dans l'entreprise et qui est décommandé.<p> En contrepartie le salarié perçoit une indemnité de 8 heures de salaire horaire minimum.</p> 155 80,64 - 155 80,64 - 160 81,42 - 170 82,99 - 170 82,99 - 170 82,99 - 175 83,78 - 175 83,78 - 175 83,78 - 185 86,24 - 185 86,24 - 185 86,24 - 185 86,24 - 190 87,01 - 190 87,01 - 190 87,01 - 195 87,78 - 195 87,78 - 195 87,78 - 195 87,78 - 240 94,72",
+    "tags": {
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "mon employeur m'a indiqué qu'il n'a pas de travail pour moi aujourd'hui. En a t-il le droit, et serais je payé?",
+    "reponse": "Votre employeur doit contractuellement vous fournir du travail. S'il ne peut en fournir, il devra donc vous rémunérer en conséquence. Dans ce cas, pour éviter que l'absence ne vous incombe(absence non rémunérée, abandon de poste fautive), un écrit peut être convenu avec l'employeur pour garder une trace, ou à défaut, signifiez par lettre avec accusé de réception la situation à votre employeur.",
+    "tags": {
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [2000, 410, 420],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Le CDI de chantier ou d'opération peut être conclu, soit si la branche en prévoit les possibilités et modalités, soit pour les branches d'activité dont il est usage d'y avoir recours au 1er janvier 2017",
+    "tags": {
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantierou d'opération?",
+    "reponse": "Oui, parceque dans le secteur du BTP, il est d'usage d'avoir recours aux contrat de chantiers ",
+    "tags": {
+      "branche": "BTP",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Non, il n'est pas possible à ce jour de contracter des CDI de chantier ou d'opération dans votre branche d'activité",
+    "tags": {
+      "branche": "boulangerie",
+      "type_entreprise": "artisanale",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Non, il n'est pas possible à ce jour de contracter des CDI de chantier ou d'opération dans votre branche d'activité",
+    "tags": {
+      "branche": "hôtels, cafés restaurants",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Oui, en principe il est possibe de contracter un contrat de chantier ou d'opération dans votre branche: il en était d'usage au 1er janvier 2017",
+    "tags": {
+      "branche": "industries chimiques",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Oui, un accord national existe en la matière dans votre branche: https://uimm.fr/wp-content/uploads/2018/07/2018-06-29_AN_contrat-chantier-ou-operation-dans-la-metallurgie.pdf ",
+    "tags": {
+      "branche": "métallurgie",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  },
+  {
+    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Oui,si l'employeur est  affilié à l'organsiation patronale SYNTEC: un texte le prévoit dans la CCN.Par aileurs, il apparait d'usage de recourir à ce type_contrat dans cette branche.",
+    "tags": {
+      "branche": "bureau d'étude technique",
+      "type_contrat": "CDI",
+      "travailleur_particulier": "temps plein"
+    },
+    "themes": [12800],
+    "date_redaction": "26/09/2018",
+    "redacteur": "cdtn"
+  }
+]

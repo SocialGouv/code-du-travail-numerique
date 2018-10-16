@@ -27,6 +27,16 @@ logger.addHandler(console)
 logger.setLevel(logging.INFO)
 
 
+def parse_hash_tags(tags):
+    newTags = []
+    for key, value in tags.items():
+        if isinstance(value, list):
+            for entry in value:
+                newTags.append(key + ":" + (str(entry) or ""))
+        else:
+          newTags.append(key + ":" + (str(value) or ""))
+    return newTags
+
 def get_es_client():
     """
     Configure the client for different environments.
@@ -76,6 +86,41 @@ def create_documents(index_name, type_name):
     es = get_es_client()
     body_data = []
 
+
+    with open(os.path.join(settings.BASE_DIR, 'dataset/kali.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from kali", len(data))
+        for val in data:
+            body_data.append({
+                'source': 'kali',
+                'id': val['cid'],
+                'slug': slugify(val['titre'], to_lower=True),
+                'title': val['titre'],
+                'all_text': val['titre'],
+                'url': val['url'],
+            })
+
+    with open(os.path.join(settings.BASE_DIR, 'dataset/idcc-tags.json')) as idcc_tags_data:
+        tags_data = json.load(idcc_tags_data)
+        with open(os.path.join(settings.BASE_DIR, 'dataset/idcc.json')) as json_data:
+            data = json.load(json_data)
+            logger.info("Load %s documents from idcc", len(data))
+            for key, val in data.items():
+                title = "IDCC " + key + " : " +  val
+                tags = []
+                if tags_data.get(key) and tags_data.get(key).get("tags"):
+                  tags += parse_hash_tags(tags_data.get(key).get("tags"))
+
+                body_data.append({
+                    'source': 'idcc',
+                    'id': key,
+                    'slug': key,
+                    'title': title,
+                    'tags':tags,
+                    'all_text': title
+                })
+
+    logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
         body_data.append({
             'source': 'code_du_travail',
@@ -90,6 +135,7 @@ def create_documents(index_name, type_name):
             'url': val['url'],
         })
 
+    logger.info("Load %s documents from service-public", len(FICHES_SERVICE_PUBLIC))
     for val in FICHES_SERVICE_PUBLIC:
         body_data.append({
             'source': 'fiches_service_public',
@@ -102,6 +148,7 @@ def create_documents(index_name, type_name):
             'url': val['url'],
         })
 
+    logger.info("Load %s documents from fiches-ministere-travail", len(FICHES_MINISTERE_TRAVAIL))
     for val in FICHES_MINISTERE_TRAVAIL:
         body_data.append({
             'source': 'fiches_ministere_travail',
@@ -116,19 +163,41 @@ def create_documents(index_name, type_name):
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/faq.json')) as json_data:
         data = json.load(json_data)
+        logger.info("Load %s documents from faq", len(data))
         for val in data:
             faq_text = strip_html(val['reponse'])
+            tags = parse_hash_tags(val.get("tags"))
             body_data.append({
                 'source': 'faq',
                 'slug': slugify(val['question'], to_lower=True),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
-                'all_text': f"{val['question']} {faq_text} {val['theme']} {val['branche']}",
+                'tags': tags,
+                'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
             })
+
+
+    with open(os.path.join(settings.BASE_DIR, 'dataset/faq-conventions-collectives.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from faq-conventions-collectives.json", len(data))
+        for val in data:
+            faq_text = strip_html(val['reponse'])
+            tags = parse_hash_tags(val.get("tags"))
+            body_data.append({
+                'source': 'faq',
+                'slug': slugify(val['question'], to_lower=True),
+                'text': faq_text,
+                'html': val["reponse"],
+                'title': val['question'],
+                'tags': tags,
+                'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
+            })
+
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/export-courriers.json')) as json_data:
         data = json.load(json_data)
+        logger.info("Load %s documents from export-courriers.json", len(data))
         for val in data:
             body_data.append({
                 'source': 'modeles_de_courriers',
@@ -150,6 +219,7 @@ def create_documents(index_name, type_name):
     #             'all_text': f"<p>{val['question']}</p>{val['reponse']}",
     #         })
 
+    logger.info("Load %s documents from conventions-collectives", len(CONVENTIONS_COLLECTIVES))
     for val in CONVENTIONS_COLLECTIVES:
         body_data.append({
             'source': 'conventions_collectives',
@@ -169,10 +239,11 @@ def create_documents(index_name, type_name):
         }
         for body in body_data
     ]
+    logger.info('Loaded %s documents', len(body_data))
     for batch_action in chunks(actions, 1000):
         logger.info('Batch indexing %s documents', len(batch_action))
         bulk(es, batch_action)
-
+    logger.info('Indexed %s documents', len(body_data))
 
 if __name__ == '__main__':
 

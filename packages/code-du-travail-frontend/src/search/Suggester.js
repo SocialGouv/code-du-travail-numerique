@@ -68,7 +68,7 @@ const onSuggestionSelected = (e, suggestion, query) => {
     : "";
 
   Router.push({
-    pathname: `/${route}/${suggestion.suggestion._source.slug}`,
+    pathname: `/contenu/${route}/${suggestion.suggestion._source.slug}`,
     query: { q: query, search: 0 },
     hash: anchor
   });

@@ -1,7 +1,9 @@
 import App, { Container } from "next/app";
 import React from "react";
 import GitHubForkRibbon from "react-github-fork-ribbon";
+import "@socialgouv/code-du-travail-css";
 
+import "../src/piwik";
 import Header from "../src/layout/Header.js";
 import Footer from "../src/layout/Footer.js";
 

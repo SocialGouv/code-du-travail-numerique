@@ -7,40 +7,18 @@ const routes = require("next-routes");
 //
 
 module.exports = routes()
-  // unique item routes
-  //
-  // http://localhost:3000/question/duree-du-travail
-  .add({ name: "question", page: "question", pattern: "/question/:slug" })
-  // http://localhost:3000/fiche-service-public/duree-du-travail
+  // content detail page
+  // http://localhost:3000/contenu/code-du-travail/L2253-1
+  // http://localhost:3000/contenu/question/duree-du-travail
+  // http://localhost:3000/contenu/modeles-de-courriers/lettre-demission
+  // http://localhost:3000/contenu/idcc/899
   .add({
-    name: "fiche-service-public",
-    page: "fiche-service-public",
-    pattern: "/fiche-service-public/:slug"
-  })
-
-  // http://localhost:3000/fiche-ministere-travail/duree-du-travail
-  .add({
-    name: "fiche-ministere-travail",
-    page: "fiche-ministere-travail",
-    pattern: "/fiche-ministere-travail/:slug"
-  })
-
-  // http://localhost:3000/code-du-travail/L2253-1
-  .add({
-    name: "code-du-travail",
-    page: "code-du-travail",
-    pattern: "/code-du-travail/:slug"
-  })
-  
-  // http://localhost:3000/modeles_de_courriers/L2253-1
-  .add({
-    name: "modeles-de-courriers",
-    page: "modeles-de-courriers",
-    pattern: "/modeles-de-courriers/:slug"
+    name: "contenu",
+    page: "content",
+    pattern: "/contenu/:source/:slug"
   })
 
   // theme navigation
-  //
   // http://localhost:3000/themes
   .add({ name: "themes", page: "theme", pattern: "/themes" })
 

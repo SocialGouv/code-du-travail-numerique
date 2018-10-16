@@ -6,7 +6,7 @@ const routeBySource = {
   fiches_ministere_travail: "fiche-ministere-travail",
   code_du_travail: "code-du-travail",
   conventions_collectives: "convention-collective",
-  modeles_de_courriers: "modeles-de-courriers",
+  modeles_de_courriers: "modeles-de-courriers"
 };
 
 // mapping elastic search source type -> source label
@@ -17,7 +17,7 @@ const labelBySource = {
   fiches_ministere_travail: "Ministère du Travail",
   code_du_travail: "Legifrance",
   conventions_collectives: "Legifrance",
-  modeles_de_courriers: "Courrier Type", 
+  modeles_de_courriers: "Courrier Type"
 };
 
 export const getLabelBySource = src => labelBySource[src] || "";

@@ -1,19 +1,47 @@
 import React from "react";
 import { withRouter } from "next/router";
-
-import { Alert } from "@socialgouv/code-du-travail-ui";
+import Link from "next/link";
+import { Section, Alert, Badge } from "@socialgouv/code-du-travail-ui";
 
 import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";
-import Link from "next/link";
-
+import DecisionTree from "../lib/decision/DecisionTree";
 import { getLabelBySource, getRouteBySource } from "../sources";
+import ContentComponents from "../content";
 
+const ContentTags = ({ tags }) => {
+  return (
+    tags &&
+    Object.keys(tags)
+      .reduce((a, tag) => {
+        if (Array.isArray(tag)) {
+          tag.forEach(t => {
+            a.push(t);
+          });
+        } else {
+          a.push(tag);
+        }
+        return a;
+      }, [])
+      .map(tag => (
+        <Badge style={{ marginRight: 5 }} key={tags[tag]}>
+          {tags[tag]}
+        </Badge>
+      ))
+  );
+};
+
+// temporarely disable tags display for s-p until filtering
 const ContentBody = ({ _source, excerpt, footer = null }) => (
   <article className={_source.source}>
     <header>
       <h3>{_source.title}</h3>
     </header>
+
+    {_source.tags &&
+      _source.source !== "fiches_service_public" && (
+        <ContentTags tags={_source.tags} />
+      )}
     <blockquote
       className="text-quote"
       dangerouslySetInnerHTML={{ __html: excerpt }}
@@ -36,19 +64,19 @@ const makeExcerpt = highlight => {
   return "";
 };
 
-const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
+const ResultItem = ({ _id, _source, highlight, query, router }) => {
   const excerpt = makeExcerpt(highlight);
 
-  const route = getRouteBySource(_source.source);
   const anchor = _source.anchor ? _source.anchor.slice(1) : "";
 
+  const sourceRoute = getRouteBySource(_source.source);
   // internal links
-  if (route) {
+  if (sourceRoute) {
     return (
       <li className="search-results__item">
         <Link
           href={{
-            pathname: `${route}/${_source.slug}`,
+            pathname: `/contenu/${sourceRoute}/${_source.slug}`,
             hash: anchor,
             query: { q: router.query.q, search: 0 }
           }}
@@ -82,42 +110,72 @@ const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
       </a>
     </li>
   );
-});
+};
+
+const Results = withRouter(({ results, router }) => (
+  <div className="search-results">
+    <ul className="search-results__list">
+      {results.map(result => (
+        <ResultItem
+          key={result._source.slug}
+          query={router.query.q}
+          router={router}
+          {...result}
+        />
+      ))}
+    </ul>
+  </div>
+));
 
 class SearchResults extends React.Component {
   render() {
-    let data = this.props.data;
-    let query = this.props.query;
-
+    const { data, query, filters, router } = this.props;
     // No results.
     if (!data || !data.hits || !data.hits.total) {
       return (
         <React.Fragment>
-          <div className="section-light">
-            <div className="container">
-              <Alert category="primary">
-                Nous n’avons pas trouvé de résultat pour votre recherche.
-              </Alert>
-            </div>
-          </div>
+          <Section light>
+            <Alert category="primary">
+              Nous n’avons pas trouvé de résultat pour votre recherche.
+            </Alert>
+          </Section>
           <FeedbackForm query={query} />
         </React.Fragment>
       );
     }
 
+    // hardcode which result can be filterable.
+    const filterableResults = data.hits.hits.filter(
+      hit => ["idcc", "faq"].indexOf(hit._source.source) > -1
+    );
+
+    if (filterableResults.length > 1) {
+      // show decision tree and results
+      return (
+        <DecisionTree
+          data={filterableResults}
+          filters={filters}
+          render={({ filters, results }) => {
+            if (results.length === 1) {
+              const data = results[0];
+              const { View } = ContentComponents[data.source];
+              return <View {...data} />;
+            }
+            return (
+              <Section light>
+                <Results results={results.map(r => ({ _source: r }))} />
+              </Section>
+            );
+          }}
+        />
+      );
+    }
+
     return (
       <React.Fragment>
-        <div className="section-light">
-          <div className="container">
-            <div className="search-results">
-              <ul className="search-results__list">
-                {data.hits.hits.map(result => (
-                  <ResultItem key={result["_id"]} {...result} />
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        <Section light>
+          <Results results={data.hits.hits} />
+        </Section>
         <SeeAlso />
         <FeedbackForm query={query} />
       </React.Fragment>
@@ -125,4 +183,4 @@ class SearchResults extends React.Component {
   }
 }
 
-export default SearchResults;
+export default withRouter(SearchResults);
