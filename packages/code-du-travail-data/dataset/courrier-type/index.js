@@ -1,11 +1,11 @@
-const mammoth = require("mammoth"); 
-const data = require("./courriers.json"); 
+const mammoth = require("mammoth");
+const data = require("./courriers.json");
 
-const DOC_DIR = "docx"; 
+const DOC_DIR = "docx";
 const basic_styles = `<style>
-.courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}  
-.courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}  
-.courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}  
+.courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}
+.courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}
+.courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}
 .editable {color: blue}
 </style>`
 const options = {
@@ -17,14 +17,15 @@ const options = {
   ]
 };
 
-const convertFile2Html = ({ filename, ...rest }) => { 
+const convertFile2Html = ({ filename, ...rest }) => {
   return mammoth
     .convertToHtml({
-      path: `${__dirname}/${DOC_DIR}/${filename}`, 
+      path: `${__dirname}/${DOC_DIR}/${filename}`,
     }, options)
-    .then(result =>  ({ 
-        ...rest, 
-        html: basic_styles + result.value.replace(/\t/g, ' ').replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>") 
+    .then(result =>  ({
+        filename,
+        ...rest,
+        html: basic_styles + result.value.replace(/\t/g, ' ').replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
       }));
 }
 

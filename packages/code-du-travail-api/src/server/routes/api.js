@@ -95,3 +95,4 @@ router.get(`${BASE_URL}/docsCount`, async ctx => {
   }
 })
 module.exports = router
+module.exports.BASE_URL = BASE_URL
