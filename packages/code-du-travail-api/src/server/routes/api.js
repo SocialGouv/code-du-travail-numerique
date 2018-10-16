@@ -30,7 +30,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
       query,
       fragmentSize: 200,
       size: 5,
-      _source: ['title', 'source', 'slug'],
+      _source: ['title', 'source', 'slug', 'anchor'],
     })
   } catch (error) {
     console.trace(error.message)
@@ -48,7 +48,6 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
-  console.log('params', ctx.params)
   try {
     ctx.body = await codeDuTravailNumerique.getSingleItem({
       source: ctx.params.source,
