@@ -76,11 +76,15 @@ def populate_fiches_ministere_travail(json_file=JSON_FICHES):
                         section_title = section_title.replace(pattern, '')
                         section_title = section_title[0].upper() + section_title[1:]
 
+                # extract the anchor part from the url '#comment-et-pourquoi'
+                anchor, = re.findall(r'(#.+$)',  section['url'])
+
                 FICHES_MINISTERE_TRAVAIL.append({
                     'title': section_title,
                     'text': section['text'],
                     'html': item.get("html"),
                     'url': section['url'],
+                    'anchor': anchor
                 })
 
     logger.debug('-' * 80)
