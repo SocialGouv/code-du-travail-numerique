@@ -8,7 +8,7 @@ import parents from "unist-util-parents";
 import { Link, Router } from "../routes";
 import Search, { SearchQuery } from "../src/search/Search";
 import Categories from "../src/Categories";
-import themes from "../src/data/themes2";
+import themes from "../src/data/themes";
 
 const BigError = ({ children }) => (
   <div
