@@ -124,6 +124,7 @@ def create_documents(index_name, type_name):
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
+                'author':  val['source'] if 'source' in val else 'DIRRECTE',
                 'all_text': f"{val['question']} {faq_text} {val['theme']} {val['branche']}",
             })
 
