@@ -14,6 +14,7 @@ async function search ({
   query,
   size = 10,
   must = [],
+  mustNot = [],
   should = [],
   fragmentSize = 40,
   ...others
@@ -25,6 +26,9 @@ async function search ({
       ...others,
       query: {
         bool: {
+          must_not: [
+            ...mustNot,
+          ],
           must: [
             // Fuziness is ignored with multi_match's cross_fields.
             // https://github.com/elastic/elasticsearch/issues/6866

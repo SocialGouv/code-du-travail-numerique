@@ -12,6 +12,7 @@ from search.extraction.code_du_travail.cleaned_tags.data import CODE_DU_TRAVAIL_
 from search.extraction.conventions_collectives_nationales.data import CONVENTIONS_COLLECTIVES
 from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRAVAIL
 from search.extraction.fiches_service_public.data import FICHES_SERVICE_PUBLIC
+from search.extraction.themes_front.data import THEMES
 from search.indexing import analysis
 from search.indexing.strip_html import strip_html
 
@@ -159,6 +160,15 @@ def create_documents(index_name, type_name):
             'title': val['title'],
             'all_text': f"{val['title']} {val['text']}",
             'url': val['url'],
+        })
+
+    for val in THEMES:
+        body_data.append({
+            'source': 'themes',
+            'slug': slugify(val['title'], to_lower=True),
+            'text': val['text'],
+            'all_text': f"{val['title']} {val['text']}",
+            'title': val['title'],
         })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/faq.json')) as json_data:

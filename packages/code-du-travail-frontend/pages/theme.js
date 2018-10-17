@@ -8,7 +8,7 @@ import parents from "unist-util-parents";
 import { Link, Router } from "../routes";
 import Search, { SearchQuery } from "../src/search/Search";
 import Categories from "../src/Categories";
-import themes from "../src/data/themes";
+import themes from "../src/data/themes.json";
 
 const BigError = ({ children }) => (
   <div
@@ -122,7 +122,7 @@ class Theme extends React.Component {
             )) ||
             null}
           {theme &&
-            theme.type !== "root" && <SearchQuery query={theme.title} />}
+            theme.type !== "root" && <SearchQuery query={theme.title} excludeSources={["themes"]} />}
         </Container>
       </React.Fragment>
     );

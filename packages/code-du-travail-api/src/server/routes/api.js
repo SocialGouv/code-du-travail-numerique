@@ -17,7 +17,18 @@ const BASE_URL = `/api/v1`
 router.get(`${BASE_URL}/search`, async ctx => {
   try {
     let query = ctx.request.query.q
-    ctx.body = await codeDuTravailNumerique.search({ query })
+    let excludeSources = ctx.request.query.excludeSources
+    let mustNot = []
+    if (excludeSources) {
+      mustNot = excludeSources.split(',').map(source => ({
+        'query_string': {
+          'default_field': 'source',
+          'query': source.trim(),
+        },
+      }))
+    }
+
+    ctx.body = await codeDuTravailNumerique.search({ query, mustNot })
   } catch (error) {
     console.trace(error.message)
   }

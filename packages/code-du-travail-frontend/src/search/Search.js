@@ -36,8 +36,14 @@ const FormSearchButton = () => (
   </button>
 );
 
-const fetchResults = (query, endPoint = "search") => {
-  const url = `${process.env.API_URL}/${endPoint}?q=${query}`;
+const fetchResults = (query, endPoint = "search", excludeSource) => {
+  let urlParams = new URLSearchParams();
+  urlParams.append("q", query);
+  if (excludeSource) {
+    urlParams.append("excludeSource", excludeSource);
+  }
+  const url = `${process.env.API_URL}/${endPoint}?${urlParams.toString()}`;
+
   return fetch(url).then(response => {
     if (response.ok) {
       return response.json();
@@ -48,8 +54,8 @@ const fetchResults = (query, endPoint = "search") => {
 
 // memoize search results
 const fetchResultsSearch = memoizee(
-  query => {
-    return fetchResults(query, "search");
+  (query, excludeSources) => {
+    return fetchResults(query, "search", excludeSources);
   },
   { promise: true }
 );
@@ -62,10 +68,10 @@ const fetchResultsSuggest = memoizee(
   { promise: true }
 );
 
-export const SearchQuery = ({ query }) => (
+export const SearchQuery = ({ query, excludeSources }) => (
   <AsyncFetch
     autoFetch={true}
-    fetch={() => fetchResultsSearch(query)}
+    fetch={() => fetchResultsSearch(query, excludeSources)}
     render={({ status, result, clear }) => (
       <div>
         <div style={{ textAlign: "center" }}>
