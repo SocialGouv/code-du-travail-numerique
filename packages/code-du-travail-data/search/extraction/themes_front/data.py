@@ -28,7 +28,7 @@ def populate_theme(data):
                 slug = '/'.join(item['slug'])
             else:
                 slug = item['slug']
-            logger.debug(slug)
+
             theme = {
                 'title': item['title'],
                 'slug':  'themes/' + slug,
