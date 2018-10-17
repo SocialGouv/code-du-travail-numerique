@@ -1,44 +1,31 @@
 {
-  "0003":
-    "Convention collective nationale des ouvriers de la navigation intérieure de marchandises",
-  "0007":
-    "Convention collective départementale de l'industrie du bâtiment et des travaux publics du Rhône",
-  "0016":
-    "Convention collective nationale des transports routiers et activités auxiliaires du transport",
+  "0003": "Convention collective nationale des ouvriers de la navigation intérieure de marchandises",
+  "0007": "Convention collective départementale de l'industrie du bâtiment et des travaux publics du Rhône",
+  "0016": "Convention collective nationale des transports routiers et activités auxiliaires du transport",
   "0018": "Convention collective nationale des industries textiles",
-  "0029":
-    "Convention collective nationale des établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP, convention de 1951)",
-  "0043":
-    "Convention collective nationale des entreprises de commission, de courtage et de commerce intracommunautaire et d'importation-exportation de France métropolitaine",
+  "0029": "Convention collective nationale des établissements privés d'hospitalisation, de soins, de cure et de garde à but non lucratif (FEHAP, convention de 1951)",
+  "0043": "Convention collective nationale des entreprises de commission, de courtage et de commerce intracommunautaire et d'importation-exportation de France métropolitaine",
   "0044": "Convention collective nationale des industries chimiques et connexes",
   "0045": "Convention collective nationale du caoutchouc",
-  "0054":
-    "Convention collective des ouvriers, employés, techniciens et agents de maîtrise des industries métallurgiques, mécaniques et connexes de la région parisienne",
+  "0054": "Convention collective des ouvriers, employés, techniciens et agents de maîtrise des industries métallurgiques, mécaniques et connexes de la région parisienne",
   "0076": "Convention collective du bâtiment de la Charente",
   "0080": "Convention collective du bâtiment et des travaux publics de la Moselle",
-  "0083":
-    "Convention collective nationale des menuiseries charpentes et constructions industrialisées et des portes planes",
+  "0083": "Convention collective nationale des menuiseries charpentes et constructions industrialisées et des portes planes",
   "0086": "Convention collective nationale des entreprises de publicité et assimilées",
-  "0087":
-    "Convention collective nationale des ouvriers des industries de carrières et de matériaux",
+  "0087": "Convention collective nationale des ouvriers des industries de carrières et de matériaux",
   "0112": "Convention collective nationale de l'industrie laitière",
   "0134": "Convention collective départementale des ouvriers du bâtiment des Hautes-Pyrénées",
-  "0135":
-    "Convention collective nationale des employés techniciens et agents de maîtrise des industries de carrières et de matériaux",
+  "0135": "Convention collective nationale des employés techniciens et agents de maîtrise des industries de carrières et de matériaux",
   "0137": "Convention collective du bâtiment et des travaux publics de l'Indre-et-Loire",
   "0140": "Convention collective départementale du bâtiment du Puy-de-Dôme",
   "0142": "Convention collective départementale des ouvriers du bâtiment de la Haute-Saône",
-  "0146":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics de la Nièvre",
+  "0146": "Convention collective départementale des ouvriers du bâtiment et des travaux publics de la Nièvre",
   "0149": "Convention collective départementale des ouvriers du bâtiment de la Vienne",
   "0152": "Convention collective départementale des ouvriers du bâtiment de l'Yonne",
   "0157": "Convention collective des ouvriers du bâtiment et des travaux publics des Vosges",
-  "0158":
-    "Convention collective nationale du travail mécanique du bois, des scieries, du négoce et de l'importation des bois",
-  "0171":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics de Seine-et-Marne",
-  "0172":
-    "Convention collective interrégionale de l'industrie du bois de pin maritime en forêt de Gascogne (Charente, Aquitaine)",
+  "0158": "Convention collective nationale du travail mécanique du bois, des scieries, du négoce et de l'importation des bois",
+  "0171": "Convention collective départementale des ouvriers du bâtiment et des travaux publics de Seine-et-Marne",
+  "0172": "Convention collective interrégionale de l'industrie du bois de pin maritime en forêt de Gascogne (Charente, Aquitaine)",
   "0176": "Convention collective nationale de l'industrie pharmaceutique",
   "0184": "Convention collective nationale de l'imprimerie de labeur et des industries graphiques",
   "0192": "Convention collective des ouvriers du bâtiment et des travaux publics du Doubs",
@@ -46,219 +33,140 @@
   "0200": "Convention collective nationale des exploitations frigorifiques",
   "0207": "Convention collective nationale de l'industrie des cuirs et peaux",
   "0208": "Convention collective départementale des ouvriers du bâtiment du territoire de Belfort",
-  "0211":
-    "Convention collective nationale des cadres des industries de carrières et matériaux (UNICEM)",
+  "0211": "Convention collective nationale des cadres des industries de carrières et matériaux (UNICEM)",
   "0214": "Convention collective des ouvriers des entreprises de presse de la région parisienne",
   "0218": "Convention collective nationale des organismes de sécurité sociale",
-  "0233":
-    "Convention collective départementale des maîtres et artisans tailleurs de la Loire-Atlantique",
+  "0233": "Convention collective départementale des maîtres et artisans tailleurs de la Loire-Atlantique",
   "0240": "Convention collective nationale du personnel des greffes des tribunaux de commerce",
   "0247": "Convention collective nationale des industries de l'habillement",
-  "0252":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics de l'Ain",
+  "0252": "Convention collective départementale des ouvriers du bâtiment et des travaux publics de l'Ain",
   "0270": "Convention collective de la couture des Bouches-du-Rhône",
   "0275": "Convention collective nationale du personnel au sol des entreprises de transport aérien",
-  "0279":
-    "Convention collective des ouvriers du bâtiment et des travaux publics pour le département de l'Allier",
-  "0292":
-    "Convention collective nationale de la plasturgie (transformation des matières plastiques)",
+  "0279": "Convention collective des ouvriers du bâtiment et des travaux publics pour le département de l'Allier",
+  "0292": "Convention collective nationale de la plasturgie (transformation des matières plastiques)",
   "0303": "Convention collective régionale de la couture parisienne",
   "0306": "Convention collective des cadres techniques de la presse quotidienne parisienne",
   "0311": "Convention collective départementale de la couture de la Loire-Atlantique",
-  "0357":
-    "Convention collective départementale du bâtiment de l'équipement électrique et des travaux publics de la Haute-Garonne",
+  "0357": "Convention collective départementale du bâtiment de l'équipement électrique et des travaux publics de la Haute-Garonne",
   "0361": "Convention collective des ouvriers du bâtiment du département de l'Indre",
-  "0362":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics du Tarn-et-Garonne",
-  "0363":
-    "Convention collective nationale du personnel ingénieurs et cadres de l'industrie de la fabrication des ciments",
+  "0362": "Convention collective départementale des ouvriers du bâtiment et des travaux publics du Tarn-et-Garonne",
+  "0363": "Convention collective nationale du personnel ingénieurs et cadres de l'industrie de la fabrication des ciments",
   "0365": "Convention collective des ouvriers du bâtiment du Gers",
-  "0372":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics de l'Ariège",
+  "0372": "Convention collective départementale des ouvriers du bâtiment et des travaux publics de l'Ariège",
   "0379": "Convention collective du travail des commerces de la Martinique",
   "0394": "Convention collective des employés de la presse quotidienne parisienne",
-  "0405":
-    "Convention collective nationale des établissements médico-sociaux de l'union intersyndicale des secteurs sanitaires et sociaux (UNISSS, FFESCPE, convention de 1965, enfants, adolescents )",
+  "0405": "Convention collective nationale des établissements médico-sociaux de l'union intersyndicale des secteurs sanitaires et sociaux (UNISSS, FFESCPE, convention de 1965, enfants, adolescents )",
   "0409": "Convention collective du bâtiment et des travaux publics de la région du Limousin",
-  "0412":
-    "Convention collective nationale de travail des guides accompagnateurs et accompagnateurs au service des agences de voyages et de tourisme",
-  "0413":
-    "Convention collective nationale de travail des établissements et services pour personnes inadaptées et handicapées (convention de 1966, SNAPEI)",
+  "0412": "Convention collective nationale de travail des guides accompagnateurs et accompagnateurs au service des agences de voyages et de tourisme",
+  "0413": "Convention collective nationale de travail des établissements et services pour personnes inadaptées et handicapées (convention de 1966, SNAPEI)",
   "0418": "Convention collective nationale de la chemiserie sur mesure",
-  "0436":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics de la Charente-Maritime",
-  "0438":
-    "Convention collective nationale de travail des échelons intermédiaires des services extérieurs de production des sociétés d'assurances",
-  "0440":
-    "Convention collective départementale des sucreries et sucreries-distilleries de la Réunion",
+  "0436": "Convention collective départementale des ouvriers du bâtiment et des travaux publics de la Charente-Maritime",
+  "0438": "Convention collective nationale de travail des échelons intermédiaires des services extérieurs de production des sociétés d'assurances",
+  "0440": "Convention collective départementale des sucreries et sucreries-distilleries de la Réunion",
   "0454": "Convention collective nationale des remontées mécaniques et domaines skiables",
   "0468": "Convention collective du commerce succursaliste de la chaussure",
   "0478": "Convention collective nationale des sociétés financières",
   "0489": "Convention collective du personnel des industries du cartonnage",
-  "0493":
-    "Convention collective nationale des vins, cidres, jus de fruits, sirops, spiritueux et liqueurs de France",
-  "0500":
-    "Convention collective nationale des commerces de gros de l'habillement, de la mercerie, de la chaussure et du jouet",
+  "0493": "Convention collective nationale des vins, cidres, jus de fruits, sirops, spiritueux et liqueurs de France",
+  "0500": "Convention collective nationale des commerces de gros de l'habillement, de la mercerie, de la chaussure et du jouet",
   "0509": "Convention collective des cadres administratifs de la presse quotidienne parisienne",
-  "0538":
-    "Convention collective nationale du personnel des entreprises de manutention ferroviaire et travaux connexes",
-  "0567":
-    "Convention collective nationale de la bijouterie, joaillerie, orfèvrerie et des activités qui s'y rattachent",
+  "0538": "Convention collective nationale du personnel des entreprises de manutention ferroviaire et travaux connexes",
+  "0567": "Convention collective nationale de la bijouterie, joaillerie, orfèvrerie et des activités qui s'y rattachent",
   "0572": "Convention collective de la couture et de la haute-couture de la région Rhône-Alpes",
   "0573": "Convention collective nationale des commerces de gros",
   "0575": "Convention collective pour le personnel des restaurants publics (chaînes)",
-  "0598":
-    "Convention collective nationale de travail des ouvriers de la presse quotidienne régionale",
-  "0599":
-    "Convention collective des ouvriers du bâtiment et des travaux publics de Meurthe-et-Moselle",
-  "0614":
-    "Convention collective nationale des industries de la sérigraphie et des procédés d'impression numérique connexes",
-  "0627":
-    "Convention collective départementale des employés, techniciens et agents de maîtrise du bâtiment et des travaux publics de La Réunion",
+  "0598": "Convention collective nationale de travail des ouvriers de la presse quotidienne régionale",
+  "0599": "Convention collective des ouvriers du bâtiment et des travaux publics de Meurthe-et-Moselle",
+  "0614": "Convention collective nationale des industries de la sérigraphie et des procédés d'impression numérique connexes",
+  "0627": "Convention collective départementale des employés, techniciens et agents de maîtrise du bâtiment et des travaux publics de La Réunion",
   "0635": "Convention collective nationale du négoce en fournitures dentaires",
-  "0637":
-    "Convention collective des industries et du commerce de la récupération (recyclage, régions Nord-Pas-de-Calais, Picardie)",
+  "0637": "Convention collective des industries et du commerce de la récupération (recyclage, régions Nord-Pas-de-Calais, Picardie)",
   "0650": "Convention collective nationale des ingénieurs et cadres de la métallurgie",
-  "0653":
-    "Convention collective de travail des producteurs salariés de base des services extérieurs de production des sociétés d'assurances",
+  "0653": "Convention collective de travail des producteurs salariés de base des services extérieurs de production des sociétés d'assurances",
   "0669": "Convention collective nationale des industries de fabrication mécanique du verre",
   "0673": "Convention collective nationale de la fourrure",
-  "0675":
-    "Convention collective nationale des maisons à succursales de vente au détail d'habillement",
+  "0675": "Convention collective nationale des maisons à succursales de vente au détail d'habillement",
   "0693": "Convention collective de travail des employés de la presse quotidienne départementale",
   "0698": "Convention collective de travail des employés de la presse quotidienne régionale",
-  "0700":
-    "Convention collective nationale des ingénieurs et cadres de la production des papiers, cartons et celluloses",
+  "0700": "Convention collective nationale des ingénieurs et cadres de la production des papiers, cartons et celluloses",
   "0706": "Convention collective nationale du personnel de la reprographie",
-  "0707":
-    "Convention collective nationale des ingénieurs et cadres de la transformation des papiers cartons et de la pellicule cellulosique",
-  "0714":
-    "Convention collective départementale des industries du travail des métaux de la Moselle (métallurgie)",
+  "0707": "Convention collective nationale des ingénieurs et cadres de la transformation des papiers cartons et de la pellicule cellulosique",
+  "0714": "Convention collective départementale des industries du travail des métaux de la Moselle (métallurgie)",
   "0715": "Convention collective nationale des instruments à écrire et des industries connexes",
-  "0716":
-    "Convention collective nationale des employés et ouvriers de la distribution cinématographique",
-  "0731":
-    "Convention collective nationale des commerces de quincaillerie, fournitures industrielles, fers, métaux et équipement de la maison, cadres",
+  "0716": "Convention collective nationale des employés et ouvriers de la distribution cinématographique",
+  "0731": "Convention collective nationale des commerces de quincaillerie, fournitures industrielles, fers, métaux et équipement de la maison, cadres",
   "0733": "Convention collective nationale des détaillants en chaussure",
-  "0749":
-    "Convention collective départementale des ouvriers du bâtiment et des travaux publics de la Martinique",
+  "0749": "Convention collective départementale des ouvriers du bâtiment et des travaux publics de la Martinique",
   "0759": "Convention collective nationale des pompes funèbres",
-  "0771":
-    "Convention collective départementale des ingénieurs assimilés et cadres du bâtiment et des travaux publics de La Réunion",
+  "0771": "Convention collective départementale des ingénieurs assimilés et cadres du bâtiment et des travaux publics de La Réunion",
   "0779": "Convention collective de travail du personnel des voies ferrées d'intérêt local",
   "0780": "Convention collective régionale des tailleurs sur mesure de la région parisienne",
   "0781": "Convention collective des cadres administratifs de la presse quotidienne départementale",
-  "0783":
-    "Convention collective des centres d'hébergement et de réadaptation sociale et dans les services d'accueil, d'orientation et d'insertion pour adultes (CHRS, SOP )",
-  "0787":
-    "Convention collective nationale des cabinets d'experts-comptables et de commissaires aux comptes",
+  "0783": "Convention collective des centres d'hébergement et de réadaptation sociale et dans les services d'accueil, d'orientation et d'insertion pour adultes (CHRS, SOP )",
+  "0787": "Convention collective nationale des cabinets d'experts-comptables et de commissaires aux comptes",
   "0797": "Convention collective des ouvriers du bâtiment du département du Loir-et-Cher",
   "0800": "Convention collective nationale des hôtels (chaîne)",
-  "0802":
-    "Convention collective nationale de la distribution de papiers-cartons commerces de gros pour les ouvriers, employés, techniciens et agents de maîtrise",
+  "0802": "Convention collective nationale de la distribution de papiers-cartons commerces de gros pour les ouvriers, employés, techniciens et agents de maîtrise",
   "0804": "Accord national interprofessionnel des voyageurs, représentants, placiers (VRP)",
-  "0822":
-    "Convention collective départementale applicable aux mensuels de la métallurgie de la Savoie",
-  "0827":
-    "Convention collective départementale des industries métallurgiques, mécaniques et connexes des Ardennes",
-  "0828":
-    "Convention collective départementale des industries métallurgiques, mécaniques, connexes et similaires de la Manche",
-  "0829":
-    "Convention collective départementale des industries métallurgiques et des industries connexes du Vaucluse",
-  "0832":
-    "Convention collective nationale du personnel ouvrier de l'industrie de la fabrication des ciments",
-  "0833":
-    "Convention collective nationale du personnel employés, techniciens, dessinateurs et agents de maîtrise de l'industrie de la fabrication des ciments",
-  "0836":
-    "Convention collective départementale des industries métallurgiques, mécaniques, électriques, connexes et similaires de la Haute-Savoie",
+  "0822": "Convention collective départementale applicable aux mensuels de la métallurgie de la Savoie",
+  "0827": "Convention collective départementale des industries métallurgiques, mécaniques et connexes des Ardennes",
+  "0828": "Convention collective départementale des industries métallurgiques, mécaniques, connexes et similaires de la Manche",
+  "0829": "Convention collective départementale des industries métallurgiques et des industries connexes du Vaucluse",
+  "0832": "Convention collective nationale du personnel ouvrier de l'industrie de la fabrication des ciments",
+  "0833": "Convention collective nationale du personnel employés, techniciens, dessinateurs et agents de maîtrise de l'industrie de la fabrication des ciments",
+  "0836": "Convention collective départementale des industries métallurgiques, mécaniques, électriques, connexes et similaires de la Haute-Savoie",
   "0843": "Convention collective nationale de la boulangerie-pâtisserie -entreprises artisanales-",
-  "0860":
-    "Convention collective départementale de la métallurgie et des industries connexes du Finistère",
-  "0863":
-    "Convention collective régionale des industries métallurgiques et connexes d'Ille-et-Vilaine et du Morbihan",
+  "0860": "Convention collective départementale de la métallurgie et des industries connexes du Finistère",
+  "0863": "Convention collective régionale des industries métallurgiques et connexes d'Ille-et-Vilaine et du Morbihan",
   "0878": "Convention collective des mensuels des industries métallurgiques du Rhône",
-  "0887":
-    "Convention collective départementale des industries métallurgiques, mécaniques, électriques et connexes de l'Eure",
-  "0892":
-    "Convention collective nationale des cadres et agents de maîtrise de la distribution de films de l'industrie cinématographique",
+  "0887": "Convention collective départementale des industries métallurgiques, mécaniques, électriques et connexes de l'Eure",
+  "0892": "Convention collective nationale des cadres et agents de maîtrise de la distribution de films de l'industrie cinématographique",
   "0897": "Convention collective nationale des services de santé au travail interentreprises",
-  "0898":
-    "Convention collective départementale des industries métallurgiques, mécaniques, électriques, connexes et similaires de l'Allier",
-  "0899":
-    "Convention collective départementale des industries métallurgiques, mécaniques et connexes de la Marne",
+  "0898": "Convention collective départementale des industries métallurgiques, mécaniques, électriques, connexes et similaires de l'Allier",
+  "0899": "Convention collective départementale des industries métallurgiques, mécaniques et connexes de la Marne",
   "0901": "Convention collective départementale des ouvriers de la boulangerie de la Martinique",
-  "0911":
-    "Convention collective départementale des industries métallurgiques, mécaniques, électriques, connexes et similaires de Seine-et-Marne",
-  "0914":
-    "Convention collective départementale des mensuels des industries métallurgiques de l'Ain",
+  "0911": "Convention collective départementale des industries métallurgiques, mécaniques, électriques, connexes et similaires de Seine-et-Marne",
+  "0914": "Convention collective départementale des mensuels des industries métallurgiques de l'Ain",
   "0915": "Convention collective nationale des sociétés d'expertises et d'évaluations",
-  "0919":
-    "Convention collective du personnel des garages de la Martinique(Automobile, commerce, réparation)",
-  "0920":
-    "Convention collective départementale des industries métallurgiques électriques et connexes de la Vienne",
+  "0919": "Convention collective du personnel des garages de la Martinique(Automobile, commerce, réparation)",
+  "0920": "Convention collective départementale des industries métallurgiques électriques et connexes de la Vienne",
   "0923": "Convention collective départementale de la métallurgie de la Charente-Maritime",
-  "0925":
-    "Convention collective nationale des ingénieurs et cadres de la distribution des papiers et cartons, commerce de gros",
-  "0930":
-    "Convention collective départementale de la métallurgie et des industries connexes de la Sarthe",
-  "0934":
-    "Convention collective départementale des industries métallurgiques mécaniques connexes et similaires de l'Indre",
-  "0937":
-    "Convention collective régionale des industries métallurgiques mécaniques et connexes de la Haute-Vienne et de la Creuse",
-  "0943":
-    "Convention collective départementale des industries métallurgiques mécaniques et connexes du Calvados",
-  "0948":
-    "Convention collective départementale des industries métallurgiques, mécaniques et connexes de l'Orne",
+  "0925": "Convention collective nationale des ingénieurs et cadres de la distribution des papiers et cartons, commerce de gros",
+  "0930": "Convention collective départementale de la métallurgie et des industries connexes de la Sarthe",
+  "0934": "Convention collective départementale des industries métallurgiques mécaniques connexes et similaires de l'Indre",
+  "0937": "Convention collective régionale des industries métallurgiques mécaniques et connexes de la Haute-Vienne et de la Creuse",
+  "0943": "Convention collective départementale des industries métallurgiques mécaniques et connexes du Calvados",
+  "0948": "Convention collective départementale des industries métallurgiques, mécaniques et connexes de l'Orne",
   "0953": "Convention collective nationale de la charcuterie de détail",
-  "0959":
-    "Convention collective nationale des laboratoires de biologie médicale extra-hospitaliers",
+  "0959": "Convention collective nationale des laboratoires de biologie médicale extra-hospitaliers",
   "0965": "Convention collective des industries métallurgiques et connexes du département du Var",
-  "0979":
-    "Convention collective locale des industries métallurgiques de l'arrondissement du Havre (Seine-Maritime)",
-  "0984":
-    "Convention collective départementale des industries métallurgiques, mécaniques et connexes d'Eure-et-Loir",
-  "0992":
-    "Convention collective nationale de la boucherie, boucherie-charcuterie et boucherie hippophagique, triperie, commerce de volailles et gibiers",
-  "0993":
-    "Convention collective nationale des prothésistes dentaires et des personnels des laboratoires de prothèse dentaire",
-  "0998":
-    "Convention collective nationale des ouvriers, employés, techniciens et agents de maîtrise de l'exploitation d'équipements thermiques et de génie climatique",
+  "0979": "Convention collective locale des industries métallurgiques de l'arrondissement du Havre (Seine-Maritime)",
+  "0984": "Convention collective départementale des industries métallurgiques, mécaniques et connexes d'Eure-et-Loir",
+  "0992": "Convention collective nationale de la boucherie, boucherie-charcuterie et boucherie hippophagique, triperie, commerce de volailles et gibiers",
+  "0993": "Convention collective nationale des prothésistes dentaires et des personnels des laboratoires de prothèse dentaire",
+  "0998": "Convention collective nationale des ouvriers, employés, techniciens et agents de maîtrise de l'exploitation d'équipements thermiques et de génie climatique",
   "1000": "Convention collective nationale du personnel des cabinets d'avocats",
-  "1001":
-    "Convention collective nationale des médecins spécialistes qualifiés au regard du conseil de l'ordre travaillant dans des établissements et services pour personnes inadaptées et handicapées",
-  "1007":
-    "Convention collective d'arrondissement des industries métallurgiques, mécaniques, connexes et similaires de la région de Thiers (Puy-de-Dôme)",
+  "1001": "Convention collective nationale des médecins spécialistes qualifiés au regard du conseil de l'ordre travaillant dans des établissements et services pour personnes inadaptées et handicapées",
+  "1007": "Convention collective d'arrondissement des industries métallurgiques, mécaniques, connexes et similaires de la région de Thiers (Puy-de-Dôme)",
   "1016": "Convention collective des cadres et agents de maîtrise de l'édition de musique",
-  "1018":
-    "Convention collective des cadres techniques de la presse quotidienne départementale française",
-  "1031":
-    "Convention collective nationale de la fédération nationale des associations familiales rurales (FNAFR)",
+  "1018": "Convention collective des cadres techniques de la presse quotidienne départementale française",
+  "1031": "Convention collective nationale de la fédération nationale des associations familiales rurales (FNAFR)",
   "1043": "Convention collective nationale des gardiens, concierges et employés d'immeubles",
   "1044": "Convention collective nationale de l'horlogerie",
-  "1049":
-    "Convention collective départementale du bâtiment, des travaux publics et de toutes professions concourant à l'acte de bâtir ou d'aménager de Saint Pierre-et-Miquelon",
-  "1050":
-    "Convention collective départementale du commerce et des services commerciaux de Saint-Pierre-et-Miquelon",
-  "1057":
-    "Convention collective des consignataires de navire et manutentionnaires de la Martinique",
-  "1059":
-    "Convention collective régionale des industries métallurgiques, électriques, électroniques et connexes de Midi-Pyrénées (Ariège, Aveyron, Gers, Haute-Garonne, Tarn, Tarn-et-Garonne, Lot, Aude convention du 1er avril 1980 )",
+  "1049": "Convention collective départementale du bâtiment, des travaux publics et de toutes professions concourant à l'acte de bâtir ou d'aménager de Saint Pierre-et-Miquelon",
+  "1050": "Convention collective départementale du commerce et des services commerciaux de Saint-Pierre-et-Miquelon",
+  "1057": "Convention collective des consignataires de navire et manutentionnaires de la Martinique",
+  "1059": "Convention collective régionale des industries métallurgiques, électriques, électroniques et connexes de Midi-Pyrénées (Ariège, Aveyron, Gers, Haute-Garonne, Tarn, Tarn-et-Garonne, Lot, Aude convention du 1er avril 1980 )",
   "1060": "Convention collective départementale de la métallurgie de la Martinique",
-  "1069":
-    "Convention collective départementale de la répartition et des dépôts pharmaceutiques de la Martinique",
-  "1072":
-    "Convention collective du travail règlementant le travail de manutention dans le port de Saint-Pierre",
-  "1077":
-    "Convention collective nationale entreprises du négoce et de l'industrie des produits du sol, engrais et produits connexes",
+  "1069": "Convention collective départementale de la répartition et des dépôts pharmaceutiques de la Martinique",
+  "1072": "Convention collective du travail règlementant le travail de manutention dans le port de Saint-Pierre",
+  "1077": "Convention collective nationale entreprises du négoce et de l'industrie des produits du sol, engrais et produits connexes",
   "1083": "Convention collective de travail des ouvriers de la presse quotidienne départementale",
-  "1090":
-    "Convention collective nationale des services de l'automobile (commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs auto-écoles CNPA )",
-  "1140":
-    "Convention collective départementale des hôtels cafés restaurants de Saint-Pierre-et-Miquelon(HCR)",
+  "1090": "Convention collective nationale des services de l'automobile (commerce et réparation de l'automobile, du cycle et du motocycle, activités connexes, contrôle technique automobile, formation des conducteurs auto-écoles CNPA )",
+  "1140": "Convention collective départementale des hôtels cafés restaurants de Saint-Pierre-et-Miquelon(HCR)",
   "1147": "Convention collective du personnel des cabinets médicaux (médecin)",
   "1159": "Convention collective départementale de la métallurgie de la Nièvre",
-  "1164":
-    "Convention collective locale des industries métallurgiques et annexes de la région de Vimeu (Somme)",
+  "1164": "Convention collective locale des industries métallurgiques et annexes de la région de Vimeu (Somme)",
   "1170": "Convention collective nationale de l'industrie des tuiles et briques (CCNTB)",
   "1182": "Convention collective nationale des personnels des ports de plaisance",
   "1194": "Convention collective nationale des employés de l'édition de musique",
@@ -267,264 +175,176 @@
   "1232": "Convention collective départementale des hôtels de la Guadeloupe",
   "1237": "Convention collective nationale des centres de gestion agréés",
   "1247": "Convention collective auto moto de la Réunion",
-  "1256":
-    "Convention collective nationale des cadres, ingénieurs et assimilés des entreprises de gestion d'équipements thermiques et de climatisation",
-  "1257":
-    "Convention collective départementale des employés, agents de maîtrise et cadres de la pharmacie d'officine de la Réunion",
-  "1261":
-    "Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local (SNAECSO)",
-  "1266":
-    "Convention collective nationale du personnel des entreprises de restauration de collectivités",
+  "1256": "Convention collective nationale des cadres, ingénieurs et assimilés des entreprises de gestion d'équipements thermiques et de climatisation",
+  "1257": "Convention collective départementale des employés, agents de maîtrise et cadres de la pharmacie d'officine de la Réunion",
+  "1261": "Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local (SNAECSO)",
+  "1266": "Convention collective nationale du personnel des entreprises de restauration de collectivités",
   "1267": "Convention collective nationale de la pâtisserie",
   "1274": "Convention collective départementale des industries métallurgiques de la Corrèze",
-  "1278":
-    "Convention collective nationale des personnels PACT et ARIM (centres pour la protection l'amélioration et la conservation de l'habitat et associations pour la restauration immobilière)",
+  "1278": "Convention collective nationale des personnels PACT et ARIM (centres pour la protection l'amélioration et la conservation de l'habitat et associations pour la restauration immobilière)",
   "1281": "Convention collective des employés de la presse hebdomadaire régionale",
-  "1285":
-    "Convention collective nationale pour les entreprises artistiques et culturelles (SYNDEAC)",
-  "1286":
-    "Convention collective nationale des détaillants, détaillants-fabricants et artisans de la confiserie, chocolaterie, biscuiterie",
+  "1285": "Convention collective nationale pour les entreprises artistiques et culturelles (SYNDEAC)",
+  "1286": "Convention collective nationale des détaillants, détaillants-fabricants et artisans de la confiserie, chocolaterie, biscuiterie",
   "1307": "Convention collective nationale de l'exploitation cinématographique",
   "1311": "Convention collective nationale de la restauration ferroviaire",
-  "1314":
-    "Convention collective nationale des maisons d'alimentation à succursales, supermarchés, hypermarchés, \"gérants mandataires\" (grande distribution)",
-  "1315":
-    "Convention collective régionale des industries métallurgiques, mécaniques et connexes de la Haute-Marne et de la Meuse",
+  "1314": "Convention collective nationale des maisons d'alimentation à succursales, supermarchés, hypermarchés, \"gérants mandataires\" (grande distribution)",
+  "1315": "Convention collective régionale des industries métallurgiques, mécaniques et connexes de la Haute-Marne et de la Meuse",
   "1316": "Convention collective nationale des organismes de tourisme social et familial",
   "1341": "Convention collective départementale des industries agroalimentaires de la Réunion",
   "1351": "Convention collective nationale des entreprises de prévention et de sécurité",
   "1353": "Convention collective des industries métallurgiques et connexes de la Dordogne",
-  "1365":
-    "Convention collective de travail des industries de transformation des métaux de Meurthe-et-Moselle (métallurgie)",
-  "1369":
-    "Convention collective des industries métallurgiques, électriques, électroniques et connexes de Loire-Atlantique",
-  "1383":
-    "Convention collective nationale des commerces de quincaillerie, fournitures industrielles, fers, métaux et équipement de la maison, employés et personnels de maîtrise",
+  "1365": "Convention collective de travail des industries de transformation des métaux de Meurthe-et-Moselle (métallurgie)",
+  "1369": "Convention collective des industries métallurgiques, électriques, électroniques et connexes de Loire-Atlantique",
+  "1383": "Convention collective nationale des commerces de quincaillerie, fournitures industrielles, fers, métaux et équipement de la maison, employés et personnels de maîtrise",
   "1387": "Convention collective des mensuels des industries métallurgiques des Flandres",
   "1388": "Convention collective nationale de l'industrie du pétrole",
-  "1391":
-    "Convention collective régionale concernant le personnel de l'industrie, de la manutention et du nettoyage sur les aéroports ouverts à la circulation publique de la région parisienne",
+  "1391": "Convention collective régionale concernant le personnel de l'industrie, de la manutention et du nettoyage sur les aéroports ouverts à la circulation publique de la région parisienne",
   "1396": "Convention collective nationale pour les industries de produits alimentaires élaborés",
   "1402": "Convention collective du bâtiment et des travaux publics de Haute-Savoie",
-  "1404":
-    "Convention collective nationale des entreprises de commerce, de location et de réparation de tracteurs, machines et matériels agricoles, de matériels de travaux publics, de bâtiment et de manutention, de matériels de motoculture de plaisance, de jardins et d'espaces verts (SEDIMA)",
-  "1405":
-    "Convention collective nationale des entreprises d'expédition et d'exportation de fruits et légumes",
-  "1408":
-    "Convention collective nationale des entreprises du négoce et de distribution de combustibles solides, liquides, gazeux et produits pétroliers",
+  "1404": "Convention collective nationale des entreprises de commerce, de location et de réparation de tracteurs, machines et matériels agricoles, de matériels de travaux publics, de bâtiment et de manutention, de matériels de motoculture de plaisance, de jardins et d'espaces verts (SEDIMA)",
+  "1405": "Convention collective nationale des entreprises d'expédition et d'exportation de fruits et légumes",
+  "1408": "Convention collective nationale des entreprises du négoce et de distribution de combustibles solides, liquides, gazeux et produits pétroliers",
   "1411": "Convention collective nationale de la fabrication de l'ameublement",
-  "1412":
-    "Convention collective nationale des entreprises d'installation sans fabrication, y compris entretien, réparation, dépannage de matériel aéraulique, thermique, frigorifique et connexes",
-  "1413":
-    "Accord national professionnel relatif aux salariés permanents des entreprises de travail temporaire",
-  "1420":
-    "Convention collective nationale de travail du personnel des organismes créés pour l'application de la convention du 31 décembre 1958 UNEDIC ASSEDIC(UNEDIC, ASSEDIC)",
+  "1412": "Convention collective nationale des entreprises d'installation sans fabrication, y compris entretien, réparation, dépannage de matériel aéraulique, thermique, frigorifique et connexes",
+  "1413": "Accord national professionnel relatif aux salariés permanents des entreprises de travail temporaire",
+  "1420": "Convention collective nationale de travail du personnel des organismes créés pour l'application de la convention du 31 décembre 1958 UNEDIC ASSEDIC(UNEDIC, ASSEDIC)",
   "1423": "Convention collective nationale des entreprises relevant de la navigation de plaisance",
   "1424": "Convention collective nationale des réseaux de transports publics urbains de voyageurs",
   "1431": "Convention collective nationale de l'optique-lunetterie de détail",
   "1468": "Convention collective de branche du Crédit mutuel",
   "1472": "Convention collective départementale des industries métallurgiques du Pas-de-Calais",
   "1480": "Convention collective nationale de travail des journalistes",
-  "1483":
-    "Convention collective nationale du commerce de détail de l'habillement et des articles textiles",
-  "1486":
-    "Convention collective nationale applicable au personnel des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils(BET, SYNTEC)",
+  "1483": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles",
+  "1486": "Convention collective nationale applicable au personnel des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils(BET, SYNTEC)",
   "1487": "Convention collective nationale du commerce de détail de l'horlogerie-bijouterie",
-  "1492":
-    "Convention collective nationale des ouvriers, employés, dessinateurs, techniciens et agents de maîtrise de la production des papiers, cartons et celluloses",
-  "1495":
-    "Convention collective nationale pour les ouvriers, employés, dessinateurs, techniciens et agents de maîtrise de la transformation des papiers, cartons et celluloses",
-  "1499":
-    "Convention collective nationale de la miroiterie, de la transformation et du négoce du verre",
+  "1492": "Convention collective nationale des ouvriers, employés, dessinateurs, techniciens et agents de maîtrise de la production des papiers, cartons et celluloses",
+  "1495": "Convention collective nationale pour les ouvriers, employés, dessinateurs, techniciens et agents de maîtrise de la transformation des papiers, cartons et celluloses",
+  "1499": "Convention collective nationale de la miroiterie, de la transformation et du négoce du verre",
   "1501": "Convention collective nationale de la restauration rapide (restauration livrée)",
-  "1504":
-    "Convention collective nationale de la poissonnerie (commerce de détail, de demi-gros et de gros de la poissonnerie)",
-  "1505":
-    "Convention collective nationale du commerce de détail de fruits et légumes, épicerie et produits laitiers",
+  "1504": "Convention collective nationale de la poissonnerie (commerce de détail, de demi-gros et de gros de la poissonnerie)",
+  "1505": "Convention collective nationale du commerce de détail de fruits et légumes, épicerie et produits laitiers",
   "1512": "Convention collective nationale de la promotion immobilière",
-  "1513":
-    "Convention collective nationale des activités de production des eaux embouteillées, des boissons rafraîchissantes sans alcool et de bière",
+  "1513": "Convention collective nationale des activités de production des eaux embouteillées, des boissons rafraîchissantes sans alcool et de bière",
   "1516": "Convention collective nationale des organismes de formation",
-  "1517":
-    "Convention collective nationale des commerces de détail non alimentaires : antiquités, brocante, galeries d'art, arts de la table, coutellerie, droguerie, équipement du foyer, bazars, commerces ménagers, modélisme, jeux, jouets, périnatalité et maroquinerie(œuvres d'art)",
+  "1517": "Convention collective nationale des commerces de détail non alimentaires : antiquités, brocante, galeries d'art, arts de la table, coutellerie, droguerie, équipement du foyer, bazars, commerces ménagers, modélisme, jeux, jouets, périnatalité et maroquinerie(œuvres d'art)",
   "1518": "Convention collective nationale de l'animation",
   "1525": "Convention collective de la métallurgie de la région dunkerquoise",
   "1527": "Convention collective nationale de l'immobilier",
-  "1534":
-    "Convention collective nationale des entreprises de l'industrie et des commerces en gros des viandes",
-  "1536":
-    "Convention collective nationale des distributeurs conseils hors domicile (entrepositaires-grossistes, bières, eaux minérales et de table, boissons gazeuses, non gazeuses, sirops, jus de fruits, CHD)",
-  "1539":
-    "Convention collective nationale des commerces de détail de papeterie, fournitures de bureau, de bureautique et informatique [et de librairie]",
+  "1534": "Convention collective nationale des entreprises de l'industrie et des commerces en gros des viandes",
+  "1536": "Convention collective nationale des distributeurs conseils hors domicile (entrepositaires-grossistes, bières, eaux minérales et de table, boissons gazeuses, non gazeuses, sirops, jus de fruits, CHD)",
+  "1539": "Convention collective nationale des commerces de détail de papeterie, fournitures de bureau, de bureautique et informatique [et de librairie]",
   "1543": "Convention collective nationale de la boyauderie",
-  "1555":
-    "Convention collective nationale de la fabrication et du commerce des produits à usage pharmaceutique, parapharmaceutique et vétérinaire",
-  "1557":
-    "Convention collective nationale du commerce des articles de sports et d'équipements de loisirs",
-  "1558":
-    "Convention collective nationale relative aux conditions de travail du personnel des industries céramiques de France",
-  "1560":
-    "Convention collective départementale des industries métallurgiques, électriques et connexes des Alpes-Maritimes",
+  "1555": "Convention collective nationale de la fabrication et du commerce des produits à usage pharmaceutique, parapharmaceutique et vétérinaire",
+  "1557": "Convention collective nationale du commerce des articles de sports et d'équipements de loisirs",
+  "1558": "Convention collective nationale relative aux conditions de travail du personnel des industries céramiques de France",
+  "1560": "Convention collective départementale des industries métallurgiques, électriques et connexes des Alpes-Maritimes",
   "1561": "Convention collective nationale de la cordonnerie multiservice",
   "1563": "Convention collective des cadres de la presse hebdomadaire régionale d'information",
   "1564": "Convention collective des industries de la métallurgie de Saône-et-Loire",
-  "1565":
-    "Convention collective des services de soins infirmiers à domicile pour personnes âgées de la Guadeloupe",
+  "1565": "Convention collective des services de soins infirmiers à domicile pour personnes âgées de la Guadeloupe",
   "1572": "Convention collective départementale de la métallurgie de la Charente",
-  "1576":
-    "Convention collective de travail des industries métallurgiques, mécaniques, électriques, électroniques, connexes et similaires du département du Cher",
-  "1577":
-    "Convention collective des industries métallurgiques, électroniques et connexes de l'Hérault, de l'Aude et des Pyrénées-Orientales",
-  "1578":
-    "Convention collective départementale de la métallurgie de la Loire et de l'arrondissement d'Yssingeaux",
-  "1580":
-    "Convention collective nationale de l'industrie de la chaussure et des articles chaussants",
-  "1586":
-    "Convention collective nationale de l'industrie de la salaison, charcuterie en gros et conserves de viandes",
+  "1576": "Convention collective de travail des industries métallurgiques, mécaniques, électriques, électroniques, connexes et similaires du département du Cher",
+  "1577": "Convention collective des industries métallurgiques, électroniques et connexes de l'Hérault, de l'Aude et des Pyrénées-Orientales",
+  "1578": "Convention collective départementale de la métallurgie de la Loire et de l'arrondissement d'Yssingeaux",
+  "1580": "Convention collective nationale de l'industrie de la chaussure et des articles chaussants",
+  "1586": "Convention collective nationale de l'industrie de la salaison, charcuterie en gros et conserves de viandes",
   "1588": "Convention collective du personnel des sociétés coopératives d'HLM",
   "1589": "Convention collective nationale des mareyeurs-expéditeurs",
   "1592": "Convention collective de la métallurgie du Valenciennois et du Cambrésis",
-  "1596":
-    "Convention collective nationale concernant les ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 -c'est-à-dire occupant jusqu'à 10 salariés-",
-  "1597":
-    "Convention collective nationale concernant les ouvriers employés par les entreprises du bâtiment non visées par le décret 1er mars 1962 -c'est-à-dire occupant plus de 10 salariés-",
-  "1604":
-    "Convention collective des industries métallurgiques des arrondissements de Rouen et de Dieppe",
-  "1605":
-    "Convention collective nationale des entreprises de désinfection, désinsectisation, dératisation",
+  "1596": "Convention collective nationale concernant les ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 -c'est-à-dire occupant jusqu'à 10 salariés-",
+  "1597": "Convention collective nationale concernant les ouvriers employés par les entreprises du bâtiment non visées par le décret 1er mars 1962 -c'est-à-dire occupant plus de 10 salariés-",
+  "1604": "Convention collective des industries métallurgiques des arrondissements de Rouen et de Dieppe",
+  "1605": "Convention collective nationale des entreprises de désinfection, désinsectisation, dératisation",
   "1606": "Convention collective nationale du bricolage",
-  "1607":
-    "Convention collective nationale des industries des jeux, jouets, articles de fêtes et ornements de Noël, articles de puériculture et voitures d'enfants modélisme et industries connexes",
-  "1611":
-    "Convention collective nationale des entreprises de logistique de communication écrite directe",
+  "1607": "Convention collective nationale des industries des jeux, jouets, articles de fêtes et ornements de Noël, articles de puériculture et voitures d'enfants modélisme et industries connexes",
+  "1611": "Convention collective nationale des entreprises de logistique de communication écrite directe",
   "1612": "Convention collective nationale du personnel navigant des essais et réceptions",
   "1618": "Convention collective nationale du camping",
   "1619": "Convention collective nationale des cabinets dentaires",
   "1621": "Convention collective nationale de la répartition pharmaceutique",
-  "1624":
-    "Convention collective nationale des commerces de gros de la confiserie, chocolaterie, biscuiterie et alimentation fine et des négociants distributeurs de levure",
-  "1626":
-    "Convention collective départementale des industries métallurgiques, mécaniques, électriques, électro-céramiques et connexes des Hautes-Pyrénées",
-  "1627":
-    "Convention collective du travail des industries de la métallurgie et des constructions mécaniques de Clermont-Ferrand et du Puy-de-Dôme",
+  "1624": "Convention collective nationale des commerces de gros de la confiserie, chocolaterie, biscuiterie et alimentation fine et des négociants distributeurs de levure",
+  "1626": "Convention collective départementale des industries métallurgiques, mécaniques, électriques, électro-céramiques et connexes des Hautes-Pyrénées",
+  "1627": "Convention collective du travail des industries de la métallurgie et des constructions mécaniques de Clermont-Ferrand et du Puy-de-Dôme",
   "1628": "Convention collective de la métallurgie des Deux-Sèvres",
   "1631": "Convention collective nationale de l'hôtellerie de plein air",
   "1634": "Convention collective de la métallurgie des Côtes-d'Armor",
-  "1635":
-    "Convention collective régionale des industries métallurgiques, mécaniques et connexes de la Gironde et des Landes",
-  "1638":
-    "Convention collective du département du Cher concernant les ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 - c'est-à-dire occupant jusqu'à 10 salariés-",
-  "1642":
-    "Convention collective du département du Cher concernant les ouvriers employés par les entreprises du bâtiment non visées par le décret du 1er mars 1962 -c'est-à-dire occupant plus de 10 salariés-",
+  "1635": "Convention collective régionale des industries métallurgiques, mécaniques et connexes de la Gironde et des Landes",
+  "1638": "Convention collective du département du Cher concernant les ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 - c'est-à-dire occupant jusqu'à 10 salariés-",
+  "1642": "Convention collective du département du Cher concernant les ouvriers employés par les entreprises du bâtiment non visées par le décret du 1er mars 1962 -c'est-à-dire occupant plus de 10 salariés-",
   "1659": "Convention collective nationale du rouissage teillage du lin",
   "1668": "Convention collective des ouvriers du bâtiment de la région Alsace",
   "1671": "Convention collective nationale des maisons d'étudiants",
   "1672": "Convention collective nationale des sociétés d'assurances",
   "1679": "Convention collective nationale de l'inspection d'assurance",
-  "1686":
-    "Convention collective nationale des commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager",
-  "1700":
-    "Convention collective départementale des sucreries, sucreries-distilleries et distilleries de la Guadeloupe",
+  "1686": "Convention collective nationale des commerces et services de l'audiovisuel, de l'électronique et de l'équipement ménager",
+  "1700": "Convention collective départementale des sucreries, sucreries-distilleries et distilleries de la Guadeloupe",
   "1702": "Convention collective nationale des ouvriers de travaux publics",
   "1710": "Convention collective nationale du personnel des agences de voyages et de tourisme",
   "1722": "Convention collective des ouvriers du bâtiment de la région de Haute-Normandie",
-  "1732":
-    "Convention collective des industries métallurgiques, mécaniques, électriques et connexes de l'Yonne",
+  "1732": "Convention collective des industries métallurgiques, mécaniques, électriques et connexes de l'Yonne",
   "1734": "Convention collective des artistes-interprètes engagés pour des émissions de télévision",
   "1740": "Convention collective régionale des ouvriers du bâtiment de la région parisienne",
   "1747": "Convention collective des activités industrielles de boulangerie et de pâtisserie",
-  "1758":
-    "Convention collective du bâtiment du département du Tarn concernant les ouvriers employés par les entreprises occupant jusqu'à 10 salariés",
-  "1759":
-    "Convention collective du bâtiment du département du Tarn concernant les ouvriers employés par les entreprises occupant plus de 10 salariés",
+  "1758": "Convention collective du bâtiment du département du Tarn concernant les ouvriers employés par les entreprises occupant jusqu'à 10 salariés",
+  "1759": "Convention collective du bâtiment du département du Tarn concernant les ouvriers employés par les entreprises occupant plus de 10 salariés",
   "1760": "Convention collective nationale des jardineries et graineteries",
   "1761": "Convention collective du commerce de gros des tissus, tapis et linge de maison",
-  "1779":
-    "Convention collective du bâtiment de la région Provence-Alpes-Côte d'Azur concernant les ouvriers employés par les entreprises occupant jusqu'à 10 salariés",
-  "1780":
-    "Convention collective du bâtiment de la région Provence-Alpes-Côte d'Azur concernant les ouvriers employés par les entreprises occupant plus de 10 salariés",
+  "1779": "Convention collective du bâtiment de la région Provence-Alpes-Côte d'Azur concernant les ouvriers employés par les entreprises occupant jusqu'à 10 salariés",
+  "1780": "Convention collective du bâtiment de la région Provence-Alpes-Côte d'Azur concernant les ouvriers employés par les entreprises occupant plus de 10 salariés",
   "1785": "Convention collective régionale des ouvriers du bâtiment de la région Basse-Normandie",
   "1790": "Convention collective nationale des espaces de loisirs, d'attractions et culturels",
-  "1794":
-    "Convention collective nationale du personnel des institutions de retraites complémentaires",
+  "1794": "Convention collective nationale du personnel des institutions de retraites complémentaires",
   "1800": "Convention collective nationale du personnel de la céramique d'art",
   "1801": "Convention collective nationale des sociétés d'assistance",
-  "1809":
-    "Convention collective des industries métallurgiques, mécaniques, similaires et connexes du Jura",
-  "1813":
-    "Convention collective de travail des industries de la transformation des métaux de la région de Maubeuge",
-  "1821":
-    "Convention collective nationale des professions regroupées du cristal, du verre et du vitrail ",
-  "1843":
-    "Convention collective régionale des ingénieurs, assimilés et cadres du bâtiment de la région parisienne",
+  "1809": "Convention collective des industries métallurgiques, mécaniques, similaires et connexes du Jura",
+  "1813": "Convention collective de travail des industries de la transformation des métaux de la région de Maubeuge",
+  "1821": "Convention collective nationale des professions regroupées du cristal, du verre et du vitrail ",
+  "1843": "Convention collective régionale des ingénieurs, assimilés et cadres du bâtiment de la région parisienne",
   "1850": "Convention collective de l'avocat salarié",
   "1867": "Convention collective de la métallurgie de la Drôme-Ardèche",
-  "1871":
-    "Convention collective nationale des employés de la presse d'information spécialisée du 1er juillet 1995",
-  "1874":
-    "Convention collective nationale des cadres, techniciens et agents de maîtrise de la presse d'information spécialisée du 1er juillet 1995",
-  "1875":
-    "Convention collective nationale des cabinets et cliniques vétérinaires : personnel salarié",
+  "1871": "Convention collective nationale des employés de la presse d'information spécialisée du 1er juillet 1995",
+  "1874": "Convention collective nationale des cadres, techniciens et agents de maîtrise de la presse d'information spécialisée du 1er juillet 1995",
+  "1875": "Convention collective nationale des cabinets et cliniques vétérinaires : personnel salarié",
   "1876": "Convention collective régionale du bâtiment de la région Bretagne",
   "1880": "Convention collective nationale du négoce de l'ameublement",
-  "1885":
-    "Convention collective des industries métallurgiques, mécaniques, électriques et connexes du département de la Côte-d'Or",
+  "1885": "Convention collective des industries métallurgiques, mécaniques, électriques et connexes du département de la Côte-d'Or",
   "1886": "Convention collective départementale des ouvriers du bâtiment de la Loire",
   "1895": "Convention collective de l'encadrement de la presse quotidienne régionale",
-  "1902":
-    "Convention collective des industries métallurgiques, mécaniques, électriques, électroniques connexes et similaires du Maine-et-Loire",
+  "1902": "Convention collective des industries métallurgiques, mécaniques, électriques, électroniques connexes et similaires du Maine-et-Loire",
   "1909": "Convention collective nationale des organismes de tourisme",
   "1912": "Convention collective des industries de la métallurgie du Haut-Rhin",
   "1921": "Convention collective nationale des huissiers de justice",
   "1922": "Convention collective nationale de la radiodiffusion",
   "1923": "Convention collective de la manutention portuaire de la Guadeloupe",
-  "1930":
-    "Convention collective nationale des métiers de la transformation des grains (ex meunerie)",
-  "1938":
-    "Convention collective nationale des industries de la transformation des volailles (abattoirs, ateliers de découpe et centres de conditionnement de volailles, commerce de gros de volailles)",
-  "1942":
-    "Convention collective nationale de l'industrie de production des textiles artificiels et synthétiques et produits assimilés",
-  "1944":
-    "Convention collective nationale du personnel navigant technique des exploitants d'hélicoptères",
+  "1930": "Convention collective nationale des métiers de la transformation des grains (ex meunerie)",
+  "1938": "Convention collective nationale des industries de la transformation des volailles (abattoirs, ateliers de découpe et centres de conditionnement de volailles, commerce de gros de volailles)",
+  "1942": "Convention collective nationale de l'industrie de production des textiles artificiels et synthétiques et produits assimilés",
+  "1944": "Convention collective nationale du personnel navigant technique des exploitants d'hélicoptères",
   "1947": "Convention collective nationale du négoce de bois d'œuvre et produits dérivés",
   "1951": "Convention collective nationale des cabinets ou entreprises d'expertises en automobile",
-  "1960":
-    "Convention collective des industries métallurgiques, mécaniques et connexes du Lot-et-Garonne",
+  "1960": "Convention collective des industries métallurgiques, mécaniques et connexes du Lot-et-Garonne",
   "1961": "Convention collective pour les stations-service en Guadeloupe",
   "1966": "Convention collective des industries métallurgiques du Loiret",
   "1967": "Convention collective départementale de l'industrie des métaux du Bas-Rhin",
-  "1970":
-    "Convention collective des commerces de détail non alimentaires des départements du Bas-Rhin et du Haut-Rhin",
-  "1974":
-    "Convention collective nationale du personnel des entreprises de transport de passagers en navigation intérieure",
-  "1978":
-    "Convention collective nationale des fleuristes, de la vente et des services des animaux familiers",
+  "1970": "Convention collective des commerces de détail non alimentaires des départements du Bas-Rhin et du Haut-Rhin",
+  "1974": "Convention collective nationale du personnel des entreprises de transport de passagers en navigation intérieure",
+  "1978": "Convention collective nationale des fleuristes, de la vente et des services des animaux familiers",
   "1979": "Convention collective nationale des hôtels, cafés, restaurants (HCR)",
-  "1980":
-    "Convention collective des commissionnaires en douane et agents auxiliaires de la Martinique",
-  "1982":
-    "Convention collective nationale du négoce et prestations de services dans les domaines médico-techniques",
-  "1987":
-    "Convention collective nationale des pâtes alimentaires sèches et du couscous non préparé",
+  "1980": "Convention collective des commissionnaires en douane et agents auxiliaires de la Martinique",
+  "1982": "Convention collective nationale du négoce et prestations de services dans les domaines médico-techniques",
+  "1987": "Convention collective nationale des pâtes alimentaires sèches et du couscous non préparé",
   "1996": "Convention collective nationale de la pharmacie d'officine",
-  "2002":
-    "Convention collective interrégionale de la blanchisserie, laverie, location de linge, nettoyage à sec, pressing et teinturerie",
-  "2003":
-    "Convention collective des industries métallurgiques, électriques, électroniques et connexes du département des Vosges",
+  "2002": "Convention collective interrégionale de la blanchisserie, laverie, location de linge, nettoyage à sec, pressing et teinturerie",
+  "2003": "Convention collective des industries métallurgiques, électriques, électroniques et connexes du département des Vosges",
   "2021": "Convention collective nationale du golf",
   "2025": "Convention collective régionale du travail des activités minières de Guyane",
-  "2032":
-    "Convention collective du département de l'Isère concernant les ouvriers employés par les entreprises du bâtiment occupant jusqu'à 10 salariés",
-  "2033":
-    "Convention collective du département de l'Isère concernant les ouvriers employés par les entreprises du bâtiment occupant plus de 10 salariés",
-  "2046":
-    "Convention collective nationale du personnel non médical des centres de lutte contre le cancer",
+  "2032": "Convention collective du département de l'Isère concernant les ouvriers employés par les entreprises du bâtiment occupant jusqu'à 10 salariés",
+  "2033": "Convention collective du département de l'Isère concernant les ouvriers employés par les entreprises du bâtiment occupant plus de 10 salariés",
+  "2046": "Convention collective nationale du personnel non médical des centres de lutte contre le cancer",
   "2060": "Convention collective nationale des chaînes de cafétérias et assimilés",
-  "2075":
-    "Convention collective nationale des centres immatriculés de conditionnement, de commercialisation et de transformation des œufs et des industries en produits d'œufs",
+  "2075": "Convention collective nationale des centres immatriculés de conditionnement, de commercialisation et de transformation des œufs et des industries en produits d'œufs",
   "2089": "Convention collective nationale de l'industrie des panneaux à base de bois",
-  "2098":
-    "Convention collective nationale du personnel des prestataires de services dans le domaine du secteur tertiaire",
+  "2098": "Convention collective nationale du personnel des prestataires de services dans le domaine du secteur tertiaire",
   "2101": "Convention collective nationale de l'enseignement privé à distance",
   "2104": "Convention collective nationale du thermalisme",
   "2111": "Convention collective nationale des salariés du particulier employeur",
@@ -533,203 +353,142 @@
   "2126": "Convention collective de la métallurgie du Gard et de la Lozère",
   "2128": "Convention collective nationale de la mutualité",
   "2145": "Convention collective régionale des ouvriers du bâtiment de la région Corse",
-  "2147":
-    "Convention collective des entreprises des services d'eau et d'assainissement (entreprises en gérance, en concession ou en affermage assurent l'exploitation, le service, le pompage, le traitement et la distribution d'eau à usage public, particulier, domestique, agricole)",
+  "2147": "Convention collective des entreprises des services d'eau et d'assainissement (entreprises en gérance, en concession ou en affermage assurent l'exploitation, le service, le pompage, le traitement et la distribution d'eau à usage public, particulier, domestique, agricole)",
   "2148": "Convention collective nationale des télécommunications",
   "2149": "Convention collective nationale des activités du déchet",
-  "2150":
-    "Convention collective nationale des personnels des sociétés anonymes et fondations d'HLM",
+  "2150": "Convention collective nationale des personnels des sociétés anonymes et fondations d'HLM",
   "2156": "Convention collective nationale des grands magasins et des magasins populaires",
-  "2174":
-    "Convention collective nationale du personnel sédentaire des entreprises de transports de marchandises de la navigation intérieure",
-  "2190":
-    "Convention collective nationale des missions locales et PAIO des maisons de l'emploi et PLIE",
-  "2194":
-    "Convention collective régionale des ouvriers employés par les entreprises du bâtiment occupant jusqu'à 10 salariés, région Aquitaine",
-  "2195":
-    "Convention collective régionale des ouvriers employés par les entreprises du bâtiment occupant plus de 10 salariés, région Aquitaine",
+  "2174": "Convention collective nationale du personnel sédentaire des entreprises de transports de marchandises de la navigation intérieure",
+  "2190": "Convention collective nationale des missions locales et PAIO des maisons de l'emploi et PLIE",
+  "2194": "Convention collective régionale des ouvriers employés par les entreprises du bâtiment occupant jusqu'à 10 salariés, région Aquitaine",
+  "2195": "Convention collective régionale des ouvriers employés par les entreprises du bâtiment occupant plus de 10 salariés, région Aquitaine",
   "2198": "Convention collective nationale des entreprises de vente à distance",
   "2205": "Convention collective du notariat",
-  "2216":
-    "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire (entrepôts d'alimentation, supérettes, supermarchés, hypermarchés, grande distribution)",
+  "2216": "Convention collective nationale du commerce de détail et de gros à prédominance alimentaire (entrepôts d'alimentation, supérettes, supermarchés, hypermarchés, grande distribution)",
   "2219": "Convention collective des taxis parisiens salariés",
-  "2221":
-    "Convention collective des mensuels des industries des métaux de l'Isère et des Hautes-Alpes",
-  "2230":
-    "Convention collective nationale des associations agréées de surveillance de la qualité de l'air",
+  "2221": "Convention collective des mensuels des industries des métaux de l'Isère et des Hautes-Alpes",
+  "2230": "Convention collective nationale des associations agréées de surveillance de la qualité de l'air",
   "2247": "Convention collective des entreprises de courtage d'assurances et/ou de réassurances",
   "2250": "Convention collective régionale de la boulangerie-pâtisserie de la Guyane",
   "2257": "Convention collective nationale des casinos",
-  "2264":
-    "Convention collective de l'hospitalisation privée (CCU, FHP, établissements pour personnes âgées, maison de retraite, établissements de suite et réadaptation, médicaux pour enfants et adolescents, UHP, sanitaires sociaux et médico-sociaux CRRR, hospitalisation privé à but lucratif FIEHP )",
-  "2266":
-    "Convention collective des industries métallurgiques, mécaniques, électriques, connexes et similaires de la Mayenne",
+  "2264": "Convention collective de l'hospitalisation privée (CCU, FHP, établissements pour personnes âgées, maison de retraite, établissements de suite et réadaptation, médicaux pour enfants et adolescents, UHP, sanitaires sociaux et médico-sociaux CRRR, hospitalisation privé à but lucratif FIEHP )",
+  "2266": "Convention collective des industries métallurgiques, mécaniques, électriques, connexes et similaires de la Mayenne",
   "2267": "Convention collective des ouvriers du bâtiment de la région Languedoc-Roussillon",
   "2272": "Convention collective nationale de l'assainissement et de la maintenance industrielle",
   "2294": "Convention collective des industries et métiers de la métallurgie de l'Aube",
-  "2328":
-    "Convention collective des ouvriers du bâtiment et des travaux publics de la Guadeloupe et dépendances",
-  "2329":
-    "Accord professionnel national de travail entre les avocats au Conseil d'Etat et à la Cour de Cassation et leur personnel salarié -non avocat-",
+  "2328": "Convention collective des ouvriers du bâtiment et des travaux publics de la Guadeloupe et dépendances",
+  "2329": "Accord professionnel national de travail entre les avocats au Conseil d'Etat et à la Cour de Cassation et leur personnel salarié -non avocat-",
   "2332": "Convention collective nationale des entreprises d'architecture",
   "2335": "Convention collective nationale du personnel des agences générales d'assurances",
-  "2336":
-    "Convention collective nationale des organismes gestionnaires de foyers et services pour jeunes travailleurs",
+  "2336": "Convention collective nationale des organismes gestionnaires de foyers et services pour jeunes travailleurs",
   "2344": "Convention collective de la sidérurgie",
   "2345": "Convention collective régionale du transport sanitaire en Martinique",
   "2354": "Convention collective départementale des ouvriers du bâtiment de la Savoie",
   "2357": "Accord du 3 mars 1993 relatif aux cadres de direction des sociétés d'assurances",
   "2360": "Convention collective régionale des services de l'automobile de la Guyane",
   "2372": "Convention collective nationale des entreprises de la distribution directe",
-  "2378":
-    "Accords nationaux professionnels concernant le personnel intérimaire des entreprises de travail temporaire",
-  "2389":
-    "Convention collective des ouvriers du bâtiment et des travaux publics région de La Réunion",
-  "2395":
-    "Convention collective nationale de travail des assistants maternels du particulier employeur",
-  "2397":
-    "Convention collective des mannequins adultes et des mannequins enfants de moins de seize ans employés par les agences de mannequins",
-  "2405":
-    "Convention collective départementale des établissements d'hospitalisation privée de la Guadeloupe du 01/04/2003",
+  "2378": "Accords nationaux professionnels concernant le personnel intérimaire des entreprises de travail temporaire",
+  "2389": "Convention collective des ouvriers du bâtiment et des travaux publics région de La Réunion",
+  "2395": "Convention collective nationale de travail des assistants maternels du particulier employeur",
+  "2397": "Convention collective des mannequins adultes et des mannequins enfants de moins de seize ans employés par les agences de mannequins",
+  "2405": "Convention collective départementale des établissements d'hospitalisation privée de la Guadeloupe du 01/04/2003",
   "2411": "Convention collective nationale des chaînes thématiques",
   "2412": "Convention collective de la production de films d'animation",
   "2420": "Convention collective nationale des cadres du bâtiment du 1er juin 2004",
-  "2480":
-    "Convention collective de la manutention portuaire du port de Fort-de-France du 4 juillet 2003",
+  "2480": "Convention collective de la manutention portuaire du port de Fort-de-France du 4 juillet 2003",
   "2489": "Convention collective des industries métallurgiques et assimilées de la Vendée",
   "2494": "Convention collective nationale de la coopération maritime",
   "2511": "Convention collective nationale du sport",
   "2526": "Convention collective nationale des organisations professionnelles de l'habitat social",
-  "2528":
-    "Convention collective nationale de travail des industries de la maroquinerie, articles de voyage, chasse sellerie, gainerie, bracelets en cuir",
+  "2528": "Convention collective nationale de travail des industries de la maroquinerie, articles de voyage, chasse sellerie, gainerie, bracelets en cuir",
   "2534": "Convention collective de l'industrie sucrière et rhumière de la Martinique",
   "2535": "Convention collective dans la culture de la canne à sucre en Martinique",
   "2542": "Convention collective des industries métallurgiques, mécaniques et connexes de l'Aisne",
-  "2543":
-    "Convention collective nationale des cabinets ou entreprises de géomètres experts, géomètres topographes photogrammètres, experts-fonciers",
+  "2543": "Convention collective nationale des cabinets ou entreprises de géomètres experts, géomètres topographes photogrammètres, experts-fonciers",
   "2564": "Convention collective nationale des vétérinaires praticiens salariés",
-  "2579":
-    "Conventions collectives applicables aux entreprises des industries et métiers de la métallurgie du Loir-et-Cher",
-  "2583":
-    "Convention collective nationale de branche des sociétés concessionnaires ou exploitantes d'autoroutes ou d'ouvrages routiers",
-  "2584":
-    "Convention collective de la région Champagne-Ardenne concernant les ouvriers employés par les entreprises du bâtiment non visées par le décret du 1er mars 1962 (plus de 10 salariés)",
-  "2585":
-    "Convention collective de la région Champagne-Ardenne concernant les ouvriers employés par les entreprise du bâtiment visées par le décret du 1er mars 1962 (jusqu'à 10 salariés)",
+  "2579": "Conventions collectives applicables aux entreprises des industries et métiers de la métallurgie du Loir-et-Cher",
+  "2583": "Convention collective nationale de branche des sociétés concessionnaires ou exploitantes d'autoroutes ou d'ouvrages routiers",
+  "2584": "Convention collective de la région Champagne-Ardenne concernant les ouvriers employés par les entreprises du bâtiment non visées par le décret du 1er mars 1962 (plus de 10 salariés)",
+  "2585": "Convention collective de la région Champagne-Ardenne concernant les ouvriers employés par les entreprise du bâtiment visées par le décret du 1er mars 1962 (jusqu'à 10 salariés)",
   "2596": "Convention collective nationale de la coiffure et des professions connexes",
-  "2603":
-    "Convention collective nationale de travail des praticiens conseils du régime général de sécurité sociale",
-  "2609":
-    "Convention collective nationale des employés, techniciens et agents de maîtrise du bâtiment",
-  "2614":
-    "Convention collective nationale des employés, techniciens et agents de maîtrise des travaux publics",
+  "2603": "Convention collective nationale de travail des praticiens conseils du régime général de sécurité sociale",
+  "2609": "Convention collective nationale des employés, techniciens et agents de maîtrise du bâtiment",
+  "2614": "Convention collective nationale des employés, techniciens et agents de maîtrise des travaux publics",
   "2615": "Convention collective de la métallurgie des Pyrénées-Atlantiques et du Seignanx",
   "2622": "Convention collective du crédit maritime mutuel",
   "2625": "Convention collective régionale des ouvriers du bâtiment des Pays de la Loire",
-  "2630":
-    "Convention collective des industries métallurgiques des Bouches-du-Rhône et Alpes-de-Haute-Provence",
-  "2631":
-    "Accord collectif national Branche de la télédiffusion. Salariés employés sous contrat à durée déterminée d'usage",
+  "2630": "Convention collective des industries métallurgiques des Bouches-du-Rhône et Alpes-de-Haute-Provence",
+  "2631": "Accord collectif national Branche de la télédiffusion. Salariés employés sous contrat à durée déterminée d'usage",
   "2642": "Convention collective de la production audiovisuelle",
-  "2658":
-    "Convention collective régionale du travail des guides d'expédition, guides accompagnateurs et guides animateurs en milieu amazonien",
-  "2666":
-    "Convention collective nationale des conseils d'architecture, d'urbanisme et de l'environnement",
+  "2658": "Convention collective régionale du travail des guides d'expédition, guides accompagnateurs et guides animateurs en milieu amazonien",
+  "2666": "Convention collective nationale des conseils d'architecture, d'urbanisme et de l'environnement",
   "2667": "Convention collective des ouvriers du bâtiment des départements Drôme, Ardèche",
-  "2668":
-    "Convention collective nationale de travail des cadres supérieurs des sociétés de secours minières et de leurs établissements, des unions régionales et des assistants sociaux régionaux",
+  "2668": "Convention collective nationale de travail des cadres supérieurs des sociétés de secours minières et de leurs établissements, des unions régionales et des assistants sociaux régionaux",
   "2683": "Convention collective nationale du portage de presse",
   "2691": "Convention collective nationale de l'enseignement privé indépendant (hors contrat)",
   "2697": "Convention collective nationale des personnels des structures associatives cynégétiques",
   "2700": "Convention collective de la métallurgie de l'Oise",
   "2701": "Convention collective du travail du personnel des banques de la Guyane",
   "2702": "Convention collective du travail du personnel des banques de la Martinique",
-  "2704":
-    "Convention collective du travail du personnel des banques de la Guadeloupe, de Saint-Martin et de Saint-Barthélémy",
-  "2706":
-    "Convention collective nationale du personnel des administrateurs et des mandataires judiciaires",
-  "2707":
-    "Convention collective régionale des employés, techniciens et agents de maîtrise du bâtiment Île-de-France",
-  "2717":
-    "Convention collective des entreprises techniques au service de la création et de l'événement",
-  "2727":
-    "Convention collective nationale des omnipraticiens exerçant dans les centres de santé miniers",
-  "2728":
-    "Convention collective nationale des sucreries, sucreries-distilleries et raffineries de sucre",
-  "2754":
-    "Convention collective nationale des magasins prestataires de services de cuisine à usage domestique",
+  "2704": "Convention collective du travail du personnel des banques de la Guadeloupe, de Saint-Martin et de Saint-Barthélémy",
+  "2706": "Convention collective nationale du personnel des administrateurs et des mandataires judiciaires",
+  "2707": "Convention collective régionale des employés, techniciens et agents de maîtrise du bâtiment Île-de-France",
+  "2717": "Convention collective des entreprises techniques au service de la création et de l'événement",
+  "2727": "Convention collective nationale des omnipraticiens exerçant dans les centres de santé miniers",
+  "2728": "Convention collective nationale des sucreries, sucreries-distilleries et raffineries de sucre",
+  "2754": "Convention collective nationale des magasins prestataires de services de cuisine à usage domestique",
   "2755": "Convention collective des industries de la métallurgie de Belfort/Montbéliard",
   "2768": "Convention collective national de travail des pharmaciens du régime minier",
   "2770": "Convention collective nationale de l'édition phonographique",
-  "2785":
-    "Convention collective nationale des sociétés de ventes volontaires de meubles aux enchères publiques et des offices de commissaires-priseurs judiciaires",
-  "2793":
-    "Convention collective de travail du 25 juin 1968 des agents de direction et des agents-comptables des organismes de sécurité sociale et d'allocations familiales",
-  "2796":
-    "Convention collective du personnel de direction du régime social des indépendants, ses annexes et son accord d'application",
-  "2797":
-    "Convention collective nationale spéciale de travail des praticiens conseils du régime social des indépendants et son annexe 1 relative à l'ARTT",
-  "2798":
-    "Convention collective des employés et cadres du régime social des indépendants, ses annexes 1 à 6 et son accord d'application",
+  "2785": "Convention collective nationale des sociétés de ventes volontaires de meubles aux enchères publiques et des offices de commissaires-priseurs judiciaires",
+  "2793": "Convention collective de travail du 25 juin 1968 des agents de direction et des agents-comptables des organismes de sécurité sociale et d'allocations familiales",
+  "2796": "Convention collective du personnel de direction du régime social des indépendants, ses annexes et son accord d'application",
+  "2797": "Convention collective nationale spéciale de travail des praticiens conseils du régime social des indépendants et son annexe 1 relative à l'ARTT",
+  "2798": "Convention collective des employés et cadres du régime social des indépendants, ses annexes 1 à 6 et son accord d'application",
   "2847": "Convention collective nationale de Pôle Emploi",
-  "2870":
-    "Convention collective régionale des ouvriers du bâtiment, des travaux publics et des industries et activités connexes de la Guyane",
+  "2870": "Convention collective régionale des ouvriers du bâtiment, des travaux publics et des industries et activités connexes de la Guyane",
   "2931": "Convention collective nationale des activités de marchés financiers",
-  "2941":
-    "Convention collective de la branche de l'aide, de l'accompagnement, des soins et des services à domicile",
-  "2964":
-    "Accord collectif relatif au transport de proximité public et privé de produits pétroliers et de liquides inflammables sur le territoire de la Martinique",
+  "2941": "Convention collective de la branche de l'aide, de l'accompagnement, des soins et des services à domicile",
+  "2964": "Accord collectif relatif au transport de proximité public et privé de produits pétroliers et de liquides inflammables sur le territoire de la Martinique",
   "2972": "Convention collective du personnel sédentaire des entreprises de navigation",
   "2978": "Convention collective nationale du personnel salarié des agences de recherches privées",
   "2980": "Convention collective de la métallurgie de la Somme",
-  "2992":
-    "Convention collective des industries métallurgiques, mécaniques, électriques, connexes et similaires d'Indre-et Loire",
+  "2992": "Convention collective des industries métallurgiques, mécaniques, électriques, connexes et similaires d'Indre-et Loire",
   "3013": "Convention collective nationale de la librairie",
   "3016": "Convention collective des ateliers chantiers d'insertion",
   "3017": "Convention collective nationale unifiée ports et manutention",
-  "3028":
-    "Convention collective régionale des transports routiers et activités auxiliaires du transport de la Guadeloupe",
-  "3032":
-    "Convention collective nationale de l'esthétique - cosmétique et de l'enseignement technique et professionnel liés aux métiers de l'esthétique et de la parfumerie",
-  "3043":
-    "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011.",
+  "3028": "Convention collective régionale des transports routiers et activités auxiliaires du transport de la Guadeloupe",
+  "3032": "Convention collective nationale de l'esthétique - cosmétique et de l'enseignement technique et professionnel liés aux métiers de l'esthétique et de la parfumerie",
+  "3043": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011.",
   "3053": "Convention collective des industries de la métallurgie de Haute-Saône",
   "3090": "Convention collective nationale des entreprises du secteur privé du spectacle vivant",
   "3097": "Convention collective nationale de la production cinématographique",
   "3105": "Convention collective nationale des régies de quartier",
-  "3107":
-    "Convention collective des employés, techniciens et agents de maîtrise du bâtiment et des travaux publics et annexes de la Martinique",
+  "3107": "Convention collective des employés, techniciens et agents de maîtrise du bâtiment et des travaux publics et annexes de la Martinique",
   "3109": "Convention collective nationale des 5 branches industries alimentaires diverses",
   "3123": "Convention collective des ambulances Guyane",
   "3127": "Convention collective nationale des services à la personne du 20 septembre 2012",
-  "3128":
-    "Convention collective régionale des employés, techniciens et agents de maîtrise du bâtiment, des travaux publics et des industries et activités connexes de la Guyane",
+  "3128": "Convention collective régionale des employés, techniciens et agents de maîtrise du bâtiment, des travaux publics et des industries et activités connexes de la Guyane",
   "3144": "Convention collective ETAM du bâtiment et des travaux publics de la Guadeloupe",
   "3151": "Convention collective nationale des industries de la fabrication de la chaux",
   "3160": "Convention collective nationale des associations de gestion et de comptabilité",
   "3168": "Convention collective Nationale des professions de la photographie",
-  "3203":
-    "Convention collective des structures associatives de pêche de loisir et de protection du milieu aquatique",
+  "3203": "Convention collective des structures associatives de pêche de loisir et de protection du milieu aquatique",
   "3205": "Convention collective nationale du personnel des coopératives de consommation",
   "3206": "Convention collective du personnel des cabinets médicaux de Martinique",
   "3207": "Convention collective des transports sanitaires de Guadeloupe",
-  "3209":
-    "Convention collective des industries mécaniques, microtechniques et connexes du département du Doubs ",
+  "3209": "Convention collective des industries mécaniques, microtechniques et connexes du département du Doubs ",
   "3210": "Convention collective de la banque populaire",
   "3212": "Convention collective nationale des cadres des travaux publics",
-  "3213":
-    "Convention collective nationale des collaborateurs salariés des entreprises d'économistes de la construction et des métreurs-vérificateurs",
+  "3213": "Convention collective nationale des collaborateurs salariés des entreprises d'économistes de la construction et des métreurs-vérificateurs",
   "3216": "Convention collective nationale des salariés du négoce des matériaux de construction",
   "3217": "Convention collective nationale ferroviaire ",
   "3218": "Convention collective nationale de l'enseignement privé non lucratif (EPNL)",
   "3219": "Convention collective nationale de branche des salariés en portage salarial",
   "3221": "Convention collective nationale des agences de presse ",
-  "3223":
-    "Convention collective nationale des officiers des entreprises de transport et services maritimes",
-  "3224":
-    "Convention collective nationale de la distribution des papiers-cartons ; commerce de gros",
-  "3225":
-    "Convention collective nationale des employés et des cadres des éditeurs de la presse magazine",
+  "3223": "Convention collective nationale des officiers des entreprises de transport et services maritimes",
+  "3224": "Convention collective nationale de la distribution des papiers-cartons ; commerce de gros",
+  "3225": "Convention collective nationale des employés et des cadres des éditeurs de la presse magazine",
   "5001": "Statut des industries électriques et gazières",
   "5002": "Statut du Mineur",
   "5003": "Statut de la Fonction publique d'État",
@@ -753,39 +512,31 @@
   "5100": "Statut divers ou non précisé",
   "5200": "Grille d'usage Mars PF (Non conventionnelle)",
   "5201": "Recommandations ANIL ADIL (Non conventionnelles)",
-  "5203":
-    "Ancienne convention collective nationale des peintres en lettres et publicité peinte (dénoncée, mais pouvant servir de grille d'usage d'établissements réputés sans convention)",
+  "5203": "Ancienne convention collective nationale des peintres en lettres et publicité peinte (dénoncée, mais pouvant servir de grille d'usage d'établissements réputés sans convention)",
   "5501": "Convention d'entreprise indépendante ou texte assimilé non précisé",
   "5502": "Convention d'entreprise Croix Rouge",
   "5503": "Convention d'entreprise SEITA (LOGISTA France)",
   "5505": "Convention d'entreprise CEA",
   "5506": "Convention d'entreprise Crédit agricole SA",
-  "5507":
-    "Convention collective nationale des administratifs du football (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5507": "Convention collective nationale des administratifs du football (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5509": "Convention d'entreprise PMU",
   "5513": "Convention d'entreprise IFREMER",
   "5514": "Convention d'entreprise Crédit Foncier",
   "5516": "Convention d'entreprise La Poste - France Télécom",
-  "5519":
-    "Convention collective nationale des salariés administratifs des sociétés de secours minières  (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5519": "Convention collective nationale des salariés administratifs des sociétés de secours minières  (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5521": "Convention collective nationale du personnel navigant d'exécution du transport maritime",
   "5522": "Convention d'entreprise Établissement français du sang",
   "5524": "Convention d'entreprise France terre d'asile",
-  "5526":
-    "Charte du football professionnel (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5526": "Charte du football professionnel (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5530": "Convention d'entreprise Adoma (ex Sonacotra)",
   "5531": "Convention d'entreprise Syngenta ",
   "5532": "Convention d'entreprise INRS",
   "5533": "Convention du comité d'entreprise SNCF",
-  "5537":
-    "Convention collective nationale des dentistes des sociétés de secours minières (n'est pas considérée à l'heure actuelle comme une convention de branche)",
-  "5538":
-    "Convention collective nationale des médecins spécialiste des sociétés de secours minières (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5537": "Convention collective nationale des dentistes des sociétés de secours minières (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5538": "Convention collective nationale des médecins spécialiste des sociétés de secours minières (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5539": "Convention d'entreprise AFPA",
-  "5541":
-    "Convention collective nationale du rugby professionnel (n'est pas considérée à l'heure actuelle comme une convention de branche)",
-  "5542":
-    "Convention collective nationale du  basket ball professionnel (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5541": "Convention collective nationale du rugby professionnel (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5542": "Convention collective nationale du  basket ball professionnel (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5545": "Convention d'entreprise des restaurants PTT",
   "5546": "Convention d'entreprise CNES",
   "5547": "Convention d'entreprise Club Méditerranée",
@@ -797,10 +548,8 @@
   "5554": "Convention collective nationale des officiers du Remorquage maritime ",
   "5555": "Convention collective nationale des navigants d'exécution du Remorquage maritime ",
   "5556": "Convention collective nationale des personnels officiers des Passages d'eau ",
-  "5557":
-    "Convention collective nationale des personnels navigants d'exécution des Passages d'eau ",
-  "5558":
-    "Accord national Multiservice immobilier et facilties management (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5557": "Convention collective nationale des personnels navigants d'exécution des Passages d'eau ",
+  "5558": "Accord national Multiservice immobilier et facilties management (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5559": "Convention d'entreprise Alliance emploi",
   "5562": "Convention d'entreprise Talc de Luzenac",
   "5563": "Convention d'entreprise Réunion des musées nationaux",
@@ -837,13 +586,12 @@
   "5594": "Convention d'entreprise Ortec Services",
   "5595": "Convention d'entreprise Sede environnement",
   "5596": "Convention d'entreprise Compagnie des Alpes",
-  "5597":
-    "Convention collective nationale des propriétaires exploitants de chapiteaux en discussion (n'est pas considérée à l'heure actuelle comme une convention de branche)",
+  "5597": "Convention collective nationale des propriétaires exploitants de chapiteaux en discussion (n'est pas considérée à l'heure actuelle comme une convention de branche)",
   "5598": "Convention d'entreprise Eurotunnel",
   "5599": "Convention d'entreprise Havas",
   "5600": "Accords-convention d'entreprise CGG Services",
   "5601": "Accords-convention d'entreprise COSEM",
-  "5602": "Accords-convention d'entreprise Bureau de recherche géologiques et minières ",
+  "5602": "Accords-convention d'entreprise Bureau de recherche géologiques et minières ",
   "5603": "Accords-convention d'entreprise Synchrotron Soleil",
   "5604": "Accords-convention d'entreprise Accor",
   "5605": "Convention d'entreprise Blondel aérologistique",
@@ -863,8 +611,7 @@
   "5620": "Convention d'entreprise Messageries lyonnaises de presse",
   "5621": "Convention d'entreprise Fondation Jean Moulin",
   "5622": "Accords-convention d'entreprise CCFD Terre Solidaire ",
-  "5623":
-    "Convention d'entreprise du groupement national interprofessionnel des semences graines et plants",
+  "5623": "Convention d'entreprise du groupement national interprofessionnel des semences graines et plants",
   "5624": "Accords-convention d'entreprise Secours catholique",
   "5625": "Convention d'entreprise Médecins du monde",
   "5626": "Convention d'entreprise des  Arts décoratifs",
@@ -876,61 +623,43 @@
   "5632": "Accords-convention d'entreprise Sodiparc",
   "5633": "Accords CFA-BTP (numéro provisoire)",
   "5634": "Accords collaborateurs parlementaires de députés (numéro provisoire)",
-  "7001":
-    "Convention collective nationale des coopératives et SICA de production, transformation et vente du bétail et des viandes",
-  "7002":
-    "Convention collective nationale des coopératives et SICA de céréales, de meunerie, d'approvisionnement et d'alimentation du bétail et d'oléagineux",
-  "7003":
-    "Convention collective nationale des coopératives agricoles, union de coopératives agricoles et SICA fabriquant des conserves de fruits et de légumes, des plats cuisinés et des spécialités",
-  "7004":
-    "Convention collective nationale des coopératives laitières, unions de coopératives laitières et SICA laitières",
-  "7005":
-    "Convention collective nationale des caves coopératives et de leurs unions élargie aux SICA vinicoles",
-  "7006":
-    "Convention collective nationale des coopératives, unions de coopératives agricoles et SICA de fleurs, de fruits et légumes et de pommes de terre",
-  "7007":
-    "Convention collective nationale des coopératives, unions de coopératives agricoles et SICA de teillage de lin",
+  "7001": "Convention collective nationale des coopératives et SICA de production, transformation et vente du bétail et des viandes",
+  "7002": "Convention collective nationale des coopératives et SICA de céréales, de meunerie, d'approvisionnement et d'alimentation du bétail et d'oléagineux",
+  "7003": "Convention collective nationale des coopératives agricoles, union de coopératives agricoles et SICA fabriquant des conserves de fruits et de légumes, des plats cuisinés et des spécialités",
+  "7004": "Convention collective nationale des coopératives laitières, unions de coopératives laitières et SICA laitières",
+  "7005": "Convention collective nationale des caves coopératives et de leurs unions élargie aux SICA vinicoles",
+  "7006": "Convention collective nationale des coopératives, unions de coopératives agricoles et SICA de fleurs, de fruits et légumes et de pommes de terre",
+  "7007": "Convention collective nationale des coopératives, unions de coopératives agricoles et SICA de teillage de lin",
   "7008": "Convention collective nationale du personnel des organismes de contrôle laitier",
-  "7009":
-    "Convention collective nationale des entreprises d'accouvage et de sélection de produits avicoles",
+  "7009": "Convention collective nationale des entreprises d'accouvage et de sélection de produits avicoles",
   "7010": "Convention collective nationale du personnel des élévages aquacoles ",
   "7012": "Convention collective nationale des centres équestres",
-  "7013":
-    "Convention collective nationale des établissements d'entraînement des chevaux de courses au trot",
-  "7014":
-    "Convention collective nationale des établissements d'entraînement des chevaux de courses au galop",
+  "7013": "Convention collective nationale des établissements d'entraînement des chevaux de courses au trot",
+  "7014": "Convention collective nationale des établissements d'entraînement des chevaux de courses au galop",
   "7017": "Convention collective nationale des parcs et jardins zoologiques ouverts au public",
   "7018": "Convention collective nationale des entreprises du paysage",
   "7019": "Convention collective nationale de la conchyliculture",
   "7020": "Convention collective nationale du réseau des centres d'économie rurale",
-  "7021":
-    "Convention collective nationale des entreprises relevant de la sélection et de la reproduction animale",
+  "7021": "Convention collective nationale des entreprises relevant de la sélection et de la reproduction animale",
   "7501": "Convention collective nationale des caisses régionales du crédit agricole",
   "7502": "Convention collective nationale de la Mutualité sociale agricole",
-  "7503":
-    "Convention collective nationale des distilleries coopératives viticoles et SICA de distillation",
-  "7508":
-    "Convention collective nationale des Maisons familiales rurales, instituts ruraux et centres",
+  "7503": "Convention collective nationale des distilleries coopératives viticoles et SICA de distillation",
+  "7508": "Convention collective nationale des Maisons familiales rurales, instituts ruraux et centres",
   "7509": "Convention collective nationale des organismes de formation et de promotion agricoles",
   "7510": "Convention collective nationale du personnel des ADASEA",
   "7511": "Convention collective nationale du personnel des ASAVPA",
-  "7513":
-    "Convention collective nationale des centres d'initiatives pour valoriser l'agriculture et le milieu rural",
+  "7513": "Convention collective nationale des centres d'initiatives pour valoriser l'agriculture et le milieu rural",
   "7514": "Convention collective nationale des organismes de la Confédération paysanne",
-  "7515":
-    "Convention collective nationale des sociétés d'aménagement foncier et d'établissement rural (SAFER)",
-  "7516":
-    "Convention collective nationale des directeurs des organismes de contrôle laitier et des centres régionaux d'informatique",
+  "7515": "Convention collective nationale des sociétés d'aménagement foncier et d'établissement rural (SAFER)",
+  "7516": "Convention collective nationale des directeurs des organismes de contrôle laitier et des centres régionaux d'informatique",
   "7519": "Accords nationaux des cadres dirigeants de la coopération agricole",
   "7520": "Convention collective nationale de l'enseignement agricole privé (CNEAP)",
   "8112": "Convention collective régionale de la polyculture Île-de-France non cadres",
   "8113": "Convention collective régionale de l'arboriculture maraîchage Île-de-France",
   "8114": "Convention collective régionale des champignonnières Île-de-France",
-  "8115":
-    "Convention collective régionale des hippodromes Île-de-France Cabourg Caen Chantilly Deauville",
+  "8115": "Convention collective régionale des hippodromes Île-de-France Cabourg Caen Chantilly Deauville",
   "8116": "Convention collective régionale de la polyculture Île-de-France cadres",
-  "8117":
-    "Convention collective régionale des exploitations polyculture élev CUMA Seine et Marne ETAR Ile de France",
+  "8117": "Convention collective régionale des exploitations polyculture élev CUMA Seine et Marne ETAR Ile de France",
   "8211": "Convention collective régionale des exploitations forestières Champagne Ardenne",
   "8212": "Convention collective régionale des scieries Champagne Ardenne",
   "8214": "Convention collective régionale des ETAR Aube Marne polyculture Marne",
@@ -943,13 +672,10 @@
   "8241": "Convention collective régionale des exploitations forestières scieries Centre",
   "8243": "Convention collective régionale des champignonnières Centre",
   "8244": "Convention collective régionale maraîchère Indre Cher",
-  "8251":
-    "Convention collective régionale des exploitations forestières scieries Calvados Manche Orne",
+  "8251": "Convention collective régionale des exploitations forestières scieries Calvados Manche Orne",
   "8252": "Convention collective régionale des travaux agricoles Basse Normandie",
-  "8262":
-    "Convention collective régionale des exploitations agricoles Côte d'or Nièvre Yonne ETAR CUMA Côte d'or",
-  "8311":
-    "Convention collective régionale des exploitations forestières scieries Nord Pas de Calais",
+  "8262": "Convention collective régionale des exploitations agricoles Côte d'or Nièvre Yonne ETAR CUMA Côte d'or",
+  "8311": "Convention collective régionale des exploitations forestières scieries Nord Pas de Calais",
   "8313": "Convention collective régionale des ETAR Nord Pas de Calais",
   "8412": "Convention collective régionale des scieries agricoles Alsace Lorraine",
   "8414": "Convention collective régionale maraîchère Meurthe et Moselle Moselle",
@@ -990,12 +716,10 @@
   "9022": "Convention collective départementale des exploitations forestières Aisne",
   "9031": "Convention collective départementale des exploitations polyculture Allier",
   "9032": "Convention collective départementale des exploitations horticoles Allier",
-  "9041":
-    "Convention collective départementale des exploitations agricoles Alpes de Haute Provence",
+  "9041": "Convention collective départementale des exploitations agricoles Alpes de Haute Provence",
   "9051": "Convention collective départementale des exploitations polyculture Hautes Alpes",
   "9061": "Convention collective départementale des exploitations polyculture Alpes Maritimes",
-  "9062":
-    "Convention collective départementale des exploitations forestières scieries Alpes Maritimes",
+  "9062": "Convention collective départementale des exploitations forestières scieries Alpes Maritimes",
   "9071": "Convention collective départementale des exploitations agricoles Ardèche",
   "9081": "Convention collective départementale des exploitations polyculture Ardennes",
   "9091": "Convention collective départementale des exploitations agricoles Ariège",
@@ -1004,10 +728,8 @@
   "9111": "Convention collective départementale des exploitations agricoles zone céréalière Aude",
   "9112": "Convention collective départementale des exploitations agricoles zone viticole Aude",
   "9121": "Convention collective départementale des exploitations agricoles Aveyron",
-  "9131":
-    "Convention collective départementale des exploitations agricoles Bouches du Rhône exécutants",
-  "9132":
-    "Convention collective départementale des exploitations agricoles Bouches du Rhône cadres",
+  "9131": "Convention collective départementale des exploitations agricoles Bouches du Rhône exécutants",
+  "9132": "Convention collective départementale des exploitations agricoles Bouches du Rhône cadres",
   "9141": "Convention collective départementale des exploitations polyculture et CUMA Calvados",
   "9142": "Convention collective départementale des exploitations horticoles fruits Calvados",
   "9151": "Convention collective départementale des exploitations polyculture Cantal",
@@ -1020,76 +742,58 @@
   "9202": "Convention collective départementale des exploitations agricoles Haute Corse",
   "9211": "Convention collective départementale des exploitations forestières scieries Côte d'or",
   "9221": "Convention collective départementale des exploitations polyculture Côtes d'Armor",
-  "9222":
-    "Convention collective départementale des exploitations pépinières horticulture Côtes d'Armor",
+  "9222": "Convention collective départementale des exploitations pépinières horticulture Côtes d'Armor",
   "9231": "Convention collective départementale des exploitations agricoles Creuse",
   "9232": "Convention collective départementale des exploitations pépinières sylvicoles Creuse",
   "9241": "Convention collective départementale des exploitations agricoles Dordogne",
   "9261": "Convention collective départementale des exploitations agricoles Drôme",
   "9272": "Convention collective départementale des exploitations polyculture Eure non cadres",
   "9273": "Convention collective départementale des exploitations polyculture Eure cadres",
-  "9281":
-    "Convention collective départementale des exploitations polyculture, élevage et CUMA Eure et Loir",
-  "9283":
-    "Convention collective départementale des exploitations horticoles fruitières jardinerie Eure et Loire",
-  "9291":
-    "Convention collective départementale des exploitations polyculture, élevage et maraîchage Finistère",
-  "9292":
-    "Convention collective départementale des exploitations pépinières horticulture Finistère",
+  "9281": "Convention collective départementale des exploitations polyculture, élevage et CUMA Eure et Loir",
+  "9283": "Convention collective départementale des exploitations horticoles fruitières jardinerie Eure et Loire",
+  "9291": "Convention collective départementale des exploitations polyculture, élevage et maraîchage Finistère",
+  "9292": "Convention collective départementale des exploitations pépinières horticulture Finistère",
   "9301": "Convention collective départementale des exploitations agricoles Gard",
   "9302": "Convention collective départementale des exploitations agricoles Gard cadres",
   "9311": "Convention collective départementale des exploitations agricoles Haute Garonne",
   "9321": "Convention collective départementale des exploitations agricoles Gers",
   "9331": "Convention collective départementale des exploitations agricoles Gironde",
   "9341": "Convention collective départementale des exploitations agricoles Hérault",
-  "9351":
-    "Convention collective départementale des exploitations polyculture, élevage et CUMA Ille et Vilaine",
-  "9352":
-    "Convention collective départementale des exploitations pépinières horticulture Ille et Vilaine",
-  "9361":
-    "Convention collective départementale des exploitations polyculture, élevage et CUMA Indre",
+  "9351": "Convention collective départementale des exploitations polyculture, élevage et CUMA Ille et Vilaine",
+  "9352": "Convention collective départementale des exploitations pépinières horticulture Ille et Vilaine",
+  "9361": "Convention collective départementale des exploitations polyculture, élevage et CUMA Indre",
   "9362": "Convention collective départementale des exploitations pépinières horticulture Indre",
-  "9371":
-    "Convention collective départementale des exploitations polyculture, élevage viticulture Indre et Loire",
-  "9372":
-    "Convention collective départementale des exploitations pépinières horticulture Indre et Loire",
-  "9374":
-    "Convention collective départementale des exploitations arboriculture fruitière Indre et Loire",
+  "9371": "Convention collective départementale des exploitations polyculture, élevage viticulture Indre et Loire",
+  "9372": "Convention collective départementale des exploitations pépinières horticulture Indre et Loire",
+  "9374": "Convention collective départementale des exploitations arboriculture fruitière Indre et Loire",
   "9383": "Convention collective départementale des exploitations agricoles CUMA Isère",
   "9401": "Convention collective départementale des exploitations agricoles Landes",
   "9411": "Convention collective départementale des exploitations agricoles Loir et Cher",
   "9412": "Convention collective départementale des ETAR CUMA Loir et Cher",
-  "9413":
-    "Convention collective départementale des exploitations pépinières horticulture Loir et Cher",
+  "9413": "Convention collective départementale des exploitations pépinières horticulture Loir et Cher",
   "9421": "Convention collective départementale des exploitations agricoles Loire",
   "9422": "Convention collective départementale des CUMA Loire",
   "9441": "Convention collective départementale des exploitations agricoles Loire Atlantique",
-  "9442":
-    "Convention collective départementale des exploitations pépinières horticulture Loire Atlantique",
+  "9442": "Convention collective départementale des exploitations pépinières horticulture Loire Atlantique",
   "9444": "Convention collective départementale des exploitations maraîchères Loire Atlantique",
   "9451": "Convention collective départementale des exploitations polyculture élevage Loiret",
   "9452": "Convention collective départementale des CUMA Loiret",
   "9456": "Convention collective départementale des exploitations cultures spécialisées Loiret",
   "9461": "Convention collective départementale des exploitations agricoles Lot",
   "9471": "Convention collective départementale des exploitations agricoles Lot et Garonne",
-  "9472":
-    "Convention collective départementale des exploitations pépinières horticulture Lot et Garonne",
-  "9491":
-    "Convention collective départementale des exploitations polyculture, élevage Maine et Loire",
-  "9492":
-    "Convention collective départementale des exploitations pépinières horticulture Maine et Loire",
+  "9472": "Convention collective départementale des exploitations pépinières horticulture Lot et Garonne",
+  "9491": "Convention collective départementale des exploitations polyculture, élevage Maine et Loire",
+  "9492": "Convention collective départementale des exploitations pépinières horticulture Maine et Loire",
   "9493": "Convention collective départementale des champignonnières Maine et Loire",
   "9494": "Convention collective départementale des exploitations maraîchères Maine et Loire",
   "9497": "Convention collective départementale des producteurs graines Maine et Loire",
   "9501": "Convention collective départementale des exploitations agricoles Manche",
   "9502": "Convention collective départementale des exploitations pépinières horticulture Manche",
-  "9521":
-    "Convention collective départementale des polyculture pépinières horticulture CUMA Haute Marne",
+  "9521": "Convention collective départementale des polyculture pépinières horticulture CUMA Haute Marne",
   "9531": "Convention collective départementale des exploitations polyculture élevage Mayenne",
   "9532": "Convention collective départementale des exploitations pépinières horticulture Mayenne",
   "9541": "Convention collective départementale des exploitations agricoles Meurthe et Moselle",
-  "9542":
-    "Convention collective départementale des exploitations pépinières horticulture Meurthe et Moselle",
+  "9542": "Convention collective départementale des exploitations pépinières horticulture Meurthe et Moselle",
   "9552": "Convention collective départementale des exploitations pépinières horticulture Meuse",
   "9553": "Convention collective départementale des exploitations polyculture élevage Meuse",
   "9561": "Convention collective départementale des exploitations polyculture élevage Morbihan",
@@ -1104,16 +808,13 @@
   "9603": "Convention collective départementale des exploitations pépinières horticulture Oise",
   "9612": "Convention collective départementale des exploitations polyculture élevage Orne",
   "9613": "Convention collective départementale des exploitations pépinières horticulture Orne",
-  "9621":
-    "Convention collective départementale des exploitations polyculture élevage Pas de Calais non cadres",
-  "9622":
-    "Convention collective départementale des exploitations pépinières horticulture Pas de Calais non cadres",
+  "9621": "Convention collective départementale des exploitations polyculture élevage Pas de Calais non cadres",
+  "9622": "Convention collective départementale des exploitations pépinières horticulture Pas de Calais non cadres",
   "9623": "Convention collective départementale des exploitations agricoles Pas de Calais cadres",
   "9631": "Convention collective départementale des exploitations agricoles Puy de Dôme",
   "9641": "Convention collective départementale des exploitations agricoles Pyrénées Atlantiques",
   "9651": "Convention collective départementale des exploitations agricoles Hautes Pyrénées",
-  "9661":
-    "Convention collective départementale des exploitations pépinières horticulture Pyrénées Orientales",
+  "9661": "Convention collective départementale des exploitations pépinières horticulture Pyrénées Orientales",
   "9691": "Convention collective départementale des exploitations agricoles Rhône",
   "9702": "Convention collective départementale des exploitations forestières Haute Saône",
   "9711": "Convention collective départementale des exploitations forestières Saône et Loire",
@@ -1126,8 +827,7 @@
   "9762": "Convention collective départementale des exploitations maraîchères Seine Maritime",
   "9791": "Convention collective départementale des exploitations agricoles Deux Sèvres",
   "9801": "Convention collective départementale des exploitations forestières Somme",
-  "9802":
-    "Convention collective départementale des exploitations polyculture élevage et CUMA, ETAR Somme",
+  "9802": "Convention collective départementale des exploitations polyculture élevage et CUMA, ETAR Somme",
   "9811": "Convention collective départementale des exploitations agricoles Tarn",
   "9821": "Convention collective départementale des exploitations agricoles Tarn et Garonne",
   "9831": "Convention collective départementale des exploitations agricoles Var",
@@ -1137,14 +837,10 @@
   "9853": "Convention collective départementale des exploitations maraîchères Vendée",
   "9862": "Convention collective départementale des champignonnières Vienne",
   "9871": "Convention collective départementale des exploitations agricoles Haute Vienne",
-  "9881":
-    "Convention collective départementale des exploitations polyculture élevage et CUMA, ETAR Vosges",
-  "9882":
-    "Convention collective départementale des exploitations pépinières horticulture maraîchères Vosges",
+  "9881": "Convention collective départementale des exploitations polyculture élevage et CUMA, ETAR Vosges",
+  "9882": "Convention collective départementale des exploitations pépinières horticulture maraîchères Vosges",
   "9891": "Convention collective départementale des exploitations forestières Yonne",
   "9901": "Convention collective départementale des exploitations forestières Belfort",
   "9971": "Convention collective départementale des exploitations bananières Martinique",
-  "9972": "Convention collective départementale des exploitations agricoles Guyane",
-  "9998": "___Convention non encore en vigueur___",
-  "9999": "___Sans convention collective___"
+  "9972": "Convention collective départementale des exploitations agricoles Guyane"
 }
