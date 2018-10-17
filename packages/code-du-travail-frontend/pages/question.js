@@ -22,12 +22,21 @@ class Question extends React.Component {
 
   render() {
     const { data } = this.props;
+    let author;
+    switch (data._source.author) {
+      case "DGT":
+        author = "Informations fournies par la Direction Générale du Travail";
+        break;
+      default:
+        author =
+          "Informations fournies par vos services de renseignements des DIRECCTE en région";
+    }
     return (
       <Answer
         title={data._source.title}
         emptyMessage="Cette question n'a pas été trouvée"
         html={data._source.html}
-        footer="Informations fournies par vos services de renseignements des DIRECCTE en région"
+        footer={author}
       />
     );
   }
