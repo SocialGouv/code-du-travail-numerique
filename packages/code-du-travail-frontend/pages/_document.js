@@ -21,11 +21,6 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          {/*<link rel="stylesheet" href="/static/bundle.css" />*/}
-          <link
-            rel="stylesheet"
-            href="//rawgit.com/SocialGouv/code-du-travail-css/master/docs/bundle.css"
-          />
           {this.props.styleTags}
           <script src="//cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
         </Head>
