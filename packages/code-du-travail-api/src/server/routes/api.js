@@ -17,10 +17,10 @@ const BASE_URL = `/api/v1`
 router.get(`${BASE_URL}/search`, async ctx => {
   try {
     let query = ctx.request.query.q
-    let excludeSource = ctx.request.query.excludeSource
+    let excludeSources = ctx.request.query.excludeSources
     let mustNot = []
-    if (excludeSource) {
-      mustNot = excludeSource.split(',').map(source => ({
+    if (excludeSources) {
+      mustNot = excludeSources.split(',').map(source => ({
         'query_string': {
           'default_field': 'source',
           'query': source.trim(),
