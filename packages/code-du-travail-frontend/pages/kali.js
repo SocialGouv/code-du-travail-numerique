@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import { Button } from "@socialgouv/code-du-travail-ui";
+import { Button } from "@cdt/ui";
 import { ExternalLink } from "react-feather";
 import Answer from "../src/search/Answer";
 

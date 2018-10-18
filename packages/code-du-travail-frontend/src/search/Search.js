@@ -1,6 +1,6 @@
 import memoizee from "memoizee";
 import React from "react";
-import { Container } from "@socialgouv/code-du-travail-ui";
+import { Container } from "@cdt/ui";
 import { withRouter } from "next/router";
 
 import AsyncFetch from "../lib/AsyncFetch";

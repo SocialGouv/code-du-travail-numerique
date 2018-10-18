@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "../routes";
 
-import { Container, Categories } from "@socialgouv/code-du-travail-ui";
+import { Container, Categories } from "@cdt/ui";
 
 import themes from "./data/themes.json";
 

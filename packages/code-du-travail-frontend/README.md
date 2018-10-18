@@ -1,4 +1,4 @@
-# Code-du-travail Frontend [![CircleCI](https://circleci.com/gh/SocialGouv/code-du-travail-explorer.svg?style=svg)](https://circleci.com/gh/SocialGouv/code-du-travail-explorer)
+# Code-du-travail - Frontend (@cdt/frontend)
 
 Ce dépôt de code contient le frontend du site web du Code du Travail Numérique.
 
@@ -6,7 +6,7 @@ Ce dépôt de code contient le frontend du site web du Code du Travail Numériqu
 
 ## Installation de l'environnement de développement
 
-**Important** : pour tourner en local ce projet nécessite les serveurs actifs des dépôts de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) (serveur Elasticsearch) et [`code-du-travail-api`](https://github.com/SocialGouv/code-du-travail-api) (serveur API).
+**Important** : pour tourner en local ce projet nécessite les serveurs actifs des dépôts de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data) (serveur Elasticsearch) et [`code-du-travail-api`](https://github.com/SocialGouv/code-du-travail-api) (serveur API).
 
 Créez un fichier `.env` :
 

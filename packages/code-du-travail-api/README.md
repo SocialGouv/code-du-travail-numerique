@@ -1,4 +1,4 @@
-# Code du travail - API
+# Code du travail - API (@cdt/api)
 
 Ce dépôt de code contient l'API permettant d'intérroger les différentes sources de données relatives au Code du travail.
 
@@ -35,7 +35,7 @@ docker-compose up -d
 
 **Important** :
 
-- le serveur Elasticsearch du dépôt de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-data) doit être actif et accessible à l'url `ELASTICSEARCH_URL` définie dans le ficher `.env`.
+- le serveur Elasticsearch du dépôt de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data) doit être actif et accessible à l'url `ELASTICSEARCH_URL` définie dans le ficher `.env`.
 
 ## Exemple d'appel :
 

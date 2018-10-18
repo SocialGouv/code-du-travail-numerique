@@ -1,6 +1,6 @@
 {
-  "name": "code-du-travail-frontend",
-  "version": "1.0.0",
+  "name": "@cdt/frontend",
+  "version": "2.0.0",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -8,8 +8,8 @@
   "main": "src/index.js",
   "dependencies": {
     "@sentry/browser": "^4.1.0",
-    "@socialgouv/code-du-travail-ui": "^1.2.4",
-    "@socialgouv/code-du-travail-css": "^1.0.4",
+    "@cdt/ui": "^2.0.0",
+    "@cdt/css": "^2.0.0",
     "@zeit/next-css": "^1.0.0",
     "date-fns": "^1.29.0",
     "dotenv": "^6.0.0",

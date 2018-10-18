@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 
-import { Alert } from "@socialgouv/code-du-travail-ui";
+import { Alert } from "@cdt/ui";
 
 import FeedbackForm from "../common/FeedbackForm.js";
 import SeeAlso from "../common/SeeAlso";

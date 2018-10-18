@@ -1,4 +1,4 @@
-import { Container, Alert } from "@socialgouv/code-du-travail-ui";
+import { Container, Alert } from "@cdt/ui";
 
 const Disclaimer = () => (
   <Container>

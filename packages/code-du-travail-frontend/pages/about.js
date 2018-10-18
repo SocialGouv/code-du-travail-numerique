@@ -1,4 +1,4 @@
-import { Container, Section } from "@socialgouv/code-du-travail-ui";
+import { Container, Section } from "@cdt/ui";
 
 export default () => (
   <Container>

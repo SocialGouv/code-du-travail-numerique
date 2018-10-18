@@ -1,6 +1,6 @@
 {
-  "name": "@socialgouv/code-du-travail-css",
-  "version": "1.0.4",
+  "name": "@cdt/css",
+  "version": "2.0.0",
   "description": "Code du travail numérique - CSS",
   "private": true,
   "repository": {
