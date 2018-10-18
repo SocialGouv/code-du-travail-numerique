@@ -7,10 +7,30 @@
 ## Installation
 
 ```sh
+# Install all the packages
 $ yarn
 ```
 
-Note, environment files will be created on *postinstall* (see [scripts/setup-env.s](scripts/setup-env.sh))
+Note: les fichiers d'environment seront créés au *postinstall* (see [scripts/setup-env.s](scripts/setup-env.sh)) en fonction du `NODE_ENV`
+
+#### Première instanciation
+
+Pour (re-)initialiser les données du elasticsearch: 
+
+```sh
+# Démarrez un elasticsearch
+$ docker-compose up
+
+#
+# Attendez de voir le message
+#
+elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [code-du-travail-data-elasticsearch-single-node] started
+
+# > En parallèle dans un autre terminal <
+
+# Lancez le script d'indexation
+$ docker-compose exec python pipenv run python /app/search/indexing/create_indexes.py
+```
 
 ## Usage
 
@@ -18,6 +38,34 @@ Note, environment files will be created on *postinstall* (see [scripts/setup-env
 
 ```sh
 $ yarn dev
+```
+
+### Build
+
+```sh
+# Build all the packages
+$ yarn build
+
+# Build the "<package-name>"
+$ yarn workspace <package-name> build
+
+# For example for "code-du-travail-frontend"
+$ yarn workspace code-du-travail-frontend build
+
+```
+
+### Test
+
+```sh
+# Run all the packages tests
+$ yarn test
+
+# Run the "<package-name>" tests
+$ yarn workspace <package-name> test
+
+# For example for "code-du-travail-frontend"
+$ yarn workspace code-du-travail-frontend test
+
 ```
 
 ## Architecture
@@ -65,12 +113,6 @@ $ yarn dev
 - ElasticSearch : `docker-compose up`
 - API : `yarn api`
 - FrontEnd : `yarn frontend`
-
-#### Mettre à jour l'index ElasticSearch :
-
-```sh
-docker-compose exec python pipenv run python /app/search/indexing/create_indexes.py
-```
 
 ## Contributions
 
