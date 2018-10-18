@@ -1,4 +1,4 @@
-# Code du travail - Data
+# Code du travail - Data (@cdt/data)
 
 Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.
 

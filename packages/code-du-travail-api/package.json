@@ -1,6 +1,6 @@
 {
-  "name": "code-du-travail-api",
-  "version": "1.0.0",
+  "name": "@cdt/api",
+  "version": "2.0.0",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SocialGouv/code-du-travail-api.git"
+    "url": "git+https://github.com/SocialGouv/code-du-travail-numerique.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SocialGouv/code-du-travail-api/issues"
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
-  "homepage": "https://github.com/SocialGouv/code-du-travail-api#readme",
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
     "@koa/cors": "^2.2.1",
     "dotenv": "^6.0.0",

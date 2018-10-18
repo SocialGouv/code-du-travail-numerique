@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Alert, Article } from "@socialgouv/code-du-travail-ui";
+import { Container, Alert, Article } from "@cdt/ui";
 import { withRouter } from "next/router";
 
 import Disclaimer from "../common/Disclaimer";

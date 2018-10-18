@@ -1,6 +1,12 @@
-# Code du travail - Templates HTML et CSS
+# Code du travail - CSS (@cdt/css)
 
-[![npm package][npm-badge]][npm]
+> Private internal module 
+
+## Usage
+
+```js
+import "@cdt/css"
+```
 
 ## Notes sur les outils utilisés pour le développement CSS
 
@@ -12,17 +18,6 @@ Il permet de transformer le code CSS à l'aide de plug-ins JavaScript (voir le f
 - [`postcss-import`](https://github.com/postcss/postcss-import) pour _inliner_ les `@import`s CSS et mettre en place un système d'importation de _partials_ (à la SASS ou Stylus)
 - [`cssnano`](https://cssnano.co)
 
-## Usage
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/@socialgouv/code-du-travail-css@latest/docs/bundle.css"/>
-```
-
-ou avec npm :
-
-```js
-require("@socialgouv/code-du-travail-css");
-```
 
 ## Conseils pour contribuer
 
@@ -31,17 +26,11 @@ require("@socialgouv/code-du-travail-css");
 
 ## Installation de l'environnement de développement
 
-```shell
-npm install
-```
-
-Puis, pour développer, lancez :
-
-```shell
+```sh
 # - le watcher qui va générer le fichier `bundle.css`
-npm run dev
+$ npm run dev
 # - un serveur web local pour servir le répertoire `docs/`
-cd docs/ && python -m SimpleHTTPServer
+$ cd docs/ && python -m SimpleHTTPServer
 ```
 
 Le serveur web local permet de contourner les limitations CORS des navigateurs pour servir correctement les `@font-face` par exemple.
@@ -110,6 +99,3 @@ Quand on veut utiliser une icône, on la copie depuis `docs/assets/icons_source/
 
 - pouvoir facilement retrouver la provenance d'une icône
 - pouvoir supprimer les icônes inutilisées par l'interface dans `docs/assets/icons/`
-
-[npm-badge]: https://img.shields.io/npm/v/@socialgouv/code-du-travail-css.png?style=flat-square
-[npm]: https://www.npmjs.org/package/@socialgouv/code-du-travail-css

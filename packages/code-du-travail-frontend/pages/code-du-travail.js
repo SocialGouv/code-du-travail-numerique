@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import { ExternalLink } from "react-feather";
-import { BreadCrumbs } from "@socialgouv/code-du-travail-ui";
+import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 

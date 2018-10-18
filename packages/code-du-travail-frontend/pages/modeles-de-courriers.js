@@ -8,7 +8,7 @@ import {
   Container,
   Alert,
   Article
-} from "@socialgouv/code-du-travail-ui";
+} from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";

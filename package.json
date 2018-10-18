@@ -1,16 +1,15 @@
 {
-  "name": "code-du-travail",
+  "name": "@socialgouv/code-du-travail",
   "version": "1.0.0",
   "private": true,
   "description": "Code du travail",
-  "homepage": "https://github.com/douglasduteil/code-du-travail#readme",
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "api": "yarn workspace code-du-travail-api dev",
     "build": "lerna run build",
     "dev:docker": "docker-compose up --remove-orphans",
-    "dev:node": "run-p frontend api",
-    "dev": "run-p dev:*",
-    "frontend": "yarn workspace code-du-travail-frontend dev",
+    "dev": "lerna run dev --parallel",
+    "dev:api": "yarn workspace @cdt/api dev",
+    "dev:frontend": "yarn workspace @cdt/frontend dev",
     "lint": "lerna run lint --parallel",
     "postinstall": "sh scripts/setup-env.sh",
     "start": "lerna run start --parallel",
@@ -18,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/douglasduteil/code-du-travail.git"
+    "url": "git+https://github.com/SocialGouv/code-du-travail-numerique.git"
   },
   "bugs": {
-    "url": "https://github.com/douglasduteil/code-du-travail/issues"
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
     "lerna": "^3.4.1",
