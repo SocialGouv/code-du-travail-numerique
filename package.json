@@ -5,12 +5,9 @@
   "description": "Code du travail",
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
-    "api": "yarn workspace @cdt/api dev",
     "build": "lerna run build",
-    "css": "yarn workspace @cdt/css dev",
     "dev:docker": "docker-compose up --remove-orphans",
-    "dev:node": "run-p frontend api css",
-    "dev": "run-p dev:*",
+    "dev": "lerna run dev --parallel",
     "frontend": "yarn workspace @cdt/frontend dev",
     "lint": "lerna run lint --parallel",
     "postinstall": "sh scripts/setup-env.sh",
