@@ -46,11 +46,12 @@ $ yarn dev
 # Build all the packages
 $ yarn build
 
-# Build the "code-du-travail-frontend"
-$ yarn workspace code-du-travail-frontend build
-
 # Build the "<package-name>"
 $ yarn workspace <package-name> build
+
+# For example for "code-du-travail-frontend"
+$ yarn workspace code-du-travail-frontend build
+
 ```
 
 ### Test
@@ -59,11 +60,12 @@ $ yarn workspace <package-name> build
 # Run all the packages tests
 $ yarn test
 
-# Run the "code-du-travail-frontend" tests
+# Run the "<package-name>" tests
+$ yarn workspace <package-name> test
+
+# For example for "code-du-travail-frontend"
 $ yarn workspace code-du-travail-frontend test
 
-# Build the "<package-name>"
-$ yarn workspace <package-name> test
 ```
 
 ## Architecture
