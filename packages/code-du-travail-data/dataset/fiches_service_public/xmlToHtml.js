@@ -78,6 +78,31 @@ const XSL = `
       <td><xsl:value-of select="Paragraphe"/></td>
     </xsl:template>
 
+
+    <xsl:template match="ListeSituations">
+      <ul class="sp__situations-nav">
+        <xsl:for-each select="Situation">
+          <li>
+            <a>
+              <xsl:attribute name="href">#situation-<xsl:value-of select="position()"/></xsl:attribute>
+              <xsl:value-of select="Titre"/>
+            </a>
+          </li>
+        </xsl:for-each>
+      </ul>
+
+      <div class="sp__situations">
+        <xsl:for-each select="Situation">
+          <div class="sp__situation">
+            <xsl:attribute name="id">situation-<xsl:value-of select="position()"/></xsl:attribute>
+            <xsl:apply-templates/>
+          </div>
+        </xsl:for-each>
+      </div>
+    </xsl:template>
+
+
+
     <xsl:template match="Publication">
       <h1>Publication</h1>
       <xsl:apply-templates select="Introduction"/>

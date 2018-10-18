@@ -36,7 +36,7 @@ def populate_fiches_service_public(json_file=JSON_FICHES):
 
                 # Merge everything that look like a tag, remove duplicate values.
                 tags = list(set(
-                    [item['sousTheme']]
+                    [item['sousTheme']] if 'sousTheme' in item else []
                     + item['tags']
                     + [item for item in item['ariane'] if item not in TAGS_IRRELEVANT]
                     + item['fiches']
@@ -47,7 +47,7 @@ def populate_fiches_service_public(json_file=JSON_FICHES):
                     'url': item['url'],
                     'title': item['title'],
                     'text': text,
-                    'html': item.get("html"),
+                    'html': item.get("html") or item.get("situationsHtml"),
                     'tags': tags,
                 }
                 FICHES_SERVICE_PUBLIC.append(fiche)
