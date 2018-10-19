@@ -11,7 +11,7 @@ from search import settings
 logger = settings.get_logger(__name__)
 
 
-JSON_FICHES = os.path.join(settings.BASE_DIR, 'dataset/themes2.json')
+JSON_FICHES = os.path.join(settings.BASE_DIR, 'dataset/themes-front.json')
 
 THEMES = []
 

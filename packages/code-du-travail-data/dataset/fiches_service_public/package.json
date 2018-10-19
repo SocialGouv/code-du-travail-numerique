@@ -12,7 +12,7 @@
     "url": "https://github.com/revolunet/fiches_service_public/issues"
   },
   "dependencies": {
-    "libxslt": "^0.7.0",
+    "libxslt": "github:alexdee2007/node-libxslt",
     "promise-serial-exec": "^1.0.0",
     "xmldom": "^0.1.27",
     "xpath.js": "^1.1.0",
