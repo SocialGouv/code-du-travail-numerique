@@ -1,0 +1,15 @@
+[{
+  "titre": "calculateur d'indemnité de licenciement",
+  "code": "indeminite-licenciement",
+  "questions": [
+      "Quelle est mon indeminité de licenciement",
+      "Comment calculer mon indemnité de licenciement"
+  ],
+  "theme": "Licenciement",
+  "themes": [300],
+  "type_de_contrat": ["CDI"],
+  "travailleur_particulier": [],
+  "catégorie": ["Ingénieur", "Cadres", "ETAM", "ouvriers", "employés"],
+  "date": "18/10/2018",
+  "branche": ""
+}]
