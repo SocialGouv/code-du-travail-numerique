@@ -8,6 +8,7 @@ const routeBySource = {
   conventions_collectives: "convention-collective",
   modeles_de_courriers: "modeles-de-courriers",
   themes: "themes",
+  outils: "outils"
 };
 
 // mapping elastic search source type -> source label
@@ -20,6 +21,7 @@ const labelBySource = {
   conventions_collectives: "Legifrance",
   modeles_de_courriers: "Courrier Type",
   themes: "themes",
+  outils: "outils"
 };
 
 export const getLabelBySource = src => labelBySource[src] || "";

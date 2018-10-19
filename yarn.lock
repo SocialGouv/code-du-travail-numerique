@@ -5467,7 +5467,7 @@ data-urls@^1.0.1:
 
 date-fns@^1.29.0:
   version "1.29.0"
-  resolved "https://registry.npmjs.org/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
   integrity sha512-lbTXWZ6M20cWH8N9S6afb0SBm6tMk+uUg6z3MqHPKE9atmsY3kJkTm8vKe93izJ2B2+q5MV990sM2CHgtAZaOw==
 
 date-format@^1.2.0:
@@ -9962,6 +9962,11 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
+
 load-source-map@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/load-source-map/-/load-source-map-1.0.0.tgz#318f49905ce8a709dfb7cc3f16f3efe3bcf1dd05"
@@ -13580,6 +13585,15 @@ react-live@^1.11.0:
     prop-types "^15.5.8"
     unescape "^0.2.0"
 
+react-mathjax2@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-mathjax2/-/react-mathjax2-0.0.1.tgz#5bcf5cb6ec284fc67133911b1db748b0df33a73e"
+  integrity sha512-fvQm0vCjzWo+XAYxv1lf3tosXl379h1s/nnOuDIzjLO0itQrnTERu7/2IHRGw9AEESHen5HQ0zWX98AVENntvQ==
+  dependencies:
+    load-script "^1.0.0"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+
 react-modal@^3.4.4:
   version "3.6.1"
   resolved "https://registry.npmjs.org/react-modal/-/react-modal-3.6.1.tgz#54d27a1ec2b493bbc451c7efaa3557b6af82332d"
@@ -13666,6 +13680,13 @@ react-star-rating-component@1.4.1:
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
+react-switch@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-switch/-/react-switch-3.0.4.tgz#52958b2736b4d21b4f0050997955c5365019ca7b"
+  integrity sha512-11WipoiPNHZx4fWzF/fsYXu+w+HZb8tzNTo7ymaJES8uc3nJZl46rxg1DAB1u669W7SOnshDNnJZOi28IblOeg==
+  dependencies:
+    prop-types "^15.6.1"
+
 react-themeable@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/react-themeable/-/react-themeable-1.1.0.tgz#7d4466dd9b2b5fa75058727825e9f152ba379a0e"
@@ -13691,7 +13712,7 @@ react-uid@^2.0.1:
   resolved "https://registry.npmjs.org/react-uid/-/react-uid-2.1.0.tgz#e9fba83e612c81d97c15ca27d4c66b2d52ee78d5"
   integrity sha512-29wIy55ZDe6LVkNsAuC7gl01aaRU0dVLHY5rPl8Gr2w0LAfm4ukWAEnRediarzPYUwAeapignp56jJQpAEs6vQ==
 
-react@^16.3.2, react@^16.5.0, react@^16.5.2:
+react@^16.0.0, react@^16.3.2, react@^16.5.0, react@^16.5.2:
   version "16.5.2"
   resolved "https://registry.npmjs.org/react/-/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
   integrity sha512-FDCSVd3DjVTmbEAjUNX6FgfAmQ+ypJfHUsqUJOYNCBUp1h8lqmtC+0mXJ+JjsWx4KAVTkk1vKd1hLQPvEviSuw==
