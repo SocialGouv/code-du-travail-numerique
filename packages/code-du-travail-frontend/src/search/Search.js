@@ -36,11 +36,11 @@ const FormSearchButton = () => (
   </button>
 );
 
-const fetchResults = (query, endPoint = "search", excludeSource) => {
+const fetchResults = (query, endPoint = "search", excludeSources) => {
   let urlParams = new URLSearchParams();
   urlParams.append("q", query);
-  if (excludeSource) {
-    urlParams.append("excludeSource", excludeSource);
+  if (excludeSources) {
+    urlParams.append("excludeSources", excludeSources);
   }
   const url = `${process.env.API_URL}/${endPoint}?${urlParams.toString()}`;
 
