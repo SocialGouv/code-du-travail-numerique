@@ -225,12 +225,12 @@ def create_documents(index_name, type_name):
             body_data.append({
                 'source': 'outils',
                 'title': val['titre'],
-                'slug': slugify(val['titre'], to_lower=True),
+                'slug': slugify(val['code'], to_lower=True),
                 'text': ' '.join(val['questions']),
                 'themes': val['themes'],
                 'date': val['date'],
                 'branche': val['branche'],
-                'all_text': f"{val['titre']} {' '.join(val['questions'])} {val['theme']} {val['type_de_contrat']} {val['profil']}, {val['catégorie']}, {val['travailleur_particulier']}",
+                'all_text': f"{val['titre']} {' '.join(val['questions'])} {val['theme']} {val['type_de_contrat']}, {val['catégorie']}, {val['travailleur_particulier']}, {val['branche']}",
           })
 
 
