@@ -31,7 +31,7 @@ module.exports = routes()
     page: "code-du-travail",
     pattern: "/code-du-travail/:slug"
   })
-  
+
   // http://localhost:3000/modeles_de_courriers/L2253-1
   .add({
     name: "modeles-de-courriers",
@@ -51,6 +51,12 @@ module.exports = routes()
     name: "idcc",
     page: "idcc",
     pattern: "/convention-collective-idcc/:slug"
+  })
+  // http://localhost:3000/outils/indeminite-licenciement
+  .add({
+    name: "outils",
+    page: "outils",
+    pattern: "/outils/:slug"
   })
 
   // theme navigation
