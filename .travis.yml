@@ -1,25 +1,20 @@
----
 dist: trusty
 language: node_js
 sudo: false
 git:
   depth: 5
-
 node_js: lts/*
-
 cache: yarn
-
 script:
-  - yarn lint
-  - yarn run build
+- yarn lint
+- yarn run build
 jobs:
   include:
-    - stage: Prepare
-      script: yarn lerna run --stream lint
-    -
-      script: yarn lerna run --stream build
-    - stage: test
-      script: yarn lerna run --stream test
-
+  - stage: Prepare
+    script: yarn lerna run --stream lint
+  - script: yarn lerna run --stream build
+  - stage: test
+    script: yarn lerna run --stream test
 notifications:
-    slack: incubateur-mas:hmWaMIMmPXfMzUNG2UaSB4wh
+  slack:
+    secure: P9HLRFvTGbMuevLDkTKPnoI9PG4HhIt50I6kX5RCzADQUBS2tBhT7ENYm3YaPvjZNcMvD4K5LcVAmpBoQxI3ccsm+KPpit/MX52I8G3JpI0uKO/8vS7hZRtzeyAiM1ZnruKU02bQqN05wNZIB0wD4kL1zYusa5i9+Nq7TtUf4EziOfqP4cTmz13yQ6DWzph/0/x+Qxbui6dm/oBifqMfOiXdkOVlNiarjeIpyN0JYkNlEzuXdiqMwAiojMgr2JhXYScwfJKWQSwD8sjndOSAoFwF6LBSto2rxInNAYZx/+9oqy0cxxrxMQv19xAhSGi425HT1clLHUsDJelGOQEi8Kktk13WKjTaeOSynsjfLicPLUA8N6g5s7osUUAd0Tm4EoyH7UnVA8dm43QvhwPIIAMC+xcFhKfvc6BeR3asY+Lwyr4Mi3WAy0NfW2vInqmpWHGQxZt/tku/pldD7gtlXbwyx5q0j3bDBmsXkwvtfIkZIzfh6uW/xKPzRxjXxo0K4gttd89N4VhKEDw/9hzEuKTNIb5Wcvlfg53giNW6EBQX8jZGe8Br+YflwNddv8okl7lQbAeZGFaCGAxPzEM4ggIHZ9oYxo+44b/my0oqzI7nCaMfj18BlHdyygHef6rTDaGTeLgFbcMLK0mimO5X5+kgM4UdZvRZtrmfMv6onwo=
