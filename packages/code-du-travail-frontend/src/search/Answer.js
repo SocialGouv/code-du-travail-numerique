@@ -20,6 +20,7 @@ const Answer = ({
   title,
   intro,
   html,
+  children,
   footer,
   emptyMessage = "Aucun résultat"
 }) => (
@@ -28,13 +29,14 @@ const Answer = ({
       <title>{title}</title>
     </Head>
     <Search />
-    {!html && <BigError>{emptyMessage}</BigError>}
-    {html && (
+    {!html && !children && <BigError>{emptyMessage}</BigError>}
+    {(html || children) && (
       <React.Fragment>
         <Disclaimer />
         <Article title={title}>
           {intro}
           <Html>{html}</Html>
+          {children}
           <div
             style={{
               background: "var(--color-light-background)",
