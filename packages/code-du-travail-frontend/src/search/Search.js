@@ -2,6 +2,7 @@ import memoizee from "memoizee";
 import React from "react";
 import { Container } from "@cdt/ui";
 import { withRouter } from "next/router";
+import pDebounce from "p-debounce";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import Suggester from "./Suggester";
@@ -36,6 +37,20 @@ const FormSearchButton = () => (
   </button>
 );
 
+const memoFetch = memoizee(
+  url =>
+    fetch(url).then(r => {
+      if (r.status === 200) {
+        return r.json();
+      } else {
+        return Promise.reject("Un problème est survenu.");
+      }
+    }),
+  {
+    promise: true
+  }
+);
+
 const fetchResults = (query, endPoint = "search", excludeSources) => {
   let urlParams = new URLSearchParams();
   urlParams.append("q", query);
@@ -60,39 +75,56 @@ const fetchResultsSearch = memoizee(
   { promise: true }
 );
 
+const fetchResultsSuggestDebounced = pDebounce(
+  (query, excludeSources) => fetchResults(query, "suggest", excludeSources),
+  200
+);
+
 // memoize suggestions results
 const fetchResultsSuggest = memoizee(
-  query =>
-    (query && query.length > 2 && fetchResults(query, "suggest")) ||
+  (query, excludeSources) =>
+    (query &&
+      query.length > 2 &&
+      fetchResultsSuggestDebounced(query, excludeSources)) ||
     Promise.resolve(),
   { promise: true }
 );
 
-export const SearchQuery = ({ query, excludeSources }) => (
-  <AsyncFetch
-    autoFetch={true}
-    fetch={() => fetchResultsSearch(query, excludeSources)}
-    render={({ status, result, clear }) => (
-      <div>
-        <div style={{ textAlign: "center" }}>
-          {status === "loading" ? "..." : " "}
-        </div>
-        <div>
-          {status === "success" && result && <SearchResults data={result} />}
-        </div>
+export class SearchQuery extends React.Component {
+  shouldComponentUpdate(nextProps) {
+    // prevent useless re-renders
+    if (nextProps.query === this.props.query) {
+      return false;
+    }
+    return true;
+  }
+  render() {
+    const { query, excludeSources, render, filters } = this.props;
+    return (
+      <AsyncFetch
+        autoFetch={true}
+        fetch={() => fetchResultsSearch(query, excludeSources)}
+        render={args => render({ ...args, query, filters })}
+      />
+    );
+  }
+}
+
+SearchQuery.defaultProps = {
+  render: ({ status, result, clear, query, filters }) => (
+    <div>
+      <div style={{ textAlign: "center" }}>
+        {status === "loading" ? "..." : " "}
       </div>
-    )}
-  />
-);
-
-// dont set the submitQuery when ?search=0
-const getQueryParam = () =>
-  Router.query.search ? Router.query.search === "0" && "" : Router.query.q;
-
-const getCurrentQueryState = () => ({
-  query: Router.query.q,
-  queryResults: getQueryParam()
-});
+      <div>
+        {status === "success" &&
+          result && (
+            <SearchResults filters={filters} query={query} data={result} />
+          )}
+      </div>
+    </div>
+  )
+};
 
 // todo: externalize state management
 class Search extends React.Component {
@@ -117,7 +149,7 @@ class Search extends React.Component {
   }
   handleRouteChange = url => {
     // when route change, ensure to update the input box
-    console.log("handleRouteChange", url);
+    //console.log("handleRouteChange", url);
     this.setState({
       query: this.props.router.query.q,
       queryResults: this.props.router.query.search
@@ -153,32 +185,41 @@ class Search extends React.Component {
   render() {
     const { query, queryResults } = this.state;
     return (
-      <div>
-        <div className="section-white shadow-bottom">
-          <Container>
-            <div className="search" style={{ padding: "1em 0" }}>
-              <header>
-                <h1 className="no-margin">
-                  Posez votre question sur le droit du travail
-                </h1>
-                <Disclaimer />
-              </header>
-              <form className="search__form" onSubmit={this.onFormSubmit}>
-                <Suggester
-                  onChange={this.onChange}
-                  query={query}
-                  getResults={() => fetchResultsSuggest(query)}
-                />
-                <FormSearchButton />
-              </form>
-            </div>
-          </Container>
-        </div>
-        {(queryResults && <SearchQuery query={queryResults} />) || null}
-      </div>
+      <SearchView
+        onChange={this.onChange}
+        onFormSubmit={this.onFormSubmit}
+        query={query}
+        queryResults={queryResults}
+      />
     );
   }
 }
+
+const SearchView = ({ onChange, onFormSubmit, query, queryResults }) => (
+  <React.Fragment>
+    <div className="section-white shadow-bottom">
+      <Container>
+        <div className="search" style={{ padding: "1em 0" }}>
+          <header>
+            <h1 className="no-margin">
+              Posez votre question sur le droit du travail
+            </h1>
+            <Disclaimer />
+          </header>
+          <form className="search__form" onSubmit={onFormSubmit}>
+            <Suggester
+              onChange={onChange}
+              query={query}
+              getResults={() => fetchResultsSuggest(query)}
+            />
+            <FormSearchButton />
+          </form>
+        </div>
+      </Container>
+    </div>
+    {(queryResults && <SearchQuery query={queryResults} />) || null}
+  </React.Fragment>
+);
 
 const _Search = withRouter(Search);
 
