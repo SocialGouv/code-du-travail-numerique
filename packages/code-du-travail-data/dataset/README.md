@@ -42,3 +42,88 @@ $ node index.js > ../nomenclatures-`date +%Y%m%d`.json
 $ cd dataset/fiches_ministere_travail
 $ node ministere-travail-extract-fiches.js > fiches-min-travail.json
 ```
+
+## Obtenir un fichier JSON des fiches du service public
+Recupérer les archives 
+- https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-particuliers/
+- https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/
+et extraire les fichiers dans le dossiers `dataset/fiches_service_public/data`
+
+```
+$ cd dataset/fiches_service_public
+$ node service-public-extract-fiches.js > fiches-sp-travail.json
+```
+
+
+## Schema des donnees outils.json, courriers-type.json 
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#", 
+  "title": "Contenu rédigés du code du travail",
+  "description": "A code-du-travail-content-FF",
+  "type": "object",
+  "properties": {
+    "questions": {
+      "description":"une liste de questions à laquelle le contenu répond",
+      "type": "Array",
+      "items": {
+        "type": "string"
+      },
+    },
+    "theme": {
+      "description":"le theme de la question",
+      "type": "string",
+    },
+    "themes": {
+      "description":"une liste d'identifiant eposeidon auquel le contenu correspond",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+    },
+    "branche": {
+      "description":"la branche qui s'applique pour cette question",
+      "type": "string"
+     },
+    "source":{
+      "description":"le service qui a fourni cette information",
+      "type": "string"
+     },
+    "date":{
+      "description":"la date de publication de cette information",
+      "type": "string"
+    },
+    "type_de_contrat":{
+      "description":"Les types de contrat auquels le contenu correspond",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+    },
+    "travailleur_particulier":{
+      "description":"Les cas de travailleur particuliers auquels le contenu correspond",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+    },
+    "catégorie":{
+      "description":"Les catégorie de salarié auquels le contenu correspond",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+    },
+    "profil":{
+      "description":"Les profil (employeur / salarié) auquels le contenu correspond",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+    },
+  },
+  "required": ["date", "theme", "themes"]
+}
+
+```
