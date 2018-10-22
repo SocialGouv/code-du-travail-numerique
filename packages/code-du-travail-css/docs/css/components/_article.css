@@ -39,3 +39,10 @@
   background: var(--color-dark-background);
   text-align: center;
 }
+
+.article__date {
+  font-weight: 700;
+  margin: var(--spacing-inter-component) 0;
+  font-size: var(--font-size-small);
+  color: var(--color-light-text);
+}

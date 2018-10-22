@@ -8,6 +8,7 @@ import SeeAlso from "../common/SeeAlso";
 import FeedbackForm from "../common/FeedbackForm";
 import Html from "../common/Html";
 import Search from "./Search";
+import { DateContenu } from "../common/DateContenu";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -22,6 +23,7 @@ const Answer = ({
   html,
   children,
   footer,
+  date,
   emptyMessage = "Aucun résultat"
 }) => (
   <React.Fragment>
@@ -37,6 +39,7 @@ const Answer = ({
           {intro}
           <Html>{html}</Html>
           {children}
+          {date && <DateContenu value={date} />}
           <div
             style={{
               background: "var(--color-light-background)",
