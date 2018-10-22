@@ -19,6 +19,11 @@ const Tags = ({ tags, onTagClick }) => (
   </React.Fragment>
 );
 
+Tags.propTypes = {
+  tags: PropTypes.array,
+  onTagClick: PropTypes.func
+};
+
 const Article = ({
   title,
   tags,

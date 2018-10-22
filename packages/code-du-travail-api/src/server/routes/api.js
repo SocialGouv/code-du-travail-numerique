@@ -1,9 +1,9 @@
-const Router = require('koa-router')
+const Router = require("koa-router");
 
-const codeDuTravailNumerique = require('../data_sources/code_du_travail_numerique.js')
+const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
 
-const router = new Router()
-const BASE_URL = `/api/v1`
+const router = new Router();
+const BASE_URL = `/api/v1`;
 
 /**
  * Return documents matching the given query.
@@ -16,37 +16,37 @@ const BASE_URL = `/api/v1`
  */
 router.get(`${BASE_URL}/search`, async ctx => {
   try {
-    let query = ctx.request.query.q
-    let excludeSources = ctx.request.query.excludeSources
-    let mustNot = []
+    let query = ctx.request.query.q;
+    let excludeSources = ctx.request.query.excludeSources;
+    let mustNot = [];
     if (excludeSources) {
-      mustNot = excludeSources.split(',').map(source => ({
+      mustNot = excludeSources.split(",").map(source => ({
         query_string: {
-          default_field: 'source',
-          query: source.trim(),
-        },
-      }))
+          default_field: "source",
+          query: source.trim()
+        }
+      }));
     }
 
-    ctx.body = await codeDuTravailNumerique.search({ query, mustNot })
+    ctx.body = await codeDuTravailNumerique.search({ query, mustNot });
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
-})
+});
 
 router.get(`${BASE_URL}/suggest`, async ctx => {
   try {
-    let query = ctx.request.query.q
+    let query = ctx.request.query.q;
 
-    let excludeSources = ctx.request.query.excludeSources
-    let mustNot = []
+    let excludeSources = ctx.request.query.excludeSources;
+    let mustNot = [];
     if (excludeSources) {
-      mustNot = excludeSources.split(',').map(source => ({
+      mustNot = excludeSources.split(",").map(source => ({
         query_string: {
-          default_field: 'source',
-          query: source.trim(),
-        },
-      }))
+          default_field: "source",
+          query: source.trim()
+        }
+      }));
     }
 
     ctx.body = await codeDuTravailNumerique.search({
@@ -54,12 +54,12 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
       mustNot,
       fragmentSize: 200,
       size: 5,
-      _source: ['title', 'source', 'slug', 'anchor'],
-    })
+      _source: ["title", "source", "slug", "anchor"]
+    });
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
-})
+});
 
 /**
  * Return document matching the given source+slug.
@@ -75,12 +75,12 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
   try {
     ctx.body = await codeDuTravailNumerique.getSingleItem({
       source: ctx.params.source,
-      slug: ctx.params.slug,
-    })
+      slug: ctx.params.slug
+    });
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
-})
+});
 
 /**
  * Return document matching the given ID.
@@ -94,12 +94,12 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
 router.get(`${BASE_URL}/items/:id`, async ctx => {
   try {
     ctx.body = await codeDuTravailNumerique.getSingleItem({
-      id: ctx.params.id,
-    })
+      id: ctx.params.id
+    });
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
-})
+});
 
 /**
  * Return document matching the given ID.
@@ -112,10 +112,10 @@ router.get(`${BASE_URL}/items/:id`, async ctx => {
  */
 router.get(`${BASE_URL}/docsCount`, async ctx => {
   try {
-    ctx.body = await codeDuTravailNumerique.getDocsCount()
+    ctx.body = await codeDuTravailNumerique.getDocsCount();
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
-})
-module.exports = router
-module.exports.BASE_URL = BASE_URL
+});
+module.exports = router;
+module.exports.BASE_URL = BASE_URL;

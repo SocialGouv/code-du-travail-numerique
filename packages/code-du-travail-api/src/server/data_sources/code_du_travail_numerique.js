@@ -1,7 +1,7 @@
-const elasticsearchClient = require('../conf/elasticsearch.js')
+const elasticsearchClient = require("../conf/elasticsearch.js");
 
-const elasticsearchIndexName = 'code_du_travail_numerique'
-const elasticsearchTypeName = 'code_du_travail_numerique'
+const elasticsearchIndexName = "code_du_travail_numerique";
+const elasticsearchTypeName = "code_du_travail_numerique";
 
 /**
  * Return documents matching the given query from Elasticsearch.
@@ -10,7 +10,7 @@ const elasticsearchTypeName = 'code_du_travail_numerique'
  * @param {int} size The number of results to return.
  * @returns {Object} An elasticsearch response.
  */
-async function search ({
+async function search({
   query,
   size = 10,
   must = [],
@@ -26,9 +26,7 @@ async function search ({
       ...others,
       query: {
         bool: {
-          must_not: [
-            ...mustNot,
-          ],
+          must_not: [...mustNot],
           must: [
             // Fuziness is ignored with multi_match's cross_fields.
             // https://github.com/elastic/elasticsearch/issues/6866
@@ -49,53 +47,53 @@ async function search ({
                 should: [
                   {
                     match: {
-                      'all_text.french_exact': {
+                      "all_text.french_exact": {
                         query: query,
-                        operator: 'and',
+                        operator: "and",
                         cutoff_frequency: 0.0007,
-                        fuzziness: 'AUTO',
-                      },
-                    },
+                        fuzziness: "AUTO"
+                      }
+                    }
                   },
                   {
                     match: {
-                      'all_text.french_stemmed': {
+                      "all_text.french_stemmed": {
                         query: query,
-                        operator: 'and',
+                        operator: "and",
                         cutoff_frequency: 0.0007,
-                        fuzziness: 'AUTO',
-                      },
-                    },
-                  },
-                ],
-              },
+                        fuzziness: "AUTO"
+                      }
+                    }
+                  }
+                ]
+              }
             },
-            ...must,
+            ...must
           ],
           should: [
             {
               multi_match: {
                 query: query,
-                fields: ['title.french_stemmed', 'title.french_exact'],
-                type: 'most_fields',
-                boost: 2000,
-              },
+                fields: ["title.french_stemmed", "title.french_exact"],
+                type: "most_fields",
+                boost: 2000
+              }
             },
             {
               match: {
-                'all_text.shingle': {
+                "all_text.shingle": {
                   query: query,
-                  boost: 1500,
-                },
-              },
+                  boost: 1500
+                }
+              }
             },
             {
               multi_match: {
                 query: query,
-                fields: ['path.french_stemmed', 'path.french_exact'],
-                type: 'most_fields',
-                boost: 500,
-              },
+                fields: ["path.french_stemmed", "path.french_exact"],
+                type: "most_fields",
+                boost: 500
+              }
             },
             // Temporarily put "fonction publique" and "agent public" results in a less prominent position.
             // todo: add a disclaimer
@@ -103,35 +101,35 @@ async function search ({
               query_string: {
                 query:
                   '(title.shingle:"fonction publique") OR (title.shingle:"agent public")',
-                boost: -2000,
-              },
+                boost: -2000
+              }
             },
-            ...should,
-          ],
-        },
+            ...should
+          ]
+        }
       },
       highlight: {
-        order: 'score',
-        pre_tags: ['<mark>'],
-        post_tags: ['</mark>'],
+        order: "score",
+        pre_tags: ["<mark>"],
+        post_tags: ["</mark>"],
         fragment_size: fragmentSize,
         fields: {
-          'title.french_stemmed': {},
-          'title.french_exact': {},
-          'all_text.french_stemmed': {},
-          'all_text.french_exact': {},
-          'all_text.shingle': {},
-          'path.french_stemmed': {},
-          'path.french_exact': {},
-        },
-      },
-    },
-  }
+          "title.french_stemmed": {},
+          "title.french_exact": {},
+          "all_text.french_stemmed": {},
+          "all_text.french_exact": {},
+          "all_text.shingle": {},
+          "path.french_stemmed": {},
+          "path.french_exact": {}
+        }
+      }
+    }
+  };
 
   try {
-    return await elasticsearchClient.search(elasticsearchQuery)
+    return await elasticsearchClient.search(elasticsearchQuery);
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
 }
 
@@ -143,15 +141,15 @@ async function search ({
  * @param {slug} id The item slug to fetch.
  * @returns {Object} An elasticsearch response.
  */
-async function getSingleItem (params) {
+async function getSingleItem(params) {
   try {
-    const { id, source, slug } = params
+    const { id, source, slug } = params;
     if (id) {
       return await elasticsearchClient.get({
         index: elasticsearchIndexName,
         type: elasticsearchTypeName,
-        id,
-      })
+        id
+      });
     }
     if (source && slug) {
       return await elasticsearchClient
@@ -163,17 +161,17 @@ async function getSingleItem (params) {
             query: {
               bool: {
                 must: {
-                  match: { source },
+                  match: { source }
                 },
-                filter: { term: { slug } },
-              },
-            },
-          },
+                filter: { term: { slug } }
+              }
+            }
+          }
         })
-        .then(res => (res.hits.total && res.hits.hits[0]) || null)
+        .then(res => (res.hits.total && res.hits.hits[0]) || null);
     }
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
 }
 
@@ -182,7 +180,7 @@ async function getSingleItem (params) {
  *
  * @returns {Object} An elasticsearch response.
  */
-async function getDocsCount () {
+async function getDocsCount() {
   try {
     return await elasticsearchClient
       .search({
@@ -192,23 +190,23 @@ async function getDocsCount () {
           size: 0,
           aggs: {
             sources: {
-              terms: { field: 'source' },
-            },
-          },
-        },
+              terms: { field: "source" }
+            }
+          }
+        }
       })
       .then(res => {
-        console.log(res.aggregations)
-        return res.aggregations
-      })
+        console.log(res.aggregations);
+        return res.aggregations;
+      });
     // (res.hits.total && res.hits.hits[0]) || null);
   } catch (error) {
-    console.trace(error.message)
+    console.trace(error.message);
   }
 }
 
 module.exports = {
   getSingleItem,
   getDocsCount,
-  search,
-}
+  search
+};
