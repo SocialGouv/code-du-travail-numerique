@@ -1685,6 +1685,16 @@
     escape-string-regexp "^1.0.5"
     lodash.deburr "^4.1.0"
 
+"@socialgouv/code-du-travail-css@^1.0.2":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@socialgouv/code-du-travail-css/-/code-du-travail-css-1.0.4.tgz#990f30343e6bebbe0674b19750a96f9576bc6c63"
+  integrity sha512-h5BI+B1tOoKOWT8rSxvJL1DyEZJxD3Teaoy3wOEC9cfquoc4zQ2ZsqdslGZ0+6OLCvwe0WviqfieXruS2abshg==
+
+"@socialgouv/code-du-travail-ui@^1.1.0":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@socialgouv/code-du-travail-ui/-/code-du-travail-ui-1.2.4.tgz#c6cb9cb0b2f0cf591eeb7cfcd8a303f29388063b"
+  integrity sha512-MFOB6EHJgoJtOlhW0pvM3u4Wj9Jh+JFyNBYoV+SiBdXh4f8QI2Dusbd4gcC1jsEatmYma91+VsSdGB+4CbDZKA==
+
 "@svgr/core@^2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@svgr/core/-/core-2.4.1.tgz#03a407c28c4a1d84305ae95021e8eabfda8fa731"
@@ -11676,7 +11686,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.1.2:
+node-fetch@^2.1.2, node-fetch@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.2.0.tgz#4ee79bde909262f9775f731e3656d0db55ced5b5"
   integrity sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==
@@ -12381,6 +12391,11 @@ output-file-sync@^1.1.2:
     graceful-fs "^4.1.4"
     mkdirp "^0.5.1"
     object-assign "^4.1.0"
+
+p-debounce@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-debounce/-/p-debounce-1.0.0.tgz#cb7f2cbeefd87a09eba861e112b67527e621e2fd"
+  integrity sha1-y38svu/YegnrqGHhErZ1J+Yh4v0=
 
 p-defer@^1.0.0:
   version "1.0.0"
