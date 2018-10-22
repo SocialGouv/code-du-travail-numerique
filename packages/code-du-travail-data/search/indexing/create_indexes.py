@@ -176,14 +176,16 @@ def create_documents(index_name, type_name):
         logger.info("Load %s documents from faq", len(data))
         for val in data:
             faq_text = strip_html(val['reponse'])
+            tags = parse_hash_tags(val.get("tags"))
             body_data.append({
                 'source': 'faq',
                 'slug': slugify(val['question'], to_lower=True),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
+                'tags': tags,
                 'author':  val['source'] if 'source' in val else 'DIRRECTE',
-                'all_text': f"{val['question']} {faq_text} {val['theme']} {val['branche']}",
+                'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
             })
 
 
