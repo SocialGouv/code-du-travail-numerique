@@ -1,0 +1,18 @@
+extends:
+  - "@socialgouv/eslint-config-react"
+
+env:
+  jest: true
+
+settings:
+  react:
+    version: "16.0"
+
+rules:
+  no-console: off
+
+  jsx-a11y/anchor-is-valid: off
+  jsx-a11y/label-has-for: off
+
+  react/display-name: off
+  react/prop-types: off
