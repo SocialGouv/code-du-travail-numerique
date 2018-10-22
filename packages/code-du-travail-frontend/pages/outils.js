@@ -7,7 +7,7 @@ import { Container, Alert} from "@cdt/ui";
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
 import Search from "../src/search/Search";
-import CalculateurIndemnite from "../src/outils/indeminiteLicenciement";
+import CalculateurIndemnite from "../src/outils/indemniteLicenciement";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -30,7 +30,7 @@ const Source = ({ name }) => (
 const getOutilsFromCode = function(code) {
   console.log(code)
   switch (code) {
-    case "indeminite-licenciement":
+    case "indemnite-licenciement":
       return CalculateurIndemnite;
 
     default: {

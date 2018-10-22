@@ -1,8 +1,8 @@
 [{
   "titre": "calculateur d'indemnité de licenciement",
-  "code": "indeminite-licenciement",
+  "code": "indemnite-licenciement",
   "questions": [
-      "Quelle est mon indeminité de licenciement",
+      "Quelle est mon indemnité de licenciement",
       "Comment calculer mon indemnité de licenciement"
   ],
   "theme": "Licenciement",
