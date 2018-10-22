@@ -20,3 +20,6 @@ jobs:
       script: yarn lerna run --stream build
     - stage: test
       script: yarn lerna run --stream test
+
+notifications:
+    slack: incubateur-mas:hmWaMIMmPXfMzUNG2UaSB4wh
