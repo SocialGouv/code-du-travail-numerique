@@ -10,7 +10,7 @@ let piwik;
 if (
   typeof window !== "undefined" &&
   process.env.PIWIK_URL &&
-  process.env.SITE_ID
+  process.env.PIWIK_SITE_ID
 ) {
   piwik = new ReactPiwik({
     url: process.env.PIWIK_URL,
