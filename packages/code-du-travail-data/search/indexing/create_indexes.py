@@ -42,7 +42,7 @@ def get_es_client():
     """
     Configure the client for different environments.
     """
-    hosts = [os.environ.get('ES_HOST')]
+    hosts = [os.environ.get('ELASTICSEARCH_URL')]
     return elasticsearch.Elasticsearch(hosts=hosts)
 
 

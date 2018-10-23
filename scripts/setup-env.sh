@@ -2,6 +2,12 @@
 
 set -exu pipefail
 
+# Running inside a docker instance, dont modify files
+[[ ! -f /.dockerenv ]] || {
+  exit 0
+}
+
+
 [[ -f .env ]] || {
   # No `.env` file
   # Create one from the `.env.sample` file

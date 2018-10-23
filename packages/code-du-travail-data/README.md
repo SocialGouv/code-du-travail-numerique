@@ -8,9 +8,6 @@ Créez un fichier `.env` (utilisé par Docker) :
 
 ```shell
 PYTHONPATH=.
-PORT=9200
-# Use the Docker elasticsearch's hostname: defaults to the container's name if not specified.
-ES_HOST=elasticsearch
 ```
 
 Puis :
