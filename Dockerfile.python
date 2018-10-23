@@ -24,6 +24,3 @@ COPY ./packages/code-du-travail-data/Pipfile .
 RUN pipenv install --deploy
 
 COPY ./packages/code-du-travail-data .
-COPY ./docker/python-entrypoint.sh ./docker
-
-ENTRYPOINT ["/app/docker/python-entrypoint.sh"]
