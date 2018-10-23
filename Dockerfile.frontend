@@ -17,6 +17,7 @@ COPY package.json .
 COPY yarn.lock .
 COPY lerna.json .
 
+RUN yarn lerna clean --yes
 RUN yarn lerna bootstrap --nohoist=@cdt*
 
 # Variables needed at build time for the frontend...
@@ -34,8 +35,8 @@ ENV SENTRY_PUBLIC_DSN=$SENTRY_PUBLIC_DSN
 ENV PIWIK_URL=$PIWIK_URL
 ENV PIWIK_SITE_ID=$PIWIK_SITE_ID
 
-WORKDIR /app/packages/code-du-travail-frontend
-
 RUN yarn build
+
+WORKDIR /app/packages/code-du-travail-frontend
 
 ENTRYPOINT ["yarn", "start"]
