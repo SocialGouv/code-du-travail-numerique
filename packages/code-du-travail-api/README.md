@@ -16,7 +16,7 @@ ELASTICSEARCH_LOG_LEVEL=trace
 APM_SERVER_URL=http://code-du-travail-apm-server:8200
 APM_SERVER_ACTIVE=1
 
-PORT=1337
+API_PORT=1337
 ```
 
 Puis :

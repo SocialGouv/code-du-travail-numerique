@@ -1,0 +1,41 @@
+FROM node:10.8.0-alpine as builder
+
+WORKDIR /app
+
+# minimize included packages
+RUN mkdir packages
+COPY ./packages/code-du-travail-frontend ./packages/code-du-travail-frontend
+COPY ./packages/code-du-travail-css ./packages/code-du-travail-css
+COPY ./packages/code-du-travail-ui ./packages/code-du-travail-ui
+
+RUN mkdir scripts
+COPY ./scripts/setup-env.sh ./scripts/setup-env.sh
+
+RUN yarn add lerna
+
+COPY package.json .
+COPY yarn.lock .
+COPY lerna.json .
+
+RUN yarn lerna bootstrap --nohoist=@cdt*
+
+# Variables needed at build time for the frontend...
+# TODO: we should switch to https://github.com/zeit/next.js/tree/master/examples/with-universal-configuration-runtime ?
+ARG API_URL
+ARG INTERNAL_API_URL
+ARG SENTRY_PUBLIC_DSN
+ARG PIWIK_URL
+ARG PIWIK_SITE_ID
+
+ENV NODE_ENV=production
+ENV API_URL=$API_URL
+ENV INTERNAL_API_URL=$INTERNAL_API_URL
+ENV SENTRY_PUBLIC_DSN=$SENTRY_PUBLIC_DSN
+ENV PIWIK_URL=$PIWIK_URL
+ENV PIWIK_SITE_ID=$PIWIK_SITE_ID
+
+WORKDIR /app/packages/code-du-travail-frontend
+
+RUN yarn build
+
+ENTRYPOINT ["yarn", "start"]

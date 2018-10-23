@@ -1,7 +1,5 @@
 const withCSS = require("@zeit/next-css");
 
-require("dotenv").config();
-
 module.exports = withCSS({
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: false,

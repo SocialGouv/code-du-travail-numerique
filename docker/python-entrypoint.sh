@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-while ! curl "http://elasticsearch:9200/_cat/health?h=status"
+while ! curl "${ELASTICSEARCH_URL}/_cat/health?h=status"
 do
     echo "Elasticsearch instance not available: still trying to connect."
     sleep 1
@@ -14,6 +14,6 @@ cd /app
 
 # Infinite wait: keep the container alive until it is told to stop.
 # Using trap will make the container react immediately to a stop request.
-/bin/sh -c "trap : TERM INT; while sleep 3600; do :; done"
+#/bin/sh -c "trap : TERM INT; while sleep 3600; do :; done"
 
 exec "$@"

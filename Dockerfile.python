@@ -3,6 +3,9 @@ FROM python:3.6-alpine
 ENV APP_DIR="/app"
 ENV PYTHONIOENCODING="UTF-8"
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=.
+
+WORKDIR $APP_DIR
 
 RUN apk update \
     && apk add --no-cache \
@@ -16,12 +19,11 @@ RUN apk update \
 
 RUN pip install pipenv==11.10.1
 
-COPY Pipfile $APP_DIR/
-
-WORKDIR $APP_DIR
+COPY ./packages/code-du-travail-data/Pipfile .
 
 RUN pipenv install --deploy
 
-COPY . $APP_DIR
+COPY ./packages/code-du-travail-data .
+COPY ./docker/python-entrypoint.sh ./docker
 
-ENTRYPOINT ["/app/docker/entrypoint.sh"]
+ENTRYPOINT ["/app/docker/python-entrypoint.sh"]

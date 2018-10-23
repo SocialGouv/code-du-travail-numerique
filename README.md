@@ -11,11 +11,11 @@
 $ yarn
 ```
 
-Note: les fichiers d'environment seront créés au *postinstall* (see [scripts/setup-env.s](scripts/setup-env.sh)) en fonction du `NODE_ENV`
+Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.s](scripts/setup-env.sh)) en fonction du `NODE_ENV`
 
 #### Première instanciation
 
-Pour (re-)initialiser les données du elasticsearch: 
+Pour (re-)initialiser les données du elasticsearch:
 
 ```sh
 # Démarrez un elasticsearch
@@ -51,7 +51,6 @@ $ yarn workspace <package-name> build
 
 # For example for "code-du-travail-frontend"
 $ yarn workspace code-du-travail-frontend build
-
 ```
 
 ### Test
@@ -65,7 +64,18 @@ $ yarn workspace <package-name> test
 
 # For example for "code-du-travail-frontend"
 $ yarn workspace code-du-travail-frontend test
+```
 
+### Prod
+
+Edit `.env`
+
+```sh
+# Use prod containers configs
+$ cp docker-compose.override.prod.yml docker-compose.override.yml
+
+# Run all the containers
+$ docker-compose up --build -d
 ```
 
 ## Architecture
