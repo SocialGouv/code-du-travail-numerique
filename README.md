@@ -68,9 +68,10 @@ $ yarn workspace code-du-travail-frontend test
 
 ### Prod
 
-Edit `.env`
-
 ```sh
+# copy and edit the sample environment file
+$ cp .env.sample .env
+
 # Use prod containers configs
 $ cp docker-compose.override.prod.yml docker-compose.override.yml
 
