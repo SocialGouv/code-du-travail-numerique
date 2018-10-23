@@ -43,14 +43,14 @@ module.exports = routes()
   .add({
     name: "kali",
     page: "kali",
-    pattern: "/convention-collective-kali/:slug"
+    pattern: "/kali/:slug"
   })
 
   // http://localhost:3000/convention-collective-idcc/boulangerie
   .add({
     name: "idcc",
     page: "idcc",
-    pattern: "/convention-collective-idcc/:slug"
+    pattern: "/idcc/:slug"
   })
   // http://localhost:3000/outils/indeminite-licenciement
   .add({
