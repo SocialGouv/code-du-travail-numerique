@@ -1,13 +1,17 @@
 import React from "react";
 import { withRouter } from "next/router";
+import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { ExternalLink } from "react-feather";
-
 import Answer from "../src/search/Answer";
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 const fetchFiche = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/fiches_ministere_travail/${slug}`).then(
-    r => r.json()
+  fetch(`${API_URL}/items/fiches_ministere_travail/${slug}`).then(r =>
+    r.json()
   );
 
 const Source = ({ name, url }) => (

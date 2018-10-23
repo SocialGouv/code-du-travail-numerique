@@ -1,5 +1,6 @@
 import ReactPiwik from "react-piwik";
 import { Router } from "../routes";
+import getConfig from "next/config";
 
 const onRouteChangeComplete = url => {
   ReactPiwik.push(["trackPageView"]);
@@ -7,14 +8,14 @@ const onRouteChangeComplete = url => {
 
 let piwik;
 
-if (
-  typeof window !== "undefined" &&
-  process.env.PIWIK_URL &&
-  process.env.PIWIK_SITE_ID
-) {
+const {
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
+} = getConfig();
+
+if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
   piwik = new ReactPiwik({
-    url: process.env.PIWIK_URL,
-    siteId: process.env.PIWIK_SITE_ID,
+    url: PIWIK_URL,
+    siteId: PIWIK_SITE_ID,
     trackErrors: true
   });
 

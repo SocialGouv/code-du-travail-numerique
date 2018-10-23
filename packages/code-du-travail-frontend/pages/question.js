@@ -1,11 +1,16 @@
 import React from "react";
 import { withRouter } from "next/router";
+import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 
 import Answer from "../src/search/Answer";
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 const fetchQuestion = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/faq/${slug}`).then(r => r.json());
+  fetch(`${API_URL}/items/faq/${slug}`).then(r => r.json());
 
 class Question extends React.Component {
   static async getInitialProps({ res, query }) {

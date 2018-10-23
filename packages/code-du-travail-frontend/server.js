@@ -1,7 +1,6 @@
 // Custom server using Express.
 const express = require("express");
 const next = require("next");
-
 const routes = require("./routes");
 
 const dev = process.env.NODE_ENV !== "production";
@@ -9,8 +8,6 @@ const app = next({ dev });
 const handler = routes.getRequestHandler(app);
 
 const PORT = process.env.FRONTEND_PORT || 3000;
-
-require("dotenv").config();
 
 app.prepare().then(() => {
   express()

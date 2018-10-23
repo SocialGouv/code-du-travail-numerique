@@ -1,8 +1,9 @@
 import React from "react";
 import { withRouter } from "next/router";
+import getConfig from "next/config";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { Container, Alert} from "@cdt/ui";
+import { Container, Alert } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
@@ -28,7 +29,6 @@ const Source = ({ name }) => (
 );
 
 const getOutilsFromCode = function(code) {
-  console.log(code)
   switch (code) {
     case "indemnite-licenciement":
       return CalculateurIndemnite;
@@ -39,9 +39,13 @@ const getOutilsFromCode = function(code) {
   }
 };
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 class Outils extends React.Component {
   static async getInitialProps({ res, query }) {
-    return await fetch(`${process.env.API_URL}/items/outils/${query.slug}`)
+    return await fetch(`${API_URL}/items/outils/${query.slug}`)
       .then(r => r.json())
       .then(data => {
         return { data };

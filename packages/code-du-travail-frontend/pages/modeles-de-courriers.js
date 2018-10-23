@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import { getConfig } from "next/config";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
@@ -30,11 +31,13 @@ const Source = ({ name }) => (
   </div>
 );
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 class ModeleCourrier extends React.Component {
   static async getInitialProps({ res, query }) {
-    return await fetch(
-      `${process.env.API_URL}/items/modeles_de_courriers/${query.slug}`
-    )
+    return await fetch(`${API_URL}/items/modeles_de_courriers/${query.slug}`)
       .then(r => r.json())
       .then(data => {
         return { data };
@@ -68,6 +71,13 @@ class ModeleCourrier extends React.Component {
             </div>
             {data._source.date && <DateContenu value={data._source.date} />}
             <Source />
+            <a
+              className="btn"
+              title="Télécharger le courrier type"
+              href={`${API_URL}/docs/${data._source.filename}`}
+            >
+              Télécharger le document
+            </a>
           </Article>
         )}
         <SeeAlso />

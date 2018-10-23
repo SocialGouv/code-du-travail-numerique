@@ -17,20 +17,6 @@ COPY lerna.json .
 
 RUN yarn
 
-# Variables needed at build time for the frontend...
-# TODO: we should switch to https://github.com/zeit/next.js/tree/master/examples/with-universal-configuration-runtime ?
-ARG API_URL
-ARG INTERNAL_API_URL
-ARG SENTRY_PUBLIC_DSN
-ARG PIWIK_URL
-ARG PIWIK_SITE_ID
-
-ENV NODE_ENV=production
-ENV API_URL=$API_URL
-ENV SENTRY_PUBLIC_DSN=$SENTRY_PUBLIC_DSN
-ENV PIWIK_URL=$PIWIK_URL
-ENV PIWIK_SITE_ID=$PIWIK_SITE_ID
-
 RUN yarn build
 
 ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]

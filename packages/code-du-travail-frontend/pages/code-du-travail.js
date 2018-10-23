@@ -5,13 +5,16 @@ import { ExternalLink } from "react-feather";
 import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
+import getConfig from "next/config";
 
 import Answer from "../src/search/Answer";
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 const fetchFiche = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/code_du_travail/${slug}`).then(r =>
-    r.json()
-  );
+  fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
 
 const Source = ({ name, url }) => (
   <a href={url} target="_blank">
