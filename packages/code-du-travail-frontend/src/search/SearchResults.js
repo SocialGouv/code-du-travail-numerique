@@ -48,7 +48,7 @@ const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
       <li className="search-results__item">
         <Link
           href={{
-            pathname: `${route}/${_source.slug}`,
+            pathname: `/${route}/${_source.slug}`,
             hash: anchor,
             query: { q: router.query.q, search: 0 }
           }}
