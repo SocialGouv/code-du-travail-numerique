@@ -1,0 +1,13 @@
+{
+  "name": "@cdt/data...annuaire",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "libxmljs": "^0.19.5",
+    "recursive-readdir": "^2.2.2"
+  },
+  "scripts": {
+    "start": "node index.js > annuaire.data.json"
+  }
+}

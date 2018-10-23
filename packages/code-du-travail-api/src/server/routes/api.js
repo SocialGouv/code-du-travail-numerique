@@ -1,6 +1,7 @@
 const Router = require("koa-router");
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
+const cdtnAnnuaire = require("../data_sources/cdtn_annuaire.js");
 
 const router = new Router();
 const BASE_URL = `/api/v1`;
@@ -166,6 +167,22 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
     fragmentSize: 200,
     size: 1000,
     _source: ["title", "url", "ape", "idcc"]
+  });
+});
+
+/**
+ * Return annaire items matching the given departement.
+ *
+ * @example
+ * http://localhost:1337/api/v1/items/:id
+ *
+ * @param {string} :id The item ID to fetch.
+ * @returns {Object} Result.
+ */
+router.get(`${BASE_URL}/inspection-travail/:code`, async ctx => {
+  ctx.body = await cdtnAnnuaire.getItemsByTypeForDepartement({
+    code: ctx.params.code.slice(0, 2),
+    type: "inspection-travail"
   });
 });
 
