@@ -106,8 +106,8 @@ class Suggester extends React.Component {
   render() {
     const { getResults, query, onChange } = this.props;
     const inputProps = {
-      placeholder: "Posez votre question",
-      "aria-label": "Posez votre question",
+      placeholder: "exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? ",
+      "aria-label": "exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?",
       type: "search",
       className: "search__input",
       value: query,
