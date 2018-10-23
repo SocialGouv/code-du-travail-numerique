@@ -1,4 +1,4 @@
-FROM node:10.8.0-alpine as builder
+FROM node:10.12.0-alpine as builder
 
 WORKDIR /app
 
@@ -10,8 +10,6 @@ COPY ./packages/code-du-travail-ui ./packages/code-du-travail-ui
 
 RUN mkdir scripts
 COPY ./scripts/setup-env.sh ./scripts/setup-env.sh
-
-RUN yarn add lerna
 
 COPY package.json .
 COPY yarn.lock .
@@ -36,6 +34,4 @@ ENV PIWIK_SITE_ID=$PIWIK_SITE_ID
 
 RUN yarn build
 
-WORKDIR /app/packages/code-du-travail-frontend
-
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]
