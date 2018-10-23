@@ -17,8 +17,7 @@ COPY package.json .
 COPY yarn.lock .
 COPY lerna.json .
 
-RUN yarn lerna clean --yes
-RUN yarn lerna bootstrap --nohoist=@cdt*
+RUN yarn
 
 # Variables needed at build time for the frontend...
 # TODO: we should switch to https://github.com/zeit/next.js/tree/master/examples/with-universal-configuration-runtime ?
