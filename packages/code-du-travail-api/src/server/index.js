@@ -19,7 +19,7 @@ const apiRoutes = require('./routes/api')
 const API_BASE_URL = require('./routes/api').BASE_URL
 
 const app = new Koa()
-const PORT = process.env.PORT || 1337
+const PORT = process.env.API_PORT || 1337
 
 app.use(cors())
 app.use(bodyParser())
