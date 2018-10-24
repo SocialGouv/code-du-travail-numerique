@@ -2,15 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Section } from "@cdt/ui";
 
-import { PrevNextStepper } from "./PrevNextStepper";
 import { inputStyle } from "./index";
 
 class Primes extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    onComplete: PropTypes.func.isRequired,
-    onPrevious: PropTypes.func.isRequired,
-    nextDisabled: PropTypes.bool,
     value: PropTypes.number
   };
   static defaultProps = {
@@ -19,13 +15,7 @@ class Primes extends React.Component {
   };
 
   render() {
-    const {
-      onChange,
-      onComplete,
-      onPrevious,
-      nextDisabled,
-      value
-    } = this.props;
+    const { onChange, value } = this.props;
 
     return (
       <Section light>
@@ -42,11 +32,6 @@ class Primes extends React.Component {
           style={{ width: 150, ...inputStyle }}
         />{" "}
         €
-        <PrevNextStepper
-          onPrev={onPrevious}
-          onNext={onComplete}
-          nextDisabled={nextDisabled}
-        />
       </Section>
     );
   }

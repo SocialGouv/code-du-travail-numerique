@@ -3,14 +3,11 @@ import PropTypes from "prop-types";
 import { Section } from "@cdt/ui";
 
 import { inputStyle } from "./index";
-import { PrevNextStepper } from "./PrevNextStepper";
 
 class Anciennete extends React.Component {
   static propTypes = {
     value: PropTypes.number,
-    onChange: PropTypes.func.isRequired,
-    onComplete: PropTypes.func.isRequired,
-    nextDisabled: PropTypes.bool
+    onChange: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -19,7 +16,7 @@ class Anciennete extends React.Component {
   };
 
   render() {
-    const { value, onChange, onComplete, nextDisabled } = this.props;
+    const { value, onChange } = this.props;
     return (
       <Section light>
         <React.Fragment>
@@ -37,7 +34,6 @@ class Anciennete extends React.Component {
               style={{ width: 100, ...inputStyle }}
             />{" "}
             mois
-            <PrevNextStepper onNext={onComplete} nextDisabled={nextDisabled} />
           </div>
         </React.Fragment>
       </Section>

@@ -10,7 +10,7 @@ import { Salaire } from "./Salaire";
 import { Primes } from "./Prime";
 import { DateFinContrat } from "./DateFinContrat";
 import { ResultDetail } from "./ResultDetail";
-
+import { PrevNextStepper } from "./PrevNextStepper";
 export const inputStyle = {
   padding: 0,
   fontSize: "1.5rem",
@@ -44,62 +44,74 @@ class CalculateurIndemnite extends React.Component {
           <div style={{ width: 700, margin: "0 auto" }}>
             <Stepper
               render={({ step, onComplete, onPrevious, restart }) => {
+                const stepperUi = (
+                  <PrevNextStepper
+                    onPrevious={onPrevious}
+                    onNext={onComplete}
+                    nextDisabled={indemniteData.errors.length > 0}
+                  />
+                );
+
                 switch (step) {
                   case 0:
                     return (
-                      <Anciennete
-                        key="anciennete"
-                        onChange={anciennete => this.setState({ anciennete })}
-                        onComplete={onComplete}
-                        value={this.state.anciennete}
-                        nextDisabled={indemniteData.errors.length > 0}
-                      />
+                      <React.Fragment>
+                        {stepperUi}
+                        <Anciennete
+                          key="anciennete"
+                          onChange={anciennete => this.setState({ anciennete })}
+                          value={this.state.anciennete}
+                        />
+                      </React.Fragment>
                     );
                   case 1:
                     return (
-                      <FauteGrave
-                        key="faute-grave"
-                        onChange={checked =>
-                          this.setState({ fauteGrave: checked })
-                        }
-                        onComplete={onComplete}
-                        onPrevious={onPrevious}
-                        checked={this.state.fauteGrave}
-                        nextDisabled={indemniteData.errors.length > 0}
-                      />
+                      <React.Fragment>
+                        {stepperUi}
+                        <FauteGrave
+                          key="faute-grave"
+                          onChange={checked =>
+                            this.setState({ fauteGrave: checked })
+                          }
+                          checked={this.state.fauteGrave}
+                        />
+                      </React.Fragment>
                     );
                   case 2:
                     return (
-                      <Salaire
-                        key="step"
-                        onComplete={onComplete}
-                        onPrevious={onPrevious}
-                        onChange={salaires => this.setState({ salaires })}
-                        value={this.state.salaires}
-                        nextDisabled={indemniteData.errors.length > 0}
-                      />
+                      <React.Fragment>
+                        {stepperUi}
+                        <Salaire
+                          key="step"
+                          onChange={salaires => this.setState({ salaires })}
+                          value={this.state.salaires}
+                        />
+                      </React.Fragment>
                     );
                   case 3:
                     return (
-                      <Primes
-                        onComplete={onComplete}
-                        onPrevious={onPrevious}
-                        onChange={primes => this.setState({ primes })}
-                        value={this.state.primes}
-                        nextDisabled={indemniteData.errors.length > 0}
-                      />
+                      <React.Fragment>
+                        {stepperUi}
+                        <Primes
+                          onChange={primes => this.setState({ primes })}
+                          value={this.state.primes}
+                        />
+                      </React.Fragment>
                     );
                   case 4:
                     return (
-                      <DateFinContrat
-                        onComplete={onComplete}
-                        onPrevious={onPrevious}
-                        onChange={dateFinContrat =>
-                          this.setState({ dateFinContrat })
-                        }
-                        value={this.state.dateFinContrat}
-                        nextDisabled={indemniteData.errors.length > 0}
-                      />
+                      <React.Fragment>
+                        {stepperUi}
+                        <DateFinContrat
+                          onComplete={onComplete}
+                          onPrevious={onPrevious}
+                          onChange={dateFinContrat =>
+                            this.setState({ dateFinContrat })
+                          }
+                          value={this.state.dateFinContrat}
+                          nextDisabled={indemniteData.errors.length > 0}
+                        />
+                      </React.Fragment>
                     );
                   case 5:
                     return (
