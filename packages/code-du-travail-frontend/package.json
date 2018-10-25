@@ -36,7 +36,8 @@
     "speakingurl": "14.0.1",
     "styled-components": "3.2.6",
     "unist-util-find": "^1.0.1",
-    "unist-util-parents": "^1.0.1"
+    "unist-util-parents": "^1.0.1",
+    "url-search-params": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge",
