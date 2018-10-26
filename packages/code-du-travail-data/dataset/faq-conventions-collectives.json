@@ -329,7 +329,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "Oui, si votre employeur est situé dans les départements d'Alsace-Moselle (haut-Rhin, bas-rhin, moselle), votre employeur doit vous laisser un temps raisonnable pour rechercher un emploi en cours de préavis.",
     "tags": {
       "particularismes": "Alsace Moselle",
@@ -339,7 +339,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "Les heures de recherche d'emploi ne sont pas prévues par le code du travail. Un accord collectif de branche ou d'entreprise voire une clause du contrat de travail peut prévoir un tel aménagement.<p>Si votre entreprise ne relève pas d'une branche, un accord collectif au niveau de l'entrperise ou une clause du contrat de trvail peut toutefois prévoir ces heures de recherche d'emploi. </p>",
     "tags": {
       "themes": [2000, 410, 420]
@@ -348,7 +348,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "Dans votre branche d'activité, la convention collective prévoit : <p> en cas de licenciement, vous avez droit à 2 heures par jour pour rechercher un emploi au cours de la dernière semaine de préavis</p>",
     "tags": {
       "branche": "boulangerie",
@@ -360,7 +360,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "La convention collective prévoit bien des heures pour recherche d'emploi, comme suit:<p><table><tr><th></th><th>Durée du préavis</th><th>nombre d'heures pour recherche d'emploi</th></tr><tr><td>en cours de période d'essai</td><td>6 jours</td><td>12 heures</td></tr><tr><td>en cours de période d'essai</td><td>15 jours</td><td>3O heures</td></tr><tr><td>hors période d'essai</td><td>durée hebdomadaire du travail x nombre de mois de préavis</td></tr></table></p>",
     "tags": {
       "branche": "industries chimiques",
@@ -371,7 +371,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "Dans votre branche, la convention collective prévoit que le salarié, à temps complet, a droit à des heures pour rechercher un emploi en cours de préavis, en cas de licenciement sauf faute grave.<p> le salarié a droit à 2 heures de recherche d'emploi par jour. la totalité de ces heures de recherche d'emploi ne doit pas dépasser la durée hebdomadaire de travail du salarié.",
     "tags": {
       "branche": "hôtels, cafés restaurants",
@@ -383,7 +383,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "Dans votre branche, il n'est pas prévu d'heures pour rechercher un emploi pour les salariés à temps partiel",
     "tags": {
       "branche": "hôtels, cafés restaurants",
@@ -395,7 +395,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "en cours de préavis, ai-je le droit à du temps rechercher un emploi?",
+    "question": "en cours de préavis, ai-je le droit à du temps pour rechercher un emploi?",
     "reponse": "Dans votre branche, la convention collective prévoit que le salarié a droit à des heures pour rechercher un emploi, en cas de licenciement, comme suit:<ul> 6 jours ouvrés par mois.</ul><ul> le crédit est pris par demi journées</ul>",
     "tags": {
       "branche": "bureau d'étude technique",
@@ -467,7 +467,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "mon patron m'a indiqué qu'il n'a pas de travail pour moi aujourd'hui. En at-il le droit, et serais je payé?",
+    "question": "mon patron m'a indiqué qu'il n'a pas de travail pour moi aujourd'hui. En a t-il le droit, et serais je payé?",
     "reponse": "Dans votre branche, la convention collective prévoit pour l'employeur une indemnité dite de chou blanc, qui permet à l'employeur de donner congé à son salarié qui se présente à sa prise de poste dans l'entreprise et qui est décommandé.<p> En contrepartie le salarié perçoit une indemnité de 8 heures de salaire horaire minimum.</p> 155 80,64 - 155 80,64 - 160 81,42 - 170 82,99 - 170 82,99 - 170 82,99 - 175 83,78 - 175 83,78 - 175 83,78 - 185 86,24 - 185 86,24 - 185 86,24 - 185 86,24 - 190 87,01 - 190 87,01 - 190 87,01 - 195 87,78 - 195 87,78 - 195 87,78 - 195 87,78 - 240 94,72",
     "tags": {
       "branche": "boulangerie",
@@ -480,8 +480,8 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "mon employeur m'a indiqué qu'il n'a pas de travail pour moi aujourd'hui. En a t-il le droit, et serais je payé?",
-    "reponse": "Votre employeur doit contractuellement vous fournir du travail. S'il ne peut en fournir, il devra donc vous rémunérer en conséquence. Dans ce cas, pour éviter que l'absence ne vous incombe(absence non rémunérée, abandon de poste fautive), un écrit peut être convenu avec l'employeur pour garder une trace, ou à défaut, signifiez par lettre avec accusé de réception la situation à votre employeur.",
+    "question": "Mon employeur m'a indiqué qu'il n'a pas de travail pour moi aujourd'hui. En a t-il le droit, et serais je payé?",
+    "reponse": "Votre employeur s'engage dans le contrat de travail à vous fournir du travail. S'il ne peut le faire, il devra donc vous rémunérer en conséquence. Dans ce cas, pour éviter que l'absence ne vous incombe(absence non rémunérée, abandon de poste fautive), un écrit peut être convenu avec l'employeur pour garder une trace, ou à défaut,vous pouvez signifier par lettre avec accusé de réception la situation à votre employeur.",
     "tags": {
       "type_contrat": "CDI",
       "travailleur_particulier": "temps plein"
@@ -491,8 +491,8 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
-    "reponse": "Le CDI de chantier ou d'opération peut être conclu, soit si la branche en prévoit les possibilités et modalités, soit pour les branches d'activité dont il est usage d'y avoir recours au 1er janvier 2017",
+    "question": "Dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Le CDI de chantier ou d'opération peut être conclu, lorsque la branche en prévoit la possibilité et les modalités, ou encore pour les branches d'activité dont il est usage d'y avoir recours au 1er janvier 2017",
     "tags": {
       "type_contrat": "CDI",
       "travailleur_particulier": "temps plein"
@@ -502,8 +502,8 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantierou d'opération?",
-    "reponse": "Oui, parceque dans le secteur du BTP, il est d'usage d'avoir recours aux contrat de chantiers ",
+    "question": "Dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
+    "reponse": "Oui, parceque dans le secteur du BTP, il est d'usage d'avoir recours aux contrat de chantier ",
     "tags": {
       "branche": "BTP",
       "type_contrat": "CDI",
@@ -514,7 +514,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "question": "dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
     "reponse": "Non, il n'est pas possible à ce jour de contracter des CDI de chantier ou d'opération dans votre branche d'activité",
     "tags": {
       "branche": "boulangerie",
@@ -527,7 +527,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "question": "dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
     "reponse": "Non, il n'est pas possible à ce jour de contracter des CDI de chantier ou d'opération dans votre branche d'activité",
     "tags": {
       "branche": "hôtels, cafés restaurants",
@@ -539,7 +539,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "question": "dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
     "reponse": "Oui, en principe il est possibe de contracter un contrat de chantier ou d'opération dans votre branche: il en était d'usage au 1er janvier 2017",
     "tags": {
       "branche": "industries chimiques",
@@ -551,7 +551,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "question": "dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
     "reponse": "Oui, un accord national existe en la matière dans votre branche: https://uimm.fr/wp-content/uploads/2018/07/2018-06-29_AN_contrat-chantier-ou-operation-dans-la-metallurgie.pdf ",
     "tags": {
       "branche": "métallurgie",
@@ -563,7 +563,7 @@
     "redacteur": "cdtn"
   },
   {
-    "question": "dans mon entreprise, peut on être embauché en contrat de chantier ou d'opération?",
+    "question": "dans mon entreprise, peut-on être embauché en contrat de chantier ou d'opération?",
     "reponse": "Oui,si l'employeur est  affilié à l'organsiation patronale SYNTEC: un texte le prévoit dans la CCN.Par aileurs, il apparait d'usage de recourir à ce type_contrat dans cette branche.",
     "tags": {
       "branche": "bureau d'étude technique",
