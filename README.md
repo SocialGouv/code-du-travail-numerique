@@ -107,6 +107,9 @@ $ yarn workspace code-du-travail-frontend test
 - Slack : https://incubateur-mas.slack.com
 - Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
 - Issues GitHub : packages/code-du-travail-frontend/issues
+- Piwik : https://stats.num.social.gouv.fr
+- Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
+
 
 ## Setup
 
