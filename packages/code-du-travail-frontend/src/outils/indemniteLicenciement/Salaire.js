@@ -1,20 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Section } from "@cdt/ui";
+import { Container, Section } from "@cdt/ui";
 
 import { inputStyle } from "./index";
+import { PrevNextStepper } from "./PrevNextStepper";
 
 const times = num => Array.from({ length: num }, (_, i) => i);
 
 class Salaire extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
-    value: PropTypes.arrayOf(PropTypes.number).isRequired
+    value: PropTypes.arrayOf(PropTypes.number).isRequired,
+    onPrevious: PropTypes.func.isRequired,
+    onNext: PropTypes.func.isRequired,
+    nextDisabled: PropTypes.bool
   };
 
   static defaultProps = {
-    nextDisabled: false,
-    value: Array.from({ length: 12 }, () => 0)
+    value: Array.from({ length: 12 }, () => 0),
+    nextDisabled: false
   };
 
   constructor(props, ...args) {
@@ -77,58 +81,68 @@ class Salaire extends React.Component {
     });
   };
   render() {
+    const { onPrevious, onNext, nextDisabled } = this.props;
     return (
-      <Section light>
-        <React.Fragment>
-          <h2>Derniers mois de salaire</h2>
-          <table width="100%" style={{ fontSize: "1.2em" }}>
-            <thead>
-              <tr>
-                <td
-                  width={140}
-                  style={{ textAlign: "center", fontWeight: "bold" }}
-                >
-                  Mois
-                </td>
-                <td
-                  width={200}
-                  style={{ textAlign: "center", fontWeight: "bold" }}
-                >
-                  Salaire brut mensuel
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              {times(12).map(i => (
-                <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
-                  <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
-                  <td style={{ textAlign: "center" }}>
-                    <input
-                      onBlur={this.onSalaireBlur(i)}
-                      onClick={this.onSalaireClick(i)}
-                      value={this.state.salaires[i]}
-                      onChange={this.updateSalaire(i)}
-                      style={{ ...inputStyle, width: 100 }}
-                      type="number"
-                    />
+      <React.Fragment>
+        <Section light>
+          <React.Fragment>
+            <h2>Derniers mois de salaire</h2>
+            <table width="100%" style={{ fontSize: "1.2em" }}>
+              <thead>
+                <tr>
+                  <td
+                    width={140}
+                    style={{ textAlign: "center", fontWeight: "bold" }}
+                  >
+                    Mois
                   </td>
-                  {i === 0 && (
-                    <td
-                      valign="middle"
-                      style={{ textAlign: "center", background: "#ddd" }}
-                      rowSpan={3}
-                    >
-                      trois derniers
-                      <br />
-                      mois de salaire
-                    </td>
-                  )}
+                  <td
+                    width={200}
+                    style={{ textAlign: "center", fontWeight: "bold" }}
+                  >
+                    Salaire brut mensuel
+                  </td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </React.Fragment>
-      </Section>
+              </thead>
+              <tbody>
+                {times(12).map(i => (
+                  <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
+                    <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
+                    <td style={{ textAlign: "center" }}>
+                      <input
+                        onBlur={this.onSalaireBlur(i)}
+                        onClick={this.onSalaireClick(i)}
+                        value={this.state.salaires[i]}
+                        onChange={this.updateSalaire(i)}
+                        style={{ ...inputStyle, width: 100 }}
+                        type="number"
+                      />
+                    </td>
+                    {i === 0 && (
+                      <td
+                        valign="middle"
+                        style={{ textAlign: "center", background: "#ddd" }}
+                        rowSpan={3}
+                      >
+                        trois derniers
+                        <br />
+                        mois de salaire
+                      </td>
+                    )}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </React.Fragment>
+        </Section>
+        <Container>
+          <PrevNextStepper
+            onPrev={onPrevious}
+            onNext={onNext}
+            nextDisabled={nextDisabled}
+          />
+        </Container>
+      </React.Fragment>
     );
   }
 }

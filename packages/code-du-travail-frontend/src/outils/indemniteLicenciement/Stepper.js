@@ -3,27 +3,56 @@ import PropTypes from "prop-types";
 
 class Stepper extends React.Component {
   static propTypes = {
-    render: PropTypes.func.isRequired
+    steps: PropTypes.arrayOf(
+      PropTypes.shape({
+        component: PropTypes.function,
+        key: PropTypes.string
+      })
+    ).isRequired,
+    render: PropTypes.func.isRequired,
+    renderRestart: PropTypes.func,
+    initialStep: PropTypes.number
+  };
+  static defaultProps = {
+    initialStep: 0,
+    renderRestart: null
   };
 
   state = {
-    step: 0
+    step: this.props.initialStep
+  };
+
+  goPrevious = () => {
+    this.setState(state => ({
+      step: Math.max(0, state.step - 1)
+    }));
+  };
+
+  goNext = () => {
+    this.setState(state => ({
+      step: Math.min(this.props.steps.length, state.step + 1)
+    }));
+  };
+
+  restart = () => {
+    this.setState({ step: 0 });
   };
 
   render() {
-    return this.props.render({
-      step: this.state.step,
-      restart: () => this.setState({ step: 0 }),
-      onPrevious: () =>
-        this.setState(curState => ({
-          step: Math.max(0, curState.step - 1)
-        })),
-      onComplete: () =>
-        this.setState(curState => ({
-          step: curState.step + 1,
-          animate: true
-        }))
-    });
+    const { step } = this.state;
+    if (step < this.props.steps.length) {
+      const { key, component } = this.props.steps[step];
+      return this.props.render({
+        key,
+        Component: component,
+        onPrevious: this.goPrevious,
+        onNext: this.goNext
+      });
+    } else if (this.props.renderRestart) {
+      return this.props.renderRestart({ restart: this.restart });
+    } else {
+      return null;
+    }
   }
 }
 

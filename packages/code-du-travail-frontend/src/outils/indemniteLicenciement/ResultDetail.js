@@ -41,7 +41,7 @@ const getJaxFormula = ({
       // indemnite = 1 / 5 * c * 10 + 2 / 5 * c * d
       return `(1/5  * ${round(meilleurMoyenne)} * 10) + (2/5 * ${round(
         meilleurMoyenne
-      )} * (${anciennete} - 10))`;
+      )} * (${Math.floor(anciennete / 12)} - 10))`;
     }
   } else {
     if (isSmallAnciennete) {
@@ -52,7 +52,7 @@ const getJaxFormula = ({
       //indemnite = 1 / 4 * c * 10 + 1 / 3 * c * d
       return `(1/4 * ${round(meilleurMoyenne)} * 10) + (1/3 * ${round(
         meilleurMoyenne
-      )} * (${anciennete} - 10))`;
+      )} * (${Math.floor(anciennete / 12)} - 10))`;
     }
   }
 };
@@ -88,14 +88,14 @@ class ResultDetail extends React.Component {
 
     const infoFinContrat = isR12342 ? (
       <React.Fragment>
-        Base minimum : fin de contrat &supp;= au
-        <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050">
+        Base minimum : fin de contrat &lt;= au
+        <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F6CD29C2DCBBBB2A5009383ADBDDAA29.tplgfr43s_2?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050&categorieLien=id&dateTexte=20170926">
           25/09/2017
         </a>
       </React.Fragment>
     ) : (
       <React.Fragment>
-        Base minimum : fin de contrat > au{" "}
+        Base minimum : fin de contrat &gt; au{" "}
         <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050">
           25/09/2017
         </a>

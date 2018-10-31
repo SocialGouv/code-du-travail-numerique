@@ -1,4 +1,3 @@
-import { isBefore } from "date-fns";
 /*
 
 calcul de l'indemnite de licenciement ou rupture conventionnelle
@@ -9,17 +8,19 @@ https://github.com/SocialGouv/code-du-travail-explorer/issues/39
 
 const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
 
-// todo: ensure effectivity is not at day-1
+// todo: ensure effectivity is not at day-1 for isR12342
 // https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050
-const isBeforeR12342 = date => isBefore(date, new Date(2017, 8, 26));
 
-const getIndemnite = ({
-  salaires,
-  primes,
-  anciennete,
-  dateFinContrat,
-  fauteGrave
-}) => {
+const getIndemnite = data => {
+  const {
+    salaires,
+    primes,
+    anciennete,
+    isR12342,
+    fauteGrave,
+    calculConvention
+  } = data;
+
   // a) moyenne des douze derniers mois
   // (a)=moyenne((mois1+prime)+(mois2+prime)... (mois 12+prime))
   const moyenneSalaires =
@@ -30,10 +31,10 @@ const getIndemnite = ({
     (sum(salaires.filter((_, i) => i < 3)) + (primes / 12) * 3) / 3;
   // si b>a, (c)=(b) sinon (c)=a
   const meilleurMoyenne = Math.max(moyenneSalaires, moyenne3DerniersMois);
-  // "calcul2017" : date du licenciement > 26 / 09 / 2017
+
   let indemnite = 0;
-  const isR12342 = Boolean(dateFinContrat) && isBeforeR12342(dateFinContrat);
-  const isSmallAnciennete = anciennete < 120; // 10 years
+  const a = Math.floor(anciennete / 12);
+  const isSmallAnciennete = a <= 10; // 10 years
   if (isR12342) {
     // "calculavant2017" : date du licenciement < 26 / 09 / 2017
     // Si "ancienneté inférieure ou égale à 10 ans
@@ -44,8 +45,7 @@ const getIndemnite = ({
       // Si ancienneté supérieur à 10 ans:
       // indemnite = 1 / 5 * c * 10 + 2 / 5 * c * d
       indemnite =
-        (1 / 5) * meilleurMoyenne * 10 +
-        (2 / 5) * meilleurMoyenne * (anciennete - 10);
+        (1 / 5) * meilleurMoyenne * 10 + (2 / 5) * meilleurMoyenne * (a - 10);
     }
   } else {
     // Si "ancienneté inférieure ou égale à 10 ans
@@ -56,8 +56,7 @@ const getIndemnite = ({
       // Si ancienneté supérieurd à 10 ans:
       //indemnite = 1 / 4 * c * 10 + 1 / 3 * c * d
       indemnite =
-        (1 / 4) * meilleurMoyenne * 10 +
-        (1 / 3) * meilleurMoyenne * (anciennete - 10);
+        (1 / 4) * meilleurMoyenne * 10 + (1 / 3) * meilleurMoyenne * (a - 10);
     }
   }
 
@@ -82,6 +81,11 @@ const getIndemnite = ({
     });
   }
 
+  let calculCC;
+
+  if (calculConvention) {
+    calculCC = calculConvention({ ...data, indemnite });
+  }
   return {
     isSmallAnciennete,
     anciennete,
@@ -90,7 +94,8 @@ const getIndemnite = ({
     moyenne3DerniersMois,
     meilleurMoyenne,
     indemnite,
-    errors
+    errors,
+    calculCC
   };
 };
 

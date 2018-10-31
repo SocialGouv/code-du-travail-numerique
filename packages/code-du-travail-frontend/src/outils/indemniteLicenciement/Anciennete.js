@@ -1,13 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Section } from "@cdt/ui";
+import { Container, Section } from "@cdt/ui";
 
 import { inputStyle } from "./index";
+import { PrevNextStepper } from "./PrevNextStepper";
 
 class Anciennete extends React.Component {
   static propTypes = {
     value: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func.isRequired,
+    onNext: PropTypes.func.isRequired,
+    nextDisabled: PropTypes.bool
   };
 
   static defaultProps = {
@@ -16,27 +20,32 @@ class Anciennete extends React.Component {
   };
 
   render() {
-    const { value, onChange } = this.props;
+    const { value, onChange, onNext, nextDisabled } = this.props;
     return (
-      <Section light>
-        <React.Fragment>
-          <h2>Quelle est votre ancienneté en mois ?</h2>
-          <div style={{ fontSize: "2em" }}>
-            <input
-              type="number"
-              onFocus={e => {
-                if (e.target.value === "0") {
-                  e.target.value = "";
-                }
-              }}
-              onChange={e => onChange(parseFloat(e.target.value) || 0)}
-              value={value}
-              style={{ width: 100, ...inputStyle }}
-            />{" "}
-            mois
-          </div>
-        </React.Fragment>
-      </Section>
+      <React.Fragment>
+        <Section light>
+          <React.Fragment>
+            <h2>Quelle est votre ancienneté en mois ?</h2>
+            <div style={{ fontSize: "2em" }}>
+              <input
+                type="number"
+                onFocus={e => {
+                  if (e.target.value === "0") {
+                    e.target.value = "";
+                  }
+                }}
+                onChange={e => onChange(parseFloat(e.target.value) || 0)}
+                value={value}
+                style={{ width: 100, ...inputStyle }}
+              />{" "}
+              mois
+            </div>
+          </React.Fragment>
+        </Section>
+        <Container>
+          <PrevNextStepper onNext={onNext} nextDisabled={nextDisabled} />
+        </Container>
+      </React.Fragment>
     );
   }
 }
