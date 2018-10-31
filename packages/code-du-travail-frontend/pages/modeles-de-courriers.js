@@ -3,17 +3,13 @@ import { withRouter } from "next/router";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import {
-  Button,
-  Container,
-  Alert,
-  Article
-} from "@cdt/ui";
+import { Button, Container, Alert, Article } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
 import Html from "../src/common/Html";
 import Search from "../src/search/Search";
+import { DateContenu } from "../src/common/DateContenu";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -50,6 +46,7 @@ class ModeleCourrier extends React.Component {
   }
   render() {
     const { data } = this.props;
+
     return (
       <React.Fragment>
         <Head>
@@ -60,14 +57,17 @@ class ModeleCourrier extends React.Component {
         {data && (
           <Article title={data._source.title}>
             <Html>{data._source.html}</Html>
+            <div className="center btn-download">
+              <a
+                className="btn"
+                title="Télécharger le courrier type"
+                href={`${process.env.API_URL}/docs/${data._source.filename}`}
+              >
+                Télécharger le document
+              </a>
+            </div>
+            {data._source.date && <DateContenu value={data._source.date} />}
             <Source />
-            <a
-              className="btn"
-              title="Télécharger le courrier type"
-              href={`${process.env.API_URL}/docs/${data._source.filename}`}
-            >
-              Télécharger le document
-            </a>
           </Article>
         )}
         <SeeAlso />
