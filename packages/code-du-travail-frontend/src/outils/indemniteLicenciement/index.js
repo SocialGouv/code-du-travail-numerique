@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Alert, Button, Container } from "@cdt/ui";
-
+import dynamic from "next/dynamic";
 import getIndemnite from "./indemnite";
 import { Stepper } from "./Stepper";
 import { initialData, steps } from "./cas_general";
@@ -26,6 +26,16 @@ class CalculateurIndemnite extends React.Component {
 
   componentOnChange = ({ key, value }) => {
     if (key === "convention" && value.hasCC) {
+      const { ccId } = value;
+      import(`./ccn/${ccId}`).then(module => {
+        this.setState({
+          [key]: value,
+          steps: steps.concat(module.steps),
+          calculConvention: module.getIndeminiteCC,
+          ...module.initialData
+        });
+      });
+      this.ResultCC = dynamic(import(`./ccn/Result_${ccId}`));
     } else {
       this.setState({ [key]: value });
     }
@@ -33,6 +43,22 @@ class CalculateurIndemnite extends React.Component {
 
   render() {
     const indemniteData = getIndemnite(this.state);
+
+    const hasIndemniteCC =
+      indemniteData.calculCC && indemniteData.calculCC.indemnite;
+
+    const noError = indemniteData.errors.length === 0;
+
+    let ResultComponent;
+    if (
+      hasIndemniteCC &&
+      indemniteData.calculCC.indemnite > indemniteData.indemnite
+    ) {
+      ResultComponent = <this.ResultCC {...indemniteData.calculCC} />;
+    } else {
+      ResultComponent = <ResultDetail {...indemniteData} />;
+    }
+
     return (
       <Container
         style={{
@@ -76,8 +102,7 @@ class CalculateurIndemnite extends React.Component {
               </Container>
             )}
           </div>
-          {indemniteData.errors.length === 0 &&
-            indemniteData.indemnite && <ResultDetail {...indemniteData} />}
+          {noError && ResultComponent}
         </React.Fragment>
       </Container>
     );
