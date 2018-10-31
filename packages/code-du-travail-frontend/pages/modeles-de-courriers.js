@@ -46,6 +46,7 @@ class ModeleCourrier extends React.Component {
   }
   render() {
     const { data } = this.props;
+
     return (
       <React.Fragment>
         <Head>
@@ -56,15 +57,17 @@ class ModeleCourrier extends React.Component {
         {data && (
           <Article title={data._source.title}>
             <Html>{data._source.html}</Html>
-            {data.date && <DateContenu value={data.date} />}
+            <div className="center btn-download">
+              <a
+                className="btn"
+                title="Télécharger le courrier type"
+                href={`${process.env.API_URL}/docs/${data._source.filename}`}
+              >
+                Télécharger le document
+              </a>
+            </div>
+            {data._source.date && <DateContenu value={data._source.date} />}
             <Source />
-            <a
-              className="btn"
-              title="Télécharger le courrier type"
-              href={`${process.env.API_URL}/docs/${data._source.filename}`}
-            >
-              Télécharger le document
-            </a>
           </Article>
         )}
         <SeeAlso />
