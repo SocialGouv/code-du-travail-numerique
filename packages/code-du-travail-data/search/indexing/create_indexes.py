@@ -228,21 +228,6 @@ def create_documents(index_name, type_name):
                 'all_text': f"{val['titre']} {' '.join(val['questions'])} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('type_de_contrat','')} {val.get('tags', {}).get('profil','')}",
           })
 
-    with open(os.path.join(settings.BASE_DIR, 'dataset/outils.json')) as json_data:
-        data = json.load(json_data)
-        logger.info("Load %s documents from outils.json", len(data))
-        for val in data:
-            body_data.append({
-                'source': 'outils',
-                'title': val['titre'],
-                'slug': slugify(val['code'], to_lower=True),
-                'text': ' '.join(val['questions']),
-                'themes': val['themes'],
-                'date': val.get('date'),
-                'branche': val['branche'],
-                'all_text': f"{val['titre']} {' '.join(val['questions'])} {val['theme']} {val['type_de_contrat']}, {val['catégorie']}, {val['travailleur_particulier']}, {val['branche']}",
-          })
-
 
     # with open(os.path.join(settings.BASE_DIR, 'dataset/code_bfc.json')) as json_data:
     #     data = json.load(json_data)
