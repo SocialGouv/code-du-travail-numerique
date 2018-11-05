@@ -4,6 +4,7 @@ module.exports = {
     "postcss-import": {},
     "postcss-media-fn": {},
     "postcss-custom-media": {},
+    "postcss-color-mod-function": require("postcss-color-mod-function"),
     "postcss-preset-env": {
       browsers: "last 2 versions",
       // https://cssdb.org/#staging-process

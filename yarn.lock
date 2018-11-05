@@ -1685,16 +1685,6 @@
     escape-string-regexp "^1.0.5"
     lodash.deburr "^4.1.0"
 
-"@socialgouv/code-du-travail-css@^1.0.2":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@socialgouv/code-du-travail-css/-/code-du-travail-css-1.0.4.tgz#990f30343e6bebbe0674b19750a96f9576bc6c63"
-  integrity sha512-h5BI+B1tOoKOWT8rSxvJL1DyEZJxD3Teaoy3wOEC9cfquoc4zQ2ZsqdslGZ0+6OLCvwe0WviqfieXruS2abshg==
-
-"@socialgouv/code-du-travail-ui@^1.1.0":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@socialgouv/code-du-travail-ui/-/code-du-travail-ui-1.2.4.tgz#c6cb9cb0b2f0cf591eeb7cfcd8a303f29388063b"
-  integrity sha512-MFOB6EHJgoJtOlhW0pvM3u4Wj9Jh+JFyNBYoV+SiBdXh4f8QI2Dusbd4gcC1jsEatmYma91+VsSdGB+4CbDZKA==
-
 "@svgr/core@^2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@svgr/core/-/core-2.4.1.tgz#03a407c28c4a1d84305ae95021e8eabfda8fa731"
@@ -11686,7 +11676,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.1.2, node-fetch@^2.2.0:
+node-fetch@^2.1.2:
   version "2.2.0"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.2.0.tgz#4ee79bde909262f9775f731e3656d0db55ced5b5"
   integrity sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==
@@ -12969,6 +12959,15 @@ postcss-color-mod-function@^2.4.3:
     postcss "^6.0.23"
     postcss-values-parser "^1.5.0"
 
+postcss-color-mod-function@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-color-mod-function/-/postcss-color-mod-function-3.0.3.tgz#816ba145ac11cc3cb6baa905a75a49f903e4d31d"
+  integrity sha512-YP4VG+xufxaVtzV6ZmhEtc+/aTXH3d0JLpnYfxqTvwZPbJhWqp8bSY3nfNzNRFLgB4XSaBA82OE4VjOOKpCdVQ==
+  dependencies:
+    "@csstools/convert-colors" "^1.4.0"
+    postcss "^7.0.2"
+    postcss-values-parser "^2.0.0"
+
 postcss-color-rebeccapurple@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/postcss-color-rebeccapurple/-/postcss-color-rebeccapurple-3.1.0.tgz#ce1269ecc2d0d8bf92aab44bd884e633124c33ec"
@@ -13562,6 +13561,15 @@ postcss-values-parser@^1.5.0:
   version "1.5.0"
   resolved "http://registry.npmjs.org/postcss-values-parser/-/postcss-values-parser-1.5.0.tgz#5d9fa63e2bcb0179ce48f3235303765eb89f3047"
   integrity sha512-3M3p+2gMp0AH3da530TlX8kiO1nxdTnc3C6vr8dMxRLIlh8UYkz0/wcwptSXjhtx2Fr0TySI7a+BHDQ8NL7LaQ==
+  dependencies:
+    flatten "^1.0.2"
+    indexes-of "^1.0.1"
+    uniq "^1.0.1"
+
+postcss-values-parser@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-values-parser/-/postcss-values-parser-2.0.0.tgz#1ba42cae31367c44f96721cb5eb99462bfb39705"
+  integrity sha512-cyRdkgbRRefu91ByAlJow4y9w/hnBmmWgLpWmlFQ2bpIy2eKrqowt3VeYcaHQ08otVXmC9V2JtYW1Z/RpvYR8A==
   dependencies:
     flatten "^1.0.2"
     indexes-of "^1.0.1"

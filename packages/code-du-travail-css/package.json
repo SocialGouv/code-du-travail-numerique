@@ -17,6 +17,7 @@
   "devDependencies": {
     "cssnano": "^4.0.5",
     "postcss-cli": "^6.0.0",
+    "postcss-color-mod-function": "^3.0.3",
     "postcss-custom-media": "^7.0.4",
     "postcss-import": "^11.1.0",
     "postcss-media-fn": "^3.0.0",
