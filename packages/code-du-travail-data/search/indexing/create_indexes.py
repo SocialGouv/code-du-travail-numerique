@@ -42,8 +42,8 @@ def get_es_client():
     """
     Configure the client for different environments.
     """
-    hosts = [os.environ.get('ES_HOST')]
-    return elasticsearch.Elasticsearch(hosts=hosts)
+    hosts = [os.environ.get('ELASTICSEARCH_URL')]
+    return elasticsearch.Elasticsearch(hosts=hosts, timeout=60)
 
 
 def drop_index(index_name):

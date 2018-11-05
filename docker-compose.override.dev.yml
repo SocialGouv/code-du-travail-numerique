@@ -1,11 +1,12 @@
-version: '3'
+version: "3"
 
 services:
-
   # In development, open ES port so host API can connect to it
   elasticsearch:
     ports:
       - 9200:9200
+
   python:
     volumes:
-     - ./packages/code-du-travail-data:/app
+      - ./packages/code-du-travail-data/:/app
+      - ./docker:/app/docker

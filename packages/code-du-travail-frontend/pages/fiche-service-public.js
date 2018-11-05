@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { ExternalLink } from "react-feather";
-
+import getConfig from "next/config";
 import Answer from "../src/search/Answer";
 
 const ServicePublicCss = styled.div`
@@ -12,10 +12,12 @@ const ServicePublicCss = styled.div`
   }
 `;
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 const fetchFiche = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/fiches_service_public/${slug}`).then(r =>
-    r.json()
-  );
+  fetch(`${API_URL}/items/fiches_service_public/${slug}`).then(r => r.json());
 
 const Source = ({ name, url }) => (
   <a href={url} target="_blank">

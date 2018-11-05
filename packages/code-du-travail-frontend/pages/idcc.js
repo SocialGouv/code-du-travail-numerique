@@ -1,14 +1,19 @@
 import React from "react";
 import { withRouter } from "next/router";
+import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { Button } from "@cdt/ui";
 import { Download } from "react-feather";
 import Answer from "../src/search/Answer";
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 // a FAQ answer
 
 const fetchIdcc = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/idcc/${slug}`)
+  fetch(`${API_URL}/items/idcc/${slug}`)
     .then(r => r.json())
     .then(data => ({
       data

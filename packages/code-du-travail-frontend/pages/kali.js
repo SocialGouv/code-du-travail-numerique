@@ -1,14 +1,19 @@
 import React from "react";
 import { withRouter } from "next/router";
+import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { Button } from "@cdt/ui";
 import { ExternalLink } from "react-feather";
 import Answer from "../src/search/Answer";
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 // a FAQ answer
 
 const fetchKali = ({ slug }) =>
-  fetch(`${process.env.API_URL}/items/kali/${slug}`).then(r => r.json());
+  fetch(`${API_URL}/items/kali/${slug}`).then(r => r.json());
 
 class Kali extends React.Component {
   static async getInitialProps({ res, query }) {

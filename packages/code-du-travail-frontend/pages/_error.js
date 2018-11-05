@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
-
+import getConfig from "next/config";
 let Sentry = require("@sentry/browser");
 
-const SENTRY_PUBLIC_DSN = process.env.SENTRY_PUBLIC_DSN;
+const {
+  publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
+} = getConfig();
 
 if (typeof window !== "undefined") {
   Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
