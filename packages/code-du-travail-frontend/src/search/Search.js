@@ -1,8 +1,9 @@
-import memoizee from "memoizee";
 import React from "react";
-import { Container } from "@cdt/ui";
 import { withRouter } from "next/router";
+import getConfig from "next/config";
+import memoizee from "memoizee";
 import pDebounce from "p-debounce";
+import { Container } from "@cdt/ui";
 
 import AsyncFetch from "../lib/AsyncFetch";
 import Suggester from "./Suggester";
@@ -51,13 +52,17 @@ const memoFetch = memoizee(
   }
 );
 
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
 const fetchResults = (query, endPoint = "search", excludeSources) => {
   let urlParams = new URLSearchParams();
   urlParams.append("q", query);
   if (excludeSources) {
     urlParams.append("excludeSources", excludeSources);
   }
-  const url = `${process.env.API_URL}/${endPoint}?${urlParams.toString()}`;
+  const url = `${API_URL}/${endPoint}?${urlParams.toString()}`;
 
   return fetch(url).then(response => {
     if (response.ok) {
