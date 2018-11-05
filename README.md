@@ -29,7 +29,7 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 # > En parallèle dans un autre terminal <
 
 # Lancez le script d'indexation
-$ docker-compose exec python pipenv run python /app/search/indexing/create_indexes.py
+$ docker-compose run python pipenv run python /app/search/indexing/create_indexes.py
 ```
 
 ## Usage
