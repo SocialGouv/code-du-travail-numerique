@@ -11,7 +11,7 @@
 $ yarn
 ```
 
-Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.s](scripts/setup-env.sh)) en fonction du `NODE_ENV`
+Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.sh](scripts/setup-env.sh)) en fonction du `NODE_ENV`
 
 #### Première instanciation
 
@@ -82,26 +82,31 @@ $ docker-compose up --build -d
 ## Architecture
 
 ```
-+--------+          +----------------+          +-------+
-|        |          |                |          |       |
-|  data  +---------->  elastisearch  +---------->  APM  |
-|        |          |                |          |       |
-+--------+          +-------+--------+          +-------+
-                            |
-                            |
-                        +---+---+
-                        |       |
-                        |  API  |
-                        |       |
-                        +---+---+
-                            |
-                            |
-                            |
-                      +-----+------+
-                      |            |
-                      |  frontend  |
-                      |            |
-                      +-----+------+
+                             +--------+
+                             | kibana |
+                             +--------+
+                                 |
+                                 |
+     +--------+          +-------v--------+
+     |        |          |                |
+     |  data  +---------->  elastisearch  <----------+
+     |        |          |                |          |
+     +--------+          +----------------+          |
+                                 |               +-------+
+                                 |               |  APM  |
+                             +-------+           +---^---+
+                             |       |               |
+                             |  API  +---------------+
+                             |       |
+                             +-------+
+                                 |
+                                 |
+                                 |
+                           +------------+
+                           |            |
+                           |  frontend  |
+                           |            |
+                           +------------+
 ```
 
 ## URLs
@@ -117,10 +122,9 @@ $ docker-compose up --build -d
 
 - Slack : https://incubateur-mas.slack.com
 - Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
-- Issues GitHub : packages/code-du-travail-frontend/issues
+- Issues GitHub : [https://github.com/SocialGouv/code-du-travail-numerique/issues]
 - Piwik : https://stats.num.social.gouv.fr
 - Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
-
 
 ## Setup
 
