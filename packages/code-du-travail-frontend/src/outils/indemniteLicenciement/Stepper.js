@@ -9,13 +9,15 @@ class Stepper extends React.Component {
         key: PropTypes.string
       })
     ).isRequired,
+    containerRef: PropTypes.object,
     render: PropTypes.func.isRequired,
     renderRestart: PropTypes.func,
     initialStep: PropTypes.number
   };
   static defaultProps = {
     initialStep: 0,
-    renderRestart: null
+    renderRestart: null,
+    containerRef: null
   };
 
   state = {
@@ -23,17 +25,27 @@ class Stepper extends React.Component {
   };
 
   goPrevious = () => {
-    this.setState(state => ({
-      step: Math.max(0, state.step - 1)
-    }));
+    this.setState(
+      state => ({
+        step: Math.max(0, state.step - 1)
+      }),
+      this.scrollToTop
+    );
   };
 
   goNext = () => {
-    this.setState(state => ({
-      step: Math.min(this.props.steps.length, state.step + 1)
-    }));
+    this.setState(
+      state => ({
+        step: Math.min(this.props.steps.length, state.step + 1)
+      }),
+      this.scrollToTop
+    );
   };
 
+  scrollToTop = () => {
+    const containerRef = this.props;
+    document.body.scrollIntoView(containerRef.current);
+  };
   restart = () => {
     this.setState({ step: 0 });
   };

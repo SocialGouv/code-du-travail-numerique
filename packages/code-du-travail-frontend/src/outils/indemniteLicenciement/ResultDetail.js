@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Section } from "@cdt/ui";
 import MathJax from "react-mathjax2";
+import { headStyle } from "./steps_styles";
 
 const round = fl => parseInt(fl * 100) / 100;
 
@@ -105,33 +106,14 @@ class ResultDetail extends React.Component {
       <React.Fragment>
         {indemnite && (
           <Section light>
-            <div style={{ display: "flex" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  flexBasis: "50%",
-                  textAlign: "center"
-                }}
-              >
-                <h2>Salaire moyen séléctionné</h2>
-                <h3 style={{ fontSize: "2rem" }}>
-                  {labelize(meilleurMoyenne)}
-                </h3>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  flexBasis: "50%",
-                  textAlign: "center"
-                }}
-              >
-                <h2>Montant indicatif de votre indemnité</h2>
-                <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
-              </div>
+            <div style={headStyle}>
+              <h2>Montant indicatif de votre indemnité</h2>
+              <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
+              <p>
+                <em>
+                  Sur la base du calcul de l'indemnité légale de licenciement.
+                </em>
+              </p>
             </div>
           </Section>
         )}

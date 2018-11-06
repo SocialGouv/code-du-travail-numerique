@@ -5,6 +5,8 @@ import Autosuggest from "react-autosuggest";
 import { branches } from "./ccn/branches";
 import { PrevNextStepper } from "./PrevNextStepper";
 
+import { labelStyle, radioContainerStyle } from "./steps_styles";
+
 class ChoixCC extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -106,24 +108,26 @@ class ChoixCC extends React.Component {
               Est ce que votre entreprise est affilié à une convention
               collective ?
             </h2>
-            <div>
-              <label>
+            <div style={radioContainerStyle}>
+              <label style={labelStyle}>
                 <input
                   type="radio"
                   onChange={this.hasConventionChangeHandler}
                   name="has-convention"
                   value="yes"
                   checked={hasCC === true}
+                  className="bigRadio"
                 />{" "}
                 Oui
               </label>
-              <label>
+              <label style={labelStyle}>
                 <input
                   type="radio"
                   onChange={this.hasConventionChangeHandler}
                   name="has-convention"
                   value="no"
                   checked={hasCC === false}
+                  className="bigRadio"
                 />{" "}
                 Non
               </label>

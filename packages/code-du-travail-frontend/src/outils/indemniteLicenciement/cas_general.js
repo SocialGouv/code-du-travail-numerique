@@ -19,5 +19,9 @@ export const initialData = {
   fauteGrave: false,
   salaires: Array.from({ length: 12 }).fill(1498.47), // Prefill with SMIC brut
   primes: 0,
-  isR12342: false
+  isR12342: false,
+  convention: {
+    hasCC: false
+  },
+  steps
 };

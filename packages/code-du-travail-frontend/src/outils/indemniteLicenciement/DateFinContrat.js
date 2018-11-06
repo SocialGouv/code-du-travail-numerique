@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { inputStyle } from "./index";
 import { PrevNextStepper } from "./PrevNextStepper";
+import { labelStyle, radioContainerStyle } from "./steps_styles";
 
 class DateFinContrat extends React.Component {
   static propTypes = {
@@ -26,27 +26,31 @@ class DateFinContrat extends React.Component {
           <React.Fragment>
             <h2>
               Est ce que la date de fin de votre contrat se situe avant le
-              <b>26 Août 2017</b>
+              <b> 26 Août 2017</b>
               &nbsp;?
             </h2>
-            <label>
-              <input
-                type="radio"
-                onChange={() => onChange(true)}
-                name="isR12342"
-                checked={value === true}
-              />{" "}
-              Oui
-            </label>
-            <label>
-              <input
-                type="radio"
-                onChange={() => onChange(false)}
-                name="isR12342"
-                checked={value === false}
-              />{" "}
-              Non
-            </label>
+            <div style={radioContainerStyle}>
+              <label style={labelStyle}>
+                <input
+                  type="radio"
+                  onChange={() => onChange(true)}
+                  name="isR12342"
+                  checked={value === true}
+                  className="bigRadio"
+                />
+                <span>Oui</span>
+              </label>
+              <label style={labelStyle}>
+                <input
+                  type="radio"
+                  onChange={() => onChange(false)}
+                  name="isR12342"
+                  checked={value === false}
+                  className="bigRadio"
+                />
+                <span>Non</span>
+              </label>
+            </div>
           </React.Fragment>
         </Section>
         <Container>

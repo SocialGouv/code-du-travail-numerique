@@ -2,19 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { inputStyle } from "./index";
+import { inputStyle } from "./steps_styles";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class Age extends React.Component {
   static propTypes = {
+    value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    value: PropTypes.string,
     onPrevious: PropTypes.func.isRequired,
     onNext: PropTypes.func.isRequired,
     nextDisabled: PropTypes.bool
   };
   static defaultProps = {
-    value: "",
+    value: 0,
     nextDisabled: true
   };
 
@@ -23,7 +23,7 @@ class Age extends React.Component {
   };
 
   componentWillReceiveProps(props) {
-    this.setState({ nextDisabled: props.value === "" });
+    this.setState({ nextDisabled: props.value === "0" || props.value === "" });
   }
 
   render() {
@@ -36,7 +36,12 @@ class Age extends React.Component {
             <h2>Quel est votre age ?</h2>
             <input
               type="number"
-              onChange={e => onChange(e.target.value)}
+              onFocus={e => {
+                if (e.target.value === "0") {
+                  e.target.value = "";
+                }
+              }}
+              onChange={e => onChange(parseFloat(e.target.value) || 0)}
               value={value}
               style={{ width: 180, ...inputStyle }}
             />

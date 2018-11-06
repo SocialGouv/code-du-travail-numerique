@@ -2,54 +2,89 @@
 --------------------------------------------------------------------------- */
 
 label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 label + textarea,
 label > textarea {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 fieldset {
-    border: 1px solid var(--color-element-border);
-    padding: var(--spacing-base);
+  border: 1px solid var(--color-element-border);
+  padding: var(--spacing-base);
 }
 
 textarea,
-input:not(
-    [type=button],
-    [type=checkbox],
-    [type=file],
-    [type=hidden],
-    [type=image],
-    [type=radio],
-    [type=range],
-    [type=reset],
-    [type=submit]
-) {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+input:not([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [type="image"], [type="radio"], [type="range"], [type="reset"], [type="submit"]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
-    color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
 
-    background: var(--color-white);
-    border: 1px solid var(--color-element-border);
-    border-radius: var(--border-radius-base);
-    margin: 0;
-    max-width: 100%;
-    padding: var(--spacing-small) var(--spacing-base);
+  background: var(--color-white);
+  border: 1px solid var(--color-element-border);
+  border-radius: var(--border-radius-base);
+  margin: 0;
+  max-width: 100%;
+  padding: var(--spacing-small) var(--spacing-base);
 
-    &:focus {
-      border: 1px solid var(--color-focus);
-      box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-    }
-
+  &:focus {
+    border: 1px solid var(--color-focus);
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
 }
 
 textarea {
-    min-height: 8rem;
+  min-height: 8rem;
+}
+input[type="radio"].bigRadio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: 1px solid var(--color-element-border);
+  background: var(--color-white);
+  border-radius: 50%;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  height: 1em;
+  width: 1em;
+  margin-right: 0.24em;
+
+  &:checked {
+    border-color: var(--color-blue-light);
+    background: var(--color-blue-light);
+  }
+
+  &:checked::before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    width: 0.4em;
+    height: 0.4em;
+    transform: translate(calc(0.3em -1px), calc(0.3em - 1px));
+    background: var(--color-white);
+    box-shadow: 0 1px 0px 0px var(--color-title);
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0.15em 0.15em var(--color-focus-shadow);
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+    border-color: var(--color-element-border);
+  }
 }

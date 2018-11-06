@@ -22,7 +22,9 @@ const options = [...groupeLabelByCoeff].map(([coefficient, { groupe }]) => {
     </option>
   );
 });
-
+const selectStyle = {
+  fontSize: "1.5rem"
+};
 class EchelonChimie extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -57,7 +59,18 @@ class EchelonChimie extends React.Component {
     const { onPrevious, onNext, nextDisabled, value } = this.props;
     let labels = [];
     if (groupeLabelByCoeff.has(this.props.value.coefficient)) {
-      labels = groupeLabelByCoeff.get(this.props.value.coefficient).labels;
+      labels = (
+        <div>
+          <p>Description</p>
+          <ul>
+            {groupeLabelByCoeff
+              .get(this.props.value.coefficient)
+              .labels.map((label, i) => (
+                <li key={i}>{label}</li>
+              ))}
+          </ul>
+        </div>
+      );
     }
     return (
       <React.Fragment>
@@ -66,20 +79,22 @@ class EchelonChimie extends React.Component {
             <h2>
               Pouvez nous indiquer votre échelon dans la convention collective ?
             </h2>
-            <select
-              onChange={this.onSelectCoefficient}
-              onBlur={this.onSelectCoefficient}
-              name="echelon"
-              value={value.coefficient}
-            >
-              <option disabled selected>
-                Veuillez sélectionnez votre branche
-              </option>
-              {options}
-            </select>
-            {labels.map((label, i) => (
-              <li key={i}>{label}</li>
-            ))}
+            <p>
+              <select
+                onChange={this.onSelectCoefficient}
+                onBlur={this.onSelectCoefficient}
+                name="echelon"
+                value={value.coefficient}
+                style={{ ...selectStyle }}
+                defaultValue={"none"}
+              >
+                <option disabled value="none">
+                  branche
+                </option>
+                {options}
+              </select>
+            </p>
+            {labels}
           </React.Fragment>
         </Section>
         <Container>

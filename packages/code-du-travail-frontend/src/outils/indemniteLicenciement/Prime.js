@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { inputStyle } from "./index";
 import { PrevNextStepper } from "./PrevNextStepper";
+import { inputStyle } from "./steps_styles";
 
 class Primes extends React.Component {
   static propTypes = {

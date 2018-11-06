@@ -5,14 +5,9 @@ import dynamic from "next/dynamic";
 import getIndemnite from "./indemnite";
 import { Stepper } from "./Stepper";
 import { initialData, steps } from "./cas_general";
-
 import { ResultDetail } from "./ResultDetail";
 
-export const inputStyle = {
-  padding: 0,
-  fontSize: "1.5rem",
-  textAlign: "center"
-};
+const containerRef = React.createRef();
 
 class CalculateurIndemnite extends React.Component {
   static propTypes = {
@@ -23,6 +18,7 @@ class CalculateurIndemnite extends React.Component {
     ...initialData,
     steps: [...steps]
   };
+  ResultCC = dynamic(import(`./ccn/Result_0044`));
 
   componentOnChange = ({ key, value }) => {
     if (key === "convention" && value.hasCC) {
@@ -41,13 +37,26 @@ class CalculateurIndemnite extends React.Component {
     }
   };
 
+  resetState = callback => {
+    const initialkeys = Object.keys(initialData);
+    const newState = Object.keys(this.state).reduce((state, key) => {
+      if (initialkeys.indexOf(key) === -1) {
+        state[key] = undefined;
+      } else {
+        state[key] = initialData[key];
+      }
+      return state;
+    }, {});
+    this.setState(newState, callback);
+  };
+
   render() {
     const indemniteData = getIndemnite(this.state);
 
     const hasIndemniteCC =
       indemniteData.calculCC && indemniteData.calculCC.indemnite;
 
-    const noError = indemniteData.errors.length === 0;
+    const showResult = indemniteData.errors.length === 0;
 
     let ResultComponent;
     if (
@@ -66,14 +75,17 @@ class CalculateurIndemnite extends React.Component {
         }}
       >
         <React.Fragment>
-          <div style={{ width: 700, margin: "0 auto" }}>
+          <div style={{ width: 700, margin: "0 auto" }} ref={containerRef}>
             <Stepper
-              initialStep={5}
+              containerRef={containerRef}
+              initialStep={0}
               steps={this.state.steps}
               renderRestart={({ restart }) => (
                 <div style={{ textAlign: "center" }}>
                   <Button
-                    onClick={() => this.setState(initialData, () => restart())}
+                    onClick={() => {
+                      this.resetState(restart);
+                    }}
                     primary
                   >
                     recommencer
@@ -102,7 +114,7 @@ class CalculateurIndemnite extends React.Component {
               </Container>
             )}
           </div>
-          {noError && ResultComponent}
+          {showResult && ResultComponent}
         </React.Fragment>
       </Container>
     );
