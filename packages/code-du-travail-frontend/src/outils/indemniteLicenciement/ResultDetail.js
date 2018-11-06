@@ -104,21 +104,19 @@ class ResultDetail extends React.Component {
     );
     return (
       <React.Fragment>
-        <div>
-          {indemnite > 0 && (
-            <Section light>
-              <div style={headStyle}>
-                <h2>Montant indicatif de votre indemnité</h2>
-                <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
-                <p>
-                  <em>
-                    Sur la base du calcul de l'indemnité légale de licenciement.
-                  </em>
-                </p>
-              </div>
-            </Section>
-          )}
-        </div>
+        {indemnite > 0 && (
+          <Section light>
+            <div style={headStyle}>
+              <h2>Montant indicatif de votre indemnité</h2>
+              <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
+              <p>
+                <em>
+                  Sur la base du calcul de l'indemnité légale de licenciement.
+                </em>
+              </p>
+            </div>
+          </Section>
+        )}
         <Section light>
           <React.Fragment>
             <table width="100%" style={{ fontSize: "1.2em" }}>
@@ -129,7 +127,9 @@ class ResultDetail extends React.Component {
                 <Row value={labelize(moyenne3DerniersMois)}>
                   Moyenne des 3 derniers sois
                 </Row>
-                <Row value={labelize(meilleurMoyenne)}>Salaire retenu</Row>
+                <Row value={labelize(meilleurMoyenne)}>
+                  Salaire de référence
+                </Row>
                 <Row value={isR12342 ? "1 / 5" : "1 / 4"}>{infoFinContrat}</Row>
                 <Row value={isSmallAnciennete ? "< 10 ans" : "> 10 ans"}>
                   Ancienneté

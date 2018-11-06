@@ -13,14 +13,13 @@ const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
 
 const getIndemnite = data => {
   const {
+    isR12342,
     salaires,
     primes,
     anciennete,
-    isR12342,
     fauteGrave,
     calculConvention
   } = data;
-
   // a) moyenne des douze derniers mois
   // (a)=moyenne((mois1+prime)+(mois2+prime)... (mois 12+prime))
   const moyenneSalaires =
@@ -28,7 +27,8 @@ const getIndemnite = data => {
   // b) moyenne des 3 derniers mois
   // (b)=moyenne((mois10+prime)+(mois11+prime)... (mois 12+prime))
   const moyenne3DerniersMois =
-    (sum(salaires.filter((_, i) => i < 3)) + (primes / 12) * 3) / 3;
+    (sum(salaires.filter((_, i) => i < 3)) + (primes / salaires.length) * 3) /
+    3;
   // si b>a, (c)=(b) sinon (c)=a
   const meilleurMoyenne = Math.max(moyenneSalaires, moyenne3DerniersMois);
 
@@ -44,8 +44,8 @@ const getIndemnite = data => {
       // Si ancienneté supérieur à 10 ans:
       // indemnite = 1 / 5 * c * 10 + 2 / 5 * c * d
       indemnite =
-        (1 / 5) * meilleurMoyenne * 10 +
-        (2 / 5) * meilleurMoyenne * (anciennete / 12 - 10);
+        ((1 / 5) * meilleurMoyenne * anciennete) / 12 +
+        (2 / 15) * meilleurMoyenne * (anciennete / 12 - 10);
     }
   } else {
     // Si "ancienneté inférieure ou égale à 10 ans
@@ -63,11 +63,20 @@ const getIndemnite = data => {
 
   const errors = [];
 
-  if (anciennete < 12) {
+  if (anciennete < 12 && isR12342) {
     errors.push({
       type: "warning",
       message:
         "L'indemnité de licenciement est dûe au-delà d'un an d'ancienneté."
+    });
+    indemnite = 0;
+  }
+
+  if (anciennete < 8 && !isR12342) {
+    errors.push({
+      type: "warning",
+      message:
+        "L'indemnité de licenciement est dûe au-delà de 8mois d'ancienneté."
     });
     indemnite = 0;
   }
