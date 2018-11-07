@@ -1,4 +1,4 @@
-import { getIndemniteCC } from "./0044";
+import { getIndemnite } from "./0044_indemnite";
 
 const echelon123 = [
   {
@@ -29,9 +29,9 @@ const echelon123 = [
       salaires: Array.from({ length: 12 }).fill(2000),
       primes: 0,
       anciennete: 30,
-      indemnite: 1000
+      indemnite: 1250
     },
-    expected: 1200
+    expected: 1500
   },
   {
     title: "2k, 5ans d'anciennté, 51ans",
@@ -334,12 +334,12 @@ const echelon5 = [
 describe("getIndemnite", () => {
   echelon123.concat(echelon4, echelon5).forEach(test => {
     it(`${test.title} should return ${test.expected}`, () => {
-      const res = getIndemniteCC(test.data);
+      const res = getIndemnite(test.data);
       expect(res.indemnite).toEqual(test.expected);
     });
   });
   it("should return 500 when anciennete > 12 && < 24", () => {
-    const res = getIndemniteCC({
+    const res = getIndemnite({
       ...echelon123[0].data,
       anciennete: 15
     });

@@ -30,7 +30,7 @@ class CalculateurIndemnite extends React.Component {
         import(`./ccn/${ccId}`).then(module => {
           this.setState({
             steps: steps.concat(module.steps),
-            calculConvention: module.getIndemniteCC,
+            calculConvention: module.getIndemnite,
             ...module.initialData
           });
         });
