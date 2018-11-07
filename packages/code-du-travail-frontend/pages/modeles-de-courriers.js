@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
-import { getConfig } from "next/config";
+import getConfig from "next/config";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
