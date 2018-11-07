@@ -4,13 +4,16 @@ import getConfig from "next/config";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { Button, Container, Alert, Article } from "@cdt/ui";
+import { AsideTitle, Container, Alert, Article } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import FeedbackForm from "../src/common/FeedbackForm";
 import Html from "../src/common/Html";
 import Search from "../src/search/Search";
 import { DateContenu } from "../src/common/DateContenu";
+import Disclaimer from "../src/common/Disclaimer";
+import { DownloadFile } from "../src/common/DownloadFile";
+import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -58,26 +61,25 @@ class ModeleCourrier extends React.Component {
         <Search />
         {!data && <BigError>Modèle de courrier introuvable</BigError>}
         {data && (
-          <Article title={data._source.title}>
-            <Html>{data._source.html}</Html>
-            <div className="center btn-download">
-              <a
-                className="btn"
-                title="Télécharger le courrier type"
-                href={`${process.env.API_URL}/docs/${data._source.filename}`}
-              >
-                Télécharger le document
-              </a>
-            </div>
-            {data._source.date && <DateContenu value={data._source.date} />}
+          <Article
+            title={data._source.title}
+            date={data._source.date}
+            icon={ModeleCourrierIcon}
+            sourceType="Modèle de document"
+          >
+            <Disclaimer />
+            {data._source.description && <p>{data._source.description}</p>}
+            <section>
+              <Html className="wrapper-outline">{data._source.html}</Html>
+            </section>
+            <AsideTitle>Télécharger le modèle</AsideTitle>
+            <DownloadFile
+              title={data._source.title}
+              file={`${API_URL}/docs/${data._source.filename}`}
+              type="Modèle de document"
+              icon={ModeleCourrierIcon}
+            />
             <Source />
-            <a
-              className="btn"
-              title="Télécharger le courrier type"
-              href={`${API_URL}/docs/${data._source.filename}`}
-            >
-              Télécharger le document
-            </a>
           </Article>
         )}
         <SeeAlso />

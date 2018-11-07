@@ -8,7 +8,10 @@
 
 .article__icon {
   flex: 0 0 100px;
+  padding: 0 30px;
   text-align: center;
+  color: var(--color-light-text);
+  align-self: center;
 }
 
 .article__header {
@@ -18,8 +21,8 @@
 }
 
 .article__title {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: var(--font-size-h1);
+  font-weight: 600;
 }
 
 .article__content {
@@ -40,13 +43,25 @@
   text-align: center;
 }
 
-.article__date {
-  font-weight: 700;
-  margin: var(--spacing-inter-component) 0;
-  font-size: var(--font-size-small);
-  color: var(--color-light-text);
+.aside-title {
+  padding: var(--spacing-inter-component) 0;
+  font-size: var(--font-size-h5);
+  font-weight: 600;
+  color: var(--color-black);
 }
 
-.btn-download {
-  margin: var(--spacing-inter-component) 0;
+.article__document-type {
+  color: var(--color-light-text);
+  font-weight: 600;
+}
+
+.article__date {
+  color: var(--color-grey);
+  font-size: var(--font-size-small);
+  display: inline-block;
+  margin-left: 1em;
+}
+.article__date-value {
+  color: var(--color-light-text);
+  font-weight: 600;
 }

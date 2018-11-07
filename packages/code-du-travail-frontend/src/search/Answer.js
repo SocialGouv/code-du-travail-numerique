@@ -34,8 +34,8 @@ const Answer = ({
     {!html && !children && <BigError>{emptyMessage}</BigError>}
     {(html || children) && (
       <React.Fragment>
-        <Disclaimer />
         <Article title={title}>
+          <Disclaimer />
           {intro}
           <Html>{html}</Html>
           {children}
