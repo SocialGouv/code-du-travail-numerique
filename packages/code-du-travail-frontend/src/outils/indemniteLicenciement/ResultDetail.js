@@ -90,7 +90,7 @@ class ResultDetail extends React.Component {
     const infoFinContrat = isR12342 ? (
       <React.Fragment>
         Base minimum : fin de contrat &lt;= au
-        <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F6CD29C2DCBBBB2A5009383ADBDDAA29.tplgfr43s_2?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050&categorieLien=id&dateTexte=20170926">
+        <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050&categorieLien=id&dateTexte=20170926">
           25/09/2017
         </a>
       </React.Fragment>

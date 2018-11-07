@@ -33,8 +33,7 @@ const getIndemnite = data => {
   const meilleurMoyenne = Math.max(moyenneSalaires, moyenne3DerniersMois);
 
   let indemnite = 0;
-  const a = Math.floor(anciennete / 12);
-  const isSmallAnciennete = a <= 10; // 10 years
+  const isSmallAnciennete = anciennete / 12 <= 10; // 10 years
   if (isR12342) {
     // "calculavant2017" : date du licenciement < 26 / 09 / 2017
     // Si "ancienneté inférieure ou égale à 10 ans
