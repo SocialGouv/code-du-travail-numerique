@@ -3,20 +3,22 @@ const select = require("xpath.js");
 const dom = require("xmldom").DOMParser;
 
 const xmlToHtml = require("./xmlToHtml");
+
 /*
 
 extrait les données avec les fichiers XML de :
 
-https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/#_
+ - dans ./vosdroits-professionnels : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/
+ - dans ./vosdroits-particuliers : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-particuliers/
 
 */
 
-const XMLS_PATH = "./data";
-
 const read = path => fs.readFileSync(path).toString();
 
-const parseFiche = path => {
-  const doc = new dom().parseFromString(read(path));
+const parseFicheFromPath = path => parseFiche(read(path));
+
+const parseFiche = text => {
+  const doc = new dom().parseFromString(text);
   const nodes = select(doc, "//Theme[@ID='N19806']");
   const audience = select(doc, "/Publication/Audience/text()")
     .map(d => d.data)
@@ -114,11 +116,23 @@ const parseFiche = path => {
   }
 };
 
-const files = fs.readdirSync(XMLS_PATH);
+const getFiches = path =>
+  fs
+    .readdirSync(path)
+    .filter(f => f.substring(0, 1) === "F")
+    .map(f => parseFicheFromPath(`${path}/${f}`))
+    .filter(Boolean);
 
-const fiches = files
-  .filter(f => f.substring(0, 1) === "F")
-  .map(f => parseFiche(`${XMLS_PATH}/${f}`))
-  .filter(Boolean);
+if (module === require.main) {
+  console.log(
+    JSON.stringify(
+      [
+        ...getFiches("./vosdroits-particuliers"),
+        ...getFiches("./vosdroits-professionnels")
+      ],
+      null,
+      2
+    )
+  );
+}
 
-console.log(JSON.stringify(fiches, null, 2));
