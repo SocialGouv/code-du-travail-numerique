@@ -15,7 +15,7 @@ export const getFlavor = props => {
     // ensure value is truthy
     flavor => flavors.indexOf(flavor) > -1 && !!props[flavor]
   );
-  return (versionProps.length && versionProps[0]) || "";
+  return (versionProps.length && `btn__${versionProps[0]}`) || "";
 };
 
 // remove falsy values

@@ -17,7 +17,7 @@ export const steps = [
 export const initialData = {
   anciennete: 12,
   fauteGrave: false,
-  salaires: Array.from({ length: 12 }).fill(1498.47), // Prefill with SMIC brut
+  salaires: Array.from({ length: 12 }).fill(0),
   primes: 0,
   isR12342: false,
   convention: {

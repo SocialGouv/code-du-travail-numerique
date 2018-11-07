@@ -104,19 +104,21 @@ class ResultDetail extends React.Component {
     );
     return (
       <React.Fragment>
-        {indemnite && (
-          <Section light>
-            <div style={headStyle}>
-              <h2>Montant indicatif de votre indemnité</h2>
-              <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
-              <p>
-                <em>
-                  Sur la base du calcul de l'indemnité légale de licenciement.
-                </em>
-              </p>
-            </div>
-          </Section>
-        )}
+        <div>
+          {indemnite > 0 && (
+            <Section light>
+              <div style={headStyle}>
+                <h2>Montant indicatif de votre indemnité</h2>
+                <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
+                <p>
+                  <em>
+                    Sur la base du calcul de l'indemnité légale de licenciement.
+                  </em>
+                </p>
+              </div>
+            </Section>
+          )}
+        </div>
         <Section light>
           <React.Fragment>
             <table width="100%" style={{ fontSize: "1.2em" }}>

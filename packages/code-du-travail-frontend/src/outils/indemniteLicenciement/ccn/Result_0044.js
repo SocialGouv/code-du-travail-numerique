@@ -80,7 +80,9 @@ class ResultDetail extends React.Component {
                 Employeur
               </Row>
               <Row value={`${age}`}>Age</Row>
-              <Row value={`${anciennete}`}>Ancienneté en mois par année</Row>
+              <Row value={`${anciennete / 12}`}>
+                Ancienneté en mois par année
+              </Row>
             </tbody>
           </table>
         </Container>

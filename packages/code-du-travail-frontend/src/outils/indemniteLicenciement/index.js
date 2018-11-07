@@ -21,19 +21,26 @@ class CalculateurIndemnite extends React.Component {
   ResultCC = dynamic(import(`./ccn/Result_0044`));
 
   componentOnChange = ({ key, value }) => {
-    if (key === "convention" && value.hasCC) {
-      const { ccId } = value;
-      import(`./ccn/${ccId}`).then(module => {
-        this.setState({
-          [key]: value,
-          steps: steps.concat(module.steps),
-          calculConvention: module.getIndeminiteCC,
-          ...module.initialData
+    this.setState({
+      [key]: value
+    });
+    if (key === "convention") {
+      if (value.hasCC) {
+        const { ccId } = value;
+        import(`./ccn/${ccId}`).then(module => {
+          this.setState({
+            steps: steps.concat(module.steps),
+            calculConvention: module.getIndemniteCC,
+            ...module.initialData
+          });
         });
-      });
-      this.ResultCC = dynamic(import(`./ccn/Result_${ccId}`));
-    } else {
-      this.setState({ [key]: value });
+        this.ResultCC = dynamic(import(`./ccn/Result_${ccId}`));
+      } else {
+        this.setState({
+          steps: steps.slice(),
+          calculConvention: null
+        });
+      }
     }
   };
 
@@ -57,7 +64,6 @@ class CalculateurIndemnite extends React.Component {
       indemniteData.calculCC && indemniteData.calculCC.indemnite;
 
     const showResult = indemniteData.errors.length === 0;
-
     let ResultComponent;
     if (
       hasIndemniteCC &&

@@ -14,43 +14,32 @@ export const initialData = {
   isEco: false
 };
 
-const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
+const sum = arr => arr.reduce((sum, c) => sum + c, 0);
 const contains = (arr, value) => arr.indexOf(value) !== -1;
 
-export function getIndeminiteCC({
+export function getIndemniteCC({
   salaires,
   primes,
   anciennete,
   indemnite,
-  age,
   hasOpe,
-  echelon,
   isEco,
+  age = 0,
+  echelon = { groupe: "I" },
   convention
 }) {
-  if (!echelon || !age) {
-    return {
-      errors: [
-        {
-          type: "warning",
-          text: "missing data"
-        }
-      ]
-    };
-  }
-
   const moyenneSalaires =
-    (sum(salaires) + (primes || 0)) / salaires.length || 0;
+    (sum(salaires) + (primes || 0)) / salaires.length || 1;
 
   let dernierSalaire = salaires[0] + primes / 12;
 
   // Pour le groupe V on prend le dernier salaire avant préavis (8ieme mois, donc 4ieme en partant de la fin )
-  if (contains(["V"], echelon.groupe)) {
+  if (echelon && contains(["V"], echelon.groupe)) {
     dernierSalaire = salaires[4];
   }
   const salaireRef = Math.max(moyenneSalaires, dernierSalaire);
   // ancienneté en année
-  const a = Math.floor(anciennete / 12);
+  const anneeAncienete = Math.floor(anciennete / 12);
   let indemniteCC = 0;
   let formula = "";
 
@@ -59,7 +48,7 @@ export function getIndeminiteCC({
   // le salarié appartient au groupe I, II, III
   if (contains(["I", "II", "III"], echelon.groupe)) {
     // le salarié a entre 1 et 2ans d'anciennté
-    if (a >= 1 && a < 2) {
+    if (anneeAncienete >= 1 && anneeAncienete < 2) {
       indemniteCC = indemnite;
       // dans le cas ou il y a un OPE et un licenciement eco
       if (hasOpe && isEco) {
@@ -68,14 +57,14 @@ export function getIndeminiteCC({
       }
     }
     // le salarié a plus de 2ans d'anciennté
-    else if (a >= 2) {
-      indemniteCC = (salaireRef / 10) * 3 * a;
-      formula = `(${salaireRef} / 10) * 3 * ${a}`;
+    else if (anneeAncienete >= 2) {
+      indemniteCC = ((salaireRef / 10) * 3 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 3 * (${anciennete} / 12)`;
     }
     // Pour les salarié avec plus de 5ans d'ancienneté
-    if (a >= 5) {
+    if (anneeAncienete >= 5) {
       // le salarié a entre 50 et 55ans
-      if (age > 50 && age <= 55) {
+      if (age >= 50 && age < 55) {
         indemniteCC += salaireRef;
         formula += ` + ${salaireRef}`;
         if (isEco && hasOpe) {
@@ -84,7 +73,7 @@ export function getIndeminiteCC({
         }
       }
       // le salarié a plus de 55ans
-      else if (age > 55) {
+      else if (age >= 55) {
         indemniteCC += salaireRef * 2;
         formula += ` + ${salaireRef} * 2`;
       }
@@ -98,7 +87,7 @@ export function getIndeminiteCC({
   // le salarié appartient au groupe IV
   else if (echelon.groupe === "IV") {
     // le salarié a entre 1 et 2ans d'anciennté
-    if (a >= 1 && a < 2) {
+    if (anneeAncienete >= 1 && anneeAncienete < 2) {
       indemniteCC = indemnite;
       // dans le cas ou il y a un OPE et un licenciement eco
       if (hasOpe && isEco) {
@@ -107,22 +96,22 @@ export function getIndeminiteCC({
       }
     }
     // le salarié a entre 2 et 10ans d'anciennté
-    else if (a >= 2 && a < 10) {
-      indemniteCC = (salaireRef / 10) * 3 * a;
-      formula = `(${salaireRef} / 10) * 3 * ${a}`;
+    else if (anneeAncienete >= 2 && anneeAncienete < 10) {
+      indemniteCC = ((salaireRef / 10) * 3 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 3 * (${anciennete} / 12)`;
     }
     // le salarié a entre 10 et 20ans d'anciennté
-    else if (a >= 10 && a < 20) {
-      indemniteCC = (salaireRef / 10) * 4 * a;
-      formula = `(${salaireRef} / 10) * 4 * ${a}`;
+    else if (anneeAncienete >= 10 && anneeAncienete < 20) {
+      indemniteCC = ((salaireRef / 10) * 4 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 4 * (${anciennete} / 12)`;
     }
     // le salarié a plus de 20ans d'anciennté
-    else if (a >= 20) {
-      indemniteCC = (salaireRef / 10) * 5 * a;
-      formula = `(${salaireRef} / 10) * 5 * ${a}`;
+    else if (anneeAncienete >= 20) {
+      indemniteCC = ((salaireRef / 10) * 5 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 5 * (${anciennete} / 12)`;
     }
     // Pour les salariés qui ont plus de 5ans d'ancienneté
-    if (a >= 5) {
+    if (anneeAncienete >= 5) {
       // le salarié a entre 50 et 55ans
       if (age >= 50 && age < 55) {
         indemniteCC += salaireRef;
@@ -133,7 +122,7 @@ export function getIndeminiteCC({
         }
       }
       // le salarié a entre 50 et 55ans
-      else if (age > 55) {
+      else if (age >= 55) {
         indemniteCC += salaireRef * 2;
         formula += `+ ${salaireRef} * 2`;
       }
@@ -147,26 +136,30 @@ export function getIndeminiteCC({
   // le salarié appartient au groupe V
   else if (echelon.groupe === "V") {
     // le salarié a entre 1 et 2ans d'anciennté
-    if (a >= 1 && a < 2) {
+    if (anneeAncienete >= 1 && anneeAncienete < 2) {
       indemniteCC = indemnite;
+      if (hasOpe && isEco) {
+        indemniteCC = salaireRef;
+        formula = `${salaireRef}`;
+      }
     }
     // le salarié a entre 2 et 10ans d'anciennté
-    else if (a >= 2 && a < 10) {
-      indemniteCC = (salaireRef / 10) * 4 * a;
-      formula = `(${salaireRef} / 10) * 4 * ${a}`;
+    else if (anneeAncienete >= 2 && anneeAncienete < 10) {
+      indemniteCC = ((salaireRef / 10) * 4 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 4 * (${anciennete} / 12)`;
     }
     // le salarié a entre 10 et 15ans d'anciennté
-    else if (a >= 10 && a < 15) {
-      indemniteCC = (salaireRef / 10) * 6 * a;
-      formula = `(${salaireRef} / 10) * 6 * ${a}`;
+    else if (anneeAncienete >= 10 && anneeAncienete < 15) {
+      indemniteCC = ((salaireRef / 10) * 6 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 6 * (${anciennete} / 12)`;
     }
     // le salarié a plus de 15ans d'anciennté
-    else if (a >= 15) {
-      indemniteCC = (salaireRef / 10) * 8 * a;
-      formula = `(${salaireRef} / 10) * 8 * ${a}`;
+    else if (anneeAncienete >= 15) {
+      indemniteCC = ((salaireRef / 10) * 8 * anciennete) / 12;
+      formula = `(${salaireRef} / 10) * 8 * (${anciennete} / 12)`;
     }
     // Pour les salariés qui ont plus de 5ans d'ancienneté
-    if (a > 6) {
+    if (anneeAncienete > 6) {
       // le salarié a entre 45 et 55ans
       if (age >= 45 && age < 55) {
         indemniteCC += salaireRef;
@@ -189,7 +182,7 @@ export function getIndeminiteCC({
     }
   }
 
-  if (isEco && hasOpe && indemniteCC < salaireRef * 2) {
+  if (isEco && hasOpe && anneeAncienete >= 2 && indemniteCC < salaireRef * 2) {
     indemniteCC = salaireRef * 2;
     formula = `${salaireRef} * 2`;
   }
@@ -199,7 +192,7 @@ export function getIndeminiteCC({
     dernierSalaire,
     salaireRef,
     convention,
-    anciennete: a,
+    anciennete,
     indemnite: indemniteCC,
     age,
     echelon,

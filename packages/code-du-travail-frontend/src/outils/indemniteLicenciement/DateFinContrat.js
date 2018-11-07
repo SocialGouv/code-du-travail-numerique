@@ -36,7 +36,6 @@ class DateFinContrat extends React.Component {
                   onChange={() => onChange(true)}
                   name="isR12342"
                   checked={value === true}
-                  className="bigRadio"
                 />
                 <span>Oui</span>
               </label>
@@ -46,7 +45,6 @@ class DateFinContrat extends React.Component {
                   onChange={() => onChange(false)}
                   name="isR12342"
                   checked={value === false}
-                  className="bigRadio"
                 />
                 <span>Non</span>
               </label>

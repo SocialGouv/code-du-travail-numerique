@@ -35,8 +35,7 @@
   display: inline;
 }
 
-.react-autosuggest__input,
-select {
+.react-autosuggest__input {
   width: 300px;
   padding: 2px 5px;
   font-family: "Open Sans", sans-serif;

@@ -23,7 +23,7 @@ const options = [...groupeLabelByCoeff].map(([coefficient, { groupe }]) => {
   );
 });
 const selectStyle = {
-  fontSize: "1.5rem"
+  fontSize: "1.25rem"
 };
 class EchelonChimie extends React.Component {
   static propTypes = {
@@ -46,6 +46,10 @@ class EchelonChimie extends React.Component {
 
   onSelectCoefficient = event => {
     const coefficient = event.target.value;
+    if (coefficient === "none") {
+      return;
+    }
+
     const { groupe } = groupeLabelByCoeff.get(coefficient);
 
     this.props.onChange({
@@ -89,7 +93,7 @@ class EchelonChimie extends React.Component {
                 defaultValue={"none"}
               >
                 <option disabled value="none">
-                  branche
+                  Selectionner un échelon
                 </option>
                 {options}
               </select>

@@ -35,7 +35,6 @@ class AffiliationOpe extends React.Component {
                   onChange={() => onChange(true)}
                   name="affiliation"
                   checked={value === true}
-                  className="bigRadio"
                 />{" "}
                 Oui
               </label>
@@ -45,7 +44,6 @@ class AffiliationOpe extends React.Component {
                   onChange={() => onChange(false)}
                   name="affiliation"
                   checked={value === false}
-                  className="bigRadio"
                 />{" "}
                 Non
               </label>

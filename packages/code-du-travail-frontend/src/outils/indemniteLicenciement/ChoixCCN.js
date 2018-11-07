@@ -116,7 +116,6 @@ class ChoixCC extends React.Component {
                   name="has-convention"
                   value="yes"
                   checked={hasCC === true}
-                  className="bigRadio"
                 />{" "}
                 Oui
               </label>
@@ -127,7 +126,6 @@ class ChoixCC extends React.Component {
                   name="has-convention"
                   value="no"
                   checked={hasCC === false}
-                  className="bigRadio"
                 />{" "}
                 Non
               </label>
