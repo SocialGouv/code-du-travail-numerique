@@ -44,7 +44,8 @@ const getIndemnite = data => {
       // Si ancienneté supérieur à 10 ans:
       // indemnite = 1 / 5 * c * 10 + 2 / 5 * c * d
       indemnite =
-        (1 / 5) * meilleurMoyenne * 10 + (2 / 5) * meilleurMoyenne * (a - 10);
+        (1 / 5) * meilleurMoyenne * 10 +
+        (2 / 5) * meilleurMoyenne * (anciennete / 12 - 10);
     }
   } else {
     // Si "ancienneté inférieure ou égale à 10 ans
@@ -55,7 +56,8 @@ const getIndemnite = data => {
       // Si ancienneté supérieurd à 10 ans:
       //indemnite = 1 / 4 * c * 10 + 1 / 3 * c * d
       indemnite =
-        (1 / 4) * meilleurMoyenne * 10 + (1 / 3) * meilleurMoyenne * (a - 10);
+        (1 / 4) * meilleurMoyenne * 10 +
+        (1 / 3) * meilleurMoyenne * (anciennete / 12 - 10);
     }
   }
 

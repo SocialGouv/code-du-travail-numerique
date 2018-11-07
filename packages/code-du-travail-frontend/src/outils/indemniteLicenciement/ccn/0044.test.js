@@ -24,11 +24,11 @@ const echelon123 = [
     expected: 2000
   },
   {
-    title: "2k, 24mois d'anciennté",
+    title: "2k, 30mois d'anciennté",
     data: {
       salaires: Array.from({ length: 12 }).fill(2000),
       primes: 0,
-      anciennete: 24,
+      anciennete: 30,
       indemnite: 1000
     },
     expected: 1200
