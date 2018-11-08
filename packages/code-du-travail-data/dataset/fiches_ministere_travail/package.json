@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "jsdom": "^12.0.0",
-    "node-fetch": "^2.2.0",
-    "promise-serial-exec": "^1.0.0"
+    "node-fetch": "^2.2.0"
+  },
+  "scripts": {
+    "start": "node index.js > fiches-min-travail.json"
   }
 }
