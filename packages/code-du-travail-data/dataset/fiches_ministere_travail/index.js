@@ -28,8 +28,18 @@ function parseDom(dom, url) {
 
   const article = $(dom.window.document, ".main-article");
   $$(article, "a").forEach(node => {
-    node.setAttribute("target", "_blanck");
-    node.setAttribute("rel", "nofollow, noopener");
+    const href = node.getAttribute("href");
+
+    if (href) {
+      if (href.slice(0, 1) === "/") {
+        node.setAttribute(
+          "href",
+          `https://travail-emploi.gouv.fr${node.getAttribute("href")}`
+        );
+        node.setAttribute("target", "_blanck");
+        node.setAttribute("rel", "nofollow, noopener");
+      }
+    }
   });
   let result = {
     articles,
@@ -66,6 +76,11 @@ const parseFiche = async url => {
     const dom = await JSDOM.fromURL(url);
     return parseDom(dom, url);
   } catch (error) {
+    if (error.statusCode) {
+      console.error(`☠️  - ${error.statusCode} - ${url}`);
+      return null;
+    }
+    console.error(error);
     return null;
   }
 };

@@ -16,6 +16,6 @@
     "node-fetch": "^2.2.0"
   },
   "scripts": {
-    "start": "node index.js > fiches-min-travail.json"
+    "start": "node index.js > fiches-min-travail.json 2> error.log"
   }
 }
