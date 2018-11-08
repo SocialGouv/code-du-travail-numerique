@@ -198,7 +198,6 @@ def create_documents(index_name, type_name):
         for val in data:
             faq_text = strip_html(val['reponse'])
             tags = parse_hash_tags(val.get("tags"))
-            logger.info(val['question'])
             body_data.append({
                 'source': 'faq',
                 'slug': slugify(val['question'], to_lower=True),
