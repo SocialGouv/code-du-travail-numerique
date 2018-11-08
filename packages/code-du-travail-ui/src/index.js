@@ -10,3 +10,4 @@ export { default as SearchForm } from "./SearchForm";
 export { default as Section } from "./Section";
 export { default as Support } from "./Support";
 export { default as Tag } from "./Tag";
+export { default as AsideTitle } from "./AsideTitle";

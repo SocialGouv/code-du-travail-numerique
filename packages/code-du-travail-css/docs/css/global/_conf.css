@@ -9,8 +9,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(assets/fonts/muli-latin-400.woff2) format('woff2'),
-       url(assets/fonts/muli-latin-400.woff) format('woff');
+  src: url(assets/fonts/muli-latin-400.woff2) format("woff2"),
+    url(assets/fonts/muli-latin-400.woff) format("woff");
 }
 
 @font-face {
@@ -18,8 +18,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: url(assets/fonts/muli-latin-700.woff2) format('woff2'),
-       url(assets/fonts/muli-latin-700.woff) format('woff');
+  src: url(assets/fonts/muli-latin-700.woff2) format("woff2"),
+    url(assets/fonts/muli-latin-700.woff) format("woff");
 }
 
 /* Variables.
@@ -29,13 +29,14 @@ https://fontlibrary.org/fr/font/source-sans-pro
   /* Colors */
   --color-black: #0c0c0e;
   --color-blue: #005c99; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
-  --color-blue-light: #007FD8;
+  --color-blue-light: #007fd8;
   --color-blue-dark: #04234a;
   --color-element-background: #f5f7fa;
   --color-element-border: #c9d3df;
   --color-white: #fff;
+  --color-grey: #9ba3ac;
 
-  --color-title: #006AB2; /* https://webaim.org/resources/contrastchecker/?bcolor=006AB2&fcolor=ffffff */
+  --color-title: #006ab2; /* https://webaim.org/resources/contrastchecker/?bcolor=006AB2&fcolor=ffffff */
 
   /* https://webaim.org/resources/contrastchecker/?bcolor=f9f9fc&fcolor=4c5467 */
   --color-light-background: #f9f9fc;
@@ -66,18 +67,17 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-mark-background: #fff28e;
 
   /* Form focus */
-  --color-focus: #80BDFF;
-  --color-focus-shadow: #BFDEFF;
+  --color-focus: #80bdff;
+  --color-focus-shadow: #bfdeff;
 
   /* Breakpoints */
-  @custom-media  --bp-desktop (max-width: 1200px);
-  @custom-media  --bp-tablet (max-width: 980px);
-  @custom-media  --bp-mobile (max-width: 600px);
+  @custom-media --bp-desktop (max-width: 1200px);
+  @custom-media --bp-tablet (max-width: 980px);
+  @custom-media --bp-mobile (max-width: 600px);
 
-  --bp-desktop : 1200px;
-  --bp-tablet : 980px;
-  --bp-mobile : 600px;
-
+  --bp-desktop: 1200px;
+  --bp-tablet: 980px;
+  --bp-mobile: 600px;
 
   /* Border radius */
   --border-radius-base: 0.25rem;
@@ -101,7 +101,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
     --------------------------------------------------------------------------- */
   --font-size-base: 1rem;
   --line-height-base: 1.4;
-
+  --font-size-xsmall: 0.8rem;
   --font-size-small: 0.9rem;
 
   --font-size-h1: 1.6rem;
