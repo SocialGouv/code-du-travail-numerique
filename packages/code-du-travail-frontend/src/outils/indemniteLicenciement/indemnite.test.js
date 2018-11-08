@@ -110,6 +110,16 @@ const tests = [
     expected: 2256.9444444444443
   },
   {
+    title: "1500, 12ans 9mois, 2016-10-22",
+    data: {
+      salaires: Array.from({ length: 12 }).fill(1500),
+      primes: 0,
+      anciennete: 12 * 12 + 9,
+      isR12342: true
+    },
+    expected: 4375
+  },
+  {
     title: "4k+4k, 25 ans, 2016-10-22",
     data: {
       salaires: Array.from({ length: 12 }).fill(4000),
@@ -117,7 +127,7 @@ const tests = [
       anciennete: 25 * 12,
       isR12342: true
     },
-    expected: 34666.6666666666667
+    expected: 30333.333333333336
   }
 ];
 describe("getIndemnite", () => {
@@ -134,10 +144,19 @@ describe("getIndemnite", () => {
     });
     expect(res.indemnite).toEqual(0);
   });
+  it("should return indemnite when anciennete >= 8", () => {
+    const res = getIndemnite({
+      ...tests[0].data,
+      salaires: Array.from({ length: 12 }).fill(1500),
+      anciennete: 8
+    });
+    expect(res.indemnite).toEqual(250);
+  });
   it("should return 0 when anciennete < 12", () => {
     const res = getIndemnite({
       ...tests[0].data,
-      anciennete: 11
+      anciennete: 11,
+      isR12342: true
     });
     expect(res.indemnite).toEqual(0);
   });
