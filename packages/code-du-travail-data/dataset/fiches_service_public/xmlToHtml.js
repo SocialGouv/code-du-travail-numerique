@@ -54,6 +54,28 @@ const XSL = `
       <li><xsl:apply-templates/></li>
     </xsl:template>
 
+
+    <xsl:template match="LienInterne[audience='Particuliers']">
+      <a href="" target="_blank" rel="noreferrer, noopener">
+        <xsl:attribute name="href">https://www.service-public.fr/particuliers/vos-droits/<xsl:value-of select="@LienPublication"/></xsl:attribute>
+        <xsl:value-of select="."/>
+      </a>
+    </xsl:template>
+
+    <xsl:template match="ServiceEnLigne">
+      <a href="" target="_blank" rel="noreferrer, noopener">
+        <xsl:attribute name="href">https://www.service-public.fr/professionnels-entreprise/vos-droits/<xsl:value-of select="@LienPublication"/></xsl:attribute>
+        <xsl:value-of select="."/>
+      </a>
+    </xsl:template>
+
+    <xsl:template match="ServiceEnLigne">
+    <a class="bt" href="" target="_blank" rel="noreferrer, noopener">
+      <xsl:attribute name="href"><xsl:value-of select="@URL"/></xsl:attribute>
+      <xsl:value-of select="Titre"/>
+    </a>
+  </xsl:template>
+
     <xsl:template match="Tableau">
       <table>
         <thead>

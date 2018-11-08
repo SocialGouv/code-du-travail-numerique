@@ -19,12 +19,15 @@ const parseFiche = path => {
   const doc = new dom().parseFromString(read(path));
   const nodes = select(doc, "//Theme[@ID='N19806']");
   const audience = select(doc, "/Publication/Audience/text()")
-      .map(d => d.data)
-      .map(x => x.trim())
-      .filter(Boolean);
-  let audienceSlug = "particuliers"
-  if (audience.indexOf('Professionnels') !== -1 && audience.indexOf('Particuliers') === -1 ) {
-    audienceSlug = "professionnels-entreprises"
+    .map(d => d.data)
+    .map(x => x.trim())
+    .filter(Boolean);
+  let audienceSlug = "particuliers";
+  if (
+    audience.indexOf("Professionnels") !== -1 &&
+    audience.indexOf("Particuliers") === -1
+  ) {
+    audienceSlug = "professionnels-entreprises";
   }
   const id = select(doc, "/Publication/@ID")[0].value;
   if (nodes.length) {
@@ -87,7 +90,7 @@ const parseFiche = path => {
       select(doc, "/Publication/ListeSituations") &&
       select(doc, "/Publication/ListeSituations")[0] &&
       select(doc, "/Publication/ListeSituations")[0].textContent.trim();
-      const situationsHtml =
+    const situationsHtml =
       select(doc, "/Publication/ListeSituations") &&
       select(doc, "/Publication/ListeSituations")[0] &&
       xmlToHtml(select(doc, "/Publication/ListeSituations")[0].toString());
