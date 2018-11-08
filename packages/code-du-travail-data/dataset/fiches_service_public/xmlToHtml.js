@@ -22,11 +22,23 @@ const XSL = `
     </xsl:template>
 
     <xsl:template match="Chapitre">
-      <xsl:apply-templates/>
+      <div class="sp__Titre"><xsl:value-of select="Titre/Paragraphe"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
     </xsl:template>
 
-    <xsl:template match="Titre">
-      <div class="sp__Titre"><xsl:apply-templates/></div>
+    <xsl:template match="ASavoir">
+      <div class="sp__Info"><xsl:value-of select="Titre"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
+    </xsl:template>
+
+    <xsl:template match="ANoter">
+      <div class="sp__Info"><xsl:value-of select="Titre"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
+    </xsl:template>
+
+    <xsl:template match="Attention">
+      <div class="sp__Warning"><xsl:value-of select="Titre"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
     </xsl:template>
 
     <xsl:template match="MiseEnEvidence">
