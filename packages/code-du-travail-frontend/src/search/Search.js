@@ -186,7 +186,11 @@ class Search extends React.Component {
       this.setState({ query: e.target.value });
     }
   };
-
+  setResults = results => {
+    if (this.props.onResults && results && results.hits.total > 0) {
+      this.props.onResults(results.hits.hits);
+    }
+  };
   render() {
     const { query, queryResults } = this.state;
     return (
@@ -195,12 +199,19 @@ class Search extends React.Component {
         onFormSubmit={this.onFormSubmit}
         query={query}
         queryResults={queryResults}
+        onResults={this.setResults}
       />
     );
   }
 }
 
-const SearchView = ({ onChange, onFormSubmit, query, queryResults }) => (
+const SearchView = ({
+  onChange,
+  onFormSubmit,
+  query,
+  queryResults,
+  onResults
+}) => (
   <React.Fragment>
     <div className="section-white shadow-bottom">
       <Container>
@@ -215,7 +226,12 @@ const SearchView = ({ onChange, onFormSubmit, query, queryResults }) => (
             <Suggester
               onChange={onChange}
               query={query}
-              getResults={() => fetchResultsSuggest(query)}
+              getResults={() =>
+                fetchResultsSuggest(query).then(results => {
+                  onResults(results);
+                  return results;
+                })
+              }
             />
             <FormSearchButton />
           </form>
