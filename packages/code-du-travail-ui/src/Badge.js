@@ -9,7 +9,10 @@ import {
 } from "./flavors";
 
 const Badge = props => (
-  <div className={`badge badge__${getFlavor(props)}`} {...cleanProps(props)} />
+  <div
+    className={`badge ${getFlavor(props, "badge")}`}
+    {...cleanProps(props)}
+  />
 );
 
 Badge.propTypes = {

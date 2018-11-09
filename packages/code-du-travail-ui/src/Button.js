@@ -14,7 +14,7 @@ const Button = props => {
     <div
       tabIndex="0"
       role="button"
-      className={`btn ${getFlavor(props)}`}
+      className={`btn ${getFlavor(props, "btn")}`}
       onKeyDown={event => {
         /* Space & Enter */
         if (event.keyCode === 32 || event.keyCode === 13) {

@@ -9,7 +9,10 @@ import {
 } from "./flavors";
 
 const Alert = props => (
-  <div className={`alert alert__${getFlavor(props)}`} {...cleanProps(props)} />
+  <div
+    className={`alert ${getFlavor(props, "alert")}`}
+    {...cleanProps(props)}
+  />
 );
 
 Alert.propTypes = {

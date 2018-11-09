@@ -9,7 +9,7 @@ import {
 } from "./flavors";
 
 const Tag = props => (
-  <div className={`tag tag__${getFlavor(props)}`} {...cleanProps(props)} />
+  <div className={`tag ${getFlavor(props, "tag")}`} {...cleanProps(props)} />
 );
 
 Tag.propTypes = {
