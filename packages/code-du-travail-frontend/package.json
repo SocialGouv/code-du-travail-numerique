@@ -9,6 +9,7 @@
   "dependencies": {
     "@cdt/css": "^2.0.0",
     "@cdt/ui": "^2.0.0",
+    "@reach/dialog": "^0.1.2",
     "@sentry/browser": "^4.1.0",
     "@zeit/next-css": "^1.0.0",
     "date-fns": "^1.29.0",
@@ -27,7 +28,6 @@
     "react-feather": "1.1.0",
     "react-github-fork-ribbon": "0.5.1",
     "react-mathjax2": "^0.0.1",
-    "react-modal": "^3.4.4",
     "react-piwik": "^1.6.0",
     "react-star-rating-component": "1.4.1",
     "react-switch": "^3.0.4",

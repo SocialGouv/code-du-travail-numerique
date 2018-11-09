@@ -1,38 +1,18 @@
 import React from "react";
-import Modal from "react-modal";
 import dynamic from "next/dynamic";
+import { DialogContent, DialogOverlay } from "@reach/dialog";
 
 // prevent ConventionPicker in initial bundle
 const _ConventionPicker = dynamic(() => import("./ConventionPicker"), {
   loading: () => <p>Chargement des conventions...</p>
 });
 
-if (typeof document !== "undefined") {
-  Modal.setAppElement("body");
-}
-
-const modalStyles = {
-  overlay: {
-    zIndex: 10000,
-    backgroundColor: "rgba(0,0,0,0.8)"
-  },
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    overflow: "visible",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    width: "70%",
-    maxHeight: "90%"
-  }
-};
-
 class ConventionModal extends React.Component {
   state = {
     modalIsOpen: false
   };
+
+  inputRef = React.createRef();
 
   openModal = e => {
     e.preventDefault();
@@ -56,40 +36,43 @@ class ConventionModal extends React.Component {
           onClick={this.openModal}
           dangerouslySetInnerHTML={{ __html: text }}
         />
-        <Modal
-          style={modalStyles}
+        <DialogOverlay
           isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
+          style={{ background: "rgba(0, 0, 0, .5)" }}
+          initialFocusRef={this.inputRef}
+          onDismiss={this.closeModal}
         >
-          <h2>Convention collective</h2>
-          <div>
-            Saisissez l'identifiant de convention collective (IDCC), le nom de
-            la branche, ou le code NAF :
-            <div style={{ marginTop: 10 }}>
-              <_ConventionPicker />
-            </div>
+          <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
+            <h2>Convention collective</h2>
             <div>
-              <div style={{ marginTop: 20, fontWeight: "bold" }}>
-                Comment trouver ma convention collective ?
+              Saisissez l'identifiant de convention collective (IDCC), le nom de
+              la branche, ou le code NAF :
+              <div style={{ marginTop: 10 }}>
+                <_ConventionPicker ref={this.inputRef} />
               </div>
-              <li>
-                Elle doit figurer au <b>bulletin de paie</b>, et sur une notice
-                remise à l’embauche ou <b>sur le contrat de travail</b>
-              </li>
-              <li>
-                Sur l’affichage obligatoire dans l’entreprise (avec les
-                modalités de consultation en entreprise)
-              </li>
-              <div style={{ marginTop: 20, fontWeight: "bold" }}>
-                Quelle est la CCN applicable ?
+              <div>
+                <div style={{ marginTop: 20, fontWeight: "bold" }}>
+                  Comment trouver ma convention collective ?
+                </div>
+                <li>
+                  Elle doit figurer au <b>bulletin de paie</b>, et sur une
+                  notice remise à l’embauche ou <b>sur le contrat de travail</b>
+                </li>
+                <li>
+                  Sur l’affichage obligatoire dans l’entreprise (avec les
+                  modalités de consultation en entreprise)
+                </li>
+                <div style={{ marginTop: 20, fontWeight: "bold" }}>
+                  Quelle est la CCN applicable ?
+                </div>
+                <li>
+                  En principe celle relevant de l’activité principale dans
+                  l’entreprise pour les cas les plus simples.
+                </li>
               </div>
-              <li>
-                En principe celle relevant de l’activité principale dans
-                l’entreprise pour les cas les plus simples.
-              </li>
             </div>
-          </div>
-        </Modal>
+          </DialogContent>
+        </DialogOverlay>
       </React.Fragment>
     );
   }
