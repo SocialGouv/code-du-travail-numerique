@@ -1,0 +1,35 @@
+.FeedbackModal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-medium);
+}
+
+.FeedbackModal__intro {
+  width: 80%;
+}
+
+.Feedback__input {
+  margin-bottom: var(--spacing-medium);
+}
+
+.Feedback__form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  padding: var(--spacing-medium) 0;
+}
+
+.Feedback__action {
+  display: flex;
+  height: 5em;
+}
+.Feedback__button {
+  align-self: flex-start;
+  margin-right: var(--spacing-base);
+}
+
+.Feedback__status {
+  flex: 1;
+}

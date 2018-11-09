@@ -27,7 +27,7 @@ https://webaim.org/techniques/css/invisiblecontent/
   position: relative;
   margin-bottom: 2rem;
   box-shadow: var(--box-shadow-bottom);
-    /*
+  /*
     &:after {
         content: "";
         position: absolute;
@@ -42,7 +42,13 @@ https://webaim.org/techniques/css/invisiblecontent/
         border-radius: 100%;
         box-shadow: 0 0 10px #B7BCDF;
     }*/
+}
 
+.fontweight--normal {
+  font-weight: normal !important;
+}
+.fontweight--italic {
+  font-style: italic !important;
 }
 
 /* Display an external link icon before the text. */

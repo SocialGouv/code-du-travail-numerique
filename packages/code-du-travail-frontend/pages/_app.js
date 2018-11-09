@@ -2,6 +2,7 @@ import App, { Container } from "next/app";
 import React from "react";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 import "@cdt/css";
+import "@reach/dialog/styles.css";
 
 import "../src/piwik";
 import Header from "../src/layout/Header.js";
@@ -14,7 +15,6 @@ export default class MyApp extends App {
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
-
     return { pageProps };
   }
 
