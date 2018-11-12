@@ -127,7 +127,7 @@ def create_documents(index_name, type_name):
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
             'slug': slugify(val['titre'], to_lower=True),
-            'title': val['titre'],
+            'title': val['titre'] + ' du code du travail',
             'all_text': f"{val['titre']} {val['bloc_textuel']} {[tag.name for tag in val.get('tags', [])]}",
             'html': val['html'],
             'path': val['path'],
