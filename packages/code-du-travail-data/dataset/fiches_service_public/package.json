@@ -23,6 +23,7 @@
     "jest": "^23.6.0"
   },
   "scripts": {
+    "start": "node index.js > fiches-sp-travail.json",
     "test": "jest"
   }
 }

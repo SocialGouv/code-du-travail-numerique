@@ -546,11 +546,6 @@ module.exports = [
   },
   {
     url:
-      "http://travail-emploi.gouv.fr/emploi/developpement-de-l-emploi/creation-d-activite/article/les-immatriculations-et-declarations-obligatoires",
-    title: "Les immatriculations et déclarations obligatoires"
-  },
-  {
-    url:
       "http://travail-emploi.gouv.fr/emploi/developpement-de-l-emploi/creation-d-activite/article/l-aide-aux-chomeurs-createurs-ou-repreneurs-d-une-entreprise-accre",
     title:
       "L’aide aux chômeurs créateurs ou repreneurs d’une entreprise (ACCRE)"
@@ -587,11 +582,6 @@ module.exports = [
   },
   {
     url:
-      "http://travail-emploi.gouv.fr/dialogue-social/representants-du-personnel/article/les-delegues-du-personnel-elections",
-    title: "Les délégués du personnel : élections"
-  },
-  {
-    url:
       "http://travail-emploi.gouv.fr/droit-du-travail/remuneration-et-participation-financiere/remuneration/article/le-cheque-emploi-service-universel-cesu-declaratif",
     title: 'Le chèque emploi-service universel (CESU) "déclaratif"'
   },
@@ -599,11 +589,6 @@ module.exports = [
     url:
       "http://travail-emploi.gouv.fr/droit-du-travail/remuneration-et-participation-financiere/remuneration/article/le-cheque-emploi-service-universel-cesu-prefinance",
     title: 'Le chèque emploi-service universel (CESU) "préfinancé"'
-  },
-  {
-    url:
-      "http://travail-emploi.gouv.fr/droit-du-travail/remuneration-et-participation-financiere/remuneration/article/la-reduction-de-charges-patronales-sur-les-bas-et-moyens-salaires",
-    title: "La réduction de charges patronales sur les bas et moyens salaires"
   },
   {
     url:
@@ -803,11 +788,6 @@ module.exports = [
     url:
       "http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/contrats-de-travail/article/les-activites-d-adultes-relais",
     title: "Les activités d’adultes relais"
-  },
-  {
-    url:
-      "http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/article/le-cumul-d-emplois-100984",
-    title: "Le cumul d’emplois"
   },
   {
     url:
@@ -1057,11 +1037,6 @@ module.exports = [
       "http://travail-emploi.gouv.fr/emploi/insertion-dans-l-emploi/insertion-par-l-activite-economique/article/groupements-d-employeurs-pour-l-insertion-et-la-qualification-geiq",
     title:
       "Groupements d’employeurs pour l’insertion et la qualification (GEIQ)"
-  },
-  {
-    url:
-      "http://travail-emploi.gouv.fr/droit-du-travail/relations-au-travail/pouvoir-de-direction/article/les-limites-au-pouvoir-de-surveillance-de-l-employeur",
-    title: "Les limites au pouvoir de surveillance de l’employeur"
   },
   {
     url:

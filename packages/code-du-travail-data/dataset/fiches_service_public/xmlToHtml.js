@@ -22,11 +22,23 @@ const XSL = `
     </xsl:template>
 
     <xsl:template match="Chapitre">
-      <xsl:apply-templates/>
+      <div class="sp__Titre"><xsl:value-of select="Titre/Paragraphe"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
     </xsl:template>
 
-    <xsl:template match="Titre">
-      <div class="sp__Titre"><xsl:apply-templates/></div>
+    <xsl:template match="ASavoir">
+      <div class="sp__Info"><xsl:value-of select="Titre"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
+    </xsl:template>
+
+    <xsl:template match="ANoter">
+      <div class="sp__Info"><xsl:value-of select="Titre"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
+    </xsl:template>
+
+    <xsl:template match="Attention">
+      <div class="sp__Warning"><xsl:value-of select="Titre"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
     </xsl:template>
 
     <xsl:template match="MiseEnEvidence">
@@ -53,6 +65,28 @@ const XSL = `
     <xsl:template match="Liste/Item">
       <li><xsl:apply-templates/></li>
     </xsl:template>
+
+
+    <xsl:template match="LienInterne[audience='Particuliers']">
+      <a href="" target="_blank" rel="noreferrer, noopener">
+        <xsl:attribute name="href">https://www.service-public.fr/particuliers/vos-droits/<xsl:value-of select="@LienPublication"/></xsl:attribute>
+        <xsl:value-of select="."/>
+      </a>
+    </xsl:template>
+
+    <xsl:template match="ServiceEnLigne">
+      <a href="" target="_blank" rel="noreferrer, noopener">
+        <xsl:attribute name="href">https://www.service-public.fr/professionnels-entreprise/vos-droits/<xsl:value-of select="@LienPublication"/></xsl:attribute>
+        <xsl:value-of select="."/>
+      </a>
+    </xsl:template>
+
+    <xsl:template match="ServiceEnLigne">
+    <a class="bt" href="" target="_blank" rel="noreferrer, noopener">
+      <xsl:attribute name="href"><xsl:value-of select="@URL"/></xsl:attribute>
+      <xsl:value-of select="Titre"/>
+    </a>
+  </xsl:template>
 
     <xsl:template match="Tableau">
       <table>
