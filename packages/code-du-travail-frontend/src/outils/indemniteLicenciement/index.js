@@ -64,14 +64,14 @@ class CalculateurIndemnite extends React.Component {
       indemniteData.calculCC && indemniteData.calculCC.indemnite;
 
     const showResult = indemniteData.errors.length === 0;
-    let ResultComponent;
+    let resultComponent;
     if (
       hasIndemniteCC &&
       indemniteData.calculCC.indemnite > indemniteData.indemnite
     ) {
-      ResultComponent = <this.ResultCC {...indemniteData.calculCC} />;
+      resultComponent = <this.ResultCC {...indemniteData.calculCC} />;
     } else {
-      ResultComponent = <ResultDetail {...indemniteData} />;
+      resultComponent = <ResultDetail {...indemniteData} />;
     }
 
     return (
@@ -120,7 +120,7 @@ class CalculateurIndemnite extends React.Component {
               </Container>
             )}
           </div>
-          {showResult && ResultComponent}
+          {showResult && resultComponent}
         </React.Fragment>
       </Container>
     );

@@ -9,7 +9,7 @@ import {
 } from "./flavors";
 
 const Button = props => {
-  const { onPress, onClick, onKeyUp } = props;
+  const { onClick, onKeyUp } = props;
   return (
     <div
       tabIndex="0"
@@ -19,9 +19,7 @@ const Button = props => {
         /* Space & Enter */
         if (event.keyCode === 32 || event.keyCode === 13) {
           event.preventDefault();
-          if (onPress) {
-            onPress();
-          } else if (onClick) {
+          if (onClick) {
             onClick();
           }
         }
@@ -30,9 +28,6 @@ const Button = props => {
         }
       }}
       onClick={event => {
-        if (onPress) {
-          onPress();
-        }
         if (onClick) {
           onClick(event);
         }
@@ -44,7 +39,6 @@ const Button = props => {
 
 Button.propTypes = {
   ...flavorsPropTypes,
-  onPress: PropTypes.func,
   onKeyUp: PropTypes.func,
   onClick: PropTypes.func,
   style: PropTypes.object
