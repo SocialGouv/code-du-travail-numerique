@@ -52,7 +52,7 @@ module.exports = routes()
     page: "idcc",
     pattern: "/idcc/:slug"
   })
-  // http://localhost:3000/outils/indeminite-licenciement
+  // http://localhost:3000/outils/indemnite-licenciement
   .add({
     name: "outils",
     page: "outils",

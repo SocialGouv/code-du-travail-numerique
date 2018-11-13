@@ -2,21 +2,29 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { PrevNextStepper } from "./PrevNextStepper";
 import { inputStyle } from "./stepStyles";
+import { PrevNextStepper } from "./PrevNextStepper";
 
-class Primes extends React.Component {
+class Age extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func.isRequired,
     value: PropTypes.number,
+    onChange: PropTypes.func.isRequired,
     onPrevious: PropTypes.func.isRequired,
     onNext: PropTypes.func.isRequired,
     nextDisabled: PropTypes.bool
   };
   static defaultProps = {
     value: 0,
-    nextDisabled: false
+    nextDisabled: true
   };
+
+  state = {
+    nextDisabled: this.props.value === ""
+  };
+
+  componentWillReceiveProps(props) {
+    this.setState({ nextDisabled: props.value === "0" || props.value === "" });
+  }
 
   render() {
     const { onChange, value, onPrevious, onNext, nextDisabled } = this.props;
@@ -25,28 +33,25 @@ class Primes extends React.Component {
       <React.Fragment>
         <Section light>
           <React.Fragment>
-            <h2>
-              Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
-            </h2>
+            <h2>Quel est votre age ?</h2>
             <input
               type="number"
-              onChange={e => onChange(parseFloat(e.target.value) || 0)}
               onFocus={e => {
                 if (e.target.value === "0") {
                   e.target.value = "";
                 }
               }}
+              onChange={e => onChange(parseFloat(e.target.value) || 0)}
               value={value}
-              style={{ width: 150, ...inputStyle }}
-            />{" "}
-            €
+              style={{ width: 180, ...inputStyle }}
+            />
           </React.Fragment>
         </Section>
         <Container>
           <PrevNextStepper
             onPrev={onPrevious}
             onNext={onNext}
-            nextDisabled={nextDisabled}
+            nextDisabled={nextDisabled || this.state.nextDisabled}
           />
         </Container>
       </React.Fragment>
@@ -54,4 +59,4 @@ class Primes extends React.Component {
   }
 }
 
-export { Primes };
+export { Age };

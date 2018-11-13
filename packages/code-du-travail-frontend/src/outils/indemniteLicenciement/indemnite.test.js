@@ -11,13 +11,13 @@ const tests = [
     expected: 625
   },
   {
-    title: "4k, 15m, pas de date",
+    title: "4k, 15 ans, pas de date",
     data: {
       salaires: Array.from({ length: 12 }).fill(4000),
       primes: 0,
-      anciennete: 15
+      anciennete: 180
     },
-    expected: 1250
+    expected: 16666.666666666664
   },
   {
     title: "2k, 15m, pas de date, faute grave",
@@ -45,7 +45,7 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(2000),
       primes: 0,
       anciennete: 15,
-      dateFinContrat: "2018-10-22"
+      isR12342: false
     },
     expected: 625
   },
@@ -55,7 +55,7 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(2000),
       primes: 0,
       anciennete: 15,
-      dateFinContrat: "2016-10-22"
+      isR12342: true
     },
     expected: 500
   },
@@ -65,7 +65,7 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(4000),
       primes: 0,
       anciennete: 25,
-      dateFinContrat: "2018-10-22"
+      isR12342: false
     },
     expected: 2083.3333333333335
   },
@@ -75,7 +75,7 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(4000),
       primes: 0,
       anciennete: 25,
-      dateFinContrat: "2016-10-22"
+      isR12342: true
     },
     expected: 1666.6666666666667
   },
@@ -85,7 +85,7 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(2000),
       primes: 4000,
       anciennete: 15,
-      dateFinContrat: "2018-10-22"
+      isR12342: false
     },
     expected: 729.1666666666666
   },
@@ -95,7 +95,7 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(2000),
       primes: 4000,
       anciennete: 15,
-      dateFinContrat: "2016-10-22"
+      isR12342: true
     },
     expected: 583.3333333333334
   },
@@ -105,19 +105,19 @@ const tests = [
       salaires: Array.from({ length: 12 }).fill(4000),
       primes: 4000,
       anciennete: 25,
-      dateFinContrat: "2018-10-22"
+      isR12342: false
     },
     expected: 2256.9444444444443
   },
   {
-    title: "4k+4k, 25m, 2016-10-22",
+    title: "4k+4k, 25 ans, 2016-10-22",
     data: {
       salaires: Array.from({ length: 12 }).fill(4000),
       primes: 4000,
-      anciennete: 25,
-      dateFinContrat: "2016-10-22"
+      anciennete: 25 * 12,
+      isR12342: true
     },
-    expected: 1805.5555555555554
+    expected: 34666.6666666666667
   }
 ];
 describe("getIndemnite", () => {

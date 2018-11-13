@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
+import { PrevNextStepper } from "../PrevNextStepper";
+import { labelStyle, radioContainerStyle } from "../stepStyles";
 
-import { PrevNextStepper } from "./PrevNextStepper";
-import { labelStyle, radioContainerStyle } from "./stepStyles";
-
-class DateFinContrat extends React.Component {
+class LicenciementEco extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.bool,
@@ -20,33 +19,30 @@ class DateFinContrat extends React.Component {
 
   render() {
     const { onChange, value, onPrevious, onNext, nextDisabled } = this.props;
+
     return (
       <React.Fragment>
         <Section light>
           <React.Fragment>
-            <h2>
-              Est ce que la date de fin de votre contrat se situe avant le
-              <b> 26 Août 2017</b>
-              &nbsp;?
-            </h2>
+            <h2>Est ce que le motif de votre licenciement est économique ?</h2>
             <div style={radioContainerStyle}>
               <label style={labelStyle}>
                 <input
                   type="radio"
                   onChange={() => onChange(true)}
-                  name="isR12342"
+                  name="affiliation"
                   checked={value === true}
-                />
-                <span>Oui</span>
+                />{" "}
+                Oui
               </label>
               <label style={labelStyle}>
                 <input
                   type="radio"
                   onChange={() => onChange(false)}
-                  name="isR12342"
+                  name="affiliation"
                   checked={value === false}
-                />
-                <span>Non</span>
+                />{" "}
+                Non
               </label>
             </div>
           </React.Fragment>
@@ -63,4 +59,4 @@ class DateFinContrat extends React.Component {
   }
 }
 
-export { DateFinContrat };
+export { LicenciementEco };

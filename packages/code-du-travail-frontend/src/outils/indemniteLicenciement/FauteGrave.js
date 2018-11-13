@@ -1,49 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Section } from "@cdt/ui";
+import { Container, Section } from "@cdt/ui";
 
-import { PrevNextStepper } from "./PrevNextStepper";
 import { SimpleSwitch } from "./SimpleSwitch";
+import { PrevNextStepper } from "./PrevNextStepper";
 
 class FauteGrave extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    onComplete: PropTypes.func.isRequired,
+    value: PropTypes.bool,
     onPrevious: PropTypes.func.isRequired,
-    nextDisabled: PropTypes.bool,
-    checked: PropTypes.bool
+    onNext: PropTypes.func.isRequired,
+    nextDisabled: PropTypes.bool
   };
 
   static defaultProps = {
-    ckecked: false,
+    value: false,
     nextDisabled: false
   };
 
   render() {
-    const {
-      onChange,
-      checked,
-      onComplete,
-      onPrevious,
-      nextDisabled
-    } = this.props;
+    const { onChange, value, onPrevious, onNext, nextDisabled } = this.props;
     return (
-      <Section light>
-        <React.Fragment>
-          <h2>Faute grave</h2>
-          <SimpleSwitch
-            checked={checked}
-            id="licencie-faute-grave"
-            label="Êtes-vous licencié(e) pour faute grave ?"
-            onChange={onChange}
-          />
+      <React.Fragment>
+        <Section light>
+          <React.Fragment>
+            <h2>Faute grave</h2>
+            <SimpleSwitch
+              checked={value}
+              id="licencie-faute-grave"
+              label="Êtes-vous licencié(e) pour faute grave ?"
+              onChange={onChange}
+            />
+          </React.Fragment>
+        </Section>
+        <Container>
           <PrevNextStepper
             onPrev={onPrevious}
-            onNext={onComplete}
+            onNext={onNext}
             nextDisabled={nextDisabled}
           />
-        </React.Fragment>
-      </Section>
+        </Container>
+      </React.Fragment>
     );
   }
 }

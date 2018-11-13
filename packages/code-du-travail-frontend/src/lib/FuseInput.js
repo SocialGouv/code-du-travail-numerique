@@ -1,10 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import Fuse from "fuse.js";
 import getSlug from "speakingurl";
 import memoizee from "memoizee";
 
 import "./FuseInput.css";
+import { propTypes } from "@cdt/ui/lib/flavors";
 
 const DEFAULT_FUSE_OPTIONS = {
   shouldSort: true,
@@ -79,8 +81,22 @@ const renderSuggestion = query => suggestion => (
 );
 
 class FuseInput extends React.Component {
+  static defaultProps = {
+    data: PropTypes.arrayOf(PropTypes.object),
+    placeholder: PropTypes.string,
+    className: PropTypes.string,
+    value: PropTypes.string
+  };
+
+  static defaultProps = {
+    data: [],
+    className: "full-width",
+    placeholder: "",
+    value: ""
+  };
+
   state = {
-    value: "",
+    value: this.props.value,
     suggestions: []
   };
   componentDidMount() {
@@ -115,7 +131,7 @@ class FuseInput extends React.Component {
 
     const inputProps = {
       value,
-      className: "full-width",
+      className: this.props.className,
       onChange: this.onChange,
       placeholder: this.props.placeholder
     };

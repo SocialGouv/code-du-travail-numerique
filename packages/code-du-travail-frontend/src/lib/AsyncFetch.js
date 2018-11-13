@@ -42,7 +42,6 @@ class AsyncFetch extends React.Component {
               });
           })
           .catch(e => {
-            console.log("e", e);
             this.mounted &&
               this.setState({
                 status: "error",

@@ -10,12 +10,12 @@ export const flavors = [
 ];
 
 // return the 1st truthy prop that is one of an Button versions
-export const getFlavor = props => {
+export const getFlavor = (props, prefix = "btn") => {
   const versionProps = Object.keys(props).filter(
     // ensure value is truthy
     flavor => flavors.indexOf(flavor) > -1 && !!props[flavor]
   );
-  return (versionProps.length && versionProps[0]) || "";
+  return (versionProps.length && `${prefix}__${versionProps[0]}`) || "";
 };
 
 // remove falsy values
