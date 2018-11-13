@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 import { PrevNextStepper } from "../PrevNextStepper";
-import { radioContainerStyle, labelStyle } from "../steps_styles";
+import { radioContainerStyle, labelStyle } from "../stepStyles";
 
 class AffiliationOpe extends React.Component {
   static propTypes = {
