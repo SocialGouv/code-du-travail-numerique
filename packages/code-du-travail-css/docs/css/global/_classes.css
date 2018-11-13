@@ -1,12 +1,18 @@
 /* Visually hide content, it will still be read by a screen reader.
-https://webaim.org/techniques/css/invisiblecontent/
---------------------------------------------------------------------------- */
-.hidden {
+https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden--------------------------------------------------------------------------- */
+.hidden:not(:focus):not(:active) {
   position: absolute;
-  left: -10000px;
-  top: auto;
+
   width: 1px;
   height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 

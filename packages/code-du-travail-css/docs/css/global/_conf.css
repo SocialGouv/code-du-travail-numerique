@@ -28,13 +28,20 @@ https://fontlibrary.org/fr/font/source-sans-pro
 :root {
   /* Colors */
   --color-black: #0c0c0e;
-  --color-blue: #005c99; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
-  --color-blue-light: #007fd8;
-  --color-blue-dark: #04234a;
+  --color-almost-black: #26353f;
+  --color-blue: #0053b3; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
+  --color-blue-light: #006be6;
+  --color-blue-dark: #003b80;
+
   --color-element-background: #f5f7fa;
   --color-element-border: #c9d3df;
   --color-white: #fff;
-  --color-grey: #9ba3ac;
+
+  --color-lighter-grey: #ebeff3;
+  --color-light-grey: ##c9d3df;
+  --color-grey: #adb9c9;
+  --color-dark-grey: #8393a7;
+  --color-darker-grey: #53657d;
 
   --color-title: #006ab2; /* https://webaim.org/resources/contrastchecker/?bcolor=006AB2&fcolor=ffffff */
 

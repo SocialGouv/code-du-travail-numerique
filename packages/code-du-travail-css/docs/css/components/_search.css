@@ -1,27 +1,94 @@
 .search {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
 }
 
 .search__form {
+  display: flex;
+  padding: var(--spacing-small) 0;
+  position: relative;
+  height: 5rem;
+  & button {
+    margin-left: 5px;
+  }
+}
 
-    display: flex;
-    padding: var(--spacing-small) 0;
+.search__fields {
+  flex: 1 1 auto;
+  display: flex;
+  border: 1px solid var(--color-element-border);
+  border-radius: var(--border-radius-base);
+  &:focus {
+    border: 1px solid var(--color-focus);
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
+}
+.search__facets {
+  flex: 1 1 10%;
+  display: flex;
+  align-items: center;
+  margin: 0.8rem;
+  border: none;
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-grey);
+}
+.facet-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 calc(var(--spacing-small) / 2);
+}
+.facet-value {
+  appearance: none;
+  border: none;
+  color: var(--color-almost-black);
+  font-size: var(--font-size-small);
+  border: 1px solid transparent;
+  background-color: transparent;
+  width: auto;
+  flex: 1 1 auto;
+  font-style: italic;
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+  &:-moz-focusring {
+    border: 1px solid var(--color-focus);
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
+  &:focus-visible {
+    border: 1px solid var(--color-focus);
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
+}
+.search__input {
+  flex: 1 0 90%;
+  appearance: none;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
 
-    & .search__input {
-        flex: 1 1 auto;
-        min-width: 14rem; /* Never shrink so small that we can't read the placeholder. */
-    }
+  background: var(--color-white);
 
-    & button {
-        margin-left: 5px;
-    }
-
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  padding-left: var(--spacing-small);
+  line-height: 3.625rem;
+  &:focus {
+    border: none;
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
 }
 
 .search__loading {
-    position: absolute;
-    bottom: -1em;
-    margin: 0;
-    width: 100%;
+  position: absolute;
+  bottom: -1em;
+  margin: 0;
+  width: 100%;
 }

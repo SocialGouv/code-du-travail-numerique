@@ -122,7 +122,9 @@ class Theme extends React.Component {
             )) ||
             null}
           {theme &&
-            theme.type !== "root" && <SearchQuery query={theme.title} excludeSources={["themes"]} />}
+            theme.type !== "root" && (
+              <SearchQuery query={theme.title} excludeSources="themes" />
+            )}
         </Container>
       </React.Fragment>
     );
