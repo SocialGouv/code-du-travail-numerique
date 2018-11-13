@@ -21,9 +21,9 @@ router.get(`${BASE_URL}/search`, async ctx => {
     let mustNot = []
     if (excludeSources) {
       mustNot = excludeSources.split(',').map(source => ({
-        'query_string': {
-          'default_field': 'source',
-          'query': source.trim(),
+        query_string: {
+          default_field: 'source',
+          query: source.trim(),
         },
       }))
     }
@@ -37,8 +37,21 @@ router.get(`${BASE_URL}/search`, async ctx => {
 router.get(`${BASE_URL}/suggest`, async ctx => {
   try {
     let query = ctx.request.query.q
+
+    let excludeSources = ctx.request.query.excludeSources
+    let mustNot = []
+    if (excludeSources) {
+      mustNot = excludeSources.split(',').map(source => ({
+        query_string: {
+          default_field: 'source',
+          query: source.trim(),
+        },
+      }))
+    }
+
     ctx.body = await codeDuTravailNumerique.search({
       query,
+      mustNot,
       fragmentSize: 200,
       size: 5,
       _source: ['title', 'source', 'slug', 'anchor'],
