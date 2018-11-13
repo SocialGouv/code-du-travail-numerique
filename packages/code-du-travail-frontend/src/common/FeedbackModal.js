@@ -7,7 +7,7 @@ import { getRouteBySource } from "../sources";
 
 const motifLabels = [
   "Les informations proposées ne sont pas à jour",
-  "Les informations me paraissent erroné",
+  "Les informations me paraissent erronées",
   "Les informations me paraissent incomplètes",
   "Les informations me paraissent hors-sujet",
   "Je n'ai pas trouvé la réponse à ma question"
