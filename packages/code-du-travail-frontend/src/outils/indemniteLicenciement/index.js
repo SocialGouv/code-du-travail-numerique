@@ -6,7 +6,6 @@ import getIndemnite from "./indemnite";
 import { Stepper } from "./Stepper";
 import { initialData, steps } from "./casGeneral";
 import { ResultDetail } from "./ResultDetail";
-import { Anciennete } from "./Anciennete";
 
 const containerRef = React.createRef();
 

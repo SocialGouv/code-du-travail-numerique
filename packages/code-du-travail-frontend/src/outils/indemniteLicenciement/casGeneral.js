@@ -6,11 +6,11 @@ import { DateFinContrat } from "./DateFinContrat";
 import { ChoixCC } from "./ChoixCCN";
 
 export const steps = [
+  { component: DateFinContrat, key: "isR12342", type: "base" },
   { component: Anciennete, key: "anciennete", type: "base" },
   { component: FauteGrave, key: "fauteGrave", type: "base" },
   { component: Salaire, key: "salaires", type: "base" },
   { component: Primes, key: "primes", type: "base" },
-  { component: DateFinContrat, key: "isR12342", type: "base" },
   { component: ChoixCC, key: "convention", type: "base" }
 ];
 
