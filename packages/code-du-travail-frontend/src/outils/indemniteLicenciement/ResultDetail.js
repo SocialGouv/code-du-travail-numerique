@@ -42,7 +42,7 @@ const getJaxFormula = ({
       // indemnite = 1 / 5 * c * 10 + 2 / 5 * c * d
       return `(1/5  * ${round(meilleurMoyenne)} * 10) + (2/5 * ${round(
         meilleurMoyenne
-      )} * (${Math.floor(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete / 12)} - 10))`;
     }
   } else {
     if (isSmallAnciennete) {
@@ -53,7 +53,7 @@ const getJaxFormula = ({
       //indemnite = 1 / 4 * c * 10 + 1 / 3 * c * d
       return `(1/4 * ${round(meilleurMoyenne)} * 10) + (1/3 * ${round(
         meilleurMoyenne
-      )} * (${Math.floor(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete / 12)} - 10))`;
     }
   }
 };
