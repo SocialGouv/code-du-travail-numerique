@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { inputStyle } from "./steps_styles";
+import { inputStyle } from "./stepStyles";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class Anciennete extends React.Component {

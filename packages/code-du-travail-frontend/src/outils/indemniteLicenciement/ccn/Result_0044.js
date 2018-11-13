@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 import MathJax from "react-mathjax2";
-import { headStyle } from "../steps_styles";
+import { headStyle } from "../stepStyles";
 const round = fl => parseFloat((fl * 100) / 100).toFixed(2);
 
 const labelize = value => {

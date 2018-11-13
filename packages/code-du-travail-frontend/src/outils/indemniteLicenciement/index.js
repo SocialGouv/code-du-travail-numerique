@@ -4,7 +4,7 @@ import { Alert, Button, Container } from "@cdt/ui";
 import dynamic from "next/dynamic";
 import getIndemnite from "./indemnite";
 import { Stepper } from "./Stepper";
-import { initialData, steps } from "./cas_general";
+import { initialData, steps } from "./casGeneral";
 import { ResultDetail } from "./ResultDetail";
 
 const containerRef = React.createRef();

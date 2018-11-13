@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
-import { labelStyle, radioContainerStyle } from "./steps_styles";
+import { labelStyle, radioContainerStyle } from "./stepStyles";
 
 class DateFinContrat extends React.Component {
   static propTypes = {

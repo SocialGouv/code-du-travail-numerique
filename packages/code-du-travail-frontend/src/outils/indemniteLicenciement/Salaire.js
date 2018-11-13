@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
-import { inputStyle } from "./steps_styles";
+import { inputStyle } from "./stepStyles";
 
 const times = num => Array.from({ length: num }, (_, i) => i);
 

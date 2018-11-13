@@ -5,7 +5,7 @@ import Autosuggest from "react-autosuggest";
 import { branches } from "./ccn/branches";
 import { PrevNextStepper } from "./PrevNextStepper";
 
-import { labelStyle, radioContainerStyle } from "./steps_styles";
+import { labelStyle, radioContainerStyle } from "./stepStyles";
 
 class ChoixCC extends React.Component {
   static propTypes = {
