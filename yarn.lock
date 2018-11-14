@@ -5927,11 +5927,6 @@ csstype@^2.5.2:
   resolved "https://registry.npmjs.org/csstype/-/csstype-2.5.7.tgz#bf9235d5872141eccfb2d16d82993c6b149179ff"
   integrity sha512-Nt5VDyOTIIV4/nRFswoCKps1R5CD1hkiyjBE9/thNaNZILLEviVw9yWQw15+O+CpNjQKB/uvdcxFFOrSflY3Yw==
 
-csv-parse@^3.1.3:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-3.2.0.tgz#9043b5921e7ecd5e3110947df1ef00d290dbeca7"
-  integrity sha512-1IBQ7PYHc5h6AXS4nyGsmicttbpUbNvlsgKxhvouh+kRaVug8xBWSiIeWdbPUQgjKG88hEGYjdU29fX73mo+6Q==
-
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npmjs.org/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -7771,13 +7766,6 @@ fast-safe-stringify@^2.0.4:
   version "2.0.6"
   resolved "https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.0.6.tgz#04b26106cc56681f51a044cfc0d76cf0008ac2c2"
   integrity sha512-q8BZ89jjc+mz08rSxROs8VsrBBcn1SIw1kq9NjolL509tkABRk9io01RAjSaEv1Xb2uFLt8VtRiZbGp5H8iDtg==
-
-fast-xml-parser@^3.12.9:
-  version "3.12.9"
-  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.12.9.tgz#7d285baecc7105a544816b1609d5c46679b9416a"
-  integrity sha512-2/YYHpCmqq3K+loiQI/ohAnVPNDXJyL1U/bKDw7NM9hDonnqGjQ+fOzvleTwBLIssc9B2Og5u2H1hoWhH3ZSqg==
-  dependencies:
-    nimnjs "^1.3.2"
 
 fastparse@^1.1.1:
   version "1.1.1"
@@ -12554,24 +12542,6 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
-
-nimn-date-parser@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/nimn-date-parser/-/nimn-date-parser-1.0.0.tgz#4ce55d1fd5ea206bbe82b76276f7b7c582139351"
-  integrity sha512-1Nf+x3EeMvHUiHsVuEhiZnwA8RMeOBVTQWfB1S2n9+i6PYCofHd2HRMD+WOHIHYshy4T4Gk8wQoCol7Hq3av8Q==
-
-nimn_schema_builder@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/nimn_schema_builder/-/nimn_schema_builder-1.1.0.tgz#b370ccf5b647d66e50b2dcfb20d0aa12468cd247"
-  integrity sha512-DK5/B8CM4qwzG2URy130avcwPev4uO0ev836FbQyKo1ms6I9z/i6EJyiZ+d9xtgloxUri0W+5gfR8YbPq7SheA==
-
-nimnjs@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/nimnjs/-/nimnjs-1.3.2.tgz#a6a877968d87fad836375a4f616525e55079a5ba"
-  integrity sha512-TIOtI4iqkQrUM1tiM76AtTQem0c7e56SkDZ7sj1d1MfUsqRcq2ZWQvej/O+HBTZV7u/VKnwlKTDugK/75IRPPw==
-  dependencies:
-    nimn-date-parser "^1.0.0"
-    nimn_schema_builder "^1.0.0"
 
 no-case@^2.2.0, no-case@^2.3.2:
   version "2.3.2"

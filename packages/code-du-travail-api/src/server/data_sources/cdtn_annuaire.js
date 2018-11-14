@@ -8,7 +8,7 @@ const elasticsearchTypeName = "cdtn_annuaire";
  *
  * @returns {Object} An elasticsearch response.
  */
-async function getItemsByTypeForDepartement(params) {
+async function getItemsBydistance(params) {
   const { distance = "30km", coord } = params;
 
   let query = {
@@ -34,5 +34,5 @@ async function getItemsByTypeForDepartement(params) {
 }
 
 module.exports = {
-  getItemsByTypeForDepartement
+  getItemsBydistance
 };

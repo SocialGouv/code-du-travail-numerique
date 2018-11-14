@@ -1,4 +1,5 @@
 const Router = require("koa-router");
+const fetch = require("node-fetch");
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
 const cdtnAnnuaire = require("../data_sources/cdtn_annuaire.js");
@@ -179,10 +180,23 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
  * @param {string} :id The item ID to fetch.
  * @returns {Object} Result.
  */
-router.get(`${BASE_URL}/inspection-travail/:code`, async ctx => {
-  ctx.body = await cdtnAnnuaire.getItemsByTypeForDepartement({
-    code: ctx.params.code.slice(0, 2),
-    type: "inspection-travail"
+router.get(`${BASE_URL}/annuaire/search`, async ctx => {
+  let lon, lat;
+  let coordData = ctx.request.query.coord;
+  if (coordData) {
+    [lon, lat] = ctx.request.query.coord.split(":");
+  } else {
+    const address = ctx.request.query.q;
+    const response = await fetch(
+      `https://api-adresse.data.gouv.fr/search/?q=${address}&type=housenumber&limit=1`
+    );
+    const results = await response.json();
+
+    [lon, lat] = results.features[0].geometry.coordinates;
+  }
+
+  ctx.body = await cdtnAnnuaire.getItemsBydistance({
+    coord: { lon, lat }
   });
 });
 

@@ -6,7 +6,6 @@ import os
 from search import settings
 from search.indexing.strip_html import strip_html
 from search.extraction.code_du_travail.cleaned_tags.data import CODE_DU_TRAVAIL_DICT
-from search.extraction.conventions_collectives_nationales.data import CONVENTIONS_COLLECTIVES
 from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRAVAIL
 from search.extraction.fiches_service_public.data import FICHES_SERVICE_PUBLIC
 from search.extraction.themes_front.data import THEMES
@@ -21,6 +20,12 @@ logger.setLevel(logging.INFO)
 
 CDTN_DOCUMENTS = []
 
+def flatten(item):
+    if isinstance(item, list):
+        return ", ".join(item)
+    else:
+        return item
+
 def parse_hash_tags(tags):
     newTags = []
     for key, value in tags.items():
@@ -28,7 +33,7 @@ def parse_hash_tags(tags):
             for entry in value:
                 newTags.append(key + ":" + (str(entry) or ""))
         else:
-          newTags.append(key + ":" + (str(value) or ""))
+            newTags.append(key + ":" + (str(value) or ""))
     return newTags
 
 def populate_cdtn_documents():
@@ -56,7 +61,7 @@ def populate_cdtn_documents():
                 title = "IDCC " + key + " : " +  val
                 tags = []
                 if tags_data.get(key) and tags_data.get(key).get("tags"):
-                  tags += parse_hash_tags(tags_data.get(key).get("tags"))
+                    tags += parse_hash_tags(tags_data.get(key).get("tags"))
 
                 CDTN_DOCUMENTS.append({
                     'source': 'idcc',
@@ -69,12 +74,13 @@ def populate_cdtn_documents():
 
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
+        tag_names = [tag.name for tag in val.get('tags', [])]
         CDTN_DOCUMENTS.append({
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
             'slug': slugify(val['titre'], to_lower=True),
             'title': val['titre'],
-            'all_text': f"{val['titre']} {val['bloc_textuel']} {[tag.name for tag in val.get('tags', [])]}",
+            'all_text': f"{val['titre']} {val['bloc_textuel']} {tag_names}",
             'html': val['html'],
             'path': val['path'],
             'date_debut': val['date_debut'],
@@ -125,6 +131,8 @@ def populate_cdtn_documents():
         for val in data:
             faq_text = strip_html(val['reponse'])
             tags = parse_hash_tags(val.get("tags"))
+            theme = val.get('tags', {}).get('theme', '')
+            branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
                 'slug': slugify(val['question'], to_lower=True),
@@ -134,7 +142,7 @@ def populate_cdtn_documents():
                 'tags': tags,
                 'date': val.get('date'),
                 'author':  val['source'] if 'source' in val else 'DIRRECTE',
-                'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
+                'all_text': f"{val['question']} {faq_text} {theme} {branche}",
             })
 
 
@@ -144,6 +152,8 @@ def populate_cdtn_documents():
         for val in data:
             faq_text = strip_html(val['reponse'])
             tags = parse_hash_tags(val.get("tags"))
+            theme = val.get('tags', {}).get('theme', '')
+            branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
                 'slug': slugify(val['question'], to_lower=True),
@@ -152,7 +162,7 @@ def populate_cdtn_documents():
                 'title': val['question'],
                 'tags': tags,
                 'date': val['date_redaction'],
-                'all_text': f"{val['question']} {faq_text} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('branche','')}",
+                'all_text': f"{val['question']} {faq_text} {theme} {branche}",
             })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/export-courriers.json')) as json_data:
@@ -160,6 +170,10 @@ def populate_cdtn_documents():
         logger.info("Load %s documents from export-courriers.json", len(data))
         for val in data:
             tags = parse_hash_tags(val.get("tags"))
+            theme = val.get('tags', {}).get('theme', '')
+            branche = val.get('tags', {}).get('branche', '')
+            type_de_contrat = val.get('tags', {}).get('type_de_contrat', '')
+            profil = val.get('tags', {}).get('profil', '')
             CDTN_DOCUMENTS.append({
                 'source': 'modeles_de_courriers',
                 'title': val['titre'],
@@ -170,13 +184,20 @@ def populate_cdtn_documents():
                 'tags': tags,
                 'date': val.get('date_redaction'),
                 'author':  val.get('redacteur'),
-                'all_text': f"{val['titre']} {' '.join(val['questions'])} {val.get('tags', {}).get('theme','')} {val.get('tags', {}).get('type_de_contrat','')} {val.get('tags', {}).get('profil','')}",
+                'all_text': f"{val['titre']} {' '.join(val['questions'])} {theme} {type_de_contrat} {profil}",
             })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/outils.json')) as json_data:
         data = json.load(json_data)
         logger.info("Load %s documents from outils.json", len(data))
         for val in data:
+            additional_tags = ["theme", "type_de_contrat", "catégorie", "travailleur_particulier", "branche"]
+            additional_text = ", ".join([flatten(val.get(key)) for key in additional_tags if val.get(key)])
+            logger.info(additional_text)
+            theme = val.get('tags', {}).get('theme', '')
+            branche = val.get('tags', {}).get('branche', '')
+            type_de_contrat = val.get('tags', {}).get('type_de_contrat', '')
+            profil = val.get('tags', {}).get('profil', '')
             CDTN_DOCUMENTS.append({
                 'source': 'outils',
                 'title': val['titre'],
@@ -185,7 +206,7 @@ def populate_cdtn_documents():
                 'themes': val['themes'],
                 'date': val.get('date'),
                 'branche': val['branche'],
-                'all_text': f"{val['titre']} {' '.join(val['questions'])} {val['theme']} {val['type_de_contrat']}, {val['catégorie']}, {val['travailleur_particulier']}, {val['branche']}",
+                'all_text': f"{val['titre']} {' '.join(val['questions'])} {additional_text}",
             })
 
 populate_cdtn_documents()
