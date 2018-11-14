@@ -1,30 +1,9 @@
-import Modal from "react-modal";
 import React from "react";
 import styled from "styled-components";
+import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { UID } from "react-uid";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
-
-if (typeof document !== "undefined") {
-  Modal.setAppElement("body");
-}
-
-const modalStyles = {
-  overlay: {
-    zIndex: 10000,
-    backgroundColor: "rgba(0,0,0,0.8)"
-  },
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    overflow: "visible",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    width: "70%"
-  }
-};
 
 const Container = styled.div``;
 
@@ -33,6 +12,8 @@ class ServiceRenseignementModal extends React.Component {
     modalIsOpen: false,
     departmentData: null
   };
+
+  inputRef = React.createRef();
 
   openModal = e => {
     e.preventDefault();
@@ -77,32 +58,36 @@ class ServiceRenseignementModal extends React.Component {
         <a href="#" role="button" onClick={this.openModal}>
           Trouver votre service de renseignement
         </a>
-        <Modal
-          style={modalStyles}
+        <DialogOverlay
           isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
+          style={{ background: "rgba(0, 0, 0, .5)" }}
+          initialFocusRef={this.inputRef}
+          onDismiss={this.closeModal}
         >
-          <h2>Trouver votre service de renseignement</h2>
-          <p>
-            <UID name={id => `id_${id}`}>
-              {id => (
-                <React.Fragment>
-                  <label htmlFor={id}>
-                    Saisissez votre numéro de département :
-                  </label>
-                  <input
-                    id={id}
-                    type="text"
-                    maxLength="3"
-                    className="full-width"
-                    onChange={this.onDepartmentInput}
-                  />
-                </React.Fragment>
-              )}
-            </UID>
-          </p>
-          {department}
-        </Modal>
+          <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
+            <h2>Trouver votre service de renseignement</h2>
+            <p>
+              <UID name={id => `id_${id}`}>
+                {id => (
+                  <React.Fragment>
+                    <label htmlFor={id}>
+                      Saisissez votre numéro de département :
+                    </label>
+                    <input
+                      id={id}
+                      ref={this.inputRef}
+                      type="text"
+                      maxLength="3"
+                      className="full-width"
+                      onChange={this.onDepartmentInput}
+                    />
+                  </React.Fragment>
+                )}
+              </UID>
+            </p>
+            {department}
+          </DialogContent>
+        </DialogOverlay>
       </Container>
     );
   }
