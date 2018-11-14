@@ -1,41 +1,44 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Search } from "./icons";
 
-import SupportImage from "./SupportImage";
-
-const Support = ({ children }) => (
-  <section className="section-light">
-    <div className="container">
-      <div className="support wrapper-dark shadow-bottom">
-        <SupportImage style={{ marginRight: "var(--spacing-large)" }} />
-        <div>{children}</div>
+const Support = ({ onSubmit, children }) => (
+  <section className="section-dark">
+    <div className="container center">
+      <div className="wrapper-narrow">
+        <header>
+          <h2>Besoin d’un accompagnement personnel ?</h2>
+          <p>
+            Services de renseignement, conseil aux salariés, défenseurs des
+            droits…
+            <br /> Indiquez l&apos;adresse de votre lieu de travail pour obtenir
+            une liste de vos interlocuteurs.
+          </p>
+        </header>
+        <form className="support__form" onSubmit={onSubmit}>
+          {/*eslint-disable-next-line jsx-a11y/label-has-for */}
+          <label className="support__label">
+            {children}
+            <Search className="support__icon" title="Recherche par adresse" />
+          </label>
+        </form>
       </div>
     </div>
   </section>
 );
 
-const defaultContent = (
-  <React.Fragment>
-    <header>
-      <h2>Besoin d’un accompagnement personnel ?</h2>
-      <p>
-        Les services de renseignement sont ouverts au public gratuitement chaque
-        semaine et vous donnent des conseils adaptés à votre situation.
-      </p>
-    </header>
-    <form className="support__form">
-      <input type="text" placeholder="Code postal" className="support__input" />
-      <input type="submit" value="Envoyer" className="support__submit btn" />
-    </form>
-  </React.Fragment>
-);
-
 Support.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element,
+  onSubmit: PropTypes.func.isRequired
 };
 
 Support.defaultProps = {
-  children: defaultContent
+  children: (
+    <input
+      type="search"
+      className="support__input"
+      placeholder="ex: 12 avenue du Palais, Metz"
+    />
+  )
 };
-
 export default Support;

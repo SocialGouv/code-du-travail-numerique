@@ -174,7 +174,7 @@ It is also possible to nest a `.wrapper-narrow` class in a `.wrapper-dark` or
 
 :--vertical-rythm-elements {
   margin-top: 0;
-  margin-bottom: var(--spacing-base);
+  margin-bottom: var(--spacing-medium);
 }
 
 /* Cancel vertical rhythm for last childs in `.container` or `wrapper-*`. */
