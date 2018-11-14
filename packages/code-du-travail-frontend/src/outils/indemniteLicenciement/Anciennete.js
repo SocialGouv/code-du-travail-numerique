@@ -20,7 +20,7 @@ class Anciennete extends React.Component {
   };
 
   render() {
-    const { value, onChange, onNext, nextDisabled } = this.props;
+    const { value, onChange, onNext, onPrevious, nextDisabled } = this.props;
     return (
       <React.Fragment>
         <Section light>
@@ -43,7 +43,11 @@ class Anciennete extends React.Component {
           </React.Fragment>
         </Section>
         <Container>
-          <PrevNextStepper onNext={onNext} nextDisabled={nextDisabled} />
+          <PrevNextStepper
+            onPrevious={onPrevious}
+            onNext={onNext}
+            nextDisabled={nextDisabled}
+          />
         </Container>
       </React.Fragment>
     );

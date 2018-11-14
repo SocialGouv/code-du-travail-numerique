@@ -42,7 +42,7 @@ const getJaxFormula = ({
       // indemnite = 1 / 5 * c * 10 + 2 / 5 * c * d
       return `(1/5  * ${round(meilleurMoyenne)} * 10) + (2/5 * ${round(
         meilleurMoyenne
-      )} * (${Math.floor(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete / 12)} - 10))`;
     }
   } else {
     if (isSmallAnciennete) {
@@ -53,7 +53,7 @@ const getJaxFormula = ({
       //indemnite = 1 / 4 * c * 10 + 1 / 3 * c * d
       return `(1/4 * ${round(meilleurMoyenne)} * 10) + (1/3 * ${round(
         meilleurMoyenne
-      )} * (${Math.floor(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete / 12)} - 10))`;
     }
   }
 };
@@ -104,21 +104,19 @@ class ResultDetail extends React.Component {
     );
     return (
       <React.Fragment>
-        <div>
-          {indemnite > 0 && (
-            <Section light>
-              <div style={headStyle}>
-                <h2>Montant indicatif de votre indemnité</h2>
-                <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
-                <p>
-                  <em>
-                    Sur la base du calcul de l'indemnité légale de licenciement.
-                  </em>
-                </p>
-              </div>
-            </Section>
-          )}
-        </div>
+        {indemnite > 0 && (
+          <Section light>
+            <div style={headStyle}>
+              <h2>Montant indicatif de votre indemnité</h2>
+              <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
+              <p>
+                <em>
+                  Sur la base du calcul de l'indemnité légale de licenciement.
+                </em>
+              </p>
+            </div>
+          </Section>
+        )}
         <Section light>
           <React.Fragment>
             <table width="100%" style={{ fontSize: "1.2em" }}>
@@ -129,7 +127,9 @@ class ResultDetail extends React.Component {
                 <Row value={labelize(moyenne3DerniersMois)}>
                   Moyenne des 3 derniers sois
                 </Row>
-                <Row value={labelize(meilleurMoyenne)}>Salaire retenu</Row>
+                <Row value={labelize(meilleurMoyenne)}>
+                  Salaire de référence
+                </Row>
                 <Row value={isR12342 ? "1 / 5" : "1 / 4"}>{infoFinContrat}</Row>
                 <Row value={isSmallAnciennete ? "< 10 ans" : "> 10 ans"}>
                   Ancienneté

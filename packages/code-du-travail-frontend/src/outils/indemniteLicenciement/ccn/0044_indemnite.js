@@ -102,7 +102,7 @@ export function getIndemnite({
         formula += `+ ${salaireRef}`;
         if (hasOpe && isEco) {
           indemniteCC += salaireRef;
-          formula = `* 2`;
+          formula += `* 2`;
         }
       }
       // le salarié a entre 50 et 55ans
@@ -150,7 +150,7 @@ export function getIndemnite({
         formula += ` + ${salaireRef}`;
         if (hasOpe && isEco && age >= 50) {
           indemniteCC += salaireRef;
-          formula = `* 2`;
+          formula += `* 2`;
         }
       }
       // le salarié a plus de 55ans

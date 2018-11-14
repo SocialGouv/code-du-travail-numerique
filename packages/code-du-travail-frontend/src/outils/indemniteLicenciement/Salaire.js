@@ -17,7 +17,6 @@ class Salaire extends React.Component {
   };
 
   static defaultProps = {
-    value: Array.from({ length: 12 }, () => 0),
     nextDisabled: false
   };
 
@@ -105,7 +104,7 @@ class Salaire extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {times(12).map(i => (
+                {times(this.props.value.length).map(i => (
                   <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
                     <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
                     <td style={{ textAlign: "center" }}>

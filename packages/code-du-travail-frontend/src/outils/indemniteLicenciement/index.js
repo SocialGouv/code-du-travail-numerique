@@ -24,6 +24,11 @@ class CalculateurIndemnite extends React.Component {
     this.setState({
       [key]: value
     });
+    if (key === "anciennete") {
+      this.setState({
+        salaires: Array.from({ length: Math.min(value, 12) }).fill(0)
+      });
+    }
     if (key === "convention") {
       if (value.hasCC) {
         const { ccId } = value;
