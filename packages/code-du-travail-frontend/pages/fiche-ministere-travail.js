@@ -4,6 +4,7 @@ import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { ExternalLink } from "react-feather";
 import Answer from "../src/search/Answer";
+import DossierIcon from "../src/icons/DossierIcon";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -48,6 +49,8 @@ class Fiche extends React.Component {
         emptyMessage="Cette fiche n'a pas été trouvée"
         html={data._source.html}
         footer={footer}
+        icon={DossierIcon}
+        sourceType="Fiche ministère du travail"
       />
     );
   }

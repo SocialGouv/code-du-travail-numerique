@@ -191,16 +191,19 @@ class Search extends React.Component {
       this.props.onResults(results.hits.hits);
     }
   };
+
   render() {
     const { query, queryResults } = this.state;
     return (
-      <SearchView
-        onChange={this.onChange}
-        onFormSubmit={this.onFormSubmit}
-        query={query}
-        queryResults={queryResults}
-        onResults={this.setResults}
-      />
+      <React.Fragment>
+        <SearchView
+          onChange={this.onChange}
+          onFormSubmit={this.onFormSubmit}
+          query={query}
+          queryResults={queryResults}
+          onResults={this.setResults}
+        />
+      </React.Fragment>
     );
   }
 }

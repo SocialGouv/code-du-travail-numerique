@@ -1,11 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Alert, Article } from "@cdt/ui";
+import { Container, Alert, Article, NoAnswer, Button } from "@cdt/ui";
 import { withRouter } from "next/router";
 
 import Disclaimer from "../common/Disclaimer";
-import SeeAlso from "../common/SeeAlso";
-import FeedbackForm from "../common/FeedbackForm";
 import Html from "../common/Html";
 import Search from "./Search";
 import { DateContenu } from "../common/DateContenu";
@@ -28,6 +26,9 @@ class Answer extends React.Component {
   onInvalidate = () => {
     this.setState({ modalVisible: true });
   };
+  showModal = () => {
+    this.setState({ modalVisible: true });
+  };
   closeModal = () => {
     this.setState({ modalVisible: false });
   };
@@ -43,6 +44,8 @@ class Answer extends React.Component {
       children,
       footer,
       date,
+      icon,
+      sourceType,
       emptyMessage = "Aucun résultat"
     } = this.props;
 
@@ -59,12 +62,15 @@ class Answer extends React.Component {
               results={this.state.searchResults}
               isOpen={this.state.modalVisible}
               closeModal={this.closeModal}
-              query={router.query.q}
+              query={router.query.q || title}
             />
             <Article
               title={title}
               onValidate={this.onValidate}
-              onInvalidate={this.onInvalidate}
+              onInvalidate={this.showModal}
+              icon={icon}
+              date={date}
+              sourceType={sourceType}
             >
               <Disclaimer />
               {intro}
@@ -83,8 +89,10 @@ class Answer extends React.Component {
             </Article>
           </React.Fragment>
         )}
-        <SeeAlso />
-        <FeedbackForm query={router.query.q} />
+
+        <NoAnswer>
+          <Button onClick={this.showModal}>Posez votre question</Button>
+        </NoAnswer>
       </React.Fragment>
     );
   }

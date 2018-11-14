@@ -6,7 +6,7 @@ import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
-
+import { ArticleIcon } from "../src/icons/ArticleIcon";
 import Answer from "../src/search/Answer";
 
 const {
@@ -79,6 +79,7 @@ class Fiche extends React.Component {
             </div>
           </React.Fragment>
         }
+        icon={ArticleIcon}
         emptyMessage="Article introuvable"
         html={data._source.html}
         footer={footer}
