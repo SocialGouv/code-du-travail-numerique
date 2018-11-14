@@ -83,6 +83,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --border-radius-base: 0.25rem;
 
   /* Spacing */
+  --spacing-xsmall: 0.5rem;
   --spacing-small: 0.625rem;
   --spacing-base: 1rem;
   --spacing-medium: 1.25rem;

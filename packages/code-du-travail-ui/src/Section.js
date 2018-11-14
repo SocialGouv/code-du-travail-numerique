@@ -13,11 +13,11 @@ const Section = ({ light, dark, style, children }) => {
       ? "wrapper-dark"
       : "wrapper";
   return (
-    <div className={containerClassName} style={style}>
+    <section className={containerClassName} style={style}>
       <div className="container">
         <div className={innerContainerClassName}>{children}</div>
       </div>
-    </div>
+    </section>
   );
 };
 

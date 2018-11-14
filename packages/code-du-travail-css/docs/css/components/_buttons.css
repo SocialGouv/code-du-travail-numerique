@@ -204,3 +204,8 @@ The <span> element will be moved away from the normal flow of the document.
   text-transform: uppercase;
   color: var(--color-grey);
 }
+.btn--small {
+  font-size: var(--font-size-xsmall);
+  padding: var(--spacing-xsmall) var(--spacing-small);
+  font-weight: 400;
+}

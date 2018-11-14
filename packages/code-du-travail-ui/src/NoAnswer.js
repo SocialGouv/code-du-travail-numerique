@@ -1,14 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { Lost } from "./icons";
 const NoAnswer = ({ children }) => {
   return (
-    <div>
-      <section className="section">
+    <section className="section">
+      <div className="container">
         <div className="wrapper-narrow wrapper-dark no-answer">
-          <Lost color="" className="no-answer__illus" />
+          <Lost className="no-answer__illus" />
           <div className="no-answer__content">
-            <h1>Vous n'avez pas trouvé votre réponse</h1>
+            <h3 className="section__title">
+              Vous n&apos;avez pas trouvé votre réponse
+            </h3>
             <p>
               Laissez nous vos impressions et commentaires. Nous étudions tous
               vos retours avec attention pour améliorer cet outil.
@@ -16,13 +18,12 @@ const NoAnswer = ({ children }) => {
             {children}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
 NoAnswer.propTypes = {
   children: PropTypes.node
 };
-
-export { NoAnswer };
+export default NoAnswer;

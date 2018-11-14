@@ -4,7 +4,7 @@ route: /icons
 
 import "@cdt/css";
 import { Playground, PropsTable } from "docz";
-import { Search, Like, Unlike, Question } from "../src/icons";
+import { Like, Unlike, Question, Lost } from "../src/icons";
 
 ## Liste des icons
 
@@ -12,11 +12,10 @@ import { Search, Like, Unlike, Question } from "../src/icons";
 import { Search, Like, Unlike, Question } "@cdt/ui/icons"
 
 const App = (
-    <Search />
-    <Search  color="red"/>
     <Like />
     <Unlike />
     <Question />
+    <Lost />
 )
 ```
 
@@ -24,10 +23,9 @@ const App = (
 
 <Playground>
 
-  <Search />
-  <Search color="red" />
   <Like />
   <Unlike />
   <Question />
+  <Lost />
 
 </Playground>

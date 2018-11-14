@@ -9,12 +9,12 @@ import {
 } from "./flavors";
 
 const Button = props => {
-  const { onClick, onKeyUp } = props;
+  const { onClick, onKeyUp, small } = props;
   return (
     <div
       tabIndex="0"
       role="button"
-      className={`btn ${getFlavor(props, "btn")}`}
+      className={`btn ${getFlavor(props, "btn")} ${small && "btn--small"}`}
       onKeyDown={event => {
         /* Space & Enter */
         if (event.keyCode === 32 || event.keyCode === 13) {
