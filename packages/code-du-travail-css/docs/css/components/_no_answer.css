@@ -1,0 +1,9 @@
+.no-answer {
+  display: flex;
+}
+.no-answer__illus {
+  flex: 0 1 90px;
+}
+.no-answer__content {
+  flex: 1 1 auto;
+}
