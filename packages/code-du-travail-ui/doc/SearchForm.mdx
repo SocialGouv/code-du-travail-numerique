@@ -1,14 +1,17 @@
 ---
-
 ---
 
+import "@cdt/css";
 import { Playground, PropsTable } from "docz";
 import { SearchForm } from "../src";
 
 ## \<SearchForm/\>
 
 <Playground>
-  <SearchForm placeholder="Comment puis-je vous aider ?" onSubmit={query => alert(query)}/>
+  <SearchForm
+    placeholder="Comment puis-je vous aider ?"
+    onSubmit={query => alert(query)}
+  />
 </Playground>
 
 <PropsTable of={SearchForm} />
