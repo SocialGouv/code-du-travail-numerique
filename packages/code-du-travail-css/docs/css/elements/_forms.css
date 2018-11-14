@@ -16,7 +16,13 @@ fieldset {
 }
 
 textarea,
-input:not([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [type="image"], [type="radio"], [type="range"], [type="reset"], [type="submit"]) {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="tel"],
+input[type="url"] {
   appearance: none;
 
   font-size: inherit;

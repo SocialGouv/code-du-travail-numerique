@@ -38,13 +38,13 @@
   margin: 0 calc(var(--spacing-small) / 2);
 }
 .facet-value {
-  appearance: none;
-  border: none;
   color: var(--color-almost-black);
   font-size: var(--font-size-small);
   border: 1px solid transparent;
   background-color: transparent;
+  background-position: top 0.75rem right 0.75em;
   width: auto;
+  padding: 0.2em 2em 0.2em 0.2em;
   flex: 1 1 auto;
   font-style: italic;
   &:focus {
@@ -64,7 +64,8 @@
     box-shadow: 0 0 2px 2px var(--color-focus-shadow);
   }
 }
-.search__input {
+
+input[type="search"].search__input {
   flex: 1 0 90%;
   appearance: none;
   border: none;
