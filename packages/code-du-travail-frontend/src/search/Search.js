@@ -46,7 +46,9 @@ const {
 } = getConfig();
 
 const fetchResults = (query, endPoint = "search", excludeSources) => {
-  const url = `${API_URL}/${endPoint}?q=${query}&excludeSources=${excludeSources}`;
+  const url = `${API_URL}/${endPoint}?q=${encodeURIComponent(
+    query
+  )}&excludeSources=${encodeURIComponent(excludeSources)}`;
 
   return fetch(url).then(response => {
     if (response.ok) {
@@ -258,7 +260,7 @@ const SearchView = ({
               <div className="search__fields">
                 <label className="search__facets" htmlFor="contentSource">
                   <span id="contentSource" className="hidden">
-                    label
+                    Filtrer par type de contenu
                   </span>
                   <ReponseIcon className="facet-icon" />
                   <select
@@ -269,7 +271,7 @@ const SearchView = ({
                     value={facet}
                     name="facet"
                   >
-                    <option value="" />
+                    <option value="">Tous contenus</option>
                     <option value="faq">Réponses</option>
                     <option value="code_du_travail">Code du travail</option>
                     <option value="fiches">Fiches</option>
