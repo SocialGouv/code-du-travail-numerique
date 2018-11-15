@@ -30,3 +30,9 @@ const labelBySource = {
 
 export const getLabelBySource = src => labelBySource[src] || "";
 export const getRouteBySource = src => routeBySource[src];
+
+const sources = Object.keys(routeBySource);
+export const getExcludeSources = value => {
+  if (Boolean(value) === false) return [];
+  return sources.filter(source => source.startsWith(value) === false).join(",");
+};

@@ -77,23 +77,26 @@ const onSuggestionSelected = (e, suggestion, query) => {
 // see https://github.com/moroshko/react-autosuggest#themeProp
 const suggesterTheme = {
   container: {
-    flex: "1 0 auto",
+    flex: "1 1 80%",
     textAlign: "left",
-    border: 0,
-    width: "calc(100% - 43px)"
+    border: 0
   },
   suggestionsList: {
     margin: 0,
     padding: 0,
-    paddingTop: 10,
+    marginTop: ".5em",
+    paddingTop: "0",
     border: "1px solid silver",
+    borderRadius: "3px",
     background: "white",
-    borderTop: 0,
     position: "absolute",
-    width: "calc(100% - 43px)"
+    left: 0,
+    right: 0,
+    boxShadow: "0 10px 10px -10px #b7bcdf"
   },
   suggestion: {
     listStyleType: "none",
+    borderRadius: "3px",
     padding: 5,
     lineHeight: "2rem",
     cursor: "pointer"
@@ -104,24 +107,30 @@ const suggesterTheme = {
 };
 
 class Suggester extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.query !== this.props.query;
+  shouldComponentUpdate(nextProps) {
+    return (
+      nextProps.query !== this.props.query ||
+      nextProps.excludeSources !== this.props.excludeSources
+    );
   }
 
   render() {
     const { getResults, query, onChange } = this.props;
     const inputProps = {
-      placeholder: "exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? ",
-      "aria-label": "exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?",
+      name: "query",
+      placeholder:
+        "exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? ",
+      "aria-label":
+        "exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?",
       type: "search",
       className: "search__input",
       value: query,
-      onChange: onChange,
+      onChange,
       style: { width: "100%" }
     };
     return (
       <AsyncFetch
-        fetch={() => getResults(query)}
+        fetch={getResults}
         render={({ status, result, fetch, clear }) => (
           <Autosuggest
             theme={suggesterTheme}
@@ -154,11 +163,13 @@ Suggester.propTypes = {
   onChange: PropTypes.func,
   // the fetch call function
   getResults: PropTypes.func.isRequired,
-  query: PropTypes.string
+  query: PropTypes.string,
+  excludeSources: PropTypes.string
 };
 
 Suggester.defaultProps = {
   query: "",
+  excludeSources: "",
   getResults: () => {},
   onChange: () => {}
 };

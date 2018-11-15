@@ -16,7 +16,13 @@ fieldset {
 }
 
 textarea,
-input:not([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [type="image"], [type="radio"], [type="range"], [type="reset"], [type="submit"]) {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+input[type="tel"],
+input[type="url"] {
   appearance: none;
 
   font-size: inherit;
@@ -27,7 +33,6 @@ input:not([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [t
   background: var(--color-white);
   border: 1px solid var(--color-element-border);
   border-radius: var(--border-radius-base);
-  margin: 0;
   max-width: 100%;
   padding: var(--spacing-small) var(--spacing-base);
 
@@ -40,7 +45,6 @@ input:not([type="button"], [type="checkbox"], [type="file"], [type="hidden"], [t
 textarea {
   min-height: 8rem;
 }
-
 input[type="radio"] {
   font: inherit;
   line-height: inherit;
