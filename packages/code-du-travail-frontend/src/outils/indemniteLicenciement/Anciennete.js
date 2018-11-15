@@ -44,7 +44,7 @@ class Anciennete extends React.Component {
         </Section>
         <Container>
           <PrevNextStepper
-            onPrevious={onPrevious}
+            onPrev={onPrevious}
             onNext={onNext}
             nextDisabled={nextDisabled}
           />
