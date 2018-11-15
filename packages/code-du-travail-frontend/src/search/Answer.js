@@ -23,9 +23,6 @@ class Answer extends React.Component {
   onValidate = () => {
     console.log("👍");
   };
-  onInvalidate = () => {
-    this.setState({ modalVisible: true });
-  };
   showModal = () => {
     this.setState({ modalVisible: true });
   };
