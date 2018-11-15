@@ -1,9 +1,9 @@
 import React from "react";
 import { withRouter } from "next/router";
 
-import { Alert } from "@cdt/ui";
+import { Alert, NoAnswer, Button } from "@cdt/ui";
 
-import FeedbackForm from "../common/FeedbackForm.js";
+import { FeedbackModal } from "../common/FeedbackModal";
 import SeeAlso from "../common/SeeAlso";
 import Link from "next/link";
 
@@ -85,6 +85,18 @@ const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
 });
 
 class SearchResults extends React.Component {
+  state = {
+    feedbackVisible: false
+  };
+
+  showFeedBackPopup = () => {
+    this.setState({ feedbackVisible: true });
+  };
+
+  closeModal = () => {
+    this.setState({ feedbackVisible: false });
+  };
+
   render() {
     let data = this.props.data;
     let query = this.props.query;
@@ -100,7 +112,17 @@ class SearchResults extends React.Component {
               </Alert>
             </div>
           </div>
-          <FeedbackForm query={query} />
+          <NoAnswer>
+            <Button onClick={this.showFeedBackPopup}>
+              Posez votre question
+            </Button>
+          </NoAnswer>
+          <FeedbackModal
+            results={this.state.suggestResults}
+            isOpen={this.state.feedbackVisible}
+            closeModal={this.closeModal}
+            query={query}
+          />
         </React.Fragment>
       );
     }
@@ -118,8 +140,17 @@ class SearchResults extends React.Component {
             </div>
           </div>
         </div>
+        <NoAnswer>
+          <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
+        </NoAnswer>
+        <FeedbackModal
+          results={data.hits.hits.slice(3)}
+          isOpen={this.state.feedbackVisible}
+          closeModal={this.closeModal}
+          query={query}
+        />
+
         <SeeAlso />
-        <FeedbackForm query={query} />
       </React.Fragment>
     );
   }

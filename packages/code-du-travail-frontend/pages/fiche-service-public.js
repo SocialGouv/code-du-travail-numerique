@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { ExternalLink } from "react-feather";
 import getConfig from "next/config";
 import Answer from "../src/search/Answer";
+import DossierIcon from "../src/icons/DossierIcon";
 
 const ServicePublicCss = styled.div`
   .sp__Titre {
@@ -52,6 +53,9 @@ class Fiche extends React.Component {
           emptyMessage="Cette fiche n'a pas été trouvée"
           html={data._source.html}
           footer={footer}
+          date={data._source.date}
+          icon={DossierIcon}
+          sourceType="Fiche service public"
         />
       </ServicePublicCss>
     );

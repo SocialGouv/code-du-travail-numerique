@@ -1,4 +1,7 @@
+import { css } from "docz-plugin-css";
+
 export default {
+  plugins: [css()],
   indexHtml: "doc/index.html",
   base: "https://socialgouv.github.io/code-du-travail-ui",
   dest: "./doc-build",

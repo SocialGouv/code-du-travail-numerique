@@ -5,6 +5,7 @@ import fetch from "isomorphic-unfetch";
 import { Button } from "@cdt/ui";
 import { ExternalLink } from "react-feather";
 import Answer from "../src/search/Answer";
+import ArticleIcon from "../src/icons/ArticleIcon";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -35,6 +36,8 @@ class Kali extends React.Component {
         title={data._source.title}
         emptyMessage="Cette convention collective n'a pas été trouvée"
         footer="Informations fournies par la DILA"
+        sourceType="Convention collective"
+        icon={ArticleIcon}
       >
         <p>
           Cliquez sur le lien ci dessous pour accéder à la convention collective

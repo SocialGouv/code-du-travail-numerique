@@ -26,7 +26,7 @@ class Question extends React.Component {
   }
 
   render() {
-    const { data } = this.props; 
+    const { data } = this.props;
     let author;
     switch (data._source.author) {
       case "DGT":
@@ -42,6 +42,7 @@ class Question extends React.Component {
         emptyMessage="Cette question n'a pas été trouvée"
         html={data._source.html}
         date={data._source.date}
+        sourceType="Réponse détaillée"
         footer={author}
       />
     );

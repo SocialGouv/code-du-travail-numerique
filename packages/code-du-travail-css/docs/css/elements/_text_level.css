@@ -85,7 +85,7 @@ mark {
   color: var(--color-title);
   line-height: var(--line-height-base);
   font-weight: 700;
-  text-align: center;
+  font-size: var(--font-size-h3);
 }
 
 .section__subtitle {

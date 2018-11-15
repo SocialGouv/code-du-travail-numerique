@@ -3,8 +3,21 @@ route: /code-du-travail-ui
 order: 1
 ---
 
+import "@cdt/css";
 import { Playground, PropsTable } from "docz";
-import { Alert, Badge, Button, BreadCrumbs, Categories, Category, Container, SearchForm, Section, Support, Tag } from "../src";
+import {
+  Alert,
+  Badge,
+  Button,
+  BreadCrumbs,
+  Categories,
+  Category,
+  Container,
+  SearchForm,
+  Section,
+  Support,
+  Tag
+} from "../src";
 
 ## Documentation des composants React du code du travail numérique
 
@@ -33,19 +46,18 @@ const App = (
 
 <Playground>
 
-  <Container>
-    <Alert primary>Ceci est un message d'information</Alert>
-    <Alert warning>Ceci est un message d'alerte</Alert>
-    <Button primary style={{marginRight:5}}>Button primary</Button>
-    <Button secondary style={{marginRight:5}}>Button secondary</Button>
-    <Button danger style={{marginRight:5}}>Button danger</Button>
-  </Container>
+<Container>
+  <Alert primary>Ceci est un message d'information</Alert>
+  <Alert warning>Ceci est un message d'alerte</Alert>
+  <Button primary style={{ marginRight: 5 }}>
+    Button primary
+  </Button>
+  <Button secondary style={{ marginRight: 5 }}>
+    Button secondary
+  </Button>
+  <Button danger style={{ marginRight: 5 }}>
+    Button danger
+  </Button>
+</Container>
 
 </Playground>
-
-
-
-
-
-
-

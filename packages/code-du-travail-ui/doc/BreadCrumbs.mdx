@@ -1,19 +1,20 @@
 ---
-
 ---
 
+import "@cdt/css";
 import { Playground, PropsTable } from "docz";
 import { BreadCrumbs } from "../src";
 
 ## \<BreadCrumbs/\>
 
 <Playground>
-  <BreadCrumbs entries={[
-    <a href="/">Accueil</a>,
-    <a href="/contacts">Vos contacts</a>,
-    "En région"
-  ]}/>
+  <BreadCrumbs
+    entries={[
+      <a href="/">Accueil</a>,
+      <a href="/contacts">Vos contacts</a>,
+      "En région"
+    ]}
+  />
 </Playground>
 
 <PropsTable of={BreadCrumbs} />
-
