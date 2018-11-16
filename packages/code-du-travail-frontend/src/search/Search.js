@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withRouter, RouterProps } from "next/router";
+import { withRouter } from "next/router";
 import getConfig from "next/config";
 import memoizee from "memoizee";
 import pDebounce from "p-debounce";
@@ -130,7 +130,8 @@ export class SearchQuery extends React.Component {
 // todo: externalize state management
 class Search extends React.Component {
   static propTypes = {
-    router: RouterProps
+    router: PropTypes.func,
+    onResults: PropTypes.func
   };
 
   state = {

@@ -118,7 +118,7 @@ class SearchResults extends React.Component {
             </Button>
           </NoAnswer>
           <FeedbackModal
-            results={this.state.suggestResults}
+            results={[]}
             isOpen={this.state.feedbackVisible}
             closeModal={this.closeModal}
             query={query}
