@@ -242,27 +242,6 @@ def create_documents(index_name, type_name):
                 'all_text': f"{val['titre']} {' '.join(val['questions'])} {val['theme']} {val['type_de_contrat']}, {val['catégorie']}, {val['travailleur_particulier']}, {val['branche']}",
           })
 
-    # with open(os.path.join(settings.BASE_DIR, 'dataset/code_bfc.json')) as json_data:
-    #     data = json.load(json_data)
-    #     for val in data:
-    #         body_data.append({
-    #             'source': 'code_bfc',
-    #             'text': val['reponse'],
-    #             'title': val['question'],
-    #             'all_text': f"<p>{val['question']}</p>{val['reponse']}",
-    #         })
-
-    logger.info("Load %s documents from conventions-collectives", len(CONVENTIONS_COLLECTIVES))
-    for val in CONVENTIONS_COLLECTIVES:
-        body_data.append({
-            'source': 'conventions_collectives',
-            'text': val['text'],
-            'slug': slugify(val['title'], to_lower=True),
-            'title': f"{val['idcc']} - {val['title']}",
-            'all_text': f"{val['idcc']} - {val['title']} {val['text']}",
-            'url': val['url'],
-        })
-
     actions = [
         {
             '_op_type': 'index',
