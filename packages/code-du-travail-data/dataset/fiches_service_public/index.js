@@ -1,7 +1,7 @@
 const fs = require("fs");
 const select = require("xpath.js");
 const dom = require("xmldom").DOMParser;
-
+const { diffLog } = require("./diff");
 const xmlToHtml = require("./xmlToHtml");
 
 /*
@@ -123,16 +123,14 @@ const getFiches = path =>
     .map(f => parseFicheFromPath(`${path}/${f}`))
     .filter(Boolean);
 
-if (module === require.main) {
-  console.log(
-    JSON.stringify(
-      [
-        ...getFiches("./vosdroits-particuliers"),
-        ...getFiches("./vosdroits-professionnels")
-      ],
-      null,
-      2
-    )
-  );
-}
+const oldFiches = JSON.parse(fs.readFileSync("./fiches-sp-travail.json"));
 
+const fiches = [
+  ...getFiches("./data/vosdroits-particuliers"),
+  ...getFiches("./data/vosdroits-professionnels")
+];
+
+if (module === require.main) {
+  fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(fiches, null, 2));
+  console.error(diffLog(oldFiches, fiches));
+}
