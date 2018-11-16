@@ -13,17 +13,17 @@
   },
   "dependencies": {
     "libxslt": "github:alexdee2007/node-libxslt",
+    "lodash.uniqby": "^4.7.0",
     "promise-serial-exec": "^1.0.0",
     "xmldom": "^0.1.27",
     "xpath.js": "^1.1.0",
     "xslt": "^0.9.1",
     "xslt-processor": "^0.10.0"
   },
-  "devDependencies": {
-    "jest": "^23.6.0"
-  },
   "scripts": {
-    "start": "node index.js",
+    "backup": "cp fiches-sp-travail.json fiches-sp-travail.old.json ",
+    "diff": "node diff.js",
+    "start": "yarn backup && node index.js > fiches-sp-travail.json && yarn diff",
     "test": "jest"
   }
 }

@@ -1,3 +1,6 @@
+const prevFiches = require("./fiches-sp-travail.old.json");
+const nextFiches = require("./fiches-sp-travail.json");
+
 const urlTitle = i => ({
   url: i.url,
   title: i.title,
@@ -11,8 +14,8 @@ function diffLog(prevJson, nextJson) {
   const diff = {
     prev,
     next,
-    previous: prev.filter(p => !next.some(n => n.id === p.id)),
-    latest: next.filter(n => !prev.some(p => p.id === n.id)),
+    previous: prev.filter(p => !next.some(n => n.url === p.url)),
+    latest: next.filter(n => !prev.some(p => p.url === n.url)),
     doublons: Object.entries(
       next.reduce(
         (state, item) => {
@@ -40,4 +43,4 @@ function diffLog(prevJson, nextJson) {
   `;
 }
 
-module.exports = { diffLog };
+console.log(diffLog(prevFiches, nextFiches));

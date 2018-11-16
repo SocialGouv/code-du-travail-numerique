@@ -1,16 +1,13 @@
 const fs = require("fs");
 const select = require("xpath.js");
 const dom = require("xmldom").DOMParser;
-const { diffLog } = require("./diff");
 const xmlToHtml = require("./xmlToHtml");
+const uniqBy = require("lodash.uniqby");
 
 /*
-
 extrait les données avec les fichiers XML de :
-
  - dans ./vosdroits-professionnels : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/
  - dans ./vosdroits-particuliers : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-particuliers/
-
 */
 
 const XMLS_PATH = "./data";
@@ -105,7 +102,6 @@ const parseFiche = text => {
       select(doc, "/Publication/ListeSituations")[0] &&
       xmlToHtml(select(doc, "/Publication/ListeSituations")[0].toString());
 
-    select(doc, "SousThemePere/text()")[0].data;
     return {
       theme: "travail",
       intro,
@@ -133,14 +129,11 @@ const getFiches = path =>
     .map(f => parseFicheFromPath(`${path}/${f}`))
     .filter(Boolean);
 
-const oldFiches = JSON.parse(fs.readFileSync("./fiches-sp-travail.json"));
-
 const fiches = [
   ...getFiches("./data/vosdroits-particuliers"),
   ...getFiches("./data/vosdroits-professionnels")
 ];
 
 if (module === require.main) {
-  fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(fiches, null, 2));
-  console.error(diffLog(oldFiches, fiches));
+  console.log(JSON.stringify(uniqBy(fiches, "url"), null, 2));
 }
