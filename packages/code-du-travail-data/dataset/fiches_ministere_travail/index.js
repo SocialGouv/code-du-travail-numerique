@@ -36,11 +36,15 @@ function parseDom(dom, url) {
           "href",
           `https://travail-emploi.gouv.fr${node.getAttribute("href")}`
         );
-        node.setAttribute("target", "_blanck");
+        node.setAttribute("target", "_blank");
         node.setAttribute("rel", "nofollow, noopener");
       }
     }
   });
+
+  const date = $(article, ".date--maj") || $(article, ".date--publication");
+  const [day, month, year] = date.textContent.trim().split(".");
+
   let result = {
     articles,
     summary,
@@ -48,6 +52,7 @@ function parseDom(dom, url) {
     text_full: $(article, ".main-article__texte").textContent.trim(),
     html: fixImages($(article, ".main-article__texte").innerHTML.trim()),
     text_by_section: [],
+    date: `${day}/${month}/20${year}`,
     url
   };
 
@@ -80,7 +85,7 @@ const parseFiche = async url => {
       console.error(`☠️  - ${error.statusCode} - ${url}`);
       return null;
     }
-    console.error(error);
+    console.error(url, "\n", error);
     return null;
   }
 };
