@@ -13,6 +13,8 @@ extrait les données avec les fichiers XML de :
 
 */
 
+const XMLS_PATH = "./data";
+
 const read = path => fs.readFileSync(path).toString();
 
 const parseFicheFromPath = path => parseFiche(read(path));
@@ -32,6 +34,12 @@ const parseFiche = text => {
     audienceSlug = "professionnels-entreprises";
   }
   const id = select(doc, "/Publication/@ID")[0].value;
+
+  const [, dateRaw] = select(doc, "dc:date/text()")[0].data.match(
+    /modified ([0-9\-]+)$/
+  );
+  const [aa, mm, jj] = dateRaw.split("-");
+  const date = `${jj}/${mm}/${aa}`;
   if (nodes.length) {
     const url = `https://www.service-public.fr/${audienceSlug}/vosdroits/${id}`;
     const title = select(
@@ -97,9 +105,11 @@ const parseFiche = text => {
       select(doc, "/Publication/ListeSituations")[0] &&
       xmlToHtml(select(doc, "/Publication/ListeSituations")[0].toString());
 
+    select(doc, "SousThemePere/text()")[0].data;
     return {
       theme: "travail",
       intro,
+      date,
       situations,
       situationsHtml,
       sousTheme,
