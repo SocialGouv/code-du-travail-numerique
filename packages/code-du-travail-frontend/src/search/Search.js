@@ -129,6 +129,11 @@ export class SearchQuery extends React.Component {
 
 // todo: externalize state management
 class Search extends React.Component {
+  static propTypes = {
+    router: PropTypes.func,
+    onResults: PropTypes.func
+  };
+
   state = {
     // query in the input box
     query: "",
