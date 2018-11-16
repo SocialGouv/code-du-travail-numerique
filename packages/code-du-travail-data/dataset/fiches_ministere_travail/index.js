@@ -43,7 +43,7 @@ function parseDom(dom, url) {
   });
 
   const date = $(article, ".date--maj") || $(article, ".date--publication");
-  const [jj, mm, aa] = date.textContent.trim().split(".");
+  const [day, month, year] = date.textContent.trim().split(".");
 
   let result = {
     articles,
@@ -52,7 +52,7 @@ function parseDom(dom, url) {
     text_full: $(article, ".main-article__texte").textContent.trim(),
     html: fixImages($(article, ".main-article__texte").innerHTML.trim()),
     text_by_section: [],
-    date: `${jj}/${mm}/${2000 + parseFloat(aa)}`,
+    date: `${day}/${month}/20${year}`,
     url
   };
 
