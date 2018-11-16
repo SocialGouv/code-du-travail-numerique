@@ -1,27 +1,30 @@
-[{
-  "titre": "Outil de simulation de l'indmenité de rupture conventionnelle",
-  "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page=calculerdelairetractation",
-  "questions": [
-    "comment calculer l'indemnité légale de rupture conventionnelle?",
-    "quel est le montant de l'indemnité légale de rupture conventionnelle?"
-  ],
-  "tags": {
-    "theme": "ruptre conventionnelle", 
-    "type de contrat": "CDI",
-    "themes": [1700,1730],
-    "date rédaction": "26/09/2018",
-    "redacteur":"cdtn"
+[
+  {
+    "titre": "Outil de simulation de l'indmenité de rupture conventionnelle",
+    "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page=calculerdelairetractation",
+    "questions": [
+      "comment calculer l'indemnité légale de rupture conventionnelle?",
+      "quel est le montant de l'indemnité légale de rupture conventionnelle?"
+    ],
+    "tags": {
+      "theme": "rupture conventionnelle",
+      "type de contrat": "CDI",
+      "themes": [1700, 1730],
+      "date rédaction": "26/09/2018",
+      "redacteur": "cdtn"
+    }
+  },
+  {
+    "titre": "Un délai est laissé aux parties à l'issue de la signature de la convention de rupture avant l'envoi pour homologation. Ce temps de réflexion permet à l'employeur comme au salarié de revenir sur leur décision de vouloir rompre le contrat par la rupture conventionnelle.",
+    "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page=calculerdelairetractation",
+    "questions": [
+      "Comment calculer le délai de rétractation dans la procédure de rupture conventionnelle"
+    ],
+    "tags": {
+      "theme": "rupture conventionnelle",
+      "type de contrat": "CDI",
+      "themes": [1700, 1730],
+      "date rédaction": "26/09/2018"
+    }
   }
-}, {
-  "titre": "Un délai est laissé aux parties à l'issue de la signature de la convention de rupture avant l'envoi pour homologation. Ce temps de réflexion permet à l'employeur comme au salarié de revenir sur leur décision de vouloir rompre le contrat par la rupture conventionnelle.",
-  "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page=calculerdelairetractation",
-  "questions": [
-    "Comment calculer le délai de rétracation dans la procédure de rupture conventionnelle"
-  ],
-  "tags": {
-    "theme": "ruptre conventionnelle", 
-    "type de contrat": "CDI",
-    "themes": [1700,1730],
-    "date rédaction": "26/09/2018"
-  }
-}]
+]

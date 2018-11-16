@@ -21,10 +21,11 @@ const Source = ({ name }) => (
     style={{
       background: "var(--color-light-background)",
       padding: 10,
-      marginTop: 50
+      marginTop: 50,
+      textAlign: "center"
     }}
   >
-    Cet outils vous est fournis par la DGT
+    -
   </div>
 );
 
