@@ -35,8 +35,8 @@ const parseFiche = text => {
   const [, dateRaw] = select(doc, "dc:date/text()")[0].data.match(
     /modified ([0-9\-]+)$/
   );
-  const [aa, mm, jj] = dateRaw.split("-");
-  const date = `${jj}/${mm}/${aa}`;
+  const [year, month, day] = dateRaw.split("-");
+  const date = `${day}/${month}/${year}`;
   if (nodes.length) {
     const url = `https://www.service-public.fr/${audienceSlug}/vosdroits/${id}`;
     const title = select(
@@ -125,7 +125,7 @@ const parseFiche = text => {
 const getFiches = path =>
   fs
     .readdirSync(path)
-    .filter(f => f.substring(0, 1) === "F")
+    .filter(f => f.startsWith("F"))
     .map(f => parseFicheFromPath(`${path}/${f}`))
     .filter(Boolean);
 
