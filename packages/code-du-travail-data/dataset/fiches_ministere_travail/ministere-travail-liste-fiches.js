@@ -1042,5 +1042,10 @@ module.exports = [
     url:
       "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/demission/article/le-droit-aux-allocations-chomage-du-salarie-demissionnaire",
     title: "Le droit aux allocations chômage du salarié démissionnaire"
+  },
+  {
+    url:
+      "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-rupture-conventionnelle-collective",
+    tilte: "La rupture conventionnelle collective"
   }
 ];
