@@ -103,7 +103,8 @@ class FeedbackForm extends React.Component {
             </header>
             <form onSubmit={this.submit}>
               <p>
-                Êtes vous satisfait par les réponses apportées à votre question ?
+                Êtes vous satisfait par les réponses apportées à votre question
+                ?
               </p>
               <StarRating
                 className="feedback-stars"
@@ -157,7 +158,7 @@ class FeedbackForm extends React.Component {
                 <p>
                   {this.state.status === "error" ? (
                     <Alert category="danger">
-                      Impossible d'envoyer votre message
+                      Impossible d&apos;envoyer votre message
                     </Alert>
                   ) : null}
                   <button

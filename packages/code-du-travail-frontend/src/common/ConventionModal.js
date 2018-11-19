@@ -45,8 +45,8 @@ class ConventionModal extends React.Component {
           <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
             <h2>Convention collective</h2>
             <div>
-              Saisissez l'identifiant de convention collective (IDCC), le nom de
-              la branche, ou le code NAF :
+              Saisissez l&apos;identifiant de convention collective (IDCC), le
+              nom de la branche, ou le code NAF :
               <div style={{ marginTop: 10 }}>
                 <_ConventionPicker ref={this.inputRef} />
               </div>
@@ -56,18 +56,19 @@ class ConventionModal extends React.Component {
                 </div>
                 <li>
                   Elle doit figurer au <b>bulletin de paie</b>, et sur une
-                  notice remise à l’embauche ou <b>sur le contrat de travail</b>
+                  notice remise à l&apos;embauche ou{" "}
+                  <b>sur le contrat de travail</b>
                 </li>
                 <li>
-                  Sur l’affichage obligatoire dans l’entreprise (avec les
-                  modalités de consultation en entreprise)
+                  Sur l&apos;affichage obligatoire dans l&apos;entreprise (avec
+                  les modalités de consultation en entreprise)
                 </li>
                 <div style={{ marginTop: 20, fontWeight: "bold" }}>
                   Quelle est la CCN applicable ?
                 </div>
                 <li>
-                  En principe celle relevant de l’activité principale dans
-                  l’entreprise pour les cas les plus simples.
+                  En principe celle relevant de l&apos;activité principale dans
+                  l&apos;entreprise pour les cas les plus simples.
                 </li>
               </div>
             </div>
