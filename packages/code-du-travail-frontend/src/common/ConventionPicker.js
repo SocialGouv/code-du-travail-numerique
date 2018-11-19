@@ -32,7 +32,7 @@ const conventions = []
   );
 
 const ConventionPreview = ({ convention }) => (
-  <a target="_blank" href={convention.url}>
+  <a target="_blank" href={convention.url} rel="noopener noreferrer">
     <Download
       alt="Télécharger la convention"
       title="Télécharger la convention"

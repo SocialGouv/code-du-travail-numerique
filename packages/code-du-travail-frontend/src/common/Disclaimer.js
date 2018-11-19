@@ -6,6 +6,7 @@ const Disclaimer = () => (
     trouvent peuvent être erronées ou imprécises.{" "}
     <a
       target="_blank"
+      rel="noopener noreferrer"
       href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
     >
       L&apos;ouverture officielle du site

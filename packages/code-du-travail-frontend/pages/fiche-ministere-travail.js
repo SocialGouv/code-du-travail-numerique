@@ -16,7 +16,7 @@ const fetchFiche = ({ slug }) =>
   );
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank">
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
     <ExternalLink
       style={{ verticalAlign: "middle", margin: "0 5px" }}

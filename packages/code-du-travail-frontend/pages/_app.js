@@ -24,7 +24,7 @@ export default class MyApp extends App {
       <Container>
         <GitHubForkRibbon
           href="//github.com/SocialGouv/code-du-travail-explorer"
-          target="_blank"
+          rel="noopener noreferrer"
           position="right"
           color="green"
         >

@@ -44,6 +44,7 @@ class Idcc extends React.Component {
         </p>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href={`https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${
             data._source.id
           }`}

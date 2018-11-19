@@ -17,7 +17,7 @@ const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank">
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
     <ExternalLink
       style={{ verticalAlign: "middle", margin: "0 5px" }}
