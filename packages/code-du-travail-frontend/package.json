@@ -7,6 +7,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@cdt/data": "^2.0.0",
     "@cdt/css": "^2.0.0",
     "@cdt/ui": "^2.0.0",
     "@reach/dialog": "^0.1.2",
