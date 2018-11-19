@@ -1,5 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import { Button } from "@cdt/ui";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 
 // prevent ConventionPicker in initial bundle
@@ -31,11 +32,9 @@ class ConventionModal extends React.Component {
     const text = this.props.text || "Trouvez votre convention collective";
     return (
       <React.Fragment>
-        <a
-          href="#"
-          onClick={this.openModal}
-          dangerouslySetInnerHTML={{ __html: text }}
-        />
+        <Button link onClick={this.openModal}>
+          {text}
+        </Button>
         <DialogOverlay
           isOpen={this.state.modalIsOpen}
           style={{ background: "rgba(0, 0, 0, .5)" }}

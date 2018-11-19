@@ -36,9 +36,9 @@ const getFakeBreadCrumb = path =>
         i === all.length - 1 ? (
           part
         ) : (
-          <a key={part} href="#">
+          <span className="link" key={part}>
             {part}
-          </a>
+          </span>
         )
     );
 

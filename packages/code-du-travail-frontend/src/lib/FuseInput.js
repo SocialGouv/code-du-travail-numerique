@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Button } from "@cdt/ui";
 import Autosuggest from "react-autosuggest";
 import Fuse from "fuse.js";
 import getSlug from "speakingurl";
@@ -52,8 +53,9 @@ const FuseHighLighter = ({ suggestion }) => {
     });
   });
   return (
-    <a
-      href="#"
+    <Button
+      link
+      style={{ whiteSpace: "normal" }}
       dangerouslySetInnerHTML={{
         __html: newHtml || html
       }}

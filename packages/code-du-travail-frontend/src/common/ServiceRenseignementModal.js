@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Button } from "@cdt/ui";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { UID } from "react-uid";
 
@@ -55,9 +56,9 @@ class ServiceRenseignementModal extends React.Component {
 
     return (
       <Container>
-        <a href="#" role="button" onClick={this.openModal}>
+        <Button link className="link" onClick={this.openModal}>
           Trouver votre service de renseignement
-        </a>
+        </Button>
         <DialogOverlay
           isOpen={this.state.modalIsOpen}
           style={{ background: "rgba(0, 0, 0, .5)" }}
