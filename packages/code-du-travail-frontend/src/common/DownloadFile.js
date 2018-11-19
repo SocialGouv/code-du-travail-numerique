@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const DownloadFile = ({ title, type, file, icon: Icon }) => {
-  const [_, extension] = file.split(/\.([a-z]{2,4})$/);
+  const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
     <a
       className=" btn-download"

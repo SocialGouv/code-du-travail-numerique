@@ -48,8 +48,7 @@ class ResultDetail extends React.Component {
       age,
       anciennete,
       echelon,
-      hasOpe,
-      isEco
+      hasOpe
     } = this.props;
     return (
       <React.Fragment>

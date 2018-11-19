@@ -25,7 +25,7 @@ const Source = ({ name }) => (
       textAlign: "center"
     }}
   >
-    -
+    {name}
   </div>
 );
 
@@ -66,7 +66,7 @@ class Outils extends React.Component {
         </Head>
         <Search />
         <OutilComponent q={router.query.q} />
-        <Source />
+        <Source name="-" />
         <SeeAlso />
         <FeedbackForm query="" />
       </React.Fragment>

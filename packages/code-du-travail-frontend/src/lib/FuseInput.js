@@ -6,7 +6,6 @@ import getSlug from "speakingurl";
 import memoizee from "memoizee";
 
 import "./FuseInput.css";
-import { propTypes } from "@cdt/ui/lib/flavors";
 
 const DEFAULT_FUSE_OPTIONS = {
   shouldSort: true,
@@ -35,7 +34,7 @@ const normalize = str =>
   });
 
 // render a highlighted html with span.fuse-highlighter from a fuse.js suggestion and a query.
-const FuseHighLighter = ({ suggestion, query }) => {
+const FuseHighLighter = ({ suggestion }) => {
   let html = suggestion.item.label;
   let offset = 0;
   let newHtml;

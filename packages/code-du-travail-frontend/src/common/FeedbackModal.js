@@ -83,7 +83,7 @@ class FeedbackModal extends React.Component {
               throw new Error("cannot send form : " + data.error);
             }
           })
-          .catch(e => {
+          .catch(() => {
             this.setState(
               {
                 status: "error"

@@ -25,7 +25,7 @@ const fetchIdcc = ({ slug }) =>
     });
 
 class Idcc extends React.Component {
-  static async getInitialProps({ res, query }) {
+  static async getInitialProps({ query }) {
     return await fetchIdcc(query);
   }
   render() {

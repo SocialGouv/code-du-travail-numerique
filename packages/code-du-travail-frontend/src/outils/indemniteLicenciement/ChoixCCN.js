@@ -63,7 +63,7 @@ class ChoixCC extends React.Component {
     }
   };
 
-  onSuggestionSelected = (event, { suggestion }) => {
+  onSuggestionSelected = (_, { suggestion }) => {
     this.props.onChange({
       hasCC: true,
       ccName: suggestion.item.label,

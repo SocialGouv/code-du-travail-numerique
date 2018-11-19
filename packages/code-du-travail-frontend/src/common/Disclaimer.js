@@ -1,4 +1,4 @@
-import { Container, Alert } from "@cdt/ui";
+import { Alert } from "@cdt/ui";
 
 const Disclaimer = () => (
   <Alert warning>

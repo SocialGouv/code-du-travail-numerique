@@ -1,6 +1,5 @@
 import React from "react";
 import { X, Download } from "react-feather";
-import Delay from "react-delay";
 
 import FuseInput from "../lib/FuseInput";
 
