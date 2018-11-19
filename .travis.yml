@@ -17,7 +17,7 @@ jobs:
     script: yarn lerna run --stream lint
   - script: yarn lerna run --stream build
   - stage: test
-    script: yarn run -- lerna run --stream test --  --coverage
+    script: yarn run -- lerna run --stream --parallel test --ignore "@cdt/data*" -- --coverage
     after_success: npx codecov
 notifications:
   slack:
