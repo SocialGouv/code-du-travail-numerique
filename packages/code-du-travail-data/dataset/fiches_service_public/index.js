@@ -1,22 +1,23 @@
 const fs = require("fs");
 const select = require("xpath.js");
 const dom = require("xmldom").DOMParser;
-
 const xmlToHtml = require("./xmlToHtml");
+const uniqBy = require("lodash.uniqby");
+
 /*
-
 extrait les données avec les fichiers XML de :
-
-https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/#_
-
+ - dans ./vosdroits-professionnels : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/
+ - dans ./vosdroits-particuliers : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-particuliers/
 */
 
 const XMLS_PATH = "./data";
 
 const read = path => fs.readFileSync(path).toString();
 
-const parseFiche = path => {
-  const doc = new dom().parseFromString(read(path));
+const parseFicheFromPath = path => parseFiche(read(path));
+
+const parseFiche = text => {
+  const doc = new dom().parseFromString(text);
   const nodes = select(doc, "//Theme[@ID='N19806']");
   const audience = select(doc, "/Publication/Audience/text()")
     .map(d => d.data)
@@ -30,6 +31,12 @@ const parseFiche = path => {
     audienceSlug = "professionnels-entreprises";
   }
   const id = select(doc, "/Publication/@ID")[0].value;
+
+  const [, dateRaw] = select(doc, "dc:date/text()")[0].data.match(
+    /modified ([0-9\-]+)$/
+  );
+  const [year, month, day] = dateRaw.split("-");
+  const date = `${day}/${month}/${year}`;
   if (nodes.length) {
     const url = `https://www.service-public.fr/${audienceSlug}/vosdroits/${id}`;
     const title = select(
@@ -98,6 +105,7 @@ const parseFiche = path => {
     return {
       theme: "travail",
       intro,
+      date,
       situations,
       situationsHtml,
       sousTheme,
@@ -114,11 +122,18 @@ const parseFiche = path => {
   }
 };
 
-const files = fs.readdirSync(XMLS_PATH);
+const getFiches = path =>
+  fs
+    .readdirSync(path)
+    .filter(f => f.startsWith("F"))
+    .map(f => parseFicheFromPath(`${path}/${f}`))
+    .filter(Boolean);
 
-const fiches = files
-  .filter(f => f.substring(0, 1) === "F")
-  .map(f => parseFiche(`${XMLS_PATH}/${f}`))
-  .filter(Boolean);
+const fiches = [
+  ...getFiches("./data/vosdroits-particuliers"),
+  ...getFiches("./data/vosdroits-professionnels")
+];
 
-console.log(JSON.stringify(fiches, null, 2));
+if (module === require.main) {
+  console.log(JSON.stringify(uniqBy(fiches, "url"), null, 2));
+}
