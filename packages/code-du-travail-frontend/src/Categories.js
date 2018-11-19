@@ -3,7 +3,7 @@ import { Link } from "../routes";
 
 import { Container, Categories } from "@cdt/ui";
 
-import themes from "./data/themes.json";
+import themes from "../../code-du-travail-data/dataset/themes-front.json";
 
 const Category = ({
   title,
