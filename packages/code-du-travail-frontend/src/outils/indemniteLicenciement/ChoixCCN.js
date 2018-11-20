@@ -81,8 +81,7 @@ class ChoixCC extends React.Component {
         <Section light>
           <React.Fragment>
             <h2>
-              Est ce que votre entreprise est affilié à une convention
-              collective ?
+              Votre entreprise est-elle affiliée à une convention collective ?
             </h2>
             <div style={radioContainerStyle}>
               <label style={labelStyle}>
@@ -108,7 +107,7 @@ class ChoixCC extends React.Component {
             </div>
             {this.state.showCC && (
               <label htmlFor="select-affiliation">
-                Selectioner votre convention collective
+                Sélectionnez votre convention collective
                 <div>
                   <FuseInput
                     value={this.state.brancheValue}
