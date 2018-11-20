@@ -53,3 +53,11 @@ $ docker exec -ti code-du-travail-data-python pipenv run python search/extractio
 # Pour vérifier les données des synonymes :
 $ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/synonyms/data.py -v
 ```
+
+## Extraction : FAQs
+
+Extraire les FAQ au format CSV
+
+```js
+node ./scripts/faqs-to-csv.js > out.csv
+```
