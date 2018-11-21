@@ -1,4 +1,5 @@
 const elasticsearchClient = require("../conf/elasticsearch.js");
+const { logger } = require("../utils/logger");
 
 const elasticsearchIndexName = "code_du_travail_numerique";
 const elasticsearchTypeName = "code_du_travail_numerique";
@@ -129,7 +130,7 @@ async function search({
   try {
     return await elasticsearchClient.search(elasticsearchQuery);
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 }
 
@@ -171,7 +172,7 @@ async function getSingleItem(params) {
         .then(res => (res.hits.total && res.hits.hits[0]) || null);
     }
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 }
 
@@ -196,12 +197,12 @@ async function getDocsCount() {
         }
       })
       .then(res => {
-        console.log(res.aggregations);
+        logger.debug(res.aggregations);
         return res.aggregations;
       });
     // (res.hits.total && res.hits.hits[0]) || null);
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 }
 

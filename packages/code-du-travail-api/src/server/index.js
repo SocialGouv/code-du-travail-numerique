@@ -18,6 +18,8 @@ const Koa = require("koa");
 const apiRoutes = require("./routes/api");
 const API_BASE_URL = require("./routes/api").BASE_URL;
 
+const { logger } = require("./utils/logger");
+
 const app = new Koa();
 const PORT = process.env.PORT || 1337;
 
@@ -34,7 +36,7 @@ app.use(
 
 // Server.
 const server = app.listen(PORT, () => {
-  console.log(`Server listening on port: ${PORT}`);
+  logger.info(`Server listening on port: ${PORT}`);
 });
 
 module.exports = server;

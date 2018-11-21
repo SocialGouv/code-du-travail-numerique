@@ -1,6 +1,7 @@
 const Router = require("koa-router");
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
+const { logger } = require("../utils/logger");
 
 const router = new Router();
 const BASE_URL = `/api/v1`;
@@ -30,7 +31,7 @@ router.get(`${BASE_URL}/search`, async ctx => {
 
     ctx.body = await codeDuTravailNumerique.search({ query, mustNot });
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 });
 
@@ -57,7 +58,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
       _source: ["title", "source", "slug", "anchor"]
     });
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 });
 
@@ -78,7 +79,7 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       slug: ctx.params.slug
     });
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 });
 
@@ -97,7 +98,7 @@ router.get(`${BASE_URL}/items/:id`, async ctx => {
       id: ctx.params.id
     });
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 });
 
@@ -114,7 +115,7 @@ router.get(`${BASE_URL}/docsCount`, async ctx => {
   try {
     ctx.body = await codeDuTravailNumerique.getDocsCount();
   } catch (error) {
-    console.trace(error.message);
+    logger.error(error);
   }
 });
 module.exports = router;
