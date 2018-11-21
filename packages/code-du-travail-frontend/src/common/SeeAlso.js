@@ -2,7 +2,7 @@ import React from "react";
 
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
-const SeeAlso = theme => {
+const SeeAlso = () => {
   let links = [
     {
       href: "https://socialgouv.github.io/faq-code-du-travail/",
@@ -14,16 +14,6 @@ const SeeAlso = theme => {
       text: "Le Code BFC (Bourgogne Franche Comté: fév 2017)"
     }
   ];
-
-  // Contrat de travail / Rupture de contrat à durée Indéterminée (CDI) / Rupture conventionnelle (individuelle)
-  if (theme && theme.id === 1700) {
-    links.unshift({
-      href:
-        "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp",
-      text:
-        "TELERC: Le service de saisie d'une demande d'homologation de Rupture Conventionnelle "
-    });
-  }
 
   return (
     <section className="section-light">

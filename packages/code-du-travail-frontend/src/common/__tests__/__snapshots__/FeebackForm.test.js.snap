@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedbackForm /> should render 1`] = `
+<div>
+  <form
+    action="https://formspree.io/xwbdjqem"
+    class="Feedback__form"
+  >
+    <input
+      class="Feedback__input"
+      disabled=""
+      name="question"
+      type="text"
+      value="Initial query"
+    />
+    <h2
+      class="section__subtitle"
+    >
+      Les réponses qui pourraient vous aider
+    </h2>
+    <ul
+      style="width: 100%;"
+    >
+      <li>
+        <a
+          href="/undefined/result-slug?q=Initial%20query&search=0"
+        >
+          item title
+        </a>
+      </li>
+    </ul>
+    <h2
+      class="section__subtitle"
+    >
+      Laisser nous un commentaire sur notre service
+       
+      <span
+        class="fontweight--normal fontweight--italic"
+      >
+         
+        - facultatif
+      </span>
+    </h2>
+    <select
+      class="Feedback__input"
+      name="motif"
+    >
+      <option
+        value="Les informations proposées ne sont pas à jour"
+      >
+        Les informations proposées ne sont pas à jour
+      </option>
+      <option
+        value="Les informations me paraissent erronées"
+      >
+        Les informations me paraissent erronées
+      </option>
+      <option
+        value="Les informations me paraissent incomplètes"
+      >
+        Les informations me paraissent incomplètes
+      </option>
+      <option
+        value="Les informations me paraissent hors-sujet"
+      >
+        Les informations me paraissent hors-sujet
+      </option>
+      <option
+        value="Je n'ai pas trouvé la réponse à ma question"
+      >
+        Je n'ai pas trouvé la réponse à ma question
+      </option>
+    </select>
+    <textarea
+      class="Feedback__input"
+      name="message"
+      placeholder="Les informations ..."
+    />
+    <input
+      class="Feedback__input"
+      name="email"
+      placeholder="nom@adresse.email"
+      type="email"
+      value=""
+    />
+    <div
+      class="Feedback__action"
+    >
+      <button
+        class="Feedback__button btn btn__primary"
+      >
+        Envoyer ma question
+      </button>
+      <div
+        class="Feedback__status"
+      />
+    </div>
+  </form>
+</div>
+`;
