@@ -15,9 +15,10 @@ jobs:
   include:
   - stage: Prepare
     script: yarn lerna run --stream lint
-  - script: yarn lerna run --stream build
-  - stage: test
-    script: yarn run -- lerna run --stream test --  --coverage
+  - stage: Build and test
+    script:
+      - yarn lerna run --stream build
+      - yarn run -- lerna run --stream test --  --coverage
     after_success: npx codecov
 notifications:
   slack:
