@@ -612,7 +612,7 @@ module.exports = [
   },
   {
     url:
-      "http://travail-emploi.gouv.fr/dialogue-social/egalite-professionnelle-et-salariale-femmes-hommes/article/l-egalite-de-remuneration",
+      "https://travail-emploi.gouv.fr/droit-du-travail/la-remuneration/article/l-egalite-de-remuneration-entre-les-femmes-et-les-hommes",
     title: "L’égalité de rémunération entre les femmes et les hommes"
   },
   {
@@ -876,7 +876,7 @@ module.exports = [
   },
   {
     url:
-      "http://travail-emploi.gouv.fr/droit-du-travail/rupture-de-contrats/licenciement/article/le-licenciement-pour-motif-personnel-les-causes-possibles-et-les-sanctions",
+      "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/le-licenciement-pour-motif-personnel-les-causes-possibles-les-sanctions",
     title:
       "Le licenciement pour motif personnel : les causes possibles et les sanctions applicables"
   },

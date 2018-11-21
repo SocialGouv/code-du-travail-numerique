@@ -50,6 +50,7 @@ class Fiche extends React.Component {
         html={data._source.html}
         footer={footer}
         icon={DossierIcon}
+        date={data._source.date}
         sourceType="Fiche ministère du travail"
       />
     );
