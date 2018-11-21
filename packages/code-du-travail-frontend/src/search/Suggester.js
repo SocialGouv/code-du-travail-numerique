@@ -56,7 +56,7 @@ const SuggestionsContainer = styled.div`
   }
 `;
 
-const renderSuggestionsContainer = ({ containerProps, children, query }) => (
+const renderSuggestionsContainer = ({ containerProps, children }) => (
   <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
 );
 

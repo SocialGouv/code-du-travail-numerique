@@ -6,7 +6,8 @@ export const flavors = [
   "warning",
   "success",
   "info",
-  "danger"
+  "danger",
+  "link"
 ];
 
 // return the 1st truthy prop that is one of an Button versions
@@ -25,11 +26,10 @@ export const cleanProps = props =>
     .reduce(
       (newProps, key) => ({
         ...newProps,
-        [key]: props[key].toString() || undefined
+        [key]: props[key] === false ? undefined : props[key].toString()
       }),
       { ...props }
     );
-
 export const propTypes = {
   /** use .btn.btn__primary */
   primary: PropTypes.bool,
@@ -43,6 +43,7 @@ export const propTypes = {
   info: PropTypes.bool,
   /** use .btn.btn__danger */
   danger: PropTypes.bool,
+  link: PropTypes.bool,
   style: PropTypes.object
 };
 
@@ -52,5 +53,6 @@ export const defaultProps = {
   warning: false,
   success: false,
   info: false,
-  danger: false
+  danger: false,
+  link: false
 };

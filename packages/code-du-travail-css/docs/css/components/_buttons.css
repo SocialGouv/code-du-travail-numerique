@@ -209,3 +209,35 @@ The <span> element will be moved away from the normal flow of the document.
   padding: var(--spacing-xsmall) var(--spacing-small);
   font-weight: 400;
 }
+
+.btn__link {
+  text-align: inherit;
+  text-decoration: underline;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  font-weight: inherit;
+  /* Fixme: currently use the same colors as `.btn__primary`. */
+  background: none;
+  color: currentColor;
+}
+
+.btn__link:focus,
+.btn__link:hover,
+.btn__link:active {
+  background: none;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--color-blue);
+}
+
+.link:focus,
+.link:hover,
+.link:active {
+  text-decoration: none;
+}

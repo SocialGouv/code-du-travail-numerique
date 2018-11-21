@@ -4,7 +4,7 @@ module.exports = {
     node: true,
     commonjs: true,
     es6: true,
-    jest: true,
+    jest: true
   },
   parser: "babel-eslint",
   extends: [
@@ -30,7 +30,13 @@ module.exports = {
     "react/react-in-jsx-scope": "warn",
     "react/prop-types": "warn",
     "jsx-a11y/click-events-have-key-events": "warn",
-    "jsx-a11y/anchor-is-valid": "warn", // conflicts with Link/a that sets href at runtime
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        components: ["Link"],
+        aspects: ["invalidHref", "preferButton"]
+      }
+    ], // conflicts with Link/a that sets href at runtime
     "jsx-a11y/no-static-element-interactions": "warn",
     "jsx-a11y/accessible-emoji": "warn",
     "jsx-a11y/label-has-for": "off", // will be deprecated in favor of label-has-associated-control

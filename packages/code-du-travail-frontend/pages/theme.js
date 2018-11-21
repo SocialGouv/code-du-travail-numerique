@@ -5,7 +5,7 @@ import { BreadCrumbs, Container, Alert } from "@cdt/ui";
 import find from "unist-util-find";
 import parents from "unist-util-parents";
 
-import { Link, Router } from "../routes";
+import { Link } from "../routes";
 import Search, { SearchQuery } from "../src/search/Search";
 import Categories from "../src/Categories";
 import themes from "@cdt/data/dataset/themes-front.json";

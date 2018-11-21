@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
-import Alert from "../common/Alert";
+import { Alert } from "@cdt/ui";
 import { getRouteBySource } from "../sources";
 
 const motifLabels = [
@@ -83,7 +83,7 @@ class FeedbackModal extends React.Component {
               throw new Error("cannot send form : " + data.error);
             }
           })
-          .catch(e => {
+          .catch(() => {
             this.setState(
               {
                 status: "error"
@@ -204,9 +204,9 @@ class FeedbackModal extends React.Component {
                 </button>
                 <div className="Feedback__status">
                   {this.state.status === "sent" ? (
-                    <Alert category="success">Message bien envoyé !</Alert>
+                    <Alert success>Message bien envoyé !</Alert>
                   ) : this.state.status === "error" ? (
-                    <Alert category="danger">
+                    <Alert warning>
                       Impossible d&apos;envoyer votre message
                     </Alert>
                   ) : null}

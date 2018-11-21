@@ -25,7 +25,7 @@ const notifySentry = err => {
 };
 
 export default class Error extends React.Component {
-  static async getInitialProps({ req, res, err }) {
+  static async getInitialProps({ res }) {
     return { statusCode: res.statusCode };
   }
 
@@ -47,7 +47,7 @@ export default class Error extends React.Component {
           <br />
           <br />
           <br />
-          <Link href="/">Retour à la page d'accueil</Link>
+          <Link href="/">Retour à la page d&apos;accueil</Link>
         </p>
       </div>
     );

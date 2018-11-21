@@ -36,7 +36,7 @@ const makeExcerpt = highlight => {
   return "";
 };
 
-const ResultItem = withRouter(({ _id, _source, highlight, router }) => {
+const ResultItem = withRouter(({ _source, highlight, router }) => {
   const excerpt = makeExcerpt(highlight);
 
   const route = getRouteBySource(_source.source);

@@ -45,8 +45,8 @@ const SeeAlso = theme => {
                 <li>
                   <a
                     target="_blank"
-                    className="external-link__after"
                     rel="noopener noreferrer"
+                    className="external-link__after"
                     href="https://www.defenseurdesdroits.fr/office"
                   >
                     Défenseur des droits

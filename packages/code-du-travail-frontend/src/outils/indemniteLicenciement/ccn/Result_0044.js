@@ -48,8 +48,7 @@ class ResultDetail extends React.Component {
       age,
       anciennete,
       echelon,
-      hasOpe,
-      isEco
+      hasOpe
     } = this.props;
     return (
       <React.Fragment>
@@ -76,7 +75,7 @@ class ResultDetail extends React.Component {
               <Row value={`${labelize(salaireRef)}`}>Salaire retenu</Row>
               <Row value={echelon.groupe}>Echelon</Row>
               <Row value={hasOpe ? "Oui" : "non"}>
-                L'entreprise est affiliée a une Organisation Patronnale
+                L&apos;entreprise est affiliée a une Organisation Patronnale
                 Employeur
               </Row>
               <Row value={`${age}`}>Age</Row>
