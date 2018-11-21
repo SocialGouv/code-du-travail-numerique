@@ -1234,9 +1234,7 @@
 	{
 		"question": "Comment s’applique un APC à un salarié en contrat à durée déterminée, notamment en matière de licenciement ?",
 		"reponse": "<p>En ce qui concerne les salariés en CDD, il ne peut y avoir de licenciement en dehors des cas de rupture anticipée du contrat limitativement prévus par la loi (art. L. 1243-1 et L. 1243-2) :</p><p>-  en cas de faute grave,</p><p>-  de force majeure, </p><p>-  ou d'inaptitude constatée par le médecin du travail,</p><p>-  et à l'initiative du salarié, lorsque celui-ci justifie de la conclusion d'un contrat à durée indéterminée.</p><p>Dès lors, en cas de refus de modification du contrat de travail par un salarié en CDD, celui-ci ne peut pas être licencié.",
-		"themes": [
-			110000
-		],
+		"themes": [110000],
 		"theme": "licenciement économique",
 		"source": "DGT",
 		"date_redaction": "07/09/2018",
@@ -1244,5 +1242,171 @@
 			"profil": "employeur",
 			"type_contrat": "CDD"
 		}
+	},
+	{
+		"question": "Quelle est la durée maximale de la période d'essai ?",
+		"reponse": "<p>La durée de la période d'essai est d'un mois. Celle-ci peut être renouvelée une fois, soit une durée maximale totale de deux mois.</p><p>Pour les salariés de niveau 1 échelon 1, la période d'essai ne peut pas être renouvelée. Pour ces salariés, la durée maximale de la période d'essai est donc d'un mois.</p>",
+		"tags": {
+			"article": ["article 13 de la convention collective"],
+			"themes": ["3710", "3760"],
+			"theme": "période d'essai",
+			"categorie": "Employés",
+			"coefficient": "niveau I , II , III de la Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997)",
+			"branche": "HCR",
+			"profil": ["employeur", "salarié"],
+			"type_contrat": "CDI"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "MS", "GH"],
+		"date_redaction": "20/11/2018"
+	},
+
+	{
+		"question": "Quelle est la durée maximale de la période d'essai ?",
+		"reponse": "La durée de la période d'essai est de trois mois. Celle-ci peut êre renouvelée une fois, soit une durée maximale totale de six mois.",
+		"tags": {
+			"themes": ["3710"],
+			"theme": "période d'essai",
+			"categorie": "Agents de maîtrise",
+			"coefficient": ["niveau IV"],
+			"branche": "HCR",
+			"profil": ["employeur", "salarié"],
+			"type_contrat": "CDI"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "MS", "GH"],
+		"date_redaction": "20/11/2018"
+	},
+	{
+		"question": "Quelle est la durée maximale de la période d'essai ?",
+		"reponse": "La durée de la période d'essai est de trois mois. Celle-ci peut êre renouvelée une fois, soit une durée maximale totale de six mois.",
+		"tags": {
+			"themes": ["3710"],
+			"theme": ["Embauche", "Période d'essai", "Contrat de travail"],
+			"categorie": "Cadres",
+			"coefficient": ["niveau IV"],
+			"branche": "HCR",
+			"profil": ["employeur", "salarié"],
+			"type_contrat": "CDI"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "MS", "GH"],
+		"date_redaction": "20/11/2018"
+	},
+
+	{
+		"question": "Quelle est la durée maximale de la période d'essai ?",
+		"reponse": "La durée de la période d'essai est de trois mois. Celle-ci peut êre renouvelée une fois, soit une durée maximale totale de six mois.",
+		"tags": {
+			"themes": ["3710"],
+			"theme": ["Embauche", "Période d'essai", "Contrat de travail"],
+			"categorie": "",
+			"coefficient": ["niveau IV"],
+			"branche": "HCR",
+			"profil": ["employeur", "salarié"],
+			"type_contrat": "CDD",
+			"travailleur_particulier": "saisonniers, extras"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "MS", "GH"],
+		"date_redaction": "20/11/2018"
+	},
+
+	{
+		"question": "L'employeur peut-il faire travailler un salarié le samedi et le dimanche (convention collective de la boulangerie artisanale) ?",
+		"reponse": "<p>le travail du samedi et du dimanche est possible dans cette convention collective. Votre employeur doit respecter le repos hebdomadaire d'au moins une journée par semaine comme le prévoit le code du travail à défaut de dispositions particuliÃ¨res dans la convention collective.</p><p>Une majoration de 20 % du taux horaire des heures effectuées, est prévu pour le travail du dimanche en application de la convention collective.</p><p>Le salaire de tout salarié employé le dimanche sera majoré de 20 p. 100.</p><p>Cette majoration sera calculée sur le produit de son salaire horaire de base par le nombre d'heures de travail effectuées le dimanche.</p><p>Si le salarié n'est pas rémunéré à l'heure, le salaire horaire de référence sera le salaire horaire minimum national de sa catégorie.</p>",
+		"tags": {
+			"article": ["article 28 de la CCN", "article 38 de la CCN", "L3132-2 du code du travail"],
+			"themes": ["21000", "21012"],
+			"theme": ["durée du travail"],
+			"branche": "Boulangerie artisanale",
+			"profil": ["employeur", "salarié"]
+		},
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "JJ", "MCM"],
+		"date_redaction": "20/11/2018"
+	},
+	{
+		"question": "L'employeur peut-il faire travailler un salarié le samedi et le dimanche (convention collective de la boulangerie artisanale) ?",
+		"reponse": "<p>le travail du samedi et du dimanche est possible dans cette convention collective. Votre employeur doit respecter le repos hebdomadaire d'au moins une journée par semaine comme le prévoit le code du travail à défaut de dispositions particuliÃ¨res dans la convention collective.</p><p>Une majoration de 20 % du taux horaire des heures effectuées, est prévu pour le travail du dimanche en application de la convention collective.</p><p>Le salaire de tout salarié employé le dimanche sera majoré de 20 p. 100.</p><p>Cette majoration sera calculée sur le produit de son salaire horaire de base par le nombre d'heures de travail effectuées le dimanche.</p><p>Pour les apprentis, le repos hebdomadaire est de deux jours consécutifs</p><p>Si le salarié n'est pas rémunéré à l'heure, le salaire horaire de référence sera le salaire horaire minimum national de sa catégorie.</p>",
+		"tags": {
+			"article": ["article 28 de la CCN", "article 38 de la CCN", "L3132-2 du code du travail"],
+			"themes": ["21000", "21012"],
+			"theme": ["durée du travail"],
+			"branche": "Boulangerie artisanale",
+			"profil": "employeur",
+			"travailleur_particulier": "apprenti"
+		},
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "JJ", "MCM"],
+		"date_redaction": "20/11/2018"
+	},
+	{
+		"question": "L'employeur peut-il faire travailler un salarié le samedi et le dimanche : Métallurgie accords nationaux ?",
+		"reponse": "Votre employeur peut vous demander de travailler le samedi soit dans le cadre d'heures supplémentaires en respectant les dispositions du code du travail ou d'un changement de votre horaire de travail. Votre employeur ne peut pas vous faire travailler le dimanche. La convention collective de la métallurgie ne prévoit pas de dispositions particulières concernant le travail du dimanche.",
+		"tags": {
+			"article": ["article 28 de la CCN", "article 38 de la CCN", "L3132-2 du code du travail"],
+			"themes": ["21000", "21012"],
+			"theme": ["durée du travail"],
+			"branche": "Métallurgie : accords nationaux",
+			"profil": "salarié",
+			"travailleur_particulier": "apprenti"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "JJ", "MCM"],
+		"date_redaction": "20/11/2018"
+	},
+	{
+		"question": "Mon employeur  peut t'il me demander de travailler la nuit ou en soirée ?",
+		"reponse": "<p>La convention collective de la boulangerie artisanale autorise le recours au travail de nuit. L' employeur peut  donc  proposer un avenant au contrat de travail mettant en place des horaires de nuit. Il s'agit de toute heure effectuée entre 21 heures et 6 heures.</p><p>Le statut particulier de travailleur de nuit est réservé au salarié effectuant au moins 2 fois par semaine, 3 heures de nuit   au minimum 270 heures dans l'année civile. S'agissant d'une proposition de modification de contrat, le salarié est en droit  de refuser ou d'accepter. Sur les conséquences d'un refus, cf fiche modification du contrat.  En cas d'acceptation,  des compensations  sont prévues par la convention collective de la boulangerie artisanale.</p><p>L'employeur peut imposer le travail exceptionnel  de nuit. Dans ce cas le refus du salarié n'est possible que si le travail de nuit est incompatible avec des obligations familiales impérieuses. A défaut, le refus peut constituer une faute.</p>",
+		"tags": {
+			"article": ["L3122-12 du code du travail", "L3122-2 du code du travail", "L3122-5 du code du travail"],
+			"themes": ["21606", "21612", "21630"],
+			"theme": ["durée du travail", "travail de nuit"],
+			"branche": "Boulangerie artisanale",
+			"profil": "employeur"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "AC", "CM", "EG"],
+		"date_redaction": "20/11/2018"
+	},
+	{
+		"question": "Mon employeur  peut t'il me demander de travailler la nuit ou en soirée ?",
+		"reponse": "<p>La convention collective de la boulangerie artisanale autorise le recours au travail de nuit. L' employeur peut  donc  proposer un avenant au contrat de travail mettant en place des horaires de nuit. Il s'agit de toute heure effectuée entre 21 heures et 6 heures.</p><p>Le statut particulier de travailleur de nuit est réservé au salarié effectuant au moins 2 fois par semaine, 3 heures de nuit   au minimum 270 heures dans l'année civile. S'agissant d'une proposition de modification de contrat, le salarié est en droit  de refuser ou d'accepter. Sur les conséquences d'un refus, voir le thème: <a href='https: //codedutravail-dev.num.social.gouv.fr/?q=modification%20du%20contrat&facet='> modification du contrat de travail < /a>  En cas d'acceptation,  des compensations  sont prévues par la convention collective de la boulangerie artisanale.</p > ",
+		"tags": {
+			"article": ["L3122-12 du code du travail", "L3122-2 du code du travail", "L3122-5 du code du travail"],
+			"themes": ["21606", "21612", "21630"],
+			"theme": ["durée du travail", "travail de nuit"],
+			"branche": "Boulangerie artisanale",
+			"profil": "employeur",
+			"travailleur_particulier": "travailleur de nuit"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "AC", "CM", "EG"],
+		"date_redaction": "20/11/2018"
+	},
+	{
+		"question": "Je suis en arrêt maladie, ai- je le droit au maintien de salaire par mon employeur? ",
+		"reponse": "Le complément de salaire prévu par la convention collective des Hôtels, Cafés Restaurants est moins favorable . Ce sont les dispositions du code du Travail qui s'appliquent.<p>Seul le salarié ayant un an d'ancienneté au 1er jour de l'arrêtt de travail a droit à un complément de salaire payé par l'employeur . Il est versé à compter du 8éme jour d'absence et dès le 1er jour en cas d'accident de travail ou de maladie professionnelle.</p><p>La durée  minimale  et taux d'indemnisation  sont les suivants.  :</p><table>\n<thead>\n<tr>\n<th colspan= 1>Ancienneté</th>\n<th colspan= 1>Nombre de jours à 90%</th>\n<th colspan= 1>Nombre de jours au 2/3</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>De 1 à 6 ans</td>\n<td>30</td>\n<td>30</td>\n</tr>\n<tr> \n < td > De 6 à 11 ans < /td>\n<td>40</td>\n<td>40</td>\n</tr>\n<tr>\n<td> De 11 à 16 ans</td>\n<td>50</td>\n<td>50</td>\n</tr>\n<tr>\n <td>De 16 à 21 ans </td>\n<td>60</td>\n<td>60</td>\n </tr>\n <tr>\n<td> De 21 ans à 26 ans </td > \n < td > 70 < /td>\n <td > 70 < /td >\n </tr>\n<tr><td > De 26 ans à 31 ans < /td>\n <td > 80 < /td>\n <td > 80 < /td>\n</tr>\n<tr > \n <td >31 ans et plus < /td>\n <td > 90 < /td>\n <td > 90 < /td>\n < /tr > \n </tbody></table></p>Les durées d'indemnisations sont fixées par période de 12 mois à compter du 1 er arrêt de maladie.Ce droit à complément est ouvert une fois par période de 12 mois.Le changement d'année civile n' ouvre pas une nouvelle période d'indemnisation.",
+		"tags": {
+			"article": ["L3122-12 du code du travail", "L3122-2 du code du travail", "L3122-5 du code du travail"],
+			"themes": ["21606", "21612", "21630"],
+			"theme": ["durée du travail", "travail de nuit"],
+			"branche": "Hôtels, cafés et restaurants",
+			"profil": "employeur",
+			"travailleur_particulier": "travailleur de nuit"
+		},
+
+		"source": "DIRECCTE",
+		"redacteur": ["GT CDTN", "AC", "CM", "EG"],
+		"date_redaction": "20/11/2018"
 	}
+
 ]
