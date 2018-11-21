@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServiceRenseignementModal /> should render a popup when click on button 1`] = `
+<body>
+  <div
+    aria-hidden="true"
+  >
+    <div
+      class="btn btn__link  link"
+      link="true"
+      role="button"
+      tabindex="0"
+    >
+      Trouver votre service de renseignement
+    </div>
+  </div>
+  <reach-portal>
+    <div
+      data-reach-dialog-overlay="true"
+      style="background: rgba(0, 0, 0, 0.5);"
+    >
+      <div
+        aria-modal="true"
+        data-reach-dialog-content="true"
+        style="border-radius: 3px; margin: 5vh auto;"
+        tabindex="-1"
+      >
+        <h2>
+          Trouver votre service de renseignement
+        </h2>
+        <p>
+          <label
+            for="id_1"
+          >
+            Saisissez votre numéro de département :
+          </label>
+          <input
+            class="full-width"
+            id="id_1"
+            maxlength="3"
+            type="text"
+          />
+        </p>
+      </div>
+    </div>
+  </reach-portal>
+</body>
+`;

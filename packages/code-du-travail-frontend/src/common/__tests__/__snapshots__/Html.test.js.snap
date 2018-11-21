@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Html /> should render 1`] = `
+<div>
+  <div>
+    <b>
+      Hello
+    </b>
+     World
+  </div>
+</div>
+`;

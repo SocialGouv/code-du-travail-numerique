@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServiceRenseignement /> should render suggestions 1`] = `
+<div>
+  <h2>
+    Trouver votre service de renseignement
+  </h2>
+  <p>
+    <label
+      for="id_1"
+    >
+      Saisissez votre numéro de département :
+    </label>
+    <input
+      class="full-width"
+      id="id_1"
+      maxlength="3"
+      type="text"
+    />
+  </p>
+  <p>
+    <a
+      class="external-link__after"
+      href="link.url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <mark>
+        link.url
+      </mark>
+    </a>
+  </p>
+</div>
+`;

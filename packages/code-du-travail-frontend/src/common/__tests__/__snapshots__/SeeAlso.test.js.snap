@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SeeAlso /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="block-2-cols wrapper-dark"
+      >
+        <header>
+          <h2>
+            Voir aussi
+          </h2>
+        </header>
+        <div
+          class="block-2-cols__row"
+        >
+          <div
+            class="block-2-cols__col"
+          >
+            <h3>
+              <img
+                alt=""
+                src="/static/assets/icons/phone-call.svg"
+              />
+              Vos interlocuteurs
+            </h3>
+            <ul>
+              <li>
+                <div
+                  class="btn btn__link  link"
+                  link="true"
+                  role="button"
+                  tabindex="0"
+                >
+                  Trouver votre service de renseignement
+                </div>
+              </li>
+              <li>
+                <a
+                  class="external-link__after"
+                  href="https://www.defenseurdesdroits.fr/office"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Défenseur des droits
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="block-2-cols__col"
+          >
+            <h3>
+              <img
+                alt=""
+                src="/static/assets/icons/line-chart.svg"
+              />
+              Liens et outils
+            </h3>
+            <ul>
+              <li>
+                <a
+                  class="external-link__after"
+                  href="https://socialgouv.github.io/faq-code-du-travail/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Question-Réponse des services de renseignement
+                </a>
+              </li>
+              <li>
+                <a
+                  class="external-link__after"
+                  href="http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Le Code BFC (Bourgogne Franche Comté: fév 2017)
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
