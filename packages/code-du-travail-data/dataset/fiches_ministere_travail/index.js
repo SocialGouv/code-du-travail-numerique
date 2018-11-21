@@ -42,8 +42,9 @@ function parseDom(dom, url) {
     }
   });
 
-  const date = $(article, ".date--maj") || $(article, ".date--publication");
-  const [day, month, year] = date.textContent.trim().split(".");
+  const dateRaw = $(article, ".date--maj") || $(article, ".date--publication");
+  const [date] = dateRaw.textContent.match(/([0-9\.]+)$/);
+  const [day, month, year] = date.split(".");
 
   let result = {
     articles,
