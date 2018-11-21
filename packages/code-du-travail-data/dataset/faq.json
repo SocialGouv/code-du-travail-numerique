@@ -143,6 +143,7 @@
 		"tags": {
 			"theme": "contrat de travail et embauche",
 			"branche": ["Bâtiment ouvriers entreprises jusqu'à 10 salariés", "Bâtiment ouvriers entreprises plus de 10 salariés"]
+      "categorie":"ouvriers"
 		},
 		"date_redaction": "01/12/2017",
 		"source": "DIRECCTE",
