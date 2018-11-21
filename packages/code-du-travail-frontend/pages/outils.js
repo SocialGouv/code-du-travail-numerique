@@ -6,7 +6,6 @@ import fetch from "isomorphic-unfetch";
 import { Container, Alert } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
-import FeedbackForm from "../src/common/FeedbackForm";
 import Search from "../src/search/Search";
 import CalculateurIndemnite from "../src/outils/indemniteLicenciement";
 
@@ -68,7 +67,6 @@ class Outils extends React.Component {
         <OutilComponent q={router.query.q} />
         <Source name="-" />
         <SeeAlso />
-        <FeedbackForm query="" />
       </React.Fragment>
     );
   }
