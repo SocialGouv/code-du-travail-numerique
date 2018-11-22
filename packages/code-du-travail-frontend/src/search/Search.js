@@ -248,7 +248,7 @@ const SearchView = ({
 }) => {
   return (
     <React.Fragment>
-      <div className="section-white shadow-bottom">
+      <div className="section-white shadow-bottom search-widget">
         <Container>
           <div className="search" style={{ padding: "1em 0" }}>
             <header>

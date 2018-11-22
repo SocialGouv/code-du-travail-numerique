@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "../../routes";
 
 const Header = () => (
-  <header className="section-white">
+  <header className="section-white site-header">
     <div className="container">
       <div className="main-header">
         <Link route="index" params={{ q: "" }}>

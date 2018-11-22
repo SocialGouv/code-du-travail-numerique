@@ -3,7 +3,7 @@ import React from "react";
 import ConventionModal from "../common/ConventionModal";
 
 const Footer = () => (
-  <footer className="section-dark" id="footer">
+  <footer className="section-dark site-footer" id="footer">
     <div className="container">
       <div className="main-footer">
         <div className="footer__block">

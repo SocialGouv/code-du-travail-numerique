@@ -1,0 +1,64 @@
+body {
+  font-size: 10pt;
+}
+
+/*
+ hide useless blocks
+*/
+.search-widget,
+.article__widget_container,
+.aside-title,
+.btn-download,
+.no-answer,
+.site-footer {
+  display: none;
+}
+
+/*
+ Improve Layout, adapt margin
+*/
+.site-header {
+  padding: 5pt 0;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+.wrapper-light {
+  border: none;
+  padding: 0 5pt;
+}
+.article__content {
+  margin: 20pt 0 0;
+}
+.article {
+  margin-top: 5pt;
+}
+
+/*
+ Block specific adaptation
+*/
+.article__icon {
+  flex-basis: 40pt;
+  padding: 5pt 10pt 0 0;
+  align-self: flex-start;
+}
+
+.article__title {
+  font-size: 18pt;
+  line-height: 1.2;
+}
+
+.courrier-type {
+  margin: 0;
+  border: none;
+  page-break-inside: avoid;
+  page-break-after: auto;
+  line-height: 1.2;
+}
+
+.article__content table {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
