@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, wait, cleanup } from "react-testing-library";
+import { fireEvent, render, wait } from "react-testing-library";
 
 import { FeedbackForm } from "../FeedbackForm";
 
@@ -16,18 +16,14 @@ const results = [
   }
 ];
 
-fetch.mockReturnValue(
-  Promise.resolve({
-    json: () => ({ success: true })
-  })
-);
-
-afterEach(cleanup);
-
 describe("<FeedbackForm />", () => {
   it("should render", () => {
     const { container, getByValue } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={jest.fn()}
+      />
     );
     expect(getByValue("Initial query")).toBeTruthy();
     expect(container).toMatchSnapshot();
@@ -35,7 +31,11 @@ describe("<FeedbackForm />", () => {
 
   it("should prevent submiting form if email is empty", () => {
     const { getByText } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={jest.fn()}
+      />
     );
     window.alert = jest.fn();
     getByText("Envoyer ma question").click();
@@ -43,20 +43,30 @@ describe("<FeedbackForm />", () => {
   });
 
   it("should submit form if email is filled", () => {
+    const onSubmit = jest.fn().mockResolvedValue({ success: true });
     const { getByText, getByPlaceholderText } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={onSubmit}
+      />
     );
     const email = getByPlaceholderText("nom@adresse.email");
     const button = getByText("Envoyer ma question");
 
     fireEvent.change(email, { target: { value: "user@social.gouv.fr" } });
     button.click();
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(onSubmit).toHaveBeenCalledTimes(1);
   });
 
   it("should reset form after submit", async () => {
+    const onSubmit = jest.fn().mockResolvedValue({ success: true });
     const { getByText, getByPlaceholderText } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={onSubmit}
+      />
     );
 
     const email = getByPlaceholderText("nom@adresse.email");
@@ -71,8 +81,13 @@ describe("<FeedbackForm />", () => {
   });
 
   it("should show a status message after submit", async () => {
+    const onSubmit = jest.fn().mockResolvedValue({ success: true });
     const { getByText, getByPlaceholderText } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={onSubmit}
+      />
     );
 
     const email = getByPlaceholderText("nom@adresse.email");
@@ -85,8 +100,13 @@ describe("<FeedbackForm />", () => {
   });
 
   it("should hide status message after 3s", async () => {
+    const onSubmit = jest.fn().mockResolvedValue({ success: true });
     const { getByText, queryByText, getByPlaceholderText } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={onSubmit}
+      />
     );
 
     const email = getByPlaceholderText("nom@adresse.email");
@@ -99,13 +119,17 @@ describe("<FeedbackForm />", () => {
     expect(queryByText(/message bien envoyé/i)).not.toBeTruthy();
   });
   it("should show error status message if request fail ", async () => {
+    const onSubmit = jest.fn().mockRejectedValue({});
     const { getByText, queryByText, getByPlaceholderText } = render(
-      <FeedbackForm query="Initial query" results={results} />
+      <FeedbackForm
+        query="Initial query"
+        results={results}
+        onSubmit={onSubmit}
+      />
     );
 
     const email = getByPlaceholderText("nom@adresse.email");
     const button = getByText(/Envoyer ma question/i);
-    fetch.mockReturnValue(Promise.reject());
     fireEvent.change(email, { target: { value: "user@social.gouv.fr" } });
     button.click();
     await wait(() => expect(getByText(/Impossible/i)).toBeTruthy());

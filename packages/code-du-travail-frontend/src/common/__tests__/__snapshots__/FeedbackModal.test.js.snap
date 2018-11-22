@@ -23,7 +23,7 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
         tabindex="-1"
       >
         <section
-          class="FeedbackModal__content"
+          class="feedback-modal__content"
           style="outline: 0;"
         >
           <h1
@@ -32,16 +32,16 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
             Vous n'avez pas trouvé votre réponse ?
           </h1>
           <p
-            class="FeedbackModal__intro"
+            class="feedback-modal__intro"
           >
             Nous sommes désolés de n'avoir pu répondre à vos attentes. Laissez-nous votre question, vos suggestions et votre adresse, nous vous préviendrons lors des prochaines améliorations de cet outils.
           </p>
           <form
             action="https://formspree.io/xwbdjqem"
-            class="Feedback__form"
+            class="feedback__form"
           >
             <input
-              class="Feedback__input"
+              class="feedback__input"
               disabled=""
               name="question"
               type="text"
@@ -76,7 +76,7 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
               </span>
             </h2>
             <select
-              class="Feedback__input"
+              class="feedback__input"
               name="motif"
             >
               <option
@@ -106,28 +106,31 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
               </option>
             </select>
             <textarea
-              class="Feedback__input"
+              class="feedback__input"
               name="message"
               placeholder="Les informations ..."
             />
             <input
-              class="Feedback__input"
+              class="feedback__input"
               name="email"
               placeholder="nom@adresse.email"
               type="email"
               value=""
             />
             <div
-              class="Feedback__action"
+              class="feedback__action"
             >
               <button
-                class="Feedback__button btn btn__primary"
+                class="feedback__button btn btn__primary"
               >
                 Envoyer ma question
               </button>
               <div
-                class="Feedback__status"
-              />
+                class="feedback__status"
+              >
+                 
+                 
+              </div>
             </div>
           </form>
         </section>

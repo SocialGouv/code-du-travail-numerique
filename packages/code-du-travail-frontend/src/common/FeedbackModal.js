@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { FeedbackForm } from "./FeedbackForm";
+import { postFeedback } from "./feedback.service";
 
 class FeedbackModal extends React.Component {
   static propTypes = {
@@ -34,7 +35,11 @@ class FeedbackModal extends React.Component {
               nous vous préviendrons lors des prochaines améliorations de cet
               outils.
             </p>
-            <FeedbackForm query={query} results={results} />
+            <FeedbackForm
+              onSubmit={postFeedback}
+              query={query}
+              results={results}
+            />
           </section>
         </DialogContent>
       </DialogOverlay>

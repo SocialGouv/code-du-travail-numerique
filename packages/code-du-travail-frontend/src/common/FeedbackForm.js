@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { Alert } from "@cdt/ui";
 import { getRouteBySource } from "../sources";
+import { feedbackUrl } from "./feedback.service";
 
 const motifLabels = [
   "Les informations proposées ne sont pas à jour",
@@ -12,12 +13,11 @@ const motifLabels = [
   "Je n'ai pas trouvé la réponse à ma question"
 ];
 
-const formspreeUrl = "https://formspree.io/xwbdjqem";
-
 class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
-    results: PropTypes.arrayOf(PropTypes.object)
+    results: PropTypes.arrayOf(PropTypes.object),
+    onSubmit: PropTypes.func.isRequired
   };
   static defaultProps = {
     query: "",
@@ -36,11 +36,17 @@ class FeedbackForm extends React.Component {
   componentDidMount() {
     this.texteareaRef.current.focus();
   }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeoutId);
+  }
+
   inputChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
+
   onSubmit = event => {
     event.preventDefault();
     const { question, motif, message, email } = this.state;
@@ -49,62 +55,55 @@ class FeedbackForm extends React.Component {
       return;
     }
 
-    this.setState(
-      {
-        status: "sending"
-      },
-      () => {
-        fetch(formspreeUrl, {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            motif,
-            message,
-            email,
-            userAgent: typeof navigator !== "undefined" && navigator.userAgent,
-            subject: question
-          })
-        })
-          .then(r => r.json())
-          .then(data => {
-            if (data.success) {
-              this.setState({
-                status: "sent",
-                email: "",
-                message: "",
-                motif: motifLabels[0]
-              });
-            } else if (data.error) {
-              throw new Error("cannot send form : " + data.error);
-            }
-          })
-          .catch(() => {
-            this.setState({
-              status: "error"
-            });
-          })
-          .then(() => {
-            this.timeoutId = setTimeout(
-              () => this.setState({ status: "" }),
-              3000
-            );
+    this.setState({ status: "sending" });
+
+    const data = {
+      motif,
+      message,
+      email,
+      userAgent: typeof navigator !== "undefined" && navigator.userAgent,
+      subject: question
+    };
+    this.props
+      .onSubmit(data)
+      .then(data => {
+        if (data.success) {
+          this.setState({
+            status: "sent",
+            email: "",
+            message: "",
+            motif: motifLabels[0]
           });
-      }
-    );
+        } else if (data.error) {
+          throw new Error("cannot send form : " + data.error);
+        }
+      })
+      .catch(() => {
+        this.setState({ status: "error" });
+      })
+      .then(() => {
+        this.timeoutId = setTimeout(() => this.setState({ status: "" }), 3000);
+      });
   };
 
-  componentWillUnmount() {
-    clearTimeout(this.timeoutId);
-  }
+  getAlert() {
+    switch (this.state.status) {
+      case "sent":
+        return <Alert success>Message bien envoyé !</Alert>;
 
+      case "error":
+        return <Alert warning>Impossible d&apos;envoyer votre message</Alert>;
+
+      default:
+        return null;
+    }
+  }
   render() {
     const { results, query } = this.props;
+
     return (
       <form
-        action={formspreeUrl}
+        action={feedbackUrl}
         className="feedback__form"
         onSubmit={this.onSubmit}
       >
@@ -184,13 +183,7 @@ class FeedbackForm extends React.Component {
           >
             Envoyer ma question
           </button>
-          <div className="feedback__status">
-            {this.state.status === "sent" ? (
-              <Alert success>Message bien envoyé !</Alert>
-            ) : this.state.status === "error" ? (
-              <Alert warning>Impossible d&apos;envoyer votre message</Alert>
-            ) : null}
-          </div>
+          <div className="feedback__status"> {this.getAlert()} </div>
         </div>
       </form>
     );

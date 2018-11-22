@@ -1,5 +1,5 @@
 import React from "react";
-import { render, wait, waitForElement, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "react-testing-library";
 import { ServiceRenseignement } from "../ServiceRenseignement";
 
 jest.mock(
@@ -17,13 +17,12 @@ describe("<ServiceRenseignement />", () => {
     const { container, getByText, getByLabelText } = render(
       <ServiceRenseignement />
     );
+    const input = getByLabelText(/saisissez votre numéro de département/i);
     const button = getByText(/Trouver votre service de renseignement/i);
-    button.click();
-    const input = await waitForElement(() =>
-      getByLabelText(/saisissez votre numéro de département/i)
-    );
+
     fireEvent.change(input, { target: { value: 26 } });
-    await wait(() => expect(getByText(/link\.url/i)).toBeTruthy());
+    button.click();
+
     expect(container).toMatchSnapshot();
   });
 });

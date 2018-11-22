@@ -3,6 +3,21 @@ import { UID } from "react-uid";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
+function DepartmentComponent(data) {
+  return (
+    <p>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={data.url}
+        className="external-link__after"
+      >
+        <mark>{data.url}</mark>
+      </a>
+    </p>
+  );
+}
+
 class ServiceRenseignement extends React.Component {
   state = {
     departmentData: null
@@ -19,21 +34,9 @@ class ServiceRenseignement extends React.Component {
   };
 
   render() {
-    let department = null;
-    if (this.state.departmentData) {
-      department = (
-        <p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={this.state.departmentData.url}
-            className="external-link__after"
-          >
-            <mark>{this.state.departmentData.url}</mark>
-          </a>
-        </p>
-      );
-    }
+    let department = this.state.departmentData
+      ? DepartmentComponent(this.state.departmentData)
+      : null;
 
     return (
       <React.Fragment>
