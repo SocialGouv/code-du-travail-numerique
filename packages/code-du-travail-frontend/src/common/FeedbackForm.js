@@ -105,7 +105,7 @@ class FeedbackForm extends React.Component {
     return (
       <form
         action={formspreeUrl}
-        className="Feedback__form"
+        className="feedback__form"
         onSubmit={this.onSubmit}
       >
         <input
@@ -113,7 +113,7 @@ class FeedbackForm extends React.Component {
           name="question"
           value={this.props.query}
           onChange={this.inputChange}
-          className="Feedback__input"
+          className="feedback__input"
           disabled
         />
         {results &&
@@ -152,7 +152,7 @@ class FeedbackForm extends React.Component {
           name="motif"
           onChange={this.inputChange}
           onBlur={this.inputChange}
-          className="Feedback__input"
+          className="feedback__input"
           value={this.state.motif}
         >
           {motifLabels.map((label, i) => (
@@ -164,7 +164,7 @@ class FeedbackForm extends React.Component {
         <textarea
           ref={this.texteareaRef}
           name="message"
-          className="Feedback__input"
+          className="feedback__input"
           placeholder="Les informations ..."
           onChange={this.inputChange}
           value={this.state.message}
@@ -174,17 +174,17 @@ class FeedbackForm extends React.Component {
           name="email"
           onChange={this.inputChange}
           placeholder="nom@adresse.email"
-          className="Feedback__input"
+          className="feedback__input"
           value={this.state.email}
         />
-        <div className="Feedback__action">
+        <div className="feedback__action">
           <button
-            className="Feedback__button btn btn__primary"
+            className="feedback__button btn btn__primary"
             disabled={this.state.status === "sending"}
           >
             Envoyer ma question
           </button>
-          <div className="Feedback__status">
+          <div className="feedback__status">
             {this.state.status === "sent" ? (
               <Alert success>Message bien envoyé !</Alert>
             ) : this.state.status === "error" ? (
