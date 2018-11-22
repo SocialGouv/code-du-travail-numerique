@@ -1,0 +1,55 @@
+body {
+  font-size: 10pt;
+}
+header.section-white {
+  padding: 5pt 0;
+}
+
+.main-header__logo {
+  font-size: 6pt;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.container .wrapper-light {
+  border: none;
+  padding: 0 5pt;
+}
+.article {
+  margin-top: 5pt;
+}
+.article__icon {
+  flex-basis: 40pt;
+  padding: 5pt 10pt 0 0;
+  align-self: flex-start;
+}
+.article__title {
+  font-size: 18pt;
+  line-height: 1.2;
+}
+.article__content {
+  margin: 20pt 0 0;
+}
+.article__content table {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+.courrier-type {
+  margin: 0;
+  border: none;
+  page-break-inside: avoid;
+  page-break-after: auto;
+  line-height: 1.2;
+}
+
+.searchForm,
+.article__widget_container,
+.aside-title,
+.btn-download,
+.no-answer,
+#footer {
+  display: none;
+}

@@ -39,7 +39,9 @@ class ModeleCourrier extends React.Component {
         sourceType="Modèle de document"
       >
         <section>
-          <Html className="wrapper-outline">{data._source.html}</Html>
+          <Html className="wrapper-outline courrier-type">
+            {data._source.html}
+          </Html>
         </section>
         <AsideTitle>Télécharger le modèle</AsideTitle>
         <DownloadFile
