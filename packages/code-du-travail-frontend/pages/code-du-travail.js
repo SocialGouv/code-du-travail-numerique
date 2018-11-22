@@ -66,9 +66,7 @@ class Fiche extends React.Component {
         title={data._source.title}
         intro={
           <React.Fragment>
-            <div
-              style={{ marginTop: -20, marginBottom: 20, fontSize: "0.8em" }}
-            >
+            <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
               <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
             </div>
             <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
@@ -83,6 +81,7 @@ class Fiche extends React.Component {
         emptyMessage="Article introuvable"
         html={data._source.html}
         footer={footer}
+        sourceType="Code du travail"
       />
     );
   }
