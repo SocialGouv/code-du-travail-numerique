@@ -5,7 +5,7 @@ body {
 /*
  hide useless blocks
 */
-.searchForm,
+.search-widget,
 .article__widget_container,
 .aside-title,
 .btn-download,
@@ -25,7 +25,7 @@ body {
   max-width: 100%;
   padding: 0;
 }
-.container .wrapper-light {
+.wrapper-light {
   border: none;
   padding: 0 5pt;
 }
@@ -50,15 +50,15 @@ body {
   line-height: 1.2;
 }
 
-.article__content table {
-  page-break-inside: avoid;
-  page-break-after: auto;
-}
-
 .courrier-type {
   margin: 0;
   border: none;
   page-break-inside: avoid;
   page-break-after: auto;
   line-height: 1.2;
+}
+
+.article__content table {
+  page-break-inside: avoid;
+  page-break-after: auto;
 }
