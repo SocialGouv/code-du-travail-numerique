@@ -25,7 +25,7 @@ class AffiliationOpe extends React.Component {
         <Section light>
           <React.Fragment>
             <h2>
-              Votre entreprise est-elle affilliée à une organisation patronnale
+              Votre entreprise est-elle affiliée à une organisation patronnale
               employeur ?
             </h2>
             <div style={radioContainerStyle}>
