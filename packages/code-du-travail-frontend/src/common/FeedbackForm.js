@@ -66,17 +66,13 @@ class FeedbackForm extends React.Component {
     };
     this.props
       .onSubmit(data)
-      .then(data => {
-        if (data.success) {
-          this.setState({
-            status: "sent",
-            email: "",
-            message: "",
-            motif: motifLabels[0]
-          });
-        } else if (data.error) {
-          throw new Error("cannot send form : " + data.error);
-        }
+      .then(() => {
+        this.setState({
+          status: "sent",
+          email: "",
+          message: "",
+          motif: motifLabels[0]
+        });
       })
       .catch(() => {
         this.setState({ status: "error" });
