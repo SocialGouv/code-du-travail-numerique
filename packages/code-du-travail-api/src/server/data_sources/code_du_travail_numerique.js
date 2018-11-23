@@ -16,7 +16,9 @@ async function search({
   size = 10,
   must = [],
   mustNot = [],
+  filter = [],
   should = [],
+  fieldHightlight = [],
   fragmentSize = 40,
   ...others
 }) {
@@ -27,6 +29,7 @@ async function search({
       ...others,
       query: {
         bool: {
+          filter: [...filter],
           must_not: [...mustNot],
           must: [
             // Fuziness is ignored with multi_match's cross_fields.
@@ -65,11 +68,11 @@ async function search({
                         fuzziness: "AUTO"
                       }
                     }
-                  }
+                  },
+                  ...must
                 ]
               }
-            },
-            ...must
+            }
           ],
           should: [
             {
@@ -121,7 +124,8 @@ async function search({
           "all_text.french_exact": {},
           "all_text.shingle": {},
           "path.french_stemmed": {},
-          "path.french_exact": {}
+          "path.french_exact": {},
+          ...fieldHightlight
         }
       }
     }

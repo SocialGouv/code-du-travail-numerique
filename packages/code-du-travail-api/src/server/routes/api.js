@@ -118,5 +118,59 @@ router.get(`${BASE_URL}/docsCount`, async ctx => {
     logger.error(error);
   }
 });
+
+router.get(`${BASE_URL}/idcc`, async ctx => {
+  try {
+    const query = ctx.request.query.q;
+    const must = [
+      {
+        match: {
+          ape: {
+            query
+          }
+        }
+      }
+    ];
+    const filter = [
+      {
+        term: {
+          source: "kali"
+        }
+      }
+    ];
+    const should = [
+      {
+        match: {
+          idcc: {
+            query: query,
+            boost: 2000
+          }
+        }
+      },
+      {
+        match: {
+          ape: {
+            query: query,
+            boost: 3000
+          }
+        }
+      }
+    ];
+    const fieldHightlight = { ape: {} };
+    ctx.body = await codeDuTravailNumerique.search({
+      query,
+      must,
+      filter,
+      should,
+      fieldHightlight,
+      fragmentSize: 200,
+      size: 1000,
+      _source: ["title", "url", "ape", "idcc"]
+    });
+  } catch (error) {
+    logger.error(error);
+  }
+});
+
 module.exports = router;
 module.exports.BASE_URL = BASE_URL;

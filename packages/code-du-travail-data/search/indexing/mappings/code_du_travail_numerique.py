@@ -116,5 +116,14 @@ code_du_travail_numerique_mapping = {
                 },
             },
         },
+        # currently available for idcc
+        'idcc': {
+            'type': 'text',
+            'analyzer': 'keyword',
+        },
+        'ape': {
+            'type': 'text',
+            'analyzer': 'whitespace',
+        },
     },
 }
