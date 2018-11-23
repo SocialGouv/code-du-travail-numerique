@@ -1,19 +1,15 @@
-.FeedbackModal__content {
+.feedback-modal__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--spacing-medium);
 }
 
-.FeedbackModal__intro {
+.feedback-modal__intro {
   width: 80%;
 }
 
-.Feedback__input {
-  margin-bottom: var(--spacing-medium);
-}
-
-.Feedback__form {
+.feedback__form {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -21,15 +17,19 @@
   padding: var(--spacing-medium) 0;
 }
 
-.Feedback__action {
+.feedback__input {
+  margin-bottom: var(--spacing-medium);
+}
+
+.feedback__action {
   display: flex;
   height: 5em;
 }
-.Feedback__button {
+.feedback__button {
   align-self: flex-start;
   margin-right: var(--spacing-base);
 }
 
-.Feedback__status {
+.feedback__status {
   flex: 1;
 }
