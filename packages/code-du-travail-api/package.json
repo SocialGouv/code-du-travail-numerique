@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/*",
+    "precommit": "lint-staged",
     "start": "node ./src/server/index.js",
     "dev": "nodemon ./src/server/index.js"
   },
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.2.0",
     "eslint": "^5.7.0",
+    "lint-staged": "^8.1.0",
     "nodemon": "^1.17.5"
   }
 }
