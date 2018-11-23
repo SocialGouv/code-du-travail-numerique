@@ -1,25 +1,77 @@
 dist: trusty
-language: node_js
 sudo: false
+language: generic
 git:
   depth: 5
-node_js: lts/*
-cache: yarn
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
-  - export PATH="$HOME/.yarn/bin:$PATH"
-script:
-- yarn lint
-- yarn run build
+
+#
+
+_before_install:
+  - &install_latest_yarn
+    - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
+    - export PATH="$HOME/.yarn/bin:$PATH"
+_environments:
+  - &docker_image
+    - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
+    - DOCKER_IMAGE="$(echo $REPO_SLUG | tr A-Z a-z):${TRAVIS_COMMIT:0:7}"
+  - &docker-keys
+    - secure: gIZPyLgWTlPfg1ac54IP8CwGvuAAp8dHhSi2Hqw/lSGDANme2vbncXlTTUejyzPZs4G7gsz55lV2eU/dAhkc4P9u21Eja0pALmvC/0rNXDl9QchRKbMmlLZ1OHhPrp6ORE5GUEMA2llKb431yyLTzH9O8fPj6FT6o/ySAS6cAE2j+ry+ufP9Wl4CUkX4VTLj6CzNqouy/xP+Lj4N9GlbO0iyMroPqGRnf8xSbG+jbbz/FBlqY62qMSJEOKSoQMOoFE5SeHHJmxWBB7Z5gpaz0DqsUHTaYpvO7wERqCn0vtOansPAZsseG1Ka2NQ7Da0r5MXdFgKgg7MbKnnJ0/s2mv6N5bDxqmoPwOHSZRpGjicuseQBlyHMCnRJ5w+Dqa/QKWlvKKZSPOPgULiGF7fOq9lBk0cZ0T9TkIIGITO5irBcGcEYryYeuHldZj4lYYQWOaOW3xAkdby2gCXlZmJazsI+Ac1/ib30WVhdHvS56+I8TlfDkcT5wN+D3tj/fpukUgii7pVh5vGeglUgORNeE/MPjVFPwOOW0IH/MujtrzmHuJ0EL6CEmozKNzDbMicpd8i4ujNyC9M0vgyQTLj6F/kYmEjWYddojrgdLBTMYLpudfeoDaSq9La3x9z0tSgibE4ZfCENuqXpHykTRS2bz9PXvAs184Eese3e4TZYgNs=
+    - secure: CLtmrV7o/M7Vni7Ph7aj0XuTiscicsxBepqnADeK/DmNo7FVPv9HPpDeWDeRdwUfNPfQ0QqCnJ2euU2BIykGqUfJOhnV7K6ahPRVhi/TDbi2e+LJ9LbbMRAnHEFj9gC1JFResJVViqDyJXanQnbJQeQPgjAJcYnL/8FNtkNBBQMnCKo0WI5efyo+SWa3rL3nZ1nvF/pV+BVR15isYIWSgOBChKLQ6KSGBNdaI+D7TOFBcw4WilXrt3JGAgI7k8xmDnnwSKgkvrLgzbK8Ak0mazqLrzSMhcOgf2xnupy0qK/XVReLBTF+hKMTWIu52XfBAQnKThUTKwDIJWIs+3OX5quono/d/YVOoZMfwddMOH/fgWrrzAMShwIV9rFeqcZ9P0eXn7LDveBHkbV7D+TubllMEEHmmtRlKBpFjRDseMba3CAw0bYESpXAM9KeJpVwkBhMYktoVeDMdGPiBdUjDdUIsuzvO2uKbGVS9kXbSCPdTUqIT/pQK9kCp/2Q1Yzl8xf5b6wcayMRBOkSZ3JRNO8/OR2OAjGcYYIM1Tu7lCC69yav2KKlJ+Fmif4Nrsw3oUoOtt6El9KgGbNvsi4y2TU5dZoB/V5YGq5/6JXSlRv/vf6m8EwL3ZcrdgXKaYjVJSyC8OKilUZhcM4fYKG4QwYlK7O+Qkcyfyra26cUvwo=
+
+#
+
 jobs:
   include:
-  - stage: Prepare
-    script: yarn lerna run --stream lint
-  - stage: Build and test
-    script:
-      - yarn lerna run --stream build
-      - yarn run -- lerna run --stream test --  --coverage
-    after_success: npx codecov
+    - stage: Prepare
+      name: Build and deploy current commit docker image
+      env: [*docker_image, *docker-keys]
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - docker build -t $DOCKER_IMAGE .
+        - docker images
+        - docker push $DOCKER_IMAGE
+
+    #
+    #
+    #
+
+    - stage: Code quality
+      name: Lint @cdt/frontend
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/frontend lint
+    - #
+      name: Lint @cdt/api
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/api lint
+    - #
+      name: Lint @cdt/ui
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui lint
+    - #
+      name: Test @cdt/ui
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui test
+      after_success: npx codecov
+    - #
+      name: Test @cdt/frontend
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/frontend test
+      after_success: npx codecov
+    - #
+      name: Lint python code
+      language: python
+      python: 3.6
+      env:
+        - PIPENV_VENV_IN_PROJECT=1
+        - PIPENV_IGNORE_VIRTUALENVS=1
+      cache: pip
+      before_install: cd packages/code-du-travail-data
+      install:
+        - pip install --upgrade pip
+        - pip install pipenv --upgrade
+        - pipenv install --dev --three
+      script: pipenv run pylint search
+
 notifications:
   slack:
     secure: P9HLRFvTGbMuevLDkTKPnoI9PG4HhIt50I6kX5RCzADQUBS2tBhT7ENYm3YaPvjZNcMvD4K5LcVAmpBoQxI3ccsm+KPpit/MX52I8G3JpI0uKO/8vS7hZRtzeyAiM1ZnruKU02bQqN05wNZIB0wD4kL1zYusa5i9+Nq7TtUf4EziOfqP4cTmz13yQ6DWzph/0/x+Qxbui6dm/oBifqMfOiXdkOVlNiarjeIpyN0JYkNlEzuXdiqMwAiojMgr2JhXYScwfJKWQSwD8sjndOSAoFwF6LBSto2rxInNAYZx/+9oqy0cxxrxMQv19xAhSGi425HT1clLHUsDJelGOQEi8Kktk13WKjTaeOSynsjfLicPLUA8N6g5s7osUUAd0Tm4EoyH7UnVA8dm43QvhwPIIAMC+xcFhKfvc6BeR3asY+Lwyr4Mi3WAy0NfW2vInqmpWHGQxZt/tku/pldD7gtlXbwyx5q0j3bDBmsXkwvtfIkZIzfh6uW/xKPzRxjXxo0K4gttd89N4VhKEDw/9hzEuKTNIb5Wcvlfg53giNW6EBQX8jZGe8Br+YflwNddv8okl7lQbAeZGFaCGAxPzEM4ggIHZ9oYxo+44b/my0oqzI7nCaMfj18BlHdyygHef6rTDaGTeLgFbcMLK0mimO5X5+kgM4UdZvRZtrmfMv6onwo=
