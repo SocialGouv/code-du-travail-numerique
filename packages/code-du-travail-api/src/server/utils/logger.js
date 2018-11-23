@@ -1,5 +1,3 @@
-// @ts-check
-
 const {
   createLogger,
   format,
