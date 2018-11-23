@@ -51,7 +51,7 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
-    "react-testing-library": "^5.2.0"
+    "react-testing-library": "^5.2.3"
   },
   "scripts": {
     "dev": "node server.js",
@@ -64,10 +64,13 @@
     "collectCoverageFrom": [
       "src/**/*.js"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/test/jest.setup.js",
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
-    ]
+    ],
+    "moduleNameMapper": {
+      ".*css$": "<rootDir>/test/stubCss.js"
+    }
   }
 }
