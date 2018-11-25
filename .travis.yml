@@ -85,7 +85,8 @@ jobs:
     #
     #
 
-    - stage: Deploy to Docker Hub
+    - &deploy_stage
+      stage: Deploy to Docker Hub
       name: Deploy to Docker Hub
       # if: type = push AND branch = master
       language: generic
@@ -100,14 +101,18 @@ jobs:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         # - docker push $REPO_SLUG:$TRAVIS_BRANCH
         - docker push $REPO_SLUG:master
+
+    - <<: *deploy_stage
+      env:
+        global:
+          - *docker_image
+          - *docker-keys
+        matrix:
+          - MODULE_IMAGE="${REPO_SLUG}:latest-api" CTX=./packages/code-du-travail-api
+          - MODULE_IMAGE="${REPO_SLUG}:latest-frontend" CTX=./packages/code-du-travail-frontend
+      script:
+        - docker pull $DOCKER_IMAGE
         #
-        - MODULE_IMAGE="${REPO_SLUG}:latest-api"
-        - CTX=./packages/code-du-travail-api
-        - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
-        - docker push $MODULE_IMAGE
-        #
-        - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
-        - CTX=./packages/code-du-travail-frontend
         - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
         - docker push $MODULE_IMAGE
 
