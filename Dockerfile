@@ -22,6 +22,7 @@ FROM node:10
 COPY --from=installer /app/node_modules /app/node_modules
 COPY --from=installer /app/packages /app/packages
 COPY ./lerna.json /app/lerna.json
+COPY ./package.json /app/package.json
 COPY ./packages /app/packages
 
 RUN yarn build
