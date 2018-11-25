@@ -8,6 +8,7 @@ git:
 
 _steps:
   - &docker_login echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - &retry_docker_push
 _environments:
   - &docker_image
     - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
@@ -26,7 +27,7 @@ jobs:
         - docker build -t $DOCKER_IMAGE .
         - docker images
         - *docker_login
-        - docker push $DOCKER_IMAGE
+        - docker push $DOCKER_IMAGE || docker push $DOCKER_IMAGE || docker push $DOCKER_IMAGE
     - stage: Prepare
       name: Monorepo build script
       language: node_js
