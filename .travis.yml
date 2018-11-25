@@ -73,7 +73,7 @@ jobs:
         - pip install --upgrade pip
         - pip install pipenv==11.10.1
         - pipenv install --dev --three
-      script: pipenv run pylint search
+      script: pipenv run pylint --output-format=colorized search
 
 notifications:
   slack:
