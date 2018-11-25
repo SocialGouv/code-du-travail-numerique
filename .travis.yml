@@ -102,13 +102,13 @@ jobs:
         - docker push $REPO_SLUG:master
         #
         - MODULE_IMAGE="${REPO_SLUG}:latest-api"
-        - DOCKERFILE=./packages/code-du-travail-api/Dockerfile
-        - docker build -f $DOCKERFILE -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE .
+        - CTX=./packages/code-du-travail-api
+        - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
         - docker push $MODULE_IMAGE
         #
         - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
-        - DOCKERFILE=./packages/code-du-travail-frontend/Dockerfile
-        - docker build -f $DOCKERFILE -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE .
+        - CTX=./packages/code-du-travail-frontend
+        - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
         - docker push $MODULE_IMAGE
 
 notifications:
