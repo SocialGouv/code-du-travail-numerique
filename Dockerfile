@@ -8,6 +8,7 @@ COPY ./yarn.lock /app/yarn.lock
 
 COPY ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-css/package.json /app/packages/code-du-travail-css/package.json
+COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-ui/package.json /app/packages/code-du-travail-ui/package.json
 
