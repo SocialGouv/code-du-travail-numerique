@@ -13,16 +13,11 @@ COPY ./packages/code-du-travail-ui/package.json /app/packages/code-du-travail-ui
 
 WORKDIR /app
 
-RUN yarn --frozen-lockfile
+RUN yarn --frozen-lockfile && yarn cache clean
 
 #
 
-FROM node:10-alpine
-
-COPY --from=installer /app/node_modules /app/node_modules
-COPY --from=installer /app/packages /app/packages
 COPY ./lerna.json /app/lerna.json
-COPY ./package.json /app/package.json
 COPY ./packages /app/packages
 
 WORKDIR /app
