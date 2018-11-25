@@ -86,7 +86,7 @@ jobs:
     #
 
     - &main_deploy_stage
-      stage: Deploy to Docker Hub
+      stage: Deploy master branch tag to Docker Hub
       name: Deploy to Docker Hub
       # if: type = push AND branch = master
       language: generic
@@ -104,10 +104,12 @@ jobs:
 
     - &module_deploy_stage
       <<: *main_deploy_stage
+      name: Deploy latest api image to Docker Hub
       env:
         - *docker_image
         - *docker-keys
-        - MODULE_IMAGE="${REPO_SLUG}:latest-api" CTX=./packages/code-du-travail-api
+        - MODULE_IMAGE="${REPO_SLUG}:latest-api"
+        - CTX=./packages/code-du-travail-api
       script:
         - docker pull $DOCKER_IMAGE
         #
@@ -115,10 +117,12 @@ jobs:
         - docker push $MODULE_IMAGE
 
     - <<: *module_deploy_stage
+      name: Deploy latest frontend image to Docker Hub
       env:
         - *docker_image
         - *docker-keys
-        - MODULE_IMAGE="${REPO_SLUG}:latest-frontend" CTX=./packages/code-du-travail-frontend
+        - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
+        - CTX=./packages/code-du-travail-frontend
 
 notifications:
   slack:
