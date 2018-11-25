@@ -1,5 +1,4 @@
-FROM node:10
-
+FROM node:10 as installer
 
 COPY ./scripts /app/scripts
 
@@ -16,6 +15,12 @@ WORKDIR /app
 
 RUN yarn --frozen-lockfile
 
+#
+
+FROM node:10
+
+COPY --from=installer /app/node_modules /app/node_modules
+COPY --from=installer /app/packages /app/packages
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
