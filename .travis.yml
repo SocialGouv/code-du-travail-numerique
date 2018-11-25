@@ -95,18 +95,18 @@ jobs:
       script:
         - docker pull $DOCKER_IMAGE
         #
-        # - docker tag $DOCKER_IMAGE $TRAVIS_REPO_SLUG:$TRAVIS_BRANCH
-        - docker tag $DOCKER_IMAGE $TRAVIS_REPO_SLUG:master
+        # - docker tag $DOCKER_IMAGE $REPO_SLUG:$TRAVIS_BRANCH
+        - docker tag $DOCKER_IMAGE $REPO_SLUG:master
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        # - docker push $TRAVIS_REPO_SLUG:$TRAVIS_BRANCH
-        - docker push $TRAVIS_REPO_SLUG:master
+        # - docker push $REPO_SLUG:$TRAVIS_BRANCH
+        - docker push $REPO_SLUG:master
         #
-        - MODULE_IMAGE="${TRAVIS_REPO_SLUG}:latest-api"
+        - MODULE_IMAGE="${REPO_SLUG}:latest-api"
         - DOCKERFILE=./packages/code-du-travail-api/Dockerfile
         - docker build -f $DOCKERFILE -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE .
         - docker push $MODULE_IMAGE
         #
-        - MODULE_IMAGE="${TRAVIS_REPO_SLUG}:latest-frontend"
+        - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
         - DOCKERFILE=./packages/code-du-travail-frontend/Dockerfile
         - docker build -f $DOCKERFILE -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE .
         - docker push $MODULE_IMAGE
