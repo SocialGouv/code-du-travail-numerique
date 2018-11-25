@@ -6,6 +6,9 @@ git:
 
 #
 
+_steps:
+  - &docker_login
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 _environments:
   - &docker_image
     - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
@@ -31,7 +34,7 @@ jobs:
       name: Build and deploy current commit docker image
       env: [*docker_image, *docker-keys]
       script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - *docker_login
         - docker build -t $DOCKER_IMAGE .
         - docker images
         - docker push $DOCKER_IMAGE
@@ -98,7 +101,7 @@ jobs:
         #
         # - docker tag $DOCKER_IMAGE $REPO_SLUG:$TRAVIS_BRANCH
         - docker tag $DOCKER_IMAGE $REPO_SLUG:master
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - *docker_login
         # - docker push $REPO_SLUG:$TRAVIS_BRANCH
         - docker push $REPO_SLUG:master
 
@@ -114,6 +117,7 @@ jobs:
         - docker pull $DOCKER_IMAGE
         #
         - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        - *docker_login
         - docker push $MODULE_IMAGE
 
     - <<: *module_deploy_stage
