@@ -23,7 +23,7 @@ jobs:
       name: Build and deploy current commit docker image
       env: [*docker_image, *docker-keys]
       script:
-        <<: *docker_login
+        - *docker_login
         - docker build -t $DOCKER_IMAGE .
         - docker images
         - docker push $DOCKER_IMAGE
