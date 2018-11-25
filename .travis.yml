@@ -6,17 +6,13 @@ git:
 
 #
 
-_before_install:
-  - &install_latest_yarn
-    - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
-    - export PATH="$HOME/.yarn/bin:$PATH"
 _environments:
   - &docker_image
     - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
     - DOCKER_IMAGE="$(echo $REPO_SLUG | tr A-Z a-z):${TRAVIS_COMMIT:0:7}"
   - &docker-keys
-    - secure: uH25+Py61ccMV/31sXamGEIHxZ35SBuMZrOzi5y6cn6bDA3pxxfgObnOjOs9+mOgB7XtBqpN/MUN6vBqrZ9L6jWFzgYafYVCxwYZzQyjJ/lIjoylnQrXEf2evP9VhGi5pcymfP7/eq+WTAGuMQVtwoFrhnX2cLpUcQQazhTiUORrjiyNcbIFcnudRGP/JWeByKQbiI07mLW3MNnMFTvfR1uyqWlsPBCQySaarBTenLcfjtnTRdMTkdXuHolXH+wRZ6R4l8gpP1X1Jr2NCc4Lt2WJlZRfSJs8fut6P3cm2fnexYued2SK7W38c+TL58fyVnzySWTmDCjjjA68SDzYZwHE+9YLL71L8EzvIfdkLNXH1o4FMJEEAsrUSGeE+lha/CcC/0AX+iBurepTVJjQlXggHRFdHQQtl2jT98gBJI/2W38o49d4t7NyzxpzRSXGhqAQzNjqh/Bysl3qb/29IJ/wWV6myLKGkapNZ8wQvMS7iNgJYmINpEAjv6bmqBRwAF9PiKy7QJrTV549YmFHYhzMsUbzgDxniGi2gNj60c1PnXBEoMwP3NtGXUhuKVpmiM5kPTz9PIqpYh4+3Bf3UjfFxu5KAcuDt670L0jjm29DXZ2MMveoBTbN3HV8e47JwjOCVPi6ZaR+AFIeBbb+B/8NT13Z00sBg/G1Wo/SkVM=
-    - secure: vP7vkKB6mVuYLPDW3KqVFbXN9BHsBxAjyc+MaxDoC+z1z8Z3iNtw3tWv1TGq4rTTgLobvscwNJcQ0hK0keg2Ohbpr7Hvf4HpJb6I0/SDwEv9/1usOI86rq4MdWFXJMr/G7zJGKr2BNmzPQysPpo6HaCc7pYKp2aqp3wgIdEMQ7JtDqv11pu6hoxSqylmXHtOvqI0RbvIxRxhdGLTFCtSL5puZv3MiKGoGMOyZGRi+w/KUzsuNr0Tk6LhwNFDEUZ44TWz6TF6Mhq/F18/doBJ0m8DtY/jz3wsIg6wR+CLKaDtevYQaTphOOkoyoSwouw/A6C3DyfRx2rs4br/UHHh5feJi8NZxQEIhf67DRtUAX4d3/JQ+2uH/8vDgHPNjyIrSDr+sy3F5txaHV6RBApPe8DBFevkL719EtQj8WEFBVqKAOHLNsnDvj7KYX5ZG7TBu5R6kYrbBwsSZr49b0QJJpWCcuLqqMUDuX7zh41lQm7yWumInkFaTb/1qainiT3E+EPaYemQOoL6HgKutYIw0FyRUtH1+AWJYVFJvOzGUgTpjVj1pylPgK3RFMxCnoXnn/8fu8+ra2IBssjsTIpNPNz628oNOp9IM9ScFNW8RMa6rR3AblzWLA11zauD+FrqxjKZsQsUBXfJH2qTetOd5/L6wtjbZBxGbT9RIfnOC0s=
+    - DOCKER_USERNAME=socialgroovybot
+    - secure: Me8gkIzJu8J8Xc3mAvSFgjsmtqoCgHdNWWYXuLqfEGMKkd4nEasME+8jXwz9Y/tUtxsslXu9ATpMnFBhMhwyQ6+8yG4dMimMFsaE2orGnOum5kMEsj+Ptkrv6hZ0FqPA0NwWDduY5337fQC1qwyFuJiIKTuSH6wTXtz+MVzNlxIjCxajrf4GUx7xhQgekT9JNo/evYn9XdU0IpPr91Y5UJz9f1qfLCKK+qfex/4x7n3/hou3cck1kFpcZDrRHACpUjRML5TRCd66XVu+LpXxPTldKpTYHkb6FfRUdjytiLNxYcNBvCZOQDZw1o+wTWR3NXBTb26f2edEaDzZmEa9jccxFqIMlJfIyO/KW/peZyNFioSm1XLdmVUqe3yboTpNUOaGN1Y3axX3FLILBDMaACVfWP7YkpKNgbB6n0QDVe9/sUZW8pH2qcz0mAGFZ8U8FQ7nyA1K4p0wiW2/FCYIuPcdI2NKYHwYRAcoe1s4fh19h9aLCgXK/v0mkKpE3lmuPR3qo3nHnxOoe+gLeCFOvSvuDC11TeR7xWEio7UuwMNzDeRGg3MFw3fsY4W8UIfds7zTEltQMzIdgEb5bG2FWVer1qgVkVwGocBSlq2Qe66UxLM7NIVmh0b0DkvtW3E5JwacjtZYTGoWvcflw5iJXEaDamn/7/W9nGJp6kYCUjw=
 
 #
 
