@@ -25,4 +25,6 @@ COPY ./lerna.json /app/lerna.json
 COPY ./package.json /app/package.json
 COPY ./packages /app/packages
 
+WORKDIR /app
+
 RUN yarn build
