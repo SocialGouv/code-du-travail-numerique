@@ -64,7 +64,7 @@ jobs:
       before_install: cd packages/code-du-travail-data
       install:
         - pip install --upgrade pip
-        - pip install pipenv --upgrade
+        - pip install pipenv==11.10.1
         - pipenv install --dev --three
       script: pipenv run pylint search
 
