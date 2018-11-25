@@ -23,7 +23,6 @@ jobs:
       name: Build and deploy current commit docker image
       env: [*docker_image, *docker-keys]
       script:
-        - docker pull $REPO_SLUG:master
         - docker build -t $DOCKER_IMAGE .
         - docker images
         - *docker_login
@@ -58,10 +57,8 @@ jobs:
     - #
       name: Test @cdt/ui
       env: [*docker_image]
-      # TODO(douglasduteil): fix @cdt/ui lint errors
-      # script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui test
-      # after_success: npx codecov
-      script: skip
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui test
+      after_success: npx codecov
     - #
       name: Test @cdt/frontend
       env: [*docker_image]
@@ -91,16 +88,15 @@ jobs:
     - &main_deploy_stage
       stage: Deploy master branch tag to Docker Hub
       name: Deploy to Docker Hub
-      # if: type = push AND branch = master
+      if: type = push AND branch = master
       env: [*docker_image, *docker-keys]
       script:
         - docker pull $DOCKER_IMAGE
         #
-        # - docker tag $DOCKER_IMAGE $REPO_SLUG:$TRAVIS_BRANCH
-        - docker tag $DOCKER_IMAGE $REPO_SLUG:master
+        - docker tag $DOCKER_IMAGE $REPO_SLUG:$TRAVIS_BRANCH
+        #
         - *docker_login
-        # - docker push $REPO_SLUG:$TRAVIS_BRANCH
-        - docker push $REPO_SLUG:master
+        - docker push $REPO_SLUG:$TRAVIS_BRANCH
 
     - &module_deploy_stage
       <<: *main_deploy_stage
@@ -114,6 +110,7 @@ jobs:
         - docker pull $DOCKER_IMAGE
         #
         - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        #
         - *docker_login
         - docker push $MODULE_IMAGE
 
