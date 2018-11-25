@@ -16,6 +16,7 @@ WORKDIR /app
 
 RUN yarn --frozen-lockfile
 
+COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
 RUN yarn build
