@@ -21,6 +21,14 @@ _environments:
 jobs:
   include:
     - stage: Prepare
+      name: Build and deploy current commit docker image
+      env: [*docker_image, *docker-keys]
+      script:
+        - *docker_login
+        - docker build -t $DOCKER_IMAGE .
+        - docker images
+        - docker push $DOCKER_IMAGE
+    - stage: Prepare
       name: Monorepo build script
       language: node_js
       node_js: 10
@@ -30,14 +38,6 @@ jobs:
         - export PATH="$HOME/.yarn/bin:$PATH"
       install: yarn --frozen-lockfile
       script: yarn build
-    - stage: Prepare
-      name: Build and deploy current commit docker image
-      env: [*docker_image, *docker-keys]
-      script:
-        - *docker_login
-        - docker build -t $DOCKER_IMAGE .
-        - docker images
-        - docker push $DOCKER_IMAGE
 
     #
     #
