@@ -1,4 +1,4 @@
-FROM node:10 as installer
+FROM node:10-alpine as installer
 
 COPY ./scripts /app/scripts
 
@@ -17,7 +17,7 @@ RUN yarn --frozen-lockfile
 
 #
 
-FROM node:10
+FROM node:10-alpine
 
 COPY --from=installer /app/node_modules /app/node_modules
 COPY --from=installer /app/packages /app/packages
