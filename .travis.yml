@@ -18,6 +18,14 @@ _environments:
 jobs:
   include:
     - stage: Prepare
+      name: Build
+      cache: yarn
+      before_install:
+        - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
+        - export PATH="$HOME/.yarn/bin:$PATH"
+      install: yarn --frozen-lockfile
+      script: yarn build
+    - stage: Prepare
       name: Build and deploy current commit docker image
       env: [*docker_image, *docker-keys]
       script:
