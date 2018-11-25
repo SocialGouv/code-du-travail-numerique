@@ -7,8 +7,7 @@ git:
 #
 
 _steps:
-  - &docker_login
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - &docker_login echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 _environments:
   - &docker_image
     - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
