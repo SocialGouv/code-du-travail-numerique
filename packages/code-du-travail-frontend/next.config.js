@@ -1,6 +1,14 @@
+const withTM = require("next-plugin-transpile-modules");
 const withCSS = require("@zeit/next-css");
+const flow = require("lodash.flow");
 
-module.exports = withCSS({
+module.exports = flow(
+  withCSS,
+  // ? NOTE(douglasduteil): "withTM" has to be the last one here
+  // ? see https://www.npmjs.com/package/next-plugin-transpile-modules#usage
+  withTM
+)({
+  transpileModules: ["@cdt/ui"],
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: false,
   webpack(config, options) {

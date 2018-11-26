@@ -7,8 +7,8 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@cdt/data": "^2.0.0",
     "@cdt/css": "^2.0.0",
+    "@cdt/data": "^2.0.0",
     "@cdt/ui": "^2.0.0",
     "@reach/dialog": "^0.1.2",
     "@sentry/browser": "^4.1.0",
@@ -50,6 +50,8 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
+    "lodash.flow": "^3.5.0",
+    "next-plugin-transpile-modules": "^0.1.3",
     "prettier": "^1.14.3",
     "react-testing-library": "^5.2.3"
   },
