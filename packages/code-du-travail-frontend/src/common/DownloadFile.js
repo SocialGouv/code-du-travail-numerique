@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
 const DownloadFile = ({ title, type, file, icon: Icon }) => {
-  const [_, extension] = file.split(/\.([a-z]{2,4})$/);
+  const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
     <a
       className=" btn-download"
@@ -22,6 +22,10 @@ const DownloadFile = ({ title, type, file, icon: Icon }) => {
       </div>
     </a>
   );
+};
+
+DownloadFile.defaultProps = {
+  icon: ModeleCourrierIcon
 };
 
 DownloadFile.propTypes = {

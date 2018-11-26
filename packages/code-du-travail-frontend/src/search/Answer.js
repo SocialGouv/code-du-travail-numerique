@@ -6,7 +6,6 @@ import { withRouter } from "next/router";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "./Search";
-import { DateContenu } from "../common/DateContenu";
 import { FeedbackModal } from "../common/FeedbackModal";
 
 const BigError = ({ children }) => (
@@ -73,7 +72,6 @@ class Answer extends React.Component {
               {intro}
               <Html>{html}</Html>
               {children}
-              {date && <DateContenu value={date} />}
               <div
                 style={{
                   background: "var(--color-light-background)",

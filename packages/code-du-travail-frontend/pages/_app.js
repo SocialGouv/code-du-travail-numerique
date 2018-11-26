@@ -9,7 +9,7 @@ import Header from "../src/layout/Header.js";
 import Footer from "../src/layout/Footer.js";
 
 export default class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -24,7 +24,7 @@ export default class MyApp extends App {
       <Container>
         <GitHubForkRibbon
           href="//github.com/SocialGouv/code-du-travail-explorer"
-          target="_blank"
+          rel="noopener noreferrer"
           position="right"
           color="green"
         >

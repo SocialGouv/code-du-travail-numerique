@@ -6,7 +6,7 @@ import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
-import { ArticleIcon } from "../src/icons/ArticleIcon";
+import ArticleIcon from "../src/icons/ArticleIcon";
 import Answer from "../src/search/Answer";
 
 const {
@@ -17,7 +17,7 @@ const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank">
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
     <ExternalLink
       style={{ verticalAlign: "middle", margin: "0 5px" }}
@@ -36,9 +36,9 @@ const getFakeBreadCrumb = path =>
         i === all.length - 1 ? (
           part
         ) : (
-          <a key={part} href="#">
+          <span className="link" key={part}>
             {part}
-          </a>
+          </span>
         )
     );
 
@@ -66,9 +66,7 @@ class Fiche extends React.Component {
         title={data._source.title}
         intro={
           <React.Fragment>
-            <div
-              style={{ marginTop: -20, marginBottom: 20, fontSize: "0.8em" }}
-            >
+            <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
               <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
             </div>
             <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
@@ -83,6 +81,7 @@ class Fiche extends React.Component {
         emptyMessage="Article introuvable"
         html={data._source.html}
         footer={footer}
+        sourceType="Code du travail"
       />
     );
   }

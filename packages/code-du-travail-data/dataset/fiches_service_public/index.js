@@ -10,8 +10,6 @@ extrait les données avec les fichiers XML de :
  - dans ./vosdroits-particuliers : https://www.data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-particuliers/
 */
 
-const XMLS_PATH = "./data";
-
 const read = path => fs.readFileSync(path).toString();
 
 const parseFicheFromPath = path => parseFiche(read(path));
@@ -87,32 +85,26 @@ const parseFiche = text => {
       select(doc, "/Publication/Texte")[0] &&
       select(doc, "/Publication/Texte")[0].textContent.trim();
     const html =
-      select(doc, "/Publication/Texte") &&
-      select(doc, "/Publication/Texte")[0] &&
-      xmlToHtml(select(doc, "/Publication/Texte")[0].toString());
-    const intro =
-      select(doc, "Introduction/Texte")[0] &&
-      select(doc, "Introduction/Texte")[0].textContent.trim();
+      select(doc, "/Publication") &&
+      select(doc, "/Publication")[0] &&
+      xmlToHtml(select(doc, "/Publication")[0].toString());
     const situations =
       select(doc, "/Publication/ListeSituations") &&
       select(doc, "/Publication/ListeSituations")[0] &&
       select(doc, "/Publication/ListeSituations")[0].textContent.trim();
-    const situationsHtml =
-      select(doc, "/Publication/ListeSituations") &&
-      select(doc, "/Publication/ListeSituations")[0] &&
-      xmlToHtml(select(doc, "/Publication/ListeSituations")[0].toString());
+    const intro =
+      select(doc, "Introduction/Texte")[0] &&
+      select(doc, "Introduction/Texte")[0].textContent.trim();
 
     return {
       theme: "travail",
       intro,
       date,
-      situations,
-      situationsHtml,
       sousTheme,
       ariane,
       fiches,
       html,
-      text,
+      text: text || situations,
       sousDossiers,
       url,
       title,

@@ -43,7 +43,7 @@ class Kali extends React.Component {
           Cliquez sur le lien ci dessous pour accéder à la convention collective
           sur LegiFrance :
         </p>
-        <a target="_blank" href={data._source.url}>
+        <a target="_blank" rel="noopener noreferrer" href={data._source.url}>
           <Button primary>
             <ExternalLink
               style={{ verticalAlign: "middle", marginRight: 10 }}

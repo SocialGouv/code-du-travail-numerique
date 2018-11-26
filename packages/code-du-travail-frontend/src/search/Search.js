@@ -17,7 +17,7 @@ import { getExcludeSources } from "../sources";
 const Disclaimer = () => (
   <div className="wrapper-narrow">
     <p>
-      Ce service public vous permet d’obtenir des réponses détaillées, des
+      Ce service public vous permet d&apos;obtenir des réponses détaillées, des
       fiches explicatives et les articles de loi correspondants -{" "}
       <Link route="about">
         <a>En savoir plus</a>
@@ -29,7 +29,7 @@ const Disclaimer = () => (
         rel="noopener noreferrer"
         href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
       >
-        L'ouverture officielle du site est prévue pour 2020.
+        L&apos;ouverture officielle du site est prévue pour 2020.
       </a>
     </p>
   </div>
@@ -248,7 +248,7 @@ const SearchView = ({
 }) => {
   return (
     <React.Fragment>
-      <div className="section-white shadow-bottom">
+      <div className="section-white shadow-bottom search-widget">
         <Container>
           <div className="search" style={{ padding: "1em 0" }}>
             <header>

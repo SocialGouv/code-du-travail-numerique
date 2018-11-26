@@ -43,7 +43,7 @@ SearchForm.propTypes = {
 SearchForm.defaultProps = {
   placeholder: "Posez votre question",
   value: null,
-  onSubmit: query => {}
+  onSubmit: () => {}
 };
 
 export default SearchForm;

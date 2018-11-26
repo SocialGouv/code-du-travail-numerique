@@ -16,7 +16,7 @@ const fetchFiche = ({ slug }) =>
   );
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank">
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
     <ExternalLink
       style={{ verticalAlign: "middle", margin: "0 5px" }}
@@ -50,6 +50,7 @@ class Fiche extends React.Component {
         html={data._source.html}
         footer={footer}
         icon={DossierIcon}
+        date={data._source.date}
         sourceType="Fiche ministère du travail"
       />
     );

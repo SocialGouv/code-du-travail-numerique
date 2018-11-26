@@ -1,6 +1,5 @@
 import React from "react";
 import { X, Download } from "react-feather";
-import Delay from "react-delay";
 
 import FuseInput from "../lib/FuseInput";
 
@@ -33,7 +32,7 @@ const conventions = []
   );
 
 const ConventionPreview = ({ convention }) => (
-  <a target="_blank" href={convention.url}>
+  <a target="_blank" href={convention.url} rel="noopener noreferrer">
     <Download
       alt="Télécharger la convention"
       title="Télécharger la convention"

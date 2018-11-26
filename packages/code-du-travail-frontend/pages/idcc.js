@@ -25,7 +25,7 @@ const fetchIdcc = ({ slug }) =>
     });
 
 class Idcc extends React.Component {
-  static async getInitialProps({ res, query }) {
+  static async getInitialProps({ query }) {
     return await fetchIdcc(query);
   }
   render() {
@@ -44,6 +44,7 @@ class Idcc extends React.Component {
         </p>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href={`https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${
             data._source.id
           }`}

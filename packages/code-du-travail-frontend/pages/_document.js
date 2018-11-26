@@ -1,3 +1,4 @@
+import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
@@ -24,6 +25,13 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           {this.props.styleTags}
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/print.css"
+            media="print"
+          />
           <script src="//cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch" />
         </Head>
         <body>

@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Section } from "@cdt/ui";
 
 export default () => (

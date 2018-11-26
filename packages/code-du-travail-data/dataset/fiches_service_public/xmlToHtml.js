@@ -8,12 +8,8 @@ convert service-public DSL from their XML dumps to HTML
 const XSL = `
   <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:template match="/">
-      <xsl:apply-templates />
-    </xsl:template>
 
     <xsl:template match="Introduction">
-      <h2>Introduction</h2>
       <xsl:apply-templates/>
     </xsl:template>
 
@@ -23,6 +19,11 @@ const XSL = `
 
     <xsl:template match="Chapitre">
       <div class="sp__Titre"><xsl:value-of select="Titre/Paragraphe"/></div>
+      <xsl:apply-templates select="*[name() != 'Titre']"/>
+    </xsl:template>
+
+    <xsl:template match="Avertissement">
+      <div class="sp__Avertissement"><xsl:value-of select="Titre"/></div>
       <xsl:apply-templates select="*[name() != 'Titre']"/>
     </xsl:template>
 
@@ -50,9 +51,6 @@ const XSL = `
       <p><xsl:apply-templates/></p>
     </xsl:template>
 
-    <xsl:template match="ASavoir">
-      <div class="sp__ASavoir"><xsl:apply-templates/></div>
-    </xsl:template>
 
     <xsl:template match="Paragraphe">
       <p><xsl:apply-templates/></p>
@@ -138,7 +136,7 @@ const XSL = `
 
 
     <xsl:template match="Publication">
-      <h1>Publication</h1>
+      <xsl:apply-templates select="Avertissement"/>
       <xsl:apply-templates select="Introduction"/>
       <xsl:apply-templates select="Texte"/>
       <xsl:apply-templates select="ListeSituations"/>

@@ -47,8 +47,9 @@ def populate_fiches_service_public(json_file=JSON_FICHES):
                     'url': item['url'],
                     'title': item['title'],
                     'text': text,
-                    'html': item.get("html") or item.get("situationsHtml"),
+                    'html': item.get("html"),
                     'tags': tags,
+                    'date': item['date']
                 }
                 FICHES_SERVICE_PUBLIC.append(fiche)
 
