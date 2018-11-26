@@ -129,6 +129,13 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
             query
           }
         }
+      },
+      {
+        match_phrase_prefix: {
+          title: {
+            query
+          }
+        }
       }
     ];
     const filter = [
