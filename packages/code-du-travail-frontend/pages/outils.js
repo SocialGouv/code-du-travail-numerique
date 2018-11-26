@@ -52,7 +52,7 @@ class Outils extends React.Component {
       })
       .catch(e => {
         res.statusCode = 404;
-        throw e;
+        return { data: { _source: {} } };
       });
   }
   render() {
