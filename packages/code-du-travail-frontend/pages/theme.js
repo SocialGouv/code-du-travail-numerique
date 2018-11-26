@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { BreadCrumbs, Container, Alert } from "@cdt/ui";
+import { Alert, BreadCrumbs, Container } from "@cdt/ui";
 
 import find from "unist-util-find";
 import parents from "unist-util-parents";

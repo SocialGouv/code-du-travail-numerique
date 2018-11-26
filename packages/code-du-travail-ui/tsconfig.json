@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "module": "es2015",
+    "baseUrl": ".",
+    "outDir": "es",
+    "sourceMap": true
+  },
+  "files": ["src/index.ts"]
+}

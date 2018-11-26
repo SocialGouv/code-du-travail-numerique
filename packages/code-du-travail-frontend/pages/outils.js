@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { Container, Alert } from "@cdt/ui";
+import { Alert, Container } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";

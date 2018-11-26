@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Alert, Article, NoAnswer, Button } from "@cdt/ui";
+import { Alert, Container, Article, NoAnswer, Button } from "@cdt/ui";
 import { withRouter } from "next/router";
 
 import Disclaimer from "../common/Disclaimer";

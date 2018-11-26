@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert danger>Danger</Alert> should have 'alert__danger' class 1`] = `
+<div
+  className="alert alert__danger"
+  danger={true}
+>
+  Danger
+</div>
+`;
+
+exports[`<Alert info>Info</Alert> should have 'alert__info' class 1`] = `
+<div
+  className="alert alert__info"
+  info={true}
+>
+  Info
+</div>
+`;
+
+exports[`<Alert link>Link</Alert> should have 'alert__link' class 1`] = `
+<div
+  className="alert alert__link"
+  link={true}
+>
+  Link
+</div>
+`;
+
+exports[`<Alert primary style={{ color: 'bar' }}>Link</Alert> should support style attribute 1`] = `
+<div
+  className="alert alert__primary"
+  primary={true}
+  style={
+    Object {
+      "color": "bar",
+    }
+  }
+>
+  Link
+</div>
+`;
+
+exports[`<Alert primary>Primary</Alert> should have 'alert__primary' class 1`] = `
+<div
+  className="alert alert__primary"
+  primary={true}
+>
+  Primary
+</div>
+`;
+
+exports[`<Alert secondary>Secondary</Alert> should have 'alert__secondary' class 1`] = `
+<div
+  className="alert alert__secondary"
+  secondary={true}
+>
+  Secondary
+</div>
+`;
+
+exports[`<Alert success>Success</Alert> should have 'alert__success' class 1`] = `
+<div
+  className="alert alert__success"
+  success={true}
+>
+  Success
+</div>
+`;
+
+exports[`<Alert warning>Warning</Alert> should have 'alert__warning' class 1`] = `
+<div
+  className="alert alert__warning"
+  warning={true}
+>
+  Warning
+</div>
+`;
+
+exports[`<Alert>Alert !</Alert> should render an Alert component 1`] = `
+<div
+  className="alert "
+>
+  Alert !
+</div>
+`;

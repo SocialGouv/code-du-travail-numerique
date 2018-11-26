@@ -11,34 +11,42 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component --no-demo ",
+    "build": "tsc",
     "clean": "nwb clean-module && nwb clean-demo",
     "lint": "eslint src/* tests/*",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build && npm run gh-pages",
     "gh-pages": "npm run docz:build && gh-pages -d ./doc-build",
     "start": "docz dev",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
+    "watch": "npm-run-all \"build --watch --preserveWatchOutput\"",
+    "test": "jest",
     "docz:build": "docz build"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.2",
-    "react": "16.x",
-    "styled-components": "^3.4.9"
+    "prop-types": "15",
+    "react": "16",
+    "styled-components": "3"
   },
   "devDependencies": {
     "@cdt/css": "^2.0.0",
     "@socialgouv/eslint-config-react": "^0.2.0",
+    "@types/jest": "^23.3.9",
+    "@types/react-test-renderer": "^16.0.3",
+    "@types/react": "^16.7.7",
     "docz": "^0.12.5",
     "docz-plugin-css": "^0.11.0",
     "gh-pages": "^1.2.0",
+    "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
+    "npm-run-all": "^4.1.5",
     "nwb": "0.23.x",
-    "prettier": "^1.14.3",
+    "prettier": "^1.15.2",
+    "react-test-renderer": "^16.6.3",
     "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "typescript": "^3.1.6"
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-ui",
   "license": "MIT",

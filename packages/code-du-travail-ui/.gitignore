@@ -2,6 +2,7 @@
 /coverage
 /demo/dist
 /es
+/esm
 /lib
 /node_modules
 /umd

@@ -1,4 +1,6 @@
-export { default as Alert } from "./Alert";
+//
+
+export * from "./components";
 export { default as Article } from "./Article";
 export { default as Badge } from "./Badge";
 export { default as Button } from "./Button";
