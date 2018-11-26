@@ -18,7 +18,7 @@ jobs:
   - stage: Build and test
     script:
       - yarn lerna run --stream build
-      - yarn run -- lerna run --stream test --  --coverage
+      - yarn run -- lerna run --stream --parallel test --ignore "@cdt/data*" -- --coverage
     after_success: npx codecov
 
 notifications:
