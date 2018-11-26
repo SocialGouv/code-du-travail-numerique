@@ -41,7 +41,7 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <ConventionModal text="Trouvez votre convention collective" />
+              <ConventionModal />
             </li>
           </ul>
         </div>

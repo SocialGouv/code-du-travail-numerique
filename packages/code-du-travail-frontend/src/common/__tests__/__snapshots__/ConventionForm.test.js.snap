@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConvetionForm /> should display idcc item once click on suggestion 1`] = `
+<div>
+  <form>
+    <h2>
+      Convention collective
+    </h2>
+    <div>
+      Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+      <div
+        style="margin-top: 10px;"
+      >
+        <div>
+          <a
+            href="item.url"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              alt="Télécharger la convention"
+              fill="none"
+              height="16"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              style="margin-right: 5px;"
+              title="Télécharger la convention"
+              viewBox="0 0 24 24"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+              />
+              <polyline
+                points="7 10 12 15 17 10"
+              />
+              <line
+                x1="12"
+                x2="12"
+                y1="15"
+                y2="3"
+              />
+            </svg>
+            item title
+          </a>
+          <svg
+            fill="none"
+            height="16"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            style="margin-left: 5px; cursor: pointer;"
+            viewBox="0 0 24 24"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </div>
+      </div>
+      <div>
+        <div
+          style="margin-top: 20px; font-weight: bold;"
+        >
+          Comment trouver ma convention collective ?
+        </div>
+        <li>
+          Elle doit figurer au 
+          <b>
+            bulletin de paie
+          </b>
+          , et sur une notice remise à l'embauche ou 
+          <b>
+            sur le contrat de travail
+          </b>
+        </li>
+        <li>
+          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+        </li>
+        <div
+          style="margin-top: 20px; font-weight: bold;"
+        >
+          Quelle est la CCN applicable ?
+        </div>
+        <li>
+          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+        </li>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<ConvetionForm /> should render 1`] = `
+<div>
+  <form>
+    <h2>
+      Convention collective
+    </h2>
+    <div>
+      Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+      <div
+        style="margin-top: 10px;"
+      >
+        <div
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-owns="react-autowhatever-1"
+          role="combobox"
+          style="position: relative;"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="react-autowhatever-1"
+            autocomplete="off"
+            class="full-width"
+            name="query"
+            placeholder="Convention collective ou code NAF"
+            type="text"
+            value=""
+          />
+          <div
+            class="sc-bdVaJa iCIbBI"
+            id="react-autowhatever-1"
+            role="listbox"
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          style="margin-top: 20px; font-weight: bold;"
+        >
+          Comment trouver ma convention collective ?
+        </div>
+        <li>
+          Elle doit figurer au 
+          <b>
+            bulletin de paie
+          </b>
+          , et sur une notice remise à l'embauche ou 
+          <b>
+            sur le contrat de travail
+          </b>
+        </li>
+        <li>
+          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+        </li>
+        <div
+          style="margin-top: 20px; font-weight: bold;"
+        >
+          Quelle est la CCN applicable ?
+        </div>
+        <li>
+          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+        </li>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<ConvetionForm /> should render suggestions 1`] = `
+<div>
+  <form>
+    <h2>
+      Convention collective
+    </h2>
+    <div>
+      Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+      <div
+        style="margin-top: 10px;"
+      >
+        <div
+          aria-expanded="true"
+          aria-haspopup="listbox"
+          aria-owns="react-autowhatever-1"
+          role="combobox"
+          style="position: relative;"
+        >
+          <input
+            aria-autocomplete="list"
+            aria-controls="react-autowhatever-1"
+            autocomplete="off"
+            class="full-width"
+            name="query"
+            placeholder="Convention collective ou code NAF"
+            type="text"
+            value="test"
+          />
+          <div
+            class="sc-bdVaJa iCIbBI"
+            id="react-autowhatever-1"
+            role="listbox"
+            style="max-height: 300px; border: 1px solid silver; position: absolute; overflow-y: scroll; left: 0px; right: 0px; border-radius: 3px; border-top-right-radius: 0; margin-top: -3px; box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);"
+          >
+            <ul
+              role="listbox"
+              style="margin: 0px; padding: 0px; background: white;"
+            >
+              <li
+                aria-selected="false"
+                data-suggestion-index="0"
+                id="react-autowhatever-1--item-0"
+                role="option"
+              >
+                <div
+                  class="sc-bwzfXH gUoAHc"
+                >
+                  <div
+                    class="btn btn__link  "
+                    link="true"
+                    role="button"
+                    style="white-space: normal; font-size: .9rem;"
+                    tabindex="0"
+                  >
+                    item title
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          style="margin-top: 20px; font-weight: bold;"
+        >
+          Comment trouver ma convention collective ?
+        </div>
+        <li>
+          Elle doit figurer au 
+          <b>
+            bulletin de paie
+          </b>
+          , et sur une notice remise à l'embauche ou 
+          <b>
+            sur le contrat de travail
+          </b>
+        </li>
+        <li>
+          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+        </li>
+        <div
+          style="margin-top: 20px; font-weight: bold;"
+        >
+          Quelle est la CCN applicable ?
+        </div>
+        <li>
+          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+        </li>
+      </div>
+    </div>
+  </form>
+</div>
+`;

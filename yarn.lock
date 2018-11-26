@@ -1009,6 +1009,11 @@
     memory-fs "^0.4.1"
     resolve "^1.2.0"
 
+"@jeetiss/callbag-xhr@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@jeetiss/callbag-xhr/-/callbag-xhr-1.0.1.tgz#e426ef2d18e0cbc332f994d9dc02b7d46f357294"
+  integrity sha512-HiwgFvFWk7E76lFQP3Nh1fowttWx6vbUiqR5jFGLK3qX4SFeFdKWRLmpA6vP3+7zgcUCgKNFNL3gHW3SCuR2hQ==
+
 "@koa/cors@^2.2.1":
   version "2.2.2"
   resolved "https://registry.npmjs.org/@koa/cors/-/cors-2.2.2.tgz#9084ab7f58107734e6b19d602d99538eda73f2d0"
@@ -4502,6 +4507,51 @@ call-me-maybe@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/call-me-maybe/-/call-me-maybe-1.0.1.tgz#26d208ea89e37b5cbde60250a15f031c16a4d66b"
   integrity sha1-JtII6onje1y95gJQoV8DHBak1ms=
+
+callbag-debounce@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/callbag-debounce/-/callbag-debounce-2.1.2.tgz#f272bd08b4dca2b40f429761f30b99a3d27033d5"
+  integrity sha512-whFjt0TcPKKw3jEfdBvFXioySMmErDHgmrvQxcefu0JSFPonJFJbNRyz62hczxzxFaCe1Kk6oVvqK9DJybxQLg==
+
+callbag-flatten@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/callbag-flatten/-/callbag-flatten-1.2.0.tgz#33d5175e7943c26b822b4e6a8c54e272699a417d"
+  integrity sha512-R3W/2HgYxHd5JbKpFbJggg8kAJKjkh2DynLRIFVQ8XD23pku+eYe/XjTV6ezysGvVoyDi96sQlRiI82yJqYGSA==
+
+callbag-from-function@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/callbag-from-function/-/callbag-from-function-2.1.0.tgz#36e30a1980a0de12608e3876058135a172ff5e81"
+  integrity sha512-nkz2VD1t6XsUJoh8wVD2kF11kozDq9/NreHm7K9D3ne9ZSzqfWUrMeDswCy+PTo0NpULAyNYbmf2pYItltrZ4w==
+  dependencies:
+    callbag-share "^1.0.0"
+
+callbag-map@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/callbag-map/-/callbag-map-1.0.1.tgz#a5bcd41cde60c226cdd22f5868beb7b2ecd6c167"
+  integrity sha512-JotprLfl5D/DqArAUlygHOBVkTi2VKfueU71EtbEs2N5dUKlcjkZzSf6BkAWN/EHmgwaaCbVQIhsgvRKYYl1iw==
+
+callbag-pipe@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/callbag-pipe/-/callbag-pipe-1.1.1.tgz#f9d9f651f0bb64bc78d91f7132d738f066e3a4cf"
+  integrity sha512-gPTHExrElPAOu/s91aySM1dCGCuQhbTLvvHwrqI/2aMW0qOda2nCZpmE0ML94l2tDy6Y4fqlI1SyAxqgLkZl6w==
+
+callbag-share@^1.0.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/callbag-share/-/callbag-share-1.1.1.tgz#25109b01fc591629c18a142771be813df3cf9268"
+  integrity sha512-N1IftKRzKOLLQWFYUTKn4NOP5i1r7Snpyfp4iPC9WewaWB9LORYj8k0cBmQRtsnob9JI1UgEAMUs26P5f+a4qg==
+
+callbag-subscribe@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/callbag-subscribe/-/callbag-subscribe-1.5.0.tgz#dadc848ab102db7831a333d6a218dab077ab6cc2"
+  integrity sha512-nlojg2L0AX4MI3IBxUMBE9OyrfBGFvCqeiapDCXLwl2sory1/Z0HWNQnGR/9Gd7EcpRbyRWTrLVB53lW6EjAdA==
+
+callbag-switch-map-operator@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/callbag-switch-map-operator/-/callbag-switch-map-operator-2.0.0.tgz#2bc36cbbb09aac3f6aa952318289622b2048161e"
+  integrity sha512-M8p3gvXGsiC14NxTBVga4Lak/lBpk+JX64iOIRlmxFB8YK3do6uR9JiEDKAQbwWgmOx7LtwcQMdMENPofqaaGQ==
+  dependencies:
+    callbag-flatten "^1.0.0"
+    callbag-map "^1.0.1"
 
 caller-path@^0.1.0:
   version "0.1.0"
