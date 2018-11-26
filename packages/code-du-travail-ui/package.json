@@ -13,6 +13,8 @@
   "scripts": {
     "build": "nwb build-react-component --no-demo ",
     "clean": "nwb clean-module && nwb clean-demo",
+    "lint": "eslint src/* tests/*",
+    "precommit": "lint-staged",
     "prepublishOnly": "npm run build && npm run gh-pages",
     "gh-pages": "npm run docz:build && gh-pages -d ./doc-build",
     "lint": "eslint src/* tests/*",
@@ -29,10 +31,13 @@
   },
   "devDependencies": {
     "@cdt/css": "^2.0.0",
+    "@socialgouv/eslint-config-react": "^0.2.0",
     "docz": "^0.12.5",
     "docz-plugin-css": "^0.11.0",
     "gh-pages": "^1.2.0",
+    "lint-staged": "^8.1.0",
     "nwb": "0.23.x",
+    "prettier": "^1.14.3",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
   },
