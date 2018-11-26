@@ -1,4 +1,4 @@
 linters:
-  index.js:
+  "+(src|__tests_)/**/*.+(t|j)s?(x)":
     - yarn lint --fix
     - git add

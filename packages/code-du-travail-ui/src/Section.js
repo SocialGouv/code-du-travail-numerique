@@ -15,7 +15,7 @@ const Section = ({ light, dark, style, children }) => {
   return (
     <section className={containerClassName} style={style}>
       <div className="container">
-        <div className={innerContainerClassName}>{children}</div>
+     <div className={innerContainerClassName}>{children}</div>
       </div>
     </section>
   );
