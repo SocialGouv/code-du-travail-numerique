@@ -1,6 +1,0 @@
-extends:
-  - "@socialgouv/eslint-config-react"
-
-settings:
-  react:
-    version: "16.0"

@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 const SearchForm = ({ placeholder, value, onSubmit }) => {
   let input;
+  // ! HACK(douglasduteil): temporally remove the tslint error during migration
+  // tslint:disable-next-line:variable-name
   const _onSubmit = e => {
     e.preventDefault();
     onSubmit(input.value);
@@ -43,7 +45,7 @@ SearchForm.propTypes = {
 SearchForm.defaultProps = {
   placeholder: "Posez votre question",
   value: null,
-  onSubmit: () => {}
+  onSubmit: () => undefined
 };
 
 export default SearchForm;

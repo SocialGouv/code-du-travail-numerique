@@ -1,4 +1,4 @@
 linters:
   index.js:
-    - eslint --fix
+    - yarn lint --fix
     - git add
