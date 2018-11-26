@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`feedback service should make a request 1`] = `
+Array [
+  Object {
+    "title": "foo",
+    "url": "bar.url",
+  },
+]
+`;
