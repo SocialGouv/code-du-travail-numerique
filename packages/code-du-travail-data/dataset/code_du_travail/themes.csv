@@ -336,8 +336,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 1160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Assistance	L1232-4; R1232-2; R1232-3
 1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Convocation	L1232-2; R1232-1;
 1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Principe	L1232-3; L1232-2;
-1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Notification	R1232-13
-1100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Principe: motivation,cause, réelle et sérieuse	L1232-1;
+1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Notification	R1232-13;
 410	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Durée	L1234-1; L1234-2; L1234-8;
 420	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Début	L1234-3;
 430	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Inexécution du préavis	L1234-4; L1234-5;L1234-6;L1234-7;
