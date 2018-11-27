@@ -1,8 +1,8 @@
 async function batchPromise(list, size, callback, progress) {
   let results = [];
   for (items of batch(list, size)) {
-    let values = await Promise.all(items.map(callback));
-    results = results.concat(...values);
+    const values = await Promise.all(items.map(callback));
+    results = [...results, ...values];
     if (progress) progress({ progress: results.length, total: list.length });
   }
   return results;
