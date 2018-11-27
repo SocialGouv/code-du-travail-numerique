@@ -1,7 +1,6 @@
 const Router = require("koa-router");
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
-const { logger } = require("../utils/logger");
 
 const router = new Router();
 const BASE_URL = `/api/v1`;
@@ -31,7 +30,7 @@ router.get(`${BASE_URL}/search`, async ctx => {
 
     ctx.body = await codeDuTravailNumerique.search({ query, mustNot });
   } catch (error) {
-    logger.error(error);
+    ctx.throw(error);
   }
 });
 
@@ -58,7 +57,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
       _source: ["title", "source", "slug", "anchor"]
     });
   } catch (error) {
-    logger.error(error);
+    ctx.throw(error);
   }
 });
 
@@ -79,7 +78,7 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       slug: ctx.params.slug
     });
   } catch (error) {
-    logger.error(error);
+    ctx.throw(error);
   }
 });
 
@@ -98,7 +97,7 @@ router.get(`${BASE_URL}/items/:id`, async ctx => {
       id: ctx.params.id
     });
   } catch (error) {
-    logger.error(error);
+    ctx.throw(error);
   }
 });
 
@@ -115,67 +114,66 @@ router.get(`${BASE_URL}/docsCount`, async ctx => {
   try {
     ctx.body = await codeDuTravailNumerique.getDocsCount();
   } catch (error) {
-    logger.error(error);
+    ctx.throw(error);
   }
 });
 
 router.get(`${BASE_URL}/idcc`, async ctx => {
+  const query = ctx.request.query.q;
+  const must = [
+    {
+      match: {
+        ape: {
+          query
+        }
+      }
+    },
+    {
+      match_phrase_prefix: {
+        title: {
+          query
+        }
+      }
+    }
+  ];
+  const filter = [
+    {
+      term: {
+        source: "kali"
+      }
+    }
+  ];
+  const should = [
+    {
+      match: {
+        idcc: {
+          query: query,
+          boost: 2000
+        }
+      }
+    },
+    {
+      match: {
+        ape: {
+          query: query,
+          boost: 3000
+        }
+      }
+    }
+  ];
+
   try {
-    const query = ctx.request.query.q;
-    const must = [
-      {
-        match: {
-          ape: {
-            query
-          }
-        }
-      },
-      {
-        match_phrase_prefix: {
-          title: {
-            query
-          }
-        }
-      }
-    ];
-    const filter = [
-      {
-        term: {
-          source: "kali"
-        }
-      }
-    ];
-    const should = [
-      {
-        match: {
-          idcc: {
-            query: query,
-            boost: 2000
-          }
-        }
-      },
-      {
-        match: {
-          ape: {
-            query: query,
-            boost: 3000
-          }
-        }
-      }
-    ];
-    const fieldHightlight = { ape: {} };
     ctx.body = await codeDuTravailNumerique.search({
       query,
       must,
       filter,
       should,
-      fieldHightlight,
       fragmentSize: 200,
       size: 1000,
       _source: ["title", "url", "ape", "idcc"]
     });
   } catch (error) {
-    logger.error(error);
+    ctx.throw(error);
   }
 });
 

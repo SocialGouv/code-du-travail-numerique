@@ -23,6 +23,20 @@ const { logger } = require("./utils/logger");
 const app = new Koa();
 const PORT = process.env.PORT || 1337;
 
+/**
+ * use a middleware for catching errors and re-emit them
+ * so we can centralize error handling / logging
+ * https://github.com/koajs/koa/wiki/Error-Handling
+ */
+app.use(async (ctx, next) => {
+  try {
+    await next();
+  } catch (err) {
+    ctx.status = err.status || 500;
+    ctx.body = err.message;
+    ctx.app.emit("error", err, ctx);
+  }
+});
 app.use(cors());
 app.use(bodyParser());
 app.use(apiRoutes.routes());
@@ -33,6 +47,11 @@ app.use(
     await send(ctx, ctx.path, { root: path.join(__dirname, DOCS_DIR) });
   })
 );
+
+// centralize error logging
+app.on("error", error => {
+  logger.error(error);
+});
 
 // Server.
 const server = app.listen(PORT, () => {
