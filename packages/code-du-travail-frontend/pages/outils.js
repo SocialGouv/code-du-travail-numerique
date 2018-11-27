@@ -44,14 +44,14 @@ const {
 } = getConfig();
 
 class Outils extends React.Component {
-  static async getInitialProps({ res, query }) {
+  static async getInitialProps({ query }) {
     return await fetch(`${API_URL}/items/outils/${query.slug}`)
       .then(r => r.json())
       .then(data => {
         return { data };
       })
       .catch(e => {
-        res.statusCode = 404;
+        console.error(e);
         return { data: { _source: {} } };
       });
   }
