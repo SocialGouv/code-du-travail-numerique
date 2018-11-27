@@ -1076,7 +1076,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 99050	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement salarié mandaté	L2411-4
 99800	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD)	L2412-5; L2412-6
 99900	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Autres mandats de représentation	L2412-14; L2412-16; L2412-11; L2412-12; L2412-10
-100000	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Comité d'entreprise (CE)	L2412-4
+100000	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Représentant de proximité	L2412-4
 100500	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Comité d'hygiène, de sécurité et des conditions de travail (CHSCT)délégué du personnel (DP)	L2412-9; L2412-7; L2412-8
 100100	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Conseiller prud'homme	L2412-13
 100200	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Défenseur syndical	L2412-15
