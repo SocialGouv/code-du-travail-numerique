@@ -45,7 +45,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           <div>
             Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
             <div
-              style="margin-top: 10px;"
+              class="sc-htpNat iJpthS"
             >
               <div
                 aria-expanded="false"
@@ -71,12 +71,12 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 />
               </div>
             </div>
-            <div>
-              <div
-                style="margin-top: 20px; font-weight: bold;"
-              >
-                Comment trouver ma convention collective ?
-              </div>
+            <h3
+              class="sc-bxivhb kVamGT"
+            >
+              Comment trouver ma convention collective ?
+            </h3>
+            <ul>
               <li>
                 Elle doit figurer au 
                 <b>
@@ -90,15 +90,17 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               <li>
                 Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
               </li>
-              <div
-                style="margin-top: 20px; font-weight: bold;"
-              >
-                Quelle est la CCN applicable ?
-              </div>
+            </ul>
+            <h3
+              class="sc-bxivhb kVamGT"
+            >
+              Quelle est la CCN applicable ?
+            </h3>
+            <ul>
               <li>
                 En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
               </li>
-            </div>
+            </ul>
           </div>
         </form>
       </div>

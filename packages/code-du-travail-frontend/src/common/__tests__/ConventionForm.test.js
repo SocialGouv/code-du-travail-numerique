@@ -1,48 +1,32 @@
 import React from "react";
-import { fireEvent, render, waitForElement } from "react-testing-library";
+import { fireEvent, render } from "react-testing-library";
 
-import { ConventionForm } from "../ConventionForm";
+jest.mock("../IdccSuggester", () => {
+  const IdccSuggester = props => {
+    return (
+      <button
+        data-testid="suggest"
+        onClick={() => props.onSelect({ title: "foo", url: "bar.url" })}
+      />
+    );
+  };
+  return { IdccSuggester };
+});
 
-const results = [
-  {
-    _source: {
-      source: "kali",
-      slug: "result-slug",
-      title: "item title",
-      url: "item.url",
-      type: "item-type",
-      idcc: "IDCC"
-    }
-  }
-];
+const { ConventionForm } = require("../ConventionForm");
 
-describe("<ConvetionForm />", () => {
+describe("<ConventionForm />", () => {
   it("should render", () => {
     const { container } = render(<ConventionForm onSearch={jest.fn()} />);
     expect(container).toMatchSnapshot();
   });
 
-  it("should render suggestions", async () => {
-    const onSearch = jest.fn().mockResolvedValue(results);
-    const { container, getAllByRole, getByPlaceholderText } = render(
-      <ConventionForm onSearch={onSearch} />
-    );
-    const input = getByPlaceholderText(/convention collective ou code NAF/i);
-    fireEvent.change(input, { target: { value: "test" } });
-    input.focus();
-    await waitForElement(() => getAllByRole("option"));
-    expect(container).toMatchSnapshot();
-  });
   it("should display idcc item once click on suggestion", async () => {
-    const onSearch = jest.fn().mockResolvedValue(results);
-    const { container, getByRole, getByPlaceholderText } = render(
-      <ConventionForm onSearch={onSearch} />
+    const { container, getByTestId } = render(
+      <ConventionForm onSearch={() => {}} />
     );
-    const input = getByPlaceholderText(/convention collective ou code NAF/i);
-    fireEvent.change(input, { target: { value: "test" } });
-    input.focus();
-    const option = await waitForElement(() => getByRole("option"));
-    option.click();
+    const suggester = getByTestId(/suggest/i);
+    fireEvent.click(suggester);
     expect(container).toMatchSnapshot();
   });
 });
