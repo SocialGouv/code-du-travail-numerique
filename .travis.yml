@@ -89,7 +89,7 @@ jobs:
     - &main_deploy_stage
       stage: Deploy master branch tag to Docker Hub
       name: Deploy to Docker Hub
-      if: type = push AND branch = master
+      # if: type = push AND branch = master
       env: [*docker_image, *docker-keys]
       script:
         - docker pull $DOCKER_IMAGE
@@ -122,7 +122,7 @@ jobs:
         - *docker-keys
         - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
         - CTX=./packages/code-du-travail-frontend
-        
+
 #
 
 notifications:
