@@ -4,7 +4,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 6900	Contrat de travail > Conseil de prud'hommes (CPH) > Conseil Supérieur Prud'homie > Exercice des fonctions	L1431-2
 7000	Contrat de travail > Conseil de prud'hommes (CPH) > Conseil Supérieur Prud'homie > Organisation, fonctionnement	R1431-9; R1431-10; R1431-11; R1431-12; R1431-13; R1431-14; R1431-15; R1431-16
 7100	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Collèges électoraux	L1441-3; L1441-4; L1441-5
-7200	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Contestation d'une inscription	L1441-14; L1441-15
+7200	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Sections de candidature	L1441-14; L1441-15
 7300	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Electeurs	L1441-1; L1441-2
 7400	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Electorat	R1441-19; R1441-15; R1441-16; R1441-17; R1441-18; R1441-1; R1441-2; R1441-3; R1441-4; R1441-5; R1441-6; R1441-7; R1441-8; R1441-9; R1441-10; R1441-11; R1441-12; R1441-13; R1441-14
 7500	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Eligibilité	L1441-16; L1441-17; L1441-18; L1441-19; L1441-20; L1441-21
@@ -122,7 +122,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE)	R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
 3300	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE) Pénal	R1227-3
 3800	Contrat de travail > Embauche > Recrutement	L1221-7; L1221-9; L1221-6; L1221-8
-3990	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Accès au docuent de substitution	D1221-27; D8113-2; D8113-3; L2313-6
+3990	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Accès au document de substitution	D1221-27; D8113-2; D8113-3; L2315-5
 3980	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Conservation des données	R1221-26;
 3910	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Dérogation à la tenue du RUP	L1221-14
 3930	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Formalités	L1221-16
