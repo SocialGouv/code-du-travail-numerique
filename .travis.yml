@@ -28,9 +28,10 @@ jobs:
         - NODE_DOCKER_IMAGE_CACHE=$DOCKER_CACHE_DIR/node.tar.gz
       cache:
         directories:
-        - $DOCKER_CACHE_DIR
+          - $DOCKER_CACHE_DIR
       before_install:
         - if [ -f ${NODE_DOCKER_IMAGE_CACHE} ]; then gunzip -c ${NODE_DOCKER_IMAGE_CACHE} | docker load; fi
+        - docker pull $DOCKER_IMAGE:master
       script:
         - docker build --cache-from $DOCKER_IMAGE:master --tag $DOCKER_IMAGE .
       after_success:
@@ -76,11 +77,11 @@ jobs:
     - #
       name: Test @cdt/frontend
       env: [*docker_image]
-      script: docker run \
-        -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage \
-        $DOCKER_IMAGE \
+      script: docker run
+        -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
+        $DOCKER_IMAGE
         yarn workspace @cdt/frontend test --coverage
-      after_success:  npx codecov
+      after_success: npx codecov
     - #
       name: Lint python code
       language: python
