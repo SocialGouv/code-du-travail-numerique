@@ -51,6 +51,9 @@ const renderSuggestion = suggestion => (
 );
 
 const SuggestionsContainer = styled.div`
+  ul {
+    z-index: 100;
+  }
   li[role="option"]:nth-child(2n + 1) {
     background: #f7f7f7;
   }
