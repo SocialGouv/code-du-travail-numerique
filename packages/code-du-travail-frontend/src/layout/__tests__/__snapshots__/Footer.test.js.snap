@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render 1`] = `
+<div>
+  <footer
+    class="section-dark site-footer"
+    id="footer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="main-footer"
+      >
+        <div
+          class="footer__block"
+        >
+          <h3>
+            Code du travail numérique
+          </h3>
+          <ul>
+            <li>
+              <a
+                href="https://code-du-travail.beta.gouv.fr"
+              >
+                Navigation par thèmes
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer__block"
+        >
+          <h3>
+            Aidez-nous à améliorer cet outil
+          </h3>
+          <ul>
+            <li>
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-html/"
+              >
+                Contribuer sur Github
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer__block"
+        >
+          <h3>
+            Liens et outils
+          </h3>
+          <ul>
+            <li>
+              <a
+                class="external-link__after"
+                href="https://socialgouv.github.io/faq-code-du-travail"
+              >
+                Question-Réponse des services de renseignement
+              </a>
+            </li>
+            <li>
+              <div
+                class="btn btn__link  "
+                link="true"
+                role="button"
+                tabindex="0"
+              >
+                Trouvez votre convention collective
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
