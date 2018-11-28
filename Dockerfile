@@ -1,4 +1,4 @@
-FROM node:10-alpine as installer
+FROM node:10-alpine
 
 COPY ./scripts /app/scripts
 
