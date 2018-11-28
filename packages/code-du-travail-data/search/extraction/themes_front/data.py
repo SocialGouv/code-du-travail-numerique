@@ -21,7 +21,7 @@ def populate_theme(data):
         if item:
             text = item.get('text', '')
             if not text:
-                logger.debug('No text found for title: %s\n%s', item['title'])
+                logger.debug('No text found for title: %s\n', item['title'])
 
             slug = ''
             if isinstance(item['slug'], list):

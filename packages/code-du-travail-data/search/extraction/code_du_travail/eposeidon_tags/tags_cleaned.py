@@ -1,3 +1,4 @@
+#-*- encoding: utf-8 -*-
 """
 This file contains ePoseidon tags that were manually corrected.
 Note: tags were corrected before being renamed.
