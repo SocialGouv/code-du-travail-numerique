@@ -7,7 +7,6 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index > ../export-courriers.json"
   },
   "author": "Lionel Breduillieard <lionel@lumographe.fr>",
