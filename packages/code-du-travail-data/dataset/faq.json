@@ -1045,7 +1045,21 @@
     "date": "31/01/2018",
     "tags": {
       "branche":"assistants maternelles du particeulier employeur",
-      "travailleur_particulier": "assistants maternelles du particeulier employeur",
+      "travailleur_particulier": "assistants maternelles du particeulier employeur"
+            
+    }
+  }
+  ,
+  {
+    "question": "qu'est ce que l'indemnité d'entretien?",
+    "reponse": "Cette indemnité est prévue pour permettre à l’assistant€ maternel(le) d’acheter des jeux, des jouets, du matériel d’éveil ainsi que pour participer à la consommation d’eau, d’électricité, de chauffage.<p>Cette indemnité est déterminée entre les parties en tenant compte du minimum prévu à la convention collective( art 8 ) et au code ASF (art D423-7).</p><p>L’article 8 de la convention collective prévoyait en 2005 une indemnité d’entretien forfaitaire fixée à 2,65 € par jour de garde et par enfant.</p><p>La loi prévoit de proratiser cette indemnité.</p>",
+    "themes": [40800],
+    "source": "DIRECCTE",
+    "redacteur":["UD17","scrap_cdtn"],
+    "date": "31/01/2018",
+    "tags": {
+      "branche":"assistants maternelles du particeulier employeur",
+      "travailleur_particulier": "assistants maternelles du particeulier employeur"
             
     }
   }
