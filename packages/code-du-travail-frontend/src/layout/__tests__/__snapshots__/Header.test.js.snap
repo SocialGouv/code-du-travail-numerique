@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render 1`] = `
+<div>
+  <header
+    class="section-white site-header"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="main-header"
+      >
+        <a
+          class="main-header__logo"
+          href="/?q="
+        >
+          <img
+            alt=""
+            src="/static/assets/img/marianne.svg"
+          />
+          Code du travail numérique
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+`;

@@ -1,23 +1,67 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "../routes";
 
-import { Container, Categories } from "@cdt/ui";
+import { Container, Categories as CategoriesWrapper } from "@cdt/ui";
 
 import themes from "@cdt/data/dataset/themes-front.json";
+export default class Categories extends React.Component {
+  static propTypes = {
+    themes: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        slug: PropTypes.arrayOf(PropTypes.string).isRequired,
+        icon: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired
+      })
+    ),
+    isRoot: PropTypes.bool,
+    title: PropTypes.string
+  };
 
-const Category = ({
-  title,
-  text,
-  slug,
-  small = false,
-  icon = "/static/assets/icons/chat.svg"
-}) => (
+  static defaultProps = {
+    themes,
+    isRoot: true,
+    title: "Retrouvez nos réponses thématiques"
+  };
+
+  render() {
+    const { title, themes, isRoot } = this.props;
+    return (
+      (themes.length && (
+        <Container>
+          {title && (
+            <h2
+              style={{ marginTop: 20, marginBottom: 40, textAlign: "center" }}
+            >
+              {title}
+            </h2>
+          )}
+          <CategoriesWrapper>
+            {themes.map(theme => (
+              <Category
+                key={theme.slug + theme.title}
+                small={!isRoot}
+                {...theme}
+              />
+            ))}
+          </CategoriesWrapper>
+          <br />
+          <br />
+        </Container>
+      )) ||
+      null
+    );
+  }
+}
+
+const Category = ({ title, text, slug, small, icon }) => (
   <li
     className={`categories__list-item ${(small &&
       "categories__list-item--small") ||
       ""}`}
   >
-    <Link route="theme" params={{ slug: slug || "/" }}>
+    <Link route="theme" params={{ slug: slug.join("/") || "/" }}>
       <a title={title}>
         <figure>
           <img src={icon} alt={title} />
@@ -31,41 +75,14 @@ const Category = ({
   </li>
 );
 
-class _Categories extends React.Component {
-  render() {
-    const { title, themes, isRoot } = this.props;
-    return (
-      (themes.length && (
-        <Container>
-          {title && (
-            <h2
-              style={{ marginTop: 20, marginBottom: 40, textAlign: "center" }}
-            >
-              {title}
-            </h2>
-          )}
-          <Categories>
-            {themes.map(theme => (
-              <Category
-                key={theme.slug + theme.title}
-                small={!isRoot}
-                {...theme}
-              />
-            ))}
-          </Categories>
-          <br />
-          <br />
-        </Container>
-      )) ||
-      null
-    );
-  }
-}
-
-_Categories.defaultProps = {
-  themes,
-  isRoot: true,
-  title: "Retrouvez nos réponses thématiques"
+Category.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  slug: PropTypes.arrayOf(PropTypes.string).isRequired,
+  small: PropTypes.bool,
+  icon: PropTypes.string
 };
-
-export default _Categories;
+Category.defaultProps = {
+  small: false,
+  icon: "/static/assets/icons/chat.svg"
+};
