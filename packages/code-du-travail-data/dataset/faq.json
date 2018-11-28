@@ -1035,4 +1035,18 @@
       "type_contrat": "CDD"
     }
   }
+  ,
+  {
+    "question": "qu'est ce que la période d'adaptation?",
+    "reponse": "La convention prévoit une période d’adaptation pendant la période d’essai pour permettre de laisser l’enfant progressivement à l’assistante maternelle.</p><p>Elle est d’un maximum d’un mois.</p><p>(Les conditions de garde, de rémunération, etc et  les horaires de travail sont fixés dans le contrat).</p><p>Elle fait partie intégrante de la période d’essai.</p>",
+        "themes": [3710],
+    "source": "DIRECCTE",
+    "redacteur":["UD17","scrap_cdtn"],
+    "date": "31/01/2018",
+    "tags": {
+      "branche":"assistants maternelles du particeulier employeur",
+      "travailleur_particulier": "assistants maternelles du particeulier employeur",
+            
+    }
+  }
 ]
