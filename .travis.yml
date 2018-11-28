@@ -30,7 +30,7 @@ jobs:
         directories:
         - $DOCKER_CACHE_DIR
       before_install:
-        - "[[ -f ${NODE_DOCKER_IMAGE_CACHE} ]] && (gunzip -c ${NODE_DOCKER_IMAGE_CACHE} | docker load)"
+        - if [ -f ${NODE_DOCKER_IMAGE_CACHE} ]; then gunzip -c ${NODE_DOCKER_IMAGE_CACHE} | docker load; fi
       script:
         - docker build --cache-from $DOCKER_IMAGE:master --tag $DOCKER_IMAGE .
       after_success:
@@ -38,7 +38,7 @@ jobs:
         - *docker_login
         - docker push $DOCKER_IMAGE || docker push $DOCKER_IMAGE || docker push $DOCKER_IMAGE
       before_cache:
-        - "[[ -f ${NODE_DOCKER_IMAGE_CACHE} ]] || (docker save node:10-alpine | gzip > ${NODE_DOCKER_IMAGE_CACHE})"
+        - if [ ! -f ${NODE_DOCKER_IMAGE_CACHE} ]; then docker save nodesource/node:6.2.2 | gzip > ${NODE_DOCKER_IMAGE_CACHE}; fi
     - stage: Prepare
       name: Monorepo build script
       language: node_js
