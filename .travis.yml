@@ -76,8 +76,11 @@ jobs:
     - #
       name: Test @cdt/frontend
       env: [*docker_image]
-      script: docker run $DOCKER_IMAGE yarn workspace @cdt/frontend test --coverage
-      after_success: npx codecov
+      script: docker run \
+        -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage \
+        $DOCKER_IMAGE \
+        yarn workspace @cdt/frontend test --coverage
+      after_success:  npx codecov
     - #
       name: Lint python code
       language: python
