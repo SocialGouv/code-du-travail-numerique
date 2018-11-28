@@ -24,23 +24,15 @@ jobs:
       env:
         - *docker_image
         - *docker_keys
-        - DOCKER_CACHE_DIR=$HOME/.cache/docker
-      cache:
-        directories:
-          - $DOCKER_CACHE_DIR
       before_install:
-        - if [[ -d $DOCKER_CACHE_DIR ]]; then ls $DOCKER_CACHE_DIR/*.tar.gz | xargs -I {file} sh -c "zcat {file} | docker load"; fi
+        - docker pull $REPO_SLUG:master
       install: skip
       script:
-        - docker build --cache-from $DOCKER_IMAGE:master --tag $DOCKER_IMAGE .
+        - docker build --cache-from $REPO_SLUG:master --tag $DOCKER_IMAGE .
       after_success:
         - docker images
         - *docker_login
-        - docker push $DOCKER_IMAGE || docker push $DOCKER_IMAGE || docker push $DOCKER_IMAGE
-      before_cache:
-        - >
-          mkdir -p $DOCKER_CACHE_DIR && docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}} {{.ID}}'
-          | xargs -n 2 -t sh -c 'test -e $DOCKER_CACHE_DIR/$1.tar.gz || docker save $0 | gzip -2 > $DOCKER_CACHE_DIR/$1.tar.gz'
+        - docker push $DOCKER_IMAGE
 
     - stage: Prepare
       name: Monorepo build script
