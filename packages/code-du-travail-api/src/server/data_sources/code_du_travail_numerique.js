@@ -131,11 +131,7 @@ async function search({
     }
   };
 
-  try {
-    return await elasticsearchClient.search(elasticsearchQuery);
-  } catch (error) {
-    logger.error(error);
-  }
+  return await elasticsearchClient.search(elasticsearchQuery);
 }
 
 /**
@@ -147,36 +143,38 @@ async function search({
  * @returns {Object} An elasticsearch response.
  */
 async function getSingleItem(params) {
-  try {
-    const { id, source, slug } = params;
-    if (id) {
-      return await elasticsearchClient.get({
+  const { id, source, slug } = params;
+  if (id) {
+    return await elasticsearchClient.get({
+      index: elasticsearchIndexName,
+      type: elasticsearchTypeName,
+      id
+    });
+  }
+  if (source && slug) {
+    return await elasticsearchClient
+      .search({
         index: elasticsearchIndexName,
         type: elasticsearchTypeName,
-        id
-      });
-    }
-    if (source && slug) {
-      return await elasticsearchClient
-        .search({
-          index: elasticsearchIndexName,
-          type: elasticsearchTypeName,
-          body: {
-            size: 1,
-            query: {
-              bool: {
-                must: {
-                  match: { source }
-                },
-                filter: { term: { slug } }
-              }
+        body: {
+          size: 1,
+          query: {
+            bool: {
+              must: {
+                match: { source }
+              },
+              filter: { term: { slug } }
             }
           }
-        })
-        .then(res => (res.hits.total && res.hits.hits[0]) || null);
-    }
-  } catch (error) {
-    logger.error(error);
+        }
+      })
+      .then(res => {
+        if (res.hits.total === 1) {
+          return res.hits.hits[0];
+        } else {
+          throw { status: 404, message: "not found" };
+        }
+      });
   }
 }
 
@@ -186,28 +184,24 @@ async function getSingleItem(params) {
  * @returns {Object} An elasticsearch response.
  */
 async function getDocsCount() {
-  try {
-    return await elasticsearchClient
-      .search({
-        index: elasticsearchIndexName,
-        type: elasticsearchTypeName,
-        body: {
-          size: 0,
-          aggs: {
-            sources: {
-              terms: { field: "source" }
-            }
+  return await elasticsearchClient
+    .search({
+      index: elasticsearchIndexName,
+      type: elasticsearchTypeName,
+      body: {
+        size: 0,
+        aggs: {
+          sources: {
+            terms: { field: "source" }
           }
         }
-      })
-      .then(res => {
-        logger.debug(res.aggregations);
-        return res.aggregations;
-      });
-    // (res.hits.total && res.hits.hits[0]) || null);
-  } catch (error) {
-    logger.error(error);
-  }
+      }
+    })
+    .then(res => {
+      logger.debug(res.aggregations);
+      return res.aggregations;
+    });
+  // (res.hits.total && res.hits.hits[0]) || null);
 }
 
 module.exports = {

@@ -15,50 +15,42 @@ const BASE_URL = `/api/v1`;
  * @returns {Object} Results.
  */
 router.get(`${BASE_URL}/search`, async ctx => {
-  try {
-    let query = ctx.request.query.q;
-    let excludeSources = ctx.request.query.excludeSources;
-    let mustNot = [];
-    if (excludeSources) {
-      mustNot = excludeSources.split(",").map(source => ({
-        query_string: {
-          default_field: "source",
-          query: source.trim()
-        }
-      }));
-    }
-
-    ctx.body = await codeDuTravailNumerique.search({ query, mustNot });
-  } catch (error) {
-    ctx.throw(error);
+  let query = ctx.request.query.q;
+  let excludeSources = ctx.request.query.excludeSources;
+  let mustNot = [];
+  if (excludeSources) {
+    mustNot = excludeSources.split(",").map(source => ({
+      query_string: {
+        default_field: "source",
+        query: source.trim()
+      }
+    }));
   }
+
+  ctx.body = await codeDuTravailNumerique.search({ query, mustNot });
 });
 
 router.get(`${BASE_URL}/suggest`, async ctx => {
-  try {
-    let query = ctx.request.query.q;
+  let query = ctx.request.query.q;
 
-    let excludeSources = ctx.request.query.excludeSources;
-    let mustNot = [];
-    if (excludeSources) {
-      mustNot = excludeSources.split(",").map(source => ({
-        query_string: {
-          default_field: "source",
-          query: source.trim()
-        }
-      }));
-    }
-
-    ctx.body = await codeDuTravailNumerique.search({
-      query,
-      mustNot,
-      fragmentSize: 200,
-      size: 5,
-      _source: ["title", "source", "slug", "anchor"]
-    });
-  } catch (error) {
-    ctx.throw(error);
+  let excludeSources = ctx.request.query.excludeSources;
+  let mustNot = [];
+  if (excludeSources) {
+    mustNot = excludeSources.split(",").map(source => ({
+      query_string: {
+        default_field: "source",
+        query: source.trim()
+      }
+    }));
   }
+
+  ctx.body = await codeDuTravailNumerique.search({
+    query,
+    mustNot,
+    fragmentSize: 200,
+    size: 5,
+    _source: ["title", "source", "slug", "anchor"]
+  });
 });
 
 /**
@@ -72,14 +64,10 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
-  try {
-    ctx.body = await codeDuTravailNumerique.getSingleItem({
-      source: ctx.params.source,
-      slug: ctx.params.slug
-    });
-  } catch (error) {
-    ctx.throw(error);
-  }
+  ctx.body = await codeDuTravailNumerique.getSingleItem({
+    source: ctx.params.source,
+    slug: ctx.params.slug
+  });
 });
 
 /**
@@ -92,13 +80,9 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/items/:id`, async ctx => {
-  try {
-    ctx.body = await codeDuTravailNumerique.getSingleItem({
-      id: ctx.params.id
-    });
-  } catch (error) {
-    ctx.throw(error);
-  }
+  ctx.body = await codeDuTravailNumerique.getSingleItem({
+    id: ctx.params.id
+  });
 });
 
 /**
@@ -111,11 +95,7 @@ router.get(`${BASE_URL}/items/:id`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/docsCount`, async ctx => {
-  try {
-    ctx.body = await codeDuTravailNumerique.getDocsCount();
-  } catch (error) {
-    ctx.throw(error);
-  }
+  ctx.body = await codeDuTravailNumerique.getDocsCount();
 });
 
 router.get(`${BASE_URL}/idcc`, async ctx => {
@@ -162,19 +142,15 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
     }
   ];
 
-  try {
-    ctx.body = await codeDuTravailNumerique.search({
-      query,
-      must,
-      filter,
-      should,
-      fragmentSize: 200,
-      size: 1000,
-      _source: ["title", "url", "ape", "idcc"]
-    });
-  } catch (error) {
-    ctx.throw(error);
-  }
+  ctx.body = await codeDuTravailNumerique.search({
+    query,
+    must,
+    filter,
+    should,
+    fragmentSize: 200,
+    size: 1000,
+    _source: ["title", "url", "ape", "idcc"]
+  });
 });
 
 module.exports = router;
