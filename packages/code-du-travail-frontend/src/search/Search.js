@@ -127,10 +127,9 @@ export class SearchQuery extends React.Component {
   }
 }
 
-// todo: externalize state management
 class Search extends React.Component {
   static propTypes = {
-    router: PropTypes.func,
+    router: PropTypes.object,
     onResults: PropTypes.func
   };
 
@@ -180,12 +179,9 @@ class Search extends React.Component {
   submitQuery = () => {
     if (this.state.query) {
       this.setState({ queryResults: this.state.query });
-      Router.push({
-        pathname: "/",
-        query: {
-          q: this.state.query,
-          facet: this.state.facet
-        }
+      Router.pushRoute("index", {
+        q: this.state.query,
+        facet: this.state.facet
       });
     }
   };
@@ -202,12 +198,9 @@ class Search extends React.Component {
     }
 
     if (event.target.name === "facet") {
-      Router.push({
-        pathname: "/",
-        query: {
-          q: this.state.query,
-          facet: event.target.value
-        }
+      Router.pushRoute("index", {
+        q: this.state.query,
+        facet: event.target.value
       });
     } else {
       this.setState({

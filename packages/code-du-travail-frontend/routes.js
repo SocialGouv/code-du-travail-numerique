@@ -1,4 +1,4 @@
-const routes = require("next-routes");
+const routes = require("next-routes-2");
 
 //
 // routes define :

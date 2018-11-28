@@ -12448,10 +12448,10 @@ next-line@^1.1.0:
   resolved "https://registry.npmjs.org/next-line/-/next-line-1.1.0.tgz#fcae57853052b6a9bae8208e40dd7d3c2d304603"
   integrity sha1-/K5XhTBStqm66CCOQN19PC0wRgM=
 
-next-routes@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.npmjs.org/next-routes/-/next-routes-1.4.2.tgz#736a382579a792ea69f35ae70b449acdfefa7944"
-  integrity sha512-1Ljs0BEV9IGcJLKxC/WZUtmftSvmkY6DlI8fVs8dClCoR82QRzBGRka/L/XB76wE5814MMeP9qVJYQil0FE9QQ==
+next-routes-2@^1.5:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/next-routes-2/-/next-routes-2-1.5.0.tgz#407476515f3694a35230ee8c09bc2721234701e3"
+  integrity sha512-rrVVDli0CrPW7lDYr8UpPOzK5vT0mcuHRtG3GnOrZVLWRxTFBHtvnHzHmb5A6+a/Fif/jr0HFLYrgLNPQpAhVg==
   dependencies:
     path-to-regexp "^2.1.0"
 

@@ -4,7 +4,8 @@ import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
 
 import AsyncFetch from "../lib/AsyncFetch";
-import Router from "next/router";
+import { Router } from "../../routes";
+
 import { getLabelBySource, getRouteBySource } from "../sources";
 
 const getSuggestionValue = suggestion =>
@@ -70,11 +71,11 @@ const onSuggestionSelected = (e, suggestion, query) => {
     ? suggestion.suggestion._source.anchor.slice(1)
     : "";
 
-  Router.push({
-    pathname: `/${route}/${suggestion.suggestion._source.slug}`,
-    query: { q: query, search: 0 },
-    hash: anchor
-  });
+  Router.pushRoute(
+    route,
+    { q: query, search: 0, slug: suggestion.suggestion._source.slug },
+    { hash: anchor }
+  );
 };
 
 // see https://github.com/moroshko/react-autosuggest#themeProp
@@ -144,6 +145,7 @@ class Suggester extends React.Component {
                 result.hits.hits) ||
               []
             }
+            focusInputOnSuggestionClick={false}
             alwaysRenderSuggestions={false}
             onSuggestionSelected={(e, suggestion) =>
               onSuggestionSelected(e, suggestion, query)
