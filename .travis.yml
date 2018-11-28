@@ -12,7 +12,7 @@ _environments:
   - &docker_image
     - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
     - DOCKER_IMAGE="$(echo $REPO_SLUG | tr A-Z a-z):${TRAVIS_COMMIT:0:7}"
-  - &docker-keys
+  - &docker_keys
     - secure: "tx34wHbxrkSCdVyuMDdRH5XAkebZqPeNehrEvXZQJOagpDNSWtJot+9SuwfHKSFN1bFk4Ys3lzp4yfv+AfA2ayPCs37sp/VgsCovuulEoesCZOF05sqicg8+CFCRQV39WYn6iy2gpw6cYVzWA9zr9PlgzZs7r3YtpG6qWriZGojiWwP8lQMHcQOJRvoZ3XGRaLC+BXYTczdWn1cMBL7i5I7LaIHrQW9gq8xEUMh8fbz4g3J715df4Oyuz2JEWl18xErkhU4E+SyUKJwBl0VOrw+Zg0PmmBFMnl+GBqwUXZciY1bNQStzhwb62qCWkSFg9d++JRMK8nAmtt2f+9SyBJ4NRoCTIlEqaVwahsdL+iQeDxzKb8jqI8INxGMectsMUm+3xo6ISn05qKvzpkeGNFZLuprsBv93FWsQS2RLMMephIrHTtp7umqBfTcFSALOgNVbrNkhxUQTE63Df3dI90B9Elt5LtTsVRTd+/JVxnevcXt9hpUjW2iDsOviBTfSpv33mk2ve5aEmYI4QlpNa5IX9TWYn1maGKlyZ1dH+URywsY08q5tjYVuiNacgeAibglGiRqgewH76U5fwU/vjmILPm/mWKAt/FEt/cQ37UJphLtUdKRgWs3hkNQ9lO/MwsnHq90a22iCbSCad9LX8dZyG4LBNC02MIIEjm0OWvE="
     - secure: "aI+chSSMCS8jCsldvRXTX7lbnIgexmL0Xfhc7U7t+z6ehAfcOPE7ZHV9iMBNM8C1CAeN8Qt126roqRBD2iTUfeWHCg7vAvfqCTUDoXlMsUySKdKzWHmjvRPsdM+AvHB9eo+mCc29Wt55Dzn3gkc+czdJHJ4T+/z8X8Y08MYVBDv2razLDdmXrQNcmrskVKIxfumOqAc17pjbn6yP+gIqzjXM7/6oSphwDsjW2ihes6OZnh1VBxOAZW7l/Sxp5C/345zQGTjbbNjrKd8K1uRAoutTmCsBj6W7tpIMDRsUFtF4kKE5dZWEulHizhfBS+F8HU6DISc5qfoYXUISxeQplufzvdww5vurrgpBSwzoizRsZXO9RWc4v0d26r9ck0Uq7ySOUDSBIIXRELhAkWarW9wt9A9XoeXEAzv1VMCbwOZGKRdlzXvk9vcxL3PvMuApbmEKcrTcC0MX+bnm5im/twLT4kXrrxb04TiXYONvJh/OXRp4sUlcersTEMu7I+obHzF3SojFXz9cF5/inZ4mFY0sqLG5tU42FdSrxWkbEpDAPGOBrNDcvL5ioeGxM/Hk7r68hCMj7gOHI11mgheobzj1/6ceZqR4sxPx8mRdNfqit5hqmh4MjAtjjKay6hiGEnmGi7TRp+eT5QV2hADpaffOp+e1nb6bReegjv9Tb8k="
 #
@@ -21,7 +21,7 @@ jobs:
   include:
     - stage: Prepare
       name: Build and deploy current commit docker image
-      env: [*docker_image, *docker-keys]
+      env: [*docker_image, *docker_keys]
       script:
         - docker build --cache-from $DOCKER_IMAGE:master --tag $DOCKER_IMAGE .
         - docker images
@@ -91,7 +91,7 @@ jobs:
       stage: Deploy master branch tag to Docker Hub
       name: Deploy to Docker Hub
       if: type = push AND branch = master
-      env: [*docker_image, *docker-keys]
+      env: [*docker_image, *docker_keys]
       script:
         - docker pull $DOCKER_IMAGE
         #
@@ -105,7 +105,7 @@ jobs:
       name: Deploy latest api image to Docker Hub
       env:
         - *docker_image
-        - *docker-keys
+        - *docker_keys
         - MODULE_IMAGE="${REPO_SLUG}:latest-api"
         - CTX=./packages/code-du-travail-api
       script:
@@ -120,7 +120,7 @@ jobs:
       name: Deploy latest frontend image to Docker Hub
       env:
         - *docker_image
-        - *docker-keys
+        - *docker_keys
         - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
         - CTX=./packages/code-du-travail-frontend
 
