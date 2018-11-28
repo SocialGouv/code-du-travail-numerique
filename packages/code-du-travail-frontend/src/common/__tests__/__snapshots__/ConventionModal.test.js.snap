@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConventionModal /> should render a button 1`] = `
+<div>
+  <div
+    class="btn btn__link  "
+    link="true"
+    role="button"
+    tabindex="0"
+  >
+    Trouvez votre convention collective
+  </div>
+</div>
+`;
+
+exports[`<ConventionModal /> should render a popup when click on button 1`] = `
+<body>
+  <div
+    aria-hidden="true"
+  >
+    <div
+      class="btn btn__link  "
+      link="true"
+      role="button"
+      tabindex="0"
+    >
+      Trouvez votre convention collective
+    </div>
+  </div>
+  <reach-portal>
+    <div
+      data-reach-dialog-overlay="true"
+      style="background: rgba(0, 0, 0, 0.5);"
+    >
+      <div
+        aria-modal="true"
+        data-reach-dialog-content="true"
+        style="border-radius: 3px; margin: 5vh auto;"
+        tabindex="-1"
+      >
+        <form>
+          <h2>
+            Convention collective
+          </h2>
+          <div>
+            Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+            <div
+              class="sc-htpNat iJpthS"
+            >
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-1"
+                role="combobox"
+                style="position: relative;"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-1"
+                  autocomplete="off"
+                  class="full-width"
+                  name="query"
+                  placeholder="Convention collective ou code NAF"
+                  type="text"
+                  value=""
+                />
+                <div
+                  class="sc-bdVaJa iCIbBI"
+                  id="react-autowhatever-1"
+                  role="listbox"
+                />
+              </div>
+            </div>
+            <h3
+              class="sc-bxivhb kVamGT"
+            >
+              Comment trouver ma convention collective ?
+            </h3>
+            <ul>
+              <li>
+                Elle doit figurer au 
+                <b>
+                  bulletin de paie
+                </b>
+                , et sur une notice remise à l'embauche ou 
+                <b>
+                  sur le contrat de travail
+                </b>
+              </li>
+              <li>
+                Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+              </li>
+            </ul>
+            <h3
+              class="sc-bxivhb kVamGT"
+            >
+              Quelle est la CCN applicable ?
+            </h3>
+            <ul>
+              <li>
+                En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </reach-portal>
+</body>
+`;

@@ -88,7 +88,7 @@ def create_documents(index_name, type_name):
     body_data = []
 
 
-    with open(os.path.join(settings.BASE_DIR, 'dataset/kali.json')) as json_data:
+    with open(os.path.join(settings.BASE_DIR, 'dataset/kali/idcc-kali-ape.json')) as json_data:
         data = json.load(json_data)
         logger.info("Load %s documents from kali", len(data))
         for val in data:
@@ -97,8 +97,10 @@ def create_documents(index_name, type_name):
                 'id': val['cid'],
                 'slug': slugify(val['titre'], to_lower=True),
                 'title': val['titre'],
-                'all_text': val['titre'],
+                'all_text':  f"{('IDCC ' + val['idcc']) if 'idcc' in val else 'TI'} {val['titre']}",
                 'url': val['url'],
+                'ape': " ".join(val.get('ape') or []),
+                'idcc': val.get('idcc'),
             })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/idcc-tags.json')) as idcc_tags_data:
