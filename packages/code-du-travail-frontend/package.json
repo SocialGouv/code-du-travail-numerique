@@ -54,7 +54,7 @@
   "scripts": {
     "dev": "node server.js",
     "lint": "eslint src/* pages/*",
-    "precommit": "lint-staged",
+    "prepush": "lint-staged",
     "start": "NODE_ENV=production node server.js",
     "build": "next build",
     "test": "NODE_ENV=test jest"

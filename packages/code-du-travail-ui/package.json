@@ -14,7 +14,7 @@
     "build": "nwb build-react-component --no-demo ",
     "clean": "nwb clean-module && nwb clean-demo",
     "lint": "eslint src/* tests/*",
-    "precommit": "lint-staged",
+    "prepush": "lint-staged",
     "prepublishOnly": "npm run build && npm run gh-pages",
     "gh-pages": "npm run docz:build && gh-pages -d ./doc-build",
     "start": "docz dev",
