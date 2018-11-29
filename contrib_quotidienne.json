@@ -1,0 +1,45 @@
+[
+
+{
+	"question": "Je suis ouvrier dans la Métallurgie, et je voudrais savoir comment procéder afin de vérifier, concernant mon salaire, si le minimum légal est respecté.",
+	"reponse": "<p>Ce n’est pas la loi qui fixe les salaires minima. Seul le Smic (Salaire Minimum Interprofessionnel de Croissance) est fixé par décret  le 1er Janvier de chaque année.</p><p>Il convient de vous reporter à la convention collective de la Métallurgie.</p><p>Dans cette branche professionnelle, il existe tout d’abord des accords nationaux étendus, applicables à l’ensemble de celle-ci. Entre autres domaines figure la classification des emplois.</p><p>Si, dans votre département, il existe par ailleurs une convention collective départementale étendue, autrement dit applicable à l’ensemble du secteur de la Métallurgie du département, il convient également de s’y reporter au cas où elle pourrait éventuellement contenir des dispositions plus favorables.</p><p>Ceci afin de vérifier,  compte tenu de votre emploi réellement occupé, si la classification portée sur votre bulletin de salaire est bien conforme.</p><p>Dans un second temps, il convient de vous reporter à la grille des salaires correspondante. Dans la Métallurgie, les accords de salaires, pour les ouvriers, employés, techniciens et agents de maîtrise (OETAM) sont conclus au niveau départemental.  Ils fixent, en fonction de chaque classification, le salaire minimum correspondant.</p><p>Pour autant, si certains minima étaient devenus inférieurs au Smic, c’est ce dernier qui devra s’appliquer.</p><p>A noter qu’un tel accord est rendu obligatoire pour l’ensemble des entreprises entrant dans son champ d’application que lorsqu’il a été étendu, autrement dit lorsqu’il a fait l’objet d’un arrêté d’extension pris par le Ministère du Travail.</p>",
+	"tags": {
+		"themes": [45100],
+		"theme": [
+			"SMIC",
+      "salaire minimum",
+			"rémunération",
+			"salaire"
+		],
+
+
+		" CCN": {
+			"branche": "Métallurgie",
+			"categorie": ["ETAM","ouvriers"],
+					},
+    
+    "references": [{
+           "url": "","title": "Accords nationaux Métallurgie",
+           "url": "","title": "conventions collectives départementales de la métallurgie",
+           "url": "https://","title": "Article du 26/09/2017",
+           "url": "https://","title": "Article du 26/09/2017",
+           
+  }],
+
+		"type_contrat": "CDI",
+
+		"travailleur_particulier": "apprenti",
+		"duree_travail": "temps plein",
+		"effectif": "> 11 salariés",
+		"particularisme": "Isère"
+	},
+
+	"profil": "",
+	"date_redaction": "27/11/2018",
+	"date_expiration": "27/11/2019",
+	"redacteur": ["GUILLE Jean-Paul","UD038"]
+	"source": "test",
+	"commentaire": " autre info.. "
+}
+]
+  
