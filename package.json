@@ -33,7 +33,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+      "pre-push": "lerna run --concurrency 1 --stream prepush"
     }
   }
 }
