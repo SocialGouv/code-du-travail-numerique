@@ -1,3 +1,5 @@
+#-*- encoding: utf-8 -*-
+
 """
 TOFIX: A FAILED attempt at extracting "Arrêtés" data from ePoseidon.
 

@@ -1,3 +1,5 @@
+#-*- encoding: utf-8 -*-
+
 import argparse
 import json
 import logging
@@ -27,7 +29,7 @@ def populate_fiches_service_public(json_file=JSON_FICHES):
             if item:
                 text = item.get('intro', '') + item.get('text', '') + item.get('situations', '')
                 if not text:
-                    logger.warn('No text found for title: %s\n%s', item['title'], item['url'])
+                    logger.warning('No text found for title: %s\n%s', item['title'], item['url'])
 
                 # Replace new lines by spaces.
                 text = ' '.join(text.split('\n'))
