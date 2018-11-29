@@ -369,6 +369,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 2100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Rupture abusive	L1237-2; L1237-3;
 51100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Fonction publique > Employeur public	L1251-63; L1251-62; L1251-61; L1251-60;
 51400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Cas de recours L1251-8; L1251-7; L1251-6; L1251-5;
+51500 Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Interdictions L1251-9; L1251-10;
 51700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Contenu et transmission	L1251-16; L1251-17;
 51800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Embauche en fin de mission	L1251-38;
 51900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Fixation du terme, durée du contrat	L1251-11; L1251-13; L1251-12; L1251-12-1
