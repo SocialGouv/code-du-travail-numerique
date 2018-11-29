@@ -22,8 +22,8 @@ services:
     depends_on:
       - elasticsearch
     build:
-      context: .
-      dockerfile: ./Dockerfile.python
+      context: ./packages/code-du-travail-data
+      dockerfile: ./Dockerfile
 
 volumes:
   esdata:

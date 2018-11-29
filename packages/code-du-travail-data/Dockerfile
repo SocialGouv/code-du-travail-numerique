@@ -19,9 +19,9 @@ RUN apk update \
 
 RUN pip install pipenv==11.10.1
 
-COPY ./packages/code-du-travail-data/Pipfile .
-COPY ./packages/code-du-travail-data/Pipfile.lock .
+COPY ./Pipfile .
+COPY ./Pipfile.lock .
 
 RUN pipenv install --deploy
 
-COPY ./packages/code-du-travail-data .
+COPY . .
