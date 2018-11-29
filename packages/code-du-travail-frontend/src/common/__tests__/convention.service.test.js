@@ -1,10 +1,5 @@
 import { searchIdcc } from "../convention.service";
 
-jest.mock("next/config", () => () => ({
-  publicRuntimeConfig: {
-    API_URL: "api.url"
-  }
-}));
 const results = {
   hits: {
     hits: [{ title: "foo", url: "bar.url" }]
