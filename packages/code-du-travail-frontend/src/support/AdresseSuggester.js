@@ -1,16 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Suggester } from "./Suggester";
+import { Suggester } from "../common/Suggester";
 import styled from "styled-components";
 
-export class IdccSuggester extends React.Component {
+export class AdresseSuggester extends React.Component {
   static propTypes = {
     onSearch: PropTypes.func.isRequired,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func
   };
-  onSelect = value => {
-    this.props.onSelect(value._source);
+  static defaultProps = {
+    onSelect: () => {}
   };
+
+  onSelect = (suggestion, event) => {
+    this.props.onSelect(suggestion, event);
+  };
+
   render() {
     return (
       <Suggester
@@ -19,17 +24,16 @@ export class IdccSuggester extends React.Component {
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         renderSuggestionsContainer={renderSuggestionsContainer}
-        placeholder="Convention collective ou code NAF"
+        placeholder="15 rue du Palais, Metz"
         theme={suggesterTheme}
+        className="support__input"
       />
     );
   }
 }
 
 const getSuggestionValue = suggestion =>
-  suggestion._source.idcc
-    ? `${suggestion._source.idcc} - ${suggestion._source.title}`
-    : suggestion._source.title;
+  `${suggestion.properties.name}, ${suggestion.properties.city}`;
 
 const SuggestionsContainer = styled.div`
   li[role="option"]:nth-child(2n + 1) {
@@ -41,26 +45,41 @@ const renderSuggestionsContainer = ({ containerProps, children }) => (
   <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
 );
 
-const Suggestion = styled.div`
-  whitespace: nowrap;
-  textoverflow: ellipsis;
-  width: 90%;
-  overflow: hidden;
-  padding: 5px;
+const SuggestionWrapper = styled.div`
+  display: flex;
   font-size: 0.9rem;
+  text-align: left;
   text-decoration: underline;
   :hover {
     text-decoration: none;
   }
+  padding: 5px;
+`;
+const Adresse = styled.span`
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
+const Ville = styled.span`
+  white-space: nowrap;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
 `;
 
 const renderSuggestion = suggestion => {
   return (
-    <Suggestion>
-      {suggestion.idcc
-        ? `IDCC ${suggestion.idcc} - ${suggestion._source.title}`
-        : suggestion._source.title}
-    </Suggestion>
+    <SuggestionWrapper
+      title={`${suggestion.properties.name}, ${
+        suggestion.properties.postcode
+      } ${suggestion.properties.city}`}
+    >
+      <Adresse>{suggestion.properties.name}</Adresse>
+
+      <Ville>, {suggestion.properties.city}</Ville>
+    </SuggestionWrapper>
   );
 };
 

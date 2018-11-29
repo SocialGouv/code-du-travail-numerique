@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<IdccSuggester /> should render 1`] = `
+exports[`<AddressSuggester /> should render 1`] = `
 <div>
   <div
     aria-expanded="false"
@@ -13,9 +13,9 @@ exports[`<IdccSuggester /> should render 1`] = `
       aria-autocomplete="list"
       aria-controls="react-autowhatever-1"
       autocomplete="off"
-      class="full-width"
+      class="support__input"
       name="query"
-      placeholder="Convention collective ou code NAF"
+      placeholder="15 rue du Palais, Metz"
       type="search"
       value=""
     />
@@ -28,7 +28,7 @@ exports[`<IdccSuggester /> should render 1`] = `
 </div>
 `;
 
-exports[`<IdccSuggester /> should render suggestions 1`] = `
+exports[`<AddressSuggester /> should render suggestions 1`] = `
 <div>
   <div
     aria-expanded="true"
@@ -41,9 +41,9 @@ exports[`<IdccSuggester /> should render suggestions 1`] = `
       aria-autocomplete="list"
       aria-controls="react-autowhatever-1"
       autocomplete="off"
-      class="full-width"
+      class="support__input"
       name="query"
-      placeholder="Convention collective ou code NAF"
+      placeholder="15 rue du Palais, Metz"
       type="search"
       value="test"
     />
@@ -64,9 +64,20 @@ exports[`<IdccSuggester /> should render suggestions 1`] = `
           role="option"
         >
           <div
-            class="sc-bwzfXH eLzkJV"
+            class="sc-bwzfXH hQKqOL"
+            title="nom de rue, 42 Niourk"
           >
-            item title
+            <span
+              class="sc-htpNat dMcFz"
+            >
+              nom de rue
+            </span>
+            <span
+              class="sc-bxivhb lfFZrp"
+            >
+              , 
+              Niourk
+            </span>
           </div>
         </li>
       </ul>
