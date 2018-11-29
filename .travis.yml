@@ -95,8 +95,7 @@ jobs:
         - pip install --upgrade pip
         - pip install pipenv==11.10.1
         - pipenv install --dev --three
-      # TODO(douglasduteil): fix code-du-travail-data/search lint errors
-      # script: pipenv run pylint --output-format=colorized search
+      script: pipenv run pylint --output-format=colorized search
       script: skip
 
     #
