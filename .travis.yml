@@ -133,7 +133,7 @@ jobs:
         - *docker_login
         - docker push $MODULE_IMAGE:$TRAVIS_BRANCH
         - docker push $MODULE_IMAGE:latest
-w
+
     - <<: *module_deploy_stage
       name: Deploy latest frontend image to Docker Hub
       env:
