@@ -119,7 +119,7 @@ jobs:
     - &module_deploy_stage
       <<: *main_deploy_stage
       name: Deploy latest api image to Docker Hub
-      if: type = push AND tag IS present
+      # if: type = push AND tag IS present
       env:
         - *docker_image
         - *docker_keys
