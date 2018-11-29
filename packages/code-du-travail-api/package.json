@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/*",
-    "precommit": "lint-staged",
+    "prepush": "lint-staged",
     "start": "node ./src/server/index.js",
     "dev": "nodemon ./src/server/index.js"
   },
