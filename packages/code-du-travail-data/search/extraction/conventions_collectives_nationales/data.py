@@ -17,7 +17,7 @@ IDCC_URL = (
     + '?idConvention=KALICONT000005635096'
 )
 
-CCN_DIR = os.path.join(settings.BASE_DIR, f'dataset/conventions_collectives_nationales/{IDCC}')
+CCN_DIR = os.path.join(settings.BASE_DIR, 'dataset/conventions_collectives_nationales/{IDCC}')
 
 CONVENTIONS_COLLECTIVES = []
 

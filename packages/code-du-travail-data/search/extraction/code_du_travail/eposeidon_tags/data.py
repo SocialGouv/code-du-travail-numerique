@@ -130,7 +130,7 @@ def populate_eposeidon_tags_dict(json_file=JSON_EPOSEIDON):
     # Correct ePoseidon tags.
     # Note: tags were corrected before being renamed.
     for key, cleaned_tags in CLEANED_EPOSEIDON_TAGS.items():
-        EPOSEIDON_TAGS_DICT[key] = set([make_tag(tag) for tag in cleaned_tags])
+        EPOSEIDON_TAGS_DICT[key] = {make_tag(tag) for tag in cleaned_tags}
 
     # Rename ePoseidon tags.
     for article_num in EPOSEIDON_TAGS_DICT.keys():
