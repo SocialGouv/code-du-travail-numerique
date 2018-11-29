@@ -48,7 +48,7 @@ jobs:
 
     - <<: *main_node_checks
       name: Check Conventional Commits
-      install: yarn global add @commitlint/travis-cli
+      install: yarn global add @commitlint/travis-cli @commitlint/config-conventional
       script: commitlint-travis
 
     #
