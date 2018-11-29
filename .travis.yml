@@ -118,25 +118,28 @@ jobs:
     - &module_deploy_stage
       <<: *main_deploy_stage
       name: Deploy latest api image to Docker Hub
+      if: type = push AND tag IS present
       env:
         - *docker_image
         - *docker_keys
-        - MODULE_IMAGE="${REPO_SLUG}:latest-api"
+        - MODULE_IMAGE="${REPO_SLUG}-api"
         - CTX=./packages/code-du-travail-api
       script:
         - docker pull $DOCKER_IMAGE
         #
-        - docker build -t $MODULE_IMAGE --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        - docker build -t $MODULE_IMAGE:$TRAVIS_BRANCH --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        - docker build -t $MODULE_IMAGE:latest --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
         #
         - *docker_login
-        - docker push $MODULE_IMAGE
-
+        - docker push $MODULE_IMAGE:$TRAVIS_BRANCH
+        - docker push $MODULE_IMAGE:latest
+w
     - <<: *module_deploy_stage
       name: Deploy latest frontend image to Docker Hub
       env:
         - *docker_image
         - *docker_keys
-        - MODULE_IMAGE="${REPO_SLUG}:latest-frontend"
+        - MODULE_IMAGE="${REPO_SLUG}-frontend:latest"
         - CTX=./packages/code-du-travail-frontend
 
 #
