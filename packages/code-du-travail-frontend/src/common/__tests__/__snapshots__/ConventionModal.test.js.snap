@@ -94,7 +94,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             <h3
               class="sc-bxivhb kVamGT"
             >
-              Quelle est la CCN applicable ?
+              Quelle est la convention collective applicable ?
             </h3>
             <ul>
               <li>

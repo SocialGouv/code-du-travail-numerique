@@ -55,7 +55,7 @@ export class ConventionForm extends React.Component {
               modalités de consultation en entreprise)
             </li>
           </ul>
-          <Title>Quelle est la CCN applicable ?</Title>
+          <Title>Quelle est la convention collective applicable ?</Title>
           <ul>
             <li>
               En principe celle relevant de l&apos;activité principale dans
