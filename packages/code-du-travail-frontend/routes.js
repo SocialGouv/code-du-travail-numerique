@@ -1,4 +1,4 @@
-const routes = require("next-routes-2");
+const routes = require("@socialgouv/next-routes");
 
 //
 // routes define :
