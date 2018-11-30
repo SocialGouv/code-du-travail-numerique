@@ -111,14 +111,15 @@ jobs:
       script:
         - docker pull $DOCKER_IMAGE
         #
-        - docker tag $DOCKER_IMAGE $REPO_SLUG:1.5.0-2
+        - docker tag $DOCKER_IMAGE $REPO_SLUG:1.5.0-3
         #
         - *docker_login
-        - docker push $REPO_SLUG:1.5.0-2
+        - docker push $REPO_SLUG:1.5.0-3
 
     - &module_deploy_stage
       <<: *main_deploy_stage
       name: Deploy latest api image to Docker Hub
+      if: type = push
       # if: type = push AND tag IS present
       env:
         - *docker_image
@@ -128,11 +129,11 @@ jobs:
       script:
         - docker pull $DOCKER_IMAGE
         #
-        - docker build -t $MODULE_IMAGE:1.5.0-2 --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        - docker build -t $MODULE_IMAGE:1.5.0-3 --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
         - docker build -t $MODULE_IMAGE:latest --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
         #
         - *docker_login
-        - docker push $MODULE_IMAGE:1.5.0-2
+        - docker push $MODULE_IMAGE:1.5.0-3
         - docker push $MODULE_IMAGE:latest
 
     - <<: *module_deploy_stage
