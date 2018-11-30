@@ -20,7 +20,7 @@
     "memoizee": "^0.4.14",
     "next": "^7.0.0",
     "next-images": "^1.0.0",
-    "next-routes": "^1.4.2",
+    "@socialgouv/next-routes": "^1.5",
     "p-debounce": "^1.0.0",
     "react": "^16.3.2",
     "react-autosuggest": "9.3.4",
@@ -60,14 +60,9 @@
     "test": "NODE_ENV=test jest"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
+    "collectCoverageFrom": ["src/**/*.js"],
     "setupTestFrameworkScriptFile": "<rootDir>/test/jest.setup.js",
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/"
-    ],
+    "testPathIgnorePatterns": ["<rootDir>/.next/", "<rootDir>/node_modules/"],
     "moduleNameMapper": {
       ".*css$": "<rootDir>/test/stubCss.js"
     }

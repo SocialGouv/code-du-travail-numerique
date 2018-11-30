@@ -5,7 +5,7 @@ import { Alert, NoAnswer, Button } from "@cdt/ui";
 
 import { FeedbackModal } from "../common/FeedbackModal";
 import SeeAlso from "../common/SeeAlso";
-import Link from "next/link";
+import { Link } from "../../routes";
 
 import { getLabelBySource, getRouteBySource } from "../sources";
 
@@ -47,11 +47,9 @@ const ResultItem = withRouter(({ _source, highlight, router }) => {
     return (
       <li className="search-results__item">
         <Link
-          href={{
-            pathname: `/${route}/${_source.slug}`,
-            hash: anchor,
-            query: { q: router.query.q, search: 0 }
-          }}
+          route={route}
+          params={{ q: router.query.q, search: 0, slug: _source.slug }}
+          hash={anchor}
         >
           <a className="search-results-link">
             <ContentBody
