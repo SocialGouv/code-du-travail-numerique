@@ -5,7 +5,7 @@ import { withRouter } from "next/router";
 
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
-import Search from "./Search";
+import Search from "../search/Search";
 import { FeedbackModal } from "../common/FeedbackModal";
 
 const BigError = ({ children }) => (

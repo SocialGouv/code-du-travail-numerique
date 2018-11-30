@@ -4,7 +4,7 @@ import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { Button } from "@cdt/ui";
 import { ExternalLink } from "react-feather";
-import Answer from "../src/search/Answer";
+import Answer from "../src/common/Answer";
 import ArticleIcon from "../src/icons/ArticleIcon";
 
 const {

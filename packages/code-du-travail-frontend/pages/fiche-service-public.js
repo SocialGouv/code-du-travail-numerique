@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { ExternalLink } from "react-feather";
 import getConfig from "next/config";
-import Answer from "../src/search/Answer";
+import Answer from "../src/common/Answer";
 import DossierIcon from "../src/icons/DossierIcon";
 
 const ServicePublicCss = styled.div`
