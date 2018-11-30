@@ -10,7 +10,7 @@
 			"themes": [45100],
 			"theme": ["SMIC", "salaire minimum", "rémunération", "salaire"],
 			"branche": "Métallurgie"
-		
+
 		},
 		"references": [{
 				"url": "",
@@ -85,51 +85,115 @@
 				}
 			]
 		},
-		{
-			"question": "Quels salariés doivent bénéficier de la mensualisation, et comment le salaire doit-il être calculé ?",
-			"reponse": "<p>Par mensualisation, on entend une seule paie par mois.</p><p>La mensualisation s’applique à tous les employeurs de droit privé et à toutes les catégories de salariés, à l’exception des travailleurs à domicile, temporaires, saisonniers et intermittents.</p><p>Les salariés à temps partiel entrent dans son champ d’application, de même que ceux embauchés en CDD.</p><p>La rémunération est indépendante, pour un horaire de travail effectif déterminé, du nombre de jours travaillés dans le mois, le calcul ayant pour objet de neutraliser les conséquences de la répartition inégale des jours entre les douze mois de l’année.</p><p>Si vous êtes mensualisé, le calcul de votre salaire consiste à multiplier le nombre d’heures hebdomadaires par 52 et à le diviser par 12.<p><p>Par exemple, pour un temps plein de 35h par semaine, le salaire mensualisé sera de:</p><p><li>35h x 52 / 12 = 151h66, arrondies à 151h67.</li></p><p>De même, pour un temps partiel de 30h par semaine,</p><p><li>le salaire mensualisé sera de 30h x 52 / 12 = 130h.</li></p><p>A ce salaire de base seront retranchées les heures d’absence, ou ajoutées les heures supplémentaires pour les temps pleins ou complémentaires pour les temps partiels.</p>",
-			"date_redaction": "27/11/2018",
-			"date_expiration": "27/11/2019",
-			"redacteur": ["GUILLE Jean-Paul", "UD038"],
-			"source": ["FAQ", "contributions quotidiennes"],
+		[{
+				"question": "Quelle est la date à laquelle, selon la loi, mon employeur doit verser mon salaire ?",
+				"reponse": "<p>La loi n’impose pas une date de paiement, mais une périodicité minimale de paiement du salaire, qui est:</p><li>d’au moins tous les trois mois pour les commissions dues aux VRP.</li></p><p>Les règles de périodicité du salaire sont d’ordre public, ce qui signifie que même l’accord des parties ne saurait y déroger.</p><p>Elles s’appliquent au salaire de base, ou principal, ainsi qu’aux accessoires qui lui sont indissociables, à l’exception des éléments de rémunération subordonnés à une condition, ou affectés d’un terme, comme une prime annuelle ou de vacances.</p><p>Il appartient à votre employeur de fixer une échéance de paie dans son entreprise, et ensuite de la respecter (par exemple, pour les salariés mensualisés, si votre employeur fixe une échéance de paie au 4 du mois suivant, vous devrez être payé au plus tard tous les 4 de chaque mois).</p><p>Certains modes d’organisation du travail peuvent prévoir le lissage des rémunérations, pouvant apparaître comme une dérogation aux règles de périodicité du salaire (garantie, aux salariés dont le travail est irrégulièrement réparti sur l’année, d’un salaire régulier versé mensuellement, quel que soit le nombre d’heures travaillées au cours du mois, avec en ce cas une régularisation effectuée en fin d’exercice ou en cas de départ en cours d’année).</p>",
+				"date_redaction": "27/11/2018",
+				"date_expiration": "27/11/2019",
+				"redacteur": ["GUILLE Jean-Paul", "UD038"],
+				"source": ["FAQ", "contributions quotidiennes"],
+				"commentaire": " autre info.. ",
+				"tags": {
+					"themes": [40700, 42400],
+					"travailleur_particulier": ["VRP", "voyageur, représentant et placier"],
+					"theme": ["rémunération", "salaire", "périodidicité", "mensualisation"]
 
-			"tags": {
-				"themes": [42400]
-
+				},
+				"references": [{
+						"url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006902858",
+						"title": "L 3242-1 du Code du Travail "
+					},
+					{
+						"url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F604538DBBCC872ADB667D1A2901DE37.tplgfr27s_3?idArticle=LEGIARTI000006902860&cidTexte=LEGITEXT000006072050&dateTexte=20181130&categorieLien=id&oldAction=&nbResultRech=",
+						"title": "L 3242-3 du Code du Travail"
+					},
+					{
+						"url": "https://",
+						"title": "L 7313-7 du Code du Travail."
+					},
+					{
+						"url": "https://",
+						"title": "Article du 26/09/2017"
+					}
+				]
 			},
-			"references": [{
-				"url": "",
-				"title": "L3242-1 du code du travail"
-			}]
-		},
+			[{
+					"question": "Quelle est la date à laquelle, selon la loi, mon employeur doit verser mon salaire ?",
+					"reponse": "<p>La loi n’impose pas une date de paiement, mais une périodicité minimale de paiement du salaire, qui est:<li>Au moins deux fois par mois pour ceux qui ne bénéficient pas de la mensualisation (travailleurs à domicile, saisonniers, temporaires).<p>Les règles de périodicité du salaire sont d’ordre public, ce qui signifie que même l’accord des parties ne saurait y déroger.</p><p>Elles s’appliquent au salaire de base, ou principal, ainsi qu’aux accessoires qui lui sont indissociables, à l’exception des éléments de rémunération subordonnés à une condition, ou affectés d’un terme, comme une prime annuelle ou de vacances.</p><p>Il appartient à votre employeur de fixer une échéance de paie dans son entreprise, et ensuite de la respecter (par exemple, pour les salariés mensualisés, si votre employeur fixe une échéance de paie au 4 du mois suivant, vous devrez être payé au plus tard tous les 4 de chaque mois).</p><p>Certains modes d’organisation du travail peuvent prévoir le lissage des rémunérations, pouvant apparaître comme une dérogation aux règles de périodicité du salaire (garantie, aux salariés dont le travail est irrégulièrement réparti sur l’année, d’un salaire régulier versé mensuellement, quel que soit le nombre d’heures travaillées au cours du mois, avec en ce cas une régularisation effectuée en fin d’exercice ou en cas de départ en cours d’année).</p>",
+					"date_redaction": "27/11/2018",
+					"date_expiration": "27/11/2019",
+					"redacteur": ["GUILLE Jean-Paul", "UD038"],
+					"source": ["FAQ", "contributions quotidiennes"],
+					"commentaire": " autre info.. ",
+					"tags": {
+						"themes": [40700, 42400],
+						"travailleur_particulier": ["travailleur à domicile ", "saisonniers ", "CTT"],
+						"theme": ["rémunération", "salaire", "périodidicité", "mensualisation"]
 
-
-
-
-
-
-
-
-		{
-			"question": "Où et comment mon employeur doit-il payer mon salaire ?",
-			"reponse": "<p>La paie s’effectue habituellement sur le lieu de travail.</p><p>Selon la jurisprudence, à défaut de convention entre les parties, le salaire est quérable.  Par opposition à une créance portable, la créance quérable est celle que l’on doit aller chercher. Votre employeur, s’il vous paie par chèque, n’a donc pas l’obligation de vous envoyer celui-ci par voie postale.</p><p>Cette règle est atténuée aujourd’hui du fait de la possibilité de payer par virement bancaire ou postal.</p><p>Sous réserve de dispositions législatives imposant le paiement des salaires sous une forme déterminée, le salaire doit être payé en espèces ou par chèque barré ou par virement.</p><p>Au-delà d’un montant mensuel net de 1500 euros, le paiement par chèque ou virement est obligatoire.</p><p>En-deçà de ce montant, le salarié peut, sur sa demande, être payé en espèce.</p><p>Les acomptes peuvent être versés en espèce, à condition que le montant total du salaire n’excède pas la limite des 1500 euros .</p>",
-			"date_redaction": "27/11/2018",
-			"date_expiration": "27/11/2019",
-			"redacteur": ["GUILLE Jean-Paul", "UD038"],
-			"source": ["FAQ", "contributions quotidiennes"],
-			"tags": {
-				"themes": [42300],
-				"theme": ["rémunération", "salaire"]
-			},
-			"references": [{
-					"url": "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000007026437&fastReqId=348722458&fastPos=1",
-					"title": "Cour de Cass,chambre sociale du 11/04/1991 n°89-43.337"
+					},
+					"references": [{
+							"url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006902858",
+							"title": "L 3242-1 du Code du Travail "
+						},
+						{
+							"url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;jsessionid=F604538DBBCC872ADB667D1A2901DE37.tplgfr27s_3?idArticle=LEGIARTI000006902860&cidTexte=LEGITEXT000006072050&dateTexte=20181130&categorieLien=id&oldAction=&nbResultRech=",
+							"title": "L 3242-3 du Code du Travail"
+						},
+						{
+							"url": "https://",
+							"title": "L 7313-7 du Code du Travail."
+						},
+						{
+							"url": "https://",
+							"title": "Article du 26/09/2017"
+						}
+					]
 				},
 				{
-					"url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006902857&cidTexte=LEGITEXT000006072050",
-					"title": "Article L3241-1"
+					"question": "Quels salariés doivent bénéficier de la mensualisation, et comment le salaire doit-il être calculé ?",
+					"reponse": "<p>Par mensualisation, on entend une seule paie par mois.</p><p>La mensualisation s’applique à tous les employeurs de droit privé et à toutes les catégories de salariés, à l’exception des travailleurs à domicile, temporaires, saisonniers et intermittents.</p><p>Les salariés à temps partiel entrent dans son champ d’application, de même que ceux embauchés en CDD.</p><p>La rémunération est indépendante, pour un horaire de travail effectif déterminé, du nombre de jours travaillés dans le mois, le calcul ayant pour objet de neutraliser les conséquences de la répartition inégale des jours entre les douze mois de l’année.</p><p>Si vous êtes mensualisé, le calcul de votre salaire consiste à multiplier le nombre d’heures hebdomadaires par 52 et à le diviser par 12.<p><p>Par exemple, pour un temps plein de 35h par semaine, le salaire mensualisé sera de:</p><p><li>35h x 52 / 12 = 151h66, arrondies à 151h67.</li></p><p>De même, pour un temps partiel de 30h par semaine,</p><p><li>le salaire mensualisé sera de 30h x 52 / 12 = 130h.</li></p><p>A ce salaire de base seront retranchées les heures d’absence, ou ajoutées les heures supplémentaires pour les temps pleins ou complémentaires pour les temps partiels.</p>",
+					"date_redaction": "27/11/2018",
+					"date_expiration": "27/11/2019",
+					"redacteur": ["GUILLE Jean-Paul", "UD038"],
+					"source": ["FAQ", "contributions quotidiennes"],
+
+					"tags": {
+						"themes": [42400]
+
+					},
+					"references": [{
+						"url": "",
+						"title": "L3242-1 du code du travail"
+					}]
+				},
+
+
+
+
+
+
+
+
+				{
+					"question": "Où et comment mon employeur doit-il payer mon salaire ?",
+					"reponse": "<p>La paie s’effectue habituellement sur le lieu de travail.</p><p>Selon la jurisprudence, à défaut de convention entre les parties, le salaire est quérable.  Par opposition à une créance portable, la créance quérable est celle que l’on doit aller chercher. Votre employeur, s’il vous paie par chèque, n’a donc pas l’obligation de vous envoyer celui-ci par voie postale.</p><p>Cette règle est atténuée aujourd’hui du fait de la possibilité de payer par virement bancaire ou postal.</p><p>Sous réserve de dispositions législatives imposant le paiement des salaires sous une forme déterminée, le salaire doit être payé en espèces ou par chèque barré ou par virement.</p><p>Au-delà d’un montant mensuel net de 1500 euros, le paiement par chèque ou virement est obligatoire.</p><p>En-deçà de ce montant, le salarié peut, sur sa demande, être payé en espèce.</p><p>Les acomptes peuvent être versés en espèce, à condition que le montant total du salaire n’excède pas la limite des 1500 euros .</p>",
+					"date_redaction": "27/11/2018",
+					"date_expiration": "27/11/2019",
+					"redacteur": ["GUILLE Jean-Paul", "UD038"],
+					"source": ["FAQ", "contributions quotidiennes"],
+					"tags": {
+						"themes": [42300],
+						"theme": ["rémunération", "salaire"]
+					},
+					"references": [{
+							"url": "https://www.legifrance.gouv.fr/affichJuriJudi.do?oldAction=rechJuriJudi&idTexte=JURITEXT000007026437&fastReqId=348722458&fastPos=1",
+							"title": "Cour de Cass,chambre sociale du 11/04/1991 n°89-43.337"
+						},
+						{
+							"url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006902857&cidTexte=LEGITEXT000006072050",
+							"title": "Article L3241-1"
+						}
+					]
 				}
 			]
-		}
-	]
-]
+		]
