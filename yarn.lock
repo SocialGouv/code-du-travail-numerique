@@ -1792,6 +1792,13 @@
     eslint-plugin-import "~2.14.0"
     eslint-plugin-prettier "~3.0.0"
 
+"@socialgouv/next-routes@^1.5":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/next-routes/-/next-routes-1.5.0.tgz#bdec5169287bce268e36baf8dbe3aff82ba7d2d3"
+  integrity sha512-1Zc+S4ysBQDZGrxpg7xzGoRYXdvWs8Z+PKv4mQCm/WulSuwNN5931yo9Ci2HvGmrwuEoMmin1OM5r42ny2a29g==
+  dependencies:
+    path-to-regexp "^2.1.0"
+
 "@svgr/core@^2.4.1":
   version "2.4.1"
   resolved "https://registry.npmjs.org/@svgr/core/-/core-2.4.1.tgz#03a407c28c4a1d84305ae95021e8eabfda8fa731"
@@ -12447,13 +12454,6 @@ next-line@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/next-line/-/next-line-1.1.0.tgz#fcae57853052b6a9bae8208e40dd7d3c2d304603"
   integrity sha1-/K5XhTBStqm66CCOQN19PC0wRgM=
-
-next-routes-2@^1.5:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/next-routes-2/-/next-routes-2-1.5.0.tgz#407476515f3694a35230ee8c09bc2721234701e3"
-  integrity sha512-rrVVDli0CrPW7lDYr8UpPOzK5vT0mcuHRtG3GnOrZVLWRxTFBHtvnHzHmb5A6+a/Fif/jr0HFLYrgLNPQpAhVg==
-  dependencies:
-    path-to-regexp "^2.1.0"
 
 next-tick@1:
   version "1.0.0"
