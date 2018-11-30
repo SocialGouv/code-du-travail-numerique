@@ -6,6 +6,7 @@ FROM node:10-alpine
 
 COPY ./package.json /app/package.json
 COPY --from=master /app/packages/code-du-travail-frontend/dist /app/dist
+COPY --from=master /app/packages/code-du-travail-frontend/.next /app/.next
 
 WORKDIR /app
 
