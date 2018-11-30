@@ -140,7 +140,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 3550	Contrat de travail > Embauche > Relevé mensuel des contrats > Pénalités	R1227-4
 3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions	L1221-4; L1221-5;
 3600	Contrat de travail > Généralités > Principes génériques du contrat > Principes	L1221-2; L1221-1
-3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; R1227-4;
+3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; 
 29300	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Calcul	D1226-1
 29400	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Date de début	D1226-3
 29500	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Durée augmentée ancienneté	D1226-2
