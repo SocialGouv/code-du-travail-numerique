@@ -9,14 +9,8 @@
 		"tags": {
 			"themes": [45100],
 			"theme": ["SMIC", "salaire minimum", "rémunération", "salaire"],
-			"branche": "Métallurgie",
-			"categorie": ["ETAM", "ouvriers"],
-			"type_contrat": "CDI",
-			"travailleur_particulier": "apprenti",
-			"duree_travail": "temps plein",
-			"effectif": "> 11 salariés",
-			"particularisme": "Isère",
-			"profil": ""
+			"branche": "Métallurgie"
+		
 		},
 		"references": [{
 				"url": "",
