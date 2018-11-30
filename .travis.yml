@@ -140,7 +140,7 @@ jobs:
       env:
         - *docker_image
         - *docker_keys
-        - MODULE_IMAGE="${REPO_SLUG}-frontend:latest"
+        - MODULE_IMAGE="${REPO_SLUG}-frontend"
         - CTX=./packages/code-du-travail-frontend
 
 #
