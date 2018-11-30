@@ -142,8 +142,8 @@
 		"question": "Embauché récemment dans une entreprise du Bâtiment en tant qu’électricien, je souhaite savoir si l’employeur doit prendre en compte mon diplôme professionnel pour la définition de mon coefficient d’emploi ?",
 		"tags": {
 			"theme": "contrat de travail et embauche",
-			"branche": ["Bâtiment ouvriers entreprises jusqu'à 10 salariés", "Bâtiment ouvriers entreprises plus de 10 salariés"]
-      "categorie":"ouvriers"
+			"branche": ["Bâtiment ouvriers entreprises jusqu'à 10 salariés", "Bâtiment ouvriers entreprises plus de 10 salariés"],
+			"categorie": "ouvriers"
 		},
 		"date_redaction": "01/12/2017",
 		"source": "DIRECCTE",
