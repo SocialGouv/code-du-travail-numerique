@@ -27,6 +27,11 @@ logger = logging.getLogger(__name__)
 logger.addHandler(console)
 logger.setLevel(logging.INFO)
 
+def flatten(item):
+    if isinstance(item, list):
+        return ", ".join(item)
+    else:
+        return item
 
 def parse_hash_tags(tags):
     newTags = []
@@ -243,7 +248,7 @@ def create_documents(index_name, type_name):
         logger.info("Load %s documents from outils.json", len(data))
         for val in data:
             additional_tags = ["theme", "type_de_contrat", "catégorie", "travailleur_particulier", "branche"]
-            additional_text = [val.get(key) for key in additional_tags].join(", ")
+            additional_text = ", ".join([flatten(val.get(key)) for key in additional_tags if val.get(key)])
             theme = val.get('tags', {}).get('theme', '')
             branche = val.get('tags', {}).get('branche', '')
             type_de_contrat = val.get('tags', {}).get('type_de_contrat', '')
