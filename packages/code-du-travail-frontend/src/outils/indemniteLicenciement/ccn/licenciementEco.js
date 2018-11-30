@@ -24,7 +24,7 @@ class LicenciementEco extends React.Component {
       <React.Fragment>
         <Section light>
           <React.Fragment>
-            <h2>Est ce que le motif de votre licenciement est économique ?</h2>
+            <h2>Le motif de votre licenciement est-il économique ?</h2>
             <div style={radioContainerStyle}>
               <label style={labelStyle}>
                 <input
