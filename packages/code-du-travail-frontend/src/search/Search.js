@@ -1,15 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "next/router";
-import getConfig from "next/config";
-import memoizee from "memoizee";
-import pDebounce from "p-debounce";
+import { searchResults, suggestResults } from "./search.service";
 import { Container } from "@cdt/ui";
 
-import AsyncFetch from "../lib/AsyncFetch";
 import { DocumentSuggester } from "./DocumentSuggester";
 import SearchResults from "./SearchResults";
-
+import AsyncFetch from "../lib/AsyncFetch";
 import { Router, Link } from "../../routes";
 import { getExcludeSources, getRouteBySource } from "../sources";
 import ReponseIcon from "../icons/ReponseIcon";
@@ -39,46 +36,6 @@ const FormSearchButton = () => (
   <button type="submit" className="btn btn__img btn__img__search">
     <span className="hidden">Rechercher</span>
   </button>
-);
-
-const {
-  publicRuntimeConfig: { API_URL }
-} = getConfig();
-
-const fetchResults = (query, endPoint = "search", excludeSources) => {
-  const url = `${API_URL}/${endPoint}?q=${encodeURIComponent(
-    query
-  )}&excludeSources=${encodeURIComponent(excludeSources)}`;
-
-  return fetch(url).then(response => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error("Un problème est survenu.");
-  });
-};
-
-// memoize search results
-const fetchResultsSearch = memoizee(
-  (query, excludeSources) => {
-    return fetchResults(query, "search", excludeSources);
-  },
-  { promise: true }
-);
-
-const fetchResultsSuggestDebounced = pDebounce(
-  (query, excludeSources) => fetchResults(query, "suggest", excludeSources),
-  200
-);
-
-// memoize suggestions results
-const fetchResultsSuggest = memoizee(
-  (query, excludeSources) =>
-    (query &&
-      query.length > 2 &&
-      fetchResultsSuggestDebounced(query, excludeSources)) ||
-    Promise.resolve({ hits: { hits: [] } }),
-  { promise: true }
 );
 
 export class SearchQuery extends React.Component {
@@ -120,7 +77,7 @@ export class SearchQuery extends React.Component {
     return (
       <AsyncFetch
         autoFetch={true}
-        fetch={() => fetchResultsSearch(query, excludeSources)}
+        fetch={() => searchResults(query, excludeSources)}
         render={args => render({ ...args, query })}
       />
     );
@@ -233,7 +190,7 @@ class Search extends React.Component {
 
   onSearch = ({ value }) => {
     const { excludeSources } = this.state;
-    fetchResultsSuggest(value, excludeSources).then(results => {
+    suggestResults(value, excludeSources).then(results => {
       this.setState({ suggestions: results.hits.hits }, () => {
         this.props.onResults(results);
       });
