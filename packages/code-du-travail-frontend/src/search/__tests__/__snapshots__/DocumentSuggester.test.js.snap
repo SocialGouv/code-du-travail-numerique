@@ -67,7 +67,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <b>
               Legifrance
                | 
-              kali hightligh
+              convention collective title
             </b>
             <br />
             <div />
@@ -86,7 +86,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <b>
               FAQ
                | 
-              FAQ hightligh
+              question / réponse title
             </b>
             <br />
             <div />
