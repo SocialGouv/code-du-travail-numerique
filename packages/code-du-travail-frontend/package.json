@@ -20,7 +20,7 @@
     "memoizee": "^0.4.14",
     "next": "^7.0.0",
     "next-images": "^1.0.0",
-    "@socialgouv/next-routes": "^1.5",
+    "@socialgouv/next-routes": "^1.5.1",
     "p-debounce": "^1.0.0",
     "react": "^16.3.2",
     "react-autosuggest": "9.3.4",

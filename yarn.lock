@@ -1792,10 +1792,10 @@
     eslint-plugin-import "~2.14.0"
     eslint-plugin-prettier "~3.0.0"
 
-"@socialgouv/next-routes@^1.5":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/next-routes/-/next-routes-1.5.0.tgz#bdec5169287bce268e36baf8dbe3aff82ba7d2d3"
-  integrity sha512-1Zc+S4ysBQDZGrxpg7xzGoRYXdvWs8Z+PKv4mQCm/WulSuwNN5931yo9Ci2HvGmrwuEoMmin1OM5r42ny2a29g==
+"@socialgouv/next-routes@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/next-routes/-/next-routes-1.5.1.tgz#e39202d353c5f807204a013d86b8a7a52e08c117"
+  integrity sha512-fCdnsqOqiXPRH0xVuY19Eh/8dJQAnFHKXpjv5mI2cu8nmM7wmdTrEFmTTSdBkipQcakRFbndYkvtMj7FVSo4Hg==
   dependencies:
     path-to-regexp "^2.1.0"
 
