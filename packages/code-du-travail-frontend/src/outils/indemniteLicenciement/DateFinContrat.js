@@ -24,7 +24,7 @@ class DateFinContrat extends React.Component {
         <Section light>
           <React.Fragment>
             <h2>
-              Est ce que la date de fin de votre contrat se situe avant le
+              La date de fin de votre contrat se situe-t-elle avant le
               <b> 26 Août 2017</b>
               &nbsp;?
             </h2>
