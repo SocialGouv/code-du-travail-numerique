@@ -29,10 +29,16 @@ const suggestMin = (query, excludeSources) => {
 };
 
 // memoize search results
-const searchResultsMemoized = memoizee(searchResults, { promise: true });
+const searchResultsMemoized = memoizee(searchResults, {
+  promise: true,
+  length: 2 // ensure memoize work for function with es6 default params
+});
 
 // memoize suggestions results
-const suggestResultsMemoized = memoizee(suggestMin, { promise: true });
+const suggestResultsMemoized = memoizee(suggestMin, {
+  promise: true,
+  length: 2 // ensure memoize work for function with es6 default params
+});
 
 // debounce memoized suggestions results
 const suggestResultDebounce = pDebounce(suggestResultsMemoized, 200);
