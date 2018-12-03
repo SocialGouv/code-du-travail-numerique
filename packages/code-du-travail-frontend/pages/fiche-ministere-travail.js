@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { ExternalLink } from "react-feather";
-import Answer from "../src/search/Answer";
+import Answer from "../src/common/Answer";
 import DossierIcon from "../src/icons/DossierIcon";
 
 const {

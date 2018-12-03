@@ -7,7 +7,7 @@ import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
 import ArticleIcon from "../src/icons/ArticleIcon";
-import Answer from "../src/search/Answer";
+import Answer from "../src/common/Answer";
 
 const {
   publicRuntimeConfig: { API_URL }
