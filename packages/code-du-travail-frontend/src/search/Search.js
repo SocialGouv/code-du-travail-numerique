@@ -218,8 +218,8 @@ class Search extends React.Component {
     const route = getRouteBySource(suggestion._source.source);
     const anchor = suggestion._source.anchor
       ? suggestion._source.anchor.slice(1)
-      : "";
-
+      : undefined;
+    console.log(suggestion._source.anchor);
     Router.pushRoute(
       route,
       { q: query, search: 0, slug: suggestion._source.slug },
@@ -234,8 +234,9 @@ class Search extends React.Component {
   onSearch = ({ value }) => {
     const { excludeSources } = this.state;
     fetchResultsSuggest(value, excludeSources).then(results => {
-      this.setState({ suggestions: results.hits.hits });
-      this.props.onResults(results);
+      this.setState({ suggestions: results.hits.hits }, () => {
+        this.props.onResults(results);
+      });
     });
   };
 

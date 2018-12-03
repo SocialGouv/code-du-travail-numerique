@@ -87,7 +87,7 @@ describe("<DocumentSuggester />", () => {
     expect(onSearch).toBeCalledWith(expect.objectContaining({ value: "test" }));
   });
 
-  it("should call onSelect", () => {
+  it("should call onSelect when user clicks some option", () => {
     const onSelect = jest.fn();
     const { getByRole, getByPlaceholderText } = renderDocumentSuggester({
       placeholder: "the place to be",
