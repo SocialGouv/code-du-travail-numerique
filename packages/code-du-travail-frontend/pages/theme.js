@@ -11,6 +11,7 @@ import { SearchQuery } from "../src/search/SearchQuery";
 
 import Categories from "../src/Categories";
 import themes from "@cdt/data/dataset/themes-front.json";
+import { searchResults } from "../src/search/search.service";
 
 const BigError = ({ children }) => (
   <div
@@ -125,7 +126,11 @@ class Theme extends React.Component {
             null}
           {theme &&
             theme.type !== "root" && (
-              <SearchQuery query={theme.title} excludeSources="themes" />
+              <SearchQuery
+                query={theme.title}
+                excludeSources="themes"
+                fetch={searchResults}
+              />
             )}
         </Container>
       </React.Fragment>

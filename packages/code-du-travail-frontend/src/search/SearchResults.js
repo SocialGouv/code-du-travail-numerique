@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "next/router";
+import PropTypes from "prop-types";
 
 import { Alert, NoAnswer, Button } from "@cdt/ui";
 
@@ -36,7 +36,7 @@ const makeExcerpt = highlight => {
   return "";
 };
 
-const ResultItem = withRouter(({ _source, highlight, router }) => {
+const ResultItem = ({ _source, highlight, query }) => {
   const excerpt = makeExcerpt(highlight);
 
   const route = getRouteBySource(_source.source);
@@ -48,7 +48,7 @@ const ResultItem = withRouter(({ _source, highlight, router }) => {
       <li className="search-results__item">
         <Link
           route={route}
-          params={{ q: router.query.q, search: 0, slug: _source.slug }}
+          params={{ q: query, search: 0, slug: _source.slug }}
           hash={anchor}
         >
           <a className="search-results-link">
@@ -80,9 +80,23 @@ const ResultItem = withRouter(({ _source, highlight, router }) => {
       </a>
     </li>
   );
-});
+};
 
 class SearchResults extends React.Component {
+  static propTypes = {
+    query: PropTypes.string,
+    data: PropTypes.shape({
+      hits: PropTypes.shape({
+        total: PropTypes.integer,
+        hits: PropTypes.array.isRequired
+      }).isRequired
+    })
+  };
+
+  static defaultProps = {
+    query: "",
+    data: { hits: { total: 0, hits: [] } }
+  };
   state = {
     feedbackVisible: false
   };
@@ -98,7 +112,6 @@ class SearchResults extends React.Component {
   render() {
     let data = this.props.data;
     let query = this.props.query;
-
     // No results.
     if (!data || !data.hits || !data.hits.total) {
       return (
@@ -132,7 +145,11 @@ class SearchResults extends React.Component {
             <div className="search-results">
               <ul className="search-results__list">
                 {data.hits.hits.map(result => (
-                  <ResultItem key={result["_id"]} {...result} />
+                  <ResultItem
+                    key={result["_id"]}
+                    {...result}
+                    query={this.props.query}
+                  />
                 ))}
               </ul>
             </div>

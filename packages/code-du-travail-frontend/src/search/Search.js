@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { withRouter } from "next/router";
 import { Container } from "@cdt/ui";
 
-import { suggestResults } from "./search.service";
+import { suggestResults, searchResults } from "./search.service";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { SearchQuery } from "./SearchQuery";
 import ReponseIcon from "../icons/ReponseIcon";
@@ -209,7 +209,11 @@ class Search extends React.Component {
           </Container>
         </div>
         {(queryResults && (
-          <SearchQuery query={queryResults} excludeSources={excludeSources} />
+          <SearchQuery
+            query={queryResults}
+            excludeSources={excludeSources}
+            fetch={searchResults}
+          />
         )) ||
           null}
       </React.Fragment>

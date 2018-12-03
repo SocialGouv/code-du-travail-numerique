@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import AsyncFetch from "../lib/AsyncFetch";
 import SearchResults from "./SearchResults";
-import { searchResults } from "./search.service";
 
 export class SearchQuery extends React.Component {
   static propTypes = {
     query: PropTypes.string,
     excludeSources: PropTypes.string,
+    fetch: PropTypes.func.isRequired,
     render: PropTypes.func
   };
 
@@ -39,11 +39,11 @@ export class SearchQuery extends React.Component {
   }
 
   render() {
-    const { query, excludeSources, render } = this.props;
+    const { query, excludeSources, render, fetch } = this.props;
     return (
       <AsyncFetch
         autoFetch={true}
-        fetch={() => searchResults(query, excludeSources)}
+        fetch={() => fetch(query, excludeSources)}
         render={args => render({ ...args, query })}
       />
     );
