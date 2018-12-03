@@ -69,14 +69,11 @@ class Fiche extends React.Component {
             <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
               <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
             </div>
-            <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
-              Article entré en vigueur le{" "}
-              {format(new Date(data._source.date_debut), "D MMMM YYYY", {
-                locale: frLocale
-              })}
-            </div>
           </React.Fragment>
         }
+        date={format(new Date(data._source.date_debut), "D MMMM YYYY", {
+          locale: frLocale
+        })}
         icon={ArticleIcon}
         emptyMessage="Article introuvable"
         html={data._source.html}
