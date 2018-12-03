@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adresse service should make a request 1`] = `
+Array [
+  Object {
+    "properties": Object {
+      "city": "bar",
+      "name": "foo",
+      "postcode": 42,
+    },
+  },
+]
+`;
