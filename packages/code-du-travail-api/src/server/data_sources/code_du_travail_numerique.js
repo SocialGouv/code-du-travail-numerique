@@ -169,7 +169,7 @@ async function getSingleItem(params) {
         }
       })
       .then(res => {
-        if (res.hits.total === 1) {
+        if (res.hits.total >= 1) {
           return res.hits.hits[0];
         } else {
           throw { status: 404, message: "not found" };
