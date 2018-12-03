@@ -7,12 +7,12 @@ import pDebounce from "p-debounce";
 import { Container } from "@cdt/ui";
 
 import AsyncFetch from "../lib/AsyncFetch";
-import Suggester from "./Suggester";
+import { DocumentSuggester } from "./DocumentSuggester";
 import SearchResults from "./SearchResults";
 
 import { Router, Link } from "../../routes";
+import { getExcludeSources, getRouteBySource } from "../sources";
 import ReponseIcon from "../icons/ReponseIcon";
-import { getExcludeSources } from "../sources";
 
 const Disclaimer = () => (
   <div className="wrapper-narrow">
@@ -77,7 +77,7 @@ const fetchResultsSuggest = memoizee(
     (query &&
       query.length > 2 &&
       fetchResultsSuggestDebounced(query, excludeSources)) ||
-    Promise.resolve(),
+    Promise.resolve({ hits: { hits: [] } }),
   { promise: true }
 );
 
@@ -132,14 +132,18 @@ class Search extends React.Component {
     router: PropTypes.object,
     onResults: PropTypes.func
   };
-
+  static defaultProps = {
+    onResults: () => {}
+  };
   state = {
     // query in the input box
     query: "",
     // query to display the search results
     queryResults: "",
     facet: "",
-    excludeSources: ""
+    excludeSources: "",
+    suggestions: [],
+    results: []
   };
 
   componentDidMount() {
@@ -208,104 +212,99 @@ class Search extends React.Component {
       });
     }
   };
-  setResults = results => {
-    if (this.props.onResults && results && results.hits.total > 0) {
-      this.props.onResults(results.hits.hits);
-    }
+
+  onSelect = suggestion => {
+    const { query } = this.state;
+    const route = getRouteBySource(suggestion._source.source);
+    const anchor = suggestion._source.anchor
+      ? suggestion._source.anchor.slice(1)
+      : undefined;
+    console.log(suggestion._source.anchor);
+    Router.pushRoute(
+      route,
+      { q: query, search: 0, slug: suggestion._source.slug },
+      { hash: anchor }
+    );
+  };
+
+  onClear = () => {
+    this.setState({ suggestions: [] });
+  };
+
+  onSearch = ({ value }) => {
+    const { excludeSources } = this.state;
+    fetchResultsSuggest(value, excludeSources).then(results => {
+      this.setState({ suggestions: results.hits.hits }, () => {
+        this.props.onResults(results);
+      });
+    });
   };
 
   render() {
-    const { query, queryResults, excludeSources, facet } = this.state;
+    const {
+      query,
+      queryResults,
+      excludeSources,
+      facet,
+      suggestions
+    } = this.state;
     return (
-      <SearchView
-        onChange={this.onChange}
-        onFormSubmit={this.onFormSubmit}
-        query={query}
-        facet={facet}
-        queryResults={queryResults}
-        onResults={this.setResults}
-        excludeSources={excludeSources}
-      />
+      <React.Fragment>
+        <div className="section-white shadow-bottom search-widget">
+          <Container>
+            <div className="search" style={{ padding: "1em 0" }}>
+              <header>
+                <h1 className="no-margin">
+                  Posez votre question sur le droit du travail
+                </h1>
+                <Disclaimer />
+              </header>
+              <form className="search__form" onSubmit={this.onFormSubmit}>
+                <div className="search__fields">
+                  <label className="search__facets" htmlFor="contentSource">
+                    <span id="contentSource" className="hidden">
+                      Filtrer par type de contenu
+                    </span>
+                    <ReponseIcon className="facet-icon" />
+                    <select
+                      id="contentSource"
+                      className="facet-value"
+                      onChange={this.onChange}
+                      onBlur={this.onChange}
+                      value={facet}
+                      name="facet"
+                    >
+                      <option value="">Tous contenus</option>
+                      <option value="faq">Réponses</option>
+                      <option value="code_du_travail">Code du travail</option>
+                      <option value="fiches">Fiches</option>
+                      <option value="modeles_de_courriers">Modèles</option>
+                      <option value="outils">Outils</option>
+                    </select>
+                  </label>
+                  <DocumentSuggester
+                    onChange={this.onChange}
+                    query={query}
+                    placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
+                    onSearch={this.onSearch}
+                    onSelect={this.onSelect}
+                    onClear={this.onClear}
+                    suggestions={suggestions}
+                    className="search__input"
+                  />
+                </div>
+                <FormSearchButton />
+              </form>
+            </div>
+          </Container>
+        </div>
+        {(queryResults && (
+          <SearchQuery query={queryResults} excludeSources={excludeSources} />
+        )) ||
+          null}
+      </React.Fragment>
     );
   }
 }
 
-const SearchView = ({
-  onChange,
-  onFormSubmit,
-  query,
-  facet,
-  queryResults,
-  onResults,
-  excludeSources = ""
-}) => {
-  return (
-    <React.Fragment>
-      <div className="section-white shadow-bottom search-widget">
-        <Container>
-          <div className="search" style={{ padding: "1em 0" }}>
-            <header>
-              <h1 className="no-margin">
-                Posez votre question sur le droit du travail
-              </h1>
-              <Disclaimer />
-            </header>
-            <form className="search__form" onSubmit={onFormSubmit}>
-              <div className="search__fields">
-                <label className="search__facets" htmlFor="contentSource">
-                  <span id="contentSource" className="hidden">
-                    Filtrer par type de contenu
-                  </span>
-                  <ReponseIcon className="facet-icon" />
-                  <select
-                    id="contentSource"
-                    className="facet-value"
-                    onChange={onChange}
-                    onBlur={onChange}
-                    value={facet}
-                    name="facet"
-                  >
-                    <option value="">Tous contenus</option>
-                    <option value="faq">Réponses</option>
-                    <option value="code_du_travail">Code du travail</option>
-                    <option value="fiches">Fiches</option>
-                    <option value="modeles_de_courriers">Modèles</option>
-                    <option value="outils">Outils</option>
-                  </select>
-                </label>
-                <Suggester
-                  onChange={onChange}
-                  query={query}
-                  excludeSources={excludeSources}
-                  getResults={() =>
-                    fetchResultsSuggest(query, excludeSources).then(results => {
-                      onResults(results);
-                      return results;
-                    })
-                  }
-                />
-              </div>
-              <FormSearchButton />
-            </form>
-          </div>
-        </Container>
-      </div>
-      {(queryResults && (
-        <SearchQuery query={queryResults} excludeSources={excludeSources} />
-      )) ||
-        null}
-    </React.Fragment>
-  );
-};
-SearchView.propTypes = {
-  query: PropTypes.string,
-  queryResults: PropTypes.string,
-  facet: PropTypes.string,
-  excludeSources: PropTypes.string,
-  onChange: PropTypes.func,
-  onResults: PropTypes.func.isRequired,
-  onFormSubmit: PropTypes.func
-};
-const _Search = withRouter(Search);
-
-export default _Search;
+export default withRouter(Search);

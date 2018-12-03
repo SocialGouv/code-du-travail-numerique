@@ -131,17 +131,15 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                 <input
                   aria-autocomplete="list"
                   aria-controls="react-autowhatever-1"
-                  aria-label="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?"
                   autocomplete="off"
                   class="search__input"
                   name="query"
                   placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                  style="width: 100%;"
                   type="search"
                   value=""
                 />
                 <div
-                  class="sc-bwzfXH hPHbaY"
+                  class="sc-bwzfXH gQLzHc"
                   id="react-autowhatever-1"
                   role="listbox"
                 />
@@ -601,17 +599,15 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                 <input
                   aria-autocomplete="list"
                   aria-controls="react-autowhatever-1"
-                  aria-label="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?"
                   autocomplete="off"
                   class="search__input"
                   name="query"
                   placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                  style="width: 100%;"
                   type="search"
                   value=""
                 />
                 <div
-                  class="sc-bwzfXH hPHbaY"
+                  class="sc-bwzfXH gQLzHc"
                   id="react-autowhatever-1"
                   role="listbox"
                 />
@@ -1068,17 +1064,15 @@ exports[`<Answer /> should render 1`] = `
               <input
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-1"
-                aria-label="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?"
                 autocomplete="off"
                 class="search__input"
                 name="query"
                 placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                style="width: 100%;"
                 type="search"
                 value=""
               />
               <div
-                class="sc-bwzfXH hPHbaY"
+                class="sc-bwzfXH gQLzHc"
                 id="react-autowhatever-1"
                 role="listbox"
               />

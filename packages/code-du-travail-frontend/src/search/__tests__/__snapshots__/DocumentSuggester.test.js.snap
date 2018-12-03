@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocumentSuggester /> should render 1`] = `
+<div>
+  <div
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
+    role="combobox"
+    style="text-align: left; border: 0px;"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-controls="react-autowhatever-1"
+      autocomplete="off"
+      name="query"
+      placeholder="document suggester placeholder"
+      type="search"
+      value="foo bar search"
+    />
+    <div
+      class="sc-bwzfXH gQLzHc"
+      id="react-autowhatever-1"
+      role="listbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`<DocumentSuggester /> should render suggestions 1`] = `
+<div>
+  <div
+    aria-expanded="true"
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
+    role="combobox"
+    style="text-align: left; border: 0px;"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-controls="react-autowhatever-1"
+      autocomplete="off"
+      name="query"
+      placeholder="search foo"
+      type="search"
+      value="foo bar search"
+    />
+    <div
+      class="sc-bwzfXH gQLzHc"
+      id="react-autowhatever-1"
+      role="listbox"
+    >
+      <ul
+        role="listbox"
+        style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
+      >
+        <li
+          aria-selected="false"
+          data-suggestion-index="0"
+          id="react-autowhatever-1--item-0"
+          role="option"
+          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+        >
+          <div
+            class="sc-bdVaJa hpcrWB"
+          >
+            <b>
+              Legifrance
+               | 
+              convention collective title
+            </b>
+            <br />
+            <div />
+          </div>
+        </li>
+        <li
+          aria-selected="false"
+          data-suggestion-index="1"
+          id="react-autowhatever-1--item-1"
+          role="option"
+          style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+        >
+          <div
+            class="sc-bdVaJa hpcrWB"
+          >
+            <b>
+              FAQ
+               | 
+              question / réponse title
+            </b>
+            <br />
+            <div />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
