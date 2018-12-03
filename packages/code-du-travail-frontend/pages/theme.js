@@ -6,7 +6,9 @@ import find from "unist-util-find";
 import parents from "unist-util-parents";
 
 import { Link } from "../routes";
-import Search, { SearchQuery } from "../src/search/Search";
+import Search from "../src/search/Search";
+import { SearchQuery } from "../src/search/SearchQuery";
+
 import Categories from "../src/Categories";
 import themes from "@cdt/data/dataset/themes-front.json";
 
