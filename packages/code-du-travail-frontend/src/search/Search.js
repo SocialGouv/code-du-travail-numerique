@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "next/router";
-import { searchResults, suggestResults } from "./search.service";
 import { Container } from "@cdt/ui";
 
+import { suggestResults, searchResults } from "./search.service";
 import { DocumentSuggester } from "./DocumentSuggester";
-import SearchResults from "./SearchResults";
-import AsyncFetch from "../lib/AsyncFetch";
-import { Router, Link } from "../../routes";
-import { getExcludeSources, getRouteBySource } from "../sources";
+import { SearchQuery } from "./SearchQuery";
 import ReponseIcon from "../icons/ReponseIcon";
+
+import { Router, Link } from "../../routes";
+import { getRouteBySource, getExcludeSources } from "../sources";
 
 const Disclaimer = () => (
   <div className="wrapper-narrow">
@@ -37,52 +37,6 @@ const FormSearchButton = () => (
     <span className="hidden">Rechercher</span>
   </button>
 );
-
-export class SearchQuery extends React.Component {
-  static propTypes = {
-    query: PropTypes.string,
-    excludeSources: PropTypes.string,
-    render: PropTypes.func
-  };
-
-  static defaultProps = {
-    query: "",
-    excludeSources: "",
-    render: ({ status, result, query }) => (
-      <div>
-        <div style={{ textAlign: "center" }}>
-          {status === "loading" ? "..." : " "}
-        </div>
-        <div>
-          {status === "success" &&
-            result && <SearchResults query={query} data={result} />}
-        </div>
-      </div>
-    )
-  };
-
-  shouldComponentUpdate(nextProps) {
-    // prevent useless re-renders
-    if (
-      nextProps.query === this.props.query &&
-      nextProps.excludeSources === this.props.excludeSources
-    ) {
-      return false;
-    }
-    return true;
-  }
-
-  render() {
-    const { query, excludeSources, render } = this.props;
-    return (
-      <AsyncFetch
-        autoFetch={true}
-        fetch={() => searchResults(query, excludeSources)}
-        render={args => render({ ...args, query })}
-      />
-    );
-  }
-}
 
 class Search extends React.Component {
   static propTypes = {
@@ -176,7 +130,6 @@ class Search extends React.Component {
     const anchor = suggestion._source.anchor
       ? suggestion._source.anchor.slice(1)
       : undefined;
-    console.log(suggestion._source.anchor);
     Router.pushRoute(
       route,
       { q: query, search: 0, slug: suggestion._source.slug },
@@ -256,7 +209,11 @@ class Search extends React.Component {
           </Container>
         </div>
         {(queryResults && (
-          <SearchQuery query={queryResults} excludeSources={excludeSources} />
+          <SearchQuery
+            query={queryResults}
+            excludeSources={excludeSources}
+            fetch={searchResults}
+          />
         )) ||
           null}
       </React.Fragment>
