@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withRouter } from "next/router";
 import { Container } from "@cdt/ui";
 
+import { searchAddress } from "../annuaire/adresse.service";
 import { suggestResults, searchResults } from "./search.service";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { SearchQuery } from "./SearchQuery";
@@ -10,6 +11,7 @@ import ReponseIcon from "../icons/ReponseIcon";
 
 import { Router, Link } from "../../routes";
 import { getRouteBySource, getExcludeSources } from "../sources";
+import { AddressQuery } from "./AddressQuery";
 
 const Disclaimer = () => (
   <div className="wrapper-narrow">
@@ -52,6 +54,7 @@ class Search extends React.Component {
     // query to display the search results
     queryResults: "",
     facet: "",
+    coord: null,
     excludeSources: "",
     suggestions: [],
     results: []
@@ -72,15 +75,19 @@ class Search extends React.Component {
       const excludeSources = getExcludeSources(facet);
       this.setState({ facet, excludeSources });
     }
+    if (this.props.router.query.coord) {
+      const [lon, lat] = this.props.router.query.coord.split(":");
+      this.setState({ coord: { lat, lon } });
+    }
     // listen to route changes
     Router.events.on("routeChangeComplete", this.handleRouteChange);
   }
   handleRouteChange = () => {
     // when route change, ensure to update the input box
-    //console.log("handleRouteChange", url);
     this.setState({
       query: this.props.router.query.q,
       facet: this.props.router.query.facet,
+      coord: this.props.router.query.coord,
       excludeSources: getExcludeSources(this.props.router.query.facet || ""),
       queryResults: this.props.router.query.search
         ? this.props.router.query.search === "0" && ""
@@ -93,7 +100,7 @@ class Search extends React.Component {
 
   submitQuery = () => {
     if (this.state.query) {
-      this.setState({ queryResults: this.state.query });
+      this.setState({ queryResults: this.state.query, coord: undefined });
       Router.pushRoute("index", {
         q: this.state.query,
         facet: this.state.facet
@@ -107,11 +114,6 @@ class Search extends React.Component {
   };
 
   onChange = event => {
-    if (event.target.keyCode === 13) {
-      this.submitQuery();
-      return;
-    }
-
     if (event.target.name === "facet") {
       Router.pushRoute("index", {
         q: this.state.query,
@@ -124,8 +126,20 @@ class Search extends React.Component {
     }
   };
 
-  onSelect = suggestion => {
-    const { query } = this.state;
+  onSelect = (suggestion, event) => {
+    // prevent onSubmit to be call
+    event.preventDefault();
+    const { query, facet } = this.state;
+    if (facet === "annuaire") {
+      const [lon, lat] = suggestion._source.coord;
+      Router.pushRoute("index", {
+        q: suggestion._source.title,
+        coord: `${lon}:${lat}`,
+        facet
+      });
+      return;
+    }
+
     const route = getRouteBySource(suggestion._source.source);
     const anchor = suggestion._source.anchor
       ? suggestion._source.anchor.slice(1)
@@ -142,12 +156,32 @@ class Search extends React.Component {
   };
 
   onSearch = ({ value }) => {
-    const { excludeSources } = this.state;
-    suggestResults(value, excludeSources).then(results => {
-      this.setState({ suggestions: results.hits.hits }, () => {
-        this.props.onResults(results);
+    const { facet, excludeSources } = this.state;
+    const promise =
+      facet === "annuaire"
+        ? searchAddress(value).then(results =>
+            results.map(item => ({
+              _source: {
+                title: `${item.properties.name}, ${item.properties.postcode} ${
+                  item.properties.city
+                }`,
+                coord: item.geometry.coordinates
+              }
+            }))
+          )
+        : suggestResults(value, excludeSources).then(
+            results => results.hits.hits
+          );
+
+    promise
+      .then(results => {
+        this.setState({ suggestions: results }, () => {
+          this.props.onResults(results);
+        });
+      })
+      .catch(error => {
+        console.error("fetch error", error);
       });
-    });
   };
 
   render() {
@@ -156,8 +190,21 @@ class Search extends React.Component {
       queryResults,
       excludeSources,
       facet,
+      coord,
       suggestions
     } = this.state;
+
+    const queryResultsComponent =
+      facet === "annuaire" ? (
+        <AddressQuery query={queryResults} coord={coord} />
+      ) : (
+        <SearchQuery
+          query={queryResults}
+          excludeSources={excludeSources}
+          fetch={searchResults}
+        />
+      );
+
     return (
       <React.Fragment>
         <div className="section-white shadow-bottom search-widget">
@@ -190,6 +237,7 @@ class Search extends React.Component {
                       <option value="fiches">Fiches</option>
                       <option value="modeles_de_courriers">Modèles</option>
                       <option value="outils">Outils</option>
+                      <option value="annuaire">Annuaire</option>
                     </select>
                   </label>
                   <DocumentSuggester
@@ -208,14 +256,7 @@ class Search extends React.Component {
             </div>
           </Container>
         </div>
-        {(queryResults && (
-          <SearchQuery
-            query={queryResults}
-            excludeSources={excludeSources}
-            fetch={searchResults}
-          />
-        )) ||
-          null}
+        {(queryResults && queryResultsComponent) || null}
       </React.Fragment>
     );
   }
