@@ -33,6 +33,6 @@ export const getRouteBySource = src => routeBySource[src];
 
 const sources = Object.keys(routeBySource);
 export const getExcludeSources = value => {
-  if (Boolean(value) === false) return [];
+  if (Boolean(value) === false) return "";
   return sources.filter(source => source.startsWith(value) === false).join(",");
 };
