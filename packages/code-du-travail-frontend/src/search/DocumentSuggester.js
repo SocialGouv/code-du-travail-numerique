@@ -21,8 +21,8 @@ export class DocumentSuggester extends React.Component {
     suggestions: []
   };
 
-  onSuggestionSelected = (e, data) => {
-    this.props.onSelect(data.suggestion);
+  onSuggestionSelected = (event, data) => {
+    this.props.onSelect(data.suggestion, event);
   };
 
   render() {
