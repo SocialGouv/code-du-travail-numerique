@@ -3,15 +3,17 @@ const elasticsearchClient = require("../conf/elasticsearch.js");
 const elasticsearchIndexName = "cdtn_annuaire";
 const elasticsearchTypeName = "cdtn_annuaire";
 
+// todo @lionelb move to constant file
+const defaultMaxSearchDistance = "30km";
 /**
  * Return a list of item matching the departement's code
  *
  * @returns {Object} An elasticsearch response.
  */
 async function getItemsBydistance(params) {
-  const { distance = "30km", coord } = params;
+  const { distance = defaultMaxSearchDistance, coord } = params;
 
-  let query = {
+  const query = {
     index: elasticsearchIndexName,
     type: elasticsearchTypeName,
     body: {

@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
 const cdtnAnnuaire = require("../data_sources/cdtn_annuaire.js");
-
+const adresseApiEndPoint = "https://api-adresse.data.gouv.fr/search";
 const router = new Router();
 const BASE_URL = `/api/v1`;
 
@@ -181,24 +181,38 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/annuaire/search`, async ctx => {
-  let lon, lat;
-  let coordData = ctx.request.query.coord;
-  if (coordData) {
-    [lon, lat] = ctx.request.query.coord.split(":");
+  const { coord, q } = ctx.request.query;
+  const results = searchFromCoord(coord) || (await searchFromQuery(q));
+  if (results) {
+    const [lon, lat] = results;
+    ctx.body = await cdtnAnnuaire.getItemsBydistance({
+      coord: { lon, lat }
+    });
   } else {
-    const address = ctx.request.query.q;
-    const response = await fetch(
-      `https://api-adresse.data.gouv.fr/search/?q=${address}&type=housenumber&limit=1`
-    );
-    const results = await response.json();
-
-    [lon, lat] = results.features[0].geometry.coordinates;
+    ctx.body = { total: 0, hits: { hits: [] } };
   }
-
-  ctx.body = await cdtnAnnuaire.getItemsBydistance({
-    coord: { lon, lat }
-  });
 });
+
+function searchFromCoord(coord) {
+  if (!coord) {
+    return false;
+  }
+  return coord;
+}
+
+async function searchFromQuery(query) {
+  if (!query) {
+    return false;
+  }
+  const response = await fetch(
+    `${adresseApiEndPoint}/?q=${query}&type=housenumber&limit=1`
+  );
+  const results = await response.json();
+  if (results.features.length === 0) {
+    return false;
+  }
+  return results.features[0].geometry.coordinates;
+}
 
 module.exports = router;
 module.exports.BASE_URL = BASE_URL;
