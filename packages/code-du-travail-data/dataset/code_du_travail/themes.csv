@@ -345,12 +345,12 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 1500	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Départ volontaire à la retraite	D1237-2-1; L1237-9; D1237-2; D1237-1; L1237-10
 1600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Mise à la retraite	L1237-5-1; L1237-8; L1237-5; L1237-7; L1237-6
 1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
-1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Principe	L1237-11
+1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle 	L1237-11
 1720	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Entretiens	L1237-12
 1760	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Exceptions	L1237-16;
 1740	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Homologation	L1237-14; R1237-3
 1730	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Indemnité de rupture	L1237-13
-1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Salariés protégés	L1237-15
+1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Salariés protégés	L1237-15
 2155	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Acceptation du salarié et rupture du contrat de travail	L1237-19-2
 2150	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Accord collectif	L1237-19-1; Article D1237-7; Article R1237-6-1
 2170	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Littiges, recours, contestation	L1237-19-8; R*1237-6
