@@ -197,7 +197,7 @@ function searchFromCoord(coord) {
   if (!coord) {
     return false;
   }
-  return coord;
+  return coord.split(":");
 }
 
 async function searchFromQuery(query) {
