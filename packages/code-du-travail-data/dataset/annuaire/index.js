@@ -41,9 +41,9 @@ function getData(xmlDoc) {
   const addresses = xmlDoc.find("/Organisme/Adresse");
   let address;
   if (addresses.length > 1) {
-    address = addresses.filter(node =>
+    address = addresses.find(node =>
       /postale$/.test(node.attr("type").value())
-    )[0];
+    );
   } else {
     address = addresses[0];
   }
@@ -73,10 +73,19 @@ function getData(xmlDoc) {
   };
 }
 
+function sortByDepartementAndType(ficheA, ficheB) {
+  const val = ficheA.address.code.localeCompare(ficheB.address.code);
+  if (val === 0) {
+    return ficheA.id.localeCompare(ficheB.id);
+  }
+  return val;
+}
+
 async function main() {
   const files = await getFiles("./data");
-  const data = await transformFiles(files);
-  console.log(JSON.stringify(data, null, 2));
+  const fiches = await transformFiles(files);
+  const sortedFiches = fiches.sort(sortByDepartementAndType);
+  console.log(JSON.stringify(sortedFiches, null, 2));
 }
 
 main();
