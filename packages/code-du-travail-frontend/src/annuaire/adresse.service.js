@@ -18,17 +18,11 @@ function search(query) {
 }
 
 function searchAnnuaireByQuery(query) {
-  if (!query) {
-    return Promise.reject(false);
-  }
   const url = `${API_URL}/annuaire/search?q=${encodeURIComponent(query)}`;
   return fetch(url).then(handleAnnaireResult);
 }
 
 function searchAnnuaireByCoord(coord) {
-  if (!coord) {
-    return Promise.reject(false);
-  }
   const { lat, lon } = coord;
   const url = `${API_URL}/annuaire/search?coord=${lon}:${lat}`;
   return fetch(url).then(handleAnnaireResult);

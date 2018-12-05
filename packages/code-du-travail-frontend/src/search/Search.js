@@ -222,11 +222,7 @@ class Search extends React.Component {
                 </h1>
                 <Disclaimer />
               </header>
-              <form
-                id="search"
-                className="search__form"
-                onSubmit={this.onFormSubmit}
-              >
+              <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
                   <label className="search__facets" htmlFor="contentSource">
                     <span id="contentSource" className="hidden">
