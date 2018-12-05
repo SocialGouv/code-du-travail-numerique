@@ -324,8 +324,8 @@ exports[`<search /> should render suggestions 1`] = `
                       class="sc-bdVaJa hpcrWB"
                     >
                       <b>
-                        FAQ
-                         | 
+                        FAQ | 
+                         
                         faq title
                       </b>
                       <br />

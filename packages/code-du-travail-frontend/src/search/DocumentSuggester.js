@@ -69,25 +69,27 @@ const SuggestionContainer = styled.div`
   }
 `;
 
-const renderSuggestion = suggestion => (
-  <SuggestionContainer>
-    <b>
-      {getLabelBySource(suggestion._source.source) && "|"}{" "}
-      {suggestion._source.title}
-    </b>
-    <br />
-    <div
-      dangerouslySetInnerHTML={{
-        __html: cleanHtml(
-          (suggestion.highlight &&
-            suggestion.highlight["all_text.french_exact"] &&
-            suggestion.highlight["all_text.french_exact"][0]) ||
-            ""
-        )
-      }}
-    />
-  </SuggestionContainer>
-);
+const renderSuggestion = suggestion => {
+  const source = getLabelBySource(suggestion._source.source);
+  return (
+    <SuggestionContainer>
+      <b>
+        {source ? `${source} | ` : ""} {suggestion._source.title}
+      </b>
+      <br />
+      <div
+        dangerouslySetInnerHTML={{
+          __html: cleanHtml(
+            (suggestion.highlight &&
+              suggestion.highlight["all_text.french_exact"] &&
+              suggestion.highlight["all_text.french_exact"][0]) ||
+              ""
+          )
+        }}
+      />
+    </SuggestionContainer>
+  );
+};
 
 const SuggestionsContainer = styled.div`
   white-space: "nowrap";

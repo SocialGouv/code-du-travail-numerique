@@ -65,8 +65,8 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             class="sc-bdVaJa hpcrWB"
           >
             <b>
-              Legifrance
-               | 
+              Legifrance | 
+               
               convention collective title
             </b>
             <br />
@@ -84,8 +84,8 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             class="sc-bdVaJa hpcrWB"
           >
             <b>
-              FAQ
-               | 
+              FAQ | 
+               
               question / réponse title
             </b>
             <br />
