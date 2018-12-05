@@ -8,16 +8,14 @@ class AddressResults extends React.Component {
     query: PropTypes.string.isRequired,
     results: PropTypes.arrayOf(
       PropTypes.shape({
-        _source: PropTypes.shape({
-          title: PropTypes.string.isRequired,
-          address: PropTypes.shape({
-            lignes: PropTypes.arrayOf(PropTypes.string).isRequired,
-            code: PropTypes.string.isRequired,
-            city: PropTypes.string.isRequired
-          }),
-          tel: PropTypes.string.isRequired,
-          email: PropTypes.string
-        })
+        title: PropTypes.string.isRequired,
+        address: PropTypes.shape({
+          lignes: PropTypes.arrayOf(PropTypes.string).isRequired,
+          code: PropTypes.string.isRequired,
+          city: PropTypes.string.isRequired
+        }),
+        tel: PropTypes.string.isRequired,
+        email: PropTypes.string
       })
     )
   };
@@ -36,17 +34,11 @@ class AddressResults extends React.Component {
 
   render() {
     const { results, query } = this.props;
-    let output;
-    if (results.length === 0) {
-      output = <NoResults />;
-    } else {
-      output = <AddressCards data={results} />;
-    }
 
     return (
       <Section>
         <h1>Adresse</h1>
-        {output}
+        {renderResults(results)}
         <NoAnswer>
           <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
         </NoAnswer>
@@ -63,6 +55,13 @@ class AddressResults extends React.Component {
 
 export { AddressResults };
 
+function renderResults(results) {
+  if (results.length === 0) {
+    return <NoResults />;
+  } else {
+    return <AddressCards data={results} />;
+  }
+}
 function NoResults() {
   return (
     <Alert category="primary">
@@ -75,7 +74,7 @@ function AddressCards({ data }) {
   return (
     <ul>
       {data.map(item => (
-        <AddressCard key={item._id} address={item._source} />
+        <AddressCard key={item.id} address={item} />
       ))}
     </ul>
   );

@@ -43,7 +43,11 @@ export class AddressQuery extends React.Component {
       case "success":
         return <AddressResults query={query} results={result} />;
       default:
-        return null;
+        return (
+          <div>
+            {status} - <pre>{result}</pre>
+          </div>
+        );
     }
   };
 
@@ -51,7 +55,7 @@ export class AddressQuery extends React.Component {
     return (
       <AsyncFetch
         autoFetch={true}
-        fetch={this.fetch}
+        fetch={() => this.fetch()}
         render={this.renderFetch}
       />
     );

@@ -84,10 +84,16 @@ class Search extends React.Component {
   }
   handleRouteChange = () => {
     // when route change, ensure to update the input box
+    let coord;
+    if (this.props.router.query.coord) {
+      const [lon, lat] = this.props.router.query.coord.split(":");
+      coord = { lon, lat };
+    }
+
     this.setState({
       query: this.props.router.query.q,
       facet: this.props.router.query.facet,
-      coord: this.props.router.query.coord,
+      coord: coord,
       excludeSources: getExcludeSources(this.props.router.query.facet || ""),
       queryResults: this.props.router.query.search
         ? this.props.router.query.search === "0" && ""
@@ -100,7 +106,7 @@ class Search extends React.Component {
 
   submitQuery = () => {
     if (this.state.query) {
-      this.setState({ queryResults: this.state.query, coord: undefined });
+      this.setState({ queryResults: this.state.query, coord: null });
       Router.pushRoute("index", {
         q: this.state.query,
         facet: this.state.facet
@@ -157,7 +163,7 @@ class Search extends React.Component {
 
   onSearch = ({ value }) => {
     const { facet, excludeSources } = this.state;
-    const promise =
+    const asyncSearchResult =
       facet === "annuaire"
         ? searchAddress(value).then(results =>
             results.map(item => ({
@@ -173,7 +179,7 @@ class Search extends React.Component {
             results => results.hits.hits
           );
 
-    promise
+    asyncSearchResult
       .then(results => {
         this.setState({ suggestions: results }, () => {
           this.props.onResults(results);
@@ -216,7 +222,11 @@ class Search extends React.Component {
                 </h1>
                 <Disclaimer />
               </header>
-              <form className="search__form" onSubmit={this.onFormSubmit}>
+              <form
+                id="search"
+                className="search__form"
+                onSubmit={this.onFormSubmit}
+              >
                 <div className="search__fields">
                   <label className="search__facets" htmlFor="contentSource">
                     <span id="contentSource" className="hidden">

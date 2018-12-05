@@ -13,9 +13,7 @@ class Support extends React.Component {
     event.preventDefault();
     this.setState(
       { q: event.target.elements[0].value, coord: undefined },
-      () => {
-        this.updateRoute();
-      }
+      this.updateRoute
     );
   };
 
@@ -28,9 +26,7 @@ class Support extends React.Component {
         q: `${name}, ${postcode} ${city}`,
         coord: `${lon}:${lat}`
       },
-      () => {
-        this.updateRoute();
-      }
+      this.updateRoute
     );
   };
 

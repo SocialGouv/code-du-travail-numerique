@@ -15,7 +15,9 @@ class AsyncFetch extends React.Component {
       this.fetch();
     }
   }
-
+  // warning @lionelb
+  // passing and arrow function in render
+  // might turn this test useless
   componentDidUpdate(prevProps) {
     if (this.props.fetch !== prevProps.fetch) {
       this.fetch();

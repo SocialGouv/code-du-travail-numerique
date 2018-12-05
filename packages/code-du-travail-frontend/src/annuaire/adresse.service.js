@@ -1,55 +1,55 @@
 import getConfig from "next/config";
 import memoizee from "memoizee";
-
+import debounce from "p-debounce";
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL, API_ADDRESS }
 } = getConfig();
 
 function search(query) {
-  const url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(
+  const url = `${API_ADDRESS}/?q=${encodeURIComponent(
     query
   )}&type=housenumber&limit=5`;
   return fetch(url).then(response => {
-    if (response.ok) {
-      return response.json().then(results => results.features);
+    if (!response.ok) {
+      return [];
     }
-    throw new Error("impossible de contacter adresse-api.gouv.fr");
+    return response.json().then(results => results.features);
   });
 }
 
 function searchAnnuaireByQuery(query) {
+  if (!query) {
+    return Promise.reject(false);
+  }
   const url = `${API_URL}/annuaire/search?q=${encodeURIComponent(query)}`;
-  return fetch(url).then(response => {
-    if (response.ok) {
-      return response.json().then(results => results.hits.hits);
-    }
-    throw new Error(
-      "Un problème est survenu lors de la requete des fiches annuaires"
-    );
-  });
+  return fetch(url).then(handleAnnaireResult);
 }
 
 function searchAnnuaireByCoord(coord) {
+  if (!coord) {
+    return Promise.reject(false);
+  }
   const { lat, lon } = coord;
   const url = `${API_URL}/annuaire/search?coord=${lon}:${lat}`;
-  return fetch(url).then(response => {
-    if (response.ok) {
-      return response.json().then(results => results.hits.hits);
-    }
+  return fetch(url).then(handleAnnaireResult);
+}
+
+function handleAnnaireResult(response) {
+  if (!response.ok) {
     throw new Error(
       "Un problème est survenu lors de la requete des fiches annuaires"
     );
-  });
+  }
+  return response
+    .json()
+    .then(results => results.hits.hits.map(item => item._source));
 }
 
-function searchAnnuaire() {}
-
-const searchAddressMemo = memoizee(query => search(query), { promise: true });
+const searchAddressMemo = memoizee(search, { promise: true, length: 1 });
+const debounceSearchAddress = debounce(searchAddressMemo, 250);
 
 export {
-  searchAddressMemo as searchAddress,
-  search as _search,
+  debounceSearchAddress as searchAddress,
   searchAnnuaireByQuery,
-  searchAnnuaireByCoord,
-  searchAnnuaire
+  searchAnnuaireByCoord
 };
