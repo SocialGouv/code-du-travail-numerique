@@ -12,3 +12,5 @@ export { default as Support } from "./Support";
 export { default as Tag } from "./Tag";
 export { default as AsideTitle } from "./AsideTitle";
 export { default as NoAnswer } from "./NoAnswer";
+export { default as Cards } from "./Cards";
+export { default as Card } from "./Card";
