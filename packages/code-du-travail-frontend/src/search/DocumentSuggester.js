@@ -69,7 +69,7 @@ const SuggestionContainer = styled.div`
   }
 `;
 
-const renderSuggestion = (suggestion, test) => (
+const renderSuggestion = suggestion => (
   <SuggestionContainer>
     <b>
       {getLabelBySource(suggestion._source.source) && "|"}{" "}
