@@ -2,6 +2,8 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import { render } from "react-testing-library";
+
 export default class MockNextContext extends React.Component {
   static propTypes = {
     headManager: PropTypes.object,
@@ -46,4 +48,8 @@ export default class MockNextContext extends React.Component {
   render() {
     return this.props.children;
   }
+}
+
+export function renderWithMock(node, options) {
+  return render(<MockNextContext>{node}</MockNextContext>, options);
 }
