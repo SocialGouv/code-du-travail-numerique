@@ -4,7 +4,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 6900	Contrat de travail > Conseil de prud'hommes (CPH) > Conseil Supérieur Prud'homie > Exercice des fonctions	L1431-2
 7000	Contrat de travail > Conseil de prud'hommes (CPH) > Conseil Supérieur Prud'homie > Organisation, fonctionnement	R1431-9; R1431-10; R1431-11; R1431-12; R1431-13; R1431-14; R1431-15; R1431-16
 7100	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Collèges électoraux	L1441-3; L1441-4; L1441-5
-7200	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Contestation d'une inscription	L1441-14; L1441-15
+7200	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Sections de candidature	L1441-14; L1441-15
 7300	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Electeurs	L1441-1; L1441-2
 7400	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Electorat	R1441-19; R1441-15; R1441-16; R1441-17; R1441-18; R1441-1; R1441-2; R1441-3; R1441-4; R1441-5; R1441-6; R1441-7; R1441-8; R1441-9; R1441-10; R1441-11; R1441-12; R1441-13; R1441-14
 7500	Contrat de travail > Conseil de prud'hommes (CPH) > Conseillers prud'hommes: Election > Eligibilité	L1441-16; L1441-17; L1441-18; L1441-19; L1441-20; L1441-21
@@ -122,7 +122,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 3200	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE)	R1221-16; R1221-17; R1221-18; D1221-18; D1221-19; R1221-14; R1221-15
 3300	Contrat de travail > Embauche > Déclaration unique d'embauche (DUE) > Déclaration unique d'embauche (DUE) Pénal	R1227-3
 3800	Contrat de travail > Embauche > Recrutement	L1221-7; L1221-9; L1221-6; L1221-8
-3990	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Accès au docuent de substitution	D1221-27; D8113-2; D8113-3; L2313-6
+3990	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Accès au document de substitution	D1221-27; D8113-2; D8113-3; L2315-5
 3980	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Conservation des données	R1221-26;
 3910	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Dérogation à la tenue du RUP	L1221-14
 3930	Contrat de travail > Embauche > Registre Unique du Personnel (RUP) > Formalités	L1221-16
@@ -140,7 +140,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 3550	Contrat de travail > Embauche > Relevé mensuel des contrats > Pénalités	R1227-4
 3602	Contrat de travail > Généralités > Principes génériques du contrat > Interdictions	L1221-4; L1221-5;
 3600	Contrat de travail > Généralités > Principes génériques du contrat > Principes	L1221-2; L1221-1
-3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; R1227-4;
+3601	Contrat de travail > Généralités > Principes génériques du contrat > Un contrat écrit en français	L1221-3; 
 29300	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Calcul	D1226-1
 29400	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Date de début	D1226-3
 29500	Contrat de travail > Maladie, Accident du travail (AT), Inaptitude > Absence pour maladie, accident > Indemnisation > Indemnité: Durée augmentée ancienneté	D1226-2
@@ -336,8 +336,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 1160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Assistance	L1232-4; R1232-2; R1232-3
 1120	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Convocation	L1232-2; R1232-1;
 1140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Entretien préalable > Principe	L1232-3; L1232-2;
-1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Notification	R1232-13
-1100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Principe: motivation,cause, réelle et sérieuse	L1232-1;
+1180	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Licenciement pour motif personnel > Notification	R1232-13;
 410	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Durée	L1234-1; L1234-2; L1234-8;
 420	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Début	L1234-3;
 430	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Licenciement > Préavis > Inexécution du préavis	L1234-4; L1234-5;L1234-6;L1234-7;
@@ -346,15 +345,15 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 1500	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Départ volontaire à la retraite	D1237-2-1; L1237-9; D1237-2; D1237-1; L1237-10
 1600	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Retraite > Mise à la retraite	L1237-5-1; L1237-8; L1237-5; L1237-7; L1237-6
 1700	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle	R1237-3; L1237-16; L1237-13; L1237-12; L1237-14; L1237-11; L1237-15
-1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Principe	L1237-11
+1710	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle 	L1237-11
 1720	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Entretiens	L1237-12
 1760	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Exceptions	L1237-16;
 1740	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Homologation	L1237-14; R1237-3
 1730	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Indemnité de rupture	L1237-13
-1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Procédure > Salariés protégés	L1237-15
+1750	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture conventionnelle > Rupture conventionnelle > Salariés protégés	L1237-15
 2155	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Acceptation du salarié et rupture du contrat de travail	L1237-19-2
 2150	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Accord collectif	L1237-19-1; Article D1237-7; Article R1237-6-1
-2170	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Littiges, recours, contesation	L1237-19-8; R*1237-6
+2170	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Littiges, recours, contestation	L1237-19-8; R*1237-6
 2175	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Mesures de revitalisation des bassins d'emploi impacté	L1237-19-9; L1237-19-10; L1237-19-11; L1237-19-12; L1237-19-13; L1237-19-14
 2145	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Principe	L1237-19;
 2160	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > La rupture conventionnelle collective > Procédure de validation de l'accord par l'autorité administrative	L1237-19-3; L1237-19-4; L1237-19-5; L1237-19-6; R*1237-6; R1237-7; D1237-8; D1237-9; D1237-10; D1237-11;
@@ -366,27 +365,29 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 2140	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Procédure	D1237-4; D1237-5; L1237-18-5;
 2130	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Le congé de mobilité > Rémunération	L1237-18-3;
 2110	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture d'un commun accord prévue par un accord collectif > Principe	L1237-17;
-2000	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Démission et préavis	L1237-1
-2100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Rupture abusive	L1237-2; L1237-3
-51100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Fonction publique > Employeur public	L1251-63; L1251-62; L1251-61; L1251-60
-51700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Contenu et transmission	L1251-16; L1251-17
-51800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Embauche en fin de mission	L1251-38
-51900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Fixation du terme, durée du contrat	L1251-11; L1251-13; L1251-12; L1251-12-1
-52000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Information poste à pourvoir	L1251-25
-52100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Période d'essai	L1251-14; L1251-15
-52300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Renouvellement	D1251-3; L1251-41; L1251-40; L1251-39
-52400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Requalification du contrat	L1251-27; L1251-26; L1251-28
-52500	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Rupture anticipée	L1251-20; L1251-19; L1251-18
-52200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Rémunération	L1251-35; L1251-35-1
-52600	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Succession de contrats	L1251-36; L1251-36-1; L1251-37; L1251-37-1
-52700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat de mission > Échéance du terme	L1251-30; L1251-34; L1251-32; L1251-33; L1251-31; L1251-29
-52800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Contrat mise à disposition > Contrat mise à disposition	L1251-44; L1251-43; L1251-42
-52900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Définitions > Définitions	L1251-4; L1251-3; L1251-2; L1251-1
-53000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > Garantie financière, Défaillance	L1251-51; L1251-50; R1251-11; R1251-12; R1251-13; R1251-14; R1251-15; R1251-16; R1251-17; R1251-18; R1251-19; R1251-20; R1251-21; R1251-22; R1251-23; R1251-24; L1251-49; L1251-52; R1251-25; R1251-26; R1251-27; R1251-28; R1251-29; R1251-30; R1251-31; L1251-53
-53100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > Règles de contrôle	R1251-9; R1251-4; R1251-6; R1251-5; L1251-45; R1251-10; L1251-47; R1251-8; R1251-7; L1251-46; L1251-48
-53200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Entreprise de Travail Temporaire > Salariés permanents, temporaires de entreprise travail temporaire (ETT)	L1251-54; L1251-58; L1251-55; L1251-56; L1251-57
-53300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Pénal > Entreprise de travail temporaire	R1255-3; R1255-4; R1255-5; R1255-6; R1255-7; L1255-2; L1255-1; R1255-1
-53400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire Actions en justice > Actions en justice Pénal > Utilisateur	R1255-2; L1255-3; L1255-4; L1255-5; L1255-6; L1255-7; L1255-8; L1255-9; L1255-10; L1255-11; L1255-12
+2000	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Démission et préavis	L1237-1;
+2100	Contrat de travail > Rupture de contrat à durée Indéterminée (CDI) > Rupture à l'initiative du salarié > Rupture abusive	L1237-2; L1237-3;
+51100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Fonction publique > Employeur public	L1251-63; L1251-62; L1251-61; L1251-60;
+51400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Cas de recours L1251-8; L1251-7; L1251-6; L1251-5;
+51500 Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Interdictions L1251-9; L1251-10;
+51700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Contenu et transmission	L1251-16; L1251-17;
+51800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Embauche en fin de mission	L1251-38;
+51900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Fixation du terme, durée du contrat	L1251-11; L1251-13; L1251-12; L1251-12-1
+52000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Information poste à pourvoir	L1251-25;
+52100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Période d'essai	L1251-14; L1251-15;
+52300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Renouvellement	D1251-3; L1251-41; L1251-40; L1251-39;
+52400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Requalification du contrat	L1251-27; L1251-26; L1251-28;
+52500	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Rupture anticipée	L1251-20; L1251-19; L1251-18;
+52200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Rémunération	L1251-35; L1251-35-1;
+52600	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Succession de contrats	L1251-36; L1251-36-1; L1251-37; L1251-37-1
+52700	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat de mission > Échéance du terme	L1251-30; L1251-34; L1251-32; L1251-33; L1251-31; L1251-29
+52800	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Contrat mise à disposition > Contrat mise à disposition	L1251-44; L1251-43; L1251-42
+52900	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Définitions > Définitions	L1251-4; L1251-3; L1251-2; L1251-1
+53000	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Entreprise de Travail Temporaire > Garantie financière, Défaillance	L1251-51; L1251-50; R1251-11; R1251-12; R1251-13; R1251-14; R1251-15; R1251-16; R1251-17; R1251-18; R1251-19; R1251-20; R1251-21; R1251-22; R1251-23; R1251-24; L1251-49; L1251-52; R1251-25; R1251-26; R1251-27; R1251-28; R1251-29; R1251-30; R1251-31; L1251-53
+53100	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Entreprise de Travail Temporaire > Règles de contrôle	R1251-9; R1251-4; R1251-6; R1251-5; L1251-45; R1251-10; L1251-47; R1251-8; R1251-7; L1251-46; L1251-48
+53200	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Entreprise de Travail Temporaire > Salariés permanents, temporaires de entreprise travail temporaire (ETT)	L1251-54; L1251-58; L1251-55; L1251-56; L1251-57
+53300	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Pénal > Entreprise de travail temporaire	R1255-3; R1255-4; R1255-5; R1255-6; R1255-7; L1255-2; L1255-1; R1255-1
+53400	Contrat de travail > Règles spécifiques du Contrat de travail temporaire > Travail Temporaire > Pénal > Utilisateur	R1255-2; L1255-3; L1255-4; L1255-5; L1255-6; L1255-7; L1255-8; L1255-9; L1255-10; L1255-11; L1255-12
 49100	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Actions en justice > Actions en justice	D1247-2; D1247-1; L1247-1
 49200	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Champ d'application > Champ d'application	L1241-1
 49400	Contrat de travail > Règles spécifiques du Contrat à durée déterminée (CDD) > Contrat à Durée Déterminée (CDD) Conclusion, exécution du contrat > Conditions d'exécution du contrat	L1242-4; L1242-2; D1242-2; D1242-3; D1242-1; L1242-6; L1242-5; D1242-4; D1242-5; L1242-1; L1242-3
@@ -1077,7 +1078,7 @@ export default `6600	Contrat de travail > Conseil de prud'hommes (CPH) > Attribu
 99050	Institutions représentatives du personnel > Salariés protégés > Protection: Licenciement > Licenciement salarié mandaté	L2411-4
 99800	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD)	L2412-5; L2412-6
 99900	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Autres mandats de représentation	L2412-14; L2412-16; L2412-11; L2412-12; L2412-10
-100000	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Comité d'entreprise (CE)	L2412-4
+100000	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Représentant de proximité	L2412-4
 100500	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Comité d'hygiène, de sécurité et des conditions de travail (CHSCT)délégué du personnel (DP)	L2412-9; L2412-7; L2412-8
 100100	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Conseiller prud'homme	L2412-13
 100200	Institutions représentatives du personnel > Salariés protégés > Protection: Rupture du Contrat à Durée Déterminée (CDD) > Défenseur syndical	L2412-15
