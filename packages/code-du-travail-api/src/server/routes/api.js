@@ -127,16 +127,16 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
     {
       match: {
         idcc: {
-          query: query,
+          query: parseInt(query, 10) || "",
           boost: 2000
         }
       }
     },
     {
       match: {
-        ape: {
+        title: {
           query: query,
-          boost: 3000
+          boost: 2000
         }
       }
     }
