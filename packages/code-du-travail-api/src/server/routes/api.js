@@ -70,7 +70,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
-  ctx.body = await codeDuTravailNumerique.getSingleItem({
+  const item = await codeDuTravailNumerique.getSingleItem({
     source: ctx.params.source,
     slug: ctx.params.slug,
     _source: [
@@ -78,16 +78,93 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       "url",
       "html",
       "date_debut", // code-du-travail
+      "date_fin", // code-du-travail
       "date",
       "path", // code-du-travail
       "id", // idcc, kali
+      "tags", // code-du-travail
       "description", // modele de courrier
       "filename", // filename
       "author" // faq
     ]
   });
+  // console.log(items)
+  let themes = [];
+  themes = item._source.tags
+    .filter(tag => tag.match(/^themes/))
+    .map(theme => theme.split(":")[1]);
+
+  const relatedItems = await getRelatedItems(themes);
+
+  ctx.body = {
+    ...item,
+    relatedItems
+  };
 });
 
+/**
+ * Return document matching the given ID.
+ *
+ * @example
+ * http://localhost:1337/api/v1/items/themes?themes[]=id1&themes[]=id2
+ *
+ * @param {string} :id The item ID to fetch.
+ * @returns {Object} Result.
+ * @example
+ *
+ * {
+ *   code_du_travail: [
+ *    {
+ *      _source: {
+ *        source: {
+ *          title: 'title',
+ *          slug: 'slug',
+ *          text: 'text',
+ *           source: 'code_du_travail'
+ *         }
+ *       }
+ *    }
+ *   ],
+ *   modele_de_courrier: [
+ *    {
+ *      _source: {
+ *        source: {
+ *          title: 'title',
+ *          slug: 'slug',
+ *          text: 'text',
+ *           source: 'modele_de_courrier'
+ *         }
+ *       }
+ *    }
+ *   ],
+ * }
+ *
+ */
+router.get(`${BASE_URL}/themes/`, async ctx => {
+  let { themes } = ctx.request.query;
+
+  if (!themes.map) {
+    themes = [themes];
+  }
+
+  ctx.body = await getRelatedItems(themes);
+});
+
+async function getRelatedItems(themes) {
+  const results = await codeDuTravailNumerique.searchRelatedDocument(themes);
+  if (results.aggregations.bySource.buckets.length === 0) {
+    return {};
+  }
+
+  const { buckets } = results.aggregations.bySource;
+
+  return buckets.reduce((state, bucket) => {
+    if (bucket.doc_count > 0) {
+      state[bucket.key] = bucket.bySource.hits.hits;
+    }
+    return state;
+  }, {});
+}
 /**
  * Return document matching the given ID.
  *

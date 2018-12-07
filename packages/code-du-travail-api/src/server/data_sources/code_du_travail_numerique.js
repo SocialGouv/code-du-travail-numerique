@@ -204,9 +204,72 @@ async function getDocsCount() {
     });
   // (res.hits.total && res.hits.hits[0]) || null);
 }
+/**
+ * Return related documents that match themes
+ *
+ * @returns {Object} An elasticsearch response.
+ */
+async function searchRelatedDocument(themes) {
+  const match = themes.reduce((state, theme) => {
+    return state.concat(
+      {
+        match: {
+          "tags.keywords": `themes:${theme}`
+        }
+      },
+      {
+        match: {
+          themes: theme
+        }
+      }
+    );
+  }, []);
+  return await elasticsearchClient.search({
+    index: elasticsearchIndexName,
+    type: elasticsearchTypeName,
+    body: {
+      size: 0,
+      aggregations: {
+        bySource: {
+          terms: {
+            field: "source"
+          },
+          aggs: {
+            bySource: {
+              top_hits: {
+                size: 2,
+                _source: ["title", "slug", "source", "text"]
+              }
+            }
+          }
+        }
+      },
+      _source: ["title", "source", "slug", "anchor"],
+      query: {
+        bool: {
+          must: [
+            {
+              bool: {
+                should: [...match]
+              }
+            }
+          ],
+          must_not: [
+            {
+              match: {
+                source: "faq"
+              }
+            }
+          ]
+        }
+      }
+    }
+  });
+}
 
 module.exports = {
   getSingleItem,
   getDocsCount,
-  search
+  search,
+  searchRelatedDocument
 };
