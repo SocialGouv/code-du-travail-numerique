@@ -172,12 +172,13 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
 });
 
 /**
- * Return annaire items matching the given departement.
+ * Return annaire items matching the given address
+ * adress could be a coord or a string.
  *
  * @example
  * http://localhost:1337/api/v1/items/:id
  *
- * @param {string} :id The item ID to fetch.
+ * @param {string} :base coord or address for geo search
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/annuaire/search`, async ctx => {

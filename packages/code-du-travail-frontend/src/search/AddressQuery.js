@@ -29,10 +29,7 @@ export class AddressQuery extends React.Component {
 
   fetch = () => {
     const { query, coord } = this.props;
-    if (coord) {
-      return searchAnnuaireByCoord(coord);
-    }
-    return searchAnnuaireByQuery(query);
+    return coord ? searchAnnuaireByCoord(coord) : searchAnnuaireByQuery(query);
   };
 
   renderFetch = ({ status, result }) => {

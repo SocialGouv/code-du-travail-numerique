@@ -1,6 +1,6 @@
 # Annuaire
 
-les données de l'annaire sont téléchargeabl depuis datagouv [https://www.data.gouv.fr/fr/datasets/service-public-fr-annuaire-de-l-administration-base-de-donnees-locales/]()
+les données de l'annuaire sont téléchargeables depuis datagouv [](https://www.data.gouv.fr/fr/datasets/service-public-fr-annuaire-de-l-administration-base-de-donnees-locales/)
 
 Ce jeux de données, contient un ensemble de fiches au format xml.
 
