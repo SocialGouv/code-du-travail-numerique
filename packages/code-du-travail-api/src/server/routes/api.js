@@ -27,7 +27,11 @@ router.get(`${BASE_URL}/search`, async ctx => {
     }));
   }
 
-  ctx.body = await codeDuTravailNumerique.search({ query, mustNot });
+  ctx.body = await codeDuTravailNumerique.search({
+    query,
+    mustNot,
+    _source: ["title", "source", "slug", "anchor"]
+  });
 });
 
 router.get(`${BASE_URL}/suggest`, async ctx => {
@@ -66,7 +70,19 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
 router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
   ctx.body = await codeDuTravailNumerique.getSingleItem({
     source: ctx.params.source,
-    slug: ctx.params.slug
+    slug: ctx.params.slug,
+    _source: [
+      "title",
+      "url",
+      "html",
+      "date_debut", // code-du-travail
+      "date",
+      "path", // code-du-travail
+      "id", // idcc, kali
+      "description", // modele de courrier
+      "filename", // filename
+      "author" // faq
+    ]
   });
 });
 
