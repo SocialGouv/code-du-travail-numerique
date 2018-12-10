@@ -33,7 +33,7 @@ describe("<IdccSuggester />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should call onSelect", async () => {
+  it("should call onSelect when user clicks some option", async () => {
     const onSearch = jest.fn().mockResolvedValue(results);
     const onSelect = jest.fn();
     const { getByRole, getByPlaceholderText } = render(

@@ -119,6 +119,11 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                   >
                     Outils
                   </option>
+                  <option
+                    value="annuaire"
+                  >
+                    Annuaire
+                  </option>
                 </select>
               </label>
               <div
@@ -587,6 +592,11 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                   >
                     Outils
                   </option>
+                  <option
+                    value="annuaire"
+                  >
+                    Annuaire
+                  </option>
                 </select>
               </label>
               <div
@@ -1051,6 +1061,11 @@ exports[`<Answer /> should render 1`] = `
                   value="outils"
                 >
                   Outils
+                </option>
+                <option
+                  value="annuaire"
+                >
+                  Annuaire
                 </option>
               </select>
             </label>

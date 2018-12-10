@@ -98,6 +98,6 @@ describe("<DocumentSuggester />", () => {
     input.focus();
     const option = getByRole("option");
     option.click();
-    expect(onSelect).toHaveBeenCalledWith(suggestions[0]);
+    expect(onSelect).toHaveBeenCalledWith(suggestions[0], expect.anything());
   });
 });

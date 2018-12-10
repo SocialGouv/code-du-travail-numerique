@@ -16,7 +16,7 @@ exports[`<IdccSuggester /> should render 1`] = `
       class="full-width"
       name="query"
       placeholder="Convention collective ou code NAF"
-      type="text"
+      type="search"
       value=""
     />
     <div
@@ -44,7 +44,7 @@ exports[`<IdccSuggester /> should render suggestions 1`] = `
       class="full-width"
       name="query"
       placeholder="Convention collective ou code NAF"
-      type="text"
+      type="search"
       value="test"
     />
     <div
