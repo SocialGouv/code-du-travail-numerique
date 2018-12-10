@@ -21,7 +21,7 @@ const API_BASE_URL = require("./routes/api").BASE_URL;
 const { logger } = require("./utils/logger");
 
 const app = new Koa();
-const PORT = process.env.PORT || 1337;
+const PORT = process.env.API_PORT || 1337;
 
 /**
  * use a middleware for catching errors and re-emit them
