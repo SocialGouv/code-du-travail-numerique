@@ -18,13 +18,10 @@ export class AddressQuery extends React.Component {
   };
 
   shouldComponentUpdate(nextProps) {
-    if (
+    return !(
       nextProps.query === this.props.query &&
       nextProps.coord === this.props.coord
-    ) {
-      return false;
-    }
-    return true;
+    );
   }
 
   fetch = () => {

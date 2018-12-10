@@ -176,7 +176,8 @@ router.get(`${BASE_URL}/idcc`, async ctx => {
  * adress could be a coord or a string.
  *
  * @example
- * http://localhost:1337/api/v1/items/:id
+ * http://localhost:1337/api/v1/annuaire/search?coord=lon:lat
+ * http://localhost:1337/api/v1/annuaire/search?q=address to search
  *
  * @param {string} :base coord or address for geo search
  * @returns {Object} Result.
