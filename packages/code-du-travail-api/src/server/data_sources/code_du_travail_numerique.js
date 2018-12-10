@@ -143,7 +143,7 @@ async function search({
  * @returns {Object} An elasticsearch response.
  */
 async function getSingleItem(params) {
-  const { id, source, slug } = params;
+  const { id, source, slug, _source } = params;
   if (id) {
     return await elasticsearchClient.get({
       index: elasticsearchIndexName,
@@ -165,7 +165,8 @@ async function getSingleItem(params) {
               },
               filter: { term: { slug } }
             }
-          }
+          },
+          _source
         }
       })
       .then(res => {
