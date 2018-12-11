@@ -22,13 +22,13 @@ _environments:
 
 stages:
   - name: Prepare
-    if: NOT env(RELEASE)
+    if: env(RELEASE) IS blank
   - name: Release
-    if: env(RELEASE) AND branch = master
+    if: env(RELEASE) IS present AND branch = master
   - name: Code quality
-    if: NOT env(RELEASE)
+    if: env(RELEASE) IS blank
   - name: Deploy
-    if: type = push AND branch = master
+    if: env(RELEASE) IS blank AND type = push AND branch = master
 
 #
 
@@ -135,7 +135,7 @@ jobs:
     - &main_deploy_stage
       stage: Deploy
       name: Deploy master branch tag to Docker Hub
-      if: type = push AND branch = master
+      if: env(RELEASE) IS blank AND type = push AND branch = master
       env: [*docker_image, *docker_keys]
       script:
         - docker pull $DOCKER_IMAGE
@@ -148,7 +148,7 @@ jobs:
     - &module_deploy_stage
       <<: *main_deploy_stage
       name: Deploy latest api image to Docker Hub
-      if: type = push AND tag IS present
+      if: env(RELEASE) IS present AND type = push AND tag IS present
       env:
         - *docker_image
         - *docker_keys
