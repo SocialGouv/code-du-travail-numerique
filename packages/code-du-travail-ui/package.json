@@ -17,6 +17,7 @@
     "prepush": "lint-staged",
     "prepublishOnly": "npm run build && npm run gh-pages",
     "gh-pages": "npm run docz:build && gh-pages -d ./doc-build",
+    "lint": "eslint src/* tests/*",
     "start": "docz dev",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",

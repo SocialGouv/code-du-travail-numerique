@@ -2333,6 +2333,11 @@
   resolved "https://registry.npmjs.org/@xtuc/long/-/long-4.2.1.tgz#5c85d662f76fa1d34575766c5dcd6615abcd30d8"
   integrity sha512-FZdkNBDqBRHKQ2MEbSC17xnPFOhZxeJ2YGSfr2BKf3sujG49Qe3bB+rGCwQfIaA7WHnGeGkSijX4FuBCdrzW/g==
 
+"@zeit/ncc@^0.1.16":
+  version "0.1.16"
+  resolved "https://registry.npmjs.org/@zeit/ncc/-/ncc-0.1.16.tgz#9bc666165fac1b926bc9c837ac2fd7c3bf2e79d3"
+  integrity sha512-75p2MD64lrNktnC+xX5a6CEM8VrJx4MBWE1U2qHPrmqZhjsfKNMtRsQb5/To3ZtILbcLWmJ7ArHbRv7wuesT4A==
+
 "@zeit/next-css@^1.0.0":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@zeit/next-css/-/next-css-1.0.1.tgz#4f784e841e7ca1b21b3468a902e2c1fa95a3e75c"

@@ -3,25 +3,21 @@ version: "3"
 services:
   # In production, dockerize the frontend
   frontend:
+    image: socialgouv/code-du-travail-numerique-frontend:latest
     restart: always
     env_file:
       - .env
-    build:
-      context: .
-      dockerfile: ./Dockerfile.frontend
     ports:
       - $FRONTEND_PORT:$FRONTEND_PORT
 
   # In production, dockerize the API
   api:
+    image: socialgouv/code-du-travail-numerique-api:latest
     restart: always
     env_file:
       - .env
     depends_on:
       - elasticsearch
-    build:
-      context: .
-      dockerfile: ./Dockerfile.api
     environment:
       # defaults for production
       - APM_SERVER_URL=http://apm:8200

@@ -1,25 +1,178 @@
 dist: trusty
-language: node_js
 sudo: false
+language: generic
 git:
   depth: 5
-node_js: 10
-cache: yarn
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
-  - export PATH="$HOME/.yarn/bin:$PATH"
+
+#
+
+_steps:
+  - &docker_login echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+_environments:
+  - &docker_image
+    - REPO_SLUG=$(echo $TRAVIS_REPO_SLUG | tr A-Z a-z)
+    - DOCKER_IMAGE="$(echo $REPO_SLUG | tr A-Z a-z):${TRAVIS_COMMIT:0:7}"
+  - &github_keys
+    - secure: "ix7y9J6eRWDEj/cwa5c6MgTb4+VceDR5AZLaM5oHDd/8M02LNaoPfIzKWNXXklHOYrLlHRUBJAUkiCt3IYU1qC850mnjjvTMInGiSxKQ+NWBewgmEhmhGfOCCvFBRFscIw6/yhynpDi8Yz2TMHgy+jSm0Gef6sSrDftuV6318pWdgk5dE7wWkNIb2SZvGjCPZnGFniKG29y1s2zmdiQjGZZ0ZtmWPnU2uDrWm/Z5y6oNI/JNKR895/MapyLtPReK2YlXsRqiTl29pf7YV/+sZPyp96OALFqfs3QCI1SZnYLooV4WG4syGBQ8Z1nYmL321gDH2ap/a3Dp5y3pRzQR69u0e+9YfvuVyWUIrnMCUCHbmq2FKv8rGbE+21YlkZlMwbAxbMTLi8jH9CHFQ76wlVnXRruo2jUPX9TnhSVSWvxC9OXW8Pxtp+nF+BNsjvIifX2pCZfXwrxzZtSSa54B3eOyIZp8ZnIlftMBKPIEZkbFie7AvkNDpj/dg6NcVuIYYJf7exWBadKLMPAtwx1tp3bxuAWRr80DwlwLSaLQaXVwGnuXBs5HrnoFd/KqwY+ZGNRVdCwHLJ8o6BL7li4e4d6SjqU7XfvqzpeLNrQXvM/YSrIRRK+kyd4AipjjFpGklDJvdXaxP4nGkUoB7yumrMvtTwYGzcjoS4i3ajvkElc="
+  - &docker_keys
+    - secure: "tx34wHbxrkSCdVyuMDdRH5XAkebZqPeNehrEvXZQJOagpDNSWtJot+9SuwfHKSFN1bFk4Ys3lzp4yfv+AfA2ayPCs37sp/VgsCovuulEoesCZOF05sqicg8+CFCRQV39WYn6iy2gpw6cYVzWA9zr9PlgzZs7r3YtpG6qWriZGojiWwP8lQMHcQOJRvoZ3XGRaLC+BXYTczdWn1cMBL7i5I7LaIHrQW9gq8xEUMh8fbz4g3J715df4Oyuz2JEWl18xErkhU4E+SyUKJwBl0VOrw+Zg0PmmBFMnl+GBqwUXZciY1bNQStzhwb62qCWkSFg9d++JRMK8nAmtt2f+9SyBJ4NRoCTIlEqaVwahsdL+iQeDxzKb8jqI8INxGMectsMUm+3xo6ISn05qKvzpkeGNFZLuprsBv93FWsQS2RLMMephIrHTtp7umqBfTcFSALOgNVbrNkhxUQTE63Df3dI90B9Elt5LtTsVRTd+/JVxnevcXt9hpUjW2iDsOviBTfSpv33mk2ve5aEmYI4QlpNa5IX9TWYn1maGKlyZ1dH+URywsY08q5tjYVuiNacgeAibglGiRqgewH76U5fwU/vjmILPm/mWKAt/FEt/cQ37UJphLtUdKRgWs3hkNQ9lO/MwsnHq90a22iCbSCad9LX8dZyG4LBNC02MIIEjm0OWvE="
+    - secure: "aI+chSSMCS8jCsldvRXTX7lbnIgexmL0Xfhc7U7t+z6ehAfcOPE7ZHV9iMBNM8C1CAeN8Qt126roqRBD2iTUfeWHCg7vAvfqCTUDoXlMsUySKdKzWHmjvRPsdM+AvHB9eo+mCc29Wt55Dzn3gkc+czdJHJ4T+/z8X8Y08MYVBDv2razLDdmXrQNcmrskVKIxfumOqAc17pjbn6yP+gIqzjXM7/6oSphwDsjW2ihes6OZnh1VBxOAZW7l/Sxp5C/345zQGTjbbNjrKd8K1uRAoutTmCsBj6W7tpIMDRsUFtF4kKE5dZWEulHizhfBS+F8HU6DISc5qfoYXUISxeQplufzvdww5vurrgpBSwzoizRsZXO9RWc4v0d26r9ck0Uq7ySOUDSBIIXRELhAkWarW9wt9A9XoeXEAzv1VMCbwOZGKRdlzXvk9vcxL3PvMuApbmEKcrTcC0MX+bnm5im/twLT4kXrrxb04TiXYONvJh/OXRp4sUlcersTEMu7I+obHzF3SojFXz9cF5/inZ4mFY0sqLG5tU42FdSrxWkbEpDAPGOBrNDcvL5ioeGxM/Hk7r68hCMj7gOHI11mgheobzj1/6ceZqR4sxPx8mRdNfqit5hqmh4MjAtjjKay6hiGEnmGi7TRp+eT5QV2hADpaffOp+e1nb6bReegjv9Tb8k="
+
+#
+
+stages:
+  - name: Prepare
+    if: NOT env(RELEASE)
+  - name: Release
+    if: env(RELEASE) AND branch = master
+  - name: Code quality
+    if: NOT env(RELEASE)
+  - name: Deploy
+    if: NOT env(RELEASE) and type = push AND branch = master
+
+#
 
 jobs:
   include:
-  - stage: Prepare
-    script:
-      - yarn lerna run --stream build
-      - yarn lerna run --stream lint
-  - stage: Build and test
-    script:
-      - yarn lerna run --stream build
-      - yarn run -- lerna run --stream --parallel test --ignore "@cdt/data*" -- --coverage
-    after_success: npx codecov
+    - stage: Prepare
+      name: Build and deploy current commit docker image
+      env:
+        - *docker_image
+        - *docker_keys
+      before_install:
+        - docker pull $REPO_SLUG:master
+      install: skip
+      script:
+        - docker build --cache-from $REPO_SLUG:master --tag $DOCKER_IMAGE .
+      after_success:
+        - docker images
+        - *docker_login
+        - docker push $DOCKER_IMAGE
+
+    - &main_node_checks
+      stage: Prepare
+      language: node_js
+      node_js: 10
+      cache: yarn
+      before_install:
+        - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.3
+        - export PATH="$HOME/.yarn/bin:$PATH"
+      install: yarn --frozen-lockfile
+      name: Monorepo build script
+      script: yarn build
+
+    - <<: *main_node_checks
+      if: type = pr
+      name: Check Conventional Commits
+      install: yarn global add @commitlint/travis-cli @commitlint/config-conventional
+      script: commitlint-travis
+
+    - <<: *main_node_checks
+      stage: Release
+      name: Make a new release 🎉
+      env:
+        - *github_keys
+      before_script:
+        - git checkout ${TRAVIS_BRANCH}
+        - git config user.name "Social Groovy Bot"
+        - git config user.email "45039513+SocialGroovyBot@users.noreply.github.com"
+        - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+      script: yarn lerna publish --yes
+      after_success:
+        - CONVENTIONAL_GITHUB_RELEASER_TOKEN=${GITHUB_TOKEN} npx conventional-github-releaser -p angular
+
+    #
+    #
+    #
+
+    - stage: Code quality
+      name: Lint @cdt/frontend
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/frontend lint
+    - #
+      name: Lint @cdt/api
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/api lint
+    - #
+      name: Lint @cdt/ui
+      env: [*docker_image]
+      script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui lint
+    - #
+      name: Test @cdt/ui
+      env: [*docker_image]
+      # TODO(douglasduteil): fix  @cdt/ui floppy tests
+      # | script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui test
+      # | after_success: npx codecov
+      script: skip
+    - #
+      name: Test @cdt/frontend
+      env: [*docker_image]
+      script: docker run
+        -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
+        $DOCKER_IMAGE
+        yarn workspace @cdt/frontend test --coverage
+      after_success: npx codecov
+    - #
+      name: Lint python code
+      language: python
+      python: 3.6
+      env:
+        - PIPENV_VENV_IN_PROJECT=1
+        - PIPENV_IGNORE_VIRTUALENVS=1
+      cache: pip
+      before_install: cd packages/code-du-travail-data
+      install:
+        - pip install --upgrade pip
+        - pip install pipenv==11.10.1
+        - pipenv install --dev --three
+      script: pipenv run pylint --output-format=colorized search
+      script: skip
+
+    #
+    #
+    #
+
+    - &main_deploy_stage
+      stage: Deploy
+      name: Deploy master branch tag to Docker Hub
+      if: type = push AND branch = master
+      env: [*docker_image, *docker_keys]
+      script:
+        - docker pull $DOCKER_IMAGE
+        #
+        - docker tag $DOCKER_IMAGE $REPO_SLUG:$TRAVIS_BRANCH
+        #
+        - *docker_login
+        - docker push $REPO_SLUG:$TRAVIS_BRANCH
+
+    - &module_deploy_stage
+      <<: *main_deploy_stage
+      name: Deploy latest api image to Docker Hub
+      if: type = push AND tag IS present
+      env:
+        - *docker_image
+        - *docker_keys
+        - MODULE_IMAGE="${REPO_SLUG}-api"
+        - CTX=./packages/code-du-travail-api
+      script:
+        - docker pull $DOCKER_IMAGE
+        #
+        - docker build -t $MODULE_IMAGE:$TRAVIS_BRANCH --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        - docker build -t $MODULE_IMAGE:latest --build-arg BASE_IMAGE=$DOCKER_IMAGE $CTX
+        #
+        - *docker_login
+        - docker push $MODULE_IMAGE:$TRAVIS_BRANCH
+        - docker push $MODULE_IMAGE:latest
+
+    - <<: *module_deploy_stage
+      name: Deploy latest frontend image to Docker Hub
+      env:
+        - *docker_image
+        - *docker_keys
+        - MODULE_IMAGE="${REPO_SLUG}-frontend"
+        - CTX=./packages/code-du-travail-frontend
+
+#
 
 notifications:
   slack:
