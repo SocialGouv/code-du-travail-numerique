@@ -28,7 +28,7 @@ stages:
   - name: Code quality
     if: NOT env(RELEASE)
   - name: Deploy
-    if: NOT env(RELEASE) and type = push AND branch = master
+    if: type = push AND branch = master
 
 #
 
