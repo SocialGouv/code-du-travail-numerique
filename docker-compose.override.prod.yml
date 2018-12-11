@@ -3,7 +3,7 @@ version: "3"
 services:
   # In production, dockerize the frontend
   frontend:
-    image: socialgouv/code-du-travail-numerique:latest-frontend
+    image: socialgouv/code-du-travail-numerique-frontend:latest
     restart: always
     env_file:
       - .env
@@ -12,7 +12,7 @@ services:
 
   # In production, dockerize the API
   api:
-    image: socialgouv/code-du-travail-numerique:latest-api
+    image: socialgouv/code-du-travail-numerique-api:latest
     restart: always
     env_file:
       - .env
