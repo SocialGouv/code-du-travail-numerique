@@ -1,17 +1,18 @@
 {
   "name": "@cdt/frontend",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@cdt/css": "^1.5.0",
-    "@cdt/data": "^1.5.0",
-    "@cdt/ui": "^1.5.0",
+    "@cdt/css": "^1.5.1",
+    "@cdt/data": "^1.5.1",
+    "@cdt/ui": "^1.5.1",
     "@reach/dialog": "^0.1.2",
     "@sentry/browser": "^4.1.0",
+    "@socialgouv/next-routes": "^1.5.1",
     "@zeit/next-css": "^1.0.0",
     "date-fns": "^1.29.0",
     "express": "^4.16.3",
@@ -20,7 +21,6 @@
     "memoizee": "^0.4.14",
     "next": "^7.0.0",
     "next-images": "^1.0.0",
-    "@socialgouv/next-routes": "^1.5.1",
     "p-debounce": "^1.0.0",
     "react": "^16.3.2",
     "react-autosuggest": "9.3.4",
@@ -60,9 +60,14 @@
     "test": "NODE_ENV=test jest"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js"],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>/test/jest.setup.js",
-    "testPathIgnorePatterns": ["<rootDir>/.next/", "<rootDir>/node_modules/"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
     "moduleNameMapper": {
       ".*css$": "<rootDir>/test/stubCss.js"
     }
