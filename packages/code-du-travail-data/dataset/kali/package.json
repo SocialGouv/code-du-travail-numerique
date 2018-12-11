@@ -1,6 +1,7 @@
 {
   "name": "@cdt/dataset...kali",
   "version": "1.5.0",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
