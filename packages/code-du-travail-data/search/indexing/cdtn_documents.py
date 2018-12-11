@@ -83,6 +83,7 @@ def populate_cdtn_documents():
             'all_text': f"{val['titre']} {val['bloc_textuel']} {tag_names}",
             'html': val['html'],
             'path': val['path'],
+            'themes': val['themes'],
             'date_debut': val['date_debut'],
             'date_fin': val['date_fin'],
             'url': val['url'],
