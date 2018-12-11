@@ -79,6 +79,8 @@ jobs:
     - &main_code_quality_stage
       stage: Code quality
       if: NOT env(RELEASE)
+      env:
+        - *docker_image
       name: Lint @cdt/frontend
       script: docker run $DOCKER_IMAGE yarn workspace @cdt/frontend lint
     - <<: *main_code_quality_stage
