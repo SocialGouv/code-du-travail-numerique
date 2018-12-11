@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 
-import Answer from "../src/search/Answer";
+import Answer from "../src/common/Answer";
 
 const {
   publicRuntimeConfig: { API_URL }

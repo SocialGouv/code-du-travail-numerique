@@ -28,6 +28,7 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "components/_block_2_cols.css";
 @import "components/_breadcrumb.css";
 @import "components/_buttons.css";
+@import "components/_cards.css";
 @import "components/_categories.css";
 @import "components/_footer.css";
 @import "components/_header.css";

@@ -143,7 +143,7 @@ async function search({
  * @returns {Object} An elasticsearch response.
  */
 async function getSingleItem(params) {
-  const { id, source, slug } = params;
+  const { id, source, slug, _source } = params;
   if (id) {
     return await elasticsearchClient.get({
       index: elasticsearchIndexName,
@@ -165,11 +165,12 @@ async function getSingleItem(params) {
               },
               filter: { term: { slug } }
             }
-          }
+          },
+          _source
         }
       })
       .then(res => {
-        if (res.hits.total === 1) {
+        if (res.hits.total >= 1) {
           return res.hits.hits[0];
         } else {
           throw { status: 404, message: "not found" };

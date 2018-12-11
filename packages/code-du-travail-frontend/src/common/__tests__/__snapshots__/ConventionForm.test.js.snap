@@ -100,7 +100,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
       <h3
         class="sc-bwzfXH kXFXiU"
       >
-        Quelle est la CCN applicable ?
+        Quelle est la convention collective applicable ?
       </h3>
       <ul>
         <li>
@@ -150,7 +150,7 @@ exports[`<ConventionForm /> should render 1`] = `
       <h3
         class="sc-bwzfXH kXFXiU"
       >
-        Quelle est la CCN applicable ?
+        Quelle est la convention collective applicable ?
       </h3>
       <ul>
         <li>

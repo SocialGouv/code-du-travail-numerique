@@ -1,12 +1,14 @@
 // this is basically: afterEach(cleanup)
 import "react-testing-library/cleanup-after-each";
 
-global.fetch = jest.fn();
-
 jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
-    API_URL: "api.url"
+    API_URL: "api.url",
+    API_ADDRESS: "addresse-api.data"
   }
+}));
+jest.mock("react-piwik", () => ({
+  push: jest.fn()
 }));
 
 // trick to prevent @reach-modal warning if styles are not imported

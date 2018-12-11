@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Autosuggest from "react-autosuggest";
+import { Suggester } from "./Suggester";
 import styled from "styled-components";
 
 export class IdccSuggester extends React.Component {
@@ -8,55 +8,18 @@ export class IdccSuggester extends React.Component {
     onSearch: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired
   };
-
-  state = {
-    query: "",
-    suggestions: []
+  onSelect = value => {
+    this.props.onSelect(value._source);
   };
-
-  onChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
-
-  onSuggestionSelected = (e, data) => {
-    this.props.onSelect(data.suggestion._source);
-  };
-
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.props.onSearch(value).then(results =>
-      this.setState({
-        suggestions: results
-      })
-    );
-  };
-
-  onSuggestionsClearRequested = () => {
-    this.setState({
-      suggestions: []
-    });
-  };
-
   render() {
-    const inputProps = {
-      name: "query",
-      placeholder: "Convention collective ou code NAF",
-      value: this.state.query,
-      onChange: this.onChange,
-      className: "full-width"
-    };
-
     return (
-      <Autosuggest
-        suggestions={this.state.suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={this.onSuggestionSelected}
+      <Suggester
+        onSearch={this.props.onSearch}
+        onSelect={this.onSelect}
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         renderSuggestionsContainer={renderSuggestionsContainer}
-        inputProps={inputProps}
+        placeholder="Convention collective ou code NAF"
         theme={suggesterTheme}
       />
     );

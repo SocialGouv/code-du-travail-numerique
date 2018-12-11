@@ -78,6 +78,7 @@ input[type="search"].search__input {
 
   margin: 0;
   max-width: 100%;
+  width: 100%;
   padding: 0;
   padding-left: var(--spacing-small);
   line-height: 3.625rem;

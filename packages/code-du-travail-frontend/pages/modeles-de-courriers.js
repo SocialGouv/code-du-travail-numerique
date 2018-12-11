@@ -7,7 +7,7 @@ import { AsideTitle } from "@cdt/ui";
 import Html from "../src/common/Html";
 import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import Answer from "../src/search/Answer";
+import Answer from "../src/common/Answer";
 
 const {
   publicRuntimeConfig: { API_URL }

@@ -2,10 +2,10 @@ import React from "react";
 import Head from "next/head";
 import { Container, Alert, Article, NoAnswer, Button } from "@cdt/ui";
 import { withRouter } from "next/router";
-
+import ReactPiwik from "react-piwik";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
-import Search from "./Search";
+import Search from "../search/Search";
 import { FeedbackModal } from "../common/FeedbackModal";
 
 const BigError = ({ children }) => (
@@ -20,12 +20,19 @@ class Answer extends React.Component {
   };
 
   onValidate = () => {
-    console.log("👍");
+    ReactPiwik.push(["trackEvent", this.props.sourceType, "feedback", "👍"]);
   };
   showModal = () => {
+    ReactPiwik.push(["trackEvent", this.props.sourceType, "feedback", "👎"]);
     this.setState({ modalVisible: true });
   };
   closeModal = () => {
+    ReactPiwik.push([
+      "trackEvent",
+      this.props.sourceType,
+      "feedback",
+      "close modal"
+    ]);
     this.setState({ modalVisible: false });
   };
   setResults = searchResults => {

@@ -80,9 +80,7 @@ class EchelonChimie extends React.Component {
       <React.Fragment>
         <Section light>
           <React.Fragment>
-            <h2>
-              Pouvez nous indiquer votre échelon dans la convention collective ?
-            </h2>
+            <h2>Quel est votre échelon dans la convention collective ?</h2>
             <p>
               <select
                 onChange={this.onSelectCoefficient}
@@ -93,7 +91,7 @@ class EchelonChimie extends React.Component {
                 defaultValue={"none"}
               >
                 <option disabled value="none">
-                  Selectionner un échelon
+                  Sélectionnez un échelon
                 </option>
                 {options}
               </select>

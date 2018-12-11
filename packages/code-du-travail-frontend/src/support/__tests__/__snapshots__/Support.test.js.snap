@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Support /> should render 1`] = `
+<div>
+  <section
+    class="section-dark"
+  >
+    <div
+      class="container center"
+    >
+      <div
+        class="wrapper-narrow"
+      >
+        <header>
+          <h2>
+            Besoin d’un accompagnement personnel ?
+          </h2>
+          <p>
+            Services de renseignement, conseil aux salariés, défenseurs des droits…
+            <br />
+             Indiquez l'adresse de votre lieu de travail pour obtenir une liste de vos interlocuteurs.
+          </p>
+        </header>
+        <form
+          class="support__form"
+        >
+          <label
+            class="support__label"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-1"
+              role="combobox"
+              style="position: relative;"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-1"
+                autocomplete="off"
+                class="support__input"
+                name="query"
+                placeholder="15 rue du Palais, Metz"
+                type="search"
+                value=""
+              />
+              <div
+                class="sc-bdVaJa iCIbBI"
+                id="react-autowhatever-1"
+                role="listbox"
+              />
+            </div>
+            <svg
+              class="support__icon"
+              viewBox="0 0 20 20"
+            >
+              <title>
+                Recherche par adresse
+              </title>
+              <path
+                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </label>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -111,7 +111,7 @@ class ResultDetail extends React.Component {
               <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
               <p>
                 <em>
-                  Sur la base du calcul de l&apos;indemnité légale de
+                  Sur la base du calcul de l&apos;indemnité minimum légale de
                   licenciement.
                 </em>
               </p>

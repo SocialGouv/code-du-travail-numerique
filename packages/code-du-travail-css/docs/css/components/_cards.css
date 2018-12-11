@@ -1,0 +1,21 @@
+.card-wrapper {
+  --flex-gutter-size: var(--spacing-inter-component);
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 0;
+  margin: 0 calc(var(--flex-gutter-size) * -1);
+}
+
+.card {
+  list-style-type: none;
+  width: media(
+    calc(100% / 3 - 2 * var(--flex-gutter-size)),
+    (--bp-tablet) calc(100% / 2 - 2 * var(--flex-gutter-size)),
+    (--bp-mobile) calc(100% - 1 * var(--flex-gutter-size))
+  );
+  margin: var(--flex-gutter-size);
+  background-color: white;
+  padding: var(--spacing-base);
+}

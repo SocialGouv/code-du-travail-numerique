@@ -61,7 +61,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   class="full-width"
                   name="query"
                   placeholder="Convention collective ou code NAF"
-                  type="text"
+                  type="search"
                   value=""
                 />
                 <div
@@ -94,7 +94,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             <h3
               class="sc-bxivhb kVamGT"
             >
-              Quelle est la CCN applicable ?
+              Quelle est la convention collective applicable ?
             </h3>
             <ul>
               <li>
