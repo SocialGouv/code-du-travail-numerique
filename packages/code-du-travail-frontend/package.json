@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-react": "^0.2.0",
-    "@zeit/ncc": "^0.1.16",
     "babel-core": "^7.0.0-bridge",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
@@ -56,9 +55,8 @@
     "dev": "node server.js",
     "lint": "eslint src/* pages/*",
     "prepush": "lint-staged",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "postbuild": "ncc build server.js -o dist",
     "test": "NODE_ENV=test jest"
   },
   "jest": {
