@@ -20,21 +20,10 @@ _environments:
 
 #
 
-stages:
-  - name: Prepare
-    if: env(RELEASE) IS blank
-  - name: Release
-    if: env(RELEASE) IS present AND branch = master
-  - name: Code quality
-    if: env(RELEASE) IS blank
-  - name: Deploy
-    if: env(RELEASE) IS blank AND type = push AND branch = master
-
-#
-
 jobs:
   include:
     - stage: Prepare
+      if: NOT env(RELEASE)
       name: Build and deploy current commit docker image
       env:
         - *docker_image
@@ -49,8 +38,9 @@ jobs:
         - *docker_login
         - docker push $DOCKER_IMAGE
 
-    - &main_node_checks
+    - &main_node_stage
       stage: Prepare
+      if: NOT env(RELEASE)
       language: node_js
       node_js: 10
       cache: yarn
@@ -61,14 +51,15 @@ jobs:
       name: Monorepo build script
       script: yarn build
 
-    - <<: *main_node_checks
+    - <<: *main_node_stage
       if: type = pr
       name: Check Conventional Commits
       install: yarn global add @commitlint/travis-cli @commitlint/config-conventional
       script: commitlint-travis
 
-    - <<: *main_node_checks
+    - <<: *main_node_stage
       stage: Release
+      if: env(RELEASE)
       name: Make a new release 🎉
       env:
         - *github_keys
@@ -85,34 +76,31 @@ jobs:
     #
     #
 
-    - stage: Code quality
+    - &main_code_quality_stage
+      stage: Code quality
+      if: NOT env(RELEASE)
       name: Lint @cdt/frontend
-      env: [*docker_image]
       script: docker run $DOCKER_IMAGE yarn workspace @cdt/frontend lint
-    - #
+    - <<: *main_code_quality_stage
       name: Lint @cdt/api
-      env: [*docker_image]
       script: docker run $DOCKER_IMAGE yarn workspace @cdt/api lint
-    - #
+    - <<: *main_code_quality_stage
       name: Lint @cdt/ui
-      env: [*docker_image]
       script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui lint
-    - #
+    - <<: *main_code_quality_stage
       name: Test @cdt/ui
-      env: [*docker_image]
       # TODO(douglasduteil): fix  @cdt/ui floppy tests
       # | script: docker run $DOCKER_IMAGE yarn workspace @cdt/ui test
       # | after_success: npx codecov
       script: skip
-    - #
+    - <<: *main_code_quality_stage
       name: Test @cdt/frontend
-      env: [*docker_image]
       script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
         $DOCKER_IMAGE
         yarn workspace @cdt/frontend test --coverage
       after_success: npx codecov
-    - #
+    - <<: *main_code_quality_stage
       name: Lint python code
       language: python
       python: 3.6
@@ -126,7 +114,6 @@ jobs:
         - pip install pipenv==11.10.1
         - pipenv install --dev --three
       script: pipenv run pylint --output-format=colorized search
-      script: skip
 
     #
     #
@@ -135,7 +122,7 @@ jobs:
     - &main_deploy_stage
       stage: Deploy
       name: Deploy master branch tag to Docker Hub
-      if: env(RELEASE) IS blank AND type = push AND branch = master
+      if: type = push AND branch = master
       env: [*docker_image, *docker_keys]
       script:
         - docker pull $DOCKER_IMAGE
@@ -148,7 +135,7 @@ jobs:
     - &module_deploy_stage
       <<: *main_deploy_stage
       name: Deploy latest api image to Docker Hub
-      if: env(RELEASE) IS present AND type = push AND tag IS present
+      if: type = push AND tag IS present
       env:
         - *docker_image
         - *docker_keys
