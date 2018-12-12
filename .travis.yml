@@ -68,7 +68,7 @@ jobs:
         - git config user.name "Social Groovy Bot"
         - git config user.email "45039513+SocialGroovyBot@users.noreply.github.com"
         - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
-      script: yarn lerna publish --yes
+      script: yarn lerna version --yes
       after_success:
         - CONVENTIONAL_GITHUB_RELEASER_TOKEN=${GITHUB_TOKEN} npx conventional-github-releaser -p angular
 
