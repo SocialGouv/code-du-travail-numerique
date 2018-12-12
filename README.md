@@ -77,7 +77,10 @@ $ cp .env.sample .env
 $ cp docker-compose.override.prod.yml docker-compose.override.yml
 
 # Run all the containers
-$ docker-compose up --build -d
+$ docker-compose up -d
+
+# Indexing documents
+$ docker-compose run python pipenv run python /app/search/indexing/create_indexes.py
 ```
 
 <br>
@@ -113,7 +116,6 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 #
 # You might want to add a Gif to your release to make it groovy ;)
 ```
-
 
 ## Architecture
 
