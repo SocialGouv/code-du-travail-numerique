@@ -79,8 +79,6 @@ $ cp docker-compose.override.prod.yml docker-compose.override.yml
 # Run all the containers
 $ docker-compose up -d
 
-# Indexing documents
-$ docker-compose run python pipenv run python /app/search/indexing/create_indexes.py
 ```
 
 <br>
