@@ -77,6 +77,7 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       "title",
       "url",
       "html",
+      "slug", // outils
       "date_debut", // code-du-travail
       "date",
       "path", // code-du-travail
