@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch").default;
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
 const cdtnAnnuaire = require("../data_sources/cdtn_annuaire.js");
