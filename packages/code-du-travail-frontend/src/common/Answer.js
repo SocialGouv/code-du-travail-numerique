@@ -49,6 +49,7 @@ class Answer extends React.Component {
       date,
       icon,
       sourceType,
+      additionalContent,
       emptyMessage = "Aucun résultat"
     } = this.props;
 
@@ -91,7 +92,7 @@ class Answer extends React.Component {
             </Article>
           </React.Fragment>
         )}
-
+        {additionalContent}
         <NoAnswer>
           <Button onClick={this.showModal}>Posez votre question</Button>
         </NoAnswer>

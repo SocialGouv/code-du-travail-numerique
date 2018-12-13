@@ -5,7 +5,7 @@ const DownloadFile = ({ title, type, file, icon: Icon }) => {
   const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
     <a
-      className=" btn-download"
+      className="btn-large btn-download"
       title="Télécharger le courrier type"
       href={file}
     >
