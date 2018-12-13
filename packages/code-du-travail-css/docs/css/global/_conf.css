@@ -38,7 +38,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --color-white: #fff;
 
   --color-lighter-grey: #ebeff3;
-  --color-light-grey: ##c9d3df;
+  --color-light-grey: #c9d3df;
   --color-grey: #adb9c9;
   --color-dark-grey: #8393a7;
   --color-darker-grey: #53657d;
@@ -127,6 +127,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
     The fourth value sets a spread (contract the shadow when negative).
     --------------------------------------------------------------------------- */
   --box-shadow-bottom: 0 10px 10px -10px #b7bcdf;
+  --box-shadow: 0 5px 10px 0 var(--color-light-grey);
 }
 
 /* Custom media queries.
