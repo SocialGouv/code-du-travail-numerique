@@ -89,12 +89,15 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
     ]
   });
   // console.log(items)
-  let themes = [];
-  themes = item._source.tags
-    .filter(tag => tag.match(/^themes/))
-    .map(theme => theme.split(":")[1]);
 
-  const relatedItems = await getRelatedItems(themes);
+  let relatedItems = {};
+  if (ctx.params.source === "faq") {
+    const themes = (item._source.tags || [])
+      .filter(tag => tag.match(/^themes/))
+      .map(theme => theme.split(":")[1]);
+
+    relatedItems = await getRelatedItems(themes);
+  }
 
   ctx.body = {
     ...item,

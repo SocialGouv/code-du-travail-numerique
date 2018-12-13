@@ -238,7 +238,7 @@ async function searchRelatedDocument(themes) {
             bySource: {
               top_hits: {
                 size: 2,
-                _source: ["title", "slug", "source", "text"]
+                _source: ["title", "slug", "source", "path", "filename"]
               }
             }
           }
