@@ -27,7 +27,7 @@
   "peerDependencies": {
     "prop-types": "^15.6.2",
     "react": "16.x",
-    "styled-components": "^3.4.9"
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "@cdt/css": "^1.5.2",
