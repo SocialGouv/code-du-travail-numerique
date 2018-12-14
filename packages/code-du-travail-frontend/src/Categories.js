@@ -61,7 +61,7 @@ const Category = ({ title, text, slug, small, icon }) => (
       "categories__list-item--small") ||
       ""}`}
   >
-    <Link route="theme" params={{ slug: slug.join("/") || "/" }}>
+    <Link route="theme" params={{ slug: slug || "/" }}>
       <a title={title}>
         <figure>
           <img src={icon} alt={title} />
@@ -78,7 +78,10 @@ const Category = ({ title, text, slug, small, icon }) => (
 Category.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  slug: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slug: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]).isRequired,
   small: PropTypes.bool,
   icon: PropTypes.string
 };
