@@ -35,7 +35,11 @@ class Question extends React.Component {
     const { data } = this.props;
     const { query } = this.props.router;
 
-    const { modeles_de_courriers, code_du_travail, faq } = data.relatedItems;
+    const {
+      modeles_de_courriers = [],
+      code_du_travail = [],
+      faq = []
+    } = data.relatedItems;
 
     let author;
     switch (data._source.author) {
@@ -47,7 +51,7 @@ class Question extends React.Component {
           "Informations fournies par vos services de renseignements des DIRECCTE en région";
     }
 
-    let additionalContent = (
+    const additionalContent = (
       <React.Fragment>
         <MoreLinks
           title="Articles de loi correspondants"
@@ -116,13 +120,11 @@ function MoreLinks({ items, icon, query, title, children }) {
       <SectionTitle>{title}</SectionTitle>
       {children}
       <List>
-        {items.map(item => {
-          return (
-            <ListItem key={item._id}>
-              <BigLink data={item} icon={icon} query={query} />
-            </ListItem>
-          );
-        })}
+        {items.map(item => (
+          <ListItem key={item._id}>
+            <BigLink data={item} icon={icon} query={query} />
+          </ListItem>
+        ))}
       </List>
     </Section>
   );

@@ -88,16 +88,9 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       "author" // faq
     ]
   });
-  // console.log(items)
 
-  let relatedItems = {};
-  if (ctx.params.source === "faq") {
-    const themes = (item._source.tags || [])
-      .filter(tag => tag.match(/^themes/))
-      .map(theme => theme.split(":")[1]);
-
-    relatedItems = await getRelatedItems(themes, item._id);
-  }
+  const relatedItems =
+    ctx.params.source === "faq" ? await searchItemFromTheme(item) : {};
 
   ctx.body = {
     ...item,
@@ -105,58 +98,14 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
   };
 });
 
-/**
- * Return document matching the given ID.
- *
- * @example
- * http://localhost:1337/api/v1/items/themes?themes[]=id1&themes[]=id2
- *
- * @param {string} :id The item ID to fetch.
- * @returns {Object} Result.
- * @example
- *
- * {
- *   code_du_travail: [
- *    {
- *      _source: {
- *        source: {
- *          title: 'title',
- *          slug: 'slug',
- *          text: 'text',
- *           source: 'code_du_travail'
- *         }
- *       }
- *    }
- *   ],
- *   modele_de_courrier: [
- *    {
- *      _source: {
- *        source: {
- *          title: 'title',
- *          slug: 'slug',
- *          text: 'text',
- *           source: 'modele_de_courrier'
- *         }
- *       }
- *    }
- *   ],
- * }
- *
- */
-router.get(`${BASE_URL}/themes/`, async ctx => {
-  let { themes } = ctx.request.query;
+async function searchItemFromTheme(item) {
+  const themes = (item._source.tags || [])
+    .filter(tag => tag.match(/^themes/))
+    .map(theme => theme.split(":")[1]);
 
-  if (!themes.map) {
-    themes = [themes];
-  }
-
-  ctx.body = await getRelatedItems(themes);
-});
-
-async function getRelatedItems(themes, id) {
   const results = await codeDuTravailNumerique.searchRelatedDocument(
     themes,
-    id
+    item._id
   );
   if (results.aggregations.bySource.buckets.length === 0) {
     return {};
