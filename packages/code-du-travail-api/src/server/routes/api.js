@@ -80,6 +80,7 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       "slug", // outils
       "date_debut", // code-du-travail
       "date",
+      "slug", // outils
       "path", // code-du-travail
       "id", // idcc, kali
       "description", // modele de courrier
