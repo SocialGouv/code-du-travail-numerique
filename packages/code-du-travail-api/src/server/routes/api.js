@@ -96,7 +96,7 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       .filter(tag => tag.match(/^themes/))
       .map(theme => theme.split(":")[1]);
 
-    relatedItems = await getRelatedItems(themes);
+    relatedItems = await getRelatedItems(themes, item._id);
   }
 
   ctx.body = {
@@ -153,8 +153,11 @@ router.get(`${BASE_URL}/themes/`, async ctx => {
   ctx.body = await getRelatedItems(themes);
 });
 
-async function getRelatedItems(themes) {
-  const results = await codeDuTravailNumerique.searchRelatedDocument(themes);
+async function getRelatedItems(themes, id) {
+  const results = await codeDuTravailNumerique.searchRelatedDocument(
+    themes,
+    id
+  );
   if (results.aggregations.bySource.buckets.length === 0) {
     return {};
   }

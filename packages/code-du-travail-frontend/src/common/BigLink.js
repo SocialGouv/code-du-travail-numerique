@@ -4,14 +4,13 @@ import { Link } from "../../routes";
 import { getRouteBySource, getLabelBySource } from "../sources";
 import ArticleIcon from "../icons/ArticleIcon";
 import styled from "styled-components";
-import { LargeLink } from "@cdt/ui";
 
 export function BigLink({ icon, query, data }) {
-  const { slug, title, source, path } = data._source;
+  const { slug, title, source, path = "" } = data._source;
   const route = getRouteBySource(source);
   return (
-    <Link route={route} params={{ q: query, search: 0, slug: slug }}>
-      <LargeLink href={`/${route}/${slug}?q=${query}`} title={title}>
+    <Link route={route} params={{ q: query, search: "0", slug: slug }}>
+      <a className="btn-large">
         <Icon as={icon} />
         <div>
           <Title>{title}</Title>
@@ -19,16 +18,34 @@ export function BigLink({ icon, query, data }) {
           <br />
           <Source>source: {getLabelBySource(source)}</Source>
         </div>
-      </LargeLink>
+      </a>
     </Link>
   );
 }
 
 BigLink.defaultProps = {
-  icon: ArticleIcon
+  icon: ArticleIcon,
+  query: "",
+  data: {
+    _source: {
+      slug: "source/article-slug",
+      title: "article title",
+      source: "source",
+      path: "/path/to/document"
+    }
+  }
 };
 BigLink.propTypes = {
-  icon: PropTypes.func
+  icon: PropTypes.func,
+  query: PropTypes.string,
+  data: PropTypes.shape({
+    _source: PropTypes.shape({
+      slug: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      source: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired
+    })
+  })
 };
 
 const Icon = styled.svg`

@@ -10,6 +10,7 @@ import { AsideTitle, Section } from "@cdt/ui";
 import styled from "styled-components";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import { BigLink } from "../src/common/BigLink";
+import ReponseIcon from "../src/icons/ReponseIcon";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -34,7 +35,7 @@ class Question extends React.Component {
     const { data } = this.props;
     const { query } = this.props.router;
 
-    const { modeles_de_courriers, code_du_travail } = data.relatedItems;
+    const { modeles_de_courriers, code_du_travail, faq } = data.relatedItems;
 
     let author;
     switch (data._source.author) {
@@ -46,7 +47,33 @@ class Question extends React.Component {
           "Informations fournies par vos services de renseignements des DIRECCTE en région";
     }
 
-    let articles = getArticlesLink(code_du_travail, query.q);
+    let additionalContent = (
+      <React.Fragment>
+        <MoreLinks
+          title="Articles de loi correspondants"
+          icon={ArticleIcon}
+          query={query.q}
+          items={code_du_travail}
+        >
+          <div className="wrapper-narrow">
+            <DisclaimerContent>
+              Pensez à vérifier votre accord d’entreprise : S’il prévoit des «
+              garanties au moins équivalentes » à ce sujet, ces clauses
+              s’appliquent dans votre cas -
+              <a href="#" title="consulter la hierachie des normes">
+                En savoir plus
+              </a>
+            </DisclaimerContent>
+          </div>
+        </MoreLinks>
+        <MoreLinks
+          title="Pour aller plus loin"
+          icon={ReponseIcon}
+          query={query.q}
+          items={faq}
+        />
+      </React.Fragment>
+    );
 
     return (
       <React.Fragment>
@@ -57,7 +84,7 @@ class Question extends React.Component {
           date={data._source.date}
           sourceType="Réponse détaillée"
           footer={author}
-          additionalContent={articles}
+          additionalContent={additionalContent}
         >
           {modeles_de_courriers.length > 0 && (
             <React.Fragment>
@@ -80,28 +107,19 @@ class Question extends React.Component {
 
 export default withRouter(Question);
 
-function getArticlesLink(articles = [], query) {
-  if (articles.length === 0) {
+function MoreLinks({ items, icon, query, title, children }) {
+  if (items.length === 0) {
     return null;
   }
   return (
     <Section>
-      <SectionTitle>Article de loi correspondants</SectionTitle>
-      <div className="wrapper-narrow">
-        <DisclaimerContent>
-          Pensez à vérifier votre accord d’entreprise : S’il prévoit des «
-          garanties au moins équivalentes » à ce sujet, ces clauses s’appliquent
-          dans votre cas -
-          <a href="#" title="consulter la hierachie des normes">
-            En savoir plus
-          </a>
-        </DisclaimerContent>
-      </div>
+      <SectionTitle>{title}</SectionTitle>
+      {children}
       <List>
-        {articles.map(item => {
+        {items.map(item => {
           return (
             <ListItem key={item._id}>
-              <BigLink data={item} icon={ArticleIcon} query={query} />
+              <BigLink data={item} icon={icon} query={query} />
             </ListItem>
           );
         })}
@@ -109,8 +127,10 @@ function getArticlesLink(articles = [], query) {
     </Section>
   );
 }
+
 const SectionTitle = styled.h2`
   text-align: center;
+  font-weight: 700;
 `;
 
 const DisclaimerContent = styled.div`

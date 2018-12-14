@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function LargeLink({ children, ...props }) {
+export default function LargeLink({ props }) {
   return (
-    <a className="btn-large" {...props}>
-      {children}
-    </a>
+    //eslint-disable-next-line jsx-a11y/anchor-has-content
+    <a className="btn-large" {...props} />
   );
 }

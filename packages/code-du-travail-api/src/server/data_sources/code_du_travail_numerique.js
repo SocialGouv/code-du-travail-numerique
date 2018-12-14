@@ -206,10 +206,11 @@ async function getDocsCount() {
 }
 /**
  * Return related documents that match themes
- *
+ * @param themes {Array} an array of theme to match
+ * @param id {string} @optional must_not_match
  * @returns {Object} An elasticsearch response.
  */
-async function searchRelatedDocument(themes) {
+async function searchRelatedDocument(themes, id) {
   const match = themes.reduce((state, theme) => {
     return state.concat(
       {
@@ -224,6 +225,15 @@ async function searchRelatedDocument(themes) {
       }
     );
   }, []);
+  const mustNot = id
+    ? [
+        {
+          match: {
+            _id: id
+          }
+        }
+      ]
+    : [];
   return await elasticsearchClient.search({
     index: elasticsearchIndexName,
     type: elasticsearchTypeName,
@@ -247,17 +257,11 @@ async function searchRelatedDocument(themes) {
       _source: ["title", "source", "slug", "anchor"],
       query: {
         bool: {
+          must_not: [...mustNot],
           must: [
             {
               bool: {
                 should: [...match]
-              }
-            }
-          ],
-          must_not: [
-            {
-              match: {
-                source: "faq"
               }
             }
           ]

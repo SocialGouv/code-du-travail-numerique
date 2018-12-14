@@ -181,8 +181,10 @@ The <span> element will be moved away from the normal flow of the document.
   display: flex;
   text-decoration: none;
   margin-bottom: var(--spacing-inter-component);
+  transition: 200ms color, 200ms box-shadow;
 }
-.btn-large:link {
+.btn-large:link,
+.btn-large:visited {
   color: var(--color-dark-tex);
   text-decoration: none;
 }
