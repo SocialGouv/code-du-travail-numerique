@@ -81,7 +81,8 @@ class ChoixCC extends React.Component {
         <Section light>
           <React.Fragment>
             <h2>
-              Votre entreprise est-elle affiliée à une convention collective ?
+              Est-ce qu&apos;une convention collective s&apos;applique dans
+              votre entreprise&nbsp;?
             </h2>
             <div style={radioContainerStyle}>
               <label style={labelStyle}>

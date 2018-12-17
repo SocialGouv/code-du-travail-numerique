@@ -91,14 +91,14 @@ class ResultDetail extends React.Component {
       <React.Fragment>
         Base minimum : fin de contrat &lt;= au
         <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050&categorieLien=id&dateTexte=20170926">
-          25/09/2017
+          27/09/2017
         </a>
       </React.Fragment>
     ) : (
       <React.Fragment>
         Base minimum : fin de contrat &gt; au{" "}
         <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050">
-          25/09/2017
+          27/09/2017
         </a>
       </React.Fragment>
     );
