@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const JSDOM = require("jsdom").JSDOM;
 const ora = require("ora");
-const { batchPromise } = require("@cdt/dataset...kali/utils");
+const { batchPromise } = require("@cdt/data...kali/utils");
 const urls = require("./ministere-travail-liste-fiches.json");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
@@ -20,12 +20,12 @@ function parseDom(dom, url) {
     .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
 
   // `articles` = textes de référence.
-  const articles = $$(dom.window.document, "article.encarts__article li").map(
-    n => ({
+  const articles = $$(dom.window.document, "article.encarts__article li")
+    .filter(item => $(item, "a") && $(item, "a").getAttribute("href"))
+    .map(n => ({
       url: $(n, "a") && $(n, "a").getAttribute("href"),
       text: n.textContent.trim()
-    })
-  );
+    }));
 
   const article = $(dom.window.document, ".main-article");
   $$(article, "a").forEach(node => {
@@ -59,21 +59,23 @@ function parseDom(dom, url) {
   };
 
   const articleChildren = $$(article, "*");
-  articleChildren.forEach(function(el, index) {
-    if (el.tagName === "H3") {
-      let subSection = {
-        title: el.textContent.trim(),
-        text: "",
-        url: `${url}#${el.id}`
-      };
-      let nextEl = el.nextElementSibling;
-      while (nextEl && nextEl.tagName !== "H3") {
-        subSection.text += nextEl.textContent.trim();
-        nextEl = nextEl.nextElementSibling;
+  articleChildren
+    .filter(el => el.getAttribute("id"))
+    .forEach(function(el, index) {
+      if (el.tagName === "H3") {
+        let subSection = {
+          title: el.textContent.trim(),
+          text: "",
+          url: `${url}#${el.id}`
+        };
+        let nextEl = el.nextElementSibling;
+        while (nextEl && nextEl.tagName !== "H3") {
+          subSection.text += nextEl.textContent.trim();
+          nextEl = nextEl.nextElementSibling;
+        }
+        result.text_by_section.push(subSection);
       }
-      result.text_by_section.push(subSection);
-    }
-  });
+    });
 
   return result;
 }
@@ -97,7 +99,7 @@ async function parseFiche(url) {
 async function parseFiches(urls) {
   results = await batchPromise(urls, 10, parseFiche);
   spinner.stop().clear();
-  console.log(JSON.stringify(results, null, 2));
+  console.log(JSON.stringify(results.filter(Boolean), null, 2));
 }
 
 if (module === require.main) {
