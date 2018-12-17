@@ -30,9 +30,9 @@ cdtn_annuaire_mapping = {
         },
         'address': {
             "properties": {
-              "lignes": { "type": "text" },
-              "code": { "type": "integer" },
-              "city": { "type": "text" },
+                "lignes": {"type": "text"},
+                "code": {"type": "integer"},
+                "city": {"type": "text"},
             }
         },
         "coord": {

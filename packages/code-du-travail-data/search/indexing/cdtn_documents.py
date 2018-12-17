@@ -1,7 +1,8 @@
 import json
-from slugify import slugify
 import logging
 import os
+
+from slugify import slugify
 
 from search import settings
 from search.indexing.strip_html import strip_html
@@ -23,8 +24,7 @@ CDTN_DOCUMENTS = []
 def flatten(item):
     if isinstance(item, list):
         return ", ".join(item)
-    else:
-        return item
+    return item
 
 def parse_hash_tags(tags):
     newTags = []
