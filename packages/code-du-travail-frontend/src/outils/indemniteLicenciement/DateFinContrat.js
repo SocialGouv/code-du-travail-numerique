@@ -24,8 +24,8 @@ class DateFinContrat extends React.Component {
         <Section light>
           <React.Fragment>
             <h2>
-              La date de fin de votre contrat se situe-t-elle avant le
-              <b> 26 Août 2017</b>
+              Le licenciement a t-il été prononcé avant le
+              <b> 27 Août 2017</b>
               &nbsp;?
             </h2>
             <div style={radioContainerStyle}>

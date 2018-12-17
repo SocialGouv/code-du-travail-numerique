@@ -1,7 +1,8 @@
 const fetch = require("node-fetch");
 const JSDOM = require("jsdom").JSDOM;
-
-const FICHES_URLS = require("./ministere-travail-liste-fiches.js");
+const ora = require("ora");
+const { batchPromise } = require("@cdt/dataset...kali/utils");
+const urls = require("./ministere-travail-liste-fiches.json");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
@@ -77,28 +78,28 @@ function parseDom(dom, url) {
   return result;
 }
 
-const parseFiche = async url => {
+let count = 0;
+const spinner = ora(`fetching 0/${urls.length}`).start();
+
+async function parseFiche(url) {
   try {
     const dom = await JSDOM.fromURL(url);
+    spinner.text = `fetching ${count++}/${urls.length}`;
     return parseDom(dom, url);
   } catch (error) {
     if (error.statusCode) {
-      console.error(`☠️  - ${error.statusCode} - ${url}`);
-      return null;
+      spinner.fail(error.options.uri).start();
     }
-    console.error(url, "\n", error);
     return null;
   }
-};
-
-async function parseFiches(urls) {
-  const fiches = [];
-  for (const url of urls) {
-    const fiche = await parseFiche(url);
-    fiches.push(fiche);
-  }
-  console.log(JSON.stringify(fiches.filter(Boolean), null, 2));
 }
 
-const urls = FICHES_URLS.map(f => f.url);
-parseFiches(urls);
+async function parseFiches(urls) {
+  results = await batchPromise(urls, 10, parseFiche);
+  spinner.stop().clear();
+  console.log(JSON.stringify(results, null, 2));
+}
+
+if (module === require.main) {
+  parseFiches(urls);
+}

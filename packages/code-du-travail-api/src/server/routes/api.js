@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch").default;
 
 const codeDuTravailNumerique = require("../data_sources/code_du_travail_numerique.js");
 const cdtnAnnuaire = require("../data_sources/cdtn_annuaire.js");
@@ -77,8 +77,10 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       "title",
       "url",
       "html",
+      "slug", // outils
       "date_debut", // code-du-travail
       "date",
+      "slug", // outils
       "path", // code-du-travail
       "id", // idcc, kali
       "description", // modele de courrier

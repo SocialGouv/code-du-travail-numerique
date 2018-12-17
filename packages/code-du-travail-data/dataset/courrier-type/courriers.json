@@ -11,27 +11,59 @@
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
     "source": "test",
-    "filename": "Modèle_certificat_de_travail.docx"
+    "filename": "certificat-de-travail.docx"
   },
   {
-    "titre": "Versement de salaire",
+    "titre": "Convocation à entretien préalable",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
-      "comment rédiger une demande de versement de salaire ?",
-      "comment demander à mon employeur le versement de mon salaire"
+      "comment faire une demande d'entretier préalable en vue d'un licenciement"
     ],
     "tags": {
-      "theme": "salaire",
-      "themes": [42400],
-      "type_de_contrat": "",
+      "theme": "entretien préalable",
+      "themes": [3760],
+      "type_de_contrat": "CDI"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "convocation-a-entretien-prealable.docx"
+  },
+  {
+    "titre": "Demande de rendez-vous en vue d'une rupture conventionnelle",
+    "description": "Ce courrier « informel » peut être adressé par mail, par lettre simple ou par tout autre document",
+    "questions": [
+      "comment demander de rendez-vous en vue d'une rupture conventionnelle"
+    ],
+    "tags": {
+      "theme": "rupture conventionnelle",
+      "themes": [],
+      "type_de_contrat": "CDI",
       "profil": "salarié"
     },
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
-    "source": "test",
-    "filename": "Modèle_demande_paiement_salaire_salarié.docx"
+    "source": "DIRRECTE",
+    "filename": "demande-rdv-rupture-conventionnelle.docx"
+  },
+  {
+    "titre": "demande de paiement de salaire",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [""],
+    "tags": {
+      "theme": "",
+      "themes": [],
+      "type_de_contrat": "CDI",
+      "profil": "salarié"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "demande-paiement-salaire-salarie.docx"
   },
   {
     "titre": "Rupture du contrat en période d'essai",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
       "comment rédiger une demande pour mettre fin à la période d'essai ?",
       "comment faire pour rompre la période d'essai?"
@@ -45,10 +77,11 @@
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
     "source": "test",
-    "filename": "Modèle_fin_période_essai-initiative_du_salarié.docx"
+    "filename": "fin-periode-essai-initiative-du-salarie.docx"
   },
   {
     "titre": "Rupture de période d'essai",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": ["comment rédiger une rupture de période d'essai ?"],
     "tags": {
       "theme": "période d'essai",
@@ -59,7 +92,103 @@
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
     "source": "test",
-    "filename": "Modèle_fin_période_essai-initiative_employeur.docx"
+    "filename": "fin-periode-essai-initiative-employeur.docx"
+  },
+  {
+    "titre": "Réclamation congès payés",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [
+      "faire une réclamation pour les congés payé ?",
+      "rédiger une réclamation pour les congés payés"
+    ],
+    "tags": {
+      "theme": "congès payés",
+      "themes": [],
+      "type_de_contrat": "",
+      "profil": "salarié"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "reclamation-de-cp.docx"
+  },
+  {
+    "titre": "Réclamation des documents de fin de contrat",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": ["Récupérer les documents relatif à la fin de contrat ?"],
+    "tags": {
+      "theme": "fin de contrat",
+      "themes": [],
+      "type_de_contrat": "",
+      "profil": "salarié"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "test",
+    "filename": "reclamation-des-documents-de-fin-de-contrat.docx"
+  },
+  {
+    "titre": "Réclamation des heures supplémenantaires",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": ["Comment se faire payer ses heures supplémenantaire ?"],
+    "tags": {
+      "theme": "heures supplementaires",
+      "themes": [],
+      "type_de_contrat": "",
+      "profil": "salarié"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "reclamation-des-heures-sup.docx"
+  },
+  {
+    "titre": "Réclamation des salaires après un renvoi oral",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [
+      "Comment se faire payer ses heures supplémenantaire après un renvoi oral ?"
+    ],
+    "tags": {
+      "theme": "renvoi oral",
+      "themes": [],
+      "type_de_contrat": "",
+      "profil": "salarié"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "reclamation-des-salaires-apres-renvoi-oral-du-salarie.docx"
+  },
+  {
+    "titre": "Prise en compte des temps de trajet dans le temps de travail",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [""],
+    "tags": {
+      "theme": "Temps de trajet",
+      "themes": [],
+      "type_de_contrat": "",
+      "profil": "salarié",
+      "branche": "bâtiment"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "reclamation-des-salaires-batiment-temps-de-trajet.docx"
+  },
+  {
+    "titre": "Réclamation des bulletins et/ou salaires",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [""],
+    "tags": {
+      "theme": "bulletin de salaire",
+      "themes": [],
+      "type_de_contrat": "",
+      "profil": "salarié"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "reclamation-des-salaires-et-ou-bulletins.docx"
   },
   {
     "titre": "Reçu pour solde de tout compte",
@@ -73,10 +202,11 @@
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
     "source": "test",
-    "filename": "Modèle_Recu_solde_de_tout_compte.docx"
+    "filename": "recu-solde-de-tout-compte.docx"
   },
   {
     "titre": "Renouvellement de période d'essai",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception.",
     "questions": [
       "comment rédiger une demande de renouvellement de période d'essai ?"
     ],
@@ -89,6 +219,77 @@
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
     "source": "test",
-    "filename": "Modèle_renouvellement_période_essai-initiative_employeur.docx"
+    "filename": "renouvellement-periode-essai-initiative-employeur.docx"
+  },
+  {
+    "titre": "Rupture d’un commun accord d’un contrat d’apprentissage",
+    "questions": ["comment rompre un contrat d’apprentissage"],
+    "tags": {
+      "theme": "contrat d’apprentissage",
+      "themes": [3760],
+      "type_de_contrat": "CDI"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "test",
+    "filename": "rupture-amiable-du-contrat-d-apprentissage.docx"
+  },
+  {
+    "titre": "Rupture d’un commun accord d’un contrat à durée déterminé",
+    "questions": ["comment rompre un CDD"],
+    "tags": {
+      "theme": "fin de contrat",
+      "themes": [],
+      "type_de_contrat": "CDD"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "test",
+    "filename": "rupture-commun-accord-du-cdd.docx"
+  },
+  {
+    "titre": "Signalement de harcellement et maltraitance sur mineur au travail",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [
+      "Comment mettre fin à un contrat d'apprentissage en cas de maltraitance au travail"
+    ],
+    "tags": {
+      "theme": "fin de contrat",
+      "themes": [],
+      "type_de_contrat": "Contrat d'apprentissage"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "signalement-harcelement-mineur.docx"
+  },
+  {
+    "titre": "Signalement de harcellement et maltraitance au travail",
+    "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": [
+      "Quelle sont les solutions en cas de maltraitance ou de harcellement au travail"
+    ],
+    "tags": {
+      "theme": "fin de contrat",
+      "themes": [],
+      "type_de_contrat": "Contrat d'apprentissage"
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "signalement-harcelement.docx"
+  },
+  {
+    "titre": "Demande de dérogation pour un temps partiel",
+    "questions": ["Comment faire une demande de temps partiel"],
+    "tags": {
+      "theme": "temps partiel",
+      "themes": [],
+      "type_de_contrat": ""
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "temps-partiel-demande-de-derogation-du-salarie.docx"
   }
 ]
