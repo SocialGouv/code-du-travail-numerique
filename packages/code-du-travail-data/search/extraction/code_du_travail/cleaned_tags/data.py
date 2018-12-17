@@ -24,7 +24,7 @@ import re
 from collections import namedtuple
 
 from search import settings
-from search.extraction.code_du_travail.cleaned_tags.tags import TAGS_DICT
+from search.extraction.code_du_travail.cleaned_tags.tags import TAGS_DICT, EPOSEIDON_DICT
 from search.indexing.strip_html import strip_html
 
 
@@ -101,7 +101,7 @@ def inspect_code_du_travail_children(children):
 
             article_num = child['data']['num']
             tag = TAGS_DICT.get(article_num)
-
+            themes = EPOSEIDON_DICT.get(article_num)
             if not tag:
                 logger.debug('%s found in Legilibre but NOT FOUND in cleaned tags.', article_num)
                 continue
@@ -118,7 +118,8 @@ def inspect_code_du_travail_children(children):
                 'bloc_textuel': strip_html(child['data']['bloc_textuel']),  # In HTML.
                 'html': child['data']['bloc_textuel'] + (child['data']['nota'] or ""),  # In HTML.
                 'cid': child['data']['cid'],
-              #'tags': [make_tag(tag)],  # Stick to 1 tag for now.
+                # 'tags': [make_tag(tag)],  # Stick to 1 tag for now.
+                'themes': themes,
                 'path': make_tag(tag).path,
                 'url': f"{LEGIFRANCE_BASE_URL}?idArticle={child['data']['id']}&cidTexte={child['data']['cid']}",
             }

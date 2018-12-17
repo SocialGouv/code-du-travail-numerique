@@ -127,6 +127,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
     The fourth value sets a spread (contract the shadow when negative).
     --------------------------------------------------------------------------- */
   --box-shadow-bottom: 0 10px 10px -10px #b7bcdf;
+  --box-shadow: 0 5px 10px 0 var(--color-light-grey);
 }
 
 /* Custom media queries.

@@ -94,6 +94,10 @@ code_du_travail_numerique_mapping = {
                     'type': 'text',
                     'analyzer': 'shingle',
                 },
+                'keywords': {
+                  'type': 'text',
+                  'analyzer': 'keyword'
+                }
             },
         },
         # Currently only available for `Code du travail`.
@@ -115,6 +119,10 @@ code_du_travail_numerique_mapping = {
                     'analyzer': 'shingle',
                 },
             },
+        },
+        'themes': {
+          'type': 'text',
+          'analyzer': 'keyword',
         },
         # currently available for idcc
         'idcc': {

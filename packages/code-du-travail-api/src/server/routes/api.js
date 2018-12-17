@@ -70,7 +70,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
  * @returns {Object} Result.
  */
 router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
-  ctx.body = await codeDuTravailNumerique.getSingleItem({
+  const item = await codeDuTravailNumerique.getSingleItem({
     source: ctx.params.source,
     slug: ctx.params.slug,
     _source: [
@@ -79,17 +79,49 @@ router.get(`${BASE_URL}/items/:source/:slug`, async ctx => {
       "html",
       "slug", // outils
       "date_debut", // code-du-travail
+      "date_fin", // code-du-travail
       "date",
       "slug", // outils
       "path", // code-du-travail
       "id", // idcc, kali
+      "tags", // code-du-travail
       "description", // modele de courrier
       "filename", // filename
       "author" // faq
     ]
   });
+
+  const relatedItems =
+    ctx.params.source === "faq" ? await searchItemFromTheme(item) : {};
+
+  ctx.body = {
+    ...item,
+    relatedItems
+  };
 });
 
+async function searchItemFromTheme(item) {
+  const themes = (item._source.tags || [])
+    .filter(tag => tag.match(/^themes/))
+    .map(theme => theme.split(":")[1]);
+
+  const results = await codeDuTravailNumerique.searchRelatedDocument(
+    themes,
+    item._id
+  );
+  if (results.aggregations.bySource.buckets.length === 0) {
+    return {};
+  }
+
+  const { buckets } = results.aggregations.bySource;
+
+  return buckets.reduce((state, bucket) => {
+    if (bucket.doc_count > 0) {
+      state[bucket.key] = bucket.bySource.hits.hits;
+    }
+    return state;
+  }, {});
+}
 /**
  * Return document matching the given ID.
  *

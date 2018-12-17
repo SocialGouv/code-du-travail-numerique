@@ -24,6 +24,7 @@ TAGS_CSV = os.path.join(settings.BASE_DIR, 'dataset/code_du_travail/themes.csv')
 
 
 TAGS_DICT = {}
+EPOSEIDON_DICT = {}
 
 
 def get_cleaned_tags(csv_file=TAGS_CSV):
@@ -38,6 +39,7 @@ def get_cleaned_tags(csv_file=TAGS_CSV):
                 articles = [article.strip() for article in row[2].split(';')]
                 for article in articles:
                     TAGS_DICT[article] = tag
+                    EPOSEIDON_DICT[article] = row[0]
 
 
 get_cleaned_tags()

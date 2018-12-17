@@ -172,13 +172,28 @@ The <span> element will be moved away from the normal flow of the document.
   background-position: 50% 65%;
 }
 
-.btn-download {
+.btn-large {
   text-decoration: none;
   border: 1px var(--color-element-border) solid;
   border-radius: var(--border-radius-base);
   padding: var(--spacing-medium);
   background-color: var(--color-element-background);
   display: flex;
+  text-decoration: none;
+  margin-bottom: var(--spacing-inter-component);
+  transition: 200ms color, 200ms box-shadow;
+}
+.btn-large:link,
+.btn-large:visited {
+  color: var(--color-dark-tex);
+  text-decoration: none;
+}
+.btn-large:hover {
+  color: var(--color-blue-dark);
+  box-shadow: var(--box-shadow);
+}
+
+.btn-download {
   align-items: center;
 }
 .btn-download:link,

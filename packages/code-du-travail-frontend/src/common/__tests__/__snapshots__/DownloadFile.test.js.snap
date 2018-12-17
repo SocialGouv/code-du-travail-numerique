@@ -3,7 +3,7 @@
 exports[`<DownloadFile /> should render with courrier icon 1`] = `
 <div>
   <a
-    class=" btn-download"
+    class="btn-large btn-download"
     href="http://file.url"
     title="Télécharger le courrier type"
   >

@@ -46,4 +46,19 @@ describe("<Answer />", () => {
     askBtn.click();
     expect(baseElement).toMatchSnapshot();
   });
+
+  it("should render additional content", () => {
+    const { baseElement, getByRole } = renderWithMock(
+      <Answer
+        title="Article du code"
+        html="<div>html</div>"
+        additionalContent={<strong>Hi</strong>}
+      >
+        <div>Raiponce</div>
+      </Answer>
+    );
+    const askBtn = getByRole("button", /Posez votre question/i);
+    askBtn.click();
+    expect(baseElement).toMatchSnapshot();
+  });
 });

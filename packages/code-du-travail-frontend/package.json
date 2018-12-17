@@ -34,7 +34,7 @@
     "react-switch": "^3.0.4",
     "react-uid": "^2.0.1",
     "speakingurl": "14.0.1",
-    "styled-components": "3.2.6",
+    "styled-components": "^4.1.2",
     "unist-util-find": "^1.0.1",
     "unist-util-parents": "^1.0.1",
     "url-search-params": "^1.1.0"

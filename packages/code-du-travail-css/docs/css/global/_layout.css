@@ -122,6 +122,12 @@ It is also possible to nest a `.wrapper-narrow` class in a `.wrapper-dark` or
         </div>
     </div>
 */
+.wrapper {
+  border: 1px solid transparent;
+  padding: var(--spacing-small) var(--spacing-medium);
+  color: var(--color-dark-text);
+}
+
 .wrapper-dark {
   border-radius: var(--border-radius-base);
   border: 1px solid var(--color-element-border);
