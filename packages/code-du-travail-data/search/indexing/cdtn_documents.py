@@ -145,6 +145,26 @@ def populate_cdtn_documents():
                 'all_text': f"{val['question']} {faq_text} {theme} {branche}",
             })
 
+    with open(os.path.join(settings.BASE_DIR, 'dataset/faq-contributions.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from contributions", len(data))
+        for val in data:
+            faq_text = strip_html(val['reponse'])
+            tags = parse_hash_tags(val.get("tags"))
+            theme = val.get('tags', {}).get('theme', '')
+            branche = val.get('tags', {}).get('branche', '')
+            CDTN_DOCUMENTS.append({
+                'source': 'faq',
+                'slug': slugify(val['question'], to_lower=True),
+                'text': faq_text,
+                'html': val["reponse"],
+                'title': val['question'],
+                'tags': tags,
+                'date': val.get('date_redaction'),
+                'date_expiration': val.get('date_expiration'),
+                'author': 'DIRRECTE',
+                'all_text': f"{val['question']} {faq_text} {theme} {branche}",
+            })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/faq-conventions-collectives.json')) as json_data:
         data = json.load(json_data)
