@@ -1,11 +1,9 @@
-import json
 import logging
 import os
 
 import elasticsearch
 from elasticsearch.helpers import bulk
 
-from search import settings
 from search.indexing import analysis
 
 from search.indexing.cdtn_documents import CDTN_DOCUMENTS
@@ -25,8 +23,7 @@ logger.setLevel(logging.INFO)
 def flatten(item):
     if isinstance(item, list):
         return ", ".join(item)
-    else:
-        return item
+    return item
 
 
 def get_es_client():

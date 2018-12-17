@@ -2,6 +2,7 @@ from html.parser import HTMLParser
 
 class MLStripper(HTMLParser):
     def __init__(self):
+        HTMLParser.__init__(self)
         self.reset()
         self.strict = False
         self.convert_charrefs = True

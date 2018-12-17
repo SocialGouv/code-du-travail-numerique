@@ -1,8 +1,8 @@
 import json
-from slugify import slugify
-import logging
 import os
+import logging
 
+from slugify import slugify
 from search import settings
 
 console = logging.StreamHandler()
