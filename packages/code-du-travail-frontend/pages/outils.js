@@ -38,9 +38,9 @@ const getOutilsFromCode = function(code) {
 };
 
 class Outils extends React.Component {
-  static async getInitialProps() {
+  static async getInitialProps({ query }) {
     // we don't request data from api since outils are client side only
-    return { data: { _source: {} } };
+    return { data: { _source: { slug: query.slug } } };
   }
   render() {
     const { data, router } = this.props;
