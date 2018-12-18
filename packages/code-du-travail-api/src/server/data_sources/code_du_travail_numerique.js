@@ -173,7 +173,10 @@ async function getSingleItem(params) {
         if (res.hits.total >= 1) {
           return res.hits.hits[0];
         } else {
-          throw { status: 404, message: "not found" };
+          throw {
+            status: 404,
+            message: `there is no items that match ${slug} in ${source}`
+          };
         }
       });
   }
