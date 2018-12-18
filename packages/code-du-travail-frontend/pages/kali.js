@@ -17,20 +17,18 @@ const fetchKali = ({ slug }) =>
   fetch(`${API_URL}/items/kali/${slug}`).then(r => r.json());
 
 class Kali extends React.Component {
-  static async getInitialProps({ res, query }) {
-    return await fetchKali(query)
-      .then(data => ({
-        data
-      }))
-      .catch(e => {
-        console.log("e", e);
-        res.statusCode = 404;
-        throw e;
-      });
+  static async getInitialProps({ query }) {
+    const data = await fetchKali(query);
+    return { data: data };
   }
 
   render() {
     const { data } = this.props;
+    if (data.status === 404) {
+      return (
+        <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
+      );
+    }
     return (
       <Answer
         title={data._source.title}
