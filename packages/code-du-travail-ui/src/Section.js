@@ -22,10 +22,7 @@ const Section = ({ light, dark, style, children }) => {
 };
 
 Section.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ]).isRequired,
+  children: PropTypes.node.isRequired,
   style: PropTypes.object,
   light: PropTypes.bool,
   dark: PropTypes.bool

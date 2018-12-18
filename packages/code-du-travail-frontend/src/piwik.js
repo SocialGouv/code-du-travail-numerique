@@ -16,6 +16,7 @@ if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
     siteId: PIWIK_SITE_ID,
     trackErrors: true
   });
-
   Router.events.on("routeChangeComplete", onRouteChangeComplete);
+} else if (typeof window !== "undefined") {
+  window._paq = [];
 }

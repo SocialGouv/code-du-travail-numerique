@@ -42,9 +42,9 @@ class Answer extends React.Component {
     const {
       router,
       title,
-      intro,
-      html,
-      children,
+      intro = null,
+      html = null,
+      children = null,
       footer,
       date,
       icon,
@@ -78,7 +78,7 @@ class Answer extends React.Component {
             >
               <Disclaimer />
               {intro}
-              <Html>{html}</Html>
+              {html && <Html>{html}</Html>}
               {children}
               <div
                 style={{
