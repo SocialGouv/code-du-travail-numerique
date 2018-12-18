@@ -14,22 +14,20 @@ const {
 // a FAQ answer
 
 const fetchIdcc = ({ slug }) =>
-  fetch(`${API_URL}/items/idcc/${slug}`)
-    .then(r => r.json())
-    .then(data => ({
-      data
-    }))
-    .catch(e => {
-      console.log("e", e);
-      throw e;
-    });
+  fetch(`${API_URL}/items/idcc/${slug}`).then(r => r.json());
 
 class Idcc extends React.Component {
   static async getInitialProps({ query }) {
-    return await fetchIdcc(query);
+    const data = await fetchIdcc(query);
+    return { data };
   }
   render() {
     const { data } = this.props;
+    if (data.status === 404) {
+      return (
+        <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
+      );
+    }
     return (
       <Answer
         title={data._source.title}

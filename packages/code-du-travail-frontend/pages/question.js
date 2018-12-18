@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-
 import Answer from "../src/common/Answer";
 import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
@@ -20,15 +19,12 @@ const fetchQuestion = ({ slug }) =>
   fetch(`${API_URL}/items/faq/${slug}`).then(r => r.json());
 
 class Question extends React.Component {
-  static async getInitialProps({ res, query }) {
-    return await fetchQuestion(query)
-      .then(data => ({
-        data
-      }))
-      .catch(e => {
-        res.statusCode = 404;
-        throw e;
-      });
+  static async getInitialProps({ query }) {
+    const data = await fetchQuestion(`${API_URL}/items/faq/${query}`);
+    if (data.status === 404) {
+      return { data: { _source: {}, relatedItems: {} } };
+    }
+    return { data };
   }
 
   render() {

@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
-import getConfig from "next/config";
 import Head from "next/head";
-import fetch from "isomorphic-unfetch";
 import { Container, Alert } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
@@ -39,21 +37,10 @@ const getOutilsFromCode = function(code) {
   }
 };
 
-const {
-  publicRuntimeConfig: { API_URL }
-} = getConfig();
-
 class Outils extends React.Component {
-  static async getInitialProps({ query }) {
-    return await fetch(`${API_URL}/items/outils/${query.slug}`)
-      .then(r => r.json())
-      .then(data => {
-        return { data };
-      })
-      .catch(e => {
-        console.error(e);
-        return { data: { _source: {} } };
-      });
+  static async getInitialProps() {
+    // we don't request data from api since outils are client side only
+    return { data: { _source: {} } };
   }
   render() {
     const { data, router } = this.props;
@@ -61,7 +48,7 @@ class Outils extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{data._source.title}</title>
+          <title>{data._source.title || "outils introuvable"}</title>
         </Head>
         <Search />
         <OutilComponent q={router.query.q} />

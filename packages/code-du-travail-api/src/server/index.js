@@ -33,7 +33,7 @@ app.use(async (ctx, next) => {
     await next();
   } catch (err) {
     ctx.status = err.status || 500;
-    ctx.body = err.message;
+    ctx.body = { status: ctx.status, message: err.message };
     ctx.app.emit("error", err, ctx);
   }
 });
@@ -50,7 +50,7 @@ app.use(
 
 // centralize error logging
 app.on("error", error => {
-  logger.error(error);
+  logger.error(`${error.status || 500} - ${error.message}`);
 });
 
 // Server.

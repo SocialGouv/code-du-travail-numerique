@@ -31,16 +31,12 @@ const Source = ({ name, url }) => (
 );
 
 class Fiche extends React.Component {
-  static async getInitialProps({ res, query }) {
-    return await fetchFiche(query)
-      .then(data => ({
-        data
-      }))
-      .catch(e => {
-        console.log("e", e);
-        res.statusCode = 404;
-        throw e;
-      });
+  static async getInitialProps({ query }) {
+    const data = await fetchFiche(query);
+    if (data.status === 404) {
+      return { data: { _source: {} } };
+    }
+    return { data };
   }
 
   render() {

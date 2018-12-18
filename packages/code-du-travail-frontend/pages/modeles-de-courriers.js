@@ -13,21 +13,20 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
+const fetchCourrier = ({ slug }) =>
+  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`).then(r => r.json());
+
 class ModeleCourrier extends React.Component {
-  static async getInitialProps({ res, query }) {
-    return await fetch(`${API_URL}/items/modeles_de_courriers/${query.slug}`)
-      .then(r => r.json())
-      .then(data => {
-        return { data };
-      })
-      .catch(e => {
-        res.statusCode = 404;
-        throw e;
-      });
+  static async getInitialProps({ query }) {
+    const data = await fetchCourrier(query);
+    return { data };
   }
+
   render() {
     const { data } = this.props;
-
+    if (data.status === 404) {
+      return <Answer emptyMessage="Modèle de courrier introuvable" />;
+    }
     return (
       <Answer
         title={`Modèle de courrier :  ${data._source.title}`}
