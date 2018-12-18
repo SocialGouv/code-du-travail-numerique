@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2018-12-18)
+
+
+### Bug Fixes
+
+* **data:** fix indexing fiches-ministere ([#383](https://github.com/revolunet/fiches_ministere_travail/issues/383)) ([0413175](https://github.com/revolunet/fiches_ministere_travail/commit/0413175))
+
+
+### Features
+
+* add related content for faq ([#370](https://github.com/revolunet/fiches_ministere_travail/issues/370)) ([853ae51](https://github.com/revolunet/fiches_ministere_travail/commit/853ae51))
+
+
+
+
+
 ## [1.5.2](https://github.com/revolunet/fiches_ministere_travail/compare/v1.5.1...v1.5.2) (2018-12-12)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail
