@@ -1,4 +1,7 @@
 import React from "react";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
 
 import ConventionModal from "../common/ConventionModal";
 
@@ -21,7 +24,10 @@ const Footer = () => (
           <ul>
             <li>
               <a
-                href="https://github.com/SocialGouv/code-du-travail-html/"
+                href={
+                  "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
+                  publicRuntimeConfig.PACKAGE_VERSION
+                }
                 className="external-link__after"
               >
                 Contribuer sur Github
