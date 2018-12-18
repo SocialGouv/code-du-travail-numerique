@@ -65,11 +65,9 @@ class Fiche extends React.Component {
       <Answer
         title={data._source.title}
         intro={
-          <React.Fragment>
-            <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
-              <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
-            </div>
-          </React.Fragment>
+          <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
+            <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
+          </div>
         }
         date={format(new Date(data._source.date_debut), "D MMMM YYYY", {
           locale: frLocale

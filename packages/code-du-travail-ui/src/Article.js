@@ -85,7 +85,7 @@ const Article = ({
           />
         </div>
       </div>
-      <div className="article__content">{children}</div>
+      {children && <div className="article__content">{children}</div>}
     </Section>
   );
 };
@@ -94,10 +94,7 @@ Article.propTypes = {
   /** article title */
   title: PropTypes.string.isRequired,
   /** article content */
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ]).isRequired,
+  children: PropTypes.node,
   date: PropTypes.string,
   sourceType: PropTypes.string,
   icon: PropTypes.func,

@@ -14,14 +14,15 @@ const BreadCrumbs = ({ entries }) => (
 );
 
 BreadCrumbs.propTypes = {
-  entries: PropTypes.arrayOf(PropTypes.element)
+  entries: PropTypes.node
 };
 
 BreadCrumbs.defaultProps = {
   entries: [
     <a key="accueil" href="/">
       Accueil
-    </a>
+    </a>,
+    "end"
   ]
 };
 
