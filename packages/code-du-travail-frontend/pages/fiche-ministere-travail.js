@@ -31,7 +31,7 @@ class Fiche extends React.Component {
     if (data.status === 404) {
       return { data: { _source: {} } };
     }
-    return { data: data };
+    return { data };
   }
 
   render() {

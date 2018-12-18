@@ -19,7 +19,7 @@ const fetchIdcc = ({ slug }) =>
 class Idcc extends React.Component {
   static async getInitialProps({ query }) {
     const data = await fetchIdcc(query);
-    return { data: data };
+    return { data };
   }
   render() {
     const { data } = this.props;

@@ -19,7 +19,7 @@ const fetchKali = ({ slug }) =>
 class Kali extends React.Component {
   static async getInitialProps({ query }) {
     const data = await fetchKali(query);
-    return { data: data };
+    return { data };
   }
 
   render() {

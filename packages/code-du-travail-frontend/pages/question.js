@@ -15,7 +15,7 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchQuestion = async ({ slug }) =>
+const fetchQuestion = ({ slug }) =>
   fetch(`${API_URL}/items/faq/${slug}`).then(r => r.json());
 
 class Question extends React.Component {
@@ -24,7 +24,7 @@ class Question extends React.Component {
     if (data.status === 404) {
       return { data: { _source: {}, relatedItems: {} } };
     }
-    return { data: data };
+    return { data };
   }
 
   render() {
