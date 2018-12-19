@@ -250,5 +250,17 @@ async function searchFromQuery(query) {
   return results.features[0].geometry.coordinates;
 }
 
+/**
+ * Return the API version
+ *
+ * @example
+ * http://localhost:1337/api/v1/version
+ *
+ * @returns {string} The current api version.
+ */
+router.get(`${BASE_URL}/version`, ctx => {
+  ctx.body = { version: require("../../../package.json").version };
+});
+
 module.exports = router;
 module.exports.BASE_URL = BASE_URL;

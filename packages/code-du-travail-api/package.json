@@ -9,7 +9,8 @@
     "lint": "eslint src/*",
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
-    "dev": "nodemon ./src/server/index.js"
+    "dev": "nodemon ./src/server/index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,12 +27,14 @@
     "dotenv": "^6.0.0",
     "elastic-apm-node": "^1.11.0",
     "elasticsearch": "^15.0.0",
+    "jest": "^23.6.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "node-fetch": "^2.3.0",
+    "supertest": "^3.3.0",
     "winston": "^3.1.0"
   },
   "devDependencies": {
@@ -39,5 +42,10 @@
     "@zeit/ncc": "^0.1.16",
     "eslint": "^5.7.0",
     "nodemon": "^1.18.7"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
   }
 }
