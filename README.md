@@ -76,8 +76,8 @@ $ cp .env.sample .env
 # Use prod containers configs
 $ cp docker-compose.override.prod.yml docker-compose.override.yml
 
-# Run all the containers
-$ docker-compose up --build -d
+# update dev server
+$ sh scripts/deploy-dev.sh
 ```
 
 <br>
