@@ -38,7 +38,7 @@ exports[`<Footer /> should render 1`] = `
             <li>
               <a
                 class="external-link__after"
-                href="https://github.com/SocialGouv/code-du-travail-html/"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vundefined"
               >
                 Contribuer sur Github
               </a>
