@@ -103,6 +103,13 @@ jobs:
         yarn workspace @cdt/frontend test --coverage
       after_success: npx codecov
     - <<: *main_code_quality_stage
+      name: Test @cdt/api
+      script: docker run
+        -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
+        $DOCKER_IMAGE
+        yarn workspace @cdt/api test --coverage
+      after_success: npx codecov --flags api
+    - <<: *main_code_quality_stage
       name: Lint python code
       language: python
       python: 3.6

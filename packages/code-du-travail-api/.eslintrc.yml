@@ -2,3 +2,6 @@
 
 extends:
   - "@socialgouv/eslint-config-recommended"
+
+env:
+  jest: true
