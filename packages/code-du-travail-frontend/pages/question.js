@@ -20,7 +20,7 @@ const fetchQuestion = ({ slug }) =>
 
 class Question extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchQuestion(`${API_URL}/items/faq/${query}`);
+    const data = await fetchQuestion(query);
     if (data.status === 404) {
       return { data: { _source: {}, relatedItems: {} } };
     }

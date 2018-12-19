@@ -14,7 +14,7 @@ export function BigLink({ icon, query, data }) {
         <Icon as={icon} />
         <div>
           <Title>{title}</Title>
-          {path.substr(1).replace(/\//g, " » ")}
+          {path && path.substr(1).replace(/\//g, " » ")}
           <br />
           <Source>source: {getLabelBySource(source)}</Source>
         </div>
@@ -43,7 +43,7 @@ BigLink.propTypes = {
       slug: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       source: PropTypes.string.isRequired,
-      path: PropTypes.string.isRequired
+      path: PropTypes.string
     })
   })
 };
