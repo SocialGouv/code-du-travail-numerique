@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/revolunet/fiches_ministere_travail/compare/v1.6.1...v1.6.2) (2018-12-19)
+
+**Note:** Version bump only for package @cdt/data...fiches_ministere_travail
+
+
+
+
+
 # 1.6.0 (2018-12-18)
 
 
