@@ -101,7 +101,7 @@ jobs:
         -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
         $DOCKER_IMAGE
         yarn workspace @cdt/frontend test --coverage
-      after_success: npx codecov
+      after_success: npx codecov --flags @cdt/frontend
     - <<: *main_code_quality_stage
       name: Lint python code
       language: python
