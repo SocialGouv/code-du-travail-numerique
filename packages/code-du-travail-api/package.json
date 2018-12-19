@@ -7,7 +7,7 @@
   "scripts": {
     "build": "ncc build ./src/server/index.js -o dist",
     "lint": "eslint src/*",
-    "prepush": "lint-staged",
+    "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js"
   },
@@ -38,7 +38,6 @@
     "@socialgouv/eslint-config-recommended": "^0.2.0",
     "@zeit/ncc": "^0.1.16",
     "eslint": "^5.7.0",
-    "lint-staged": "^8.1.0",
     "nodemon": "^1.18.7"
   }
 }
