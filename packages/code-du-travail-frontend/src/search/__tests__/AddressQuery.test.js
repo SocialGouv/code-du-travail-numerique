@@ -41,7 +41,7 @@ describe("<AddressQuery/>", () => {
     const lon = "lon";
     const lat = "lat";
     const { container, getByText } = render(
-      <AddressQuery coord={{ lon, lat }} />
+      <AddressQuery query="search test" coord={{ lon, lat }} />
     );
     await waitForElement(() => getByText(/bureau des légendes/i));
     expect(container).toMatchSnapshot();
