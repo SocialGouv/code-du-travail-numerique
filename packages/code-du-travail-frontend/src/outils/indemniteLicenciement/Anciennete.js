@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { inputStyle } from "./stepStyles";
+import { Input } from "./stepStyles";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class Anciennete extends React.Component {
@@ -27,7 +27,8 @@ class Anciennete extends React.Component {
           <React.Fragment>
             <h2>Quelle est votre ancienneté en mois ?</h2>
             <div style={{ fontSize: "2em" }}>
-              <input
+              <Input
+                size={5}
                 type="number"
                 onFocus={e => {
                   if (e.target.value === "0") {
@@ -36,7 +37,6 @@ class Anciennete extends React.Component {
                 }}
                 onChange={e => onChange(parseFloat(e.target.value) || 0)}
                 value={value}
-                style={{ width: 180, ...inputStyle }}
               />{" "}
               mois
             </div>

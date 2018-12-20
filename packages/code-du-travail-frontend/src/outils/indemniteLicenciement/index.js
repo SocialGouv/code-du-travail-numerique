@@ -86,8 +86,8 @@ class CalculateurIndemnite extends React.Component {
         }}
       >
         <React.Fragment>
-          <h1>Calculer son indémnité de licenciement</h1>
           <div style={{ width: 700, margin: "0 auto" }} ref={containerRef}>
+            <h1>Calculer son indémnité de licenciement</h1>
             <Stepper
               containerRef={containerRef}
               initialStep={0}

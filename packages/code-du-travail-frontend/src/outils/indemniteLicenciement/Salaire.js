@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
-import { inputStyle } from "./stepStyles";
+import { InputSmall } from "./stepStyles";
 
 const times = num => Array.from({ length: num }, (_, i) => i);
 
@@ -108,12 +108,11 @@ class Salaire extends React.Component {
                   <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
                     <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
                     <td style={{ textAlign: "center" }}>
-                      <input
+                      <InputSmall
                         onBlur={this.onSalaireBlur(i)}
                         onClick={this.onSalaireClick(i)}
                         value={this.state.salaires[i]}
                         onChange={this.updateSalaire(i)}
-                        style={{ ...inputStyle, width: 100 }}
                         type="number"
                       />
                     </td>
