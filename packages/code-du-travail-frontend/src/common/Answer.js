@@ -20,19 +20,24 @@ class Answer extends React.Component {
   };
 
   onValidate = () => {
-    ReactPiwik.push(["trackEvent", this.props.sourceType, "feedback", "👍"]);
+    ReactPiwik.push([
+      "trackEvent",
+      "feedback",
+      "thumb up",
+      `${this.props.router.route}/${this.props.router.query.slug}`
+    ]);
   };
   showModal = () => {
-    ReactPiwik.push(["trackEvent", this.props.sourceType, "feedback", "👎"]);
+    ReactPiwik.push([
+      "trackEvent",
+      "feedback",
+      "thumb down",
+      `${this.props.router.route}/${this.props.router.query.slug}`
+    ]);
     this.setState({ modalVisible: true });
   };
   closeModal = () => {
-    ReactPiwik.push([
-      "trackEvent",
-      this.props.sourceType,
-      "feedback",
-      "close modal"
-    ]);
+    ReactPiwik.push(["trackEvent", "feedback", "cancel"]);
     this.setState({ modalVisible: false });
   };
   setResults = searchResults => {
