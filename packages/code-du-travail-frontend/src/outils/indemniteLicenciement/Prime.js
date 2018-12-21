@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
-import { InputSmall } from "./stepStyles";
+import { Input, Label } from "./stepStyles";
 
 class Primes extends React.Component {
   static propTypes = {
@@ -24,11 +24,12 @@ class Primes extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>
-              Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
-            </h2>
-            <InputSmall
+          <h2>
+            Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
+          </h2>
+          <Label>
+            <Input
+              size={5}
               type="number"
               onChange={e => onChange(parseFloat(e.target.value) || 0)}
               onFocus={e => {
@@ -39,7 +40,7 @@ class Primes extends React.Component {
               value={value}
             />{" "}
             €
-          </React.Fragment>
+          </Label>
         </Section>
         <Container>
           <PrevNextStepper

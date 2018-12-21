@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
-import { InputSmall } from "./stepStyles";
+import { Input } from "./stepStyles";
 
 const times = num => Array.from({ length: num }, (_, i) => i);
 
@@ -84,54 +84,53 @@ class Salaire extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Derniers mois de salaire</h2>
-            <table width="100%" style={{ fontSize: "1.2em" }}>
-              <thead>
-                <tr>
-                  <td
-                    width={140}
-                    style={{ textAlign: "center", fontWeight: "bold" }}
-                  >
-                    Mois
+          <h2>Derniers mois de salaire</h2>
+          <table width="100%" style={{ fontSize: "1.2em" }}>
+            <thead>
+              <tr>
+                <td
+                  width={140}
+                  style={{ textAlign: "center", fontWeight: "bold" }}
+                >
+                  Mois
+                </td>
+                <td
+                  width={200}
+                  style={{ textAlign: "center", fontWeight: "bold" }}
+                >
+                  Salaire brut mensuel
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              {times(this.props.value.length).map(i => (
+                <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
+                  <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
+                  <td style={{ textAlign: "center" }}>
+                    <Input
+                      size="6"
+                      onBlur={this.onSalaireBlur(i)}
+                      onClick={this.onSalaireClick(i)}
+                      value={this.state.salaires[i]}
+                      onChange={this.updateSalaire(i)}
+                      type="number"
+                    />
                   </td>
-                  <td
-                    width={200}
-                    style={{ textAlign: "center", fontWeight: "bold" }}
-                  >
-                    Salaire brut mensuel
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                {times(this.props.value.length).map(i => (
-                  <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
-                    <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
-                    <td style={{ textAlign: "center" }}>
-                      <InputSmall
-                        onBlur={this.onSalaireBlur(i)}
-                        onClick={this.onSalaireClick(i)}
-                        value={this.state.salaires[i]}
-                        onChange={this.updateSalaire(i)}
-                        type="number"
-                      />
+                  {i === 0 && (
+                    <td
+                      valign="middle"
+                      style={{ textAlign: "center", background: "#ddd" }}
+                      rowSpan={3}
+                    >
+                      trois derniers
+                      <br />
+                      mois de salaire
                     </td>
-                    {i === 0 && (
-                      <td
-                        valign="middle"
-                        style={{ textAlign: "center", background: "#ddd" }}
-                        rowSpan={3}
-                      >
-                        trois derniers
-                        <br />
-                        mois de salaire
-                      </td>
-                    )}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </React.Fragment>
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </Section>
         <Container>
           <PrevNextStepper

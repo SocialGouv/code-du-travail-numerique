@@ -79,25 +79,23 @@ class EchelonChimie extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Quel est votre échelon dans la convention collective ?</h2>
-            <p>
-              <select
-                onChange={this.onSelectCoefficient}
-                onBlur={this.onSelectCoefficient}
-                name="echelon"
-                value={value.coefficient}
-                style={{ ...selectStyle }}
-                defaultValue={"none"}
-              >
-                <option disabled value="none">
-                  Sélectionnez un échelon
-                </option>
-                {options}
-              </select>
-            </p>
-            {labels}
-          </React.Fragment>
+          <h2>Quel est votre échelon dans la convention collective ?</h2>
+          <p>
+            <select
+              onChange={this.onSelectCoefficient}
+              onBlur={this.onSelectCoefficient}
+              name="echelon"
+              value={value.coefficient}
+              style={{ ...selectStyle }}
+              defaultValue={"none"}
+            >
+              <option disabled value="none">
+                Sélectionnez un échelon
+              </option>
+              {options}
+            </select>
+          </p>
+          {labels}
         </Section>
         <Container>
           <PrevNextStepper

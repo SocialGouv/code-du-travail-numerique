@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { InputSmall } from "./stepStyles";
+import { Input, Label } from "./stepStyles";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class Age extends React.Component {
@@ -32,9 +32,10 @@ class Age extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Quel est votre age ?</h2>
-            <InputSmall
+          <h2>Quel est votre age ?</h2>
+          <Label>
+            <Input
+              size={5}
               type="number"
               onFocus={e => {
                 if (e.target.value === "0") {
@@ -44,7 +45,7 @@ class Age extends React.Component {
               onChange={e => onChange(parseFloat(e.target.value) || 0)}
               value={value}
             />
-          </React.Fragment>
+          </Label>
         </Section>
         <Container>
           <PrevNextStepper

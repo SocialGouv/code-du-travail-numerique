@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 import MathJax from "react-mathjax2";
-import { headStyle } from "../stepStyles";
+import { Header } from "../stepStyles";
 const round = fl => parseFloat((fl * 100) / 100).toFixed(2);
 
 const labelize = value => {
@@ -53,14 +53,14 @@ class ResultDetail extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <div style={headStyle}>
+          <Header>
             <h2>Montant indicatif de votre indemnité</h2>
             <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
             <p>
               <em>Calculé sur la base de la </em>
               {convention.ccName}
             </p>
-          </div>
+          </Header>
         </Section>
         <Container>
           <table width="100%" style={{ fontSize: "1.2em" }}>

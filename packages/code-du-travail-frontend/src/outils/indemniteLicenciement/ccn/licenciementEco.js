@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 import { PrevNextStepper } from "../PrevNextStepper";
-import { labelStyle, radioContainerStyle } from "../stepStyles";
+import { Label, RadioContainer } from "../stepStyles";
 
 class LicenciementEco extends React.Component {
   static propTypes = {
@@ -23,29 +23,27 @@ class LicenciementEco extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Le motif de votre licenciement est-il économique ?</h2>
-            <div style={radioContainerStyle}>
-              <label style={labelStyle}>
-                <input
-                  type="radio"
-                  onChange={() => onChange(true)}
-                  name="affiliation"
-                  checked={value === true}
-                />{" "}
-                Oui
-              </label>
-              <label style={labelStyle}>
-                <input
-                  type="radio"
-                  onChange={() => onChange(false)}
-                  name="affiliation"
-                  checked={value === false}
-                />{" "}
-                Non
-              </label>
-            </div>
-          </React.Fragment>
+          <h2>Le motif de votre licenciement est-il économique ?</h2>
+          <RadioContainer>
+            <Label>
+              <input
+                type="radio"
+                onChange={() => onChange(true)}
+                name="affiliation"
+                checked={value === true}
+              />{" "}
+              Oui
+            </Label>
+            <Label>
+              <input
+                type="radio"
+                onChange={() => onChange(false)}
+                name="affiliation"
+                checked={value === false}
+              />{" "}
+              Non
+            </Label>
+          </RadioContainer>
         </Section>
         <Container>
           <PrevNextStepper

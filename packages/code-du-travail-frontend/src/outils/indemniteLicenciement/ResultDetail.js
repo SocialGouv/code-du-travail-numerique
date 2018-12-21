@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Section } from "@cdt/ui";
 import MathJax from "react-mathjax2";
-import { headStyle } from "./stepStyles";
+import { Header } from "./stepStyles";
 
 const round = fl => parseInt(fl * 100) / 100;
 
@@ -106,7 +106,7 @@ class ResultDetail extends React.Component {
       <React.Fragment>
         {indemnite > 0 && (
           <Section light>
-            <div style={headStyle}>
+            <Header>
               <h2>Montant indicatif de votre indemnité</h2>
               <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
               <p>
@@ -115,44 +115,40 @@ class ResultDetail extends React.Component {
                   licenciement.
                 </em>
               </p>
-            </div>
+            </Header>
           </Section>
         )}
         <Section light>
-          <React.Fragment>
-            <table width="100%" style={{ fontSize: "1.2em" }}>
-              <tbody>
-                <Row value={labelize(moyenneSalaires)}>
-                  Moyenne des 12 derniers mois
-                </Row>
-                <Row value={labelize(moyenne3DerniersMois)}>
-                  Moyenne des 3 derniers sois
-                </Row>
-                <Row value={labelize(meilleurMoyenne)}>
-                  Salaire de référence
-                </Row>
-                <Row value={isR12342 ? "1 / 5" : "1 / 4"}>{infoFinContrat}</Row>
-                <Row value={isSmallAnciennete ? "< 10 ans" : "> 10 ans"}>
-                  Ancienneté
-                </Row>
-              </tbody>
-            </table>
-            <div style={{ fontSize: "1.5em" }}>
-              <MathJax.Context input="ascii">
-                <div
-                  style={{
-                    fontSize: "1.5em",
-                    textAlign: "center",
-                    fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
-                  }}
-                >
-                  <MathJax.Node inline>
-                    {getJaxFormula(formulaParams)}
-                  </MathJax.Node>
-                </div>
-              </MathJax.Context>
-            </div>
-          </React.Fragment>
+          <table width="100%" style={{ fontSize: "1.2em" }}>
+            <tbody>
+              <Row value={labelize(moyenneSalaires)}>
+                Moyenne des 12 derniers mois
+              </Row>
+              <Row value={labelize(moyenne3DerniersMois)}>
+                Moyenne des 3 derniers sois
+              </Row>
+              <Row value={labelize(meilleurMoyenne)}>Salaire de référence</Row>
+              <Row value={isR12342 ? "1 / 5" : "1 / 4"}>{infoFinContrat}</Row>
+              <Row value={isSmallAnciennete ? "< 10 ans" : "> 10 ans"}>
+                Ancienneté
+              </Row>
+            </tbody>
+          </table>
+          <div style={{ fontSize: "1.5em" }}>
+            <MathJax.Context input="ascii">
+              <div
+                style={{
+                  fontSize: "1.5em",
+                  textAlign: "center",
+                  fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
+                }}
+              >
+                <MathJax.Node inline>
+                  {getJaxFormula(formulaParams)}
+                </MathJax.Node>
+              </div>
+            </MathJax.Context>
+          </div>
         </Section>
       </React.Fragment>
     );
