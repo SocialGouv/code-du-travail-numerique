@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WorkPeriodForm /> should render single work period 1`] = `
+<div>
+  <form>
+    <div
+      class="sc-bdVaJa hPrguC"
+    >
+      <label
+        class="sc-ifAKCX bqyzQp"
+      >
+        <span
+          class="sc-EHOje rYzUQ"
+        >
+          type
+        </span>
+        <select
+          class="sc-bwzfXH ezXOAB"
+          name="type"
+        >
+          <option
+            value="temps-partiel"
+          >
+            Temps partiel
+          </option>
+          <option
+            value="temps-plein"
+          >
+            Temps plein
+          </option>
+        </select>
+      </label>
+      <label
+        class="sc-ifAKCX bqyzQp"
+      >
+        <span
+          class="sc-EHOje rYzUQ"
+        >
+          durée (en mois)
+        </span>
+        <input
+          class="sc-htpNat kjWUdU"
+          min="0"
+          name="duree"
+          placeholder="8 mois"
+          type="number"
+          value="10"
+        />
+      </label>
+      <label
+        class="sc-ifAKCX bqyzQp"
+      >
+        <span
+          class="sc-EHOje rYzUQ"
+        >
+          salaire mensuel
+        </span>
+        <input
+          class="sc-bxivhb jWzExO"
+          min="0"
+          name="salaire"
+          placeholder="€"
+          type="number"
+          value="1000"
+        />
+      </label>
+      <button
+        class="btn"
+      >
+        Ajouter la période
+      </button>
+    </div>
+  </form>
+</div>
+`;

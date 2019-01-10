@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChoixCCN /> should display cc list  1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Est-ce qu'une convention collective s'applique dans votre entreprise ?
+        </h2>
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-convention"
+              type="radio"
+              value="yes"
+            />
+             
+            Oui
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-convention"
+              type="radio"
+              value="no"
+            />
+             
+            Non
+          </label>
+        </div>
+        <label
+          for="select-affiliation"
+        >
+          Selectioner votre convention collective
+          <div>
+            <div
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-1"
+              class="react-autosuggest__container react-autosuggest__container--open"
+              role="combobox"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-1"
+                autocomplete="off"
+                class="full-width"
+                placeholder="ex: Chimie"
+                type="text"
+                value="chimie"
+              />
+              <div
+                class="react-autosuggest__suggestions-container react-autosuggest__suggestions-container--open"
+                id="react-autowhatever-1"
+                role="listbox"
+              >
+                <ul
+                  class="react-autosuggest__suggestions-list"
+                  role="listbox"
+                >
+                  <li
+                    aria-selected="false"
+                    class="react-autosuggest__suggestion react-autosuggest__suggestion--first"
+                    data-suggestion-index="0"
+                    id="react-autowhatever-1--item-0"
+                    role="option"
+                  >
+                    <div
+                      class="btn btn__link  "
+                      link="true"
+                      role="button"
+                      style="white-space: normal;"
+                      tabindex="0"
+                    >
+                      Convention collective nationale des industries 
+                      <span
+                        class="fuse-highlighter"
+                      >
+                        chimi
+                      </span>
+                      ques et connexes
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ChoixCCN /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Est-ce qu'une convention collective s'applique dans votre entreprise ?
+        </h2>
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-convention"
+              type="radio"
+              value="yes"
+            />
+             
+            Oui
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-convention"
+              type="radio"
+              value="no"
+            />
+             
+            Non
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ChoixCCN /> should update view when update checkbox  1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Est-ce qu'une convention collective s'applique dans votre entreprise ?
+        </h2>
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-convention"
+              type="radio"
+              value="yes"
+            />
+             
+            Oui
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-convention"
+              type="radio"
+              value="no"
+            />
+             
+            Non
+          </label>
+        </div>
+        <label
+          for="select-affiliation"
+        >
+          Selectioner votre convention collective
+          <div>
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-1"
+              class="react-autosuggest__container"
+              role="combobox"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-1"
+                autocomplete="off"
+                class="full-width"
+                placeholder="ex: Chimie"
+                type="text"
+                value=""
+              />
+              <div
+                class="react-autosuggest__suggestions-container"
+                id="react-autowhatever-1"
+                role="listbox"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

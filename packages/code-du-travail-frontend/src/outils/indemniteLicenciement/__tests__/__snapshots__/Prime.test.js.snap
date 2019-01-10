@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Primes /> should call onChange with updated value 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
+        </h2>
+        <label
+          class="sc-bwzfXH lbnHsv"
+        >
+          <input
+            class="sc-bdVaJa dBfvmf"
+            name="prime"
+            size="5"
+            type="number"
+            value="0"
+          />
+           
+          €
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Primes /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
+        </h2>
+        <label
+          class="sc-bwzfXH lbnHsv"
+        >
+          <input
+            class="sc-bdVaJa dBfvmf"
+            name="prime"
+            size="5"
+            type="number"
+            value="0"
+          />
+           
+          €
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

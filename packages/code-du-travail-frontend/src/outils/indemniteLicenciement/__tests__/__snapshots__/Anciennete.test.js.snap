@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Anciennete /> should call onChange with updated value 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Quelle est votre ancienneté en mois ?
+        </h2>
+        <label
+          class="sc-bwzfXH lbnHsv"
+        >
+          <input
+            class="sc-bdVaJa dBfvmf"
+            name="anciennete"
+            size="5"
+            type="number"
+            value="12"
+          />
+           
+          mois
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Anciennete /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Quelle est votre ancienneté en mois ?
+        </h2>
+        <label
+          class="sc-bwzfXH lbnHsv"
+        >
+          <input
+            class="sc-bdVaJa dBfvmf"
+            name="anciennete"
+            size="5"
+            type="number"
+            value="55"
+          />
+           
+          mois
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DateFinContrat /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Le licenciement a t-il été prononcé avant le
+          <b>
+             27 Août 2017
+          </b>
+           ?
+        </h2>
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="isR12342"
+              type="radio"
+            />
+            <span>
+              Oui
+            </span>
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="isR12342"
+              type="radio"
+            />
+            <span>
+              Non
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
