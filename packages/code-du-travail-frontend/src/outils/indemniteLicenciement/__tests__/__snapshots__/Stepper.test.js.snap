@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stepper /> should display a restart button 1`] = `
+<div>
+  <button>
+    restart
+  </button>
+</div>
+`;
+
+exports[`<Stepper /> should navigate to nex step 1`] = `
+<div>
+  <div>
+    <button>
+      prev
+    </button>
+    <span>
+      step2 name 
+      bar
+    </span>
+    <button>
+      next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Stepper /> should render 1`] = `
+<div>
+  <div>
+    <span>
+      step1 name 
+      foo
+    </span>
+    <button>
+      next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Stepper /> should restart stepper 1`] = `
+<div>
+  <div>
+    <span>
+      step1 name 
+      foo
+    </span>
+    <button>
+      next
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
+<div>
+  <form>
+    <div
+      class="sc-bdVaJa hPrguC"
+    >
+      <label
+        class="sc-ifAKCX bqyzQp"
+      >
+        <span
+          class="sc-EHOje rYzUQ"
+        >
+          type
+        </span>
+        <select
+          class="sc-bwzfXH ezXOAB"
+          name="type"
+        >
+          <option
+            value="temps-partiel"
+          >
+            Temps partiel
+          </option>
+          <option
+            value="temps-plein"
+          >
+            Temps plein
+          </option>
+        </select>
+      </label>
+      <label
+        class="sc-ifAKCX bqyzQp"
+      >
+        <span
+          class="sc-EHOje rYzUQ"
+        >
+          durée (en mois)
+        </span>
+        <input
+          class="sc-htpNat kjWUdU"
+          min="0"
+          name="duree"
+          placeholder="8 mois"
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        class="sc-ifAKCX bqyzQp"
+      >
+        <span
+          class="sc-EHOje rYzUQ"
+        >
+          salaire mensuel
+        </span>
+        <input
+          class="sc-bxivhb jWzExO"
+          min="0"
+          name="salaire"
+          placeholder="€"
+          type="number"
+          value=""
+        />
+      </label>
+      <button
+        class="btn"
+      >
+        Ajouter la période
+      </button>
+    </div>
+  </form>
+  <table
+    class="sc-bZQynM hUYSbs"
+  >
+    <thead
+      class="sc-gzVnrw kLUpNd"
+    >
+      <tr>
+        <th
+          class="sc-htoDjs fuzpcc"
+        >
+          Type
+        </th>
+        <th
+          class="sc-dnqmqq lDZzO"
+        >
+          Durée
+        </th>
+        <th
+          class="sc-dnqmqq lDZzO"
+        >
+          Salaire
+        </th>
+        <th
+          class="sc-iwsKbI fqBEHj"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="sc-gZMcBi cTJnyA"
+        >
+          Temps plein
+        </td>
+        <td
+          class="sc-gqjmRU bryhRV"
+        >
+          10
+          <span
+            class="sc-VigVT cmuClJ"
+          >
+            mois
+          </span>
+        </td>
+        <td
+          class="sc-gqjmRU bryhRV"
+        >
+          1300
+          <span
+            class="sc-VigVT cmuClJ"
+          >
+            €
+          </span>
+        </td>
+        <td
+          class="sc-jTzLTM IqDLX"
+        >
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Modifier
+          </div>
+           – 
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Supprimer
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="sc-gZMcBi cTJnyA"
+        >
+          Temps partiel
+        </td>
+        <td
+          class="sc-gqjmRU bryhRV"
+        >
+          10
+          <span
+            class="sc-VigVT cmuClJ"
+          >
+            mois
+          </span>
+        </td>
+        <td
+          class="sc-gqjmRU bryhRV"
+        >
+          1000
+          <span
+            class="sc-VigVT cmuClJ"
+          >
+            €
+          </span>
+        </td>
+        <td
+          class="sc-jTzLTM IqDLX"
+        >
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Modifier
+          </div>
+           – 
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Supprimer
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

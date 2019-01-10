@@ -44,7 +44,9 @@ class Stepper extends React.Component {
 
   scrollToTop = () => {
     const containerRef = this.props;
-    document.body.scrollIntoView(containerRef.current);
+    if (containerRef) {
+      document.body.scrollIntoView(containerRef.current);
+    }
   };
   restart = () => {
     this.setState({ step: 0 });
@@ -57,8 +59,8 @@ class Stepper extends React.Component {
       return this.props.render({
         key,
         Component: component,
-        onPrevious: this.goPrevious,
-        onNext: this.goNext
+        onPrevious: step > 0 ? this.goPrevious : null,
+        onNext: step < this.props.steps.length ? this.goNext : null
       });
     } else if (this.props.renderRestart) {
       return this.props.renderRestart({ restart: this.restart });

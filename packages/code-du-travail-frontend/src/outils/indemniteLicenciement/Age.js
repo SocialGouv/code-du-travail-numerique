@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { inputStyle } from "./stepStyles";
+import { Input, Label } from "./stepStyles";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class Age extends React.Component {
   static propTypes = {
     value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
   static defaultProps = {
@@ -32,9 +32,11 @@ class Age extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Quel est votre age ?</h2>
-            <input
+          <h2>Quel est votre age ?</h2>
+          <Label>
+            <Input
+              name="age"
+              size={5}
               type="number"
               onFocus={e => {
                 if (e.target.value === "0") {
@@ -43,9 +45,8 @@ class Age extends React.Component {
               }}
               onChange={e => onChange(parseFloat(e.target.value) || 0)}
               value={value}
-              style={{ width: 180, ...inputStyle }}
             />
-          </React.Fragment>
+          </Label>
         </Section>
         <Container>
           <PrevNextStepper

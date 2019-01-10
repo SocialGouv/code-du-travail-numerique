@@ -1,0 +1,653 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Salaire /> should render mixed work period 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <h2>
+            Votre quotité de temps de travail a-t-elle évoluée durant votre contrat ?
+          </h2>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-temps-partiel"
+              type="radio"
+              value="yes"
+            />
+             
+            Oui
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-temps-partiel"
+              type="radio"
+              value="no"
+            />
+             
+            Non
+          </label>
+        </div>
+        <form>
+          <div
+            class="sc-ifAKCX fLUhBC"
+          >
+            <label
+              class="sc-htoDjs fHktW"
+            >
+              <span
+                class="sc-dnqmqq jFczle"
+              >
+                type
+              </span>
+              <select
+                class="sc-EHOje caLbZd"
+                name="type"
+              >
+                <option
+                  value="temps-partiel"
+                >
+                  Temps partiel
+                </option>
+                <option
+                  value="temps-plein"
+                >
+                  Temps plein
+                </option>
+              </select>
+            </label>
+            <label
+              class="sc-htoDjs fHktW"
+            >
+              <span
+                class="sc-dnqmqq jFczle"
+              >
+                durée (en mois)
+              </span>
+              <input
+                class="sc-bZQynM jdlsEM"
+                min="0"
+                name="duree"
+                placeholder="8 mois"
+                type="number"
+                value=""
+              />
+            </label>
+            <label
+              class="sc-htoDjs fHktW"
+            >
+              <span
+                class="sc-dnqmqq jFczle"
+              >
+                salaire mensuel
+              </span>
+              <input
+                class="sc-gzVnrw eCWXcf"
+                min="0"
+                name="salaire"
+                placeholder="€"
+                type="number"
+                value=""
+              />
+            </label>
+            <button
+              class="btn"
+            >
+              Ajouter la période
+            </button>
+          </div>
+        </form>
+        <table
+          class="sc-iwsKbI ihEBWt"
+        >
+          <thead
+            class="sc-gZMcBi bEWRJx"
+          >
+            <tr>
+              <th
+                class="sc-gqjmRU duWcpo"
+              >
+                Type
+              </th>
+              <th
+                class="sc-VigVT jBihYX"
+              >
+                Durée
+              </th>
+              <th
+                class="sc-VigVT jBihYX"
+              >
+                Salaire
+              </th>
+              <th
+                class="sc-jTzLTM bCGmFT"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class="sc-fjdhpX cQfeff"
+              >
+                Temps plein
+              </td>
+              <td
+                class="sc-jzJRlG buBBTl"
+              >
+                10
+                <span
+                  class="sc-cSHVUG kAMgIx"
+                >
+                  mois
+                </span>
+              </td>
+              <td
+                class="sc-jzJRlG buBBTl"
+              >
+                1300
+                <span
+                  class="sc-cSHVUG kAMgIx"
+                >
+                  €
+                </span>
+              </td>
+              <td
+                class="sc-kAzzGY hlorSy"
+              >
+                <div
+                  class="btn btn__link  "
+                  link="true"
+                  role="button"
+                  tabindex="0"
+                >
+                  Modifier
+                </div>
+                 – 
+                <div
+                  class="btn btn__link  "
+                  link="true"
+                  role="button"
+                  tabindex="0"
+                >
+                  Supprimer
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="sc-fjdhpX cQfeff"
+              >
+                Temps partiel
+              </td>
+              <td
+                class="sc-jzJRlG buBBTl"
+              >
+                10
+                <span
+                  class="sc-cSHVUG kAMgIx"
+                >
+                  mois
+                </span>
+              </td>
+              <td
+                class="sc-jzJRlG buBBTl"
+              >
+                1000
+                <span
+                  class="sc-cSHVUG kAMgIx"
+                >
+                  €
+                </span>
+              </td>
+              <td
+                class="sc-kAzzGY hlorSy"
+              >
+                <div
+                  class="btn btn__link  "
+                  link="true"
+                  role="button"
+                  tabindex="0"
+                >
+                  Modifier
+                </div>
+                 – 
+                <div
+                  class="btn btn__link  "
+                  link="true"
+                  role="button"
+                  tabindex="0"
+                >
+                  Supprimer
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Salaire /> should render single work period 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <h2>
+            Votre quotité de temps de travail a-t-elle évoluée durant votre contrat ?
+          </h2>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-temps-partiel"
+              type="radio"
+              value="yes"
+            />
+             
+            Oui
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-temps-partiel"
+              type="radio"
+              value="no"
+            />
+             
+            Non
+          </label>
+        </div>
+        <h2>
+          Derniers mois de salaire
+        </h2>
+        <table
+          style="font-size: 1.2em;"
+          width="100%"
+        >
+          <thead>
+            <tr>
+              <td
+                style="text-align: center; font-weight: bold;"
+                width="140"
+              >
+                Mois
+              </td>
+              <td
+                style="text-align: center; font-weight: bold;"
+                width="200"
+              >
+                Salaire brut mensuel
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              style="background: rgb(221, 221, 221);"
+            >
+              <td>
+                Dernier salaire
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+              <td
+                rowspan="3"
+                style="text-align: center; background: rgb(221, 221, 221);"
+                valign="middle"
+              >
+                trois derniers
+                <br />
+                mois de salaire
+              </td>
+            </tr>
+            <tr
+              style="background: rgb(221, 221, 221);"
+            >
+              <td>
+                Salaire N-1
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr
+              style="background: rgb(221, 221, 221);"
+            >
+              <td>
+                Salaire N-2
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-3
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-4
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-5
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-6
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Salaire /> should switch from single period to mixed period 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <h2>
+            Votre quotité de temps de travail a-t-elle évoluée durant votre contrat ?
+          </h2>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-temps-partiel"
+              type="radio"
+              value="yes"
+            />
+             
+            Oui
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="has-temps-partiel"
+              type="radio"
+              value="no"
+            />
+             
+            Non
+          </label>
+        </div>
+        <h2>
+          Derniers mois de salaire
+        </h2>
+        <table
+          style="font-size: 1.2em;"
+          width="100%"
+        >
+          <thead>
+            <tr>
+              <td
+                style="text-align: center; font-weight: bold;"
+                width="140"
+              >
+                Mois
+              </td>
+              <td
+                style="text-align: center; font-weight: bold;"
+                width="200"
+              >
+                Salaire brut mensuel
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              style="background: rgb(221, 221, 221);"
+            >
+              <td>
+                Dernier salaire
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+              <td
+                rowspan="3"
+                style="text-align: center; background: rgb(221, 221, 221);"
+                valign="middle"
+              >
+                trois derniers
+                <br />
+                mois de salaire
+              </td>
+            </tr>
+            <tr
+              style="background: rgb(221, 221, 221);"
+            >
+              <td>
+                Salaire N-1
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr
+              style="background: rgb(221, 221, 221);"
+            >
+              <td>
+                Salaire N-2
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-3
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-4
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-5
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Salaire N-6
+              </td>
+              <td
+                style="text-align: center;"
+              >
+                <input
+                  class="sc-bdVaJa dFlwiT"
+                  size="6"
+                  type="number"
+                  value="1500"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

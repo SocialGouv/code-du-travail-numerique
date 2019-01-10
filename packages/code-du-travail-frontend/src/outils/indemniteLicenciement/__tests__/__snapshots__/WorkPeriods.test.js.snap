@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WorkPeriods /> should render 1`] = `
+<div>
+  <table
+    class="sc-bdVaJa iqUEsv"
+  >
+    <thead
+      class="sc-bwzfXH dYaYOz"
+    >
+      <tr>
+        <th
+          class="sc-htpNat jnqzKx"
+        >
+          Type
+        </th>
+        <th
+          class="sc-bxivhb hQTtcV"
+        >
+          Durée
+        </th>
+        <th
+          class="sc-bxivhb hQTtcV"
+        >
+          Salaire
+        </th>
+        <th
+          class="sc-ifAKCX hFumjR"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="sc-EHOje NpirS"
+        >
+          Temps plein
+        </td>
+        <td
+          class="sc-bZQynM jcDMsS"
+        >
+          10
+          <span
+            class="sc-gzVnrw hJOryv"
+          >
+            mois
+          </span>
+        </td>
+        <td
+          class="sc-bZQynM jcDMsS"
+        >
+          1300
+          <span
+            class="sc-gzVnrw hJOryv"
+          >
+            €
+          </span>
+        </td>
+        <td
+          class="sc-htoDjs eWBLGq"
+        >
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Modifier
+          </div>
+           – 
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Supprimer
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="sc-EHOje NpirS"
+        >
+          Temps partiel
+        </td>
+        <td
+          class="sc-bZQynM jcDMsS"
+        >
+          10
+          <span
+            class="sc-gzVnrw hJOryv"
+          >
+            mois
+          </span>
+        </td>
+        <td
+          class="sc-bZQynM jcDMsS"
+        >
+          1000
+          <span
+            class="sc-gzVnrw hJOryv"
+          >
+            €
+          </span>
+        </td>
+        <td
+          class="sc-htoDjs eWBLGq"
+        >
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Modifier
+          </div>
+           – 
+          <div
+            class="btn btn__link  "
+            link="true"
+            role="button"
+            tabindex="0"
+          >
+            Supprimer
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -5,7 +5,7 @@ import FuseInput from "../../lib/FuseInput";
 import { branches } from "./ccn/branches";
 import { PrevNextStepper } from "./PrevNextStepper";
 
-import { labelStyle, radioContainerStyle } from "./stepStyles";
+import { Label, RadioContainer } from "./stepStyles";
 
 class ChoixCC extends React.Component {
   static propTypes = {
@@ -15,8 +15,8 @@ class ChoixCC extends React.Component {
       ccName: PropTypes.string,
       ccId: PropTypes.string
     }),
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
 
@@ -79,47 +79,45 @@ class ChoixCC extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>
-              Est-ce qu&apos;une convention collective s&apos;applique dans
-              votre entreprise&nbsp;?
-            </h2>
-            <div style={radioContainerStyle}>
-              <label style={labelStyle}>
-                <input
-                  type="radio"
-                  onChange={this.hasConventionChangeHandler}
-                  name="has-convention"
-                  value="yes"
-                  checked={hasCC === true}
-                />{" "}
-                Oui
-              </label>
-              <label style={labelStyle}>
-                <input
-                  type="radio"
-                  onChange={this.hasConventionChangeHandler}
-                  name="has-convention"
-                  value="no"
-                  checked={hasCC === false}
-                />{" "}
-                Non
-              </label>
-            </div>
-            {this.state.showCC && (
-              <label htmlFor="select-affiliation">
-                Selectioner votre convention collective
-                <div>
-                  <FuseInput
-                    value={this.state.brancheValue}
-                    data={branches}
-                    placeholder="ex: Chimie"
-                    onSuggestionSelected={this.onSuggestionSelected}
-                  />
-                </div>
-              </label>
-            )}
-          </React.Fragment>
+          <h2>
+            Est-ce qu&apos;une convention collective s&apos;applique dans votre
+            entreprise&nbsp;?
+          </h2>
+          <RadioContainer>
+            <Label>
+              <input
+                type="radio"
+                onChange={this.hasConventionChangeHandler}
+                name="has-convention"
+                value="yes"
+                checked={hasCC === true}
+              />{" "}
+              Oui
+            </Label>
+            <Label>
+              <input
+                type="radio"
+                onChange={this.hasConventionChangeHandler}
+                name="has-convention"
+                value="no"
+                checked={hasCC === false}
+              />{" "}
+              Non
+            </Label>
+          </RadioContainer>
+          {this.state.showCC && (
+            <label htmlFor="select-affiliation">
+              Selectioner votre convention collective
+              <div>
+                <FuseInput
+                  value={this.state.brancheValue}
+                  data={branches}
+                  placeholder="ex: Chimie"
+                  onSuggestionSelected={this.onSuggestionSelected}
+                />
+              </div>
+            </label>
+          )}
         </Section>
         <Container>
           <PrevNextStepper

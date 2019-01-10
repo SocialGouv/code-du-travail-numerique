@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { SimpleSwitch } from "./SimpleSwitch";
+import { SimpleSwitch } from "../../common/SimpleSwitch";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class FauteGrave extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.bool,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
 
@@ -24,15 +24,13 @@ class FauteGrave extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Faute grave</h2>
-            <SimpleSwitch
-              checked={value}
-              id="licencie-faute-grave"
-              label="Êtes-vous licencié(e) pour faute grave ?"
-              onChange={onChange}
-            />
-          </React.Fragment>
+          <h2>Faute grave</h2>
+          <SimpleSwitch
+            checked={value}
+            id="licencie-faute-grave"
+            label="Êtes-vous licencié(e) pour faute grave ?"
+            onChange={onChange}
+          />
         </Section>
         <Container>
           <PrevNextStepper

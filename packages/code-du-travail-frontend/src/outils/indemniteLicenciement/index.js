@@ -6,6 +6,7 @@ import getIndemnite from "./indemnite";
 import { Stepper } from "./Stepper";
 import { initialData, steps } from "./casGeneral";
 import { ResultDetail } from "./ResultDetail";
+import styled from "styled-components";
 
 const containerRef = React.createRef();
 
@@ -18,16 +19,20 @@ class CalculateurIndemnite extends React.Component {
     ...initialData,
     steps: [...steps]
   };
-  ResultCC = dynamic(import(`./ccn/Result_0044`));
+
+  ResultCC = null;
 
   componentOnChange = ({ key, value }) => {
     this.setState({
       [key]: value
     });
     if (key === "anciennete") {
-      this.setState({
-        salaires: Array.from({ length: Math.min(value, 12) }).fill(0)
-      });
+      this.setState(prevState => ({
+        salaires: {
+          ...prevState.salaires,
+          derniersMois: Array.from({ length: Math.min(value, 12) }).fill(0)
+        }
+      }));
     }
     if (key === "convention") {
       if (value.hasCC) {
@@ -80,57 +85,59 @@ class CalculateurIndemnite extends React.Component {
     }
 
     return (
-      <Container
-        style={{
-          textAlign: "left"
-        }}
-      >
-        <React.Fragment>
-          <h1>Calculer son indémnité de licenciement</h1>
-          <div style={{ width: 700, margin: "0 auto" }} ref={containerRef}>
-            <Stepper
-              containerRef={containerRef}
-              initialStep={0}
-              steps={this.state.steps}
-              renderRestart={({ restart }) => (
-                <div style={{ textAlign: "center" }}>
-                  <Button
-                    onClick={() => {
-                      this.resetState(restart);
-                    }}
-                    primary
-                  >
-                    recommencer
-                  </Button>
-                </div>
-              )}
-              render={({ Component, key, onNext, onPrevious }) => (
-                <Component
-                  key={key}
-                  value={this.state[key]}
-                  onChange={value => this.componentOnChange({ key, value })}
-                  onNext={onNext}
-                  onPrevious={onPrevious}
-                  nextDisabled={indemniteData.errors.length > 0}
-                />
-              )}
-            />
-            <br />
-            {indemniteData.errors.length > 0 && (
-              <Container style={{ fontSize: "1.5em" }}>
-                {indemniteData.errors.map(error => (
-                  <Alert {...{ [error.type]: true }} key={error.message}>
-                    <div dangerouslySetInnerHTML={{ __html: error.message }} />
-                  </Alert>
-                ))}
-              </Container>
+      <Container>
+        <Title>Calculer son indémnité de licenciement</Title>
+        <WidgetContainer ref={containerRef}>
+          <Stepper
+            containerRef={containerRef}
+            initialStep={0}
+            steps={this.state.steps}
+            renderRestart={({ restart }) => (
+              <div style={{ textAlign: "center" }}>
+                <Button
+                  onClick={() => {
+                    this.resetState(restart);
+                  }}
+                  primary
+                >
+                  recommencer
+                </Button>
+              </div>
             )}
-          </div>
-          {showResult && resultComponent}
-        </React.Fragment>
+            render={({ Component, key, onNext, onPrevious }) => (
+              <Component
+                key={key}
+                value={this.state[key]}
+                onChange={value => this.componentOnChange({ key, value })}
+                onNext={onNext}
+                onPrevious={onPrevious}
+                nextDisabled={indemniteData.errors.length > 0}
+              />
+            )}
+          />
+          <br />
+          {indemniteData.errors.length > 0 && (
+            <Container style={{ fontSize: "1.5em" }}>
+              {indemniteData.errors.map(error => (
+                <Alert {...{ [error.type]: true }} key={error.message}>
+                  <div dangerouslySetInnerHTML={{ __html: error.message }} />
+                </Alert>
+              ))}
+            </Container>
+          )}
+        </WidgetContainer>
+        {showResult && resultComponent}
       </Container>
     );
   }
 }
 
 export default CalculateurIndemnite;
+
+const Title = styled.h2`
+  text-align: center;
+`;
+const WidgetContainer = styled.div`
+  max-width: 48rem;
+  margin: 0 auto;
+`;

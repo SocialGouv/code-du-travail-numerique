@@ -20,6 +20,8 @@ jest.mock("react-piwik", () => ({
 // Meanwhile...
 //
 // HACK(douglasduteil): mock the check style function from `@reach/utils`
-// As `@reach/*` packages are usion the "checkStyles" function from `@reach/utils`
+// As `@reach/*` packages are using the "checkStyles" function from `@reach/utils`
 // to warn us about missing stylesheet, we silent it with a mock 💩
 require("@reach/utils").checkStyles = jest.fn();
+
+document.body.scrollIntoView = jest.fn();

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Age /> should call onChange with updated value 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Quel est votre age ?
+        </h2>
+        <label
+          class="sc-bwzfXH lbnHsv"
+        >
+          <input
+            class="sc-bdVaJa dBfvmf"
+            name="age"
+            size="5"
+            type="number"
+            value="55"
+          />
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Age /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Quel est votre age ?
+        </h2>
+        <label
+          class="sc-bwzfXH lbnHsv"
+        >
+          <input
+            class="sc-bdVaJa dBfvmf"
+            name="age"
+            size="5"
+            type="number"
+            value="55"
+          />
+        </label>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

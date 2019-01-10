@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PrevNextStepper /> should disabled next button 1`] = `
+<div>
+  <div
+    style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+  >
+    <div />
+    <div
+      class="btn   "
+      disabled=""
+      role="button"
+      tabindex="0"
+    >
+      suivant
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PrevNextStepper /> should hide previous button and render next button 1`] = `
+<div>
+  <div
+    style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+  >
+    <div />
+    <div
+      class="btn   "
+      role="button"
+      tabindex="0"
+    >
+      suivant
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PrevNextStepper /> should render previous and next button 1`] = `
+<div>
+  <div
+    style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+  >
+    <div
+      class="btn btn__secondary  "
+      role="button"
+      secondary="true"
+      tabindex="0"
+    >
+      précédent
+    </div>
+    <div />
+    <div
+      class="btn   "
+      role="button"
+      tabindex="0"
+    >
+      suivant
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PrevNextStepper /> should render previous button and hide next button 1`] = `
+<div>
+  <div
+    style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+  >
+    <div
+      class="btn btn__secondary  "
+      role="button"
+      secondary="true"
+      tabindex="0"
+    >
+      précédent
+    </div>
+    <div />
+  </div>
+</div>
+`;

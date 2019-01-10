@@ -3,16 +3,20 @@ import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
-import { inputStyle } from "./stepStyles";
-
-const times = num => Array.from({ length: num }, (_, i) => i);
+import { Label, RadioContainer } from "./stepStyles";
+import { SalaireTempsPlein } from "./SalaireTempsPlein";
+import { SalaireTempsPartiel } from "./SalaireTempsPartiel";
 
 class Salaire extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
-    value: PropTypes.arrayOf(PropTypes.number).isRequired,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    value: PropTypes.shape({
+      isPartiel: PropTypes.bool,
+      periods: PropTypes.array,
+      derniersMois: PropTypes.arrayOf(PropTypes.number)
+    }).isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
 
@@ -20,119 +24,50 @@ class Salaire extends React.Component {
     nextDisabled: false
   };
 
-  constructor(props, ...args) {
-    super(props, ...args);
-    this.state = {
-      salaires: props.value
-    };
-  }
-
-  onSalaireClick = i => e => {
-    const value = parseFloat(e.target.value);
-    if (value === 0) {
-      this.updateSalaireValue(i, "");
-    }
-  };
-
-  onSalaireBlur = i => e => {
-    // update below fields values when empty
-    const value = parseFloat(e.target.value);
-    if (!value) {
-      this.updateSalaireValue(i, 0);
-      return;
-    }
-    const curSalaires = [...this.state.salaires];
-    let j = i + 1;
-    while (j < curSalaires.length) {
-      if (parseFloat(curSalaires[j]) > 0) {
-        break;
-      }
-      curSalaires[j] = value;
-      j++;
-    }
-    this.setState(
-      {
-        salaires: curSalaires
-      },
-      () => {
-        if (this.props.onChange) {
-          this.props.onChange(this.state.salaires);
-        }
-      }
-    );
-  };
-  updateSalaireValue = (index, value, cb) => {
-    this.setState(curState => {
-      const curSalaires = [...curState.salaires];
-      curSalaires[index] = value;
-      return {
-        salaires: curSalaires
-      };
-    }, cb);
-  };
-  updateSalaire = i => e => {
-    // update a single row
-    const value = parseFloat(e.target.value) || 0;
-    this.updateSalaireValue(i, value, () => {
-      if (this.props.onChange) {
-        this.props.onChange(this.state.salaires);
-      }
+  onTempsPartielChange = event => {
+    const { value } = this.props;
+    const hasTempsPartiel = event.target.value === "yes";
+    this.props.onChange({
+      ...value,
+      isPartiel: hasTempsPartiel
     });
   };
+
   render() {
-    const { onPrevious, onNext, nextDisabled } = this.props;
+    const { onPrevious, onNext, nextDisabled, value, onChange } = this.props;
+    const SalaireComponent = value.isPartiel
+      ? SalaireTempsPartiel
+      : SalaireTempsPlein;
     return (
       <React.Fragment>
         <Section light>
-          <React.Fragment>
-            <h2>Derniers mois de salaire</h2>
-            <table width="100%" style={{ fontSize: "1.2em" }}>
-              <thead>
-                <tr>
-                  <td
-                    width={140}
-                    style={{ textAlign: "center", fontWeight: "bold" }}
-                  >
-                    Mois
-                  </td>
-                  <td
-                    width={200}
-                    style={{ textAlign: "center", fontWeight: "bold" }}
-                  >
-                    Salaire brut mensuel
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                {times(this.props.value.length).map(i => (
-                  <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
-                    <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
-                    <td style={{ textAlign: "center" }}>
-                      <input
-                        onBlur={this.onSalaireBlur(i)}
-                        onClick={this.onSalaireClick(i)}
-                        value={this.state.salaires[i]}
-                        onChange={this.updateSalaire(i)}
-                        style={{ ...inputStyle, width: 100 }}
-                        type="number"
-                      />
-                    </td>
-                    {i === 0 && (
-                      <td
-                        valign="middle"
-                        style={{ textAlign: "center", background: "#ddd" }}
-                        rowSpan={3}
-                      >
-                        trois derniers
-                        <br />
-                        mois de salaire
-                      </td>
-                    )}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </React.Fragment>
+          <RadioContainer>
+            <h2>
+              Votre quotité de temps de travail a-t-elle évoluée durant votre
+              contrat ?
+            </h2>
+            <Label>
+              <input
+                type="radio"
+                onChange={this.onTempsPartielChange}
+                name="has-temps-partiel"
+                value="yes"
+                checked={value.isPartiel === true}
+              />{" "}
+              Oui
+            </Label>
+            <Label>
+              <input
+                type="radio"
+                onChange={this.onTempsPartielChange}
+                name="has-temps-partiel"
+                value="no"
+                checked={value.isPartiel === false}
+              />{" "}
+              Non
+            </Label>
+          </RadioContainer>
+          <SalaireComponent onChange={onChange} value={value} />
         </Section>
         <Container>
           <PrevNextStepper
