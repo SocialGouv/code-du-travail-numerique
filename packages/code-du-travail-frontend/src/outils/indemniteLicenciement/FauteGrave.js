@@ -9,8 +9,8 @@ class FauteGrave extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.bool,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
 

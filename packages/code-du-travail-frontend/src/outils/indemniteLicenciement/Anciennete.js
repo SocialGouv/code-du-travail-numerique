@@ -9,8 +9,8 @@ class Anciennete extends React.Component {
   static propTypes = {
     value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
 
@@ -28,6 +28,7 @@ class Anciennete extends React.Component {
           <Label>
             <Input
               size={5}
+              name="anciennete"
               type="number"
               onFocus={e => {
                 if (e.target.value === "0") {

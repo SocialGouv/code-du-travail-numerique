@@ -9,7 +9,8 @@ class DateFinContrat extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.bool,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
   static defaultProps = {
@@ -18,7 +19,7 @@ class DateFinContrat extends React.Component {
   };
 
   render() {
-    const { onChange, value, onNext, nextDisabled } = this.props;
+    const { onChange, value, onNext, onPrevious, nextDisabled } = this.props;
     return (
       <React.Fragment>
         <Section light>
@@ -49,7 +50,11 @@ class DateFinContrat extends React.Component {
           </RadioContainer>
         </Section>
         <Container>
-          <PrevNextStepper onNext={onNext} nextDisabled={nextDisabled} />
+          <PrevNextStepper
+            onPrev={onPrevious}
+            onNext={onNext}
+            nextDisabled={nextDisabled}
+          />
         </Container>
       </React.Fragment>
     );

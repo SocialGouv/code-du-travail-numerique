@@ -15,8 +15,8 @@ class ChoixCC extends React.Component {
       ccName: PropTypes.string,
       ccId: PropTypes.string
     }),
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
 

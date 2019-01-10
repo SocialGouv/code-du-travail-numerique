@@ -9,8 +9,8 @@ class Primes extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
     value: PropTypes.number,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
   static defaultProps = {
@@ -31,6 +31,7 @@ class Primes extends React.Component {
             <Input
               size={5}
               type="number"
+              name="prime"
               onChange={e => onChange(parseFloat(e.target.value) || 0)}
               onFocus={e => {
                 if (e.target.value === "0") {

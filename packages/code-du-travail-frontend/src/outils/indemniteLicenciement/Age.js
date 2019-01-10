@@ -9,8 +9,8 @@ class Age extends React.Component {
   static propTypes = {
     value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
+    onPrevious: PropTypes.func,
+    onNext: PropTypes.func,
     nextDisabled: PropTypes.bool
   };
   static defaultProps = {
@@ -35,6 +35,7 @@ class Age extends React.Component {
           <h2>Quel est votre age ?</h2>
           <Label>
             <Input
+              name="age"
               size={5}
               type="number"
               onFocus={e => {
