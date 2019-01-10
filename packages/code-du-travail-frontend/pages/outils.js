@@ -26,18 +26,18 @@ const Source = ({ name }) => (
   </div>
 );
 
-const getOutilsFromCode = function(code) {
+const getOutilFromCode = function(code) {
   switch (code) {
     case "indemnite-licenciement":
       return {
-        title: "calculer une indemnité de licenciement",
-        outils: CalculateurIndemnite
+        title: "Calculer une indemnité de licenciement",
+        outil: CalculateurIndemnite
       };
 
     default:
       return {
-        title: "Outils introuvable",
-        outils: () => <BigError> Cet outils est introuvable </BigError>
+        title: "Outil introuvable",
+        outil: () => <BigError> Cet outil est introuvable </BigError>
       };
   }
 };
@@ -49,7 +49,7 @@ class Outils extends React.Component {
   }
   render() {
     const { data, router } = this.props;
-    const { outils: Outil, title } = getOutilsFromCode(data._source.slug);
+    const { outil: Outil, title } = getOutilFromCode(data._source.slug);
     return (
       <React.Fragment>
         <Head>

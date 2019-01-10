@@ -25,25 +25,25 @@ class SalaireTempsPlein extends React.Component {
     }
   };
 
-  onSalaireBlur = i => e => {
+  onSalaireBlur = startIndex => event => {
     // update below fields values when empty
-    const value = parseFloat(e.target.value);
+    const value = parseFloat(event.target.value);
     if (!value) {
-      this.updateSalaireValue(i, 0);
+      this.updateSalaireValue(startIndex, 0);
       return;
     }
-    const curSalaires = [...this.state.salaires];
-    let j = i + 1;
-    while (j < curSalaires.length) {
-      if (parseFloat(curSalaires[j]) > 0) {
-        break;
-      }
-      curSalaires[j] = value;
-      j++;
-    }
+
+    const { salaires } = this.state;
+    let endIndex = salaires
+      .slice(startIndex + 1)
+      .findIndex(item => parseFloat(item) > 0);
+    endIndex = endIndex === -1 ? salaires.length : endIndex + startIndex + 1;
+
     this.setState(
       {
-        salaires: curSalaires
+        salaires: salaires.map(
+          (item, i) => (i > startIndex && i < endIndex ? value : item)
+        )
       },
       () => {
         if (this.props.onChange) {
