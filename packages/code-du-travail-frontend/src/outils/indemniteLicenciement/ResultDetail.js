@@ -101,19 +101,21 @@ class ResultDetail extends React.Component {
               </Row>
             </tbody>
           </table>
-          <div style={{ fontSize: "1.5em" }}>
-            <MathJax.Context input="ascii">
-              <div
-                style={{
-                  fontSize: "1.5em",
-                  textAlign: "center",
-                  fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
-                }}
-              >
-                <MathJax.Node inline>{formula}</MathJax.Node>
-              </div>
-            </MathJax.Context>
-          </div>
+          {salaireRef > 0 && (
+            <div style={{ fontSize: "1.5em" }}>
+              <MathJax.Context input="ascii">
+                <div
+                  style={{
+                    fontSize: "1.5em",
+                    textAlign: "center",
+                    fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
+                  }}
+                >
+                  <MathJax.Node inline>{formula}</MathJax.Node>
+                </div>
+              </MathJax.Context>
+            </div>
+          )}
         </Section>
       </React.Fragment>
     );

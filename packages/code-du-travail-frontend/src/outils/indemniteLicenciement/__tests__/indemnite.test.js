@@ -180,6 +180,68 @@ const tests = [
       isR12342: true
     },
     expected: 30333.333333333336
+  },
+  {
+    title: "2k, 15m, pas de date, 10m tps plein, 5mois tps partiel",
+    data: {
+      salaires: {
+        isPartiel: true,
+        periods: [
+          {
+            type: "temps-plein",
+            duree: 10,
+            salaire: 2000
+          },
+          {
+            type: "temps-partiel",
+            duree: 5,
+            salaire: 1000
+          }
+        ]
+      },
+      primes: 0,
+      anciennete: 15
+    },
+    expected: 520.8333333333333
+  },
+  {
+    title: "2k, 15m, 2018-10-22, inaptitude",
+    data: {
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
+      primes: 0,
+      anciennete: 15,
+      isR12342: false,
+      inaptitude: true
+    },
+    expected: 1250
+  },
+  {
+    title: "2k, 15m, pas de date, 10m tps plein, 5mois tps partiel, inaptitude",
+    data: {
+      salaires: {
+        isPartiel: true,
+        periods: [
+          {
+            type: "temps-plein",
+            duree: 10,
+            salaire: 2000
+          },
+          {
+            type: "temps-partiel",
+            duree: 5,
+            salaire: 1000
+          }
+        ]
+      },
+      inaptitude: true,
+      primes: 0,
+      anciennete: 15
+    },
+    expected: 1041.6666666666665
   }
 ];
 describe("getIndemnite", () => {
