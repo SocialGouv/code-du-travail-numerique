@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
 
-import { SimpleSwitch } from "./SimpleSwitch";
+import { SimpleSwitch } from "../../common/SimpleSwitch";
 import { PrevNextStepper } from "./PrevNextStepper";
 
 class FauteGrave extends React.Component {
