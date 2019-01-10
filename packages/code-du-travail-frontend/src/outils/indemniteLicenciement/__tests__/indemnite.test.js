@@ -1,10 +1,14 @@
-import getIndemnite from "./indemnite";
+import getIndemnite from "../indemnite";
 
 const tests = [
   {
     title: "2k, 15m, pas de date",
     data: {
-      salaires: Array.from({ length: 12 }).fill(2000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
       primes: 0,
       anciennete: 15
     },
@@ -13,7 +17,11 @@ const tests = [
   {
     title: "4k, 15 ans, pas de date",
     data: {
-      salaires: Array.from({ length: 12 }).fill(4000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(4000)
+      },
       primes: 0,
       anciennete: 180
     },
@@ -22,7 +30,11 @@ const tests = [
   {
     title: "2k, 15m, pas de date, faute grave",
     data: {
-      salaires: Array.from({ length: 12 }).fill(2000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
       primes: 0,
       fauteGrave: true,
       anciennete: 15
@@ -32,7 +44,11 @@ const tests = [
   {
     title: "4k, 15m, pas de date, faute grave",
     data: {
-      salaires: Array.from({ length: 12 }).fill(4000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(4000)
+      },
       primes: 0,
       fauteGrave: true,
       anciennete: 15
@@ -42,7 +58,11 @@ const tests = [
   {
     title: "2k, 15m, 2018-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(2000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
       primes: 0,
       anciennete: 15,
       isR12342: false
@@ -52,7 +72,11 @@ const tests = [
   {
     title: "2k, 15m, 2016-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(2000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
       primes: 0,
       anciennete: 15,
       isR12342: true
@@ -62,7 +86,11 @@ const tests = [
   {
     title: "4k, 25m, 2018-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(4000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(4000)
+      },
       primes: 0,
       anciennete: 25,
       isR12342: false
@@ -72,7 +100,11 @@ const tests = [
   {
     title: "4k, 25m, 2016-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(4000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(4000)
+      },
       primes: 0,
       anciennete: 25,
       isR12342: true
@@ -82,7 +114,11 @@ const tests = [
   {
     title: "2k+4k, 15m, 2018-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(2000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
       primes: 4000,
       anciennete: 15,
       isR12342: false
@@ -92,7 +128,11 @@ const tests = [
   {
     title: "2k+4k, 15m, 2016-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(2000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(2000)
+      },
       primes: 4000,
       anciennete: 15,
       isR12342: true
@@ -102,7 +142,11 @@ const tests = [
   {
     title: "4k+4k, 25m, 2018-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(4000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(4000)
+      },
       primes: 4000,
       anciennete: 25,
       isR12342: false
@@ -112,7 +156,11 @@ const tests = [
   {
     title: "1500, 12ans 9mois, 2016-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(1500),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(1500)
+      },
       primes: 0,
       anciennete: 12 * 12 + 9,
       isR12342: true
@@ -122,7 +170,11 @@ const tests = [
   {
     title: "4k+4k, 25 ans, 2016-10-22",
     data: {
-      salaires: Array.from({ length: 12 }).fill(4000),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(4000)
+      },
       primes: 4000,
       anciennete: 25 * 12,
       isR12342: true
@@ -147,7 +199,11 @@ describe("getIndemnite", () => {
   it("should return indemnite when anciennete >= 8", () => {
     const res = getIndemnite({
       ...tests[0].data,
-      salaires: Array.from({ length: 12 }).fill(1500),
+      salaires: {
+        isPartiel: false,
+        periods: [],
+        derniersMois: Array.from({ length: 12 }).fill(1500)
+      },
       anciennete: 8
     });
     expect(res.indemnite).toEqual(250);
