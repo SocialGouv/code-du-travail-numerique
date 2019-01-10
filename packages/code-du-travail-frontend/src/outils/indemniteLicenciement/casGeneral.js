@@ -2,14 +2,12 @@ import { Anciennete } from "./Anciennete";
 import { FauteGrave } from "./FauteGrave";
 import { Salaire } from "./Salaire";
 import { Primes } from "./Prime";
-import { TempsPartiel } from "./TempsPartiel";
 import { DateFinContrat } from "./DateFinContrat";
 import { ChoixCC } from "./ChoixCCN";
 
 export const steps = [
   { component: DateFinContrat, key: "isR12342", type: "base" },
   { component: Anciennete, key: "anciennete", type: "base" },
-  // { component: TempsPartiel, key: "tempspartiel", type: "base" },
   { component: FauteGrave, key: "fauteGrave", type: "base" },
   { component: Salaire, key: "salaires", type: "base" },
   { component: Primes, key: "primes", type: "base" },
@@ -19,16 +17,15 @@ export const steps = [
 export const initialData = {
   anciennete: 12,
   fauteGrave: false,
-  salaires: Array.from({ length: 12 }).fill(0),
+  salaires: {
+    isPartiel: false,
+    derniersMois: Array.from({ length: 12 }).fill(0),
+    periods: []
+  },
   primes: 0,
   isR12342: false,
   convention: {
     hasCC: false
-  },
-  tempspartiel: {
-    isPartiel: false,
-    multi: false,
-    perdiods: []
   },
   steps
 };
