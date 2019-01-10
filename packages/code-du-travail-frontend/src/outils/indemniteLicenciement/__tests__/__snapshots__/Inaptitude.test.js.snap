@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Inaptitude /> should render 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        <h2>
+          Le licenciement a t-il fait il suite au prononcé d'une inaptitude d'origine professionnelle ( accident du travail ou maladie professionnelle) ?
+        </h2>
+        <div
+          class="sc-htpNat cKNzUf"
+        >
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="inaptitude"
+              type="radio"
+            />
+            <span>
+              Oui
+            </span>
+          </label>
+          <label
+            class="sc-bwzfXH lbnHsv"
+          >
+            <input
+              name="inaptitude"
+              type="radio"
+            />
+            <span>
+              Non
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="container"
+  >
+    <div
+      style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

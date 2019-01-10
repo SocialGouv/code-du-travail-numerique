@@ -12,7 +12,8 @@ const getIndemnite = data => {
     primes,
     fauteGrave,
     anciennete,
-    calculConvention
+    calculConvention,
+    inaptitude
   } = data;
   let salaireRef;
   let moyenne3DerniersMois;
@@ -68,6 +69,10 @@ const getIndemnite = data => {
         salaireRef
       )} * (${round(anciennete / 12)} - 10))`;
     }
+  }
+  if (inaptitude) {
+    indemnite *= 2;
+    formula += "* 2";
   }
 
   const errors = [];

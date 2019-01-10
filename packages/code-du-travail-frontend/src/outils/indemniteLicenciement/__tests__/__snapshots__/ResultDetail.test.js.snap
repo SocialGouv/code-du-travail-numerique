@@ -113,9 +113,6 @@ exports[`<ResultDetail /> should render 1`] = `
             </tr>
           </tbody>
         </table>
-        <div
-          style="font-size: 1.5em;"
-        />
       </div>
     </div>
   </section>
@@ -234,9 +231,6 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
             </tr>
           </tbody>
         </table>
-        <div
-          style="font-size: 1.5em;"
-        />
       </div>
     </div>
   </section>
@@ -332,9 +326,6 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
             </tr>
           </tbody>
         </table>
-        <div
-          style="font-size: 1.5em;"
-        />
       </div>
     </div>
   </section>
