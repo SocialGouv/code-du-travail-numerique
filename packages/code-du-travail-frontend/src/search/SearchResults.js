@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 import { Alert, NoAnswer, Button } from "@cdt/ui";
 
@@ -9,18 +10,18 @@ import { Link } from "../../routes";
 
 import { getLabelBySource, getRouteBySource } from "../sources";
 
-const ContentBody = ({ _source, excerpt, footer = null }) => (
+const ContentBody = ({ _source, excerpt, sourceType }) => (
   <article className={_source.source}>
     <header>
-      <h3>{_source.title}</h3>
+      <Title>
+        <SourceType>{sourceType} | </SourceType>
+        {_source.title}
+      </Title>
     </header>
-    <blockquote
-      className="text-quote"
+    <Excerpt
       dangerouslySetInnerHTML={{ __html: excerpt }}
+      className="text-quote"
     />
-    <footer>
-      <span className="external-link__before">{footer}</span>
-    </footer>
   </article>
 );
 
@@ -41,7 +42,6 @@ const ResultItem = ({ _source, highlight, query }) => {
 
   const route = getRouteBySource(_source.source);
   const anchor = _source.anchor ? _source.anchor.slice(1) : "";
-
   // internal links
   if (route) {
     return (
@@ -54,8 +54,8 @@ const ResultItem = ({ _source, highlight, query }) => {
           <a className="search-results-link">
             <ContentBody
               _source={_source}
+              sourceType={getLabelBySource(_source.source)}
               excerpt={excerpt}
-              footer={getLabelBySource(_source.source)}
             />
           </a>
         </Link>
@@ -72,11 +72,7 @@ const ResultItem = ({ _source, highlight, query }) => {
         rel="noopener noreferrer"
         className="search-results-link"
       >
-        <ContentBody
-          _source={_source}
-          excerpt={excerpt}
-          footer={getLabelBySource(_source.source)}
-        />
+        <ContentBody _source={_source} excerpt={excerpt} />
       </a>
     </li>
   );
@@ -172,3 +168,17 @@ class SearchResults extends React.Component {
 }
 
 export default SearchResults;
+const Title = styled.h3`
+  font-size: 1.1rem;
+  margin-top: 0;
+`;
+
+const SourceType = styled.span`
+  color: #53657d;
+  font-size: 1rem;
+  margin-left: 0.25em;
+`;
+
+const Excerpt = styled.blockquote`
+  margin: 0;
+`;
