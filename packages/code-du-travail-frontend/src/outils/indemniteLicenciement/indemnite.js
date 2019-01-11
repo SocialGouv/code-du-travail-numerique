@@ -113,6 +113,7 @@ const getIndemnite = data => {
   return {
     isSmallAnciennete,
     anciennete,
+    inaptitude,
     isR12342,
     moyenneSalaires,
     moyenne3DerniersMois,
