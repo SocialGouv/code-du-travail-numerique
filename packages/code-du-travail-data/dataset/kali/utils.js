@@ -1,9 +1,12 @@
-async function batchPromise(list, size, callback, progress) {
+async function batchPromise(list, size, callback) {
   let results = [];
+  let nbBatch = 0;
   for (items of batch(list, size)) {
-    const values = await Promise.all(items.map(callback));
+    const values = await Promise.all(
+      items.map((item, i) => callback(item, i + nbBatch * size, list))
+    );
+    nbBatch += 1;
     results = [...results, ...values];
-    if (progress) progress({ progress: results.length, total: list.length });
   }
   return results;
 }
@@ -14,13 +17,19 @@ function batch(items, size) {
   });
 }
 
-function range(start, end, size) {
-  return Array.from({ length: Math.ceil((end - start) / size) }).map(
-    (_, i) => i * size
+function range(start, end, size = 1) {
+  return Array.from(
+    { length: Math.ceil((end - start) / size) },
+    (_, i) => start + i * size
   );
 }
 
+function times(size) {
+  return Array.from({ length: size }, (_, i) => i);
+}
+
 module.exports = {
+  times,
   range,
   batch,
   batchPromise
