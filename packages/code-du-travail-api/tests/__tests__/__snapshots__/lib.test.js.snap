@@ -97,20 +97,19 @@ Object {
 `;
 
 exports[`printResultsAbstracts should output absctract 1`] = `
-"     master      PR        +/-
-  ===================================
-  +   10%      20%      10%
+"\`\`\`diff
+    master     PR      +/-
+==========================================
++   10%      20%      10%
+==========================================
+\`\`\`
   "
 `;
 
 exports[`printResultsDetails should output absctract 1`] = `
 "| file | Δ |  |
-  |---|---|---|
-  
-  | Fromage | \`  10% <20%> (10%)\` | :arrow_up:
-  
-  | Entrées | \`  50% <20%> (30%)\` | :arrow_down:
-  
-  | Legumes | \`  0% <100%> (100%)\` | :arrow_up:
-  "
+|---|---|---|
+| Fromage | \`  10% <20%> (10%)\` | :arrow_up: |
+| Entrées | \`  50% <20%> (30%)\` | :arrow_down: |
+| Legumes | \`  0% <100%> (100%)\` | :arrow_up: |"
 `;

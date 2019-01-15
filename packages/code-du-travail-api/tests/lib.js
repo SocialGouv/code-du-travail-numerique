@@ -61,11 +61,14 @@ function printResultsAbstract(results) {
   const prevScore = results.map(item => item.prevScore || 0).reduce(sum, 0);
   const globalScore = results.map(item => item.score).reduce(sum, 0);
   const sign = globalScore > prevScore ? "+" : "-";
-  return `     master      PR        +/-
-  ===================================
-  ${sign}   ${percent(prevScore / results.length)}      ${percent(
+  return `\`\`\`diff
+    master     PR      +/-
+==========================================
+${sign}   ${percent(prevScore / results.length)}      ${percent(
     globalScore / results.length
   )}      ${percent((globalScore - prevScore) / results.length)}
+==========================================
+\`\`\`
   `;
 }
 
@@ -73,16 +76,15 @@ function printResultsDetails(results) {
   const emoji = (prev, next) => (next > prev ? ":arrow_up:" : ":arrow_down:");
   const output = results
     .map(
-      ({ Request, prevScore, score, diffScore }) => `
-  | ${Request} | \`  ${percent(prevScore)} <${percent(score)}> (${percent(
-        diffScore
-      )})\` | ${emoji(prevScore, score)}
-  `
+      ({ Request, prevScore, score, diffScore }) =>
+        `| ${Request} | \`  ${percent(prevScore)} <${percent(
+          score
+        )}> (${percent(diffScore)})\` | ${emoji(prevScore, score)} |`
     )
-    .join("");
+    .join("\n");
   return `| file | Δ |  |
-  |---|---|---|
-  ${output}`;
+|---|---|---|
+${output}`;
 }
 
 module.exports = {
