@@ -7,13 +7,6 @@ const urls = require("./ministere-travail-liste-fiches.json");
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
 
-// restore base image url
-const fixImages = html =>
-  html.replace(
-    /src="((?!https?:\/\/)[^"]*)"/g,
-    `src="https://travail-emploi.gouv.fr/$1"`
-  );
-
 function parseDom(dom, url) {
   const summary = $$(dom.window.document, ".navigation-article li")
     .map(n => n.textContent.trim())
@@ -43,21 +36,42 @@ function parseDom(dom, url) {
     }
   });
 
+  $$(article, "img")
+    .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
+    .forEach(node => {
+      node.setAttribute(
+        "src",
+        `https://travail-emploi.gouv.fr/${node
+          .getAttribute("src")
+          .replace(/^\//, "")}`
+      );
+    });
+
   const dateRaw = $(article, ".date--maj") || $(article, ".date--publication");
   const [date] = dateRaw.textContent.match(/([0-9\.]+)$/);
   const [day, month, year] = date.split(".");
 
+  // get Intro image + text before first Question
+  let elIntro = $(article, ".main-article__texte > *");
+  let intro = "";
+
+  while (elIntro && elIntro.tagName !== "H3") {
+    intro += elIntro.outerHTML.trim();
+    elIntro = elIntro.nextElementSibling;
+  }
+
+  const chapo = $(article, ".main-article__chapo");
+
   let result = {
     articles,
     summary,
+    intro: `${chapo ? chapo.innerHTML.trim() : ""}${intro}`,
     title: $(article, "h1").textContent.trim(),
     text_full: $(article, ".main-article__texte").textContent.trim(),
-    html: fixImages($(article, ".main-article__texte").innerHTML.trim()),
     text_by_section: [],
     date: `${day}/${month}/20${year}`,
     url
   };
-
   const articleChildren = $$(article, "*");
   articleChildren
     .filter(el => el.getAttribute("id"))
@@ -66,11 +80,13 @@ function parseDom(dom, url) {
         let subSection = {
           title: el.textContent.trim(),
           text: "",
+          html: "",
           url: `${url}#${el.id}`
         };
         let nextEl = el.nextElementSibling;
         while (nextEl && nextEl.tagName !== "H3") {
           subSection.text += nextEl.textContent.trim();
+          subSection.html += nextEl.outerHTML;
           nextEl = nextEl.nextElementSibling;
         }
         result.text_by_section.push(subSection);
@@ -91,13 +107,15 @@ async function parseFiche(url) {
   } catch (error) {
     if (error.statusCode) {
       spinner.fail(error.options.uri).start();
+    } else {
+      spinner.fail(`${url} - ${error}`).start();
     }
     return null;
   }
 }
 
 async function parseFiches(urls) {
-  results = await batchPromise(urls, 10, parseFiche);
+  results = await batchPromise(urls, 6, parseFiche);
   spinner.stop().clear();
   console.log(JSON.stringify(results.filter(Boolean), null, 2));
 }
