@@ -10,7 +10,8 @@
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
-    "test": "jest"
+    "test": "jest",
+    "elastic": "node tests/index.js"
   },
   "repository": {
     "type": "git",
