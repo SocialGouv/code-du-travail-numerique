@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2019-01-15)
+
+
+### Bug Fixes
+
+* **frontend:** change trackEvent value for feedback ([#404](https://github.com/SocialGouv/code-du-travail-numerique/issues/404)) ([26b664b](https://github.com/SocialGouv/code-du-travail-numerique/commit/26b664b))
+* **outils:** add wording for indeminite speciale ([#419](https://github.com/SocialGouv/code-du-travail-numerique/issues/419)) ([2fae3ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/2fae3ce))
+
+
+### Features
+
+* **data:** index one question only from fiche ministere travail ([#423](https://github.com/SocialGouv/code-du-travail-numerique/issues/423)) ([1416995](https://github.com/SocialGouv/code-du-travail-numerique/commit/1416995)), closes [#270](https://github.com/SocialGouv/code-du-travail-numerique/issues/270)
+* **frontend:** indemnite licenciement temps partiel ([#410](https://github.com/SocialGouv/code-du-travail-numerique/issues/410)) ([be52dc3](https://github.com/SocialGouv/code-du-travail-numerique/commit/be52dc3)), closes [#411](https://github.com/SocialGouv/code-du-travail-numerique/issues/411) [#131](https://github.com/SocialGouv/code-du-travail-numerique/issues/131) [#310](https://github.com/SocialGouv/code-du-travail-numerique/issues/310)
+* **ui:** update search result ui ([#420](https://github.com/SocialGouv/code-du-travail-numerique/issues/420)) ([3750882](https://github.com/SocialGouv/code-du-travail-numerique/commit/3750882))
+
+
+
+
+
 ## [1.6.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.6.1...v1.6.2) (2018-12-19)
 
 

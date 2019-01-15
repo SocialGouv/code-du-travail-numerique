@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2019-01-15)
+
+
+### Bug Fixes
+
+* **frontend:** change trackEvent value for feedback ([#404](https://github.com/SocialGouv/code-du-travail-css/issues/404)) ([26b664b](https://github.com/SocialGouv/code-du-travail-css/commit/26b664b))
+
+
+### Features
+
+* **ui:** update search result ui ([#420](https://github.com/SocialGouv/code-du-travail-css/issues/420)) ([3750882](https://github.com/SocialGouv/code-du-travail-css/commit/3750882))
+
+
+
+
+
 ## [1.6.2](https://github.com/SocialGouv/code-du-travail-css/compare/v1.6.1...v1.6.2) (2018-12-19)
 
 **Note:** Version bump only for package @cdt/css
