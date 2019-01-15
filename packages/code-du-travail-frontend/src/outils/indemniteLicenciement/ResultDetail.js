@@ -27,6 +27,7 @@ Row.propTypes = {
 class ResultDetail extends React.Component {
   static propTypes = {
     indemnite: PropTypes.number,
+    inaptitude: PropTypes.bool,
     moyenneSalaires: PropTypes.number,
     moyenne3DerniersMois: PropTypes.number,
     anciennete: PropTypes.number,
@@ -41,6 +42,7 @@ class ResultDetail extends React.Component {
   render() {
     const {
       indemnite,
+      inaptitude,
       moyenneSalaires,
       moyenne3DerniersMois,
       salaireRef,
@@ -49,10 +51,9 @@ class ResultDetail extends React.Component {
       salaires,
       formula
     } = this.props;
-
     const infoFinContrat = isR12342 ? (
       <React.Fragment>
-        Base minimum : fin de contrat &lt;= au
+        Base minimum : fin de contrat &lt;= au{" "}
         <a href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000019225838&cidTexte=LEGITEXT000006072050&categorieLien=id&dateTexte=20170926">
           27/09/2017
         </a>
@@ -76,6 +77,12 @@ class ResultDetail extends React.Component {
                 <em>
                   Sur la base du calcul de l&apos;indemnité minimum légale de
                   licenciement.
+                  {inaptitude && (
+                    <React.Fragment>
+                      <br /> Ce montant prend en compte l&apos;indemnité
+                      spéciale de licenciement.
+                    </React.Fragment>
+                  )}
                 </em>
               </p>
             </Header>
