@@ -32,20 +32,21 @@ exports[`<SearchQuery/> should render results 1`] = `
                     class="faq"
                   >
                     <header>
-                      <h3>
+                      <h3
+                        class="sc-bdVaJa kBfMAi"
+                      >
+                        <span
+                          class="sc-bwzfXH aKpTk"
+                        >
+                          FAQ
+                           | 
+                        </span>
                         Mer il est fou!
                       </h3>
                     </header>
                     <blockquote
-                      class="text-quote"
+                      class="text-quote sc-htpNat bhpHJD"
                     />
-                    <footer>
-                      <span
-                        class="external-link__before"
-                      >
-                        FAQ
-                      </span>
-                    </footer>
                   </article>
                 </a>
               </li>
