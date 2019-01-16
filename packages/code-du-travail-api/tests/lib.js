@@ -1,4 +1,4 @@
-const { range } = require("@cdt/data...kali/utils");
+const range = require("get-range");
 
 function sum(a, b) {
   return a + b;
@@ -26,7 +26,7 @@ function computeLineScore(line, hits) {
     result =>
       result._source.url || `${result._source.source}/${result._source.slug}`
   );
-  const expectedValues = range(1, 6).map(i => line[`Expected_${i}`]);
+  const expectedValues = [...range(1, 6)].map(i => line[`Expected_${i}`]);
 
   const resultsRank = expectedValues.reduce((state, url, i) => {
     const position = resultsUrl.indexOf(url);
