@@ -21,7 +21,7 @@
     ],
     "tags": {
       "theme": "entretien préalable",
-      "themes": [3760],
+      "themes": [1120],
       "type_de_contrat": "CDI"
     },
     "date_redaction": "26/10/2018",
@@ -37,7 +37,7 @@
     ],
     "tags": {
       "theme": "rupture conventionnelle",
-      "themes": [],
+      "themes": [1720],
       "type_de_contrat": "CDI",
       "profil": "salarié"
     },
@@ -47,12 +47,12 @@
     "filename": "demande-rdv-rupture-conventionnelle.docx"
   },
   {
-    "titre": "demande de paiement de salaire",
+    "titre": "Demande de paiement de salaire",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [""],
     "tags": {
       "theme": "",
-      "themes": [],
+      "themes": [42100, 42300],
       "type_de_contrat": "CDI",
       "profil": "salarié"
     },
@@ -70,7 +70,7 @@
     ],
     "tags": {
       "theme": "période d'essai",
-      "themes": [3720],
+      "themes": [3720, 3730],
       "type_de_contrat": "CDI",
       "profil": "salarié"
     },
@@ -85,7 +85,7 @@
     "questions": ["comment rédiger une rupture de période d'essai ?"],
     "tags": {
       "theme": "période d'essai",
-      "themes": [3730],
+      "themes": [3720, 3730],
       "type_de_contrat": "CDI",
       "profil": "employeur"
     },
@@ -103,7 +103,7 @@
     ],
     "tags": {
       "theme": "congès payés",
-      "themes": [],
+      "themes": [5900, 6000, 6300],
       "type_de_contrat": "",
       "profil": "salarié"
     },
@@ -118,7 +118,7 @@
     "questions": ["Récupérer les documents relatif à la fin de contrat ?"],
     "tags": {
       "theme": "fin de contrat",
-      "themes": [],
+      "themes": [200],
       "type_de_contrat": "",
       "profil": "salarié"
     },
@@ -133,7 +133,7 @@
     "questions": ["Comment se faire payer ses heures supplémenantaire ?"],
     "tags": {
       "theme": "heures supplementaires",
-      "themes": [],
+      "themes": [20310],
       "type_de_contrat": "",
       "profil": "salarié"
     },
@@ -150,7 +150,7 @@
     ],
     "tags": {
       "theme": "renvoi oral",
-      "themes": [],
+      "themes": [20310],
       "type_de_contrat": "",
       "profil": "salarié"
     },
@@ -165,7 +165,7 @@
     "questions": [""],
     "tags": {
       "theme": "Temps de trajet",
-      "themes": [],
+      "themes": [21740, 21750],
       "type_de_contrat": "",
       "profil": "salarié",
       "branche": "bâtiment"
@@ -181,7 +181,7 @@
     "questions": [""],
     "tags": {
       "theme": "bulletin de salaire",
-      "themes": [],
+      "themes": [42200],
       "type_de_contrat": "",
       "profil": "salarié"
     },
@@ -226,7 +226,7 @@
     "questions": ["comment rompre un contrat d’apprentissage"],
     "tags": {
       "theme": "contrat d’apprentissage",
-      "themes": [3760],
+      "themes": [57600],
       "type_de_contrat": "CDI"
     },
     "date_redaction": "26/10/2018",
@@ -239,7 +239,7 @@
     "questions": ["comment rompre un CDD"],
     "tags": {
       "theme": "fin de contrat",
-      "themes": [],
+      "themes": [50500],
       "type_de_contrat": "CDD"
     },
     "date_redaction": "26/10/2018",
@@ -248,13 +248,13 @@
     "filename": "rupture-commun-accord-du-cdd.docx"
   },
   {
-    "titre": "Signalement de harcellement et maltraitance sur mineur au travail",
+    "titre": "Signalement de harcèlement et maltraitance sur mineur au travail",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
       "Comment mettre fin à un contrat d'apprentissage en cas de maltraitance au travail"
     ],
     "tags": {
-      "theme": "fin de contrat",
+      "theme": "harcèlement",
       "themes": [],
       "type_de_contrat": "Contrat d'apprentissage"
     },
@@ -264,14 +264,14 @@
     "filename": "signalement-harcelement-mineur.docx"
   },
   {
-    "titre": "Signalement de harcellement et maltraitance au travail",
+    "titre": "Signalement de harcèlement et maltraitance au travail",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
       "Quelle sont les solutions en cas de maltraitance ou de harcellement au travail"
     ],
     "tags": {
-      "theme": "fin de contrat",
-      "themes": [],
+      "theme": ["fin de contrat", "apprentissage", "harcèlement"],
+      "themes": [59700, 10300],
       "type_de_contrat": "Contrat d'apprentissage"
     },
     "date_redaction": "26/10/2018",
@@ -284,7 +284,7 @@
     "questions": ["Comment faire une demande de temps partiel"],
     "tags": {
       "theme": "temps partiel",
-      "themes": [],
+      "themes": [21508],
       "type_de_contrat": ""
     },
     "date_redaction": "26/10/2018",
