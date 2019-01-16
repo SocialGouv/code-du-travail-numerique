@@ -1,101 +1,100 @@
 .categories {
-    /* Gutters between items. */
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
-    --flex-gutter-size: 10px;
+  /* Gutters between items. */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
+  --flex-gutter-size: 10px;
 }
 
 .categories header {
-    margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
 }
 
 .categories__list {
-    display: flex; /* Flex layout so items have equal height. */
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    list-style-type: none;
-    padding: 0;
-    /* Use negative margins on sides to create gutters that do not also
+  display: flex; /* Flex layout so items have equal height. */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  /* Use negative margins on sides to create gutters that do not also
     create a gutter at the edges of the container. */
-    margin: calc(var(--flex-gutter-size) * -1);
+  margin: calc(var(--flex-gutter-size) * -1);
 }
 
 .categories__list-item {
+  /*width:calc(100%/4 - 2 * var(--flex-gutter-size)) ;*/
+  /*flex: 0 0 250px;*/
+  /*margin: var(--flex-gutter-size);*/ /* Gutters between items. */
+  width: media(
+    calc(100% / 4 - 2 * var(--flex-gutter-size)),
+    (--bp-tablet) calc(100% / 3 - 2 * var(--flex-gutter-size)),
+    (--bp-mobile) calc(100% - 2 * var(--flex-gutter-size))
+  );
 
-    /*width:calc(100%/4 - 2 * var(--flex-gutter-size)) ;*/
-    /*flex: 0 0 250px;*/
-    /*margin: var(--flex-gutter-size);*/ /* Gutters between items. */
-    width: media(
-        calc(100%/4 - 2 * var(--flex-gutter-size)),
-        (--bp-tablet) calc(100%/3 - 2 * var(--flex-gutter-size)),
-        (--bp-mobile) calc(100% - 2 * var(--flex-gutter-size)),
-    );
+  margin: var(--flex-gutter-size);
+  text-align: center;
 
-    margin: var(--flex-gutter-size);
-    text-align: center;
+  & a,
+  & a:link,
+  & a:visited {
+    display: block;
+    height: 100%;
+    padding: var(--spacing-small) var(--spacing-base);
+    border: 1px solid var(--color-element-border);
+    border-radius: var(--border-radius-base);
+    background: var(--color-white);
+    color: var(--color-light-text);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
 
-    & a,
-    & a:link,
-    & a:visited {
-        display: block;
-        height: 100%;
-        padding: var(--spacing-small) var(--spacing-base);
-        border: 1px solid var(--color-element-border);
-        border-radius: var(--border-radius-base);
-        background: var(--color-white);
-        color: var(--color-light-text);
-        text-decoration: none;
-        transition: all .2s ease;
-    }
+  & a:focus,
+  & a:hover,
+  & a:active {
+    transform: scale(1.1);
+    border: 1px solid var(--color-focus);
+    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
 
-    & a:focus,
-    & a:hover,
-    & a:active {
-        transform: scale(1.1);
-        border: 1px solid var(--color-focus);
-        box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-    }
+  & a:focus h3,
+  & a:hover h3,
+  & a:active h3 {
+    /*text-decoration: underline;*/
+  }
 
-    & a:focus h3,
-    & a:hover h3,
-    & a:active h3 {
-        /*text-decoration: underline;*/
+  & h3,
+  & p {
+    font-size: 0.9375rem;
+  }
 
-    }
-
-    & h3, & p {
-        font-size: 0.9375rem;
-    }
-
-    & a img {
-        display: inline-block;
-        width: 2.5rem;
-        margin: var(--spacing-small) 0;
-    }
+  & a img {
+    display: inline-block;
+    width: 2.5rem;
+    margin: var(--spacing-small) 0;
+  }
 }
 
 .categories__list-item--small {
+  & a,
+  & a:link,
+  & a:visited {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
 
-    & a,
-    & a:link,
-    & a:visited {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        text-align: left;
-    }
+  & figure {
+    margin: 0.5rem;
+  }
 
-    & figure {
-        margin: .5rem;
-    }
+  & img {
+    width: 2.5rem;
+    margin: 0.2rem auto;
+  }
 
-    & img {
-        width: 2.5rem;
-        margin: .2rem auto;
-    }
-
-    & h3, & p {
-        font-size: .8125rem;
-        margin: .5rem
-    }
+  & h3,
+  & p {
+    font-size: 0.8125rem;
+    margin: 0.5rem;
+  }
 }

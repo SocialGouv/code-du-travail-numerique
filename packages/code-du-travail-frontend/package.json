@@ -47,6 +47,7 @@
     "css-loader": "^1.0.0",
     "eslint": "^5.7.0",
     "jest": "^23.6.0",
+    "next-plugin-transpile-modules": "^1.0.0",
     "prettier": "^1.14.3",
     "react-testing-library": "^5.2.3"
   },

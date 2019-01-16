@@ -29,6 +29,7 @@
   align-items: center;
   margin: 0.8rem;
   border: none;
+  max-width: 200px;
   border-radius: var(--border-radius-base);
   background-color: var(--color-lighter-grey);
 }
@@ -76,6 +77,7 @@ input[type="search"].search__input {
 
   background: var(--color-white);
 
+  height: 100%;
   margin: 0;
   max-width: 100%;
   width: 100%;

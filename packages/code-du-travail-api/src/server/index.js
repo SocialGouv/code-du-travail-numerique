@@ -8,12 +8,14 @@ require("elastic-apm-node").start({
 
 require("dotenv").config();
 const path = require("path");
+const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
 const mount = require("koa-mount");
 const send = require("koa-send");
 const cors = require("@koa/cors");
+
 const DOCS_DIR = "../../../code-du-travail-data/dataset/courrier-type/docx";
-const Koa = require("koa");
+
 // const corsConf = require('./conf/cors')
 const apiRoutes = require("./routes/api");
 const API_BASE_URL = require("./routes/api").BASE_URL;
@@ -37,6 +39,16 @@ app.use(async (ctx, next) => {
     ctx.app.emit("error", err, ctx);
   }
 });
+
+/**
+ * use a middleware for IE 10+ http xmlhttp requests
+ * https://blogs.msdn.microsoft.com/ieinternals/2013/09/17/a-quick-look-at-p3p/
+ */
+app.use(async (ctx, next) => {
+  ctx.set("P3P", "NOI ADM DEV PSAi OUR OTRo STP IND COM NAV DEM");
+  await next();
+});
+
 app.use(cors());
 app.use(bodyParser());
 app.use(apiRoutes.routes());

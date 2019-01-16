@@ -1,8 +1,14 @@
 module.exports = {
-  presets: ["next/babel"],
-  env: {
-    test: {
-      presets: [["next/babel", { "preset-env": { modules: "commonjs" } }]]
-    }
-  }
+  presets: [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          targets: {
+            browsers: ["last 5 version", "IE>=10"]
+          }
+        }
+      }
+    ]
+  ]
 };
