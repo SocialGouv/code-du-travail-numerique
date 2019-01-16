@@ -11,7 +11,7 @@
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
     "test": "jest",
-    "elastic": "node tests/index.js"
+    "elastic": "node scripts/elastic.js"
   },
   "repository": {
     "type": "git",
@@ -52,7 +52,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/**/*.js",
+      "lib/**/*.js"
     ]
   }
 }

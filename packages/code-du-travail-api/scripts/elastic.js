@@ -12,7 +12,7 @@ const {
   computeLineScore,
   printResultsAbstract,
   printResultsDetails
-} = require("./lib");
+} = require("../lib");
 
 const TestCasesFile = "results.csv";
 const endpoint = "http://localhost:1337/api/v1/search";
