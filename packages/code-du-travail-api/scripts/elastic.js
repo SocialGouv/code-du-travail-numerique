@@ -35,7 +35,7 @@ async function processRequest(data, nbItem) {
   }
 }
 
-async function main() {
+async function main({ reporter }) {
   const csvFile = path.join(__dirname, TestCasesFile);
 
   const csvData = await csv().fromFile(csvFile);
@@ -46,14 +46,13 @@ async function main() {
   const csvString = json2csv.parse(results, {
     fields: Object.keys(results[0])
   });
-  // fs.writeFileSync(csvFile, csvString);
+  fs.writeFileSync(csvFile, csvString);
 
-  // eslint-disable-next-line no-console
-  console.log(printResultsAbstract(results));
-  // eslint-disable-next-line no-console
-  console.log(printResultsDetails(results));
+  reporter(printResultsAbstract(results));
+  reporter(printResultsDetails(results));
 }
 
 if (module === require.main) {
-  main();
+  // eslint-disable-next-line no-console
+  main({ reporter: console.log });
 }

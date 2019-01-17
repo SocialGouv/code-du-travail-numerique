@@ -18,7 +18,7 @@ const BASE_URL = `/api/v1`;
  */
 router.get(`${BASE_URL}/search`, async ctx => {
   let query = ctx.request.query.q;
-  let size = Math.min(ctx.request.query.size || 10, 100);
+  const size = Math.min(ctx.request.query.size || 10, 100);
 
   let excludeSources = ctx.request.query.excludeSources;
   let mustNot = [];
