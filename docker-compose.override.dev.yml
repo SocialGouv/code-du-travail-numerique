@@ -6,13 +6,6 @@ services:
     ports:
       - 9200:9200
 
-  kibana:
-    image: docker.elastic.co/kibana/kibana:6.4.2
-    ports:
-      - 5601:5601
-    depends_on:
-      - elasticsearch
-
   python:
     volumes:
       - ./packages/code-du-travail-data/:/app
