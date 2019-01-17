@@ -67,7 +67,7 @@ code_du_travail_numerique_mapping = {
                 'french_heavy': {
                   'type': 'text',
                   'analyzer': 'french_heavy',
-                }
+                },
                 # Useful to match articles by number, e.g. "R1227-7".
                 'whitespace': {
                     'type': 'text',
