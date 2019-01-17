@@ -34,6 +34,14 @@ code_du_travail_numerique_mapping = {
                     'type': 'text',
                     'analyzer': 'shingle',
                 },
+                'french_light': {
+                  'type': 'text',
+                  'analyzer': 'french_light',
+                },
+                'french_heavy': {
+                  'type': 'text',
+                  'analyzer': 'french_heavy',
+                }
             },
         },
         'title': {
@@ -51,6 +59,14 @@ code_du_travail_numerique_mapping = {
                 'shingle': {
                     'type': 'text',
                     'analyzer': 'shingle',
+                },
+                'french_light': {
+                  'type': 'text',
+                  'analyzer': 'french_light',
+                },
+                'french_heavy': {
+                  'type': 'text',
+                  'analyzer': 'french_heavy',
                 },
                 # Useful to match articles by number, e.g. "R1227-7".
                 'whitespace': {
@@ -75,6 +91,14 @@ code_du_travail_numerique_mapping = {
                     'type': 'text',
                     'analyzer': 'shingle',
                 },
+                'french_light': {
+                  'type': 'text',
+                  'analyzer': 'french_light',
+                },
+                'french_heavy': {
+                  'type': 'text',
+                  'analyzer': 'french_heavy',
+                }
             },
         },
         # Currently only available for `Fiches service public`.
@@ -131,7 +155,7 @@ code_du_travail_numerique_mapping = {
         },
         'ape': {
             'type': 'text',
-            'analyzer': 'whitespace',
+            'analyzer': 'idcc_ape',
         },
     },
 }

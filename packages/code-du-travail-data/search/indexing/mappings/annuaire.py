@@ -2,14 +2,11 @@ cdtn_annuaire_mapping = {
     'properties': {
         # Indicates the origin of the document, e.g. 'code_du_travail', 'fiches_service_public' etc.
         'source': {
-            'type': 'text',
-            'fielddata': True,
-            'analyzer': 'keyword',
+            'type': 'keyword',
         },
         # The local document slug
         'slug': {
-            'type': 'text',
-            'analyzer': 'keyword',
+            'type': 'keyword',
         },
         'title': {
             'type': 'text',
@@ -22,16 +19,23 @@ cdtn_annuaire_mapping = {
                 'type': 'text',
                 'analyzer': 'french_exact',
               },
+              'french_light': {
+                'type': 'text',
+                'analyzer': 'french_light',
+              },
+              'french_heavy': {
+                'type': 'text',
+                'analyzer': 'french_heavy',
+              }
             }
         },
         'type': {
-            'type': 'text',
-            'analyzer': 'keyword',
+            'type': 'keyword',
         },
         'address': {
             "properties": {
                 "lignes": {"type": "text"},
-                "code": {"type": "integer"},
+                "code": {"type": "keyword"},
                 "city": {"type": "text"},
             }
         },
@@ -39,12 +43,10 @@ cdtn_annuaire_mapping = {
           'type': 'geo_point'
         },
         'tel': {
-            'type': 'text',
-            'analyzer': 'keyword',
+            'type': 'keyword',
         },
         'email': {
-            'type': 'text',
-            'analyzer': 'keyword',
+            'type': 'keyword',
         },
     },
 }
