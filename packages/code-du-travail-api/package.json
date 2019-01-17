@@ -10,7 +10,8 @@
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
-    "test": "jest"
+    "test": "jest",
+    "elastic": "node scripts/elastic.js"
   },
   "repository": {
     "type": "git",
@@ -34,18 +35,25 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "node-fetch": "^2.3.0",
-    "supertest": "^3.3.0",
     "winston": "^3.1.0"
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.2.0",
     "@zeit/ncc": "^0.1.16",
+    "axios": "^0.18.0",
+    "csvtojson": "^2.0.8",
     "eslint": "^5.7.0",
-    "nodemon": "^1.18.7"
+    "get-range": "^1.0.0",
+    "json2csv": "^4.3.3",
+    "nodemon": "^1.18.7",
+    "p-limit": "^2.1.0",
+    "superagent": "^4.1.0",
+    "supertest": "^3.3.0"
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/**/*.js",
+      "lib/**/*.js"
     ]
   }
 }

@@ -18,6 +18,8 @@ const BASE_URL = `/api/v1`;
  */
 router.get(`${BASE_URL}/search`, async ctx => {
   let query = ctx.request.query.q;
+  const size = Math.min(ctx.request.query.size || 10, 100);
+
   let excludeSources = ctx.request.query.excludeSources;
   let mustNot = [];
   if (excludeSources) {
@@ -32,7 +34,8 @@ router.get(`${BASE_URL}/search`, async ctx => {
   ctx.body = await codeDuTravailNumerique.search({
     query,
     mustNot,
-    _source: ["title", "source", "slug", "anchor"]
+    size,
+    _source: ["title", "source", "slug", "anchor", "url"]
   });
 });
 
@@ -55,7 +58,7 @@ router.get(`${BASE_URL}/suggest`, async ctx => {
     mustNot,
     fragmentSize: 200,
     size: 5,
-    _source: ["title", "source", "slug", "anchor"]
+    _source: ["title", "source", "slug", "anchor", "url"]
   });
 });
 

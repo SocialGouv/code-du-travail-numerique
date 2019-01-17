@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`computeLineScore should return an object with prevScore, score, diffScore properties 1`] = `
+Object {
+  "Actual_Rank1": 1,
+  "Actual_Rank2": "",
+  "Actual_Rank3": "",
+  "Actual_Rank4": "",
+  "Actual_Rank5": "",
+  "Expected_1": "a.url",
+  "Expected_2": "",
+  "Expected_3": "",
+  "Expected_4": "",
+  "Expected_5": "",
+  "countResults": "1/1",
+  "diffScore": 1,
+  "prevScore": 0,
+  "score": 1,
+  "url_0": "a.url",
+  "url_1": "b.url",
+  "url_2": "c.url",
+  "url_3": "d.url",
+  "url_4": "e.url",
+}
+`;
+
+exports[`computeLineScore should return an object with prevScore, score, diffScore properties 2`] = `
+Object {
+  "Actual_Rank1": 1,
+  "Actual_Rank2": 2,
+  "Actual_Rank3": 3,
+  "Actual_Rank4": 4,
+  "Actual_Rank5": 5,
+  "Expected_1": "a.url",
+  "Expected_2": "b.url",
+  "Expected_3": "c.url",
+  "Expected_4": "d.url",
+  "Expected_5": "e.url",
+  "countResults": "5/5",
+  "diffScore": 1,
+  "prevScore": 0,
+  "score": 1,
+  "url_0": "a.url",
+  "url_1": "b.url",
+  "url_2": "c.url",
+  "url_3": "d.url",
+  "url_4": "e.url",
+}
+`;
+
+exports[`computeLineScore should return an object with prevScore, score, diffScore properties 3`] = `
+Object {
+  "Actual_Rank1": "",
+  "Actual_Rank2": "",
+  "Actual_Rank3": "",
+  "Actual_Rank4": "",
+  "Actual_Rank5": "",
+  "Expected_1": "o.url",
+  "Expected_2": "z.url",
+  "Expected_3": "x.url",
+  "Expected_4": "y.url",
+  "Expected_5": "u.url",
+  "countResults": "0/5",
+  "diffScore": 0,
+  "prevScore": 0,
+  "score": 0,
+  "url_0": "a.url",
+  "url_1": "b.url",
+  "url_2": "c.url",
+  "url_3": "d.url",
+  "url_4": "e.url",
+}
+`;
+
+exports[`computeLineScore should return an object with prevScore, score, diffScore properties 4`] = `
+Object {
+  "Actual_Rank1": 5,
+  "Actual_Rank2": 4,
+  "Actual_Rank3": 3,
+  "Actual_Rank4": 2,
+  "Actual_Rank5": 1,
+  "Expected_1": "e.url",
+  "Expected_2": "d.url",
+  "Expected_3": "c.url",
+  "Expected_4": "b.url",
+  "Expected_5": "a.url",
+  "countResults": "5/5",
+  "diffScore": 0.76,
+  "prevScore": 0,
+  "score": 0.76,
+  "url_0": "a.url",
+  "url_1": "b.url",
+  "url_2": "c.url",
+  "url_3": "d.url",
+  "url_4": "e.url",
+}
+`;
+
+exports[`printResultsAbstracts should output absctract 1`] = `
+"\`\`\`diff
+    master     PR      +/-
+==========================================
++   10%      20%      10%
+==========================================
+\`\`\`
+  "
+`;
+
+exports[`printResultsDetails should output absctract 1`] = `
+"| file | Δ |  |
+|---|---|---|
+| Fromage | \`  10% <20%> (10%)\` | :arrow_up: |
+| Entrées | \`  50% <20%> (30%)\` | :arrow_down: |
+| Legumes | \`  0% <100%> (100%)\` | :arrow_up: |"
+`;
