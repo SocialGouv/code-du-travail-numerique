@@ -105,7 +105,7 @@ jobs:
     - <<: *main_code_quality_stage
       name: Test @cdt/api
       before_script:
-        - sh scripts/setup-env.sh
+        - bash scripts/setup-env.sh
         - docker-compose up -d elasticsearch
         - node packages/code-du-travail-api/tests/create_indexes.js
       script: docker run
