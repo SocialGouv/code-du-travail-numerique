@@ -1,0 +1,10 @@
+{
+  "name": "@cdt/data...synonyms",
+  "private": true,
+  "version": "1.7.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js > ../thesaurus/TESS_synonyms.json"
+  }
+}
