@@ -14,7 +14,7 @@ exports[`<DateFinContrat /> should render 1`] = `
         <h2>
           Le licenciement a t-il été prononcé avant le
           <b>
-             27 Août 2017
+             27 Septembre 2017
           </b>
            ?
         </h2>

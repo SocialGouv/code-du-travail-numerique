@@ -25,7 +25,7 @@ class DateFinContrat extends React.Component {
         <Section light>
           <h2>
             Le licenciement a t-il été prononcé avant le
-            <b> 27 Août 2017</b>
+            <b> 27&nbsp;Septembre&nbsp;2017</b>
             &nbsp;?
           </h2>
           <RadioContainer>
