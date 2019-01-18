@@ -112,7 +112,8 @@ jobs:
           $DOCKER_IMAGE
           node packages/code-du-travail-api/tests/create_indexes.js
           "
-      script: docker run
+      script:  docker-compose logs -f elasticsearch
+      real_script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
         -e ELASTICSEARCH_LOG_LEVEL=info
         -e ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test
