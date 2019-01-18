@@ -43,8 +43,8 @@ class Salaire extends React.Component {
         <Section light>
           <RadioContainer>
             <h2>
-              Votre quotité de temps de travail a-t-elle évoluée durant votre
-              contrat ?
+              Avez vous eu des périodes de cumul temps plein temps partiel
+              depuis votre embauche ?
             </h2>
             <Label>
               <input
