@@ -15,7 +15,7 @@ exports[`<Salaire /> should render mixed work period 1`] = `
           class="sc-htpNat cKNzUf"
         >
           <h2>
-            Avez vous eu des périodes de cumul temps plein temps partiel depuis votre embauche ?
+            Avez vous eu des périodes de cumul temps plein / temps partiel depuis votre embauche ?
           </h2>
           <label
             class="sc-bwzfXH lbnHsv"
@@ -265,7 +265,7 @@ exports[`<Salaire /> should render single work period 1`] = `
           class="sc-htpNat cKNzUf"
         >
           <h2>
-            Avez vous eu des périodes de cumul temps plein temps partiel depuis votre embauche ?
+            Avez vous eu des périodes de cumul temps plein / temps partiel depuis votre embauche ?
           </h2>
           <label
             class="sc-bwzfXH lbnHsv"
@@ -466,7 +466,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
           class="sc-htpNat cKNzUf"
         >
           <h2>
-            Avez vous eu des périodes de cumul temps plein temps partiel depuis votre embauche ?
+            Avez vous eu des périodes de cumul temps plein / temps partiel depuis votre embauche ?
           </h2>
           <label
             class="sc-bwzfXH lbnHsv"

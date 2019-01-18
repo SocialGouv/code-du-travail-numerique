@@ -43,8 +43,8 @@ class Salaire extends React.Component {
         <Section light>
           <RadioContainer>
             <h2>
-              Avez vous eu des périodes de cumul temps plein temps partiel
-              depuis votre embauche ?
+              Avez vous eu des périodes de cumul temps plein / temps partiel
+              depuis votre&nbsp;embauche ?
             </h2>
             <Label>
               <input
