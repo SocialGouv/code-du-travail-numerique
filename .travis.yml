@@ -110,7 +110,7 @@ jobs:
       install: docker pull $DOCKER_IMAGE
       before_script:
         - docker network ls
-        - while ! curl "http://localhost:920/_cat/health?h=status"; do sleep 1; done
+        - while ! curl "http://localhost:9200/_cat/health?h=status"; do sleep 1; done
         - "docker run
           -e ELASTICSEARCH_URL=http://elasticsearch:9200
           --network $(docker network ls -qf name=code)
