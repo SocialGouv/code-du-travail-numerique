@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.7.1 (2019-01-18)
+
+
+### Bug Fixes
+
+* **frontend:** update wording on calculateur indemnité ([#441](https://github.com/SocialGouv/code-du-travail-numerique/issues/441)) ([a83e1d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/a83e1d4))
+
+
+
+
+
 # 1.7.0 (2019-01-15)
 
 
