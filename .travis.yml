@@ -106,25 +106,26 @@ jobs:
       name: Test @cdt/api
       before_install:
         - bash scripts/setup-env.sh
-        - docker-compose -p apitest up -d elasticsearch
+        - docker-compose up -d elasticsearch
       install: docker pull $DOCKER_IMAGE
       before_script:
+        - docker network ls
+        - while ! curl "http://localhost:920/_cat/health?h=status"; do sleep 1; done
         - "docker run
           -e ELASTICSEARCH_URL=http://elasticsearch:9200
           --network $(docker network ls -qf name=code)
           $DOCKER_IMAGE
           node packages/code-du-travail-api/tests/create_indexes.js
           "
-        - docker network ls
       script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
         -e ELASTICSEARCH_LOG_LEVEL=info
         -e ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test
         -e ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test
-        --network $(docker network ls -qf name=apitest)
+        --network $(docker network ls -qf name=code)
         $DOCKER_IMAGE
         yarn workspace @cdt/api test --coverage
-      after_script: docker-compose -p apitest down
+      after_script: docker-compose down
       after_success: npx codecov --flags api
     - <<: *main_code_quality_stage
       name: Lint python code
