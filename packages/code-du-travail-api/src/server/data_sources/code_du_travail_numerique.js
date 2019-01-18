@@ -1,8 +1,8 @@
 const elasticsearchClient = require("../conf/elasticsearch.js");
 const { logger } = require("../utils/logger");
 
-const elasticsearchIndexName = "code_du_travail_numerique";
-const elasticsearchTypeName = "code_du_travail_numerique";
+const elasticsearchIndexName =
+  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 /**
  * Return documents matching the given query from Elasticsearch.
@@ -147,7 +147,7 @@ async function getSingleItem(params) {
   if (id) {
     return await elasticsearchClient.get({
       index: elasticsearchIndexName,
-      type: elasticsearchTypeName,
+      type: elasticsearchIndexName,
       id
     });
   }
@@ -155,7 +155,7 @@ async function getSingleItem(params) {
     return await elasticsearchClient
       .search({
         index: elasticsearchIndexName,
-        type: elasticsearchTypeName,
+        type: elasticsearchIndexName,
         body: {
           size: 1,
           query: {
@@ -192,7 +192,7 @@ async function getDocsCount() {
   return await elasticsearchClient
     .search({
       index: elasticsearchIndexName,
-      type: elasticsearchTypeName,
+      type: elasticsearchIndexName,
       body: {
         size: 0,
         aggs: {
@@ -240,7 +240,7 @@ async function searchRelatedDocument(themes, id) {
     : [];
   return await elasticsearchClient.search({
     index: elasticsearchIndexName,
-    type: elasticsearchTypeName,
+    type: elasticsearchIndexName,
     body: {
       size: 0,
       aggregations: {

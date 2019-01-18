@@ -1,7 +1,7 @@
 const elasticsearchClient = require("../conf/elasticsearch.js");
 
-const elasticsearchIndexName = "cdtn_annuaire";
-const elasticsearchTypeName = "cdtn_annuaire";
+const elasticsearchIndexName =
+  process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_annuaire";
 
 // todo @lionelb move to constant file
 const defaultMaxSearchDistance = "30km";
@@ -15,7 +15,7 @@ async function getItemsBydistance(params) {
 
   const query = {
     index: elasticsearchIndexName,
-    type: elasticsearchTypeName,
+    type: elasticsearchIndexName,
     body: {
       query: {
         bool: {
