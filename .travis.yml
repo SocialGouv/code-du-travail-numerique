@@ -104,15 +104,19 @@ jobs:
       after_success: npx codecov --flags frontend
     - <<: *main_code_quality_stage
       name: Test @cdt/api
-      before_script:
+      before_install:
         - bash scripts/setup-env.sh
+      install: docker pull $DOCKER_IMAGE
+      before_script:
         - docker-compose up -d elasticsearch
+        - docker network ls
         - "docker run
           -e ELASTICSEARCH_URL=http://elasticsearch:9200
           --network code-du-travail-numerique_default
           $DOCKER_IMAGE
           node packages/code-du-travail-api/tests/create_indexes.js
           "
+        - docker network ls
       script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
         -e ELASTICSEARCH_LOG_LEVEL=info
