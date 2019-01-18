@@ -107,7 +107,11 @@ jobs:
       before_script:
         - bash scripts/setup-env.sh
         - docker-compose up -d elasticsearch
-        - docker run $DOCKER_IMAGE node packages/code-du-travail-api/tests/create_indexes.js
+        - "docker run
+          -e ELASTICSEARCH_URL=http://elasticsearch:9200
+          $DOCKER_IMAGE
+          node packages/code-du-travail-api/tests/create_indexes.js
+          "
       script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
         -e ELASTICSEARCH_LOG_LEVEL=info
