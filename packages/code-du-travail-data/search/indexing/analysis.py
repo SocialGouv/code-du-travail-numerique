@@ -1,6 +1,5 @@
 from search.extraction.synonyms.data import SYNONYMS
 
-
 filters = {
     # Normalize acronyms so that no matter the format, the resulting token will be the same.
     # E.g.: SmiC => S.M.I.C. => SMIC => smic.
