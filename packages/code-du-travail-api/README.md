@@ -17,6 +17,11 @@ APM_SERVER_URL=http://code-du-travail-apm-server:8200
 APM_SERVER_ACTIVE=1
 
 API_PORT=1337
+
+# Optional
+# For tests, you can configure ElasticSearch indices using
+# ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test
+# ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test
 ```
 
 Puis :

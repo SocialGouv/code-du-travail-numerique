@@ -17,3 +17,10 @@ test("version route", async () => {
   );
   expect(response.body).toMatchSnapshot();
 });
+
+test("docsCount route", async () => {
+  const response = await request(app.callback()).get(
+    `${apiRoutes.BASE_URL}/docsCount`
+  );
+  expect(response.body).toMatchSnapshot();
+});
