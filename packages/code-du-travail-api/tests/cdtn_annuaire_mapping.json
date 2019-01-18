@@ -1,0 +1,43 @@
+[
+  {
+    "source": "annuaire",
+    "slug": "chambre-de-metiers-et-de-lartisanat-cma-ardeche",
+    "id": "chambre_metier-07102-01",
+    "title": "Chambre de métiers et de l'artisanat (CMA) - Ardèche",
+    "type": "chambre_metier",
+    "address": {
+      "lignes": ["Délégation de l'Ardèche", "70 allée des Ondines", "BP 356"],
+      "code": "07503",
+      "city": "Guilherand-Granges"
+    },
+    "coord": {
+      "lat": "44.9353",
+      "lon": "4.8756"
+    },
+    "tel": "04 75 07 54 00",
+    "email": "contact@cma-ardeche.fr"
+  },
+  {
+    "source": "annuaire",
+    "slug": "centre-dinformation-de-conseil-et-daccueil-des-salaries-cicas-drome",
+    "id": "cicas-26362-01",
+    "title": "Centre d'information de conseil et d'accueil des salariés (Cicas) - Drôme",
+    "type": "cicas",
+    "address": {
+      "lignes": [
+        "Immeuble le Sud",
+        "Bâtiment B",
+        "497 avenue Victor-Hugo",
+        "CS 5043"
+      ],
+      "code": "26004",
+      "city": "Valence Cedex"
+    },
+    "coord": {
+      "lat": "44.9103821",
+      "lon": "4.8842344"
+    },
+    "tel": "08 20 20 01 89",
+    "email": null
+  }
+]

@@ -1,10 +1,10 @@
 const client = require("../src/server/conf/elasticsearch");
 const { analyzer, filter, tokenizer } = require("./es_analysis");
 const { logger } = require("../src/server/utils/logger");
-const documentsData = require("./cdtn_document_data.json");
-const annuaireData = require("./cdtn_annuaire_data.json");
 const documentMapping = require("./cdtn_document_mapping");
-const annuaireMapping = require("./cdtn_document_mapping");
+const documentsData = require("./cdtn_document_data.json");
+const annuaireMapping = require("./cdtn_annuaire_mapping");
+const annuaireData = require("./cdtn_annuaire_data.json");
 
 const documentIndexName = "cdtn_document_test";
 const annuaireIndexName = "cdtn_annuaire_test";
