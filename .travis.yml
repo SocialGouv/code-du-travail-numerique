@@ -104,10 +104,17 @@ jobs:
       after_success: npx codecov --flags frontend
     - <<: *main_code_quality_stage
       name: Test @cdt/api
+      before_script:
+        - docker-compose up -d elasticsearch
+        - node packages/code-du-travail-api/tests/create_indexes.js
       script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
+        -e ELASTICSEARCH_LOG_LEVEL=info
+        -e ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test
+        -e ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test
         $DOCKER_IMAGE
         yarn workspace @cdt/api test --coverage
+      after_script: docker-compose down
       after_success: npx codecov --flags api
     - <<: *main_code_quality_stage
       name: Lint python code
