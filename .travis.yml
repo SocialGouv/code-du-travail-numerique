@@ -106,12 +106,12 @@ jobs:
       name: Test @cdt/api
       before_install:
         - bash scripts/setup-env.sh
+        - docker-compose -p apitest up -d elasticsearch
       install: docker pull $DOCKER_IMAGE
       before_script:
-        - docker-compose -p apitest up -d elasticsearch
         - "docker run
           -e ELASTICSEARCH_URL=http://elasticsearch:9200
-          --network $(docker network ls -qf name=apitest)
+          --network $(docker network ls -qf name=code)
           $DOCKER_IMAGE
           node packages/code-du-travail-api/tests/create_indexes.js
           "
