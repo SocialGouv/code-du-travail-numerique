@@ -14,7 +14,9 @@ const mount = require("koa-mount");
 const send = require("koa-send");
 const cors = require("@koa/cors");
 
-const DOCS_DIR = "../../../code-du-travail-data/dataset/courrier-type/docx";
+const DOCS_DIR =
+  process.env.API_DOCS_DIR ||
+  "../../../code-du-travail-data/dataset/courrier-type/docx";
 
 // const corsConf = require('./conf/cors')
 const apiRoutes = require("./routes/api");
