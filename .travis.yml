@@ -109,8 +109,7 @@ jobs:
         - docker-compose up -d elasticsearch
       install: docker pull $DOCKER_IMAGE
       before_script:
-        - docker network ls
-        - while ! curl "http://localhost:9200/_cat/health?h=status"; do sleep 1; done
+        - retry=0; while ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
         - "docker run
           -e ELASTICSEARCH_LOG_LEVEL=info
           -e ELASTICSEARCH_URL=http://elasticsearch:9200
