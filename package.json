@@ -10,7 +10,7 @@
     "dev:api": "yarn workspace @cdt/api dev",
     "dev:frontend": "yarn workspace @cdt/frontend dev",
     "lint": "lerna run lint --parallel",
-    "postinstall": "sh scripts/setup-env.sh",
+    "postinstall": "bash scripts/setup-env.sh",
     "start": "lerna run start --parallel",
     "test": "lerna run test"
   },
