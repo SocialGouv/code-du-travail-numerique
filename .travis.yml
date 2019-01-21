@@ -23,7 +23,7 @@ _environments:
 jobs:
   include:
     - stage: Prepare
-      if: NOT env(RELEASE)
+      if: NOT env(RELEASE) AND NOT type = pull_request
       name: Build and deploy current commit docker image
       env:
         - *docker_image
@@ -40,7 +40,7 @@ jobs:
 
     - &main_node_stage
       stage: Prepare
-      if: NOT env(RELEASE)
+      if: NOT env(RELEASE) AND NOT type = pull_request
       language: node_js
       node_js: 10
       cache: yarn
@@ -53,9 +53,23 @@ jobs:
 
     - <<: *main_node_stage
       if: type = pull_request
-      name: Check Conventional Commits
-      install: yarn global add @commitlint/travis-cli @commitlint/config-conventional
-      script: commitlint-travis
+      name: Pull Request Stage
+      env:
+        - ELASTICSEARCH_LOG_LEVEL=info
+        - ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test
+        - ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test
+      before_install:
+        - yarn global add @commitlint/travis-cli @commitlint/config-conventional
+        - commitlint-travis
+      install: yarn
+      before_script:
+        - docker-compose up -d elasticsearch
+      script:
+        - yarn build --stream
+        - yarn lint --stream
+        - node packages/code-du-travail-api/tests/create_indexes.js
+        - yarn run -- test --stream -- --coverage
+      after_success: npx codecov
 
     - <<: *main_node_stage
       stage: Release
@@ -78,7 +92,7 @@ jobs:
 
     - &main_code_quality_stage
       stage: Code quality
-      if: NOT env(RELEASE)
+      if: NOT env(RELEASE) AND NOT type = pull_request
       env:
         - *docker_image
       name: Lint @cdt/frontend
