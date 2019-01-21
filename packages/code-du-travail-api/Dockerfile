@@ -5,7 +5,7 @@ FROM ${BASE_IMAGE} as master
 FROM node:10-alpine
 
 COPY ./package.json /app/package.json
-COPY ../code-du-travail-data/dataset/courrier-type/docx /app/courrier-type/docx
+COPY --from=master /app/packages/code-du-travail-data/dataset/courrier-type/docx /app/courrier-type/docx
 COPY --from=master /app/packages/code-du-travail-api/dist /app/dist
 
 WORKDIR /app

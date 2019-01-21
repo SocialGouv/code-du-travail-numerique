@@ -70,6 +70,7 @@ app.on("error", error => {
 // Server.
 const server = app.listen(PORT, () => {
   logger.info(`Server listening on port: ${PORT}`);
+  logger.info(`Server docs dir : ${DOCS_DIR}`);
 });
 
 module.exports = server;
