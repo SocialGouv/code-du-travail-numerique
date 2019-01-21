@@ -135,8 +135,6 @@ jobs:
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
         -e ELASTICSEARCH_URL=http://elasticsearch:9200
         -e ELASTICSEARCH_LOG_LEVEL=info
-        -e ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test
-        -e ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test
         --network $(docker network ls -qf name=code)
         $DOCKER_IMAGE
         yarn workspace @cdt/api test --coverage
