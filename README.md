@@ -12,7 +12,7 @@
 $ yarn
 ```
 
-Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.sh](scripts/setup-env.sh)) en fonction du `NODE_ENV`
+Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) en fonction du `NODE_ENV`
 
 #### Première instanciation
 
