@@ -19,7 +19,7 @@ JSON_SYNONYMS_FILE = os.path.join(settings.BASE_DIR, 'dataset/synonyms.json')
 def populate_synonyms():
 
     with open(JSON_SYNONYMS_FILE) as json_data:
-       SYNONYMS.extend(json.load(json_data))
+        SYNONYMS.extend(json.load(json_data))
 
     logger.debug('-' * 80)
     logger.debug(pformat(SYNONYMS, width=120))
