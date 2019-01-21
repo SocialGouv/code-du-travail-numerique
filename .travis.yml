@@ -119,7 +119,7 @@ jobs:
     - <<: *main_code_quality_stage
       name: Test @cdt/api
       before_install:
-        - bash scripts/setup-env.sh
+        - node scripts/setup-env.js
         - docker-compose up -d elasticsearch
       install: docker pull $DOCKER_IMAGE
       before_script:
