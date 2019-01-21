@@ -5,20 +5,10 @@ calcul de l'indemnite de licenciement ou rupture conventionnelle
 const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
 const round = fl => parseInt(fl * 100) / 100;
 
-const getIndemnite = data => {
-  const {
-    isR12342,
-    salaires,
-    primes,
-    fauteGrave,
-    anciennete,
-    calculConvention,
-    inaptitude
-  } = data;
-  let salaireRef;
+function getSalaireRef(salaires, primes, anciennete) {
+  let salaireRef = 0;
   let moyenne3DerniersMois;
   let moyenneSalaires;
-  let formula;
 
   if (salaires.isPartiel) {
     salaireRef =
@@ -42,6 +32,26 @@ const getIndemnite = data => {
 
     salaireRef = Math.max(moyenneSalaires, moyenne3DerniersMois);
   }
+  return { salaireRef, moyenneSalaires, moyenne3DerniersMois };
+}
+const getIndemnite = data => {
+  const {
+    isR12342,
+    salaires,
+    primes,
+    fauteGrave,
+    anciennete,
+    calculConvention,
+    inaptitude
+  } = data;
+
+  let formula;
+
+  const { salaireRef, moyenneSalaires, moyenne3DerniersMois } = getSalaireRef(
+    salaires,
+    primes,
+    anciennete
+  );
 
   let indemnite = 0;
   const isSmallAnciennete = anciennete / 12 <= 10; // 10 years
@@ -127,3 +137,4 @@ const getIndemnite = data => {
 };
 
 export default getIndemnite;
+export { getSalaireRef };
