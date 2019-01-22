@@ -1,10 +1,10 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../api").BASE_URL;
-const routeName = "/search";
 const router = new Router({ prefix: API_BASE_URL });
+const routeName = "/search";
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const getSearchBody = require("./searchBody");
+const getSearchBody = require("./search.elastic");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
@@ -30,4 +30,4 @@ router.get(routeName, async ctx => {
 });
 
 module.exports = router;
-module.exports.routeName = `/search`;
+module.exports.routeName = routeName;
