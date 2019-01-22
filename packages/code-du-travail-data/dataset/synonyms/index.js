@@ -1,12 +1,19 @@
-const synonyms = require("../synonyms.json");
-const thesaurus = require("../thesaurus/TESS.json");
+const cdtn_synonyms = require("./cdtn_synonyms.json");
+const thesaurus = require("./TESS.json");
 
 const thesaurusSynonyms = thesaurus
-  .filter(({ term, equivalent }) => term && equivalent)
+  .filter(
+    ({ term, equivalent }) =>
+      term && equivalent && !Number.isInteger(parseInt(equivalent, 10))
+  )
   .map(({ term, equivalent }) => `${term}, ${equivalent}`);
 
-module.exports = [...synonyms, ...thesaurusSynonyms];
+const synonyms = [...cdtn_synonyms, ...thesaurusSynonyms]
+  .map(str => str.toLowerCase())
+  .sort();
+
+module.exports = synonyms;
 
 if (module === require.main) {
-  console.log(JSON.stringify(thesaurusSynonyms, null, 2));
+  console.log(JSON.stringify(synonyms, null, 2));
 }
