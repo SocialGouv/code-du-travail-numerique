@@ -1,5 +1,6 @@
-const sum = arr => arr.reduce((sum, c) => sum + c, 0);
 const contains = (arr, value) => arr.indexOf(value) !== -1;
+
+import { getSalaireRef } from "../indemnite";
 
 export function getIndemnite({
   salaires,
@@ -12,16 +13,21 @@ export function getIndemnite({
   echelon = { groupe: "I" },
   convention
 }) {
-  const moyenneSalaires =
-    (sum(salaires) + (primes || 0)) / salaires.length || 1;
-
-  let dernierSalaire = salaires[0] + primes / 12;
-
-  // Pour le groupe V on prend le dernier salaire avant préavis (8ieme mois, donc 4ieme en partant de la fin )
-  if (echelon && contains(["V"], echelon.groupe)) {
-    dernierSalaire = salaires[4];
+  let { salaireRef, moyenneSalaires } = getSalaireRef(
+    salaires,
+    primes,
+    anciennete
+  );
+  let dernierSalaire = 0;
+  if (!salaires.isPartiel) {
+    dernierSalaire = salaires.derniersMois[0] + primes / 12;
+    // Pour le groupe V on prend le dernier salaire avant préavis (8ieme mois, donc 4ieme en partant de la fin )
+    if (echelon && contains(["V"], echelon.groupe)) {
+      dernierSalaire = salaires.derniersMois[4];
+    }
+    salaireRef = Math.max(moyenneSalaires, dernierSalaire);
   }
-  const salaireRef = Math.max(moyenneSalaires, dernierSalaire);
+
   // ancienneté en année
   const anneeAncienete = Math.floor(anciennete / 12);
   let indemniteCC = 0;
