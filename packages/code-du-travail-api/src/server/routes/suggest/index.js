@@ -13,9 +13,10 @@ const index =
  * Return documents matching the given query.
  *
  * @example
- * http://localhost:1337/api/v1/search?q=incapacité%20travail
+ * http://localhost:1337/api/v1/suggest?q=incapacité%20travail
  *
  * @param {string} querystring.q A `q` querystring param containing the query to process.
+ * @param {string} querystring.excludeSources A `excludeSources` querystring param containing the sources (comma separatied list) to exclude from the results
  * @returns {Object} Results.
  */
 router.get(routeName, async ctx => {
