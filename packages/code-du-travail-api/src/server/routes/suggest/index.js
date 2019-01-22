@@ -19,9 +19,9 @@ const index =
  * @returns {Object} Results.
  */
 router.get(routeName, async ctx => {
-  let query = ctx.request.query.q;
+  const query = ctx.request.query.q;
 
-  let excludeSources = (ctx.request.query.excludeSources || "").split(",");
+  const excludeSources = (ctx.request.query.excludeSources || "").split(",");
   const body = getSuggestBody({ query, excludeSources });
   ctx.body = await elasticsearchClient.search({ index, body });
 });
