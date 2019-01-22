@@ -40,6 +40,15 @@ router.get(`${routeName}/:source/:slug`, async ctx => {
   };
 });
 
+/**
+ * Return document matching the given id.
+ *
+ * @example
+ * http://localhost:1337/api/v1/items/:id
+ *
+ * @param {string} :id The item id.
+ * @returns {Object} Result.
+ */
 router.get(`${routeName}/:id`, async ctx => {
   const { id } = ctx.params;
 
@@ -50,6 +59,12 @@ router.get(`${routeName}/:id`, async ctx => {
   });
 });
 
+/**
+ * Return documents matching item themes, grouped by source.
+ *
+ * @param {object} :item The item
+ * @returns {Object} Result: documents that match item's themes, group by source.
+ */
 async function searchItemsFromTheme(item) {
   const themes = (item._source.tags || [])
     .filter(tag => tag.match(/^themes/))
