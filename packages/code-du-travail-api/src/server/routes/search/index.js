@@ -19,10 +19,10 @@ const index =
  * @returns {Object} Results.
  */
 router.get(routeName, async ctx => {
-  let query = ctx.request.query.q;
+  const query = ctx.request.query.q;
   const size = Math.min(ctx.request.query.size || 10, 100);
 
-  let excludeSources = (ctx.request.query.excludeSources || "").split(",");
+  const excludeSources = (ctx.request.query.excludeSources || "").split(",");
 
   const body = getSearchBody({ query, size, excludeSources });
 
@@ -30,4 +30,3 @@ router.get(routeName, async ctx => {
 });
 
 module.exports = router;
-module.exports.routeName = routeName;
