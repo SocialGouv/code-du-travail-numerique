@@ -52,8 +52,13 @@
     "supertest": "^3.3.0"
   },
   "jest": {
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".mock.js$"
+    ],
     "collectCoverageFrom": [
       "src/**/*.js",
+      "!src/**/*.mock.js",
       "lib/**/*.js"
     ]
   }
