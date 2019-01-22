@@ -1,21 +1,18 @@
 [
   {
     "source": "annuaire",
-    "slug": "chambre-de-metiers-et-de-lartisanat-cma-ardeche",
-    "id": "chambre_metier-07102-01",
-    "title": "Chambre de métiers et de l'artisanat (CMA) - Ardèche",
-    "type": "chambre_metier",
+    "slug": "agence-nationale-pour-la-formation-professionnelle-des-adultes-afpa-centre-davignon-le-pontet",
+    "id": "afpa-84092-01",
+    "title": "Agence nationale pour la formation professionnelle des adultes (Afpa) - Centre d'Avignon - Le Pontet",
+    "type": "afpa",
     "address": {
-      "lignes": ["Délégation de l'Ardèche", "70 allée des Ondines", "BP 356"],
-      "code": "07503",
-      "city": "Guilherand-Granges"
+      "lignes": ["56 avenue Émile-Zola"],
+      "code": "84130",
+      "city": "Le Pontet"
     },
-    "coord": {
-      "lat": "44.9353",
-      "lon": "4.8756"
-    },
-    "tel": "04 75 07 54 00",
-    "email": "contact@cma-ardeche.fr"
+    "coord": { "lat": "43.9575004", "lon": "4.85395" },
+    "tel": "3936",
+    "email": null
   },
   {
     "source": "annuaire",
