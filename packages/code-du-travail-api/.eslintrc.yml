@@ -1,7 +1,7 @@
 ---
-
 extends:
   - "@socialgouv/eslint-config-recommended"
-
+rules:
+  prefer-const: 2
 env:
   jest: true
