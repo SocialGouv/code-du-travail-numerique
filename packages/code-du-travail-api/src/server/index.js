@@ -13,6 +13,7 @@ const cors = require("@koa/cors");
 
 // const corsConf = require('./conf/cors')
 const apiRoutes = require("./routes/api");
+const searchRoutes = require("./routes/search");
 const docsRoutes = require("./routes/docs");
 const suggestRoutes = require("./routes/suggest");
 const annuaireRoutes = require("./routes/annuaire");
@@ -51,6 +52,7 @@ app.use(bodyParser());
 app.use(apiRoutes.routes());
 app.use(suggestRoutes.routes());
 app.use(annuaireRoutes.routes());
+app.use(searchRoutes.routes());
 
 app.use(docsRoutes);
 

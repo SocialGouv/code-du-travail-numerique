@@ -5,38 +5,6 @@ const router = new Router();
 const BASE_URL = `/api/v1`;
 
 /**
- * Return documents matching the given query.
- *
- * @example
- * http://localhost:1337/api/v1/search?q=incapacité%20travail
- *
- * @param {string} querystring.q A `q` querystring param containing the query to process.
- * @returns {Object} Results.
- */
-router.get(`${BASE_URL}/search`, async ctx => {
-  let query = ctx.request.query.q;
-  const size = Math.min(ctx.request.query.size || 10, 100);
-
-  let excludeSources = ctx.request.query.excludeSources;
-  let mustNot = [];
-  if (excludeSources) {
-    mustNot = excludeSources.split(",").map(source => ({
-      query_string: {
-        default_field: "source",
-        query: source.trim()
-      }
-    }));
-  }
-
-  ctx.body = await codeDuTravailNumerique.search({
-    query,
-    mustNot,
-    size,
-    _source: ["title", "source", "slug", "anchor", "url"]
-  });
-});
-
-/**
  * Return document matching the given source+slug.
  *
  * @example
