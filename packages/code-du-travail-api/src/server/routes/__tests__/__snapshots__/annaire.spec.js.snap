@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return all the records around avignon 1`] = `
+Object {
+  "hits": Array [
+    Object {
+      "_id": "0",
+      "_index": "cdtn_annuaire_test",
+      "_score": 0,
+      "_source": Object {
+        "address": Object {
+          "city": "Le Pontet",
+          "code": "84130",
+          "lignes": Array [
+            "56 avenue Émile-Zola",
+          ],
+        },
+        "coord": Object {
+          "lat": "43.9575004",
+          "lon": "4.85395",
+        },
+        "email": null,
+        "id": "afpa-84092-01",
+        "slug": "agence-nationale-pour-la-formation-professionnelle-des-adultes-afpa-centre-davignon-le-pontet",
+        "source": "annuaire",
+        "tel": "3936",
+        "title": "Agence nationale pour la formation professionnelle des adultes (Afpa) - Centre d'Avignon - Le Pontet",
+        "type": "afpa",
+      },
+      "_type": "cdtn_annuaire_test",
+    },
+  ],
+  "max_score": 0,
+  "total": 1,
+}
+`;
+
+exports[`should return all the records around loriol 1`] = `
+Object {
+  "hits": Array [
+    Object {
+      "_id": "1",
+      "_index": "cdtn_annuaire_test",
+      "_score": 0,
+      "_source": Object {
+        "address": Object {
+          "city": "Valence Cedex",
+          "code": "26004",
+          "lignes": Array [
+            "Immeuble le Sud",
+            "Bâtiment B",
+            "497 avenue Victor-Hugo",
+            "CS 5043",
+          ],
+        },
+        "coord": Object {
+          "lat": "44.9103821",
+          "lon": "4.8842344",
+        },
+        "email": null,
+        "id": "cicas-26362-01",
+        "slug": "centre-dinformation-de-conseil-et-daccueil-des-salaries-cicas-drome",
+        "source": "annuaire",
+        "tel": "08 20 20 01 89",
+        "title": "Centre d'information de conseil et d'accueil des salariés (Cicas) - Drôme",
+        "type": "cicas",
+      },
+      "_type": "cdtn_annuaire_test",
+    },
+  ],
+  "max_score": 0,
+  "total": 1,
+}
+`;
