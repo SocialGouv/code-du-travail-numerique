@@ -2,7 +2,7 @@ const request = require("supertest");
 const Koa = require("koa");
 
 const router = require("../annuaire");
-const addresses = require("./api-adresse.mock");
+const addresses = require("./api-adresse.mock.json");
 
 jest.mock("node-fetch", () => ({ default: jest.fn() }));
 const fetch = require("node-fetch").default;

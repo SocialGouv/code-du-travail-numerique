@@ -26,7 +26,8 @@ const adresseApiEndPoint = "https://api-adresse.data.gouv.fr/search";
  */
 router.get(`${routeName}/search`, async ctx => {
   const { coord, q } = ctx.request.query;
-  const results = searchFromCoord(coord) || (await searchFromQuery(q));
+  const results =
+    searchFromCoord(coord) || (await searchFromQuery(adresseApiEndPoint, q));
   if (results) {
     const [lon, lat] = results;
     const body = getAnnuaireBody({
@@ -49,12 +50,12 @@ function searchFromCoord(coord) {
   return coord.split(":");
 }
 
-async function searchFromQuery(query) {
+async function searchFromQuery(endpoint, query) {
   if (!query) {
     return false;
   }
   const response = await fetch(
-    `${adresseApiEndPoint}/?q=${query}&type=housenumber&limit=1`
+    `${endpoint}/?q=${query}&type=housenumber&limit=1`
   );
   const results = await response.json();
   if (results.features.length === 0) {
