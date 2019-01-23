@@ -21,6 +21,7 @@
     "memoizee": "^0.4.14",
     "next": "^7.0.0",
     "next-images": "^1.0.0",
+    "p-debounce": "^1.0.0",
     "react": "^16.3.2",
     "react-autosuggest": "9.3.4",
     "react-delay": "^0.1.0",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@socialgouv/eslint-config-react": "^0.2.0",
     "babel-core": "^7.0.0-bridge",
+    "babel-engine-plugin": "^0.3.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "css-loader": "^1.0.0",

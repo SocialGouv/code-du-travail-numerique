@@ -1,3 +1,4 @@
+const BabelEnginePlugin = require("babel-engine-plugin");
 const withCSS = require("@zeit/next-css");
 module.exports = withCSS({
   // https://github.com/zeit/next.js/#disabling-file-system-routing
@@ -15,6 +16,11 @@ module.exports = withCSS({
         outputPath: "static/"
       }
     });
+    config.plugins.push(
+      new BabelEnginePlugin({
+        presets: ["env"]
+      })
+    );
     return config;
   },
   publicRuntimeConfig: {
