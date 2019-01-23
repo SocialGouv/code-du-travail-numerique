@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return suggest results for demission 1`] = `
+exports[`return idcc results for boulangerie 1`] = `
 Object {
   "hits": Array [
     Object {

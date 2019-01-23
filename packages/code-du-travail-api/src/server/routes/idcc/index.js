@@ -13,7 +13,9 @@ const index =
  * Return documents matching the given query.
  *
  * @example
- * http://localhost:1337/api/v1/search?q=incapacité%20travail
+ * http://localhost:1337/api/v1/idcc?q=banlangerie
+ * http://localhost:1337/api/v1/idcc?q=843
+ * http://localhost:1337/api/v1/idcc?q=1020Z
  *
  * @param {string} querystring.q A `q` querystring param containing the query to process.
  * @returns {Object} Results.

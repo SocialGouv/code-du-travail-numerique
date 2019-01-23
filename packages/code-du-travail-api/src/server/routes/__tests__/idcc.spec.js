@@ -5,7 +5,7 @@ const routes = require("../idcc");
 const app = new Koa();
 app.use(routes.routes());
 
-test("return suggest results for demission", async () => {
+test("return idcc results for boulangerie", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/idcc?q=boulangerie`
   );
