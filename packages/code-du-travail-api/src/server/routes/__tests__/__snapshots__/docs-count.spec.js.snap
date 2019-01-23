@@ -42,9 +42,3 @@ Object {
   },
 }
 `;
-
-exports[`version route 1`] = `
-Object {
-  "version": "x.y.z",
-}
-`;

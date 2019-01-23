@@ -1,13 +1,13 @@
 const Router = require("koa-router");
-const API_BASE_URL = require("../api").BASE_URL;
-const routeName = "/suggest";
-const router = new Router({ prefix: API_BASE_URL });
+const API_BASE_URL = require("../v1.prefix");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSuggestBody = require("./suggest.elastic");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+
+const router = new Router({ prefix: API_BASE_URL });
 
 /**
  * Return documents matching the given query.
@@ -19,7 +19,7 @@ const index =
  * @param {string} querystring.excludeSources A `excludeSources` querystring param containing the sources (comma separatied list) to exclude from the results
  * @returns {Object} Results.
  */
-router.get(routeName, async ctx => {
+router.get("/suggest", async ctx => {
   const query = ctx.request.query.q;
 
   const excludeSources = (ctx.request.query.excludeSources || "").split(",");
@@ -28,4 +28,3 @@ router.get(routeName, async ctx => {
 });
 
 module.exports = router;
-module.exports.routeName = routeName;

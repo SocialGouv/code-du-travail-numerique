@@ -1,13 +1,12 @@
 const Router = require("koa-router");
 const fetch = require("node-fetch").default;
-const API_BASE_URL = require("../api").BASE_URL;
+const API_BASE_URL = require("../v1.prefix");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getAnnuaireBody = require("./annuaire.elastic");
 
-const router = new Router({ prefix: API_BASE_URL });
 const index = process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_annuaire";
-const routeName = "/annuaire";
+const router = new Router({ prefix: API_BASE_URL });
 
 // todo @lionelb move to constant file
 const defaultMaxSearchDistance = "30km";
@@ -24,7 +23,7 @@ const adresseApiEndPoint = "https://api-adresse.data.gouv.fr/search";
  * @param {string} :base coord or address for geo search
  * @returns {Object} Result.
  */
-router.get(`${routeName}/search`, async ctx => {
+router.get(`/annuaire/search`, async ctx => {
   const { coord, q } = ctx.request.query;
   const results =
     searchFromCoord(coord) || (await searchFromQuery(adresseApiEndPoint, q));

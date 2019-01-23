@@ -1,10 +1,9 @@
 const request = require("supertest");
 const Koa = require("koa");
-
-const routes = require("../items");
+const router = require("../items");
 
 const app = new Koa();
-app.use(routes.routes());
+app.use(router.routes());
 
 test("return item from its id", async () => {
   const response = await request(app.callback()).get(`/api/v1/items/6`);

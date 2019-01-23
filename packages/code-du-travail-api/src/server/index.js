@@ -12,11 +12,15 @@ const bodyParser = require("koa-bodyparser");
 const cors = require("@koa/cors");
 
 // const corsConf = require('./conf/cors')
-const apiRoutes = require("./routes/api");
-const searchRoutes = require("./routes/search");
-const docsRoutes = require("./routes/docs");
-const suggestRoutes = require("./routes/suggest");
+
 const annuaireRoutes = require("./routes/annuaire");
+const docsCount = require("./routes/docs-count");
+const idccRoutes = require("./routes/idcc");
+const itemsRoutes = require("./routes/items");
+const searchRoutes = require("./routes/search");
+const suggestRoutes = require("./routes/suggest");
+const versionRoutes = require("./routes/version");
+const docsRoutes = require("./routes/docs");
 
 const { logger } = require("./utils/logger");
 
@@ -49,10 +53,14 @@ app.use(async (ctx, next) => {
 
 app.use(cors());
 app.use(bodyParser());
-app.use(apiRoutes.routes());
-app.use(suggestRoutes.routes());
+
 app.use(annuaireRoutes.routes());
+app.use(docsCount.routes());
+app.use(idccRoutes.routes());
+app.use(itemsRoutes.routes());
 app.use(searchRoutes.routes());
+app.use(suggestRoutes.routes());
+app.use(versionRoutes.routes());
 
 app.use(docsRoutes);
 
