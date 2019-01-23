@@ -98,61 +98,6 @@ router.get(`${BASE_URL}/docsCount`, async ctx => {
   ctx.body = await codeDuTravailNumerique.getDocsCount();
 });
 
-router.get(`${BASE_URL}/idcc`, async ctx => {
-  const query = ctx.request.query.q;
-  const must = [
-    {
-      match: {
-        ape: {
-          query
-        }
-      }
-    },
-    {
-      match_phrase_prefix: {
-        title: {
-          query
-        }
-      }
-    }
-  ];
-  const filter = [
-    {
-      term: {
-        source: "kali"
-      }
-    }
-  ];
-  const should = [
-    {
-      match: {
-        idcc: {
-          query: parseInt(query, 10) || "",
-          boost: 2000
-        }
-      }
-    },
-    {
-      match: {
-        title: {
-          query: query,
-          boost: 2000
-        }
-      }
-    }
-  ];
-
-  ctx.body = await codeDuTravailNumerique.search({
-    query,
-    must,
-    filter,
-    should,
-    fragmentSize: 200,
-    size: 1000,
-    _source: ["title", "url", "ape", "idcc"]
-  });
-});
-
 /**
  * Return annaire items matching the given address
  * adress could be a coord or a string.
