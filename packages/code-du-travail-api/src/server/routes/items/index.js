@@ -79,12 +79,13 @@ async function searchItemsFromTheme(item) {
 
   const { buckets } = results.aggregations.bySource;
 
-  return buckets.reduce((state, bucket) => {
-    if (bucket.doc_count > 0) {
-      state[bucket.key] = bucket.bySource.hits.hits;
-    }
-    return state;
-  }, {});
+  return buckets.reduce(
+    (state, bucket) =>
+      bucket.doc_count > 0
+        ? { ...state, [bucket.key]: bucket.bySource.hits.hits }
+        : state,
+    {}
+  );
 }
 
 module.exports = router;
