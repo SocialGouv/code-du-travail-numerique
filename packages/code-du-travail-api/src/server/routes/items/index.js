@@ -1,6 +1,5 @@
 const Router = require("koa-router");
-const API_BASE_URL = require("../api").BASE_URL;
-const routeName = "/items";
+const API_BASE_URL = require("../v1.prefix");
 const router = new Router({ prefix: API_BASE_URL });
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
@@ -20,7 +19,7 @@ const index =
  * @param {string} :slug The item slug to fetch.
  * @returns {Object} Result.
  */
-router.get(`${routeName}/:source/:slug`, async ctx => {
+router.get("/items/:source/:slug", async ctx => {
   const { source, slug } = ctx.params;
 
   const body = getItemBySlugBody({ source, slug });
@@ -49,7 +48,7 @@ router.get(`${routeName}/:source/:slug`, async ctx => {
  * @param {string} :id The item id.
  * @returns {Object} Result.
  */
-router.get(`${routeName}/:id`, async ctx => {
+router.get("/items/:id", async ctx => {
   const { id } = ctx.params;
 
   ctx.body = await elasticsearchClient.get({

@@ -1,11 +1,7 @@
-//
-
 const path = require("path");
 const mount = require("koa-mount");
 const send = require("koa-send");
-const API_BASE_URL = require("./api").BASE_URL;
-
-//
+const API_BASE_URL = require("./v1.prefix");
 
 // HACK(douglasduteil): force use of native node require.resolve function
 // As the API code pass by ncc (webpack), require is replaced by

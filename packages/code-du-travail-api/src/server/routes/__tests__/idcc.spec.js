@@ -1,9 +1,9 @@
 const request = require("supertest");
 const Koa = require("koa");
-const routes = require("../idcc");
+const router = require("../idcc");
 
 const app = new Koa();
-app.use(routes.routes());
+app.use(router.routes());
 
 test("return idcc results for boulangerie", async () => {
   const response = await request(app.callback()).get(

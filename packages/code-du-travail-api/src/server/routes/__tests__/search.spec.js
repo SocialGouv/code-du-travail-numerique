@@ -1,13 +1,13 @@
 const request = require("supertest");
 const Koa = require("koa");
-const routes = require("../search");
+const router = require("../search");
 
 const app = new Koa();
-app.use(routes.routes());
+app.use(router.routes());
 
 test("return search results for demission", async () => {
   const response = await request(app.callback()).get(
-    `/api/v1/search?q=démission`
+    "/api/v1/search?q=démission"
   );
   expect(response.status).toBe(200);
   expect(response.body.hits).toMatchSnapshot();

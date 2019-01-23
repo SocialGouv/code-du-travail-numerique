@@ -1,7 +1,6 @@
 const Router = require("koa-router");
-const API_BASE_URL = require("../api").BASE_URL;
+const API_BASE_URL = require("../v1.prefix");
 const router = new Router({ prefix: API_BASE_URL });
-const routeName = "/search";
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
@@ -19,7 +18,7 @@ const index =
  * @param {string} querystring.excludeSources A `excludeSources` querystring param containing the sources (comma separatied list) to exclude from the results
  * @returns {Object} Results.
  */
-router.get(routeName, async ctx => {
+router.get("/search", async ctx => {
   const query = ctx.request.query.q;
   const size = Math.min(ctx.request.query.size || 10, 100);
 
