@@ -15,6 +15,7 @@ test("should return all the records around avignon", async () => {
     `/api/v1/annuaire/search?coord=${addresses.coord.avignon}`
   );
   expect(response.status).toBe(200);
+  expect(fetch).not.toHaveBeenCalled();
   expect(response.body.hits).toMatchSnapshot();
 });
 
@@ -25,5 +26,6 @@ test("should return all the records around loriol", async () => {
     `/api/v1/annuaire/search?q=${addresses.query}`
   );
   expect(response.status).toBe(200);
+  expect(fetch).toHaveBeenCalledWith(expect.stringContaining(addresses.query));
   expect(response.body.hits).toMatchSnapshot();
 });
