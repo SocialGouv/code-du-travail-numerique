@@ -135,55 +135,6 @@ async function search({
 }
 
 /**
- * Get a single JSON document from the index based on its id or source+slug
- *
- * @param {string} id The item ID to fetch.
- * @param {source} id The item source to fetch.
- * @param {slug} id The item slug to fetch.
- * @returns {Object} An elasticsearch response.
- */
-async function getSingleItem(params) {
-  const { id, source, slug, _source } = params;
-  if (id) {
-    return await elasticsearchClient.get({
-      index: elasticsearchIndexName,
-      type: elasticsearchIndexName,
-      id
-    });
-  }
-  if (source && slug) {
-    return await elasticsearchClient
-      .search({
-        index: elasticsearchIndexName,
-        type: elasticsearchIndexName,
-        body: {
-          size: 1,
-          query: {
-            bool: {
-              must: {
-                match: { source }
-              },
-              filter: { term: { slug } }
-            }
-          },
-          _source
-        }
-      })
-      .then(res => {
-        if (res.hits.total >= 1) {
-          return res.hits.hits[0];
-        } else {
-          const error = new Error(
-            `there is no items that match ${slug} in ${source}`
-          );
-          error.status = 404;
-          throw error;
-        }
-      });
-  }
-}
-
-/**
  * Return number of indexed documents by source
  *
  * @returns {Object} An elasticsearch response.
@@ -208,76 +159,8 @@ async function getDocsCount() {
     });
   // (res.hits.total && res.hits.hits[0]) || null);
 }
-/**
- * Return related documents that match themes
- * @param themes {Array} an array of theme to match
- * @param id {string} @optional must_not_match
- * @returns {Object} An elasticsearch response.
- */
-async function searchRelatedDocument(themes, id) {
-  const match = themes.reduce((state, theme) => {
-    return state.concat(
-      {
-        match: {
-          "tags.keywords": `themes:${theme}`
-        }
-      },
-      {
-        match: {
-          themes: theme
-        }
-      }
-    );
-  }, []);
-  const mustNot = id
-    ? [
-        {
-          match: {
-            _id: id
-          }
-        }
-      ]
-    : [];
-  return await elasticsearchClient.search({
-    index: elasticsearchIndexName,
-    type: elasticsearchIndexName,
-    body: {
-      size: 0,
-      aggregations: {
-        bySource: {
-          terms: {
-            field: "source"
-          },
-          aggs: {
-            bySource: {
-              top_hits: {
-                size: 2,
-                _source: ["title", "slug", "source", "path", "filename"]
-              }
-            }
-          }
-        }
-      },
-      _source: ["title", "source", "slug", "anchor"],
-      query: {
-        bool: {
-          must_not: [...mustNot],
-          must: [
-            {
-              bool: {
-                should: [...match]
-              }
-            }
-          ]
-        }
-      }
-    }
-  });
-}
 
 module.exports = {
-  getSingleItem,
   getDocsCount,
-  search,
-  searchRelatedDocument
+  search
 };
