@@ -841,7 +841,7 @@
 	},
 	{
 		"question": "Ma période d'essai peut elle être renouvelée ? (Boulangerie)",
-		"reponse": "<p>La période d'essai est renouvelable <strong>une fois</strong> lorsque plusieurs conditions le permettent:</p><p><strong>Le contrat de travail</strong> doit prévoir la période d'essai, et la possibilité de renouvellement.</p><p>La convention collective de la boulangerie ne prévoit pas que la période d'essai soit renouvelée.</p><p>Pour que cette période d'essai puisse être renouvelable <strong>une fois</strong> :</p><ul><li>La convention collective doit prévoir la possibilité du renouvellement</li><li>Le contrat de travail doit avoir prévu la période d'essai</li><li>Le renouvellement doit être prévu contractuellement ( contrat de travail, avenant)</li><li>Le salarié doit avoir donné son accord</li></ul>",
+		"reponse": "La convention collective de la boulangerie ne prévoit pas que la période d'essai soit renouvelée.",
 		"themes": [3760],
 		"tags": {
 			"theme": "période d'essai",
