@@ -1,7 +1,6 @@
 import getConfig from "next/config";
 import memoizee from "memoizee";
-// import debounce from "../lib/pDebounce";
-import debounce from "p-debounce";
+import pDebounce from "../lib/pDebounce";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -42,7 +41,7 @@ const suggestResultsMemoized = memoizee(suggestMin, {
 });
 
 // debounce memoized suggestions results
-const suggestResultDebounce = debounce(suggestResultsMemoized, 200);
+const suggestResultDebounce = pDebounce(suggestResultsMemoized, 200);
 
 export {
   suggestResultDebounce as suggestResults,
