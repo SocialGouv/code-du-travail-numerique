@@ -1,6 +1,5 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
-const router = new Router({ prefix: API_BASE_URL });
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getItemBySlugBody = require("./searchBySourceSlug.elastic");
@@ -8,6 +7,8 @@ const getRelatedDocumentBody = require("./relatedDocument.elastic");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+
+const router = new Router({ prefix: API_BASE_URL });
 
 /**
  * Return document matching the given source+slug.

@@ -1,5 +1,6 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
+
 const router = new Router({ prefix: API_BASE_URL });
 
 /**

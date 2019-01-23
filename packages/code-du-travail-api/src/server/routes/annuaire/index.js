@@ -5,8 +5,8 @@ const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getAnnuaireBody = require("./annuaire.elastic");
 
-const router = new Router({ prefix: API_BASE_URL });
 const index = process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_annuaire";
+const router = new Router({ prefix: API_BASE_URL });
 
 // todo @lionelb move to constant file
 const defaultMaxSearchDistance = "30km";
