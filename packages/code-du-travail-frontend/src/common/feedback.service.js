@@ -1,4 +1,4 @@
-export const feedbackUrl = "https://formspree.io/xwbdjqem";
+export const feedbackUrl = "https://formspree.io/xbalrgzm";
 
 export function postFeedback(data) {
   return fetch(feedbackUrl, {
@@ -11,6 +11,7 @@ export function postFeedback(data) {
   })
     .then(r => r.json())
     .then(data => {
+      // todo (@ju) sentry/piwik
       if (data.error) {
         // meh! formspree api return 200 with a success / error data
         throw new Error("cannot send form : " + data.error);
