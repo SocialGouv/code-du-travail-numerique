@@ -25,7 +25,6 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           {this.props.styleTags}
-          <link rel="shortcut icon" href="/static/favicon.ico" />
           <link
             rel="stylesheet"
             type="text/css"

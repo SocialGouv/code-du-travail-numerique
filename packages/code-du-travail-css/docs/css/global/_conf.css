@@ -139,8 +139,8 @@ https://fontlibrary.org/fr/font/source-sans-pro
 --------------------------------------------------------------------------- */
 
 :focus {
-  border: 1px solid var(--color-focus);
-  box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  outline: 1px solid var(--color-outline);
+  box-shadow: 0 0 0.15rem 0.15rem var(--color-focus-shadow);
 }
 
 /* WebKit gets its native focus styles. */

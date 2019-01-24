@@ -50,7 +50,7 @@ class Search extends React.Component {
   };
   state = {
     // query in the input box
-    query: "",
+    query: this.props.router.query.q || "",
     // query to display the search results
     queryResults: "",
     facet: "",

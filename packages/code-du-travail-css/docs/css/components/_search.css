@@ -10,30 +10,26 @@
   height: 5rem;
   & button {
     margin-left: 5px;
+    width: 4rem;
   }
 }
 
 .search__fields {
   flex: 1 1 auto;
   display: flex;
-  border: 1px solid var(--color-element-border);
-  border-radius: var(--border-radius-base);
-  &:focus {
-    border: 1px solid var(--color-focus);
-    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-  }
 }
 .search__facets {
-  flex: 1 1 10%;
+  position: absolute;
   display: flex;
   align-items: center;
-  margin: 0.8rem;
+  margin: 0.575rem;
   border: none;
-  max-width: 200px;
+  max-width: 10rem;
   border-radius: var(--border-radius-base);
   background-color: var(--color-lighter-grey);
 }
 .facet-icon {
+  position: absolute;
   width: 1.25rem;
   height: 1.25rem;
   margin: 0 calc(var(--spacing-small) / 2);
@@ -43,38 +39,20 @@
   font-size: var(--font-size-small);
   border: 1px solid transparent;
   background-color: transparent;
-  background-position: top 0.75rem right 0.75em;
+  background-position: top 1rem right 0.75em;
   width: auto;
-  padding: 0.2em 2em 0.2em 0.2em;
-  flex: 1 1 auto;
+  padding: 0.6em 2.1em 0.6em 2em;
   font-style: italic;
-  &:focus {
-    border: none;
-    box-shadow: none;
-  }
-  &:-moz-focusring {
-    border: 1px solid var(--color-focus);
-    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-  }
-  &:focus-visible {
-    border: 1px solid var(--color-focus);
-    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-  }
-  &:focus:not(:focus-visible) {
-    outline: none;
-    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-  }
 }
 
-input[type="search"].search__input {
-  flex: 1 0 90%;
+.search__input[type="search"] {
   appearance: none;
-  border: none;
+  border: 1px solid var(--color-element-border);
+  border-radius: var(--border-radius-base);
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
   color: inherit;
-
   background: var(--color-white);
 
   height: 100%;
@@ -82,12 +60,14 @@ input[type="search"].search__input {
   max-width: 100%;
   width: 100%;
   padding: 0;
-  padding-left: var(--spacing-small);
-  line-height: 3.625rem;
-  &:focus {
-    border: none;
-    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-  }
+  padding-right: 0.5rem;
+  padding-left: 11.5rem;
+  line-height: calc(3.625rem - 1px);
+  transition: border 250ms ease;
+}
+.search__input[type="search"]:focus {
+  outline: none;
+  border-color: var(--color-blue-light);
 }
 
 .search__loading {

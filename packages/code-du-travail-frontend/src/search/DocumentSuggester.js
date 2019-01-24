@@ -21,6 +21,12 @@ export class DocumentSuggester extends React.Component {
     suggestions: []
   };
 
+  focusInput = autoSuggest => {
+    if (autoSuggest !== null && this.props.query.trim().length === 0) {
+      autoSuggest.input.focus();
+    }
+  };
+
   onSuggestionSelected = (event, data) => {
     this.props.onSelect(data.suggestion, event);
   };
@@ -38,6 +44,7 @@ export class DocumentSuggester extends React.Component {
     };
     return (
       <Autosuggest
+        ref={this.focusInput}
         theme={suggesterTheme}
         suggestions={suggestions}
         alwaysRenderSuggestions={false}
