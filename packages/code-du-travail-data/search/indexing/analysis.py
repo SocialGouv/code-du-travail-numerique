@@ -64,25 +64,31 @@ filters = {
 analyzers = {
     'idcc_ape': {
       'tokenizer': 'whitespace',
-      'filters': [
+      'filter': [
         'french_acronyms'
       ]
     },
     'french_heavy': {
       'tokenizer': 'icu_tokenizer',
-      'filters': [
+      'char_filter': ['html_strip'],
+      'filter': [
         'french_elision',
         'icu_folding',
+        'lowercase',
+        'french_stop',
         'french_stemmer',
+        'french_acronyms',
         'french_synonyms'
       ]
     },
     'french_light': {
       'tokenizer': 'icu_tokenizer',
-      'filters': [
+      'char_filter': ['html_strip'],
+      'filter': [
         'french_elision',
         'icu_folding',
-        'french_synonym'
+        'lowercase',
+        'french_synonyms'
       ]
     },
     'french_stemmed': {

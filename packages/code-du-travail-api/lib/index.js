@@ -73,7 +73,12 @@ ${sign}   ${percent(prevScore / results.length)}      ${percent(
 }
 
 function printResultsDetails(results) {
-  const emoji = (prev, next) => (next > prev ? ":arrow_up:" : ":arrow_down:");
+  const emoji = (prev, next) =>
+    next > prev
+      ? ":chart_with_upwards_trend:"
+      : next < prev
+        ? ":chart_with_downwards_trend:"
+        : ":heavy_minus_sign:";
   const output = results
     .map(
       ({ Request, prevScore, score, diffScore }) =>
