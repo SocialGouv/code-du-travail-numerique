@@ -52,13 +52,6 @@ filters = {
         'type': 'stop',
         'stopwords': '_french_',
     },
-    'shingle': {
-        'type': 'shingle',
-        'min_shingle_size': 2,
-        'max_shingle_size': 5,
-        'output_unigrams': False,
-        'filler_token': '',
-    },
 }
 
 analyzers = {
@@ -68,32 +61,44 @@ analyzers = {
         'french_acronyms'
       ]
     },
-    'french_heavy': {
+    'french_light_startwith': {
       'tokenizer': 'icu_tokenizer',
-      'char_filter': ['html_strip'],
+      'char_filter': ['startwith'],
       'filter': [
-        'french_elision',
-        'icu_folding',
-        'lowercase',
-        'french_stop',
-        'french_stemmer',
-        'french_acronyms',
-        'french_synonyms'
+          "french_elision",
+          "icu_folding",
       ]
     },
     'french_light': {
       'tokenizer': 'icu_tokenizer',
-      'char_filter': ['html_strip'],
       'filter': [
-        'french_elision',
-        'icu_folding',
-        'lowercase',
-        'french_synonyms'
+          "french_elision",
+          "icu_folding",
       ]
     },
-    'french_stemmed': {
+    'french_light_stemmed_startwidth': {
+      'tokenizer': 'icu_tokenizer',
+      'char_filter': ['startwith'],
+      'filter': [
+          "french_elision",
+          "icu_folding",
+          'lowercase',
+          "french_stop",
+          "french_stemmer"
+      ]
+    },
+    'french_light_stemmed': {
+      'tokenizer': 'icu_tokenizer',
+      'filter': [
+          "french_elision",
+          "icu_folding",
+          'lowercase',
+          "french_stop",
+          "french_stemmer"
+      ]
+    },
+    'french': {
         'type': 'custom',
-        'char_filter': ['html_strip'],
         'tokenizer': 'icu_tokenizer',
         'filter': [
             'french_elision',
@@ -105,40 +110,13 @@ analyzers = {
             'french_stemmer',
         ],
     },
-    'french_exact': {
-        'type': 'custom',
-        'char_filter': ['html_strip'],
-        'tokenizer': 'icu_tokenizer',
-        'filter': [
-            'french_elision',
-            'icu_folding',
-            'lowercase',
-            'french_acronyms',
-            'french_synonyms',
-            'french_stop',
-        ],
-    },
-    'shingle': {
-        'type': 'custom',
-        'char_filter': ['html_strip'],
-        'tokenizer': 'icu_tokenizer',
-        'filter': [
-            'french_elision',
-            'icu_folding',
-            'lowercase',
-            'french_acronyms',
-            'french_synonyms',
-            'french_stop',
-            'shingle',
-        ],
-    },
-    'path_analyzer_custom': {
-        'tokenizer': 'tags',
-    },
 }
 
-tokenizers = {
-    'tags': {
-        'type': 'path_hierarchy',
-    },
+
+char_filters = {
+    'startwith': {
+        "type": "pattern_replace",
+        "pattern": "^(.*)",
+        "replacement": "_start_ $1"
+    }
 }

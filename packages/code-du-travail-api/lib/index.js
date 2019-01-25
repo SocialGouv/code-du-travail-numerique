@@ -44,7 +44,7 @@ function computeLineScore(line, hits) {
   }, {});
 
   const score = computeScore(expectedValues, resultsUrl);
-  const prevScore = parseInt(line.score, 10) || 0;
+  const prevScore = parseFloat(line.score, 10) || 0;
   const diffScore = score - prevScore;
   return {
     ...line,
