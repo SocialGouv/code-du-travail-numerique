@@ -386,7 +386,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
             Nous sommes désolés de n'avoir pu répondre à vos attentes. Laissez-nous votre question, vos suggestions et votre adresse, nous vous préviendrons lors des prochaines améliorations de cet outils.
           </p>
           <form
-            action="https://formspree.io/xwbdjqem"
+            action="https://formspree.io/xbalrgzm"
             class="feedback__form"
           >
             <input
@@ -859,7 +859,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
             Nous sommes désolés de n'avoir pu répondre à vos attentes. Laissez-nous votre question, vos suggestions et votre adresse, nous vous préviendrons lors des prochaines améliorations de cet outils.
           </p>
           <form
-            action="https://formspree.io/xwbdjqem"
+            action="https://formspree.io/xbalrgzm"
             class="feedback__form"
           >
             <input
@@ -1719,7 +1719,7 @@ exports[`<Answer /> should render additional content 1`] = `
             Nous sommes désolés de n'avoir pu répondre à vos attentes. Laissez-nous votre question, vos suggestions et votre adresse, nous vous préviendrons lors des prochaines améliorations de cet outils.
           </p>
           <form
-            action="https://formspree.io/xwbdjqem"
+            action="https://formspree.io/xbalrgzm"
             class="feedback__form"
           >
             <input

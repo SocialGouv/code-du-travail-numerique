@@ -3,7 +3,7 @@
 exports[`<FeedbackForm /> should render 1`] = `
 <div>
   <form
-    action="https://formspree.io/xwbdjqem"
+    action="https://formspree.io/xbalrgzm"
     class="feedback__form"
   >
     <input
