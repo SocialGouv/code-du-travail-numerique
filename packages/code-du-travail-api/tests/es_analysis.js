@@ -63,26 +63,11 @@ const filter = {
 
 const analyzer = {
   idcc_ape: {
-    tokenizer: "whitespace",
-    filters: ["french_acronyms"]
-  },
-  french_heavy: {
-    tokenizer: "icu_tokenizer",
-    filters: [
-      "french_elision",
-      "icu_folding",
-      "french_stemmer",
-      "french_synonyms"
-    ]
-  },
-  french_light: {
-    tokenizer: "icu_tokenizer",
-    filters: ["french_elision", "icu_folding", "french_synonym"]
+    tokenizer: "whitespace"
   },
   french_stemmed: {
-    type: "custom",
-    char_filter: ["html_strip"],
     tokenizer: "icu_tokenizer",
+    char_filter: ["html_strip"],
     filter: [
       "french_elision",
       "icu_folding",
@@ -93,46 +78,27 @@ const analyzer = {
       "french_stemmer"
     ]
   },
-  french_exact: {
-    type: "custom",
-    char_filter: ["html_strip"],
+  french: {
     tokenizer: "icu_tokenizer",
-    filter: [
-      "french_elision",
-      "icu_folding",
-      "lowercase",
-      "french_acronyms",
-      "french_synonyms",
-      "french_stop"
-    ]
+    filter: ["french_elision", "icu_folding", "french_stop", "french_stemmer"]
   },
-  shingle: {
-    type: "custom",
-    char_filter: ["html_strip"],
+  french_indexing: {
     tokenizer: "icu_tokenizer",
-    filter: [
-      "french_elision",
-      "icu_folding",
-      "lowercase",
-      "french_acronyms",
-      "french_synonyms",
-      "french_stop",
-      "shingle"
-    ]
-  },
-  path_analyzer_custom: {
-    tokenizer: "tags"
+    char_filter: ["startwith"],
+    filter: ["french_elision", "icu_folding", "french_stop", "french_stemmer"]
   }
 };
 
-const tokenizer = {
-  tags: {
-    type: "path_hierarchy"
+const char_filter = {
+  startwith: {
+    type: "pattern_replace",
+    pattern: "^(.*)",
+    replacement: "__start__ $1"
   }
 };
 
 module.exports = {
-  tokenizer,
+  char_filter,
   analyzer,
   filter
 };

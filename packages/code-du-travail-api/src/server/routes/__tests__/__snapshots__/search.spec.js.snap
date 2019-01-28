@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 5174.0654,
+      "_score": 2.8796601,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -14,22 +14,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
+        "text": Array [
           "Le préavis de <mark>démission</mark> diffère suivant la",
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis",
         ],
-        "all_text.french_stemmed": Array [
-          "Le préavis de <mark>démission</mark> diffère suivant la",
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis",
-        ],
-        "all_text.shingle": Array [
-          "Le préavis de <mark>démission</mark> diffère suivant la",
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "Dans les HCR, quel est le préavis de <mark>démission</mark>",
         ],
         "title.french_stemmed": Array [
@@ -40,7 +28,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 3618.4893,
+      "_score": 2.1730855,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -48,22 +36,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
+        "text": Array [
           "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie",
         ],
-        "all_text.french_stemmed": Array [
-          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie",
-        ],
-        "all_text.shingle": Array [
-          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
         ],
         "title.french_stemmed": Array [
@@ -72,7 +48,7 @@ Object {
       },
     },
   ],
-  "max_score": 5174.0654,
+  "max_score": 2.8796601,
   "total": 2,
 }
 `;
@@ -83,7 +59,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 6535.994,
+      "_score": 4.252878,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -93,102 +69,24 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
+        "text": Array [
           "La <mark>démission</mark> ne peut être exigée par avance",
           "aucune forme particulière pour présenter sa <mark>démission</mark>",
           "collectives prévoient d’ailleurs que la <mark>démission</mark>",
           "travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
         ],
-        "all_text.french_stemmed": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
-          "La <mark>démission</mark> ne peut être exigée par avance",
-          "aucune forme particulière pour présenter sa <mark>démission</mark>",
-          "collectives prévoient d’ailleurs que la <mark>démission</mark>",
-          "travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
-        ],
-        "all_text.shingle": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
-          "La <mark>démission</mark> ne peut être exigée par avance",
-          "aucune forme particulière pour présenter sa <mark>démission</mark>",
-          "collectives prévoient d’ailleurs que la <mark>démission</mark>",
-          "travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
         ],
         "title.french_stemmed": Array [
           "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
-        ],
-      },
-    },
-    Object {
-      "_id": "3",
-      "_index": "cdtn_document_test",
-      "_score": 6246.071,
-      "_source": Object {
-        "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-        "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
-        "source": "fiches_ministere_travail",
-        "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "all_text.french_exact": Array [
-          "est-elle une <mark>démission</mark> ?",
-          "La <mark>démission</mark> : l’absence prolongée du salarié",
-        ],
-        "all_text.french_stemmed": Array [
-          "est-elle une <mark>démission</mark> ?",
-          "La <mark>démission</mark> : l’absence prolongée du salarié",
-        ],
-        "all_text.shingle": Array [
-          "est-elle une <mark>démission</mark> ?",
-          "La <mark>démission</mark> : l’absence prolongée du salarié",
-        ],
-        "title.french_exact": Array [
-          "est-elle une <mark>démission</mark> ?",
-          "La <mark>démission</mark> : l’absence prolongée du salarié",
-        ],
-        "title.french_stemmed": Array [
-          "est-elle une <mark>démission</mark> ?",
-          "La <mark>démission</mark> : l’absence prolongée du salarié",
-        ],
-      },
-    },
-    Object {
-      "_id": "0",
-      "_index": "cdtn_document_test",
-      "_score": 6238.069,
-      "_source": Object {
-        "slug": "la-demission",
-        "source": "themes",
-        "title": "La démission",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "all_text.french_exact": Array [
-          "La <mark>démission</mark> Vous souhaitez démissionner?",
-        ],
-        "all_text.french_stemmed": Array [
-          "La <mark>démission</mark> Vous souhaitez <mark>démissionner</mark>?",
-        ],
-        "all_text.shingle": Array [
-          "La <mark>démission</mark> Vous souhaitez démissionner?",
-        ],
-        "title.french_exact": Array [
-          "La <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
-          "La <mark>démission</mark>",
         ],
       },
     },
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 6201.423,
+      "_score": 3.9669623,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -197,28 +95,14 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "<mark>Démission</mark> d'un salarié La <mark>démission</mark> vous",
+        "text": Array [
+          "La <mark>démission</mark> vous permet de rompre votre",
           "La <mark>démission</mark> est un mode de rupture du contrat",
           "Lettre de <mark>démission</mark> du salarié Direction",
           "Volonté de démissionner Pour qu'une <mark>démission</mark>",
           "selon votre situation au moment de votre <mark>démission</mark>",
         ],
-        "all_text.french_stemmed": Array [
-          "<mark>Démission</mark> d'un salarié La <mark>démission</mark> vous",
-          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark>",
-          "La <mark>démission</mark> est un mode de rupture du contrat",
-          "Lettre de <mark>démission</mark> du salarié Direction",
-          "selon votre situation au moment de votre <mark>démission</mark>",
-        ],
-        "all_text.shingle": Array [
-          "<mark>Démission</mark> d'un salarié La <mark>démission</mark> vous",
-          "La <mark>démission</mark> est un mode de rupture du contrat",
-          "Lettre de <mark>démission</mark> du salarié Direction",
-          "Volonté de démissionner Pour qu'une <mark>démission</mark>",
-          "selon votre situation au moment de votre <mark>démission</mark>",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "<mark>Démission</mark> d'un salarié",
         ],
         "title.french_stemmed": Array [
@@ -229,7 +113,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 5932.514,
+      "_score": 3.744854,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -238,67 +122,24 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
+        "text": Array [
           "Lettre de <mark>démission</mark> du salarié Direction",
-          "<mark>Démission</mark> d'une assistante maternelle L'assistante",
           "son contrat de travail en présentant sa <mark>démission</mark>",
           "respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
           "présentation de la lettre recommandée de <mark>démission</mark>",
         ],
-        "all_text.french_stemmed": Array [
-          "Lettre de <mark>démission</mark> du salarié Direction",
-          "<mark>Démission</mark> d'une assistante maternelle L'assistante",
-          "son contrat de travail en présentant sa <mark>démission</mark>",
-          "respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
-          "présentation de la lettre recommandée de <mark>démission</mark>",
-        ],
-        "all_text.shingle": Array [
-          "Lettre de <mark>démission</mark> du salarié Direction",
-          "<mark>Démission</mark> d'une assistante maternelle L'assistante",
-          "son contrat de travail en présentant sa <mark>démission</mark>",
-          "respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
-          "présentation de la lettre recommandée de <mark>démission</mark>",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "<mark>Démission</mark> d'une assistante maternelle",
         ],
         "title.french_stemmed": Array [
           "<mark>Démission</mark> d'une assistante maternelle",
-        ],
-      },
-    },
-    Object {
-      "_id": "1",
-      "_index": "cdtn_document_test",
-      "_score": 5750.7783,
-      "_source": Object {
-        "slug": "labandon-de-poste-est-il-une-demission",
-        "source": "themes",
-        "title": "L’abandon de poste est-il une démission ?",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "all_text.french_exact": Array [
-          "L’abandon de poste est-il une <mark>démission</mark> ?",
-        ],
-        "all_text.french_stemmed": Array [
-          "L’abandon de poste est-il une <mark>démission</mark> ?",
-        ],
-        "all_text.shingle": Array [
-          "L’abandon de poste est-il une <mark>démission</mark> ?",
-        ],
-        "title.french_exact": Array [
-          "L’abandon de poste est-il une <mark>démission</mark> ?",
-        ],
-        "title.french_stemmed": Array [
-          "L’abandon de poste est-il une <mark>démission</mark> ?",
         ],
       },
     },
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 5174.0654,
+      "_score": 2.8796601,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -306,22 +147,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
+        "text": Array [
           "Le préavis de <mark>démission</mark> diffère suivant la",
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis",
         ],
-        "all_text.french_stemmed": Array [
-          "Le préavis de <mark>démission</mark> diffère suivant la",
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis",
-        ],
-        "all_text.shingle": Array [
-          "Le préavis de <mark>démission</mark> diffère suivant la",
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "Dans les HCR, quel est le préavis de <mark>démission</mark>",
         ],
         "title.french_stemmed": Array [
@@ -332,7 +161,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 3618.4893,
+      "_score": 2.1730855,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -340,22 +169,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
+        "text": Array [
           "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie",
         ],
-        "all_text.french_stemmed": Array [
-          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie",
-        ],
-        "all_text.shingle": Array [
-          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
         ],
         "title.french_stemmed": Array [
@@ -364,38 +181,9 @@ Object {
       },
     },
     Object {
-      "_id": "8",
-      "_index": "cdtn_document_test",
-      "_score": 2148.4797,
-      "_source": Object {
-        "slug": "article-r1225-18",
-        "source": "code_du_travail",
-        "title": "Article R1225-18",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "all_text.french_exact": Array [
-          "Le salarié informe son employeur de sa <mark>démission</mark>",
-        ],
-        "all_text.french_stemmed": Array [
-          "Le salarié informe son employeur de sa <mark>démission</mark>",
-        ],
-        "all_text.shingle": Array [
-          "Le salarié informe son employeur de sa <mark>démission</mark>",
-        ],
-        "path.french_exact": Array [
-          "Paternité/Congés d'éducation des enfants/<mark>Démission</mark>",
-        ],
-        "path.french_stemmed": Array [
-          "Paternité/Congés d'éducation des enfants/<mark>Démission</mark>",
-        ],
-      },
-    },
-    Object {
       "_id": "9",
       "_index": "cdtn_document_test",
-      "_score": 1355.6232,
+      "_score": 1.9784344,
       "_source": Object {
         "slug": "article-r1442-22-4",
         "source": "code_du_travail",
@@ -404,22 +192,31 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "désire renoncer à son mandat adresse sa  <mark>démission</mark>",
-          "La <mark>démission</mark>  n'est définitive qu'après acceptation",
-        ],
-        "all_text.french_stemmed": Array [
-          "désire renoncer à son mandat adresse sa  <mark>démission</mark>",
-          "La <mark>démission</mark>  n'est définitive qu'après acceptation",
-        ],
-        "all_text.shingle": Array [
+        "text": Array [
           "désire renoncer à son mandat adresse sa  <mark>démission</mark>",
           "La <mark>démission</mark>  n'est définitive qu'après acceptation",
         ],
       },
     },
+    Object {
+      "_id": "8",
+      "_index": "cdtn_document_test",
+      "_score": 1.5655789,
+      "_source": Object {
+        "slug": "article-r1225-18",
+        "source": "code_du_travail",
+        "title": "Article R1225-18",
+        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text": Array [
+          "Le salarié informe son employeur de sa <mark>démission</mark>",
+        ],
+      },
+    },
   ],
-  "max_score": 6535.994,
-  "total": 10,
+  "max_score": 4.252878,
+  "total": 7,
 }
 `;

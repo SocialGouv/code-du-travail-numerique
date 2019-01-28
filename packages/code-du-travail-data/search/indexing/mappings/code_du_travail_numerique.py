@@ -22,19 +22,14 @@ code_du_travail_numerique_mapping = {
         'title': {
             'type': 'text',
             'analyzer': 'french',
+            'search_analyzer': 'french_indexing',
             'fields': {
-                'light_stemmed': {
+                'french_stemmed': {
                     'type': 'text',
-                    'analyzer': 'french_light_stemmed_startwith',
-                    'search_analyzer': 'french_light_stemmed'
-                },
-                'light': {
-                    'type': 'text',
-                    'analyzer': 'french_light_startwith',
-                    'search_analyzer': 'french_light'
+                    'analyzer': 'french_stemmed',
                 },
             },
-        }
+        },
         'text': {
             'type': 'text',
             'analyzer': 'french',
@@ -46,8 +41,8 @@ code_du_travail_numerique_mapping = {
             'fields': {
                 'keywords': {
                   'type': 'text',
-                  'analyzer': 'keyword'
-                }
+                  'analyzer': 'keyword',
+                },
             },
         },
         # Currently only available for `Code du travail`.
@@ -66,5 +61,5 @@ code_du_travail_numerique_mapping = {
             'type': 'text',
             'analyzer': 'idcc_ape',
         },
-    },
+    }
 }

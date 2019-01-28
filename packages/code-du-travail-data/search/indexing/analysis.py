@@ -56,56 +56,38 @@ filters = {
 
 analyzers = {
     'idcc_ape': {
-      'tokenizer': 'whitespace',
-      'filter': [
-        'french_acronyms'
-      ]
+        'tokenizer': 'whitespace',
     },
-    'french_light_startwith': {
-      'tokenizer': 'icu_tokenizer',
-      'char_filter': ['startwith'],
-      'filter': [
-          "french_elision",
-          "icu_folding",
-      ]
-    },
-    'french_light': {
-      'tokenizer': 'icu_tokenizer',
-      'filter': [
-          "french_elision",
-          "icu_folding",
-      ]
-    },
-    'french_light_stemmed_startwidth': {
-      'tokenizer': 'icu_tokenizer',
-      'char_filter': ['startwith'],
-      'filter': [
-          "french_elision",
-          "icu_folding",
-          'lowercase',
-          "french_stop",
-          "french_stemmer"
-      ]
-    },
-    'french_light_stemmed': {
-      'tokenizer': 'icu_tokenizer',
-      'filter': [
-          "french_elision",
-          "icu_folding",
-          'lowercase',
-          "french_stop",
-          "french_stemmer"
-      ]
+    'french_stemmed': {
+        'tokenizer': 'icu_tokenizer',
+        "char_filter": [
+            "html_strip"
+        ],
+        'filter': [
+            "french_elision",
+            "icu_folding",
+            "lowercase",
+            "french_acronyms",
+            "french_synonyms",
+            "french_stop",
+            "french_stemmer"
+        ]
     },
     'french': {
-        'type': 'custom',
         'tokenizer': 'icu_tokenizer',
         'filter': [
             'french_elision',
             'icu_folding',
-            'lowercase',
-            'french_acronyms',
-            'french_synonyms',
+            'french_stop',
+            'french_stemmer',
+        ],
+    },
+    'french_indexing': {
+        'tokenizer': 'icu_tokenizer',
+        "char_filter": [ "startwith" ],
+        'filter': [
+            'french_elision',
+            'icu_folding',
             'french_stop',
             'french_stemmer',
         ],
@@ -117,6 +99,6 @@ char_filters = {
     'startwith': {
         "type": "pattern_replace",
         "pattern": "^(.*)",
-        "replacement": "_start_ $1"
+        "replacement": "__start__ $1"
     }
 }

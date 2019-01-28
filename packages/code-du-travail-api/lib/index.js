@@ -16,7 +16,7 @@ function computeScore(expectedResultsUrl, actualResulstUrl) {
   }, []);
   return (
     distances
-      .map(d => (d !== null ? 1 - d * 0.1 : 0)) // each ditance unit is corresponding to a malus of 10%
+      .map(d => (d !== null ? Math.max(1 - d * 0.1, 0) : 0)) // each ditance unit is corresponding to a malus of 10%
       .reduce(sum, 0) / distances.length
   );
 }

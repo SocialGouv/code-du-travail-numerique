@@ -35,16 +35,11 @@ function getSearchBody({ query, size, excludeSources = [] }) {
             }
           },
           {
-            match: {
-              "title.light_stemmed": {
-                query: query
-              }
-            }
-          },
-          {
             match_phrase: {
-              "title.light_stemmed": {
-                query: `_start_ ${query}`
+              title: {
+                query: `__start__ ${query}`,
+                slop: 1,
+                boost: 2
               }
             }
           },
@@ -63,8 +58,16 @@ function getSearchBody({ query, size, excludeSources = [] }) {
             }
           },
           {
+            match: {
+              "title.french_stemmed": {
+                query: query
+              }
+            }
+          },
+          {
             query_string: {
-              query: '(title:"fonction publique") OR (title:"agent public")',
+              query:
+                '(title.french_stemmed:"fonction publique") OR (title.french_stemmed:"agent public")',
               boost: -2000
             }
           }
@@ -72,14 +75,13 @@ function getSearchBody({ query, size, excludeSources = [] }) {
       }
     },
     highlight: {
+      fragment_size: 40,
       order: "score",
       pre_tags: ["<mark>"],
       post_tags: ["</mark>"],
-      fragment_size: 40,
       fields: {
         title: {},
-        "title.light": {},
-        "title.ligth_stemmed": {},
+        "title.french_stemmed": {},
         text: {},
         path: {}
       }

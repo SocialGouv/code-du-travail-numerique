@@ -10,22 +10,11 @@ const cdtn_annuaire_mapping = {
     },
     title: {
       type: "text",
+      analizer: "french",
       fields: {
         french_stemmed: {
           type: "text",
           analyzer: "french_stemmed"
-        },
-        french_exact: {
-          type: "text",
-          analyzer: "french_exact"
-        },
-        french_light: {
-          type: "text",
-          analyzer: "french_light"
-        },
-        french_heavy: {
-          type: "text",
-          analyzer: "french_heavy"
         }
       }
     },
