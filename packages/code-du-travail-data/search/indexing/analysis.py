@@ -84,7 +84,7 @@ analyzers = {
     },
     'french_indexing': {
         'tokenizer': 'icu_tokenizer',
-        "char_filter": [ "startwith" ],
+        "char_filter": ["startwith"],
         'filter': [
             'french_elision',
             'icu_folding',
