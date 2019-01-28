@@ -17,48 +17,48 @@ const cdtn_document_mapping = {
       type: "text",
       analyzer: "french",
       store: true
-    }
-  },
-  title: {
-    type: "text",
-    analyzer: "french",
-    search_analyzer: "french_indexing",
-    fields: {
-      french_stemmed: {
-        type: "text",
-        analyzer: "french_stemmed"
+    },
+    title: {
+      type: "text",
+      analyzer: "french",
+      search_analyzer: "french_indexing",
+      fields: {
+        french_stemmed: {
+          type: "text",
+          analyzer: "french_stemmed"
+        }
       }
-    }
-  },
-  text: {
-    type: "text",
-    analyzer: "french"
-  },
-  // Currently only available for `Fiches service public`.
-  tags: {
-    type: "text",
-    analyzer: "french",
-    fields: {
-      keywords: {
-        type: "text",
-        analyzer: "keyword"
+    },
+    text: {
+      type: "text",
+      analyzer: "french"
+    },
+    // Currently only available for `Fiches service public`.
+    tags: {
+      type: "text",
+      analyzer: "french",
+      fields: {
+        keywords: {
+          type: "text",
+          analyzer: "keyword"
+        }
       }
+    },
+    // Currently only available for `Code du travail`.
+    path: {
+      type: "text",
+      analyzer: "french"
+    },
+    themes: {
+      type: "keyword"
+    },
+    idcc: {
+      type: "keyword"
+    },
+    ape: {
+      type: "text",
+      analyzer: "idcc_ape"
     }
-  },
-  // Currently only available for `Code du travail`.
-  path: {
-    type: "text",
-    analyzer: "french"
-  },
-  themes: {
-    type: "keyword"
-  },
-  idcc: {
-    type: "keyword"
-  },
-  ape: {
-    type: "text",
-    analyzer: "idcc_ape"
   }
 };
 
