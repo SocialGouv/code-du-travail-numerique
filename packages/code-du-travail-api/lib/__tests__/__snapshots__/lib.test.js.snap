@@ -109,7 +109,7 @@ exports[`printResultsAbstracts should output absctract 1`] = `
 exports[`printResultsDetails should output absctract 1`] = `
 "| file | Δ |  |
 |---|---|---|
-| Fromage | \`  10% <20%> (10%)\` | :arrow_up: |
-| Entrées | \`  50% <20%> (30%)\` | :arrow_down: |
-| Legumes | \`  0% <100%> (100%)\` | :arrow_up: |"
+| Fromage | \`  10% <20%> (10%)\` | :chart_with_upwards_trend: |
+| Entrées | \`  50% <20%> (30%)\` | :chart_with_downwards_trend: |
+| Legumes | \`  0% <100%> (100%)\` | :chart_with_upwards_trend: |"
 `;

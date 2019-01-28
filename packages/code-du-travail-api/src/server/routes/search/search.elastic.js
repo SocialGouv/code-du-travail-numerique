@@ -11,40 +11,14 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           }
         })),
         must: [
-          // Fuziness is ignored with multi_match's cross_fields.
-          // https://github.com/elastic/elasticsearch/issues/6866
-          // Put multi_match clause in standby, use an inner bool with 2 should clauses instead.
-          // {
-          //   multi_match: {
-          //     query: query,
-          //     fields: [
-          //       'all_text.french_stemmed',
-          //       'all_text.french_exact',
-          //     ],
-          //     operator: 'and',
-          //     cutoff_frequency: 0.0007,
-          //     type: 'cross_fields',
-          //   },
           {
             bool: {
               should: [
                 {
                   match: {
-                    "all_text.french_exact": {
+                    text: {
                       query: query,
-                      operator: "and",
-                      cutoff_frequency: 0.0007,
-                      fuzziness: "AUTO"
-                    }
-                  }
-                },
-                {
-                  match: {
-                    "all_text.french_stemmed": {
-                      query: query,
-                      operator: "and",
-                      cutoff_frequency: 0.0007,
-                      fuzziness: "AUTO"
+                      operator: "and"
                     }
                   }
                 }
@@ -54,35 +28,46 @@ function getSearchBody({ query, size, excludeSources = [] }) {
         ],
         should: [
           {
-            multi_match: {
-              query: query,
-              fields: ["title.french_stemmed", "title.french_exact"],
-              type: "most_fields",
-              boost: 2000
-            }
-          },
-          {
             match: {
-              "all_text.shingle": {
-                query: query,
-                boost: 1500
+              title: {
+                query: query
               }
             }
           },
           {
-            multi_match: {
-              query: query,
-              fields: ["path.french_stemmed", "path.french_exact"],
-              type: "most_fields",
-              boost: 500
+            match_phrase: {
+              title: {
+                query: `__start__ ${query}`,
+                slop: 1,
+                boost: 2
+              }
             }
           },
-          // Temporarily put "fonction publique" and "agent public" results in a less prominent position.
-          // todo: add a disclaimer
+          {
+            match_phrase: {
+              text: {
+                query: query
+              }
+            }
+          },
+          {
+            match: {
+              path: {
+                query: query
+              }
+            }
+          },
+          {
+            match: {
+              "title.french_stemmed": {
+                query: query
+              }
+            }
+          },
           {
             query_string: {
               query:
-                '(title.shingle:"fonction publique") OR (title.shingle:"agent public")',
+                '(title.french_stemmed:"fonction publique") OR (title.french_stemmed:"agent public")',
               boost: -2000
             }
           }
@@ -90,18 +75,15 @@ function getSearchBody({ query, size, excludeSources = [] }) {
       }
     },
     highlight: {
+      fragment_size: 40,
       order: "score",
       pre_tags: ["<mark>"],
       post_tags: ["</mark>"],
-      fragment_size: 40,
       fields: {
+        title: {},
         "title.french_stemmed": {},
-        "title.french_exact": {},
-        "all_text.french_stemmed": {},
-        "all_text.french_exact": {},
-        "all_text.shingle": {},
-        "path.french_stemmed": {},
-        "path.french_exact": {}
+        text: {},
+        path: {}
       }
     }
   };

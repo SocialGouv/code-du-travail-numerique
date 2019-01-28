@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 5174.0654,
+      "_score": 2.753367,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -14,19 +14,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "Dans les HCR, quel est le préavis de <mark>démission</mark> ? Le préavis de <mark>démission</mark> diffère suivant la qualification.",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis'] hôtels, cafés et restaurants",
+        "text": Array [
+          "Le préavis de <mark>démission</mark> diffère suivant la qualification.",
         ],
-        "all_text.french_stemmed": Array [
-          "Dans les HCR, quel est le préavis de <mark>démission</mark> ? Le préavis de <mark>démission</mark> diffère suivant la qualification.",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis'] hôtels, cafés et restaurants",
-        ],
-        "all_text.shingle": Array [
-          "Dans les HCR, quel est le préavis de <mark>démission</mark> ? Le préavis de <mark>démission</mark> diffère suivant la qualification.",
-          "['rupture du contrat', '<mark>démission</mark>', 'préavis'] hôtels, cafés et restaurants",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "Dans les HCR, quel est le préavis de <mark>démission</mark> ?",
         ],
         "title.french_stemmed": Array [
@@ -37,7 +28,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 3618.4893,
+      "_score": 1.9308722,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -45,22 +36,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie artisanale",
+        "text": Array [
           "Vous pouvez être en arrêt maladie pendant le préavis de <mark>démission</mark> ; cette situation est sans incidence sur son déroulement et sur sa date d’expiration.",
-          "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ?",
         ],
-        "all_text.french_stemmed": Array [
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie artisanale",
-          "Vous pouvez être en arrêt maladie pendant le préavis de <mark>démission</mark> ; cette situation est sans incidence sur son déroulement et sur sa date d’expiration.",
-          "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ?",
-        ],
-        "all_text.shingle": Array [
-          "['maladie', '<mark>démission</mark>', 'préavis'] boulangerie artisanale",
-          "Vous pouvez être en arrêt maladie pendant le préavis de <mark>démission</mark> ; cette situation est sans incidence sur son déroulement et sur sa date d’expiration.",
-          "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ?",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ?",
         ],
         "title.french_stemmed": Array [
@@ -69,7 +48,7 @@ Object {
       },
     },
   ],
-  "max_score": 5174.0654,
+  "max_score": 2.753367,
   "total": 2,
 }
 `;
@@ -80,7 +59,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 6535.994,
+      "_score": 3.8587623,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -90,69 +69,25 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark> ?",
-          "La <mark>démission</mark> ne peut être exigée par avance, par exemple, lors de la signature du contrat de travail ou au cours de son exécution.",
-          "Le Code du travail ne prévoit aucune forme particulière pour présenter sa <mark>démission</mark> : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par",
-          "L’écrit permet également de définir le début du préavis.Certaines conventions collectives prévoient d’ailleurs que la <mark>démission</mark> doit être écrite et adressée par lettre recommandée avec avis  de réception",
-          "du travail à l’issue des congés payés).Toutefois, pour éviter les contestations sur l’intention même de démissionner ou sur la date de la fin du contrat de travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
-        ],
-        "all_text.french_stemmed": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark> ?",
+        "text": Array [
           "La <mark>démission</mark> ne peut être exigée par avance, par exemple, lors de la signature du contrat de travail ou au cours de son exécution.",
           "ou sur la date de la fin du contrat de travail, le salarié a intérêt à remettre sa <mark>démission</mark> par écrit (si possible par lettre recommandée avec avis de réception).",
           "Le Code du travail ne prévoit aucune forme particulière pour présenter sa <mark>démission</mark> : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par",
+          "exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).Toutefois, pour éviter les contestations sur l’intention même de <mark>démissionner</mark>",
           "L’écrit permet également de définir le début du préavis.Certaines conventions collectives prévoient d’ailleurs que la <mark>démission</mark> doit être écrite et adressée par lettre recommandée avec avis  de réception",
         ],
-        "all_text.shingle": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark> ?",
-          "La <mark>démission</mark> ne peut être exigée par avance, par exemple, lors de la signature du contrat de travail ou au cours de son exécution.",
-          "Le Code du travail ne prévoit aucune forme particulière pour présenter sa <mark>démission</mark> : elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par",
-          "L’écrit permet également de définir le début du préavis.Certaines conventions collectives prévoient d’ailleurs que la <mark>démission</mark> doit être écrite et adressée par lettre recommandée avec avis  de réception",
-          "du travail à l’issue des congés payés).Toutefois, pour éviter les contestations sur l’intention même de démissionner ou sur la date de la fin du contrat de travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "La <mark>démission</mark> : comment présenter une <mark>démission</mark> ?",
         ],
         "title.french_stemmed": Array [
           "La <mark>démission</mark> : comment présenter une <mark>démission</mark> ?",
-        ],
-      },
-    },
-    Object {
-      "_id": "3",
-      "_index": "cdtn_document_test",
-      "_score": 6246.071,
-      "_source": Object {
-        "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-        "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
-        "source": "fiches_ministere_travail",
-        "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "all_text.french_exact": Array [
-          "La <mark>démission</mark> : l’absence prolongée du salarié est-elle une <mark>démission</mark> ?",
-        ],
-        "all_text.french_stemmed": Array [
-          "La <mark>démission</mark> : l’absence prolongée du salarié est-elle une <mark>démission</mark> ?",
-        ],
-        "all_text.shingle": Array [
-          "La <mark>démission</mark> : l’absence prolongée du salarié est-elle une <mark>démission</mark> ?",
-        ],
-        "title.french_exact": Array [
-          "La <mark>démission</mark> : l’absence prolongée du salarié est-elle une <mark>démission</mark> ?",
-        ],
-        "title.french_stemmed": Array [
-          "La <mark>démission</mark> : l’absence prolongée du salarié est-elle une <mark>démission</mark> ?",
         ],
       },
     },
     Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 6238.069,
+      "_score": 3.695746,
       "_source": Object {
         "slug": "la-demission",
         "source": "themes",
@@ -160,16 +95,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "La <mark>démission</mark> Vous souhaitez démissionner? Suivez notre guide",
+        "text": Array [
+          "Vous souhaitez <mark>démissionner</mark>? Suivez notre guide",
         ],
-        "all_text.french_stemmed": Array [
-          "La <mark>démission</mark> Vous souhaitez <mark>démissionner</mark>? Suivez notre guide",
-        ],
-        "all_text.shingle": Array [
-          "La <mark>démission</mark> Vous souhaitez démissionner? Suivez notre guide",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "La <mark>démission</mark>",
         ],
         "title.french_stemmed": Array [
@@ -180,7 +109,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 6201.423,
+      "_score": 3.583404,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -189,28 +118,14 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "<mark>Démission</mark> d'un salarié La <mark>démission</mark> vous permet de rompre votre contrat de travail de votre propre initiative. Cependant, pour être valable, elle doit respecter certaines conditions.",
+        "text": Array [
           "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark>. La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
+          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark> soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.",
           "Il n'y a pas de procédure légale imposée pour signifier une <mark>démission</mark>. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de <mark>démission</mark>.",
           "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Des dispositions conventionnelles peuvent imposer l'envoi de la lettre de <mark>démission</mark> par lettre recommandée",
           "Une absence injustifiée ou un abandon de poste ne peuvent pas être considérés comme une <mark>démission</mark>.",
         ],
-        "all_text.french_stemmed": Array [
-          "<mark>Démission</mark> d'un salarié La <mark>démission</mark> vous permet de rompre votre contrat de travail de votre propre initiative. Cependant, pour être valable, elle doit respecter certaines conditions.",
-          "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark>. La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
-          "Il n'y a pas de procédure légale imposée pour signifier une <mark>démission</mark>. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de <mark>démission</mark>.",
-          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Des dispositions conventionnelles peuvent imposer l'envoi de la lettre de <mark>démission</mark> par lettre recommandée",
-          "Une absence injustifiée ou un abandon de poste ne peuvent pas être considérés comme une <mark>démission</mark>.",
-        ],
-        "all_text.shingle": Array [
-          "<mark>Démission</mark> d'un salarié La <mark>démission</mark> vous permet de rompre votre contrat de travail de votre propre initiative. Cependant, pour être valable, elle doit respecter certaines conditions.",
-          "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark>. La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
-          "Il n'y a pas de procédure légale imposée pour signifier une <mark>démission</mark>. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de <mark>démission</mark>.",
-          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Des dispositions conventionnelles peuvent imposer l'envoi de la lettre de <mark>démission</mark> par lettre recommandée",
-          "Une absence injustifiée ou un abandon de poste ne peuvent pas être considérés comme une <mark>démission</mark>.",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "<mark>Démission</mark> d'un salarié",
         ],
         "title.french_stemmed": Array [
@@ -221,7 +136,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 5932.514,
+      "_score": 3.2561908,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -230,22 +145,12 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "préavis.Envoi d'une lettre de <mark>démission</mark> L'assistante maternelle peut rompre son contrat de travail en présentant sa <mark>démission</mark> par lettre recommandée avec AR.",
+        "text": Array [
           "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Respect d'un préavis La date de 1re présentation de la lettre recommandée de <mark>démission</mark> fixe le point",
-          "<mark>Démission</mark> d'une assistante maternelle L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un",
+          "L'assistante maternelle peut rompre son contrat de travail en présentant sa <mark>démission</mark> par lettre recommandée avec AR.",
+          "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
         ],
-        "all_text.french_stemmed": Array [
-          "préavis.Envoi d'une lettre de <mark>démission</mark> L'assistante maternelle peut rompre son contrat de travail en présentant sa <mark>démission</mark> par lettre recommandée avec AR.",
-          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Respect d'un préavis La date de 1re présentation de la lettre recommandée de <mark>démission</mark> fixe le point",
-          "<mark>Démission</mark> d'une assistante maternelle L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un",
-        ],
-        "all_text.shingle": Array [
-          "préavis.Envoi d'une lettre de <mark>démission</mark> L'assistante maternelle peut rompre son contrat de travail en présentant sa <mark>démission</mark> par lettre recommandée avec AR.",
-          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Respect d'un préavis La date de 1re présentation de la lettre recommandée de <mark>démission</mark> fixe le point",
-          "<mark>Démission</mark> d'une assistante maternelle L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un",
-        ],
-        "title.french_exact": Array [
+        "title": Array [
           "<mark>Démission</mark> d'une assistante maternelle",
         ],
         "title.french_stemmed": Array [
@@ -253,8 +158,30 @@ Object {
         ],
       },
     },
+    Object {
+      "_id": "6",
+      "_index": "cdtn_document_test",
+      "_score": 2.753367,
+      "_source": Object {
+        "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
+        "source": "faq",
+        "title": "Dans les HCR, quel est le préavis de démission ?",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text": Array [
+          "Le préavis de <mark>démission</mark> diffère suivant la qualification.",
+        ],
+        "title": Array [
+          "Dans les HCR, quel est le préavis de <mark>démission</mark> ?",
+        ],
+        "title.french_stemmed": Array [
+          "Dans les HCR, quel est le préavis de <mark>démission</mark> ?",
+        ],
+      },
+    },
   ],
-  "max_score": 6535.994,
-  "total": 10,
+  "max_score": 3.8587623,
+  "total": 8,
 }
 `;

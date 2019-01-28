@@ -5,7 +5,7 @@ const {
   computeLineScore,
   printResultsAbstract,
   printResultsDetails
-} = require("../lib");
+} = require("../");
 
 test("sum should return a sum for an array", () => {
   expect(sum(2, 4)).toEqual(6);

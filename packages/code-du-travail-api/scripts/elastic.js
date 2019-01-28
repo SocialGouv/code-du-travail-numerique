@@ -27,7 +27,7 @@ async function processRequest(data, nbItem) {
   const { Request: query } = data;
   try {
     const response = await axios.get(`${endpoint}?q=${query}&size=20`);
-    updateSpinner(nbItem - limit.pendingCount, nbItem);
+    updateSpinner(nbItem - (limit.pendingCount + 1), nbItem);
     return computeLineScore(data, response.data.hits.hits);
   } catch (error) {
     spinner.fail(error).start();

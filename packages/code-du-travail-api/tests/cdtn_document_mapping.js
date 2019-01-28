@@ -15,136 +15,50 @@ const cdtn_document_mapping = {
     // A field that concatenate `title` and `text` fields.
     all_text: {
       type: "text",
-      analyzer: "standard",
-      store: true,
-      fields: {
-        french_stemmed: {
-          type: "text",
-          analyzer: "french_stemmed"
-        },
-        french_exact: {
-          type: "text",
-          analyzer: "french_exact"
-        },
-        shingle: {
-          type: "text",
-          analyzer: "shingle"
-        },
-        french_light: {
-          type: "text",
-          analyzer: "french_light"
-        },
-        french_heavy: {
-          type: "text",
-          analyzer: "french_heavy"
-        }
-      }
+      analyzer: "french",
+      store: true
     },
     title: {
       type: "text",
-      analyzer: "standard",
+      analyzer: "french",
+      search_analyzer: "french_indexing",
       fields: {
         french_stemmed: {
           type: "text",
           analyzer: "french_stemmed"
-        },
-        french_exact: {
-          type: "text",
-          analyzer: "french_exact"
-        },
-        shingle: {
-          type: "text",
-          analyzer: "shingle"
-        },
-        french_light: {
-          type: "text",
-          analyzer: "french_light"
-        },
-        french_heavy: {
-          type: "text",
-          analyzer: "french_heavy"
-        },
-        // Useful to match articles by number, e.g. "R1227-7".
-        whitespace: {
-          type: "text",
-          analyzer: "whitespace"
         }
       }
     },
     text: {
       type: "text",
-      analyzer: "standard",
-      fields: {
-        french_stemmed: {
-          type: "text",
-          analyzer: "french_stemmed"
-        },
-        french_exact: {
-          type: "text",
-          analyzer: "french_exact"
-        },
-        shingle: {
-          type: "text",
-          analyzer: "shingle"
-        },
-        french_light: {
-          type: "text",
-          analyzer: "french_light"
-        },
-        french_heavy: {
-          type: "text",
-          analyzer: "french_heavy"
-        }
-      }
+      analyzer: "french"
     },
     // Currently only available for `Fiches service public`.
     tags: {
       type: "text",
-      analyzer: "standard",
+      analyzer: "french",
       fields: {
-        french_stemmed: {
-          type: "text",
-          analyzer: "french_stemmed"
-        },
-        french_exact: {
-          type: "text",
-          analyzer: "french_exact"
-        },
-        shingle: {
-          type: "text",
-          analyzer: "shingle"
-        },
         keywords: {
-          type: "keyword"
+          type: "text",
+          analyzer: "keyword"
         }
       }
     },
     // Currently only available for `Code du travail`.
     path: {
       type: "text",
-      analyzer: "path_analyzer_custom",
-      fielddata: true,
-      fields: {
-        french_stemmed: {
-          type: "text",
-          analyzer: "french_stemmed"
-        },
-        french_exact: {
-          type: "text",
-          analyzer: "french_exact"
-        },
-        shingle: {
-          type: "text",
-          analyzer: "shingle"
-        }
-      }
+      analyzer: "french"
     },
     themes: {
       type: "keyword"
     },
-    // currently available for idcc
     idcc: {
-      type: "keyword"
+      type: "keyword",
+      fields: {
+        text: {
+          type: "text"
+        }
+      }
     },
     ape: {
       type: "text",
