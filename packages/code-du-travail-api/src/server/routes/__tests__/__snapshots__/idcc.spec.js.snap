@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "10",
       "_index": "cdtn_document_test",
-      "_score": 7694.1333,
+      "_score": 2.4232228,
       "_source": Object {
         "ape": "1071A 1071B 1071C 1071D 4724Z 4781Z",
         "idcc": "843",
@@ -15,16 +15,7 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "IDCC 843 <mark>Boulangerie</mark>-pâtisserie du 19 mars 1976",
-        ],
-        "all_text.french_stemmed": Array [
-          "IDCC 843 <mark>Boulangerie</mark>-pâtisserie du 19 mars 1976",
-        ],
-        "title.french_exact": Array [
-          "<mark>Boulangerie</mark>-pâtisserie du 19 mars 1976",
-        ],
-        "title.french_stemmed": Array [
+        "title": Array [
           "<mark>Boulangerie</mark>-pâtisserie du 19 mars 1976",
         ],
       },
@@ -32,7 +23,7 @@ Object {
     Object {
       "_id": "11",
       "_index": "cdtn_document_test",
-      "_score": 6637.2964,
+      "_score": 2.115805,
       "_source": Object {
         "ape": "1020Z 1071A 1071B 1071C 1071D 1072Z 1085Z 1089Z 4638B 4724Z 5210A",
         "idcc": "1747",
@@ -41,22 +32,13 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "all_text.french_exact": Array [
-          "IDCC 1747 Activités industrielles de <mark>boulangerie</mark> et pâtisserie du 13 juillet 1993",
-        ],
-        "all_text.french_stemmed": Array [
-          "IDCC 1747 Activités industrielles de <mark>boulangerie</mark> et pâtisserie du 13 juillet 1993",
-        ],
-        "title.french_exact": Array [
-          "Activités industrielles de <mark>boulangerie</mark> et pâtisserie du 13 juillet 1993",
-        ],
-        "title.french_stemmed": Array [
-          "Activités industrielles de <mark>boulangerie</mark> et pâtisserie du 13 juillet 1993",
+        "title": Array [
+          "Activités industrielles de <mark>boulangerie</mark> et",
         ],
       },
     },
   ],
-  "max_score": 7694.1333,
+  "max_score": 2.4232228,
   "total": 2,
 }
 `;

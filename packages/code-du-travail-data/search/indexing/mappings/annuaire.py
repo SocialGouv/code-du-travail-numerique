@@ -10,7 +10,7 @@ cdtn_annuaire_mapping = {
         },
         'title': {
             'type': 'text',
-            'analizer': 'french',
+            'analyzer': 'french',
             'fields': {
               'french_stemmed': {
                 'type': 'text',

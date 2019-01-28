@@ -51,7 +51,7 @@ def create_index(index_name, mapping_name, mapping):
                 'analysis': {
                     'filter': analysis.filters,
                     'analyzer': analysis.analyzers,
-                    'char_filter' analysis.char_filters,
+                    'char_filter': analysis.char_filters,
                 },
             },
         },

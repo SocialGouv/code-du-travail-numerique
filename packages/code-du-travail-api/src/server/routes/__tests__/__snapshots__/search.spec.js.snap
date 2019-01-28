@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.8796601,
+      "_score": 2.753367,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -28,7 +28,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 2.1730855,
+      "_score": 1.9308722,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -48,7 +48,7 @@ Object {
       },
     },
   ],
-  "max_score": 2.8796601,
+  "max_score": 2.753367,
   "total": 2,
 }
 `;
@@ -59,7 +59,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 4.252878,
+      "_score": 3.8587623,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -74,6 +74,7 @@ Object {
           "aucune forme particulière pour présenter sa <mark>démission</mark>",
           "collectives prévoient d’ailleurs que la <mark>démission</mark>",
           "travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
+          "les contestations sur l’intention même de <mark>démissionner</mark>",
         ],
         "title": Array [
           "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
@@ -84,9 +85,31 @@ Object {
       },
     },
     Object {
+      "_id": "0",
+      "_index": "cdtn_document_test",
+      "_score": 3.695746,
+      "_source": Object {
+        "slug": "la-demission",
+        "source": "themes",
+        "title": "La démission",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text": Array [
+          "Vous souhaitez <mark>démissionner</mark>?",
+        ],
+        "title": Array [
+          "La <mark>démission</mark>",
+        ],
+        "title.french_stemmed": Array [
+          "La <mark>démission</mark>",
+        ],
+      },
+    },
+    Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 3.9669623,
+      "_score": 3.583404,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -96,10 +119,10 @@ Object {
       "_type": "cdtn_document_test",
       "highlight": Object {
         "text": Array [
+          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark>",
           "La <mark>démission</mark> vous permet de rompre votre",
           "La <mark>démission</mark> est un mode de rupture du contrat",
           "Lettre de <mark>démission</mark> du salarié Direction",
-          "Volonté de démissionner Pour qu'une <mark>démission</mark>",
           "selon votre situation au moment de votre <mark>démission</mark>",
         ],
         "title": Array [
@@ -113,7 +136,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 3.744854,
+      "_score": 3.2561908,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -139,7 +162,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.8796601,
+      "_score": 2.753367,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -161,7 +184,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 2.1730855,
+      "_score": 1.9308722,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -181,9 +204,29 @@ Object {
       },
     },
     Object {
+      "_id": "8",
+      "_index": "cdtn_document_test",
+      "_score": 1.8793771,
+      "_source": Object {
+        "slug": "article-r1225-18",
+        "source": "code_du_travail",
+        "title": "Article R1225-18",
+        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "path": Array [
+          "Paternité/Congés d'éducation des enfants/<mark>Démission</mark>",
+        ],
+        "text": Array [
+          "Le salarié informe son employeur de sa <mark>démission</mark>",
+        ],
+      },
+    },
+    Object {
       "_id": "9",
       "_index": "cdtn_document_test",
-      "_score": 1.9784344,
+      "_score": 1.5387119,
       "_source": Object {
         "slug": "article-r1442-22-4",
         "source": "code_du_travail",
@@ -198,25 +241,8 @@ Object {
         ],
       },
     },
-    Object {
-      "_id": "8",
-      "_index": "cdtn_document_test",
-      "_score": 1.5655789,
-      "_source": Object {
-        "slug": "article-r1225-18",
-        "source": "code_du_travail",
-        "title": "Article R1225-18",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "text": Array [
-          "Le salarié informe son employeur de sa <mark>démission</mark>",
-        ],
-      },
-    },
   ],
-  "max_score": 4.252878,
-  "total": 7,
+  "max_score": 3.8587623,
+  "total": 8,
 }
 `;

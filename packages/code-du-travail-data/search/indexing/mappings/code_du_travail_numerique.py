@@ -17,7 +17,6 @@ code_du_travail_numerique_mapping = {
             'type': 'text',
             'analyzer': 'french',
             'store': True,
-            },
         },
         'title': {
             'type': 'text',
@@ -40,8 +39,8 @@ code_du_travail_numerique_mapping = {
             'analyzer': 'french',
             'fields': {
                 'keywords': {
-                  'type': 'text',
-                  'analyzer': 'keyword',
+                    'type': 'text',
+                    'analyzer': 'keyword',
                 },
             },
         },
@@ -56,6 +55,11 @@ code_du_travail_numerique_mapping = {
         # currently available for idcc
         'idcc': {
             'type': 'keyword',
+            'fields': {
+                'text': {
+                  "type": "text"
+                }
+            }
         },
         'ape': {
             'type': 'text',

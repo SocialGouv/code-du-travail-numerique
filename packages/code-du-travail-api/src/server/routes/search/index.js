@@ -4,7 +4,8 @@ const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
 
-const index = process.env.ELASTICSEARCH_DOCUMENT_INDEX || "cdtn2";
+const index =
+  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 const router = new Router({ prefix: API_BASE_URL });
 

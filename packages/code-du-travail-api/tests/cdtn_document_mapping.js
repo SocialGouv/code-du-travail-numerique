@@ -53,7 +53,12 @@ const cdtn_document_mapping = {
       type: "keyword"
     },
     idcc: {
-      type: "keyword"
+      type: "keyword",
+      fields: {
+        text: {
+          type: "text"
+        }
+      }
     },
     ape: {
       type: "text",
