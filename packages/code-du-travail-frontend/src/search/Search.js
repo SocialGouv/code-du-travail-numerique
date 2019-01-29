@@ -225,9 +225,7 @@ class Search extends React.Component {
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
                   <label className="search__facets" htmlFor="contentSource">
-                    <span id="contentSource" className="hidden">
-                      Filtrer par type de contenu
-                    </span>
+                    <span className="hidden">Filtrer par type de contenu</span>
                     <ReponseIcon className="facet-icon" />
                     <select
                       id="contentSource"

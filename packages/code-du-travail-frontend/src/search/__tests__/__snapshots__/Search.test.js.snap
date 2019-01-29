@@ -53,7 +53,6 @@ exports[`<search /> should render 1`] = `
             >
               <span
                 class="hidden"
-                id="contentSource"
               >
                 Filtrer par type de contenu
               </span>
@@ -123,29 +122,39 @@ exports[`<search /> should render 1`] = `
                 </option>
               </select>
             </label>
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
-              role="combobox"
-              style="text-align: left; border: 0px;"
+            <label
+              class="sc-bwzfXH kfBgbD"
+              for="main-search-input"
             >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                autocomplete="off"
-                class="search__input"
-                name="query"
-                placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                type="search"
-                value=""
-              />
+              <span
+                class="hidden"
+              >
+                Rechercher
+              </span>
               <div
-                class="sc-bwzfXH gQLzHc"
-                id="react-autowhatever-1"
-                role="listbox"
-              />
-            </div>
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-cdtn-documents-suggester"
+                role="combobox"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-cdtn-documents-suggester"
+                  autocomplete="off"
+                  class="search__input"
+                  id="main-search-input"
+                  name="query"
+                  placeholder=""
+                  type="search"
+                  value=""
+                />
+                <div
+                  class="sc-htpNat ZTZIQ"
+                  id="react-autowhatever-cdtn-documents-suggester"
+                  role="listbox"
+                />
+              </div>
+            </label>
           </div>
           <button
             class="btn btn__img btn__img__search"
@@ -217,7 +226,6 @@ exports[`<search /> should render suggestions 1`] = `
             >
               <span
                 class="hidden"
-                id="contentSource"
               >
                 Filtrer par type de contenu
               </span>
@@ -287,54 +295,64 @@ exports[`<search /> should render suggestions 1`] = `
                 </option>
               </select>
             </label>
-            <div
-              aria-expanded="true"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
-              role="combobox"
-              style="text-align: left; border: 0px;"
+            <label
+              class="sc-bwzfXH kfBgbD"
+              for="main-search-input"
             >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                autocomplete="off"
-                class="search__input"
-                name="query"
-                placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                type="search"
-                value="yolo"
-              />
-              <div
-                class="sc-bwzfXH gQLzHc"
-                id="react-autowhatever-1"
-                role="listbox"
+              <span
+                class="hidden"
               >
-                <ul
+                Rechercher
+              </span>
+              <div
+                aria-expanded="true"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-cdtn-documents-suggester"
+                role="combobox"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-cdtn-documents-suggester"
+                  autocomplete="off"
+                  class="search__input"
+                  id="main-search-input"
+                  name="query"
+                  placeholder=""
+                  type="search"
+                  value="yolo"
+                />
+                <div
+                  class="sc-htpNat ZTZIQ"
+                  id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
-                  style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
                 >
-                  <li
-                    aria-selected="false"
-                    data-suggestion-index="0"
-                    id="react-autowhatever-1--item-0"
-                    role="option"
-                    style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+                  <ul
+                    role="listbox"
+                    style="margin: .5em 0px 0px 0px; padding: 0px 0px 0px 0px; border: 1px solid silver; border-radius: 3px; background: white; position: absolute; left: 0px; right: 0px; box-shadow: 0 10px 10px -10px #b7bcdf;"
                   >
-                    <div
-                      class="sc-bdVaJa hpcrWB"
+                    <li
+                      aria-selected="false"
+                      data-suggestion-index="0"
+                      id="react-autowhatever-cdtn-documents-suggester--item-0"
+                      role="option"
+                      style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
-                      <b>
-                        FAQ | 
-                         
-                        faq title
-                      </b>
-                      <br />
-                      <div />
-                    </div>
-                  </li>
-                </ul>
+                      <div
+                        class="sc-bdVaJa hpcrWB"
+                      >
+                        <b>
+                          FAQ | 
+                           
+                          faq title
+                        </b>
+                        <br />
+                        <div />
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </label>
           </div>
           <button
             class="btn btn__img btn__img__search"
