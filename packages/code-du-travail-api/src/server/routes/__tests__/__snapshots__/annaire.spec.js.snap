@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_annuaire_test",
-      "_score": 0,
+      "_score": 0.48520303,
       "_source": Object {
         "address": Object {
           "city": "Le Pontet",
@@ -30,7 +30,7 @@ Object {
       "_type": "cdtn_annuaire_test",
     },
   ],
-  "max_score": 0,
+  "max_score": 0.48520303,
   "total": 1,
 }
 `;
@@ -41,7 +41,7 @@ Object {
     Object {
       "_id": "1",
       "_index": "cdtn_annuaire_test",
-      "_score": 0,
+      "_score": 0.6931472,
       "_source": Object {
         "address": Object {
           "city": "Valence Cedex",
@@ -61,6 +61,7 @@ Object {
         "id": "cicas-26362-01",
         "slug": "centre-dinformation-de-conseil-et-daccueil-des-salaries-cicas-drome",
         "source": "annuaire",
+        "subtitle": "Caisses de retraite et de prévoyance",
         "tel": "08 20 20 01 89",
         "title": "Centre d'information de conseil et d'accueil des salariés (Cicas) - Drôme",
         "type": "cicas",
@@ -68,7 +69,7 @@ Object {
       "_type": "cdtn_annuaire_test",
     },
   ],
-  "max_score": 0,
+  "max_score": 0.6931472,
   "total": 1,
 }
 `;

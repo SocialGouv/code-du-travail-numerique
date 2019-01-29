@@ -14,7 +14,8 @@ function allowedFile(file) {
     "chambre_agriculture",
     "chambre_metier",
     "cicas",
-    "cidf"
+    "cidf",
+    "mjd"
   ];
   return allowedPrefix.some(prefix => basename(file).startsWith(prefix));
 }
@@ -47,18 +48,23 @@ function getData(xmlDoc) {
   } else {
     address = addresses[0];
   }
+
   const tel = xmlDoc.get("//CoordonnéesNum/Téléphone");
   const email = xmlDoc.get("//CoordonnéesNum/Email");
+  const type = xmlDoc
+    .get("/Organisme")
+    .attr("pivotLocal")
+    .value();
+  const id = xmlDoc
+    .get("/Organisme")
+    .attr("id")
+    .value();
+
   return {
+    id,
+    type,
     title: xmlDoc.get("//Nom").text(),
-    type: xmlDoc
-      .get("/Organisme")
-      .attr("pivotLocal")
-      .value(),
-    id: xmlDoc
-      .get("/Organisme")
-      .attr("id")
-      .value(),
+    subtitle: getSubtitle(type),
     address: {
       lignes: address.find("Ligne").map(node => node.text()),
       code: address.get("CodePostal").text(),
@@ -72,7 +78,14 @@ function getData(xmlDoc) {
     email: email && email.text()
   };
 }
-
+function getSubtitle(type) {
+  switch (type) {
+    case "cicas":
+      return "Caisses de retraite et de prévoyance";
+    default:
+      undefined;
+  }
+}
 function sortByDepartementAndType(ficheA, ficheB) {
   const val = ficheA.address.code.localeCompare(ficheB.address.code);
   if (val === 0) {

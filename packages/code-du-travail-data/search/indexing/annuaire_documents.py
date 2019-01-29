@@ -25,10 +25,11 @@ def populate_annuaire_documents():
                 'slug': slugify(val['title'], to_lower=True),
                 'id': val['id'],
                 'title': val['title'],
+                'subtitle': val.get('subtitle'),
                 'type': val['type'],
                 'address': val['address'],
                 'coord': val['coord'],
-                'tel': val['tel'],
+                'tel': val.get('tel'),
                 'email': val.get('email'),
             })
 
