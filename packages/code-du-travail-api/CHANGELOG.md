@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.7.3 (2019-01-29)
+
+
+### Bug Fixes
+
+* **api:** update test after mapping change ([#461](https://github.com/SocialGouv/code-du-travail-numerique/issues/461)) ([59d6b43](https://github.com/SocialGouv/code-du-travail-numerique/commit/59d6b43)), closes [#330](https://github.com/SocialGouv/code-du-travail-numerique/issues/330) [#116](https://github.com/SocialGouv/code-du-travail-numerique/issues/116) [#416](https://github.com/SocialGouv/code-du-travail-numerique/issues/416)
+* **data:** mise à jour des metadata des courrier ([#431](https://github.com/SocialGouv/code-du-travail-numerique/issues/431)) ([bc4c9e7](https://github.com/SocialGouv/code-du-travail-numerique/commit/bc4c9e7)), closes [#429](https://github.com/SocialGouv/code-du-travail-numerique/issues/429)
+
+
+
+
+
 ## [1.7.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.1...v1.7.2) (2019-01-21)
 
 **Note:** Version bump only for package @cdt/api

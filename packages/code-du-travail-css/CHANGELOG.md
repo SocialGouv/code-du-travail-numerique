@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.7.3 (2019-01-29)
+
+
+### Bug Fixes
+
+* **data:** mise à jour des metadata des courrier ([#431](https://github.com/SocialGouv/code-du-travail-css/issues/431)) ([bc4c9e7](https://github.com/SocialGouv/code-du-travail-css/commit/bc4c9e7)), closes [#429](https://github.com/SocialGouv/code-du-travail-css/issues/429)
+* **frontend:** focus search input on initial load ([#472](https://github.com/SocialGouv/code-du-travail-css/issues/472)) ([d001b4e](https://github.com/SocialGouv/code-du-travail-css/commit/d001b4e)), closes [#462](https://github.com/SocialGouv/code-du-travail-css/issues/462)
+
+
+
+
+
 ## 1.7.1 (2019-01-18)
 
 **Note:** Version bump only for package @cdt/css
