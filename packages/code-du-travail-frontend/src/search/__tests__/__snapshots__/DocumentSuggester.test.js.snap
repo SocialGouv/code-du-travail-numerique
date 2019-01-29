@@ -89,7 +89,11 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
                 convention collective title
               </b>
               <br />
-              <div />
+              <div>
+                <mark>
+                  hightlighted ccn
+                </mark>
+              </div>
             </div>
           </li>
           <li
@@ -108,7 +112,11 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
                 question / réponse title
               </b>
               <br />
-              <div />
+              <div>
+                <mark>
+                  hightlighted faq
+                </mark>
+              </div>
             </div>
           </li>
         </ul>
