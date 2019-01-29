@@ -3,7 +3,7 @@
 exports[`<DocumentSuggester /> should render 1`] = `
 <div>
   <label
-    class="sc-bwzfXH kfBgbD"
+    class="sc-bwzfXH jthXhr"
     for="main-search-input"
   >
     <span
@@ -40,7 +40,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
 <div>
   <label
-    class="sc-bwzfXH kfBgbD"
+    class="sc-bwzfXH jthXhr"
     for="main-search-input"
   >
     <span

@@ -123,7 +123,7 @@ exports[`<search /> should render 1`] = `
               </select>
             </label>
             <label
-              class="sc-bwzfXH kfBgbD"
+              class="sc-bwzfXH jthXhr"
               for="main-search-input"
             >
               <span
@@ -296,7 +296,7 @@ exports[`<search /> should render suggestions 1`] = `
               </select>
             </label>
             <label
-              class="sc-bwzfXH kfBgbD"
+              class="sc-bwzfXH jthXhr"
               for="main-search-input"
             >
               <span
