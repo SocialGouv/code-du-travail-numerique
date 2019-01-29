@@ -59,6 +59,7 @@ class Search extends React.Component {
     suggestions: [],
     results: []
   };
+  searchRef = React.createRef();
 
   componentDidMount() {
     // when coming on this page with a ?q param
@@ -99,6 +100,10 @@ class Search extends React.Component {
         ? this.props.router.query.search === "0" && ""
         : this.props.router.query.q
     });
+
+    if (this.searchRef.current) {
+      this.searchRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
   componentWillUnmount() {
     Router.events.off("routeChangeComplete", this.handleRouteChange);
@@ -215,7 +220,11 @@ class Search extends React.Component {
       <React.Fragment>
         <div className="section-white shadow-bottom search-widget">
           <Container>
-            <div className="search" style={{ padding: "1em 0" }}>
+            <div
+              className="search"
+              ref={this.searchRef}
+              style={{ padding: "1em 0" }}
+            >
               <header>
                 <h1 className="no-margin">
                   Posez votre question sur le droit du travail
