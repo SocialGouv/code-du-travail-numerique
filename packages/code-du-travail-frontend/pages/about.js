@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Section } from "@cdt/ui";
 
-export default () => (
+const About = () => (
   <Container>
     <Section light>
       <div>
@@ -56,3 +56,4 @@ export default () => (
     </Section>
   </Container>
 );
+export default About;

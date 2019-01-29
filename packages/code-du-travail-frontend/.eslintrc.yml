@@ -9,10 +9,8 @@ settings:
     version: "16.0"
 
 rules:
+  prefer-const: 2
   no-console: off
-  prefer-const: 1
   jsx-a11y/anchor-is-valid: off
-  jsx-a11y/label-has-for: on
-
-  react/display-name: off
+  jsx-a11y/label-has-for: off
   react/prop-types: off

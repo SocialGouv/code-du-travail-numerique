@@ -77,6 +77,7 @@ const getFuse = memoizee(
     )
 );
 
+// eslint-disable-next-line react/display-name
 const renderSuggestion = query => suggestion => (
   <FuseHighLighter query={query} suggestion={suggestion} />
 );
