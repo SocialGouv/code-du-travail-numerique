@@ -125,21 +125,15 @@ select {
   padding-right: 45px;
   border-radius: 3px;
   width: auto;
-}
-
-select:focus {
-  border-color: var(--color-blue);
-  transition: border-color 0.2s ease-out;
-  box-shadow: 0 0 0.15em 0.15em var(--color-focus-shadow);
+  transition: border-color 250ms ease;
 }
 
 select:disabled {
   background-color: var(--color-dark-background);
 }
 
-select:focus:not(:focus-visible) {
+select:focus {
   outline: none;
-}
-select:focus:not(:-moz-focusring) {
-  outline: none;
+  border-color: var(--color-blue-light);
+  box-shadow: 0 0 0.15rem 0.15rem var(--color-focus-shadow);
 }

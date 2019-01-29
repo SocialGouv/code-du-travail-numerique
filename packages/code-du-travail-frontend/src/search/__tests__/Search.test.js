@@ -36,12 +36,10 @@ describe("<search />", () => {
   });
 
   it("should render suggestions", async () => {
-    const { container, getAllByRole, getByPlaceholderText } = renderWithMock(
+    const { container, getAllByRole, getByLabelText } = renderWithMock(
       <Search />
     );
-    const input = getByPlaceholderText(
-      /exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal?/i
-    );
+    const input = getByLabelText(/rechercher/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
     await waitForElement(() => getAllByRole("option"));

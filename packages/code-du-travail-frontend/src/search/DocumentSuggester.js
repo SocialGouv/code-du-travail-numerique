@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
-
 import { getLabelBySource } from "../sources";
 
 export class DocumentSuggester extends React.Component {
@@ -12,13 +11,21 @@ export class DocumentSuggester extends React.Component {
     onSelect: PropTypes.func.isRequired,
     onClear: PropTypes.func.isRequired,
     query: PropTypes.string,
+    inputId: PropTypes.string,
     suggestions: PropTypes.array
   };
 
   static defaultProps = {
     query: "",
+    inputId: "main-search-input",
     excludeSources: "",
     suggestions: []
+  };
+
+  focusInput = autoSuggest => {
+    if (autoSuggest !== null && this.props.query.trim().length === 0) {
+      autoSuggest.input.focus();
+    }
   };
 
   onSuggestionSelected = (event, data) => {
@@ -28,6 +35,7 @@ export class DocumentSuggester extends React.Component {
   render() {
     const { query, onChange, onSearch, onClear, suggestions } = this.props;
     const inputProps = {
+      id: this.props.inputId,
       name: "query",
       placeholder: this.props.placeholder,
       "aria-label": this.props.ariaLabel,
@@ -37,18 +45,23 @@ export class DocumentSuggester extends React.Component {
       onChange
     };
     return (
-      <Autosuggest
-        theme={suggesterTheme}
-        suggestions={suggestions}
-        alwaysRenderSuggestions={false}
-        onSuggestionSelected={this.onSuggestionSelected}
-        onSuggestionsFetchRequested={onSearch}
-        onSuggestionsClearRequested={onClear}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        renderSuggestionsContainer={renderSuggestionsContainer}
-        inputProps={inputProps}
-      />
+      <Label htmlFor={this.props.inputId}>
+        <span className="hidden">Rechercher</span>
+        <Autosuggest
+          id="cdtn-documents-suggester"
+          ref={this.focusInput}
+          theme={suggesterTheme}
+          suggestions={suggestions}
+          alwaysRenderSuggestions={false}
+          onSuggestionSelected={this.onSuggestionSelected}
+          onSuggestionsFetchRequested={onSearch}
+          onSuggestionsClearRequested={onClear}
+          getSuggestionValue={getSuggestionValue}
+          renderSuggestion={renderSuggestion}
+          renderSuggestionsContainer={renderSuggestionsContainer}
+          inputProps={inputProps}
+        />
+      </Label>
     );
   }
 }
@@ -90,6 +103,10 @@ const renderSuggestion = suggestion => {
     </SuggestionContainer>
   );
 };
+const Label = styled.label`
+  flex: 1;
+  display: flex;
+`;
 
 const SuggestionsContainer = styled.div`
   white-space: "nowrap";
@@ -112,9 +129,7 @@ const renderSuggestionsContainer = ({ containerProps, children }) => (
 // see https://github.com/moroshko/react-autosuggest#themeProp
 const suggesterTheme = {
   container: {
-    flex: "1 1 80%",
-    textAlign: "left",
-    border: 0
+    flex: 1
   },
   suggestionsList: {
     margin: 0,

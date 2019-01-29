@@ -56,7 +56,6 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
               >
                 <span
                   class="hidden"
-                  id="contentSource"
                 >
                   Filtrer par type de contenu
                 </span>
@@ -126,29 +125,39 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                   </option>
                 </select>
               </label>
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-1"
-                role="combobox"
-                style="text-align: left; border: 0px;"
+              <label
+                class="sc-bwzfXH kfBgbD"
+                for="main-search-input"
               >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-1"
-                  autocomplete="off"
-                  class="search__input"
-                  name="query"
-                  placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                  type="search"
-                  value=""
-                />
+                <span
+                  class="hidden"
+                >
+                  Rechercher
+                </span>
                 <div
-                  class="sc-bwzfXH gQLzHc"
-                  id="react-autowhatever-1"
-                  role="listbox"
-                />
-              </div>
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="react-autowhatever-cdtn-documents-suggester"
+                  role="combobox"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="react-autowhatever-cdtn-documents-suggester"
+                    autocomplete="off"
+                    class="search__input"
+                    id="main-search-input"
+                    name="query"
+                    placeholder=""
+                    type="search"
+                    value=""
+                  />
+                  <div
+                    class="sc-htpNat ZTZIQ"
+                    id="react-autowhatever-cdtn-documents-suggester"
+                    role="listbox"
+                  />
+                </div>
+              </label>
             </div>
             <button
               class="btn btn__img btn__img__search"
@@ -529,7 +538,6 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
               >
                 <span
                   class="hidden"
-                  id="contentSource"
                 >
                   Filtrer par type de contenu
                 </span>
@@ -599,29 +607,39 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                   </option>
                 </select>
               </label>
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-1"
-                role="combobox"
-                style="text-align: left; border: 0px;"
+              <label
+                class="sc-bwzfXH kfBgbD"
+                for="main-search-input"
               >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-1"
-                  autocomplete="off"
-                  class="search__input"
-                  name="query"
-                  placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                  type="search"
-                  value=""
-                />
+                <span
+                  class="hidden"
+                >
+                  Rechercher
+                </span>
                 <div
-                  class="sc-bwzfXH gQLzHc"
-                  id="react-autowhatever-1"
-                  role="listbox"
-                />
-              </div>
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="react-autowhatever-cdtn-documents-suggester"
+                  role="combobox"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="react-autowhatever-cdtn-documents-suggester"
+                    autocomplete="off"
+                    class="search__input"
+                    id="main-search-input"
+                    name="query"
+                    placeholder=""
+                    type="search"
+                    value=""
+                  />
+                  <div
+                    class="sc-htpNat ZTZIQ"
+                    id="react-autowhatever-cdtn-documents-suggester"
+                    role="listbox"
+                  />
+                </div>
+              </label>
             </div>
             <button
               class="btn btn__img btn__img__search"
@@ -999,7 +1017,6 @@ exports[`<Answer /> should render 1`] = `
             >
               <span
                 class="hidden"
-                id="contentSource"
               >
                 Filtrer par type de contenu
               </span>
@@ -1069,29 +1086,39 @@ exports[`<Answer /> should render 1`] = `
                 </option>
               </select>
             </label>
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
-              role="combobox"
-              style="text-align: left; border: 0px;"
+            <label
+              class="sc-bwzfXH kfBgbD"
+              for="main-search-input"
             >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                autocomplete="off"
-                class="search__input"
-                name="query"
-                placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                type="search"
-                value=""
-              />
+              <span
+                class="hidden"
+              >
+                Rechercher
+              </span>
               <div
-                class="sc-bwzfXH gQLzHc"
-                id="react-autowhatever-1"
-                role="listbox"
-              />
-            </div>
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-cdtn-documents-suggester"
+                role="combobox"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-cdtn-documents-suggester"
+                  autocomplete="off"
+                  class="search__input"
+                  id="main-search-input"
+                  name="query"
+                  placeholder=""
+                  type="search"
+                  value=""
+                />
+                <div
+                  class="sc-htpNat ZTZIQ"
+                  id="react-autowhatever-cdtn-documents-suggester"
+                  role="listbox"
+                />
+              </div>
+            </label>
           </div>
           <button
             class="btn btn__img btn__img__search"
@@ -1386,7 +1413,6 @@ exports[`<Answer /> should render additional content 1`] = `
               >
                 <span
                   class="hidden"
-                  id="contentSource"
                 >
                   Filtrer par type de contenu
                 </span>
@@ -1456,29 +1482,39 @@ exports[`<Answer /> should render additional content 1`] = `
                   </option>
                 </select>
               </label>
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-1"
-                role="combobox"
-                style="text-align: left; border: 0px;"
+              <label
+                class="sc-bwzfXH kfBgbD"
+                for="main-search-input"
               >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-1"
-                  autocomplete="off"
-                  class="search__input"
-                  name="query"
-                  placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
-                  type="search"
-                  value=""
-                />
+                <span
+                  class="hidden"
+                >
+                  Rechercher
+                </span>
                 <div
-                  class="sc-bwzfXH gQLzHc"
-                  id="react-autowhatever-1"
-                  role="listbox"
-                />
-              </div>
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="react-autowhatever-cdtn-documents-suggester"
+                  role="combobox"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="react-autowhatever-cdtn-documents-suggester"
+                    autocomplete="off"
+                    class="search__input"
+                    id="main-search-input"
+                    name="query"
+                    placeholder=""
+                    type="search"
+                    value=""
+                  />
+                  <div
+                    class="sc-htpNat ZTZIQ"
+                    id="react-autowhatever-cdtn-documents-suggester"
+                    role="listbox"
+                  />
+                </div>
+              </label>
             </div>
             <button
               class="btn btn__img btn__img__search"

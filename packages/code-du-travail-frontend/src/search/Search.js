@@ -50,7 +50,7 @@ class Search extends React.Component {
   };
   state = {
     // query in the input box
-    query: "",
+    query: this.props.router.query.q || "",
     // query to display the search results
     queryResults: "",
     facet: "",
@@ -225,9 +225,7 @@ class Search extends React.Component {
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
                   <label className="search__facets" htmlFor="contentSource">
-                    <span id="contentSource" className="hidden">
-                      Filtrer par type de contenu
-                    </span>
+                    <span className="hidden">Filtrer par type de contenu</span>
                     <ReponseIcon className="facet-icon" />
                     <select
                       id="contentSource"
@@ -249,7 +247,7 @@ class Search extends React.Component {
                   <DocumentSuggester
                     onChange={this.onChange}
                     query={query}
-                    placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
+                    placeholder=""
                     onSearch={this.onSearch}
                     onSelect={this.onSelect}
                     onClear={this.onClear}

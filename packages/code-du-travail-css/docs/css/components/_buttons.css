@@ -31,7 +31,7 @@
 
   /* Specific to <a> elements. */
   text-decoration: none;
-
+  transition: background 250ms ease;
   &:active {
     position: relative;
     top: 1px;
@@ -46,8 +46,13 @@
   }
 
   &:focus {
+    outline: none;
+  }
+  &:focus:not(:focus-visible) {
     border: 1px solid var(--color-focus);
-    box-shadow: 0 0 2px 2px var(--color-focus-shadow);
+  }
+  &:focus:not(:-moz-focusring) {
+    border: 1px solid var(--color-focus);
   }
 
   &.btn__primary {
