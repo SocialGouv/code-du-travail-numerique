@@ -26,15 +26,15 @@ class ServiceRenseignement extends React.Component {
   inputRef = React.createRef();
 
   onDepartmentInput = e => {
-    let departmentNum = (e.target.value || "").toLowerCase();
-    let departmentData = servicesDeRenseignement[departmentNum];
+    const departmentNum = (e.target.value || "").toLowerCase();
+    const departmentData = servicesDeRenseignement[departmentNum];
     this.setState({
       departmentData: departmentData
     });
   };
 
   render() {
-    let department = this.state.departmentData
+    const department = this.state.departmentData
       ? DepartmentComponent(this.state.departmentData)
       : null;
 

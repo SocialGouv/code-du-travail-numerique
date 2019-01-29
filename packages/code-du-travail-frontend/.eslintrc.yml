@@ -10,9 +10,9 @@ settings:
 
 rules:
   no-console: off
-
+  prefer-const: 1
   jsx-a11y/anchor-is-valid: off
-  jsx-a11y/label-has-for: off
+  jsx-a11y/label-has-for: on
 
   react/display-name: off
   react/prop-types: off

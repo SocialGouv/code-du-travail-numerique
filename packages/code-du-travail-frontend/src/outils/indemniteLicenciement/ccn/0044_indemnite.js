@@ -13,11 +13,9 @@ export function getIndemnite({
   echelon = { groupe: "I" },
   convention
 }) {
-  let { salaireRef, moyenneSalaires } = getSalaireRef(
-    salaires,
-    primes,
-    anciennete
-  );
+  const { moyenneSalaires } = getSalaireRef(salaires, primes, anciennete);
+  let { salaireRef } = getSalaireRef(salaires, primes, anciennete);
+
   let dernierSalaire = 0;
   if (!salaires.isPartiel) {
     dernierSalaire = salaires.derniersMois[0] + primes / 12;

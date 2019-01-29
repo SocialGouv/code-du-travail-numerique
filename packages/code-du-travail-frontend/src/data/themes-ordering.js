@@ -20,7 +20,7 @@
 //     ],
 //   }
 
-let ordering = {
+const ordering = {
   // The `root` path is represented as an empty string in the breadcrumb path.
   // So the empty string is used as an object identifier on purpose.
   "": [
