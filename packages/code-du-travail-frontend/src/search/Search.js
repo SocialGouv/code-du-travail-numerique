@@ -249,7 +249,7 @@ class Search extends React.Component {
                   <DocumentSuggester
                     onChange={this.onChange}
                     query={query}
-                    placeholder="exemple: je travaille dans l'industrie chimique et n'ai pas eu de contrat de travail est-ce normal? "
+                    placeholder=""
                     onSearch={this.onSearch}
                     onSelect={this.onSelect}
                     onClear={this.onClear}
