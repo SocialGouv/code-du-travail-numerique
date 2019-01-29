@@ -47,6 +47,13 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
               type="text"
               value="Query"
             />
+            <input
+              class="feedback__input"
+              disabled=""
+              name="fiche"
+              type="hidden"
+              value=""
+            />
             <h2
               class="section__subtitle"
             >

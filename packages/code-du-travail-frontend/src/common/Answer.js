@@ -72,6 +72,7 @@ class Answer extends React.Component {
               isOpen={this.state.modalVisible}
               closeModal={this.closeModal}
               query={router.query.q || title}
+              fiche={`${router.route}/${router.query.slug}`}
             />
             <Article
               title={title}

@@ -405,6 +405,13 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
               type="text"
               value="Article du code"
             />
+            <input
+              class="feedback__input"
+              disabled=""
+              name="fiche"
+              type="hidden"
+              value="//undefined"
+            />
             <h2
               class="section__subtitle"
             >
@@ -886,6 +893,13 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
               name="question"
               type="text"
               value="Article du code"
+            />
+            <input
+              class="feedback__input"
+              disabled=""
+              name="fiche"
+              type="hidden"
+              value="//undefined"
             />
             <h2
               class="section__subtitle"
@@ -1764,6 +1778,13 @@ exports[`<Answer /> should render additional content 1`] = `
               name="question"
               type="text"
               value="Article du code"
+            />
+            <input
+              class="feedback__input"
+              disabled=""
+              name="fiche"
+              type="hidden"
+              value="//undefined"
             />
             <h2
               class="section__subtitle"

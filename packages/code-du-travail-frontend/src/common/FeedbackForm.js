@@ -16,6 +16,7 @@ const motifLabels = [
 class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
+    fiche: PropTypes.string,
     results: PropTypes.arrayOf(PropTypes.object),
     onSubmit: PropTypes.func.isRequired
   };
@@ -28,7 +29,8 @@ class FeedbackForm extends React.Component {
     motif: motifLabels[0],
     message: "",
     question: this.props.query || "",
-    email: ""
+    email: "",
+    fiche: ""
   };
   timeoutId = null;
   texteareaRef = React.createRef();
@@ -107,6 +109,14 @@ class FeedbackForm extends React.Component {
           type="text"
           name="question"
           value={this.props.query}
+          onChange={this.inputChange}
+          className="feedback__input"
+          disabled
+        />
+        <input
+          type="hidden"
+          name="fiche"
+          value={this.props.fiche}
           onChange={this.inputChange}
           className="feedback__input"
           disabled
