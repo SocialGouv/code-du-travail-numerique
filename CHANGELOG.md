@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.3...v1.7.4) (2019-01-30)
+
+
+### Bug Fixes
+
+* **docker:** fix yaml indentation and deploy script ([#476](https://github.com/SocialGouv/code-du-travail-numerique/issues/476)) ([efe4572](https://github.com/SocialGouv/code-du-travail-numerique/commit/efe4572))
+
+
+
+
+
 ## 1.7.3 (2019-01-29)
 
 
