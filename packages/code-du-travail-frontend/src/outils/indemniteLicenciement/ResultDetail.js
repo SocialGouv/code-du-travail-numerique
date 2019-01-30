@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Section } from "@cdt/ui";
 import MathJax from "react-mathjax2";
 import { Header } from "./stepStyles";
+import styled from "styled-components";
 
 const round = fl => parseInt(fl * 100) / 100;
 
@@ -69,7 +70,7 @@ class ResultDetail extends React.Component {
     return (
       <React.Fragment>
         {indemnite > 0 && (
-          <Section light>
+          <Section>
             <Header>
               <h2>Montant indicatif de votre indemnité</h2>
               <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
@@ -88,8 +89,8 @@ class ResultDetail extends React.Component {
             </Header>
           </Section>
         )}
-        <Section light>
-          <table width="100%" style={{ fontSize: "1.2em" }}>
+        <Section>
+          <Table width="100%" style={{ fontSize: "1.2em" }}>
             <tbody>
               {!salaires.isPartiel && (
                 <Row value={labelize(moyenneSalaires)}>
@@ -98,7 +99,7 @@ class ResultDetail extends React.Component {
               )}
               {!salaires.isPartiel && (
                 <Row value={labelize(moyenne3DerniersMois)}>
-                  Moyenne des 3 derniers sois
+                  Moyenne des 3 derniers mois
                 </Row>
               )}
               <Row value={labelize(salaireRef)}>Salaire de référence</Row>
@@ -107,7 +108,7 @@ class ResultDetail extends React.Component {
                 Ancienneté
               </Row>
             </tbody>
-          </table>
+          </Table>
           {salaireRef > 0 && (
             <div style={{ fontSize: "1.5em" }}>
               <MathJax.Context input="ascii">
@@ -128,5 +129,10 @@ class ResultDetail extends React.Component {
     );
   }
 }
-
+const Table = styled.table`
+  color: #757575;
+  a:link {
+    color: #757575;
+  }
+`;
 export { ResultDetail };
