@@ -2,6 +2,7 @@
 
 set -exu pipefail
 
+git checkout master
 git fetch
 git checkout $(git describe --abbrev=0 --tags)
 sudo docker-compose pull

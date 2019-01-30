@@ -24,7 +24,7 @@ services:
       - APM_SERVER_ACTIVE=1
     ports:
       - $API_PORT:$API_PORT
-     volumes:
+    volumes:
       - ./packages/code-du-travail-data/dataset/courrier-type/docx:/code-du-travail-data/dataset/courrier-type/docx
 
   # In production, add an APM Server
