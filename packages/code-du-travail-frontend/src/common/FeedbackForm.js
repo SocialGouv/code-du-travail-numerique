@@ -137,7 +137,7 @@ class FeedbackForm extends React.Component {
             </React.Fragment>
           )}
         <h2 className="section__subtitle" style={{ alignSelf: "center" }}>
-          Laisser nous un commentaire sur notre service{" "}
+          Laissez-nous un commentaire sur notre service{" "}
           <span className="fontweight--normal fontweight--italic">
             {" "}
             - facultatif
