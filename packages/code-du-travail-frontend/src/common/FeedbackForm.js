@@ -16,12 +16,13 @@ const motifLabels = [
 class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
-    fiche: PropTypes.string,
+    url: PropTypes.string,
     results: PropTypes.arrayOf(PropTypes.object),
     onSubmit: PropTypes.func.isRequired
   };
   static defaultProps = {
     query: "",
+    url: "",
     results: []
   };
   state = {
@@ -29,8 +30,7 @@ class FeedbackForm extends React.Component {
     motif: motifLabels[0],
     message: "",
     question: this.props.query || "",
-    email: "",
-    fiche: ""
+    email: ""
   };
   timeoutId = null;
   texteareaRef = React.createRef();
@@ -63,6 +63,7 @@ class FeedbackForm extends React.Component {
       motif,
       message,
       email,
+      url: document.location.href,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent,
       subject: question
     };
@@ -97,7 +98,7 @@ class FeedbackForm extends React.Component {
     }
   }
   render() {
-    const { results, query } = this.props;
+    const { results, query, url } = this.props;
 
     return (
       <form
@@ -115,11 +116,8 @@ class FeedbackForm extends React.Component {
         />
         <input
           type="hidden"
-          name="fiche"
-          value={this.props.fiche}
-          onChange={this.inputChange}
-          className="feedback__input"
-          disabled
+          name="url"
+          value={document ? document.location.href : url}
         />
         {results &&
           results.length > 0 && (

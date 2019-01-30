@@ -9,14 +9,14 @@ class FeedbackModal extends React.Component {
     isOpen: PropTypes.bool,
     closeModal: PropTypes.func.isRequired,
     query: PropTypes.string,
-    fiche: PropTypes.string,
+    url: PropTypes.string,
     results: PropTypes.arrayOf(PropTypes.object)
   };
   static defaultProps = {
     isOpen: false
   };
   render() {
-    const { results, isOpen, closeModal, query, fiche } = this.props;
+    const { results, isOpen, closeModal, query, url } = this.props;
     return (
       <DialogOverlay
         isOpen={isOpen}
@@ -39,7 +39,7 @@ class FeedbackModal extends React.Component {
             <FeedbackForm
               onSubmit={postFeedback}
               query={query}
-              fiche={fiche}
+              url={url}
               results={results}
             />
           </section>
