@@ -4,7 +4,11 @@ import styled from "styled-components";
 
 const WorkPeriodForm = React.forwardRef(
   (
-    { period: { uid, type, duree = "", salaire = "" }, onSubmit, onChange },
+    {
+      period: { uid, type, duree = "", salaire = "", isValid },
+      onSubmit,
+      onChange
+    },
     ref
   ) => {
     return (
@@ -46,9 +50,13 @@ const WorkPeriodForm = React.forwardRef(
             />
           </InlineLabel>
           {uid ? (
-            <button className="btn">Modifier la période</button>
+            <button className="btn" disabled={!isValid}>
+              Modifier la période
+            </button>
           ) : (
-            <button className="btn">Ajouter la période</button>
+            <button className="btn" disabled={!isValid}>
+              Ajouter la période
+            </button>
           )}
         </Wrapper>
       </form>

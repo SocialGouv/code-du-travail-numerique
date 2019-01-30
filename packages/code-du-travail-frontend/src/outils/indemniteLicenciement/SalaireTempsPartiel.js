@@ -24,7 +24,8 @@ class SalaireTempsPartiel extends React.Component {
     currentPeriod: {
       type: "temps-partiel",
       duree: undefined,
-      salaire: undefined
+      salaire: undefined,
+      isValid: false
     }
   };
 
@@ -83,10 +84,19 @@ class SalaireTempsPartiel extends React.Component {
     this.resetForm();
   };
   onInputChange = event => {
+    const period = {
+      ...this.state.currentPeriod,
+      [event.target.name]: event.target.value
+    };
+
+    const { duree, salaire } = period;
+    const isValid =
+      parseFloat(duree) && duree > 0 && parseFloat(salaire) && salaire > 0;
+
     this.setState({
       currentPeriod: {
-        ...this.state.currentPeriod,
-        [event.target.name]: event.target.value
+        ...period,
+        isValid
       }
     });
   };
@@ -97,7 +107,8 @@ class SalaireTempsPartiel extends React.Component {
         uid: undefined,
         type: "temps-partiel",
         duree: "",
-        salaire: ""
+        salaire: "",
+        isValid: false
       }
     });
     if (this.selectRef.current) {
