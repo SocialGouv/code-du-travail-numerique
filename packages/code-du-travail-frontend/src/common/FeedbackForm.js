@@ -16,11 +16,13 @@ const motifLabels = [
 class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
+    url: PropTypes.string,
     results: PropTypes.arrayOf(PropTypes.object),
     onSubmit: PropTypes.func.isRequired
   };
   static defaultProps = {
     query: "",
+    url: "",
     results: []
   };
   state = {
@@ -61,6 +63,7 @@ class FeedbackForm extends React.Component {
       motif,
       message,
       email,
+      url: document.location.href,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent,
       subject: question
     };
@@ -95,7 +98,7 @@ class FeedbackForm extends React.Component {
     }
   }
   render() {
-    const { results, query } = this.props;
+    const { results, query, url } = this.props;
 
     return (
       <form
@@ -110,6 +113,11 @@ class FeedbackForm extends React.Component {
           onChange={this.inputChange}
           className="feedback__input"
           disabled
+        />
+        <input
+          type="hidden"
+          name="url"
+          value={document ? document.location.href : url}
         />
         {results &&
           results.length > 0 && (
@@ -137,7 +145,7 @@ class FeedbackForm extends React.Component {
             </React.Fragment>
           )}
         <h2 className="section__subtitle" style={{ alignSelf: "center" }}>
-          Laisser nous un commentaire sur notre service{" "}
+          Laissez-nous un commentaire sur notre service{" "}
           <span className="fontweight--normal fontweight--italic">
             {" "}
             - facultatif

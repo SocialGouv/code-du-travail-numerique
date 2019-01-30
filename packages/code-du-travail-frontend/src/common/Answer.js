@@ -24,7 +24,7 @@ class Answer extends React.Component {
       "trackEvent",
       "feedback",
       "thumb up",
-      `${this.props.router.route}/${this.props.router.query.slug}`
+      this.props.router.asPath
     ]);
   };
   showModal = () => {
@@ -32,7 +32,7 @@ class Answer extends React.Component {
       "trackEvent",
       "feedback",
       "thumb down",
-      `${this.props.router.route}/${this.props.router.query.slug}`
+      this.props.router.asPath
     ]);
     this.setState({ modalVisible: true });
   };
@@ -57,7 +57,6 @@ class Answer extends React.Component {
       additionalContent,
       emptyMessage = "Aucun résultat"
     } = this.props;
-
     return (
       <React.Fragment>
         <Head>
@@ -72,6 +71,7 @@ class Answer extends React.Component {
               isOpen={this.state.modalVisible}
               closeModal={this.closeModal}
               query={router.query.q || title}
+              url={router.asPath}
             />
             <Article
               title={title}

@@ -13,6 +13,11 @@ exports[`<FeedbackForm /> should render 1`] = `
       type="text"
       value="Initial query"
     />
+    <input
+      name="url"
+      type="hidden"
+      value="http://localhost/"
+    />
     <h2
       class="section__subtitle"
     >
@@ -32,7 +37,7 @@ exports[`<FeedbackForm /> should render 1`] = `
     <h2
       class="section__subtitle"
     >
-      Laisser nous un commentaire sur notre service
+      Laissez-nous un commentaire sur notre service
        
       <span
         class="fontweight--normal fontweight--italic"
