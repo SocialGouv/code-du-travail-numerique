@@ -78,6 +78,57 @@ https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden-
   height: 15px;
   margin-left: 5px;
 }
+.bg-color {
+  background: currentColor;
+}
+.color__black {
+  color: var(--color-black);
+}
+.color__blue-dark {
+  color: var(--color-blue-dark);
+}
+.color__blue {
+  color: var(--color-blue);
+}
+.color__danger-background {
+  color: var(--color-danger-background);
+}
+.color__dark-background {
+  color: var(--color-dark-background);
+}
+.color__dark-text {
+  color: var(--color-dark-text);
+}
+.color__element-background {
+  color: var(--color-element-background);
+}
+.color__element-border {
+  color: var(--color-element-border);
+}
+.color__info-background {
+  color: var(--color-info-background);
+}
+.color__light-background {
+  color: var(--color-light-background);
+}
+.color__light-text {
+  color: var(--color-light-text);
+}
+.color__primary-background {
+  color: var(--color-primary-background);
+}
+.color__secondary-background {
+  color: var(--color-secondary-background);
+}
+.color__success-background {
+  color: var(--color-success-background);
+}
+.color__warning-background {
+  color: var(--color-warning-background);
+}
+.color__white {
+  color: var(--color-white);
+}
 
 /* Style guide.
 --------------------------------------------------------------------------- */
@@ -90,53 +141,5 @@ https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden-
   margin-right: var(--spacing-small);
   vertical-align: middle;
   border: 1px solid var(--color-element-border);
-}
-
-.style-guide__color__black::before {
-  background: var(--color-black);
-}
-.style-guide__color__blue-dark::before {
-  background: var(--color-blue-dark);
-}
-.style-guide__color__blue::before {
-  background: var(--color-blue);
-}
-.style-guide__color__danger-background::before {
-  background: var(--color-danger-background);
-}
-.style-guide__color__dark-background::before {
-  background: var(--color-dark-background);
-}
-.style-guide__color__dark-text::before {
-  background: var(--color-dark-text);
-}
-.style-guide__color__element-background::before {
-  background: var(--color-element-background);
-}
-.style-guide__color__element-border::before {
-  background: var(--color-element-border);
-}
-.style-guide__color__info-background::before {
-  background: var(--color-info-background);
-}
-.style-guide__color__light-background::before {
-  background: var(--color-light-background);
-}
-.style-guide__color__light-text::before {
-  background: var(--color-light-text);
-}
-.style-guide__color__primary-background::before {
-  background: var(--color-primary-background);
-}
-.style-guide__color__secondary-background::before {
-  background: var(--color-secondary-background);
-}
-.style-guide__color__success-background::before {
-  background: var(--color-success-background);
-}
-.style-guide__color__warning-background::before {
-  background: var(--color-warning-background);
-}
-.style-guide__color__white::before {
-  background: var(--color-white);
+  background: currentColor;
 }
