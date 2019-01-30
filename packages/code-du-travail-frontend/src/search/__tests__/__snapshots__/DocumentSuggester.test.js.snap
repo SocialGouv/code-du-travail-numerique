@@ -3,7 +3,7 @@
 exports[`<DocumentSuggester /> should render 1`] = `
 <div>
   <label
-    class="sc-bwzfXH kfBgbD"
+    class="sc-bwzfXH jthXhr"
     for="main-search-input"
   >
     <span
@@ -40,7 +40,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
 <div>
   <label
-    class="sc-bwzfXH kfBgbD"
+    class="sc-bwzfXH jthXhr"
     for="main-search-input"
   >
     <span
@@ -89,7 +89,11 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
                 convention collective title
               </b>
               <br />
-              <div />
+              <div>
+                <mark>
+                  hightlighted ccn
+                </mark>
+              </div>
             </div>
           </li>
           <li
@@ -108,7 +112,11 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
                 question / réponse title
               </b>
               <br />
-              <div />
+              <div>
+                <mark>
+                  hightlighted faq
+                </mark>
+              </div>
             </div>
           </li>
         </ul>

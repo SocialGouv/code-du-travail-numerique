@@ -94,8 +94,9 @@ const renderSuggestion = suggestion => {
         dangerouslySetInnerHTML={{
           __html: cleanHtml(
             (suggestion.highlight &&
-              suggestion.highlight["all_text.french_exact"] &&
-              suggestion.highlight["all_text.french_exact"][0]) ||
+              ((suggestion.highlight.text && suggestion.highlight.text[0]) ||
+                (suggestion.highlight.title &&
+                  suggestion.highlight.title[0]))) ||
               ""
           )
         }}
@@ -106,6 +107,7 @@ const renderSuggestion = suggestion => {
 const Label = styled.label`
   flex: 1;
   display: flex;
+  text-align: left;
 `;
 
 const SuggestionsContainer = styled.div`

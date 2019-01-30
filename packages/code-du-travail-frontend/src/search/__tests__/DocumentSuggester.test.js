@@ -8,8 +8,8 @@ const suggestions = [
       source: "kali",
       title: "convention collective title"
     },
-    hightlight: {
-      "all_text.french_exact": <mark>hightlighted ccn</mark>
+    highlight: {
+      title: ["<mark>hightlighted ccn</mark>"]
     }
   },
   {
@@ -17,8 +17,8 @@ const suggestions = [
       source: "faq",
       title: "question / réponse title"
     },
-    hightlight: {
-      "all_text.french_exact": <mark>hightlighted faq</mark>
+    highlight: {
+      text: ["<mark>hightlighted faq</mark>"]
     }
   }
 ];
