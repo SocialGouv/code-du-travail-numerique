@@ -27,7 +27,7 @@ const ContentBody = ({ _source, excerpt, sourceType }) => (
 
 const makeExcerpt = highlight => {
   if (highlight && Object.keys(highlight).length) {
-    let firstHighlightObjectKeyName = Object.keys(highlight)[0];
+    const firstHighlightObjectKeyName = Object.keys(highlight)[0];
     // Use the first `n` available highlights as excerpt.
     const numExcerpts = 3;
     return highlight[firstHighlightObjectKeyName]
@@ -106,8 +106,8 @@ class SearchResults extends React.Component {
   };
 
   render() {
-    let data = this.props.data;
-    let query = this.props.query;
+    const data = this.props.data;
+    const query = this.props.query;
     // No results.
     if (!data || !data.hits || !data.hits.total) {
       return (

@@ -13,6 +13,8 @@ const BigError = ({ children }) => (
   </Container>
 );
 
+const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
+
 const Source = ({ name }) => (
   <div
     style={{
@@ -37,7 +39,7 @@ const getOutilFromCode = function(code) {
     default:
       return {
         title: "Outil introuvable",
-        outil: () => <BigError> Cet outil est introuvable </BigError>
+        outil: OutilIntrouvable
       };
   }
 };

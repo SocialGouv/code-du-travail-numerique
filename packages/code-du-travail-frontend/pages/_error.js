@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import getConfig from "next/config";
-let Sentry = require("@sentry/browser");
+const Sentry = require("@sentry/browser");
 
 const {
   publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
@@ -30,7 +30,7 @@ export default class Error extends React.Component {
   }
 
   componentDidMount() {
-    let { statusCode } = this.props;
+    const { statusCode } = this.props;
     if (statusCode && statusCode > 200) {
       notifySentry(new BrowserException(statusCode));
     }

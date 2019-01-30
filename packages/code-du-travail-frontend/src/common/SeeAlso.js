@@ -3,7 +3,7 @@ import React from "react";
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
 const SeeAlso = () => {
-  let links = [
+  const links = [
     {
       href: "https://socialgouv.github.io/faq-code-du-travail/",
       text: "Question-Réponse des services de renseignement"
