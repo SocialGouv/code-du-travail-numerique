@@ -22,23 +22,28 @@ exports[`<AddressQuery/> should render results with coord 1`] = `
             >
               Bureau des légendes
             </strong>
-            <p
-              class="sc-bwzfXH iKlumB"
+            <a
+              class="sc-htpNat ctwMlm"
+              href="https://www.openstreetmap.org/?mlat=4&mlon=44&zoom=16"
             >
               adresse inconnue
               <br />
               00700
                
               Partout
-            </p>
+            </a>
             <p
-              class="sc-htpNat dghnfL"
+              class="sc-bxivhb pmBgr"
             >
               Tél: 
-              +00 000 000 000
+              <a
+                href="tel:+00 000 000 000"
+              >
+                +00 000 000 000
+              </a>
             </p>
             <a
-              class="sc-bxivhb pmBgr"
+              class="sc-ifAKCX hnIkBb"
               href="mailto:email"
             >
               email
@@ -132,23 +137,28 @@ exports[`<AddressQuery/> should render results with query 1`] = `
             >
               Bureau des légendes
             </strong>
-            <p
-              class="sc-bwzfXH iKlumB"
+            <a
+              class="sc-htpNat ctwMlm"
+              href="https://www.openstreetmap.org/?mlat=4&mlon=44&zoom=16"
             >
               adresse inconnue
               <br />
               00700
                
               Partout
-            </p>
+            </a>
             <p
-              class="sc-htpNat dghnfL"
+              class="sc-bxivhb pmBgr"
             >
               Tél: 
-              +00 000 000 000
+              <a
+                href="tel:+00 000 000 000"
+              >
+                +00 000 000 000
+              </a>
             </p>
             <a
-              class="sc-bxivhb pmBgr"
+              class="sc-ifAKCX hnIkBb"
               href="mailto:email"
             >
               email

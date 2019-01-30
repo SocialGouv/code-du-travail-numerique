@@ -4,6 +4,8 @@ import { Alert, Button, Card, Cards, NoAnswer, Section } from "@cdt/ui";
 import { FeedbackModal } from "../common/FeedbackModal";
 import styled from "styled-components";
 
+const mapUrl = "https://www.openstreetmap.org/";
+
 class AddressResults extends React.Component {
   static propTypes = {
     query: PropTypes.string.isRequired,
@@ -14,6 +16,10 @@ class AddressResults extends React.Component {
           lignes: PropTypes.arrayOf(PropTypes.string).isRequired,
           code: PropTypes.string.isRequired,
           city: PropTypes.string.isRequired
+        }),
+        coord: PropTypes.shape({
+          lat: PropTypes.number,
+          lon: PropTypes.number
         }),
         tel: PropTypes.string.isRequired,
         email: PropTypes.string
@@ -84,15 +90,22 @@ function AddressCard({ data }) {
   return (
     <Card>
       <CardTitle>{data.title}</CardTitle>
-      <CardAddress>
+      {data.subtitle && <CardSubtitle>{data.subtitle}</CardSubtitle>}
+      <CardAddress
+        href={`${mapUrl}?mlat=${data.coord.lat}&mlon=${data.coord.lon}&zoom=16`}
+      >
         {data.address.lignes.map((ligne, i) => [ligne, <br key={i} />])}
         {data.address.code}
         &nbsp;
         {data.address.city}
       </CardAddress>
       <CardText>
-        Tél:&nbsp;
-        {data.tel}
+        {data.tel && (
+          <React.Fragment>
+            Tél:&nbsp;
+            <a href={`tel:${data.tel}`}>{data.tel}</a>
+          </React.Fragment>
+        )}
       </CardText>
       {data.email && (
         <CardMail href={`mailto:${data.email}`}>{data.email}</CardMail>
@@ -104,11 +117,25 @@ function AddressCard({ data }) {
 const CardTitle = styled.strong`
   font-size: 1rem;
 `;
-const CardAddress = styled.p`
+const CardSubtitle = styled.span`
+  font-size: 0.9rem;
+  display: block;
+`;
+const CardAddress = styled.a`
+  display: block;
   font-size: 0.9em;
   line-height: 1.5;
   margin: 1rem 0;
-  color: rgba(100, 100, 100, 0.9);
+  :link {
+    text-decoration: none;
+    color: rgba(100, 100, 100, 0.9);
+  }
+  :hover {
+    text-decoration: underline;
+  }
+  :visited {
+    color: rgba(100, 100, 100, 0.8);
+  }
 `;
 const CardText = styled.p`
   font-size: 0.9em;

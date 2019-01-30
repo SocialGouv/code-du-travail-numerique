@@ -11,6 +11,10 @@ const results = [
       code: "00700",
       city: "Partout"
     },
+    coord: {
+      lat: 4,
+      lon: 44
+    },
     tel: "+00 000 000 000",
     email: "email"
   }
