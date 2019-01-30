@@ -41,11 +41,12 @@ class Salaire extends React.Component {
     return (
       <React.Fragment>
         <Section light>
+          <h2>
+            Avez-vous alterné au cours de votre contrat de travail des périodes
+            de travail à temps plein et à temps partiel sur le même
+            contrat&nbsp;?
+          </h2>
           <RadioContainer>
-            <h2>
-              Avez-vous eu des périodes de cumul temps plein / temps partiel
-              depuis votre&nbsp;embauche ?
-            </h2>
             <Label>
               <input
                 type="radio"

@@ -24,9 +24,8 @@ class Inaptitude extends React.Component {
       <React.Fragment>
         <Section light>
           <h2>
-            Le licenciement a t-il fait il suite au prononcé d&apos;une
-            inaptitude d&apos;origine professionnelle ( accident du travail ou
-            maladie professionnelle)&nbsp;?
+            Êtes-vous licencié pour inaptitude suite à accident du travail ou
+            maladie professionnelle reconnue&nbsp;?
           </h2>
           <RadioContainer>
             <Label>

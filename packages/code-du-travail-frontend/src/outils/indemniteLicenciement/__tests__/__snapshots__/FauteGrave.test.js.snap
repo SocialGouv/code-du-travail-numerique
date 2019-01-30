@@ -12,7 +12,7 @@ exports[`<FauteGrave /> should render 1`] = `
         class="wrapper-light"
       >
         <h2>
-          Faute grave
+          Faute grave ou lourde
         </h2>
         <label
           for="licencie-faute-grave"
@@ -20,7 +20,7 @@ exports[`<FauteGrave /> should render 1`] = `
           <div
             style="display: inline-block; margin-right: 10px; line-height: 20px; vertical-align: top; font-size: 1.2em;"
           >
-            Êtes-vous licencié(e) pour faute grave ?
+            Êtes-vous licencié(e) pour faute grave ou lourde ?
           </div>
           <div
             style="position: relative; display: inline-block; text-align: left; opacity: 1; border-radius: 10px;"

@@ -24,11 +24,11 @@ class FauteGrave extends React.Component {
     return (
       <React.Fragment>
         <Section light>
-          <h2>Faute grave</h2>
+          <h2>Faute grave ou lourde</h2>
           <SimpleSwitch
             checked={value}
             id="licencie-faute-grave"
-            label="Êtes-vous licencié(e) pour faute grave ?"
+            label="Êtes-vous licencié(e) pour faute grave ou lourde&nbsp;?"
             onChange={onChange}
           />
         </Section>

@@ -3,13 +3,13 @@
 exports[`<ResultDetail /> should render 1`] = `
 <div>
   <section
-    class="section-light"
+    class="section"
   >
     <div
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper"
       >
         <div
           class="sc-bxivhb gtwcOJ"
@@ -32,15 +32,16 @@ exports[`<ResultDetail /> should render 1`] = `
     </div>
   </section>
   <section
-    class="section-light"
+    class="section"
   >
     <div
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper"
       >
         <table
+          class="sc-ifAKCX fKnNeQ"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -61,7 +62,7 @@ exports[`<ResultDetail /> should render 1`] = `
               <td
                 style="text-align: left; font-weight: bold;"
               >
-                Moyenne des 3 derniers sois
+                Moyenne des 3 derniers mois
               </td>
               <td
                 style="text-align: center;"
@@ -122,13 +123,13 @@ exports[`<ResultDetail /> should render 1`] = `
 exports[`<ResultDetail /> should render when rupture contrat is before sept 27 sept 2017 1`] = `
 <div>
   <section
-    class="section-light"
+    class="section"
   >
     <div
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper"
       >
         <div
           class="sc-bxivhb gtwcOJ"
@@ -151,15 +152,16 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
     </div>
   </section>
   <section
-    class="section-light"
+    class="section"
   >
     <div
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper"
       >
         <table
+          class="sc-ifAKCX fKnNeQ"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -180,7 +182,7 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
               <td
                 style="text-align: left; font-weight: bold;"
               >
-                Moyenne des 3 derniers sois
+                Moyenne des 3 derniers mois
               </td>
               <td
                 style="text-align: center;"
@@ -241,13 +243,13 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
 exports[`<ResultDetail /> should render with temps partiel 1`] = `
 <div>
   <section
-    class="section-light"
+    class="section"
   >
     <div
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper"
       >
         <div
           class="sc-bxivhb gtwcOJ"
@@ -270,15 +272,16 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
     </div>
   </section>
   <section
-    class="section-light"
+    class="section"
   >
     <div
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper"
       >
         <table
+          class="sc-ifAKCX fKnNeQ"
           style="font-size: 1.2em;"
           width="100%"
         >

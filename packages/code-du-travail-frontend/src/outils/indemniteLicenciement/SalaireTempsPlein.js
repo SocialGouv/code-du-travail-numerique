@@ -98,7 +98,7 @@ class SalaireTempsPlein extends React.Component {
           <tbody>
             {times(this.props.value.derniersMois.length).map(i => (
               <tr key={i} style={{ background: i < 3 ? "#ddd" : "" }}>
-                <td>{i === 0 ? "Dernier salaire" : `Salaire N-${i}`}</td>
+                <td>{i === 0 ? "Dernier salaire" : `Salaire m-${i}`}</td>
                 <td style={{ textAlign: "center" }}>
                   <Input
                     size="6"

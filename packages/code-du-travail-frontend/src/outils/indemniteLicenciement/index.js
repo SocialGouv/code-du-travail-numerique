@@ -86,7 +86,7 @@ class CalculateurIndemnite extends React.Component {
 
     return (
       <Container>
-        <Title>Calculer son indémnité de licenciement</Title>
+        <Title>Calculer son indemnité de licenciement</Title>
         <WidgetContainer ref={containerRef}>
           <Stepper
             containerRef={containerRef}

@@ -12,7 +12,7 @@ exports[`<Inaptitude /> should render 1`] = `
         class="wrapper-light"
       >
         <h2>
-          Le licenciement a t-il fait il suite au prononcé d'une inaptitude d'origine professionnelle ( accident du travail ou maladie professionnelle) ?
+          Êtes-vous licencié pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
         </h2>
         <div
           class="sc-htpNat cKNzUf"
