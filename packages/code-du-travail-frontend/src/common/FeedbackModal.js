@@ -34,7 +34,7 @@ class FeedbackModal extends React.Component {
               Nous sommes désolés de n&apos;avoir pu répondre à vos attentes.
               Laissez-nous votre question, vos suggestions et votre adresse,
               nous vous préviendrons lors des prochaines améliorations de cet
-              outils.
+              outil.
             </p>
             <FeedbackForm
               onSubmit={postFeedback}

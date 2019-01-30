@@ -34,7 +34,7 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
           <p
             class="feedback-modal__intro"
           >
-            Nous sommes désolés de n'avoir pu répondre à vos attentes. Laissez-nous votre question, vos suggestions et votre adresse, nous vous préviendrons lors des prochaines améliorations de cet outils.
+            Nous sommes désolés de n'avoir pu répondre à vos attentes. Laissez-nous votre question, vos suggestions et votre adresse, nous vous préviendrons lors des prochaines améliorations de cet outil.
           </p>
           <form
             action="https://formspree.io/xbalrgzm"
@@ -71,7 +71,7 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
             <h2
               class="section__subtitle"
             >
-              Laisser nous un commentaire sur notre service
+              Laissez-nous un commentaire sur notre service
                
               <span
                 class="fontweight--normal fontweight--italic"
