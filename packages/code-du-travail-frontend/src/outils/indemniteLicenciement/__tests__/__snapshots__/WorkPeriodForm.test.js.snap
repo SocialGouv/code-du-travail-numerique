@@ -66,6 +66,7 @@ exports[`<WorkPeriodForm /> should render single work period 1`] = `
       </label>
       <button
         class="btn"
+        disabled=""
       >
         Ajouter la période
       </button>

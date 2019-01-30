@@ -11,12 +11,12 @@ exports[`<Salaire /> should render mixed work period 1`] = `
       <div
         class="wrapper-light"
       >
+        <h2>
+          Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
+        </h2>
         <div
           class="sc-htpNat cKNzUf"
         >
-          <h2>
-            Avez-vous eu des périodes de cumul temps plein / temps partiel depuis votre embauche ?
-          </h2>
           <label
             class="sc-bwzfXH lbnHsv"
           >
@@ -104,6 +104,7 @@ exports[`<Salaire /> should render mixed work period 1`] = `
             </label>
             <button
               class="btn"
+              disabled=""
             >
               Ajouter la période
             </button>
@@ -261,12 +262,12 @@ exports[`<Salaire /> should render single work period 1`] = `
       <div
         class="wrapper-light"
       >
+        <h2>
+          Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
+        </h2>
         <div
           class="sc-htpNat cKNzUf"
         >
-          <h2>
-            Avez-vous eu des périodes de cumul temps plein / temps partiel depuis votre embauche ?
-          </h2>
           <label
             class="sc-bwzfXH lbnHsv"
           >
@@ -344,7 +345,7 @@ exports[`<Salaire /> should render single work period 1`] = `
               style="background: rgb(221, 221, 221);"
             >
               <td>
-                Salaire N-1
+                Salaire m-1
               </td>
               <td
                 style="text-align: center;"
@@ -361,7 +362,7 @@ exports[`<Salaire /> should render single work period 1`] = `
               style="background: rgb(221, 221, 221);"
             >
               <td>
-                Salaire N-2
+                Salaire m-2
               </td>
               <td
                 style="text-align: center;"
@@ -376,7 +377,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-3
+                Salaire m-3
               </td>
               <td
                 style="text-align: center;"
@@ -391,7 +392,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-4
+                Salaire m-4
               </td>
               <td
                 style="text-align: center;"
@@ -406,7 +407,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-5
+                Salaire m-5
               </td>
               <td
                 style="text-align: center;"
@@ -421,7 +422,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-6
+                Salaire m-6
               </td>
               <td
                 style="text-align: center;"
@@ -462,12 +463,12 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
       <div
         class="wrapper-light"
       >
+        <h2>
+          Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
+        </h2>
         <div
           class="sc-htpNat cKNzUf"
         >
-          <h2>
-            Avez-vous eu des périodes de cumul temps plein / temps partiel depuis votre embauche ?
-          </h2>
           <label
             class="sc-bwzfXH lbnHsv"
           >
@@ -545,7 +546,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
               style="background: rgb(221, 221, 221);"
             >
               <td>
-                Salaire N-1
+                Salaire m-1
               </td>
               <td
                 style="text-align: center;"
@@ -562,7 +563,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
               style="background: rgb(221, 221, 221);"
             >
               <td>
-                Salaire N-2
+                Salaire m-2
               </td>
               <td
                 style="text-align: center;"
@@ -577,7 +578,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-3
+                Salaire m-3
               </td>
               <td
                 style="text-align: center;"
@@ -592,7 +593,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-4
+                Salaire m-4
               </td>
               <td
                 style="text-align: center;"
@@ -607,7 +608,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-5
+                Salaire m-5
               </td>
               <td
                 style="text-align: center;"
@@ -622,7 +623,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             </tr>
             <tr>
               <td>
-                Salaire N-6
+                Salaire m-6
               </td>
               <td
                 style="text-align: center;"

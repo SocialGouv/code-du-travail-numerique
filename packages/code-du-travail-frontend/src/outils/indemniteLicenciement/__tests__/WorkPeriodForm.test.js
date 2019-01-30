@@ -40,7 +40,7 @@ describe("<WorkPeriodForm />", () => {
     expect(props.onChange).toHaveBeenCalled();
   });
 
-  it("should call onSubmit", () => {
+  it("should call onSubmit when data are valid", () => {
     const props = {
       onChange: jest.fn(),
       // HACK(lionelb): needed to avoid jsdom error about submit
@@ -49,7 +49,8 @@ describe("<WorkPeriodForm />", () => {
       period: {
         type: "temps-plein",
         duree: "10",
-        salaire: "1000"
+        salaire: "1000",
+        isValid: true
       }
     };
     const ref = React.createRef();
@@ -58,5 +59,25 @@ describe("<WorkPeriodForm />", () => {
     const addButton = getByText(/ajouter la période/i);
     addButton.click();
     expect(props.onSubmit).toHaveBeenCalled();
+  });
+  it("should not call onSubmit when data are not valid", () => {
+    const props = {
+      onChange: jest.fn(),
+      // HACK(lionelb): needed to avoid jsdom error about submit
+      // @see https://github.com/jsdom/jsdom/issues/1937
+      onSubmit: jest.fn().mockImplementation(event => event.preventDefault()),
+      period: {
+        type: "temps-plein",
+        duree: "10",
+        salaire: "0",
+        isValid: false
+      }
+    };
+    const ref = React.createRef();
+    const { getByText } = render(<WorkPeriodForm {...props} ref={ref} />);
+
+    const addButton = getByText(/ajouter la période/i);
+    addButton.click();
+    expect(props.onSubmit).not.toHaveBeenCalled();
   });
 });
