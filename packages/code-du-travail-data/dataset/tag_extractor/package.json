@@ -1,10 +1,11 @@
 {
   "name": "@cdt/data...tags",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "version": "1.7.3",
+  "description": "extract tags from json faq, output markdown",
   "main": "index.js",
   "scripts": {
-    "start" : "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
