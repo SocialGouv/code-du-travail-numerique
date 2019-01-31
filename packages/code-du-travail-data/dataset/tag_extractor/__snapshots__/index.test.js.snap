@@ -2,7 +2,7 @@
 
 exports[`it extract tags 1`] = `
 Array [
-  "./file.mock.json",
+  "file.mock.json",
   Map {
     "foo" => Set {
       "bar",
@@ -16,7 +16,7 @@ Array [
 
 exports[`it print tags to markdown 1`] = `
 "
-### ./file.mock.json
+### file.mock.json
 
 Tag | values
 ----|-------

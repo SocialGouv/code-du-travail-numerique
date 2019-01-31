@@ -1,9 +1,10 @@
+const { basename } = require("path");
 const dataSources = ["../faq.json", "../faq-contributions.json"];
 
-function extractTags(filename) {
-  const data = require(filename);
+function extractTags(filepath) {
+  const data = require(filepath);
   return [
-    filename,
+    basename(filepath),
     data
       .filter(items => items.tags)
       .reduce((state, items) => state.concat(Object.entries(items.tags)), [])
