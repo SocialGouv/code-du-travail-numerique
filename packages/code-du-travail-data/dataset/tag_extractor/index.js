@@ -1,36 +1,53 @@
-const path = require("path");
-const dataSources = ["faq.json"];
+const dataSources = ["../faq.json", "../faq-contributions.json"];
 
 function extractTags(filename) {
-  const data = require(path.join("../", filename));
+  const data = require(filename);
   return [
     filename,
     data
       .filter(items => items.tags)
       .reduce((state, items) => state.concat(Object.entries(items.tags)), [])
-      .reduce((state, item) => {
-        const [tag, values] = item;
-        state.set(tag, new Set([...(state.get(tag) || [])].concat(values)));
-        return state;
-      }, new Map())
+      .reduce(mergeTags, new Map())
   ];
 }
 
-function dumpTags([filename, tags]) {
-  console.log(`
+function mergeTags(state, [tag, values]) {
+  state.set(tag, new Set([...(state.get(tag) || [])].concat(values)));
+  return state;
+}
+
+function flattenTagMap(tags) {
+  return tags.reduce((state, [_, tagsMap]) => {
+    return [...tagsMap.entries()].reduce((state, [tag, values]) => {
+      mergeTags(state, [tag, [...values]]);
+      return state;
+    }, state);
+  }, new Map());
+}
+
+function dumpTags([filename, tagMap]) {
+  return `
 ### ${filename}
 
 Tag | values
 ----|-------
-${[...tags.entries()]
+${[...tagMap.entries()]
     .map(([key, tags]) => `${key} | ${[...tags].join(", ")}`)
     .join("\n")}
-`);
+`;
 }
 
 const tags = dataSources.map(extractTags);
+
 if (module === require.main) {
-  tags.forEach(dumpTags);
+  const dump = data
+    .forEach(([file, tagMap]) => dumpTags(file, tagMap))
+    .join("\n");
+  console.log(dump);
 } else {
-  module.exports = tags.reduce((state, tags) => state.contat(tags), []);
+  module.exports = {
+    tags: flattenTagMap(tags),
+    dumpTags,
+    extractTags
+  };
 }

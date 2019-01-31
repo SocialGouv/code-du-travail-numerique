@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it extract tags 1`] = `
+Array [
+  "./file.mock.json",
+  Map {
+    "foo" => Set {
+      "bar",
+    },
+    "baz" => Set {
+      "baz",
+    },
+  },
+]
+`;
+
+exports[`it print tags to markdown 1`] = `
+"
+### ./file.mock.json
+
+Tag | values
+----|-------
+foo | bar
+baz | baz
+"
+`;
+
+exports[`it should export tags as an map 1`] = `
+Map {
+  "foo" => Set {
+    "bar",
+    "foo",
+  },
+  "baz" => Set {
+    "baz",
+  },
+  "bar" => Set {
+    "bar",
+  },
+  "fizz" => Set {
+    "buzz",
+  },
+}
+`;
