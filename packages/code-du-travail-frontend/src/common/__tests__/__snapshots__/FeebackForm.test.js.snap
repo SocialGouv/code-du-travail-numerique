@@ -18,6 +18,11 @@ exports[`<FeedbackForm /> should render 1`] = `
       type="hidden"
       value="http://localhost/"
     />
+    <input
+      name="source"
+      type="hidden"
+      value="Tous contenus"
+    />
     <h2
       class="section__subtitle"
     >

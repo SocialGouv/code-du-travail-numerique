@@ -140,6 +140,7 @@ class SearchResults extends React.Component {
             isOpen={this.state.feedbackVisible}
             closeModal={this.closeModal}
             query={query}
+            source={source}
           />
         </React.Fragment>
       );

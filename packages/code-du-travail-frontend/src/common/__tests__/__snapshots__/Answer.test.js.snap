@@ -410,6 +410,11 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
               type="hidden"
               value="http://localhost/"
             />
+            <input
+              name="source"
+              type="hidden"
+              value="Tous contenus"
+            />
             <h2
               class="section__subtitle"
             >
@@ -896,6 +901,11 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
               name="url"
               type="hidden"
               value="http://localhost/"
+            />
+            <input
+              name="source"
+              type="hidden"
+              value="Tous contenus"
             />
             <h2
               class="section__subtitle"
@@ -1779,6 +1789,11 @@ exports[`<Answer /> should render additional content 1`] = `
               name="url"
               type="hidden"
               value="http://localhost/"
+            />
+            <input
+              name="source"
+              type="hidden"
+              value="Tous contenus"
             />
             <h2
               class="section__subtitle"
