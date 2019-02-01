@@ -12,7 +12,9 @@ exports[`<SearchResults/> should render no results 1`] = `
         category="primary"
         class="alert "
       >
-        Nous n’avons pas trouvé de résultat pour votre recherche.
+        <p>
+          Nous n’avons pas trouvé de résultat pour votre recherche.
+        </p>
       </div>
     </div>
   </div>

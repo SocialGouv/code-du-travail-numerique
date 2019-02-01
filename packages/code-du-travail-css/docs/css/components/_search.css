@@ -18,7 +18,7 @@
   flex: 1 1 auto;
   display: flex;
 }
-.search__facets {
+.search__sources {
   position: absolute;
   display: flex;
   align-items: center;
@@ -28,13 +28,13 @@
   border-radius: var(--border-radius-base);
   background-color: var(--color-lighter-grey);
 }
-.facet-icon {
+.select-sources__icon {
   position: absolute;
   width: 1.25rem;
   height: 1.25rem;
   margin: 0 calc(var(--spacing-small) / 2);
 }
-.facet-value {
+.select-sources__value {
   color: var(--color-almost-black);
   font-size: var(--font-size-small);
   border: 1px solid transparent;
