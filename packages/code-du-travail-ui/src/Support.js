@@ -19,7 +19,7 @@ const Support = ({ onSubmit, children }) => (
           {/*eslint-disable-next-line jsx-a11y/label-has-for */}
           <label className="support__label">
             {children}
-            <Search className="support__icon" title="Recherche par adresse" />
+            <Search className="support__icon" title="Rechercher par adresse" />
           </label>
         </form>
       </div>

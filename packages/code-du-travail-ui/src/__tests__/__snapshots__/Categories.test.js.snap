@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Categories /> should render with default props 1`] = `
+<div>
+  <div
+    class="categories"
+  >
+    <ul
+      class="categories__list"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Categories /> should render with props 1`] = `
+<div>
+  <div
+    class="categories"
+  >
+    <ul
+      class="categories__list"
+    >
+      <li
+        class="categories__list-item"
+      >
+        <a
+          href="http://code-du-travail-numerique.beta.gouv.fr"
+        >
+          <img
+            alt="titre"
+            src="icon/icon.svg"
+          />
+          <h3>
+            titre
+          </h3>
+          <p>
+            text
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

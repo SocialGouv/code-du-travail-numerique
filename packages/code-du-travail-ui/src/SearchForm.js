@@ -7,9 +7,10 @@ const SearchForm = ({ placeholder, value, onSubmit }) => {
     e.preventDefault();
     onSubmit(input.value);
   };
-  const onKeyDown = e => {
-    if (e.charCode === 13) {
-      _onSubmit(e);
+  const onKeyDown = event => {
+    const key = event.key || event.keyCode;
+    if (key === "Enter" || key === "13") {
+      _onSubmit(event);
     }
   };
   return (
@@ -19,7 +20,7 @@ const SearchForm = ({ placeholder, value, onSubmit }) => {
         type="search"
         name="search"
         onKeyDown={onKeyDown}
-        value={value}
+        defaultValue={value}
         placeholder={placeholder}
         className="search__input"
       />
@@ -42,7 +43,7 @@ SearchForm.propTypes = {
 
 SearchForm.defaultProps = {
   placeholder: "Posez votre question",
-  value: null,
+  value: "",
   onSubmit: () => {}
 };
 

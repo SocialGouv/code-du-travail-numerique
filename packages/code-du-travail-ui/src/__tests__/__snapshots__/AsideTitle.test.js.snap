@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AsideTitle /> should render 1`] = `
+<div>
+  <h3
+    class="aside-title"
+  >
+    One Aside title
+  </h3>
+</div>
+`;
