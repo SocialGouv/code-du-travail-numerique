@@ -1,6 +1,8 @@
 import json
 import logging
 import os
+import base64
+import hashlib
 
 from slugify import slugify
 
@@ -35,6 +37,14 @@ def parse_hash_tags(tags):
         else:
             newTags.append(key + ":" + (str(value) or ""))
     return newTags
+
+def hasher(text):
+  return text and "-" + base64.urlsafe_b64encode(hashlib.sha1(text).digest()[:10]).decode() or ""
+
+# make a slug from given text and add short hashed suffix from given seed if any
+def make_slug(text, seed):
+    return slugify(text + str(hasher((seed.encode('utf-8'))) ), to_lower=True)
+
 
 def populate_cdtn_documents():
     with open(os.path.join(settings.BASE_DIR, 'dataset/kali/idcc-kali-ape.json')) as json_data:
@@ -94,7 +104,7 @@ def populate_cdtn_documents():
         CDTN_DOCUMENTS.append({
             'source': 'fiches_service_public',
             'text': val['text'],
-            'slug': slugify(val['title'], to_lower=True),
+            'slug': make_slug(val['title'], val['text']),
             'title': val['title'],
             'html': val["html"],
             'all_text': f"{val['title']} {val['text']}",
@@ -136,7 +146,7 @@ def populate_cdtn_documents():
             branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
-                'slug': slugify(val['question'], to_lower=True),
+                'slug': make_slug(val['question'], val['reponse']),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
@@ -156,7 +166,7 @@ def populate_cdtn_documents():
             branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
-                'slug': slugify(val['question'], to_lower=True),
+                'slug': make_slug(val['question'], val['reponse']),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
