@@ -39,7 +39,7 @@ def parse_hash_tags(tags):
     return newTags
 
 def hasher(text):
-    return text and "-" + base64.urlsafe_b64encode(hashlib.sha1(text).digest()[:10]).decode() or ""
+    return ("-" + base64.urlsafe_b64encode(hashlib.sha1(text).digest()[:10]).decode()) if text else ""
 
 # make a slug from given text and add short hashed suffix from given seed if any
 def make_slug(text, seed):
