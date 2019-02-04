@@ -39,11 +39,11 @@ def parse_hash_tags(tags):
     return newTags
 
 def hasher(text):
-  return text and "-" + base64.urlsafe_b64encode(hashlib.sha1(text).digest()[:10]).decode() or ""
+    return text and "-" + base64.urlsafe_b64encode(hashlib.sha1(text).digest()[:10]).decode() or ""
 
 # make a slug from given text and add short hashed suffix from given seed if any
 def make_slug(text, seed):
-    return slugify(text + str(hasher((seed.encode('utf-8'))) ), to_lower=True)
+    return slugify(text + str(hasher((seed.encode('utf-8')))), to_lower=True)
 
 
 def populate_cdtn_documents():
