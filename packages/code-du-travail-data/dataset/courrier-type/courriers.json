@@ -291,5 +291,19 @@
     "redacteur": "cdtn",
     "source": "DIRRECTE",
     "filename": "temps-partiel-demande-de-derogation-du-salarie.docx"
+  },
+  {
+    "titre": "Relevé d'heures supplémentaires",
+    "description": "En cas d'horaires individualisé dans l'entreprise, l’employeur a l'obligation de mettre en place un dispositif de décompte de la durée du travail.",
+    "questions": ["Qu'est ce qu'un relevé d'heures supplémentaires ?"],
+    "tags": {
+      "theme": "durée du travail",
+      "themes": [21400, 20000],
+      "type_de_contrat": ""
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "filename": "tableau-recap-heures supplementaire.docx"
   }
 ]
