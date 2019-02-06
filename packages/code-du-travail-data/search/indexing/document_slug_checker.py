@@ -46,10 +46,3 @@ if __name__ == '__main__':
             logger.debug("%s | %s", slug, count)
 
         sys.exit("document with same slugs detected")
-
-    else:
-        sys.exit(0)
-        # check, but it's probably optional
-
-
-
