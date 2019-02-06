@@ -2,7 +2,7 @@ import argparse
 import logging
 import sys
 
-from cdtn_documents import CDTN_DOCUMENTS
+from search.indexing.cdtn_documents import CDTN_DOCUMENTS
 
 console = logging.StreamHandler()
 logger = logging.getLogger(__name__)
@@ -18,7 +18,7 @@ def documents_slug_checker():
     logger.debug("slug | count")
     logger.debug("-----|----")
     for slug, count in DUPLICATE_SLUGS:
-        logger.debug(f"{slug} | {count}")
+        logger.debug("%s | %s", slug, count)
 
 if __name__ == '__main__':
 
