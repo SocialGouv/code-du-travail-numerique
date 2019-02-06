@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Question = props => (
   <svg viewBox="0 0 50 50" {...props}>
@@ -12,3 +13,7 @@ const Question = props => (
 );
 
 export default Question;
+
+Question.propTypes = {
+  fill: PropTypes.string
+};

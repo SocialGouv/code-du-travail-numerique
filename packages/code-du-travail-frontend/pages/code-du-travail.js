@@ -31,15 +31,14 @@ const getFakeBreadCrumb = path =>
     .split("/")
     .map(s => s.trim())
     .filter(Boolean)
-    .map(
-      (part, i, all) =>
-        i === all.length - 1 ? (
-          part
-        ) : (
-          <span className="link" key={part}>
-            {part}
-          </span>
-        )
+    .map((part, i, all) =>
+      i === all.length - 1 ? (
+        part
+      ) : (
+        <span className="link" key={part}>
+          {part}
+        </span>
+      )
     );
 
 class Fiche extends React.Component {

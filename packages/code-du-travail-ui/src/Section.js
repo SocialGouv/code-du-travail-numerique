@@ -5,13 +5,13 @@ const Section = ({ light, dark, style, children }) => {
   const containerClassName = light
     ? "section-light"
     : dark
-      ? "section-dark"
-      : "section";
+    ? "section-dark"
+    : "section";
   const innerContainerClassName = light
     ? "wrapper-light"
     : dark
-      ? "wrapper-dark"
-      : "wrapper";
+    ? "wrapper-dark"
+    : "wrapper";
   return (
     <section className={containerClassName} style={style}>
       <div className="container">

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Lost = ({ title = "Perdu ?", ...props }) => (
   <svg viewBox="0 0 83 87" {...props}>
@@ -27,3 +28,8 @@ const Lost = ({ title = "Perdu ?", ...props }) => (
 );
 
 export default Lost;
+
+Lost.propTypes = {
+  title: PropTypes.string,
+  fill: PropTypes.string
+};

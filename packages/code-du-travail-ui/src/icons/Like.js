@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Like = props => (
   <svg viewBox="0 0 50 50" width="1em" height="1em" {...props}>
@@ -11,3 +12,7 @@ const Like = props => (
 );
 
 export default Like;
+
+Like.propTypes = {
+  fill: PropTypes.string
+};

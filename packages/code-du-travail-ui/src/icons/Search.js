@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Search = ({ title, ...props }) => (
   <svg viewBox="0 0 20 20" {...props}>
@@ -12,3 +13,8 @@ const Search = ({ title, ...props }) => (
 );
 
 export default Search;
+
+Search.propTypes = {
+  fill: PropTypes.string,
+  title: PropTypes.string
+};

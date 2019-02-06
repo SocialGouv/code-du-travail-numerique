@@ -41,8 +41,8 @@ class SalaireTempsPlein extends React.Component {
 
     this.setState(
       {
-        salaires: salaires.map(
-          (item, i) => (i > startIndex && i < endIndex ? value : item)
+        salaires: salaires.map((item, i) =>
+          i > startIndex && i < endIndex ? value : item
         )
       },
       () => {

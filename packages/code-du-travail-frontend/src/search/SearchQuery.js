@@ -20,8 +20,9 @@ export class SearchQuery extends React.Component {
           {status === "loading" ? "..." : " "}
         </div>
         <div>
-          {status === "success" &&
-            result && <SearchResults query={query} data={result} />}
+          {status === "success" && result && (
+            <SearchResults query={query} data={result} />
+          )}
         </div>
       </div>
     )
