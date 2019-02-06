@@ -184,6 +184,7 @@ def populate_cdtn_documents():
                 'text': ''.join(val['questions']),
                 'html': val["html"],
                 'tags': tags,
+                'description': val.get('description'),
                 'date': val.get('date_redaction'),
                 'author':  val.get('redacteur'),
                 'all_text': f"{val['titre']} {' '.join(val['questions'])} {theme} {type_de_contrat} {profil}",
