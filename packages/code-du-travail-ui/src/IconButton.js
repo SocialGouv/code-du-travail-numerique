@@ -9,4 +9,4 @@ IconButton.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
-export { IconButton };
+export default IconButton;

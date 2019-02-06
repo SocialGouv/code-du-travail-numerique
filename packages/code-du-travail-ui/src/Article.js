@@ -5,7 +5,7 @@ import Section from "./Section";
 import Tag from "./Tag";
 
 import { Question, Like, Unlike } from "./icons";
-import { IconButton } from "./IconButton";
+import IconButton from "./IconButton";
 
 const Tags = ({ tags, onTagClick }) => (
   <React.Fragment>
@@ -63,17 +63,11 @@ const Article = ({
           </div>
         </div>
         <div className="article__widget_container">
-          <IconButton onClick={onValidate}>
-            <Like
-              title="Valider cette réponse"
-              style={{ paddingBottom: ".5rem" }}
-            />
+          <IconButton onClick={onValidate} title="Valider cette réponse">
+            <Like style={{ paddingBottom: ".5rem" }} />
           </IconButton>
-          <IconButton onClick={onInvalidate}>
-            <Unlike
-              style={{ paddingTop: ".5rem" }}
-              title="Invalider cette réponse"
-            />
+          <IconButton onClick={onInvalidate} title="Invalider cette réponse">
+            <Unlike style={{ paddingTop: ".5rem" }} />
           </IconButton>
         </div>
       </div>
