@@ -104,7 +104,7 @@ def populate_cdtn_documents():
         CDTN_DOCUMENTS.append({
             'source': 'fiches_service_public',
             'text': val['text'],
-            'slug': make_slug(val['title'], val['text']),
+            'slug': make_slug(val['title'], 'fiches_service_public' + val['title']),
             'title': val['title'],
             'html': val["html"],
             'all_text': f"{val['title']} {val['text']}",
@@ -146,7 +146,7 @@ def populate_cdtn_documents():
             branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
-                'slug': make_slug(val['question'], val['reponse']),
+                'slug': make_slug(val['question'], 'faq' + val['question']),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
@@ -166,7 +166,7 @@ def populate_cdtn_documents():
             branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
-                'slug': make_slug(val['question'], val['reponse']),
+                'slug': make_slug(val['question'], 'faq' + val['question']),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
