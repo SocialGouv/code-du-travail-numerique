@@ -11,20 +11,22 @@ async function parseFiche(url) {
   try {
     const response = await request.head(url);
     spinner.text = `fetching ${count++}/${urls.length}`;
-    switch (response.statusCode) {
-      case 200:
-        return url;
-      case 301:
-        return response.headers.location;
-      case 404:
-        throw new Error("not found");
-      default:
-        console.log(response.statusCode);
+    if (response.statusCode === 200) {
+      return url;
+    } else {
+      spinner.info(`${response.statusCode}-${url}`).start();
     }
   } catch (error) {
-    console.log(error);
-    spinner.fail(url).start();
-    return null;
+    switch (error.response.statusCode) {
+      case 301:
+        return error.response.headers.location;
+      case 404:
+        spinner.fail(url).start();
+        return null;
+      default:
+        spinner.fail(`${error.response.statusCode}-${url}`).start();
+        return null;
+    }
   }
 }
 
