@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Unlike = props => (
   <svg viewBox="0 0 50 50" width="1em" height="1em" {...props}>
@@ -11,3 +12,7 @@ const Unlike = props => (
 );
 
 export default Unlike;
+
+Unlike.propTypes = {
+  fill: PropTypes.string
+};

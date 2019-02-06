@@ -1,6 +1,7 @@
 extends:
   - "@socialgouv/eslint-config-react"
 
-settings:
-  react:
-    version: "16.0"
+overrides:
+  - files: ["*.test.js"]
+    env:
+      jest: true

@@ -119,31 +119,30 @@ class FeedbackForm extends React.Component {
           name="url"
           value={document ? document.location.href : url}
         />
-        {results &&
-          results.length > 0 && (
-            <React.Fragment>
-              <h2 className="section__subtitle" style={{ alignSelf: "center" }}>
-                Les réponses qui pourraient vous aider
-              </h2>
-              <ul style={{ width: "100%" }}>
-                {results.slice(0, 3).map(({ _source: item }) => (
-                  <li key={`${item.type}/${item.slug}`}>
-                    <Link
-                      href={{
-                        pathname: `/${getRouteBySource(item.source)}/${
-                          item.slug
-                        }`,
-                        query: { q: query, search: 0 },
-                        hash: item.anchor
-                      }}
-                    >
-                      <a>{item.title}</a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </React.Fragment>
-          )}
+        {results && results.length > 0 && (
+          <React.Fragment>
+            <h2 className="section__subtitle" style={{ alignSelf: "center" }}>
+              Les réponses qui pourraient vous aider
+            </h2>
+            <ul style={{ width: "100%" }}>
+              {results.slice(0, 3).map(({ _source: item }) => (
+                <li key={`${item.type}/${item.slug}`}>
+                  <Link
+                    href={{
+                      pathname: `/${getRouteBySource(item.source)}/${
+                        item.slug
+                      }`,
+                      query: { q: query, search: 0 },
+                      hash: item.anchor
+                    }}
+                  >
+                    <a>{item.title}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </React.Fragment>
+        )}
         <h2 className="section__subtitle" style={{ alignSelf: "center" }}>
           Laissez-nous un commentaire sur notre service{" "}
           <span className="fontweight--normal fontweight--italic">
