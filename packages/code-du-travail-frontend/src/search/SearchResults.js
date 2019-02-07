@@ -81,6 +81,7 @@ const ResultItem = ({ _source, highlight, query }) => {
 class SearchResults extends React.Component {
   static propTypes = {
     query: PropTypes.string,
+    source: PropTypes.string,
     data: PropTypes.shape({
       hits: PropTypes.shape({
         total: PropTypes.integer,
@@ -91,6 +92,7 @@ class SearchResults extends React.Component {
 
   static defaultProps = {
     query: "",
+    source: "",
     data: { hits: { total: 0, hits: [] } }
   };
   state = {
@@ -106,8 +108,7 @@ class SearchResults extends React.Component {
   };
 
   render() {
-    const data = this.props.data;
-    const query = this.props.query;
+    const { data, query, source } = this.props;
     // No results.
     if (!data || !data.hits || !data.hits.total) {
       return (
@@ -115,7 +116,17 @@ class SearchResults extends React.Component {
           <div className="section-light">
             <div className="container">
               <Alert category="primary">
-                Nous n’avons pas trouvé de résultat pour votre recherche.
+                <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
+                {source.length > 0 && (
+                  <p>
+                    Vous pouvez élargir la recherche en intégrant&nbsp;
+                    <strong>
+                      <Link route="index" params={{ q: query, source: "" }}>
+                        <a>les autres sources de documents</a>
+                      </Link>
+                    </strong>
+                  </p>
+                )}
               </Alert>
             </div>
           </div>
@@ -129,6 +140,7 @@ class SearchResults extends React.Component {
             isOpen={this.state.feedbackVisible}
             closeModal={this.closeModal}
             query={query}
+            source={source}
           />
         </React.Fragment>
       );

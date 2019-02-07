@@ -52,6 +52,11 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
               type="hidden"
               value="http://localhost/"
             />
+            <input
+              name="source"
+              type="hidden"
+              value="Tous contenus"
+            />
             <h2
               class="section__subtitle"
             >

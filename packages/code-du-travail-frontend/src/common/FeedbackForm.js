@@ -17,6 +17,7 @@ class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
     url: PropTypes.string,
+    source: PropTypes.string.isRequired,
     results: PropTypes.arrayOf(PropTypes.object),
     onSubmit: PropTypes.func.isRequired
   };
@@ -63,6 +64,7 @@ class FeedbackForm extends React.Component {
       motif,
       message,
       email,
+      source: this.props.source,
       url: document.location.href,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent,
       subject: question
@@ -98,7 +100,7 @@ class FeedbackForm extends React.Component {
     }
   }
   render() {
-    const { results, query, url } = this.props;
+    const { results, query, url, source } = this.props;
 
     return (
       <form
@@ -119,6 +121,7 @@ class FeedbackForm extends React.Component {
           name="url"
           value={document ? document.location.href : url}
         />
+        <input type="hidden" name="source" value={source} />
         {results && results.length > 0 && (
           <React.Fragment>
             <h2 className="section__subtitle" style={{ alignSelf: "center" }}>

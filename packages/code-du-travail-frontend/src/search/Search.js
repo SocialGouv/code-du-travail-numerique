@@ -53,7 +53,7 @@ class Search extends React.Component {
     query: this.props.router.query.q || "",
     // query to display the search results
     queryResults: "",
-    facet: "",
+    source: "",
     coord: null,
     excludeSources: "",
     suggestions: [],
@@ -71,10 +71,10 @@ class Search extends React.Component {
           : this.props.router.query.q
       });
     }
-    if (this.props.router.query.facet) {
-      const facet = this.props.router.query.facet;
-      const excludeSources = getExcludeSources(facet);
-      this.setState({ facet, excludeSources });
+    if (this.props.router.query.source) {
+      const source = this.props.router.query.source;
+      const excludeSources = getExcludeSources(source);
+      this.setState({ source, excludeSources });
     }
     if (this.props.router.query.coord) {
       const [lon, lat] = this.props.router.query.coord.split(":");
@@ -90,12 +90,12 @@ class Search extends React.Component {
       const [lon, lat] = this.props.router.query.coord.split(":");
       coord = { lon, lat };
     }
-
+    console.log("route change", { source: this.props.router.query.source });
     this.setState({
       query: this.props.router.query.q,
-      facet: this.props.router.query.facet,
+      source: this.props.router.query.source,
       coord: coord,
-      excludeSources: getExcludeSources(this.props.router.query.facet || ""),
+      excludeSources: getExcludeSources(this.props.router.query.source || ""),
       queryResults: this.props.router.query.search
         ? this.props.router.query.search === "0" && ""
         : this.props.router.query.q
@@ -114,7 +114,7 @@ class Search extends React.Component {
       this.setState({ queryResults: this.state.query, coord: null });
       Router.pushRoute("index", {
         q: this.state.query,
-        facet: this.state.facet
+        source: this.state.source
       });
     }
   };
@@ -125,10 +125,10 @@ class Search extends React.Component {
   };
 
   onChange = event => {
-    if (event.target.name === "facet") {
+    if (event.target.name === "source") {
       Router.pushRoute("index", {
         q: this.state.query,
-        facet: event.target.value
+        source: event.target.value
       });
     } else {
       this.setState({
@@ -140,13 +140,13 @@ class Search extends React.Component {
   onSelect = (suggestion, event) => {
     // prevent onSubmit to be call
     event.preventDefault();
-    const { query, facet } = this.state;
-    if (facet === "annuaire") {
+    const { query, source } = this.state;
+    if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
       Router.pushRoute("index", {
         q: suggestion._source.title,
         coord: `${lon}:${lat}`,
-        facet
+        source
       });
       return;
     }
@@ -167,9 +167,9 @@ class Search extends React.Component {
   };
 
   onSearch = ({ value }) => {
-    const { facet, excludeSources } = this.state;
+    const { source, excludeSources } = this.state;
     const asyncSearchResult =
-      facet === "annuaire"
+      source === "annuaire"
         ? searchAddress(value).then(results =>
             results.map(item => ({
               _source: {
@@ -200,17 +200,18 @@ class Search extends React.Component {
       query,
       queryResults,
       excludeSources,
-      facet,
+      source,
       coord,
       suggestions
     } = this.state;
 
     const queryResultsComponent =
-      facet === "annuaire" ? (
+      source === "annuaire" ? (
         <AddressQuery query={queryResults} coord={coord} />
       ) : (
         <SearchQuery
           query={queryResults}
+          source={source}
           excludeSources={excludeSources}
           fetch={searchResults}
         />
@@ -233,16 +234,16 @@ class Search extends React.Component {
               </header>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
-                  <label className="search__facets" htmlFor="contentSource">
+                  <label className="search__sources" htmlFor="contentSource">
                     <span className="hidden">Filtrer par type de contenu</span>
-                    <ReponseIcon className="facet-icon" />
+                    <ReponseIcon className="select-sources__icon" />
                     <select
                       id="contentSource"
-                      className="facet-value"
+                      className="select-sources__value"
                       onChange={this.onChange}
                       onBlur={this.onChange}
-                      value={facet}
-                      name="facet"
+                      value={source}
+                      name="source"
                     >
                       <option value="">Tous contenus</option>
                       <option value="faq">Réponses</option>

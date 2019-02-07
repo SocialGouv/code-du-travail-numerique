@@ -21,6 +21,7 @@ describe("<FeedbackForm />", () => {
     const { container, getByValue } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={jest.fn()}
       />
@@ -33,6 +34,7 @@ describe("<FeedbackForm />", () => {
     const { getByText } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={jest.fn()}
       />
@@ -47,6 +49,7 @@ describe("<FeedbackForm />", () => {
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={onSubmit}
       />
@@ -64,6 +67,7 @@ describe("<FeedbackForm />", () => {
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={onSubmit}
       />
@@ -85,6 +89,7 @@ describe("<FeedbackForm />", () => {
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={onSubmit}
       />
@@ -104,6 +109,7 @@ describe("<FeedbackForm />", () => {
     const { getByText, queryByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={onSubmit}
       />
@@ -123,6 +129,7 @@ describe("<FeedbackForm />", () => {
     const { getByText, queryByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
+        source="Tous contenus"
         results={results}
         onSubmit={onSubmit}
       />

@@ -48,7 +48,7 @@ exports[`<search /> should render 1`] = `
             class="search__fields"
           >
             <label
-              class="search__facets"
+              class="search__sources"
               for="contentSource"
             >
               <span
@@ -57,7 +57,7 @@ exports[`<search /> should render 1`] = `
                 Filtrer par type de contenu
               </span>
               <svg
-                class="facet-icon"
+                class="select-sources__icon"
                 viewBox="0 0 49 49"
               >
                 <title>
@@ -81,9 +81,9 @@ exports[`<search /> should render 1`] = `
                 </g>
               </svg>
               <select
-                class="facet-value"
+                class="select-sources__value"
                 id="contentSource"
-                name="facet"
+                name="source"
               >
                 <option
                   value=""
@@ -221,7 +221,7 @@ exports[`<search /> should render suggestions 1`] = `
             class="search__fields"
           >
             <label
-              class="search__facets"
+              class="search__sources"
               for="contentSource"
             >
               <span
@@ -230,7 +230,7 @@ exports[`<search /> should render suggestions 1`] = `
                 Filtrer par type de contenu
               </span>
               <svg
-                class="facet-icon"
+                class="select-sources__icon"
                 viewBox="0 0 49 49"
               >
                 <title>
@@ -254,9 +254,9 @@ exports[`<search /> should render suggestions 1`] = `
                 </g>
               </svg>
               <select
-                class="facet-value"
+                class="select-sources__value"
                 id="contentSource"
-                name="facet"
+                name="source"
               >
                 <option
                   value=""
