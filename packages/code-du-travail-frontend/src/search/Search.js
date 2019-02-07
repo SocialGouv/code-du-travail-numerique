@@ -90,7 +90,6 @@ class Search extends React.Component {
       const [lon, lat] = this.props.router.query.coord.split(":");
       coord = { lon, lat };
     }
-    console.log("route change", { source: this.props.router.query.source });
     this.setState({
       query: this.props.router.query.q,
       source: this.props.router.query.source,
@@ -230,7 +229,7 @@ class Search extends React.Component {
                 <h1 className="no-margin">
                   Posez votre question sur le droit du travail
                 </h1>
-                <Disclaimer />
+                {queryResults.length === 0 && <Disclaimer />}
               </header>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
