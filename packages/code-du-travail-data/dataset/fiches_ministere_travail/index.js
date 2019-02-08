@@ -12,9 +12,9 @@ function parseDom(dom, url) {
     .map(n => n.textContent.trim())
     .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
 
-  const ariane = $$(dom.window.document, "nav.page__breadcrumb li")
+  const ariane = $$(dom.window.document, "nav.page__breadcrumb a")
     .slice(1)
-    .map(el => el.textContent.replace(/ > $/, ""));
+    .map(el => el.textContent);
 
   // `articles` = textes de référence.
   const articles = $$(dom.window.document, "article.encarts__article li")
