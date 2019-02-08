@@ -21,7 +21,7 @@ logger.setLevel(logging.INFO)
 # ]
 
 def documents_slug_checker():
-    slugs = [f"{item.get('source')}/{item.get('slug')}" for item in CDTN_DOCUMENTS]
+    slugs = [f"{item['source']}/{item.['slug']}" for item in CDTN_DOCUMENTS]
 
     slugs_count = {item: slugs.count(item) for item in set(slugs)}
 
