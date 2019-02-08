@@ -6,6 +6,7 @@ import { Container, Alert } from "@cdt/ui";
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
 import CalculateurIndemnite from "../src/outils/indemniteLicenciement";
+import { PageLayout } from "../src/layout/PageLayout";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -53,7 +54,7 @@ class Outils extends React.Component {
     const { data, router } = this.props;
     const { outil: Outil, title } = getOutilFromCode(data._source.slug);
     return (
-      <React.Fragment>
+      <PageLayout>
         <Head>
           <title>{title}</title>
         </Head>
@@ -61,7 +62,7 @@ class Outils extends React.Component {
         <Outil q={router.query.q} />
         <Source name="-" />
         <SeeAlso />
-      </React.Fragment>
+      </PageLayout>
     );
   }
 }

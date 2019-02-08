@@ -6,6 +6,7 @@ import { Button } from "@cdt/ui";
 import { Download } from "react-feather";
 import Answer from "../src/common/Answer";
 import ArticleIcon from "../src/icons/ArticleIcon";
+import { PageLayout } from "../src/layout/PageLayout";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -29,30 +30,32 @@ class Idcc extends React.Component {
       );
     }
     return (
-      <Answer
-        title={data._source.title}
-        emptyMessage="Cette convention collective n'a pas été trouvée"
-        footer="Informations fournies par la DILA"
-        sourceType="Convention collective"
-        icon={ArticleIcon}
-      >
-        <p>
-          Cliquez sur le lien ci dessous pour accéder à la convention collective
-          sur LegiFrance :
-        </p>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${
-            data._source.id
-          }`}
+      <PageLayout>
+        <Answer
+          title={data._source.title}
+          emptyMessage="Cette convention collective n'a pas été trouvée"
+          footer="Informations fournies par la DILA"
+          sourceType="Convention collective"
+          icon={ArticleIcon}
         >
-          <Button primary>
-            <Download style={{ verticalAlign: "middle", marginRight: 10 }} />
-            {data._source.title}
-          </Button>{" "}
-        </a>
-      </Answer>
+          <p>
+            Cliquez sur le lien ci dessous pour accéder à la convention
+            collective sur LegiFrance :
+          </p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://www.legifrance.gouv.fr/rechConvColl.do?&champIDCC=${
+              data._source.id
+            }`}
+          >
+            <Button primary>
+              <Download style={{ verticalAlign: "middle", marginRight: 10 }} />
+              {data._source.title}
+            </Button>{" "}
+          </a>
+        </Answer>
+      </PageLayout>
     );
   }
 }
