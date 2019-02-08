@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> it should render a badge danger 1`] = `
+<div>
+  <div
+    class="badge badge__danger"
+    danger="true"
+  >
+    this is a badge 
+    danger
+     
+  </div>
+</div>
+`;
+
+exports[`<Badge /> it should render a badge info 1`] = `
+<div>
+  <div
+    class="badge badge__info"
+    info="true"
+  >
+    this is a badge 
+    info
+     
+  </div>
+</div>
+`;
+
+exports[`<Badge /> it should render a badge primary 1`] = `
+<div>
+  <div
+    class="badge badge__primary"
+    primary="true"
+  >
+    this is a badge 
+    primary
+     
+  </div>
+</div>
+`;
+
+exports[`<Badge /> it should render a badge secondary 1`] = `
+<div>
+  <div
+    class="badge badge__secondary"
+    secondary="true"
+  >
+    this is a badge 
+    secondary
+     
+  </div>
+</div>
+`;
+
+exports[`<Badge /> it should render a badge success 1`] = `
+<div>
+  <div
+    class="badge badge__success"
+    success="true"
+  >
+    this is a badge 
+    success
+     
+  </div>
+</div>
+`;
+
+exports[`<Badge /> it should render a badge warning 1`] = `
+<div>
+  <div
+    class="badge badge__warning"
+    warning="true"
+  >
+    this is a badge 
+    warning
+     
+  </div>
+</div>
+`;
+
+exports[`<Badge /> should render 1`] = `
+<div>
+  <div
+    class="badge "
+  >
+    this is an alert 
+  </div>
+</div>
+`;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cards /> should render 1`] = `
+<div>
+  <ul
+    class="card-wrapper"
+  />
+</div>
+`;
+
+exports[`<Cards /> should render children 1`] = `
+<div>
+  <ul
+    class="card-wrapper"
+  >
+    <li
+      class="card"
+    >
+      hello
+    </li>
+    <li
+      class="card"
+    >
+      world
+    </li>
+  </ul>
+</div>
+`;

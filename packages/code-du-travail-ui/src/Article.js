@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Section, Tag } from ".";
+import Section from "./Section";
+import Tag from "./Tag";
 
 import { Question, Like, Unlike } from "./icons";
 

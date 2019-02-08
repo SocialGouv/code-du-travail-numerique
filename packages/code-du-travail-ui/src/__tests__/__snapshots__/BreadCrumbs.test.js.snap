@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should render width custom props 1`] = `
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="breadcrumb"
+  >
+    <ol
+      class="breadcrumb"
+    >
+      <li
+        class="breadcrumb-item"
+      >
+        <a
+          href="path"
+        >
+          path
+        </a>
+      </li>
+      <li
+        class="breadcrumb-item"
+      >
+        <a
+          href="sub path"
+        >
+          sub path
+        </a>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`<Alert /> should render with default props 1`] = `
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="breadcrumb"
+  >
+    <ol
+      class="breadcrumb"
+    >
+      <li
+        class="breadcrumb-item"
+      >
+        <a
+          href="/"
+        >
+          Accueil
+        </a>
+      </li>
+      <li
+        class="breadcrumb-item"
+      >
+        end
+      </li>
+    </ol>
+  </nav>
+</div>
+`;

@@ -14,7 +14,7 @@ const Tag = props => (
 
 Tag.propTypes = {
   ...flavorsPropTypes,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 Tag.defaultProps = {

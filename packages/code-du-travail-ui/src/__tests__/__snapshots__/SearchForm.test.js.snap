@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchForm /> should render 1`] = `
+<div>
+  <form
+    class="search__form"
+  >
+    <input
+      class="search__input"
+      name="search"
+      placeholder="Poser votre question"
+      type="search"
+      value="démission"
+    />
+    <button
+      class="btn btn__img btn__img__search"
+      type="submit"
+    >
+      <span
+        class="hidden"
+      >
+        Rechercher
+      </span>
+    </button>
+  </form>
+</div>
+`;

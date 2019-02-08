@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> it should render an alert danger 1`] = `
+<div>
+  <div
+    class="alert alert__danger"
+    danger="true"
+  >
+    this is an alert 
+    danger
+     
+  </div>
+</div>
+`;
+
+exports[`<Alert /> it should render an alert info 1`] = `
+<div>
+  <div
+    class="alert alert__info"
+    info="true"
+  >
+    this is an alert 
+    info
+     
+  </div>
+</div>
+`;
+
+exports[`<Alert /> it should render an alert primary 1`] = `
+<div>
+  <div
+    class="alert alert__primary"
+    primary="true"
+  >
+    this is an alert 
+    primary
+     
+  </div>
+</div>
+`;
+
+exports[`<Alert /> it should render an alert secondary 1`] = `
+<div>
+  <div
+    class="alert alert__secondary"
+    secondary="true"
+  >
+    this is an alert 
+    secondary
+     
+  </div>
+</div>
+`;
+
+exports[`<Alert /> it should render an alert success 1`] = `
+<div>
+  <div
+    class="alert alert__success"
+    success="true"
+  >
+    this is an alert 
+    success
+     
+  </div>
+</div>
+`;
+
+exports[`<Alert /> it should render an alert warning 1`] = `
+<div>
+  <div
+    class="alert alert__warning"
+    warning="true"
+  >
+    this is an alert 
+    warning
+     
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should render 1`] = `
+<div>
+  <div
+    class="alert "
+  >
+    this is an alert 
+  </div>
+</div>
+`;

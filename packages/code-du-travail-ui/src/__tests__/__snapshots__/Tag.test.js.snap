@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> it should render a Tag danger 1`] = `
+<div>
+  <div
+    class="tag tag__danger"
+    danger="true"
+  >
+    this is a Tag 
+    danger
+     
+  </div>
+</div>
+`;
+
+exports[`<Tag /> it should render a Tag info 1`] = `
+<div>
+  <div
+    class="tag tag__info"
+    info="true"
+  >
+    this is a Tag 
+    info
+     
+  </div>
+</div>
+`;
+
+exports[`<Tag /> it should render a Tag primary 1`] = `
+<div>
+  <div
+    class="tag tag__primary"
+    primary="true"
+  >
+    this is a Tag 
+    primary
+     
+  </div>
+</div>
+`;
+
+exports[`<Tag /> it should render a Tag secondary 1`] = `
+<div>
+  <div
+    class="tag tag__secondary"
+    secondary="true"
+  >
+    this is a Tag 
+    secondary
+     
+  </div>
+</div>
+`;
+
+exports[`<Tag /> it should render a Tag success 1`] = `
+<div>
+  <div
+    class="tag tag__success"
+    success="true"
+  >
+    this is a Tag 
+    success
+     
+  </div>
+</div>
+`;
+
+exports[`<Tag /> it should render a Tag warning 1`] = `
+<div>
+  <div
+    class="tag tag__warning"
+    warning="true"
+  >
+    this is a Tag 
+    warning
+     
+  </div>
+</div>
+`;
+
+exports[`<Tag /> should render 1`] = `
+<div>
+  <div
+    class="tag "
+  >
+    this is an alert 
+  </div>
+</div>
+`;
