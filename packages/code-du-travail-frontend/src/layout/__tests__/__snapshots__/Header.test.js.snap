@@ -3,23 +3,30 @@
 exports[`<Header /> should render 1`] = `
 <div>
   <header
-    class="section-white site-header"
+    class="bg-color color__white"
   >
     <div
       class="container"
     >
       <div
-        class="main-header"
+        class="sc-bdVaJa fKqKQM"
       >
         <a
-          class="main-header__logo"
+          class="sc-bwzfXH eBIpsv"
           href="/?q="
         >
           <img
             alt=""
+            class="sc-htpNat knlPcz"
             src="/static/assets/img/marianne.svg"
           />
-          Code du travail numérique
+          <span
+            class="sc-bxivhb fjOXOG"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
         </a>
       </div>
     </div>

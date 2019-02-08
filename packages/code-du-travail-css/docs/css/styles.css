@@ -31,7 +31,6 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "components/_cards.css";
 @import "components/_categories.css";
 @import "components/_footer.css";
-@import "components/_header.css";
 @import "components/_tags.css";
 @import "components/_modal.css";
 

@@ -14,13 +14,6 @@ body {
   display: none;
 }
 
-/*
- Improve Layout, adapt margin
-*/
-.site-header {
-  padding: 5pt 0;
-}
-
 .container {
   max-width: 100%;
   padding: 0;
