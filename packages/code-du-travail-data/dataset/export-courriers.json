@@ -174,10 +174,10 @@
   },
   {
     "filename": "reclamation-des-heures-sup.docx",
-    "titre": "Réclamation des heures supplémenantaires",
+    "titre": "Réclamation des heures supplémentaires",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
-      "Comment se faire payer ses heures supplémenantaire ?"
+      "Comment se faire payer ses heures supplémentaires ?"
     ],
     "tags": {
       "theme": "heures supplementaires",
@@ -197,7 +197,7 @@
     "titre": "Réclamation des salaires après un renvoi oral",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
-      "Comment se faire payer ses heures supplémenantaire après un renvoi oral ?"
+      "Comment se faire payer ses salaires impayés après un renvoi oral?"
     ],
     "tags": {
       "theme": "renvoi oral",
