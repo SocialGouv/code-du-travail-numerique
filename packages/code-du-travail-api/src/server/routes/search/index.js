@@ -27,7 +27,18 @@ router.get("/search", async ctx => {
 
   const body = getSearchBody({ query, size, excludeSources });
 
-  ctx.body = await elasticsearchClient.search({ index, body });
+  const results = await elasticsearchClient.search({ index, body });
+  ctx.body = {
+    hits: {
+      ...results.hits,
+      hits: results.hits.hits.filter(item => item._source.source !== "snippet")
+    }
+  };
+
+  if (results.aggregations.bySource.buckets.length > 0) {
+    const [snippetResults] = results.aggregations.bySource.buckets;
+    ctx.body.snippet = snippetResults.bySource.hits.hits[0];
+  }
 });
 
 module.exports = router;

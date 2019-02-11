@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.753367,
+      "_score": 3.3363123,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -28,7 +28,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 1.9308722,
+      "_score": 2.4016047,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -48,8 +48,61 @@ Object {
       },
     },
   ],
-  "max_score": 2.753367,
+  "max_score": 3.3363123,
   "total": 2,
+}
+`;
+
+exports[`return faq search results for smic with snippet content 1`] = `
+Object {
+  "hits": Object {
+    "hits": Array [
+      Object {
+        "_id": "17",
+        "_index": "cdtn_document_test",
+        "_score": 20.196075,
+        "_source": Object {
+          "anchor": "#A-qui-s-applique-le-SMIC",
+          "slug": "le-smic-a-qui-sapplique-le-smic",
+          "source": "fiches_ministere_travail",
+          "title": "Le SMIC : à qui s’applique le SMIC ?",
+          "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-remuneration/article/le-smic-374531#A-qui-s-applique-le-SMIC",
+        },
+        "_type": "cdtn_document_test",
+        "highlight": Object {
+          "text": Array [
+            "Doit percevoir un salaire au moins égal au <mark>SMIC</mark>",
+            "conditions de droit privé.Un taux réduit du <mark>SMIC</mark>",
+            "n’est pas contrôlable (certains VRP).Le <mark>SMIC</mark>",
+            "emplois d’avenir.Sont exclus du bénéfice du <mark>SMIC</mark>",
+          ],
+          "title": Array [
+            "Le <mark>SMIC</mark> : à qui s’applique le <mark>SMIC</mark> ?",
+          ],
+          "title.french_stemmed": Array [
+            "Le <mark>SMIC</mark> : <mark>à</mark> <mark>qui</mark> s’applique <mark>le</mark> <mark>SMIC</mark> ?",
+          ],
+        },
+      },
+    ],
+    "max_score": 20.196075,
+    "total": 2,
+  },
+  "snippet": Object {
+    "_id": "16",
+    "_index": "cdtn_document_test",
+    "_score": 17.67381,
+    "_source": Object {
+      "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
+      "references": Array [
+        Object {
+          "titre": "Décret n° 2018-1173 du 19 décembre 2018 portant relèvement du salaire minimum de croissance ",
+          "url": "https://www.legifrance.gouv.fr/eli/decret/2018/12/19/MTRX1833925D/jo/texte",
+        },
+      ],
+    },
+    "_type": "cdtn_document_test",
+  },
 }
 `;
 
@@ -59,7 +112,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 3.8587623,
+      "_score": 4.733461,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -87,7 +140,7 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 3.695746,
+      "_score": 4.529443,
       "_source": Object {
         "slug": "la-demission",
         "source": "themes",
@@ -109,7 +162,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 3.583404,
+      "_score": 4.3862834,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -136,7 +189,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 3.2561908,
+      "_score": 3.9709737,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -162,7 +215,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.753367,
+      "_score": 3.3363123,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -184,7 +237,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 1.9308722,
+      "_score": 2.4016047,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -206,7 +259,7 @@ Object {
     Object {
       "_id": "8",
       "_index": "cdtn_document_test",
-      "_score": 1.8793771,
+      "_score": 2.2742832,
       "_source": Object {
         "slug": "article-r1225-18",
         "source": "code_du_travail",
@@ -226,7 +279,7 @@ Object {
     Object {
       "_id": "9",
       "_index": "cdtn_document_test",
-      "_score": 1.5387119,
+      "_score": 2.050433,
       "_source": Object {
         "slug": "article-r1442-22-4",
         "source": "code_du_travail",
@@ -242,7 +295,7 @@ Object {
       },
     },
   ],
-  "max_score": 3.8587623,
+  "max_score": 4.733461,
   "total": 8,
 }
 `;

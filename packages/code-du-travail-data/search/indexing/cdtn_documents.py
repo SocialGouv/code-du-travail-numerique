@@ -166,6 +166,27 @@ def populate_cdtn_documents():
                 'author': 'DIRRECTE',
                 'all_text': f"{val['question']} {faq_text} {theme} {branche}",
             })
+    with open(os.path.join(settings.BASE_DIR, 'dataset/faq-snippets.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from snippets", len(data))
+        for val in data:
+            faq_text = strip_html(val['reponse'])
+            tags = parse_hash_tags(val.get("tags"))
+            theme = val.get('tags', {}).get('theme', '')
+            branche = val.get('tags', {}).get('branche', '')
+            CDTN_DOCUMENTS.append({
+                'source': 'snippet',
+                'slug': slugify(val['question'], to_lower=True),
+                'text': faq_text,
+                'html': val["reponse"],
+                'title': val['question'],
+                'tags': tags,
+                'date': val.get('date_redaction'),
+                'references': val.get('references'),
+                'date_expiration': val.get('date_expiration'),
+                'author': val['redacteur'],
+                'all_text': f"{val['question']} {faq_text} {theme} {branche}",
+            })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/export-courriers.json')) as json_data:
         data = json.load(json_data)

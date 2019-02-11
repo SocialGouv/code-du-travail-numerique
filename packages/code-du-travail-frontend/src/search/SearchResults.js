@@ -170,6 +170,24 @@ class SearchResults extends React.Component {
         <div className="section-light">
           <div className="container">
             <div className="search-results">
+              {data.snippet && (
+                <ResultSnippet>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: data.snippet._source.html
+                    }}
+                  />
+                  {data.snippet._source.references && (
+                    <SourceLink
+                      href={data.snippet._source.references[0].url}
+                      norel
+                      noopener
+                    >
+                      {data.snippet._source.references[0].titre}
+                    </SourceLink>
+                  )}
+                </ResultSnippet>
+              )}
               <ul className="search-results__list">
                 {data.hits.hits.map((result, i) => (
                   <ResultItem
@@ -213,4 +231,17 @@ const SourceType = styled.span`
 
 const Excerpt = styled.blockquote`
   margin: 0;
+`;
+const ResultSnippet = styled.div`
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.1rem;
+  }
+`;
+
+const SourceLink = styled.a`
+  font-size: 0.9rem;
 `;
