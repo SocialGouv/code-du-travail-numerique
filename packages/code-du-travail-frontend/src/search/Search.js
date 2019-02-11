@@ -9,30 +9,9 @@ import { DocumentSuggester } from "./DocumentSuggester";
 import { SearchQuery } from "./SearchQuery";
 import ReponseIcon from "../icons/ReponseIcon";
 
-import { Router, Link } from "../../routes";
+import { Router } from "../../routes";
 import { getRouteBySource, getExcludeSources } from "../sources";
 import { AddressQuery } from "./AddressQuery";
-
-const Disclaimer = () => (
-  <div className="wrapper-narrow">
-    <p>
-      Ce service public vous permet d&apos;obtenir des réponses détaillées, des
-      fiches explicatives et les articles de loi correspondants -{" "}
-      <Link route="about">
-        <a>En savoir plus</a>
-      </Link>
-      <br />
-      <a
-        target="_blank"
-        className="external-link__after"
-        rel="noopener noreferrer"
-        href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-      >
-        L&apos;ouverture officielle du site est prévue pour 2020.
-      </a>
-    </p>
-  </div>
-);
 
 const FormSearchButton = () => (
   <button type="submit" className="btn btn__img btn__img__search">
@@ -229,7 +208,7 @@ class Search extends React.Component {
                 <h1 className="no-margin">
                   Posez votre question sur le droit du travail
                 </h1>
-                {queryResults.length === 0 && <Disclaimer />}
+                <br />
               </header>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">

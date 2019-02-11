@@ -57,9 +57,9 @@ exports[`<PageLayout /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="https://code-du-travail.beta.gouv.fr"
+                href="/a-propos"
               >
-                Navigation par thèmes
+                À propos
               </a>
             </li>
           </ul>
