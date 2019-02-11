@@ -12,6 +12,7 @@ import { SearchQuery } from "../src/search/SearchQuery";
 import Categories from "../src/Categories";
 import themes from "@cdt/data/dataset/themes-front.json";
 import { searchResults } from "../src/search/search.service";
+import { PageLayout } from "../src/layout/PageLayout";
 
 const BigError = ({ children }) => (
   <div
@@ -95,7 +96,7 @@ class Theme extends React.Component {
     const { theme, parents } = this.props;
     const breadCrumbs = getBreadcrumbs(parents);
     return (
-      <React.Fragment>
+      <PageLayout>
         <Head>
           <title>Code du travail numérique : {theme && theme.title}</title>
         </Head>
@@ -128,7 +129,7 @@ class Theme extends React.Component {
             />
           )}
         </Container>
-      </React.Fragment>
+      </PageLayout>
     );
   }
 }

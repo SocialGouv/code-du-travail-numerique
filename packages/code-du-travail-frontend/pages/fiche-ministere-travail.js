@@ -5,6 +5,7 @@ import fetch from "isomorphic-unfetch";
 import { ExternalLink } from "react-feather";
 import Answer from "../src/common/Answer";
 import DossierIcon from "../src/icons/DossierIcon";
+import { PageLayout } from "../src/layout/PageLayout";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -40,15 +41,17 @@ class Fiche extends React.Component {
       <Source name="Ministère du travail" url={data._source.url} />
     );
     return (
-      <Answer
-        title={data._source.title}
-        emptyMessage="Cette fiche n'a pas été trouvée"
-        html={data._source.html}
-        footer={footer}
-        icon={DossierIcon}
-        date={data._source.date}
-        sourceType="Fiche ministère du travail"
-      />
+      <PageLayout>
+        <Answer
+          title={data._source.title}
+          emptyMessage="Cette fiche n'a pas été trouvée"
+          html={data._source.html}
+          footer={footer}
+          icon={DossierIcon}
+          date={data._source.date}
+          sourceType="Fiche ministère du travail"
+        />
+      </PageLayout>
     );
   }
 }

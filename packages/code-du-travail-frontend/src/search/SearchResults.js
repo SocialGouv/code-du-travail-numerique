@@ -37,46 +37,55 @@ const makeExcerpt = highlight => {
   return "";
 };
 
-const ResultItem = ({ _source, highlight, query }) => {
-  const excerpt = makeExcerpt(highlight);
+class ResultItem extends React.Component {
+  itemRef = React.createRef();
+  componentDidMount() {
+    if (this.props.focused) {
+      this.itemRef.current.focus();
+    }
+  }
+  render() {
+    const { _source, highlight, query } = this.props;
+    const excerpt = makeExcerpt(highlight);
 
-  const route = getRouteBySource(_source.source);
-  const anchor = _source.anchor ? _source.anchor.slice(1) : "";
-  // internal links
-  if (route) {
+    const route = getRouteBySource(_source.source);
+    const anchor = _source.anchor ? _source.anchor.slice(1) : "";
+    // internal links
+    if (route) {
+      return (
+        <li className="search-results__item">
+          <Link
+            route={route}
+            params={{ q: query, search: 0, slug: _source.slug }}
+            hash={anchor}
+          >
+            <a className="search-results-link" ref={this.itemRef}>
+              <ContentBody
+                _source={_source}
+                sourceType={getLabelBySource(_source.source)}
+                excerpt={excerpt}
+              />
+            </a>
+          </Link>
+        </li>
+      );
+    }
+
+    // external urls
     return (
       <li className="search-results__item">
-        <Link
-          route={route}
-          params={{ q: query, search: 0, slug: _source.slug }}
-          hash={anchor}
+        <a
+          href={_source.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="search-results-link"
         >
-          <a className="search-results-link">
-            <ContentBody
-              _source={_source}
-              sourceType={getLabelBySource(_source.source)}
-              excerpt={excerpt}
-            />
-          </a>
-        </Link>
+          <ContentBody _source={_source} excerpt={excerpt} />
+        </a>
       </li>
     );
   }
-
-  // external urls
-  return (
-    <li className="search-results__item">
-      <a
-        href={_source.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="search-results-link"
-      >
-        <ContentBody _source={_source} excerpt={excerpt} />
-      </a>
-    </li>
-  );
-};
+}
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -95,10 +104,20 @@ class SearchResults extends React.Component {
     source: "",
     data: { hits: { total: 0, hits: [] } }
   };
+
   state = {
     feedbackVisible: false
   };
 
+  // contains the first result item ref
+  // in order to move focus to it
+  firtResultRef = React.createRef();
+
+  componentDidMount() {
+    if (this.firtResultRef.current) {
+      this.firtResultRef.current.focus();
+    }
+  }
   showFeedBackPopup = () => {
     this.setState({ feedbackVisible: true });
   };
@@ -152,8 +171,9 @@ class SearchResults extends React.Component {
           <div className="container">
             <div className="search-results">
               <ul className="search-results__list">
-                {data.hits.hits.map(result => (
+                {data.hits.hits.map((result, i) => (
                   <ResultItem
+                    focused={i === 0}
                     key={result["_id"]}
                     {...result}
                     query={this.props.query}

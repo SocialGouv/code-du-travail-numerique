@@ -32,6 +32,12 @@ export class DocumentSuggester extends React.Component {
     this.props.onSelect(data.suggestion, event);
   };
 
+  onKeyPress = event => {
+    if (event.key === "Enter") {
+      event.target.blur();
+    }
+  };
+
   render() {
     const { query, onChange, onSearch, onClear, suggestions } = this.props;
     const inputProps = {
@@ -42,7 +48,8 @@ export class DocumentSuggester extends React.Component {
       type: "search",
       className: this.props.className,
       value: query,
-      onChange
+      onChange,
+      onKeyPress: this.onKeyPress
     };
     return (
       <Label htmlFor={this.props.inputId}>
