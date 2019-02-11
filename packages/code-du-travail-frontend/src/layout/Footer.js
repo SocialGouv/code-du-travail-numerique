@@ -1,6 +1,5 @@
 import React from "react";
 import getConfig from "next/config";
-import { Link } from "../../routes";
 
 const { publicRuntimeConfig } = getConfig();
 
@@ -14,9 +13,9 @@ const Footer = () => (
           <h3>Code du travail numérique</h3>
           <ul>
             <li>
-              <Link route="about">
-                <a>À propos</a>
-              </Link>
+              <a href="https://code-du-travail.beta.gouv.fr">
+                Navigation par thèmes
+              </a>
             </li>
           </ul>
         </div>

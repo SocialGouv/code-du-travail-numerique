@@ -60,9 +60,9 @@ exports[`<HomeLayout /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/a-propos"
+                href="https://code-du-travail.beta.gouv.fr"
               >
-                À propos
+                Navigation par thèmes
               </a>
             </li>
           </ul>
