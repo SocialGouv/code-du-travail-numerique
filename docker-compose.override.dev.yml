@@ -10,3 +10,10 @@ services:
     volumes:
       - ./packages/code-du-travail-data/:/app
       - ./docker:/app/docker
+
+  nlp_api:
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - ./packages/code-du-travail-nlp/:/app
+    command: flask run --host=0.0.0.0
