@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2019-02-12)
+
+
+### Bug Fixes
+
+* **scrap:** add ariane+tags for fiches ministere-travail ([#510](https://github.com/SocialGouv/code-du-travail-numerique/issues/510)) ([ddc2c02](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddc2c02))
+
+
+
+
+
 ## 1.7.3 (2019-01-29)
 
 
