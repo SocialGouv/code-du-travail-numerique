@@ -11,12 +11,7 @@ from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRA
 from search.extraction.fiches_service_public.data import FICHES_SERVICE_PUBLIC
 from search.extraction.themes_front.data import THEMES
 
-console = logging.StreamHandler()
-formatter = logging.Formatter(fmt='[%(levelname)s - %(funcName)s] %(message)s')
-console.setFormatter(formatter)
-
-logger = logging.getLogger(__name__)
-logger.addHandler(console)
+logger = settings.get_logger(__name__)
 logger.setLevel(logging.INFO)
 
 CDTN_DOCUMENTS = []
@@ -196,7 +191,6 @@ def populate_cdtn_documents():
         for val in data:
             additional_tags = ["theme", "type_de_contrat", "catégorie", "travailleur_particulier", "branche"]
             additional_text = ", ".join([flatten(val.get(key)) for key in additional_tags if val.get(key)])
-            logger.info(additional_text)
             theme = val.get('tags', {}).get('theme', '')
             branche = val.get('tags', {}).get('branche', '')
             type_de_contrat = val.get('tags', {}).get('type_de_contrat', '')
