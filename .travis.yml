@@ -85,13 +85,6 @@ jobs:
     #
     #
 
-    - &main_code_quality_stage
-      if: NOT env(RELEASE) AND NOT type = pull_request
-      env:
-        - *docker_image
-      name: slug check @cdt/data
-      script: docker run $DOCKER_IMAGE pipenv run python /app/search/indexing/document_slug_checker.py -v
-
     - <<: *main_code_quality_stage
       stage: Code quality
       if: NOT env(RELEASE) AND NOT type = pull_request
@@ -142,7 +135,9 @@ jobs:
         yarn workspace @cdt/api test --coverage
       after_script: docker-compose down
       after_success: npx codecov --flags api
-    - <<: *main_code_quality_stage
+      
+    - &python_stage
+      <<: *main_code_quality_stage
       name: Lint python code
       language: python
       python: 3.6
@@ -156,6 +151,11 @@ jobs:
         - pip install pipenv==11.10.1
         - pipenv install --dev --three
       script: pipenv run pylint --output-format=colorized search
+      
+    - <<: *python_stage
+      name: Check @cdt/data slugs
+      before_install: cd packages/code-du-travail-data
+      script: python search/indexing/document_slug_checker.py -v
 
     #
     #
