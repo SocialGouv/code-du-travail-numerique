@@ -32,7 +32,7 @@ async function parseFiche(url) {
 
 async function parseFiches(urls) {
   spinner.start();
-  results = await batchPromise(urls, 20, parseFiche);
+  const results = await batchPromise(urls, 20, parseFiche);
   spinner.stop().clear();
   const uniqUrls = new Set(results.filter(Boolean));
   console.log(JSON.stringify([...uniqUrls].sort(), null, 2));

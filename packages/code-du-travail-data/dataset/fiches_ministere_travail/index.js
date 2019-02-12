@@ -12,6 +12,10 @@ function parseDom(dom, url) {
     .map(n => n.textContent.trim())
     .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
 
+  const ariane = $$(dom.window.document, "nav.page__breadcrumb a")
+    .slice(1)
+    .map(el => el.textContent.trim());
+
   // `articles` = textes de référence.
   const articles = $$(dom.window.document, "article.encarts__article li")
     .filter(item => $(item, "a") && $(item, "a").getAttribute("href"))
@@ -62,7 +66,14 @@ function parseDom(dom, url) {
 
   const chapo = $(article, ".main-article__chapo");
 
+  const tags = $$(
+    dom.window.document,
+    "span.main-article__tag.tag--encart"
+  ).map(n => n.textContent.trim());
+
   let result = {
+    ariane,
+    tags,
     articles,
     summary,
     intro: `${chapo ? chapo.innerHTML.trim() : ""}${intro}`,
@@ -115,7 +126,7 @@ async function parseFiche(url) {
 }
 
 async function parseFiches(urls) {
-  results = await batchPromise(urls, 6, parseFiche);
+  const results = await batchPromise(urls, 15, parseFiche);
   spinner.stop().clear();
   console.log(JSON.stringify(results.filter(Boolean), null, 2));
 }
