@@ -38,7 +38,7 @@ def hasher(text):
 
 # make a slug from given text and add short hashed suffix from given seed if any
 def make_slug(text, seed):
-    return slugify(text + str(hasher((seed.encode('utf-8')))), to_lower=True)
+    return slugify(text + str(hasher(((text+seed).encode('utf-8')))), to_lower=True)
 
 
 def populate_cdtn_documents():
@@ -99,7 +99,7 @@ def populate_cdtn_documents():
         CDTN_DOCUMENTS.append({
             'source': 'fiches_service_public',
             'text': val['text'],
-            'slug': make_slug(val['title'], 'fiches_service_public' + val['title']),
+            'slug': slugify(val['title'], to_lower=True),
             'title': val['title'],
             'html': val["html"],
             'all_text': f"{val['title']} {val['text']}",
@@ -141,7 +141,7 @@ def populate_cdtn_documents():
             branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
-                'slug': make_slug(val['question'], 'faq' + val['question']),
+                'slug': make_slug(val['question'], '-'.join(tags)),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
@@ -161,7 +161,7 @@ def populate_cdtn_documents():
             branche = val.get('tags', {}).get('branche', '')
             CDTN_DOCUMENTS.append({
                 'source': 'faq',
-                'slug': make_slug(val['question'], 'faq' + val['question']),
+                'slug': make_slug(val['question'], '-'.join(tags)),
                 'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
