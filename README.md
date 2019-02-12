@@ -158,6 +158,11 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 - Slack : https://incubateur-mas.slack.com
 - Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
 - Issues GitHub : [https://github.com/SocialGouv/code-du-travail-numerique/issues]
+  - nomenclature des labels :
+    - t : `t`ype d’issue
+    - p : nom du `p`roduit (j’ai différencié ES et la nav par thèmes pour l’instant)
+    - s : `s`tatut de l’issue
+    - o : nom de l’`o`util dédié
 - Piwik : https://stats.num.social.gouv.fr
 - Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
 
