@@ -86,6 +86,13 @@ jobs:
     #
 
     - &main_code_quality_stage
+      if: NOT env(RELEASE) AND NOT type = pull_request
+      env:
+        - *docker_image
+      name: slug check @cdt/data
+      script: docker run $DOCKER_IMAGE pipenv run python /app/search/indexing/document_slug_checker.py -v
+
+    - <<: *main_code_quality_stage
       stage: Code quality
       if: NOT env(RELEASE) AND NOT type = pull_request
       env:
