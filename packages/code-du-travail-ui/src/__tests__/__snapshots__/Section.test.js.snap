@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> should render dark Section 1`] = `
+<div>
+  <section
+    class="section-dark"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-dark"
+      >
+        One Aside title
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Section /> should render default Section 1`] = `
+<div>
+  <section
+    class="section"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper"
+      >
+        One Aside title
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Section /> should render light Section 1`] = `
+<div>
+  <section
+    class="section-light"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper-light"
+      >
+        One Aside title
+      </div>
+    </div>
+  </section>
+</div>
+`;

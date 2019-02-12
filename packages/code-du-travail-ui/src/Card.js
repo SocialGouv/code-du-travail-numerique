@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Card({ children, ...props }) {
   return (
@@ -7,3 +8,7 @@ export default function Card({ children, ...props }) {
     </li>
   );
 }
+
+Card.propTypes = {
+  children: PropTypes.node
+};

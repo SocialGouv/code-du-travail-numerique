@@ -174,10 +174,10 @@
   },
   {
     "filename": "reclamation-des-heures-sup.docx",
-    "titre": "Réclamation des heures supplémenantaires",
+    "titre": "Réclamation des heures supplémentaires",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
-      "Comment se faire payer ses heures supplémenantaire ?"
+      "Comment se faire payer ses heures supplémentaires ?"
     ],
     "tags": {
       "theme": "heures supplementaires",
@@ -197,7 +197,7 @@
     "titre": "Réclamation des salaires après un renvoi oral",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
-      "Comment se faire payer ses heures supplémenantaire après un renvoi oral ?"
+      "Comment se faire payer ses salaires impayés après un renvoi oral?"
     ],
     "tags": {
       "theme": "renvoi oral",
@@ -387,5 +387,25 @@
     "redacteur": "cdtn",
     "source": "DIRRECTE",
     "html": "<style>\n.courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}\n.courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}\n.courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}\n.editable {color: blue}\n</style><div class=\"courrier-expediteur\"><p><span class='editable'>« Prénom du salarié  »</span> <span class='editable'>« Nom du salarié »</span></p><p><span class='editable'>« Adresse du salarié »</span></p></div><div class=\"courrier-destinataire\"><p>À l’attention de <span class='editable'>« Nom de l’entreprise »</span></p><p><span class='editable'>« M. /Mme »</span>, <span class='editable'>« Prénom de l’employeur »</span>, <span class='editable'>« Nom de l’employeur »</span></p><p><span class='editable'>« Adresse de l’employeur »</span> </p><p><em><span class='editable'>« Lieu »</span>,  le <span class='editable'>« Date »</span></em></p></div><p>Objet : Demande de dérogation temps partiel</p><p>Madame / Monsieur,</p><p> </p><p>Par la présente, je vous fais part de mon souhait de bénéficier d’une dérogation à la durée minimale légale prévue par l’article L. 3123-14-1 du Code du travail. </p><p>(Option 1: Dérogation afin de cumuler plusieurs emplois)</p><p>En effet, compte-tenu de mon autre engagement contractuel salarié à hauteur de <em><span class='editable'>« nombre d’heure »</span></em> heures de travail hebdomadaires, il m’est impossible d’effectuer plus de <span class='editable'>« nombre d’heures »</span> heures de travail  hebdomadaires (ou le cas échéant mensuelles ou annuelles) au sein de <span class='editable'>« nom de l’entreprise »</span>.</p><p>(Option 2: Dérogation en raison de contraintes personnelles)</p><p>En effet, des contraintes personnelles ne me permettent pas d’effectuer plus de <em><span class='editable'>« nombre d’heures »</span></em> heures de travail hebdomadaires (ou le cas échéant mensuelles ou annuelles) au sein de <em><span class='editable'>« nom de l’entreprise »</span>.</em></p><p><em>(Note: Préciser la nature de l’empêchement : par exemple : raisons familiales impérieuses, </em></p><p><em>incompatibilité  avec l’exercice d’une activité professionnelle non salariée, suivi d’une formation ou d’un  enseignement scolaire ou supérieur etc…)</em></p><p>Veuillez agréer, Madame / Monsieur, l'expression de ma considération distinguée.</p><div class=\"courrier-signature\"><p>Signature</p><p><span class='editable'>« Prénom du salarié »</span>, <span class='editable'>« Nom du salarié »</span></p></div>"
+  },
+  {
+    "filename": "tableau-recap-des-heures-supplementaires.docx",
+    "titre": "Relevé d'heures supplémentaires",
+    "description": "En cas d'horaires individualisé dans l'entreprise, l’employeur a l'obligation de mettre en place un dispositif de décompte de la durée du travail.",
+    "questions": [
+      "Qu'est ce qu'un relevé d'heures supplémentaires ?"
+    ],
+    "tags": {
+      "theme": "durée du travail",
+      "themes": [
+        21400,
+        20000
+      ],
+      "type_de_contrat": ""
+    },
+    "date_redaction": "26/10/2018",
+    "redacteur": "cdtn",
+    "source": "DIRRECTE",
+    "html": "<style>\n.courrier-expediteur {display: flex; align-items: flex-start; flex-direction:column;}\n.courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}\n.courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}\n.editable {color: blue}\n</style><table><tr><td><p><strong>Semaine du ***</strong></p></td><td><p><strong>Nombre d’heures total</strong></p></td><td><p><strong>Nombre d’heures de 36 à 43</strong></p></td><td><p><strong>Nombre d’heures au-delà de 43</strong></p></td></tr><tr><td><p>Exemple : semaine du 25/07/2016</p></td><td><p>46</p></td><td><p>8 (43 moins 35)</p></td><td><p>3 (46 moins 43)</p></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td><p>TOTAUX</p></td><td></td><td><p>T1</p></td><td><p>T2</p></td></tr><tr><td><p>Exemple</p></td><td></td><td><p>8</p></td><td><p>3</p></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td><p>Rémunération</p></td><td></td><td><p>Majoration de 25% </p><p>T1 X taux horaire X 1,25</p></td><td><p>Majoration de 50%</p><p>T2 X taux horaire X 1,50</p></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td><p>Exemple au SMIC</p></td><td></td><td><p>8 X 9,67 X 1,25 = 96,7</p></td><td><p>3 X 9,67 X 1,50 = 43,515</p></td></tr></table>"
   }
 ]

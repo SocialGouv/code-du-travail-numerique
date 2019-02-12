@@ -3,5 +3,8 @@ extends:
   - "@socialgouv/eslint-config-recommended"
 rules:
   prefer-const: 2
-env:
-  jest: true
+
+overrides:
+  - files: ["*.spec.js"]
+    env:
+      jest: true

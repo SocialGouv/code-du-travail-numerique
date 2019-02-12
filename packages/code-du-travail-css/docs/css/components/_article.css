@@ -35,12 +35,13 @@
 }
 
 .article__widget_container {
-  flex: 0 0 100px;
+  flex: 0 0 102px;
   border: 1px solid var(--color-element-border);
-  padding: 10px 0;
   border-radius: 3px;
   background: var(--color-dark-background);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .aside-title {

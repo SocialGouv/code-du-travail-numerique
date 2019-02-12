@@ -10,6 +10,7 @@ import styled from "styled-components";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import { BigLink } from "../src/common/BigLink";
 import ReponseIcon from "../src/icons/ReponseIcon";
+import { PageLayout } from "../src/layout/PageLayout";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -76,7 +77,7 @@ class Question extends React.Component {
     );
 
     return (
-      <React.Fragment>
+      <PageLayout>
         <Answer
           title={data._source.title}
           emptyMessage="Cette question n'a pas été trouvée"
@@ -100,7 +101,7 @@ class Question extends React.Component {
             </React.Fragment>
           )}
         </Answer>
-      </React.Fragment>
+      </PageLayout>
     );
   }
 }

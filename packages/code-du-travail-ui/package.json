@@ -1,52 +1,67 @@
 {
   "name": "@cdt/ui",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "private": true,
   "description": "Composants ReactJS du Code du travail numérique",
   "main": "lib/index.js",
-  "module": "es/index.js",
+  "module": "lib/index.esm.js",
   "files": [
-    "css",
     "es",
-    "lib",
-    "umd"
+    "lib"
   ],
   "scripts": {
-    "build": "nwb build-react-component --no-demo ",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "lint": "eslint src/* tests/*",
+    "build": "NODE_ENV=production rollup --config",
+    "lint": "eslint src/*",
     "prepush": "yarn lint && yarn test",
     "prepublishOnly": "npm run build && npm run gh-pages",
     "gh-pages": "npm run docz:build && gh-pages -d ./doc-build",
     "start": "docz dev",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
-    "docz:build": "docz build"
+    "docz:build": "docz build",
+    "test": "jest"
   },
   "peerDependencies": {
     "prop-types": "^15.6.2",
-    "react": "16.x",
-    "styled-components": "^4.1.2"
+    "react": "16"
   },
   "devDependencies": {
-    "@cdt/css": "^1.7.3",
-    "@socialgouv/eslint-config-react": "^0.2.0",
-    "docz": "^0.12.5",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@cdt/css": "^1.8.0",
+    "@socialgouv/eslint-config-react": "^0.5.0",
+    "docz": "^0.13.7",
     "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^0.13.7",
+    "eslint": "^5.13.0",
     "gh-pages": "^1.2.0",
-    "nwb": "0.23.x",
+    "jest": "^24.0.0",
     "prettier": "^1.14.3",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0"
+    "prop-types": "^15.6.2",
+    "react": "16",
+    "react-dom": "16",
+    "react-testing-library": "^5.4.4",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.0"
   },
-  "homepage": "https://github.com/SocialGouv/code-du-travail-ui",
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/packages/code-du-travail-ui",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SocialGouv/code-du-travail-ui.git"
+    "url": "git+https://github.com/SocialGouv/code-du-travail-numerique.git"
   },
   "keywords": [
     "ui"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "setupFilesAfterEnv": [
+      "react-testing-library/cleanup-after-each"
+    ]
+  }
 }

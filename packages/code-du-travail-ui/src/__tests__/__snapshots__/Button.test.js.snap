@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> it should render a Button danger 1`] = `
+<div>
+  <div
+    class="btn btn__danger  "
+    danger="true"
+    role="button"
+    tabindex="0"
+  >
+    this is a Button 
+    danger
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> it should render a Button info 1`] = `
+<div>
+  <div
+    class="btn btn__info  "
+    info="true"
+    role="button"
+    tabindex="0"
+  >
+    this is a Button 
+    info
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> it should render a Button link 1`] = `
+<div>
+  <div
+    class="btn btn__link  "
+    link="true"
+    role="button"
+    tabindex="0"
+  >
+    this is a Button 
+    link
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> it should render a Button primary 1`] = `
+<div>
+  <div
+    class="btn btn__primary  "
+    primary="true"
+    role="button"
+    tabindex="0"
+  >
+    this is a Button 
+    primary
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> it should render a Button secondary 1`] = `
+<div>
+  <div
+    class="btn btn__secondary  "
+    role="button"
+    secondary="true"
+    tabindex="0"
+  >
+    this is a Button 
+    secondary
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> it should render a Button success 1`] = `
+<div>
+  <div
+    class="btn btn__success  "
+    role="button"
+    success="true"
+    tabindex="0"
+  >
+    this is a Button 
+    success
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> it should render a Button warning 1`] = `
+<div>
+  <div
+    class="btn btn__warning  "
+    role="button"
+    tabindex="0"
+    warning="true"
+  >
+    this is a Button 
+    warning
+     
+  </div>
+</div>
+`;
+
+exports[`<Button /> should render 1`] = `
+<div>
+  <div
+    class="btn   "
+    role="button"
+    tabindex="0"
+  >
+    this is an alert 
+  </div>
+</div>
+`;

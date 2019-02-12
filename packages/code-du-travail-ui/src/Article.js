@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Section, Tag } from ".";
+import Section from "./Section";
+import Tag from "./Tag";
 
 import { Question, Like, Unlike } from "./icons";
+import IconButton from "./IconButton";
 
 const Tags = ({ tags, onTagClick }) => (
   <React.Fragment>
@@ -60,29 +62,13 @@ const Article = ({
             <Tags tags={tags} onTagClick={onTagClick} />
           </div>
         </div>
-        <div className="article__widget_container" style={{}}>
-          <Like
-            onClick={onValidate}
-            style={{
-              marginRight: 10,
-              width: 30,
-              height: 30,
-              verticalAlign: "top"
-            }}
-            title="Valider cette réponse"
-            fill="#aaa"
-          />
-          <Unlike
-            onClick={onInvalidate}
-            style={{
-              marginTop: 10,
-              width: 30,
-              height: 30,
-              verticalAlign: "top"
-            }}
-            title="Invalider cette réponse"
-            fill="#aaa"
-          />
+        <div className="article__widget_container">
+          <IconButton onClick={onValidate} title="Valider cette réponse">
+            <Like style={{ paddingBottom: ".5rem" }} />
+          </IconButton>
+          <IconButton onClick={onInvalidate} title="Invalider cette réponse">
+            <Unlike style={{ paddingTop: ".5rem" }} />
+          </IconButton>
         </div>
       </div>
       {children && <div className="article__content">{children}</div>}

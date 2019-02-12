@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2019-02-12)
+
+
+### Features
+
+* **frontend:** improve feedback thumbs ([#501](https://github.com/SocialGouv/code-du-travail-css/issues/501)) ([b38dcc8](https://github.com/SocialGouv/code-du-travail-css/commit/b38dcc8)), closes [#458](https://github.com/SocialGouv/code-du-travail-css/issues/458) [#496](https://github.com/SocialGouv/code-du-travail-css/issues/496)
+
+
+
+
+
 ## 1.7.3 (2019-01-29)
 
 

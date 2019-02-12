@@ -6,8 +6,6 @@ import "@cdt/css";
 import "@reach/dialog/styles.css";
 
 import "../src/piwik";
-import Header from "../src/layout/Header.js";
-import Footer from "../src/layout/Footer.js";
 
 export default class MyApp extends App {
   // HACK @lionelb from https://github.com/zeit/next.js/issues/4687#issuecomment-432608667
@@ -17,15 +15,6 @@ export default class MyApp extends App {
     headManager: PropTypes.object,
     router: PropTypes.object
   };
-
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-    return { pageProps };
-  }
 
   render() {
     const { Component, pageProps } = this.props;
@@ -39,11 +28,7 @@ export default class MyApp extends App {
         >
           version bêta
         </GitHubForkRibbon>
-        <Header />
-        <main id="main">
-          <Component {...pageProps} />
-        </main>
-        <Footer />
+        <Component {...pageProps} />
       </Container>
     );
   }

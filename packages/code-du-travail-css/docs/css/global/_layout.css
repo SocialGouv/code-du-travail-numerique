@@ -185,6 +185,7 @@ It is also possible to nest a `.wrapper-narrow` class in a `.wrapper-dark` or
 
 /* Cancel vertical rhythm for last childs in `.container` or `wrapper-*`. */
 .container > :--vertical-rythm-elements:last-child,
+.alert > :--vertical-rythm-elements:last-child,
 [class^="wrapper-"] > :--vertical-rythm-elements:last-child {
   margin-bottom: 0;
 }

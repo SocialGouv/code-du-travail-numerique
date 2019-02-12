@@ -24,7 +24,8 @@ class Answer extends React.Component {
       "trackEvent",
       "feedback",
       "thumb up",
-      this.props.router.asPath
+      this.props.router.asPath,
+      this.props.router.query.q
     ]);
   };
   showModal = () => {
@@ -32,12 +33,12 @@ class Answer extends React.Component {
       "trackEvent",
       "feedback",
       "thumb down",
-      this.props.router.asPath
+      this.props.router.asPath,
+      this.props.router.query.q
     ]);
     this.setState({ modalVisible: true });
   };
   closeModal = () => {
-    ReactPiwik.push(["trackEvent", "feedback", "cancel"]);
     this.setState({ modalVisible: false });
   };
   setResults = searchResults => {
@@ -71,6 +72,7 @@ class Answer extends React.Component {
               isOpen={this.state.modalVisible}
               closeModal={this.closeModal}
               query={router.query.q || title}
+              source={router.query.source}
               url={router.asPath}
             />
             <Article

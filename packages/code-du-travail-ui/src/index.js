@@ -1,3 +1,4 @@
+import * as icons from "./icons";
 export { default as Alert } from "./Alert";
 export { default as Article } from "./Article";
 export { default as Badge } from "./Badge";
@@ -15,3 +16,5 @@ export { default as NoAnswer } from "./NoAnswer";
 export { default as Cards } from "./Cards";
 export { default as Card } from "./Card";
 export { default as LargeLink } from "./LargeLink";
+export { default as IconButton } from "./IconButton";
+export { icons };

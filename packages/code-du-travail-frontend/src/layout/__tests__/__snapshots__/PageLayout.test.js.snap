@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageLayout /> should render 1`] = `
+<div>
+  <header
+    class="bg-color color__white"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="sc-bdVaJa fKqKQM"
+      >
+        <a
+          class="sc-bwzfXH eBIpsv"
+          href="/?q="
+        >
+          <img
+            alt=""
+            class="sc-htpNat knlPcz"
+            src="/static/assets/img/marianne.svg"
+          />
+          <span
+            class="sc-bxivhb fjOXOG"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main
+    id="main"
+  >
+    <span>
+      content
+    </span>
+  </main>
+  <footer
+    class="section-dark site-footer"
+    id="footer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="main-footer"
+      >
+        <div
+          class="footer__block"
+        >
+          <h3>
+            Code du travail numérique
+          </h3>
+          <ul>
+            <li>
+              <a
+                href="/a-propos"
+              >
+                À propos
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer__block"
+        >
+          <h3>
+            Aidez-nous à améliorer cet outil
+          </h3>
+          <ul>
+            <li>
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vundefined"
+              >
+                Contribuer sur Github
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="footer__block"
+        >
+          <h3>
+            Liens et outils
+          </h3>
+          <ul>
+            <li>
+              <a
+                class="external-link__after"
+                href="https://socialgouv.github.io/faq-code-du-travail"
+              >
+                Question-Réponse des services de renseignement
+              </a>
+            </li>
+            <li>
+              <div
+                class="btn btn__link  "
+                link="true"
+                role="button"
+                tabindex="0"
+              >
+                Trouvez votre convention collective
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

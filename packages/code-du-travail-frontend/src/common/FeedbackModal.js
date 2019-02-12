@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReactPiwik from "react-piwik";
+
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { FeedbackForm } from "./FeedbackForm";
 import { postFeedback } from "./feedback.service";
@@ -9,14 +11,29 @@ class FeedbackModal extends React.Component {
     isOpen: PropTypes.bool,
     closeModal: PropTypes.func.isRequired,
     query: PropTypes.string,
+    source: PropTypes.string,
     url: PropTypes.string,
     results: PropTypes.arrayOf(PropTypes.object)
   };
   static defaultProps = {
-    isOpen: false
+    isOpen: false,
+    query: "",
+    source: "Tous contenus",
+    url: "",
+    results: []
+  };
+  submit = data => {
+    ReactPiwik.push([
+      "trackEvent",
+      "feedback",
+      "submit",
+      this.props.router.asPath,
+      this.props.router.query.q
+    ]);
+    return postFeedback(data);
   };
   render() {
-    const { results, isOpen, closeModal, query, url } = this.props;
+    const { results, isOpen, closeModal, query, url, source } = this.props;
     return (
       <DialogOverlay
         isOpen={isOpen}
@@ -37,8 +54,9 @@ class FeedbackModal extends React.Component {
               outil.
             </p>
             <FeedbackForm
-              onSubmit={postFeedback}
+              onSubmit={this.submit}
               query={query}
+              source={source}
               url={url}
               results={results}
             />

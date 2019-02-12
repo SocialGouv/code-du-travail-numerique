@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2019-02-12)
+
+
+### Bug Fixes
+
+* **frontend:** a a-propos page, remove disclaimer ([#517](https://github.com/SocialGouv/code-du-travail-numerique/issues/517)) ([7adaf2b](https://github.com/SocialGouv/code-du-travail-numerique/commit/7adaf2b)), closes [#513](https://github.com/SocialGouv/code-du-travail-numerique/issues/513) [#512](https://github.com/SocialGouv/code-du-travail-numerique/issues/512)
+* **scrap:** add ariane+tags for fiches ministere-travail ([#510](https://github.com/SocialGouv/code-du-travail-numerique/issues/510)) ([ddc2c02](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddc2c02))
+
+
+### Features
+
+* **frontend:** improve feedback thumbs ([#501](https://github.com/SocialGouv/code-du-travail-numerique/issues/501)) ([b38dcc8](https://github.com/SocialGouv/code-du-travail-numerique/commit/b38dcc8)), closes [#458](https://github.com/SocialGouv/code-du-travail-numerique/issues/458) [#496](https://github.com/SocialGouv/code-du-travail-numerique/issues/496)
+
+
+
+
+
 ## [1.7.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.3...v1.7.4) (2019-01-30)
 
 
