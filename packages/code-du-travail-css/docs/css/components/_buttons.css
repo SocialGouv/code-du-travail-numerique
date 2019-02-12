@@ -29,20 +29,14 @@
 
   cursor: pointer;
 
+  transition: background 250ms ease;
+
   /* Specific to <a> elements. */
   text-decoration: none;
-  transition: background 250ms ease;
   &:active {
     position: relative;
     top: 1px;
     left: 1px;
-  }
-
-  &:focus,
-  &:hover,
-  &:active {
-    background-color: color-mod(var(--color-blue-light) lightness(-10%));
-    color: var(--color-white);
   }
 
   &:focus {
@@ -55,91 +49,146 @@
     border: 1px solid var(--color-focus);
   }
 
-  &.btn__primary {
-    background: var(--color-primary-background);
-    border-bottom: 2px solid
-      color-mod(var(--color-primary-background) lightness(-10%));
-    color: var(--color-primary-text);
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: color-mod(
-        var(--color-primary-background) lightness(-10%)
-      );
-    }
-  }
-
-  &.btn__secondary {
-    background-color: var(--color-secondary-background);
-    border-bottom: 2px solid
-      color-mod(var(--color-secondary-background) lightness(-10%));
-    color: var(--color-secondary-text);
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: color-mod(
-        var(--color-secondary-background) lightness(-10%)
-      );
-    }
-  }
-
-  &.btn__warning {
-    background-color: var(--color-warning-background);
-    border-bottom: 2px solid
-      color-mod(var(--color-warning-background) lightness(-10%));
-    color: var(--color-warning-text);
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: color-mod(
-        var(--color-warning-background) lightness(-10%)
-      );
-    }
-  }
-
-  &.btn__success {
-    background-color: var(--color-success-background);
-    border-bottom: 2px solid
-      color-mod(var(--color-success-background) lightness(-10%));
-    color: var(--color-success-text);
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: color-mod(
-        var(--color-success-background) lightness(-10%)
-      );
-    }
-  }
-
-  &.btn__info {
-    background-color: var(--color-info-background);
-    border-bottom: 2px solid
-      color-mod(var(--color-info-background) lightness(-10%));
-    color: var(--color-info-text);
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: color-mod(var(--color-info-background) lightness(-10%));
-    }
-  }
-
-  &.btn__danger {
-    background-color: var(--color-danger-background);
-    border-bottom: 2px solid
-      color-mod(var(--color-danger-background) lightness(-10%));
-    color: var(--color-danger-text);
-    &:focus,
-    &:hover,
-    &:active {
-      background-color: color-mod(
-        var(--color-danger-background) lightness(-10%)
-      );
-    }
-  }
-
   &[disabled] {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+}
+
+.btn__primary {
+  background: var(--color-primary-background);
+  border-bottom: 2px solid
+    color-mod(var(--color-primary-background) lightness(-10%));
+  color: var(--color-primary-text);
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(
+      var(--color-primary-background) lightness(-10%)
+    );
+  }
+}
+
+.btn__secondary {
+  background-color: var(--color-secondary-background);
+  border-bottom: 2px solid
+    color-mod(var(--color-secondary-background) lightness(-10%));
+  color: var(--color-secondary-text);
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(
+      var(--color-secondary-background) lightness(-10%)
+    );
+  }
+}
+
+.btn__warning {
+  background-color: var(--color-warning-background);
+  border-bottom: 2px solid
+    color-mod(var(--color-warning-background) lightness(-10%));
+  color: var(--color-warning-text);
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(
+      var(--color-warning-background) lightness(-10%)
+    );
+  }
+}
+
+.btn__success {
+  background-color: var(--color-success-background);
+  border-bottom: 2px solid
+    color-mod(var(--color-success-background) lightness(-10%));
+  color: var(--color-success-text);
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(
+      var(--color-success-background) lightness(-10%)
+    );
+  }
+}
+
+.btn__info {
+  background-color: var(--color-info-background);
+  border-bottom: 2px solid
+    color-mod(var(--color-info-background) lightness(-10%));
+  color: var(--color-info-text);
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(var(--color-info-background) lightness(-10%));
+  }
+}
+
+.btn__danger {
+  background-color: var(--color-danger-background);
+  border-bottom: 2px solid
+    color-mod(var(--color-danger-background) lightness(-10%));
+  color: var(--color-danger-text);
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: color-mod(var(--color-danger-background) lightness(-10%));
+  }
+}
+
+.btn-icon {
+  appearance: none;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 0.8;
+  font-weight: normal;
+
+  padding: var(--spacing-xsmall) var(--spacing-small);
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: all 250ms ease;
+
+  background: transparent;
+  color: var(--color-dark-grey);
+
+  &:hover {
+    color: var(--color-blue-light);
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:focus {
+    color: var(--color-blue-dark);
+    background: var(--color-element-background);
+  }
+  &:focus:not(:focus-visible) {
+    background: transparent;
+    box-shadow: none;
+  }
+  &:focus:not(:-moz-focusring) {
+    background: transparent;
+    box-shadow: none;
+  }
+  &:focus-visible {
+    color: var(--color-black);
+    background: var(--color-element-background);
+    box-shadow: none;
+  }
+  &:-moz-focusring {
+    color: var(--color-black);
+    background: var(--color-element-background);
+    box-shadow: none;
+  }
+  & svg {
+    width: 30px;
+    height: 38px;
   }
 }
 

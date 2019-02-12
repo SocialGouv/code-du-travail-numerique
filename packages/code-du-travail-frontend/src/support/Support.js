@@ -9,10 +9,9 @@ class Support extends React.Component {
   state = {
     q: undefined
   };
-  onSubmit = event => {
-    event.preventDefault();
+  onSubmit = ({ target }) => {
     this.setState(
-      { q: event.target.elements[0].value, coord: undefined },
+      { q: target.elements[0].value, coord: undefined },
       this.updateRoute
     );
   };
