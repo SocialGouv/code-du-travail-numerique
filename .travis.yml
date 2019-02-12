@@ -85,7 +85,7 @@ jobs:
     #
     #
 
-    - <<: *main_code_quality_stage
+    - &main_code_quality_stage
       stage: Code quality
       if: NOT env(RELEASE) AND NOT type = pull_request
       env:
