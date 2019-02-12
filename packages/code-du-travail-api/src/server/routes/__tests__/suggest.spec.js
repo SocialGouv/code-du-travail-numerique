@@ -5,7 +5,7 @@ const routes = require("../suggest");
 const app = new Koa();
 app.use(routes.routes());
 
-test("return suggest results for demission", async () => {
+test("return suggestion results for demission", async () => {
   const response = await request(app.callback()).get(
     "/api/v1/suggest?q=démission"
   );
@@ -13,7 +13,7 @@ test("return suggest results for demission", async () => {
   expect(response.body.hits).toMatchSnapshot();
 });
 
-test("return faq search suggest for demission ", async () => {
+test("return faq suggestion results for demission ", async () => {
   const excludeSources = [
     "code_du_travail",
     "fiche",
