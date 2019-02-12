@@ -14,7 +14,7 @@ function parseDom(dom, url) {
 
   const ariane = $$(dom.window.document, "nav.page__breadcrumb a")
     .slice(1)
-    .map(el => el.textContent);
+    .map(el => el.textContent.trim());
 
   // `articles` = textes de référence.
   const articles = $$(dom.window.document, "article.encarts__article li")
@@ -126,7 +126,7 @@ async function parseFiche(url) {
 }
 
 async function parseFiches(urls) {
-  const results = await batchPromise(urls, 6, parseFiche);
+  const results = await batchPromise(urls, 15, parseFiche);
   spinner.stop().clear();
   console.log(JSON.stringify(results.filter(Boolean), null, 2));
 }
