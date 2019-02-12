@@ -33,10 +33,10 @@ def populate_fiches_ministere_travail(json_file=JSON_FICHES):
             # by using the subsection's title alone.
             prefix_title = fiche_title
 
-            if '(' in fiche_title and fiche_title.count('(') == 1:
+            if '(' in fiche_title and fiche_title.count('(') == 1 and fiche_title[fiche_title.find('(') + 1:fiche_title.find(')')] == fiche_title[fiche_title.find('(') + 1:fiche_title.find(')')].upper():
                 # If there is only one opening parenthesis, assume that the value between parenthesis
                 # is an acronym: use it as the prefix.
-                prefix_title = fiche_title[fiche_title.find('(') + 1:fiche_title.find(')')]
+                prefix_title = fiche_title[fiche_title.find('(') + 1:fiche_title.find(')')] + fiche_title[fiche_title.find(')') + 1:]
             elif ':' in fiche_title:
                 # Otherwise use the part before the first colon.
                 prefix_title = fiche_title.split(':')[0]

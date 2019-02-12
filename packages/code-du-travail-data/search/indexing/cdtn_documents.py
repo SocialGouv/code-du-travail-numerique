@@ -125,7 +125,7 @@ def populate_cdtn_documents():
     for val in THEMES:
         CDTN_DOCUMENTS.append({
             'source': 'themes',
-            'slug': slugify(val['title'], to_lower=True),
+            'slug': val['slug'],
             'text': val['text'],
             'all_text': f"{val['title']} {val['text']}",
             'title': val['title'],
