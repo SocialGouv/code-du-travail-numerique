@@ -32,6 +32,13 @@ services:
       context: ./packages/code-du-travail-data
       dockerfile: ./Dockerfile
 
+  nlp_api:
+    ports:
+      - 5000:5000
+    build:
+      context: ./packages/code-du-travail-nlp
+      dockerfile: ./Dockerfile
+
 volumes:
   esdata:
     driver: local
