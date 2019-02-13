@@ -135,7 +135,9 @@ jobs:
         yarn workspace @cdt/api test --coverage
       after_script: docker-compose down
       after_success: npx codecov --flags api
-    - <<: *main_code_quality_stage
+
+    - &python_stage
+      <<: *main_code_quality_stage
       name: Lint python code
       language: python
       python: 3.6
@@ -149,6 +151,13 @@ jobs:
         - pip install pipenv==11.10.1
         - pipenv install --dev --three
       script: pipenv run pylint --output-format=colorized search
+
+    - <<: *python_stage
+      name: Check @cdt/data slugs
+      env:
+        - PYTHONPATH=.
+      before_install: cd packages/code-du-travail-data
+      script: python search/indexing/document_slug_checker.py -v
 
     #
     #

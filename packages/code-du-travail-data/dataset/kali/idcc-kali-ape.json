@@ -42,7 +42,9 @@
     "convention": "KALICONT000005635725",
     "titre": "Accord national interprofessionnel des voyageurs, représentants, placiers du 3 octobre 1975",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005664884&pdf=KALITEXT000005664884",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635725"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635725",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000005677408",
@@ -145,7 +147,9 @@
     "convention": "KALICONT000018797550",
     "titre": "Appointements minima des ingénieurs, assimilés et cadres du bâtiment et des travaux publics du 30 avril 1951 ",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000017846208&pdf=KALITEXT000017846208",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018797550"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000018797550",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000005666912",
@@ -160,7 +164,9 @@
     "convention": "KALICONT000005635273",
     "titre": "Artistes musiciens de la production cinématographique du 1er juillet 1964",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005665868&pdf=KALITEXT000005665868",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635273"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635273",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000005670072",
@@ -627,7 +633,9 @@
     "convention": "KALICONT000019423645",
     "titre": "Cadres administratifs et voyageurs des entreprises de presse hebdomadaire du 1er juillet 1972",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005684416&pdf=KALITEXT000005684416",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019423645"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019423645",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000005654239",
@@ -650,7 +658,9 @@
     "convention": "KALICONT000019423552",
     "titre": "Cadres de la presse périodique du 30 juin 1972",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005680903&pdf=KALITEXT000005680903",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019423552"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019423552",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000018000546",
@@ -1894,7 +1904,9 @@
     "convention": "KALICONT000019423727",
     "titre": "Employés de la presse hebdomadaire parisienne du 1er avril 1974",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005680865&pdf=KALITEXT000005680865",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019423727"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019423727",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000005658925",
@@ -3773,17 +3785,6 @@
     "idcc": "3013"
   },
   {
-    "cid": "KALITEXT000005687127",
-    "convention": "KALICONT000019765628",
-    "titre": "Magasins prestataires de services de cuisine à usage domestique du  17 juillet 2008\n\n",
-    "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005687127&pdf=KALITEXT000005687127",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000019765628",
-    "ape": [
-      "4759A"
-    ],
-    "idcc": "2754"
-  },
-  {
     "cid": "KALITEXT000019942821",
     "convention": "KALICONT000019765628",
     "titre": "Magasins prestataires de services de cuisine à usage domestique du 17 juillet 2008\n\n",
@@ -4563,7 +4564,9 @@
     "convention": "KALICONT000005635395",
     "titre": "Personnel des agents immobiliers et mandataires en vente de fonds de commerce du 8 décembre 1971",
     "pdf": "https://www.legifrance.gouv.fr/download_code_pdf.do?cidTexte=KALITEXT000005675916&pdf=KALITEXT000005675916",
-    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635395"
+    "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635395",
+    "ape": [],
+    "idcc": ""
   },
   {
     "cid": "KALITEXT000023973178",
