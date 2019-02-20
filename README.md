@@ -51,7 +51,7 @@ $ yarn build
 $ yarn workspace <package-name> build
 
 # For example for "code-du-travail-frontend"
-$ yarn workspace code-du-travail-frontend build
+$ yarn workspace @cdt/frontend build
 ```
 
 ### Test
@@ -64,7 +64,7 @@ $ yarn test
 $ yarn workspace <package-name> test
 
 # For example for "code-du-travail-frontend"
-$ yarn workspace code-du-travail-frontend test
+$ yarn workspace @cdt/frontend test
 ```
 
 ### Prod
