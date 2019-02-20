@@ -3,6 +3,8 @@ import Head from "next/head";
 import { Container, Alert, Article, NoAnswer, Button } from "@cdt/ui";
 import { withRouter } from "next/router";
 import ReactPiwik from "react-piwik";
+
+import { Link } from "../../routes";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
@@ -14,9 +16,22 @@ const BigError = ({ children }) => (
   </Container>
 );
 
+const BackToResultsLink = ({ query }) => {
+  if (!query.q) return null;
+
+  return (
+    <Container>
+      <Link route="index" params={{ ...query }}>
+        <a>{"< Retour aux résultats"}</a>
+      </Link>
+    </Container>
+  );
+};
+
 class Answer extends React.Component {
   state = {
-    modalVisible: false
+    modalVisible: false,
+    searchResults: []
   };
 
   onValidate = () => {
@@ -58,12 +73,14 @@ class Answer extends React.Component {
       additionalContent,
       emptyMessage = "Aucun résultat"
     } = this.props;
+
     return (
       <React.Fragment>
         <Head>
           <title>{title}</title>
         </Head>
         <Search onResults={this.setResults} />
+        <BackToResultsLink query={router.query} />
         {!html && !children && <BigError>{emptyMessage}</BigError>}
         {(html || children) && (
           <React.Fragment>
