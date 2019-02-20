@@ -102,7 +102,7 @@ exports[`<search /> should render 1`] = `
               </select>
             </label>
             <label
-              class="sc-bwzfXH jthXhr"
+              class="sc-htpNat jIcxBH"
               for="main-search-input"
             >
               <span
@@ -128,7 +128,7 @@ exports[`<search /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="sc-htpNat ZTZIQ"
+                  class="sc-bxivhb kQrtqg"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -254,7 +254,7 @@ exports[`<search /> should render suggestions 1`] = `
               </select>
             </label>
             <label
-              class="sc-bwzfXH jthXhr"
+              class="sc-htpNat jIcxBH"
               for="main-search-input"
             >
               <span
@@ -280,7 +280,7 @@ exports[`<search /> should render suggestions 1`] = `
                   value="yolo"
                 />
                 <div
-                  class="sc-htpNat ZTZIQ"
+                  class="sc-bxivhb kQrtqg"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 >
@@ -298,13 +298,16 @@ exports[`<search /> should render suggestions 1`] = `
                       <div
                         class="sc-bdVaJa hpcrWB"
                       >
-                        <b>
-                          FAQ | 
-                           
+                        <div
+                          class="sc-jTzLTM iGfftI"
+                        >
                           faq title
-                        </b>
-                        <br />
-                        <div />
+                        </div>
+                        <small
+                          class="sc-bwzfXH kGTrEC"
+                        >
+                           - FAQ
+                        </small>
                       </div>
                     </li>
                   </ul>

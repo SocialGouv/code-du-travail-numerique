@@ -3,7 +3,7 @@
 exports[`<DocumentSuggester /> should render 1`] = `
 <div>
   <label
-    class="sc-bwzfXH jthXhr"
+    class="sc-htpNat jIcxBH"
     for="main-search-input"
   >
     <span
@@ -28,7 +28,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
         value="foo bar search"
       />
       <div
-        class="sc-htpNat ZTZIQ"
+        class="sc-bxivhb kQrtqg"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       />
@@ -40,7 +40,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
 <div>
   <label
-    class="sc-bwzfXH jthXhr"
+    class="sc-htpNat jIcxBH"
     for="main-search-input"
   >
     <span
@@ -65,7 +65,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
         value="foo bar search"
       />
       <div
-        class="sc-htpNat ZTZIQ"
+        class="sc-bxivhb kQrtqg"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       >
@@ -83,17 +83,18 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <div
               class="sc-bdVaJa hpcrWB"
             >
-              <b>
-                Legifrance | 
-                 
-                convention collective title
-              </b>
-              <br />
-              <div>
-                <mark>
+              <div
+                class="sc-ifAKCX bzUsHD"
+              >
+                <b>
                   hightlighted ccn
-                </mark>
+                </b>
               </div>
+              <small
+                class="sc-bwzfXH kGTrEC"
+              >
+                 - Legifrance
+              </small>
             </div>
           </li>
           <li
@@ -106,17 +107,16 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             <div
               class="sc-bdVaJa hpcrWB"
             >
-              <b>
-                FAQ | 
-                 
+              <div
+                class="sc-EHOje klVYHy"
+              >
                 question / réponse title
-              </b>
-              <br />
-              <div>
-                <mark>
-                  hightlighted faq
-                </mark>
               </div>
+              <small
+                class="sc-bwzfXH kGTrEC"
+              >
+                 - FAQ
+              </small>
             </div>
           </li>
         </ul>

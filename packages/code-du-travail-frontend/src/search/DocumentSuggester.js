@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
-import { getLabelBySource } from "../sources";
 
+import Html from "../common/Html";
+import { getLabelBySource } from "../sources";
 export class DocumentSuggester extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -75,39 +76,29 @@ export class DocumentSuggester extends React.Component {
 
 const getSuggestionValue = suggestion => suggestion._source.title;
 
-const cleanHtml = html =>
-  html
-    .trim()
-    .replace(/^(<br\/?>)+/, "")
-    .replace(/((<br\/?>)+)$/, "")
-    .replace(/^(<p>)+/, "")
-    .replace(/((<\/p>)+)$/, "");
-
 const SuggestionContainer = styled.div`
   p {
     margin: 0;
   }
 `;
 
+const SourceContainer = styled.small`
+  color: #999;
+  font-size: 0.8rem;
+`;
+
 const renderSuggestion = suggestion => {
+  const { highlight: { title: highlightedTitles } = {} } = suggestion;
   const source = getLabelBySource(suggestion._source.source);
+  const title = highlightedTitles
+    ? highlightedTitles[0]
+        .replace(/(<mark>)+/g, "<b>")
+        .replace(/((<\/mark>)+)/g, "</b>")
+    : suggestion._source.title;
   return (
     <SuggestionContainer>
-      <b>
-        {source ? `${source} | ` : ""} {suggestion._source.title}
-      </b>
-      <br />
-      <div
-        dangerouslySetInnerHTML={{
-          __html: cleanHtml(
-            (suggestion.highlight &&
-              ((suggestion.highlight.text && suggestion.highlight.text[0]) ||
-                (suggestion.highlight.title &&
-                  suggestion.highlight.title[0]))) ||
-              ""
-          )
-        }}
-      />
+      <Html inline>{title}</Html>
+      {source && <SourceContainer>{` - ${source}`}</SourceContainer>}
     </SuggestionContainer>
   );
 };
