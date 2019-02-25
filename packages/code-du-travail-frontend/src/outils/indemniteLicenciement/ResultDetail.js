@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Section } from "@cdt/ui";
-import MathJax from "react-mathjax2";
 import { Header } from "./stepStyles";
+import MathJax from "react-mathjax-preview";
 import styled from "styled-components";
+import { ErrorBoundary } from "../../common/ErrorBoundary";
 
 const round = fl => parseInt(fl * 100) / 100;
 
@@ -110,18 +111,16 @@ class ResultDetail extends React.Component {
             </tbody>
           </Table>
           {salaireRef > 0 && (
-            <div style={{ fontSize: "1.5em" }}>
-              <MathJax.Context input="ascii">
-                <div
-                  style={{
-                    fontSize: "1.5em",
-                    textAlign: "center",
-                    fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
-                  }}
-                >
-                  <MathJax.Node inline>{formula}</MathJax.Node>
-                </div>
-              </MathJax.Context>
+            <div
+              style={{
+                fontSize: "2.5em",
+                textAlign: "center",
+                fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
+              }}
+            >
+              <ErrorBoundary>
+                <MathJax math={"`" + formula + "`"} />
+              </ErrorBoundary>
             </div>
           )}
         </Section>
@@ -129,6 +128,7 @@ class ResultDetail extends React.Component {
     );
   }
 }
+
 const Table = styled.table`
   color: #757575;
   a:link {

@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Section } from "@cdt/ui";
-import MathJax from "react-mathjax2";
+import MathJax from "react-mathjax-preview";
 import { Header } from "../stepStyles";
+import { ErrorBoundary } from "../../../common/ErrorBoundary";
 const round = fl => parseFloat((fl * 100) / 100).toFixed(2);
 
 const labelize = value => {
@@ -86,17 +87,17 @@ class ResultDetail extends React.Component {
           </table>
         </Container>
         <Section light>
-          <MathJax.Context input="ascii">
-            <div
-              style={{
-                fontSize: "1.5em",
-                textAlign: "center",
-                fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
-              }}
-            >
-              <MathJax.Node inline>{formula}</MathJax.Node>;
-            </div>
-          </MathJax.Context>
+          <div
+            style={{
+              fontSize: "2.5em",
+              textAlign: "center",
+              fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
+            }}
+          >
+            <ErrorBoundary>
+              <MathJax math={"`" + formula + "`"} />
+            </ErrorBoundary>
+          </div>
         </Section>
       </React.Fragment>
     );
