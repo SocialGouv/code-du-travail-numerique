@@ -29,6 +29,17 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
             <div
               class="search__fields"
             >
+              <svg
+                class="search__input__icon"
+                viewBox="0 0 20 20"
+              >
+                <title />
+                <path
+                  d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
               <label
                 class="search__sources"
                 for="contentSource"
@@ -105,7 +116,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                 </select>
               </label>
               <label
-                class="sc-htpNat jIcxBH"
+                class="sc-htoDjs jKMTeV"
                 for="main-search-input"
               >
                 <span
@@ -126,12 +137,12 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                     class="search__input"
                     id="main-search-input"
                     name="query"
-                    placeholder=""
+                    placeholder="Recherche"
                     type="search"
                     value=""
                   />
                   <div
-                    class="sc-bxivhb kQrtqg"
+                    class="sc-dnqmqq cyvidm"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -139,14 +150,10 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
               </label>
             </div>
             <button
-              class="btn btn__img btn__img__search"
+              class="btn"
               type="submit"
             >
-              <span
-                class="hidden"
-              >
-                Rechercher
-              </span>
+              Rechercher
             </button>
           </form>
         </div>
@@ -508,6 +515,17 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
             <div
               class="search__fields"
             >
+              <svg
+                class="search__input__icon"
+                viewBox="0 0 20 20"
+              >
+                <title />
+                <path
+                  d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
               <label
                 class="search__sources"
                 for="contentSource"
@@ -584,7 +602,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                 </select>
               </label>
               <label
-                class="sc-htpNat jIcxBH"
+                class="sc-htoDjs jKMTeV"
                 for="main-search-input"
               >
                 <span
@@ -605,12 +623,12 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                     class="search__input"
                     id="main-search-input"
                     name="query"
-                    placeholder=""
+                    placeholder="Recherche"
                     type="search"
                     value=""
                   />
                   <div
-                    class="sc-bxivhb kQrtqg"
+                    class="sc-dnqmqq cyvidm"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -618,14 +636,10 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
               </label>
             </div>
             <button
-              class="btn btn__img btn__img__search"
+              class="btn"
               type="submit"
             >
-              <span
-                class="hidden"
-              >
-                Rechercher
-              </span>
+              Rechercher
             </button>
           </form>
         </div>
@@ -984,6 +998,17 @@ exports[`<Answer /> should render 1`] = `
           <div
             class="search__fields"
           >
+            <svg
+              class="search__input__icon"
+              viewBox="0 0 20 20"
+            >
+              <title />
+              <path
+                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
             <label
               class="search__sources"
               for="contentSource"
@@ -1060,7 +1085,7 @@ exports[`<Answer /> should render 1`] = `
               </select>
             </label>
             <label
-              class="sc-htpNat jIcxBH"
+              class="sc-htoDjs jKMTeV"
               for="main-search-input"
             >
               <span
@@ -1081,12 +1106,12 @@ exports[`<Answer /> should render 1`] = `
                   class="search__input"
                   id="main-search-input"
                   name="query"
-                  placeholder=""
+                  placeholder="Recherche"
                   type="search"
                   value=""
                 />
                 <div
-                  class="sc-bxivhb kQrtqg"
+                  class="sc-dnqmqq cyvidm"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -1094,14 +1119,10 @@ exports[`<Answer /> should render 1`] = `
             </label>
           </div>
           <button
-            class="btn btn__img btn__img__search"
+            class="btn"
             type="submit"
           >
-            <span
-              class="hidden"
-            >
-              Rechercher
-            </span>
+            Rechercher
           </button>
         </form>
       </div>
@@ -1367,6 +1388,17 @@ exports[`<Answer /> should render additional content 1`] = `
             <div
               class="search__fields"
             >
+              <svg
+                class="search__input__icon"
+                viewBox="0 0 20 20"
+              >
+                <title />
+                <path
+                  d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
               <label
                 class="search__sources"
                 for="contentSource"
@@ -1443,7 +1475,7 @@ exports[`<Answer /> should render additional content 1`] = `
                 </select>
               </label>
               <label
-                class="sc-htpNat jIcxBH"
+                class="sc-htoDjs jKMTeV"
                 for="main-search-input"
               >
                 <span
@@ -1464,12 +1496,12 @@ exports[`<Answer /> should render additional content 1`] = `
                     class="search__input"
                     id="main-search-input"
                     name="query"
-                    placeholder=""
+                    placeholder="Recherche"
                     type="search"
                     value=""
                   />
                   <div
-                    class="sc-bxivhb kQrtqg"
+                    class="sc-dnqmqq cyvidm"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -1477,14 +1509,10 @@ exports[`<Answer /> should render additional content 1`] = `
               </label>
             </div>
             <button
-              class="btn btn__img btn__img__search"
+              class="btn"
               type="submit"
             >
-              <span
-                class="hidden"
-              >
-                Rechercher
-              </span>
+              Rechercher
             </button>
           </form>
         </div>

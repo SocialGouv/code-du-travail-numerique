@@ -28,7 +28,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
         value="foo bar search"
       />
       <div
-        class="sc-bxivhb kQrtqg"
+        class="sc-bxivhb dCVcvH"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       />
@@ -65,7 +65,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
         value="foo bar search"
       />
       <div
-        class="sc-bxivhb kQrtqg"
+        class="sc-bxivhb dCVcvH"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       >

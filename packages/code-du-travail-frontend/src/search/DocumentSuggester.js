@@ -109,11 +109,6 @@ const Label = styled.label`
 `;
 
 const SuggestionsContainer = styled.div`
-  white-space: "nowrap";
-  text-overflow: "ellipsis";
-  width: "90%";
-  overflow: "hidden";
-
   ul {
     z-index: 100;
   }

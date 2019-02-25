@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 import { withRouter } from "next/router";
 import { Container } from "@cdt/ui";
 
-import { searchAddress } from "../annuaire/adresse.service";
-import { suggestResults, searchResults } from "./search.service";
-import { DocumentSuggester } from "./DocumentSuggester";
-import { SearchQuery } from "./SearchQuery";
-import ReponseIcon from "../icons/ReponseIcon";
-
 import { Router } from "../../routes";
+import { searchAddress } from "../annuaire/adresse.service";
+import ReponseIcon from "../icons/ReponseIcon";
+import SearchIcon from "../icons/SearchIcon";
 import { getRouteBySource, getExcludeSources } from "../sources";
 import { AddressQuery } from "./AddressQuery";
+import { DocumentSuggester } from "./DocumentSuggester";
+import { SearchQuery } from "./SearchQuery";
+import { suggestResults, searchResults } from "./search.service";
 
 const FormSearchButton = () => (
-  <button type="submit" className="btn btn__img btn__img__search">
-    <span className="hidden">Rechercher</span>
+  <button type="submit" className="btn">
+    Rechercher
   </button>
 );
 
@@ -212,6 +212,7 @@ class Search extends React.Component {
               </header>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
+                  <SearchIcon className="search__input__icon" />
                   <label className="search__sources" htmlFor="contentSource">
                     <span className="hidden">Filtrer par type de contenu</span>
                     <ReponseIcon className="select-sources__icon" />
@@ -235,7 +236,7 @@ class Search extends React.Component {
                   <DocumentSuggester
                     onChange={this.onChange}
                     query={query}
-                    placeholder=""
+                    placeholder="Recherche"
                     onSearch={this.onSearch}
                     onSelect={this.onSelect}
                     onClear={this.onClear}
