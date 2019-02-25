@@ -32,6 +32,7 @@ exports[`<Inaptitude /> should render 1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="inaptitude"
               type="radio"
             />
