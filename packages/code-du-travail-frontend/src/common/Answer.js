@@ -21,7 +21,7 @@ const BackToResultsLink = ({ query }) => {
 
   return (
     <Container>
-      <Link route="index" params={{ ...query }}>
+      <Link route="recherche" params={{ ...query }}>
         <a>{"< Retour aux résultats"}</a>
       </Link>
     </Container>
