@@ -1,6 +1,7 @@
 # Code du travail - CSS (@cdt/css)
 
 > Private internal module 
+Ancienne doc [`--> ici <--`](https://socialgouv.github.io/code-du-travail-css/)
 
 ## Usage
 
