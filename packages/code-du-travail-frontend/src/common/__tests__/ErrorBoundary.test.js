@@ -5,7 +5,7 @@ import { ErrorBoundary } from "../ErrorBoundary";
 describe("Error Boundary", () => {
   // Hack(lionelb): remove noisy error logging catch by ErrorBoundary
   // @see https://github.com/facebook/react/issues/11098#issuecomment-412682721
-  const topLevelErrors = [];
+  let topLevelErrors;
   function handleTopLevelError(event) {
     // calling preventDefault() will prevent error logging
     event.preventDefault();
@@ -13,6 +13,7 @@ describe("Error Boundary", () => {
   }
 
   beforeEach(() => {
+    topLevelErrors = [];
     window.addEventListener("error", handleTopLevelError);
   });
   afterEach(() => {
