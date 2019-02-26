@@ -8,7 +8,7 @@ const Header = () => (
   <header className="bg-color color__white">
     <Container>
       <Wrapper>
-        <Link route="index" params={{ q: "" }}>
+        <Link route="index">
           <LogoWrapper href="/?q=">
             <Logo src={"/static/assets/img/marianne.svg"} alt="" />
             <Title>

@@ -45,11 +45,19 @@ describe("<search />", () => {
     await waitForElement(() => getAllByRole("option"));
     expect(container).toMatchSnapshot();
   });
-  it("should navigate when user change facet", () => {
+  it("should not navigate when user change facet if query is empty", () => {
     const { getBySelectText } = renderWithMock(<Search />);
+    const select = getBySelectText(/Tous contenus/i);
+    fireEvent.change(select, { target: { value: "faq" } });
+    expect(Router.pushRoute).not.toHaveBeenCalled();
+  });
+
+  it("should navigate when user change facet if query is filled", () => {
+    const { getBySelectText, getByLabelText } = renderWithMock(<Search />);
+    const input = getByLabelText(/rechercher/i);
+    fireEvent.change(input, { target: { value: "yolo" } });
     const select = getBySelectText(/Tous contenus/i);
     fireEvent.change(select, { target: { value: "faq" } });
     expect(Router.pushRoute).toHaveBeenCalled();
   });
-  //todo lionelb add moar tests
 });

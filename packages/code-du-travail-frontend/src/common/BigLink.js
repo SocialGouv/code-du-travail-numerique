@@ -9,7 +9,7 @@ export function BigLink({ icon, query, data }) {
   const { slug, title, source, path = "" } = data._source;
   const route = getRouteBySource(source);
   return (
-    <Link route={route} params={{ q: query, search: "0", slug: slug }}>
+    <Link route={route} params={{ q: query, slug: slug }}>
       <a className="btn-large">
         <Icon as={icon} />
         <div>
