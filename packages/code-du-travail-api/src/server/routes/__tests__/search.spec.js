@@ -30,3 +30,9 @@ test("return faq search results for demission ", async () => {
   expect(response.status).toBe(200);
   expect(response.body.hits).toMatchSnapshot();
 });
+
+test("return faq search results for smic with snippet content", async () => {
+  const response = await request(app.callback()).get(`/api/v1/search?q=smic`);
+  expect(response.status).toBe(200);
+  expect(response.body).toMatchSnapshot();
+});

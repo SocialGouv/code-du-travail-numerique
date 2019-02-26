@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "10",
       "_index": "cdtn_document_test",
-      "_score": 2.4232228,
+      "_score": 2.652225,
       "_source": Object {
         "ape": "1071A 1071B 1071C 1071D 4724Z 4781Z",
         "idcc": "843",
@@ -23,7 +23,7 @@ Object {
     Object {
       "_id": "11",
       "_index": "cdtn_document_test",
-      "_score": 2.115805,
+      "_score": 2.3149943,
       "_source": Object {
         "ape": "1020Z 1071A 1071B 1071C 1071D 1072Z 1085Z 1089Z 4638B 4724Z 5210A",
         "idcc": "1747",
@@ -38,7 +38,7 @@ Object {
       },
     },
   ],
-  "max_score": 2.4232228,
+  "max_score": 2.652225,
   "total": 2,
 }
 `;

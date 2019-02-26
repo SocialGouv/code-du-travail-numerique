@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return faq search suggest for demission  1`] = `
+exports[`return faq suggestion results for demission  1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.753367,
+      "_score": 3.3363123,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -28,7 +28,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 1.9308722,
+      "_score": 2.4016047,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -48,18 +48,18 @@ Object {
       },
     },
   ],
-  "max_score": 2.753367,
+  "max_score": 3.3363123,
   "total": 2,
 }
 `;
 
-exports[`return suggest results for demission 1`] = `
+exports[`return suggestion results for demission 1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 3.8587623,
+      "_score": 4.733461,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -87,7 +87,7 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 3.695746,
+      "_score": 4.529443,
       "_source": Object {
         "slug": "la-demission",
         "source": "themes",
@@ -109,7 +109,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 3.583404,
+      "_score": 4.3862834,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -136,7 +136,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 3.2561908,
+      "_score": 3.9709737,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -161,7 +161,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.753367,
+      "_score": 3.3363123,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -181,7 +181,7 @@ Object {
       },
     },
   ],
-  "max_score": 3.8587623,
+  "max_score": 4.733461,
   "total": 8,
 }
 `;

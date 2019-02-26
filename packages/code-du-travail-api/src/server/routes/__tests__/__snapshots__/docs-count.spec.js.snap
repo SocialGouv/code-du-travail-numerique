@@ -5,16 +5,16 @@ Object {
   "sources": Object {
     "buckets": Array [
       Object {
+        "doc_count": 3,
+        "key": "fiches_ministere_travail",
+      },
+      Object {
         "doc_count": 2,
         "key": "code_du_travail",
       },
       Object {
         "doc_count": 2,
         "key": "faq",
-      },
-      Object {
-        "doc_count": 2,
-        "key": "fiches_ministere_travail",
       },
       Object {
         "doc_count": 2,
@@ -35,6 +35,10 @@ Object {
       Object {
         "doc_count": 2,
         "key": "themes",
+      },
+      Object {
+        "doc_count": 1,
+        "key": "snippet",
       },
     ],
     "doc_count_error_upper_bound": 0,
