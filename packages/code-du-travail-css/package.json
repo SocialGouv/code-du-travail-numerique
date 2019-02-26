@@ -7,11 +7,11 @@
     "type": "git",
     "url": "git+https://github.com/SocialGouv/code-du-travail-css.git"
   },
-  "main": "docs/bundle.css",
+  "main": "bundle.css",
   "license": "Apache-2.0",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "postcss --config postcss.config.js docs/css/styles.css --output docs/bundle.css",
+    "build": "postcss --config postcss.config.js src/styles.css --output bundle.css",
     "dev": "npm run build -- --watch --verbose"
   },
   "devDependencies": {

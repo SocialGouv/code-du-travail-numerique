@@ -1,0 +1,152 @@
+/* Fonts.
+https://calendar.perfplanet.com/2016/no-font-face-bulletproof-syntax/
+https://fontlibrary.org/fr/font/evolventa
+https://fontlibrary.org/fr/font/source-sans-pro
+--------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(src/assets/fonts/muli-latin-400.woff2) format("woff2"),
+    url(src/assets/fonts/muli-latin-400.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Muli";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(src/assets/fonts/muli-latin-700.woff2) format("woff2"),
+    url(src/assets/fonts/muli-latin-700.woff) format("woff");
+}
+
+/* Variables.
+--------------------------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --color-black: #0c0c0e;
+  --color-almost-black: #26353f;
+  --color-blue: #0053b3; /* https://webaim.org/resources/contrastchecker/?bcolor=005c99&fcolor=ffffff */
+  --color-blue-light: #006be6;
+  --color-blue-dark: #003b80;
+
+  --color-element-background: #f5f7fa;
+  --color-element-border: #c9d3df;
+  --color-white: #fff;
+
+  --color-lighter-grey: #ebeff3;
+  --color-light-grey: #c9d3df;
+  --color-grey: #adb9c9;
+  --color-dark-grey: #8393a7;
+  --color-darker-grey: #53657d;
+
+  --color-title: #006ab2; /* https://webaim.org/resources/contrastchecker/?bcolor=006AB2&fcolor=ffffff */
+
+  /* https://webaim.org/resources/contrastchecker/?bcolor=f9f9fc&fcolor=4c5467 */
+  --color-light-background: #f9f9fc;
+  --color-light-text: #4c5467; /* Also used as fill color in SVG files. */
+  /* https://webaim.org/resources/contrastchecker/?bcolor=ebeff3&fcolor=434956 */
+  --color-dark-background: #ebeff3;
+  --color-dark-text: #434956;
+
+  /* https://webaim.org/resources/contrastchecker/?bcolor=005994&fcolor=ffffff */
+  --color-primary-background: #005994;
+  --color-primary-text: var(--color-white);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=c4c4c4&fcolor=0c0c0e */
+  --color-secondary-background: #eaeaea;
+  --color-secondary-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=2cb54c&fcolor=0c0c0e */
+  --color-success-background: #e0f2bd;
+  --color-success-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=b1e2f8&fcolor=0c0c0e */
+  --color-info-background: #d7e8f9;
+  --color-info-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=ffc107&fcolor=0c0c0e */
+  --color-warning-background: #fee5ad;
+  --color-warning-text: var(--color-black);
+  /* https://webaim.org/resources/contrastchecker/?bcolor=aa1d2b&fcolor=ffffff */
+  --color-danger-background: #f6bcc2;
+  --color-danger-text: var(--color-black);
+
+  --color-mark-background: #fff28e;
+
+  /* Form focus */
+  --color-focus: #80bdff;
+  --color-focus-shadow: #bfdeff;
+
+  /* Breakpoints */
+  @custom-media --bp-desktop (max-width: 1200px);
+  @custom-media --bp-tablet (max-width: 980px);
+  @custom-media --bp-mobile (max-width: 600px);
+
+  --bp-desktop: 1200px;
+  --bp-tablet: 980px;
+  --bp-mobile: 600px;
+
+  /* Border radius */
+  --border-radius-base: 0.25rem;
+
+  /* Spacing */
+  --spacing-xsmall: 0.5rem;
+  --spacing-small: 0.625rem;
+  --spacing-base: 1rem;
+  --spacing-medium: 1.25rem;
+  --spacing-large: 2.5em;
+  --spacing-inter-component: var(--spacing-medium);
+
+  /* Font-size
+    Setting the font size on the body to 1rem sets the text size to the
+    browser's default font size: usually 16px.
+
+    Then:
+    20px = 1.25rem => (20 * 1) / 16
+    12px => 0.75rem
+    10px => 0.625rem
+    etc.
+    --------------------------------------------------------------------------- */
+  --font-size-base: 1rem;
+  --line-height-base: 1.4;
+  --font-size-xsmall: 0.8rem;
+  --font-size-small: 0.9rem;
+
+  --font-size-h1: 1.6rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.4rem;
+  --font-size-h4: 1.3rem;
+  --font-size-h5: 1.2rem;
+  --font-size-h6: 1.1rem;
+
+  /* Box-shadow: `offset-x offset-y blur-radius spread-radius color`
+
+    The first value sets the x-offset of the light source.
+    The second value sets y-offset of the light source.
+    The third value sets a blur effects (makes the shadow non-uniform).
+    The fourth value sets a spread (contract the shadow when negative).
+    --------------------------------------------------------------------------- */
+  --box-shadow-bottom: 0 10px 10px -10px #b7bcdf;
+  --box-shadow: 0 5px 10px 0 var(--color-light-grey);
+}
+
+/* Custom media queries.
+--------------------------------------------------------------------------- */
+
+@custom-media --breakpoint-mobile (max-width: 600px);
+
+/* Focus ring.
+--------------------------------------------------------------------------- */
+
+:focus {
+  outline: 1px solid var(--color-outline);
+  box-shadow: 0 0 0.15rem 0.15rem var(--color-focus-shadow);
+}
+
+/* WebKit gets its native focus styles. */
+/*@media (-webkit-min-device-pixel-ratio: 0) {
+  :focus {
+    outline: 1px solid var(--color-outline);
+    box-shadow: 0 0 2px 2px var(--color-outline-shadow);
+  }
+}*/
