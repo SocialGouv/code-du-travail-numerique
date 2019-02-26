@@ -21,6 +21,7 @@ exports[`<ChoixCCN /> should display cc list  1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="has-convention"
               type="radio"
               value="yes"
@@ -145,6 +146,7 @@ exports[`<ChoixCCN /> should render 1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="has-convention"
               type="radio"
               value="no"
@@ -200,6 +202,7 @@ exports[`<ChoixCCN /> should update view when update checkbox  1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="has-convention"
               type="radio"
               value="no"

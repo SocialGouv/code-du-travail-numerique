@@ -21,6 +21,7 @@ exports[`<Salaire /> should render mixed work period 1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="has-temps-partiel"
               type="radio"
               value="yes"
@@ -283,6 +284,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="has-temps-partiel"
               type="radio"
               value="no"
@@ -484,6 +486,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             class="sc-bwzfXH lbnHsv"
           >
             <input
+              checked=""
               name="has-temps-partiel"
               type="radio"
               value="no"
