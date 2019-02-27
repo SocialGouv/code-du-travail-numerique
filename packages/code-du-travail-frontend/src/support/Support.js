@@ -30,7 +30,7 @@ class Support extends React.Component {
   };
 
   updateRoute() {
-    Router.pushRoute("index", {
+    Router.pushRoute("annuaire", {
       q: this.state.q,
       coord: this.state.coord,
       facet: "annuaire"
