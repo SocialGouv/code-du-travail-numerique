@@ -33,7 +33,7 @@ exports[`<FeedbackForm /> should render 1`] = `
     >
       <li>
         <a
-          href="/undefined/result-slug?q=Initial%20query&search=0"
+          href="/undefined/result-slug?q=Initial%20query"
         >
           item title
         </a>
