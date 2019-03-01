@@ -41,6 +41,25 @@ $ docker-compose run --rm python pipenv run python /app/search/indexing/create_i
 $ yarn dev
 ```
 
+You can see which data will be indexed into ES by using the `--verbose` option:
+
+```sh
+# Pour vérifier les données du code du travail :
+# 1) Données accompagnées des "tags" extraits de ePoseidon :
+$ docker-compose run --rm python pipenv run python /app/search/extraction/code_du_travail/eposeidon_tags/data.py -v
+# 2) Données accompagnées des "tags" renommés humainement :
+$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/code_du_travail/cleaned_tags/data.py -v
+
+# Pour vérifier les données des fiches Ministère du Travail :
+$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/fiches_ministere_travail/data.py -v
+
+# Pour vérifier les données des fiches services public :
+$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/fiches_service_public/data.py -v
+
+# Pour vérifier les données des synonymes :
+$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/synonyms/data.py -v
+```
+
 ### Build
 
 ```sh
