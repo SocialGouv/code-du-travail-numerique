@@ -1,4 +1,5 @@
 const synonyms = require("@cdt/data...synonyms");
+const stopwords = require("@cdt/data...stopwords");
 
 const filter = {
   // Normalize acronyms so that no matter the format, the resulting token will be the same.
@@ -15,6 +16,15 @@ const filter = {
     type: "elision",
     articles_case: true,
     articles: [
+      "l",
+      "m",
+      "t",
+      "qu",
+      "n",
+      "s",
+      "j",
+      "d",
+      "c",
       "jusqu",
       "quoiqu",
       "lorsqu",
@@ -41,7 +51,7 @@ const filter = {
   },
   french_stop: {
     type: "stop",
-    stopwords: "_french_"
+    stopwords: stopwords
   }
 };
 
@@ -70,6 +80,10 @@ const analyzer = {
     tokenizer: "icu_tokenizer",
     char_filter: ["startwith"],
     filter: ["french_elision", "icu_folding", "french_stop", "french_stemmer"]
+  },
+  article_id_analyzer: {
+    tokenizer: "article_id_tokenizer",
+    filter: ["lowercase", "french_acronyms"]
   }
 };
 
@@ -81,8 +95,16 @@ const char_filter = {
   }
 };
 
+const tokenizer = {
+  article_id_tokenizer: {
+    type: "simple_pattern",
+    pattern: "[LRD].*[0123456789]{4}.?[0123456789]{1,3}"
+  }
+};
+
 module.exports = {
   char_filter,
   analyzer,
-  filter
+  filter,
+  tokenizer
 };

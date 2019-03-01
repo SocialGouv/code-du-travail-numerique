@@ -1,5 +1,5 @@
 const client = require("../src/server/conf/elasticsearch");
-const { analyzer, filter, char_filter } = require("./es_analysis");
+const { analyzer, filter, char_filter, tokenizer } = require("./es_analysis");
 const { logger } = require("../src/server/utils/logger");
 const documentMapping = require("./cdtn_document_mapping");
 const documentsData = require("./cdtn_document_data.json");
@@ -30,7 +30,8 @@ async function createIndex(indexName, mapping, data) {
             analysis: {
               filter,
               analyzer,
-              char_filter
+              char_filter,
+              tokenizer
             }
           }
         },
