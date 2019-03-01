@@ -15,6 +15,10 @@ code_du_travail_numerique_mapping = {
         'title': {
             'type': 'text',
             'fields': {
+                'article_id': {
+                  'type': 'text',
+                  'analyzer': 'article_id_analyzer'
+                },
                 'french': {
                     'type': 'text',
                     'analyzer': 'french',

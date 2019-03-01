@@ -93,6 +93,13 @@ analyzers = {
             'french_stemmer',
         ],
     },
+    'article_id_analyzer': {
+        'tokenizer': 'article_id_tokenizer',
+        'filter': [
+            'lowercase',
+            'french_acronyms'
+        ]
+    }
 }
 
 
@@ -101,5 +108,12 @@ char_filters = {
         'type': 'pattern_replace',
         'pattern': '^(.*)',
         'replacement': '__start__ $1'
+    }
+}
+
+tokenizers = {
+    'article_id_tokenizer': {
+        'type': 'simple_pattern',
+        'pattern': '[LRD].*[0123456789]{4}.?[0123456789]{1,3}'
     }
 }
