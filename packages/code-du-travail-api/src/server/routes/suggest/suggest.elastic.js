@@ -4,12 +4,11 @@ function getSearchBody({ query, size = 5, excludeSources = [] }) {
     _source: ["title", "source", "slug", "anchor", "url"],
     query: {
       bool: {
-        must_not: excludeSources.map(source => ({
-          query_string: {
-            default_field: "source",
-            query: source.trim()
+        must_not: {
+          terms: {
+            source: excludeSources
           }
-        })),
+        },
         must: [
           {
             bool: {
@@ -47,6 +46,13 @@ function getSearchBody({ query, size = 5, excludeSources = [] }) {
             match_phrase: {
               text: {
                 query: query
+              }
+            }
+          },
+          {
+            match: {
+              "tags.theme": {
+                query: `theme:${query}`
               }
             }
           },

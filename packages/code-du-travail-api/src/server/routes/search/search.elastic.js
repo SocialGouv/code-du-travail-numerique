@@ -22,12 +22,11 @@ function getSearchBody({ query, size, excludeSources = [] }) {
     },
     query: {
       bool: {
-        must_not: excludeSources.map(source => ({
-          query_string: {
-            default_field: "source",
-            query: source.trim()
+        must_not: {
+          terms: {
+            source: excludeSources
           }
-        })),
+        },
         must: [
           {
             bool: {
