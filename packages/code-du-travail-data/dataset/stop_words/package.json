@@ -1,0 +1,7 @@
+{
+  "name": "@cdt/data...stopwords",
+  "version": "1.8.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT"
+}
