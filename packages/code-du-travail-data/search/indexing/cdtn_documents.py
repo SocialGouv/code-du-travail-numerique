@@ -81,13 +81,15 @@ def populate_cdtn_documents():
     for val in FICHES_SERVICE_PUBLIC:
         CDTN_DOCUMENTS.append({
             'source': 'fiches_service_public',
-            'text': val['text'],
+            'all_text': f"{val['title']} {val['text']}",
+            'date': val['date'],
+            'ficheId': val['id'],
+            'raw': val['raw'],
             'slug': slugify(val['title'], to_lower=True),
-            'title': val['title'],
-            'html': val["html"],
             'tags': val['tags'],
+            'text': val['text'],
+            'title': val['title'],
             'url': val['url'],
-            'date': val.get('date'),
         })
 
     logger.info("Load %s documents from fiches-ministere-travail", len(FICHES_MINISTERE_TRAVAIL))
