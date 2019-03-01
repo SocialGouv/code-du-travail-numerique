@@ -1,5 +1,7 @@
+from search import settings
 from search.extraction.synonyms.data import SYNONYMS
-from search.indexing.stop_words import STOP_WORDS
+from search.extraction.stop_words.data import STOP_WORDS
+
 
 filters = {
     # Normalize acronyms so that no matter the format, the resulting token will be the same.
@@ -51,7 +53,7 @@ filters = {
     },
     'french_stop': {
         'type': 'stop',
-        'stopwords': STOP_WORDS,
+        'stopwords': STOP_WORDS
     },
 }
 
