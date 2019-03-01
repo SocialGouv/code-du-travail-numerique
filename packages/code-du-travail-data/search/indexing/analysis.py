@@ -1,4 +1,3 @@
-from search import settings
 from search.extraction.synonyms.data import SYNONYMS
 from search.extraction.stop_words.data import STOP_WORDS
 
