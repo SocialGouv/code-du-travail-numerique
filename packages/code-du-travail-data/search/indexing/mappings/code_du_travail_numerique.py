@@ -12,17 +12,14 @@ code_du_travail_numerique_mapping = {
         'url': {
             'type': 'keyword',
         },
-        # A field that concatenate `title` and `text` fields.
-        'all_text': {
-            'type': 'text',
-            'analyzer': 'french',
-            'store': True,
-        },
         'title': {
             'type': 'text',
-            'analyzer': 'french',
-            'search_analyzer': 'french_indexing',
             'fields': {
+                'french': {
+                    'type': 'text',
+                    'analyzer': 'french',
+                    'search_analyzer': 'french_indexing',
+                },
                 'french_stemmed': {
                     'type': 'text',
                     'analyzer': 'french_stemmed',
@@ -31,7 +28,12 @@ code_du_travail_numerique_mapping = {
         },
         'text': {
             'type': 'text',
-            'analyzer': 'french',
+            'fields': {
+                'french': {
+                    'type': 'text',
+                    'analyzer': 'french',
+                },
+            },
         },
         # Currently only available for `Fiches service public`.
         'tags': {
@@ -57,7 +59,7 @@ code_du_travail_numerique_mapping = {
             'type': 'keyword',
             'fields': {
                 'text': {
-                  "type": "text"
+                  'type': 'text'
                 }
             }
         },
