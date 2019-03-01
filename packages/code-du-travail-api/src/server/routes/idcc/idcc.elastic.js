@@ -1,7 +1,7 @@
 function getIdccBody({ query }) {
   return {
     size: 1000,
-    _source: ["title", "url", "ape", "idcc"],
+    _source: ["title", "url", "idcc"],
     query: {
       bool: {
         filter: [
@@ -14,7 +14,7 @@ function getIdccBody({ query }) {
         must: {
           multi_match: {
             query,
-            fields: ["title", "ape", "idcc.*"]
+            fields: ["title", "idcc.*"]
           }
         },
         should: [

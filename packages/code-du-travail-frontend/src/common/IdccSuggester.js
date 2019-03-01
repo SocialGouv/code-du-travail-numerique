@@ -19,7 +19,7 @@ export class IdccSuggester extends React.Component {
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         renderSuggestionsContainer={renderSuggestionsContainer}
-        placeholder="Convention collective ou code NAF"
+        placeholder="Convention collective"
         theme={suggesterTheme}
       />
     );
@@ -57,8 +57,8 @@ const Suggestion = styled.div`
 const renderSuggestion = suggestion => {
   return (
     <Suggestion>
-      {suggestion.idcc
-        ? `IDCC ${suggestion.idcc} - ${suggestion._source.title}`
+      {suggestion._source.idcc
+        ? `IDCC ${suggestion._source.idcc} - ${suggestion._source.title}`
         : suggestion._source.title}
     </Suggestion>
   );

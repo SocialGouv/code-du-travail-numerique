@@ -48,7 +48,7 @@ class Kali extends React.Component {
               <ExternalLink
                 style={{ verticalAlign: "middle", marginRight: 10 }}
               />
-              {data._source.title}
+              Contenu intégral de la convention sur Legifrance
             </Button>{" "}
           </a>
         </Answer>

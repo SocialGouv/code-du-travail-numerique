@@ -39,19 +39,13 @@ module.exports = routes()
     pattern: "/modeles-de-courriers/:slug"
   })
 
-  // http://localhost:3000/convention-collective-kali/boulangerie
+  // http://localhost:3000/kali/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
   .add({
     name: "kali",
     page: "kali",
     pattern: "/kali/:slug"
   })
 
-  // http://localhost:3000/convention-collective-idcc/boulangerie
-  .add({
-    name: "idcc",
-    page: "idcc",
-    pattern: "/idcc/:slug"
-  })
   // http://localhost:3000/outils/indemnite-licenciement
   .add({
     name: "outils",

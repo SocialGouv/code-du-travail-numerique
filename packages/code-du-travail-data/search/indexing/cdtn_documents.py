@@ -48,39 +48,18 @@ def make_slug(text, seed):
 
 
 def populate_cdtn_documents():
-    with open(os.path.join(settings.BASE_DIR, 'dataset/kali/idcc-kali-ape.json')) as json_data:
+    with open(os.path.join(settings.BASE_DIR, 'dataset/kali.json')) as json_data:
         data = json.load(json_data)
         logger.info("Load %s documents from kali", len(data))
         for val in data:
             CDTN_DOCUMENTS.append({
                 'source': 'kali',
-                'id': val['cid'],
-                'slug': slugify(val['titre'], to_lower=True),
+                'id': val['id'],
+                'slug': f"{val['num']}-{slugify(val['titre'], to_lower=True)[:80]}",
                 'title': val['titre'],
                 'url': val['url'],
-                'ape': " ".join(val.get('ape') or []),
-                'idcc': val.get('idcc'),
+                'idcc': val['num'],
             })
-
-    with open(os.path.join(settings.BASE_DIR, 'dataset/idcc-tags.json')) as idcc_tags_data:
-        tags_data = json.load(idcc_tags_data)
-        with open(os.path.join(settings.BASE_DIR, 'dataset/idcc.json')) as json_data:
-            data = json.load(json_data)
-            logger.info("Load %s documents from idcc", len(data))
-            for key, val in data.items():
-                title = "IDCC " + key + " : " +  val
-                tags = []
-                if tags_data.get(key) and tags_data.get(key).get("tags"):
-                    tags += parse_hash_tags(tags_data.get(key).get("tags"))
-
-                CDTN_DOCUMENTS.append({
-                    'source': 'idcc',
-                    'id': key,
-                    'slug': key,
-                    'title': title,
-                    'tags':tags,
-                    'all_text': title
-                })
 
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():

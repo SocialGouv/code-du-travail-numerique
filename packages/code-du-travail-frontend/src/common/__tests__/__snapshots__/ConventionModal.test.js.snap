@@ -43,7 +43,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             Convention collective
           </h2>
           <div>
-            Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+            Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
               class="sc-htpNat iJpthS"
             >
@@ -60,7 +60,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   autocomplete="off"
                   class="full-width"
                   name="query"
-                  placeholder="Convention collective ou code NAF"
+                  placeholder="Convention collective"
                   type="search"
                   value=""
                 />

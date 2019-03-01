@@ -1,50 +1,17 @@
-var fetch = require("node-fetch");
-const cheerio = require("cheerio");
-const ora = require("ora");
-const { batchPromise } = require("./utils");
-const kali = require("./kali.json");
-const apeByIdcc = require("./apeByIdcc.json");
-
-function getPage(item) {
-  return fetch(item.url)
-    .then(response => response.text())
-    .then(result => cheerio.load(result))
-    .then($ => {
-      const idccLabel = $(".contexte .soustitre");
-      const [, idcc] = idccLabel.text().split(" ");
-      if (!idcc) {
-        return {
-          ...item,
-          ape: [],
-          idcc: ""
-        };
-      }
-      const idccApeKey = ("0000" + idcc).slice(-5);
-      return {
-        ...item,
-        ape: apeByIdcc[idccApeKey],
-        idcc: idcc
-      };
-    });
-}
-
-const updateSpinner = spinner => ({ progress, total }) => {
-  spinner.text = `fetching ${progress}/${total}`;
-};
-
-async function parseAll(list) {
-  const spinner = ora(`fetching 0/${list.length}`).start();
-  const progress = updateSpinner(spinner);
-  try {
-    results = await batchPromise(list, 10, getPage, progress);
-    spinner.stop().clear();
-    console.log(JSON.stringify(results, null, 2));
-  } catch (error) {
-    spinner.stop().clear();
-    console.error(error);
-  }
-}
+const axios = require('axios');
 
 if (module === require.main) {
-  parseAll(kali);
+  const url = "https://api.kali.num.social.gouv.fr/v1/base/KALI/conteneurs?nature=IDCC&etat=VIGUEUR&etat=VIGUEUR_ETEN&etat=VIGUEUR_NON_ETEN";
+  axios.get(url)
+    .then(function (response) {
+      const rows = response.data.map(row => ({
+        ...row,
+        url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${row.id}`,
+        // pdf: `https://www.legifrance.gouv.fr/download_code_pdf.do?pdf=${row.id}&cidTexte=${row.id}`
+        // the pdf url calls it a cid but actually uses the text id
+        // the pdf is actually generated for the base texte, so it makes little sense
+        // to have it at this level.
+      }))
+      console.log(JSON.stringify(rows, null, 2));
+    })
 }

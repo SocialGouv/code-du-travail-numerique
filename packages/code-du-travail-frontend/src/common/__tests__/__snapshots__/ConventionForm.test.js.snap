@@ -7,7 +7,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
       Convention collective
     </h2>
     <div>
-      Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+      Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
       <div
         class="sc-bdVaJa byrdwB"
       >
@@ -43,6 +43,8 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
               y2="3"
             />
           </svg>
+          IDCC 
+           - 
           foo
         </a>
         <div
@@ -119,7 +121,7 @@ exports[`<ConventionForm /> should render 1`] = `
       Convention collective
     </h2>
     <div>
-      Saisissez l'identifiant de convention collective (IDCC), le nom de la branche, ou le code NAF :
+      Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
       <div
         class="sc-bdVaJa byrdwB"
       >
