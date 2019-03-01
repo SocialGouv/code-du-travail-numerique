@@ -15,15 +15,6 @@ const filter = {
     type: "elision",
     articles_case: true,
     articles: [
-      "l",
-      "m",
-      "t",
-      "qu",
-      "n",
-      "s",
-      "j",
-      "d",
-      "c",
       "jusqu",
       "quoiqu",
       "lorsqu",
@@ -51,13 +42,6 @@ const filter = {
   french_stop: {
     type: "stop",
     stopwords: "_french_"
-  },
-  shingle: {
-    type: "shingle",
-    min_shingle_size: 2,
-    max_shingle_size: 5,
-    output_unigrams: false,
-    filler_token: ""
   }
 };
 
