@@ -1,7 +1,9 @@
+// node --max-old-space-size=4096 index.js
 const fs = require("fs");
 const util = require("util")
 const xmlStringToJsObject = require("xml-js").xml2js;
 const uniqBy = require("lodash.uniqby");
+const filter = require("./filter");
 const format = require("./format");
 
 const read = path => fs.readFileSync(path).toString();
@@ -20,16 +22,17 @@ const parsedFiches = fiches.map(fiche => xmlStringToJsObject(fiche, {
   ignoreDeclaration: true,
   ignoreDoctype:  true,
   ignoreInstruction: true,
-  elementsKey: "children",
-  attributesKey: "attr",
-  textKey: "value"
+  elementsKey: "$",
+  attributesKey: "_",
+  textKey: "$"
 }))
 
-const formatedFiches = parsedFiches
+const filteredFiches = filter(uniqBy(parsedFiches, (fiche) => fiche.$[0]._.ID));
+
+const formatedFiches = filteredFiches
   .map((fiche) => format(fiche))
   .filter(Boolean);
-/*
+
   if (module === require.main) {
-    console.log(JSON.stringify(uniqBy(formatedFiches, "url"), null, 2));
+    fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(formatedFiches, null, 2));
   }
-*/

@@ -1,87 +1,56 @@
+const getChildren = (element, name) => element.$.find(el => el.name === name);
 
-const findChildrenByName = (element, name) => element.children.find(el => el.name === name);
-const getText = element => element.children.find(el => el.type === "text").value
-
-const getTextDeep = element => null;
+// Beware, this one is recursive
+function getText(element = { text: "" }, joint = " ") {
+  if (element.type === "text") {
+    return element.$.trim();
+  }
+  if (element.$) {
+    return element.$
+      .map((children) => getText(children, joint))
+      .join(joint);
+  }
+  return "";
+}
 
 
 const format = fiche => {
 
-  if (!fiche.children[0].name === "Publication") return null;
+  if (!fiche.$[0].name === "Publication") return null;
 
-  const publication = fiche.children[0];
-  const { ID: id } = publication.attr;
+  const publication = fiche.$[0];
+  const { ID: id } = publication._;
 
-  const title = getText(findChildrenByName(publication, "dc:title"));
-  const dateRaw = getText(findChildrenByName(publication, "dc:date"));
-  const audience = getText(findChildrenByName(publication, "Audience"));
+  const title = getText(getChildren(publication, "dc:title"));
 
-  // tags
-  // Retirer ['Accueil particuliers', 'Travail']
-  const ariane = findChildrenByName(publication, "FilDAriane");
-  const sousThemePere = findChildrenByName(publication, "SousThemePere");
-  const dossierPere = findChildrenByName(publication, "DossierPere");
-  
-  // text
-  const intro = findChildrenByName(publication, "Introduction");
-  const texte = findChildrenByName(publication, "Texte");
-  const ListeSituations = findChildrenByName(publication, "ListeSituations");
-/*
-
-  TAGS_IRRELEVANT = ['Accueil particuliers', 'Travail']
-
-  text = item.get('intro', '') + item.get('text', '') + item.get('situations', '')
-  if not text:
-      logger.warning('No text found for title: %s\n%s', item['title'], item['url'])
-
-  # Replace new lines by spaces.
-  text = ' '.join(text.split('\n'))
-  # Replace multiple spaces by a single space.
-  text = ' '.join(text.split())
-
-  # Merge everything that look like a tag, remove duplicate values.
-  tags = list(set(
-      [item['sousTheme']] if 'sousTheme' in item else []
-      + item['tags']
-      + [item for item in item['ariane'] if item not in TAGS_IRRELEVANT]
-      + item['fiches']
-      + item['sousDossiers']
-  ))
-*/
-
+  const dateRaw = getText(getChildren(publication, "dc:date"));
   const [year, month, day] = dateRaw.split(" ")[1].split("-");
-
   const date = `${day}/${month}/${year}`;
 
+  const audience = getText(getChildren(publication, "Audience"));
   const urlSlug = audience === "Particuliers" ? "particuliers" : "professionnels-entreprises";
   const url = `https://www.service-public.fr/${urlSlug}/vosdroits/${id}`;
 
- /*
-  // Get text
-  const intro = 
-  */
+  const joint = "#";
+  const meaninglessCrumbs = ["Accueil particuliers", "Travail"];
+  const ariane = getText(getChildren(publication, "FilDAriane"), joint)
+    .split(joint)
+    .filter(crumb => !meaninglessCrumbs.includes(crumb));
+  const sousThemePere =  getText(getChildren(publication, "SousThemePere"), joint).split(joint);
+  const dossierPere = getText(getChildren(publication, "DossierPere"), joint).split(joint);
+  const tags = Array.from(new Set(ariane.concat(sousThemePere, dossierPere)));
 
-
-  if (id === "F2883") {
-    console.log(
-      JSON.stringify({
-        date,
-        id,
-        raw: { ...fiche },
-        // tags,
-        // text,
-        title,
-        url
-      }, null, 2)
-    );
-  }
+  const intro = getText(getChildren(publication, "Introduction"));
+  const texte = getText(getChildren(publication, "Texte"));
+  const ListeSituations = getText(getChildren(publication, "ListeSituations"));
+  const text = intro + " " + texte + " " + ListeSituations;
 
   return {
     date,
     id,
-    raw: { ...fiche },
-    // tags,
-    // text,
+    raw: { ...publication },
+    tags,
+    text,
     title,
     url
   }
