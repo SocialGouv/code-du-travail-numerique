@@ -8,7 +8,7 @@ const read = path => fs.readFileSync(path).toString();
 
 const getFiches = path => fs
   .readdirSync(path)
-  .filter(file => file.match(/[A-Z]{1}[0-9]+/))
+  .filter(file => file.match(/F[0-9]+/))
   .map(file => read(`${path}/${file}`))
 
 const fichesParticuliers = getFiches("./data/vosdroits-particuliers");

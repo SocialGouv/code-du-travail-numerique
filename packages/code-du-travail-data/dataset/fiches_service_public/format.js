@@ -47,6 +47,7 @@ const format = fiche => {
 
   return {
     date,
+    id,
     raw: JSON.stringify(publication),
     tags,
     text,
