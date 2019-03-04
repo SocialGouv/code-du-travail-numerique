@@ -24,10 +24,10 @@ def populate_fiches_service_public(json_file=JSON_FICHES):
         fiches = json.load(json_data)
 
         for fiche in fiches:
-          FICHES_SERVICE_PUBLIC.append(fiche)
+            FICHES_SERVICE_PUBLIC.append(fiche)
 
-          logger.debug('-' * 80)
-          logger.debug(pformat(fiche))
+            logger.debug('-' * 80)
+            logger.debug(pformat(fiche))
 
 
 if __name__ == '__main__':
