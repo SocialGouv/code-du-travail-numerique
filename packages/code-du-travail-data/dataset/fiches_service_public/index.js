@@ -34,5 +34,5 @@ const formatedFiches = filteredFiches
   .filter(Boolean);
 
   if (module === require.main) {
-    fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(formatedFiches, null, 2));
+    fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(formatedFiches));
   }
