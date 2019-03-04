@@ -1,5 +1,4 @@
 const fs = require("fs");
-const util = require("util")
 const xmlStringToJsObject = require("xml-js").xml2js;
 const uniqBy = require("lodash.uniqby");
 const filter = require("./filter");

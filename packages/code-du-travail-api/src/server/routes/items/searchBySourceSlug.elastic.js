@@ -13,6 +13,7 @@ function getSearchBody({ source, slug }) {
       "title",
       "url",
       "html",
+      "raw", // service-public
       "slug", // outils
       "date_debut", // code-du-travail
       "date_fin", // code-du-travail
