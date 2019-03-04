@@ -1,4 +1,3 @@
-// node --max-old-space-size=4096 index.js
 const fs = require("fs");
 const util = require("util")
 const xmlStringToJsObject = require("xml-js").xml2js;
@@ -34,5 +33,5 @@ const formatedFiches = filteredFiches
   .filter(Boolean);
 
   if (module === require.main) {
-    fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(formatedFiches));
+    fs.writeFileSync("./fiches-sp-travail.json", JSON.stringify(formatedFiches, null, 2));
   }
