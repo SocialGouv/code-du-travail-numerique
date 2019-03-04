@@ -80,17 +80,17 @@ def populate_cdtn_documents():
         data = json.load(json_data)
         logger.info("Load %s documents from fiches-service-public", len(data))
         for val in data:
-          CDTN_DOCUMENTS.append({
-              'source': 'fiches_service_public',
-              'all_text': f"{val['title']} {val['text']}",
-              'date': val['date'],
-              'raw': val['raw'],
-              'slug': slugify(val['title'], to_lower=True),
-              'tags': val['tags'],
-              'text': val['text'],
-              'title': val['title'],
-              'url': val['url'],
-          })
+            CDTN_DOCUMENTS.append({
+                'source': 'fiches_service_public',
+                'all_text': f"{val['title']} {val['text']}",
+                'date': val['date'],
+                'raw': val['raw'],
+                'slug': slugify(val['title'], to_lower=True),
+                'tags': val['tags'],
+                'text': val['text'],
+                'title': val['title'],
+                'url': val['url'],
+            })
 
     logger.info("Load %s documents from fiches-ministere-travail", len(FICHES_MINISTERE_TRAVAIL))
     for val in FICHES_MINISTERE_TRAVAIL:
