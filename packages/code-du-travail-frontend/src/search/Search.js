@@ -10,12 +10,14 @@ import SearchIcon from "../icons/SearchIcon";
 import { getRouteBySource, getExcludeSources } from "../sources";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { suggestResults } from "./search.service";
+import { withClipboard } from "../common/withClipboard.hoc";
 
 const FormSearchButton = () => (
   <button type="submit" className="btn">
     Rechercher
   </button>
 );
+const SearchIconWithClipboard = withClipboard(SearchIcon);
 
 class Search extends React.Component {
   static propTypes = {
@@ -195,7 +197,7 @@ class Search extends React.Component {
               </header>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
-                  <SearchIcon className="search__input__icon" />
+                  <SearchIconWithClipboard className="search__input__icon" />
                   <label className="search__sources" htmlFor="contentSource">
                     <span className="hidden">Filtrer par type de contenu</span>
                     <ReponseIcon className="select-sources__icon" />
