@@ -3,10 +3,12 @@ const path = require("path");
 const axios = require("axios");
 const csv = require("csvtojson");
 const json2csv = require("json2csv");
+
+const { promisify } = require("util");
+
 const ora = require("ora");
 const pLimit = require("p-limit");
-
-const limit = pLimit(10);
+const GoogleSpreadsheets = require("google-spreadsheets");
 
 const {
   computeLineScore,
@@ -14,37 +16,64 @@ const {
   printResultsDetails
 } = require("../lib");
 
-const TestCasesFile = "results.csv";
+const spreadsheetKey = "1o6hf-Tm3rb5qMXRBId3aGuSt9tNalvxMsOkrbkHSbB4";
 const endpoint = "http://localhost:1337/api/v1/search";
 
+const limit = pLimit(10);
+
 const spinner = ora("testing search").start();
+
+const getCells = promisify(GoogleSpreadsheets.cells);
+
+const getCellValue = cell => cell.value;
 
 function updateSpinner(progress, total) {
   spinner.text = `search done: ${progress + 1}/${total}`;
 }
 
-async function processRequest(data, nbItem) {
-  const { Request: query } = data;
+async function getTestCases() {
+  const { cells } = await getCells({
+    key: spreadsheetKey,
+    worksheet: 1,
+    range: "A1:E100"
+  });
+
+  return Object.values(cells)
+    .slice(1) // remove header
+    .map(row => Object.values(row).map(getCellValue));
+}
+
+async function processRequest(testCase, csvResults, nbItem) {
+  const [query, ...expectedResults] = testCase;
+  const previousResults = csvResults.find(item => item.query === query);
   try {
     const response = await axios.get(`${endpoint}?q=${query}&size=20`);
     updateSpinner(nbItem - (limit.pendingCount + 1), nbItem);
-    return computeLineScore(data, response.data.hits.hits);
+    return computeLineScore({
+      query,
+      expectedResults,
+      previousResults,
+      hits: response.data.hits.hits
+    });
   } catch (error) {
     spinner.fail(error).start();
     return null;
   }
 }
+// eslint-disable-next-line no-console
+async function main({ reporter = console.log } = {}) {
+  const csvFile = path.join(__dirname, "testResults.csv");
+  const csvResults = await csv().fromFile(csvFile);
+  const testCases = await getTestCases();
 
-async function main({ reporter }) {
-  const csvFile = path.join(__dirname, TestCasesFile);
-
-  const csvData = await csv().fromFile(csvFile);
   const results = await Promise.all(
-    csvData.map(data => limit(() => processRequest(data, csvData.length)))
+    testCases.map(testCase =>
+      limit(() => processRequest(testCase, csvResults, testCases.length))
+    )
   );
   spinner.stop().clear();
   const csvString = json2csv.parse(results, {
-    fields: Object.keys(results[0])
+    fields: ["query", "score", "prevScore", "diffScore", "found"]
   });
   fs.writeFileSync(csvFile, csvString);
 
@@ -53,6 +82,5 @@ async function main({ reporter }) {
 }
 
 if (module === require.main) {
-  // eslint-disable-next-line no-console
-  main({ reporter: console.log });
+  main();
 }
