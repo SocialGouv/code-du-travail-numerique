@@ -1,0 +1,8 @@
+.deploy-kibana-k8s:
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  script:
+  - /apps/create-kubeconfig.sh
+  - kubectl apply -f k8s/kibana/deployment-kibana.yml
+  allow_failure: false

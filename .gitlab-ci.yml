@@ -1,0 +1,23 @@
+include:
+- '/k8s/kibana/.deploy-kibana-k8s.yml'
+
+variables:
+  IMAGE_INFRA_BASE_NAME: "infra/images-docker"
+
+
+stages:
+- "Deploy"
+
+deploy-kibana:
+  stage: "Deploy"
+  extends: .deploy-kibana-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
+    K8S_NAMESPACE: $K8S_NAMESPACE
+    K8S_USERNAME: $K8S_USERNAME
+    K8S_CONTEXT: $K8S_CONTEXT
+    K8S_TOKEN: $K8S_TOKEN
+  environment:
+    name: ops
