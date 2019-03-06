@@ -18,35 +18,36 @@ function translateSource(path) {
   );
 }
 
-export function withClipboard(Component) {
-  return class Hoc extends React.Component {
-    saveToClipboard = () => {
-      const el = document.createElement("textarea");
-      el.value = translateSource(document.location.pathname);
-
-      el.setAttribute("readonly", "");
-      el.style.position = "absolute";
-      el.style.left = "-9999px";
-      document.body.appendChild(el);
-      // If there is any content selected previously
-      // then save it
-      const selected =
-        document.getSelection().rangeCount > 0 // Check if there is any content selected previously
-          ? document.getSelection().getRangeAt(0)
-          : false;
-
-      el.select();
-      document.execCommand("copy");
-      document.body.removeChild(el);
-      // If a selection existed before copying, then reselect it
-      if (selected) {
-        document.getSelection().removeAllRanges();
-        document.getSelection().addRange(selected);
-      }
-    };
-
-    render() {
-      return <Component onClick={this.saveToClipboard} {...this.props} />;
-    }
+export function withClipboard(
+  Component,
+  saveToClipboard = savePathnameToClipBoard
+) {
+  return function withClipboardComponent(props) {
+    return <Component onClick={saveToClipboard} {...props} />;
   };
+}
+
+function savePathnameToClipBoard() {
+  const el = document.createElement("textarea");
+  el.value = translateSource(document.location.pathname);
+
+  el.setAttribute("readonly", "");
+  el.style.position = "absolute";
+  el.style.left = "-9999px";
+  document.body.appendChild(el);
+  // If there is any content selected previously
+  // then save it
+  const selected =
+    document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+      ? document.getSelection().getRangeAt(0)
+      : false;
+
+  el.select();
+  document.execCommand("copy");
+  document.body.removeChild(el);
+  // If a selection existed before copying, then reselect it
+  if (selected) {
+    document.getSelection().removeAllRanges();
+    document.getSelection().addRange(selected);
+  }
 }
