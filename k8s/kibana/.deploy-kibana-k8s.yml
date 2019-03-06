@@ -5,4 +5,5 @@
   script:
   - /apps/create-kubeconfig.sh
   - kubectl apply -f k8s/kibana/deployment-kibana.yml
+  - kubectl apply -f k8s/kibana/service-kibana.yml
   allow_failure: false
