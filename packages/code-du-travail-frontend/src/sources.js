@@ -22,10 +22,11 @@ const labelBySource = {
   code_du_travail: "Code du travail",
   conventions_collectives: "Legifrance",
   modeles_de_courriers: "Courrier Type",
-  themes: "themes",
-  outils: "outils",
+  themes: "Themes",
+  outils: "Outils",
   idcc: "Legifrance",
-  kali: "Legifrance"
+  kali: "Legifrance",
+  fiches: "Fiches"
 };
 
 export const getLabelBySource = src => labelBySource[src] || "";
