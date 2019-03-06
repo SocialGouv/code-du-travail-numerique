@@ -196,3 +196,13 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 - Travailler sur des features branches
 - Faire des [commits conventionnels](https://github.com/conventional-changelog/conventional-changelog)
 - Soumettre des PR sur la branche du sprint en cours
+
+## FAQ
+
+### J'ai rajouté un nouveau packages dans datasetmais il n'est pas trouvé lorsqu'on build l'api
+
+il faut le rajouter dans le fichier /packages/code-du-travail-api/Dockerfile
+
+```diff
++ COPY ./packages/code-du-travail-data/dataset/yolo/package.json /app/packages/code-du-travail-data/dataset/yolo/package.json
+```
