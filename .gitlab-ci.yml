@@ -6,7 +6,23 @@ variables:
 
 
 stages:
+- "Build & push Docker image"
 - "Deploy"
+
+
+build-and-push-elasticsearch-image:
+  stage: "Build & push Docker image"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - cd docker/elasticsearch
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:latest" .
+  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
+
 
 deploy-kibana:
   stage: "Deploy"
