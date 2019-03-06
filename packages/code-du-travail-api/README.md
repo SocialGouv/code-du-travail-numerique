@@ -47,3 +47,24 @@ docker-compose up -d
 ```shell
 http://localhost:1337/api/v1/search?q=incapacité%20travail
 ```
+
+## Tester les requêtes.
+
+Un script permet de tester la non régréssion du moteur de recherche lorsqu'on modifie la configuration d'Elasticsearch ou le contenu des requetes que l'on fait.
+
+Pour cela on se base sur un [fichier en ligne](https://docs.google.com/spreadsheets/d/e/2PACX-1vTBTINraToLx_LgkQtfr0BjGVm3VZ332vYsZsZ0Cc6TB3p5ukaPQ95yOod5Pzcr1R1amf26DJrm5b-Y/pubhtml?gid=0&single=true) qui regroupe l'ensemble de tests.
+
+Chaque document est identifié par un clé contenant `/${source}/${slug}`. Afin de récupérer cette information simplement, un click sur la loupe du champ de recherche vous permet d'avoir cette information directement dans le presse-papier. Il ne reste plus qu'à copier l'information dans la colone des documents attendus pour compléter le tests.
+![](https://user-images.githubusercontent.com/160320/53883257-c7621f00-4018-11e9-9ea9-c269fb66fd68.png)
+
+Le script génére aussi un rapport succint ainsi qu'un rapport détaillé et met à jour un fichier de résultats.
+Pour lancer le script, il est nécessaire d'avoir une instance en local d'elasticsearch ainsi que de l'api.
+
+```
+node /packages/code-du-travail-api/scripts/elastic.js
+```
+
+Le script accepte les paramètres suivants:
+
+- `-v, --verbose` affiche le rapport détaillé pour chaque tests
+- `-u, --update` met à jour le fichier de resultats
