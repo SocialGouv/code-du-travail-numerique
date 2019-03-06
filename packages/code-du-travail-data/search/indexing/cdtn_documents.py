@@ -57,6 +57,7 @@ def populate_cdtn_documents():
                 'id': val['id'],
                 'slug': f"{val['num']}-{slugify(val['titre'], to_lower=True)[:80]}",
                 'title': val['titre'],
+                'text': val['titre'],
                 'url': val['url'],
                 'idcc': val['num'],
             })
