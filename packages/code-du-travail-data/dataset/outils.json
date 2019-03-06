@@ -1,15 +1,22 @@
-[{
-  "titre": "calculateur d'indemnité de licenciement",
-  "code": "indemnite-licenciement",
-  "questions": [
+[
+  {
+    "titre": "calculateur d'indemnité de licenciement",
+    "code": "indemnite-licenciement",
+    "questions": [
       "Quelle est mon indemnité de licenciement",
-      "Comment calculer mon indemnité de licenciement"
-  ],
-  "theme": "Licenciement",
-  "themes": [300],
-  "type_de_contrat": ["CDI"],
-  "travailleur_particulier": [],
-  "catégorie": ["Ingénieur", "Cadres", "ETAM", "ouvriers", "employés"],
-  "date": "18/10/2018",
-  "branche": ""
-}]
+      "Comment calculer mon indemnité de licenciement",
+      "indemnité de licenciement pour inaptitude d'origine professionnelle",
+      "indemnité de licenciement pour inaptitude d'origine professionnelle",
+      "indemnité spéciale de licenciement pour inaptitude 'origine professionnelle",
+      "indemnité de licenciement en cas d'alternance temps plein temps partiel",
+      "calculez le montant d'une indemnité de licenciement en fonction de votre situation"
+    ],
+    "theme": "Licenciement",
+    "themes": [300,28300,21512],
+    "type_de_contrat": ["CDI"],
+    "travailleur_particulier": [],
+    "catégorie": ["Ingénieur", "Cadres", "ETAM", "ouvriers", "employés"],
+    "date": "18/10/2018",
+    "branche": ["industries chimiques","44"]
+  }
+]
