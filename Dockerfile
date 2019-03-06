@@ -14,6 +14,7 @@ COPY ./packages/code-du-travail-data/dataset/annuaire/package.json /app/packages
 COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
 COPY ./packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json /app/packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json
 COPY ./packages/code-du-travail-data/dataset/kali/package.json /app/packages/code-du-travail-data/dataset/kali/package.json
+COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
 COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
 COPY ./packages/code-du-travail-data/dataset/code_du_travail/eposeidon_script/package.json /app/packages/code-du-travail-data/dataset/code_du_travail/eposeidon_script/package.json
 

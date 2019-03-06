@@ -1,12 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`return article results when searching with article id 1`] = `
+Object {
+  "hits": Object {
+    "hits": Array [
+      Object {
+        "_id": "8",
+        "_index": "cdtn_document_test",
+        "_score": 7.2709517,
+        "_source": Object {
+          "slug": "article-r1225-18",
+          "source": "code_du_travail",
+          "title": "Article R1225-18",
+          "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
+        },
+        "_type": "cdtn_document_test",
+        "highlight": Object {
+          "title.article_id": Array [
+            "Article <mark>R1225-18</mark>",
+          ],
+          "title.french": Array [
+            "Article <mark>R1225</mark>-<mark>18</mark>",
+          ],
+        },
+      },
+    ],
+    "max_score": 7.2709517,
+    "total": 1,
+  },
+}
+`;
+
 exports[`return faq search results for demission  1`] = `
 Object {
   "hits": Array [
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 3.3363123,
+      "_score": 2.114319,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -14,13 +45,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "Le préavis de <mark>démission</mark> diffère suivant la",
         ],
-        "title": Array [
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
+        "title.french": Array [
           "Dans les HCR, quel est le préavis de <mark>démission</mark>",
         ],
       },
@@ -28,7 +56,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 2.4016047,
+      "_score": 1.7785039,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -36,19 +64,16 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "en arrêt maladie pendant le préavis de <mark>démission</mark>",
         ],
-        "title": Array [
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
+        "title.french": Array [
           "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
         ],
       },
     },
   ],
-  "max_score": 3.3363123,
+  "max_score": 2.114319,
   "total": 2,
 }
 `;
@@ -60,7 +85,7 @@ Object {
       Object {
         "_id": "17",
         "_index": "cdtn_document_test",
-        "_score": 20.196075,
+        "_score": 15.798565,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -70,28 +95,25 @@ Object {
         },
         "_type": "cdtn_document_test",
         "highlight": Object {
-          "text": Array [
+          "text.french": Array [
             "Doit percevoir un salaire au moins égal au <mark>SMIC</mark>",
             "conditions de droit privé.Un taux réduit du <mark>SMIC</mark>",
             "n’est pas contrôlable (certains VRP).Le <mark>SMIC</mark>",
             "emplois d’avenir.Sont exclus du bénéfice du <mark>SMIC</mark>",
           ],
-          "title": Array [
+          "title.french": Array [
             "Le <mark>SMIC</mark> : à qui s’applique le <mark>SMIC</mark> ?",
-          ],
-          "title.french_stemmed": Array [
-            "Le <mark>SMIC</mark> : <mark>à</mark> <mark>qui</mark> s’applique <mark>le</mark> <mark>SMIC</mark> ?",
           ],
         },
       },
     ],
-    "max_score": 20.196075,
+    "max_score": 15.798565,
     "total": 2,
   },
   "snippet": Object {
     "_id": "16",
     "_index": "cdtn_document_test",
-    "_score": 17.67381,
+    "_score": 13.786873,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
@@ -112,7 +134,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 4.733461,
+      "_score": 3.1720703,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -122,17 +144,14 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "La <mark>démission</mark> ne peut être exigée par avance",
           "aucune forme particulière pour présenter sa <mark>démission</mark>",
           "collectives prévoient d’ailleurs que la <mark>démission</mark>",
           "travail, le salarié a intérêt à remettre sa <mark>démission</mark>",
           "les contestations sur l’intention même de <mark>démissionner</mark>",
         ],
-        "title": Array [
-          "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
+        "title.french": Array [
           "La <mark>démission</mark> : comment présenter une <mark>démission</mark>",
         ],
       },
@@ -140,7 +159,7 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 4.529443,
+      "_score": 2.9479306,
       "_source": Object {
         "slug": "la-demission",
         "source": "themes",
@@ -148,13 +167,10 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "Vous souhaitez <mark>démissionner</mark>?",
         ],
-        "title": Array [
-          "La <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
+        "title.french": Array [
           "La <mark>démission</mark>",
         ],
       },
@@ -162,7 +178,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 4.3862834,
+      "_score": 2.9238665,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -171,17 +187,14 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark>",
           "La <mark>démission</mark> vous permet de rompre votre",
           "La <mark>démission</mark> est un mode de rupture du contrat",
           "Lettre de <mark>démission</mark> du salarié Direction",
           "selon votre situation au moment de votre <mark>démission</mark>",
         ],
-        "title": Array [
-          "<mark>Démission</mark> d'un salarié",
-        ],
-        "title.french_stemmed": Array [
+        "title.french": Array [
           "<mark>Démission</mark> d'un salarié",
         ],
       },
@@ -189,7 +202,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 3.9709737,
+      "_score": 2.6583235,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -198,16 +211,13 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "Lettre de <mark>démission</mark> du salarié Direction",
           "son contrat de travail en présentant sa <mark>démission</mark>",
           "respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
           "présentation de la lettre recommandée de <mark>démission</mark>",
         ],
-        "title": Array [
-          "<mark>Démission</mark> d'une assistante maternelle",
-        ],
-        "title.french_stemmed": Array [
+        "title.french": Array [
           "<mark>Démission</mark> d'une assistante maternelle",
         ],
       },
@@ -215,7 +225,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 3.3363123,
+      "_score": 2.114319,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -223,43 +233,18 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "Le préavis de <mark>démission</mark> diffère suivant la",
         ],
-        "title": Array [
+        "title.french": Array [
           "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-        ],
-      },
-    },
-    Object {
-      "_id": "7",
-      "_index": "cdtn_document_test",
-      "_score": 2.4016047,
-      "_source": Object {
-        "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-        "source": "faq",
-        "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "text": Array [
-          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-        ],
-        "title": Array [
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
-        ],
-        "title.french_stemmed": Array [
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
         ],
       },
     },
     Object {
       "_id": "8",
       "_index": "cdtn_document_test",
-      "_score": 2.2742832,
+      "_score": 1.9339712,
       "_source": Object {
         "slug": "article-r1225-18",
         "source": "code_du_travail",
@@ -271,15 +256,34 @@ Object {
         "path": Array [
           "Paternité/Congés d'éducation des enfants/<mark>Démission</mark>",
         ],
-        "text": Array [
+        "text.french": Array [
           "Le salarié informe son employeur de sa <mark>démission</mark>",
+        ],
+      },
+    },
+    Object {
+      "_id": "7",
+      "_index": "cdtn_document_test",
+      "_score": 1.7785039,
+      "_source": Object {
+        "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
+        "source": "faq",
+        "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text.french": Array [
+          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
+        ],
+        "title.french": Array [
+          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
         ],
       },
     },
     Object {
       "_id": "9",
       "_index": "cdtn_document_test",
-      "_score": 2.050433,
+      "_score": 1.628073,
       "_source": Object {
         "slug": "article-r1442-22-4",
         "source": "code_du_travail",
@@ -288,14 +292,14 @@ Object {
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text": Array [
+        "text.french": Array [
           "désire renoncer à son mandat adresse sa  <mark>démission</mark>",
           "La <mark>démission</mark>  n'est définitive qu'après acceptation",
         ],
       },
     },
   ],
-  "max_score": 4.733461,
+  "max_score": 3.1720703,
   "total": 8,
 }
 `;

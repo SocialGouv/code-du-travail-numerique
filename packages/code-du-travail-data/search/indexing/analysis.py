@@ -1,4 +1,6 @@
 from search.extraction.synonyms.data import SYNONYMS
+from search.extraction.stop_words.data import STOP_WORDS
+
 
 filters = {
     # Normalize acronyms so that no matter the format, the resulting token will be the same.
@@ -50,7 +52,7 @@ filters = {
     },
     'french_stop': {
         'type': 'stop',
-        'stopwords': '_french_',
+        'stopwords': STOP_WORDS
     },
 }
 
@@ -60,17 +62,17 @@ analyzers = {
     },
     'french_stemmed': {
         'tokenizer': 'icu_tokenizer',
-        "char_filter": [
-            "html_strip"
+        'char_filter': [
+            'html_strip'
         ],
         'filter': [
-            "french_elision",
-            "icu_folding",
-            "lowercase",
-            "french_acronyms",
-            "french_synonyms",
-            "french_stop",
-            "french_stemmer"
+            'french_elision',
+            'icu_folding',
+            'lowercase',
+            'french_acronyms',
+            'french_synonyms',
+            'french_stop',
+            'french_stemmer'
         ]
     },
     'french': {
@@ -84,7 +86,7 @@ analyzers = {
     },
     'french_indexing': {
         'tokenizer': 'icu_tokenizer',
-        "char_filter": ["startwith"],
+        'char_filter': ['startwith'],
         'filter': [
             'french_elision',
             'icu_folding',
@@ -92,13 +94,27 @@ analyzers = {
             'french_stemmer',
         ],
     },
+    'article_id_analyzer': {
+        'tokenizer': 'article_id_tokenizer',
+        'filter': [
+            'lowercase',
+            'french_acronyms'
+        ]
+    }
 }
 
 
 char_filters = {
     'startwith': {
-        "type": "pattern_replace",
-        "pattern": "^(.*)",
-        "replacement": "__start__ $1"
+        'type': 'pattern_replace',
+        'pattern': '^(.*)',
+        'replacement': '__start__ $1'
+    }
+}
+
+tokenizers = {
+    'article_id_tokenizer': {
+        'type': 'simple_pattern',
+        'pattern': '[LRD].*[0123456789]{4}.?[0123456789]{1,3}'
     }
 }

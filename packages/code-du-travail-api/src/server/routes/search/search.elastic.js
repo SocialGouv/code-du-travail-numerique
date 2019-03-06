@@ -22,21 +22,28 @@ function getSearchBody({ query, size, excludeSources = [] }) {
     },
     query: {
       bool: {
-        must_not: excludeSources.map(source => ({
-          query_string: {
-            default_field: "source",
-            query: source.trim()
+        must_not: {
+          terms: {
+            source: excludeSources
           }
-        })),
+        },
         must: [
           {
             bool: {
               should: [
                 {
+                  multi_match: {
+                    query: query,
+                    fields: ["text.french", "title.french"],
+                    type: "cross_fields",
+                    minimum_should_match: "3<75% 6<30%",
+                    boost: 0.1
+                  }
+                },
+                {
                   match: {
-                    text: {
-                      query: query,
-                      operator: "and"
+                    "title.article_id": {
+                      query: query
                     }
                   }
                 }
@@ -46,15 +53,8 @@ function getSearchBody({ query, size, excludeSources = [] }) {
         ],
         should: [
           {
-            match: {
-              title: {
-                query: query
-              }
-            }
-          },
-          {
             match_phrase: {
-              title: {
+              "title.french": {
                 query: `__start__ ${query}`,
                 slop: 1,
                 boost: 2
@@ -63,8 +63,9 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           },
           {
             match_phrase: {
-              text: {
-                query: query
+              "text.french": {
+                query: query,
+                boost: 1.5
               }
             }
           },
@@ -105,9 +106,9 @@ function getSearchBody({ query, size, excludeSources = [] }) {
       pre_tags: ["<mark>"],
       post_tags: ["</mark>"],
       fields: {
-        title: {},
-        "title.french_stemmed": {},
-        text: {},
+        "title.french": {},
+        "text.french": {},
+        "title.article_id": {},
         path: {}
       }
     }
