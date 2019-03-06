@@ -27,6 +27,7 @@
   "dependencies": {
     "@cdt/data...courrier-type": "^1.8.0",
     "@koa/cors": "^2.2.1",
+    "commander": "^2.19.0",
     "dotenv": "^6.0.0",
     "elastic-apm-node": "^1.11.0",
     "elasticsearch": "^15.0.0",

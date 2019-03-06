@@ -3,7 +3,7 @@ const path = require("path");
 const axios = require("axios");
 const csv = require("csvtojson");
 const json2csv = require("json2csv");
-
+const program = require("commander");
 const { promisify } = require("util");
 
 const ora = require("ora");
@@ -60,8 +60,12 @@ async function processRequest(testCase, csvResults, nbItem) {
     return null;
   }
 }
-// eslint-disable-next-line no-console
-async function main({ reporter = console.log } = {}) {
+async function main({
+  // eslint-disable-next-line no-console
+  reporter = console.log,
+  update = false,
+  verbose = false
+} = {}) {
   const csvFile = path.join(__dirname, "testResults.csv");
   const csvResults = await csv().fromFile(csvFile);
   const testCases = await getTestCases();
@@ -72,15 +76,27 @@ async function main({ reporter = console.log } = {}) {
     )
   );
   spinner.stop().clear();
-  const csvString = json2csv.parse(results, {
-    fields: ["query", "score", "prevScore", "diffScore", "found"]
-  });
-  fs.writeFileSync(csvFile, csvString);
+  if (update) {
+    const csvString = json2csv.parse(results, {
+      fields: ["query", "score", "prevScore", "diffScore", "found"]
+    });
+    fs.writeFileSync(csvFile, csvString);
+  }
 
   reporter(printResultsAbstract(results));
-  reporter(printResultsDetails(results));
+  if (verbose) {
+    reporter(printResultsDetails(results));
+  }
 }
 
 if (module === require.main) {
-  main();
+  program
+    .option("-u, --update", "update test cases results file")
+    .option("-v, --verbose", "display verbose report")
+    .parse(process.argv);
+
+  main({
+    verbose: program.verbose,
+    update: program.update
+  });
 }
