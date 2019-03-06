@@ -11,19 +11,3 @@ Array [
   },
 ]
 `;
-
-exports[`adresse service searchAnnuaireByCoord: should make a request on api with coord 1`] = `
-Array [
-  Object {
-    "title": "han yolo",
-  },
-]
-`;
-
-exports[`adresse service searchAnnuaireByQuery: should make a request on api with query 1`] = `
-Array [
-  Object {
-    "title": "han yolo",
-  },
-]
-`;

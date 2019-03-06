@@ -8,10 +8,8 @@ import { searchAddress } from "../annuaire/adresse.service";
 import ReponseIcon from "../icons/ReponseIcon";
 import SearchIcon from "../icons/SearchIcon";
 import { getRouteBySource, getExcludeSources } from "../sources";
-import { AddressQuery } from "./AddressQuery";
 import { DocumentSuggester } from "./DocumentSuggester";
-import { SearchQuery } from "./SearchQuery";
-import { suggestResults, searchResults } from "./search.service";
+import { suggestResults } from "./search.service";
 
 const FormSearchButton = () => (
   <button type="submit" className="btn">
@@ -30,8 +28,6 @@ class Search extends React.Component {
   state = {
     // query in the input box
     query: this.props.router.query.q || "",
-    // query to display the search results
-    queryResults: "",
     source: "",
     coord: null,
     excludeSources: "",
@@ -44,10 +40,7 @@ class Search extends React.Component {
     // when coming on this page with a ?q param
     if (this.props.router.query.q) {
       this.setState({
-        query: this.props.router.query.q,
-        queryResults: this.props.router.query.search
-          ? this.props.router.query.search === "0" && ""
-          : this.props.router.query.q
+        query: this.props.router.query.q
       });
     }
     if (this.props.router.query.source) {
@@ -73,10 +66,7 @@ class Search extends React.Component {
       query: this.props.router.query.q,
       source: this.props.router.query.source,
       coord: coord,
-      excludeSources: getExcludeSources(this.props.router.query.source || ""),
-      queryResults: this.props.router.query.search
-        ? this.props.router.query.search === "0" && ""
-        : this.props.router.query.q
+      excludeSources: getExcludeSources(this.props.router.query.source || "")
     });
 
     if (this.searchRef.current) {
@@ -89,8 +79,10 @@ class Search extends React.Component {
 
   submitQuery = () => {
     if (this.state.query) {
-      this.setState({ queryResults: this.state.query, coord: null });
-      Router.pushRoute("index", {
+      const routeName =
+        this.state.source === "annuaire" ? "annuaire" : "recherche";
+
+      Router.pushRoute(routeName, {
         q: this.state.query,
         source: this.state.source
       });
@@ -103,15 +95,25 @@ class Search extends React.Component {
   };
 
   onChange = event => {
-    if (event.target.name === "source") {
-      Router.pushRoute("index", {
-        q: this.state.query,
-        source: event.target.value
-      });
-    } else {
-      this.setState({
-        [event.target.name]: event.target.value
-      });
+    switch (event.target.name) {
+      case "query":
+        this.setState({
+          query: event.target.value
+        });
+        return;
+      case "source":
+        this.setState({
+          source: event.target.value,
+          excludeSources: getExcludeSources(event.target.value)
+        });
+        if (this.state.query) {
+          const routeName =
+            event.target.value === "annuaire" ? "annuaire" : "recherche";
+          Router.pushRoute(routeName, {
+            q: this.state.query,
+            source: event.target.value
+          });
+        }
     }
   };
 
@@ -121,7 +123,7 @@ class Search extends React.Component {
     const { query, source } = this.state;
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
-      Router.pushRoute("index", {
+      Router.pushRoute("annuaire", {
         q: suggestion._source.title,
         coord: `${lon}:${lat}`,
         source
@@ -135,7 +137,7 @@ class Search extends React.Component {
       : undefined;
     Router.pushRoute(
       route,
-      { q: query, search: 0, slug: suggestion._source.slug },
+      { q: query, slug: suggestion._source.slug },
       { hash: anchor }
     );
   };
@@ -174,26 +176,7 @@ class Search extends React.Component {
   };
 
   render() {
-    const {
-      query,
-      queryResults,
-      excludeSources,
-      source,
-      coord,
-      suggestions
-    } = this.state;
-
-    const queryResultsComponent =
-      source === "annuaire" ? (
-        <AddressQuery query={queryResults} coord={coord} />
-      ) : (
-        <SearchQuery
-          query={queryResults}
-          source={source}
-          excludeSources={excludeSources}
-          fetch={searchResults}
-        />
-      );
+    const { query, source, suggestions } = this.state;
 
     return (
       <React.Fragment>
@@ -249,7 +232,6 @@ class Search extends React.Component {
             </div>
           </Container>
         </div>
-        {(queryResults && queryResultsComponent) || null}
       </React.Fragment>
     );
   }

@@ -71,7 +71,18 @@ module.exports = routes()
   // http://localhost:3000/a-propos
   .add({ name: "about", page: "about", pattern: "/a-propos" })
 
-  // The main search route. Parameters are optional.
+  // search results page
+  //
+  // http://localhost:3000/recherche?q=travail
+  .add({ name: "recherche", page: "recherche", pattern: "/recherche" })
+
+  // annuaire results page
+  //
+  // http://localhost:3000/annuaire?q=15 rue du levant, Concarneau
+  // http://localhost:3000/annuaire?coord=lon:lat
+  .add({ name: "annuaire", page: "annuaire", pattern: "/annuaire" })
+
+  // The home route
   //
   // http://localhost:3000/
   // http://localhost:3000/?q=travail

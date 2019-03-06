@@ -135,7 +135,7 @@ class FeedbackForm extends React.Component {
                       pathname: `/${getRouteBySource(item.source)}/${
                         item.slug
                       }`,
-                      query: { q: query, search: 0 },
+                      query: { q: query },
                       hash: item.anchor
                     }}
                   >

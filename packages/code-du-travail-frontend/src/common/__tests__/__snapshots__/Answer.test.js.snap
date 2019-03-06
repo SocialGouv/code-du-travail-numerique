@@ -116,7 +116,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                 </select>
               </label>
               <label
-                class="sc-htoDjs jKMTeV"
+                class="sc-htpNat jIcxBH"
                 for="main-search-input"
               >
                 <span
@@ -142,7 +142,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                     value=""
                   />
                   <div
-                    class="sc-dnqmqq cyvidm"
+                    class="sc-bxivhb dCVcvH"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -287,7 +287,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
               est prévue pour 2020.
             </div>
             <div
-              class="sc-chPdSV gMFNpU"
+              class="sc-htoDjs cvyteF"
             >
               <div>
                 html
@@ -602,7 +602,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                 </select>
               </label>
               <label
-                class="sc-htoDjs jKMTeV"
+                class="sc-htpNat jIcxBH"
                 for="main-search-input"
               >
                 <span
@@ -628,7 +628,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                     value=""
                   />
                   <div
-                    class="sc-dnqmqq cyvidm"
+                    class="sc-bxivhb dCVcvH"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -773,7 +773,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
               est prévue pour 2020.
             </div>
             <div
-              class="sc-cSHVUG UZPwC"
+              class="sc-bZQynM bNLtFW"
             >
               <div>
                 html
@@ -1085,7 +1085,7 @@ exports[`<Answer /> should render 1`] = `
               </select>
             </label>
             <label
-              class="sc-htoDjs jKMTeV"
+              class="sc-htpNat jIcxBH"
               for="main-search-input"
             >
               <span
@@ -1111,7 +1111,7 @@ exports[`<Answer /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="sc-dnqmqq cyvidm"
+                  class="sc-bxivhb dCVcvH"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -1274,7 +1274,7 @@ exports[`<Answer /> should render 1`] = `
           </div>
           intro de l'article
           <div
-            class="sc-fjdhpX faZXWb"
+            class="sc-ifAKCX heNqfr"
           >
             <p
               class="test-content"
@@ -1475,7 +1475,7 @@ exports[`<Answer /> should render additional content 1`] = `
                 </select>
               </label>
               <label
-                class="sc-htoDjs jKMTeV"
+                class="sc-htpNat jIcxBH"
                 for="main-search-input"
               >
                 <span
@@ -1501,7 +1501,7 @@ exports[`<Answer /> should render additional content 1`] = `
                     value=""
                   />
                   <div
-                    class="sc-dnqmqq cyvidm"
+                    class="sc-bxivhb dCVcvH"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -1646,7 +1646,7 @@ exports[`<Answer /> should render additional content 1`] = `
               est prévue pour 2020.
             </div>
             <div
-              class="sc-kGXeez jAjjmr"
+              class="sc-iwsKbI jKCabD"
             >
               <div>
                 html

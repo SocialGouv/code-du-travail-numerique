@@ -67,7 +67,7 @@ exports[`<FeedbackModal /> should render modal when isOpen is true 1`] = `
             >
               <li>
                 <a
-                  href="/undefined/result-slug?q=Query&search=0"
+                  href="/undefined/result-slug?q=Query"
                 >
                   item title
                 </a>

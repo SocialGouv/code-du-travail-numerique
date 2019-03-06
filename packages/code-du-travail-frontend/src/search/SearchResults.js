@@ -56,7 +56,7 @@ class ResultItem extends React.Component {
         <li className="search-results__item">
           <Link
             route={route}
-            params={{ q: query, search: 0, slug: _source.slug }}
+            params={{ q: query, slug: _source.slug }}
             hash={anchor}
           >
             <a className="search-results-link" ref={this.itemRef}>

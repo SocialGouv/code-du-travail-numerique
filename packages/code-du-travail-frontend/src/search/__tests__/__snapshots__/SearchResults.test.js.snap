@@ -99,7 +99,7 @@ exports[`<SearchResults/> should render results 1`] = `
           >
             <a
               class="search-results-link"
-              href="/question/mer-il-est-fou?q=search%20test&search=0"
+              href="/question/mer-il-est-fou?q=search%20test"
             >
               <article
                 class="faq"
