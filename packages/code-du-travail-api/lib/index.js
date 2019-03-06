@@ -8,7 +8,7 @@ function percent(value) {
 
 function computeScore(expectedResultsUrl, actualResulstUrl) {
   // compute distance between expexted rank and actual rank for a given result
-  const distances = expectedResultsUrl.map((url, index) => {
+  const distances = expectedResultsUrl.filter(Boolean).map((url, index) => {
     const position = actualResulstUrl.indexOf(url);
     return position > -1 ? Math.abs(index - position) : null;
   }, []);
@@ -21,7 +21,7 @@ function computeScore(expectedResultsUrl, actualResulstUrl) {
 
 function computeLineScore({
   query,
-  previousResults = {},
+  previousResultsData = {},
   expectedResults,
   hits
 }) {
@@ -29,16 +29,17 @@ function computeLineScore({
     result => `/${result._source.source}/${result._source.slug}`
   );
 
-  const resultsRank = expectedResults.filter(Boolean).map(url => {
+  const resultsRank = expectedResults.map(url => {
     const position = resultsUrl.indexOf(url);
     return position > -1 ? position + 1 : "";
   });
 
-  const numExpected = expectedResults;
-  const found = `${resultsRank.length}/${numExpected.length}`;
+  const numFound = resultsRank.filter(Boolean).length;
+  const numExpected = expectedResults.filter(Boolean).length;
+  const found = `${numFound}/${numExpected}`;
 
   const score = computeScore(expectedResults, resultsUrl);
-  const prevScore = parseFloat(previousResults.score, 10) || 0;
+  const prevScore = parseFloat(previousResultsData.score, 10) || 0;
   const diffScore = score - prevScore;
   return {
     query,

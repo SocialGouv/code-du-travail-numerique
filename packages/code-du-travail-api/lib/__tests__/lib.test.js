@@ -29,45 +29,52 @@ test.each([
 });
 
 test.each([
-  {
-    Expected_1: "a.url",
-    Expected_2: "",
-    Expected_3: "",
-    Expected_4: "",
-    Expected_5: ""
-  },
-  {
-    Expected_1: "a.url",
-    Expected_2: "b.url",
-    Expected_3: "c.url",
-    Expected_4: "d.url",
-    Expected_5: "e.url"
-  },
-  {
-    Expected_1: "o.url",
-    Expected_2: "z.url",
-    Expected_3: "x.url",
-    Expected_4: "y.url",
-    Expected_5: "u.url"
-  },
-  {
-    Expected_1: "e.url",
-    Expected_2: "d.url",
-    Expected_3: "c.url",
-    Expected_4: "b.url",
-    Expected_5: "a.url"
-  }
+  [["a"], ["/source/slug-a", "", "", "", ""]],
+  [
+    ["a,b,c,d,e"],
+    [
+      "/source/slug-a",
+      "/source/slug-b",
+      "/source/slug-c",
+      "/source/slug-d",
+      "/source/slug-e"
+    ]
+  ],
+  [
+    ["o,z,x,y,u"],
+    [
+      "/source/slug-o",
+      "/source/slug-z",
+      "/source/slug-x",
+      "/source/slug-y",
+      "/source/slug-u"
+    ]
+  ],
+  [
+    ["e,d,c,b,a"],
+    [
+      "/source/slug-e",
+      "/source/slug-d",
+      "/source/slug-c",
+      "/source/slug-b",
+      "/source/slug-a"
+    ]
+  ]
 ])(
-  "computeLineScore should return an object with prevScore, score, diffScore properties",
-  line => {
+  "computeLineScore should return an object with prevScore, score, diffScore properties for %p",
+  (label, expectedResults) => {
     const hits = [
-      { _source: { url: "a.url" } },
-      { _source: { url: "b.url" } },
-      { _source: { url: "c.url" } },
-      { _source: { url: "d.url" } },
-      { _source: { url: "e.url" } }
+      { _source: { source: "source", slug: "slug-a" } },
+      { _source: { source: "source", slug: "slug-b" } },
+      { _source: { source: "source", slug: "slug-c" } },
+      { _source: { source: "source", slug: "slug-d" } },
+      { _source: { source: "source", slug: "slug-e" } }
     ];
-    expect(computeLineScore(line, hits)).toMatchSnapshot();
+    const query = "query";
+    const previousResults = {};
+    expect(
+      computeLineScore({ query, previousResults, expectedResults, hits })
+    ).toMatchSnapshot();
   }
 );
 
@@ -85,22 +92,25 @@ test("printResultsAbstracts should output absctract", () => {
 test("printResultsDetails should output absctract", () => {
   const results = [
     {
-      Request: "Fromage",
+      query: "Fromage",
       prevScore: 0.1,
       score: 0.2,
-      diffScore: 0.1
+      diffScore: 0.1,
+      found: "1/5"
     },
     {
-      Request: "Entrées",
+      query: "Entrées",
       prevScore: 0.5,
       score: 0.2,
-      diffScore: 0.3
+      diffScore: 0.3,
+      found: "1/5"
     },
     {
-      Request: "Legumes",
+      query: "Legumes",
       prevScore: 0,
       score: 1,
-      diffScore: 1
+      diffScore: 1,
+      found: "1/1"
     }
   ];
   expect(printResultsDetails(results)).toMatchSnapshot();
