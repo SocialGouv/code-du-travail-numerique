@@ -14,7 +14,7 @@ function getIdccBody({ query }) {
         must: {
           multi_match: {
             query,
-            fields: ["title", "idcc.*"]
+            fields: ["title.*", "idcc.*"]
           }
         },
         should: [
