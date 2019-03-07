@@ -4,5 +4,5 @@
     entrypoint: [""]
   script:
   - /apps/create-kubeconfig.sh
-  - kubectl apply -f k8s/kibana/deployment-apm-server.yml
+  - kubectl apply -f k8s/apm-server/deployment-apm-server.yml
   allow_failure: false
