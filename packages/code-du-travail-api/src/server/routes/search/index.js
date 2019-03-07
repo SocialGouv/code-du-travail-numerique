@@ -5,6 +5,8 @@ const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
 const getFacetsBody = require("./facets.elastic");
 
+const quest2keys = require("../../conf/nlpApi");
+
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
@@ -21,7 +23,9 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {Object} Results.
  */
 router.get("/search", async ctx => {
-  const query = ctx.request.query.q;
+  const q = ctx.request.query.q;
+  const query = await quest2keys(q);
+
   const size = Math.min(ctx.request.query.size || 10, 100);
 
   const excludeSources = (ctx.request.query.excludeSources || "").split(",");

@@ -5,7 +5,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "scripts": {
     "build": "lerna run build",
-    "dev:docker": "docker-compose up --remove-orphans",
+    "dev:docker": "docker-compose up elasticsearch nlp_api",
     "dev": "lerna run dev --parallel",
     "dev:api": "yarn workspace @cdt/api dev",
     "dev:frontend": "yarn workspace @cdt/frontend dev",
@@ -35,5 +35,7 @@
       "pre-push": "lerna run --stream prepush"
     }
   },
-  "engines": {"node": ">= 10.15 <11"}
+  "engines": {
+    "node": ">= 10.15 <11"
+  }
 }

@@ -1,2 +1,3 @@
 Flask==1.0.2
 gunicorn==19.9.0
+git+git://github.com/ArmandGiraud/quest2keys.git@master#egg=quest2keys

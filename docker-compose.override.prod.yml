@@ -41,4 +41,4 @@ services:
   nlp_api:
     environment:
       - FLASK_ENV=production
-    command: gunicorn -w 2 -b :5000 api.app:app
+    command: gunicorn -t 60 -w 2 -b :5000 api.app:app
