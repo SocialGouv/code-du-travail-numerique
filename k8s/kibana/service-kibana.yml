@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kibana-cdtn
+  name: kibana
   labels:
-    app: kibana-cdtn
+    app: kibana
 spec:
   ports:
   - port: 5601
   selector:
-    app: kibana-cdtn
+    app: kibana

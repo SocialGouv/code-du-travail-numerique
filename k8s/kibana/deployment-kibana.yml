@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kibana-cdtn
+  name: kibana
   labels:
-    app: kibana-cdtn
+    app: kibana
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kibana-cdtn
+      app: kibana
   template:
     metadata:
       labels:
-        app: kibana-cdtn
+        app: kibana
     spec:
       containers:
       - name: kibana
