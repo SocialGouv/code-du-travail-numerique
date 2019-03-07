@@ -9,12 +9,12 @@ variables:
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
 
 stages:
-- "Build & push Docker image"
-- "Deploy"
-- "Create Elasticsearch cdtn index"
+- "Build & Push Docker Image"
+- "Deploy EL Stack"
+- "Create Code du Travail Numerique Elasticsearch Index"
 
 build-and-push-elasticsearch-image:
-  stage: "Build & push Docker image"
+  stage: "Build & Push Docker Image"
   image: docker:latest
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -27,7 +27,7 @@ build-and-push-elasticsearch-image:
   - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
 
 build-and-push-cdtn-data-image:
-  stage: "Build & push Docker image"
+  stage: "Build & Push Docker Image"
   image: docker:latest
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -40,7 +40,7 @@ build-and-push-cdtn-data-image:
   - docker push "$CI_REGISTRY_IMAGE/data:latest"
 
 deploy-kibana:
-  stage: "Deploy"
+  stage: "Deploy EL Stack"
   extends: .deploy-kibana-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -54,7 +54,7 @@ deploy-kibana:
     name: ops
 
 deploy-elasticsearch:
-  stage: "Deploy"
+  stage: "Deploy EL Stack"
   extends: .deploy-elasticsearch-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -68,7 +68,7 @@ deploy-elasticsearch:
     name: ops
 
 deploy-apm-server:
-  stage: "Deploy"
+  stage: "Deploy EL Stack"
   extends: .deploy-apm-server-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -81,8 +81,8 @@ deploy-apm-server:
   environment:
     name: ops
 
-create-es-cdtn-index:
-  stage: "Create Elasticsearch cdtn index"
+create-cdtn-es-index:
+  stage: "Create Code du Travail Numerique Elasticsearch Index"
   extends: .deploy-code-du-travail-data-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
