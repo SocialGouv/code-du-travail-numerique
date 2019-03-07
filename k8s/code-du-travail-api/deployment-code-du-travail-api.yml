@@ -1,0 +1,22 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: cdtn-api
+  labels:
+    app: cdtn-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cdtn-api
+  template:
+    metadata:
+      labels:
+        app: cdtn-api
+    spec:
+      containers:
+      - image:  registry.gitlab.factory.social.gouv.fr/test-ops/test-code-du-travail-numerique/api:latest
+        name: cdtn-api
+        ports:
+        - containerPort: 1337
