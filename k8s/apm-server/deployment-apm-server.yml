@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apm-server
+  labels:
+    app: apm-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apm-server
+  template:
+    metadata:
+      labels:
+        app: apm-server
+    spec:
+      containers:
+      - name: apm-server
+        image: docker.elastic.co/apm/apm-server:6.4.2
+        resources:
+          limits:
+            cpu: 1000m
+          requests:
+            cpu: 100m
+        env:
+        - name: logging.level
+          value: "trace"
+        - name: setup.kibana.host
+          value: "5601"
+        - name: output.elasticsearch.hosts
+          value: "elasticsearch:9200"
+        - name: output.elasticsearch.enabled
+          value: "true"
+        ports:
+        - containerPort: 8200
