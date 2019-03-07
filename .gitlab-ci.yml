@@ -1,7 +1,9 @@
+---
 include:
 - '/k8s/kibana/.deploy-kibana-k8s.yml'
 - '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
 - '/k8s/apm-server/.deploy-apm-server-k8s.yml'
+- '/k8s/code-du-travail-data/.deploy-code-du-travail-data-k8s.yml'
 
 variables:
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
@@ -9,6 +11,7 @@ variables:
 stages:
 - "Build & push Docker image"
 - "Deploy"
+- "Create Elasticsearch cdtn index"
 
 build-and-push-elasticsearch-image:
   stage: "Build & push Docker image"
@@ -67,6 +70,20 @@ deploy-elasticsearch:
 deploy-apm-server:
   stage: "Deploy"
   extends: .deploy-apm-server-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
+    K8S_NAMESPACE: $K8S_NAMESPACE
+    K8S_USERNAME: $K8S_USERNAME
+    K8S_CONTEXT: $K8S_CONTEXT
+    K8S_TOKEN: $K8S_TOKEN
+  environment:
+    name: ops
+
+create-es-cdtn-index:
+  stage: "Create Elasticsearch cdtn index"
+  extends: .deploy-code-du-travail-data-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
     K8S_SERVER: $K8S_SERVER
