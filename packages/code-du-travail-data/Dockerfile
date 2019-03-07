@@ -25,3 +25,7 @@ COPY ./Pipfile.lock .
 RUN pipenv install --deploy
 
 COPY . .
+
+RUN chmod +x ./scripts/entrypoint.sh
+
+ENTRYPOINT ["./scripts/entrypoint.sh"]
