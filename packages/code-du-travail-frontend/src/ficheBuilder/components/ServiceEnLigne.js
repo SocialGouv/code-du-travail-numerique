@@ -4,24 +4,28 @@ import styled from "styled-components";
 import elementBuilder from "../index";
 import { colors, spacing, box } from "../cssVariables";
 
-const ServiceEnLigne = ({ data }) => {
-  const type = data._.type;
-  const url = data._.URL;
-  const title = elementBuilder(data.$[0].$);
-  const source = elementBuilder(data.$[1].$);
-  return (
-    <Wrapper>
-      <Type>{type}</Type>
-      <ButtonLink href={url} target="_blank">
-        {`${title}`}
-      </ButtonLink>
-      <Source>{source}</Source>
-    </Wrapper>
-  );
-};
+class ServiceEnLigne extends React.PureComponent {
+  render() {
+    const { data, headingLevel } = this.props;
+    const type = data._.type;
+    const url = data._.URL;
+    const title = elementBuilder(data.$[0].$, headingLevel);
+    const source = elementBuilder(data.$[1].$, headingLevel);
+    return (
+      <Wrapper>
+        <Type>{type}</Type>
+        <ButtonLink href={url} target="_blank">
+          {`${title}`}
+        </ButtonLink>
+        <Source>{source}</Source>
+      </Wrapper>
+    );
+  }
+}
 
 ServiceEnLigne.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  headingLevel: PropTypes.number.isRequired
 };
 
 export default ServiceEnLigne;

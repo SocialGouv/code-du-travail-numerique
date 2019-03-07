@@ -53,6 +53,7 @@ export const colors = { ...baseColors, ...feedbackColors };
   etc.
 */
 export const spacing = {
+  tiny: "0.25rem",
   xsmall: "0.5rem",
   small: "0.625rem",
   base: "1rem",
@@ -82,6 +83,7 @@ export const breakpoints = {
 };
 
 export const box = {
+  lightBorderRadius: "0.2rem",
   borderRadius: "0.25rem",
   shadow: `0 5px 10px 0 ${baseColors.lightGrey})`,
   shadowBottom: "0 10px 10px -10px #b7bcdf"

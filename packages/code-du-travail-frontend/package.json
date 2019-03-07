@@ -22,6 +22,7 @@
     "next": "^7.0.0",
     "next-images": "^1.0.0",
     "react": "^16.7.0",
+    "react-accessible-accordion": "^2.4.5",
     "react-autosuggest": "9.3.4",
     "react-delay": "^0.1.0",
     "react-dom": "16.7.0",
