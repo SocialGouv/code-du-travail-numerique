@@ -199,9 +199,9 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 
 ## FAQ
 
-### J'ai rajouté un nouveau packages dans datasetmais il n'est pas trouvé lorsqu'on build l'api
+### J'ai rajouté un nouveau package dans dataset mais il n'est pas trouvé lorsqu'on build l'api
 
-il faut le rajouter dans le fichier /packages/code-du-travail-api/Dockerfile
+il faut le rajouter dans le fichier `/packages/code-du-travail-api/Dockerfile`
 
 ```diff
 + COPY ./packages/code-du-travail-data/dataset/yolo/package.json /app/packages/code-du-travail-data/dataset/yolo/package.json
