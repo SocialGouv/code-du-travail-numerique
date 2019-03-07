@@ -1,6 +1,7 @@
 include:
 - '/k8s/kibana/.deploy-kibana-k8s.yml'
 - '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
+- '/k8s/apm-server/.deploy-apm-server-k8s.yml'
 
 variables:
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
@@ -42,6 +43,20 @@ deploy-kibana:
 deploy-elasticsearch:
   stage: "Deploy"
   extends: .deploy-elasticsearch-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
+    K8S_NAMESPACE: $K8S_NAMESPACE
+    K8S_USERNAME: $K8S_USERNAME
+    K8S_CONTEXT: $K8S_CONTEXT
+    K8S_TOKEN: $K8S_TOKEN
+  environment:
+    name: ops`
+
+deploy-apm-server:
+  stage: "Deploy"
+  extends: .deploy-apm-server-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
     K8S_SERVER: $K8S_SERVER
