@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cdtn-data
+  labels:
+    app: cdtn-data
+spec:
+  containers:
+  - name: cdtn-data
+    image: registry.gitlab.factory.social.gouv.fr/test-ops/test-code-du-travail-numerique/data:latest
+  restartPolicy: Never
+  initContainers:
+  - name: wait-for-elasticsearch
+    image: alpine
+    imagePullPolicy: Always
+    args:
+    - ash
+    - -c
+    - |
+      apk --no-cache add curl
+      ENDPOINT="http://elasticsearch:9200"
+      echo Checking: ${ENDPOINT}
+      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" ${ENDPOINT}) -ne 200 ]]; do
+        echo "Not ready"
+        sleep 5s
+      done
+      echo Ready
