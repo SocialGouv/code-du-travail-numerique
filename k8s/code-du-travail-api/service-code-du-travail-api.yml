@@ -1,0 +1,13 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: cdtn-api
+  labels:
+    app: cdtn-api
+spec:
+  selector:
+    app: cdtn-api
+  ports:
+  - port: 1337
+    name: api
