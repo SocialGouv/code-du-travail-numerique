@@ -4,7 +4,7 @@ import Head from "next/head";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-
+import { Container } from "@cdt/ui";
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -46,7 +46,7 @@ class SearchPage extends React.Component {
         </Head>
         <Search />
         <div className="section">
-          <div className="container">
+          <Container>
             <SearhPageLayout>
               {results.facets.length > 0 && (
                 <Column>
@@ -57,7 +57,7 @@ class SearchPage extends React.Component {
                 <SearchResults query={q} data={results} source={source} />
               </Page>
             </SearhPageLayout>
-          </div>
+          </Container>
         </div>
         <SeeAlso />
       </PageLayout>
