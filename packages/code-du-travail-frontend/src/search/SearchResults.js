@@ -132,7 +132,9 @@ class SearchResults extends React.Component {
       return (
         <React.Fragment>
           <Alert category="primary">
-            <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
+            <p>
+              Nous n&apos;avons pas trouvé de résultat pour votre recherche.
+            </p>
             {source.length > 0 && (
               <p>
                 Vous pouvez élargir la recherche en intégrant&nbsp;

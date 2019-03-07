@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import { Link } from "../../routes";
 import { getLabelBySource } from "../sources";
-
 class Faceting extends React.Component {
   static propTypes = {
     data: PropTypes.arrayOf(
@@ -39,7 +38,7 @@ class Faceting extends React.Component {
     const { query } = this.props;
     const facets = this.state.facets.map(([key, count]) => (
       <Item key={key}>
-        <Link route="recherche" params={{ q: query, source: key }}>
+        <Link route="recherche" params={{ q: query, source: key }} passHref>
           <Text>
             {getLabelBySource(key)} ({count})
           </Text>
@@ -53,7 +52,7 @@ class Faceting extends React.Component {
         <List>
           {facets}
           <Item>
-            <Link route="recherche" params={{ q: query, source: "" }}>
+            <Link route="recherche" params={{ q: query, source: "" }} passHref>
               <Text>Toutes les réponses</Text>
             </Link>
           </Item>
@@ -72,24 +71,32 @@ const List = styled.ul`
 
 const Item = styled.li`
   font-size: 0.9em;
+  font-size: var(--font-size-small);
   letter-spacing: 0.5px;
   font-weight: 700;
-  color: #8393a7;
-  padding: 0.5em 0;
+  padding: var(--spacing-small) 0;
 `;
 
 const ListTitle = styled.h3`
-  font-size: 1em;
+  font-size: 1rem;
+  font-size: var(--font-size-base);
   color: #26353f;
+  color: var(--color-almost-black);
   letter-spacing: 0.5px;
   font-weight: 700;
 `;
 
 const Text = styled.a`
-  color: #8393a7;
   text-decoration: none;
-  cursor: pointer;
-  &:hover {
+  color: #8393a7;
+  color: var(--color-dark-grey);
+  :link,
+  :visited {
+    text-decoration: none;
+    color: #8393a7;
+    color: var(--color-dark-grey);
+  }
+  :hover {
     text-decoration: underline;
   }
 `;

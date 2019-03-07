@@ -4,7 +4,7 @@ exports[`<Facetting/> should render Facets 1`] = `
 <div>
   <nav>
     <h3
-      class="sc-htpNat kFnlAP"
+      class="sc-htpNat beNYgP"
     >
       Type de réponse
     </h3>
@@ -12,10 +12,11 @@ exports[`<Facetting/> should render Facets 1`] = `
       class="sc-bdVaJa dDblRF"
     >
       <li
-        class="sc-bwzfXH gzXDIF"
+        class="sc-bwzfXH bwxcMI"
       >
         <a
-          class="sc-bxivhb AguZC"
+          class="sc-bxivhb NtWvd"
+          href="/recherche?q=search%20address&source=foo"
         >
           
            (
@@ -24,10 +25,11 @@ exports[`<Facetting/> should render Facets 1`] = `
         </a>
       </li>
       <li
-        class="sc-bwzfXH gzXDIF"
+        class="sc-bwzfXH bwxcMI"
       >
         <a
-          class="sc-bxivhb AguZC"
+          class="sc-bxivhb NtWvd"
+          href="/recherche?q=search%20address&source=fiches"
         >
           Fiches
            (
@@ -36,10 +38,11 @@ exports[`<Facetting/> should render Facets 1`] = `
         </a>
       </li>
       <li
-        class="sc-bwzfXH gzXDIF"
+        class="sc-bwzfXH bwxcMI"
       >
         <a
-          class="sc-bxivhb AguZC"
+          class="sc-bxivhb NtWvd"
+          href="/recherche?q=search%20address&source=bar"
         >
           
            (
@@ -48,10 +51,11 @@ exports[`<Facetting/> should render Facets 1`] = `
         </a>
       </li>
       <li
-        class="sc-bwzfXH gzXDIF"
+        class="sc-bwzfXH bwxcMI"
       >
         <a
-          class="sc-bxivhb AguZC"
+          class="sc-bxivhb NtWvd"
+          href="/recherche?q=search%20address&source="
         >
           Toutes les réponses
         </a>
