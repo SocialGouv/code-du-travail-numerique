@@ -18,16 +18,13 @@ class Faceting extends React.Component {
     facets: []
   };
   static getDerivedStateFromProps({ data = {} }) {
-    const facets = data.reduce((state, item) => {
-      if (
+    const facets = data.reduce(
+      (state, item) =>
         ["fiches_ministere_travail", "fiches_service_public"].includes(item.key)
-      ) {
-        state.fiches = (state.fiches || 0) + item.doc_count;
-      } else {
-        state[item.key] = item.doc_count;
-      }
-      return state;
-    }, {});
+          ? { ...state, fiches: (state.fiches || 0) + item.doc_count }
+          : { ...state, [item.key]: item.doc_count },
+      {}
+    );
 
     return {
       facets: Object.entries(facets)
