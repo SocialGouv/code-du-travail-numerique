@@ -26,6 +26,19 @@ build-and-push-elasticsearch-image:
   - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:latest" .
   - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
 
+build-and-push-cdtn-api-image:
+  stage: "Build & Push Docker Image"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - cd packages/code-du-travail-api
+  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  - docker build -t "$CI_REGISTRY_IMAGE/api:latest" .
+  - docker push "$CI_REGISTRY_IMAGE/api:latest"
+
 build-and-push-cdtn-data-image:
   stage: "Build & Push Docker Image"
   image: docker:latest
@@ -38,7 +51,6 @@ build-and-push-cdtn-data-image:
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   - docker build -t "$CI_REGISTRY_IMAGE/data:latest" .
   - docker push "$CI_REGISTRY_IMAGE/data:latest"
-
 deploy-kibana:
   stage: "Deploy EL Stack"
   extends: .deploy-kibana-k8s
