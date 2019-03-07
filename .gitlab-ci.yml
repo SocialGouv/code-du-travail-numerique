@@ -6,11 +6,9 @@ include:
 variables:
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
 
-
 stages:
 - "Build & push Docker image"
 - "Deploy"
-
 
 build-and-push-elasticsearch-image:
   stage: "Build & push Docker image"
@@ -25,6 +23,18 @@ build-and-push-elasticsearch-image:
   - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:latest" .
   - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
 
+build-and-push-cdtn-data-image:
+  stage: "Build & push Docker image"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - cd packages/code-du-travail-data
+  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  - docker build -t "$CI_REGISTRY_IMAGE/data:latest" .
+  - docker push "$CI_REGISTRY_IMAGE/data:latest"
 
 deploy-kibana:
   stage: "Deploy"
@@ -52,7 +62,7 @@ deploy-elasticsearch:
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
   environment:
-    name: ops`
+    name: ops
 
 deploy-apm-server:
   stage: "Deploy"
