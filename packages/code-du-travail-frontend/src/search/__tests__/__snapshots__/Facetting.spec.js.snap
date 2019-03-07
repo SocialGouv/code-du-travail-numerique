@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Facetting/> should render Facets 1`] = `
+<div>
+  <nav>
+    <h3
+      class="sc-htpNat kFnlAP"
+    >
+      Type de réponse
+    </h3>
+    <ul
+      class="sc-bdVaJa dDblRF"
+    >
+      <li
+        class="sc-bwzfXH gzXDIF"
+      >
+        <a
+          class="sc-bxivhb AguZC"
+        >
+          
+           (
+          14
+          )
+        </a>
+      </li>
+      <li
+        class="sc-bwzfXH gzXDIF"
+      >
+        <a
+          class="sc-bxivhb AguZC"
+        >
+          Fiches
+           (
+          10
+          )
+        </a>
+      </li>
+      <li
+        class="sc-bwzfXH gzXDIF"
+      >
+        <a
+          class="sc-bxivhb AguZC"
+        >
+          
+           (
+          2
+          )
+        </a>
+      </li>
+      <li
+        class="sc-bwzfXH gzXDIF"
+      >
+        <a
+          class="sc-bxivhb AguZC"
+        >
+          Toutes les réponses
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

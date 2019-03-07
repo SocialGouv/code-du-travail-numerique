@@ -46,6 +46,7 @@ class Faceting extends React.Component {
         </Link>
       </Item>
     ));
+
     return (
       <nav>
         <ListTitle>Type de réponse</ListTitle>

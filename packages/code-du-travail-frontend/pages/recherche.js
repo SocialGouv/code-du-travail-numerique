@@ -10,7 +10,7 @@ import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import SearchResults from "../src/search/SearchResults";
 import { getExcludeSources } from "../src/sources";
-import { Faceting } from "../src/search/Facetting";
+import { Faceting } from "../src/search/Faceting";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -48,9 +48,11 @@ class SearchPage extends React.Component {
         <div className="section">
           <div className="container">
             <SearhPageLayout>
-              <Column>
-                <Faceting data={results.facets} query={q} />
-              </Column>
+              {results.facets.length > 0 && (
+                <Column>
+                  <Faceting data={results.facets} query={q} />
+                </Column>
+              )}
               <Page>
                 <SearchResults query={q} data={results} source={source} />
               </Page>
