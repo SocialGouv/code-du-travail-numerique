@@ -7,6 +7,8 @@
 
 ## Installation
 
+Make sure you're using NodeJS 10.15 (9 or 11 won't work).
+
 ```sh
 # Install all the packages
 $ yarn
@@ -76,6 +78,11 @@ $ yarn workspace @cdt/frontend build
 ### Test
 
 ```sh
+# Prepare ES indexes for the test environment. This will create the indexes
+# cdtn_document_test and cdtn_annuaire_test. This is needed initially and
+# every time you update the indexing code or remove the Docker volume
+$ ELASTICSEARCH_LOG_LEVEL=info node packages/code-du-travail-api/tests/create_indexes.js
+
 # Run all the packages tests
 $ yarn test
 

@@ -34,5 +34,6 @@
     "hooks": {
       "pre-push": "lerna run --stream prepush"
     }
-  }
+  },
+  "engines": {"node": ">= 10.15 <11"}
 }
