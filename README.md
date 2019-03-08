@@ -7,6 +7,8 @@
 
 ## Installation
 
+Make sure you're using NodeJS 10.15 (9 or 11 won't work).
+
 ```sh
 # Install all the packages
 $ yarn
@@ -76,6 +78,9 @@ $ yarn workspace @cdt/frontend build
 ### Test
 
 ```sh
+# Prepare ES indexes for the test environment
+$ ELASTICSEARCH_LOG_LEVEL=info node packages/code-du-travail-api/tests/create_indexes.js
+
 # Run all the packages tests
 $ yarn test
 
