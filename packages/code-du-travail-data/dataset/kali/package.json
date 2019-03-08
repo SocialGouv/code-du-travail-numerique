@@ -5,11 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > idcc-kali-ape.json"
+    "start": "node index.js > ./kali.json"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "node-fetch": "^2.3.0",
-    "ora": "^3.0.0"
+    "axios": "^0.18.0"
   }
 }

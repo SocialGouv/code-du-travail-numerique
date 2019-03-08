@@ -27,8 +27,8 @@ export class ConventionForm extends React.Component {
       <form>
         <h2>Convention collective</h2>
         <div>
-          Saisissez l&apos;identifiant de convention collective (IDCC), le nom
-          de la branche, ou le code NAF :
+          Saisissez l&apos;identifiant de convention collective (IDCC) ou le nom
+          de la branche :
           <SuggestWrapper>
             {!this.state.convention ? (
               <IdccSuggester
@@ -87,7 +87,7 @@ const ConventionPreview = ({ data }) => {
         size="16"
         style={{ marginRight: 5 }}
       />
-      {data.title}
+      IDCC {data.idcc} - {data.title}
     </a>
   );
 };

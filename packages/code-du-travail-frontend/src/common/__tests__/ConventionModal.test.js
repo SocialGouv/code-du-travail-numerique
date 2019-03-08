@@ -20,7 +20,7 @@ describe("<ConventionModal />", () => {
     );
     const button = getByRole("button", /trouvez votre convention collective/i);
     button.click();
-    const input = getByPlaceholderText(/Convention collective ou code NAF/i);
+    const input = getByPlaceholderText(/Convention collective/i);
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });

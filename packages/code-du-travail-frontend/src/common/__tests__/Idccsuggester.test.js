@@ -26,7 +26,7 @@ describe("<IdccSuggester />", () => {
     const { container, getAllByRole, getByPlaceholderText } = render(
       <IdccSuggester onSelect={() => {}} onSearch={onSearch} />
     );
-    const input = getByPlaceholderText(/convention collective ou code NAF/i);
+    const input = getByPlaceholderText(/convention collective/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
     await waitForElement(() => getAllByRole("option"));
@@ -39,7 +39,7 @@ describe("<IdccSuggester />", () => {
     const { getByRole, getByPlaceholderText } = render(
       <IdccSuggester onSearch={onSearch} onSelect={onSelect} />
     );
-    const input = getByPlaceholderText(/convention collective ou code NAF/i);
+    const input = getByPlaceholderText(/convention collective/i);
     fireEvent.change(input, { target: { value: "test" } });
     input.focus();
     const option = await waitForElement(() => getByRole("option"));
