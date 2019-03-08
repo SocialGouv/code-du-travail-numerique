@@ -27,16 +27,6 @@ function getIdccBody({ query }) {
           }
         ]
       }
-    },
-    highlight: {
-      fragment_size: 40,
-      order: "score",
-      pre_tags: ["<mark>"],
-      post_tags: ["</mark>"],
-      fields: {
-        title: {},
-        ape: {}
-      }
     }
   };
 }
