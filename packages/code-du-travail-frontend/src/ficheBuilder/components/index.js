@@ -1,5 +1,6 @@
 export { default as Accordion } from "./Accordion";
 export { default as List } from "./List";
+export { default as OuSAdresser } from "./OuSAdresser";
 export { default as ServiceEnLigne } from "./ServiceEnLigne";
 export { default as Table } from "./Table";
 export { default as Tabulator } from "./Tabulator";

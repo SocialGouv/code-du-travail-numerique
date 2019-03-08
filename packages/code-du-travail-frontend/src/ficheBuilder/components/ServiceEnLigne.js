@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import elementBuilder from "../index";
-import { colors, spacing, box } from "../cssVariables";
+import { colors, spacing, box } from "../css/variables";
 
 class ServiceEnLigne extends React.PureComponent {
   render() {
@@ -14,7 +14,7 @@ class ServiceEnLigne extends React.PureComponent {
     return (
       <Wrapper>
         <Type>{type}</Type>
-        <ButtonLink href={url} target="_blank">
+        <ButtonLink href={url} rel="noopener noreferrer" target="_blank">
           {`${title}`}
         </ButtonLink>
         <Source>{source}</Source>

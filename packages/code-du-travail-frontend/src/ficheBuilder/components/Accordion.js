@@ -5,35 +5,100 @@ import {
   Accordion,
   AccordionItem,
   AccordionItemTitle,
-  AccordionItemBody,
-} from 'react-accessible-accordion';
-import { colors, spacing, box } from "../cssVariables";
-import { SrOnly } from "../cssComponents";
+  AccordionItemBody
+} from "react-accessible-accordion";
+import { colors, spacing } from "../css/variables";
+import { VerticalArrow } from "../css/components";
+import { fadeIn } from "../css/animations";
 import elementBuilder from "../index";
-import { getText } from "../utils";
 
-class Accordion extends React.Component {
-  constructor(props) {
-    super(props);
-    const { data, headingLevel: previousHeadingLevel } = props;
-    const firstIndexOfAccordionItem = data.$.findIndex(element => element.name === "Chapitre")
-    const AccordionItems = data.$.filter(element => element.name === "Chapitre")
-    const beforeAccordionElements = data.$.slice(0, firstIndexOfAccordionItem);
-    const afterAccordionElements = data.$.slice(firstIndexOfAccordionItem + AccordionItems.length);
-    this.state = {  };
-  }
+class AccordionWrapper extends React.Component {
   render() {
-    const {  } = this.state;
+    const { data, headingLevel } = this.props;
+    const firstIndexOfAccordionItem = data.$.findIndex(
+      element => element.name === "Chapitre"
+    );
+    const accordionItems = data.$.filter(
+      element => element.name === "Chapitre"
+    ).map((accordionItem, index) => {
+      const title = (
+        <>
+          {elementBuilder(
+            accordionItem.$.find(child => child.name === "Titre"),
+            headingLevel
+          )}
+          <VerticalArrow />
+        </>
+      );
+      const body = elementBuilder(
+        accordionItem.$.filter(child => child.name !== "Titre"),
+        headingLevel + 1
+      );
+      return (
+        <AccordionItem key={index}>
+          <AccordionItemTitle>{title}</AccordionItemTitle>
+          <AccordionItemBody>{body}</AccordionItemBody>
+        </AccordionItem>
+      );
+    });
+
+    const beforeAccordionElements = data.$.slice(
+      0,
+      firstIndexOfAccordionItem
+    ).map(element => elementBuilder(element, headingLevel));
+
+    const afterAccordionElements = data.$.slice(
+      firstIndexOfAccordionItem + accordionItems.length
+    ).map(element => elementBuilder(element, headingLevel));
     return (
+      <>
+        {beforeAccordionElements}
+        <StyledAccordion accordion={false}>{accordionItems}</StyledAccordion>
+        {afterAccordionElements}
+      </>
     );
   }
 }
 
-Accordion.propTypes = {
+AccordionWrapper.propTypes = {
   data: PropTypes.object.isRequired,
   headingLevel: PropTypes.number.isRequired
 };
 
-export default Accordion;
+export default AccordionWrapper;
 
-const StyledAccordion = styled(Accordion)``;
+const StyledAccordion = styled(Accordion)`
+  .accordion__item + .accordion__item {
+    border-top: 1px solid ${colors.elementBorder};
+  }
+
+  .accordion__title {
+    position: relative;
+    cursor: pointer;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: currentColor;
+      font-weight: normal;
+    }
+  }
+
+  .accordion__title:hover,
+  .accordion__title:focus,
+  .accordion__title:focus-within,
+  .accordion__title[aria-expanded="true"] {
+    color: ${colors.title};
+  }
+
+  .accordion__body {
+    padding: ${spacing.base};
+    animation: ${fadeIn} 0.35s ease-in;
+  }
+
+  .accordion__body--hidden {
+    display: none;
+  }
+`;

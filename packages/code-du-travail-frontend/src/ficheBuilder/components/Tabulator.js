@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { colors, spacing, box } from "../cssVariables";
-import { SrOnly } from "../cssComponents";
+import { box, colors, fonts, spacing } from "../css/variables";
+import { SrOnly } from "../css/components";
 import elementBuilder from "../index";
 import { ignoreParagraph } from "../utils";
 
@@ -63,9 +63,11 @@ const StyledTabs = styled(Tabs)`
 
   .react-tabs__tab {
     margin-right: ${spacing.tiny};
-    padding: ${spacing.xsmall};
-    background-color: ${colors.white};
-    border: 1px solid ${colors.primaryBackground};
+    padding: ${spacing.small} ${spacing.base};
+    font-size: ${fonts.sizeH6};
+    background-color: ${colors.lighterGrey};
+    border: 1px solid ${colors.elementBorder};
+    border-bottom: 1px solid ${colors.primaryBackground};
     border-top-left-radius: ${box.lightBorderRadius};
     border-top-right-radius: ${box.lightBorderRadius};
     cursor: pointer;

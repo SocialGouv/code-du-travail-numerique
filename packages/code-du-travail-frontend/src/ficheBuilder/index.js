@@ -5,19 +5,16 @@ import { getText } from "./utils";
 
 // Beware, this one is recursive
 function elementBuilder(element, headingLevel = 0) {
-  if (element.type === "text") {
-    return element.$;
-  }
   // In case we get children
   if (Array.isArray(element)) {
     return element.map(child => elementBuilder(child, headingLevel));
   }
+
+  if (element.type === "text") {
+    return element.$;
+  }
   // Complex elements, we don't immediately parse their children
   switch (element.name) {
-    case "ListeSituations":
-      return (
-        <Components.Tabulator data={element} headingLevel={headingLevel} />
-      );
     case "BlocCas":
       if (element._.affichage === "onglet") {
         return (
@@ -28,6 +25,20 @@ function elementBuilder(element, headingLevel = 0) {
         );
       }
       break;
+    case "Liste":
+      return <Components.List data={element} headingLevel={headingLevel} />;
+    case "ListeSituations":
+      return (
+        <Components.Tabulator data={element} headingLevel={headingLevel} />
+      );
+    case "OuSAdresser":
+      return <Components.OuSAdresser data={element} />;
+    case "ServiceEnLigne":
+      return (
+        <Components.ServiceEnLigne data={element} headingLevel={headingLevel} />
+      );
+    case "Tableau":
+      return <Components.Table data={element} headingLevel={headingLevel} />;
     case "Texte":
       if (element.$.find(child => child.name === "Chapitre")) {
         return (
@@ -35,14 +46,6 @@ function elementBuilder(element, headingLevel = 0) {
         );
       }
       break;
-    case "Tableau":
-      return <Components.Table data={element} headingLevel={headingLevel} />;
-    case "Liste":
-      return <Components.List data={element} headingLevel={headingLevel} />;
-    case "ServiceEnLigne":
-      return (
-        <Components.ServiceEnLigne data={element} headingLevel={headingLevel} />
-      );
     case "Titre":
       return (
         <Components.Title level={headingLevel}>

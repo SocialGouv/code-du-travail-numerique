@@ -53,13 +53,13 @@ export const colors = { ...baseColors, ...feedbackColors };
   etc.
 */
 export const spacing = {
-  tiny: "0.25rem",
-  xsmall: "0.5rem",
-  small: "0.625rem",
-  base: "1rem",
-  medium: "1.25rem",
-  large: "2rem",
-  larger: "2.5em",
+  tiny: "0.25rem", // 4px
+  xsmall: "0.5rem", // 8px
+  small: "0.625rem", // 10px
+  base: "1rem", // 16px
+  medium: "1.25rem", // 20px
+  large: "2rem", // 32px
+  larger: "2.5em", // 40px
   interComponent: "1.25rem"
 };
 
