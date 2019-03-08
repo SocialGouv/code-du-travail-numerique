@@ -10,7 +10,7 @@ Ces fichiers sont utilisés pour créer les indexes Elastic Search.
 | [themes.csv](./code-du-travail/themes.csv)                                           | ePoseidon                                                                                                                   |    -     | Liens articles/tags                         |
 | [fiches-sp-travail.json](./fiches_service_public/fiches-sp-travail.json)             | [data.gouv](https://data.gouv.fr/fr/datasets/service-public-fr-guide-vos-droits-et-demarches-professionnels-entreprises/#_) | 07/11/18 | FAQ service-public travail                  |
 | [fiches-min-travail.json](./fiches_ministere_travail/fiches-min-travail.json)        | Scrap https://travail-emploi.gouv.fr/                                                                                       | 20/07/18 | Fiches ministère du travail                 |
-| [kali.json](./kali.json)                                                             | Legixplore API sur api.kali.num.social.gouv.fr                                                                              | 05/03/19 | Liens conventions collectives               |
+| [kali.json](./kali/kali.json)                                                        | Legixplore API sur api.kali.num.social.gouv.fr                                                                              | 05/03/19 | Liens conventions collectives               |
 | [export-courriers.json](./export-courriers.json)                                     | -                                                                                                                           |    -     | Liste des modèles de courrier               |
 | [outils.json](./outils.json)                                                         | -                                                                                                                           |    -     | Liste des outils disponibles                |
 | [synonyms.json](./synonyms.json)                                                     | -                                                                                                                           |    -     | Synonymes                                   |
@@ -51,7 +51,7 @@ $ npm install
 $ node service-public-extract-fiches.js > fiches-sp-travail.json
 ```
 
-## Mettre à jour les conventions collectives (fichier kali.json)
+## Mettre à jour les conventions collectives (fichier kali/kali.json)
 
 ```
 $ cd dataset/kali

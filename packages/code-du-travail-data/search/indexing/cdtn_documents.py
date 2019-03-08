@@ -48,7 +48,7 @@ def make_slug(text, seed):
 
 
 def populate_cdtn_documents():
-    with open(os.path.join(settings.BASE_DIR, 'dataset/kali.json')) as json_data:
+    with open(os.path.join(settings.BASE_DIR, 'dataset/kali/kali.json')) as json_data:
         data = json.load(json_data)
         logger.info("Load %s documents from kali", len(data))
         for val in data:
@@ -57,7 +57,7 @@ def populate_cdtn_documents():
                 'id': val['id'],
                 'slug': f"{val['num']}-{slugify(val['titre'], to_lower=True)[:80]}",
                 'title': val['titre'],
-                'text': val['titre'],
+                'text': f"IDCC {val['num']} {val['titre']}",
                 'url': val['url'],
                 'idcc': val['num'],
             })

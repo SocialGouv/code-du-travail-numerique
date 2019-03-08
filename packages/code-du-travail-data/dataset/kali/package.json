@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > ../kali.json"
+    "start": "node index.js > ./kali.json"
   },
   "dependencies": {
     "axios": "^0.18.0"
