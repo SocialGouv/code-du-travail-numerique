@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2019-03-08)
+
+
+### Features
+
+* **data:** refactor KALI data to use legixplore API  ([e6ae16c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e6ae16c)), closes [#533](https://github.com/SocialGouv/code-du-travail-numerique/issues/533)
+* **data:** update code-du-travail au 1er Janvier 2019 ([#558](https://github.com/SocialGouv/code-du-travail-numerique/issues/558)) ([4b8ad48](https://github.com/SocialGouv/code-du-travail-numerique/commit/4b8ad48))
+
+
+### BREAKING CHANGES
+
+* **data:** json payload updated for KALI
+
+- removed deprecated data files
+- removed NAF information
+- refactored kali dataset to hit the new legixplore API.
+
+
+
+
+
 # 1.8.0 (2019-02-12)
 
 

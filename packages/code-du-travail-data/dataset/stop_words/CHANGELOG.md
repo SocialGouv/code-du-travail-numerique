@@ -5,12 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 2.0.0 (2019-03-08)
 
-**Note:** Version bump only for package @cdt/data...tags
-
-
-
-
-
-# 1.8.0 (2019-02-12)
-
-**Note:** Version bump only for package @cdt/data...tags
+**Note:** Version bump only for package @cdt/data...stopwords
