@@ -33,7 +33,7 @@ logger = settings.get_logger(__name__)
 
 LEGIFRANCE_BASE_URL = 'https://www.legifrance.gouv.fr/affichCodeArticle.do'
 
-JSON_LEGILIBRE = os.path.join(settings.BASE_DIR, 'dataset/code_du_travail/code-du-travail-2018-01-01.json')
+JSON_LEGILIBRE = os.path.join(settings.BASE_DIR, 'dataset/code_du_travail/code-du-travail.json')
 
 CODE_DU_TRAVAIL_DICT = {}
 
