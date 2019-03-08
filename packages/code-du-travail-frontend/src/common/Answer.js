@@ -10,6 +10,8 @@ import Html from "../common/Html";
 import Search from "../search/Search";
 import { FeedbackModal } from "../common/FeedbackModal";
 
+import TextesConventionnels from "./TextesConventionnels";
+
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
     <Alert warning>{children}</Alert>
@@ -67,6 +69,7 @@ class Answer extends React.Component {
       html = null,
       children = null,
       footer,
+      refs = [],
       date,
       icon,
       sourceType,
@@ -104,6 +107,7 @@ class Answer extends React.Component {
               {intro}
               {html && <Html>{html}</Html>}
               {children}
+              <TextesConventionnels refs={refs} />
               <div
                 style={{
                   background: "var(--color-light-background)",
