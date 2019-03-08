@@ -1,6 +1,6 @@
 import React from "react";
 
-const routeBysource = {
+const sourceByRoute = {
   "fiche-service-public": "fiches_service_public",
   "fiche-ministere-travail": "fiches_ministere_travail",
   "code-du-travail": "code_du_travail",
@@ -14,7 +14,7 @@ const routeBysource = {
 function translateSource(path) {
   return path.replace(
     /\/([^/]+)(\/.*)$/,
-    (_, p1, p2) => `/${routeBysource[p1] || p1}${p2}`
+    (_, p1, p2) => `/${sourceByRoute[p1] || p1}${p2}`
   );
 }
 
