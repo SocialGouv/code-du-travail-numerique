@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: cdtn-data
-    image: registry.gitlab.factory.social.gouv.fr/test-ops/test-code-du-travail-numerique/data:latest
+    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:latest
   restartPolicy: Never
   initContainers:
   - name: wait-for-elasticsearch
