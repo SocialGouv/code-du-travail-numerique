@@ -86,6 +86,7 @@ def populate_cdtn_documents():
     for val in CODE_DU_TRAVAIL_DICT.values():
         CDTN_DOCUMENTS.append({
             'source': 'code_du_travail',
+            'id': val['id'],
             'text': val['bloc_textuel'],
             'slug': slugify(val['titre'], to_lower=True),
             'title': val['titre'],

@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`http://legifrance.gouv.fr/affichCode.do;?idSectionTA=LEGISCTA000006178057&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006903115",
+    "num": "L3343-1",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000006901292&idSectionTA=LEGISCTA000006195646&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006901292",
+    "num": "L1251-38",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000028058860&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000037000998",
+    "num": "D4153-15",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901222&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006901222",
+    "num": "L1243-11",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635792 1`] = `
+Array [
+  Object {
+    "idConvention": "KALICONT000005635792",
+    "type": "convention-collective",
+  },
+]
+`;
+
+exports[`http://www.legifrance.gouv.fr/affichCode.do;?idSectionTA=LEGISCTA000006195912&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000031087431",
+    "num": "L6222-18",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006904015",
+    "num": "L6222-19",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000027682903",
+    "num": "L6222-21",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006904018",
+    "num": "L6222-22",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://www.legifrance.gouv.fr/affichCode.do?cidTexte=LEGITEXT000006072050&idSectionTA=LEGISCTA000031588593&dateTexte=20160101 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000031588590",
+    "num": "R3313-12",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000031588586",
+    "num": "D3313-13",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000006902373&idSectionTA=LEGISCTA000006177989&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006902373",
+    "num": "L2512-1",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000006904159&idSectionTA=LEGISCTA000006195923&cidTexte=LEGITEXT000006072050&dateTexte 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006904159",
+    "num": "L6322-1",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018523270&cidTexte=LEGITEXT000006072050&dateTexte 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000018523268",
+    "num": "R6322-1",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000034103439",
+    "num": "R6322-2",
+    "type": "article",
+  },
+]
+`;
+
+exports[`http://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000006902345&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006902345",
+    "num": undefined,
+    "type": "article",
+  },
+]
+`;
+
+exports[`https://www.legifrance.gouv.fr/affichCode.do;jsessionid=F6A039BEA1CEBEED08A95F62603613C4.tpdila20v_1?idSectionTA=LEGISCTA000006195895&cidTexte=LEGITEXT000006072050&dateTexte=20170831 1`] = `Array []`;
+
+exports[`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=LEGITEXT000006072050&idSectionTA=LEGISCTA000030237495 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000030237497",
+    "num": "D6113-1",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000030237499",
+    "num": "D6113-2",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000030237501",
+    "num": "D6113-3",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000030237503",
+    "num": "D6113-4",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000033240184",
+    "num": "D6113-5",
+    "type": "article",
+  },
+]
+`;
+
+exports[`https://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000024197703&idSectionTA=LEGISCTA000006178283&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000024197703",
+    "num": undefined,
+    "type": "article",
+  },
+]
+`;
+
+exports[`https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006177834&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006900785",
+    "num": "L1121-1",
+    "type": "article",
+  },
+]
+`;
+
+exports[`https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000006177869&cidTexte=LEGITEXT000006072050 1`] = `
+Array [
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000036262152",
+    "num": "L1245-1",
+    "type": "article",
+  },
+  Object {
+    "code": "LEGITEXT000006072050",
+    "id": "LEGIARTI000006901234",
+    "num": "L1245-2",
+    "type": "article",
+  },
+]
+`;
+
+exports[`https://www.legifrance.gouv.fr/affichIDCC.do?cidTexte=KALITEXT000005669667&idSectionTA=KALISCTA000005713172&idConvention=KALICONT000005635807 1`] = `
+Array [
+  Object {
+    "cidTexte": "KALITEXT000005669667",
+    "idConvention": "KALICONT000005635807",
+    "idSectionTA": "KALISCTA000005713172",
+    "type": "convention-collective",
+  },
+]
+`;

@@ -16,6 +16,7 @@
     "libxslt": "github:alexdee2007/node-libxslt",
     "lodash.uniqby": "^4.7.0",
     "promise-serial-exec": "^1.0.0",
+    "query-string": "^6.2.0",
     "xmldom": "^0.1.27",
     "xpath.js": "^1.1.0",
     "xslt": "^0.9.1",
