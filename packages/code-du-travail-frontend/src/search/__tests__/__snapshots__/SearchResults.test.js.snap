@@ -3,20 +3,12 @@
 exports[`<SearchResults/> should render no results 1`] = `
 <div>
   <div
-    class="section-light"
+    category="primary"
+    class="alert "
   >
-    <div
-      class="container"
-    >
-      <div
-        category="primary"
-        class="alert "
-      >
-        <p>
-          Nous n’avons pas trouvé de résultat pour votre recherche.
-        </p>
-      </div>
-    </div>
+    <p>
+      Nous n'avons pas trouvé de résultat pour votre recherche.
+    </p>
   </div>
   <section
     class="section"
@@ -83,49 +75,41 @@ exports[`<SearchResults/> should render no results 1`] = `
 exports[`<SearchResults/> should render results 1`] = `
 <div>
   <div
-    class="section-light"
+    class="search-results"
   >
-    <div
-      class="container"
+    <ul
+      class="search-results__list"
     >
-      <div
-        class="search-results"
+      <li
+        class="search-results__item"
       >
-        <ul
-          class="search-results__list"
+        <a
+          class="search-results-link"
+          href="/question/mer-il-est-fou?q=search%20test"
         >
-          <li
-            class="search-results__item"
+          <article
+            class="faq"
           >
-            <a
-              class="search-results-link"
-              href="/question/mer-il-est-fou?q=search%20test"
-            >
-              <article
-                class="faq"
+            <header>
+              <h3
+                class="sc-bdVaJa kBfMAi"
               >
-                <header>
-                  <h3
-                    class="sc-bdVaJa kBfMAi"
-                  >
-                    <span
-                      class="sc-bwzfXH aKpTk"
-                    >
-                      FAQ
-                       | 
-                    </span>
-                    Mer il est fou!
-                  </h3>
-                </header>
-                <blockquote
-                  class="text-quote sc-htpNat bhpHJD"
-                />
-              </article>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+                <span
+                  class="sc-bwzfXH aKpTk"
+                >
+                  FAQ
+                   | 
+                </span>
+                Mer il est fou!
+              </h3>
+            </header>
+            <blockquote
+              class="text-quote sc-htpNat bhpHJD"
+            />
+          </article>
+        </a>
+      </li>
+    </ul>
   </div>
   <section
     class="section"
@@ -181,93 +165,6 @@ exports[`<SearchResults/> should render results 1`] = `
             tabindex="0"
           >
             Posez votre question
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    class="section-light"
-  >
-    <div
-      class="container"
-    >
-      <div
-        class="block-2-cols wrapper-dark"
-      >
-        <header>
-          <h2>
-            Voir aussi
-          </h2>
-        </header>
-        <div
-          class="block-2-cols__row"
-        >
-          <div
-            class="block-2-cols__col"
-          >
-            <h3>
-              <img
-                alt=""
-                src="/static/assets/icons/phone-call.svg"
-              />
-              Vos interlocuteurs
-            </h3>
-            <ul>
-              <li>
-                <div
-                  class="btn btn__link  link"
-                  link="true"
-                  role="button"
-                  tabindex="0"
-                >
-                  Trouver votre service de renseignement
-                </div>
-              </li>
-              <li>
-                <a
-                  class="external-link__after"
-                  href="https://www.defenseurdesdroits.fr/office"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Défenseur des droits
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="block-2-cols__col"
-          >
-            <h3>
-              <img
-                alt=""
-                src="/static/assets/icons/line-chart.svg"
-              />
-              Liens et outils
-            </h3>
-            <ul>
-              <li>
-                <a
-                  class="external-link__after"
-                  href="https://socialgouv.github.io/faq-code-du-travail/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Question-Réponse des services de renseignement
-                </a>
-              </li>
-              <li>
-                <a
-                  class="external-link__after"
-                  href="http://bourgogne-franche-comte.direccte.gouv.fr/Le-code-BFC-Bienveillant-facile-et-comprehensible"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Le Code BFC (Bourgogne Franche Comté: fév 2017)
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { Alert, NoAnswer, Button } from "@cdt/ui";
 
 import { FeedbackModal } from "../common/FeedbackModal";
-import SeeAlso from "../common/SeeAlso";
 import { Link } from "../../routes";
 
 import { getLabelBySource, getRouteBySource } from "../sources";
@@ -132,23 +131,21 @@ class SearchResults extends React.Component {
     if (!data || !data.hits || !data.hits.total) {
       return (
         <React.Fragment>
-          <div className="section-light">
-            <div className="container">
-              <Alert category="primary">
-                <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
-                {source.length > 0 && (
-                  <p>
-                    Vous pouvez élargir la recherche en intégrant&nbsp;
-                    <strong>
-                      <Link route="index" params={{ q: query, source: "" }}>
-                        <a>les autres sources de documents</a>
-                      </Link>
-                    </strong>
-                  </p>
-                )}
-              </Alert>
-            </div>
-          </div>
+          <Alert category="primary">
+            <p>
+              Nous n&apos;avons pas trouvé de résultat pour votre recherche.
+            </p>
+            {source.length > 0 && (
+              <p>
+                Vous pouvez élargir la recherche en intégrant&nbsp;
+                <strong>
+                  <Link route="index" params={{ q: query, source: "" }}>
+                    <a>les autres sources de documents</a>
+                  </Link>
+                </strong>
+              </p>
+            )}
+          </Alert>
           <NoAnswer>
             <Button onClick={this.showFeedBackPopup}>
               Posez votre question
@@ -167,39 +164,35 @@ class SearchResults extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="section-light">
-          <div className="container">
-            <div className="search-results">
-              {data.snippet && (
-                <ResultSnippet>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: data.snippet._source.html
-                    }}
-                  />
-                  {data.snippet._source.references && (
-                    <SourceLink
-                      href={data.snippet._source.references[0].url}
-                      norel
-                      noopener
-                    >
-                      {data.snippet._source.references[0].titre}
-                    </SourceLink>
-                  )}
-                </ResultSnippet>
+        <div className="search-results">
+          {data.snippet && (
+            <ResultSnippet>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: data.snippet._source.html
+                }}
+              />
+              {data.snippet._source.references && (
+                <SourceLink
+                  href={data.snippet._source.references[0].url}
+                  norel
+                  noopener
+                >
+                  {data.snippet._source.references[0].titre}
+                </SourceLink>
               )}
-              <ul className="search-results__list">
-                {data.hits.hits.map((result, i) => (
-                  <ResultItem
-                    focused={i === 0}
-                    key={result["_id"]}
-                    {...result}
-                    query={this.props.query}
-                  />
-                ))}
-              </ul>
-            </div>
-          </div>
+            </ResultSnippet>
+          )}
+          <ul className="search-results__list">
+            {data.hits.hits.map((result, i) => (
+              <ResultItem
+                focused={i === 0}
+                key={result["_id"]}
+                {...result}
+                query={this.props.query}
+              />
+            ))}
+          </ul>
         </div>
         <NoAnswer>
           <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
@@ -210,8 +203,6 @@ class SearchResults extends React.Component {
           closeModal={this.closeModal}
           query={query}
         />
-
-        <SeeAlso />
       </React.Fragment>
     );
   }

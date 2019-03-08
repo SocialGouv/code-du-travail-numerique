@@ -2,6 +2,12 @@
 
 exports[`return article results when searching with article id 1`] = `
 Object {
+  "facets": Array [
+    Object {
+      "doc_count": 1,
+      "key": "code_du_travail",
+    },
+  ],
   "hits": Object {
     "hits": Array [
       Object {
@@ -80,6 +86,12 @@ Object {
 
 exports[`return faq search results for smic with snippet content 1`] = `
 Object {
+  "facets": Array [
+    Object {
+      "doc_count": 1,
+      "key": "fiches_ministere_travail",
+    },
+  ],
   "hits": Object {
     "hits": Array [
       Object {

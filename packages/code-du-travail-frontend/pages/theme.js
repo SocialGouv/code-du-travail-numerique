@@ -101,18 +101,19 @@ class Theme extends React.Component {
           <title>Code du travail numérique : {theme && theme.title}</title>
         </Head>
         <Search />
-        <Container>
-          {!theme && <BigError>Ce thème n&apos;a pas été trouvé</BigError>}
-          {(breadCrumbs && breadCrumbs.length && (
-            <h2 style={{ textAlign: "center", margin: 20 }}>
-              <BreadCrumbs entries={breadCrumbs} />
-            </h2>
-          )) || (
-            <h2 style={{ textAlign: "center", margin: 20 }}>
-              Choisissez un thème :
-            </h2>
-          )}
-
+        <div className="section">
+          <Container>
+            {!theme && <BigError>Ce thème n&apos;a pas été trouvé</BigError>}
+            {(breadCrumbs && breadCrumbs.length && (
+              <h2 style={{ textAlign: "center", margin: "20px 0" }}>
+                <BreadCrumbs entries={breadCrumbs} />
+              </h2>
+            )) || (
+              <h2 style={{ textAlign: "center", margin: "20px 0" }}>
+                Choisissez un thème :
+              </h2>
+            )}
+          </Container>
           {(theme && theme.children && theme.children.length && (
             <Categories
               isRoot={parents.length === 0}
@@ -121,14 +122,18 @@ class Theme extends React.Component {
             />
           )) ||
             null}
-          {theme && theme.type !== "root" && (
-            <SearchQuery
-              query={theme.title}
-              excludeSources="themes"
-              fetch={searchResults}
-            />
-          )}
-        </Container>
+        </div>
+        {theme && theme.type !== "root" && (
+          <div className="section">
+            <Container>
+              <SearchQuery
+                query={theme.title}
+                excludeSources="themes"
+                fetch={searchResults}
+              />
+            </Container>
+          </div>
+        )}
       </PageLayout>
     );
   }
