@@ -1,9 +1,11 @@
 const fs = require("fs");
 const select = require("xpath.js");
 const dom = require("xmldom").DOMParser;
-const xmlToHtml = require("./xmlToHtml");
 const uniqBy = require("lodash.uniqby");
+
+const xmlToHtml = require("./xmlToHtml");
 const ficheFilter = require("./ficheFilter");
+const resolveReferences = require("./resolveReferences");
 
 /*
 extrait les données avec les fichiers XML de :
@@ -121,7 +123,8 @@ const getFiches = path =>
     .map(f => getFicheText(`${path}/${f}`))
     .map(parseXml)
     .filter(ficheFilter)
-    .map(toJson);
+    .map(toJson)
+    .map(resolveReferences);
 
 const fiches = [
   ...getFiches("./data/vosdroits-particuliers"),
