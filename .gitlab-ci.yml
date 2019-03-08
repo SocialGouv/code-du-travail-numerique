@@ -9,11 +9,37 @@ include:
 variables:
   IMAGE_INFRA_BASE_NAME: "infra/images-docker"
 
+image: node:10-alpine
+
 stages:
+- "Install NPM Dependencies"
+- "Build Assets"
 - "Build & Push Docker Image"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
+
+install-dependencies:
+  stage: "Install NPM Dependencies"
+  script:
+  - yarn
+  artifacts:
+    expire_in: "1 day"
+    paths:
+    - node_modules
+    - packages/code-du-travail-ui/node_modules
+    - packages/code-du-travail-frontend/node_modules
+    - packages/code-du-travail-css/node_modules
+    - packages/code-du-travail-api/node_modules
+
+build-api-assets:
+  stage: "Build Assets"
+  script:
+  - yarn build
+  artifacts:
+    expire_in: "1 day"
+    paths:
+    - packages/code-du-travail-api/dist
 
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
