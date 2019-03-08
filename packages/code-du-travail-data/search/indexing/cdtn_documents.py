@@ -54,8 +54,8 @@ def populate_cdtn_documents():
         for val in data:
             CDTN_DOCUMENTS.append({
                 'source': 'kali',
-                'id': val['cid'],
-                'slug': slugify(val['titre'], to_lower=True),
+                '_id': 'kali--' + val['convention'],
+                'slug': val['convention'],
                 'title': val['titre'],
                 'url': val['url'],
                 'ape': " ".join(val.get('ape') or []),
@@ -85,10 +85,10 @@ def populate_cdtn_documents():
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
         CDTN_DOCUMENTS.append({
+            '_id': 'code_du_travail--' + val['num'],
             'source': 'code_du_travail',
-            'id': val['id'],
             'text': val['bloc_textuel'],
-            'slug': slugify(val['titre'], to_lower=True),
+            'slug': val['num'],
             'title': val['titre'],
             'html': val['html'],
             'path': val['path'],
@@ -106,6 +106,7 @@ def populate_cdtn_documents():
             'slug': slugify(val['title'], to_lower=True),
             'title': val['title'],
             'html': val["html"],
+            'refs': val["refs"],
             'tags': val['tags'],
             'url': val['url'],
             'date': val.get('date'),

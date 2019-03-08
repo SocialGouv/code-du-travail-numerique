@@ -52,6 +52,7 @@ class Fiche extends React.Component {
             html={data._source.html}
             footer={footer}
             date={data._source.date}
+            refs={data._source.refs}
             icon={DossierIcon}
             sourceType="Fiche service public"
           />
