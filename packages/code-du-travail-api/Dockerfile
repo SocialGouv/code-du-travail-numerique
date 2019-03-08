@@ -11,7 +11,7 @@ ENV ELASTICSEARCH_URL="http://elasticsearch:9200"
 ENV APM_SERVER_URL="http://apm:8200"
 
 COPY ./package.json /app/package.json
-COPY --from=master /app/packages/code-du-travail-api/dist /app/dist
+COPY ./dist /app/dist
 COPY --from=master /app/node_modules/@cdt/data...courrier-type /node_modules/@cdt/data...courrier-type
 
 WORKDIR /app
