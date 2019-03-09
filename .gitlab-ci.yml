@@ -67,6 +67,19 @@ build-and-push-cdtn-api-image:
   - docker build -t "$CI_REGISTRY_IMAGE/api:latest" .
   - docker push "$CI_REGISTRY_IMAGE/api:latest"
 
+build-and-push-cdtn-frontend-image:
+  stage: "Build & Push Docker Image"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - cd packages/code-du-travail-frontend
+  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  - docker build -t "$CI_REGISTRY_IMAGE/frontend:latest" .
+  - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
+
 build-and-push-cdtn-data-image:
   stage: "Build & Push Docker Image"
   image: docker:latest
