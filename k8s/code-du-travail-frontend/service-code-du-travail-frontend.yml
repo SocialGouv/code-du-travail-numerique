@@ -1,0 +1,13 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: cdtn-frontend
+  labels:
+    app: cdtn-frontend
+spec:
+  selector:
+    app: cdtn-frontend
+  ports:
+  - port: 3000
+    name: frontend
