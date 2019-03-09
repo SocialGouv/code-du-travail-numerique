@@ -1,0 +1,22 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: cdtn-frontend
+  labels:
+    app: cdtn-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cdtn-frontend
+  template:
+    metadata:
+      labels:
+        app: cdtn-frontend
+    spec:
+      containers:
+      - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/frontend:latest
+        name: cdtn-frontend
+        ports:
+        - containerPort: 3000
