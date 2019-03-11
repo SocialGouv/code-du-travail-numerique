@@ -7,7 +7,7 @@ function getText(element = { text: "" }, joint = " ") {
   }
   if (element.$) {
     return element.$
-      .map((children) => getText(children, joint))
+      .map((child) => getText(child, joint))
       .join(joint);
   }
   return "";
