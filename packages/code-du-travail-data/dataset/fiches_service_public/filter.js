@@ -7,18 +7,20 @@ const filter = fiches => fiches.filter(fiche => {
         return ids;
       }, []);
 
-  if (excludeFicheId.some(id => arianeIDs.includes(id))) {
+    const matchFilDAriane = id => arianeIDs.includes(id);
+
+  if (excludeFicheId.some(matchFilDAriane)) {
     return false;
   }
 
-  if (excludeDossierId.some(id => arianeIDs.includes(id))) {
+  if (excludeDossierId.some(matchFilDAriane)) {
     // Il existe des fiches que l'on souhaite garder, alors que
     // l'on ne souhaite pas garder son dossier parent
-    return includeFicheId.some(id => arianeIDs.includes(id));
+    return includeFicheId.some(matchFilDAriane);
   }
 
   const includeList = includeThemeId.concat(includeDossierId, includeFicheId);
-  if (includeList.some(id => arianeIDs.includes(id))) {
+  if (includeList.some(matchFilDAriane)) {
     return true;
   }
 
