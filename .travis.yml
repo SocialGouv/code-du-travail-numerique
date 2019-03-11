@@ -22,7 +22,7 @@ _environments:
 #
 
 jobs:
-    - <<: *main_node_stage
+    - <<: *node_stage
       if: type = pull_request
       name: Pull Request Stage
       env:
@@ -54,7 +54,7 @@ jobs:
         - travis_time_finish && travis_fold end "Index"
       after_success: npx codecov
 
-    - <<: *main_node_stage
+    - <<: *node_stage
       stage: Release
       if: env(RELEASE)
       name: Make a new release 🎉
