@@ -8,6 +8,7 @@ const DATAFILLER_URL =
   "https://datafiller.num.social.gouv.fr/kinto/v1/buckets/datasets/collections/requetes/records";
 
 // for 2nd sort order after relevance
+// higher is better
 const sourcesPriority = [
   "faq",
   "fiche-service-public",
@@ -22,48 +23,50 @@ const getSource = url => {
 
 // sort datafiller references by relevance and source
 const sortRefs = (a, b) => {
+  // 1st sort by relevance
   if (a.relevance < b.relevance) {
-    return -1;
-  } else if (a.relevance > b.relevance) {
     return 1;
-  } else {
-    if (
-      sourcesPriority.indexOf(getSource(a.url)) <
-      sourcesPriority.indexOf(getSource(b.url))
-    ) {
-      return 1;
-    } else if (
-      sourcesPriority.indexOf(getSource(a.url)) >
-      sourcesPriority.indexOf(getSource(b.url))
-    ) {
-      return -1;
-    }
+  } else if (a.relevance > b.relevance) {
+    return -1;
+  }
+  // 2nd sort by sourcesPriority
+  if (
+    sourcesPriority.indexOf(getSource(a.url)) <
+    sourcesPriority.indexOf(getSource(b.url))
+  ) {
+    return -1;
+  } else if (
+    sourcesPriority.indexOf(getSource(a.url)) >
+    sourcesPriority.indexOf(getSource(b.url))
+  ) {
+    return 1;
   }
   return 0;
 };
 
+const hasUrl = row => !!row.url;
+
+const getVariants = row => {
+  const others =
+    (row.variants && row.variants.split("\n").map(variant => variant.trim())) ||
+    [];
+  const variants = [row.title.replace("-", " ")].concat(others);
+  return variants;
+};
 // import only valid data from datafiller
 // == has more than one ref
 const fetchAll = () =>
   fetch(DATAFILLER_URL)
     .then(res => res.json())
-    .then(res => res.data)
-    .then(res => res.filter(item => item.refs && item.refs.length > 1))
-    .then(res =>
-      res
-        // .filter(r => r.refs && r.refs.filter(a => !!a.url).length)
-        .map(r => ({
-          ...r,
-          refs: r.refs
-            .filter(ref => !!ref.url)
-            .sort(sortRefs)
-            .reverse(),
-          variants: [r.title].concat(
-            (r.variants && r.variants.split("\n")) || []
-          )
-        }))
+    .then(json => json.data)
+    .then(data => data.filter(item => item.refs && item.refs.length > 1))
+    .then(rows =>
+      rows.map(row => ({
+        ...row,
+        refs: row.refs.filter(hasUrl).sort(sortRefs),
+        variants: getVariants(row)
+      }))
     );
-//  .then(sortRowsRefs);
 
 module.exports = fetchAll;
 

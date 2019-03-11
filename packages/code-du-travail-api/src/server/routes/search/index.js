@@ -4,7 +4,7 @@ const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
 const getFacetsBody = require("./facets.elastic");
-const getKnownQuery = require("./search.known");
+const getKnownQuery = require("./search.prequalified");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";

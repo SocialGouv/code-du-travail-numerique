@@ -5,6 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "promise-serial-exec": "^1.0.0"
+    "p-limit": "^2.2.0"
+  },
+  "scripts": {
+    "start": "node index.js prequalified.json"
   }
 }

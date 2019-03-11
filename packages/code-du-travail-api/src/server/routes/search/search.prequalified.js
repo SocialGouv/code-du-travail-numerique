@@ -1,4 +1,4 @@
-const knownQueries = require("@cdt/data...datafiller/queries.json");
+const knownQueries = require("@cdt/data...datafiller/prequalified.json");
 
 // find known query if any
 const getKnownQuery = (query, excludeSources = []) => {
