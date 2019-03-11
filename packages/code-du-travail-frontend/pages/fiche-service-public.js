@@ -59,7 +59,7 @@ class Fiche extends React.Component {
             icon={DossierIcon}
             sourceType="Fiche service public"
           >
-            {data._source.raw && ficheBuilder(data._source.raw)}
+            {data._source.raw && ficheBuilder(data._source.raw.$)}
           </Answer>
         </ServicePublicCss>
       </PageLayout>
