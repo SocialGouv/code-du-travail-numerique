@@ -58,7 +58,8 @@ Lint @cdt/ui:
 Lint @cdt/data search code:
   stage: "Check Code quality"
   image: python:3.6-alpine
-  before_script: cd packages/code-du-travail-data
+  before_script:
+  - cd packages/code-du-travail-data
   script:
   - pip install --upgrade pip
   - pip install pipenv==11.10.1
