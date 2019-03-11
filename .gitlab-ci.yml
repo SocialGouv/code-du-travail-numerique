@@ -57,7 +57,7 @@ Lint @cdt/ui:
 
 Lint @cdt/data search code:
   stage: "Check Code quality"
-  image: python:3.7-alpine
+  image: python:3
   variables:
     PIPENV_VENV_IN_PROJECT: 1
     PIPENV_IGNORE_VIRTUALENVS: 1
