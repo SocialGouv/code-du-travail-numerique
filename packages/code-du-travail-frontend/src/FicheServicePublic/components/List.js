@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import elementBuilder from "../index";
+import { spacing } from "../css/variables";
+import { ElementBuilder } from "../index";
 
 class List extends React.PureComponent {
   render() {
     const { data, headingLevel } = this.props;
     const items = data.$.map((item, index) => (
-      <li key={index}>{elementBuilder(item.$, headingLevel + 1)}</li>
+      <StyledLi key={index}>
+        <ElementBuilder data={item.$} headingLevel={headingLevel + 1} />
+      </StyledLi>
     ));
 
     if (data._.type === "puce") {
@@ -23,3 +26,7 @@ List.propTypes = {
 };
 
 export default List;
+
+const StyledLi = styled.li`
+  margin-bottom: ${spacing.tiny};
+`;

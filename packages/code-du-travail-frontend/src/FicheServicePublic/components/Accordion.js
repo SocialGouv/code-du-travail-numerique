@@ -10,7 +10,7 @@ import {
 import { colors, spacing } from "../css/variables";
 import { VerticalArrow } from "../css/components";
 import { fadeIn } from "../css/animations";
-import elementBuilder from "../index";
+import { ElementBuilder } from "../index";
 
 class AccordionWrapper extends React.Component {
   render() {
@@ -23,16 +23,18 @@ class AccordionWrapper extends React.Component {
     ).map((accordionItem, index) => {
       const title = (
         <>
-          {elementBuilder(
-            accordionItem.$.find(child => child.name === "Titre"),
-            headingLevel
-          )}
+          <ElementBuilder
+            data={accordionItem.$.find(child => child.name === "Titre")}
+            headingLevel={headingLevel}
+          />
           <VerticalArrow />
         </>
       );
-      const body = elementBuilder(
-        accordionItem.$.filter(child => child.name !== "Titre"),
-        headingLevel + 1
+      const body = (
+        <ElementBuilder
+          data={accordionItem.$.filter(child => child.name !== "Titre")}
+          headingLevel={headingLevel + 1}
+        />
       );
       return (
         <AccordionItem key={index}>
@@ -45,11 +47,15 @@ class AccordionWrapper extends React.Component {
     const beforeAccordionElements = data.$.slice(
       0,
       firstIndexOfAccordionItem
-    ).map(element => elementBuilder(element, headingLevel));
+    ).map((element, index) => (
+      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
+    ));
 
     const afterAccordionElements = data.$.slice(
       firstIndexOfAccordionItem + accordionItems.length
-    ).map(element => elementBuilder(element, headingLevel));
+    ).map((element, index) => (
+      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
+    ));
     return (
       <>
         {beforeAccordionElements}

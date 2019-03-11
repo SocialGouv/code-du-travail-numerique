@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { box, colors, fonts, spacing } from "../css/variables";
 import { SrOnly } from "../css/components";
-import elementBuilder from "../index";
+import { ElementBuilder } from "../index";
 import { ignoreParagraph } from "../utils";
 
 class Tabulator extends React.PureComponent {
@@ -17,21 +17,24 @@ class Tabulator extends React.PureComponent {
 
     const tabLabels = data.$.map((tab, index) => (
       <Tab key={index}>
-        {elementBuilder(
-          ignoreParagraph(tab.$.find(el => el.name === "Titre").$),
-          headingLevel
-        )}
+        <ElementBuilder
+          data={ignoreParagraph(tab.$.find(el => el.name === "Titre").$)}
+          headingLevel={headingLevel}
+        />
       </Tab>
     ));
     const tabContents = data.$.map((tab, index) => (
       <TabPanel key={index}>
         <SrOnly>
-          {elementBuilder(tab.$.find(el => el.name === "Titre"), headingLevel)}
+          <ElementBuilder
+            data={tab.$.find(el => el.name === "Titre")}
+            headingLevel={headingLevel}
+          />
         </SrOnly>
-        {elementBuilder(
-          tab.$.filter(el => el.name !== "Titre"),
-          headingLevel + 1
-        )}
+        <ElementBuilder
+          data={tab.$.filter(el => el.name !== "Titre")}
+          headingLevel={headingLevel + 1}
+        />
       </TabPanel>
     ));
 

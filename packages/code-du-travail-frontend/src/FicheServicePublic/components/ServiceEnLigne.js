@@ -1,21 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import elementBuilder from "../index";
+import { getText } from "../utils";
 import { colors, spacing, box } from "../css/variables";
 
 class ServiceEnLigne extends React.PureComponent {
   render() {
-    const { data, headingLevel } = this.props;
+    const { data } = this.props;
     const type = data._.type;
     const url = data._.URL;
-    const title = elementBuilder(data.$[0].$, headingLevel);
-    const source = elementBuilder(data.$[1].$, headingLevel);
+    const title = getText(data.$[0]);
+    const source = getText(data.$[1]);
+    console.log("Title is :", title);
     return (
       <Wrapper>
         <Type>{type}</Type>
         <ButtonLink href={url} rel="noopener noreferrer" target="_blank">
-          {`${title}`}
+          {title}
         </ButtonLink>
         <Source>{source}</Source>
       </Wrapper>
@@ -24,8 +25,7 @@ class ServiceEnLigne extends React.PureComponent {
 }
 
 ServiceEnLigne.propTypes = {
-  data: PropTypes.object.isRequired,
-  headingLevel: PropTypes.number.isRequired
+  data: PropTypes.object.isRequired
 };
 
 export default ServiceEnLigne;
@@ -37,6 +37,9 @@ const Wrapper = styled.div`
   padding: ${spacing.large};
   background-color: ${colors.lighterGrey};
   border-radius: ${box.borderRadius};
+  &:not(:last-child) {
+    margin-bottom: ${spacing.base};
+  }
 `;
 
 const Type = styled.div`

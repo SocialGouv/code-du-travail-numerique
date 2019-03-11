@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import elementBuilder from "../index";
-import { ignoreParagraph } from "../utils";
+import { ElementBuilder } from "../index";
+import { ignoreParagraph, getText } from "../utils";
 
 class Table extends React.PureComponent {
   render() {
@@ -18,13 +17,16 @@ class Table extends React.PureComponent {
 
     return (
       <table>
-        {title && <caption>{elementBuilder(title.$, headingLevel)}</caption>}
+        {title && <caption>{getText(title.$)}</caption>}
         {headingRow && (
           <thead>
             <tr>
               {headingRow.$.map((th, index) => (
                 <th key={index}>
-                  {elementBuilder(ignoreParagraph(th.$), headingLevel)}
+                  <ElementBuilder
+                    data={ignoreParagraph(th.$)}
+                    headingLevel={headingLevel}
+                  />
                 </th>
               ))}
             </tr>
@@ -35,7 +37,10 @@ class Table extends React.PureComponent {
             <tr key={index}>
               {tr.$.map((td, index) => (
                 <td key={index}>
-                  {elementBuilder(ignoreParagraph(td.$), headingLevel + 1)}
+                  <ElementBuilder
+                    data={ignoreParagraph(td.$)}
+                    headingLevel={headingLevel + 1}
+                  />
                 </td>
               ))}
             </tr>
