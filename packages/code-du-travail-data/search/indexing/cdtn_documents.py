@@ -82,7 +82,6 @@ def populate_cdtn_documents():
         for val in data:
             CDTN_DOCUMENTS.append({
                 'source': 'fiches_service_public',
-                'all_text': f"{val['title']} {val['text']}",
                 'date': val['date'],
                 'raw': val['raw'],
                 'slug': slugify(val['title'], to_lower=True),
