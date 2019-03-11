@@ -72,13 +72,15 @@ Test @cdt/frontend:
   stage: "Check Code quality"
   script:
   - yarn workspace @cdt/frontend test --coverage
-  after_script: npx codecov
+  after_script:
+  - npx codecov
 
 Test @cdt/ui:
   stage: "Check Code quality"
   script:
   - yarn workspace @cdt/ui test --coverage
-  after_script: npx codecov
+  after_script:
+  - npx codecov
 
 #
 
