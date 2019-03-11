@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import * as Components from "./components";
 import { getText, ignoreParagraph } from "./utils";
-import { fonts, spacing } from "./css/variables";
+import { box, colors, fonts, spacing } from "./css/variables";
 
 // Beware, this one is recursive
 export function ElementBuilder({ data, headingLevel = 0 }) {
@@ -57,6 +57,9 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
   // "Standard" elements, we can immediately parse their children
   const children = <ElementBuilder data={data.$} headingLevel={headingLevel} />;
   switch (data.name) {
+    case "ANoter":
+    case "ASavoir":
+      return <ANoter>{children}</ANoter>;
     case "BlocCas":
     case "Cas":
       return children;
@@ -69,10 +72,6 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     case "Texte":
       return children;
     // These ones are still to be defined
-    case "ANoter":
-      return children;
-    case "ASavoir":
-      return children;
     case "LienIntra":
       return children;
     case "LienInterne":
@@ -98,6 +97,15 @@ export default FicheServicePublic;
 const StyledElementBuilder = styled.div`
   * > *:last-child {
     margin-bottom: 0;
+  }
+`;
+
+const ANoter = styled.div`
+  padding: ${spacing.base};
+  background-color: ${colors.elementBackground};
+  border-radius: ${box.borderRadius};
+  & > *:first-child {
+    margin-top: 0;
   }
 `;
 
