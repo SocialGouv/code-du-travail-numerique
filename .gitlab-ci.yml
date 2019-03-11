@@ -20,6 +20,14 @@ stages:
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
 
+#
+#
+#
+
+#
+# Install & Build
+#
+
 Install & Build:
   stage: "Install & Build"
   script:
@@ -38,6 +46,12 @@ Install & Build:
     - packages/code-du-travail-ui/lib
     - packages/code-du-travail-ui/node_modules
 
+#
+#
+#
+
+#
+# Check Code quality
 #
 
 Lint @cdt/api:
@@ -58,6 +72,7 @@ Lint @cdt/ui:
 Lint @cdt/data search code:
   stage: "Check Code quality"
   image: python:3
+  artifacts: # disable artifacts here...
   variables:
     PIPENV_VENV_IN_PROJECT: 1
     PIPENV_IGNORE_VIRTUALENVS: 1
@@ -86,8 +101,14 @@ Test @cdt/ui:
   - npx codecov
 
 #
+#
+#
 
-build-and-push-elasticsearch-image:
+#
+# Build & Push Docker Image
+#
+
+Build Elasticsearch Image:
   stage: "Build & Push Docker Image"
   image: docker:latest
   variables:
@@ -100,7 +121,7 @@ build-and-push-elasticsearch-image:
   - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:latest" .
   - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
 
-build-and-push-cdtn-api-image:
+Build API Image:
   stage: "Build & Push Docker Image"
   image: docker:latest
   variables:
@@ -113,7 +134,7 @@ build-and-push-cdtn-api-image:
   - docker build -t "$CI_REGISTRY_IMAGE/api:latest" .
   - docker push "$CI_REGISTRY_IMAGE/api:latest"
 
-build-and-push-cdtn-frontend-image:
+Build Frontend Image:
   stage: "Build & Push Docker Image"
   image: docker:latest
   variables:
@@ -126,7 +147,7 @@ build-and-push-cdtn-frontend-image:
   - docker build -t "$CI_REGISTRY_IMAGE/frontend:latest" .
   - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
 
-build-and-push-cdtn-data-image:
+Build Data Image:
   stage: "Build & Push Docker Image"
   image: docker:latest
   variables:
@@ -139,7 +160,15 @@ build-and-push-cdtn-data-image:
   - docker build -t "$CI_REGISTRY_IMAGE/data:latest" .
   - docker push "$CI_REGISTRY_IMAGE/data:latest"
 
-deploy-kibana:
+#
+#
+#
+
+#
+# Deploy EL Stack
+#
+
+Deploy Kibana:
   stage: "Deploy EL Stack"
   extends: .deploy-kibana-k8s
   variables:
@@ -153,7 +182,7 @@ deploy-kibana:
   environment:
     name: ops
 
-deploy-elasticsearch:
+Deploy Elasticsearch:
   stage: "Deploy EL Stack"
   extends: .deploy-elasticsearch-k8s
   variables:
@@ -167,7 +196,7 @@ deploy-elasticsearch:
   environment:
     name: ops
 
-deploy-apm-server:
+Deploy APM:
   stage: "Deploy EL Stack"
   extends: .deploy-apm-server-k8s
   variables:
@@ -181,7 +210,15 @@ deploy-apm-server:
   environment:
     name: ops
 
-create-cdtn-es-index:
+#
+#
+#
+
+#
+# Create Code du Travail Numerique Elasticsearch Index
+#
+
+Index Elasticsearch:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
   extends: .deploy-code-du-travail-data-k8s
   variables:
@@ -195,7 +232,15 @@ create-cdtn-es-index:
   environment:
     name: ops
 
-deploy-cdtn-api:
+#
+#
+#
+
+#
+# Deploy Code du Travail Numerique
+#
+
+Deploy Api:
   stage: "Deploy Code du Travail Numerique"
   extends: .deploy-code-du-travail-api-k8s
   variables:
@@ -209,7 +254,7 @@ deploy-cdtn-api:
   environment:
     name: ops
 
-deploy-cdtn-frontend:
+Deploy Frontend:
   stage: "Deploy Code du Travail Numerique"
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
@@ -222,3 +267,7 @@ deploy-cdtn-frontend:
     K8S_TOKEN: $K8S_TOKEN
   environment:
     name: ops
+
+#
+#
+#
