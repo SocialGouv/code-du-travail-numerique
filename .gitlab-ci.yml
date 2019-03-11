@@ -57,7 +57,7 @@ Lint @cdt/ui:
 
 Lint @cdt/data search code:
   stage: "Check Code quality"
-  image: python:3.6-alpine
+  image: python:3.7-alpine
   before_script:
   - cd packages/code-du-travail-data
   script:
