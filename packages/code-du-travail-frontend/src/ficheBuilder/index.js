@@ -1,32 +1,37 @@
 import React from "react";
 import styled from "styled-components";
-import { List, LI } from "./components";
+import * as Components from "./components";
 
-function mapChildren(children) {
-  if (children) return children.map(child => buildStructure(child));
-  return null;
-}
+export const childrenBuilder = element => {
+  if (!Array.isArray(element.$)) return null;
+  return element.$.map(child => elementBuilder(child));
+};
 
 // Beware, this one is recursive
-function buildStructure(element) {
+function elementBuilder(element) {
   if (element.type === "text") {
     return element.$;
   }
-
-  if (!element.$) return null;
-
-  const children = element.$.map(child => buildStructure(child));
-
+  // Complex elements, we don't immediately parse their children
   switch (element.name) {
-    case "List":
-      return <List>{children}</List>;
-    case "Item":
-      return <LI>{children}</LI>;
+    case "Tableau":
+      return <Components.Table data={element} />;
+    case "Liste":
+      return <Components.List data={element} />;
+    case "ServiceEnLigne":
+      return <Components.ServiceEnLigne data={element} />;
+  }
+
+  // "Standard" elements, we can immediately parse their children
+  const children = childrenBuilder(element);
+  switch (element.name) {
     case "Paragraphe":
       return <p>{children}</p>;
+    case "Texte":
+      return children;
     default:
-      return <span>{children}</span>;
+      return children;
   }
 }
 
-export default buildStructure;
+export default elementBuilder;
