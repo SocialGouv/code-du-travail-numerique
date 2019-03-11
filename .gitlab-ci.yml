@@ -38,10 +38,48 @@ Install & Build:
     - packages/code-du-travail-ui/lib
     - packages/code-du-travail-ui/node_modules
 
+#
+
+Lint @cdt/api:
+  stage: "Check Code quality"
+  script:
+  - yarn workspace @cdt/api lint
+
 Lint @cdt/frontend:
   stage: "Check Code quality"
   script:
   - yarn workspace @cdt/frontend lint
+
+Lint @cdt/ui:
+  stage: "Check Code quality"
+  script:
+  - yarn workspace @cdt/ui lint
+
+Lint @cdt/data search code:
+  stage: "Check Code quality"
+  image: python:3.6-alpine
+  before_script: cd packages/code-du-travail-data
+  script:
+  - pip install --upgrade pip
+  - pip install pipenv==11.10.1
+  - pipenv install --dev --three
+  - pipenv run pylint --output-format=colorized search
+
+#
+
+Test @cdt/frontend:
+  stage: "Check Code quality"
+  script:
+  - yarn workspace @cdt/frontend test --coverage
+  after_script: npx codecov
+
+Test @cdt/ui:
+  stage: "Check Code quality"
+  script:
+  - yarn workspace @cdt/ui test --coverage
+  after_script: npx codecov
+
+#
 
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
