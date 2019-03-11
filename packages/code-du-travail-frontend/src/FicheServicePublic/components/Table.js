@@ -17,7 +17,7 @@ class Table extends React.PureComponent {
 
     return (
       <table>
-        {title && <caption>{getText(title.$)}</caption>}
+        {title && <caption>{getText(title)}</caption>}
         {headingRow && (
           <thead>
             <tr>

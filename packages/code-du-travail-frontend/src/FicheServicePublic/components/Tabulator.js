@@ -55,6 +55,8 @@ Tabulator.propTypes = {
 export default Tabulator;
 
 const StyledTabs = styled(Tabs)`
+  margin-bottom: ${spacing.large};
+
   .react-tabs__tab-list {
     position: relative;
     top: 1px;

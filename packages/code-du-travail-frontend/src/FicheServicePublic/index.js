@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import * as Components from "./components";
-import { getText } from "./utils";
+import { getText, ignoreParagraph } from "./utils";
+import { fonts, spacing } from "./css/variables";
 
 // Beware, this one is recursive
 export function ElementBuilder({ data, headingLevel = 0 }) {
@@ -24,6 +25,12 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
         );
       }
       break;
+    case "Introduction":
+      return (
+        <Introduction>
+          <ElementBuilder data={ignoreParagraph(data.$)} />
+        </Introduction>
+      );
     case "Liste":
       return <Components.List data={data} headingLevel={headingLevel} />;
     case "ListeSituations":
@@ -50,17 +57,18 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
   // "Standard" elements, we can immediately parse their children
   const children = <ElementBuilder data={data.$} headingLevel={headingLevel} />;
   switch (data.name) {
-    case "Paragraphe":
-      return <p>{children}</p>;
-    case "Texte":
-      return children;
-    // Elements restants à traiter :o
-    case "Introduction":
-      return children;
-    case "SousChapitre":
+    case "BlocCas":
+    case "Cas":
       return children;
     case "MiseEnEvidence":
       return <strong>{children}</strong>;
+    case "Paragraphe":
+      return <p>{children}</p>;
+    case "SousChapitre":
+      return children;
+    case "Texte":
+      return children;
+    // These ones are still to be defined
     case "ANoter":
       return children;
     case "ASavoir":
@@ -82,13 +90,18 @@ const FicheServicePublic = props => (
 );
 
 FicheServicePublic.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.array.isRequired
 };
 
 export default FicheServicePublic;
 
 const StyledElementBuilder = styled.div`
-  * > p:last-child {
+  * > *:last-child {
     margin-bottom: 0;
   }
+`;
+
+const Introduction = styled.p`
+  margin-bottom: ${spacing.large};
+  font-size: ${fonts.sizeH6};
 `;

@@ -1,5 +1,8 @@
 const ignoreParagraph = children =>
   children.map(child => {
+    if (child.name === "Texte") {
+      return ignoreParagraph(child.$);
+    }
     if (child.name === "Paragraphe") {
       return child.$;
     }

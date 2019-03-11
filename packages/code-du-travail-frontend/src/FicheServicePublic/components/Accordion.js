@@ -74,6 +74,8 @@ AccordionWrapper.propTypes = {
 export default AccordionWrapper;
 
 const StyledAccordion = styled(Accordion)`
+  margin-bottom: ${spacing.large};
+
   .accordion__item + .accordion__item {
     border-top: 1px solid ${colors.elementBorder};
   }

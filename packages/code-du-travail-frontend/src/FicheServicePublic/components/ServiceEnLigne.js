@@ -11,7 +11,6 @@ class ServiceEnLigne extends React.PureComponent {
     const url = data._.URL;
     const title = getText(data.$[0]);
     const source = getText(data.$[1]);
-    console.log("Title is :", title);
     return (
       <Wrapper>
         <Type>{type}</Type>
