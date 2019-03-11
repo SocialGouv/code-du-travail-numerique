@@ -13,34 +13,35 @@ variables:
 image: node:10-alpine
 
 stages:
-- "Install NPM Dependencies"
-- "Build Assets"
+- "Install & Build"
+- "Check Code quality"
 - "Build & Push Docker Image"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
 
-install-dependencies:
-  stage: "Install NPM Dependencies"
+Install & Build:
+  stage: "Install & Build"
   script:
   - yarn
-  artifacts:
-    expire_in: "1 day"
-    paths:
-    - node_modules
-    - packages/code-du-travail-ui/node_modules
-    - packages/code-du-travail-frontend/node_modules
-    - packages/code-du-travail-css/node_modules
-    - packages/code-du-travail-api/node_modules
-
-build-api-assets:
-  stage: "Build Assets"
-  script:
   - yarn build
   artifacts:
     expire_in: "1 day"
     paths:
+    - node_modules
     - packages/code-du-travail-api/dist
+    - packages/code-du-travail-api/node_modules
+    - packages/code-du-travail-css/node_modules
+    - packages/code-du-travail-css/docs/bundle.css
+    - packages/code-du-travail-frontend/.next
+    - packages/code-du-travail-frontend/node_modules
+    - packages/code-du-travail-ui/lib
+    - packages/code-du-travail-ui/node_modules
+
+Lint @cdt/frontend:
+  stage: "Check Code quality"
+  script:
+  - yarn workspace @cdt/frontend lint
 
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
