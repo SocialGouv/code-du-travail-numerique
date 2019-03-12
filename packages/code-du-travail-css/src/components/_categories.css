@@ -1,6 +1,5 @@
-.categories {
-  /* Gutters between items. */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
+:root {
   --flex-gutter-size: 10px;
 }
 
@@ -21,15 +20,13 @@
 }
 
 .categories__list-item {
-  /*width:calc(100%/4 - 2 * var(--flex-gutter-size)) ;*/
-  /*flex: 0 0 250px;*/
-  /*margin: var(--flex-gutter-size);*/ /* Gutters between items. */
-  width: media(
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: media(
     calc(100% / 4 - 2 * var(--flex-gutter-size)),
     (--bp-tablet) calc(100% / 3 - 2 * var(--flex-gutter-size)),
     (--bp-mobile) calc(100% - 2 * var(--flex-gutter-size))
   );
-
   margin: var(--flex-gutter-size);
   text-align: center;
 
