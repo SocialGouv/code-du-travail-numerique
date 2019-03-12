@@ -5,6 +5,9 @@ import { colors, spacing, box } from "../css/variables";
 import { getText } from "../utils";
 
 class ServiceEnLigne extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  };
   render() {
     const { data } = this.props;
     const label = getText(data.$.find(child => child.name === "Titre"));
@@ -19,10 +22,6 @@ class ServiceEnLigne extends React.PureComponent {
     );
   }
 }
-
-ServiceEnLigne.propTypes = {
-  data: PropTypes.object.isRequired
-};
 
 export default ServiceEnLigne;
 

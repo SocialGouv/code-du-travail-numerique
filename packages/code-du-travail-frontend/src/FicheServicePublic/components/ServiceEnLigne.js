@@ -5,6 +5,9 @@ import { getText } from "../utils";
 import { colors, spacing, box } from "../css/variables";
 
 class ServiceEnLigne extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  };
   render() {
     const { data } = this.props;
     const type = data._.type;
@@ -22,10 +25,6 @@ class ServiceEnLigne extends React.PureComponent {
     );
   }
 }
-
-ServiceEnLigne.propTypes = {
-  data: PropTypes.object.isRequired
-};
 
 export default ServiceEnLigne;
 

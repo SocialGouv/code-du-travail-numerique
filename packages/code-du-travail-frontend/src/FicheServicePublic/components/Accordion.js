@@ -12,7 +12,11 @@ import { VerticalArrow } from "../css/components";
 import { fadeIn } from "../css/animations";
 import { ElementBuilder } from "../index";
 
-class AccordionWrapper extends React.Component {
+class AccordionWrapper extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes.object.isRequired,
+    headingLevel: PropTypes.number.isRequired
+  };
   render() {
     const { data, headingLevel } = this.props;
     const firstIndexOfAccordionItem = data.$.findIndex(
@@ -65,11 +69,6 @@ class AccordionWrapper extends React.Component {
     );
   }
 }
-
-AccordionWrapper.propTypes = {
-  data: PropTypes.object.isRequired,
-  headingLevel: PropTypes.number.isRequired
-};
 
 export default AccordionWrapper;
 

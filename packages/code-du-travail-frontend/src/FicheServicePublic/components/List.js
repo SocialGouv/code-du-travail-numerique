@@ -5,6 +5,10 @@ import { spacing } from "../css/variables";
 import { ElementBuilder } from "../index";
 
 class List extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes.object.isRequired,
+    headingLevel: PropTypes.number.isRequired
+  };
   render() {
     const { data, headingLevel } = this.props;
     const items = data.$.map((item, index) => (
@@ -19,11 +23,6 @@ class List extends React.PureComponent {
     return <ol>{items}</ol>;
   }
 }
-
-List.propTypes = {
-  data: PropTypes.object.isRequired,
-  headingLevel: PropTypes.number.isRequired
-};
 
 export default List;
 

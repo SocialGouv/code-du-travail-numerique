@@ -1,9 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import * as Components from "./components";
 import { getText, ignoreParagraph } from "./utils";
+import Accordion from "./components/Accordion";
+import List from "./components/List";
+import OuSAdresser from "./components/OuSAdresser";
+import ServiceEnLigne from "./components/ServiceEnLigne";
+import Table from "./components/Table";
+import Tabulator from "./components/Tabulator";
+import Title from "./components/Title";
 import { box, colors, fonts, spacing } from "./css/variables";
+
+const parseChildren = (children, headingLevel) => (
+  <ElementBuilder data={children} headingLevel={headingLevel} />
+);
 
 // Beware, this one is recursive
 export function ElementBuilder({ data, headingLevel = 0 }) {
@@ -16,15 +26,13 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
   if (data.type === "text") {
     return data.$;
   }
-  // Complex elements, we don't immediately parse their children
   switch (data.name) {
+    // Complex elements, we don't immediately parse their children
     case "BlocCas":
       if (data._.affichage === "onglet") {
-        return (
-          <Components.Tabulator data={data} headingLevel={headingLevel + 1} />
-        );
+        return <Tabulator data={data} headingLevel={headingLevel + 1} />;
       }
-      break;
+      return parseChildren(data.$, headingLevel);
     case "Introduction":
       return (
         <Introduction>
@@ -32,50 +40,41 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
         </Introduction>
       );
     case "Liste":
-      return <Components.List data={data} headingLevel={headingLevel} />;
+      return <List data={data} headingLevel={headingLevel} />;
     case "ListeSituations":
-      return <Components.Tabulator data={data} headingLevel={headingLevel} />;
+      return <Tabulator data={data} headingLevel={headingLevel} />;
     case "OuSAdresser":
-      return <Components.OuSAdresser data={data} />;
+      return <OuSAdresser data={data} />;
     case "ServiceEnLigne":
-      return <Components.ServiceEnLigne data={data} />;
+      return <ServiceEnLigne data={data} />;
     case "Tableau":
-      return <Components.Table data={data} headingLevel={headingLevel} />;
+      return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
       if (data.$.find(child => child.name === "Chapitre")) {
-        return <Components.Accordion data={data} headingLevel={headingLevel} />;
+        return <Accordion data={data} headingLevel={headingLevel} />;
       }
-      break;
+      return parseChildren(data.$, headingLevel);
     case "Titre":
-      return (
-        <Components.Title level={headingLevel}>
-          {getText(data)}
-        </Components.Title>
-      );
-  }
-
-  // "Standard" elements, we can immediately parse their children
-  const children = <ElementBuilder data={data.$} headingLevel={headingLevel} />;
-  switch (data.name) {
+      return <Title level={headingLevel}>{getText(data)}</Title>;
+    // "Simple" elements, we can immediately parse their children
     case "ANoter":
     case "ASavoir":
-      return <ANoter>{children}</ANoter>;
-    case "BlocCas":
+    case "Attention":
+    case "Rappel":
+      return <ANoter>{parseChildren(data.$, headingLevel)}</ANoter>;
     case "Cas":
-      return children;
+      return parseChildren(data.$, headingLevel);
     case "MiseEnEvidence":
-      return <strong>{children}</strong>;
+      return <strong>{parseChildren(data.$, headingLevel)}</strong>;
     case "Paragraphe":
-      return <p>{children}</p>;
+      return <p>{parseChildren(data.$, headingLevel)}</p>;
     case "SousChapitre":
-      return children;
-    case "Texte":
-      return children;
+      return parseChildren(data.$, headingLevel);
     // These ones are still to be defined
     case "LienIntra":
-      return children;
+      return parseChildren(data.$, headingLevel);
     case "LienInterne":
-      return children;
+      return parseChildren(data.$, headingLevel);
     // Otherwise we simply ignore the element
     default:
       return null;

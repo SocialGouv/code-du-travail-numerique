@@ -8,6 +8,10 @@ import { ElementBuilder } from "../index";
 import { ignoreParagraph } from "../utils";
 
 class Tabulator extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes.object.isRequired,
+    headingLevel: PropTypes.number.isRequired
+  };
   render() {
     const { data, headingLevel: previousHeadingLevel } = this.props;
     const headingLevel =
@@ -46,11 +50,6 @@ class Tabulator extends React.PureComponent {
     );
   }
 }
-
-Tabulator.propTypes = {
-  data: PropTypes.object.isRequired,
-  headingLevel: PropTypes.number.isRequired
-};
 
 export default Tabulator;
 
