@@ -1,16 +1,28 @@
 const getChildren = (element, name) => element.$.find(el => el.name === name);
 
 // Beware, this one is recursive
-function getText(element = { text: "" }, joint = " ") {
+function getText(element = { text: "" }) {
   if (element.type === "text") {
     return element.$.trim();
   }
   if (element.$) {
     return element.$
-      .map((child) => getText(child, joint))
-      .join(joint);
+      .map((child) => getText(child))
+      .join(" ");
   }
   return "";
+}
+
+function  getTags(element = { text: ""}) {
+  if (element.type === "text") {
+    return [element.$.trim()];
+  }
+  if (element.$) {
+    return element.$
+      .map((child) => getTags(child))
+      .reduce((acc, val) => acc.concat(val), []); // flatten the array
+  }
+  return [];
 }
 
 
@@ -31,13 +43,11 @@ const format = fiche => {
   const urlSlug = audience === "Particuliers" ? "particuliers" : "professionnels-entreprises";
   const url = `https://www.service-public.fr/${urlSlug}/vosdroits/${id}`;
 
-  const joint = "#";
   const meaninglessCrumbs = ["Accueil particuliers", "Travail"];
-  const ariane = getText(getChildren(publication, "FilDAriane"), joint)
-    .split(joint)
+  const ariane = getTags(getChildren(publication, "FilDAriane"))
     .filter(crumb => !meaninglessCrumbs.includes(crumb));
-  const sousThemePere =  getText(getChildren(publication, "SousThemePere"), joint).split(joint);
-  const dossierPere = getText(getChildren(publication, "DossierPere"), joint).split(joint);
+  const sousThemePere =  getTags(getChildren(publication, "SousThemePere"));
+  const dossierPere = getTags(getChildren(publication, "DossierPere"));
   const tags = Array.from(new Set(ariane.concat(sousThemePere, dossierPere)));
 
   const intro = getText(getChildren(publication, "Introduction"));

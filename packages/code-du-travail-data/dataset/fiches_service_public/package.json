@@ -19,7 +19,7 @@
   "scripts": {
     "backup": "cp fiches-sp-travail.json fiches-sp-travail.old.json ",
     "diff": "node diff.js",
-    "start": "yarn backup && node index.js && yarn diff",
+    "start": "yarn backup && node index.js > fiches-sp-travail.json && yarn diff",
     "test": "jest"
   }
 }
