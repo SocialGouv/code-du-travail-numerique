@@ -59,7 +59,9 @@ class Fiche extends React.Component {
             icon={DossierIcon}
             sourceType="Fiche service public"
           >
-            {data._source.raw && (
+            {// Without the check, the prop children of the Answer will evaluate to true
+            // even if in the end, <FicheServicePublic /> returns null
+            data._source.raw && (
               <FicheServicePublic data={data._source.raw.$} />
             )}
           </Answer>
