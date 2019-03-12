@@ -1,21 +1,25 @@
+:root {
+  --flex-annuaire-gutter-size: var(--spacing-inter-component);
+}
 .card-wrapper {
-  --flex-gutter-size: var(--spacing-inter-component);
   display: flex;
   flex-flow: wrap;
   justify-content: flex-start;
   align-content: flex-start;
   padding: 0;
-  margin: 0 calc(var(--flex-gutter-size) * -1);
+  margin: 0 calc(var(--flex-annuaire-gutter-size) * -1);
 }
 
 .card {
   list-style-type: none;
+  flex-shrink: 1;
+  flex-grow: 1;
   width: media(
-    calc(100% / 3 - 2 * var(--flex-gutter-size)),
-    (--bp-tablet) calc(100% / 2 - 2 * var(--flex-gutter-size)),
-    (--bp-mobile) calc(100% - 1 * var(--flex-gutter-size))
+    calc(100% / 3 - 2 * var(--flex-annuaire-gutter-size)),
+    (--bp-tablet) calc(100% / 2 - 2 * var(--flex-annuaire-gutter-size)),
+    (--bp-mobile) calc(100% - 1 * var(--flex-annuaire-gutter-size))
   );
-  margin: var(--flex-gutter-size);
+  margin: var(--flex-annuaire-gutter-size);
   background-color: white;
   padding: var(--spacing-base);
 }
