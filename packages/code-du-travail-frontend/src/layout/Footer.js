@@ -18,6 +18,9 @@ const Footer = () => (
                 <a>À propos</a>
               </Link>
             </li>
+            <li>
+              <a href="mailto:contact@code-du-travail.beta.gouv.fr">Contact</a>
+            </li>
           </ul>
         </div>
         <div className="footer__block">
