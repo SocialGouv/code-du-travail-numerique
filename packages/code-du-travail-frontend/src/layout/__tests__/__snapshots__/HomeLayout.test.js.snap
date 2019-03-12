@@ -65,6 +65,13 @@ exports[`<HomeLayout /> should render 1`] = `
                 À propos
               </a>
             </li>
+            <li>
+              <a
+                href="mailto:contact@code-du-travail.beta.gouv.fr"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
         <div
