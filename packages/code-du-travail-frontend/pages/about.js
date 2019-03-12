@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Section } from "@cdt/ui";
+import styled from "styled-components";
+import { Container, Section, Alert } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 
 const About = () => (
@@ -7,7 +8,20 @@ const About = () => (
     <Container>
       <Section light>
         <div>
-          <h2>A propos du code du travail numérique</h2>
+          <h2>À propos du code du travail numérique</h2>
+          <Alert info>
+            Ce service public vous permet d'obtenir des réponses détaillées à
+            des questions de droit de travail, ainsi que des fiches explicatives
+            et les articles de loi correspondants.
+            <P>
+              <a
+                href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+                title="lien vers l'ordonnance relative au code du travail numérique"
+              >
+                L&apos;ouverture officielle du site est prévue pour 2020.
+              </a>
+            </P>
+          </Alert>
           <p>
             Seul un public expert maitrîse la complexité du droit du travail et
             de ses différentes sources de droit (conventions collectives,
@@ -62,3 +76,8 @@ const About = () => (
   </PageLayout>
 );
 export default About;
+
+const P = styled.p`
+  margin-top: 1.25rem;
+  margin-top: var(--spacing-inter-component);
+`;
