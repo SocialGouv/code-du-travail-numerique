@@ -37,6 +37,17 @@ const Footer = () => (
                 Contribuer sur Github
               </a>
             </li>
+            <li>
+              <a
+                href={
+                  "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
+                  publicRuntimeConfig.PACKAGE_VERSION
+                }
+                className="external-link__after"
+              >
+                Journal des modifications
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer__block">
