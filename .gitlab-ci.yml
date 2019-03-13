@@ -32,6 +32,14 @@ prepare-cdtn-base-image:
   - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
 
+prepare-env-file:
+  stage: "Prepare"
+  script:
+  - node scripts/setup-env.js
+  artifacts:
+    paths:
+    - .env
+
 lint-cdtn-api:
   stage: "Code Quality"
   image: docker:latest
@@ -89,6 +97,32 @@ test-cdtn-frontend:
   - docker:dind
   script:
   - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend test --coverage
+
+test-cdtn-api:
+  stage: "Code Quality"
+  image: docker/compose:1.23.2
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  before_script:
+  - docker-compose up -d elasticsearch
+  - retry=0; while ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
+  - >-
+    docker run
+    -e ELASTICSEARCH_LOG_LEVEL=info
+    -e ELASTICSEARCH_URL=http://elasticsearch:9200
+    --network $(docker network ls -qf name=code)
+    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    node packages/code-du-travail-api/tests/create_indexes.js
+  script:
+  - >-
+    docker run
+    -e ELASTICSEARCH_URL=http://elasticsearch:9200
+    -e ELASTICSEARCH_LOG_LEVEL=info
+    --network $(docker network ls -qf name=code)
+    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    yarn workspace @cdt/api test --coverage
 
 test-cdtn-data:
   stage: "Code Quality"
