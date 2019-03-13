@@ -3,7 +3,7 @@
   --flex-gutter-size: 10px;
 }
 
-.categories header {
+.categories {
   margin-bottom: var(--spacing-large);
 }
 
@@ -21,7 +21,7 @@
 
 .categories__list-item {
   flex-shrink: 1;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-basis: media(
     calc(100% / 4 - 2 * var(--flex-gutter-size)),
     (--bp-tablet) calc(100% / 3 - 2 * var(--flex-gutter-size)),
@@ -30,32 +30,30 @@
   margin: var(--flex-gutter-size);
   text-align: center;
 
-  & a,
-  & a:link,
-  & a:visited {
+  & > a,
+  & > button {
     display: block;
     height: 100%;
     padding: var(--spacing-small) var(--spacing-base);
     border: 1px solid var(--color-element-border);
     border-radius: var(--border-radius-base);
     background: var(--color-white);
-    color: var(--color-light-text);
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
-  & a:focus,
-  & a:hover,
-  & a:active {
+  & > a:link,
+  & > a:visited {
+    color: var(--color-light-text);
+  }
+
+  & > a:focus,
+  & > a:hover,
+  & > button:hover,
+  & > a:active {
     transform: scale(1.1);
     border: 1px solid var(--color-focus);
     box-shadow: 0 0 2px 2px var(--color-focus-shadow);
-  }
-
-  & a:focus h3,
-  & a:hover h3,
-  & a:active h3 {
-    /*text-decoration: underline;*/
   }
 
   & h3,
@@ -63,7 +61,8 @@
     font-size: 0.9375rem;
   }
 
-  & a img {
+  & > a img,
+  & > button img {
     display: inline-block;
     width: 2.5rem;
     margin: var(--spacing-small) 0;

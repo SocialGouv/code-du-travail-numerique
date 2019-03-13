@@ -11,12 +11,14 @@ describe("<Categories />", () => {
   test("should render with props", () => {
     const { container } = render(
       <Categories>
-        <Category
-          href="http://code-du-travail-numerique.beta.gouv.fr"
-          icon="icon/icon.svg"
-          title="titre"
-          text="text"
-        />
+        <Category>
+          <strong>titre 1</strong>
+          <p>contenu 1</p>
+        </Category>
+        <Category>
+          <strong>titre 2</strong>
+          <p>contenu 2</p>
+        </Category>
       </Categories>
     );
     expect(container).toMatchSnapshot();

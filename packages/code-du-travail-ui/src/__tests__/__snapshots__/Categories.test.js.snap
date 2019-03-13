@@ -6,7 +6,7 @@ exports[`<Categories /> should render with default props 1`] = `
     class="categories"
   >
     <ul
-      class="categories__list"
+      class="categories__list "
     />
   </div>
 </div>
@@ -18,25 +18,27 @@ exports[`<Categories /> should render with props 1`] = `
     class="categories"
   >
     <ul
-      class="categories__list"
+      class="categories__list "
     >
       <li
         class="categories__list-item"
       >
-        <a
-          href="http://code-du-travail-numerique.beta.gouv.fr"
-        >
-          <img
-            alt="titre"
-            src="icon/icon.svg"
-          />
-          <h3>
-            titre
-          </h3>
-          <p>
-            text
-          </p>
-        </a>
+        <strong>
+          titre 1
+        </strong>
+        <p>
+          contenu 1
+        </p>
+      </li>
+      <li
+        class="categories__list-item"
+      >
+        <strong>
+          titre 2
+        </strong>
+        <p>
+          contenu 2
+        </p>
       </li>
     </ul>
   </div>
