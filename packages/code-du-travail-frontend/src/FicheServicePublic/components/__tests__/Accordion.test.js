@@ -4,13 +4,11 @@ import Accordion from "../Accordion";
 import accordionDataMock from "./accordionData.mock.json";
 
 describe("<Accordion />", () => {
-  it("should have three H3 and one H4 if heading is set to 1", () => {
-    const headingLevel = 1;
+  it("should have two different levels of headings", () => {
     const { container } = render(
-      <Accordion data={accordionDataMock} headingLevel={headingLevel} />
+      <Accordion data={accordionDataMock} headingLevel={0} />
     );
-    expect(container.querySelectorAll("h3")).toHaveLength(4);
-    expect(container.querySelectorAll("h4")).toHaveLength(1);
+    expect(container).toMatchSnapshot();
   });
   it("should render all, siblings included", () => {
     const { container } = render(

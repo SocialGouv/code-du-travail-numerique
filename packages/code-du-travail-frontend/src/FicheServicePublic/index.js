@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { getText, ignoreParagraph } from "./utils";
 import Accordion from "./components/Accordion";
+import LienExterne from "./components/LienExterne";
 import List from "./components/List";
 import OuSAdresser from "./components/OuSAdresser";
 import ServiceEnLigne from "./components/ServiceEnLigne";
@@ -39,12 +40,14 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
           <ElementBuilder data={ignoreParagraph(data.$)} />
         </Introduction>
       );
+    case "LienExterne":
+      return <LienExterne data={data} />;
     case "Liste":
       return <List data={data} headingLevel={headingLevel} />;
     case "ListeSituations":
       return <Tabulator data={data} headingLevel={headingLevel} />;
     case "OuSAdresser":
-      return <OuSAdresser data={data} />;
+      return <OuSAdresser data={data} headingLevel={headingLevel} />;
     case "ServiceEnLigne":
       return <ServiceEnLigne data={data} />;
     case "Tableau":

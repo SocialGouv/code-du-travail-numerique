@@ -1,33 +1,49 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { ElementBuilder } from "../index";
 import { colors, spacing, box } from "../css/variables";
 import { getText } from "../utils";
 
-class ServiceEnLigne extends React.PureComponent {
+class OuSAdresser extends React.PureComponent {
   static propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    headingLevel: PropTypes.number.isRequired
   };
   render() {
-    const { data } = this.props;
+    const { data, headingLevel } = this.props;
     const label = getText(data.$.find(child => child.name === "Titre"));
-    const url = data.$.find(child => child.name === "RessourceWeb")._.URL;
-    return (
-      <Wrapper>
-        <Title>{"Ou s'adresser ?"}</Title>
+    let content = null;
+    if (data.$.find(child => child.name === "RessourceWeb")) {
+      const url = data.$.find(child => child.name === "RessourceWeb")._.URL;
+      content = (
         <a href={url} rel="noopener noreferrer" target="_blank">
           {label}
         </a>
+      );
+    } else {
+      content = (
+        <ElementBuilder
+          data={data.$.find(child => child.name === "Texte")}
+          headingLevel={headingLevel + 1}
+        />
+      );
+    }
+    return (
+      <Wrapper>
+        <Title>{"Ou s'adresser ?"}</Title>
+        {content}
       </Wrapper>
     );
   }
 }
 
-export default ServiceEnLigne;
+export default OuSAdresser;
 
 const Wrapper = styled.div`
   display: inline-block;
   padding: ${spacing.large};
+  margin-bottom: ${spacing.large};
   background-color: ${colors.lighterGrey};
   border-radius: ${box.borderRadius};
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class List extends React.PureComponent {
+class Title extends React.PureComponent {
   static propTypes = {
     level: PropTypes.number
   };
@@ -22,4 +22,4 @@ class List extends React.PureComponent {
   }
 }
 
-export default List;
+export default Title;

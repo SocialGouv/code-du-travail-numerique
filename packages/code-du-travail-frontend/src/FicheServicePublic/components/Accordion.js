@@ -81,6 +81,7 @@ const StyledAccordion = styled(Accordion)`
 
   .accordion__title {
     position: relative;
+    padding-right: ${spacing.large};
     cursor: pointer;
     h1,
     h2,

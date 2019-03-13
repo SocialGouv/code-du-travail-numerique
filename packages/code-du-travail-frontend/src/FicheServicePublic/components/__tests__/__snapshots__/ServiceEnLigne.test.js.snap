@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServiceEnLigne /> should render 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa fjKOtS"
+  >
+    <div
+      class="sc-bwzfXH dVqAjd"
+    >
+      Se retrouve dans en entête
+    </div>
+    <a
+      class="sc-htpNat bnTMcs"
+      href="url à retoruver dans le lien"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Texte qui se retrouve dans le lien
+    </a>
+    <small
+      class="sc-bxivhb kveWqS"
+    >
+      Source qui se retrouve sous le lien
+    </small>
+  </div>
+</div>
+`;
