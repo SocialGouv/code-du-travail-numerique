@@ -13,34 +13,23 @@ variables:
 image: node:10-alpine
 
 stages:
-- "Install NPM Dependencies"
-- "Build Assets"
+- "Build & Push Base Docker Image"
 - "Build & Push Docker Image"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
 
-install-dependencies:
-  stage: "Install NPM Dependencies"
+build-and-push-cdtn-base-image:
+  stage: "Build & Push Base Docker Image"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
   script:
-  - yarn
-  artifacts:
-    expire_in: "1 day"
-    paths:
-    - node_modules
-    - packages/code-du-travail-ui/node_modules
-    - packages/code-du-travail-frontend/node_modules
-    - packages/code-du-travail-css/node_modules
-    - packages/code-du-travail-api/node_modules
-
-build-api-assets:
-  stage: "Build Assets"
-  script:
-  - yarn build
-  artifacts:
-    expire_in: "1 day"
-    paths:
-    - packages/code-du-travail-api/dist
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
 
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
@@ -65,7 +54,7 @@ build-and-push-cdtn-api-image:
   script:
   - cd packages/code-du-travail-api
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-  - docker build -t "$CI_REGISTRY_IMAGE/api:latest" .
+  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/api:latest" .
   - docker push "$CI_REGISTRY_IMAGE/api:latest"
 
 build-and-push-cdtn-frontend-image:
@@ -78,7 +67,7 @@ build-and-push-cdtn-frontend-image:
   script:
   - cd packages/code-du-travail-frontend
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-  - docker build -t "$CI_REGISTRY_IMAGE/frontend:latest" .
+  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/frontend:latest" .
   - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
 
 build-and-push-cdtn-data-image:
