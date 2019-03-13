@@ -89,6 +89,14 @@ exports[`<HomeLayout /> should render 1`] = `
                 Contribuer sur Github
               </a>
             </li>
+            <li>
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vundefined"
+              >
+                Journal des modifications
+              </a>
+            </li>
           </ul>
         </div>
         <div
