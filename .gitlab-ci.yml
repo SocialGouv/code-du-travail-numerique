@@ -14,6 +14,7 @@ image: node:10-alpine
 
 stages:
 - "Build & Push Base Docker Image"
+- "Test"
 - "Build & Push Docker Image"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
@@ -30,6 +31,36 @@ build-and-push-cdtn-base-image:
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+
+lint-cdtn-api:
+  stage: "Test"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/api lint
+
+lint-cdtn-ui:
+  stage: "Test"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/ui lint
+
+lint-cdtn-frontend:
+  stage: "Test"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
 
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
