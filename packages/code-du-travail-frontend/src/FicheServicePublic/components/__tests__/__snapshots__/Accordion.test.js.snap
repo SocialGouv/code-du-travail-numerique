@@ -9,7 +9,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-VigVT kLFSbj"
+    class="sc-VigVT kqRiyl"
   >
     <div
       class="accordion__item"
@@ -126,7 +126,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-VigVT kLFSbj"
+    class="sc-VigVT kqRiyl"
   >
     <div
       class="accordion__item"
