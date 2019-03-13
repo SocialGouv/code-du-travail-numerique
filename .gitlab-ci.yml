@@ -62,6 +62,16 @@ lint-cdtn-frontend:
   script:
   - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
 
+test-cdtn-frontend:
+  stage: "Test"
+  image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend test --coverage
+
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
   image: docker:latest
