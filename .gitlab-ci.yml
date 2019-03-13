@@ -62,6 +62,24 @@ lint-cdtn-frontend:
   script:
   - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
 
+lint-cdtn-data:
+  stage: "Code Quality"
+  image: python:3.6-alpine
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    PIPENV_VENV_IN_PROJECT: 1
+    PIPENV_IGNORE_VIRTUALENVS: 1
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-data
+  - apk add build-base
+  - pip install --upgrade pip
+  - pip install pipenv==11.10.1
+  - pipenv install --dev --three
+  script:
+  - pipenv run pylint --output-format=colorized search
+
 test-cdtn-frontend:
   stage: "Code Quality"
   image: docker:latest
@@ -71,6 +89,25 @@ test-cdtn-frontend:
   - docker:dind
   script:
   - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend test --coverage
+
+test-cdtn-data:
+  stage: "Code Quality"
+  image: python:3.6-alpine
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    PIPENV_VENV_IN_PROJECT: 1
+    PIPENV_IGNORE_VIRTUALENVS: 1
+    PYTHONPATH: .
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-data
+  - apk add build-base
+  - pip install --upgrade pip
+  - pip install pipenv==11.10.1
+  - pipenv install --dev
+  script:
+  - pipenv run python search/indexing/document_slug_checker.py -v
 
 build-and-push-elasticsearch-image:
   stage: "Build & Push Docker Image"
