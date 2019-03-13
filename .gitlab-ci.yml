@@ -15,7 +15,7 @@ image: node:10-alpine
 stages:
 - "Prepare"
 - "Code Quality"
-- "Build & Push Docker Image"
+- "Build and Push Docker Image"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
@@ -110,7 +110,7 @@ test-cdtn-data:
   - pipenv run python search/indexing/document_slug_checker.py -v
 
 build-and-push-elasticsearch-image:
-  stage: "Build & Push Docker Image"
+  stage: "Build and Push Docker Image"
   image: docker:latest
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -123,7 +123,7 @@ build-and-push-elasticsearch-image:
   - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
 
 build-and-push-cdtn-api-image:
-  stage: "Build & Push Docker Image"
+  stage: "Build and Push Docker Image"
   image: docker:latest
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -136,7 +136,7 @@ build-and-push-cdtn-api-image:
   - docker push "$CI_REGISTRY_IMAGE/api:latest"
 
 build-and-push-cdtn-frontend-image:
-  stage: "Build & Push Docker Image"
+  stage: "Build and Push Docker Image"
   image: docker:latest
   variables:
     DOCKER_HOST: tcp://localhost:2375
@@ -149,7 +149,7 @@ build-and-push-cdtn-frontend-image:
   - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
 
 build-and-push-cdtn-data-image:
-  stage: "Build & Push Docker Image"
+  stage: "Build and Push Docker Image"
   image: docker:latest
   variables:
     DOCKER_HOST: tcp://localhost:2375
