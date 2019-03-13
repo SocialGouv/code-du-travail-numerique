@@ -16,7 +16,7 @@ const About = () => (
             <P>
               <a
                 href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-                title="lien vers l'ordonnance relative au code du travail numérique"
+                title="lien vers l’ordonnance relative à la création du Code du travail numérique"
               >
                 L&apos;ouverture officielle du site est prévue pour 2020.
               </a>
