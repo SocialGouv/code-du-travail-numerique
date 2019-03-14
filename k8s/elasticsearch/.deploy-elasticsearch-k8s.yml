@@ -4,9 +4,11 @@
     entrypoint: [""]
   before_script:
   - /apps/create-kubeconfig.sh
-  - envsubst < k8s/elasticsearch/statefulset-elasticsearch-dev.yml > k8s/elasticsearch/statefulset-elasticsearch-cdtn-dev.yml
+  - envsubst < k8s/elasticsearch/configmap-elasticsearch-dev.yml > k8s/elasticsearch/configmap-cdtn-elasticsearch-dev.yml
+  - envsubst < k8s/elasticsearch/statefulset-elasticsearch-dev.yml > k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
+  - envsubst < k8s/elasticsearch/service-elasticsearch-dev.yml > k8s/elasticsearch/service-cdtn-elasticsearch.yml
   script:
-  - kubectl apply -f k8s/elasticsearch/configmap-elasticsearch-dev.yml
-  - kubectl apply -f k8s/elasticsearch/statefulset-elasticsearch-cdtn-dev.yml
-  - kubectl apply -f k8s/elasticsearch/service-elasticsearch.yml
+  - kubectl apply -f k8s/elasticsearch/configmap-cdtn-elasticsearch-dev.yml
+  - kubectl apply -f k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
+  - kubectl apply -f k8s/elasticsearch/service-cdtn-elasticsearch.yml
   allow_failure: false
