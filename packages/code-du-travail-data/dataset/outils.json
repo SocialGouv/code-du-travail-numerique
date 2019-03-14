@@ -42,7 +42,7 @@
       "cout embauche CDI"
     ],
     "theme": "Embauche",
-    "themes": [3800],
+    "themes": [3800, 42200, 42300],
     "catégorie": [],
     "type_de_contrat": [],
     "travailleur_particulier": [],
