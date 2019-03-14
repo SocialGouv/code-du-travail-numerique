@@ -27,8 +27,9 @@ prepare-cdtn-base-image:
     DOCKER_HOST: tcp://localhost:2375
   services:
   - docker:dind
-  script:
+  before_script:
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
   - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
 
@@ -150,9 +151,10 @@ build-and-push-elasticsearch-image:
     DOCKER_HOST: tcp://localhost:2375
   services:
   - docker:dind
-  script:
+  before_script:
   - cd docker/elasticsearch
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
   - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:latest" .
   - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
 
@@ -163,9 +165,10 @@ build-and-push-cdtn-api-image:
     DOCKER_HOST: tcp://localhost:2375
   services:
   - docker:dind
-  script:
+  before_script:
   - cd packages/code-du-travail-api
-  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
   - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/api:latest" .
   - docker push "$CI_REGISTRY_IMAGE/api:latest"
 
@@ -176,9 +179,10 @@ build-and-push-cdtn-frontend-image:
     DOCKER_HOST: tcp://localhost:2375
   services:
   - docker:dind
-  script:
+  before_script:
   - cd packages/code-du-travail-frontend
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
   - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/frontend:latest" .
   - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
 
@@ -189,9 +193,10 @@ build-and-push-cdtn-data-image:
     DOCKER_HOST: tcp://localhost:2375
   services:
   - docker:dind
-  script:
+  before_script:
   - cd packages/code-du-travail-data
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
   - docker build -t "$CI_REGISTRY_IMAGE/data:latest" .
   - docker push "$CI_REGISTRY_IMAGE/data:latest"
 

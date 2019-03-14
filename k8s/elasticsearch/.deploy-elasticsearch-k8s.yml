@@ -2,8 +2,9 @@
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  script:
+  before_script:
   - /apps/create-kubeconfig.sh
+  script:
   - kubectl apply -f k8s/elasticsearch/configmap-elasticsearch-dev.yml
   - kubectl apply -f k8s/elasticsearch/statefulset-elasticsearch-dev.yml
   - kubectl apply -f k8s/elasticsearch/service-elasticsearch.yml
