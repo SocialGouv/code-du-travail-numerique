@@ -31,7 +31,7 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     // Complex elements, we don't immediately parse their children
     case "BlocCas":
       if (data._.affichage === "onglet") {
-        return <Tabulator data={data} headingLevel={headingLevel + 1} />;
+        return <Tabulator data={data} headingLevel={headingLevel} />;
       }
       return parseChildren(data.$, headingLevel);
     case "Introduction":
