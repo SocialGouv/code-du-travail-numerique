@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`return all modeles results 1`] = `
+Object {
+  "hits": Array [
+    Object {
+      "_id": "14",
+      "_index": "cdtn_document_test",
+      "_score": 0,
+      "_source": Object {
+        "filename": "fin-periode-essai-initiative-employeur.docx",
+        "slug": "rupture-de-periode-dessai",
+        "title": "Rupture de période d'essai",
+      },
+      "_type": "cdtn_document_test",
+    },
+    Object {
+      "_id": "15",
+      "_index": "cdtn_document_test",
+      "_score": 0,
+      "_source": Object {
+        "filename": "fin-periode-essai-initiative-du-salarie.docx",
+        "slug": "rupture-du-contrat-en-periode-dessai",
+        "title": "Rupture du contrat en période d'essai",
+      },
+      "_type": "cdtn_document_test",
+    },
+  ],
+  "max_score": 0,
+  "total": 2,
+}
+`;
