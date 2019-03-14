@@ -16,7 +16,7 @@ spec:
         app: cdtn-frontend
     spec:
       containers:
-      - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/frontend:latest
+      - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/frontend:${IMAGE_TAG}
         name: cdtn-frontend
         ports:
         - containerPort: 3000

@@ -155,8 +155,8 @@ build-and-push-elasticsearch-image:
   - cd docker/elasticsearch
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:latest" .
-  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:latest"
+  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
 
 build-and-push-cdtn-api-image:
   stage: "Build and Push Docker Image"
@@ -169,8 +169,8 @@ build-and-push-cdtn-api-image:
   - cd packages/code-du-travail-api
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/api:latest" .
-  - docker push "$CI_REGISTRY_IMAGE/api:latest"
+  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA"
 
 build-and-push-cdtn-frontend-image:
   stage: "Build and Push Docker Image"
@@ -183,8 +183,8 @@ build-and-push-cdtn-frontend-image:
   - cd packages/code-du-travail-frontend
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/frontend:latest" .
-  - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
+  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA"
 
 build-and-push-cdtn-data-image:
   stage: "Build and Push Docker Image"
@@ -197,8 +197,8 @@ build-and-push-cdtn-data-image:
   - cd packages/code-du-travail-data
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build -t "$CI_REGISTRY_IMAGE/data:latest" .
-  - docker push "$CI_REGISTRY_IMAGE/data:latest"
+  - docker build -t "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA"
 
 deploy-kibana:
   stage: "Deploy EL Stack"
@@ -225,6 +225,7 @@ deploy-elasticsearch:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    IMAGE_TAG: $CI_COMMIT_SHA
   environment:
     name: ops
 
@@ -253,6 +254,7 @@ create-cdtn-es-index:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    IMAGE_TAG: $CI_COMMIT_SHA
   environment:
     name: ops
 
@@ -267,6 +269,7 @@ deploy-cdtn-api:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    IMAGE_TAG: $CI_COMMIT_SHA
   environment:
     name: ops
 
@@ -281,5 +284,6 @@ deploy-cdtn-frontend:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    IMAGE_TAG: $CI_COMMIT_SHA
   environment:
     name: ops

@@ -4,8 +4,9 @@
     entrypoint: [""]
   before_script:
   - /apps/create-kubeconfig.sh
+  - envsubst < k8s/code-du-travail-api/deployment-code-du-travail-api.yml > k8s/code-du-travail-api/deployment-cdtn-api.yml
   script:
-  - kubectl apply -f k8s/code-du-travail-api/deployment-code-du-travail-api.yml
+  - kubectl apply -f k8s/code-du-travail-api/deployment-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/service-code-du-travail-api.yml
   - kubectl apply -f k8s/code-du-travail-api/ingress-code-du-travail-api.yml
   allow_failure: false
