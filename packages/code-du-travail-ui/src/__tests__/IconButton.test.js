@@ -1,9 +1,10 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { cleanup, render } from "react-testing-library";
 import IconButton from "../IconButton";
 import { Like } from "../icons";
 
 describe("<IconButton />", () => {
+  afterEach(cleanup);
   test("should render", () => {
     const { container } = render(
       <IconButton title="test-btn" onClick={jest.fn()}>
