@@ -2,8 +2,9 @@
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  script:
+  before_script:
   - /apps/create-kubeconfig.sh
+  script:
   - kubectl apply -f k8s/code-du-travail-frontend/deployment-code-du-travail-frontend.yml
   - kubectl apply -f k8s/code-du-travail-frontend/service-code-du-travail-frontend.yml
   - kubectl apply -f k8s/code-du-travail-frontend/ingress-code-du-travail-frontend.yml
