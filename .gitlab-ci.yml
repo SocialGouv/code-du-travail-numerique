@@ -214,6 +214,7 @@ deploy-kibana:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    BRANCH_NAME: -$CI_COMMIT_REF_NAME
   environment:
     name: ops
 
@@ -229,6 +230,7 @@ deploy-elasticsearch:
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
     IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: -$CI_COMMIT_REF_NAME
   environment:
     name: ops
 
@@ -243,6 +245,7 @@ deploy-apm-server:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    BRANCH_NAME: -$CI_COMMIT_REF_NAME
   environment:
     name: ops
 
@@ -258,6 +261,7 @@ create-cdtn-es-index:
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
     IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: -$CI_COMMIT_REF_NAME
   environment:
     name: ops
 
@@ -273,6 +277,7 @@ deploy-cdtn-api:
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
     IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: -$CI_COMMIT_REF_NAME
   environment:
     name: ops
 
@@ -288,5 +293,6 @@ deploy-cdtn-frontend:
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
     IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: -$CI_COMMIT_REF_NAME
   environment:
     name: ops

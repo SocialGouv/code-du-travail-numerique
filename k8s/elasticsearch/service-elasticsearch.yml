@@ -2,12 +2,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: elasticsearch
+  name: elasticsearch${BRANCH_NAME}
   labels:
-    app: elasticsearch
+    app: elasticsearch${BRANCH_NAME}
 spec:
   selector:
-    app: elasticsearch
+    app: elasticsearch${BRANCH_NAME}
   clusterIP: None
   ports:
   - port: 9200

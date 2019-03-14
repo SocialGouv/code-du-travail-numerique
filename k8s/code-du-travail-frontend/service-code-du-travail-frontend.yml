@@ -2,12 +2,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cdtn-frontend
+  name: cdtn-frontend${BRANCH_NAME}
   labels:
-    app: cdtn-frontend
+    app: cdtn-frontend${BRANCH_NAME}
 spec:
   selector:
-    app: cdtn-frontend
+    app: cdtn-frontend${BRANCH_NAME}
   ports:
   - port: 3000
     name: frontend

@@ -2,15 +2,15 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: cdtn-frontend
+  name: cdtn-frontend${BRANCH_NAME}
   labels:
-    app: cdtn-frontend
+    app: cdtn-frontend${BRANCH_NAME}
 spec:
   rules:
-  - host: code-du-travail-numerique.ops.factory.social.gouv.fr
+  - host: code-du-travail-numerique${BRANCH_NAME}.ops.factory.social.gouv.fr
     http:
       paths:
       - path: /
         backend:
-          serviceName: cdtn-frontend
+          serviceName: cdtn-frontend${BRANCH_NAME}
           servicePort: 3000

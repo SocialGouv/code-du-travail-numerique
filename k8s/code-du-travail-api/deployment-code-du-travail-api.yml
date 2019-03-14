@@ -2,21 +2,24 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: cdtn-api
+  name: cdtn-api${BRANCH_NAME}
   labels:
-    app: cdtn-api
+    app: cdtn-api${BRANCH_NAME}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdtn-api
+      app: cdtn-api${BRANCH_NAME}
   template:
     metadata:
       labels:
-        app: cdtn-api
+        app: cdtn-api${BRANCH_NAME}
     spec:
       containers:
       - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:${IMAGE_TAG}
-        name: cdtn-api
+        name: cdtn-api${BRANCH_NAME}
         ports:
         - containerPort: 1337
+        env:
+        - name: ELASTICSEARCH_URL
+          value: http://elasticsearch${BRANCH_NAME}:9200

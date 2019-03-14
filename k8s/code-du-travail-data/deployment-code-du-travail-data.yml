@@ -2,13 +2,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: cdtn-data
+  name: cdtn-data${BRANCH_NAME}
   labels:
-    app: cdtn-data
+    app: cdtn-data${BRANCH_NAME}
 spec:
   containers:
-  - name: cdtn-data
+  - name: cdtn-data${BRANCH_NAME}
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:${IMAGE_TAG}
+    env:
+    - name: ELASTICSEARCH_URL
+      value: http://elasticsearch${BRANCH_NAME}:9200
   restartPolicy: Never
   initContainers:
   - name: wait-for-elasticsearch
@@ -19,7 +22,7 @@ spec:
     - -c
     - |
       apk --no-cache add curl
-      ENDPOINT="http://elasticsearch:9200"
+      ENDPOINT="http://elasticsearch${BRANCH_NAME}:9200"
       echo Checking: ${ENDPOINT}
       while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" ${ENDPOINT}) -ne 200 ]]; do
         echo "Not ready"

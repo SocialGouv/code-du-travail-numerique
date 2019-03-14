@@ -4,6 +4,7 @@
     entrypoint: [""]
   before_script:
   - /apps/create-kubeconfig.sh
+  - envsubst < k8s/apm-server/deployment-apm-server.yml > k8s/apm-server/deployment-cdtn-apm-server.yml
   script:
-  - kubectl apply -f k8s/apm-server/deployment-apm-server.yml
+  - kubectl apply -f k8s/apm-server/deployment-cdtn-apm-server.yml
   allow_failure: false

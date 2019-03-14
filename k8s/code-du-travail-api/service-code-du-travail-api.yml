@@ -2,12 +2,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cdtn-api
+  name: cdtn-api${BRANCH_NAME}
   labels:
-    app: cdtn-api
+    app: cdtn-api${BRANCH_NAME}
 spec:
   selector:
-    app: cdtn-api
+    app: cdtn-api${BRANCH_NAME}
   ports:
   - port: 1337
     name: api

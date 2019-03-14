@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kibana
+  name: kibana${BRANCH_NAME}
   labels:
-    app: kibana
+    app: kibana${BRANCH_NAME}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kibana
+      app: kibana${BRANCH_NAME}
   template:
     metadata:
       labels:
-        app: kibana
+        app: kibana${BRANCH_NAME}
     spec:
       containers:
-      - name: kibana
+      - name: kibana${BRANCH_NAME}
         image: docker.elastic.co/kibana/kibana:6.4.2
         resources:
           limits:
@@ -25,6 +25,6 @@ spec:
             cpu: 100m
         env:
         - name: ELASTICSEARCH_URL
-          value: http://elasticsearch:9200
+          value: http://elasticsearch${BRANCH_NAME}:9200
         ports:
         - containerPort: 5601
