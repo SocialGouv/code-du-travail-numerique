@@ -12,6 +12,15 @@ variables:
 
 image: node:10-alpine
 
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules
+  - packages/code-du-travail-api/node_modules
+  - packages/code-du-travail-css/node_modules
+  - packages/code-du-travail-frontend/node_modules
+  - packages/code-du-travail-ui/node_modules
+
 stages:
 - "Install & Build"
 - "Check Code quality"
@@ -36,15 +45,10 @@ Install & Build:
   artifacts:
     expire_in: "1 day"
     paths:
-    - node_modules
     - packages/code-du-travail-api/dist
-    - packages/code-du-travail-api/node_modules
-    - packages/code-du-travail-css/node_modules
     - packages/code-du-travail-css/docs/bundle.css
     - packages/code-du-travail-frontend/.next
-    - packages/code-du-travail-frontend/node_modules
     - packages/code-du-travail-ui/lib
-    - packages/code-du-travail-ui/node_modules
 
 #
 #
