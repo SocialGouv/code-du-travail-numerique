@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { box, colors, fonts, spacing } from "../css/variables";
-import { SrOnly } from "../css/components";
+import { theme, SrOnly } from "@cdt/ui";
 import { ElementBuilder } from "../index";
 import { ignoreParagraph } from "../utils";
+
+const { box, colors, fonts, spacing } = theme;
 
 class Tabulator extends React.PureComponent {
   static propTypes = {

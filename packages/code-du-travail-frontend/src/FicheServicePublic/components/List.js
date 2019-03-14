@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { theme } from "@cdt/ui";
 import styled from "styled-components";
-import { spacing } from "../css/variables";
 import { ElementBuilder } from "../index";
+
+const { spacing } = theme;
 
 class List extends React.PureComponent {
   static propTypes = {

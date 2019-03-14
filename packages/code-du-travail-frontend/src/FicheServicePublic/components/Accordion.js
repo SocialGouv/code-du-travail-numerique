@@ -7,10 +7,11 @@ import {
   AccordionItemTitle,
   AccordionItemBody
 } from "react-accessible-accordion";
-import { colors, spacing } from "../css/variables";
-import { VerticalArrow } from "../css/components";
-import { fadeIn } from "../css/animations";
+import { theme, VerticalArrow, keyframes } from "@cdt/ui";
 import { ElementBuilder } from "../index";
+
+const { colors, spacing } = theme;
+const { fadeIn } = keyframes;
 
 class AccordionWrapper extends React.PureComponent {
   static propTypes = {

@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { theme } from "@cdt/ui";
 import { getText } from "../utils";
-import { colors, spacing, box } from "../css/variables";
+
+const { colors, spacing, box } = theme;
 
 class ServiceEnLigne extends React.PureComponent {
   static propTypes = {

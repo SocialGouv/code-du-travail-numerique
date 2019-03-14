@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { theme } from "@cdt/ui";
 import { getText, ignoreParagraph } from "./utils";
 import Accordion from "./components/Accordion";
 import LienExterne from "./components/LienExterne";
@@ -10,7 +11,8 @@ import ServiceEnLigne from "./components/ServiceEnLigne";
 import Table from "./components/Table";
 import Tabulator from "./components/Tabulator";
 import Title from "./components/Title";
-import { box, colors, fonts, spacing } from "./css/variables";
+
+const { box, colors, fonts, spacing } = theme;
 
 const parseChildren = (children, headingLevel) => (
   <ElementBuilder data={children} headingLevel={headingLevel} />

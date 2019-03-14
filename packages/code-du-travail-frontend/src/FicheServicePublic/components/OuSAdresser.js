@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { theme } from "@cdt/ui";
 import { ElementBuilder } from "../index";
-import { colors, spacing, box } from "../css/variables";
 import { getText } from "../utils";
+
+const { colors, spacing, box } = theme;
 
 class OuSAdresser extends React.PureComponent {
   static propTypes = {
