@@ -15,7 +15,7 @@ image: node:10-alpine
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-  - ~/.cache/yarn
+  - /usr/local/share/.cache
 
 stages:
 - "Install & Build"
