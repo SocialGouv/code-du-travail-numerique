@@ -37,7 +37,7 @@ Install & Build:
   stage: "Install & Build"
   script:
   - yarn cache dir
-  - yarn
+  - yarn --frozen-lockfile
   - yarn build
   artifacts:
     expire_in: "1 day"
