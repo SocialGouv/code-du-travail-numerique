@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 import ServiceEnLigne from "../ServiceEnLigne";
-import serviceEnLigneDataMock from "./serviceEnLigneData.mock.json";
+import serviceEnLigneDataMock from "./mocks/serviceEnLigneData.json";
 
 describe("<ServiceEnLigne />", () => {
   it("should render", () => {

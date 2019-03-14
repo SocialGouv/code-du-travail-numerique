@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 import Accordion from "../Accordion";
-import accordionDataMock from "./accordionData.mock.json";
+import accordionDataMock from "./mocks/accordionData.json";
 
 describe("<Accordion />", () => {
   it("should have two different levels of headings", () => {

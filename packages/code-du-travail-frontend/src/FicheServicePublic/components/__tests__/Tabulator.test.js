@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 import Tabulator from "../Tabulator";
-import tabulatorDataMock from "./tabulatorData.mock.json";
+import tabulatorDataMock from "./mocks/tabulatorData.json";
 
 describe("<Tabulator />", () => {
   it("should have two different levels of headings", () => {

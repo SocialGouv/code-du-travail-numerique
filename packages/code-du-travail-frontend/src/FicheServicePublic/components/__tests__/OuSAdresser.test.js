@@ -1,7 +1,8 @@
 import React from "react";
 import { render } from "react-testing-library";
 import OuSAdresser from "../OuSAdresser";
-import { classicData, ressourceWebData } from "./ouSAdresserData.mock.js";
+import classicData from "./mocks/ouSAdresserClassicData.json";
+import ressourceWebData from "./mocks/ouSAdresserWebData.json";
 
 describe("<OuSAdresser />", () => {
   it("should render a simple case", () => {
