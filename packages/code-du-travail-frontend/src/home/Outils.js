@@ -13,7 +13,16 @@ const outils = [
     hrefTitle: "Démarrer une simulation ",
     text:
       "Calculez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
-    slug: "/outils/indemnite-licenciement"
+    routeName: "outils",
+    slug: "indemnite-licenciement"
+  },
+  {
+    icon: "/static/assets/icons/message_web.svg",
+    title: "Modèles de courriers",
+    hrefTitle: "Voir tous les modèles de courriers",
+    text:
+      "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
+    routeName: "modeles"
   }
 ];
 
@@ -31,15 +40,17 @@ export default class Outils extends React.PureComponent {
         <Container>
           <Title>{title}</Title>
           <Wrapper>
-            {outils.map(({ title, text, icon, slug, hrefTitle }) => (
-              <OutilCard key={slug}>
-                <Link href={slug}>
-                  <a title={hrefTitle}>
-                    <Outil title={title} text={text} icon={icon} />
-                  </a>
-                </Link>
-              </OutilCard>
-            ))}
+            {outils.map(
+              ({ title, text, icon, routeName = "index", slug, hrefTitle }) => (
+                <OutilCard key={`${routeName}/${slug}`} data-route={routeName}>
+                  <Link route={routeName} params={slug ? { slug } : {}}>
+                    <a title={hrefTitle}>
+                      <Outil title={title} text={text} icon={icon} />
+                    </a>
+                  </Link>
+                </OutilCard>
+              )
+            )}
             <ConventionModal />
           </Wrapper>
         </Container>
