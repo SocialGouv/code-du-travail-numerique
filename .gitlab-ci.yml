@@ -15,11 +15,7 @@ image: node:10-alpine
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-  - node_modules
-  - packages/code-du-travail-api/node_modules
-  - packages/code-du-travail-css/node_modules
-  - packages/code-du-travail-frontend/node_modules
-  - packages/code-du-travail-ui/node_modules
+  - ~/.cache/yarn
 
 stages:
 - "Install & Build"
@@ -40,6 +36,7 @@ stages:
 Install & Build:
   stage: "Install & Build"
   script:
+  - yarn cache dir
   - yarn
   - yarn build
   artifacts:
