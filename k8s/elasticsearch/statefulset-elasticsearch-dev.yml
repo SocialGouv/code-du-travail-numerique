@@ -53,7 +53,7 @@ spec:
             add:
             - IPC_LOCK
             - SYS_RESOURCE
-        image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/elasticsearch:latest
+        image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/elasticsearch:${IMAGE_TAG}
         env:
         - name: ES_JAVA_OPTS
           valueFrom:

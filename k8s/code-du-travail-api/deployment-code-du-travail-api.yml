@@ -16,7 +16,7 @@ spec:
         app: cdtn-api
     spec:
       containers:
-      - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:latest
+      - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:${IMAGE_TAG}
         name: cdtn-api
         ports:
         - containerPort: 1337
