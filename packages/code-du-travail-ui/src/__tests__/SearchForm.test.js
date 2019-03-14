@@ -1,8 +1,9 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { cleanup, render, fireEvent } from "react-testing-library";
 import SearchForm from "../SearchForm";
 
 describe("<SearchForm />", () => {
+  afterEach(cleanup);
   test("should render", () => {
     const { container } = render(
       <SearchForm

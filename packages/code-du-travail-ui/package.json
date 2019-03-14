@@ -24,12 +24,12 @@
     "react": "16"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "@cdt/css": "^2.0.0",
     "@socialgouv/eslint-config-react": "^0.5.0",
+    "babel-jest": "^24.5.0",
     "docz": "^0.13.7",
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "^0.13.7",
@@ -40,7 +40,7 @@
     "prop-types": "^15.6.2",
     "react": "16",
     "react-dom": "16",
-    "react-testing-library": "^5.4.4",
+    "react-testing-library": "^6.0.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
@@ -59,9 +59,6 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js"
-    ],
-    "setupFilesAfterEnv": [
-      "react-testing-library/cleanup-after-each"
     ]
   }
 }

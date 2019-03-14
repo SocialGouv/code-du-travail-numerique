@@ -1,8 +1,9 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { cleanup, render, fireEvent } from "react-testing-library";
 import Support from "../Support";
 
 describe("<Support />", () => {
+  afterEach(cleanup);
   test("should render Support", () => {
     const { container } = render(<Support onSubmit={jest.fn()} />);
     expect(container).toMatchSnapshot();
