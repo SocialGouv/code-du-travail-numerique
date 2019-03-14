@@ -8,8 +8,9 @@ include:
 - '/k8s/code-du-travail-frontend/.deploy-code-du-travail-frontend-k8s.yml'
 
 variables:
-  IMAGE_INFRA_BASE_NAME: "infra/images-docker"
+  IMAGE_INFRA_BASE_NAME: infra/images-docker
   DOCKER_VERSION: 18.06
+  PYTHON_VERSION: 3.6-alpine
 
 image: node:10-alpine
 
@@ -74,7 +75,7 @@ lint-cdtn-frontend:
 
 lint-cdtn-data:
   stage: "Code Quality"
-  image: python:3.6-alpine
+  image: python:$PYTHON_VERSION
   variables:
     DOCKER_HOST: tcp://localhost:2375
     PIPENV_VENV_IN_PROJECT: 1
@@ -128,7 +129,7 @@ test-cdtn-api:
 
 test-cdtn-data:
   stage: "Code Quality"
-  image: python:3.6-alpine
+  image: python:$PYTHON_VERSION
   variables:
     DOCKER_HOST: tcp://localhost:2375
     PIPENV_VENV_IN_PROJECT: 1
