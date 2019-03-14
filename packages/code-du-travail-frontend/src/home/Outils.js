@@ -23,6 +23,14 @@ const outils = [
     text:
       "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
     routeName: "modeles"
+  },
+  {
+    icon: "/static/assets/icons/salary_web.svg",
+    title: "Simulateur d'embauche",
+    hrefTitle: "Voir tous les modèles de courriers",
+    text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
+    routeName: "outils",
+    slug: "simulateur-embauche"
   }
 ];
 
