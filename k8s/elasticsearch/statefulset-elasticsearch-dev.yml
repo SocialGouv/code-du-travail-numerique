@@ -41,6 +41,13 @@ spec:
             configMapKeyRef:
               name: es-config${BRANCH_NAME}
               key: ES_JAVA_OPTS
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /_cluster/health
+            port: 9200
+          initialDelaySeconds: 5
+          periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
