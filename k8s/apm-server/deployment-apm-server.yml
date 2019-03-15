@@ -27,7 +27,7 @@ spec:
         - name: logging.level
           value: "trace"
         - name: setup.kibana.host
-          value: "5601"
+          value: "kibana:5601"
         - name: output.elasticsearch.hosts
           value: "elasticsearch${BRANCH_NAME}:9200"
         - name: output.elasticsearch.enabled
