@@ -15,10 +15,10 @@ exports[`<ChoixCCN /> should display cc list  1`] = `
           Est-ce qu'une convention collective s'applique dans votre entreprise ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""
@@ -30,7 +30,7 @@ exports[`<ChoixCCN /> should display cc list  1`] = `
             Oui
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="has-convention"
@@ -129,10 +129,10 @@ exports[`<ChoixCCN /> should render 1`] = `
           Est-ce qu'une convention collective s'applique dans votre entreprise ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="has-convention"
@@ -143,7 +143,7 @@ exports[`<ChoixCCN /> should render 1`] = `
             Oui
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""
@@ -185,10 +185,10 @@ exports[`<ChoixCCN /> should update view when update checkbox  1`] = `
           Est-ce qu'une convention collective s'applique dans votre entreprise ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="has-convention"
@@ -199,7 +199,7 @@ exports[`<ChoixCCN /> should update view when update checkbox  1`] = `
             Oui
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""

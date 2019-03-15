@@ -100,12 +100,12 @@ exports[`<AddressResults/> should render results 1`] = `
             class="card"
           >
             <strong
-              class="sc-bdVaJa eMFQSc"
+              class="sc-htpNat lfbAJt"
             >
               Bureau des légendes
             </strong>
             <a
-              class="sc-htpNat ctwMlm"
+              class="sc-ifAKCX bqOmET"
               href="https://www.openstreetmap.org/?mlat=4&mlon=44&zoom=16"
             >
               adresse inconnue
@@ -115,7 +115,7 @@ exports[`<AddressResults/> should render results 1`] = `
               Partout
             </a>
             <p
-              class="sc-bxivhb pmBgr"
+              class="sc-EHOje cJPhng"
             >
               Tél: 
               <a
@@ -125,7 +125,7 @@ exports[`<AddressResults/> should render results 1`] = `
               </a>
             </p>
             <a
-              class="sc-ifAKCX hnIkBb"
+              class="sc-bZQynM eLthGe"
               href="mailto:email"
             >
               email

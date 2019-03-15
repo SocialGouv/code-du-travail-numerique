@@ -46,7 +46,7 @@ const Article = ({
           <Icon />
         </div>
         <div className="article__header">
-          <div className="article__title">{title}</div>
+          <h1 className="article__title">{title}</h1>
           <div>
             {sourceType && (
               <span className="article__document-type">{sourceType}</span>

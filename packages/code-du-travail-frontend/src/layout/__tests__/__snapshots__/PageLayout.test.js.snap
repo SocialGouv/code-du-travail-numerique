@@ -9,19 +9,19 @@ exports[`<PageLayout /> should render 1`] = `
       class="container"
     >
       <div
-        class="sc-bdVaJa fKqKQM"
+        class="sc-htpNat hXSzT"
       >
         <a
-          class="sc-bwzfXH eBIpsv"
+          class="sc-bxivhb hJglWP"
           href="/?q="
         >
           <img
             alt=""
-            class="sc-htpNat knlPcz"
+            class="sc-ifAKCX fnBDIL"
             src="/static/assets/img/marianne.svg"
           />
           <span
-            class="sc-bxivhb fjOXOG"
+            class="sc-EHOje dKEeYN"
           >
             Code du travail
             <br />

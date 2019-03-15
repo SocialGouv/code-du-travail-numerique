@@ -19,10 +19,10 @@ exports[`<DateFinContrat /> should render 1`] = `
            ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="isR12342"
@@ -33,7 +33,7 @@ exports[`<DateFinContrat /> should render 1`] = `
             </span>
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""

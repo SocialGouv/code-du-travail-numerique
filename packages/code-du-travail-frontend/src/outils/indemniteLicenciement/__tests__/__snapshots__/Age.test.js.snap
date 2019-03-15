@@ -15,10 +15,10 @@ exports[`<Age /> should call onChange with updated value 1`] = `
           Quel est votre age ?
         </h2>
         <label
-          class="sc-bwzfXH lbnHsv"
+          class="sc-bxivhb dTOYdh"
         >
           <input
-            class="sc-bdVaJa dBfvmf"
+            class="sc-htpNat kOhZjJ"
             name="age"
             size="5"
             type="number"
@@ -55,10 +55,10 @@ exports[`<Age /> should render 1`] = `
           Quel est votre age ?
         </h2>
         <label
-          class="sc-bwzfXH lbnHsv"
+          class="sc-bxivhb dTOYdh"
         >
           <input
-            class="sc-bdVaJa dBfvmf"
+            class="sc-htpNat kOhZjJ"
             name="age"
             size="5"
             type="number"

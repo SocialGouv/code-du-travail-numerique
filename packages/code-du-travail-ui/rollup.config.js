@@ -14,7 +14,7 @@ export default {
       format: "esm"
     }
   ],
-  external: ["react", "prop-types"],
+  external: ["react", "prop-types", "styled-components"],
   plugins: [
     resolve(),
     replace({

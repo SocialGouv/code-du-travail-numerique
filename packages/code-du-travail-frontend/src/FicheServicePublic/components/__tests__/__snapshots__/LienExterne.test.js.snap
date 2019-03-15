@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LienExterne /> should render 1`] = `
+<div>
+  <a
+    href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    formulaire de contact
+  </a>
+</div>
+`;

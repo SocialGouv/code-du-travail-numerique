@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OuSAdresser /> should render a complex case 1`] = `
+<div>
+  <div
+    class="sc-gqjmRU dinUnz"
+  >
+    <strong
+      class="sc-VigVT evjmKG"
+    >
+      Ou s'adresser ?
+    </strong>
+    <a
+      href="url du lien"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Label du lien !
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<OuSAdresser /> should render a simple case 1`] = `
+<div>
+  <div
+    class="sc-gqjmRU dinUnz"
+  >
+    <strong
+      class="sc-VigVT evjmKG"
+    >
+      Ou s'adresser ?
+    </strong>
+    <p>
+      Un paragraphe tout bête
+    </p>
+  </div>
+</div>
+`;
