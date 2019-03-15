@@ -20,6 +20,18 @@ spec:
         name: cdtn-api${BRANCH_NAME}
         ports:
         - containerPort: 1337
+        livenessProbe:
+          httpGet:
+            path: /api/v1/version
+            port: 1337
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /api/v1/version
+            port: 1337
+          initialDelaySeconds: 3
+          periodSeconds: 5
         env:
         - name: ELASTICSEARCH_URL
           value: http://elasticsearch${BRANCH_NAME}:9200
