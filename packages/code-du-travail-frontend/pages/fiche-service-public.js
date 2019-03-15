@@ -4,6 +4,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { ExternalLink } from "react-feather";
 import getConfig from "next/config";
+import FicheServicePublic from "../src/FicheServicePublic";
 import Answer from "../src/common/Answer";
 import DossierIcon from "../src/icons/DossierIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -37,6 +38,9 @@ class Fiche extends React.Component {
     if (data.status === 404) {
       return { data: { _source: {} } };
     }
+    if (data._source.raw) {
+      data._source.raw = JSON.parse(data._source.raw);
+    }
     return { data };
   }
 
@@ -54,7 +58,13 @@ class Fiche extends React.Component {
             date={data._source.date}
             icon={DossierIcon}
             sourceType="Fiche service public"
-          />
+          >
+            {// Without the check, the prop children of the Answer will evaluate to true
+            // even if in the end, <FicheServicePublic /> returns null
+            data._source.raw && (
+              <FicheServicePublic data={data._source.raw.$} />
+            )}
+          </Answer>
         </ServicePublicCss>
       </PageLayout>
     );

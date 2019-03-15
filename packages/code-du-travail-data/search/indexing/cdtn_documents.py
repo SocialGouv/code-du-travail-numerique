@@ -10,7 +10,6 @@ from search import settings
 from search.indexing.strip_html import strip_html
 from search.extraction.code_du_travail.cleaned_tags.data import CODE_DU_TRAVAIL_DICT
 from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRAVAIL
-from search.extraction.fiches_service_public.data import FICHES_SERVICE_PUBLIC
 from search.extraction.themes_front.data import THEMES
 
 logger = settings.get_logger(__name__)
@@ -77,18 +76,20 @@ def populate_cdtn_documents():
             'url': val['url'],
         })
 
-    logger.info("Load %s documents from service-public", len(FICHES_SERVICE_PUBLIC))
-    for val in FICHES_SERVICE_PUBLIC:
-        CDTN_DOCUMENTS.append({
-            'source': 'fiches_service_public',
-            'text': val['text'],
-            'slug': slugify(val['title'], to_lower=True),
-            'title': val['title'],
-            'html': val["html"],
-            'tags': val['tags'],
-            'url': val['url'],
-            'date': val.get('date'),
-        })
+    with open(os.path.join(settings.BASE_DIR, 'dataset/fiches_service_public/fiches-sp-travail.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from fiches-service-public", len(data))
+        for val in data:
+            CDTN_DOCUMENTS.append({
+                'source': 'fiches_service_public',
+                'date': val['date'],
+                'raw': val['raw'],
+                'slug': slugify(val['title'], to_lower=True),
+                'tags': val['tags'],
+                'text': val['text'],
+                'title': val['title'],
+                'url': val['url'],
+            })
 
     logger.info("Load %s documents from fiches-ministere-travail", len(FICHES_MINISTERE_TRAVAIL))
     for val in FICHES_MINISTERE_TRAVAIL:

@@ -42,11 +42,11 @@ exports[`<Article /> should render 1`] = `
           <div
             class="article__header"
           >
-            <div
+            <h1
               class="article__title"
             >
               Contrat de travail et formalités d'embauche de l'assistante maternelle
-            </div>
+            </h1>
             <div>
               <span
                 class="article__document-type"

@@ -1,0 +1,36 @@
+{
+  "type":"element",
+  "name":"OuSAdresser",
+  "_":{
+    "ID":"R14971",
+    "type":"pas pris en compte"
+  },
+  "$":[
+    {
+      "type":"element",
+      "name":"Titre",
+      "$":[
+        {
+          "type":"text",
+          "$":"pas pris en compte"
+        }
+      ]
+    },
+    {
+      "type":"element",
+      "name":"Texte",
+      "$":[
+        {
+          "type":"element",
+          "name":"Paragraphe",
+          "$":[
+            {
+              "type":"text",
+              "$":"Un paragraphe tout bête"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

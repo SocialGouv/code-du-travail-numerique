@@ -15,10 +15,10 @@ exports[`<Primes /> should call onChange with updated value 1`] = `
           Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
         </h2>
         <label
-          class="sc-bwzfXH lbnHsv"
+          class="sc-bxivhb dTOYdh"
         >
           <input
-            class="sc-bdVaJa dBfvmf"
+            class="sc-htpNat kOhZjJ"
             name="prime"
             size="5"
             type="number"
@@ -57,10 +57,10 @@ exports[`<Primes /> should render 1`] = `
           Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
         </h2>
         <label
-          class="sc-bwzfXH lbnHsv"
+          class="sc-bxivhb dTOYdh"
         >
           <input
-            class="sc-bdVaJa dBfvmf"
+            class="sc-htpNat kOhZjJ"
             name="prime"
             size="5"
             type="number"

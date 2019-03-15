@@ -38,8 +38,8 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <noscript>
-            Vous devez activer le JavaScript pour pouvoir profiter pleinement ce
-            site internet.
+            Vous devez activer le JavaScript pour pouvoir profiter pleinement de
+            ce site internet.
           </noscript>
           <Main />
           <NextScript />

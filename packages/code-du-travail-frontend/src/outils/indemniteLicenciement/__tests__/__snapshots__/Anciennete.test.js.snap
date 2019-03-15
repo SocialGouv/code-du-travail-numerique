@@ -15,10 +15,10 @@ exports[`<Anciennete /> should call onChange with updated value 1`] = `
           Quelle est votre ancienneté en mois ?
         </h2>
         <label
-          class="sc-bwzfXH lbnHsv"
+          class="sc-bxivhb dTOYdh"
         >
           <input
-            class="sc-bdVaJa dBfvmf"
+            class="sc-htpNat kOhZjJ"
             name="anciennete"
             size="5"
             type="number"
@@ -57,10 +57,10 @@ exports[`<Anciennete /> should render 1`] = `
           Quelle est votre ancienneté en mois ?
         </h2>
         <label
-          class="sc-bwzfXH lbnHsv"
+          class="sc-bxivhb dTOYdh"
         >
           <input
-            class="sc-bdVaJa dBfvmf"
+            class="sc-htpNat kOhZjJ"
             name="anciennete"
             size="5"
             type="number"

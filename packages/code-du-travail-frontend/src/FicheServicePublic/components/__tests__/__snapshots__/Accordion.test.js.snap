@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should have two different levels of headings 1`] = `
+<div>
+  <h2>
+    titre 0
+  </h2>
+  <p>
+    paragraphe 0
+  </p>
+  <div
+    class="sc-VigVT kqRiyl"
+  >
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-0"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-0"
+        role="button"
+        tabindex="0"
+      >
+        <h2>
+          titre 1
+        </h2>
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-0"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-0"
+      >
+        <p>
+          paragraphe 1-1
+        </p>
+        <p>
+          paragraphe 1-2
+        </p>
+      </div>
+    </div>
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-1"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-1"
+        role="button"
+        tabindex="0"
+      >
+        <h2>
+          titre 2
+        </h2>
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-1"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-1"
+      >
+        <p>
+          paragraphe 2-1
+        </p>
+        <p>
+          paragraphe 2-2
+        </p>
+        <h3>
+          titre 2-1
+        </h3>
+      </div>
+    </div>
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-2"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-2"
+        role="button"
+        tabindex="0"
+      >
+        <h2>
+          titre 3
+        </h2>
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-2"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-2"
+      >
+        <p>
+          paragraphe 3-1
+        </p>
+      </div>
+    </div>
+  </div>
+  <p>
+    paragraphe 4
+  </p>
+</div>
+`;
+
+exports[`<Accordion /> should render all, siblings included 1`] = `
+<div>
+  <h5>
+    titre 0
+  </h5>
+  <p>
+    paragraphe 0
+  </p>
+  <div
+    class="sc-VigVT kqRiyl"
+  >
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-3"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-3"
+        role="button"
+        tabindex="0"
+      >
+        <h5>
+          titre 1
+        </h5>
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-3"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-3"
+      >
+        <p>
+          paragraphe 1-1
+        </p>
+        <p>
+          paragraphe 1-2
+        </p>
+      </div>
+    </div>
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-4"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-4"
+        role="button"
+        tabindex="0"
+      >
+        <h5>
+          titre 2
+        </h5>
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-4"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-4"
+      >
+        <p>
+          paragraphe 2-1
+        </p>
+        <p>
+          paragraphe 2-2
+        </p>
+        <h6>
+          titre 2-1
+        </h6>
+      </div>
+    </div>
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-5"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-5"
+        role="button"
+        tabindex="0"
+      >
+        <h5>
+          titre 3
+        </h5>
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-5"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-5"
+      >
+        <p>
+          paragraphe 3-1
+        </p>
+      </div>
+    </div>
+  </div>
+  <p>
+    paragraphe 4
+  </p>
+</div>
+`;
