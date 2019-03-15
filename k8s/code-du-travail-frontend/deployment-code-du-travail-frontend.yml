@@ -20,6 +20,18 @@ spec:
         name: cdtn-frontend
         ports:
         - containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 3
+          periodSeconds: 5
         env:
         - name: API_URL
           value: http://code-du-travail-numerique-api${BRANCH_NAME}.ops.factory.social.gouv.fr/api/v1
