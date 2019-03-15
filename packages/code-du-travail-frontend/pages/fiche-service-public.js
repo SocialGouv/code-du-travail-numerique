@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { ExternalLink } from "react-feather";
 import getConfig from "next/config";
 import FicheServicePublic from "../src/FicheServicePublic";
+import HierarchieDesNormes from "../src/HierarchieDesNormes";
 import Answer from "../src/common/Answer";
 import DossierIcon from "../src/icons/DossierIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -62,7 +63,12 @@ class Fiche extends React.Component {
             {// Without the check, the prop children of the Answer will evaluate to true
             // even if in the end, <FicheServicePublic /> returns null
             data._source.raw && (
-              <FicheServicePublic data={data._source.raw.$} />
+              <>
+                <FicheServicePublic data={data._source.raw.$} />
+                <HierarchieDesNormes
+                  data={data._source.references_juridiques}
+                />
+              </>
             )}
           </Answer>
         </ServicePublicCss>

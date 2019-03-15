@@ -72,6 +72,10 @@ def chunks(l, n):
         yield l[i:i+n]
 
 
+def removeId(obj):
+  return {key: obj.get(key) for key in obj.keys() if key != '_id'}
+
+
 def create_documents(index_name, type_name, documents):
     es = get_es_client()
     actions = [
@@ -79,7 +83,9 @@ def create_documents(index_name, type_name, documents):
             '_op_type': 'index',
             '_index': index_name,
             '_type': type_name,
-            '_source': body,
+            # this hack allows to set a predefined _id
+            '_source': removeId(body),
+            '_id': body.get("_id")
         }
         for body in documents
     ]
