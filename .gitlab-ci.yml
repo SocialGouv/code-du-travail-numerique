@@ -227,29 +227,15 @@ deploy-kibana:
   extends: .deploy-kibana-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
-    K8S_NAMESPACE: $K8S_NAMESPACE
-    K8S_USERNAME: $K8S_USERNAME
-    K8S_CONTEXT: $K8S_CONTEXT
-    K8S_TOKEN: $K8S_TOKEN
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
-  environment:
-    name: ops
-
-deploy-elasticsearch:
-  stage: "Deploy EL Stack"
-  extends: .deploy-elasticsearch-k8s
-  variables:
-    DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
-    K8S_NAMESPACE: $K8S_NAMESPACE
-    K8S_USERNAME: $K8S_USERNAME
-    K8S_CONTEXT: $K8S_CONTEXT
-    K8S_TOKEN: $K8S_TOKEN
-    IMAGE_TAG: $CI_COMMIT_SHA
-    BRANCH_NAME: -$CI_COMMIT_REF_NAME
+  only:
+  - ops
 
 deploy-apm-server:
   stage: "Deploy EL Stack"
@@ -262,6 +248,22 @@ deploy-apm-server:
     K8S_USERNAME: $K8S_USERNAME
     K8S_CONTEXT: $K8S_CONTEXT
     K8S_TOKEN: $K8S_TOKEN
+    BRANCH_NAME: ''
+  only:
+  - ops
+
+deploy-elasticsearch:
+  stage: "Deploy EL Stack"
+  extends: .deploy-elasticsearch-dev-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+    IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
 
 create-cdtn-es-index:
@@ -269,12 +271,12 @@ create-cdtn-es-index:
   extends: .deploy-code-du-travail-data-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
-    K8S_NAMESPACE: $K8S_NAMESPACE
-    K8S_USERNAME: $K8S_USERNAME
-    K8S_CONTEXT: $K8S_CONTEXT
-    K8S_TOKEN: $K8S_TOKEN
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
 
@@ -283,12 +285,12 @@ deploy-cdtn-api:
   extends: .deploy-code-du-travail-api-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
-    K8S_NAMESPACE: $K8S_NAMESPACE
-    K8S_USERNAME: $K8S_USERNAME
-    K8S_CONTEXT: $K8S_CONTEXT
-    K8S_TOKEN: $K8S_TOKEN
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ELASTICSEARCH_LOG_LEVEL: "trace"
@@ -296,21 +298,21 @@ deploy-cdtn-api:
     APM_SERVER_URL: ""
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
   environment:
-    name: ops
+    name: dev
 
 deploy-cdtn-frontend:
   stage: "Deploy Code du Travail Numerique"
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
     DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
-    K8S_NAMESPACE: $K8S_NAMESPACE
-    K8S_USERNAME: $K8S_USERNAME
-    K8S_CONTEXT: $K8S_CONTEXT
-    K8S_TOKEN: $K8S_TOKEN
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
   environment:
-    name: ops
+    name: dev

@@ -1,4 +1,4 @@
-.deploy-elasticsearch-k8s:
+.deploy-elasticsearch-dev-k8s:
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
