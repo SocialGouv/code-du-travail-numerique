@@ -297,6 +297,9 @@ deploy-cdtn-api:
     K8S_TOKEN: $K8S_TOKEN
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
+    ELASTICSEARCH_LOG_LEVEL: "trace"
+    APM_SERVER_ACTIVE: 0
+    APM_SERVER_URL: ""
   environment:
     name: ops
 
