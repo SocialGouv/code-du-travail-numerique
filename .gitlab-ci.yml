@@ -18,6 +18,7 @@ image: node:10-alpine
 stages:
 - "Prepare"
 - "Code Quality"
+- "Send Code Quality Reports"
 - "Build and Push Docker Image"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
@@ -100,7 +101,13 @@ test-cdtn-frontend:
   services:
   - docker:dind
   script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend test --coverage
+  - >-
+    docker run -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
+    -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    yarn workspace @cdt/frontend test --coverage
+  artifacts:
+    paths:
+    - $PWD/coverage
 
 test-cdtn-api:
   stage: "Code Quality"
@@ -122,11 +129,15 @@ test-cdtn-api:
   script:
   - >-
     docker run
+    -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
     -e ELASTICSEARCH_URL=http://elasticsearch:9200
     -e ELASTICSEARCH_LOG_LEVEL=info
     --network $(docker network ls -qf name=code)
     "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
     yarn workspace @cdt/api test --coverage
+  artifacts:
+    paths:
+    - $PWD/coverage
 
 test-cdtn-data:
   stage: "Code Quality"
@@ -146,6 +157,14 @@ test-cdtn-data:
   - pipenv install --dev
   script:
   - pipenv run python search/indexing/document_slug_checker.py -v
+
+send-reports-to-codecov:
+  stage: "Send Code Quality Reports"
+  before_script:
+  - apk add --no-cache git
+  script:
+  - npx codecov --flags frontend
+  - npx codecov --flags api
 
 build-and-push-elasticsearch-image:
   stage: "Build and Push Docker Image"
