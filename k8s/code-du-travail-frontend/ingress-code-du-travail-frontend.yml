@@ -7,7 +7,7 @@ metadata:
     app: cdtn-frontend${BRANCH_NAME}
 spec:
   rules:
-  - host: code-du-travail-numerique${BRANCH_NAME}.ops.factory.social.gouv.fr
+  - host: code-du-travail-numerique${BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr
     http:
       paths:
       - path: /

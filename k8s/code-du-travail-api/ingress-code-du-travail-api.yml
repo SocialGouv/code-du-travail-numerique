@@ -7,7 +7,7 @@ metadata:
     app: cdtn-api${BRANCH_NAME}
 spec:
   rules:
-  - host: code-du-travail-numerique-api${BRANCH_NAME}.ops.factory.social.gouv.fr
+  - host: code-du-travail-numerique-api${BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr
     http:
       paths:
       - path: /
