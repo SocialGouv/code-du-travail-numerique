@@ -3,61 +3,61 @@
 exports[`<WorkPeriods /> should render 1`] = `
 <div>
   <table
-    class="sc-bdVaJa iqUEsv"
+    class="sc-htpNat rRlla"
   >
     <thead
-      class="sc-bwzfXH dYaYOz"
+      class="sc-bxivhb bbfLM"
     >
       <tr>
         <th
-          class="sc-htpNat jnqzKx"
+          class="sc-ifAKCX ravIE"
         >
           Type
         </th>
         <th
-          class="sc-bxivhb hQTtcV"
+          class="sc-EHOje bvyII"
         >
           Durée
         </th>
         <th
-          class="sc-bxivhb hQTtcV"
+          class="sc-EHOje bvyII"
         >
           Salaire
         </th>
         <th
-          class="sc-ifAKCX hFumjR"
+          class="sc-bZQynM gWWkQS"
         />
       </tr>
     </thead>
     <tbody>
       <tr>
         <td
-          class="sc-EHOje NpirS"
+          class="sc-gzVnrw fiXAsj"
         >
           Temps plein
         </td>
         <td
-          class="sc-bZQynM jcDMsS"
+          class="sc-htoDjs bBILmz"
         >
           10
           <span
-            class="sc-gzVnrw hJOryv"
+            class="sc-dnqmqq kVudQc"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-bZQynM jcDMsS"
+          class="sc-htoDjs bBILmz"
         >
           1300
           <span
-            class="sc-gzVnrw hJOryv"
+            class="sc-dnqmqq kVudQc"
           >
             €
           </span>
         </td>
         <td
-          class="sc-htoDjs eWBLGq"
+          class="sc-iwsKbI jtHIMG"
         >
           <div
             class="btn btn__link  "
@@ -80,32 +80,32 @@ exports[`<WorkPeriods /> should render 1`] = `
       </tr>
       <tr>
         <td
-          class="sc-EHOje NpirS"
+          class="sc-gzVnrw fiXAsj"
         >
           Temps partiel
         </td>
         <td
-          class="sc-bZQynM jcDMsS"
+          class="sc-htoDjs bBILmz"
         >
           10
           <span
-            class="sc-gzVnrw hJOryv"
+            class="sc-dnqmqq kVudQc"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-bZQynM jcDMsS"
+          class="sc-htoDjs bBILmz"
         >
           1000
           <span
-            class="sc-gzVnrw hJOryv"
+            class="sc-dnqmqq kVudQc"
           >
             €
           </span>
         </td>
         <td
-          class="sc-htoDjs eWBLGq"
+          class="sc-iwsKbI jtHIMG"
         >
           <div
             class="btn btn__link  "

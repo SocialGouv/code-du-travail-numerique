@@ -3,15 +3,15 @@
 exports[`<ServiceEnLigne /> should render 1`] = `
 <div>
   <div
-    class="sc-bdVaJa fjKOtS"
+    class="sc-htpNat gHjumY"
   >
     <div
-      class="sc-bwzfXH dVqAjd"
+      class="sc-bxivhb kjpcZS"
     >
       Se retrouve dans en entête
     </div>
     <a
-      class="sc-htpNat bnTMcs"
+      class="sc-ifAKCX iPrfNR"
       href="url à retoruver dans le lien"
       rel="noopener noreferrer"
       target="_blank"
@@ -19,7 +19,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
       Texte qui se retrouve dans le lien
     </a>
     <small
-      class="sc-bxivhb kveWqS"
+      class="sc-EHOje jrDJBX"
     >
       Source qui se retrouve sous le lien
     </small>

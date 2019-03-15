@@ -411,9 +411,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="sc-bdVaJa edgkJi"
                   >
-                    <h6>
+                    <h5>
                       Cas général
-                    </h6>
+                    </h5>
                   </div>
                   <p>
                     La durée du préavis de démission est fixée :
@@ -547,9 +547,9 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   <div
                     class="sc-bdVaJa edgkJi"
                   >
-                    <h6>
+                    <h5>
                       Vous demandez une dispense de préavis
-                    </h6>
+                    </h5>
                   </div>
                   <p>
                     Vous pouvez demander à votre employeur de vous dispenser d'effectuer votre préavis (par écrit ou par oral) :

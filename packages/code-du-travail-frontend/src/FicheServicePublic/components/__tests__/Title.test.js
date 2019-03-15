@@ -8,7 +8,7 @@ describe("<Title />", () => {
     expect(container).toMatchSnapshot();
   });
   it("heading should default to H6", () => {
-    const { container } = render(<Title level={"nawak"} />);
+    const { container } = render(<Title level={10} />);
     expect(container).toMatchSnapshot();
   });
 });

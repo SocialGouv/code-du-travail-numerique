@@ -27,10 +27,10 @@ exports[`<SearchQuery/> should render results 1`] = `
               >
                 <header>
                   <h3
-                    class="sc-bdVaJa kBfMAi"
+                    class="sc-htpNat gvPoaQ"
                   >
                     <span
-                      class="sc-bwzfXH aKpTk"
+                      class="sc-bxivhb crOlaW"
                     >
                       FAQ
                        | 
@@ -39,7 +39,7 @@ exports[`<SearchQuery/> should render results 1`] = `
                   </h3>
                 </header>
                 <blockquote
-                  class="text-quote sc-htpNat bhpHJD"
+                  class="text-quote sc-ifAKCX ftAxxp"
                 />
               </article>
             </a>

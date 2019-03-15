@@ -73,61 +73,61 @@ exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
     </div>
   </form>
   <table
-    class="sc-bZQynM hUYSbs"
+    class="sc-htoDjs etAHKx"
   >
     <thead
-      class="sc-gzVnrw kLUpNd"
+      class="sc-dnqmqq dpRooH"
     >
       <tr>
         <th
-          class="sc-htoDjs fuzpcc"
+          class="sc-iwsKbI gMKRFd"
         >
           Type
         </th>
         <th
-          class="sc-dnqmqq lDZzO"
+          class="sc-gZMcBi elFnME"
         >
           Durée
         </th>
         <th
-          class="sc-dnqmqq lDZzO"
+          class="sc-gZMcBi elFnME"
         >
           Salaire
         </th>
         <th
-          class="sc-iwsKbI fqBEHj"
+          class="sc-gqjmRU xJoXN"
         />
       </tr>
     </thead>
     <tbody>
       <tr>
         <td
-          class="sc-gZMcBi cTJnyA"
+          class="sc-VigVT hFGILh"
         >
           Temps plein
         </td>
         <td
-          class="sc-gqjmRU bryhRV"
+          class="sc-jTzLTM ghgAdO"
         >
           10
           <span
-            class="sc-VigVT cmuClJ"
+            class="sc-fjdhpX ftqrHL"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-gqjmRU bryhRV"
+          class="sc-jTzLTM ghgAdO"
         >
           1300
           <span
-            class="sc-VigVT cmuClJ"
+            class="sc-fjdhpX ftqrHL"
           >
             €
           </span>
         </td>
         <td
-          class="sc-jTzLTM IqDLX"
+          class="sc-jzJRlG fuQHfL"
         >
           <div
             class="btn btn__link  "
@@ -150,32 +150,32 @@ exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
       </tr>
       <tr>
         <td
-          class="sc-gZMcBi cTJnyA"
+          class="sc-VigVT hFGILh"
         >
           Temps partiel
         </td>
         <td
-          class="sc-gqjmRU bryhRV"
+          class="sc-jTzLTM ghgAdO"
         >
           10
           <span
-            class="sc-VigVT cmuClJ"
+            class="sc-fjdhpX ftqrHL"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-gqjmRU bryhRV"
+          class="sc-jTzLTM ghgAdO"
         >
           1000
           <span
-            class="sc-VigVT cmuClJ"
+            class="sc-fjdhpX ftqrHL"
           >
             €
           </span>
         </td>
         <td
-          class="sc-jTzLTM IqDLX"
+          class="sc-jzJRlG fuQHfL"
         >
           <div
             class="btn btn__link  "

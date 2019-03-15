@@ -12,7 +12,7 @@ exports[`<ResultDetail /> should render 1`] = `
         class="wrapper"
       >
         <div
-          class="sc-bxivhb gtwcOJ"
+          class="sc-EHOje eSPVKp"
         >
           <h2>
             Montant indicatif de votre indemnité
@@ -41,7 +41,7 @@ exports[`<ResultDetail /> should render 1`] = `
         class="wrapper"
       >
         <table
-          class="sc-ifAKCX fKnNeQ"
+          class="sc-bZQynM bIfjLe"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -132,7 +132,7 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
         class="wrapper"
       >
         <div
-          class="sc-bxivhb gtwcOJ"
+          class="sc-EHOje eSPVKp"
         >
           <h2>
             Montant indicatif de votre indemnité
@@ -161,7 +161,7 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
         class="wrapper"
       >
         <table
-          class="sc-ifAKCX fKnNeQ"
+          class="sc-bZQynM bIfjLe"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -252,7 +252,7 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
         class="wrapper"
       >
         <div
-          class="sc-bxivhb gtwcOJ"
+          class="sc-EHOje eSPVKp"
         >
           <h2>
             Montant indicatif de votre indemnité
@@ -281,7 +281,7 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
         class="wrapper"
       >
         <table
-          class="sc-ifAKCX fKnNeQ"
+          class="sc-bZQynM bIfjLe"
           style="font-size: 1.2em;"
           width="100%"
         >

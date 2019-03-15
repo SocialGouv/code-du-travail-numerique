@@ -15,10 +15,10 @@ exports[`<Salaire /> should render mixed work period 1`] = `
           Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""
@@ -30,7 +30,7 @@ exports[`<Salaire /> should render mixed work period 1`] = `
             Oui
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="has-temps-partiel"
@@ -43,18 +43,18 @@ exports[`<Salaire /> should render mixed work period 1`] = `
         </div>
         <form>
           <div
-            class="sc-ifAKCX fLUhBC"
+            class="sc-bZQynM eyAcZw"
           >
             <label
-              class="sc-htoDjs fHktW"
+              class="sc-iwsKbI fzPyAB"
             >
               <span
-                class="sc-dnqmqq jFczle"
+                class="sc-gZMcBi bWDUlY"
               >
                 type
               </span>
               <select
-                class="sc-EHOje caLbZd"
+                class="sc-gzVnrw jcOAMN"
                 name="type"
               >
                 <option
@@ -70,15 +70,15 @@ exports[`<Salaire /> should render mixed work period 1`] = `
               </select>
             </label>
             <label
-              class="sc-htoDjs fHktW"
+              class="sc-iwsKbI fzPyAB"
             >
               <span
-                class="sc-dnqmqq jFczle"
+                class="sc-gZMcBi bWDUlY"
               >
                 durée (en mois)
               </span>
               <input
-                class="sc-bZQynM jdlsEM"
+                class="sc-htoDjs eqgMBq"
                 min="0"
                 name="duree"
                 placeholder="8 mois"
@@ -87,15 +87,15 @@ exports[`<Salaire /> should render mixed work period 1`] = `
               />
             </label>
             <label
-              class="sc-htoDjs fHktW"
+              class="sc-iwsKbI fzPyAB"
             >
               <span
-                class="sc-dnqmqq jFczle"
+                class="sc-gZMcBi bWDUlY"
               >
                 salaire mensuel
               </span>
               <input
-                class="sc-gzVnrw eCWXcf"
+                class="sc-dnqmqq iqotfl"
                 min="0"
                 name="salaire"
                 placeholder="€"
@@ -112,61 +112,61 @@ exports[`<Salaire /> should render mixed work period 1`] = `
           </div>
         </form>
         <table
-          class="sc-iwsKbI ihEBWt"
+          class="sc-gqjmRU iFDCgL"
         >
           <thead
-            class="sc-gZMcBi bEWRJx"
+            class="sc-VigVT fRiqMG"
           >
             <tr>
               <th
-                class="sc-gqjmRU duWcpo"
+                class="sc-jTzLTM bkzRfo"
               >
                 Type
               </th>
               <th
-                class="sc-VigVT jBihYX"
+                class="sc-fjdhpX inPDWS"
               >
                 Durée
               </th>
               <th
-                class="sc-VigVT jBihYX"
+                class="sc-fjdhpX inPDWS"
               >
                 Salaire
               </th>
               <th
-                class="sc-jTzLTM bCGmFT"
+                class="sc-jzJRlG jwFZRm"
               />
             </tr>
           </thead>
           <tbody>
             <tr>
               <td
-                class="sc-fjdhpX cQfeff"
+                class="sc-cSHVUG hHlyyh"
               >
                 Temps plein
               </td>
               <td
-                class="sc-jzJRlG buBBTl"
+                class="sc-kAzzGY kaFsBe"
               >
                 10
                 <span
-                  class="sc-cSHVUG kAMgIx"
+                  class="sc-chPdSV EQXqG"
                 >
                   mois
                 </span>
               </td>
               <td
-                class="sc-jzJRlG buBBTl"
+                class="sc-kAzzGY kaFsBe"
               >
                 1300
                 <span
-                  class="sc-cSHVUG kAMgIx"
+                  class="sc-chPdSV EQXqG"
                 >
                   €
                 </span>
               </td>
               <td
-                class="sc-kAzzGY hlorSy"
+                class="sc-kgoBCf hhsGWl"
               >
                 <div
                   class="btn btn__link  "
@@ -189,32 +189,32 @@ exports[`<Salaire /> should render mixed work period 1`] = `
             </tr>
             <tr>
               <td
-                class="sc-fjdhpX cQfeff"
+                class="sc-cSHVUG hHlyyh"
               >
                 Temps partiel
               </td>
               <td
-                class="sc-jzJRlG buBBTl"
+                class="sc-kAzzGY kaFsBe"
               >
                 10
                 <span
-                  class="sc-cSHVUG kAMgIx"
+                  class="sc-chPdSV EQXqG"
                 >
                   mois
                 </span>
               </td>
               <td
-                class="sc-jzJRlG buBBTl"
+                class="sc-kAzzGY kaFsBe"
               >
                 1000
                 <span
-                  class="sc-cSHVUG kAMgIx"
+                  class="sc-chPdSV EQXqG"
                 >
                   €
                 </span>
               </td>
               <td
-                class="sc-kAzzGY hlorSy"
+                class="sc-kgoBCf hhsGWl"
               >
                 <div
                   class="btn btn__link  "
@@ -267,10 +267,10 @@ exports[`<Salaire /> should render single work period 1`] = `
           Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="has-temps-partiel"
@@ -281,7 +281,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             Oui
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""
@@ -327,7 +327,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -353,7 +353,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -370,7 +370,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -385,7 +385,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -400,7 +400,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -415,7 +415,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -430,7 +430,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -469,10 +469,10 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
           Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="has-temps-partiel"
@@ -483,7 +483,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             Oui
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""
@@ -529,7 +529,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -555,7 +555,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -572,7 +572,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -587,7 +587,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -602,7 +602,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -617,7 +617,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"
@@ -632,7 +632,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-bdVaJa dFlwiT"
+                  class="sc-htpNat iYjHII"
                   size="6"
                   type="number"
                   value="1500"

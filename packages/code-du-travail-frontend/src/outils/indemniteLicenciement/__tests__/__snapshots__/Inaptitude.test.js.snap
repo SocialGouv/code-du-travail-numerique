@@ -15,10 +15,10 @@ exports[`<Inaptitude /> should render 1`] = `
           Êtes-vous licencié pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
         </h2>
         <div
-          class="sc-htpNat cKNzUf"
+          class="sc-ifAKCX dmUlWY"
         >
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               name="inaptitude"
@@ -29,7 +29,7 @@ exports[`<Inaptitude /> should render 1`] = `
             </span>
           </label>
           <label
-            class="sc-bwzfXH lbnHsv"
+            class="sc-bxivhb dTOYdh"
           >
             <input
               checked=""
