@@ -21,7 +21,7 @@ function computeScore(expectedResultsUrl, actualResulstUrl) {
 
 function computeLineScore({
   query,
-  previousResultsData = {},
+  previousResults = {},
   expectedResults,
   hits
 }) {
@@ -39,7 +39,7 @@ function computeLineScore({
   const found = `${numFound}/${numExpected}`;
 
   const score = computeScore(expectedResults, resultsUrl);
-  const prevScore = parseFloat(previousResultsData.score, 10) || 0;
+  const prevScore = parseFloat(previousResults.score) || 0;
   const diffScore = score - prevScore;
   return {
     query,

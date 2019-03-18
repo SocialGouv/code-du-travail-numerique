@@ -35,7 +35,7 @@ async function getTestCases() {
   const { cells } = await getCells({
     key: spreadsheetKey,
     worksheet: 1,
-    range: "A1:E100"
+    range: "A1:K100"
   });
 
   return Object.values(cells)
@@ -44,7 +44,8 @@ async function getTestCases() {
 }
 
 async function processRequest(testCase, csvResults, nbItem) {
-  const [query, ...expectedResults] = testCase;
+  const [query, ...queryData] = testCase;
+  const expectedResults = queryData.filter((data, i) => i % 2 === 0);
   const previousResults = csvResults.find(item => item.query === query);
   try {
     const response = await axios.get(`${endpoint}?q=${query}&size=20`);
