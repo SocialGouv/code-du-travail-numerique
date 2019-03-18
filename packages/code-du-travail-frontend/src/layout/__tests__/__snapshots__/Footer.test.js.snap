@@ -45,9 +45,17 @@ exports[`<Footer /> should render 1`] = `
             <li>
               <a
                 class="external-link__after"
-                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vundefined"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
               >
                 Contribuer sur Github
+              </a>
+            </li>
+            <li>
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+              >
+                Journal des modifications
               </a>
             </li>
           </ul>

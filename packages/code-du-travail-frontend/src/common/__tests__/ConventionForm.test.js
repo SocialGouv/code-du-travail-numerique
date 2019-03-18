@@ -6,6 +6,7 @@ jest.mock("../IdccSuggester", () => {
     return (
       <button
         data-testid="suggest"
+        type="button"
         onClick={() => props.onSelect({ title: "foo", url: "bar.url" })}
       />
     );
