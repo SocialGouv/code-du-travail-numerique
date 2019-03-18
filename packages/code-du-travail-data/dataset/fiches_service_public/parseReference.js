@@ -7,7 +7,7 @@ const kali = require("../kali/kali.json");
 
 const isConventionCollective = url => url.includes("idConvention");
 const isCodeDuTravail = cid => cid === "LEGITEXT000006072050";
-const isDecret = cid => cid && cid.includes("JORFTEXT");
+const isJournalOfficiel = cid => cid && cid.includes("JORFTEXT");
 
  // resolve article.num in LEGI extract
  const getArticleNumFromId = id => {
@@ -65,10 +65,10 @@ const parseReference = reference => {
           title,
           num: qs.idConvention
         };
-    } else if (isDecret(qs.cidTexte)) {
+    } else if (isJournalOfficiel(qs.cidTexte)) {
       return {
-        type: "decret",
-        id: `decret--${qs.cidTexte}`,
+        type: "journal-officiel",
+        id: `journal-officiel--${qs.cidTexte}`,
         num: qs.cidTexte,
         title: reference.$[0].$[0].$, // .Titre.text.contenu
         url: reference._.URL

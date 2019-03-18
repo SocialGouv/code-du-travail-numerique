@@ -111,6 +111,7 @@ const StyledElementBuilder = styled.div`
 `;
 
 const ANoter = styled.div`
+  margin-bottom: ${spacing.base};
   padding: ${spacing.base};
   background-color: ${colors.elementBackground};
   border-radius: ${box.borderRadius};

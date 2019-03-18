@@ -1,57 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import styled from "styled-components";
+import styled from "styled-components";
 
-import { Section } from "@cdt/ui";
-// import { theme } from "@cdt/ui";
+import { theme } from "@cdt/ui";
 
 import { Link } from "../../../routes";
 import ArticleIcon from "../../icons/ArticleIcon";
 import TYPE_TEXTE from "../typeTexte";
-// const { box, colors, fonts, spacing } = theme;
+
+const { box, colors, fonts, spacing } = theme;
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link route="code-du-travail" params={{ slug }}>
-    <a className="btn-large" style={{ display: "block" }}>
-      <ArticleIcon
-        width="18"
-        style={{ verticalAlign: "middle", marginRight: 10 }}
-      />
+    <ReferenceWrapper>
+      <ArticleIcon width={18} />
       {title}
-    </a>
+    </ReferenceWrapper>
   </Link>
 );
 
 const ConventionLink = ({ title, slug }) => (
   <Link route="kali" params={{ slug }}>
-    <a className="btn-large" style={{ display: "block" }}>
-      <ArticleIcon
-        width="18"
-        style={{ verticalAlign: "top", marginTop: 5, marginRight: 10 }}
-      />
-      <div style={{ display: "inline-block" }}>
-        <b>Convention collective</b>
-        <br />
-        <span style={{ fontSize: "0.9em" }}>{title}</span>
-      </div>
-    </a>
+    <ReferenceWrapper>
+      <ArticleIcon width={18} />
+      Convention collective: {title}
+    </ReferenceWrapper>
   </Link>
 );
 
-const DecretLink = ({ title, url }) => (
-  <a
-    className="btn-large"
-    style={{ display: "block" }}
+const OtherLink = ({ title, url }) => (
+  <ReferenceWrapper
     href={url}
     rel="noopener noreferrer"
     target="_blank"
+    className={"external-link__after"}
   >
-    {title}
-  </a>
+    <ArticleIcon width="18" />
+    Autre: {title}
+  </ReferenceWrapper>
 );
 
 const TextesConventionnels = ({ data }) => (
-  <Section light>
+  <ReferencesWrapper>
     <h3>Références Juridiques</h3>
     {data.map(
       texteConventionnel =>
@@ -69,15 +59,15 @@ const TextesConventionnels = ({ data }) => (
             slug={texteConventionnel.num}
           />
         )) ||
-        (texteConventionnel.type === TYPE_TEXTE.decret && (
-          <DecretLink
+        (texteConventionnel.type === TYPE_TEXTE.journalOfficiel && (
+          <OtherLink
             key={texteConventionnel.id}
             title={texteConventionnel.title}
             url={texteConventionnel.url}
           />
         ))
     )}
-  </Section>
+  </ReferencesWrapper>
 );
 
 TextesConventionnels.propTypes = {
@@ -92,3 +82,25 @@ TextesConventionnels.propTypes = {
 };
 
 export default TextesConventionnels;
+
+const ReferencesWrapper = styled.div`
+  margin-top: ${spacing.large};
+  padding: ${spacing.base};
+  border: 1px solid ${colors.primaryBackground};
+  border-radius: ${box.borderRadius};
+`;
+
+const ReferenceWrapper = styled.a`
+  display: block;
+  margin-top: ${spacing.base};
+  padding: ${spacing.base};
+  background-color: ${colors.elementBackground};
+  border: 1px solid ${colors.elementBorder};
+  border-radius: ${box.borderRadius};
+  cursor: pointer;
+
+  svg {
+    vertical-align: middle;
+    margin-right: ${spacing.base};
+  }
+`;
