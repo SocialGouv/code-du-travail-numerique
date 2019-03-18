@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.114319,
+      "_score": 2.1860318,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -25,7 +25,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 1.7785039,
+      "_score": 1.9340146,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -42,7 +42,7 @@ Object {
       },
     },
   ],
-  "max_score": 2.114319,
+  "max_score": 2.1860318,
   "total": 2,
 }
 `;
@@ -53,7 +53,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 3.1720703,
+      "_score": 3.3219259,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -78,9 +78,9 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 2.9479306,
+      "_score": 3.080506,
       "_source": Object {
-        "slug": "la-demission",
+        "slug": "themes/rupture-de-contrat/la-demission",
         "source": "themes",
         "title": "La démission",
       },
@@ -97,7 +97,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 2.9238665,
+      "_score": 3.0484219,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -121,7 +121,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 2.6583235,
+      "_score": 2.7513063,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -143,7 +143,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.114319,
+      "_score": 2.1860318,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -160,7 +160,7 @@ Object {
       },
     },
   ],
-  "max_score": 3.1720703,
+  "max_score": 3.3219259,
   "total": 8,
 }
 `;
