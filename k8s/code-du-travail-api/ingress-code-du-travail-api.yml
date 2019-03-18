@@ -13,4 +13,4 @@ spec:
       - path: /
         backend:
           serviceName: cdtn-api${BRANCH_NAME}
-          servicePort: 1337
+          servicePort: ${PORT}

@@ -19,17 +19,17 @@ spec:
       - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/frontend:${IMAGE_TAG}
         name: cdtn-frontend
         ports:
-        - containerPort: 3000
+        - containerPort: ${PORT}
         livenessProbe:
           httpGet:
             path: /
-            port: 3000
+            port: ${PORT}
           initialDelaySeconds: 3
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /
-            port: 3000
+            port: ${PORT}
           initialDelaySeconds: 3
           periodSeconds: 5
         env:

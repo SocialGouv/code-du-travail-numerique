@@ -14,6 +14,8 @@ variables:
   PYTHON_VERSION: "3.6-alpine"
   ELASTICSEARCH_PORT: 9200
   ELASTICSEARCH_INTER_NODE_PORT: 9300
+  API_PORT: 1337
+  FRONTEND_PORT: 3000
 
 image: node:10-alpine
 
@@ -302,6 +304,8 @@ deploy-cdtn-api:
     APM_SERVER_ACTIVE: 0
     APM_SERVER_URL: ""
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${API_PORT}
+    ES_PORT: ${ELASTICSEARCH_PORT}
   environment:
     name: dev
 
@@ -319,5 +323,6 @@ deploy-cdtn-frontend:
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${FRONTEND_PORT}
   environment:
     name: dev

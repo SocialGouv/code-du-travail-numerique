@@ -9,5 +9,5 @@ spec:
   selector:
     app: cdtn-frontend${BRANCH_NAME}
   ports:
-  - port: 3000
+  - port: ${PORT}
     name: frontend

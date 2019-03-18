@@ -9,5 +9,5 @@ spec:
   selector:
     app: cdtn-api${BRANCH_NAME}
   ports:
-  - port: 1337
+  - port: ${PORT}
     name: api

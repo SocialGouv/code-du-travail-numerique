@@ -19,24 +19,24 @@ spec:
       - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:${IMAGE_TAG}
         name: cdtn-api${BRANCH_NAME}
         ports:
-        - containerPort: 1337
+        - containerPort: ${PORT}
         livenessProbe:
           httpGet:
             path: /api/v1/version
-            port: 1337
+            port: ${PORT}
           initialDelaySeconds: 3
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /api/v1/version
-            port: 1337
+            port: ${PORT}
           initialDelaySeconds: 3
           periodSeconds: 5
         env:
         - name: API_PORT
           value: "1337"
         - name: ELASTICSEARCH_URL
-          value: http://elasticsearch${BRANCH_NAME}:9200
+          value: http://elasticsearch${BRANCH_NAME}:${ES_PORT}
         - name: ELASTICSEARCH_LOG_LEVEL
           value: "${ELASTICSEARCH_LOG_LEVEL}"
         - name: APM_SERVER_ACTIVE

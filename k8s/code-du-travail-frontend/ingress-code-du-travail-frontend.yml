@@ -13,4 +13,4 @@ spec:
       - path: /
         backend:
           serviceName: cdtn-frontend${BRANCH_NAME}
-          servicePort: 3000
+          servicePort: ${PORT}
