@@ -68,13 +68,13 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     case "Rappel":
       return <ANoter>{parseChildren(data.$, headingLevel)}</ANoter>;
     case "Cas":
+    case "Chapitre":
+    case "SousChapitre":
       return parseChildren(data.$, headingLevel);
     case "MiseEnEvidence":
       return <strong>{parseChildren(data.$, headingLevel)}</strong>;
     case "Paragraphe":
       return <p>{parseChildren(data.$, headingLevel)}</p>;
-    case "SousChapitre":
-      return parseChildren(data.$, headingLevel);
     // These ones are still to be defined
     case "LienIntra":
       return parseChildren(data.$, headingLevel);
