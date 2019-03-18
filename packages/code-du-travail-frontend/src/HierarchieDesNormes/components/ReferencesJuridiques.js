@@ -8,7 +8,7 @@ import { Link } from "../../../routes";
 import ArticleIcon from "../../icons/ArticleIcon";
 import TYPE_TEXTE from "../typeTexte";
 
-const { box, colors, fonts, spacing } = theme;
+const { box, colors, spacing } = theme;
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link route="code-du-travail" params={{ slug }}>
@@ -86,7 +86,7 @@ export default TextesConventionnels;
 const ReferencesWrapper = styled.div`
   margin-top: ${spacing.large};
   padding: ${spacing.base};
-  border: 1px solid ${colors.primaryBackground};
+  border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
 `;
 
@@ -100,6 +100,8 @@ const ReferenceWrapper = styled.a`
   cursor: pointer;
 
   svg {
+    position: relative;
+    top: 1px;
     vertical-align: middle;
     margin-right: ${spacing.base};
   }
