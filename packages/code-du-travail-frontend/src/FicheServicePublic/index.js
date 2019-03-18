@@ -72,9 +72,12 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     case "SousChapitre":
       return parseChildren(data.$, headingLevel);
     case "MiseEnEvidence":
+    case "Valeur":
       return <strong>{parseChildren(data.$, headingLevel)}</strong>;
     case "Paragraphe":
       return <p>{parseChildren(data.$, headingLevel)}</p>;
+    case "Exposant":
+      return <sup>{parseChildren(data.$, headingLevel)}</sup>;
     // These ones are still to be defined
     case "LienIntra":
     case "LienInterne":
