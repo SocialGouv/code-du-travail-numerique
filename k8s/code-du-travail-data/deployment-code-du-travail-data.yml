@@ -17,14 +17,12 @@ spec:
   - name: wait-for-elasticsearch
     image: alpine
     imagePullPolicy: Always
-    args:
-    - ash
+    command:
+    - sh
     - -c
     - |
       apk --no-cache add curl
-      ENDPOINT="http://elasticsearch${BRANCH_NAME}:${ES_PORT}"
-      echo Checking: ${ENDPOINT}
-      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" ${ENDPOINT}) -ne 200 ]]; do
+      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" "http://elasticsearch${BRANCH_NAME}:${ES_PORT}") -ne 200 ]]; do
         echo "Not ready"
         sleep 5s
       done

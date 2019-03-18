@@ -8,8 +8,21 @@
   - envsubst < k8s/elasticsearch/statefulset-elasticsearch-dev.yml > k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
   - envsubst < k8s/elasticsearch/service-elasticsearch.yml > k8s/elasticsearch/service-cdtn-elasticsearch.yml
   script:
-  - cat k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
   - kubectl apply -f k8s/elasticsearch/configmap-cdtn-elasticsearch-dev.yml
   - kubectl apply -f k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
   - kubectl apply -f k8s/elasticsearch/service-cdtn-elasticsearch.yml
+  allow_failure: false
+
+
+.deploy-elasticsearch-prod-k8s:
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  before_script:
+  - /apps/create-kubeconfig.sh
+  - envsubst < k8s/elasticsearch/statefulset-elasticsearch.yml > k8s/elasticsearch/statefulset-cdtn-elasticsearch-prod.yml
+  - envsubst < k8s/elasticsearch/service-elasticsearch.yml > k8s/elasticsearch/service-cdtn-elasticsearch-prod.yml
+  script:
+  - kubectl apply -f k8s/elasticsearch/statefulset-cdtn-elasticsearch-prod.yml
+  - kubectl apply -f k8s/elasticsearch/service-cdtn-elasticsearch-prod.yml
   allow_failure: false

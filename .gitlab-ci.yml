@@ -226,35 +226,9 @@ build-and-push-cdtn-data-image:
   - docker build -t "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA"
 
-deploy-kibana:
-  stage: "Deploy EL Stack"
-  extends: .deploy-kibana-k8s
-  variables:
-    DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER_DEV
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
-    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
-    K8S_USERNAME: $K8S_USERNAME_DEV
-    K8S_CONTEXT: $K8S_CONTEXT_DEV
-    K8S_TOKEN: $K8S_TOKEN_DEV
-    BRANCH_NAME: -$CI_COMMIT_REF_NAME
-  only:
-  - ops
-
-deploy-apm-server:
-  stage: "Deploy EL Stack"
-  extends: .deploy-apm-server-k8s
-  variables:
-    DOCKER_HOST: tcp://localhost:2375
-    K8S_SERVER: $K8S_SERVER
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME
-    K8S_NAMESPACE: $K8S_NAMESPACE
-    K8S_USERNAME: $K8S_USERNAME
-    K8S_CONTEXT: $K8S_CONTEXT
-    K8S_TOKEN: $K8S_TOKEN
-    BRANCH_NAME: ''
-  only:
-  - ops
+######################################
+### DEPLOY CDTN TO K8S DEV CLUSTER ###
+######################################
 
 deploy-elasticsearch:
   stage: "Deploy EL Stack"
@@ -271,6 +245,8 @@ deploy-elasticsearch:
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+  except:
+  - ops
 
 create-cdtn-es-index:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
@@ -286,6 +262,8 @@ create-cdtn-es-index:
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ES_PORT: ${ELASTICSEARCH_PORT}
+  except:
+  - ops
 
 deploy-cdtn-api:
   stage: "Deploy Code du Travail Numerique"
@@ -308,6 +286,8 @@ deploy-cdtn-api:
     ES_PORT: ${ELASTICSEARCH_PORT}
   environment:
     name: dev
+  except:
+  - ops
 
 deploy-cdtn-frontend:
   stage: "Deploy Code du Travail Numerique"
@@ -326,3 +306,117 @@ deploy-cdtn-frontend:
     PORT: ${FRONTEND_PORT}
   environment:
     name: dev
+  except:
+  - ops
+
+#######################################
+### DEPLOY CDTN TO K8S PROD CLUSTER ###
+#######################################
+
+deploy-kibana:
+  stage: "Deploy EL Stack"
+  extends: .deploy-kibana-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    BRANCH_NAME: ''
+  only:
+  - ops
+
+deploy-apm-server:
+  stage: "Deploy EL Stack"
+  extends: .deploy-apm-server-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    BRANCH_NAME: ''
+  only:
+  - ops
+
+deploy-elasticsearch-prod:
+  stage: "Deploy EL Stack"
+  extends: .deploy-elasticsearch-prod-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+  only:
+  - ops
+
+create-cdtn-es-index-prod:
+  stage: "Create Code du Travail Numerique Elasticsearch Index"
+  extends: .deploy-code-du-travail-data-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: ''
+    ES_PORT: ${ELASTICSEARCH_PORT}
+  only:
+  - ops
+
+deploy-cdtn-api-prod:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-api-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: ''
+    ELASTICSEARCH_LOG_LEVEL: "trace"
+    APM_SERVER_ACTIVE: 1
+    APM_SERVER_URL: "http://apm:8200"
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${API_PORT}
+    ES_PORT: ${ELASTICSEARCH_PORT}
+  environment:
+    name: ops
+  only:
+  - ops
+
+deploy-cdtn-frontend-prod:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-frontend-k8s
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    BRANCH_NAME: ''
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${FRONTEND_PORT}
+  environment:
+    name: ops
+  only:
+  - ops
