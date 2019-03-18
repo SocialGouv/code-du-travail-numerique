@@ -77,9 +77,12 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
       return <p>{parseChildren(data.$, headingLevel)}</p>;
     // These ones are still to be defined
     case "LienIntra":
-      return parseChildren(data.$, headingLevel);
     case "LienInterne":
-      return parseChildren(data.$, headingLevel);
+      // they are empty links sometimes...
+      if (data.$) {
+        return parseChildren(data.$, headingLevel);
+      }
+      return null;
     // Otherwise we simply ignore the element
     default:
       return null;

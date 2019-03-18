@@ -48,6 +48,9 @@ const Wrapper = styled.div`
   margin-bottom: ${spacing.large};
   background-color: ${colors.lighterGrey};
   border-radius: ${box.borderRadius};
+  & + & {
+    margin-left: ${spacing.base};
+  }
 `;
 const Title = styled.strong`
   display: block;
