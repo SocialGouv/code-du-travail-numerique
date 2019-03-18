@@ -43,7 +43,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.1860318,
+      "_score": 2.3778663,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -62,7 +62,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 1.9340146,
+      "_score": 2.1108572,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -79,7 +79,7 @@ Object {
       },
     },
   ],
-  "max_score": 2.1860318,
+  "max_score": 2.3778663,
   "total": 2,
 }
 `;
@@ -97,7 +97,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 15.952363,
+        "_score": 16.334557,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -119,13 +119,13 @@ Object {
         },
       },
     ],
-    "max_score": 15.952363,
+    "max_score": 16.334557,
     "total": 2,
   },
   "snippet": Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 13.89222,
+    "_score": 14.235261,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
@@ -146,7 +146,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 3.3219259,
+      "_score": 3.4251862,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -169,9 +169,33 @@ Object {
       },
     },
     Object {
+      "_id": "4",
+      "_index": "cdtn_document_test",
+      "_score": 3.2924087,
+      "_source": Object {
+        "slug": "demission-dun-salarie",
+        "source": "fiches_service_public",
+        "title": "Démission d'un salarié",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text.french": Array [
+          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark>",
+          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark>",
+          "La <mark>démission</mark> vous permet de rompre votre",
+          "Pour qu'une <mark>démission</mark> soit valable, vous",
+          "Lettre de <mark>démission</mark> du salarié Direction",
+        ],
+        "title.french": Array [
+          "<mark>Démission</mark> d'un salarié",
+        ],
+      },
+    },
+    Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 3.080506,
+      "_score": 3.103135,
       "_source": Object {
         "slug": "themes/rupture-de-contrat/la-demission",
         "source": "themes",
@@ -188,33 +212,9 @@ Object {
       },
     },
     Object {
-      "_id": "4",
-      "_index": "cdtn_document_test",
-      "_score": 3.0484219,
-      "_source": Object {
-        "slug": "demission-dun-salarie",
-        "source": "fiches_service_public",
-        "title": "Démission d'un salarié",
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "text.french": Array [
-          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark>",
-          "La <mark>démission</mark> vous permet de rompre votre",
-          "La <mark>démission</mark> est un mode de rupture du contrat",
-          "Lettre de <mark>démission</mark> du salarié Direction",
-          "selon votre situation au moment de votre <mark>démission</mark>",
-        ],
-        "title.french": Array [
-          "<mark>Démission</mark> d'un salarié",
-        ],
-      },
-    },
-    Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 2.7513063,
+      "_score": 2.9205968,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -225,8 +225,8 @@ Object {
       "highlight": Object {
         "text.french": Array [
           "Lettre de <mark>démission</mark> du salarié Direction",
+          "Envoi d'une lettre de <mark>démission</mark> L'assistante",
           "son contrat de travail en présentant sa <mark>démission</mark>",
-          "respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
           "présentation de la lettre recommandée de <mark>démission</mark>",
         ],
         "title.french": Array [
@@ -237,7 +237,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.1860318,
+      "_score": 2.3778663,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -256,7 +256,7 @@ Object {
     Object {
       "_id": "8",
       "_index": "cdtn_document_test",
-      "_score": 2.1849303,
+      "_score": 2.3033223,
       "_source": Object {
         "slug": "article-r1225-18",
         "source": "code_du_travail",
@@ -274,27 +274,9 @@ Object {
       },
     },
     Object {
-      "_id": "9",
-      "_index": "cdtn_document_test",
-      "_score": 1.973027,
-      "_source": Object {
-        "slug": "article-r1442-22-4",
-        "source": "code_du_travail",
-        "title": "Article R1442-22-4",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "text.french": Array [
-          "désire renoncer à son mandat adresse sa  <mark>démission</mark>",
-          "La <mark>démission</mark>  n'est définitive qu'après acceptation",
-        ],
-      },
-    },
-    Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 1.9340146,
+      "_score": 2.1108572,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -310,8 +292,26 @@ Object {
         ],
       },
     },
+    Object {
+      "_id": "9",
+      "_index": "cdtn_document_test",
+      "_score": 2.0272236,
+      "_source": Object {
+        "slug": "article-r1442-22-4",
+        "source": "code_du_travail",
+        "title": "Article R1442-22-4",
+        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text.french": Array [
+          "désire renoncer à son mandat adresse sa  <mark>démission</mark>",
+          "La <mark>démission</mark>  n'est définitive qu'après acceptation",
+        ],
+      },
+    },
   ],
-  "max_score": 3.3219259,
+  "max_score": 3.4251862,
   "total": 8,
 }
 `;
