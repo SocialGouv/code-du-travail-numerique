@@ -45,19 +45,19 @@ spec:
           httpGet:
             scheme: HTTP
             path: /_cluster/health
-            port: 9200
+            port: ${ES_PORT}
           initialDelaySeconds: 5
           periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
             path: /_cluster/health?local=true
-            port: 9200
+            port: ${ES_PORT}
           initialDelaySeconds: 5
         ports:
-        - containerPort: 9200
+        - containerPort: ${ES_PORT}
           name: es-http
-        - containerPort: 9300
+        - containerPort: ${ES_INTER_NODE}
           name: es-transport
         volumeMounts:
         - name: es-data${BRANCH_NAME}

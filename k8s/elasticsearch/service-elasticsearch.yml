@@ -10,7 +10,7 @@ spec:
     app: elasticsearch${BRANCH_NAME}
   clusterIP: None
   ports:
-  - port: 9200
+  - port: ${ES_PORT}
     name: rest
-  - port: 9300
+  - port: ${ES_INTER_NODE}
     name: inter-node

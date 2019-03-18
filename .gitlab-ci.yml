@@ -12,6 +12,8 @@ variables:
   DOCKER_VERSION: "18.06"
   DOCKER_COMPOSE_VERSION: "1.23.2"
   PYTHON_VERSION: "3.6-alpine"
+  ELASTICSEARCH_PORT: 9200
+  ELASTICSEARCH_INTER_NODE_PORT: 9300
 
 image: node:10-alpine
 
@@ -265,6 +267,8 @@ deploy-elasticsearch:
     K8S_TOKEN: $K8S_TOKEN_DEV
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
 
 create-cdtn-es-index:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
@@ -279,6 +283,7 @@ create-cdtn-es-index:
     K8S_TOKEN: $K8S_TOKEN_DEV
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
+    ES_PORT: ${ELASTICSEARCH_PORT}
 
 deploy-cdtn-api:
   stage: "Deploy Code du Travail Numerique"
