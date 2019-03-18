@@ -4,7 +4,8 @@ import "react-testing-library/cleanup-after-each";
 jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
     API_URL: "api.url",
-    API_ADDRESS: "addresse-api.data"
+    API_ADDRESS: "addresse-api.data",
+    PACKAGE_VERSION: "x.y.z"
   }
 }));
 jest.mock("react-piwik", () => ({
