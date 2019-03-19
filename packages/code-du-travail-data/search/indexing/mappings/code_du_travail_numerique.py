@@ -37,6 +37,10 @@ code_du_travail_numerique_mapping = {
                     'type': 'text',
                     'analyzer': 'french',
                 },
+                'french_stemmed': {
+                    'type': 'text',
+                    'analyzer': 'french_stemmed',
+                },
             },
         },
         # Currently only available for `Fiches service public`.

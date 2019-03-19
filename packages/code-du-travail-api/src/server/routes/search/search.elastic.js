@@ -46,6 +46,13 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                       query: query
                     }
                   }
+                },
+                {
+                  match: {
+                    "text.text_stemmed": {
+                      query: query
+                    }
+                  }
                 }
               ]
             }

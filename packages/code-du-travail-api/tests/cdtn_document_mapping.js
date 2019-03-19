@@ -36,6 +36,10 @@ const cdtn_document_mapping = {
         french: {
           type: "text",
           analyzer: "french"
+        },
+        french_stemmed: {
+          type: "text",
+          analyzer: "french_stemmed"
         }
       }
     },
