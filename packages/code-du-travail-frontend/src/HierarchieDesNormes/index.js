@@ -12,7 +12,6 @@ HierarchieDesNormes.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       type: PropTypes.oneOf(Object.values(typeReference)).isRequired,
-      num: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired
     })
   )

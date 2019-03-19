@@ -61,8 +61,8 @@ const format = fiche => {
   const references_juridiques = publication.$
     .filter(el => el.name === "Reference")
     .map(parseReference)
-    .filter(Boolean)
-    .reduce((acc, val) => acc.concat(val), []); // flatten the array
+    .reduce((acc, val) => acc.concat(val), []) // flatten the array
+    .filter(Boolean);
 
   return {
     date,

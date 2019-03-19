@@ -48,17 +48,17 @@ const ReferencesJuridiques = ({ references }) => (
         <li key={texteConventionnel.id}>
           {(texteConventionnel.type === TYPE_REFERENCE.codeDuTravail && (
             <CodeDuTravailLink
-              key={texteConventionnel.num}
+              key={texteConventionnel.id}
               title={texteConventionnel.title}
-              slug={texteConventionnel.num}
+              slug={texteConventionnel.id}
             />
           )) ||
             (texteConventionnel.type ===
               TYPE_REFERENCE.conventionCollective && (
               <ConventionLink
-                key={texteConventionnel.num}
+                key={texteConventionnel.id}
                 title={texteConventionnel.title}
-                slug={texteConventionnel.num}
+                slug={texteConventionnel.id}
               />
             )) ||
             (texteConventionnel.type === TYPE_REFERENCE.journalOfficiel && (
@@ -79,7 +79,6 @@ ReferencesJuridiques.propTypes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       type: PropTypes.oneOf(Object.values(TYPE_REFERENCE)).isRequired,
-      num: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired
     })
   )
