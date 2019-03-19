@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.3778663,
+      "_score": 2.1194303,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -25,7 +25,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 2.1108572,
+      "_score": 1.7847064,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -42,7 +42,7 @@ Object {
       },
     },
   ],
-  "max_score": 2.3778663,
+  "max_score": 2.1194303,
   "total": 2,
 }
 `;
@@ -53,7 +53,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 3.4251862,
+      "_score": 3.174133,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -76,35 +76,11 @@ Object {
       },
     },
     Object {
-      "_id": "4",
-      "_index": "cdtn_document_test",
-      "_score": 3.2924087,
-      "_source": Object {
-        "slug": "demission-dun-salarie",
-        "source": "fiches_service_public",
-        "title": "Démission d'un salarié",
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "text.french": Array [
-          "Vous devez prévenir votre employeur de votre volonté de <mark>démissionner</mark>. Sauf en cas de dispense, vous poursuivez votre activité jusqu'au terme du préavis de <mark>démission</mark>.",
-          "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark> . La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
-          "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark> . La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
-          "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark> . La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
-          "Il n'y a pas de procédure légale imposée pour signifier une <mark>démission</mark>. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de <mark>démission</mark>.",
-        ],
-        "title.french": Array [
-          "<mark>Démission</mark> d'un salarié",
-        ],
-      },
-    },
-    Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 3.103135,
+      "_score": 2.9492128,
       "_source": Object {
-        "slug": "themes/rupture-de-contrat/la-demission",
+        "slug": "la-demission",
         "source": "themes",
         "title": "La démission",
       },
@@ -119,9 +95,33 @@ Object {
       },
     },
     Object {
+      "_id": "4",
+      "_index": "cdtn_document_test",
+      "_score": 2.9261734,
+      "_source": Object {
+        "slug": "demission-dun-salarie",
+        "source": "fiches_service_public",
+        "title": "Démission d'un salarié",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text.french": Array [
+          "Dans certains cas, vous pouvez revenir sur votre <mark>démission</mark>. La <mark>démission</mark> ne doit pas être abusive, c'est-à-dire prise avec l'intention de nuire à l'employeur.",
+          "Volonté de <mark>démissionner</mark> Pour qu'une <mark>démission</mark> soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.",
+          "Il n'y a pas de procédure légale imposée pour signifier une <mark>démission</mark>. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de <mark>démission</mark>.",
+          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Des dispositions conventionnelles peuvent imposer l'envoi de la lettre de <mark>démission</mark> par lettre recommandée",
+          "Une absence injustifiée ou un abandon de poste ne peuvent pas être considérés comme une <mark>démission</mark>.",
+        ],
+        "title.french": Array [
+          "<mark>Démission</mark> d'un salarié",
+        ],
+      },
+    },
+    Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 2.9205968,
+      "_score": 2.6614544,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -131,8 +131,9 @@ Object {
       "_type": "cdtn_document_test",
       "highlight": Object {
         "text.french": Array [
-          "Envoi d'une lettre de <mark>démission</mark> L'assistante maternelle doit rompre son contrat de travail en présentant sa <mark>démission</mark> par lettre recommandée avec AR .",
-          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Préavis La date de 1 re présentation de la lettre recommandée de <mark>démission</mark> fixe le point de départ",
+          "Lettre de <mark>démission</mark> du salarié Direction de l'information légale et administrative (Premier ministre) Respect d'un préavis La date de 1re présentation de la lettre recommandée de <mark>démission</mark> fixe le point",
+          "L'assistante maternelle peut rompre son contrat de travail en présentant sa <mark>démission</mark> par lettre recommandée avec AR.",
+          "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis.Envoi d'une lettre de <mark>démission</mark>",
         ],
         "title.french": Array [
           "<mark>Démission</mark> d'une assistante maternelle",
@@ -142,7 +143,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.3778663,
+      "_score": 2.1194303,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -159,7 +160,7 @@ Object {
       },
     },
   ],
-  "max_score": 3.4251862,
+  "max_score": 3.174133,
   "total": 8,
 }
 `;
