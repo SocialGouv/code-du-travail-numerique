@@ -67,7 +67,7 @@ def populate_cdtn_documents():
             '_id': 'code_du_travail--' + val['num'],
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
-            'slug': val['num'],
+            'slug': val['num'].lower(),
             'title': val['titre'],
             'html': val['html'],
             'path': val['path'],

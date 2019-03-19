@@ -72,7 +72,6 @@ const parseReference = reference => {
           // resolve related article num from CDT structure
           const articleNum = getArticleNumFromId(qs.idArticle);
           if(!articleNum) return [];
-          console.error(articleNum);
           return [createCDTRef(articleNum)];
         }
         if (qs.idSectionTA) {
