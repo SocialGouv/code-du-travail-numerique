@@ -83,6 +83,9 @@ $ yarn workspace @cdt/frontend build
 # every time you update the indexing code or remove the Docker volume
 $ ELASTICSEARCH_LOG_LEVEL=info node packages/code-du-travail-api/tests/create_indexes.js
 
+# If there were changes in the css or the ui packages, you need to rebuild
+$ yarn build
+
 # Run all the packages tests
 $ yarn test
 
