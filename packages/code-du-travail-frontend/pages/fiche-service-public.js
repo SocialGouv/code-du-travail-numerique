@@ -65,9 +65,9 @@ class Fiche extends React.Component {
             data._source.raw && (
               <>
                 <FicheServicePublic data={data._source.raw.$} />
-                {Boolean(data._source.references_juridiques.length) && (
+                {data._source.references_juridiques.length > 0 && (
                   <HierarchieDesNormes
-                    data={data._source.references_juridiques}
+                    references={data._source.references_juridiques}
                   />
                 )}
               </>

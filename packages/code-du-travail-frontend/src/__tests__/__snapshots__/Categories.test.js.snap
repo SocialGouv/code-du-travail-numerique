@@ -14,7 +14,7 @@ exports[`<Categories /> should render 1`] = `
       class="categories"
     >
       <ul
-        class="categories__list "
+        class="categories__list"
       >
         <li
           class="categories__list-item "

@@ -6,30 +6,30 @@ import { theme } from "@cdt/ui";
 
 import { Link } from "../../../routes";
 import ArticleIcon from "../../icons/ArticleIcon";
-import TYPE_TEXTE from "../typeTexte";
+import TYPE_REFERENCE from "../typeReference";
 
 const { box, colors, spacing } = theme;
 
 const CodeDuTravailLink = ({ title, slug }) => (
-  <Link route="code-du-travail" params={{ slug }}>
-    <ReferenceWrapper>
+  <Link route="code-du-travail" params={{ slug }} passHref>
+    <ReferenceLink>
       <ArticleIcon width={18} />
       {title}
-    </ReferenceWrapper>
+    </ReferenceLink>
   </Link>
 );
 
 const ConventionLink = ({ title, slug }) => (
-  <Link route="kali" params={{ slug }}>
-    <ReferenceWrapper>
+  <Link route="kali" params={{ slug }} passHref>
+    <ReferenceLink>
       <ArticleIcon width={18} />
       Convention collective: {title}
-    </ReferenceWrapper>
+    </ReferenceLink>
   </Link>
 );
 
 const OtherLink = ({ title, url }) => (
-  <ReferenceWrapper
+  <ReferenceLink
     href={url}
     rel="noopener noreferrer"
     target="_blank"
@@ -37,60 +37,73 @@ const OtherLink = ({ title, url }) => (
   >
     <ArticleIcon width="18" />
     Autre: {title}
-  </ReferenceWrapper>
+  </ReferenceLink>
 );
 
-const TextesConventionnels = ({ data }) => (
+const ReferencesJuridiques = ({ references }) => (
   <ReferencesWrapper>
     <h3>Références Juridiques</h3>
-    {data.map(
-      texteConventionnel =>
-        (texteConventionnel.type === TYPE_TEXTE.codeDuTravail && (
-          <CodeDuTravailLink
-            key={texteConventionnel.num}
-            title={texteConventionnel.title}
-            slug={texteConventionnel.num}
-          />
-        )) ||
-        (texteConventionnel.type === TYPE_TEXTE.conventionCollective && (
-          <ConventionLink
-            key={texteConventionnel.num}
-            title={texteConventionnel.title}
-            slug={texteConventionnel.num}
-          />
-        )) ||
-        (texteConventionnel.type === TYPE_TEXTE.journalOfficiel && (
-          <OtherLink
-            key={texteConventionnel.id}
-            title={texteConventionnel.title}
-            url={texteConventionnel.url}
-          />
-        ))
-    )}
+    <ul>
+      {references.map(texteConventionnel => (
+        <li key={texteConventionnel.id}>
+          {(texteConventionnel.type === TYPE_REFERENCE.codeDuTravail && (
+            <CodeDuTravailLink
+              key={texteConventionnel.num}
+              title={texteConventionnel.title}
+              slug={texteConventionnel.num}
+            />
+          )) ||
+            (texteConventionnel.type ===
+              TYPE_REFERENCE.conventionCollective && (
+              <ConventionLink
+                key={texteConventionnel.num}
+                title={texteConventionnel.title}
+                slug={texteConventionnel.num}
+              />
+            )) ||
+            (texteConventionnel.type === TYPE_REFERENCE.journalOfficiel && (
+              <OtherLink
+                key={texteConventionnel.id}
+                title={texteConventionnel.title}
+                url={texteConventionnel.url}
+              />
+            ))}
+        </li>
+      ))}
+    </ul>
   </ReferencesWrapper>
 );
 
-TextesConventionnels.propTypes = {
-  data: PropTypes.arrayOf(
+ReferencesJuridiques.propTypes = {
+  references: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      type: PropTypes.oneOf(Object.values(TYPE_TEXTE)).isRequired,
+      type: PropTypes.oneOf(Object.values(TYPE_REFERENCE)).isRequired,
       num: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired
     })
   )
 };
 
-export default TextesConventionnels;
+export default ReferencesJuridiques;
 
 const ReferencesWrapper = styled.div`
   margin-top: ${spacing.large};
   padding: ${spacing.base};
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
+
+  ul {
+    list-style-type: none;
+  }
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
-const ReferenceWrapper = styled.a`
+const ReferenceLink = styled.a`
   display: block;
   margin-top: ${spacing.base};
   padding: ${spacing.base};

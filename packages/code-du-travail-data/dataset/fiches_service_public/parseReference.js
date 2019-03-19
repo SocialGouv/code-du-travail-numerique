@@ -29,6 +29,7 @@ const getArticlesFromSection = (cidTexte, id) => {
       .filter(child => child.type === "article")
       .map(article => makeArticleData(article.data.num));
   }
+  return [];
 };
 
 // Can return either an array of objects, an object, or undefined !

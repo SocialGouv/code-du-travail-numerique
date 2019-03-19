@@ -81,7 +81,7 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     // These ones are still to be defined
     case "LienIntra":
     case "LienInterne":
-      // they are empty links sometimes...
+      // there are empty links sometimes...
       if (data.$) {
         return parseChildren(data.$, headingLevel);
       }
