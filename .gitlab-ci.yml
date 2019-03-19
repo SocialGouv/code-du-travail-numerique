@@ -27,6 +27,7 @@ stages:
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
+- "Delete Pods"
 
 prepare-cdtn-base-image:
   stage: "Prepare"
@@ -418,5 +419,28 @@ deploy-cdtn-frontend-prod:
     PORT: ${FRONTEND_PORT}
   environment:
     name: ops
+  only:
+  - ops
+
+#######################################
+###           DELETE PODS           ###
+#######################################
+
+delete-pods:
+  stage: "Delete Pods"
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  variables:
+    DOCKER_HOST: tcp://localhost:2375
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+  script:
+  - /apps/create-kubeconfig.sh
+  - python3 k8s/scripts/delete-pods.py
   only:
   - ops
