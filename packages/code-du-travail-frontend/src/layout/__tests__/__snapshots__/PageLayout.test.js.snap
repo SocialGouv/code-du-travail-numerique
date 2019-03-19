@@ -111,16 +111,6 @@ exports[`<PageLayout /> should render 1`] = `
                 Question-Réponse des services de renseignement
               </a>
             </li>
-            <li>
-              <div
-                class="btn btn__link  "
-                link="true"
-                role="button"
-                tabindex="0"
-              >
-                Trouvez votre convention collective
-              </div>
-            </li>
           </ul>
         </div>
       </div>

@@ -7,14 +7,12 @@ describe("<Category />", () => {
     const { container } = render(<Category />);
     expect(container).toMatchSnapshot();
   });
-  test("should render with props", () => {
+  test("should render small", () => {
     const { container } = render(
-      <Category
-        href="http://code-du-travail-numerique.beta.gouv.fr"
-        icon="icon/icon.svg"
-        title="titre"
-        text="text"
-      />
+      <Category small>
+        <strong>titre</strong>
+        <p>contenu</p>
+      </Category>
     );
     expect(container).toMatchSnapshot();
   });

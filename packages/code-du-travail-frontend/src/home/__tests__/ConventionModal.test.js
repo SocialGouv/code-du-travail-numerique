@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-testing-library";
 import ConventionModal from "../ConventionModal";
 
-jest.mock("../convention.service", () => ({
+jest.mock("../../common/convention.service", () => ({
   searchIdcc: jest.fn()
 }));
 
@@ -15,10 +15,10 @@ describe("<ConventionModal />", () => {
   });
 
   it("should render a popup when click on button", () => {
-    const { baseElement, getByRole, getByPlaceholderText } = render(
+    const { baseElement, getByText, getByPlaceholderText } = render(
       <ConventionModal />
     );
-    const button = getByRole("button", /trouvez votre convention collective/i);
+    const button = getByText(/votre convention collective/i);
     button.click();
     const input = getByPlaceholderText(/Convention collective/i);
     expect(input).toBeTruthy();
@@ -26,8 +26,8 @@ describe("<ConventionModal />", () => {
   });
 
   it("should close the modal", async () => {
-    const { getByRole, queryByPlaceholderText } = render(<ConventionModal />);
-    const button = getByRole("button", /trouvez votre convention collective/i);
+    const { getByText, queryByPlaceholderText } = render(<ConventionModal />);
+    const button = getByText(/votre convention collective/i);
     button.click();
     const el = document.body.querySelector("[data-reach-dialog-overlay]");
     el.click();

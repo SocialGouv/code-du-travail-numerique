@@ -12,11 +12,42 @@
       "calculez le montant d'une indemnité de licenciement en fonction de votre situation"
     ],
     "theme": "Licenciement",
-    "themes": [300,28300,21512],
+    "themes": [300, 28300, 21512],
     "type_de_contrat": ["CDI"],
     "travailleur_particulier": [],
     "catégorie": ["Ingénieur", "Cadres", "ETAM", "ouvriers", "employés"],
     "date": "18/10/2018",
-    "branche": ["industries chimiques","44"]
+    "branche": ["industries chimiques", "44"]
+  },
+  {
+    "titre": "Simulateur d'embauche",
+    "code": "simulateur-embauche",
+    "questions": [
+      "Comment calculer mon salaire",
+      "calculer mon salaire",
+      "calcul salaire",
+      "montant de mon salaire",
+      "montant du salaire",
+      "montant salaire",
+      "montant salaire net",
+      "montant salaire brut",
+      "calcul du salaire net",
+      "net en brut",
+      "brut en net",
+      "calcul net en brut",
+      "calcul brut en net",
+      "montant net en brut",
+      "montant brut en net",
+      "cout embauche CDD",
+      "cout embauche CDI"
+    ],
+    "theme": "Embauche",
+    "themes": [3800, 42200, 42300],
+    "catégorie": [],
+    "type_de_contrat": [],
+    "travailleur_particulier": [],
+    "date": "14/03/2019",
+    "references": ["L1221-7", "L1221-9", "L1221-6", "L1221-8"],
+    "branche": []
   }
 ]

@@ -4,8 +4,6 @@ import { Link } from "../../routes";
 
 const { publicRuntimeConfig } = getConfig();
 
-import ConventionModal from "../common/ConventionModal";
-
 const Footer = () => (
   <footer className="section-dark site-footer" id="footer">
     <div className="container">
@@ -60,9 +58,6 @@ const Footer = () => (
               >
                 Question-Réponse des services de renseignement
               </a>
-            </li>
-            <li>
-              <ConventionModal />
             </li>
           </ul>
         </div>

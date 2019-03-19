@@ -9,7 +9,7 @@ import { Link } from "../routes";
 import Search from "../src/search/Search";
 import { SearchQuery } from "../src/search/SearchQuery";
 
-import Categories from "../src/Categories";
+import Categories from "../src/home/Categories";
 import themes from "@cdt/data/dataset/themes-front.json";
 import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";

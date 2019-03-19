@@ -7,6 +7,7 @@ import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
 import CalculateurIndemnite from "../src/outils/indemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
+import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -36,7 +37,11 @@ const getOutilFromCode = function(code) {
         title: "Calculer une indemnité de licenciement",
         outil: CalculateurIndemnite
       };
-
+    case "simulateur-embauche":
+      return {
+        title: "Simalateur d'embauche",
+        outil: SimulateurEmbauche
+      };
     default:
       return {
         title: "Outil introuvable",

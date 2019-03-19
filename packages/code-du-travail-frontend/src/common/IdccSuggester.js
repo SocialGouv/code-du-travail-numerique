@@ -42,8 +42,6 @@ const renderSuggestionsContainer = ({ containerProps, children }) => (
 );
 
 const Suggestion = styled.div`
-  whitespace: nowrap;
-  textoverflow: ellipsis;
   width: 90%;
   overflow: hidden;
   padding: 5px;

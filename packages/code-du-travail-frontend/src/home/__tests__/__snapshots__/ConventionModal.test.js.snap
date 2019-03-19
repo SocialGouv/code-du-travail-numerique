@@ -2,14 +2,27 @@
 
 exports[`<ConventionModal /> should render a button 1`] = `
 <div>
-  <div
-    class="btn btn__link  "
-    link="true"
-    role="button"
-    tabindex="0"
+  <li
+    class="categories__list-item "
+    icon="/static/assets/icons/chat.svg"
   >
-    Trouvez votre convention collective
-  </div>
+    <button
+      class="sc-htoDjs iZlXkf"
+    >
+      <figure>
+        <img
+          alt=""
+          src="/static/assets/icons/book_web.svg"
+        />
+      </figure>
+      <h3>
+        Votre convention collective
+      </h3>
+      <p>
+        Trouvez simplement la convention collective dont vous dépendez
+      </p>
+    </button>
+  </li>
 </div>
 `;
 
@@ -18,14 +31,27 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   <div
     aria-hidden="true"
   >
-    <div
-      class="btn btn__link  "
-      link="true"
-      role="button"
-      tabindex="0"
+    <li
+      class="categories__list-item "
+      icon="/static/assets/icons/chat.svg"
     >
-      Trouvez votre convention collective
-    </div>
+      <button
+        class="sc-htoDjs iZlXkf"
+      >
+        <figure>
+          <img
+            alt=""
+            src="/static/assets/icons/book_web.svg"
+          />
+        </figure>
+        <h3>
+          Votre convention collective
+        </h3>
+        <p>
+          Trouvez simplement la convention collective dont vous dépendez
+        </p>
+      </button>
+    </li>
   </div>
   <reach-portal>
     <div
@@ -45,7 +71,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           <div>
             Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
-              class="sc-ifAKCX duHYHE"
+              class="sc-bZQynM iUJxtM"
             >
               <div
                 aria-expanded="false"
@@ -65,14 +91,14 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   value=""
                 />
                 <div
-                  class="sc-htpNat dOhisT"
+                  class="sc-ifAKCX eCZXzX"
                   id="react-autowhatever-1"
                   role="listbox"
                 />
               </div>
             </div>
             <h3
-              class="sc-EHOje iHuWIb"
+              class="sc-gzVnrw ikCnXL"
             >
               Comment trouver ma convention collective ?
             </h3>
@@ -92,7 +118,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </li>
             </ul>
             <h3
-              class="sc-EHOje iHuWIb"
+              class="sc-gzVnrw ikCnXL"
             >
               Quelle est la convention collective applicable ?
             </h3>

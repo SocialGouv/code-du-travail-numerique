@@ -1,47 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Category /> should render with default props 1`] = `
+exports[`<Category /> should render small 1`] = `
 <div>
   <li
-    class="categories__list-item"
+    class="categories__list-item categories__list-item--small"
   >
-    <a
-      href="#"
-    >
-      <img
-        alt="Embauche et contrat"
-        src="assets/icons/handshake.svg"
-      />
-      <h3>
-        Embauche et contrat
-      </h3>
-      <p>
-        Fluctuat nec mergitur.
-      </p>
-    </a>
+    <strong>
+      titre
+    </strong>
+    <p>
+      contenu
+    </p>
   </li>
 </div>
 `;
 
-exports[`<Category /> should render with props 1`] = `
+exports[`<Category /> should render with default props 1`] = `
 <div>
   <li
     class="categories__list-item"
-  >
-    <a
-      href="http://code-du-travail-numerique.beta.gouv.fr"
-    >
-      <img
-        alt="titre"
-        src="icon/icon.svg"
-      />
-      <h3>
-        titre
-      </h3>
-      <p>
-        text
-      </p>
-    </a>
-  </li>
+  />
 </div>
 `;

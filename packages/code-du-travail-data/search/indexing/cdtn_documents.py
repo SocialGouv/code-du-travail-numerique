@@ -181,6 +181,7 @@ def populate_cdtn_documents():
                 'description': val.get('description'),
                 'date': val.get('date_redaction'),
                 'author':  val.get('redacteur'),
+                'editor':  val.get('source'),
             })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/outils.json')) as json_data:
