@@ -115,6 +115,6 @@ char_filters = {
 tokenizers = {
     'article_id_tokenizer': {
         'type': 'simple_pattern',
-        'pattern': '[LRD].*[0123456789]{4}.?[0123456789]{1,3}'
+        'pattern': '[LlRrDd].?[0123456789]{4}-[0123456789]{1,3}-?[0123456789]{1,3}?'
     }
 }

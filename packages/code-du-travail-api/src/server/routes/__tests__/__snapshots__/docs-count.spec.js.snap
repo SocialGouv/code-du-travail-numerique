@@ -22,10 +22,6 @@ Object {
       },
       Object {
         "doc_count": 2,
-        "key": "idcc",
-      },
-      Object {
-        "doc_count": 2,
         "key": "kali",
       },
       Object {
