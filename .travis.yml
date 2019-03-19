@@ -52,7 +52,7 @@ jobs:
         - export PATH="$HOME/.yarn/bin:$PATH"
       install: yarn --frozen-lockfile
       before_script:
-        - docker-compose up -d elasticsearch
+        - FLASK_APP=api.dev docker-compose up -d elasticsearch nlp_api
       script:
         - yarn build --stream
         - yarn lint --stream
@@ -109,10 +109,10 @@ jobs:
       name: Test @cdt/api
       before_install:
         - node scripts/setup-env.js
-        - docker-compose up -d elasticsearch
+        - FLASK_APP=./api/dev docker-compose up -d elasticsearch nlp_api
       install: docker pull $DOCKER_IMAGE
       before_script:
-        - retry=0; while ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
+        - retry=0; while  ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
         - "docker run
           -e ELASTICSEARCH_LOG_LEVEL=info
           -e ELASTICSEARCH_URL=http://elasticsearch:9200
@@ -120,9 +120,11 @@ jobs:
           $DOCKER_IMAGE
           node packages/code-du-travail-api/tests/create_indexes.js
           "
+        - retry=0; while  ! curl "http://localhost:5000/" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
       script: docker run
         -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
         -e ELASTICSEARCH_URL=http://elasticsearch:9200
+        -e NLP_API_URL=http://nlp_api:5000
         -e ELASTICSEARCH_LOG_LEVEL=info
         --network $(docker network ls -qf name=code)
         $DOCKER_IMAGE
