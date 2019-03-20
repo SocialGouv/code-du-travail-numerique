@@ -13,7 +13,7 @@ logger = settings.get_logger(__name__)
 
 SYNONYMS = []
 
-JSON_SYNONYMS_FILE = os.path.join(settings.BASE_DIR, 'dataset/synonyms.json')
+JSON_SYNONYMS_FILE = os.path.join(settings.BASE_DIR, 'dataset/synonyms/synonyms.json')
 
 
 def populate_synonyms():

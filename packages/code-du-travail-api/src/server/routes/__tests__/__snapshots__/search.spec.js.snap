@@ -13,7 +13,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 7.2165623,
+        "_score": 7.237313,
         "_source": Object {
           "slug": "article-r1225-18",
           "source": "code_du_travail",
@@ -31,7 +31,7 @@ Object {
         },
       },
     ],
-    "max_score": 7.2165623,
+    "max_score": 7.237313,
     "total": 1,
   },
 }
@@ -43,7 +43,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.3778663,
+      "_score": 2.3817577,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -62,7 +62,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 2.1108572,
+      "_score": 2.1159964,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -79,7 +79,7 @@ Object {
       },
     },
   ],
-  "max_score": 2.3778663,
+  "max_score": 2.3817577,
   "total": 2,
 }
 `;
@@ -97,7 +97,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 16.334557,
+        "_score": 16.379986,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -119,13 +119,13 @@ Object {
         },
       },
     ],
-    "max_score": 16.334557,
+    "max_score": 16.379986,
     "total": 2,
   },
   "snippet": Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 14.235261,
+    "_score": 14.275905,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
@@ -146,7 +146,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 3.4251862,
+      "_score": 3.4266605,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "la-demission-comment-presenter-une-demission",
@@ -171,7 +171,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 3.2924087,
+      "_score": 3.294067,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -195,7 +195,7 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_document_test",
-      "_score": 3.103135,
+      "_score": 3.1040425,
       "_source": Object {
         "slug": "themes/rupture-de-contrat/la-demission",
         "source": "themes",
@@ -214,7 +214,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 2.9205968,
+      "_score": 2.9228776,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -237,7 +237,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 2.3778663,
+      "_score": 2.3817577,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -276,7 +276,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 2.1108572,
+      "_score": 2.1159964,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -311,7 +311,7 @@ Object {
       },
     },
   ],
-  "max_score": 3.4251862,
+  "max_score": 3.4266605,
   "total": 8,
 }
 `;

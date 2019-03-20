@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "10",
       "_index": "cdtn_document_test",
-      "_score": 2.1646636,
+      "_score": 2.1846728,
       "_source": Object {
         "idcc": "843",
         "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
@@ -17,7 +17,7 @@ Object {
     Object {
       "_id": "11",
       "_index": "cdtn_document_test",
-      "_score": 2.1646636,
+      "_score": 2.1846728,
       "_source": Object {
         "idcc": "1747",
         "title": "Convention collective nationale des activités industrielles de boulangerie et pâtisserie du 13 juillet 1993. Mise à jour par avenant n°10 du 11 octobre 2011.",
@@ -26,7 +26,7 @@ Object {
       "_type": "cdtn_document_test",
     },
   ],
-  "max_score": 2.1646636,
+  "max_score": 2.1846728,
   "total": 2,
 }
 `;
