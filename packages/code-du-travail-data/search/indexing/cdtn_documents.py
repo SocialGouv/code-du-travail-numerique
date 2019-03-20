@@ -53,8 +53,7 @@ def populate_cdtn_documents():
         for val in data:
             CDTN_DOCUMENTS.append({
                 'source': 'kali',
-                'id': val['id'],
-                'slug': f"{val['num']}-{slugify(val['titre'], to_lower=True)[:80]}",
+                'slug': val['num'],
                 'title': val['titre'],
                 'text': f"IDCC {val['num']} {val['titre']}",
                 'url': val['url'],
@@ -66,7 +65,7 @@ def populate_cdtn_documents():
         CDTN_DOCUMENTS.append({
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
-            'slug': slugify(val['titre'], to_lower=True),
+            'slug': val['num'].lower(),
             'title': val['titre'],
             'html': val['html'],
             'path': val['path'],
@@ -81,12 +80,13 @@ def populate_cdtn_documents():
         logger.info("Load %s documents from fiches-service-public", len(data))
         for val in data:
             CDTN_DOCUMENTS.append({
-                'source': 'fiches_service_public',
                 'date': val['date'],
                 'raw': val['raw'],
                 'slug': slugify(val['title'], to_lower=True),
+                'source': 'fiches_service_public',
                 'tags': val['tags'],
                 'text': val['text'],
+                'references_juridiques': val['references_juridiques'],
                 'title': val['title'],
                 'url': val['url'],
             })

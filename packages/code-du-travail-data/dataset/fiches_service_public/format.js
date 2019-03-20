@@ -1,4 +1,6 @@
-const getChildren = (element, name) => element.$.find(el => el.name === name);
+const parseReference = require("./parseReference");
+
+const getChild = (element, name) => element.$.find(el => el.name === name);
 
 // Beware, this one is recursive
 function getText(element = { text: "" }) {
@@ -33,27 +35,34 @@ const format = fiche => {
   const publication = fiche.$[0];
   const { ID: id } = publication._;
 
-  const title = getText(getChildren(publication, "dc:title"));
+  const title = getText(getChild(publication, "dc:title"));
 
-  const dateRaw = getText(getChildren(publication, "dc:date"));
+  const dateRaw = getText(getChild(publication, "dc:date"));
   const [year, month, day] = dateRaw.split(" ")[1].split("-");
   const date = `${day}/${month}/${year}`;
 
-  const audience = getText(getChildren(publication, "Audience"));
+  const audience = getText(getChild(publication, "Audience"));
   const urlSlug = audience === "Particuliers" ? "particuliers" : "professionnels-entreprises";
   const url = `https://www.service-public.fr/${urlSlug}/vosdroits/${id}`;
 
   const meaninglessCrumbs = ["Accueil particuliers", "Travail"];
-  const ariane = getTags(getChildren(publication, "FilDAriane"))
+  const ariane = getTags(getChild(publication, "FilDAriane"))
     .filter(crumb => !meaninglessCrumbs.includes(crumb));
-  const sousThemePere =  getTags(getChildren(publication, "SousThemePere"));
-  const dossierPere = getTags(getChildren(publication, "DossierPere"));
+  const sousThemePere =  getTags(getChild(publication, "SousThemePere"));
+  const dossierPere = getTags(getChild(publication, "DossierPere"));
   const tags = Array.from(new Set(ariane.concat(sousThemePere, dossierPere)));
 
-  const intro = getText(getChildren(publication, "Introduction"));
-  const texte = getText(getChildren(publication, "Texte"));
-  const ListeSituations = getText(getChildren(publication, "ListeSituations"));
-  const text = intro + " " + texte + " " + ListeSituations;
+  const intro = getText(getChild(publication, "Introduction"));
+  const texte = getText(getChild(publication, "Texte"));
+  const listeSituations = getText(getChild(publication, "ListeSituations"));
+  const text = intro + " " + texte + " " + listeSituations;
+
+
+  const references_juridiques = publication.$
+    .filter(el => el.name === "Reference")
+    .map(parseReference)
+    .reduce((acc, val) => acc.concat(val), []) // flatten the array
+    .filter(Boolean);
 
   return {
     date,
@@ -61,6 +70,7 @@ const format = fiche => {
     raw: JSON.stringify(publication),
     tags,
     text,
+    references_juridiques,
     title,
     url
   }

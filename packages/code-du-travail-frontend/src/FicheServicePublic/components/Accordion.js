@@ -13,6 +13,10 @@ import { ElementBuilder } from "../index";
 const { colors, spacing } = theme;
 const { fadeIn } = keyframes;
 
+const isItemOfAccordion = element =>
+  element.name === "Chapitre" &&
+  element.$.find(child => child.name === "Titre");
+
 class AccordionWrapper extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired,
@@ -20,34 +24,32 @@ class AccordionWrapper extends React.PureComponent {
   };
   render() {
     const { data, headingLevel } = this.props;
-    const firstIndexOfAccordionItem = data.$.findIndex(
-      element => element.name === "Chapitre"
-    );
-    const accordionItems = data.$.filter(
-      element => element.name === "Chapitre"
-    ).map((accordionItem, index) => {
-      const title = (
-        <>
+    const firstIndexOfAccordionItem = data.$.findIndex(isItemOfAccordion);
+    const accordionItems = data.$.filter(isItemOfAccordion).map(
+      (accordionItem, index) => {
+        const title = (
+          <>
+            <ElementBuilder
+              data={accordionItem.$.find(child => child.name === "Titre")}
+              headingLevel={headingLevel}
+            />
+            <VerticalArrow />
+          </>
+        );
+        const body = (
           <ElementBuilder
-            data={accordionItem.$.find(child => child.name === "Titre")}
-            headingLevel={headingLevel}
+            data={accordionItem.$.filter(child => child.name !== "Titre")}
+            headingLevel={headingLevel + 1}
           />
-          <VerticalArrow />
-        </>
-      );
-      const body = (
-        <ElementBuilder
-          data={accordionItem.$.filter(child => child.name !== "Titre")}
-          headingLevel={headingLevel + 1}
-        />
-      );
-      return (
-        <AccordionItem key={index}>
-          <AccordionItemTitle>{title}</AccordionItemTitle>
-          <AccordionItemBody>{body}</AccordionItemBody>
-        </AccordionItem>
-      );
-    });
+        );
+        return (
+          <AccordionItem key={index}>
+            <AccordionItemTitle>{title}</AccordionItemTitle>
+            <AccordionItemBody>{body}</AccordionItemBody>
+          </AccordionItem>
+        );
+      }
+    );
 
     const beforeAccordionElements = data.$.slice(
       0,

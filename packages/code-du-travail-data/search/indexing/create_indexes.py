@@ -79,7 +79,7 @@ def create_documents(index_name, type_name, documents):
             '_op_type': 'index',
             '_index': index_name,
             '_type': type_name,
-            '_source': body,
+            '_source': body
         }
         for body in documents
     ]

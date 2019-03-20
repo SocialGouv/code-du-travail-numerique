@@ -68,18 +68,24 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     case "Rappel":
       return <ANoter>{parseChildren(data.$, headingLevel)}</ANoter>;
     case "Cas":
+    case "Chapitre":
+    case "SousChapitre":
       return parseChildren(data.$, headingLevel);
     case "MiseEnEvidence":
+    case "Valeur":
       return <strong>{parseChildren(data.$, headingLevel)}</strong>;
     case "Paragraphe":
       return <p>{parseChildren(data.$, headingLevel)}</p>;
-    case "SousChapitre":
-      return parseChildren(data.$, headingLevel);
+    case "Exposant":
+      return <sup>{parseChildren(data.$, headingLevel)}</sup>;
     // These ones are still to be defined
     case "LienIntra":
-      return parseChildren(data.$, headingLevel);
     case "LienInterne":
-      return parseChildren(data.$, headingLevel);
+      // there are empty links sometimes...
+      if (data.$) {
+        return parseChildren(data.$, headingLevel);
+      }
+      return null;
     // Otherwise we simply ignore the element
     default:
       return null;
@@ -105,6 +111,7 @@ const StyledElementBuilder = styled.div`
 `;
 
 const ANoter = styled.div`
+  margin-bottom: ${spacing.base};
   padding: ${spacing.base};
   background-color: ${colors.elementBackground};
   border-radius: ${box.borderRadius};
