@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { X, Download } from "react-feather";
+import { X } from "react-feather";
 import styled from "styled-components";
 import { Button } from "@cdt/ui";
 import { IdccSuggester } from "./IdccSuggester";
 
-export class ConventionForm extends React.Component {
+class ConventionForm extends React.Component {
   static propTypes = {
     onSearch: PropTypes.func.isRequired
   };
@@ -25,10 +25,11 @@ export class ConventionForm extends React.Component {
   render() {
     return (
       <form>
-        <h2>Convention collective</h2>
+        <h2>Trouvez votre convention collective</h2>
         <div>
+          <Title>Recherche par nom ou par identifiant</Title>
           Saisissez l&apos;identifiant de convention collective (IDCC) ou le nom
-          de la branche :
+          de la branche&nbsp;:
           <SuggestWrapper>
             {!this.state.convention ? (
               <IdccSuggester
@@ -37,14 +38,14 @@ export class ConventionForm extends React.Component {
               />
             ) : (
               <React.Fragment>
-                <ConventionPreview data={this.state.convention} />
+                <ConventionPreview {...this.state.convention} />
                 <Button link onClick={this.onClearConvention}>
                   <X size="16" />
                 </Button>
               </React.Fragment>
             )}
           </SuggestWrapper>
-          <Title>Comment trouver ma convention collective ?</Title>
+          <Subtitle>Comment trouver ma convention collective ?</Subtitle>
           <ul>
             <li>
               Elle doit figurer au <b>bulletin de paie</b>, et sur une notice
@@ -55,7 +56,7 @@ export class ConventionForm extends React.Component {
               modalités de consultation en entreprise)
             </li>
           </ul>
-          <Title>Quelle est la convention collective applicable ?</Title>
+          <Subtitle>Quelle est la convention collective applicable ?</Subtitle>
           <ul>
             <li>
               En principe celle relevant de l&apos;activité principale dans
@@ -73,27 +74,30 @@ const SuggestWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  color: initial;
+  color: #000;
   font-size: 1.2em;
   margin-top: 20px;
 `;
 
-const ConventionPreview = ({ data }) => {
+const Subtitle = styled.div`
+  color: #666;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+`;
+
+const ConventionPreview = ({ slug, idcc, title }) => {
+  const path = slug ? `/kali/${slug}` : `/kali-idcc/${idcc}`;
   return (
-    <a target="_blank" href={data.url} rel="noopener noreferrer">
-      <Download
-        alt="Télécharger la convention"
-        title="Télécharger la convention"
-        size="16"
-        style={{ marginRight: 5 }}
-      />
-      IDCC {data.idcc} - {data.title}
+    <a href={path}>
+      IDCC {idcc} {title ? `- ${title}` : ""}
     </a>
   );
 };
 ConventionPreview.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
-  }).isRequired
+  slug: PropTypes.string,
+  idcc: PropTypes.string,
+  title: PropTypes.string.isRequired
 };
+
+export { ConventionForm, ConventionPreview, Title, SuggestWrapper };

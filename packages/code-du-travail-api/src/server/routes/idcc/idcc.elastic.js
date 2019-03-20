@@ -1,7 +1,7 @@
 function getIdccBody({ query }) {
   return {
     size: 1000,
-    _source: ["title", "url", "idcc"],
+    _source: ["title", "url", "idcc", "slug"],
     query: {
       bool: {
         filter: [
