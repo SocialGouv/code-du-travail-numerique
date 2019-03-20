@@ -44,7 +44,7 @@ export default OuSAdresser;
 
 const Wrapper = styled.div`
   padding: ${spacing.large};
-  margin-bottom: ${spacing.large};
+  margin-bottom: ${spacing.base};
   background-color: ${colors.lighterGrey};
   border-radius: ${box.borderRadius};
 `;

@@ -13,7 +13,7 @@ const { box, colors, spacing } = theme;
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link route="code-du-travail" params={{ slug }} passHref>
     <ReferenceLink>
-      <ArticleIcon width={18} />
+      <Icon width={18} />
       {title}
     </ReferenceLink>
   </Link>
@@ -22,7 +22,7 @@ const CodeDuTravailLink = ({ title, slug }) => (
 const ConventionLink = ({ title, slug }) => (
   <Link route="kali" params={{ slug }} passHref>
     <ReferenceLink>
-      <ArticleIcon width={18} />
+      <Icon width={18} />
       Convention collective: {title}
     </ReferenceLink>
   </Link>
@@ -35,44 +35,52 @@ const OtherLink = ({ title, url }) => (
     target="_blank"
     className={"external-link__after"}
   >
-    <ArticleIcon width="18" />
+    <Icon width="18" />
     Autre: {title}
   </ReferenceLink>
 );
 
-const ReferencesJuridiques = ({ references }) => (
-  <ReferencesWrapper>
-    <h3>Références Juridiques</h3>
-    <ul>
-      {references.map(texteConventionnel => (
-        <li key={texteConventionnel.id}>
-          {(texteConventionnel.type === TYPE_REFERENCE.codeDuTravail && (
-            <CodeDuTravailLink
-              key={texteConventionnel.id}
-              title={texteConventionnel.title}
-              slug={texteConventionnel.id}
-            />
-          )) ||
-            (texteConventionnel.type ===
-              TYPE_REFERENCE.conventionCollective && (
-              <ConventionLink
-                key={texteConventionnel.id}
-                title={texteConventionnel.title}
-                slug={texteConventionnel.id}
-              />
-            )) ||
-            (texteConventionnel.type === TYPE_REFERENCE.journalOfficiel && (
-              <OtherLink
-                key={texteConventionnel.id}
-                title={texteConventionnel.title}
-                url={texteConventionnel.url}
-              />
-            ))}
-        </li>
-      ))}
-    </ul>
-  </ReferencesWrapper>
-);
+const ReferencesJuridiques = ({ references }) => {
+  const getLink = texteConventionnel => {
+    switch (texteConventionnel.type) {
+      case TYPE_REFERENCE.codeDuTravail:
+        return (
+          <CodeDuTravailLink
+            key={texteConventionnel.id}
+            title={texteConventionnel.title}
+            slug={texteConventionnel.id}
+          />
+        );
+      case TYPE_REFERENCE.conventionCollective:
+        return (
+          <ConventionLink
+            key={texteConventionnel.id}
+            title={texteConventionnel.title}
+            slug={texteConventionnel.id}
+          />
+        );
+      case TYPE_REFERENCE.journalOfficiel:
+        return (
+          <OtherLink
+            key={texteConventionnel.id}
+            title={texteConventionnel.title}
+            url={texteConventionnel.url}
+          />
+        );
+    }
+  };
+
+  return (
+    <ReferencesWrapper>
+      <h3>Références Juridiques</h3>
+      <ul>
+        {references.map(texteConventionnel => (
+          <li key={texteConventionnel.id}>{getLink(texteConventionnel)}</li>
+        ))}
+      </ul>
+    </ReferencesWrapper>
+  );
+};
 
 ReferencesJuridiques.propTypes = {
   references: PropTypes.arrayOf(
@@ -93,12 +101,9 @@ const ReferencesWrapper = styled.div`
   border-radius: ${box.borderRadius};
 
   ul {
-    list-style-type: none;
-  }
-  ul,
-  li {
     margin: 0;
     padding: 0;
+    list-style-type: none;
   }
 `;
 
@@ -110,11 +115,11 @@ const ReferenceLink = styled.a`
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
   cursor: pointer;
+`;
 
-  svg {
-    position: relative;
-    top: 1px;
-    vertical-align: middle;
-    margin-right: ${spacing.base};
-  }
+const Icon = styled(ArticleIcon)`
+  position: relative;
+  top: 1px;
+  vertical-align: middle;
+  margin-right: ${spacing.base};
 `;

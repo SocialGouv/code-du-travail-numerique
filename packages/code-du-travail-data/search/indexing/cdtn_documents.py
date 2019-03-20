@@ -53,8 +53,7 @@ def populate_cdtn_documents():
         for val in data:
             CDTN_DOCUMENTS.append({
                 'source': 'kali',
-                '_id': 'kali--' + val['id'],
-                'slug': val['id'],
+                'slug': val['num'],
                 'title': val['titre'],
                 'text': f"IDCC {val['num']} {val['titre']}",
                 'url': val['url'],
@@ -64,7 +63,6 @@ def populate_cdtn_documents():
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
         CDTN_DOCUMENTS.append({
-            '_id': 'code_du_travail--' + val['num'],
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
             'slug': val['num'].lower(),

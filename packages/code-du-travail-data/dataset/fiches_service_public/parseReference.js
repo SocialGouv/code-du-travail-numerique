@@ -56,13 +56,7 @@ const createJORef = (id, title, url) => ({
   url
 })
 
-// Always return an array
 const parseReference = reference => {
-    /* todo :
-      - gestion des dates
-          - https://www.legifrance.gouv.fr/affichCode.do;jsessionid=F6A039BEA1CEBEED08A95F62603613C4.tpdila20v_1?idSectionTA=LEGISCTA000006195895&cidTexte=LEGITEXT000006072050&dateTexte=20170831
-          - https://www.legifrance.gouv.fr/affichCode.do?idSectionTA=LEGISCTA000018525018&cidTexte=LEGITEXT000006072050&dateTexte=20170831
-    */
     const { URL: url } = reference._;
     const qs = queryString.parse(url.split("?")[1]);
     const type = getTextType(qs)
@@ -79,14 +73,8 @@ const parseReference = reference => {
           return getArticlesFromSection(qs.idSectionTA);
         }
       case "convention-collective":
-        let title;
         const convention = kali.find(convention => convention.id === qs.idConvention);
-        if (convention) {
-          title = convention.titre;
-        } else {
-          title = `Convention collective ${qs.idConvention}`;
-        }
-        return [createCCRef(qs.idConvention, title)];
+        return [createCCRef(convention.num, convention.titre)];
       case "journal-officiel":
         return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
       default:

@@ -34,12 +34,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin-bottom: ${spacing.base};
   padding: ${spacing.large};
   background-color: ${colors.lighterGrey};
   border-radius: ${box.borderRadius};
-  &:not(:last-child) {
-    margin-bottom: ${spacing.base};
-  }
 `;
 
 const Type = styled.div`
