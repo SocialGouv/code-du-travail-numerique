@@ -14,8 +14,15 @@ const {
 
 // a FAQ answer
 
-const fetchKali = ({ slug }) =>
-  fetch(`${API_URL}/items/kali/${slug}`).then(r => r.json());
+const fetchKali = ({ slug, idccNum }) =>
+  slug
+    ? fetch(`${API_URL}/items/kali/${slug}`).then(r => r.json())
+    : fetch(`${API_URL}/idcc?num=${idccNum}`)
+        .then(r => r.json())
+        .then(r => r.hits.hits)
+        .then(hits => {
+          return hits.length == 1 ? hits[0] : null;
+        });
 
 class Kali extends React.Component {
   static async getInitialProps({ query }) {
@@ -25,7 +32,7 @@ class Kali extends React.Component {
 
   render() {
     const { data } = this.props;
-    if (data.status === 404) {
+    if (!data || data.status === 404) {
       return (
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );

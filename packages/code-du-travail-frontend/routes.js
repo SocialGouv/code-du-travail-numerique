@@ -51,6 +51,13 @@ module.exports = routes()
     pattern: "/kali/:slug"
   })
 
+  // http://localhost:3000/kali/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
+  .add({
+    name: "kaliIdcc",
+    page: "kali",
+    pattern: "/kali-idcc/:idccNum"
+  })
+
   // http://localhost:3000/outils/indemnite-licenciement
   .add({
     name: "outils",
