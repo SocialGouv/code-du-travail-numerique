@@ -6,6 +6,10 @@ import kali from "@socialgouv/kali-data/data/index.json";
 
 import getQueryType from "./getQueryType";
 
+const SIRET2IDCC_URL =
+  process.env.API_SIRET2IDCC_URL ||
+  "https://siret2idcc.incubateur.social.gouv.fr/api/v1";
+
 // parametres fuse.js pour le search texte
 const fuseCCNames = new Fuse(kali, {
   threshold: 0.2,
@@ -29,7 +33,7 @@ const fuseCCIds = new Fuse(kali, {
 const formatResultEntreprise = async result => ({
   id: result.id,
   siret: result.siret,
-  idcc: await apiSiret2idcc(result.siret),
+  conventions: await apiSiret2idcc(result.siret),
   label: `${result.nom_raison_sociale} ${result.code_postal ||
     ""} ${result.libelle_commune || ""}`
 });
@@ -38,7 +42,9 @@ const formatResultEntreprise = async result => ({
 const formatFullTextResults = apiData =>
   (apiData.etablissement &&
     apiData.etablissement.map &&
-    Promise.all(apiData.etablissement.map(formatResultEntreprise))) ||
+    Promise.all(
+      apiData.etablissement.filter(Boolean).map(formatResultEntreprise)
+    )) ||
   Promise.resolve();
 
 // api entreprise full text call
@@ -64,16 +70,22 @@ const apiEntrepriseSiret = memoize(
       )}`
     )
       .then(r => r.json())
-      .then(data => formatResultEntreprise(data.etablissement)),
+      .then(
+        data => data.etablissement && formatResultEntreprise(data.etablissement)
+      ),
   { promise: true }
 );
 
 // api siret2idcc call
 const apiSiret2idcc = memoize(
   async siret =>
-    await fetch(`https://siret2idcc.incubateur.social.gouv.fr/api/v1/${siret}`)
+    await fetch(`${SIRET2IDCC_URL}/${siret}`)
       .then(r => r.json())
-      .then(data => (data.error && []) || data.idcc.filter(id => id !== "9999"))
+      .then(
+        data =>
+          (data.error && []) ||
+          data.filter(convention => convention.num !== "9999")
+      )
       .catch(() => []),
   { promise: true }
 );
@@ -104,12 +116,12 @@ export const loadResults = async query => {
     if (etablissements && etablissements.length) {
       results.push(...etablissements);
     }
-    return results.filter(r => r.idcc && r.idcc.length);
+    return results.filter(r => r.conventions && r.conventions.length);
     // direct search by siret with API sirene
   }
   if (type === "siret") {
     const etablissement = await searchBySiret(query.trim());
-    return [etablissement];
+    return (etablissement && [etablissement]) || [];
     // search local idcc list
   }
   if (type === "idcc") {

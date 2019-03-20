@@ -14,29 +14,24 @@ const formatIdCc = num => {
 };
 
 // link to a CC
-const CC = ({ idcc }) => {
-  const data = kali.find(c => formatIdCc(c.num) === formatIdCc(idcc));
-  if (data) {
-    return (
-      <Box>
-        <Flex>
-          <Tag title="Numéro de convention collective" variant="info">
-            IDCC {formatIdCc(idcc)}
-          </Tag>
-          <Spacer />
-          <CCLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${
-              data.id
-            }`}
-          >
-            {data.titre}
-          </CCLink>
-        </Flex>
-      </Box>
-    );
-  }
+const CC = ({ id, num, titre }) => {
+  return (
+    <Box>
+      <Flex>
+        <Tag title="Numéro de convention collective" variant="info">
+          IDCC {formatIdCc(num)}
+        </Tag>
+        <Spacer />
+        <CCLink
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`}
+        >
+          {titre}
+        </CCLink>
+      </Flex>
+    </Box>
+  );
   return null;
 };
 
@@ -95,8 +90,10 @@ const Search = () => {
                           {result.siret && <TagSiret siret={result.siret} />}
                         </Flex>
                         <CCsContainer>
-                          {result.idcc.length ? (
-                            result.idcc.map(id => <CC key={id} idcc={id} />)
+                          {result.conventions && result.conventions.length ? (
+                            result.conventions.map(convention => (
+                              <CC key={convention.id} {...convention} />
+                            ))
                           ) : (
                             <div className="text-danger">
                               Aucune convention collective connue pour cette
