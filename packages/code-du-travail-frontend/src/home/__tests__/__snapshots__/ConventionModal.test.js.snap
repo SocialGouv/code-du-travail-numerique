@@ -92,10 +92,15 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
       >
         <form>
           <h2>
-            Convention collective
+            Trouvez votre convention collective
           </h2>
           <div>
-            Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
+            <h3
+              class="sc-gzVnrw brzehh"
+            >
+              Recherche par nom ou par identifiant
+            </h3>
+            Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
               class="c1"
             >
@@ -127,14 +132,14 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               class="c3"
             >
               Comment trouver ma convention collective ?
-            </h3>
+            </div>
             <ul>
               <li>
-                Elle doit figurer au 
+                Elle doit figurer au
                 <b>
                   bulletin de paie
                 </b>
-                , et sur une notice remise à l'embauche ou 
+                , et sur une notice remise à l'embauche ou
                 <b>
                   sur le contrat de travail
                 </b>
@@ -147,12 +152,62 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               class="c3"
             >
               Quelle est la convention collective applicable ?
-            </h3>
+            </div>
             <ul>
               <li>
                 En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
               </li>
             </ul>
+          </div>
+        </form>
+        <form>
+          <h3
+            class="sc-gzVnrw brzehh"
+          >
+            Recherche par SIRET
+          </h3>
+          Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
+          <div
+            class="sc-bZQynM iUJxtM"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-1"
+              role="combobox"
+              style="position: relative;"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-1"
+                autocomplete="off"
+                class="full-width"
+                name="query"
+                placeholder="Numéro de SIRET à 14 chiffres"
+                type="search"
+                value=""
+              />
+              <div
+                class="sc-ifAKCX eCZXzX"
+                id="react-autowhatever-1"
+                role="listbox"
+              />
+            </div>
+            <p>
+              <span>
+                 
+              </span>
+            </p>
+            <p
+              style="font-style: italic;"
+            >
+              Vous pouvez chercher le SIRET de votre entreprise sur 
+              <a
+                href="https://entreprise.data.gouv.fr/"
+              >
+                entreprise.data.gouv.fr
+              </a>
+            </p>
           </div>
         </form>
       </div>
