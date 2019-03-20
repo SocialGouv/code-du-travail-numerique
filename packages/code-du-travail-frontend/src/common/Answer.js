@@ -79,7 +79,7 @@ class Answer extends React.Component {
         <Head>
           <title>{title}</title>
         </Head>
-        <Search onResults={this.setResults} />
+        <Search />
         <BackToResultsLink query={router.query} />
         {!html && !children && <BigError>{emptyMessage}</BigError>}
         {(html || children) && (

@@ -21,12 +21,9 @@ const SearchIconWithClipboard = withClipboard(SearchIcon);
 
 class Search extends React.Component {
   static propTypes = {
-    router: PropTypes.object,
-    onResults: PropTypes.func
+    router: PropTypes.object
   };
-  static defaultProps = {
-    onResults: () => {}
-  };
+
   state = {
     // query in the input box
     query: this.props.router.query.q || "",
@@ -133,15 +130,7 @@ class Search extends React.Component {
       return;
     }
 
-    const route = getRouteBySource(suggestion._source.source);
-    const anchor = suggestion._source.anchor
-      ? suggestion._source.anchor.slice(1)
-      : undefined;
-    Router.pushRoute(
-      route,
-      { q: query, slug: suggestion._source.slug },
-      { hash: anchor }
-    );
+    Router.pushRoute("recherche", { q: query, source });
   };
 
   onClear = () => {
@@ -149,7 +138,7 @@ class Search extends React.Component {
   };
 
   onSearch = ({ value }) => {
-    const { source, excludeSources } = this.state;
+    const { source } = this.state;
     const asyncSearchResult =
       source === "annuaire"
         ? searchAddress(value).then(results =>
@@ -162,15 +151,11 @@ class Search extends React.Component {
               }
             }))
           )
-        : suggestResults(value, excludeSources).then(
-            results => results.hits.hits
-          );
+        : suggestResults(value).then(items => items.slice(0, 5));
 
     asyncSearchResult
       .then(results => {
-        this.setState({ suggestions: results }, () => {
-          this.props.onResults(results);
-        });
+        this.setState({ suggestions: results });
       })
       .catch(error => {
         console.error("fetch error", error);
