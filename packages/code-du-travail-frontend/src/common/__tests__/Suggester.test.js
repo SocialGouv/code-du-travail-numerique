@@ -26,6 +26,51 @@ describe("<Suggester />", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("should allow reformatting the entered value", async () => {
+    const onSearch = jest.fn().mockResolvedValue(results);
+    const { getByDisplayValue, getByPlaceholderText } = render(
+      <Suggester
+        onSelect={() => {}}
+        onSearch={onSearch}
+        reformatEnteredValue={v => v.replace(/e/, "O")}
+      />
+    );
+    const input = getByPlaceholderText(/faire une recherche/i);
+    fireEvent.change(input, { target: { value: "test" } });
+    input.focus();
+    await waitForElement(() => getByDisplayValue("tOst"));
+  });
+
+  it("should allow reformatting the searched value", async () => {
+    const onSearch = jest.fn().mockResolvedValue(results);
+    const { getByPlaceholderText } = render(
+      <Suggester
+        onSelect={() => {}}
+        onSearch={onSearch}
+        reformatSearchedValue={v => v.replace(/e/, "O")}
+      />
+    );
+    const input = getByPlaceholderText(/faire une recherche/i);
+    fireEvent.change(input, { target: { value: "test" } });
+    expect(onSearch).toBeCalledWith("tOst");
+  });
+
+  it("should allow displaying a help message", async () => {
+    const onSearch = jest.fn().mockResolvedValue(results);
+    const { getByPlaceholderText, getByText } = render(
+      <Suggester
+        onSelect={() => {}}
+        onSearch={onSearch}
+        getHelpMessage={(query, suggestions) =>
+          `${query} returned ${suggestions.length} results`
+        }
+      />
+    );
+    const input = getByPlaceholderText(/faire une recherche/i);
+    fireEvent.change(input, { target: { value: "test" } });
+    await waitForElement(() => getByText("test returned 1 results"));
+  });
+
   it("should call onSelect when user clicks some option", async () => {
     const onSearch = jest.fn().mockResolvedValue(results);
     const onSelect = jest.fn();

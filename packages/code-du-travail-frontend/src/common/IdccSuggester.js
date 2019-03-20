@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Suggester } from "./Suggester";
 import styled from "styled-components";
 
-export class IdccSuggester extends React.Component {
+class IdccSuggester extends React.Component {
   static propTypes = {
     onSearch: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired
@@ -88,4 +88,11 @@ const suggesterTheme = {
   suggestionHighlighted: {
     background: "#eee"
   }
+};
+
+export {
+  IdccSuggester,
+  renderSuggestionsContainer,
+  Suggestion,
+  suggesterTheme
 };

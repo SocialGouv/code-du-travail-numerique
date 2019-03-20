@@ -10,7 +10,10 @@ export class Suggester extends React.Component {
     getSuggestionValue: PropTypes.func,
     renderSuggestion: PropTypes.func,
     renderSuggestionsContainer: PropTypes.func,
-    theme: PropTypes.object
+    theme: PropTypes.object,
+    reformatSearchedValue: PropTypes.func,
+    reformatEnteredValue: PropTypes.func,
+    getHelpMessage: PropTypes.func
   };
 
   static defaultProps = {
@@ -19,17 +22,22 @@ export class Suggester extends React.Component {
     getSuggestionValue: value => value.toString(),
     renderSuggestion: suggestion => <span>{suggestion.toString()}</span>,
     renderSuggestionsContainer: undefined,
-    theme: undefined
+    theme: undefined,
+    reformatSearchedValue: v => v,
+    reformatEnteredValue: v => v
   };
 
   state = {
     query: "",
-    suggestions: []
+    suggestions: [],
+    loading: false
   };
 
   onChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]:
+        event.target.value &&
+        this.props.reformatEnteredValue(event.target.value)
     });
   };
 
@@ -38,9 +46,11 @@ export class Suggester extends React.Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    this.props.onSearch(value).then(results =>
+    this.setState({ loading: true });
+    this.props.onSearch(this.props.reformatSearchedValue(value)).then(results =>
       this.setState({
-        suggestions: results
+        suggestions: results,
+        loading: false
       })
     );
   };
@@ -52,27 +62,37 @@ export class Suggester extends React.Component {
   };
 
   render() {
+    const { loading, suggestions, query } = this.state;
+    const { placeholder, className, getHelpMessage } = this.props;
     const inputProps = {
       name: "query",
-      placeholder: this.props.placeholder,
-      value: this.state.query,
+      placeholder: placeholder,
+      value: query,
       type: "search",
       onChange: this.onChange,
-      className: this.props.className
+      className: className
     };
+    const helpMessage =
+      !loading && getHelpMessage && getHelpMessage(query, suggestions);
 
     return (
-      <Autosuggest
-        suggestions={this.state.suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={this.onSuggestionSelected}
-        getSuggestionValue={this.props.getSuggestionValue}
-        renderSuggestion={this.props.renderSuggestion}
-        renderSuggestionsContainer={this.props.renderSuggestionsContainer}
-        theme={this.props.theme}
-        inputProps={inputProps}
-      />
+      <React.Fragment>
+        <Autosuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          onSuggestionSelected={this.onSuggestionSelected}
+          getSuggestionValue={this.props.getSuggestionValue}
+          renderSuggestion={this.props.renderSuggestion}
+          renderSuggestionsContainer={this.props.renderSuggestionsContainer}
+          theme={this.props.theme}
+          inputProps={inputProps}
+        />
+        {getHelpMessage && (
+          // we display the <p> tag even when there is no message to prevent flickering
+          <p>{helpMessage ? helpMessage : <span>&nbsp;</span>}</p>
+        )}
+      </React.Fragment>
     );
   }
 }
