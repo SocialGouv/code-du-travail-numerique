@@ -247,7 +247,7 @@ deploy-elasticsearch:
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
   except:
-  - ops
+  - master
 
 create-cdtn-es-index:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
@@ -264,7 +264,7 @@ create-cdtn-es-index:
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ES_PORT: ${ELASTICSEARCH_PORT}
   except:
-  - ops
+  - master
 
 deploy-cdtn-api:
   stage: "Deploy Code du Travail Numerique"
@@ -288,7 +288,7 @@ deploy-cdtn-api:
   environment:
     name: dev
   except:
-  - ops
+  - master
 
 deploy-cdtn-frontend:
   stage: "Deploy Code du Travail Numerique"
@@ -308,7 +308,7 @@ deploy-cdtn-frontend:
   environment:
     name: dev
   except:
-  - ops
+  - master
 
 #######################################
 ### DEPLOY CDTN TO K8S PROD CLUSTER ###
@@ -327,7 +327,7 @@ deploy-kibana:
     K8S_TOKEN: $K8S_TOKEN_PROD
     BRANCH_NAME: ''
   only:
-  - ops
+  - master
 
 deploy-apm-server:
   stage: "Deploy EL Stack"
@@ -342,7 +342,7 @@ deploy-apm-server:
     K8S_TOKEN: $K8S_TOKEN_PROD
     BRANCH_NAME: ''
   only:
-  - ops
+  - master
 
 deploy-elasticsearch-prod:
   stage: "Deploy EL Stack"
@@ -359,7 +359,7 @@ deploy-elasticsearch-prod:
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
   only:
-  - ops
+  - master
 
 create-cdtn-es-index-prod:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
@@ -376,7 +376,7 @@ create-cdtn-es-index-prod:
     BRANCH_NAME: ''
     ES_PORT: ${ELASTICSEARCH_PORT}
   only:
-  - ops
+  - master
 
 deploy-cdtn-api-prod:
   stage: "Deploy Code du Travail Numerique"
@@ -400,7 +400,7 @@ deploy-cdtn-api-prod:
   environment:
     name: ops
   only:
-  - ops
+  - master
 
 deploy-cdtn-frontend-prod:
   stage: "Deploy Code du Travail Numerique"
@@ -420,7 +420,7 @@ deploy-cdtn-frontend-prod:
   environment:
     name: ops
   only:
-  - ops
+  - master
 
 #######################################
 ###           DELETE PODS           ###
@@ -443,4 +443,4 @@ delete-pods:
   - /apps/create-kubeconfig.sh
   - python3 k8s/scripts/delete-pods.py
   only:
-  - ops
+  - master
