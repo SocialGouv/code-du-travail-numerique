@@ -439,8 +439,9 @@ delete-pods:
     K8S_USERNAME: $K8S_USERNAME_DEV
     K8S_CONTEXT: $K8S_CONTEXT_DEV
     K8S_TOKEN: $K8S_TOKEN_DEV
-  script:
+  before_script:
   - /apps/create-kubeconfig.sh
+  script:
   - python3 k8s/scripts/delete-pods.py
   only:
   - master
