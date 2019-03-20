@@ -3,7 +3,7 @@
 exports[`<OuSAdresser /> should render a complex case 1`] = `
 <div>
   <div
-    class="sc-gqjmRU cAnnfM"
+    class="sc-gqjmRU dAJwaB"
   >
     <strong
       class="sc-VigVT evjmKG"
@@ -24,7 +24,7 @@ exports[`<OuSAdresser /> should render a complex case 1`] = `
 exports[`<OuSAdresser /> should render a simple case 1`] = `
 <div>
   <div
-    class="sc-gqjmRU cAnnfM"
+    class="sc-gqjmRU dAJwaB"
   >
     <strong
       class="sc-VigVT evjmKG"

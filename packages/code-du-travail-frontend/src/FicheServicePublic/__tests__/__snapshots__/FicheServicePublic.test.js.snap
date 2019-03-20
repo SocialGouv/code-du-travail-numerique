@@ -295,7 +295,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
               </p>
               <div
-                class="sc-bZQynM fZUXCl"
+                class="sc-bZQynM kEIWyL"
               >
                 <div
                   class="sc-gzVnrw gWsBJX"
@@ -808,7 +808,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
       />
     </div>
     <div
-      class="sc-bZQynM fZUXCl"
+      class="sc-bZQynM kEIWyL"
     >
       <div
         class="sc-gzVnrw gWsBJX"
