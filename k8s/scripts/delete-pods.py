@@ -20,9 +20,10 @@ def get_pod_to_delete(label):
   return pod_to_delete_list
 
 def delete_pod(label):
-  command_to_delete_pods = ('kubectl delete po --selector app='+label)
-  print(command_to_delete_pods)
-  check_output(command_to_delete_pods, shell=True)
+  k8s_object_list = ["pod", "service", "ingress", "configmap"]
+  for k8s_object in k8s_object_list:
+    command_to_delete_k8s_object = ('kubectl delete '+ k8s_object +' --selector branch=cdtn-'+label)
+    check_output(command_to_delete_k8s_object, shell=True)
 
 if __name__ == '__main__':
   for merged_branch in get_merged_branches():
