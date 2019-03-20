@@ -19,7 +19,6 @@ const idccRoutes = require("./routes/idcc");
 const itemsRoutes = require("./routes/items");
 const modelesRoutes = require("./routes/modeles");
 const searchRoutes = require("./routes/search");
-const suggestRoutes = require("./routes/suggest");
 const versionRoutes = require("./routes/version");
 const docsRoutes = require("./routes/docs");
 
@@ -60,7 +59,6 @@ app.use(docsCount.routes());
 app.use(idccRoutes.routes());
 app.use(modelesRoutes.routes());
 app.use(searchRoutes.routes());
-app.use(suggestRoutes.routes());
 app.use(itemsRoutes.routes());
 app.use(versionRoutes.routes());
 
