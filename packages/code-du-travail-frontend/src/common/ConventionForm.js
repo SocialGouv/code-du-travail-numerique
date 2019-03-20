@@ -97,7 +97,7 @@ const ConventionPreview = ({ slug, idcc, title }) => {
 ConventionPreview.propTypes = {
   slug: PropTypes.string,
   idcc: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string
 };
 
 export { ConventionForm, ConventionPreview, Title, SuggestWrapper };

@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CompanyForm /> should display the company and its IDCCs once you click on the suggestion 1`] = `
+<div>
+  <form>
+    <h3
+      class="sc-EHOje djbide"
+    >
+      Recherche par SIRET
+    </h3>
+    Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
+    <div
+      class="sc-ifAKCX duHYHE"
+    >
+      <div>
+        <div>
+          <b>
+            RENAULT-3200-VILLARD
+          </b>
+          <div>
+            <div
+              class="btn btn__link  "
+              link="true"
+              role="button"
+              tabindex="0"
+            >
+              Chercher une autre entreprise
+            </div>
+            <div
+              class="btn btn__link  "
+              link="true"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gzVnrw kvvweo"
+        >
+          Cette entreprise emploie des salariés sous
+           2 conventions collectives
+           :
+        </div>
+        <ul>
+          <li
+            data-testid="companyIdcc"
+          >
+            <a
+              href="/kali-idcc/200"
+            >
+              IDCC 
+              200
+               
+              - Convention collective nationale de la coiffure
+            </a>
+          </li>
+          <li
+            data-testid="companyIdcc"
+          >
+            <a
+              href="/kali-idcc/86"
+            >
+              IDCC 
+              86
+               
+              - Convention collective nationale des boulangers associés
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<CompanyForm /> should render 1`] = `
+<div>
+  <form>
+    <h3
+      class="sc-EHOje djbide"
+    >
+      Recherche par SIRET
+    </h3>
+    Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
+    <div
+      class="sc-ifAKCX duHYHE"
+    >
+      <button
+        data-testid="suggest"
+      />
+      <p
+        style="font-style: italic;"
+      >
+        Vous pouvez chercher le SIRET de votre entreprise sur 
+        <a
+          href="https://entreprise.data.gouv.fr/"
+        >
+          entreprise.data.gouv.fr
+        </a>
+      </p>
+    </div>
+  </form>
+</div>
+`;
