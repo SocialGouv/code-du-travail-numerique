@@ -7,7 +7,7 @@ import { Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
 import ReponseIcon from "../icons/ReponseIcon";
 import SearchIcon from "../icons/SearchIcon";
-import { getRouteBySource, getExcludeSources } from "../sources";
+import { getExcludeSources } from "../sources";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { suggestResults } from "./search.service";
 import { withClipboard } from "../common/withClipboard.hoc";
