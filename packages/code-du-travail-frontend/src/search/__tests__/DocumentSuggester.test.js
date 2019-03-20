@@ -2,33 +2,14 @@ import React from "react";
 import { fireEvent, render } from "react-testing-library";
 
 import { DocumentSuggester } from "../DocumentSuggester";
-const suggestions = [
-  {
-    _source: {
-      source: "kali",
-      title: "convention collective title"
-    },
-    highlight: {
-      title: ["<mark>hightlighted ccn</mark>"]
-    }
-  },
-  {
-    _source: {
-      source: "faq",
-      title: "question / réponse title"
-    },
-    highlight: {
-      text: ["<mark>hightlighted faq</mark>"]
-    }
-  }
-];
+const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
 function renderDocumentSuggester({
   onSearch = jest.fn(),
   onSelect = jest.fn(),
   onClear = jest.fn(),
   onChange = jest.fn(),
-  query = "foo bar search",
+  query = "foo",
   placeholder = "document suggester placeholder",
   suggestions = []
 }) {

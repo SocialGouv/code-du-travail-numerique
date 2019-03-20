@@ -2,26 +2,7 @@
 
 exports[`<Answer /> should display feedback modal when click on feedback button 1`] = `
 <body>
-  .c0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-}
-
-.c1 ul {
-  z-index: 100;
-}
-
-.c1 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
-}
-
-<div
+  <div
     aria-hidden="true"
   >
     <div
@@ -135,7 +116,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                 </select>
               </label>
               <label
-                class="c0"
+                class="sc-bxivhb RULfe"
                 for="main-search-input"
               >
                 <span
@@ -161,7 +142,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                     value=""
                   />
                   <div
-                    class="c1"
+                    class="sc-ifAKCX cggTaJ"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -306,7 +287,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
               est prévue pour 2020.
             </div>
             <div
-              class=""
+              class="sc-dnqmqq kuTEnE"
             >
               <div>
                 html
@@ -506,25 +487,6 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
 `;
 
 exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = `
-.c0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-}
-
-.c1 ul {
-  z-index: 100;
-}
-
-.c1 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
-}
-
 <body>
   <div
     aria-hidden="true"
@@ -640,7 +602,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                 </select>
               </label>
               <label
-                class="c0"
+                class="sc-bxivhb RULfe"
                 for="main-search-input"
               >
                 <span
@@ -666,7 +628,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                     value=""
                   />
                   <div
-                    class="c1"
+                    class="sc-ifAKCX cggTaJ"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -811,7 +773,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
               est prévue pour 2020.
             </div>
             <div
-              class=""
+              class="sc-gzVnrw dULJxC"
             >
               <div>
                 html
@@ -1011,25 +973,6 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
 `;
 
 exports[`<Answer /> should render 1`] = `
-.c0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-}
-
-.c1 ul {
-  z-index: 100;
-}
-
-.c1 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
-}
-
 <div>
   <div
     class="section-white shadow-bottom search-widget"
@@ -1142,7 +1085,7 @@ exports[`<Answer /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c0"
+              class="sc-bxivhb RULfe"
               for="main-search-input"
             >
               <span
@@ -1168,7 +1111,7 @@ exports[`<Answer /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c1"
+                  class="sc-ifAKCX cggTaJ"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -1331,7 +1274,7 @@ exports[`<Answer /> should render 1`] = `
           </div>
           intro de l'article
           <div
-            class=""
+            class="sc-EHOje hAUQPT"
           >
             <p
               class="test-content"
@@ -1418,26 +1361,7 @@ exports[`<Answer /> should render 1`] = `
 
 exports[`<Answer /> should render additional content 1`] = `
 <body>
-  .c0 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-}
-
-.c1 ul {
-  z-index: 100;
-}
-
-.c1 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
-}
-
-<div
+  <div
     aria-hidden="true"
   >
     <div
@@ -1551,7 +1475,7 @@ exports[`<Answer /> should render additional content 1`] = `
                 </select>
               </label>
               <label
-                class="c0"
+                class="sc-bxivhb RULfe"
                 for="main-search-input"
               >
                 <span
@@ -1577,7 +1501,7 @@ exports[`<Answer /> should render additional content 1`] = `
                     value=""
                   />
                   <div
-                    class="c1"
+                    class="sc-ifAKCX cggTaJ"
                     id="react-autowhatever-cdtn-documents-suggester"
                     role="listbox"
                   />
@@ -1722,7 +1646,7 @@ exports[`<Answer /> should render additional content 1`] = `
               est prévue pour 2020.
             </div>
             <div
-              class=""
+              class="sc-gZMcBi dTdKsO"
             >
               <div>
                 html

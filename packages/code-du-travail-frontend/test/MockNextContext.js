@@ -50,6 +50,9 @@ export default class MockNextContext extends React.Component {
   }
 }
 
-export function renderWithMock(node, options) {
-  return render(<MockNextContext>{node}</MockNextContext>, options);
+export function renderWithMock(node, router, options) {
+  return render(
+    <MockNextContext router={router}>{node}</MockNextContext>,
+    options
+  );
 }

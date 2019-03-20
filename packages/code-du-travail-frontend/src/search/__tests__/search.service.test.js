@@ -21,9 +21,7 @@ describe("suggest service", () => {
     suggestResults(query);
     jest.runAllTimers();
     expect(fetch).toBeCalledTimes(1);
-    expect(fetch.mock.calls[0][0]).toMatch(
-      /api\.url\/suggest\?q=foo&excludeSources=$/
-    );
+    expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
     expect(results).toMatchSnapshot();
   });
   it("should make a request once", () => {
@@ -31,9 +29,7 @@ describe("suggest service", () => {
     suggestResults(query);
     jest.runAllTimers();
     expect(fetch).toBeCalledTimes(1);
-    expect(fetch.mock.calls[0][0]).toMatch(
-      /api\.url\/suggest\?q=foo&excludeSources=$/
-    );
+    expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
     expect(results).toMatchSnapshot();
   });
 });

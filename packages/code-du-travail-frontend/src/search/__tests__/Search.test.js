@@ -13,19 +13,8 @@ jest.mock("../search.service.js", () => ({
 
 Router.pushRoute = jest.fn();
 
-const suggestions = {
-  hits: {
-    hits: [
-      {
-        _source: {
-          source: "faq",
-          title: "faq title",
-          slug: "faq-title"
-        }
-      }
-    ]
-  }
-};
+const q = "foo";
+const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
 suggestResults.mockResolvedValue(Promise.resolve(suggestions));
 
@@ -37,7 +26,8 @@ describe("<search />", () => {
 
   it("should render suggestions", async () => {
     const { container, getAllByRole, getByLabelText } = renderWithMock(
-      <Search />
+      <Search />,
+      { query: { q } }
     );
     const input = getByLabelText(/rechercher/i);
     fireEvent.change(input, { target: { value: "yolo" } });
