@@ -3,6 +3,9 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: es-cluster
+  labels:
+    app: es-cluster${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   serviceName: elasticsearch
   replicas: 3

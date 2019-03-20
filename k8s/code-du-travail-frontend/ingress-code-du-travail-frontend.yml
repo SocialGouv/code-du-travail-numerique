@@ -5,6 +5,7 @@ metadata:
   name: cdtn-frontend${BRANCH_NAME}
   labels:
     app: cdtn-frontend${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   rules:
   - host: code-du-travail-numerique${BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr

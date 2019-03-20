@@ -5,6 +5,7 @@ metadata:
   name: kibana${BRANCH_NAME}
   labels:
     app: kibana${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   replicas: 1
   selector:

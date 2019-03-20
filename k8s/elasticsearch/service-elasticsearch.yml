@@ -5,6 +5,7 @@ metadata:
   name: elasticsearch${BRANCH_NAME}
   labels:
     app: elasticsearch${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   selector:
     app: elasticsearch${BRANCH_NAME}

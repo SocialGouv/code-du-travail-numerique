@@ -5,6 +5,7 @@ metadata:
   name: cdtn-api${BRANCH_NAME}
   labels:
     app: cdtn-api${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   selector:
     app: cdtn-api${BRANCH_NAME}

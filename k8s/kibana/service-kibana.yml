@@ -4,6 +4,7 @@ metadata:
   name: kibana${BRANCH_NAME}
   labels:
     app: kibana${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   ports:
   - port: 5601

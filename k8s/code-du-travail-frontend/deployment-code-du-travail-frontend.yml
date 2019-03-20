@@ -5,6 +5,7 @@ metadata:
   name: cdtn-frontend${BRANCH_NAME}
   labels:
     app: cdtn-frontend${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   replicas: 1
   selector:

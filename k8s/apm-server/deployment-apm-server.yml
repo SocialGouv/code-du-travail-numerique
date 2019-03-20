@@ -5,6 +5,7 @@ metadata:
   name: apm-server${BRANCH_NAME}
   labels:
     app: apm-server${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   replicas: 1
   selector:

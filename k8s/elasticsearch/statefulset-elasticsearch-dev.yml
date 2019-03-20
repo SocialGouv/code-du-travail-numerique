@@ -3,6 +3,9 @@ apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
   name: elasticsearch${BRANCH_NAME}
+  labels:
+    app: elasticsearch${BRANCH_NAME}
+    branch: cdtn${BRANCH_NAME}
 spec:
   serviceName: elasticsearch${BRANCH_NAME}
   replicas: 1
