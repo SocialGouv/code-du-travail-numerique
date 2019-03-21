@@ -196,7 +196,11 @@ build-and-push-cdtn-api-image:
   - cd packages/code-du-travail-api
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
+  - >-
+    docker build
+    --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+    --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA"
 
 build-and-push-cdtn-frontend-image:
@@ -210,7 +214,11 @@ build-and-push-cdtn-frontend-image:
   - cd packages/code-du-travail-frontend
   - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" .
+  - >-
+    docker build
+    --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+    --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA"
 
 build-and-push-cdtn-data-image:
@@ -246,6 +254,7 @@ deploy-elasticsearch:
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   except:
   - master
 
@@ -263,6 +272,7 @@ create-cdtn-es-index:
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   except:
   - master
 
@@ -285,6 +295,7 @@ deploy-cdtn-api:
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${API_PORT}
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   environment:
     name: dev
   except:
@@ -305,6 +316,7 @@ deploy-cdtn-frontend:
     BRANCH_NAME: -$CI_COMMIT_REF_NAME
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${FRONTEND_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   environment:
     name: dev
   except:
@@ -358,6 +370,7 @@ deploy-elasticsearch-prod:
     IMAGE_TAG: $CI_COMMIT_SHA
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
   - master
 
@@ -375,6 +388,7 @@ create-cdtn-es-index-prod:
     IMAGE_TAG: $CI_COMMIT_SHA
     BRANCH_NAME: ''
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
   - master
 
@@ -397,6 +411,7 @@ deploy-cdtn-api-prod:
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${API_PORT}
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   environment:
     name: ops
   only:
@@ -417,6 +432,7 @@ deploy-cdtn-frontend-prod:
     BRANCH_NAME: ''
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${FRONTEND_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   environment:
     name: ops
   only:

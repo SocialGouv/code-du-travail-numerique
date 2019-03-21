@@ -1,5 +1,6 @@
 ARG TAG_BASE_IMAGE=master
-ARG BASE_IMAGE=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:${TAG_BASE_IMAGE}
+ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
+ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 
 FROM ${BASE_IMAGE}
 

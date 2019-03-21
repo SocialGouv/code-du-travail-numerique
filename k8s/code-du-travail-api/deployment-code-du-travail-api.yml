@@ -17,7 +17,7 @@ spec:
         app: cdtn-api${BRANCH_NAME}
     spec:
       containers:
-      - image:  registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:${IMAGE_TAG}
+      - image:  ${CDTN_REGISTRY}/api:${IMAGE_TAG}
         name: cdtn-api${BRANCH_NAME}
         ports:
         - containerPort: ${PORT}

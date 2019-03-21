@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: cdtn-data${BRANCH_NAME}
-    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:${IMAGE_TAG}
+    image: ${CDTN_REGISTRY}/data:${IMAGE_TAG}
     env:
     - name: ELASTICSEARCH_URL
       value: http://elasticsearch${BRANCH_NAME}:${ES_PORT}

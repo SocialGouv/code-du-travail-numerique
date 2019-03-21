@@ -22,7 +22,7 @@ spec:
         emptyDir: {}
       containers:
       - name: elasticsearch
-        image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/elasticsearch:${IMAGE_TAG}
+        image: ${CDTN_REGISTRY}/elasticsearch:${IMAGE_TAG}
         resources:
           limits:
             cpu: 1000m
