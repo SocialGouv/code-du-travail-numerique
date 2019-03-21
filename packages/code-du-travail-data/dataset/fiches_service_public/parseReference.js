@@ -1,6 +1,7 @@
 
 // Do we really need this one ?
 const find = require("unist-util-find");
+const slugify = require('slugify');
 const queryString = require("query-string");
 const cdt = require("../code_du_travail/code-du-travail.json");
 const kali = require("../kali/kali.json");
@@ -46,6 +47,9 @@ const createCDTRef = id => ({
 const createCCRef = (id, title) => ({
   type: "convention-collective",
   id,
+  // beware, the slug below is linked with the slug generated here:
+  // packages/code-du-travail-data/search/indexing/cdtn_documents.py
+  slug: slugify(`${id}-${title}`.substring(0, 80), { lower: true}),
   title,
 });
 
