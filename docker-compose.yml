@@ -34,8 +34,6 @@ services:
 
   nlp_api:
     restart: always
-    depends_on:
-      - elasticsearch
     ports:
       - 5000:5000
     build:

@@ -1,6 +1,6 @@
-from flask import Flask
-from flask import request
+from flask import Flask, request
 from quest2keys.extract_keywords import SpacyExtractor
+
 
 SPACY_FILTER_SOFT = ["NOUN","PROPN", "VERB", "X","ADJ", "ADV"]
 se = SpacyExtractor(SPACY_FILTER_SOFT, "fr_core_news_md")

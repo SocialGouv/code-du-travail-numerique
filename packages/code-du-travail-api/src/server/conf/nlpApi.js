@@ -7,6 +7,6 @@ logger.info(`nlp-api at ${NLP_API_URL}`);
 
 module.exports = async function quest2keys(query) {
   const response = await fetch(`${NLP_API_URL}/api/quest2keys?q=${query}`);
-  const data = await response.text();
-  return data;
+  const text = await response.text();
+  return text;
 };
