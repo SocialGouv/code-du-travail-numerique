@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: apm-server${BRANCH_NAME}
-        image: docker.elastic.co/apm/apm-server:6.4.2
+        image: docker.elastic.co/apm/apm-server:${ELK_VERSION}
         resources:
           limits:
             cpu: 1000m
