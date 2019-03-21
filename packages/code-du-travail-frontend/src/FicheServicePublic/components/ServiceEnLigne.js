@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin-bottom: ${spacing.base};
   padding: ${spacing.large};
-  background-color: ${colors.lighterGrey};
+  background-color: ${colors.darkBackground};
   border-radius: ${box.borderRadius};
 `;
 

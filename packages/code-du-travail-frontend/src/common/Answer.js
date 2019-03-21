@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Alert, Article, NoAnswer, Button } from "@cdt/ui";
+import { Alert, Article, Button, Container, NoAnswer, theme } from "@cdt/ui";
+import styled from "styled-components";
 import { withRouter } from "next/router";
 import ReactPiwik from "react-piwik";
 
@@ -9,6 +10,8 @@ import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
 import { FeedbackModal } from "../common/FeedbackModal";
+
+const { spacing } = theme;
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -21,9 +24,11 @@ const BackToResultsLink = ({ query }) => {
 
   return (
     <Container>
-      <Link route="recherche" params={{ ...query }}>
-        <a>{"< Retour aux résultats"}</a>
-      </Link>
+      <BacklinkWrapper>
+        <Link route="recherche" params={{ ...query }}>
+          <a>{"< Retour aux résultats"}</a>
+        </Link>
+      </BacklinkWrapper>
     </Container>
   );
 };
@@ -126,3 +131,7 @@ class Answer extends React.Component {
 }
 
 export default withRouter(Answer);
+
+const BacklinkWrapper = styled.div`
+  margin-top: ${spacing.base};
+`;

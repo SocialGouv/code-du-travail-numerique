@@ -1,17 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemTitle,
-  AccordionItemBody
-} from "react-accessible-accordion";
-import { theme, VerticalArrow, keyframes } from "@cdt/ui";
+import { Accordion, theme } from "@cdt/ui";
 import { ElementBuilder } from "../index";
 
-const { colors, spacing } = theme;
-const { fadeIn } = keyframes;
+const { spacing } = theme;
 
 const isItemOfAccordion = element =>
   element.name === "Chapitre" &&
@@ -26,15 +19,12 @@ class AccordionWrapper extends React.PureComponent {
     const { data, headingLevel } = this.props;
     const firstIndexOfAccordionItem = data.$.findIndex(isItemOfAccordion);
     const accordionItems = data.$.filter(isItemOfAccordion).map(
-      (accordionItem, index) => {
+      accordionItem => {
         const title = (
-          <>
-            <ElementBuilder
-              data={accordionItem.$.find(child => child.name === "Titre")}
-              headingLevel={headingLevel}
-            />
-            <VerticalArrow />
-          </>
+          <ElementBuilder
+            data={accordionItem.$.find(child => child.name === "Titre")}
+            headingLevel={headingLevel}
+          />
         );
         const body = (
           <ElementBuilder
@@ -42,12 +32,10 @@ class AccordionWrapper extends React.PureComponent {
             headingLevel={headingLevel + 1}
           />
         );
-        return (
-          <AccordionItem key={index}>
-            <AccordionItemTitle>{title}</AccordionItemTitle>
-            <AccordionItemBody>{body}</AccordionItemBody>
-          </AccordionItem>
-        );
+        return {
+          title,
+          body
+        };
       }
     );
 
@@ -66,7 +54,9 @@ class AccordionWrapper extends React.PureComponent {
     return (
       <>
         {beforeAccordionElements}
-        <StyledAccordion accordion={false}>{accordionItems}</StyledAccordion>
+        <StyledAccordion items={accordionItems}>
+          {accordionItems}
+        </StyledAccordion>
         {afterAccordionElements}
       </>
     );
@@ -77,39 +67,4 @@ export default AccordionWrapper;
 
 const StyledAccordion = styled(Accordion)`
   margin-bottom: ${spacing.large};
-
-  .accordion__item + .accordion__item {
-    border-top: 1px solid ${colors.elementBorder};
-  }
-
-  .accordion__title {
-    position: relative;
-    padding-right: ${spacing.large};
-    cursor: pointer;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: currentColor;
-      font-weight: normal;
-    }
-  }
-
-  .accordion__title:hover,
-  .accordion__title:focus,
-  .accordion__title:focus-within,
-  .accordion__title[aria-expanded="true"] {
-    color: ${colors.title};
-  }
-
-  .accordion__body {
-    padding: ${spacing.base};
-    animation: ${fadeIn} 0.35s ease-in;
-  }
-
-  .accordion__body--hidden {
-    display: none;
-  }
 `;

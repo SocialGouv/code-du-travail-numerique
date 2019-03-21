@@ -92,11 +92,15 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
   }
 }
 
-const FicheServicePublic = props => (
-  <StyledElementBuilder>
-    <ElementBuilder {...props} />
-  </StyledElementBuilder>
-);
+class FicheServicePublic extends React.PureComponent {
+  render() {
+    return (
+      <StyledElementBuilder>
+        <ElementBuilder {...this.props} />
+      </StyledElementBuilder>
+    );
+  }
+}
 
 FicheServicePublic.propTypes = {
   data: PropTypes.array.isRequired

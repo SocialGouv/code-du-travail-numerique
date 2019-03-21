@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should render 1`] = `
+<div>
+  <div
+    class="sc-htpNat iVrhmn"
+  >
+    <div
+      class="accordion__item"
+    >
+      <div
+        aria-controls="accordion__body-0"
+        aria-expanded="false"
+        class="accordion__title"
+        id="accordion__title-0"
+        role="button"
+        tabindex="0"
+      >
+        This is the title
+        <div
+          class="sc-bwzfXH fjzBfR"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-0"
+        class="accordion__body accordion__body--hidden"
+        id="accordion__body-0"
+      >
+        this is the body
+      </div>
+    </div>
+  </div>
+</div>
+`;
