@@ -14,6 +14,7 @@ services:
   nlp_api:
     environment:
       - FLASK_ENV=development
+      - FLASK_DEBUG=1
     volumes:
       - ./packages/code-du-travail-nlp/:/app
     command: flask run --host=0.0.0.0

@@ -1,2 +1,5 @@
 venv
-api/__pycache__
+__pycache__
+
+api/data/*
+!api/data/stops.txt

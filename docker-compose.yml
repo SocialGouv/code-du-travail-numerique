@@ -33,11 +33,16 @@ services:
       dockerfile: ./Dockerfile
 
   nlp_api:
+    restart: always
+    env_file:
+      - .env
     ports:
       - 5000:5000
     build:
       context: ./packages/code-du-travail-nlp
       dockerfile: ./Dockerfile
+    volumes:
+      - ./packages/code-du-travail-nlp/api/data/${SUGGEST_DATA_FILE}:/app/api/data/${SUGGEST_DATA_FILE}
 
 volumes:
   esdata:

@@ -1,15 +1,34 @@
 from flask import Flask
 from flask import request
+from flask import jsonify
+from api.determinist_autosuggest import autoSuggestor
+
+import os
+
+
+data_filename = os.environ.get('SUGGEST_DATA_FILE')
+stops_filename = "stops.txt"
+data_dir = os.path.abspath(os.path.join(__file__, "../data"))
+link_path = os.path.join(data_dir, data_filename)
+stops_path = os.path.join(data_dir, stops_filename)
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
+app.logger.info("Flask app started ")
+
+auto = autoSuggestor(link_path, stops_path)
+app.logger.info("api suggest data: %s", data_filename)
 
 @app.route('/')
 def hello():
-    return 'Hello there !'
+    return 'suggest api'
 
-@app.route('/api/words')
-def words():
-    return 'query < %s >' % request.args.get('q', '')
+@app.route('/api/suggest', methods=['GET'])
+def suggest():
+    input = request.args.get('q')
+    results =  auto.auto_suggest_fast(input)
+    results = [r[0] for r in results]
+    return jsonify(results)
 
 if __name__ == "__main__":
     app.run(debug=True)
