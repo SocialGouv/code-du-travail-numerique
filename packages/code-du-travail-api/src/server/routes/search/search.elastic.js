@@ -49,7 +49,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                 },
                 {
                   match: {
-                    "text.text_stemmed": {
+                    "text.french_stemmed": {
                       query: query
                     }
                   }
