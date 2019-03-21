@@ -12,6 +12,7 @@ variables:
   DOCKER_VERSION: "18.06"
   DOCKER_COMPOSE_VERSION: "1.23.2"
   PYTHON_VERSION: "3.6-alpine"
+  PIP_VERSION: "11.10.1"
   ELASTICSEARCH_PORT: 9200
   ELASTICSEARCH_INTER_NODE_PORT: 9300
   API_PORT: 1337
@@ -93,7 +94,7 @@ lint-cdtn-data:
   - cd packages/code-du-travail-data
   - apk add build-base
   - pip install --upgrade pip
-  - pip install pipenv==11.10.1
+  - pip install pipenv==$PIP_VERSION
   - pipenv install --dev --three
   script:
   - pipenv run pylint --output-format=colorized search
@@ -158,7 +159,7 @@ test-cdtn-data:
   - cd packages/code-du-travail-data
   - apk add build-base
   - pip install --upgrade pip
-  - pip install pipenv==11.10.1
+  - pip install pipenv==$PIP_VERSION
   - pipenv install --dev
   script:
   - pipenv run python search/indexing/document_slug_checker.py -v
