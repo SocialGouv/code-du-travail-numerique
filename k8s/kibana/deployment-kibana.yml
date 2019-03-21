@@ -26,6 +26,6 @@ spec:
             cpu: 100m
         env:
         - name: ELASTICSEARCH_URL
-          value: http://elasticsearch${BRANCH_NAME}:9200
+          value: http://elasticsearch${BRANCH_NAME}:${ES_PORT}
         ports:
-        - containerPort: 5601
+        - containerPort: ${KBN_PORT}

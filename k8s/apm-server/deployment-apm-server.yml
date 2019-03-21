@@ -28,10 +28,10 @@ spec:
         - name: logging.level
           value: "trace"
         - name: setup.kibana.host
-          value: "kibana:5601"
+          value: "kibana:${KBN_PORT}"
         - name: output.elasticsearch.hosts
-          value: "elasticsearch${BRANCH_NAME}:9200"
+          value: "elasticsearch${BRANCH_NAME}:${ES_PORT}"
         - name: output.elasticsearch.enabled
           value: "true"
         ports:
-        - containerPort: 8200
+        - containerPort: ${APM_PORT}
