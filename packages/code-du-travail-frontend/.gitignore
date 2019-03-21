@@ -1,28 +1,4 @@
-docker-compose.override.yml
-docker-compose.override.yaml
-
-build
-
-# OS generated files #
-######################
-*#
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Editor files #
-################
-.tm_properties
-
-# NPM #
-################
-node_modules/
-
-# Next.js #
+# Next.js      #
 ################
 .next
 
