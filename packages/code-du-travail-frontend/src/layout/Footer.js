@@ -31,6 +31,8 @@ const Footer = () => (
                   publicRuntimeConfig.PACKAGE_VERSION
                 }
                 className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Contribuer sur Github
               </a>
@@ -42,6 +44,8 @@ const Footer = () => (
                   publicRuntimeConfig.PACKAGE_VERSION
                 }
                 className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Journal des modifications
               </a>
