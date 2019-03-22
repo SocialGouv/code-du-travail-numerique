@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent, render, waitForElement } from "react-testing-library";
 
-import { CompanySuggester } from "../CompanySuggester";
+import { CompanySuggester, reformatSiret } from "../CompanySuggester";
 
 const item = {
   name: "RENAULT-32444-VILLARD",
@@ -67,5 +67,31 @@ describe("<CompanySuggester />", () => {
     await waitForElement(() =>
       getByText("Aucune entreprise trouvée pour le SIRET 340 495 283 94945")
     );
+  });
+});
+
+describe("reformatSiret", () => {
+  it("does nothing for less than 3 numbers", () => {
+    expect(reformatSiret("34")).toEqual("34");
+  });
+
+  it("add one space with 3-6 numbers", () => {
+    expect(reformatSiret("34344")).toEqual("343 44");
+  });
+
+  it("adds 2 spaces with 6-9 numbers", () => {
+    expect(reformatSiret("34344499")).toEqual("343 444 99");
+  });
+
+  it("adds 3 spaces with 9+ numbers", () => {
+    expect(reformatSiret("34344499940")).toEqual("343 444 999 40");
+  });
+
+  it("limits to 14 chars", () => {
+    expect(reformatSiret("49348322990909444")).toEqual("493 483 229 90909");
+  });
+
+  it("doesn't explode with non-numerical values", () => {
+    expect(reformatSiret("abcdefgh")).toEqual("abcdefgh");
   });
 });

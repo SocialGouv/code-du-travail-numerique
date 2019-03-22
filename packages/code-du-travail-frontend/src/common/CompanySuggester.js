@@ -7,6 +7,14 @@ import {
   suggesterTheme
 } from "./IdccSuggester";
 
+export const reformatSiret = value =>
+  value
+    .toString()
+    .replace(/ /g, "")
+    .substring(0, 14)
+    .replace(/(\d{1,3})?(\d{1,3})?(\d{1,3})?(\d{1,5})?/, "$1 $2 $3 $4")
+    .trim();
+
 export class CompanySuggester extends React.Component {
   static propTypes = {
     onSearch: PropTypes.func.isRequired,
@@ -25,14 +33,7 @@ export class CompanySuggester extends React.Component {
         placeholder="Numéro de SIRET à 14 chiffres"
         theme={suggesterTheme}
         // inserts spaces to have a "000 000 000 00000" format and limits to 14 chars
-        reformatEnteredValue={v =>
-          v
-            .toString()
-            .replace(/ /g, "")
-            .substring(0, 14)
-            .replace(/(\d{1,3})?(\d{1,3})?(\d{1,3})?(\d{1,5})?/, "$1 $2 $3 $4")
-            .trim()
-        }
+        reformatEnteredValue={reformatSiret}
         // remove spaces when sending query for search
         reformatSearchedValue={v => v.replace(/ /g, "")}
         // only display an error message when the query is 14 chars long
