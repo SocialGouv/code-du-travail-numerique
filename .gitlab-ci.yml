@@ -255,7 +255,7 @@ deploy-elasticsearch:
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   except:
-  - master
+  - ops
 
 create-cdtn-es-index:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
@@ -271,7 +271,7 @@ create-cdtn-es-index:
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   except:
-  - master
+  - ops
 
 deploy-cdtn-api:
   stage: "Deploy Code du Travail Numerique"
@@ -294,7 +294,7 @@ deploy-cdtn-api:
   environment:
     name: dev
   except:
-  - master
+  - ops
 
 deploy-cdtn-frontend:
   stage: "Deploy Code du Travail Numerique"
@@ -313,7 +313,7 @@ deploy-cdtn-frontend:
   environment:
     name: dev
   except:
-  - master
+  - ops
 
 send-url:
   stage: "Send Url"
@@ -352,7 +352,7 @@ deploy-kibana:
     ES_PORT: ${ELASTICSEARCH_PORT}
     KBN_PORT: ${KIBANA_PORT}
   only:
-  - master
+  - ops
 
 deploy-apm-server:
   stage: "Deploy EL Stack"
@@ -370,7 +370,7 @@ deploy-apm-server:
     KBN_PORT: ${KIBANA_PORT}
     APM_PORT: ${APM_SERVER_PORT}
   only:
-  - master
+  - ops
 
 deploy-elasticsearch-prod:
   stage: "Deploy EL Stack"
@@ -388,7 +388,7 @@ deploy-elasticsearch-prod:
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-  - master
+  - ops
 
 create-cdtn-es-index-prod:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
@@ -405,7 +405,7 @@ create-cdtn-es-index-prod:
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-  - master
+  - ops
 
 deploy-cdtn-api-prod:
   stage: "Deploy Code du Travail Numerique"
@@ -429,7 +429,7 @@ deploy-cdtn-api-prod:
   environment:
     name: ops
   only:
-  - master
+  - ops
 
 deploy-cdtn-frontend-prod:
   stage: "Deploy Code du Travail Numerique"
@@ -449,7 +449,7 @@ deploy-cdtn-frontend-prod:
   environment:
     name: ops
   only:
-  - master
+  - ops
 
 send-url-prod:
   stage: "Send Url"
@@ -489,4 +489,4 @@ delete-pods:
   script:
   - python3 k8s/scripts/delete-pods.py
   only:
-  - master
+  - ops
