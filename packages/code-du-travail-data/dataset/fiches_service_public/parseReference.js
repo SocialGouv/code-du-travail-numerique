@@ -1,7 +1,6 @@
 
 // Do we really need this one ?
 const find = require("unist-util-find");
-const slugify = require('slugify');
 const queryString = require("query-string");
 const cdt = require("../code_du_travail/code-du-travail.json");
 const kali = require("../kali/kali.json");
@@ -44,15 +43,6 @@ const createCDTRef = id => ({
   title: `Article ${id} du code du travail`
 });
 
-const createCCRef = (id, title) => ({
-  type: "convention-collective",
-  id,
-  // beware, the slug below is linked with the slug generated here:
-  // packages/code-du-travail-data/search/indexing/cdtn_documents.py
-  slug: slugify(`${id}-${title}`.substring(0, 80), { lower: true}),
-  title,
-});
-
 const createJORef = (id, title, url) => ({
   type: "journal-officiel",
   id,
@@ -77,8 +67,8 @@ const parseReference = reference => {
           return getArticlesFromSection(qs.idSectionTA);
         }
       case "convention-collective":
-        const convention = kali.find(convention => convention.id === qs.idConvention);
-        return [createCCRef(convention.num, convention.titre)];
+        const {id, title, slug} = kali.find(convention => convention.id === qs.idConvention);
+        return [{type: "convention-collective", id, title, slug}];
       case "journal-officiel":
         return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
       default:
