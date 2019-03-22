@@ -17,6 +17,9 @@ const FormSearchButton = () => (
     Rechercher
   </button>
 );
+
+const suggestMaxResults = 5;
+
 const SearchIconWithClipboard = withClipboard(SearchIcon);
 
 class Search extends React.Component {
@@ -151,7 +154,9 @@ class Search extends React.Component {
               }
             }))
           )
-        : suggestResults(value).then(items => items.slice(0, 5));
+        : suggestResults(value).then(items =>
+            items.slice(0, suggestMaxResults)
+          );
 
     asyncSearchResult
       .then(results => {
