@@ -56,7 +56,7 @@ const ReferencesJuridiques = ({ references }) => {
           <ConventionLink
             key={texteConventionnel.id}
             title={texteConventionnel.title}
-            slug={texteConventionnel.id}
+            slug={texteConventionnel.slug}
           />
         );
       case TYPE_REFERENCE.journalOfficiel:

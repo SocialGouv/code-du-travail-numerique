@@ -43,9 +43,10 @@ const createCDTRef = id => ({
   title: `Article ${id} du code du travail`
 });
 
-const createCCRef = (id, title) => ({
+const createCCRef = (id, slug, title) => ({
   type: "convention-collective",
   id,
+  slug,
   title,
 });
 
@@ -73,8 +74,8 @@ const parseReference = reference => {
           return getArticlesFromSection(qs.idSectionTA);
         }
       case "convention-collective":
-        const convention = kali.find(convention => convention.id === qs.idConvention);
-        return [createCCRef(convention.num, convention.titre)];
+        const {id, slug, title} = kali.find(convention => convention.id === qs.idConvention);
+        return [createCCRef(id, slug, title)];
       case "journal-officiel":
         return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
       default:

@@ -53,7 +53,7 @@ def populate_cdtn_documents():
         for val in data:
             CDTN_DOCUMENTS.append({
                 'source': 'kali',
-                'slug': val['num'],
+                'slug': val['slug'],
                 'title': val['titre'],
                 'text': f"IDCC {val['num']} {val['titre']}",
                 'url': val['url'],
