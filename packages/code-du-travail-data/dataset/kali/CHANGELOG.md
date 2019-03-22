@@ -3,7 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 2.0.0 (2019-03-08)
+# [2.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.8.0...v2.0.0) (2019-03-08)
+
+
+### Bug Fixes
+
+* **data:** make unique slugs for faqs ([#500](https://github.com/SocialGouv/code-du-travail-numerique/issues/500)) ([2fcb7f8](https://github.com/SocialGouv/code-du-travail-numerique/commit/2fcb7f8))
 
 
 ### Features
@@ -23,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.8.0 (2019-02-12)
+# [1.8.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.4...v1.8.0) (2019-02-12)
 
 **Note:** Version bump only for package @cdt/data...kali
 
@@ -31,18 +36,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## 1.7.3 (2019-01-29)
-
-
-### Bug Fixes
-
-* **data:** mise à jour des metadata des courrier ([#431](https://github.com/SocialGouv/code-du-travail-numerique/issues/431)) ([bc4c9e7](https://github.com/SocialGouv/code-du-travail-numerique/commit/bc4c9e7)), closes [#429](https://github.com/SocialGouv/code-du-travail-numerique/issues/429)
+## [1.7.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.2...v1.7.3) (2019-01-29)
 
 
 
 
 
-## 1.7.1 (2019-01-18)
+## [1.7.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.0...v1.7.1) (2019-01-18)
 
 **Note:** Version bump only for package @cdt/data...kali
 
@@ -50,12 +50,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.7.0 (2019-01-15)
-
-
-### Bug Fixes
-
-* **frontend:** change trackEvent value for feedback ([#404](https://github.com/SocialGouv/code-du-travail-numerique/issues/404)) ([26b664b](https://github.com/SocialGouv/code-du-travail-numerique/commit/26b664b))
+# [1.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.6.2...v1.7.0) (2019-01-15)
 
 
 
@@ -69,12 +64,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.6.0 (2018-12-18)
-
-
-### Features
-
-* add related content for faq ([#370](https://github.com/SocialGouv/code-du-travail-numerique/issues/370)) ([853ae51](https://github.com/SocialGouv/code-du-travail-numerique/commit/853ae51))
+# [1.6.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.5.2...v1.6.0) (2018-12-18)
 
 
 
@@ -88,7 +78,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## 1.5.1 (2018-12-11)
+## [1.5.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/0c91820...v1.5.1) (2018-12-11)
 
 
 ### Bug Fixes
