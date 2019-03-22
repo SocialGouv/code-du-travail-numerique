@@ -5,7 +5,8 @@ ENV FLASK_APP ./api/app
 
 WORKDIR ${APP_DIR}
 
-COPY . .
+COPY api .
+COPY requirements .
 
 RUN python -m venv venv
 RUN . venv/bin/activate
