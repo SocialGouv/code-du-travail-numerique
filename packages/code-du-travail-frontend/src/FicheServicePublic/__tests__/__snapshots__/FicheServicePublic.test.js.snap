@@ -1,6 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FicheServicePublic /> should render 1`] = `
+.c6 {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+}
+
+.c6::after,
+.c6::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.c6::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .c6::before,
+[aria-selected="true"] .c6::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .c6::after,
+[aria-selected="true"] .c6::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c6::before,
+.c6::after {
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+}
+
+.c5 .accordion__item + .accordion__item {
+  border-top: 1px solid #c9d3df;
+}
+
+.c5 .accordion__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.625rem;
+  cursor: pointer;
+}
+
+.c5 .accordion__title > * {
+  margin: 0;
+  padding: 0;
+  color: currentColor;
+  font-weight: normal;
+}
+
+.c5 .accordion__title:hover,
+.c5 .accordion__title:focus,
+.c5 .accordion__title:focus-within,
+.c5 .accordion__title[aria-expanded="true"] {
+  color: #006ab2;
+}
+
+.c5 .accordion__body {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c5 .accordion__body--hidden {
+  display: none;
+}
+
 .c3 {
   position: absolute;
   width: 1px;
@@ -13,109 +111,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border: 0;
 }
 
-.c5 {
-  display: inline-block;
-  position: relative;
-  width: 24px;
-  height: 12px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -6px;
-}
-
-.c5::after,
-.c5::before {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor;
-  content: "";
-}
-
-.c5::before {
-  left: 4px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-[aria-expanded="true"] .c5::before,
-[aria-selected="true"] .c5::before {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.c5::after {
-  right: 4px;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-[aria-expanded="true"] .c5::after,
-[aria-selected="true"] .c5::after {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.c5::before,
-.c5::after {
-  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
-  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
-}
-
 .c4 {
   margin-bottom: 2rem;
 }
 
-.c4 .accordion__item + .accordion__item {
-  border-top: 1px solid #c9d3df;
-}
-
-.c4 .accordion__title {
-  position: relative;
-  padding-right: 2rem;
-  cursor: pointer;
-}
-
-.c4 .accordion__title h1,
-.c4 .accordion__title h2,
-.c4 .accordion__title h3,
-.c4 .accordion__title h4,
-.c4 .accordion__title h5,
-.c4 .accordion__title h6 {
-  color: currentColor;
-  font-weight: normal;
-}
-
-.c4 .accordion__title:hover,
-.c4 .accordion__title:focus,
-.c4 .accordion__title:focus-within,
-.c4 .accordion__title[aria-expanded="true"] {
-  color: #006ab2;
-}
-
-.c4 .accordion__body {
-  padding: 1rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c4 .accordion__body--hidden {
-  display: none;
-}
-
-.c6 {
+.c7 {
   margin-bottom: 0.25rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -133,7 +137,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c8 {
+.c9 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -143,8 +147,8 @@ exports[`<FicheServicePublic /> should render 1`] = `
   color: #006ab2;
 }
 
-.c9:link,
-.c9:visited {
+.c10:link,
+.c10:visited {
   display: inline-block;
   background-color: #005994;
   color: #fff;
@@ -154,13 +158,13 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c9:hover,
-.c9:focus,
-.c9:active {
+.c10:hover,
+.c10:focus,
+.c10:active {
   background-color: #003b80;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   margin-top: 0.5rem;
   color: #8393a7;
@@ -216,14 +220,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c12 {
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: #f5f7fa;
   border-radius: 0.25rem;
 }
 
-.c11 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
@@ -305,7 +309,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </h2>
         </div>
         <div
-          class="c4"
+          class="c4 c5"
         >
           <div
             class="accordion__item"
@@ -322,7 +326,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 De quoi s'agit-il ?
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -361,7 +365,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Conditions
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -376,14 +380,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </p>
               <ul>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Dans le cadre d'une rupture volontaire du contrat de travail par le salarié
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -396,7 +400,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -406,7 +410,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -416,7 +420,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -443,7 +447,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Volonté de démissionner
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -509,7 +513,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Procédure
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -526,15 +530,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Il n'y a pas de procédure légale imposée pour signifier une démission. Vous pouvez prévenir votre employeur par oral ou par écrit, en lui adressant une lettre de démission.
               </p>
               <div
-                class="c7"
+                class="c8"
               >
                 <div
-                  class="c8"
+                  class="c9"
                 >
                   Modèle de document
                 </div>
                 <a
-                  class="c9"
+                  class="c10"
                   href="https://www.service-public.fr/simulateur/calcul/Demission"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -542,7 +546,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   Lettre de démission du salarié
                 </a>
                 <small
-                  class="c10"
+                  class="c11"
                 >
                   Direction de l'information légale et administrative (Premier ministre)
                 </small>
@@ -577,7 +581,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Préavis
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -651,14 +655,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                   <ul>
                     <li
-                      class="c6"
+                      class="c7"
                     >
                       <p>
                         Soit par convention collective ou accord collectif
                       </p>
                     </li>
                     <li
-                      class="c6"
+                      class="c7"
                     >
                       <p>
                         
@@ -671,7 +675,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                       </p>
                     </li>
                     <li
-                      class="c6"
+                      class="c7"
                     >
                       <p>
                         Soit par le droit local (en Alsace-Moselle)
@@ -685,7 +689,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     Si vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.
                   </p>
                   <div
-                    class="c11"
+                    class="c12"
                   >
                     <h6>
                       À savoir
@@ -716,7 +720,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </p>
               <ul>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -726,7 +730,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -819,14 +823,14 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </p>
               <ul>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Accord entre le salarié et l'employeur
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     
@@ -839,7 +843,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Arrêt de travail
@@ -849,7 +853,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Dispositions conventionnelles
@@ -891,7 +895,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Indemnisation
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -978,7 +982,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                 Documents remis au salarié
               </h3>
               <div
-                class="c5"
+                class="c6"
                 role="presentation"
               />
             </div>
@@ -993,28 +997,28 @@ exports[`<FicheServicePublic /> should render 1`] = `
               </p>
               <ul>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Certificat de travail
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Attestation Pôle emploi
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     Solde de tout compte
                   </p>
                 </li>
                 <li
-                  class="c6"
+                  class="c7"
                 >
                   <p>
                     En cas de dispositifs de participation, d'intéressement et des plans d'épargne salariale au sein de l'entreprise, état récapitulatif de l'ensemble des sommes et valeurs mobilières épargnées
@@ -1039,15 +1043,15 @@ exports[`<FicheServicePublic /> should render 1`] = `
       />
     </div>
     <div
-      class="c7"
+      class="c8"
     >
       <div
-        class="c8"
+        class="c9"
       >
         Modèle de document
       </div>
       <a
-        class="c9"
+        class="c10"
         href="https://www.service-public.fr/simulateur/calcul/Demission"
         rel="noopener noreferrer"
         target="_blank"
@@ -1055,7 +1059,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         Lettre de démission du salarié
       </a>
       <small
-        class="c10"
+        class="c11"
       >
         Direction de l'information légale et administrative (Premier ministre)
       </small>
