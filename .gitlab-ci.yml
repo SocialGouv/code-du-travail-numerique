@@ -134,7 +134,6 @@ test-cdtn-api:
     -e ELASTICSEARCH_URL=http://elasticsearch:9200
     --network $(docker network ls -qf name=code)
     "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-    node packages/code-du-travail-api/tests/create_indexes.js
   script:
   - >-
     docker run
