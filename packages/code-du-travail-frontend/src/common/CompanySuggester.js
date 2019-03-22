@@ -5,7 +5,7 @@ import {
   renderSuggestionsContainer,
   Suggestion,
   suggesterTheme
-} from "./IdccSuggester";
+} from "./IdccSuggesterTheme";
 
 export const reformatSiret = value =>
   value
