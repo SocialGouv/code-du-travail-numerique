@@ -13,6 +13,7 @@ services:
 
   nlp_api:
     environment:
+      - FLASK_RUN_PORT=$NLP_PORT
       - FLASK_ENV=development
       - FLASK_DEBUG=1
     volumes:

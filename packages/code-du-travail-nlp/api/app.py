@@ -6,18 +6,15 @@ from api.determinist_autosuggest import autoSuggestor
 import os
 
 
-data_filename = os.environ.get('SUGGEST_DATA_FILE')
-stops_filename = "stops.txt"
 data_dir = os.path.abspath(os.path.join(__file__, "../data"))
-link_path = os.path.join(data_dir, data_filename)
-stops_path = os.path.join(data_dir, stops_filename)
+link_path = os.path.join(data_dir, "data.txt")
+stops_path = os.path.join(data_dir, "stops.txt")
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 app.logger.info("Flask app started ")
 
 auto = autoSuggestor(link_path, stops_path)
-app.logger.info("api suggest data: %s", data_filename)
 
 @app.route('/')
 def hello():

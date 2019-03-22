@@ -3,7 +3,7 @@ from collections import Counter, defaultdict
 import json
 from itertools import chain
 
-link_path = "./data/data-test.txt"
+link_path = "./data/data.txt"
 stops_path = "./data/stops.txt"
 
 def load_titles(link_path):

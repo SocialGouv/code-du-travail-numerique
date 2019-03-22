@@ -37,12 +37,12 @@ services:
     env_file:
       - .env
     ports:
-      - 5000:5000
+      - $NLP_PORT:$NLP_PORT
     build:
       context: ./packages/code-du-travail-nlp
       dockerfile: ./Dockerfile
     volumes:
-      - ./packages/code-du-travail-nlp/api/data/${SUGGEST_DATA_FILE}:/app/api/data/${SUGGEST_DATA_FILE}
+      - ./packages/code-du-travail-nlp/data:/app/api/data
 
 volumes:
   esdata:
