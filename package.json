@@ -32,7 +32,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-push": "lerna run --stream prepush"
+      "pre-push": "lerna run --stream --parallel prepush"
     }
   },
   "engines": {"node": ">= 10.15 <11"}
