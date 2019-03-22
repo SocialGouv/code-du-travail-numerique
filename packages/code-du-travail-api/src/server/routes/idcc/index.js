@@ -19,18 +19,33 @@ const router = new Router({ prefix: API_BASE_URL });
  * http://localhost:1337/api/v1/idcc?q=1020Z
  *
  * @param {string} querystring.q A `q` querystring param containing the query to process.
- * @param {string} querystring.num A `num` querystring param containing the num to process.
  * @returns {Object} Results.
  */
 router.get("/idcc", async ctx => {
-  let body;
-  if (ctx.request.query.num) {
-    body = getIdccByNumBody({ query: ctx.request.query.num });
-  } else {
-    body = getIdccBody({ query: ctx.request.query.q });
-  }
+  const body = getIdccBody({ query: ctx.request.query.q });
 
   ctx.body = await elasticsearchClient.search({ index, body });
+});
+
+/**
+ * Return the convention collective object that matches the given num
+ *
+ * @example
+ * http://localhost:1337/api/v1/idcc/200
+ *
+ * @param {string} :num the searched IDCC number
+ * @returns {Object} one IDCC object.
+ */
+router.get("/idcc/:num", async ctx => {
+  const body = getIdccByNumBody({ query: ctx.params.num });
+
+  const results = await elasticsearchClient.search({ index, body });
+
+  if (results.hits.total === 0) {
+    ctx.throw(404, `no IDCC found for num ${ctx.params.num}`);
+  }
+
+  ctx.body = { ...results.hits.hits[0] };
 });
 
 module.exports = router;

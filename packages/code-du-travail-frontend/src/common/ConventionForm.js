@@ -4,6 +4,7 @@ import { X } from "react-feather";
 import styled from "styled-components";
 import { Button } from "@cdt/ui";
 import { IdccSuggester } from "./IdccSuggester";
+import { Link } from "../../routes";
 
 class ConventionForm extends React.Component {
   static propTypes = {
@@ -87,11 +88,14 @@ const Subtitle = styled.div`
 `;
 
 const ConventionPreview = ({ slug, idcc, title }) => {
-  const path = slug ? `/kali/${slug}` : `/kali-idcc/${idcc}`;
+  const route = slug ? "kali" : "kali-idcc";
+  const params = slug ? { slug } : { idccNum: idcc };
   return (
-    <a href={path}>
-      IDCC {idcc} {title ? `- ${title}` : ""}
-    </a>
+    <Link route={route} params={params}>
+      <a>
+        IDCC {idcc} {title ? `- ${title}` : ""}
+      </a>
+    </Link>
   );
 };
 ConventionPreview.propTypes = {

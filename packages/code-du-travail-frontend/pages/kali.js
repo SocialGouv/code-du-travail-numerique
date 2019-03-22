@@ -14,33 +14,32 @@ const {
 
 // a FAQ answer
 
-const fetchKali = ({ slug, idccNum }) =>
-  slug
-    ? fetch(`${API_URL}/items/kali/${slug}`).then(r => r.json())
-    : fetch(`${API_URL}/idcc?num=${idccNum}`)
-        .then(r => r.json())
-        .then(r => r.hits.hits)
-        .then(hits => {
-          return hits.length == 1 ? hits[0] : null;
-        });
+const fetchKali = ({ slug, idccNum }) => {
+  const url = slug
+    ? `${API_URL}/items/kali/${slug}`
+    : `${API_URL}/idcc/${idccNum}`;
+  return fetch(url)
+    .then(r => r.json())
+    .then(r => r.status != 404 && r._source);
+};
 
 class Kali extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchKali(query);
-    return { data };
+    const convention = await fetchKali(query);
+    return { convention };
   }
 
   render() {
-    const { data } = this.props;
-    if (!data || data.status === 404) {
+    if (!this.props.convention) {
       return (
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
+    const { title, url } = this.props.convention;
     return (
       <PageLayout>
         <Answer
-          title={data._source.title}
+          title={title}
           emptyMessage="Cette convention collective n'a pas été trouvée"
           footer="Informations fournies par la DILA"
           sourceType="Convention collective"
@@ -50,7 +49,7 @@ class Kali extends React.Component {
             Cliquez sur le lien ci dessous pour accéder à la convention
             collective sur LegiFrance :
           </p>
-          <a target="_blank" rel="noopener noreferrer" href={data._source.url}>
+          <a target="_blank" rel="noopener noreferrer" href={url}>
             <Button primary>
               <ExternalLink
                 style={{ verticalAlign: "middle", marginRight: 10 }}

@@ -53,7 +53,7 @@ module.exports = routes()
 
   // http://localhost:3000/kali/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
   .add({
-    name: "kaliIdcc",
+    name: "kali-idcc",
     page: "kali",
     pattern: "/kali-idcc/:idccNum"
   })
