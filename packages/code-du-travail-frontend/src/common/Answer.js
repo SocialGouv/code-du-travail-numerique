@@ -6,6 +6,7 @@ import { withRouter } from "next/router";
 import ReactPiwik from "react-piwik";
 
 import { Link } from "../../routes";
+import HierarchieDesNormes from "../HierarchieDesNormes";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
@@ -76,6 +77,7 @@ class Answer extends React.Component {
       icon,
       sourceType,
       additionalContent,
+      referencesJuridiques = [],
       emptyMessage = "Aucun résultat"
     } = this.props;
 
@@ -122,6 +124,9 @@ class Answer extends React.Component {
           </React.Fragment>
         )}
         {additionalContent}
+        {referencesJuridiques.length > 0 && (
+          <HierarchieDesNormes references={referencesJuridiques} />
+        )}
         <NoAnswer>
           <Button onClick={this.showModal}>Posez votre question</Button>
         </NoAnswer>

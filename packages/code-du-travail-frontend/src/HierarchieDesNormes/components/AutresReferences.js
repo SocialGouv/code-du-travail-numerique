@@ -4,7 +4,7 @@ import { Accordion } from "@cdt/ui";
 import TYPE_REFERENCE from "../typeReference";
 import { CodeDuTravailLink, ConventionLink, OtherLink } from "./links";
 
-const ReferencesJuridiques = ({ references }) => {
+const AutresReferences = ({ references, showTitle }) => {
   const getLink = reference => {
     switch (reference.type) {
       case TYPE_REFERENCE.codeDuTravail:
@@ -26,14 +26,14 @@ const ReferencesJuridiques = ({ references }) => {
   );
   const items = [
     {
-      title: "Voir ces articles du code du travail",
+      title: "Voir les articles du code du travail concernés",
       body: referenceList
     }
   ];
 
   return (
     <>
-      <h4>Autres références</h4>
+      {showTitle && <h3>Autres références</h3>}
       <p>
         Pour ces références, veuillez vérifier dans le code du travail quel est
         le texte applicable.
@@ -43,14 +43,15 @@ const ReferencesJuridiques = ({ references }) => {
   );
 };
 
-ReferencesJuridiques.propTypes = {
+AutresReferences.propTypes = {
   references: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       type: PropTypes.oneOf(Object.values(TYPE_REFERENCE)).isRequired,
       id: PropTypes.string.isRequired
     })
-  )
+  ),
+  showTitle: PropTypes.bool
 };
 
-export default ReferencesJuridiques;
+export default AutresReferences;

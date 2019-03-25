@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "@cdt/ui";
+import { Section, theme } from "@cdt/ui";
 import TYPE_REFERENCE from "./typeReference";
 import { references as referenceToBlocMapping } from "./mapping";
 import Bloc from "./components/Bloc";
 import AutresReferences from "./components/AutresReferences";
 
-const { box, colors, spacing } = theme;
+const { spacing } = theme;
 
 class ReferencesJuridiques extends React.PureComponent {
   render() {
@@ -40,13 +40,18 @@ class ReferencesJuridiques extends React.PureComponent {
     });
 
     return (
-      <ReferencesWrapper>
-        <h3>Références juridiques</h3>
-        {blocElements}
-        {autresReferences.length > 0 && (
-          <AutresReferences references={autresReferences} />
-        )}
-      </ReferencesWrapper>
+      <Section light>
+        <ReferencesWrapper>
+          <h2>Références juridiques</h2>
+          {blocElements}
+          {autresReferences.length > 0 && (
+            <AutresReferences
+              references={autresReferences}
+              showTitle={blocElements.length > 0}
+            />
+          )}
+        </ReferencesWrapper>
+      </Section>
     );
   }
 }
@@ -64,11 +69,10 @@ ReferencesJuridiques.propTypes = {
 export default ReferencesJuridiques;
 
 const ReferencesWrapper = styled.div`
-  margin-top: ${spacing.large};
-  padding: ${spacing.base};
-  background-color: ${colors.lightBackground};
-  border: 1px solid ${colors.elementBorder};
-  border-radius: ${box.borderRadius};
+  margin: ${spacing.base} 0;
+  h2 {
+    font-weight: bold;
+  }
   ul {
     margin: 0;
     padding: 0;

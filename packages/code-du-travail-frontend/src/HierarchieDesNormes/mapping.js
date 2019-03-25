@@ -26,20 +26,23 @@ export const blocs = {
       "L4622-3",
       "L4622-4",
       "L4622-5"
-    ]
+    ],
+    hasCCSearch: true
   },
   "1_1_b": {
     title: "L'accord de branche prime",
     text:
       "Pour ces thèmes, les accords négociés dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. A noter que votre entreprise ne peut pas conclure d'accord sur ces sujets.",
-    references: ["L3121-44", "L2135-9", "L2135-10", "L5121-4"]
+    references: ["L3121-44", "L2135-9", "L2135-10", "L5121-4"],
+    hasCCSearch: true
   },
   "1_2": {
     title:
       "L'accord de branche prime sauf garanties équivalentes de l'accord d'entreprise",
     text:
       "Pour ces thèmes, les accords négociés dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. A noter que s'il existe dans votre entreprise des accords conclus sur ces sujets, c'est l'accord de branche qui s'applique à votre situation sauf dans un cas spécifique. En effet, si l'accord de votre entreprise prévoit \"des garanties au moins équivalentes\" dans ce domaine, c'est l'accord de votre entreprise qui s'applique. \"des garanties au moins équivalentes\" s'apprécient par matière et par rapport à la collectivité de salariés.",
-    references: []
+    references: [],
+    hasCCSearch: true
   }
 };
 

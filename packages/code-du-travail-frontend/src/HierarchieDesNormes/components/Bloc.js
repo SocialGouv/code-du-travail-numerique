@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Accordion, theme } from "@cdt/ui";
+import { DialogContent, DialogOverlay } from "@reach/dialog";
+import { Accordion, Button, theme } from "@cdt/ui";
+import { ConventionForm } from "../../common/ConventionForm";
+import { searchIdcc } from "../../common/convention.service";
 import TYPE_REFERENCE from "../typeReference";
 import { CodeDuTravailLink } from "./links";
 
@@ -10,9 +13,12 @@ import { blocs } from "../mapping";
 const { box, colors, spacing } = theme;
 
 class Bloc extends React.PureComponent {
+  state = {
+    modalIsOpen: false
+  };
   render() {
     const { id, references } = this.props;
-    const { title, text } = blocs[id];
+    const { title, text, hasCCSearch } = blocs[id];
     const referenceList = (
       <ul>
         {references.map(reference => (
@@ -30,8 +36,35 @@ class Bloc extends React.PureComponent {
     ];
     return (
       <BlocWrapper>
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{text}</p>
+        {hasCCSearch && (
+          <>
+            <CCButtonWrapper>
+              <Button
+                onClick={() =>
+                  this.setState({
+                    modalIsOpen: true
+                  })
+                }
+              >
+                Trouvez votre convention collective
+              </Button>
+            </CCButtonWrapper>
+            <DialogOverlay
+              isOpen={this.state.modalIsOpen}
+              onDismiss={() =>
+                this.setState({
+                  modalIsOpen: false
+                })
+              }
+            >
+              <DialogContent>
+                <ConventionForm onSearch={searchIdcc} />
+              </DialogContent>
+            </DialogOverlay>
+          </>
+        )}
         <Accordion items={items} />
       </BlocWrapper>
     );
@@ -62,4 +95,9 @@ const BlocWrapper = styled.div`
     padding: 0;
     list-style-type: none;
   }
+`;
+
+const CCButtonWrapper = styled.div`
+  margin-bottom: ${spacing.medium};
+  text-align: center;
 `;

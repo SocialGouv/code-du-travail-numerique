@@ -9,7 +9,7 @@ import {
 } from "react-accessible-accordion";
 import { theme, VerticalArrow, keyframes } from "@cdt/ui";
 
-const { colors, spacing } = theme;
+const { box, colors, spacing } = theme;
 const { fadeIn } = keyframes;
 
 class Accordion extends React.PureComponent {
@@ -25,10 +25,13 @@ class Accordion extends React.PureComponent {
   render() {
     const { items, className } = this.props;
 
+    const StyledAccordionItem =
+      items.length > 1 ? AccordionItem : SingleAccordionItem;
+
     return (
       <StyledAccordion className={className} accordion={false}>
         {items.map((item, index) => (
-          <AccordionItem key={index}>
+          <StyledAccordionItem key={index}>
             <AccordionItemTitle>
               <>
                 {item.title}
@@ -36,7 +39,7 @@ class Accordion extends React.PureComponent {
               </>
             </AccordionItemTitle>
             <AccordionItemBody>{item.body}</AccordionItemBody>
-          </AccordionItem>
+          </StyledAccordionItem>
         ))}
       </StyledAccordion>
     );
@@ -51,15 +54,14 @@ const StyledAccordion = styled(RootAccordion)`
   }
 
   .accordion__title {
-    position: relative;
-    padding-right: ${spacing.large};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: ${spacing.small};
     cursor: pointer;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    & > * {
+      margin: 0;
+      padding: 0;
       color: currentColor;
       font-weight: normal;
     }
@@ -71,7 +73,6 @@ const StyledAccordion = styled(RootAccordion)`
   .accordion__title[aria-expanded="true"] {
     color: ${colors.title};
   }
-
   .accordion__body {
     padding: ${spacing.base};
     animation: ${fadeIn} 0.35s ease-in;
@@ -79,5 +80,15 @@ const StyledAccordion = styled(RootAccordion)`
 
   .accordion__body--hidden {
     display: none;
+  }
+`;
+
+const SingleAccordionItem = styled(AccordionItem)`
+  background-color: ${colors.lightBackground};
+  border: 1px solid ${colors.elementBorder};
+  border-radius: ${box.borderRadius};
+  overflow: hidden;
+  .accordion__title {
+    padding: ${spacing.base};
   }
 `;
