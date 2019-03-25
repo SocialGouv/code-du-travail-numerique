@@ -16,11 +16,10 @@ class CompanyForm extends React.Component {
     company: null
   };
 
-  onSelect = company => {
+  onSelect = async company => {
     this.setState({ company });
-    this.props.getCompany(company.siret).then(company => {
-      this.setState({ company });
-    });
+    const fullCompany = await this.props.getCompany(company.siret);
+    this.setState({ company: fullCompany });
   };
 
   onClear = () => this.setState({ company: null });
