@@ -1,12 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<OuSAdresser /> should render a complex case 1`] = `
+.c0 {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: #ebeff3;
+  border-radius: 0.25rem;
+}
+
+.c1 {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 <div>
   <div
-    class="sc-gqjmRU dAJwaB"
+    class="c0"
   >
     <strong
-      class="sc-VigVT evjmKG"
+      class="c1"
     >
       Ou s'adresser ?
     </strong>
@@ -22,12 +34,24 @@ exports[`<OuSAdresser /> should render a complex case 1`] = `
 `;
 
 exports[`<OuSAdresser /> should render a simple case 1`] = `
+.c0 {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: #ebeff3;
+  border-radius: 0.25rem;
+}
+
+.c1 {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 <div>
   <div
-    class="sc-gqjmRU dAJwaB"
+    class="c0"
   >
     <strong
-      class="sc-VigVT evjmKG"
+      class="c1"
     >
       Ou s'adresser ?
     </strong>

@@ -1,63 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<WorkPeriods /> should render 1`] = `
+.c0 {
+  border: none;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.c1 {
+  background: none;
+}
+
+.c2 {
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.c3 {
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.c4 {
+  border-color: transparent;
+}
+
+.c5 {
+  text-align: left;
+  border: none;
+}
+
+.c6 {
+  text-align: right;
+  border: none;
+}
+
+.c7 {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.c8 {
+  width: 25%;
+  white-space: nowrap;
+  border: none;
+}
+
 <div>
   <table
-    class="sc-htpNat rRlla"
+    class="c0"
   >
     <thead
-      class="sc-bxivhb bbfLM"
+      class="c1"
     >
       <tr>
         <th
-          class="sc-ifAKCX ravIE"
+          class="c2"
         >
           Type
         </th>
         <th
-          class="sc-EHOje bvyII"
+          class="c3"
         >
           Durée
         </th>
         <th
-          class="sc-EHOje bvyII"
+          class="c3"
         >
           Salaire
         </th>
         <th
-          class="sc-bZQynM gWWkQS"
+          class="c4"
         />
       </tr>
     </thead>
     <tbody>
       <tr>
         <td
-          class="sc-gzVnrw fiXAsj"
+          class="c5"
         >
           Temps plein
         </td>
         <td
-          class="sc-htoDjs bBILmz"
+          class="c6"
         >
           10
           <span
-            class="sc-dnqmqq kVudQc"
+            class="c7"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-htoDjs bBILmz"
+          class="c6"
         >
           1300
           <span
-            class="sc-dnqmqq kVudQc"
+            class="c7"
           >
             €
           </span>
         </td>
         <td
-          class="sc-iwsKbI jtHIMG"
+          class="c8"
         >
           <div
             class="btn btn__link  "
@@ -80,32 +127,32 @@ exports[`<WorkPeriods /> should render 1`] = `
       </tr>
       <tr>
         <td
-          class="sc-gzVnrw fiXAsj"
+          class="c5"
         >
           Temps partiel
         </td>
         <td
-          class="sc-htoDjs bBILmz"
+          class="c6"
         >
           10
           <span
-            class="sc-dnqmqq kVudQc"
+            class="c7"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-htoDjs bBILmz"
+          class="c6"
         >
           1000
           <span
-            class="sc-dnqmqq kVudQc"
+            class="c7"
           >
             €
           </span>
         </td>
         <td
-          class="sc-iwsKbI jtHIMG"
+          class="c8"
         >
           <div
             class="btn btn__link  "

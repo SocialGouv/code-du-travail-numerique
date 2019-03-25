@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPlein /> should render 1`] = `
+.c0 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 6em;
+}
+
 <div>
   <h2>
     Derniers mois de salaire
@@ -36,7 +43,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="1500"
@@ -62,7 +69,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="1500"
@@ -79,7 +86,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="1500"
@@ -94,7 +101,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="1500"
@@ -107,6 +114,13 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 `;
 
 exports[`<SalaireTempsPlein /> should update all monthes 1`] = `
+.c0 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 6em;
+}
+
 <div>
   <h2>
     Derniers mois de salaire
@@ -142,7 +156,7 @@ exports[`<SalaireTempsPlein /> should update all monthes 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="2000"
@@ -168,7 +182,7 @@ exports[`<SalaireTempsPlein /> should update all monthes 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="2000"
@@ -185,7 +199,7 @@ exports[`<SalaireTempsPlein /> should update all monthes 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="2000"
@@ -200,7 +214,7 @@ exports[`<SalaireTempsPlein /> should update all monthes 1`] = `
           style="text-align: center;"
         >
           <input
-            class="sc-bdVaJa dFlwiT"
+            class="c0"
             size="6"
             type="number"
             value="2000"

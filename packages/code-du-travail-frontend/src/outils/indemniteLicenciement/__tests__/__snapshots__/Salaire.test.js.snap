@@ -1,6 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaire /> should render mixed work period 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.c5 {
+  width: 14rem;
+}
+
+.c6 {
+  width: 8.5rem;
+}
+
+.c7 {
+  width: 8.5rem;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c4 {
+  display: block;
+  position: absolute;
+  top: -1.5rem;
+}
+
+.c8 {
+  border: none;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.c9 {
+  background: none;
+}
+
+.c10 {
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.c11 {
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.c12 {
+  border-color: transparent;
+}
+
+.c13 {
+  text-align: left;
+  border: none;
+}
+
+.c14 {
+  text-align: right;
+  border: none;
+}
+
+.c15 {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.c16 {
+  width: 25%;
+  white-space: nowrap;
+  border: none;
+}
+
 <div>
   <section
     class="section-light"
@@ -15,10 +122,10 @@ exports[`<Salaire /> should render mixed work period 1`] = `
           Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
         </h2>
         <div
-          class="sc-ifAKCX dmUlWY"
+          class="c0"
         >
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               checked=""
@@ -30,7 +137,7 @@ exports[`<Salaire /> should render mixed work period 1`] = `
             Oui
           </label>
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               name="has-temps-partiel"
@@ -43,18 +150,18 @@ exports[`<Salaire /> should render mixed work period 1`] = `
         </div>
         <form>
           <div
-            class="sc-bZQynM eyAcZw"
+            class="c2"
           >
             <label
-              class="sc-iwsKbI fzPyAB"
+              class="c3"
             >
               <span
-                class="sc-gZMcBi bWDUlY"
+                class="c4"
               >
                 type
               </span>
               <select
-                class="sc-gzVnrw jcOAMN"
+                class="c5"
                 name="type"
               >
                 <option
@@ -70,15 +177,15 @@ exports[`<Salaire /> should render mixed work period 1`] = `
               </select>
             </label>
             <label
-              class="sc-iwsKbI fzPyAB"
+              class="c3"
             >
               <span
-                class="sc-gZMcBi bWDUlY"
+                class="c4"
               >
                 durée (en mois)
               </span>
               <input
-                class="sc-htoDjs eqgMBq"
+                class="c6"
                 min="0"
                 name="duree"
                 placeholder="8 mois"
@@ -87,15 +194,15 @@ exports[`<Salaire /> should render mixed work period 1`] = `
               />
             </label>
             <label
-              class="sc-iwsKbI fzPyAB"
+              class="c3"
             >
               <span
-                class="sc-gZMcBi bWDUlY"
+                class="c4"
               >
                 salaire mensuel
               </span>
               <input
-                class="sc-dnqmqq iqotfl"
+                class="c7"
                 min="0"
                 name="salaire"
                 placeholder="€"
@@ -112,61 +219,61 @@ exports[`<Salaire /> should render mixed work period 1`] = `
           </div>
         </form>
         <table
-          class="sc-gqjmRU iFDCgL"
+          class="c8"
         >
           <thead
-            class="sc-VigVT fRiqMG"
+            class="c9"
           >
             <tr>
               <th
-                class="sc-jTzLTM bkzRfo"
+                class="c10"
               >
                 Type
               </th>
               <th
-                class="sc-fjdhpX inPDWS"
+                class="c11"
               >
                 Durée
               </th>
               <th
-                class="sc-fjdhpX inPDWS"
+                class="c11"
               >
                 Salaire
               </th>
               <th
-                class="sc-jzJRlG jwFZRm"
+                class="c12"
               />
             </tr>
           </thead>
           <tbody>
             <tr>
               <td
-                class="sc-cSHVUG hHlyyh"
+                class="c13"
               >
                 Temps plein
               </td>
               <td
-                class="sc-kAzzGY kaFsBe"
+                class="c14"
               >
                 10
                 <span
-                  class="sc-chPdSV EQXqG"
+                  class="c15"
                 >
                   mois
                 </span>
               </td>
               <td
-                class="sc-kAzzGY kaFsBe"
+                class="c14"
               >
                 1300
                 <span
-                  class="sc-chPdSV EQXqG"
+                  class="c15"
                 >
                   €
                 </span>
               </td>
               <td
-                class="sc-kgoBCf hhsGWl"
+                class="c16"
               >
                 <div
                   class="btn btn__link  "
@@ -189,32 +296,32 @@ exports[`<Salaire /> should render mixed work period 1`] = `
             </tr>
             <tr>
               <td
-                class="sc-cSHVUG hHlyyh"
+                class="c13"
               >
                 Temps partiel
               </td>
               <td
-                class="sc-kAzzGY kaFsBe"
+                class="c14"
               >
                 10
                 <span
-                  class="sc-chPdSV EQXqG"
+                  class="c15"
                 >
                   mois
                 </span>
               </td>
               <td
-                class="sc-kAzzGY kaFsBe"
+                class="c14"
               >
                 1000
                 <span
-                  class="sc-chPdSV EQXqG"
+                  class="c15"
                 >
                   €
                 </span>
               </td>
               <td
-                class="sc-kgoBCf hhsGWl"
+                class="c16"
               >
                 <div
                   class="btn btn__link  "
@@ -253,6 +360,39 @@ exports[`<Salaire /> should render mixed work period 1`] = `
 `;
 
 exports[`<Salaire /> should render single work period 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 6em;
+}
+
+.c1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 <div>
   <section
     class="section-light"
@@ -267,10 +407,10 @@ exports[`<Salaire /> should render single work period 1`] = `
           Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
         </h2>
         <div
-          class="sc-ifAKCX dmUlWY"
+          class="c0"
         >
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               name="has-temps-partiel"
@@ -281,7 +421,7 @@ exports[`<Salaire /> should render single work period 1`] = `
             Oui
           </label>
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               checked=""
@@ -327,7 +467,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -353,7 +493,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -370,7 +510,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -385,7 +525,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -400,7 +540,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -415,7 +555,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -430,7 +570,7 @@ exports[`<Salaire /> should render single work period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -455,6 +595,39 @@ exports[`<Salaire /> should render single work period 1`] = `
 `;
 
 exports[`<Salaire /> should switch from single period to mixed period 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 6em;
+}
+
+.c1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 <div>
   <section
     class="section-light"
@@ -469,10 +642,10 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
           Avez-vous alterné au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
         </h2>
         <div
-          class="sc-ifAKCX dmUlWY"
+          class="c0"
         >
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               name="has-temps-partiel"
@@ -483,7 +656,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
             Oui
           </label>
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               checked=""
@@ -529,7 +702,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -555,7 +728,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -572,7 +745,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -587,7 +760,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -602,7 +775,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -617,7 +790,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"
@@ -632,7 +805,7 @@ exports[`<Salaire /> should switch from single period to mixed period 1`] = `
                 style="text-align: center;"
               >
                 <input
-                  class="sc-htpNat iYjHII"
+                  class="c2"
                   size="6"
                   type="number"
                   value="1500"

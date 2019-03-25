@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Age /> should call onChange with updated value 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 5em;
+}
+
+.c0 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <div>
   <section
     class="section-light"
@@ -15,10 +37,10 @@ exports[`<Age /> should call onChange with updated value 1`] = `
           Quel est votre age ?
         </h2>
         <label
-          class="sc-bxivhb dTOYdh"
+          class="c0"
         >
           <input
-            class="sc-htpNat kOhZjJ"
+            class="c1"
             name="age"
             size="5"
             type="number"
@@ -41,6 +63,28 @@ exports[`<Age /> should call onChange with updated value 1`] = `
 `;
 
 exports[`<Age /> should render 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 5em;
+}
+
+.c0 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <div>
   <section
     class="section-light"
@@ -55,10 +99,10 @@ exports[`<Age /> should render 1`] = `
           Quel est votre age ?
         </h2>
         <label
-          class="sc-bxivhb dTOYdh"
+          class="c0"
         >
           <input
-            class="sc-htpNat kOhZjJ"
+            class="c1"
             name="age"
             size="5"
             type="number"

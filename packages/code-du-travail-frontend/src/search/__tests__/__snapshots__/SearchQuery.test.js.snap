@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchQuery/> should render results 1`] = `
+.c0 {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.c1 {
+  color: #53657d;
+  font-size: 1rem;
+  margin-left: 0.25em;
+}
+
+.c2 {
+  margin: 0;
+}
+
 <div>
   <div>
     <div
@@ -27,10 +42,10 @@ exports[`<SearchQuery/> should render results 1`] = `
               >
                 <header>
                   <h3
-                    class="sc-htpNat gvPoaQ"
+                    class="c0"
                   >
                     <span
-                      class="sc-bxivhb crOlaW"
+                      class="c1"
                     >
                       FAQ
                        | 
@@ -39,7 +54,7 @@ exports[`<SearchQuery/> should render results 1`] = `
                   </h3>
                 </header>
                 <blockquote
-                  class="text-quote sc-ifAKCX ftAxxp"
+                  class="text-quote c2"
                 />
               </article>
             </a>

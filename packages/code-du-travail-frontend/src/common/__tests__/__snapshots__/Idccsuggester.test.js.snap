@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IdccSuggester /> should render 1`] = `
+.c0 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
 <div>
   <div
     aria-expanded="false"
@@ -20,7 +24,7 @@ exports[`<IdccSuggester /> should render 1`] = `
       value=""
     />
     <div
-      class="sc-bdVaJa iCIbBI"
+      class="c0"
       id="react-autowhatever-1"
       role="listbox"
     />
@@ -29,6 +33,24 @@ exports[`<IdccSuggester /> should render 1`] = `
 `;
 
 exports[`<IdccSuggester /> should render suggestions 1`] = `
+.c0 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
+.c1 {
+  width: 90%;
+  overflow: hidden;
+  padding: 5px;
+  font-size: 0.9rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div>
   <div
     aria-expanded="true"
@@ -48,7 +70,7 @@ exports[`<IdccSuggester /> should render suggestions 1`] = `
       value="test"
     />
     <div
-      class="sc-bdVaJa iCIbBI"
+      class="c0"
       id="react-autowhatever-1"
       role="listbox"
       style="max-height: 300px; border: 1px solid silver; position: absolute; overflow-y: scroll; left: 0px; right: 0px; border-radius: 3px; border-top-right-radius: 0; margin-top: -3px; box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);"
@@ -64,7 +86,7 @@ exports[`<IdccSuggester /> should render suggestions 1`] = `
           role="option"
         >
           <div
-            class="sc-bwzfXH bXyoxZ"
+            class="c1"
           >
             IDCC IDCC - item title
           </div>

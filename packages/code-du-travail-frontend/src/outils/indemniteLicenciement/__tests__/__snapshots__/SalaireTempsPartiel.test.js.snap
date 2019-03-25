@@ -1,21 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.c3 {
+  width: 14rem;
+}
+
+.c4 {
+  width: 8.5rem;
+}
+
+.c5 {
+  width: 8.5rem;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c2 {
+  display: block;
+  position: absolute;
+  top: -1.5rem;
+}
+
+.c6 {
+  border: none;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.c7 {
+  background: none;
+}
+
+.c8 {
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.c9 {
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.c10 {
+  border-color: transparent;
+}
+
+.c11 {
+  text-align: left;
+  border: none;
+}
+
+.c12 {
+  text-align: right;
+  border: none;
+}
+
+.c13 {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.c14 {
+  width: 25%;
+  white-space: nowrap;
+  border: none;
+}
+
 <div>
   <form>
     <div
-      class="sc-bdVaJa hPrguC"
+      class="c0"
     >
       <label
-        class="sc-ifAKCX bqyzQp"
+        class="c1"
       >
         <span
-          class="sc-EHOje rYzUQ"
+          class="c2"
         >
           type
         </span>
         <select
-          class="sc-bwzfXH ezXOAB"
+          class="c3"
           name="type"
         >
           <option
@@ -31,15 +112,15 @@ exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
         </select>
       </label>
       <label
-        class="sc-ifAKCX bqyzQp"
+        class="c1"
       >
         <span
-          class="sc-EHOje rYzUQ"
+          class="c2"
         >
           durée (en mois)
         </span>
         <input
-          class="sc-htpNat kjWUdU"
+          class="c4"
           min="0"
           name="duree"
           placeholder="8 mois"
@@ -48,15 +129,15 @@ exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
         />
       </label>
       <label
-        class="sc-ifAKCX bqyzQp"
+        class="c1"
       >
         <span
-          class="sc-EHOje rYzUQ"
+          class="c2"
         >
           salaire mensuel
         </span>
         <input
-          class="sc-bxivhb jWzExO"
+          class="c5"
           min="0"
           name="salaire"
           placeholder="€"
@@ -73,61 +154,61 @@ exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
     </div>
   </form>
   <table
-    class="sc-htoDjs etAHKx"
+    class="c6"
   >
     <thead
-      class="sc-dnqmqq dpRooH"
+      class="c7"
     >
       <tr>
         <th
-          class="sc-iwsKbI gMKRFd"
+          class="c8"
         >
           Type
         </th>
         <th
-          class="sc-gZMcBi elFnME"
+          class="c9"
         >
           Durée
         </th>
         <th
-          class="sc-gZMcBi elFnME"
+          class="c9"
         >
           Salaire
         </th>
         <th
-          class="sc-gqjmRU xJoXN"
+          class="c10"
         />
       </tr>
     </thead>
     <tbody>
       <tr>
         <td
-          class="sc-VigVT hFGILh"
+          class="c11"
         >
           Temps plein
         </td>
         <td
-          class="sc-jTzLTM ghgAdO"
+          class="c12"
         >
           10
           <span
-            class="sc-fjdhpX ftqrHL"
+            class="c13"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-jTzLTM ghgAdO"
+          class="c12"
         >
           1300
           <span
-            class="sc-fjdhpX ftqrHL"
+            class="c13"
           >
             €
           </span>
         </td>
         <td
-          class="sc-jzJRlG fuQHfL"
+          class="c14"
         >
           <div
             class="btn btn__link  "
@@ -150,32 +231,32 @@ exports[`<SalaireTempsPartiel /> should render work periods 1`] = `
       </tr>
       <tr>
         <td
-          class="sc-VigVT hFGILh"
+          class="c11"
         >
           Temps partiel
         </td>
         <td
-          class="sc-jTzLTM ghgAdO"
+          class="c12"
         >
           10
           <span
-            class="sc-fjdhpX ftqrHL"
+            class="c13"
           >
             mois
           </span>
         </td>
         <td
-          class="sc-jTzLTM ghgAdO"
+          class="c12"
         >
           1000
           <span
-            class="sc-fjdhpX ftqrHL"
+            class="c13"
           >
             €
           </span>
         </td>
         <td
-          class="sc-jzJRlG fuQHfL"
+          class="c14"
         >
           <div
             class="btn btn__link  "

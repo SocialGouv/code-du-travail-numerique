@@ -1,21 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Facetting/> should render Facets 1`] = `
+.c1 {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.c2 {
+  font-size: 0.9em;
+  font-size: var(--font-size-small);
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding: var(--spacing-small) 0;
+}
+
+.c0 {
+  font-size: 1rem;
+  font-size: var(--font-size-base);
+  color: #26353f;
+  color: var(--color-almost-black);
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #8393a7;
+  color: var(--color-dark-grey);
+}
+
+.c3:link,
+.c3:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #8393a7;
+  color: var(--color-dark-grey);
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
 <div>
   <nav>
     <h3
-      class="sc-htpNat beNYgP"
+      class="c0"
     >
       Type de réponse
     </h3>
     <ul
-      class="sc-bdVaJa dDblRF"
+      class="c1"
     >
       <li
-        class="sc-bwzfXH bwxcMI"
+        class="c2"
       >
         <a
-          class="sc-bxivhb NtWvd"
+          class="c3"
           href="/recherche?q=search%20address&source=foo"
         >
           
@@ -25,10 +73,10 @@ exports[`<Facetting/> should render Facets 1`] = `
         </a>
       </li>
       <li
-        class="sc-bwzfXH bwxcMI"
+        class="c2"
       >
         <a
-          class="sc-bxivhb NtWvd"
+          class="c3"
           href="/recherche?q=search%20address&source=fiches"
         >
           Fiches
@@ -38,10 +86,10 @@ exports[`<Facetting/> should render Facets 1`] = `
         </a>
       </li>
       <li
-        class="sc-bwzfXH bwxcMI"
+        class="c2"
       >
         <a
-          class="sc-bxivhb NtWvd"
+          class="c3"
           href="/recherche?q=search%20address&source=bar"
         >
           
@@ -51,10 +99,10 @@ exports[`<Facetting/> should render Facets 1`] = `
         </a>
       </li>
       <li
-        class="sc-bwzfXH bwxcMI"
+        class="c2"
       >
         <a
-          class="sc-bxivhb NtWvd"
+          class="c3"
           href="/recherche?q=search%20address&source="
         >
           Toutes les réponses
