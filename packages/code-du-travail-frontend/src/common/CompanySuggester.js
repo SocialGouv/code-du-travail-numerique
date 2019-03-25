@@ -24,7 +24,10 @@ export class CompanySuggester extends React.Component {
     this.props.onSelect(value);
   };
 
-  renderMessage = (query, suggestions) => {
+  renderMessage = (query, suggestions, loading) => {
+    if (loading) {
+      return <p>chargement ...</p>;
+    }
     const helpMessage =
       suggestions != null &&
       suggestions.length == 0 &&

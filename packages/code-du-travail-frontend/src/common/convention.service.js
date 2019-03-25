@@ -1,5 +1,6 @@
 import getConfig from "next/config";
 import memoizee from "memoizee";
+import pDebounce from "../lib/pDebounce";
 
 const {
   publicRuntimeConfig: { API_URL, API_SIRET2IDCC_URL }
@@ -49,10 +50,12 @@ const searchCompaniesMemo = memoizee(siret => searchCompanies(siret), {
 });
 const getCompanyMemo = memoizee(siret => getCompany(siret), { promise: true });
 
+const searchCompaniesDebounced = pDebounce(searchCompaniesMemo, 800);
+
 export {
   searchIdccMemo as searchIdcc,
   searchIdcc as _searchIdcc,
-  searchCompaniesMemo as searchCompanies,
+  searchCompaniesDebounced as searchCompanies,
   searchCompanies as _searchCompanies,
   getCompanyMemo as getCompany,
   getCompany as _getCompany

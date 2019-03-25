@@ -28,7 +28,8 @@ export class Suggester extends React.Component {
 
   state = {
     query: "",
-    suggestions: null
+    suggestions: [],
+    loading: false
   };
 
   onChange = event => {
@@ -44,10 +45,11 @@ export class Suggester extends React.Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({ suggestions: null });
+    this.setState({ suggestions: null, loading: true });
     this.props.onSearch(value).then(results =>
       this.setState({
-        suggestions: results
+        suggestions: results,
+        loading: false
       })
     );
   };
@@ -59,7 +61,7 @@ export class Suggester extends React.Component {
   };
 
   render() {
-    const { suggestions, query } = this.state;
+    const { suggestions, query, loading } = this.state;
     const { placeholder, className } = this.props;
     const inputProps = {
       name: "query",
@@ -83,7 +85,7 @@ export class Suggester extends React.Component {
           theme={this.props.theme}
           inputProps={inputProps}
         />
-        {this.props.renderMessage(query, suggestions)}
+        {this.props.renderMessage(query, suggestions, loading)}
       </React.Fragment>
     );
   }

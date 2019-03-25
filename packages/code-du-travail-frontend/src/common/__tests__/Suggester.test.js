@@ -47,9 +47,13 @@ describe("<Suggester />", () => {
       <Suggester
         onSelect={() => {}}
         onSearch={onSearch}
-        renderMessage={(query, suggestions) => (
+        renderMessage={(query, suggestions, loading) => (
           <p>
-            {query} returned {suggestions && suggestions.length} results
+            {!loading && (
+              <span>
+                {query} returned {suggestions && suggestions.length} results
+              </span>
+            )}
           </p>
         )}
       />
