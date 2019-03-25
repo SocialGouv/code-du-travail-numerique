@@ -1,6 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageLayout /> should render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c1:link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 {
+  width: 5rem;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.c3 {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div>
   <header
     class="bg-color color__white"
@@ -9,19 +54,19 @@ exports[`<PageLayout /> should render 1`] = `
       class="container"
     >
       <div
-        class="sc-htpNat hXSzT"
+        class="c0"
       >
         <a
-          class="sc-bxivhb hJglWP"
+          class="c1"
           href="/?q="
         >
           <img
             alt=""
-            class="sc-ifAKCX fnBDIL"
+            class="c2"
             src="/static/assets/img/marianne.svg"
           />
           <span
-            class="sc-EHOje dKEeYN"
+            class="c3"
           >
             Code du travail
             <br />

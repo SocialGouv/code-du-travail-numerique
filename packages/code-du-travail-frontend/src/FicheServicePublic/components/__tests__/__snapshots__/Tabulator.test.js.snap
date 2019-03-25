@@ -1,9 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
+.c1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c0 .react-tabs__tab-list {
+  position: relative;
+  top: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c0 .react-tabs__tab {
+  margin-right: 0.25rem;
+  padding: 0.625rem 1rem;
+  font-size: 1.1rem;
+  background-color: #ebeff3;
+  border: 1px solid #c9d3df;
+  border-bottom: 1px solid #005994;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.c0 .react-tabs__tab:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 .react-tabs__tab--selected {
+  color: #fff;
+  background-color: #005994;
+}
+
+.c0 .react-tabs__tab-panel--selected {
+  padding: 1rem;
+  border: 1px solid #005994;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 <div>
   <div
-    class="sc-VigVT cJJQpp"
+    class="c0"
     data-tabs="true"
   >
     <ul
@@ -39,7 +97,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       role="tabpanel"
     >
       <div
-        class="sc-bdVaJa edgkJi"
+        class="c1"
       >
         <h2>
           CDI
@@ -63,9 +121,67 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
+.c1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c0 .react-tabs__tab-list {
+  position: relative;
+  top: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c0 .react-tabs__tab {
+  margin-right: 0.25rem;
+  padding: 0.625rem 1rem;
+  font-size: 1.1rem;
+  background-color: #ebeff3;
+  border: 1px solid #c9d3df;
+  border-bottom: 1px solid #005994;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.c0 .react-tabs__tab:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 .react-tabs__tab--selected {
+  color: #fff;
+  background-color: #005994;
+}
+
+.c0 .react-tabs__tab-panel--selected {
+  padding: 1rem;
+  border: 1px solid #005994;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 <div>
   <div
-    class="sc-VigVT cJJQpp"
+    class="c0"
     data-tabs="true"
   >
     <ul
@@ -101,7 +217,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       role="tabpanel"
     >
       <div
-        class="sc-bdVaJa edgkJi"
+        class="c1"
       >
         <h4>
           CDI
@@ -125,9 +241,67 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
+.c1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c0 .react-tabs__tab-list {
+  position: relative;
+  top: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c0 .react-tabs__tab {
+  margin-right: 0.25rem;
+  padding: 0.625rem 1rem;
+  font-size: 1.1rem;
+  background-color: #ebeff3;
+  border: 1px solid #c9d3df;
+  border-bottom: 1px solid #005994;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.c0 .react-tabs__tab:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 .react-tabs__tab--selected {
+  color: #fff;
+  background-color: #005994;
+}
+
+.c0 .react-tabs__tab-panel--selected {
+  padding: 1rem;
+  border: 1px solid #005994;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 <div>
   <div
-    class="sc-VigVT cJJQpp"
+    class="c0"
     data-tabs="true"
   >
     <ul
@@ -163,7 +337,7 @@ exports[`<Tabulator /> should render 1`] = `
       role="tabpanel"
     >
       <div
-        class="sc-bdVaJa edgkJi"
+        class="c1"
       >
         <h5>
           CDI

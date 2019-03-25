@@ -1,6 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
+.c1 {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -6px;
+}
+
+.c1::after,
+.c1::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.c1::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .c1::before,
+[aria-selected="true"] .c1::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c1::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .c1::after,
+[aria-selected="true"] .c1::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c1::before,
+.c1::after {
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+}
+
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c0 .accordion__item + .accordion__item {
+  border-top: 1px solid #c9d3df;
+}
+
+.c0 .accordion__title {
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.c0 .accordion__title h1,
+.c0 .accordion__title h2,
+.c0 .accordion__title h3,
+.c0 .accordion__title h4,
+.c0 .accordion__title h5,
+.c0 .accordion__title h6 {
+  color: currentColor;
+  font-weight: normal;
+}
+
+.c0 .accordion__title:hover,
+.c0 .accordion__title:focus,
+.c0 .accordion__title:focus-within,
+.c0 .accordion__title[aria-expanded="true"] {
+  color: #006ab2;
+}
+
+.c0 .accordion__body {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c0 .accordion__body--hidden {
+  display: none;
+}
+
 <div>
   <h2>
     titre 0
@@ -9,7 +107,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-VigVT kqRiyl"
+    class="c0"
   >
     <div
       class="accordion__item"
@@ -26,7 +124,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           titre 1
         </h2>
         <div
-          class="sc-bwzfXH fjzBfR"
+          class="c1"
           role="presentation"
         />
       </div>
@@ -59,7 +157,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           titre 2
         </h2>
         <div
-          class="sc-bwzfXH fjzBfR"
+          class="c1"
           role="presentation"
         />
       </div>
@@ -95,7 +193,7 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           titre 3
         </h2>
         <div
-          class="sc-bwzfXH fjzBfR"
+          class="c1"
           role="presentation"
         />
       </div>
@@ -118,6 +216,104 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
+.c1 {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -6px;
+}
+
+.c1::after,
+.c1::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.c1::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .c1::before,
+[aria-selected="true"] .c1::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c1::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .c1::after,
+[aria-selected="true"] .c1::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c1::before,
+.c1::after {
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+}
+
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c0 .accordion__item + .accordion__item {
+  border-top: 1px solid #c9d3df;
+}
+
+.c0 .accordion__title {
+  position: relative;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.c0 .accordion__title h1,
+.c0 .accordion__title h2,
+.c0 .accordion__title h3,
+.c0 .accordion__title h4,
+.c0 .accordion__title h5,
+.c0 .accordion__title h6 {
+  color: currentColor;
+  font-weight: normal;
+}
+
+.c0 .accordion__title:hover,
+.c0 .accordion__title:focus,
+.c0 .accordion__title:focus-within,
+.c0 .accordion__title[aria-expanded="true"] {
+  color: #006ab2;
+}
+
+.c0 .accordion__body {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c0 .accordion__body--hidden {
+  display: none;
+}
+
 <div>
   <h5>
     titre 0
@@ -126,7 +322,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     paragraphe 0
   </p>
   <div
-    class="sc-VigVT kqRiyl"
+    class="c0"
   >
     <div
       class="accordion__item"
@@ -143,7 +339,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           titre 1
         </h5>
         <div
-          class="sc-bwzfXH fjzBfR"
+          class="c1"
           role="presentation"
         />
       </div>
@@ -176,7 +372,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           titre 2
         </h5>
         <div
-          class="sc-bwzfXH fjzBfR"
+          class="c1"
           role="presentation"
         />
       </div>
@@ -212,7 +408,7 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           titre 3
         </h5>
         <div
-          class="sc-bwzfXH fjzBfR"
+          class="c1"
           role="presentation"
         />
       </div>

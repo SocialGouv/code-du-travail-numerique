@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DateFinContrat /> should render 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 <div>
   <section
     class="section-light"
@@ -19,10 +45,10 @@ exports[`<DateFinContrat /> should render 1`] = `
            ?
         </h2>
         <div
-          class="sc-ifAKCX dmUlWY"
+          class="c0"
         >
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               name="isR12342"
@@ -33,7 +59,7 @@ exports[`<DateFinContrat /> should render 1`] = `
             </span>
           </label>
           <label
-            class="sc-bxivhb dTOYdh"
+            class="c1"
           >
             <input
               checked=""

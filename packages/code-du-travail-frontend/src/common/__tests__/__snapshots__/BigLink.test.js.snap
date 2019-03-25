@@ -1,12 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BigLink /> should render with courrier icon 1`] = `
+.c0 {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.c1 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 {
+  font-weight: 700;
+  color: #8393a7;
+}
+
 <div>
   <a
     class="btn-large"
   >
     <svg
-      class="sc-bdVaJa gYFwqq"
+      class="c0"
       viewBox="0 0 34 50"
     >
       <title>
@@ -27,14 +43,14 @@ exports[`<BigLink /> should render with courrier icon 1`] = `
     </svg>
     <div>
       <strong
-        class="sc-bwzfXH hcUVWp"
+        class="c1"
       >
         article title
       </strong>
       path » to » document
       <br />
       <span
-        class="sc-htpNat euVmIW"
+        class="c2"
       >
         source: 
         

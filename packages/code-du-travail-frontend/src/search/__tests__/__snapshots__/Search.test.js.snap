@@ -1,6 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<search /> should render 1`] = `
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.c1 ul {
+  z-index: 100;
+}
+
+.c1 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
 <div>
   <div
     class="section-white shadow-bottom search-widget"
@@ -113,7 +132,7 @@ exports[`<search /> should render 1`] = `
               </select>
             </label>
             <label
-              class="sc-ifAKCX eWOizb"
+              class="c0"
               for="main-search-input"
             >
               <span
@@ -139,7 +158,7 @@ exports[`<search /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="sc-EHOje cCuIzY"
+                  class="c1"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -160,6 +179,38 @@ exports[`<search /> should render 1`] = `
 `;
 
 exports[`<search /> should render suggestions 1`] = `
+.c2 p {
+  margin: 0;
+}
+
+.c4 {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.c1 ul {
+  z-index: 100;
+}
+
+.c1 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
+.c3 {
+  display: inline-block;
+}
+
 <div>
   <div
     class="section-white shadow-bottom search-widget"
@@ -272,7 +323,7 @@ exports[`<search /> should render suggestions 1`] = `
               </select>
             </label>
             <label
-              class="sc-ifAKCX eWOizb"
+              class="c0"
               for="main-search-input"
             >
               <span
@@ -298,7 +349,7 @@ exports[`<search /> should render suggestions 1`] = `
                   value="yolo"
                 />
                 <div
-                  class="sc-EHOje cCuIzY"
+                  class="c1"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 >
@@ -314,15 +365,15 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="sc-htpNat eOQrvi"
+                        class="c2"
                       >
                         <div
-                          class="sc-gzVnrw hVpHbx"
+                          class="c3"
                         >
                           faq title
                         </div>
                         <small
-                          class="sc-bxivhb leOFCj"
+                          class="c4"
                         >
                            - FAQ
                         </small>

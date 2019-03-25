@@ -83,6 +83,46 @@ exports[`<AddressResults/> should render no results 1`] = `
 `;
 
 exports[`<AddressResults/> should render results 1`] = `
+.c0 {
+  font-size: 1rem;
+}
+
+.c1 {
+  display: block;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.c1:link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgba(100,100,100,0.9);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:visited {
+  color: rgba(100,100,100,0.8);
+}
+
+.c2 {
+  font-size: 0.9em;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.c3 {
+  font-size: 0.9em;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
 <div>
   <section
     class="section"
@@ -100,12 +140,12 @@ exports[`<AddressResults/> should render results 1`] = `
             class="card"
           >
             <strong
-              class="sc-htpNat lfbAJt"
+              class="c0"
             >
               Bureau des légendes
             </strong>
             <a
-              class="sc-ifAKCX bqOmET"
+              class="c1"
               href="https://www.openstreetmap.org/?mlat=4&mlon=44&zoom=16"
             >
               adresse inconnue
@@ -115,7 +155,7 @@ exports[`<AddressResults/> should render results 1`] = `
               Partout
             </a>
             <p
-              class="sc-EHOje cJPhng"
+              class="c2"
             >
               Tél: 
               <a
@@ -125,7 +165,7 @@ exports[`<AddressResults/> should render results 1`] = `
               </a>
             </p>
             <a
-              class="sc-bZQynM eLthGe"
+              class="c3"
               href="mailto:email"
             >
               email
