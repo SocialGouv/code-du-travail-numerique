@@ -82,6 +82,8 @@ exports[`<PageLayout /> should render 1`] = `
               <a
                 class="external-link__after"
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Contribuer sur Github
               </a>
@@ -90,6 +92,8 @@ exports[`<PageLayout /> should render 1`] = `
               <a
                 class="external-link__after"
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 Journal des modifications
               </a>
