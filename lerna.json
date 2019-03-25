@@ -4,6 +4,9 @@
       "skip-npm": true,
       "conventionalCommits": true,
       "message": "chore(release): version %v"
+    },
+    "version": {
+      "changelog-preset": "angular"
     }
   },
   "npmClient": "yarn",
