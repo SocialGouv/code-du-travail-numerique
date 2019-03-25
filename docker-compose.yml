@@ -42,7 +42,7 @@ services:
       context: ./packages/code-du-travail-nlp
       dockerfile: ./Dockerfile
     volumes:
-      - ./packages/code-du-travail-nlp/data:/app/api/data
+      - ./packages/code-du-travail-nlp/data:/app/data
 
 volumes:
   esdata:
