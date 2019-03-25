@@ -1,10 +1,20 @@
 from flask import Flask
 from api.suggest import add_suggest
+from autosuggest import autoSuggestor
 import os
 
+data_path = os.path.join(
+  os.path.dirname(os.path.abspath(__name__)),
+  "data"
+)
+
 def create_app():
-  data_dir = os.path.abspath(os.path.join(__name__, "../data"))
-  print("data %s", data_dir)
+
+  suggester = autoSuggestor(
+    link_path=os.path.join(data_path, 'data.txt'),
+    stops_path=os.path.join(data_path, 'stops.txt'),
+    build_precount = False
+  )
 
   app = Flask(__name__)
   app.config['JSON_AS_ASCII'] = False
@@ -14,7 +24,7 @@ def create_app():
   def hello():
       return 'suggest api'
 
-  add_suggest(app, data_dir)
+  add_suggest(app, suggester)
 
   return app
 
