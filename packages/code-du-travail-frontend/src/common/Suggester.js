@@ -11,9 +11,8 @@ export class Suggester extends React.Component {
     renderSuggestion: PropTypes.func,
     renderSuggestionsContainer: PropTypes.func,
     theme: PropTypes.object,
-    reformatSearchedValue: PropTypes.func,
     reformatEnteredValue: PropTypes.func,
-    getHelpMessage: PropTypes.func
+    renderMessage: PropTypes.func
   };
 
   static defaultProps = {
@@ -23,14 +22,13 @@ export class Suggester extends React.Component {
     renderSuggestion: suggestion => <span>{suggestion.toString()}</span>,
     renderSuggestionsContainer: undefined,
     theme: undefined,
-    reformatSearchedValue: v => v,
+    renderMessage: () => null,
     reformatEnteredValue: v => v
   };
 
   state = {
     query: "",
-    suggestions: [],
-    loading: false
+    suggestions: null
   };
 
   onChange = event => {
@@ -46,24 +44,23 @@ export class Suggester extends React.Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    this.setState({ loading: true });
-    this.props.onSearch(this.props.reformatSearchedValue(value)).then(results =>
+    this.setState({ suggestions: null });
+    this.props.onSearch(value).then(results =>
       this.setState({
-        suggestions: results,
-        loading: false
+        suggestions: results
       })
     );
   };
 
   onSuggestionsClearRequested = () => {
     this.setState({
-      suggestions: []
+      suggestions: null
     });
   };
 
   render() {
-    const { loading, suggestions, query } = this.state;
-    const { placeholder, className, getHelpMessage } = this.props;
+    const { suggestions, query } = this.state;
+    const { placeholder, className } = this.props;
     const inputProps = {
       name: "query",
       placeholder: placeholder,
@@ -72,13 +69,11 @@ export class Suggester extends React.Component {
       onChange: this.onChange,
       className: className
     };
-    const helpMessage =
-      !loading && getHelpMessage && getHelpMessage(query, suggestions);
 
     return (
       <React.Fragment>
         <Autosuggest
-          suggestions={suggestions}
+          suggestions={suggestions || []}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
           onSuggestionsClearRequested={this.onSuggestionsClearRequested}
           onSuggestionSelected={this.onSuggestionSelected}
@@ -88,10 +83,7 @@ export class Suggester extends React.Component {
           theme={this.props.theme}
           inputProps={inputProps}
         />
-        {getHelpMessage && (
-          // we display the <p> tag even when there is no message to prevent flickering
-          <p>{helpMessage ? helpMessage : <span>&nbsp;</span>}</p>
-        )}
+        {this.props.renderMessage(query, suggestions)}
       </React.Fragment>
     );
   }

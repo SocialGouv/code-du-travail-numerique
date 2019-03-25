@@ -23,6 +23,17 @@ export class CompanySuggester extends React.Component {
   onSelect = value => {
     this.props.onSelect(value);
   };
+
+  renderMessage = (query, suggestions) => {
+    const helpMessage =
+      suggestions != null &&
+      suggestions.length == 0 &&
+      query.replace(/ /g, "").length == 14 &&
+      `Aucune entreprise trouvée pour le SIRET ${query}`;
+    // we display the <p> tag even when there is no message to prevent flickering
+    return <p>{helpMessage ? helpMessage : <span>&nbsp;</span>}</p>;
+  };
+
   render() {
     return (
       <Suggester
@@ -34,14 +45,8 @@ export class CompanySuggester extends React.Component {
         theme={suggesterTheme}
         // inserts spaces to have a "000 000 000 00000" format and limits to 14 chars
         reformatEnteredValue={reformatSiret}
-        // remove spaces when sending query for search
-        reformatSearchedValue={v => v.replace(/ /g, "")}
         // only display an error message when the query is 14 chars long
-        getHelpMessage={(query, suggestions) =>
-          suggestions.length == 0 &&
-          query.replace(/ /g, "").length == 14 &&
-          `Aucune entreprise trouvée pour le SIRET ${query}`
-        }
+        renderMessage={this.renderMessage}
       />
     );
   }

@@ -43,7 +43,7 @@ describe("<CompanySuggester />", () => {
     expect(onSelect).toHaveBeenCalledWith(item);
   });
 
-  it("should reformat the entered values but not the searched ones", async () => {
+  it("should reformat the entered values", async () => {
     const onSearch = jest.fn().mockResolvedValue([]);
     const onSelect = jest.fn();
     const { getByPlaceholderText, getByDisplayValue } = render(

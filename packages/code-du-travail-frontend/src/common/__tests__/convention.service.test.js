@@ -47,6 +47,28 @@ describe("convention service", () => {
     expect(results).toMatchSnapshot();
   });
 
+  it("removes spaces from sirets when searching for companies", async () => {
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          hits: {
+            hits: [
+              {
+                name: "RENAULT-23499-VILLARD",
+                siret: "34048927839394"
+              }
+            ]
+          }
+        })
+    });
+    await searchCompanies("340 489 278 39394");
+    expect(fetch).toBeCalledTimes(1);
+    expect(fetch.mock.calls[0][0]).toMatch(
+      /siret2idcc\.url\/api\/v1\/companies\?siret=34048927839394$/
+    );
+  });
+
   it("can get a single company with IDCCs", async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,

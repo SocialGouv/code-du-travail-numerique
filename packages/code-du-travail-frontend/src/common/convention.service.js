@@ -6,7 +6,9 @@ const {
 } = getConfig();
 
 function searchIdcc(query) {
-  const url = `${API_URL}/idcc?q=${encodeURIComponent(query)}`;
+  const url = `${API_URL}/idcc?q=${encodeURIComponent(
+    query.replace(/ /g, "")
+  )}`;
 
   return fetch(url).then(response => {
     if (response.ok) {
@@ -18,7 +20,7 @@ function searchIdcc(query) {
 
 function searchCompanies(siret) {
   const url = `${API_SIRET2IDCC_URL}/api/v1/companies?siret=${encodeURIComponent(
-    siret
+    siret.replace(/ /g, "")
   )}`;
 
   return fetch(url).then(response => {

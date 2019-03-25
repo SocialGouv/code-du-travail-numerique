@@ -41,29 +41,17 @@ describe("<Suggester />", () => {
     await waitForElement(() => getByDisplayValue("tOst"));
   });
 
-  it("should allow reformatting the searched value", async () => {
-    const onSearch = jest.fn().mockResolvedValue(results);
-    const { getByPlaceholderText } = render(
-      <Suggester
-        onSelect={() => {}}
-        onSearch={onSearch}
-        reformatSearchedValue={v => v.replace(/e/, "O")}
-      />
-    );
-    const input = getByPlaceholderText(/faire une recherche/i);
-    fireEvent.change(input, { target: { value: "test" } });
-    expect(onSearch).toBeCalledWith("tOst");
-  });
-
   it("should allow displaying a help message", async () => {
     const onSearch = jest.fn().mockResolvedValue(results);
     const { getByPlaceholderText, getByText } = render(
       <Suggester
         onSelect={() => {}}
         onSearch={onSearch}
-        getHelpMessage={(query, suggestions) =>
-          `${query} returned ${suggestions.length} results`
-        }
+        renderMessage={(query, suggestions) => (
+          <p>
+            {query} returned {suggestions && suggestions.length} results
+          </p>
+        )}
       />
     );
     const input = getByPlaceholderText(/faire une recherche/i);
