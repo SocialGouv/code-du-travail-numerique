@@ -3,13 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# 2.0.0 (2019-03-08)
+# [2.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.8.0...v2.0.0) (2019-03-08)
+
+
+### Bug Fixes
+
+* **data:** add vlep in synonyms ([#571](https://github.com/SocialGouv/code-du-travail-numerique/issues/571)) ([6420d8f](https://github.com/SocialGouv/code-du-travail-numerique/commit/6420d8f))
+* **data:** make unique slugs for faqs ([#500](https://github.com/SocialGouv/code-du-travail-numerique/issues/500)) ([2fcb7f8](https://github.com/SocialGouv/code-du-travail-numerique/commit/2fcb7f8))
+* **data:** update elastic configuration ([#566](https://github.com/SocialGouv/code-du-travail-numerique/issues/566)) ([09e0b96](https://github.com/SocialGouv/code-du-travail-numerique/commit/09e0b96)), closes [#537](https://github.com/SocialGouv/code-du-travail-numerique/issues/537) [#498](https://github.com/SocialGouv/code-du-travail-numerique/issues/498) [#112](https://github.com/SocialGouv/code-du-travail-numerique/issues/112)
+* **data:** update stopwords ([#580](https://github.com/SocialGouv/code-du-travail-numerique/issues/580)) ([b19543d](https://github.com/SocialGouv/code-du-travail-numerique/commit/b19543d))
+* **data:** update synonyms.json ([#572](https://github.com/SocialGouv/code-du-travail-numerique/issues/572)) ([868b9f6](https://github.com/SocialGouv/code-du-travail-numerique/commit/868b9f6))
+* **frontend:** improve metadata for calcul-indemnité-licenciement ([#557](https://github.com/SocialGouv/code-du-travail-numerique/issues/557)) ([f1da00d](https://github.com/SocialGouv/code-du-travail-numerique/commit/f1da00d)), closes [#474](https://github.com/SocialGouv/code-du-travail-numerique/issues/474)
 
 
 ### Features
 
 * **data:** refactor KALI data to use legixplore API  ([e6ae16c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e6ae16c)), closes [#533](https://github.com/SocialGouv/code-du-travail-numerique/issues/533)
 * **data:** update code-du-travail au 1er Janvier 2019 ([#558](https://github.com/SocialGouv/code-du-travail-numerique/issues/558)) ([4b8ad48](https://github.com/SocialGouv/code-du-travail-numerique/commit/4b8ad48))
+* **data:** update fiche-service public ([#560](https://github.com/SocialGouv/code-du-travail-numerique/issues/560)) ([fcf5e6a](https://github.com/SocialGouv/code-du-travail-numerique/commit/fcf5e6a))
+* **frontend:** add snippet answers ([#518](https://github.com/SocialGouv/code-du-travail-numerique/issues/518)) ([5c91a40](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c91a40)), closes [#409](https://github.com/SocialGouv/code-du-travail-numerique/issues/409)
 
 
 ### BREAKING CHANGES
@@ -24,18 +36,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.8.0 (2019-02-12)
+# [1.8.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.4...v1.8.0) (2019-02-12)
 
 
 ### Bug Fixes
 
+* **annuaire:** add feedback from last GT meeting ([#478](https://github.com/SocialGouv/code-du-travail-numerique/issues/478)) ([8c28f01](https://github.com/SocialGouv/code-du-travail-numerique/commit/8c28f01)), closes [#464](https://github.com/SocialGouv/code-du-travail-numerique/issues/464)
+* **data:** add template for releve d'heures sup ([#503](https://github.com/SocialGouv/code-du-travail-numerique/issues/503)) ([3cec00c](https://github.com/SocialGouv/code-du-travail-numerique/commit/3cec00c)), closes [#363](https://github.com/SocialGouv/code-du-travail-numerique/issues/363)
+* **data:** udpate typo in courriers ([#511](https://github.com/SocialGouv/code-du-travail-numerique/issues/511)) ([b892c9a](https://github.com/SocialGouv/code-du-travail-numerique/commit/b892c9a))
+* **data:** update fiches ministere url ([#505](https://github.com/SocialGouv/code-du-travail-numerique/issues/505)) ([405892c](https://github.com/SocialGouv/code-du-travail-numerique/commit/405892c))
 * **scrap:** add ariane+tags for fiches ministere-travail ([#510](https://github.com/SocialGouv/code-du-travail-numerique/issues/510)) ([ddc2c02](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddc2c02))
 
 
+### Features
+
+* **data:** add a tag extractor script ([#489](https://github.com/SocialGouv/code-du-travail-numerique/issues/489)) ([7261a0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/7261a0c))
 
 
 
-## 1.7.3 (2019-01-29)
+## [1.7.3](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.2...v1.7.3) (2019-01-29)
 
 
 ### Bug Fixes
@@ -48,7 +67,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## 1.7.1 (2019-01-18)
+## [1.7.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.7.0...v1.7.1) (2019-01-18)
 
 **Note:** Version bump only for package @cdt/data
 
@@ -56,12 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.7.0 (2019-01-15)
-
-
-### Bug Fixes
-
-* **frontend:** change trackEvent value for feedback ([#404](https://github.com/SocialGouv/code-du-travail-numerique/issues/404)) ([26b664b](https://github.com/SocialGouv/code-du-travail-numerique/commit/26b664b))
+# [1.7.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.6.2...v1.7.0) (2019-01-15)
 
 
 ### Features
@@ -80,19 +94,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.6.0 (2018-12-18)
+# [1.6.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.5.2...v1.6.0) (2018-12-18)
 
 
 ### Bug Fixes
 
 * **data:** fix indexing fiches-ministere ([#383](https://github.com/SocialGouv/code-du-travail-numerique/issues/383)) ([0413175](https://github.com/SocialGouv/code-du-travail-numerique/commit/0413175))
+* **data:** remove faq-convention-collective from index ([#378](https://github.com/SocialGouv/code-du-travail-numerique/issues/378)) ([bc1d6d8](https://github.com/SocialGouv/code-du-travail-numerique/commit/bc1d6d8))
+* **frontend:** fix theme navigation ([#376](https://github.com/SocialGouv/code-du-travail-numerique/issues/376)) ([2bf4582](https://github.com/SocialGouv/code-du-travail-numerique/commit/2bf4582)), closes [#372](https://github.com/SocialGouv/code-du-travail-numerique/issues/372)
 
 
 ### Features
 
 * add related content for faq ([#370](https://github.com/SocialGouv/code-du-travail-numerique/issues/370)) ([853ae51](https://github.com/SocialGouv/code-du-travail-numerique/commit/853ae51))
-
-
+* **data:** add faq contribution ([#337](https://github.com/SocialGouv/code-du-travail-numerique/issues/337)) ([945726d](https://github.com/SocialGouv/code-du-travail-numerique/commit/945726d))
+* **data:** ajout de nouveaux courriers ([#367](https://github.com/SocialGouv/code-du-travail-numerique/issues/367)) ([e60779f](https://github.com/SocialGouv/code-du-travail-numerique/commit/e60779f)), closes [#318](https://github.com/SocialGouv/code-du-travail-numerique/issues/318)
+* **data:** ajout des fiches santé ministere-travail ([#366](https://github.com/SocialGouv/code-du-travail-numerique/issues/366)) ([572f62a](https://github.com/SocialGouv/code-du-travail-numerique/commit/572f62a)), closes [#121](https://github.com/SocialGouv/code-du-travail-numerique/issues/121)
 
 
 
@@ -104,7 +121,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## 1.5.1 (2018-12-11)
+## [1.5.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/ea229e5...v1.5.1) (2018-12-11)
 
 
 ### Bug Fixes
@@ -126,10 +143,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **docker:** fix ES_PORT, move data docker scripts to data ([850dc5b](https://github.com/SocialGouv/code-du-travail-numerique/commit/850dc5b))
 * **docker:** restore docker setup ([ea229e5](https://github.com/SocialGouv/code-du-travail-numerique/commit/ea229e5))
 * **dockerify:** add missing .env ([c612762](https://github.com/SocialGouv/code-du-travail-numerique/commit/c612762))
-* **faq:** add info provider(DGT, DIRRECTE) to faq ([#188](https://github.com/SocialGouv/code-du-travail-numerique/issues/188)) ([d287852](https://github.com/SocialGouv/code-du-travail-numerique/commit/d287852))
 * **frontend:** update convention modal to request elastic search  ([#319](https://github.com/SocialGouv/code-du-travail-numerique/issues/319)) ([0c91820](https://github.com/SocialGouv/code-du-travail-numerique/commit/0c91820))
 * remove outils until fix bug ([#248](https://github.com/SocialGouv/code-du-travail-numerique/issues/248)) ([e089999](https://github.com/SocialGouv/code-du-travail-numerique/commit/e089999))
 * typos in outils.json ([#292](https://github.com/SocialGouv/code-du-travail-numerique/issues/292)) ([013cbc6](https://github.com/SocialGouv/code-du-travail-numerique/commit/013cbc6))
+* **faq:** add info provider(DGT, DIRRECTE) to faq ([#188](https://github.com/SocialGouv/code-du-travail-numerique/issues/188)) ([d287852](https://github.com/SocialGouv/code-du-travail-numerique/commit/d287852))
 
 
 ### Features
