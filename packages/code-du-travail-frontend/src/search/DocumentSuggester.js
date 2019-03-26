@@ -4,7 +4,7 @@ import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
 
 import Html from "../common/Html";
-import { getLabelBySource } from "../sources";
+
 export class DocumentSuggester extends React.Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -65,7 +65,7 @@ export class DocumentSuggester extends React.Component {
           onSuggestionsFetchRequested={onSearch}
           onSuggestionsClearRequested={onClear}
           getSuggestionValue={getSuggestionValue}
-          renderSuggestion={renderSuggestion}
+          renderSuggestion={suggestion => renderSuggestion(suggestion, query)}
           renderSuggestionsContainer={renderSuggestionsContainer}
           inputProps={inputProps}
         />
@@ -74,7 +74,7 @@ export class DocumentSuggester extends React.Component {
   }
 }
 
-const getSuggestionValue = suggestion => suggestion._source.title;
+const getSuggestionValue = suggestion => suggestion;
 
 const SuggestionContainer = styled.div`
   p {
@@ -82,23 +82,12 @@ const SuggestionContainer = styled.div`
   }
 `;
 
-const SourceContainer = styled.small`
-  color: #999;
-  font-size: 0.8rem;
-`;
-
-const renderSuggestion = suggestion => {
-  const { highlight: { title: highlightedTitles } = {} } = suggestion;
-  const source = getLabelBySource(suggestion._source.source);
-  const title = highlightedTitles
-    ? highlightedTitles[0]
-        .replace(/(<mark>)+/g, "<b>")
-        .replace(/((<\/mark>)+)/g, "</b>")
-    : suggestion._source.title;
+const renderSuggestion = (suggestion, query) => {
+  const regexp = new RegExp(query);
+  const title = suggestion.replace(regexp, "<b>$&</b>");
   return (
     <SuggestionContainer>
       <Html inline>{title}</Html>
-      {source && <SourceContainer>{` - ${source}`}</SourceContainer>}
     </SuggestionContainer>
   );
 };

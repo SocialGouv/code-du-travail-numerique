@@ -3,30 +3,34 @@ import memoizee from "memoizee";
 import pDebounce from "../lib/pDebounce";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL, SUGGEST_URL }
 } = getConfig();
 
-const fetchResults = endpoint => (query = "", excludeSources = "") => {
+const fetchResults = endpoint => async (query = "", excludeSources = "") => {
   const url = `${API_URL}/${endpoint}?q=${encodeURIComponent(
     query
   )}&excludeSources=${encodeURIComponent(excludeSources)}`;
-  return fetch(url).then(response => {
-    if (response.ok) {
-      return response.json();
-    }
+  const response = await fetch(url);
+  if (!response.ok) {
     throw new Error("Un problème est survenu.");
-  });
+  }
+  const json = await response.json();
+  return json;
 };
 const searchResults = fetchResults("search");
-const suggestResults = fetchResults("suggest");
 
-const suggestMin = (query, excludeSources) => {
-  if (query.length > 2) {
-    return suggestResults(query, excludeSources);
-  } else {
-    return Promise.resolve({ hits: { hits: [] } });
+const suggestResults = async query => {
+  const url = `${SUGGEST_URL}?q=${query}`;
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error("suggester: Un problème est survenu.");
   }
+  return response.json();
 };
+
+const suggestMin = query =>
+  query.length > 2 ? suggestResults(query) : Promise.resolve([]);
 
 // memoize search results
 const searchResultsMemoized = memoizee(searchResults, {
@@ -37,7 +41,7 @@ const searchResultsMemoized = memoizee(searchResults, {
 // memoize suggestions results
 const suggestResultsMemoized = memoizee(suggestMin, {
   promise: true,
-  length: 2 // ensure memoize work for function with es6 default params
+  length: 1 // ensure memoize work for function with es6 default params
 });
 
 // debounce memoized suggestions results

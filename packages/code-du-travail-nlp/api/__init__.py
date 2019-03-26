@@ -22,7 +22,7 @@ def create_app():
 
   @app.route('/')
   def hello():
-      return 'suggest api'
+    return 'suggest api'
 
   add_suggest(app, suggester)
 

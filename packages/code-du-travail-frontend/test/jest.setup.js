@@ -6,6 +6,7 @@ jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
     API_URL: "api.url",
     API_SIRET2IDCC_URL: "siret2idcc.url",
+    SUGGEST_URL: "suggest.url/suggest",
     API_ADDRESS: "addresse-api.data",
     PACKAGE_VERSION: "x.y.z"
   }

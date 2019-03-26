@@ -12,7 +12,16 @@ L'api de suggestion utilise des données pour faire des suggestions
 Ces données sont montées sur un volume docker. Lors du premier lancement ou pour mettre à jour
 le jeu de donnée, vous pouvez modifier la variable d'environnement `SUGGEST_DATA_URL` et
 lancer le script `scripts download-nlp-data.sh` pour récupérer d'autres données.
-Les données sont stockéss sur un gist et il faut récupérer l'adresse de l'archive.
+`SUGGEST_DATA_URL` contient l'url d'un gist qui liste plusieurs gist de données, 
+ceux-ci sont ensuite ré-assemblé dans un seul fichier.
+Les données sont stockéss sur plusieurs gist car les documents sont volumineux.
+Pour exemple, l'url 
+
+Pour spliter un fichier texte en plusieur fichier.
+```
+split -l 300000 data_raw.txt data-part.
+```
+
 
 ## Installation en local
 
@@ -36,3 +45,6 @@ FLASK_ENV=development FLASK_APP=api/app flask run
 ```
 deactivate
 ```
+## Data
+
+Pour l'instant, on héberge les data dans des gist anonymes. le scrit

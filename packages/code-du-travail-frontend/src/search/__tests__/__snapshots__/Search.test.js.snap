@@ -183,11 +183,6 @@ exports[`<search /> should render suggestions 1`] = `
   margin: 0;
 }
 
-.c4 {
-  color: #999;
-  font-size: 0.8rem;
-}
-
 .c0 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -208,6 +203,18 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 .c3 {
+  display: inline-block;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c6 {
   display: inline-block;
 }
 
@@ -370,13 +377,59 @@ exports[`<search /> should render suggestions 1`] = `
                         <div
                           class="c3"
                         >
-                          faq title
+                          foo
                         </div>
-                        <small
+                      </div>
+                    </li>
+                    <li
+                      aria-selected="false"
+                      data-suggestion-index="1"
+                      id="react-autowhatever-cdtn-documents-suggester--item-1"
+                      role="option"
+                      style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+                    >
+                      <div
+                        class="c2"
+                      >
+                        <div
                           class="c4"
                         >
-                           - FAQ
-                        </small>
+                          foobar
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      aria-selected="false"
+                      data-suggestion-index="2"
+                      id="react-autowhatever-cdtn-documents-suggester--item-2"
+                      role="option"
+                      style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+                    >
+                      <div
+                        class="c2"
+                      >
+                        <div
+                          class="c5"
+                        >
+                          foo bar ?
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      aria-selected="false"
+                      data-suggestion-index="3"
+                      id="react-autowhatever-cdtn-documents-suggester--item-3"
+                      role="option"
+                      style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
+                    >
+                      <div
+                        class="c2"
+                      >
+                        <div
+                          class="c6"
+                        >
+                          foo bazzz
+                        </div>
                       </div>
                     </li>
                   </ul>

@@ -6,6 +6,7 @@ jest.mock("../CompanySuggester", () => {
     return (
       <button
         data-testid="suggest"
+        type="button"
         onClick={() => props.onSelect({ name: "RENAULT-3200-VILLARD" })}
       />
     );
