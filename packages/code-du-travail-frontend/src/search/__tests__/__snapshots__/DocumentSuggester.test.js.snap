@@ -1,9 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DocumentSuggester /> should render 1`] = `
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.c1 ul {
+  z-index: 100;
+}
+
+.c1 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
 <div>
   <label
-    class="sc-bwzfXH jthXhr"
+    class="c0"
     for="main-search-input"
   >
     <span
@@ -28,7 +47,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
         value="foo"
       />
       <div
-        class="sc-htpNat bSwrWv"
+        class="c1"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       />
@@ -38,9 +57,48 @@ exports[`<DocumentSuggester /> should render 1`] = `
 `;
 
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
+.c2 p {
+  margin: 0;
+}
+
+.c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.c1 ul {
+  z-index: 100;
+}
+
+.c1 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c5 {
+  display: inline-block;
+}
+
+.c6 {
+  display: inline-block;
+}
+
 <div>
   <label
-    class="sc-bwzfXH jthXhr"
+    class="c0"
     for="main-search-input"
   >
     <span
@@ -65,7 +123,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
         value="foo"
       />
       <div
-        class="sc-htpNat bSwrWv"
+        class="c1"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       >
@@ -81,10 +139,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="sc-bdVaJa hpcrWB"
+              class="c2"
             >
               <div
-                class="sc-bxivhb blYzmz"
+                class="c3"
               >
                 <b>
                   foo
@@ -100,10 +158,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="sc-bdVaJa hpcrWB"
+              class="c2"
             >
               <div
-                class="sc-ifAKCX bzUsHD"
+                class="c4"
               >
                 <b>
                   foo
@@ -120,10 +178,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="sc-bdVaJa hpcrWB"
+              class="c2"
             >
               <div
-                class="sc-EHOje klVYHy"
+                class="c5"
               >
                 <b>
                   foo
@@ -140,10 +198,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="sc-bdVaJa hpcrWB"
+              class="c2"
             >
               <div
-                class="sc-bZQynM jZrkcw"
+                class="c6"
               >
                 <b>
                   foo

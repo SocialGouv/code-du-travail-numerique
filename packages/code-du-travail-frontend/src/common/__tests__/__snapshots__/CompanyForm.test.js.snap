@@ -136,6 +136,7 @@ exports[`<CompanyForm /> should render 1`] = `
     >
       <button
         data-testid="suggest"
+        type="button"
       />
       <p
         style="font-style: italic;"
