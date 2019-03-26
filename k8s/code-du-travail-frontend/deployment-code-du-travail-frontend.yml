@@ -35,4 +35,4 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: http://code-du-travail-numerique-api${HASH_BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr/api/v1
+          value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-api.${ENVIRONMENT}.factory.social.gouv.fr/api/v1

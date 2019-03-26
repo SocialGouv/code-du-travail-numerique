@@ -4,6 +4,7 @@
     entrypoint: [""]
   before_script:
   - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
+  - export HASH_BRANCH_INGRESS=$HASH_BRANCH_NAME-
   - export HASH_BRANCH_NAME=-$HASH_BRANCH_NAME
   - /apps/create-kubeconfig.sh
   - envsubst < k8s/code-du-travail-frontend/deployment-code-du-travail-frontend.yml > k8s/code-du-travail-frontend/deployment-cdtn-frontend.yml
