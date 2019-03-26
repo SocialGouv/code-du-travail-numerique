@@ -122,7 +122,7 @@ class Search extends React.Component {
   onSelect = (suggestion, event) => {
     // prevent onSubmit to be call
     event.preventDefault();
-    const { query, source } = this.state;
+    const { source } = this.state;
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
       Router.pushRoute("annuaire", {
@@ -133,7 +133,7 @@ class Search extends React.Component {
       return;
     }
 
-    Router.pushRoute("recherche", { q: query, source });
+    Router.pushRoute("recherche", { q: suggestion, source });
   };
 
   onClear = () => {
