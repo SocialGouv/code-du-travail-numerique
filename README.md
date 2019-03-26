@@ -122,17 +122,48 @@ $ sh scripts/deploy-dev.sh
 <br>
 <br>
 
-## Release policy
+## Release policy (preprod environment)
+
+This is the process to release to the preprod URL: https://codedutravail-dev.num.social.gouv.fr/
+
+To deploy in production, ask @revolunet
 
 ### Auto
 
-Trigger a custom build on [Travis](https://travis-ci.com/SocialGouv/code-du-travail-numerique) (in the "More options" right menu) on the `master` branch with a custom config:
+First, trigger a custom build on [Travis CI > code-du-travail-numerique]((https://travis-ci.com/SocialGouv/code-du-travail-numerique)) > master branch > in the "More options" right menu > trigger custom build.
+Add a message like "Release v2.1.0".
+Use this YAML config:
 
 ```yml
 env:
   global:
     - RELEASE=true
 ```
+
+> This will :
+> - tag the release on GitHub
+> - update the changelogs
+> - build Docker images
+> - push them to DockerHub
+
+Wait for the Travis Jobs to be fully done, including the push to DockerHub.
+
+SSH into the Dev Server (your SSH key needs to be added first, ask @revolunet)
+
+```sh
+cd dev
+git checkout master && git pull
+sh scripts/deploy-dev.sh
+```
+
+> This will:
+> - Pull the latest docker images from DockerHub
+> - Update containers with the new images
+
+Optionally needed:
+
+- update environment variables with `vim dev/.env`
+- refresh NLP data with: `sh dev/scripts/download-nlp-data.sh`
 
 ### Manual
 
