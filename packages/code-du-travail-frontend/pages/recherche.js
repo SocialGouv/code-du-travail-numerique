@@ -24,7 +24,7 @@ class SearchPage extends React.Component {
     );
     if (!response.ok) {
       return {
-        results: {},
+        results: { facets: [] },
         errorCode: response.status,
         errorStatus: response.statusText
       };
