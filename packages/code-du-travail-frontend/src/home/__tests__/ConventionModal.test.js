@@ -3,7 +3,9 @@ import { render } from "react-testing-library";
 import ConventionModal from "../ConventionModal";
 
 jest.mock("../../common/convention.service", () => ({
-  searchIdcc: jest.fn()
+  searchIdcc: jest.fn(),
+  searchCompanies: jest.fn(),
+  getCompany: jest.fn()
 }));
 
 // Trouvez votre convention collective

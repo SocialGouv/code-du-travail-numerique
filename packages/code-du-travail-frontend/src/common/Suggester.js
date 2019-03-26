@@ -10,7 +10,9 @@ export class Suggester extends React.Component {
     getSuggestionValue: PropTypes.func,
     renderSuggestion: PropTypes.func,
     renderSuggestionsContainer: PropTypes.func,
-    theme: PropTypes.object
+    theme: PropTypes.object,
+    reformatEnteredValue: PropTypes.func,
+    renderMessage: PropTypes.func
   };
 
   static defaultProps = {
@@ -19,17 +21,22 @@ export class Suggester extends React.Component {
     getSuggestionValue: value => value.toString(),
     renderSuggestion: suggestion => <span>{suggestion.toString()}</span>,
     renderSuggestionsContainer: undefined,
-    theme: undefined
+    theme: undefined,
+    renderMessage: () => null,
+    reformatEnteredValue: v => v
   };
 
   state = {
     query: "",
-    suggestions: []
+    suggestions: [],
+    loading: false
   };
 
   onChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]:
+        event.target.value &&
+        this.props.reformatEnteredValue(event.target.value)
     });
   };
 
@@ -38,41 +45,48 @@ export class Suggester extends React.Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
+    this.setState({ suggestions: null, loading: true });
     this.props.onSearch(value).then(results =>
       this.setState({
-        suggestions: results
+        suggestions: results,
+        loading: false
       })
     );
   };
 
   onSuggestionsClearRequested = () => {
     this.setState({
-      suggestions: []
+      suggestions: null
     });
   };
 
   render() {
+    const { suggestions, query, loading } = this.state;
+    const { placeholder, className } = this.props;
     const inputProps = {
       name: "query",
-      placeholder: this.props.placeholder,
-      value: this.state.query,
+      placeholder: placeholder,
+      value: query,
       type: "search",
       onChange: this.onChange,
-      className: this.props.className
+      className: className
     };
 
     return (
-      <Autosuggest
-        suggestions={this.state.suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        onSuggestionSelected={this.onSuggestionSelected}
-        getSuggestionValue={this.props.getSuggestionValue}
-        renderSuggestion={this.props.renderSuggestion}
-        renderSuggestionsContainer={this.props.renderSuggestionsContainer}
-        theme={this.props.theme}
-        inputProps={inputProps}
-      />
+      <React.Fragment>
+        <Autosuggest
+          suggestions={suggestions || []}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          onSuggestionSelected={this.onSuggestionSelected}
+          getSuggestionValue={this.props.getSuggestionValue}
+          renderSuggestion={this.props.renderSuggestion}
+          renderSuggestionsContainer={this.props.renderSuggestionsContainer}
+          theme={this.props.theme}
+          inputProps={inputProps}
+        />
+        {this.props.renderMessage(query, suggestions, loading)}
+      </React.Fragment>
     );
   }
 }

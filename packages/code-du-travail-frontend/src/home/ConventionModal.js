@@ -4,7 +4,12 @@ import styled from "styled-components";
 
 import { Outil, OutilCard } from "./Outils";
 import { ConventionForm } from "../common/ConventionForm";
-import { searchIdcc } from "../common/convention.service";
+import { CompanyForm } from "../common/CompanyForm";
+import {
+  searchIdcc,
+  searchCompanies,
+  getCompany
+} from "../common/convention.service";
 
 class ConventionModal extends React.Component {
   state = {
@@ -40,6 +45,7 @@ class ConventionModal extends React.Component {
         >
           <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
             <ConventionForm onSearch={searchIdcc} />
+            <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
           </DialogContent>
         </DialogOverlay>
       </OutilCard>

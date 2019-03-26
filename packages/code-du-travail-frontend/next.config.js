@@ -19,6 +19,8 @@ module.exports = withCSS({
   },
   publicRuntimeConfig: {
     API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",
+    API_SIRET2IDCC_URL:
+      process.env.API_SIRET2IDCC_URL || "https://siret2idcc.num.social.gouv.fr",
     API_ADDRESS: "https://api-adresse.data.gouv.fr/search",
     PACKAGE_VERSION: require("./package.json").version,
     SENTRY_PUBLIC_DSN: process.env.SENTRY_PUBLIC_DSN,

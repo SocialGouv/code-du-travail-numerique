@@ -7,7 +7,12 @@ jest.mock("../IdccSuggester", () => {
       <button
         data-testid="suggest"
         type="button"
-        onClick={() => props.onSelect({ title: "foo", url: "bar.url" })}
+        onClick={() =>
+          props.onSelect({
+            title: "Convention des Poulaillers",
+            slug: "200-convention-des-poulaillers"
+          })
+        }
       />
     );
   };
