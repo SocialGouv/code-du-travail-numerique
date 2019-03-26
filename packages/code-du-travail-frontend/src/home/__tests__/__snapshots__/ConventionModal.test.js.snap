@@ -33,18 +33,25 @@ exports[`<ConventionModal /> should render a button 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c3 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
-.c1 {
+.c2 {
   margin-top: 10px;
 }
 
-.c3 {
-  color: initial;
+.c1 {
+  color: #000;
   font-size: 1.2em;
   margin-top: 20px;
+}
+
+.c4 {
+  color: #666;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
 }
 
 .c0 {
@@ -96,13 +103,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           </h2>
           <div>
             <h3
-              class="sc-gzVnrw brzehh"
+              class="c1"
             >
               Recherche par nom ou par identifiant
             </h3>
             Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
-              class="c1"
+              class="c2"
             >
               <div
                 aria-expanded="false"
@@ -122,24 +129,24 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   value=""
                 />
                 <div
-                  class="c2"
+                  class="c3"
                   id="react-autowhatever-1"
                   role="listbox"
                 />
               </div>
             </div>
-            <h3
-              class="c3"
+            <div
+              class="c4"
             >
               Comment trouver ma convention collective ?
             </div>
             <ul>
               <li>
-                Elle doit figurer au
+                Elle doit figurer au 
                 <b>
                   bulletin de paie
                 </b>
-                , et sur une notice remise à l'embauche ou
+                , et sur une notice remise à l'embauche ou 
                 <b>
                   sur le contrat de travail
                 </b>
@@ -148,8 +155,8 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
               </li>
             </ul>
-            <h3
-              class="c3"
+            <div
+              class="c4"
             >
               Quelle est la convention collective applicable ?
             </div>
@@ -162,13 +169,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
         </form>
         <form>
           <h3
-            class="sc-gzVnrw brzehh"
+            class="c1"
           >
             Recherche par SIRET
           </h3>
           Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
           <div
-            class="sc-bZQynM iUJxtM"
+            class="c2"
           >
             <div
               aria-expanded="false"
@@ -188,7 +195,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 value=""
               />
               <div
-                class="sc-ifAKCX eCZXzX"
+                class="c3"
                 id="react-autowhatever-1"
                 role="listbox"
               />
