@@ -2,19 +2,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: cdtn-frontend${BRANCH_NAME}
+  name: cdtn-frontend${HASH_BRANCH_NAME}
   labels:
-    app: cdtn-frontend${BRANCH_NAME}
-    branch: cdtn${BRANCH_NAME}
+    app: cdtn-frontend${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdtn-frontend${BRANCH_NAME}
+      app: cdtn-frontend${HASH_BRANCH_NAME}
   template:
     metadata:
       labels:
-        app: cdtn-frontend${BRANCH_NAME}
+        app: cdtn-frontend${HASH_BRANCH_NAME}
     spec:
       containers:
       - image:  ${CDTN_REGISTRY}/frontend:${IMAGE_TAG}
@@ -35,4 +35,4 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: http://code-du-travail-numerique-api${BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr/api/v1
+          value: http://code-du-travail-numerique-api${HASH_BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr/api/v1

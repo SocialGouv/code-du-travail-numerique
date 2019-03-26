@@ -4,8 +4,8 @@ kind: StatefulSet
 metadata:
   name: es-cluster
   labels:
-    app: es-cluster${BRANCH_NAME}
-    branch: cdtn${BRANCH_NAME}
+    app: es-cluster${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
 spec:
   serviceName: elasticsearch
   replicas: 3

@@ -2,13 +2,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: elasticsearch${BRANCH_NAME}
+  name: elasticsearch${HASH_BRANCH_NAME}
   labels:
-    app: elasticsearch${BRANCH_NAME}
-    branch: cdtn${BRANCH_NAME}
+    app: elasticsearch${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
 spec:
   selector:
-    app: elasticsearch${BRANCH_NAME}
+    app: elasticsearch${HASH_BRANCH_NAME}
   clusterIP: None
   ports:
   - port: ${ES_PORT}

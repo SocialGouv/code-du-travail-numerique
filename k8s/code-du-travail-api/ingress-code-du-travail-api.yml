@@ -2,16 +2,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: cdtn-api${BRANCH_NAME}
+  name: cdtn-api${HASH_BRANCH_NAME}
   labels:
-    app: cdtn-api${BRANCH_NAME}
-    branch: cdtn${BRANCH_NAME}
+    app: cdtn-api${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
 spec:
   rules:
-  - host: code-du-travail-numerique-api${BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr
+  - host: code-du-travail-numerique-api${HASH_BRANCH_NAME}.${ENVIRONMENT}.factory.social.gouv.fr
     http:
       paths:
       - path: /
         backend:
-          serviceName: cdtn-api${BRANCH_NAME}
+          serviceName: cdtn-api${HASH_BRANCH_NAME}
           servicePort: ${PORT}

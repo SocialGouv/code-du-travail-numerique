@@ -2,17 +2,17 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: cdtn-data${BRANCH_NAME}
+  name: cdtn-data${HASH_BRANCH_NAME}
   labels:
-    app: cdtn-data${BRANCH_NAME}
-    branch: cdtn${BRANCH_NAME}
+    app: cdtn-data${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
 spec:
   containers:
-  - name: cdtn-data${BRANCH_NAME}
+  - name: cdtn-data${HASH_BRANCH_NAME}
     image: ${CDTN_REGISTRY}/data:${IMAGE_TAG}
     env:
     - name: ELASTICSEARCH_URL
-      value: http://elasticsearch${BRANCH_NAME}:${ES_PORT}
+      value: http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}
   restartPolicy: Never
   initContainers:
   - name: wait-for-elasticsearch
@@ -23,7 +23,7 @@ spec:
     - -c
     - |
       apk --no-cache add curl
-      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" "http://elasticsearch${BRANCH_NAME}:${ES_PORT}") -ne 200 ]]; do
+      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" "http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}") -ne 200 ]]; do
         echo "Not ready"
         sleep 5s
       done

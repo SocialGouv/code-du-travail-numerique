@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apm-server${BRANCH_NAME}
+  name: apm-server${HASH_BRANCH_NAME}
   labels:
-    app: apm-server${BRANCH_NAME}
-    branch: cdtn${BRANCH_NAME}
+    app: apm-server${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: apm-server${BRANCH_NAME}
+      app: apm-server${HASH_BRANCH_NAME}
   template:
     metadata:
       labels:
-        app: apm-server${BRANCH_NAME}
+        app: apm-server${HASH_BRANCH_NAME}
     spec:
       containers:
-      - name: apm-server${BRANCH_NAME}
+      - name: apm-server${HASH_BRANCH_NAME}
         image: docker.elastic.co/apm/apm-server:${ELK_VERSION}
         resources:
           limits:
@@ -30,7 +30,7 @@ spec:
         - name: setup.kibana.host
           value: "kibana:${KBN_PORT}"
         - name: output.elasticsearch.hosts
-          value: "elasticsearch${BRANCH_NAME}:${ES_PORT}"
+          value: "elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}"
         - name: output.elasticsearch.enabled
           value: "true"
         ports:

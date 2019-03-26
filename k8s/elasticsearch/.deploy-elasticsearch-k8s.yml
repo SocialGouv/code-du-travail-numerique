@@ -3,6 +3,8 @@
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
   before_script:
+  - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
+  - export HASH_BRANCH_NAME=-$HASH_BRANCH_NAME
   - /apps/create-kubeconfig.sh
   - envsubst < k8s/elasticsearch/configmap-elasticsearch-dev.yml > k8s/elasticsearch/configmap-cdtn-elasticsearch-dev.yml
   - envsubst < k8s/elasticsearch/statefulset-elasticsearch-dev.yml > k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
