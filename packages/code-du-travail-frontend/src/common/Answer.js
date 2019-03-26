@@ -6,7 +6,7 @@ import { withRouter } from "next/router";
 import ReactPiwik from "react-piwik";
 
 import { Link } from "../../routes";
-import HierarchieDesNormes from "../HierarchieDesNormes";
+import ReferencesJuridiques from "../ReferencesJuridiques";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
@@ -24,13 +24,11 @@ const BackToResultsLink = ({ query }) => {
   if (!query.q) return null;
 
   return (
-    <Container>
-      <BacklinkWrapper>
-        <Link route="recherche" params={{ ...query }}>
-          <a>{"< Retour aux résultats"}</a>
-        </Link>
-      </BacklinkWrapper>
-    </Container>
+    <BacklinkWrapper>
+      <Link route="recherche" params={{ ...query }}>
+        <a>{"< Retour aux résultats"}</a>
+      </Link>
+    </BacklinkWrapper>
   );
 };
 
@@ -125,7 +123,7 @@ class Answer extends React.Component {
         )}
         {additionalContent}
         {referencesJuridiques.length > 0 && (
-          <HierarchieDesNormes references={referencesJuridiques} />
+          <ReferencesJuridiques references={referencesJuridiques} />
         )}
         <NoAnswer>
           <Button onClick={this.showModal}>Posez votre question</Button>
@@ -137,6 +135,6 @@ class Answer extends React.Component {
 
 export default withRouter(Answer);
 
-const BacklinkWrapper = styled.div`
+const BacklinkWrapper = styled(Container)`
   margin-top: ${spacing.base};
 `;

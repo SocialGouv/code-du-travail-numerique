@@ -6,32 +6,24 @@ import { Accordion, Button, theme } from "@cdt/ui";
 import { ConventionForm } from "../../common/ConventionForm";
 import { searchIdcc } from "../../common/convention.service";
 import TYPE_REFERENCE from "../typeReference";
-import { CodeDuTravailLink } from "./links";
+import ReferenceList from "./ReferenceList";
 
 import { blocs } from "../mapping";
 
 const { box, colors, spacing } = theme;
 
-class Bloc extends React.PureComponent {
+class HierarchieBloc extends React.PureComponent {
   state = {
     modalIsOpen: false
   };
   render() {
     const { id, references } = this.props;
     const { title, text, hasCCSearch } = blocs[id];
-    const referenceList = (
-      <ul>
-        {references.map(reference => (
-          <li key={reference.id}>
-            <CodeDuTravailLink title={reference.title} slug={reference.id} />
-          </li>
-        ))}
-      </ul>
-    );
+
     const items = [
       {
         title: "Voir les articles du code du travail concernés",
-        body: referenceList
+        body: <ReferenceList references={references} />
       }
     ];
     return (
@@ -71,7 +63,7 @@ class Bloc extends React.PureComponent {
   }
 }
 
-Bloc.propTypes = {
+HierarchieBloc.propTypes = {
   id: PropTypes.string.isRequired,
   references: PropTypes.arrayOf(
     PropTypes.shape({
@@ -82,7 +74,7 @@ Bloc.propTypes = {
   )
 };
 
-export default Bloc;
+export default HierarchieBloc;
 
 const BlocWrapper = styled.div`
   margin: ${spacing.large} 0;
@@ -90,11 +82,6 @@ const BlocWrapper = styled.div`
   background-color: ${colors.darkBackground};
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
 `;
 
 const CCButtonWrapper = styled.div`

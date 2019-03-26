@@ -3,7 +3,7 @@
 exports[`<Container /> should render 1`] = `
 <div>
   <div
-    class="container"
+    class="container "
   >
     One Aside title
   </div>

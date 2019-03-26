@@ -31,7 +31,7 @@ exports[`<Age /> should call onChange with updated value 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <h2>
           Quel est votre age ?
@@ -51,7 +51,7 @@ exports[`<Age /> should call onChange with updated value 1`] = `
     </div>
   </section>
   <div
-    class="container"
+    class="container "
   >
     <div
       style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
@@ -93,7 +93,7 @@ exports[`<Age /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <h2>
           Quel est votre age ?
@@ -113,7 +113,7 @@ exports[`<Age /> should render 1`] = `
     </div>
   </section>
   <div
-    class="container"
+    class="container "
   >
     <div
       style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"

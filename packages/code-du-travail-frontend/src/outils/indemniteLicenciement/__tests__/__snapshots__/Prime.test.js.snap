@@ -31,7 +31,7 @@ exports[`<Primes /> should call onChange with updated value 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <h2>
           Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
@@ -53,7 +53,7 @@ exports[`<Primes /> should call onChange with updated value 1`] = `
     </div>
   </section>
   <div
-    class="container"
+    class="container "
   >
     <div
       style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"
@@ -95,7 +95,7 @@ exports[`<Primes /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <h2>
           Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
@@ -117,7 +117,7 @@ exports[`<Primes /> should render 1`] = `
     </div>
   </section>
   <div
-    class="container"
+    class="container "
   >
     <div
       style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"

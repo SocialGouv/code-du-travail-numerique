@@ -3,10 +3,10 @@
 exports[`<Accordion /> should render 1`] = `
 <div>
   <div
-    class="sc-hEsumM eKBhNs"
+    class="sc-iuJeZd eSBcRZ"
   >
     <div
-      class="sc-ktHwxA emDEYm"
+      class="sc-esOvli bHzNtf"
     >
       <div
         aria-controls="accordion__body-0"
@@ -18,7 +18,7 @@ exports[`<Accordion /> should render 1`] = `
       >
         This is the title
         <div
-          class="sc-tilXH bmaQQ"
+          class="sc-cMhqgX llrHqq"
           role="presentation"
         />
       </div>

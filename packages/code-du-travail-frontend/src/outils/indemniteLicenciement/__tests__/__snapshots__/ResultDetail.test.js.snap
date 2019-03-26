@@ -31,7 +31,7 @@ exports[`<ResultDetail /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <div
           class="c0"
@@ -60,7 +60,7 @@ exports[`<ResultDetail /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <table
           class="c1"
@@ -173,7 +173,7 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <div
           class="c0"
@@ -202,7 +202,7 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <table
           class="c1"
@@ -315,7 +315,7 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <div
           class="c0"
@@ -344,7 +344,7 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <table
           class="c1"

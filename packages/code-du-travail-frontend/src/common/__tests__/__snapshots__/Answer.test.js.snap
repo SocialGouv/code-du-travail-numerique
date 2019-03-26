@@ -28,7 +28,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
       class="section-white shadow-bottom search-widget"
     >
       <div
-        class="container"
+        class="container "
       >
         <div
           class="search"
@@ -185,7 +185,7 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
         class="container"
       >
         <div
-          class="wrapper-light"
+          class="wrapper-light "
         >
           <div
             class="article"
@@ -533,7 +533,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
       class="section-white shadow-bottom search-widget"
     >
       <div
-        class="container"
+        class="container "
       >
         <div
           class="search"
@@ -690,7 +690,7 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
         class="container"
       >
         <div
-          class="wrapper-light"
+          class="wrapper-light "
         >
           <div
             class="article"
@@ -1035,7 +1035,7 @@ exports[`<Answer /> should render 1`] = `
     class="section-white shadow-bottom search-widget"
   >
     <div
-      class="container"
+      class="container "
     >
       <div
         class="search"
@@ -1192,7 +1192,7 @@ exports[`<Answer /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <div
           class="article"
@@ -1444,7 +1444,7 @@ exports[`<Answer /> should render additional content 1`] = `
       class="section-white shadow-bottom search-widget"
     >
       <div
-        class="container"
+        class="container "
       >
         <div
           class="search"
@@ -1601,7 +1601,7 @@ exports[`<Answer /> should render additional content 1`] = `
         class="container"
       >
         <div
-          class="wrapper-light"
+          class="wrapper-light "
         >
           <div
             class="article"

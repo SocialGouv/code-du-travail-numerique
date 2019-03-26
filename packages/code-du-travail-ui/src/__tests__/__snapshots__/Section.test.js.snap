@@ -9,7 +9,7 @@ exports[`<Section /> should render dark Section 1`] = `
       class="container"
     >
       <div
-        class="wrapper-dark"
+        class="wrapper-dark "
       >
         One Aside title
       </div>
@@ -27,7 +27,7 @@ exports[`<Section /> should render default Section 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         One Aside title
       </div>
@@ -45,7 +45,7 @@ exports[`<Section /> should render light Section 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         One Aside title
       </div>

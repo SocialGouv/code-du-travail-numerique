@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "@cdt/ui";
+import { List, theme } from "@cdt/ui";
 import { Link } from "../../../routes";
+import TYPE_REFERENCE from "../typeReference";
 import ArticleIcon from "../../icons/ArticleIcon";
 
 const { box, colors, spacing } = theme;
 
-export const CodeDuTravailLink = ({ title, slug }) => (
+const CodeDuTravailLink = ({ title, slug }) => (
   <Link route="code-du-travail" params={{ slug }} passHref>
     <ReferenceLink>
       <Icon width={18} />
@@ -15,7 +16,7 @@ export const CodeDuTravailLink = ({ title, slug }) => (
   </Link>
 );
 
-export const ConventionLink = ({ title, slug }) => (
+const ConventionLink = ({ title, slug }) => (
   <Link route="kali" params={{ slug }} passHref>
     <ReferenceLink>
       <Icon width={18} />
@@ -24,7 +25,7 @@ export const ConventionLink = ({ title, slug }) => (
   </Link>
 );
 
-export const OtherLink = ({ title, url }) => (
+const OtherLink = ({ title, url }) => (
   <ReferenceLink
     href={url}
     rel="noopener noreferrer"
@@ -35,6 +36,24 @@ export const OtherLink = ({ title, url }) => (
     Autre: {title}
   </ReferenceLink>
 );
+
+const getLink = reference => {
+  switch (reference.type) {
+    case TYPE_REFERENCE.codeDuTravail:
+      return <CodeDuTravailLink title={reference.title} slug={reference.id} />;
+    case TYPE_REFERENCE.conventionCollective:
+      return <ConventionLink title={reference.title} slug={reference.id} />;
+    case TYPE_REFERENCE.journalOfficiel:
+      return <OtherLink title={reference.title} url={reference.url} />;
+  }
+};
+
+const ReferenceList = ({ references }) => {
+  const items = references.map(reference => getLink(reference));
+  return <List items={items} />;
+};
+
+export default ReferenceList;
 
 const ReferenceLink = styled.a`
   display: block;

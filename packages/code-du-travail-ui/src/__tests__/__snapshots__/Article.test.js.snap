@@ -9,7 +9,7 @@ exports[`<Article /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <div
           class="article"

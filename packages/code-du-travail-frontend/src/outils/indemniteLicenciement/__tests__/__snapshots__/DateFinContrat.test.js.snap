@@ -35,7 +35,7 @@ exports[`<DateFinContrat /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper-light"
+        class="wrapper-light "
       >
         <h2>
           Le licenciement a t-il été prononcé avant le
@@ -75,7 +75,7 @@ exports[`<DateFinContrat /> should render 1`] = `
     </div>
   </section>
   <div
-    class="container"
+    class="container "
   >
     <div
       style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"

@@ -9,7 +9,7 @@ exports[`<AddressResults/> should render no results 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <div
           category="primary"
@@ -131,7 +131,7 @@ exports[`<AddressResults/> should render results 1`] = `
       class="container"
     >
       <div
-        class="wrapper"
+        class="wrapper "
       >
         <ul
           class="card-wrapper"

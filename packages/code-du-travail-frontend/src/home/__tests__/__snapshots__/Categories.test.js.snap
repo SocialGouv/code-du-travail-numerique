@@ -4,7 +4,7 @@ exports[`<Categories /> should render 1`] = `
 <div>
   <section>
     <div
-      class="container"
+      class="container "
     >
       <h2
         style="margin-top: 20px; margin-bottom: 40px; text-align: center;"

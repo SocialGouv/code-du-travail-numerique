@@ -51,7 +51,7 @@ exports[`<PageLayout /> should render 1`] = `
     class="bg-color color__white"
   >
     <div
-      class="container"
+      class="container "
     >
       <div
         class="c0"

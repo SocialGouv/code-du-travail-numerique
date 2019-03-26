@@ -25,7 +25,7 @@ exports[`<search /> should render 1`] = `
     class="section-white shadow-bottom search-widget"
   >
     <div
-      class="container"
+      class="container "
     >
       <div
         class="search"
@@ -223,7 +223,7 @@ exports[`<search /> should render suggestions 1`] = `
     class="section-white shadow-bottom search-widget"
   >
     <div
-      class="container"
+      class="container "
     >
       <div
         class="search"

@@ -1,3 +1,5 @@
+import TYPE_REFERENCE from "./typeReference";
+
 export const blocs = {
   "1_1_a": {
     title: "L'accord de branche étendu prime",
@@ -21,11 +23,8 @@ export const blocs = {
       "L1242-2",
       "L6321-10",
       "L4625-2",
-      "L4622-1",
-      "L4622-2",
       "L4622-3",
-      "L4622-4",
-      "L4622-5"
+      "L4622-4"
     ],
     hasCCSearch: true
   },
@@ -33,7 +32,14 @@ export const blocs = {
     title: "L'accord de branche prime",
     text:
       "Pour ces thèmes, les accords négociés dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. A noter que votre entreprise ne peut pas conclure d'accord sur ces sujets.",
-    references: ["L3121-44", "L2135-9", "L2135-10", "L5121-4"],
+    references: [
+      "L3121-44",
+      "L2135-9",
+      "L2135-10",
+      "L5121-4",
+      "L4622-1",
+      "L4622-2"
+    ],
     hasCCSearch: true
   },
   "1_2": {
@@ -46,8 +52,32 @@ export const blocs = {
   }
 };
 
-export const references = new Map();
+const referencesToBlocMap = new Map();
 
 Object.entries(blocs).forEach(([blocId, blocInfo]) => {
-  blocInfo.references.forEach(reference => references.set(reference, blocId));
+  blocInfo.references.forEach(reference =>
+    referencesToBlocMap.set(reference, blocId)
+  );
 });
+
+export const mapReferencesToBlocs = references => {
+  const concernedBlocs = new Map();
+  const autresReferences = [];
+  references.forEach(reference => {
+    const upperCasedReferenceId = reference.id.toUpperCase();
+    if (
+      reference.type === TYPE_REFERENCE.codeDuTravail &&
+      referencesToBlocMap.has(upperCasedReferenceId)
+    ) {
+      const concernedBloc = referencesToBlocMap.get(upperCasedReferenceId);
+      if (concernedBlocs.has(concernedBloc)) {
+        concernedBlocs.get(concernedBloc).push(reference);
+      } else {
+        concernedBlocs.set(concernedBloc, [reference]);
+      }
+    } else {
+      autresReferences.push(reference);
+    }
+  });
+  return { concernedBlocs, autresReferences };
+};
