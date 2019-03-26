@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2019-03-26)
+
+
+### Bug Fixes
+
+* **frontend:** styled-components-classnames ([#633](https://github.com/SocialGouv/code-du-travail-numerique/issues/633)) ([32e9911](https://github.com/SocialGouv/code-du-travail-numerique/commit/32e9911))
+
+
+### Features
+
+* **frontend:** add Company Suggester to find the CCN with a SIRET number - fixes [#49](https://github.com/SocialGouv/code-du-travail-numerique/issues/49) ([d4d440f](https://github.com/SocialGouv/code-du-travail-numerique/commit/d4d440f))
+* **frontend:** use docker nlp suggest for suggesting search request ([#617](https://github.com/SocialGouv/code-du-travail-numerique/issues/617)) ([2223541](https://github.com/SocialGouv/code-du-travail-numerique/commit/2223541))
+
+
+
+
+
 # [2.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.8.0...v2.0.0) (2019-03-08)
 
 ### Bug Fixes

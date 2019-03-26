@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2019-03-26)
+
+
+### Bug Fixes
+
+* **frontend:** styled-components-classnames ([#633](https://github.com/SocialGouv/code-du-travail-numerique/issues/633)) ([32e9911](https://github.com/SocialGouv/code-du-travail-numerique/commit/32e9911))
+
+
+
+
+
 # [2.0.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v1.8.0...v2.0.0) (2019-03-08)
 
 **Note:** Version bump only for package @cdt/data...synonyms
