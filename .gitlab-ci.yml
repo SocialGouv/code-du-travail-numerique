@@ -67,7 +67,24 @@ prepare-deploy-id:
   environment:
     name: dev
   except:
-  - master
+  - ops
+  artifacts:
+    paths:
+    - github_deploy_id
+
+prepare-deploy-id-prod:
+  stage: "Prepare"
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  before_script:
+  - envsubst < k8s/scripts/get-deploy-id.sh > k8s/scripts/get-github-deploy-id.sh
+  script:
+  - sh k8s/scripts/get-github-deploy-id.sh
+  environment:
+    name: dev
+  only:
+  - ops
   artifacts:
     paths:
     - github_deploy_id
@@ -331,7 +348,7 @@ send-url:
   environment:
     name: dev
   except:
-  - master
+  - ops
 
 ########################################
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
@@ -466,27 +483,27 @@ send-url-prod:
   environment:
     name: ops
   only:
-  - master
+  - ops
 
 #######################################
 ###           DELETE PODS           ###
 #######################################
-
-delete-pods:
-  stage: "Delete Pods"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  variables:
-    K8S_SERVER: $K8S_SERVER_PROD
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-    K8S_USERNAME: $K8S_USERNAME_PROD
-    K8S_CONTEXT: $K8S_CONTEXT_PROD
-    K8S_TOKEN: $K8S_TOKEN_PROD
-  before_script:
-  - /apps/create-kubeconfig.sh
-  script:
-  - python3 k8s/scripts/delete-pods.py
-  only:
-  - ops
+#
+#delete-pods:
+#  stage: "Delete Pods"
+#  image:
+#    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+#    entrypoint: [""]
+#  variables:
+#    K8S_SERVER: $K8S_SERVER_PROD
+#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+#    K8S_USERNAME: $K8S_USERNAME_PROD
+#    K8S_CONTEXT: $K8S_CONTEXT_PROD
+#    K8S_TOKEN: $K8S_TOKEN_PROD
+#  before_script:
+#  - /apps/create-kubeconfig.sh
+#  script:
+#  - python3 k8s/scripts/delete-pods.py
+#  only:
+#  - ops
