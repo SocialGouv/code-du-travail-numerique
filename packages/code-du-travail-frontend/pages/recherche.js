@@ -5,11 +5,12 @@ import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { Container } from "@cdt/ui";
+
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import SearchResults from "../src/search/SearchResults";
-import { getExcludeSources } from "../src/sources";
+import { getExcludeSources, getLabelBySource } from "../src/sources";
 import { Faceting } from "../src/search/Faceting";
 
 const {
@@ -39,6 +40,7 @@ class SearchPage extends React.Component {
   render() {
     const { router, results } = this.props;
     const { source = "", q = "" } = router.query;
+    const title = source ? getLabelBySource(source) : "Résultats";
     return (
       <PageLayout>
         <Head>

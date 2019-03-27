@@ -8,83 +8,82 @@ import { FeedbackModal } from "../common/FeedbackModal";
 import { Link } from "../../routes";
 
 import { getLabelBySource, getRouteBySource } from "../sources";
+import ReponseIcon from "../icons/ReponseIcon";
+import ArticleIcon from "../icons/ArticleIcon";
+import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
+import DossierIcon from "../icons/DossierIcon";
+import OutilIcon from "../icons/OutilsIcon";
 
-const ContentBody = ({ _source, excerpt, sourceType }) => (
-  <article className={_source.source}>
-    <header>
-      <Title>
-        <SourceType>{sourceType} | </SourceType>
-        {_source.title}
-      </Title>
-    </header>
-    <Excerpt
-      dangerouslySetInnerHTML={{ __html: excerpt }}
-      className="text-quote"
-    />
-  </article>
-);
-
-const makeExcerpt = highlight => {
-  if (highlight && Object.keys(highlight).length) {
-    const firstHighlightObjectKeyName = Object.keys(highlight)[0];
-    // Use the first `n` available highlights as excerpt.
-    const numExcerpts = 3;
-    return highlight[firstHighlightObjectKeyName]
-      .slice(0, numExcerpts)
-      .join(" … ");
-  }
-  return "";
-};
-
-class ResultItem extends React.Component {
-  itemRef = React.createRef();
-  componentDidMount() {
-    if (this.props.focused) {
-      this.itemRef.current.focus();
-    }
-  }
-  render() {
-    const { _source, highlight, query } = this.props;
-    const excerpt = makeExcerpt(highlight);
-
-    const route = getRouteBySource(_source.source);
-    const anchor = _source.anchor ? _source.anchor.slice(1) : "";
-    // internal links
-    if (route) {
-      return (
-        <li className="search-results__item">
+const SearchResultList = ({ items, query }) => {
+  return (
+    <List>
+      {items.map(({ _id, _source }, i) => (
+        <li key={_id}>
           <Link
-            route={route}
+            route={getRouteBySource(_source.source)}
             params={{ q: query, slug: _source.slug }}
-            hash={anchor}
+            passHref
           >
-            <a className="search-results-link" ref={this.itemRef}>
-              <ContentBody
-                _source={_source}
-                sourceType={getLabelBySource(_source.source)}
-                excerpt={excerpt}
-              />
-            </a>
+            <ListLink focused={i === 0}>
+              <SearchResult result={_source} />
+            </ListLink>
           </Link>
         </li>
-      );
-    }
+      ))}
+    </List>
+  );
+};
 
-    // external urls
-    return (
-      <li className="search-results__item">
-        <a
-          href={_source.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="search-results-link"
-        >
-          <ContentBody _source={_source} excerpt={excerpt} />
-        </a>
-      </li>
-    );
+SearchResultList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      _source: PropTypes.shape({
+        title: PropTypes.string,
+        source: PropTypes.string,
+        slug: PropTypes.string
+      })
+    })
+  )
+};
+
+const Icon = ({ source }) => {
+  switch (source) {
+    case "faq":
+      return <ResultIcon as={ReponseIcon} />;
+    case "fiches_service_public":
+    case "fiches_ministere_travail":
+      return <ResultIcon as={ReponseIcon} />;
+
+    case "code_du_travail":
+      return <ResultIcon as={ArticleIcon} />;
+    case "modeles_de_courriers":
+      return <ResultIcon as={ModeleCourrierIcon} />;
+    case "themes":
+      return <ResultIcon as={DossierIcon} />;
+    case "outils":
+      return <ResultIcon as={OutilIcon} />;
+    case "kali":
+      return <ResultIcon as={ArticleIcon} />;
   }
-}
+};
+
+const SearchResult = ({ result }) => {
+  const { title, source, author } = result;
+  return (
+    <React.Fragment>
+      <Icon source={source} />
+      <Content>
+        <strong>{title.replace(/ \?/, " ?")}</strong>
+        <P>
+          <Label>Source</Label>: <Label>{getLabelBySource(source)}</Label>
+          {source && author ? " - " : null}
+          <Value>{author}</Value>
+        </P>
+      </Content>
+    </React.Fragment>
+  );
+};
 
 class SearchResults extends React.Component {
   static propTypes = {
@@ -127,6 +126,7 @@ class SearchResults extends React.Component {
 
   render() {
     const { data, query, source } = this.props;
+    console.log("[searchresult] render");
     // No results.
     if (!data || !data.hits || !data.hits.total) {
       return (
@@ -183,16 +183,8 @@ class SearchResults extends React.Component {
               )}
             </ResultSnippet>
           )}
-          <ul className="search-results__list">
-            {data.hits.hits.map((result, i) => (
-              <ResultItem
-                focused={i === 0}
-                key={result["_id"]}
-                {...result}
-                query={this.props.query}
-              />
-            ))}
-          </ul>
+          {source && <Title> {getLabelBySource(source)} </Title>}
+          <SearchResultList items={data.hits.hits} query={query} />
         </div>
         <NoAnswer>
           <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
@@ -209,20 +201,42 @@ class SearchResults extends React.Component {
 }
 
 export default SearchResults;
+
 const Title = styled.h3`
-  font-size: 1.1rem;
-  margin-top: 0;
+  text-align: center;
 `;
 
-const SourceType = styled.span`
-  color: #53657d;
-  font-size: 1rem;
-  margin-left: 0.25em;
+const List = styled.ul`
+  list-style-type: none;
+  margin-left: 0;
 `;
 
-const Excerpt = styled.blockquote`
-  margin: 0;
+const ListLink = styled.a`
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  border-radius: var(--border-radius-base);
+  padding: 1rem;
+  padding: var(--spacing-base);
+  :link {
+    text-decoration: none;
+  }
+  :hover {
+    border-color: #c9d3df;
+    border-color: var(--color-element-border);
+    background: #ebeff3;
+    background: var(--color-dark-background);
+  }
+  :hover strong {
+    text-decoration: underline;
+  }
 `;
+
+const Content = styled.div`
+  padding-left: 1rem;
+`;
+
 const ResultSnippet = styled.div`
   border-radius: 0.5rem;
   background-color: #fff;
@@ -235,4 +249,29 @@ const ResultSnippet = styled.div`
 
 const SourceLink = styled.a`
   font-size: 0.9rem;
+`;
+
+const P = styled.p`
+  margin-bottom: 0;
+  font-size: 0.9em;
+`;
+
+const ResultIcon = styled.svg`
+  width: 2rem;
+  flex-shrink: 0;
+  color: #8393a7;
+  color: var(--color-dark-grey);
+`;
+
+const Label = styled.span`
+  font-weight: 700;
+  color: #53657d;
+  color: var(--color-darker-grey);
+`;
+
+const Value = styled.span`
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #adb9c9;
+  color: var(--color-grey);
 `;
