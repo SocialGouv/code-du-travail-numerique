@@ -383,7 +383,7 @@ create-cdtn-es-index-prod:
 
 deploy-cdtn-api-prod:
   stage: "Deploy Code du Travail Numerique"
-  extends: .deploy-code-du-travail-api-k8s
+  extends: .deploy-code-du-travail-api-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
     K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
@@ -407,7 +407,7 @@ deploy-cdtn-api-prod:
 
 deploy-cdtn-frontend-prod:
   stage: "Deploy Code du Travail Numerique"
-  extends: .deploy-code-du-travail-frontend-k8s
+  extends: .deploy-code-du-travail-frontend-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
     K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
