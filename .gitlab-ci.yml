@@ -33,27 +33,28 @@ stages:
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
+- "Send Url"
 - "Delete Pods"
 
-#prepare-cdtn-base-image:
-#  stage: "Prepare"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  before_script:
-#  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-#  script:
-#  - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
-#  - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-#
-#prepare-env-file:
-#  stage: "Prepare"
-#  script:
-#  - node scripts/setup-env.js
-#  artifacts:
-#    paths:
-#    - .env
+prepare-cdtn-base-image:
+  stage: "Prepare"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  before_script:
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
+  - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+
+prepare-env-file:
+  stage: "Prepare"
+  script:
+  - node scripts/setup-env.js
+  artifacts:
+    paths:
+    - .env
 
 prepare-deploy-id:
   stage: "Prepare"
@@ -72,396 +73,413 @@ prepare-deploy-id:
     paths:
     - github_deploy_id
 
-#lint-cdtn-api:
-#  stage: "Code Quality"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  script:
-#  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/api lint
-#
-#lint-cdtn-ui:
-#  stage: "Code Quality"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  script:
-#  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/ui lint
-#
-#lint-cdtn-frontend:
-#  stage: "Code Quality"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  script:
-#  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
-#
-#lint-cdtn-data:
-#  stage: "Code Quality"
-#  image: python:$PYTHON_VERSION
-#  variables:
-#    PIPENV_VENV_IN_PROJECT: 1
-#    PIPENV_IGNORE_VIRTUALENVS: 1
-#  services:
-#  - docker:dind
-#  before_script:
-#  - cd packages/code-du-travail-data
-#  - apk add build-base
-#  - pip install --upgrade pip
-#  - pip install pipenv==$PIP_VERSION
-#  - pipenv install --dev --three
-#  script:
-#  - pipenv run pylint --output-format=colorized search
-#
-#test-cdtn-frontend:
-#  stage: "Code Quality"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  script:
-#  - >-
-#    docker run -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
-#    -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-#    yarn workspace @cdt/frontend test --coverage
-#  artifacts:
-#    paths:
-#    - $PWD/coverage
-#
-#test-cdtn-api:
-#  stage: "Code Quality"
-#  image: docker/compose:$DOCKER_COMPOSE_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  before_script:
-#  - docker-compose up -d elasticsearch
-#  - retry=0; while ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
-#  - >-
-#    docker run
-#    -e ELASTICSEARCH_LOG_LEVEL=info
-#    -e ELASTICSEARCH_URL=http://elasticsearch:9200
-#    --network $(docker network ls -qf name=code)
-#    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-#  script:
-#  - >-
-#    docker run
-#    -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
-#    -e ELASTICSEARCH_URL=http://elasticsearch:9200
-#    -e ELASTICSEARCH_LOG_LEVEL=info
-#    --network $(docker network ls -qf name=code)
-#    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-#    yarn workspace @cdt/api test --coverage
-#  artifacts:
-#    paths:
-#    - $PWD/coverage
-#
-#test-cdtn-data:
-#  stage: "Code Quality"
-#  image: python:$PYTHON_VERSION
-#  variables:
-#    PIPENV_VENV_IN_PROJECT: 1
-#    PIPENV_IGNORE_VIRTUALENVS: 1
-#    PYTHONPATH: .
-#  services:
-#  - docker:dind
-#  before_script:
-#  - cd packages/code-du-travail-data
-#  - apk add build-base
-#  - pip install --upgrade pip
-#  - pip install pipenv==$PIP_VERSION
-#  - pipenv install --dev
-#  script:
-#  - pipenv run python search/indexing/document_slug_checker.py -v
-#
-#send-reports-to-codecov:
-#  stage: "Send Code Quality Reports"
-#  before_script:
-#  - apk add --no-cache git
-#  script:
-#  - npx codecov --flags frontend
-#  - npx codecov --flags api
-#
-#build-and-push-elasticsearch-image:
-#  stage: "Build and Push Docker Image"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  before_script:
-#  - cd docker/elasticsearch
-#  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-#  script:
-#  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA" .
-#  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
-#
-#build-and-push-cdtn-api-image:
-#  stage: "Build and Push Docker Image"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  before_script:
-#  - cd packages/code-du-travail-api
-#  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-#  script:
-#  - >-
-#    docker build
-#    --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-#    --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-#    -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
-#  - docker push "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA"
-#
-#build-and-push-cdtn-frontend-image:
-#  stage: "Build and Push Docker Image"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  before_script:
-#  - cd packages/code-du-travail-frontend
-#  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-#  script:
-#  - >-
-#    docker build
-#    --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-#    --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-#    -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" .
-#  - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA"
-#
-#build-and-push-cdtn-data-image:
-#  stage: "Build and Push Docker Image"
-#  image: docker:$DOCKER_VERSION
-#  variables:
-#  services:
-#  - docker:dind
-#  before_script:
-#  - cd packages/code-du-travail-data
-#  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-#  script:
-#  - docker build -t "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA" .
-#  - docker push "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA"
-#
-#######################################
-#### DEPLOY CDTN TO K8S DEV CLUSTER ###
-#######################################
-#
-#deploy-elasticsearch:
-#  stage: "Deploy EL Stack"
-#  extends: .deploy-elasticsearch-dev-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_DEV
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
-#    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
-#    K8S_USERNAME: $K8S_USERNAME_DEV
-#    K8S_CONTEXT: $K8S_CONTEXT_DEV
-#    K8S_TOKEN: $K8S_TOKEN_DEV
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  except:
-#  - master
-#
-#create-cdtn-es-index:
-#  stage: "Create Code du Travail Numerique Elasticsearch Index"
-#  extends: .deploy-code-du-travail-data-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_DEV
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
-#    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
-#    K8S_USERNAME: $K8S_USERNAME_DEV
-#    K8S_CONTEXT: $K8S_CONTEXT_DEV
-#    K8S_TOKEN: $K8S_TOKEN_DEV
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  except:
-#  - master
-#
-#deploy-cdtn-api:
-#  stage: "Deploy Code du Travail Numerique"
-#  extends: .deploy-code-du-travail-api-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_DEV
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
-#    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
-#    K8S_USERNAME: $K8S_USERNAME_DEV
-#    K8S_CONTEXT: $K8S_CONTEXT_DEV
-#    K8S_TOKEN: $K8S_TOKEN_DEV
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    ELASTICSEARCH_LOG_LEVEL: "trace"
-#    APM_SERVER_ACTIVE: 0
-#    APM_SERVER_URL: ""
-#    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-#    PORT: ${API_PORT}
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  environment:
-#    name: dev
-#  except:
-#  - master
-#
-#deploy-cdtn-frontend:
-#  stage: "Deploy Code du Travail Numerique"
-#  extends: .deploy-code-du-travail-frontend-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_DEV
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
-#    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
-#    K8S_USERNAME: $K8S_USERNAME_DEV
-#    K8S_CONTEXT: $K8S_CONTEXT_DEV
-#    K8S_TOKEN: $K8S_TOKEN_DEV
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-#    PORT: ${FRONTEND_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  environment:
-#    name: dev
-#  except:
-#  - master
+lint-cdtn-api:
+  stage: "Code Quality"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/api lint
 
+lint-cdtn-ui:
+  stage: "Code Quality"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/ui lint
+
+lint-cdtn-frontend:
+  stage: "Code Quality"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  script:
+  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
+
+lint-cdtn-data:
+  stage: "Code Quality"
+  image: python:$PYTHON_VERSION
+  variables:
+    PIPENV_VENV_IN_PROJECT: 1
+    PIPENV_IGNORE_VIRTUALENVS: 1
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-data
+  - apk add build-base
+  - pip install --upgrade pip
+  - pip install pipenv==$PIP_VERSION
+  - pipenv install --dev --three
+  script:
+  - pipenv run pylint --output-format=colorized search
+
+test-cdtn-frontend:
+  stage: "Code Quality"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  script:
+  - >-
+    docker run -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
+    -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    yarn workspace @cdt/frontend test --coverage
+  artifacts:
+    paths:
+    - $PWD/coverage
+
+test-cdtn-api:
+  stage: "Code Quality"
+  image: docker/compose:$DOCKER_COMPOSE_VERSION
+  variables:
+  services:
+  - docker:dind
+  before_script:
+  - docker-compose up -d elasticsearch
+  - retry=0; while ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
+  - >-
+    docker run
+    -e ELASTICSEARCH_LOG_LEVEL=info
+    -e ELASTICSEARCH_URL=http://elasticsearch:9200
+    --network $(docker network ls -qf name=code)
+    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+  script:
+  - >-
+    docker run
+    -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
+    -e ELASTICSEARCH_URL=http://elasticsearch:9200
+    -e ELASTICSEARCH_LOG_LEVEL=info
+    --network $(docker network ls -qf name=code)
+    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    yarn workspace @cdt/api test --coverage
+  artifacts:
+    paths:
+    - $PWD/coverage
+
+test-cdtn-data:
+  stage: "Code Quality"
+  image: python:$PYTHON_VERSION
+  variables:
+    PIPENV_VENV_IN_PROJECT: 1
+    PIPENV_IGNORE_VIRTUALENVS: 1
+    PYTHONPATH: .
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-data
+  - apk add build-base
+  - pip install --upgrade pip
+  - pip install pipenv==$PIP_VERSION
+  - pipenv install --dev
+  script:
+  - pipenv run python search/indexing/document_slug_checker.py -v
+
+send-reports-to-codecov:
+  stage: "Send Code Quality Reports"
+  before_script:
+  - apk add --no-cache git
+  script:
+  - npx codecov --flags frontend
+  - npx codecov --flags api
+
+build-and-push-elasticsearch-image:
+  stage: "Build and Push Docker Image"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  before_script:
+  - cd docker/elasticsearch
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
+  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
+
+build-and-push-cdtn-api-image:
+  stage: "Build and Push Docker Image"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-api
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
+  - >-
+    docker build
+    --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+    --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA"
+
+build-and-push-cdtn-frontend-image:
+  stage: "Build and Push Docker Image"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-frontend
+  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
+  - >-
+    docker build
+    --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+    --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+    -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_SHA"
+
+build-and-push-cdtn-data-image:
+  stage: "Build and Push Docker Image"
+  image: docker:$DOCKER_VERSION
+  variables:
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-data
+  - docker login  $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
+  - docker build -t "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/data:$CI_COMMIT_SHA"
+
+######################################
+### DEPLOY CDTN TO K8S DEV CLUSTER ###
+######################################
+
+deploy-elasticsearch:
+  stage: "Deploy EL Stack"
+  extends: .deploy-elasticsearch-dev-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+    IMAGE_TAG: $CI_COMMIT_SHA
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  except:
+  - master
+
+create-cdtn-es-index:
+  stage: "Create Code du Travail Numerique Elasticsearch Index"
+  extends: .deploy-code-du-travail-data-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+    IMAGE_TAG: $CI_COMMIT_SHA
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  except:
+  - master
+
+deploy-cdtn-api:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-api-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+    IMAGE_TAG: $CI_COMMIT_SHA
+    ELASTICSEARCH_LOG_LEVEL: "trace"
+    APM_SERVER_ACTIVE: 0
+    APM_SERVER_URL: ""
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${API_PORT}
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: dev
+  except:
+  - master
+
+deploy-cdtn-frontend:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-frontend-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+    IMAGE_TAG: $CI_COMMIT_SHA
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${FRONTEND_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: dev
+  except:
+  - master
+
+send-url:
+  stage: "Send Url"
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  before_script:
+  - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
+  - export HASH_BRANCH_NAME=$HASH_BRANCH_NAME
+  - export URL=http://$HASH_BRANCH_NAME-code-du-travail-numerique.${CI_ENVIRONMENT_NAME}.factory.social.gouv.fr/
+  - export DEPLOY_ID=$(cat github_deploy_id)
+  - envsubst < k8s/scripts/send-url.sh > k8s/scripts/send-url-to-github.sh
+  script:
+  - sh k8s/scripts/send-url-to-github.sh $CI_COMMIT_REF_NAME
+  environment:
+    name: dev
+  except:
+  - master
 
 ########################################
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
 ########################################
-#
-#deploy-kibana:
-#  stage: "Deploy EL Stack"
-#  extends: .deploy-kibana-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#    HASH_BRANCH_NAME: ''
-#    ELK_VERSION: ${ELK_STACK_VERSION}
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    KBN_PORT: ${KIBANA_PORT}
-#  only:
-#  - master
-#
-#deploy-apm-server:
-#  stage: "Deploy EL Stack"
-#  extends: .deploy-apm-server-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#    HASH_BRANCH_NAME: ''
-#    ELK_VERSION: ${ELK_STACK_VERSION}
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    KBN_PORT: ${KIBANA_PORT}
-#    APM_PORT: ${APM_SERVER_PORT}
-#  only:
-#  - master
-#
-#deploy-elasticsearch-prod:
-#  stage: "Deploy EL Stack"
-#  extends: .deploy-elasticsearch-prod-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    HASH_BRANCH_NAME: ''
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  only:
-#  - master
-#
-#create-cdtn-es-index-prod:
-#  stage: "Create Code du Travail Numerique Elasticsearch Index"
-#  extends: .deploy-code-du-travail-data-prod-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    HASH_BRANCH_NAME: ''
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  only:
-#  - master
-#
-#deploy-cdtn-api-prod:
-#  stage: "Deploy Code du Travail Numerique"
-#  extends: .deploy-code-du-travail-api-prod-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    HASH_BRANCH_NAME: ''
-#    ELASTICSEARCH_LOG_LEVEL: "trace"
-#    APM_SERVER_ACTIVE: 1
-#    APM_SERVER_URL: "http://apm:8200"
-#    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-#    PORT: ${API_PORT}
-#    ES_PORT: ${ELASTICSEARCH_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  environment:
-#    name: ops
-#  only:
-#  - master
-#
-#deploy-cdtn-frontend-prod:
-#  stage: "Deploy Code du Travail Numerique"
-#  extends: .deploy-code-du-travail-frontend-prod-k8s
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#    IMAGE_TAG: $CI_COMMIT_SHA
-#    HASH_BRANCH_NAME: ''
-#    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-#    PORT: ${FRONTEND_PORT}
-#    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-#  environment:
-#    name: ops
-#  only:
-#  - master
-#
-########################################
-####           DELETE PODS           ###
-########################################
-#
-#delete-pods:
-#  stage: "Delete Pods"
-#  image:
-#    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-#    entrypoint: [""]
-#  variables:
-#    K8S_SERVER: $K8S_SERVER_PROD
-#    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-#    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-#    K8S_USERNAME: $K8S_USERNAME_PROD
-#    K8S_CONTEXT: $K8S_CONTEXT_PROD
-#    K8S_TOKEN: $K8S_TOKEN_PROD
-#  before_script:
-#  - /apps/create-kubeconfig.sh
-#  script:
-#  - python3 k8s/scripts/delete-pods.py
-#  only:
-#  - master
+
+deploy-kibana:
+  stage: "Deploy EL Stack"
+  extends: .deploy-kibana-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    HASH_BRANCH_NAME: ''
+    ELK_VERSION: ${ELK_STACK_VERSION}
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    KBN_PORT: ${KIBANA_PORT}
+  only:
+  - master
+
+deploy-apm-server:
+  stage: "Deploy EL Stack"
+  extends: .deploy-apm-server-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    HASH_BRANCH_NAME: ''
+    ELK_VERSION: ${ELK_STACK_VERSION}
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    KBN_PORT: ${KIBANA_PORT}
+    APM_PORT: ${APM_SERVER_PORT}
+  only:
+  - master
+
+deploy-elasticsearch-prod:
+  stage: "Deploy EL Stack"
+  extends: .deploy-elasticsearch-prod-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    HASH_BRANCH_NAME: ''
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  only:
+  - master
+
+create-cdtn-es-index-prod:
+  stage: "Create Code du Travail Numerique Elasticsearch Index"
+  extends: .deploy-code-du-travail-data-prod-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    HASH_BRANCH_NAME: ''
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  only:
+  - master
+
+deploy-cdtn-api-prod:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-api-prod-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    HASH_BRANCH_NAME: ''
+    ELASTICSEARCH_LOG_LEVEL: "trace"
+    APM_SERVER_ACTIVE: 1
+    APM_SERVER_URL: "http://apm:8200"
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${API_PORT}
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: ops
+  only:
+  - master
+
+deploy-cdtn-frontend-prod:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-frontend-prod-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    HASH_BRANCH_NAME: ''
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: ${FRONTEND_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: ops
+  only:
+  - master
+
+#######################################
+###           DELETE PODS           ###
+#######################################
+
+delete-pods:
+  stage: "Delete Pods"
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+  before_script:
+  - /apps/create-kubeconfig.sh
+  script:
+  - python3 k8s/scripts/delete-pods.py
+  only:
+  - master
