@@ -366,7 +366,7 @@ deploy-elasticsearch-prod:
 
 create-cdtn-es-index-prod:
   stage: "Create Code du Travail Numerique Elasticsearch Index"
-  extends: .deploy-code-du-travail-data-k8s
+  extends: .deploy-code-du-travail-data-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
     K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
