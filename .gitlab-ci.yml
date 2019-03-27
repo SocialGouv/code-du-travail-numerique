@@ -39,7 +39,6 @@ stages:
 prepare-cdtn-base-image:
   stage: "Prepare"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   before_script:
@@ -76,7 +75,6 @@ prepare-deploy-id:
 lint-cdtn-api:
   stage: "Code Quality"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   script:
@@ -85,7 +83,6 @@ lint-cdtn-api:
 lint-cdtn-ui:
   stage: "Code Quality"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   script:
@@ -94,7 +91,6 @@ lint-cdtn-ui:
 lint-cdtn-frontend:
   stage: "Code Quality"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   script:
@@ -120,7 +116,6 @@ lint-cdtn-data:
 test-cdtn-frontend:
   stage: "Code Quality"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   script:
@@ -135,7 +130,6 @@ test-cdtn-frontend:
 test-cdtn-api:
   stage: "Code Quality"
   image: docker/compose:$DOCKER_COMPOSE_VERSION
-  variables:
   services:
   - docker:dind
   before_script:
@@ -189,7 +183,6 @@ send-reports-to-codecov:
 build-and-push-elasticsearch-image:
   stage: "Build and Push Docker Image"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   before_script:
@@ -202,7 +195,6 @@ build-and-push-elasticsearch-image:
 build-and-push-cdtn-api-image:
   stage: "Build and Push Docker Image"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   before_script:
@@ -219,7 +211,6 @@ build-and-push-cdtn-api-image:
 build-and-push-cdtn-frontend-image:
   stage: "Build and Push Docker Image"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   before_script:
@@ -236,7 +227,6 @@ build-and-push-cdtn-frontend-image:
 build-and-push-cdtn-data-image:
   stage: "Build and Push Docker Image"
   image: docker:$DOCKER_VERSION
-  variables:
   services:
   - docker:dind
   before_script:
@@ -456,6 +446,23 @@ deploy-cdtn-frontend-prod:
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${FRONTEND_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: ops
+  only:
+  - master
+
+send-url-prod:
+  stage: "Send Url"
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  variables:
+    URL: http://code-du-travail-numerique.$CI_ENVIRONMENT_NAME.factory.social.gouv.fr/
+  before_script:
+  - export DEPLOY_ID=$(cat github_deploy_id)
+  - envsubst < k8s/scripts/send-url.sh > k8s/scripts/send-url-to-github.sh
+  script:
+  - sh k8s/scripts/send-url-to-github.sh $CI_COMMIT_REF_NAME
   environment:
     name: ops
   only:
