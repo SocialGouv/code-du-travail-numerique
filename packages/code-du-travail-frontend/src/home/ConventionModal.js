@@ -58,5 +58,9 @@ export default ConventionModal;
 const Button = styled.button`
   background: transparent;
   border: none;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: inherit;
+  color: inherit;
 `;
