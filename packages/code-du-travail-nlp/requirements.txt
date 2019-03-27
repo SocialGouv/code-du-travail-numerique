@@ -1,4 +1,4 @@
 Flask==1.0.2
 flask-cors==3.0.7
 gunicorn==19.9.0
-git+git://github.com/ArmandGiraud/autosuggest.git@master
+git+https://github.com/ArmandGiraud/autosuggest.git@123d50e6d317c84b1704240f7ec39858edf83bbc

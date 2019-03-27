@@ -1,6 +1,6 @@
 from flask import Flask
 from api.suggest import add_suggest
-from autosuggest import autoSuggestor
+from autosuggest import AutoSuggestor
 import os
 
 data_path = os.path.join(
@@ -10,8 +10,8 @@ data_path = os.path.join(
 
 def create_app():
 
-  suggester = autoSuggestor(
-    link_path=os.path.join(data_path, 'data.txt'),
+  suggester = AutoSuggestor(
+    queries_path=os.path.join(data_path, 'data.txt'),
     stops_path=os.path.join(data_path, 'stops.txt'),
     build_precount = False
   )
