@@ -22,7 +22,11 @@ class HierarchieBloc extends React.PureComponent {
 
     const items = [
       {
-        title: "Voir les articles du code du travail concernés",
+        title: (
+          <StyledSpan>
+            Voir les articles du code du travail concernés
+          </StyledSpan>
+        ),
         body: <ReferenceList references={references} />
       }
     ];
@@ -87,4 +91,9 @@ const BlocWrapper = styled.div`
 const CCButtonWrapper = styled.div`
   margin-bottom: ${spacing.medium};
   text-align: center;
+`;
+
+const StyledSpan = styled.span`
+  display: inline-block;
+  padding: ${spacing.base};
 `;

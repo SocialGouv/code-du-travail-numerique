@@ -1,13 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Accordion } from "@cdt/ui";
+import styled from "styled-components";
+import { Accordion, theme } from "@cdt/ui";
 import TYPE_REFERENCE from "../typeReference";
 import ReferenceList from "./ReferenceList";
+
+const { spacing } = theme;
 
 const AutresReferences = ({ references, showTitle }) => {
   const items = [
     {
-      title: "Voir les articles du code du travail concernés",
+      title: (
+        <StyledSpan>Voir les articles du code du travail concernés</StyledSpan>
+      ),
       body: <ReferenceList references={references} />
     }
   ];
@@ -32,3 +37,8 @@ AutresReferences.propTypes = {
 };
 
 export default AutresReferences;
+
+const StyledSpan = styled.span`
+  display: inline-block;
+  padding: ${spacing.base};
+`;

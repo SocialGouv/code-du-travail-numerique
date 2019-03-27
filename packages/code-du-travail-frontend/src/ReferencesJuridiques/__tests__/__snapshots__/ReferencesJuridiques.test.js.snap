@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferencesJuridiques /> should render 1`] = `
-.c6 {
+.c9 {
   display: inline-block;
   position: relative;
   width: 24px;
   height: 12px;
 }
 
-.c6::after,
-.c6::before {
+.c9::after,
+.c9::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -19,46 +19,42 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   content: "";
 }
 
-.c6::before {
+.c9::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c6::before,
-[aria-selected="true"] .c6::before {
+[aria-expanded="true"] .c9::before,
+[aria-selected="true"] .c9::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c6::after {
+.c9::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c6::after,
-[aria-selected="true"] .c6::after {
+[aria-expanded="true"] .c9::after,
+[aria-selected="true"] .c9::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c6::before,
-.c6::after {
+.c9::before,
+.c9::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c4 .accordion__item + .accordion__item {
-  border-top: 1px solid #c9d3df;
-}
-
-.c4 .accordion__title {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,32 +67,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.625rem;
   cursor: pointer;
 }
 
-.c4 .accordion__title > * {
-  margin: 0;
-  padding: 0;
-  color: currentColor;
-  font-weight: normal;
-}
-
-.c4 .accordion__title:hover,
-.c4 .accordion__title:focus,
-.c4 .accordion__title:focus-within,
-.c4 .accordion__title[aria-expanded="true"] {
+.c7:hover,
+.c7:focus,
+.c7:focus-within,
+.c7[aria-expanded="true"] {
   color: #006ab2;
-}
-
-.c4 .accordion__body {
-  padding: 1rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c4 .accordion__body--hidden {
-  display: none;
 }
 
 .c5 {
@@ -106,17 +84,31 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   overflow: hidden;
 }
 
-.c5 .accordion__title {
-  padding: 1rem;
+.c5 + .c4 {
+  border-top: 1px solid #c9d3df;
 }
 
-.c7 {
+.c5 .c6 {
+  padding-right: 1rem;
+}
+
+.c10 {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c10.accordion__body--hidden {
+  display: none;
+}
+
+.c11 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c8 {
+.c12 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -126,7 +118,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   cursor: pointer;
 }
 
-.c9 {
+.c13 {
   position: relative;
   top: 1px;
   vertical-align: middle;
@@ -144,6 +136,16 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 .c3 {
   margin-bottom: 1.25rem;
   text-align: center;
+}
+
+.c8 {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.c14 {
+  display: inline-block;
+  padding: 1rem;
 }
 
 .c0 {
@@ -191,41 +193,45 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c4"
+            class="accordion"
           >
             <div
-              class="c5"
+              class="c4 c5"
             >
               <div
                 aria-controls="accordion__body-0"
                 aria-expanded="false"
-                class="accordion__title"
+                class="c6 c7"
                 id="accordion__title-0"
                 role="button"
                 tabindex="0"
               >
-                Voir les articles du code du travail concernés
+                <span
+                  class="c8"
+                >
+                  Voir les articles du code du travail concernés
+                </span>
                 <div
-                  class="c6"
+                  class="c9"
                   role="presentation"
                 />
               </div>
               <div
                 aria-hidden="true"
                 aria-labelledby="accordion__title-0"
-                class="accordion__body accordion__body--hidden"
+                class="c10 accordion__body--hidden"
                 id="accordion__body-0"
               >
                 <ul
-                  class="c7"
+                  class="c11"
                 >
                   <li>
                     <a
-                      class="c8"
+                      class="c12"
                       href="/code-du-travail/l1244-3"
                     >
                       <svg
-                        class="c9"
+                        class="c13"
                         viewBox="0 0 34 50"
                         width="18"
                       >
@@ -250,11 +256,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   </li>
                   <li>
                     <a
-                      class="c8"
+                      class="c12"
                       href="/code-du-travail/l1244-4"
                     >
                       <svg
-                        class="c9"
+                        class="c13"
                         viewBox="0 0 34 50"
                         width="18"
                       >
@@ -286,42 +292,46 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           Autres références
         </h3>
         <div
-          class="c4"
+          class="accordion"
         >
           <div
-            class="c5"
+            class="c4 c5"
           >
             <div
               aria-controls="accordion__body-1"
               aria-expanded="false"
-              class="accordion__title"
+              class="c6 c7"
               id="accordion__title-1"
               role="button"
               tabindex="0"
             >
-              Voir les articles du code du travail concernés
+              <span
+                class="c14"
+              >
+                Voir les articles du code du travail concernés
+              </span>
               <div
-                class="c6"
+                class="c9"
                 role="presentation"
               />
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__title-1"
-              class="accordion__body accordion__body--hidden"
+              class="c10 accordion__body--hidden"
               id="accordion__body-1"
             >
               <ul
-                class="c7"
+                class="c11"
               >
                 <li>
                   <a
-                    class="external-link__after c8"
+                    class="external-link__after c12"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <svg
-                      class="c9"
+                      class="c13"
                       viewBox="0 0 34 50"
                       width="18"
                     >
@@ -347,12 +357,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="external-link__after c8"
+                    class="external-link__after c12"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <svg
-                      class="c9"
+                      class="c13"
                       viewBox="0 0 34 50"
                       width="18"
                     >
@@ -378,11 +388,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 </li>
                 <li>
                   <a
-                    class="c8"
+                    class="c12"
                     href="/kali/yyy"
                   >
                     <svg
-                      class="c9"
+                      class="c13"
                       viewBox="0 0 34 50"
                       width="18"
                     >

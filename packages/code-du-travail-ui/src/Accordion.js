@@ -7,10 +7,9 @@ import {
   AccordionItemTitle,
   AccordionItemBody
 } from "react-accessible-accordion";
-import { theme, VerticalArrow, keyframes } from "@cdt/ui";
-
-const { box, colors, spacing } = theme;
-const { fadeIn } = keyframes;
+import { box, colors, spacing } from "./theme";
+import VerticalArrow from "./VerticalArrow";
+import { fadeIn } from "./keyframes";
 
 class Accordion extends React.PureComponent {
   static propTypes = {
@@ -26,69 +25,63 @@ class Accordion extends React.PureComponent {
     const { items, className } = this.props;
 
     const StyledAccordionItem =
-      items.length > 1 ? AccordionItem : SingleAccordionItem;
+      items.length > 1
+        ? StyledMultipleAccordionItem
+        : StyledSingleAccordionItem;
 
     return (
-      <StyledAccordion className={className} accordion={false}>
+      <RootAccordion className={className} accordion={false}>
         {items.map((item, index) => (
           <StyledAccordionItem key={index}>
-            <AccordionItemTitle>
+            <StyledAccordionItemTitle>
               <>
                 {item.title}
                 <VerticalArrow />
               </>
-            </AccordionItemTitle>
-            <AccordionItemBody>{item.body}</AccordionItemBody>
+            </StyledAccordionItemTitle>
+            <StyledAccordionItemBody>{item.body}</StyledAccordionItemBody>
           </StyledAccordionItem>
         ))}
-      </StyledAccordion>
+      </RootAccordion>
     );
   }
 }
 
 export default Accordion;
 
-const StyledAccordion = styled(RootAccordion)`
-  .accordion__item + .accordion__item {
+const StyledMultipleAccordionItem = styled(AccordionItem)`
+  & + & {
     border-top: 1px solid ${colors.elementBorder};
-  }
-
-  .accordion__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: ${spacing.small};
-    cursor: pointer;
-    & > * {
-      margin: 0;
-      padding: 0;
-      color: currentColor;
-      font-weight: normal;
-    }
-  }
-
-  .accordion__title:hover,
-  .accordion__title:focus,
-  .accordion__title:focus-within,
-  .accordion__title[aria-expanded="true"] {
-    color: ${colors.title};
-  }
-  .accordion__body {
-    padding: ${spacing.base};
-    animation: ${fadeIn} 0.35s ease-in;
-  }
-
-  .accordion__body--hidden {
-    display: none;
   }
 `;
 
-const SingleAccordionItem = styled(AccordionItem)`
+const StyledAccordionItemTitle = styled(AccordionItemTitle)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &[aria-expanded="true"] {
+    color: ${colors.title};
+  }
+`;
+
+const StyledSingleAccordionItem = styled(StyledMultipleAccordionItem)`
   background-color: ${colors.lightBackground};
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
   overflow: hidden;
-  .accordion__title {
-    padding: ${spacing.base};
+  & ${StyledAccordionItemTitle} {
+    padding-right: ${spacing.base};
+  }
+`;
+
+const StyledAccordionItemBody = styled(AccordionItemBody)`
+  padding: ${spacing.base};
+  animation: ${fadeIn} 0.35s ease-in;
+  &.accordion__body--hidden {
+    display: none;
   }
 `;

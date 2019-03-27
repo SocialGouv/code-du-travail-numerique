@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HierarchieBloc /> should render 1`] = `
-.c4 {
+.c7 {
   display: inline-block;
   position: relative;
   width: 24px;
   height: 12px;
 }
 
-.c4::after,
-.c4::before {
+.c7::after,
+.c7::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -19,46 +19,42 @@ exports[`<HierarchieBloc /> should render 1`] = `
   content: "";
 }
 
-.c4::before {
+.c7::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c4::before,
-[aria-selected="true"] .c4::before {
+[aria-expanded="true"] .c7::before,
+[aria-selected="true"] .c7::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c4::after {
+.c7::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c4::after,
-[aria-selected="true"] .c4::after {
+[aria-expanded="true"] .c7::after,
+[aria-selected="true"] .c7::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c4::before,
-.c4::after {
+.c7::before,
+.c7::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c2 .accordion__item + .accordion__item {
-  border-top: 1px solid #c9d3df;
-}
-
-.c2 .accordion__title {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,32 +67,14 @@ exports[`<HierarchieBloc /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0.625rem;
   cursor: pointer;
 }
 
-.c2 .accordion__title > * {
-  margin: 0;
-  padding: 0;
-  color: currentColor;
-  font-weight: normal;
-}
-
-.c2 .accordion__title:hover,
-.c2 .accordion__title:focus,
-.c2 .accordion__title:focus-within,
-.c2 .accordion__title[aria-expanded="true"] {
+.c5:hover,
+.c5:focus,
+.c5:focus-within,
+.c5[aria-expanded="true"] {
   color: #006ab2;
-}
-
-.c2 .accordion__body {
-  padding: 1rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c2 .accordion__body--hidden {
-  display: none;
 }
 
 .c3 {
@@ -106,17 +84,31 @@ exports[`<HierarchieBloc /> should render 1`] = `
   overflow: hidden;
 }
 
-.c3 .accordion__title {
-  padding: 1rem;
+.c3 + .c2 {
+  border-top: 1px solid #c9d3df;
 }
 
-.c5 {
+.c3 .c4 {
+  padding-right: 1rem;
+}
+
+.c8 {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c8.accordion__body--hidden {
+  display: none;
+}
+
+.c9 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c6 {
+.c10 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -126,7 +118,7 @@ exports[`<HierarchieBloc /> should render 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c11 {
   position: relative;
   top: 1px;
   vertical-align: middle;
@@ -144,6 +136,11 @@ exports[`<HierarchieBloc /> should render 1`] = `
 .c1 {
   margin-bottom: 1.25rem;
   text-align: center;
+}
+
+.c6 {
+  display: inline-block;
+  padding: 1rem;
 }
 
 <div>
@@ -168,41 +165,45 @@ exports[`<HierarchieBloc /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c2"
+      class="accordion"
     >
       <div
-        class="c3"
+        class="c2 c3"
       >
         <div
           aria-controls="accordion__body-0"
           aria-expanded="false"
-          class="accordion__title"
+          class="c4 c5"
           id="accordion__title-0"
           role="button"
           tabindex="0"
         >
-          Voir les articles du code du travail concernés
+          <span
+            class="c6"
+          >
+            Voir les articles du code du travail concernés
+          </span>
           <div
-            class="c4"
+            class="c7"
             role="presentation"
           />
         </div>
         <div
           aria-hidden="true"
           aria-labelledby="accordion__title-0"
-          class="accordion__body accordion__body--hidden"
+          class="c8 accordion__body--hidden"
           id="accordion__body-0"
         >
           <ul
-            class="c5"
+            class="c9"
           >
             <li>
               <a
-                class="c6"
+                class="c10"
                 href="/code-du-travail/l1244-3"
               >
                 <svg
-                  class="c7"
+                  class="c11"
                   viewBox="0 0 34 50"
                   width="18"
                 >
@@ -227,11 +228,11 @@ exports[`<HierarchieBloc /> should render 1`] = `
             </li>
             <li>
               <a
-                class="c6"
+                class="c10"
                 href="/code-du-travail/l1244-4"
               >
                 <svg
-                  class="c7"
+                  class="c11"
                   viewBox="0 0 34 50"
                   width="18"
                 >
