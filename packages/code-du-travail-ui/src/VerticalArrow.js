@@ -7,10 +7,6 @@ const VerticalArrow = styled.div.attrs(() => ({
   position: relative;
   width: 24px;
   height: 12px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -6px;
 
   &::after,
   &::before {

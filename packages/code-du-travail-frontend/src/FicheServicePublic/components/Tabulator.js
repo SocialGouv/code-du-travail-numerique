@@ -70,7 +70,7 @@ const StyledTabs = styled(Tabs)`
     margin-right: ${spacing.tiny};
     padding: ${spacing.small} ${spacing.base};
     font-size: ${fonts.sizeH6};
-    background-color: ${colors.lighterGrey};
+    background-color: ${colors.darkBackground};
     border: 1px solid ${colors.elementBorder};
     border-bottom: 1px solid ${colors.primaryBackground};
     border-top-left-radius: ${box.lightBorderRadius};

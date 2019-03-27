@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HierarchieBloc /> should render 1`] = `
+.c7 {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+}
+
+.c7::after,
+.c7::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.c7::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .c7::before,
+[aria-selected="true"] .c7::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c7::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .c7::after,
+[aria-selected="true"] .c7::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c7::before,
+.c7::after {
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c5:hover,
+.c5:focus,
+.c5:focus-within,
+.c5[aria-expanded="true"] {
+  color: #006ab2;
+}
+
+.c3 {
+  background-color: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.c3 + .c2 {
+  border-top: 1px solid #c9d3df;
+}
+
+.c3 .c4 {
+  padding-right: 1rem;
+}
+
+.c8 {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c8.accordion__body--hidden {
+  display: none;
+}
+
+.c9 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c10 {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f7fa;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.c11 {
+  position: relative;
+  top: 1px;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.c0 {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #ebeff3;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+}
+
+.c1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.c6 {
+  display: inline-block;
+  padding: 1rem;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      L'accord de branche étendu prime
+    </h3>
+    <p>
+      Pour ces thèmes, les accords négociés et étendus dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.
+    </p>
+    <div
+      class="c1"
+    >
+      <div
+        class="btn   "
+        role="button"
+        tabindex="0"
+      >
+        Trouvez votre convention collective
+      </div>
+    </div>
+    <div
+      class="accordion"
+    >
+      <div
+        class="c2 c3"
+      >
+        <div
+          aria-controls="accordion__body-0"
+          aria-expanded="false"
+          class="c4 c5"
+          id="accordion__title-0"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="c6"
+          >
+            Voir les articles du code du travail concernés
+          </span>
+          <div
+            class="c7"
+            role="presentation"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="accordion__title-0"
+          class="c8 accordion__body--hidden"
+          id="accordion__body-0"
+        >
+          <ul
+            class="c9"
+          >
+            <li>
+              <a
+                class="c10"
+                href="/code-du-travail/l1244-3"
+              >
+                <svg
+                  class="c11"
+                  viewBox="0 0 34 50"
+                  width="18"
+                >
+                  <title>
+                    Icône Article
+                  </title>
+                  <g
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M31.963 0H2.037C.912 0 0 .925 0 2.066v39.926c0 1.14.912 2.066 2.037 2.066h3.168v4.482c0 .57.456 1.033 1.018 1.033.298 0 .58-.132.775-.362l2.24-2.644 2.241 2.644a1.01 1.01 0 0 0 1.436.114c.226-.196.357-.483.357-.785v-4.482h18.691c1.126 0 2.037-.925 2.037-2.066V2.066C34 .925 33.089 0 31.963 0zm-21.95 44.274a1.009 1.009 0 0 0-1.549 0L7.242 45.72v-3.924a5.588 5.588 0 0 0 3.993 0v3.924l-1.223-1.446zm2.923-7.972c0 2.077-1.65 3.767-3.698 3.79h-.04c-2.065 0-3.738-1.697-3.738-3.79 0-2.094 1.673-3.79 3.737-3.79 2.065 0 3.739 1.696 3.739 3.79zm18.976 5.68h-18.64v-1.498c2.283-2.258 2.328-5.966.1-8.28a5.72 5.72 0 0 0-8.167-.102c-2.283 2.259-2.328 5.967-.1 8.281l.1.101v1.498H2.037V2.066h29.926l-.05 39.916z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M25.164 7.967h-17.2c-.547 0-.99.396-.99.885s.443.885.99.885h17.2c.547 0 .99-.396.99-.885s-.443-.885-.99-.885zM25.164 14.164h-17.2c-.547 0-.99.396-.99.885s.443.885.99.885h17.2c.547 0 .99-.396.99-.885 0-.49-.443-.885-.99-.885zM25.164 20.36h-17.2c-.547 0-.99.397-.99.886s.443.885.99.885h17.2c.547 0 .99-.396.99-.885 0-.49-.443-.886-.99-.886zM25.164 25.672h-17.2c-.547 0-.99.396-.99.885 0 .488.443.885.99.885h17.2c.547 0 .99-.397.99-.885 0-.489-.443-.885-.99-.885zM25.973 31.868h-8.357c-.58 0-1.052.397-1.052.885 0 .49.472.886 1.052.886h8.357c.581 0 1.053-.397 1.053-.886 0-.488-.472-.885-1.053-.885z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+                Article L1244-3 du code du travail
+              </a>
+            </li>
+            <li>
+              <a
+                class="c10"
+                href="/code-du-travail/l1244-4"
+              >
+                <svg
+                  class="c11"
+                  viewBox="0 0 34 50"
+                  width="18"
+                >
+                  <title>
+                    Icône Article
+                  </title>
+                  <g
+                    fill-rule="evenodd"
+                  >
+                    <path
+                      d="M31.963 0H2.037C.912 0 0 .925 0 2.066v39.926c0 1.14.912 2.066 2.037 2.066h3.168v4.482c0 .57.456 1.033 1.018 1.033.298 0 .58-.132.775-.362l2.24-2.644 2.241 2.644a1.01 1.01 0 0 0 1.436.114c.226-.196.357-.483.357-.785v-4.482h18.691c1.126 0 2.037-.925 2.037-2.066V2.066C34 .925 33.089 0 31.963 0zm-21.95 44.274a1.009 1.009 0 0 0-1.549 0L7.242 45.72v-3.924a5.588 5.588 0 0 0 3.993 0v3.924l-1.223-1.446zm2.923-7.972c0 2.077-1.65 3.767-3.698 3.79h-.04c-2.065 0-3.738-1.697-3.738-3.79 0-2.094 1.673-3.79 3.737-3.79 2.065 0 3.739 1.696 3.739 3.79zm18.976 5.68h-18.64v-1.498c2.283-2.258 2.328-5.966.1-8.28a5.72 5.72 0 0 0-8.167-.102c-2.283 2.259-2.328 5.967-.1 8.281l.1.101v1.498H2.037V2.066h29.926l-.05 39.916z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M25.164 7.967h-17.2c-.547 0-.99.396-.99.885s.443.885.99.885h17.2c.547 0 .99-.396.99-.885s-.443-.885-.99-.885zM25.164 14.164h-17.2c-.547 0-.99.396-.99.885s.443.885.99.885h17.2c.547 0 .99-.396.99-.885 0-.49-.443-.885-.99-.885zM25.164 20.36h-17.2c-.547 0-.99.397-.99.886s.443.885.99.885h17.2c.547 0 .99-.396.99-.885 0-.49-.443-.886-.99-.886zM25.164 25.672h-17.2c-.547 0-.99.396-.99.885 0 .488.443.885.99.885h17.2c.547 0 .99-.397.99-.885 0-.489-.443-.885-.99-.885zM25.973 31.868h-8.357c-.58 0-1.052.397-1.052.885 0 .49.472.886 1.052.886h8.357c.581 0 1.053-.397 1.053-.886 0-.488-.472-.885-1.053-.885z"
+                      fill="currentColor"
+                    />
+                  </g>
+                </svg>
+                Article L1244-4 du code du travail
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

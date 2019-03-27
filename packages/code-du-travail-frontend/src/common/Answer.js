@@ -1,14 +1,18 @@
 import React from "react";
 import Head from "next/head";
-import { Container, Alert, Article, NoAnswer, Button } from "@cdt/ui";
+import { Alert, Article, Button, Container, NoAnswer, theme } from "@cdt/ui";
+import styled from "styled-components";
 import { withRouter } from "next/router";
 import ReactPiwik from "react-piwik";
 
 import { Link } from "../../routes";
+import ReferencesJuridiques from "../ReferencesJuridiques";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
 import { FeedbackModal } from "../common/FeedbackModal";
+
+const { spacing } = theme;
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -20,11 +24,11 @@ const BackToResultsLink = ({ query }) => {
   if (!query.q) return null;
 
   return (
-    <Container>
+    <BacklinkWrapper>
       <Link route="recherche" params={{ ...query }}>
         <a>{"< Retour aux résultats"}</a>
       </Link>
-    </Container>
+    </BacklinkWrapper>
   );
 };
 
@@ -71,6 +75,7 @@ class Answer extends React.Component {
       icon,
       sourceType,
       additionalContent,
+      referencesJuridiques = [],
       emptyMessage = "Aucun résultat"
     } = this.props;
 
@@ -117,6 +122,9 @@ class Answer extends React.Component {
           </React.Fragment>
         )}
         {additionalContent}
+        {referencesJuridiques.length > 0 && (
+          <ReferencesJuridiques references={referencesJuridiques} />
+        )}
         <NoAnswer>
           <Button onClick={this.showModal}>Posez votre question</Button>
         </NoAnswer>
@@ -126,3 +134,7 @@ class Answer extends React.Component {
 }
 
 export default withRouter(Answer);
+
+const BacklinkWrapper = styled(Container)`
+  margin-top: ${spacing.base};
+`;

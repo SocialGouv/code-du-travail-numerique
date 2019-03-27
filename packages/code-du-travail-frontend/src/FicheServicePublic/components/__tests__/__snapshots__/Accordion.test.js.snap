@@ -1,19 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
-.c1 {
+.c4 {
   display: inline-block;
   position: relative;
   width: 24px;
   height: 12px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -6px;
 }
 
-.c1::after,
-.c1::before {
+.c4::after,
+.c4::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -23,80 +19,80 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   content: "";
 }
 
-.c1::before {
+.c4::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c1::before,
-[aria-selected="true"] .c1::before {
+[aria-expanded="true"] .c4::before,
+[aria-selected="true"] .c4::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c1::after {
+.c4::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c1::after,
-[aria-selected="true"] .c1::after {
+[aria-expanded="true"] .c4::after,
+[aria-selected="true"] .c4::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c1::before,
-.c1::after {
+.c4::before,
+.c4::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c0 {
-  margin-bottom: 2rem;
-}
-
-.c0 .accordion__item + .accordion__item {
+.c2 + .c1 {
   border-top: 1px solid #c9d3df;
 }
 
-.c0 .accordion__title {
-  position: relative;
-  padding-right: 2rem;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
 }
 
-.c0 .accordion__title h1,
-.c0 .accordion__title h2,
-.c0 .accordion__title h3,
-.c0 .accordion__title h4,
-.c0 .accordion__title h5,
-.c0 .accordion__title h6 {
-  color: currentColor;
-  font-weight: normal;
-}
-
-.c0 .accordion__title:hover,
-.c0 .accordion__title:focus,
-.c0 .accordion__title:focus-within,
-.c0 .accordion__title[aria-expanded="true"] {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
   color: #006ab2;
 }
 
-.c0 .accordion__body {
+.c5 {
   padding: 1rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c0 .accordion__body--hidden {
+.c5.accordion__body--hidden {
   display: none;
+}
+
+.c0 {
+  margin-bottom: 2rem;
 }
 
 <div>
@@ -110,12 +106,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     class="c0"
   >
     <div
-      class="accordion__item"
+      class="c1 c2"
     >
       <div
         aria-controls="accordion__body-0"
         aria-expanded="false"
-        class="accordion__title"
+        class="c3"
         id="accordion__title-0"
         role="button"
         tabindex="0"
@@ -124,14 +120,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           titre 1
         </h2>
         <div
-          class="c1"
+          class="c4"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-0"
-        class="accordion__body accordion__body--hidden"
+        class="c5 accordion__body--hidden"
         id="accordion__body-0"
       >
         <p>
@@ -143,12 +139,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       </div>
     </div>
     <div
-      class="accordion__item"
+      class="c1 c2"
     >
       <div
         aria-controls="accordion__body-1"
         aria-expanded="false"
-        class="accordion__title"
+        class="c3"
         id="accordion__title-1"
         role="button"
         tabindex="0"
@@ -157,14 +153,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           titre 2
         </h2>
         <div
-          class="c1"
+          class="c4"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-1"
-        class="accordion__body accordion__body--hidden"
+        class="c5 accordion__body--hidden"
         id="accordion__body-1"
       >
         <p>
@@ -179,12 +175,12 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
       </div>
     </div>
     <div
-      class="accordion__item"
+      class="c1 c2"
     >
       <div
         aria-controls="accordion__body-2"
         aria-expanded="false"
-        class="accordion__title"
+        class="c3"
         id="accordion__title-2"
         role="button"
         tabindex="0"
@@ -193,14 +189,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
           titre 3
         </h2>
         <div
-          class="c1"
+          class="c4"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-2"
-        class="accordion__body accordion__body--hidden"
+        class="c5 accordion__body--hidden"
         id="accordion__body-2"
       >
         <p>
@@ -216,19 +212,15 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
-.c1 {
+.c4 {
   display: inline-block;
   position: relative;
   width: 24px;
   height: 12px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -6px;
 }
 
-.c1::after,
-.c1::before {
+.c4::after,
+.c4::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -238,80 +230,80 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   content: "";
 }
 
-.c1::before {
+.c4::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c1::before,
-[aria-selected="true"] .c1::before {
+[aria-expanded="true"] .c4::before,
+[aria-selected="true"] .c4::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c1::after {
+.c4::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c1::after,
-[aria-selected="true"] .c1::after {
+[aria-expanded="true"] .c4::after,
+[aria-selected="true"] .c4::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c1::before,
-.c1::after {
+.c4::before,
+.c4::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c0 {
-  margin-bottom: 2rem;
-}
-
-.c0 .accordion__item + .accordion__item {
+.c2 + .c1 {
   border-top: 1px solid #c9d3df;
 }
 
-.c0 .accordion__title {
-  position: relative;
-  padding-right: 2rem;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
 }
 
-.c0 .accordion__title h1,
-.c0 .accordion__title h2,
-.c0 .accordion__title h3,
-.c0 .accordion__title h4,
-.c0 .accordion__title h5,
-.c0 .accordion__title h6 {
-  color: currentColor;
-  font-weight: normal;
-}
-
-.c0 .accordion__title:hover,
-.c0 .accordion__title:focus,
-.c0 .accordion__title:focus-within,
-.c0 .accordion__title[aria-expanded="true"] {
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
   color: #006ab2;
 }
 
-.c0 .accordion__body {
+.c5 {
   padding: 1rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c0 .accordion__body--hidden {
+.c5.accordion__body--hidden {
   display: none;
+}
+
+.c0 {
+  margin-bottom: 2rem;
 }
 
 <div>
@@ -325,12 +317,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     class="c0"
   >
     <div
-      class="accordion__item"
+      class="c1 c2"
     >
       <div
         aria-controls="accordion__body-3"
         aria-expanded="false"
-        class="accordion__title"
+        class="c3"
         id="accordion__title-3"
         role="button"
         tabindex="0"
@@ -339,14 +331,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           titre 1
         </h5>
         <div
-          class="c1"
+          class="c4"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-3"
-        class="accordion__body accordion__body--hidden"
+        class="c5 accordion__body--hidden"
         id="accordion__body-3"
       >
         <p>
@@ -358,12 +350,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       </div>
     </div>
     <div
-      class="accordion__item"
+      class="c1 c2"
     >
       <div
         aria-controls="accordion__body-4"
         aria-expanded="false"
-        class="accordion__title"
+        class="c3"
         id="accordion__title-4"
         role="button"
         tabindex="0"
@@ -372,14 +364,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           titre 2
         </h5>
         <div
-          class="c1"
+          class="c4"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-4"
-        class="accordion__body accordion__body--hidden"
+        class="c5 accordion__body--hidden"
         id="accordion__body-4"
       >
         <p>
@@ -394,12 +386,12 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
       </div>
     </div>
     <div
-      class="accordion__item"
+      class="c1 c2"
     >
       <div
         aria-controls="accordion__body-5"
         aria-expanded="false"
-        class="accordion__title"
+        class="c3"
         id="accordion__title-5"
         role="button"
         tabindex="0"
@@ -408,14 +400,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
           titre 3
         </h5>
         <div
-          class="c1"
+          class="c4"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-5"
-        class="accordion__body accordion__body--hidden"
+        class="c5 accordion__body--hidden"
         id="accordion__body-5"
       >
         <p>

@@ -14,7 +14,12 @@ export default {
       format: "esm"
     }
   ],
-  external: ["react", "prop-types", "styled-components"],
+  external: [
+    "react",
+    "prop-types",
+    "styled-components",
+    "react-accessible-accordion"
+  ],
   plugins: [
     resolve(),
     replace({

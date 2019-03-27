@@ -2,6 +2,7 @@ import * as icons from "./icons";
 import * as keyframes from "./keyframes";
 import * as theme from "./theme";
 
+export { default as Accordion } from "./Accordion";
 export { default as Alert } from "./Alert";
 export { default as Article } from "./Article";
 export { default as AsideTitle } from "./AsideTitle";
@@ -15,6 +16,7 @@ export { default as Category } from "./Category";
 export { default as Container } from "./Container";
 export { default as IconButton } from "./IconButton";
 export { default as LargeLink } from "./LargeLink";
+export { default as List } from "./List";
 export { default as NoAnswer } from "./NoAnswer";
 export { default as SearchForm } from "./SearchForm";
 export { default as Section } from "./Section";
