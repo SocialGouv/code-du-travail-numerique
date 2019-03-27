@@ -16,18 +16,24 @@ export class SearchQuery extends React.Component {
     query: "",
     source: "",
     excludeSources: "",
-    render: ({ status, result, query, source }) => (
-      <div>
-        <div style={{ textAlign: "center" }}>
-          {status === "loading" ? "..." : " "}
-        </div>
+    render: ({ status, result, query, source }) => {
+      const results = {
+        facets: result ? result.facets : [],
+        items: result ? result.hits.hits : []
+      };
+      return (
         <div>
-          {status === "success" && result && (
-            <SearchResults query={query} data={result} source={source} />
-          )}
+          <div style={{ textAlign: "center" }}>
+            {status === "loading" ? "..." : " "}
+          </div>
+          <div>
+            {status === "success" && result && (
+              <SearchResults query={query} results={results} source={source} />
+            )}
+          </div>
         </div>
-      </div>
-    )
+      );
+    }
   };
 
   shouldComponentUpdate(nextProps) {

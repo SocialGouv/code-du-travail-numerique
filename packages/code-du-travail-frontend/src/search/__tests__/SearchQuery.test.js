@@ -3,6 +3,7 @@ import { SearchQuery } from "../SearchQuery";
 import { render, waitForElement } from "react-testing-library";
 
 const results = {
+  facets: [],
   hits: {
     total: 1,
     hits: [

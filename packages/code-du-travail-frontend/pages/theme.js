@@ -101,7 +101,7 @@ class Theme extends React.Component {
           <title>Code du travail numérique : {theme && theme.title}</title>
         </Head>
         <Search />
-        <div className="section">
+        <div className="section section-white">
           <Container>
             {!theme && <BigError>Ce thème n&apos;a pas été trouvé</BigError>}
             {(breadCrumbs && breadCrumbs.length && (

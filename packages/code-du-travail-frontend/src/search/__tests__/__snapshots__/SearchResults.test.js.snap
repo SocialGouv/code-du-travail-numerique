@@ -73,58 +73,14 @@ exports[`<SearchResults/> should render no results 1`] = `
 `;
 
 exports[`<SearchResults/> should render results 1`] = `
-.c0 {
-  font-size: 1.1rem;
-  margin-top: 0;
-}
-
-.c1 {
-  color: #53657d;
-  font-size: 1rem;
-  margin-left: 0.25em;
-}
-
-.c2 {
-  margin: 0;
-}
-
 <div>
   <div
-    class="search-results"
+    category="primary"
+    class="alert "
   >
-    <ul
-      class="search-results__list"
-    >
-      <li
-        class="search-results__item"
-      >
-        <a
-          class="search-results-link"
-          href="/question/mer-il-est-fou?q=search%20test"
-        >
-          <article
-            class="faq"
-          >
-            <header>
-              <h3
-                class="c0"
-              >
-                <span
-                  class="c1"
-                >
-                  FAQ
-                   | 
-                </span>
-                Mer il est fou!
-              </h3>
-            </header>
-            <blockquote
-              class="text-quote c2"
-            />
-          </article>
-        </a>
-      </li>
-    </ul>
+    <p>
+      Nous n'avons pas trouvé de résultat pour votre recherche.
+    </p>
   </div>
   <section
     class="section"

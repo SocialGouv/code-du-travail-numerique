@@ -94,7 +94,7 @@ https://fontlibrary.org/fr/font/source-sans-pro
   --spacing-small: 0.625rem;
   --spacing-base: 1rem;
   --spacing-medium: 1.25rem;
-  --spacing-large: 2.5em;
+  --spacing-large: 2.5rem;
   --spacing-inter-component: var(--spacing-medium);
 
   /* Font-size

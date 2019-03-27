@@ -7,115 +7,30 @@ import { Alert, NoAnswer, Button } from "@cdt/ui";
 import { FeedbackModal } from "../common/FeedbackModal";
 import { Link } from "../../routes";
 
-import { getLabelBySource, getRouteBySource } from "../sources";
-import ReponseIcon from "../icons/ReponseIcon";
-import ArticleIcon from "../icons/ArticleIcon";
-import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
-import DossierIcon from "../icons/DossierIcon";
-import OutilIcon from "../icons/OutilsIcon";
-
-const SearchResultList = ({ items, query }) => {
-  return (
-    <List>
-      {items.map(({ _id, _source }, i) => (
-        <li key={_id}>
-          <Link
-            route={getRouteBySource(_source.source)}
-            params={{ q: query, slug: _source.slug }}
-            passHref
-          >
-            <ListLink focused={i === 0}>
-              <SearchResult result={_source} />
-            </ListLink>
-          </Link>
-        </li>
-      ))}
-    </List>
-  );
-};
-
-SearchResultList.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      _source: PropTypes.shape({
-        title: PropTypes.string,
-        source: PropTypes.string,
-        slug: PropTypes.string
-      })
-    })
-  )
-};
-
-const Icon = ({ source }) => {
-  switch (source) {
-    case "faq":
-      return <ResultIcon as={ReponseIcon} />;
-    case "fiches_service_public":
-    case "fiches_ministere_travail":
-      return <ResultIcon as={ReponseIcon} />;
-
-    case "code_du_travail":
-      return <ResultIcon as={ArticleIcon} />;
-    case "modeles_de_courriers":
-      return <ResultIcon as={ModeleCourrierIcon} />;
-    case "themes":
-      return <ResultIcon as={DossierIcon} />;
-    case "outils":
-      return <ResultIcon as={OutilIcon} />;
-    case "kali":
-      return <ResultIcon as={ArticleIcon} />;
-  }
-};
-
-const SearchResult = ({ result }) => {
-  const { title, source, author } = result;
-  return (
-    <React.Fragment>
-      <Icon source={source} />
-      <Content>
-        <strong>{title.replace(/ \?/, " ?")}</strong>
-        <P>
-          <Label>Source</Label>: <Label>{getLabelBySource(source)}</Label>
-          {source && author ? " - " : null}
-          <Value>{author}</Value>
-        </P>
-      </Content>
-    </React.Fragment>
-  );
-};
+import { getLabelBySource } from "../sources";
+import { SearchResultList } from "./SearchResultList";
+import { Faceting } from "./Faceting";
 
 class SearchResults extends React.Component {
   static propTypes = {
     query: PropTypes.string,
     source: PropTypes.string,
-    data: PropTypes.shape({
-      hits: PropTypes.shape({
-        total: PropTypes.integer,
-        hits: PropTypes.array.isRequired
-      }).isRequired
-    })
+    results: PropTypes.shape({
+      facets: PropTypes.array,
+      items: PropTypes.array
+    }).isRequired
   };
 
   static defaultProps = {
     query: "",
     source: "",
-    data: { hits: { total: 0, hits: [] } }
+    results: { facets: [], items: [] }
   };
 
   state = {
     feedbackVisible: false
   };
 
-  // contains the first result item ref
-  // in order to move focus to it
-  firtResultRef = React.createRef();
-
-  componentDidMount() {
-    if (this.firtResultRef.current) {
-      this.firtResultRef.current.focus();
-    }
-  }
   showFeedBackPopup = () => {
     this.setState({ feedbackVisible: true });
   };
@@ -125,10 +40,9 @@ class SearchResults extends React.Component {
   };
 
   render() {
-    const { data, query, source } = this.props;
-    console.log("[searchresult] render");
+    const { results, query, source } = this.props;
     // No results.
-    if (!data || !data.hits || !data.hits.total) {
+    if (results.items.length === 0) {
       return (
         <React.Fragment>
           <Alert category="primary">
@@ -164,33 +78,48 @@ class SearchResults extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="search-results">
-          {data.snippet && (
-            <ResultSnippet>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: data.snippet._source.html
-                }}
-              />
-              {data.snippet._source.references && (
-                <SourceLink
-                  href={data.snippet._source.references[0].url}
-                  norel
-                  noopener
-                >
-                  {data.snippet._source.references[0].titre}
-                </SourceLink>
-              )}
-            </ResultSnippet>
+        <SearhResultLayout>
+          {results.facets.length > 0 && (
+            <Aside>
+              <Faceting data={results.facets} query={query} />
+            </Aside>
           )}
-          {source && <Title> {getLabelBySource(source)} </Title>}
-          <SearchResultList items={data.hits.hits} query={query} />
-        </div>
+          <Content>
+            <div className="search-results">
+              {results.items.snippet && (
+                <ResultSnippet>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: results.items.snippet._source.html
+                    }}
+                  />
+                  {results.items.snippet._source.references && (
+                    <SourceLink
+                      href={results.items.snippet._source.references[0].url}
+                      norel
+                      noopener
+                    >
+                      {results.items.snippet._source.references[0].titre}
+                    </SourceLink>
+                  )}
+                </ResultSnippet>
+              )}
+              <Title>
+                {" "}
+                {source
+                  ? getLabelBySource(source)
+                  : "Questions et réponses"}{" "}
+              </Title>
+              <SearchResultList items={results.items} query={query} />
+            </div>
+          </Content>
+        </SearhResultLayout>
+
         <NoAnswer>
           <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
         </NoAnswer>
         <FeedbackModal
-          results={data.hits.hits.slice(3)}
+          results={results.items.slice(3)}
           isOpen={this.state.feedbackVisible}
           closeModal={this.closeModal}
           query={query}
@@ -202,39 +131,25 @@ class SearchResults extends React.Component {
 
 export default SearchResults;
 
-const Title = styled.h3`
-  text-align: center;
-`;
-
-const List = styled.ul`
-  list-style-type: none;
-  margin-left: 0;
-`;
-
-const ListLink = styled.a`
+const SearhResultLayout = styled.div`
   display: flex;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  border-radius: var(--border-radius-base);
-  padding: 1rem;
-  padding: var(--spacing-base);
-  :link {
-    text-decoration: none;
-  }
-  :hover {
-    border-color: #c9d3df;
-    border-color: var(--color-element-border);
-    background: #ebeff3;
-    background: var(--color-dark-background);
-  }
-  :hover strong {
-    text-decoration: underline;
-  }
+  justify-content: space-between;
+`;
+
+const Aside = styled.div`
+  flex: 1 1 calc(20% - 1rem);
+  margin-right: 1em;
 `;
 
 const Content = styled.div`
-  padding-left: 1rem;
+  margin-left: 1rem;
+  flex: 1 1 calc(80% - 1rem);
+`;
+
+const Title = styled.h3`
+  text-align: center;
+  margin-bottom: 2.5rem;
+  margin-bottom: var(--spacing-large);
 `;
 
 const ResultSnippet = styled.div`
@@ -249,29 +164,4 @@ const ResultSnippet = styled.div`
 
 const SourceLink = styled.a`
   font-size: 0.9rem;
-`;
-
-const P = styled.p`
-  margin-bottom: 0;
-  font-size: 0.9em;
-`;
-
-const ResultIcon = styled.svg`
-  width: 2rem;
-  flex-shrink: 0;
-  color: #8393a7;
-  color: var(--color-dark-grey);
-`;
-
-const Label = styled.span`
-  font-weight: 700;
-  color: #53657d;
-  color: var(--color-darker-grey);
-`;
-
-const Value = styled.span`
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #adb9c9;
-  color: var(--color-grey);
 `;

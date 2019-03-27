@@ -6,7 +6,7 @@ import { ExternalLink } from "react-feather";
 import getConfig from "next/config";
 import FicheServicePublic from "../src/FicheServicePublic";
 import Answer from "../src/common/Answer";
-import DossierIcon from "../src/icons/DossierIcon";
+import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 
 const ServicePublicCss = styled.div`
@@ -56,7 +56,7 @@ class Fiche extends React.Component {
             html={data._source.html}
             footer={footer}
             date={data._source.date}
-            icon={DossierIcon}
+            icon={ReponseIcon}
             sourceType="Fiche service public"
             referencesJuridiques={data._source.references_juridiques}
           >
