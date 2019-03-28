@@ -1,0 +1,10 @@
+.deploy-apm-server-k8s:
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]
+  before_script:
+  - /apps/create-kubeconfig.sh
+  - envsubst < k8s/apm-server/deployment-apm-server.yml > k8s/apm-server/deployment-cdtn-apm-server.yml
+  script:
+  - kubectl apply -f k8s/apm-server/deployment-cdtn-apm-server.yml
+  allow_failure: false

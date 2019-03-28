@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: cdtn-api${HASH_BRANCH_NAME}
+  labels:
+    app: cdtn-api${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
+spec:
+  selector:
+    app: cdtn-api${HASH_BRANCH_NAME}
+  ports:
+  - port: ${PORT}
+    name: api

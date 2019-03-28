@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: es-config${HASH_BRANCH_NAME}
+  labels:
+    branch: cdtn${HASH_BRANCH_NAME}
+data:
+  elasticsearch.yml: |
+    cluster.name: "code-du-travail-data-elasticsearch"
+    node.name: "code-du-travail-data-elasticsearch-single-node"
+    network.host: 0.0.0.0
+    discovery.type: single-node
+    http.cors.enabled: true
+    http.cors.allow-origin: "*"
+    xpack.security.enabled: false
+    xpack.monitoring.enabled: false
+    xpack.ml.enabled: false
+    xpack.graph.enabled: false
+    xpack.watcher.enabled: false
+  ES_JAVA_OPTS: -Xms512m -Xmx512m

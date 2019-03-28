@@ -1,0 +1,79 @@
+---
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: elasticsearch${HASH_BRANCH_NAME}
+  labels:
+    app: elasticsearch${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
+spec:
+  serviceName: elasticsearch${HASH_BRANCH_NAME}
+  replicas: 1
+  updateStrategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: elasticsearch${HASH_BRANCH_NAME}
+    spec:
+      securityContext:
+        fsGroup: 1000
+      initContainers:
+      - name: init-sysctl
+        image: busybox
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          privileged: true
+        command: ["sysctl", "-w", "vm.max_map_count=262144"]
+      containers:
+      - name: elasticsearch${HASH_BRANCH_NAME}
+        resources:
+          requests:
+            memory: 1Gi
+        securityContext:
+          privileged: true
+          runAsUser: 1000
+          capabilities:
+            add:
+            - IPC_LOCK
+            - SYS_RESOURCE
+        image: ${CDTN_REGISTRY}/elasticsearch:${IMAGE_TAG}
+        env:
+        - name: ES_JAVA_OPTS
+          valueFrom:
+            configMapKeyRef:
+              name: es-config${HASH_BRANCH_NAME}
+              key: ES_JAVA_OPTS
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /_cluster/health
+            port: ${ES_PORT}
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /_cluster/health?local=true
+            port: ${ES_PORT}
+          initialDelaySeconds: 5
+        ports:
+        - containerPort: ${ES_PORT}
+          name: es-http
+        - containerPort: ${ES_INTER_NODE}
+          name: es-transport
+        volumeMounts:
+        - name: es-data${HASH_BRANCH_NAME}
+          mountPath: /usr/share/elasticsearch/data
+        - name: elasticsearch-config${HASH_BRANCH_NAME}
+          mountPath: /usr/share/elasticsearch/config/elasticsearch.yml
+          subPath: elasticsearch.yml
+      volumes:
+      - name: elasticsearch-config${HASH_BRANCH_NAME}
+        configMap:
+          name: es-config${HASH_BRANCH_NAME}
+          items:
+          - key: elasticsearch.yml
+            path: elasticsearch.yml
+      - name: es-data${HASH_BRANCH_NAME}
+        emptyDir: {}

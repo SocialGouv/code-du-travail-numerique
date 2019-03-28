@@ -1,0 +1,17 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: elasticsearch${HASH_BRANCH_NAME}
+  labels:
+    app: elasticsearch${HASH_BRANCH_NAME}
+    branch: cdtn${HASH_BRANCH_NAME}
+spec:
+  selector:
+    app: elasticsearch${HASH_BRANCH_NAME}
+  clusterIP: None
+  ports:
+  - port: ${ES_PORT}
+    name: rest
+  - port: ${ES_INTER_NODE}
+    name: inter-node
