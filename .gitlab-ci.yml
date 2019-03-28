@@ -89,31 +89,37 @@ prepare-deploy-id-prod:
     paths:
     - github_deploy_id
 
-lint-cdtn-api:
+Lint @cdtn/api:
   stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
+  variables:
+    GIT_STRATEGY: none
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  before_script:
+  - cd /app
   script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/api lint
+  - yarn workspace @cdt/api lint
 
-lint-cdtn-ui:
+Lint @cdtn/ui:
   stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
+  variables:
+    GIT_STRATEGY: none
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  before_script:
+  - cd /app
   script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/ui lint
+  - yarn workspace @cdt/ui lint
 
-lint-cdtn-frontend:
+Lint @cdtn/frontend:
   stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
+  variables:
+    GIT_STRATEGY: none
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  before_script:
+  - cd /app
   script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
+  - yarn workspace @cdt/frontend lint
 
-lint-cdtn-data:
+Lint @cdtn/data:
   stage: "Code Quality"
   image: python:$PYTHON_VERSION
   variables:
