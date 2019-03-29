@@ -9,7 +9,7 @@ import ConventionModal from "./ConventionModal";
 const outils = [
   {
     icon: "/static/assets/icons/point-of-service_web.svg",
-    title: "calculateur d'indemnités de licenciements",
+    title: "Calculateur d'indemnités de licenciements",
     hrefTitle: "Démarrer une simulation ",
     text:
       "Calculez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
@@ -87,12 +87,13 @@ OutilCard.defaultProps = {
   small: false,
   icon: "/static/assets/icons/chat.svg"
 };
-
+const CardIcon = styled.img`
+  width: 2.5rem;
+  margin: 0 auto;
+`;
 export const Outil = ({ title, text, icon }) => (
   <React.Fragment>
-    <figure>
-      <img src={icon} alt="" />
-    </figure>
+    <CardIcon src={icon} alt="" />
     <h3>{title}</h3>
     <p>{text}</p>
   </React.Fragment>

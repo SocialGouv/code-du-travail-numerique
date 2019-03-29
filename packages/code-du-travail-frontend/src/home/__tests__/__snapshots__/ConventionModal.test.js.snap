@@ -1,10 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionModal /> should render a button 1`] = `
+.c1 {
+  width: 2.5rem;
+  margin: 0 auto;
+}
+
 .c0 {
   background: transparent;
   border: none;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: inherit;
+  color: inherit;
 }
 
 <div>
@@ -15,12 +32,11 @@ exports[`<ConventionModal /> should render a button 1`] = `
     <button
       class="c0"
     >
-      <figure>
-        <img
-          alt=""
-          src="/static/assets/icons/book_web.svg"
-        />
-      </figure>
+      <img
+        alt=""
+        class="c1"
+        src="/static/assets/icons/book_web.svg"
+      />
       <h3>
         Votre convention collective
       </h3>
@@ -33,21 +49,26 @@ exports[`<ConventionModal /> should render a button 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c3 li[role="option"]:nth-child(2n + 1) {
+.c1 {
+  width: 2.5rem;
+  margin: 0 auto;
+}
+
+.c4 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
-.c2 {
+.c3 {
   margin-top: 10px;
 }
 
-.c1 {
+.c2 {
   color: #000;
   font-size: 1.2em;
   margin-top: 20px;
 }
 
-.c4 {
+.c5 {
   color: #666;
   font-size: 1em;
   font-weight: bold;
@@ -57,7 +78,19 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 .c0 {
   background: transparent;
   border: none;
-  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: inherit;
+  color: inherit;
 }
 
 <body>
@@ -71,12 +104,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
       <button
         class="c0"
       >
-        <figure>
-          <img
-            alt=""
-            src="/static/assets/icons/book_web.svg"
-          />
-        </figure>
+        <img
+          alt=""
+          class="c1"
+          src="/static/assets/icons/book_web.svg"
+        />
         <h3>
           Votre convention collective
         </h3>
@@ -103,13 +135,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           </h2>
           <div>
             <h3
-              class="c1"
+              class="c2"
             >
               Recherche par nom ou par identifiant
             </h3>
             Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
-              class="c2"
+              class="c3"
             >
               <div
                 aria-expanded="false"
@@ -129,14 +161,14 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   value=""
                 />
                 <div
-                  class="c3"
+                  class="c4"
                   id="react-autowhatever-1"
                   role="listbox"
                 />
               </div>
             </div>
             <div
-              class="c4"
+              class="c5"
             >
               Comment trouver ma convention collective ?
             </div>
@@ -156,7 +188,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </li>
             </ul>
             <div
-              class="c4"
+              class="c5"
             >
               Quelle est la convention collective applicable ?
             </div>
@@ -169,13 +201,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
         </form>
         <form>
           <h3
-            class="c1"
+            class="c2"
           >
             Recherche par SIRET
           </h3>
           Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
           <div
-            class="c2"
+            class="c3"
           >
             <div
               aria-expanded="false"
@@ -195,7 +227,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 value=""
               />
               <div
-                class="c3"
+                class="c4"
                 id="react-autowhatever-1"
                 role="listbox"
               />
