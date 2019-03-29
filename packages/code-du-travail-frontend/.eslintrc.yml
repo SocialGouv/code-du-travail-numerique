@@ -9,6 +9,6 @@ rules:
   react/prop-types: off
 
 overrides:
-  - files: ["*.test.js"]
-    env:
-      jest: true
+  env:
+    jest: true
+  files: ["*.test.js"]

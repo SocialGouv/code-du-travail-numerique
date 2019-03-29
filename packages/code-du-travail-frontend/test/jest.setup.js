@@ -2,7 +2,7 @@
 import "react-testing-library/cleanup-after-each";
 import "jest-styled-components";
 
-jest.mock("next/config", () => () => ({
+jest.mock("next-server/config", () => () => ({
   publicRuntimeConfig: {
     API_URL: "api.url",
     API_SIRET2IDCC_URL: "siret2idcc.url",
