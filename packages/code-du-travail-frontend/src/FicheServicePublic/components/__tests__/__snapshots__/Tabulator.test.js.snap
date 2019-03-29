@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
-.c1 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c0 {
   margin-bottom: 2rem;
 }
@@ -97,7 +85,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
       role="tabpanel"
     >
       <div
-        class="c1"
+        class="czymRv"
       >
         <h2>
           CDI
@@ -121,18 +109,6 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
-.c1 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c0 {
   margin-bottom: 2rem;
 }
@@ -217,7 +193,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
       role="tabpanel"
     >
       <div
-        class="c1"
+        class="czymRv"
       >
         <h4>
           CDI
@@ -241,18 +217,6 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
-.c1 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c0 {
   margin-bottom: 2rem;
 }
@@ -337,7 +301,7 @@ exports[`<Tabulator /> should render 1`] = `
       role="tabpanel"
     >
       <div
-        class="c1"
+        class="czymRv"
       >
         <h5>
           CDI
