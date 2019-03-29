@@ -11,3 +11,5 @@ RUN . venv/bin/activate
 RUN pip install -r requirements.txt
 
 COPY ./api ./api
+
+ENTRYPOINT ["sh", "scripts/entrypoint.sh"]

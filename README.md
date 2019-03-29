@@ -16,15 +16,8 @@ $ yarn
 
 Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) en fonction du `NODE_ENV`
 
-#### Première instanciation
+### Données
 
-Il faudra télécharger les données d'entrainement nécessaires à l'api de suggestion de résultats.
-pour cela, mettez à jour les variables d'environnement dans le fichier `.env`
-
-```sh
-# télécharger les données
-$ sh script/download-nlp-data.sh
-```
 
 Pour (re-)initialiser les données du elasticsearch:
 
