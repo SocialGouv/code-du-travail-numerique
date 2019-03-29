@@ -14,14 +14,12 @@ export default {
       format: "esm"
     }
   ],
-  external: [
-    "react",
-    "prop-types",
-    "styled-components",
-    "react-accessible-accordion"
-  ],
+  external: ["react", "prop-types", "styled-components"],
   plugins: [
-    resolve(),
+    resolve({
+      jsnext: true,
+      main: true
+    }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
