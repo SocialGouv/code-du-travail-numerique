@@ -32,14 +32,11 @@ exports[`<ConventionModal /> should render a button 1`] = `
     <button
       class="c0"
     >
-      <figure
+      <img
+        alt=""
         class="c1"
-      >
-        <img
-          alt=""
-          src="/static/assets/icons/book_web.svg"
-        />
-      </figure>
+        src="/static/assets/icons/book_web.svg"
+      />
       <h3>
         Votre convention collective
       </h3>
@@ -107,14 +104,11 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
       <button
         class="c0"
       >
-        <figure
+        <img
+          alt=""
           class="c1"
-        >
-          <img
-            alt=""
-            src="/static/assets/icons/book_web.svg"
-          />
-        </figure>
+          src="/static/assets/icons/book_web.svg"
+        />
         <h3>
           Votre convention collective
         </h3>

@@ -87,15 +87,13 @@ OutilCard.defaultProps = {
   small: false,
   icon: "/static/assets/icons/chat.svg"
 };
-const OutilIcon = styled.figure`
+const CardIcon = styled.img`
   width: 2.5rem;
   margin: 0 auto;
 `;
 export const Outil = ({ title, text, icon }) => (
   <React.Fragment>
-    <OutilIcon>
-      <img src={icon} alt="" />
-    </OutilIcon>
+    <CardIcon src={icon} alt="" />
     <h3>{title}</h3>
     <p>{text}</p>
   </React.Fragment>
