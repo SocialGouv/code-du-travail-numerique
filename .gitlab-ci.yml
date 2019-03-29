@@ -44,7 +44,7 @@ prepare-cdtn-base-image:
   before_script:
   - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
   script:
-  - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
+  - docker build --cache-from $CI_REGISTRY_IMAGE:$CI_COMMIT_BEFORE_SHA -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
 
 prepare-env-file:
