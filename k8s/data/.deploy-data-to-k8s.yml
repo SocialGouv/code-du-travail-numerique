@@ -1,0 +1,8 @@
+.deploy-data-to-k8s:
+  extends: .docker_kube_stage
+  script:
+    - /apps/create-kubeconfig.sh
+    #
+    - envsubst < k8s/data/deployment-data.yml > ./deployment.yml
+    #
+    - sh -x ./k8s/data/scripts/create-elasticsearch-index.sh $HASH_BRANCH_NAME

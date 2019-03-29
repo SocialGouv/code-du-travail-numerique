@@ -1,0 +1,14 @@
+.docker_stage:
+  image: docker:$DOCKER_VERSION
+  services:
+  - docker:dind
+
+.docker_compose_stage:
+  image: docker/compose:$DOCKER_COMPOSE_VERSION
+  services:
+    - docker:dind
+
+.docker_kube_stage:
+  image:
+    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+    entrypoint: [""]

@@ -5,7 +5,9 @@ metadata:
   name: cdtn-frontend${HASH_BRANCH_NAME}
   labels:
     app: cdtn-frontend${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    branch: ${BRANCH_NAME}
+    commit: ${COMMIT}
+    job: "${JOB_ID}"
 spec:
   replicas: 1
   selector:
@@ -35,6 +37,7 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-api.${ENVIRONMENT}.factory.social.gouv.fr/api/v1
+          value: http://${API_HOST}
         - name: SUGGEST_URL
           value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-nlp.${ENVIRONMENT}.factory.social.gouv.fr/api/suggest
+

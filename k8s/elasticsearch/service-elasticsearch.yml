@@ -5,7 +5,9 @@ metadata:
   name: elasticsearch${HASH_BRANCH_NAME}
   labels:
     app: elasticsearch${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    branch: ${BRANCH_NAME}
+    commit: ${COMMIT}
+    job: "${JOB_ID}"
 spec:
   selector:
     app: elasticsearch${HASH_BRANCH_NAME}

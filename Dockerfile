@@ -1,5 +1,9 @@
 FROM node:10-alpine
 
+WORKDIR /app
+
+#
+
 COPY ./scripts /app/scripts
 
 COPY ./package.json /app/package.json
@@ -18,8 +22,6 @@ COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packag
 COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
 COPY ./packages/code-du-travail-data/dataset/code_du_travail/eposeidon_script/package.json /app/packages/code-du-travail-data/dataset/code_du_travail/eposeidon_script/package.json
 
-WORKDIR /app
-
 RUN yarn --frozen-lockfile && yarn cache clean
 
 #
@@ -27,6 +29,9 @@ RUN yarn --frozen-lockfile && yarn cache clean
 COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
-WORKDIR /app
-
 RUN yarn build
+
+#
+
+COPY ./docker /app/docker
+COPY ./docker-compose.yml /app/docker-compose.yml

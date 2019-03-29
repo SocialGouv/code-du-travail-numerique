@@ -4,7 +4,9 @@ kind: ConfigMap
 metadata:
   name: es-config${HASH_BRANCH_NAME}
   labels:
-    branch: cdtn${HASH_BRANCH_NAME}
+    branch: ${BRANCH_NAME}
+    commit: ${COMMIT}
+    job: "${JOB_ID}"
 data:
   elasticsearch.yml: |
     cluster.name: "code-du-travail-data-elasticsearch"

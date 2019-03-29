@@ -5,7 +5,9 @@ metadata:
   name: cdtn-data${HASH_BRANCH_NAME}
   labels:
     app: cdtn-data${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    branch: ${BRANCH_NAME}
+    commit: ${COMMIT}
+    job: "${JOB_ID}"
 spec:
   containers:
   - name: cdtn-data${HASH_BRANCH_NAME}

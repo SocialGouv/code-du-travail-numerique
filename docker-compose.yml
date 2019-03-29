@@ -2,19 +2,14 @@ version: "3"
 
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.2
-    restart: always
+    build:
+      context: docker/elasticsearch
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
       - esdata:/usr/share/elasticsearch/data
-      - ./docker:/app/docker
-    command:
-      - sh
-      - -c
-      - "cp /app/docker/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml; ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu; docker-entrypoint.sh"
 
   kibana:
     image: docker.elastic.co/kibana/kibana:6.4.2
@@ -33,7 +28,6 @@ services:
       dockerfile: ./Dockerfile
 
   nlp_api:
-    restart: always
     env_file:
       - .env
     ports:
@@ -41,6 +35,8 @@ services:
     build:
       context: ./packages/code-du-travail-nlp
       dockerfile: ./Dockerfile
+    volumes:
+      - ./packages/code-du-travail-nlp/data:/app/data
 
 volumes:
   esdata:

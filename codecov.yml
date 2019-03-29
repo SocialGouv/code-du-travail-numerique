@@ -1,0 +1,17 @@
+coverage:
+  status:
+    project:
+      default: off
+      frontend:
+        flags: frontend
+      api:
+        target: 89%
+        flags: api
+
+flags:
+  api:
+    paths:
+      - packages/code-du-travail-api
+  frontend:
+    paths:
+      - packages/code-du-travail-frontend

@@ -1,0 +1,168 @@
+#
+
+.deploy_stage: &deploy_stage
+  stage: "Deploy"
+  dependencies: []
+  services:
+    - docker:dind
+  variables: &deploy_stage_variables
+    IMAGE_TAG: $CI_COMMIT_SHA
+
+.docker_kube_prod_stage: &docker_kube_prod_stage
+  before_script:
+    - export HASH_BRANCH_NAME=""
+
+.docker_kube_dev_stage: &docker_kube_dev_stage
+  before_script:
+    - export BRANCH_HASH=$(eval $BRANCH_HASHER)
+    - export BRANCH_NAME=$(echo $CI_COMMIT_REF_NAME | sed -e 's/[^[:alnum:]]/-/g')
+    - export COMMIT=$CI_COMMIT_SHA
+    - export JOB_ID=$CI_JOB_ID
+    - export HASH_BRANCH_NAME=-$BRANCH_HASH
+    - export FRONTEND_HOST=${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr
+    - export API_HOST=api.${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr
+
+.ops_stage: &ops_stage
+  environment:
+    name: ops
+  only:
+    - master
+
+.dev_stage: &dev_stage
+  environment:
+    name: dev
+  except:
+    - master
+
+#
+
+.deploy-elasticsearch: &deploy_elasticsearch
+  <<: *deploy_stage
+  variables:
+    <<: *deploy_stage_variables
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+    ES_INTER_NODE: $ELASTICSEARCH_INTER_NODE_PORT
+    ES_PORT: $ELASTICSEARCH_PORT
+
+Deploy Elasticsearch (dev):
+  <<: *deploy_elasticsearch
+  <<: *dev_stage
+  <<: *docker_kube_dev_stage
+  extends: .deploy-elasticsearch-to-k8s (dev)
+
+Deploy Elasticsearch (ops):
+  <<: *deploy_elasticsearch
+  <<: *ops_stage
+  <<: *docker_kube_prod_stage
+  extends: .deploy-elasticsearch-to-k8s (prod)
+
+#
+
+.deploy-data: &deploy_data
+  <<: *deploy_stage
+  stage: "Create Code du Travail Numerique Elasticsearch Index"
+  extends: .deploy-data-to-k8s
+  variables:
+    <<: *deploy_stage_variables
+    ES_PORT: $ELASTICSEARCH_PORT
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+
+Create Elasticsearch Index (dev):
+  <<: *deploy_data
+  <<: *dev_stage
+  <<: *docker_kube_dev_stage
+
+Create Elasticsearch Index (ops):
+  <<: *deploy_data
+  <<: *ops_stage
+  <<: *docker_kube_prod_stage
+
+#
+
+.deploy-api: &deploy_api
+  <<: *deploy_stage
+  extends: .deploy-api-to-k8s
+  variables: &deploy_api_variables
+    <<: *deploy_stage_variables
+    ELASTICSEARCH_LOG_LEVEL: "trace"
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    PORT: $API_PORT
+    ES_PORT: $ELASTICSEARCH_PORT
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+
+Deploy @cdtn/api (dev):
+  <<: *deploy_api
+  <<: *dev_stage
+  <<: *docker_kube_dev_stage
+  variables:
+    <<: *deploy_api_variables
+    APM_SERVER_ACTIVE: 0
+    APM_SERVER_URL: ""
+
+Deploy @cdtn/api (ops):
+  <<: *deploy_api
+  <<: *ops_stage
+  <<: *docker_kube_prod_stage
+  variables:
+    <<: *deploy_api_variables
+    APM_SERVER_ACTIVE: 1
+    APM_SERVER_URL: "http://apm:8200"
+
+#
+
+.deploy-frontend: &deploy_frontend
+  <<: *deploy_stage
+  extends: .deploy-frontend-to-k8s
+  variables:
+    <<: *deploy_stage_variables
+    PORT: $FRONTEND_PORT
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+
+Deploy @cdtn/frontend (dev):
+  <<: *deploy_frontend
+  <<: *dev_stage
+  <<: *docker_kube_dev_stage
+  environment:
+    name: dev
+    url: $FRONTEND_HOST
+    on_stop: Delete frontend pods
+
+Deploy @cdtn/frontend (ops):
+  <<: *deploy_frontend
+  <<: *ops_stage
+  <<: *docker_kube_prod_stage
+
+Delete frontend pods:
+  <<: *deploy_frontend
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - kubectl delete ingress --selector app="cdtn-frontend${HASH_BRANCH_NAME}"
+    - kubectl delete service --selector app="cdtn-frontend${HASH_BRANCH_NAME}"
+    - kubectl delete deployments --selector app="cdtn-frontend${HASH_BRANCH_NAME}"
+  when: manual
+  environment:
+    name: dev
+    action: stop
+
+#
+
+.deploy-kibana: &deploy_kibana
+  <<: *deploy_stage
+  extends: .deploy-kibana-to-k8s
+  variables:
+    <<: *deploy_stage_variables
+    ELK_VERSION: $ELK_STACK_VERSION
+    ES_PORT: $ELASTICSEARCH_PORT
+    KBN_PORT: $KIBANA_PORT
+
+Deploy Kibana (dev):
+  <<: *deploy_kibana
+  <<: *dev_stage
+  <<: *docker_kube_dev_stage
+
+Deploy Kibana (ops):
+  <<: *deploy_kibana
+  <<: *ops_stage
+  <<: *docker_kube_prod_stage
+

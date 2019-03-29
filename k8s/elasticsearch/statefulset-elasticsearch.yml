@@ -5,7 +5,9 @@ metadata:
   name: es-cluster
   labels:
     app: es-cluster${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    branch: ${BRANCH_NAME}
+    commit: ${COMMIT}
+    job: "${JOB_ID}"
 spec:
   serviceName: elasticsearch
   replicas: 3

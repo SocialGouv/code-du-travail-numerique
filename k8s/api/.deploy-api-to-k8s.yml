@@ -1,0 +1,14 @@
+.deploy-api-to-k8s:
+  extends: .docker_kube_stage
+  script:
+    - /apps/create-kubeconfig.sh
+    #
+    - envsubst < k8s/api/deployment-api.yml > ./deployment.yml
+    - envsubst < k8s/api/service-api.yml > ./service.yml
+    - envsubst < k8s/api/ingress-api.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml
+    #
+    - echo "CDTN api available at - ${API_HOST}"

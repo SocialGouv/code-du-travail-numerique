@@ -1,0 +1,14 @@
+.deploy-frontend-to-k8s:
+  extends: .docker_kube_stage
+  script:
+    - /apps/create-kubeconfig.sh
+    #
+    - envsubst < k8s/frontend/deployment-frontend.yml > ./deployment.yml
+    - envsubst < k8s/frontend/service-frontend.yml > ./service.yml
+    - envsubst < k8s/frontend/ingress-frontend.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml
+    #
+    - echo "CDTN frontend available at - ${FRONTEND_HOST}"

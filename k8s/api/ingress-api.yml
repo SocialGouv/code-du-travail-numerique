@@ -5,10 +5,12 @@ metadata:
   name: cdtn-api${HASH_BRANCH_NAME}
   labels:
     app: cdtn-api${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    branch: ${BRANCH_NAME}
+    commit: ${COMMIT}
+    job: "${JOB_ID}"
 spec:
   rules:
-  - host: ${HASH_BRANCH_INGRESS}code-du-travail-numerique-api.${ENVIRONMENT}.factory.social.gouv.fr
+  - host: api.${HASH_BRANCH_INGRESS}code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr
     http:
       paths:
       - path: /

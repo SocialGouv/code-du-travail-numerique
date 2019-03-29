@@ -1,0 +1,12 @@
+.deploy-kibana-to-k8s:
+  extends: .docker_kube_stage
+  script:
+    - /apps/create-kubeconfig.sh
+    #
+    - envsubst < k8s/kibana/deployment-kibana.yml > ./deployment.yml
+    - envsubst < k8s/kibana/service-kibana.yml > ./service.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    #
+    - echo "CDTN frontend available at - ${FRONTEND_HOST}"
