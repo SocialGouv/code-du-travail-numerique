@@ -1,13 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { theme } from "@cdt/ui";
+
 import { Link } from "../../routes";
 import { getRouteBySource, getLabelBySource } from "../sources";
-import ReponseIcon from "../icons/ReponseIcon";
-import ArticleIcon from "../icons/ArticleIcon";
-import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
-import DossierIcon from "../icons/DossierIcon";
-import OutilIcon from "../icons/OutilsIcon";
+import { SourceIcon } from "./SourceIcon";
+
+const SearchResult = ({ result }) => {
+  const { title, source, author } = result;
+  return (
+    <React.Fragment>
+      <SourceIcon source={source} />
+      <Content>
+        <strong>{title.replace(/ \?/, " ?")}</strong>
+        <P>
+          <Label>Source</Label>: <Label>{getLabelBySource(source)}</Label>
+          {source && author ? " - " : null}
+          <Value>{author}</Value>
+        </P>
+      </Content>
+    </React.Fragment>
+  );
+};
+
+class ListLink extends React.Component {
+  ref = React.createRef();
+  static propTypes = {
+    focused: PropTypes.bool
+  };
+  static defaultProps = {
+    focused: false
+  };
+  componentDidMount() {
+    if (this.ref.current && this.props.focused) {
+      this.ref.current.focus();
+    }
+  }
+
+  render() {
+    return <ResultLink ref={this.ref} {...this.props} />;
+  }
+}
 
 const SearchResultList = ({ items, query }) => {
   return (
@@ -42,64 +76,9 @@ SearchResultList.propTypes = {
   )
 };
 
-const Icon = ({ source }) => {
-  switch (source) {
-    case "faq":
-      return <ResultIcon as={ReponseIcon} />;
-    case "fiches_service_public":
-    case "fiches_ministere_travail":
-      return <ResultIcon as={ReponseIcon} />;
-
-    case "code_du_travail":
-      return <ResultIcon as={ArticleIcon} />;
-    case "modeles_de_courriers":
-      return <ResultIcon as={ModeleCourrierIcon} />;
-    case "themes":
-      return <ResultIcon as={DossierIcon} />;
-    case "outils":
-      return <ResultIcon as={OutilIcon} />;
-    case "kali":
-      return <ResultIcon as={ArticleIcon} />;
-  }
-};
-
-const SearchResult = ({ result }) => {
-  const { title, source, author } = result;
-  return (
-    <React.Fragment>
-      <Icon source={source} />
-      <Content>
-        <strong>{title.replace(/ \?/, " ?")}</strong>
-        <P>
-          <Label>Source</Label>: <Label>{getLabelBySource(source)}</Label>
-          {source && author ? " - " : null}
-          <Value>{author}</Value>
-        </P>
-      </Content>
-    </React.Fragment>
-  );
-};
-
-class ListLink extends React.Component {
-  ref = React.createRef();
-  static propTypes = {
-    focused: PropTypes.bool
-  };
-  static defaultProps = {
-    focused: false
-  };
-  componentDidMount() {
-    if (this.ref.current && this.props.focused) {
-      this.ref.current.focus();
-    }
-  }
-
-  render() {
-    return <ResultLink ref={this.ref} {...this.props} />;
-  }
-}
-
 export { SearchResultList };
+
+const { colors, spacing, fonts, box } = theme;
 
 const List = styled.ul`
   list-style-type: none;
@@ -110,18 +89,14 @@ const ResultLink = styled.a`
   display: flex;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  border-radius: var(--border-radius-base);
-  padding: 1rem;
-  padding: var(--spacing-base);
+  border-radius: ${box.borderRadius};
+  padding: ${spacing.base};
   :link {
     text-decoration: none;
   }
   :hover {
-    border-color: #c9d3df;
-    border-color: var(--color-element-border);
-    background: #ebeff3;
-    background: var(--color-dark-background);
+    border-color: ${colors.elementBorder};
+    background: ${colors.darkBackground};
   }
   :hover strong {
     text-decoration: underline;
@@ -129,29 +104,20 @@ const ResultLink = styled.a`
 `;
 
 const Content = styled.div`
-  padding-left: 1rem;
+  padding-left: ${spacing.base};
 `;
 const P = styled.p`
   margin-bottom: 0;
-  font-size: 0.9em;
-`;
-
-const ResultIcon = styled.svg`
-  width: 2rem;
-  flex-shrink: 0;
-  color: #8393a7;
-  color: var(--color-dark-grey);
+  font-size: ${fonts.sizeSmall};
 `;
 
 const Label = styled.span`
   font-weight: 700;
-  color: #53657d;
-  color: var(--color-darker-grey);
+  color: ${colors.darkerGrey};
 `;
 
 const Value = styled.span`
   font-weight: 700;
   text-transform: uppercase;
-  color: #adb9c9;
-  color: var(--color-grey);
+  color: ${colors.grey};
 `;

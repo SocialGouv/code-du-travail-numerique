@@ -1,4 +1,4 @@
-const baseColors = {
+export const colors = {
   black: "#0c0c0e",
   almostBlack: "#26353f",
   blue: "#0053b3",
@@ -21,30 +21,26 @@ const baseColors = {
   lightText: "#4c5467",
 
   darkBackground: "#ebeff3",
-  darkText: "#434956"
-};
-
-const feedbackColors = {
-  primaryBackground: "#005994",
-  primaryText: baseColors.white,
-  secondaryBackground: "#eaeaea",
-  secondaryText: baseColors.black,
-  successBackground: "#e0f2bd",
-  successText: baseColors.black,
-  infoBackground: "#d7e8f9",
-  infoText: baseColors.black,
-  warningBackground: "#fee5ad",
-  warningText: baseColors.black,
-  dangerBackground: "#f6bcc2",
-  dangerText: baseColors.black,
-
+  darkText: "#434956",
+  /// ui colours
   markBackground: "#fff28e",
-
   focus: "#80bdff",
-  focusShadow: "#bfdeff"
+  focusShadow: "#bfdeff",
+  primaryBackground: "#005994",
+  secondaryBackground: "#eaeaea",
+  successBackground: "#e0f2bd",
+  infoBackground: "#d7e8f9",
+  warningBackground: "#fee5ad",
+  dangerBackground: "#f6bcc2"
 };
 
-export const colors = { ...baseColors, ...feedbackColors };
+// adding colour shortcuts
+colors.primaryText = colors.white;
+colors.secondaryText = colors.black;
+colors.successText = colors.black;
+colors.infoText = colors.black;
+colors.warningText = colors.black;
+colors.dangerText = colors.black;
 
 /* Rem with a 16px base:
   20px = 1.25rem => (20 * 1) / 16
@@ -85,6 +81,6 @@ export const breakpoints = {
 export const box = {
   lightBorderRadius: "0.2rem",
   borderRadius: "0.25rem",
-  shadow: `0 5px 10px 0 ${baseColors.lightGrey})`,
+  shadow: `0 5px 10px 0 ${colors.lightGrey}`,
   shadowBottom: "0 10px 10px -10px #b7bcdf"
 };

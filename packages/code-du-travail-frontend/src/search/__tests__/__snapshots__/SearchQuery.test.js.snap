@@ -1,12 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchQuery/> should render results 1`] = `
-.c3 {
+.c6 {
+  width: 2rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: #8393a7;
+}
+
+.c4 {
   list-style-type: none;
   margin-left: 0;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,60 +25,45 @@ exports[`<SearchQuery/> should render results 1`] = `
   align-items: center;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  border-radius: var(--border-radius-base);
   padding: 1rem;
-  padding: var(--spacing-base);
 }
 
-.c4:link {
+.c5:link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4:hover {
+.c5:hover {
   border-color: #c9d3df;
-  border-color: var(--color-element-border);
   background: #ebeff3;
-  background: var(--color-dark-background);
 }
 
-.c4:hover strong {
+.c5:hover strong {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c6 {
+.c7 {
   padding-left: 1rem;
 }
 
-.c7 {
-  margin-bottom: 0;
-  font-size: 0.9em;
-}
-
-.c5 {
-  width: 2rem;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  color: #8393a7;
-  color: var(--color-dark-grey);
-}
-
 .c8 {
-  font-weight: 700;
-  color: #53657d;
-  color: var(--color-darker-grey);
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .c9 {
   font-weight: 700;
-  text-transform: uppercase;
-  color: #adb9c9;
-  color: var(--color-grey);
+  color: #53657d;
 }
 
-.c0 {
+.c10 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #adb9c9;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,53 +74,54 @@ exports[`<SearchQuery/> should render results 1`] = `
   justify-content: space-between;
 }
 
-.c1 {
+.c2 {
   margin-left: 1rem;
   -webkit-flex: 1 1 calc(80% - 1rem);
   -ms-flex: 1 1 calc(80% - 1rem);
   flex: 1 1 calc(80% - 1rem);
 }
 
-.c2 {
+.c3 {
   text-align: center;
-  margin-bottom: 2.5rem;
-  margin-bottom: var(--spacing-large);
+  margin-bottom: 2rem;
+}
+
+.c0 {
+  text-align: "center";
 }
 
 <div>
   <div>
     <div
-      style="text-align: center;"
+      class="c0"
     >
        
     </div>
     <div>
       <div
-        class="c0"
+        class="c1"
       >
         <div
-          class="c1"
+          class="c2"
         >
           <div
             class="search-results"
           >
             <h3
-              class="c2"
+              class="c3"
             >
-               
               Questions et réponses
-               
             </h3>
             <ul
-              class="c3"
+              class="c4"
             >
               <li>
                 <a
-                  class="c4"
+                  class="c5"
                   href="/question/mer-il-est-fou?q=search%20test"
                 >
                   <svg
-                    class="c5"
+                    class="c6"
                     viewBox="0 0 512 512"
                   >
                     <title>
@@ -147,27 +141,27 @@ exports[`<SearchQuery/> should render results 1`] = `
                     />
                   </svg>
                   <div
-                    class="c6"
+                    class="c7"
                   >
                     <strong>
                       Mer il est fou!
                     </strong>
                     <p
-                      class="c7"
+                      class="c8"
                     >
                       <span
-                        class="c8"
+                        class="c9"
                       >
                         Source
                       </span>
                       : 
                       <span
-                        class="c8"
+                        class="c9"
                       >
                         Réponses
                       </span>
                       <span
-                        class="c9"
+                        class="c10"
                       />
                     </p>
                   </div>

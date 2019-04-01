@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import AsyncFetch from "../lib/AsyncFetch";
 import SearchResults from "./SearchResults";
 
@@ -17,17 +18,16 @@ export class SearchQuery extends React.Component {
     source: "",
     excludeSources: "",
     render: ({ status, result, query, source }) => {
+      // result can be null, in case AsyncFetch is cleared
       const results = {
         facets: result ? result.facets : [],
         items: result ? result.hits.hits : []
       };
       return (
         <div>
-          <div style={{ textAlign: "center" }}>
-            {status === "loading" ? "..." : " "}
-          </div>
+          <CenterText>{status === "loading" ? "..." : " "}</CenterText>
           <div>
-            {status === "success" && result && (
+            {status === "success" && (
               <SearchResults query={query} results={results} source={source} />
             )}
           </div>
@@ -58,3 +58,7 @@ export class SearchQuery extends React.Component {
     );
   }
 }
+
+const CenterText = styled.div`
+  text-align: "center";
+`;

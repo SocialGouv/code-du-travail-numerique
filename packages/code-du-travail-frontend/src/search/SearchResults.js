@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Alert, NoAnswer, Button } from "@cdt/ui";
+import { Alert, NoAnswer, Button, theme } from "@cdt/ui";
 
 import { FeedbackModal } from "../common/FeedbackModal";
 import { Link } from "../../routes";
@@ -96,6 +96,7 @@ class SearchResults extends React.Component {
                   {results.items.snippet._source.references && (
                     <SourceLink
                       href={results.items.snippet._source.references[0].url}
+                      target="_blank"
                       norel
                       noopener
                     >
@@ -105,10 +106,7 @@ class SearchResults extends React.Component {
                 </ResultSnippet>
               )}
               <Title>
-                {" "}
-                {source
-                  ? getLabelBySource(source)
-                  : "Questions et réponses"}{" "}
+                {source ? getLabelBySource(source) : "Questions et réponses"}
               </Title>
               <SearchResultList items={results.items} query={query} />
             </div>
@@ -131,37 +129,38 @@ class SearchResults extends React.Component {
 
 export default SearchResults;
 
+const { colors, spacing, fonts, box } = theme;
+
 const SearhResultLayout = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
 const Aside = styled.div`
-  flex: 1 1 calc(20% - 1rem);
-  margin-right: 1em;
+  flex: 1 1 calc(20% - ${spacing.base});
+  margin-right: ${spacing.base};
 `;
 
 const Content = styled.div`
-  margin-left: 1rem;
-  flex: 1 1 calc(80% - 1rem);
+  margin-left: ${spacing.base};
+  flex: 1 1 calc(80% - ${spacing.base});
 `;
 
 const Title = styled.h3`
   text-align: center;
-  margin-bottom: 2.5rem;
-  margin-bottom: var(--spacing-large);
+  margin-bottom: ${spacing.large};
 `;
 
 const ResultSnippet = styled.div`
-  border-radius: 0.5rem;
-  background-color: #fff;
-  padding: 0.75rem;
-  margin-bottom: 2rem;
+  border-radius: ${box.borderRadius};
+  background-color: ${colors.white};
+  padding: ${spacing.small};
+  margin-bottom: ${spacing.large};
   p {
     font-size: 1.1rem;
   }
 `;
 
 const SourceLink = styled.a`
-  font-size: 0.9rem;
+  font-size: ${fonts.sizeSmall};
 `;
