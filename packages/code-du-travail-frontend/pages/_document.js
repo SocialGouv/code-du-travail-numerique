@@ -23,6 +23,10 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <meta
+            name="google-site-verification"
+            content="k5625aNLEYRAFI6MIHOJNN4gfMeDVhdsTIe2ZEtxAqU"
+          />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           {this.props.styleTags}
           <link
