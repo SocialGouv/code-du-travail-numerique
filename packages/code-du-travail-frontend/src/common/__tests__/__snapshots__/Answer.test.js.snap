@@ -232,10 +232,8 @@ exports[`<Answer /> should display feedback modal when click on feedback button 
                 title="Valider cette réponse"
               >
                 <svg
-                  height="1em"
                   style="padding-bottom: .5rem;"
                   viewBox="0 0 50 50"
-                  width="1em"
                 >
                   <title>
                     like
@@ -733,10 +731,8 @@ exports[`<Answer /> should display feedback modal when click on thumbDown 1`] = 
                 title="Valider cette réponse"
               >
                 <svg
-                  height="1em"
                   style="padding-bottom: .5rem;"
                   viewBox="0 0 50 50"
-                  width="1em"
                 >
                   <title>
                     like
@@ -1248,10 +1244,8 @@ exports[`<Answer /> should render 1`] = `
               title="Valider cette réponse"
             >
               <svg
-                height="1em"
                 style="padding-bottom: .5rem;"
                 viewBox="0 0 50 50"
-                width="1em"
               >
                 <title>
                   like
@@ -1636,10 +1630,8 @@ exports[`<Answer /> should render additional content 1`] = `
                 title="Valider cette réponse"
               >
                 <svg
-                  height="1em"
                   style="padding-bottom: .5rem;"
                   viewBox="0 0 50 50"
-                  width="1em"
                 >
                   <title>
                     like

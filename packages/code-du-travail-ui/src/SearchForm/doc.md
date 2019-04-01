@@ -3,7 +3,7 @@ name: SearchForm
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import SearchForm from ".";
 
 ## \<SearchForm/\>
@@ -15,4 +15,4 @@ import SearchForm from ".";
   />
 </Playground>
 
-<PropsTable of={SearchForm} />
+<Props of={SearchForm} />

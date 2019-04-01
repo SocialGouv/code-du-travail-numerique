@@ -3,7 +3,7 @@ name: Section
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Section from ".";
 
 ## \<Section/\>
@@ -35,4 +35,4 @@ import Section from ".";
   </Section>
 </Playground>
 
-<PropsTable of={Section} />
+<Props of={Section} />

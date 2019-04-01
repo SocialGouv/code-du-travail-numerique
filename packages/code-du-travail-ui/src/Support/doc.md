@@ -3,7 +3,7 @@ name: Support
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Container from "../Container";
 import Section from "../Section";
 import Support from ".";
@@ -40,4 +40,4 @@ import Support from ".";
   }}
 </Playground>
 
-<PropsTable of={Support} />
+<Props of={Support} />

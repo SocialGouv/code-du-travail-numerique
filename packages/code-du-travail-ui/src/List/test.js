@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-testing-library";
-import List from "../List";
+import List from ".";
 
 // eslint-disable-next-line react/jsx-key
 const items = ["un truc", <p>Un autre truc</p>];

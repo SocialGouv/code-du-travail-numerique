@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should render 1`] = `
+.c4 {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+}
+
+.c4::after,
+.c4::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.c4::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .c4::before,
+[aria-selected="true"] .c4::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c4::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .c4::after,
+[aria-selected="true"] .c4::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c4::before,
+.c4::after {
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #006ab2;
+}
+
+.c1 {
+  background-color: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.c1 + .c0 {
+  border-top: 1px solid #c9d3df;
+}
+
+.c1 .c2 {
+  padding-right: 1rem;
+}
+
+.c5 {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c5.accordion__body--hidden {
+  display: none;
+}
+
+<div>
+  <div
+    class="accordion"
+  >
+    <div
+      class="c0 c1"
+    >
+      <div
+        aria-controls="accordion__body-0"
+        aria-expanded="false"
+        class="c2 c3"
+        id="accordion__title-0"
+        role="button"
+        tabindex="0"
+      >
+        This is the title
+        <div
+          class="c4"
+          role="presentation"
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        aria-labelledby="accordion__title-0"
+        class="c5 accordion__body--hidden"
+        id="accordion__body-0"
+      >
+        this is the body
+      </div>
+    </div>
+  </div>
+</div>
+`;

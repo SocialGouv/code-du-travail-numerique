@@ -1,7 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AutresReferences /> should render 1`] = `
+.c5 {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+}
+
+.c5::after,
+.c5::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.c5::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .c5::before,
+[aria-selected="true"] .c5::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c5::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .c5::after,
+[aria-selected="true"] .c5::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c5::before,
+.c5::after {
+  -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
+  -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+  transition: transform 0.25s ease,-webkit-transform 0.25s ease;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c3:hover,
+.c3:focus,
+.c3:focus-within,
+.c3[aria-expanded="true"] {
+  color: #006ab2;
+}
+
 .c1 {
+  background-color: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.c1 + .c0 {
+  border-top: 1px solid #c9d3df;
+}
+
+.c1 .c2 {
+  padding-right: 1rem;
+}
+
+.c6 {
+  padding: 1rem;
+  -webkit-animation: bcCCNc 0.35s ease-in;
+  animation: bcCCNc 0.35s ease-in;
+}
+
+.c6.accordion__body--hidden {
+  display: none;
+}
+
+.c7 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c8 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -11,14 +118,14 @@ exports[`<AutresReferences /> should render 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c9 {
   position: relative;
   top: 1px;
   vertical-align: middle;
   margin-right: 1rem;
 }
 
-.c0 {
+.c4 {
   display: inline-block;
   padding: 1rem;
 }
@@ -28,43 +135,43 @@ exports[`<AutresReferences /> should render 1`] = `
     class="accordion"
   >
     <div
-      class="sc-bxivhb glBCEE"
+      class="c0 c1"
     >
       <div
         aria-controls="accordion__body-0"
         aria-expanded="false"
-        class="fHmSYl"
+        class="c2 c3"
         id="accordion__title-0"
         role="button"
         tabindex="0"
       >
         <span
-          class="c0"
+          class="c4"
         >
           Voir les articles du code du travail concernés
         </span>
         <div
-          class="lmqUBU"
+          class="c5"
           role="presentation"
         />
       </div>
       <div
         aria-hidden="true"
         aria-labelledby="accordion__title-0"
-        class="sc-ifAKCX bCdLDJ accordion__body--hidden"
+        class="c6 accordion__body--hidden"
         id="accordion__body-0"
       >
         <ul
-          class="sc-EHOje jbEOTQ"
+          class="c7"
         >
           <li>
             <a
-              class="external-link__after c1"
+              class="external-link__after c8"
               rel="noopener noreferrer"
               target="_blank"
             >
               <svg
-                class="c2"
+                class="c9"
                 viewBox="0 0 512 512"
                 width="18"
               >
@@ -86,11 +193,11 @@ exports[`<AutresReferences /> should render 1`] = `
           </li>
           <li>
             <a
-              class="c1"
+              class="c8"
               href="/kali/yyy"
             >
               <svg
-                class="c2"
+                class="c9"
                 viewBox="0 0 512 512"
                 width="18"
               >

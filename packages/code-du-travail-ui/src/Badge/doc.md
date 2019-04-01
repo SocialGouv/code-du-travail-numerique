@@ -3,7 +3,7 @@ name: Badge
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Badge from ".";
 
 ## \<Badge/\>
@@ -30,4 +30,4 @@ import Badge from ".";
   <Badge danger>Badge danger</Badge>
 </Playground>
 
-<PropsTable of={Badge} />
+<Props of={Badge} />

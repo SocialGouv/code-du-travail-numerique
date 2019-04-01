@@ -3,7 +3,7 @@ name: NoAnswer
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Button from "../Button";
 import NoAnswer from ".";
 
@@ -17,4 +17,4 @@ import NoAnswer from ".";
   </NoAnswer>
 </Playground>
 
-<PropsTable of={NoAnswer} />
+<Props of={NoAnswer} />

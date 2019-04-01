@@ -3,7 +3,7 @@ name: Button
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Button from ".";
 
 ## \<Button/\>
@@ -38,4 +38,4 @@ import Button from ".";
   </Button>
 </Playground>
 
-<PropsTable of={Button} />
+<Props of={Button} />

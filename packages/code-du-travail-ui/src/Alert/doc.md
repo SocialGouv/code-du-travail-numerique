@@ -3,7 +3,7 @@ name: Alert
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Alert from ".";
 
 ## \<Alert/\>
@@ -18,4 +18,4 @@ import Alert from ".";
   <Alert danger>Alert danger</Alert>
 </Playground>
 
-<PropsTable of={Alert} />
+<Props of={Alert} />

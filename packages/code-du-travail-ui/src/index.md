@@ -14,3 +14,5 @@ Regardless of the technologies and tools behind them, a successful design system
 -   **It’s reusable**. You’ve built components so they can be reused in many contexts.
 -   **It’s accessible**. Applications built with your design system are usable by as many people as possible, no matter how they access the web.
 -   **It’s robust**. No matter the product or platform to which your design system is applied, it should perform with grace and minimal bugs.
+
+[Source](https://www.designbetter.co/design-systems-handbook)

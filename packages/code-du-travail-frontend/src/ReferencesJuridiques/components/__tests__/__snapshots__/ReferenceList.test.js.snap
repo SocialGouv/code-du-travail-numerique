@@ -2,6 +2,12 @@
 
 exports[`<ReferenceList /> should render 1`] = `
 .c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -11,7 +17,7 @@ exports[`<ReferenceList /> should render 1`] = `
   cursor: pointer;
 }
 
-.c1 {
+.c2 {
   position: relative;
   top: 1px;
   vertical-align: middle;
@@ -20,15 +26,15 @@ exports[`<ReferenceList /> should render 1`] = `
 
 <div>
   <ul
-    class="sc-EHOje jbEOTQ"
+    class="c0"
   >
     <li>
       <a
-        class="c0"
+        class="c1"
         href="/code-du-travail/xxx"
       >
         <svg
-          class="c1"
+          class="c2"
           viewBox="0 0 512 512"
           width="18"
         >
@@ -49,12 +55,12 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="external-link__after c0"
+        class="external-link__after c1"
         rel="noopener noreferrer"
         target="_blank"
       >
         <svg
-          class="c1"
+          class="c2"
           viewBox="0 0 512 512"
           width="18"
         >
@@ -76,11 +82,11 @@ exports[`<ReferenceList /> should render 1`] = `
     </li>
     <li>
       <a
-        class="c0"
+        class="c1"
         href="/kali/zzz"
       >
         <svg
-          class="c1"
+          class="c2"
           viewBox="0 0 512 512"
           width="18"
         >

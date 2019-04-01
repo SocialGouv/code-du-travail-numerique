@@ -3,7 +3,7 @@ name: Container
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Container from ".";
 
 ## \<Container/\>

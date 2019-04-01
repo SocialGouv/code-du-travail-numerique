@@ -77,10 +77,8 @@ exports[`<Article /> should render 1`] = `
               title="Valider cette réponse"
             >
               <svg
-                height="1em"
                 style="padding-bottom: .5rem;"
                 viewBox="0 0 50 50"
-                width="1em"
               >
                 <title>
                   like

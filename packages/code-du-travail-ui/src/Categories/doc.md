@@ -3,7 +3,7 @@ name: Categories
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Category from "../Category";
 import Categories from ".";
 
@@ -30,4 +30,4 @@ import Categories from ".";
   </Categories>
 </Playground>
 
-<PropsTable of={Category} />
+<Props of={Category} />

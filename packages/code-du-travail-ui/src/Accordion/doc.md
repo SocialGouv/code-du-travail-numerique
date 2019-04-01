@@ -1,9 +1,11 @@
 ---
+name: Accordion
+menu: Component
 ---
 
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
-import { Accordion } from "../src";
+import { Playground, Props } from "docz";
+import Accordion from ".";
 
 ## \<Accordion/\>
 
@@ -15,4 +17,4 @@ import { Accordion } from "../src";
   ]}/>
 </Playground>
 
-<PropsTable of={Accordion} />
+<Props of={Accordion} />

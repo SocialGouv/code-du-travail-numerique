@@ -3,7 +3,7 @@ name: Article
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Article from ".";
 
 ## \<Article/\>
@@ -65,4 +65,4 @@ import Article from ".";
   </Article>
 </Playground>
 
-<PropsTable of={Article} />
+<Props of={Article} />

@@ -4,15 +4,19 @@ menu: Component
 ---
 import "@cdt/css";
 import styled from "styled-components";
-import { Playground, PropsTable } from "docz";
-import { Like, Unlike, Question, Lost, Search } from ".";
+import { Playground, Props } from "docz";
+import * as icons from ".";
 
 ## Playground
 
 <Playground>
-  <Like width="3rem" />
-  <Unlike width="3rem" />
-  <Question width="3rem" />
-  <Lost width="3rem" />
-  <Search width="3rem" />
+  {
+    () => {
+      return Object.entries(icons).map(([name, Icon]) => <div key={name}>
+          <p>{name}</p>
+          <Icon width="3rem" />
+        </div>
+      )
+    }
+  }
 </Playground>

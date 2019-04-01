@@ -7,9 +7,9 @@ import {
   AccordionItemTitle,
   AccordionItemBody
 } from "react-accessible-accordion";
-import { box, colors, spacing } from "./theme";
-import VerticalArrow from "./VerticalArrow";
-import { fadeIn } from "./keyframes";
+import { box, colors, spacing } from "../theme";
+import VerticalArrow from "../VerticalArrow";
+import { fadeIn } from "../keyframes";
 
 class Accordion extends React.PureComponent {
   static propTypes = {

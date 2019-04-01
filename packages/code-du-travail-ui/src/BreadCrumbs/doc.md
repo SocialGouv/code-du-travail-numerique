@@ -3,7 +3,7 @@ name: BreadCrumbs
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import BreadCrumbs from ".";
 
 ## \<BreadCrumbs/\>
@@ -19,4 +19,4 @@ import BreadCrumbs from ".";
   />
 </Playground>
 
-<PropsTable of={BreadCrumbs} />
+<Props of={BreadCrumbs} />

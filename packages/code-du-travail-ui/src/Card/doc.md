@@ -3,7 +3,7 @@ name: Card
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Section from "../Section";
 import Cards from "../Cards";
 import Card from ".";
@@ -28,4 +28,4 @@ import Card from ".";
   </Section>
 </Playground>
 
-<PropsTable of={Card} />
+<Props of={Card} />

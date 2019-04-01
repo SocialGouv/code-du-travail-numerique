@@ -3,7 +3,7 @@ name: Tag
 menu: Component
 ---
 import "@cdt/css";
-import { Playground, PropsTable } from "docz";
+import { Playground, Props } from "docz";
 import Tag from ".";
 
 ## \<Tag/\>
@@ -30,4 +30,4 @@ import Tag from ".";
   <Tag danger>#danger</Tag>
 </Playground>
 
-<PropsTable of={Tag} />
+<Props of={Tag} />
