@@ -2,6 +2,6 @@ extends:
   - "@socialgouv/eslint-config-react"
 
 overrides:
-  - files: ["*.test.js"]
+  - files: ["test.js"]
     env:
       jest: true
