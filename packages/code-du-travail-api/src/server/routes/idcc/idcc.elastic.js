@@ -12,20 +12,33 @@ function getIdccBody({ query }) {
           }
         ],
         must: {
-          multi_match: {
-            query,
-            fields: ["title.*", "idcc.*"]
-          }
-        },
-        should: [
-          {
-            match: {
-              "title.french_stemmed": {
-                query
+          bool: {
+            should: [
+              {
+                match: {
+                  "title.french": {
+                    query: `${query}`,
+                    fuzziness: "AUTO",
+                    boost: ".9"
+                  }
+                }
+              },
+              {
+                multi_match: {
+                  query: `${query}`,
+                  fields: "idcc.*"
+                }
+              },
+              {
+                match_phrase_prefix: {
+                  "title.french_stemmed": {
+                    query: `${query}`
+                  }
+                }
               }
-            }
+            ]
           }
-        ]
+        }
       }
     }
   };
