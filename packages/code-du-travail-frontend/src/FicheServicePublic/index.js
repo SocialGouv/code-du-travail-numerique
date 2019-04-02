@@ -51,6 +51,7 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
     case "OuSAdresser":
       return <OuSAdresser data={data} headingLevel={headingLevel} />;
     case "ServiceEnLigne":
+    case "PourEnSavoirPlus":
       return <ServiceEnLigne data={data} />;
     case "Tableau":
       return <Table data={data} headingLevel={headingLevel} />;

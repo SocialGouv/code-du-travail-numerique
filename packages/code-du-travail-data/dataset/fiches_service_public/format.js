@@ -35,6 +35,9 @@ const format = fiche => {
   const publication = fiche.$[0];
   const { ID: id } = publication._;
 
+  // We filter out the elements we will never use nor display
+  publication.$ = publication.$.filter(child => (child.name !== "OuSAdresser" && child.name!== "ServiceEnLigne"));
+
   const title = getText(getChild(publication, "dc:title"));
 
   const dateRaw = getText(getChild(publication, "dc:date"));
