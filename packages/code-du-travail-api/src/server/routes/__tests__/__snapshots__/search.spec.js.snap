@@ -7,6 +7,10 @@ Object {
       "doc_count": 1,
       "key": "code_du_travail",
     },
+    Object {
+      "doc_count": 1,
+      "key": "fiches_ministere_travail",
+    },
   ],
   "hits": Object {
     "hits": Array [
@@ -111,6 +115,10 @@ Object {
     Object {
       "doc_count": 1,
       "key": "fiches_ministere_travail",
+    },
+    Object {
+      "doc_count": 1,
+      "key": "fiches_service_public",
     },
   ],
   "hits": Object {
