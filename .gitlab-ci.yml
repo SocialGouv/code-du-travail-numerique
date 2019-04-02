@@ -6,6 +6,7 @@ include:
 - '/k8s/code-du-travail-data/.deploy-code-du-travail-data-k8s.yml'
 - '/k8s/code-du-travail-api/.deploy-code-du-travail-api-k8s.yml'
 - '/k8s/code-du-travail-frontend/.deploy-code-du-travail-frontend-k8s.yml'
+- '/k8s/code-du-travail-nlp/.deploy-code-du-travail-nlp-k8s.yml'
 
 variables:
   DOCKER_HOST: tcp://localhost:2375
@@ -21,6 +22,10 @@ variables:
   APM_SERVER_PORT: 8200
   API_PORT: 1337
   FRONTEND_PORT: 3000
+  FLASK_APP: "api"
+  NLP_PORT: "5000"
+  SUGGEST_DATA_URL: "https://gist.github.com/lionelB/1eba0e58af7b27d402c6fde38129352c/raw/45d19ed84af91a055630310f16157d32ac2ba345/data-test.txt"
+  FLASK_ENV: "debug"
 
 
 image: node:10-alpine
@@ -225,6 +230,18 @@ build-and-push-cdtn-api-image:
     -t "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA" .
   - docker push "$CI_REGISTRY_IMAGE/api:$CI_COMMIT_SHA"
 
+build-and-push-cdtn-nlp-image:
+  stage: "Build and Push Docker Image"
+  image: docker:$DOCKER_VERSION
+  services:
+  - docker:dind
+  before_script:
+  - cd packages/code-du-travail-nlp
+  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
+  script:
+  - docker build -t "$CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA" .
+  - docker push "$CI_REGISTRY_IMAGE/nlp:$CI_COMMIT_SHA"
+
 build-and-push-cdtn-frontend-image:
   stage: "Build and Push Docker Image"
   image: docker:$DOCKER_VERSION
@@ -307,6 +324,27 @@ deploy-cdtn-api:
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${API_PORT}
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: dev
+  except:
+  - master
+
+deploy-cdtn-nlp:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-nlp-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_DEV
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_DEV
+    K8S_NAMESPACE: $K8S_NAMESPACE_DEV
+    K8S_USERNAME: $K8S_USERNAME_DEV
+    K8S_CONTEXT: $K8S_CONTEXT_DEV
+    K8S_TOKEN: $K8S_TOKEN_DEV
+    IMAGE_TAG: $CI_COMMIT_SHA
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    FLASK_APP: ${FLASK_APP}
+    PORT: ${NLP_PORT}
+    SUGGEST_DATA_URL: ${SUGGEST_DATA_URL}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   environment:
     name: dev
@@ -424,6 +462,28 @@ deploy-cdtn-api-prod:
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${API_PORT}
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+  environment:
+    name: ops
+  only:
+  - master
+
+deploy-cdtn-nlp-prod:
+  stage: "Deploy Code du Travail Numerique"
+  extends: .deploy-code-du-travail-nlp-prod-k8s
+  variables:
+    K8S_SERVER: $K8S_SERVER_PROD
+    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
+    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
+    K8S_USERNAME: $K8S_USERNAME_PROD
+    K8S_CONTEXT: $K8S_CONTEXT_PROD
+    K8S_TOKEN: $K8S_TOKEN_PROD
+    IMAGE_TAG: $CI_COMMIT_SHA
+    HASH_BRANCH_NAME: ''
+    ENVIRONMENT: $CI_ENVIRONMENT_NAME
+    FLASK_APP: ${FLASK_APP}
+    PORT: ${NLP_PORT}
+    SUGGEST_DATA_URL: ${SUGGEST_DATA_URL}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   environment:
     name: ops

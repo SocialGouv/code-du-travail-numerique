@@ -2,23 +2,23 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: cdtn-frontend${HASH_BRANCH_NAME}
+  name: cdtn-nlp${HASH_BRANCH_NAME}
   labels:
-    app: cdtn-frontend${HASH_BRANCH_NAME}
+    app: cdtn-nlp${HASH_BRANCH_NAME}
     branch: cdtn${HASH_BRANCH_NAME}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdtn-frontend${HASH_BRANCH_NAME}
+      app: cdtn-nlp${HASH_BRANCH_NAME}
   template:
     metadata:
       labels:
-        app: cdtn-frontend${HASH_BRANCH_NAME}
+        app: cdtn-nlp${HASH_BRANCH_NAME}
     spec:
       containers:
-      - image:  ${CDTN_REGISTRY}/frontend:${IMAGE_TAG}
-        name: cdtn-frontend
+      - image:  ${CDTN_REGISTRY}/nlp:${IMAGE_TAG}
+        name: cdtn-nlp${HASH_BRANCH_NAME}
         ports:
         - containerPort: ${PORT}
         livenessProbe:
@@ -34,7 +34,9 @@ spec:
           initialDelaySeconds: 3
           periodSeconds: 5
         env:
-        - name: API_URL
-          value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-api.${ENVIRONMENT}.factory.social.gouv.fr/api/v1
-        - name: SUGGEST_URL
-          value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-nlp.${ENVIRONMENT}.factory.social.gouv.fr/api/suggest
+        - name: NLP_PORT
+          value: "${PORT}"
+        - name: FLASK_APP
+          value: "api"
+        - name: SUGGEST_DATA_URL
+          value: "${SUGGEST_DATA_URL}"
