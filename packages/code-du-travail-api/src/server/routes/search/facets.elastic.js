@@ -30,6 +30,13 @@ function getFacetsBody({ query }) {
                       query: query
                     }
                   }
+                },
+                {
+                  match: {
+                    "text.french_stemmed": {
+                      query: query
+                    }
+                  }
                 }
               ]
             }
