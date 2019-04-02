@@ -10,4 +10,8 @@ RUN python -m venv venv
 RUN . venv/bin/activate
 RUN pip install -r requirements.txt
 
+RUN mkdir -p ./data
+COPY ./scripts ./scripts
 COPY ./api ./api
+
+ENTRYPOINT ["sh", "scripts/entrypoint.sh"]
