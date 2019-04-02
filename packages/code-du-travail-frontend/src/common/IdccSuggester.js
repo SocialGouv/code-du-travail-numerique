@@ -12,9 +12,11 @@ export class IdccSuggester extends React.Component {
     onSearch: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired
   };
+
   onSelect = value => {
     this.props.onSelect(value._source);
   };
+
   render() {
     return (
       <Suggester

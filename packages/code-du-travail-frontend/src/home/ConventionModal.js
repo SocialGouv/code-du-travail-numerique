@@ -1,7 +1,8 @@
 import React from "react";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
-
+import { X } from "react-feather";
+import { theme } from "@cdt/ui";
 import { Outil, OutilCard } from "./Outils";
 import { ConventionForm } from "../common/ConventionForm";
 import { CompanyForm } from "../common/CompanyForm";
@@ -38,22 +39,43 @@ class ConventionModal extends React.Component {
             icon="/static/assets/icons/book_web.svg"
           />
         </Button>
-        <DialogOverlay
+        <StyledDialogOverlay
           isOpen={this.state.modalIsOpen}
-          style={{ background: "rgba(0, 0, 0, .5)" }}
           onDismiss={this.closeModal}
         >
-          <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
+          <StyledDialogContent>
             <ConventionForm onSearch={searchIdcc} />
             <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
-          </DialogContent>
-        </DialogOverlay>
+            <CloseIcon onClick={this.closeModal}>
+              <X title="fermer la modale" />
+            </CloseIcon>
+          </StyledDialogContent>
+        </StyledDialogOverlay>
       </OutilCard>
     );
   }
 }
-
+const { box, colors, spacing } = theme;
 export default ConventionModal;
+const StyledDialogOverlay = styled(DialogOverlay)`
+  background: rgba(0, 0, 0, 0.5);
+`;
+const StyledDialogContent = styled(DialogContent)`
+  position: relative;
+  border-radius: ${box.borderRadius};
+`;
+
+const CloseIcon = styled.button`
+  padding: ${spacing.small};
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  color: ${colors.darkGrey};
+  line-height: 0;
+`;
 
 const Button = styled.button`
   background: transparent;
