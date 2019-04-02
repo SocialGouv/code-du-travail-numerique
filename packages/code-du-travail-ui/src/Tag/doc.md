@@ -1,0 +1,33 @@
+---
+name: Tag
+menu: Component
+---
+import "@cdt/css";
+import { Playground, Props } from "docz";
+import Tag from ".";
+
+## \<Tag/\>
+
+<Playground>
+  <Tag>Tag</Tag>
+  <br />
+  <br />
+  <Tag primary>#primary</Tag>
+  <br />
+  <br />
+  <Tag secondary>#secondary</Tag>
+  <br />
+  <br />
+  <Tag warning>#warning</Tag>
+  <br />
+  <br />
+  <Tag success>#success</Tag>
+  <br />
+  <br />
+  <Tag info>#info</Tag>
+  <br />
+  <br />
+  <Tag danger>#danger</Tag>
+</Playground>
+
+<Props of={Tag} />
