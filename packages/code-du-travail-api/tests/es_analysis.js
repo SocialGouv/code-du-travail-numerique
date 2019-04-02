@@ -74,12 +74,24 @@ const analyzer = {
   },
   french: {
     tokenizer: "icu_tokenizer",
-    filter: ["french_elision", "icu_folding", "french_stop", "french_stemmer"]
+    filter: [
+      "french_elision",
+      "icu_folding",
+      "lowercase",
+      "french_stop",
+      "french_stemmer"
+    ]
   },
   french_indexing: {
     tokenizer: "icu_tokenizer",
     char_filter: ["startwith"],
-    filter: ["french_elision", "icu_folding", "french_stop", "french_stemmer"]
+    filter: [
+      "french_elision",
+      "icu_folding",
+      "lowercase",
+      "french_stop",
+      "french_stemmer"
+    ]
   },
   article_id_analyzer: {
     tokenizer: "article_id_tokenizer",

@@ -19,6 +19,12 @@ test("return idcc results for num 843", async () => {
   expect(response.body).toMatchSnapshot();
 });
 
+test("return idcc results for pati", async () => {
+  const response = await request(app.callback()).get(`/api/v1/idcc?q=pati`);
+  expect(response.status).toBe(200);
+  expect(response.body.hits).toMatchSnapshot();
+});
+
 test("returns 404 when IDCC with num not found", async () => {
   const response = await request(app.callback()).get(`/api/v1/idcc/8434`);
   expect(response.status).toBe(404);

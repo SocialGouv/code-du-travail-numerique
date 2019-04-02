@@ -80,6 +80,7 @@ analyzers = {
         'filter': [
             'french_elision',
             'icu_folding',
+            'lowercase',
             'french_stop',
             'french_stemmer',
         ],
@@ -90,6 +91,7 @@ analyzers = {
         'filter': [
             'french_elision',
             'icu_folding',
+            'lowercase',
             'french_stop',
             'french_stemmer',
         ],
