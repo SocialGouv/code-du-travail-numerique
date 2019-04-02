@@ -51,9 +51,5 @@ deactivate
 Pour l'instant, on héberge les données dans des hébergées dans gist anonymes. 
 Le script pour télécharger les données est exéctuté avant de lancer le container nlp
 
-Pour télécharger les donnée en local, vous pouvez utiliser le script
-```
-sh script/download-nlp-data.sh
-```
 
 
