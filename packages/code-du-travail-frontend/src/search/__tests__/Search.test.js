@@ -50,4 +50,15 @@ describe("<search />", () => {
     fireEvent.change(select, { target: { value: "faq" } });
     expect(Router.pushRoute).toHaveBeenCalled();
   });
+
+  it("should update input value when suggestion are hightlighted", async () => {
+    const { getByLabelText, getAllByRole } = renderWithMock(<Search />);
+    const input = getByLabelText(/rechercher/i);
+    fireEvent.change(input, { target: { value: "yolo" } });
+    input.focus();
+    await waitForElement(() => getAllByRole("option"));
+    fireEvent.keyDown(input, { keyCode: 40 }); // foo
+    fireEvent.keyDown(input, { keyCode: 40 }); // foobar
+    expect(input.value).toBe("foobar");
+  });
 });
