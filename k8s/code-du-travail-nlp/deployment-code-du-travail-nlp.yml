@@ -39,4 +39,4 @@ spec:
         - name: FLASK_APP
           value: "api"
         - name: SUGGEST_DATA_URL
-          value: "${SUGGEST_DATA_URL}"
+          value: "${SUGGEST_DATA}"
