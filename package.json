@@ -12,7 +12,8 @@
     "lint": "lerna run lint --parallel",
     "postinstall": "node scripts/setup-env.js",
     "start": "lerna run start --parallel",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "repository": {
     "type": "git",
