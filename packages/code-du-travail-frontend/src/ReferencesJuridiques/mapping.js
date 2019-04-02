@@ -6,6 +6,13 @@ export const blocs = {
     text:
       "Pour ces thèmes, les accords négociés et étendus dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.",
     references: [
+      "L3121-14",
+      "L3122-16",
+      "L3123-19",
+      "L3123-21",
+      "L3123-22",
+      "L1242-8",
+      "L1243-13",
       "L1244-3",
       "L1244-4",
       "L1251-12",
@@ -18,13 +25,13 @@ export const blocs = {
       "L1254-2",
       "L1254-9",
       "L1251-7",
-      "L3123-19",
       "L1224-1",
+      "L1251-6",
       "L1242-2",
       "L6321-10",
-      "L4625-2",
-      "L4622-3",
-      "L4622-4"
+      "L4625-2 ",
+      "L6241-13",
+      "L6331-55"
     ],
     hasCCSearch: true
   },
@@ -37,8 +44,12 @@ export const blocs = {
       "L2135-9",
       "L2135-10",
       "L5121-4",
-      "L4622-1",
-      "L4622-2"
+      "L6331-5",
+      "L6331-35",
+      "L6331-38",
+      "L6331-60",
+      "L6332-14",
+      "L6332-1-1"
     ],
     hasCCSearch: true
   },
@@ -47,7 +58,22 @@ export const blocs = {
       "L'accord de branche prime sauf garanties équivalentes de l'accord d'entreprise",
     text:
       "Pour ces thèmes, les accords négociés dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. A noter que s'il existe dans votre entreprise des accords conclus sur ces sujets, c'est l'accord de branche qui s'applique à votre situation sauf dans un cas spécifique. En effet, si l'accord de votre entreprise prévoit \"des garanties au moins équivalentes\" dans ce domaine, c'est l'accord de votre entreprise qui s'applique. \"des garanties au moins équivalentes\" s'apprécient par matière et par rapport à la collectivité de salariés.",
-    references: [],
+    references: [
+      "L2232-5-1",
+      "L2253-4",
+      "L2241-1 ",
+      "L2241-8 ",
+      "L2241-11",
+      "L2241-15",
+      "L2241-17",
+      "L2242-1",
+      "L2242-13",
+      "L1142-4",
+      "L1242-2",
+      "L2241-1",
+      "L2241-15",
+      "R3121-1"
+    ],
     hasCCSearch: true
   }
 };
