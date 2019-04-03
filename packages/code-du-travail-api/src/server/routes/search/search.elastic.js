@@ -1,3 +1,5 @@
+const getExpressions = require("./search.expressions");
+
 function getSearchBody({ query, size, excludeSources = [] }) {
   return {
     size: size,
@@ -53,7 +55,8 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                       query: query
                     }
                   }
-                }
+                },
+                ...getExpressions(query)
               ]
             }
           }
