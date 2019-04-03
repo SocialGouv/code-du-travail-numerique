@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "@cdt/ui";
+
 import { getText } from "../utils";
 
 const { colors, spacing, box } = theme;

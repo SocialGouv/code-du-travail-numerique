@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ElementBuilder } from "../index";
+
+import { ElementBuilder } from "./ElementBuilder";
 import { ignoreParagraph, getText } from "../utils";
 
 class Table extends React.PureComponent {

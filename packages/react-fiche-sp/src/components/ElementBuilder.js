@@ -1,16 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
+
 import { theme } from "@cdt/ui";
-import { getText, ignoreParagraph } from "./utils";
-import Accordion from "./components/Accordion";
-import LienExterne from "./components/LienExterne";
-import List from "./components/List";
-import OuSAdresser from "./components/OuSAdresser";
-import ServiceEnLigne from "./components/ServiceEnLigne";
-import Table from "./components/Table";
-import Tabulator from "./components/Tabulator";
-import Title from "./components/Title";
+
+import { getText, ignoreParagraph } from "../utils";
+import Accordion from "./Accordion";
+import LienExterne from "./LienExterne";
+import List from "./List";
+import OuSAdresser from "./OuSAdresser";
+import ServiceEnLigne from "./ServiceEnLigne";
+import Table from "./Table";
+import Tabulator from "./Tabulator";
+import Title from "./Title";
 
 const { box, colors, fonts, spacing } = theme;
 
@@ -93,27 +94,7 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
   }
 }
 
-class FicheServicePublic extends React.PureComponent {
-  render() {
-    return (
-      <StyledElementBuilder>
-        <ElementBuilder {...this.props} />
-      </StyledElementBuilder>
-    );
-  }
-}
-
-FicheServicePublic.propTypes = {
-  data: PropTypes.array.isRequired
-};
-
-export default FicheServicePublic;
-
-const StyledElementBuilder = styled.div`
-  * > *:last-child {
-    margin-bottom: 0;
-  }
-`;
+export default ElementBuilder;
 
 const ANoter = styled.div`
   margin-bottom: ${spacing.base};
