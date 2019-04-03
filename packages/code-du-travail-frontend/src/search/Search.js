@@ -96,11 +96,11 @@ class Search extends React.Component {
     this.submitQuery();
   };
 
-  onChange = event => {
+  onChange = (event, { newValue } = {}) => {
     switch (event.target.name) {
       case "query":
         this.setState({
-          query: event.target.value
+          query: newValue
         });
         return;
       case "source":
