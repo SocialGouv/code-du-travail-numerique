@@ -14,7 +14,7 @@ export default {
       format: "esm"
     }
   ],
-  external: ["react", "prop-types", "styled-components"],
+  external: ["react", "prop-types", "styled-components", "react-tabs"],
   plugins: [
     resolve({
       jsnext: true,
