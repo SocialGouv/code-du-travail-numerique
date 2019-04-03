@@ -88,12 +88,14 @@ const ListTitle = styled.h3`
 const Text = styled.a`
   text-decoration: ${props => (props.active ? "underline" : "none")};
   color: #8393a7;
-  color: var(--color-dark-grey);
+  color: ${props =>
+    props.active ? "var(--color-almost-black)" : "var(--color-dark-grey)"};
   :link,
   :visited {
     text-decoration: ${props => (props.active ? "underline" : "none")};
     color: #8393a7;
-    color: var(--color-dark-grey);
+    color: ${props =>
+      props.active ? "var(--color-almost-black)" : "var(--color-dark-grey)"};
   }
   :hover {
     text-decoration: underline;
