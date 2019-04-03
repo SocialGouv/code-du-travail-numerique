@@ -10,6 +10,7 @@ COPY ./packages/code-du-travail-css/package.json /app/packages/code-du-travail-c
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
 COPY ./packages/code-du-travail-ui/package.json /app/packages/code-du-travail-ui/package.json
+COPY ./packages/react-fiches-sp/package.json /app/packages/react-fiches-sp/package.json
 COPY ./packages/code-du-travail-data/dataset/annuaire/package.json /app/packages/code-du-travail-data/dataset/annuaire/package.json
 COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
 COPY ./packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json /app/packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json

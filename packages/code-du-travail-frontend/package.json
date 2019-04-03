@@ -12,6 +12,7 @@
     "@cdt/ui": "^2.1.0",
     "@sentry/browser": "^4.1.0",
     "@socialgouv/next-routes": "^1.5.1",
+    "@socialgouv/react-fiche-sp": "^2.1.0",
     "@zeit/next-css": "^1.0.0",
     "date-fns": "^1.29.0",
     "express": "^4.16.3",
