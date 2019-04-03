@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Alert, NoAnswer, Button, theme } from "@cdt/ui";
+import { Alert, theme } from "@cdt/ui";
 
-import { FeedbackModal } from "../common/FeedbackModal";
 import { Link } from "../../routes";
 
 import { getLabelBySource } from "../sources";
@@ -44,85 +43,57 @@ class SearchResults extends React.Component {
     // No results.
     if (results.items.length === 0) {
       return (
-        <React.Fragment>
-          <Alert category="primary">
+        <Alert category="primary">
+          <p>Nous n&apos;avons pas trouvé de résultat pour votre recherche.</p>
+          {source.length > 0 && (
             <p>
-              Nous n&apos;avons pas trouvé de résultat pour votre recherche.
+              Vous pouvez élargir la recherche en intégrant&nbsp;
+              <strong>
+                <Link route="recherche" params={{ q: query, source: "" }}>
+                  <a>les autres sources de documents</a>
+                </Link>
+              </strong>
             </p>
-            {source.length > 0 && (
-              <p>
-                Vous pouvez élargir la recherche en intégrant&nbsp;
-                <strong>
-                  <Link route="recherche" params={{ q: query, source: "" }}>
-                    <a>les autres sources de documents</a>
-                  </Link>
-                </strong>
-              </p>
-            )}
-          </Alert>
-          <NoAnswer>
-            <Button onClick={this.showFeedBackPopup}>
-              Posez votre question
-            </Button>
-          </NoAnswer>
-          <FeedbackModal
-            results={[]}
-            isOpen={this.state.feedbackVisible}
-            closeModal={this.closeModal}
-            query={query}
-            source={source}
-          />
-        </React.Fragment>
+          )}
+        </Alert>
       );
     }
 
     return (
-      <React.Fragment>
-        <SearhResultLayout>
-          {results.facets.length > 0 && (
-            <Aside>
-              <Faceting data={results.facets} query={query} />
-            </Aside>
-          )}
-          <Content>
-            <div className="search-results">
-              {results.items.snippet && (
-                <ResultSnippet>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: results.items.snippet._source.html
-                    }}
-                  />
-                  {results.items.snippet._source.references && (
-                    <SourceLink
-                      href={results.items.snippet._source.references[0].url}
-                      target="_blank"
-                      norel
-                      noopener
-                    >
-                      {results.items.snippet._source.references[0].titre}
-                    </SourceLink>
-                  )}
-                </ResultSnippet>
-              )}
-              <Title>
-                {source ? getLabelBySource(source) : "Questions et réponses"}
-              </Title>
-              <SearchResultList items={results.items} query={query} />
-            </div>
-          </Content>
-        </SearhResultLayout>
-
-        <NoAnswer>
-          <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
-        </NoAnswer>
-        <FeedbackModal
-          results={results.items.slice(3)}
-          isOpen={this.state.feedbackVisible}
-          closeModal={this.closeModal}
-          query={query}
-        />
-      </React.Fragment>
+      <SearhResultLayout>
+        {results.facets.length > 0 && (
+          <Aside>
+            <Faceting data={results.facets} query={query} />
+          </Aside>
+        )}
+        <Content>
+          <div className="search-results">
+            {results.items.snippet && (
+              <ResultSnippet>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: results.items.snippet._source.html
+                  }}
+                />
+                {results.items.snippet._source.references && (
+                  <SourceLink
+                    href={results.items.snippet._source.references[0].url}
+                    target="_blank"
+                    norel
+                    noopener
+                  >
+                    {results.items.snippet._source.references[0].titre}
+                  </SourceLink>
+                )}
+              </ResultSnippet>
+            )}
+            <Title>
+              {source ? getLabelBySource(source) : "Questions et réponses"}
+            </Title>
+            <SearchResultList items={results.items} query={query} />
+          </div>
+        </Content>
+      </SearhResultLayout>
     );
   }
 }
