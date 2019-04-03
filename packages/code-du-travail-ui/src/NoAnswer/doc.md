@@ -7,7 +7,7 @@ import { Playground, Props } from "docz";
 import Button from "../Button";
 import NoAnswer from ".";
 
-## \<NoAnswer/\>
+# NoAnswer
 
 <Playground>
   <NoAnswer>

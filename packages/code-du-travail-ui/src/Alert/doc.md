@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Alert from ".";
 
-## \<Alert/\>
+# Alert
 
 <Playground>
   <Alert>Alert</Alert>

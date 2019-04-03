@@ -7,8 +7,16 @@ import styled from "styled-components";
 import { Playground, Props } from "docz";
 import * as icons from ".";
 
-## Playground
+# Icons
 
+## Basics
+
+We use the icons available [here](https://feathericons.com/) wrapped into react
+components thanks to this package: [react-feather](https://github.com/feathericons/react-feather)
+
+## Customs
+
+However, we also have custom icons: 
 <Playground>
   {
     () => {

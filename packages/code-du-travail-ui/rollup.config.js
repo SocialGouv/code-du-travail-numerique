@@ -14,7 +14,13 @@ export default {
       format: "esm"
     }
   ],
-  external: ["react", "prop-types", "styled-components"],
+  external: [
+    "@reach/dialog",
+    "prop-types",
+    "react",
+    "react-feather",
+    "styled-components"
+  ],
   plugins: [
     resolve({
       jsnext: true,

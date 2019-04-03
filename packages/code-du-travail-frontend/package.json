@@ -10,7 +10,6 @@
     "@cdt/css": "^2.1.0",
     "@cdt/data": "^2.1.0",
     "@cdt/ui": "^2.1.0",
-    "@reach/dialog": "^0.1.2",
     "@sentry/browser": "^4.1.0",
     "@socialgouv/next-routes": "^1.5.1",
     "@zeit/next-css": "^1.0.0",

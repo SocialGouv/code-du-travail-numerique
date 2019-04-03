@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Tag from ".";
 
-## \<Tag/\>
+# Tag
 
 <Playground>
   <Tag>Tag</Tag>

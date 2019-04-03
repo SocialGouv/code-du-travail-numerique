@@ -18,6 +18,7 @@ export { default as IconButton } from "./IconButton";
 export { default as LargeLink } from "./LargeLink";
 export { default as List } from "./List";
 export { default as NoAnswer } from "./NoAnswer";
+export { default as Modal } from "./Modal";
 export { default as SearchForm } from "./SearchForm";
 export { default as Section } from "./Section";
 export { default as Support } from "./Support";

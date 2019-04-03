@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ThumbsUp, ThumbsDown } from "react-feather";
 
 import Section from "../Section";
 import Tag from "../Tag";
 
-import { Question, Like, Unlike } from "../icons";
+import { Question } from "../icons";
 import IconButton from "../IconButton";
 
 const Tags = ({ tags, onTagClick }) => (
@@ -64,10 +65,10 @@ const Article = ({
         </div>
         <div className="article__widget_container">
           <IconButton onClick={onValidate} title="Valider cette réponse">
-            <Like style={{ paddingBottom: ".5rem" }} />
+            <ThumbsUp />
           </IconButton>
           <IconButton onClick={onInvalidate} title="Invalider cette réponse">
-            <Unlike style={{ paddingTop: ".5rem" }} />
+            <ThumbsDown />
           </IconButton>
         </div>
       </div>

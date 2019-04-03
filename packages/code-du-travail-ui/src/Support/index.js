@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Search } from "../icons";
+import { Search } from "react-feather";
 
 class Support extends React.Component {
   static propTypes = {

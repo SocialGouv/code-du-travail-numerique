@@ -8,7 +8,7 @@ import Section from "../Section";
 import Cards from "../Cards";
 import Card from ".";
 
-## \<Card/\>
+# Card
 
 <Playground>
   <Section dark>
