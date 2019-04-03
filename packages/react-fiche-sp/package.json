@@ -1,5 +1,5 @@
 {
-  "name": "@cdt/react-fiche-sp",
+  "name": "@socialgouv/react-fiche-sp",
   "version": "2.1.0",
   "private": true,
   "description": "Composant React pour render une fiche SP",
