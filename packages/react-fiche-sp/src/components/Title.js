@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 class Title extends React.PureComponent {
   static propTypes = {
-    level: PropTypes.number
+    level: PropTypes.number,
+    children: PropTypes.node
   };
   render() {
     const { level, children } = this.props;
