@@ -46,7 +46,7 @@ export default class Categories extends React.Component {
             <CategoriesWrapper>
               {themes.map(({ slug, title, text, icon }) => (
                 <CategoryItem key={slug + title} small={!isRoot}>
-                  <Link route="theme" params={{ slug: slug || "/" }}>
+                  <Link route="themes" params={{ slug: slug || "/" }}>
                     <a title={title}>
                       <Category title={title} text={text} icon={icon} />
                     </a>

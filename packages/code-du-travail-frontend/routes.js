@@ -68,11 +68,9 @@ module.exports = routes()
   // theme navigation
   //
   // http://localhost:3000/themes
-  .add({ name: "themes", page: "theme", pattern: "/themes" })
-
   // http://localhost:3000/theme/rupture-de-contrat
   // http://localhost:3000/theme/rupture-de-contrat/la-rupture-conventionnelle
-  .add({ name: "theme", page: "theme", pattern: "/themes/:slug+" }) // slug is an array of slugs
+  .add({ name: "themes", page: "theme", pattern: "/themes/:slug*" })
 
   // http://localhost:3000/a-propos
   .add({ name: "about", page: "about", pattern: "/a-propos" })
