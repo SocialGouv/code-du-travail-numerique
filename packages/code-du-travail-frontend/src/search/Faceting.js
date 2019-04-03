@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { Link } from "../../routes";
 import { getLabelBySource } from "../sources";
+
 class Faceting extends React.Component {
   static propTypes = {
     data: PropTypes.arrayOf(
@@ -12,7 +13,8 @@ class Faceting extends React.Component {
         doc_count: PropTypes.number
       })
     ),
-    query: PropTypes.string
+    query: PropTypes.string,
+    source: PropTypes.string
   };
   state = {
     facets: []
@@ -32,11 +34,11 @@ class Faceting extends React.Component {
   }
 
   render() {
-    const { query } = this.props;
+    const { query, source } = this.props;
     const facets = this.state.facets.map(([key, count]) => (
       <Item key={key}>
         <Link route="recherche" params={{ q: query, source: key }} passHref>
-          <Text>
+          <Text active={key === source}>
             {getLabelBySource(key)} ({count})
           </Text>
         </Link>
@@ -84,12 +86,12 @@ const ListTitle = styled.h3`
 `;
 
 const Text = styled.a`
-  text-decoration: none;
+  text-decoration: ${props => (props.active ? "underline" : "none")};
   color: #8393a7;
   color: var(--color-dark-grey);
   :link,
   :visited {
-    text-decoration: none;
+    text-decoration: ${props => (props.active ? "underline" : "none")};
     color: #8393a7;
     color: var(--color-dark-grey);
   }

@@ -51,7 +51,7 @@ class SearchResults extends React.Component {
       <SearhResultLayout>
         {results.facets.length > 0 && (
           <Aside>
-            <Faceting data={results.facets} query={query} />
+            <Faceting data={results.facets} query={query} source={source} />
           </Aside>
         )}
         <Content>
