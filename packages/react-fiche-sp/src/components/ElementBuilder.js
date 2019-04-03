@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { theme } from "@cdt/ui";
@@ -20,7 +21,7 @@ const parseChildren = (children, headingLevel) => (
 );
 
 // Beware, this one is recursive
-export function ElementBuilder({ data, headingLevel = 0 }) {
+export function ElementBuilder({ data, headingLevel }) {
   // In case we get children
   if (Array.isArray(data)) {
     return data.map((child, index) => (
@@ -93,6 +94,15 @@ export function ElementBuilder({ data, headingLevel = 0 }) {
       return null;
   }
 }
+
+ElementBuilder.propTypes = {
+  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  headingLevel: PropTypes.number
+};
+
+ElementBuilder.defaultProps = {
+  headingLevel: 0
+};
 
 export default ElementBuilder;
 

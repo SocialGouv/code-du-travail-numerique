@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import FicheBuilder from "./ElementBuilder";
@@ -13,10 +12,6 @@ class FicheServicePublic extends React.PureComponent {
     );
   }
 }
-
-FicheServicePublic.propTypes = {
-  data: PropTypes.array.isRequired
-};
 
 export default FicheServicePublic;
 
