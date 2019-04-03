@@ -53,7 +53,7 @@ class SearchResults extends React.Component {
               <p>
                 Vous pouvez élargir la recherche en intégrant&nbsp;
                 <strong>
-                  <Link route="index" params={{ q: query, source: "" }}>
+                  <Link route="recherche" params={{ q: query, source: "" }}>
                     <a>les autres sources de documents</a>
                   </Link>
                 </strong>
