@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Button from ".";
 
-## \<Button/\>
+# Button
 
 <Playground>
   <Button>Button</Button>

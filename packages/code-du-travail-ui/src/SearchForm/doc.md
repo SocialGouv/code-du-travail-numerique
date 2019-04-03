@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import SearchForm from ".";
 
-## \<SearchForm/\>
+# SearchForm
 
 <Playground>
   <SearchForm

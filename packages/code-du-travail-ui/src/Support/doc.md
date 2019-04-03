@@ -8,7 +8,7 @@ import Container from "../Container";
 import Section from "../Section";
 import Support from ".";
 
-## \<Support/\>
+# Support
 
 <Playground>
   {() => {

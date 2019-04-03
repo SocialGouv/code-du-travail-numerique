@@ -1,7 +1,9 @@
 import * as icons from "./icons";
 import * as keyframes from "./keyframes";
 import * as theme from "./theme";
+import { Modal, ModalContentWrapper } from "./Modal";
 
+export { icons, keyframes, Modal, ModalContentWrapper, theme };
 export { default as Accordion } from "./Accordion";
 export { default as Alert } from "./Alert";
 export { default as Article } from "./Article";
@@ -24,4 +26,3 @@ export { default as SrOnly } from "./SrOnly";
 export { default as Tag } from "./Tag";
 export { default as ToggleButton } from "./ToggleButton";
 export { default as VerticalArrow } from "./VerticalArrow";
-export { icons, keyframes, theme };

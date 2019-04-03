@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import App, { Container } from "next/app";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 import "@cdt/css";
-import "@reach/dialog/styles.css";
 
 import "../src/piwik";
 

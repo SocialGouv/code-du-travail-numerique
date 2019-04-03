@@ -7,7 +7,7 @@ import { Playground, Props } from "docz";
 import Category from "../Category";
 import Categories from ".";
 
-## \<Categories/\>
+# Categories
 
 <Playground>
   <Categories>

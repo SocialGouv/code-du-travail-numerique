@@ -7,7 +7,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Accordion from ".";
 
-## \<Accordion/\>
+# Accordion
 
 <Playground>
   <Accordion items={[{ title: "This is the title of a single item accordion", body: "this is the body" }]}/>

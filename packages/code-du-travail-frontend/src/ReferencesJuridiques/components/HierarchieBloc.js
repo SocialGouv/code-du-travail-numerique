@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { DialogContent, DialogOverlay } from "@reach/dialog";
-import { Accordion, Button, theme } from "@cdt/ui";
+import { Accordion, Button, Modal, theme } from "@cdt/ui";
 import { ConventionForm } from "../../common/ConventionForm";
 import { searchIdcc } from "../../common/convention.service";
 import TYPE_REFERENCE from "../typeReference";
@@ -16,6 +15,20 @@ class HierarchieBloc extends React.PureComponent {
   state = {
     modalIsOpen: false
   };
+
+  openModal = e => {
+    e.preventDefault();
+    this.setState({
+      modalIsOpen: true
+    });
+  };
+
+  closeModal = () => {
+    this.setState({
+      modalIsOpen: false
+    });
+  };
+
   render() {
     const { id, references } = this.props;
     const { title, text, hasCCSearch } = blocs[id];
@@ -37,28 +50,13 @@ class HierarchieBloc extends React.PureComponent {
         {hasCCSearch && (
           <>
             <CCButtonWrapper>
-              <Button
-                onClick={() =>
-                  this.setState({
-                    modalIsOpen: true
-                  })
-                }
-              >
+              <Button onClick={this.openModal}>
                 Trouvez votre convention collective
               </Button>
             </CCButtonWrapper>
-            <DialogOverlay
-              isOpen={this.state.modalIsOpen}
-              onDismiss={() =>
-                this.setState({
-                  modalIsOpen: false
-                })
-              }
-            >
-              <DialogContent>
-                <ConventionForm onSearch={searchIdcc} />
-              </DialogContent>
-            </DialogOverlay>
+            <Modal isOpen={this.state.modalIsOpen} onDismiss={this.closeModal}>
+              <ConventionForm onSearch={searchIdcc} />
+            </Modal>
           </>
         )}
         <Accordion items={items} />

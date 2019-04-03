@@ -1,6 +1,6 @@
 import React from "react";
 import { cleanup, render } from "react-testing-library";
-import { Like } from "../icons";
+import { ThumbsUp } from "react-feather";
 import IconButton from ".";
 
 describe("<IconButton />", () => {
@@ -8,7 +8,7 @@ describe("<IconButton />", () => {
   test("should render", () => {
     const { container } = render(
       <IconButton title="test-btn" onClick={jest.fn()}>
-        <Like />
+        <ThumbsUp />
       </IconButton>
     );
     expect(container).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe("<IconButton />", () => {
     const handler = jest.fn();
     const { getByTitle } = render(
       <IconButton title="test-btn" onClick={handler}>
-        <Like />
+        <ThumbsUp />
       </IconButton>
     );
     const button = getByTitle(/test-btn/i);

@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Section from ".";
 
-## \<Section/\>
+# Section
 
 <Playground>
   <Section light>

@@ -1,6 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> should render a popup when click on button 1`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  overflow: auto;
+}
+
+.c1 {
+  position: relative;
+  margin: 10vh auto;
+  padding: 2rem;
+  width: 50vw;
+  background: white;
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+.c2 {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  padding: 0.625rem;
+  color: #8393a7;
+  line-height: 0;
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
 <body>
   <div
     aria-hidden="true"
@@ -16,13 +49,13 @@ exports[`<ServiceRenseignementModal /> should render a popup when click on butto
   </div>
   <reach-portal>
     <div
+      class="c0"
       data-reach-dialog-overlay="true"
-      style="background: rgba(0, 0, 0, 0.5);"
     >
       <div
         aria-modal="true"
+        class="c1"
         data-reach-dialog-content="true"
-        style="border-radius: 3px; margin: 5vh auto;"
         tabindex="-1"
       >
         <h2>
@@ -41,6 +74,35 @@ exports[`<ServiceRenseignementModal /> should render a popup when click on butto
             type="text"
           />
         </p>
+        <button
+          class="c2"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            title="fermer la modale"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   </reach-portal>
