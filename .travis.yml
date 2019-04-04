@@ -64,6 +64,11 @@ jobs:
       stage: Release
       if: env(RELEASE)
       name: Make a new release 🎉
+      git:
+        # NOTE(douglasduteil): disable git --depth
+        # Try to have all the commits for the release Change Log
+        # see travis-ci/travis-ci#3412
+        depth: 9999999 # Over 9000 !
       env:
         - *github_keys
       before_script:
