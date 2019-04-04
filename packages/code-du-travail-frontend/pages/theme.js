@@ -60,7 +60,7 @@ const getBreadcrumbs = parents =>
       ) : (
         <Link
           key={parent.title}
-          route="theme"
+          route="themes"
           params={{ slug: parent.slug || ["/"] }}
         >
           <a title={parent.title}>{parent.title}</a>

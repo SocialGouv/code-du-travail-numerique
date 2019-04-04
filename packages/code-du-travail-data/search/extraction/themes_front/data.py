@@ -31,7 +31,7 @@ def populate_theme(data):
 
             theme = {
                 'title': item['title'],
-                'slug':  'themes/' + slug,
+                'slug':  slug,
                 'text': text,
             }
             THEMES.append(theme)

@@ -104,6 +104,7 @@ def populate_cdtn_documents():
             'date': val.get('date'),
         })
 
+    logger.info("Load %s themes from dataset/themes-front.json", len(THEMES))
     for val in THEMES:
         CDTN_DOCUMENTS.append({
             'source': 'themes',
