@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Alert, Article, Button, Container, NoAnswer, theme } from "@cdt/ui";
+import { Alert, Article, Button, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
 import { withRouter } from "next/router";
 import ReactPiwik from "react-piwik";
@@ -125,9 +125,7 @@ class Answer extends React.Component {
         {referencesJuridiques.length > 0 && (
           <ReferencesJuridiques references={referencesJuridiques} />
         )}
-        <NoAnswer>
-          <Button onClick={this.showModal}>Posez votre question</Button>
-        </NoAnswer>
+        <Button onClick={this.showModal}>Posez votre question</Button>
       </React.Fragment>
     );
   }

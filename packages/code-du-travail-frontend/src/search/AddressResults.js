@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Alert, Button, Card, Cards, NoAnswer, Section } from "@cdt/ui";
+import { Alert, Button, Card, Cards, Section } from "@cdt/ui";
 import { FeedbackModal } from "../common/FeedbackModal";
 import styled from "styled-components";
 
@@ -45,9 +45,8 @@ class AddressResults extends React.Component {
     return (
       <Section>
         {renderResults(results)}
-        <NoAnswer>
-          <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
-        </NoAnswer>
+        <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
+
         <FeedbackModal
           results={results.slice(3)}
           isOpen={this.state.feedbackVisible}

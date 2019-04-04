@@ -39,4 +39,3 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "components/_skip_links.css";
 
 @import "components/_support.css";
-@import "components/_no_answer.css";
