@@ -24,13 +24,23 @@ const emptyResults = [];
 describe("<AddressResults/>", () => {
   it("should render no results", () => {
     const { container } = render(
-      <AddressResults results={emptyResults} query="search address" />
+      <AddressResults
+        results={emptyResults}
+        query="search address"
+        source="tous"
+        url="search.url/fiches/doc1"
+      />
     );
     expect(container).toMatchSnapshot();
   });
   it("should render results", () => {
     const { container } = render(
-      <AddressResults results={results} query="search address" />
+      <AddressResults
+        results={results}
+        query="search address"
+        source="tous"
+        url="search.url/fiches/doc1"
+      />
     );
     expect(container).toMatchSnapshot();
   });

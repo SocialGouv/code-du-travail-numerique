@@ -1,9 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Button } from "@cdt/ui";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
 class ServiceRenseignementModal extends React.Component {
+  static propTypes = {
+    children: PropTypes.node
+  };
+  static defaultProps = {
+    children: "Trouver votre service de renseignement"
+  };
   state = {
     modalIsOpen: false
   };
@@ -24,7 +31,7 @@ class ServiceRenseignementModal extends React.Component {
     return (
       <React.Fragment>
         <Button link className="link" onClick={this.openModal}>
-          Trouver votre service de renseignement
+          {this.props.children}
         </Button>
         <DialogOverlay
           isOpen={this.state.modalIsOpen}

@@ -39,14 +39,19 @@ class AnnuairePage extends React.Component {
 
   render() {
     const { router, results } = this.props;
-    const { q = "" } = router.query;
+    const { q = "", source = "" } = router.query;
     return (
       <PageLayout>
         <Head>
           <title>{q} - Code du travail numérique</title>
         </Head>
         <Search />
-        <AddressResults query={q} results={results} />
+        <AddressResults
+          query={q}
+          results={results}
+          source={source}
+          url={router.asPath}
+        />
       </PageLayout>
     );
   }

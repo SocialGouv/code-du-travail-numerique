@@ -1,6 +1,6 @@
 import { feedbackUrl, postFeedback } from "../feedback.service";
 
-global.fetch = jest.fn().mockResolvedValue();
+global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
 
 const data = { foo: "bar" };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Alert, Button, Card, Cards, Section } from "@cdt/ui";
-import { FeedbackModal } from "../common/FeedbackModal";
+import { Feedback } from "../common/Feedback";
 import styled from "styled-components";
 
 const mapUrl = "https://www.openstreetmap.org/";
@@ -9,6 +9,8 @@ const mapUrl = "https://www.openstreetmap.org/";
 class AddressResults extends React.Component {
   static propTypes = {
     query: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
     results: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
@@ -27,32 +29,15 @@ class AddressResults extends React.Component {
     )
   };
 
-  state = {
-    feedbackVisible: false
-  };
-
-  showFeedBackPopup = () => {
-    this.setState({ feedbackVisible: true });
-  };
-
-  closeModal = () => {
-    this.setState({ feedbackVisible: false });
-  };
-
   render() {
-    const { results, query } = this.props;
+    const { results, query, source, url } = this.props;
 
     return (
       <Section>
         {renderResults(results)}
         <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
 
-        <FeedbackModal
-          results={results.slice(3)}
-          isOpen={this.state.feedbackVisible}
-          closeModal={this.closeModal}
-          query={query}
-        />
+        <Feedback query={query} source={source} url={url} />
       </Section>
     );
   }

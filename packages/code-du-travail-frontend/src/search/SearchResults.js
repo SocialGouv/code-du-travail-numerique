@@ -26,18 +26,6 @@ class SearchResults extends React.Component {
     results: { facets: [], items: [] }
   };
 
-  state = {
-    feedbackVisible: false
-  };
-
-  showFeedBackPopup = () => {
-    this.setState({ feedbackVisible: true });
-  };
-
-  closeModal = () => {
-    this.setState({ feedbackVisible: false });
-  };
-
   render() {
     const { results, query, source } = this.props;
     // No results.

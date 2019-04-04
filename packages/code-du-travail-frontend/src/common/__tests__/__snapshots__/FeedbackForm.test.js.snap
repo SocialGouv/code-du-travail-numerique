@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedbackForm /> should render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c3 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+<div>
+  <form
+    action="https://formspree.io/xbalrgzm"
+    class="c0"
+  >
+    <p>
+      Merci pour votre réponse !
+      <br />
+      Vous souhaitez nous donner plus de précisions ? 
+      <br />
+       Nous somme à votre écoute
+    </p>
+    <input
+      name="question"
+      type="hidden"
+      value="Initial query"
+    />
+    <input
+      name="url"
+      type="hidden"
+      value="http://localhost/"
+    />
+    <input
+      name="source"
+      type="hidden"
+      value="Tous contenus"
+    />
+    <textarea
+      class="c1"
+      name="message"
+      placeholder="Les informations ..."
+    />
+    <div
+      class="c2"
+    >
+      <button
+        class="btn btn__primary btn__feedback"
+      >
+        Envoyer ma question
+      </button>
+      <button
+        class="btn btn__link"
+        type="button"
+      >
+        Annuler
+      </button>
+      <div
+        class="c3"
+      />
+    </div>
+  </form>
+</div>
+`;
