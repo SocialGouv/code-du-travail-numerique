@@ -34,16 +34,6 @@
   margin-left: -10px;
 }
 
-.article__widget_container {
-  flex: 0 0 102px;
-  border: 1px solid var(--color-element-border);
-  border-radius: 3px;
-  background: var(--color-dark-background);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .aside-title {
   padding: var(--spacing-inter-component) 0;
   font-size: var(--font-size-h5);

@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import Section from "../Section";
 import Tag from "../Tag";
 
-import { Question, Like, Unlike } from "../icons";
-import IconButton from "../IconButton";
+import { Question } from "../icons";
 
 const Tags = ({ tags, onTagClick }) => (
   <React.Fragment>
@@ -35,8 +34,6 @@ const Article = ({
   date,
   icon: Icon = Question,
   onTagClick,
-  onValidate,
-  onInvalidate,
   children
 }) => {
   return (
@@ -62,14 +59,6 @@ const Article = ({
             <Tags tags={tags} onTagClick={onTagClick} />
           </div>
         </div>
-        <div className="article__widget_container">
-          <IconButton onClick={onValidate} title="Valider cette réponse">
-            <Like style={{ paddingBottom: ".5rem" }} />
-          </IconButton>
-          <IconButton onClick={onInvalidate} title="Invalider cette réponse">
-            <Unlike style={{ paddingTop: ".5rem" }} />
-          </IconButton>
-        </div>
       </div>
       {children && <div className="article__content">{children}</div>}
     </Section>
@@ -89,11 +78,7 @@ Article.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   /** when user clicks some tag */
-  onTagClick: PropTypes.func,
-  /** when user validates the content */
-  onValidate: PropTypes.func,
-  /** when user invalidates the content */
-  onInvalidate: PropTypes.func
+  onTagClick: PropTypes.func
 };
 
 Article.defaultProps = {

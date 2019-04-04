@@ -38,15 +38,6 @@ class Answer extends React.Component {
     searchResults: []
   };
 
-  onValidate = () => {
-    ReactPiwik.push([
-      "trackEvent",
-      "feedback",
-      "thumb up",
-      this.props.router.asPath,
-      this.props.router.query.q
-    ]);
-  };
   showModal = () => {
     ReactPiwik.push([
       "trackEvent",
@@ -99,8 +90,6 @@ class Answer extends React.Component {
             />
             <Article
               title={title}
-              onValidate={this.onValidate}
-              onInvalidate={this.showModal}
               icon={icon}
               date={date}
               sourceType={sourceType}
