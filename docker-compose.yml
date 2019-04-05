@@ -16,13 +16,6 @@ services:
       - -c
       - "cp /app/docker/elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml; ./bin/elasticsearch-plugin list | grep -q analysis-icu || ./bin/elasticsearch-plugin install analysis-icu; docker-entrypoint.sh"
 
-  kibana:
-    image: docker.elastic.co/kibana/kibana:6.4.2
-    ports:
-      - 5601:5601
-    depends_on:
-      - elasticsearch
-
   python:
     env_file:
       - .env
