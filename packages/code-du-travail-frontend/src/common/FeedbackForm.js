@@ -31,7 +31,7 @@ class FeedbackForm extends React.Component {
     status: "", // "" | "sending" | "error"
     motif: null,
     message: "",
-    question: this.props.query || "",
+    question: this.props.query,
     email: ""
   };
   timeoutId = null;

@@ -8,42 +8,42 @@ import { postFeedback } from "./feedback.service";
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
 function Feedback({ query = "", source = "Tous contenus", url = "" }) {
-  const [answer, setAnswer] = useState(null); // null, "yes", "no",
-  const [status, setStatus] = useState(null); // null, "sent",
+  const [isSatisfied, setSatisfaction] = useState(null); // null, true, false,
+  const [isSent, setIsSent] = useState(false); // false, true,
 
   const onAnswerChange = answer => {
     ReactPiwik.push([
       "trackEvent",
       "feedback",
-      answer === "yes" ? "thumb up" : "thumb down",
+      answer ? "thumb up" : "thumb down",
       url,
       query
     ]);
-    setAnswer(answer);
+    setSatisfaction(answer);
   };
 
   const resetAnswer = () => {
     ReactPiwik.push([
       "trackEvent",
       "feedback",
-      answer === "yes" ? "cancel form positive" : "cancel form negative",
+      isSatisfied ? "cancel form positive" : "cancel form negative",
       url,
       query
     ]);
-    setAnswer(null);
+    setSatisfaction(null);
   };
 
   const submitFeedback = data => {
     ReactPiwik.push([
       "trackEvent",
       "feedback",
-      answer === "yes" ? "submit positive form" : "submit negative form",
+      isSatisfied ? "submit positive form" : "submit negative form",
       url,
       query
     ]);
 
     return postFeedback(data).then(() => {
-      setStatus("send");
+      setIsSent(true);
     });
   };
 
@@ -56,34 +56,32 @@ function Feedback({ query = "", source = "Tous contenus", url = "" }) {
           <p>
             <StyledToggle
               secondary
-              disabled={answer !== null}
-              pressed={answer === "no"}
-              onClick={() => onAnswerChange("no")}
+              disabled={isSatisfied !== null}
+              pressed={isSatisfied === false}
+              onClick={() => onAnswerChange(false)}
             >
               Non
             </StyledToggle>
             <StyledToggle
-              disabled={answer !== null}
-              pressed={answer === "yes"}
-              onClick={() => onAnswerChange("yes")}
+              disabled={isSatisfied !== null}
+              pressed={isSatisfied === true}
+              onClick={() => onAnswerChange(true)}
             >
               Oui
             </StyledToggle>
           </p>
-          {answer && !status && (
+          {isSatisfied !== null && !isSent && (
             <FeedbackForm
               query={query}
               source={source}
               url={url}
               onSubmit={submitFeedback}
               onReset={resetAnswer}
-              askMotif={answer === "no"}
+              askMotif={isSatisfied === false}
             />
           )}
-          {status === "send" && (
-            <p> Nous avons bien recu votre commentaire. Merci !</p>
-          )}
-          {answer === "no" && (
+          {isSent && <p> Nous avons bien recu votre commentaire. Merci !</p>}
+          {isSatisfied === false && (
             <div>
               Vous pouvez également{" "}
               <ServiceRenseignementModal>
