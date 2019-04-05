@@ -107,7 +107,7 @@ class FeedbackForm extends React.Component {
       <StyledForm action={feedbackUrl} onSubmit={this.onSubmit}>
         <p>
           Merci pour votre réponse !<br />
-          Vous souhaitez nous donner plus de précisions ? <br /> Nous somme à
+          Souhaitez-vous donner plus de précisions ? <br /> Nous sommes à
           votre écoute
         </p>
         <input type="hidden" name="question" value={query} />
