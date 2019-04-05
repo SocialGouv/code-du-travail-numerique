@@ -544,9 +544,9 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               <p>
                 Merci pour votre réponse !
                 <br />
-                Souhaitez-vous donner plus de précisions ? 
+                Souhaitez-vous donner plus de précisions ?
                 <br />
-                 Nous sommes à votre écoute
+                Nous sommes à votre écoute
               </p>
               <input
                 name="question"
@@ -930,9 +930,9 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
               <p>
                 Merci pour votre réponse !
                 <br />
-                Souhaitez-vous donner plus de précisions ? 
+                Souhaitez-vous donner plus de précisions ?
                 <br />
-                 Nous sommes à votre écoute
+                Nous sommes à votre écoute
               </p>
               <input
                 name="question"
