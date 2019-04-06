@@ -52,7 +52,7 @@ function Feedback({ query = "", source = "Tous contenus", url = "" }) {
       <Layout>
         <Icon />
         <div>
-          <Title>Avez vous trouvez la réponse à votre question</Title>
+          <Title>Avez-vous trouvé la réponse à votre question ?</Title>
           <p>
             <StyledToggle
               secondary
@@ -80,14 +80,14 @@ function Feedback({ query = "", source = "Tous contenus", url = "" }) {
               askMotif={isSatisfied === false}
             />
           )}
-          {isSent && <p> Nous avons bien recu votre commentaire. Merci !</p>}
+          {isSent && <p>Nous avons bien reçu votre commentaire. Merci !</p>}
           {isSatisfied === false && (
             <div>
               Vous pouvez également{" "}
               <ServiceRenseignementModal>
-                joindre les services de reseignement
+                joindre les services de renseignement
               </ServiceRenseignementModal>{" "}
-              de votre régions afin d&apos;obtenir une réponse
+              de votre région afin d&apos;obtenir une réponse
             </div>
           )}
         </div>

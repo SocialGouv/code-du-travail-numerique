@@ -249,7 +249,7 @@ exports[`<AddressResults/> should render no results 1`] = `
                   <h3
                     class="c2"
                   >
-                    Avez vous trouvez la réponse à votre question
+                    Avez-vous trouvé la réponse à votre question ?
                   </h3>
                   <p>
                     <button
@@ -600,7 +600,7 @@ exports[`<AddressResults/> should render results 1`] = `
                   <h3
                     class="c6"
                   >
-                    Avez vous trouvez la réponse à votre question
+                    Avez-vous trouvé la réponse à votre question ?
                   </h3>
                   <p>
                     <button

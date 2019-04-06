@@ -227,7 +227,7 @@ exports[`<Feedback/> should render 1`] = `
             <h3
               class="c2"
             >
-              Avez vous trouvez la réponse à votre question
+              Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p>
               <button
@@ -517,7 +517,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             <h3
               class="c2"
             >
-              Avez vous trouvez la réponse à votre question
+              Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p>
               <button
@@ -626,10 +626,10 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
                 role="button"
                 tabindex="0"
               >
-                joindre les services de reseignement
+                joindre les services de renseignement
               </div>
                
-              de votre régions afin d'obtenir une réponse
+              de votre région afin d'obtenir une réponse
             </div>
           </div>
         </div>
@@ -903,7 +903,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             <h3
               class="c2"
             >
-              Avez vous trouvez la réponse à votre question
+              Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p>
               <button
