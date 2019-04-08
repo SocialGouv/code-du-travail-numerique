@@ -7,7 +7,7 @@ const { publicRuntimeConfig } = getConfig();
 const Footer = () => (
   <footer className="section-dark site-footer" id="footer">
     <div className="container">
-      <div className="main-footer">
+      <div className="main-footer wrapper-narrow">
         <div className="footer__block">
           <h3>Code du travail numérique</h3>
           <ul>
@@ -48,19 +48,6 @@ const Footer = () => (
                 rel="noopener noreferrer"
               >
                 Journal des modifications
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer__block">
-          <h3>Liens et outils</h3>
-          <ul>
-            <li>
-              <a
-                href="https://socialgouv.github.io/faq-code-du-travail"
-                className="external-link__after"
-              >
-                Question-Réponse des services de renseignement
               </a>
             </li>
           </ul>
