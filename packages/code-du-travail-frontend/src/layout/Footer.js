@@ -53,7 +53,7 @@ const Footer = () => (
           </ul>
         </div>
         <div className="footer__block">
-          <h3>Liens et outils</h3>
+          <h3>Liens</h3>
           <ul>
             <li>
               <a

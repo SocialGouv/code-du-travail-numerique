@@ -68,7 +68,7 @@ exports[`<Footer /> should render 1`] = `
           class="footer__block"
         >
           <h3>
-            Liens et outils
+            Liens
           </h3>
           <ul>
             <li>
