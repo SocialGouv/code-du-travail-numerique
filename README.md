@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/SocialGouv/code-du-travail-numerique.svg?branch=master)](https://travis-ci.com/SocialGouv/code-du-travail-numerique)
 [![codecov](https://codecov.io/gh/SocialGouv/code-du-travail-numerique/branch/master/graph/badge.svg)](https://codecov.io/gh/SocialGouv/code-du-travail-numerique)
 
-> Ce repository regroupe les informations sur les projets du code du travail numérique.
+> This repository regroups information about code du travail numerique projects.
 
 ## Installation
 
@@ -14,27 +14,34 @@ Make sure you're using NodeJS 10.15 (9 or 11 won't work).
 $ yarn
 ```
 
-Note: les fichiers d'environment seront créés au _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) en fonction du `NODE_ENV`
+Note: environment file are created at _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`
 
-### Données
+### Data
 
+Before doing anything, update environment variables in the non versioned `.env` file. A versioned `.env.sample` file will help you to do so.
+Beware that `SUGGEST_DATA_URL` is a test url in the `.env.sample` file.
+Then, ensure that you also have the correct params in the unversioned `docker-compose.override.yml` file
 
-Pour (re-)initialiser les données du elasticsearch:
+Finally, to (re)initialize data for elasticsearch:
 
 ```sh
-# Démarrez un elasticsearch
+# Start elasticsearch
 $ docker-compose up
 
 #
-# Attendez de voir le message
+# Wait for the message:
 #
 elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [code-du-travail-data-elasticsearch-single-node] started
 
-# > En parallèle dans un autre terminal <
+# > In parallel, in another terminal <
 
-# Lancez le script d'indexation
+# Launch indexing script
 $ docker-compose run --rm python pipenv run python /app/search/indexing/create_indexes.py
 ```
+
+If some error appears for the nlp_api container, run `docker-compose down`, then run 
+the data checklist above again, then run `docker-compose build nlp_api`, and, finally, reinitialize data for elasticsearch.
+
 
 ## Usage
 
@@ -47,19 +54,19 @@ $ yarn dev
 You can see which data will be indexed into ES by using the `--verbose` option:
 
 ```sh
-# Pour vérifier les données du code du travail :
-# 1) Données accompagnées des "tags" extraits de ePoseidon :
+# To check code tu travail data :
+# 1) Data with "tags" extracted from ePoseidon :
 $ docker-compose run --rm python pipenv run python /app/search/extraction/code_du_travail/eposeidon_tags/data.py -v
-# 2) Données accompagnées des "tags" renommés humainement :
+# 2) Data with "tags" renamed by hand :
 $ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/code_du_travail/cleaned_tags/data.py -v
 
-# Pour vérifier les données des fiches Ministère du Travail :
+# To check fiches Ministère du Travail data :
 $ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/fiches_ministere_travail/data.py -v
 
-# Pour vérifier les données des fiches services public :
+# To check fiches services public data :
 $ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/fiches_service_public/data.py -v
 
-# Pour vérifier les données des synonymes :
+# To check synonymes dictionary:
 $ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/synonyms/data.py -v
 ```
 
@@ -214,16 +221,16 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 - Sprint 1.1 - https://codedutravail-sprint11.num.social.gouv.fr
 - Sprint 1.2 - https://codedutravail-sprint12.num.social.gouv.fr
 
-### Outils
+### Tools
 
 - Slack : https://incubateur-mas.slack.com
 - Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
 - Issues GitHub : [https://github.com/SocialGouv/code-du-travail-numerique/issues]
   - nomenclature des labels :
-    - t : `t`ype d’issue
-    - p : nom du `p`roduit (j’ai différencié ES et la nav par thèmes pour l’instant)
-    - s : `s`tatut de l’issue
-    - o : nom de l’`o`util dédié
+    - t : `t`ype of issue
+    - p : name of `p`roduct (we differentiate ES and nav by themes for now)
+    - s : `s`tatus of the issue
+    - o : name of the dedicated t`o`ol
 - Piwik : https://stats.num.social.gouv.fr
 - Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
 
@@ -235,15 +242,15 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 
 ## Contributions
 
-- Travailler sur des features branches
-- Faire des [commits conventionnels](https://github.com/conventional-changelog/conventional-changelog)
-- Soumettre des PR sur la branche du sprint en cours
+- Work on feature branches
+- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
+- Submit PR on current's sprint branch
 
 ## FAQ
 
-### J'ai rajouté un nouveau package dans dataset mais il n'est pas trouvé lorsqu'on build l'api
+### I added a new package in dataset but it is not found when we build the API ?
 
-il faut le rajouter dans le fichier `/packages/code-du-travail-api/Dockerfile`
+You must add it to the `/packages/code-du-travail-api/Dockerfile`
 
 ```diff
 + COPY ./packages/code-du-travail-data/dataset/yolo/package.json /app/packages/code-du-travail-data/dataset/yolo/package.json
