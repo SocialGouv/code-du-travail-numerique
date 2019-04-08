@@ -16,7 +16,6 @@ export { default as Card } from "./Card";
 export { default as Categories } from "./Categories";
 export { default as Category } from "./Category";
 export { default as Container } from "./Container";
-export { default as IconButton } from "./IconButton";
 export { default as LargeLink } from "./LargeLink";
 export { default as List } from "./List";
 export { default as SearchForm } from "./SearchForm";
