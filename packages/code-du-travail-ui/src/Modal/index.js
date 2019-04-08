@@ -7,8 +7,8 @@ import { box, colors, spacing } from "../theme";
 export class Modal extends React.Component {
   static propTypes = {
     className: PropTypes.string,
-    isOpen: PropTypes.bool,
-    onDismiss: PropTypes.func,
+    isOpen: PropTypes.bool.isRequired,
+    onDismiss: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
     ContentWrapper: PropTypes.object
   };
