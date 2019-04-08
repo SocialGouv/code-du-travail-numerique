@@ -10,7 +10,7 @@ export class Modal extends React.Component {
     isOpen: PropTypes.bool,
     onDismiss: PropTypes.func,
     children: PropTypes.node.isRequired,
-    ContentWrapper: PropTypes.node
+    ContentWrapper: PropTypes.object
   };
 
   render() {
