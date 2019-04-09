@@ -1,6 +1,6 @@
 {
   "name": "@socialgouv/react-fiche-service-public",
-  "version": "2.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Composant React pour render une fiche SP",
   "main": "lib/index.js",
@@ -20,7 +20,9 @@
     "react": "16.x",
     "react-dom": "16.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-tabs": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
@@ -32,14 +34,11 @@
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
     "prettier": "^1.14.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "react-testing-library": "^6.0.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.2.2",
-    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.0",
     "rollup-plugin-replace": "^2.1.0",
     "styled-components": "^4.2.0"
   },

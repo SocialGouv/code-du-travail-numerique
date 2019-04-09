@@ -1,3 +1,4 @@
+import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import replace from "rollup-plugin-replace";
 import babel from "rollup-plugin-babel";
@@ -14,11 +15,13 @@ export default {
       format: "esm"
     }
   ],
-  external: ["react", "prop-types", "styled-components", "react-tabs"],
+  external: ["react", "react-dom", "prop-types", "styled-components"],
   plugins: [
     resolve({
-      jsnext: true,
-      main: true
+      mainFields: ["module", "jsnext", "jsnext:main", "main"]
+    }),
+    commonjs({
+      exclude: "src/**"
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
