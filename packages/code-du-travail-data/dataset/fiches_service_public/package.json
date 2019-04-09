@@ -2,15 +2,13 @@
   "name": "@cdt/data...fiches_service_public",
   "version": "1.5.0",
   "private": true,
-  "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/revolunet/fiches_service_public.git"
+    "url": "git+https://github.com/SocialGouv/code-du-travail-numerique.git"
   },
-  "homepage": "https://revolunet.github.io/fiches_service_public/",
   "bugs": {
-    "url": "https://github.com/revolunet/fiches_service_public/issues"
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
     "lodash.uniqby": "^4.7.0",
