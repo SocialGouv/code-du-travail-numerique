@@ -91,7 +91,7 @@ exports[`<PageLayout /> should render 1`] = `
       class="container"
     >
       <div
-        class="main-footer"
+        class="main-footer wrapper-narrow"
       >
         <div
           class="footer__block"
@@ -141,23 +141,6 @@ exports[`<PageLayout /> should render 1`] = `
                 target="_blank"
               >
                 Journal des modifications
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="footer__block"
-        >
-          <h3>
-            Liens et outils
-          </h3>
-          <ul>
-            <li>
-              <a
-                class="external-link__after"
-                href="https://socialgouv.github.io/faq-code-du-travail"
-              >
-                Question-Réponse des services de renseignement
               </a>
             </li>
           </ul>
