@@ -15,6 +15,15 @@ class SearchResults extends React.Component {
     query: PropTypes.string,
     source: PropTypes.string,
     results: PropTypes.shape({
+      snippet: PropTypes.shape({
+        html: PropTypes.string,
+        references: PropTypes.arrayOf(
+          PropTypes.shape({
+            url: PropTypes.string,
+            titre: PropTypes.string
+          })
+        )
+      }),
       facets: PropTypes.array,
       items: PropTypes.array
     }).isRequired
@@ -46,7 +55,6 @@ class SearchResults extends React.Component {
         </Alert>
       );
     }
-
     return (
       <SearhResultLayout>
         {results.facets.length > 0 && (
@@ -55,21 +63,21 @@ class SearchResults extends React.Component {
           </Aside>
         )}
         <Content>
-          {results.items.snippet && (
+          {results.snippet && (
             <ResultSnippet>
-              <p
+              <div
                 dangerouslySetInnerHTML={{
-                  __html: results.items.snippet._source.html
+                  __html: results.snippet.html
                 }}
               />
-              {results.items.snippet._source.references && (
+              {results.snippet.references && (
                 <SourceLink
-                  href={results.items.snippet._source.references[0].url}
+                  href={results.snippet.references[0].url}
                   target="_blank"
                   norel
                   noopener
                 >
-                  {results.items.snippet._source.references[0].titre}
+                  {results.snippet.references[0].titre}
                 </SourceLink>
               )}
             </ResultSnippet>

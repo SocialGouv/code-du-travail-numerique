@@ -30,11 +30,13 @@ class SearchPage extends React.Component {
 
     const {
       facets,
+      snippet = {},
       hits: { hits }
     } = await response.json();
     return {
       data: {
         facets,
+        snippet: snippet._source,
         items: hits
       }
     };
