@@ -15,25 +15,15 @@ export default {
       format: "esm"
     }
   ],
-  external: ["prop-types", "react", "styled-components"],
+  external: ["prop-types", "react", "react-dom", "styled-components"],
   plugins: [
     resolve({
-      browser: true
+      mainFields: ["module", "jsnext", "jsnext:main", "main"],
+      dedupe: ["react", "react-dom", "styled-components"]
     }),
     commonjs({
-      include: /node_modules\//,
-      // This is tricky, if we ever decide to extract this subrepo from the mono repo,
-      // then these paths will break and we will have to change them
-      namedExports: {
-        "../../node_modules/react-accessible-accordion/dist/umd/index.js": [
-          "Accordion",
-          "AccordionItem",
-          "AccordionItemTitle",
-          "AccordionItemBody"
-        ],
-        "../../node_modules/react-dom/index.js": ["createPortal"],
-        "../../node_modules/focus-trap/index.js": ["default"]
-      }
+      exclude: "src/**",
+      namedExports: { "focus-trap": ["createFocusTrap"] }
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
