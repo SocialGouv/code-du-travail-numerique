@@ -40,7 +40,7 @@ const About = () => (
 
           <p>
             Les services de renseignement en droit du travail (dans les
-            DIRECCTE1) répondent à plus de 900 000 demandes par an concernant le
+            DIRECCTE) répondent à plus de 900 000 demandes par an concernant le
             droit du travail, des questions les plus simples aux cas les plus
             complexes.
           </p>
