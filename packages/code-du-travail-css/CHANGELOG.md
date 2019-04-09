@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/SocialGouv/code-du-travail-css/compare/v2.1.0...v2.2.0) (2019-04-09)
+
+
+### Bug Fixes
+
+* **frontend:** update search results page design  ([#644](https://github.com/SocialGouv/code-du-travail-css/issues/644)) ([ffae740](https://github.com/SocialGouv/code-du-travail-css/commit/ffae740)), closes [#529](https://github.com/SocialGouv/code-du-travail-css/issues/529)
+
+
+### Features
+
+* **frontend:** replace feedback modal with inline form ([#677](https://github.com/SocialGouv/code-du-travail-css/issues/677)) ([2c6ddc3](https://github.com/SocialGouv/code-du-travail-css/commit/2c6ddc3)), closes [#682](https://github.com/SocialGouv/code-du-travail-css/issues/682) [#683](https://github.com/SocialGouv/code-du-travail-css/issues/683)
+
+
+
+
+
 # 2.1.0 (2019-03-26)
 
 

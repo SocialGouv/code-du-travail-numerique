@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.1.0...v2.2.0) (2019-04-09)
+
+
+### Bug Fixes
+
+* **api:** add match phrase prefix to idcc search ([#662](https://github.com/SocialGouv/code-du-travail-numerique/issues/662)) ([e1ad3f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/e1ad3f1)), closes [#622](https://github.com/SocialGouv/code-du-travail-numerique/issues/622)
+* **api:** add missing matcher in faceting request ([#665](https://github.com/SocialGouv/code-du-travail-numerique/issues/665)) ([093fd0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/093fd0c)), closes [#645](https://github.com/SocialGouv/code-du-travail-numerique/issues/645)
+* **frontend:** fix theme links and use a single route for themes ([#672](https://github.com/SocialGouv/code-du-travail-numerique/issues/672)) ([089c53a](https://github.com/SocialGouv/code-du-travail-numerique/commit/089c53a))
+* **frontend:** udpate search input when higlighting suggestion ([#666](https://github.com/SocialGouv/code-du-travail-numerique/issues/666)) ([e39d7ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/e39d7ba)), closes [#646](https://github.com/SocialGouv/code-du-travail-numerique/issues/646)
+* **frontend:** unify outils styles ([#639](https://github.com/SocialGouv/code-du-travail-numerique/issues/639)) ([2a6c7ae](https://github.com/SocialGouv/code-du-travail-numerique/commit/2a6c7ae)), closes [#495](https://github.com/SocialGouv/code-du-travail-numerique/issues/495)
+* **frontend:** update search results page design  ([#644](https://github.com/SocialGouv/code-du-travail-numerique/issues/644)) ([ffae740](https://github.com/SocialGouv/code-du-travail-numerique/commit/ffae740)), closes [#529](https://github.com/SocialGouv/code-du-travail-numerique/issues/529)
+* **frontend:** wrong articles in references juridiques ([#663](https://github.com/SocialGouv/code-du-travail-numerique/issues/663)) ([2cc92da](https://github.com/SocialGouv/code-du-travail-numerique/commit/2cc92da))
+* **nlp:** pin autosuggest version ([#640](https://github.com/SocialGouv/code-du-travail-numerique/issues/640)) ([5d074d7](https://github.com/SocialGouv/code-du-travail-numerique/commit/5d074d7))
+* **search:** fix enlarge your results link ([#671](https://github.com/SocialGouv/code-du-travail-numerique/issues/671)) ([03e2e33](https://github.com/SocialGouv/code-du-travail-numerique/commit/03e2e33))
+
+
+### Features
+
+* **frontend:** replace feedback modal with inline form ([#677](https://github.com/SocialGouv/code-du-travail-numerique/issues/677)) ([2c6ddc3](https://github.com/SocialGouv/code-du-travail-numerique/commit/2c6ddc3)), closes [#682](https://github.com/SocialGouv/code-du-travail-numerique/issues/682) [#683](https://github.com/SocialGouv/code-du-travail-numerique/issues/683)
+* **frontend:** underline active source in facets ([#670](https://github.com/SocialGouv/code-du-travail-numerique/issues/670)) ([5c354e3](https://github.com/SocialGouv/code-du-travail-numerique/commit/5c354e3))
+
+
+
+
+
 # 2.1.0 (2019-03-26)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.1.0...v2.2.0) (2019-04-09)
+
+
+### Bug Fixes
+
+* **api:** add match phrase prefix to idcc search ([#662](https://github.com/SocialGouv/code-du-travail-numerique/issues/662)) ([e1ad3f1](https://github.com/SocialGouv/code-du-travail-numerique/commit/e1ad3f1)), closes [#622](https://github.com/SocialGouv/code-du-travail-numerique/issues/622)
+* **api:** add missing matcher in faceting request ([#665](https://github.com/SocialGouv/code-du-travail-numerique/issues/665)) ([093fd0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/093fd0c)), closes [#645](https://github.com/SocialGouv/code-du-travail-numerique/issues/645)
+
+
+
+
+
 # 2.1.0 (2019-03-26)
 
 

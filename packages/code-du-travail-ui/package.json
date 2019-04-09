@@ -1,6 +1,6 @@
 {
   "name": "@cdt/ui",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "description": "Composants ReactJS du Code du travail numérique",
   "main": "lib/index.js",
@@ -32,7 +32,7 @@
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@cdt/css": "^2.1.0",
+    "@cdt/css": "^2.2.0",
     "@socialgouv/eslint-config-react": "^0.5.0",
     "babel-jest": "^24.5.0",
     "docz": "v1.0.0-rc.7",
