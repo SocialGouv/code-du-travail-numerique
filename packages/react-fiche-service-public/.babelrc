@@ -1,11 +1,15 @@
 {
-  "presets": ["@babel/preset-react"],
+  "presets": [
+    "@babel/preset-react"
+  ],
   "plugins": [
     "@babel/plugin-proposal-class-properties"
   ],
   "env": {
     "test": {
-      "presets": [["@babel/preset-env", { "modules": "cjs" }]]
+      "presets": [
+        ["@babel/preset-env", { "modules": "cjs" }]
+      ]
     }
   }
 }

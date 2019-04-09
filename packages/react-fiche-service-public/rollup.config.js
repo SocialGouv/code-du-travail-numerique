@@ -17,17 +17,13 @@ export default {
   ],
   external: ["react", "react-dom", "prop-types", "styled-components"],
   plugins: [
+    babel(),
     resolve({
       mainFields: ["module", "jsnext", "jsnext:main", "main"]
     }),
-    commonjs({
-      exclude: "src/**"
-    }),
+    commonjs(),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
-    }),
-    babel({
-      exclude: "node_modules/**"
     })
   ],
   watch: {

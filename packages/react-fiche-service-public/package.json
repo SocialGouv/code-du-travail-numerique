@@ -11,6 +11,8 @@
   "scripts": {
     "build": "NODE_ENV=production rollup --config",
     "lint": "eslint src/**/*.js",
+    "start": "docz dev",
+    "docz:build": "docz build",
     "prepush": "yarn lint && yarn test",
     "prepublishOnly": "yarn build",
     "test": "jest"
