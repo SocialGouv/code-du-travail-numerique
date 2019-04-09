@@ -1,3 +1,4 @@
+import commonjs from "rollup-plugin-commonjs";
 import resolve from "rollup-plugin-node-resolve";
 import replace from "rollup-plugin-replace";
 import babel from "rollup-plugin-babel";
@@ -14,17 +15,25 @@ export default {
       format: "esm"
     }
   ],
-  external: [
-    "@reach/dialog",
-    "prop-types",
-    "react",
-    "react-feather",
-    "styled-components"
-  ],
+  external: ["prop-types", "react", "styled-components"],
   plugins: [
     resolve({
-      jsnext: true,
-      main: true
+      browser: true
+    }),
+    commonjs({
+      include: /node_modules\//,
+      // This is tricky, if we ever decide to extract this subrepo from the mono repo,
+      // then these paths will break and we will have to change them
+      namedExports: {
+        "../../node_modules/react-accessible-accordion/dist/umd/index.js": [
+          "Accordion",
+          "AccordionItem",
+          "AccordionItemTitle",
+          "AccordionItemBody"
+        ],
+        "../../node_modules/react-dom/index.js": ["createPortal"],
+        "../../node_modules/focus-trap/index.js": ["default"]
+      }
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
