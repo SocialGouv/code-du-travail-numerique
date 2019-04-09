@@ -22,8 +22,7 @@ export default {
       dedupe: ["react", "react-dom", "styled-components"]
     }),
     commonjs({
-      exclude: "src/**",
-      namedExports: { "focus-trap": ["createFocusTrap"] }
+      exclude: "src/**"
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")
