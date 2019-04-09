@@ -3,10 +3,10 @@ import hashlib
 
 def get_active_branches():
   active_branche_list = []
-  raw_active_branche = check_output('git branch', shell=True)
+  raw_active_branche = check_output('git branch -r', shell=True)
   for  active_branch in raw_active_branche.decode('utf-8').split('\n'):
-    if active_branch and not active_branch.startswith('*') and active_branch.strip() != 'master':
-      active_branch = active_branch +'\n'
+    if active_branch and not active_branch.startswith('*') and active_branch.strip() != 'origin/master' and active_branch.strip() != 'origin/HEAD -> origin/master':
+      active_branch = active_branch.replace('origin/','').replace('/','-').strip()
       active_hash_branch = hashlib.sha1(active_branch.strip().encode())
       active_branche_list.append(active_hash_branch.hexdigest()[:5])
   return active_branche_list
