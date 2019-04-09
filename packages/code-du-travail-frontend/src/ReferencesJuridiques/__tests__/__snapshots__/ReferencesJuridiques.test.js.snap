@@ -126,7 +126,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 .c2 {
-  margin: 2rem 0;
+  margin: 1.25rem 0;
   padding: 1rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
@@ -134,6 +134,10 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 }
 
 .c3 {
+  margin-bottom: 1rem;
+}
+
+.c14 {
   margin-bottom: 1.25rem;
   text-align: center;
 }
@@ -143,7 +147,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   padding: 1rem;
 }
 
-.c14 {
+.c15 {
   display: inline-block;
   padding: 1rem;
 }
@@ -172,28 +176,19 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         >
           Références juridiques
         </h2>
+        <p>
+          Cette réponse est liée à 5 articles du code du travail. Le texte
+          applicable à votre situation (code du travail, accord de branche,
+          accord d'entreprise) est différent en fonction des articles.
+        </p>
         <div
           class="c2"
         >
           <h3>
-            L'accord de branche étendu prime
+            L'accord de branche étendu s'applique
           </h3>
-          <p>
-            Pour ces thèmes, les accords négociés et étendus dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.
-          </p>
           <div
             class="c3"
-          >
-            <div
-              class="btn   "
-              role="button"
-              tabindex="0"
-            >
-              Trouvez votre convention collective
-            </div>
-          </div>
-          <div
-            class="accordion"
           >
             <div
               class="c4 c5"
@@ -279,6 +274,20 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               </div>
             </div>
           </div>
+          <p>
+            Pour ces articles, si les accords négociés et étendus dans votre branche prévoient des mesures plus favorables que le Code du travail, alors ces mesures s'appliquent. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.
+          </p>
+          <div
+            class="c14"
+          >
+            <div
+              class="btn   "
+              role="button"
+              tabindex="0"
+            >
+              Trouvez votre convention collective
+            </div>
+          </div>
         </div>
         <h3>
           Autres références
@@ -298,7 +307,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               tabindex="0"
             >
               <span
-                class="c14"
+                class="c15"
               >
                 Voir les articles du code du travail concernés
               </span>

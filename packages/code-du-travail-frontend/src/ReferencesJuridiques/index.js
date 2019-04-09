@@ -29,6 +29,15 @@ class ReferencesJuridiques extends React.PureComponent {
     return (
       <StyledSection light>
         <StyledHeading>Références juridiques</StyledHeading>
+        {hierarchieBlocElements.length > 0 && (
+          <p>
+            {`Cette réponse est liée à ${
+              references.length
+            } articles du code du travail. Le texte
+          applicable à votre situation (code du travail, accord de branche,
+          accord d'entreprise) est différent en fonction des articles.`}
+          </p>
+        )}
         {hierarchieBlocElements}
         {autresReferences.length > 0 && (
           <AutresReferences

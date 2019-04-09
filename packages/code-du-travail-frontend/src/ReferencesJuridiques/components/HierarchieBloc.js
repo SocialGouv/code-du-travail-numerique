@@ -46,6 +46,7 @@ class HierarchieBloc extends React.PureComponent {
     return (
       <BlocWrapper>
         <h3>{title}</h3>
+        <StyledAccordion items={items} />
         <p>{text}</p>
         {hasCCSearch && (
           <>
@@ -59,7 +60,6 @@ class HierarchieBloc extends React.PureComponent {
             </Modal>
           </>
         )}
-        <Accordion items={items} />
       </BlocWrapper>
     );
   }
@@ -79,11 +79,15 @@ HierarchieBloc.propTypes = {
 export default HierarchieBloc;
 
 const BlocWrapper = styled.div`
-  margin: ${spacing.large} 0;
+  margin: ${spacing.medium} 0;
   padding: ${spacing.base};
   background-color: ${colors.darkBackground};
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
+`;
+
+const StyledAccordion = styled(Accordion)`
+  margin-bottom: ${spacing.base};
 `;
 
 const CCButtonWrapper = styled.div`
