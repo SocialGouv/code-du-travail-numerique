@@ -23,36 +23,37 @@ import { Modal, ModalContentWrapper } from ".";
       class ExampleModal extends React.Component {
         constructor(props) {
           super(props);
-          this.state = { areModalOpened: [false, false] };
+          this.state = {
+            defaultModalOpened: false,
+            styledModalOpened: false
+          };
           this.openModal = this.openModal.bind(this);
           this.closeModal = this.closeModal.bind(this);
         }
 
-        openModal(modalIndex) {
+        openModal(modalName) {
           this.setState((previousState) => {
-            previousState.areModalOpened[modalIndex] = true;
-            return { areModalOpened: [...previousState.areModalOpened]}
+            return { ...previousState, [`${modalName}Opened`]: true }
           });
         };
 
-        closeModal(modalIndex) {
+        closeModal(modalName) {
           this.setState((previousState) => {
-            previousState.areModalOpened[modalIndex] = false;
-            return { areModalOpened: [...previousState.areModalOpened]}
+            return { ...previousState, [`${modalName}Opened`]: false }
           });
         };
 
         render() {
-          const { areModalOpened } = this.state;
+          const { defaultModalOpened, styledModalOpened } = this.state;
           return <>
             <h1> Standard modal </h1>
-            <Button onClick={() => this.openModal(0)}>Click me !</Button>
-            <Modal isOpen={areModalOpened[0]} onDismiss={() => this.closeModal(0)}>
+            <Button onClick={() => this.openModal('defaultModal')}>Click me !</Button>
+            <Modal isOpen={defaultModalOpened} onDismiss={() => this.closeModal('defaultModal')}>
               <p>It was worth the click right ?</p>
             </Modal>
             <h1> Styled modal </h1>
-            <Button onClick={() => this.openModal(1)}>Click me I'm stylish !</Button>
-            <Modal isOpen={areModalOpened[1]} onDismiss={() => this.closeModal(1)} ContentWrapper={StyledModalContentWrapper}>
+            <Button onClick={() => this.openModal('styledModal')}>Click me I'm stylish !</Button>
+            <Modal isOpen={styledModalOpened} onDismiss={() => this.closeModal('styledModal')} ContentWrapper={StyledModalContentWrapper}>
               <p>Are you blind yet ?</p>
             </Modal>
           </>

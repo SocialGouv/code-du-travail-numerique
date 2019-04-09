@@ -24,8 +24,10 @@
     "react-dom": "16.x"
   },
   "dependencies": {
+    "@reach/dialog": "^0.1.2",
     "polished": "^3.2.0",
-    "react-accessible-accordion": "^2.4.5"
+    "react-accessible-accordion": "^2.4.5",
+    "react-feather": "1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -46,7 +48,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-feather": "1.1.0",
     "react-testing-library": "^6.0.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
