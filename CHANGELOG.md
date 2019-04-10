@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.2.0...v2.3.0) (2019-04-10)
+
+
+### Bug Fixes
+
+* correction typo dans la page "A propos" ([ecc9c22](https://github.com/SocialGouv/code-du-travail-numerique/commit/ecc9c22))
+* **data:** fix typo & html markup in faq.json ([#690](https://github.com/SocialGouv/code-du-travail-numerique/issues/690)) ([39f215a](https://github.com/SocialGouv/code-du-travail-numerique/commit/39f215a))
+* **frontend:** remove liens et outils from footer ([#694](https://github.com/SocialGouv/code-du-travail-numerique/issues/694)) ([478c53f](https://github.com/SocialGouv/code-du-travail-numerique/commit/478c53f)), closes [#692](https://github.com/SocialGouv/code-du-travail-numerique/issues/692)
+* update package.json path of react-fiche-service-public ([#705](https://github.com/SocialGouv/code-du-travail-numerique/issues/705)) ([72d70ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/72d70ba))
+
+
+### Features
+
+* **frontend:** add hotjar script tag ([#701](https://github.com/SocialGouv/code-du-travail-numerique/issues/701)) ([0440bd2](https://github.com/SocialGouv/code-du-travail-numerique/commit/0440bd2)), closes [#700](https://github.com/SocialGouv/code-du-travail-numerique/issues/700)
+* **frontend:** add tracking on search ([#704](https://github.com/SocialGouv/code-du-travail-numerique/issues/704)) ([c41ca5d](https://github.com/SocialGouv/code-du-travail-numerique/commit/c41ca5d))
+* **frontend:** improve hierarchie des normes ui ([#698](https://github.com/SocialGouv/code-du-travail-numerique/issues/698)) ([2683491](https://github.com/SocialGouv/code-du-travail-numerique/commit/2683491))
+
+
+
+
+
 # [2.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.1.0...v2.2.0) (2019-04-09)
 
 
