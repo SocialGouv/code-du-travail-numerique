@@ -29,10 +29,10 @@ class ReferencesJuridiques extends React.PureComponent {
     const explanatoryText =
       hierarchieBlocElements.length && references.length > 1 ? (
         <p>
-          {`Cette réponse est liée à ${
-            references.length
-          } articles du code du travail.
-        Le texte applicable à votre situation (code du travail, accord de branche, accord d'entreprise) est différent en fonction des articles.`}
+          {`Attention, en fonction des articles du Code du travail, un accord de branche ou un
+            accord d'entreprise peut définir le droit applicable. Nous vous précisons ci-dessous
+            quel texte juridique est applicable pour les différents articles du Code du travail liés
+            à cette réponse.`}
         </p>
       ) : null;
 
