@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
 import { Container } from "@cdt/ui";
 
@@ -83,7 +84,7 @@ class Search extends React.Component {
     if (this.state.query) {
       const routeName =
         this.state.source === "annuaire" ? "annuaire" : "recherche";
-
+      ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
       Router.pushRoute(routeName, {
         q: this.state.query,
         source: this.state.source
@@ -122,9 +123,10 @@ class Search extends React.Component {
   onSelect = (suggestion, event) => {
     // prevent onSubmit to be call
     event.preventDefault();
-    const { source } = this.state;
+    const { source, query } = this.state;
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
+      ReactPiwik.push(["trackEvent", "selectedSource", source]);
       Router.pushRoute("annuaire", {
         q: suggestion._source.title,
         coord: `${lon}:${lat}`,
@@ -132,11 +134,12 @@ class Search extends React.Component {
       });
       return;
     }
-
+    ReactPiwik.push(["trackEvent", "selectedSuggestion", query, suggestion]);
     Router.pushRoute("recherche", { q: suggestion, source });
   };
 
   onClear = () => {
+    ReactPiwik.push(["trackEvent", "clearSearch"]);
     this.setState({ suggestions: [] });
   };
 
