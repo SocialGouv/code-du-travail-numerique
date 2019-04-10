@@ -17,18 +17,15 @@ export default {
   ],
   external: ["prop-types", "react", "react-dom", "styled-components"],
   plugins: [
-    resolve({
-      mainFields: ["module", "jsnext", "jsnext:main", "main"],
-      dedupe: ["react", "react-dom", "styled-components"]
-    }),
-    commonjs({
-      exclude: "src/**"
-    }),
-    replace({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    }),
     babel({
-      exclude: "node_modules/**"
+      exclude: /node_modules/
+    }),
+    resolve({
+      mainFields: ["module", "jsnext", "jsnext:main", "main"]
+    }),
+    commonjs(),
+    replace({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
     })
   ],
   watch: {
