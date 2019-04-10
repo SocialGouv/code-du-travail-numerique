@@ -32,7 +32,7 @@ spec:
             memory: 512Mi
             cpu: 500m
           requests:
-          memory: 256Mi
+            memory: 256Mi
             cpu: 100m
         securityContext:
           privileged: true
