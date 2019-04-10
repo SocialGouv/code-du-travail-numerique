@@ -97,9 +97,9 @@ const Button = styled.button`
     let backgroundColor = props["aria-pressed"]
       ? darken(0.05, colors.blueLight)
       : colors.blueLight;
-    let color = (color = props["aria-pressed"]
+    let color = props["aria-pressed"]
       ? darken(0.02, colors.primaryText)
-      : colors.primaryText);
+      : colors.primaryText;
 
     if (props.primary) {
       backgroundColor = props["aria-pressed"]
