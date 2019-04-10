@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import { getText } from "../utils";
 
 class LienExterne extends React.PureComponent {

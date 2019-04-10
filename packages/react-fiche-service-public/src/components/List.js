@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { theme } from "@cdt/ui";
 import styled from "styled-components";
-import { ElementBuilder } from "../index";
+
+import { theme } from "@cdt/ui";
+
+import { ElementBuilder } from "./ElementBuilder";
 
 const { spacing } = theme;
 

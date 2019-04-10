@@ -208,10 +208,6 @@ exports[`<FicheServicePublic /> should render 1`] = `
   border-bottom-left-radius: 0.25rem;
 }
 
-.c0 * > *:last-child {
-  margin-bottom: 0;
-}
-
 .c15 {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -226,6 +222,10 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c1 {
   margin-bottom: 2rem;
   font-size: 1.1rem;
+}
+
+.c0 * > *:last-child {
+  margin-bottom: 0;
 }
 
 <div>

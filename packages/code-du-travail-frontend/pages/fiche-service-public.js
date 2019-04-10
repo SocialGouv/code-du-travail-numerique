@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { ExternalLink } from "react-feather";
 import getConfig from "next/config";
-import FicheServicePublic from "../src/FicheServicePublic";
+import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";

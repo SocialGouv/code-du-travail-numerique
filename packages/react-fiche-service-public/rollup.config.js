@@ -15,7 +15,7 @@ export default {
       format: "esm"
     }
   ],
-  external: ["prop-types", "react", "react-dom", "styled-components"],
+  external: ["react", "react-dom", "prop-types", "styled-components"],
   plugins: [
     babel(),
     resolve({
@@ -23,7 +23,7 @@ export default {
     }),
     commonjs(),
     replace({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
+      "process.env.NODE_ENV": JSON.stringify("production")
     })
   ],
   watch: {

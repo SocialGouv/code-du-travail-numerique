@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+
 import { theme, SrOnly } from "@cdt/ui";
-import { ElementBuilder } from "../index";
+
+import { ElementBuilder } from "./ElementBuilder";
 import { ignoreParagraph } from "../utils";
 
 const { box, colors, fonts, spacing } = theme;

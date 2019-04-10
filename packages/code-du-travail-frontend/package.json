@@ -6,12 +6,21 @@
   "homepage": "https://code-du-travail.beta.gouv.fr/",
   "keywords": [],
   "main": "src/index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "lint": "eslint src/* pages/*",
+    "prepush": "yarn lint && yarn test",
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "test": "NODE_ENV=test jest"
+  },
   "dependencies": {
     "@cdt/css": "^2.1.0",
     "@cdt/data": "^2.1.0",
     "@cdt/ui": "^2.1.0",
     "@sentry/browser": "^4.1.0",
     "@socialgouv/next-routes": "^1.5.1",
+    "@socialgouv/react-fiche-service-public": "^1.0.0",
     "@zeit/next-css": "^1.0.0",
     "date-fns": "^1.29.0",
     "express": "^4.16.3",
@@ -28,7 +37,6 @@
     "react-mathjax-preview": "^0.1.10",
     "react-piwik": "^1.6.0",
     "react-switch": "^3.0.4",
-    "react-tabs": "^3.0.0",
     "react-uid": "^2.0.1",
     "speakingurl": "14.0.1",
     "styled-components": "^4.2.0",
@@ -46,16 +54,8 @@
     "eslint": "^5.13.0",
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
-    "prettier": "^1.14.3",
+    "prettier": "^1.16.4",
     "react-testing-library": "^6.0.3"
-  },
-  "scripts": {
-    "dev": "node server.js",
-    "lint": "eslint src/* pages/*",
-    "prepush": "yarn lint && yarn test",
-    "start": "NODE_ENV=production node server.js",
-    "build": "next build",
-    "test": "NODE_ENV=test jest"
   },
   "jest": {
     "collectCoverageFrom": [
