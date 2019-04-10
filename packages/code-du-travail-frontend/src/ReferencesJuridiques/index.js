@@ -26,9 +26,20 @@ class ReferencesJuridiques extends React.PureComponent {
       );
     });
 
+    const explanatoryText =
+      hierarchieBlocElements.length && references.length > 1 ? (
+        <p>
+          {`Attention, en fonction des articles du Code du travail, un accord de branche ou un
+            accord d'entreprise peut définir le droit applicable. Nous vous précisons ci-dessous
+            quel texte juridique est applicable pour les différents articles du Code du travail liés
+            à cette réponse.`}
+        </p>
+      ) : null;
+
     return (
       <StyledSection light>
         <StyledHeading>Références juridiques</StyledHeading>
+        {explanatoryText}
         {hierarchieBlocElements}
         {autresReferences.length > 0 && (
           <AutresReferences
