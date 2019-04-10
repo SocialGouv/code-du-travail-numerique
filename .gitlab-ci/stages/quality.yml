@@ -17,17 +17,12 @@
     PIPENV_VENV_IN_PROJECT: 1
     PIPENV_IGNORE_VIRTUALENVS: 1
     PYTHONPATH: .
-  # HAXX(douglasduteil): use multi-line script
-  # "Official" workaround to merge YAML array
-  # see https://gitlab.com/gitlab-org/gitlab-ce/issues/19677#note_13008199
-  before_script: &python_based_install_step |-
-    set -xeo pipefail;
-    echo;
-    apk add --no-cache build-base;
-    pip install --upgrade pip;
-    pip install pipenv==$PIP_VERSION;
-    pipenv install --dev;
-    set +x;
+  before_script:
+    - cd packages/code-du-travail-data
+    - apk add --no-cache build-base
+    - pip install --upgrade pip
+    - pip install pipenv==$PIP_VERSION
+    - pipenv install --dev
 
 #
 
@@ -52,9 +47,6 @@ Lint @cdtn/frontend:
 Lint @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
-  before_script:
-    - cd packages/code-du-travail-data
-    - *python_based_install_step
   script:
     - pipenv run pylint --output-format=colorized search
 
@@ -102,8 +94,5 @@ Test @cdtn/api:
 Test @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
-  before_script:
-    - cd packages/code-du-travail-data
-    - *python_based_install_step
   script:
     - pipenv run python search/indexing/document_slug_checker.py -v

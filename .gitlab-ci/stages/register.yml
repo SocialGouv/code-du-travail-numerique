@@ -1,20 +1,22 @@
 #
 
-.build_and_push_stage: &build_and_push_stage
+.register-stage: &register_stage
   extends: .docker_stage
   stage: "Registration"
   dependencies: []
   before_script:
     - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
-  script:
+    # NOTE(douglasduteil): do not fail if no previous sha image exist
     - docker pull $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA || true
+  script:
+    - echo "Build $IMAGE_NAME:$CI_COMMIT_SHA from $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA"
     - docker build $DOCKER_BUILD_ARGS --cache-from $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA -t $IMAGE_NAME:$CI_COMMIT_SHA $CONTEXT
     - docker push $IMAGE_NAME
 
 #
 
 Register api image:
-  <<: *build_and_push_stage
+  <<: *register_stage
   variables:
     CONTEXT: packages/code-du-travail-api
     DOCKER_BUILD_ARGS: >-
@@ -23,7 +25,7 @@ Register api image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE/api
 
 Register frontend image:
-  <<: *build_and_push_stage
+  <<: *register_stage
   variables:
     CONTEXT: packages/code-du-travail-frontend
     DOCKER_BUILD_ARGS: >-
@@ -32,7 +34,7 @@ Register frontend image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
 
 Register data image:
-  <<: *build_and_push_stage
+  <<: *register_stage
   variables:
     CONTEXT: packages/code-du-travail-data
     DOCKER_BUILD_ARGS: ""
