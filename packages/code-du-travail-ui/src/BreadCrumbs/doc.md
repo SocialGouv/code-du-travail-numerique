@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import BreadCrumbs from ".";
 
-## \<BreadCrumbs/\>
+# BreadCrumbs
 
 <Playground>
   <BreadCrumbs />

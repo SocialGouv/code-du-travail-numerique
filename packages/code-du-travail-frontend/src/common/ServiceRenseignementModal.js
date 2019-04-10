@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button } from "@cdt/ui";
-import { DialogContent, DialogOverlay } from "@reach/dialog";
+import { Button, Modal } from "@cdt/ui";
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
 class ServiceRenseignementModal extends React.Component {
@@ -33,15 +32,9 @@ class ServiceRenseignementModal extends React.Component {
         <Button link className="link" onClick={this.openModal}>
           {this.props.children}
         </Button>
-        <DialogOverlay
-          isOpen={this.state.modalIsOpen}
-          style={{ background: "rgba(0, 0, 0, .5)" }}
-          onDismiss={this.closeModal}
-        >
-          <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
-            <ServiceRenseignement />
-          </DialogContent>
-        </DialogOverlay>
+        <Modal isOpen={this.state.modalIsOpen} onDismiss={this.closeModal}>
+          <ServiceRenseignement />
+        </Modal>
       </React.Fragment>
     );
   }

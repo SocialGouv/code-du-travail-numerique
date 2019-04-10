@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Badge from ".";
 
-## \<Badge/\>
+# Badge
 
 <Playground>
   <Badge>Badge</Badge>

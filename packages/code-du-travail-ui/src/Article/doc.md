@@ -6,7 +6,7 @@ import "@cdt/css";
 import { Playground, Props } from "docz";
 import Article from ".";
 
-## \<Article/\>
+# Article
 
 <Playground>
   <Article
