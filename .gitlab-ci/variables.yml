@@ -13,7 +13,7 @@ variables:
   GIT_STRATEGY: fetch
   IMAGE_INFRA_BASE_NAME: infra/images-docker
   KIBANA_PORT: 5601
-  NLP_PORT: "5000"
+  NLP_PORT: 5000
   PIP_VERSION: "11.10.1"
   PYTHON_VERSION: 3.6-alpine
   SUGGEST_DATA_URL: "https://gist.github.com/lionelB/1eba0e58af7b27d402c6fde38129352c/raw/45d19ed84af91a055630310f16157d32ac2ba345/data-test.txt"
