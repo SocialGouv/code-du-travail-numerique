@@ -1,6 +1,9 @@
 from subprocess import check_output
 import hashlib
 
+# This script compares the active remote branches and active k8s tags.
+# If a k8s tag doesn't match an active hashed remote branches name's, we delete all the k8s objects with this k8s tag.
+
 def get_active_branches():
   active_branche_list = []
   raw_active_branche = check_output('git branch -r', shell=True)
