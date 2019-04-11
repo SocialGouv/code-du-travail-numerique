@@ -3,7 +3,7 @@ version: "3"
 services:
   elasticsearch:
     build:
-      context: docker/elasticsearch
+      context: ./docker/elasticsearch
     ulimits:
       memlock:
         soft: -1
