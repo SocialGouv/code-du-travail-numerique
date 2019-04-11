@@ -1,5 +1,6 @@
 ---
 include:
+- /.gitlab-ci/extends.yml
 - '/k8s/kibana/.deploy-kibana-k8s.yml'
 - '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
 - '/k8s/apm-server/.deploy-apm-server-k8s.yml'
