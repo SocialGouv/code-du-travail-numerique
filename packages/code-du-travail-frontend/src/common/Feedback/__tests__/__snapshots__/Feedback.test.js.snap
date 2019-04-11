@@ -1,0 +1,439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Feedback/> should render 1`] = `
+.c4 {
+  padding: 0.625rem 1rem;
+  text-align: center;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-bottom-width: 2px;
+  border-top-width: 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-top-color: transparent;
+  border-bottom-color: #d1d1d1;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #0c0c0e;
+}
+
+.c4:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  background: #fff;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.c4[aria-pressed="true"] {
+  background: #d1d1d1;
+  color: #000;
+  border-top-color: #c4c4c4;
+  border-bottom-color: transparent;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  text-align: center;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-bottom-width: 2px;
+  border-top-width: 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-top-color: transparent;
+  border-bottom-color: #0053b3;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+}
+
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c5:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  background: #1a85ff;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.c5[aria-pressed="true"] {
+  background: #0053b3;
+  color: #e6e6e6;
+  border-top-color: #00479a;
+  border-bottom-color: transparent;
+}
+
+.c0 {
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
+}
+
+.c1 {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  min-width: 7rem;
+  margin-right: 1rem;
+}
+
+<div>
+  <section
+    class="section"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper wrapper-dark c0"
+      >
+        <div
+          class="c1"
+        >
+          <h3
+            class="c2"
+          >
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+          <p>
+            <button
+              aria-pressed="false"
+              class="c3 c4"
+            >
+              Non
+            </button>
+            <button
+              aria-pressed="false"
+              class="c3 c5"
+            >
+              Oui
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Feedback/> should render form once user answer no 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c4 {
+  margin-bottom: 1.25rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c6 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
+}
+
+.c1 {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <section
+    class="section"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper wrapper-dark c0"
+      >
+        <div
+          class="c1"
+        >
+          <h3
+            class="c2"
+          >
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+          <form
+            action="https://formspree.io/xbalrgzm"
+            class="c3"
+          >
+            <p>
+              <strong>
+                Merci pour votre réponse !
+              </strong>
+            </p>
+            <p>
+              Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
+            </p>
+            <input
+              name="question"
+              type="hidden"
+              value="Query"
+            />
+            <input
+              name="url"
+              type="hidden"
+              value="http://localhost/"
+            />
+            <input
+              name="source"
+              type="hidden"
+              value="Fiches"
+            />
+            <select
+              class="c4"
+              name="motif"
+            >
+              <option
+                value="Les informations proposées ne sont pas à jour"
+              >
+                Les informations proposées ne sont pas à jour
+              </option>
+              <option
+                value="Les informations me paraissent erronées"
+              >
+                Les informations me paraissent erronées
+              </option>
+              <option
+                value="Les informations me paraissent incomplètes"
+              >
+                Les informations me paraissent incomplètes
+              </option>
+              <option
+                value="Les informations me paraissent hors-sujet"
+              >
+                Les informations me paraissent hors-sujet
+              </option>
+              <option
+                value="Je n'ai pas trouvé la réponse à ma question"
+              >
+                Je n'ai pas trouvé la réponse à ma question
+              </option>
+            </select>
+            <textarea
+              class="c4"
+              name="message"
+              placeholder="Les informations ..."
+            />
+            <div
+              class="c5"
+            >
+              <button
+                class="btn btn__primary btn__feedback"
+              >
+                Envoyer mon commentaire
+              </button>
+              <div
+                class="c6"
+              />
+            </div>
+          </form>
+          <p>
+            Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
+             
+            <div
+              class="btn btn__link  link"
+              link="true"
+              role="button"
+              tabindex="0"
+            >
+              services de renseignement
+            </div>
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Feedback/> should render form once user answer yes 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c4 {
+  margin-bottom: 1.25rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c6 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+.c0 {
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
+}
+
+.c1 {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+<div>
+  <section
+    class="section"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="wrapper wrapper-dark c0"
+      >
+        <div
+          class="c1"
+        >
+          <h3
+            class="c2"
+          >
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+          <form
+            action="https://formspree.io/xbalrgzm"
+            class="c3"
+          >
+            <p>
+              <strong>
+                Merci pour votre réponse !
+              </strong>
+            </p>
+            <p>
+              Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
+            </p>
+            <input
+              name="question"
+              type="hidden"
+              value="Query"
+            />
+            <input
+              name="url"
+              type="hidden"
+              value="http://localhost/"
+            />
+            <input
+              name="source"
+              type="hidden"
+              value="Fiches"
+            />
+            <textarea
+              class="c4"
+              name="message"
+              placeholder="Les informations ..."
+            />
+            <div
+              class="c5"
+            >
+              <button
+                class="btn btn__primary btn__feedback"
+              >
+                Envoyer mon commentaire
+              </button>
+              <div
+                class="c6"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Feedback/> should send piwik event when click no 1`] = `"[]"`;
+
+exports[`<Feedback/> should send piwik event when click yes 1`] = `"[]"`;

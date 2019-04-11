@@ -2,179 +2,105 @@
 
 exports[`<AddressResults/> should render no results 1`] = `
 .c4 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
+  padding: 0.625rem 1rem;
   text-align: center;
-  white-space: nowrap;
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.625rem 1rem;
-  border-radius: 0.25rem;
   border: 1px solid transparent;
   border-bottom-width: 2px;
   border-top-width: 1px;
-  color: #fff;
-  background-color: #006be6;
-  border-bottom-color: #0053b3;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
-  background: #eaeaea;
-  border-bottom-color: #d1d1d1;
-  border-top-color: transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   color: #0c0c0e;
-}
-
-.c4:focus {
-  outline: none;
-}
-
-.c4:focus:not(:focus-visible) {
-  border: 1px solid #80bdff;
-}
-
-.c4:focus:not(:-moz-focusring) {
-  border: 1px solid #80bdff;
+  background: #eaeaea;
+  border-top-color: transparent;
+  border-bottom-color: #d1d1d1;
 }
 
 .c4[disabled] {
   cursor: not-allowed;
-  opacity: 0.8;
-  box-shadow: none;
-  pointer-events: none;
 }
 
-.c4:active {
-  border-bottom-color: transparent;
-  border-top-color: transparent;
-  position: relative;
-  top: 1px;
-}
-
-.c4:hover {
-  background: #d1d1d1;
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
+  background: #f7f7f7;
   color: #0c0c0e;
 }
 
-.c4:active {
-  background: #f0f0f0;
+.c4:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  background: #fff;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.c4[aria-pressed="true"] {
+  background: #d1d1d1;
+  color: #000;
+  border-top-color: #c4c4c4;
+  border-bottom-color: transparent;
 }
 
 .c5 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
+  padding: 0.625rem 1rem;
   text-align: center;
-  white-space: nowrap;
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.625rem 1rem;
-  border-radius: 0.25rem;
   border: 1px solid transparent;
   border-bottom-width: 2px;
   border-top-width: 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   color: #fff;
-  background-color: #006be6;
-  border-bottom-color: #0053b3;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
   background: #006be6;
-  border-bottom-color: #0053b3;
   border-top-color: transparent;
-  color: #fff;
-}
-
-.c5:focus {
-  outline: none;
-}
-
-.c5:focus:not(:focus-visible) {
-  border: 1px solid #80bdff;
-}
-
-.c5:focus:not(:-moz-focusring) {
-  border: 1px solid #80bdff;
+  border-bottom-color: #0053b3;
 }
 
 .c5[disabled] {
   cursor: not-allowed;
-  opacity: 0.8;
-  box-shadow: none;
-  pointer-events: none;
 }
 
-.c5:active {
-  border-bottom-color: transparent;
-  border-top-color: transparent;
-  position: relative;
-  top: 1px;
-}
-
-.c5:hover {
-  background: #0053b3;
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
+  background: #07f;
   color: #fff;
 }
 
-.c5:active {
-  background: #0071f3;
+.c5:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  background: #1a85ff;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.c5[aria-pressed="true"] {
+  background: #0053b3;
+  color: #e6e6e6;
+  border-top-color: #00479a;
+  border-bottom-color: transparent;
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
 }
 
 .c1 {
-  -webkit-flex-basis: calc(2rem + 0.5vw);
-  -ms-flex-preferred-size: calc(2rem + 0.5vw);
-  flex-basis: calc(2rem + 0.5vw);
-  min-width: 2rem;
-  margin: 0.625rem;
-  margin-left: 0;
-  margin-right: 1.25rem;
+  position: relative;
+  padding: 0 2rem;
 }
 
 .c2 {
-  color: #006ab2;
-  line-height: 2rem;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .c3 {
@@ -212,62 +138,30 @@ exports[`<AddressResults/> should render no results 1`] = `
             class="container"
           >
             <div
-              class="wrapper wrapper-dark wrapper-narrow"
+              class="wrapper wrapper-dark c0"
             >
               <div
-                class="c0"
+                class="c1"
               >
-                <svg
-                  class="c1"
-                  viewBox="0 0 83 87"
+                <h3
+                  class="c2"
                 >
-                  <title>
-                    Perdu ?
-                  </title>
-                  <path
-                    d="M23.382 84.445c.24-.275.572-.445.94-.445h34.356c.172 0 .335.037.485.104.209-.224.337-.524.337-.854 0-.41.196-.773.5-1v-2.977c0-.221.066-.43.183-.61a6.89 6.89 0 0 0-5.874-5.85c-.19.118-.41.186-.642.186L48.333 73C47.598 73 47 72.33 47 71.5c0-.826.596-1.499 1.333-1.499h5.026a1.405 1.405 0 0 1 .053 0l.255-.001c.053 0 .106.004.157.01 4.922.228 8.893 4.172 9.162 9.085.01.058.014.118.014.178v3.454c0 .576-.448 1.06-1.065 1.219a3.763 3.763 0 0 1-2.73 2.93c-.161.08-.34.124-.527.124H24.322c-.097 0-.19-.012-.281-.034-.094.022-.19.034-.291.034A3.755 3.755 0 0 1 20 83.25c0-.093.01-.184.03-.27a1.096 1.096 0 0 1-.03-.253v-3.454c0-.06.005-.12.014-.178.268-4.913 4.24-8.857 9.162-9.085a1.2 1.2 0 0 1 .157-.01h.255a9.76 9.76 0 0 1 .053 0l5.026.001c.737 0 1.333.673 1.333 1.5 0 .83-.597 1.499-1.333 1.499l-5.334-.001c-.233 0-.451-.068-.642-.185a6.89 6.89 0 0 0-5.874 5.849c.117.18.183.389.183.61v3.454c0 .353-.169.672-.441.903.124.388.433.695.823.815zM41.504 81C40.676 81 40 80.33 40 79.5c0-.829.662-1.5 1.487-1.5h.017c.825 0 1.496.671 1.496 1.5 0 .83-.67 1.5-1.496 1.5z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M46.996 73.772l1.637-1.638c.05-.049.093-.1.132-.155.703-.112 1.235-.662 1.235-1.325v-4.308c0-.745-.67-1.346-1.5-1.346s-1.5.601-1.5 1.346v3.904a1.265 1.265 0 0 0-.134.116l-1.744 1.744-2.702-.857a1.445 1.445 0 0 0-.92-.25 1.444 1.444 0 0 0-.921.25l-3.46 1.098-1.217-1.217c.063-.149.098-.31.098-.48v-4.308c0-.745-.67-1.346-1.5-1.346s-1.5.601-1.5 1.346v4.308c0 .102.013.201.036.296-.1.411.01.863.33 1.184l2.5 2.5a1.248 1.248 0 0 0 1.196.327 1.461 1.461 0 0 0 .78-.03l3.658-1.16 2.944.934a1.248 1.248 0 0 0 .975.284c.06.007.121.011.18.011.587 0 1.133-.353 1.329-.912.036-.105.059-.21.068-.316z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M56.913 54.948C56.075 62.833 49.258 69 41 69c-8.666 0-15.745-6.791-15.993-15.233a1.261 1.261 0 0 1-.007-.13V41.363c0-.754.67-1.364 1.5-1.364s1.5.61 1.5 1.364v12.272c0 .3-.105.576-.284.8.585 6.685 6.32 11.95 13.284 11.95 7.352 0 13.334-5.868 13.334-13.078 0-.485.268-.907.666-1.133V41.363c0-.753.671-1.363 1.5-1.363.83 0 1.5.61 1.5 1.363v12.274c0 .624-.458 1.148-1.087 1.31z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M37.614 30.775c.2.143.434.225.686.225H48v3.667c0 .737.67 1.333 1.5 1.333.358 0 .687-.111.945-.297a5.15 5.15 0 0 1 3.984 5.011 1.285 1.285 0 1 0 2.571 0c0-3.665-2.568-6.74-6-7.522v-3.859c0-.737-.67-1.333-1.5-1.333-.153 0-.3.02-.44.058A1.143 1.143 0 0 0 48.7 28H38.3c-.046 0-.091.003-.136.008C30.863 28.258 25 34.275 25 41.636a1.362 1.362 0 1 0 2.727 0c0-5.67 4.35-10.344 9.887-10.86zm-5.986 12.676c1.481.635 5.248 2.05 9.373 2.05 5.315 0 9.988-2.326 10.034-2.35.318-.161.675-.188.997-.102.468-.127.99-.007 1.358.362l4.2 4.2a1.399 1.399 0 1 1-1.98 1.979l-3.944-3.944C50.098 46.34 45.836 48 41 48c-4.237 0-8.034-1.275-9.964-2.057L27.39 49.59a1.397 1.397 0 0 1-1.98 0 1.399 1.399 0 0 1 0-1.98l3.62-3.619c.025-.113.068-.224.13-.331.262-.458.785-.703 1.307-.654a1.396 1.396 0 0 1 1.161.445zM18.702 46c-.755 4.44-4.63 7.833-9.282 7.833-5.19 0-9.415-4.226-9.415-9.416s4.224-9.415 9.415-9.416c2.516 0 4.88.98 6.659 2.757A9.345 9.345 0 0 1 18.73 43h2.87c.774 0 1.4.67 1.4 1.5s-.626 1.5-1.4 1.5h-2.898zm-9.279-8.31c-3.71.002-6.728 3.019-6.728 6.727a6.733 6.733 0 0 0 6.725 6.725 6.733 6.733 0 0 0 6.725-6.726c0-3.708-3.015-6.725-6.722-6.725zm54.874 5.143c.755-4.44 4.63-7.833 9.282-7.833 5.19 0 9.415 4.225 9.415 9.415 0 5.191-4.224 9.416-9.415 9.417a9.36 9.36 0 0 1-6.658-2.757 9.345 9.345 0 0 1-2.652-5.242h-2.87c-.774 0-1.4-.671-1.4-1.5 0-.83.626-1.5 1.4-1.5h2.898zm9.28 8.309c3.709-.002 6.727-3.018 6.727-6.727a6.733 6.733 0 0 0-6.725-6.725 6.733 6.733 0 0 0-6.725 6.727c0 3.708 3.015 6.725 6.722 6.725zM57.286 26.388c-2.605-3.674-2.264-8.813 1.025-12.102 3.67-3.67 9.645-3.67 13.315 0s3.671 9.644.001 13.316a9.36 9.36 0 0 1-6.657 2.758 9.345 9.345 0 0 1-5.583-1.83l-2.028 2.028c-.548.548-1.465.516-2.051-.07-.587-.587-.618-1.504-.07-2.052l2.048-2.048zm12.437-.686c2.622-2.624 2.623-6.892 0-9.514a6.733 6.733 0 0 0-9.51 0 6.733 6.733 0 0 0 .001 9.512c2.622 2.622 6.888 2.623 9.509.002zm-29.809-6.086c-4.44-.755-7.833-4.63-7.833-9.282 0-5.19 4.225-9.415 9.415-9.415 5.191 0 9.416 4.224 9.417 9.415a9.36 9.36 0 0 1-2.757 6.658 9.345 9.345 0 0 1-5.242 2.652v2.87c0 .774-.671 1.4-1.5 1.4-.83 0-1.5-.626-1.5-1.4v-2.898zm8.309-9.28c-.002-3.709-3.018-6.727-6.727-6.727a6.733 6.733 0 0 0-6.725 6.725 6.733 6.733 0 0 0 6.727 6.725c3.708 0 6.725-3.015 6.725-6.722zM23.469 28.627c-3.674 2.605-8.813 2.264-12.102-1.025-3.67-3.67-3.67-9.645 0-13.315s9.644-3.671 13.316-.001a9.36 9.36 0 0 1 2.758 6.657 9.345 9.345 0 0 1-1.83 5.583l2.028 2.028c.548.548.516 1.465-.07 2.051-.587.587-1.504.618-2.052.07l-2.048-2.048zm-.686-12.437c-2.624-2.622-6.892-2.623-9.514 0a6.733 6.733 0 0 0 0 9.51 6.733 6.733 0 0 0 9.512-.001c2.622-2.622 2.623-6.888.002-9.509z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M7.911 46.406v-.57c0-.434.087-.8.26-1.1.172-.298.48-.589.92-.872.35-.225.601-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.247-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.287.71L6 40.931c1.076-.628 2.199-.942 3.37-.942.963 0 1.719.217 2.267.65.549.434.823 1.024.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.494v.339H7.91zm-.278 2.323c0-.407.115-.722.347-.943.23-.221.57-.332 1.02-.332.432 0 .764.112.995.336.23.223.346.536.346.939 0 .402-.12.714-.36.935-.24.221-.566.332-.981.332-.428 0-.762-.11-1.004-.328-.242-.22-.363-.532-.363-.94zm8.572-26.107v-.57c0-.434.087-.8.26-1.099.172-.299.479-.59.92-.873.35-.225.601-.429.754-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.246-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.288.71l-.9-1.805c1.075-.628 2.199-.942 3.37-.942.963 0 1.718.217 2.267.65.549.434.823 1.025.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.278 2.323c0-.407.115-.721.346-.943.231-.22.572-.331 1.02-.331.433 0 .764.111.995.335.232.223.347.536.347.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.763-.11-1.004-.328-.242-.22-.363-.532-.363-.94zM39.91 12.429v-.57c0-.434.087-.8.26-1.099.172-.299.48-.59.92-.873.35-.225.601-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.247-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.287.71L38 6.954c1.076-.628 2.199-.942 3.37-.942.963 0 1.719.217 2.267.65.549.434.823 1.024.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.278 2.323c0-.407.115-.721.347-.943.23-.22.57-.331 1.02-.331.432 0 .764.111.995.335.23.223.346.536.346.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.762-.11-1.004-.328-.242-.22-.363-.532-.363-.94zm24.778 7.665v-.57c0-.434.087-.8.26-1.099.172-.298.48-.59.92-.873.35-.225.601-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.247-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.287.71l-.901-1.805c1.076-.628 2.199-.942 3.37-.942.963 0 1.719.217 2.267.65.549.434.823 1.025.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.278 2.323c0-.407.115-.721.347-.943.23-.22.57-.331 1.02-.331.432 0 .764.111.995.335.23.223.346.536.346.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.762-.11-1.004-.328-.242-.22-.363-.532-.363-.94zm8.31 21.326v-.57c0-.434.086-.8.258-1.099.173-.298.48-.59.92-.873.35-.225.602-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.246-.441c-.164-.109-.378-.163-.641-.163-.653 0-1.415.237-2.288.71l-.9-1.805c1.075-.628 2.199-.942 3.37-.942.962 0 1.718.217 2.267.65.549.434.823 1.025.823 1.772 0 .536-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.28 2.323c0-.407.116-.721.347-.943.231-.22.572-.331 1.02-.331.433 0 .764.111.995.335.232.223.347.536.347.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.763-.11-1.004-.328-.242-.22-.363-.532-.363-.94z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <div>
-                  <h3
-                    class="c2"
+                  Avez-vous trouvé la réponse à votre question ?
+                </h3>
+                <p>
+                  <button
+                    aria-pressed="false"
+                    class="c3 c4"
                   >
-                    Avez-vous trouvé la réponse à votre question ?
-                  </h3>
-                  <p>
-                    <button
-                      aria-pressed="false"
-                      class="c3 c4"
-                      type="button"
-                    >
-                      Non
-                    </button>
-                    <button
-                      aria-pressed="false"
-                      class="c3 c5"
-                      type="button"
-                    >
-                      Oui
-                    </button>
-                  </p>
-                </div>
+                    Non
+                  </button>
+                  <button
+                    aria-pressed="false"
+                    class="c3 c5"
+                  >
+                    Oui
+                  </button>
+                </p>
               </div>
             </div>
           </div>
@@ -280,179 +174,105 @@ exports[`<AddressResults/> should render no results 1`] = `
 
 exports[`<AddressResults/> should render results 1`] = `
 .c8 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
+  padding: 0.625rem 1rem;
   text-align: center;
-  white-space: nowrap;
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.625rem 1rem;
-  border-radius: 0.25rem;
   border: 1px solid transparent;
   border-bottom-width: 2px;
   border-top-width: 1px;
-  color: #fff;
-  background-color: #006be6;
-  border-bottom-color: #0053b3;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
-  background: #eaeaea;
-  border-bottom-color: #d1d1d1;
-  border-top-color: transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   color: #0c0c0e;
-}
-
-.c8:focus {
-  outline: none;
-}
-
-.c8:focus:not(:focus-visible) {
-  border: 1px solid #80bdff;
-}
-
-.c8:focus:not(:-moz-focusring) {
-  border: 1px solid #80bdff;
+  background: #eaeaea;
+  border-top-color: transparent;
+  border-bottom-color: #d1d1d1;
 }
 
 .c8[disabled] {
   cursor: not-allowed;
-  opacity: 0.8;
-  box-shadow: none;
-  pointer-events: none;
 }
 
-.c8:active {
-  border-bottom-color: transparent;
-  border-top-color: transparent;
-  position: relative;
-  top: 1px;
-}
-
-.c8:hover {
-  background: #d1d1d1;
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
+  background: #f7f7f7;
   color: #0c0c0e;
 }
 
-.c8:active {
-  background: #f0f0f0;
+.c8:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  background: #fff;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.c8[aria-pressed="true"] {
+  background: #d1d1d1;
+  color: #000;
+  border-top-color: #c4c4c4;
+  border-bottom-color: transparent;
 }
 
 .c9 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0;
+  padding: 0.625rem 1rem;
   text-align: center;
-  white-space: nowrap;
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.625rem 1rem;
-  border-radius: 0.25rem;
   border: 1px solid transparent;
   border-bottom-width: 2px;
   border-top-width: 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   color: #fff;
-  background-color: #006be6;
-  border-bottom-color: #0053b3;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
   background: #006be6;
-  border-bottom-color: #0053b3;
   border-top-color: transparent;
-  color: #fff;
-}
-
-.c9:focus {
-  outline: none;
-}
-
-.c9:focus:not(:focus-visible) {
-  border: 1px solid #80bdff;
-}
-
-.c9:focus:not(:-moz-focusring) {
-  border: 1px solid #80bdff;
+  border-bottom-color: #0053b3;
 }
 
 .c9[disabled] {
   cursor: not-allowed;
-  opacity: 0.8;
-  box-shadow: none;
-  pointer-events: none;
 }
 
-.c9:active {
-  border-bottom-color: transparent;
-  border-top-color: transparent;
-  position: relative;
-  top: 1px;
-}
-
-.c9:hover {
-  background: #0053b3;
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
+  background: #07f;
   color: #fff;
 }
 
-.c9:active {
-  background: #0071f3;
+.c9:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  background: #1a85ff;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+.c9[aria-pressed="true"] {
+  background: #0053b3;
+  color: #e6e6e6;
+  border-top-color: #00479a;
+  border-bottom-color: transparent;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
 }
 
 .c5 {
-  -webkit-flex-basis: calc(2rem + 0.5vw);
-  -ms-flex-preferred-size: calc(2rem + 0.5vw);
-  flex-basis: calc(2rem + 0.5vw);
-  min-width: 2rem;
-  margin: 0.625rem;
-  margin-left: 0;
-  margin-right: 1.25rem;
+  position: relative;
+  padding: 0 2rem;
 }
 
 .c6 {
-  color: #006ab2;
-  line-height: 2rem;
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .c7 {
@@ -563,62 +383,30 @@ exports[`<AddressResults/> should render results 1`] = `
             class="container"
           >
             <div
-              class="wrapper wrapper-dark wrapper-narrow"
+              class="wrapper wrapper-dark c4"
             >
               <div
-                class="c4"
+                class="c5"
               >
-                <svg
-                  class="c5"
-                  viewBox="0 0 83 87"
+                <h3
+                  class="c6"
                 >
-                  <title>
-                    Perdu ?
-                  </title>
-                  <path
-                    d="M23.382 84.445c.24-.275.572-.445.94-.445h34.356c.172 0 .335.037.485.104.209-.224.337-.524.337-.854 0-.41.196-.773.5-1v-2.977c0-.221.066-.43.183-.61a6.89 6.89 0 0 0-5.874-5.85c-.19.118-.41.186-.642.186L48.333 73C47.598 73 47 72.33 47 71.5c0-.826.596-1.499 1.333-1.499h5.026a1.405 1.405 0 0 1 .053 0l.255-.001c.053 0 .106.004.157.01 4.922.228 8.893 4.172 9.162 9.085.01.058.014.118.014.178v3.454c0 .576-.448 1.06-1.065 1.219a3.763 3.763 0 0 1-2.73 2.93c-.161.08-.34.124-.527.124H24.322c-.097 0-.19-.012-.281-.034-.094.022-.19.034-.291.034A3.755 3.755 0 0 1 20 83.25c0-.093.01-.184.03-.27a1.096 1.096 0 0 1-.03-.253v-3.454c0-.06.005-.12.014-.178.268-4.913 4.24-8.857 9.162-9.085a1.2 1.2 0 0 1 .157-.01h.255a9.76 9.76 0 0 1 .053 0l5.026.001c.737 0 1.333.673 1.333 1.5 0 .83-.597 1.499-1.333 1.499l-5.334-.001c-.233 0-.451-.068-.642-.185a6.89 6.89 0 0 0-5.874 5.849c.117.18.183.389.183.61v3.454c0 .353-.169.672-.441.903.124.388.433.695.823.815zM41.504 81C40.676 81 40 80.33 40 79.5c0-.829.662-1.5 1.487-1.5h.017c.825 0 1.496.671 1.496 1.5 0 .83-.67 1.5-1.496 1.5z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M46.996 73.772l1.637-1.638c.05-.049.093-.1.132-.155.703-.112 1.235-.662 1.235-1.325v-4.308c0-.745-.67-1.346-1.5-1.346s-1.5.601-1.5 1.346v3.904a1.265 1.265 0 0 0-.134.116l-1.744 1.744-2.702-.857a1.445 1.445 0 0 0-.92-.25 1.444 1.444 0 0 0-.921.25l-3.46 1.098-1.217-1.217c.063-.149.098-.31.098-.48v-4.308c0-.745-.67-1.346-1.5-1.346s-1.5.601-1.5 1.346v4.308c0 .102.013.201.036.296-.1.411.01.863.33 1.184l2.5 2.5a1.248 1.248 0 0 0 1.196.327 1.461 1.461 0 0 0 .78-.03l3.658-1.16 2.944.934a1.248 1.248 0 0 0 .975.284c.06.007.121.011.18.011.587 0 1.133-.353 1.329-.912.036-.105.059-.21.068-.316z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M56.913 54.948C56.075 62.833 49.258 69 41 69c-8.666 0-15.745-6.791-15.993-15.233a1.261 1.261 0 0 1-.007-.13V41.363c0-.754.67-1.364 1.5-1.364s1.5.61 1.5 1.364v12.272c0 .3-.105.576-.284.8.585 6.685 6.32 11.95 13.284 11.95 7.352 0 13.334-5.868 13.334-13.078 0-.485.268-.907.666-1.133V41.363c0-.753.671-1.363 1.5-1.363.83 0 1.5.61 1.5 1.363v12.274c0 .624-.458 1.148-1.087 1.31z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M37.614 30.775c.2.143.434.225.686.225H48v3.667c0 .737.67 1.333 1.5 1.333.358 0 .687-.111.945-.297a5.15 5.15 0 0 1 3.984 5.011 1.285 1.285 0 1 0 2.571 0c0-3.665-2.568-6.74-6-7.522v-3.859c0-.737-.67-1.333-1.5-1.333-.153 0-.3.02-.44.058A1.143 1.143 0 0 0 48.7 28H38.3c-.046 0-.091.003-.136.008C30.863 28.258 25 34.275 25 41.636a1.362 1.362 0 1 0 2.727 0c0-5.67 4.35-10.344 9.887-10.86zm-5.986 12.676c1.481.635 5.248 2.05 9.373 2.05 5.315 0 9.988-2.326 10.034-2.35.318-.161.675-.188.997-.102.468-.127.99-.007 1.358.362l4.2 4.2a1.399 1.399 0 1 1-1.98 1.979l-3.944-3.944C50.098 46.34 45.836 48 41 48c-4.237 0-8.034-1.275-9.964-2.057L27.39 49.59a1.397 1.397 0 0 1-1.98 0 1.399 1.399 0 0 1 0-1.98l3.62-3.619c.025-.113.068-.224.13-.331.262-.458.785-.703 1.307-.654a1.396 1.396 0 0 1 1.161.445zM18.702 46c-.755 4.44-4.63 7.833-9.282 7.833-5.19 0-9.415-4.226-9.415-9.416s4.224-9.415 9.415-9.416c2.516 0 4.88.98 6.659 2.757A9.345 9.345 0 0 1 18.73 43h2.87c.774 0 1.4.67 1.4 1.5s-.626 1.5-1.4 1.5h-2.898zm-9.279-8.31c-3.71.002-6.728 3.019-6.728 6.727a6.733 6.733 0 0 0 6.725 6.725 6.733 6.733 0 0 0 6.725-6.726c0-3.708-3.015-6.725-6.722-6.725zm54.874 5.143c.755-4.44 4.63-7.833 9.282-7.833 5.19 0 9.415 4.225 9.415 9.415 0 5.191-4.224 9.416-9.415 9.417a9.36 9.36 0 0 1-6.658-2.757 9.345 9.345 0 0 1-2.652-5.242h-2.87c-.774 0-1.4-.671-1.4-1.5 0-.83.626-1.5 1.4-1.5h2.898zm9.28 8.309c3.709-.002 6.727-3.018 6.727-6.727a6.733 6.733 0 0 0-6.725-6.725 6.733 6.733 0 0 0-6.725 6.727c0 3.708 3.015 6.725 6.722 6.725zM57.286 26.388c-2.605-3.674-2.264-8.813 1.025-12.102 3.67-3.67 9.645-3.67 13.315 0s3.671 9.644.001 13.316a9.36 9.36 0 0 1-6.657 2.758 9.345 9.345 0 0 1-5.583-1.83l-2.028 2.028c-.548.548-1.465.516-2.051-.07-.587-.587-.618-1.504-.07-2.052l2.048-2.048zm12.437-.686c2.622-2.624 2.623-6.892 0-9.514a6.733 6.733 0 0 0-9.51 0 6.733 6.733 0 0 0 .001 9.512c2.622 2.622 6.888 2.623 9.509.002zm-29.809-6.086c-4.44-.755-7.833-4.63-7.833-9.282 0-5.19 4.225-9.415 9.415-9.415 5.191 0 9.416 4.224 9.417 9.415a9.36 9.36 0 0 1-2.757 6.658 9.345 9.345 0 0 1-5.242 2.652v2.87c0 .774-.671 1.4-1.5 1.4-.83 0-1.5-.626-1.5-1.4v-2.898zm8.309-9.28c-.002-3.709-3.018-6.727-6.727-6.727a6.733 6.733 0 0 0-6.725 6.725 6.733 6.733 0 0 0 6.727 6.725c3.708 0 6.725-3.015 6.725-6.722zM23.469 28.627c-3.674 2.605-8.813 2.264-12.102-1.025-3.67-3.67-3.67-9.645 0-13.315s9.644-3.671 13.316-.001a9.36 9.36 0 0 1 2.758 6.657 9.345 9.345 0 0 1-1.83 5.583l2.028 2.028c.548.548.516 1.465-.07 2.051-.587.587-1.504.618-2.052.07l-2.048-2.048zm-.686-12.437c-2.624-2.622-6.892-2.623-9.514 0a6.733 6.733 0 0 0 0 9.51 6.733 6.733 0 0 0 9.512-.001c2.622-2.622 2.623-6.888.002-9.509z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M7.911 46.406v-.57c0-.434.087-.8.26-1.1.172-.298.48-.589.92-.872.35-.225.601-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.247-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.287.71L6 40.931c1.076-.628 2.199-.942 3.37-.942.963 0 1.719.217 2.267.65.549.434.823 1.024.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.494v.339H7.91zm-.278 2.323c0-.407.115-.722.347-.943.23-.221.57-.332 1.02-.332.432 0 .764.112.995.336.23.223.346.536.346.939 0 .402-.12.714-.36.935-.24.221-.566.332-.981.332-.428 0-.762-.11-1.004-.328-.242-.22-.363-.532-.363-.94zm8.572-26.107v-.57c0-.434.087-.8.26-1.099.172-.299.479-.59.92-.873.35-.225.601-.429.754-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.246-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.288.71l-.9-1.805c1.075-.628 2.199-.942 3.37-.942.963 0 1.718.217 2.267.65.549.434.823 1.025.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.278 2.323c0-.407.115-.721.346-.943.231-.22.572-.331 1.02-.331.433 0 .764.111.995.335.232.223.347.536.347.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.763-.11-1.004-.328-.242-.22-.363-.532-.363-.94zM39.91 12.429v-.57c0-.434.087-.8.26-1.099.172-.299.48-.59.92-.873.35-.225.601-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.247-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.287.71L38 6.954c1.076-.628 2.199-.942 3.37-.942.963 0 1.719.217 2.267.65.549.434.823 1.024.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.278 2.323c0-.407.115-.721.347-.943.23-.22.57-.331 1.02-.331.432 0 .764.111.995.335.23.223.346.536.346.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.762-.11-1.004-.328-.242-.22-.363-.532-.363-.94zm24.778 7.665v-.57c0-.434.087-.8.26-1.099.172-.298.48-.59.92-.873.35-.225.601-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.247-.441c-.164-.109-.378-.163-.641-.163-.652 0-1.415.237-2.287.71l-.901-1.805c1.076-.628 2.199-.942 3.37-.942.963 0 1.719.217 2.267.65.549.434.823 1.025.823 1.772 0 .535-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.278 2.323c0-.407.115-.721.347-.943.23-.22.57-.331 1.02-.331.432 0 .764.111.995.335.23.223.346.536.346.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.762-.11-1.004-.328-.242-.22-.363-.532-.363-.94zm8.31 21.326v-.57c0-.434.086-.8.258-1.099.173-.298.48-.59.92-.873.35-.225.602-.429.755-.61a.939.939 0 0 0 .23-.624.504.504 0 0 0-.246-.441c-.164-.109-.378-.163-.641-.163-.653 0-1.415.237-2.288.71l-.9-1.805c1.075-.628 2.199-.942 3.37-.942.962 0 1.718.217 2.267.65.549.434.823 1.025.823 1.772 0 .536-.122.999-.366 1.39-.244.392-.634.762-1.17 1.112-.453.3-.737.52-.852.66a.755.755 0 0 0-.171.495v.338h-1.99zm-.28 2.323c0-.407.116-.721.347-.943.231-.22.572-.331 1.02-.331.433 0 .764.111.995.335.232.223.347.536.347.939 0 .402-.12.714-.36.935-.24.222-.566.332-.981.332-.428 0-.763-.11-1.004-.328-.242-.22-.363-.532-.363-.94z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <div>
-                  <h3
-                    class="c6"
+                  Avez-vous trouvé la réponse à votre question ?
+                </h3>
+                <p>
+                  <button
+                    aria-pressed="false"
+                    class="c7 c8"
                   >
-                    Avez-vous trouvé la réponse à votre question ?
-                  </h3>
-                  <p>
-                    <button
-                      aria-pressed="false"
-                      class="c7 c8"
-                      type="button"
-                    >
-                      Non
-                    </button>
-                    <button
-                      aria-pressed="false"
-                      class="c7 c9"
-                      type="button"
-                    >
-                      Oui
-                    </button>
-                  </p>
-                </div>
+                    Non
+                  </button>
+                  <button
+                    aria-pressed="false"
+                    class="c7 c9"
+                  >
+                    Oui
+                  </button>
+                </p>
               </div>
             </div>
           </div>

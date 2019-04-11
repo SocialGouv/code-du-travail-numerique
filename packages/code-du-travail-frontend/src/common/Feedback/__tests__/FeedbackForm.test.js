@@ -42,7 +42,7 @@ describe("<FeedbackForm />", () => {
       />
     );
     window.alert = jest.fn();
-    getByText("Envoyer ma question").click();
+    getByText("Envoyer mon commentaire").click();
     expect(alert).toHaveBeenCalled();
   });
 
@@ -58,7 +58,7 @@ describe("<FeedbackForm />", () => {
       />
     );
     const content = getByPlaceholderText(/les informations/i);
-    const button = getByText("Envoyer ma question");
+    const button = getByText("Envoyer mon commentaire");
 
     fireEvent.change(content, { target: { value: "marche pô" } });
     button.click();
@@ -77,7 +77,7 @@ describe("<FeedbackForm />", () => {
       />
     );
     const content = getByPlaceholderText(/les informations/i);
-    const button = getByText(/Envoyer ma question/i);
+    const button = getByText("Envoyer mon commentaire");
 
     fireEvent.change(content, { target: { value: "marche pô" } });
     expect(content.value).toBe("marche pô");
@@ -100,7 +100,7 @@ describe("<FeedbackForm />", () => {
     );
 
     const content = getByPlaceholderText(/les informations/i);
-    const button = getByText(/Envoyer ma question/i);
+    const button = getByText("Envoyer mon commentaire");
 
     fireEvent.change(content, { target: { value: "marche pô" } });
     button.click();

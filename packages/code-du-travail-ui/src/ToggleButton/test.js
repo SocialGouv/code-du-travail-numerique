@@ -3,7 +3,7 @@ import { render } from "react-testing-library";
 import ToggleButton from ".";
 
 describe("<Button />", () => {
-  test("should render", () => {
+  it("renders", () => {
     const { container } = render(<ToggleButton>Toggle button</ToggleButton>);
     expect(container).toMatchSnapshot();
   });
@@ -16,7 +16,7 @@ describe("<Button />", () => {
     ["primary"],
     ["secondary"],
     ["link"]
-  ])("it should render a Button %s", label => {
+  ])("it renders a Button %s", label => {
     const props = { [label]: true };
     const { container } = render(
       <ToggleButton {...props}>this is a Button {label} </ToggleButton>
@@ -24,60 +24,13 @@ describe("<Button />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
-    ["primary"],
-    ["secondary"],
-    ["link"]
-  ])("Button %s can be toggle initially", label => {
-    const props = { [label]: true };
-    const { getByText } = render(
-      <ToggleButton {...props} pressed>
-        Button {label}{" "}
-      </ToggleButton>
+  it("can be toggled programmatically", () => {
+    const { getByText, rerender } = render(
+      <ToggleButton pressed>label</ToggleButton>
     );
-    const button = getByText(`Button ${label}`);
+    const button = getByText("label");
     expect(button.getAttribute("aria-pressed")).toBe("true");
-  });
-
-  test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
-    ["primary"],
-    ["secondary"],
-    ["link"]
-  ])("Button %s can be toggle", label => {
-    const props = { [label]: true };
-    const { getByText } = render(
-      <ToggleButton {...props}>Button {label} </ToggleButton>
-    );
-    const button = getByText(`Button ${label}`);
-    button.click();
-    expect(button.getAttribute("aria-pressed")).toBe("true");
-  });
-
-  test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
-    ["primary"],
-    ["secondary"],
-    ["link"]
-  ])("Button %s can be untoggle", label => {
-    const props = { [label]: true };
-    const { getByText } = render(
-      <ToggleButton pressed {...props}>
-        Button {label}{" "}
-      </ToggleButton>
-    );
-    const button = getByText(`Button ${label}`);
-    button.click();
+    rerender(<ToggleButton>label</ToggleButton>);
     expect(button.getAttribute("aria-pressed")).toBe("false");
   });
 });
