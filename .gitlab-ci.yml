@@ -1,6 +1,8 @@
 ---
 include:
 - /.gitlab-ci/variables.yml
+- /.gitlab-ci/extends.yml
+#
 - '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
 - '/k8s/code-du-travail-data/.deploy-code-du-travail-data-k8s.yml'
 - '/k8s/code-du-travail-api/.deploy-code-du-travail-api-k8s.yml'
