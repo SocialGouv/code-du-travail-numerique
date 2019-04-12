@@ -24,6 +24,14 @@ stages:
 - "Send Url"
 - "Delete Pods"
 
+prepare-env-file:
+  stage: "Prepare"
+  script:
+  - node scripts/setup-env.js
+  artifacts:
+    paths:
+    - .env
+
 lint-cdtn-api:
   stage: "Code Quality"
   image: docker:$DOCKER_VERSION
