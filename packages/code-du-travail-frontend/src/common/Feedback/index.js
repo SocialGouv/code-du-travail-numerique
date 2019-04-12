@@ -7,7 +7,12 @@ import { FeedbackForm } from "./FeedbackForm";
 import { postFeedback } from "./feedback.service";
 import ServiceRenseignementModal from "../ServiceRenseignementModal";
 
-function Feedback({ query = "", source = "Tous contenus", url = "" }) {
+function Feedback({
+  query = "",
+  source = "Tous contenus",
+  url = "",
+  title = ""
+}) {
   const [isSatisfied, setSatisfaction] = useState(null); // null, true, false,
   const [isSent, setSent] = useState(false); // false, true,
 

@@ -17,13 +17,15 @@ class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
     url: PropTypes.string,
+    title: PropTypes.string,
     source: PropTypes.string.isRequired,
     onSubmit: PropTypes.func.isRequired,
     isSatisfied: PropTypes.bool.isRequired
   };
   static defaultProps = {
     query: "",
-    url: ""
+    url: "",
+    title: ""
   };
   state = {
     status: "", // "" | "sending" | "error"
@@ -64,17 +66,15 @@ class FeedbackForm extends React.Component {
     }
     this.setState({ status: "sending" });
 
-    const titreArticle = document.querySelector(".article__title");
-
     const data = {
       motif,
       message,
       source: this.props.source,
-      url: document.location.href,
+      url: this.props.url || document ? document.location.href : "",
+      title: this.props.title,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent,
       subject: question,
-      isSatisfied: this.props.isSatisfied,
-      titreArticle: titreArticle ? titreArticle.innerText : "not found"
+      isSatisfied: this.props.isSatisfied
     };
     try {
       await this.props.onSubmit(data);
@@ -118,7 +118,7 @@ class FeedbackForm extends React.Component {
         <input
           type="hidden"
           name="url"
-          value={document ? document.location.href : url}
+          value={url || document ? document.location.href : ""}
         />
         <input type="hidden" name="source" value={source} />
         {!isSatisfied && (
