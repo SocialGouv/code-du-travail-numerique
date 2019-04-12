@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.0...v2.3.1) (2019-04-11)
+
+
+### Bug Fixes
+
+* **frontend:** update matomo tracking for suggested searches ([#714](https://github.com/SocialGouv/code-du-travail-numerique/issues/714)) ([be865d5](https://github.com/SocialGouv/code-du-travail-numerique/commit/be865d5))
+
+
+
+
+
 # [2.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.2.0...v2.3.0) (2019-04-10)
 
 
