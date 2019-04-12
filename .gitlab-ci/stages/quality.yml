@@ -67,7 +67,7 @@ Test @cdtn/api:
     - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
   variables:
     ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
-  before_script:
+  script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
     - |-
@@ -76,7 +76,7 @@ Test @cdtn/api:
         ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
-  script:
+    #
     - yarn workspace @cdt/api test --coverage
   after_script:
     - CI_PROJECT_DIR=/app npx codecov -F api
