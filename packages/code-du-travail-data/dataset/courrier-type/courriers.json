@@ -95,14 +95,14 @@
     "filename": "fin-periode-essai-initiative-employeur.docx"
   },
   {
-    "titre": "Réclamation congès payés",
+    "titre": "Réclamation congés payés",
     "description": "Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
       "faire une réclamation pour les congés payé ?",
       "rédiger une réclamation pour les congés payés"
     ],
     "tags": {
-      "theme": "congès payés",
+      "theme": "congés payés",
       "themes": [5900, 6000, 6300],
       "type_de_contrat": "",
       "profil": "salarié"
