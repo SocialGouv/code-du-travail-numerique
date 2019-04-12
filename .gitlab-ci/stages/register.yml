@@ -37,3 +37,10 @@ Register data image:
     CONTEXT: packages/code-du-travail-data
     DOCKER_BUILD_ARGS: ""
     IMAGE_NAME: $CI_REGISTRY_IMAGE/data
+
+Register nlp image:
+  <<: *build_and_push_stage
+  variables:
+    CONTEXT: packages/code-du-travail-nlp
+    DOCKER_BUILD_ARGS: ""
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp
