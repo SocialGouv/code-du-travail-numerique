@@ -1,0 +1,47 @@
+#
+
+.notify_stage: &notify_stage
+  image: python:$PYTHON_VERSION
+  variables:
+    DEPLOY_ID_FILE: github_deploy_id
+  environment:
+    name: dev
+  before_script:
+    - apk update && apk add curl
+    - export BRANCH_HASH=$(eval $BRANCH_HASHER)
+    - export URL=http://${BRANCH_HASH}.code-du-travail-numerique.${CI_ENVIRONMENT_NAME}.factory.social.gouv.fr/
+  dependencies: []
+
+#
+
+Notify Starting Deployment:
+  <<: *notify_stage
+  stage: "Registration"
+  script:
+    - sh ./k8s/scripts/get-deploy-id.sh
+    - echo "GitHub deployment id '$(cat github_deploy_id)'"
+  artifacts:
+    paths:
+      - github_deploy_id
+
+#
+
+Notify Fail:
+  <<: *notify_stage
+  stage: "Notify Finished Deployment"
+  when: on_failure
+  dependencies:
+    - Notify Starting Deployment
+  script:
+    - echo "Notify Failure to GitHub deployment id '$(cat github_deploy_id)'"
+    - sh ./k8s/scripts/send-url.sh $(cat github_deploy_id) failure
+
+Notify Success:
+  <<: *notify_stage
+  stage: "Notify Finished Deployment"
+  when: on_success
+  dependencies:
+    - Notify Starting Deployment
+  script:
+    - echo "Notify Success to GitHub deployment id '$(cat github_deploy_id)'"
+    - sh ./k8s/scripts/send-url.sh $(cat github_deploy_id) success

@@ -12,27 +12,19 @@ include:
 - /.gitlab-ci/stages/prepare.yml
 - /.gitlab-ci/stages/quality.yml
 - /.gitlab-ci/stages/register.yml
+- /.gitlab-ci/stages/notify.yml
 
 image: node:10-alpine
 
 stages:
 - "Prepare"
 - "Code Quality"
-- "Send Code Quality Reports"
 - "Registration"
 - "Deploy EL Stack"
 - "Create Code du Travail Numerique Elasticsearch Index"
 - "Deploy Code du Travail Numerique"
-- "Send Url"
+- "Notify Finished Deployment"
 - "Delete Pods"
-
-send-reports-to-codecov:
-  stage: "Send Code Quality Reports"
-  before_script:
-  - apk add --no-cache git
-  script:
-  - npx codecov --flags frontend
-  - npx codecov --flags api
 
 ######################################
 ### DEPLOY CDTN TO K8S DEV CLUSTER ###
@@ -234,45 +226,6 @@ deploy-cdtn-frontend-prod:
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${FRONTEND_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  environment:
-    name: ops
-  only:
-  - master
-
-###########################################
-###         SEND URL TO GITHUB          ###
-###########################################
-
-send-url:
-  stage: "Send Url"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  before_script:
-  - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
-  - export HASH_BRANCH_NAME=$HASH_BRANCH_NAME
-  - export URL=http://$HASH_BRANCH_NAME-code-du-travail-numerique.${CI_ENVIRONMENT_NAME}.factory.social.gouv.fr/
-  - export DEPLOY_ID=$(cat github_deploy_id)
-  - envsubst < k8s/scripts/send-url.sh > k8s/scripts/send-url-to-github.sh
-  script:
-  - sh k8s/scripts/send-url-to-github.sh $CI_COMMIT_REF_NAME
-  environment:
-    name: dev
-  except:
-  - master
-
-send-url-prod:
-  stage: "Send Url"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  variables:
-    URL: http://code-du-travail-numerique.$CI_ENVIRONMENT_NAME.factory.social.gouv.fr/
-  before_script:
-  - export DEPLOY_ID=$(cat github_deploy_id)
-  - envsubst < k8s/scripts/send-url.sh > k8s/scripts/send-url-to-github.sh
-  script:
-  - sh k8s/scripts/send-url-to-github.sh $CI_COMMIT_REF_NAME
   environment:
     name: ops
   only:
