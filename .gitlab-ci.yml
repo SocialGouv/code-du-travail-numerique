@@ -10,6 +10,7 @@ include:
 - '/k8s/code-du-travail-nlp/.deploy-code-du-travail-nlp-k8s.yml'
 #
 - /.gitlab-ci/stages/prepare.yml
+- /.gitlab-ci/stages/quality.yml
 
 image: node:10-alpine
 
@@ -24,114 +25,6 @@ stages:
 - "Send Url"
 - "Delete Pods"
 
-prepare-env-file:
-  stage: "Prepare"
-  script:
-  - node scripts/setup-env.js
-  artifacts:
-    paths:
-    - .env
-
-lint-cdtn-api:
-  stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/api lint
-
-lint-cdtn-ui:
-  stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/ui lint
-
-lint-cdtn-frontend:
-  stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  script:
-  - docker run -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" yarn workspace @cdt/frontend lint
-
-lint-cdtn-data:
-  stage: "Code Quality"
-  image: python:$PYTHON_VERSION
-  variables:
-    PIPENV_VENV_IN_PROJECT: 1
-    PIPENV_IGNORE_VIRTUALENVS: 1
-  services:
-  - docker:dind
-  before_script:
-  - cd packages/code-du-travail-data
-  - apk add build-base
-  - pip install --upgrade pip
-  - pip install pipenv==$PIP_VERSION
-  - pipenv install --dev --three
-  script:
-  - pipenv run pylint --output-format=colorized search
-
-test-cdtn-frontend:
-  stage: "Code Quality"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  script:
-  - >-
-    docker run -v $PWD/coverage:/app/packages/code-du-travail-frontend/coverage
-    -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-    yarn workspace @cdt/frontend test --coverage
-  artifacts:
-    paths:
-    - $PWD/coverage
-
-test-cdtn-api:
-  stage: "Code Quality"
-  image: docker/compose:$DOCKER_COMPOSE_VERSION
-  services:
-  - docker:dind
-  before_script:
-  - docker-compose up -d elasticsearch
-  - retry=0; while ! curl "http://localhost:9200/_cat/health?h=status" && (( $retry <= 60 )) ; do sleep 1; ((retry++)); done;
-  - >-
-    docker run
-    -e ELASTICSEARCH_LOG_LEVEL=info
-    -e ELASTICSEARCH_URL=http://elasticsearch:9200
-    --network $(docker network ls -qf name=code)
-    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-  script:
-  - >-
-    docker run
-    -v $PWD/coverage:/app/packages/code-du-travail-api/coverage
-    -e ELASTICSEARCH_URL=http://elasticsearch:9200
-    -e ELASTICSEARCH_LOG_LEVEL=info
-    --network $(docker network ls -qf name=code)
-    "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-    yarn workspace @cdt/api test --coverage
-  artifacts:
-    paths:
-    - $PWD/coverage
-
-test-cdtn-data:
-  stage: "Code Quality"
-  image: python:$PYTHON_VERSION
-  variables:
-    PIPENV_VENV_IN_PROJECT: 1
-    PIPENV_IGNORE_VIRTUALENVS: 1
-    PYTHONPATH: .
-  services:
-  - docker:dind
-  before_script:
-  - cd packages/code-du-travail-data
-  - apk add build-base
-  - pip install --upgrade pip
-  - pip install pipenv==$PIP_VERSION
-  - pipenv install --dev
-  script:
-  - pipenv run python search/indexing/document_slug_checker.py -v
-
 send-reports-to-codecov:
   stage: "Send Code Quality Reports"
   before_script:
@@ -139,18 +32,6 @@ send-reports-to-codecov:
   script:
   - npx codecov --flags frontend
   - npx codecov --flags api
-
-build-and-push-elasticsearch-image:
-  stage: "Build and Push Docker Image"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  before_script:
-  - cd docker/elasticsearch
-  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-  script:
-  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA" .
-  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
 
 build-and-push-cdtn-api-image:
   stage: "Build and Push Docker Image"

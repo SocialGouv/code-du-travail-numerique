@@ -1,0 +1,89 @@
+#
+
+.quality_stage: &quality_stage
+  stage: "Code Quality"
+  dependencies: []
+
+.master_based_stage: &master_based_stage
+  variables:
+    GIT_STRATEGY: none
+  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+  before_script:
+    - cd /app
+
+.python_based_stage: &python_based_stage
+  image: python:$PYTHON_VERSION
+  variables:
+    PIPENV_VENV_IN_PROJECT: 1
+    PIPENV_IGNORE_VIRTUALENVS: 1
+    PYTHONPATH: .
+  before_script:
+    - cd packages/code-du-travail-data
+    - apk add --no-cache build-base
+    - pip install --upgrade pip
+    - pip install pipenv==$PIP_VERSION
+    - pipenv install --dev
+
+#
+
+Lint @cdtn/api:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @cdt/api lint
+
+Lint @cdtn/ui:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @cdt/ui lint
+
+Lint @cdtn/frontend:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @cdt/frontend lint
+
+Lint @cdtn/data:
+  <<: *quality_stage
+  <<: *python_based_stage
+  script:
+    - pipenv run pylint --output-format=colorized search
+
+#
+
+Test @cdtn/frontend:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @cdt/frontend test --coverage
+  after_script:
+    - CI_PROJECT_DIR=/app npx codecov -F frontend
+
+Test @cdtn/api:
+  <<: *quality_stage
+  <<: *master_based_stage
+  services:
+    - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+  variables:
+    ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
+    ELASTICSEARCH_LOG_LEVEL: info
+  script:
+    # NOTE(douglasduteil): the elasticsearch health check must be last
+    # As we block the job waiting for elasticsearch to be up.
+    - |-
+      retry=60;
+      while
+        ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
+    #
+    - yarn workspace @cdt/api test --coverage
+  after_script:
+    - CI_PROJECT_DIR=/app npx codecov -F api
+
+Test @cdtn/data:
+  <<: *quality_stage
+  <<: *python_based_stage
+  script:
+    - pipenv run python search/indexing/document_slug_checker.py -v
