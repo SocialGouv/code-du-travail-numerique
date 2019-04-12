@@ -65,6 +65,8 @@ Test @cdtn/api:
   <<: *master_based_stage
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
+  variables:
+    ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
   before_script:
     # NOTE(douglasduteil): the elasticsearch health check must be last
     # As we block the job waiting for elasticsearch to be up.
