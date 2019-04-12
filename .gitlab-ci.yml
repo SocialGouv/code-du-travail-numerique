@@ -86,7 +86,7 @@ send-reports-to-codecov:
   - npx codecov --flags api
 
 build-and-push-elasticsearch-image:
-  stage: "Build and Push Docker Image"
+  stage: "Prepare"
   image: docker:$DOCKER_VERSION
   services:
   - docker:dind
