@@ -33,18 +33,6 @@ send-reports-to-codecov:
   - npx codecov --flags frontend
   - npx codecov --flags api
 
-build-and-push-elasticsearch-image:
-  stage: "Prepare"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  before_script:
-  - cd docker/elasticsearch
-  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-  script:
-  - docker build -t "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA" .
-  - docker push "$CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA"
-
 build-and-push-cdtn-api-image:
   stage: "Build and Push Docker Image"
   image: docker:$DOCKER_VERSION
