@@ -1,33 +1,13 @@
 ---
 include:
+- /.gitlab-ci/variables.yml
 - /.gitlab-ci/extends.yml
-- '/k8s/kibana/.deploy-kibana-k8s.yml'
+#
 - '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
-- '/k8s/apm-server/.deploy-apm-server-k8s.yml'
 - '/k8s/code-du-travail-data/.deploy-code-du-travail-data-k8s.yml'
 - '/k8s/code-du-travail-api/.deploy-code-du-travail-api-k8s.yml'
 - '/k8s/code-du-travail-frontend/.deploy-code-du-travail-frontend-k8s.yml'
 - '/k8s/code-du-travail-nlp/.deploy-code-du-travail-nlp-k8s.yml'
-
-variables:
-  DOCKER_HOST: tcp://localhost:2375
-  IMAGE_INFRA_BASE_NAME: "infra/images-docker"
-  DOCKER_VERSION: "18.06"
-  DOCKER_COMPOSE_VERSION: "1.23.2"
-  PYTHON_VERSION: "3.6-alpine"
-  PIP_VERSION: "11.10.1"
-  ELK_STACK_VERSION: "6.4.2"
-  ELASTICSEARCH_PORT: 9200
-  ELASTICSEARCH_INTER_NODE_PORT: 9300
-  KIBANA_PORT: 5601
-  APM_SERVER_PORT: 8200
-  API_PORT: 1337
-  FRONTEND_PORT: 3000
-  FLASK_APP: "api"
-  NLP_PORT: "5000"
-  SUGGEST_DATA_URL: "https://gist.github.com/lionelB/1eba0e58af7b27d402c6fde38129352c/raw/45d19ed84af91a055630310f16157d32ac2ba345/data-test.txt"
-  FLASK_ENV: "debug"
-
 
 image: node:10-alpine
 
@@ -375,41 +355,6 @@ deploy-cdtn-frontend:
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
 ########################################
 
-deploy-kibana:
-  stage: "Deploy EL Stack"
-  extends: .deploy-kibana-k8s
-  variables:
-    K8S_SERVER: $K8S_SERVER_PROD
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-    K8S_USERNAME: $K8S_USERNAME_PROD
-    K8S_CONTEXT: $K8S_CONTEXT_PROD
-    K8S_TOKEN: $K8S_TOKEN_PROD
-    HASH_BRANCH_NAME: ''
-    ELK_VERSION: ${ELK_STACK_VERSION}
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    KBN_PORT: ${KIBANA_PORT}
-  only:
-  - master
-
-deploy-apm-server:
-  stage: "Deploy EL Stack"
-  extends: .deploy-apm-server-k8s
-  variables:
-    K8S_SERVER: $K8S_SERVER_PROD
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-    K8S_USERNAME: $K8S_USERNAME_PROD
-    K8S_CONTEXT: $K8S_CONTEXT_PROD
-    K8S_TOKEN: $K8S_TOKEN_PROD
-    HASH_BRANCH_NAME: ''
-    ELK_VERSION: ${ELK_STACK_VERSION}
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    KBN_PORT: ${KIBANA_PORT}
-    APM_PORT: ${APM_SERVER_PORT}
-  only:
-  - master
-
 deploy-elasticsearch-prod:
   stage: "Deploy EL Stack"
   extends: .deploy-elasticsearch-prod-k8s
@@ -458,8 +403,8 @@ deploy-cdtn-api-prod:
     IMAGE_TAG: $CI_COMMIT_SHA
     HASH_BRANCH_NAME: ''
     ELASTICSEARCH_LOG_LEVEL: "trace"
-    APM_SERVER_ACTIVE: 1
-    APM_SERVER_URL: "http://apm:8200"
+    APM_SERVER_ACTIVE: 0
+    APM_SERVER_URL: ""
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${API_PORT}
     ES_PORT: ${ELASTICSEARCH_PORT}

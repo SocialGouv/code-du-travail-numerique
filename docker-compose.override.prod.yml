@@ -27,17 +27,6 @@ services:
     volumes:
       - ./packages/code-du-travail-data/dataset/courrier-type/docx:/code-du-travail-data/dataset/courrier-type/docx
 
-  # In production, add an APM Server
-  apm:
-    image: docker.elastic.co/apm/apm-server:6.4.2
-    depends_on:
-      - elasticsearch
-    environment:
-      - logging.level=trace
-      - setup.kibana.host=kibana:5601
-      - output.elasticsearch.hosts=elasticsearch:9200
-      - output.elasticsearch.enabled=true
-
   nlp_api:
     environment:
       - FLASK_ENV=production

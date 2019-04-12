@@ -135,11 +135,11 @@ class Search extends React.Component {
       return;
     }
     ReactPiwik.push(["trackEvent", "selectedSuggestion", query, suggestion]);
+    ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
     Router.pushRoute("recherche", { q: suggestion, source });
   };
 
   onClear = () => {
-    ReactPiwik.push(["trackEvent", "clearSearch"]);
     this.setState({ suggestions: [] });
   };
 
