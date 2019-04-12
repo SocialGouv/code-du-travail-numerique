@@ -8,6 +8,8 @@ include:
 - '/k8s/code-du-travail-api/.deploy-code-du-travail-api-k8s.yml'
 - '/k8s/code-du-travail-frontend/.deploy-code-du-travail-frontend-k8s.yml'
 - '/k8s/code-du-travail-nlp/.deploy-code-du-travail-nlp-k8s.yml'
+#
+- /.gitlab-ci/stages/prepare.yml
 
 image: node:10-alpine
 
@@ -22,17 +24,6 @@ stages:
 - "Send Url"
 - "Delete Pods"
 
-prepare-cdtn-base-image:
-  stage: "Prepare"
-  image: docker:$DOCKER_VERSION
-  services:
-  - docker:dind
-  before_script:
-  - docker login $CI_REGISTRY -u gitlab-ci-token -p $CI_JOB_TOKEN
-  script:
-  - docker build --cache-from $CI_REGISTRY_IMAGE:$CI_COMMIT_BEFORE_SHA -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
-  - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
-
 prepare-env-file:
   stage: "Prepare"
   script:
@@ -40,40 +31,6 @@ prepare-env-file:
   artifacts:
     paths:
     - .env
-
-prepare-deploy-id:
-  stage: "Prepare"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  before_script:
-  - envsubst < k8s/scripts/get-deploy-id.sh > k8s/scripts/get-github-deploy-id.sh
-  script:
-  - sh k8s/scripts/get-github-deploy-id.sh
-  environment:
-    name: dev
-  except:
-  - master
-  artifacts:
-    paths:
-    - github_deploy_id
-
-prepare-deploy-id-prod:
-  stage: "Prepare"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  before_script:
-  - envsubst < k8s/scripts/get-deploy-id.sh > k8s/scripts/get-github-deploy-id.sh
-  script:
-  - sh k8s/scripts/get-github-deploy-id.sh
-  environment:
-    name: ops
-  only:
-  - master
-  artifacts:
-    paths:
-    - github_deploy_id
 
 lint-cdtn-api:
   stage: "Code Quality"
