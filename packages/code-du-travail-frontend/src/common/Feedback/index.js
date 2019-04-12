@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { theme, Section, ToggleButton } from "@cdt/ui";
+import { Button, theme, Section, ToggleButton } from "@cdt/ui";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
 
@@ -60,6 +60,7 @@ function Feedback({
             query={query}
             source={source}
             url={url}
+            title={title}
             onSubmit={submitFeedback}
             isSatisfied={isSatisfied}
           />
@@ -70,7 +71,9 @@ function Feedback({
             Pour obtenir une réponse à votre question de droit du travail, nous
             vous invitons à joindre les{" "}
             <ServiceRenseignementModal>
-              services de renseignement
+              <Button link className="link">
+                services de renseignement
+              </Button>
             </ServiceRenseignementModal>
             .
           </p>

@@ -11,11 +11,11 @@ import ToggleButton from ".";
   <p>
     <ToggleButton>Default button</ToggleButton>
     {" "}
-    <ToggleButton pressed>Pressed default button</ToggleButton>
+    <ToggleButton pressed>Default button</ToggleButton>
     {" "}
-    <ToggleButton disabled>Disabled default button</ToggleButton>
+    <ToggleButton disabled>Default button</ToggleButton>
     {" "}
-    <ToggleButton pressed disabled>Pressed disabled default button</ToggleButton>
+    <ToggleButton pressed disabled>Default button</ToggleButton>
   </p>
   <p>
     <ToggleButton primary>Button Primary</ToggleButton>

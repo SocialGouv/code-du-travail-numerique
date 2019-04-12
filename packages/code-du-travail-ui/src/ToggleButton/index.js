@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { colors, box, spacing } from "../theme";
-import { darken, lighten } from "polished";
+import { darken, lighten, transparentize } from "polished";
 
 // OK it is a simple button in fact, on which you can provid a pressed prop...
 const ToggleButton = ({ pressed, onClick, ...props }) => {
@@ -23,16 +23,16 @@ export default ToggleButton;
 
 const Button = styled.button`
   padding: ${spacing.small} ${spacing.base};
+  appearance: none;
   text-align: center;
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  border: 1px solid transparent;
-  border-bottom-width: 2px;
-  border-top-width: 1px;
+  white-space: nowrap;
+  border-width: 1px 1px 2px 1px;
   border-radius: ${box.borderRadius};
   cursor: pointer;
-  transition: all 250ms ease;
+  transition: background-color 250ms ease;
 
   ${props => {
     let backgroundColor = colors.blueLight;
@@ -59,32 +59,44 @@ const Button = styled.button`
     return css`
       color: ${color};
       background: ${backgroundColor};
-      border-top-color: transparent;
+      border-color: ${backgroundColor};
       border-bottom-color: ${darken(0.1, backgroundColor)};
-
-      &[disabled] {
-        cursor: not-allowed;
-      }
       :not([disabled]) {
         &:hover,
         &:focus {
           background: ${lighten(0.05, backgroundColor)};
-          color: ${color};
+          color: ${lighten(0.05, color)};
         }
         &:active {
           position: relative;
           top: 1px;
+          color: ${lighten(0.1, color)};
           background: ${lighten(0.1, backgroundColor)};
-          border-bottom-color: transparent;
-          border-top-color: transparent;
+          border-style: solid;
+          border-width: 1px;
+          border-color: ${backgroundColor};
         }
       }
-
       &[aria-pressed="true"] {
-        background: ${darken(0.1, backgroundColor)};
-        color: ${darken(0.1, color)};
-        border-top-color: ${darken(0.15, backgroundColor)};
-        border-bottom-color: transparent;
+        position: relative;
+        top: 1px;
+        color: ${lighten(0.05, color)};
+        background: ${lighten(0.05, backgroundColor)};
+        border-width: 1px;
+        border-color: ${backgroundColor};
+        border-top-color: ${darken(0.1, backgroundColor)};
+        box-shadow: inset 0 1px 2px 0 ${darken(0.1, backgroundColor)};
+        :not([disabled]) {
+          &:hover,
+          &:focus {
+            background-color: ${backgroundColor};
+          }
+        }
+      }
+      /* keep it last so it overrides other styles */
+      &[disabled] {
+        cursor: not-allowed;
+        color: ${transparentize(0.6, color)};
       }
     `;
   }}
