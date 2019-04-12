@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ServiceRenseignementModal /> should render a popup when click on button 1`] = `
+exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
 .c0 {
   position: fixed;
   top: 0;
@@ -21,7 +21,7 @@ exports[`<ServiceRenseignementModal /> should render a popup when click on butto
   outline: none;
 }
 
-.c2 {
+.c4 {
   position: absolute;
   top: 1em;
   right: 1em;
@@ -34,17 +34,72 @@ exports[`<ServiceRenseignementModal /> should render a popup when click on butto
   cursor: pointer;
 }
 
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 1rem 0 2rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #003b80;
+}
+
+.c2 strong {
+  padding: 0 1rem;
+  color: #003b80;
+  font-size: 2rem;
+}
+
+.c2 em {
+  position: relative;
+  padding: 0 1rem 0 1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font-style: normal;
+  font-size: 1rem;
+  background-color: #003b80;
+}
+
+.c2 em::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.c3 {
+  display: block;
+  margin-top: 1.25rem;
+  color: #8393a7;
+}
+
 <body>
   <div
     aria-hidden="true"
   >
     <div
-      class="btn btn__link  link"
-      link="true"
+      class="btn   "
       role="button"
       tabindex="0"
     >
-      Trouver votre service de renseignement
+      texte dans le bouton
     </div>
   </div>
   <reach-portal>
@@ -58,9 +113,23 @@ exports[`<ServiceRenseignementModal /> should render a popup when click on butto
         data-reach-dialog-content="true"
         tabindex="-1"
       >
-        <h2>
-          Trouver votre service de renseignement
-        </h2>
+        <h4>
+          Contacter les services de renseignement par téléphone
+        </h4>
+        <a
+          class="c2"
+          href="tel:+0033806000126"
+        >
+          <strong>
+            0 806 000 126
+          </strong>
+          <em>
+            Service gratuit + prix appel
+          </em>
+        </a>
+        <h4>
+          Trouver les coordonnées du service de renseignements de mon département
+        </h4>
         <p>
           <label
             for="id_1"
@@ -74,8 +143,27 @@ exports[`<ServiceRenseignementModal /> should render a popup when click on butto
             type="text"
           />
         </p>
+        <small
+          class="c3"
+        >
+          Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+          <ul>
+            <li>
+              les demandes d'intervention en entreprise
+            </li>
+            <li>
+              le règlement des litiges, et la consitution des dossiers prud'homaux
+            </li>
+            <li>
+              les calculs de droit au chômage
+            </li>
+            <li>
+              vous renseigner sur les cotisations sociales
+            </li>
+          </ul>
+        </small>
         <button
-          class="c2"
+          class="c4"
         >
           <svg
             fill="none"

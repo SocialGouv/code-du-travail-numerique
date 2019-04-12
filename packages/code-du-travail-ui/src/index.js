@@ -20,7 +20,6 @@ export { default as LargeLink } from "./LargeLink";
 export { default as List } from "./List";
 export { default as SearchForm } from "./SearchForm";
 export { default as Section } from "./Section";
-export { default as Support } from "./Support";
 export { default as SrOnly } from "./SrOnly";
 export { default as Tag } from "./Tag";
 export { default as ToggleButton } from "./ToggleButton";

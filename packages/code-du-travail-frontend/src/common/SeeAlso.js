@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@cdt/ui";
 
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
@@ -30,7 +31,11 @@ const SeeAlso = () => {
               </h3>
               <ul>
                 <li>
-                  <ServiceRenseignementModal />
+                  <ServiceRenseignementModal>
+                    <Button link className="link">
+                      Trouver votre service de renseignement
+                    </Button>
+                  </ServiceRenseignementModal>
                 </li>
                 <li>
                   <a
