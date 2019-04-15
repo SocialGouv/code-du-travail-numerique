@@ -25,7 +25,7 @@ class ConventionForm extends React.Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={e => e.preventDefault()}>
         <h2>Trouvez votre convention collective</h2>
         <div>
           <Title>Recherche par nom ou par identifiant</Title>
