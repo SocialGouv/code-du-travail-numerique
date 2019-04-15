@@ -70,6 +70,8 @@ $ docker exec -ti code-du-travail-data-python pipenv run python search/extractio
 $ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/synonyms/data.py -v
 ```
 
+If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn build`.
+
 ### Build
 
 ```sh
