@@ -22,7 +22,7 @@ spec:
     - sh
     - -c
     - |
-      apk --no-cache add curl
+      apk --no-cache  --update add curl
       while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" "http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}") -ne 200 ]]; do
         echo "Not ready"
         sleep 5s
