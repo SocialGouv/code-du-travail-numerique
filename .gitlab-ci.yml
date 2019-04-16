@@ -240,13 +240,8 @@ delete-pods:
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  variables:
-    K8S_SERVER: $K8S_SERVER_PROD
-    K8S_CLUSTER_NAME: $K8S_CLUSTER_NAME_PROD
-    K8S_NAMESPACE: $K8S_NAMESPACE_PROD
-    K8S_USERNAME: $K8S_USERNAME_PROD
-    K8S_CONTEXT: $K8S_CONTEXT_PROD
-    K8S_TOKEN: $K8S_TOKEN_PROD
+  environment:
+    name: dev
   before_script:
   - /apps/create-kubeconfig.sh
   script:
