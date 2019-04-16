@@ -12,7 +12,7 @@ spec:
     image: ${CDTN_REGISTRY}/data:${IMAGE_TAG}
     env:
     - name: ELASTICSEARCH_URL
-      value: http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}
+      value: "http://${ELASTICSEARCH_HOST}"
   restartPolicy: Never
   initContainers:
   - name: wait-for-elasticsearch

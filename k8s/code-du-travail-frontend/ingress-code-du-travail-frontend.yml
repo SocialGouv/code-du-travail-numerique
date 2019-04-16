@@ -8,7 +8,7 @@ metadata:
     branch: cdtn${HASH_BRANCH_NAME}
 spec:
   rules:
-  - host: ${HASH_BRANCH_INGRESS}code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr
+  - host: ${FRONTEND_HOST}
     http:
       paths:
       - path: /
