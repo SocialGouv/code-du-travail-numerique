@@ -47,6 +47,7 @@ Deploy Elasticsearch (dev):
   <<: *deploy_stage
   environment:
     name: dev
+    url: $ELASTICSEARCH_HOST
   extends: .deploy-elasticsearch-dev-k8s
   variables:
     <<: *deploy_stage_variables
@@ -72,6 +73,7 @@ Deploy @cdtn/api (dev):
   <<: *deploy_stage
   environment:
     name: dev
+    url: $API_HOST
   extends: .deploy-code-du-travail-api-k8s
   variables:
     <<: *deploy_stage_variables
@@ -89,6 +91,7 @@ Deploy @cdtn/nlp (dev):
   <<: *deploy_stage
   environment:
     name: dev
+    url: $NLP_HOST
   extends: .deploy-code-du-travail-nlp-k8s
   variables:
     <<: *deploy_stage_variables
@@ -104,6 +107,7 @@ Deploy @cdtn/frontend (dev):
   <<: *deploy_stage
   environment:
     name: dev
+    url: $FRONTEND_HOST
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
     <<: *deploy_stage_variables
@@ -119,6 +123,9 @@ Deploy @cdtn/frontend (dev):
 
 Deploy Elasticsearch (ops):
   <<: *deploy_stage
+  environment:
+    name: ops
+    url: $ELASTICSEARCH_HOST
   extends: .deploy-elasticsearch-prod-k8s
   variables:
     <<: *deploy_stage_variables
@@ -146,6 +153,7 @@ Deploy @cdtn/api (ops):
   <<: *deploy_stage
   environment:
     name: ops
+    url: $API_HOST
   extends: .deploy-code-du-travail-api-prod-k8s
   variables:
     <<: *deploy_stage_variables
@@ -164,6 +172,7 @@ Deploy @cdtn/nlp (ops):
   <<: *deploy_stage
   environment:
     name: ops
+    url: $NLP_HOST
   extends: .deploy-code-du-travail-nlp-prod-k8s
   variables:
     <<: *deploy_stage_variables
@@ -180,6 +189,7 @@ Deploy @cdtn/frontend (ops):
   <<: *deploy_stage
   environment:
     name: ops
+    url: $FRONTEND_HOST
   extends: .deploy-code-du-travail-frontend-prod-k8s
   variables:
     <<: *deploy_stage_variables
