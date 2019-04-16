@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { theme, Section, ToggleButton, icons } from "@cdt/ui";
+import { Button, theme, Section, ToggleButton, icons } from "@cdt/ui";
 import { FeedbackForm } from "./FeedbackForm";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
@@ -85,7 +85,9 @@ function Feedback({ query = "", source = "Tous contenus", url = "" }) {
             <div>
               Vous pouvez également{" "}
               <ServiceRenseignementModal>
-                joindre les services de renseignement
+                <Button link className="link">
+                  joindre les services de renseignement
+                </Button>
               </ServiceRenseignementModal>{" "}
               de votre région afin d&apos;obtenir une réponse
             </div>

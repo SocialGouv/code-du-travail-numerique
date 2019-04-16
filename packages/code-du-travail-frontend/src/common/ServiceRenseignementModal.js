@@ -1,14 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Modal } from "@cdt/ui";
+import { Modal } from "@cdt/ui";
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
 class ServiceRenseignementModal extends React.Component {
   static propTypes = {
-    children: PropTypes.node
-  };
-  static defaultProps = {
-    children: "Trouver votre service de renseignement"
+    children: PropTypes.element.isRequired
   };
   state = {
     modalIsOpen: false
@@ -25,13 +22,12 @@ class ServiceRenseignementModal extends React.Component {
       modalIsOpen: false
     });
   };
-
   render() {
     return (
       <React.Fragment>
-        <Button link className="link" onClick={this.openModal}>
-          {this.props.children}
-        </Button>
+        {React.cloneElement(this.props.children, {
+          onClick: this.openModal
+        })}
         <Modal isOpen={this.state.modalIsOpen} onDismiss={this.closeModal}>
           <ServiceRenseignement />
         </Modal>

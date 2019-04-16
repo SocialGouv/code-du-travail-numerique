@@ -1,60 +1,148 @@
 import React from "react";
 import getConfig from "next/config";
+import styled from "styled-components";
+import { Button, List, theme } from "@cdt/ui";
+
 import { Link } from "../../routes";
+import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
 
 const { publicRuntimeConfig } = getConfig();
 
 const Footer = () => (
-  <footer className="section-dark site-footer" id="footer">
+  <footer className="site-footer" id="footer">
     <div className="container">
-      <div className="main-footer wrapper-narrow">
-        <div className="footer__block">
-          <h3>Code du travail numérique</h3>
-          <ul>
-            <li>
-              <Link route="about">
-                <a>À propos</a>
-              </Link>
-            </li>
-            <li>
-              <a href="mailto:contact@code-du-travail.beta.gouv.fr">Contact</a>
-            </li>
-          </ul>
+      <Support>
+        <h2>Besoin d’un accompagnement personnalisé ?</h2>
+        <p>
+          Les services de renseignement en droit du travail peuvent vous donner
+          des informations juridiques générales relatives au Code du travail,
+          aux conventions collectives, à la jurisprudence. Ils peuvent également
+          vous conseiller et vous orienter dans vos démarches.
+        </p>
+        <ServiceRenseignementModal>
+          <Button primary>Contacter les services de renseignement</Button>
+        </ServiceRenseignementModal>
+      </Support>
+      <Links>
+        <div>
+          <LinkTitle>Code du travail numérique</LinkTitle>
+          <List
+            items={[
+              <ItemWrapper key="0">
+                <Link route="about">
+                  <a>À propos</a>
+                </Link>
+              </ItemWrapper>,
+              <ItemWrapper key="1">
+                <a href="mailto:contact@code-du-travail.beta.gouv.fr">
+                  Contact
+                </a>
+              </ItemWrapper>
+            ]}
+          />
         </div>
-        <div className="footer__block">
-          <h3>Aidez-nous à améliorer cet outil</h3>
-          <ul>
-            <li>
-              <a
-                href={
-                  "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
-                  publicRuntimeConfig.PACKAGE_VERSION
-                }
-                className="external-link__after"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contribuer sur Github
-              </a>
-            </li>
-            <li>
-              <a
-                href={
-                  "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
-                  publicRuntimeConfig.PACKAGE_VERSION
-                }
-                className="external-link__after"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Journal des modifications
-              </a>
-            </li>
-          </ul>
+        <div>
+          <LinkTitle>Aidez-nous à améliorer cet outil</LinkTitle>
+          <List
+            items={[
+              <ItemWrapper key="0">
+                <a
+                  href={
+                    "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
+                    publicRuntimeConfig.PACKAGE_VERSION
+                  }
+                  className="external-link__after"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contribuer sur Github
+                </a>
+              </ItemWrapper>,
+              <ItemWrapper key="1">
+                <a
+                  href={
+                    "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
+                    publicRuntimeConfig.PACKAGE_VERSION
+                  }
+                  className="external-link__after"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Journal des modifications
+                </a>
+              </ItemWrapper>
+            ]}
+          />
         </div>
-      </div>
+        <div>
+          <LinkTitle>En collaboration avec</LinkTitle>
+          <List
+            items={[
+              <ItemWrapper key="0">
+                <a
+                  href={
+                    "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                  }
+                  className="external-link__after"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  La direction générale du travail
+                </a>
+              </ItemWrapper>,
+              <ItemWrapper key="1">
+                <a
+                  href={"https://incubateur.social.gouv.fr/"}
+                  className="external-link__after"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  L’incubateur des ministères sociaux
+                </a>
+              </ItemWrapper>,
+              <ItemWrapper key="2">
+                <a
+                  href={"https://beta.gouv.fr/"}
+                  className="external-link__after"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  beta.gouv.fr
+                </a>
+              </ItemWrapper>
+            ]}
+          />
+        </div>
+      </Links>
     </div>
   </footer>
 );
 
 export default Footer;
+
+const { colors, fonts, spacing } = theme;
+
+const Support = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: ${spacing.interComponent} 0;
+`;
+
+const Links = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: ${spacing.interComponent};
+`;
+
+const LinkTitle = styled.h3`
+  font-size: ${fonts.sizeBase};
+  font-weight: 700;
+`;
+
+const ItemWrapper = styled.div`
+  margin: ${spacing.xsmall} 0;
+  a {
+    color: ${colors.darkText};
+  }
+`;
