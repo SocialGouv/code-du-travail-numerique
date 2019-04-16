@@ -12,7 +12,7 @@ spec:
     image: ${CDTN_REGISTRY}/data:${IMAGE_TAG}
     env:
     - name: ELASTICSEARCH_URL
-      value: http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}
+      value: "${ELASTICSEARCH_HOST}"
   restartPolicy: Never
   initContainers:
   - name: wait-for-elasticsearch
@@ -23,7 +23,7 @@ spec:
     - -c
     - |
       apk --no-cache  --update add curl
-      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" "http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}") -ne 200 ]]; do
+      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" ${ELASTICSEARCH_HOST} ) -ne 200 ]]; do
         echo "Not ready"
         sleep 5s
       done

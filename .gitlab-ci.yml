@@ -26,12 +26,27 @@ stages:
 - "Notify Finished Deployment"
 - "Delete Pods"
 
+
+#
+
+.deploy_stage: &deploy_stage
+  stage: "Deploy EL Stack"
+  dependencies: []
+  services:
+    - docker:$DOCKER_VERSION-dind
+  variables:
+    IMAGE_TAG: $CI_COMMIT_SHA
+  before_script:
+    - source .gitlab-ci/env.sh
+
+#
+
 ######################################
 ### DEPLOY CDTN TO K8S DEV CLUSTER ###
 ######################################
 
 deploy-elasticsearch:
-  stage: "Deploy EL Stack"
+  <<: *deploy_stage
   extends: .deploy-elasticsearch-dev-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_DEV
@@ -48,7 +63,7 @@ deploy-elasticsearch:
   - master
 
 create-cdtn-es-index:
-  stage: "Create Code du Travail Numerique Elasticsearch Index"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-data-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_DEV
@@ -64,7 +79,7 @@ create-cdtn-es-index:
   - master
 
 deploy-cdtn-api:
-  stage: "Deploy Code du Travail Numerique"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-api-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_DEV
@@ -87,7 +102,7 @@ deploy-cdtn-api:
   - master
 
 deploy-cdtn-nlp:
-  stage: "Deploy Code du Travail Numerique"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-nlp-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_DEV
@@ -108,7 +123,7 @@ deploy-cdtn-nlp:
   - master
 
 deploy-cdtn-frontend:
-  stage: "Deploy Code du Travail Numerique"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_DEV
@@ -131,7 +146,7 @@ deploy-cdtn-frontend:
 ########################################
 
 deploy-elasticsearch-prod:
-  stage: "Deploy EL Stack"
+  <<: *deploy_stage
   extends: .deploy-elasticsearch-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
@@ -149,7 +164,7 @@ deploy-elasticsearch-prod:
   - master
 
 create-cdtn-es-index-prod:
-  stage: "Create Code du Travail Numerique Elasticsearch Index"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-data-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
@@ -166,7 +181,7 @@ create-cdtn-es-index-prod:
   - master
 
 deploy-cdtn-api-prod:
-  stage: "Deploy Code du Travail Numerique"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-api-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
@@ -190,7 +205,7 @@ deploy-cdtn-api-prod:
   - master
 
 deploy-cdtn-nlp-prod:
-  stage: "Deploy Code du Travail Numerique"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-nlp-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD
@@ -212,7 +227,7 @@ deploy-cdtn-nlp-prod:
   - master
 
 deploy-cdtn-frontend-prod:
-  stage: "Deploy Code du Travail Numerique"
+  <<: *deploy_stage
   extends: .deploy-code-du-travail-frontend-prod-k8s
   variables:
     K8S_SERVER: $K8S_SERVER_PROD

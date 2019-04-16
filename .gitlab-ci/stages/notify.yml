@@ -6,7 +6,6 @@
     DEPLOY_ID_FILE: github_deploy_id
   before_script:
     - apk add --update curl
-    - export BRANCH_HASH=$(eval $BRANCH_HASHER)
     - source .gitlab-ci/env.sh
   dependencies: []
 

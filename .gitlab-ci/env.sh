@@ -18,6 +18,7 @@ case ${BRANCH_NAME} in
     export API_HOST=http://api.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr/;
     export FRONTEND_HOST=http://code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr/;
     export NLP_HOST=http://nlp.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr/;
+    export ELASTICSEARCH_HOST=http://elasticsearch:${ES_PORT};
     ;;
   *)
     export ENVIRONMENT=dev;
@@ -25,5 +26,6 @@ case ${BRANCH_NAME} in
     export API_HOST=http://api.${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr/;
     export FRONTEND_HOST=http://${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr/;
     export NLP_HOST=http://nlp.${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr/;
+    export ELASTICSEARCH_HOST=http://${BRANCH_HASH}.elasticsearch:${ES_PORT};
     ;;
 esac
