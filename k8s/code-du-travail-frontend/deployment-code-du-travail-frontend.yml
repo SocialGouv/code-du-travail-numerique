@@ -35,6 +35,6 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-api.${ENVIRONMENT}.factory.social.gouv.fr/api/v1
+          value: "${API_HOST}/api/v1"
         - name: SUGGEST_URL
           value: "${NLP_HOST}/api/suggest"
