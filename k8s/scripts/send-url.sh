@@ -20,7 +20,7 @@ curl -0 \
 -d @- << EOF
 {
   "description": "Deployment ${STATE}",
-  "environment": "${CI_ENVIRONMENT_NAME}",
+  "environment": "${ENVIRONMENT}",
   "environment_url": "${URL}",
   "log_url": "${URL}",
   "state": "${STATE}"

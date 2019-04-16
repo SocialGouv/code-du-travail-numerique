@@ -4,12 +4,10 @@
   image: python:$PYTHON_VERSION
   variables:
     DEPLOY_ID_FILE: github_deploy_id
-  environment:
-    name: dev
   before_script:
-    - apk update && apk add curl
+    - apk add --update curl
     - export BRANCH_HASH=$(eval $BRANCH_HASHER)
-    - export URL=http://${BRANCH_HASH}.code-du-travail-numerique.${CI_ENVIRONMENT_NAME}.factory.social.gouv.fr/
+    - source .gitlab-ci/env.sh
   dependencies: []
 
 #
@@ -33,8 +31,8 @@ Notify Fail:
   dependencies:
     - Notify Starting Deployment
   script:
-    - echo "Notify Failure to GitHub deployment id '$(cat github_deploy_id)'"
-    - sh ./k8s/scripts/send-url.sh $(cat github_deploy_id) failure
+    - echo "Notify Failure to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
+    - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
 
 Notify Success:
   <<: *notify_stage
@@ -43,5 +41,6 @@ Notify Success:
   dependencies:
     - Notify Starting Deployment
   script:
-    - echo "Notify Success to GitHub deployment id '$(cat github_deploy_id)'"
-    - sh ./k8s/scripts/send-url.sh $(cat github_deploy_id) success
+    - echo "Notify Success to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
+    - export URL=$FRONTEND_HOST
+    - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success
