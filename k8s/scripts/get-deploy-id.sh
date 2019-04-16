@@ -13,7 +13,7 @@ curl -0 -sS \
 {
   "auto_merge": false,
   "description": "Deplying ${CI_PROJECT_PATH}@${CI_COMMIT_SHORT_SHA}",
-  "environment": "${CI_ENVIRONMENT_NAME}",
+  "environment": "${ENVIRONMENT}",
   "ref": "${CI_COMMIT_REF_NAME}",
   "required_contexts": [],
   "transient_environment": true
