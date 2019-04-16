@@ -20,9 +20,7 @@ stages:
 - "Prepare"
 - "Code Quality"
 - "Registration"
-- "Deploy EL Stack"
-- "Create Code du Travail Numerique Elasticsearch Index"
-- "Deploy Code du Travail Numerique"
+- "Deploy"
 - "Notify Finished Deployment"
 - "Delete Pods"
 
@@ -30,7 +28,7 @@ stages:
 #
 
 .deploy_stage: &deploy_stage
-  stage: "Deploy EL Stack"
+  stage: "Deploy"
   dependencies: []
   services:
     - docker:$DOCKER_VERSION-dind
@@ -45,7 +43,7 @@ stages:
 ### DEPLOY CDTN TO K8S DEV CLUSTER ###
 ######################################
 
-deploy-elasticsearch:
+Deploy Elasticsearch (dev):
   <<: *deploy_stage
   extends: .deploy-elasticsearch-dev-k8s
   variables:
@@ -62,7 +60,7 @@ deploy-elasticsearch:
   except:
   - master
 
-create-cdtn-es-index:
+Create Elasticsearch Index (dev):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-data-k8s
   variables:
@@ -78,7 +76,7 @@ create-cdtn-es-index:
   except:
   - master
 
-deploy-cdtn-api:
+Deploy @cdtn/api (dev):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-api-k8s
   variables:
@@ -101,7 +99,7 @@ deploy-cdtn-api:
   except:
   - master
 
-deploy-cdtn-nlp:
+Deploy @cdtn/nlp (dev):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-nlp-k8s
   variables:
@@ -122,7 +120,7 @@ deploy-cdtn-nlp:
   except:
   - master
 
-deploy-cdtn-frontend:
+Deploy @cdtn/frontend (dev):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
@@ -145,7 +143,7 @@ deploy-cdtn-frontend:
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
 ########################################
 
-deploy-elasticsearch-prod:
+Deploy Elasticsearch (ops):
   <<: *deploy_stage
   extends: .deploy-elasticsearch-prod-k8s
   variables:
@@ -163,7 +161,7 @@ deploy-elasticsearch-prod:
   only:
   - master
 
-create-cdtn-es-index-prod:
+Create Elasticsearch Index (ops):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-data-prod-k8s
   variables:
@@ -180,7 +178,7 @@ create-cdtn-es-index-prod:
   only:
   - master
 
-deploy-cdtn-api-prod:
+Deploy @cdtn/api (ops):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-api-prod-k8s
   variables:
@@ -204,7 +202,7 @@ deploy-cdtn-api-prod:
   only:
   - master
 
-deploy-cdtn-nlp-prod:
+Deploy @cdtn/nlp (ops):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-nlp-prod-k8s
   variables:
@@ -226,7 +224,7 @@ deploy-cdtn-nlp-prod:
   only:
   - master
 
-deploy-cdtn-frontend-prod:
+Deploy @cdtn/frontend (ops):
   <<: *deploy_stage
   extends: .deploy-code-du-travail-frontend-prod-k8s
   variables:
