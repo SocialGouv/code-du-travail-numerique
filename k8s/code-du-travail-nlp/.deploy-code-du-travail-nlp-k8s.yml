@@ -3,10 +3,10 @@
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
   before_script:
-  - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
-  - export HASH_BRANCH_INGRESS=$HASH_BRANCH_NAME-
-  - export HASH_BRANCH_NAME=-$HASH_BRANCH_NAME
+  - export HASH_BRANCH_NAME=-$BRANCH_HASH
+  #
   - /apps/create-kubeconfig.sh
+  #
   - envsubst < k8s/code-du-travail-nlp/deployment-code-du-travail-nlp.yml > k8s/code-du-travail-nlp/deployment-cdtn-nlp.yml
   - envsubst < k8s/code-du-travail-nlp/service-code-du-travail-nlp.yml > k8s/code-du-travail-nlp/service-cdtn-nlp.yml
   - envsubst < k8s/code-du-travail-nlp/ingress-code-du-travail-nlp.yml > k8s/code-du-travail-nlp/ingress-cdtn-nlp.yml
@@ -23,6 +23,7 @@
     entrypoint: [""]
   before_script:
   - /apps/create-kubeconfig.sh
+  #
   - envsubst < k8s/code-du-travail-nlp/deployment-code-du-travail-nlp.yml > k8s/code-du-travail-nlp/deployment-cdtn-nlp.yml
   - envsubst < k8s/code-du-travail-nlp/service-code-du-travail-nlp.yml > k8s/code-du-travail-nlp/service-cdtn-nlp.yml
   - envsubst < k8s/code-du-travail-nlp/ingress-code-du-travail-nlp.yml > k8s/code-du-travail-nlp/ingress-cdtn-nlp.yml
