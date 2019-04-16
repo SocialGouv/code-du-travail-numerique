@@ -31,6 +31,7 @@ Notify Fail:
     - Notify Starting Deployment
   script:
     - echo "Notify Failure to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
+    - export URL="http://${FRONTEND_HOST}"
     - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
 
 Notify Success:
