@@ -8,7 +8,7 @@ metadata:
     branch: cdtn${HASH_BRANCH_NAME}
 spec:
   rules:
-  - host: "${NLP_HOST}"
+  - host: ${NLP_HOST}
     http:
       paths:
       - path: /

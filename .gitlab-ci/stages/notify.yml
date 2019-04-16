@@ -41,5 +41,5 @@ Notify Success:
     - Notify Starting Deployment
   script:
     - echo "Notify Success to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
-    - export URL=$FRONTEND_HOST
+    - export URL="http://${FRONTEND_HOST}"
     - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success

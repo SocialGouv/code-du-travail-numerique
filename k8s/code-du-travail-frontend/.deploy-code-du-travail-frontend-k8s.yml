@@ -14,7 +14,7 @@
   - kubectl apply -f k8s/code-du-travail-frontend/deployment-cdtn-frontend.yml
   - kubectl apply -f k8s/code-du-travail-frontend/service-cdtn-frontend.yml
   - kubectl apply -f k8s/code-du-travail-frontend/ingress-cdtn-frontend.yml
-  - echo "CDTN frontend available at - ${FRONTEND_HOST}"
+  - echo "CDTN frontend available at - http://${FRONTEND_HOST}"
   allow_failure: false
 
 .deploy-code-du-travail-frontend-prod-k8s:
@@ -31,5 +31,5 @@
   - kubectl apply -f k8s/code-du-travail-frontend/deployment-cdtn-frontend.yml
   - kubectl apply -f k8s/code-du-travail-frontend/service-cdtn-frontend.yml
   - kubectl apply -f k8s/code-du-travail-frontend/ingress-cdtn-frontend.yml
-  - echo "CDTN frontend available at - ${FRONTEND_HOST}"
+  - echo "CDTN frontend available at - http://${FRONTEND_HOST}"
   allow_failure: false
