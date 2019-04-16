@@ -2,12 +2,12 @@
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  before_script:
+  script:
   - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
   - export HASH_BRANCH_NAME=-$HASH_BRANCH_NAME
   - /apps/create-kubeconfig.sh
   - envsubst < k8s/code-du-travail-data/deployment-code-du-travail-data.yml > k8s/code-du-travail-data/deployment-cdtn-data.yml
-  script:
+  #
   - k8s/code-du-travail-data/scripts/create-code-du-travail-elasticsearch-index.sh $HASH_BRANCH_NAME
   allow_failure: false
 
@@ -15,9 +15,9 @@
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  before_script:
+  script:
   - /apps/create-kubeconfig.sh
   - envsubst < k8s/code-du-travail-data/deployment-code-du-travail-data.yml > k8s/code-du-travail-data/deployment-cdtn-data.yml
-  script:
+  #
   - k8s/code-du-travail-data/scripts/create-code-du-travail-elasticsearch-index.sh $HASH_BRANCH_NAME
   allow_failure: false
