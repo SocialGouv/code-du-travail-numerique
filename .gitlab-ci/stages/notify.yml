@@ -6,7 +6,6 @@
     DEPLOY_ID_FILE: github_deploy_id
   before_script:
     - apk add --update curl
-    - export BRANCH_HASH=$(eval $BRANCH_HASHER)
     - source .gitlab-ci/env.sh
   dependencies: []
 
@@ -32,6 +31,7 @@ Notify Fail:
     - Notify Starting Deployment
   script:
     - echo "Notify Failure to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
+    - export URL="http://${FRONTEND_HOST}"
     - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
 
 Notify Success:
@@ -42,5 +42,5 @@ Notify Success:
     - Notify Starting Deployment
   script:
     - echo "Notify Success to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
-    - export URL=$FRONTEND_HOST
+    - export URL="http://${FRONTEND_HOST}"
     - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success
