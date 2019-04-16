@@ -8,7 +8,7 @@ metadata:
     branch: cdtn${HASH_BRANCH_NAME}
 spec:
   rules:
-  - host: ${HASH_BRANCH_INGRESS}code-du-travail-numerique-nlp.${ENVIRONMENT}.factory.social.gouv.fr
+  - host: ${NLP_HOST}
     http:
       paths:
       - path: /
