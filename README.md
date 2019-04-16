@@ -187,31 +187,26 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 ## Architecture
 
 ```
-                             +--------+
-                             | kibana |
-                             +--------+
-                                 |
-                                 |
-     +--------+          +-------v--------+
+     +--------+          +----------------+
      |        |          |                |
-     |  data  +---------->  elastisearch  <----------+
-     |        |          |                |          |
-     +--------+          +----------------+          |
-                                 |               +-------+
-                                 |               |  APM  |
-                             +-------+           +---^---+
-                             |       |               |
-                             |  API  +---------------+
+     |  data  +---------->  elastisearch  |
+     |        |          |                | 
+     +--------+          +----------------+ 
+                                 |
+                                 |
+                             +-------+
+                             |       |
+                             |  API  |
                              |       |
                              +-------+
                                  |
                                  |
                                  |
-                           +------------+
-                           |            |
-                           |  frontend  |
-                           |            |
-                           +------------+
+                           +------------+      +---------+
+                           |            |      |         |
+                           |  frontend  +------> API-nlp |
+                           |            |      |         |
+                           +------------+      +---------+
 ```
 
 ## URLs
@@ -220,8 +215,6 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 
 - Prod - https://codedutravail.num.social.gouv.fr/
 - Dev - https://codedutravail-dev.num.social.gouv.fr
-- Sprint 1.1 - https://codedutravail-sprint11.num.social.gouv.fr
-- Sprint 1.2 - https://codedutravail-sprint12.num.social.gouv.fr
 
 ### Tools
 
