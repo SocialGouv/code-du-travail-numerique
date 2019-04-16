@@ -26,6 +26,6 @@ case ${BRANCH_NAME} in
     export API_HOST=api.${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
     export FRONTEND_HOST=${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
     export NLP_HOST=nlp.${BRANCH_HASH}.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
-    export ELASTICSEARCH_HOST=${BRANCH_HASH}.elasticsearch:${ES_PORT};
+    export ELASTICSEARCH_HOST=elasticsearch-${BRANCH_HASH}:${ES_PORT};
     ;;
 esac
