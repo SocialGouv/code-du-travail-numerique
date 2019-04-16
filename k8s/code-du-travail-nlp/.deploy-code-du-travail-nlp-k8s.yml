@@ -14,7 +14,7 @@
   - kubectl apply -f k8s/code-du-travail-nlp/deployment-cdtn-nlp.yml
   - kubectl apply -f k8s/code-du-travail-nlp/service-cdtn-nlp.yml
   - kubectl apply -f k8s/code-du-travail-nlp/ingress-cdtn-nlp.yml
-  - echo "CDTN nlp available at - http://"$HASH_BRANCH_INGRESS"code-du-travail-numerique-nlp.dev.factory.social.gouv.fr"
+  - echo "CDTN nlp available at - ${NLP_HOST}"
   allow_failure: false
 
 .deploy-code-du-travail-nlp-prod-k8s:
@@ -30,5 +30,5 @@
   - kubectl apply -f k8s/code-du-travail-nlp/deployment-cdtn-nlp.yml
   - kubectl apply -f k8s/code-du-travail-nlp/service-cdtn-nlp.yml
   - kubectl apply -f k8s/code-du-travail-nlp/ingress-cdtn-nlp.yml
-  - echo "CDTN nlp available at - http://code-du-travail-numerique-nlp.ops.factory.social.gouv.fr"
+  - echo "CDTN nlp available at - ${NLP_HOST}"
   allow_failure: false

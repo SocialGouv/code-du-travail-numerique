@@ -37,4 +37,4 @@ spec:
         - name: API_URL
           value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-api.${ENVIRONMENT}.factory.social.gouv.fr/api/v1
         - name: SUGGEST_URL
-          value: http://${HASH_BRANCH_INGRESS}code-du-travail-numerique-nlp.${ENVIRONMENT}.factory.social.gouv.fr/api/suggest
+          value: "${NLP_HOST}/api/suggest"
