@@ -18,7 +18,7 @@ case ${BRANCH_NAME} in
     export API_HOST=api.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
     export FRONTEND_HOST=code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
     export NLP_HOST=nlp.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
-    export ELASTICSEARCH_HOST=es-cluster:${ES_PORT};
+    export ELASTICSEARCH_HOST=elasticsearch:${ES_PORT};
     ;;
   *)
     export ENVIRONMENT=dev;
