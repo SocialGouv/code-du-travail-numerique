@@ -22,9 +22,14 @@ spec:
     - sh
     - -c
     - |
-      apk --no-cache  --update add curl
-      while [[ $(curl --silent --output /dev/null --request GET --write-out "%{http_code}" "http://elasticsearch${HASH_BRANCH_NAME}:${ES_PORT}") -ne 200 ]]; do
-        echo "Not ready"
-        sleep 5s
-      done
-      echo Ready
+      apk --no-cache --update add curl;
+
+      retry=120; # 5s * (12 * 10) = 10min
+      while
+        ! curl -sS "http://${ELASTICSEARCH_HOST}/_cat/health?h=status" &&
+        [[ $(( retry-- )) -gt 0 ]];
+      do echo "Waiting for Elasticsearch to go Green ($(( retry )))" ; sleep 5s ; done ;
+
+      [[ $(( retry )) -lt 1 ]] && exit 128;
+
+      echo Ready;
