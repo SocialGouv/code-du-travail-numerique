@@ -70,7 +70,7 @@ class FeedbackForm extends React.Component {
       motif,
       message,
       source: this.props.source,
-      url: this.props.url || document ? document.location.href : "",
+      url: this.props.url || (document ? document.location.href : ""),
       title: this.props.title,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent,
       subject: question,
@@ -118,7 +118,7 @@ class FeedbackForm extends React.Component {
         <input
           type="hidden"
           name="url"
-          value={url || document ? document.location.href : ""}
+          value={url || (document ? document.location.href : "")}
         />
         <input type="hidden" name="source" value={source} />
         {!isSatisfied && (

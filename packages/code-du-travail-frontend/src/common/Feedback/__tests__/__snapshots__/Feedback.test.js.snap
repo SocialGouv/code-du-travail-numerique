@@ -265,7 +265,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             <input
               name="url"
               type="hidden"
-              value="http://localhost/"
+              value="http://server/fiches/fiche1"
             />
             <input
               name="source"
@@ -430,7 +430,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             <input
               name="url"
               type="hidden"
-              value="http://localhost/"
+              value="http://server/fiches/fiche1"
             />
             <input
               name="source"
