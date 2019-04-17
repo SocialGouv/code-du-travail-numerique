@@ -17,15 +17,15 @@ class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
     url: PropTypes.string,
+    title: PropTypes.string,
     source: PropTypes.string.isRequired,
     onSubmit: PropTypes.func.isRequired,
-    onReset: PropTypes.func.isRequired,
-    askMotif: PropTypes.bool
+    isSatisfied: PropTypes.bool.isRequired
   };
   static defaultProps = {
     query: "",
     url: "",
-    askMotif: false
+    title: ""
   };
   state = {
     status: "", // "" | "sending" | "error"
@@ -39,7 +39,7 @@ class FeedbackForm extends React.Component {
 
   static getDerivedStateFromProps(props) {
     return {
-      motif: props.askMotif ? motifLabels[0] : null
+      motif: !props.isSatisfied ? motifLabels[0] : null
     };
   }
 
@@ -70,9 +70,11 @@ class FeedbackForm extends React.Component {
       motif,
       message,
       source: this.props.source,
-      url: document.location.href,
+      url: this.props.url || (document ? document.location.href : ""),
+      title: this.props.title,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent,
-      subject: question
+      subject: question,
+      isSatisfied: this.props.isSatisfied
     };
     try {
       await this.props.onSubmit(data);
@@ -101,32 +103,25 @@ class FeedbackForm extends React.Component {
   }
 
   render() {
-    const { query, url, source, askMotif, onReset } = this.props;
+    const { query, url, source, isSatisfied } = this.props;
 
     return (
       <StyledForm action={feedbackUrl} onSubmit={this.onSubmit}>
         <p>
-          Merci pour votre réponse !<br />
-          Souhaitez-vous donner plus de précisions ?<br />
-          Nous sommes à votre écoute
+          <strong>Merci pour votre réponse !</strong>
+        </p>
+        <p>
+          Vous souhaitez nous aider à améliorer le Code du travail numérique ?
+          Laissez-nous un commentaire :
         </p>
         <input type="hidden" name="question" value={query} />
         <input
           type="hidden"
           name="url"
-          value={document ? document.location.href : url}
+          value={url || (document ? document.location.href : "")}
         />
         <input type="hidden" name="source" value={source} />
-
-        <StyledInput
-          as="textarea"
-          ref={this.texteareaRef}
-          name="message"
-          placeholder="Les informations ..."
-          onChange={this.inputChange}
-          value={this.state.message}
-        />
-        {askMotif && (
+        {!isSatisfied && (
           <StyledInput
             as="select"
             name="motif"
@@ -141,21 +136,21 @@ class FeedbackForm extends React.Component {
             ))}
           </StyledInput>
         )}
+        <StyledInput
+          as="textarea"
+          ref={this.texteareaRef}
+          name="message"
+          placeholder="Les informations ..."
+          onChange={this.inputChange}
+          value={this.state.message}
+        />
 
         <FormAction>
           <button
             className="btn btn__primary btn__feedback"
             disabled={this.state.status === "sending"}
           >
-            Envoyer ma question
-          </button>
-          <button
-            type="button"
-            className="btn btn__link"
-            disabled={this.state.status === "sending"}
-            onClick={onReset}
-          >
-            Annuler
+            Envoyer mon commentaire
           </button>
           <Status>{this.getAlert()}</Status>
         </FormAction>

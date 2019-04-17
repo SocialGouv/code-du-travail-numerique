@@ -78,6 +78,7 @@ function Answer({
         query={router.query.q}
         source={router.query.source}
         url={router.asPath}
+        title={title}
       />
     </React.Fragment>
   );

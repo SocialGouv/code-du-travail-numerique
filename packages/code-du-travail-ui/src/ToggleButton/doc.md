@@ -5,7 +5,7 @@ menu: Component
 import { Playground, Props } from "docz";
 import ToggleButton from ".";
 
-## <ToggleButton/\>
+# ToggleButton
 
 <Playground>
   <p>

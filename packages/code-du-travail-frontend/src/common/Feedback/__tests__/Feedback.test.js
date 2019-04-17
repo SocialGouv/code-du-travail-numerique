@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 
-import { Feedback } from "../Feedback";
+import { Feedback } from "..";
 
 jest.mock("react-piwik", () => {
   let events = [];

@@ -44,11 +44,12 @@ exports[`<FeedbackForm /> should render 1`] = `
     class="c0"
   >
     <p>
-      Merci pour votre réponse !
-      <br />
-      Souhaitez-vous donner plus de précisions ?
-      <br />
-      Nous sommes à votre écoute
+      <strong>
+        Merci pour votre réponse !
+      </strong>
+    </p>
+    <p>
+      Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
     </p>
     <input
       name="question"
@@ -65,6 +66,36 @@ exports[`<FeedbackForm /> should render 1`] = `
       type="hidden"
       value="Tous contenus"
     />
+    <select
+      class="c1"
+      name="motif"
+    >
+      <option
+        value="Les informations proposées ne sont pas à jour"
+      >
+        Les informations proposées ne sont pas à jour
+      </option>
+      <option
+        value="Les informations me paraissent erronées"
+      >
+        Les informations me paraissent erronées
+      </option>
+      <option
+        value="Les informations me paraissent incomplètes"
+      >
+        Les informations me paraissent incomplètes
+      </option>
+      <option
+        value="Les informations me paraissent hors-sujet"
+      >
+        Les informations me paraissent hors-sujet
+      </option>
+      <option
+        value="Je n'ai pas trouvé la réponse à ma question"
+      >
+        Je n'ai pas trouvé la réponse à ma question
+      </option>
+    </select>
     <textarea
       class="c1"
       name="message"
@@ -76,13 +107,7 @@ exports[`<FeedbackForm /> should render 1`] = `
       <button
         class="btn btn__primary btn__feedback"
       >
-        Envoyer ma question
-      </button>
-      <button
-        class="btn btn__link"
-        type="button"
-      >
-        Annuler
+        Envoyer mon commentaire
       </button>
       <div
         class="c3"
