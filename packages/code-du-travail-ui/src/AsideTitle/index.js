@@ -1,12 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const AsideTitle = ({ style, children }) => {
-  return (
-    <h3 className="aside-title" style={style}>
-      {children}
-    </h3>
-  );
+import { colors, fonts, spacing } from "../theme";
+
+const AsideTitle = ({ children }) => {
+  return <H3>{children}</H3>;
 };
 
 AsideTitle.propTypes = {
@@ -19,3 +18,10 @@ AsideTitle.propTypes = {
 };
 
 export default AsideTitle;
+
+const H3 = styled.h3`
+  padding: ${spacing.interComponent} 0;
+  font-size: ${fonts.sizeH5};
+  font-weight: 600;
+  color: ${colors.black};
+`;

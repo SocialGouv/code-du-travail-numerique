@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { ExternalLink } from "react-feather";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -17,12 +16,13 @@ const fetchFiche = ({ slug }) =>
   );
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
+  <a
+    href={url}
+    className="external-link__after"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     Voir le contenu original sur : {name}{" "}
-    <ExternalLink
-      style={{ verticalAlign: "middle", margin: "0 5px" }}
-      size={16}
-    />
   </a>
 );
 

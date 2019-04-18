@@ -1,6 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> should render 1`] = `
+.c0 {
+  position: relative;
+  margin: 20px auto 0 auto;
+  max-width: 850px;
+}
+
+.c1 {
+  position: absolute;
+  top: 0.625rem;
+  left: calc(-60px - 1.25rem);
+  width: 60px;
+  color: #4c5467;
+}
+
+.c2 {
+  font-weight: 600;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c4 {
+  color: #4c5467;
+  font-weight: 600;
+}
+
+.c5 {
+  margin-left: 1rem;
+  color: #adb9c9;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.c6 {
+  color: #4c5467;
+  font-weight: 600;
+}
+
+.c7 {
+  margin-left: -10px;
+}
+
+.c8 {
+  margin: 20px auto;
+  max-width: 850px;
+  text-align: left;
+}
+
+@media (max-width:1200px) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    margin-left: 0;
+  }
+}
+
 <div>
   <section
     class="section-light"
@@ -12,10 +92,10 @@ exports[`<Article /> should render 1`] = `
         class="wrapper-light "
       >
         <div
-          class="article"
+          class="c0"
         >
           <div
-            class="article__icon"
+            class="c1"
           >
             <svg
               viewBox="0 0 50 50"
@@ -39,39 +119,38 @@ exports[`<Article /> should render 1`] = `
               </g>
             </svg>
           </div>
-          <div
-            class="article__header"
-          >
+          <div>
             <h1
-              class="article__title"
+              class="c2"
             >
               Contrat de travail et formalités d'embauche de l'assistante maternelle
             </h1>
-            <div>
+            <div
+              class="c3"
+            >
               <span
-                class="article__document-type"
+                class="c4"
               >
                 Fiche service public
               </span>
               <span
-                class="article__date"
+                class="c5"
               >
-                Mis à jour le :
-                 
+                Mis à jour le : 
                 <span
-                  class="article__date-value"
+                  class="c6"
                 >
                   26/07/2018
                 </span>
               </span>
             </div>
-            <div
-              class="article__tags"
-            />
           </div>
+          <div
+            class="c7"
+          />
         </div>
         <div
-          class="article__content"
+          class="c8"
         >
           this is an Article
         </div>

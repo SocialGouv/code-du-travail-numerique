@@ -1,17 +1,16 @@
 import React from "react";
 import Head from "next/head";
-import { Alert, Article, Container, theme } from "@cdt/ui";
+import { Alert, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
 import { withRouter } from "next/router";
 
 import { Link } from "../../routes";
 import ReferencesJuridiques from "../ReferencesJuridiques";
+import Article from "../common/Article";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
 import { Feedback } from "../common/Feedback";
-
-const { spacing } = theme;
 
 const BigError = ({ children }) => (
   <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
@@ -59,15 +58,7 @@ function Answer({
           {intro}
           {html && <Html>{html}</Html>}
           {children}
-          <div
-            style={{
-              background: "var(--color-light-background)",
-              padding: 10,
-              marginTop: 50
-            }}
-          >
-            {footer}
-          </div>
+          <Footer>{footer}</Footer>
         </Article>
       )}
       {additionalContent}
@@ -86,6 +77,15 @@ function Answer({
 
 export default withRouter(Answer);
 
+const { box, colors, spacing } = theme;
+
 const BacklinkWrapper = styled(Container)`
   margin-top: ${spacing.base};
+`;
+
+const Footer = styled.div`
+  margin-top: ${spacing.larger};
+  padding: ${spacing.base};
+  background-color: ${colors.lightBackground};
+  border-radius: ${box.borderRadius};
 `;

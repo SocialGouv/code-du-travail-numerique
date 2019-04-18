@@ -7,7 +7,6 @@ import { List, ListItem } from "./List";
 export { icons, keyframes, List, ListItem, Modal, ModalContentWrapper, theme };
 export { default as Accordion } from "./Accordion";
 export { default as Alert } from "./Alert";
-export { default as Article } from "./Article";
 export { default as AsideTitle } from "./AsideTitle";
 export { default as Badge } from "./Badge";
 export { default as Button } from "./Button";
