@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { colors, box, spacing } from "../theme";
+import { animations, colors, box, spacing } from "../theme";
 import { darken, lighten, transparentize } from "polished";
 
 // OK it is a simple button in fact, on which you can provid a pressed prop...
@@ -32,7 +32,7 @@ const Button = styled.button`
   border-width: 1px 1px 2px 1px;
   border-radius: ${box.borderRadius};
   cursor: pointer;
-  transition: background-color 250ms ease;
+  transition: background-color ${animations.transitionTiming} ease;
 
   ${props => {
     let backgroundColor = colors.blueLight;

@@ -18,7 +18,6 @@ export { default as Category } from "./Category";
 export { default as Container } from "./Container";
 export { default as LargeLink } from "./LargeLink";
 export { default as List } from "./List";
-export { default as SearchForm } from "./SearchForm";
 export { default as Section } from "./Section";
 export { default as SrOnly } from "./SrOnly";
 export { default as Tag } from "./Tag";
