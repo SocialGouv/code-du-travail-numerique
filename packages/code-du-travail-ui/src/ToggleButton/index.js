@@ -28,7 +28,6 @@ const Button = styled.button`
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: ${box.borderRadius};
   cursor: pointer;

@@ -31,6 +31,3 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "components/_cards.css";
 @import "components/_categories.css";
 @import "components/_tags.css";
-
-@import "components/_search_results.css";
-@import "components/_skip_links.css";

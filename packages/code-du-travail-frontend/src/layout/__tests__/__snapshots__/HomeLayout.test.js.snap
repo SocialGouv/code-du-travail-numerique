@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomeLayout /> should render 1`] = `
-.c8 {
+.c10 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -16,7 +16,6 @@ exports[`<HomeLayout /> should render 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -134,20 +133,38 @@ exports[`<HomeLayout /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 1.25rem;
+  padding: 1.25rem 0;
 }
 
-.c7 {
+.c8 + .c7 {
+  padding-left: 1rem;
+}
+
+.c9 {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.c9 {
+.c11 {
   margin: 0.5rem 0;
 }
 
-.c9 a {
+.c11 a {
   color: #434956;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 + .c7 {
+    padding-left: 0;
+  }
 }
 
 <div>
@@ -216,18 +233,20 @@ exports[`<HomeLayout /> should render 1`] = `
       <div
         class="c6"
       >
-        <div>
+        <div
+          class="c7 c8"
+        >
           <h3
-            class="c7"
+            class="c9"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c8"
+            class="c10"
           >
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   href="/a-propos"
@@ -238,7 +257,7 @@ exports[`<HomeLayout /> should render 1`] = `
             </li>
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   href="mailto:contact@code-du-travail.beta.gouv.fr"
@@ -249,18 +268,20 @@ exports[`<HomeLayout /> should render 1`] = `
             </li>
           </ul>
         </div>
-        <div>
+        <div
+          class="c7 c8"
+        >
           <h3
-            class="c7"
+            class="c9"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c8"
+            class="c10"
           >
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   class="external-link__after"
@@ -274,7 +295,7 @@ exports[`<HomeLayout /> should render 1`] = `
             </li>
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   class="external-link__after"
@@ -288,18 +309,20 @@ exports[`<HomeLayout /> should render 1`] = `
             </li>
           </ul>
         </div>
-        <div>
+        <div
+          class="c7 c8"
+        >
           <h3
-            class="c7"
+            class="c9"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c8"
+            class="c10"
           >
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   class="external-link__after"
@@ -307,13 +330,13 @@ exports[`<HomeLayout /> should render 1`] = `
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  La direction générale du travail
+                  La Direction Générale du Travail
                 </a>
               </div>
             </li>
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   class="external-link__after"
@@ -327,7 +350,7 @@ exports[`<HomeLayout /> should render 1`] = `
             </li>
             <li>
               <div
-                class="c9"
+                class="c11"
               >
                 <a
                   class="external-link__after"

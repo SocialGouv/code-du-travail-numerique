@@ -10,7 +10,6 @@ exports[`<Button /> it renders a Button danger 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -81,7 +80,6 @@ exports[`<Button /> it renders a Button info 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -152,7 +150,6 @@ exports[`<Button /> it renders a Button link 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -223,7 +220,6 @@ exports[`<Button /> it renders a Button primary 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -294,7 +290,6 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -365,7 +360,6 @@ exports[`<Button /> it renders a Button success 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -436,7 +430,6 @@ exports[`<Button /> it renders a Button warning 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -507,7 +500,6 @@ exports[`<Button /> renders 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;

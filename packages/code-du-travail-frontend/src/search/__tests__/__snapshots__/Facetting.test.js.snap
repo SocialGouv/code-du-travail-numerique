@@ -8,20 +8,18 @@ exports[`<Facetting/> should render Facets 1`] = `
 
 .c2 {
   font-size: 0.9em;
-  font-size: var(--font-size-small);
+  font-size: 0.9rem;
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;
   -ms-letter-spacing: 0.5px;
   letter-spacing: 0.5px;
   font-weight: 700;
-  padding: var(--spacing-small) 0;
+  padding: 0.625rem 0;
 }
 
 .c0 {
   font-size: 1rem;
-  font-size: var(--font-size-base);
   color: #26353f;
-  color: var(--color-almost-black);
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;
   -ms-letter-spacing: 0.5px;
@@ -33,7 +31,6 @@ exports[`<Facetting/> should render Facets 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #8393a7;
-  color: var(--color-dark-grey);
 }
 
 .c3:link,
@@ -41,12 +38,39 @@ exports[`<Facetting/> should render Facets 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #8393a7;
-  color: var(--color-dark-grey);
+  color: #8393a7;
 }
 
 .c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c4 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #26353f;
+}
+
+.c4:link,
+.c4:visited {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #8393a7;
+  color: #26353f;
+}
+
+.c4:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (max-width:600px) {
+  .c2 {
+    display: inline-block;
+    padding-bottom: 0;
+    padding-right: 0.625rem;
+  }
 }
 
 <div>
@@ -102,7 +126,7 @@ exports[`<Facetting/> should render Facets 1`] = `
         class="c2"
       >
         <a
-          class="c3"
+          class="c4"
           href="/recherche?q=search%20address&source="
         >
           Toutes les réponses

@@ -83,6 +83,7 @@ const { colors, spacing, fonts, box } = theme;
 const List = styled.ul`
   list-style-type: none;
   margin-left: 0;
+  padding-left: 0;
 `;
 
 const ResultLink = styled.a`

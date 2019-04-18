@@ -10,7 +10,6 @@ exports[`<search /> should render 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -374,7 +373,6 @@ exports[`<search /> should render suggestions 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
