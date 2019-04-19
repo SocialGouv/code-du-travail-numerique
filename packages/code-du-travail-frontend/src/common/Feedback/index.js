@@ -95,6 +95,9 @@ const SectionWrapper = styled(Section)`
 const ContentWrapper = styled.div`
   position: relative;
   padding: 0 ${spacing.large};
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 0;
+  }
 `;
 
 const Title = styled.h3`
@@ -103,5 +106,7 @@ const Title = styled.h3`
 
 const StyledToggle = styled(ToggleButton)`
   min-width: 7rem;
-  margin-right: 1rem;
+  & + & {
+    margin-left: ${spacing.base};
+  }
 `;

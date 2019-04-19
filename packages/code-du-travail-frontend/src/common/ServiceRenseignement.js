@@ -43,13 +43,15 @@ class ServiceRenseignement extends React.Component {
     return (
       <>
         <h4>Contacter les services de renseignement par téléphone</h4>
-        <NumberInsert href="tel:+0033806000126">
-          <strong>0 806 000 126</strong>
-          <em>Service gratuit + prix appel</em>
-        </NumberInsert>
+        <NumberInsertWrapper>
+          <NumberInsert href="tel:+0033806000126">
+            <Number>0 806 000 126</Number>
+            <Pricing>Service gratuit + prix appel</Pricing>
+          </NumberInsert>
+        </NumberInsertWrapper>
+
         <h4>
-          Trouver les coordonnées du service de renseignements de mon
-          département
+          Trouver les coordonnées du service de renseignement de mon département
         </h4>
         <p>
           <UID name={id => `id_${id}`}>
@@ -92,7 +94,13 @@ class ServiceRenseignement extends React.Component {
 
 export { ServiceRenseignement };
 
-const { colors, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacing } = theme;
+
+const NumberInsertWrapper = styled.div`
+  @media (max-width: ${breakpoints.tablet}) {
+    text-align: center;
+  }
+`;
 
 const NumberInsert = styled.a`
   display: inline-flex;
@@ -102,31 +110,43 @@ const NumberInsert = styled.a`
   font-weight: bold;
   background-color: ${colors.white};
   border: 1px solid ${colors.blueDark};
-  strong {
-    padding: 0 ${spacing.base};
-    color: ${colors.blueDark};
-    font-size: 2rem;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
   }
-  em {
-    position: relative;
-    padding: 0 ${spacing.base} 0 ${spacing.medium};
-    display: flex;
-    align-items: center;
-    color: ${colors.white};
-    font-style: normal;
-    font-size: ${fonts.sizeBase};
-    background-color: ${colors.blueDark};
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      margin-top: -10px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 10px 0 10px 10px;
-      border-color: transparent transparent transparent ${colors.white};
+`;
+
+const Number = styled.strong`
+  padding: 0 ${spacing.base};
+  color: ${colors.blueDark};
+  font-size: 2rem;
+`;
+
+const Pricing = styled.em`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 ${spacing.base} 0 ${spacing.medium};
+  color: ${colors.white};
+  font-style: normal;
+  font-size: ${fonts.sizeBase};
+  background-color: ${colors.blueDark};
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: ${spacing.small};
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent ${colors.white};
+    transform: translateY(-50%);
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
     }
   }
 `;
