@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "@cdt/ui";
+import { List, ListItem, theme } from "@cdt/ui";
 
 import { Link } from "../../routes";
 import { getRouteBySource, getLabelBySource } from "../sources";
@@ -47,7 +47,7 @@ const SearchResultList = ({ items, query }) => {
   return (
     <List>
       {items.map(({ _id, _source }, i) => (
-        <li key={_id}>
+        <ListItem key={_id}>
           <Link
             route={getRouteBySource(_source.source)}
             params={{ q: query, slug: _source.slug }}
@@ -57,7 +57,7 @@ const SearchResultList = ({ items, query }) => {
               <SearchResult result={_source} />
             </ListLink>
           </Link>
-        </li>
+        </ListItem>
       ))}
     </List>
   );
@@ -79,12 +79,6 @@ SearchResultList.propTypes = {
 export { SearchResultList };
 
 const { colors, spacing, fonts, box } = theme;
-
-const List = styled.ul`
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-`;
 
 const ResultLink = styled.a`
   display: flex;

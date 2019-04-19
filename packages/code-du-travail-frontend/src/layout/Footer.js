@@ -1,7 +1,7 @@
 import React from "react";
 import getConfig from "next/config";
 import styled from "styled-components";
-import { ToggleButton, List, theme } from "@cdt/ui";
+import { ToggleButton, List, ListItem, theme } from "@cdt/ui";
 
 import { Link } from "../../routes";
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
@@ -28,92 +28,84 @@ const Footer = () => (
       <Links>
         <Category>
           <CategoryTitle>Code du travail numérique</CategoryTitle>
-          <List
-            items={[
-              <LinkWrapper key="0">
-                <Link route="about">
-                  <a>À propos</a>
-                </Link>
-              </LinkWrapper>,
-              <LinkWrapper key="1">
-                <a href="mailto:contact@code-du-travail.beta.gouv.fr">
-                  Contact
-                </a>
-              </LinkWrapper>
-            ]}
-          />
+          <List>
+            <StyledListItem key="0">
+              <Link route="about">
+                <a>À propos</a>
+              </Link>
+            </StyledListItem>
+            <StyledListItem key="1">
+              <a href="mailto:contact@code-du-travail.beta.gouv.fr">Contact</a>
+            </StyledListItem>
+          </List>
         </Category>
         <Category>
           <CategoryTitle>Aidez-nous à améliorer cet outil</CategoryTitle>
-          <List
-            items={[
-              <LinkWrapper key="0">
-                <a
-                  href={
-                    "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
-                    publicRuntimeConfig.PACKAGE_VERSION
-                  }
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Contribuer sur Github
-                </a>
-              </LinkWrapper>,
-              <LinkWrapper key="1">
-                <a
-                  href={
-                    "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
-                    publicRuntimeConfig.PACKAGE_VERSION
-                  }
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Journal des modifications
-                </a>
-              </LinkWrapper>
-            ]}
-          />
+          <List>
+            <StyledListItem key="0">
+              <a
+                href={
+                  "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
+                  publicRuntimeConfig.PACKAGE_VERSION
+                }
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contribuer sur Github
+              </a>
+            </StyledListItem>
+            <StyledListItem key="1">
+              <a
+                href={
+                  "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
+                  publicRuntimeConfig.PACKAGE_VERSION
+                }
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Journal des modifications
+              </a>
+            </StyledListItem>
+          </List>
         </Category>
         <Category>
           <CategoryTitle>En collaboration avec</CategoryTitle>
-          <List
-            items={[
-              <LinkWrapper key="0">
-                <a
-                  href={
-                    "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  }
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </LinkWrapper>,
-              <LinkWrapper key="1">
-                <a
-                  href={"https://incubateur.social.gouv.fr/"}
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </LinkWrapper>,
-              <LinkWrapper key="2">
-                <a
-                  href={"https://beta.gouv.fr/"}
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  beta.gouv.fr
-                </a>
-              </LinkWrapper>
-            ]}
-          />
+          <List>
+            <StyledListItem key="0">
+              <a
+                href={
+                  "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                }
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                La Direction Générale du Travail
+              </a>
+            </StyledListItem>
+            <StyledListItem key="1">
+              <a
+                href={"https://incubateur.social.gouv.fr/"}
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                L’incubateur des ministères sociaux
+              </a>
+            </StyledListItem>
+            <StyledListItem key="2">
+              <a
+                href={"https://beta.gouv.fr/"}
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                beta.gouv.fr
+              </a>
+            </StyledListItem>
+          </List>
         </Category>
       </Links>
     </div>
@@ -154,7 +146,7 @@ const CategoryTitle = styled.h3`
   font-weight: 700;
 `;
 
-const LinkWrapper = styled.div`
+const StyledListItem = styled(ListItem)`
   margin: ${spacing.xsmall} 0;
   a {
     color: ${colors.darkText};

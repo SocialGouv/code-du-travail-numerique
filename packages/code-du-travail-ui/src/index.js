@@ -2,8 +2,9 @@ import * as icons from "./icons";
 import * as keyframes from "./keyframes";
 import * as theme from "./theme";
 import { Modal, ModalContentWrapper } from "./Modal";
+import { List, ListItem } from "./List";
 
-export { icons, keyframes, Modal, ModalContentWrapper, theme };
+export { icons, keyframes, List, ListItem, Modal, ModalContentWrapper, theme };
 export { default as Accordion } from "./Accordion";
 export { default as Alert } from "./Alert";
 export { default as Article } from "./Article";
@@ -17,7 +18,6 @@ export { default as Categories } from "./Categories";
 export { default as Category } from "./Category";
 export { default as Container } from "./Container";
 export { default as LargeLink } from "./LargeLink";
-export { default as List } from "./List";
 export { default as Section } from "./Section";
 export { default as SrOnly } from "./SrOnly";
 export { default as Tag } from "./Tag";

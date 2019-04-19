@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { theme } from "@cdt/ui";
+import { List, ListItem, theme } from "@cdt/ui";
 import styled from "styled-components";
 
 import { Link } from "../../routes";
@@ -42,7 +42,7 @@ class Faceting extends React.Component {
         <ListTitle>Type de réponse</ListTitle>
         <List>
           {this.state.facets.map(([key, count]) => (
-            <Item key={key}>
+            <StyledListItem key={key}>
               <Link
                 route="recherche"
                 params={{ q: query, source: key }}
@@ -52,13 +52,13 @@ class Faceting extends React.Component {
                   {getLabelBySource(key)} ({count})
                 </Text>
               </Link>
-            </Item>
+            </StyledListItem>
           ))}
-          <Item>
+          <StyledListItem>
             <Link route="recherche" params={{ q: query, source: "" }} passHref>
               <Text active={!source}>Toutes les réponses</Text>
             </Link>
-          </Item>
+          </StyledListItem>
         </List>
       </nav>
     );
@@ -69,12 +69,7 @@ export { Faceting };
 
 const { breakpoints, colors, fonts, spacing } = theme;
 
-const List = styled.ul`
-  list-style-type: none;
-  padding-left: 0;
-`;
-
-const Item = styled.li`
+const StyledListItem = styled(ListItem)`
   font-size: 0.9em;
   font-size: ${fonts.sizeSmall};
   letter-spacing: 0.5px;

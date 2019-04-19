@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AutresReferences /> should render 1`] = `
+.c7 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c5 {
   display: inline-block;
   position: relative;
@@ -102,12 +108,6 @@ exports[`<AutresReferences /> should render 1`] = `
   display: none;
 }
 
-.c7 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c8 {
   display: block;
   margin-top: 1rem;
@@ -164,7 +164,9 @@ exports[`<AutresReferences /> should render 1`] = `
         <ul
           class="c7"
         >
-          <li>
+          <li
+            class=""
+          >
             <a
               class="external-link__after c8"
               rel="noopener noreferrer"
@@ -191,7 +193,9 @@ exports[`<AutresReferences /> should render 1`] = `
               Article xxx du code du travail
             </a>
           </li>
-          <li>
+          <li
+            class=""
+          >
             <a
               class="c8"
               href="/kali/yyy"

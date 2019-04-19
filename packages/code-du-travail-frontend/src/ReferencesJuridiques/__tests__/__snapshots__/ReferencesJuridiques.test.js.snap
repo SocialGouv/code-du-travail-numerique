@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferencesJuridiques /> should render 1`] = `
+.c11 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c9 {
   display: inline-block;
   position: relative;
@@ -100,12 +106,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 
 .c10.accordion__body--hidden {
   display: none;
-}
-
-.c11 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .c12 {
@@ -221,7 +221,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 <ul
                   class="c11"
                 >
-                  <li>
+                  <li
+                    class=""
+                  >
                     <a
                       class="c12"
                       href="/code-du-travail/l1244-3"
@@ -246,7 +248,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                       Article L1244-3 du code du travail
                     </a>
                   </li>
-                  <li>
+                  <li
+                    class=""
+                  >
                     <a
                       class="c12"
                       href="/code-du-travail/l1244-4"
@@ -326,7 +330,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
               <ul
                 class="c11"
               >
-                <li>
+                <li
+                  class=""
+                >
                   <a
                     class="external-link__after c12"
                     rel="noopener noreferrer"
@@ -353,7 +359,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     Article L3121-44 du code du travail
                   </a>
                 </li>
-                <li>
+                <li
+                  class=""
+                >
                   <a
                     class="external-link__after c12"
                     rel="noopener noreferrer"
@@ -380,7 +388,9 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     Article xxx du code du travail
                   </a>
                 </li>
-                <li>
+                <li
+                  class=""
+                >
                   <a
                     class="c12"
                     href="/kali/yyy"

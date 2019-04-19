@@ -16,6 +16,7 @@ exports[`<Footer /> should render 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -36,9 +37,9 @@ exports[`<Footer /> should render 1`] = `
 .c1:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #0078c7;
-  border-style: solid;
   border-width: 1px;
   border-color: #005994;
 }
@@ -46,6 +47,7 @@ exports[`<Footer /> should render 1`] = `
 .c1[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #0068ae;
   border-width: 1px;
@@ -160,27 +162,23 @@ exports[`<Footer /> should render 1`] = `
           <ul
             class="c6"
           >
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                href="/a-propos"
               >
-                <a
-                  href="/a-propos"
-                >
-                  À propos
-                </a>
-              </div>
+                À propos
+              </a>
             </li>
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                href="mailto:contact@code-du-travail.beta.gouv.fr"
               >
-                <a
-                  href="mailto:contact@code-du-travail.beta.gouv.fr"
-                >
-                  Contact
-                </a>
-              </div>
+                Contact
+              </a>
             </li>
           </ul>
         </div>
@@ -195,33 +193,29 @@ exports[`<Footer /> should render 1`] = `
           <ul
             class="c6"
           >
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </div>
+                Contribuer sur Github
+              </a>
             </li>
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </div>
+                Journal des modifications
+              </a>
             </li>
           </ul>
         </div>
@@ -236,47 +230,41 @@ exports[`<Footer /> should render 1`] = `
           <ul
             class="c6"
           >
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                class="external-link__after"
+                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </div>
+                La Direction Générale du Travail
+              </a>
             </li>
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                class="external-link__after"
+                href="https://incubateur.social.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </div>
+                L’incubateur des ministères sociaux
+              </a>
             </li>
-            <li>
-              <div
-                class="c7"
+            <li
+              class="c7"
+            >
+              <a
+                class="external-link__after"
+                href="https://beta.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </div>
+                beta.gouv.fr
+              </a>
             </li>
           </ul>
         </div>

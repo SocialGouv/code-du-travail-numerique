@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchQuery/> should render results 1`] = `
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c5 {
   width: 2rem;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   color: #8393a7;
-}
-
-.c3 {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
 }
 
 .c4 {
@@ -113,7 +113,9 @@ exports[`<SearchQuery/> should render results 1`] = `
           <ul
             class="c3"
           >
-            <li>
+            <li
+              class=""
+            >
               <a
                 class="c4"
                 href="/question/mer-il-est-fou?q=search%20test"

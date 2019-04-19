@@ -28,6 +28,7 @@ const Button = styled.button`
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: ${box.borderRadius};
   cursor: pointer;
@@ -69,9 +70,9 @@ const Button = styled.button`
         &:active {
           position: relative;
           top: 1px;
+          margin-top: 1px;
           color: ${lighten(0.1, color)};
           background: ${lighten(0.1, backgroundColor)};
-          border-style: solid;
           border-width: 1px;
           border-color: ${backgroundColor};
         }
@@ -79,6 +80,7 @@ const Button = styled.button`
       &[aria-pressed="true"] {
         position: relative;
         top: 1px;
+        margin-top: 1px;
         color: ${lighten(0.05, color)};
         background: ${lighten(0.05, backgroundColor)};
         border-width: 1px;

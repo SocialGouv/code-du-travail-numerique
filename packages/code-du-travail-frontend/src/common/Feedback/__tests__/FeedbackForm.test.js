@@ -17,7 +17,7 @@ const results = [
 ];
 
 describe("<FeedbackForm />", () => {
-  it("should render", () => {
+  it("renders if user is satisfied", () => {
     const { container, getByValue } = render(
       <FeedbackForm
         query="Initial query"
@@ -25,13 +25,28 @@ describe("<FeedbackForm />", () => {
         results={results}
         onSubmit={jest.fn()}
         onReset={jest.fn()}
+        isSatisfied={true}
+      />
+    );
+    expect(getByValue("Initial query")).toBeTruthy();
+    expect(container).toMatchSnapshot();
+  });
+  it("renders if user is no satisfied", () => {
+    const { container, getByValue } = render(
+      <FeedbackForm
+        query="Initial query"
+        source="Tous contenus"
+        results={results}
+        onSubmit={jest.fn()}
+        onReset={jest.fn()}
+        isSatisfied={false}
       />
     );
     expect(getByValue("Initial query")).toBeTruthy();
     expect(container).toMatchSnapshot();
   });
 
-  it("should prevent submiting form if content is empty", () => {
+  it("prevents submiting form if content is empty", () => {
     const { getByText } = render(
       <FeedbackForm
         query="Initial query"
@@ -39,6 +54,7 @@ describe("<FeedbackForm />", () => {
         results={results}
         onSubmit={jest.fn()}
         onReset={jest.fn()}
+        isSatisfied={true}
       />
     );
     window.alert = jest.fn();
@@ -46,7 +62,7 @@ describe("<FeedbackForm />", () => {
     expect(alert).toHaveBeenCalled();
   });
 
-  it("should submit form if content is filled", () => {
+  it("submits form if content is filled", () => {
     const onSubmit = jest.fn().mockResolvedValue({ success: true });
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
@@ -55,6 +71,7 @@ describe("<FeedbackForm />", () => {
         results={results}
         onSubmit={onSubmit}
         onReset={jest.fn()}
+        isSatisfied={true}
       />
     );
     const content = getByPlaceholderText(/les informations/i);
@@ -65,7 +82,7 @@ describe("<FeedbackForm />", () => {
     expect(onSubmit).toHaveBeenCalledTimes(1);
   });
 
-  it("should reset form after submit", async () => {
+  it("resets form after submit", async () => {
     const onSubmit = jest.fn().mockResolvedValue();
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
@@ -74,6 +91,7 @@ describe("<FeedbackForm />", () => {
         results={results}
         onSubmit={onSubmit}
         onReset={jest.fn()}
+        isSatisfied={true}
       />
     );
     const content = getByPlaceholderText(/les informations/i);
@@ -87,7 +105,7 @@ describe("<FeedbackForm />", () => {
     expect(content.value).toBe("");
   });
 
-  it("should show error status message if request fail ", async () => {
+  it("shows error status message if request fail ", async () => {
     const onSubmit = jest.fn().mockRejectedValue({});
     const { getByText, queryByText, getByPlaceholderText } = render(
       <FeedbackForm
@@ -96,6 +114,7 @@ describe("<FeedbackForm />", () => {
         results={results}
         onSubmit={onSubmit}
         onReset={jest.fn()}
+        isSatisfied={true}
       />
     );
 

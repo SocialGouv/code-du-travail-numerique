@@ -2,27 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const List = ({ className, items }) => (
-  <ul className={className}>
-    {items.map((item, index) => (
-      <li key={index}>{item}</li>
-    ))}
-  </ul>
+const RootList = ({ className, children }) => (
+  <ul className={className}>{children}</ul>
 );
 
-List.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.node),
+RootList.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string
 };
 
-List.defaultProps = {
+RootList.defaultProps = {
   className: ""
 };
 
-const StyledList = styled(List)`
+export const List = styled(RootList)`
   margin: 0;
   padding: 0;
   list-style-type: none;
 `;
 
-export default StyledList;
+export const ListItem = styled.li``;

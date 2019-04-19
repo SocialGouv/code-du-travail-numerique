@@ -2,8 +2,9 @@
 
 exports[`<Facetting/> should render Facets 1`] = `
 .c1 {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
-  padding-left: 0;
 }
 
 .c2 {
