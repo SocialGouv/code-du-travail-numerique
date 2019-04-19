@@ -1,3 +1,9 @@
+a,
+a:visited {
+  text-decoration: underline;
+  color: var(--color-blue);
+}
+
 a:focus,
 a:hover,
 a:active {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { List, theme } from "@cdt/ui";
+import { List, ListItem, theme } from "@cdt/ui";
 import { Link } from "../../../routes";
 import TYPE_REFERENCE from "../typeReference";
 import ArticleIcon from "../../icons/ArticleIcon";
@@ -49,8 +49,13 @@ const getLink = reference => {
 };
 
 const ReferenceList = ({ references }) => {
-  const items = references.map(reference => getLink(reference));
-  return <List items={items} />;
+  return (
+    <List>
+      {references.map(reference => (
+        <ListItem key={reference.id}>{getLink(reference)}</ListItem>
+      ))}
+    </List>
+  );
 };
 
 export default ReferenceList;

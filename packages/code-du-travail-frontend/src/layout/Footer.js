@@ -1,7 +1,7 @@
 import React from "react";
 import getConfig from "next/config";
 import styled from "styled-components";
-import { Button, List, theme } from "@cdt/ui";
+import { ToggleButton, List, ListItem, theme } from "@cdt/ui";
 
 import { Link } from "../../routes";
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
@@ -20,99 +20,93 @@ const Footer = () => (
           vous conseiller et vous orienter dans vos démarches.
         </p>
         <ServiceRenseignementModal>
-          <Button primary>Contacter les services de renseignement</Button>
+          <ToggleButton primary>
+            Contacter les services de renseignement
+          </ToggleButton>
         </ServiceRenseignementModal>
       </Support>
       <Links>
-        <div>
-          <LinkTitle>Code du travail numérique</LinkTitle>
-          <List
-            items={[
-              <ItemWrapper key="0">
-                <Link route="about">
-                  <a>À propos</a>
-                </Link>
-              </ItemWrapper>,
-              <ItemWrapper key="1">
-                <a href="mailto:contact@code-du-travail.beta.gouv.fr">
-                  Contact
-                </a>
-              </ItemWrapper>
-            ]}
-          />
-        </div>
-        <div>
-          <LinkTitle>Aidez-nous à améliorer cet outil</LinkTitle>
-          <List
-            items={[
-              <ItemWrapper key="0">
-                <a
-                  href={
-                    "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
-                    publicRuntimeConfig.PACKAGE_VERSION
-                  }
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Contribuer sur Github
-                </a>
-              </ItemWrapper>,
-              <ItemWrapper key="1">
-                <a
-                  href={
-                    "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
-                    publicRuntimeConfig.PACKAGE_VERSION
-                  }
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Journal des modifications
-                </a>
-              </ItemWrapper>
-            ]}
-          />
-        </div>
-        <div>
-          <LinkTitle>En collaboration avec</LinkTitle>
-          <List
-            items={[
-              <ItemWrapper key="0">
-                <a
-                  href={
-                    "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  }
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  La direction générale du travail
-                </a>
-              </ItemWrapper>,
-              <ItemWrapper key="1">
-                <a
-                  href={"https://incubateur.social.gouv.fr/"}
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </ItemWrapper>,
-              <ItemWrapper key="2">
-                <a
-                  href={"https://beta.gouv.fr/"}
-                  className="external-link__after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  beta.gouv.fr
-                </a>
-              </ItemWrapper>
-            ]}
-          />
-        </div>
+        <Category>
+          <CategoryTitle>Code du travail numérique</CategoryTitle>
+          <List>
+            <StyledListItem key="0">
+              <Link route="about">
+                <a>À propos</a>
+              </Link>
+            </StyledListItem>
+            <StyledListItem key="1">
+              <a href="mailto:contact@code-du-travail.beta.gouv.fr">Contact</a>
+            </StyledListItem>
+          </List>
+        </Category>
+        <Category>
+          <CategoryTitle>Aidez-nous à améliorer cet outil</CategoryTitle>
+          <List>
+            <StyledListItem key="0">
+              <a
+                href={
+                  "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
+                  publicRuntimeConfig.PACKAGE_VERSION
+                }
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contribuer sur Github
+              </a>
+            </StyledListItem>
+            <StyledListItem key="1">
+              <a
+                href={
+                  "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
+                  publicRuntimeConfig.PACKAGE_VERSION
+                }
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Journal des modifications
+              </a>
+            </StyledListItem>
+          </List>
+        </Category>
+        <Category>
+          <CategoryTitle>En collaboration avec</CategoryTitle>
+          <List>
+            <StyledListItem key="0">
+              <a
+                href={
+                  "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                }
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                La Direction Générale du Travail
+              </a>
+            </StyledListItem>
+            <StyledListItem key="1">
+              <a
+                href={"https://incubateur.social.gouv.fr/"}
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                L’incubateur des ministères sociaux
+              </a>
+            </StyledListItem>
+            <StyledListItem key="2">
+              <a
+                href={"https://beta.gouv.fr/"}
+                className="external-link__after"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                beta.gouv.fr
+              </a>
+            </StyledListItem>
+          </List>
+        </Category>
       </Links>
     </div>
   </footer>
@@ -120,7 +114,7 @@ const Footer = () => (
 
 export default Footer;
 
-const { colors, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacing } = theme;
 
 const Support = styled.div`
   display: flex;
@@ -132,15 +126,27 @@ const Support = styled.div`
 const Links = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: ${spacing.interComponent};
+  padding: ${spacing.interComponent} 0;
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
-const LinkTitle = styled.h3`
+const Category = styled.div`
+  & + & {
+    padding-left: ${spacing.base};
+    @media (max-width: ${breakpoints.mobile}) {
+      padding-left: 0;
+    }
+  }
+`;
+
+const CategoryTitle = styled.h3`
   font-size: ${fonts.sizeBase};
   font-weight: 700;
 `;
 
-const ItemWrapper = styled.div`
+const StyledListItem = styled(ListItem)`
   margin: ${spacing.xsmall} 0;
   a {
     color: ${colors.darkText};

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { List, ListItem, theme } from "@cdt/ui";
 import styled from "styled-components";
 
 import { Link } from "../../routes";
@@ -35,26 +36,29 @@ class Faceting extends React.Component {
 
   render() {
     const { query, source } = this.props;
-    const facets = this.state.facets.map(([key, count]) => (
-      <Item key={key}>
-        <Link route="recherche" params={{ q: query, source: key }} passHref>
-          <Text active={key === source}>
-            {getLabelBySource(key)} ({count})
-          </Text>
-        </Link>
-      </Item>
-    ));
 
     return (
       <nav>
         <ListTitle>Type de réponse</ListTitle>
         <List>
-          {facets}
-          <Item>
+          {this.state.facets.map(([key, count]) => (
+            <StyledListItem key={key}>
+              <Link
+                route="recherche"
+                params={{ q: query, source: key }}
+                passHref
+              >
+                <Text active={key === source}>
+                  {getLabelBySource(key)} ({count})
+                </Text>
+              </Link>
+            </StyledListItem>
+          ))}
+          <StyledListItem>
             <Link route="recherche" params={{ q: query, source: "" }} passHref>
-              <Text>Toutes les réponses</Text>
+              <Text active={!source}>Toutes les réponses</Text>
             </Link>
-          </Item>
+          </StyledListItem>
         </List>
       </nav>
     );
@@ -63,39 +67,36 @@ class Faceting extends React.Component {
 
 export { Faceting };
 
-const List = styled.ul`
-  list-style-type: none;
-  padding-left: 0;
-`;
+const { breakpoints, colors, fonts, spacing } = theme;
 
-const Item = styled.li`
+const StyledListItem = styled(ListItem)`
   font-size: 0.9em;
-  font-size: var(--font-size-small);
+  font-size: ${fonts.sizeSmall};
   letter-spacing: 0.5px;
   font-weight: 700;
-  padding: var(--spacing-small) 0;
+  padding: ${spacing.small} 0;
+  @media (max-width: ${breakpoints.mobile}) {
+    display: inline-block;
+    padding-bottom: 0;
+    padding-right: ${spacing.small};
+  }
 `;
 
 const ListTitle = styled.h3`
-  font-size: 1rem;
-  font-size: var(--font-size-base);
-  color: #26353f;
-  color: var(--color-almost-black);
+  font-size: ${fonts.sizeBase};
+  color: ${colors.almostBlack};
   letter-spacing: 0.5px;
   font-weight: 700;
 `;
 
 const Text = styled.a`
   text-decoration: ${props => (props.active ? "underline" : "none")};
-  color: #8393a7;
-  color: ${props =>
-    props.active ? "var(--color-almost-black)" : "var(--color-dark-grey)"};
+  color: ${props => (props.active ? colors.almostBlack : colors.darkGrey)};
   :link,
   :visited {
     text-decoration: ${props => (props.active ? "underline" : "none")};
     color: #8393a7;
-    color: ${props =>
-      props.active ? "var(--color-almost-black)" : "var(--color-dark-grey)"};
+    color: ${props => (props.active ? colors.almostBlack : colors.darkGrey)};
   }
   :hover {
     text-decoration: underline;

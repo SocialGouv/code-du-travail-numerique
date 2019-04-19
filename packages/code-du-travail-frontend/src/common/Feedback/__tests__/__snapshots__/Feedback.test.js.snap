@@ -10,7 +10,7 @@ exports[`<Feedback/> should render 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -31,9 +31,9 @@ exports[`<Feedback/> should render 1`] = `
 .c4:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #242429;
   background: #fff;
-  border-style: solid;
   border-width: 1px;
   border-color: #eaeaea;
 }
@@ -41,6 +41,7 @@ exports[`<Feedback/> should render 1`] = `
 .c4[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #18181c;
   background: #f7f7f7;
   border-width: 1px;
@@ -68,7 +69,7 @@ exports[`<Feedback/> should render 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -89,9 +90,9 @@ exports[`<Feedback/> should render 1`] = `
 .c5:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #1a85ff;
-  border-style: solid;
   border-width: 1px;
   border-color: #006be6;
 }
@@ -99,6 +100,7 @@ exports[`<Feedback/> should render 1`] = `
 .c5[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #07f;
   border-width: 1px;

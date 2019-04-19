@@ -1,13 +1,17 @@
 import React from "react";
 import { render } from "react-testing-library";
-import List from ".";
-
-// eslint-disable-next-line react/jsx-key
-const items = ["un truc", <p>Un autre truc</p>];
+import { List, ListItem } from ".";
 
 describe("<List />", () => {
   test("should render", () => {
-    const { container } = render(<List items={items} />);
+    const { container } = render(
+      <List>
+        <ListItem>{"un truc"}</ListItem>,
+        <ListItem>
+          <p>Un autre truc</p>
+        </ListItem>
+      </List>
+    );
     expect(container).toMatchSnapshot();
   });
 });

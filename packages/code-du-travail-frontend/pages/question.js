@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
 import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import { AsideTitle, Section } from "@cdt/ui";
+import { AsideTitle, List, ListItem, Section } from "@cdt/ui";
 import styled from "styled-components";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import { BigLink } from "../src/common/BigLink";
@@ -116,13 +116,13 @@ function MoreLinks({ items, icon, query, title, children }) {
     <Section>
       <SectionTitle>{title}</SectionTitle>
       {children}
-      <List>
+      <StyledList>
         {items.map(item => (
           <ListItem key={item._id}>
             <BigLink data={item} icon={icon} query={query} />
           </ListItem>
         ))}
-      </List>
+      </StyledList>
     </Section>
   );
 }
@@ -136,11 +136,6 @@ const DisclaimerContent = styled.div`
   color: #53657d;
 `;
 
-const List = styled.ul`
-  list-style: none;
-  padding-left: 0;
+const StyledList = styled(List)`
   margin: 20px 130px 20px 100px;
-`;
-const ListItem = styled.li`
-  margin: 0;
 `;

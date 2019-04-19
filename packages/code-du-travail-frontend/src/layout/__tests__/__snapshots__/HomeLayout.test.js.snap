@@ -1,10 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomeLayout /> should render 1`] = `
-.c7 {
+.c10 {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c5:not([disabled]):active {
+  position: relative;
+  top: 1px;
+  margin-top: 1px;
+  color: #fff;
+  background: #0078c7;
+  border-width: 1px;
+  border-color: #005994;
+}
+
+.c5[aria-pressed="true"] {
+  position: relative;
+  top: 1px;
+  margin-top: 1px;
+  color: #fff;
+  background: #0068ae;
+  border-width: 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c5[aria-pressed="true"]:not([disabled]):hover,
+.c5[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c0 {
@@ -67,7 +126,7 @@ exports[`<HomeLayout /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,20 +135,38 @@ exports[`<HomeLayout /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 1.25rem;
+  padding: 1.25rem 0;
 }
 
-.c6 {
+.c8 + .c7 {
+  padding-left: 1rem;
+}
+
+.c9 {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.c8 {
+.c11 {
   margin: 0.5rem 0;
 }
 
-.c8 a {
+.c11 a {
   color: #434956;
+}
+
+@media (max-width:600px) {
+  .c6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 + .c7 {
+    padding-left: 0;
+  }
 }
 
 <div>
@@ -148,140 +225,130 @@ exports[`<HomeLayout /> should render 1`] = `
         <p>
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </p>
-        <div
-          class="btn btn__primary  "
-          primary="true"
-          role="button"
-          tabindex="0"
+        <button
+          aria-pressed="false"
+          class="c5"
         >
           Contacter les services de renseignement
-        </div>
+        </button>
       </div>
       <div
-        class="c5"
+        class="c6"
       >
-        <div>
+        <div
+          class="c7 c8"
+        >
           <h3
-            class="c6"
+            class="c9"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c7"
+            class="c10"
           >
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                href="/a-propos"
               >
-                <a
-                  href="/a-propos"
-                >
-                  À propos
-                </a>
-              </div>
+                À propos
+              </a>
             </li>
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                href="mailto:contact@code-du-travail.beta.gouv.fr"
               >
-                <a
-                  href="mailto:contact@code-du-travail.beta.gouv.fr"
-                >
-                  Contact
-                </a>
-              </div>
+                Contact
+              </a>
             </li>
           </ul>
         </div>
-        <div>
+        <div
+          class="c7 c8"
+        >
           <h3
-            class="c6"
+            class="c9"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c7"
+            class="c10"
           >
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </div>
+                Contribuer sur Github
+              </a>
             </li>
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </div>
+                Journal des modifications
+              </a>
             </li>
           </ul>
         </div>
-        <div>
+        <div
+          class="c7 c8"
+        >
           <h3
-            class="c6"
+            class="c9"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c7"
+            class="c10"
           >
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                class="external-link__after"
+                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La direction générale du travail
-                </a>
-              </div>
+                La Direction Générale du Travail
+              </a>
             </li>
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                class="external-link__after"
+                href="https://incubateur.social.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </div>
+                L’incubateur des ministères sociaux
+              </a>
             </li>
-            <li>
-              <div
-                class="c8"
+            <li
+              class="c11"
+            >
+              <a
+                class="external-link__after"
+                href="https://beta.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </div>
+                beta.gouv.fr
+              </a>
             </li>
           </ul>
         </div>

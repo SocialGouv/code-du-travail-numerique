@@ -11,10 +11,15 @@ exports[`<List /> should render 1`] = `
   <ul
     class="c0"
   >
-    <li>
+    <li
+      class=""
+    >
       un truc
     </li>
-    <li>
+    ,
+    <li
+      class=""
+    >
       <p>
         Un autre truc
       </p>

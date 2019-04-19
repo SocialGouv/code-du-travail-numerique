@@ -5,12 +5,19 @@ menu: Component
 
 import "@cdt/css";
 import { Playground, Props } from "docz";
-import List from ".";
+import { List, ListItem } from ".";
 
 # List
 
 <Playground>
-  <List items={[<p>Des elements</p>,"Ou du texte"]}/>
+  <List>
+    <ListItem>
+      <p>Des elements</p>
+    </ListItem>
+    <ListItem>
+      {"Ou du texte"}
+    </ListItem>
+  </List>
 </Playground>
 
 <Props of={List} />

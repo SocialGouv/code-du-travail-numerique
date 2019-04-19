@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HierarchieBloc /> should render 1`] = `
+.c9 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .c7 {
   display: inline-block;
   position: relative;
@@ -102,12 +108,6 @@ exports[`<HierarchieBloc /> should render 1`] = `
   display: none;
 }
 
-.c9 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c10 {
   display: block;
   margin-top: 1rem;
@@ -187,7 +187,9 @@ exports[`<HierarchieBloc /> should render 1`] = `
           <ul
             class="c9"
           >
-            <li>
+            <li
+              class=""
+            >
               <a
                 class="c10"
                 href="/code-du-travail/l1244-3"
@@ -212,7 +214,9 @@ exports[`<HierarchieBloc /> should render 1`] = `
                 Article L1244-3 du code du travail
               </a>
             </li>
-            <li>
+            <li
+              class=""
+            >
               <a
                 class="c10"
                 href="/code-du-travail/l1244-4"

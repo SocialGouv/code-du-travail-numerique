@@ -55,31 +55,27 @@ class SearchResults extends React.Component {
           </Aside>
         )}
         <Content>
-          <div className="search-results">
-            {results.items.snippet && (
-              <ResultSnippet>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: results.items.snippet._source.html
-                  }}
-                />
-                {results.items.snippet._source.references && (
-                  <SourceLink
-                    href={results.items.snippet._source.references[0].url}
-                    target="_blank"
-                    norel
-                    noopener
-                  >
-                    {results.items.snippet._source.references[0].titre}
-                  </SourceLink>
-                )}
-              </ResultSnippet>
-            )}
-            <Title>
-              {source ? getLabelBySource(source) : "Questions et réponses"}
-            </Title>
-            <SearchResultList items={results.items} query={query} />
-          </div>
+          {results.items.snippet && (
+            <ResultSnippet>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: results.items.snippet._source.html
+                }}
+              />
+              {results.items.snippet._source.references && (
+                <SourceLink
+                  href={results.items.snippet._source.references[0].url}
+                  target="_blank"
+                  norel
+                  noopener
+                >
+                  {results.items.snippet._source.references[0].titre}
+                </SourceLink>
+              )}
+            </ResultSnippet>
+          )}
+          <h3>{source ? getLabelBySource(source) : "Questions et réponses"}</h3>
+          <SearchResultList items={results.items} query={query} />
         </Content>
       </SearhResultLayout>
     );
@@ -88,26 +84,23 @@ class SearchResults extends React.Component {
 
 export default SearchResults;
 
-const { colors, spacing, fonts, box } = theme;
+const { breakpoints, colors, spacing, fonts, box } = theme;
 
 const SearhResultLayout = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const Aside = styled.div`
-  flex: 1 1 calc(20% - ${spacing.base});
+  flex: 1 1 auto;
   margin-right: ${spacing.base};
 `;
 
 const Content = styled.div`
-  margin-left: ${spacing.base};
-  flex: 1 1 calc(80% - ${spacing.base});
-`;
-
-const Title = styled.h3`
-  text-align: center;
-  margin-bottom: ${spacing.large};
+  flex: 1 1 65%;
 `;
 
 const ResultSnippet = styled.div`

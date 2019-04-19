@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { colors, box, spacing } from "../theme";
+import { animations, colors, box, spacing } from "../theme";
 import { darken, lighten, transparentize } from "polished";
 
 // OK it is a simple button in fact, on which you can provid a pressed prop...
@@ -28,11 +28,11 @@ const Button = styled.button`
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: ${box.borderRadius};
   cursor: pointer;
-  transition: background-color 250ms ease;
+  transition: background-color ${animations.transitionTiming} ease;
 
   ${props => {
     let backgroundColor = colors.blueLight;
@@ -70,9 +70,9 @@ const Button = styled.button`
         &:active {
           position: relative;
           top: 1px;
+          margin-top: 1px;
           color: ${lighten(0.1, color)};
           background: ${lighten(0.1, backgroundColor)};
-          border-style: solid;
           border-width: 1px;
           border-color: ${backgroundColor};
         }
@@ -80,6 +80,7 @@ const Button = styled.button`
       &[aria-pressed="true"] {
         position: relative;
         top: 1px;
+        margin-top: 1px;
         color: ${lighten(0.05, color)};
         background: ${lighten(0.05, backgroundColor)};
         border-width: 1px;

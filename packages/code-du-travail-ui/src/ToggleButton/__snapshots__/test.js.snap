@@ -10,7 +10,7 @@ exports[`<Button /> it renders a Button danger 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -31,9 +31,9 @@ exports[`<Button /> it renders a Button danger 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #242429;
   background: #fce9eb;
-  border-style: solid;
   border-width: 1px;
   border-color: #f6bcc2;
 }
@@ -41,6 +41,7 @@ exports[`<Button /> it renders a Button danger 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #18181c;
   background: #f9d2d6;
   border-width: 1px;
@@ -81,7 +82,7 @@ exports[`<Button /> it renders a Button info 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -102,9 +103,9 @@ exports[`<Button /> it renders a Button info 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #242429;
   background: #fff;
-  border-style: solid;
   border-width: 1px;
   border-color: #d7e8f9;
 }
@@ -112,6 +113,7 @@ exports[`<Button /> it renders a Button info 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #18181c;
   background: #edf5fc;
   border-width: 1px;
@@ -152,7 +154,7 @@ exports[`<Button /> it renders a Button link 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -173,9 +175,9 @@ exports[`<Button /> it renders a Button link 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #1a85ff;
-  border-style: solid;
   border-width: 1px;
   border-color: #006be6;
 }
@@ -183,6 +185,7 @@ exports[`<Button /> it renders a Button link 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #07f;
   border-width: 1px;
@@ -223,7 +226,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -244,9 +247,9 @@ exports[`<Button /> it renders a Button primary 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #0078c7;
-  border-style: solid;
   border-width: 1px;
   border-color: #005994;
 }
@@ -254,6 +257,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #0068ae;
   border-width: 1px;
@@ -294,7 +298,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -315,9 +319,9 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #242429;
   background: #fff;
-  border-style: solid;
   border-width: 1px;
   border-color: #eaeaea;
 }
@@ -325,6 +329,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #18181c;
   background: #f7f7f7;
   border-width: 1px;
@@ -365,7 +370,7 @@ exports[`<Button /> it renders a Button success 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -386,9 +391,9 @@ exports[`<Button /> it renders a Button success 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #242429;
   background: #f4fae8;
-  border-style: solid;
   border-width: 1px;
   border-color: #e0f2bd;
 }
@@ -396,6 +401,7 @@ exports[`<Button /> it renders a Button success 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #18181c;
   background: #eaf6d2;
   border-width: 1px;
@@ -436,7 +442,7 @@ exports[`<Button /> it renders a Button warning 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -457,9 +463,9 @@ exports[`<Button /> it renders a Button warning 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #242429;
   background: #fff5df;
-  border-style: solid;
   border-width: 1px;
   border-color: #fee5ad;
 }
@@ -467,6 +473,7 @@ exports[`<Button /> it renders a Button warning 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #18181c;
   background: #feedc6;
   border-width: 1px;
@@ -507,7 +514,7 @@ exports[`<Button /> renders 1`] = `
   line-height: inherit;
   font-size: inherit;
   font-weight: 600;
-  white-space: nowrap;
+  border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -528,9 +535,9 @@ exports[`<Button /> renders 1`] = `
 .c0:not([disabled]):active {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #1a85ff;
-  border-style: solid;
   border-width: 1px;
   border-color: #006be6;
 }
@@ -538,6 +545,7 @@ exports[`<Button /> renders 1`] = `
 .c0[aria-pressed="true"] {
   position: relative;
   top: 1px;
+  margin-top: 1px;
   color: #fff;
   background: #07f;
   border-width: 1px;
