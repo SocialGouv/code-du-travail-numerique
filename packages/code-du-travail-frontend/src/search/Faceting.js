@@ -37,8 +37,6 @@ class Faceting extends React.Component {
   render() {
     const { query, source } = this.props;
 
-    console.log("Source is :", source);
-
     return (
       <nav>
         <ListTitle>Type de réponse</ListTitle>
