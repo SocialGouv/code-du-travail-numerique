@@ -8,8 +8,9 @@ exports[`<Answer /> should render 1`] = `
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -29,22 +30,17 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c3:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
   color: #fff;
   background: #1a85ff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
+  outline: none;
 }
 
 .c3[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
   color: #fff;
   background: #07f;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
   border-top-color: #0053b3;
   box-shadow: inset 0 1px 2px 0 #0053b3;
@@ -55,20 +51,25 @@ exports[`<Answer /> should render 1`] = `
   background-color: #006be6;
 }
 
+.c3[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
 .c3[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c8 {
+.c19 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -81,42 +82,97 @@ exports[`<Answer /> should render 1`] = `
   border-bottom-color: #d1d1d1;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
+.c19:not([disabled]):hover,
+.c19:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c8:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c19:not([disabled]):active {
   color: #242429;
   background: #fff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #eaeaea;
+  outline: none;
 }
 
-.c8[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c19[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #eaeaea;
   border-top-color: #d1d1d1;
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
+.c19[aria-pressed="true"]:not([disabled]):hover,
+.c19[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c8[disabled] {
+.c19[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c19[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+}
+
+.c4 {
+  position: relative;
+  margin: 20px auto 0 auto;
+  max-width: 850px;
+}
+
+.c5 {
+  position: absolute;
+  top: 0.625rem;
+  left: calc(-60px - 1.25rem);
+  width: 60px;
+  color: #4c5467;
+}
+
+.c6 {
+  font-weight: 600;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c8 {
+  color: #4c5467;
+  font-weight: 600;
+}
+
+.c9 {
+  margin-left: 1rem;
+  color: #adb9c9;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.c10 {
+  color: #4c5467;
+  font-weight: 600;
+}
+
+.c11 {
+  margin-left: -10px;
+}
+
+.c12 {
+  margin: 20px auto;
+  max-width: 850px;
+  text-align: left;
 }
 
 .c1 {
@@ -235,23 +291,57 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c4 {
+.c14 {
   margin: 0 auto;
   max-width: calc(3 * 1200px / 4);
 }
 
-.c5 {
+.c15 {
   position: relative;
   padding: 0 2rem;
 }
 
-.c6 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c7 {
+.c18 {
   min-width: 7rem;
-  margin-right: 1rem;
+}
+
+.c18 + .c17 {
+  margin-left: 1rem;
+}
+
+.c13 {
+  margin-top: 2.5em;
+  padding: 1rem;
+  background-color: #f9f9fc;
+  border-radius: 0.25rem;
+}
+
+@media (max-width:1200px) {
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    margin-left: 0;
+  }
 }
 
 @media (max-width:980px) {
@@ -286,6 +376,12 @@ exports[`<Answer /> should render 1`] = `
 
   .c0 .search__input {
     padding: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    padding: 0;
   }
 }
 
@@ -450,10 +546,10 @@ exports[`<Answer /> should render 1`] = `
         class="wrapper-light "
       >
         <div
-          class="article"
+          class="c4"
         >
           <div
-            class="article__icon"
+            class="c5"
           >
             <svg
               viewBox="0 0 50 50"
@@ -477,39 +573,38 @@ exports[`<Answer /> should render 1`] = `
               </g>
             </svg>
           </div>
-          <div
-            class="article__header"
-          >
+          <div>
             <h1
-              class="article__title"
+              class="c6"
             >
               Article du code
             </h1>
-            <div>
+            <div
+              class="c7"
+            >
               <span
-                class="article__document-type"
+                class="c8"
               >
                 social groove
               </span>
               <span
-                class="article__date"
+                class="c9"
               >
-                Mis à jour le :
-                 
+                Mis à jour le : 
                 <span
-                  class="article__date-value"
+                  class="c10"
                 >
                   03/11/1979
                 </span>
               </span>
             </div>
-            <div
-              class="article__tags"
-            />
           </div>
+          <div
+            class="c11"
+          />
         </div>
         <div
-          class="article__content"
+          class="c12"
         >
           <div
             class="alert alert__warning"
@@ -545,7 +640,7 @@ exports[`<Answer /> should render 1`] = `
             Contenu supplémentaire
           </div>
           <div
-            style="padding: 10px; margin-top: 50px;"
+            class="c13"
           >
             pied de page
           </div>
@@ -560,26 +655,26 @@ exports[`<Answer /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper wrapper-dark c4"
+        class="wrapper wrapper-dark c14"
       >
         <div
-          class="c5"
+          class="c15"
         >
           <h3
-            class="c6"
+            class="c16"
           >
             Avez-vous trouvé la réponse à votre question ?
           </h3>
           <p>
             <button
               aria-pressed="false"
-              class="c7 c8"
+              class="c17 c18 c19"
             >
               Non
             </button>
             <button
               aria-pressed="false"
-              class="c7 c3"
+              class="c17 c18 c3"
             >
               Oui
             </button>

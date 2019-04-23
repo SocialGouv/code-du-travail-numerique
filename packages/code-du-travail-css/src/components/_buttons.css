@@ -12,7 +12,6 @@
   display: inline-block;
   margin: 0;
   text-align: center;
-  white-space: nowrap;
 
   font-family: inherit;
   font-size: inherit;
@@ -219,9 +218,6 @@ The <span> element will be moved away from the normal flow of the document.
     min-width: 1rem;
     display: inline-block;
   }
-}
-.btn__feedback {
-  margin-right: var(--spacing-inter-component);
 }
 .btn__img__search {
   background-image: url(src/assets/icons/search.svg);

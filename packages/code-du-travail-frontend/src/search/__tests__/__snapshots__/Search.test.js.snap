@@ -8,8 +8,9 @@ exports[`<search /> should render 1`] = `
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -29,22 +30,17 @@ exports[`<search /> should render 1`] = `
 }
 
 .c3:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
   color: #fff;
   background: #1a85ff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
+  outline: none;
 }
 
 .c3[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
   color: #fff;
   background: #07f;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
   border-top-color: #0053b3;
   box-shadow: inset 0 1px 2px 0 #0053b3;
@@ -53,6 +49,10 @@ exports[`<search /> should render 1`] = `
 .c3[aria-pressed="true"]:not([disabled]):hover,
 .c3[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
 }
 
 .c3[disabled] {
@@ -373,8 +373,9 @@ exports[`<search /> should render suggestions 1`] = `
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -394,22 +395,17 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 .c8:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
   color: #fff;
   background: #1a85ff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
+  outline: none;
 }
 
 .c8[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
   color: #fff;
   background: #07f;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
   border-top-color: #0053b3;
   box-shadow: inset 0 1px 2px 0 #0053b3;
@@ -418,6 +414,10 @@ exports[`<search /> should render suggestions 1`] = `
 .c8[aria-pressed="true"]:not([disabled]):hover,
 .c8[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
+}
+
+.c8[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
 }
 
 .c8[disabled] {

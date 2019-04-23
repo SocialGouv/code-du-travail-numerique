@@ -105,7 +105,7 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
       class="c2"
     >
       <button
-        class="btn btn__primary btn__feedback"
+        class="btn btn__primary"
       >
         Envoyer mon commentaire
       </button>
@@ -192,7 +192,7 @@ exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
       class="c2"
     >
       <button
-        class="btn btn__primary btn__feedback"
+        class="btn btn__primary"
       >
         Envoyer mon commentaire
       </button>

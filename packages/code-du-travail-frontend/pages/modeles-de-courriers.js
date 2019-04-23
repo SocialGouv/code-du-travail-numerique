@@ -34,7 +34,7 @@ class ModeleCourrier extends React.Component {
           title={`Modèle de courrier :  ${data._source.title}`}
           emptyMessage="Modèle de courrier introuvable"
           intro={data._source.description && <p>{data._source.description}</p>}
-          footer="Modèles de courrier fournis par vos services de renseignements des DIRECCTE en région"
+          footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
           icon={ModeleCourrierIcon}
           date={data._source.date}
           sourceType="Modèle de document"

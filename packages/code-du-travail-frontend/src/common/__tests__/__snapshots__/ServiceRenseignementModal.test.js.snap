@@ -16,15 +16,17 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   margin: 10vh auto;
   padding: 2rem;
   width: 50vw;
+  max-height: calc(100vh - 2 * 10vh);
   background: white;
   border-radius: 0.25rem;
   outline: none;
+  overflow-y: auto;
 }
 
-.c4 {
+.c7 {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 0;
+  right: 0;
   padding: 0.625rem;
   color: #8393a7;
   line-height: 0;
@@ -34,7 +36,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -48,15 +50,13 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   border: 1px solid #003b80;
 }
 
-.c2 strong {
+.c4 {
   padding: 0 1rem;
   color: #003b80;
   font-size: 2rem;
 }
 
-.c2 em {
-  position: relative;
-  padding: 0 1rem 0 1.25rem;
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,29 +65,91 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 1rem 0 1.25rem;
   color: #fff;
   font-style: normal;
   font-size: 1rem;
   background-color: #003b80;
 }
 
-.c2 em::before {
+.c5::before {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -10px;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #fff;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.c3 {
+.c6 {
   display: block;
   margin-top: 1.25rem;
   color: #8393a7;
+}
+
+@media (max-width:1200px) {
+  .c1 {
+    width: 60vw;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: 80vw;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    margin: 1rem;
+    max-height: calc(100vh - 2 * 1rem);
+    width: calc(100% - 2 * 1rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    position: fixed;
+    top: 0.625rem;
+    right: 0.625rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    text-align: center;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:980px) {
+  .c5 {
+    padding: 0.625rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c5::before {
+    display: none;
+  }
 }
 
 <body>
@@ -116,19 +178,27 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
         <h4>
           Contacter les services de renseignement par téléphone
         </h4>
-        <a
+        <div
           class="c2"
-          href="tel:+0033806000126"
         >
-          <strong>
-            0 806 000 126
-          </strong>
-          <em>
-            Service gratuit + prix appel
-          </em>
-        </a>
+          <a
+            class="c3"
+            href="tel:+0033806000126"
+          >
+            <strong
+              class="c4"
+            >
+              0 806 000 126
+            </strong>
+            <em
+              class="c5"
+            >
+              Service gratuit + prix appel
+            </em>
+          </a>
+        </div>
         <h4>
-          Trouver les coordonnées du service de renseignements de mon département
+          Trouver les coordonnées du service de renseignement de mon département
         </h4>
         <p>
           <label
@@ -144,7 +214,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
           />
         </p>
         <small
-          class="c3"
+          class="c6"
         >
           Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
           <ul>
@@ -163,7 +233,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
           </ul>
         </small>
         <button
-          class="c4"
+          class="c7"
         >
           <svg
             fill="none"

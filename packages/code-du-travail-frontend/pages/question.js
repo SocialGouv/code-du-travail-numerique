@@ -45,7 +45,7 @@ class Question extends React.Component {
         break;
       default:
         author =
-          "Informations fournies par vos services de renseignements des DIRECCTE en région";
+          "Informations fournies par vos services de renseignement des DIRECCTE en région";
     }
 
     const additionalContent = (

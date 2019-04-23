@@ -65,15 +65,17 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   margin: 10vh auto;
   padding: 2rem;
   width: 50vw;
+  max-height: calc(100vh - 2 * 10vh);
   background: white;
   border-radius: 0.25rem;
   outline: none;
+  overflow-y: auto;
 }
 
 .c8 {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 0;
+  right: 0;
   padding: 0.625rem;
   color: #8393a7;
   line-height: 0;
@@ -126,6 +128,34 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   font-family: inherit;
   color: inherit;
   cursor: pointer;
+}
+
+@media (max-width:1200px) {
+  .c3 {
+    width: 60vw;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
+    width: 80vw;
+  }
+}
+
+@media (max-width:600px) {
+  .c3 {
+    margin: 1rem;
+    max-height: calc(100vh - 2 * 1rem);
+    width: calc(100% - 2 * 1rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    position: fixed;
+    top: 0.625rem;
+    right: 0.625rem;
+  }
 }
 
 <body>

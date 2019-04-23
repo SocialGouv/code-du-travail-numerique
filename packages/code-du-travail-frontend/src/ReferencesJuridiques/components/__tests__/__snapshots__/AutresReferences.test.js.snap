@@ -8,6 +8,9 @@ exports[`<AutresReferences /> should render 1`] = `
 }
 
 .c5 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   display: inline-block;
   position: relative;
   width: 24px;

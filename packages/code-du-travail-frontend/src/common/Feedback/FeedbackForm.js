@@ -147,7 +147,7 @@ class FeedbackForm extends React.Component {
 
         <FormAction>
           <button
-            className="btn btn__primary btn__feedback"
+            className="btn btn__primary"
             disabled={this.state.status === "sending"}
           >
             Envoyer mon commentaire

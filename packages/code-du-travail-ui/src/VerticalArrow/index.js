@@ -3,6 +3,7 @@ import styled from "styled-components";
 const VerticalArrow = styled.div.attrs(() => ({
   role: "presentation"
 }))`
+  flex: 0 0 auto;
   display: inline-block;
   position: relative;
   width: 24px;

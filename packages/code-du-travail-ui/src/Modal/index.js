@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
 import X from "react-feather/dist/icons/x";
-import { box, colors, spacing } from "../theme";
+import { box, breakpoints, colors, spacing } from "../theme";
 export class Modal extends React.Component {
   static propTypes = {
     className: PropTypes.string,
@@ -53,17 +53,30 @@ const StyledDialogContent = styled(DialogContent)`
   margin: 10vh auto;
   padding: 2rem;
   width: 50vw;
+  max-height: calc(100vh - 2 * 10vh);
   background: white;
   border-radius: ${box.borderRadius};
   outline: none;
+  overflow-y: auto;
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 60vw;
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 80vw;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: ${spacing.base};
+    max-height: calc(100vh - 2 * ${spacing.base});
+    width: calc(100% - 2 * ${spacing.base});
+  }
 `;
 
 export const ModalContentWrapper = StyledDialogContent;
 
 const CloseIcon = styled.button`
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 0;
+  right: 0;
   padding: ${spacing.small};
   color: ${colors.darkGrey};
   line-height: 0;
@@ -71,4 +84,13 @@ const CloseIcon = styled.button`
   border: none;
   -webkit-appearance: none;
   cursor: pointer;
+  @media (max-width: ${breakpoints.desktop}) {
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    position: fixed;
+    top: ${spacing.small};
+    right: ${spacing.small};
+  }
 `;

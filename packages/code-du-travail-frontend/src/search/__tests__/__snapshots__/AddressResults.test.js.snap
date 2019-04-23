@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AddressResults/> should render no results 1`] = `
-.c4 {
+.c5 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -22,53 +23,53 @@ exports[`<AddressResults/> should render no results 1`] = `
   border-bottom-color: #d1d1d1;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c4:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c5:not([disabled]):active {
   color: #242429;
   background: #fff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #eaeaea;
+  outline: none;
 }
 
-.c4[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c5[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #eaeaea;
   border-top-color: #d1d1d1;
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
+.c5[aria-pressed="true"]:not([disabled]):hover,
+.c5[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c4[disabled] {
+.c5[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c5[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c5 {
+.c6 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -81,40 +82,39 @@ exports[`<AddressResults/> should render no results 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c5:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c6:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
+  outline: none;
 }
 
-.c5[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c6[aria-pressed="true"] {
   color: #fff;
   background: #07f;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
   border-top-color: #0053b3;
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):hover,
-.c5[aria-pressed="true"]:not([disabled]):focus {
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c5[disabled] {
+.c6[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c6[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -133,9 +133,18 @@ exports[`<AddressResults/> should render no results 1`] = `
   margin-bottom: 1rem;
 }
 
-.c3 {
+.c4 {
   min-width: 7rem;
-  margin-right: 1rem;
+}
+
+.c4 + .c3 {
+  margin-left: 1rem;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding: 0;
+  }
 }
 
 <div>
@@ -181,13 +190,13 @@ exports[`<AddressResults/> should render no results 1`] = `
                 <p>
                   <button
                     aria-pressed="false"
-                    class="c3 c4"
+                    class="c3 c4 c5"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c3 c5"
+                    class="c3 c4 c6"
                   >
                     Oui
                   </button>
@@ -203,15 +212,16 @@ exports[`<AddressResults/> should render no results 1`] = `
 `;
 
 exports[`<AddressResults/> should render results 1`] = `
-.c8 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -224,53 +234,53 @@ exports[`<AddressResults/> should render results 1`] = `
   border-bottom-color: #d1d1d1;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c8:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c9:not([disabled]):active {
   color: #242429;
   background: #fff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #eaeaea;
+  outline: none;
 }
 
-.c8[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c9[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #eaeaea;
   border-top-color: #d1d1d1;
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c8[disabled] {
+.c9[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c9 {
+.c10 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  vertical-align: middle;
   border-style: solid;
   border-width: 1px 1px 2px 1px;
   border-radius: 0.25rem;
@@ -283,40 +293,39 @@ exports[`<AddressResults/> should render results 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c9:not([disabled]):active {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c10:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
+  outline: none;
 }
 
-.c9[aria-pressed="true"] {
-  position: relative;
-  top: 1px;
-  margin-top: 1px;
+.c10[aria-pressed="true"] {
   color: #fff;
   background: #07f;
-  border-width: 1px;
+  border-width: 2px 1px 1px 1px;
   border-color: #006be6;
   border-top-color: #0053b3;
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
+.c10[aria-pressed="true"]:not([disabled]):hover,
+.c10[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c9[disabled] {
+.c10[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c10[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -335,9 +344,12 @@ exports[`<AddressResults/> should render results 1`] = `
   margin-bottom: 1rem;
 }
 
-.c7 {
+.c8 {
   min-width: 7rem;
-  margin-right: 1rem;
+}
+
+.c8 + .c7 {
+  margin-left: 1rem;
 }
 
 .c0 {
@@ -378,6 +390,12 @@ exports[`<AddressResults/> should render results 1`] = `
   margin-top: 0.25em;
   margin-bottom: 0.5em;
   line-height: 1.5;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0;
+  }
 }
 
 <div>
@@ -456,13 +474,13 @@ exports[`<AddressResults/> should render results 1`] = `
                 <p>
                   <button
                     aria-pressed="false"
-                    class="c7 c8"
+                    class="c7 c8 c9"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c7 c9"
+                    class="c7 c8 c10"
                   >
                     Oui
                   </button>

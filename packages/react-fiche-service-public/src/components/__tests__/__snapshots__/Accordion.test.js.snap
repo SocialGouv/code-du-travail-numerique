@@ -2,6 +2,9 @@
 
 exports[`<Accordion /> should have two different levels of headings 1`] = `
 .c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   display: inline-block;
   position: relative;
   width: 24px;
@@ -213,6 +216,9 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
 
 exports[`<Accordion /> should render all, siblings included 1`] = `
 .c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   display: inline-block;
   position: relative;
   width: 24px;
