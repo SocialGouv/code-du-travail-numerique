@@ -88,7 +88,7 @@ def populate_cdtn_documents():
                 'slug': slugify(val['title'], to_lower=True),
                 'source': 'fiches_service_public',
                 'description': val['description'],
-                'tags': val['tags'],
+                'tags': val['themeCdtn'],
                 'text': val['text'],
                 'references_juridiques': val['references_juridiques'],
                 'title': val['title'],
