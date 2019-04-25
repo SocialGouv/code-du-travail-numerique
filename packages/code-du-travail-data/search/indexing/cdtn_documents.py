@@ -4,6 +4,7 @@ import os
 import base64
 import hashlib
 
+from collections import OrderedDict
 from slugify import slugify
 
 from search import settings
@@ -62,9 +63,11 @@ def populate_cdtn_documents():
 
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
+        breadcrumbs = ", ".join(list(OrderedDict.fromkeys(filter(None, val['path'].split("/"))))[1:])
         CDTN_DOCUMENTS.append({
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
+            'description': val['bloc_textuel'][:val['bloc_textuel'].find(" ", 150)] + "… (" + breadcrumbs + ")",
             'slug': val['num'].lower(),
             'title': val['titre'],
             'html': val['html'],
