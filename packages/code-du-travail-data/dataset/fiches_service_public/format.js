@@ -39,7 +39,7 @@ const format = fiche => {
   publication.$ = publication.$.filter(child => (child.name !== "OuSAdresser" && child.name!== "ServiceEnLigne"));
 
   const title = getText(getChild(publication, "dc:title"));
-
+  const description = getText(getChild(publication, "dc:description"));
   const dateRaw = getText(getChild(publication, "dc:date"));
   const [year, month, day] = dateRaw.split(" ")[1].split("-");
   const date = `${day}/${month}/${year}`;
@@ -75,6 +75,7 @@ const format = fiche => {
     text,
     references_juridiques,
     title,
+    description,
     url
   }
 }

@@ -8,6 +8,7 @@ const getThemesMapping = require("./cdtn-theme-mt")
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
 function parseDom(dom, url) {
+  const description = $(dom.window.document, "meta[name=description]").getAttribute("content")
   const summary = $$(dom.window.document, ".navigation-article li")
     .map(n => n.textContent.trim())
     .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
@@ -72,6 +73,7 @@ function parseDom(dom, url) {
   ).map(n => n.textContent.trim());
 
   let result = {
+    description,
     ariane,
     tags,
     articles,
