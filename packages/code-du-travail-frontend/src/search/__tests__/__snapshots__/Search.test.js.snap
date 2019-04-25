@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<search /> should render 1`] = `
-.c3 {
+.c4 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -23,13 +23,13 @@ exports[`<search /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c3:not([disabled]):active {
+.c4:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -37,7 +37,7 @@ exports[`<search /> should render 1`] = `
   outline: none;
 }
 
-.c3[aria-pressed="true"] {
+.c4[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -46,21 +46,21 @@ exports[`<search /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
+.c4[aria-pressed="true"]:not([disabled]):hover,
+.c4[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c3[aria-pressed="true"]:not([disabled]):active {
+.c4[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -71,12 +71,18 @@ exports[`<search /> should render 1`] = `
   text-align: left;
 }
 
-.c2 ul {
+.c3 ul {
   z-index: 100;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c3 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #006ab2;
 }
 
 .c0 {
@@ -221,14 +227,11 @@ exports[`<search /> should render 1`] = `
       <div
         class="c0"
       >
-        <header>
-          <h1
-            class="no-margin"
-          >
-            Posez votre question sur le droit du travail
-          </h1>
-          <br />
-        </header>
+        <p
+          class="c1"
+        >
+          Posez votre question sur le droit du travail
+        </p>
         <form
           class="search__form"
         >
@@ -318,7 +321,7 @@ exports[`<search /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c1"
+              class="c2"
               for="main-search-input"
             >
               <span
@@ -344,7 +347,7 @@ exports[`<search /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c2"
+                  class="c3"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -353,7 +356,7 @@ exports[`<search /> should render 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c3"
+            class="c4"
             type="submit"
           >
             Rechercher
@@ -366,7 +369,7 @@ exports[`<search /> should render 1`] = `
 `;
 
 exports[`<search /> should render suggestions 1`] = `
-.c8 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -388,13 +391,13 @@ exports[`<search /> should render suggestions 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c8:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -402,7 +405,7 @@ exports[`<search /> should render suggestions 1`] = `
   outline: none;
 }
 
-.c8[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -411,25 +414,25 @@ exports[`<search /> should render suggestions 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c3 p {
+.c4 p {
   margin: 0;
 }
 
-.c1 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -440,12 +443,18 @@ exports[`<search /> should render suggestions 1`] = `
   text-align: left;
 }
 
-.c2 ul {
+.c3 ul {
   z-index: 100;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c3 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #006ab2;
 }
 
 .c0 {
@@ -545,10 +554,6 @@ exports[`<search /> should render suggestions 1`] = `
   outline: none;
 }
 
-.c4 {
-  display: inline-block;
-}
-
 .c5 {
   display: inline-block;
 }
@@ -558,6 +563,10 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 .c7 {
+  display: inline-block;
+}
+
+.c8 {
   display: inline-block;
 }
 
@@ -606,14 +615,11 @@ exports[`<search /> should render suggestions 1`] = `
       <div
         class="c0"
       >
-        <header>
-          <h1
-            class="no-margin"
-          >
-            Posez votre question sur le droit du travail
-          </h1>
-          <br />
-        </header>
+        <p
+          class="c1"
+        >
+          Posez votre question sur le droit du travail
+        </p>
         <form
           class="search__form"
         >
@@ -703,7 +709,7 @@ exports[`<search /> should render suggestions 1`] = `
               </select>
             </label>
             <label
-              class="c1"
+              class="c2"
               for="main-search-input"
             >
               <span
@@ -729,7 +735,7 @@ exports[`<search /> should render suggestions 1`] = `
                   value="yolo"
                 />
                 <div
-                  class="c2"
+                  class="c3"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 >
@@ -745,10 +751,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c3"
+                        class="c4"
                       >
                         <div
-                          class="c4"
+                          class="c5"
                         >
                           foo
                         </div>
@@ -762,10 +768,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c3"
+                        class="c4"
                       >
                         <div
-                          class="c5"
+                          class="c6"
                         >
                           foobar
                         </div>
@@ -779,10 +785,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c3"
+                        class="c4"
                       >
                         <div
-                          class="c6"
+                          class="c7"
                         >
                           foo bar ?
                         </div>
@@ -796,10 +802,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c3"
+                        class="c4"
                       >
                         <div
-                          class="c7"
+                          class="c8"
                         >
                           foo bazzz
                         </div>
@@ -812,7 +818,7 @@ exports[`<search /> should render suggestions 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c8"
+            class="c9"
             type="submit"
           >
             Rechercher
