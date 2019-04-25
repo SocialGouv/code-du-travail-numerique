@@ -29,6 +29,10 @@ class Modeles extends React.Component {
       <PageLayout>
         <Head>
           <title>Modèles de courriers - Code du travail numérique</title>
+          <meta
+            name="description"
+            content="Retrouvez l'ensemble des modèles de courriers à votre disposition."
+          />
         </Head>
         <Search />
         <div className="section">
