@@ -3,11 +3,28 @@
 exports[`<LienExterne /> should render 1`] = `
 <div>
   <a
+    class="external-link__after"
     href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
     rel="noopener noreferrer"
     target="_blank"
   >
     formulaire de contact
   </a>
+</div>
+`;
+
+exports[`<LienExterneCommente /> should render 1`] = `
+<div>
+  Un contrat à durée déterminée (CDD) ne peut être conclu que pour l'exécution d'une tâche précise et temporaire et seulement dans les cas énumérés par la loi, et doit obligatoirement faire l'objet d'un écrit. Il ne doit pas pourvoir durablement un emploi lié à l'activité normale et permanente de l'entreprise.
+  <p>
+    <a
+      class="external-link__after"
+      href="http://travail-emploi.gouv.fr/droit-du-travail/contrats-et-carriere/contrats-de-travail/types-de-contrats/article/le-contrat-a-duree-determinee-cdd"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Fiche pratique sur le CDD
+    </a>
+  </p>
 </div>
 `;

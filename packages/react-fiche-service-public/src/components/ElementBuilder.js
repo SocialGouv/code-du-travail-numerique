@@ -6,7 +6,7 @@ import { theme } from "@cdt/ui";
 
 import { getText, ignoreParagraph } from "../utils";
 import Accordion from "./Accordion";
-import LienExterne from "./LienExterne";
+import { LienExterne, LienExterneCommente } from "./LienExterne";
 import List from "./List";
 import OuSAdresser from "./OuSAdresser";
 import ServiceEnLigne from "./ServiceEnLigne";
@@ -22,11 +22,15 @@ const parseChildren = (children, headingLevel) => (
 
 // Beware, this one is recursive
 export function ElementBuilder({ data, headingLevel }) {
+  // Sometime we get elements without children...
+  if (!data) return null;
   // In case we get children
   if (Array.isArray(data)) {
-    return data.map((child, index) => (
-      <ElementBuilder key={index} data={child} headingLevel={headingLevel} />
-    ));
+    return data.map((child, index) => {
+      return (
+        <ElementBuilder key={index} data={child} headingLevel={headingLevel} />
+      );
+    });
   }
   if (data.type === "text") {
     return data.$;
@@ -36,8 +40,9 @@ export function ElementBuilder({ data, headingLevel }) {
     case "BlocCas":
       if (data._.affichage === "onglet") {
         return <Tabulator data={data} headingLevel={headingLevel} />;
+      } else {
+        return <Accordion data={data} headingLevel={headingLevel} />;
       }
-      return parseChildren(data.$, headingLevel);
     case "Introduction":
       return (
         <Introduction>
@@ -46,6 +51,8 @@ export function ElementBuilder({ data, headingLevel }) {
       );
     case "LienExterne":
       return <LienExterne data={data} />;
+    case "LienExterneCommente":
+      return <LienExterneCommente data={data} />;
     case "Liste":
       return <List data={data} headingLevel={headingLevel} />;
     case "ListeSituations":
@@ -70,10 +77,8 @@ export function ElementBuilder({ data, headingLevel }) {
     case "Attention":
     case "Rappel":
       return <ANoter>{parseChildren(data.$, headingLevel)}</ANoter>;
-    case "Cas":
     case "Chapitre":
     case "SousChapitre":
-      return parseChildren(data.$, headingLevel);
     case "MiseEnEvidence":
     case "Valeur":
       return <strong>{parseChildren(data.$, headingLevel)}</strong>;
