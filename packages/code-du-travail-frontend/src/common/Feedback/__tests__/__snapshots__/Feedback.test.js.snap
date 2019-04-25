@@ -287,7 +287,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             <input
               name="source"
               type="hidden"
-              value="Fiches"
+              value="Fiches Service Public"
             />
             <select
               class="c4"
@@ -458,7 +458,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             <input
               name="source"
               type="hidden"
-              value="Fiches"
+              value="Fiches Service Public"
             />
             <textarea
               class="c4"

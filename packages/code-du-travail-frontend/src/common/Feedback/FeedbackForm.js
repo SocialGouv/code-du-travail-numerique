@@ -18,6 +18,7 @@ class FeedbackForm extends React.Component {
     query: PropTypes.string,
     url: PropTypes.string,
     title: PropTypes.string,
+    filter: PropTypes.string.isRequired,
     source: PropTypes.string.isRequired,
     onSubmit: PropTypes.func.isRequired,
     isSatisfied: PropTypes.bool.isRequired
@@ -67,14 +68,16 @@ class FeedbackForm extends React.Component {
     this.setState({ status: "sending" });
 
     const data = {
-      motif,
+      filter: this.props.filter,
+      isSatisfied: this.props.isSatisfied,
       message,
+      motif,
+      query: this.props.query,
       source: this.props.source,
-      url: this.props.url || (document ? document.location.href : ""),
-      title: this.props.title,
-      userAgent: typeof navigator !== "undefined" && navigator.userAgent,
       subject: question,
-      isSatisfied: this.props.isSatisfied
+      title: this.props.title,
+      url: this.props.url || (document ? document.location.href : ""),
+      userAgent: typeof navigator !== "undefined" && navigator.userAgent
     };
     try {
       await this.props.onSubmit(data);
