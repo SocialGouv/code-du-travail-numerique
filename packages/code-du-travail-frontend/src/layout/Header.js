@@ -9,8 +9,14 @@ const Header = () => (
     <Container>
       <Wrapper>
         <Link route="index">
-          <LogoWrapper href="/?q=">
-            <Logo src={"/static/assets/img/marianne.svg"} alt="" />
+          <LogoWrapper
+            href="/?q="
+            title="Code du travail numérique - retour à l'accueil"
+          >
+            <Logo
+              src={"/static/assets/img/marianne.svg"}
+              alt="symbole de la Marianne, site officiel du gouvernement"
+            />
             <Title>
               Code du travail
               <br />
