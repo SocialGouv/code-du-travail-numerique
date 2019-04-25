@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Answer /> should render 1`] = `
-.c3 {
+.c4 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -23,13 +23,13 @@ exports[`<Answer /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c3:not([disabled]):active {
+.c4:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -37,7 +37,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c3[aria-pressed="true"] {
+.c4[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -46,21 +46,21 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
+.c4[aria-pressed="true"]:not([disabled]):hover,
+.c4[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c3[aria-pressed="true"]:not([disabled]):active {
+.c4[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c19 {
+.c20 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -82,13 +82,13 @@ exports[`<Answer /> should render 1`] = `
   border-bottom-color: #d1d1d1;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c19:not([disabled]):active {
+.c20:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -96,7 +96,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c19[aria-pressed="true"] {
+.c20[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -105,27 +105,27 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):hover,
-.c19[aria-pressed="true"]:not([disabled]):focus {
+.c20[aria-pressed="true"]:not([disabled]):hover,
+.c20[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):active {
+.c20[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c4 {
+.c5 {
   position: relative;
   margin: 20px auto 0 auto;
   max-width: 850px;
 }
 
-.c5 {
+.c6 {
   position: absolute;
   top: 0.625rem;
   left: calc(-60px - 1.25rem);
@@ -133,11 +133,11 @@ exports[`<Answer /> should render 1`] = `
   color: #4c5467;
 }
 
-.c6 {
+.c7 {
   font-weight: 600;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,34 +148,34 @@ exports[`<Answer /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c8 {
+.c9 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c9 {
+.c10 {
   margin-left: 1rem;
   color: #adb9c9;
   font-size: 0.9rem;
   display: inline-block;
 }
 
-.c10 {
+.c11 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c11 {
+.c12 {
   margin-left: -10px;
 }
 
-.c12 {
+.c13 {
   margin: 20px auto;
   max-width: 850px;
   text-align: left;
 }
 
-.c1 {
+.c2 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -186,12 +186,18 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c2 ul {
+.c3 ul {
   z-index: 100;
 }
 
-.c2 li[role="option"]:nth-child(2n + 1) {
+.c3 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
+}
+
+.c1 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #006ab2;
 }
 
 .c0 {
@@ -291,29 +297,29 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c14 {
+.c15 {
   margin: 0 auto;
   max-width: calc(3 * 1200px / 4);
 }
 
-.c15 {
+.c16 {
   position: relative;
   padding: 0 2rem;
 }
 
-.c16 {
+.c17 {
   margin-bottom: 1rem;
 }
 
-.c18 {
+.c19 {
   min-width: 7rem;
 }
 
-.c18 + .c17 {
+.c19 + .c18 {
   margin-left: 1rem;
 }
 
-.c13 {
+.c14 {
   margin-top: 2.5em;
   padding: 1rem;
   background-color: #f9f9fc;
@@ -321,13 +327,13 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:1200px) {
-  .c5 {
+  .c6 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -339,7 +345,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     margin-left: 0;
   }
 }
@@ -380,7 +386,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c16 {
     padding: 0;
   }
 }
@@ -395,14 +401,11 @@ exports[`<Answer /> should render 1`] = `
       <div
         class="c0"
       >
-        <header>
-          <h1
-            class="no-margin"
-          >
-            Posez votre question sur le droit du travail
-          </h1>
-          <br />
-        </header>
+        <p
+          class="c1"
+        >
+          Posez votre question sur le droit du travail
+        </p>
         <form
           class="search__form"
         >
@@ -492,7 +495,7 @@ exports[`<Answer /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c1"
+              class="c2"
               for="main-search-input"
             >
               <span
@@ -518,7 +521,7 @@ exports[`<Answer /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c2"
+                  class="c3"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -527,7 +530,7 @@ exports[`<Answer /> should render 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c3"
+            class="c4"
             type="submit"
           >
             Rechercher
@@ -546,10 +549,10 @@ exports[`<Answer /> should render 1`] = `
         class="wrapper-light "
       >
         <div
-          class="c4"
+          class="c5"
         >
           <div
-            class="c5"
+            class="c6"
           >
             <svg
               viewBox="0 0 50 50"
@@ -575,24 +578,24 @@ exports[`<Answer /> should render 1`] = `
           </div>
           <div>
             <h1
-              class="c6"
+              class="c7"
             >
               Article du code
             </h1>
             <div
-              class="c7"
+              class="c8"
             >
               <span
-                class="c8"
+                class="c9"
               >
                 social groove
               </span>
               <span
-                class="c9"
+                class="c10"
               >
                 Mis à jour le : 
                 <span
-                  class="c10"
+                  class="c11"
                 >
                   03/11/1979
                 </span>
@@ -600,11 +603,11 @@ exports[`<Answer /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c11"
+            class="c12"
           />
         </div>
         <div
-          class="c12"
+          class="c13"
         >
           <div
             class="alert alert__warning"
@@ -640,7 +643,7 @@ exports[`<Answer /> should render 1`] = `
             Contenu supplémentaire
           </div>
           <div
-            class="c13"
+            class="c14"
           >
             pied de page
           </div>
@@ -655,26 +658,26 @@ exports[`<Answer /> should render 1`] = `
       class="container"
     >
       <div
-        class="wrapper wrapper-dark c14"
+        class="wrapper wrapper-dark c15"
       >
         <div
-          class="c15"
+          class="c16"
         >
           <h3
-            class="c16"
+            class="c17"
           >
             Avez-vous trouvé la réponse à votre question ?
           </h3>
           <p>
             <button
               aria-pressed="false"
-              class="c17 c18 c19"
+              class="c18 c19 c20"
             >
               Non
             </button>
             <button
               aria-pressed="false"
-              class="c17 c18 c3"
+              class="c18 c19 c4"
             >
               Oui
             </button>

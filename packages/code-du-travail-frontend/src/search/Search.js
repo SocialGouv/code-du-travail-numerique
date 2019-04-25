@@ -173,12 +173,9 @@ class Search extends React.Component {
         <div className="section-white shadow-bottom search-widget">
           <Container>
             <StyledSearch ref={this.searchRef}>
-              <header>
-                <h1 className="no-margin">
-                  Posez votre question sur le droit du travail
-                </h1>
-                <br />
-              </header>
+              <SearchLabel>
+                Posez votre question sur le droit du travail
+              </SearchLabel>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
                   <SearchIconWithClipboard className="search__input__icon" />
@@ -225,7 +222,13 @@ class Search extends React.Component {
 
 export default withRouter(Search);
 
-const { animations, box, breakpoints, colors, spacing } = theme;
+const { animations, box, breakpoints, colors, spacing, fonts } = theme;
+
+const SearchLabel = styled.p`
+  font-size: ${fonts.sizeH1};
+  line-height: ${fonts.lineHeight};
+  color: ${colors.title};
+`;
 
 const StyledSearch = styled.div`
   position: relative;
