@@ -35,11 +35,15 @@ const getOutilFromCode = function(code) {
     case "indemnite-licenciement":
       return {
         title: "Calculer une indemnité de licenciement",
+        description:
+          "Calculez votre indemnité de licenciement en tenant compte des dispositions conventionnelles",
         outil: CalculateurIndemnite
       };
     case "simulateur-embauche":
       return {
         title: "Simalateur d'embauche",
+        description:
+          "Simuler le coût d'une embauche en France et calculer le salaire net à partir du brut : CDD, statut cadre, cotisations sociales, retraite…",
         outil: SimulateurEmbauche
       };
     default:
@@ -57,11 +61,14 @@ class Outils extends React.Component {
   }
   render() {
     const { data, router } = this.props;
-    const { outil: Outil, title } = getOutilFromCode(data._source.slug);
+    const { outil: Outil, title, description } = getOutilFromCode(
+      data._source.slug
+    );
     return (
       <PageLayout>
         <Head>
           <title>{title}</title>
+          <meta name="description" content={description} />
         </Head>
         <Search />
         <Outil q={router.query.q} />

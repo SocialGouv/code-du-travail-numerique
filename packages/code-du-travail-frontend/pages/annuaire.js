@@ -44,6 +44,10 @@ class AnnuairePage extends React.Component {
       <PageLayout>
         <Head>
           <title>{q} - Code du travail numérique</title>
+          <meta
+            name="description"
+            content="Retrouvez les interlocuteurs qui peuvent vous accompagner dans vos questions et démarches sur le droit du travail."
+          />
         </Head>
         <Search />
         <AddressResults

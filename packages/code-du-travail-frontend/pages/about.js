@@ -1,10 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Head from "next/head";
 import { Container, Section, Alert } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 
 const About = () => (
   <PageLayout>
+    <Head>
+      <meta
+        name="description"
+        content="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
+      />
+    </Head>
     <Container>
       <Section light>
         <div>
