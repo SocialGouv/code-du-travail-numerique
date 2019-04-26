@@ -259,7 +259,7 @@ exports[`<HomeLayout /> should render 1`] = `
               class="c11"
             >
               <a
-                href="mailto:contact@code-du-travail.beta.gouv.fr"
+                href="mailto:codedutravail@beta.gouv.fr"
               >
                 Contact
               </a>
