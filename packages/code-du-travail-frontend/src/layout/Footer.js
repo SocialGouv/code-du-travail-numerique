@@ -35,7 +35,7 @@ const Footer = () => (
               </Link>
             </StyledListItem>
             <StyledListItem key="1">
-              <a href="mailto:contact@code-du-travail.beta.gouv.fr">Contact</a>
+              <a href="mailto:codedutravail@beta.gouv.fr">Contact</a>
             </StyledListItem>
           </List>
         </Category>

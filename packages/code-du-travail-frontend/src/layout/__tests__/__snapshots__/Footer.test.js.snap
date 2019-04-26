@@ -175,7 +175,7 @@ exports[`<Footer /> should render 1`] = `
               class="c7"
             >
               <a
-                href="mailto:contact@code-du-travail.beta.gouv.fr"
+                href="mailto:codedutravail@beta.gouv.fr"
               >
                 Contact
               </a>
