@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
@@ -59,6 +60,9 @@ class Fiche extends React.Component {
     );
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={data._source.description} />
+        </Head>
         <Answer
           title={data._source.title}
           intro={
