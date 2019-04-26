@@ -3,10 +3,10 @@ const JSDOM = require("jsdom").JSDOM;
 const ora = require("ora");
 const { batchPromise } = require("@cdt/data...kali/utils");
 const urls = require("./ministere-travail-liste-fiches.json");
+const getThemesMapping = require("./cdtn-theme-mt")
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
-
 function parseDom(dom, url) {
   const summary = $$(dom.window.document, ".navigation-article li")
     .map(n => n.textContent.trim())
@@ -126,7 +126,9 @@ async function parseFiche(url) {
 }
 
 async function parseFiches(urls) {
+  const themeMapping = await getThemesMapping()
   const results = await batchPromise(urls, 15, parseFiche);
+  results.forEach(fiche => fiche.themeCdtn = themeMapping[fiche.url])
   spinner.stop().clear();
   console.log(JSON.stringify(results.filter(Boolean), null, 2));
 }
