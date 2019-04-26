@@ -196,7 +196,7 @@ exports[`<Categories /> should render 1`] = `
                   Maladie et inaptitude
                 </h3>
                 <p>
-                  inaptitude,arrets de travail, accident du travail /maladie professionnelle...
+                  inaptitude, arrêts de travail, accident du travail / maladie professionnelle...
                 </p>
               </div>
             </a>
