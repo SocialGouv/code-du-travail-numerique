@@ -70,6 +70,10 @@ async function searchItemsFromTheme(item) {
     .filter(tag => tag.match(/^themes/))
     .map(theme => theme.split(":")[1]);
 
+  if (themes.length === 0) {
+    return {};
+  }
+
   const body = getRelatedDocumentBody({ themes, id: item._id });
   const results = await elasticsearchClient.search({ index, body });
 
