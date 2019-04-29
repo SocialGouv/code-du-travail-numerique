@@ -13,9 +13,9 @@ import ServiceRenseignementModal from "../ServiceRenseignementModal";
 
 function Feedback({
   query = "",
-  source = "",
-  filter = "Tous contenus",
-  url = "",
+  sourceType = "",
+  sourceFilter = "Tous contenus",
+  url = document ? document.location.href : "",
   title = ""
 }) {
   const [isSatisfied, setSatisfaction] = useState(null); // null, true, false,
@@ -30,12 +30,12 @@ function Feedback({
       query
     ]);
     postFeedback(feedbackLightUrl, {
-      filter,
+      sourceFilter,
       isSatisfied: answer,
       query,
       title,
-      source,
-      url: url || (document ? document.location.href : ""),
+      sourceType,
+      url,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent
     });
     setSatisfaction(answer);
@@ -72,8 +72,8 @@ function Feedback({
         {isSatisfied !== null && !isSent && (
           <FeedbackForm
             query={query}
-            filter={filter}
-            source={source}
+            sourceFilter={sourceFilter}
+            sourceType={sourceType}
             url={url}
             title={title}
             onSubmit={submitFeedback}
