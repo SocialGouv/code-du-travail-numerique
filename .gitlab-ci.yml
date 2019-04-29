@@ -46,7 +46,7 @@ stages:
 Deploy Elasticsearch (dev):
   <<: *deploy_stage
   environment:
-    name: dev.factory
+    name: dev
     url: $ELASTICSEARCH_HOST
   extends: .deploy-elasticsearch-dev-k8s
   variables:
@@ -60,7 +60,7 @@ Deploy Elasticsearch (dev):
 Create Elasticsearch Index (dev):
   <<: *deploy_stage
   environment:
-    name: dev.factory
+    name: dev
   extends: .deploy-code-du-travail-data-k8s
   variables:
     <<: *deploy_stage_variables
@@ -72,7 +72,7 @@ Create Elasticsearch Index (dev):
 Deploy @cdtn/api (dev):
   <<: *deploy_stage
   environment:
-    name: dev.factory
+    name: dev
     url: $API_HOST
   extends: .deploy-code-du-travail-api-k8s
   variables:
@@ -90,7 +90,7 @@ Deploy @cdtn/api (dev):
 Deploy @cdtn/nlp (dev):
   <<: *deploy_stage
   environment:
-    name: dev.factory
+    name: dev
     url: $NLP_HOST
   extends: .deploy-code-du-travail-nlp-k8s
   variables:
@@ -106,7 +106,7 @@ Deploy @cdtn/nlp (dev):
 Deploy @cdtn/frontend (dev):
   <<: *deploy_stage
   environment:
-    name: dev.factory
+    name: dev
     url: $FRONTEND_HOST
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
@@ -210,7 +210,7 @@ delete-pods:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
   environment:
-    name: dev.factory
+    name: dev
   before_script:
   - /apps/create-kubeconfig.sh
   script:
