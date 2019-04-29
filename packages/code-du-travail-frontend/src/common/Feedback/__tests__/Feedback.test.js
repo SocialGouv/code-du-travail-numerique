@@ -3,6 +3,8 @@ import { render } from "react-testing-library";
 
 import { Feedback } from "..";
 
+global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
+
 jest.mock("react-piwik", () => {
   let events = [];
   return {
@@ -22,7 +24,8 @@ describe("<Feedback/>", () => {
     const { container } = render(
       <Feedback
         query="Query"
-        source="Fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -32,7 +35,8 @@ describe("<Feedback/>", () => {
     const { container, getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -44,7 +48,8 @@ describe("<Feedback/>", () => {
     const { container, getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -56,7 +61,8 @@ describe("<Feedback/>", () => {
     const { getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -69,7 +75,8 @@ describe("<Feedback/>", () => {
     const { getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );

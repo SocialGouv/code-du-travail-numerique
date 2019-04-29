@@ -59,12 +59,12 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
     <input
       name="url"
       type="hidden"
-      value="http://localhost/"
+      value="led zeppelin"
     />
     <input
-      name="source"
+      name="sourceType"
       type="hidden"
-      value="Tous contenus"
+      value="Fiches Service Public"
     />
     <select
       class="c1"
@@ -176,12 +176,12 @@ exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
     <input
       name="url"
       type="hidden"
-      value="http://localhost/"
+      value="led zeppelin"
     />
     <input
-      name="source"
+      name="sourceType"
       type="hidden"
-      value="Tous contenus"
+      value="Fiches Service Public"
     />
     <textarea
       class="c1"

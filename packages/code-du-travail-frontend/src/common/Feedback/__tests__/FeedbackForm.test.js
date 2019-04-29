@@ -5,24 +5,14 @@ import { FeedbackForm } from "../FeedbackForm";
 
 jest.useFakeTimers();
 
-const results = [
-  {
-    _source: {
-      source: "code-du-travail",
-      slug: "result-slug",
-      title: "item title",
-      type: "item-type"
-    }
-  }
-];
-
 describe("<FeedbackForm />", () => {
   it("renders if user is satisfied", () => {
     const { container, getByValue } = render(
       <FeedbackForm
         query="Initial query"
-        source="Tous contenus"
-        results={results}
+        sourceType="Fiches Service Public"
+        sourceFilter="Tous contenus"
+        url="led zeppelin"
         onSubmit={jest.fn()}
         onReset={jest.fn()}
         isSatisfied={true}
@@ -35,8 +25,9 @@ describe("<FeedbackForm />", () => {
     const { container, getByValue } = render(
       <FeedbackForm
         query="Initial query"
-        source="Tous contenus"
-        results={results}
+        sourceType="Fiches Service Public"
+        sourceFilter="Tous contenus"
+        url="led zeppelin"
         onSubmit={jest.fn()}
         onReset={jest.fn()}
         isSatisfied={false}
@@ -50,8 +41,9 @@ describe("<FeedbackForm />", () => {
     const { getByText } = render(
       <FeedbackForm
         query="Initial query"
-        source="Tous contenus"
-        results={results}
+        sourceType="Fiches Service Public"
+        sourceFilter="Tous contenus"
+        url="led zeppelin"
         onSubmit={jest.fn()}
         onReset={jest.fn()}
         isSatisfied={true}
@@ -67,8 +59,9 @@ describe("<FeedbackForm />", () => {
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
-        source="Tous contenus"
-        results={results}
+        sourceType="Fiches Service Public"
+        sourceFilter="Tous contenus"
+        url="led zeppelin"
         onSubmit={onSubmit}
         onReset={jest.fn()}
         isSatisfied={true}
@@ -87,8 +80,9 @@ describe("<FeedbackForm />", () => {
     const { getByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
-        source="Tous contenus"
-        results={results}
+        sourceType="Fiches Service Public"
+        sourceFilter="Tous contenus"
+        url="led zeppelin"
         onSubmit={onSubmit}
         onReset={jest.fn()}
         isSatisfied={true}
@@ -110,8 +104,9 @@ describe("<FeedbackForm />", () => {
     const { getByText, queryByText, getByPlaceholderText } = render(
       <FeedbackForm
         query="Initial query"
-        source="Tous contenus"
-        results={results}
+        sourceType="Fiches Service Public"
+        sourceFilter="Tous contenus"
+        url="led zeppelin"
         onSubmit={onSubmit}
         onReset={jest.fn()}
         isSatisfied={true}

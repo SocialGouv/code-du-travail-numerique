@@ -67,7 +67,8 @@ function Answer({
       )}
       <Feedback
         query={router.query.q}
-        source={router.query.source}
+        sourceType={sourceType}
+        sourceFilter={router.query.source}
         url={router.asPath}
         title={title}
       />

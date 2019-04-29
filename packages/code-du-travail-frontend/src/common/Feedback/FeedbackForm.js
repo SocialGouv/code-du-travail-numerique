@@ -16,15 +16,15 @@ const motifLabels = [
 class FeedbackForm extends React.Component {
   static propTypes = {
     query: PropTypes.string,
-    url: PropTypes.string,
     title: PropTypes.string,
-    source: PropTypes.string.isRequired,
+    isSatisfied: PropTypes.bool.isRequired,
     onSubmit: PropTypes.func.isRequired,
-    isSatisfied: PropTypes.bool.isRequired
+    sourceFilter: PropTypes.string.isRequired,
+    sourceType: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
   };
   static defaultProps = {
     query: "",
-    url: "",
     title: ""
   };
   state = {
@@ -67,14 +67,16 @@ class FeedbackForm extends React.Component {
     this.setState({ status: "sending" });
 
     const data = {
-      motif,
+      sourceFilter: this.props.sourceFilter,
+      isSatisfied: this.props.isSatisfied,
       message,
-      source: this.props.source,
-      url: this.props.url || (document ? document.location.href : ""),
-      title: this.props.title,
-      userAgent: typeof navigator !== "undefined" && navigator.userAgent,
+      motif,
+      query: this.props.query,
+      sourceType: this.props.sourceType,
       subject: question,
-      isSatisfied: this.props.isSatisfied
+      title: this.props.title,
+      url: this.props.url,
+      userAgent: typeof navigator !== "undefined" && navigator.userAgent
     };
     try {
       await this.props.onSubmit(data);
@@ -103,7 +105,7 @@ class FeedbackForm extends React.Component {
   }
 
   render() {
-    const { query, url, source, isSatisfied } = this.props;
+    const { query, url, sourceType, isSatisfied } = this.props;
 
     return (
       <StyledForm action={feedbackUrl} onSubmit={this.onSubmit}>
@@ -115,12 +117,8 @@ class FeedbackForm extends React.Component {
           Laissez-nous un commentaire :
         </p>
         <input type="hidden" name="question" value={query} />
-        <input
-          type="hidden"
-          name="url"
-          value={url || (document ? document.location.href : "")}
-        />
-        <input type="hidden" name="source" value={source} />
+        <input type="hidden" name="url" value={url} />
+        <input type="hidden" name="sourceType" value={sourceType} />
         {!isSatisfied && (
           <StyledInput
             as="select"

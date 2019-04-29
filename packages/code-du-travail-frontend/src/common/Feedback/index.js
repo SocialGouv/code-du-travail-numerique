@@ -4,13 +4,18 @@ import styled from "styled-components";
 import ReactPiwik from "react-piwik";
 
 import { FeedbackForm } from "./FeedbackForm";
-import { postFeedback } from "./feedback.service";
+import {
+  feedbackUrl,
+  feedbackLightUrl,
+  postFeedback
+} from "./feedback.service";
 import ServiceRenseignementModal from "../ServiceRenseignementModal";
 
 function Feedback({
   query = "",
-  source = "Tous contenus",
-  url = "",
+  sourceType = "",
+  sourceFilter = "Tous contenus",
+  url = document ? document.location.href : "",
   title = ""
 }) {
   const [isSatisfied, setSatisfaction] = useState(null); // null, true, false,
@@ -24,6 +29,15 @@ function Feedback({
       url,
       query
     ]);
+    postFeedback(feedbackLightUrl, {
+      sourceFilter,
+      isSatisfied: answer,
+      query,
+      title,
+      sourceType,
+      url,
+      userAgent: typeof navigator !== "undefined" && navigator.userAgent
+    });
     setSatisfaction(answer);
   };
 
@@ -36,7 +50,7 @@ function Feedback({
       query
     ]);
 
-    return postFeedback(data).then(() => {
+    return postFeedback(feedbackUrl, data).then(() => {
       setSent(true);
     });
   };
@@ -58,7 +72,8 @@ function Feedback({
         {isSatisfied !== null && !isSent && (
           <FeedbackForm
             query={query}
-            source={source}
+            sourceFilter={sourceFilter}
+            sourceType={sourceType}
             url={url}
             title={title}
             onSubmit={submitFeedback}
