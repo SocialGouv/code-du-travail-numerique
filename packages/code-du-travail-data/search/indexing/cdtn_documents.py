@@ -154,14 +154,13 @@ def populate_cdtn_documents():
         data = json.load(json_data)
         logger.info("Load %s documents from snippets", len(data))
         for val in data:
-            faq_text = strip_html(val['reponse'])
             tags = parse_hash_tags(val.get("tags"))
             CDTN_DOCUMENTS.append({
                 'source': 'snippet',
                 'slug': slugify(val['question'], to_lower=True),
-                'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
+                'text': val['question'],
                 'tags': tags,
                 'date': val.get('date_redaction'),
                 'references': val.get('references'),

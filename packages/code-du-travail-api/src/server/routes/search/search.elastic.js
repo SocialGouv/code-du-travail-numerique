@@ -36,7 +36,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                     query: query,
                     fields: ["text.french", "title.french"],
                     type: "cross_fields",
-                    minimum_should_match: "3<75% 6<30%",
+                    minimum_should_match: "1<99% 3<75% 6<30%",
                     boost: 0.1
                   }
                 },
@@ -78,7 +78,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           },
           {
             match: {
-              "tags.theme": {
+              "tags.keywords": {
                 query: `theme:${query}`
               }
             }

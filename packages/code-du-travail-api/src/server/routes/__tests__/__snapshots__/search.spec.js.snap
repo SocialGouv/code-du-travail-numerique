@@ -17,7 +17,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 7.237313,
+        "_score": 7.8337746,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -37,7 +37,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 4.4652514,
+        "_score": 4.9022255,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -56,7 +56,7 @@ Object {
         },
       },
     ],
-    "max_score": 7.237313,
+    "max_score": 7.8337746,
     "total": 2,
   },
 }
@@ -68,7 +68,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 3.5355968,
+      "_score": 4.834407,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -87,7 +87,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 3.296895,
+      "_score": 4.595705,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -104,7 +104,7 @@ Object {
       },
     },
   ],
-  "max_score": 3.5355968,
+  "max_score": 4.834407,
   "total": 2,
 }
 `;
@@ -210,6 +210,25 @@ Object {
       },
     },
     Object {
+      "_id": "6",
+      "_index": "cdtn_document_test",
+      "_score": 4.834407,
+      "_source": Object {
+        "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
+        "source": "faq",
+        "title": "Dans les HCR, quel est le préavis de démission ?",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text.french": Array [
+          "Le préavis de <mark>démission</mark> diffère suivant la",
+        ],
+        "title.french": Array [
+          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
+        ],
+      },
+    },
+    Object {
       "_id": "4",
       "_index": "cdtn_document_test",
       "_score": 4.712615,
@@ -230,6 +249,25 @@ Object {
         ],
         "title.french": Array [
           "<mark>Démission</mark> d'un salarié",
+        ],
+      },
+    },
+    Object {
+      "_id": "7",
+      "_index": "cdtn_document_test",
+      "_score": 4.595705,
+      "_source": Object {
+        "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
+        "source": "faq",
+        "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "text.french": Array [
+          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
+        ],
+        "title.french": Array [
+          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
         ],
       },
     },
@@ -296,25 +334,6 @@ Object {
       },
     },
     Object {
-      "_id": "6",
-      "_index": "cdtn_document_test",
-      "_score": 3.5355968,
-      "_source": Object {
-        "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-        "source": "faq",
-        "title": "Dans les HCR, quel est le préavis de démission ?",
-      },
-      "_type": "cdtn_document_test",
-      "highlight": Object {
-        "text.french": Array [
-          "Le préavis de <mark>démission</mark> diffère suivant la",
-        ],
-        "title.french": Array [
-          "Dans les HCR, quel est le préavis de <mark>démission</mark>",
-        ],
-      },
-    },
-    Object {
       "_id": "9",
       "_index": "cdtn_document_test",
       "_score": 3.4196072,
@@ -333,26 +352,42 @@ Object {
       },
     },
     Object {
-      "_id": "7",
+      "_id": "3",
       "_index": "cdtn_document_test",
-      "_score": 3.296895,
+      "_score": 1.3544811,
       "_source": Object {
-        "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-        "source": "faq",
-        "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
+        "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+        "slug": "la-demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+        "source": "fiches_ministere_travail",
+        "title": "La démission : l’absence prolongée du salarié est-elle une démission ?",
+        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
       },
       "_type": "cdtn_document_test",
       "highlight": Object {
-        "text.french": Array [
-          "en arrêt maladie pendant le préavis de <mark>démission</mark>",
-        ],
         "title.french": Array [
-          "boulangerie-pâtisserie et je viens de poser ma <mark>démission</mark>",
+          "est-elle une <mark>démission</mark> ?",
+          "La <mark>démission</mark> : l’absence prolongée du salarié",
+        ],
+      },
+    },
+    Object {
+      "_id": "1",
+      "_index": "cdtn_document_test",
+      "_score": 1.2437692,
+      "_source": Object {
+        "slug": "themes/labandon-de-poste-est-il-une-demission",
+        "source": "themes",
+        "title": "L’abandon de poste est-il une démission ?",
+      },
+      "_type": "cdtn_document_test",
+      "highlight": Object {
+        "title.french": Array [
+          "L’abandon de poste est-il une <mark>démission</mark> ?",
         ],
       },
     },
   ],
   "max_score": 4.843935,
-  "total": 8,
+  "total": 10,
 }
 `;
