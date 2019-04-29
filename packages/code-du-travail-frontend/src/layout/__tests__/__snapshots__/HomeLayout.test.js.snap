@@ -182,9 +182,10 @@ exports[`<HomeLayout /> should render 1`] = `
         <a
           class="c1"
           href="/?q="
+          title="Code du travail numérique - retour à l'accueil"
         >
           <img
-            alt=""
+            alt="symbole de la Marianne, site officiel du gouvernement"
             class="c2"
             src="/static/assets/img/marianne.svg"
           />
