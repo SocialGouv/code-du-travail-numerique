@@ -49,6 +49,10 @@ class SearchPage extends React.Component {
       <PageLayout>
         <Head>
           <title>{q} - Code du travail numérique</title>
+          <meta
+            name="description"
+            content="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
+          />
         </Head>
         <Search />
         <div className="section">

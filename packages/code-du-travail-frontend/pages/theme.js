@@ -99,6 +99,10 @@ class Theme extends React.Component {
       <PageLayout>
         <Head>
           <title>Code du travail numérique : {theme && theme.title}</title>
+          <meta
+            name="description"
+            content={`Explorez les contenus autour du thème ${theme}`}
+          />
         </Head>
         <Search />
         <div className="section section-white">
