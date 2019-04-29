@@ -46,7 +46,7 @@ stages:
 Deploy Elasticsearch (dev):
   <<: *deploy_stage
   environment:
-    name: dev
+    name: dev.factory
     url: $ELASTICSEARCH_HOST
   extends: .deploy-elasticsearch-dev-k8s
   variables:
@@ -60,7 +60,7 @@ Deploy Elasticsearch (dev):
 Create Elasticsearch Index (dev):
   <<: *deploy_stage
   environment:
-    name: dev
+    name: dev.factory
   extends: .deploy-code-du-travail-data-k8s
   variables:
     <<: *deploy_stage_variables
@@ -72,7 +72,7 @@ Create Elasticsearch Index (dev):
 Deploy @cdtn/api (dev):
   <<: *deploy_stage
   environment:
-    name: dev
+    name: dev.factory
     url: $API_HOST
   extends: .deploy-code-du-travail-api-k8s
   variables:
@@ -90,7 +90,7 @@ Deploy @cdtn/api (dev):
 Deploy @cdtn/nlp (dev):
   <<: *deploy_stage
   environment:
-    name: dev
+    name: dev.factory
     url: $NLP_HOST
   extends: .deploy-code-du-travail-nlp-k8s
   variables:
@@ -106,7 +106,7 @@ Deploy @cdtn/nlp (dev):
 Deploy @cdtn/frontend (dev):
   <<: *deploy_stage
   environment:
-    name: dev
+    name: dev.factory
     url: $FRONTEND_HOST
   extends: .deploy-code-du-travail-frontend-k8s
   variables:
@@ -121,10 +121,10 @@ Deploy @cdtn/frontend (dev):
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
 ########################################
 
-Deploy Elasticsearch (ops):
+Deploy Elasticsearch (prod):
   <<: *deploy_stage
   environment:
-    name: ops
+    name: incubateur
     url: $ELASTICSEARCH_HOST
   extends: .deploy-elasticsearch-prod-k8s
   variables:
@@ -136,10 +136,10 @@ Deploy Elasticsearch (ops):
   only:
   - master
 
-Create Elasticsearch Index (ops):
+Create Elasticsearch Index (prod):
   <<: *deploy_stage
   environment:
-    name: ops
+    name: incubateur
   extends: .deploy-code-du-travail-data-prod-k8s
   variables:
     <<: *deploy_stage_variables
@@ -149,10 +149,10 @@ Create Elasticsearch Index (ops):
   only:
   - master
 
-Deploy @cdtn/api (ops):
+Deploy @cdtn/api (prod):
   <<: *deploy_stage
   environment:
-    name: ops
+    name: incubateur
     url: $API_HOST
   extends: .deploy-code-du-travail-api-prod-k8s
   variables:
@@ -168,10 +168,10 @@ Deploy @cdtn/api (ops):
   only:
   - master
 
-Deploy @cdtn/nlp (ops):
+Deploy @cdtn/nlp (prod):
   <<: *deploy_stage
   environment:
-    name: ops
+    name: incubateur
     url: $NLP_HOST
   extends: .deploy-code-du-travail-nlp-prod-k8s
   variables:
@@ -185,10 +185,10 @@ Deploy @cdtn/nlp (ops):
   only:
   - master
 
-Deploy @cdtn/frontend (ops):
+Deploy @cdtn/frontend (prod):
   <<: *deploy_stage
   environment:
-    name: ops
+    name: incubateur
     url: $FRONTEND_HOST
   extends: .deploy-code-du-travail-frontend-prod-k8s
   variables:
@@ -210,7 +210,7 @@ delete-pods:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
   environment:
-    name: dev
+    name: dev.factory
   before_script:
   - /apps/create-kubeconfig.sh
   script:
