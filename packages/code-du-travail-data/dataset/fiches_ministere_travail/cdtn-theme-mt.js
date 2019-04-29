@@ -16,8 +16,8 @@ const unRollTheme = theme => (
 )
 const transformRow = row => {
   return {
-  url: row["6"].value,
-  theme: unRollTheme(row["9"].value),
+  url: row["1"].value,
+  theme: row["9"] ? unRollTheme(row["9"].value) : [],
 }}
 
 async function getThemeMapping() {

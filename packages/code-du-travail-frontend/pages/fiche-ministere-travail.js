@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
@@ -42,6 +43,9 @@ class Fiche extends React.Component {
     );
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={data._source.description} />
+        </Head>
         <Answer
           title={data._source.title}
           emptyMessage="Cette fiche n'a pas été trouvée"

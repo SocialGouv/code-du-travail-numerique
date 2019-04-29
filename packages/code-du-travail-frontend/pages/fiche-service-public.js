@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import getConfig from "next/config";
@@ -49,6 +50,9 @@ class Fiche extends React.Component {
     const footer = <Source name="service-public.fr" url={data._source.url} />;
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={data._source.description} />
+        </Head>
         <ServicePublicCss>
           <Answer
             title={data._source.title}
