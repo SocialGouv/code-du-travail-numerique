@@ -285,7 +285,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
               value="http://server/fiches/fiche1"
             />
             <input
-              name="source"
+              name="sourceType"
               type="hidden"
               value="Fiches Service Public"
             />
@@ -456,7 +456,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
               value="http://server/fiches/fiche1"
             />
             <input
-              name="source"
+              name="sourceType"
               type="hidden"
               value="Fiches Service Public"
             />

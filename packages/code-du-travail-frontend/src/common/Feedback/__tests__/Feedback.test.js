@@ -24,8 +24,8 @@ describe("<Feedback/>", () => {
     const { container } = render(
       <Feedback
         query="Query"
-        source="Fiches Service Public"
-        filter="fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -35,8 +35,8 @@ describe("<Feedback/>", () => {
     const { container, getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches Service Public"
-        filter="fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -48,8 +48,8 @@ describe("<Feedback/>", () => {
     const { container, getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches Service Public"
-        filter="fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -61,8 +61,8 @@ describe("<Feedback/>", () => {
     const { getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches Service Public"
-        filter="fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
@@ -75,8 +75,8 @@ describe("<Feedback/>", () => {
     const { getByText } = render(
       <Feedback
         query="Query"
-        source="Fiches Service Public"
-        filter="fiches"
+        sourceType="Fiches Service Public"
+        sourceFilter="fiches"
         url="http://server/fiches/fiche1"
       />
     );
