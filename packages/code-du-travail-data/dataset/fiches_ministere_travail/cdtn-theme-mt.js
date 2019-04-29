@@ -8,35 +8,46 @@ const getCells = promisify(GoogleSpreadsheets.cells);
  * This module export a function that will load a google speardsheet
  * which contains a mapping between content classification of ministere-travail content
  * and the cdtn classification
-*/
+ */
 
+const unRollTheme = theme =>
+  theme
+    .replace(/[0-9]+ -/, "")
+    .split("-")
+    .map(data => data.trim());
 
-const unRollTheme = theme => (
-  theme.replace(/[0-9]+ -/, '').split('-').map(data => data.trim())
-)
 const transformRow = row => {
+  const [_, slug] = row["1"].value.match(/\/([\w-]+)\/?$/);
   return {
-  url: row["1"].value,
-  theme: row["9"] ? unRollTheme(row["9"].value) : [],
-}}
+    slug,
+    theme: row['9'] ? unRollTheme(row["9"].value) : []
+  };
+};
 
 async function getThemeMapping() {
   const { cells } = await getCells({
     key: spreadsheetKey,
-    worksheet: 2, // matching fiche MT
+    worksheet: 2 // matching fiche MT
   });
 
   return Object.values(cells)
     .slice(1) // remove header
     .map(transformRow)
-    .reduce((state, item) => ({...state, [item.url]: item.theme}), {})
+    .reduce((state, item) => {
+      if (state[item.slug]) {
+        console.error("slug existant", item.slug, state[item.slug], item.theme)
+      }
+      state[item.slug] = item.theme
+      return state
+    }, {});
 }
 
-module.exports = getThemeMapping
+module.exports = getThemeMapping;
 
 async function main() {
   const themesMap = await getThemeMapping();
-  console.log(themesMap)
+  console.log(themesMap);
+  console.log("nb slug", Object.keys(themesMap).length)
 }
 
 if (module === require.main) {

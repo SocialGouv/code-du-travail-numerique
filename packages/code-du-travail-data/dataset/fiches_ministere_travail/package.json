@@ -10,13 +10,13 @@
   "dependencies": {
     "google-spreadsheets": "^2.0.0",
     "jsdom": "^12.0.0",
-    "node-fetch": "^2.2.0",
     "ora": "^3.0.0",
     "superagent": "^4.1.0"
   },
   "scripts": {
     "prestart": "node verifyUrl.js",
     "start": "node index.js > fiches-min-travail.json",
-    "poststart": "node report.js"
+    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-min-travail.json",
+    "poststart": "yarn updateTheme && node report.js"
   }
 }
