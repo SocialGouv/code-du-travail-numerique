@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
@@ -78,6 +79,9 @@ class Question extends React.Component {
 
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={data._source.description} />
+        </Head>
         <Answer
           title={data._source.title}
           emptyMessage="Cette question n'a pas été trouvée"
