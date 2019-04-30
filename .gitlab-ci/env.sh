@@ -13,11 +13,11 @@ export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
 case ${BRANCH_NAME} in
   master)
-    export ENVIRONMENT=ops;
+    export ENVIRONMENT=incubateur;
     #
-    export API_HOST=api.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
-    export FRONTEND_HOST=code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
-    export NLP_HOST=nlp.code-du-travail-numerique.${ENVIRONMENT}.factory.social.gouv.fr;
+    export API_HOST=api.code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr;
+    export FRONTEND_HOST=code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr;
+    export NLP_HOST=nlp.code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr;
     export ELASTICSEARCH_HOST=elasticsearch:${ES_PORT};
     ;;
   *)
