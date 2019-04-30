@@ -22,9 +22,10 @@ class Table extends React.PureComponent {
       child => child.name === "Rangée" && child._.type === "normal"
     );
 
-    const isHeaderCellInRow = data.$.filter(
-      child => child.name === "Colonne"
-    ).map(colonne => colonne._.type === ROW_HEADER);
+    const columns = data.$.filter(child => child.name === "Colonne");
+    const isHeaderCell = columnIndex => {
+      return columns[columnIndex]._.type === ROW_HEADER;
+    };
 
     return (
       <table>
@@ -32,8 +33,8 @@ class Table extends React.PureComponent {
         {headingRow && (
           <thead>
             <tr>
-              {headingRow.$.map((th, index) => (
-                <th key={index}>
+              {headingRow.$.map((th, columnIndex) => (
+                <th key={columnIndex}>
                   {th.$ && (
                     <ElementBuilder
                       data={ignoreParagraph(th.$)}
@@ -46,15 +47,15 @@ class Table extends React.PureComponent {
           </thead>
         )}
         <tbody>
-          {rows.map((tr, index) => (
-            <tr key={index}>
-              {tr.$.map((td, index) => {
+          {rows.map((tr, rowIndex) => (
+            <tr key={rowIndex}>
+              {tr.$.map((td, columnIndex) => {
                 if (!td.$) {
                   return null;
                 }
-                const Cell = isHeaderCellInRow[index] ? "th" : "td";
+                const Cell = isHeaderCell(columnIndex) ? "th" : "td";
                 return (
-                  <Cell key={index}>
+                  <Cell key={columnIndex}>
                     <ElementBuilder
                       data={ignoreParagraph(td.$)}
                       headingLevel={headingLevel + 1}
