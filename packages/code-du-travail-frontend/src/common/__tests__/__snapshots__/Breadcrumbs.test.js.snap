@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
+.c1 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c0 {
+  background: #c9d3df;
+}
+
+.c2 {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+}
+
+.c2:first-child {
+  padding-left: 0;
+}
+
+.c3 {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div>
+  <nav
+    class="section c0"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="c1"
+      >
+        <li
+          class="c2"
+        >
+          item 1
+        </li>
+        <li
+          aria-hidden="true"
+          class="c3"
+        >
+           » 
+        </li>
+        <li
+          class="c2"
+        >
+          item 2
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`<Breadcrumbs /> should render nothing 1`] = `<div />`;

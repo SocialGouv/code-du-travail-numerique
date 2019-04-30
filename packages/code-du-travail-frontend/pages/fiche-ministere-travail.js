@@ -54,6 +54,7 @@ class Fiche extends React.Component {
           icon={ReponseIcon}
           date={data._source.date}
           sourceType="Fiche ministère du travail"
+          tags={data._source.tags}
         />
       </PageLayout>
     );

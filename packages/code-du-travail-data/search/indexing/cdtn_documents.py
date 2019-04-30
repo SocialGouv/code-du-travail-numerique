@@ -106,6 +106,7 @@ def populate_cdtn_documents():
             'html': val["html"],
             'title': val['title'],
             'url': val['url'],
+            'tags': val['tags'],
             'date': val.get('date'),
         })
 
