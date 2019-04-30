@@ -21,6 +21,7 @@ const modelesRoutes = require("./routes/modeles");
 const searchRoutes = require("./routes/search");
 const versionRoutes = require("./routes/version");
 const docsRoutes = require("./routes/docs");
+const themesRoute = require("./routes/themes");
 
 const { logger } = require("./utils/logger");
 
@@ -61,6 +62,7 @@ app.use(modelesRoutes.routes());
 app.use(searchRoutes.routes());
 app.use(itemsRoutes.routes());
 app.use(versionRoutes.routes());
+app.use(themesRoute.routes());
 
 app.use(docsRoutes);
 

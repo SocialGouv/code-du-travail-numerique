@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`return idcc results for num 41-licenciement-pour-motif-personnel 1`] = `
+Object {
+  "breadcrumbs": Array [
+    Object {
+      "id": 7,
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+      "title": "Départ de l'entreprise",
+    },
+    Object {
+      "id": 41,
+      "parent": "7-depart-de-lentreprise",
+      "slug": "41-licenciement-pour-motif-personnel",
+      "title": "Licenciement pour motif personnel",
+    },
+  ],
+  "children": Array [
+    Object {
+      "id": 173,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "173-motifs-du-licenciement",
+      "title": "Motifs du licenciement",
+    },
+    Object {
+      "id": 174,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "174-procedure-de-licenciement",
+      "title": "Procédure de licenciement",
+    },
+    Object {
+      "id": 175,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "175-le-conseiller-du-salarie",
+      "title": "Le conseiller du salarié",
+    },
+    Object {
+      "id": 176,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "176-preavis-de-licenciement",
+      "title": "Préavis de licenciement",
+    },
+    Object {
+      "id": 177,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "177-licenciement-nul,-injustifie-ou-irregulier",
+      "title": "Licenciement nul, injustifié ou irrégulier",
+    },
+    Object {
+      "id": 178,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "178-indemnite-de-licenciement",
+      "title": "Indemnité de licenciement",
+    },
+    Object {
+      "id": 179,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "179-indemnite-compensatrice-de-preavis-et-de-conges-payes",
+      "title": "Indemnité compensatrice de préavis et de congés payés",
+    },
+    Object {
+      "id": 180,
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "180-salaries-proteges",
+      "title": "Salariés protégés",
+    },
+  ],
+  "theme": Object {
+    "id": 41,
+    "parent": "7-depart-de-lentreprise",
+    "slug": "41-licenciement-pour-motif-personnel",
+    "title": "Licenciement pour motif personnel",
+  },
+}
+`;
+
+exports[`return themes results for theme slug 42-licenciement-pour-inaptitude 1`] = `undefined`;
+
+exports[`return themes root themes 1`] = `undefined`;
