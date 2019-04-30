@@ -24,4 +24,20 @@ describe("<Answer />", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it("should render a breadcrumbs", () => {
+    const { container } = renderWithMock(
+      <Answer
+        title="Article du code"
+        intro="intro de l'article"
+        html="<p class='test-content'>Contenu au format <strong>html</strong></p>"
+        footer="pied de page"
+        date="03/11/1979"
+        sourceType="social groove"
+        tags={["tag1", "tag2"]}
+      >
+        <div>Contenu supplémentaire</div>
+      </Answer>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
