@@ -9,17 +9,15 @@ describe("<Button />", () => {
   });
 
   test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
     ["primary"],
     ["secondary"],
-    ["link"]
+    ["info"],
+    ["success"],
+    ["warning"],
+    ["danger"]
   ])("it renders a Button %s", label => {
-    const props = { [label]: true };
     const { container } = render(
-      <ToggleButton {...props}>this is a Button {label} </ToggleButton>
+      <ToggleButton kind={label}>this is a Button {label} </ToggleButton>
     );
     expect(container).toMatchSnapshot();
   });
