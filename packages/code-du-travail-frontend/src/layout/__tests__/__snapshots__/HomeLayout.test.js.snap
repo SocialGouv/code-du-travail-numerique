@@ -24,41 +24,41 @@ exports[`<HomeLayout /> should render 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
 }
 
 .c5:not([disabled]):hover,
 .c5:not([disabled]):focus {
-  background: #0068ae;
+  background: #07f;
   color: #fff;
 }
 
 .c5:not([disabled]):active {
   color: #fff;
-  background: #0078c7;
+  background: #1a85ff;
   border-width: 2px 1px 1px 1px;
-  border-color: #005994;
+  border-color: #006be6;
   outline: none;
 }
 
 .c5[aria-pressed="true"] {
   color: #fff;
-  background: #0068ae;
+  background: #07f;
   border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
 .c5[aria-pressed="true"]:not([disabled]):hover,
 .c5[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
+  background-color: #006be6;
 }
 
 .c5[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
+  border-top-color: #0053b3;
 }
 
 .c5[disabled] {

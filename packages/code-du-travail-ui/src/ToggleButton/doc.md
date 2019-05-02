@@ -18,59 +18,59 @@ import ToggleButton from ".";
     <ToggleButton pressed disabled>Default button</ToggleButton>
   </p>
   <p>
-    <ToggleButton primary>Button Primary</ToggleButton>
+    <ToggleButton kind="primary">Button Primary</ToggleButton>
     {" "}
-    <ToggleButton primary pressed>Button Primary</ToggleButton>
+    <ToggleButton kind="primary" pressed>Button Primary</ToggleButton>
     {" "}
-    <ToggleButton primary disabled>Button Primary</ToggleButton>
+    <ToggleButton kind="primary" disabled>Button Primary</ToggleButton>
     {" "}
-    <ToggleButton primary pressed disabled>Button Primary</ToggleButton>
+    <ToggleButton kind="primary" pressed disabled>Button Primary</ToggleButton>
     
   </p>
   <p>
-    <ToggleButton secondary>Button Secondary</ToggleButton>
+    <ToggleButton kind="secondary">Button Secondary</ToggleButton>
     {" "}
-    <ToggleButton secondary pressed>Button Secondary</ToggleButton>
+    <ToggleButton kind="secondary" pressed>Button Secondary</ToggleButton>
     {" "}
-    <ToggleButton secondary disabled>Button Secondary</ToggleButton>
+    <ToggleButton kind="secondary" disabled>Button Secondary</ToggleButton>
     {" "}
-    <ToggleButton secondary disabled pressed>Button Secondary</ToggleButton>
+    <ToggleButton kind="secondary" disabled pressed>Button Secondary</ToggleButton>
   </p>
   <p>
-    <ToggleButton info>Button Info</ToggleButton>
+    <ToggleButton kind="info">Button Info</ToggleButton>
     {" "}
-    <ToggleButton info pressed>Button Info</ToggleButton>
+    <ToggleButton kind="info" pressed>Button Info</ToggleButton>
     {" "}
-    <ToggleButton info disabled>Button Info</ToggleButton>
+    <ToggleButton kind="info" disabled>Button Info</ToggleButton>
     {" "}
-    <ToggleButton info disabled pressed>Button Info</ToggleButton>
+    <ToggleButton kind="info" disabled pressed>Button Info</ToggleButton>
   </p>
   <p>
-    <ToggleButton success>Button Success</ToggleButton>
+    <ToggleButton kind="success">Button Success</ToggleButton>
     {" "}
-    <ToggleButton success pressed>Button Success</ToggleButton>
+    <ToggleButton kind="success" pressed>Button Success</ToggleButton>
     {" "}
-    <ToggleButton success disabled>Button Success</ToggleButton>
+    <ToggleButton kind="success" disabled>Button Success</ToggleButton>
     {" "}
-    <ToggleButton success disabled pressed>Button Success</ToggleButton>
+    <ToggleButton kind="success" disabled pressed>Button Success</ToggleButton>
   </p>
   <p>
-    <ToggleButton warning>Button Warning</ToggleButton>
+    <ToggleButton kind="warning">Button Warning</ToggleButton>
     {" "}
-    <ToggleButton warning pressed>Button Warning</ToggleButton>
+    <ToggleButton kind="warning" pressed>Button Warning</ToggleButton>
     {" "}
-    <ToggleButton warning disabled>Button Warning</ToggleButton>
+    <ToggleButton kind="warning" disabled>Button Warning</ToggleButton>
     {" "}
-    <ToggleButton warning disabled pressed>Button Warning</ToggleButton>
+    <ToggleButton kind="warning" disabled pressed>Button Warning</ToggleButton>
   </p>
   <p>
-    <ToggleButton danger>Button Danger</ToggleButton>
+    <ToggleButton kind="danger">Button Danger</ToggleButton>
     {" "}
-    <ToggleButton danger pressed>Button Danger</ToggleButton>
+    <ToggleButton kind="danger" pressed>Button Danger</ToggleButton>
     {" "}
-    <ToggleButton danger disabled>Button Danger</ToggleButton>
+    <ToggleButton kind="danger" disabled>Button Danger</ToggleButton>
     {" "}
-    <ToggleButton danger disabled pressed>Button Danger</ToggleButton>
+    <ToggleButton kind="danger" disabled pressed>Button Danger</ToggleButton>
   </p>
 </Playground>
 
