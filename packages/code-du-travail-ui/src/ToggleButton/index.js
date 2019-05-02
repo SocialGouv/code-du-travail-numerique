@@ -49,6 +49,22 @@ const StyledButton = styled(Button)`
     let backgroundColor = colors.blueLight;
     let color = colors.primaryText;
 
+    if (props.kind === "icon") {
+      return css`
+        padding: ${spacing.base};
+        color: ${colors.darkText};
+        line-height: 0;
+        border: none;
+        &:hover {
+          color: ${lighten(0.3, colors.darkText)};
+        }
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      `;
+    }
+
     if (props.kind) {
       backgroundColor = colors[`${props.kind}Background`];
       color = colors[`${props.kind}Text`];
