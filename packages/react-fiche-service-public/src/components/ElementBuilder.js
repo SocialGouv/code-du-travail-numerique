@@ -22,15 +22,14 @@ const parseChildren = (children, headingLevel) => (
 
 // Beware, this one is recursive
 export function ElementBuilder({ data, headingLevel }) {
-  // Sometime we get elements without children...
+  // in cases where the parent's "$"/children is undefined while it should not
+  // e.g. in a "Texte" element. It occurs sometimes.
   if (!data) return null;
   // In case we get children
   if (Array.isArray(data)) {
-    return data.map((child, index) => {
-      return (
-        <ElementBuilder key={index} data={child} headingLevel={headingLevel} />
-      );
-    });
+    return data.map((child, index) => (
+      <ElementBuilder key={index} data={child} headingLevel={headingLevel} />
+    ));
   }
   if (data.type === "text") {
     return data.$;
