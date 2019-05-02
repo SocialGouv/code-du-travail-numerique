@@ -41,7 +41,7 @@ function Answer({
   icon,
   sourceType,
   additionalContent,
-  tags = [],
+  breadcrumbs = [],
   referencesJuridiques = [],
   emptyMessage = "Aucun résultat"
 }) {
@@ -51,7 +51,7 @@ function Answer({
         <title>{title}</title>
       </Head>
       <Search />
-      <Breadcrumbs items={tags} />
+      <Breadcrumbs items={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
