@@ -8,26 +8,25 @@ import {
   Category as CategoryItem
 } from "@cdt/ui";
 
-import themes from "@cdt/data/dataset/themes-front.json";
-
 export default class Categories extends React.Component {
   static propTypes = {
     themes: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        slug: PropTypes.arrayOf(PropTypes.string).isRequired,
-        icon: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired
-      })
+        label: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
+        icon: PropTypes.string,
+        text: PropTypes.string
+      }).isRequired
     ),
     isRoot: PropTypes.bool,
     title: PropTypes.string
   };
 
   static defaultProps = {
-    themes,
     isRoot: true,
-    title: "Retrouvez nos réponses thématiques"
+    title: "Retrouvez nos réponses thématiques",
+    icon: null,
+    text: ""
   };
 
   render() {
@@ -44,11 +43,11 @@ export default class Categories extends React.Component {
               </h2>
             )}
             <CategoriesWrapper>
-              {themes.map(({ slug, title, text, icon }) => (
-                <CategoryItem key={slug + title} small={!isRoot}>
+              {themes.map(({ slug, label, text, icon }) => (
+                <CategoryItem key={slug + label} small={!isRoot}>
                   <Link route="themes" params={{ slug: slug || "/" }}>
-                    <a title={title}>
-                      <Category title={title} text={text} icon={icon} />
+                    <a title={label}>
+                      <Category title={label} text={text} icon={icon} />
                     </a>
                   </Link>
                 </CategoryItem>

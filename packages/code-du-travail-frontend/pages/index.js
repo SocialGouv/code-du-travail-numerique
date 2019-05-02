@@ -1,11 +1,17 @@
 import React from "react";
 import Head from "next/head";
+import getConfig from "next/config";
 import Search from "../src/search/Search";
 import { HomeLayout } from "../src/layout/HomeLayout";
 import Categories from "../src/home/Categories";
 import Outils from "../src/home/Outils";
+import fetch from "isomorphic-unfetch";
 
-const Home = () => (
+const {
+  publicRuntimeConfig: { API_URL }
+} = getConfig();
+
+const Home = ({ data: { themes } }) => (
   <HomeLayout>
     <Head>
       <title>Code du travail numérique</title>
@@ -15,9 +21,24 @@ const Home = () => (
       />
     </Head>
     <Search />
-    <Categories />
+    <Categories themes={themes} />
     <Outils />
   </HomeLayout>
 );
-
+Home.getInitialProps = async () => {
+  const response = await fetch(`${API_URL}/themes`);
+  if (!response.ok) {
+    return {
+      data: { themes: [] },
+      errorCode: response.status,
+      errorStatus: response.statusText
+    };
+  }
+  const themes = await response.json();
+  return {
+    data: {
+      themes: themes.children
+    }
+  };
+};
 export default Home;

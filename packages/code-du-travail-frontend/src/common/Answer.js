@@ -29,7 +29,13 @@ const BackToResultsLink = ({ query }) => {
     </BacklinkWrapper>
   );
 };
-
+function getBreadcrumbs(items = []) {
+  return items.map(({ slug, label }) => (
+    <Link key={slug} route="themes" params={{ slug }}>
+      <a title={`Voir le theme ${label}`}>{label}</a>
+    </Link>
+  ));
+}
 function Answer({
   router,
   title,
@@ -45,13 +51,14 @@ function Answer({
   referencesJuridiques = [],
   emptyMessage = "Aucun résultat"
 }) {
+  getBreadcrumbs;
   return (
     <React.Fragment>
       <Head>
         <title>{title}</title>
       </Head>
       <Search />
-      <Breadcrumbs items={breadcrumbs} />
+      <Breadcrumbs items={getBreadcrumbs(breadcrumbs)} />
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
