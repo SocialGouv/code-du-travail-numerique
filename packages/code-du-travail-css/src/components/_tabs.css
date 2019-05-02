@@ -1,0 +1,15 @@
+.tabs-wrapper {
+  display: flex;
+  border-bottom: 1px solid var(--color-focus);
+}
+
+.tab {
+  list-style-type: none;
+  flex-shrink: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tab.active {
+  border-bottom: 3px solid var(--color-focus);
+}
