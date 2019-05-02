@@ -3,6 +3,8 @@ name: ToggleButton
 menu: Component
 ---
 import { Playground, Props } from "docz";
+import IconClose from "react-feather/dist/icons/x";
+import IconEnlarge from "react-feather/dist/icons/maximize";
 import ToggleButton from ".";
 
 # ToggleButton
@@ -11,7 +13,7 @@ import ToggleButton from ".";
   <p>
     <ToggleButton>Default button</ToggleButton>
     {" "}
-    <ToggleButton disabled>Default button disabled</ToggleButton>
+    <ToggleButton variant="default" disabled>Default button disabled</ToggleButton>
     {" "}
     <ToggleButton pressed>Default button pressed</ToggleButton>
   </p>
@@ -56,6 +58,16 @@ import ToggleButton from ".";
     <ToggleButton variant="danger" disabled>Button Danger disabled</ToggleButton>
     {" "}
     <ToggleButton variant="danger" pressed>Button Danger pressed</ToggleButton>
+  </p>
+  <p>
+    <ToggleButton variant="icon">
+      <IconClose />
+    </ToggleButton>
+    <br />
+    <br />
+    <ToggleButton variant="icon">
+      <IconEnlarge />
+    </ToggleButton>
   </p>
 </Playground>
 
