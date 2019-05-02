@@ -1,6 +1,9 @@
 const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
 
+const { extractSlug } = require("@cdt/data...themes")
+const { getBreadcrumbs } = require("@cdt/data...themes/query");
+
 const spreadsheetKey = "1CVRrR45QIlSzVeO_9V1TUXSqI1U9Bt5_KYWlcH9K2jI";
 const getCells = promisify(GoogleSpreadsheets.cells);
 
@@ -10,11 +13,18 @@ const getCells = promisify(GoogleSpreadsheets.cells);
  * and the cdtn classification
  */
 
-const unRollTheme = theme =>
-  theme
-    .replace(/[0-9]+ -/, "")
-    .split("-")
-    .map(data => data.trim());
+/**
+ * Transform a dash separated string a breadcrumbs of themes
+ * input: 46 - Conflits au travail et contrôle de la réglementation - Sanctions disciplinaires
+ * output:  [{sous-theme1}, {sous-theme2},...]
+ *
+ * @param {string} themeFlat
+ * @returns {Object}
+ */
+const unRollTheme = themeFlat => {
+  const slug = extractSlug(themeFlat);
+  return getBreadcrumbs(slug);
+};
 
 const transformRow = row => {
   const [_, slug] = row["1"].value.match(/\/([\w-]+)\/?$/);
