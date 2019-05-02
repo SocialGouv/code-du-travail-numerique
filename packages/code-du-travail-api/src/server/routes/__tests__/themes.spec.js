@@ -8,18 +8,18 @@ app.use(router.routes());
 test("return themes root themes", async () => {
   const response = await request(app.callback()).get(`/api/v1/themes`);
   expect(response.status).toBe(200);
-  expect(response.body.hits).toMatchSnapshot();
+  expect(response.body).toMatchSnapshot();
 });
 
-test("return themes results for theme slug 42-licenciement-pour-inaptitude", async () => {
+test("return theme data for slug 42-licenciement-pour-inaptitude", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/themes/42-licenciement-pour-inaptitude`
   );
   expect(response.status).toBe(200);
-  expect(response.body.hits).toMatchSnapshot();
+  expect(response.body).toMatchSnapshot();
 });
 
-test("return idcc results for num 41-licenciement-pour-motif-personnel", async () => {
+test("return theme data for slug 41-licenciement-pour-motif-personnel", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/themes/41-licenciement-pour-motif-personnel`
   );

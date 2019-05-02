@@ -1,12 +1,13 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
-const themes = require("@cdt/data...themes/themes.json");
+const {
+  getTheme,
+  getBreadcrumbs,
+  getChildren
+} = require("@cdt/data...themes/query");
 
 const router = new Router({ prefix: API_BASE_URL });
-const themesMap = themes.reduce(
-  (state, theme) => ({ ...state, [theme.slug]: theme }),
-  {}
-);
+
 /**
  * Return the root themes
  *
@@ -17,6 +18,7 @@ const themesMap = themes.reduce(
  */
 router.get("/themes", ctx => {
   ctx.body = {
+    label: "Thèmes",
     children: getChildren(null)
   };
 });
@@ -28,21 +30,18 @@ router.get("/themes", ctx => {
  *
  * @returns {Object} An object containing the matching theme .
  */
+
 router.get("/themes/:slug", ctx => {
   const { slug } = ctx.params;
-  if (!themesMap.hasOwnProperty(slug)) {
+  const theme = getTheme(slug);
+  if (!theme) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
-  const breadcrumbs = [];
-  let currentTheme = themesMap[slug];
-  while (currentTheme) {
-    breadcrumbs.unshift(currentTheme);
-    currentTheme = themesMap[currentTheme.parent];
-  }
+
   ctx.body = {
-    theme: themesMap[slug],
-    children: themes.filter(theme => theme.parent === slug),
-    breadcrumbs
+    ...theme,
+    children: getChildren(slug),
+    breadcrumbs: getBreadcrumbs(slug)
   };
 });
 

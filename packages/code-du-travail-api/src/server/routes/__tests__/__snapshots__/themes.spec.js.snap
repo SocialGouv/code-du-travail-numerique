@@ -1,80 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return idcc results for num 41-licenciement-pour-motif-personnel 1`] = `
+exports[`return theme data for slug 41-licenciement-pour-motif-personnel 1`] = `
 Object {
   "breadcrumbs": Array [
     Object {
       "id": 7,
+      "label": "Départ de l'entreprise",
       "parent": null,
       "slug": "7-depart-de-lentreprise",
-      "title": "Départ de l'entreprise",
     },
     Object {
       "id": 41,
+      "label": "Licenciement pour motif personnel",
       "parent": "7-depart-de-lentreprise",
       "slug": "41-licenciement-pour-motif-personnel",
-      "title": "Licenciement pour motif personnel",
     },
   ],
   "children": Array [
     Object {
       "id": 173,
+      "label": "Motifs du licenciement",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "173-motifs-du-licenciement",
-      "title": "Motifs du licenciement",
     },
     Object {
       "id": 174,
+      "label": "Procédure de licenciement",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "174-procedure-de-licenciement",
-      "title": "Procédure de licenciement",
     },
     Object {
       "id": 175,
+      "label": "Le conseiller du salarié",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "175-le-conseiller-du-salarie",
-      "title": "Le conseiller du salarié",
     },
     Object {
       "id": 176,
+      "label": "Préavis de licenciement",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "176-preavis-de-licenciement",
-      "title": "Préavis de licenciement",
     },
     Object {
       "id": 177,
+      "label": "Licenciement nul, injustifié ou irrégulier",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "177-licenciement-nul,-injustifie-ou-irregulier",
-      "title": "Licenciement nul, injustifié ou irrégulier",
     },
     Object {
       "id": 178,
+      "label": "Indemnité de licenciement",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "178-indemnite-de-licenciement",
-      "title": "Indemnité de licenciement",
     },
     Object {
       "id": 179,
+      "label": "Indemnité compensatrice de préavis et de congés payés",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "179-indemnite-compensatrice-de-preavis-et-de-conges-payes",
-      "title": "Indemnité compensatrice de préavis et de congés payés",
     },
     Object {
       "id": 180,
+      "label": "Salariés protégés",
       "parent": "41-licenciement-pour-motif-personnel",
       "slug": "180-salaries-proteges",
-      "title": "Salariés protégés",
     },
   ],
-  "theme": Object {
-    "id": 41,
-    "parent": "7-depart-de-lentreprise",
-    "slug": "41-licenciement-pour-motif-personnel",
-    "title": "Licenciement pour motif personnel",
-  },
+  "id": 41,
+  "label": "Licenciement pour motif personnel",
+  "parent": "7-depart-de-lentreprise",
+  "slug": "41-licenciement-pour-motif-personnel",
 }
 `;
 
-exports[`return themes results for theme slug 42-licenciement-pour-inaptitude 1`] = `undefined`;
+exports[`return theme data for slug 42-licenciement-pour-inaptitude 1`] = `
+Object {
+  "breadcrumbs": Array [
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+    Object {
+      "id": 42,
+      "label": "Licenciement pour inaptitude",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "42-licenciement-pour-inaptitude",
+    },
+  ],
+  "children": Array [],
+  "id": 42,
+  "label": "Licenciement pour inaptitude",
+  "parent": "7-depart-de-lentreprise",
+  "slug": "42-licenciement-pour-inaptitude",
+}
+`;
 
-exports[`return themes root themes 1`] = `undefined`;
+exports[`return themes root themes 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "id": 1,
+      "label": "Recrutement et contrat de travail",
+      "parent": null,
+      "slug": "1-recrutement-et-contrat-de-travail",
+    },
+    Object {
+      "id": 2,
+      "label": "Salaire et Rémunération",
+      "parent": null,
+      "slug": "2-salaire-et-remuneration",
+    },
+    Object {
+      "id": 3,
+      "label": "Temps de travail et congés",
+      "parent": null,
+      "slug": "3-temps-de-travail-et-conges",
+    },
+    Object {
+      "id": 4,
+      "label": "Emploi et formation",
+      "parent": null,
+      "slug": "4-emploi-et-formation",
+    },
+    Object {
+      "id": 5,
+      "label": "Santé, sécurité et conditions de travail",
+      "parent": null,
+      "slug": "5-sante,-securite-et-conditions-de-travail",
+    },
+    Object {
+      "id": 6,
+      "label": "Représentation du personnel et négociation collective",
+      "parent": null,
+      "slug": "6-representation-du-personnel-et-negociation-collective",
+    },
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+    Object {
+      "id": 8,
+      "label": "Conflits au travail et contrôle de la réglementation",
+      "parent": null,
+      "slug": "8-conflits-au-travail-et-controle-de-la-reglementation",
+    },
+  ],
+  "label": "Thèmes",
+}
+`;
