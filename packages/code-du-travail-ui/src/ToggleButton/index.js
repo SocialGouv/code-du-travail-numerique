@@ -4,15 +4,15 @@ import styled, { css } from "styled-components";
 import { animations, box, colors, fonts, spacing } from "../theme";
 import { darken, lighten, transparentize } from "polished";
 
-// We don't want the kind prop to be passed down to the button
+// We don't want the variant prop to be passed down to the button
 // eslint-disable-next-line
-const Button = ({ pressed, kind, onClick, ...props }) => {
+const Button = ({ pressed, variant, onClick, ...props }) => {
   return <button aria-pressed={pressed} {...props} onClick={onClick} />;
 };
 
 Button.propTypes = {
-  kind: PropTypes.oneOf([
-    "",
+  variant: PropTypes.oneOf([
+    "default",
     "primary",
     "secondary",
     "info",
@@ -26,7 +26,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  kind: "",
+  variant: "default",
   onClick: () => {},
   pressed: false
 };
@@ -49,9 +49,9 @@ const StyledButton = styled(Button)`
     let backgroundColor = colors.blueLight;
     let color = colors.primaryText;
 
-    if (props.kind) {
-      backgroundColor = colors[`${props.kind}Background`];
-      color = colors[`${props.kind}Text`];
+    if (props.variant && props.variant !== "default") {
+      backgroundColor = colors[`${props.variant}Background`];
+      color = colors[`${props.variant}Text`];
     }
 
     return css`

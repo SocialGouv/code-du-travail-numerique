@@ -268,6 +268,70 @@ exports[`<Answer /> should render 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c19:not([disabled]):hover,
+.c19:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c19:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c19[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c19[aria-pressed="true"]:not([disabled]):hover,
+.c19[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c19[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c19[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c19 + .c18 {
+  margin-left: 1rem;
+}
+
+.c20 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -275,13 +339,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c19:not([disabled]):active {
+.c20:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -289,7 +353,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c19[aria-pressed="true"] {
+.c20[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -298,21 +362,21 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):hover,
-.c19[aria-pressed="true"]:not([disabled]):focus {
+.c20[aria-pressed="true"]:not([disabled]):hover,
+.c20[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):active {
+.c20[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c19[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c19 + .c18 {
+.c20 + .c18 {
   margin-left: 1rem;
 }
 
@@ -674,7 +738,7 @@ exports[`<Answer /> should render 1`] = `
             </button>
             <button
               aria-pressed="false"
-              class="c18 c19"
+              class="c18 c20"
             >
               Oui
             </button>
@@ -982,6 +1046,70 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c23:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c23[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c23[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c23 + .c22 {
+  margin-left: 1rem;
+}
+
+.c24 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -989,13 +1117,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c23:not([disabled]):hover,
-.c23:not([disabled]):focus {
+.c24:not([disabled]):hover,
+.c24:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c23:not([disabled]):active {
+.c24:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1003,7 +1131,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c23[aria-pressed="true"] {
+.c24[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1012,21 +1140,21 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):hover,
-.c23[aria-pressed="true"]:not([disabled]):focus {
+.c24[aria-pressed="true"]:not([disabled]):hover,
+.c24[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):active {
+.c24[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c23[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c23 + .c22 {
+.c24 + .c22 {
   margin-left: 1rem;
 }
 
@@ -1416,7 +1544,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             </button>
             <button
               aria-pressed="false"
-              class="c22 c23"
+              class="c22 c24"
             >
               Oui
             </button>

@@ -9,6 +9,7 @@ describe("<Button />", () => {
   });
 
   test.each([
+    ["default"],
     ["primary"],
     ["secondary"],
     ["info"],
@@ -17,7 +18,7 @@ describe("<Button />", () => {
     ["danger"]
   ])("it renders a Button %s", label => {
     const { container } = render(
-      <ToggleButton kind={label}>this is a Button {label} </ToggleButton>
+      <ToggleButton variant={label}>this is a Button {label} </ToggleButton>
     );
     expect(container).toMatchSnapshot();
   });

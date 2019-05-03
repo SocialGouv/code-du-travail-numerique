@@ -31,6 +31,70 @@ exports[`<AddressResults/> should render no results 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c4:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c4[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c4[aria-pressed="true"]:not([disabled]):hover,
+.c4[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c4[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c4 + .c3 {
+  margin-left: 1rem;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -38,13 +102,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c4:not([disabled]):active {
+.c5:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -52,7 +116,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c4[aria-pressed="true"] {
+.c5[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -61,21 +125,21 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
+.c5[aria-pressed="true"]:not([disabled]):hover,
+.c5[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):active {
+.c5[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c4 + .c3 {
+.c5 + .c3 {
   margin-left: 1rem;
 }
 
@@ -134,7 +198,7 @@ exports[`<AddressResults/> should render no results 1`] = `
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c3 c4"
+                    class="c3 c5"
                   >
                     Oui
                   </button>
@@ -180,6 +244,70 @@ exports[`<AddressResults/> should render results 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c8:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c8[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c8[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c8 + .c7 {
+  margin-left: 1rem;
+}
+
+.c9 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
@@ -187,13 +315,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c8:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -201,7 +329,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c8[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -210,21 +338,21 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c8 + .c7 {
+.c9 + .c7 {
   margin-left: 1rem;
 }
 
@@ -356,7 +484,7 @@ exports[`<AddressResults/> should render results 1`] = `
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c7 c8"
+                    class="c7 c9"
                   >
                     Oui
                   </button>
