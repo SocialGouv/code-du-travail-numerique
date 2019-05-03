@@ -61,7 +61,10 @@ function Feedback({
         <Title>Avez-vous trouvé la réponse à votre question ?</Title>
         {isSatisfied === null && (
           <p>
-            <StyledToggle secondary onClick={() => onSetSatisfaction(false)}>
+            <StyledToggle
+              variant="secondary"
+              onClick={() => onSetSatisfaction(false)}
+            >
               Non
             </StyledToggle>
             <StyledToggle onClick={() => onSetSatisfaction(true)}>

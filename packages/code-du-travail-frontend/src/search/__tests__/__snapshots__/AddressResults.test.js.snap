@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AddressResults/> should render no results 1`] = `
-.c5 {
+.c0 {
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
+}
+
+.c1 {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c4 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -21,15 +35,16 @@ exports[`<AddressResults/> should render no results 1`] = `
   background: #eaeaea;
   border-color: #eaeaea;
   border-bottom-color: #d1d1d1;
+  min-width: 7rem;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):focus {
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c5:not([disabled]):active {
+.c4:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -37,7 +52,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c5[aria-pressed="true"] {
+.c4[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -46,21 +61,25 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):hover,
-.c5[aria-pressed="true"]:not([disabled]):focus {
+.c4[aria-pressed="true"]:not([disabled]):hover,
+.c4[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):active {
+.c4[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c6 {
+.c4 + .c3 {
+  margin-left: 1rem;
+}
+
+.c5 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -80,15 +99,16 @@ exports[`<AddressResults/> should render no results 1`] = `
   background: #006be6;
   border-color: #006be6;
   border-bottom-color: #0053b3;
+  min-width: 7rem;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c5:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -96,7 +116,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c5[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -105,39 +125,21 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c5[aria-pressed="true"]:not([disabled]):hover,
+.c5[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c5[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c6[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c0 {
-  margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
-}
-
-.c1 {
-  position: relative;
-  padding: 0 2rem;
-}
-
-.c2 {
-  margin-bottom: 1rem;
-}
-
-.c4 {
-  min-width: 7rem;
-}
-
-.c4 + .c3 {
+.c5 + .c3 {
   margin-left: 1rem;
 }
 
@@ -190,13 +192,13 @@ exports[`<AddressResults/> should render no results 1`] = `
                 <p>
                   <button
                     aria-pressed="false"
-                    class="c3 c4 c5"
+                    class="c3 c4"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c3 c4 c6"
+                    class="c3 c5"
                   >
                     Oui
                   </button>
@@ -212,7 +214,21 @@ exports[`<AddressResults/> should render no results 1`] = `
 `;
 
 exports[`<AddressResults/> should render results 1`] = `
-.c9 {
+.c4 {
+  margin: 0 auto;
+  max-width: calc(3 * 1200px / 4);
+}
+
+.c5 {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.c6 {
+  margin-bottom: 1rem;
+}
+
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -232,15 +248,16 @@ exports[`<AddressResults/> should render results 1`] = `
   background: #eaeaea;
   border-color: #eaeaea;
   border-bottom-color: #d1d1d1;
+  min-width: 7rem;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c9:not([disabled]):active {
+.c8:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -248,7 +265,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c9[aria-pressed="true"] {
+.c8[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -257,21 +274,25 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):active {
+.c8[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c9[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c10 {
+.c8 + .c7 {
+  margin-left: 1rem;
+}
+
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -291,15 +312,16 @@ exports[`<AddressResults/> should render results 1`] = `
   background: #006be6;
   border-color: #006be6;
   border-bottom-color: #0053b3;
+  min-width: 7rem;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c10:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -307,7 +329,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c10[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -316,39 +338,21 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):hover,
-.c10[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c4 {
-  margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
-}
-
-.c5 {
-  position: relative;
-  padding: 0 2rem;
-}
-
-.c6 {
-  margin-bottom: 1rem;
-}
-
-.c8 {
-  min-width: 7rem;
-}
-
-.c8 + .c7 {
+.c9 + .c7 {
   margin-left: 1rem;
 }
 
@@ -474,13 +478,13 @@ exports[`<AddressResults/> should render results 1`] = `
                 <p>
                   <button
                     aria-pressed="false"
-                    class="c7 c8 c9"
+                    class="c7 c8"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c7 c8 c10"
+                    class="c7 c9"
                   >
                     Oui
                   </button>

@@ -20,7 +20,7 @@ const Footer = () => (
           vous conseiller et vous orienter dans vos démarches.
         </p>
         <ServiceRenseignementModal>
-          <ToggleButton primary>
+          <ToggleButton variant="primary">
             Contacter les services de renseignement
           </ToggleButton>
         </ServiceRenseignementModal>

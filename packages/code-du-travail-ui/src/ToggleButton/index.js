@@ -4,24 +4,34 @@ import styled, { css } from "styled-components";
 import { animations, box, colors, fonts, spacing } from "../theme";
 import { darken, lighten, transparentize } from "polished";
 
-// OK it is a simple button in fact, on which you can provid a pressed prop...
-const ToggleButton = ({ pressed, onClick, ...props }) => {
-  return <Button aria-pressed={pressed} {...props} onClick={onClick} />;
+// We don't want the variant prop to be passed down to the button
+// eslint-disable-next-line
+const Button = ({ pressed, variant, onClick, ...props }) => {
+  return <button aria-pressed={pressed} {...props} onClick={onClick} />;
 };
 
-ToggleButton.propTypes = {
-  pressed: PropTypes.bool,
-  onClick: PropTypes.func
+Button.propTypes = {
+  variant: PropTypes.oneOf([
+    "default",
+    "primary",
+    "secondary",
+    "info",
+    "warning",
+    "danger",
+    "success",
+    "icon"
+  ]),
+  onClick: PropTypes.func,
+  pressed: PropTypes.bool
 };
 
-ToggleButton.defaultProps = {
-  pressed: false,
-  onClick: () => {}
+Button.defaultProps = {
+  variant: "default",
+  onClick: () => {},
+  pressed: false
 };
 
-export default ToggleButton;
-
-const Button = styled.button`
+const StyledButton = styled(Button)`
   padding: ${spacing.small} ${spacing.base};
   appearance: none;
   text-align: center;
@@ -39,22 +49,9 @@ const Button = styled.button`
     let backgroundColor = colors.blueLight;
     let color = colors.primaryText;
 
-    const expectedButtonTypes = [
-      "primary",
-      "secondary",
-      "info",
-      "warning",
-      "danger",
-      "success"
-    ];
-
-    let buttonType =
-      Object.keys(props).find(prop => expectedButtonTypes.includes(prop)) ||
-      false;
-
-    if (buttonType) {
-      backgroundColor = colors[`${buttonType}Background`];
-      color = colors[`${buttonType}Text`];
+    if (props.variant && props.variant !== "default") {
+      backgroundColor = colors[`${props.variant}Background`];
+      color = colors[`${props.variant}Text`];
     }
 
     return css`
@@ -101,3 +98,5 @@ const Button = styled.button`
     `;
   }}
 `;
+
+export default StyledButton;
