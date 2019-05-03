@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HomeLayout /> should render 1`] = `
-.c10 {
+.c11 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c5 {
+.c6 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -29,13 +29,13 @@ exports[`<HomeLayout /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c5:not([disabled]):active {
+.c6:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -43,7 +43,7 @@ exports[`<HomeLayout /> should render 1`] = `
   outline: none;
 }
 
-.c5[aria-pressed="true"] {
+.c6[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -52,16 +52,16 @@ exports[`<HomeLayout /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):hover,
-.c5[aria-pressed="true"]:not([disabled]):focus {
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):active {
+.c6[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -112,21 +112,15 @@ exports[`<HomeLayout /> should render 1`] = `
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 1.25rem 0;
+  text-align: center;
 }
 
-.c6 {
+.c5 {
+  text-align: left;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,25 +132,25 @@ exports[`<HomeLayout /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c8 + .c7 {
+.c9 + .c8 {
   padding-left: 1rem;
 }
 
-.c9 {
+.c10 {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.c11 {
+.c12 {
   margin: 0.5rem 0;
 }
 
-.c11 a {
+.c12 a {
   color: #434956;
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -164,7 +158,7 @@ exports[`<HomeLayout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 + .c7 {
+  .c9 + .c8 {
     padding-left: 0;
   }
 }
@@ -223,32 +217,34 @@ exports[`<HomeLayout /> should render 1`] = `
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
-        <p>
+        <p
+          class="c5"
+        >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </p>
         <button
           aria-pressed="false"
-          class="c5"
+          class="c6"
         >
           Contacter les services de renseignement
         </button>
       </div>
       <div
-        class="c6"
+        class="c7"
       >
         <div
-          class="c7 c8"
+          class="c8 c9"
         >
           <h3
-            class="c9"
+            class="c10"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c10"
+            class="c11"
           >
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 href="/a-propos"
@@ -257,7 +253,7 @@ exports[`<HomeLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -268,18 +264,18 @@ exports[`<HomeLayout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c7 c8"
+          class="c8 c9"
         >
           <h3
-            class="c9"
+            class="c10"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c10"
+            class="c11"
           >
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 class="external-link__after"
@@ -291,7 +287,7 @@ exports[`<HomeLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 class="external-link__after"
@@ -305,18 +301,18 @@ exports[`<HomeLayout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c7 c8"
+          class="c8 c9"
         >
           <h3
-            class="c9"
+            class="c10"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c10"
+            class="c11"
           >
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 class="external-link__after"
@@ -328,7 +324,7 @@ exports[`<HomeLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 class="external-link__after"
@@ -340,7 +336,7 @@ exports[`<HomeLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c11"
+              class="c12"
             >
               <a
                 class="external-link__after"
