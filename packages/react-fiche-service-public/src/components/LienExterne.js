@@ -3,7 +3,26 @@ import PropTypes from "prop-types";
 
 import { getText } from "../utils";
 
-class LienExterne extends React.PureComponent {
+export class LienExterneCommente extends React.PureComponent {
+  static propTypes = {
+    data: PropTypes.object.isRequired
+  };
+  render() {
+    const { data } = this.props;
+    const commentaire = data.$.find(child => child.name === "Commentaire");
+    const lienExterne = data.$.find(child => child.name === "LienExterne");
+    return (
+      <>
+        {getText(commentaire)}
+        <p>
+          <LienExterne data={lienExterne} />
+        </p>
+      </>
+    );
+  }
+}
+
+export class LienExterne extends React.PureComponent {
   static propTypes = {
     data: PropTypes.object.isRequired
   };
@@ -12,11 +31,14 @@ class LienExterne extends React.PureComponent {
     const url = data._.URL;
     const label = getText(data);
     return (
-      <a href={url} rel="noopener noreferrer" target="_blank">
+      <a
+        href={url}
+        className="external-link__after"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         {label}
       </a>
     );
   }
 }
-
-export default LienExterne;

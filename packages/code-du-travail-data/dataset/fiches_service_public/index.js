@@ -15,7 +15,8 @@ const getFiches = fichePath => fs
 
 const fiches = [].concat(
   getFiches("data/vosdroits-particuliers"),
-  getFiches("data/vosdroits-professionnels")
+  getFiches("data/vosdroits-professionnels"),
+  getFiches("data/vosdroits-associations")
 );
 
 const parsedFiches = fiches.map(fiche => xmlStringToJsObject(fiche, {

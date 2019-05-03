@@ -8,7 +8,7 @@ import { ElementBuilder } from "./ElementBuilder";
 const { spacing } = theme;
 
 const isItemOfAccordion = element =>
-  element.name === "Chapitre" &&
+  (element.name === "Chapitre" || element.name === "Cas") &&
   element.$.find(child => child.name === "Titre");
 
 class AccordionWrapper extends React.PureComponent {
