@@ -86,7 +86,7 @@ def populate_fiches_ministere_travail(json_file=JSON_FICHES):
                     'description': item.get("description"),
                     'html': f"{item['intro']} {section['html']}",
                     'date': item.get("date"),
-                    'tags': item['themeCdtn'],
+                    'breadcrumbs': item['themeCdtn'],
                     'url': section['url'],
                     'anchor': anchor
                 })

@@ -33,7 +33,10 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
-        tags={["tag1", "tag2"]}
+        breadcrumbs={[
+          { label: "tag1", slug: "tag-1" },
+          { label: "tag2", slug: "tag-2" }
+        ]}
       >
         <div>Contenu supplémentaire</div>
       </Answer>

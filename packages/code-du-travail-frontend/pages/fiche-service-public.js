@@ -63,7 +63,7 @@ class Fiche extends React.Component {
             icon={ReponseIcon}
             sourceType="Fiche service public"
             referencesJuridiques={data._source.references_juridiques}
-            tags={data._source.tags}
+            breadcrumbs={data._source.breadcrumbs}
           >
             {// Without the check, the prop children of the Answer will evaluate to true
             // even if in the end, <FicheServicePublic /> returns null

@@ -24,7 +24,8 @@ function getSearchBody({ source, slug }) {
       "slug", // outils
       "tags", // code-du-travail
       "title",
-      "url"
+      "url",
+      "breadcrumbs"
     ]
   };
 }

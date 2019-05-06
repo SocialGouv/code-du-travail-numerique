@@ -1390,7 +1390,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         <li
           class="c7"
         >
-          tag1
+          <a
+            href="/themes/tag-1"
+            title="Voir le theme tag1"
+          >
+            tag1
+          </a>
         </li>
         <li
           aria-hidden="true"
@@ -1401,7 +1406,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         <li
           class="c7"
         >
-          tag2
+          <a
+            href="/themes/tag-2"
+            title="Voir le theme tag2"
+          >
+            tag2
+          </a>
         </li>
       </ul>
     </div>

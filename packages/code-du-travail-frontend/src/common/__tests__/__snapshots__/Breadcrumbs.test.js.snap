@@ -42,7 +42,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         <li
           class="c2"
         >
-          item 1
+          <span>
+             
+            item 1
+             
+          </span>
         </li>
         <li
           aria-hidden="true"
@@ -53,7 +57,11 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
         <li
           class="c2"
         >
-          item 2
+          <span>
+             
+            item 2
+             
+          </span>
         </li>
       </ul>
     </div>
