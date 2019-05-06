@@ -63,7 +63,6 @@ function Answer({
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
         <Article title={title} icon={icon} date={date} sourceType={sourceType}>
-          <Disclaimer />
           {intro}
           {html && <Html>{html}</Html>}
           {children}
@@ -81,6 +80,7 @@ function Answer({
         url={router.asPath}
         title={title}
       />
+      <Disclaimer />
     </React.Fragment>
   );
 }

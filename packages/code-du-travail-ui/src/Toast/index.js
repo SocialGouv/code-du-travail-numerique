@@ -5,7 +5,7 @@ import IconWarning from "react-feather/dist/icons/alert-triangle";
 import IconInfo from "react-feather/dist/icons/info";
 import IconSuccess from "react-feather/dist/icons/check";
 import IconClose from "react-feather/dist/icons/x";
-import ToggleButton from "../ToggleButton";
+import Button from "../Button";
 import { box, colors, fonts, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 
@@ -37,9 +37,9 @@ const Toast = ({ children, className, timeout, type, onRemove }) => {
       <Content role="alert">{children}</Content>
       {onRemove ? (
         <ButtonWrapper>
-          <ToggleButton variant="icon" onClick={onRemove}>
+          <Button variant="icon" onClick={onRemove}>
             <IconClose />
-          </ToggleButton>
+          </Button>
         </ButtonWrapper>
       ) : null}
     </div>
