@@ -1,17 +1,17 @@
 import React from "react";
 import Head from "next/head";
 import getConfig from "next/config";
+import { withRouter } from "next/router";
 import { Container, Alert } from "@cdt/ui";
 import fetch from "isomorphic-unfetch";
 
 import { Link } from "../routes";
 import Search from "../src/search/Search";
-import { SearchQuery } from "../src/search/SearchQuery";
 
 import Categories from "../src/home/Categories";
-import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
+import SearchResults from "../src/search/SearchResults";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -48,7 +48,9 @@ const getBreadcrumbs = (items = []) => {
 // Theme page
 class Theme extends React.Component {
   static async getInitialProps({ query: { slug } }) {
-    const response = await fetch(`${API_URL}/themes/${slug ? slug : ""}`);
+    const response = await fetch(
+      `${API_URL}/themes${slug ? `/${slug}/items` : ""}`
+    );
     if (!response.ok) {
       return {
         data: { theme: null },
@@ -64,8 +66,10 @@ class Theme extends React.Component {
 
   render() {
     const {
+      router,
       data: { theme }
     } = this.props;
+    const { source = "", q = "" } = router.query;
     const breadcrumbs = getBreadcrumbs(theme.breadcrumbs);
     const isRootTheme = theme && !theme.slug;
     if (!theme) {
@@ -95,11 +99,13 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <div className="section">
             <Container>
-              <SearchQuery
-                query={theme.label}
-                excludeSources="themes"
-                fetch={searchResults}
-              />
+              <div className="wrapper-narrow">
+                <SearchResults
+                  query={q}
+                  source={source}
+                  results={{ items: theme.documents, facets: [] }}
+                />
+              </div>
             </Container>
           </div>
         )}
@@ -108,7 +114,7 @@ class Theme extends React.Component {
   }
 }
 
-export default Theme;
+export default withRouter(Theme);
 
 const NotFound = () => (
   <PageLayout>
