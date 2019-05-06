@@ -20,5 +20,6 @@ export { default as LargeLink } from "./LargeLink";
 export { default as Section } from "./Section";
 export { default as SrOnly } from "./SrOnly";
 export { default as Tag } from "./Tag";
+export { default as Toast } from "./Toast";
 export { default as ToggleButton } from "./ToggleButton";
 export { default as VerticalArrow } from "./VerticalArrow";
