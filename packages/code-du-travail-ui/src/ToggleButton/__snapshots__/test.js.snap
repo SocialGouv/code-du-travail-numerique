@@ -144,6 +144,50 @@ exports[`<Button /> it renders a Button default 1`] = `
 </div>
 `;
 
+exports[`<Button /> it renders a Button icon 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c0:hover {
+  color: #8c94a6;
+}
+
+.c0:active {
+  position: relative;
+  top: 1px;
+}
+
+<div>
+  <button
+    aria-pressed="false"
+    class="c0"
+  >
+    this is a Button 
+    icon
+     
+  </button>
+</div>
+`;
+
 exports[`<Button /> it renders a Button info 1`] = `
 .c0 {
   padding: 0.625rem 1rem;
