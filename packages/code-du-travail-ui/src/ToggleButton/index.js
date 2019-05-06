@@ -19,7 +19,8 @@ Button.propTypes = {
     "warning",
     "danger",
     "success",
-    "icon"
+    "icon",
+    "link"
   ]),
   onClick: PropTypes.func,
   pressed: PropTypes.bool
@@ -48,7 +49,20 @@ const StyledButton = styled(Button)`
   ${props => {
     let backgroundColor = colors.blueLight;
     let color = colors.primaryText;
-
+    if (props.variant === "link") {
+      return css`
+        padding: 0;
+        color: ${colors.blue};
+        font-weight: normal;
+        border: none;
+        text-decoration: underline;
+        &:focus,
+        &:hover,
+        &:active {
+          text-decoration: none;
+        }
+      `;
+    }
     if (props.variant === "icon") {
       return css`
         padding: ${spacing.base};
