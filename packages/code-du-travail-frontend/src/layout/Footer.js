@@ -13,12 +13,12 @@ const Footer = () => (
     <div className="container">
       <Support>
         <h2>Besoin d’un accompagnement personnalisé ?</h2>
-        <p>
+        <SupportText>
           Les services de renseignement en droit du travail peuvent vous donner
           des informations juridiques générales relatives au Code du travail,
           aux conventions collectives, à la jurisprudence. Ils peuvent également
           vous conseiller et vous orienter dans vos démarches.
-        </p>
+        </SupportText>
         <ServiceRenseignementModal>
           <ToggleButton variant="primary">
             Contacter les services de renseignement
@@ -117,10 +117,12 @@ export default Footer;
 const { breakpoints, colors, fonts, spacing } = theme;
 
 const Support = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: ${spacing.interComponent} 0;
+  text-align: center;
+`;
+
+const SupportText = styled.p`
+  text-align: left;
 `;
 
 const Links = styled.div`

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer /> should render 1`] = `
-.c6 {
+.c7 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c1 {
+.c2 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -29,13 +29,13 @@ exports[`<Footer /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c1:not([disabled]):hover,
-.c1:not([disabled]):focus {
+.c2:not([disabled]):hover,
+.c2:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c1:not([disabled]):active {
+.c2:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -43,7 +43,7 @@ exports[`<Footer /> should render 1`] = `
   outline: none;
 }
 
-.c1[aria-pressed="true"] {
+.c2[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -52,36 +52,30 @@ exports[`<Footer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c1[aria-pressed="true"]:not([disabled]):hover,
-.c1[aria-pressed="true"]:not([disabled]):focus {
+.c2[aria-pressed="true"]:not([disabled]):hover,
+.c2[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c1[aria-pressed="true"]:not([disabled]):active {
+.c2[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c1[disabled] {
+.c2[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   padding: 1.25rem 0;
+  text-align: center;
 }
 
-.c2 {
+.c1 {
+  text-align: left;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,25 +87,25 @@ exports[`<Footer /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c4 + .c3 {
+.c5 + .c4 {
   padding-left: 1rem;
 }
 
-.c5 {
+.c6 {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.c7 {
+.c8 {
   margin: 0.5rem 0;
 }
 
-.c7 a {
+.c8 a {
   color: #434956;
 }
 
 @media (max-width:600px) {
-  .c2 {
+  .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -119,7 +113,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 + .c3 {
+  .c5 + .c4 {
     padding-left: 0;
   }
 }
@@ -138,32 +132,34 @@ exports[`<Footer /> should render 1`] = `
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
-        <p>
+        <p
+          class="c1"
+        >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </p>
         <button
           aria-pressed="false"
-          class="c1"
+          class="c2"
         >
           Contacter les services de renseignement
         </button>
       </div>
       <div
-        class="c2"
+        class="c3"
       >
         <div
-          class="c3 c4"
+          class="c4 c5"
         >
           <h3
-            class="c5"
+            class="c6"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c6"
+            class="c7"
           >
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 href="/a-propos"
@@ -172,7 +168,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -183,18 +179,18 @@ exports[`<Footer /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c3 c4"
+          class="c4 c5"
         >
           <h3
-            class="c5"
+            class="c6"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c6"
+            class="c7"
           >
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 class="external-link__after"
@@ -206,7 +202,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 class="external-link__after"
@@ -220,18 +216,18 @@ exports[`<Footer /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c3 c4"
+          class="c4 c5"
         >
           <h3
-            class="c5"
+            class="c6"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c6"
+            class="c7"
           >
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 class="external-link__after"
@@ -243,7 +239,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 class="external-link__after"
@@ -255,7 +251,7 @@ exports[`<Footer /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c7"
+              class="c8"
             >
               <a
                 class="external-link__after"

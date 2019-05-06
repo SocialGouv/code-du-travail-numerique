@@ -60,5 +60,11 @@
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
     ]
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1% in FR",
+    "ie 11",
+    "not dead"
+  ]
 }
