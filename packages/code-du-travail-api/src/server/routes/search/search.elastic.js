@@ -106,18 +106,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           }
         ]
       }
-    },
-    highlight: {
-      fragment_size: 40,
-      order: "score",
-      pre_tags: ["<mark>"],
-      post_tags: ["</mark>"],
-      fields: {
-        "title.french": {},
-        "text.french": {},
-        "title.article_id": {},
-        path: {}
-      }
     }
   };
 }

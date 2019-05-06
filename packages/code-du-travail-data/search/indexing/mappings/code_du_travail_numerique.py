@@ -69,6 +69,9 @@ code_du_travail_numerique_mapping = {
               'parent': {'type': 'keyword'},
             }
         },
+        'theme': {
+          'type': 'keyword'
+        },
         # currently available for idcc
         'idcc': {
             'type': 'keyword',
