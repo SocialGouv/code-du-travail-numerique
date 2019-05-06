@@ -2,20 +2,79 @@
 
 exports[`<AddressResults/> should render no results 1`] = `
 .c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c0:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c1 {
   margin: 0 auto;
   max-width: calc(3 * 1200px / 4);
 }
 
-.c1 {
+.c2 {
   position: relative;
   padding: 0 2rem;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
-.c4 {
+.c5 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -38,13 +97,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
+.c5:not([disabled]):hover,
+.c5:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c4:not([disabled]):active {
+.c5:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -52,7 +111,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c4[aria-pressed="true"] {
+.c5[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -61,25 +120,25 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
+.c5[aria-pressed="true"]:not([disabled]):hover,
+.c5[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):active {
+.c5[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c4 + .c3 {
+.c5 + .c4 {
   margin-left: 1rem;
 }
 
-.c5 {
+.c6 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -102,13 +161,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c5:not([disabled]):active {
+.c6:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -116,7 +175,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c5[aria-pressed="true"] {
+.c6[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -125,26 +184,26 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):hover,
-.c5[aria-pressed="true"]:not([disabled]):focus {
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):active {
+.c6[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c5 + .c3 {
+.c6 + .c4 {
   margin-left: 1rem;
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c2 {
     padding: 0;
   }
 }
@@ -165,13 +224,12 @@ exports[`<AddressResults/> should render no results 1`] = `
         >
           Nous n’avons pas trouvé de résultat pour votre recherche.
         </div>
-        <div
-          class="btn   "
-          role="button"
-          tabindex="0"
+        <button
+          aria-pressed="false"
+          class="c0"
         >
           Posez votre question
-        </div>
+        </button>
         <section
           class="section"
         >
@@ -179,26 +237,26 @@ exports[`<AddressResults/> should render no results 1`] = `
             class="container"
           >
             <div
-              class="wrapper wrapper-dark c0"
+              class="wrapper wrapper-dark c1"
             >
               <div
-                class="c1"
+                class="c2"
               >
                 <h3
-                  class="c2"
+                  class="c3"
                 >
                   Avez-vous trouvé la réponse à votre question ?
                 </h3>
                 <p>
                   <button
                     aria-pressed="false"
-                    class="c3 c4"
+                    class="c4 c5"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c3 c5"
+                    class="c4 c6"
                   >
                     Oui
                   </button>
@@ -215,20 +273,79 @@ exports[`<AddressResults/> should render no results 1`] = `
 
 exports[`<AddressResults/> should render results 1`] = `
 .c4 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c4:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c4[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c4[aria-pressed="true"]:not([disabled]):hover,
+.c4[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c4[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c5 {
   margin: 0 auto;
   max-width: calc(3 * 1200px / 4);
 }
 
-.c5 {
+.c6 {
   position: relative;
   padding: 0 2rem;
 }
 
-.c6 {
+.c7 {
   margin-bottom: 1rem;
 }
 
-.c8 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -251,13 +368,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c8:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -265,7 +382,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c8[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -274,25 +391,25 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c8 + .c7 {
+.c9 + .c8 {
   margin-left: 1rem;
 }
 
-.c9 {
+.c10 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -315,13 +432,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c9:not([disabled]):active {
+.c10:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -329,7 +446,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c9[aria-pressed="true"] {
+.c10[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -338,21 +455,21 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
+.c10[aria-pressed="true"]:not([disabled]):hover,
+.c10[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):active {
+.c10[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c9[disabled] {
+.c10[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c9 + .c7 {
+.c10 + .c8 {
   margin-left: 1rem;
 }
 
@@ -397,7 +514,7 @@ exports[`<AddressResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     padding: 0;
   }
 }
@@ -451,13 +568,12 @@ exports[`<AddressResults/> should render results 1`] = `
             </a>
           </li>
         </ul>
-        <div
-          class="btn   "
-          role="button"
-          tabindex="0"
+        <button
+          aria-pressed="false"
+          class="c4"
         >
           Posez votre question
-        </div>
+        </button>
         <section
           class="section"
         >
@@ -465,26 +581,26 @@ exports[`<AddressResults/> should render results 1`] = `
             class="container"
           >
             <div
-              class="wrapper wrapper-dark c4"
+              class="wrapper wrapper-dark c5"
             >
               <div
-                class="c5"
+                class="c6"
               >
                 <h3
-                  class="c6"
+                  class="c7"
                 >
                   Avez-vous trouvé la réponse à votre question ?
                 </h3>
                 <p>
                   <button
                     aria-pressed="false"
-                    class="c7 c8"
+                    class="c8 c9"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c7 c9"
+                    class="c8 c10"
                   >
                     Oui
                   </button>

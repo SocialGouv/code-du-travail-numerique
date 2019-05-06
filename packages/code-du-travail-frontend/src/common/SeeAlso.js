@@ -32,7 +32,7 @@ const SeeAlso = () => {
               <ul>
                 <li>
                   <ServiceRenseignementModal>
-                    <Button link className="link">
+                    <Button variant="link">
                       Trouver votre service de renseignement
                     </Button>
                   </ServiceRenseignementModal>

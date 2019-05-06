@@ -98,7 +98,7 @@ class CalculateurIndemnite extends React.Component {
                   onClick={() => {
                     this.resetState(restart);
                   }}
-                  primary
+                  variant="primary"
                 >
                   recommencer
                 </Button>

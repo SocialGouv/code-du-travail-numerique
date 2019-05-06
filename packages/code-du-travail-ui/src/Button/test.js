@@ -3,23 +3,33 @@ import { render } from "react-testing-library";
 import Button from ".";
 
 describe("<Button />", () => {
-  test("should render", () => {
-    const { container } = render(<Button>this is an alert </Button>);
+  it("renders", () => {
+    const { container } = render(<Button>A button</Button>);
     expect(container).toMatchSnapshot();
   });
+
   test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
+    ["default"],
     ["primary"],
     ["secondary"],
+    ["info"],
+    ["success"],
+    ["warning"],
+    ["danger"],
+    ["icon"],
     ["link"]
-  ])("it should render a Button %s", label => {
-    const props = { [label]: true };
+  ])("it renders a Button %s", label => {
     const { container } = render(
-      <Button {...props}>this is a Button {label} </Button>
+      <Button variant={label}>this is a Button {label} </Button>
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it("can be toggled programmatically", () => {
+    const { getByText, rerender } = render(<Button pressed>label</Button>);
+    const button = getByText("label");
+    expect(button.getAttribute("aria-pressed")).toBe("true");
+    rerender(<Button>label</Button>);
+    expect(button.getAttribute("aria-pressed")).toBe("false");
   });
 });

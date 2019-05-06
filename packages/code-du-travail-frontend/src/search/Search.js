@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
-import { Container, theme, ToggleButton } from "@cdt/ui";
+import { Container, theme, Button } from "@cdt/ui";
 
 import { Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
@@ -210,7 +210,7 @@ class Search extends React.Component {
                     className="search__input"
                   />
                 </div>
-                <ToggleButton type="submit">Rechercher</ToggleButton>
+                <Button type="submit">Rechercher</Button>
               </form>
             </StyledSearch>
           </Container>

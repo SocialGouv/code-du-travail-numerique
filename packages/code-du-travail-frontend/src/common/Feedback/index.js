@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, theme, Section, ToggleButton } from "@cdt/ui";
+import { Button, theme, Section } from "@cdt/ui";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
 
@@ -61,15 +61,15 @@ function Feedback({
         <Title>Avez-vous trouvé la réponse à votre question ?</Title>
         {isSatisfied === null && (
           <p>
-            <StyledToggle
+            <StyledButton
               variant="secondary"
               onClick={() => onSetSatisfaction(false)}
             >
               Non
-            </StyledToggle>
-            <StyledToggle onClick={() => onSetSatisfaction(true)}>
+            </StyledButton>
+            <StyledButton onClick={() => onSetSatisfaction(true)}>
               Oui
-            </StyledToggle>
+            </StyledButton>
           </p>
         )}
         {isSatisfied !== null && !isSent && (
@@ -89,9 +89,7 @@ function Feedback({
             Pour obtenir une réponse à votre question de droit du travail, nous
             vous invitons à joindre les{" "}
             <ServiceRenseignementModal>
-              <Button link className="link">
-                services de renseignement
-              </Button>
+              <Button variant="link">services de renseignement</Button>
             </ServiceRenseignementModal>
             .
           </p>
@@ -122,7 +120,7 @@ const Title = styled.h3`
   margin-bottom: ${spacing.base};
 `;
 
-const StyledToggle = styled(ToggleButton)`
+const StyledButton = styled(Button)`
   min-width: 7rem;
   & + & {
     margin-left: ${spacing.base};

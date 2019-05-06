@@ -40,7 +40,7 @@ class ConventionForm extends React.Component {
             ) : (
               <React.Fragment>
                 <ConventionPreview {...this.state.convention} />
-                <Button link onClick={this.onClearConvention}>
+                <Button variant="link" onClick={this.onClearConvention}>
                   <X size="16" />
                 </Button>
               </React.Fragment>
