@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import IconWarning from "react-feather/dist/icons/alert-triangle";
@@ -9,51 +9,42 @@ import ToggleButton from "../ToggleButton";
 import { box, colors, fonts, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 
-class Toast extends Component {
-  constructor(props) {
-    super(props);
-    this.timer = null;
-  }
+const Toast = ({ children, className, timeout, type, onRemove }) => {
+  let timer = null;
+  let Icon = IconInfo;
+  if (type === "warning") Icon = IconWarning;
+  if (type === "success") Icon = IconSuccess;
 
-  componentDidMount() {
-    const { timeout } = this.props;
-
-    if (timeout) {
-      this.timer = setTimeout(() => {
-        this.props.onRemove();
-      }, timeout);
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.timer) {
+  useEffect(() => {
+    if (timer) {
       clearTimeout(this.timer);
     }
-  }
+    if (timeout) {
+      timer = setTimeout(onRemove, timeout);
+    }
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
+  }, [timeout]);
 
-  render() {
-    const { onRemove, type, className } = this.props;
-    let Icon = IconInfo;
-    if (type === "warning") Icon = IconWarning;
-    if (type === "success") Icon = IconSuccess;
-
-    return (
-      <div className={className}>
-        <IconWrapper type={type}>
-          <Icon />
-        </IconWrapper>
-        <Content role="alert">{this.props.children}</Content>
-        {onRemove ? (
-          <ButtonWrapper>
-            <ToggleButton variant="icon" onClick={onRemove}>
-              <IconClose />
-            </ToggleButton>
-          </ButtonWrapper>
-        ) : null}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={className}>
+      <IconWrapper type={type}>
+        <Icon />
+      </IconWrapper>
+      <Content role="alert">{children}</Content>
+      {onRemove ? (
+        <ButtonWrapper>
+          <ToggleButton variant="icon" onClick={onRemove}>
+            <IconClose />
+          </ToggleButton>
+        </ButtonWrapper>
+      ) : null}
+    </div>
+  );
+};
 
 Toast.propTypes = {
   className: PropTypes.string,
@@ -66,7 +57,7 @@ Toast.propTypes = {
     "from-bottom",
     "from-left"
   ]),
-  timeout: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+  timeout: PropTypes.number,
   onRemove: PropTypes.func,
   children: PropTypes.node.isRequired
 };
@@ -75,7 +66,6 @@ Toast.defaultProps = {
   wide: false,
   type: "info",
   animate: null,
-  timeout: false,
   onRemove: null
 };
 
