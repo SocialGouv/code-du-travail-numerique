@@ -54,7 +54,7 @@ class Kali extends React.Component {
             collective sur LegiFrance :
           </p>
           <a target="_blank" rel="noopener noreferrer" href={url}>
-            <Button primary>
+            <Button variant="primary">
               <ExternalLink
                 style={{ verticalAlign: "middle", marginRight: 10 }}
               />

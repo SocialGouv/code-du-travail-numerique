@@ -102,7 +102,7 @@ const WorkPeriod = ({ onEdit, onDelete, data }) => (
     </Numericcell>
     <Actions>
       <Button
-        link
+        variant="link"
         onClick={() => {
           onEdit(data);
         }}
@@ -111,7 +111,7 @@ const WorkPeriod = ({ onEdit, onDelete, data }) => (
       </Button>
       {" – "}
       <Button
-        link
+        variant="link"
         onClick={() => {
           onDelete(data);
         }}

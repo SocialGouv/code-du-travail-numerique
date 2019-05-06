@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme, Alert } from "@cdt/ui";
+import { Alert, Button, theme } from "@cdt/ui";
 
 import { feedbackUrl } from "./feedback.service";
 
@@ -144,12 +144,9 @@ class FeedbackForm extends React.Component {
         />
 
         <FormAction>
-          <button
-            className="btn btn__primary"
-            disabled={this.state.status === "sending"}
-          >
+          <Button variant="primary" disabled={this.state.status === "sending"}>
             Envoyer mon commentaire
-          </button>
+          </Button>
           <Status>{this.getAlert()}</Status>
         </FormAction>
       </StyledForm>

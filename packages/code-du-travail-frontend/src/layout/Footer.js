@@ -1,7 +1,7 @@
 import React from "react";
 import getConfig from "next/config";
 import styled from "styled-components";
-import { ToggleButton, List, ListItem, theme } from "@cdt/ui";
+import { Button, List, ListItem, theme } from "@cdt/ui";
 
 import { Link } from "../../routes";
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
@@ -20,9 +20,9 @@ const Footer = () => (
           vous conseiller et vous orienter dans vos démarches.
         </SupportText>
         <ServiceRenseignementModal>
-          <ToggleButton variant="primary">
+          <Button variant="primary">
             Contacter les services de renseignement
-          </ToggleButton>
+          </Button>
         </ServiceRenseignementModal>
       </Support>
       <Links>

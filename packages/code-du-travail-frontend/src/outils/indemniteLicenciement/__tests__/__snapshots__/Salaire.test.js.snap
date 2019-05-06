@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaire /> should render mixed work period 1`] = `
+.c17 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:focus,
+.c17:hover,
+.c17:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 {
   padding: 0;
   font-size: 1.5rem;
@@ -275,23 +311,19 @@ exports[`<Salaire /> should render mixed work period 1`] = `
               <td
                 class="c16"
               >
-                <div
-                  class="btn btn__link  "
-                  link="true"
-                  role="button"
-                  tabindex="0"
+                <button
+                  aria-pressed="false"
+                  class="c17"
                 >
                   Modifier
-                </div>
+                </button>
                  – 
-                <div
-                  class="btn btn__link  "
-                  link="true"
-                  role="button"
-                  tabindex="0"
+                <button
+                  aria-pressed="false"
+                  class="c17"
                 >
                   Supprimer
-                </div>
+                </button>
               </td>
             </tr>
             <tr>
@@ -323,23 +355,19 @@ exports[`<Salaire /> should render mixed work period 1`] = `
               <td
                 class="c16"
               >
-                <div
-                  class="btn btn__link  "
-                  link="true"
-                  role="button"
-                  tabindex="0"
+                <button
+                  aria-pressed="false"
+                  class="c17"
                 >
                   Modifier
-                </div>
+                </button>
                  – 
-                <div
-                  class="btn btn__link  "
-                  link="true"
-                  role="button"
-                  tabindex="0"
+                <button
+                  aria-pressed="false"
+                  class="c17"
                 >
                   Supprimer
-                </div>
+                </button>
               </td>
             </tr>
           </tbody>
