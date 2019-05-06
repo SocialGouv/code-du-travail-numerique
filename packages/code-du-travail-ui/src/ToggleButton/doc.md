@@ -60,6 +60,9 @@ import ToggleButton from ".";
     <ToggleButton variant="danger" pressed>Button Danger pressed</ToggleButton>
   </p>
   <p>
+    <ToggleButton variant="link">Button link</ToggleButton>
+  </p>
+  <p>
     <ToggleButton variant="icon">
       <IconClose />
     </ToggleButton>

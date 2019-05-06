@@ -16,7 +16,8 @@ describe("<Button />", () => {
     ["success"],
     ["warning"],
     ["danger"],
-    ["icon"]
+    ["icon"],
+    ["link"]
   ])("it renders a Button %s", label => {
     const { container } = render(
       <ToggleButton variant={label}>this is a Button {label} </ToggleButton>
