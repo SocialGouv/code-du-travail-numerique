@@ -1,12 +1,9 @@
 {
   "command": {
-    "publish": {
-      "skip-npm": true,
-      "conventionalCommits": true,
-      "message": "chore(release): version %v"
-    },
     "version": {
-      "changelog-preset": "angular"
+      "conventionalCommits": true,
+      "githubRelease": true,
+      "message": "chore(release): version %v",
     }
   },
   "npmClient": "yarn",
