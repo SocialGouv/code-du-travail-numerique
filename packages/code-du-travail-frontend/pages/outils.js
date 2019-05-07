@@ -41,7 +41,7 @@ const getOutilFromCode = function(code) {
       };
     case "simulateur-embauche":
       return {
-        title: "Simalateur d'embauche",
+        title: "Simulateur d'embauche",
         description:
           "Simuler le coût d'une embauche en France et calculer le salaire net à partir du brut : CDD, statut cadre, cotisations sociales, retraite…",
         outil: SimulateurEmbauche
