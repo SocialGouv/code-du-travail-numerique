@@ -45,7 +45,7 @@ export function ElementBuilder({ data, headingLevel }) {
     case "Introduction":
       return (
         <Introduction>
-          <ElementBuilder data={ignoreParagraph(data.$)} />
+          <ElementBuilder data={ignoreParagraph(data)} />
         </Introduction>
       );
     case "LienExterne":
