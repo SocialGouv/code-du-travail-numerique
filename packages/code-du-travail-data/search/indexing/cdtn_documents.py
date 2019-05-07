@@ -89,6 +89,7 @@ def populate_cdtn_documents():
                 'source': 'fiches_service_public',
                 'description': val['description'],
                 'breadcrumbs': val['themeCdtn'],
+                'theme': val['themeCdtn'][-1]['slug'] if val['themeCdtn'] else None,
                 'text': val['text'],
                 'references_juridiques': val['references_juridiques'],
                 'title': val['title'],
@@ -107,6 +108,7 @@ def populate_cdtn_documents():
             'title': val['title'],
             'url': val['url'],
             'breadcrumbs': val['breadcrumbs'],
+            'theme': val['breadcrumbs'][-1]['slug'] if val['breadcrumbs'] else None,
             'date': val.get('date'),
         })
 

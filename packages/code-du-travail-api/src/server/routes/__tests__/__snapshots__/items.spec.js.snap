@@ -29,7 +29,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 1.2988099,
+        "_score": 0.84539527,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -82,10 +82,25 @@ Object {
   "_index": "cdtn_document_test",
   "_score": 1.5804504,
   "_source": Object {
-    "date": "28/11/2018",
+    "breadcrumbs": Array [
+      Object {
+        "id": 7,
+        "label": "Départ de l'entreprise",
+        "parent": null,
+        "slug": "7-depart-de-lentreprise",
+      },
+      Object {
+        "id": 37,
+        "label": "Démission",
+        "parent": "7-depart-de-lentreprise",
+        "slug": "37-demission",
+      },
+    ],
+    "date": "18/01/2019",
+    "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
     "html": "<p>La démission permet au salarié de rompre son contrat de travail à durée indéterminée de sa propre initiative, à condition de manifester clairement sa volonté de démissionner et de respecter le délai de préavis éventuellement prévu, sauf dispense accordée par l’employeur ou prévue par la convention collective (celle-ci peut, par exemple, prévoir que le salarié est libéré de son préavis lorsqu’il a trouvé un autre emploi).<br class=\\"manualbr\\">Des facilités de recherche d’emploi peuvent être prévues par la convention collective.</p> <p>Le Code du travail ne prévoit aucune forme particulière pour présenter sa démission&nbsp;: elle peut être verbale, écrite ou résulter d’un comportement sans ambiguïté du salarié (ce qui n’est pas le cas, par exemple, de la seule absence du salarié à son poste de travail ou de l’absence de reprise du travail à l’issue des congés payés).</p><p>Toutefois, pour éviter les contestations sur l’intention même de démissionner ou sur la date de la fin du contrat de travail, le salarié a intérêt à remettre sa démission par écrit (si possible par lettre recommandée avec avis de réception). L’écrit permet également de définir le début du préavis.</p><p>Certaines conventions collectives prévoient d’ailleurs que la démission doit être écrite et adressée par lettre recommandée avec avis  de réception. La démission ne peut être exigée par avance, par exemple, lors de la signature du contrat de travail ou au cours de son exécution.</p>",
-    "slug": "la-demission-comment-presenter-une-demission",
-    "title": "La démission : comment présenter une démission ?",
+    "slug": "demission-comment-presenter-une-demission",
+    "title": "Démission : comment présenter une démission ?",
     "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
   },
   "_type": "cdtn_document_test",
