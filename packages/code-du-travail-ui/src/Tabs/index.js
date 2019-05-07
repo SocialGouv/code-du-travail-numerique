@@ -5,24 +5,6 @@ import { Tab, Tabs as RootTabs, TabList, TabPanel } from "react-tabs";
 import { box, colors, fonts, spacing } from "../theme";
 
 class Tabs extends React.PureComponent {
-  static propTypes = {
-    onSelect: PropTypes.func,
-    selectedIndex: PropTypes.number,
-    defaultIndex: PropTypes.number,
-    data: PropTypes.arrayOf(
-      PropTypes.shape({
-        key: PropTypes.string.isRequired,
-        tab: PropTypes.node.isRequired,
-        panel: PropTypes.node.isRequired
-      })
-    ).isRequired
-  };
-
-  static defaultProps = {
-    defaultIndex: 0,
-    onSelect: () => {}
-  };
-
   render() {
     const { data, defaultIndex, onSelect, selectedIndex } = this.props;
     const tabs = data.map(item => <Tab key={item.key}>{item.tab}</Tab>);
@@ -46,6 +28,25 @@ class Tabs extends React.PureComponent {
     );
   }
 }
+
+Tabs.propTypes = {
+  onSelect: PropTypes.func,
+  selectedIndex: PropTypes.number,
+  defaultIndex: PropTypes.number,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      tab: PropTypes.node.isRequired,
+      panel: PropTypes.node.isRequired
+    })
+  ).isRequired
+};
+
+Tabs.defaultProps = {
+  defaultIndex: 0,
+  onSelect: () => {}
+};
+
 export default Tabs;
 
 const StyledTabs = styled(RootTabs)`
