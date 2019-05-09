@@ -35,6 +35,11 @@ const Footer = () => (
               </Link>
             </StyledListItem>
             <StyledListItem key="1">
+              <Link route="mentions-legales">
+                <a>Mentions légales</a>
+              </Link>
+            </StyledListItem>
+            <StyledListItem key="2">
               <a href="mailto:codedutravail@beta.gouv.fr">Contact</a>
             </StyledListItem>
           </List>

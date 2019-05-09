@@ -15,7 +15,7 @@ const About = () => (
     <Container>
       <Section light>
         <div>
-          <h2>À propos du code du travail numérique</h2>
+          <h1>À propos du code du travail numérique</h1>
           <Alert info>
             Ce service public vous permet d&apos;obtenir des réponses détaillées
             à des questions de droit de travail, ainsi que des fiches

@@ -74,6 +74,12 @@ module.exports = routes()
 
   // http://localhost:3000/a-propos
   .add({ name: "about", page: "about", pattern: "/a-propos" })
+  // http://localhost:3000/a-propos
+  .add({
+    name: "mentions-legales",
+    page: "mentions-legales",
+    pattern: "/mentions-legales"
+  })
 
   // search results page
   //

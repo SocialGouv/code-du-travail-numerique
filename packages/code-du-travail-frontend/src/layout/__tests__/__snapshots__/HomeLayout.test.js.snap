@@ -256,6 +256,15 @@ exports[`<HomeLayout /> should render 1`] = `
               class="c12"
             >
               <a
+                href="/mentions-legales"
+              >
+                Mentions légales
+              </a>
+            </li>
+            <li
+              class="c12"
+            >
+              <a
                 href="mailto:codedutravail@beta.gouv.fr"
               >
                 Contact
