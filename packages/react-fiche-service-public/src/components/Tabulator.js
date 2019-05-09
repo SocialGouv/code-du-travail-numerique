@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { SrOnly, Tabs } from "@cdt/ui";
 
 import { ElementBuilder } from "./ElementBuilder";
-import { getText, ignoreParagraph } from "../utils";
+import { ignoreParagraph } from "../utils";
 
 class Tabulator extends React.PureComponent {
   static propTypes = {
@@ -22,7 +22,6 @@ class Tabulator extends React.PureComponent {
       const title = tab.$.find(el => el.name === "Titre");
       const content = tab.$.filter(el => el.name !== "Titre");
       return {
-        key: getText(title),
         tab: (
           <ElementBuilder
             data={ignoreParagraph(title)}

@@ -7,7 +7,7 @@ import { box, colors, fonts, spacing } from "../theme";
 class Tabs extends React.PureComponent {
   render() {
     const { data, defaultIndex, onSelect, selectedIndex } = this.props;
-    const tabs = data.map(item => <Tab key={item.key}>{item.tab}</Tab>);
+    const tabs = data.map((item, index) => <Tab key={index}>{item.tab}</Tab>);
     const tabContents = data.map(item => (
       <TabPanel key={item.key}>{item.panel}</TabPanel>
     ));
