@@ -171,6 +171,15 @@ exports[`<Footer /> should render 1`] = `
               class="c8"
             >
               <a
+                href="/mentions-legales"
+              >
+                Mentions légales
+              </a>
+            </li>
+            <li
+              class="c8"
+            >
+              <a
                 href="mailto:codedutravail@beta.gouv.fr"
               >
                 Contact
