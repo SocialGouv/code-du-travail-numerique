@@ -61,7 +61,7 @@ class Fiche extends React.Component {
             footer={footer}
             date={data._source.date}
             icon={ReponseIcon}
-            sourceType="Fiche service public"
+            sourceType="Fiche service-public.fr"
             referencesJuridiques={data._source.references_juridiques}
             breadcrumbs={data._source.breadcrumbs}
           >
