@@ -37,7 +37,7 @@ class Table extends React.PureComponent {
                 <th key={columnIndex}>
                   {th.$ && (
                     <ElementBuilder
-                      data={ignoreParagraph(th.$)}
+                      data={ignoreParagraph(th)}
                       headingLevel={headingLevel}
                     />
                   )}
@@ -57,7 +57,7 @@ class Table extends React.PureComponent {
                 return (
                   <Cell key={columnIndex}>
                     <ElementBuilder
-                      data={ignoreParagraph(td.$)}
+                      data={ignoreParagraph(td)}
                       headingLevel={headingLevel + 1}
                     />
                   </Cell>

@@ -5,14 +5,6 @@ import styled from "styled-components";
 import X from "react-feather/dist/icons/x";
 import { box, breakpoints, colors, spacing } from "../theme";
 export class Modal extends React.Component {
-  static propTypes = {
-    className: PropTypes.string,
-    isOpen: PropTypes.bool.isRequired,
-    onDismiss: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired,
-    ContentWrapper: PropTypes.object
-  };
-
   render() {
     const {
       children,
@@ -38,6 +30,14 @@ export class Modal extends React.Component {
     );
   }
 }
+
+Modal.propTypes = {
+  className: PropTypes.string,
+  isOpen: PropTypes.bool.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+  ContentWrapper: PropTypes.object
+};
 
 const StyledDialogOverlay = styled(DialogOverlay)`
   position: fixed;

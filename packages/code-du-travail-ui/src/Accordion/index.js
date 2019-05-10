@@ -12,15 +12,6 @@ import VerticalArrow from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 
 class Accordion extends React.PureComponent {
-  static propTypes = {
-    className: PropTypes.string,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.node.isRequired,
-        body: PropTypes.node.isRequired
-      })
-    ).isRequired
-  };
   render() {
     const { items, className } = this.props;
 
@@ -46,6 +37,16 @@ class Accordion extends React.PureComponent {
     );
   }
 }
+
+Accordion.propTypes = {
+  className: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.node.isRequired,
+      body: PropTypes.node.isRequired
+    })
+  ).isRequired
+};
 
 export default Accordion;
 

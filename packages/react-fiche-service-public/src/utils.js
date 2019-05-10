@@ -6,13 +6,16 @@ export function getText(element = { text: "" }, separator = " ") {
   if (element.$) {
     return element.$.map(child => getText(child, separator)).join(separator);
   }
+  if (Array.isArray(element)) {
+    return element.map(child => getText(child, separator)).join(separator);
+  }
   return "";
 }
 
-export const ignoreParagraph = children =>
-  children.map(child => {
+export const ignoreParagraph = element =>
+  element.$.map(child => {
     if (child.name === "Texte") {
-      return ignoreParagraph(child.$);
+      return ignoreParagraph(child);
     }
     if (child.name === "Paragraphe") {
       return child.$;
