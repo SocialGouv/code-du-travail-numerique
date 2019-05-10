@@ -1,13 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> should render 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #fff;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   position: relative;
   margin: 20px auto 0 auto;
   max-width: 850px;
 }
 
-.c1 {
+.c4 {
   position: absolute;
   top: 0.625rem;
   left: calc(-60px - 1.25rem);
@@ -15,11 +43,11 @@ exports[`<Article /> should render 1`] = `
   color: #4c5467;
 }
 
-.c2 {
+.c5 {
   font-weight: 600;
 }
 
-.c3 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,41 +58,55 @@ exports[`<Article /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c4 {
+.c7 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c5 {
+.c8 {
   margin-left: 1rem;
   color: #adb9c9;
   font-size: 0.9rem;
   display: inline-block;
 }
 
-.c6 {
+.c9 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c7 {
+.c10 {
   margin-left: -10px;
 }
 
-.c8 {
+.c11 {
   margin: 20px auto;
   max-width: 850px;
   text-align: left;
 }
 
-@media (max-width:1200px) {
+@media print {
   .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:1200px) {
+  .c4 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c6 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -76,26 +118,26 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c8 {
     margin-left: 0;
   }
 }
 
 <div>
-  <section
-    class="section-light"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper-light "
+        class="c2"
       >
         <div
-          class="c0"
+          class="c3"
         >
           <div
-            class="c1"
+            class="c4"
           >
             <svg
               viewBox="0 0 50 50"
@@ -121,24 +163,24 @@ exports[`<Article /> should render 1`] = `
           </div>
           <div>
             <h1
-              class="c2"
+              class="c5"
             >
               Contrat de travail et formalités d'embauche de l'assistante maternelle
             </h1>
             <div
-              class="c3"
+              class="c6"
             >
               <span
-                class="c4"
+                class="c7"
               >
                 Fiche service public
               </span>
               <span
-                class="c5"
+                class="c8"
               >
                 Mis à jour le : 
                 <span
-                  class="c6"
+                  class="c9"
                 >
                   26/07/2018
                 </span>
@@ -146,16 +188,16 @@ exports[`<Article /> should render 1`] = `
             </div>
           </div>
           <div
-            class="c7"
+            class="c10"
           />
         </div>
         <div
-          class="c8"
+          class="c11"
         >
           this is an Article
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;

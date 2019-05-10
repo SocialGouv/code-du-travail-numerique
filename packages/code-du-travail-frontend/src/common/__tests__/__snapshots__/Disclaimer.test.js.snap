@@ -51,7 +51,7 @@ exports[`<Disclaimer /> should render 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  box-shadow: none;
 }
 
 .c2 {
@@ -126,6 +126,7 @@ exports[`<Disclaimer /> should render 1`] = `
   >
     <div
       class="c1"
+      type="warning"
     >
       <div
         class="c2"

@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import getConfig from "next/config";
-import { Container, Alert } from "@cdt/ui";
+import { Alert, Container, Section } from "@cdt/ui";
 import fetch from "isomorphic-unfetch";
 
 import { Link } from "../routes";
@@ -84,16 +84,16 @@ class Theme extends React.Component {
         <Search />
         <Breadcrumbs items={breadcrumbs} />
         {theme.children.length > 0 && (
-          <div className="section section-white">
+          <Section variant="white">
             <Categories
               isRoot={isRootTheme}
               title={isRootTheme ? undefined : null}
               themes={theme.children}
             />
-          </div>
+          </Section>
         )}
         {!isRootTheme && (
-          <div className="section">
+          <Section>
             <Container>
               <SearchQuery
                 query={theme.label}
@@ -101,7 +101,7 @@ class Theme extends React.Component {
                 fetch={searchResults}
               />
             </Container>
-          </div>
+          </Section>
         )}
       </PageLayout>
     );
@@ -116,11 +116,11 @@ const NotFound = () => (
       <title>Theme introuvable : Code du travail numérique</title>
     </Head>
     <Search />
-    <div className="section section-white">
+    <Section variant="white">
       <Container>
         <BigError>Ce thème n&apos;a pas été trouvé</BigError>
       </Container>
-    </div>
+    </Section>
   </PageLayout>
 );
 

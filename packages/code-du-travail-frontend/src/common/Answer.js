@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import { Alert, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
 import { withRouter } from "next/router";
+import { Alert, Container, theme } from "@cdt/ui";
 import { Link } from "../../routes";
 import ReferencesJuridiques from "../ReferencesJuridiques";
 import Article from "../common/Article";
@@ -13,9 +13,9 @@ import Search from "../search/Search";
 import { Feedback } from "../common/Feedback";
 
 const BigError = ({ children }) => (
-  <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
+  <StyledContainer>
     <Alert warning>{children}</Alert>
-  </Container>
+  </StyledContainer>
 );
 
 const BackToResultsLink = ({ query }) => {
@@ -88,6 +88,12 @@ function Answer({
 export default withRouter(Answer);
 
 const { box, colors, spacing } = theme;
+
+const StyledContainer = styled(Container)`
+  margin: 20%;
+  font-size: 2rem;
+  text-align: center;
+`;
 
 const BacklinkWrapper = styled(Container)`
   margin-top: ${spacing.base};

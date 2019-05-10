@@ -2,6 +2,16 @@
 
 exports[`<Header /> should render 1`] = `
 .c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9,7 +19,7 @@ exports[`<Header /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,27 +33,34 @@ exports[`<Header /> should render 1`] = `
   cursor: pointer;
 }
 
-.c1:link {
+.c2:link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:hover {
+.c2:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c2 {
+.c3 {
   width: 5rem;
   height: 100%;
   margin-right: 1rem;
 }
 
-.c3 {
+.c4 {
   font-size: 1.3rem;
   line-height: 1.1;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
@@ -51,23 +68,23 @@ exports[`<Header /> should render 1`] = `
     class="bg-color color__white"
   >
     <div
-      class="container "
+      class="c0"
     >
       <div
-        class="c0"
+        class="c1"
       >
         <a
-          class="c1"
+          class="c2"
           href="/?q="
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="symbole de la Marianne, site officiel du gouvernement"
-            class="c2"
+            class="c3"
             src="/static/assets/img/marianne.svg"
           />
           <span
-            class="c3"
+            class="c4"
           >
             Code du travail
             <br />

@@ -1,21 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Feedback/> should render 1`] = `
-.c0 {
+.c1 {
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
+  padding: 0 1.25rem;
+  max-width: 43.75rem;
 }
 
-.c1 {
-  position: relative;
-  padding: 0 2rem;
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
 }
 
 .c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   margin-bottom: 1rem;
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c6 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -38,13 +68,13 @@ exports[`<Feedback/> should render 1`] = `
   min-width: 7rem;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c4:not([disabled]):active {
+.c6:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -52,7 +82,7 @@ exports[`<Feedback/> should render 1`] = `
   outline: none;
 }
 
-.c4[aria-pressed="true"] {
+.c6[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -61,25 +91,25 @@ exports[`<Feedback/> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):active {
+.c6[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c4[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c4 + .c3 {
+.c6 + .c5 {
   margin-left: 1rem;
 }
 
-.c5 {
+.c7 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -102,13 +132,13 @@ exports[`<Feedback/> should render 1`] = `
   min-width: 7rem;
 }
 
-.c5:not([disabled]):hover,
-.c5:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c5:not([disabled]):active {
+.c7:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -116,7 +146,7 @@ exports[`<Feedback/> should render 1`] = `
   outline: none;
 }
 
-.c5[aria-pressed="true"] {
+.c7[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -125,71 +155,106 @@ exports[`<Feedback/> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):hover,
-.c5[aria-pressed="true"]:not([disabled]):focus {
+.c7[aria-pressed="true"]:not([disabled]):hover,
+.c7[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c5[aria-pressed="true"]:not([disabled]):active {
+.c7[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c5[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c5 + .c3 {
+.c7 + .c5 {
   margin-left: 1rem;
 }
 
-@media (max-width:600px) {
+@media print {
   .c1 {
+    max-width: 100%;
     padding: 0;
   }
 }
 
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper wrapper-dark c0"
+        class="c2"
       >
-        <div
-          class="c1"
+        <h3
+          class="c3"
         >
-          <h3
-            class="c2"
+          Avez-vous trouvé la réponse à votre question ?
+        </h3>
+        <p
+          class="c4"
+        >
+          <button
+            aria-pressed="false"
+            class="c5 c6"
           >
-            Avez-vous trouvé la réponse à votre question ?
-          </h3>
-          <p>
-            <button
-              aria-pressed="false"
-              class="c3 c4"
-            >
-              Non
-            </button>
-            <button
-              aria-pressed="false"
-              class="c3 c5"
-            >
-              Oui
-            </button>
-          </p>
-        </div>
+            Non
+          </button>
+          <button
+            aria-pressed="false"
+            class="c5 c7"
+          >
+            Oui
+          </button>
+        </p>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`<Feedback/> should render form once user answer no 1`] = `
-.c6 {
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 43.75rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c7 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -211,13 +276,13 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c7:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -225,7 +290,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c7[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -234,21 +299,21 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c7[aria-pressed="true"]:not([disabled]):hover,
+.c7[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c7[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c8 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -277,14 +342,14 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   text-decoration: underline;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c9:focus,
+.c9:hover,
+.c9:active {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,11 +364,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   align-items: stretch;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.25rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -313,7 +378,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   flex-wrap: wrap;
 }
 
-.c7 {
+.c8 {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -321,140 +386,163 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   margin-top: 1.25rem;
 }
 
-.c0 {
-  margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
-}
-
-.c1 {
-  position: relative;
-  padding: 0 2rem;
-}
-
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:600px) {
+@media print {
   .c1 {
+    max-width: 100%;
     padding: 0;
   }
 }
 
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper wrapper-dark c0"
+        class="c2"
       >
-        <div
-          class="c1"
+        <h3
+          class="c3"
         >
-          <h3
-            class="c2"
-          >
-            Avez-vous trouvé la réponse à votre question ?
-          </h3>
-          <form
-            action="https://formspree.io/xbalrgzm"
-            class="c3"
-          >
-            <p>
-              <strong>
-                Merci pour votre réponse !
-              </strong>
-            </p>
-            <p>
-              Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
-            </p>
-            <input
-              name="question"
-              type="hidden"
-              value="Query"
-            />
-            <input
-              name="url"
-              type="hidden"
-              value="http://server/fiches/fiche1"
-            />
-            <input
-              name="sourceType"
-              type="hidden"
-              value="Fiches Service Public"
-            />
-            <select
-              class="c4"
-              name="motif"
-            >
-              <option
-                value="Les informations proposées ne sont pas à jour"
-              >
-                Les informations proposées ne sont pas à jour
-              </option>
-              <option
-                value="Les informations me paraissent erronées"
-              >
-                Les informations me paraissent erronées
-              </option>
-              <option
-                value="Les informations me paraissent incomplètes"
-              >
-                Les informations me paraissent incomplètes
-              </option>
-              <option
-                value="Les informations me paraissent hors-sujet"
-              >
-                Les informations me paraissent hors-sujet
-              </option>
-              <option
-                value="Je n'ai pas trouvé la réponse à ma question"
-              >
-                Je n'ai pas trouvé la réponse à ma question
-              </option>
-            </select>
-            <textarea
-              class="c4"
-              name="message"
-              placeholder="Les informations ..."
-            />
-            <div
-              class="c5"
-            >
-              <button
-                aria-pressed="false"
-                class="c6"
-              >
-                Envoyer mon commentaire
-              </button>
-              <div
-                class="c7"
-              />
-            </div>
-          </form>
+          Avez-vous trouvé la réponse à votre question ?
+        </h3>
+        <form
+          action="https://formspree.io/xbalrgzm"
+          class="c4"
+        >
           <p>
-            Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
-             
+            <strong>
+              Merci pour votre réponse !
+            </strong>
+          </p>
+          <p>
+            Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
+          </p>
+          <input
+            name="question"
+            type="hidden"
+            value="Query"
+          />
+          <input
+            name="url"
+            type="hidden"
+            value="http://server/fiches/fiche1"
+          />
+          <input
+            name="sourceType"
+            type="hidden"
+            value="Fiches Service Public"
+          />
+          <select
+            class="c5"
+            name="motif"
+          >
+            <option
+              value="Les informations proposées ne sont pas à jour"
+            >
+              Les informations proposées ne sont pas à jour
+            </option>
+            <option
+              value="Les informations me paraissent erronées"
+            >
+              Les informations me paraissent erronées
+            </option>
+            <option
+              value="Les informations me paraissent incomplètes"
+            >
+              Les informations me paraissent incomplètes
+            </option>
+            <option
+              value="Les informations me paraissent hors-sujet"
+            >
+              Les informations me paraissent hors-sujet
+            </option>
+            <option
+              value="Je n'ai pas trouvé la réponse à ma question"
+            >
+              Je n'ai pas trouvé la réponse à ma question
+            </option>
+          </select>
+          <textarea
+            class="c5"
+            name="message"
+            placeholder="Les informations ..."
+          />
+          <div
+            class="c6"
+          >
             <button
               aria-pressed="false"
-              class="c8"
+              class="c7"
             >
-              services de renseignement
+              Envoyer mon commentaire
             </button>
-            .
-          </p>
-        </div>
+            <div
+              class="c8"
+            />
+          </div>
+        </form>
+        <p>
+          Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
+           
+          <button
+            aria-pressed="false"
+            class="c9"
+          >
+            services de renseignement
+          </button>
+          .
+        </p>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`<Feedback/> should render form once user answer yes 1`] = `
-.c6 {
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 43.75rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c7 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -476,13 +564,13 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c7:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -490,7 +578,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c7[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -499,21 +587,21 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c7[aria-pressed="true"]:not([disabled]):hover,
+.c7[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c7[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -528,11 +616,11 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   align-items: stretch;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.25rem;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -542,7 +630,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   flex-wrap: wrap;
 }
 
-.c7 {
+.c8 {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -550,94 +638,88 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   margin-top: 1.25rem;
 }
 
-.c0 {
-  margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
-}
-
-.c1 {
-  position: relative;
-  padding: 0 2rem;
-}
-
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
-@media (max-width:600px) {
+@media print {
   .c1 {
+    max-width: 100%;
     padding: 0;
   }
 }
 
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper wrapper-dark c0"
+        class="c2"
       >
-        <div
-          class="c1"
+        <h3
+          class="c3"
         >
-          <h3
-            class="c2"
+          Avez-vous trouvé la réponse à votre question ?
+        </h3>
+        <form
+          action="https://formspree.io/xbalrgzm"
+          class="c4"
+        >
+          <p>
+            <strong>
+              Merci pour votre réponse !
+            </strong>
+          </p>
+          <p>
+            Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
+          </p>
+          <input
+            name="question"
+            type="hidden"
+            value="Query"
+          />
+          <input
+            name="url"
+            type="hidden"
+            value="http://server/fiches/fiche1"
+          />
+          <input
+            name="sourceType"
+            type="hidden"
+            value="Fiches Service Public"
+          />
+          <textarea
+            class="c5"
+            name="message"
+            placeholder="Les informations ..."
+          />
+          <div
+            class="c6"
           >
-            Avez-vous trouvé la réponse à votre question ?
-          </h3>
-          <form
-            action="https://formspree.io/xbalrgzm"
-            class="c3"
-          >
-            <p>
-              <strong>
-                Merci pour votre réponse !
-              </strong>
-            </p>
-            <p>
-              Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
-            </p>
-            <input
-              name="question"
-              type="hidden"
-              value="Query"
-            />
-            <input
-              name="url"
-              type="hidden"
-              value="http://server/fiches/fiche1"
-            />
-            <input
-              name="sourceType"
-              type="hidden"
-              value="Fiches Service Public"
-            />
-            <textarea
-              class="c4"
-              name="message"
-              placeholder="Les informations ..."
-            />
-            <div
-              class="c5"
+            <button
+              aria-pressed="false"
+              class="c7"
             >
-              <button
-                aria-pressed="false"
-                class="c6"
-              >
-                Envoyer mon commentaire
-              </button>
-              <div
-                class="c7"
-              />
-            </div>
-          </form>
-        </div>
+              Envoyer mon commentaire
+            </button>
+            <div
+              class="c8"
+            />
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 

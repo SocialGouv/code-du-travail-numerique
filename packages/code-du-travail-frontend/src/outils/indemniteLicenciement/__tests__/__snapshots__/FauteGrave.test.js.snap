@@ -1,15 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FauteGrave /> should render 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #fff;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 <div>
-  <section
-    class="section-light"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper-light "
+        class="c2"
       >
         <h2>
           Faute grave ou lourde
@@ -75,9 +117,9 @@ exports[`<FauteGrave /> should render 1`] = `
         </label>
       </div>
     </div>
-  </section>
+  </div>
   <div
-    class="container "
+    class="c1"
   >
     <div
       style="display: flex; flex-direction: row; margin-top: 20px; font-size: 1rem;"

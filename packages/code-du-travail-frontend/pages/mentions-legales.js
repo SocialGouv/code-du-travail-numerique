@@ -9,7 +9,8 @@ import {
   ListItem,
   Section,
   SrOnly,
-  theme
+  theme,
+  Wrapper
 } from "@cdt/ui";
 
 import { PageLayout } from "../src/layout/PageLayout";
@@ -237,30 +238,32 @@ const SearchPage = () => {
           content="Mentions légales du Code du travail numérique"
         />
       </Head>
-      <Container>
-        <Section light>
-          <Alert warning>
-            Ce site est en cours de construction, la fiabilité des réponses qui
-            s’y trouvent ne sont pas garanties. L’ouverture officielle du site
-            est prévue pour 2020.
-          </Alert>
-          <Alert info>
-            <p>
-              Le{" "}
-              <a href="https://github.com/SocialGouv/code-du-travail-numerique">
-                code du logiciel
-              </a>{" "}
-              est libre, et peut donc être vérifié et amélioré par toutes et
-              tous à l’adresse suivante:{" "}
-              <a href="https://github.com/SocialGouv/code-du-travail-numerique">
-                https://github.com/SocialGouv/code-du-travail-numerique
-              </a>
-              .
-            </p>
-          </Alert>
-          <Accordion items={accordionItems} />
-        </Section>
-      </Container>
+      <Section>
+        <Container narrow>
+          <Wrapper variant="light">
+            <Alert warning>
+              Ce site est en cours de construction, la fiabilité des réponses
+              qui s’y trouvent ne sont pas garanties. L’ouverture officielle du
+              site est prévue pour 2020.
+            </Alert>
+            <Alert info>
+              <p>
+                Le{" "}
+                <a href="https://github.com/SocialGouv/code-du-travail-numerique">
+                  code du logiciel
+                </a>{" "}
+                est libre, et peut donc être vérifié et amélioré par toutes et
+                tous à l’adresse suivante:{" "}
+                <a href="https://github.com/SocialGouv/code-du-travail-numerique">
+                  https://github.com/SocialGouv/code-du-travail-numerique
+                </a>
+                .
+              </p>
+            </Alert>
+            <Accordion items={accordionItems} />
+          </Wrapper>
+        </Container>
+      </Section>
     </PageLayout>
   );
 };

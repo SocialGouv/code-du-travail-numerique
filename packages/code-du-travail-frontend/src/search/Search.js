@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
-import { Container, theme, Button } from "@cdt/ui";
+import { Button, Container, theme, Section } from "@cdt/ui";
 
 import { Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
@@ -170,7 +170,7 @@ class Search extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="section-white shadow-bottom search-widget">
+        <Section variant="white" className="shadow-bottom search-widget">
           <Container>
             <StyledSearch ref={this.searchRef}>
               <SearchLabel>
@@ -214,7 +214,7 @@ class Search extends React.Component {
               </form>
             </StyledSearch>
           </Container>
-        </div>
+        </Section>
       </React.Fragment>
     );
   }
@@ -225,6 +225,7 @@ export default withRouter(Search);
 const { animations, box, breakpoints, colors, spacing, fonts } = theme;
 
 const SearchLabel = styled.p`
+  margin-top: 0;
   font-size: ${fonts.sizeH1};
   line-height: ${fonts.lineHeight};
   color: ${colors.title};

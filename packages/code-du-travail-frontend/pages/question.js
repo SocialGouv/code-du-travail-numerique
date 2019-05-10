@@ -6,7 +6,15 @@ import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
 import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import { AsideTitle, List, ListItem, Section } from "@cdt/ui";
+import {
+  AsideTitle,
+  Container,
+  List,
+  ListItem,
+  Section,
+  theme,
+  Wrapper
+} from "@cdt/ui";
 import styled from "styled-components";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import { BigLink } from "../src/common/BigLink";
@@ -57,7 +65,7 @@ class Question extends React.Component {
           query={query.q}
           items={code_du_travail}
         >
-          <div className="wrapper-narrow">
+          <Container narrow>
             <DisclaimerContent>
               Pensez à vérifier votre accord d’entreprise : S’il prévoit des «
               garanties au moins équivalentes » à ce sujet, ces clauses
@@ -66,7 +74,7 @@ class Question extends React.Component {
                 En savoir plus
               </a>
             </DisclaimerContent>
-          </div>
+          </Container>
         </MoreLinks>
         <MoreLinks
           title="Pour aller plus loin"
@@ -118,18 +126,24 @@ function MoreLinks({ items, icon, query, title, children }) {
   }
   return (
     <Section>
-      <SectionTitle>{title}</SectionTitle>
-      {children}
-      <StyledList>
-        {items.map(item => (
-          <ListItem key={item._id}>
-            <BigLink data={item} icon={icon} query={query} />
-          </ListItem>
-        ))}
-      </StyledList>
+      <Container>
+        <Wrapper>
+          <SectionTitle>{title}</SectionTitle>
+          {children}
+          <StyledList>
+            {items.map(item => (
+              <ListItem key={item._id}>
+                <BigLink data={item} icon={icon} query={query} />
+              </ListItem>
+            ))}
+          </StyledList>
+        </Wrapper>
+      </Container>
     </Section>
   );
 }
+
+const { breakpoints, colors, spacing } = theme;
 
 const SectionTitle = styled.h2`
   text-align: center;
@@ -137,9 +151,12 @@ const SectionTitle = styled.h2`
 `;
 
 const DisclaimerContent = styled.div`
-  color: #53657d;
+  color: ${colors.darkerGRey};
 `;
 
 const StyledList = styled(List)`
-  margin: 20px 130px 20px 100px;
+  margin: ${spacing.medium} 130px ${spacing.medium} 100px;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin: ${spacing.medium} 0;
+  }
 `;

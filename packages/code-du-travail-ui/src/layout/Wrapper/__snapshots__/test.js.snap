@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
+.c0 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    this is a Button 
+    dark
+     
+  </div>
+</div>
+`;
+
+exports[`<Wrapper /> it renders a default Wrapper 1`] = `
+.c0 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    this is a Button 
+    default
+     
+  </div>
+</div>
+`;
+
+exports[`<Wrapper /> it renders a light Wrapper 1`] = `
+.c0 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #fff;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    this is a Button 
+    light
+     
+  </div>
+</div>
+`;

@@ -7,4 +7,10 @@ describe("<Container />", () => {
     const { container } = render(<Container>One Aside title</Container>);
     expect(container).toMatchSnapshot();
   });
+  test("should render narrow", () => {
+    const { container } = render(
+      <Container narrow>Narrow contained</Container>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

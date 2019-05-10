@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { theme } from "@cdt/ui";
 import { Link } from "../../routes";
 import { getRouteBySource, getLabelBySource } from "../sources";
 import ArticleIcon from "../icons/ArticleIcon";
@@ -48,9 +49,14 @@ BigLink.propTypes = {
   })
 };
 
+const { breakpoints, colors } = theme;
+
 const Icon = styled.svg`
-  width: 2em;
-  margin-right: 1em;
+  flex: 0 0 8%;
+  margin-right: 1rem;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex: 0 0 15%;
+  }
 `;
 const Title = styled.strong`
   display: block;
@@ -59,5 +65,5 @@ const Title = styled.strong`
 
 const Source = styled.span`
   font-weight: 700;
-  color: #8393a7;
+  color: ${colors.darkGrey};
 `;

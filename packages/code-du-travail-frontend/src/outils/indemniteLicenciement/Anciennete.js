@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 
 import { Input, Label } from "./stepStyles";
 import { PrevNextStepper } from "./PrevNextStepper";
@@ -23,23 +23,27 @@ class Anciennete extends React.Component {
     const { value, onChange, onNext, onPrevious, nextDisabled } = this.props;
     return (
       <React.Fragment>
-        <Section light>
-          <h2>Quelle est votre ancienneté en mois ?</h2>
-          <Label>
-            <Input
-              size={5}
-              name="anciennete"
-              type="number"
-              onFocus={e => {
-                if (e.target.value === "0") {
-                  e.target.value = "";
-                }
-              }}
-              onChange={e => onChange(parseFloat(e.target.value) || 0)}
-              value={value}
-            />{" "}
-            mois
-          </Label>
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <h2>Quelle est votre ancienneté en mois ?</h2>
+              <Label>
+                <Input
+                  size={5}
+                  name="anciennete"
+                  type="number"
+                  onFocus={e => {
+                    if (e.target.value === "0") {
+                      e.target.value = "";
+                    }
+                  }}
+                  onChange={e => onChange(parseFloat(e.target.value) || 0)}
+                  value={value}
+                />{" "}
+                mois
+              </Label>
+            </Wrapper>
+          </Container>
         </Section>
         <Container>
           <PrevNextStepper

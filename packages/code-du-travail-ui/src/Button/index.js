@@ -134,4 +134,8 @@ const StyledButton = styled(Button)`
   }}
 `;
 
+StyledButton.defaultProps = {
+  variant: "default"
+};
+
 export default StyledButton;

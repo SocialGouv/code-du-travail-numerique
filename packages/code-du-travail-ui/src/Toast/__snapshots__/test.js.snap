@@ -19,6 +19,7 @@ exports[`<Toast /> renders 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
+  border-color: #d7e8f9;
   box-shadow: none;
 }
 
@@ -60,6 +61,7 @@ exports[`<Toast /> renders 1`] = `
 <div>
   <div
     class="c0"
+    type="info"
   >
     <div
       class="c1"

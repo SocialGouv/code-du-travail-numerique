@@ -4,14 +4,14 @@ menu: Component
 ---
 import "@cdt/css";
 import { Playground, Props } from "docz";
-import Section from "../Section";
+import Wrapper from "../layout/Wrapper";
 import Cards from "../Cards";
 import Card from ".";
 
 # Card
 
 <Playground>
-  <Section dark>
+  <Wrapper variant="dark">
     <Cards>
       <Card>Alert</Card>
       <Card>Alert</Card>
@@ -25,7 +25,7 @@ import Card from ".";
       <Card>Alert</Card>
       <Card>Alert</Card>
     </Cards>
-  </Section>
+  </Wrapper>
 </Playground>
 
 <Props of={Card} />

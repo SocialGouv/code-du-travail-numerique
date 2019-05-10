@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 import { coefficient } from "./0044_coefficient";
 import { PrevNextStepper } from "../PrevNextStepper";
 
@@ -78,24 +78,28 @@ class EchelonChimie extends React.Component {
     }
     return (
       <React.Fragment>
-        <Section light>
-          <h2>Quel est votre échelon dans la convention collective ?</h2>
-          <p>
-            <select
-              onChange={this.onSelectCoefficient}
-              onBlur={this.onSelectCoefficient}
-              name="echelon"
-              value={value.coefficient}
-              style={{ ...selectStyle }}
-              defaultValue={"none"}
-            >
-              <option disabled value="none">
-                Sélectionnez un échelon
-              </option>
-              {options}
-            </select>
-          </p>
-          {labels}
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <h2>Quel est votre échelon dans la convention collective ?</h2>
+              <p>
+                <select
+                  onChange={this.onSelectCoefficient}
+                  onBlur={this.onSelectCoefficient}
+                  name="echelon"
+                  value={value.coefficient}
+                  style={{ ...selectStyle }}
+                  defaultValue={"none"}
+                >
+                  <option disabled value="none">
+                    Sélectionnez un échelon
+                  </option>
+                  {options}
+                </select>
+              </p>
+              {labels}
+            </Wrapper>
+          </Container>
         </Section>
         <Container>
           <PrevNextStepper

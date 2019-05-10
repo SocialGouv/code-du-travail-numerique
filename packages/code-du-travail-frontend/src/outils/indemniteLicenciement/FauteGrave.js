@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 
 import { SimpleSwitch } from "../../common/SimpleSwitch";
 import { PrevNextStepper } from "./PrevNextStepper";
@@ -23,14 +23,18 @@ class FauteGrave extends React.Component {
     const { onChange, value, onPrevious, onNext, nextDisabled } = this.props;
     return (
       <React.Fragment>
-        <Section light>
-          <h2>Faute grave ou lourde</h2>
-          <SimpleSwitch
-            checked={value}
-            id="licencie-faute-grave"
-            label="Êtes-vous licencié(e) pour faute grave ou lourde&nbsp;?"
-            onChange={onChange}
-          />
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <h2>Faute grave ou lourde</h2>
+              <SimpleSwitch
+                checked={value}
+                id="licencie-faute-grave"
+                label="Êtes-vous licencié(e) pour faute grave ou lourde&nbsp;?"
+                onChange={onChange}
+              />
+            </Wrapper>
+          </Container>
         </Section>
         <Container>
           <PrevNextStepper
