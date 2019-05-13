@@ -7,7 +7,7 @@ exports[`<SearchResults/> should render no results 1`] = `
     class="alert "
   >
     <p>
-      Nous n'avons pas trouvé de résultat pour votre recherche.
+      Nous n’avons pas trouvé de résultat pour votre recherche.
     </p>
   </div>
 </div>
@@ -20,7 +20,7 @@ exports[`<SearchResults/> should render results 1`] = `
     class="alert "
   >
     <p>
-      Nous n'avons pas trouvé de résultat pour votre recherche.
+      Nous n’avons pas trouvé de résultat pour votre recherche.
     </p>
   </div>
 </div>

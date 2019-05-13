@@ -24,7 +24,7 @@ class SimulateurEmbauche extends React.PureComponent {
       <Section>
         <Container>
           <Wrapper>
-            <Title>Simulateur d&apos;embauche</Title>
+            <Title>Simulateur d’embauche</Title>
             <ErrorBoundary>
               <div ref={this.simRef} />;
             </ErrorBoundary>

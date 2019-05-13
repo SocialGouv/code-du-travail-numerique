@@ -82,8 +82,8 @@ class ChoixCC extends React.Component {
           <Container>
             <Wrapper variant="light">
               <h2>
-                Est-ce qu&apos;une convention collective s&apos;applique dans
-                votre entreprise&nbsp;?
+                Est-ce qu’une convention collective s’applique dans votre
+                entreprise&nbsp;?
               </h2>
               <RadioContainer>
                 <Label>

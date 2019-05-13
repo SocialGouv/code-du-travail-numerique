@@ -65,7 +65,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
       >
         Recherche par nom ou par identifiant
       </h3>
-      Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
+      Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
       <div
         class="c1"
       >
@@ -117,13 +117,13 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
           <b>
             bulletin de paie
           </b>
-          , et sur une notice remise à l'embauche ou 
+          , et sur une notice remise à l’embauche ou 
           <b>
             sur le contrat de travail
           </b>
         </li>
         <li>
-          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+          Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
         </li>
       </ul>
       <div
@@ -133,7 +133,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
       </div>
       <ul>
         <li>
-          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+          En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
         </li>
       </ul>
     </div>
@@ -170,7 +170,7 @@ exports[`<ConventionForm /> should render 1`] = `
       >
         Recherche par nom ou par identifiant
       </h3>
-      Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
+      Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
       <div
         class="c1"
       >
@@ -190,13 +190,13 @@ exports[`<ConventionForm /> should render 1`] = `
           <b>
             bulletin de paie
           </b>
-          , et sur une notice remise à l'embauche ou 
+          , et sur une notice remise à l’embauche ou 
           <b>
             sur le contrat de travail
           </b>
         </li>
         <li>
-          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+          Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
         </li>
       </ul>
       <div
@@ -206,7 +206,7 @@ exports[`<ConventionForm /> should render 1`] = `
       </div>
       <ul>
         <li>
-          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+          En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
         </li>
       </ul>
     </div>

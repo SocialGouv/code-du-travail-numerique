@@ -80,8 +80,8 @@ class ResultDetail extends React.Component {
               <Row value={`${labelize(salaireRef)}`}>Salaire retenu</Row>
               <Row value={echelon.groupe}>Echelon</Row>
               <Row value={hasOpe ? "Oui" : "non"}>
-                L&apos;entreprise est-elle affiliée a une Organisation
-                Patronnale Employeur
+                L’entreprise est-elle affiliée a une Organisation Patronnale
+                Employeur
               </Row>
               <Row value={`${age}`}>Age</Row>
               <Row value={`${anciennete / 12}`}>

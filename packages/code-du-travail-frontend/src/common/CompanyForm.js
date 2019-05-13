@@ -29,8 +29,8 @@ class CompanyForm extends React.Component {
     return (
       <form>
         <Title>Recherche par SIRET</Title>
-        Saisissez le numéro de SIRET de votre entreprise afin d&apos;obtenir
-        votre convention collective&nbsp;:
+        Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre
+        convention collective&nbsp;:
         <SuggestWrapper>
           {!this.state.company ? (
             <React.Fragment>

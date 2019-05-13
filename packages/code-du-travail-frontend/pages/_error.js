@@ -58,7 +58,7 @@ export default class Error extends React.Component {
                 : "Une erreur est apparue sur le client"}
               <br />
               <br />
-              <Link href="/">Retour à la page d&apos;accueil</Link>
+              <Link href="/">Retour à la page d’accueil</Link>
             </p>
           </div>
         </Section>

@@ -79,12 +79,12 @@ class ResultDetail extends React.Component {
                   <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
                   <p>
                     <em>
-                      Sur la base du calcul de l&apos;indemnité minimum légale
-                      de licenciement.
+                      Sur la base du calcul de l’indemnité minimum légale de
+                      licenciement.
                       {inaptitude && (
                         <React.Fragment>
-                          <br /> Ce montant prend en compte l&apos;indemnité
-                          spéciale de licenciement.
+                          <br /> Ce montant prend en compte l’indemnité spéciale
+                          de licenciement.
                         </React.Fragment>
                       )}
                     </em>

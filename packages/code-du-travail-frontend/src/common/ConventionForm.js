@@ -29,8 +29,8 @@ class ConventionForm extends React.Component {
         <h2>Trouvez votre convention collective</h2>
         <div>
           <Title>Recherche par nom ou par identifiant</Title>
-          Saisissez l&apos;identifiant de convention collective (IDCC) ou le nom
-          de la branche&nbsp;:
+          Saisissez l’identifiant de convention collective (IDCC) ou le nom de
+          la branche&nbsp;:
           <SuggestWrapper>
             {!this.state.convention ? (
               <IdccSuggester
@@ -50,18 +50,18 @@ class ConventionForm extends React.Component {
           <ul>
             <li>
               Elle doit figurer au <b>bulletin de paie</b>, et sur une notice
-              remise à l&apos;embauche ou <b>sur le contrat de travail</b>
+              remise à l’embauche ou <b>sur le contrat de travail</b>
             </li>
             <li>
-              Sur l&apos;affichage obligatoire dans l&apos;entreprise (avec les
-              modalités de consultation en entreprise)
+              Sur l’affichage obligatoire dans l’entreprise (avec les modalités
+              de consultation en entreprise)
             </li>
           </ul>
           <Subtitle>Quelle est la convention collective applicable ?</Subtitle>
           <ul>
             <li>
-              En principe celle relevant de l&apos;activité principale dans
-              l&apos;entreprise pour les cas les plus simples.
+              En principe celle relevant de l’activité principale dans
+              l’entreprise pour les cas les plus simples.
             </li>
           </ul>
         </div>

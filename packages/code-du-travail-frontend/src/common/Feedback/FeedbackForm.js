@@ -97,7 +97,7 @@ class FeedbackForm extends React.Component {
         return <Alert success>Message bien envoyé !</Alert>;
 
       case "error":
-        return <Alert warning>Impossible d&apos;envoyer votre message</Alert>;
+        return <Alert warning>Impossible d’envoyer votre message</Alert>;
 
       default:
         return null;

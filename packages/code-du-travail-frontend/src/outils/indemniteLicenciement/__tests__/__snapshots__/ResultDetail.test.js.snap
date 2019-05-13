@@ -88,7 +88,7 @@ exports[`<ResultDetail /> should render 1`] = `
           </h3>
           <p>
             <em>
-              Sur la base du calcul de l'indemnité minimum légale de licenciement.
+              Sur la base du calcul de l’indemnité minimum légale de licenciement.
             </em>
           </p>
         </div>
@@ -272,7 +272,7 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
           </h3>
           <p>
             <em>
-              Sur la base du calcul de l'indemnité minimum légale de licenciement.
+              Sur la base du calcul de l’indemnité minimum légale de licenciement.
             </em>
           </p>
         </div>
@@ -456,7 +456,7 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
           </h3>
           <p>
             <em>
-              Sur la base du calcul de l'indemnité minimum légale de licenciement.
+              Sur la base du calcul de l’indemnité minimum légale de licenciement.
             </em>
           </p>
         </div>

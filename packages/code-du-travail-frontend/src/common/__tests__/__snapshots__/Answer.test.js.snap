@@ -972,7 +972,7 @@ exports[`<Answer /> should render 1`] = `
         class="c29"
         role="alert"
       >
-        Ce site est en cours de construction, la fiabilité des réponses qui s'y trouvent ne sont pas garanties.
+        Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
           class="c30"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
@@ -980,7 +980,7 @@ exports[`<Answer /> should render 1`] = `
           target="_blank"
           title="consulter l'ordonance"
         >
-          L'ouverture officielle du site
+          L’ouverture officielle du site
         </a>
         est prévue pour 2020.
       </div>
@@ -2064,7 +2064,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         class="c33"
         role="alert"
       >
-        Ce site est en cours de construction, la fiabilité des réponses qui s'y trouvent ne sont pas garanties.
+        Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
           class="c34"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
@@ -2072,7 +2072,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
           target="_blank"
           title="consulter l'ordonance"
         >
-          L'ouverture officielle du site
+          L’ouverture officielle du site
         </a>
         est prévue pour 2020.
       </div>
