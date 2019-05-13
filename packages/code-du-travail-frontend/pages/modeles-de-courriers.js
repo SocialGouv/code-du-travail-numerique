@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { AsideTitle } from "@cdt/ui";
+import { AsideTitle, Section, Wrapper } from "@cdt/ui";
 
 import Html from "../src/common/Html";
 import { DownloadFile } from "../src/common/DownloadFile";
@@ -47,11 +47,11 @@ class ModeleCourrier extends React.Component {
           date={data._source.date}
           sourceType="Modèle de document"
         >
-          <section>
-            <Html className="wrapper-outline courrier-type">
-              {data._source.html}
-            </Html>
-          </section>
+          <Section>
+            <Wrapper variant="outline">
+              <Html className="courrier-type">{data._source.html}</Html>
+            </Wrapper>
+          </Section>
           <AsideTitle>Télécharger le modèle</AsideTitle>
           <DownloadFile
             title={data._source.title}

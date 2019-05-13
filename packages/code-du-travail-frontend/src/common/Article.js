@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { icons, Section, Tag, theme } from "@cdt/ui/";
+import { Container, icons, Section, Tag, theme, Wrapper } from "@cdt/ui/";
 
 const Article = ({
   title,
   tags,
-  className,
-  style,
   sourceType,
   date,
   icon: Icon = icons.Question,
@@ -16,35 +14,39 @@ const Article = ({
   children
 }) => {
   return (
-    <Section light className={className} style={style}>
-      <Header>
-        <IconWrapper>
-          <Icon />
-        </IconWrapper>
-        <div>
-          <H1>{title}</H1>
-          <Meta>
-            {sourceType && <Type>{sourceType}</Type>}
-            {date && (
-              <Date>
-                Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
-              </Date>
-            )}
-          </Meta>
-        </div>
-        <Tags>
-          {tags.map(tag => (
-            <Tag
-              key={tag}
-              style={{ cursor: "pointer" }}
-              onClick={() => onTagClick(tag)}
-            >
-              {tag}
-            </Tag>
-          ))}
-        </Tags>
-      </Header>
-      {children && <Content>{children}</Content>}
+    <Section>
+      <Container>
+        <Wrapper variant="light">
+          <Header>
+            <IconWrapper>
+              <Icon />
+            </IconWrapper>
+            <div>
+              <H1>{title}</H1>
+              <Meta>
+                {sourceType && <Type>{sourceType}</Type>}
+                {date && (
+                  <Date>
+                    Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
+                  </Date>
+                )}
+              </Meta>
+            </div>
+            <Tags>
+              {tags.map(tag => (
+                <Tag
+                  key={tag}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => onTagClick(tag)}
+                >
+                  {tag}
+                </Tag>
+              ))}
+            </Tags>
+          </Header>
+          {children && <Content>{children}</Content>}
+        </Wrapper>
+      </Container>
     </Section>
   );
 };

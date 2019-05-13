@@ -3,7 +3,7 @@ import getConfig from "next/config";
 import Head from "next/head";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import { Container } from "@cdt/ui";
+import { Container, Section } from "@cdt/ui";
 
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -55,11 +55,11 @@ class SearchPage extends React.Component {
           />
         </Head>
         <Search />
-        <div className="section">
+        <Section>
           <Container>
             <SearchResults query={q} results={data} source={source} />
           </Container>
-        </div>
+        </Section>
       </PageLayout>
     );
   }

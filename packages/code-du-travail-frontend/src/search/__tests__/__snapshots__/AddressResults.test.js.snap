@@ -1,348 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AddressResults/> should render no results 1`] = `
-.c0 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-}
-
-.c0:not([disabled]):hover,
-.c0:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c0:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c0[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c0[aria-pressed="true"]:not([disabled]):hover,
-.c0[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c0[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c0[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
 .c1 {
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 43.75rem;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
 }
 
 .c2 {
-  position: relative;
-  padding: 0 2rem;
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c3 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c3:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c3[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):hover,
+.c3[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c6 {
   margin-bottom: 1rem;
-}
-
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
-  min-width: 7rem;
-}
-
-.c5:not([disabled]):hover,
-.c5:not([disabled]):focus {
-  background: #f7f7f7;
-  color: #18181c;
-}
-
-.c5:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  outline: none;
-}
-
-.c5[aria-pressed="true"] {
-  color: #18181c;
-  background: #f7f7f7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
-}
-
-.c5[aria-pressed="true"]:not([disabled]):hover,
-.c5[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
-}
-
-.c5[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
-}
-
-.c5[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c5 + .c4 {
-  margin-left: 1rem;
-}
-
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  min-width: 7rem;
-}
-
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c6:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c6[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c6[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c6 + .c4 {
-  margin-left: 1rem;
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0;
-  }
-}
-
-<div>
-  <section
-    class="section"
-  >
-    <div
-      class="container"
-    >
-      <div
-        class="wrapper "
-      >
-        <div
-          category="primary"
-          class="alert "
-        >
-          Nous n’avons pas trouvé de résultat pour votre recherche.
-        </div>
-        <button
-          aria-pressed="false"
-          class="c0"
-        >
-          Posez votre question
-        </button>
-        <section
-          class="section"
-        >
-          <div
-            class="container"
-          >
-            <div
-              class="wrapper wrapper-dark c1"
-            >
-              <div
-                class="c2"
-              >
-                <h3
-                  class="c3"
-                >
-                  Avez-vous trouvé la réponse à votre question ?
-                </h3>
-                <p>
-                  <button
-                    aria-pressed="false"
-                    class="c4 c5"
-                  >
-                    Non
-                  </button>
-                  <button
-                    aria-pressed="false"
-                    class="c4 c6"
-                  >
-                    Oui
-                  </button>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </section>
-</div>
-`;
-
-exports[`<AddressResults/> should render results 1`] = `
-.c4 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-}
-
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c4:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c4[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c4[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c4[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c5 {
-  margin: 0 auto;
-  max-width: calc(3 * 1200px / 4);
-}
-
-.c6 {
-  position: relative;
-  padding: 0 2rem;
 }
 
 .c7 {
-  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
 
 .c9 {
@@ -473,61 +256,428 @@ exports[`<AddressResults/> should render results 1`] = `
   margin-left: 1rem;
 }
 
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c4 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media print {
+  .c5 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <div
+          category="primary"
+          class="alert "
+        >
+          Nous n’avons pas trouvé de résultat pour votre recherche.
+        </div>
+        <button
+          aria-pressed="false"
+          class="c3"
+        >
+          Posez votre question
+        </button>
+        <div
+          class="c0"
+        >
+          <div
+            class="c4"
+          >
+            <div
+              class="c5"
+            >
+              <h3
+                class="c6"
+              >
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+              <p
+                class="c7"
+              >
+                <button
+                  aria-pressed="false"
+                  class="c8 c9"
+                >
+                  Non
+                </button>
+                <button
+                  aria-pressed="false"
+                  class="c8 c10"
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AddressResults/> should render results 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 43.75rem;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c7 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c7:not([disabled]):hover,
+.c7:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c7:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c7[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c7[aria-pressed="true"]:not([disabled]):hover,
+.c7[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c7[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c10 {
+  margin-bottom: 1rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c13 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c13:not([disabled]):hover,
+.c13:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c13:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c13[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c13[aria-pressed="true"]:not([disabled]):hover,
+.c13[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c13[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c13 + .c12 {
+  margin-left: 1rem;
+}
+
+.c14 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+  min-width: 7rem;
+}
+
+.c14:not([disabled]):hover,
+.c14:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c14:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c14[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c14[aria-pressed="true"]:not([disabled]):hover,
+.c14[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c14[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c14 + .c12 {
+  margin-left: 1rem;
+}
+
+.c3 {
   font-size: 1rem;
 }
 
-.c1 {
+.c4 {
   display: block;
   font-size: 0.9em;
   line-height: 1.5;
   margin: 1rem 0;
 }
 
-.c1:link {
+.c4:link {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: rgba(100,100,100,0.9);
 }
 
-.c1:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c1:visited {
+.c4:visited {
   color: rgba(100,100,100,0.8);
 }
 
-.c2 {
+.c5 {
   font-size: 0.9em;
   margin-top: 0.25em;
   margin-bottom: 0.5em;
   line-height: 1.5;
 }
 
-.c3 {
+.c6 {
   font-size: 0.9em;
   margin-top: 0.25em;
   margin-bottom: 0.5em;
   line-height: 1.5;
 }
 
-@media (max-width:600px) {
-  .c6 {
+@media print {
+  .c1 {
+    max-width: 100%;
     padding: 0;
   }
 }
 
+@media print {
+  .c8 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media print {
+  .c9 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <ul
           class="card-wrapper"
@@ -536,12 +686,12 @@ exports[`<AddressResults/> should render results 1`] = `
             class="card"
           >
             <strong
-              class="c0"
+              class="c3"
             >
               Bureau des légendes
             </strong>
             <a
-              class="c1"
+              class="c4"
               href="https://www.openstreetmap.org/?mlat=4&mlon=44&zoom=16"
             >
               adresse inconnue
@@ -551,7 +701,7 @@ exports[`<AddressResults/> should render results 1`] = `
               Partout
             </a>
             <p
-              class="c2"
+              class="c5"
             >
               Tél: 
               <a
@@ -561,7 +711,7 @@ exports[`<AddressResults/> should render results 1`] = `
               </a>
             </p>
             <a
-              class="c3"
+              class="c6"
               href="mailto:email"
             >
               email
@@ -570,47 +720,45 @@ exports[`<AddressResults/> should render results 1`] = `
         </ul>
         <button
           aria-pressed="false"
-          class="c4"
+          class="c7"
         >
           Posez votre question
         </button>
-        <section
-          class="section"
+        <div
+          class="c0"
         >
           <div
-            class="container"
+            class="c8"
           >
             <div
-              class="wrapper wrapper-dark c5"
+              class="c9"
             >
-              <div
-                class="c6"
+              <h3
+                class="c10"
               >
-                <h3
-                  class="c7"
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+              <p
+                class="c11"
+              >
+                <button
+                  aria-pressed="false"
+                  class="c12 c13"
                 >
-                  Avez-vous trouvé la réponse à votre question ?
-                </h3>
-                <p>
-                  <button
-                    aria-pressed="false"
-                    class="c8 c9"
-                  >
-                    Non
-                  </button>
-                  <button
-                    aria-pressed="false"
-                    class="c8 c10"
-                  >
-                    Oui
-                  </button>
-                </p>
-              </div>
+                  Non
+                </button>
+                <button
+                  aria-pressed="false"
+                  class="c12 c14"
+                >
+                  Oui
+                </button>
+              </p>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;

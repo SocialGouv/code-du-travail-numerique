@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 import MathJax from "react-mathjax-preview";
 import { Header } from "../stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
@@ -53,15 +53,19 @@ class ResultDetail extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <Section light>
-          <Header>
-            <h2>Montant indicatif de votre indemnité</h2>
-            <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
-            <p>
-              <em>Calculé sur la base de la </em>
-              {convention.ccName}
-            </p>
-          </Header>
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <Header>
+                <h2>Montant indicatif de votre indemnité</h2>
+                <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
+                <p>
+                  <em>Calculé sur la base de la </em>
+                  {convention.ccName}
+                </p>
+              </Header>
+            </Wrapper>
+          </Container>
         </Section>
         <Container>
           <table width="100%" style={{ fontSize: "1.2em" }}>
@@ -86,18 +90,22 @@ class ResultDetail extends React.Component {
             </tbody>
           </table>
         </Container>
-        <Section light>
-          <div
-            style={{
-              fontSize: "2.5em",
-              textAlign: "center",
-              fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
-            }}
-          >
-            <ErrorBoundary>
-              <MathJax math={"`" + formula + "`"} />
-            </ErrorBoundary>
-          </div>
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <div
+                style={{
+                  fontSize: "2.5em",
+                  textAlign: "center",
+                  fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
+                }}
+              >
+                <ErrorBoundary>
+                  <MathJax math={"`" + formula + "`"} />
+                </ErrorBoundary>
+              </div>
+            </Wrapper>
+          </Container>
         </Section>
       </React.Fragment>
     );

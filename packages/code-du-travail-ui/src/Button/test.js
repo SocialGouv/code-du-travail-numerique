@@ -18,9 +18,9 @@ describe("<Button />", () => {
     ["danger"],
     ["icon"],
     ["link"]
-  ])("it renders a Button %s", label => {
+  ])("it renders a Button %s", variant => {
     const { container } = render(
-      <Button variant={label}>this is a Button {label} </Button>
+      <Button variant={variant}>this is a Button {variant} </Button>
     );
     expect(container).toMatchSnapshot();
   });

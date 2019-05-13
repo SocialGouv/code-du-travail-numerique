@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import { Container, Section, Alert } from "@cdt/ui";
+import { Alert, Container, Section, Wrapper } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 
 const About = () => (
@@ -12,9 +12,9 @@ const About = () => (
         content="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
       />
     </Head>
-    <Container>
-      <Section light>
-        <div>
+    <Section>
+      <Container narrow>
+        <Wrapper variant="light">
           <h1>À propos du code du travail numérique</h1>
           <Alert info>
             Ce service public vous permet d&apos;obtenir des réponses détaillées
@@ -78,9 +78,9 @@ const About = () => (
             claire sur les dispositions propres à la situation de
             l&apos;utilisateur.
           </p>
-        </div>
-      </Section>
-    </Container>
+        </Wrapper>
+      </Container>
+    </Section>
   </PageLayout>
 );
 export default About;

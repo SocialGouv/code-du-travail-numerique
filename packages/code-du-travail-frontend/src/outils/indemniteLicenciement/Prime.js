@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
 import { Input, Label } from "./stepStyles";
@@ -23,25 +23,29 @@ class Primes extends React.Component {
 
     return (
       <React.Fragment>
-        <Section light>
-          <h2>
-            Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
-          </h2>
-          <Label>
-            <Input
-              size={5}
-              type="number"
-              name="prime"
-              onChange={e => onChange(parseFloat(e.target.value) || 0)}
-              onFocus={e => {
-                if (e.target.value === "0") {
-                  e.target.value = "";
-                }
-              }}
-              value={value}
-            />{" "}
-            €
-          </Label>
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <h2>
+                Montant des primes et/ou 13ème mois sur les 12 derniers mois ?
+              </h2>
+              <Label>
+                <Input
+                  size={5}
+                  type="number"
+                  name="prime"
+                  onChange={e => onChange(parseFloat(e.target.value) || 0)}
+                  onFocus={e => {
+                    if (e.target.value === "0") {
+                      e.target.value = "";
+                    }
+                  }}
+                  value={value}
+                />{" "}
+                €
+              </Label>
+            </Wrapper>
+          </Container>
         </Section>
         <Container>
           <PrevNextStepper

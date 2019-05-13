@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 import { Header } from "./stepStyles";
 import MathJax from "react-mathjax-preview";
 import styled from "styled-components";
@@ -72,57 +72,67 @@ class ResultDetail extends React.Component {
       <React.Fragment>
         {indemnite > 0 && (
           <Section>
-            <Header>
-              <h2>Montant indicatif de votre indemnité</h2>
-              <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
-              <p>
-                <em>
-                  Sur la base du calcul de l&apos;indemnité minimum légale de
-                  licenciement.
-                  {inaptitude && (
-                    <React.Fragment>
-                      <br /> Ce montant prend en compte l&apos;indemnité
-                      spéciale de licenciement.
-                    </React.Fragment>
-                  )}
-                </em>
-              </p>
-            </Header>
+            <Container>
+              <Wrapper>
+                <Header>
+                  <h2>Montant indicatif de votre indemnité</h2>
+                  <h3 style={{ fontSize: "2rem" }}>{labelize(indemnite)}</h3>
+                  <p>
+                    <em>
+                      Sur la base du calcul de l&apos;indemnité minimum légale
+                      de licenciement.
+                      {inaptitude && (
+                        <React.Fragment>
+                          <br /> Ce montant prend en compte l&apos;indemnité
+                          spéciale de licenciement.
+                        </React.Fragment>
+                      )}
+                    </em>
+                  </p>
+                </Header>
+              </Wrapper>
+            </Container>
           </Section>
         )}
         <Section>
-          <Table width="100%" style={{ fontSize: "1.2em" }}>
-            <tbody>
-              {!salaires.isPartiel && (
-                <Row value={labelize(moyenneSalaires)}>
-                  Moyenne des 12 derniers mois
-                </Row>
+          <Container>
+            <Wrapper>
+              <Table width="100%" style={{ fontSize: "1.2em" }}>
+                <tbody>
+                  {!salaires.isPartiel && (
+                    <Row value={labelize(moyenneSalaires)}>
+                      Moyenne des 12 derniers mois
+                    </Row>
+                  )}
+                  {!salaires.isPartiel && (
+                    <Row value={labelize(moyenne3DerniersMois)}>
+                      Moyenne des 3 derniers mois
+                    </Row>
+                  )}
+                  <Row value={labelize(salaireRef)}>Salaire de référence</Row>
+                  <Row value={isR12342 ? "1 / 5" : "1 / 4"}>
+                    {infoFinContrat}
+                  </Row>
+                  <Row value={isSmallAnciennete ? "< 10 ans" : "> 10 ans"}>
+                    Ancienneté
+                  </Row>
+                </tbody>
+              </Table>
+              {salaireRef > 0 && (
+                <div
+                  style={{
+                    fontSize: "2.5em",
+                    textAlign: "center",
+                    fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
+                  }}
+                >
+                  <ErrorBoundary>
+                    <MathJax math={"`" + formula + "`"} />
+                  </ErrorBoundary>
+                </div>
               )}
-              {!salaires.isPartiel && (
-                <Row value={labelize(moyenne3DerniersMois)}>
-                  Moyenne des 3 derniers mois
-                </Row>
-              )}
-              <Row value={labelize(salaireRef)}>Salaire de référence</Row>
-              <Row value={isR12342 ? "1 / 5" : "1 / 4"}>{infoFinContrat}</Row>
-              <Row value={isSmallAnciennete ? "< 10 ans" : "> 10 ans"}>
-                Ancienneté
-              </Row>
-            </tbody>
-          </Table>
-          {salaireRef > 0 && (
-            <div
-              style={{
-                fontSize: "2.5em",
-                textAlign: "center",
-                fontFamily: "MJXc-TeX-main-R,MJXc-TeX-main-Rw"
-              }}
-            >
-              <ErrorBoundary>
-                <MathJax math={"`" + formula + "`"} />
-              </ErrorBoundary>
-            </div>
-          )}
+            </Wrapper>
+          </Container>
         </Section>
       </React.Fragment>
     );

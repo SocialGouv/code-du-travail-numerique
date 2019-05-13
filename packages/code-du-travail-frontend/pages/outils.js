@@ -1,7 +1,8 @@
 import React from "react";
 import { withRouter } from "next/router";
 import Head from "next/head";
-import { Container, Alert } from "@cdt/ui";
+import styled from "styled-components";
+import { Alert, Container } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
@@ -10,9 +11,9 @@ import { PageLayout } from "../src/layout/PageLayout";
 import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
 
 const BigError = ({ children }) => (
-  <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
+  <StyledContainer>
     <Alert warning>{children}</Alert>
-  </Container>
+  </StyledContainer>
 );
 
 const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
@@ -80,3 +81,9 @@ class Outils extends React.Component {
 }
 
 export default withRouter(Outils);
+
+const StyledContainer = styled(Container)`
+  margin: 20%;
+  font-size: 2rem;
+  text-align: center;
+`;

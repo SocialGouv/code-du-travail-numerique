@@ -4,6 +4,11 @@ import * as theme from "./theme";
 import { Modal, ModalContentWrapper } from "./Modal";
 import { List, ListItem } from "./List";
 
+// Layout
+export { default as Container } from "./layout/Container";
+export { default as Section } from "./layout/Section";
+export { default as Wrapper } from "./layout/Wrapper";
+
 export { icons, keyframes, List, ListItem, Modal, ModalContentWrapper, theme };
 export { default as Accordion } from "./Accordion";
 export { default as Alert } from "./Alert";
@@ -15,9 +20,7 @@ export { default as Cards } from "./Cards";
 export { default as Card } from "./Card";
 export { default as Categories } from "./Categories";
 export { default as Category } from "./Category";
-export { default as Container } from "./Container";
 export { default as LargeLink } from "./LargeLink";
-export { default as Section } from "./Section";
 export { default as SrOnly } from "./SrOnly";
 export { default as Tabs } from "./Tabs";
 export { default as Tag } from "./Tag";

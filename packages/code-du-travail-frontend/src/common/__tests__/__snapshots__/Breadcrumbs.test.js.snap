@@ -1,26 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
-.c1 {
+.c3 {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 1.25rem 0;
 }
 
 .c0 {
   background: #c9d3df;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
   padding: 0.625rem 1.25rem;
 }
 
-.c2:first-child {
+.c4:first-child {
   padding-left: 0;
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   pointer-events: none;
   -webkit-user-select: none;
@@ -29,41 +43,52 @@ exports[`<Breadcrumbs /> should render a breadcrumbs 1`] = `
   user-select: none;
 }
 
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 <div>
   <nav
-    class="section c0"
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
-      <ul
-        class="c1"
+      <div
+        class="c2"
       >
-        <li
-          class="c2"
-        >
-          <span>
-             
-            item 1
-             
-          </span>
-        </li>
-        <li
-          aria-hidden="true"
+        <ul
           class="c3"
         >
-           » 
-        </li>
-        <li
-          class="c2"
-        >
-          <span>
-             
-            item 2
-             
-          </span>
-        </li>
-      </ul>
+          <li
+            class="c4"
+          >
+            <span>
+               
+              item 1
+               
+            </span>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <span>
+               
+              item 2
+               
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>

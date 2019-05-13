@@ -9,7 +9,15 @@ import Button from "../Button";
 import { box, colors, fonts, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 
-const Toast = ({ children, className, timeout, type, onRemove }) => {
+const Toast = ({
+  animate,
+  children,
+  className,
+  onRemove,
+  timeout,
+  type,
+  wide
+}) => {
   let timer = null;
   let Icon = IconInfo;
   if (type === "warning") Icon = IconWarning;
@@ -30,7 +38,12 @@ const Toast = ({ children, className, timeout, type, onRemove }) => {
   }, [timeout]);
 
   return (
-    <div className={className}>
+    <StyledToast
+      animate={animate}
+      type={type}
+      wide={wide}
+      className={className}
+    >
       <IconWrapper type={type}>
         <Icon />
       </IconWrapper>
@@ -42,7 +55,7 @@ const Toast = ({ children, className, timeout, type, onRemove }) => {
           </Button>
         </ButtonWrapper>
       ) : null}
-    </div>
+    </StyledToast>
   );
 };
 
@@ -69,7 +82,9 @@ Toast.defaultProps = {
   onRemove: null
 };
 
-const StyledToast = styled(Toast)`
+export default Toast;
+
+const StyledToast = styled.div`
   box-sizing: border-box;
   display: inline-flex;
   justify-content: space-between;
@@ -146,5 +161,3 @@ const ButtonWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
 `;
-
-export default StyledToast;

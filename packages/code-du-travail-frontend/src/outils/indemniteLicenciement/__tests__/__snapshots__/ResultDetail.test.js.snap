@@ -1,7 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ResultDetail /> should render 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,26 +43,40 @@ exports[`<ResultDetail /> should render 1`] = `
   align-items: center;
 }
 
-.c1 {
+.c4 {
   color: #757575;
 }
 
-.c1 a:link {
+.c4 a:link {
   color: #757575;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
 }
 
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <div
-          class="c0"
+          class="c3"
         >
           <h2>
             Montant indicatif de votre indemnité
@@ -52,18 +94,18 @@ exports[`<ResultDetail /> should render 1`] = `
         </div>
       </div>
     </div>
-  </section>
-  <section
-    class="section"
+  </div>
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <table
-          class="c1"
+          class="c4"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -138,12 +180,40 @@ exports[`<ResultDetail /> should render 1`] = `
         </table>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`<ResultDetail /> should render when rupture contrat is before sept 27 sept 2017 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -157,26 +227,40 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
   align-items: center;
 }
 
-.c1 {
+.c4 {
   color: #757575;
 }
 
-.c1 a:link {
+.c4 a:link {
   color: #757575;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
 }
 
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <div
-          class="c0"
+          class="c3"
         >
           <h2>
             Montant indicatif de votre indemnité
@@ -194,18 +278,18 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
         </div>
       </div>
     </div>
-  </section>
-  <section
-    class="section"
+  </div>
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <table
-          class="c1"
+          class="c4"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -280,12 +364,40 @@ exports[`<ResultDetail /> should render when rupture contrat is before sept 27 s
         </table>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`<ResultDetail /> should render with temps partiel 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,26 +411,40 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
   align-items: center;
 }
 
-.c1 {
+.c4 {
   color: #757575;
 }
 
-.c1 a:link {
+.c4 a:link {
   color: #757575;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
 }
 
 <div>
-  <section
-    class="section"
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <div
-          class="c0"
+          class="c3"
         >
           <h2>
             Montant indicatif de votre indemnité
@@ -336,18 +462,18 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
         </div>
       </div>
     </div>
-  </section>
-  <section
-    class="section"
+  </div>
+  <div
+    class="c0"
   >
     <div
-      class="container"
+      class="c1"
     >
       <div
-        class="wrapper "
+        class="c2"
       >
         <table
-          class="c1"
+          class="c4"
           style="font-size: 1.2em;"
           width="100%"
         >
@@ -398,6 +524,6 @@ exports[`<ResultDetail /> should render with temps partiel 1`] = `
         </table>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;

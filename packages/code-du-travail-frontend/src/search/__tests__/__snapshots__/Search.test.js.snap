@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<search /> should render 1`] = `
-.c4 {
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+  background-color: #fff;
+}
+
+.c6 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -23,13 +38,13 @@ exports[`<search /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c4:not([disabled]):active {
+.c6:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -37,7 +52,7 @@ exports[`<search /> should render 1`] = `
   outline: none;
 }
 
-.c4[aria-pressed="true"] {
+.c6[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -46,21 +61,21 @@ exports[`<search /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c4[aria-pressed="true"]:not([disabled]):active {
+.c6[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c4[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c2 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -71,27 +86,28 @@ exports[`<search /> should render 1`] = `
   text-align: left;
 }
 
-.c3 ul {
+.c5 ul {
   z-index: 100;
 }
 
-.c3 li[role="option"]:nth-child(2n + 1) {
+.c5 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
-.c1 {
+.c3 {
+  margin-top: 0;
   font-size: 1.6rem;
   line-height: 1.4;
   color: #006ab2;
 }
 
-.c0 {
+.c2 {
   position: relative;
   padding: 1rem 0;
   text-align: center;
 }
 
-.c0 .search__form {
+.c2 .search__form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,11 +119,11 @@ exports[`<search /> should render 1`] = `
   width: 90%;
 }
 
-.c0 .search__form button {
+.c2 .search__form button {
   margin-left: 0.5rem;
 }
 
-.c0 .search__fields {
+.c2 .search__fields {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,7 +134,7 @@ exports[`<search /> should render 1`] = `
   position: relative;
 }
 
-.c0 .search__input__icon {
+.c2 .search__input__icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -126,7 +142,7 @@ exports[`<search /> should render 1`] = `
   width: 2.55rem;
 }
 
-.c0 .search__sources {
+.c2 .search__sources {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -143,14 +159,14 @@ exports[`<search /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c0 .search__sources__icon {
+.c2 .search__sources__icon {
   position: absolute;
   margin: 0 calc(1.25rem / 2);
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c0 .search__sources__value {
+.c2 .search__sources__value {
   padding: 0.5rem 2rem 0.5rem 2.5em;
   color: #26353f;
   background-color: transparent;
@@ -158,7 +174,7 @@ exports[`<search /> should render 1`] = `
   border: 1px solid transparent;
 }
 
-.c0 .search__input {
+.c2 .search__input {
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   height: 100%;
@@ -177,58 +193,65 @@ exports[`<search /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c0 .search__input:focus {
+.c2 .search__input:focus {
   border-color: #006be6;
   outline: none;
 }
 
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 @media (max-width:980px) {
-  .c0 .search__sources {
+  .c2 .search__sources {
     display: none;
   }
 
-  .c0 .search__input {
+  .c2 .search__input {
     padding-right: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c0 .search__form {
+  .c2 .search__form {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
 
-  .c0 .search__form button {
+  .c2 .search__form button {
     margin-left: 0;
   }
 
-  .c0 .search__input__icon {
+  .c2 .search__input__icon {
     display: none;
   }
 
-  .c0 .search__fields {
+  .c2 .search__fields {
     margin-bottom: 0.5rem;
   }
 
-  .c0 .search__input {
+  .c2 .search__input {
     padding: 1rem;
   }
 }
 
 <div>
   <div
-    class="section-white shadow-bottom search-widget"
+    class="shadow-bottom search-widget c0"
   >
     <div
-      class="container "
+      class="c1"
     >
       <div
-        class="c0"
+        class="c2"
       >
         <p
-          class="c1"
+          class="c3"
         >
           Posez votre question sur le droit du travail
         </p>
@@ -321,7 +344,7 @@ exports[`<search /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c2"
+              class="c4"
               for="main-search-input"
             >
               <span
@@ -347,7 +370,7 @@ exports[`<search /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c3"
+                  class="c5"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -356,7 +379,7 @@ exports[`<search /> should render 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c4"
+            class="c6"
             type="submit"
           >
             Rechercher
@@ -369,7 +392,22 @@ exports[`<search /> should render 1`] = `
 `;
 
 exports[`<search /> should render suggestions 1`] = `
-.c9 {
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+  background-color: #fff;
+}
+
+.c11 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -391,13 +429,13 @@ exports[`<search /> should render suggestions 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
+.c11:not([disabled]):hover,
+.c11:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c9:not([disabled]):active {
+.c11:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -405,7 +443,7 @@ exports[`<search /> should render suggestions 1`] = `
   outline: none;
 }
 
-.c9[aria-pressed="true"] {
+.c11[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -414,25 +452,25 @@ exports[`<search /> should render suggestions 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
+.c11[aria-pressed="true"]:not([disabled]):hover,
+.c11[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):active {
+.c11[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c9[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c4 p {
+.c6 p {
   margin: 0;
 }
 
-.c2 {
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -443,27 +481,28 @@ exports[`<search /> should render suggestions 1`] = `
   text-align: left;
 }
 
-.c3 ul {
+.c5 ul {
   z-index: 100;
 }
 
-.c3 li[role="option"]:nth-child(2n + 1) {
+.c5 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
-.c1 {
+.c3 {
+  margin-top: 0;
   font-size: 1.6rem;
   line-height: 1.4;
   color: #006ab2;
 }
 
-.c0 {
+.c2 {
   position: relative;
   padding: 1rem 0;
   text-align: center;
 }
 
-.c0 .search__form {
+.c2 .search__form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -475,11 +514,11 @@ exports[`<search /> should render suggestions 1`] = `
   width: 90%;
 }
 
-.c0 .search__form button {
+.c2 .search__form button {
   margin-left: 0.5rem;
 }
 
-.c0 .search__fields {
+.c2 .search__fields {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -490,7 +529,7 @@ exports[`<search /> should render suggestions 1`] = `
   position: relative;
 }
 
-.c0 .search__input__icon {
+.c2 .search__input__icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -498,7 +537,7 @@ exports[`<search /> should render suggestions 1`] = `
   width: 2.55rem;
 }
 
-.c0 .search__sources {
+.c2 .search__sources {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -515,14 +554,14 @@ exports[`<search /> should render suggestions 1`] = `
   border-radius: 0.25rem;
 }
 
-.c0 .search__sources__icon {
+.c2 .search__sources__icon {
   position: absolute;
   margin: 0 calc(1.25rem / 2);
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c0 .search__sources__value {
+.c2 .search__sources__value {
   padding: 0.5rem 2rem 0.5rem 2.5em;
   color: #26353f;
   background-color: transparent;
@@ -530,7 +569,7 @@ exports[`<search /> should render suggestions 1`] = `
   border: 1px solid transparent;
 }
 
-.c0 .search__input {
+.c2 .search__input {
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   height: 100%;
@@ -549,17 +588,9 @@ exports[`<search /> should render suggestions 1`] = `
   transition: border 250ms ease;
 }
 
-.c0 .search__input:focus {
+.c2 .search__input:focus {
   border-color: #006be6;
   outline: none;
-}
-
-.c5 {
-  display: inline-block;
-}
-
-.c6 {
-  display: inline-block;
 }
 
 .c7 {
@@ -570,53 +601,68 @@ exports[`<search /> should render suggestions 1`] = `
   display: inline-block;
 }
 
+.c9 {
+  display: inline-block;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 @media (max-width:980px) {
-  .c0 .search__sources {
+  .c2 .search__sources {
     display: none;
   }
 
-  .c0 .search__input {
+  .c2 .search__input {
     padding-right: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c0 .search__form {
+  .c2 .search__form {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
 
-  .c0 .search__form button {
+  .c2 .search__form button {
     margin-left: 0;
   }
 
-  .c0 .search__input__icon {
+  .c2 .search__input__icon {
     display: none;
   }
 
-  .c0 .search__fields {
+  .c2 .search__fields {
     margin-bottom: 0.5rem;
   }
 
-  .c0 .search__input {
+  .c2 .search__input {
     padding: 1rem;
   }
 }
 
 <div>
   <div
-    class="section-white shadow-bottom search-widget"
+    class="shadow-bottom search-widget c0"
   >
     <div
-      class="container "
+      class="c1"
     >
       <div
-        class="c0"
+        class="c2"
       >
         <p
-          class="c1"
+          class="c3"
         >
           Posez votre question sur le droit du travail
         </p>
@@ -709,7 +755,7 @@ exports[`<search /> should render suggestions 1`] = `
               </select>
             </label>
             <label
-              class="c2"
+              class="c4"
               for="main-search-input"
             >
               <span
@@ -735,7 +781,7 @@ exports[`<search /> should render suggestions 1`] = `
                   value="yolo"
                 />
                 <div
-                  class="c3"
+                  class="c5"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 >
@@ -751,10 +797,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c4"
+                        class="c6"
                       >
                         <div
-                          class="c5"
+                          class="c7"
                         >
                           foo
                         </div>
@@ -768,10 +814,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c4"
+                        class="c6"
                       >
                         <div
-                          class="c6"
+                          class="c8"
                         >
                           foobar
                         </div>
@@ -785,10 +831,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c4"
+                        class="c6"
                       >
                         <div
-                          class="c7"
+                          class="c9"
                         >
                           foo bar ?
                         </div>
@@ -802,10 +848,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c4"
+                        class="c6"
                       >
                         <div
-                          class="c8"
+                          class="c10"
                         >
                           foo bazzz
                         </div>
@@ -818,7 +864,7 @@ exports[`<search /> should render suggestions 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c9"
+            class="c11"
             type="submit"
           >
             Rechercher
