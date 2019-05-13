@@ -139,7 +139,7 @@ exports[`<ChoixCCN /> should display cc list  1`] = `
         class="c2"
       >
         <h2>
-          Est-ce qu'une convention collective s'applique dans votre entreprise ?
+          Est-ce qu’une convention collective s’applique dans votre entreprise ?
         </h2>
         <div
           class="c3"
@@ -319,7 +319,7 @@ exports[`<ChoixCCN /> should render 1`] = `
         class="c2"
       >
         <h2>
-          Est-ce qu'une convention collective s'applique dans votre entreprise ?
+          Est-ce qu’une convention collective s’applique dans votre entreprise ?
         </h2>
         <div
           class="c3"
@@ -443,7 +443,7 @@ exports[`<ChoixCCN /> should update view when update checkbox  1`] = `
         class="c2"
       >
         <h2>
-          Est-ce qu'une convention collective s'applique dans votre entreprise ?
+          Est-ce qu’une convention collective s’applique dans votre entreprise ?
         </h2>
         <div
           class="c3"

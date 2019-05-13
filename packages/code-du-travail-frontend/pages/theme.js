@@ -118,7 +118,7 @@ const NotFound = () => (
     <Search />
     <Section variant="white">
       <Container>
-        <BigError>Ce thème n&apos;a pas été trouvé</BigError>
+        <BigError>Ce thème n’a pas été trouvé</BigError>
       </Container>
     </Section>
   </PageLayout>

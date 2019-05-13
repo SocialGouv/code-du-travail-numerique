@@ -204,7 +204,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             >
               Recherche par nom ou par identifiant
             </h3>
-            Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
+            Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
               class="c5"
             >
@@ -243,13 +243,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 <b>
                   bulletin de paie
                 </b>
-                , et sur une notice remise à l'embauche ou 
+                , et sur une notice remise à l’embauche ou 
                 <b>
                   sur le contrat de travail
                 </b>
               </li>
               <li>
-                Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+                Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
               </li>
             </ul>
             <div
@@ -259,7 +259,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             </div>
             <ul>
               <li>
-                En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+                En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
               </li>
             </ul>
           </div>
@@ -270,7 +270,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           >
             Recherche par SIRET
           </h3>
-          Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
+          Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre convention collective :
           <div
             class="c5"
           >
