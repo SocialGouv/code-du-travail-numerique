@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Link } from "../../routes";
 
 import {
@@ -7,6 +8,7 @@ import {
   Categories as CategoriesWrapper,
   Category as CategoryItem,
   Section,
+  theme,
   Wrapper
 } from "@cdt/ui";
 
@@ -38,17 +40,7 @@ export default class Categories extends React.Component {
         <Section>
           <Container>
             <Wrapper>
-              {title && (
-                <h2
-                  style={{
-                    marginTop: 20,
-                    marginBottom: 40,
-                    textAlign: "center"
-                  }}
-                >
-                  {title}
-                </h2>
-              )}
+              <Title>{title}</Title>
               <CategoriesWrapper>
                 {themes.map(({ slug, label, text, icon }) => (
                   <CategoryItem key={slug + label} small={!isRoot}>
@@ -89,3 +81,10 @@ Category.propTypes = {
 Category.defaultProps = {
   icon: "/static/assets/icons/chat.svg"
 };
+
+const { spacing } = theme;
+
+const Title = styled.h2`
+  text-align: center;
+  margin-bottom: ${spacing.large};
+`;

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "../../routes";
 import styled from "styled-components";
 
-import { Container, Categories, Section, Wrapper } from "@cdt/ui";
+import { Container, Categories, Section, theme, Wrapper } from "@cdt/ui";
 import ConventionModal from "./ConventionModal";
 
 const outils = [
@@ -79,9 +79,11 @@ export default class Outils extends React.PureComponent {
   }
 }
 
+const { spacing } = theme;
+
 const Title = styled.h2`
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: ${spacing.large};
 `;
 
 export const OutilCard = ({ small, ...props }) => (
