@@ -1,10 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Container, Section, Wrapper } from "@cdt/ui";
-import { coefficient } from "./0044_coefficient";
-import { PrevNextStepper } from "../PrevNextStepper";
+import React, { useState } from "react";
+import { Field } from "react-final-form";
+import { OnChange } from "react-final-form-listeners";
+import styled from "styled-components";
 
-const groupeLabelByCoeff = coefficient.reduce(
+import { coefficients } from "./0044_coefficient";
+import { required } from "../components/validators";
+
+const groupeLabelByCoeff = coefficients.reduce(
   (state, { coefficient, groupe, label }) => {
     if (!state.has(coefficient)) {
       state.set(coefficient, { groupe, labels: [label] });
@@ -15,6 +17,7 @@ const groupeLabelByCoeff = coefficient.reduce(
   },
   new Map()
 );
+
 const options = [...groupeLabelByCoeff].map(([coefficient, { groupe }]) => {
   return (
     <option key={`${groupe}-${coefficient}`} value={coefficient}>
@@ -22,95 +25,52 @@ const options = [...groupeLabelByCoeff].map(([coefficient, { groupe }]) => {
     </option>
   );
 });
-const selectStyle = {
-  fontSize: "1.25rem"
-};
-class EchelonChimie extends React.Component {
-  static propTypes = {
-    onChange: PropTypes.func.isRequired,
-    value: PropTypes.shape({
-      coefficient: PropTypes.string,
-      groupe: PropTypes.string
-    }),
-    onPrevious: PropTypes.func.isRequired,
-    onNext: PropTypes.func.isRequired,
-    nextDisabled: PropTypes.bool
-  };
-  static defaultProps = {
-    value: {},
-    nextDisabled: true
-  };
-  state = {
-    nextDisabled: !(this.props.value && this.props.value.coefficient)
-  };
 
-  onSelectCoefficient = event => {
-    const coefficient = event.target.value;
-    if (coefficient === "none") {
-      return;
-    }
+function EchelonChimie({ name }) {
+  const [labels, setLabels] = useState();
+  return (
+    <>
+      <p>Quel est votre échelon dans la convention collective ?</p>
+      <Field name="echelon" validate={required}>
+        {({ input }) => (
+          <Select {...input}>
+            <option disabled value="">
+              Sélectionnez un échelon
+            </option>
+            {options}
+          </Select>
+        )}
+      </Field>
 
-    const { groupe } = groupeLabelByCoeff.get(coefficient);
+      <Field name={name} subscribe={{}}>
+        {({ input }) => (
+          <OnChange name="echelon">
+            {coefficient => {
+              if (coefficient) {
+                const { groupe, labels } = groupeLabelByCoeff.get(coefficient);
+                setLabels(labels);
+                input.onChange(groupe);
+              } else {
+                setLabels(null);
+              }
+            }}
+          </OnChange>
+        )}
+      </Field>
 
-    this.props.onChange({
-      groupe,
-      coefficient
-    });
-    this.setState({ nextDisabled: false });
-  };
-
-  render() {
-    const { onPrevious, onNext, nextDisabled, value } = this.props;
-    let labels = [];
-    if (groupeLabelByCoeff.has(this.props.value.coefficient)) {
-      labels = (
-        <div>
-          <p>Description</p>
-          <ul>
-            {groupeLabelByCoeff
-              .get(this.props.value.coefficient)
-              .labels.map((label, i) => (
-                <li key={i}>{label}</li>
-              ))}
-          </ul>
-        </div>
-      );
-    }
-    return (
-      <React.Fragment>
-        <Section>
-          <Container>
-            <Wrapper variant="light">
-              <h2>Quel est votre échelon dans la convention collective ?</h2>
-              <p>
-                <select
-                  onChange={this.onSelectCoefficient}
-                  onBlur={this.onSelectCoefficient}
-                  name="echelon"
-                  value={value.coefficient}
-                  style={{ ...selectStyle }}
-                  defaultValue={"none"}
-                >
-                  <option disabled value="none">
-                    Sélectionnez un échelon
-                  </option>
-                  {options}
-                </select>
-              </p>
-              {labels}
-            </Wrapper>
-          </Container>
-        </Section>
-        <Container>
-          <PrevNextStepper
-            onPrev={onPrevious}
-            onNext={onNext}
-            nextDisabled={nextDisabled || this.state.nextDisabled}
-          />
-        </Container>
-      </React.Fragment>
-    );
-  }
+      {labels && (
+        <ul>
+          {labels.map((label, index) => (
+            <li key={`label-${index}`}>{label}</li>
+          ))}
+        </ul>
+      )}
+    </>
+  );
 }
 
 export { EchelonChimie };
+
+const Select = styled.select`
+  width: 100%;
+`;
