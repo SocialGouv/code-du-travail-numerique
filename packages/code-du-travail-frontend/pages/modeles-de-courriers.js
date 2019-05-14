@@ -41,14 +41,14 @@ class ModeleCourrier extends React.Component {
         <Answer
           title={`Modèle de courrier :  ${data._source.title}`}
           emptyMessage="Modèle de courrier introuvable"
-          intro={<p>{description}</p>}
+          intro={description}
           footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
           icon={ModeleCourrierIcon}
           date={data._source.date}
           sourceType="Modèle de document"
         >
           <Section>
-            <Wrapper variant="outline">
+            <Wrapper variant="light">
               <Html className="courrier-type">{data._source.html}</Html>
             </Wrapper>
           </Section>

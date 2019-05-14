@@ -22,11 +22,11 @@ const BackToResultsLink = ({ query }) => {
   if (!query.q) return null;
 
   return (
-    <BacklinkWrapper>
+    <BacklinkContainer>
       <Link route="recherche" params={{ ...query }}>
         <a>{"< Retour aux résultats"}</a>
       </Link>
-    </BacklinkWrapper>
+    </BacklinkContainer>
   );
 };
 function getBreadcrumbs(items = []) {
@@ -62,7 +62,7 @@ function Answer({
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
         <Article title={title} icon={icon} date={date} sourceType={sourceType}>
-          {intro && <Wrapper variant="dark">{intro}</Wrapper>}
+          {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
           {html && <Html>{html}</Html>}
           {children}
           <Footer>{footer}</Footer>
@@ -94,7 +94,11 @@ const StyledContainer = styled(Container)`
   text-align: center;
 `;
 
-const BacklinkWrapper = styled(Container)`
+const BacklinkContainer = styled(Container)`
+  margin-top: ${spacing.base};
+`;
+
+const IntroWrapper = styled(Wrapper)`
   margin-top: ${spacing.base};
 `;
 

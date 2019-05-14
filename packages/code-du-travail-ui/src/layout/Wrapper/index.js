@@ -45,12 +45,6 @@ const StyledWrapper = styled.div`
         background-color: ${colors.darkBackground};
       `;
     }
-    if (props.variant === "outline") {
-      return css`
-        margin: 0 calc(-1 * ${spacing.large});
-        padding: ${spacing.large};
-      `;
-    }
   }}
   & > *:last-child {
     margin-bottom: 0;

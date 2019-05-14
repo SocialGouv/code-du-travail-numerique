@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Container /> should render 1`] = `
+exports[`<Container /> renders 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,12 +27,12 @@ exports[`<Container /> should render 1`] = `
 </div>
 `;
 
-exports[`<Container /> should render narrow 1`] = `
+exports[`<Container /> renders narrow 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 43.75rem;
+  max-width: 46.25rem;
 }
 
 .c0 > *:last-child {
@@ -51,6 +51,62 @@ exports[`<Container /> should render narrow 1`] = `
     class="c0"
   >
     Narrow contained
+  </div>
+</div>
+`;
+
+exports[`<Container /> renders narrow without padding 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    noPadding prop can only be used with the narrow prop
+  </div>
+</div>
+`;
+
+exports[`<Container /> renders without padding even if the prop is specified, because the narrow prop is not  1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    noPadding prop can only be used with the narrow prop
   </div>
 </div>
 `;

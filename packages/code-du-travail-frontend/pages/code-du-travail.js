@@ -2,7 +2,6 @@ import React from "react";
 import { withRouter } from "next/router";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
@@ -17,6 +16,24 @@ const {
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
 
+const BreadCrumbs = ({ entry }) => {
+  if (entries && !entries.length) return null;
+  const entries = entry
+    .split("/")
+    .map(s => s.trim())
+    .filter(Boolean);
+  return (
+    <nav className="breadcrumb" aria-label="breadcrumb">
+      <ol className="breadcrumb">
+        {entries.map((entry, i) => (
+          <li key={i} className="breadcrumb-item">
+            {entry}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+};
 const Source = ({ name, url }) => (
   <a
     href={url}
@@ -27,21 +44,6 @@ const Source = ({ name, url }) => (
     Voir le contenu original sur : {name}{" "}
   </a>
 );
-
-const getFakeBreadCrumb = path =>
-  path
-    .split("/")
-    .map(s => s.trim())
-    .filter(Boolean)
-    .map((part, i, all) =>
-      i === all.length - 1 ? (
-        part
-      ) : (
-        <span className="link" key={part}>
-          {part}
-        </span>
-      )
-    );
 
 class Fiche extends React.Component {
   static async getInitialProps({ query }) {
@@ -65,11 +67,7 @@ class Fiche extends React.Component {
         </Head>
         <Answer
           title={data._source.title}
-          intro={
-            <div style={{ marginBottom: 20, fontSize: "0.8em" }}>
-              <BreadCrumbs entries={getFakeBreadCrumb(data._source.path)} />
-            </div>
-          }
+          intro={<BreadCrumbs entry={data._source.path} />}
           date={format(new Date(data._source.date_debut), "D MMMM YYYY", {
             locale: frLocale
           })}
