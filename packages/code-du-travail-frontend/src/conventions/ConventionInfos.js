@@ -20,11 +20,11 @@ class ConventionInfos extends React.Component {
           </tbody>
         </table>
 
-        <div>
+        <p>
           <a target="_blank" rel="noopener noreferrer" href={url}>
             Voir la convention sur Legifrance ↗
           </a>
-        </div>
+        </p>
       </React.Fragment>
     );
   }

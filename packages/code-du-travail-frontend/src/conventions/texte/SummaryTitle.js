@@ -28,7 +28,7 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
       </div>
       {(expanded || visible) &&
         children.map((child, idx) => (
-          <SummaryItem key={idx} level={0} maxLevel={10} {...child}>
+          <SummaryItem key={idx} level={0} {...child}>
             {child.children}
           </SummaryItem>
         ))}

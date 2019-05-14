@@ -94,28 +94,28 @@ class ConventionTexte extends React.Component {
   }
 }
 
-const { breakpoints } = theme;
-
 const Wrapper = styled.div`
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${theme.breakpoints.tablet}) {
     display: flex;
   }
 `;
 
 const SidebarWrapper = styled.div`
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${theme.breakpoints.tablet}) {
     flex: 0 1 40%;
     position: sticky;
     top: 0px;
     max-height: 100vh;
     overflow: scroll;
+    padding-right: 20px;
   }
 `;
 
 const ContentWrapper = styled.div`
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${theme.breakpoints.tablet}) {
     flex: 0 1 60%;
     overflow: scroll;
+    padding-left: 10px;
   }
 `;
 

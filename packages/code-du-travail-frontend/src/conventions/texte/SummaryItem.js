@@ -1,7 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { theme } from "@cdt/ui/";
 
-const SummaryItem = ({ data, children, type, level, maxLevel, visible }) => {
+const SummaryItem = ({ data, children, type, level, visible }) => {
   const { titre, id } = data;
   const borderColor = 0 + (level + 1) * 50;
   const style = {
@@ -16,12 +17,7 @@ const SummaryItem = ({ data, children, type, level, maxLevel, visible }) => {
       </Title>
       {children &&
         children.map(child => (
-          <SummaryItem
-            key={child.data.id}
-            level={level + 1}
-            maxLevel={maxLevel}
-            {...child}
-          >
+          <SummaryItem key={child.data.id} level={level + 1} {...child}>
             {child.children}
           </SummaryItem>
         ))}
@@ -34,7 +30,7 @@ const Title = styled.h4`
   line-height: 1;
   margin: 0;
   padding: 0 0 5px 0;
-  color: #666;
+  color: ${theme.colors.darkGrey};
   font-weight: normal;
   ${props =>
     props.visible &&
