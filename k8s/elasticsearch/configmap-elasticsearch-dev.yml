@@ -18,4 +18,4 @@ data:
     xpack.ml.enabled: false
     xpack.graph.enabled: false
     xpack.watcher.enabled: false
-  ES_JAVA_OPTS: -Xms512m -Xmx512m
+  ES_JAVA_OPTS: -Xms256m -Xmx256m

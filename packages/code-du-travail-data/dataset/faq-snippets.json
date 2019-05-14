@@ -1,32 +1,14 @@
 [
   {
     "question": "Quel est le montant du SMIC ?",
-    "reponse": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
-    "source": "CDTN",
-    "redacteur": ["JR"],
-    "date": "01/01/2019",
+    "reponse": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à</p> <ul><li><b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</li> <li><b>7,57&nbsp;€</b>à Mayotte, soit <b>1148,12&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</li> </ul>",
     "tags": {
       "themes": [44300],
-      "theme": ["SMIC", "salaire minimum", "rémunération", "salaire"]
+      "theme": ["smic", "salaire minimum", "montant smic"]
     },
-    "references": [
-      {
-        "url": "https://www.legifrance.gouv.fr/eli/decret/2018/12/19/MTRX1833925D/jo/texte",
-        "titre": "Décret n° 2018-1173 du 19 décembre 2018 portant relèvement du salaire minimum de croissance "
-      }
-    ]
-  },
-  {
-    "question": "Quel est le montant du SMIC à Mayotte ?",
-    "reponse": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> s'établit à <b>7,57&nbsp;€</b> à Mayotte, soit <b>1148,12&nbsp;€</b> mensuel sur la base de la durée légale du travail de 35 heures hebdomadaires.</p>",
-    "themes": [44300],
     "source": "CDTN",
     "redacteur": ["JR"],
     "date": "01/01/2019",
-    "tags": {
-      "theme": ["SMIC", "salaire minimum", "rémunération", "salaire"],
-      "particularisme": "Mayotte"
-    },
     "references": [
       {
         "url": "https://www.legifrance.gouv.fr/eli/decret/2018/12/19/MTRX1833925D/jo/texte",
@@ -37,14 +19,13 @@
   {
     "question": "Quel est le montant du minimum garanti ?",
     "reponse": "<p>Le minimum garanti s'établit à <b>3,62&nbsp;€</b> en métropole, dans les collectivités régies par l'article 73 de la Constitution, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.</p>",
-    "themes": [],
+    "tags": {
+      "themes": [44400],
+      "theme": ["minimum garanti"]
+    },
     "source": "CDTN",
     "redacteur": ["JR"],
     "date": "01/01/2019",
-    "tags": {
-      "themes": [44400],
-      "theme": ["SMIC", "salaire minimum", "rémunération", "salaire"]
-    },
     "references": [
       {
         "url": "https://www.legifrance.gouv.fr/eli/decret/2018/12/19/MTRX1833925D/jo/texte",

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Alert, Button, Container } from "@cdt/ui";
+import { Alert, Button, Container, theme } from "@cdt/ui";
 import dynamic from "next/dynamic";
 import getIndemnite from "./indemnite";
 import { Stepper } from "./Stepper";
@@ -98,7 +98,7 @@ class CalculateurIndemnite extends React.Component {
                   onClick={() => {
                     this.resetState(restart);
                   }}
-                  primary
+                  variant="primary"
                 >
                   recommencer
                 </Button>
@@ -117,13 +117,13 @@ class CalculateurIndemnite extends React.Component {
           />
           <br />
           {indemniteData.errors.length > 0 && (
-            <Container style={{ fontSize: "1.5em" }}>
+            <StyledContainer>
               {indemniteData.errors.map(error => (
                 <Alert {...{ [error.type]: true }} key={error.message}>
                   <div dangerouslySetInnerHTML={{ __html: error.message }} />
                 </Alert>
               ))}
-            </Container>
+            </StyledContainer>
           )}
         </WidgetContainer>
         {showResult && resultComponent}
@@ -134,9 +134,16 @@ class CalculateurIndemnite extends React.Component {
 
 export default CalculateurIndemnite;
 
+const { fonts } = theme;
+
 const Title = styled.h2`
   text-align: center;
 `;
+
+const StyledContainer = styled(Container)`
+  font-size: ${fonts.sizeH2};
+`;
+
 const WidgetContainer = styled.div`
   max-width: 48rem;
   margin: 0 auto;

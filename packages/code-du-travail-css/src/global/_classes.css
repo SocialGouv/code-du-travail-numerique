@@ -55,6 +55,8 @@ https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden-
 /* Display an external link icon after the text. */
 .external-link__after::after {
   content: "";
+  position: relative;
+  top: 1px;
   display: inline-block;
   background: url(src/assets/icons/external-link.svg) no-repeat 100% 50%;
   background-size: 15px;

@@ -6,21 +6,11 @@ body {
  hide useless blocks
 */
 .search-widget,
-.article__widget_container,
 .aside-title,
 .btn-download,
 .no-answer,
 .site-footer {
   display: none;
-}
-
-.container {
-  max-width: 100%;
-  padding: 0;
-}
-.wrapper-light {
-  border: none;
-  padding: 0 5pt;
 }
 .article__content {
   margin: 20pt 0 0;

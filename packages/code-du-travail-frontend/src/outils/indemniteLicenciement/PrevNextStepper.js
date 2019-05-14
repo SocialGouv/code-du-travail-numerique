@@ -20,7 +20,7 @@ class PrevNextStepper extends React.Component {
         }}
       >
         {onPrev && (
-          <Button secondary onClick={onPrev}>
+          <Button variant="secondary" onClick={onPrev}>
             précédent
           </Button>
         )}

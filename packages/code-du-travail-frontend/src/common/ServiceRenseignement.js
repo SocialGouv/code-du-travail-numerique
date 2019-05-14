@@ -1,5 +1,7 @@
 import React from "react";
 import { UID } from "react-uid";
+import styled from "styled-components";
+import { theme } from "@cdt/ui";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 
@@ -39,12 +41,22 @@ class ServiceRenseignement extends React.Component {
       : null;
 
     return (
-      <React.Fragment>
-        <h2>Trouver votre service de renseignement</h2>
+      <>
+        <h4>Contacter les services de renseignement par téléphone</h4>
+        <NumberInsertWrapper>
+          <NumberInsert href="tel:+0033806000126">
+            <Number>0 806 000 126</Number>
+            <Pricing>Service gratuit + prix appel</Pricing>
+          </NumberInsert>
+        </NumberInsertWrapper>
+
+        <h4>
+          Trouver les coordonnées du service de renseignement de mon département
+        </h4>
         <p>
           <UID name={id => `id_${id}`}>
             {id => (
-              <React.Fragment>
+              <>
                 <label htmlFor={id}>
                   Saisissez votre numéro de département :
                 </label>
@@ -56,14 +68,91 @@ class ServiceRenseignement extends React.Component {
                   className="full-width"
                   onChange={this.onDepartmentInput}
                 />
-              </React.Fragment>
+              </>
             )}
           </UID>
         </p>
         {department}
-      </React.Fragment>
+        <Small>
+          Attention, ces services délivrent une information juridique, ils ne
+          sont pas compétents pour :
+          <ul>
+            <li>{"les demandes d'intervention en entreprise"}</li>
+            <li>
+              {
+                "le règlement des litiges, et la consitution des dossiers prud'homaux"
+              }
+            </li>
+            <li>{"les calculs de droit au chômage"}</li>
+            <li>{"vous renseigner sur les cotisations sociales"}</li>
+          </ul>
+        </Small>
+      </>
     );
   }
 }
 
 export { ServiceRenseignement };
+
+const { breakpoints, colors, fonts, spacing } = theme;
+
+const NumberInsertWrapper = styled.div`
+  @media (max-width: ${breakpoints.tablet}) {
+    text-align: center;
+  }
+`;
+
+const NumberInsert = styled.a`
+  display: inline-flex;
+  margin: ${spacing.base} 0 ${spacing.large};
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: ${colors.white};
+  border: 1px solid ${colors.blueDark};
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+  }
+`;
+
+const Number = styled.strong`
+  padding: 0 ${spacing.base};
+  color: ${colors.blueDark};
+  font-size: 2rem;
+`;
+
+const Pricing = styled.em`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 ${spacing.base} 0 ${spacing.medium};
+  color: ${colors.white};
+  font-style: normal;
+  font-size: ${fonts.sizeBase};
+  background-color: ${colors.blueDark};
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: ${spacing.small};
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent ${colors.white};
+    transform: translateY(-50%);
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
+  }
+`;
+
+const Small = styled.small`
+  display: block;
+  margin-top: ${spacing.interComponent};
+  color: ${colors.darkGrey};
+`;

@@ -1,61 +1,60 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Link } from "../../routes";
 
 import {
   Container,
   Categories as CategoriesWrapper,
-  Category as CategoryItem
+  Category as CategoryItem,
+  Section,
+  theme,
+  Wrapper
 } from "@cdt/ui";
-
-import themes from "@cdt/data/dataset/themes-front.json";
 
 export default class Categories extends React.Component {
   static propTypes = {
     themes: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        slug: PropTypes.arrayOf(PropTypes.string).isRequired,
-        icon: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired
-      })
+        label: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
+        icon: PropTypes.string,
+        text: PropTypes.string
+      }).isRequired
     ),
     isRoot: PropTypes.bool,
     title: PropTypes.string
   };
 
   static defaultProps = {
-    themes,
     isRoot: true,
-    title: "Retrouvez nos réponses thématiques"
+    title: "Retrouvez nos réponses thématiques",
+    icon: null,
+    text: ""
   };
 
   render() {
     const { title, themes, isRoot } = this.props;
     return (
       (themes.length && (
-        <section>
+        <Section>
           <Container>
-            {title && (
-              <h2
-                style={{ marginTop: 20, marginBottom: 40, textAlign: "center" }}
-              >
-                {title}
-              </h2>
-            )}
-            <CategoriesWrapper>
-              {themes.map(({ slug, title, text, icon }) => (
-                <CategoryItem key={slug + title} small={!isRoot}>
-                  <Link route="themes" params={{ slug: slug || "/" }}>
-                    <a title={title}>
-                      <Category title={title} text={text} icon={icon} />
-                    </a>
-                  </Link>
-                </CategoryItem>
-              ))}
-            </CategoriesWrapper>
+            <Wrapper>
+              <Title>{title}</Title>
+              <CategoriesWrapper>
+                {themes.map(({ slug, label, text, icon }) => (
+                  <CategoryItem key={slug + label} small={!isRoot}>
+                    <Link route="themes" params={{ slug: slug || "/" }}>
+                      <a title={label}>
+                        <Category title={label} text={text} icon={icon} />
+                      </a>
+                    </Link>
+                  </CategoryItem>
+                ))}
+              </CategoriesWrapper>
+            </Wrapper>
           </Container>
-        </section>
+        </Section>
       )) ||
       null
     );
@@ -82,3 +81,10 @@ Category.propTypes = {
 Category.defaultProps = {
   icon: "/static/assets/icons/chat.svg"
 };
+
+const { spacing } = theme;
+
+const Title = styled.h2`
+  text-align: center;
+  margin-bottom: ${spacing.large};
+`;

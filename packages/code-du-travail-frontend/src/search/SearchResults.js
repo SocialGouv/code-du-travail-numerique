@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Alert, NoAnswer, Button, theme } from "@cdt/ui";
+import { Alert, theme } from "@cdt/ui";
 
-import { FeedbackModal } from "../common/FeedbackModal";
 import { Link } from "../../routes";
 
 import { getLabelBySource } from "../sources";
@@ -16,6 +15,15 @@ class SearchResults extends React.Component {
     query: PropTypes.string,
     source: PropTypes.string,
     results: PropTypes.shape({
+      snippet: PropTypes.shape({
+        html: PropTypes.string,
+        references: PropTypes.arrayOf(
+          PropTypes.shape({
+            url: PropTypes.string,
+            titre: PropTypes.string
+          })
+        )
+      }),
       facets: PropTypes.array,
       items: PropTypes.array
     }).isRequired
@@ -27,128 +35,80 @@ class SearchResults extends React.Component {
     results: { facets: [], items: [] }
   };
 
-  state = {
-    feedbackVisible: false
-  };
-
-  showFeedBackPopup = () => {
-    this.setState({ feedbackVisible: true });
-  };
-
-  closeModal = () => {
-    this.setState({ feedbackVisible: false });
-  };
-
   render() {
     const { results, query, source } = this.props;
     // No results.
     if (results.items.length === 0) {
       return (
-        <React.Fragment>
-          <Alert category="primary">
+        <Alert category="primary">
+          <p>Nous n’avons pas trouvé de résultat pour votre recherche.</p>
+          {source.length > 0 && (
             <p>
-              Nous n&apos;avons pas trouvé de résultat pour votre recherche.
+              Vous pouvez élargir la recherche en intégrant&nbsp;
+              <strong>
+                <Link route="recherche" params={{ q: query, source: "" }}>
+                  <a>les autres sources de documents</a>
+                </Link>
+              </strong>
             </p>
-            {source.length > 0 && (
-              <p>
-                Vous pouvez élargir la recherche en intégrant&nbsp;
-                <strong>
-                  <Link route="recherche" params={{ q: query, source: "" }}>
-                    <a>les autres sources de documents</a>
-                  </Link>
-                </strong>
-              </p>
-            )}
-          </Alert>
-          <NoAnswer>
-            <Button onClick={this.showFeedBackPopup}>
-              Posez votre question
-            </Button>
-          </NoAnswer>
-          <FeedbackModal
-            results={[]}
-            isOpen={this.state.feedbackVisible}
-            closeModal={this.closeModal}
-            query={query}
-            source={source}
-          />
-        </React.Fragment>
+          )}
+        </Alert>
       );
     }
-
     return (
-      <React.Fragment>
-        <SearhResultLayout>
-          {results.facets.length > 0 && (
-            <Aside>
-              <Faceting data={results.facets} query={query} />
-            </Aside>
-          )}
-          <Content>
-            <div className="search-results">
-              {results.items.snippet && (
-                <ResultSnippet>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: results.items.snippet._source.html
-                    }}
-                  />
-                  {results.items.snippet._source.references && (
-                    <SourceLink
-                      href={results.items.snippet._source.references[0].url}
-                      target="_blank"
-                      norel
-                      noopener
-                    >
-                      {results.items.snippet._source.references[0].titre}
-                    </SourceLink>
-                  )}
-                </ResultSnippet>
+      <SearhResultLayout>
+        {results.facets.length > 0 && (
+          <Aside>
+            <Faceting data={results.facets} query={query} source={source} />
+          </Aside>
+        )}
+        <Content>
+          {results.snippet && (
+            <ResultSnippet>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: results.snippet.html
+                }}
+              />
+              {results.snippet.references && (
+                <SourceLink
+                  href={results.snippet.references[0].url}
+                  target="_blank"
+                  norel
+                  noopener
+                >
+                  {results.snippet.references[0].titre}
+                </SourceLink>
               )}
-              <Title>
-                {source ? getLabelBySource(source) : "Questions et réponses"}
-              </Title>
-              <SearchResultList items={results.items} query={query} />
-            </div>
-          </Content>
-        </SearhResultLayout>
-
-        <NoAnswer>
-          <Button onClick={this.showFeedBackPopup}>Posez votre question</Button>
-        </NoAnswer>
-        <FeedbackModal
-          results={results.items.slice(3)}
-          isOpen={this.state.feedbackVisible}
-          closeModal={this.closeModal}
-          query={query}
-        />
-      </React.Fragment>
+            </ResultSnippet>
+          )}
+          <h3>{source ? getLabelBySource(source) : "Questions et réponses"}</h3>
+          <SearchResultList items={results.items} query={query} />
+        </Content>
+      </SearhResultLayout>
     );
   }
 }
 
 export default SearchResults;
 
-const { colors, spacing, fonts, box } = theme;
+const { breakpoints, colors, spacing, fonts, box } = theme;
 
 const SearhResultLayout = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 const Aside = styled.div`
-  flex: 1 1 calc(20% - ${spacing.base});
+  flex: 1 1 auto;
   margin-right: ${spacing.base};
 `;
 
 const Content = styled.div`
-  margin-left: ${spacing.base};
-  flex: 1 1 calc(80% - ${spacing.base});
-`;
-
-const Title = styled.h3`
-  text-align: center;
-  margin-bottom: ${spacing.large};
+  flex: 1 1 65%;
 `;
 
 const ResultSnippet = styled.div`

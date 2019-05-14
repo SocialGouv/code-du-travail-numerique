@@ -1,4 +1,3 @@
-const fetch = require("node-fetch");
 const JSDOM = require("jsdom").JSDOM;
 const ora = require("ora");
 const { batchPromise } = require("@cdt/data...kali/utils");
@@ -6,8 +5,8 @@ const urls = require("./ministere-travail-liste-fiches.json");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
-
 function parseDom(dom, url) {
+  const description = $(dom.window.document, "meta[name=description]").getAttribute("content")
   const summary = $$(dom.window.document, ".navigation-article li")
     .map(n => n.textContent.trim())
     .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
@@ -51,9 +50,10 @@ function parseDom(dom, url) {
       );
     });
 
-  const dateRaw = $(article, ".date--maj") || $(article, ".date--publication");
-  const [date] = dateRaw.textContent.match(/([0-9\.]+)$/);
-  const [day, month, year] = date.split(".");
+  const dateRaw =
+    $(dom.window.document, "meta[property*=modified_time]") ||
+    $(dom.window.document, "meta[property$=published_time]");
+  const [year, month, day] = dateRaw.getAttribute("content").split("-");
 
   // get Intro image + text before first Question
   let elIntro = $(article, ".main-article__texte > *");
@@ -70,17 +70,20 @@ function parseDom(dom, url) {
     dom.window.document,
     "span.main-article__tag.tag--encart"
   ).map(n => n.textContent.trim());
-
+  const [title] = $(dom.window.document, "title")
+    .textContent.trim()
+    .split(" - Ministère du Travail");
   let result = {
+    description,
     ariane,
     tags,
     articles,
     summary,
     intro: `${chapo ? chapo.innerHTML.trim() : ""}${intro}`,
-    title: $(article, "h1").textContent.trim(),
+    title,
     text_full: $(article, ".main-article__texte").textContent.trim(),
     text_by_section: [],
-    date: `${day}/${month}/20${year}`,
+    date: `${day}/${month}/${year}`,
     url
   };
   const articleChildren = $$(article, "*");

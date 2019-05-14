@@ -84,3 +84,7 @@ export const box = {
   shadow: `0 5px 10px 0 ${colors.lightGrey}`,
   shadowBottom: "0 10px 10px -10px #b7bcdf"
 };
+
+export const animations = {
+  transitionTiming: "250ms"
+};

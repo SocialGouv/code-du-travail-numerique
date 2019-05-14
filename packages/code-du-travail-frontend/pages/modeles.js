@@ -4,7 +4,7 @@ import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { Link } from "../routes";
-import { Container } from "@cdt/ui";
+import { Container, Section, theme } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
@@ -29,16 +29,18 @@ class Modeles extends React.Component {
       <PageLayout>
         <Head>
           <title>Modèles de courriers - Code du travail numérique</title>
+          <meta
+            name="description"
+            content="Retrouvez l'ensemble des modèles de courriers à votre disposition."
+          />
         </Head>
         <Search />
-        <div className="section">
-          <Container>
-            <div className="wrapper-narrow">
-              <Title>Les modèles de documents à télécharger</Title>
-              <ModeleCourrierList items={data.hits.hits} />
-            </div>
+        <Section>
+          <Container narrow>
+            <Title>Les modèles de documents à télécharger</Title>
+            <ModeleCourrierList items={data.hits.hits} />
           </Container>
-        </div>
+        </Section>
         <SeeAlso />
       </PageLayout>
     );
@@ -81,6 +83,8 @@ const ModeleCourrier = ({ modele }) => {
   );
 };
 
+const { box, colors, spacing } = theme;
+
 const ModeleCourrierList = styled(List)`
   list-style-type: none;
   padding-left: 0;
@@ -94,18 +98,14 @@ const ModeleLink = styled.a`
   display: flex;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
-  border-radius: var(--border-radius-base);
-  padding: 1rem;
-  padding: var(--spacing-base);
+  border-radius: ${box.borderRadius};
+  padding: ${spacing.base};
   :link {
     text-decoration: none;
   }
   :hover {
-    border-color: #c9d3df;
-    border-color: var(--color-element-border);
-    background: #ebeff3;
-    background: var(--color-dark-background);
+    border-color: ${colors.elementBorder};
+    background: ${colors.darkBackground};
   }
   :hover strong {
     text-decoration: underline;
@@ -121,21 +121,18 @@ const P = styled.p`
 const Icon = styled(ModeleCourrierIcon)`
   width: 25px;
   flex-shrink: 0;
-  color: #8393a7;
-  color: var(--color-dark-grey);
+  color: ${colors.darkGrey};
 `;
 
 const Label = styled.span`
   font-weight: 700;
-  color: #53657d;
-  color: var(--color-darker-grey);
+  color: ${colors.darkerGrey};
 `;
 
 const Value = styled.span`
   font-weight: 700;
   text-transform: uppercase;
-  color: #adb9c9;
-  color: var(--color-grey);
+  color: ${colors.grey};
 `;
 
 export default Modeles;

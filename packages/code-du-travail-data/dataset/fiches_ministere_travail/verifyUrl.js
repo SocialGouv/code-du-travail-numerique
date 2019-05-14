@@ -32,11 +32,14 @@ async function parseFiche(url) {
 
 async function parseFiches(urls) {
   spinner.start();
-  const results = await batchPromise(urls, 20, parseFiche);
+  const results = await batchPromise(urls, 10, parseFiche);
   spinner.stop().clear();
   const uniqUrls = new Set(results.filter(Boolean));
+  if (results.length !== [...uniqUrls].length) {
+    console.error(results.length, "-", [...uniqUrls].length);
+    process.exit(1);
+  }
   console.log(JSON.stringify([...uniqUrls].sort(), null, 2));
-  console.log(results.length, "-", [...uniqUrls].length);
 }
 
 if (module === require.main) {

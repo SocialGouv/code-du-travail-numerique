@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Container, Section, Wrapper } from "@cdt/ui";
 
 import ServiceRenseignementModal from "./ServiceRenseignementModal";
 
@@ -16,58 +17,64 @@ const SeeAlso = () => {
   ];
 
   return (
-    <section className="section-light">
-      <div className="container">
-        <div className="block-2-cols wrapper-dark">
-          <header>
-            <h2>Voir aussi</h2>
-          </header>
-          <div className="block-2-cols__row">
-            <div className="block-2-cols__col">
-              <h3>
-                <img src="/static/assets/icons/phone-call.svg" alt="" />
-                Vos interlocuteurs
-              </h3>
-              <ul>
-                <li>
-                  <ServiceRenseignementModal />
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="external-link__after"
-                    href="https://www.defenseurdesdroits.fr/office"
-                  >
-                    Défenseur des droits
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="block-2-cols__col">
-              <h3>
-                <img src="/static/assets/icons/line-chart.svg" alt="" />
-                Liens et outils
-              </h3>
-              <ul>
-                {links.map(link => (
-                  <li key={link.href}>
+    <Section>
+      <Container>
+        <Wrapper variant="dark">
+          <div className="block-2-cols">
+            <header>
+              <h2>Voir aussi</h2>
+            </header>
+            <div className="block-2-cols__row">
+              <div className="block-2-cols__col">
+                <h3>
+                  <img src="/static/assets/icons/phone-call.svg" alt="" />
+                  Vos interlocuteurs
+                </h3>
+                <ul>
+                  <li>
+                    <ServiceRenseignementModal>
+                      <Button variant="link">
+                        Trouver votre service de renseignement
+                      </Button>
+                    </ServiceRenseignementModal>
+                  </li>
+                  <li>
                     <a
                       target="_blank"
-                      className="external-link__after"
                       rel="noopener noreferrer"
-                      href={link.href}
+                      className="external-link__after"
+                      href="https://www.defenseurdesdroits.fr/office"
                     >
-                      {link.text}
+                      Défenseur des droits
                     </a>
                   </li>
-                ))}
-              </ul>
+                </ul>
+              </div>
+              <div className="block-2-cols__col">
+                <h3>
+                  <img src="/static/assets/icons/line-chart.svg" alt="" />
+                  Liens et outils
+                </h3>
+                <ul>
+                  {links.map(link => (
+                    <li key={link.href}>
+                      <a
+                        target="_blank"
+                        className="external-link__after"
+                        rel="noopener noreferrer"
+                        href={link.href}
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </Wrapper>
+      </Container>
+    </Section>
   );
 };
 

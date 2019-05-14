@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
-import { Container } from "@cdt/ui";
+import { Button, Container, theme, Section } from "@cdt/ui";
 
 import { Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
@@ -11,12 +13,6 @@ import { getExcludeSources } from "../sources";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { suggestResults } from "./search.service";
 import { withClipboard } from "../common/withClipboard.hoc";
-
-const FormSearchButton = () => (
-  <button type="submit" className="btn">
-    Rechercher
-  </button>
-);
 
 const suggestMaxResults = 5;
 
@@ -83,7 +79,7 @@ class Search extends React.Component {
     if (this.state.query) {
       const routeName =
         this.state.source === "annuaire" ? "annuaire" : "recherche";
-
+      ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
       Router.pushRoute(routeName, {
         q: this.state.query,
         source: this.state.source
@@ -122,9 +118,10 @@ class Search extends React.Component {
   onSelect = (suggestion, event) => {
     // prevent onSubmit to be call
     event.preventDefault();
-    const { source } = this.state;
+    const { source, query } = this.state;
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
+      ReactPiwik.push(["trackEvent", "selectedSource", source]);
       Router.pushRoute("annuaire", {
         q: suggestion._source.title,
         coord: `${lon}:${lat}`,
@@ -132,7 +129,8 @@ class Search extends React.Component {
       });
       return;
     }
-
+    ReactPiwik.push(["trackEvent", "selectedSuggestion", query, suggestion]);
+    ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
     Router.pushRoute("recherche", { q: suggestion, source });
   };
 
@@ -172,28 +170,21 @@ class Search extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="section-white shadow-bottom search-widget">
+        <Section variant="white" className="shadow-bottom search-widget">
           <Container>
-            <div
-              className="search"
-              ref={this.searchRef}
-              style={{ padding: "1em 0" }}
-            >
-              <header>
-                <h1 className="no-margin">
-                  Posez votre question sur le droit du travail
-                </h1>
-                <br />
-              </header>
+            <StyledSearch ref={this.searchRef}>
+              <SearchLabel>
+                Posez votre question sur le droit du travail
+              </SearchLabel>
               <form className="search__form" onSubmit={this.onFormSubmit}>
                 <div className="search__fields">
                   <SearchIconWithClipboard className="search__input__icon" />
                   <label className="search__sources" htmlFor="contentSource">
                     <span className="hidden">Filtrer par type de contenu</span>
-                    <ReponseIcon className="select-sources__icon" />
+                    <ReponseIcon className="search__sources__icon" />
                     <select
                       id="contentSource"
-                      className="select-sources__value"
+                      className="search__sources__value"
                       onChange={this.onChange}
                       onBlur={this.onChange}
                       value={source}
@@ -219,14 +210,131 @@ class Search extends React.Component {
                     className="search__input"
                   />
                 </div>
-                <FormSearchButton />
+                <Button type="submit">Rechercher</Button>
               </form>
-            </div>
+            </StyledSearch>
           </Container>
-        </div>
+        </Section>
       </React.Fragment>
     );
   }
 }
 
 export default withRouter(Search);
+
+const { animations, box, breakpoints, colors, spacing, fonts } = theme;
+
+const SearchLabel = styled.p`
+  margin-top: 0;
+  font-size: ${fonts.sizeH1};
+  line-height: ${fonts.lineHeight};
+  color: ${colors.title};
+`;
+
+const StyledSearch = styled.div`
+  position: relative;
+  padding: ${spacing.base} 0;
+  text-align: center;
+
+  .search__form {
+    display: flex;
+    margin: 0 auto;
+    padding: var(--spacing-small) 0;
+    position: relative;
+    height: 5rem;
+    width: 90%;
+    & button {
+      margin-left: ${spacing.xsmall};
+    }
+  }
+
+  .search__fields {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+  }
+
+  .search__input__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: ${spacing.medium} 0 0 ${spacing.medium};
+    width: 2.55rem;
+  }
+
+  .search__sources {
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin: ${spacing.small};
+    align-items: center;
+    background-color: ${colors.lighterGrey};
+    border: none;
+    border-radius: ${box.borderRadius};
+  }
+
+  .search__sources__icon {
+    position: absolute;
+    margin: 0 calc(${spacing.medium} / 2);
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .search__sources__value {
+    padding: ${spacing.xsmall} ${spacing.large} ${spacing.xsmall}
+      ${spacing.larger};
+    color: ${colors.almostBlack};
+    background-color: transparent;
+    background-position: top 1rem right 0.75em;
+    border: 1px solid transparent;
+  }
+
+  .search__input {
+    margin: 0;
+    padding: 0 12.8rem 0 4rem;
+    height: 100%;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: calc(3.625rem - 1px);
+    color: inherit;
+    appearance: none;
+    background: ${colors.lightBackground};
+    border: 1px solid ${colors.elementBorder};
+    border-radius: ${box.borderRadius};
+    transition: border ${animations.transitionTiming} ease;
+  }
+
+  .search__input:focus {
+    border-color: ${colors.blueLight};
+    outline: none;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    .search__sources {
+      display: none;
+    }
+    .search__input {
+      padding-right: ${spacing.base};
+    }
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    .search__form {
+      flex-direction: column;
+      height: auto;
+      & button {
+        margin-left: 0;
+      }
+    }
+    .search__input__icon {
+      display: none;
+    }
+    .search__fields {
+      margin-bottom: ${spacing.xsmall};
+    }
+    .search__input {
+      padding: ${spacing.base};
+    }
+  }
+`;

@@ -1,7 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<search /> should render 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
+  padding: 1.25rem 0;
+  background-color: #fff;
+}
+
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c6:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c6[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -12,33 +86,175 @@ exports[`<search /> should render 1`] = `
   text-align: left;
 }
 
-.c1 ul {
+.c5 ul {
   z-index: 100;
 }
 
-.c1 li[role="option"]:nth-child(2n + 1) {
+.c5 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
+}
+
+.c3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #006ab2;
+}
+
+.c2 {
+  position: relative;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.c2 .search__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: var(--spacing-small) 0;
+  position: relative;
+  height: 5rem;
+  width: 90%;
+}
+
+.c2 .search__form button {
+  margin-left: 0.5rem;
+}
+
+.c2 .search__fields {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.c2 .search__input__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1.25rem 0 0 1.25rem;
+  width: 2.55rem;
+}
+
+.c2 .search__sources {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ebeff3;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.c2 .search__sources__icon {
+  position: absolute;
+  margin: 0 calc(1.25rem / 2);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c2 .search__sources__value {
+  padding: 0.5rem 2rem 0.5rem 2.5em;
+  color: #26353f;
+  background-color: transparent;
+  background-position: top 1rem right 0.75em;
+  border: 1px solid transparent;
+}
+
+.c2 .search__input {
+  margin: 0;
+  padding: 0 12.8rem 0 4rem;
+  height: 100%;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: calc(3.625rem - 1px);
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
+}
+
+.c2 .search__input:focus {
+  border-color: #006be6;
+  outline: none;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 .search__sources {
+    display: none;
+  }
+
+  .c2 .search__input {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 .search__form {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .c2 .search__form button {
+    margin-left: 0;
+  }
+
+  .c2 .search__input__icon {
+    display: none;
+  }
+
+  .c2 .search__fields {
+    margin-bottom: 0.5rem;
+  }
+
+  .c2 .search__input {
+    padding: 1rem;
+  }
 }
 
 <div>
   <div
-    class="section-white shadow-bottom search-widget"
+    class="shadow-bottom search-widget c0"
   >
     <div
-      class="container "
+      class="c1"
     >
       <div
-        class="search"
-        style="padding: 1em 0px;"
+        class="c2"
       >
-        <header>
-          <h1
-            class="no-margin"
-          >
-            Posez votre question sur le droit du travail
-          </h1>
-          <br />
-        </header>
+        <p
+          class="c3"
+        >
+          Posez votre question sur le droit du travail
+        </p>
         <form
           class="search__form"
         >
@@ -66,7 +282,7 @@ exports[`<search /> should render 1`] = `
                 Filtrer par type de contenu
               </span>
               <svg
-                class="select-sources__icon"
+                class="search__sources__icon"
                 viewBox="0 0 512 512"
               >
                 <title>
@@ -86,7 +302,7 @@ exports[`<search /> should render 1`] = `
                 />
               </svg>
               <select
-                class="select-sources__value"
+                class="search__sources__value"
                 id="contentSource"
                 name="source"
               >
@@ -128,7 +344,7 @@ exports[`<search /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c0"
+              class="c4"
               for="main-search-input"
             >
               <span
@@ -154,7 +370,7 @@ exports[`<search /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c1"
+                  class="c5"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -162,7 +378,8 @@ exports[`<search /> should render 1`] = `
             </label>
           </div>
           <button
-            class="btn"
+            aria-pressed="false"
+            class="c6"
             type="submit"
           >
             Rechercher
@@ -175,11 +392,85 @@ exports[`<search /> should render 1`] = `
 `;
 
 exports[`<search /> should render suggestions 1`] = `
-.c2 p {
-  margin: 0;
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c0 {
+  padding: 1.25rem 0;
+  background-color: #fff;
+}
+
+.c11 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c11:not([disabled]):hover,
+.c11:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c11:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c11[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c11[aria-pressed="true"]:not([disabled]):hover,
+.c11[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c11[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c11[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c6 p {
+  margin: 0;
+}
+
+.c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -190,49 +481,191 @@ exports[`<search /> should render suggestions 1`] = `
   text-align: left;
 }
 
-.c1 ul {
+.c5 ul {
   z-index: 100;
 }
 
-.c1 li[role="option"]:nth-child(2n + 1) {
+.c5 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
 .c3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #006ab2;
+}
+
+.c2 {
+  position: relative;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.c2 .search__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: var(--spacing-small) 0;
+  position: relative;
+  height: 5rem;
+  width: 90%;
+}
+
+.c2 .search__form button {
+  margin-left: 0.5rem;
+}
+
+.c2 .search__fields {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.c2 .search__input__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1.25rem 0 0 1.25rem;
+  width: 2.55rem;
+}
+
+.c2 .search__sources {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin: 0.625rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ebeff3;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.c2 .search__sources__icon {
+  position: absolute;
+  margin: 0 calc(1.25rem / 2);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c2 .search__sources__value {
+  padding: 0.5rem 2rem 0.5rem 2.5em;
+  color: #26353f;
+  background-color: transparent;
+  background-position: top 1rem right 0.75em;
+  border: 1px solid transparent;
+}
+
+.c2 .search__input {
+  margin: 0;
+  padding: 0 12.8rem 0 4rem;
+  height: 100%;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: calc(3.625rem - 1px);
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
+}
+
+.c2 .search__input:focus {
+  border-color: #006be6;
+  outline: none;
+}
+
+.c7 {
   display: inline-block;
 }
 
-.c4 {
+.c8 {
   display: inline-block;
 }
 
-.c5 {
+.c9 {
   display: inline-block;
 }
 
-.c6 {
+.c10 {
   display: inline-block;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 .search__sources {
+    display: none;
+  }
+
+  .c2 .search__input {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 .search__form {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .c2 .search__form button {
+    margin-left: 0;
+  }
+
+  .c2 .search__input__icon {
+    display: none;
+  }
+
+  .c2 .search__fields {
+    margin-bottom: 0.5rem;
+  }
+
+  .c2 .search__input {
+    padding: 1rem;
+  }
 }
 
 <div>
   <div
-    class="section-white shadow-bottom search-widget"
+    class="shadow-bottom search-widget c0"
   >
     <div
-      class="container "
+      class="c1"
     >
       <div
-        class="search"
-        style="padding: 1em 0px;"
+        class="c2"
       >
-        <header>
-          <h1
-            class="no-margin"
-          >
-            Posez votre question sur le droit du travail
-          </h1>
-          <br />
-        </header>
+        <p
+          class="c3"
+        >
+          Posez votre question sur le droit du travail
+        </p>
         <form
           class="search__form"
         >
@@ -260,7 +693,7 @@ exports[`<search /> should render suggestions 1`] = `
                 Filtrer par type de contenu
               </span>
               <svg
-                class="select-sources__icon"
+                class="search__sources__icon"
                 viewBox="0 0 512 512"
               >
                 <title>
@@ -280,7 +713,7 @@ exports[`<search /> should render suggestions 1`] = `
                 />
               </svg>
               <select
-                class="select-sources__value"
+                class="search__sources__value"
                 id="contentSource"
                 name="source"
               >
@@ -322,7 +755,7 @@ exports[`<search /> should render suggestions 1`] = `
               </select>
             </label>
             <label
-              class="c0"
+              class="c4"
               for="main-search-input"
             >
               <span
@@ -348,7 +781,7 @@ exports[`<search /> should render suggestions 1`] = `
                   value="yolo"
                 />
                 <div
-                  class="c1"
+                  class="c5"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 >
@@ -364,10 +797,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c2"
+                        class="c6"
                       >
                         <div
-                          class="c3"
+                          class="c7"
                         >
                           foo
                         </div>
@@ -381,10 +814,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c2"
+                        class="c6"
                       >
                         <div
-                          class="c4"
+                          class="c8"
                         >
                           foobar
                         </div>
@@ -398,10 +831,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c2"
+                        class="c6"
                       >
                         <div
-                          class="c5"
+                          class="c9"
                         >
                           foo bar ?
                         </div>
@@ -415,10 +848,10 @@ exports[`<search /> should render suggestions 1`] = `
                       style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                     >
                       <div
-                        class="c2"
+                        class="c6"
                       >
                         <div
-                          class="c6"
+                          class="c10"
                         >
                           foo bazzz
                         </div>
@@ -430,7 +863,8 @@ exports[`<search /> should render suggestions 1`] = `
             </label>
           </div>
           <button
-            class="btn"
+            aria-pressed="false"
+            class="c11"
             type="submit"
           >
             Rechercher

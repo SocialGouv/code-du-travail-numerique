@@ -8,6 +8,8 @@ const getFacetsBody = require("./facets.elastic");
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
+const MAX_RESULTS = 10;
+
 const router = new Router({ prefix: API_BASE_URL });
 
 /**
@@ -22,7 +24,9 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
-  const size = Math.min(ctx.request.query.size || 10, 100);
+  // we add 1 to maxResults in case we have a snippet document in the results
+  // we filter results to remove snippet document from main results
+  const size = Math.min(ctx.request.query.size || MAX_RESULTS + 1, 100);
 
   const excludeSources = (ctx.request.query.excludeSources || "").split(",");
 
@@ -31,14 +35,24 @@ router.get("/search", async ctx => {
 
   // query data
   const results = await elasticsearchClient.search({ index, body });
+  const snippetIndex = results.hits.hits.findIndex(
+    item => item._source.source === "snippet"
+  );
   ctx.body = {
     hits: {
       ...results.hits,
-      hits: results.hits.hits.filter(item => item._source.source !== "snippet")
+      hits: results.hits.hits
+        .filter(item => item._source.source !== "snippet")
+        .slice(0, 10)
     },
     facets: []
   };
-  if (results.aggregations.bySource.buckets.length > 0) {
+  // only add snippet if it's found in the returned results
+  if (
+    results.aggregations.bySource.buckets.length > 0 &&
+    snippetIndex > -1 &&
+    snippetIndex < 10
+  ) {
     const [snippetResults] = results.aggregations.bySource.buckets;
     ctx.body.snippet = snippetResults.bySource.hits.hits[0];
   }

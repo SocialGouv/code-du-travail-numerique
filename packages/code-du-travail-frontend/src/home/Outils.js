@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "../../routes";
 import styled from "styled-components";
 
-import { Container, Categories } from "@cdt/ui";
+import { Container, Categories, Section, theme, Wrapper } from "@cdt/ui";
 import ConventionModal from "./ConventionModal";
 
 const outils = [
@@ -44,35 +44,46 @@ export default class Outils extends React.PureComponent {
   render() {
     const { title } = this.props;
     return (
-      <section className="section-white">
+      <Section variant="white">
         <Container>
-          <Title>{title}</Title>
           <Wrapper>
-            {outils.map(
-              ({ title, text, icon, routeName = "index", slug, hrefTitle }) => (
-                <OutilCard key={`${routeName}/${slug}`} data-route={routeName}>
-                  <Link route={routeName} params={slug ? { slug } : {}}>
-                    <a title={hrefTitle}>
-                      <Outil title={title} text={text} icon={icon} />
-                    </a>
-                  </Link>
-                </OutilCard>
-              )
-            )}
-            <ConventionModal />
+            <Title>{title}</Title>
+            <Categories>
+              {outils.map(
+                ({
+                  title,
+                  text,
+                  icon,
+                  routeName = "index",
+                  slug,
+                  hrefTitle
+                }) => (
+                  <OutilCard
+                    key={`${routeName}/${slug}`}
+                    data-route={routeName}
+                  >
+                    <Link route={routeName} params={slug ? { slug } : {}}>
+                      <a title={hrefTitle}>
+                        <Outil title={title} text={text} icon={icon} />
+                      </a>
+                    </Link>
+                  </OutilCard>
+                )
+              )}
+              <ConventionModal />
+            </Categories>
           </Wrapper>
         </Container>
-      </section>
+      </Section>
     );
   }
 }
 
+const { spacing } = theme;
+
 const Title = styled.h2`
-  margin-bottom: 40px;
   text-align: center;
-`;
-const Wrapper = styled(Categories)`
-  justify-content: center;
+  margin-bottom: ${spacing.large};
 `;
 
 export const OutilCard = ({ small, ...props }) => (

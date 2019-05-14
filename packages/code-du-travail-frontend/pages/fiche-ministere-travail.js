@@ -1,8 +1,8 @@
 import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { ExternalLink } from "react-feather";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -17,12 +17,13 @@ const fetchFiche = ({ slug }) =>
   );
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
+  <a
+    href={url}
+    className="external-link__after"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     Voir le contenu original sur : {name}{" "}
-    <ExternalLink
-      style={{ verticalAlign: "middle", margin: "0 5px" }}
-      size={16}
-    />
   </a>
 );
 
@@ -42,6 +43,9 @@ class Fiche extends React.Component {
     );
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={data._source.description} />
+        </Head>
         <Answer
           title={data._source.title}
           emptyMessage="Cette fiche n'a pas été trouvée"
@@ -50,6 +54,7 @@ class Fiche extends React.Component {
           icon={ReponseIcon}
           date={data._source.date}
           sourceType="Fiche ministère du travail"
+          breadcrumbs={data._source.breadcrumbs}
         />
       </PageLayout>
     );

@@ -29,8 +29,8 @@ class CompanyForm extends React.Component {
     return (
       <form>
         <Title>Recherche par SIRET</Title>
-        Saisissez le numéro de SIRET de votre entreprise afin d&apos;obtenir
-        votre convention collective&nbsp;:
+        Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre
+        convention collective&nbsp;:
         <SuggestWrapper>
           {!this.state.company ? (
             <React.Fragment>
@@ -62,10 +62,10 @@ const Company = ({ name, idccList, onClear }) => {
       <div>
         <b>{name}</b>
         <div>
-          <Button link onClick={onClear}>
+          <Button variant="link" onClick={onClear}>
             Chercher une autre entreprise
           </Button>
-          <Button link onClick={onClear}>
+          <Button variant="link" onClick={onClear}>
             {/* it does not seem to work when in the same Button */}
             <X size="16" />
           </Button>

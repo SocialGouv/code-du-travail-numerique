@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionForm /> should display idcc item once click on suggestion 1`] = `
+.c2 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2:focus,
+.c2:hover,
+.c2:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 {
   margin-top: 10px;
 }
@@ -11,7 +47,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
   margin-top: 20px;
 }
 
-.c2 {
+.c3 {
   color: #666;
   font-size: 1em;
   font-weight: bold;
@@ -29,7 +65,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
       >
         Recherche par nom ou par identifiant
       </h3>
-      Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
+      Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
       <div
         class="c1"
       >
@@ -40,11 +76,9 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
            
           - Convention des Poulaillers
         </a>
-        <div
-          class="btn btn__link  "
-          link="true"
-          role="button"
-          tabindex="0"
+        <button
+          aria-pressed="false"
+          class="c2"
         >
           <svg
             fill="none"
@@ -70,10 +104,10 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
               y2="18"
             />
           </svg>
-        </div>
+        </button>
       </div>
       <div
-        class="c2"
+        class="c3"
       >
         Comment trouver ma convention collective ?
       </div>
@@ -83,23 +117,23 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
           <b>
             bulletin de paie
           </b>
-          , et sur une notice remise à l'embauche ou 
+          , et sur une notice remise à l’embauche ou 
           <b>
             sur le contrat de travail
           </b>
         </li>
         <li>
-          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+          Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
         </li>
       </ul>
       <div
-        class="c2"
+        class="c3"
       >
         Quelle est la convention collective applicable ?
       </div>
       <ul>
         <li>
-          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+          En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
         </li>
       </ul>
     </div>
@@ -136,7 +170,7 @@ exports[`<ConventionForm /> should render 1`] = `
       >
         Recherche par nom ou par identifiant
       </h3>
-      Saisissez l'identifiant de convention collective (IDCC) ou le nom de la branche :
+      Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
       <div
         class="c1"
       >
@@ -156,13 +190,13 @@ exports[`<ConventionForm /> should render 1`] = `
           <b>
             bulletin de paie
           </b>
-          , et sur une notice remise à l'embauche ou 
+          , et sur une notice remise à l’embauche ou 
           <b>
             sur le contrat de travail
           </b>
         </li>
         <li>
-          Sur l'affichage obligatoire dans l'entreprise (avec les modalités de consultation en entreprise)
+          Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
         </li>
       </ul>
       <div
@@ -172,7 +206,7 @@ exports[`<ConventionForm /> should render 1`] = `
       </div>
       <ul>
         <li>
-          En principe celle relevant de l'activité principale dans l'entreprise pour les cas les plus simples.
+          En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
         </li>
       </ul>
     </div>

@@ -55,3 +55,7 @@
     }
 
 }
+
+.alert > :--vertical-rythm-elements:last-child {
+  margin-bottom: 0;
+}

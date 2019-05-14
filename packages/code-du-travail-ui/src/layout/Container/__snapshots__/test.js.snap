@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    One Aside title
+  </div>
+</div>
+`;
+
+exports[`<Container /> should render narrow 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 43.75rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Narrow contained
+  </div>
+</div>
+`;

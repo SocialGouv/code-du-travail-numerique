@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 
 import { PrevNextStepper } from "./PrevNextStepper";
 import { Label, RadioContainer } from "./stepStyles";
@@ -40,35 +40,39 @@ class Salaire extends React.Component {
       : SalaireTempsPlein;
     return (
       <React.Fragment>
-        <Section light>
-          <h2>
-            Avez-vous alterné au cours de votre contrat de travail des périodes
-            de travail à temps plein et à temps partiel sur le même
-            contrat&nbsp;?
-          </h2>
-          <RadioContainer>
-            <Label>
-              <input
-                type="radio"
-                onChange={this.onTempsPartielChange}
-                name="has-temps-partiel"
-                value="yes"
-                checked={value.isPartiel === true}
-              />{" "}
-              Oui
-            </Label>
-            <Label>
-              <input
-                type="radio"
-                onChange={this.onTempsPartielChange}
-                name="has-temps-partiel"
-                value="no"
-                checked={value.isPartiel === false}
-              />{" "}
-              Non
-            </Label>
-          </RadioContainer>
-          <SalaireComponent onChange={onChange} value={value} />
+        <Section>
+          <Container>
+            <Wrapper variant="light">
+              <h2>
+                Avez-vous alterné au cours de votre contrat de travail des
+                périodes de travail à temps plein et à temps partiel sur le même
+                contrat&nbsp;?
+              </h2>
+              <RadioContainer>
+                <Label>
+                  <input
+                    type="radio"
+                    onChange={this.onTempsPartielChange}
+                    name="has-temps-partiel"
+                    value="yes"
+                    checked={value.isPartiel === true}
+                  />{" "}
+                  Oui
+                </Label>
+                <Label>
+                  <input
+                    type="radio"
+                    onChange={this.onTempsPartielChange}
+                    name="has-temps-partiel"
+                    value="no"
+                    checked={value.isPartiel === false}
+                  />{" "}
+                  Non
+                </Label>
+              </RadioContainer>
+              <SalaireComponent onChange={onChange} value={value} />
+            </Wrapper>
+          </Container>
         </Section>
         <Container>
           <PrevNextStepper

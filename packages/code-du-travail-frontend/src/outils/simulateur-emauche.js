@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "@cdt/ui";
+import { Container, Section, Wrapper } from "@cdt/ui";
 import styled from "styled-components";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";
@@ -22,10 +22,14 @@ class SimulateurEmbauche extends React.PureComponent {
   render() {
     return (
       <Section>
-        <Title>Simulateur d&apos;embauche</Title>
-        <ErrorBoundary>
-          <div ref={this.simRef} />;
-        </ErrorBoundary>
+        <Container>
+          <Wrapper>
+            <Title>Simulateur d’embauche</Title>
+            <ErrorBoundary>
+              <div ref={this.simRef} />;
+            </ErrorBoundary>
+          </Wrapper>
+        </Container>
       </Section>
     );
   }

@@ -4,7 +4,6 @@ import Footer from "./Footer.js";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 
 import "@cdt/css";
-import "@reach/dialog/styles.css";
 
 const HomeLayout = ({ children }) => {
   return (

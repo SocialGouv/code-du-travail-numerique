@@ -4,6 +4,7 @@ import os
 import base64
 import hashlib
 
+from collections import OrderedDict
 from slugify import slugify
 
 from search import settings
@@ -62,9 +63,11 @@ def populate_cdtn_documents():
 
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
+        breadcrumbs = ", ".join(list(OrderedDict.fromkeys(filter(None, val['path'].split("/"))))[1:])
         CDTN_DOCUMENTS.append({
             'source': 'code_du_travail',
             'text': val['bloc_textuel'],
+            'description': val['bloc_textuel'][:val['bloc_textuel'].find(" ", 150)] + "… (" + breadcrumbs + ")",
             'slug': val['num'].lower(),
             'title': val['titre'],
             'html': val['html'],
@@ -84,7 +87,9 @@ def populate_cdtn_documents():
                 'raw': val['raw'],
                 'slug': slugify(val['title'], to_lower=True),
                 'source': 'fiches_service_public',
-                'tags': val['tags'],
+                'description': val['description'],
+                'breadcrumbs': val['themeCdtn'],
+                'theme': val['themeCdtn'][-1]['slug'] if val['themeCdtn'] else None,
                 'text': val['text'],
                 'references_juridiques': val['references_juridiques'],
                 'title': val['title'],
@@ -97,10 +102,13 @@ def populate_cdtn_documents():
             'source': 'fiches_ministere_travail',
             'slug': slugify(val['title'], to_lower=True),
             'text': val['text'],
+            'description': val['description'],
             'anchor': val['anchor'],
             'html': val["html"],
             'title': val['title'],
             'url': val['url'],
+            'breadcrumbs': val['breadcrumbs'],
+            'theme': val['breadcrumbs'][-1]['slug'] if val['breadcrumbs'] else None,
             'date': val.get('date'),
         })
 
@@ -123,6 +131,7 @@ def populate_cdtn_documents():
                 'source': 'faq',
                 'slug': make_slug(val['question'], '-'.join(tags)),
                 'text': faq_text,
+                'description': faq_text[:faq_text.find(" ", 150)]+"…",
                 'html': val["reponse"],
                 'title': val['question'],
                 'tags': tags,
@@ -140,6 +149,7 @@ def populate_cdtn_documents():
                 'source': 'faq',
                 'slug': make_slug(val['question'], '-'.join(tags)),
                 'text': faq_text,
+                'description': faq_text[:faq_text.find(" ", 150)]+"…",
                 'html': val["reponse"],
                 'title': val['question'],
                 'tags': tags,
@@ -151,14 +161,13 @@ def populate_cdtn_documents():
         data = json.load(json_data)
         logger.info("Load %s documents from snippets", len(data))
         for val in data:
-            faq_text = strip_html(val['reponse'])
             tags = parse_hash_tags(val.get("tags"))
             CDTN_DOCUMENTS.append({
                 'source': 'snippet',
                 'slug': slugify(val['question'], to_lower=True),
-                'text': faq_text,
                 'html': val["reponse"],
                 'title': val['question'],
+                'text': val['question'],
                 'tags': tags,
                 'date': val.get('date_redaction'),
                 'references': val.get('references'),
@@ -179,7 +188,7 @@ def populate_cdtn_documents():
                 'text': ''.join(val['questions']),
                 'html': val["html"],
                 'tags': tags,
-                'description': val.get('description'),
+                'description': val['description'],
                 'date': val.get('date_redaction'),
                 'author':  val.get('redacteur'),
                 'editor':  val.get('source'),

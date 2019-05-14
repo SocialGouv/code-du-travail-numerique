@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { Button } from "@cdt/ui";
@@ -38,6 +39,9 @@ class Kali extends React.Component {
     const { title, url } = this.props.convention;
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={title} />
+        </Head>
         <Answer
           title={title}
           emptyMessage="Cette convention collective n'a pas été trouvée"
@@ -50,7 +54,7 @@ class Kali extends React.Component {
             collective sur LegiFrance :
           </p>
           <a target="_blank" rel="noopener noreferrer" href={url}>
-            <Button primary>
+            <Button variant="primary">
               <ExternalLink
                 style={{ verticalAlign: "middle", marginRight: 10 }}
               />

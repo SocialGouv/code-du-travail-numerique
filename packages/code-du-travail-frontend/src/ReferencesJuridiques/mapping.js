@@ -2,9 +2,9 @@ import TYPE_REFERENCE from "./typeReference";
 
 export const blocs = {
   "1_1_a": {
-    title: "L'accord de branche étendu prime",
+    title: "L'accord de branche étendu s'applique",
     text:
-      "Pour ces thèmes, les accords négociés et étendus dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.",
+      "Pour ces articles, si les accords négociés et étendus dans votre branche prévoient des mesures plus favorables que le Code du travail, alors ces mesures s'appliquent. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.",
     references: [
       "L3121-14",
       "L3122-16",
@@ -36,9 +36,9 @@ export const blocs = {
     hasCCSearch: true
   },
   "1_1_b": {
-    title: "L'accord de branche prime",
+    title: "L'accord de branche s'applique",
     text:
-      "Pour ces thèmes, les accords négociés dans votre branche d'activité peuvent prévoir des mesures/modalités plus favorables que le code du travail. A noter que votre entreprise ne peut pas conclure d'accord sur ces sujets.",
+      "Pour ces articles, si les accords négociés dans votre branche prévoient des mesures plus favorables que le Code du travail, alors ces mesures s'appliquent. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.",
     references: [
       "L3121-44",
       "L2135-9",

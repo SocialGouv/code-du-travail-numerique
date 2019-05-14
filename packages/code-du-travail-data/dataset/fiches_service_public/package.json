@@ -1,19 +1,14 @@
 {
   "name": "@cdt/data...fiches_service_public",
-  "version": "1.5.0",
+  "version": "2.3.0",
   "private": true,
-  "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/revolunet/fiches_service_public.git"
-  },
-  "homepage": "https://revolunet.github.io/fiches_service_public/",
+  "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/revolunet/fiches_service_public/issues"
+    "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
     "lodash.uniqby": "^4.7.0",
+    "memoizee": "^0.4.14",
     "query-string": "^6.2.0",
     "unist-util-find": "^1.0.1",
     "xml-js": "^1.6.11"
@@ -21,7 +16,10 @@
   "scripts": {
     "backup": "cp fiches-sp-travail.json fiches-sp-travail.old.json ",
     "diff": "node diff.js",
-    "start": "yarn backup && node index.js > fiches-sp-travail.json && yarn diff",
+    "report": "node diff.js && node missingTheme.js",
+    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-sp-travail.json ",
+    "start": "yarn backup && node index.js > fiches-sp-travail.json",
+    "poststart": "yarn updateTheme && yarn report",
     "test": "jest"
   }
 }

@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
+.c3 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c3:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c3[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):hover,
+.c3[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c4 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+<div>
+  <form
+    action="https://formspree.io/xbalrgzm"
+    class="c0"
+  >
+    <p>
+      <strong>
+        Merci pour votre réponse !
+      </strong>
+    </p>
+    <p>
+      Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
+    </p>
+    <input
+      name="question"
+      type="hidden"
+      value="Initial query"
+    />
+    <input
+      name="url"
+      type="hidden"
+      value="led zeppelin"
+    />
+    <input
+      name="sourceType"
+      type="hidden"
+      value="Fiches Service Public"
+    />
+    <select
+      class="c1"
+      name="motif"
+    >
+      <option
+        value="Les informations proposées ne sont pas à jour"
+      >
+        Les informations proposées ne sont pas à jour
+      </option>
+      <option
+        value="Les informations me paraissent erronées"
+      >
+        Les informations me paraissent erronées
+      </option>
+      <option
+        value="Les informations me paraissent incomplètes"
+      >
+        Les informations me paraissent incomplètes
+      </option>
+      <option
+        value="Les informations me paraissent hors-sujet"
+      >
+        Les informations me paraissent hors-sujet
+      </option>
+      <option
+        value="Je n'ai pas trouvé la réponse à ma question"
+      >
+        Je n'ai pas trouvé la réponse à ma question
+      </option>
+    </select>
+    <textarea
+      class="c1"
+      name="message"
+      placeholder="Les informations ..."
+    />
+    <div
+      class="c2"
+    >
+      <button
+        aria-pressed="false"
+        class="c3"
+      >
+        Envoyer mon commentaire
+      </button>
+      <div
+        class="c4"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
+.c3 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c3:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c3[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):hover,
+.c3[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c3[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c4 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+<div>
+  <form
+    action="https://formspree.io/xbalrgzm"
+    class="c0"
+  >
+    <p>
+      <strong>
+        Merci pour votre réponse !
+      </strong>
+    </p>
+    <p>
+      Vous souhaitez nous aider à améliorer le Code du travail numérique ? Laissez-nous un commentaire :
+    </p>
+    <input
+      name="question"
+      type="hidden"
+      value="Initial query"
+    />
+    <input
+      name="url"
+      type="hidden"
+      value="led zeppelin"
+    />
+    <input
+      name="sourceType"
+      type="hidden"
+      value="Fiches Service Public"
+    />
+    <textarea
+      class="c1"
+      name="message"
+      placeholder="Les informations ..."
+    />
+    <div
+      class="c2"
+    >
+      <button
+        aria-pressed="false"
+        class="c3"
+      >
+        Envoyer mon commentaire
+      </button>
+      <div
+        class="c4"
+      />
+    </div>
+  </form>
+</div>
+`;

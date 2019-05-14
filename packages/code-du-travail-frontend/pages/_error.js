@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import getConfig from "next/config";
+import { Section } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 const Sentry = require("@sentry/browser");
 
@@ -41,24 +42,26 @@ export default class Error extends React.Component {
     const { statusCode } = this.props;
     return (
       <PageLayout>
-        <div
-          className="section-light center"
-          style={{
-            minHeight: "calc(90vh - 15rem)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center"
-          }}
-        >
-          <p style={{ fontSize: "2em" }}>
-            {this.props.statusCode
-              ? `Une erreur ${statusCode} est apparue sur le serveur`
-              : "Une erreur est apparue sur le client"}
-            <br />
-            <br />
-            <Link href="/">Retour à la page d&apos;accueil</Link>
-          </p>
-        </div>
+        <Section variant="light">
+          <div
+            className="center"
+            style={{
+              minHeight: "calc(90vh - 15rem)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <p style={{ fontSize: "2em" }}>
+              {this.props.statusCode
+                ? `Une erreur ${statusCode} est apparue sur le serveur`
+                : "Une erreur est apparue sur le client"}
+              <br />
+              <br />
+              <Link href="/">Retour à la page d’accueil</Link>
+            </p>
+          </div>
+        </Section>
       </PageLayout>
     );
   }

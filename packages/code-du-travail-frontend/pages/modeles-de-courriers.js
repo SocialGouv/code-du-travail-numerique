@@ -1,8 +1,9 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { AsideTitle } from "@cdt/ui";
+import { AsideTitle, Section, Wrapper } from "@cdt/ui";
 
 import Html from "../src/common/Html";
 import { DownloadFile } from "../src/common/DownloadFile";
@@ -25,25 +26,32 @@ class ModeleCourrier extends React.Component {
 
   render() {
     const { data } = this.props;
+    const { description } = data._source;
     if (data.status === 404) {
       return <Answer emptyMessage="Modèle de courrier introuvable" />;
     }
     return (
       <PageLayout>
+        <Head>
+          <meta
+            name="description"
+            content={description.slice(0, description.indexOf(" ", 150)) + "…"}
+          />
+        </Head>
         <Answer
           title={`Modèle de courrier :  ${data._source.title}`}
           emptyMessage="Modèle de courrier introuvable"
-          intro={data._source.description && <p>{data._source.description}</p>}
-          footer="Modèles de courrier fournis par vos services de renseignements des DIRECCTE en région"
+          intro={<p>{description}</p>}
+          footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
           icon={ModeleCourrierIcon}
           date={data._source.date}
           sourceType="Modèle de document"
         >
-          <section>
-            <Html className="wrapper-outline courrier-type">
-              {data._source.html}
-            </Html>
-          </section>
+          <Section>
+            <Wrapper variant="outline">
+              <Html className="courrier-type">{data._source.html}</Html>
+            </Wrapper>
+          </Section>
           <AsideTitle>Télécharger le modèle</AsideTitle>
           <DownloadFile
             title={data._source.title}

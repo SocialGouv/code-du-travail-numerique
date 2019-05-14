@@ -63,6 +63,11 @@ jobs:
       stage: Release
       if: env(RELEASE)
       name: Make a new release 🎉
+      git:
+        # NOTE(douglasduteil): disable git --depth
+        # Try to have all the commits for the release Change Log
+        # see travis-ci/travis-ci#3412
+        depth: 9999999 # Over 9000 !
       env:
         - *github_keys
       before_script:
@@ -70,6 +75,6 @@ jobs:
         - git config user.name "Social Groovy Bot"
         - git config user.email "45039513+SocialGroovyBot@users.noreply.github.com"
         - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
-      script: yarn lerna version ${LERNA_ARGS:=--yes}
-      after_success:
-        - CONVENTIONAL_GITHUB_RELEASER_TOKEN=${GITHUB_TOKEN} npx conventional-github-releaser -p angular
+      script:
+        - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:=--yes}
+        - yarn lerna publish from-git --yes

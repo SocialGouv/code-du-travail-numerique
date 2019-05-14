@@ -1,7 +1,6 @@
 import React from "react";
-import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
-
+import { Modal } from "@cdt/ui";
 import { Outil, OutilCard } from "./Outils";
 import { ConventionForm } from "../common/ConventionForm";
 import { CompanyForm } from "../common/CompanyForm";
@@ -15,6 +14,7 @@ class ConventionModal extends React.Component {
   state = {
     modalIsOpen: false
   };
+
   openModal = e => {
     e.preventDefault();
     this.setState({
@@ -29,6 +29,7 @@ class ConventionModal extends React.Component {
   };
 
   render() {
+    const { modalIsOpen } = this.state;
     return (
       <OutilCard>
         <Button onClick={this.openModal}>
@@ -38,16 +39,10 @@ class ConventionModal extends React.Component {
             icon="/static/assets/icons/book_web.svg"
           />
         </Button>
-        <DialogOverlay
-          isOpen={this.state.modalIsOpen}
-          style={{ background: "rgba(0, 0, 0, .5)" }}
-          onDismiss={this.closeModal}
-        >
-          <DialogContent style={{ borderRadius: "3px", margin: "5vh auto" }}>
-            <ConventionForm onSearch={searchIdcc} />
-            <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
-          </DialogContent>
-        </DialogOverlay>
+        <Modal isOpen={modalIsOpen} onDismiss={this.closeModal}>
+          <ConventionForm onSearch={searchIdcc} />
+          <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
+        </Modal>
       </OutilCard>
     );
   }
@@ -63,4 +58,5 @@ const Button = styled.button`
   align-items: center;
   font-family: inherit;
   color: inherit;
+  cursor: pointer;
 `;

@@ -2,33 +2,36 @@
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  before_script:
-  - HASH_BRANCH_NAME=$(printf "$CI_COMMIT_REF_NAME" | sha1sum | cut -c1-5)
-  - export HASH_BRANCH_INGRESS=$HASH_BRANCH_NAME-
-  - export HASH_BRANCH_NAME=-$HASH_BRANCH_NAME
+  script:
+  - export HASH_BRANCH_NAME=-$BRANCH_HASH
+  #
   - /apps/create-kubeconfig.sh
+  #
   - envsubst < k8s/code-du-travail-api/deployment-code-du-travail-api.yml > k8s/code-du-travail-api/deployment-cdtn-api.yml
   - envsubst < k8s/code-du-travail-api/service-code-du-travail-api.yml > k8s/code-du-travail-api/service-cdtn-api.yml
   - envsubst < k8s/code-du-travail-api/ingress-code-du-travail-api.yml > k8s/code-du-travail-api/ingress-cdtn-api.yml
-  script:
+  #
   - kubectl apply -f k8s/code-du-travail-api/deployment-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/service-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/ingress-cdtn-api.yml
-  - echo "CDTN api available at - http://"$HASH_BRANCH_INGRESS"code-du-travail-numerique-api.dev.factory.social.gouv.fr"
+  #
+  - echo "CDTN api available at - http://${API_HOST}"
   allow_failure: false
 
 .deploy-code-du-travail-api-prod-k8s:
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
-  before_script:
+  script:
   - /apps/create-kubeconfig.sh
+  #
   - envsubst < k8s/code-du-travail-api/deployment-code-du-travail-api.yml > k8s/code-du-travail-api/deployment-cdtn-api.yml
   - envsubst < k8s/code-du-travail-api/service-code-du-travail-api.yml > k8s/code-du-travail-api/service-cdtn-api.yml
   - envsubst < k8s/code-du-travail-api/ingress-code-du-travail-api.yml > k8s/code-du-travail-api/ingress-cdtn-api.yml
-  script:
+  #
   - kubectl apply -f k8s/code-du-travail-api/deployment-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/service-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/ingress-cdtn-api.yml
-  - echo "CDTN api available at - http://code-du-travail-numerique-api.ops.factory.social.gouv.fr"
+  #
+  - echo "CDTN api available at - http://${API_HOST}"
   allow_failure: false

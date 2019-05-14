@@ -1,0 +1,22 @@
+---
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: code-du-travail-crt
+spec:
+  secretName: code-du-travail-crt-secret
+  dnsNames:
+  - code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr
+  - api.code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr
+  - nlp.code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr
+  acme:
+    config:
+    - http01:
+        ingressClass: nginx
+      domains:
+      - code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr
+      - api.code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr
+      - nlp.code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer

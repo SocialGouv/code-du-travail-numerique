@@ -1,7 +1,8 @@
 import React from "react";
 import { withRouter } from "next/router";
 import Head from "next/head";
-import { Container, Alert } from "@cdt/ui";
+import styled from "styled-components";
+import { Alert, Container } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
@@ -10,9 +11,9 @@ import { PageLayout } from "../src/layout/PageLayout";
 import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
 
 const BigError = ({ children }) => (
-  <Container style={{ fontSize: "2em", textAlign: "center", margin: "20%" }}>
+  <StyledContainer>
     <Alert warning>{children}</Alert>
-  </Container>
+  </StyledContainer>
 );
 
 const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
@@ -35,11 +36,15 @@ const getOutilFromCode = function(code) {
     case "indemnite-licenciement":
       return {
         title: "Calculer une indemnité de licenciement",
+        description:
+          "Calculez votre indemnité de licenciement en tenant compte des dispositions conventionnelles",
         outil: CalculateurIndemnite
       };
     case "simulateur-embauche":
       return {
-        title: "Simalateur d'embauche",
+        title: "Simulateur d'embauche",
+        description:
+          "Simuler le coût d'une embauche en France et calculer le salaire net à partir du brut : CDD, statut cadre, cotisations sociales, retraite…",
         outil: SimulateurEmbauche
       };
     default:
@@ -57,11 +62,14 @@ class Outils extends React.Component {
   }
   render() {
     const { data, router } = this.props;
-    const { outil: Outil, title } = getOutilFromCode(data._source.slug);
+    const { outil: Outil, title, description } = getOutilFromCode(
+      data._source.slug
+    );
     return (
       <PageLayout>
         <Head>
           <title>{title}</title>
+          <meta name="description" content={description} />
         </Head>
         <Search />
         <Outil q={router.query.q} />
@@ -73,3 +81,9 @@ class Outils extends React.Component {
 }
 
 export default withRouter(Outils);
+
+const StyledContainer = styled(Container)`
+  margin: 20%;
+  font-size: 2rem;
+  text-align: center;
+`;

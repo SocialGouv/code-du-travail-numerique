@@ -1,0 +1,46 @@
+#
+
+.notify_stage: &notify_stage
+  image: python:$PYTHON_VERSION
+  variables:
+    DEPLOY_ID_FILE: github_deploy_id
+  before_script:
+    - apk add --update curl
+    - source .gitlab-ci/env.sh
+  dependencies: []
+
+#
+
+Notify Starting Deployment:
+  <<: *notify_stage
+  stage: "Registration"
+  script:
+    - sh ./k8s/scripts/get-deploy-id.sh
+    - echo "GitHub deployment id '$(cat github_deploy_id)'"
+  artifacts:
+    paths:
+      - github_deploy_id
+
+#
+
+Notify Fail:
+  <<: *notify_stage
+  stage: "Notify Finished Deployment"
+  when: on_failure
+  dependencies:
+    - Notify Starting Deployment
+  script:
+    - echo "Notify Failure to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
+    - export URL="http://${FRONTEND_HOST}"
+    - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
+
+Notify Success:
+  <<: *notify_stage
+  stage: "Notify Finished Deployment"
+  when: on_success
+  dependencies:
+    - Notify Starting Deployment
+  script:
+    - echo "Notify Success to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
+    - export URL="http://${FRONTEND_HOST}"
+    - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success

@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> renders 1`] = `
+.c0 {
+  margin-bottom: 2rem;
+}
+
+.c0 .react-tabs__tab-list {
+  position: relative;
+  top: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c0 .react-tabs__tab {
+  margin-right: 0.25rem;
+  padding: 0.625rem 1rem;
+  font-size: 1.1rem;
+  background-color: #ebeff3;
+  border: 1px solid #c9d3df;
+  border-bottom: 1px solid #005994;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.c0 .react-tabs__tab:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 .react-tabs__tab--selected {
+  color: #fff;
+  background-color: #005994;
+}
+
+.c0 .react-tabs__tab-panel--selected {
+  padding: 1rem;
+  border: 1px solid #005994;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+<div>
+  <div
+    class="c0"
+    data-tabs="true"
+  >
+    <ul
+      class="react-tabs__tab-list"
+      role="tablist"
+    >
+      <li
+        aria-controls="react-tabs-1"
+        aria-disabled="false"
+        aria-selected="true"
+        class="react-tabs__tab react-tabs__tab--selected"
+        id="react-tabs-0"
+        role="tab"
+        tabindex="0"
+      >
+        tab1
+      </li>
+      <li
+        aria-controls="react-tabs-3"
+        aria-disabled="false"
+        aria-selected="false"
+        class="react-tabs__tab"
+        id="react-tabs-2"
+        role="tab"
+      >
+        tab2
+      </li>
+    </ul>
+    <div
+      aria-labelledby="react-tabs-0"
+      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      id="react-tabs-1"
+      role="tabpanel"
+    >
+      Ce panel peut contenir des nodes
+    </div>
+    <div
+      aria-labelledby="react-tabs-2"
+      class="react-tabs__tab-panel"
+      id="react-tabs-3"
+      role="tabpanel"
+    />
+  </div>
+</div>
+`;

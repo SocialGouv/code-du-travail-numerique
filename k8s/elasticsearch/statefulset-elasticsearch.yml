@@ -8,7 +8,7 @@ metadata:
     branch: cdtn${HASH_BRANCH_NAME}
 spec:
   serviceName: elasticsearch
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: elasticsearch
@@ -49,10 +49,6 @@ spec:
           value: "true"
         - name: http.cors.allow-origin
           value: "*"
-        - name: discovery.zen.ping.unicast.hosts
-          value: "es-cluster-0.elasticsearch,es-cluster-1.elasticsearch,es-cluster-2.elasticsearch"
-        - name: discovery.zen.minimum_master_nodes
-          value: "2"
         - name: xpack.security.enabled
           value: "false"
         - name: xpack.monitoring.enabled

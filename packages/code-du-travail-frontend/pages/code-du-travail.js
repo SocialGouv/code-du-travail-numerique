@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { ExternalLink } from "react-feather";
 import { BreadCrumbs } from "@cdt/ui";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -18,12 +18,13 @@ const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
 
 const Source = ({ name, url }) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
+  <a
+    href={url}
+    className="external-link__after"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     Voir le contenu original sur : {name}{" "}
-    <ExternalLink
-      style={{ verticalAlign: "middle", margin: "0 5px" }}
-      size={16}
-    />
   </a>
 );
 
@@ -59,6 +60,9 @@ class Fiche extends React.Component {
     );
     return (
       <PageLayout>
+        <Head>
+          <meta name="description" content={data._source.description} />
+        </Head>
         <Answer
           title={data._source.title}
           intro={

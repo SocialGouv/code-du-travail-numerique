@@ -9,6 +9,7 @@ FROM node:10-alpine
 COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-api/dist /app/dist
 COPY --from=cdtn-base-image /app/node_modules/@cdt/data...courrier-type /node_modules/@cdt/data...courrier-type
+COPY --from=cdtn-base-image /app/node_modules/@cdt/data...themes /node_modules/@cdt/data...themes
 
 WORKDIR /app
 

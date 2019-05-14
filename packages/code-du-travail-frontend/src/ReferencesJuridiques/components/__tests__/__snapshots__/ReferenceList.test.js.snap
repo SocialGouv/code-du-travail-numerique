@@ -28,7 +28,9 @@ exports[`<ReferenceList /> should render 1`] = `
   <ul
     class="c0"
   >
-    <li>
+    <li
+      class=""
+    >
       <a
         class="c1"
         href="/code-du-travail/xxx"
@@ -53,7 +55,9 @@ exports[`<ReferenceList /> should render 1`] = `
         Article xxx du code du travail
       </a>
     </li>
-    <li>
+    <li
+      class=""
+    >
       <a
         class="external-link__after c1"
         rel="noopener noreferrer"
@@ -80,7 +84,9 @@ exports[`<ReferenceList /> should render 1`] = `
         Article yyy du code du travail
       </a>
     </li>
-    <li>
+    <li
+      class=""
+    >
       <a
         class="c1"
         href="/kali/zzz"

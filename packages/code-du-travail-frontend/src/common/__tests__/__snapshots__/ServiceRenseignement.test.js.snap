@@ -1,10 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignement /> should render suggestions 1`] = `
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 1rem 0 2rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #003b80;
+}
+
+.c2 {
+  padding: 0 1rem;
+  color: #003b80;
+  font-size: 2rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 1rem 0 1.25rem;
+  color: #fff;
+  font-style: normal;
+  font-size: 1rem;
+  background-color: #003b80;
+}
+
+.c3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  display: block;
+  margin-top: 1.25rem;
+  color: #8393a7;
+}
+
+@media (max-width:980px) {
+  .c0 {
+    text-align: center;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:980px) {
+  .c3 {
+    padding: 0.625rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c3::before {
+    display: none;
+  }
+}
+
 <div>
-  <h2>
-    Trouver votre service de renseignement
-  </h2>
+  <h4>
+    Contacter les services de renseignement par téléphone
+  </h4>
+  <div
+    class="c0"
+  >
+    <a
+      class="c1"
+      href="tel:+0033806000126"
+    >
+      <strong
+        class="c2"
+      >
+        0 806 000 126
+      </strong>
+      <em
+        class="c3"
+      >
+        Service gratuit + prix appel
+      </em>
+    </a>
+  </div>
+  <h4>
+    Trouver les coordonnées du service de renseignement de mon département
+  </h4>
   <p>
     <label
       for="id_1"
@@ -30,5 +140,24 @@ exports[`<ServiceRenseignement /> should render suggestions 1`] = `
       </mark>
     </a>
   </p>
+  <small
+    class="c4"
+  >
+    Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+    <ul>
+      <li>
+        les demandes d'intervention en entreprise
+      </li>
+      <li>
+        le règlement des litiges, et la consitution des dossiers prud'homaux
+      </li>
+      <li>
+        les calculs de droit au chômage
+      </li>
+      <li>
+        vous renseigner sur les cotisations sociales
+      </li>
+    </ul>
+  </small>
 </div>
 `;

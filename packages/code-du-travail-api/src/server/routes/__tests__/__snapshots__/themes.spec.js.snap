@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`return 204 when slug match no themes 1`] = `Object {}`;
+
+exports[`return 404 when slug match no themes 1`] = `Object {}`;
+
+exports[`return documents that belongs to theme 7-depart-de-lentreprise 1`] = `
+Object {
+  "breadcrumbs": Array [
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+  ],
+  "children": Array [
+    Object {
+      "id": 37,
+      "label": "Démission",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "37-demission",
+    },
+    Object {
+      "id": 38,
+      "label": "Fin d'un CDD / CTT",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "38-fin-dun-cdd-/-ctt",
+    },
+    Object {
+      "id": 39,
+      "label": "Rupture conventionnelle",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "39-rupture-conventionnelle",
+    },
+    Object {
+      "id": 40,
+      "label": "Licenciement économique",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "40-licenciement-economique",
+    },
+    Object {
+      "id": 41,
+      "label": "Licenciement pour motif personnel",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "41-licenciement-pour-motif-personnel",
+    },
+    Object {
+      "id": 42,
+      "label": "Licenciement pour inaptitude",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "42-licenciement-pour-inaptitude",
+    },
+    Object {
+      "id": 43,
+      "label": "Documents à remettre au salarié",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "43-documents-a-remettre-au-salarie",
+    },
+    Object {
+      "id": 44,
+      "label": "Retraite",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "44-retraite",
+    },
+    Object {
+      "id": 286,
+      "label": "Autres départs",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "286-autres-departs",
+    },
+  ],
+  "documents": Array [
+    Object {
+      "_id": "5",
+      "_index": "cdtn_document_test",
+      "_score": 3.8667738,
+      "_source": Object {
+        "slug": "demission-dune-assistante-maternelle",
+        "source": "fiches_service_public",
+        "title": "Démission d'une assistante maternelle",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+      },
+      "_type": "cdtn_document_test",
+    },
+  ],
+  "id": 7,
+  "label": "Départ de l'entreprise",
+  "parent": null,
+  "slug": "7-depart-de-lentreprise",
+}
+`;
+
+exports[`return documents that belongs to theme 37-demission 1`] = `
+Object {
+  "breadcrumbs": Array [
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+    Object {
+      "id": 37,
+      "label": "Démission",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "37-demission",
+    },
+  ],
+  "children": Array [],
+  "documents": Array [
+    Object {
+      "_id": "2",
+      "_index": "cdtn_document_test",
+      "_score": 0.7769157,
+      "_source": Object {
+        "anchor": "#Comment-presenter-une-demission",
+        "slug": "demission-comment-presenter-une-demission",
+        "source": "fiches_ministere_travail",
+        "title": "Démission : comment présenter une démission ?",
+        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
+      },
+      "_type": "cdtn_document_test",
+    },
+    Object {
+      "_id": "3",
+      "_index": "cdtn_document_test",
+      "_score": 0.7769157,
+      "_source": Object {
+        "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+        "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+        "source": "fiches_ministere_travail",
+        "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
+        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+      },
+      "_type": "cdtn_document_test",
+    },
+    Object {
+      "_id": "4",
+      "_index": "cdtn_document_test",
+      "_score": 0.7769157,
+      "_source": Object {
+        "slug": "demission-dun-salarie",
+        "source": "fiches_service_public",
+        "title": "Démission d'un salarié",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+      },
+      "_type": "cdtn_document_test",
+    },
+  ],
+  "id": 37,
+  "label": "Démission",
+  "parent": "7-depart-de-lentreprise",
+  "slug": "37-demission",
+}
+`;
+
+exports[`return theme data for slug 41-licenciement-pour-motif-personnel 1`] = `
+Object {
+  "breadcrumbs": Array [
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+    Object {
+      "id": 41,
+      "label": "Licenciement pour motif personnel",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "41-licenciement-pour-motif-personnel",
+    },
+  ],
+  "children": Array [
+    Object {
+      "id": 173,
+      "label": "Motifs du licenciement",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "173-motifs-du-licenciement",
+    },
+    Object {
+      "id": 174,
+      "label": "Procédure de licenciement",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "174-procedure-de-licenciement",
+    },
+    Object {
+      "id": 175,
+      "label": "Le conseiller du salarié",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "175-le-conseiller-du-salarie",
+    },
+    Object {
+      "id": 176,
+      "label": "Préavis de licenciement",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "176-preavis-de-licenciement",
+    },
+    Object {
+      "id": 177,
+      "label": "Licenciement nul, injustifié ou irrégulier",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "177-licenciement-nul,-injustifie-ou-irregulier",
+    },
+    Object {
+      "id": 178,
+      "label": "Indemnité de licenciement",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "178-indemnite-de-licenciement",
+    },
+    Object {
+      "id": 179,
+      "label": "Indemnité compensatrice de préavis et de congés payés",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "179-indemnite-compensatrice-de-preavis-et-de-conges-payes",
+    },
+    Object {
+      "id": 180,
+      "label": "Salariés protégés",
+      "parent": "41-licenciement-pour-motif-personnel",
+      "slug": "180-salaries-proteges",
+    },
+  ],
+  "id": 41,
+  "label": "Licenciement pour motif personnel",
+  "parent": "7-depart-de-lentreprise",
+  "slug": "41-licenciement-pour-motif-personnel",
+}
+`;
+
+exports[`return theme data for slug 42-licenciement-pour-inaptitude 1`] = `
+Object {
+  "breadcrumbs": Array [
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+    Object {
+      "id": 42,
+      "label": "Licenciement pour inaptitude",
+      "parent": "7-depart-de-lentreprise",
+      "slug": "42-licenciement-pour-inaptitude",
+    },
+  ],
+  "children": Array [],
+  "id": 42,
+  "label": "Licenciement pour inaptitude",
+  "parent": "7-depart-de-lentreprise",
+  "slug": "42-licenciement-pour-inaptitude",
+}
+`;
+
+exports[`return themes root themes 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "id": 1,
+      "label": "Recrutement et contrat de travail",
+      "parent": null,
+      "slug": "1-recrutement-et-contrat-de-travail",
+    },
+    Object {
+      "id": 2,
+      "label": "Salaire et Rémunération",
+      "parent": null,
+      "slug": "2-salaire-et-remuneration",
+    },
+    Object {
+      "id": 3,
+      "label": "Temps de travail et congés",
+      "parent": null,
+      "slug": "3-temps-de-travail-et-conges",
+    },
+    Object {
+      "id": 4,
+      "label": "Emploi et formation",
+      "parent": null,
+      "slug": "4-emploi-et-formation",
+    },
+    Object {
+      "id": 5,
+      "label": "Santé, sécurité et conditions de travail",
+      "parent": null,
+      "slug": "5-sante,-securite-et-conditions-de-travail",
+    },
+    Object {
+      "id": 6,
+      "label": "Représentation du personnel et négociation collective",
+      "parent": null,
+      "slug": "6-representation-du-personnel-et-negociation-collective",
+    },
+    Object {
+      "id": 7,
+      "label": "Départ de l'entreprise",
+      "parent": null,
+      "slug": "7-depart-de-lentreprise",
+    },
+    Object {
+      "id": 8,
+      "label": "Conflits au travail et contrôle de la réglementation",
+      "parent": null,
+      "slug": "8-conflits-au-travail-et-controle-de-la-reglementation",
+    },
+  ],
+  "label": "Thèmes",
+}
+`;

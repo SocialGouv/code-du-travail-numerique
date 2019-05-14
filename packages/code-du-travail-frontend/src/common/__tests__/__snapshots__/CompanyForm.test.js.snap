@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CompanyForm /> should display the company and its IDCCs once you click on the suggestion 1`] = `
+.c2 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2:focus,
+.c2:hover,
+.c2:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 {
   margin-top: 10px;
 }
@@ -11,7 +47,7 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
   margin-top: 20px;
 }
 
-.c2 {
+.c3 {
   margin: 10px 0;
 }
 
@@ -22,7 +58,7 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
     >
       Recherche par SIRET
     </h3>
-    Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
+    Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre convention collective :
     <div
       class="c1"
     >
@@ -32,19 +68,15 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
             RENAULT-3200-VILLARD
           </b>
           <div>
-            <div
-              class="btn btn__link  "
-              link="true"
-              role="button"
-              tabindex="0"
+            <button
+              aria-pressed="false"
+              class="c2"
             >
               Chercher une autre entreprise
-            </div>
-            <div
-              class="btn btn__link  "
-              link="true"
-              role="button"
-              tabindex="0"
+            </button>
+            <button
+              aria-pressed="false"
+              class="c2"
             >
               <svg
                 fill="none"
@@ -70,11 +102,11 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
                   y2="18"
                 />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
         <div
-          class="c2"
+          class="c3"
         >
           Cette entreprise emploie des salariés sous
            2 conventions collectives
@@ -130,7 +162,7 @@ exports[`<CompanyForm /> should render 1`] = `
     >
       Recherche par SIRET
     </h3>
-    Saisissez le numéro de SIRET de votre entreprise afin d'obtenir votre convention collective :
+    Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre convention collective :
     <div
       class="c1"
     >

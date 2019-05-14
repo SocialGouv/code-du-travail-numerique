@@ -1,118 +1,668 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> it should render a Button danger 1`] = `
+exports[`<Button /> it renders a Button danger 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #f6bcc2;
+  border-color: #f6bcc2;
+  border-bottom-color: #f08f99;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #f9d2d6;
+  color: #18181c;
+}
+
+.c0:not([disabled]):active {
+  color: #242429;
+  background: #fce9eb;
+  border-width: 2px 1px 1px 1px;
+  border-color: #f6bcc2;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #18181c;
+  background: #f9d2d6;
+  border-width: 2px 1px 1px 1px;
+  border-color: #f6bcc2;
+  border-top-color: #f08f99;
+  box-shadow: inset 0 1px 2px 0 #f08f99;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #f6bcc2;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #f08f99;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
 <div>
-  <div
-    class="btn btn__danger  "
-    danger="true"
-    role="button"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     danger
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> it should render a Button info 1`] = `
+exports[`<Button /> it renders a Button default 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c0:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 <div>
-  <div
-    class="btn btn__info  "
-    info="true"
-    role="button"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
+  >
+    this is a Button 
+    default
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> it renders a Button icon 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c0:hover {
+  color: #8c94a6;
+}
+
+.c0:active {
+  position: relative;
+  top: 1px;
+}
+
+<div>
+  <button
+    aria-pressed="false"
+    class="c0"
+  >
+    this is a Button 
+    icon
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> it renders a Button info 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #d7e8f9;
+  border-color: #d7e8f9;
+  border-bottom-color: #abcff2;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #edf5fc;
+  color: #18181c;
+}
+
+.c0:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #d7e8f9;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #18181c;
+  background: #edf5fc;
+  border-width: 2px 1px 1px 1px;
+  border-color: #d7e8f9;
+  border-top-color: #abcff2;
+  box-shadow: inset 0 1px 2px 0 #abcff2;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #d7e8f9;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #abcff2;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+<div>
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     info
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> it should render a Button link 1`] = `
+exports[`<Button /> it renders a Button link 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0:focus,
+.c0:hover,
+.c0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div>
-  <div
-    class="btn btn__link  "
-    link="true"
-    role="button"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     link
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> it should render a Button primary 1`] = `
+exports[`<Button /> it renders a Button primary 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c0:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 <div>
-  <div
-    class="btn btn__primary  "
-    primary="true"
-    role="button"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     primary
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> it should render a Button secondary 1`] = `
+exports[`<Button /> it renders a Button secondary 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c0:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
 <div>
-  <div
-    class="btn btn__secondary  "
-    role="button"
-    secondary="true"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     secondary
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> it should render a Button success 1`] = `
+exports[`<Button /> it renders a Button success 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #e0f2bd;
+  border-color: #e0f2bd;
+  border-bottom-color: #ccea92;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #eaf6d2;
+  color: #18181c;
+}
+
+.c0:not([disabled]):active {
+  color: #242429;
+  background: #f4fae8;
+  border-width: 2px 1px 1px 1px;
+  border-color: #e0f2bd;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #18181c;
+  background: #eaf6d2;
+  border-width: 2px 1px 1px 1px;
+  border-color: #e0f2bd;
+  border-top-color: #ccea92;
+  box-shadow: inset 0 1px 2px 0 #ccea92;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #e0f2bd;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #ccea92;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
 <div>
-  <div
-    class="btn btn__success  "
-    role="button"
-    success="true"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     success
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> it should render a Button warning 1`] = `
+exports[`<Button /> it renders a Button warning 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fee5ad;
+  border-bottom-color: #fdd57b;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #feedc6;
+  color: #18181c;
+}
+
+.c0:not([disabled]):active {
+  color: #242429;
+  background: #fff5df;
+  border-width: 2px 1px 1px 1px;
+  border-color: #fee5ad;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #18181c;
+  background: #feedc6;
+  border-width: 2px 1px 1px 1px;
+  border-color: #fee5ad;
+  border-top-color: #fdd57b;
+  box-shadow: inset 0 1px 2px 0 #fdd57b;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #fee5ad;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #fdd57b;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
 <div>
-  <div
-    class="btn btn__warning  "
-    role="button"
-    tabindex="0"
-    warning="true"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
     this is a Button 
     warning
      
-  </div>
+  </button>
 </div>
 `;
 
-exports[`<Button /> should render 1`] = `
+exports[`<Button /> renders 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c0:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c0[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):hover,
+.c0[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c0[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 <div>
-  <div
-    class="btn   "
-    role="button"
-    tabindex="0"
+  <button
+    aria-pressed="false"
+    class="c0"
   >
-    this is an alert 
-  </div>
+    A button
+  </button>
 </div>
 `;

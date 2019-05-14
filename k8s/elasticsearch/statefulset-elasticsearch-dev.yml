@@ -28,8 +28,12 @@ spec:
       containers:
       - name: elasticsearch${HASH_BRANCH_NAME}
         resources:
+          limits:
+            memory: "640Mi"
+            cpu: "1.5"
           requests:
-            memory: 1Gi
+            memory: "256Mi"
+            cpu: "0.5"
         securityContext:
           privileged: true
           runAsUser: 1000
