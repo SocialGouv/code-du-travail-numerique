@@ -1,11 +1,9 @@
 import React from "react";
 import SummaryItem from "./SummaryItem";
 import styled from "styled-components";
-import find from "unist-util-find";
 
 const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
   const { id, titre } = data;
-  const visible = find({ children: children }, node => node.visible);
 
   return (
     <Wrapper title={`${type} ${id}`}>
@@ -26,7 +24,7 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
           )}
         </Title>
       </div>
-      {(expanded || visible) &&
+      {expanded &&
         children.map((child, idx) => (
           <SummaryItem key={idx} level={0} {...child}>
             {child.children}

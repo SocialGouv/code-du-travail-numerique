@@ -3,12 +3,6 @@ import getConfig from "next/config";
 import Sidebar from "./texte/Sidebar";
 import Content from "./texte/Content";
 import styled from "styled-components";
-import {
-  buildIndexMap,
-  getIndexesFromIds,
-  buildNestedAccessor
-} from "../lib/indexMaps";
-import update from "immutability-helper";
 import { theme } from "@cdt/ui/";
 
 const {
@@ -25,13 +19,7 @@ class ConventionTexte extends React.Component {
     const { id } = this.props;
     const texte = await this.fetchTexte({ id });
     const rootNode = this.getRootNode(texte);
-    const indexMap = buildIndexMap(rootNode);
-    this.setState({
-      texte,
-      rootNode,
-      indexMap,
-      loaded: true
-    });
+    this.setState({ texte, rootNode, loaded: true });
   }
 
   getRootNode(startNode) {
@@ -48,18 +36,14 @@ class ConventionTexte extends React.Component {
   }
 
   onChangeSummaryTitleExpanded(expanded, sectionId) {
-    const { indexMap, rootNode } = this.state;
-    const indexes = getIndexesFromIds([sectionId], indexMap);
-    const accessor = buildNestedAccessor({ $merge: { expanded } }, indexes);
-    const newRootNode = update(rootNode, accessor);
-    this.setState({ rootNode: newRootNode });
-  }
-
-  onChangeArticleVisibility(visible, idList) {
-    const { indexMap, rootNode } = this.state;
-    const indexes = getIndexesFromIds(idList, indexMap);
-    const accessor = buildNestedAccessor({ $merge: { visible } }, indexes);
-    const newRootNode = update(rootNode, accessor);
+    const { rootNode } = this.state;
+    const sectionIdx = rootNode.children.findIndex(
+      child => child.data.id == sectionId
+    );
+    const newSection = { ...rootNode.children[sectionIdx], expanded };
+    const newChildren = [...rootNode.children];
+    newChildren[sectionIdx] = newSection;
+    const newRootNode = { ...rootNode, children: newChildren };
     this.setState({ rootNode: newRootNode });
   }
 
@@ -80,13 +64,7 @@ class ConventionTexte extends React.Component {
         )}
         {loaded && (
           <ContentWrapper>
-            <Content
-              rootNode={rootNode}
-              texte={texte}
-              onChangeArticleVisibility={(visible, idList) =>
-                this.onChangeArticleVisibility(visible, idList)
-              }
-            />
+            <Content rootNode={rootNode} texte={texte} />
           </ContentWrapper>
         )}
       </Wrapper>
