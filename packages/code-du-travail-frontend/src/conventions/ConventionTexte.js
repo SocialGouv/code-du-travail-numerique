@@ -12,10 +12,19 @@ const {
 class ConventionTexte extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loaded: false, structure: null };
+    if (props.preloadedTexte) {
+      const texte = props.preloadedTexte;
+      const rootNode = this.getRootNode(texte);
+      this.state = { rootNode, texte, loaded: true };
+    } else {
+      this.state = { loaded: false };
+    }
   }
 
   async componentDidMount() {
+    if (this.state.texte) {
+      return false;
+    }
     const { id } = this.props;
     const texte = await this.fetchTexte({ id });
     const rootNode = this.getRootNode(texte);
