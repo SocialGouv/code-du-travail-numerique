@@ -17,34 +17,40 @@ const Article = ({
     <Section>
       <Container>
         <Wrapper variant="light">
-          <Header>
-            <IconWrapper>
-              <Icon />
-            </IconWrapper>
-            <div>
-              <H1>{title}</H1>
-              <Meta>
-                {sourceType && <Type>{sourceType}</Type>}
-                {date && (
-                  <Date>
-                    Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
-                  </Date>
-                )}
-              </Meta>
-            </div>
-            <Tags>
-              {tags.map(tag => (
-                <Tag
-                  key={tag}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => onTagClick(tag)}
-                >
-                  {tag}
-                </Tag>
-              ))}
-            </Tags>
-          </Header>
-          {children && <Content>{children}</Content>}
+          <Section>
+            <Header narrow noPadding>
+              <IconWrapper>
+                <Icon />
+              </IconWrapper>
+              <div>
+                <H1>{title}</H1>
+                <Meta>
+                  {sourceType && <Type>{sourceType}</Type>}
+                  {date && (
+                    <Date>
+                      Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
+                    </Date>
+                  )}
+                </Meta>
+              </div>
+              <Tags>
+                {tags.map(tag => (
+                  <Tag
+                    key={tag}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => onTagClick(tag)}
+                  >
+                    {tag}
+                  </Tag>
+                ))}
+              </Tags>
+            </Header>
+            {children && (
+              <Container narrow noPadding>
+                {children}
+              </Container>
+            )}
+          </Section>
         </Wrapper>
       </Container>
     </Section>
@@ -74,12 +80,9 @@ Article.defaultProps = {
 export default Article;
 
 const { breakpoints, colors, fonts, spacing } = theme;
-const maxWidth = "850px";
 
-const Header = styled.div`
+const Header = styled(Container)`
   position: relative;
-  margin: 20px auto 0 auto;
-  max-width: ${maxWidth};
 `;
 
 const IconWrapper = styled.div`
@@ -127,10 +130,4 @@ const DateValue = styled.span`
 
 const Tags = styled.div`
   margin-left: -10px;
-`;
-
-const Content = styled.div`
-  margin: 20px auto;
-  max-width: ${maxWidth};
-  text-align: left;
 `;

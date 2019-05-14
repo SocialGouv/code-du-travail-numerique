@@ -170,7 +170,7 @@ class Search extends React.Component {
 
     return (
       <React.Fragment>
-        <Section variant="white" className="shadow-bottom search-widget">
+        <SearchSection variant="white" className="search-widget">
           <Container>
             <StyledSearch ref={this.searchRef}>
               <SearchLabel>
@@ -214,7 +214,7 @@ class Search extends React.Component {
               </form>
             </StyledSearch>
           </Container>
-        </Section>
+        </SearchSection>
       </React.Fragment>
     );
   }
@@ -223,6 +223,10 @@ class Search extends React.Component {
 export default withRouter(Search);
 
 const { animations, box, breakpoints, colors, spacing, fonts } = theme;
+
+const SearchSection = styled(Section)`
+  box-shadow: 0 10px 10px -10px ${colors.lightGrey};
+`;
 
 const SearchLabel = styled.p`
   margin-top: 0;

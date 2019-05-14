@@ -126,7 +126,6 @@ https://fontlibrary.org/fr/font/source-sans-pro
     The third value sets a blur effects (makes the shadow non-uniform).
     The fourth value sets a spread (contract the shadow when negative).
     --------------------------------------------------------------------------- */
-  --box-shadow-bottom: 0 10px 10px -10px #b7bcdf;
   --box-shadow: 0 5px 10px 0 var(--color-light-grey);
 }
 

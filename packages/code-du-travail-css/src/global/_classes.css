@@ -29,11 +29,6 @@ https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden-
   width: 100%;
 }
 
-.shadow-bottom {
-  position: relative;
-  box-shadow: var(--box-shadow-bottom);
-}
-
 .fontweight--normal {
   font-weight: normal !important;
 }

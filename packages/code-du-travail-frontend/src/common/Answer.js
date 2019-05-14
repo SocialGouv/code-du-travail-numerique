@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import { withRouter } from "next/router";
-import { Alert, Container, theme } from "@cdt/ui";
+import { Alert, Container, theme, Wrapper } from "@cdt/ui";
 import { Link } from "../../routes";
 import ReferencesJuridiques from "../ReferencesJuridiques";
 import Article from "../common/Article";
@@ -51,7 +51,6 @@ function Answer({
   referencesJuridiques = [],
   emptyMessage = "Aucun résultat"
 }) {
-  getBreadcrumbs;
   return (
     <React.Fragment>
       <Head>
@@ -63,7 +62,7 @@ function Answer({
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
         <Article title={title} icon={icon} date={date} sourceType={sourceType}>
-          {intro}
+          {intro && <Wrapper variant="dark">{intro}</Wrapper>}
           {html && <Html>{html}</Html>}
           {children}
           <Footer>{footer}</Footer>
