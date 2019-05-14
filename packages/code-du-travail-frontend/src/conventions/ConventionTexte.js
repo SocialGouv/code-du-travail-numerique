@@ -51,7 +51,7 @@ class ConventionTexte extends React.Component {
     const { loaded, texte, rootNode } = this.state;
     return (
       <Wrapper>
-        {!loaded && "loading..."}
+        {!loaded && "chargement ..."}
         {loaded && (
           <SidebarWrapper>
             <Sidebar
