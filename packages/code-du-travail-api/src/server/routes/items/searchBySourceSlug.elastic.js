@@ -16,6 +16,7 @@ function getSearchBody({ source, slug }) {
       "date_fin", // code-du-travail
       "description", // modele de courrier
       "filename", // filename
+      "intro",
       "html",
       "id", // idcc, kali
       "path", // code-du-travail
