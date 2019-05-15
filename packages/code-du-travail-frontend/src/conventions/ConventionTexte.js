@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import getConfig from "next/config";
 import Sidebar from "./texte/Sidebar";
 import Content from "./texte/Content";
@@ -80,6 +81,13 @@ class ConventionTexte extends React.Component {
     );
   }
 }
+
+ConventionTexte.propTypes = {
+  id: PropTypes.string.isRequired,
+  preloadedTexte: PropTypes.shape({
+    children: PropTypes.array
+  })
+};
 
 const Wrapper = styled.div`
   @media (min-width: ${theme.breakpoints.tablet}) {

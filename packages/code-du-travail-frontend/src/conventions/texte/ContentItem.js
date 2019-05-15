@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Article from "./Article";
 import styled from "styled-components";
 
@@ -16,6 +17,21 @@ const ContentItem = ({ data, children, type, level }) => {
       {type == "article" && <Article {...data} />}
     </div>
   );
+};
+
+ContentItem.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    titre: PropTypes.string.isRequired
+  }).isRequired,
+  children: PropTypes.arrayOf(
+    PropTypes.shape({
+      data: PropTypes.shape({
+        id: PropTypes.string.isRequired
+      }),
+      children: PropTypes.array
+    })
+  )
 };
 
 const Title = styled.h3`

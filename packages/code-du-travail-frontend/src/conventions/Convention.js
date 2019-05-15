@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ConventionInfos from "./ConventionInfos";
 import ConventionTexte from "./ConventionTexte";
 import ConventionExplainer from "./ConventionExplainer";
@@ -59,6 +60,13 @@ const Convention = ({ convention, conteneur }) => (
     />
   </React.Fragment>
 );
+
+Convention.propTypes = {
+  convention: PropTypes.object.isRequired,
+  conteneur: PropTypes.shape({
+    texte_de_base: PropTypes.string.isRequired
+  }).isRequired
+};
 
 const ExplainerWrapper = styled.div`
   margin-bottom: 20px;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import SummaryItem from "./SummaryItem";
 import styled from "styled-components";
 
@@ -33,6 +34,21 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
     </Wrapper>
   );
 };
+
+SummaryTitle.propTypes = {
+  type: PropTypes.string,
+  data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    titre: PropTypes.string.isRequired
+  }).isRequired,
+  children: PropTypes.arrayOf(
+    PropTypes.shape({
+      children: PropTypes.array
+    })
+  ),
+  expanded: PropTypes.bool,
+  onToggleExpanded: PropTypes.func.isRequired
+}
 
 const Title = styled.h4`
   font-size: 14px;

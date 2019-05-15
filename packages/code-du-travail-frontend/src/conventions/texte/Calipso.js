@@ -2,7 +2,6 @@ import React from "react";
 
 const Calipso = ({ calipso }) => (
   <div
-    key={calipso}
     style={{
       display: "inline-block",
       backgroundColor: "rgb(0, 83, 179)",

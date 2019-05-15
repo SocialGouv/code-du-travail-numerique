@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { format } from "date-fns";
 
 class ConventionInfos extends React.Component {
@@ -29,5 +30,15 @@ class ConventionInfos extends React.Component {
     );
   }
 }
+
+ConventionInfos.propTypes = {
+  convention: PropTypes.shape({
+    url: PropTypes.string
+  }).isRequired,
+  conteneur: PropTypes.shape({
+    num: PropTypes.number,
+    date_publi: PropTypes.string
+  }).isRequired
+};
 
 export default ConventionInfos;

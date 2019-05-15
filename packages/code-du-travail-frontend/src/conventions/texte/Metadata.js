@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const Metadata = ({ texte }) => {
   const { nature, date_texte, origine_publi } = texte.data;
@@ -34,6 +35,12 @@ const Metadata = ({ texte }) => {
       </tbody>
     </table>
   );
+};
+
+Metadata.propTypes = {
+  nature: PropTypes.string.isRequired,
+  date_texte: PropTypes.string.isRequired,
+  origine_publi: PropTypes.string
 };
 
 const ButtonLink = ({ eventHandler, children }) => (

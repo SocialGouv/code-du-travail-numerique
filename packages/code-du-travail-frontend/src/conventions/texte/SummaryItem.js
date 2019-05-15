@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { theme } from "@cdt/ui/";
 
@@ -23,6 +24,24 @@ const SummaryItem = ({ data, children, type, level, visible }) => {
         ))}
     </div>
   );
+};
+
+SummaryItem.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    titre: PropTypes.string.isRequired
+  }).isRequired,
+  children: PropTypes.arrayOf(
+    PropTypes.shape({
+      data: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        children: PropTypes.array
+      })
+    })
+  ),
+  type: PropTypes.string,
+  visible: PropTypes.bool,
+  level: PropTypes.number.isRequired
 };
 
 const Title = styled.h4`

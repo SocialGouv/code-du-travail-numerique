@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Calipso from "./Calipso";
 import styled from "styled-components";
 
@@ -24,6 +25,12 @@ const Article = ({ etat, calipsos, bloc_textuel }) => {
       <div dangerouslySetInnerHTML={{ __html: bloc_textuel }} />
     </div>
   );
+};
+
+Article.propTypes = {
+  etat: PropTypes.oneOf(Object.keys(ETAT_LABEL)).isRequired,
+  bloc_textuel: PropTypes.string.isRequired,
+  calipsos: PropTypes.array
 };
 
 const ArticleMeta = styled.div`

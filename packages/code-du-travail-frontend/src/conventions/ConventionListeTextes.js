@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import getConfig from "next/config";
 import ConventionTexte from "./ConventionTexte";
 
@@ -65,5 +66,12 @@ class ConventionListeTextes extends React.Component {
     );
   }
 }
+
+ConventionListeTextes.propTypes = {
+  conteneur: PropTypes.shape({
+    id: PropTypes.string.isRequired
+  }).isRequired,
+  typeTextes: PropTypes.oneOf(["base", "extensions", "attaches", "salaires"])
+};
 
 export default ConventionListeTextes;
