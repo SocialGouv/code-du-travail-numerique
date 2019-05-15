@@ -60,6 +60,14 @@ Test @cdtn/frontend:
   after_script:
     - CI_PROJECT_DIR=/app npx codecov -F frontend
 
+Test @cdtn/ui:
+  <<: *quality_stage
+  <<: *master_based_stage
+  script:
+    - yarn workspace @cdt/ui test --coverage
+  after_script:
+    - CI_PROJECT_DIR=/app npx codecov -F ui
+
 Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
