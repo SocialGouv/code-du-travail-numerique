@@ -12,6 +12,7 @@ services:
       - esdata:/usr/share/elasticsearch/data
 
   python:
+    restart: "no"
     env_file:
       - .env
     depends_on:
