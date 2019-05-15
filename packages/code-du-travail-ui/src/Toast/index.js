@@ -50,7 +50,7 @@ const Toast = ({
       <Content role="alert">{children}</Content>
       {onRemove ? (
         <ButtonWrapper>
-          <Button variant="icon" onClick={onRemove}>
+          <Button variant="icon" aria-label="Fermer" onClick={onRemove}>
             <IconClose />
           </Button>
         </ButtonWrapper>
