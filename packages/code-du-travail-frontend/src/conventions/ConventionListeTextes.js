@@ -1,11 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import getConfig from "next/config";
 import ConventionTexte from "./ConventionTexte";
-
-const {
-  publicRuntimeConfig: { API_DILA2SQL_URL }
-} = getConfig();
+import { fetchTextes } from "../common/convention.service";
 
 class ConventionListeTextes extends React.Component {
   constructor(props) {
@@ -13,16 +9,9 @@ class ConventionListeTextes extends React.Component {
     this.state = { loaded: false, textes: [], selectedTexte: null };
   }
 
-  fetchTextes({ conteneurId, typeTextes }) {
-    const url = `${API_DILA2SQL_URL}/base/KALI/conteneur/${conteneurId}/textes/${typeTextes}`;
-    return fetch(url)
-      .then(r => r.json())
-      .then(res => res.textes);
-  }
-
   async componentDidMount() {
     const { conteneur, typeTextes } = this.props;
-    const textes = await this.fetchTextes({
+    const textes = await fetchTextes({
       conteneurId: conteneur.id,
       typeTextes
     });

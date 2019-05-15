@@ -1,14 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import getConfig from "next/config";
+import { fetchTexte } from "../common/convention.service";
 import Sidebar from "./texte/Sidebar";
 import Content from "./texte/Content";
 import styled from "styled-components";
 import { theme } from "@cdt/ui/";
-
-const {
-  publicRuntimeConfig: { API_DILA2SQL_URL }
-} = getConfig();
 
 class ConventionTexte extends React.Component {
   constructor(props) {
@@ -27,7 +23,7 @@ class ConventionTexte extends React.Component {
       return false;
     }
     const { id } = this.props;
-    const texte = await this.fetchTexte({ id });
+    const texte = await fetchTexte({ id });
     const topNode = this.getFirstNodeWithChildren(texte);
     this.setState({ texte, topNode, loaded: true });
   }
@@ -38,11 +34,6 @@ class ConventionTexte extends React.Component {
       topNode = topNode.children[0];
     }
     return topNode.children ? topNode : texte;
-  }
-
-  fetchTexte({ id }) {
-    const url = `${API_DILA2SQL_URL}/base/KALI/texte/${id}`;
-    return fetch(url).then(r => r.json());
   }
 
   onChangeSummaryTitleExpanded(expanded, sectionId) {
