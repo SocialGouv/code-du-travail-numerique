@@ -6,10 +6,10 @@ import { theme } from "@cdt/ui/";
 const SummaryItem = ({ data, children, type, level, visible }) => {
   const { titre, id } = data;
   return (
-    <Wrapper level={level} title={`${type} ${id}, level ${level}`}>
-      <Title visible={visible}>
-        <TitleLink href={`#${id}`}>{titre}</TitleLink>
-      </Title>
+    <Wrapper className="toc-list-item" level={level} title={`${type} ${id}, level ${level}`}>
+      <TitleLink className="toc-link" href={`#${id}`}>
+        {titre}
+      </TitleLink>
       {children &&
         children.map(child => (
           <SummaryItem key={child.data.id} level={level + 1} {...child}>
@@ -41,6 +41,14 @@ SummaryItem.propTypes = {
 const Wrapper = styled.div`
   margin-left: 5px;
   padding-left: 10px;
+  display: none;
+  &.is-active-li,
+  &.is-active-li > .toc-list-item {
+    // display same-level siblings of current active link
+    display: block;
+  }
+  // this should mitigate flickering
+  transition: all 300ms ease-in-out;
   ${props =>
     props.level != undefined &&
     css`
@@ -54,21 +62,19 @@ const Wrapper = styled.div`
     `}
 `;
 
-const Title = styled.h4`
+const TitleLink = styled.a`
   font-size: 14px;
   line-height: 1;
   margin: 0;
   padding: 0 0 5px 0;
   color: ${theme.colors.darkGrey};
+  &:visited {
+    color: ${theme.colors.darkGrey};
+  }
   font-weight: normal;
-  ${props =>
-    props.visible &&
-    css`
-      background: #ddd;
-    `}
-`;
-
-const TitleLink = styled.a`
+  &.is-active-link {
+    color: #000;
+  }
   color: #000,
   text-decoration: none;
   &:hover {

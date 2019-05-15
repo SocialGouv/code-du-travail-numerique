@@ -8,11 +8,13 @@ const Content = ({ texte, node }) => {
   return (
     <Section>
       <Metadata texte={texte} />
-      {node.children.map((child, idx) => (
-        <ContentItem key={idx} {...child}>
-          {child.children}
-        </ContentItem>
-      ))}
+      <div className="js-toc-content">
+        {node.children.map((child, idx) => (
+          <ContentItem key={idx} {...child}>
+            {child.children}
+          </ContentItem>
+        ))}
+      </div>
     </Section>
   );
 };

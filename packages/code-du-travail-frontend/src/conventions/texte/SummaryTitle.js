@@ -7,30 +7,29 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
   const { id, titre } = data;
 
   return (
-    <Wrapper title={`${type} ${id}`}>
-      <div>
-        <Title>
-          {children && children.length > 0 ? (
-            <TitleLink
-              href="#"
-              onClick={e => {
-                e.preventDefault();
-                onToggleExpanded(id, !expanded);
-              }}
-            >
-              {titre}&nbsp;{expanded ? "▲" : "▼"}
-            </TitleLink>
-          ) : (
-            <TitleLink href={`#${id}`}>{titre}</TitleLink>
-          )}
-        </Title>
-      </div>
-      {expanded &&
-        children.map((child, idx) => (
+    <Wrapper className="toc-list-item" title={`${type} ${id}`}>
+      {children && children.length > 0 ? (
+        <TitleLink
+          id={id}
+          onClick={e => {
+            e.preventDefault();
+            onToggleExpanded(id, !expanded);
+          }}
+        >
+          {titre}&nbsp;{expanded ? "▲" : "▼"}
+        </TitleLink>
+      ) : (
+        <TitleLink id={id}>{titre}</TitleLink>
+      )}
+      <SummarySection
+        className={`toc-list is-collapsible ${expanded ? "" : "is-collapsed"}`}
+      >
+        {children.map((child, idx) => (
           <SummaryItem key={idx} level={0} {...child}>
             {child.children}
           </SummaryItem>
         ))}
+      </SummarySection>
     </Wrapper>
   );
 };
@@ -52,9 +51,18 @@ SummaryTitle.propTypes = {
 
 const Title = styled.h4`
   font-size: 14px;
+  &.is-active-li {
+    font-weight: bold;
+  }
 `;
 
-const TitleLink = styled.a`
+const TitleLink = ({ id, children, onClick }) => (
+  <TitleLinkStyled className="toc-link" href={`#${id}`} onClick={onClick}>
+    {children}
+  </TitleLinkStyled>
+);
+
+const TitleLinkStyled = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -63,6 +71,22 @@ const TitleLink = styled.a`
 
 const Wrapper = styled.div`
   clear: both;
+  font-size: 14px;
+  &.is-active-li {
+    font-weight: bold;
+  }
+`;
+
+const SummarySection = styled.ol`
+  &.is-collapsed {
+    display: none;
+  }
+  & > .toc-list-item {
+    // display all first level section links
+    display: block;
+  }
+  // this should mitigate flickering
+  transition: all 300ms ease-in-out;
 `;
 
 export default SummaryTitle;

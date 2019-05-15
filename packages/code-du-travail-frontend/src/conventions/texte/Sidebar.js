@@ -5,7 +5,7 @@ import SummaryTitle from "./SummaryTitle";
 
 const Sidebar = ({ node, onSummaryTitleToggleExpanded }) => {
   return (
-    <Section>
+    <Section className="js-toc">
       <Wrapper variant="dark">
         {node.children.map((child, idx) => (
           <SummaryTitle

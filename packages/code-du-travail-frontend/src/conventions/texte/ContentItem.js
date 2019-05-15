@@ -6,8 +6,8 @@ import styled from "styled-components";
 const ContentItem = ({ data, children, type, level }) => {
   const { titre, id } = data;
   return (
-    <div id={id}>
-      <Title>{titre}</Title>
+    <div>
+      <Title id={id}>{titre}</Title>
       {children &&
         children.map(child => (
           <ContentItem key={child.data.id} level={level + 1} {...child}>

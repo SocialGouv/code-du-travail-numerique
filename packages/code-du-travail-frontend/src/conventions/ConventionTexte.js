@@ -5,6 +5,7 @@ import Sidebar from "./texte/Sidebar";
 import Content from "./texte/Content";
 import styled from "styled-components";
 import { theme } from "@cdt/ui/";
+import { createOnScrollHandler } from "./texte/autoscroll";
 
 class ConventionTexte extends React.Component {
   constructor(props) {
@@ -26,6 +27,16 @@ class ConventionTexte extends React.Component {
     const texte = await fetchTexte({ id });
     const topNode = this.getFirstNodeWithChildren(texte);
     this.setState({ texte, topNode, loaded: true });
+  }
+
+  componentDidUpdate() {
+    const headings = document.querySelectorAll(".js-toc-content h3");
+    this._scrollListener = createOnScrollHandler(headings);
+    document.addEventListener("scroll", this._scrollListener, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this._scrollListener);
   }
 
   getFirstNodeWithChildren(texte) {
