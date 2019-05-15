@@ -4,10 +4,13 @@ import ConventionTexte from "./ConventionTexte";
 import ConventionExplainer from "./ConventionExplainer";
 import ConventionListeTextes from "./ConventionListeTextes";
 import { Tabs } from "@cdt/ui";
+import styled from "styled-components";
 
 const Convention = ({ convention, conteneur }) => (
   <React.Fragment>
-    <ConventionExplainer />
+    <ExplainerWrapper>
+      <ConventionExplainer />
+    </ExplainerWrapper>
     <Tabs
       data={[
         {
@@ -56,5 +59,12 @@ const Convention = ({ convention, conteneur }) => (
     />
   </React.Fragment>
 );
+
+const ExplainerWrapper = styled.div`
+  margin-bottom: 20px;
+  .accordion > div {
+    padding: 10px;
+  }
+`;
 
 export default Convention;

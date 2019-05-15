@@ -1,33 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Section, Wrapper } from "@cdt/ui";
+import React from "react";
+import { Accordion } from "@cdt/ui";
 import styled from "styled-components";
 
-const storedExpandedKey = "isConventionExplainerExpanded";
-
-const ConventionExplainer = () => {
-  const [expanded, setExpanded] = useState(true);
-
-  useEffect(() => {
-    const expanded = sessionStorage.getItem(storedExpandedKey) == "true";
-    setExpanded(expanded);
-  });
-
-  return (
-    <Section>
-      <Wrapper variant="dark">
-        <ExpandWrapper>
-          <Button
-            onClick={e => {
-              e.preventDefault();
-              sessionStorage.setItem(storedExpandedKey, !expanded);
-              setExpanded(!expanded);
-            }}
-          >
-            {expanded ? "▲" : "▼"}
-          </Button>
-        </ExpandWrapper>
-        <Title>Explications sur les conventions collectives nationales</Title>
-        {expanded && (
+const ConventionExplainer = () => (
+  <Accordion
+    items={[
+      {
+        title: "Explications sur les conventions collectives nationales",
+        body: (
           <React.Fragment>
             <SubTitle>
               Qu&apos;est ce qu&apos;une convention collective ?
@@ -57,31 +37,25 @@ const ConventionExplainer = () => {
               existe deux situations dans lesquelles votre entreprise a
               l&apos;obligation de l&apos;appliquer :
               <br />
-              - soit une convention collective de branche a été étendue par le
-              Ministère du travail rendant la convention collective obligatoire
-              pour toutes les entreprises qui entrent dans son champ
-              d&apos;application professionnel et géographique.
-              <br />- soit votre entreprise est signataire ou adhérente à une
-              organisation patronale signataire de la convention collective.
+              <ul>
+                <li>
+                  soit une convention collective de branche a été étendue par le
+                  Ministère du travail rendant la convention collective
+                  obligatoire pour toutes les entreprises qui entrent dans son
+                  champ d&apos;application professionnel et géographique.
+                </li>
+                <li>
+                  soit votre entreprise est signataire ou adhérente à une
+                  organisation patronale signataire de la convention collective.
+                </li>
+              </ul>
             </p>
           </React.Fragment>
-        )}
-      </Wrapper>
-    </Section>
-  );
-};
-
-const Button = styled.button`
-  padding: 2px;
-`;
-
-const ExpandWrapper = styled.div`
-  float: right;
-`;
-
-const Title = styled.span`
-  font-weight: bold;
-`;
+        )
+      }
+    ]}
+  />
+);
 
 const SubTitle = styled.p`
   text-decoration: underline;
