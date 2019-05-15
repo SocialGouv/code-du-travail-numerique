@@ -7,6 +7,8 @@ coverage:
       api:
         target: 89%
         flags: api
+      ui:
+        flags: ui
 
 flags:
   api:
@@ -15,3 +17,6 @@ flags:
   frontend:
     paths:
       - packages/code-du-travail-frontend
+  ui:
+    paths:
+      - packages/code-du-travail-ui
