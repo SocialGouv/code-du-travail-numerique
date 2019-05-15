@@ -38,8 +38,8 @@ const Metadata = ({ texte }) => {
 };
 
 Metadata.propTypes = {
-  nature: PropTypes.string.isRequired,
-  date_texte: PropTypes.string.isRequired,
+  nature: PropTypes.string,
+  date_texte: PropTypes.string,
   origine_publi: PropTypes.string
 };
 

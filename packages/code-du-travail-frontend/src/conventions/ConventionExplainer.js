@@ -36,20 +36,19 @@ const ConventionExplainer = () => (
               géographique d&apos;une convention collective de branche, il
               existe deux situations dans lesquelles votre entreprise a
               l&apos;obligation de l&apos;appliquer :
-              <br />
-              <ul>
-                <li>
-                  soit une convention collective de branche a été étendue par le
-                  Ministère du travail rendant la convention collective
-                  obligatoire pour toutes les entreprises qui entrent dans son
-                  champ d&apos;application professionnel et géographique.
-                </li>
-                <li>
-                  soit votre entreprise est signataire ou adhérente à une
-                  organisation patronale signataire de la convention collective.
-                </li>
-              </ul>
             </p>
+            <ul>
+              <li>
+                soit une convention collective de branche a été étendue par le
+                Ministère du travail rendant la convention collective
+                obligatoire pour toutes les entreprises qui entrent dans son
+                champ d&apos;application professionnel et géographique.
+              </li>
+              <li>
+                soit votre entreprise est signataire ou adhérente à une
+                organisation patronale signataire de la convention collective.
+              </li>
+            </ul>
           </React.Fragment>
         )
       }

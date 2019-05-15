@@ -36,7 +36,7 @@ ConventionInfos.propTypes = {
     url: PropTypes.string
   }).isRequired,
   conteneur: PropTypes.shape({
-    num: PropTypes.number,
+    num: PropTypes.string,
     date_publi: PropTypes.string
   }).isRequired
 };
