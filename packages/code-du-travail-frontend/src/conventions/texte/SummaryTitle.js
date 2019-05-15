@@ -48,7 +48,7 @@ SummaryTitle.propTypes = {
   ),
   expanded: PropTypes.bool,
   onToggleExpanded: PropTypes.func.isRequired
-}
+};
 
 const Title = styled.h4`
   font-size: 14px;

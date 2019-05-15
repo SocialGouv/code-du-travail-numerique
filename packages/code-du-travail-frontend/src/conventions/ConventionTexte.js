@@ -15,8 +15,8 @@ class ConventionTexte extends React.Component {
     super(props);
     if (props.preloadedTexte) {
       const texte = props.preloadedTexte;
-      const rootNode = this.getRootNode(texte);
-      this.state = { rootNode, texte, loaded: true };
+      const topNode = this.getFirstNodeWithChildren(texte);
+      this.state = { topNode, texte, loaded: true };
     } else {
       this.state = { loaded: false };
     }
@@ -28,16 +28,16 @@ class ConventionTexte extends React.Component {
     }
     const { id } = this.props;
     const texte = await this.fetchTexte({ id });
-    const rootNode = this.getRootNode(texte);
-    this.setState({ texte, rootNode, loaded: true });
+    const topNode = this.getFirstNodeWithChildren(texte);
+    this.setState({ texte, topNode, loaded: true });
   }
 
-  getRootNode(startNode) {
-    let rootNode = startNode;
-    while (rootNode.children && rootNode.children.length == 1) {
-      rootNode = rootNode.children[0];
+  getFirstNodeWithChildren(texte) {
+    let topNode = texte;
+    while (topNode.children && topNode.children.length == 1) {
+      topNode = topNode.children[0];
     }
-    return rootNode.children ? rootNode : startNode;
+    return topNode.children ? topNode : texte;
   }
 
   fetchTexte({ id }) {
@@ -46,26 +46,26 @@ class ConventionTexte extends React.Component {
   }
 
   onChangeSummaryTitleExpanded(expanded, sectionId) {
-    const { rootNode } = this.state;
-    const sectionIdx = rootNode.children.findIndex(
+    const { topNode } = this.state;
+    const sectionIdx = topNode.children.findIndex(
       child => child.data.id == sectionId
     );
-    const newSection = { ...rootNode.children[sectionIdx], expanded };
-    const newChildren = [...rootNode.children];
+    const newSection = { ...topNode.children[sectionIdx], expanded };
+    const newChildren = [...topNode.children];
     newChildren[sectionIdx] = newSection;
-    const newRootNode = { ...rootNode, children: newChildren };
-    this.setState({ rootNode: newRootNode });
+    const newRootNode = { ...topNode, children: newChildren };
+    this.setState({ topNode: newRootNode });
   }
 
   render() {
-    const { loaded, texte, rootNode } = this.state;
+    const { loaded, texte, topNode } = this.state;
     return (
       <Wrapper>
         {!loaded && "chargement ..."}
         {loaded && (
           <SidebarWrapper>
             <Sidebar
-              rootNode={rootNode}
+              topNode={topNode}
               onSummaryTitleToggleExpanded={(sectionId, visible) =>
                 this.onChangeSummaryTitleExpanded(visible, sectionId)
               }
@@ -74,7 +74,7 @@ class ConventionTexte extends React.Component {
         )}
         {loaded && (
           <ContentWrapper>
-            <Content rootNode={rootNode} texte={texte} />
+            <Content topNode={topNode} texte={texte} />
           </ContentWrapper>
         )}
       </Wrapper>
