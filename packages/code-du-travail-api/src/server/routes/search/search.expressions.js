@@ -24,12 +24,10 @@ const expressions = [
 // expressions is a suite of some words.  eg: ["rupture conventionnelle", "contrat de travail"];
 const getExpressions = query => {
   const normalizedQuery = normalize(query);
-  if (!normalizedQuery) {
+  if (normalizedQuery === "") {
     return [];
   }
-  return expressions.filter(
-    expression => normalizedQuery.indexOf(expression) > -1
-  );
+  return expressions.filter(expression => normalizedQuery.includes(expression));
 };
 
 // return some additional ES filters for a given query
