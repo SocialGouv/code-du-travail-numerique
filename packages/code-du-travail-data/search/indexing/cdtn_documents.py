@@ -59,6 +59,7 @@ def populate_cdtn_documents():
                 'text': f"IDCC {val['num']} {val['titre']}",
                 'url': val['url'],
                 'idcc': val['num'],
+                'id': val['id']
             })
 
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))

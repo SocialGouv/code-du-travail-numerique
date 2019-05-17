@@ -3,7 +3,7 @@ import memoizee from "memoizee";
 import pDebounce from "../lib/pDebounce";
 
 const {
-  publicRuntimeConfig: { API_URL, API_SIRET2IDCC_URL }
+  publicRuntimeConfig: { API_URL, API_SIRET2IDCC_URL, API_DILA2SQL_URL }
 } = getConfig();
 
 function searchIdcc(query) {
@@ -43,6 +43,20 @@ function getCompany(siret) {
   });
 }
 
+const fetchTextes = ({ conteneurId, typeTextes }) => {
+  const url = `${API_DILA2SQL_URL}/base/KALI/conteneur/${conteneurId}/textes/${typeTextes}`;
+  return fetch(url)
+    .then(r => r.json())
+    .then(res => res.textes);
+};
+
+const fetchTexte = ({ id }) => {
+  // have a look at https://api.dila2sql.num.social.gouv.fr/v1/base/KALI/texte/KALITEXT000005687520
+  // to have an idea of a texte structure, with the children and such
+  const url = `${API_DILA2SQL_URL}/base/KALI/texte/${id}`;
+  return fetch(url).then(r => r.json());
+};
+
 // memoize search results
 const searchIdccMemo = memoizee(query => searchIdcc(query), { promise: true });
 const searchCompaniesMemo = memoizee(siret => searchCompanies(siret), {
@@ -58,5 +72,7 @@ export {
   searchCompaniesDebounced as searchCompanies,
   searchCompanies as _searchCompanies,
   getCompanyMemo as getCompany,
-  getCompany as _getCompany
+  getCompany as _getCompany,
+  fetchTexte,
+  fetchTextes
 };

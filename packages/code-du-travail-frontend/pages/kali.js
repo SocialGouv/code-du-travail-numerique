@@ -3,17 +3,14 @@ import { withRouter } from "next/router";
 import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { Button } from "@cdt/ui";
-import { ExternalLink } from "react-feather";
 import Answer from "../src/common/Answer";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import { PageLayout } from "../src/layout/PageLayout";
+import Convention from "../src/conventions/Convention";
 
 const {
-  publicRuntimeConfig: { API_URL }
+  publicRuntimeConfig: { API_URL, API_DILA2SQL_URL }
 } = getConfig();
-
-// a FAQ answer
 
 const fetchKali = ({ slug, idccNum }) => {
   const url = slug
@@ -24,10 +21,16 @@ const fetchKali = ({ slug, idccNum }) => {
     .then(r => r.status != 404 && r._source);
 };
 
+const fetchConteneur = ({ id }) =>
+  fetch(`${API_DILA2SQL_URL}/base/KALI/conteneur/${id}`)
+    .then(r => r.json())
+    .then(r => r.data);
+
 class Kali extends React.Component {
   static async getInitialProps({ query }) {
     const convention = await fetchKali(query);
-    return { convention };
+    const conteneur = await fetchConteneur({ id: convention.id });
+    return { convention, conteneur };
   }
 
   render() {
@@ -36,7 +39,8 @@ class Kali extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { title, url } = this.props.convention;
+    const { convention, conteneur } = this.props;
+    const { title } = convention;
     return (
       <PageLayout>
         <Head>
@@ -49,18 +53,7 @@ class Kali extends React.Component {
           sourceType="Convention collective"
           icon={ArticleIcon}
         >
-          <p>
-            Cliquez sur le lien ci dessous pour accéder à la convention
-            collective sur LegiFrance :
-          </p>
-          <a target="_blank" rel="noopener noreferrer" href={url}>
-            <Button variant="primary">
-              <ExternalLink
-                style={{ verticalAlign: "middle", marginRight: 10 }}
-              />
-              Contenu intégral de la convention sur Legifrance
-            </Button>{" "}
-          </a>
+          <Convention convention={convention} conteneur={conteneur} />
         </Answer>
       </PageLayout>
     );

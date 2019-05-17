@@ -2,7 +2,7 @@ const axios = require('axios');
 const slugify = require('slugify');
 
 if (module === require.main) {
-  const url = "https://api.kali.num.social.gouv.fr/v1/base/KALI/conteneurs?nature=IDCC&etat=VIGUEUR&etat=VIGUEUR_ETEN&etat=VIGUEUR_NON_ETEN";
+  const url = "https://api.dila2sql.num.social.gouv.fr/v1/base/KALI/conteneurs?nature=IDCC&etat=VIGUEUR&etat=VIGUEUR_ETEN&etat=VIGUEUR_NON_ETEN&active=true";
   axios.get(url)
     .then(function (response) {
       const rows = response.data.map(row => ({
