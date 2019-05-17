@@ -27,10 +27,10 @@ class CompanyForm extends React.Component {
   render() {
     const { company } = this.state;
     return (
-      <form>
-        <Title>Recherche par SIRET</Title>
-        Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre
-        convention collective&nbsp;:
+      <form onSubmit={e => e.preventDefault()}>
+        <Title>Recherche par SIREN ou SIRET</Title>
+        Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir
+        votre convention collective&nbsp;:
         <SuggestWrapper>
           {!this.state.company ? (
             <React.Fragment>

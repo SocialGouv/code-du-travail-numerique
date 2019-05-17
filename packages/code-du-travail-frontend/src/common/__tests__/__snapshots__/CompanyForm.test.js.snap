@@ -56,9 +56,9 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
     <h3
       class="c0"
     >
-      Recherche par SIRET
+      Recherche par SIREN ou SIRET
     </h3>
-    Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre convention collective :
+    Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir votre convention collective :
     <div
       class="c1"
     >
@@ -160,9 +160,9 @@ exports[`<CompanyForm /> should render 1`] = `
     <h3
       class="c0"
     >
-      Recherche par SIRET
+      Recherche par SIREN ou SIRET
     </h3>
-    Saisissez le numéro de SIRET de votre entreprise afin d’obtenir votre convention collective :
+    Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir votre convention collective :
     <div
       class="c1"
     >
