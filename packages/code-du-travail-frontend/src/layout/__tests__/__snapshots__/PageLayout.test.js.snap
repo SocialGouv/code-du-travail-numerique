@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageLayout /> should render 1`] = `
-.c15 {
+.c13 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -30,11 +30,6 @@ exports[`<PageLayout /> should render 1`] = `
 }
 
 .c5 {
-  padding: 1.25rem 0;
-  background-color: #f9f9fc;
-}
-
-.c10 {
   padding: 1.25rem 0;
 }
 
@@ -148,10 +143,6 @@ exports[`<PageLayout /> should render 1`] = `
 }
 
 .c9 {
-  box-shadow: 0 -10px 10px -10px #c9d3df;
-}
-
-.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,20 +153,20 @@ exports[`<PageLayout /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c13 + .c12 {
+.c11 + .c10 {
   padding-left: 1rem;
 }
 
-.c14 {
+.c12 {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.c16 {
+.c14 {
   margin: 0.5rem 0;
 }
 
-.c16 a {
+.c14 a {
   color: #434956;
 }
 
@@ -194,7 +185,7 @@ exports[`<PageLayout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c9 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -202,7 +193,7 @@ exports[`<PageLayout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c13 + .c12 {
+  .c11 + .c10 {
     padding-left: 0;
   }
 }
@@ -276,24 +267,24 @@ exports[`<PageLayout /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c9 c10"
+      class="c5"
     >
       <div
-        class="c11 c0"
+        class="c9 c0"
       >
         <div
-          class="c12 c13"
+          class="c10 c11"
         >
           <h3
-            class="c14"
+            class="c12"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c15"
+            class="c13"
           >
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 href="/a-propos"
@@ -302,7 +293,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 href="/mentions-legales"
@@ -311,7 +302,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -322,18 +313,18 @@ exports[`<PageLayout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c12 c13"
+          class="c10 c11"
         >
           <h3
-            class="c14"
+            class="c12"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c15"
+            class="c13"
           >
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 class="external-link__after"
@@ -345,7 +336,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 class="external-link__after"
@@ -359,18 +350,18 @@ exports[`<PageLayout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c12 c13"
+          class="c10 c11"
         >
           <h3
-            class="c14"
+            class="c12"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c15"
+            class="c13"
           >
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 class="external-link__after"
@@ -382,7 +373,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 class="external-link__after"
@@ -394,7 +385,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c16"
+              class="c14"
             >
               <a
                 class="external-link__after"

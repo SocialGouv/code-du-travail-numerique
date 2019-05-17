@@ -10,7 +10,7 @@ const { publicRuntimeConfig } = getConfig();
 
 const Footer = () => (
   <footer className="site-footer" id="footer">
-    <Section variant="light">
+    <Section>
       <Container className="center">
         <h2>Besoin d’un accompagnement personnalisé ?</h2>
         <ContainerWrapper>
@@ -29,7 +29,7 @@ const Footer = () => (
         </ServiceRenseignementModal>
       </Container>
     </Section>
-    <LinkSection>
+    <Section>
       <Links>
         <Category>
           <CategoryTitle>Code du travail numérique</CategoryTitle>
@@ -118,7 +118,7 @@ const Footer = () => (
           </List>
         </Category>
       </Links>
-    </LinkSection>
+    </Section>
   </footer>
 );
 
@@ -129,10 +129,6 @@ const { breakpoints, colors, fonts, spacing } = theme;
 const ContainerWrapper = styled.div`
   margin-bottom: ${spacing.interComponent};
   text-align: left;
-`;
-
-const LinkSection = styled(Section)`
-  box-shadow: 0 -10px 10px -10px ${colors.lightGrey};
 `;
 
 const Links = styled(Container)`
