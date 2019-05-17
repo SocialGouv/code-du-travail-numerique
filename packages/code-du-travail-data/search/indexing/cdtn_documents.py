@@ -105,6 +105,7 @@ def populate_cdtn_documents():
             'text': val['text'],
             'description': val['description'],
             'anchor': val['anchor'],
+            'intro': val['intro'],
             'html': val["html"],
             'title': val['title'],
             'url': val['url'],
