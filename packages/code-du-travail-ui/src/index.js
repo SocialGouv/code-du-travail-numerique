@@ -15,7 +15,6 @@ export { default as Alert } from "./Alert";
 export { default as AsideTitle } from "./AsideTitle";
 export { default as Badge } from "./Badge";
 export { default as Button } from "./Button";
-export { default as BreadCrumbs } from "./BreadCrumbs";
 export { default as Cards } from "./Cards";
 export { default as Card } from "./Card";
 export { default as Categories } from "./Categories";

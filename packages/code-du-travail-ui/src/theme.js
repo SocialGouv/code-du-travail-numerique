@@ -81,8 +81,7 @@ export const breakpoints = {
 export const box = {
   lightBorderRadius: "0.2rem",
   borderRadius: "0.25rem",
-  shadow: `0 5px 10px 0 ${colors.lightGrey}`,
-  shadowBottom: "0 10px 10px -10px #b7bcdf"
+  shadow: `0 5px 10px 0 ${colors.lightGrey}`
 };
 
 export const animations = {

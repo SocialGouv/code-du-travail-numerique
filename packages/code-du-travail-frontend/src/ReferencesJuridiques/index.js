@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Section, theme } from "@cdt/ui";
+import { Container, Section, theme, Wrapper } from "@cdt/ui";
 import TYPE_REFERENCE from "./typeReference";
 import { mapReferencesToBlocs } from "./mapping";
 import HierarchieBloc from "./components/HierarchieBloc";
@@ -37,16 +37,20 @@ class ReferencesJuridiques extends React.PureComponent {
       ) : null;
 
     return (
-      <StyledSection light>
-        <StyledHeading>Références juridiques</StyledHeading>
-        {explanatoryText}
-        {hierarchieBlocElements}
-        {autresReferences.length > 0 && (
-          <AutresReferences
-            references={autresReferences}
-            showTitle={hierarchieBlocElements.length > 0}
-          />
-        )}
+      <StyledSection>
+        <Container>
+          <Wrapper variant="light">
+            <StyledHeading>Références juridiques</StyledHeading>
+            {explanatoryText}
+            {hierarchieBlocElements}
+            {autresReferences.length > 0 && (
+              <AutresReferences
+                references={autresReferences}
+                showTitle={hierarchieBlocElements.length > 0}
+              />
+            )}
+          </Wrapper>
+        </Container>
       </StyledSection>
     );
   }

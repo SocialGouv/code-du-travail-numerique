@@ -21,7 +21,8 @@ exports[`<HomeLayout /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 43.75rem;
+  padding: 0;
+  max-width: 46.25rem;
 }
 
 .c7 > *:last-child {
@@ -150,7 +151,6 @@ exports[`<HomeLayout /> should render 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1.25rem 0;
 }
 
 .c11 + .c10 {
@@ -267,135 +267,139 @@ exports[`<HomeLayout /> should render 1`] = `
         >
           Contacter les services de renseignement
         </button>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c9 c0"
+      >
         <div
-          class="c9"
+          class="c10 c11"
         >
-          <div
-            class="c10 c11"
+          <h3
+            class="c12"
           >
-            <h3
-              class="c12"
-            >
-              Code du travail numérique
-            </h3>
-            <ul
-              class="c13"
-            >
-              <li
-                class="c14"
-              >
-                <a
-                  href="/a-propos"
-                >
-                  À propos
-                </a>
-              </li>
-              <li
-                class="c14"
-              >
-                <a
-                  href="/mentions-legales"
-                >
-                  Mentions légales
-                </a>
-              </li>
-              <li
-                class="c14"
-              >
-                <a
-                  href="mailto:codedutravail@beta.gouv.fr"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c10 c11"
+            Code du travail numérique
+          </h3>
+          <ul
+            class="c13"
           >
-            <h3
-              class="c12"
+            <li
+              class="c14"
             >
-              Aidez-nous à améliorer cet outil
-            </h3>
-            <ul
-              class="c13"
+              <a
+                href="/a-propos"
+              >
+                À propos
+              </a>
+            </li>
+            <li
+              class="c14"
             >
-              <li
-                class="c14"
+              <a
+                href="/mentions-legales"
               >
-                <a
-                  class="external-link__after"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Contribuer sur Github
-                </a>
-              </li>
-              <li
-                class="c14"
+                Mentions légales
+              </a>
+            </li>
+            <li
+              class="c14"
+            >
+              <a
+                href="mailto:codedutravail@beta.gouv.fr"
               >
-                <a
-                  class="external-link__after"
-                  href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Journal des modifications
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="c10 c11"
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c10 c11"
+        >
+          <h3
+            class="c12"
           >
-            <h3
-              class="c12"
+            Aidez-nous à améliorer cet outil
+          </h3>
+          <ul
+            class="c13"
+          >
+            <li
+              class="c14"
             >
-              En collaboration avec
-            </h3>
-            <ul
-              class="c13"
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Contribuer sur Github
+              </a>
+            </li>
+            <li
+              class="c14"
             >
-              <li
-                class="c14"
+              <a
+                class="external-link__after"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  La Direction Générale du Travail
-                </a>
-              </li>
-              <li
-                class="c14"
+                Journal des modifications
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c10 c11"
+        >
+          <h3
+            class="c12"
+          >
+            En collaboration avec
+          </h3>
+          <ul
+            class="c13"
+          >
+            <li
+              class="c14"
+            >
+              <a
+                class="external-link__after"
+                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://incubateur.social.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  L’incubateur des ministères sociaux
-                </a>
-              </li>
-              <li
-                class="c14"
+                La Direction Générale du Travail
+              </a>
+            </li>
+            <li
+              class="c14"
+            >
+              <a
+                class="external-link__after"
+                href="https://incubateur.social.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a
-                  class="external-link__after"
-                  href="https://beta.gouv.fr/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  beta.gouv.fr
-                </a>
-              </li>
-            </ul>
-          </div>
+                L’incubateur des ministères sociaux
+              </a>
+            </li>
+            <li
+              class="c14"
+            >
+              <a
+                class="external-link__after"
+                href="https://beta.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                beta.gouv.fr
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
