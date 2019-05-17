@@ -3,6 +3,7 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import Head from "next/head";
 import fetch from "isomorphic-unfetch";
+import styled from "styled-components";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -49,6 +50,9 @@ class Fiche extends React.Component {
         <Answer
           title={data._source.title}
           emptyMessage="Cette fiche n'a pas été trouvée"
+          intro={
+            <Intro dangerouslySetInnerHTML={{ __html: data._source.intro }} />
+          }
           html={data._source.html}
           footer={footer}
           icon={ReponseIcon}
@@ -62,3 +66,12 @@ class Fiche extends React.Component {
 }
 
 export default withRouter(Fiche);
+
+const Intro = styled.div`
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+`;
