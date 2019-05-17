@@ -4,11 +4,11 @@ import Metadata from "./Metadata";
 import ContentItem from "./ContentItem";
 import { Section } from "@cdt/ui";
 
-const Content = ({ texte, topNode }) => {
+const Content = ({ texte, node }) => {
   return (
     <Section>
       <Metadata texte={texte} />
-      {topNode.children.map((child, idx) => (
+      {node.children.map((child, idx) => (
         <ContentItem key={idx} {...child}>
           {child.children}
         </ContentItem>
@@ -19,7 +19,7 @@ const Content = ({ texte, topNode }) => {
 
 Content.propTypes = {
   texte: PropTypes.object.isRequired,
-  topNode: PropTypes.shape({
+  node: PropTypes.shape({
     children: PropTypes.arrayOf(
       PropTypes.shape({
         children: PropTypes.array

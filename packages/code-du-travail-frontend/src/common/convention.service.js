@@ -51,6 +51,8 @@ const fetchTextes = ({ conteneurId, typeTextes }) => {
 };
 
 const fetchTexte = ({ id }) => {
+  // have a look at https://api.dila2sql.num.social.gouv.fr/v1/base/KALI/texte/KALITEXT000005687520
+  // to have an idea of a texte structure, with the children and such
   const url = `${API_DILA2SQL_URL}/base/KALI/texte/${id}`;
   return fetch(url).then(r => r.json());
 };

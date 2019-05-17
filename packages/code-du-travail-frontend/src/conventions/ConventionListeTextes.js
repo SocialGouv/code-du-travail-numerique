@@ -2,11 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import ConventionTexte from "./ConventionTexte";
 import { fetchTextes } from "../common/convention.service";
+import styled from "styled-components";
+import { theme } from "@cdt/ui/";
 
 class ConventionListeTextes extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { loaded: false, textes: [], selectedTexte: null };
+    this.state = {
+      loaded: false,
+      textes: [],
+      selectedTexte: null
+    };
   }
 
   async componentDidMount() {
@@ -30,9 +36,9 @@ class ConventionListeTextes extends React.Component {
         {!loaded && <div>chargement ...</div>}
         {loaded && selectedTexte && (
           <React.Fragment>
-            <a href="" onClick={e => this.onSelectTexte(e, null)}>
+            <Button onClick={e => this.onSelectTexte(e, null)}>
               &lt; Retour à la liste des textes
-            </a>
+            </Button>
             <h2>{selectedTexte.titrefull}</h2>
             <ConventionTexte id={selectedTexte.id} />
           </React.Fragment>
@@ -44,9 +50,9 @@ class ConventionListeTextes extends React.Component {
           <ul>
             {textes.map(texte => (
               <li key={texte.id}>
-                <a href="#" onClick={e => this.onSelectTexte(e, texte)}>
+                <Button onClick={e => this.onSelectTexte(e, texte)}>
                   {texte.titrefull}
-                </a>
+                </Button>
               </li>
             ))}
           </ul>
@@ -55,6 +61,17 @@ class ConventionListeTextes extends React.Component {
     );
   }
 }
+
+const Button = styled.button`
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: inherit;
+  color: ${theme.colors.blue};
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+`;
 
 ConventionListeTextes.propTypes = {
   conteneur: PropTypes.shape({

@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { Section, Wrapper } from "@cdt/ui";
 import SummaryTitle from "./SummaryTitle";
 
-const Sidebar = ({ topNode, onSummaryTitleToggleExpanded }) => {
+const Sidebar = ({ node, onSummaryTitleToggleExpanded }) => {
   return (
     <Section>
       <Wrapper variant="dark">
-        {topNode.children.map((child, idx) => (
+        {node.children.map((child, idx) => (
           <SummaryTitle
             key={idx}
             onToggleExpanded={onSummaryTitleToggleExpanded}
@@ -22,7 +22,7 @@ const Sidebar = ({ topNode, onSummaryTitleToggleExpanded }) => {
 };
 
 Sidebar.propTypes = {
-  topNode: PropTypes.shape({
+  node: PropTypes.shape({
     children: PropTypes.arrayOf(
       PropTypes.shape({
         children: PropTypes.array

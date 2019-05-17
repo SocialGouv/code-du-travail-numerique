@@ -5,14 +5,8 @@ import { theme } from "@cdt/ui/";
 
 const SummaryItem = ({ data, children, type, level, visible }) => {
   const { titre, id } = data;
-  const borderColor = 0 + (level + 1) * 50;
-  const style = {
-    marginLeft: `5px`,
-    paddingLeft: `10px`,
-    borderLeft: `1px solid rgba(${borderColor}, ${borderColor}, ${borderColor}, 1)`
-  };
   return (
-    <div style={style} title={`${type} ${id}, level ${level}`}>
+    <Wrapper level={level} title={`${type} ${id}, level ${level}`}>
       <Title visible={visible}>
         <TitleLink href={`#${id}`}>{titre}</TitleLink>
       </Title>
@@ -22,7 +16,7 @@ const SummaryItem = ({ data, children, type, level, visible }) => {
             {child.children}
           </SummaryItem>
         ))}
-    </div>
+    </Wrapper>
   );
 };
 
@@ -43,6 +37,22 @@ SummaryItem.propTypes = {
   visible: PropTypes.bool,
   level: PropTypes.number.isRequired
 };
+
+const Wrapper = styled.div`
+  margin-left: 5px;
+  padding-left: 10px;
+  ${props =>
+    props.level != undefined &&
+    css`
+      border-left: 1px solid
+        rgba(
+          ${(props.level + 1) * 50},
+          ${(props.level + 1) * 50},
+          ${(props.level + 1) * 50},
+          1
+        );
+    `}
+`;
 
 const Title = styled.h4`
   font-size: 14px;

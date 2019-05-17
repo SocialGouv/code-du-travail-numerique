@@ -36,7 +36,7 @@ class ConventionTexte extends React.Component {
     return topNode.children ? topNode : texte;
   }
 
-  onChangeSummaryTitleExpanded(expanded, sectionId) {
+  onChangeSummaryTitleExpanded = (sectionId, expanded) => {
     const { topNode } = this.state;
     const sectionIdx = topNode.children.findIndex(
       child => child.data.id == sectionId
@@ -46,7 +46,7 @@ class ConventionTexte extends React.Component {
     newChildren[sectionIdx] = newSection;
     const newRootNode = { ...topNode, children: newChildren };
     this.setState({ topNode: newRootNode });
-  }
+  };
 
   render() {
     const { loaded, texte, topNode } = this.state;
@@ -56,16 +56,14 @@ class ConventionTexte extends React.Component {
         {loaded && (
           <SidebarWrapper>
             <Sidebar
-              topNode={topNode}
-              onSummaryTitleToggleExpanded={(sectionId, visible) =>
-                this.onChangeSummaryTitleExpanded(visible, sectionId)
-              }
+              node={topNode}
+              onSummaryTitleToggleExpanded={this.onChangeSummaryTitleExpanded}
             />
           </SidebarWrapper>
         )}
         {loaded && (
           <ContentWrapper>
-            <Content topNode={topNode} texte={texte} />
+            <Content node={topNode} texte={texte} />
           </ContentWrapper>
         )}
       </Wrapper>
