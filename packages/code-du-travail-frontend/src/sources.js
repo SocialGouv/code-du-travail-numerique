@@ -5,7 +5,7 @@ const routeBySource = {
   fiches_ministere_travail: "fiche-ministere-travail",
   code_du_travail: "code-du-travail",
   conventions_collectives: "convention-collective",
-  modeles_de_courriers: "modeles-de-courriers",
+  modeles_de_courriers: "modele-de-courrier",
   themes: "themes",
   outils: "outils",
   idcc: "idcc",

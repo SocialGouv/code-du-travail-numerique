@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "../../routes";
 import styled from "styled-components";
 
 import { Container, Categories, Section, theme, Wrapper } from "@cdt/ui";
+import Link from "../lib/Link";
 import ConventionModal from "./ConventionModal";
 
 const outils = [
@@ -13,7 +13,7 @@ const outils = [
     hrefTitle: "Démarrer une simulation ",
     text:
       "Calculez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
-    routeName: "outils",
+    pathname: "outils",
     slug: "indemnite-licenciement"
   },
   {
@@ -22,14 +22,14 @@ const outils = [
     hrefTitle: "Voir tous les modèles de courriers",
     text:
       "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
-    routeName: "modeles"
+    pathname: "modeles-de-courriers"
   },
   {
     icon: "/static/assets/icons/salary_web.svg",
     title: "Simulateur d'embauche",
     hrefTitle: "Voir tous les modèles de courriers",
     text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
-    routeName: "outils",
+    pathname: "outils",
     slug: "simulateur-embauche"
   }
 ];
@@ -54,15 +54,12 @@ export default class Outils extends React.PureComponent {
                   title,
                   text,
                   icon,
-                  routeName = "index",
+                  pathname = "index",
                   slug,
                   hrefTitle
                 }) => (
-                  <OutilCard
-                    key={`${routeName}/${slug}`}
-                    data-route={routeName}
-                  >
-                    <Link route={routeName} params={slug ? { slug } : {}}>
+                  <OutilCard key={`${pathname}/${slug}`}>
+                    <Link pathname={pathname} query={{ slug }}>
                       <a title={hrefTitle}>
                         <Outil title={title} text={text} icon={icon} />
                       </a>

@@ -1,16 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { theme } from "@cdt/ui";
-import { Link } from "../../routes";
+import Link from "../lib/Link";
 import { getRouteBySource, getLabelBySource } from "../sources";
 import ArticleIcon from "../icons/ArticleIcon";
 import styled from "styled-components";
 
 export function BigLink({ icon, query, data }) {
   const { slug, title, source, path = "" } = data._source;
-  const route = getRouteBySource(source);
   return (
-    <Link route={route} params={{ q: query, slug: slug }}>
+    <Link pathname={getRouteBySource(source)} query={{ q: query, slug }}>
       <a className="btn-large">
         <Icon as={icon} />
         <div>
@@ -26,15 +25,7 @@ export function BigLink({ icon, query, data }) {
 
 BigLink.defaultProps = {
   icon: ArticleIcon,
-  query: "",
-  data: {
-    _source: {
-      slug: "source/article-slug",
-      title: "article title",
-      source: "source",
-      path: "/path/to/document"
-    }
-  }
+  query: ""
 };
 BigLink.propTypes = {
   icon: PropTypes.func,
@@ -45,8 +36,8 @@ BigLink.propTypes = {
       title: PropTypes.string.isRequired,
       source: PropTypes.string.isRequired,
       path: PropTypes.string
-    })
-  })
+    }).isRequired
+  }).isRequired
 };
 
 const { breakpoints, colors } = theme;

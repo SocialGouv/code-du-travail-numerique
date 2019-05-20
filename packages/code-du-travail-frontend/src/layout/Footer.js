@@ -3,7 +3,7 @@ import getConfig from "next/config";
 import styled from "styled-components";
 import { Button, Container, List, ListItem, Section, theme } from "@cdt/ui";
 
-import { Link } from "../../routes";
+import Link from "../lib/Link";
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
 
 const { publicRuntimeConfig } = getConfig();
@@ -35,12 +35,12 @@ const Footer = () => (
           <CategoryTitle>Code du travail numérique</CategoryTitle>
           <List>
             <StyledListItem key="0">
-              <Link route="about">
+              <Link pathname="a-propos">
                 <a>À propos</a>
               </Link>
             </StyledListItem>
             <StyledListItem key="1">
-              <Link route="mentions-legales">
+              <Link pathname="mentions-legales">
                 <a>Mentions légales</a>
               </Link>
             </StyledListItem>

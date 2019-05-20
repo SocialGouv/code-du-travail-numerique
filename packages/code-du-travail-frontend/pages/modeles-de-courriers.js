@@ -1,68 +1,138 @@
 import React from "react";
-import { withRouter } from "next/router";
-import Head from "next/head";
 import getConfig from "next/config";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
-import { AsideTitle, Section, Wrapper } from "@cdt/ui";
+import styled from "styled-components";
+import { Container, Section, theme } from "@cdt/ui";
 
-import Html from "../src/common/Html";
-import { DownloadFile } from "../src/common/DownloadFile";
-import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import Answer from "../src/common/Answer";
+import Link from "../src/lib/Link";
+import SeeAlso from "../src/common/SeeAlso";
+import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
+import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchCourrier = ({ slug }) =>
-  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`).then(r => r.json());
+const fetchAllModeles = () => fetch(`${API_URL}/modeles`).then(r => r.json());
 
-class ModeleCourrier extends React.Component {
-  static async getInitialProps({ query }) {
-    const data = await fetchCourrier(query);
+class Modeles extends React.Component {
+  static async getInitialProps() {
+    const data = await fetchAllModeles();
     return { data };
   }
 
   render() {
     const { data } = this.props;
-    const { description } = data._source;
-    if (data.status === 404) {
-      return <Answer emptyMessage="Modèle de courrier introuvable" />;
-    }
     return (
       <PageLayout>
         <Head>
+          <title>Modèles de courriers - Code du travail numérique</title>
           <meta
             name="description"
-            content={description.slice(0, description.indexOf(" ", 150)) + "…"}
+            content="Retrouvez l'ensemble des modèles de courriers à votre disposition."
           />
         </Head>
-        <Answer
-          title={`Modèle de courrier :  ${data._source.title}`}
-          emptyMessage="Modèle de courrier introuvable"
-          intro={description}
-          footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
-          icon={ModeleCourrierIcon}
-          date={data._source.date}
-          sourceType="Modèle de document"
-        >
-          <Section>
-            <Wrapper variant="light">
-              <Html className="courrier-type">{data._source.html}</Html>
-            </Wrapper>
-          </Section>
-          <AsideTitle>Télécharger le modèle</AsideTitle>
-          <DownloadFile
-            title={data._source.title}
-            file={`${API_URL}/docs/${data._source.filename}`}
-            type="Modèle de document"
-            icon={ModeleCourrierIcon}
-          />
-        </Answer>
+        <Search />
+        <Section>
+          <Container narrow>
+            <Title>Les modèles de documents à télécharger</Title>
+            <ModeleCourrierList items={data.hits.hits} />
+          </Container>
+        </Section>
+        <SeeAlso />
       </PageLayout>
     );
   }
 }
 
-export default withRouter(ModeleCourrier);
+const List = ({ className, items }) => (
+  <ul className={className}>
+    {items.map(({ id, _source }) => (
+      <Item key={id}>
+        <Link
+          pathname="modele-de-courrier"
+          query={{ slug: _source.slug }}
+          passHref
+        >
+          <ModeleLink>
+            <ModeleCourrier modele={_source} />
+          </ModeleLink>
+        </Link>
+      </Item>
+    ))}
+  </ul>
+);
+
+const ModeleCourrier = ({ modele }) => {
+  const { filename, title, editor } = modele;
+  const [, extension] = filename.split(/\.([a-z]{2,4})$/);
+  return (
+    <React.Fragment>
+      <Icon />
+      <TextWrapper>
+        <strong>{title}</strong>
+        <P>
+          <Label>Source</Label>: <Label>{editor}</Label>
+          {extension && editor ? " - " : null}
+          <Value>{extension}</Value>
+        </P>
+      </TextWrapper>
+    </React.Fragment>
+  );
+};
+
+const { box, colors, spacing } = theme;
+
+const ModeleCourrierList = styled(List)`
+  list-style-type: none;
+  padding-left: 0;
+`;
+const Title = styled.h3`
+  text-align: center;
+`;
+const Item = styled.li``;
+
+const ModeleLink = styled.a`
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: ${box.borderRadius};
+  padding: ${spacing.base};
+  :link {
+    text-decoration: none;
+  }
+  :hover {
+    border-color: ${colors.elementBorder};
+    background: ${colors.darkBackground};
+  }
+  :hover strong {
+    text-decoration: underline;
+  }
+`;
+const TextWrapper = styled.div`
+  padding-left: 1rem;
+`;
+const P = styled.p`
+  margin-bottom: 0;
+  font-size: 0.9em;
+`;
+const Icon = styled(ModeleCourrierIcon)`
+  width: 25px;
+  flex-shrink: 0;
+  color: ${colors.darkGrey};
+`;
+
+const Label = styled.span`
+  font-weight: 700;
+  color: ${colors.darkerGrey};
+`;
+
+const Value = styled.span`
+  font-weight: 700;
+  text-transform: uppercase;
+  color: ${colors.grey};
+`;
+
+export default Modeles;

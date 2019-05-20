@@ -4,7 +4,7 @@ const sourceByRoute = {
   "fiche-service-public": "fiches_service_public",
   "fiche-ministere-travail": "fiches_ministere_travail",
   "code-du-travail": "code_du_travail",
-  "modeles-de-courriers": "modeles_de_courriers",
+  "modele-de-courrier": "modeles_de_courriers",
   question: "faq",
   themes: "themes",
   outils: "outils",

@@ -3202,13 +3202,6 @@
     eslint-plugin-import "~2.16.0"
     eslint-plugin-prettier "~3.0.1"
 
-"@socialgouv/next-routes@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.npmjs.org/@socialgouv/next-routes/-/next-routes-1.5.1.tgz#e39202d353c5f807204a013d86b8a7a52e08c117"
-  integrity sha512-fCdnsqOqiXPRH0xVuY19Eh/8dJQAnFHKXpjv5mI2cu8nmM7wmdTrEFmTTSdBkipQcakRFbndYkvtMj7FVSo4Hg==
-  dependencies:
-    path-to-regexp "^2.1.0"
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -14756,11 +14749,6 @@ path-to-regexp@^1.1.1:
   integrity sha1-Wf3g9DW62suhA6hOnTvGTpa5k30=
   dependencies:
     isarray "0.0.1"
-
-path-to-regexp@^2.1.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-2.4.0.tgz#35ce7f333d5616f1c1e1bfe266c3aba2e5b2e704"
-  integrity sha512-G6zHoVqC6GGTQkZwF4lkuEyMbVOjoBKAEybQUypI1WTkqinCOrq2x6U2+phkJ1XsEMTy4LjtwPI7HW+NVrRR2w==
 
 path-type@^1.0.0:
   version "1.1.0"

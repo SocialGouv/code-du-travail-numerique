@@ -1,10 +1,10 @@
 import React from "react";
-import Head from "next/head";
 import getConfig from "next/config";
+import Head from "next/head";
 import { Alert, Container, Section } from "@cdt/ui";
 import fetch from "isomorphic-unfetch";
 
-import { Link } from "../routes";
+import Link from "../src/lib/Link";
 import Search from "../src/search/Search";
 import { SearchQuery } from "../src/search/SearchQuery";
 
@@ -23,7 +23,7 @@ const getBreadcrumbs = (items = []) => {
     return [];
   }
   const root = [
-    <Link key="root" route="themes">
+    <Link key="root" pathname="themes">
       <a title="Tous les thèmes">Thèmes</a>
     </Link>
   ];
@@ -37,7 +37,7 @@ const getBreadcrumbs = (items = []) => {
       );
     }
     return (
-      <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
+      <Link key={item.slug} pathname="themes" query={{ slug: item.slug }}>
         <a title={item.label}>{item.label}</a>
       </Link>
     );

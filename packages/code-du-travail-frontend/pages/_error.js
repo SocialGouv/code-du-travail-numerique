@@ -1,7 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import getConfig from "next/config";
 import { Section } from "@cdt/ui";
+import Link from "../src/lib/Link";
 import { PageLayout } from "../src/layout/PageLayout";
 const Sentry = require("@sentry/browser");
 
@@ -58,7 +58,9 @@ export default class Error extends React.Component {
                 : "Une erreur est apparue sur le client"}
               <br />
               <br />
-              <Link href="/">Retour à la page d’accueil</Link>
+              <Link pathname="/">
+                <a>Retour à la page d’accueil</a>
+              </Link>
             </p>
           </div>
         </Section>

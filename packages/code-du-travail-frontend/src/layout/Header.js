@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 import { Container } from "@cdt/ui";
-import { Link } from "../../routes";
+import Link from "../lib/Link";
 
 const Header = () => (
   <header className="bg-color color__white">
     <Container>
       <Wrapper>
-        <Link route="index">
+        <Link pathname="">
           <LogoWrapper
             href="/?q="
             title="Code du travail numérique - retour à l'accueil"

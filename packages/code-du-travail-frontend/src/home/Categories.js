@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Link } from "../../routes";
+
+import Link from "../lib/Link";
 
 import {
   Container,
@@ -44,7 +45,7 @@ export default class Categories extends React.Component {
               <CategoriesWrapper>
                 {themes.map(({ slug, label, text, icon }) => (
                   <CategoryItem key={slug + label} small={!isRoot}>
-                    <Link route="themes" params={{ slug: slug || "/" }}>
+                    <Link pathname="themes" query={{ slug }}>
                       <a title={label}>
                         <Category title={label} text={text} icon={icon} />
                       </a>
@@ -75,11 +76,12 @@ const Category = ({ title, text, icon }) => (
 
 Category.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   icon: PropTypes.string
 };
 Category.defaultProps = {
-  icon: "/static/assets/icons/chat.svg"
+  icon: "/static/assets/icons/chat.svg",
+  text: ""
 };
 
 const { spacing } = theme;

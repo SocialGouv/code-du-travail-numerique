@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
-import { withRouter } from "next/router";
+import Router, { withRouter } from "next/router";
 import { Button, Container, theme, Section } from "@cdt/ui";
 
-import { Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
 import ReponseIcon from "../icons/ReponseIcon";
 import SearchIcon from "../icons/SearchIcon";
@@ -77,12 +76,15 @@ class Search extends React.Component {
 
   submitQuery = () => {
     if (this.state.query) {
-      const routeName =
-        this.state.source === "annuaire" ? "annuaire" : "recherche";
+      const pathname =
+        this.state.source === "annuaire" ? "/annuaire" : "/recherche";
       ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
-      Router.pushRoute(routeName, {
-        q: this.state.query,
-        source: this.state.source
+      Router.push({
+        pathname,
+        query: {
+          q: this.state.query,
+          source: this.state.source
+        }
       });
     }
   };
@@ -105,11 +107,14 @@ class Search extends React.Component {
           excludeSources: getExcludeSources(event.target.value)
         });
         if (this.state.query) {
-          const routeName =
-            event.target.value === "annuaire" ? "annuaire" : "recherche";
-          Router.pushRoute(routeName, {
-            q: this.state.query,
-            source: event.target.value
+          const pathname =
+            event.target.value === "annuaire" ? "/annuaire" : "/recherche";
+          Router.push({
+            pathname,
+            query: {
+              q: this.state.query,
+              source: event.target.value
+            }
           });
         }
     }
@@ -122,16 +127,19 @@ class Search extends React.Component {
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
       ReactPiwik.push(["trackEvent", "selectedSource", source]);
-      Router.pushRoute("annuaire", {
-        q: suggestion._source.title,
-        coord: `${lon}:${lat}`,
-        source
+      Router.push({
+        pathname: "/annuaire",
+        query: {
+          q: suggestion._source.title,
+          coord: `${lon}:${lat}`,
+          source
+        }
       });
       return;
     }
     ReactPiwik.push(["trackEvent", "selectedSuggestion", query, suggestion]);
     ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
-    Router.pushRoute("recherche", { q: suggestion, source });
+    Router.push({ pathname: "/recherche", query: { q: suggestion, source } });
   };
 
   onClear = () => {

@@ -1,5 +1,5 @@
 import ReactPiwik from "react-piwik";
-import { Router } from "../routes";
+import Router from "next/router";
 import getConfig from "next/config";
 
 const onRouteChangeComplete = () => {

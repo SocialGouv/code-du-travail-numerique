@@ -3,62 +3,41 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { List, ListItem, theme } from "@cdt/ui";
 
-import { Link } from "../../routes";
+import Link from "../lib/Link";
 import { getRouteBySource, getLabelBySource } from "../sources";
 import { SourceIcon } from "./SourceIcon";
-
-const SearchResult = ({ result }) => {
-  const { title, source, author } = result;
-  return (
-    <React.Fragment>
-      <SourceIcon source={source} />
-      <Content>
-        <strong>{title.replace(/ \?/, " ?")}</strong>
-        <P>
-          <Label>Source</Label>: <Label>{getLabelBySource(source)}</Label>
-          {source && author ? " - " : null}
-          <Value>{author}</Value>
-        </P>
-      </Content>
-    </React.Fragment>
-  );
-};
-
-class ListLink extends React.Component {
-  ref = React.createRef();
-  static propTypes = {
-    focused: PropTypes.bool
-  };
-  static defaultProps = {
-    focused: false
-  };
-  componentDidMount() {
-    if (this.ref.current && this.props.focused) {
-      this.ref.current.focus();
-    }
-  }
-
-  render() {
-    return <ResultLink ref={this.ref} {...this.props} />;
-  }
-}
 
 const SearchResultList = ({ items, query }) => {
   return (
     <List>
-      {items.map(({ _id, _source }, i) => (
-        <ListItem key={_id}>
-          <Link
-            route={getRouteBySource(_source.source)}
-            params={{ q: query, slug: _source.slug }}
-            passHref
-          >
-            <ListLink focused={i === 0}>
-              <SearchResult result={_source} />
-            </ListLink>
-          </Link>
-        </ListItem>
-      ))}
+      {items.map(({ _id, _source }) => {
+        const { author, slug, source, title } = _source;
+        return (
+          <ListItem key={_id}>
+            <Link
+              pathname={getRouteBySource(source)}
+              query={{
+                slug,
+                q: query
+              }}
+              passHref
+            >
+              <ResultLink>
+                <SourceIcon source={source} />
+                <Content>
+                  <strong>{title.replace(/ \?/, " ?")}</strong>
+                  <P>
+                    <Label>Source</Label>:{" "}
+                    <Label>{getLabelBySource(source)}</Label>
+                    {source && author ? " - " : null}
+                    <Value>{author}</Value>
+                  </P>
+                </Content>
+              </ResultLink>
+            </Link>
+          </ListItem>
+        );
+      })}
     </List>
   );
 };

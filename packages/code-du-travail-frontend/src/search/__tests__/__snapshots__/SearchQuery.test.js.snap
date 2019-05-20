@@ -154,7 +154,8 @@ exports[`<SearchQuery/> should render results 1`] = `
                     >
                       Source
                     </span>
-                    : 
+                    :
+                     
                     <span
                       class="c8"
                     >

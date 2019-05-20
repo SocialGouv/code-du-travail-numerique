@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { X } from "react-feather";
 import styled from "styled-components";
 import { Button } from "@cdt/ui";
+import Link from "../lib/Link";
 import { IdccSuggester } from "./IdccSuggester";
-import { Link } from "../../routes";
 
 class ConventionForm extends React.Component {
   static propTypes = {
@@ -88,10 +88,15 @@ const Subtitle = styled.div`
 `;
 
 const ConventionPreview = ({ slug, idcc, title }) => {
-  const route = slug ? "kali" : "kali-idcc";
-  const params = slug ? { slug } : { idccNum: idcc };
+  const query = { ...(slug ? { slug } : { idccNum: idcc }) };
+  console.log("Idcc is:", idcc);
   return (
-    <Link route={route} params={params}>
+    <Link
+      pathname="kali"
+      query={query}
+      alias={`kali${!slug && idcc ? "-idcc" : ""}`}
+      slugKey={slug ? "slug" : "idccNum"}
+    >
       <a>
         IDCC {idcc} {title ? `- ${title}` : ""}
       </a>
