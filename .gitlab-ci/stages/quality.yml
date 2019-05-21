@@ -84,6 +84,22 @@ Test @cdtn/ui:
     - mkdir -p $CI_PROJECT_DIR/$CONTEXT
     - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
+Test @socialgouv/react-fiche-service-public:
+  <<: *quality_stage
+  <<: *master_based_stage
+  artifacts:
+    paths:
+      - packages/react-fiche-service-public/coverage
+  script:
+    - yarn workspace @socialgouv/react-fiche-service-public test --coverage
+
+    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
+    # As Gitlab artifacts paths seems to only support relative path, I copy the
+    # coverage folder to the relative project directory
+    - export CONTEXT=packages/react-fiche-service-public
+    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
+    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
+
 Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
