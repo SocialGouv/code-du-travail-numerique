@@ -3,12 +3,17 @@ coverage:
     project:
       default: off
       frontend:
+        target: 75%
         flags: frontend
       api:
-        target: 89%
+        target: 75%
         flags: api
       ui:
+        target: 80%
         flags: ui
+      react-fiche-service-public:
+        target: 80%
+        flags: react-fiche-service-public
 
 flags:
   api:
@@ -20,3 +25,6 @@ flags:
   ui:
     paths:
       - packages/code-du-travail-ui
+  react-fiche-service-public:
+    paths:
+      - packages/react-fiche-service-public
