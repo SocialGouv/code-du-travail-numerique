@@ -55,22 +55,27 @@ Lint @cdtn/data:
 Test @cdtn/frontend:
   <<: *quality_stage
   <<: *master_based_stage
+  artifacts:
+    paths:
+      - packages/code-du-travail-frontend/coverage
   script:
     - yarn workspace @cdt/frontend test --coverage
-  after_script:
-    - CI_PROJECT_DIR=/app npx codecov -F frontend
 
 Test @cdtn/ui:
   <<: *quality_stage
   <<: *master_based_stage
+  artifacts:
+    paths:
+      - packages/code-du-travail-ui/coverage
   script:
     - yarn workspace @cdt/ui test --coverage
-  after_script:
-    - CI_PROJECT_DIR=/app npx codecov -F ui
 
 Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
+  artifacts:
+    paths:
+      - packages/code-du-travail-api/coverage
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
   variables:
@@ -87,11 +92,28 @@ Test @cdtn/api:
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
     #
     - yarn workspace @cdt/api test --coverage
-  after_script:
-    - CI_PROJECT_DIR=/app npx codecov -F api
 
 Test @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
   script:
     - pipenv run python search/indexing/document_slug_checker.py -v
+
+#
+
+Send coverage result:
+  stage: "Registration"
+  dependencies:
+    - Test @cdtn/api
+    - Test @cdtn/frontend
+    - Test @cdtn/ui
+  script:
+    - pwd
+    - ls packages/code-du-travail-api/
+    - ls packages/code-du-travail-frontend/
+    - ls packages/code-du-travail-ui/
+    - ls /app
+    - ls /app/packages/
+    - ls /app/packages/code-du-travail-api/
+    - ls /app/packages/code-du-travail-api/coverage
+    - npx codecov
