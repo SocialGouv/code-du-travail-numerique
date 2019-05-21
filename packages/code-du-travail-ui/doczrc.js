@@ -1,6 +1,7 @@
 import { css } from "docz-plugin-css";
 
 export default {
+  base: "/code-du-travail-numerique/",
   codeSandbox: false,
   description: "Composants ReactJS du Code du travail numérique",
   files: "./src/**/*.{markdown,mdx}",
