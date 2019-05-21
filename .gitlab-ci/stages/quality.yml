@@ -57,9 +57,10 @@ Test @cdtn/frontend:
   <<: *master_based_stage
   artifacts:
     paths:
-      - ../../../app/packages/code-du-travail-frontend/coverage
+      - packages/code-du-travail-frontend/coverage
   script:
     - yarn workspace @cdt/frontend test --coverage
+    - cp -r /app/packages/code-du-travail-frontend/coverage $CI_PROJECT_DIR/packages/code-du-travail-frontend/coverage
 
 Test @cdtn/ui:
   <<: *quality_stage
@@ -69,6 +70,7 @@ Test @cdtn/ui:
       - packages/code-du-travail-ui/coverage
   script:
     - yarn workspace @cdt/ui test --coverage
+    - cp -r /app/packages/code-du-travail-ui/coverage $CI_PROJECT_DIR/packages/code-du-travail-ui/coverage
 
 Test @cdtn/api:
   <<: *quality_stage
