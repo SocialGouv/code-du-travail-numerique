@@ -145,10 +145,6 @@ Send coverage result:
     - Test @cdtn/api
     - Test @cdtn/frontend
     - Test @cdtn/ui
+    - Test @socialgouv/react-fiche-service-public
   script:
-    - pwd
-    - ls packages/code-du-travail-api/
-    - ls packages/code-du-travail-frontend/
-    - ls packages/code-du-travail-ui/
-    - ls /
     - npx codecov
