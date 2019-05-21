@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SummaryItem from "./SummaryItem";
-import TocListItem from "./TocListItem";
-import TocList from "./TocList";
-import TocLink from "./TocLink";
+import { TocListItem, TocList, TocLink } from "./toc";
 
 const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
   const { id, titre } = data;

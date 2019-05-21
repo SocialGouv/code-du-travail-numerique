@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "@cdt/ui/";
-import TocListItem from "./TocListItem";
-import TocList from "./TocList";
-import TocLink from "./TocLink";
+import { TocListItem, TocList, TocLink } from "./toc";
 
 const SummaryItem = ({ data, children, type, level }) => {
   const { titre, id } = data;
