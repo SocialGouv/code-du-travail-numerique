@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SummaryItem from "./SummaryItem";
-import styled from "styled-components";
 import TocListItem from "./TocListItem";
 import TocList from "./TocList";
+import TocLink from "./TocLink";
 
 const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
   const { id, titre } = data;
@@ -26,7 +26,7 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
       >
         {titre}&nbsp;{expanded ? "▲" : "▼"}
       </TitleLink>
-      <TocList>
+      <TocList expanded={expanded}>
         {children.map((child, idx) => (
           <SummaryItem key={idx} level={0} {...child}>
             {child.children}
@@ -53,21 +53,9 @@ SummaryTitle.propTypes = {
 };
 
 const TitleLink = ({ id, children, onClick }) => (
-  <TitleLinkStyled
-    className="toc-link node-name--H3"
-    href={`#${id}`}
-    onClick={onClick}
-  >
+  <TocLink id={id} onClick={onClick}>
     {children}
-  </TitleLinkStyled>
+  </TocLink>
 );
-
-const TitleLinkStyled = styled.a`
-  font-size: 14px;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
 
 export default SummaryTitle;

@@ -14,9 +14,6 @@ const TocListItem = ({ level, type, id, children }) => (
 
 const Wrapper = styled.li`
   list-style-type: none;
-  &.is-active-li {
-    font-weight: bold;
-  }
   margin-left: 5px;
   padding-left: 10px;
   ${props =>

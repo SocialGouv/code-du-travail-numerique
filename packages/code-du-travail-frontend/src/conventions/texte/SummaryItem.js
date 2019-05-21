@@ -4,14 +4,13 @@ import styled from "styled-components";
 import { theme } from "@cdt/ui/";
 import TocListItem from "./TocListItem";
 import TocList from "./TocList";
+import TocLink from "./TocLink";
 
 const SummaryItem = ({ data, children, type, level }) => {
   const { titre, id } = data;
   return (
     <TocListItem level={level} type={type} id={id}>
-      <TitleLink className="toc-link node-name--H3" href={`#${id}`}>
-        {titre}
-      </TitleLink>
+      <TocLinkNested id={id}>{titre}</TocLinkNested>
       {children && (
         <TocList>
           {children.map(child => (
@@ -43,23 +42,10 @@ SummaryItem.propTypes = {
   level: PropTypes.number.isRequired
 };
 
-const TitleLink = styled.a`
-  font-size: 14px;
-  line-height: 1;
-  margin: 0;
-  padding: 0 0 5px 0;
-  color: ${theme.colors.darkGrey};
+const TocLinkNested = styled(TocLink)`
+  color: ${theme.colors.black};
   &:visited {
-    color: ${theme.colors.darkGrey};
-  }
-  font-weight: normal;
-  &.is-active-link {
-    color: #000;
-  }
-  color: #000,
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+    color: ${theme.colors.black};
   }
 `;
 
