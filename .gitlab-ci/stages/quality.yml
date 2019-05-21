@@ -60,8 +60,13 @@ Test @cdtn/frontend:
       - packages/code-du-travail-frontend/coverage
   script:
     - yarn workspace @cdt/frontend test --coverage
-    - mkdir -p $CI_PROJECT_DIR/packages/code-du-travail-frontend
-    - cp -r /app/packages/code-du-travail-frontend/coverage $CI_PROJECT_DIR/packages/code-du-travail-frontend/coverage
+
+    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
+    # As Gitlab artifacts paths seems to only support relative path, I copy the
+    # coverage folder to the relative project directory
+    - export CONTEXT=packages/code-du-travail-frontend
+    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
+    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
 Test @cdtn/ui:
   <<: *quality_stage
@@ -71,8 +76,13 @@ Test @cdtn/ui:
       - packages/code-du-travail-ui/coverage
   script:
     - yarn workspace @cdt/ui test --coverage
-    - mkdir -p $CI_PROJECT_DIR/packages/code-du-travail-ui
-    - cp -r /app/packages/code-du-travail-ui/coverage $CI_PROJECT_DIR/packages/code-du-travail-ui/coverage
+
+    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
+    # As Gitlab artifacts paths seems to only support relative path, I copy the
+    # coverage folder to the relative project directory
+    - export CONTEXT=packages/code-du-travail-ui
+    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
+    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
 Test @cdtn/api:
   <<: *quality_stage
@@ -83,6 +93,7 @@ Test @cdtn/api:
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
   variables:
+    GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
     ELASTICSEARCH_LOG_LEVEL: info
   script:
@@ -96,6 +107,13 @@ Test @cdtn/api:
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
     #
     - yarn workspace @cdt/api test --coverage
+
+    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
+    # As Gitlab artifacts paths seems to only support relative path, I copy the
+    # coverage folder to the relative project directory
+    - export CONTEXT=packages/code-du-travail-api
+    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
+    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
 Test @cdtn/data:
   <<: *quality_stage
