@@ -22,7 +22,7 @@ const Link = styled.a`
 `;
 
 TocLink.propTypes = {
-  children: PropTypes.array
+  children: PropTypes.node.isRequired
 };
 
 export default TocLink;
