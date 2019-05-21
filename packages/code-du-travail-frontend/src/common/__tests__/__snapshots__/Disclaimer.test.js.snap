@@ -180,6 +180,7 @@ exports[`<Disclaimer /> should render 1`] = `
         class="c5"
       >
         <button
+          aria-label="Fermer"
           aria-pressed="false"
           class="c6"
         >
