@@ -1,22 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { theme } from "@cdt/ui/";
+import TocListItem from "./TocListItem";
+import TocList from "./TocList";
 
-const SummaryItem = ({ data, children, type, level, visible }) => {
+const SummaryItem = ({ data, children, type, level }) => {
   const { titre, id } = data;
   return (
-    <Wrapper className="toc-list-item" level={level} title={`${type} ${id}, level ${level}`}>
-      <TitleLink className="toc-link" href={`#${id}`}>
+    <TocListItem level={level} type={type} id={id}>
+      <TitleLink className="toc-link node-name--H3" href={`#${id}`}>
         {titre}
       </TitleLink>
-      {children &&
-        children.map(child => (
-          <SummaryItem key={child.data.id} level={level + 1} {...child}>
-            {child.children}
-          </SummaryItem>
-        ))}
-    </Wrapper>
+      {children && (
+        <TocList>
+          {children.map(child => (
+            <SummaryItem key={child.data.id} level={level + 1} {...child}>
+              {child.children}
+            </SummaryItem>
+          ))}
+        </TocList>
+      )}
+    </TocListItem>
   );
 };
 
@@ -37,30 +42,6 @@ SummaryItem.propTypes = {
   visible: PropTypes.bool,
   level: PropTypes.number.isRequired
 };
-
-const Wrapper = styled.div`
-  margin-left: 5px;
-  padding-left: 10px;
-  display: none;
-  &.is-active-li,
-  &.is-active-li > .toc-list-item {
-    // display same-level siblings of current active link
-    display: block;
-  }
-  // this should mitigate flickering
-  transition: all 300ms ease-in-out;
-  ${props =>
-    props.level != undefined &&
-    css`
-      border-left: 1px solid
-        rgba(
-          ${(props.level + 1) * 50},
-          ${(props.level + 1) * 50},
-          ${(props.level + 1) * 50},
-          1
-        );
-    `}
-`;
 
 const TitleLink = styled.a`
   font-size: 14px;

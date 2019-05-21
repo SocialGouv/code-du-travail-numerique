@@ -5,7 +5,7 @@ import Sidebar from "./texte/Sidebar";
 import Content from "./texte/Content";
 import styled from "styled-components";
 import { theme } from "@cdt/ui/";
-import { createOnScrollHandler } from "./texte/autoscroll";
+import tocbot from "tocbot";
 
 class ConventionTexte extends React.Component {
   constructor(props) {
@@ -30,13 +30,14 @@ class ConventionTexte extends React.Component {
   }
 
   componentDidUpdate() {
-    const headings = document.querySelectorAll(".js-toc-content h3");
-    this._scrollListener = createOnScrollHandler(headings);
-    document.addEventListener("scroll", this._scrollListener, false);
+    tocbot.init({ headingSelector: "h3", skipRendering: true });
   }
 
   componentWillUnmount() {
-    document.removeEventListener("scroll", this._scrollListener);
+    tocbot.destroy();
+    // note: this removes the scroll event listener, but probably also the
+    // DOM, which we don't actually want to do but it's okay for now as we are
+    // rebuilding the DOM on each texte mount
   }
 
   getFirstNodeWithChildren(texte) {

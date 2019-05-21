@@ -19103,6 +19103,10 @@ to-vfile@^5.0.1, to-vfile@^5.0.2:
     is-buffer "^2.0.0"
     vfile "^3.0.0"
 
+"tocbot@https://github.com/SocialGouv/tocbot#feature/skip-rendering":
+  version "4.6.0"
+  resolved "https://github.com/SocialGouv/tocbot#bd30d1ae8b33dd745650b3e5e7ef9642fed74706"
+
 toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
