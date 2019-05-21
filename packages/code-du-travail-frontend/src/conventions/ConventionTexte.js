@@ -31,7 +31,7 @@ class ConventionTexte extends React.Component {
 
   componentDidUpdate() {
     tocbot.init({
-      headingSelector: "h3", // titles from all levels are rendered with h3 so far
+      headingSelector: "h3, h4, h5",
       skipRendering: true
     });
   }

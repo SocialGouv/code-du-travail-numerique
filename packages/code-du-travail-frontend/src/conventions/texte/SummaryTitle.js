@@ -26,7 +26,7 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
       </TitleLink>
       <TocList expanded={expanded}>
         {children.map((child, idx) => (
-          <SummaryItem key={idx} level={0} {...child}>
+          <SummaryItem key={idx} level={1} {...child}>
             {child.children}
           </SummaryItem>
         ))}
@@ -51,7 +51,7 @@ SummaryTitle.propTypes = {
 };
 
 const TitleLink = ({ id, children, onClick }) => (
-  <TocLink id={id} onClick={onClick}>
+  <TocLink id={id} onClick={onClick} level={0}>
     {children}
   </TocLink>
 );

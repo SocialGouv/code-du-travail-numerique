@@ -10,7 +10,7 @@ const Content = ({ texte, node }) => {
       <Metadata texte={texte} />
       <div className="js-toc-content">
         {node.children.map((child, idx) => (
-          <ContentItem key={idx} {...child}>
+          <ContentItem level={0} key={idx} {...child}>
             {child.children}
           </ContentItem>
         ))}

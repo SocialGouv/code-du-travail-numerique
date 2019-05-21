@@ -8,7 +8,9 @@ const SummaryItem = ({ data, children, type, level }) => {
   const { titre, id } = data;
   return (
     <TocListItem level={level} type={type} id={id}>
-      <TocLinkNested id={id}>{titre}</TocLinkNested>
+      <TocLinkNested type={type} level={level} id={id}>
+        {titre}
+      </TocLinkNested>
       {children && (
         <TocList>
           {children.map(child => (
