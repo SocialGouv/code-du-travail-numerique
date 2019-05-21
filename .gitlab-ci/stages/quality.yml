@@ -57,7 +57,7 @@ Test @cdtn/frontend:
   <<: *master_based_stage
   artifacts:
     paths:
-      - packages/code-du-travail-frontend/coverage
+      - ../../../app/packages/code-du-travail-frontend/coverage
   script:
     - yarn workspace @cdt/frontend test --coverage
 
@@ -112,8 +112,5 @@ Send coverage result:
     - ls packages/code-du-travail-api/
     - ls packages/code-du-travail-frontend/
     - ls packages/code-du-travail-ui/
-    - ls /app
-    - ls /app/packages/
-    - ls /app/packages/code-du-travail-api/
-    - ls /app/packages/code-du-travail-api/coverage
+    - ls /
     - npx codecov
