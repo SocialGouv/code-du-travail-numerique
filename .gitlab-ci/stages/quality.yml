@@ -60,6 +60,7 @@ Test @cdtn/frontend:
       - packages/code-du-travail-frontend/coverage
   script:
     - yarn workspace @cdt/frontend test --coverage
+    - mkdir -p /app/packages/code-du-travail-frontend
     - cp -r /app/packages/code-du-travail-frontend/coverage $CI_PROJECT_DIR/packages/code-du-travail-frontend/coverage
 
 Test @cdtn/ui:
@@ -70,6 +71,7 @@ Test @cdtn/ui:
       - packages/code-du-travail-ui/coverage
   script:
     - yarn workspace @cdt/ui test --coverage
+    - mkdir -p /app/packages/code-du-travail-ui
     - cp -r /app/packages/code-du-travail-ui/coverage $CI_PROJECT_DIR/packages/code-du-travail-ui/coverage
 
 Test @cdtn/api:
