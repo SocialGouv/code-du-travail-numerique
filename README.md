@@ -72,6 +72,10 @@ $ docker exec -ti code-du-travail-data-python pipenv run python search/extractio
 
 If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn build`.
 
+### UI
+
+The UI components are showcased here: [https://socialgouv.github.io/code-du-travail-numerique/](https://socialgouv.github.io/code-du-travail-numerique/)
+
 ### Build
 
 ```sh
