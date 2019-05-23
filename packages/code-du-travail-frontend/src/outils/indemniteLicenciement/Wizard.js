@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";
 
 function Wizard({
-  initialData,
+  initialData = {},
   initialStep = 0,
   steps,
   onSubmit,
@@ -37,7 +38,7 @@ function Wizard({
       onSubmit(values);
     } else {
       nextStep();
-      onUpdate(values);
+      onUpdate && onUpdate(values);
       setValues(values);
     }
   };
@@ -63,7 +64,7 @@ function Wizard({
         }}
         onSubmit={handlePageSubmit}
       >
-        {({ handleSubmit, form, values }) => {
+        {({ handleSubmit, form }) => {
           return (
             <>
               <form onSubmit={handleSubmit}>
@@ -76,10 +77,6 @@ function Wizard({
                   previousVisible={previousVisible}
                 />
               </form>
-              <details>
-                <summary>state</summary>
-                <pre>{JSON.stringify(values, null, 2)}</pre>
-              </details>
             </>
           );
         }}
@@ -87,5 +84,12 @@ function Wizard({
     </>
   );
 }
+
+Wizard.propTypes = {
+  steps: PropTypes.array.isRequired,
+  initialData: PropTypes.object,
+  initialStep: PropTypes.number,
+  onSubmit: PropTypes.func.isRequired
+};
 
 export { Wizard };

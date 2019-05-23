@@ -18,8 +18,9 @@ function CalculateurIndemnite() {
     resetState
   );
 
-  const updateData = data => dispatch({ type: "update_data", payload: data });
-
+  /**
+   * The rules defined here allows to manage additionnal steps to the form
+   */
   const rules = [
     <OnChange key="rule-same-salaire" name="hasSameSalaire">
       {value =>
@@ -63,7 +64,6 @@ function CalculateurIndemnite() {
             initialData={state.data}
             initialStep={state.page}
             onSubmit={onSubmit}
-            onUpdate={updateData}
             rules={rules}
           />
         </Wrapper>

@@ -1,11 +1,11 @@
-/**
- * calcul de l'indemnite de licenciement légale
- */
-
 import { isAfter } from "date-fns";
 const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
 const round = fl => parseInt(fl * 100, 10) / 100;
 
+/**
+ * Compute the salaire de Réference
+ * used in the indemnité calculus
+ */
 function getSalaireRef({
   hasTempsPartiel = false,
   hasSameSalaire = false,
@@ -45,6 +45,10 @@ function getSalaireRef({
     return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
   }
 }
+
+/**
+ * Compute the indemnité calculus
+ */
 function getIndemnite({
   salaireRef,
   inaptitude = false,

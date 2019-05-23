@@ -6,12 +6,7 @@ function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
   return (
     <ButtonBar>
       {previousVisible && (
-        <PreviousButton
-          type="button"
-          onClick={onPrev}
-          disabled={disabled}
-          variant="secondary"
-        >
+        <PreviousButton type="button" onClick={onPrev} variant="secondary">
           Précédent
         </PreviousButton>
       )}

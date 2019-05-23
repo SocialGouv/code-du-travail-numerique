@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "@cdt/ui";
-
+/**
+ * For now, only <Step /> are used but stepItems will
+ * allows to navigate between form's steps
+ */
 export function StepItems({ page, items, onNavigate = () => {} }) {
   return (
     <StepItemsContainer>

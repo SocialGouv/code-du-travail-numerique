@@ -118,6 +118,12 @@ function StepAnciennete({ form }) {
 }
 
 StepAnciennete.validate = validate;
+/**
+ * The decorator here is used to compute the ancienneté value
+ * based on the data provided by the user
+ * decorator can only be used in initialSteps since final-form do not allows
+ * decorator to be added once the form is created
+ */
 StepAnciennete.decorator = createDecorator({
   field: /date|absencePeriods/,
   updates: {

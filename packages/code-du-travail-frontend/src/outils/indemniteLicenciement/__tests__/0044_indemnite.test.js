@@ -344,9 +344,6 @@ describe("getIndemnite", () => {
         salaireRef: salaireRefLegal,
         ...test.data
       });
-      if (indemnite !== test.data.indemnite) {
-        console.log(test.title, indemnite, test.data.indemnite);
-      }
       const res = getIndemnite({ salaireRef, indemnite, ...test.data });
       expect(res.indemniteConventionnelle).toEqual(test.expected);
     });

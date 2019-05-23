@@ -44,7 +44,6 @@ export function resetState({ ...data }) {
 }
 
 export function CalculateurReducer(state, action) {
-  console.log(action, { ...state });
   switch (action.type) {
     case "reset":
       return resetState({ ...action.payload });
