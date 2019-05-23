@@ -75,7 +75,7 @@ class FeedbackForm extends React.Component {
       sourceType: this.props.sourceType,
       subject: question,
       title: this.props.title,
-      url: this.props.url,
+      url: document.location.href,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent
     };
     try {

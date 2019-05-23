@@ -8,7 +8,7 @@ export function postFeedback(url, data) {
       Accept: "application/json",
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ ...data, hostname: window.location.hostname })
+    body: JSON.stringify(data)
   })
     .then(r => r.json())
     .then(data => {
