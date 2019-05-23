@@ -38,7 +38,7 @@ function Result_Chimie({ form }) {
   });
 
   const { indemnite } = getIndemnite({
-    salaireRef,
+    salaireRef: salaireRefLegal,
     anciennete,
     inaptitude,
     dateNotification
@@ -74,8 +74,7 @@ function Result_Chimie({ form }) {
         <p>
           Le montant de l’indemnité conventionnelle est inférieur à l’indemnité
           légale. Le montant de votre indémnité de licenciement est fixé par le
-          code du travail est sera de
-          <strong>{indemniteConventionnelle} €</strong>
+          code du travail est sera de <strong>{indemnite} €</strong>
         </p>
       )}
       <br />
