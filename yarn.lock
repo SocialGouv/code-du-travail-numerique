@@ -19103,9 +19103,10 @@ to-vfile@^5.0.1, to-vfile@^5.0.2:
     is-buffer "^2.0.0"
     vfile "^3.0.0"
 
-"tocbot@https://github.com/SocialGouv/tocbot#feature/skip-rendering":
-  version "4.6.0"
-  resolved "https://github.com/SocialGouv/tocbot#bd30d1ae8b33dd745650b3e5e7ef9642fed74706"
+tocbot@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/tocbot/-/tocbot-4.7.0.tgz#cd466b120bda386f27084feff8395d8c02141923"
+  integrity sha512-K5Bkw7DzjHmsLXnwbqgEztZVCSIicblk2lfcP4UQTecNeF0gIx6vMq37hkj+LO7aq/uvjM7hEP2JFyqpiuU08Q==
 
 toidentifier@1.0.0:
   version "1.0.0"

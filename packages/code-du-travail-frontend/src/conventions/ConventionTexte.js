@@ -38,9 +38,6 @@ class ConventionTexte extends React.Component {
 
   componentWillUnmount() {
     tocbot.destroy();
-    // note: this removes the scroll event listener, but probably also the
-    // DOM, which we don't actually want to do but it's okay for now as we are
-    // rebuilding the DOM on each texte mount
   }
 
   getFirstNodeWithChildren(texte) {
