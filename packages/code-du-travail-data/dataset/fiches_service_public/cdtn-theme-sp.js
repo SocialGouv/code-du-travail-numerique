@@ -15,7 +15,7 @@ const getCells = promisify(GoogleSpreadsheets.cells);
 
 /**
  * Transform a dash separated string a breadcrumbs of themes
- * input: 46 - Conflits au travail et contrôle de la réglementation - Sanctions disciplinaires
+ * input: 46 | Conflits au travail et contrôle de la réglementation | Sanctions disciplinaires
  * output:  [{sous-theme1}, {sous-theme2},...]
  *
  * @param {string} themeFlat
