@@ -4,7 +4,7 @@ import { Section, Wrapper } from "@cdt/ui";
 import SummaryTitle from "./SummaryTitle";
 import { TocList } from "./toc";
 
-const Sidebar = ({ node, onSummaryTitleToggleExpanded }) => {
+const Sidebar = ({ node, onSummaryTitleToggleExpanded, tocbotEnabled }) => {
   return (
     <Section className="js-toc">
       <Wrapper variant="dark">
@@ -13,6 +13,7 @@ const Sidebar = ({ node, onSummaryTitleToggleExpanded }) => {
             <SummaryTitle
               key={idx}
               onToggleExpanded={onSummaryTitleToggleExpanded}
+              tocbotEnabled={tocbotEnabled}
               {...child}
             >
               {child.children}

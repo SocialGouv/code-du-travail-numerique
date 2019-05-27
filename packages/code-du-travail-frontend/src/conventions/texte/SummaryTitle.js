@@ -3,7 +3,14 @@ import PropTypes from "prop-types";
 import SummaryItem from "./SummaryItem";
 import { TocListItem, TocList, TocLink } from "./toc";
 
-const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
+const SummaryTitle = ({
+  type,
+  data,
+  children,
+  expanded,
+  onToggleExpanded,
+  tocbotEnabled
+}) => {
   const { id, titre } = data;
 
   if (!children || children.length == 0) {
@@ -28,11 +35,12 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
         {titre}&nbsp;{expanded ? "▲" : "▼"}
       </TitleLink>
       <TocList expanded={expanded}>
-        {children.map((child, idx) => (
-          <SummaryItem key={idx} level={1} {...child}>
-            {child.children}
-          </SummaryItem>
-        ))}
+        {(expanded || tocbotEnabled) && // with tocbot, all DOM is required
+          children.map((child, idx) => (
+            <SummaryItem key={idx} level={1} {...child} expanded={expanded}>
+              {child.children}
+            </SummaryItem>
+          ))}
       </TocList>
     </TocListItem>
   );

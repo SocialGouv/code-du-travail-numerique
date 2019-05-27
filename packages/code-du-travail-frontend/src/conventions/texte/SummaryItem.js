@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { theme } from "@cdt/ui/";
 import { TocListItem, TocList, TocLink } from "./toc";
 
-const SummaryItem = ({ data, children, type, level }) => {
+const SummaryItem = ({ data, children, type, level, expanded }) => {
   const { titre, id } = data;
   return (
     <TocListItem level={level} type={type} id={id}>
@@ -12,9 +12,14 @@ const SummaryItem = ({ data, children, type, level }) => {
         {titre}
       </TocLinkNested>
       {children && (
-        <TocList>
+        <TocList expanded={expanded}>
           {children.map(child => (
-            <SummaryItem key={child.data.id} level={level + 1} {...child}>
+            <SummaryItem
+              expanded={expanded}
+              key={child.data.id}
+              level={level + 1}
+              {...child}
+            >
               {child.children}
             </SummaryItem>
           ))}

@@ -19,16 +19,16 @@ exports[`<ConventionTexte /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
+.c8 {
   font-size: 22px;
   margin-top: 40px;
 }
 
-.c12 {
+.c9 {
   font-size: 20px;
 }
 
-.c13 {
+.c10 {
   font-size: 16px;
 }
 
@@ -50,20 +50,6 @@ exports[`<ConventionTexte /> should render 1`] = `
   border-left: 1px solid rgba( 50, 50, 50, 1 );
 }
 
-.c7 {
-  list-style-type: none;
-  margin-left: 5px;
-  padding-left: 10px;
-  border-left: 1px solid rgba( 100, 100, 100, 1 );
-}
-
-.c9 {
-  list-style-type: none;
-  margin-left: 5px;
-  padding-left: 10px;
-  border-left: 1px solid rgba( 150, 150, 150, 1 );
-}
-
 .c4 {
   border: 0;
   margin: 0;
@@ -74,15 +60,7 @@ exports[`<ConventionTexte /> should render 1`] = `
   display: none;
 }
 
-.c8 {
-  color: #0c0c0e;
-}
-
-.c8:visited {
-  color: #0c0c0e;
-}
-
-.c14 {
+.c11 {
   margin-top: -10px;
   margin-bottom: 10px;
   font-style: italic;
@@ -121,7 +99,7 @@ exports[`<ConventionTexte /> should render 1`] = `
 }
 
 @media (min-width:980px) {
-  .c10 {
+  .c7 {
     -webkit-flex: 0 1 60%;
     -ms-flex: 0 1 60%;
     flex: 0 1 60%;
@@ -160,262 +138,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347513, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347513"
-                  >
-                    Chapitre Ier : Champ d'application
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347511, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347511"
-                      >
-                        Article 1er Champ professionnel
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347508, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347508"
-                      >
-                        Article 2 Durée
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347506, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347506"
-                      >
-                        Article 3 Révision
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347504, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347504"
-                      >
-                        Article 4 Dénonciation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347502, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347502"
-                      >
-                        Article 5 Avantages antérieurs
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347500, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347500"
-                  >
-                    Chapitre II : Dialogue social au niveau de la branche
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347498, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347498"
-                      >
-                        Article 6 Validité des accords de branche
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347496, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347496"
-                      >
-                        Article 7 Réunions périodiques de concertation syndicale
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347494, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347494"
-                      >
-                        Article 8 Indemnisation des mandataires syndicaux
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347492, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347492"
-                      >
-                        Article 9 Commission de conciliation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347490, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347490"
-                      >
-                        Article 10 Observatoire paritaire de la négociation collective
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347488, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347488"
-                      >
-                        Article 11 Commission paritaire nationale de validation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347486, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347486"
-                      >
-                        Article 12 Commission paritaire nationale de l'emploi et de la formation professionnelle
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347484, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347484"
-                  >
-                    Chapitre III : Dialogue social au niveau de l'entreprise et droit syndical
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347482, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347482"
-                      >
-                        Article 13 Information. – Négociation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347480, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347480"
-                      >
-                        Article 14 Libertés syndicales et d'opinions
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347478, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347478"
-                      >
-                        Article 15 Délégués du personnel et comités d'entreprise
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347476, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347476"
-                      >
-                        Article 16 Conflits collectifs
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347474, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347474"
-                      >
-                        Article 17 Accords d'entreprise et d'établissement
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347472, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347472"
-                      >
-                        Article 18 Négociation avec les représentants élus du personnel
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347470, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347470"
-                      >
-                        Article 19 Négociation avec un salarié mandaté
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -431,306 +154,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347466, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347466"
-                  >
-                    Chapitre Ier : Conclusion du contrat de travail
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347464, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347464"
-                      >
-                        Article 20 Principes généraux
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347462, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347462"
-                      >
-                        Article 21 Egalité professionnelle
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347460, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347460"
-                      >
-                        Article 22 Ancienneté
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347458, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347458"
-                      >
-                        Article 23 Contrat de travail à durée indéterminée
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347456, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347456"
-                      >
-                        Article 24 Contrat de travail à durée déterminée
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347454, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347454"
-                      >
-                        Article 25 Période d'essai
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347452, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347452"
-                      >
-                        Article 26 Obligation de discrétion et de non-concurrence
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347450, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347450"
-                      >
-                        Article 27 Modification du contrat
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347448, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347448"
-                      >
-                        Article 28 Remplacement temporaire
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347446, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347446"
-                  >
-                    Chapitre II : Exécution du contrat de travail
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347444, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347444"
-                      >
-                        Article 29 Salaires
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347442, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347442"
-                      >
-                        Article 30 Mensualisation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347440, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347440"
-                      >
-                        Article 31 Treizième mois
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347438, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347438"
-                      >
-                        Article 32 Indemnités de frais professionnels
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347436, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347436"
-                      >
-                        Article 33 Congés payés
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000030610868, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000030610868"
-                      >
-                        Article 34 Autorisations d'absence pour événements familiaux
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347432, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347432"
-                      >
-                        Article 35 Absences
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347430, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347430"
-                      >
-                        Article 36 Absences pour maladie ou accident
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347428, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347428"
-                  >
-                    Chapitre III : Rupture du contrat de travail
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347426, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347426"
-                      >
-                        Article 37 Préavis
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347424, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347424"
-                      >
-                        Article 38 Indemnité de licenciement
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347422, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347422"
-                      >
-                        Article 39 Démission
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347420, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347420"
-                      >
-                        Article 40 Départ à la retraite
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347418, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347418"
-                      >
-                        Article 41 Mise à la retraite
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347416, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347416"
-                      >
-                        Article 42 Rupture conventionnelle
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -746,590 +170,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347412, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347412"
-                  >
-                    Article Préambule
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347410, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347410"
-                  >
-                    Chapitre Ier : Durée du travail
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347408, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347408"
-                      >
-                        Article 43 Durée du travail
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347406, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347406"
-                      >
-                        Article 44 Heures supplémentaires
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347404, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347404"
-                      >
-                        Article 45 Repos hebdomadaire
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347402, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347402"
-                      >
-                        Article 46 Majoration pour travail du dimanche
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347400, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347400"
-                      >
-                        Article 47 Equipes de suppléance
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347398, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347398"
-                      >
-                        Article 48 Jours fériés
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347396, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347396"
-                  >
-                    Chapitre II : Temps partiel
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347394, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347394"
-                      >
-                        Article 49 Travail à temps partiel
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347392, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347392"
-                      >
-                        Article 50 Organisation du travail à temps partiel
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347390, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347390"
-                      >
-                        Article 51 Passage à temps plein
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347388, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347388"
-                  >
-                    Chapitre III : Répartition pluri-hebdomadaire du temps de travail
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347386, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347386"
-                      >
-                        Article Préambule
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347384, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347384"
-                      >
-                        Article 52 Répartition pluri-hebdomadaire du temps de travail
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347382, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347382"
-                      >
-                        Article 53 Travail intermittent
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347379, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347379"
-                  >
-                    Chapitre IV : Conventions de forfaits annuels en jours
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347377, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347377"
-                      >
-                        Article 54 Mise en œuvre des conventions de forfaits annuels en jours
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347375, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347375"
-                      >
-                        Article 55 Salariés concernés
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347373, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347373"
-                      >
-                        Article 56 Nombre de jours travaillés dans l'année
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347371, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347371"
-                      >
-                        Article 57 Modalités de décompte des jours travaillés et suivi
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347369, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347369"
-                      >
-                        Article 58 Règles relatives aux repos quotidien et hebdomadaire
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347367, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347367"
-                      >
-                        Article 59 Rémunération
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347365, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347365"
-                  >
-                    Chapitre V : Conventions de forfaits annuels en heures
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347363, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347363"
-                      >
-                        Article 60 Mise en œuvre des conventions de forfaits annuels en heures
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347361, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347361"
-                      >
-                        Article 61 Salariés concernés
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347359, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347359"
-                      >
-                        Article 62 Durée annuelle
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347357, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347357"
-                      >
-                        Article 63 Modalités de décompte des heures travaillées et suivi
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347355, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347355"
-                      >
-                        Article 64 Rémunération
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347353, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347353"
-                  >
-                    Chapitre VI : Travail de nuit
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347351, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347351"
-                      >
-                        Article 65 Mise en œuvre
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347349, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347349"
-                      >
-                        Article 66 Définition du travail de nuit
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347347, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347347"
-                      >
-                        Article 67 Durée du travail de nuit
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347344, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347344"
-                      >
-                        Article 68 Contreparties au travail de nuit
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347342, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347342"
-                      >
-                        Article 69 Définition du travailleur de nuit
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347340, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347340"
-                      >
-                        Article 70 Contreparties accordées aux travailleurs de nuit
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347338, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347338"
-                      >
-                        Article 71 Protection des travailleurs de nuit
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347336, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347336"
-                  >
-                    Chapitre VII : Astreintes
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347334, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347334"
-                      >
-                        Article Préambule
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347332, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347332"
-                      >
-                        Article 72 Mise en œuvre
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347330, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347330"
-                      >
-                        Article 73 Définition de l'astreinte
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347328, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347328"
-                      >
-                        Article 74 Organisation des astreintes
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347326, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347326"
-                      >
-                        Article 75 Modalités d'organisation des astreintes
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347324, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347324"
-                      >
-                        Article 76 Compensation des astreintes
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347322, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347322"
-                  >
-                    Chapitre VIII : Compte épargne-temps
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347320, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347320"
-                      >
-                        Article Préambule
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347318, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347318"
-                      >
-                        Article 77 Salariés bénéficiaires
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347316, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347316"
-                      >
-                        Article 78 Alimentation du compte épargne-temps
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347314, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347314"
-                      >
-                        Article 79 Utilisation des droits affectés au compte épargne-temps
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347312, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347312"
-                      >
-                        Article 80 Clôture du compte
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -1345,163 +186,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347308, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347308"
-                  >
-                    Chapitre Ier : Information et formation des travailleurs
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347306, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347306"
-                      >
-                        Article 81 Information des salariés sur la sécurité au travail
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347304, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347304"
-                      >
-                        Article 82 Formation des salariés en matière d'hygiène et de sécurité
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347302, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347302"
-                  >
-                    Chapitre II : Prévention des risques professionnels
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347300, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347300"
-                      >
-                        Article 83 Démarche de prévention des risques
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347298, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347298"
-                      >
-                        Article 84 Acteurs de la prévention des risques professionnels
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347296, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347296"
-                  >
-                    Chapitre III : Prescriptions particulières en matière d'hygiène et de sécurité
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347293, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347293"
-                      >
-                        Article 85 Risques consécutifs aux équipements de travail
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347290, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347290"
-                      >
-                        Article 86 Premiers secours
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347288, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347288"
-                      >
-                        Article 87 Matériels de sécurité
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347286, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347286"
-                      >
-                        Article 88 Propreté
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347284, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347284"
-                      >
-                        Article 89 Restauration
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347282, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347282"
-                      >
-                        Article 90 Entreprises extérieures et sécurité
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -1517,365 +202,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347276, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347276"
-                  >
-                    Chapitre Ier : Contrat et période de professionnalisation
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347274, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347274"
-                      >
-                        Article Préambule
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347272, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347272"
-                      >
-                        Article 91 Contrat de professionnalisation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347270, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347270"
-                      >
-                        Article 92 Période de professionnalisation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347268, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347268"
-                      >
-                        Article 93 Prise en charge des coûts de la professionnalisation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347266, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347266"
-                      >
-                        Article 94 Tutorat
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347264, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347264"
-                  >
-                    Chapitre II : Droit individuel a la formation (DIF)
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347262, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347262"
-                      >
-                        Article 95 Salariés bénéficiaires et durée de la formation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347260, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347260"
-                      >
-                        Article 96 Droit individuel à la formation des salariés en contrat à durée déterminée
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347258, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347258"
-                      >
-                        Article 97 Mise en œuvre du droit individuel à la formation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347256, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347256"
-                      >
-                        Article 98 Exercice du droit individuel à la formation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347254, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347254"
-                      >
-                        Article 99 Nature des actions de formation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347252, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347252"
-                      >
-                        Article 100 Dispositions financières
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347250, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347250"
-                      >
-                        Article 101 Portabilité du DIF
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347248, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347248"
-                      >
-                        Article 102 Mutation d'un salarié
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347246, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347246"
-                      >
-                        Article 103 Plan de formation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347244, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347244"
-                      >
-                        Article 104 Bilan de compétences
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347242, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347242"
-                      >
-                        Article 105 Entretien professionnel
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347240, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347240"
-                      >
-                        Article 106 Entretien professionnel pour les salariés de 45 ans et plus
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347238, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347238"
-                  >
-                    Chapitre III : Certificats de qualification professionnelle
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347236, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347236"
-                      >
-                        Article Préambule
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347234, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347234"
-                      >
-                        Article 107 Champ d'application
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347232, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347232"
-                      >
-                        Article 108 Définition
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347230, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347230"
-                      >
-                        Article 109 Condition d'accès
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347227, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347227"
-                      >
-                        Article 110 Création d'un CQP
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347225, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347225"
-                      >
-                        Article 111 Dispositif de validation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347223, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347223"
-                      >
-                        Article 112 Valorisation des CQP
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347221, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347221"
-                      >
-                        Article 113 Organisation de stages
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347219, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347219"
-                  >
-                    Chapitre IV : Financement de la formation professionnelle
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347216, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347216"
-                      >
-                        Article 114 Champ d'application
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347214, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347214"
-                      >
-                        Article 115 Financement de la formation professionnelle
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -1891,299 +218,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347210, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347210"
-                  >
-                    Chapitre Ier : Retraite complémentaire
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347208, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347208"
-                      >
-                        Article 116 Personnel non cadre
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347206, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347206"
-                      >
-                        Article 117 Personnel cadre
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347204, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347204"
-                  >
-                    Chapitre II : Mensualisation
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347202, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347202"
-                      >
-                        Article 118 Indemnisation de l'absence pour maladie ou accident
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347200, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347200"
-                  >
-                    Chapitre III : Prévoyance
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347198, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347198"
-                      >
-                        Article 119 Organismes désignés
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000034227144, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000034227144"
-                      >
-                        Article 120 Prévoyance du personnel non cadre
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000034227142, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000034227142"
-                      >
-                        Article 121 Prévoyance du personnel cadre
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000032438542, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000032438542"
-                      >
-                        Article 122 Dispositions communes
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="section KALISCTA000025347190, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H4 c6"
-                    href="#KALISCTA000025347190"
-                  >
-                    Chapitre IV : Frais de santé
-                  </a>
-                  <ol
-                    class="toc-list is-collapsible not-expanded c4"
-                  >
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347188, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347188"
-                      >
-                        Article 123 Principes généraux
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347186, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347186"
-                      >
-                        Article 124 Organisme assureur
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000032438540, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000032438540"
-                      >
-                        Article 125 Bénéficiaires
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347182, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347182"
-                      >
-                        Article 126 Adhésion. – Affiliation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347180, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347180"
-                      >
-                        Article 127 Information
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000034227146, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000034227146"
-                      >
-                        Article 128 Garanties. – Limite des garanties
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347176, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347176"
-                      >
-                        Article 129 Suspension de garantie
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000034227150, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000034227150"
-                      >
-                        Article 130 Cotisations
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347172, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347172"
-                      >
-                        Article 131 Revalorisation de la cotisation
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347169, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347169"
-                      >
-                        Article 132 Prestations
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000034227148, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000034227148"
-                      >
-                        Article 133 Maintien des garanties
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000028507669, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000028507669"
-                      >
-                        Article 134 Portabilité des droits
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347163, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347163"
-                      >
-                        Article 135 Fonds social
-                      </a>
-                    </li>
-                    <li
-                      class="toc-list-item c9"
-                      title="article KALIARTI000025347161, level 2"
-                    >
-                      <a
-                        class="c8 toc-link node-name--H5 c6"
-                        href="#KALIARTI000025347161"
-                      >
-                        Article 136 Comité paritaire de gestion et de suivi du régime
-                      </a>
-                    </li>
-                  </ol>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -2199,96 +234,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347156, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347156"
-                  >
-                    Article 137 Présentation de la méthode de classification professionnelle
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347154, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347154"
-                  >
-                    Article 138 Mise en œuvre de la classification professionnelle
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347152, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347152"
-                  >
-                    Article 139 Définition de l'emploi
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347150, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347150"
-                  >
-                    Article 140 Double pesée de l'emploi
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347148, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347148"
-                  >
-                    Article 141 Positionnement par catégories professionnelles
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347146, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347146"
-                  >
-                    Article 142 Mise en œuvre dans l'entreprise
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347144, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347144"
-                  >
-                    Article 143 Bilan
-                  </a>
-                </li>
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347141, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347141"
-                  >
-                    Article 144 Non-dérogation
-                  </a>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -2304,19 +250,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347137, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347137"
-                  >
-                    Article Critères classant
-                  </a>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -2332,19 +266,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347133, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347133"
-                  >
-                    Article Définition des degrés pour chaque critère
-                  </a>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -2360,19 +282,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347128, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347128"
-                  >
-                    Article Grille de pesé
-                  </a>
-                </li>
-              </ol>
+              />
             </li>
             <li
               class="toc-list-item c5"
@@ -2388,26 +298,14 @@ exports[`<ConventionTexte /> should render 1`] = `
               </a>
               <ol
                 class="toc-list is-collapsible not-expanded c4"
-              >
-                <li
-                  class="toc-list-item c7"
-                  title="article KALIARTI000025347124, level 1"
-                >
-                  <a
-                    class="c8 toc-link node-name--H5 c6"
-                    href="#KALIARTI000025347124"
-                  >
-                    Article Grille de classification
-                  </a>
-                </li>
-              </ol>
+              />
             </li>
           </ol>
         </div>
       </div>
     </div>
     <div
-      class="c10"
+      class="c7"
     >
       <div
         class="c2"
@@ -2428,21 +326,21 @@ exports[`<ConventionTexte /> should render 1`] = `
         >
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347515"
             >
               Titre Ier : Dispositions générales
             </h3>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347513"
               >
                 Chapitre Ier : Champ d'application
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347511"
                 >
                   <span
@@ -2456,7 +354,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2527,7 +425,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347508"
                 >
                   <span
@@ -2541,7 +439,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2554,7 +452,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347506"
                 >
                   <span
@@ -2568,7 +466,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2581,7 +479,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347504"
                 >
                   <span
@@ -2595,7 +493,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2623,7 +521,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347502"
                 >
                   <span
@@ -2637,7 +535,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2651,14 +549,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347500"
               >
                 Chapitre II : Dialogue social au niveau de la branche
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347498"
                 >
                   <span
@@ -2672,7 +570,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2719,7 +617,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347496"
                 >
                   <span
@@ -2733,7 +631,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2804,7 +702,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347494"
                 >
                   <span
@@ -2818,7 +716,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2867,7 +765,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347492"
                 >
                   <span
@@ -2881,7 +779,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -2932,7 +830,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347490"
                 >
                   <span
@@ -2946,7 +844,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3027,7 +925,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347488"
                 >
                   <span
@@ -3041,7 +939,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3195,7 +1093,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347486"
                 >
                   <span
@@ -3209,7 +1107,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3355,14 +1253,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347484"
               >
                 Chapitre III : Dialogue social au niveau de l'entreprise et droit syndical
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347482"
                 >
                   <span
@@ -3376,7 +1274,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3393,7 +1291,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347480"
                 >
                   <span
@@ -3407,7 +1305,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3432,7 +1330,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347478"
                 >
                   <span
@@ -3446,7 +1344,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3542,7 +1440,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347476"
                 >
                   <span
@@ -3556,7 +1454,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3569,7 +1467,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347474"
                 >
                   <span
@@ -3583,7 +1481,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3616,7 +1514,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347472"
                 >
                   <span
@@ -3630,7 +1528,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3736,7 +1634,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347470"
                 >
                   <span
@@ -3750,7 +1648,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3917,21 +1815,21 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347468"
             >
               Titre II : Contrat de travail
             </h3>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347466"
               >
                 Chapitre Ier : Conclusion du contrat de travail
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347464"
                 >
                   <span
@@ -3945,7 +1843,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -3962,7 +1860,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347462"
                 >
                   <span
@@ -3976,7 +1874,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4012,7 +1910,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347460"
                 >
                   <span
@@ -4026,7 +1924,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4047,7 +1945,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347458"
                 >
                   <span
@@ -4061,7 +1959,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4098,7 +1996,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347456"
                 >
                   <span
@@ -4112,7 +2010,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4145,7 +2043,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347454"
                 >
                   <span
@@ -4159,7 +2057,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4298,7 +2196,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347452"
                 >
                   <span
@@ -4312,7 +2210,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4365,7 +2263,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347450"
                 >
                   <span
@@ -4379,7 +2277,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4422,7 +2320,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347448"
                 >
                   <span
@@ -4436,7 +2334,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4454,14 +2352,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347446"
               >
                 Chapitre II : Exécution du contrat de travail
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347444"
                 >
                   <span
@@ -4475,7 +2373,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4496,7 +2394,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347442"
                 >
                   <span
@@ -4510,7 +2408,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4531,7 +2429,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347440"
                 >
                   <span
@@ -4545,7 +2443,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4594,7 +2492,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347438"
                 >
                   <span
@@ -4608,7 +2506,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4625,7 +2523,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347436"
                 >
                   <span
@@ -4639,7 +2537,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4668,7 +2566,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000030610868"
                 >
                   <span
@@ -4682,7 +2580,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4837,7 +2735,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347432"
                 >
                   <span
@@ -4851,7 +2749,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4864,7 +2762,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347430"
                 >
                   <span
@@ -4878,7 +2776,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -4938,14 +2836,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347428"
               >
                 Chapitre III : Rupture du contrat de travail
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347426"
                 >
                   <span
@@ -4959,7 +2857,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5006,7 +2904,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347424"
                 >
                   <span
@@ -5020,7 +2918,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5037,7 +2935,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347422"
                 >
                   <span
@@ -5051,7 +2949,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5068,7 +2966,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347420"
                 >
                   <span
@@ -5082,7 +2980,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5128,7 +3026,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347418"
                 >
                   <span
@@ -5142,7 +3040,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5175,7 +3073,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347416"
                 >
                   <span
@@ -5189,7 +3087,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5228,14 +3126,14 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347414"
             >
               Titre III : Durée, aménagement et organisation du temps de travail
             </h3>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347412"
               >
                 <span
@@ -5249,7 +3147,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -5262,14 +3160,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347410"
               >
                 Chapitre Ier : Durée du travail
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347408"
                 >
                   <span
@@ -5283,7 +3181,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5308,7 +3206,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347406"
                 >
                   <span
@@ -5322,7 +3220,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5367,7 +3265,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347404"
                 >
                   <span
@@ -5381,7 +3279,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5441,7 +3339,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347402"
                 >
                   <span
@@ -5455,7 +3353,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5468,7 +3366,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347400"
                 >
                   <span
@@ -5482,7 +3380,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5604,7 +3502,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347398"
                 >
                   <span
@@ -5618,7 +3516,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5640,14 +3538,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347396"
               >
                 Chapitre II : Temps partiel
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347394"
                 >
                   <span
@@ -5661,7 +3559,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5686,7 +3584,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347392"
                 >
                   <span
@@ -5700,7 +3598,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5737,7 +3635,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347390"
                 >
                   <span
@@ -5751,7 +3649,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5777,14 +3675,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347388"
               >
                 Chapitre III : Répartition pluri-hebdomadaire du temps de travail
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347386"
                 >
                   <span
@@ -5798,7 +3696,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5811,7 +3709,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347384"
                 >
                   <span
@@ -5825,7 +3723,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -5994,7 +3892,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347382"
                 >
                   <span
@@ -6008,7 +3906,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6127,14 +4025,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347379"
               >
                 Chapitre IV : Conventions de forfaits annuels en jours
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347377"
                 >
                   <span
@@ -6148,7 +4046,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6161,7 +4059,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347375"
                 >
                   <span
@@ -6175,7 +4073,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6203,7 +4101,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347373"
                 >
                   <span
@@ -6217,7 +4115,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6242,7 +4140,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347371"
                 >
                   <span
@@ -6256,7 +4154,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6289,7 +4187,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347369"
                 >
                   <span
@@ -6303,7 +4201,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6324,7 +4222,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347367"
                 >
                   <span
@@ -6338,7 +4236,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6352,14 +4250,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347365"
               >
                 Chapitre V : Conventions de forfaits annuels en heures
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347363"
                 >
                   <span
@@ -6373,7 +4271,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6386,7 +4284,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347361"
                 >
                   <span
@@ -6400,7 +4298,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6423,7 +4321,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347359"
                 >
                   <span
@@ -6437,7 +4335,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6458,7 +4356,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347357"
                 >
                   <span
@@ -6472,7 +4370,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6493,7 +4391,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347355"
                 >
                   <span
@@ -6507,7 +4405,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6521,14 +4419,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347353"
               >
                 Chapitre VI : Travail de nuit
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347351"
                 >
                   <span
@@ -6542,7 +4440,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6567,7 +4465,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347349"
                 >
                   <span
@@ -6581,7 +4479,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6598,7 +4496,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347347"
                 >
                   <span
@@ -6612,7 +4510,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6658,7 +4556,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347344"
                 >
                   <span
@@ -6672,7 +4570,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6693,7 +4591,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347342"
                 >
                   <span
@@ -6707,7 +4605,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6730,7 +4628,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347340"
                 >
                   <span
@@ -6744,7 +4642,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -6869,7 +4767,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347338"
                 >
                   <span
@@ -6883,7 +4781,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7016,14 +4914,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347336"
               >
                 Chapitre VII : Astreintes
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347334"
                 >
                   <span
@@ -7037,7 +4935,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7054,7 +4952,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347332"
                 >
                   <span
@@ -7068,7 +4966,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7081,7 +4979,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347330"
                 >
                   <span
@@ -7095,7 +4993,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7112,7 +5010,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347328"
                 >
                   <span
@@ -7126,7 +5024,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7143,7 +5041,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347326"
                 >
                   <span
@@ -7157,7 +5055,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7182,7 +5080,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347324"
                 >
                   <span
@@ -7196,7 +5094,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7218,14 +5116,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347322"
               >
                 Chapitre VIII : Compte épargne-temps
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347320"
                 >
                   <span
@@ -7239,7 +5137,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7256,7 +5154,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347318"
                 >
                   <span
@@ -7270,7 +5168,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7283,7 +5181,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347316"
                 >
                   <span
@@ -7297,7 +5195,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7440,7 +5338,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347314"
                 >
                   <span
@@ -7454,7 +5352,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7626,7 +5524,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347312"
                 >
                   <span
@@ -7640,7 +5538,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7659,21 +5557,21 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347310"
             >
               Titre IV : Hygiène et sécurité
             </h3>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347308"
               >
                 Chapitre Ier : Information et formation des travailleurs
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347306"
                 >
                   <span
@@ -7687,7 +5585,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7728,7 +5626,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347304"
                 >
                   <span
@@ -7742,7 +5640,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7846,14 +5744,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347302"
               >
                 Chapitre II : Prévention des risques professionnels
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347300"
                 >
                   <span
@@ -7867,7 +5765,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -7937,7 +5835,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347298"
                 >
                   <span
@@ -7951,7 +5849,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8146,14 +6044,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347296"
               >
                 Chapitre III : Prescriptions particulières en matière d'hygiène et de sécurité
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347293"
                 >
                   <span
@@ -8167,7 +6065,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8192,7 +6090,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347290"
                 >
                   <span
@@ -8206,7 +6104,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8231,7 +6129,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347288"
                 >
                   <span
@@ -8245,7 +6143,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8266,7 +6164,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347286"
                 >
                   <span
@@ -8280,7 +6178,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8333,7 +6231,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347284"
                 >
                   <span
@@ -8347,7 +6245,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8368,7 +6266,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347282"
                 >
                   <span
@@ -8382,7 +6280,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8413,21 +6311,21 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347279"
             >
               Titre V : Formation professionnelle
             </h3>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347276"
               >
                 Chapitre Ier : Contrat et période de professionnalisation
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347274"
                 >
                   <span
@@ -8441,7 +6339,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8458,7 +6356,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347272"
                 >
                   <span
@@ -8472,7 +6370,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8650,7 +6548,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347270"
                 >
                   <span
@@ -8664,7 +6562,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8782,7 +6680,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347268"
                 >
                   <span
@@ -8796,7 +6694,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8853,7 +6751,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347266"
                 >
                   <span
@@ -8867,7 +6765,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -8963,14 +6861,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347264"
               >
                 Chapitre II : Droit individuel a la formation (DIF)
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347262"
                 >
                   <span
@@ -8984,7 +6882,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9035,7 +6933,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347260"
                 >
                   <span
@@ -9049,7 +6947,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9062,7 +6960,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347258"
                 >
                   <span
@@ -9076,7 +6974,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9230,7 +7128,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347256"
                 >
                   <span
@@ -9244,7 +7142,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9269,7 +7167,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347254"
                 >
                   <span
@@ -9283,7 +7181,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9386,7 +7284,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347252"
                 >
                   <span
@@ -9400,7 +7298,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9413,7 +7311,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347250"
                 >
                   <span
@@ -9427,7 +7325,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9533,7 +7431,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347248"
                 >
                   <span
@@ -9547,7 +7445,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9560,7 +7458,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347246"
                 >
                   <span
@@ -9574,7 +7472,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9631,7 +7529,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347244"
                 >
                   <span
@@ -9645,7 +7543,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9662,7 +7560,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347242"
                 >
                   <span
@@ -9676,7 +7574,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9731,7 +7629,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347240"
                 >
                   <span
@@ -9745,7 +7643,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9763,14 +7661,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347238"
               >
                 Chapitre III : Certificats de qualification professionnelle
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347236"
                 >
                   <span
@@ -9784,7 +7682,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9825,7 +7723,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347234"
                 >
                   <span
@@ -9839,7 +7737,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9852,7 +7750,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347232"
                 >
                   <span
@@ -9866,7 +7764,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9883,7 +7781,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347230"
                 >
                   <span
@@ -9897,7 +7795,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -9956,7 +7854,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347227"
                 >
                   <span
@@ -9970,7 +7868,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10089,7 +7987,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347225"
                 >
                   <span
@@ -10103,7 +8001,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10300,7 +8198,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347223"
                 >
                   <span
@@ -10314,7 +8212,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10327,7 +8225,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347221"
                 >
                   <span
@@ -10341,7 +8239,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10373,14 +8271,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347219"
               >
                 Chapitre IV : Financement de la formation professionnelle
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347216"
                 >
                   <span
@@ -10394,7 +8292,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10433,7 +8331,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347214"
                 >
                   <span
@@ -10447,7 +8345,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10634,21 +8532,21 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347212"
             >
               Titre VI : Retraite et prévoyance
             </h3>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347210"
               >
                 Chapitre Ier : Retraite complémentaire
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347208"
                 >
                   <span
@@ -10662,7 +8560,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10683,7 +8581,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347206"
                 >
                   <span
@@ -10697,7 +8595,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10723,14 +8621,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347204"
               >
                 Chapitre II : Mensualisation
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347202"
                 >
                   <span
@@ -10744,7 +8642,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10801,14 +8699,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347200"
               >
                 Chapitre III : Prévoyance
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347198"
                 >
                   <span
@@ -10822,7 +8720,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -10915,7 +8813,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000034227144"
                 >
                   <span
@@ -10929,7 +8827,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -11541,7 +9439,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000034227142"
                 >
                   <span
@@ -11555,7 +9453,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12223,7 +10121,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000032438542"
                 >
                   <span
@@ -12237,7 +10135,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12467,14 +10365,14 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c12"
+                class="c9"
                 id="KALISCTA000025347190"
               >
                 Chapitre IV : Frais de santé
               </h4>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347188"
                 >
                   <span
@@ -12488,7 +10386,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12575,7 +10473,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347186"
                 >
                   <span
@@ -12589,7 +10487,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12641,7 +10539,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000032438540"
                 >
                   <span
@@ -12655,7 +10553,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12832,7 +10730,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347182"
                 >
                   <span
@@ -12846,7 +10744,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12863,7 +10761,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347180"
                 >
                   <span
@@ -12877,7 +10775,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -12894,7 +10792,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000034227146"
                 >
                   <span
@@ -12908,7 +10806,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13097,7 +10995,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347176"
                 >
                   <span
@@ -13111,7 +11009,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13170,7 +11068,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000034227150"
                 >
                   <span
@@ -13184,7 +11082,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13355,7 +11253,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347172"
                 >
                   <span
@@ -13369,7 +11267,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13400,7 +11298,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347169"
                 >
                   <span
@@ -13414,7 +11312,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13487,7 +11385,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000034227148"
                 >
                   <span
@@ -13501,7 +11399,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13668,7 +11566,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000028507669"
                 >
                   <span
@@ -13682,7 +11580,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13722,7 +11620,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347163"
                 >
                   <span
@@ -13736,7 +11634,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13757,7 +11655,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c13"
+                  class="c10"
                   id="KALIARTI000025347161"
                 >
                   <span
@@ -13771,7 +11669,7 @@ exports[`<ConventionTexte /> should render 1`] = `
                 </h5>
                 <div>
                   <div
-                    class="c14"
+                    class="c11"
                   >
                     En vigueur étendu
                   </div>
@@ -13812,14 +11710,14 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347158"
             >
               Titre VII (1) : Classification
             </h3>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347156"
               >
                 <span
@@ -13833,7 +11731,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -13922,7 +11820,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347154"
               >
                 <span
@@ -13936,7 +11834,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -13953,7 +11851,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347152"
               >
                 <span
@@ -13967,7 +11865,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14006,7 +11904,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347150"
               >
                 <span
@@ -14020,7 +11918,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14059,7 +11957,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347148"
               >
                 <span
@@ -14073,7 +11971,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14094,7 +11992,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347146"
               >
                 <span
@@ -14108,7 +12006,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14225,7 +12123,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347144"
               >
                 <span
@@ -14239,7 +12137,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14252,7 +12150,7 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347141"
               >
                 <span
@@ -14266,7 +12164,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14290,14 +12188,14 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347139"
             >
               Annexe I
             </h3>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347137"
               >
                 <span
@@ -14311,7 +12209,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -14499,14 +12397,14 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347135"
             >
               Annexe II
             </h3>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347133"
               >
                 <span
@@ -14520,7 +12418,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -15450,14 +13348,14 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347131"
             >
               Annexe III
             </h3>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347128"
               >
                 <span
@@ -15471,7 +13369,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
@@ -15896,14 +13794,14 @@ exports[`<ConventionTexte /> should render 1`] = `
           </div>
           <div>
             <h3
-              class="c11"
+              class="c8"
               id="KALISCTA000025347126"
             >
               Annexe IV
             </h3>
             <div>
               <h5
-                class="c13"
+                class="c10"
                 id="KALIARTI000025347124"
               >
                 <span
@@ -15917,7 +13815,7 @@ exports[`<ConventionTexte /> should render 1`] = `
               </h5>
               <div>
                 <div
-                  class="c14"
+                  class="c11"
                 >
                   En vigueur étendu
                 </div>
