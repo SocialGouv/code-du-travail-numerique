@@ -12,9 +12,14 @@ function SalaireTempsPartiel({ name, onChange }) {
     <FieldArray name={name}>
       {({ fields }) => (
         <>
+          <Row>
+            <CellHeader as={CellType}>Type de contrat</CellHeader>
+            <CellHeader as={CellDuration}>Durée en mois</CellHeader>
+            <CellHeader>Rémunération</CellHeader>
+          </Row>
           {fields.map((name, index) => (
             <Row key={name}>
-              <div>
+              <CellType>
                 <Field name={`${name}.type`}>
                   {({ input }) => (
                     <Select {...input}>
@@ -24,8 +29,8 @@ function SalaireTempsPartiel({ name, onChange }) {
                     </Select>
                   )}
                 </Field>
-              </div>
-              <div>
+              </CellType>
+              <CellDuration>
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
@@ -43,7 +48,7 @@ function SalaireTempsPartiel({ name, onChange }) {
                     </>
                   )}
                 />
-              </div>
+              </CellDuration>
               <div>
                 <Field
                   name={`${name}.salary`}
@@ -77,6 +82,7 @@ function SalaireTempsPartiel({ name, onChange }) {
           ))}
           <AddButton
             variant="link"
+            type="button"
             onClick={() =>
               fields.push({
                 type: TEMPS_PARTIEL,
@@ -99,7 +105,7 @@ export { SalaireTempsPartiel };
 
 const { colors, fonts, spacing } = theme;
 
-const AddButton = styled(Button).attrs(() => ({ type: "button" }))`
+const AddButton = styled(Button)`
   margin: ${spacing.interComponent} 0;
 `;
 
@@ -107,14 +113,18 @@ const Row = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-bottom: ${spacing.tiny};
-  & > *:nth-child(1) {
-    flex-basis: 15rem;
-    margin-right: ${spacing.interComponent};
-  }
-  & > *:nth-child(2) {
-    flex-basis: 8rem;
-    margin-right: ${spacing.interComponent};
-  }
+`;
+
+const CellType = styled.div`
+  flex-basis: 15rem;
+  margin-right: ${spacing.interComponent};
+`;
+const CellDuration = styled.div`
+  flex-basis: 8rem;
+  margin-right: ${spacing.interComponent};
+`;
+const CellHeader = styled.div`
+  font-weight: 700;
 `;
 
 const Select = styled.select`

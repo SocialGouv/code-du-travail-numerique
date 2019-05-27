@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import { coefficients } from "./0044_coefficient";
 import { required } from "../validators";
+import { Label } from "../stepStyles";
 
 const groupeLabelByCoeff = coefficients.reduce(
   (state, { coefficient, groupe, label }) => {
@@ -30,15 +31,19 @@ function EchelonChimie({ name }) {
   const [labels, setLabels] = useState();
   return (
     <>
-      <p>Quel est votre échelon dans la convention collective ?</p>
+      <p>
+        Quel est votre échelon dans la convention collective ? <br />
+        Vous pouvez le trouver sur votre bulletin de salaire
+      </p>
       <Field name="echelon" validate={required}>
         {({ input }) => (
-          <Select {...input}>
-            <option disabled value="">
-              Sélectionnez un échelon
-            </option>
-            {options}
-          </Select>
+          <>
+            <Label htmlFor="echelon">Sélectionnez un échelon</Label>
+            <Select {...input} id="echelon">
+              <option disabled value="" />
+              {options}
+            </Select>
+          </>
         )}
       </Field>
 

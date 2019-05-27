@@ -4,7 +4,7 @@ import { Field } from "react-final-form";
 import { Container, theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input } from "../stepStyles";
+import { Input, SectionTitle } from "../stepStyles";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
   SalaireTempsPartiel,
@@ -43,9 +43,8 @@ function StepSalaires({ form }) {
           {({ input }) =>
             input.value === true ? (
               <>
-                <br />
-                <br />
-                <h2>Renseigner vos différentes périodes de travail</h2>
+                <SectionTitle>Périodes de travail</SectionTitle>
+                <p>Renseigner vos différentes périodes de travail</p>
                 <SalaireTempsPartiel
                   name="salairePeriods"
                   onChange={salairePeriods => {

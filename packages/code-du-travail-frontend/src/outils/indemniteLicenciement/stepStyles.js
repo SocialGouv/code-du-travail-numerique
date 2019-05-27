@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "@cdt/ui";
 
-const { box, colors, spacing } = theme;
+const { box, fonts, colors, spacing } = theme;
 
 export const Input = styled.input`
   padding: 0;
@@ -40,4 +40,10 @@ export const Header = styled.div`
 
 export const QuestionLabel = styled.p`
   font-size: 1.1rem;
+`;
+
+export const SectionTitle = styled.h2`
+  font-size: ${fonts.sizeH3};
+  margin-top: ${spacing.large};
+  margin-bottom: ${spacing.interComponent};
 `;

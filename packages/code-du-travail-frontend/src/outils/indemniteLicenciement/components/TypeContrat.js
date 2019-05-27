@@ -24,16 +24,6 @@ function TypeContrat() {
             component="input"
             type="radio"
             name="contrat"
-            value="ctt"
-            validate={required}
-          />
-          <span>Contrat de travail temporaire (intérimaire)</span>
-        </Label>
-        <Label>
-          <Field
-            component="input"
-            type="radio"
-            name="contrat"
             value="cdi"
             validate={required}
           />

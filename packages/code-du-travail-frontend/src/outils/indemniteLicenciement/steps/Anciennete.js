@@ -7,6 +7,7 @@ import { isAfter, differenceInMonths, format } from "date-fns";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import { TextQuestion } from "../components/TextQuestion";
 import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
+import { SectionTitle } from "../stepStyles";
 
 function validate({
   dateEntree,
@@ -64,6 +65,7 @@ function validate({
 function StepAnciennete({ form }) {
   return (
     <Container nopadding>
+      <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
       <TextQuestion
         name="dateEntree"
         label="Quelle est votre date d'entrée dans l'entreprise&nbsp;?"
@@ -79,8 +81,7 @@ function StepAnciennete({ form }) {
         label="Quelle est votre date de sortie de l'entreprise (incluant la durée de votre préavis)&nbsp;?"
         inputType="date"
       />
-      <br />
-      <br />
+      <SectionTitle>Période d'absence prolongée (plus d'un mois)</SectionTitle>
       <YesNoQuestion
         name="hasAbsenceProlonge"
         label="Avez-vous eu des périodes d'absence de plus d'un mois au cours
@@ -96,8 +97,6 @@ function StepAnciennete({ form }) {
             : form.change("absencePeriods", []);
         }}
       />
-      <br />
-      <br />
       <Field name="hasAbsenceProlonge">
         {({ input }) =>
           input.value === true ? (

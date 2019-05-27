@@ -12,23 +12,33 @@ function AbsencePeriods({ name, onChange }) {
     <FieldArray name={name}>
       {({ fields }) => (
         <>
+          <p>
+            Les congés maternité, arrêts de travail liés à une maladie
+            professionnelle, congés individuel de formation (Cif) et stage de
+            fin d’étude de plus de 2 mois ne sont pas considérés comme des
+            absences. Merci de ne pas les renseigner.
+          </p>
+          <Row key={name}>
+            <CellHeader as={MotifCell}>Motif</CellHeader>
+            <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
+          </Row>
           {fields.map((name, index) => (
             <Row key={name}>
-              <div>
+              <MotifCell>
                 <Field name={`${name}.type`} component="select">
                   {motifs.map(({ label }) => (
                     <option key={label}>{label}</option>
                   ))}
                 </Field>
-              </div>
-              <div>
+              </MotifCell>
+              <DurationCell>
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
                   subscribe={{ error: true, touched: true }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <Input {...input} size="5" invalid={touched && invalid} />
+                      <Input {...input} size="7" invalid={touched && invalid} />
                       <DelButton
                         variant="link"
                         onClick={() => fields.remove(index)}
@@ -41,11 +51,12 @@ function AbsencePeriods({ name, onChange }) {
                     </>
                   )}
                 />
-              </div>
+              </DurationCell>
             </Row>
           ))}
           <AddButton
             variant="link"
+            type="button"
             onClick={() =>
               fields.push({
                 type: "Absence pour maladie non professionnelle",
@@ -70,20 +81,23 @@ function AbsencePeriods({ name, onChange }) {
 export { AbsencePeriods };
 const { colors, fonts, spacing } = theme;
 
-const AddButton = styled(Button).attrs(() => ({ type: "button" }))`
+const AddButton = styled(Button)`
   margin: ${spacing.interComponent} 0;
 `;
 const Row = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-bottom: ${spacing.tiny};
-  & > *:nth-child(1) {
-    flex-basis: 25rem;
-    margin-right: ${spacing.interComponent};
-  }
-  & > *:nth-child(2) {
-    margin-right: ${spacing.interComponent};
-  }
+`;
+const MotifCell = styled.div`
+  flex-basis: 25rem;
+  margin-right: ${spacing.interComponent};
+`;
+const DurationCell = styled.div`
+  margin-right: ${spacing.interComponent};
+`;
+const CellHeader = styled.div`
+  font-weight: 700;
 `;
 
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`

@@ -7,6 +7,7 @@ import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 import { getIndemnite, getSalaireRef } from "../indemnite";
 import { branches } from "../branches";
+import { Label } from "../stepStyles";
 
 function validateCCn(idcc) {
   const selectedBranche = branches.find(branche => branche.value === idcc);
@@ -69,7 +70,6 @@ function StepIndemnite({ form }) {
         Selon la convention collective dont vous dépendez, le montant minimum de
         votre indemnité de licenciement peut être supérieur au montant de
         l’indemnité légale.
-        <br /> Renseignez votre convention collective pour en savoir plus.
       </p>
       <Field
         name="branche"
@@ -79,10 +79,12 @@ function StepIndemnite({ form }) {
         {({ input, meta: { error, dirty } }) => (
           <>
             <SelectWrapper>
-              Selectionnez votre convention collective&nbsp;:
-              <Select {...input}>
+              <Label htmlFor="ccn">
+                Renseignez votre convention collective pour en savoir plus:
+              </Label>
+              <Select {...input} id="ccn">
                 <option disabled value="">
-                  Selectionner une branche
+                  ex: Industries chimique
                 </option>
                 {branches.map(branche => (
                   <option value={branche.value} key={branche.value}>
