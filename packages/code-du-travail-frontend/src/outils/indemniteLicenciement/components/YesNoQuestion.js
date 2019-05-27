@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Label, RadioContainer, QuestionLabel } from "../stepStyles";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { ErrorField } from "./ErrorField";
+import { Alert } from "@cdt/ui";
+import { Label, RadioContainer, QuestionLabel } from "../stepStyles";
 import { requiredBoolean } from "../validators";
 
 function YesNoQuestion({ name, label, onChange }) {
@@ -34,8 +34,16 @@ function YesNoQuestion({ name, label, onChange }) {
           <span>Non</span>
         </Label>
       </RadioContainer>
-      <ErrorField name={name} />
-      <OnChange name={name}> {values => onChange(values)} </OnChange>
+      <Field
+        name={name}
+        subscribe={{ error: true, visited: true }}
+        render={({ meta: { visited, error } }) =>
+          error && visited ? <Alert>{error}</Alert> : null
+        }
+      />
+      {onChange && (
+        <OnChange name={name}>{values => onChange(values)}</OnChange>
+      )}
     </>
   );
 }
