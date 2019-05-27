@@ -5,6 +5,11 @@
 
 > This repository regroups information about code du travail numerique projects.
 
+<br>
+<br>
+<br>
+<br>
+
 ## Installation
 
 Make sure you're using NodeJS 10.15 (9 or 11 won't work).
@@ -42,6 +47,10 @@ $ docker-compose run --rm python pipenv run python /app/search/indexing/create_i
 If some error appears for the nlp_api container, run `docker-compose down`, then run 
 the data checklist above again, then run `docker-compose build nlp_api`, and, finally, reinitialize data for elasticsearch.
 
+<br>
+<br>
+<br>
+<br>
 
 ## Usage
 
@@ -71,6 +80,10 @@ $ docker exec -ti code-du-travail-data-python pipenv run python search/extractio
 ```
 
 If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn build`.
+
+### UI
+
+The UI components are showcased here: [https://socialgouv.github.io/code-du-travail-numerique/](https://socialgouv.github.io/code-du-travail-numerique/)
 
 ### Build
 
@@ -184,6 +197,11 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 # You might want to add a Gif to your release to make it groovy ;)
 ```
 
+<br>
+<br>
+<br>
+<br>
+
 ## Architecture
 
 ```
@@ -209,6 +227,11 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
                            +------------+      +---------+
 ```
 
+<br>
+<br>
+<br>
+<br>
+
 ## URLs
 
 ### Demos
@@ -229,17 +252,32 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 - Piwik : https://stats.num.social.gouv.fr
 - Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
 
+<br>
+<br>
+<br>
+<br>
+
 ## Setup
 
 - ElasticSearch : `docker-compose up`
 - API : `yarn api`
 - FrontEnd : `yarn frontend`
 
+<br>
+<br>
+<br>
+<br>
+
 ## Contributions
 
 - Work on feature branches
 - Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
 - Submit PR on current's sprint branch
+
+<br>
+<br>
+<br>
+<br>
 
 ## FAQ
 

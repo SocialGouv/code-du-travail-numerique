@@ -56,6 +56,6 @@
 
 }
 
-.alert > :--vertical-rythm-elements:last-child {
+.alert > *:last-child {
   margin-bottom: 0;
 }

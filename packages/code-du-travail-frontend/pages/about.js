@@ -34,15 +34,14 @@ const About = () => (
             de ses différentes sources de droit (conventions collectives,
             accords de branches et accords d’entreprises…). En plus de la
             diversité des sources de droit, la technicité de la matière la rend
-            peu accessible pour les concerné·e·s : les employeur·e·s et les
-            salarié·e·s.
+            peu accessible pour les concernés : les employeurs et les salariés.
           </p>
 
           <p>
             Or tous les actifs sont impactés tous les jours par le droit qui
             régit leurs relations au travail, qui, mal compris, mal appliqué,
-            peut avoir des conséquences importantes pour le salarié·e comme pour
-            l’employeur·e.
+            peut avoir des conséquences importantes pour le salarié comme pour
+            l’employeur.
           </p>
 
           <p>
@@ -61,9 +60,9 @@ const About = () => (
             Construit avec les utilisateurs (employeurs et salariés) et les
             experts du terrain (inspecteur du travail services d’inspection du
             travail et de renseignements en droit du travail notamment), le
-            service répondra aux questions que se posent les employeur·e·s,
+            service répondra aux questions que se posent les employeurs,
             notamment de TPE PME, quant aux règles applicables à leur situation,
-            ainsi qu’à celles que se posent les salarié·e·s
+            ainsi qu’à celles que se posent les salariés
           </p>
 
           <p>

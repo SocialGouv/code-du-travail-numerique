@@ -1,37 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Answer /> should render 1`] = `
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c11 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c11 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c22 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c22 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c19 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 43.75rem;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c0 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
 
-.c7 {
+.c8 {
   padding: 1.25rem 0;
 }
 
-.c8 {
+.c9 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -41,7 +53,7 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fff;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -59,7 +71,7 @@ exports[`<Answer /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -81,13 +93,13 @@ exports[`<Answer /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c7:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -95,7 +107,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c7[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -104,21 +116,21 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c7[aria-pressed="true"]:not([disabled]):hover,
+.c7[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c7[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c32 {
+.c34 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -140,16 +152,16 @@ exports[`<Answer /> should render 1`] = `
   border: none;
 }
 
-.c32:hover {
+.c34:hover {
   color: #8c94a6;
 }
 
-.c32:active {
+.c34:active {
   position: relative;
   top: 1px;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -171,7 +183,7 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: none;
 }
 
-.c28 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,7 +205,7 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c29 {
+.c31 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -206,7 +218,7 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c31 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,13 +237,11 @@ exports[`<Answer /> should render 1`] = `
   justify-content: center;
 }
 
-.c9 {
+.c10 {
   position: relative;
-  margin: 20px auto 0 auto;
-  max-width: 850px;
 }
 
-.c10 {
+.c12 {
   position: absolute;
   top: 0.625rem;
   left: calc(-60px - 1.25rem);
@@ -239,11 +249,11 @@ exports[`<Answer /> should render 1`] = `
   color: #4c5467;
 }
 
-.c11 {
+.c13 {
   font-weight: 600;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -254,34 +264,28 @@ exports[`<Answer /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c13 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
-.c14 {
-  margin-left: 1rem;
-  color: #adb9c9;
-  font-size: 0.9rem;
-  display: inline-block;
-}
-
 .c15 {
   color: #4c5467;
   font-weight: 600;
 }
 
 .c16 {
-  margin-left: -10px;
+  margin-left: 1rem;
+  color: #adb9c9;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 .c17 {
-  margin: 20px auto;
-  max-width: 850px;
-  text-align: left;
+  color: #4c5467;
+  font-weight: 600;
 }
 
-.c26 {
+.c18 {
+  margin-left: -10px;
+}
+
+.c28 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -289,11 +293,11 @@ exports[`<Answer /> should render 1`] = `
   z-index: 1000;
 }
 
-.c30 {
+.c32 {
   padding: 0 0.25rem;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -304,28 +308,32 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c5 ul {
+.c6 ul {
   z-index: 100;
 }
 
-.c5 li[role="option"]:nth-child(2n + 1) {
+.c6 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
-.c3 {
+.c0 {
+  box-shadow: 0 10px 10px -10px #c9d3df;
+}
+
+.c4 {
   margin-top: 0;
   font-size: 1.6rem;
   line-height: 1.4;
   color: #006ab2;
 }
 
-.c2 {
+.c3 {
   position: relative;
   padding: 1rem 0;
   text-align: center;
 }
 
-.c2 .search__form {
+.c3 .search__form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -337,11 +345,11 @@ exports[`<Answer /> should render 1`] = `
   width: 90%;
 }
 
-.c2 .search__form button {
+.c3 .search__form button {
   margin-left: 0.5rem;
 }
 
-.c2 .search__fields {
+.c3 .search__fields {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -352,7 +360,7 @@ exports[`<Answer /> should render 1`] = `
   position: relative;
 }
 
-.c2 .search__input__icon {
+.c3 .search__input__icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -360,7 +368,7 @@ exports[`<Answer /> should render 1`] = `
   width: 2.55rem;
 }
 
-.c2 .search__sources {
+.c3 .search__sources {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,14 +385,14 @@ exports[`<Answer /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c2 .search__sources__icon {
+.c3 .search__sources__icon {
   position: absolute;
   margin: 0 calc(1.25rem / 2);
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c2 .search__sources__value {
+.c3 .search__sources__value {
   padding: 0.5rem 2rem 0.5rem 2.5em;
   color: #26353f;
   background-color: transparent;
@@ -392,7 +400,7 @@ exports[`<Answer /> should render 1`] = `
   border: 1px solid transparent;
 }
 
-.c2 .search__input {
+.c3 .search__input {
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   height: 100%;
@@ -411,16 +419,16 @@ exports[`<Answer /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c2 .search__input:focus {
+.c3 .search__input:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c21 {
+.c23 {
   margin-bottom: 1rem;
 }
 
-.c22 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -431,7 +439,7 @@ exports[`<Answer /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c24 {
+.c26 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -454,13 +462,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c24:not([disabled]):hover,
-.c24:not([disabled]):focus {
+.c26:not([disabled]):hover,
+.c26:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c24:not([disabled]):active {
+.c26:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -468,7 +476,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c24[aria-pressed="true"] {
+.c26[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -477,25 +485,25 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c24[aria-pressed="true"]:not([disabled]):hover,
-.c24[aria-pressed="true"]:not([disabled]):focus {
+.c26[aria-pressed="true"]:not([disabled]):hover,
+.c26[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c24[aria-pressed="true"]:not([disabled]):active {
+.c26[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c24[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c24 + .c23 {
+.c26 + .c25 {
   margin-left: 1rem;
 }
 
-.c25 {
+.c27 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -518,13 +526,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c25:not([disabled]):hover,
-.c25:not([disabled]):focus {
+.c27:not([disabled]):hover,
+.c27:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c25:not([disabled]):active {
+.c27:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -532,7 +540,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c25[aria-pressed="true"] {
+.c27[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -541,25 +549,29 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c25[aria-pressed="true"]:not([disabled]):hover,
-.c25[aria-pressed="true"]:not([disabled]):focus {
+.c27[aria-pressed="true"]:not([disabled]):hover,
+.c27[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c25[aria-pressed="true"]:not([disabled]):active {
+.c27[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c25[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c25 + .c23 {
+.c27 + .c25 {
   margin-left: 1rem;
 }
 
-.c18 {
+.c19 {
+  margin-top: 1rem;
+}
+
+.c21 {
   margin-top: 2.5em;
   padding: 1rem;
   background-color: #f9f9fc;
@@ -567,21 +579,28 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c2 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c19 {
+  .c11 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c8 {
+  .c22 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c9 {
     border: none;
     padding: 0 5pt;
   }
@@ -595,13 +614,13 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:1200px) {
-  .c10 {
+  .c12 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c14 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -613,58 +632,58 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c16 {
     margin-left: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c2 .search__sources {
+  .c3 .search__sources {
     display: none;
   }
 
-  .c2 .search__input {
+  .c3 .search__input {
     padding-right: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 .search__form {
+  .c3 .search__form {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
 
-  .c2 .search__form button {
+  .c3 .search__form button {
     margin-left: 0;
   }
 
-  .c2 .search__input__icon {
+  .c3 .search__input__icon {
     display: none;
   }
 
-  .c2 .search__fields {
+  .c3 .search__fields {
     margin-bottom: 0.5rem;
   }
 
-  .c2 .search__input {
+  .c3 .search__input {
     padding: 1rem;
   }
 }
 
 <div>
   <div
-    class="shadow-bottom search-widget c0"
+    class="search-widget c0 c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <p
-          class="c3"
+          class="c4"
         >
           Posez votre question sur le droit du travail
         </p>
@@ -757,7 +776,7 @@ exports[`<Answer /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c4"
+              class="c5"
               for="main-search-input"
             >
               <span
@@ -783,7 +802,7 @@ exports[`<Answer /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c5"
+                  class="c6"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -792,7 +811,7 @@ exports[`<Answer /> should render 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c6"
+            class="c7"
             type="submit"
           >
             Rechercher
@@ -802,126 +821,134 @@ exports[`<Answer /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c7"
+    class="c8"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c8"
+        class="c9"
       >
         <div
-          class="c9"
+          class="c8"
         >
           <div
-            class="c10"
+            class="c10 c11"
           >
-            <svg
-              viewBox="0 0 50 50"
-            >
-              <title>
-                question
-              </title>
-              <g
-                fill="currentColor"
-                fill-rule="evenodd"
-              >
-                <path
-                  d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
-                />
-                <path
-                  d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
-                />
-                <path
-                  d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
-                />
-              </g>
-            </svg>
-          </div>
-          <div>
-            <h1
-              class="c11"
-            >
-              Article du code
-            </h1>
             <div
               class="c12"
             >
-              <span
+              <svg
+                viewBox="0 0 50 50"
+              >
+                <title>
+                  question
+                </title>
+                <g
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
+                  />
+                  <path
+                    d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
+                  />
+                  <path
+                    d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div>
+              <h1
                 class="c13"
               >
-                social groove
-              </span>
-              <span
+                Article du code
+              </h1>
+              <div
                 class="c14"
               >
-                Mis à jour le : 
                 <span
                   class="c15"
                 >
-                  03/11/1979
+                  social groove
                 </span>
-              </span>
+                <span
+                  class="c16"
+                >
+                  Mis à jour le : 
+                  <span
+                    class="c17"
+                  >
+                    03/11/1979
+                  </span>
+                </span>
+              </div>
             </div>
+            <div
+              class="c18"
+            />
           </div>
           <div
-            class="c16"
-          />
-        </div>
-        <div
-          class="c17"
-        >
-          intro de l'article
-          <div
-            class=""
+            class="c11"
           >
-            <p
-              class="test-content"
+            <div
+              class="c19 c20"
             >
-              Contenu au format 
-              <strong>
-                html
-              </strong>
-            </p>
-          </div>
-          <div>
-            Contenu supplémentaire
-          </div>
-          <div
-            class="c18"
-          >
-            pied de page
+              intro de l'article
+            </div>
+            <div
+              class=""
+            >
+              <p
+                class="test-content"
+              >
+                Contenu au format 
+                <strong>
+                  html
+                </strong>
+              </p>
+            </div>
+            <div>
+              Contenu supplémentaire
+            </div>
+            <div
+              class="c21"
+            >
+              pied de page
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="c7"
+    class="c8"
   >
     <div
-      class="c19"
+      class="c22"
     >
       <div
         class="c20"
       >
         <h3
-          class="c21"
+          class="c23"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c22"
+          class="c24"
         >
           <button
             aria-pressed="false"
-            class="c23 c24"
+            class="c25 c26"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c23 c25"
+            class="c25 c27"
           >
             Oui
           </button>
@@ -930,14 +957,14 @@ exports[`<Answer /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c26"
+    class="c28"
   >
     <div
-      class="c27"
+      class="c29"
       type="warning"
     >
       <div
-        class="c28"
+        class="c30"
         type="warning"
       >
         <svg
@@ -969,12 +996,12 @@ exports[`<Answer /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c29"
+        class="c31"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c30"
+          class="c32"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -985,11 +1012,11 @@ exports[`<Answer /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c31"
+        class="c33"
       >
         <button
           aria-pressed="false"
-          class="c32"
+          class="c34"
         >
           <svg
             fill="none"
@@ -1023,43 +1050,55 @@ exports[`<Answer /> should render 1`] = `
 `;
 
 exports[`<Answer /> should render a breadcrumbs 1`] = `
-.c9 {
+.c10 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c15 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c15 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c26 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c26 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c23 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 43.75rem;
-}
-
-.c23 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c0 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
 
-.c8 {
+.c9 {
   padding: 1.25rem 0;
 }
 
-.c12 {
+.c13 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -1069,7 +1108,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #fff;
 }
 
-.c12 > *:last-child {
+.c13 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1087,7 +1126,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1109,13 +1148,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c7:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1123,7 +1162,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c7[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1132,21 +1171,21 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c7[aria-pressed="true"]:not([disabled]):hover,
+.c7[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c7[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c36 {
+.c38 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1168,16 +1207,16 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border: none;
 }
 
-.c36:hover {
+.c38:hover {
   color: #8c94a6;
 }
 
-.c36:active {
+.c38:active {
   position: relative;
   top: 1px;
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1199,7 +1238,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: none;
 }
 
-.c32 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,7 +1260,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #fee5ad;
 }
 
-.c33 {
+.c35 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1234,7 +1273,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   text-align: left;
 }
 
-.c35 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1253,13 +1292,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: center;
 }
 
-.c13 {
+.c14 {
   position: relative;
-  margin: 20px auto 0 auto;
-  max-width: 850px;
 }
 
-.c14 {
+.c16 {
   position: absolute;
   top: 0.625rem;
   left: calc(-60px - 1.25rem);
@@ -1267,11 +1304,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   color: #4c5467;
 }
 
-.c15 {
+.c17 {
   font-weight: 600;
 }
 
-.c16 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1282,47 +1319,41 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   align-items: flex-end;
 }
 
-.c17 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
-.c18 {
-  margin-left: 1rem;
-  color: #adb9c9;
-  font-size: 0.9rem;
-  display: inline-block;
-}
-
 .c19 {
   color: #4c5467;
   font-weight: 600;
 }
 
 .c20 {
-  margin-left: -10px;
+  margin-left: 1rem;
+  color: #adb9c9;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 .c21 {
-  margin: 20px auto;
-  max-width: 850px;
-  text-align: left;
+  color: #4c5467;
+  font-weight: 600;
 }
 
-.c7 {
+.c22 {
+  margin-left: -10px;
+}
+
+.c8 {
   background: #c9d3df;
 }
 
-.c10 {
+.c11 {
   display: inline-block;
   padding: 0.625rem 1.25rem;
 }
 
-.c10:first-child {
+.c11:first-child {
   padding-left: 0;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
   pointer-events: none;
   -webkit-user-select: none;
@@ -1331,7 +1362,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   user-select: none;
 }
 
-.c30 {
+.c32 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -1339,11 +1370,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   z-index: 1000;
 }
 
-.c34 {
+.c36 {
   padding: 0 0.25rem;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1354,28 +1385,32 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   text-align: left;
 }
 
-.c5 ul {
+.c6 ul {
   z-index: 100;
 }
 
-.c5 li[role="option"]:nth-child(2n + 1) {
+.c6 li[role="option"]:nth-child(2n + 1) {
   background: #f7f7f7;
 }
 
-.c3 {
+.c0 {
+  box-shadow: 0 10px 10px -10px #c9d3df;
+}
+
+.c4 {
   margin-top: 0;
   font-size: 1.6rem;
   line-height: 1.4;
   color: #006ab2;
 }
 
-.c2 {
+.c3 {
   position: relative;
   padding: 1rem 0;
   text-align: center;
 }
 
-.c2 .search__form {
+.c3 .search__form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1387,11 +1422,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   width: 90%;
 }
 
-.c2 .search__form button {
+.c3 .search__form button {
   margin-left: 0.5rem;
 }
 
-.c2 .search__fields {
+.c3 .search__fields {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1402,7 +1437,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   position: relative;
 }
 
-.c2 .search__input__icon {
+.c3 .search__input__icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -1410,7 +1445,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   width: 2.55rem;
 }
 
-.c2 .search__sources {
+.c3 .search__sources {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1427,14 +1462,14 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border-radius: 0.25rem;
 }
 
-.c2 .search__sources__icon {
+.c3 .search__sources__icon {
   position: absolute;
   margin: 0 calc(1.25rem / 2);
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c2 .search__sources__value {
+.c3 .search__sources__value {
   padding: 0.5rem 2rem 0.5rem 2.5em;
   color: #26353f;
   background-color: transparent;
@@ -1442,7 +1477,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border: 1px solid transparent;
 }
 
-.c2 .search__input {
+.c3 .search__input {
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   height: 100%;
@@ -1461,16 +1496,16 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   transition: border 250ms ease;
 }
 
-.c2 .search__input:focus {
+.c3 .search__input:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c25 {
+.c27 {
   margin-bottom: 1rem;
 }
 
-.c26 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1481,7 +1516,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: space-around;
 }
 
-.c28 {
+.c30 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1504,13 +1539,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c28:not([disabled]):hover,
-.c28:not([disabled]):focus {
+.c30:not([disabled]):hover,
+.c30:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c28:not([disabled]):active {
+.c30:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -1518,7 +1553,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c28[aria-pressed="true"] {
+.c30[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -1527,25 +1562,25 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c28[aria-pressed="true"]:not([disabled]):hover,
-.c28[aria-pressed="true"]:not([disabled]):focus {
+.c30[aria-pressed="true"]:not([disabled]):hover,
+.c30[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c28[aria-pressed="true"]:not([disabled]):active {
+.c30[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c28[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c28 + .c27 {
+.c30 + .c29 {
   margin-left: 1rem;
 }
 
-.c29 {
+.c31 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1568,13 +1603,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c29:not([disabled]):hover,
-.c29:not([disabled]):focus {
+.c31:not([disabled]):hover,
+.c31:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c29:not([disabled]):active {
+.c31:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1582,7 +1617,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c29[aria-pressed="true"] {
+.c31[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1591,25 +1626,29 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c29[aria-pressed="true"]:not([disabled]):hover,
-.c29[aria-pressed="true"]:not([disabled]):focus {
+.c31[aria-pressed="true"]:not([disabled]):hover,
+.c31[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c29[aria-pressed="true"]:not([disabled]):active {
+.c31[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c29[disabled] {
+.c31[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c29 + .c27 {
+.c31 + .c29 {
   margin-left: 1rem;
 }
 
-.c22 {
+.c23 {
+  margin-top: 1rem;
+}
+
+.c25 {
   margin-top: 2.5em;
   padding: 1rem;
   background-color: #f9f9fc;
@@ -1617,21 +1656,28 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c2 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c23 {
+  .c15 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c12 {
+  .c26 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c13 {
     border: none;
     padding: 0 5pt;
   }
@@ -1645,13 +1691,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:1200px) {
-  .c14 {
+  .c16 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c18 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1663,58 +1709,58 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c20 {
     margin-left: 0;
   }
 }
 
 @media (max-width:980px) {
-  .c2 .search__sources {
+  .c3 .search__sources {
     display: none;
   }
 
-  .c2 .search__input {
+  .c3 .search__input {
     padding-right: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c2 .search__form {
+  .c3 .search__form {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
 
-  .c2 .search__form button {
+  .c3 .search__form button {
     margin-left: 0;
   }
 
-  .c2 .search__input__icon {
+  .c3 .search__input__icon {
     display: none;
   }
 
-  .c2 .search__fields {
+  .c3 .search__fields {
     margin-bottom: 0.5rem;
   }
 
-  .c2 .search__input {
+  .c3 .search__input {
     padding: 1rem;
   }
 }
 
 <div>
   <div
-    class="shadow-bottom search-widget c0"
+    class="search-widget c0 c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
       >
         <p
-          class="c3"
+          class="c4"
         >
           Posez votre question sur le droit du travail
         </p>
@@ -1807,7 +1853,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
               </select>
             </label>
             <label
-              class="c4"
+              class="c5"
               for="main-search-input"
             >
               <span
@@ -1833,7 +1879,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                   value=""
                 />
                 <div
-                  class="c5"
+                  class="c6"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -1842,7 +1888,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c6"
+            class="c7"
             type="submit"
           >
             Rechercher
@@ -1852,19 +1898,19 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </div>
   <nav
-    class="c7"
+    class="c8"
   >
     <div
-      class="c8"
+      class="c9"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <ul
-          class="c9"
+          class="c10"
         >
           <li
-            class="c10"
+            class="c11"
           >
             <a
               href="/themes/tag-1"
@@ -1875,12 +1921,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
           </li>
           <li
             aria-hidden="true"
-            class="c11"
+            class="c12"
           >
              » 
           </li>
           <li
-            class="c10"
+            class="c11"
           >
             <a
               href="/themes/tag-2"
@@ -1894,126 +1940,134 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </nav>
   <div
-    class="c8"
+    class="c9"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c12"
+        class="c13"
       >
         <div
-          class="c13"
+          class="c9"
         >
           <div
-            class="c14"
+            class="c14 c15"
           >
-            <svg
-              viewBox="0 0 50 50"
-            >
-              <title>
-                question
-              </title>
-              <g
-                fill="currentColor"
-                fill-rule="evenodd"
-              >
-                <path
-                  d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
-                />
-                <path
-                  d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
-                />
-                <path
-                  d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
-                />
-              </g>
-            </svg>
-          </div>
-          <div>
-            <h1
-              class="c15"
-            >
-              Article du code
-            </h1>
             <div
               class="c16"
             >
-              <span
+              <svg
+                viewBox="0 0 50 50"
+              >
+                <title>
+                  question
+                </title>
+                <g
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
+                  />
+                  <path
+                    d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
+                  />
+                  <path
+                    d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div>
+              <h1
                 class="c17"
               >
-                social groove
-              </span>
-              <span
+                Article du code
+              </h1>
+              <div
                 class="c18"
               >
-                Mis à jour le : 
                 <span
                   class="c19"
                 >
-                  03/11/1979
+                  social groove
                 </span>
-              </span>
+                <span
+                  class="c20"
+                >
+                  Mis à jour le : 
+                  <span
+                    class="c21"
+                  >
+                    03/11/1979
+                  </span>
+                </span>
+              </div>
             </div>
+            <div
+              class="c22"
+            />
           </div>
           <div
-            class="c20"
-          />
-        </div>
-        <div
-          class="c21"
-        >
-          intro de l'article
-          <div
-            class=""
+            class="c15"
           >
-            <p
-              class="test-content"
+            <div
+              class="c23 c24"
             >
-              Contenu au format 
-              <strong>
-                html
-              </strong>
-            </p>
-          </div>
-          <div>
-            Contenu supplémentaire
-          </div>
-          <div
-            class="c22"
-          >
-            pied de page
+              intro de l'article
+            </div>
+            <div
+              class=""
+            >
+              <p
+                class="test-content"
+              >
+                Contenu au format 
+                <strong>
+                  html
+                </strong>
+              </p>
+            </div>
+            <div>
+              Contenu supplémentaire
+            </div>
+            <div
+              class="c25"
+            >
+              pied de page
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="c8"
+    class="c9"
   >
     <div
-      class="c23"
+      class="c26"
     >
       <div
         class="c24"
       >
         <h3
-          class="c25"
+          class="c27"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c26"
+          class="c28"
         >
           <button
             aria-pressed="false"
-            class="c27 c28"
+            class="c29 c30"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c27 c29"
+            class="c29 c31"
           >
             Oui
           </button>
@@ -2022,14 +2076,14 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </div>
   <div
-    class="c30"
+    class="c32"
   >
     <div
-      class="c31"
+      class="c33"
       type="warning"
     >
       <div
-        class="c32"
+        class="c34"
         type="warning"
       >
         <svg
@@ -2061,12 +2115,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         </svg>
       </div>
       <div
-        class="c33"
+        class="c35"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c34"
+          class="c36"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2077,11 +2131,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c35"
+        class="c37"
       >
         <button
           aria-pressed="false"
-          class="c36"
+          class="c38"
         >
           <svg
             fill="none"

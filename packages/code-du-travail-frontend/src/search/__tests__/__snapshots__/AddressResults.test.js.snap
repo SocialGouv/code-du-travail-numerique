@@ -15,7 +15,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 43.75rem;
+  max-width: 46.25rem;
 }
 
 .c4 > *:last-child {
@@ -360,7 +360,7 @@ exports[`<AddressResults/> should render results 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 43.75rem;
+  max-width: 46.25rem;
 }
 
 .c8 > *:last-child {

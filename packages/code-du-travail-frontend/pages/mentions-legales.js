@@ -69,7 +69,7 @@ const SearchPage = () => {
           dispositifs appelés “cookies” permettant d’établir des mesures
           statistiques de fréquentation et d’utilisation du site pouvant être
           utilisées à des fins de suivi et d’amélioration du service :
-          <List>
+          <StyledList>
             <ListItem>
               Les données collectées ne sont pas recoupées avec d’autres
               traitements.
@@ -82,7 +82,7 @@ const SearchPage = () => {
               Le cookie ne permet pas de suivre la navigation de l’internaute
               sur d’autres sites.
             </ListItem>
-          </List>
+          </StyledList>
         </p>
         <p>
           La mesure d’audience (nombre de visites, pages consultées) est
@@ -281,4 +281,10 @@ const AccordionItem = styled.div`
 const Address = styled.address`
   display: block;
   margin-top: ${spacing.interComponent};
+`;
+
+const StyledList = styled(List)`
+  margin: ${spacing.medium} 0;
+  padding-left: ${spacing.medium};
+  list-style-type: disc;
 `;
