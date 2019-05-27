@@ -38,7 +38,7 @@ function validate(values) {
 
 function StepInfo() {
   return (
-    <Container narrow>
+    <Container>
       <TypeContrat />
       <YesNoQuestion
         name="fauteGrave"

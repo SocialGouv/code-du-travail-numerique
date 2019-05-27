@@ -7,7 +7,7 @@ import { YesNoQuestion } from "../components/YesNoQuestion";
 
 function Step_Chimie() {
   return (
-    <Container narrow>
+    <Container>
       <h3>Chimie</h3>
       <EchelonChimie name="groupe" />
 

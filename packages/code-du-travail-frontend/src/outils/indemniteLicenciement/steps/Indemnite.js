@@ -46,7 +46,7 @@ function StepIndemnite({ form }) {
   });
 
   return (
-    <Container narrow>
+    <Container>
       <h2>Indemnité légale</h2>
       <p>
         Le code du travail prévoit un montant minimum de{" "}

@@ -63,7 +63,7 @@ function validate({
 
 function StepAnciennete({ form }) {
   return (
-    <Container narrow nopadding>
+    <Container nopadding>
       <TextQuestion
         name="dateEntree"
         label="Quelle est votre date d'entrée dans l'entreprise&nbsp;?"

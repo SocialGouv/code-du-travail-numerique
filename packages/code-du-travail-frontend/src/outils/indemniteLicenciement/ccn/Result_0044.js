@@ -61,7 +61,7 @@ function Result_Chimie({ form }) {
     groupe
   });
   return (
-    <Container narrow>
+    <Container>
       <h2>Indemnité Conventionnelle</h2>
       {indemniteConventionnelle > indemnite ? (
         <p>
