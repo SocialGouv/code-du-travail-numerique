@@ -2,21 +2,20 @@ import ReactPiwik from "react-piwik";
 import { Router } from "../routes";
 import getConfig from "next/config";
 
-const onRouteChangeComplete = () => {
-  ReactPiwik.push(["trackPageView"]);
-};
-
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
 } = getConfig();
 
 if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
-  new ReactPiwik({
+  const piwik = new ReactPiwik({
     url: PIWIK_URL,
     siteId: PIWIK_SITE_ID,
     trackErrors: true
   });
-  Router.events.on("routeChangeComplete", onRouteChangeComplete);
+  ReactPiwik.push(["trackPageView"]);
+  Router.events.on("routeChangeComplete", path => {
+    piwik.track({ path });
+  });
 } else if (typeof window !== "undefined") {
   window._paq = [];
 }
