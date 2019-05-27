@@ -9,7 +9,9 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
   if (!children || children.length == 0) {
     return (
       <TocListItem type={type} id={id} level={0}>
-        <TitleLink id={id}>{titre}</TitleLink>
+        <TitleLink type={type} id={id}>
+          {titre}
+        </TitleLink>
       </TocListItem>
     );
   }
@@ -17,6 +19,7 @@ const SummaryTitle = ({ type, data, children, expanded, onToggleExpanded }) => {
     <TocListItem type={type} id={id} level={0}>
       <TitleLink
         id={id}
+        type={type}
         onClick={e => {
           e.preventDefault();
           onToggleExpanded(id, !expanded);
@@ -50,8 +53,8 @@ SummaryTitle.propTypes = {
   onToggleExpanded: PropTypes.func.isRequired
 };
 
-const TitleLink = ({ id, children, onClick }) => (
-  <TocLink id={id} onClick={onClick} level={0}>
+const TitleLink = ({ id, type, children, onClick }) => (
+  <TocLink id={id} type={type} level={0} onClick={onClick}>
     {children}
   </TocLink>
 );

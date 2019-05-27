@@ -33,7 +33,7 @@ TocListItem.propTypes = {
   level: PropTypes.number.isRequired,
   type: PropTypes.string,
   id: PropTypes.string,
-  children: PropTypes.array
+  children: PropTypes.node
 };
 
 export default TocListItem;
