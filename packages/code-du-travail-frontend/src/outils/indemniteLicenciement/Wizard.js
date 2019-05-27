@@ -7,33 +7,33 @@ import { PrevNextBar } from "./PrevNextBar";
 
 function Wizard({
   initialData = {},
-  initialStep = 0,
+  initialStepIndex = 0,
   steps,
   onSubmit,
   onUpdate,
   rules
 }) {
   const [initialValues, setValues] = useState(initialData);
-  const [page, setPage] = useState(initialStep);
+  const [stepIndex, setStepIndex] = useState(initialStepIndex);
 
   const prevStep = () => {
-    setPage(Math.max(0, page - 1));
+    setStepIndex(Math.max(0, stepIndex - 1));
   };
   const nextStep = () => {
-    setPage(Math.min(page + 1, steps.length - 1));
+    setStepIndex(Math.min(stepIndex + 1, steps.length - 1));
   };
 
-  const previousVisible = page > 0;
-  const nextVisible = page < steps.length - 1;
+  const previousVisible = stepIndex > 0;
+  const nextVisible = stepIndex < steps.length - 1;
 
   const validate = values => {
-    const Step = steps[page].component;
+    const Step = steps[stepIndex].component;
     return Step.validate ? Step.validate(values) : {};
   };
 
   const handlePageSubmit = values => {
-    if (page === steps.length - 1) {
-      setPage(0);
+    if (stepIndex === steps.length - 1) {
+      setStepIndex(0);
       setValues({});
       onSubmit(values);
     } else {
@@ -51,7 +51,7 @@ function Wizard({
     .map(step => step.component.decorator)
     .filter(Boolean);
 
-  const Step = steps[page];
+  const Step = steps[stepIndex];
 
   return (
     <>
@@ -69,7 +69,7 @@ function Wizard({
             <>
               <form onSubmit={handleSubmit}>
                 {rules}
-                <StepItems page={page} items={stepItems} />
+                <StepItems page={stepIndex} items={stepItems} />
                 <Step.component form={form} />
                 <PrevNextBar
                   onPrev={prevStep}

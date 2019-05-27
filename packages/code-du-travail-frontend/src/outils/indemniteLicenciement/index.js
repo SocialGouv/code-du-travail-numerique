@@ -47,8 +47,6 @@ function CalculateurIndemnite() {
     dispatch({
       type: "reset",
       payload: {
-        data: {},
-        page: 0,
         steps: getInitialSteps()
       }
     });
@@ -59,13 +57,7 @@ function CalculateurIndemnite() {
       <Container>
         <Wrapper variant="light">
           <h1>Calculateur d&apos;indemnités de licenciement</h1>
-          <Wizard
-            steps={state.steps}
-            initialData={state.data}
-            initialStep={state.page}
-            onSubmit={onSubmit}
-            rules={rules}
-          />
+          <Wizard steps={state.steps} onSubmit={onSubmit} rules={rules} />
         </Wrapper>
       </Container>
     </Section>

@@ -31,9 +31,7 @@ export function getInitialSteps() {
 
 export function getInitialData() {
   return {
-    steps: getInitialSteps(),
-    page: 0,
-    data: {}
+    steps: getInitialSteps()
   };
 }
 
@@ -47,11 +45,7 @@ export function CalculateurReducer(state, action) {
   switch (action.type) {
     case "reset":
       return resetState({ ...action.payload });
-    case "update_data":
-      return {
-        ...state,
-        data: action.payload
-      };
+
     case "add_primes": {
       const salaireIndex = state.steps.findIndex(
         step => step.name === "salaires"
