@@ -47,11 +47,12 @@ function Wizard({
     label,
     isValid: false
   }));
+
   const decorators = steps
     .map(step => step.component.decorator)
     .filter(Boolean);
 
-  const Step = steps[stepIndex];
+  const Step = steps[stepIndex].component;
 
   return (
     <>
@@ -70,7 +71,7 @@ function Wizard({
               <form onSubmit={handleSubmit}>
                 {rules}
                 <StepItems page={stepIndex} items={stepItems} />
-                <Step.component form={form} />
+                <Step form={form} />
                 <PrevNextBar
                   onPrev={prevStep}
                   nextVisible={nextVisible}
