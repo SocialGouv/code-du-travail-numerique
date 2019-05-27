@@ -29,60 +29,34 @@ export function getInitialSteps() {
   ];
 }
 
-export function getInitialData() {
-  return {
-    steps: getInitialSteps()
-  };
-}
-
-export function resetState({ ...data }) {
-  return {
-    ...data
-  };
-}
-
-export function CalculateurReducer(state, action) {
+export function StepReducer(steps, action) {
   switch (action.type) {
     case "reset":
-      return resetState({ ...action.payload });
+      return getInitialSteps({ ...action.payload });
 
     case "add_primes": {
-      const salaireIndex = state.steps.findIndex(
-        step => step.name === "salaires"
-      );
-      const newSteps = state.steps.filter(step => step.name !== "primes");
+      const salaireIndex = steps.findIndex(step => step.name === "salaires");
+      const newSteps = steps.filter(step => step.name !== "primes");
       newSteps.splice(salaireIndex + 1, 0, {
         component: StepPrimes,
         label: "Primes",
         name: "primes"
       });
-      return {
-        ...state,
-        steps: newSteps
-      };
+      return newSteps;
     }
     case "remove_primes": {
-      return {
-        ...state,
-        steps: state.steps.filter(step => step.name !== "primes")
-      };
+      return steps.filter(step => step.name !== "primes");
     }
     case "add_branche": {
-      return {
-        ...state,
-        steps: state.steps
-          .filter(step => !/branche_/.test(step.name))
-          .concat(...action.payload)
-      };
+      return steps
+        .filter(step => !/branche_/.test(step.name))
+        .concat(...action.payload);
     }
     case "remove_branche": {
-      return {
-        ...state,
-        steps: state.steps.filter(step => !/branche_/.test(step.name))
-      };
+      return steps.filter(step => !/branche_/.test(step.name));
     }
     default:
       console.warning("action unknow", action);
   }
-  return state;
+  return steps;
 }

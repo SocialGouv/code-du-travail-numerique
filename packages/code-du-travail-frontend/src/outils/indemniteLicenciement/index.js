@@ -1,22 +1,13 @@
 import React, { useReducer } from "react";
 import PropTypes from "prop-types";
 import { Section, Container, Wrapper } from "@cdt/ui";
-import {
-  CalculateurReducer,
-  resetState,
-  getInitialData,
-  getInitialSteps
-} from "./reducer";
+import { StepReducer, getInitialSteps } from "./reducer";
 import { Wizard } from "./Wizard";
 import { OnChange } from "react-final-form-listeners";
 
 function CalculateurIndemnite() {
-  const initialData = getInitialData();
-  const [state, dispatch] = useReducer(
-    CalculateurReducer,
-    initialData,
-    resetState
-  );
+  const initialSteps = getInitialSteps();
+  const [steps, dispatch] = useReducer(StepReducer, initialSteps);
 
   /**
    * The rules defined here allows to manage additionnal steps to the form
@@ -46,9 +37,7 @@ function CalculateurIndemnite() {
   const onSubmit = () => {
     dispatch({
       type: "reset",
-      payload: {
-        steps: getInitialSteps()
-      }
+      payload: getInitialSteps()
     });
   };
 
@@ -57,7 +46,7 @@ function CalculateurIndemnite() {
       <Container>
         <Wrapper variant="light">
           <h1>Calculateur d&apos;indemnités de licenciement</h1>
-          <Wizard steps={state.steps} onSubmit={onSubmit} rules={rules} />
+          <Wizard steps={steps} onSubmit={onSubmit} rules={rules} />
         </Wrapper>
       </Container>
     </Section>

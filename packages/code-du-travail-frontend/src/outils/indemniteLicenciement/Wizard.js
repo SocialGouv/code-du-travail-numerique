@@ -33,13 +33,14 @@ function Wizard({
 
   const handlePageSubmit = values => {
     if (stepIndex === steps.length - 1) {
-      setStepIndex(0);
       setValues({});
+      setStepIndex(0);
       onSubmit(values);
     } else {
+      // updating initialValues so we can reset them once form is finished
+      setValues(values);
       nextStep();
       onUpdate && onUpdate(values);
-      setValues(values);
     }
   };
   const stepItems = steps.map(({ name, label }) => ({
@@ -65,7 +66,7 @@ function Wizard({
         }}
         onSubmit={handlePageSubmit}
       >
-        {({ handleSubmit, form }) => {
+        {({ handleSubmit, form, values }) => {
           return (
             <>
               <form onSubmit={handleSubmit}>
@@ -78,10 +79,12 @@ function Wizard({
                   previousVisible={previousVisible}
                 />
               </form>
+              <pre>{JSON.stringify(values, 0, 2)}</pre>
             </>
           );
         }}
       </Form>
+      <pre>{JSON.stringify(initialValues, 0, 2)}</pre>
     </>
   );
 }
