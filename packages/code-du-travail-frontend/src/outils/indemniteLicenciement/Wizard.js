@@ -89,7 +89,7 @@ function Wizard({
 Wizard.propTypes = {
   steps: PropTypes.array.isRequired,
   initialData: PropTypes.object,
-  initialStep: PropTypes.number,
+  initialStepIndex: PropTypes.number,
   onSubmit: PropTypes.func.isRequired
 };
 
