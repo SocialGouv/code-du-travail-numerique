@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { theme } from "@cdt/ui";
 
 import { Input } from "../stepStyles";
-import { isNumber } from "./validators";
+import { isNumber } from "../validators";
 
 function SalaireTempsPlein({ name }) {
   return (

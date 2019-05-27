@@ -1,6 +1,6 @@
 import React from "react";
 import { Field } from "react-final-form";
-import { required } from "./validators";
+import { required } from "../validators";
 
 import { Input, QuestionLabel } from "../stepStyles";
 import { ErrorField } from "./ErrorField";

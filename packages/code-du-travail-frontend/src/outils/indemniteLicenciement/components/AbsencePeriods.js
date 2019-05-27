@@ -4,9 +4,10 @@ import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { Button, theme } from "@cdt/ui";
 import { Input } from "../stepStyles";
-import { isNumber } from "./validators";
+import { isNumber } from "../validators";
+import { OnChange } from "react-final-form-listeners";
 
-function AbsencePeriods({ name }) {
+function AbsencePeriods({ name, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (
@@ -54,6 +55,13 @@ function AbsencePeriods({ name }) {
           >
             Ajouter une période
           </AddButton>
+          {onChange && (
+            <OnChange name={name}>
+              {values => {
+                onChange(values);
+              }}
+            </OnChange>
+          )}
         </>
       )}
     </FieldArray>

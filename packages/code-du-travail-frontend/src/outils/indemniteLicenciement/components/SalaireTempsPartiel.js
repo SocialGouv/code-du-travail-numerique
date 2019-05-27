@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
+import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@cdt/ui";
 import { Input } from "../stepStyles";
-import { isNumber } from "./validators";
+import { isNumber } from "../validators";
 
-function SalaireTempsPartiel({ name }) {
+function SalaireTempsPartiel({ name, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (
@@ -86,6 +87,9 @@ function SalaireTempsPartiel({ name }) {
           >
             Ajouter une période
           </AddButton>
+          {onChange && (
+            <OnChange name={name}>{values => onChange(values)}</OnChange>
+          )}
         </>
       )}
     </FieldArray>

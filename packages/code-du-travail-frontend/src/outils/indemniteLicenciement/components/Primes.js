@@ -2,11 +2,12 @@ import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
+import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@cdt/ui";
 import { Input } from "../stepStyles";
-import { isNumber } from "./validators";
+import { isNumber } from "../validators";
 
-function Primes({ name }) {
+function Primes({ name, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (
@@ -48,6 +49,9 @@ function Primes({ name }) {
           >
             Ajouter une prime
           </AddButton>
+          {onChange && (
+            <OnChange name={name}>{values => onChange(values)}</OnChange>
+          )}
         </>
       )}
     </FieldArray>

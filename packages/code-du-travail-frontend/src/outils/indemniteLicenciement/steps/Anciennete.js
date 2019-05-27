@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "@cdt/ui";
 import { Field } from "react-final-form";
-import { OnChange } from "react-final-form-listeners";
 import createDecorator from "final-form-calculate";
 import { isAfter, differenceInMonths, format } from "date-fns";
 
@@ -86,9 +85,7 @@ function StepAnciennete({ form }) {
         name="hasAbsenceProlonge"
         label="Avez-vous eu des périodes d'absence de plus d'un mois au cours
         de votre contrat&nbsp;?"
-      />
-      <OnChange name="hasAbsenceProlonge">
-        {hasAbsenceProlonge => {
+        onChange={hasAbsenceProlonge => {
           hasAbsenceProlonge
             ? form.change("absencePeriods", [
                 {
@@ -98,21 +95,23 @@ function StepAnciennete({ form }) {
               ])
             : form.change("absencePeriods", []);
         }}
-      </OnChange>
+      />
       <br />
       <br />
       <Field name="hasAbsenceProlonge">
         {({ input }) =>
-          input.value === true ? <AbsencePeriods name="absencePeriods" /> : null
+          input.value === true ? (
+            <AbsencePeriods
+              name="absencePeriods"
+              onChange={absencePeriods => {
+                if (absencePeriods.length === 0) {
+                  form.change("hasAbsenceProlonge", false);
+                }
+              }}
+            />
+          ) : null
         }
       </Field>
-      <OnChange name="absencePeriods">
-        {absencePeriods => {
-          if (absencePeriods.length === 0) {
-            form.change("hasAbsenceProlonge", false);
-          }
-        }}
-      </OnChange>
     </Container>
   );
 }

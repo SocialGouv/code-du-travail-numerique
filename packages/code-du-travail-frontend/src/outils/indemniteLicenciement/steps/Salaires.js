@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { OnChange } from "react-final-form-listeners";
 import { Container, theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-
 import { Input } from "../stepStyles";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
@@ -14,7 +12,7 @@ import {
   TEMPS_PLEIN
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
-import { isNumber } from "../components/validators";
+import { isNumber } from "../validators";
 import { motifs } from "../components/AbsencePeriods";
 
 function StepSalaires({ form }) {
@@ -25,9 +23,7 @@ function StepSalaires({ form }) {
           name="hasTempsPartiel"
           label="Avez-vous alterné, au cours de votre contrat de travail des périodes
               de travail à temps plein et à temps partiel sur le même contrat&nbsp;?"
-        />
-        <OnChange name="hasTempsPartiel">
-          {hasTempsPartiel => {
+          onChange={hasTempsPartiel => {
             if (hasTempsPartiel) {
               form.batch(() => {
                 form.change("salairePeriods", [
@@ -42,7 +38,7 @@ function StepSalaires({ form }) {
               form.change("salairePeriods", []);
             }
           }}
-        </OnChange>
+        />
         <Field name="hasTempsPartiel">
           {({ input }) =>
             input.value === true ? (
@@ -50,20 +46,31 @@ function StepSalaires({ form }) {
                 <br />
                 <br />
                 <h2>Renseigner vos différentes périodes de travail</h2>
-                <SalaireTempsPartiel name="salairePeriods" />
-                <OnChange name="salairePeriods">
-                  {salairePeriods => {
+                <SalaireTempsPartiel
+                  name="salairePeriods"
+                  onChange={salairePeriods => {
                     if (salairePeriods.length === 0) {
                       form.change("hasTempsPartiel", false);
                     }
                   }}
-                </OnChange>
+                />
               </>
             ) : input.value === false ? (
               <>
                 <YesNoQuestion
                   name="hasSameSalaire"
                   label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
+                  onChange={hasSameSalaire => {
+                    if (hasSameSalaire) {
+                      form.change("salaires", []);
+                    } else {
+                      form.batch(() => {
+                        const { values } = form.getState();
+                        form.change("salaires", getSalairesPeriods(values));
+                        form.change("salaire", null);
+                      });
+                    }
+                  }}
                 />
                 <Field name="hasSameSalaire">
                   {({ input }) =>
@@ -98,19 +105,6 @@ function StepSalaires({ form }) {
                     ) : null
                   }
                 </Field>
-                <OnChange name="hasSameSalaire">
-                  {hasSameSalaire => {
-                    if (hasSameSalaire) {
-                      form.change("salaires", []);
-                    } else {
-                      form.batch(() => {
-                        const { values } = form.getState();
-                        form.change("salaires", getSalairesPeriods(values));
-                        form.change("salaire", null);
-                      });
-                    }
-                  }}
-                </OnChange>
               </>
             ) : null
           }
