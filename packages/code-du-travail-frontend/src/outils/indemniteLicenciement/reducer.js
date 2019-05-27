@@ -1,8 +1,8 @@
-import { StepInfo } from "./StepInfo";
-import { StepIndemnite } from "./StepIndemnite";
-import { StepAnciennete } from "./StepAnciennete";
-import { StepSalaires } from "./stepSalaire";
-import { StepPrimes } from "./stepPrimes";
+import { StepInfo } from "./steps/Info";
+import { StepIndemnite } from "./steps/Indemnite";
+import { StepAnciennete } from "./steps/Anciennete";
+import { StepSalaires } from "./steps/Salaires";
+import { StepPrimes } from "./steps/Primes";
 
 export function getInitialSteps() {
   return [

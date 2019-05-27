@@ -5,9 +5,9 @@ import { OnChange } from "react-final-form-listeners";
 import createDecorator from "final-form-calculate";
 import { isAfter, differenceInMonths, format } from "date-fns";
 
-import { YesNoQuestion } from "./components/YesNoQuestion";
-import { TextQuestion } from "./components/TextQuestion";
-import { AbsencePeriods, motifs } from "./components/AbsencePeriods";
+import { YesNoQuestion } from "../components/YesNoQuestion";
+import { TextQuestion } from "../components/TextQuestion";
+import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
 
 function validate({
   dateEntree,

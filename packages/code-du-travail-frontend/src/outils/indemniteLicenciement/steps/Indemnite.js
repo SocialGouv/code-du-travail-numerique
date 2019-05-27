@@ -3,10 +3,10 @@ import { Field } from "react-final-form";
 import { Button, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
-import { ErrorBoundary } from "../../common/ErrorBoundary";
+import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
-import { getIndemnite, getSalaireRef } from "./indemnite";
-import { branches } from "./branches";
+import { getIndemnite, getSalaireRef } from "../indemnite";
+import { branches } from "../branches";
 
 function validateCCn(idcc) {
   const selectedBranche = branches.find(branche => branche.value === idcc);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "@cdt/ui/";
-import { TypeContrat } from "./components/TypeContrat";
-import { YesNoQuestion } from "./components/YesNoQuestion";
+import { TypeContrat } from "../components/TypeContrat";
+import { YesNoQuestion } from "../components/YesNoQuestion";
 
 function validate(values) {
   const errors = {};

@@ -3,8 +3,8 @@ import { Field } from "react-final-form";
 import { Container } from "@cdt/ui";
 import { OnChange } from "react-final-form-listeners";
 
-import { YesNoQuestion } from "./components/YesNoQuestion";
-import { Primes } from "./components/Primes";
+import { YesNoQuestion } from "../components/YesNoQuestion";
+import { Primes } from "../components/Primes";
 
 function StepPrimes({ form }) {
   return (

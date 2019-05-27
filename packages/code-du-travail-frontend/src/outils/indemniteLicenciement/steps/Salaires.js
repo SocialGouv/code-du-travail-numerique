@@ -6,16 +6,16 @@ import { Container, theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 
-import { Input } from "./stepStyles";
-import { YesNoQuestion } from "./components/YesNoQuestion";
+import { Input } from "../stepStyles";
+import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
   SalaireTempsPartiel,
   TEMPS_PARTIEL,
   TEMPS_PLEIN
-} from "./components/SalaireTempsPartiel";
-import { SalaireTempsPlein } from "./components/SalaireTempsPlein";
-import { isNumber } from "./components/validators";
-import { motifs } from "./components/AbsencePeriods";
+} from "../components/SalaireTempsPartiel";
+import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
+import { isNumber } from "../components/validators";
+import { motifs } from "../components/AbsencePeriods";
 
 function StepSalaires({ form }) {
   return (
