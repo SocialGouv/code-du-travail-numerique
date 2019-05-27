@@ -37,7 +37,11 @@ function Wizard({
       setStepIndex(0);
       onSubmit(values);
     } else {
-      // updating initialValues so we can reset them once form is finished
+      /**
+       * we update initialValues so we can reset the property once form is finished
+       * if we don't update initialValues, initialValues will still equal to an empty object
+       * and updating to another empty object will not trigger form values udate
+       */
       setValues(values);
       nextStep();
       onUpdate && onUpdate(values);
@@ -66,7 +70,7 @@ function Wizard({
         }}
         onSubmit={handlePageSubmit}
       >
-        {({ handleSubmit, form, values }) => {
+        {({ handleSubmit, form, invalid }) => {
           return (
             <>
               <form onSubmit={handleSubmit}>
@@ -76,15 +80,14 @@ function Wizard({
                 <PrevNextBar
                   onPrev={prevStep}
                   nextVisible={nextVisible}
+                  disabled={invalid}
                   previousVisible={previousVisible}
                 />
               </form>
-              <pre>{JSON.stringify(values, 0, 2)}</pre>
             </>
           );
         }}
       </Form>
-      <pre>{JSON.stringify(initialValues, 0, 2)}</pre>
     </>
   );
 }
