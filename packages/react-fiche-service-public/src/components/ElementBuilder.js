@@ -78,6 +78,7 @@ export function ElementBuilder({ data, headingLevel }) {
       return <ANoter>{parseChildren(data.$, headingLevel)}</ANoter>;
     case "Chapitre":
     case "SousChapitre":
+      return parseChildren(data.$, headingLevel);
     case "MiseEnEvidence":
     case "Valeur":
       return <strong>{parseChildren(data.$, headingLevel)}</strong>;
