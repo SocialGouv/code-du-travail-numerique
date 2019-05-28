@@ -5,8 +5,26 @@ const urls = require("./ministere-travail-liste-fiches.json");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
+
+const formatAnchor = node => {
+  let href = node.getAttribute("href");
+  if (!href) return;
+  if (!href.match(/^https?:\/\//)) {
+    if (href.slice(0, 1) !== "/") {
+      href = "/" + href;
+    }
+    href = `https://travail-emploi.gouv.fr${href}`;
+    node.setAttribute("href", href);
+    node.setAttribute("target", "_blank");
+    node.setAttribute("rel", "nofollow, noopener");
+  }
+};
+
 function parseDom(dom, url) {
-  const description = $(dom.window.document, "meta[name=description]").getAttribute("content")
+  const description = $(
+    dom.window.document,
+    "meta[name=description]"
+  ).getAttribute("content");
   const summary = $$(dom.window.document, ".navigation-article li")
     .map(n => n.textContent.trim())
     .filter(t => t !== "L’INFO EN PLUS" && t !== "POUR ALLER PLUS LOIN");
@@ -18,36 +36,28 @@ function parseDom(dom, url) {
   // `articles` = textes de référence.
   const articles = $$(dom.window.document, "article.encarts__article li")
     .filter(item => $(item, "a") && $(item, "a").getAttribute("href"))
-    .map(n => ({
-      url: $(n, "a") && $(n, "a").getAttribute("href"),
-      text: n.textContent.trim()
-    }));
+    .map(node => {
+      formatAnchor(node);
+      return {
+        url: node.getAttribute("href"),
+        text: node.textContent.trim()
+      };
+    });
 
   const article = $(dom.window.document, ".main-article");
-  $$(article, "a").forEach(node => {
-    const href = node.getAttribute("href");
-
-    if (href) {
-      if (href.slice(0, 1) === "/") {
-        node.setAttribute(
-          "href",
-          `https://travail-emploi.gouv.fr${node.getAttribute("href")}`
-        );
-        node.setAttribute("target", "_blank");
-        node.setAttribute("rel", "nofollow, noopener");
-      }
-    }
-  });
+  $$(article, "a").forEach(formatAnchor);
 
   $$(article, "img")
     .filter(node => node.getAttribute("src").indexOf("data:image") === -1)
     .forEach(node => {
-      node.setAttribute(
-        "src",
-        `https://travail-emploi.gouv.fr/${node
-          .getAttribute("src")
-          .replace(/^\//, "")}`
-      );
+      let src = node.getAttribute("src");
+      if (!src.match(/^https?:\/\//)) {
+        if (src.slice(0, 1) !== "/") {
+          src = "/" + src;
+        }
+        src = `https://travail-emploi.gouv.fr${src}`;
+        node.setAttribute("src", src);
+      }
     });
 
   const dateRaw =
@@ -73,7 +83,7 @@ function parseDom(dom, url) {
   const [title] = $(dom.window.document, "title")
     .textContent.trim()
     .split(" - Ministère du Travail");
-  let result = {
+  const result = {
     description,
     ariane,
     tags,
@@ -91,7 +101,7 @@ function parseDom(dom, url) {
     .filter(el => el.getAttribute("id"))
     .forEach(function(el, index) {
       if (el.tagName === "H3") {
-        let subSection = {
+        const subSection = {
           title: el.textContent.trim(),
           text: "",
           html: "",
