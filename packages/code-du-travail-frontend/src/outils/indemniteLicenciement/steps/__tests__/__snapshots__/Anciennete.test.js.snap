@@ -16,25 +16,11 @@ exports[`<Anciennete /> should display error if anciennté < 12mois and licencie
 </div>
 `;
 
-exports[`<Anciennete /> should display error if dateEntre > dateSortie 1`] = `
-<div
-  class="alert "
->
-  La date de sortie doit se situer après le
-  <strong>
-     
-    02 April 2018
-  </strong>
-</div>
-`;
+exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] = `null`;
 
-exports[`<Anciennete /> should display error if dateNotif > dateSortie 1`] = `
-<div
-  class="alert "
->
-  La date de notification doit se situer avant la date de sortie
-</div>
-`;
+exports[`<Anciennete /> should display error if dateEntree after dateNotif 1`] = `null`;
+
+exports[`<Anciennete /> should display error if dateNotif after dateSortie 1`] = `null`;
 
 exports[`<Anciennete /> should render 1`] = `
 .c0 {
@@ -47,7 +33,7 @@ exports[`<Anciennete /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c4 {
   padding: 0;
   font-size: 1rem;
   text-align: center;
@@ -59,7 +45,7 @@ exports[`<Anciennete /> should render 1`] = `
   border-color: #c9d3df;
 }
 
-.c6 {
+.c7 {
   padding: 0;
   text-align: center;
   font-size: 1.15rem;
@@ -74,7 +60,7 @@ exports[`<Anciennete /> should render 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +86,7 @@ exports[`<Anciennete /> should render 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c4 {
+.c5 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
@@ -110,6 +96,18 @@ exports[`<Anciennete /> should render 1`] = `
 .c1 {
   font-size: 1.4rem;
   margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 1.25rem;
 }
 
@@ -135,54 +133,66 @@ exports[`<Anciennete /> should render 1`] = `
     >
       Quelle est votre date d’entrée dans l’entreprise ?
     </label>
-    <input
+    <div
       class="c3"
-      id="1"
-      name="dateEntree"
-      type="date"
-      value=""
-    />
+    >
+      <input
+        class="c4"
+        id="1"
+        name="dateEntree"
+        type="date"
+        value=""
+      />
+    </div>
     <label
       class="c2"
       for="2"
     >
       À quelle date votre licenciement vous a-t-il été notifié ?
     </label>
-    <input
+    <div
       class="c3"
-      id="2"
-      name="dateNotification"
-      type="date"
-      value=""
-    />
+    >
+      <input
+        class="c4"
+        id="2"
+        name="dateNotification"
+        type="date"
+        value=""
+      />
+    </div>
     <label
       class="c2"
       for="3"
     >
       Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis) ?
     </label>
-    <input
+    <div
       class="c3"
-      id="3"
-      name="dateSortie"
-      type="date"
-      value=""
-    />
+    >
+      <input
+        class="c4"
+        id="3"
+        name="dateSortie"
+        type="date"
+        value=""
+      />
+    </div>
     <h2
       class="c1"
     >
       Période d’absence prolongée (plus d’un mois)
     </h2>
     <p
-      class="c4"
+      class="c5"
     >
       Avez-vous eu des périodes d’absence de plus d’un mois au cours de votre contrat ?
     </p>
     <div
-      class="c5"
+      class="c6"
     >
       <label
-        class="c6"
+        class="c7"
       >
         <input
           name="hasAbsenceProlonge"
@@ -194,7 +204,7 @@ exports[`<Anciennete /> should render 1`] = `
         </span>
       </label>
       <label
-        class="c6"
+        class="c7"
       >
         <input
           name="hasAbsenceProlonge"

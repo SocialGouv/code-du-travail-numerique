@@ -23,7 +23,7 @@ function StepIndemnite({ form }) {
     hasTempsPartiel = false,
     hasSameSalaire = false,
     inaptitude = false,
-    salairesPeriods = [],
+    salairePeriods = [],
     salaires = [],
     primes = [],
     salaire,
@@ -35,11 +35,12 @@ function StepIndemnite({ form }) {
     hasTempsPartiel,
     hasSameSalaire,
     salaire,
-    salairesPeriods,
+    salairePeriods,
     salaires,
     anciennete,
     primes
   });
+
   const { indemnite, formula } = getIndemnite({
     salaireRef,
     anciennete,

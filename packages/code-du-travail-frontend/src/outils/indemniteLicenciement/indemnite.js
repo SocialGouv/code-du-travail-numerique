@@ -9,7 +9,7 @@ function getSalaireRef({
   hasSameSalaire = false,
   salaires = [],
   salaire,
-  salairesPeriods,
+  salairePeriods,
   primes = [],
   anciennete
 }) {
@@ -21,7 +21,7 @@ function getSalaireRef({
 
   // calcul du salaire de reference
   if (hasTempsPartiel) {
-    return salairesPeriods.reduce(
+    return salairePeriods.reduce(
       (salaire, period) =>
         salaire +
         (parseInt(period.salary, 10) * parseInt(period.duration, 10)) /
@@ -69,7 +69,7 @@ function getIndemnite({
         (2 / 15) * salaireRef * (anciennete - 10);
       formula = `(1/5  * ${round(salaireRef)} * 10) + (2/5 * ${round(
         salaireRef
-      )} * (${round(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete)} - 10))`;
     }
   } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {

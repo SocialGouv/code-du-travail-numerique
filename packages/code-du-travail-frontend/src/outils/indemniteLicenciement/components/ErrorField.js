@@ -16,10 +16,22 @@ function ErrorField({ name, immediate = false }) {
     />
   );
 }
-
 ErrorField.propTypes = {
   name: PropTypes.string.isRequired,
   immediate: PropTypes.bool
 };
 
-export { ErrorField };
+function ErrorComputedField({ name }) {
+  return (
+    <Field
+      name={name}
+      subscribe={{ error: true }}
+      render={({ meta: { error } }) => (error ? <Alert>{error}</Alert> : null)}
+    />
+  );
+}
+ErrorComputedField.propTypes = {
+  name: PropTypes.string.isRequired
+};
+
+export { ErrorField, ErrorComputedField };

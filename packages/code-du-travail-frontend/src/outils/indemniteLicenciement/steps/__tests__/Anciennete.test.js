@@ -21,48 +21,49 @@ describe("<Anciennete />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should display error if dateEntre > dateSortie", () => {
+  it("should display error if dateEntre after dateSortie", () => {
     const { container, getByLabelText } = renderForm({
-      dateEntree: "2018-04-02",
-      dateSortie: "2018-04-01"
+      dateEntree: "2018-04-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
-    //trigger validation
-    fireEvent.blur(dateSortie);
+    fireEvent.change(dateSortie, { target: { value: "2018-03-01" } });
     expect(container.querySelector(".alert")).toMatchSnapshot();
   });
 
-  it("should display error if dateNotif > dateSortie", () => {
+  it("should display error if dateEntree after dateNotif", () => {
     const { container, getByLabelText } = renderForm({
-      dateNotification: "2018-05-02",
+      dateEntrer: "2018-05-01"
+    });
+    const dateNotif = getByLabelText(/licenciement/i);
+    fireEvent.change(dateNotif, { target: { value: "2018-04-02" } });
+    expect(container.querySelector(".alert")).toMatchSnapshot();
+  });
+
+  it("should display error if dateNotif after dateSortie", () => {
+    const { container, getByLabelText } = renderForm({
       dateSortie: "2018-04-01"
     });
     const dateNotif = getByLabelText(/licenciement/i);
-    //trigger validation
-    fireEvent.blur(dateNotif);
+    fireEvent.change(dateNotif, { target: { value: "2018-05-02" } });
     expect(container.querySelector(".alert")).toMatchSnapshot();
   });
 
   it("should display error if anciennté < 8mois", () => {
     const { container, getByLabelText } = renderForm({
       dateEntree: "2018-04-02",
-      dateNotification: "2018-09-02",
-      dateSortie: "2018-12-31"
+      dateNotification: "2018-09-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
-    //trigger validation
-    fireEvent.blur(dateSortie);
+    fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
     expect(container.querySelector(".alert")).toMatchSnapshot();
   });
   it("should display error if anciennté < 12mois and licenciement in 2017", () => {
     const { container, getByLabelText } = renderForm({
       dateEntree: "2017-04-02",
-      dateNotification: "2017-09-02",
-      dateSortie: "2018-12-31"
+      dateNotification: "2017-09-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
-    //trigger validation
-    fireEvent.blur(dateSortie);
+    fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
     expect(container.querySelector(".alert")).toMatchSnapshot();
   });
 });

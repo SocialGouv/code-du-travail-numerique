@@ -127,7 +127,7 @@ const tests = [
     title: "2k, 15m, 2019-01-01, 10m tps plein, 5mois tps partiel",
     data: {
       hasTempsPartiel: true,
-      salairesPeriods: [
+      salairePeriods: [
         {
           type: "temps-plein",
           duration: 10,
@@ -159,7 +159,7 @@ const tests = [
     title: "2k, 15m, 2019-01-01, 10m tps plein, 5mois tps partiel, inaptitude",
     data: {
       hasTempsPartiel: true,
-      salairesPeriods: [
+      salairePeriods: [
         {
           type: "temps-plein",
           duration: 10,
@@ -176,6 +176,60 @@ const tests = [
       anciennete: 15 / 2
     },
     expected: 1041.6666666666665
+  },
+  {
+    title:
+      "2k, 10ans, 2019-01-01, 60m tps plein, 60mois tps partiel + congé parental",
+    data: {
+      contrat: "cdi",
+      inaptitude: false,
+      fauteGrave: false,
+      hasAbsenceProlonge: true,
+      dateEntree: "2008-01-01",
+      dateSortie: "2018-02-01",
+      dateNotification: "2017-11-01",
+      absencePeriods: [
+        {
+          type: "Congé parental d'éducation",
+          duration: 2
+        }
+      ],
+      anciennete: 10.07638888888889,
+      hasTempsPartiel: true,
+      salairePeriods: [
+        {
+          type: "Temps plein",
+          duration: "20",
+          salary: "2000"
+        },
+        {
+          type: "Temps partiel",
+          duration: "20",
+          salary: "1000"
+        },
+        {
+          type: "Temps plein",
+          duration: "20",
+          salary: "1600"
+        },
+        {
+          type: "Temps partiel",
+          salary: "1000",
+          duration: "20"
+        },
+        {
+          type: "Temps plein",
+          duration: "20",
+          salary: "2000"
+        },
+        {
+          type: "Temps partiel",
+          duration: "20",
+          salary: "1000"
+        }
+      ]
+    },
+    expected: 3592.38
   }
 ];
 describe("getIndemnite", () => {

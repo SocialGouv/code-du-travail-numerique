@@ -16,7 +16,7 @@ function Result_Chimie({ form }) {
     hasTempsPartiel = false,
     hasSameSalaire = false,
     inaptitude = false,
-    salairesPeriods = [],
+    salairePeriods = [],
     salaires = [],
     primes = [],
     salaire,
@@ -32,7 +32,7 @@ function Result_Chimie({ form }) {
     hasTempsPartiel,
     hasSameSalaire,
     salaire,
-    salairesPeriods,
+    salairePeriods,
     salaires,
     anciennete,
     primes

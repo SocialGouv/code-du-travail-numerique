@@ -9,6 +9,7 @@ import { YesNoQuestion } from "../components/YesNoQuestion";
 import { TextQuestion } from "../components/TextQuestion";
 import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
 import { SectionTitle } from "../stepStyles";
+import { ErrorComputedField } from "../components/ErrorField";
 
 function validate({
   dateEntree,
@@ -44,7 +45,7 @@ function validate({
     isAfter(new Date("2017-09-27"), dNotification) &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 12
   ) {
-    errors.dateSortie =
+    errors.anciennete =
       "L’indemnité de licenciement est dûe au-delà de 12 mois d’ancienneté";
   }
   if (
@@ -53,12 +54,15 @@ function validate({
     isAfter(dNotification, new Date("2017-09-27")) &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 8
   ) {
-    errors.dateSortie =
+    errors.anciennete =
       "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
   }
 
   if (dateNotification && dateSortie && isAfter(dNotification, dSortie)) {
     errors.dateNotification = `La date de notification doit se situer avant la date de sortie`;
+  }
+  if (dateNotification && dateEntree && isAfter(dateEntree, dNotification)) {
+    errors.dateNotification = `La date de notification doit se situer après la date d’entrée`;
   }
   return errors;
 }
@@ -82,6 +86,7 @@ function StepAnciennete({ form }) {
         label="Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis)&nbsp;?"
         inputType="date"
       />
+      <ErrorComputedField name="anciennete" />
       <SectionTitle>Période d’absence prolongée (plus d’un mois)</SectionTitle>
       <YesNoQuestion
         name="hasAbsenceProlonge"
@@ -146,5 +151,4 @@ StepAnciennete.decorator = createDecorator({
 StepAnciennete.propTypes = {
   form: PropTypes.object.isRequired
 };
-
 export { StepAnciennete };
