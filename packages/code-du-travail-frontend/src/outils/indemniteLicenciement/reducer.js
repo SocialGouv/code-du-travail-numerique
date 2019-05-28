@@ -32,7 +32,7 @@ export function getInitialSteps() {
 export function StepReducer(steps, action) {
   switch (action.type) {
     case "reset":
-      return getInitialSteps({ ...action.payload });
+      return action.payload;
 
     case "add_primes": {
       const salaireIndex = steps.findIndex(step => step.name === "salaires");

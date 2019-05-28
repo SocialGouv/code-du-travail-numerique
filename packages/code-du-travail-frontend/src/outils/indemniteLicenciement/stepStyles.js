@@ -38,8 +38,18 @@ export const Header = styled.div`
   align-items: center;
 `;
 
-export const QuestionLabel = styled.p`
+export const QuestionLabel = styled.label`
   font-size: 1.1rem;
+  display: block;
+  margin-top: ${spacing.interComponent};
+  margin-bottom: ${spacing.small};
+`;
+
+export const QuestionParagraphe = styled.p`
+  font-size: 1.1rem;
+  display: block;
+  margin-top: ${spacing.interComponent};
+  margin-bottom: ${spacing.small};
 `;
 
 export const SectionTitle = styled.h2`

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { Container } from "@cdt/ui";
 
@@ -38,5 +39,8 @@ function StepPrimes({ form }) {
     </Container>
   );
 }
+StepPrimes.propTypes = {
+  form: PropTypes.object.isRequired
+};
 
 export { StepPrimes };

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Container } from "@cdt/ui";
 import { Field } from "react-final-form";
 import createDecorator from "final-form-calculate";
@@ -23,7 +24,7 @@ function validate({
   if (dateEntree && dateSortie && isAfter(dEntree, dSortie)) {
     errors.dateSortie = (
       <>
-        La date de sortie doit se situer apres le
+        La date de sortie doit se situer après le
         <strong> {format(dEntree, "DD MMMM YYYY")}</strong>
       </>
     );
@@ -40,20 +41,20 @@ function validate({
   if (
     dateEntree &&
     dateSortie &&
-    isAfter(new Date("2017-09-27"), dateSortie) &&
+    isAfter(new Date("2017-09-27"), dNotification) &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 12
   ) {
     errors.dateSortie =
-      "L’indemnité de licenciement est dûe au-delà de 12 mois d'ancienneté";
+      "L’indemnité de licenciement est dûe au-delà de 12 mois d’ancienneté";
   }
   if (
     dateEntree &&
     dateSortie &&
-    isAfter(dateSortie, new Date("2017-09-27")) &&
+    isAfter(dNotification, new Date("2017-09-27")) &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 8
   ) {
     errors.dateSortie =
-      "L’indemnité de licenciement est dûe au-delà de 8 mois d'ancienneté";
+      "L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté";
   }
 
   if (dateNotification && dateSortie && isAfter(dNotification, dSortie)) {
@@ -68,7 +69,7 @@ function StepAnciennete({ form }) {
       <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
       <TextQuestion
         name="dateEntree"
-        label="Quelle est votre date d'entrée dans l'entreprise&nbsp;?"
+        label="Quelle est votre date d’entrée dans l’entreprise&nbsp;?"
         inputType="date"
       />
       <TextQuestion
@@ -78,13 +79,13 @@ function StepAnciennete({ form }) {
       />
       <TextQuestion
         name="dateSortie"
-        label="Quelle est votre date de sortie de l'entreprise (incluant la durée de votre préavis)&nbsp;?"
+        label="Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis)&nbsp;?"
         inputType="date"
       />
-      <SectionTitle>Période d'absence prolongée (plus d'un mois)</SectionTitle>
+      <SectionTitle>Période d’absence prolongée (plus d’un mois)</SectionTitle>
       <YesNoQuestion
         name="hasAbsenceProlonge"
-        label="Avez-vous eu des périodes d'absence de plus d'un mois au cours
+        label="Avez-vous eu des périodes d’absence de plus d’un mois au cours
         de votre contrat&nbsp;?"
         onChange={hasAbsenceProlonge => {
           hasAbsenceProlonge
@@ -129,7 +130,7 @@ StepAnciennete.decorator = createDecorator({
       const dEntree = new Date(dateEntree);
       const dSortie = new Date(dateSortie);
       // on calcule totalAbsence en mois par année (ex: 12mois = 1)
-      // pour pouvoir ensuite le retranché de l'anciennété qui est aussi en mois par année
+      // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
       const totalAbsence =
         (absencePeriods || [])
           .filter(period => Boolean(period.duration))
@@ -141,5 +142,9 @@ StepAnciennete.decorator = createDecorator({
     }
   }
 });
+
+StepAnciennete.propTypes = {
+  form: PropTypes.object.isRequired
+};
 
 export { StepAnciennete };

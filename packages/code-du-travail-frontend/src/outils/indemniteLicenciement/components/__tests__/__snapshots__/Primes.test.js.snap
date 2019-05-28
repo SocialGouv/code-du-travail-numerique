@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Primes /> should add a prime 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c1 {
+  display: inline-block;
+  position: relative;
+}
+
+.c3 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.c4:focus,
+.c4:hover,
+.c4:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <p>
+    Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
+  </p>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <input
+        class="c2"
+        name="primes[0].prime"
+        size="10"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="c3"
+      >
+        €
+      </span>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c4"
+      type="button"
+    >
+      Supprimer
+    </button>
+  </div>
+  <button
+    aria-pressed="false"
+    class="c5"
+    type="button"
+  >
+    Ajouter une prime
+  </button>
+</div>
+`;
+
+exports[`<Primes /> should delete a primes 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c0:focus,
+.c0:hover,
+.c0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <p>
+    Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
+  </p>
+  <button
+    aria-pressed="false"
+    class="c0"
+    type="button"
+  >
+    Ajouter une prime
+  </button>
+</div>
+`;
+
+exports[`<Primes /> should render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c1 {
+  display: inline-block;
+  position: relative;
+}
+
+.c3 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.c4:focus,
+.c4:hover,
+.c4:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <p>
+    Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
+  </p>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <input
+        class="c2"
+        name="primes[0].prime"
+        size="10"
+        value="300"
+      />
+      <span
+        aria-hidden="true"
+        class="c3"
+      >
+        €
+      </span>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c4"
+      type="button"
+    >
+      Supprimer
+    </button>
+  </div>
+  <button
+    aria-pressed="false"
+    class="c5"
+    type="button"
+  >
+    Ajouter une prime
+  </button>
+</div>
+`;

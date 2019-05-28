@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
@@ -57,7 +58,9 @@ function Primes({ name, onChange }) {
     </FieldArray>
   );
 }
-
+Primes.propTypes = {
+  name: PropTypes.string.isRequired
+};
 export { Primes };
 
 const { colors, fonts, spacing } = theme;

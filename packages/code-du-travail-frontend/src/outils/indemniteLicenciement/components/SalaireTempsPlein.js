@@ -27,7 +27,11 @@ function SalaireTempsPlein({ name }) {
             <tbody>
               {fields.map((name, index) => (
                 <tr key={name}>
-                  <td>{fields.value[index].label}</td>
+                  <td>
+                    <label htmlFor={`salary${index}`}>
+                      {fields.value[index].label}
+                    </label>
+                  </td>
                   <td>
                     <Field
                       name={`${name}.salary`}
@@ -38,9 +42,9 @@ function SalaireTempsPlein({ name }) {
                         fields.value.forEach((field, fieldIndex) => {
                           if (
                             fieldIndex > index &&
-                            fields.value[fieldIndex].salaire === null
+                            fields.value[fieldIndex].salary === null
                           ) {
-                            fields.value[fieldIndex].salaire =
+                            fields.value[fieldIndex].salary =
                               parseFloat(value) || null;
                           }
                         });
@@ -56,6 +60,7 @@ function SalaireTempsPlein({ name }) {
                             <NumberInput
                               {...input}
                               size="10"
+                              id={`salary${index}`}
                               invalid={touched && invalid}
                             />
                             <Currency aria-hidden="true">€</Currency>

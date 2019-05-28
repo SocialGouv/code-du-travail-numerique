@@ -2,7 +2,7 @@ function required(value) {
   return value ? undefined : "Ce champs est requis";
 }
 function requiredBoolean(value) {
-  return value === false || value === true ? undefined : "Ce champs est requis";
+  return value === false || value === true ? undefined : "Ce champ est requis";
 }
 
 function isNumber(value) {

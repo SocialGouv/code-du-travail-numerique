@@ -60,15 +60,15 @@ function Result_Chimie({ form }) {
     age,
     groupe
   });
+
   return (
     <Container>
       <h2>Indemnité Conventionnelle</h2>
       {indemniteConventionnelle > indemnite ? (
         <p>
-          Le montant de l’indemnité conventionnelle est inférieur à celui de
+          Le montant de l’indemnité conventionnelle est supérieur à celui de
           l’indemnité légale. <br /> Le montant de votre indémnité de
-          licenciement sera de <strong>{indemniteConventionnelle} €</strong>{" "}
-          (sur la base de l’indemnité légale)
+          licenciement sera de <strong>{indemniteConventionnelle} €</strong>
         </p>
       ) : (
         <p>

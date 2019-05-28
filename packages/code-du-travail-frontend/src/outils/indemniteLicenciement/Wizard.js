@@ -11,7 +11,7 @@ function Wizard({
   steps,
   onSubmit,
   onUpdate,
-  rules
+  rules = null
 }) {
   const [initialValues, setValues] = useState(initialData);
   const [stepIndex, setStepIndex] = useState(initialStepIndex);
@@ -75,7 +75,7 @@ function Wizard({
             <>
               <form onSubmit={handleSubmit}>
                 {rules}
-                <StepItems page={stepIndex} items={stepItems} />
+                <StepItems activeIndex={stepIndex} items={stepItems} />
                 <Step form={form} />
                 <PrevNextBar
                   onPrev={prevStep}

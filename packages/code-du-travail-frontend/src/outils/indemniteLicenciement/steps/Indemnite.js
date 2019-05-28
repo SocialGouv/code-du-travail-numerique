@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { Button, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
@@ -105,8 +106,11 @@ function StepIndemnite({ form }) {
     </Container>
   );
 }
-
+StepIndemnite.propTypes = {
+  form: PropTypes.object.isRequired
+};
 export { StepIndemnite };
+
 const { spacing } = theme;
 const SelectWrapper = styled.label`
   display: flex;

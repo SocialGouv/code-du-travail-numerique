@@ -5,40 +5,27 @@ import { theme } from "@cdt/ui";
  * For now, only <Step /> are used but stepItems will
  * allows to navigate between form's steps
  */
-export function StepItems({ page, items, onNavigate = () => {} }) {
+export function StepItems({ activeIndex = 0, items = [] }) {
   return (
     <StepItemsContainer>
-      {items.map((item, index) =>
-        item.isValid ? (
-          <ButtonStep
-            key={item.name}
-            index={index}
-            step={item}
-            onClick={() => onNavigate(index)}
-          />
-        ) : (
-          <Step key={item.name} step={item} index={index} page={page} />
-        )
-      )}
+      {items.map((item, index) => (
+        <Step
+          key={item.name}
+          label={item.label}
+          index={index}
+          activeIndex={activeIndex}
+        />
+      ))}
     </StepItemsContainer>
   );
 }
 
-function ButtonStep({ step, onClick, index, ...props }) {
+function Step({ label, index, activeIndex, ...props }) {
+  const isActive = activeIndex === index;
   return (
-    <ClickableStep index={index} onClick={() => onClick(step.id)} {...props}>
-      <IndexCircle>{index + 1}</IndexCircle>
-      {step.label}
-    </ClickableStep>
-  );
-}
-
-function Step({ step, index, page, ...props }) {
-  const isCurrentPage = page === index;
-  return (
-    <StepBase index={index} isCurrentPage={isCurrentPage} {...props}>
-      <IndexCircle isCurrentPage={isCurrentPage}>{index + 1}</IndexCircle>
-      {step.label}
+    <StepBase index={index} isActive={isActive} {...props}>
+      <IndexCircle isActive={isActive}>{index + 1}</IndexCircle>
+      {label}
     </StepBase>
   );
 }
@@ -62,13 +49,7 @@ const StepBase = styled.span`
   font-size: ${fonts.sizeSmall};
   font-weight: 600;
   line-height: 1;
-  color: ${props => (props.isCurrentPage ? colors.blue : colors.grey)};
-`;
-
-const ClickableStep = styled(StepBase).attrs(() => ({ as: "button" }))`
-  appearance: none;
-  cursor: pointer;
-  border: none;
+  color: ${props => (props.isActive ? colors.blue : colors.grey)};
 `;
 
 const IndexCircle = styled.span`
@@ -82,6 +63,5 @@ const IndexCircle = styled.span`
   margin: ${spacing.xsmall} ${spacing.small};
   margin-left: 0;
   color: ${colors.white};
-  background-color: ${props =>
-    props.isCurrentPage ? colors.blue : colors.grey};
+  background-color: ${props => (props.isActive ? colors.blue : colors.grey)};
 `;

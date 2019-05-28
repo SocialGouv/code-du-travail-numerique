@@ -1,13 +1,15 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { ErrorField } from "./ErrorField";
-import { Label, RadioContainer, QuestionLabel } from "../stepStyles";
+import { Label, RadioContainer, QuestionParagraphe } from "../stepStyles";
 import { required } from "../validators";
 
 function TypeContrat() {
   return (
     <>
-      <QuestionLabel>Quel est votre type de contrat&nbsp;?</QuestionLabel>
+      <QuestionParagraphe>
+        Quel est votre type de contrat&nbsp;?
+      </QuestionParagraphe>
       <RadioContainer>
         <Label>
           <Field
@@ -30,7 +32,7 @@ function TypeContrat() {
           <span>Contrat à durée indeterminé (CDI)</span>
         </Label>
       </RadioContainer>
-      <ErrorField name="contrat" />
+      <ErrorField name="contrat" immediate />
     </>
   );
 }

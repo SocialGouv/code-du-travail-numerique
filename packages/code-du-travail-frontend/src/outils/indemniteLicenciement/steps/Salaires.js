@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { Container, theme } from "@cdt/ui";
@@ -134,11 +135,16 @@ function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
       label: format(subMonths(dSortie, index), "MMMM YYYY", {
         locale: frLocale
       }),
-      salaire: null
+      salary: null
     };
   });
 }
-export { StepSalaires };
+
+StepSalaires.propTypes = {
+  form: PropTypes.object.isRequired
+};
+
+export { StepSalaires, getSalairesPeriods };
 
 const { colors, fonts, spacing } = theme;
 

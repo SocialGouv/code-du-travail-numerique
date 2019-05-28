@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
+.c0 {
+  width: 100%;
+}
+
+.c0 tr > td:nth-child(2) {
+  text-align: left;
+  width: 70%;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c1 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c3 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div>
+  <table
+    class="c0"
+  >
+    <caption>
+      Salaire mensuel brut (prendre en compte les primes et avantages en natures)
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Mois
+        </th>
+        <th>
+          Salaire
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label
+            for="salary0"
+          >
+            janvier
+          </label>
+        </td>
+        <td>
+          <div
+            class="c1"
+          >
+            <input
+              class="c2"
+              id="salary0"
+              name="periods[0].salary"
+              size="10"
+              value="2000"
+            />
+            <span
+              aria-hidden="true"
+              class="c3"
+            >
+              €
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            for="salary1"
+          >
+            février
+          </label>
+        </td>
+        <td>
+          <div
+            class="c1"
+          >
+            <input
+              class="c2"
+              id="salary1"
+              name="periods[1].salary"
+              size="10"
+              value="2000"
+            />
+            <span
+              aria-hidden="true"
+              class="c3"
+            >
+              €
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<SalaireTempsPlein /> should render 1`] = `
+.c0 {
+  width: 100%;
+}
+
+.c0 tr > td:nth-child(2) {
+  text-align: left;
+  width: 70%;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c1 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c3 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div>
+  <table
+    class="c0"
+  >
+    <caption>
+      Salaire mensuel brut (prendre en compte les primes et avantages en natures)
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Mois
+        </th>
+        <th>
+          Salaire
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <label
+            for="salary0"
+          >
+            janvier
+          </label>
+        </td>
+        <td>
+          <div
+            class="c1"
+          >
+            <input
+              class="c2"
+              id="salary0"
+              name="periods[0].salary"
+              size="10"
+              value="2000"
+            />
+            <span
+              aria-hidden="true"
+              class="c3"
+            >
+              €
+            </span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label
+            for="salary1"
+          >
+            février
+          </label>
+        </td>
+        <td>
+          <div
+            class="c1"
+          >
+            <input
+              class="c2"
+              id="salary1"
+              name="periods[1].salary"
+              size="10"
+              value="1000"
+            />
+            <span
+              aria-hidden="true"
+              class="c3"
+            >
+              €
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIndemnite /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.24rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h2>
+      Indemnité légale
+    </h2>
+    <p>
+      Le code du travail prévoit un montant minimum de
+       
+      <strong>
+        1250
+         €
+      </strong>
+      pour votre indemnité de licenciement.
+    </p>
+    <br />
+    <details>
+      <summary>
+        Voir le detail du calcul
+      </summary>
+      <div
+        id="react-mathjax-preview"
+      >
+        <div
+          id="react-mathjax-preview-result"
+        >
+          \`(1/4 * 2000 * 2.5) / 12\`
+        </div>
+      </div>
+    </details>
+    <br />
+    <br />
+    <h2>
+      Votre convention collective peut prévoir un montant plus important
+    </h2>
+    <p>
+      Selon la convention collective dont vous dépendez, le montant minimum de votre indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
+    </p>
+    <label
+      class="c1"
+    >
+      <label
+        class="c2"
+        for="ccn"
+      >
+        Renseignez votre convention collective pour en savoir plus:
+      </label>
+      <select
+        class="c3"
+        id="ccn"
+        name="branche"
+      >
+        <option
+          disabled=""
+          value=""
+        >
+          ex: Industries chimique
+        </option>
+        <option
+          value="0044"
+        >
+          Convention collective nationale des industries chimiques et connexes
+        </option>
+      </select>
+      
+    </label>
+  </div>
+</div>
+`;

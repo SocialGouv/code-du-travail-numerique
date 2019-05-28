@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
@@ -73,7 +74,9 @@ function EchelonChimie({ name }) {
     </>
   );
 }
-
+EchelonChimie.propTypes = {
+  name: PropTypes.string.isRequired
+};
 export { EchelonChimie };
 
 const Select = styled.select`

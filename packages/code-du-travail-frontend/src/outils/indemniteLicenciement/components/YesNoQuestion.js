@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import { Alert } from "@cdt/ui";
-import { Label, RadioContainer, QuestionLabel } from "../stepStyles";
+import { Label, RadioContainer, QuestionParagraphe } from "../stepStyles";
 import { requiredBoolean } from "../validators";
 
 function YesNoQuestion({ name, label, onChange }) {
   return (
     <>
-      <QuestionLabel>{label}</QuestionLabel>
+      <QuestionParagraphe>{label}</QuestionParagraphe>
       <RadioContainer>
         <Label>
           <Field
@@ -36,9 +36,11 @@ function YesNoQuestion({ name, label, onChange }) {
       </RadioContainer>
       <Field
         name={name}
-        subscribe={{ error: true, visited: true }}
-        render={({ meta: { visited, error } }) =>
-          error && visited ? <Alert>{error}</Alert> : null
+        subscribe={{ error: true, visited: true, touched: true }}
+        render={({ meta: { visited, touched, error } }) =>
+          (error && visited) || (error && touched) ? (
+            <Alert>{error}</Alert>
+          ) : null
         }
       />
       {onChange && (

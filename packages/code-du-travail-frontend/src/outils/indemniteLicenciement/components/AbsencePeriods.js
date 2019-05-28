@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
@@ -78,6 +79,10 @@ function AbsencePeriods({ name, onChange }) {
     </FieldArray>
   );
 }
+
+AbsencePeriods.propTypes = {
+  name: PropTypes.string.isRequired
+};
 export { AbsencePeriods };
 const { colors, fonts, spacing } = theme;
 

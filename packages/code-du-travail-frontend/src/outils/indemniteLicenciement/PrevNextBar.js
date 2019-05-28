@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Button, theme } from "@cdt/ui";
 
@@ -18,6 +19,18 @@ function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
     </ButtonBar>
   );
 }
+PrevNextBar.propTypes = {
+  onPrev: PropTypes.func,
+  disabled: PropTypes.bool,
+  nextVisible: PropTypes.bool,
+  previousVisible: PropTypes.bool
+};
+PrevNextBar.defaultProps = {
+  onPrev: () => {},
+  disabled: false,
+  nextVisible: true,
+  previousVisible: true
+};
 
 export { PrevNextBar };
 

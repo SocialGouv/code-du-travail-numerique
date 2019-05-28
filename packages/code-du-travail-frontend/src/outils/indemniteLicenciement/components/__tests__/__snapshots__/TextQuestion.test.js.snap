@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextQuestion /> should render 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: NaNem;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+}
+
+.c0 {
+  font-size: 1.1rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <label
+    class="c0"
+    for="1"
+  >
+    lorem ipsum
+  </label>
+  <input
+    class="c1"
+    id="1"
+    name="test"
+    type="text"
+    value="hello"
+  />
+</div>
+`;
+
+exports[`<TextQuestion /> should render error 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: NaNem;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+}
+
+.c0 {
+  font-size: 1.1rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <label
+    class="c0"
+    for="2"
+  >
+    lorem ipsum
+  </label>
+  <input
+    class="c1"
+    id="2"
+    name="test"
+    type="text"
+    value=""
+  />
+</div>
+`;
