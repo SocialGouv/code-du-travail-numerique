@@ -123,5 +123,8 @@ export const motifs = [
   { label: "Congé pour création d'entreprise", value: 1.0 },
   { label: "Congé de solidarité familiale", value: 1.0 },
   { label: "Congé de solidarité internationale", value: 1.0 },
-  { label: "Congé parental d'éducation", value: 0.5 }
+  { label: "Congé parental d'éducation", value: 0.5 },
+  { label: "Congé de proche aidant", value: 1.0 },
+  { label: "Congés sans solde", value: 1.0 },
+  { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 }
 ];

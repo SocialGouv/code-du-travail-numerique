@@ -7,12 +7,7 @@ import {
   getSalaireRef as getSalaireRefConventionnel
 } from "./0044_indemnite";
 import { getIndemnite, getSalaireRef } from "../indemnite";
-import {
-  SectionTitle,
-  Highlight,
-  ResultWrapper,
-  SmallText
-} from "../stepStyles";
+import { SectionTitle, Highlight, SmallText } from "../stepStyles";
 
 function Result_Chimie({ form }) {
   const state = form.getState();

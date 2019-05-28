@@ -8,7 +8,7 @@ import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 import { getIndemnite, getSalaireRef } from "../indemnite";
 import { branches } from "../branches";
-import { Label, SectionTitle, Highlight, ResultWrapper } from "../stepStyles";
+import { Label, SectionTitle, Highlight } from "../stepStyles";
 
 function validateCCn(idcc) {
   const selectedBranche = branches.find(branche => branche.value === idcc);

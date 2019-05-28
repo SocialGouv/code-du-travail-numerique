@@ -166,6 +166,15 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
         <option>
           Congé parental d'éducation
         </option>
+        <option>
+          Congé de proche aidant
+        </option>
+        <option>
+          Congés sans solde
+        </option>
+        <option>
+          Arrêt maladie lié à un accident de trajet
+        </option>
       </select>
     </div>
     <div
@@ -454,6 +463,15 @@ exports[`<AbsencePeriods /> should render 1`] = `
         </option>
         <option>
           Congé parental d'éducation
+        </option>
+        <option>
+          Congé de proche aidant
+        </option>
+        <option>
+          Congés sans solde
+        </option>
+        <option>
+          Arrêt maladie lié à un accident de trajet
         </option>
       </select>
     </div>
