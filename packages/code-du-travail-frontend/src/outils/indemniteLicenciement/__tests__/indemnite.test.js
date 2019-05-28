@@ -181,9 +181,7 @@ const tests = [
 describe("getIndemnite", () => {
   tests.forEach(test => {
     it(`${test.title} should return ${test.expected}`, () => {
-      const salaireRef = getSalaireRef({
-        ...test.data
-      });
+      const salaireRef = getSalaireRef(test.data);
       const res = getIndemnite({ salaireRef, ...test.data });
       expect(res.indemnite).toEqual(round(test.expected));
     });
