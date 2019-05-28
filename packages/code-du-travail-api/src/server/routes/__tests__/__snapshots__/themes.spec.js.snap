@@ -23,9 +23,9 @@ Object {
     },
     Object {
       "id": 38,
-      "label": "Fin d'un CDD / CTT",
+      "label": "Fin d'un CDD - CTT",
       "parent": "7-depart-de-lentreprise",
-      "slug": "38-fin-dun-cdd-/-ctt",
+      "slug": "38-fin-dun-cdd-ctt",
     },
     Object {
       "id": 39,
