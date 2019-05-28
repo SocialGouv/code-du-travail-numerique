@@ -4,7 +4,7 @@ exports[`<EchelonChimie /> should render 1`] = `
 .c0 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -164,7 +164,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
 .c0 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;

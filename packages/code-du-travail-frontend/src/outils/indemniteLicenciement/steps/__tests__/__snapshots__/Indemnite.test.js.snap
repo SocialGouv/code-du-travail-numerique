@@ -11,10 +11,10 @@ exports[`<StepIndemnite /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c2 {
+.c4 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -27,6 +27,18 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 .c1 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,7 +52,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c5 {
   margin-right: 1.25rem;
   -webkit-flex: 1 1 70%;
   -ms-flex: 1 1 70%;
@@ -59,17 +71,21 @@ exports[`<StepIndemnite /> should render 1`] = `
   <div
     class="c0"
   >
-    <h2>
+    <h2
+      class="c1"
+    >
       Indemnité légale
     </h2>
     <p>
       Le code du travail prévoit un montant minimum de
        
-      <strong>
+      <strong
+        class="c2"
+      >
         1250
-         €
+         €
       </strong>
-      pour votre indemnité de licenciement.
+       pour votre indemnité de licenciement.
     </p>
     <br />
     <details>
@@ -88,23 +104,25 @@ exports[`<StepIndemnite /> should render 1`] = `
     </details>
     <br />
     <br />
-    <h2>
+    <h2
+      class="c1"
+    >
       Votre convention collective peut prévoir un montant plus important
     </h2>
     <p>
       Selon la convention collective dont vous dépendez, le montant minimum de votre indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
     </p>
     <label
-      class="c1"
+      class="c3"
     >
       <label
-        class="c2"
+        class="c4"
         for="ccn"
       >
-        Renseignez votre convention collective pour en savoir plus:
+        Sélectionnez votre convention collective pour en savoir plus :
       </label>
       <select
-        class="c3"
+        class="c5"
         id="ccn"
         name="branche"
       >

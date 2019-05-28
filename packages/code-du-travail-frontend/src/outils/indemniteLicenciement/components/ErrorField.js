@@ -9,7 +9,9 @@ function ErrorField({ name, immediate = false }) {
       name={name}
       subscribe={{ error: true, touched: true, visited: immediate }}
       render={({ meta: { touched, error, visited } }) =>
-        (error && touched) || (error && visited) ? <Alert>{error}</Alert> : null
+        (error && touched) || (error && visited && immediate) ? (
+          <Alert>{error}</Alert>
+        ) : null
       }
     />
   );

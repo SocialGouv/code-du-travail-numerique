@@ -4,7 +4,7 @@ exports[`<YesNoQuestion /> should render 1`] = `
 .c2 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -32,10 +32,11 @@ exports[`<YesNoQuestion /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 1.25rem;
 }
 
 .c0 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;

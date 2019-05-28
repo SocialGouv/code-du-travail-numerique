@@ -23,7 +23,7 @@ function StepSalaires({ form }) {
         <YesNoQuestion
           name="hasTempsPartiel"
           label="Avez-vous alterné, au cours de votre contrat de travail des périodes
-              de travail à temps plein et à temps partiel sur le même contrat&nbsp;?"
+              de travail à temps plein et à temps partiel&nbsp;?"
           onChange={hasTempsPartiel => {
             if (hasTempsPartiel) {
               form.batch(() => {
@@ -84,7 +84,7 @@ function StepSalaires({ form }) {
                           <>
                             <p>
                               Salaire mensuel brut (prendre en compte les primes
-                              et avantages en natures)
+                              et avantages en nature)
                             </p>
                             <CurrencyWrapper>
                               <NumberInput

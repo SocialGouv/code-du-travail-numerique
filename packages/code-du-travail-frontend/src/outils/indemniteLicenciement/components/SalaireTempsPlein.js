@@ -16,12 +16,12 @@ function SalaireTempsPlein({ name }) {
           <Table>
             <caption>
               Salaire mensuel brut (prendre en compte les primes et avantages en
-              natures)
+              nature)
             </caption>
             <thead>
               <tr>
                 <th>Mois</th>
-                <th>Salaire</th>
+                <th>Salaire mensuel brut</th>
               </tr>
             </thead>
             <tbody>

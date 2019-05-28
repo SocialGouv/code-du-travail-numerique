@@ -1,3 +1,4 @@
+import { round } from "../math";
 /**
  * calcul de l'indemnite de licenciement conventionnelle
  * des industries chimiques et connexes
@@ -179,7 +180,7 @@ export function getIndemnite({
   }
 
   return {
-    indemniteConventionnelle,
+    indemniteConventionnelle: round(indemniteConventionnelle),
     formula
   };
 }

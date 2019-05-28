@@ -68,6 +68,7 @@ const { colors, fonts, spacing } = theme;
 const Row = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   margin-bottom: ${spacing.tiny};
 `;
 
@@ -79,6 +80,7 @@ const NumberInput = styled(Input)`
 const CurrencyWrapper = styled.div`
   display: inline-block;
   position: relative;
+  margin-right: ${spacing.interComponent};
 `;
 
 const Currency = styled.span`

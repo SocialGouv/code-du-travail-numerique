@@ -45,7 +45,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
     class="c0"
   >
     <caption>
-      Salaire mensuel brut (prendre en compte les primes et avantages en natures)
+      Salaire mensuel brut (prendre en compte les primes et avantages en nature)
     </caption>
     <thead>
       <tr>
@@ -53,7 +53,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
           Mois
         </th>
         <th>
-          Salaire
+          Salaire mensuel brut
         </th>
       </tr>
     </thead>
@@ -164,7 +164,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
     class="c0"
   >
     <caption>
-      Salaire mensuel brut (prendre en compte les primes et avantages en natures)
+      Salaire mensuel brut (prendre en compte les primes et avantages en nature)
     </caption>
     <thead>
       <tr>
@@ -172,7 +172,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
           Mois
         </th>
         <th>
-          Salaire
+          Salaire mensuel brut
         </th>
       </tr>
     </thead>

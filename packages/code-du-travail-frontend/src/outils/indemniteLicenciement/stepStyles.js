@@ -19,7 +19,7 @@ export const Input = styled.input`
 export const Label = styled.label`
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: flex;
   align-items: center;
@@ -30,6 +30,7 @@ export const RadioContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: ${props => (props.direction === "row" ? "row" : "column")};
+  margin-bottom: ${spacing.interComponent};
 `;
 
 export const Header = styled.div`
@@ -39,14 +40,14 @@ export const Header = styled.div`
 `;
 
 export const QuestionLabel = styled.label`
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: ${spacing.interComponent};
   margin-bottom: ${spacing.small};
 `;
 
 export const QuestionParagraphe = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: ${spacing.interComponent};
   margin-bottom: ${spacing.small};
@@ -56,4 +57,15 @@ export const SectionTitle = styled.h2`
   font-size: ${fonts.sizeH3};
   margin-top: ${spacing.large};
   margin-bottom: ${spacing.interComponent};
+`;
+
+export const Highlight = styled.strong`
+  font-size: ${fonts.sizeH3};
+  font-weight: 700;
+  color: ${colors.blue};
+`;
+
+export const SmallText = styled.span`
+  color: ${colors.darkText};
+  font-style: italic;
 `;

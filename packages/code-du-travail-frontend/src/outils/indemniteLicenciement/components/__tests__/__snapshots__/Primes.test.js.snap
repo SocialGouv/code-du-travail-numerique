@@ -10,6 +10,10 @@ exports[`<Primes /> should add a prime 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 0.25rem;
 }
 
@@ -30,6 +34,7 @@ exports[`<Primes /> should add a prime 1`] = `
 .c1 {
   display: inline-block;
   position: relative;
+  margin-right: 1.25rem;
 }
 
 .c3 {
@@ -220,6 +225,10 @@ exports[`<Primes /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 0.25rem;
 }
 
@@ -240,6 +249,7 @@ exports[`<Primes /> should render 1`] = `
 .c1 {
   display: inline-block;
   position: relative;
+  margin-right: 1.25rem;
 }
 
 .c3 {

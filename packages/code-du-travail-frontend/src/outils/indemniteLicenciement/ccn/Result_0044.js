@@ -7,6 +7,12 @@ import {
   getSalaireRef as getSalaireRefConventionnel
 } from "./0044_indemnite";
 import { getIndemnite, getSalaireRef } from "../indemnite";
+import {
+  SectionTitle,
+  Highlight,
+  ResultWrapper,
+  SmallText
+} from "../stepStyles";
 
 function Result_Chimie({ form }) {
   const state = form.getState();
@@ -63,20 +69,17 @@ function Result_Chimie({ form }) {
 
   return (
     <Container>
-      <h2>Indemnité Conventionnelle</h2>
-      {indemniteConventionnelle > indemnite ? (
-        <p>
-          Le montant de l’indemnité conventionnelle est supérieur à celui de
-          l’indemnité légale. <br /> Le montant de votre indémnité de
-          licenciement sera de <strong>{indemniteConventionnelle} €</strong>
-        </p>
-      ) : (
-        <p>
-          Le montant de l’indemnité conventionnelle est inférieur à l’indemnité
-          légale. Le montant de votre indémnité de licenciement est fixé par le
-          code du travail est sera de <strong>{indemnite} €</strong>
-        </p>
-      )}
+      <SectionTitle>Indemnité Conventionnelle</SectionTitle>
+      <p>
+        Le montant de l’indemnité est{" "}
+        <Highlight>{indemniteConventionnelle} €</Highlight>{" "}
+        <SmallText>
+          {indemniteConventionnelle > indemnite
+            ? "sur la base du calcul d'indemnité conventionel"
+            : "sur la base du calcul de l’indemnité légale"}
+        </SmallText>
+      </p>
+
       <br />
       <details>
         <summary>Voir le detail du calcul</summary>

@@ -14,7 +14,7 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco 1`] = `
 .c1 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -42,10 +42,11 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 1.25rem;
 }
 
 .c3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
@@ -289,7 +290,7 @@ exports[`<Step_0044 /> should render 1`] = `
 .c1 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;

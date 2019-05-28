@@ -14,7 +14,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c3 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -42,10 +42,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 1.25rem;
 }
 
 .c1 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
@@ -104,7 +105,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
     <p
       class="c1"
     >
-      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
+      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
     </p>
     <div
       class="c2"
@@ -173,7 +174,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
       class="c4"
     >
       <caption>
-        Salaire mensuel brut (prendre en compte les primes et avantages en natures)
+        Salaire mensuel brut (prendre en compte les primes et avantages en nature)
       </caption>
       <thead>
         <tr>
@@ -181,7 +182,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
             Mois
           </th>
           <th>
-            Salaire
+            Salaire mensuel brut
           </th>
         </tr>
       </thead>
@@ -542,7 +543,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 .c3 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -570,10 +571,11 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 1.25rem;
 }
 
 .c1 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
@@ -623,7 +625,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
     <p
       class="c1"
     >
-      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
+      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
     </p>
     <div
       class="c2"
@@ -689,7 +691,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
       </label>
     </div>
     <p>
-      Salaire mensuel brut (prendre en compte les primes et avantages en natures)
+      Salaire mensuel brut (prendre en compte les primes et avantages en nature)
     </p>
     <div
       class="c4"
@@ -725,7 +727,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 .c3 {
   padding: 0;
   text-align: center;
-  font-size: 1.24rem;
+  font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -753,10 +755,11 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-bottom: 1.25rem;
 }
 
 .c1 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
@@ -934,7 +937,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     <p
       class="c1"
     >
-      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel sur le même contrat ?
+      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
     </p>
     <div
       class="c2"

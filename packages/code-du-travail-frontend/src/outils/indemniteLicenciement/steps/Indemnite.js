@@ -8,7 +8,7 @@ import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 import { getIndemnite, getSalaireRef } from "../indemnite";
 import { branches } from "../branches";
-import { Label } from "../stepStyles";
+import { Label, SectionTitle, Highlight, ResultWrapper } from "../stepStyles";
 
 function validateCCn(idcc) {
   const selectedBranche = branches.find(branche => branche.value === idcc);
@@ -49,11 +49,11 @@ function StepIndemnite({ form }) {
 
   return (
     <Container>
-      <h2>Indemnité légale</h2>
+      <SectionTitle>Indemnité légale</SectionTitle>
       <p>
         Le code du travail prévoit un montant minimum de{" "}
-        <strong>{indemnite} €</strong>
-        pour votre indemnité de licenciement.
+        <Highlight>{indemnite} €</Highlight> pour votre indemnité de
+        licenciement.
       </p>
       <br />
       <details>
@@ -64,9 +64,9 @@ function StepIndemnite({ form }) {
       </details>
       <br />
       <br />
-      <h2>
+      <SectionTitle>
         Votre convention collective peut prévoir un montant plus important
-      </h2>
+      </SectionTitle>
       <p>
         Selon la convention collective dont vous dépendez, le montant minimum de
         votre indemnité de licenciement peut être supérieur au montant de
@@ -81,7 +81,7 @@ function StepIndemnite({ form }) {
           <>
             <SelectWrapper>
               <Label htmlFor="ccn">
-                Renseignez votre convention collective pour en savoir plus:
+                Sélectionnez votre convention collective pour en savoir plus :
               </Label>
               <Select {...input} id="ccn">
                 <option disabled value="">
@@ -112,11 +112,13 @@ StepIndemnite.propTypes = {
 export { StepIndemnite };
 
 const { spacing } = theme;
+
 const SelectWrapper = styled.label`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 `;
+
 const Select = styled.select`
   margin-right: ${spacing.interComponent};
   flex: 1 1 70%;

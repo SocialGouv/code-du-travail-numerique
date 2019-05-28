@@ -1,7 +1,5 @@
 import { isAfter } from "date-fns";
-const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
-const round = fl => parseInt(fl * 100, 10) / 100;
-
+import { round, sum } from "./math";
 /**
  * Compute the salaire de Réference
  * used in the indemnité calculus
