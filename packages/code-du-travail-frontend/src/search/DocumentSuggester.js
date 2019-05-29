@@ -36,6 +36,19 @@ export class DocumentSuggester extends React.Component {
   onKeyPress = event => {
     if (event.key === "Enter") {
       event.target.blur();
+
+      /**
+       * HACK: @lionelb
+       * on IE, submit event are not triggered while pressing Enter
+       * if there is no <input type="submit"/> present in form
+       * solution is to dispatch the submit event manually
+       * since calling form.submit() doesn't call
+       * onSubmit react form's handler
+       */
+      const { form } = event.target;
+      if (form && form.dispatchEvent) {
+        form.dispatchEvent(new Event("submit"));
+      }
     }
   };
 
