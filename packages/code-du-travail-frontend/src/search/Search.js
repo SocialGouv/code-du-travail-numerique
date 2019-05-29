@@ -161,6 +161,7 @@ class Search extends React.Component {
         this.setState({ suggestions: results });
       })
       .catch(error => {
+        // eslint-disable-next-line no-console
         console.error("fetch error", error);
       });
   };

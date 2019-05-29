@@ -1,0 +1,7 @@
+root: true
+extends:
+  - "@socialgouv/eslint-config-recommended"
+
+rules:
+  prefer-const: error
+  no-console: off

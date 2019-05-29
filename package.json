@@ -25,6 +25,9 @@
     "husky": "^1.2.0",
     "lerna": "^3.4.1"
   },
+  "devDependencies": {
+    "@socialgouv/eslint-config-recommended": "^0.7.2"
+  },
   "workspaces": [
     "packages/*",
     "packages/code-du-travail-data/dataset/!(fiches_service_public)",
