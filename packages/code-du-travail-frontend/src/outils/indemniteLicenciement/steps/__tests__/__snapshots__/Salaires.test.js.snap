@@ -1,0 +1,1115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepSalaires /> should render lastSalaires 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c4 tr > td:nth-child(2) {
+  text-align: left;
+  width: 70%;
+}
+
+.c6 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c5 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c7 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
+    </p>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <input
+          name="hasTempsPartiel"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          checked=""
+          name="hasTempsPartiel"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p
+      class="c1"
+    >
+      Avez-vous eu le même salaire lors des 12 derniers mois ?
+    </p>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <input
+          name="hasSameSalaire"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          checked=""
+          name="hasSameSalaire"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <table
+      class="c4"
+    >
+      <caption>
+        Salaire mensuel brut (prendre en compte les primes et avantages en nature)
+      </caption>
+      <thead>
+        <tr>
+          <th>
+            Mois
+          </th>
+          <th>
+            Salaire mensuel brut
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <label
+              for="salary0"
+            >
+              juillet 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary0"
+                name="salaires[0].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary1"
+            >
+              juin 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary1"
+                name="salaires[1].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary2"
+            >
+              mai 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary2"
+                name="salaires[2].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary3"
+            >
+              avril 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary3"
+                name="salaires[3].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary4"
+            >
+              mars 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary4"
+                name="salaires[4].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary5"
+            >
+              février 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary5"
+                name="salaires[5].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary6"
+            >
+              janvier 2019
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary6"
+                name="salaires[6].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary7"
+            >
+              décembre 2018
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary7"
+                name="salaires[7].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary8"
+            >
+              novembre 2018
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary8"
+                name="salaires[8].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary9"
+            >
+              octobre 2018
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary9"
+                name="salaires[9].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary10"
+            >
+              septembre 2018
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary10"
+                name="salaires[10].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label
+              for="salary11"
+            >
+              août 2018
+            </label>
+          </td>
+          <td>
+            <div
+              class="c5"
+            >
+              <input
+                class="c6"
+                id="salary11"
+                name="salaires[11].salary"
+                size="10"
+                value=""
+              />
+              <span
+                aria-hidden="true"
+                class="c7"
+              >
+                €
+              </span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`<StepSalaires /> should render same salaire 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c5 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c4 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c6 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
+    </p>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <input
+          name="hasTempsPartiel"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          checked=""
+          name="hasTempsPartiel"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p
+      class="c1"
+    >
+      Avez-vous eu le même salaire lors des 12 derniers mois ?
+    </p>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <input
+          checked=""
+          name="hasSameSalaire"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="hasSameSalaire"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <p>
+      Salaire mensuel brut (prendre en compte les primes et avantages en nature)
+    </p>
+    <div
+      class="c4"
+    >
+      <input
+        class="c5"
+        name="salaire"
+        size="10"
+        value="3000"
+      />
+      <span
+        aria-hidden="true"
+        class="c6"
+      >
+        €
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<StepSalaires /> should render tempsPartiel 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c4 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c15 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c15:focus,
+.c15:hover,
+.c15:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.c7 {
+  -webkit-flex-basis: 15rem;
+  -ms-flex-preferred-size: 15rem;
+  flex-basis: 15rem;
+  margin-right: 1.25rem;
+}
+
+.c8 {
+  -webkit-flex-basis: 8rem;
+  -ms-flex-preferred-size: 8rem;
+  flex-basis: 8rem;
+  margin-right: 1.25rem;
+}
+
+.c6 {
+  font-weight: 700;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c10 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 8em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c12 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c11 {
+  display: inline-block;
+  position: relative;
+}
+
+.c13 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c14 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.c14:focus,
+.c14:hover,
+.c14:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Avez-vous alterné, au cours de votre contrat de travail des périodes de travail à temps plein et à temps partiel ?
+    </p>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <input
+          checked=""
+          name="hasTempsPartiel"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="hasTempsPartiel"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <h2
+      class="c4"
+    >
+      Périodes de travail
+    </h2>
+    <p>
+      Renseigner vos différentes périodes de travail
+    </p>
+    <div
+      class="c5"
+    >
+      <div
+        class="c6 c7"
+      >
+        Type de contrat
+      </div>
+      <div
+        class="c6 c8"
+      >
+        Durée en mois
+      </div>
+      <div
+        class="c6"
+      >
+        Rémunération
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c7"
+      >
+        <select
+          class="c9"
+          name="salairePeriods[0].type"
+        >
+          <option>
+            Temps partiel
+          </option>
+          <option>
+            Temps plein
+          </option>
+        </select>
+      </div>
+      <div
+        class="c8"
+      >
+        <input
+          class="c10"
+          name="salairePeriods[0].duration"
+          size="8"
+          value="24"
+        />
+      </div>
+      <div>
+        <div
+          class="c11"
+        >
+          <input
+            class="c12"
+            name="salairePeriods[0].salary"
+            size="10"
+            value="2000"
+          />
+          <span
+            aria-hidden="true"
+            class="c13"
+          >
+            €
+          </span>
+        </div>
+        <button
+          aria-pressed="false"
+          class="c14"
+          type="button"
+        >
+          Supprimer
+        </button>
+      </div>
+    </div>
+    <div
+      class="c5"
+    >
+      <div
+        class="c7"
+      >
+        <select
+          class="c9"
+          name="salairePeriods[1].type"
+        >
+          <option>
+            Temps partiel
+          </option>
+          <option>
+            Temps plein
+          </option>
+        </select>
+      </div>
+      <div
+        class="c8"
+      >
+        <input
+          class="c10"
+          name="salairePeriods[1].duration"
+          size="8"
+          value="12"
+        />
+      </div>
+      <div>
+        <div
+          class="c11"
+        >
+          <input
+            class="c12"
+            name="salairePeriods[1].salary"
+            size="10"
+            value="1000"
+          />
+          <span
+            aria-hidden="true"
+            class="c13"
+          >
+            €
+          </span>
+        </div>
+        <button
+          aria-pressed="false"
+          class="c14"
+          type="button"
+        >
+          Supprimer
+        </button>
+      </div>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c15"
+      type="button"
+    >
+      Ajouter une période
+    </button>
+  </div>
+</div>
+`;

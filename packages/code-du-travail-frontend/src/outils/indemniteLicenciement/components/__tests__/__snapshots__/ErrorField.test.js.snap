@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErroField /> should render error 1`] = `
+<div>
+  <input
+    data-testid="test"
+    name="test"
+    value=""
+  />
+  <div
+    class="alert "
+  >
+    Champ requis
+  </div>
+</div>
+`;
