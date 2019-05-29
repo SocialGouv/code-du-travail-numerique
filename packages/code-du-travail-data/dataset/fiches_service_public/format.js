@@ -1,4 +1,4 @@
-const parseReference = require("./parseReference");
+const parseReference = require("./parse-reference");
 const getChild = (element, name) => element.$.find(el => el.name === name);
 
 // Beware, this one is recursive
