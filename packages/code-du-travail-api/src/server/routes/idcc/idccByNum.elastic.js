@@ -1,7 +1,7 @@
 function getIdccByNumBody({ query }) {
   return {
     size: 1,
-    _source: ["title", "url", "idcc", "slug"],
+    _source: ["id", "title", "url", "idcc", "slug"],
     query: {
       bool: {
         filter: [
