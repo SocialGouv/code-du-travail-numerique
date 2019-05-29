@@ -42,7 +42,16 @@ const slugify = require("slugify");
  *  parent: "9-recrutement"
  * }]
  */
-
+const iconsMap = {
+  1: "hiring-1.svg",
+  2: "coins.svg",
+  3: "time.svg",
+  4: "certificate.svg",
+  5: "shield.svg",
+  6: "handshake.svg",
+  7: "file-3.svg",
+  8: "book_web.svg",
+}
 function flattenThemes(data) {
   const allThemes = data.reduce((state, row) => {
     const themes = Object.entries(row)
@@ -61,7 +70,8 @@ function flattenThemes(data) {
           id: parseInt(id, 10),
           label: theme,
           slug: slugify(value.replace('|', '-').toLowerCase(), { remove: /[()']/ }),
-          parent: parentSlug
+          parent: parentSlug,
+          icon: iconsMap[parseInt(id, 10)] || undefined
         };
       });
 

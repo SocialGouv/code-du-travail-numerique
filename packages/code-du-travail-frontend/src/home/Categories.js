@@ -64,7 +64,7 @@ export default class Categories extends React.Component {
 const Category = ({ title, text, icon }) => (
   <React.Fragment>
     <figure>
-      <img src={icon} alt={title} />
+      <img src={`/static/assets/icons/${icon}`} alt={title} />
     </figure>
     <div>
       <h3>{title}</h3>
@@ -79,7 +79,7 @@ Category.propTypes = {
   icon: PropTypes.string
 };
 Category.defaultProps = {
-  icon: "/static/assets/icons/chat.svg"
+  icon: "chat.svg"
 };
 
 const { spacing } = theme;

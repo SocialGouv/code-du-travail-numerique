@@ -3,49 +3,57 @@
     "id": 1,
     "label": "Recrutement et contrat de travail",
     "slug": "1-recrutement-et-contrat-de-travail",
-    "parent": null
+    "parent": null,
+    "icon": "hiring-1.svg"
   },
   {
     "id": 2,
     "label": "Salaire et Rémunération",
     "slug": "2-salaire-et-remuneration",
-    "parent": null
+    "parent": null,
+    "icon": "coins.svg"
   },
   {
     "id": 3,
     "label": "Temps de travail et congés",
     "slug": "3-temps-de-travail-et-conges",
-    "parent": null
+    "parent": null,
+    "icon": "time.svg"
   },
   {
     "id": 4,
     "label": "Emploi et formation",
     "slug": "4-emploi-et-formation",
-    "parent": null
+    "parent": null,
+    "icon": "certificate.svg"
   },
   {
     "id": 5,
     "label": "Santé, sécurité et conditions de travail",
     "slug": "5-sante,-securite-et-conditions-de-travail",
-    "parent": null
+    "parent": null,
+    "icon": "shield.svg"
   },
   {
     "id": 6,
     "label": "Représentation du personnel et négociation collective",
     "slug": "6-representation-du-personnel-et-negociation-collective",
-    "parent": null
+    "parent": null,
+    "icon": "handshake.svg"
   },
   {
     "id": 7,
     "label": "Départ de l'entreprise",
     "slug": "7-depart-de-lentreprise",
-    "parent": null
+    "parent": null,
+    "icon": "file-3.svg"
   },
   {
     "id": 8,
     "label": "Conflits au travail et contrôle de la réglementation",
     "slug": "8-conflits-au-travail-et-controle-de-la-reglementation",
-    "parent": null
+    "parent": null,
+    "icon": "book_web.svg"
   },
   {
     "id": 9,
