@@ -1015,6 +1015,7 @@ exports[`<Answer /> should render 1`] = `
         class="c33"
       >
         <button
+          aria-label="Fermer"
           aria-pressed="false"
           class="c34"
         >
@@ -2134,6 +2135,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         class="c37"
       >
         <button
+          aria-label="Fermer"
           aria-pressed="false"
           class="c38"
         >
