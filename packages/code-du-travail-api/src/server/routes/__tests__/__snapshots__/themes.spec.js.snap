@@ -8,6 +8,7 @@ exports[`return documents that belongs to theme 7-depart-de-lentreprise 1`] = `
 Object {
   "breadcrumbs": Array [
     Object {
+      "icon": "file-3.svg",
       "id": 7,
       "label": "Départ de l'entreprise",
       "parent": null,
@@ -84,6 +85,7 @@ Object {
       "_type": "cdtn_document_test",
     },
   ],
+  "icon": "file-3.svg",
   "id": 7,
   "label": "Départ de l'entreprise",
   "parent": null,
@@ -95,6 +97,7 @@ exports[`return documents that belongs to theme 37-demission 1`] = `
 Object {
   "breadcrumbs": Array [
     Object {
+      "icon": "file-3.svg",
       "id": 7,
       "label": "Départ de l'entreprise",
       "parent": null,
@@ -159,6 +162,7 @@ exports[`return theme data for slug 41-licenciement-pour-motif-personnel 1`] = `
 Object {
   "breadcrumbs": Array [
     Object {
+      "icon": "file-3.svg",
       "id": 7,
       "label": "Départ de l'entreprise",
       "parent": null,
@@ -232,6 +236,7 @@ exports[`return theme data for slug 42-licenciement-pour-inaptitude 1`] = `
 Object {
   "breadcrumbs": Array [
     Object {
+      "icon": "file-3.svg",
       "id": 7,
       "label": "Départ de l'entreprise",
       "parent": null,
@@ -256,48 +261,56 @@ exports[`return themes root themes 1`] = `
 Object {
   "children": Array [
     Object {
+      "icon": "hiring-1.svg",
       "id": 1,
       "label": "Recrutement et contrat de travail",
       "parent": null,
       "slug": "1-recrutement-et-contrat-de-travail",
     },
     Object {
+      "icon": "coins.svg",
       "id": 2,
       "label": "Salaire et Rémunération",
       "parent": null,
       "slug": "2-salaire-et-remuneration",
     },
     Object {
+      "icon": "time.svg",
       "id": 3,
       "label": "Temps de travail et congés",
       "parent": null,
       "slug": "3-temps-de-travail-et-conges",
     },
     Object {
+      "icon": "certificate.svg",
       "id": 4,
       "label": "Emploi et formation",
       "parent": null,
       "slug": "4-emploi-et-formation",
     },
     Object {
+      "icon": "shield.svg",
       "id": 5,
       "label": "Santé, sécurité et conditions de travail",
       "parent": null,
       "slug": "5-sante,-securite-et-conditions-de-travail",
     },
     Object {
+      "icon": "handshake.svg",
       "id": 6,
       "label": "Représentation du personnel et négociation collective",
       "parent": null,
       "slug": "6-representation-du-personnel-et-negociation-collective",
     },
     Object {
+      "icon": "file-3.svg",
       "id": 7,
       "label": "Départ de l'entreprise",
       "parent": null,
       "slug": "7-depart-de-lentreprise",
     },
     Object {
+      "icon": "book_web.svg",
       "id": 8,
       "label": "Conflits au travail et contrôle de la réglementation",
       "parent": null,
