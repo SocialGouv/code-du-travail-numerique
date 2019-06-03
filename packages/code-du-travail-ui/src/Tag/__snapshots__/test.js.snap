@@ -1,10 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tag /> it should render a Tag danger 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #f6bcc2;
+}
+
 <div>
   <div
-    class="tag tag__danger"
-    danger="true"
+    class="c0"
   >
     this is a Tag 
     danger
@@ -14,10 +27,23 @@ exports[`<Tag /> it should render a Tag danger 1`] = `
 `;
 
 exports[`<Tag /> it should render a Tag info 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #d7e8f9;
+}
+
 <div>
   <div
-    class="tag tag__info"
-    info="true"
+    class="c0"
   >
     this is a Tag 
     info
@@ -27,10 +53,23 @@ exports[`<Tag /> it should render a Tag info 1`] = `
 `;
 
 exports[`<Tag /> it should render a Tag primary 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: #005994;
+}
+
 <div>
   <div
-    class="tag tag__primary"
-    primary="true"
+    class="c0"
   >
     this is a Tag 
     primary
@@ -40,10 +79,23 @@ exports[`<Tag /> it should render a Tag primary 1`] = `
 `;
 
 exports[`<Tag /> it should render a Tag secondary 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #eaeaea;
+}
+
 <div>
   <div
-    class="tag tag__secondary"
-    secondary="true"
+    class="c0"
   >
     this is a Tag 
     secondary
@@ -53,10 +105,23 @@ exports[`<Tag /> it should render a Tag secondary 1`] = `
 `;
 
 exports[`<Tag /> it should render a Tag success 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #e0f2bd;
+}
+
 <div>
   <div
-    class="tag tag__success"
-    success="true"
+    class="c0"
   >
     this is a Tag 
     success
@@ -66,10 +131,23 @@ exports[`<Tag /> it should render a Tag success 1`] = `
 `;
 
 exports[`<Tag /> it should render a Tag warning 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+}
+
 <div>
   <div
-    class="tag tag__warning"
-    warning="true"
+    class="c0"
   >
     this is a Tag 
     warning
@@ -79,9 +157,23 @@ exports[`<Tag /> it should render a Tag warning 1`] = `
 `;
 
 exports[`<Tag /> should render 1`] = `
+.c0 {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+}
+
 <div>
   <div
-    class="tag "
+    class="c0"
   >
     this is an alert 
   </div>

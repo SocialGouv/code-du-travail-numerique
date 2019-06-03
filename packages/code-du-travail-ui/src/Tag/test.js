@@ -14,9 +14,10 @@ describe("<Tag />", () => {
     ["danger"],
     ["primary"],
     ["secondary"]
-  ])("it should render a Tag %s", label => {
-    const props = { [label]: true };
-    const { container } = render(<Tag {...props}>this is a Tag {label} </Tag>);
+  ])("it should render a Tag %s", variant => {
+    const { container } = render(
+      <Tag variant={variant}>this is a Tag {variant} </Tag>
+    );
     expect(container).toMatchSnapshot();
   });
 });

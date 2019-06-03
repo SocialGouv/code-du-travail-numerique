@@ -126,11 +126,9 @@ exports[`<Disclaimer /> should render 1`] = `
   >
     <div
       class="c1"
-      type="warning"
     >
       <div
         class="c2"
-        type="warning"
       >
         <svg
           fill="none"
