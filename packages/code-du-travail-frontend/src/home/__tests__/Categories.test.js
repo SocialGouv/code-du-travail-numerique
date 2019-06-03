@@ -3,55 +3,47 @@ import { render } from "react-testing-library";
 import Categories from "../Categories";
 const themes = [
   {
-    label: "Rupture de contrat",
-    text: "Licenciement, démission, rupture conventionnelle…",
-    icon: "/static/assets/icons/file-3.svg",
-    slug: "rupture-de-contrat"
+    id: 1,
+    label: "Recrutement et contrat de travail",
+    slug: "1-recrutement-et-contrat-de-travail"
   },
   {
-    slug: "embauche-et-contrat",
-    label: "Contrat de travail et embauche",
-    text: "Obligations liées à l'embauche et vie du contrat de travail",
-    icon: "/static/assets/icons/handshake.svg"
+    id: 2,
+    label: "Salaire et Rémunération",
+    slug: "2-salaire-et-remuneration"
   },
   {
-    slug: "duree-du-travail-et-conges",
-    label: "Durée de travail et congés",
-    text: "heures supplémentaires, congés payés, durée maximale du travail...",
-    icon: "/static/assets/icons/time.svg"
+    id: 3,
+    label: "Temps de travail et congés",
+    slug: "3-temps-de-travail-et-conges"
   },
   {
-    slug: "remuneration",
-    label: "Rémunération",
-    text: "Salaire, primes, avantages, bulletin de salaire...",
-    icon: "/static/assets/icons/remuneration.svg"
+    id: 4,
+    label: "Emploi et formation",
+    slug: "4-emploi-et-formation"
   },
   {
-    slug: "sante-et-securite",
-    label: "Santé et sécurité",
-    text: "conditions de travail, surveillance médicale...",
-    icon: "/static/assets/icons/shield.svg"
+    id: 5,
+    label: "Santé, sécurité et conditions de travail",
+    slug: "5-sante,-securite-et-conditions-de-travail"
   },
   {
-    slug: "formation",
-    label: "Formation",
-    text: "Evolution de carrière, VAE",
-    icon: "/static/assets/icons/hiring-1.svg"
+    id: 6,
+    label: "Représentation du personnel et négociation collective",
+    slug: "6-representation-du-personnel-et-negociation-collective"
   },
   {
-    slug: "contentieux-et-coercitif",
-    label: "prud’hommes, inspection du travail, procédures...",
-    text: "Les syndicats à votre service",
-    icon: "/static/assets/icons/chat.svg"
+    id: 7,
+    label: "Départ de l'entreprise",
+    slug: "7-depart-de-lentreprise"
   },
   {
-    slug: "maladies-et-inaptitudes",
-    label: "Maladie et inaptitude",
-    text:
-      "inaptitude, arrêts de travail, accident du travail / maladie professionnelle...",
-    icon: "/static/assets/icons/certificate.svg"
+    id: 8,
+    label: "Conflits au travail et contrôle de la réglementation",
+    slug: "8-conflits-au-travail-et-controle-de-la-reglementation"
   }
 ];
+
 describe("<Categories />", () => {
   it("should render", () => {
     const { container } = render(<Categories themes={themes} />);
