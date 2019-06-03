@@ -56,7 +56,6 @@ export function StepReducer(steps, action) {
       return steps.filter(step => !/branche_/.test(step.name));
     }
     default:
-      // eslint-disable-next-line no-console
       console.warning("action unknow", action);
   }
   return steps;

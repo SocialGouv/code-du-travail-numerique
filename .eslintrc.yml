@@ -4,4 +4,3 @@ extends:
 
 rules:
   prefer-const: error
-  no-console: off
