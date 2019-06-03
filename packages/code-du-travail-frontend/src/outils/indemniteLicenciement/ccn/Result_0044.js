@@ -70,7 +70,7 @@ function Result_Chimie({ form }) {
         <Highlight>{indemniteConventionnelle} €</Highlight>{" "}
         <SmallText>
           {indemniteConventionnelle > indemnite
-            ? "sur la base du calcul d'indemnité conventionel"
+            ? "sur la base du calcul de l'indemnité conventionelle"
             : "sur la base du calcul de l’indemnité légale"}
         </SmallText>
       </p>
