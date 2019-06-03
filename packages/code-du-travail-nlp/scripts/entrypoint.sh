@@ -2,6 +2,7 @@
 
 set -exu pipefail
 count=0
+if [ ! -d "data" ]; then mkdir data; fi
 for file in $(curl -Ls $SUGGEST_DATA_URL); do
   curl -L $file > data/data-$count.zip
   unzip -j -o -d data data/data-$count.zip
