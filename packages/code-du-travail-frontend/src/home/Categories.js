@@ -37,8 +37,7 @@ export default class Categories extends React.Component {
 
   static defaultProps = {
     isRoot: true,
-    title: "Retrouvez nos réponses thématiques",
-    icon: null
+    title: "Retrouvez nos réponses thématiques"
   };
 
   render() {
@@ -50,7 +49,7 @@ export default class Categories extends React.Component {
             <Wrapper>
               <Title>{title}</Title>
               <CategoriesWrapper>
-                {themes.map(({ id, slug, label, icon }) => (
+                {themes.map(({ id, slug, label }) => (
                   <CategoryItem key={slug + label} small={!isRoot}>
                     <Link route="themes" params={{ slug: slug || "/" }}>
                       <a title={label}>
