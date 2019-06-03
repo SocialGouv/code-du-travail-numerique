@@ -12,14 +12,23 @@ import {
   Wrapper
 } from "@cdt/ui";
 
+const iconsMap = {
+  1: "hiring-1.svg",
+  2: "coins.svg",
+  3: "time.svg",
+  4: "certificate.svg",
+  5: "shield.svg",
+  6: "handshake.svg",
+  7: "file-3.svg",
+  8: "book_web.svg"
+};
+
 export default class Categories extends React.Component {
   static propTypes = {
     themes: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        slug: PropTypes.string.isRequired,
-        icon: PropTypes.string,
-        text: PropTypes.string
+        slug: PropTypes.string.isRequired
       }).isRequired
     ),
     isRoot: PropTypes.bool,
@@ -29,8 +38,7 @@ export default class Categories extends React.Component {
   static defaultProps = {
     isRoot: true,
     title: "Retrouvez nos réponses thématiques",
-    icon: null,
-    text: ""
+    icon: null
   };
 
   render() {
@@ -42,11 +50,14 @@ export default class Categories extends React.Component {
             <Wrapper>
               <Title>{title}</Title>
               <CategoriesWrapper>
-                {themes.map(({ slug, label, text, icon }) => (
+                {themes.map(({ id, slug, label, icon }) => (
                   <CategoryItem key={slug + label} small={!isRoot}>
                     <Link route="themes" params={{ slug: slug || "/" }}>
                       <a title={label}>
-                        <Category title={label} text={text} icon={icon} />
+                        <Category
+                          title={label}
+                          icon={iconsMap[id] || undefined}
+                        />
                       </a>
                     </Link>
                   </CategoryItem>
@@ -61,25 +72,24 @@ export default class Categories extends React.Component {
   }
 }
 
-const Category = ({ title, text, icon }) => (
+const Category = ({ title, icon }) => (
   <React.Fragment>
     <figure>
       <img src={`/static/assets/icons/${icon}`} alt={title} />
     </figure>
     <div>
       <h3>{title}</h3>
-      <p>{text}</p>
     </div>
   </React.Fragment>
 );
 
 Category.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   icon: PropTypes.string
 };
+
 Category.defaultProps = {
-  icon: "chat.svg"
+  icon: "profiles.svg"
 };
 
 const { spacing } = theme;

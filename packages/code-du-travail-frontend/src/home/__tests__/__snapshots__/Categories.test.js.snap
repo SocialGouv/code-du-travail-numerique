@@ -73,137 +73,19 @@ exports[`<Categories /> should render 1`] = `
               class="categories__list-item"
             >
               <a
-                href="/themes/rupture-de-contrat"
-                title="Rupture de contrat"
+                href="/themes/1-recrutement-et-contrat-de-travail"
+                title="Recrutement et contrat de travail"
               >
                 <figure>
                   <img
-                    alt="Rupture de contrat"
-                    src="/static/assets/icons/file-3.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Rupture de contrat
-                  </h3>
-                  <p>
-                    Licenciement, démission, rupture conventionnelle…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
-            >
-              <a
-                href="/themes/embauche-et-contrat"
-                title="Contrat de travail et embauche"
-              >
-                <figure>
-                  <img
-                    alt="Contrat de travail et embauche"
-                    src="/static/assets/icons/handshake.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Contrat de travail et embauche
-                  </h3>
-                  <p>
-                    Obligations liées à l'embauche et vie du contrat de travail
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
-            >
-              <a
-                href="/themes/duree-du-travail-et-conges"
-                title="Durée de travail et congés"
-              >
-                <figure>
-                  <img
-                    alt="Durée de travail et congés"
-                    src="/static/assets/icons/time.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Durée de travail et congés
-                  </h3>
-                  <p>
-                    heures supplémentaires, congés payés, durée maximale du travail...
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
-            >
-              <a
-                href="/themes/remuneration"
-                title="Rémunération"
-              >
-                <figure>
-                  <img
-                    alt="Rémunération"
-                    src="/static/assets/icons/remuneration.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Rémunération
-                  </h3>
-                  <p>
-                    Salaire, primes, avantages, bulletin de salaire...
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
-            >
-              <a
-                href="/themes/sante-et-securite"
-                title="Santé et sécurité"
-              >
-                <figure>
-                  <img
-                    alt="Santé et sécurité"
-                    src="/static/assets/icons/shield.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Santé et sécurité
-                  </h3>
-                  <p>
-                    conditions de travail, surveillance médicale...
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
-            >
-              <a
-                href="/themes/formation"
-                title="Formation"
-              >
-                <figure>
-                  <img
-                    alt="Formation"
+                    alt="Recrutement et contrat de travail"
                     src="/static/assets/icons/hiring-1.svg"
                   />
                 </figure>
                 <div>
                   <h3>
-                    Formation
+                    Recrutement et contrat de travail
                   </h3>
-                  <p>
-                    Evolution de carrière, VAE
-                  </p>
                 </div>
               </a>
             </li>
@@ -211,22 +93,19 @@ exports[`<Categories /> should render 1`] = `
               class="categories__list-item"
             >
               <a
-                href="/themes/contentieux-et-coercitif"
-                title="prud’hommes, inspection du travail, procédures..."
+                href="/themes/2-salaire-et-remuneration"
+                title="Salaire et Rémunération"
               >
                 <figure>
                   <img
-                    alt="prud’hommes, inspection du travail, procédures..."
-                    src="/static/assets/icons/chat.svg"
+                    alt="Salaire et Rémunération"
+                    src="/static/assets/icons/coins.svg"
                   />
                 </figure>
                 <div>
                   <h3>
-                    prud’hommes, inspection du travail, procédures...
+                    Salaire et Rémunération
                   </h3>
-                  <p>
-                    Les syndicats à votre service
-                  </p>
                 </div>
               </a>
             </li>
@@ -234,22 +113,119 @@ exports[`<Categories /> should render 1`] = `
               class="categories__list-item"
             >
               <a
-                href="/themes/maladies-et-inaptitudes"
-                title="Maladie et inaptitude"
+                href="/themes/3-temps-de-travail-et-conges"
+                title="Temps de travail et congés"
               >
                 <figure>
                   <img
-                    alt="Maladie et inaptitude"
+                    alt="Temps de travail et congés"
+                    src="/static/assets/icons/time.svg"
+                  />
+                </figure>
+                <div>
+                  <h3>
+                    Temps de travail et congés
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li
+              class="categories__list-item"
+            >
+              <a
+                href="/themes/4-emploi-et-formation"
+                title="Emploi et formation"
+              >
+                <figure>
+                  <img
+                    alt="Emploi et formation"
                     src="/static/assets/icons/certificate.svg"
                   />
                 </figure>
                 <div>
                   <h3>
-                    Maladie et inaptitude
+                    Emploi et formation
                   </h3>
-                  <p>
-                    inaptitude, arrêts de travail, accident du travail / maladie professionnelle...
-                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="categories__list-item"
+            >
+              <a
+                href="/themes/5-sante%2C-securite-et-conditions-de-travail"
+                title="Santé, sécurité et conditions de travail"
+              >
+                <figure>
+                  <img
+                    alt="Santé, sécurité et conditions de travail"
+                    src="/static/assets/icons/shield.svg"
+                  />
+                </figure>
+                <div>
+                  <h3>
+                    Santé, sécurité et conditions de travail
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li
+              class="categories__list-item"
+            >
+              <a
+                href="/themes/6-representation-du-personnel-et-negociation-collective"
+                title="Représentation du personnel et négociation collective"
+              >
+                <figure>
+                  <img
+                    alt="Représentation du personnel et négociation collective"
+                    src="/static/assets/icons/handshake.svg"
+                  />
+                </figure>
+                <div>
+                  <h3>
+                    Représentation du personnel et négociation collective
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li
+              class="categories__list-item"
+            >
+              <a
+                href="/themes/7-depart-de-lentreprise"
+                title="Départ de l'entreprise"
+              >
+                <figure>
+                  <img
+                    alt="Départ de l'entreprise"
+                    src="/static/assets/icons/file-3.svg"
+                  />
+                </figure>
+                <div>
+                  <h3>
+                    Départ de l'entreprise
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li
+              class="categories__list-item"
+            >
+              <a
+                href="/themes/8-conflits-au-travail-et-controle-de-la-reglementation"
+                title="Conflits au travail et contrôle de la réglementation"
+              >
+                <figure>
+                  <img
+                    alt="Conflits au travail et contrôle de la réglementation"
+                    src="/static/assets/icons/book_web.svg"
+                  />
+                </figure>
+                <div>
+                  <h3>
+                    Conflits au travail et contrôle de la réglementation
+                  </h3>
                 </div>
               </a>
             </li>

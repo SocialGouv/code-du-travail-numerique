@@ -35,23 +35,14 @@ const slugify = require("slugify");
  *  slug: "50-methodes-de-recrutement'"
  *  parent: "9-recrutement"
  * },
-  * {
+ * {
  *  id: 51,
  *  label: "Curriculum vitae (CV)",
  *  slug: "51-curriculum-vitae-cv"
  *  parent: "9-recrutement"
  * }]
  */
-const iconsMap = {
-  1: "hiring-1.svg",
-  2: "coins.svg",
-  3: "time.svg",
-  4: "certificate.svg",
-  5: "shield.svg",
-  6: "handshake.svg",
-  7: "file-3.svg",
-  8: "book_web.svg",
-}
+
 function flattenThemes(data) {
   const allThemes = data.reduce((state, row) => {
     const themes = Object.entries(row)
@@ -62,16 +53,20 @@ function flattenThemes(data) {
         const [_, id, theme] = value.match(/^([0-9]+) \| ?(.+)/);
         let parentSlug = null;
         if (index > 0) {
-          parentSlug = slugify(items[index - 1].replace('|', '-').toLowerCase(), {
-            remove: /[()']/
-          });
+          parentSlug = slugify(
+            items[index - 1].replace("|", "-").toLowerCase(),
+            {
+              remove: /[()']/
+            }
+          );
         }
         return {
           id: parseInt(id, 10),
           label: theme,
-          slug: slugify(value.replace('|', '-').toLowerCase(), { remove: /[()']/ }),
-          parent: parentSlug,
-          icon: iconsMap[parseInt(id, 10)] || undefined
+          slug: slugify(value.replace("|", "-").toLowerCase(), {
+            remove: /[()']/
+          }),
+          parent: parentSlug
         };
       });
 
@@ -100,13 +95,16 @@ async function main() {
 
 function extractSlug(str) {
   const [_, id, label] = str.match(/([0-9]+) \| (.+)$/, "");
-  const [theme] = label.split("|").map(t => t.trim()).reverse();
+  const [theme] = label
+    .split("|")
+    .map(t => t.trim())
+    .reverse();
   return slugify(`${id} - ${theme}`.toLowerCase(), { remove: /[()']/ });
 }
 
 module.exports = {
-  extractSlug,
-}
+  extractSlug
+};
 
 if (module === require.main) {
   main();
