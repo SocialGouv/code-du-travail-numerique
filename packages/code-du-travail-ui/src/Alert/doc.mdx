@@ -2,7 +2,6 @@
 name: Alert
 menu: Component
 ---
-import "@cdt/css";
 import { Playground, Props } from "docz";
 import Alert from ".";
 
@@ -10,12 +9,12 @@ import Alert from ".";
 
 <Playground>
   <Alert>Alert</Alert>
-  <Alert primary>Alert primary</Alert>
-  <Alert secondary>Alert secondary</Alert>
-  <Alert warning>Alert warning</Alert>
-  <Alert success>Alert success</Alert>
-  <Alert info>Alert info</Alert>
-  <Alert danger>Alert danger</Alert>
+  <Alert variant="primary">primary alert</Alert>
+  <Alert variant="secondary">secondary alert</Alert>
+  <Alert variant="warning">warning alert</Alert>
+  <Alert variant="success">success alert</Alert>
+  <Alert variant="info">info alert</Alert>
+  <Alert variant="danger">danger alert</Alert>
 </Playground>
 
 <Props of={Alert} />

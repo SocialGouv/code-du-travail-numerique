@@ -15,10 +15,9 @@ describe("<Alert />", () => {
     ["danger"],
     ["primary"],
     ["secondary"]
-  ])("it should render an alert %s", label => {
-    const props = { [label]: true };
+  ])("it should render a %s alert", variant => {
     const { container } = render(
-      <Alert {...props}>this is an alert {label} </Alert>
+      <Alert variant={variant}>this is a {variant} alert </Alert>
     );
     expect(container).toMatchSnapshot();
   });

@@ -27,9 +27,9 @@ function validate(values) {
       <>
         L’indemnité légale de licenciement n’est pas dûe en cas de faute grave.
         <br />
-        Vous reporter à la lettre de notification de licenciement, lorsqu’il est
-        invoqué le motif de faute grave doit apparaître précisément dans le
-        courrier.
+        Lorsqu’il est invoqué, le motif de faute grave doit apparaître
+        précisément dans le courrier. Reportez vous à la lettre de notification
+        de licenciement.
       </>
     );
   }

@@ -22,20 +22,22 @@ describe("<StepInfo />", () => {
   });
 
   it("should display error if contrat cdd", () => {
-    const { container, getByLabelText } = renderForm({ contrat: "cdi" });
+    const { getByLabelText, getByText } = renderForm({
+      contrat: "cdi"
+    });
     //trigger validation
     const cdd = getByLabelText(/cdd/i);
     fireEvent.click(cdd);
     fireEvent.blur(cdd);
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(getByText(/vous ne pouvez pas/i)).toMatchSnapshot();
   });
 
   it("should display error if fauteGrave", () => {
-    const { container, getByLabelText } = renderForm({});
+    const { getByLabelText, getByText } = renderForm({});
     const fauteGrave = getByLabelText(/oui/i);
     fireEvent.click(fauteGrave);
     // blur is need to force validation in react-testing-lib
     fireEvent.blur(fauteGrave);
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(getByText(/n’est pas dûe/i)).toMatchSnapshot();
   });
 });

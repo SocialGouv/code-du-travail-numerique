@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { box, colors, fonts, spacing } from "../theme";
 
-const Tag = ({ variant, children, ...props }) => (
+const Tag = ({ children, variant, ...props }) => (
   <StyledTag variant={variant} {...props}>
     {children}
   </StyledTag>
