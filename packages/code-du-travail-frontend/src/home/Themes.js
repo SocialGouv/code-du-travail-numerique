@@ -5,9 +5,9 @@ import { Link } from "../../routes";
 
 import {
   Container,
-  Categories as CategoriesWrapper,
+  Grid,
   Category,
-  Cell,
+  GridCell,
   Section,
   theme,
   Wrapper
@@ -24,7 +24,7 @@ const iconsMap = {
   8: "book_web.svg"
 };
 
-export default class Categories extends React.Component {
+export default class Themes extends React.Component {
   static propTypes = {
     themes: PropTypes.arrayOf(
       PropTypes.shape({
@@ -47,9 +47,9 @@ export default class Categories extends React.Component {
           <Container>
             <Wrapper>
               <Title>{title}</Title>
-              <CategoriesWrapper>
+              <Grid>
                 {themes.map(({ id, slug, label, parent }) => (
-                  <Cell key={slug + label}>
+                  <GridCell key={slug + label}>
                     <Link
                       route="themes"
                       params={{ slug: slug || "/" }}
@@ -64,9 +64,9 @@ export default class Categories extends React.Component {
                         />
                       </Tile>
                     </Link>
-                  </Cell>
+                  </GridCell>
                 ))}
-              </CategoriesWrapper>
+              </Grid>
             </Wrapper>
           </Container>
         </Section>

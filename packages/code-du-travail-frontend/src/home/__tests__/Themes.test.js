@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-testing-library";
-import Categories from "../Categories";
+import Themes from "../Themes";
 const themes = [
   {
     id: 1,
@@ -44,9 +44,9 @@ const themes = [
   }
 ];
 
-describe("<Categories />", () => {
+describe("<Themes />", () => {
   it("should render", () => {
-    const { container } = render(<Categories themes={themes} />);
+    const { container } = render(<Themes themes={themes} />);
     expect(container).toMatchSnapshot();
   });
 });

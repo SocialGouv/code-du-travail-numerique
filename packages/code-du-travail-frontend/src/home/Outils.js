@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 import {
   Container,
-  Categories,
+  Grid,
   Category,
-  Cell,
+  GridCell,
   Section,
   theme,
   Wrapper
@@ -55,7 +55,7 @@ export default class Outils extends React.PureComponent {
         <Container>
           <Wrapper>
             <Title>{title}</Title>
-            <Categories>
+            <Grid>
               {outils.map(
                 ({
                   title,
@@ -65,7 +65,7 @@ export default class Outils extends React.PureComponent {
                   slug,
                   hrefTitle
                 }) => (
-                  <Cell key={`${routeName}/${slug}`}>
+                  <GridCell key={`${routeName}/${slug}`}>
                     <Link
                       route={routeName}
                       params={slug ? { slug } : {}}
@@ -75,13 +75,13 @@ export default class Outils extends React.PureComponent {
                         <Category title={title} text={text} icon={icon} />
                       </Tile>
                     </Link>
-                  </Cell>
+                  </GridCell>
                 )
               )}
-              <Cell>
+              <GridCell>
                 <ConventionModal />
-              </Cell>
-            </Categories>
+              </GridCell>
+            </Grid>
           </Wrapper>
         </Container>
       </Section>

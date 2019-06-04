@@ -1,0 +1,27 @@
+---
+name: Categories
+menu: Component
+---
+import "@cdt/css";
+import { Playground, Props } from "docz";
+import {Category} from "../Category";
+
+# Categories
+
+<Playground>
+  # Basic category
+  <Category
+    icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+    title="Embauche et contrat"
+    text="c'est trop bien le texte"
+  />
+
+  # Small category
+  <Category
+    small
+    icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+    title="Embauche et contrat"
+    />
+</Playground>
+
+<Props of={Category} />

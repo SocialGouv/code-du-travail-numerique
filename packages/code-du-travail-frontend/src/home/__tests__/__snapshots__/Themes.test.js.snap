@@ -1,42 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Categories /> should render 1`] = `
-.c5 {
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
-  flex-basis: calc(100% / 4 - 2 * 0.625rem);
-  margin: 0.625rem;
-  text-align: center;
-}
-
-.c7 {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  height: 100%;
-}
-
-.c9 {
-  font-size: 0.9rem;
-  color: #0053b3;
-}
-
-.c8 {
-  width: 2.5rem;
-  display: inline-block;
-  margin: 1rem;
-}
-
+exports[`<Themes /> should render 1`] = `
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -85,6 +49,42 @@ exports[`<Categories /> should render 1`] = `
   margin: NaN;
 }
 
+.c5 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
+  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  margin: 0.625rem;
+  text-align: center;
+}
+
+.c7 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c9 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c8 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
 .c3 {
   text-align: center;
   margin-bottom: 2rem;
@@ -113,6 +113,20 @@ exports[`<Categories /> should render 1`] = `
   box-shadow: 0 0 2px 2px #bfdeff;
 }
 
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 @media (max-width:980px) {
   .c5 {
     -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
@@ -126,20 +140,6 @@ exports[`<Categories /> should render 1`] = `
     -webkit-flex-basis: calc(100% - 2 * 0.625rem);
     -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
     flex-basis: calc(100% - 2 * 0.625rem);
-  }
-}
-
-@media print {
-  .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c2 {
-    border: none;
-    padding: 0 5pt;
   }
 }
 

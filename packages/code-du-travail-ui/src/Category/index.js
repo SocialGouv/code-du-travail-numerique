@@ -1,26 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { box, breakpoints, colors, spacing, fonts } from "../theme";
+import { box, colors, spacing, fonts } from "../theme";
 import styled, { css } from "styled-components";
-
-/**
- * CategoryCell should be added to Categories and renamed Cell
- * since it's a generic grid component
- */
-const CategoryCell = styled.li`
-  flex-shrink: 1;
-  flex-grow: 0;
-  flex-basis: calc(100% / 4 - 2 * ${spacing.small});
-  @media (max-width: ${breakpoints.tablet}) {
-    flex-basis: calc(100% / 3 - 2 * ${spacing.small});
-  }
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-basis: calc(100% - 2 * ${spacing.small});
-  }
-  margin: ${spacing.small};
-  text-align: center;
-`;
-export default CategoryCell;
 
 export function Category({ title, text, icon, small = false }) {
   return (
