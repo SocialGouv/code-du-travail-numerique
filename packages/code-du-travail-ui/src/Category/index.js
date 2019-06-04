@@ -7,8 +7,8 @@ export function Category({ title, text, icon, small = false }) {
   return (
     <CategoryWrapper small={small}>
       <Icon small={small} src={icon} alt="" />
-      <Title small={small}>{title}</Title>
-      {text && <Text small={small}>{text}</Text>}
+      <Title>{title}</Title>
+      {text && <Text>{text}</Text>}
     </CategoryWrapper>
   );
 }
