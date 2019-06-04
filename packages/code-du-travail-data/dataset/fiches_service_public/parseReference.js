@@ -1,4 +1,3 @@
-
 // Do we really need this one ?
 const find = require("unist-util-find");
 const queryString = require("query-string");
@@ -9,20 +8,20 @@ const isConventionCollective = qs => qs.idConvention;
 const isCodeDuTravail = qs => qs.cidTexte === "LEGITEXT000006072050";
 const isJournalOfficiel = qs => (qs.cidText || "").includes("JORFTEXT");
 
-const getTextType = (qs) => {
+const getTextType = qs => {
   if (isCodeDuTravail(qs)) {
-    return "code-du-travail"
+    return "code-du-travail";
   }
   if (isConventionCollective(qs)) {
-    return "convention-collective"
+    return "convention-collective";
   }
   if (isJournalOfficiel(qs)) {
-    return "journal-officiel"
+    return "journal-officiel";
   }
-}
+};
 
- // resolve article.num in LEGI extract
- const getArticleNumFromId = id => {
+// resolve article.num in LEGI extract
+const getArticleNumFromId = id => {
   const article = find(cdt, node => node.data.id === id);
   return article && article.data.num;
 };
@@ -47,7 +46,7 @@ const createCCRef = (id, slug, title) => ({
   type: "convention-collective",
   id,
   slug,
-  title,
+  title
 });
 
 const createJORef = (id, title, url) => ({
@@ -55,32 +54,34 @@ const createJORef = (id, title, url) => ({
   id,
   title,
   url
-})
+});
 
 const parseReference = reference => {
-    const { URL: url } = reference._;
-    const qs = queryString.parse(url.split("?")[1]);
-    const type = getTextType(qs)
-    switch (type) {
-      case "code-du-travail":
-        if (qs.idArticle) {
-          // resolve related article num from CDT structure
-          const articleNum = getArticleNumFromId(qs.idArticle);
-          if(!articleNum) return [];
-          return [createCDTRef(articleNum)];
-        }
-        if (qs.idSectionTA) {
-          // resolve related articles from CDT structure
-          return getArticlesFromSection(qs.idSectionTA);
-        }
-      case "convention-collective":
-        const {id, slug, title} = kali.find(convention => convention.id === qs.idConvention);
-        return [createCCRef(id, slug, title)];
-      case "journal-officiel":
-        return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
-      default:
-        return [];
-    }
-  };
+  const { URL: url } = reference._;
+  const qs = queryString.parse(url.split("?")[1]);
+  const type = getTextType(qs);
+  switch (type) {
+    case "code-du-travail":
+      if (qs.idArticle) {
+        // resolve related article num from CDT structure
+        const articleNum = getArticleNumFromId(qs.idArticle);
+        if (!articleNum) return [];
+        return [createCDTRef(articleNum)];
+      }
+      if (qs.idSectionTA) {
+        // resolve related articles from CDT structure
+        return getArticlesFromSection(qs.idSectionTA);
+      }
+    case "convention-collective":
+      const { id, slug, title } = kali.find(
+        convention => convention.id === qs.idConvention
+      );
+      return [createCCRef(id, slug, title)];
+    case "journal-officiel":
+      return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
+    default:
+      return [];
+  }
+};
 
-  module.exports = parseReference;
+module.exports = parseReference;

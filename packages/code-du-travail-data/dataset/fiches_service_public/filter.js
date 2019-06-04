@@ -1,32 +1,32 @@
-const filter = fiches => fiches.filter(fiche => {
-  const arianeIDs =
-    fiche.$[0]
-      .$.find(el => el.name === "FilDAriane")
-      .$.reduce((ids, el) => {
-        if (el.name === "Niveau") ids.push(el._.ID);
-        return ids;
-      }, []);
+const filter = fiches =>
+  fiches.filter(fiche => {
+    const arianeIDs = fiche.$[0].$.find(
+      el => el.name === "FilDAriane"
+    ).$.reduce((ids, el) => {
+      if (el.name === "Niveau") ids.push(el._.ID);
+      return ids;
+    }, []);
 
     const matchFilDAriane = id => arianeIDs.includes(id);
 
-  if (excludeFicheId.some(matchFilDAriane)) {
+    if (excludeFicheId.some(matchFilDAriane)) {
+      return false;
+    }
+
+    if (excludeDossierId.some(matchFilDAriane)) {
+      // Il existe des fiches que l'on souhaite garder, alors que
+      // l'on ne souhaite pas garder son dossier parent
+      return includeFicheId.some(matchFilDAriane);
+    }
+
+    const includeList = includeThemeId.concat(includeDossierId, includeFicheId);
+    if (includeList.some(matchFilDAriane)) {
+      return true;
+    }
+
+    // Par défaut, on exclue
     return false;
-  }
-
-  if (excludeDossierId.some(matchFilDAriane)) {
-    // Il existe des fiches que l'on souhaite garder, alors que
-    // l'on ne souhaite pas garder son dossier parent
-    return includeFicheId.some(matchFilDAriane);
-  }
-
-  const includeList = includeThemeId.concat(includeDossierId, includeFicheId);
-  if (includeList.some(matchFilDAriane)) {
-    return true;
-  }
-
-  // Par défaut, on exclue
-  return false;
-})
+  });
 
 module.exports = filter;
 
@@ -46,7 +46,7 @@ const excludeDossierId = [
   "N515",
   "N379"
 ];
- const excludeFicheId = [
+const excludeFicheId = [
   "F10027",
   "F12416",
   "F13375",
@@ -117,7 +117,7 @@ const includeDossierId = [
   "N31391",
   "N31392"
 ];
- const includeThemeId = [
+const includeThemeId = [
   "N19806" // particulier / travail
 ];
 const includeFicheId = [
