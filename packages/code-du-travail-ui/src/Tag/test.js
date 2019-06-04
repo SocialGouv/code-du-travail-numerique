@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-testing-library";
+import { variants } from "../theme";
 import Tag from ".";
 
 describe("<Tag />", () => {
@@ -7,14 +8,11 @@ describe("<Tag />", () => {
     const { container } = render(<Tag>this is a tag </Tag>);
     expect(container).toMatchSnapshot();
   });
-  test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
-    ["primary"],
-    ["secondary"]
-  ])("it should render a %s tag", variant => {
+  test("should render a small tag", () => {
+    const { container } = render(<Tag size="small">this is a small tag </Tag>);
+    expect(container).toMatchSnapshot();
+  });
+  test.each(variants)("it should render a %s tag", variant => {
     const { container } = render(
       <Tag variant={variant}>this is a {variant} tag </Tag>
     );

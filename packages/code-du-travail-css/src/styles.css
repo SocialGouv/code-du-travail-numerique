@@ -22,7 +22,6 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "elements/_table.css";
 @import "elements/_text_level.css";
 
-@import "components/_badges.css";
 @import "components/_block_2_cols.css";
 @import "components/_breadcrumb.css";
 @import "components/_buttons.css";

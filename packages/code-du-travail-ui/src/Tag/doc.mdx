@@ -3,18 +3,25 @@ name: Tag
 menu: Component
 ---
 import { Playground, Props } from "docz";
+import Section from "../layout/Section"
+import { variants } from "../theme";
 import Tag from ".";
 
 # Tag
 
 <Playground>
-  <Tag>default tag</Tag>
-  <Tag variant="primary">primary tag</Tag>
-  <Tag variant="secondary">secondary tag</Tag>
-  <Tag variant="warning">warning tag</Tag>
-  <Tag variant="success">success tag</Tag>
-  <Tag variant="info">info tag</Tag>
-  <Tag variant="danger">danger tag</Tag>
+  {
+    () => ["default"].concat(variants).map((variant) => (
+      <div>
+        <Section>
+          <Tag variant={variant}>{variant} tag</Tag>
+        </Section>
+        <Section>
+          <Tag variant={variant} size="small">{variant} small tag</Tag>
+        </Section>
+      </div>
+    ))
+  }
 </Playground>
 
 <Props of={Tag} />

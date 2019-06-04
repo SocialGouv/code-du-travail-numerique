@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { darken } from "polished";
-import { box, colors, spacing } from "../theme";
+import { box, colors, spacing, variants } from "../theme";
 
 const Alert = ({ children, variant, ...props }) => (
   <StyledAlert variant={variant} {...props}>
@@ -11,15 +11,7 @@ const Alert = ({ children, variant, ...props }) => (
 );
 
 Alert.propTypes = {
-  variant: PropTypes.oneOf([
-    "default",
-    "primary",
-    "secondary",
-    "info",
-    "warning",
-    "danger",
-    "success"
-  ]),
+  variant: PropTypes.oneOf(["default"].concat(variants)),
   children: PropTypes.node.isRequired
 };
 
