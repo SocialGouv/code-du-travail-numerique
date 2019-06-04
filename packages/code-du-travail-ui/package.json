@@ -13,7 +13,7 @@
     "lint": "eslint src/**/*.js",
     "prepush": "yarn lint && yarn test",
     "prepublishOnly": "yarn build && yarn gh-pages",
-    "gh-pages": "yarn docz:build && gh-pages -d ./doc-build",
+    "gh-pages": "yarn docz:build && gh-pages -d .docz/dist",
     "start": "docz dev",
     "docz:build": "docz build",
     "test": "jest"
@@ -42,7 +42,7 @@
     "docz-plugin-css": "^0.11.0",
     "docz-theme-default": "1.0.0-rc.7",
     "eslint": "^5.13.0",
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
     "prettier": "^1.16.4",
