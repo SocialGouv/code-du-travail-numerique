@@ -241,12 +241,12 @@ const SearchPage = () => {
       <Section>
         <Container narrow>
           <Wrapper variant="light">
-            <Alert warning>
+            <Alert variant="warning">
               Ce site est en cours de construction, la fiabilité des réponses
               qui s’y trouvent ne sont pas garanties. L’ouverture officielle du
               site est prévue pour 2020.
             </Alert>
-            <Alert info>
+            <Alert variant="info">
               <p>
                 Le{" "}
                 <a href="https://github.com/SocialGouv/code-du-travail-numerique">

@@ -1,8 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepInfo /> should display error if contrat cdd 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  class="alert "
+  class="c0"
 >
   Vous ne pouvez pas obtenir d’indemnité de licenciement si vous êtes en CDD ou en contrat de travail temporaire. Sous certaines conditions, vous avez le droit à une 
   <a
@@ -16,12 +30,26 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
 `;
 
 exports[`<StepInfo /> should display error if fauteGrave 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  class="alert "
+  class="c0"
 >
   L’indemnité légale de licenciement n’est pas dûe en cas de faute grave.
   <br />
-  Vous reporter à la lettre de notification de licenciement, lorsqu’il est invoqué le motif de faute grave doit apparaître précisément dans le courrier.
+  Lorsqu’il est invoqué, le motif de faute grave doit apparaître précisément dans le courrier. Reportez vous à la lettre de notification de licenciement.
 </div>
 `;
 

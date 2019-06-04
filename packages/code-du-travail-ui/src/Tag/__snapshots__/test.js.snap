@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tag /> it should render a Tag danger 1`] = `
+exports[`<Tag /> it should render a danger tag 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -19,17 +18,16 @@ exports[`<Tag /> it should render a Tag danger 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     danger
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag info 1`] = `
+exports[`<Tag /> it should render a info tag 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -45,17 +43,16 @@ exports[`<Tag /> it should render a Tag info 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     info
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag primary 1`] = `
+exports[`<Tag /> it should render a primary tag 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -71,17 +68,16 @@ exports[`<Tag /> it should render a Tag primary 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     primary
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag secondary 1`] = `
+exports[`<Tag /> it should render a secondary tag 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -97,17 +93,16 @@ exports[`<Tag /> it should render a Tag secondary 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     secondary
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag success 1`] = `
+exports[`<Tag /> it should render a success tag 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -123,17 +118,16 @@ exports[`<Tag /> it should render a Tag success 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     success
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag warning 1`] = `
+exports[`<Tag /> it should render a warning tag 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -149,9 +143,9 @@ exports[`<Tag /> it should render a Tag warning 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     warning
-     
+     tag 
   </div>
 </div>
 `;
@@ -159,7 +153,6 @@ exports[`<Tag /> it should render a Tag warning 1`] = `
 exports[`<Tag /> should render 1`] = `
 .c0 {
   display: inline-block;
-  margin: 1rem;
   padding: 0.5rem 0.625rem;
   font-size: 0.8rem;
   font-weight: bold;
@@ -175,7 +168,30 @@ exports[`<Tag /> should render 1`] = `
   <div
     class="c0"
   >
-    this is an alert 
+    this is a tag 
+  </div>
+</div>
+`;
+
+exports[`<Tag /> should render a small tag 1`] = `
+.c0 {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    this is a small tag 
   </div>
 </div>
 `;

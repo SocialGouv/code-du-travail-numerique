@@ -1,87 +1,179 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Alert /> it should render an alert danger 1`] = `
+exports[`<Alert /> it should render a danger alert 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #f6bcc2;
+  border-color: #f08f99;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert alert__danger"
-    danger="true"
+    class="c0"
   >
-    this is an alert 
+    this is a 
     danger
-     
+     alert 
   </div>
 </div>
 `;
 
-exports[`<Alert /> it should render an alert info 1`] = `
+exports[`<Alert /> it should render a info alert 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #d7e8f9;
+  border-color: #abcff2;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert alert__info"
-    info="true"
+    class="c0"
   >
-    this is an alert 
+    this is a 
     info
-     
+     alert 
   </div>
 </div>
 `;
 
-exports[`<Alert /> it should render an alert primary 1`] = `
+exports[`<Alert /> it should render a primary alert 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: #005994;
+  border-color: #003a61;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert alert__primary"
-    primary="true"
+    class="c0"
   >
-    this is an alert 
+    this is a 
     primary
-     
+     alert 
   </div>
 </div>
 `;
 
-exports[`<Alert /> it should render an alert secondary 1`] = `
+exports[`<Alert /> it should render a secondary alert 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #d1d1d1;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert alert__secondary"
-    secondary="true"
+    class="c0"
   >
-    this is an alert 
+    this is a 
     secondary
-     
+     alert 
   </div>
 </div>
 `;
 
-exports[`<Alert /> it should render an alert success 1`] = `
+exports[`<Alert /> it should render a success alert 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #e0f2bd;
+  border-color: #ccea92;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert alert__success"
-    success="true"
+    class="c0"
   >
-    this is an alert 
+    this is a 
     success
-     
+     alert 
   </div>
 </div>
 `;
 
-exports[`<Alert /> it should render an alert warning 1`] = `
+exports[`<Alert /> it should render a warning alert 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert alert__warning"
-    warning="true"
+    class="c0"
   >
-    this is an alert 
+    this is a 
     warning
-     
+     alert 
   </div>
 </div>
 `;
 
 exports[`<Alert /> should render 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    class="alert "
+    class="c0"
   >
     this is an alert 
   </div>
