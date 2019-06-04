@@ -29,6 +29,27 @@ exports[`<Themes /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c7 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c9 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c8 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,27 +83,6 @@ exports[`<Themes /> should render 1`] = `
   flex-basis: calc(100% / 4 - 2 * 0.625rem);
   margin: 0.625rem;
   text-align: center;
-}
-
-.c7 {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  height: 100%;
-}
-
-.c9 {
-  font-size: 0.9rem;
-  color: #0053b3;
-}
-
-.c8 {
-  width: 2.5rem;
-  display: inline-block;
-  margin: 1rem;
 }
 
 .c3 {

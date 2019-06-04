@@ -3,18 +3,17 @@ name: Alert
 menu: Component
 ---
 import { Playground, Props } from "docz";
+import { variants } from "../theme";
 import Alert from ".";
 
 # Alert
 
 <Playground>
-  <Alert>Alert</Alert>
-  <Alert variant="primary">primary alert</Alert>
-  <Alert variant="secondary">secondary alert</Alert>
-  <Alert variant="warning">warning alert</Alert>
-  <Alert variant="success">success alert</Alert>
-  <Alert variant="info">info alert</Alert>
-  <Alert variant="danger">danger alert</Alert>
+  {
+    () => ["default"].concat(variants).map((variant) => (
+      <Alert variant={variant}>{variant} alert</Alert>
+    ))
+  }
 </Playground>
 
 <Props of={Alert} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-testing-library";
+import { variants } from "../theme";
 import Alert from ".";
 
 describe("<Alert />", () => {
@@ -8,14 +9,7 @@ describe("<Alert />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test.each([
-    ["success"],
-    ["info"],
-    ["warning"],
-    ["danger"],
-    ["primary"],
-    ["secondary"]
-  ])("it should render a %s alert", variant => {
+  test.each(variants)("it should render a %s alert", variant => {
     const { container } = render(
       <Alert variant={variant}>this is a {variant} alert </Alert>
     );
