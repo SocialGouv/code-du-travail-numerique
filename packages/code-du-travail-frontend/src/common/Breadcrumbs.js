@@ -28,12 +28,7 @@ const Breadcrumbs = ({ items = [] }) => {
 };
 
 Breadcrumbs.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      slug: PropTypes.string
-    })
-  )
+  items: PropTypes.arrayOf(PropTypes.node)
 };
 
 export { Breadcrumbs };

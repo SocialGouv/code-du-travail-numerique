@@ -1,0 +1,31 @@
+---
+name: Category
+menu: Component
+---
+import "@cdt/css";
+import { Playground, Props } from "docz";
+import {Category} from "../Category";
+
+# Categories
+<Props of={Category} />
+
+## Basic
+
+<Playground>
+  <Category
+    icon="/public/icons/remuneration.svg"
+    title="Embauche et contrat"
+    text="c'est trop bien le texte"
+  />
+</Playground>
+
+## Small category
+
+<Playground>
+  <Category
+    small
+    icon="/public/icons/remuneration.svg"
+    title="Embauche et contrat"
+    />
+</Playground>
+
