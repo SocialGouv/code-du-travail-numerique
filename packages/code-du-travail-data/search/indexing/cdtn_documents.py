@@ -11,7 +11,6 @@ from search import settings
 from search.indexing.strip_html import strip_html
 from search.extraction.code_du_travail.cleaned_tags.data import CODE_DU_TRAVAIL_DICT
 from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRAVAIL
-from search.extraction.themes_front.data import THEMES
 
 logger = settings.get_logger(__name__)
 logger.setLevel(logging.INFO)
@@ -114,14 +113,15 @@ def populate_cdtn_documents():
             'date': val.get('date'),
         })
 
-    logger.info("Load %s themes from dataset/themes-front.json", len(THEMES))
-    for val in THEMES:
-        CDTN_DOCUMENTS.append({
-            'source': 'themes',
-            'slug': val['slug'],
-            'text': val['text'],
-            'title': val['title'],
-        })
+    with open(os.path.join(settings.BASE_DIR, 'dataset/themes/themes.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from themes", len(data))
+        for val in data:
+            CDTN_DOCUMENTS.append({
+                'source': 'themes',
+                'slug': val['slug'],
+                'title': val['label'],
+            })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/faq.json')) as json_data:
         data = json.load(json_data)
