@@ -2,32 +2,19 @@
 name: Tag
 menu: Component
 ---
-import "@cdt/css";
 import { Playground, Props } from "docz";
 import Tag from ".";
 
 # Tag
 
 <Playground>
-  <Tag>Tag</Tag>
-  <br />
-  <br />
-  <Tag primary>#primary</Tag>
-  <br />
-  <br />
-  <Tag secondary>#secondary</Tag>
-  <br />
-  <br />
-  <Tag warning>#warning</Tag>
-  <br />
-  <br />
-  <Tag success>#success</Tag>
-  <br />
-  <br />
-  <Tag info>#info</Tag>
-  <br />
-  <br />
-  <Tag danger>#danger</Tag>
+  <Tag>default tag</Tag>
+  <Tag variant="primary">primary tag</Tag>
+  <Tag variant="secondary">secondary tag</Tag>
+  <Tag variant="warning">warning tag</Tag>
+  <Tag variant="success">success tag</Tag>
+  <Tag variant="info">info tag</Tag>
+  <Tag variant="danger">danger tag</Tag>
 </Playground>
 
 <Props of={Tag} />

@@ -11,7 +11,7 @@ const Disclaimer = () => {
   return (
     <Wrapper>
       <Toast
-        type="warning"
+        variant="warning"
         wide
         shadow
         animate="from-bottom"

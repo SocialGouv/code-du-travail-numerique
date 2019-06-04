@@ -961,11 +961,9 @@ exports[`<Answer /> should render 1`] = `
   >
     <div
       class="c29"
-      type="warning"
     >
       <div
         class="c30"
-        type="warning"
       >
         <svg
           fill="none"
@@ -2081,11 +2079,9 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   >
     <div
       class="c33"
-      type="warning"
     >
       <div
         class="c34"
-        type="warning"
       >
         <svg
           fill="none"
