@@ -22,12 +22,14 @@ describe("<Anciennete />", () => {
   });
 
   it("should display error if dateEntre after dateSortie", () => {
-    const { container, getByLabelText } = renderForm({
+    const { getByLabelText, getByText } = renderForm({
       dateEntree: "2018-04-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-03-01" } });
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(
+      getByText(/la date de sortie doit se situer après/i)
+    ).toMatchSnapshot();
   });
 
   it("should display error if dateEntree after dateNotif", () => {
@@ -49,21 +51,21 @@ describe("<Anciennete />", () => {
   });
 
   it("should display error if anciennté < 8mois", () => {
-    const { container, getByLabelText } = renderForm({
+    const { getByLabelText, getByText } = renderForm({
       dateEntree: "2018-04-02",
       dateNotification: "2018-09-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(getByText(/est dûe au-delà de 8 mois/i)).toMatchSnapshot();
   });
   it("should display error if anciennté < 12mois and licenciement in 2017", () => {
-    const { container, getByLabelText } = renderForm({
+    const { getByLabelText, getByText } = renderForm({
       dateEntree: "2017-04-02",
       dateNotification: "2017-09-02"
     });
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
-    expect(container.querySelector(".alert")).toMatchSnapshot();
+    expect(getByText(/est dûe au-delà de 12 mois/i)).toMatchSnapshot();
   });
 });

@@ -1,22 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Anciennete /> should display error if anciennté < 8mois 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  class="alert "
+  class="c0"
 >
   L’indemnité de licenciement est dûe au-delà de 8 mois d’ancienneté
 </div>
 `;
 
 exports[`<Anciennete /> should display error if anciennté < 12mois and licenciement in 2017 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  class="alert "
+  class="c0"
 >
   L’indemnité de licenciement est dûe au-delà de 12 mois d’ancienneté
 </div>
 `;
 
-exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] = `null`;
+exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] = `
+.c0 {
+  margin-left: 1.25rem;
+  color: #53657d;
+  font-weight: 600;
+}
+
+<span
+  class="c0"
+>
+  La date de sortie doit se situer après le
+  <strong>
+     
+    02 April 2018
+  </strong>
+</span>
+`;
 
 exports[`<Anciennete /> should display error if dateEntree after dateNotif 1`] = `null`;
 

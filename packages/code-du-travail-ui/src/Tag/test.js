@@ -4,7 +4,7 @@ import Tag from ".";
 
 describe("<Tag />", () => {
   test("should render", () => {
-    const { container } = render(<Tag>this is an alert </Tag>);
+    const { container } = render(<Tag>this is a tag </Tag>);
     expect(container).toMatchSnapshot();
   });
   test.each([
@@ -14,9 +14,9 @@ describe("<Tag />", () => {
     ["danger"],
     ["primary"],
     ["secondary"]
-  ])("it should render a Tag %s", variant => {
+  ])("it should render a %s tag", variant => {
     const { container } = render(
-      <Tag variant={variant}>this is a Tag {variant} </Tag>
+      <Tag variant={variant}>this is a {variant} tag </Tag>
     );
     expect(container).toMatchSnapshot();
   });

@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ErroField /> should render error 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <input
     data-testid="test"
@@ -8,7 +22,7 @@ exports[`<ErroField /> should render error 1`] = `
     value=""
   />
   <div
-    class="alert "
+    class="c0"
   >
     Champ requis
   </div>

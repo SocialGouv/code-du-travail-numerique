@@ -12,7 +12,7 @@ import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
 
 const BigError = ({ children }) => (
   <StyledContainer>
-    <Alert warning>{children}</Alert>
+    <Alert variant="warning">{children}</Alert>
   </StyledContainer>
 );
 

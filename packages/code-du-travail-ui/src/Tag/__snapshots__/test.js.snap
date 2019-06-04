@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tag /> it should render a Tag danger 1`] = `
+exports[`<Tag /> it should render a danger tag 1`] = `
 .c0 {
   display: inline-block;
   margin: 1rem;
@@ -19,14 +19,14 @@ exports[`<Tag /> it should render a Tag danger 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     danger
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag info 1`] = `
+exports[`<Tag /> it should render a info tag 1`] = `
 .c0 {
   display: inline-block;
   margin: 1rem;
@@ -45,14 +45,14 @@ exports[`<Tag /> it should render a Tag info 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     info
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag primary 1`] = `
+exports[`<Tag /> it should render a primary tag 1`] = `
 .c0 {
   display: inline-block;
   margin: 1rem;
@@ -71,14 +71,14 @@ exports[`<Tag /> it should render a Tag primary 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     primary
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag secondary 1`] = `
+exports[`<Tag /> it should render a secondary tag 1`] = `
 .c0 {
   display: inline-block;
   margin: 1rem;
@@ -97,14 +97,14 @@ exports[`<Tag /> it should render a Tag secondary 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     secondary
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag success 1`] = `
+exports[`<Tag /> it should render a success tag 1`] = `
 .c0 {
   display: inline-block;
   margin: 1rem;
@@ -123,14 +123,14 @@ exports[`<Tag /> it should render a Tag success 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     success
-     
+     tag 
   </div>
 </div>
 `;
 
-exports[`<Tag /> it should render a Tag warning 1`] = `
+exports[`<Tag /> it should render a warning tag 1`] = `
 .c0 {
   display: inline-block;
   margin: 1rem;
@@ -149,9 +149,9 @@ exports[`<Tag /> it should render a Tag warning 1`] = `
   <div
     class="c0"
   >
-    this is a Tag 
+    this is a 
     warning
-     
+     tag 
   </div>
 </div>
 `;
@@ -175,7 +175,7 @@ exports[`<Tag /> should render 1`] = `
   <div
     class="c0"
   >
-    this is an alert 
+    this is a tag 
   </div>
 </div>
 `;

@@ -16,7 +16,7 @@ const About = () => (
       <Container narrow>
         <Wrapper variant="light">
           <h1>À propos du code du travail numérique</h1>
-          <Alert info>
+          <Alert variant="info">
             Ce service public vous permet d’obtenir des réponses détaillées à
             des questions de droit de travail, ainsi que des fiches explicatives
             et les articles de loi correspondants.

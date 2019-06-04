@@ -133,7 +133,7 @@ const BigError = ({ children }) => (
       background: "var(--color-light-background)"
     }}
   >
-    <Alert warning>{children}</Alert>
+    <Alert variant="warning">{children}</Alert>
     <br />
     <br />
   </div>
