@@ -50,7 +50,7 @@ exports[`<Category /> should render small 1`] = `
     <img
       alt=""
       class="c1"
-      src="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+      src="/public/icons/remuneration.svg"
     />
     <h3
       class="c2"
@@ -100,7 +100,7 @@ exports[`<Category /> should render with default props 1`] = `
     <img
       alt=""
       class="c1"
-      src="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+      src="/public/icons/remuneration.svg"
     />
     <h3
       class="c2"

@@ -1,5 +1,5 @@
 ---
-name: Categories
+name: Category
 menu: Component
 ---
 import "@cdt/css";
@@ -7,21 +7,25 @@ import { Playground, Props } from "docz";
 import {Category} from "../Category";
 
 # Categories
+<Props of={Category} />
+
+## Basic
 
 <Playground>
-  # Basic category
   <Category
-    icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+    icon="/public/icons/remuneration.svg"
     title="Embauche et contrat"
     text="c'est trop bien le texte"
   />
+</Playground>
 
-  # Small category
+## Small category
+
+<Playground>
   <Category
     small
-    icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+    icon="/public/icons/remuneration.svg"
     title="Embauche et contrat"
     />
 </Playground>
 
-<Props of={Category} />

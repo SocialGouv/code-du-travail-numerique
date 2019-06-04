@@ -8,7 +8,7 @@ describe("<Category />", () => {
       <Category
         title="title"
         text="texte"
-        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+        icon="/public/icons/remuneration.svg"
       />
     );
     expect(container).toMatchSnapshot();
@@ -19,7 +19,7 @@ describe("<Category />", () => {
         small
         title="title"
         text="texte"
-        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+        icon="/public/icons/remuneration.svg"
       />
     );
     expect(container).toMatchSnapshot();
