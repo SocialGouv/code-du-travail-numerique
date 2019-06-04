@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Categories /> should render 1`] = `
+.c5 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
+  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  margin: 0.625rem;
+  text-align: center;
+}
+
+.c7 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c9 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c8 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,9 +65,68 @@ exports[`<Categories /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: NaN;
+}
+
 .c3 {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.c6 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.c6 > * {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c6:focus > *,
+.c6:active > *,
+.c6:hover > * {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 2px 2px #bfdeff;
+}
+
+@media (max-width:980px) {
+  .c5 {
+    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
+    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
+    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
+    flex-basis: calc(100% - 2 * 0.625rem);
+  }
 }
 
 @media print {
@@ -63,174 +158,202 @@ exports[`<Categories /> should render 1`] = `
         >
           Retrouvez nos réponses thématiques
         </h2>
-        <div
-          class="categories"
+        <ul
+          class="c4"
         >
-          <ul
-            class="categories__list "
+          <li
+            class="c5"
           >
-            <li
-              class="categories__list-item"
+            <a
+              class="c6"
+              href="/themes/1-recrutement-et-contrat-de-travail"
+              title="Recrutement et contrat de travail"
             >
-              <a
-                href="/themes/1-recrutement-et-contrat-de-travail"
-                title="Recrutement et contrat de travail"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Recrutement et contrat de travail"
-                    src="/static/assets/icons/hiring-1.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Recrutement et contrat de travail
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/hiring-1.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Recrutement et contrat de travail
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/2-salaire-et-remuneration"
+              title="Salaire et Rémunération"
             >
-              <a
-                href="/themes/2-salaire-et-remuneration"
-                title="Salaire et Rémunération"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Salaire et Rémunération"
-                    src="/static/assets/icons/coins.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Salaire et Rémunération
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/remuneration.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Salaire et Rémunération
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/3-temps-de-travail-et-conges"
+              title="Temps de travail et congés"
             >
-              <a
-                href="/themes/3-temps-de-travail-et-conges"
-                title="Temps de travail et congés"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Temps de travail et congés"
-                    src="/static/assets/icons/time.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Temps de travail et congés
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/time.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Temps de travail et congés
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/4-emploi-et-formation"
+              title="Emploi et formation"
             >
-              <a
-                href="/themes/4-emploi-et-formation"
-                title="Emploi et formation"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Emploi et formation"
-                    src="/static/assets/icons/certificate.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Emploi et formation
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/certificate.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Emploi et formation
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/5-sante%2C-securite-et-conditions-de-travail"
+              title="Santé, sécurité et conditions de travail"
             >
-              <a
-                href="/themes/5-sante%2C-securite-et-conditions-de-travail"
-                title="Santé, sécurité et conditions de travail"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Santé, sécurité et conditions de travail"
-                    src="/static/assets/icons/shield.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Santé, sécurité et conditions de travail
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/shield.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Santé, sécurité et conditions de travail
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/6-representation-du-personnel-et-negociation-collective"
+              title="Représentation du personnel et négociation collective"
             >
-              <a
-                href="/themes/6-representation-du-personnel-et-negociation-collective"
-                title="Représentation du personnel et négociation collective"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Représentation du personnel et négociation collective"
-                    src="/static/assets/icons/handshake.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Représentation du personnel et négociation collective
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/handshake.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Représentation du personnel et négociation collective
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/7-depart-de-lentreprise"
+              title="Départ de l'entreprise"
             >
-              <a
-                href="/themes/7-depart-de-lentreprise"
-                title="Départ de l'entreprise"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Départ de l'entreprise"
-                    src="/static/assets/icons/file-3.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Départ de l'entreprise
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li
-              class="categories__list-item"
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/file-3.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Départ de l'entreprise
+                </h3>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="/themes/8-conflits-au-travail-et-controle-de-la-reglementation"
+              title="Conflits au travail et contrôle de la réglementation"
             >
-              <a
-                href="/themes/8-conflits-au-travail-et-controle-de-la-reglementation"
-                title="Conflits au travail et contrôle de la réglementation"
+              <div
+                class="c7"
               >
-                <figure>
-                  <img
-                    alt="Conflits au travail et contrôle de la réglementation"
-                    src="/static/assets/icons/book_web.svg"
-                  />
-                </figure>
-                <div>
-                  <h3>
-                    Conflits au travail et contrôle de la réglementation
-                  </h3>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
+                <img
+                  alt=""
+                  class="c8"
+                  src="/static/assets/icons/book_web.svg"
+                />
+                <h3
+                  class="c9"
+                >
+                  Conflits au travail et contrôle de la réglementation
+                </h3>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

@@ -1,46 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Categories /> should render with default props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: NaN;
+}
+
 <div>
-  <div
-    class="categories"
-  >
-    <ul
-      class="categories__list "
-    />
-  </div>
+  <ul
+    class="c0"
+  />
 </div>
 `;
 
 exports[`<Categories /> should render with props 1`] = `
+.c1 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  -ms-flex-preferred-size: calc(100% / 4 - 2 * 0.625rem);
+  flex-basis: calc(100% / 4 - 2 * 0.625rem);
+  margin: 0.625rem;
+  text-align: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: NaN;
+}
+
+@media (max-width:980px) {
+  .c1 {
+    -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
+    -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
+    flex-basis: calc(100% / 3 - 2 * 0.625rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    -webkit-flex-basis: calc(100% - 2 * 0.625rem);
+    -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
+    flex-basis: calc(100% - 2 * 0.625rem);
+  }
+}
+
 <div>
-  <div
-    class="categories"
+  <ul
+    class="c0"
   >
-    <ul
-      class="categories__list "
+    <li
+      class="c1"
     >
-      <li
-        class="categories__list-item"
-      >
-        <strong>
-          titre 1
-        </strong>
-        <p>
-          contenu 1
-        </p>
-      </li>
-      <li
-        class="categories__list-item"
-      >
-        <strong>
-          titre 2
-        </strong>
-        <p>
-          contenu 2
-        </p>
-      </li>
-    </ul>
-  </div>
+      <strong>
+        titre 1
+      </strong>
+      <p>
+        contenu 1
+      </p>
+    </li>
+    <li
+      class="c1"
+    >
+      <strong>
+        titre 2
+      </strong>
+      <p>
+        contenu 2
+      </p>
+    </li>
+  </ul>
 </div>
 `;

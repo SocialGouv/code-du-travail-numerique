@@ -1,9 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "../../routes";
 import styled from "styled-components";
 
-import { Container, Categories, Section, theme, Wrapper } from "@cdt/ui";
+import {
+  Container,
+  Categories,
+  Category,
+  Cell,
+  Section,
+  theme,
+  Wrapper
+} from "@cdt/ui";
 import ConventionModal from "./ConventionModal";
 
 const outils = [
@@ -58,19 +65,22 @@ export default class Outils extends React.PureComponent {
                   slug,
                   hrefTitle
                 }) => (
-                  <OutilCard
-                    key={`${routeName}/${slug}`}
-                    data-route={routeName}
-                  >
-                    <Link route={routeName} params={slug ? { slug } : {}}>
-                      <a title={hrefTitle}>
-                        <Outil title={title} text={text} icon={icon} />
-                      </a>
+                  <Cell key={`${routeName}/${slug}`}>
+                    <Link
+                      route={routeName}
+                      params={slug ? { slug } : {}}
+                      passHref
+                    >
+                      <Tile title={hrefTitle}>
+                        <Category title={title} text={text} icon={icon} />
+                      </Tile>
                     </Link>
-                  </OutilCard>
+                  </Cell>
                 )
               )}
-              <ConventionModal />
+              <Cell>
+                <ConventionModal />
+              </Cell>
             </Categories>
           </Wrapper>
         </Container>
@@ -79,41 +89,26 @@ export default class Outils extends React.PureComponent {
   }
 }
 
-const { spacing } = theme;
+const { box, spacing, colors } = theme;
 
 const Title = styled.h2`
   text-align: center;
   margin-bottom: ${spacing.large};
 `;
 
-export const OutilCard = ({ small, ...props }) => (
-  <li
-    className={`categories__list-item ${(small &&
-      "categories__list-item--small") ||
-      ""}`}
-    {...props}
-  />
-);
-OutilCard.defaultProps = {
-  small: false,
-  icon: "/static/assets/icons/chat.svg"
-};
-const CardIcon = styled.img`
-  width: 2.5rem;
-  margin: 0 auto;
+const Tile = styled.a`
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  border-radius: ${box.borderRadius};
+  & > * {
+    transition: all 0.2s ease;
+  }
+  :focus > *,
+  :active > *,
+  :hover > * {
+    transform: scale(1.1);
+    border: 1px solid ${colors.focus};
+    box-shadow: 0 0 2px 2px ${colors.focusShadow};
+  }
 `;
-export const Outil = ({ title, text, icon }) => (
-  <React.Fragment>
-    <CardIcon src={icon} alt="" />
-    <h3>{title}</h3>
-    <p>{text}</p>
-  </React.Fragment>
-);
-
-Outil.propTypes = {
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  slug: PropTypes.string,
-  small: PropTypes.bool,
-  icon: PropTypes.string
-};

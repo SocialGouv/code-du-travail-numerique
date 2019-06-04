@@ -18,7 +18,7 @@ export { default as Button } from "./Button";
 export { default as Cards } from "./Cards";
 export { default as Card } from "./Card";
 export { default as Categories } from "./Categories";
-export { default as Category } from "./Category";
+export { default as Cell, Category } from "./Category";
 export { default as LargeLink } from "./LargeLink";
 export { default as SrOnly } from "./SrOnly";
 export { default as Tabs } from "./Tabs";

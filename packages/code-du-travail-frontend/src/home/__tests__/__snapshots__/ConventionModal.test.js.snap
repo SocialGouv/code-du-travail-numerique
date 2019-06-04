@@ -2,55 +2,90 @@
 
 exports[`<ConventionModal /> should render a button 1`] = `
 .c1 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c4 {
+  font-size: 0.9rem;
+  color: #4c5467;
+}
+
+.c3 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c2 {
   width: 2.5rem;
-  margin: 0 auto;
+  display: inline-block;
+  margin: 1rem;
 }
 
 .c0 {
-  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: inherit;
-  color: inherit;
+  background: transparent;
+  padding: 0%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
+  display: block;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.c0 > * {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c0:focus > *,
+.c0:active > *,
+.c0:hover > * {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 2px 2px #bfdeff;
 }
 
 <div>
-  <li
-    class="categories__list-item "
-    icon="/static/assets/icons/chat.svg"
+  <button
+    class="c0"
   >
-    <button
-      class="c0"
+    <div
+      class="c1"
     >
       <img
         alt=""
-        class="c1"
+        class="c2"
         src="/static/assets/icons/book_web.svg"
       />
-      <h3>
+      <h3
+        class="c3"
+      >
         Votre convention collective
       </h3>
-      <p>
+      <p
+        class="c4"
+      >
         Trouvez simplement la convention collective dont vous dépendez
       </p>
-    </button>
-  </li>
+    </div>
+  </button>
 </div>
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c2 {
+.c5 {
   position: fixed;
   top: 0;
   right: 0;
@@ -60,7 +95,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   overflow: auto;
 }
 
-.c3 {
+.c6 {
   position: relative;
   margin: 10vh auto;
   padding: 2rem;
@@ -72,7 +107,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   overflow-y: auto;
 }
 
-.c8 {
+.c11 {
   position: absolute;
   top: 0;
   right: 0;
@@ -86,25 +121,46 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c1 {
-  width: 2.5rem;
-  margin: 0 auto;
-}
-
-.c6 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
-}
-
-.c5 {
-  margin-top: 10px;
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
 }
 
 .c4 {
+  font-size: 0.9rem;
+  color: #4c5467;
+}
+
+.c3 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c2 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.c9 li[role="option"]:nth-child(2n + 1) {
+  background: #f7f7f7;
+}
+
+.c8 {
+  margin-top: 10px;
+}
+
+.c7 {
   color: #000;
   font-size: 1.2em;
   margin-top: 20px;
 }
 
-.c7 {
+.c10 {
   color: #666;
   font-size: 1em;
   font-weight: bold;
@@ -112,38 +168,49 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c0 {
-  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: inherit;
-  color: inherit;
+  background: transparent;
+  padding: 0%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
+  display: block;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.c0 > * {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c0:focus > *,
+.c0:active > *,
+.c0:hover > * {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 2px 2px #bfdeff;
 }
 
 @media (max-width:1200px) {
-  .c3 {
+  .c6 {
     width: 60vw;
   }
 }
 
 @media (max-width:980px) {
-  .c3 {
+  .c6 {
     width: 80vw;
   }
 }
 
 @media (max-width:600px) {
-  .c3 {
+  .c6 {
     margin: 1rem;
     max-height: calc(100vh - 2 * 1rem);
     width: calc(100% - 2 * 1rem);
@@ -151,7 +218,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c11 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -162,35 +229,38 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   <div
     aria-hidden="true"
   >
-    <li
-      class="categories__list-item "
-      icon="/static/assets/icons/chat.svg"
+    <button
+      class="c0"
     >
-      <button
-        class="c0"
+      <div
+        class="c1"
       >
         <img
           alt=""
-          class="c1"
+          class="c2"
           src="/static/assets/icons/book_web.svg"
         />
-        <h3>
+        <h3
+          class="c3"
+        >
           Votre convention collective
         </h3>
-        <p>
+        <p
+          class="c4"
+        >
           Trouvez simplement la convention collective dont vous dépendez
         </p>
-      </button>
-    </li>
+      </div>
+    </button>
   </div>
   <reach-portal>
     <div
-      class="c2"
+      class="c5"
       data-reach-dialog-overlay="true"
     >
       <div
         aria-modal="true"
-        class="c3"
+        class="c6"
         data-reach-dialog-content="true"
         tabindex="-1"
       >
@@ -200,13 +270,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           </h2>
           <div>
             <h3
-              class="c4"
+              class="c7"
             >
               Recherche par nom ou par identifiant
             </h3>
             Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
             <div
-              class="c5"
+              class="c8"
             >
               <div
                 aria-expanded="false"
@@ -226,14 +296,14 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                   value=""
                 />
                 <div
-                  class="c6"
+                  class="c9"
                   id="react-autowhatever-1"
                   role="listbox"
                 />
               </div>
             </div>
             <div
-              class="c7"
+              class="c10"
             >
               Comment trouver ma convention collective ?
             </div>
@@ -253,7 +323,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </li>
             </ul>
             <div
-              class="c7"
+              class="c10"
             >
               Quelle est la convention collective applicable ?
             </div>
@@ -266,13 +336,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
         </form>
         <form>
           <h3
-            class="c4"
+            class="c7"
           >
             Recherche par SIREN ou SIRET
           </h3>
           Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir votre convention collective :
           <div
-            class="c5"
+            class="c8"
           >
             <div
               aria-expanded="false"
@@ -292,7 +362,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 value=""
               />
               <div
-                class="c6"
+                class="c9"
                 id="react-autowhatever-1"
                 role="listbox"
               />
@@ -315,7 +385,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           </div>
         </form>
         <button
-          class="c8"
+          class="c11"
         >
           <svg
             fill="none"

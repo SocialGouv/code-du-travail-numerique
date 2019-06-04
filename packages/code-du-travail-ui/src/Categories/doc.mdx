@@ -4,29 +4,69 @@ menu: Component
 ---
 import "@cdt/css";
 import { Playground, Props } from "docz";
-import Category from "../Category";
+import Cell, {Category} from "../Category";
 import Categories from ".";
 
 # Categories
 
 <Playground>
   <Categories>
-    <Category
-      icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
-      title="Embauche et contrat"
-    />
-    <Category
-      icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/time.svg"
-      title="Durée de travail et congés"
-    />
-    <Category
-      icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/coins.svg"
-      title="Rémunération"
-    />
-    <Category
-      icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/shield.svg"
-      title="Santé et sécurité"
-    />
+    <Cell>
+      <Category
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+        title="Embauche et contrat"
+        text="c'est trop bien le texte"
+      />
+    </Cell>
+    <Cell>
+      <Category
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/time.svg"
+        title="Durée de travail et congés"
+      />
+    </Cell>
+    <Cell>
+      <Category
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/coins.svg"
+        title="Rémunération"
+      />
+    </Cell>
+    <Cell>
+      <Category
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/shield.svg"
+        title="Santé et sécurité"
+      />
+    </Cell>
+  </Categories>
+  # Small categories
+  <Categories>
+    <Cell>
+      <Category
+        small
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/handshake.svg"
+        title="Embauche et contrat"
+       />
+    </Cell>
+    <Cell>
+      <Category
+        small
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/time.svg"
+        title="Durée de travail et congés"
+      />
+    </Cell>
+    <Cell>
+      <Category
+        small
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/coins.svg"
+        title="Rémunération"
+      />
+    </Cell>
+    <Cell>
+      <Category
+        small
+        icon="https://rawgit.com/SocialGouv/code-du-travail-html/master/docs/assets/icons/shield.svg"
+        title="Santé et sécurité"
+      />
+    </Cell>
   </Categories>
 </Playground>
 

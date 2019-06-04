@@ -6,7 +6,8 @@ import { Link } from "../../routes";
 import {
   Container,
   Categories as CategoriesWrapper,
-  Category as CategoryItem,
+  Category,
+  Cell,
   Section,
   theme,
   Wrapper
@@ -14,7 +15,7 @@ import {
 
 const iconsMap = {
   1: "hiring-1.svg",
-  2: "coins.svg",
+  2: "remuneration.svg",
   3: "time.svg",
   4: "certificate.svg",
   5: "shield.svg",
@@ -31,17 +32,15 @@ export default class Categories extends React.Component {
         slug: PropTypes.string.isRequired
       }).isRequired
     ),
-    isRoot: PropTypes.bool,
     title: PropTypes.string
   };
 
   static defaultProps = {
-    isRoot: true,
     title: "Retrouvez nos réponses thématiques"
   };
 
   render() {
-    const { title, themes, isRoot } = this.props;
+    const { title, themes } = this.props;
     return (
       (themes.length && (
         <Section>
@@ -49,17 +48,23 @@ export default class Categories extends React.Component {
             <Wrapper>
               <Title>{title}</Title>
               <CategoriesWrapper>
-                {themes.map(({ id, slug, label }) => (
-                  <CategoryItem key={slug + label} small={!isRoot}>
-                    <Link route="themes" params={{ slug: slug || "/" }}>
-                      <a title={label}>
+                {themes.map(({ id, slug, label, parent }) => (
+                  <Cell key={slug + label}>
+                    <Link
+                      route="themes"
+                      params={{ slug: slug || "/" }}
+                      passHref
+                    >
+                      <Tile title={label}>
                         <Category
+                          small={parent}
                           title={label}
-                          icon={iconsMap[id] || undefined}
+                          icon={`/static/assets/icons/${iconsMap[id] ||
+                            "profiles.svg"}`}
                         />
-                      </a>
+                      </Tile>
                     </Link>
-                  </CategoryItem>
+                  </Cell>
                 ))}
               </CategoriesWrapper>
             </Wrapper>
@@ -70,30 +75,26 @@ export default class Categories extends React.Component {
     );
   }
 }
-
-const Category = ({ title, icon }) => (
-  <React.Fragment>
-    <figure>
-      <img src={`/static/assets/icons/${icon}`} alt={title} />
-    </figure>
-    <div>
-      <h3>{title}</h3>
-    </div>
-  </React.Fragment>
-);
-
-Category.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string
-};
-
-Category.defaultProps = {
-  icon: "profiles.svg"
-};
-
-const { spacing } = theme;
+const { box, spacing, colors } = theme;
 
 const Title = styled.h2`
   text-align: center;
   margin-bottom: ${spacing.large};
+`;
+
+const Tile = styled.a`
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  border-radius: ${box.borderRadius};
+  & > * {
+    transition: all 0.2s ease;
+  }
+  :focus > *,
+  :active > *,
+  :hover > * {
+    transform: scale(1.1);
+    border: 1px solid ${colors.focus};
+    box-shadow: 0 0 2px 2px ${colors.focusShadow};
+  }
 `;
