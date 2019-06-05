@@ -137,6 +137,36 @@ exports[`<StepIndemnite /> should render 1`] = `
         >
           Convention collective nationale des industries chimiques et connexes
         </option>
+        <option
+          value="1518"
+        >
+          Convention collective nationale de l'Animation
+        </option>
+        <option
+          value="0843"
+        >
+          Convention collective nationale de la Boulangerie-pâtisserie artisanale
+        </option>
+        <option
+          value="1351"
+        >
+          Convention collective nationale de la Prévention et sécurité
+        </option>
+        <option
+          value="1534"
+        >
+          Convention collective nationale Viandes industries commerces en gros
+        </option>
+        <option
+          value="0992"
+        >
+          Convention collective nationale Boucherie boucherie-charcuterie triperie
+        </option>
+        <option
+          value="2344"
+        >
+          Convention collective nationale de la Sidérurgie
+        </option>
       </select>
       
     </label>
