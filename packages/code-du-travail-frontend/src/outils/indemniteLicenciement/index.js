@@ -1,9 +1,11 @@
 import React, { useReducer } from "react";
 import PropTypes from "prop-types";
+import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
+
 import { StepReducer, getInitialSteps } from "./reducer";
 import { Wizard } from "./Wizard";
-import { OnChange } from "react-final-form-listeners";
+import { hasIndemniteLicenciement } from "./branches";
 
 function CalculateurIndemnite() {
   const initialSteps = getInitialSteps();
@@ -22,7 +24,7 @@ function CalculateurIndemnite() {
     </OnChange>,
     <OnChange key="rule-branche" name="branche">
       {async value => {
-        if (value) {
+        if (hasIndemniteLicenciement(value)) {
           const module = await import(`./ccn/${value}`);
           dispatch({ type: "add_branche", payload: module.steps });
         } else {
@@ -32,8 +34,8 @@ function CalculateurIndemnite() {
     </OnChange>
   ];
 
-  // when at the end, the form is submited
-  // whe reset the forms data
+  // when at the end, the form is submitted
+  // we reset the form data
   const onSubmit = () => {
     dispatch({
       type: "reset",
