@@ -23,7 +23,7 @@ describe("<Tabs />", () => {
   it("calls the right onSelect callback", () => {
     const onSelect = jest.fn();
     const { container } = render(<Tabs onSelect={onSelect} data={items} />);
-    const secondTab = container.querySelectorAll(".react-tabs__tab-list li")[1];
+    const secondTab = container.querySelectorAll("li")[1];
     fireEvent.click(secondTab);
     expect(onSelect).toHaveBeenCalledTimes(1);
   });
