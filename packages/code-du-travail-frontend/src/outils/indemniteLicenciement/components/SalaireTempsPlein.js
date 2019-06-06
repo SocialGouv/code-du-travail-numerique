@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
-import { theme } from "@cdt/ui";
+import { Table as UITable, theme } from "@cdt/ui";
 
 import { Input } from "../stepStyles";
 import { isNumber } from "../validators";
@@ -90,8 +90,7 @@ export { SalaireTempsPlein };
 
 const { colors, fonts, spacing } = theme;
 
-const Table = styled.table`
-  width: 100%;
+const Table = styled(UITable)`
   & tr > td:nth-child(2) {
     text-align: left;
     width: 70%;

@@ -7,26 +7,43 @@ import { colors } from "../theme";
 const OverflowWrapper = ({ children, shadowColor, ...props }) => {
   const scrollableElement = useRef(null);
   const [isAtFarLeft, setIsAtFarLeft] = useState(true);
-  const [isAtFarRight, setIsAtFarRight] = useState(false);
+  const [isAtFarRight, setIsAtFarRight] = useState(true);
 
-  function onScroll(event) {
-    const { offsetWidth, scrollLeft, scrollWidth } = event.target;
-    const scrolled = scrollLeft + offsetWidth;
-    if (scrollLeft !== 0) {
-      if (isAtFarLeft) setIsAtFarLeft(false);
+  useEffect(() => {
+    function onResize() {
+      const { offsetWidth, scrollWidth } = scrollableElement.current;
+      if (scrollWidth <= offsetWidth) {
+        if (!isAtFarLeft) setIsAtFarLeft(true);
+        if (!isAtFarRight) setIsAtFarRight(true);
+      } else {
+        onScroll();
+      }
+    }
+
+    function onScroll() {
+      const {
+        offsetWidth,
+        scrollLeft,
+        scrollWidth
+      } = scrollableElement.current;
+      const scrolled = scrollLeft + offsetWidth;
+      if (scrollLeft !== 0) {
+        if (isAtFarLeft) setIsAtFarLeft(false);
+      } else if (!isAtFarLeft) {
+        setIsAtFarLeft(true);
+      }
       if (scrolled !== scrollWidth) {
         if (isAtFarRight) setIsAtFarRight(false);
       } else if (!isAtFarRight) {
         setIsAtFarRight(true);
       }
-    } else if (!isAtFarLeft) {
-      setIsAtFarLeft(true);
     }
-  }
 
-  useEffect(() => {
+    onResize();
+    window.addEventListener("resize", onResize);
     scrollableElement.current.addEventListener("scroll", onScroll);
     return () => {
+      window.removeEventListener("resize", onResize);
       scrollableElement.current.removeEventListener("scroll", onScroll);
     };
   });
@@ -68,7 +85,7 @@ const ShadowContainer = styled.div`
     display: block;
     width: 4rem;
     pointer-events: none;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.3s linear;
     ${({ shadowColor }) => css`
       background: radial-gradient(
@@ -81,17 +98,17 @@ const ShadowContainer = styled.div`
   &:before {
     left: -2rem;
     ${({ hasShadowLeft }) =>
-      !hasShadowLeft &&
+      hasShadowLeft &&
       css`
-        opacity: 0;
+        opacity: 1;
       `}
   }
   &:after {
     right: -2rem;
     ${({ hasShadowRight }) =>
-      !hasShadowRight &&
+      hasShadowRight &&
       css`
-        opacity: 0;
+        opacity: 1;
       `}
   }
 `;
