@@ -16,7 +16,7 @@ function validateCCn(idcc) {
     return "Cette branche n’est pas encore intégrée.";
   }
   if (!hasIndemniteLicenciement(idcc)) {
-    return "Cette branche ne prévoit pas d’indemnité spécifique, c’est donc l’indemnité légale qui s’applique.";
+    return "Pour votre branche, le calcul de l’indemnité de licenciement se base sur l’indemnité légale de licenciement.";
   }
 }
 
@@ -62,8 +62,8 @@ function StepIndemnite({ form }) {
       </p>
       {branche && !hasIndemniteLicenciement(branche) && (
         <p>
-          Votre branche ne prévoit pas d’indemnité spécifique, c’est donc
-          l’indemnité légale qui s’applique.
+          Pour votre branche, le calcul de l’indemnité de licenciement se base
+          sur l’indemnité légale de licenciement.
         </p>
       )}
       <br />
