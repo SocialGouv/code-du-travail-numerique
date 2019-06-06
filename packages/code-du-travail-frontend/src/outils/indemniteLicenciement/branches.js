@@ -42,6 +42,21 @@ export const branches = [
     value: "2344",
     hasIndemniteLicenciement: false,
     label: "Convention collective nationale de la Sidérurgie"
+  },
+  {
+    value: "0029",
+    hasIndemniteLicenciement: false,
+    label: "Etablissements privés d'hospitalisation (FEHAP)"
+  },
+  {
+    value: "1596",
+    hasIndemniteLicenciement: false,
+    label: "Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)"
+  },
+  {
+    value: "1597",
+    hasIndemniteLicenciement: false,
+    label: "Ouvriers du bâtiment (entreprises de plus 10 salariés)"
   }
 ];
 
