@@ -22,6 +22,7 @@ const getKnownQuery = (query, excludeSources = []) => {
   }
 };
 
+// builds facets manually
 const makeFacets = refs =>
   refs.reduce((a, c) => {
     const source = c._source.source;
