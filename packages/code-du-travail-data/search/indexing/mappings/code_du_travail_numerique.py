@@ -6,7 +6,7 @@ code_du_travail_numerique_mapping = {
         },
         # The local document slug
         'slug': {
-            'type': 'keyword',
+            'type': 'text',
         },
         # The source URL
         'url': {
