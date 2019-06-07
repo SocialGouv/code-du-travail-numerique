@@ -99,7 +99,7 @@ function parseDom(dom, url) {
   const articleChildren = $$(article, "*");
   articleChildren
     .filter(el => el.getAttribute("id"))
-    .forEach(function(el, index) {
+    .forEach(function(el) {
       if (el.tagName === "H3") {
         const subSection = {
           title: el.textContent.trim(),
