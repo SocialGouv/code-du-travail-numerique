@@ -28,9 +28,6 @@ class Table extends React.PureComponent {
       return columns[columnIndex]._.type === ROW_HEADER;
     };
 
-    //colspan = fusionHorizontale
-    // rowspan = fusionVerticale
-
     const handleSpan = el => {
       let colspan = 1;
       let rowspan = 1;
