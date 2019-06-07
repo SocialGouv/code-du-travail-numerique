@@ -22,7 +22,7 @@ stages:
 - "Registration"
 - "Deploy"
 - "Notify Finished Deployment"
-- "Delete Pods"
+- "Delete K8S Objects"
 
 
 #
@@ -201,11 +201,11 @@ Deploy @cdtn/frontend (prod):
   - master
 
 #######################################
-###           DELETE PODS           ###
+###       DELETE K8S OBJECTS        ###
 #######################################
 
-delete-pods:
-  stage: "Delete Pods"
+delete-k8s-objects:
+  stage: "Delete K8S Objects"
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
@@ -214,6 +214,6 @@ delete-pods:
   before_script:
   - /apps/create-kubeconfig.sh
   script:
-  - python3 k8s/scripts/delete-pods.py
+  - python3 k8s/scripts/delete-k8s-objects.py
   only:
   - master

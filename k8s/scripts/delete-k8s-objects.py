@@ -11,7 +11,7 @@ def get_active_branches():
     if active_branch and not active_branch.startswith('*') and active_branch.strip() != 'origin/master' and active_branch.strip() != 'origin/HEAD -> origin/master':
       active_branch = active_branch.replace('origin/','').replace('/','-').strip()
       active_hash_branch = hashlib.sha1(active_branch.strip().encode())
-      active_branche_list.append(active_hash_branch.hexdigest()[:5])
+      active_branche_list.append(active_hash_branch.hexdigest()[:7])
   return active_branche_list
 
 def get_active_k8s_tags():
