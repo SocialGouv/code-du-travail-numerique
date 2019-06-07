@@ -4,6 +4,7 @@ const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
 const getFacetsBody = require("./facets.elastic");
+const getKnownQuery = require("./search.known");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
@@ -24,11 +25,19 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
+  const excludeSources = (ctx.request.query.excludeSources || "").split(",");
+
+  // shortcut ES if we find a known query
+  const knownQueryResult = getKnownQuery(query, excludeSources);
+
+  if (knownQueryResult) {
+    ctx.body = knownQueryResult;
+    return;
+  }
+
   // we add 1 to maxResults in case we have a snippet document in the results
   // we filter results to remove snippet document from main results
   const size = Math.min(ctx.request.query.size || MAX_RESULTS + 1, 100);
-
-  const excludeSources = (ctx.request.query.excludeSources || "").split(",");
 
   const body = getSearchBody({ query, size, excludeSources });
   const facetBody = getFacetsBody({ query });
