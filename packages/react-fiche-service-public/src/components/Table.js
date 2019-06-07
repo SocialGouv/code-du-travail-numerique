@@ -16,7 +16,7 @@ class Table extends React.PureComponent {
     const { data, headingLevel } = this.props;
 
     const title = data.$.find(child => child.name === "Titre");
-    const headingRow = data.$.find(
+    const headingRows = data.$.filter(
       child => child.name === "Rangée" && child._.type === "header"
     );
     const rows = data.$.filter(
@@ -28,35 +28,53 @@ class Table extends React.PureComponent {
       return columns[columnIndex]._.type === ROW_HEADER;
     };
 
+    //colspan = fusionHorizontale
+    // rowspan = fusionVerticale
+
+    const handleSpan = el => {
+      let colspan = 1;
+      let rowspan = 1;
+      if (el._) {
+        colspan = el._.fusionHorizontale || 1;
+        rowspan = el._.fusionVerticale || 1;
+      }
+      return {
+        colspan,
+        rowspan
+      };
+    };
+
     return (
       <UITable>
         {title && <caption>{getText(title)}</caption>}
-        {headingRow && (
+        {headingRows.length && (
           <thead>
-            <tr>
-              {headingRow.$.map((th, columnIndex) => (
-                <th key={columnIndex}>
-                  {th.$ && (
-                    <ElementBuilder
-                      data={ignoreParagraph(th)}
-                      headingLevel={headingLevel}
-                    />
-                  )}
-                </th>
-              ))}
-            </tr>
+            {headingRows.map((tr, rowIndex) => (
+              <tr key={rowIndex}>
+                {tr.$.map((th, columnIndex) => (
+                  <th key={columnIndex} {...handleSpan(th)}>
+                    {th.$ && (
+                      <ElementBuilder
+                        data={ignoreParagraph(th)}
+                        headingLevel={headingLevel}
+                      />
+                    )}
+                  </th>
+                ))}
+              </tr>
+            ))}
           </thead>
         )}
         <tbody>
           {rows.map((tr, rowIndex) => (
             <tr key={rowIndex}>
               {tr.$.map((td, columnIndex) => {
-                if (!td.$) {
-                  return null;
-                }
                 const Cell = isHeaderCell(columnIndex) ? "th" : "td";
+                if (!td.$) {
+                  return <Cell />;
+                }
                 return (
-                  <Cell key={columnIndex}>
+                  <Cell key={columnIndex} {...handleSpan(td)}>
                     <ElementBuilder
                       data={ignoreParagraph(td)}
                       headingLevel={headingLevel + 1}
