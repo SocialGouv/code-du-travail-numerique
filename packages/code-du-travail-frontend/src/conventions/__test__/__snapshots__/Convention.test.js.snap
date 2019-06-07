@@ -105,6 +105,73 @@ exports[`<Convention /> should render 1`] = `
   display: none;
 }
 
+.c9 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c9:before,
+.c9:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c9:before {
+  left: -2rem;
+}
+
+.c9:after {
+  right: -2rem;
+}
+
+.c10 {
+  overflow-x: auto;
+}
+
+.c11 {
+  text-align: left;
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c11 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c11 td,
+.c11 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c11 th {
+  background: #f5f7fa;
+}
+
+.c11 thead,
+.c11 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f5f7fa;
+}
+
+.c11 tfoot {
+  vertical-align: top;
+}
+
 .c8 {
   margin-bottom: 2rem;
 }
@@ -320,26 +387,36 @@ exports[`<Convention /> should render 1`] = `
       id="react-tabs-1"
       role="tabpanel"
     >
-      <table>
-        <tbody>
-          <tr>
-            <th>
-              IDCC
-            </th>
-            <td>
-              1747
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Date de publication originale
-            </th>
-            <td>
-              01/11/1993
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div
+        class="c9"
+      >
+        <div
+          class="c10"
+        >
+          <table
+            class="c11"
+          >
+            <tbody>
+              <tr>
+                <th>
+                  IDCC
+                </th>
+                <td>
+                  1747
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Date de publication originale
+                </th>
+                <td>
+                  01/11/1993
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <p>
         <a
           href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691"

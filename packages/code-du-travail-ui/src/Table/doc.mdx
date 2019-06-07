@@ -1,0 +1,35 @@
+---
+name: Table
+menu: Component
+---
+import { Playground, Props } from "docz";
+import Table from ".";
+
+# Table
+
+<Playground>
+  <Table>
+    <caption>Caption</caption>
+    <thead>
+      <tr>
+        <th>Table header 1</th>
+        <th>Table header 2</th>
+        <th>Table header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Line 1</th>
+        <td>some data</td>
+        <td>some data</td>
+      </tr>
+      <tr>
+        <th>Line 2</th>
+        <td>some data</td>
+        <td>some data</td>
+      </tr>
+    </tbody>
+  </Table>
+</Playground>
+
+<Props of={Table} />
