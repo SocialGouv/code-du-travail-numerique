@@ -46,6 +46,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c7 {
   text-align: left;
   empty-cells: show;
+  background-color: #fff;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #c9d3df;
@@ -64,7 +65,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 }
 
 .c7 th {
-  background: #f5f7fa;
+  background: #ebeff3;
 }
 
 .c7 thead,

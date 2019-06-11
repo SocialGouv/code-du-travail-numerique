@@ -36,6 +36,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 .c3 {
   text-align: left;
   empty-cells: show;
+  background-color: #fff;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #c9d3df;
@@ -54,7 +55,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
 }
 
 .c3 th {
-  background: #f5f7fa;
+  background: #ebeff3;
 }
 
 .c3 thead,
@@ -226,6 +227,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 .c3 {
   text-align: left;
   empty-cells: show;
+  background-color: #fff;
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #c9d3df;
@@ -244,7 +246,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
 }
 
 .c3 th {
-  background: #f5f7fa;
+  background: #ebeff3;
 }
 
 .c3 thead,

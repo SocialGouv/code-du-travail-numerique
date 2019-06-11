@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
 import OverflowWrapper from "../OverflowWrapper";
 import { colors, spacing } from "../theme";
 
@@ -19,6 +20,7 @@ export default Table;
 const StyledTable = styled.table`
   text-align: left;
   empty-cells: show;
+  background-color: ${colors.white};
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid ${colors.elementBorder};
@@ -29,6 +31,14 @@ const StyledTable = styled.table`
     font-style: italic;
   }
 
+  ${props =>
+    props.stripes &&
+    css`
+      tr:nth-child(even) {
+        background-color: ${colors.elementBackground}};
+      }
+    `}
+
   td,
   th {
     padding: ${spacing.small} ${spacing.base};
@@ -36,7 +46,7 @@ const StyledTable = styled.table`
   }
 
   th {
-    background: ${colors.elementBackground};
+    background: ${colors.lighterGrey};
   }
 
   thead,
