@@ -167,6 +167,21 @@ exports[`<StepIndemnite /> should render 1`] = `
         >
           Convention collective nationale de la Sidérurgie
         </option>
+        <option
+          value="0029"
+        >
+          Etablissements privés d'hospitalisation (FEHAP)
+        </option>
+        <option
+          value="1596"
+        >
+          Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)
+        </option>
+        <option
+          value="1597"
+        >
+          Ouvriers du bâtiment (entreprises de plus 10 salariés)
+        </option>
       </select>
       
     </label>
