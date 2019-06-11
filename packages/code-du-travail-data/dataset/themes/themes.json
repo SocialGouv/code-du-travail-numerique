@@ -223,8 +223,8 @@
   },
   {
     "id": 38,
-    "label": "Fin d'un CDD / CTT",
-    "slug": "38-fin-dun-cdd-/-ctt",
+    "label": "Fin d'un CDD - CTT",
+    "slug": "38-fin-dun-cdd-ctt",
     "parent": "7-depart-de-lentreprise"
   },
   {
@@ -829,8 +829,8 @@
   },
   {
     "id": 139,
-    "label": "Femmes enceintes / Maternité",
-    "slug": "139-femmes-enceintes-/-maternite",
+    "label": "Femmes enceintes - Maternité",
+    "slug": "139-femmes-enceintes-maternite",
     "parent": "32-travailleurs-et-secteurs-specifiques"
   },
   {
@@ -1309,7 +1309,7 @@
   },
   {
     "id": 220,
-    "label": "Périodes de mise en situation en milieu professionnel - PMSMP",
+    "label": "Périodes de mise en situation en milieu professionnel (PMSMP)",
     "slug": "220-periodes-de-mise-en-situation-en-milieu-professionnel-pmsmp",
     "parent": "88-dispositifs-dacces-a-la-formation"
   },
@@ -1399,13 +1399,13 @@
   },
   {
     "id": 235,
-    "label": "La préparation opérationnelle à l’emploi collective - POEC",
+    "label": "La préparation opérationnelle à l’emploi collective (POEC)",
     "slug": "235-la-preparation-operationnelle-a-lemploi-collective-poec",
     "parent": "91-formation-pour-les-demandeurs-demploi"
   },
   {
     "id": 236,
-    "label": "Périodes de mise en situation en milieu professionnel - PMSMP",
+    "label": "Périodes de mise en situation en milieu professionnel (PMSMP)",
     "slug": "236-periodes-de-mise-en-situation-en-milieu-professionnel-pmsmp",
     "parent": "91-formation-pour-les-demandeurs-demploi"
   },

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Modal } from "@cdt/ui";
-import { Outil, OutilCard } from "./Outils";
+import { Category, Modal, theme } from "@cdt/ui";
 import { ConventionForm } from "../common/ConventionForm";
 import { CompanyForm } from "../common/CompanyForm";
 import {
@@ -31,9 +30,9 @@ class ConventionModal extends React.Component {
   render() {
     const { modalIsOpen } = this.state;
     return (
-      <OutilCard>
+      <>
         <Button onClick={this.openModal}>
-          <Outil
+          <Category
             title="Votre convention collective"
             text="Trouvez simplement la convention collective dont vous dépendez"
             icon="/static/assets/icons/book_web.svg"
@@ -43,20 +42,33 @@ class ConventionModal extends React.Component {
           <ConventionForm onSearch={searchIdcc} />
           <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
         </Modal>
-      </OutilCard>
+      </>
     );
   }
 }
 
 export default ConventionModal;
 
+const { box, colors } = theme;
+
 const Button = styled.button`
-  background: transparent;
+  appearance: none;
   border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: inherit;
-  color: inherit;
+  background: transparent;
+  padding: 0%;
+  text-decoration: none;
   cursor: pointer;
+  display: block;
+  height: 100%;
+  border-radius: ${box.borderRadius};
+  & > * {
+    transition: all 0.2s ease;
+  }
+  :focus > *,
+  :active > *,
+  :hover > * {
+    transform: scale(1.1);
+    border: 1px solid ${colors.focus};
+    box-shadow: 0 0 2px 2px ${colors.focusShadow};
+  }
 `;

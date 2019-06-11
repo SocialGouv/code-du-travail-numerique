@@ -14,7 +14,7 @@ import { Feedback } from "../common/Feedback";
 
 const BigError = ({ children }) => (
   <StyledContainer>
-    <Alert warning>{children}</Alert>
+    <Alert variant="warning">{children}</Alert>
   </StyledContainer>
 );
 

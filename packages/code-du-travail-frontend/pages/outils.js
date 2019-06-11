@@ -6,13 +6,13 @@ import { Alert, Container } from "@cdt/ui";
 
 import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
-import CalculateurIndemnite from "../src/outils/indemniteLicenciement";
+import { CalculateurIndemnite } from "../src/outils/indemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
 import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
 
 const BigError = ({ children }) => (
   <StyledContainer>
-    <Alert warning>{children}</Alert>
+    <Alert variant="warning">{children}</Alert>
   </StyledContainer>
 );
 

@@ -1,10 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchResults/> should render no results 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: #005994;
+  border-color: #003a61;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    category="primary"
-    class="alert "
+    class="c0"
   >
     <p>
       Nous n’avons pas trouvé de résultat pour votre recherche.
@@ -14,10 +27,23 @@ exports[`<SearchResults/> should render no results 1`] = `
 `;
 
 exports[`<SearchResults/> should render results 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #fff;
+  background: #005994;
+  border-color: #003a61;
+}
+
+.c0> *:last-child {
+  margin-bottom: 0;
+}
+
 <div>
   <div
-    category="primary"
-    class="alert "
+    class="c0"
   >
     <p>
       Nous n’avons pas trouvé de résultat pour votre recherche.

@@ -1,24 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Category /> should render small 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  font-size: 0.9rem;
+  color: #4c5467;
+}
+
+.c2 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c1 {
+  width: 2rem;
+  display: inline-block;
+  margin: 0.2rem 0.625rem 0.2rem 0;
+}
+
 <div>
-  <li
-    class="categories__list-item categories__list-item--small"
+  <div
+    class="c0"
   >
-    <strong>
-      titre
-    </strong>
-    <p>
-      contenu
+    <img
+      alt=""
+      class="c1"
+      src="/public/icons/remuneration.svg"
+    />
+    <h3
+      class="c2"
+    >
+      title
+    </h3>
+    <p
+      class="c3"
+    >
+      texte
     </p>
-  </li>
+  </div>
 </div>
 `;
 
 exports[`<Category /> should render with default props 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c3 {
+  font-size: 0.9rem;
+  color: #4c5467;
+}
+
+.c2 {
+  font-size: 0.9rem;
+  color: #0053b3;
+}
+
+.c1 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
 <div>
-  <li
-    class="categories__list-item"
-  />
+  <div
+    class="c0"
+  >
+    <img
+      alt=""
+      class="c1"
+      src="/public/icons/remuneration.svg"
+    />
+    <h3
+      class="c2"
+    >
+      title
+    </h3>
+    <p
+      class="c3"
+    >
+      texte
+    </p>
+  </div>
 </div>
 `;

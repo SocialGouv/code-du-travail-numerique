@@ -1,0 +1,16 @@
+ {
+  "values": {
+    "contrat": "cdi",
+    "fauteGrave": false,
+    "inaptitude": false,
+    "hasAbsenceProlonge": false,
+    "hasTempsPartiel": false,
+    "hasSameSalaire": true,
+    "salaire": 2000,
+    "dataEntree": "2016-06-01",
+    "dateSortie": "2019-01-02",
+    "dateNotification": "2018-12-01",
+    "anciennete": 2.5,
+    "groupe": "I"
+  }
+}

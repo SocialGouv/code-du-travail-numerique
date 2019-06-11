@@ -271,7 +271,7 @@ exports[`<Answer /> should render 1`] = `
 
 .c16 {
   margin-left: 1rem;
-  color: #adb9c9;
+  color: #53657d;
   font-size: 0.9rem;
   display: inline-block;
 }
@@ -961,11 +961,9 @@ exports[`<Answer /> should render 1`] = `
   >
     <div
       class="c29"
-      type="warning"
     >
       <div
         class="c30"
-        type="warning"
       >
         <svg
           fill="none"
@@ -1015,6 +1013,7 @@ exports[`<Answer /> should render 1`] = `
         class="c33"
       >
         <button
+          aria-label="Fermer"
           aria-pressed="false"
           class="c34"
         >
@@ -1326,7 +1325,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c20 {
   margin-left: 1rem;
-  color: #adb9c9;
+  color: #53657d;
   font-size: 0.9rem;
   display: inline-block;
 }
@@ -2080,11 +2079,9 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   >
     <div
       class="c33"
-      type="warning"
     >
       <div
         class="c34"
-        type="warning"
       >
         <svg
           fill="none"
@@ -2134,6 +2131,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         class="c37"
       >
         <button
+          aria-label="Fermer"
           aria-pressed="false"
           class="c38"
         >

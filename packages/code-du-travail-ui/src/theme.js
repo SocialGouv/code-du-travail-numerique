@@ -1,3 +1,12 @@
+export const variants = [
+  "primary",
+  "secondary",
+  "info",
+  "success",
+  "warning",
+  "danger"
+];
+
 export const colors = {
   black: "#0c0c0e",
   almostBlack: "#26353f",

@@ -75,7 +75,7 @@ class FeedbackForm extends React.Component {
       sourceType: this.props.sourceType,
       subject: question,
       title: this.props.title,
-      url: this.props.url,
+      url: document.location.href,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent
     };
     try {
@@ -94,10 +94,12 @@ class FeedbackForm extends React.Component {
   getAlert() {
     switch (this.state.status) {
       case "sent":
-        return <Alert success>Message bien envoyé !</Alert>;
+        return <Alert variant="success">Message bien envoyé !</Alert>;
 
       case "error":
-        return <Alert warning>Impossible d’envoyer votre message</Alert>;
+        return (
+          <Alert variant="warning">Impossible d’envoyer votre message</Alert>
+        );
 
       default:
         return null;

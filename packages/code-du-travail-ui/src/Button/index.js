@@ -1,27 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { animations, box, colors, fonts, spacing } from "../theme";
+import { animations, box, colors, fonts, spacing, variants } from "../theme";
 import { darken, lighten, transparentize } from "polished";
 
 // We don't want the variant prop to be passed down to the button
 // eslint-disable-next-line
-const Button = ({ pressed, variant, onClick, ...props }) => {
-  return <button aria-pressed={pressed} {...props} onClick={onClick} />;
+const Button = ({ children, pressed, variant, onClick, ...props }) => {
+  return (
+    <button aria-pressed={pressed} {...props} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf([
-    "default",
-    "primary",
-    "secondary",
-    "info",
-    "warning",
-    "danger",
-    "success",
-    "icon",
-    "link"
-  ]),
+  variant: PropTypes.oneOf(["default", "icon", "link"].concat(variants)),
   onClick: PropTypes.func,
   pressed: PropTypes.bool
 };
@@ -47,8 +41,8 @@ const StyledButton = styled(Button)`
   transition: background-color ${animations.transitionTiming} ease;
 
   ${props => {
-    let backgroundColor = colors.blueLight;
     let color = colors.primaryText;
+    let backgroundColor = colors.blueLight;
     if (props.variant === "link") {
       return css`
         padding: 0;
@@ -84,7 +78,7 @@ const StyledButton = styled(Button)`
       `;
     }
 
-    if (props.variant && props.variant !== "default") {
+    if (props.variant !== "default") {
       backgroundColor = colors[`${props.variant}Background`];
       color = colors[`${props.variant}Text`];
     }

@@ -1,150 +1,60 @@
-import React from "react";
+import React, { useReducer } from "react";
 import PropTypes from "prop-types";
-import { Alert, Button, Container, theme } from "@cdt/ui";
-import dynamic from "next/dynamic";
-import getIndemnite from "./indemnite";
-import { Stepper } from "./Stepper";
-import { initialData, steps } from "./casGeneral";
-import { ResultDetail } from "./ResultDetail";
-import styled from "styled-components";
+import { Section, Container, Wrapper } from "@cdt/ui";
+import { StepReducer, getInitialSteps } from "./reducer";
+import { Wizard } from "./Wizard";
+import { OnChange } from "react-final-form-listeners";
 
-const containerRef = React.createRef();
+function CalculateurIndemnite() {
+  const initialSteps = getInitialSteps();
+  const [steps, dispatch] = useReducer(StepReducer, initialSteps);
 
-class CalculateurIndemnite extends React.Component {
-  static propTypes = {
-    q: PropTypes.string
-  };
-
-  state = {
-    ...initialData,
-    steps: [...steps]
-  };
-
-  ResultCC = null;
-
-  componentOnChange = ({ key, value }) => {
-    this.setState({
-      [key]: value
-    });
-    if (key === "anciennete") {
-      this.setState(prevState => ({
-        salaires: {
-          ...prevState.salaires,
-          derniersMois: Array.from({ length: Math.min(value, 12) }).fill(0)
+  /**
+   * The rules defined here allows to manage additionnal steps to the form
+   */
+  const rules = [
+    <OnChange key="rule-same-salaire" name="hasSameSalaire">
+      {value =>
+        value === false
+          ? dispatch({ type: "add_primes" })
+          : dispatch({ type: "remove_primes" })
+      }
+    </OnChange>,
+    <OnChange key="rule-branche" name="branche">
+      {async value => {
+        if (value) {
+          const module = await import(`./ccn/${value}`);
+          dispatch({ type: "add_branche", payload: module.steps });
+        } else {
+          dispatch({ type: "remove_branche" });
         }
-      }));
-    }
-    if (key === "convention") {
-      if (value.hasCC) {
-        const { ccId } = value;
-        import(`./ccn/${ccId}`).then(module => {
-          this.setState({
-            steps: steps.concat(module.steps),
-            calculConvention: module.getIndemnite,
-            ...module.initialData
-          });
-        });
-        this.ResultCC = dynamic(import(`./ccn/Result_${ccId}`));
-      } else {
-        this.setState({
-          steps: steps.slice(),
-          calculConvention: null
-        });
-      }
-    }
+      }}
+    </OnChange>
+  ];
+
+  // when at the end, the form is submited
+  // whe reset the forms data
+  const onSubmit = () => {
+    dispatch({
+      type: "reset",
+      payload: getInitialSteps()
+    });
   };
 
-  resetState = callback => {
-    const initialkeys = Object.keys(initialData);
-    const newState = Object.keys(this.state).reduce((state, key) => {
-      if (initialkeys.indexOf(key) === -1) {
-        state[key] = undefined;
-      } else {
-        state[key] = initialData[key];
-      }
-      return state;
-    }, {});
-    this.setState(newState, callback);
-  };
-
-  render() {
-    const indemniteData = getIndemnite(this.state);
-
-    const hasIndemniteCC =
-      indemniteData.calculCC && indemniteData.calculCC.indemnite;
-
-    const showResult = indemniteData.errors.length === 0;
-    let resultComponent;
-    if (
-      hasIndemniteCC &&
-      indemniteData.calculCC.indemnite > indemniteData.indemnite
-    ) {
-      resultComponent = <this.ResultCC {...indemniteData.calculCC} />;
-    } else {
-      resultComponent = <ResultDetail {...indemniteData} />;
-    }
-
-    return (
+  return (
+    <Section>
       <Container>
-        <Title>Calculer son indemnité de licenciement</Title>
-        <WidgetContainer ref={containerRef}>
-          <Stepper
-            containerRef={containerRef}
-            initialStep={0}
-            steps={this.state.steps}
-            renderRestart={({ restart }) => (
-              <div style={{ textAlign: "center" }}>
-                <Button
-                  onClick={() => {
-                    this.resetState(restart);
-                  }}
-                  variant="primary"
-                >
-                  recommencer
-                </Button>
-              </div>
-            )}
-            render={({ Component, key, onNext, onPrevious }) => (
-              <Component
-                key={key}
-                value={this.state[key]}
-                onChange={value => this.componentOnChange({ key, value })}
-                onNext={onNext}
-                onPrevious={onPrevious}
-                nextDisabled={indemniteData.errors.length > 0}
-              />
-            )}
-          />
-          <br />
-          {indemniteData.errors.length > 0 && (
-            <StyledContainer>
-              {indemniteData.errors.map(error => (
-                <Alert {...{ [error.type]: true }} key={error.message}>
-                  <div dangerouslySetInnerHTML={{ __html: error.message }} />
-                </Alert>
-              ))}
-            </StyledContainer>
-          )}
-        </WidgetContainer>
-        {showResult && resultComponent}
+        <Wrapper variant="light">
+          <h1>Calculateur d&apos;indemnités de licenciement</h1>
+          <Wizard steps={steps} onSubmit={onSubmit} rules={rules} />
+        </Wrapper>
       </Container>
-    );
-  }
+    </Section>
+  );
 }
 
-export default CalculateurIndemnite;
+CalculateurIndemnite.propTypes = {
+  initialState: PropTypes.object
+};
 
-const { fonts } = theme;
-
-const Title = styled.h2`
-  text-align: center;
-`;
-
-const StyledContainer = styled(Container)`
-  font-size: ${fonts.sizeH2};
-`;
-
-const WidgetContainer = styled.div`
-  max-width: 48rem;
-  margin: 0 auto;
-`;
+export { CalculateurIndemnite };

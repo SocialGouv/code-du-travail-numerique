@@ -1,140 +1,97 @@
-/*
-calcul de l'indemnite de licenciement ou rupture conventionnelle
-*/
+import { isAfter } from "date-fns";
+import { round, sum } from "./math";
+/**
+ * Compute the salaire de Réference
+ * used in the indemnité calculus
+ */
+function getSalaireRef({
+  hasTempsPartiel = false,
+  hasSameSalaire = false,
+  salaires = [],
+  salaire,
+  salairePeriods,
+  primes = [],
+  anciennete
+}) {
+  const primeValues = primes.map(a => a.prime);
+  const salaryValues = salaires.map(a => a.salary);
 
-const sum = arr => arr.reduce((sum, c) => sum + parseFloat(c), 0);
-const round = fl => parseInt(fl * 100) / 100;
+  let moyenneSalaires = 0;
+  let moyenne3DerniersMoisSalaires = 0;
 
-function getSalaireRef(salaires, primes, anciennete) {
-  let salaireRef = 0;
-  let moyenne3DerniersMois;
-  let moyenneSalaires;
-
-  if (salaires.isPartiel) {
-    salaireRef =
-      salaires.periods.reduce(
-        (salaire, period) =>
-          salaire +
-          (parseInt(period.salaire, 10) * parseInt(period.duree, 10)) /
-            anciennete,
-        0
-      ) +
-      (primes || 0) / anciennete;
+  // calcul du salaire de reference
+  if (hasTempsPartiel) {
+    return salairePeriods.reduce(
+      (salaire, period) =>
+        salaire +
+        (parseInt(period.salary, 10) * parseInt(period.duration, 10)) /
+          12 /
+          anciennete,
+      0
+    );
   } else {
-    moyenneSalaires =
-      (sum(salaires.derniersMois) + (primes || 0)) /
-        salaires.derniersMois.length || 0;
+    moyenneSalaires = hasSameSalaire
+      ? salaire
+      : sum(salaryValues) / salaires.length;
 
-    moyenne3DerniersMois =
-      (sum(salaires.derniersMois.slice(0, 3)) +
-        (primes / salaires.derniersMois.length) * 3) /
-      3;
-
-    salaireRef = Math.max(moyenneSalaires, moyenne3DerniersMois);
+    moyenne3DerniersMoisSalaires = hasSameSalaire
+      ? salaire
+      : (sum(salaryValues.slice(0, 3)) -
+          sum(primeValues) +
+          sum(primeValues) / 12) /
+        3;
+    return Math.max(moyenneSalaires, moyenne3DerniersMoisSalaires);
   }
-  return { salaireRef, moyenneSalaires, moyenne3DerniersMois };
 }
-const getIndemnite = data => {
-  const {
-    isR12342,
-    salaires,
-    primes,
-    fauteGrave,
-    anciennete,
-    calculConvention,
-    inaptitude
-  } = data;
 
+/**
+ * Compute the indemnité calculus
+ */
+function getIndemnite({
+  salaireRef,
+  inaptitude = false,
+  anciennete,
+  dateNotification
+}) {
   let formula;
 
-  const { salaireRef, moyenneSalaires, moyenne3DerniersMois } = getSalaireRef(
-    salaires,
-    primes,
-    anciennete
-  );
+  const avant27Sep2017 = isAfter(new Date("2017-09-27"), dateNotification);
 
   let indemnite = 0;
-  const isSmallAnciennete = anciennete / 12 <= 10; // 10 years
-  if (isR12342) {
+  const isSmallAnciennete = anciennete <= 10; // 10 years
+  if (avant27Sep2017 && anciennete >= 1) {
     if (isSmallAnciennete) {
-      indemnite = ((1 / 5) * salaireRef * anciennete) / 12;
+      indemnite = (1 / 5) * salaireRef * anciennete;
       formula = `(1/5 * ${round(salaireRef)} * ${anciennete}) / 12`;
     } else {
       indemnite =
-        ((1 / 5) * salaireRef * anciennete) / 12 +
-        (2 / 15) * salaireRef * (anciennete / 12 - 10);
+        (1 / 5) * salaireRef * anciennete +
+        (2 / 15) * salaireRef * (anciennete - 10);
       formula = `(1/5  * ${round(salaireRef)} * 10) + (2/5 * ${round(
         salaireRef
-      )} * (${round(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete)} - 10))`;
     }
-  } else {
+  } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {
-      indemnite = ((1 / 4) * salaireRef * anciennete) / 12;
+      indemnite = (1 / 4) * salaireRef * anciennete;
       formula = `(1/4 * ${round(salaireRef)} * ${anciennete}) / 12`;
     } else {
       indemnite =
-        (1 / 4) * salaireRef * 10 +
-        (1 / 3) * salaireRef * (anciennete / 12 - 10);
+        (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
       formula = `(1/4 * ${round(salaireRef)} * 10) + (1/3 * ${round(
         salaireRef
-      )} * (${round(anciennete / 12)} - 10))`;
+      )} * (${round(anciennete)} - 10))`;
     }
   }
-  if (inaptitude) {
+  if (inaptitude && indemnite > 0) {
     indemnite *= 2;
     formula += "* 2";
   }
 
-  const errors = [];
-
-  if (anciennete < 12 && isR12342) {
-    errors.push({
-      type: "warning",
-      message:
-        "L'indemnité de licenciement est dûe au-delà d'un an d'ancienneté."
-    });
-    indemnite = 0;
-  }
-
-  if (anciennete < 8 && !isR12342) {
-    errors.push({
-      type: "warning",
-      message:
-        "L'indemnité de licenciement est dûe au-delà de 8mois d'ancienneté."
-    });
-    indemnite = 0;
-  }
-
-  if (fauteGrave) {
-    indemnite = 0;
-    errors.push({
-      type: "warning",
-      message: `L’indemnité légale de licenciement n'est pas dûe en cas de faute grave.
-        <br/><br/>
-        Vous reporter à la lettre de notification de licenciement, lorsqu'il est invoqué le motif de faute grave doit apparaître précisément dans le courrier.`
-    });
-  }
-
-  let calculCC;
-
-  if (calculConvention) {
-    calculCC = calculConvention({ ...data, indemnite });
-  }
   return {
-    isSmallAnciennete,
-    anciennete,
-    inaptitude,
-    isR12342,
-    moyenneSalaires,
-    moyenne3DerniersMois,
-    salaireRef,
-    salaires,
-    indemnite,
-    errors,
-    formula,
-    calculCC
+    indemnite: round(indemnite),
+    formula
   };
-};
+}
 
-export default getIndemnite;
-export { getSalaireRef };
+export { getIndemnite, getSalaireRef, round };

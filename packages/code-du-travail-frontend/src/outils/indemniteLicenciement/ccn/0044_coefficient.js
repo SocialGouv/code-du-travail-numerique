@@ -1,4 +1,4 @@
-export const coefficient = [
+export const coefficients = [
   {
     groupe: "I",
     coefficient: "130",

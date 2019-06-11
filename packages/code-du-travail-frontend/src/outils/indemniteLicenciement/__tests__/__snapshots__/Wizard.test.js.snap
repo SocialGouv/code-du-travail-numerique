@@ -1,0 +1,872 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Wizard /> should call navigate the previous step when click on précédent 1`] = `
+.c0 {
+  border-bottom: 1px solid #adb9c9;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0053b3;
+}
+
+.c3 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #adb9c9;
+}
+
+.c2 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #0053b3;
+}
+
+.c4 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #adb9c9;
+}
+
+.c5 {
+  margin: 2.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+  margin-left: auto;
+}
+
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c6:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c6[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+<div>
+  <form>
+    <div
+      class="c0"
+    >
+      <span
+        class="c1"
+      >
+        <span
+          class="c2"
+        >
+          1
+        </span>
+        First Step
+      </span>
+      <span
+        class="c3"
+      >
+        <span
+          class="c4"
+        >
+          2
+        </span>
+        Second Step
+      </span>
+    </div>
+    <p>
+      Premiere Etape
+    </p>
+    <div
+      class="c5"
+    >
+      <button
+        aria-pressed="false"
+        class="c6"
+      >
+        Suivant
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<Wizard /> should call navigate to the second step when click on Suivant 1`] = `
+.c0 {
+  border-bottom: 1px solid #adb9c9;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #adb9c9;
+}
+
+.c3 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0053b3;
+}
+
+.c4 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #0053b3;
+}
+
+.c2 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #adb9c9;
+}
+
+.c5 {
+  margin: 2.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  margin-right: auto;
+}
+
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c6:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c6[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+<div>
+  <form>
+    <div
+      class="c0"
+    >
+      <span
+        class="c1"
+      >
+        <span
+          class="c2"
+        >
+          1
+        </span>
+        First Step
+      </span>
+      <span
+        class="c3"
+      >
+        <span
+          class="c4"
+        >
+          2
+        </span>
+        Second Step
+      </span>
+    </div>
+    <p>
+      Deuxieme Etape 
+      <button>
+        Submit
+      </button>
+    </p>
+    <div
+      class="c5"
+    >
+      <button
+        aria-pressed="false"
+        class="c6"
+        type="button"
+      >
+        Précédent
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<Wizard /> should handle initialData 1`] = `
+.c0 {
+  border-bottom: 1px solid #adb9c9;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0053b3;
+}
+
+.c2 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #0053b3;
+}
+
+.c3 {
+  margin: 2.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div>
+  <form>
+    <div
+      class="c0"
+    >
+      <span
+        class="c1"
+      >
+        <span
+          class="c2"
+        >
+          1
+        </span>
+        final form
+      </span>
+    </div>
+    <input
+      name="firstName"
+      value="lionel"
+    />
+    <div
+      class="c3"
+    />
+  </form>
+</div>
+`;
+
+exports[`<Wizard /> should inject rules component 1`] = `
+.c0 {
+  border-bottom: 1px solid #adb9c9;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0053b3;
+}
+
+.c2 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #0053b3;
+}
+
+.c3 {
+  margin: 2.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div>
+  <form>
+    <p>
+      Rule
+    </p>
+    <div
+      class="c0"
+    >
+      <span
+        class="c1"
+      >
+        <span
+          class="c2"
+        >
+          1
+        </span>
+        final form
+      </span>
+    </div>
+    <input
+      name="firstName"
+      value="lionel"
+    />
+    <div
+      class="c3"
+    />
+  </form>
+</div>
+`;
+
+exports[`<Wizard /> should render a step 1`] = `
+.c0 {
+  border-bottom: 1px solid #adb9c9;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0053b3;
+}
+
+.c3 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #adb9c9;
+}
+
+.c2 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #0053b3;
+}
+
+.c4 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #adb9c9;
+}
+
+.c5 {
+  margin: 2.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+  margin-left: auto;
+}
+
+.c6:not([disabled]):hover,
+.c6:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c6:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c6[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):hover,
+.c6[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c6[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+<div>
+  <form>
+    <div
+      class="c0"
+    >
+      <span
+        class="c1"
+      >
+        <span
+          class="c2"
+        >
+          1
+        </span>
+        First Step
+      </span>
+      <span
+        class="c3"
+      >
+        <span
+          class="c4"
+        >
+          2
+        </span>
+        Second Step
+      </span>
+    </div>
+    <p>
+      Premiere Etape
+    </p>
+    <div
+      class="c5"
+    >
+      <button
+        aria-pressed="false"
+        class="c6"
+      >
+        Suivant
+      </button>
+    </div>
+  </form>
+</div>
+`;

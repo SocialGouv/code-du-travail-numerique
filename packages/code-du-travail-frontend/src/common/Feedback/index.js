@@ -35,7 +35,7 @@ function Feedback({
       query,
       title,
       sourceType,
-      url,
+      url: document.location.href,
       userAgent: typeof navigator !== "undefined" && navigator.userAgent
     });
     setSatisfaction(answer);

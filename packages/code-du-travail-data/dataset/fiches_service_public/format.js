@@ -12,19 +12,6 @@ function getText(element = { text: "" }) {
   return "";
 }
 
-function getTags(element = { text: "" }) {
-  if (element.type === "text") {
-    return [element.$.trim()];
-  }
-  if (element.$) {
-    return element.$.map(child => getTags(child)).reduce(
-      (acc, val) => acc.concat(val),
-      []
-    ); // flatten the array
-  }
-  return [];
-}
-
 const format = fiche => {
   if (!fiche.$[0].name === "Publication") return null;
 
@@ -68,7 +55,7 @@ const format = fiche => {
     references_juridiques,
     title,
     description,
-    url,
+    url
   };
 };
 

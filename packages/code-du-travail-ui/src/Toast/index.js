@@ -15,13 +15,13 @@ const Toast = ({
   className,
   onRemove,
   timeout,
-  type,
+  variant,
   wide
 }) => {
   let timer = null;
   let Icon = IconInfo;
-  if (type === "warning") Icon = IconWarning;
-  if (type === "success") Icon = IconSuccess;
+  if (variant === "warning") Icon = IconWarning;
+  if (variant === "success") Icon = IconSuccess;
 
   useEffect(() => {
     if (timer) {
@@ -40,17 +40,17 @@ const Toast = ({
   return (
     <StyledToast
       animate={animate}
-      type={type}
+      variant={variant}
       wide={wide}
       className={className}
     >
-      <IconWrapper type={type}>
+      <IconWrapper variant={variant}>
         <Icon />
       </IconWrapper>
       <Content role="alert">{children}</Content>
       {onRemove ? (
         <ButtonWrapper>
-          <Button variant="icon" onClick={onRemove}>
+          <Button variant="icon" aria-label="Fermer" onClick={onRemove}>
             <IconClose />
           </Button>
         </ButtonWrapper>
@@ -61,7 +61,7 @@ const Toast = ({
 
 Toast.propTypes = {
   className: PropTypes.string,
-  type: PropTypes.oneOf(["warning", "success", "info"]),
+  variant: PropTypes.oneOf(["warning", "success", "info"]),
   wide: PropTypes.bool,
   shadow: PropTypes.bool,
   animate: PropTypes.oneOf([
@@ -77,7 +77,7 @@ Toast.propTypes = {
 
 Toast.defaultProps = {
   wide: false,
-  type: "info",
+  variant: "info",
   animate: null,
   onRemove: null
 };
@@ -96,7 +96,7 @@ const StyledToast = styled.div`
   border-radius: ${box.borderRadius};
   ${props => {
     let animation = "none";
-    const borderColor = colors[`${props.type}Background`];
+    const borderColor = colors[`${props.variant}Background`];
     if (props.animate) {
       if (props.animate === "from-top") {
         animation = css`
@@ -134,15 +134,8 @@ const IconWrapper = styled.div`
   font-size: ${fonts.sizeH1};
 
   ${props => {
-    let backgroundColor = colors.infoBackground;
-    if (props.type === "warning") {
-      backgroundColor = colors.warningBackground;
-    }
-    if (props.type === "success") {
-      backgroundColor = colors.successBackground;
-    }
     return css`
-      background-color: ${backgroundColor};
+      background-color: ${colors[`${props.variant}Background`]};
     `;
   }}
 `;

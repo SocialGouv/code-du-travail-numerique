@@ -8,7 +8,7 @@ import { Link } from "../routes";
 import Search from "../src/search/Search";
 import { SearchQuery } from "../src/search/SearchQuery";
 
-import Categories from "../src/home/Categories";
+import Themes from "../src/home/Themes";
 import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
@@ -85,7 +85,7 @@ class Theme extends React.Component {
         <Breadcrumbs items={breadcrumbs} />
         {theme.children.length > 0 && (
           <Section variant="white">
-            <Categories
+            <Themes
               isRoot={isRootTheme}
               title={isRootTheme ? undefined : null}
               themes={theme.children}
@@ -133,7 +133,7 @@ const BigError = ({ children }) => (
       background: "var(--color-light-background)"
     }}
   >
-    <Alert warning>{children}</Alert>
+    <Alert variant="warning">{children}</Alert>
     <br />
     <br />
   </div>

@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepPrimes /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.c6 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: center;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c5 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c7 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c8 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.c8:focus,
+.c8:hover,
+.c8:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c9:focus,
+.c9:hover,
+.c9:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p
+      class="c1"
+    >
+      Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois ?
+    </p>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+      >
+        <input
+          checked=""
+          name="hasPrimes"
+          type="radio"
+          value="true"
+        />
+        <span>
+          Oui
+        </span>
+      </label>
+      <label
+        class="c3"
+      >
+        <input
+          name="hasPrimes"
+          type="radio"
+          value="false"
+        />
+        <span>
+          Non
+        </span>
+      </label>
+    </div>
+    <br />
+    <br />
+    <p>
+      Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
+    </p>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+      >
+        <input
+          class="c6"
+          name="primes[0].prime"
+          size="10"
+          value="3000"
+        />
+        <span
+          aria-hidden="true"
+          class="c7"
+        >
+          €
+        </span>
+      </div>
+      <button
+        aria-pressed="false"
+        class="c8"
+        type="button"
+      >
+        Supprimer
+      </button>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c9"
+      type="button"
+    >
+      Ajouter une prime
+    </button>
+  </div>
+</div>
+`;

@@ -3,7 +3,7 @@ import Head from "next/head";
 import getConfig from "next/config";
 import Search from "../src/search/Search";
 import { HomeLayout } from "../src/layout/HomeLayout";
-import Categories from "../src/home/Categories";
+import Themes from "../src/home/Themes";
 import Outils from "../src/home/Outils";
 import fetch from "isomorphic-unfetch";
 
@@ -21,7 +21,7 @@ const Home = ({ data: { themes } }) => (
       />
     </Head>
     <Search />
-    <Categories themes={themes} />
+    <Themes themes={themes} />
     <Outils />
   </HomeLayout>
 );

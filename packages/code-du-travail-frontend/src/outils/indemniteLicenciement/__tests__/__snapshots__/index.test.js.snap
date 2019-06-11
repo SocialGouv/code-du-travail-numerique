@@ -1,0 +1,442 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CalculateurIndemnite /> should render 1`] = `
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  padding: 1.25rem 0;
+}
+
+.c2 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #fff;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c10 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c8 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c3 {
+  border-bottom: 1px solid #adb9c9;
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c4 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0053b3;
+}
+
+.c6 {
+  text-align: left;
+  -webkit-flex-basis: 130px;
+  -ms-flex-preferred-size: 130px;
+  flex-basis: 130px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #adb9c9;
+}
+
+.c5 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #0053b3;
+}
+
+.c7 {
+  border-radius: 49%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin: 0.5rem 0.625rem;
+  margin-left: 0;
+  color: #fff;
+  background-color: #adb9c9;
+}
+
+.c11 {
+  margin: 2.5em 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c12 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+  margin-left: auto;
+}
+
+.c12:not([disabled]):hover,
+.c12:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c12:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c12[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c12[aria-pressed="true"]:not([disabled]):hover,
+.c12[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c12[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h1>
+          Calculateur d'indemnités de licenciement
+        </h1>
+        <form>
+          <div
+            class="c3"
+          >
+            <span
+              class="c4"
+            >
+              <span
+                class="c5"
+              >
+                1
+              </span>
+              Informations générales
+            </span>
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+              >
+                2
+              </span>
+              Ancienneté
+            </span>
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+              >
+                3
+              </span>
+              Salaires
+            </span>
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+              >
+                4
+              </span>
+              Indemnité légale
+            </span>
+          </div>
+          <div
+            class="c1"
+          >
+            <p
+              class="c8"
+            >
+              Quel est votre type de contrat ?
+            </p>
+            <div
+              class="c9"
+            >
+              <label
+                class="c10"
+              >
+                <input
+                  name="contrat"
+                  type="radio"
+                  value="cdd"
+                />
+                <span>
+                  Contrat à durée determiné (CDD) ou contrat d’intérim
+                </span>
+              </label>
+              <label
+                class="c10"
+              >
+                <input
+                  name="contrat"
+                  type="radio"
+                  value="cdi"
+                />
+                <span>
+                  Contrat à durée indeterminé (CDI)
+                </span>
+              </label>
+            </div>
+            <p
+              class="c8"
+            >
+              Êtes-vous licencié(e) pour faute grave ou lourde ?
+            </p>
+            <div
+              class="c9"
+            >
+              <label
+                class="c10"
+              >
+                <input
+                  name="fauteGrave"
+                  type="radio"
+                  value="true"
+                />
+                <span>
+                  Oui
+                </span>
+              </label>
+              <label
+                class="c10"
+              >
+                <input
+                  name="fauteGrave"
+                  type="radio"
+                  value="false"
+                />
+                <span>
+                  Non
+                </span>
+              </label>
+            </div>
+            <p
+              class="c8"
+            >
+              Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
+            </p>
+            <div
+              class="c9"
+            >
+              <label
+                class="c10"
+              >
+                <input
+                  name="inaptitude"
+                  type="radio"
+                  value="true"
+                />
+                <span>
+                  Oui
+                </span>
+              </label>
+              <label
+                class="c10"
+              >
+                <input
+                  name="inaptitude"
+                  type="radio"
+                  value="false"
+                />
+                <span>
+                  Non
+                </span>
+              </label>
+            </div>
+          </div>
+          <div
+            class="c11"
+          >
+            <button
+              aria-pressed="false"
+              class="c12"
+              disabled=""
+            >
+              Suivant
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
