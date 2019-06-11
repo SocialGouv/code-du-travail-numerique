@@ -20,15 +20,8 @@ exports[`<ConventionTexte /> should render 1`] = `
 }
 
 .c8 {
-  font-size: 22px;
-  margin-top: 40px;
-}
-
-.c9 {
+  margin-top: 0;
   font-size: 20px;
-}
-
-.c10 {
   font-size: 16px;
 }
 
@@ -60,7 +53,7 @@ exports[`<ConventionTexte /> should render 1`] = `
   display: none;
 }
 
-.c11 {
+.c9 {
   margin-top: -10px;
   margin-bottom: 10px;
   font-style: italic;
@@ -333,28 +326,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347513"
               >
                 Chapitre Ier : Champ d'application
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347511"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 1er Champ professionnel
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -425,21 +417,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347508"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 2 Durée
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -452,21 +443,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347506"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 3 Révision
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -479,21 +469,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347504"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 4 Dénonciation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -521,21 +510,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347502"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 5 Avantages antérieurs
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -549,28 +537,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347500"
               >
                 Chapitre II : Dialogue social au niveau de la branche
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347498"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 6 Validité des accords de branche
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -617,21 +604,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347496"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 7 Réunions périodiques de concertation syndicale
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -702,21 +688,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347494"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 8 Indemnisation des mandataires syndicaux
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -765,21 +750,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347492"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 9 Commission de conciliation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -830,21 +814,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347490"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 10 Observatoire paritaire de la négociation collective
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -925,21 +908,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347488"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 11 Commission paritaire nationale de validation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1093,21 +1075,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347486"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 12 Commission paritaire nationale de l'emploi et de la formation professionnelle
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1253,28 +1234,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347484"
               >
                 Chapitre III : Dialogue social au niveau de l'entreprise et droit syndical
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347482"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 13 Information. – Négociation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1291,21 +1271,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347480"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 14 Libertés syndicales et d'opinions
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1330,21 +1309,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347478"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 15 Délégués du personnel et comités d'entreprise
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1440,21 +1418,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347476"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 16 Conflits collectifs
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1467,21 +1444,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347474"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 17 Accords d'entreprise et d'établissement
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1514,21 +1490,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347472"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 18 Négociation avec les représentants élus du personnel
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1634,21 +1609,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347470"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 19 Négociation avec un salarié mandaté
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1822,28 +1796,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347466"
               >
                 Chapitre Ier : Conclusion du contrat de travail
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347464"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 20 Principes généraux
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1860,21 +1833,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347462"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 21 Egalité professionnelle
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1910,21 +1882,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347460"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 22 Ancienneté
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1945,21 +1916,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347458"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 23 Contrat de travail à durée indéterminée
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -1996,21 +1966,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347456"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 24 Contrat de travail à durée déterminée
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2043,21 +2012,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347454"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 25 Période d'essai
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2196,21 +2164,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347452"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 26 Obligation de discrétion et de non-concurrence
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2263,21 +2230,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347450"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 27 Modification du contrat
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2320,21 +2286,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347448"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 28 Remplacement temporaire
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2352,28 +2317,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347446"
               >
                 Chapitre II : Exécution du contrat de travail
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347444"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 29 Salaires
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2394,21 +2358,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347442"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 30 Mensualisation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2429,21 +2392,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347440"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 31 Treizième mois
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2492,21 +2454,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347438"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 32 Indemnités de frais professionnels
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2523,21 +2484,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347436"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 33 Congés payés
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2566,21 +2526,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000030610868"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 34 Autorisations d'absence pour événements familiaux
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2735,21 +2694,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347432"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 35 Absences
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2762,21 +2720,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347430"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 36 Absences pour maladie ou accident
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2836,28 +2793,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347428"
               >
                 Chapitre III : Rupture du contrat de travail
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347426"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 37 Préavis
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2904,21 +2860,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347424"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 38 Indemnité de licenciement
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2935,21 +2890,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347422"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 39 Démission
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -2966,21 +2920,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347420"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 40 Départ à la retraite
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3026,21 +2979,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347418"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 41 Mise à la retraite
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3073,21 +3025,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347416"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 42 Rupture conventionnelle
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3133,21 +3084,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347412"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article Préambule
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -3160,28 +3110,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347410"
               >
                 Chapitre Ier : Durée du travail
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347408"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 43 Durée du travail
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3206,21 +3155,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347406"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 44 Heures supplémentaires
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3265,21 +3213,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347404"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 45 Repos hebdomadaire
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3339,21 +3286,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347402"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 46 Majoration pour travail du dimanche
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3366,21 +3312,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347400"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 47 Equipes de suppléance
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3502,21 +3447,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347398"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 48 Jours fériés
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3538,28 +3482,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347396"
               >
                 Chapitre II : Temps partiel
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347394"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 49 Travail à temps partiel
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3584,21 +3527,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347392"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 50 Organisation du travail à temps partiel
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3635,21 +3577,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347390"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 51 Passage à temps plein
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3675,28 +3616,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347388"
               >
                 Chapitre III : Répartition pluri-hebdomadaire du temps de travail
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347386"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article Préambule
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3709,21 +3649,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347384"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 52 Répartition pluri-hebdomadaire du temps de travail
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -3892,21 +3831,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347382"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 53 Travail intermittent
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4025,28 +3963,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347379"
               >
                 Chapitre IV : Conventions de forfaits annuels en jours
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347377"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 54 Mise en œuvre des conventions de forfaits annuels en jours
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4059,21 +3996,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347375"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 55 Salariés concernés
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4101,21 +4037,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347373"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 56 Nombre de jours travaillés dans l'année
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4140,21 +4075,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347371"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 57 Modalités de décompte des jours travaillés et suivi
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4187,21 +4121,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347369"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 58 Règles relatives aux repos quotidien et hebdomadaire
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4222,21 +4155,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347367"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 59 Rémunération
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4250,28 +4182,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347365"
               >
                 Chapitre V : Conventions de forfaits annuels en heures
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347363"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 60 Mise en œuvre des conventions de forfaits annuels en heures
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4284,21 +4215,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347361"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 61 Salariés concernés
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4321,21 +4251,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347359"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 62 Durée annuelle
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4356,21 +4285,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347357"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 63 Modalités de décompte des heures travaillées et suivi
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4391,21 +4319,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347355"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 64 Rémunération
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4419,28 +4346,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347353"
               >
                 Chapitre VI : Travail de nuit
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347351"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 65 Mise en œuvre
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4465,21 +4391,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347349"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 66 Définition du travail de nuit
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4496,21 +4421,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347347"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 67 Durée du travail de nuit
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4556,21 +4480,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347344"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 68 Contreparties au travail de nuit
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4591,21 +4514,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347342"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 69 Définition du travailleur de nuit
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4628,21 +4550,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347340"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 70 Contreparties accordées aux travailleurs de nuit
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4767,21 +4688,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347338"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 71 Protection des travailleurs de nuit
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4914,28 +4834,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347336"
               >
                 Chapitre VII : Astreintes
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347334"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article Préambule
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4952,21 +4871,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347332"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 72 Mise en œuvre
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -4979,21 +4897,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347330"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 73 Définition de l'astreinte
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5010,21 +4927,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347328"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 74 Organisation des astreintes
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5041,21 +4957,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347326"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 75 Modalités d'organisation des astreintes
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5080,21 +4995,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347324"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 76 Compensation des astreintes
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5116,28 +5030,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347322"
               >
                 Chapitre VIII : Compte épargne-temps
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347320"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article Préambule
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5154,21 +5067,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347318"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 77 Salariés bénéficiaires
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5181,21 +5093,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347316"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 78 Alimentation du compte épargne-temps
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5338,21 +5249,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347314"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 79 Utilisation des droits affectés au compte épargne-temps
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5524,21 +5434,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347312"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 80 Clôture du compte
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5564,28 +5473,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347308"
               >
                 Chapitre Ier : Information et formation des travailleurs
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347306"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 81 Information des salariés sur la sécurité au travail
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5626,21 +5534,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347304"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 82 Formation des salariés en matière d'hygiène et de sécurité
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5744,28 +5651,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347302"
               >
                 Chapitre II : Prévention des risques professionnels
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347300"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 83 Démarche de prévention des risques
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -5835,21 +5741,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347298"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 84 Acteurs de la prévention des risques professionnels
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6044,28 +5949,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347296"
               >
                 Chapitre III : Prescriptions particulières en matière d'hygiène et de sécurité
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347293"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 85 Risques consécutifs aux équipements de travail
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6090,21 +5994,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347290"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 86 Premiers secours
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6129,21 +6032,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347288"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 87 Matériels de sécurité
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6164,21 +6066,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347286"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 88 Propreté
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6231,21 +6132,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347284"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 89 Restauration
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6266,21 +6166,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347282"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 90 Entreprises extérieures et sécurité
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6318,28 +6217,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347276"
               >
                 Chapitre Ier : Contrat et période de professionnalisation
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347274"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article Préambule
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6356,21 +6254,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347272"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 91 Contrat de professionnalisation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6548,21 +6445,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347270"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 92 Période de professionnalisation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6680,21 +6576,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347268"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 93 Prise en charge des coûts de la professionnalisation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6751,21 +6646,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347266"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 94 Tutorat
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6861,28 +6755,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347264"
               >
                 Chapitre II : Droit individuel a la formation (DIF)
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347262"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 95 Salariés bénéficiaires et durée de la formation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6933,21 +6826,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347260"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 96 Droit individuel à la formation des salariés en contrat à durée déterminée
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -6960,21 +6852,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347258"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 97 Mise en œuvre du droit individuel à la formation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7128,21 +7019,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347256"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 98 Exercice du droit individuel à la formation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7167,21 +7057,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347254"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 99 Nature des actions de formation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7284,21 +7173,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347252"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 100 Dispositions financières
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7311,21 +7199,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347250"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 101 Portabilité du DIF
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7431,21 +7318,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347248"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 102 Mutation d'un salarié
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7458,21 +7344,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347246"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 103 Plan de formation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7529,21 +7414,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347244"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 104 Bilan de compétences
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7560,21 +7444,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347242"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 105 Entretien professionnel
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7629,21 +7512,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347240"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 106 Entretien professionnel pour les salariés de 45 ans et plus
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7661,28 +7543,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347238"
               >
                 Chapitre III : Certificats de qualification professionnelle
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347236"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article Préambule
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7723,21 +7604,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347234"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 107 Champ d'application
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7750,21 +7630,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347232"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 108 Définition
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7781,21 +7660,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347230"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 109 Condition d'accès
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7854,21 +7732,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347227"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 110 Création d'un CQP
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -7987,21 +7864,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347225"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 111 Dispositif de validation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8198,21 +8074,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347223"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 112 Valorisation des CQP
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8225,21 +8100,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347221"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 113 Organisation de stages
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8271,28 +8145,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347219"
               >
                 Chapitre IV : Financement de la formation professionnelle
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347216"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 114 Champ d'application
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8331,21 +8204,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347214"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 115 Financement de la formation professionnelle
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8539,28 +8411,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347210"
               >
                 Chapitre Ier : Retraite complémentaire
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347208"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 116 Personnel non cadre
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8581,21 +8452,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347206"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 117 Personnel cadre
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8621,28 +8491,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347204"
               >
                 Chapitre II : Mensualisation
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347202"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 118 Indemnisation de l'absence pour maladie ou accident
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8699,28 +8568,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347200"
               >
                 Chapitre III : Prévoyance
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347198"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 119 Organismes désignés
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -8813,21 +8681,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000034227144"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 120 Prévoyance du personnel non cadre
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -9439,21 +9306,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000034227142"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 121 Prévoyance du personnel cadre
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10121,21 +9987,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000032438542"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 122 Dispositions communes
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10365,28 +10230,27 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h4
-                class="c9"
+                class="c8"
                 id="KALISCTA000025347190"
               >
                 Chapitre IV : Frais de santé
               </h4>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347188"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 123 Principes généraux
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10473,21 +10337,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347186"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 124 Organisme assureur
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10539,21 +10402,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000032438540"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 125 Bénéficiaires
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10730,21 +10592,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347182"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 126 Adhésion. – Affiliation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10761,21 +10622,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347180"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 127 Information
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10792,21 +10652,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000034227146"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 128 Garanties. – Limite des garanties
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -10995,21 +10854,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347176"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 129 Suspension de garantie
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11068,21 +10926,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000034227150"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 130 Cotisations
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11253,21 +11110,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347172"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 131 Revalorisation de la cotisation
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11298,21 +11154,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347169"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 132 Prestations
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11385,21 +11240,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000034227148"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 133 Maintien des garanties
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11566,21 +11420,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000028507669"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 134 Portabilité des droits
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11620,21 +11473,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347163"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 135 Fonds social
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11655,21 +11507,20 @@ exports[`<ConventionTexte /> should render 1`] = `
               </div>
               <div>
                 <h5
-                  class="c10"
+                  class="c8"
                   id="KALIARTI000025347161"
                 >
                   <span
                     aria-label="article"
                     role="img"
                   >
-                    📖
+                    📖 
                   </span>
-                   
                   Article 136 Comité paritaire de gestion et de suivi du régime
                 </h5>
                 <div>
                   <div
-                    class="c11"
+                    class="c9"
                   >
                     En vigueur étendu
                   </div>
@@ -11717,21 +11568,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347156"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 137 Présentation de la méthode de classification professionnelle
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -11820,21 +11670,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347154"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 138 Mise en œuvre de la classification professionnelle
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -11851,21 +11700,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347152"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 139 Définition de l'emploi
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -11904,21 +11752,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347150"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 140 Double pesée de l'emploi
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -11957,21 +11804,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347148"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 141 Positionnement par catégories professionnelles
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -11992,21 +11838,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347146"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 142 Mise en œuvre dans l'entreprise
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -12123,21 +11968,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347144"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 143 Bilan
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -12150,21 +11994,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </div>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347141"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article 144 Non-dérogation
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -12195,21 +12038,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347137"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article Critères classant
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -12404,21 +12246,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347133"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article Définition des degrés pour chaque critère
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -13355,21 +13196,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347128"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article Grille de pesé
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>
@@ -13801,21 +13641,20 @@ exports[`<ConventionTexte /> should render 1`] = `
             </h3>
             <div>
               <h5
-                class="c10"
+                class="c8"
                 id="KALIARTI000025347124"
               >
                 <span
                   aria-label="article"
                   role="img"
                 >
-                  📖
+                  📖 
                 </span>
-                 
                 Article Grille de classification
               </h5>
               <div>
                 <div
-                  class="c11"
+                  class="c9"
                 >
                   En vigueur étendu
                 </div>

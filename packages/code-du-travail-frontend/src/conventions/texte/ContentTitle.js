@@ -2,23 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 const ContentTitle = ({ level, type, id, titre }) => {
-  if (type == "article") {
-    return (
-      <ArticleTitle id={id}>
+  const tagName = getTitleTagName({ type, level });
+  return (
+    <Title id={id} as={tagName}>
+      {type == "article" && (
         <span role="img" aria-label="article">
-          📖
+          📖&nbsp;
         </span>
-        &nbsp;{titre}
-      </ArticleTitle>
-    );
-  } else if (level == 0) {
-    return <TopSectionTitle id={id}>{titre}</TopSectionTitle>;
-  } else {
-    return <NestedSectionTitle id={id}>{titre}</NestedSectionTitle>;
-  }
+      )}
+      {titre}
+    </Title>
+  );
 };
 
-// TODO: this method should be used in the styled component definitions below
 const getTitleTagName = ({ type, level }) => {
   if (type == "article") {
     return "h5";
@@ -29,16 +25,10 @@ const getTitleTagName = ({ type, level }) => {
   }
 };
 
-const TopSectionTitle = styled.h3`
-  font-size: 22px;
-  margin-top: 40px;
-`;
-
-const NestedSectionTitle = styled.h4`
-  font-size: 20px;
-`;
-
-const ArticleTitle = styled.h5`
+const Title = styled.span`
+  margin-top: ${props => (props.type == "article" ? "40px" : "0")};
+  font-size: ${props =>
+    props.type == "article" ? "16px" : props.level == 0 ? "22px" : "20px"};
   font-size: 16px;
 `;
 
