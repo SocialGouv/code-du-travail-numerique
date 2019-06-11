@@ -4,6 +4,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
+import ReferencesJuridiques from "../src/ReferencesJuridiques";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -47,32 +48,44 @@ class Fiche extends React.Component {
 
   render() {
     const { data, pageUrl, ogImage } = this.props;
-    const footer = <Source name="service-public.fr" url={data._source.url} />;
+    const {
+      _source: {
+        breadcrumbs,
+        date,
+        description,
+        html,
+        raw,
+        references_juridiques,
+        title,
+        url
+      }
+    } = data;
+    const footer = <Source name="service-public.fr" url={url} />;
     return (
       <PageLayout>
         <Metas
           url={pageUrl}
-          title={data._source.title}
-          description={data._source.description}
+          title={title}
+          description={description}
           image={ogImage}
         />
         <ServicePublicCss>
           <Answer
-            title={data._source.title}
+            title={title}
             emptyMessage="Cette fiche n'a pas été trouvée"
-            html={data._source.html}
+            html={html}
             footer={footer}
-            date={data._source.date}
+            date={date}
             icon={ReponseIcon}
             sourceType="Fiche service-public.fr"
-            referencesJuridiques={data._source.references_juridiques}
-            breadcrumbs={data._source.breadcrumbs}
+            additionalContent={
+              <ReferencesJuridiques references={references_juridiques} />
+            }
+            breadcrumbs={breadcrumbs}
           >
             {// Without the check, the prop children of the Answer will evaluate to true
             // even if in the end, <FicheServicePublic /> returns null
-            data._source.raw && (
-              <FicheServicePublic data={data._source.raw.$} />
-            )}
+            raw && <FicheServicePublic data={raw.$} />}
           </Answer>
         </ServicePublicCss>
       </PageLayout>

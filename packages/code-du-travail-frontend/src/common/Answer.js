@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { withRouter } from "next/router";
 import { Alert, Container, theme, Wrapper } from "@cdt/ui";
 import { Link } from "../../routes";
-import ReferencesJuridiques from "../ReferencesJuridiques";
 import Article from "../common/Article";
 import { Breadcrumbs } from "./Breadcrumbs";
 import Disclaimer from "../common/Disclaimer";
@@ -48,7 +47,6 @@ function Answer({
   sourceType,
   additionalContent,
   breadcrumbs = [],
-  referencesJuridiques = [],
   emptyMessage = "Aucun résultat"
 }) {
   return (
@@ -69,9 +67,6 @@ function Answer({
         </Article>
       )}
       {additionalContent}
-      {referencesJuridiques.length > 0 && (
-        <ReferencesJuridiques references={referencesJuridiques} />
-      )}
       <Feedback
         query={router.query.q}
         sourceType={sourceType}
