@@ -21,7 +21,7 @@ exports[`<ConventionTexte /> should render 1`] = `
 
 .c8 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 1.3rem;
   font-size: 16px;
 }
 
@@ -54,11 +54,15 @@ exports[`<ConventionTexte /> should render 1`] = `
 }
 
 .c9 {
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -0.625rem;
+  margin-bottom: 0.625rem;
   font-style: italic;
   font-weight: bold;
   font-size: 1em;
+}
+
+.c10 {
+  margin-bottom: 0.625rem;
 }
 
 @media print {
@@ -350,7 +354,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La présente convention est rédigée conformément aux articles L. 131-1 et suivants du code du travail.
                     </p>
@@ -434,7 +440,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La présente convention est conclue pour une durée indéterminée, sauf dénonciation dans les conditions prévues à l'article 4 ci-après.
                     </p>
@@ -460,7 +468,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La présente convention est révisable à tout moment par accord des parties signataires. Les demandes de révision sont effectuées par lettre recommandée avec avis de réception, à toutes les parties contractantes. Elles sont accompagnées d'un projet concernant les points dont la révision est demandée. La commission paritaire se réunit dans un délai maximal de 3 mois à compter de la date de réception de la demande.
                     </p>
@@ -486,7 +496,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La dénonciation de la présente convention, par l'une des parties contractantes, doit être portée à la connaissance des autres parties par lettre recommandée avec avis de réception. 
                       <br />
@@ -527,7 +539,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       L'application des dispositions de la présente convention collective qui se substituent à celles antérieures ne peut entraîner la réduction ou la suppression des avantages particuliers dont les salariés auraient antérieurement bénéficié. 
                     </p>
@@ -561,7 +575,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La validité des accords de branche est subordonnée à l'absence d'opposition 
                       <i>
@@ -621,7 +637,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les parties contractantes conviennent de se rencontrer régulièrement pour évoquer les enjeux de la profession, qu'il s'agisse des classifications et des salaires minimaux, de la formation et de la promotion professionnelles, de la durée et de l'aménagement du temps de travail, de l'emploi, des nouvelles techniques, de l'adaptation du personnel en place, de l'intégration des jeunes et de toute question ayant une incidence sur la profession et sur son personnel, car elles n'entendent pas, à la signature de la convention, dresser une liste exhaustive des sujets, ni limiter les thèmes à débattre. 
                       <br />
@@ -705,7 +723,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il importe que chaque syndicat reste parfaitement libre de désigner les mandataires de son choix pour le représenter et participer aux réunions paritaires organisées par les organisations patronales représentatives. 
                       <br />
@@ -767,7 +787,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Elle a pour objet de tenter de résoudre par la négociation les conflits collectifs qui pourraient surgir dans une entreprise, afin d'aboutir à une solution amiable. 
                       <br />
@@ -831,7 +853,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les parties signataires conviennent de constituer un observatoire paritaire de la négociation collective chargé du suivi des accords dans la branche à tous les niveaux conformément aux dispositions de l'article L. 2232-10 du code du travail. 
                     </p>
@@ -925,7 +949,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il est instauré une commission paritaire nationale de validation conformément aux dispositions de l'article L. 2232-23 du code du travail. 
                     </p>
@@ -1092,7 +1118,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il est instauré, conformément aux dispositions de l'article R. 2241-9 du code du travail, une commission paritaire nationale de l'emploi et de la formation professionnelle (CPNEFP). 
                     </p>
@@ -1258,7 +1286,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il importe essentiellement que, dans toutes les entreprises quelles qu'en soient la structure et l'importance, l'information montante et descendante puisse circuler au mieux à tous les échelons de la hiérarchie. 
                       <br />
@@ -1288,7 +1318,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Ces libertés doivent être strictement respectées dans l'entreprise. Elles sont prévues dans le détail aux articles L. 2141-5 et suivants et L. 1132-1 et suivants du code du travail et sanctionnées par l'article 416-3 du code pénal. 
                       <br />
@@ -1326,7 +1358,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La représentation des différentes catégories de salariés par des délégués du personnel et au sein des comités d'entreprise est réglée, sauf accord d'entreprise plus favorable, par les dispositions législatives et réglementaires en vigueur. 
                     </p>
@@ -1435,7 +1469,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       En cas de conflits collectifs, toutes les parties en cause mettront tout en œuvre afin d'engager au plus tôt toutes les procédures possibles de concertation et de négociation, qu'elles soient conventionnelles, notamment par la saisine de la commission de conciliation, ou qu'elles résultent de la réglementation en vigueur. 
                     </p>
@@ -1461,7 +1497,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La négociation d'entreprise s'effectue, en principe, avec un délégué syndical. 
                       <br />
@@ -1507,7 +1545,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Conformément aux dispositions de l'article L. 2232-23 du code du travail, dans les entreprises dépourvues de délégués syndicaux, les représentants élus du personnel au comité d'entreprise, ou à défaut les délégués du personnel, pourront négocier et conclure des accords collectifs de travail sur toutes les mesures dont la mise en œuvre est subordonnée par la loi à un accord collectif. (1) 
                     </p>
@@ -1626,7 +1666,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Conformément aux dispositions de l'article L. 2232-24 du code du travail, les entreprises dépourvues de délégué syndical et lorsqu'un procès-verbal de carence a établi l'absence de représentants élus du personnel, peuvent conclure des accords d'entreprise ou d'établissement avec un ou plusieurs salariés mandatés par une ou plusieurs organisations syndicales 
                       <i>
@@ -1820,7 +1862,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les entreprises doivent privilégier la promotion interne. 
                       <br />
@@ -1850,7 +1894,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les partenaires sociaux affirment leur attachement au principe de non-discrimination tel qu'énoncé à l'article L. 1132-1 du code du travail. 
                       <br />
@@ -1899,7 +1945,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Pour l'application de la présente convention, l'ancienneté s'entend de la durée du contrat de travail en cours depuis l'embauche, sans qu'il y ait lieu de déduire la durée des absences pour maladie d'une durée inférieure aux périodes de garantie d'emploi visées à l'article 36, pour accident du travail ou maladie professionnelle, pour événements familiaux tels que fixés à l'article 34, pour congé de maternité ou adoption et pour congés payés. 
                       <br />
@@ -1933,7 +1981,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le contrat de travail de droit commun est le contrat de travail à durée indéterminée. 
                       <br />
@@ -1983,7 +2033,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les contrats de travail conclus pour une durée indéterminée constituant la norme, les entreprises sont incitées à limiter, au maximum, l'utilisation de contrats à durée déterminée. 
                       <br />
@@ -2029,7 +2081,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -2181,7 +2235,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       A titre général, une collaboration loyale implique le respect d'une obligation de discrétion par tout salarié. 
                       <br />
@@ -2247,7 +2303,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Toute modification du contrat de travail, contrairement au changement des conditions de travail, doit faire l'objet d'une proposition écrite de l'employeur, précisant la ou les modifications envisagées, ainsi que sa date d'entrée en vigueur. 
                       <br />
@@ -2303,7 +2361,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       En cas de remplacement temporaire sur un poste de qualification supérieure, dont la durée excède 10 jours, le salarié, qui assure l'ensemble des fonctions du titulaire du poste, perçoit pendant la durée du remplacement une indemnité de remplacement égale à la différence entre le salaire minimal de la catégorie du salarié remplacé et le salaire minimal de sa catégorie. 
                       <br />
@@ -2341,7 +2401,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les minima conventionnels sont établis par accord paritaire entre les organisations patronales et syndicales représentatives, en référence à la classification conventionnelle de la profession. 
                       <br />
@@ -2375,7 +2437,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les salariés sont rémunérés une fois par mois. Leur rémunération est indépendante, pour un horaire de travail déterminé, du nombre de jours effectivement travaillés dans le mois. Un acompte peut être demandé au cours du mois. 
                       <br />
@@ -2409,7 +2473,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       A compter du 1er janvier 2013, tout salarié titulaire d'un contrat de travail au 31 décembre de chaque année bénéficie d'un treizième mois dans les conditions suivantes. 
                       <br />
@@ -2471,7 +2537,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il est attribué une indemnité, dite pour frais professionnels, à tout le personnel participant au cycle de production en site industriel et occupé à un travail en continu, en équipe ou posté, d'une durée effective d'au moins 6 heures consécutives. 
                       <br />
@@ -2501,7 +2569,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les congés annuels sont accordés et indemnisés conformément à la réglementation en vigueur. 
                       <br />
@@ -2543,7 +2613,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Des autorisations d'absence sont accordées aux salariés dans les cas suivants : 
                     </p>
@@ -2711,7 +2783,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Tout salarié absent doit avertir son employeur, ou le faire avertir, avant le début du travail, sauf circonstances exceptionnelles et, en tout état de cause, au cours de la journée d'absence, par tout moyen à sa convenance.
                     </p>
@@ -2737,7 +2811,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       En cas de maladie ou d'accident, le salarié absent doit, après avoir prévenu son employeur dans les conditions fixées à l'article précédent, lui faire parvenir dans les 48 heures un certificat médical justificatif. 
                       <br />
@@ -2817,7 +2893,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       En cas de rupture du contrat de travail après la période d'essai et sauf faute grave ou lourde, la durée du préavis réciproque est égale, en fonction de l'ancienneté du salarié, à : 
                     </p>
@@ -2877,7 +2955,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       En cas de licenciement non motivé par une faute grave ou lourde, il est attribué au salarié licencié ayant au moins 1 an d'ancienneté dans l'entreprise, une indemnité distincte de l'indemnité compensatrice de préavis, égale à 2/10 de mois par année d'ancienneté, majorée de 2/15 de mois par année d'ancienneté au-delà de 10 ans. 
                       <br />
@@ -2907,7 +2987,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le salarié qui envisage de démissionner doit en informer son employeur par lettre recommandée avec avis de réception, ou lettre remise en mains propres contre décharge. 
                       <br />
@@ -2937,7 +3019,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le salarié quittant volontairement l'entreprise pour bénéficier d'une pension de vieillesse doit en informer l'employeur par lettre recommandée avec avis de réception, ou lettre remise en mains propres contre décharge, et observer le préavis prévu à l'article 37. (1) 
                     </p>
@@ -2996,7 +3080,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La mise à la retraite d'un salarié ne peut intervenir avant 65 ans. 
                       <br />
@@ -3042,7 +3128,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       L'employeur et le salarié peuvent convenir des conditions de la rupture du contrat de travail à durée indéterminée qui les lie, conformément aux dispositions des articles L. 1237-11 à L. 1237-16 du code du travail. La rupture conventionnelle, exclusive du licenciement ou de la démission, ne peut être imposée par l'une ou l'autre des parties. 
                       <br />
@@ -3101,7 +3189,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Les parties signataires ont souhaité rappeler dans le présent titre les principes généraux concernant la durée du travail et les modalités d'aménagement et d'organisation du temps de travail dans les conditions ouvertes par le législateur. 
                   </p>
@@ -3134,7 +3224,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La durée légale du travail est fixée à 35 heures de travail effectif par semaine. 
                       <br />
@@ -3172,7 +3264,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Est considérée comme heure supplémentaire, toute heure de travail effectif réalisée au-delà de 35 heures hebdomadaires. 
                     </p>
@@ -3230,7 +3324,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -3303,7 +3399,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les salariés bénéficient, pour les heures de travail effectuées le dimanche de 0 à 24 heures, d'une majoration de 15 % calculée sur leur taux horaire de base. 
                     </p>
@@ -3329,7 +3427,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les entreprises peuvent recourir à la mise en place d'équipes de suppléance dans la mesure où la nature de leur activité implique l'obligation de fonctionner durant le week-end. 
                     </p>
@@ -3464,7 +3564,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les jours fériés sont ceux prévus par la réglementation en vigueur. 
                       <br />
@@ -3506,7 +3608,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Est considéré comme salarié à temps partiel tout salarié dont la durée hebdomadaire de travail est inférieure à la durée légale du travail ou conventionnelle. 
                       <br />
@@ -3544,7 +3648,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Aucune journée de travail ne peut être d'une durée inférieure à 3 heures consécutives. Indépendamment de toute pause, il ne peut y avoir qu'une interruption par journée de travail. Dans ce cas, une des deux plages de travail doit être au moins égale à 3 heures. 
                       <br />
@@ -3594,7 +3700,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les salariés à temps partiel bénéficient d'une priorité pour les emplois à temps plein de leur qualification. Ils doivent être avisés soit individuellement, soit collectivement, lorsque l'employeur envisage d'embaucher. 
                       <br />
@@ -3640,7 +3748,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les modalités de mise en œuvre, de la répartition des horaires sur une période supérieure à la semaine et au plus égale à l'année et du travail intermittent, en application des présentes dispositions pourront, le cas échéant, être précisées au niveau de chaque entreprise. 
                     </p>
@@ -3666,7 +3776,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -3848,7 +3960,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les dispositions du présent article sont conclues dans le cadre des articles L. 3123-31 et suivants du code du travail. 
                     </p>
@@ -3987,7 +4101,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Des modalités spécifiques de mise en œuvre des conventions de forfaits annuels en jours pourront, en application des dispositions du présent accord, être précisées au niveau de chaque entreprise.
                     </p>
@@ -4013,7 +4129,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Conformément à l'article L. 3121-43 du code du travail, un forfait annuel en jours sur l'année peut être convenu avec : 
                     </p>
@@ -4054,7 +4172,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La mise en œuvre de convention individuelle de forfait nécessite l'accord express du salarié par le biais d'une clause insérée à son contrat de travail. 
                       <br />
@@ -4092,7 +4212,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le forfait en jours s'accompagne d'un contrôle du nombre de jours travaillés. 
                       <br />
@@ -4138,7 +4260,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le salarié doit bénéficier d'un temps de repos quotidien d'au moins 11 heures consécutives, sauf dérogation dans les conditions fixées par les dispositions législatives et conventionnelles en vigueur. 
                       <br />
@@ -4172,7 +4296,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La rémunération forfaitaire mensuelle est indépendante du nombre d'heures de travail effectif accomplies durant la période de paye considérée et devra tenir compte des conditions particulières de travail et notamment du travail éventuel les jours fériés, la nuit et le dimanche. 
                     </p>
@@ -4206,7 +4332,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Des modalités spécifiques de mise en œuvre des conventions de forfaits annuels en heures pourront être, en application des dispositions du présent accord, précisées au niveau de chaque entreprise. 
                     </p>
@@ -4232,7 +4360,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Peuvent conclure une convention de forfaits en heures sur l'année en application de l'article L. 3121-42 du code du travail : 
                     </p>
@@ -4268,7 +4398,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La mise en œuvre de convention individuelle de forfait annuelle en heures nécessite l'accord express du salarié par le biais d'une clause insérée à son contrat de travail ou d'un avenant à son contrat de travail. 
                       <br />
@@ -4302,7 +4434,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les salariés concernés devront organiser leur temps de travail à l'intérieur de ce forfait annuel en respectant les limites maximales quotidiennes et hebdomadaires définies par accord collectif ou, à défaut, les limites légales. 
                       <br />
@@ -4336,7 +4470,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La rémunération sera déterminée contractuellement, sans qu'elle puisse être inférieure à la rémunération minimale correspondant à 1 600 heures auxquelles s'ajoutent 7 heures au titre de la journée de solidarité, augmentée du paiement des heures supplémentaires à taux majoré. 
                     </p>
@@ -4370,7 +4506,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le recours au travail de nuit se justifie dans la profession par la nécessité d'assurer la poursuite de l'activité économique et des services à la collectivité. 
                       <br />
@@ -4408,7 +4546,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le travail de nuit tel que défini par la loi se situe de 21 heures à 6 heures. 
                       <br />
@@ -4438,7 +4578,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Si, conformément à la loi, la durée quotidienne ne doit pas normalement excéder 8 heures par jour, les parties signataires reconnaissent que, dans la profession, en raison des inéluctables écarts de production causés par la demande de la population, cette durée peut, après consultation du comité d'entreprise ou, à défaut, des délégués du personnel, varier dans les proportions suivantes : 
                     </p>
@@ -4497,7 +4639,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les heures effectuées entre 21 heures et 6 heures du matin ou dans la plage horaire définie à l'article 66 sont majorées de 25 %. 
                       <br />
@@ -4531,7 +4675,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Est considéré comme travailleur de nuit, pour l'application des présentes dispositions, tout salarié qui : 
                     </p>
@@ -4567,7 +4713,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les travailleurs de nuit, répondant à la définition ci-dessus bénéficient, en sus de la rémunération prévue à l'article 68, d'un repos complémentaire aux repos habituels, calculé en fonction du nombre d'heures de nuit effectuées au cours de l'année, dans les conditions suivantes : 
                     </p>
@@ -4705,7 +4853,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -4858,7 +5008,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Des astreintes pourront être mises en œuvre en raison des contraintes de production inhérentes au secteur d'activité liées au fonctionnement continu de certaines installations ou de certains services et afin de répondre aux exigences de la clientèle. 
                       <br />
@@ -4888,7 +5040,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les modalités de mise en œuvre des astreintes sont précisées au niveau de chaque entreprise, après consultation des instances représentatives du personnel. 
                     </p>
@@ -4914,7 +5068,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le régime des astreintes est défini comme la période pendant laquelle le salarié, sans être à la disposition permanente et immédiate de l'employeur, doit s'organiser afin d'être en mesure d'intervenir pour effectuer un travail au service de l'entreprise, la durée de cette intervention étant considérée comme du temps de travail effectif. 
                       <br />
@@ -4944,7 +5100,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les catégories de personnel, quel que soit leur niveau de responsabilité, susceptibles d'effectuer des astreintes, ainsi que les modalités pratiques d'organisation de celles-ci, sont précisées au niveau de chaque entreprise, après consultation du comité d'hygiène, de sécurité et des conditions de travail, du comité d'entreprise ou, à défaut, des délégués du personnel. 
                       <br />
@@ -4974,7 +5132,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       La programmation individuelle des périodes d'astreinte devra être portée à la connaissance de chaque salarié concerné 1 mois à l'avance, sauf circonstances exceptionnelles et sous réserve que le salarié en soit averti au moins 1 jour franc à l'avance. 
                       <br />
@@ -5012,7 +5172,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les périodes d'astreinte seront compensées au moyen d'une contrepartie financière, à raison de 3,5 fois le montant du minimum interprofessionnel garanti (MIG) par jour d'astreinte, majorée de 50 % les dimanches et les jours fériés. 
                       <br />
@@ -5054,7 +5216,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les entreprises qui le souhaitent, relevant de la présente convention peuvent mettre en place, dans les conditions définies ci-après, un compte épargne-temps. 
                       <br />
@@ -5084,7 +5248,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       L'accès au compte épargne-temps est ouvert aux salariés qui bénéficient d'une ancienneté définie par l'entreprise.
                     </p>
@@ -5110,7 +5276,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il est ouvert au nom de chaque salarié adhérent au compte épargne-temps, un compte individuel sur lequel est inscrit l'ensemble des droits qu'il a affecté. 
                       <br />
@@ -5266,7 +5434,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les salariés pourront utiliser les droits affectés au compte épargne-temps : 
                     </p>
@@ -5451,7 +5621,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le compte épargne-temps sera clôturé lors du départ du salarié de la société, pour quelque motif que ce soit. 
                       <br />
@@ -5497,7 +5669,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Chaque salarié reçoit lors de son embauche toutes les informations nécessaires relatives aux mesures d'hygiène et de sécurité en vigueur dans l'entreprise ainsi que sur les risques pour sa santé et sa sécurité et les mesures prises pour y remédier. 
                       <br />
@@ -5551,7 +5725,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -5675,7 +5851,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -5758,7 +5936,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -5973,7 +6153,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       L'employeur doit prendre les mesures d'organisation appropriées, notamment en utilisant des équipements mécaniques pour éviter la manutention manuelle des charges. Lorsque celle-ci ne peut être évitée, il doit mettre à la disposition des travailleurs les moyens permettant de limiter l'effort physique et de réduire le risque encouru. 
                       <br />
@@ -6011,7 +6193,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Dans les établissements industriels, lorsque l'effectif est au moins égal à 200 salariés, un local destiné aux premiers secours, facilement accessibles avec les brancards et pouvant contenir les installations et le matériel de premiers secours, doit être aménagé. Les locaux médicaux peuvent être utilisés comme locaux de premiers secours sous réserve de remplir les conditions. 
                       <br />
@@ -6049,7 +6233,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les employeurs s'engagent à veiller à la qualité et à l'efficacité du matériel de protection et à rechercher, en concertation avec les comités d'hygiène, de sécurité et des conditions de travail ou les délégués du personnel, les moyens les plus appropriés pour assurer la sécurité des travailleurs. Les salariés doivent respecter les consignes prises pour la prévention des accidents et notamment celles concernant le port de matériels de protection individuels. Tout manquement ne peut engager la responsabilité de l'entreprise. 
                       <br />
@@ -6083,7 +6269,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -6149,7 +6337,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Des réfectoires seront mis, si possible, à la disposition du personnel qui souhaiterait prendre ses repas dans l'établissement. 
                       <br />
@@ -6183,7 +6373,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       L'entreprise doit prendre les mesures nécessaires dès le premier jour de la mission du salarié en accord avec l'entreprise de travail temporaire, afin que celui-ci bénéficie d'un même niveau de protection et de sécurité que les salariés de l'entreprise. 
                       <br />
@@ -6241,7 +6433,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les partenaires sociaux rappellent leur attachement au développement de la professionnalisation afin de permettre, par une personnalisation des parcours de formation, une meilleure égalité d'accès entre les hommes et les femmes à la formation professionnelle continue et ainsi favoriser la mixité, l'égalité et l'évolution professionnelle dans le secteur. 
                       <br />
@@ -6271,7 +6465,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -6462,7 +6658,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -6593,7 +6791,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les actions d'évaluation, d'accompagnement et de formation donneront lieu à un financement de l'OPCA de la branche en application des règles proposées par la CPNEFP ou, à défaut, selon les règles définies par l'OPCA. 
                       <br />
@@ -6663,7 +6863,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -6779,7 +6981,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Tout salarié titulaire d'un contrat de travail à durée indéterminée à temps complet, à l'exclusion des contrats d'apprentissage et des contrats de professionnalisation, ayant au moins 1 an d'ancienneté dans l'entreprise, bénéficie chaque année d'un droit individuel à la formation d'une durée de 20 heures. Pendant les périodes de suspension du contrat de travail pour maladie professionnelle, accident du travail, congé de maternité et de paternité, d'adoption, de présence parentale, de soutien familial, congés payés ou congé parental d'éducation, le salarié continue d'acquérir ses droits à DIF. 
                       <br />
@@ -6843,7 +7047,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les salariés titulaires d'un contrat de travail à durée déterminée peuvent bénéficier du droit individuel à la formation calculé pro rata temporis, après 4 mois consécutifs ou non sous contrat à durée déterminée au cours des 12 derniers mois. L'employeur est tenu d'informer le salarié de ses droits à ce titre.
                     </p>
@@ -6869,7 +7075,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Il appartient au salarié de prendre l'initiative d'utiliser son droit individuel à la formation. Il doit obtenir l'accord de son employeur sur la formation souhaitée. 
                     </p>
@@ -7036,7 +7244,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les heures de formation liées au droit individuel à la formation s'exercent en dehors du temps de travail, sauf accord entre le salarié et l'employeur pour qu'elles s'exercent en tout ou partie pendant le temps de travail. 
                       <br />
@@ -7074,7 +7284,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les parties signataires souhaitent que le choix de l'action de formation suivie dans le cadre du DIF soit arrêté conjointement au cours d'un entretien à l'initiative du salarié ou de l'employeur, et notamment au cours de l'entretien professionnel prévu à l'article 1er de l'accord interprofessionnel du 5 décembre 2003. 
                       <br />
@@ -7190,7 +7402,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les frais de formation, les frais de déplacement et d'hébergement sont à la charge de l'employeur et sont imputables sur sa participation au développement de la formation professionnelle continue ou sur la contribution de 0,50 % versée au titre du financement des périodes de professionnalisation, lorsque l'action de formation répond aux critères définis dans la limite des financements disponibles. 
                     </p>
@@ -7216,7 +7430,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -7335,7 +7551,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       En cas de mutation d'un salarié entre deux entreprises appartenant au même groupe au sens de l'article L. 2331-1 du code du travail, les heures que l'intéressé a acquises au titre du droit individuel à la formation, sont transférées auprès de son nouvel employeur. 
                     </p>
@@ -7361,7 +7579,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le plan de formation est le document de référence de l'entreprise en matière de formation professionnelle qui présente la politique de formation en lien avec les orientations générales et les actions de formation que l'entreprise entend mettre en œuvre. 
                       <br />
@@ -7431,7 +7651,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le bilan de compétences est une action de formation qui contribue à l'élaboration, par le salarié concerné, d'un projet professionnel pouvant donner lieu, le cas échéant, à la réalisation d'actions de formation. 
                       <br />
@@ -7461,7 +7683,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Pour lui permettre d'être acteur de son évolution professionnelle, tout salarié ayant au minimum 2 années d'activité dans l'entreprise bénéficie, au moins tous les 2 ans, d'un entretien professionnel réalisé par l'entreprise. 
                       <br />
@@ -7529,7 +7753,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Dans les entreprises et groupes d'entreprises employant au moins 50 salariés, l'employeur organise pour chacun de ses salariés, dans l'année qui suit leur 45e anniversaire, un entretien professionnel au cours duquel il informe le salarié notamment sur ses droits en matière d'accès à un bilan de compétences ou à une action de professionnalisation. 
                       <br />
@@ -7567,7 +7793,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Conscients des enjeux de la formation professionnelle dans la profession, les parties affirment leur volonté de développer des formations débouchant sur des qualifications sanctionnées par des certificats de qualification professionnelle (CQP). 
                       <br />
@@ -7621,7 +7849,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le dispositif de délivrance des CQP concerne toutes les entreprises relevant du champ d'application de la convention collective nationale des activités industrielles de boulangerie-pâtisserie. 
                     </p>
@@ -7647,7 +7877,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le CQP atteste, au moyen d'un titre délivré par la commission paritaire nationale de l'emploi et de la formation professionnelle (CPNEFP) de la branche de l'acquisition d'une qualification spécifique et reconnue par la convention collective nationale, à travers une formation adaptée aux besoins des entreprises de la boulangerie-pâtisserie industrielle. 
                       <br />
@@ -7677,7 +7909,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Sont concernés : 
                     </p>
@@ -7749,7 +7983,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -7881,7 +8117,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -8091,7 +8329,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Contribuant au développement des compétences et de l'expertise professionnelle de son titulaire, ainsi qu'à sa reconnaissance par l'ensemble de la profession, la détention d'un CQP doit aussi être prise en compte à l'intérieur de l'entreprise. 
                     </p>
@@ -8117,7 +8357,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Tout organisme de formation agréé organisant des actions conduisant au CQP devra : 
                     </p>
@@ -8169,7 +8411,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les dispositions du présent chapitre s'appliquent aux entreprises entrant dans le champ d'application de la convention collective excepté pour ce qui concerne : 
                     </p>
@@ -8221,7 +8465,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les parties désignent l'OPCALIM en tant qu'organisme paritaire collecteur agréé (OPCA) des entreprises de la boulangerie et de la pâtisserie industrielles et des terminaux de cuisson, en vue de la collecte de la contribution à la formation professionnelle des entreprises de moins de 10 salariés et de la contribution de 0,5 % de la masse salariale des entreprises de 10 salariés et plus. 
                     </p>
@@ -8435,7 +8681,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les entreprises adhèrent, pour l'ensemble de leur personnel, à l'exception des collaborateurs cadres et de ceux affiliés obligatoirement à une caisse des cadres, en application de la convention du 14 mars 1947, à une caisse de retraite relevant du régime ARRCO et, de préférence à l'UGRR-ISICA. 
                       <br />
@@ -8469,7 +8717,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les cadres doivent être affiliés à une caisse de retraite des cadres, conformément à l'accord du 14 mars 1947 et des textes subséquents. 
                       <br />
@@ -8515,7 +8765,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Tout salarié ayant 1 an d'ancienneté dans l'entreprise bénéficie, en cas d'absence résultant d'une maladie ou d'un accident, professionnel ou non, justifiée dans les conditions prévues à l'article 36, sous réserve d'être pris en charge par la sécurité sociale et d'être soigné sur le territoire français ou dans l'un des pays de l'Union européenne, du maintien de sa rémunération dans les limites suivantes. 
                       <br />
@@ -8592,7 +8844,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Afin d'assurer la mutualisation des risques couverts par le régime de prévoyance, les partenaires sociaux désignent, en tant qu'organismes assureurs du régime conventionnel : 
                     </p>
@@ -8698,7 +8952,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="left"
                     >
@@ -9323,7 +9579,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le personnel cadre des entreprises entrant dans le champ d'application de la présente convention collective bénéficie des garanties de prévoyance suivantes.
                     </p>
@@ -10004,7 +10262,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="left"
                     >
@@ -10254,7 +10514,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les présentes dispositions marquent la volonté de la branche de s'investir dans la santé des salariés appartenant aux entreprises relevant de son champ d'application, en leur accordant notamment une meilleure prise en charge de leurs dépenses de santé. 
                       <br />
@@ -10354,7 +10616,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       AG2R Prévoyance, institution de prévoyance régie par le code de la sécurité sociale sise, 35, boulevard Brune, 75014 Paris, est désignée comme organisme assureur du présent régime de remboursement complémentaire de frais de soins de santé. 
                       <br />
@@ -10419,7 +10683,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="left"
                     >
@@ -10609,7 +10875,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       A compter de la date d'effet du présent régime, les entreprises doivent affilier, par la signature d'un bulletin d'affiliation, les salariés bénéficiaires définis à l'article 125 auprès de l'organisme assureur désigné à l'article 124. 
                       <br />
@@ -10639,7 +10907,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Conformément aux dispositions légales, une notice d'information, délivrée par l'organisme assureur à l'employeur, sera obligatoirement remise par ce dernier à chaque salarié de l'entreprise afin de lui faire connaître les caractéristiques du présent régime. 
                       <br />
@@ -10669,7 +10939,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="left"
                     >
@@ -10871,7 +11143,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       L'adhésion du salarié est maintenue dans les mêmes conditions que celles de la catégorie de personnel dont il relève : 
                     </p>
@@ -10943,7 +11217,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="left"
                     >
@@ -11127,7 +11403,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Les cotisations peuvent être révisées et/ ou modifiées au 1er janvier par l'application d'un taux qui dépend : 
                     </p>
@@ -11171,7 +11449,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p
                       align="center"
                     >
@@ -11257,7 +11537,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Pour le salarié et ses éventuels ayants droit, la garantie cesse d'être accordée à l'expiration du mois au cours duquel prend fin le contrat de travail qui lie le salarié à l'entreprise ou, en cas de maintien des droits au titre de l'article 134 du présent régime, le dernier jour du mois au cours duquel le bénéficiaire cesse d'être garanti.
                     </p>
@@ -11437,7 +11719,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Sont bénéficiaires du régime les anciens salariés des entreprises dont la rupture du contrat de travail ouvre droit au régime d'indemnisation de l'assurance chômage. 
                     </p>
@@ -11490,7 +11774,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Un fonds social est instauré au sein du présent régime ayant pour objet d'attribuer aux salariés des aides à caractère social dans le cadre du régime de remboursement des frais de santé, mis en place par la profession. 
                       <br />
@@ -11524,7 +11810,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                   >
                     En vigueur étendu
                   </div>
-                  <div>
+                  <div
+                    class="c10"
+                  >
                     <p>
                       Le suivi du présent régime par les partenaires sociaux est effectué par un comité paritaire de suivi et de gestion constitué sous forme d'association entre les représentants des organisations syndicales de salariés et d'employeurs signataires de la présente convention collective. 
                       <br />
@@ -11585,7 +11873,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     La diversité des entreprises relevant de la branche professionnelle a créé l'obligation de déterminer une méthode de classification adaptable à l'ensemble des entreprises concernées et à toutes les fonctions. 
                     <br />
@@ -11687,7 +11977,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Chaque emploi se définit comme une situation de travail correspondant à un ou plusieurs postes de travail et mobilisant des activités et des compétences de même nature. 
                     <br />
@@ -11717,7 +12009,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Un emploi est un ensemble d'un ou de plusieurs postes de travail mobilisant des activités et des compétences de même nature et suffisamment proches pour pouvoir être exercés par les mêmes personnes, moyennant adaptation ou formation. 
                     <br />
@@ -11769,7 +12063,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     L'emploi s'étend sur une fourchette de niveau/ degrés (un ou plusieurs niveaux, un ou plusieurs degrés). 
                     <br />
@@ -11821,7 +12117,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Les catégories professionnelles ouvriers et employés relèvent des niveaux OE de la classification. 
                     <br />
@@ -11855,7 +12153,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Préalablement à sa mise en œuvre, l'employeur informera et consultera le comité d'entreprise ou, à défaut, les délégués du personnel lorsqu'ils existent, de la mise en œuvre de la nouvelle grille de classification. 
                   </p>
@@ -11985,7 +12285,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Les parties signataires s'engagent à faire le point à l'expiration d'une année à compter de la date d'entrée en vigueur des présentes dispositions et à procéder à un bilan d'évaluation des résultats de son application. Elles pourront, en fonction de ce bilan, procéder aux ajustements conventionnels qu'elles estimeront nécessaires. 
                   </p>
@@ -12011,7 +12313,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Le présent titre s'impose aux établissements, entreprises et groupes qui ne peuvent y déroger que de manière plus favorable.
                   </p>
@@ -12055,7 +12359,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <table
                     border="1"
                   >
@@ -12263,7 +12569,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <p>
                     Connaissances requises ou expérience équivalente 
                   </p>
@@ -13213,7 +13521,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <div>
                     <table
                       border="1"
@@ -13658,7 +13968,9 @@ exports[`<ConventionTexte /> should render 1`] = `
                 >
                   En vigueur étendu
                 </div>
-                <div>
+                <div
+                  class="c10"
+                >
                   <div>
                     <table
                       border="1"

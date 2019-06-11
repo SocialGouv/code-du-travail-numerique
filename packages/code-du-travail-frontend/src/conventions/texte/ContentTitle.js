@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "@cdt/ui/";
 
 const ContentTitle = ({ level, type, id, titre }) => {
   const tagName = getTitleTagName({ type, level });
@@ -26,9 +27,14 @@ const getTitleTagName = ({ type, level }) => {
 };
 
 const Title = styled.span`
-  margin-top: ${props => (props.type == "article" ? "40px" : "0")};
+  margin-top: ${props =>
+    props.type != "article" && props.level == 0 ? theme.spacing.large : "0"};
   font-size: ${props =>
-    props.type == "article" ? "16px" : props.level == 0 ? "22px" : "20px"};
+    props.type == "article"
+      ? theme.fonts.sizeH6
+      : props.level == 0
+      ? theme.fonts.sizeH5
+      : theme.fonts.sizeH4};
   font-size: 16px;
 `;
 
