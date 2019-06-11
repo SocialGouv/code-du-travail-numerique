@@ -1,11 +1,11 @@
 import React from "react";
-import Head from "next/head";
 import getConfig from "next/config";
 import Search from "../src/search/Search";
 import { HomeLayout } from "../src/layout/HomeLayout";
 import Themes from "../src/home/Themes";
 import Outils from "../src/home/Outils";
 import fetch from "isomorphic-unfetch";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -13,13 +13,11 @@ const {
 
 const Home = ({ data: { themes } }) => (
   <HomeLayout>
-    <Head>
-      <title>Code du travail numérique</title>
-      <meta
-        name="description"
-        content="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
-      />
-    </Head>
+    <Metas
+      url=""
+      title="Code du travail numérique"
+      description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
+    />
     <Search />
     <Themes themes={themes} />
     <Outils />

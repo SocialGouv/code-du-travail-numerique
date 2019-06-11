@@ -14,6 +14,27 @@ export default class MyApp extends App {
     headManager: PropTypes.object,
     router: PropTypes.object
   };
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+    console.log({ ctx });
+    // const pageUrl = req
+    //   ? `${req.protocol}://${req.headers.host}`
+    //   : `${window.location.href.protocol}://${window.location.href.hostname}${
+    //       window.location.href.pathname
+    //     }`;
+    // if (req) {
+    //   console.log(req.headers);
+    // } else {
+    //   console.log({ window });
+    // }
+
+    // console.log(pageUrl);
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+
+    return { pageProps };
+  }
 
   render() {
     const { Component, pageProps } = this.props;
