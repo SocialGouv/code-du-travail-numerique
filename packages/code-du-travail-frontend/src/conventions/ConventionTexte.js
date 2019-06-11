@@ -11,12 +11,13 @@ import debounce from "../lib/pDebounce";
 class ConventionTexte extends React.Component {
   constructor(props) {
     super(props);
+    const baseState = { tocbotEnabled: false, tocbotMounted: false };
     if (props.preloadedTexte) {
       const texte = props.preloadedTexte;
       const topNode = this.getFirstNodeWithChildren(texte);
-      this.state = { topNode, texte, loaded: true };
+      this.state = Object.assign(baseState, { topNode, texte, loaded: true });
     } else {
-      this.state = { loaded: false };
+      this.state = Object.assign(baseState, { loaded: false });
     }
   }
 
@@ -50,7 +51,7 @@ class ConventionTexte extends React.Component {
 
   mountOrUnmountTocbot() {
     const { tocbotMounted, tocbotEnabled } = this.state;
-    if (!!tocbotEnabled == !!tocbotMounted) return;
+    if (tocbotEnabled == tocbotMounted) return;
     if (tocbotEnabled) {
       tocbot.init({
         headingSelector: "h3, h4, h5",
