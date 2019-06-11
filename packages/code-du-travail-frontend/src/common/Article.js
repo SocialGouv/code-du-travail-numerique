@@ -19,9 +19,11 @@ const Article = ({
         <Wrapper variant="light">
           <Section>
             <Header narrow noPadding>
-              <IconWrapper>
-                <Icon />
-              </IconWrapper>
+              {Icon && (
+                <IconWrapper>
+                  <Icon />
+                </IconWrapper>
+              )}
               <div>
                 <H1>{title}</H1>
                 <Meta>
