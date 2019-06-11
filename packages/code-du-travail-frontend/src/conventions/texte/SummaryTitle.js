@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PropTypes from "prop-types";
 import SummaryItem from "./SummaryItem";
 import TocLink from "./toc/TocLink";
@@ -15,6 +15,14 @@ const SummaryTitle = ({
 }) => {
   const { id, titre } = data;
 
+  const clickHandler = useCallback(
+    event => {
+      event.preventDefault();
+      onToggleExpanded(id, !expanded);
+    },
+    [id, expanded]
+  );
+
   if (!children || children.length == 0) {
     return (
       <TocListItem type={type} id={id} level={0}>
@@ -26,18 +34,11 @@ const SummaryTitle = ({
   }
   return (
     <TocListItem type={type} id={id} level={0}>
-      <TitleLink
-        id={id}
-        type={type}
-        onClick={e => {
-          e.preventDefault();
-          onToggleExpanded(id, !expanded);
-        }}
-      >
+      <TitleLink id={id} type={type} onClick={clickHandler}>
         {titre}&nbsp;{expanded ? "▲" : "▼"}
       </TitleLink>
       <TocList expanded={expanded}>
-        {(expanded || tocbotEnabled) && // with tocbot, all DOM is required
+        {(expanded || tocbotEnabled) && // with tocbot, all DOM is displayed by default
           children.map((child, idx) => (
             <SummaryItem key={idx} level={1} {...child} expanded={expanded}>
               {child.children}

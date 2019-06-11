@@ -7,6 +7,7 @@ import TocList from "./toc/TocList";
 const Sidebar = ({ node, onSummaryTitleToggleExpanded, tocbotEnabled }) => {
   return (
     <Section className="js-toc">
+      {/* js-toc is the base class used by tocbot */}
       <Wrapper variant="dark">
         <TocList>
           {node.children.map((child, idx) => (
