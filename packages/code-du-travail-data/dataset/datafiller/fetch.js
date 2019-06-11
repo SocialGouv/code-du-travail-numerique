@@ -51,7 +51,7 @@ const getVariants = row => {
     (row.variants && row.variants.split("\n").map(variant => variant.trim())) ||
     [];
   const variants = [row.title.replace("-", " ")].concat(others);
-  return variants;
+  return [...new Set(variants)];
 };
 // import only valid data from datafiller
 // == has more than one ref

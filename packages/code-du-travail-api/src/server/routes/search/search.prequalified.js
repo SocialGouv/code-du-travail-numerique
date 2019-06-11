@@ -12,9 +12,7 @@ const getKnownQuery = (query, excludeSources = []) => {
     return {
       hits: {
         hits: knownQuery.refs.filter(
-          ref =>
-            !excludeSources.length ||
-            excludeSources.indexOf(ref._source.source) === -1
+          ref => !excludeSources.includes(ref._source.source)
         )
       },
       facets: makeFacets(knownQuery.refs)
