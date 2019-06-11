@@ -19,7 +19,7 @@ import { motifs } from "../components/AbsencePeriods";
 function StepSalaires({ form }) {
   return (
     <>
-      <Container nopadding>
+      <Container>
         <YesNoQuestion
           name="hasTempsPartiel"
           label="Avez-vous alterné, au cours de votre contrat de travail des périodes
