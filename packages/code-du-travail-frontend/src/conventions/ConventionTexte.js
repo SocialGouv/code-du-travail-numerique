@@ -6,6 +6,7 @@ import Content from "./texte/Content";
 import styled from "styled-components";
 import { theme } from "@cdt/ui/";
 import tocbot from "tocbot";
+import debounce from "../lib/pDebounce";
 
 class ConventionTexte extends React.Component {
   constructor(props) {
@@ -27,8 +28,9 @@ class ConventionTexte extends React.Component {
     const texte = await fetchTexte({ id });
     const topNode = this.getFirstNodeWithChildren(texte);
     this.setState({ texte, topNode, loaded: true });
-    this.resize();
-    window.addEventListener("resize", () => this.resize());
+    this.onResize();
+    this.resizeEventHandler = debounce(() => this.onResize(), 250);
+    window.addEventListener("resize", this.resizeEventHandler);
   }
 
   componentDidUpdate() {
@@ -37,9 +39,10 @@ class ConventionTexte extends React.Component {
 
   componentWillUnmount() {
     tocbot.destroy();
+    window.removeEventListener("resize", this.resizeEventHandler);
   }
 
-  resize() {
+  onResize() {
     this.setState({
       tocbotEnabled: window.innerWidth > parseInt(theme.breakpoints.tablet, 10)
     });
