@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LargeLink /> should render 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f5f7fa;
+  border: 1px #c9d3df solid;
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+  -webkit-transition: 200ms color,200ms box-shadow;
+  transition: 200ms color,200ms box-shadow;
+}
+
+.c0:visited {
+  color: #434956;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:active,
+.c0:hover {
+  color: #003b80;
+  box-shadow: 0 5px 10px 0 #c9d3df;
+}
+
+<div>
+  <a
+    class="c0"
+  >
+    <span>
+      Ok
+    </span>
+  </a>
+</div>
+`;

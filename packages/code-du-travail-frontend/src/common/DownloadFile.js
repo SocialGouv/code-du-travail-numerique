@@ -1,26 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { LargeLink, theme } from "@cdt/ui";
+
 import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
-const DownloadFile = ({ title, type, file, icon: Icon }) => {
+
+const DownloadFile = ({ title, type, file, icon }) => {
   const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
-    <a
-      className="btn-large btn-download"
-      title="Télécharger le courrier type"
-      href={file}
-    >
-      <Icon
-        style={{ width: "2em", marginRight: "1em" }}
-        className="btn-download--icon"
-      />
-      <div>
-        <span className="btn-download--label">{title}</span>
-        <span className="btn-download--type">{type}</span>{" "}
-        {extension && (
-          <span className="btn-download--extension"> - {extension}</span>
-        )}
-      </div>
-    </a>
+    <LargeLink title="Télécharger le courrier type" href={file} icon={icon}>
+      <DownloadLabel>
+        <span>{title}</span>
+        <br />
+        <DownloadType>{type}</DownloadType>
+        {extension && <DownloadExtension> - {extension}</DownloadExtension>}
+      </DownloadLabel>
+    </LargeLink>
   );
 };
 
@@ -36,3 +31,20 @@ DownloadFile.propTypes = {
 };
 
 export { DownloadFile };
+
+const { colors } = theme;
+
+const DownloadLabel = styled.div`
+  color: ${colors.darkText};
+  font-weight: bold;
+`;
+
+const DownloadType = styled.span`
+  font-size: var(--font-size-xsmall);
+`;
+
+const DownloadExtension = styled.span`
+  color: var(--color-grey);
+  font-size: var(--font-size-xsmall);
+  text-transform: uppercase;
+`;
