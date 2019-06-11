@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Section, Wrapper } from "@cdt/ui";
 import SummaryTitle from "./SummaryTitle";
-import { TocList } from "./toc";
+import TocList from "./toc/TocList";
 
 const Sidebar = ({ node, onSummaryTitleToggleExpanded, tocbotEnabled }) => {
   return (

@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SummaryItem from "./SummaryItem";
-import { TocListItem, TocList, TocLink } from "./toc";
+import TocLink from "./toc/TocLink";
+import TocListItem from "./toc/TocListItem";
+import TocList from "./toc/TocList";
 
 const SummaryTitle = ({
   type,
