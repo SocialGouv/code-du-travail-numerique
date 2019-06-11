@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
-const TocListItem = ({ level, type, id, children }) => (
+const TocListItem = ({ type, id, children, level = 0 }) => (
   <Wrapper
     className="toc-list-item"
     level={level}
@@ -17,7 +17,6 @@ const Wrapper = styled.li`
   margin-left: 5px;
   padding-left: 10px;
   ${props =>
-    props.level != undefined &&
     css`
       border-left: 1px solid
         rgba(
