@@ -20,8 +20,3 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 @import "elements/_forms.css";
 @import "elements/_link.css";
 @import "elements/_text_level.css";
-
-@import "components/_block_2_cols.css";
-@import "components/_breadcrumb.css";
-@import "components/_buttons.css";
-@import "components/_cards.css";
