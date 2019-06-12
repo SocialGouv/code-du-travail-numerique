@@ -14,9 +14,3 @@ Before making any change to any CSS file in this project, ensure that `postcss-c
 
 @import "global/_conf.css";
 @import "global/_classes.css";
-@import "global/_layout.css";
-
-@import "elements/_embedded.css";
-@import "elements/_forms.css";
-@import "elements/_link.css";
-@import "elements/_text_level.css";
