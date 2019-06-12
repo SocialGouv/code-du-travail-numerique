@@ -53,6 +53,8 @@ const ConventionExplainer = () => (
         )
       }
     ]}
+    uuids={["explanation-item"]}
+    preExpanded={["explanation-item"]}
   />
 );
 

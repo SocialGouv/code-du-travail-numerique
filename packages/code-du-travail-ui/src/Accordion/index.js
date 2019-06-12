@@ -13,7 +13,7 @@ import { fadeIn } from "../keyframes";
 
 class Accordion extends React.PureComponent {
   render() {
-    const { items, className } = this.props;
+    const { items, className, uuids, preExpanded } = this.props;
 
     const StyledAccordionItem =
       items.length > 1
@@ -21,9 +21,13 @@ class Accordion extends React.PureComponent {
         : StyledSingleAccordionItem;
 
     return (
-      <RootAccordion className={className} accordion={false}>
+      <RootAccordion
+        className={className}
+        accordion={false}
+        preExpanded={preExpanded}
+      >
         {items.map((item, index) => (
-          <StyledAccordionItem key={index}>
+          <StyledAccordionItem key={index} uuid={uuids && uuids[index]}>
             <StyledAccordionItemTitle>
               <>
                 {item.title}
@@ -45,7 +49,9 @@ Accordion.propTypes = {
       title: PropTypes.node.isRequired,
       body: PropTypes.node.isRequired
     })
-  ).isRequired
+  ).isRequired,
+  uuids: PropTypes.arrayOf(PropTypes.string),
+  preExpanded: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Accordion;

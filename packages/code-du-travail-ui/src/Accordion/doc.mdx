@@ -9,11 +9,22 @@ import Accordion from ".";
 # Accordion
 
 <Playground>
+  <h2>Example 1 - Single Item</h2>
   <Accordion items={[{ title: "This is the title of a single item accordion", body: "this is the body" }]}/>
+  <h2>Example 2 - Multiple Items</h2>
   <Accordion items={[
     { title: "This is the title 1", body: "this is the body" },
     { title: "This is the title 2", body: "this is the body" },
   ]}/>
+  <h2>Example 3 - Multiple Items Pre Expanded</h2>
+  <Accordion
+    items={[
+      { title: "This is the title 1", body: "this is the body" },
+      { title: "This is the title 2", body: "this is the body" },
+    ]}
+    uuids={['item-1', 'item-2']}
+    preExpanded={['item-2']}
+  />
 </Playground>
 
 <Props of={Accordion} />
