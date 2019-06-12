@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { AsideTitle, Section, Wrapper } from "@cdt/ui";
@@ -10,6 +9,7 @@ import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -25,19 +25,21 @@ class ModeleCourrier extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageUrl } = this.props;
     const { description } = data._source;
     if (data.status === 404) {
       return <Answer emptyMessage="Modèle de courrier introuvable" />;
     }
     return (
       <PageLayout>
-        <Head>
-          <meta
-            name="description"
-            content={description.slice(0, description.indexOf(" ", 150)) + "…"}
-          />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={`Modèle de courrier :  ${data._source.title}`}
+          description={
+            description.slice(0, description.indexOf(" ", 150)) + "…"
+          }
+        />
+
         <Answer
           title={`Modèle de courrier :  ${data._source.title}`}
           emptyMessage="Modèle de courrier introuvable"

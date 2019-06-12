@@ -16,22 +16,14 @@ export default class MyApp extends App {
   };
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
-    console.log({ ctx });
-    // const pageUrl = req
-    //   ? `${req.protocol}://${req.headers.host}`
-    //   : `${window.location.href.protocol}://${window.location.href.hostname}${
-    //       window.location.href.pathname
-    //     }`;
-    // if (req) {
-    //   console.log(req.headers);
-    // } else {
-    //   console.log({ window });
-    // }
 
-    // console.log(pageUrl);
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
+    // pageUrl is only defined on serverside request
+    pageProps.pageUrl = ctx.req
+      ? `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`
+      : undefined;
 
     return { pageProps };
   }

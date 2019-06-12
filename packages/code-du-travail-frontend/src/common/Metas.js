@@ -1,11 +1,15 @@
 import React from "react";
 import Head from "next/head";
+import Router from "next/router";
 export function Metas({
   title = "",
   description = "",
-  url = "",
+  url,
   image = "/static/images/social-preview.jpg"
 }) {
+  if (!url && Router) {
+    url = Router.asPath;
+  }
   return (
     <Head>
       <title>{title}</title>

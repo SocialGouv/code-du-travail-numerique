@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Head from "next/head";
 import {
   Accordion,
   Alert,
@@ -14,8 +13,9 @@ import {
 } from "@cdt/ui";
 
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
-const SearchPage = () => {
+const SearchPage = ({ pageUrl }) => {
   const accordionItems = [];
 
   accordionItems.push({
@@ -231,13 +231,12 @@ const SearchPage = () => {
 
   return (
     <PageLayout>
-      <Head>
-        <title>Mentions légales - Code du travail numérique</title>
-        <meta
-          name="description"
-          content="Mentions légales du Code du travail numérique"
-        />
-      </Head>
+      <Metas
+        url={pageUrl}
+        title="Mentions légales - Code du travail numérique"
+        description="Mentions légales du Code du travail numérique"
+      />
+
       <Section>
         <Container narrow>
           <Wrapper variant="light">
