@@ -21,32 +21,6 @@ https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden-
   text-align: center;
 }
 
-.no-margin {
-  margin: 0;
-}
-
-.full-width {
-  width: 100%;
-}
-
-.fontweight--normal {
-  font-weight: normal !important;
-}
-.fontweight--italic {
-  font-style: italic !important;
-}
-
-/* Display an external link icon before the text. */
-.external-link__before::before {
-  content: "";
-  display: inline-block;
-  background: url(src/assets/icons/external-link.svg) no-repeat 100% 50%;
-  background-size: 15px;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-}
-
 /* Display an external link icon after the text. */
 .external-link__after::after {
   content: "";
@@ -62,65 +36,7 @@ https://allyjs.io/tutorials/hiding-elements.html#2017-edition-of-visuallyhidden-
 .bg-color {
   background: currentColor;
 }
-.color__black {
-  color: var(--color-black);
-}
-.color__blue-dark {
-  color: var(--color-blue-dark);
-}
-.color__blue {
-  color: var(--color-blue);
-}
-.color__danger-background {
-  color: var(--color-danger-background);
-}
-.color__dark-background {
-  color: var(--color-dark-background);
-}
-.color__dark-text {
-  color: var(--color-dark-text);
-}
-.color__element-background {
-  color: var(--color-element-background);
-}
-.color__element-border {
-  color: var(--color-element-border);
-}
-.color__info-background {
-  color: var(--color-info-background);
-}
-.color__light-background {
-  color: var(--color-light-background);
-}
-.color__light-text {
-  color: var(--color-light-text);
-}
-.color__primary-background {
-  color: var(--color-primary-background);
-}
-.color__secondary-background {
-  color: var(--color-secondary-background);
-}
-.color__success-background {
-  color: var(--color-success-background);
-}
-.color__warning-background {
-  color: var(--color-warning-background);
-}
+
 .color__white {
   color: var(--color-white);
-}
-
-/* Style guide.
---------------------------------------------------------------------------- */
-
-.style-guide__color::before {
-  content: "";
-  display: inline-block;
-  width: var(--spacing-large);
-  height: var(--spacing-large);
-  margin-right: var(--spacing-small);
-  vertical-align: middle;
-  border: 1px solid var(--color-element-border);
-  background: currentColor;
 }

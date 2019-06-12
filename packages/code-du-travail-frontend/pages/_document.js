@@ -1,8 +1,9 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-
 import "url-search-params";
+
+import GlobalStyle from "../src/layout/GlobalStyle";
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -58,6 +59,7 @@ export default class MyDocument extends Document {
             Vous devez activer le JavaScript pour pouvoir profiter pleinement de
             ce site internet.
           </noscript>
+          <GlobalStyle />
           <Main />
           <NextScript />
         </body>
