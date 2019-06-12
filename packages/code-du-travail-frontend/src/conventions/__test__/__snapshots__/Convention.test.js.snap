@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Convention /> should render 1`] = `
-.c5 {
+.c1 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -11,8 +25,8 @@ exports[`<Convention /> should render 1`] = `
   height: 12px;
 }
 
-.c5::after,
-.c5::before {
+.c3::after,
+.c3::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -22,42 +36,88 @@ exports[`<Convention /> should render 1`] = `
   content: "";
 }
 
-.c5::before {
+.c3::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c5::before,
-[aria-selected="true"] .c5::before {
+[aria-expanded="true"] .c3::before,
+[aria-selected="true"] .c3::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c5::after {
+.c3::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c5::after,
-[aria-selected="true"] .c5::after {
+[aria-expanded="true"] .c3::after,
+[aria-selected="true"] .c3::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c5::before,
-.c5::after {
+.c3::before,
+.c3::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c4 {
+.c5 {
+  margin-bottom: 2rem;
+}
+
+.c5 .react-tabs__tab-list {
+  position: relative;
+  top: 1px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c5 .react-tabs__tab {
+  margin-right: 0.25rem;
+  padding: 0.625rem 1rem;
+  font-size: 1.1rem;
+  background-color: #ebeff3;
+  border: 1px solid #c9d3df;
+  border-bottom: 1px solid #005994;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.c5 .react-tabs__tab:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5 .react-tabs__tab--selected {
+  color: #fff;
+  background-color: #005994;
+}
+
+.c5 .react-tabs__tab-panel--selected {
+  padding: 1rem;
+  border: 1px solid #005994;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,88 +130,9 @@ exports[`<Convention /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
 }
 
-.c4:hover,
-.c4:focus,
-.c4:focus-within,
-.c4[aria-expanded="true"] {
-  color: #006ab2;
-}
-
-.c2 {
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-.c2 + .c1 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c2 .c3 {
-  padding-right: 1rem;
-}
-
-.c6 {
-  padding: 1rem;
-  -webkit-animation: bcCCNc 0.35s ease-in;
-  animation: bcCCNc 0.35s ease-in;
-}
-
-.c6.accordion__body--hidden {
-  display: none;
-}
-
-.c8 {
-  margin-bottom: 2rem;
-}
-
-.c8 .react-tabs__tab-list {
-  position: relative;
-  top: 1px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c8 .react-tabs__tab {
-  margin-right: 0.25rem;
-  padding: 0.625rem 1rem;
-  font-size: 1.1rem;
-  background-color: #ebeff3;
-  border: 1px solid #c9d3df;
-  border-bottom: 1px solid #005994;
-  border-top-left-radius: 0.2rem;
-  border-top-right-radius: 0.2rem;
-  cursor: pointer;
-}
-
-.c8 .react-tabs__tab:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c8 .react-tabs__tab--selected {
-  color: #fff;
-  background-color: #005994;
-}
-
-.c8 .react-tabs__tab-panel--selected {
-  padding: 1rem;
-  border: 1px solid #005994;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.c7 {
+.c4 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -164,70 +145,63 @@ exports[`<Convention /> should render 1`] = `
   padding: 10px;
 }
 
+@media print {
+  .c1 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 <div>
   <div
     class="c0"
   >
     <div
-      class="accordion"
+      class="c1"
     >
-      <div
-        class="c1 c2"
+      <a
+        aria-expanded="true"
+        class="c2"
+        href="#"
       >
+        Explications sur les conventions collectives nationales
         <div
-          aria-controls="accordion__body-0"
-          aria-expanded="false"
-          class="c3 c4"
-          id="accordion__title-0"
-          role="button"
-          tabindex="0"
-        >
-          Explications sur les conventions collectives nationales
-          <div
-            class="c5"
-            role="presentation"
-          />
-        </div>
-        <div
-          aria-hidden="true"
-          aria-labelledby="accordion__title-0"
-          class="c6 accordion__body--hidden"
-          id="accordion__body-0"
-        >
-          <p
-            class="c7"
-          >
-            Qu'est ce qu'une convention collective ?
-          </p>
-          <p>
-            Une convention collective est un accord négocié entre des organisations syndicales de salariés et des organisations d'employeurs.
-            <br />
-            Elle permet d'aménager les règles issues du code du travail concernant les conditions d'emploi, la formation professionnelle, le travail des salariés et de leurs garanties sociales aux spécificités du secteurs d'activité et géographique concernés. Elle peut également prévoir d'autres mesures qui ne sont pas prévues par le code du travail.
-          </p>
-          <p
-            class="c7"
-          >
-            Une convention collective de branche s'applique-t-elle à ma situation ?
-          </p>
-          <p>
-            Pour pouvoir s'appliquer à vous, la convention collective de branche doit être applicable à votre entreprise.
-            <br />
-            Lorsque votre entreprise entre dans le champ professionnel et géographique d'une convention collective de branche, il existe deux situations dans lesquelles votre entreprise a l'obligation de l'appliquer :
-          </p>
-          <ul>
-            <li>
-              soit une convention collective de branche a été étendue par le Ministère du travail rendant la convention collective obligatoire pour toutes les entreprises qui entrent dans son champ d'application professionnel et géographique.
-            </li>
-            <li>
-              soit votre entreprise est signataire ou adhérente à une organisation patronale signataire de la convention collective.
-            </li>
-          </ul>
-        </div>
-      </div>
+          class="c3"
+          role="presentation"
+        />
+      </a>
+      <p
+        class="c4"
+      >
+        Qu'est ce qu'une convention collective ?
+      </p>
+      <p>
+        Une convention collective est un accord négocié entre des organisations syndicales de salariés et des organisations d'employeurs.
+        <br />
+        Elle permet d'aménager les règles issues du code du travail concernant les conditions d'emploi, la formation professionnelle, le travail des salariés et de leurs garanties sociales aux spécificités du secteurs d'activité et géographique concernés. Elle peut également prévoir d'autres mesures qui ne sont pas prévues par le code du travail.
+      </p>
+      <p
+        class="c4"
+      >
+        Une convention collective de branche s'applique-t-elle à ma situation ?
+      </p>
+      <p>
+        Pour pouvoir s'appliquer à vous, la convention collective de branche doit être applicable à votre entreprise.
+        <br />
+        Lorsque votre entreprise entre dans le champ professionnel et géographique d'une convention collective de branche, il existe deux situations dans lesquelles votre entreprise a l'obligation de l'appliquer :
+      </p>
+      <ul>
+        <li>
+          soit une convention collective de branche a été étendue par le Ministère du travail rendant la convention collective obligatoire pour toutes les entreprises qui entrent dans son champ d'application professionnel et géographique.
+        </li>
+        <li>
+          soit votre entreprise est signataire ou adhérente à une organisation patronale signataire de la convention collective.
+        </li>
+      </ul>
     </div>
   </div>
   <div
-    class="c8"
+    class="c5"
     data-tabs="true"
   >
     <ul
