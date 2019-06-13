@@ -105,13 +105,13 @@ exports[`<Convention /> should render 1`] = `
   display: none;
 }
 
-.c9 {
+.c12 {
   position: relative;
   overflow: hidden;
 }
 
-.c9:before,
-.c9:after {
+.c12:before,
+.c12:after {
   content: "";
   position: absolute;
   top: 0;
@@ -125,19 +125,19 @@ exports[`<Convention /> should render 1`] = `
   background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
 }
 
-.c9:before {
+.c12:before {
   left: -2rem;
 }
 
-.c9:after {
+.c12:after {
   right: -2rem;
 }
 
-.c10 {
+.c13 {
   overflow-x: auto;
 }
 
-.c11 {
+.c14 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -146,30 +146,30 @@ exports[`<Convention /> should render 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c11 caption {
+.c14 caption {
   padding: 0.625rem 0;
   text-align: center;
   font-style: italic;
 }
 
-.c11 td,
-.c11 th {
+.c14 td,
+.c14 th {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
 }
 
-.c11 th {
+.c14 th {
   background: #ebeff3;
 }
 
-.c11 thead,
-.c11 tfoot {
+.c14 thead,
+.c14 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
   background: #f5f7fa;
 }
 
-.c11 tfoot {
+.c14 tfoot {
   vertical-align: top;
 }
 
@@ -389,13 +389,13 @@ exports[`<Convention /> should render 1`] = `
       role="tabpanel"
     >
       <div
-        class="c9"
+        class="c12"
       >
         <div
-          class="c10"
+          class="c13"
         >
           <table
-            class="c11"
+            class="c14"
           >
             <tbody>
               <tr>

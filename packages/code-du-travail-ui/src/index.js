@@ -25,4 +25,3 @@ export { default as Tabs } from "./Tabs";
 export { default as Tag } from "./Tag";
 export { default as Toast } from "./Toast";
 export { default as VerticalArrow } from "./VerticalArrow";
-export { default as OverflowWrapper } from "./OverflowWrapper";
