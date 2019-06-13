@@ -29,15 +29,15 @@ class Table extends React.PureComponent {
     };
 
     const handleSpan = el => {
-      let colspan = 1;
-      let rowspan = 1;
+      let colSpan = 1;
+      let rowSpan = 1;
       if (el._) {
-        colspan = el._.fusionHorizontale || 1;
-        rowspan = el._.fusionVerticale || 1;
+        colSpan = el._.fusionHorizontale || 1;
+        rowSpan = el._.fusionVerticale || 1;
       }
       return {
-        colspan,
-        rowspan
+        colSpan,
+        rowSpan
       };
     };
 
