@@ -4,9 +4,9 @@ import { Field } from "react-final-form";
 import { Button, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
 
-import { getSalaireRef, getIndemnite } from "../indemnite";
 import { branches } from "../branches";
 import { Label, SectionTitle } from "../stepStyles";
+import { getIndemniteFromFinalForm } from "../indemnite";
 import { IndemniteLegale } from "../components/IndemniteLegale";
 
 function validateCCn(idcc) {
@@ -17,36 +17,7 @@ function validateCCn(idcc) {
 }
 
 function StepIndemnite({ form }) {
-  const state = form.getState();
-  const {
-    hasTempsPartiel = false,
-    hasSameSalaire = false,
-    inaptitude = false,
-    salairePeriods = [],
-    salaires = [],
-    primes = [],
-    salaire,
-    anciennete,
-    dateNotification
-  } = state.values;
-
-  const salaireRef = getSalaireRef({
-    hasTempsPartiel,
-    hasSameSalaire,
-    salaire,
-    salairePeriods,
-    salaires,
-    anciennete,
-    primes
-  });
-
-  const { indemnite, formula } = getIndemnite({
-    salaireRef,
-    inaptitude,
-    anciennete,
-    dateNotification
-  });
-
+  const { indemnite, formula } = getIndemniteFromFinalForm(form);
   return (
     <Container>
       <IndemniteLegale indemnite={indemnite} formula={formula} />
