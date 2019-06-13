@@ -12,7 +12,6 @@ hash_size = int(os.environ["HASH_SIZE"])
 def get_active_branches():
   response = request.urlopen("https://{}@api.github.com/repos/SocialGouv/code-du-travail-numerique/pulls".format(github_token))
   active_branches = [branch.get("head").get("ref") for branch in json.loads(response.read())]
-  print active_branches
   return [
     hashlib.sha1(branche).hexdigest()[:hash_size]
     for branche in active_branches
