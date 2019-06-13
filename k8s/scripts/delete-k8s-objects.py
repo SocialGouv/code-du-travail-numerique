@@ -13,7 +13,7 @@ def get_active_branches():
   url = "https://api.github.com/repos/SocialGouv/code-du-travail-numerique/pulls".format(github_token)
   req = request.Request(url, None, {"token": github_token})
   response = request.urlopen(req)
-  [branch.get("head").get("ref") for branch in json.loads(response.read())]
+  active_branches = [branch.get("head").get("ref") for branch in json.loads(response.read())]
   return [
     hashlib.sha1(branche).hexdigest()[:hash_size]
     for branche in active_branches
