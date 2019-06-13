@@ -1,6 +1,7 @@
 from subprocess import check_output
 import hashlib
 import os
+print "a"
 import requests
 
 # This script compares the active remote branches and active k8s tags.
@@ -11,7 +12,7 @@ hash_size = int(os.environ["HASH_SIZE"])
 def get_active_branches():
   r = requests.get("https://{}@api.github.com/repos/SocialGouv/code-du-travail-numerique/pulls".format(github_token))
   active_branches = [branch.get("head").get("ref") for branch in r.json()]
-  print(active_branches)
+  print active_branches
   return [
     hashlib.sha1(branche).hexdigest()[:hash_size]
     for branche in active_branches
