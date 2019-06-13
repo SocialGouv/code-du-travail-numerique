@@ -93,7 +93,7 @@ exports[`<Tabs /> renders 1`] = `
         role="tab"
         tabindex="0"
       >
-        tab1
+        Tab 1
       </li>
       <li
         aria-controls="react-tabs-3"
@@ -103,7 +103,7 @@ exports[`<Tabs /> renders 1`] = `
         id="react-tabs-2"
         role="tab"
       >
-        tab2
+        Tab 2
       </li>
     </ul>
     <div
@@ -112,7 +112,7 @@ exports[`<Tabs /> renders 1`] = `
       id="react-tabs-1"
       role="tabpanel"
     >
-      Ce panel peut contenir des nodes
+      This panel can contain nodes
     </div>
     <div
       aria-labelledby="react-tabs-2"
