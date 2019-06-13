@@ -25,7 +25,7 @@ class ModeleCourrier extends React.Component {
   }
 
   render() {
-    const { data, pageUrl } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const { description } = data._source;
     if (data.status === 404) {
       return <Answer emptyMessage="Modèle de courrier introuvable" />;
@@ -38,6 +38,7 @@ class ModeleCourrier extends React.Component {
           description={
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
+          image={ogImage}
         />
 
         <Answer

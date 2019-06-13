@@ -12,12 +12,13 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const Home = ({ pageUrl, data: { themes } }) => (
+const Home = ({ pageUrl, ogImage, data: { themes } }) => (
   <HomeLayout>
     <Metas
       url={pageUrl}
       title="Code du travail numérique"
       description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
+      image={ogImage}
     />
     <Search />
     <Themes themes={themes} />

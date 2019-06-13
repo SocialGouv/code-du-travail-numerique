@@ -15,7 +15,7 @@ import {
 import { PageLayout } from "../src/layout/PageLayout";
 import { Metas } from "../src/common/Metas";
 
-const SearchPage = ({ pageUrl }) => {
+const SearchPage = ({ pageUrl, ogImage }) => {
   const accordionItems = [];
 
   accordionItems.push({
@@ -235,6 +235,7 @@ const SearchPage = ({ pageUrl }) => {
         url={pageUrl}
         title="Mentions légales - Code du travail numérique"
         description="Mentions légales du Code du travail numérique"
+        image={ogImage}
       />
 
       <Section>

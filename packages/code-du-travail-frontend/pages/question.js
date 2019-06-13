@@ -38,7 +38,7 @@ class Question extends React.Component {
   }
 
   render() {
-    const { data, pageUrl } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const { query } = this.props.router;
 
     const {
@@ -91,6 +91,7 @@ class Question extends React.Component {
           url={pageUrl}
           title={data._source.title}
           description={data._source.description}
+          image={ogImage}
         />
         <Answer
           title={data._source.title}

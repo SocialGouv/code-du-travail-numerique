@@ -24,13 +24,14 @@ class Modeles extends React.Component {
   }
 
   render() {
-    const { data, pageUrl } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     return (
       <PageLayout>
         <Metas
           url={pageUrl}
           title="Modèles de courriers - Code du travail numérique"
           description="Retrouvez l'ensemble des modèles de courriers à votre disposition."
+          image={ogImage}
         />
         <Search />
         <Section>

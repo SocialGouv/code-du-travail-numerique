@@ -25,6 +25,14 @@ export default class MyApp extends App {
       ? `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`
       : undefined;
 
+    pageProps.ogImage = ctx.req
+      ? `${ctx.req.protocol}://${
+          ctx.req.headers.host
+        }/static/images/social-preview.jpg`
+      : `${location.protocol}//${
+          location.hostname
+        }/static/images/social-preview.jpg`;
+
     return { pageProps };
   }
 

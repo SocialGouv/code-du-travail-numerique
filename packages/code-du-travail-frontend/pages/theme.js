@@ -66,7 +66,8 @@ class Theme extends React.Component {
   render() {
     const {
       data: { theme },
-      pageUrl
+      pageUrl,
+      ogImage
     } = this.props;
     const breadcrumbs = getBreadcrumbs(theme.breadcrumbs);
     const isRootTheme = theme && !theme.slug;
@@ -80,6 +81,7 @@ class Theme extends React.Component {
           url={pageUrl}
           title={`${theme.label} - Code du travail numérique`}
           description={`Explorez les contenus autour du thème ${theme.label}`}
+          image={ogImage}
         />
         <Search />
         <Breadcrumbs items={breadcrumbs} />

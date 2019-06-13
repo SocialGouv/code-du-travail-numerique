@@ -38,7 +38,7 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data, pageUrl } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const footer = (
       <Source name="Ministère du travail" url={data._source.url} />
     );
@@ -48,6 +48,7 @@ class Fiche extends React.Component {
           url={pageUrl}
           title={data._source.title}
           description={data._source.description}
+          image={ogImage}
         />
         <Answer
           title={data._source.title}

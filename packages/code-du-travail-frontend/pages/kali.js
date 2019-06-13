@@ -39,11 +39,16 @@ class Kali extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { pageUrl, convention, conteneur } = this.props;
+    const { pageUrl, ogImage, convention, conteneur } = this.props;
     const { title } = convention;
     return (
       <PageLayout>
-        <Metas url={pageUrl} title={title} description={title} />
+        <Metas
+          url={pageUrl}
+          title={title}
+          description={title}
+          image={ogImage}
+        />
         <Answer
           title={title}
           emptyMessage="Cette convention collective n'a pas été trouvée"

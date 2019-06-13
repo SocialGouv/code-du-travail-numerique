@@ -43,7 +43,7 @@ class SearchPage extends React.Component {
   }
 
   render() {
-    const { router, data, pageUrl } = this.props;
+    const { router, data, pageUrl, ogImage } = this.props;
     const { source = "", q = "" } = router.query;
     return (
       <PageLayout>
@@ -51,6 +51,7 @@ class SearchPage extends React.Component {
           url={pageUrl}
           title={`${q} - Code du travail numérique`}
           description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
+          image={ogImage}
         />
         <Search />
         <Section>

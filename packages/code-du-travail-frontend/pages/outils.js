@@ -61,13 +61,18 @@ class Outils extends React.Component {
     return { data: { _source: { slug: query.slug } } };
   }
   render() {
-    const { data, router, pageUrl } = this.props;
+    const { data, router, pageUrl, ogImage } = this.props;
     const { outil: Outil, title, description } = getOutilFromCode(
       data._source.slug
     );
     return (
       <PageLayout>
-        <Metas url={pageUrl} title={title} description={description} />
+        <Metas
+          url={pageUrl}
+          title={title}
+          description={description}
+          image={ogImage}
+        />
         <Search />
         <Outil q={router.query.q} />
         <Source name="-" />
