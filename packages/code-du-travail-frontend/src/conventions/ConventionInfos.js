@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { format } from "date-fns";
+import { Table } from "@cdt/ui";
 
 class ConventionInfos extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class ConventionInfos extends React.Component {
     const { url } = convention;
     return (
       <React.Fragment>
-        <table>
+        <Table>
           <tbody>
             <tr>
               <th>IDCC</th>
@@ -19,7 +20,7 @@ class ConventionInfos extends React.Component {
               <td>{format(conteneur.date_publi, "DD/MM/YYYY")}</td>
             </tr>
           </tbody>
-        </table>
+        </Table>
 
         <p>
           <a target="_blank" rel="noopener noreferrer" href={url}>

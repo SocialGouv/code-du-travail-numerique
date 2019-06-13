@@ -11,6 +11,74 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   margin-bottom: 0;
 }
 
+.c4 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c4:before,
+.c4:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c4:before {
+  left: -2rem;
+}
+
+.c4:after {
+  right: -2rem;
+}
+
+.c5 {
+  overflow-x: auto;
+}
+
+.c7 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c7 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c7 td,
+.c7 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c7 th {
+  background: #ebeff3;
+}
+
+.c7 thead,
+.c7 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f5f7fa;
+}
+
+.c7 tfoot {
+  vertical-align: top;
+}
+
 .c3 {
   padding: 0;
   text-align: center;
@@ -52,16 +120,12 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c4 {
-  width: 100%;
-}
-
-.c4 tr > td:nth-child(2) {
+.c6 tr > td:nth-child(2) {
   text-align: left;
   width: 70%;
 }
 
-.c6 {
+.c9 {
   padding: 0;
   font-size: 1rem;
   text-align: center;
@@ -75,13 +139,13 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   padding-right: 1rem;
 }
 
-.c5 {
+.c8 {
   display: inline-block;
   position: relative;
   margin-right: 1.25rem;
 }
 
-.c7 {
+.c10 {
   color: #adb9c9;
   position: absolute;
   right: 0.25rem;
@@ -170,361 +234,369 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
         </span>
       </label>
     </div>
-    <table
+    <div
       class="c4"
     >
-      <caption>
-        Salaire mensuel brut (prendre en compte les primes et avantages en nature)
-      </caption>
-      <thead>
-        <tr>
-          <th>
-            Mois
-          </th>
-          <th>
-            Salaire mensuel brut
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <label
-              for="salary0"
-            >
-              juillet 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary0"
-                name="salaires[0].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary1"
-            >
-              juin 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary1"
-                name="salaires[1].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary2"
-            >
-              mai 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary2"
-                name="salaires[2].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary3"
-            >
-              avril 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary3"
-                name="salaires[3].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary4"
-            >
-              mars 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary4"
-                name="salaires[4].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary5"
-            >
-              février 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary5"
-                name="salaires[5].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary6"
-            >
-              janvier 2019
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary6"
-                name="salaires[6].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary7"
-            >
-              décembre 2018
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary7"
-                name="salaires[7].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary8"
-            >
-              novembre 2018
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary8"
-                name="salaires[8].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary9"
-            >
-              octobre 2018
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary9"
-                name="salaires[9].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary10"
-            >
-              septembre 2018
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary10"
-                name="salaires[10].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label
-              for="salary11"
-            >
-              août 2018
-            </label>
-          </td>
-          <td>
-            <div
-              class="c5"
-            >
-              <input
-                class="c6"
-                id="salary11"
-                name="salaires[11].salary"
-                size="10"
-                value=""
-              />
-              <span
-                aria-hidden="true"
-                class="c7"
-              >
-                €
-              </span>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <div
+        class="c5"
+      >
+        <table
+          class="c6 c7"
+        >
+          <caption>
+            Salaire mensuel brut (prendre en compte les primes et avantages en nature)
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                Mois
+              </th>
+              <th>
+                Salaire mensuel brut
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label
+                  for="salary0"
+                >
+                  juillet 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary0"
+                    name="salaires[0].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary1"
+                >
+                  juin 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary1"
+                    name="salaires[1].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary2"
+                >
+                  mai 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary2"
+                    name="salaires[2].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary3"
+                >
+                  avril 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary3"
+                    name="salaires[3].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary4"
+                >
+                  mars 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary4"
+                    name="salaires[4].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary5"
+                >
+                  février 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary5"
+                    name="salaires[5].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary6"
+                >
+                  janvier 2019
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary6"
+                    name="salaires[6].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary7"
+                >
+                  décembre 2018
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary7"
+                    name="salaires[7].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary8"
+                >
+                  novembre 2018
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary8"
+                    name="salaires[8].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary9"
+                >
+                  octobre 2018
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary9"
+                    name="salaires[9].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary10"
+                >
+                  septembre 2018
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary10"
+                    name="salaires[10].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label
+                  for="salary11"
+                >
+                  août 2018
+                </label>
+              </td>
+              <td>
+                <div
+                  class="c8"
+                >
+                  <input
+                    class="c9"
+                    id="salary11"
+                    name="salaires[11].salary"
+                    size="10"
+                    value=""
+                  />
+                  <span
+                    aria-hidden="true"
+                    class="c10"
+                  >
+                    €
+                  </span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 `;

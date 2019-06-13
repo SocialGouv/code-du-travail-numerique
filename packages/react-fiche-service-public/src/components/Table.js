@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Table as UITable } from "@cdt/ui";
 
 import { ElementBuilder } from "./ElementBuilder";
 import { ignoreParagraph, getText } from "../utils";
@@ -28,7 +29,7 @@ class Table extends React.PureComponent {
     };
 
     return (
-      <table>
+      <UITable>
         {title && <caption>{getText(title)}</caption>}
         {headingRow && (
           <thead>
@@ -66,7 +67,7 @@ class Table extends React.PureComponent {
             </tr>
           ))}
         </tbody>
-      </table>
+      </UITable>
     );
   }
 }
