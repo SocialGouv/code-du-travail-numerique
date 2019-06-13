@@ -17,7 +17,7 @@ const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
 
 const BreadCrumbs = ({ entry }) => {
-  if (entries && !entries.length) return null;
+  if (entries && !(entries.length > 0)) return null;
   const entries = entry
     .split("/")
     .map(s => s.trim())

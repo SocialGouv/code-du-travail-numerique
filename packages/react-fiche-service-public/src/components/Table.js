@@ -44,7 +44,7 @@ class Table extends React.PureComponent {
     return (
       <UITable>
         {title && <caption>{getText(title)}</caption>}
-        {headingRows.length && (
+        {headingRows.length > 0 && (
           <thead>
             {headingRows.map((tr, rowIndex) => (
               <tr key={rowIndex}>
