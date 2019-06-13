@@ -12,6 +12,7 @@ exports[`<Convention /> should render 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

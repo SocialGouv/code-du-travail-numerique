@@ -74,6 +74,7 @@ exports[`<Anciennete /> should render 1`] = `
 }
 
 .c0 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

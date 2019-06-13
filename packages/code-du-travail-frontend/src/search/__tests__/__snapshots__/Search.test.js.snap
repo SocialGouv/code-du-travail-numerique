@@ -8,6 +8,7 @@ exports[`<search /> should render 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -403,6 +404,7 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

@@ -12,6 +12,7 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 }
 
 .c0 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -45,6 +46,7 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 }
 
 .c0 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -78,6 +80,7 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 }
 
 .c0 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
