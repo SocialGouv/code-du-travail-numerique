@@ -5,7 +5,6 @@ import { Section, Container, Wrapper } from "@cdt/ui";
 
 import { StepReducer, getInitialSteps } from "./reducer";
 import { Wizard } from "./Wizard";
-import { hasIndemniteLicenciement } from "./branches";
 
 function CalculateurIndemnite() {
   const initialSteps = getInitialSteps();
@@ -24,7 +23,7 @@ function CalculateurIndemnite() {
     </OnChange>,
     <OnChange key="rule-branche" name="branche">
       {async value => {
-        if (hasIndemniteLicenciement(value)) {
+        if (value) {
           const module = await import(`./ccn/${value}`);
           dispatch({ type: "add_branche", payload: module.steps });
         } else {

@@ -7,16 +7,13 @@ import MathJax from "react-mathjax-preview";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 import { getIndemnite, getSalaireRef } from "../indemnite";
-import { branches, hasIndemniteLicenciement } from "../branches";
+import { branches } from "../branches";
 import { Label, SectionTitle, Highlight } from "../stepStyles";
 
 function validateCCn(idcc) {
   const selectedBranche = branches.find(branche => branche.value === idcc);
   if (!selectedBranche) {
     return "Cette branche n’est pas encore intégrée.";
-  }
-  if (!hasIndemniteLicenciement(idcc)) {
-    return "Pour votre branche, le calcul de l’indemnité de licenciement se base sur l’indemnité légale de licenciement.";
   }
 }
 
@@ -30,7 +27,6 @@ function StepIndemnite({ form }) {
     salaires = [],
     primes = [],
     salaire,
-    branche,
     anciennete,
     dateNotification
   } = state.values;
@@ -60,12 +56,6 @@ function StepIndemnite({ form }) {
         <Highlight>{indemnite} €</Highlight> pour votre indemnité de
         licenciement.
       </p>
-      {branche && !hasIndemniteLicenciement(branche) && (
-        <p>
-          Pour votre branche, le calcul de l’indemnité de licenciement se base
-          sur l’indemnité légale de licenciement.
-        </p>
-      )}
       <br />
       <details>
         <summary>Voir le detail du calcul</summary>
