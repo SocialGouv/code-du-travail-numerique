@@ -19,9 +19,7 @@ exports[`<SearchResults/> should render no results 1`] = `
   <div
     class="c0"
   >
-    <p>
-      Nous n’avons pas trouvé de résultat pour votre recherche.
-    </p>
+    Nous n’avons pas trouvé de résultat pour votre recherche.
   </div>
 </div>
 `;
@@ -45,9 +43,7 @@ exports[`<SearchResults/> should render results 1`] = `
   <div
     class="c0"
   >
-    <p>
-      Nous n’avons pas trouvé de résultat pour votre recherche.
-    </p>
+    Nous n’avons pas trouvé de résultat pour votre recherche.
   </div>
 </div>
 `;

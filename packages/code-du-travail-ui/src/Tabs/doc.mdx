@@ -12,38 +12,52 @@ import Tabs from ".";
 <Playground>
   <Tabs data={[
     {
-      tab: "tab1",
-      panel: "Ce panel peut contenir des nodes",
-      key: "une clé"
+      tab: "Tab 1",
+      panel: "This panel can contain nodes"
     },
     {
-      tab: "tab2",
-      panel: "Ces tabs ne sont pas 'controllés'",
-      key: "une autre clé"
+      tab: "Tab 2",
+      panel: "These tabs are not 'controlled'"
+    },
+    {
+      tab: "Tab 3",
+      panel: "Content 3"
+    },
+    {
+      tab: "Tab 4",
+      panel: "Content 4"
+    },
+    {
+      tab: "Tab 5 starts to be long",
+      panel: "Content 5"
+    },
+    {
+      tab: "Tab 6, how will render the mobile version ? ",
+      panel: "Content 6"
+    },
+    {
+      tab: "Tab 7",
+      panel: "Content 7"
     }
   ]}/>
-  <Tabs onSelect={(index) => window.alert(`Surprise ! L'index selectionné est le ${index}`)} data={[
+  <Tabs onSelect={(index) => window.alert(`Surprise ! Selected index is ${index}`)} data={[
     {
       tab: "Tab 1",
-      panel: "Ce panel peut contenir des nodes",
-      key: "une clé"
+      panel: "This panel can contain nodes"
     },
     {
-      tab: "Cliquez ici !",
-      panel: "Ces tabs ne sont pas 'controllés'",
-      key: "une autre clé"
+      tab: "Click here !",
+      panel: "These tabs are not 'controlled'"
     }
   ]}/>
-  <Tabs selectedIndex={1} onSelect={() => window.alert('changement de tab demandé detecté')} data={[
+  <Tabs selectedIndex={1} onSelect={() => window.alert('tab change request detected')} data={[
     {
-      tab: "Cliquer ici ne fera rien",
-      panel: ":/",
-      key: "une clé"
+      tab: "Clicking here won't do anything",
+      panel: ":/"
     },
     {
-      tab: "Tab selectionné programmatiquement",
-      panel: "Ces tabs sont controllés, ne vous acharnez pas, vous ne pourrez pas passer de l'un à l'autre ici",
-      key: "une clé aussi"
+      tab: "Tab programmatically selected",
+      panel: "These tabs are controlled, you won't be able to switch them manually."
     },
   ]}/>
 </Playground>
