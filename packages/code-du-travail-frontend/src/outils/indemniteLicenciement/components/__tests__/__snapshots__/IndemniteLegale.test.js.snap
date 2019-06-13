@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IndemniteLegale /> should render 1`] = `
+.c0 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Indemnité légale
+  </h2>
+  <p>
+    Le code du travail prévoit un montant minimum de
+     
+    <strong
+      class="c1"
+    >
+      42
+       €
+    </strong>
+     pour votre indemnité de licenciement.
+  </p>
+  <br />
+  <details>
+    <summary>
+      Voir le detail du calcul
+    </summary>
+    <div
+      id="react-mathjax-preview"
+    >
+      <div
+        id="react-mathjax-preview-result"
+      >
+        \`1337% * 3.14\`
+      </div>
+    </div>
+  </details>
+</div>
+`;

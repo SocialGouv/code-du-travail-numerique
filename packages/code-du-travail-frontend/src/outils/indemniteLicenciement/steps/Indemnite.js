@@ -3,12 +3,11 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { Button, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
-import MathJax from "react-mathjax-preview";
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
-import { getIndemnite, getSalaireRef } from "../indemnite";
+import { getSalaireRef, getIndemnite } from "../indemnite";
 import { branches } from "../branches";
-import { Label, SectionTitle, Highlight } from "../stepStyles";
+import { Label, SectionTitle } from "../stepStyles";
+import { IndemniteLegale } from "../components/IndemniteLegale";
 
 function validateCCn(idcc) {
   const selectedBranche = branches.find(branche => branche.value === idcc);
@@ -43,26 +42,14 @@ function StepIndemnite({ form }) {
 
   const { indemnite, formula } = getIndemnite({
     salaireRef,
-    anciennete,
     inaptitude,
+    anciennete,
     dateNotification
   });
 
   return (
     <Container>
-      <SectionTitle>Indemnité légale</SectionTitle>
-      <p>
-        Le code du travail prévoit un montant minimum de{" "}
-        <Highlight>{indemnite} €</Highlight> pour votre indemnité de
-        licenciement.
-      </p>
-      <br />
-      <details>
-        <summary>Voir le detail du calcul</summary>
-        <ErrorBoundary>
-          <MathJax math={"`" + formula + "`"} />
-        </ErrorBoundary>
-      </details>
+      <IndemniteLegale indemnite={indemnite} formula={formula} />
       <br />
       <br />
       <SectionTitle>
