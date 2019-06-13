@@ -5,8 +5,8 @@
 export BRANCH_NAME=${BRANCH_NAME:=$CI_COMMIT_REF_NAME}
 export COMMIT=${COMMIT:=$CI_COMMIT_SHA}
 export JOB_ID=${JOB_ID:=$CI_JOB_ID}
-
-BRANCH_NAME_HASHED=$(printf "${BRANCH_NAME}" | sha1sum | cut -c1-7 )
+export HASH_SIZE=${HASH_SIZE}
+BRANCH_NAME_HASHED=$(printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
 
 #
