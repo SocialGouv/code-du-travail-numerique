@@ -13,17 +13,14 @@ if (typeof window !== "undefined") {
   Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
 }
 
-const BrowserException = args => new Error(args);
-
-const notifySentry = err => {
+const notifySentry = statusCode => {
   if (typeof window === "undefined") {
     return;
   }
-  Sentry.configureScope(scope => {
+  Sentry.withScope(scope => {
     scope.setTag(`ssr`, false);
+    Sentry.captureMessage(`Error ${statusCode}`, "error");
   });
-
-  Sentry.captureException(err);
 };
 
 export default class Error extends React.Component {
@@ -34,7 +31,7 @@ export default class Error extends React.Component {
   componentDidMount() {
     const { statusCode } = this.props;
     if (statusCode && statusCode > 200) {
-      notifySentry(new BrowserException(statusCode));
+      notifySentry(statusCode);
     }
   }
 
