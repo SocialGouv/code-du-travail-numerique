@@ -51,5 +51,5 @@ def get_k8s_tag_to_delete(active_k8s_tag_list=[], active_branch_list=[]):
 
 if __name__ == '__main__':
   for k8s_tag_to_delete in get_k8s_tag_to_delete(get_active_k8s_tags(), get_active_branches()):
-    # delete_k8s_object(k8s_tag_to_delete)
+    delete_k8s_object(k8s_tag_to_delete)
     print('k8s objects with label branch=cdtn-'+k8s_tag_to_delete+' have been deleted')
