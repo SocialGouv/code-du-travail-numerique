@@ -11,9 +11,8 @@ function Step({ form }) {
   } = form.getState();
 
   const { indemnite, formula } = getIndemniteFromFinalForm(form);
-
   const selectedBranche = branches.find(br => br.value === branche);
-  console.log(form.getState());
+
   return (
     <Container>
       <h3>{selectedBranche.label}</h3>
