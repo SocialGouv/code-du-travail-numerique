@@ -1,8 +1,8 @@
 from subprocess import check_output
 import hashlib
 import os
-print "a"
-import requests
+import json
+from urllib import request
 
 # This script compares the active remote branches and active k8s tags.
 # If a k8s tag doesn't match an active hashed remote branches name's, we delete all the k8s objects with this k8s tag.
@@ -10,8 +10,8 @@ github_token = os.environ["GITHUB_TOKEN"]
 hash_size = int(os.environ["HASH_SIZE"])
 
 def get_active_branches():
-  r = requests.get("https://{}@api.github.com/repos/SocialGouv/code-du-travail-numerique/pulls".format(github_token))
-  active_branches = [branch.get("head").get("ref") for branch in r.json()]
+  response = request.urlopen("https://{}@api.github.com/repos/SocialGouv/code-du-travail-numerique/pulls".format(github_token))
+  active_branches = [branch.get("head").get("ref") for branch in json.loads(response.read())]
   print active_branches
   return [
     hashlib.sha1(branche).hexdigest()[:hash_size]
