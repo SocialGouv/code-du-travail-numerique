@@ -22,7 +22,7 @@ spec:
         emptyDir: {}
       containers:
       - name: elasticsearch
-        image: ${CDTN_REGISTRY}/elasticsearch:${IMAGE_TAG}
+        image: ${CDTN_REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
         resources:
           limits:
             cpu: 1000m

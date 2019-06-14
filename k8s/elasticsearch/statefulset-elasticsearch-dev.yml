@@ -41,7 +41,7 @@ spec:
             add:
             - IPC_LOCK
             - SYS_RESOURCE
-        image: ${CDTN_REGISTRY}/elasticsearch:${IMAGE_TAG}
+        image: ${CDTN_REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
         env:
         - name: ES_JAVA_OPTS
           valueFrom:

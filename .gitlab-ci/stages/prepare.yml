@@ -22,7 +22,17 @@ Register socialgouv/cdtn base image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE
 
 Register elasticsearch image:
-  <<: *prepare_stage
-  variables:
-    CONTEXT: docker/elasticsearch
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
+  extends: .base-docker-image-stage
+  stage: "Prepare"
+  dependencies: []
+  before_script:
+  - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
+  # NOTE(douglasduteil): do not fail if no previous sha image exist
+  - docker pull $IMAGE_NAME:$ELK_STACK_VERSION || true
+  script:
+  - echo "Build $IMAGE_NAME:$ELK_STACK_VERSION from $IMAGE_NAME:$ELK_STACK_VERSION"
+  - docker build --cache-from $IMAGE_NAME:$ELK_STACK_VERSION -t $IMAGE_NAME:$ELK_STACK_VERSION $CONTEXT
+  - docker push $IMAGE_NAME
+variables:
+  CONTEXT: docker/elasticsearch
+  IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
