@@ -22,7 +22,7 @@ services:
       dockerfile: ./Dockerfile
 
   nlp_api:
-    # restart: always
+    restart: always
     env_file:
       - .env
     ports:

@@ -19,7 +19,7 @@ const ContentTitle = ({ level, type, id, titre }) => {
 const getTitleTagName = ({ type, level }) => {
   if (type == "article") {
     return "h5";
-  } else if (level == 0) {
+  } else if (level === 0) {
     return "h3";
   } else {
     return "h4";
@@ -28,11 +28,11 @@ const getTitleTagName = ({ type, level }) => {
 
 const Title = styled.span`
   margin-top: ${props =>
-    props.type != "article" && props.level == 0 ? theme.spacing.large : "0"};
+    props.type != "article" && props.level === 0 ? theme.spacing.large : "0"};
   font-size: ${props =>
     props.type == "article"
       ? theme.fonts.sizeH6
-      : props.level == 0
+      : props.level === 0
       ? theme.fonts.sizeH5
       : theme.fonts.sizeH4};
   font-size: 16px;

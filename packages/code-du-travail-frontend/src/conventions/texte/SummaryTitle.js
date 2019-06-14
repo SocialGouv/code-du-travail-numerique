@@ -17,7 +17,7 @@ const SummaryTitle = ({ node, onToggleExpanded, tocbotEnabled }) => {
     [id, expanded]
   );
 
-  if (!node.children || node.children.length == 0) {
+  if (!node.children || node.children.length === 0) {
     return (
       <TocListItem type={type} id={id} level={0}>
         <TitleLink type={type} id={id}>
