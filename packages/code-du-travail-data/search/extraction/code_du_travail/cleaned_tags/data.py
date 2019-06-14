@@ -106,6 +106,11 @@ def inspect_code_du_travail_children(children):
                 logger.debug('%s found in Legilibre but NOT FOUND in cleaned tags.', article_num)
                 continue
 
+            html = child['data']['bloc_textuel']
+            if child['data']['nota']:
+              html += f"<p>Nota: {child['data']['nota']}</p>"
+
+
             CODE_DU_TRAVAIL_DICT[article_num] = {
                 'titre': child['data']['titre'],
                 'id': child['data']['id'],
@@ -113,7 +118,7 @@ def inspect_code_du_travail_children(children):
                 'date_debut': child['data']['date_debut'],
                 'nota': child['data']['nota'],  # In HTML.
                 'bloc_textuel': strip_html(child['data']['bloc_textuel']),  # In HTML.
-                'html': child['data']['bloc_textuel'] + (child['data']['nota'] or ""),  # In HTML.
+                'html': html,
                 'themes': themes,
                 'path': make_tag(tag).path,
                 'url': f"{LEGIFRANCE_BASE_URL}?idArticle={child['data']['id']}&cidTexte={child['data']['cid']}",
