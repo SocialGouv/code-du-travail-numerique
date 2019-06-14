@@ -1,13 +1,37 @@
 import React from "react";
-import { Accordion } from "@cdt/ui";
+import { Wrapper, VerticalArrow } from "@cdt/ui";
 import styled from "styled-components";
 
-const ConventionExplainer = () => (
-  <Accordion
-    items={[
-      {
-        title: "Explications sur les conventions collectives nationales",
-        body: (
+const HIDDEN_KEY = "convention-explainer-hidden";
+
+class ConventionExplainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hidden: false };
+  }
+
+  componentDidMount = () => {
+    // we store values as strings in sessionStorage
+    this.setState({ hidden: sessionStorage.getItem(HIDDEN_KEY) === "true" });
+  };
+
+  render = () => {
+    const { hidden } = this.state;
+    return (
+      <Wrapper variant="dark">
+        <Title
+          href="#"
+          aria-expanded={!hidden}
+          onClick={e => {
+            e.preventDefault();
+            this.setState({ hidden: !hidden });
+            sessionStorage.setItem(HIDDEN_KEY, (!hidden).toString());
+          }}
+        >
+          Explications sur les conventions collectives nationales
+          <VerticalArrow />
+        </Title>
+        {!hidden && (
           <React.Fragment>
             <SubTitle>
               Qu&apos;est ce qu&apos;une convention collective ?
@@ -50,11 +74,17 @@ const ConventionExplainer = () => (
               </li>
             </ul>
           </React.Fragment>
-        )
-      }
-    ]}
-  />
-);
+        )}
+      </Wrapper>
+    );
+  };
+}
+
+const Title = styled.a`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 const SubTitle = styled.p`
   text-decoration: underline;
