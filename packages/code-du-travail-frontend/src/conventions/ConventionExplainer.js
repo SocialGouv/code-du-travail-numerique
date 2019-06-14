@@ -11,7 +11,8 @@ class ConventionExplainer extends React.Component {
   }
 
   componentDidMount = () => {
-    this.setState({ hidden: sessionStorage.getItem(HIDDEN_KEY) == "true" });
+    // we store values as strings in sessionStorage
+    this.setState({ hidden: sessionStorage.getItem(HIDDEN_KEY) === "true" });
   };
 
   render = () => {
@@ -24,7 +25,7 @@ class ConventionExplainer extends React.Component {
           onClick={e => {
             e.preventDefault();
             this.setState({ hidden: !hidden });
-            sessionStorage.setItem(HIDDEN_KEY, !hidden);
+            sessionStorage.setItem(HIDDEN_KEY, (!hidden).toString());
           }}
         >
           Explications sur les conventions collectives nationales
