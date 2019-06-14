@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Calipso from "./Calipso";
 import styled from "styled-components";
+import { theme } from "@cdt/ui/";
 
 const ETAT_LABEL = {
   MODIFIE: "Modifie",
@@ -22,7 +23,7 @@ const Article = ({ etat, calipsos, bloc_textuel }) => {
         calipsos
           .split(",")
           .map((calipso, idx) => <Calipso calipso={calipso} key={idx} />)}
-      <div dangerouslySetInnerHTML={{ __html: bloc_textuel }} />
+      <ArticleContent dangerouslySetInnerHTML={{ __html: bloc_textuel }} />
     </div>
   );
 };
@@ -34,11 +35,15 @@ Article.propTypes = {
 };
 
 const ArticleMeta = styled.div`
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -${theme.spacing.small};
+  margin-bottom: ${theme.spacing.small};
   font-style: italic;
   font-weight: bold;
   font-size: 1em;
+`;
+
+const ArticleContent = styled.div`
+  margin-bottom: ${theme.spacing.small};
 `;
 
 export default Article;

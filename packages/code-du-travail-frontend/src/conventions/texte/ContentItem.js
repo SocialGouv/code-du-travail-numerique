@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Article from "./Article";
-import styled from "styled-components";
+import { ContentTitle } from "./ContentTitle";
 
 const ContentItem = ({ data, children, type, level }) => {
   const { titre, id } = data;
   return (
-    <div id={id}>
-      <Title>{titre}</Title>
+    <div>
+      <ContentTitle level={level} type={type} id={id} titre={titre} />
       {children &&
         children.map(child => (
           <ContentItem key={child.data.id} level={level + 1} {...child}>
@@ -33,9 +33,5 @@ ContentItem.propTypes = {
     })
   )
 };
-
-const Title = styled.h3`
-  font-size: 16px;
-`;
 
 export default ContentItem;

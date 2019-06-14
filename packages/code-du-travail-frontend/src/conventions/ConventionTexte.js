@@ -5,16 +5,19 @@ import Sidebar from "./texte/Sidebar";
 import Content from "./texte/Content";
 import styled from "styled-components";
 import { theme } from "@cdt/ui/";
+import tocbot from "tocbot";
+import debounce from "../lib/pDebounce";
 
 class ConventionTexte extends React.Component {
   constructor(props) {
     super(props);
+    const baseState = { tocbotEnabled: false, tocbotMounted: false };
     if (props.preloadedTexte) {
       const texte = props.preloadedTexte;
       const topNode = this.getFirstNodeWithChildren(texte);
-      this.state = { topNode, texte, loaded: true };
+      this.state = { ...baseState, topNode, texte, loaded: true };
     } else {
-      this.state = { loaded: false };
+      this.state = { ...baseState, loaded: false };
     }
   }
 
@@ -26,6 +29,40 @@ class ConventionTexte extends React.Component {
     const texte = await fetchTexte({ id });
     const topNode = this.getFirstNodeWithChildren(texte);
     this.setState({ texte, topNode, loaded: true });
+    this.onResize();
+    this.resizeEventHandler = debounce(() => this.onResize(), 250);
+    window.addEventListener("resize", this.resizeEventHandler);
+  }
+
+  componentDidUpdate() {
+    this.mountOrUnmountTocbot();
+  }
+
+  componentWillUnmount() {
+    tocbot.destroy();
+    window.removeEventListener("resize", this.resizeEventHandler);
+  }
+
+  onResize() {
+    this.setState({
+      tocbotEnabled: window.innerWidth > parseInt(theme.breakpoints.tablet, 10)
+    });
+  }
+
+  mountOrUnmountTocbot() {
+    const { tocbotMounted, tocbotEnabled } = this.state;
+    if (tocbotEnabled == tocbotMounted) return;
+    if (tocbotEnabled) {
+      tocbot.init({
+        headingSelector: "h3, h4, h5",
+        skipRendering: true,
+        scrollSmooth: false
+      });
+      this.setState({ tocbotMounted: true });
+    } else {
+      tocbot.destroy();
+      this.setState({ tocbotMounted: false });
+    }
   }
 
   getFirstNodeWithChildren(texte) {
@@ -49,7 +86,7 @@ class ConventionTexte extends React.Component {
   };
 
   render() {
-    const { loaded, texte, topNode } = this.state;
+    const { loaded, texte, topNode, tocbotEnabled } = this.state;
     return (
       <Wrapper>
         {!loaded && "chargement ..."}
@@ -58,6 +95,7 @@ class ConventionTexte extends React.Component {
             <Sidebar
               node={topNode}
               onSummaryTitleToggleExpanded={this.onChangeSummaryTitleExpanded}
+              tocbotEnabled={tocbotEnabled}
             />
           </SidebarWrapper>
         )}
