@@ -19,6 +19,7 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;

@@ -86,7 +86,7 @@ const ModeleCourrierList = styled(List)`
   list-style-type: none;
   padding-left: 0;
 `;
-const Title = styled.h3`
+const Title = styled.h1`
   text-align: center;
 `;
 const Item = styled.li``;

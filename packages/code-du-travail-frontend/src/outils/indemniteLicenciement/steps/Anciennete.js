@@ -69,7 +69,7 @@ function validate({
 
 function StepAnciennete({ form }) {
   return (
-    <Container nopadding>
+    <Container>
       <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
       <TextQuestion
         name="dateEntree"

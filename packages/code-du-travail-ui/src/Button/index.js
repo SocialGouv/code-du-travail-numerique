@@ -48,6 +48,7 @@ const StyledButton = styled(Button)`
       return css`
         padding: 0;
         vertical-align: initial;
+        text-align: left;
         line-height: initial;
         color: ${colors.blue};
         font-weight: normal;

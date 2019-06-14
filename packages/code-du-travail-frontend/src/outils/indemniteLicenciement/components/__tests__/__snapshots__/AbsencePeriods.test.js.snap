@@ -31,6 +31,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -95,6 +96,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -224,6 +226,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -329,6 +332,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -393,6 +397,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;

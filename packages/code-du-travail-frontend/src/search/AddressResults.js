@@ -1,14 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  Alert,
-  Button,
-  Card,
-  Cards,
-  Container,
-  Section,
-  Wrapper
-} from "@cdt/ui";
+import { Alert, Card, Cards, Container, Section, Wrapper } from "@cdt/ui";
 import { Feedback } from "../common/Feedback";
 import styled from "styled-components";
 
@@ -45,10 +37,6 @@ class AddressResults extends React.Component {
         <Container>
           <Wrapper>
             {renderResults(results)}
-            <Button onClick={this.showFeedBackPopup}>
-              Posez votre question
-            </Button>
-
             <Feedback query={query} source={source} url={url} />
           </Wrapper>
         </Container>

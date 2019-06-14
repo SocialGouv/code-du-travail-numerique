@@ -1,9 +1,12 @@
 import React from "react";
+import styled from "styled-components";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
+import { theme } from "@cdt/ui";
+
 import ArticleIcon from "../src/icons/ArticleIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -23,15 +26,15 @@ const BreadCrumbs = ({ entry }) => {
     .map(s => s.trim())
     .filter(Boolean);
   return (
-    <nav className="breadcrumb" aria-label="breadcrumb">
-      <ol className="breadcrumb">
+    <Nav aria-label="breadcrumb">
+      <Ol>
         {entries.map((entry, i) => (
-          <li key={i} className="breadcrumb-item">
+          <Li key={i} className="breadcrumb-item">
             {entry}
-          </li>
+          </Li>
         ))}
-      </ol>
-    </nav>
+      </Ol>
+    </Nav>
   );
 };
 const Source = ({ name, url }) => (
@@ -86,3 +89,32 @@ class Fiche extends React.Component {
 }
 
 export default withRouter(Fiche);
+
+const { spacing } = theme;
+
+const Nav = styled.nav`
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const Ol = styled.ol`
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const Li = styled.li`
+  & + & {
+    padding-left: ${spacing.small};
+    &:before {
+      content: "/";
+      display: inline-block;
+      padding-right: var(--spacing-small);
+    }
+  }
+`;

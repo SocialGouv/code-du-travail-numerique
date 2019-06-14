@@ -18,6 +18,7 @@ export { default as Cards } from "./Cards";
 export { default as Card } from "./Card";
 export { Category } from "./Category";
 export { Grid, GridCell } from "./Grid";
+export { default as LargeLink } from "./LargeLink";
 export { default as OverflowWrapper } from "./OverflowWrapper";
 export { default as SrOnly } from "./SrOnly";
 export { default as Table } from "./Table";

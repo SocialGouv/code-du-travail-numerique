@@ -12,7 +12,7 @@ const { spacing } = theme;
 class ReferencesJuridiques extends React.PureComponent {
   render() {
     const { references } = this.props;
-
+    if (!references.length) return null;
     // concernedBlocs is a map of blocIds with an array of references
     // autresReferences is simply an array of references not linked to any bloc
     const { concernedBlocs, autresReferences } = mapReferencesToBlocs(
@@ -64,6 +64,10 @@ ReferencesJuridiques.propTypes = {
       id: PropTypes.string.isRequired
     })
   )
+};
+
+ReferencesJuridiques.defaultProps = {
+  references: []
 };
 
 export default ReferencesJuridiques;

@@ -331,6 +331,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
