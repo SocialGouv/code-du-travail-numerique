@@ -42,6 +42,7 @@ function Answer({
   intro = null,
   html = null,
   children = null,
+  narrow = true,
   footer,
   date,
   icon,
@@ -61,7 +62,13 @@ function Answer({
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
-        <Article title={title} icon={icon} date={date} sourceType={sourceType}>
+        <Article
+          narrow={narrow}
+          title={title}
+          icon={icon}
+          date={date}
+          sourceType={sourceType}
+        >
           {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
           {html && <Html>{html}</Html>}
           {children}

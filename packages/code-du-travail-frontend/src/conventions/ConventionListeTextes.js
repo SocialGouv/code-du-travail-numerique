@@ -64,8 +64,9 @@ class ConventionListeTextes extends React.Component {
 
 const Button = styled.button`
   padding: 0;
-  margin: 0;
+  margin: 0 0 8px 0;
   border: 0;
+  text-align: left;
   background-color: inherit;
   color: ${theme.colors.blue};
   text-decoration: underline;

@@ -10,6 +10,7 @@ const Article = ({
   sourceType,
   date,
   icon: Icon = icons.Question,
+  narrow = true,
   onTagClick,
   children
 }) => {
@@ -18,10 +19,12 @@ const Article = ({
       <Container>
         <Wrapper variant="light">
           <Section>
-            <Header narrow noPadding>
-              <IconWrapper>
-                <Icon />
-              </IconWrapper>
+            <Header narrow={narrow} noPadding>
+              {Icon && (
+                <IconWrapper>
+                  <Icon />
+                </IconWrapper>
+              )}
               <div>
                 <H1>{title}</H1>
                 <Meta>
@@ -46,7 +49,7 @@ const Article = ({
               </Tags>
             </Header>
             {children && (
-              <Container narrow noPadding>
+              <Container narrow={narrow} noPadding>
                 {children}
               </Container>
             )}
@@ -65,6 +68,7 @@ Article.propTypes = {
   date: PropTypes.string,
   sourceType: PropTypes.string,
   icon: PropTypes.func,
+  narrow: PropTypes.bool,
   /** list of tags */
   tags: PropTypes.array,
   className: PropTypes.string,
