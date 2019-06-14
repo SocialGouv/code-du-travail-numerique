@@ -22,7 +22,7 @@ const Wrapper = styled.ol`
 `;
 
 TocList.propTypes = {
-  children: PropTypes.array
+  children: PropTypes.node
 };
 
 export default TocList;

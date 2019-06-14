@@ -15,9 +15,9 @@ class ConventionTexte extends React.Component {
     if (props.preloadedTexte) {
       const texte = props.preloadedTexte;
       const topNode = this.getFirstNodeWithChildren(texte);
-      this.state = Object.assign(baseState, { topNode, texte, loaded: true });
+      this.state = { ...baseState, topNode, texte, loaded: true };
     } else {
-      this.state = Object.assign(baseState, { loaded: false });
+      this.state = { ...baseState, loaded: false };
     }
   }
 
