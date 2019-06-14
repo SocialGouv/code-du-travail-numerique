@@ -109,16 +109,11 @@ def inspect_code_du_travail_children(children):
             CODE_DU_TRAVAIL_DICT[article_num] = {
                 'titre': child['data']['titre'],
                 'id': child['data']['id'],
-                #'section': child['data']['section'],
                 'num': child['data']['num'],
-                #'etat': child['data']['etat'],  # 'ABROGE_DIFF', 'VIGUEUR', 'VIGUEUR_DIFF', 'MODIFIE'
-                #'date_debut': child['data']['date_debut'],
-                #'date_fin': child['data']['date_fin'],
+                'date_debut': child['data']['date_debut'],
                 'nota': child['data']['nota'],  # In HTML.
                 'bloc_textuel': strip_html(child['data']['bloc_textuel']),  # In HTML.
                 'html': child['data']['bloc_textuel'] + (child['data']['nota'] or ""),  # In HTML.
-                #'cid': child['data']['cid'],
-                # 'tags': [make_tag(tag)],  # Stick to 1 tag for now.
                 'themes': themes,
                 'path': make_tag(tag).path,
                 'url': f"{LEGIFRANCE_BASE_URL}?idArticle={child['data']['id']}&cidTexte={child['data']['cid']}",
