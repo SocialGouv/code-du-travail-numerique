@@ -25,6 +25,27 @@ export default class MyApp extends App {
     headManager: PropTypes.object,
     router: PropTypes.object
   };
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {};
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+    // pageUrl is only defined on serverside request
+    pageProps.pageUrl = ctx.req
+      ? `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`
+      : undefined;
+
+    pageProps.ogImage = ctx.req
+      ? `${ctx.req.protocol}://${
+          ctx.req.headers.host
+        }/static/images/social-preview.png`
+      : `${location.protocol}//${
+          location.hostname
+        }/static/images/social-preview.png`;
+
+    return { pageProps };
+  }
 
   componentDidCatch(error, errorInfo) {
     Sentry.withScope(scope => {

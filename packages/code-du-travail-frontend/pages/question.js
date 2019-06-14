@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
@@ -20,6 +19,7 @@ import ArticleIcon from "../src/icons/ArticleIcon";
 import { BigLink } from "../src/common/BigLink";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -38,7 +38,7 @@ class Question extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const { query } = this.props.router;
 
     const {
@@ -87,9 +87,12 @@ class Question extends React.Component {
 
     return (
       <PageLayout>
-        <Head>
-          <meta name="description" content={data._source.description} />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={data._source.title}
+          description={data._source.description}
+          image={ogImage}
+        />
         <Answer
           title={data._source.title}
           emptyMessage="Cette question n'a pas été trouvée"

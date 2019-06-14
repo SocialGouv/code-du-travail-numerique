@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import getConfig from "next/config";
@@ -8,6 +7,7 @@ import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
 const ServicePublicCss = styled.div`
   .sp__Titre {
@@ -46,13 +46,16 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const footer = <Source name="service-public.fr" url={data._source.url} />;
     return (
       <PageLayout>
-        <Head>
-          <meta name="description" content={data._source.description} />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={data._source.title}
+          description={data._source.description}
+          image={ogImage}
+        />
         <ServicePublicCss>
           <Answer
             title={data._source.title}

@@ -1,12 +1,12 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 import Convention from "../src/conventions/Convention";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL, API_DILA2SQL_URL }
@@ -39,13 +39,16 @@ class Kali extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { convention, conteneur } = this.props;
+    const { pageUrl, ogImage, convention, conteneur } = this.props;
     const { title } = convention;
     return (
       <PageLayout>
-        <Head>
-          <meta name="description" content={title} />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={title}
+          description={title}
+          image={ogImage}
+        />
         <Answer
           title={title}
           emptyMessage="Cette convention collective n'a pas été trouvée"
