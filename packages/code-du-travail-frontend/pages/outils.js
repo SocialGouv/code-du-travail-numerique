@@ -4,7 +4,6 @@ import Head from "next/head";
 import styled from "styled-components";
 import { Alert, Container } from "@cdt/ui";
 
-import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
 import { CalculateurIndemnite } from "../src/outils/indemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -74,7 +73,6 @@ class Outils extends React.Component {
         <Search />
         <Outil q={router.query.q} />
         <Source name="-" />
-        <SeeAlso />
       </PageLayout>
     );
   }

@@ -105,50 +105,120 @@ exports[`<Convention /> should render 1`] = `
   display: none;
 }
 
+.c12 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c12:before,
+.c12:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c12:before {
+  left: -2rem;
+}
+
+.c12:after {
+  right: -2rem;
+}
+
+.c13 {
+  overflow-x: auto;
+}
+
+.c14 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c14 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c14 td,
+.c14 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c14 th {
+  background: #ebeff3;
+}
+
+.c14 thead,
+.c14 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f5f7fa;
+}
+
+.c14 tfoot {
+  vertical-align: top;
+}
+
 .c8 {
   margin-bottom: 2rem;
 }
 
-.c8 .react-tabs__tab-list {
-  position: relative;
-  top: 1px;
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 1px;
   margin: 0;
   padding: 0;
+  max-width: 100%;
   list-style-type: none;
+  overflow-x: auto;
 }
 
-.c8 .react-tabs__tab {
+.c10 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.1rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
-  border-top-left-radius: 0.2rem;
-  border-top-right-radius: 0.2rem;
+  border-radius: 0.2rem 0.2rem 0 0;
   cursor: pointer;
 }
 
-.c8 .react-tabs__tab:hover {
+.c10:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c8 .react-tabs__tab--selected {
+.c10[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
 }
 
-.c8 .react-tabs__tab-panel--selected {
+.c11.react-tabs__tab-panel--selected {
   padding: 1rem;
   border: 1px solid #005994;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
 }
 
 .c7 {
@@ -162,6 +232,32 @@ exports[`<Convention /> should render 1`] = `
 
 .c0 .accordion > div {
   padding: 10px;
+}
+
+@media (max-width:980px) {
+  .c9 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c10 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0.25rem;
+    border-bottom: 1px solid #c9d3df;
+    border-radius: 0.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c11.react-tabs__tab-panel--selected {
+    margin-top: 0.25rem;
+    border-radius: 0.25rem;
+  }
 }
 
 <div>
@@ -231,14 +327,14 @@ exports[`<Convention /> should render 1`] = `
     data-tabs="true"
   >
     <ul
-      class="react-tabs__tab-list"
+      class="c9"
       role="tablist"
     >
       <li
         aria-controls="react-tabs-1"
         aria-disabled="false"
         aria-selected="true"
-        class="react-tabs__tab react-tabs__tab--selected"
+        class="c10 react-tabs__tab--selected"
         id="react-tabs-0"
         role="tab"
         tabindex="0"
@@ -249,7 +345,7 @@ exports[`<Convention /> should render 1`] = `
         aria-controls="react-tabs-3"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c10"
         id="react-tabs-2"
         role="tab"
       >
@@ -259,7 +355,7 @@ exports[`<Convention /> should render 1`] = `
         aria-controls="react-tabs-5"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c10"
         id="react-tabs-4"
         role="tab"
       >
@@ -269,7 +365,7 @@ exports[`<Convention /> should render 1`] = `
         aria-controls="react-tabs-7"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c10"
         id="react-tabs-6"
         role="tab"
       >
@@ -279,7 +375,7 @@ exports[`<Convention /> should render 1`] = `
         aria-controls="react-tabs-9"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c10"
         id="react-tabs-8"
         role="tab"
       >
@@ -288,30 +384,40 @@ exports[`<Convention /> should render 1`] = `
     </ul>
     <div
       aria-labelledby="react-tabs-0"
-      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      class="c11 react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
-      <table>
-        <tbody>
-          <tr>
-            <th>
-              IDCC
-            </th>
-            <td>
-              1747
-            </td>
-          </tr>
-          <tr>
-            <th>
-              Date de publication originale
-            </th>
-            <td>
-              01/11/1993
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div
+        class="c12"
+      >
+        <div
+          class="c13"
+        >
+          <table
+            class="c14"
+          >
+            <tbody>
+              <tr>
+                <th>
+                  IDCC
+                </th>
+                <td>
+                  1747
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Date de publication originale
+                </th>
+                <td>
+                  01/11/1993
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <p>
         <a
           href="https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635691"
@@ -324,25 +430,25 @@ exports[`<Convention /> should render 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="react-tabs__tab-panel"
+      class="c11"
       id="react-tabs-3"
       role="tabpanel"
     />
     <div
       aria-labelledby="react-tabs-4"
-      class="react-tabs__tab-panel"
+      class="c11"
       id="react-tabs-5"
       role="tabpanel"
     />
     <div
       aria-labelledby="react-tabs-6"
-      class="react-tabs__tab-panel"
+      class="c11"
       id="react-tabs-7"
       role="tabpanel"
     />
     <div
       aria-labelledby="react-tabs-8"
-      class="react-tabs__tab-panel"
+      class="c11"
       id="react-tabs-9"
       role="tabpanel"
     />

@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { Link } from "../routes";
 import { Container, Section, theme } from "@cdt/ui";
 
-import SeeAlso from "../src/common/SeeAlso";
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
@@ -41,7 +40,6 @@ class Modeles extends React.Component {
             <ModeleCourrierList items={data.hits.hits} />
           </Container>
         </Section>
-        <SeeAlso />
       </PageLayout>
     );
   }

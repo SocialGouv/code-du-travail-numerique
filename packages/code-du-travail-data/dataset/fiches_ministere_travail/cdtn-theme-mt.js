@@ -1,7 +1,7 @@
 const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
 
-const { extractSlug } = require("@cdt/data...themes")
+const { extractSlug } = require("@cdt/data...themes");
 const { getBreadcrumbs } = require("@cdt/data...themes/query");
 
 const spreadsheetKey = "1CVRrR45QIlSzVeO_9V1TUXSqI1U9Bt5_KYWlcH9K2jI";
@@ -30,7 +30,7 @@ const transformRow = row => {
   const [_, slug] = row["1"].value.match(/\/([\w-]+)\/?$/);
   return {
     slug,
-    theme: row['9'] ? unRollTheme(row["9"].value) : []
+    theme: row["9"] ? unRollTheme(row["9"].value) : []
   };
 };
 
@@ -45,10 +45,10 @@ async function getThemeMapping() {
     .map(transformRow)
     .reduce((state, item) => {
       if (state[item.slug]) {
-        console.error("slug existant", item.slug, state[item.slug], item.theme)
+        console.error("slug existant", item.slug, state[item.slug], item.theme);
       }
-      state[item.slug] = item.theme
-      return state
+      state[item.slug] = item.theme;
+      return state;
     }, {});
 }
 
@@ -57,7 +57,7 @@ module.exports = getThemeMapping;
 async function main() {
   const themesMap = await getThemeMapping();
   console.log(themesMap);
-  console.log("nb slug", Object.keys(themesMap).length)
+  console.log("nb slug", Object.keys(themesMap).length);
 }
 
 if (module === require.main) {
