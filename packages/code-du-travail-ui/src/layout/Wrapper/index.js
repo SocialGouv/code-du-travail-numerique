@@ -47,6 +47,7 @@ const StyledWrapper = styled.div`
     }
   }}
   & > *:last-child {
+    margin-top: 0;
     margin-bottom: 0;
   }
   @media print {

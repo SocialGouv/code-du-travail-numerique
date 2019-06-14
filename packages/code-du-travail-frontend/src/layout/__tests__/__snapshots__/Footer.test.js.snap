@@ -14,6 +14,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -26,6 +27,7 @@ exports[`<Footer /> should render 1`] = `
 }
 
 .c3 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

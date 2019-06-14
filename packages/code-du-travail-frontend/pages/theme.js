@@ -88,7 +88,6 @@ class Theme extends React.Component {
         {theme.children.length > 0 && (
           <Section variant="white">
             <Themes
-              isRoot={isRootTheme}
               title={isRootTheme ? undefined : null}
               themes={theme.children}
             />

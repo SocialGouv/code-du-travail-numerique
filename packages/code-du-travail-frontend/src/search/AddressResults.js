@@ -56,9 +56,7 @@ function renderResults(results) {
 }
 function NoResults() {
   return (
-    <Alert variant="primary">
-      Nous n’avons pas trouvé de résultat pour votre recherche.
-    </Alert>
+    <Alert>Nous n’avons pas trouvé de résultat pour votre recherche.</Alert>
   );
 }
 

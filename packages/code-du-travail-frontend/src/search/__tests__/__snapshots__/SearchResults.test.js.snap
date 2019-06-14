@@ -6,9 +6,9 @@ exports[`<SearchResults/> should render no results 1`] = `
   padding: 0.625rem 1.25rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  color: #fff;
-  background: #005994;
-  border-color: #003a61;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
 }
 
 .c0> *:last-child {
@@ -30,9 +30,9 @@ exports[`<SearchResults/> should render results 1`] = `
   padding: 0.625rem 1.25rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  color: #fff;
-  background: #005994;
-  border-color: #003a61;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
 }
 
 .c0> *:last-child {
