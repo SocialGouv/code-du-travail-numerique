@@ -4,14 +4,12 @@ import Tabs from ".";
 
 const items = [
   {
-    tab: "tab1",
-    panel: "Ce panel peut contenir des nodes",
-    key: "une clé"
+    tab: "Tab 1",
+    panel: "This panel can contain nodes"
   },
   {
-    tab: "tab2",
-    panel: "Ces tabs ne sont pas 'controllés'",
-    key: "une autre clé"
+    tab: "Tab 2",
+    panel: "These tabs are not 'controlled'"
   }
 ];
 
@@ -23,7 +21,7 @@ describe("<Tabs />", () => {
   it("calls the right onSelect callback", () => {
     const onSelect = jest.fn();
     const { container } = render(<Tabs onSelect={onSelect} data={items} />);
-    const secondTab = container.querySelectorAll(".react-tabs__tab-list li")[1];
+    const secondTab = container.querySelectorAll("li")[1];
     fireEvent.click(secondTab);
     expect(onSelect).toHaveBeenCalledTimes(1);
   });

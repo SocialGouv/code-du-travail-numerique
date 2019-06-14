@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Table } from "@cdt/ui";
 
 const Metadata = ({ texte }) => {
   const { nature, date_texte, origine_publi } = texte.data;
@@ -16,7 +17,7 @@ const Metadata = ({ texte }) => {
     );
   }
   return (
-    <table>
+    <Table>
       <tbody>
         <tr>
           <th>Nature</th>
@@ -33,7 +34,7 @@ const Metadata = ({ texte }) => {
           </tr>
         )}
       </tbody>
-    </table>
+    </Table>
   );
 };
 

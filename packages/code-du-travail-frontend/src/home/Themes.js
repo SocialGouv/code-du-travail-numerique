@@ -42,7 +42,7 @@ export default class Themes extends React.Component {
   render() {
     const { title, themes } = this.props;
     return (
-      (themes.length && (
+      (themes.length > 0 && (
         <Section>
           <Container>
             <Wrapper>

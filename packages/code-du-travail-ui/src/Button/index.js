@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { animations, box, colors, fonts, spacing, variants } from "../theme";
 import { darken, lighten, transparentize } from "polished";
+
+import { animations, box, colors, fonts, spacing, variants } from "../theme";
 
 // We don't want the variant prop to be passed down to the button
 // eslint-disable-next-line

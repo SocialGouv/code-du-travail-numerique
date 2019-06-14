@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabulator /> should have two different levels of headings 1`] = `
-.c1 {
+.c4 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -17,46 +17,74 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   margin-bottom: 2rem;
 }
 
-.c0 .react-tabs__tab-list {
-  position: relative;
-  top: 1px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 1px;
   margin: 0;
   padding: 0;
+  max-width: 100%;
   list-style-type: none;
+  overflow-x: auto;
 }
 
-.c0 .react-tabs__tab {
+.c2 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.1rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
-  border-top-left-radius: 0.2rem;
-  border-top-right-radius: 0.2rem;
+  border-radius: 0.2rem 0.2rem 0 0;
   cursor: pointer;
 }
 
-.c0 .react-tabs__tab:hover {
+.c2:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c0 .react-tabs__tab--selected {
+.c2[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
 }
 
-.c0 .react-tabs__tab-panel--selected {
+.c3.react-tabs__tab-panel--selected {
   padding: 1rem;
   border: 1px solid #005994;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+@media (max-width:980px) {
+  .c1 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0.25rem;
+    border-bottom: 1px solid #c9d3df;
+    border-radius: 0.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c3.react-tabs__tab-panel--selected {
+    margin-top: 0.25rem;
+    border-radius: 0.25rem;
+  }
 }
 
 <div>
@@ -65,14 +93,14 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     data-tabs="true"
   >
     <ul
-      class="react-tabs__tab-list"
+      class="c1"
       role="tablist"
     >
       <li
         aria-controls="react-tabs-1"
         aria-disabled="false"
         aria-selected="true"
-        class="react-tabs__tab react-tabs__tab--selected"
+        class="c2 react-tabs__tab--selected"
         id="react-tabs-0"
         role="tab"
         tabindex="0"
@@ -83,7 +111,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
         aria-controls="react-tabs-3"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c2"
         id="react-tabs-2"
         role="tab"
       >
@@ -92,12 +120,12 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     </ul>
     <div
       aria-labelledby="react-tabs-0"
-      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      class="c3 react-tabs__tab-panel--selected"
       id="react-tabs-1"
       role="tabpanel"
     >
       <div
-        class="c1"
+        class="c4"
       >
         <h2>
           CDI
@@ -112,7 +140,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-2"
-      class="react-tabs__tab-panel"
+      class="c3"
       id="react-tabs-3"
       role="tabpanel"
     />
@@ -121,7 +149,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 `;
 
 exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
-.c1 {
+.c4 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -137,46 +165,74 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   margin-bottom: 2rem;
 }
 
-.c0 .react-tabs__tab-list {
-  position: relative;
-  top: 1px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 1px;
   margin: 0;
   padding: 0;
+  max-width: 100%;
   list-style-type: none;
+  overflow-x: auto;
 }
 
-.c0 .react-tabs__tab {
+.c2 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.1rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
-  border-top-left-radius: 0.2rem;
-  border-top-right-radius: 0.2rem;
+  border-radius: 0.2rem 0.2rem 0 0;
   cursor: pointer;
 }
 
-.c0 .react-tabs__tab:hover {
+.c2:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c0 .react-tabs__tab--selected {
+.c2[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
 }
 
-.c0 .react-tabs__tab-panel--selected {
+.c3.react-tabs__tab-panel--selected {
   padding: 1rem;
   border: 1px solid #005994;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+@media (max-width:980px) {
+  .c1 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0.25rem;
+    border-bottom: 1px solid #c9d3df;
+    border-radius: 0.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c3.react-tabs__tab-panel--selected {
+    margin-top: 0.25rem;
+    border-radius: 0.25rem;
+  }
 }
 
 <div>
@@ -185,14 +241,14 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     data-tabs="true"
   >
     <ul
-      class="react-tabs__tab-list"
+      class="c1"
       role="tablist"
     >
       <li
         aria-controls="react-tabs-5"
         aria-disabled="false"
         aria-selected="true"
-        class="react-tabs__tab react-tabs__tab--selected"
+        class="c2 react-tabs__tab--selected"
         id="react-tabs-4"
         role="tab"
         tabindex="0"
@@ -203,7 +259,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
         aria-controls="react-tabs-7"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c2"
         id="react-tabs-6"
         role="tab"
       >
@@ -212,12 +268,12 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     </ul>
     <div
       aria-labelledby="react-tabs-4"
-      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      class="c3 react-tabs__tab-panel--selected"
       id="react-tabs-5"
       role="tabpanel"
     >
       <div
-        class="c1"
+        class="c4"
       >
         <h4>
           CDI
@@ -232,7 +288,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-6"
-      class="react-tabs__tab-panel"
+      class="c3"
       id="react-tabs-7"
       role="tabpanel"
     />
@@ -241,7 +297,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 `;
 
 exports[`<Tabulator /> should render 1`] = `
-.c1 {
+.c4 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -257,46 +313,74 @@ exports[`<Tabulator /> should render 1`] = `
   margin-bottom: 2rem;
 }
 
-.c0 .react-tabs__tab-list {
-  position: relative;
-  top: 1px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+  top: 1px;
   margin: 0;
   padding: 0;
+  max-width: 100%;
   list-style-type: none;
+  overflow-x: auto;
 }
 
-.c0 .react-tabs__tab {
+.c2 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.1rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
-  border-top-left-radius: 0.2rem;
-  border-top-right-radius: 0.2rem;
+  border-radius: 0.2rem 0.2rem 0 0;
   cursor: pointer;
 }
 
-.c0 .react-tabs__tab:hover {
+.c2:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c0 .react-tabs__tab--selected {
+.c2[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
 }
 
-.c0 .react-tabs__tab-panel--selected {
+.c3.react-tabs__tab-panel--selected {
   padding: 1rem;
   border: 1px solid #005994;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+@media (max-width:980px) {
+  .c1 {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0.25rem;
+    border-bottom: 1px solid #c9d3df;
+    border-radius: 0.2rem;
+  }
+}
+
+@media (max-width:980px) {
+  .c3.react-tabs__tab-panel--selected {
+    margin-top: 0.25rem;
+    border-radius: 0.25rem;
+  }
 }
 
 <div>
@@ -305,14 +389,14 @@ exports[`<Tabulator /> should render 1`] = `
     data-tabs="true"
   >
     <ul
-      class="react-tabs__tab-list"
+      class="c1"
       role="tablist"
     >
       <li
         aria-controls="react-tabs-9"
         aria-disabled="false"
         aria-selected="true"
-        class="react-tabs__tab react-tabs__tab--selected"
+        class="c2 react-tabs__tab--selected"
         id="react-tabs-8"
         role="tab"
         tabindex="0"
@@ -323,7 +407,7 @@ exports[`<Tabulator /> should render 1`] = `
         aria-controls="react-tabs-11"
         aria-disabled="false"
         aria-selected="false"
-        class="react-tabs__tab"
+        class="c2"
         id="react-tabs-10"
         role="tab"
       >
@@ -332,12 +416,12 @@ exports[`<Tabulator /> should render 1`] = `
     </ul>
     <div
       aria-labelledby="react-tabs-8"
-      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      class="c3 react-tabs__tab-panel--selected"
       id="react-tabs-9"
       role="tabpanel"
     >
       <div
-        class="c1"
+        class="c4"
       >
         <h5>
           CDI
@@ -352,7 +436,7 @@ exports[`<Tabulator /> should render 1`] = `
     </div>
     <div
       aria-labelledby="react-tabs-10"
-      class="react-tabs__tab-panel"
+      class="c3"
       id="react-tabs-11"
       role="tabpanel"
     />

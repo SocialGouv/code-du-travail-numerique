@@ -1,10 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import App, { Container } from "next/app";
+import getConfig from "next/config";
 import GitHubForkRibbon from "react-github-fork-ribbon";
+import * as Sentry from "@sentry/browser";
+
 import "@cdt/css";
 
+const {
+  publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
+} = getConfig();
+
 import "../src/piwik";
+
+if (typeof window !== "undefined") {
+  Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
+}
 
 export default class MyApp extends App {
   // HACK @lionelb from https://github.com/zeit/next.js/issues/4687#issuecomment-432608667
@@ -14,6 +25,17 @@ export default class MyApp extends App {
     headManager: PropTypes.object,
     router: PropTypes.object
   };
+
+  componentDidCatch(error, errorInfo) {
+    Sentry.withScope(scope => {
+      Object.keys(errorInfo).forEach(key => {
+        scope.setExtra(key, errorInfo[key]);
+      });
+
+      Sentry.captureException(error);
+    });
+    super.componentDidCatch(error, errorInfo);
+  }
 
   render() {
     const { Component, pageProps } = this.props;

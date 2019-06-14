@@ -27,7 +27,7 @@ class ReferencesJuridiques extends React.PureComponent {
     });
 
     const explanatoryText =
-      hierarchieBlocElements.length && references.length > 1 ? (
+      hierarchieBlocElements.length > 0 && references.length > 1 ? (
         <p>
           {`Attention, en fonction des articles du Code du travail, un accord de branche ou un
             accord d'entreprise peut définir le droit applicable. Nous vous précisons ci-dessous
