@@ -47,5 +47,9 @@ export const branches = [
   {
     value: "1597",
     label: "Ouvriers du bâtiment (entreprises de plus 10 salariés)"
+  },
+  {
+    value: "3043",
+    label: "Propreté : entreprises et services associés"
   }
 ];
