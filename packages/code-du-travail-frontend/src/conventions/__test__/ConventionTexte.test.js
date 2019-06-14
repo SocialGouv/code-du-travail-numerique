@@ -17,6 +17,7 @@ describe("<ConventionTexte />", () => {
     );
     const articleLink = getByText(/Titre Ier : Dispositions générales/);
     fireEvent.click(articleLink);
+    fireEvent.scroll(container, { target: { scrollY: 1000 } });
 
     expect(container).toMatchSnapshot();
   });
