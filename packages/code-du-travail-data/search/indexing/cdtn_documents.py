@@ -73,8 +73,8 @@ def populate_cdtn_documents():
             'html': val['html'],
             'path': val['path'],
             'themes': val['themes'],
-            'date_debut': val['date_debut'],
-            'date_fin': val['date_fin'],
+            #'date_debut': val['date_debut'],
+            #'date_fin': val['date_fin'],
             'url': val['url'],
         })
 
