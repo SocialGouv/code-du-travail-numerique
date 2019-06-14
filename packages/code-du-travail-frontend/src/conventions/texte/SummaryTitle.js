@@ -5,15 +5,9 @@ import TocLink from "./toc/TocLink";
 import TocListItem from "./toc/TocListItem";
 import TocList from "./toc/TocList";
 
-const SummaryTitle = ({
-  type,
-  data,
-  children,
-  expanded,
-  onToggleExpanded,
-  tocbotEnabled
-}) => {
-  const { id, titre } = data;
+const SummaryTitle = ({ node, onToggleExpanded, tocbotEnabled }) => {
+  const { data, expanded, type } = node;
+  const { titre, id } = data;
 
   const clickHandler = useCallback(
     event => {
@@ -23,7 +17,7 @@ const SummaryTitle = ({
     [id, expanded]
   );
 
-  if (!children || children.length == 0) {
+  if (!node.children || node.children.length == 0) {
     return (
       <TocListItem type={type} id={id} level={0}>
         <TitleLink type={type} id={id}>
@@ -39,10 +33,13 @@ const SummaryTitle = ({
       </TitleLink>
       <TocList expanded={expanded}>
         {(expanded || tocbotEnabled) && // with tocbot, all DOM is displayed by default
-          children.map((child, idx) => (
-            <SummaryItem key={idx} level={1} {...child} expanded={expanded}>
-              {child.children}
-            </SummaryItem>
+          node.children.map(childNode => (
+            <SummaryItem
+              key={childNode.data.id}
+              level={1}
+              node={childNode}
+              expanded={expanded}
+            />
           ))}
       </TocList>
     </TocListItem>
@@ -50,18 +47,23 @@ const SummaryTitle = ({
 };
 
 SummaryTitle.propTypes = {
-  type: PropTypes.string,
-  data: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    titre: PropTypes.string.isRequired
-  }).isRequired,
-  children: PropTypes.arrayOf(
-    PropTypes.shape({
-      children: PropTypes.array
-    })
-  ),
-  expanded: PropTypes.bool,
-  onToggleExpanded: PropTypes.func.isRequired
+  node: PropTypes.shape({
+    data: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      titre: PropTypes.string.isRequired
+    }).isRequired,
+    expanded: PropTypes.bool,
+    type: PropTypes.string,
+    children: PropTypes.arrayOf(
+      PropTypes.shape({
+        data: PropTypes.shape({
+          id: PropTypes.string
+        })
+      })
+    )
+  }),
+  onToggleExpanded: PropTypes.func.isRequired,
+  tocbotEnabled: PropTypes.bool
 };
 
 const TitleLink = ({ id, type, children, onClick }) => (

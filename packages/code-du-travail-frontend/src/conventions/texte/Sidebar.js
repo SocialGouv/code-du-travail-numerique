@@ -10,15 +10,13 @@ const Sidebar = ({ node, onSummaryTitleToggleExpanded, tocbotEnabled }) => {
       {/* js-toc is the base class used by tocbot */}
       <Wrapper variant="dark">
         <TocList>
-          {node.children.map((child, idx) => (
+          {node.children.map(childNode => (
             <SummaryTitle
-              key={idx}
+              key={childNode.data.id}
               onToggleExpanded={onSummaryTitleToggleExpanded}
               tocbotEnabled={tocbotEnabled}
-              {...child}
-            >
-              {child.children}
-            </SummaryTitle>
+              node={childNode}
+            />
           ))}
         </TocList>
       </Wrapper>
@@ -30,7 +28,9 @@ Sidebar.propTypes = {
   node: PropTypes.shape({
     children: PropTypes.arrayOf(
       PropTypes.shape({
-        children: PropTypes.array
+        data: PropTypes.shape({
+          id: PropTypes.string
+        })
       })
     )
   }).isRequired,
