@@ -28,10 +28,10 @@ export default class MyApp extends App {
     pageProps.ogImage = ctx.req
       ? `${ctx.req.protocol}://${
           ctx.req.headers.host
-        }/static/images/social-preview.jpg`
+        }/static/images/social-preview.png`
       : `${location.protocol}//${
           location.hostname
-        }/static/images/social-preview.jpg`;
+        }/static/images/social-preview.png`;
 
     return { pageProps };
   }
