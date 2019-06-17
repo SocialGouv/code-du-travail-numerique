@@ -2,7 +2,7 @@ import { getIndemnite, getSalaireRef } from "../0044_indemnite";
 import {
   getIndemnite as getIndemniteLegale,
   getSalaireRef as getSalaireRefLegal
-} from "../../indemnite";
+} from "../../../indemnite";
 
 const echelon123 = [
   {

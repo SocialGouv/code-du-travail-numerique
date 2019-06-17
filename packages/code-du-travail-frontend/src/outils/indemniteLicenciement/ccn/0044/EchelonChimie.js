@@ -5,8 +5,8 @@ import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
 import { coefficients } from "./0044_coefficient";
-import { required } from "../validators";
-import { Label } from "../stepStyles";
+import { required } from "../../validators";
+import { Label } from "../../stepStyles";
 
 const groupeLabelByCoeff = coefficients.reduce(
   (state, { coefficient, groupe, label }) => {
