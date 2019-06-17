@@ -94,4 +94,36 @@ function getIndemnite({
   };
 }
 
-export { getIndemnite, getSalaireRef, round };
+function getIndemniteFromFinalForm(form) {
+  const state = form.getState();
+  const {
+    hasTempsPartiel = false,
+    hasSameSalaire = false,
+    inaptitude = false,
+    salairePeriods = [],
+    salaires = [],
+    primes = [],
+    salaire,
+    anciennete,
+    dateNotification
+  } = state.values;
+
+  const salaireRef = getSalaireRef({
+    hasTempsPartiel,
+    hasSameSalaire,
+    salaire,
+    salairePeriods,
+    salaires,
+    anciennete,
+    primes
+  });
+
+  return getIndemnite({
+    salaireRef,
+    inaptitude,
+    anciennete,
+    dateNotification
+  });
+}
+
+export { getIndemnite, getSalaireRef, getIndemniteFromFinalForm, round };
