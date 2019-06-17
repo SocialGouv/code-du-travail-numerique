@@ -401,7 +401,6 @@ exports[`<Answer /> should render 1`] = `
   padding: 0.5rem 2rem 0.5rem 2.5em;
   color: #26353f;
   background-color: transparent;
-  background-position: top 1rem right 0.75em;
   border: 1px solid transparent;
 }
 
@@ -1482,7 +1481,6 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   padding: 0.5rem 2rem 0.5rem 2.5em;
   color: #26353f;
   background-color: transparent;
-  background-position: top 1rem right 0.75em;
   border: 1px solid transparent;
 }
 
