@@ -19,6 +19,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -133,6 +134,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -256,6 +258,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -370,6 +373,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -493,6 +497,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -607,6 +612,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;

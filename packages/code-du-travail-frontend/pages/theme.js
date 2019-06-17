@@ -12,6 +12,7 @@ import Themes from "../src/home/Themes";
 import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -64,7 +65,9 @@ class Theme extends React.Component {
 
   render() {
     const {
-      data: { theme }
+      data: { theme },
+      pageUrl,
+      ogImage
     } = this.props;
     const breadcrumbs = getBreadcrumbs(theme.breadcrumbs);
     const isRootTheme = theme && !theme.slug;
@@ -74,19 +77,17 @@ class Theme extends React.Component {
 
     return (
       <PageLayout>
-        <Head>
-          <title>Code du travail numérique : {theme.label}</title>
-          <meta
-            name="description"
-            content={`Explorez les contenus autour du thème ${theme.label}`}
-          />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={`${theme.label} - Code du travail numérique`}
+          description={`Explorez les contenus autour du thème ${theme.label}`}
+          image={ogImage}
+        />
         <Search />
         <Breadcrumbs items={breadcrumbs} />
         {theme.children.length > 0 && (
           <Section variant="white">
             <Themes
-              isRoot={isRootTheme}
               title={isRootTheme ? undefined : null}
               themes={theme.children}
             />

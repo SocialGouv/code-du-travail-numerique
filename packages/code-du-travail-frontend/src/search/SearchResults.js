@@ -40,7 +40,7 @@ class SearchResults extends React.Component {
     // No results.
     if (results.items.length === 0) {
       return (
-        <Alert variant="primary">
+        <Alert>
           Nous n’avons pas trouvé de résultat pour votre recherche.
           {source.length > 0 && (
             <p>

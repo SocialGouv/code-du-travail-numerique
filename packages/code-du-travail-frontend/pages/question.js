@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
@@ -10,17 +9,20 @@ import {
   AsideTitle,
   Container,
   List,
+  LargeLink,
   ListItem,
   Section,
   theme,
-  icons,
-  Wrapper
+  icons
 } from "@cdt/ui";
 import styled from "styled-components";
+
+import { Link } from "../routes";
+import { getRouteBySource, getLabelBySource } from "../src/sources";
 import ArticleIcon from "../src/icons/ArticleIcon";
-import { BigLink } from "../src/common/BigLink";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -39,7 +41,7 @@ class Question extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const { query } = this.props.router;
 
     const {
@@ -66,16 +68,14 @@ class Question extends React.Component {
           query={query.q}
           items={code_du_travail}
         >
-          <Container narrow>
-            <DisclaimerContent>
-              Pensez à vérifier votre accord d’entreprise : S’il prévoit des «
-              garanties au moins équivalentes » à ce sujet, ces clauses
-              s’appliquent dans votre cas -
-              <a href="#" title="consulter la hierachie des normes">
-                En savoir plus
-              </a>
-            </DisclaimerContent>
-          </Container>
+          <DisclaimerContent>
+            Pensez à vérifier votre accord d’entreprise : S’il prévoit des «
+            garanties au moins équivalentes » à ce sujet, ces clauses
+            s’appliquent dans votre cas -&nbsp;
+            <a href="#" title="consulter la hierachie des normes">
+              En savoir plus
+            </a>
+          </DisclaimerContent>
         </MoreLinks>
         <MoreLinks
           title="Pour aller plus loin"
@@ -88,9 +88,12 @@ class Question extends React.Component {
 
     return (
       <PageLayout>
-        <Head>
-          <meta name="description" content={data._source.description} />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={data._source.title}
+          description={data._source.description}
+          image={ogImage}
+        />
         <Answer
           title={data._source.title}
           emptyMessage="Cette question n'a pas été trouvée"
@@ -126,26 +129,35 @@ function MoreLinks({ items, icon, query, title, children }) {
   if (items.length === 0) {
     return null;
   }
+
   return (
     <Section>
-      <Container>
-        <Wrapper>
-          <SectionTitle>{title}</SectionTitle>
-          {children}
-          <StyledList>
-            {items.map(item => (
-              <ListItem key={item._id}>
-                <BigLink data={item} icon={icon} query={query} />
-              </ListItem>
-            ))}
-          </StyledList>
-        </Wrapper>
+      <Container narrow>
+        <SectionTitle>{title}</SectionTitle>
+        {children}
+        <List>
+          {items.map(({ _id, _source: slug, title, source, path = "" }) => (
+            <ListItem key={_id}>
+              <Link
+                route={getRouteBySource(source)}
+                params={{ q: query, slug: slug }}
+                passHref
+              >
+                <LargeLink icon={icon}>
+                  <Title>{title}</Title>
+                  {path && <Path>{path.substr(1).replace(/\//g, " » ")}</Path>}
+                  <Source>source: {getLabelBySource(source)}</Source>
+                </LargeLink>
+              </Link>
+            </ListItem>
+          ))}
+        </List>
       </Container>
     </Section>
   );
 }
 
-const { breakpoints, colors, spacing } = theme;
+const { colors, spacing } = theme;
 
 const SectionTitle = styled.h2`
   text-align: center;
@@ -153,12 +165,20 @@ const SectionTitle = styled.h2`
 `;
 
 const DisclaimerContent = styled.div`
+  margin-bottom: ${spacing.interComponent};
   color: ${colors.darkerGRey};
 `;
 
-const StyledList = styled(List)`
-  margin: ${spacing.medium} 130px ${spacing.medium} 100px;
-  @media (max-width: ${breakpoints.mobile}) {
-    margin: ${spacing.medium} 0;
-  }
+const Title = styled.strong`
+  display: block;
+  text-decoration: none;
+`;
+
+const Path = styled.span`
+  display: block;
+`;
+
+const Source = styled.span`
+  font-weight: 700;
+  color: ${colors.darkGrey};
 `;

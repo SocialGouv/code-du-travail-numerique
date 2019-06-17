@@ -1,6 +1,5 @@
 import React from "react";
 import getConfig from "next/config";
-import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { Link } from "../routes";
@@ -9,6 +8,7 @@ import { Container, Section, theme } from "@cdt/ui";
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -23,16 +23,15 @@ class Modeles extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     return (
       <PageLayout>
-        <Head>
-          <title>Modèles de courriers - Code du travail numérique</title>
-          <meta
-            name="description"
-            content="Retrouvez l'ensemble des modèles de courriers à votre disposition."
-          />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title="Modèles de courriers - Code du travail numérique"
+          description="Retrouvez l'ensemble des modèles de courriers à votre disposition."
+          image={ogImage}
+        />
         <Search />
         <Section>
           <Container narrow>
@@ -87,7 +86,7 @@ const ModeleCourrierList = styled(List)`
   list-style-type: none;
   padding-left: 0;
 `;
-const Title = styled.h3`
+const Title = styled.h1`
   text-align: center;
 `;
 const Item = styled.li``;

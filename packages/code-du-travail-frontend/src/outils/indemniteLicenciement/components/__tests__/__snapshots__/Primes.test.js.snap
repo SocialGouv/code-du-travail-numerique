@@ -65,6 +65,7 @@ exports[`<Primes /> should add a prime 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -103,6 +104,7 @@ exports[`<Primes /> should add a prime 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -182,6 +184,7 @@ exports[`<Primes /> should delete a primes 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -280,6 +283,7 @@ exports[`<Primes /> should render 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -318,6 +322,7 @@ exports[`<Primes /> should render 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;

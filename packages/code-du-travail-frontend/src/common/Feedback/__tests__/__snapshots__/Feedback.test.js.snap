@@ -9,6 +9,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -27,6 +28,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -233,6 +235,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -251,6 +254,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -331,6 +335,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   transition: background-color 250ms ease;
   padding: 0;
   vertical-align: initial;
+  text-align: left;
   line-height: initial;
   color: #0053b3;
   font-weight: normal;
@@ -521,6 +526,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -539,6 +545,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

@@ -8,7 +8,7 @@ import { Primes } from "../components/Primes";
 
 function StepPrimes({ form }) {
   return (
-    <Container nopadding>
+    <Container>
       <YesNoQuestion
         name="hasPrimes"
         label="Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois&nbsp;?"

@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="fr">
+      <html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
           <meta charSet="utf-8" />
           <meta

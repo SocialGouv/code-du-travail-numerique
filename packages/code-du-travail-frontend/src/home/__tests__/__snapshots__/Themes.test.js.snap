@@ -8,6 +8,7 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -26,6 +27,7 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

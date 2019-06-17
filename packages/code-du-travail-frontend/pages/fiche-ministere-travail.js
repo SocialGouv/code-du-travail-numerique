@@ -1,12 +1,12 @@
 import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
-import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -38,15 +38,18 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, pageUrl, ogImage } = this.props;
     const footer = (
       <Source name="Ministère du travail" url={data._source.url} />
     );
     return (
       <PageLayout>
-        <Head>
-          <meta name="description" content={data._source.description} />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={data._source.title}
+          description={data._source.description}
+          image={ogImage}
+        />
         <Answer
           title={data._source.title}
           emptyMessage="Cette fiche n'a pas été trouvée"
@@ -72,6 +75,7 @@ const Intro = styled.div`
     margin-top: 0;
   }
   & > *:last-child {
+    margin-top: 0;
     margin-bottom: 0;
   }
 `;

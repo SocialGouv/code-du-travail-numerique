@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Head from "next/head";
 import { Alert, Container, Section, Wrapper } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
+import { Metas } from "../src/common/Metas";
 
-const About = () => (
+const About = ({ pageUrl }) => (
   <PageLayout>
-    <Head>
-      <meta
-        name="description"
-        content="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
-      />
-    </Head>
+    <Metas
+      url={pageUrl}
+      title="À propos - Code du travail numérique"
+      description="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
+    />
     <Section>
       <Container narrow>
         <Wrapper variant="light">

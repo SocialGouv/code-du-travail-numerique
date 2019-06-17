@@ -16,6 +16,7 @@ exports[`<ConventionTexte /> should let you click on a toc item 1`] = `
 }
 
 .c3 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -14585,6 +14586,7 @@ exports[`<ConventionTexte /> should render 1`] = `
 }
 
 .c3 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

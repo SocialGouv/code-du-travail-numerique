@@ -8,17 +8,19 @@ exports[`<AddressResults/> should render no results 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.c5 {
+.c4 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c5 > *:last-child {
+.c4 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -37,10 +39,11 @@ exports[`<AddressResults/> should render no results 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.c6 {
+.c5 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -50,7 +53,8 @@ exports[`<AddressResults/> should render no results 1`] = `
   background-color: #ebeff3;
 }
 
-.c6 > *:last-child {
+.c5 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -59,79 +63,20 @@ exports[`<AddressResults/> should render no results 1`] = `
   padding: 0.625rem 1.25rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  color: #fff;
-  background: #005994;
-  border-color: #003a61;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
 }
 
 .c3> *:last-child {
   margin-bottom: 0;
 }
 
-.c4 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-}
-
-.c4:not([disabled]):hover,
-.c4:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c4:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c4[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c4[aria-pressed="true"]:not([disabled]):hover,
-.c4[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c4[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c4[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c7 {
+.c6 {
   margin-bottom: 1rem;
 }
 
-.c8 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +87,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   justify-content: space-around;
 }
 
-.c10 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -165,13 +110,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c10:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -179,7 +124,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c10[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -188,25 +133,25 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):hover,
-.c10[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c10 + .c9 {
+.c9 + .c8 {
   margin-left: 1rem;
 }
 
-.c11 {
+.c10 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -229,13 +174,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c11:not([disabled]):hover,
-.c11:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c11:not([disabled]):active {
+.c10:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -243,7 +188,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c11[aria-pressed="true"] {
+.c10[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -252,21 +197,21 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c11[aria-pressed="true"]:not([disabled]):hover,
-.c11[aria-pressed="true"]:not([disabled]):focus {
+.c10[aria-pressed="true"]:not([disabled]):hover,
+.c10[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c11[aria-pressed="true"]:not([disabled]):active {
+.c10[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c11[disabled] {
+.c10[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c11 + .c9 {
+.c10 + .c8 {
   margin-left: 1rem;
 }
 
@@ -278,7 +223,7 @@ exports[`<AddressResults/> should render no results 1`] = `
 }
 
 @media print {
-  .c5 {
+  .c4 {
     max-width: 100%;
     padding: 0;
   }
@@ -292,7 +237,7 @@ exports[`<AddressResults/> should render no results 1`] = `
 }
 
 @media print {
-  .c6 {
+  .c5 {
     border: none;
     padding: 0 5pt;
   }
@@ -313,38 +258,32 @@ exports[`<AddressResults/> should render no results 1`] = `
         >
           Nous n’avons pas trouvé de résultat pour votre recherche.
         </div>
-        <button
-          aria-pressed="false"
-          class="c4"
-        >
-          Posez votre question
-        </button>
         <div
           class="c0"
         >
           <div
-            class="c5"
+            class="c4"
           >
             <div
-              class="c6"
+              class="c5"
             >
               <h3
-                class="c7"
+                class="c6"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c8"
+                class="c7"
               >
                 <button
                   aria-pressed="false"
-                  class="c9 c10"
+                  class="c8 c9"
                 >
                   Non
                 </button>
                 <button
                   aria-pressed="false"
-                  class="c9 c11"
+                  class="c8 c10"
                 >
                   Oui
                 </button>
@@ -366,17 +305,19 @@ exports[`<AddressResults/> should render results 1`] = `
 }
 
 .c1 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.c8 {
+.c9 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -395,10 +336,11 @@ exports[`<AddressResults/> should render results 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.c9 {
+.c10 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -408,74 +350,43 @@ exports[`<AddressResults/> should render results 1`] = `
   background-color: #ebeff3;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.c7 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  margin: 0 calc(1.25rem * -1);
+  padding: 0;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c7:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c7[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):hover,
-.c7[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c7[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c10 {
-  margin-bottom: 1rem;
+.c4 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 1.25rem;
+  padding: 1rem;
+  width: calc(100% / 3 - 2 * 1.25rem);
+  list-style-type: none;
+  background-color: white;
 }
 
 .c11 {
+  margin-bottom: 1rem;
+}
+
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -486,7 +397,7 @@ exports[`<AddressResults/> should render results 1`] = `
   justify-content: space-around;
 }
 
-.c13 {
+.c14 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -509,13 +420,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c13:not([disabled]):active {
+.c14:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -523,7 +434,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c13[aria-pressed="true"] {
+.c14[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -532,25 +443,25 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c13[aria-pressed="true"]:not([disabled]):hover,
-.c13[aria-pressed="true"]:not([disabled]):focus {
+.c14[aria-pressed="true"]:not([disabled]):hover,
+.c14[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c13[aria-pressed="true"]:not([disabled]):active {
+.c14[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c13 + .c12 {
+.c14 + .c13 {
   margin-left: 1rem;
 }
 
-.c14 {
+.c15 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -573,13 +484,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c14:not([disabled]):active {
+.c15:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -587,7 +498,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c14[aria-pressed="true"] {
+.c15[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -596,58 +507,58 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c14[aria-pressed="true"]:not([disabled]):hover,
-.c14[aria-pressed="true"]:not([disabled]):focus {
+.c15[aria-pressed="true"]:not([disabled]):hover,
+.c15[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c14[aria-pressed="true"]:not([disabled]):active {
+.c15[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c14[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c14 + .c12 {
+.c15 + .c13 {
   margin-left: 1rem;
 }
 
-.c3 {
+.c5 {
   font-size: 1rem;
 }
 
-.c4 {
+.c6 {
   display: block;
   font-size: 0.9em;
   line-height: 1.5;
   margin: 1rem 0;
 }
 
-.c4:link {
+.c6:link {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: rgba(100,100,100,0.9);
 }
 
-.c4:hover {
+.c6:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c4:visited {
+.c6:visited {
   color: rgba(100,100,100,0.8);
 }
 
-.c5 {
+.c7 {
   font-size: 0.9em;
   margin-top: 0.25em;
   margin-bottom: 0.5em;
   line-height: 1.5;
 }
 
-.c6 {
+.c8 {
   font-size: 0.9em;
   margin-top: 0.25em;
   margin-bottom: 0.5em;
@@ -662,7 +573,7 @@ exports[`<AddressResults/> should render results 1`] = `
 }
 
 @media print {
-  .c8 {
+  .c9 {
     max-width: 100%;
     padding: 0;
   }
@@ -676,9 +587,21 @@ exports[`<AddressResults/> should render results 1`] = `
 }
 
 @media print {
-  .c9 {
+  .c10 {
     border: none;
     padding: 0 5pt;
+  }
+}
+
+@media (max-width:980px) {
+  .c4 {
+    width: calc(100% / 2 - 2 * 1.25rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    width: calc(100% - 1 * 1.25rem);
   }
 }
 
@@ -693,18 +616,18 @@ exports[`<AddressResults/> should render results 1`] = `
         class="c2"
       >
         <ul
-          class="card-wrapper"
+          class="c3"
         >
           <li
-            class="card"
+            class="c4"
           >
             <strong
-              class="c3"
+              class="c5"
             >
               Bureau des légendes
             </strong>
             <a
-              class="c4"
+              class="c6"
               href="https://www.openstreetmap.org/?mlat=4&mlon=44&zoom=16"
             >
               adresse inconnue
@@ -714,7 +637,7 @@ exports[`<AddressResults/> should render results 1`] = `
               Partout
             </a>
             <p
-              class="c5"
+              class="c7"
             >
               Tél: 
               <a
@@ -724,45 +647,39 @@ exports[`<AddressResults/> should render results 1`] = `
               </a>
             </p>
             <a
-              class="c6"
+              class="c8"
               href="mailto:email"
             >
               email
             </a>
           </li>
         </ul>
-        <button
-          aria-pressed="false"
-          class="c7"
-        >
-          Posez votre question
-        </button>
         <div
           class="c0"
         >
           <div
-            class="c8"
+            class="c9"
           >
             <div
-              class="c9"
+              class="c10"
             >
               <h3
-                class="c10"
+                class="c11"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c11"
+                class="c12"
               >
                 <button
                   aria-pressed="false"
-                  class="c12 c13"
+                  class="c13 c14"
                 >
                   Non
                 </button>
                 <button
                   aria-pressed="false"
-                  class="c12 c14"
+                  class="c13 c15"
                 >
                   Oui
                 </button>

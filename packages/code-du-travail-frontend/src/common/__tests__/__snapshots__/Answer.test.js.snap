@@ -8,6 +8,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -20,6 +21,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c11 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -31,6 +33,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c22 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -54,6 +57,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c9 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -68,6 +72,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 .c20 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1062,6 +1067,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c2 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1074,6 +1080,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c15 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1085,6 +1092,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c26 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1108,6 +1116,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c13 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1122,6 +1131,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c24 > *:last-child {
+  margin-top: 0;
   margin-bottom: 0;
 }
 

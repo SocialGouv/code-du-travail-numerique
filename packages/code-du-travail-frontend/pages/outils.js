@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import styled from "styled-components";
 import { Alert, Container } from "@cdt/ui";
 
@@ -8,6 +7,7 @@ import Search from "../src/search/Search";
 import { CalculateurIndemnite } from "../src/outils/indemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
 import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
+import { Metas } from "../src/common/Metas";
 
 const BigError = ({ children }) => (
   <StyledContainer>
@@ -60,16 +60,18 @@ class Outils extends React.Component {
     return { data: { _source: { slug: query.slug } } };
   }
   render() {
-    const { data, router } = this.props;
+    const { data, router, pageUrl, ogImage } = this.props;
     const { outil: Outil, title, description } = getOutilFromCode(
       data._source.slug
     );
     return (
       <PageLayout>
-        <Head>
-          <title>{title}</title>
-          <meta name="description" content={description} />
-        </Head>
+        <Metas
+          url={pageUrl}
+          title={title}
+          description={description}
+          image={ogImage}
+        />
         <Search />
         <Outil q={router.query.q} />
         <Source name="-" />
