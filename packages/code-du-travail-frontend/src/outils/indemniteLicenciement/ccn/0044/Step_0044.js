@@ -2,8 +2,8 @@ import React from "react";
 import { Field } from "react-final-form";
 import { Container } from "@cdt/ui";
 import { EchelonChimie } from "./EchelonChimie";
-import { TextQuestion } from "../components/TextQuestion";
-import { YesNoQuestion } from "../components/YesNoQuestion";
+import { TextQuestion } from "../../components/TextQuestion";
+import { YesNoQuestion } from "../../components/YesNoQuestion";
 
 function Step_Chimie() {
   return (
