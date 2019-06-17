@@ -289,7 +289,6 @@ const StyledSearch = styled.div`
       ${spacing.larger};
     color: ${colors.almostBlack};
     background-color: transparent;
-    background-position: top 1rem right 0.75em;
     border: 1px solid transparent;
   }
 
