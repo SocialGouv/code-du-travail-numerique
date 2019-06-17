@@ -8,10 +8,9 @@ describe("<Metas />", () => {
     const title = "title";
     const description = "description";
     const image = "image.url";
-    const { debug, container } = render(
+    const { container } = render(
       <_Metas url={url} title={title} description={description} image={image} />
     );
-    debug();
     expect(container).toMatchSnapshot();
   });
 });

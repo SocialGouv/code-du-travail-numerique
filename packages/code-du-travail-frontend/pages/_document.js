@@ -4,7 +4,7 @@ import { ServerStyleSheet } from "styled-components";
 import * as Sentry from "@sentry/browser";
 import "url-search-params";
 
-import GlobalStyle from "../src/layout/GlobalStyle";
+import GlobalStyles from "../src/layout/GlobalStyles";
 
 process.on("unhandledRejection", err => {
   Sentry.captureException(err);
@@ -68,7 +68,7 @@ export default class MyDocument extends Document {
             Vous devez activer le JavaScript pour pouvoir profiter pleinement de
             ce site internet.
           </noscript>
-          <GlobalStyle />
+          <GlobalStyles />
           <Main />
           <NextScript />
         </body>
