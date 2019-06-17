@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Container, icons, Section, Tag, theme, Wrapper } from "@cdt/ui/";
+import { Container, Section, Tag, theme, Wrapper } from "@cdt/ui/";
 
 const Article = ({
   title,
   tags,
   sourceType,
   date,
-  icon: Icon = icons.Question,
+  icon: Icon,
   narrow = true,
   onTagClick,
   children

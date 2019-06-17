@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 import Answer from "../Answer";
+import { icons } from "@cdt/ui/";
 
 import MockNextContext from "../../../test/MockNextContext";
 
@@ -18,6 +19,7 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
+        icon={icons.Question}
       >
         <div>Contenu supplémentaire</div>
       </Answer>
@@ -33,6 +35,7 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
+        icon={icons.Question}
         breadcrumbs={[
           { label: "tag1", slug: "tag-1" },
           { label: "tag2", slug: "tag-2" }

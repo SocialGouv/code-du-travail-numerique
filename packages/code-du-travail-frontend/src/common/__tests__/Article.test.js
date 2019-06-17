@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 import Article from "../Article";
+import { icons } from "@cdt/ui/";
 
 const articleProps = {
   title:
@@ -12,7 +13,9 @@ const articleProps = {
 describe("<Article />", () => {
   test("should render", () => {
     const { container } = render(
-      <Article {...articleProps}>this is an Article</Article>
+      <Article {...articleProps} icon={icons.Question}>
+        this is an Article
+      </Article>
     );
     expect(container).toMatchSnapshot();
   });

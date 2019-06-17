@@ -28,7 +28,12 @@ class ModeleCourrier extends React.Component {
     const { data } = this.props;
     const { description } = data._source;
     if (data.status === 404) {
-      return <Answer emptyMessage="Modèle de courrier introuvable" />;
+      return (
+        <Answer
+          emptyMessage="Modèle de courrier introuvable"
+          icon={ModeleCourrierIcon}
+        />
+      );
     }
     return (
       <PageLayout>
