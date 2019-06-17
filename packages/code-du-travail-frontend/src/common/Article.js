@@ -2,14 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Container, icons, Section, Tag, theme, Wrapper } from "@cdt/ui/";
+import { Container, Section, Tag, theme, Wrapper } from "@cdt/ui/";
 
 const Article = ({
   title,
   tags,
   sourceType,
   date,
-  icon: Icon = icons.Question,
+  icon: Icon,
+  wide,
   onTagClick,
   children
 }) => {
@@ -18,10 +19,12 @@ const Article = ({
       <Container>
         <Wrapper variant="light">
           <Section>
-            <Header narrow noPadding>
-              <IconWrapper>
-                <Icon />
-              </IconWrapper>
+            <Header narrow={!wide} noPadding>
+              {Icon && (
+                <IconWrapper>
+                  <Icon />
+                </IconWrapper>
+              )}
               <div>
                 <H1>{title}</H1>
                 <Meta>
@@ -46,7 +49,7 @@ const Article = ({
               </Tags>
             </Header>
             {children && (
-              <Container narrow noPadding>
+              <Container narrow={!wide} noPadding>
                 {children}
               </Container>
             )}
@@ -65,6 +68,7 @@ Article.propTypes = {
   date: PropTypes.string,
   sourceType: PropTypes.string,
   icon: PropTypes.func,
+  wide: PropTypes.bool,
   /** list of tags */
   tags: PropTypes.array,
   className: PropTypes.string,

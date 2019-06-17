@@ -12,7 +12,8 @@ import {
   LargeLink,
   ListItem,
   Section,
-  theme
+  theme,
+  icons
 } from "@cdt/ui";
 import styled from "styled-components";
 
@@ -101,6 +102,7 @@ class Question extends React.Component {
           sourceType="Réponse détaillée"
           footer={author}
           additionalContent={additionalContent}
+          icon={icons.Question}
         >
           {modeles_de_courriers.length > 0 && (
             <React.Fragment>

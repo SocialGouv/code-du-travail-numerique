@@ -7,11 +7,11 @@ import { theme } from "@cdt/ui/";
 const ETAT_LABEL = {
   MODIFIE: "Modifie",
   DENONCE: "Dénonce",
-  VIGUEUR_ETEN: "En vigueur étendu",
-  VIGUEUR: "En vigueur",
+  VIGUEUR_ETEN: "Article étendu",
+  VIGUEUR: "",
   PERIME: "Périmé",
   ABROGE: "Abrogé",
-  VIGUEUR_NON_ETEN: "En vigueur non étendu",
+  VIGUEUR_NON_ETEN: "Article non étendu",
   REMPLACE: "Remplace"
 };
 

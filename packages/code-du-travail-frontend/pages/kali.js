@@ -3,7 +3,6 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
-import ArticleIcon from "../src/icons/ArticleIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 import Convention from "../src/conventions/Convention";
 import { Metas } from "../src/common/Metas";
@@ -53,8 +52,7 @@ class Kali extends React.Component {
           title={title}
           emptyMessage="Cette convention collective n'a pas été trouvée"
           footer="Informations fournies par la DILA"
-          sourceType="Convention collective"
-          icon={ArticleIcon}
+          wide
         >
           <Convention convention={convention} conteneur={conteneur} />
         </Answer>
