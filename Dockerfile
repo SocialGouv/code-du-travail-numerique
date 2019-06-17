@@ -23,6 +23,7 @@ COPY ./packages/code-du-travail-data/dataset/kali/package.json /app/packages/cod
 COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
 COPY ./packages/code-du-travail-data/dataset/synonyms/package.json /app/packages/code-du-travail-data/dataset/synonyms/package.json
 COPY ./packages/code-du-travail-data/dataset/themes/package.json /app/packages/code-du-travail-data/dataset/themes/package.json
+COPY ./packages/code-du-travail-data/dataset/datafiller/package.json /app/packages/code-du-travail-data/dataset/datafiller/package.json
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
 
