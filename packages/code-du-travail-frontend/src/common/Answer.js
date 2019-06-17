@@ -42,7 +42,7 @@ function Answer({
   intro = null,
   html = null,
   children = null,
-  narrow = true,
+  wide,
   footer,
   date,
   icon,
@@ -63,7 +63,7 @@ function Answer({
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
         <Article
-          narrow={narrow}
+          wide={wide}
           title={title}
           icon={icon}
           date={date}

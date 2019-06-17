@@ -10,7 +10,7 @@ const Article = ({
   sourceType,
   date,
   icon: Icon,
-  narrow = true,
+  wide,
   onTagClick,
   children
 }) => {
@@ -19,7 +19,7 @@ const Article = ({
       <Container>
         <Wrapper variant="light">
           <Section>
-            <Header narrow={narrow} noPadding>
+            <Header narrow={!wide} noPadding>
               {Icon && (
                 <IconWrapper>
                   <Icon />
@@ -49,7 +49,7 @@ const Article = ({
               </Tags>
             </Header>
             {children && (
-              <Container narrow={narrow} noPadding>
+              <Container narrow={!wide} noPadding>
                 {children}
               </Container>
             )}
@@ -68,7 +68,7 @@ Article.propTypes = {
   date: PropTypes.string,
   sourceType: PropTypes.string,
   icon: PropTypes.func,
-  narrow: PropTypes.bool,
+  wide: PropTypes.bool,
   /** list of tags */
   tags: PropTypes.array,
   className: PropTypes.string,
