@@ -20,9 +20,10 @@
   before_script:
     - cd packages/code-du-travail-data
     - apk add --no-cache build-base
-    - pip install --upgrade pip
-    - pip install pipenv==$PIP_VERSION
-    - pipenv install --dev
+    - python -m venv venv
+    - . venv/bin/activate
+    - pip install pylint
+    - pip install -r requirements.txt
 
 #
 
@@ -48,7 +49,7 @@ Lint @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
   script:
-    - pipenv run pylint --output-format=colorized search
+    - pylint --output-format=colorized search
 
 #
 
@@ -135,7 +136,7 @@ Test @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
   script:
-    - pipenv run python search/indexing/document_slug_checker.py -v
+    - python search/indexing/document_slug_checker.py -v
 
 #
 
