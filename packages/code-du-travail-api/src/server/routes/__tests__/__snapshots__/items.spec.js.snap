@@ -46,6 +46,8 @@ exports[`return item from its id 1`] = `
 Object {
   "_id": "6",
   "_index": "cdtn_document_test",
+  "_primary_term": 1,
+  "_seq_no": 6,
   "_source": Object {
     "author": "DIRECCTE",
     "date": "01/12/2017",
