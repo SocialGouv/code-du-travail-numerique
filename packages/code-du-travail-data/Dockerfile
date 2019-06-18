@@ -30,5 +30,3 @@ COPY ./dataset/outils.json ./dataset/outils.json
 COPY ./search ./search
 
 ENTRYPOINT ["python", "/app/search/indexing/create_indexes.py"]
-
-
