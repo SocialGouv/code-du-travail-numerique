@@ -41,7 +41,7 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 # > In parallel, in another terminal <
 
 # Launch indexing script
-$ docker-compose run --rm python pipenv run python /app/search/indexing/create_indexes.py
+$ docker-compose run --rm python
 ```
 
 If some error appears for the nlp_api container, run `docker-compose down`, then run 
@@ -64,19 +64,18 @@ You can see which data will be indexed into ES by using the `--verbose` option:
 
 ```sh
 # To check code tu travail data :
-# 1) Data with "tags" extracted from ePoseidon :
-$ docker-compose run --rm python pipenv run python /app/search/extraction/code_du_travail/eposeidon_tags/data.py -v
+ 
 # 2) Data with "tags" renamed by hand :
-$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/code_du_travail/cleaned_tags/data.py -v
+$ docker-compose run --rm  --entrypoint "python search/extraction/code_du_travail/cleaned_tags/data.py -v"  python
 
 # To check fiches Ministère du Travail data :
-$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/fiches_ministere_travail/data.py -v
+$ docker-compose run --rm  --entrypoint "python search/extraction/fiches_ministere_travail/data.py -v"  python
 
 # To check fiches services public data :
-$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/fiches_service_public/data.py -v
+$ docker-compose run --rm  --entrypoint "python search/extraction/fiches_service_public/data.py -v" python
 
 # To check synonymes dictionary:
-$ docker exec -ti code-du-travail-data-python pipenv run python search/extraction/synonyms/data.py -v
+$ docker-compose run --rm --entrypoint "python search/extraction/synonyms/data.py -v" python
 ```
 
 If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn build`.
