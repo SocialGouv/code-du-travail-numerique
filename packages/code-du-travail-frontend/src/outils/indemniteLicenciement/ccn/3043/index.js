@@ -1,8 +1,8 @@
-import Result_3043 from "./Result_3043";
+import Result from "./Result";
 
 export const steps = [
   {
-    component: Result_3043,
+    component: Result,
     name: "branche_result",
     label: "Indemnité conventionnelle"
   }

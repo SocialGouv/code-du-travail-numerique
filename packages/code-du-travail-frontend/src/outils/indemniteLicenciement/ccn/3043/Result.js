@@ -1,15 +1,17 @@
 import React from "react";
 import MathJax from "react-mathjax-preview";
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import { Container, Button } from "@cdt/ui";
+
+import { ErrorBoundary } from "../../../../common/ErrorBoundary";
+
 import {
   getIndemnite as getIndemniteConventionnelle,
   getSalaireRef as getSalaireRefConventionnel
-} from "./3043_indemnite";
+} from "./indemnite";
 
-import { branches } from "../branches";
-import { getIndemnite, getSalaireRef } from "../indemnite";
-import { SectionTitle, Highlight, SmallText } from "../stepStyles";
+import { branches } from "../../branches";
+import { getIndemnite, getSalaireRef } from "../../indemnite";
+import { SectionTitle, Highlight, SmallText } from "../../stepStyles";
 
 function ResultProprete({ form }) {
   const state = form.getState();
