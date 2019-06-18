@@ -2,8 +2,9 @@ import React from "react";
 import { Field } from "react-final-form";
 import { Container } from "@cdt/ui";
 import { EchelonChimie } from "./EchelonChimie";
-import { TextQuestion } from "../../components/TextQuestion";
+//import { TextQuestion } from "../../components/TextQuestion";
 import { YesNoQuestion } from "../../components/YesNoQuestion";
+import { TextQuestion } from "../../components/TextQuestion";
 
 function Step_Chimie() {
   return (
@@ -25,16 +26,14 @@ function Step_Chimie() {
                   name="isEco"
                   label="Le motif de votre licenciement est-il économique ?"
                 />
+                {anciennete > 5 && (
+                  <TextQuestion
+                    inputType="number"
+                    name="age"
+                    label="Quel etait votre age à la date du licenciement ?"
+                  />
+                )}
               </>
-            );
-          }
-          if (anciennete > 5) {
-            return (
-              <TextQuestion
-                inputType="number"
-                name="age"
-                label="Quel etait votre age à la date du licenciementnbsp;?"
-              />
             );
           }
           return null;
