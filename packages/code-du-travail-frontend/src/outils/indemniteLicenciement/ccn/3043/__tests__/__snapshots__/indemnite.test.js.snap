@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getIndemnite 2k, 5ans d'ancienneté, 51ans 1`] = `1000`;
+
+exports[`getIndemnite 2k, 5ans d'ancienneté, 51ans, licenciement eco, OPE 1`] = `1000`;
+
+exports[`getIndemnite 2k, 5ans d'ancienneté, 55ans 1`] = `1000`;
+
+exports[`getIndemnite 2k, 12mois d'ancienneté 1`] = `0`;
+
+exports[`getIndemnite 2k, 12mois d'ancienneté, OPE + licenciement eco 1`] = `0`;
+
+exports[`getIndemnite 2k, 30mois d'ancienneté 1`] = `500`;
+
+exports[`getIndemnite 2k, 41ans d'ancienneté, 55ans 1`] = `1000`;

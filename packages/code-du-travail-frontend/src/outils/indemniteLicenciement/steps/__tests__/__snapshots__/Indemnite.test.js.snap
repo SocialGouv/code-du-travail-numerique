@@ -183,6 +183,11 @@ exports[`<StepIndemnite /> should render 1`] = `
         >
           Ouvriers du bâtiment (entreprises de plus 10 salariés)
         </option>
+        <option
+          value="3043"
+        >
+          Propreté : entreprises et services associés
+        </option>
       </select>
       
     </label>
