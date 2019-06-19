@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getIndemnite 2k, 6ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 5 + 3/10 * 2000 * 1 - 920"`;
+
+exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 10 + 3/10 * 2000 * 0"`;
+
+exports[`getIndemnite 2k, 12mois d'ancienneté, 55ans, ouvrier 1`] = `""`;
+
+exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, TAM 1`] = `"1/10 * 2000 * 2"`;
+
+exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, cadre 1`] = `""`;
+
+exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, ouvrier 1`] = `"1/10 * 2000 * 2"`;
+
+exports[`getIndemnite 2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible 1`] = `"1/10 * 2000 * 2 - 80"`;
+
+exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, TAM 1`] = `"3/10 * 2000 * 3"`;
+
+exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, cadre 1`] = `"4/10 * 2000 * 2 + 3/10 * 2000 * 1"`;
+
+exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, ouvrier 1`] = `"2/10 * 2000 * 3"`;
+
+exports[`getIndemnite 2k, 36mois d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 2 + 3/10 * 2000 * 1 - 440"`;

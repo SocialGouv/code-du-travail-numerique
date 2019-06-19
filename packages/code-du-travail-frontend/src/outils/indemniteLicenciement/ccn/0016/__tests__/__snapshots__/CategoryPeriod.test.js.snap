@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CategoryPeriod /> should render 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 5em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c0 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Précisez les périodes éventuelles passées au statut de TAM ou employé
+  </h2>
+  <label
+    class="c1"
+  >
+    <p>
+      Période passée en tant que TAM ou employé
+    </p>
+    <div>
+      <input
+        class="c2"
+        min="0"
+        name="tamDuration"
+        size="5"
+        type="number"
+        value=""
+      />
+       
+      mois
+    </div>
+  </label>
+  <label
+    class="c1"
+  >
+    <p>
+      Période passée en tant que cadre
+    </p>
+    <div>
+      <input
+        class="c2"
+        min="0"
+        name="cadreDuration"
+        size="5"
+        type="number"
+        value=""
+      />
+       
+      mois
+    </div>
+  </label>
+</div>
+`;

@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Categorie /> should render 1`] = `
+.c1 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Quel est votre catégorie dans la convention collective ?
+  </h2>
+  <p>
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
+    class="c1"
+    for="input-cat"
+  >
+    Sélectionnez une catégorie
+  </label>
+  <select
+    id="input-cat"
+    name="cat"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="ouvrier"
+    >
+      Ouvriers et employés
+    </option>
+    <option
+      value="tam"
+    >
+      Techniciens et agents de maîtrise (TAM)
+    </option>
+    <option
+      value="cadre"
+    >
+      Cadre
+    </option>
+  </select>
+</div>
+`;
+
+exports[`<Categorie /> should render the selected echelon 1`] = `
+.c1 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Quel est votre catégorie dans la convention collective ?
+  </h2>
+  <p>
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
+    class="c1"
+    for="input-cat"
+  >
+    Sélectionnez une catégorie
+  </label>
+  <select
+    id="input-cat"
+    name="cat"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="ouvrier"
+    >
+      Ouvriers et employés
+    </option>
+    <option
+      value="tam"
+    >
+      Techniciens et agents de maîtrise (TAM)
+    </option>
+    <option
+      value="cadre"
+    >
+      Cadre
+    </option>
+  </select>
+</div>
+`;

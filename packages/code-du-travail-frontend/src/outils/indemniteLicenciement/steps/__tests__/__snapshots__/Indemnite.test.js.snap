@@ -137,6 +137,11 @@ exports[`<StepIndemnite /> should render 1`] = `
           ex: Industries chimique
         </option>
         <option
+          value="0016"
+        >
+          Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+        </option>
+        <option
           value="0044"
         >
           Convention collective nationale des industries chimiques et connexes
