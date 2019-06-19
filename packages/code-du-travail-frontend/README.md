@@ -24,12 +24,6 @@ $ npm install
 $ npm run dev
 ```
 
-## Intégration HTML/CSS
-
-L'intégration HTML/CSS est réalisée et documentée dans un autre dépôt de code : [code-du-travail-css](https://github.com/SocialGouv/code-du-travail-css).
-
-Le fichier CSS et certains assets du dépôt de code de l'intégration sont copiés dans le répertoire `static` de ce dépôt de code.
-
 ## Build de production
 
 - éditer `.env`

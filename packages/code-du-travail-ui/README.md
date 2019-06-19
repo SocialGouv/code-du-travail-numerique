@@ -5,7 +5,6 @@
 ## Usage
 
 ```js
-import "@cdt/css"
 
 import { Container, Alert } "@cdt/ui"
 

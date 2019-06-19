@@ -3,3 +3,4 @@ coverage
 dist
 /.env
 docker-compose.override.yml
+__pycache__
