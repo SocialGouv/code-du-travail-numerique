@@ -585,7 +585,7 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco and age 1`] = `
       class="c5"
       for="1"
     >
-      Quel etait votre age à la date du licenciement ?
+      Quel etait votre âge à la date du licenciement ?
     </label>
     <div
       class="c6"
