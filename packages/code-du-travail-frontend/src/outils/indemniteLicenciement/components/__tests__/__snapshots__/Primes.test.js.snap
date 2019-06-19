@@ -20,7 +20,7 @@ exports[`<Primes /> should add a prime 1`] = `
 .c2 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -29,6 +29,14 @@ exports[`<Primes /> should add a prime 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c1 {
@@ -238,7 +246,7 @@ exports[`<Primes /> should render 1`] = `
 .c2 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -247,6 +255,14 @@ exports[`<Primes /> should render 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c1 {

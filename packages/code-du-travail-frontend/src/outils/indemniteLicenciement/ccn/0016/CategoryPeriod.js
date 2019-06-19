@@ -2,6 +2,7 @@ import React from "react";
 import { SectionTitle, Input, InlineError } from "../../stepStyles";
 import { Field } from "react-final-form";
 import styled from "styled-components";
+import { theme } from "@cdt/ui";
 
 import { isNumber } from "../../validators";
 
@@ -26,7 +27,9 @@ function CategoryPeriod() {
                 />{" "}
                 mois
                 {error && touched && invalid && (
-                  <InlineError>{error}</InlineError>
+                  <ErrorWrapper>
+                    <InlineError>{error}</InlineError>
+                  </ErrorWrapper>
                 )}
               </div>
             </VerticalLabel>
@@ -64,8 +67,12 @@ function CategoryPeriod() {
 }
 
 export { CategoryPeriod };
-
+const { spacing } = theme;
 const VerticalLabel = styled.label`
   display: flex;
   flex-direction: column;
+`;
+const ErrorWrapper = styled.div`
+  display: inline-block;
+  margin-left: ${spacing.interComponent};
 `;

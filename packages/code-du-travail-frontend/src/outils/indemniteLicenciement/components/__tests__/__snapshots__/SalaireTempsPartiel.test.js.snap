@@ -76,7 +76,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -87,10 +87,18 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   padding-right: 1rem;
 }
 
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -99,6 +107,14 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c6 {
@@ -315,7 +331,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -326,10 +342,18 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   padding-right: 1rem;
 }
 
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -338,6 +362,14 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c6 {
@@ -554,7 +586,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -565,10 +597,18 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   padding-right: 1rem;
 }
 
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -577,6 +617,14 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c6 {

@@ -2,12 +2,12 @@ import React from "react";
 import { Field } from "react-final-form";
 import { required } from "../validators";
 
-import { Input, QuestionLabel } from "../stepStyles";
+import { Input, QuestionLabel, InlineError } from "../stepStyles";
 import { UID } from "react-uid";
 import { theme } from "@cdt/ui";
 import styled from "styled-components";
 
-function TextQuestion({ name, label, inputType = "text" }) {
+function TextQuestion({ name, label, inputType = "text", size }) {
   return (
     <UID>
       {id => (
@@ -24,6 +24,7 @@ function TextQuestion({ name, label, inputType = "text" }) {
                   id={id}
                   type={inputType}
                   invalid={touched && invalid}
+                  size={size}
                 />
               )}
             />
@@ -32,7 +33,9 @@ function TextQuestion({ name, label, inputType = "text" }) {
               subscribe={{ error: true, dirty: true, touched: true }}
               render={({ meta: { error, dirty, touched } }) =>
                 (error && dirty) || (error && touched) ? (
-                  <InlineError>{error}</InlineError>
+                  <ErrorWrapper>
+                    <InlineError>{error}</InlineError>
+                  </ErrorWrapper>
                 ) : null
               }
             />
@@ -44,16 +47,14 @@ function TextQuestion({ name, label, inputType = "text" }) {
 }
 
 export { TextQuestion };
-const { spacing, colors } = theme;
+const { spacing } = theme;
 
 const QuestionWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: ${spacing.interComponent};
 `;
-
-const InlineError = styled.span`
+const ErrorWrapper = styled.div`
+  display: inline-block;
   margin-left: ${spacing.interComponent};
-  color: ${colors.darkerGrey};
-  font-weight: 600;
 `;
