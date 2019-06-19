@@ -1,0 +1,4 @@
+FROM cdtn-es
+
+COPY ./data /usr/share/elasticsearch/data
+
