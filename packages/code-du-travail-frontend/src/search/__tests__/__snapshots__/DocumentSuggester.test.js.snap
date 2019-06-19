@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DocumentSuggester /> should render 1`] = `
+.c1:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c0 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -12,12 +24,12 @@ exports[`<DocumentSuggester /> should render 1`] = `
   text-align: left;
 }
 
-.c1 ul {
+.c2 ul {
   z-index: 100;
 }
 
-.c1 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
+.c2 li[role="option"]:nth-child(2n + 1) {
+  background: #f5f7fa;
 }
 
 <div>
@@ -26,7 +38,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
     for="main-search-input"
   >
     <span
-      class="hidden"
+      class="c1"
     >
       Rechercher
     </span>
@@ -47,7 +59,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
         value="foo"
       />
       <div
-        class="c1"
+        class="c2"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       />
@@ -57,7 +69,23 @@ exports[`<DocumentSuggester /> should render 1`] = `
 `;
 
 exports[`<DocumentSuggester /> should render suggestions 1`] = `
-.c2 p {
+.c1:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c4 {
+  display: inline-block;
+}
+
+.c3 p {
   margin: 0;
 }
 
@@ -72,28 +100,12 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
   text-align: left;
 }
 
-.c1 ul {
+.c2 ul {
   z-index: 100;
 }
 
-.c1 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
-}
-
-.c3 {
-  display: inline-block;
-}
-
-.c4 {
-  display: inline-block;
-}
-
-.c5 {
-  display: inline-block;
-}
-
-.c6 {
-  display: inline-block;
+.c2 li[role="option"]:nth-child(2n + 1) {
+  background: #f5f7fa;
 }
 
 <div>
@@ -102,7 +114,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
     for="main-search-input"
   >
     <span
-      class="hidden"
+      class="c1"
     >
       Rechercher
     </span>
@@ -123,7 +135,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
         value="foo"
       />
       <div
-        class="c1"
+        class="c2"
         id="react-autowhatever-cdtn-documents-suggester"
         role="listbox"
       >
@@ -139,10 +151,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="c2"
+              class="c3"
             >
               <div
-                class="c3"
+                class="c4"
               >
                 <b>
                   foo
@@ -158,7 +170,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="c2"
+              class="c3"
             >
               <div
                 class="c4"
@@ -178,10 +190,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="c2"
+              class="c3"
             >
               <div
-                class="c5"
+                class="c4"
               >
                 <b>
                   foo
@@ -198,10 +210,10 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
             style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
           >
             <div
-              class="c2"
+              class="c3"
             >
               <div
-                class="c6"
+                class="c4"
               >
                 <b>
                   foo

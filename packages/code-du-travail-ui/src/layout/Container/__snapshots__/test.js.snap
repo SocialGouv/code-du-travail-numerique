@@ -7,8 +7,11 @@ exports[`<Container /> renders 1`] = `
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -36,8 +39,11 @@ exports[`<Container /> renders narrow 1`] = `
   max-width: 46.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -66,8 +72,11 @@ exports[`<Container /> renders narrow without padding 1`] = `
   max-width: 46.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -94,8 +103,11 @@ exports[`<Container /> renders without padding even if the prop is specified, be
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

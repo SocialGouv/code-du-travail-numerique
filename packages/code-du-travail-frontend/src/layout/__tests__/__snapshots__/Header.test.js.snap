@@ -1,18 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render 1`] = `
-.c0 {
+.c1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
-.c1 {
+.c0 {
+  color: white;
+  background: currentColor;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,7 +28,7 @@ exports[`<Header /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,23 +42,23 @@ exports[`<Header /> should render 1`] = `
   cursor: pointer;
 }
 
-.c2:link {
+.c3:link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2:hover {
+.c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 {
+.c4 {
   width: 5rem;
   height: 100%;
   margin-right: 1rem;
 }
 
-.c4 {
+.c5 {
   font-size: 1.3rem;
   line-height: 1.1;
   -webkit-text-decoration: none;
@@ -58,7 +66,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media print {
-  .c0 {
+  .c1 {
     max-width: 100%;
     padding: 0;
   }
@@ -66,26 +74,26 @@ exports[`<Header /> should render 1`] = `
 
 <div>
   <header
-    class="bg-color color__white"
+    class="c0"
   >
     <div
-      class="c0"
+      class="c1"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <a
-          class="c2"
+          class="c3"
           href="/?q="
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="symbole de la Marianne, site officiel du gouvernement"
-            class="c3"
+            class="c4"
             src="/static/assets/img/marianne.svg"
           />
           <span
-            class="c4"
+            class="c5"
           >
             Code du travail
             <br />

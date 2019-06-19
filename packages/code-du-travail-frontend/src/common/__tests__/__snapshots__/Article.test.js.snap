@@ -7,8 +7,11 @@ exports[`<Article /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -20,8 +23,11 @@ exports[`<Article /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c4 > *:last-child {
+.c4 > *:first-child {
   margin-top: 0;
+}
+
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -39,28 +45,28 @@ exports[`<Article /> should render 1`] = `
   background-color: #fff;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
 .c3 {
   position: relative;
+  margin-bottom: 1.25rem;
 }
 
 .c5 {
   position: absolute;
   top: 0.625rem;
-  left: calc(-60px - 1.25rem);
-  width: 60px;
+  left: calc(-80px - 1.25rem);
+  width: 80px;
   color: #4c5467;
 }
 
 .c6 {
-  font-weight: 600;
-}
-
-.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,24 +77,24 @@ exports[`<Article /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c8 {
+.c7 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c9 {
+.c8 {
   margin-left: 1rem;
   color: #53657d;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   display: inline-block;
 }
 
-.c10 {
+.c9 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c11 {
+.c10 {
   margin-left: -10px;
 }
 
@@ -120,7 +126,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -132,7 +138,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c8 {
     margin-left: 0;
   }
 }
@@ -178,34 +184,30 @@ exports[`<Article /> should render 1`] = `
                 </g>
               </svg>
             </div>
-            <div>
-              <h1
-                class="c6"
-              >
-                Contrat de travail et formalités d'embauche de l'assistante maternelle
-              </h1>
-              <div
+            <h1>
+              Contrat de travail et formalités d'embauche de l'assistante maternelle
+            </h1>
+            <div
+              class="c6"
+            >
+              <span
                 class="c7"
               >
-                <span
-                  class="c8"
-                >
-                  Fiche service public
-                </span>
+                Fiche service public
+              </span>
+              <span
+                class="c8"
+              >
+                Mis à jour le : 
                 <span
                   class="c9"
                 >
-                  Mis à jour le : 
-                  <span
-                    class="c10"
-                  >
-                    26/07/2018
-                  </span>
+                  26/07/2018
                 </span>
-              </div>
+              </span>
             </div>
             <div
-              class="c11"
+              class="c10"
             />
           </div>
           <div

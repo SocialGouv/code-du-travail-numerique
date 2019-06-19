@@ -8,8 +8,11 @@ exports[`<Feedback/> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -27,8 +30,11 @@ exports[`<Feedback/> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -234,8 +240,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -253,8 +262,11 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   background-color: #ebeff3;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -525,8 +537,11 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -544,8 +559,11 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   background-color: #ebeff3;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 

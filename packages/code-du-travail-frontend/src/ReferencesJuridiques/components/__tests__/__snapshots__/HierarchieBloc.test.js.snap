@@ -107,6 +107,14 @@ exports[`<HierarchieBloc /> should render 1`] = `
   animation: bcCCNc 0.35s ease-in;
 }
 
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c8.accordion__body--hidden {
   display: none;
 }

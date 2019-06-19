@@ -2,9 +2,7 @@
 
 exports[`<Html /> should render 1`] = `
 <div>
-  <div
-    class="toto "
-  >
+  <div>
     <b>
       Hello
     </b>

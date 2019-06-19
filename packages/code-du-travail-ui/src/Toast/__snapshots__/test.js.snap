@@ -41,7 +41,6 @@ exports[`<Toast /> renders 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  font-size: 1.6rem;
   background-color: #d7e8f9;
 }
 
@@ -61,6 +60,7 @@ exports[`<Toast /> renders 1`] = `
 <div>
   <div
     class="c0"
+    kind="warning"
   >
     <div
       class="c1"

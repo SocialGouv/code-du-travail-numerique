@@ -107,6 +107,14 @@ exports[`<AutresReferences /> should render 1`] = `
   animation: bcCCNc 0.35s ease-in;
 }
 
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c6.accordion__body--hidden {
   display: none;
 }
@@ -171,7 +179,7 @@ exports[`<AutresReferences /> should render 1`] = `
             class=""
           >
             <a
-              class="external-link__after c8"
+              class="c8"
               rel="noopener noreferrer"
               target="_blank"
             >

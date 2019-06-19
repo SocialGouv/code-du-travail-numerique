@@ -29,7 +29,7 @@ exports[`<StepItems /> should render 1`] = `
   padding-left: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #adb9c9;
@@ -51,7 +51,7 @@ exports[`<StepItems /> should render 1`] = `
   padding-left: 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #0053b3;
@@ -73,7 +73,7 @@ exports[`<StepItems /> should render 1`] = `
   padding-left: 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #adb9c9;

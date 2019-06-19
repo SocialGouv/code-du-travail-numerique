@@ -11,8 +11,11 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
   background-color: #ebeff3;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -45,8 +48,11 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
   border-color: transparent;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -79,8 +85,11 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
   background-color: #fff;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

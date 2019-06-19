@@ -7,12 +7,15 @@ exports[`<Answer /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
-.c11 {
+.c19 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -20,20 +23,26 @@ exports[`<Answer /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c11 > *:last-child {
+.c19 > *:first-child {
   margin-top: 0;
+}
+
+.c19 > *:last-child {
   margin-bottom: 0;
 }
 
-.c22 {
+.c29 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c22 > *:last-child {
+.c29 > *:first-child {
   margin-top: 0;
+}
+
+.c29 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -42,11 +51,11 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fff;
 }
 
-.c8 {
+.c16 {
   padding: 1.25rem 0;
 }
 
-.c9 {
+.c17 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -56,12 +65,15 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fff;
 }
 
-.c9 > *:last-child {
+.c17 > *:first-child {
   margin-top: 0;
+}
+
+.c17 > *:last-child {
   margin-bottom: 0;
 }
 
-.c20 {
+.c27 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -71,12 +83,15 @@ exports[`<Answer /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c20 > *:last-child {
+.c27 > *:first-child {
   margin-top: 0;
+}
+
+.c27 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7 {
+.c15 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -98,13 +113,13 @@ exports[`<Answer /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c7:not([disabled]):active {
+.c15:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -112,7 +127,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c7[aria-pressed="true"] {
+.c15[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -121,21 +136,21 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c7[aria-pressed="true"]:not([disabled]):hover,
-.c7[aria-pressed="true"]:not([disabled]):focus {
+.c15[aria-pressed="true"]:not([disabled]):hover,
+.c15[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c7[aria-pressed="true"]:not([disabled]):active {
+.c15[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c7[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c34 {
+.c41 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -157,16 +172,28 @@ exports[`<Answer /> should render 1`] = `
   border: none;
 }
 
-.c34:hover {
+.c41:hover {
   color: #8c94a6;
 }
 
-.c34:active {
+.c41:active {
   position: relative;
   top: 1px;
 }
 
-.c29 {
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c36 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -185,10 +212,10 @@ exports[`<Answer /> should render 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: none;
+  box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c30 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,11 +233,10 @@ exports[`<Answer /> should render 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  font-size: 1.6rem;
   background-color: #fee5ad;
 }
 
-.c31 {
+.c38 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -223,7 +249,7 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c33 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,23 +268,20 @@ exports[`<Answer /> should render 1`] = `
   justify-content: center;
 }
 
-.c10 {
+.c18 {
   position: relative;
+  margin-bottom: 1.25rem;
 }
 
-.c12 {
+.c20 {
   position: absolute;
   top: 0.625rem;
-  left: calc(-60px - 1.25rem);
-  width: 60px;
+  left: calc(-80px - 1.25rem);
+  width: 80px;
   color: #4c5467;
 }
 
-.c13 {
-  font-weight: 600;
-}
-
-.c14 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,28 +292,28 @@ exports[`<Answer /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c15 {
+.c22 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c16 {
+.c23 {
   margin-left: 1rem;
   color: #53657d;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   display: inline-block;
 }
 
-.c17 {
+.c24 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c18 {
+.c25 {
   margin-left: -10px;
 }
 
-.c28 {
+.c35 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -298,11 +321,11 @@ exports[`<Answer /> should render 1`] = `
   z-index: 1000;
 }
 
-.c32 {
+.c39 {
   padding: 0 0.25rem;
 }
 
-.c5 {
+.c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -313,12 +336,12 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c6 ul {
+.c14 ul {
   z-index: 100;
 }
 
-.c6 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
+.c14 li[role="option"]:nth-child(2n + 1) {
+  background: #f5f7fa;
 }
 
 .c0 {
@@ -327,7 +350,7 @@ exports[`<Answer /> should render 1`] = `
 
 .c4 {
   margin-top: 0;
-  font-size: 1.6rem;
+  font-size: 1.875rem;
   line-height: 1.4;
   color: #006ab2;
 }
@@ -338,23 +361,22 @@ exports[`<Answer /> should render 1`] = `
   text-align: center;
 }
 
-.c3 .search__form {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  padding: var(--spacing-small) 0;
+  padding: 0.625rem 0;
   position: relative;
-  height: 5rem;
   width: 90%;
 }
 
-.c3 .search__form button {
+.c5 button {
   margin-left: 0.5rem;
 }
 
-.c3 .search__fields {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,7 +387,7 @@ exports[`<Answer /> should render 1`] = `
   position: relative;
 }
 
-.c3 .search__input__icon {
+.c7 {
   position: absolute;
   left: 0;
   top: 0;
@@ -373,7 +395,7 @@ exports[`<Answer /> should render 1`] = `
   width: 2.55rem;
 }
 
-.c3 .search__sources {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -390,28 +412,27 @@ exports[`<Answer /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c3 .search__sources__icon {
+.c10 {
   position: absolute;
   margin: 0 calc(1.25rem / 2);
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c3 .search__sources__value {
-  padding: 0.5rem 2rem 0.5rem 2.5em;
+.c11 {
+  padding: 0.5rem 2rem 0.5rem 2.5rem;
   color: #26353f;
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.c3 .search__input {
+.c13 {
   margin: 0;
   padding: 0 12.8rem 0 4rem;
-  height: 100%;
   width: 100%;
   font-size: inherit;
   font-family: inherit;
-  line-height: calc(3.625rem - 1px);
+  line-height: 3.625rem;
   color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -423,16 +444,16 @@ exports[`<Answer /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c3 .search__input:focus {
+.c13:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c23 {
+.c30 {
   margin-bottom: 1rem;
 }
 
-.c24 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -443,7 +464,7 @@ exports[`<Answer /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c26 {
+.c33 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -466,13 +487,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c26:not([disabled]):hover,
-.c26:not([disabled]):focus {
+.c33:not([disabled]):hover,
+.c33:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c26:not([disabled]):active {
+.c33:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -480,7 +501,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c26[aria-pressed="true"] {
+.c33[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -489,25 +510,25 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c26[aria-pressed="true"]:not([disabled]):hover,
-.c26[aria-pressed="true"]:not([disabled]):focus {
+.c33[aria-pressed="true"]:not([disabled]):hover,
+.c33[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c26[aria-pressed="true"]:not([disabled]):active {
+.c33[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c26[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c26 + .c25 {
+.c33 + .c32 {
   margin-left: 1rem;
 }
 
-.c27 {
+.c34 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -530,13 +551,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c27:not([disabled]):hover,
-.c27:not([disabled]):focus {
+.c34:not([disabled]):hover,
+.c34:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c27:not([disabled]):active {
+.c34:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -544,7 +565,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c27[aria-pressed="true"] {
+.c34[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -553,30 +574,30 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c27[aria-pressed="true"]:not([disabled]):hover,
-.c27[aria-pressed="true"]:not([disabled]):focus {
+.c34[aria-pressed="true"]:not([disabled]):hover,
+.c34[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c27[aria-pressed="true"]:not([disabled]):active {
+.c34[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c27[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c27 + .c25 {
+.c34 + .c32 {
   margin-left: 1rem;
 }
 
-.c19 {
-  margin-top: 1rem;
+.c26 {
+  margin: 1rem auto;
 }
 
-.c21 {
-  margin-top: 2.5em;
+.c28 {
+  margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
   border-radius: 0.25rem;
@@ -590,41 +611,41 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media print {
-  .c11 {
+  .c19 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c22 {
+  .c29 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c9 {
+  .c17 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media print {
-  .c20 {
+  .c27 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (max-width:1200px) {
-  .c12 {
+  .c20 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c21 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -636,49 +657,63 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c23 {
     margin-left: 0;
   }
 }
 
-@media (max-width:980px) {
-  .c3 .search__sources {
+@media print {
+  .c0 {
     display: none;
-  }
-
-  .c3 .search__input {
-    padding-right: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 .search__form {
+  .c5 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
 
-  .c3 .search__form button {
+  .c5 button {
     margin-left: 0;
   }
+}
 
-  .c3 .search__input__icon {
-    display: none;
-  }
-
-  .c3 .search__fields {
+@media (max-width:600px) {
+  .c6 {
     margin-bottom: 0.5rem;
   }
+}
 
-  .c3 .search__input {
-    padding: 1rem;
+@media (max-width:600px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c13 {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    padding: 0 1rem;
   }
 }
 
 <div>
   <div
-    class="search-widget c0 c1"
+    class="c0 c1"
   >
     <div
       class="c2"
@@ -692,13 +727,13 @@ exports[`<Answer /> should render 1`] = `
           Posez votre question sur le droit du travail
         </p>
         <form
-          class="search__form"
+          class="c5"
         >
           <div
-            class="search__fields"
+            class="c6"
           >
             <svg
-              class="search__input__icon"
+              class="c7"
               viewBox="0 0 20 20"
             >
               <title />
@@ -709,16 +744,16 @@ exports[`<Answer /> should render 1`] = `
               />
             </svg>
             <label
-              class="search__sources"
+              class="c8"
               for="contentSource"
             >
               <span
-                class="hidden"
+                class="c9"
               >
                 Filtrer par type de contenu
               </span>
               <svg
-                class="search__sources__icon"
+                class="c10"
                 viewBox="0 0 512 512"
               >
                 <title>
@@ -738,7 +773,7 @@ exports[`<Answer /> should render 1`] = `
                 />
               </svg>
               <select
-                class="search__sources__value"
+                class="c11"
                 id="contentSource"
                 name="source"
               >
@@ -780,11 +815,11 @@ exports[`<Answer /> should render 1`] = `
               </select>
             </label>
             <label
-              class="c5"
+              class="c12"
               for="main-search-input"
             >
               <span
-                class="hidden"
+                class="c9"
               >
                 Rechercher
               </span>
@@ -798,7 +833,7 @@ exports[`<Answer /> should render 1`] = `
                   aria-autocomplete="list"
                   aria-controls="react-autowhatever-cdtn-documents-suggester"
                   autocomplete="off"
-                  class="search__input"
+                  class="c13"
                   id="main-search-input"
                   name="query"
                   placeholder="Recherche"
@@ -806,7 +841,7 @@ exports[`<Answer /> should render 1`] = `
                   value=""
                 />
                 <div
-                  class="c6"
+                  class="c14"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -815,7 +850,7 @@ exports[`<Answer /> should render 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c7"
+            class="c15"
             type="submit"
           >
             Rechercher
@@ -825,22 +860,22 @@ exports[`<Answer /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c8"
+    class="c16"
   >
     <div
       class="c2"
     >
       <div
-        class="c9"
+        class="c17"
       >
         <div
-          class="c8"
+          class="c16"
         >
           <div
-            class="c10 c11"
+            class="c18 c19"
           >
             <div
-              class="c12"
+              class="c20"
             >
               <svg
                 viewBox="0 0 50 50"
@@ -864,47 +899,41 @@ exports[`<Answer /> should render 1`] = `
                 </g>
               </svg>
             </div>
-            <div>
-              <h1
-                class="c13"
+            <h1>
+              Article du code
+            </h1>
+            <div
+              class="c21"
+            >
+              <span
+                class="c22"
               >
-                Article du code
-              </h1>
-              <div
-                class="c14"
+                social groove
+              </span>
+              <span
+                class="c23"
               >
+                Mis à jour le : 
                 <span
-                  class="c15"
+                  class="c24"
                 >
-                  social groove
+                  03/11/1979
                 </span>
-                <span
-                  class="c16"
-                >
-                  Mis à jour le : 
-                  <span
-                    class="c17"
-                  >
-                    03/11/1979
-                  </span>
-                </span>
-              </div>
+              </span>
             </div>
             <div
-              class="c18"
+              class="c25"
             />
           </div>
           <div
-            class="c11"
+            class="c19"
           >
             <div
-              class="c19 c20"
+              class="c26 c27"
             >
               intro de l'article
             </div>
-            <div
-              class=""
-            >
+            <div>
               <p
                 class="test-content"
               >
@@ -918,7 +947,7 @@ exports[`<Answer /> should render 1`] = `
               Contenu supplémentaire
             </div>
             <div
-              class="c21"
+              class="c28"
             >
               pied de page
             </div>
@@ -928,31 +957,31 @@ exports[`<Answer /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c8"
+    class="c16"
   >
     <div
-      class="c22"
+      class="c29"
     >
       <div
-        class="c20"
+        class="c27"
       >
         <h3
-          class="c23"
+          class="c30"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c24"
+          class="c31"
         >
           <button
             aria-pressed="false"
-            class="c25 c26"
+            class="c32 c33"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c25 c27"
+            class="c32 c34"
           >
             Oui
           </button>
@@ -961,13 +990,13 @@ exports[`<Answer /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c28"
+    class="c35"
   >
     <div
-      class="c29"
+      class="c36"
     >
       <div
-        class="c30"
+        class="c37"
       >
         <svg
           fill="none"
@@ -998,12 +1027,12 @@ exports[`<Answer /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c31"
+        class="c38"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c32"
+          class="c39"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -1014,12 +1043,12 @@ exports[`<Answer /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c33"
+        class="c40"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c34"
+          class="c41"
         >
           <svg
             fill="none"
@@ -1053,7 +1082,7 @@ exports[`<Answer /> should render 1`] = `
 `;
 
 exports[`<Answer /> should render a breadcrumbs 1`] = `
-.c10 {
+.c18 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1065,12 +1094,15 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   padding: 0 1.25rem;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c23 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -1078,20 +1110,26 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   max-width: 46.25rem;
 }
 
-.c15 > *:last-child {
+.c23 > *:first-child {
   margin-top: 0;
+}
+
+.c23 > *:last-child {
   margin-bottom: 0;
 }
 
-.c26 {
+.c33 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c26 > *:last-child {
+.c33 > *:first-child {
   margin-top: 0;
+}
+
+.c33 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1100,11 +1138,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #fff;
 }
 
-.c9 {
+.c17 {
   padding: 1.25rem 0;
 }
 
-.c13 {
+.c21 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -1114,12 +1152,15 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #fff;
 }
 
-.c13 > *:last-child {
+.c21 > *:first-child {
   margin-top: 0;
+}
+
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
-.c24 {
+.c31 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -1129,12 +1170,15 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #ebeff3;
 }
 
-.c24 > *:last-child {
+.c31 > *:first-child {
   margin-top: 0;
+}
+
+.c31 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7 {
+.c15 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1156,13 +1200,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c7:not([disabled]):active {
+.c15:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1170,7 +1214,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c7[aria-pressed="true"] {
+.c15[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1179,21 +1223,21 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c7[aria-pressed="true"]:not([disabled]):hover,
-.c7[aria-pressed="true"]:not([disabled]):focus {
+.c15[aria-pressed="true"]:not([disabled]):hover,
+.c15[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c7[aria-pressed="true"]:not([disabled]):active {
+.c15[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c7[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c38 {
+.c45 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1215,16 +1259,28 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border: none;
 }
 
-.c38:hover {
+.c45:hover {
   color: #8c94a6;
 }
 
-.c38:active {
+.c45:active {
   position: relative;
   top: 1px;
 }
 
-.c33 {
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c40 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1243,10 +1299,10 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: none;
+  box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c34 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1264,11 +1320,10 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  font-size: 1.6rem;
   background-color: #fee5ad;
 }
 
-.c35 {
+.c42 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1281,7 +1336,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   text-align: left;
 }
 
-.c37 {
+.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1300,23 +1355,20 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: center;
 }
 
-.c14 {
+.c22 {
   position: relative;
+  margin-bottom: 1.25rem;
 }
 
-.c16 {
+.c24 {
   position: absolute;
   top: 0.625rem;
-  left: calc(-60px - 1.25rem);
-  width: 60px;
+  left: calc(-80px - 1.25rem);
+  width: 80px;
   color: #4c5467;
 }
 
-.c17 {
-  font-weight: 600;
-}
-
-.c18 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1327,41 +1379,41 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   align-items: flex-end;
 }
 
-.c19 {
+.c26 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c20 {
+.c27 {
   margin-left: 1rem;
   color: #53657d;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   display: inline-block;
 }
 
-.c21 {
+.c28 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c22 {
+.c29 {
   margin-left: -10px;
 }
 
-.c8 {
-  background: #c9d3df;
+.c16 {
+  background: #d7e8f9;
 }
 
-.c11 {
+.c19 {
   display: inline-block;
   padding: 0.625rem 1.25rem;
 }
 
-.c11:first-child {
+.c19:first-child {
   padding-left: 0;
 }
 
-.c12 {
+.c20 {
   display: inline-block;
   pointer-events: none;
   -webkit-user-select: none;
@@ -1370,7 +1422,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   user-select: none;
 }
 
-.c32 {
+.c39 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -1378,11 +1430,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   z-index: 1000;
 }
 
-.c36 {
+.c43 {
   padding: 0 0.25rem;
 }
 
-.c5 {
+.c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1393,12 +1445,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   text-align: left;
 }
 
-.c6 ul {
+.c14 ul {
   z-index: 100;
 }
 
-.c6 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
+.c14 li[role="option"]:nth-child(2n + 1) {
+  background: #f5f7fa;
 }
 
 .c0 {
@@ -1407,7 +1459,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c4 {
   margin-top: 0;
-  font-size: 1.6rem;
+  font-size: 1.875rem;
   line-height: 1.4;
   color: #006ab2;
 }
@@ -1418,23 +1470,22 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   text-align: center;
 }
 
-.c3 .search__form {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  padding: var(--spacing-small) 0;
+  padding: 0.625rem 0;
   position: relative;
-  height: 5rem;
   width: 90%;
 }
 
-.c3 .search__form button {
+.c5 button {
   margin-left: 0.5rem;
 }
 
-.c3 .search__fields {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1445,7 +1496,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   position: relative;
 }
 
-.c3 .search__input__icon {
+.c7 {
   position: absolute;
   left: 0;
   top: 0;
@@ -1453,7 +1504,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   width: 2.55rem;
 }
 
-.c3 .search__sources {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1470,28 +1521,27 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border-radius: 0.25rem;
 }
 
-.c3 .search__sources__icon {
+.c10 {
   position: absolute;
   margin: 0 calc(1.25rem / 2);
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.c3 .search__sources__value {
-  padding: 0.5rem 2rem 0.5rem 2.5em;
+.c11 {
+  padding: 0.5rem 2rem 0.5rem 2.5rem;
   color: #26353f;
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.c3 .search__input {
+.c13 {
   margin: 0;
   padding: 0 12.8rem 0 4rem;
-  height: 100%;
   width: 100%;
   font-size: inherit;
   font-family: inherit;
-  line-height: calc(3.625rem - 1px);
+  line-height: 3.625rem;
   color: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1503,16 +1553,16 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   transition: border 250ms ease;
 }
 
-.c3 .search__input:focus {
+.c13:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c27 {
+.c34 {
   margin-bottom: 1rem;
 }
 
-.c28 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1523,7 +1573,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: space-around;
 }
 
-.c30 {
+.c37 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1546,13 +1596,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c30:not([disabled]):hover,
-.c30:not([disabled]):focus {
+.c37:not([disabled]):hover,
+.c37:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c30:not([disabled]):active {
+.c37:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -1560,7 +1610,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c30[aria-pressed="true"] {
+.c37[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -1569,25 +1619,25 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c30[aria-pressed="true"]:not([disabled]):hover,
-.c30[aria-pressed="true"]:not([disabled]):focus {
+.c37[aria-pressed="true"]:not([disabled]):hover,
+.c37[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c30[aria-pressed="true"]:not([disabled]):active {
+.c37[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c30[disabled] {
+.c37[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c30 + .c29 {
+.c37 + .c36 {
   margin-left: 1rem;
 }
 
-.c31 {
+.c38 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1610,13 +1660,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c31:not([disabled]):hover,
-.c31:not([disabled]):focus {
+.c38:not([disabled]):hover,
+.c38:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c31:not([disabled]):active {
+.c38:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1624,7 +1674,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c31[aria-pressed="true"] {
+.c38[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1633,30 +1683,30 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c31[aria-pressed="true"]:not([disabled]):hover,
-.c31[aria-pressed="true"]:not([disabled]):focus {
+.c38[aria-pressed="true"]:not([disabled]):hover,
+.c38[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c31[aria-pressed="true"]:not([disabled]):active {
+.c38[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c31[disabled] {
+.c38[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c31 + .c29 {
+.c38 + .c36 {
   margin-left: 1rem;
 }
 
-.c23 {
-  margin-top: 1rem;
+.c30 {
+  margin: 1rem auto;
 }
 
-.c25 {
-  margin-top: 2.5em;
+.c32 {
+  margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
   border-radius: 0.25rem;
@@ -1670,41 +1720,41 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media print {
-  .c15 {
+  .c23 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c26 {
+  .c33 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c13 {
+  .c21 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media print {
-  .c24 {
+  .c31 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (max-width:1200px) {
-  .c16 {
+  .c24 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c25 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1716,49 +1766,63 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c27 {
     margin-left: 0;
   }
 }
 
-@media (max-width:980px) {
-  .c3 .search__sources {
+@media print {
+  .c0 {
     display: none;
-  }
-
-  .c3 .search__input {
-    padding-right: 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c3 .search__form {
+  .c5 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
   }
 
-  .c3 .search__form button {
+  .c5 button {
     margin-left: 0;
   }
+}
 
-  .c3 .search__input__icon {
-    display: none;
-  }
-
-  .c3 .search__fields {
+@media (max-width:600px) {
+  .c6 {
     margin-bottom: 0.5rem;
   }
+}
 
-  .c3 .search__input {
-    padding: 1rem;
+@media (max-width:600px) {
+  .c7 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c8 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c13 {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    padding: 0 1rem;
   }
 }
 
 <div>
   <div
-    class="search-widget c0 c1"
+    class="c0 c1"
   >
     <div
       class="c2"
@@ -1772,13 +1836,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
           Posez votre question sur le droit du travail
         </p>
         <form
-          class="search__form"
+          class="c5"
         >
           <div
-            class="search__fields"
+            class="c6"
           >
             <svg
-              class="search__input__icon"
+              class="c7"
               viewBox="0 0 20 20"
             >
               <title />
@@ -1789,16 +1853,16 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
               />
             </svg>
             <label
-              class="search__sources"
+              class="c8"
               for="contentSource"
             >
               <span
-                class="hidden"
+                class="c9"
               >
                 Filtrer par type de contenu
               </span>
               <svg
-                class="search__sources__icon"
+                class="c10"
                 viewBox="0 0 512 512"
               >
                 <title>
@@ -1818,7 +1882,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                 />
               </svg>
               <select
-                class="search__sources__value"
+                class="c11"
                 id="contentSource"
                 name="source"
               >
@@ -1860,11 +1924,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
               </select>
             </label>
             <label
-              class="c5"
+              class="c12"
               for="main-search-input"
             >
               <span
-                class="hidden"
+                class="c9"
               >
                 Rechercher
               </span>
@@ -1878,7 +1942,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                   aria-autocomplete="list"
                   aria-controls="react-autowhatever-cdtn-documents-suggester"
                   autocomplete="off"
-                  class="search__input"
+                  class="c13"
                   id="main-search-input"
                   name="query"
                   placeholder="Recherche"
@@ -1886,7 +1950,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                   value=""
                 />
                 <div
-                  class="c6"
+                  class="c14"
                   id="react-autowhatever-cdtn-documents-suggester"
                   role="listbox"
                 />
@@ -1895,7 +1959,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
           </div>
           <button
             aria-pressed="false"
-            class="c7"
+            class="c15"
             type="submit"
           >
             Rechercher
@@ -1905,19 +1969,19 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </div>
   <nav
-    class="c8"
+    class="c16"
   >
     <div
-      class="c9"
+      class="c17"
     >
       <div
         class="c2"
       >
         <ul
-          class="c10"
+          class="c18"
         >
           <li
-            class="c11"
+            class="c19"
           >
             <a
               href="/themes/tag-1"
@@ -1928,12 +1992,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
           </li>
           <li
             aria-hidden="true"
-            class="c12"
+            class="c20"
           >
              » 
           </li>
           <li
-            class="c11"
+            class="c19"
           >
             <a
               href="/themes/tag-2"
@@ -1947,22 +2011,22 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </nav>
   <div
-    class="c9"
+    class="c17"
   >
     <div
       class="c2"
     >
       <div
-        class="c13"
+        class="c21"
       >
         <div
-          class="c9"
+          class="c17"
         >
           <div
-            class="c14 c15"
+            class="c22 c23"
           >
             <div
-              class="c16"
+              class="c24"
             >
               <svg
                 viewBox="0 0 50 50"
@@ -1986,47 +2050,41 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                 </g>
               </svg>
             </div>
-            <div>
-              <h1
-                class="c17"
+            <h1>
+              Article du code
+            </h1>
+            <div
+              class="c25"
+            >
+              <span
+                class="c26"
               >
-                Article du code
-              </h1>
-              <div
-                class="c18"
+                social groove
+              </span>
+              <span
+                class="c27"
               >
+                Mis à jour le : 
                 <span
-                  class="c19"
+                  class="c28"
                 >
-                  social groove
+                  03/11/1979
                 </span>
-                <span
-                  class="c20"
-                >
-                  Mis à jour le : 
-                  <span
-                    class="c21"
-                  >
-                    03/11/1979
-                  </span>
-                </span>
-              </div>
+              </span>
             </div>
             <div
-              class="c22"
+              class="c29"
             />
           </div>
           <div
-            class="c15"
+            class="c23"
           >
             <div
-              class="c23 c24"
+              class="c30 c31"
             >
               intro de l'article
             </div>
-            <div
-              class=""
-            >
+            <div>
               <p
                 class="test-content"
               >
@@ -2040,7 +2098,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
               Contenu supplémentaire
             </div>
             <div
-              class="c25"
+              class="c32"
             >
               pied de page
             </div>
@@ -2050,31 +2108,31 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </div>
   <div
-    class="c9"
+    class="c17"
   >
     <div
-      class="c26"
+      class="c33"
     >
       <div
-        class="c24"
+        class="c31"
       >
         <h3
-          class="c27"
+          class="c34"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c28"
+          class="c35"
         >
           <button
             aria-pressed="false"
-            class="c29 c30"
+            class="c36 c37"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c29 c31"
+            class="c36 c38"
           >
             Oui
           </button>
@@ -2083,13 +2141,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
     </div>
   </div>
   <div
-    class="c32"
+    class="c39"
   >
     <div
-      class="c33"
+      class="c40"
     >
       <div
-        class="c34"
+        class="c41"
       >
         <svg
           fill="none"
@@ -2120,12 +2178,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         </svg>
       </div>
       <div
-        class="c35"
+        class="c42"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c36"
+          class="c43"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2136,12 +2194,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c37"
+        class="c44"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c38"
+          class="c45"
         >
           <svg
             fill="none"

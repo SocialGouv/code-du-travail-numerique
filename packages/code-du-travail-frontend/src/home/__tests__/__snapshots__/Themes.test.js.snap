@@ -7,8 +7,11 @@ exports[`<Themes /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -26,8 +29,11 @@ exports[`<Themes /> should render 1`] = `
   border-color: transparent;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -42,8 +48,8 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c9 {
-  font-size: 0.9rem;
   color: #0053b3;
+  font-size: 1.125rem;
 }
 
 .c8 {

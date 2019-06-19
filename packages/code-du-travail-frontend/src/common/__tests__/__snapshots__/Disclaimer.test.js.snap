@@ -51,7 +51,7 @@ exports[`<Disclaimer /> should render 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: none;
+  box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
 .c2 {
@@ -72,7 +72,6 @@ exports[`<Disclaimer /> should render 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  font-size: 1.6rem;
   background-color: #fee5ad;
 }
 

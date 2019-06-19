@@ -1,24 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PageLayout /> should render 1`] = `
-.c13 {
+.c16 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c0 {
+.c1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7 {
+.c10 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -26,16 +29,19 @@ exports[`<PageLayout /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c7 > *:last-child {
+.c10 > *:first-child {
   margin-top: 0;
+}
+
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
-.c5 {
+.c7 {
   padding: 1.25rem 0;
 }
 
-.c8 {
+.c11 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -57,13 +63,13 @@ exports[`<PageLayout /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
+.c11:not([disabled]):hover,
+.c11:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c8:not([disabled]):active {
+.c11:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -71,7 +77,7 @@ exports[`<PageLayout /> should render 1`] = `
   outline: none;
 }
 
-.c8[aria-pressed="true"] {
+.c11[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -80,21 +86,26 @@ exports[`<PageLayout /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
+.c11[aria-pressed="true"]:not([disabled]):hover,
+.c11[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c8[aria-pressed="true"]:not([disabled]):active {
+.c11[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c8[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
+.c0 {
+  color: white;
+  background: currentColor;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +113,7 @@ exports[`<PageLayout /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,35 +127,39 @@ exports[`<PageLayout /> should render 1`] = `
   cursor: pointer;
 }
 
-.c2:link {
+.c3:link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2:hover {
+.c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 {
+.c4 {
   width: 5rem;
   height: 100%;
   margin-right: 1rem;
 }
 
-.c4 {
+.c5 {
   font-size: 1.3rem;
   line-height: 1.1;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6 {
+.c8 {
+  text-align: center;
+}
+
+.c9 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c9 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,39 +170,45 @@ exports[`<PageLayout /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c11 + .c10 {
+.c14 + .c13 {
   padding-left: 1rem;
 }
 
-.c12 {
+.c15 {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: bold;
 }
 
-.c14 {
+.c17 {
   margin: 0.5rem 0;
 }
 
-.c14 a {
+.c17 a {
   color: #434956;
 }
 
 @media print {
-  .c0 {
+  .c1 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c7 {
+  .c10 {
     max-width: 100%;
     padding: 0;
   }
 }
 
+@media print {
+  .c6 {
+    display: none;
+  }
+}
+
 @media (max-width:600px) {
-  .c9 {
+  .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -195,33 +216,33 @@ exports[`<PageLayout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 + .c10 {
+  .c14 + .c13 {
     padding-left: 0;
   }
 }
 
 <div>
   <header
-    class="bg-color color__white"
+    class="c0"
   >
     <div
-      class="c0"
+      class="c1"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <a
-          class="c2"
+          class="c3"
           href="/?q="
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="symbole de la Marianne, site officiel du gouvernement"
-            class="c3"
+            class="c4"
             src="/static/assets/img/marianne.svg"
           />
           <span
-            class="c4"
+            class="c5"
           >
             Code du travail
             <br />
@@ -239,54 +260,49 @@ exports[`<PageLayout /> should render 1`] = `
     </span>
   </main>
   <footer
-    class="site-footer"
-    id="footer"
+    class="c6"
   >
     <div
-      class="c5"
+      class="c7"
     >
       <div
-        class="center c0"
+        class="c8 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c6"
+          class="c9 c10"
         >
-          <div
-            class="c7"
-          >
-            Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
-          </div>
+          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
           aria-pressed="false"
-          class="c8"
+          class="c11"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c5"
+      class="c7"
     >
       <div
-        class="c9 c0"
+        class="c12 c1"
       >
         <div
-          class="c10 c11"
+          class="c13 c14"
         >
           <h3
-            class="c12"
+            class="c15"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c13"
+            class="c16"
           >
             <li
-              class="c14"
+              class="c17"
             >
               <a
                 href="/a-propos"
@@ -295,7 +311,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c14"
+              class="c17"
             >
               <a
                 href="/mentions-legales"
@@ -304,7 +320,7 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c14"
+              class="c17"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -315,21 +331,20 @@ exports[`<PageLayout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c10 c11"
+          class="c13 c14"
         >
           <h3
-            class="c12"
+            class="c15"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c13"
+            class="c16"
           >
             <li
-              class="c14"
+              class="c17"
             >
               <a
-                class="external-link__after"
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -338,10 +353,9 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c14"
+              class="c17"
             >
               <a
-                class="external-link__after"
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -352,21 +366,20 @@ exports[`<PageLayout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c10 c11"
+          class="c13 c14"
         >
           <h3
-            class="c12"
+            class="c15"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c13"
+            class="c16"
           >
             <li
-              class="c14"
+              class="c17"
             >
               <a
-                class="external-link__after"
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -375,10 +388,9 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c14"
+              class="c17"
             >
               <a
-                class="external-link__after"
                 href="https://incubateur.social.gouv.fr/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -387,10 +399,9 @@ exports[`<PageLayout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c14"
+              class="c17"
             >
               <a
-                class="external-link__after"
                 href="https://beta.gouv.fr/"
                 rel="noopener noreferrer"
                 target="_blank"

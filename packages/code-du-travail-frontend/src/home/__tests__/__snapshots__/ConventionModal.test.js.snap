@@ -12,13 +12,13 @@ exports[`<ConventionModal /> should render a button 1`] = `
 }
 
 .c4 {
-  font-size: 0.9rem;
   color: #4c5467;
+  font-size: 0.875rem;
 }
 
 .c3 {
-  font-size: 0.9rem;
   color: #0053b3;
+  font-size: 1.125rem;
 }
 
 .c2 {
@@ -107,7 +107,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   overflow-y: auto;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   top: 0;
   right: 0;
@@ -131,13 +131,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c4 {
-  font-size: 0.9rem;
   color: #4c5467;
+  font-size: 0.875rem;
 }
 
 .c3 {
-  font-size: 0.9rem;
   color: #0053b3;
+  font-size: 1.125rem;
 }
 
 .c2 {
@@ -165,6 +165,10 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   font-size: 1em;
   font-weight: bold;
   margin: 20px 0 10px 0;
+}
+
+.c11 {
+  font-style: italic;
 }
 
 .c0 {
@@ -218,7 +222,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -373,7 +377,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               </span>
             </p>
             <p
-              style="font-style: italic;"
+              class="c11"
             >
               Vous pouvez chercher le SIRET de votre entreprise sur 
               <a
@@ -385,7 +389,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
           </div>
         </form>
         <button
-          class="c11"
+          class="c12"
         >
           <svg
             fill="none"

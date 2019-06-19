@@ -7,8 +7,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   padding: 0 1.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -19,8 +22,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   max-width: 46.25rem;
 }
 
-.c4 > *:last-child {
+.c4 > *:first-child {
   margin-top: 0;
+}
+
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -38,8 +44,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   border-color: transparent;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -53,8 +62,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   background-color: #ebeff3;
 }
 
-.c5 > *:last-child {
+.c5 > *:first-child {
   margin-top: 0;
+}
+
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -68,7 +80,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   border-color: #cbd6e0;
 }
 
-.c3> *:last-child {
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -304,8 +320,11 @@ exports[`<AddressResults/> should render results 1`] = `
   padding: 0 1.25rem;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -316,8 +335,11 @@ exports[`<AddressResults/> should render results 1`] = `
   max-width: 46.25rem;
 }
 
-.c9 > *:last-child {
+.c9 > *:first-child {
   margin-top: 0;
+}
+
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -335,8 +357,11 @@ exports[`<AddressResults/> should render results 1`] = `
   border-color: transparent;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -350,8 +375,11 @@ exports[`<AddressResults/> should render results 1`] = `
   background-color: #ebeff3;
 }
 
-.c10 > *:last-child {
+.c10 > *:first-child {
   margin-top: 0;
+}
+
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 

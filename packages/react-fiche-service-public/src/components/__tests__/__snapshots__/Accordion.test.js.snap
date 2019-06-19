@@ -90,6 +90,14 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   animation: bcCCNc 0.35s ease-in;
 }
 
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c5.accordion__body--hidden {
   display: none;
 }
@@ -302,6 +310,14 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   padding: 1rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c5.accordion__body--hidden {

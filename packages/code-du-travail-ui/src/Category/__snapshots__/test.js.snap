@@ -28,13 +28,13 @@ exports[`<Category /> should render small 1`] = `
 }
 
 .c3 {
-  font-size: 0.9rem;
   color: #4c5467;
+  font-size: 0.875rem;
 }
 
 .c2 {
-  font-size: 0.9rem;
   color: #0053b3;
+  font-size: 1.125rem;
 }
 
 .c1 {
@@ -78,13 +78,13 @@ exports[`<Category /> should render with default props 1`] = `
 }
 
 .c3 {
-  font-size: 0.9rem;
   color: #4c5467;
+  font-size: 0.875rem;
 }
 
 .c2 {
-  font-size: 0.9rem;
   color: #0053b3;
+  font-size: 1.125rem;
 }
 
 .c1 {

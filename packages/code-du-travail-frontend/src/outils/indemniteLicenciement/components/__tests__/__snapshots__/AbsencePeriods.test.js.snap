@@ -107,7 +107,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-left: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .c5:focus,
@@ -191,7 +191,6 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
       <button
         aria-pressed="false"
         class="c5"
-        type="button"
       >
         Supprimer
       </button>
@@ -408,7 +407,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-left: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .c5:focus,
@@ -492,7 +491,6 @@ exports[`<AbsencePeriods /> should render 1`] = `
       <button
         aria-pressed="false"
         class="c5"
-        type="button"
       >
         Supprimer
       </button>

@@ -11,7 +11,11 @@ exports[`<SearchResults/> should render no results 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -35,7 +39,11 @@ exports[`<SearchResults/> should render results 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

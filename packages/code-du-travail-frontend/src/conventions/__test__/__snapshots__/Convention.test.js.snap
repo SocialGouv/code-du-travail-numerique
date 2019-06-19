@@ -11,8 +11,11 @@ exports[`<Convention /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c1 > *:last-child {
+.c1 > *:first-child {
   margin-top: 0;
+}
+
+.c1 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -164,7 +167,7 @@ exports[`<Convention /> should render 1`] = `
 .c7 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;

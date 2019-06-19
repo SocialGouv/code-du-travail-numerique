@@ -59,7 +59,7 @@ exports[`<ReferenceList /> should render 1`] = `
       class=""
     >
       <a
-        class="external-link__after c1"
+        class="c1"
         rel="noopener noreferrer"
         target="_blank"
       >
