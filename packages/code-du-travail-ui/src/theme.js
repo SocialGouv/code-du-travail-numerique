@@ -64,21 +64,21 @@ export const spacing = {
   base: "1rem", // 16px
   medium: "1.25rem", // 20px
   large: "2rem", // 32px
-  larger: "2.5em", // 40px
+  larger: "2.5rem", // 40px
   interComponent: "1.25rem"
 };
 
 export const fonts = {
-  sizeBase: "1rem",
+  sizeBase: "1rem", // should be 16px
   lineHeight: "1.4",
-  sizeXsmall: "0.8rem",
-  sizeSmall: "0.9rem",
-  sizeH1: "1.6rem",
-  sizeH2: "1.5rem",
-  sizeH3: "1.4rem",
-  sizeH4: "1.3rem",
-  sizeH5: "1.2rem",
-  sizeH6: "1.1rem"
+  sizeXsmall: "0.75rem", // 12px
+  sizeSmall: "0.875rem", // 14px
+  sizeH1: "2.25rem",
+  sizeH2: "1.875rem",
+  sizeH3: "1.625rem",
+  sizeH4: "1.375rem",
+  sizeH5: "1.125rem",
+  sizeH6: "1rem"
 };
 
 export const breakpoints = {
