@@ -30,7 +30,7 @@ function Step_Chimie() {
                   <TextQuestion
                     inputType="number"
                     name="age"
-                    label="Quel etait votre age à la date du licenciement ?"
+                    label="Quel etait votre âge à la date du licenciement ?"
                   />
                 )}
               </>
