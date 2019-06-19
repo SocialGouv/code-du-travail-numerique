@@ -3,13 +3,9 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { breakpoints, spacing } from "../../theme";
 
-const Container = ({ children, className, narrow, noPadding }) => {
+const Container = ({ children, narrow, noPadding, ...props }) => {
   return (
-    <StyledContainer
-      className={className}
-      narrow={narrow}
-      noPadding={noPadding}
-    >
+    <StyledContainer narrow={narrow} noPadding={noPadding} {...props}>
       {children}
     </StyledContainer>
   );
@@ -48,8 +44,10 @@ const StyledContainer = styled.div`
       `;
     }
   }};
-  & > *:last-child {
+  & > *:first-child {
     margin-top: 0;
+  }
+  & > *:last-child {
     margin-bottom: 0;
   }
   @media print {

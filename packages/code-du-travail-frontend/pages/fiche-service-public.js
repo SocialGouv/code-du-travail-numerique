@@ -10,7 +10,7 @@ import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Metas } from "../src/common/Metas";
 
-const ServicePublicCss = styled.div`
+const ServicePublic = styled.div`
   .sp__Titre {
     font-size: 1.5rem;
   }
@@ -24,12 +24,7 @@ const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/fiches_service_public/${slug}`).then(r => r.json());
 
 const Source = ({ name, url }) => (
-  <a
-    href={url}
-    className="external-link__after"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
   </a>
 );
@@ -69,7 +64,7 @@ class Fiche extends React.Component {
           description={description}
           image={ogImage}
         />
-        <ServicePublicCss>
+        <ServicePublic>
           <Answer
             title={title}
             emptyMessage="Cette fiche n'a pas été trouvée"
@@ -87,7 +82,7 @@ class Fiche extends React.Component {
             // even if in the end, <FicheServicePublic /> returns null
             raw && <FicheServicePublic data={raw.$} />}
           </Answer>
-        </ServicePublicCss>
+        </ServicePublic>
       </PageLayout>
     );
   }

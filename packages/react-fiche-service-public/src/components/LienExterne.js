@@ -31,12 +31,7 @@ export class LienExterne extends React.PureComponent {
     const url = data._.URL;
     const label = getText(data);
     return (
-      <a
-        href={url}
-        className="external-link__after"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <a href={url} rel="noopener noreferrer" target="_blank">
         {label}
       </a>
     );

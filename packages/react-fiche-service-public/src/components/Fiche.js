@@ -16,7 +16,10 @@ class FicheServicePublic extends React.PureComponent {
 export default FicheServicePublic;
 
 const StyledElementBuilder = styled.div`
-  * > *:last-child {
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
     margin-bottom: 0;
   }
 `;

@@ -22,7 +22,7 @@ const Article = ({ etat, calipsos, bloc_textuel }) => {
       {calipsos &&
         calipsos
           .split(",")
-          .map((calipso, idx) => <Calipso calipso={calipso} key={idx} />)}
+          .map((calipso, idx) => <Calipso key={idx}>{calipso}</Calipso>)}
       <ArticleContent dangerouslySetInnerHTML={{ __html: bloc_textuel }} />
     </div>
   );

@@ -8,18 +8,14 @@ export class Modal extends React.Component {
   render() {
     const {
       children,
-      className,
       isOpen,
       onDismiss,
-      ContentWrapper
+      ContentWrapper,
+      ...props
     } = this.props;
     const Wrapper = ContentWrapper || StyledDialogContent;
     return (
-      <StyledDialogOverlay
-        isOpen={isOpen}
-        onDismiss={onDismiss}
-        className={className}
-      >
+      <StyledDialogOverlay isOpen={isOpen} onDismiss={onDismiss} {...props}>
         <Wrapper>
           {children}
           <CloseIcon onClick={onDismiss}>

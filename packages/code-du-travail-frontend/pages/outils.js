@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 import styled from "styled-components";
-import { Alert, Container } from "@cdt/ui";
+import { Alert, Container, theme } from "@cdt/ui";
 
 import Search from "../src/search/Search";
 import { CalculateurIndemnite } from "../src/outils/indemniteLicenciement";
@@ -16,19 +16,6 @@ const BigError = ({ children }) => (
 );
 
 const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
-
-const Source = ({ name }) => (
-  <div
-    style={{
-      background: "var(--color-light-background)",
-      padding: 10,
-      marginTop: 50,
-      textAlign: "center"
-    }}
-  >
-    {name}
-  </div>
-);
 
 const getOutilFromCode = function(code) {
   switch (code) {
@@ -74,7 +61,7 @@ class Outils extends React.Component {
         />
         <Search />
         <Outil q={router.query.q} />
-        <Source name="-" />
+        <Source>-</Source>
       </PageLayout>
     );
   }
@@ -82,8 +69,17 @@ class Outils extends React.Component {
 
 export default withRouter(Outils);
 
+const { colors, fonts, spacing } = theme;
+
 const StyledContainer = styled(Container)`
   margin: 20%;
-  font-size: 2rem;
+  font-size: ${fonts.sizeH2};
   text-align: center;
+`;
+
+const Source = styled.div`
+  margin-top: 50px;
+  padding: ${spacing.small};
+  text-align: center;
+  background: ${colors.lightBackground};
 `;

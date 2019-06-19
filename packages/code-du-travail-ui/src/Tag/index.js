@@ -24,18 +24,16 @@ export default Tag;
 
 const StyledTag = styled.div`
   display: inline-block;
+  padding: ${spacing.xsmall} ${spacing.small};
+  font-size: ${fonts.sizeSmall};
   ${({ size }) => {
-    let verticalPadding = spacing.xsmall;
-    let horizontalPadding = spacing.small;
     if (size === "small") {
-      verticalPadding = spacing.tiny;
-      horizontalPadding = spacing.xsmall;
+      return css`
+        padding: ${spacing.tiny} ${spacing.xsmall};
+        font-size: ${fonts.sizeXsmall};
+      `;
     }
-    return css`
-      padding: ${verticalPadding} ${horizontalPadding};
-    `;
   }}
-  font-size: ${fonts.sizeXsmall};
   font-weight: bold;
   text-align: center;
   white-space: nowrap;

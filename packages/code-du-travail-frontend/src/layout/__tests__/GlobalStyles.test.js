@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-testing-library";
-import GlobalStyle from "../GlobalStyles";
+import GlobalStyles from "../css/index.js";
 
-describe("<GlobalStyle />", () => {
+describe("<GlobalStyles />", () => {
   it("should render", () => {
-    const { container } = render(<GlobalStyle />);
+    const { container } = render(<GlobalStyles />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -3,11 +3,7 @@ import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
 const TocListItem = ({ type, id, children, level = 0 }) => (
-  <Wrapper
-    className="toc-list-item"
-    level={level}
-    title={`${type} ${id}, level ${level}`}
-  >
+  <Wrapper level={level} title={`${type} ${id}, level ${level}`}>
     {children}
   </Wrapper>
 );

@@ -5,7 +5,7 @@ import { Container } from "@cdt/ui";
 import { Link } from "../../routes";
 
 const Header = () => (
-  <header className="bg-color color__white">
+  <StyledHeader>
     <Container>
       <Wrapper>
         <Link route="index">
@@ -26,8 +26,13 @@ const Header = () => (
         </Link>
       </Wrapper>
     </Container>
-  </header>
+  </StyledHeader>
 );
+const StyledHeader = styled.header`
+  color: white;
+  background: currentColor;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   padding: 1.25rem 0;

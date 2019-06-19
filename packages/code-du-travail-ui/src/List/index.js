@@ -2,9 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const RootList = ({ className, children }) => (
-  <ul className={className}>{children}</ul>
-);
+const RootList = ({ children, ...props }) => <ul {...props}>{children}</ul>;
 
 RootList.propTypes = {
   children: PropTypes.node,

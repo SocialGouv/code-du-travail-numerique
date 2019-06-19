@@ -105,7 +105,7 @@ const CellHeader = styled.div`
   font-weight: 700;
 `;
 
-const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
+const DelButton = styled(Button)`
   margin-left: ${spacing.interComponent};
   font-size: ${fonts.sizeSmall};
 `;

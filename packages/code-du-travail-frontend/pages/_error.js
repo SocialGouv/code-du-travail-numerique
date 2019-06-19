@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import getConfig from "next/config";
-import { Section } from "@cdt/ui";
+import styled from "styled-components";
+import { Section, theme } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 const Sentry = require("@sentry/browser");
 
@@ -40,26 +41,32 @@ export default class Error extends React.Component {
     return (
       <PageLayout>
         <Section variant="light">
-          <div
-            className="center"
-            style={{
-              minHeight: "calc(90vh - 15rem)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}
-          >
-            <p style={{ fontSize: "2em" }}>
+          <FlexCenterer>
+            <P>
               {this.props.statusCode
                 ? `Une erreur ${statusCode} est apparue sur le serveur`
                 : "Une erreur est apparue sur le client"}
               <br />
               <br />
               <Link href="/">Retour à la page d’accueil</Link>
-            </p>
-          </div>
+            </P>
+          </FlexCenterer>
         </Section>
       </PageLayout>
     );
   }
 }
+
+const { fonts } = theme;
+
+const FlexCenterer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(90vh - 15rem);
+  text-align: center;
+`;
+
+const P = styled.p`
+  font-size: ${fonts.sizeH2};
+`;

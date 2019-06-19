@@ -8,12 +8,7 @@ import servicesDeRenseignement from "../data/services-de-renseignement.json";
 function DepartmentComponent(data) {
   return (
     <p>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href={data.url}
-        className="external-link__after"
-      >
+      <a target="_blank" rel="noopener noreferrer" href={data.url}>
         <mark>{data.url}</mark>
       </a>
     </p>
@@ -60,12 +55,11 @@ class ServiceRenseignement extends React.Component {
                 <label htmlFor={id}>
                   Saisissez votre numéro de département :
                 </label>
-                <input
+                <Input
                   id={id}
                   ref={this.inputRef}
                   type="text"
                   maxLength="3"
-                  className="full-width"
                   onChange={this.onDepartmentInput}
                 />
               </>
@@ -149,6 +143,11 @@ const Pricing = styled.em`
       display: none;
     }
   }
+`;
+
+const Input = styled.input`
+  margin-top: ${spacing.small};
+  width: 100%;
 `;
 
 const Small = styled.small`

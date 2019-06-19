@@ -29,21 +29,14 @@ const BreadCrumbs = ({ entry }) => {
     <Nav aria-label="breadcrumb">
       <Ol>
         {entries.map((entry, i) => (
-          <Li key={i} className="breadcrumb-item">
-            {entry}
-          </Li>
+          <Li key={i}>{entry}</Li>
         ))}
       </Ol>
     </Nav>
   );
 };
 const Source = ({ name, url }) => (
-  <a
-    href={url}
-    className="external-link__after"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
   </a>
 );
@@ -114,7 +107,7 @@ const Li = styled.li`
     &:before {
       content: "/";
       display: inline-block;
-      padding-right: var(--spacing-small);
+      padding-right: ${spacing.small};
     }
   }
 `;

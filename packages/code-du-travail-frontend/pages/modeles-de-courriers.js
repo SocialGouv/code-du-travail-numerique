@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { AsideTitle, Section, Wrapper } from "@cdt/ui";
+import { Section, Wrapper } from "@cdt/ui";
 
 import Html from "../src/common/Html";
 import { DownloadFile } from "../src/common/DownloadFile";
@@ -57,10 +57,10 @@ class ModeleCourrier extends React.Component {
         >
           <Section>
             <Wrapper variant="light">
-              <Html className="courrier-type">{data._source.html}</Html>
+              <Html>{data._source.html}</Html>
             </Wrapper>
           </Section>
-          <AsideTitle>Télécharger le modèle</AsideTitle>
+          <h4>Télécharger le modèle</h4>
           <DownloadFile
             title={data._source.title}
             file={`${API_URL}/docs/${data._source.filename}`}

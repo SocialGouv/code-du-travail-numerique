@@ -41,13 +41,13 @@ Category.propTypes = {
 };
 
 export const Text = styled.p`
-  font-size: ${fonts.sizeSmall};
   color: ${colors.lightText};
+  font-size: ${fonts.sizeSmall};
 `;
 
 export const Title = styled.h3`
-  font-size: ${fonts.sizeSmall};
   color: ${colors.blue};
+  font-size: ${fonts.sizeH5};
 `;
 
 export const Icon = styled.img`

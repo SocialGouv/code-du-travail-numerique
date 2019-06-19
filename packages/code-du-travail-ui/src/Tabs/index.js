@@ -72,7 +72,7 @@ const StyledTabList = styled(TabList)`
 const StyledTab = styled(Tab)`
   margin-right: ${spacing.tiny};
   padding: ${spacing.small} ${spacing.base};
-  font-size: ${fonts.sizeH6};
+  font-size: ${fonts.sizeH5};
   background-color: ${colors.darkBackground};
   border: 1px solid ${colors.elementBorder};
   border-bottom: 1px solid ${colors.primaryBackground};

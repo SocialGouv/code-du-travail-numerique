@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { SrOnly, Tabs } from "@cdt/ui";
+import { ScreenReaderOnly, Tabs } from "@cdt/ui";
 
 import { ElementBuilder } from "./ElementBuilder";
 import { ignoreParagraph } from "../utils";
@@ -30,9 +30,9 @@ class Tabulator extends React.PureComponent {
         ),
         panel: (
           <>
-            <SrOnly>
+            <ScreenReaderOnly>
               <ElementBuilder data={title} headingLevel={headingLevel} />
-            </SrOnly>
+            </ScreenReaderOnly>
             <ElementBuilder data={content} headingLevel={headingLevel + 1} />
           </>
         )

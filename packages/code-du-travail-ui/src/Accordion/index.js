@@ -13,7 +13,7 @@ import { fadeIn } from "../keyframes";
 
 class Accordion extends React.PureComponent {
   render() {
-    const { items, className } = this.props;
+    const { items, ...props } = this.props;
 
     const StyledAccordionItem =
       items.length > 1
@@ -21,7 +21,7 @@ class Accordion extends React.PureComponent {
         : StyledSingleAccordionItem;
 
     return (
-      <RootAccordion className={className} accordion={false}>
+      <RootAccordion accordion={false} {...props}>
         {items.map((item, index) => (
           <StyledAccordionItem key={index}>
             <StyledAccordionItemTitle>
@@ -82,6 +82,12 @@ const StyledSingleAccordionItem = styled(StyledMultipleAccordionItem)`
 const StyledAccordionItemBody = styled(AccordionItemBody)`
   padding: ${spacing.base};
   animation: ${fadeIn} 0.35s ease-in;
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
   &.accordion__body--hidden {
     display: none;
   }

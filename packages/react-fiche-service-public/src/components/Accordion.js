@@ -55,7 +55,9 @@ class AccordionWrapper extends React.PureComponent {
     return (
       <>
         {beforeAccordionElements}
-        <StyledAccordion items={accordionItems} />
+        {accordionItems.length > 0 && (
+          <StyledAccordion items={accordionItems} />
+        )}
         {afterAccordionElements}
       </>
     );

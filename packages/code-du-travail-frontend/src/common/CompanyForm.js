@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { X } from "react-feather";
 import styled from "styled-components";
-import { Button } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui";
 import { CompanySuggester } from "./CompanySuggester";
 import { ConventionPreview, SuggestWrapper, Title } from "./ConventionForm";
 
@@ -38,12 +38,12 @@ class CompanyForm extends React.Component {
                 onSearch={this.props.onSearch}
                 onSelect={this.onSelect}
               />
-              <p style={{ fontStyle: "italic" }}>
+              <P>
                 Vous pouvez chercher le SIRET de votre entreprise sur&nbsp;
                 <a href="https://entreprise.data.gouv.fr/">
                   entreprise.data.gouv.fr
                 </a>
-              </p>
+              </P>
             </React.Fragment>
           ) : (
             <React.Fragment>
@@ -95,8 +95,14 @@ const Company = ({ name, idccList, onClear }) => {
   );
 };
 
+export { CompanyForm };
+
+const { spacing } = theme;
+
 const CompanyIdccListWrapper = styled.div`
-  margin: 10px 0;
+  margin: ${spacing.small} 0;
 `;
 
-export { CompanyForm };
+const P = styled.p`
+  font-style: italic;
+`;

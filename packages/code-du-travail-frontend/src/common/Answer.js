@@ -88,11 +88,11 @@ function Answer({
 
 export default withRouter(Answer);
 
-const { box, colors, spacing } = theme;
+const { box, colors, fonts, spacing } = theme;
 
 const StyledContainer = styled(Container)`
   margin: 20%;
-  font-size: 2rem;
+  font-size: ${fonts.sizeH2};
   text-align: center;
 `;
 
@@ -101,7 +101,7 @@ const BacklinkContainer = styled(Container)`
 `;
 
 const IntroWrapper = styled(Wrapper)`
-  margin-top: ${spacing.base};
+  margin: ${spacing.base} auto;
 `;
 
 const Footer = styled.div`
