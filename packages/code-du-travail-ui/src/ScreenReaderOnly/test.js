@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-testing-library";
-import SrOnly from ".";
+import ScreenReaderOnly from ".";
 
-describe("<SrOnly />", () => {
+describe("<ScreenReaderOnly />", () => {
   test("should render", () => {
-    const { container } = render(<SrOnly />);
+    const { container } = render(<ScreenReaderOnly />);
     expect(container).toMatchSnapshot();
   });
 });

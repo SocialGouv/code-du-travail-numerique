@@ -3,6 +3,8 @@ import { theme } from "@cdt/ui";
 
 const { animations, box, colors, spacing } = theme;
 
+const RADIO_SIZE = "1.1em";
+
 export default createGlobalStyle`
   label {
     cursor: pointer;
@@ -19,13 +21,7 @@ export default createGlobalStyle`
   }
 
   textarea,
-  input[type="text"],
-  input[type="number"],
-  input[type="email"],
-  input[type="search"],
-  input[type="password"],
-  input[type="tel"],
-  input[type="url"] {
+  input {
     appearance: none;
 
     font-size: inherit;
@@ -48,44 +44,40 @@ export default createGlobalStyle`
   textarea {
     min-height: 8rem;
   }
-  input[type="radio"] {
-    font: inherit;
-    line-height: inherit;
-    color: inherit;
-    appearance: none;
-    border: 1px solid ${colors.elementBorder};
-    background: ${colors.white};
-    vertical-align: middle;
-    position: relative;
-    margin-right: ${spacing.tiny};
-    margin-top: 0;
-    height: 1em;
-    width: 1em;
-    border-radius: 50%;
-    display: inline-block;
-    padding: 0;
-  }
-  input[type="radio"]::before {
-    content: "";
-    border-color: ${colors.blue};
-    border-radius: 50%;
-    position: absolute;
-    top: calc(0.25em -1px);
-    left: calc(0.25em -1px);
-    width: 0.5em;
-    height: 0.5em;
-    transform: scale(0);
-  }
 
+  input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    height: ${RADIO_SIZE};
+    width: ${RADIO_SIZE};
+    margin: 0 ${spacing.xsmall} calc(1em / 10) 0;
+    padding: 0;
+    appearance: none;
+    line-height: inherit;
+    font: inherit;
+    color: inherit;
+    background: ${colors.white};
+    border: 1px solid ${colors.elementBorder};
+    border-radius: 50%;
+  }
   input[type="radio"]:checked {
     background-color: ${colors.white};
     border-color: ${colors.blue};
   }
-
-  input[type="radio"]:checked::before {
+  input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - ${RADIO_SIZE} / 4);
+    left: calc(50% - ${RADIO_SIZE} / 4);
+    width: calc(${RADIO_SIZE} / 2);
+    height: calc(${RADIO_SIZE} / 2);
     background-color: ${colors.blue};
-    transform: scale(1);
+    border-radius: 50%;
+    transform: scale(0);
     transition: transform ${animations.transitionTiming} ease-out;
+  }
+  input[type="radio"]:checked::before {
+    transform: scale(1);
   }
 
   input[type="radio"]:focus {

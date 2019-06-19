@@ -1,25 +1,33 @@
 import React from "react";
 
 import Code from "./Code";
+import FocusRing from "./FocusRing";
+import Fonts from "./Fonts";
 import Forms from "./Forms";
 import Headings from "./Headings";
 import Hr from "./Hr";
+import Img from "./Img";
 import Links from "./Links";
 import Lists from "./Lists";
-import Main from "./Main";
 import Mark from "./Mark";
+import Reset from "./Reset";
+import Root from "./Root";
 
-const GlobalStyle = () => (
+const GlobalStyles = () => (
   <>
     <Code />
+    <FocusRing />
+    <Fonts />
     <Forms />
     <Headings />
     <Hr />
+    <Img />
     <Links />
     <Lists />
-    <Main />
     <Mark />
+    <Reset />
+    <Root />
   </>
 );
 
-export default GlobalStyle;
+export default GlobalStyles;

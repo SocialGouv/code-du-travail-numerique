@@ -4,12 +4,6 @@ import { theme } from "@cdt/ui";
 const { colors, fonts } = theme;
 
 export default createGlobalStyle`
-  *,
-  *:after,
-  *:before {
-    box-sizing: border-box;
-  }
-
   html {
     font-family: Muli, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
       Helvetica, Arial, sans-serif;
@@ -28,9 +22,14 @@ export default createGlobalStyle`
     text-rendering: optimizeLegibility;
     background: ${colors.darkBackground};
     border-top: 5px solid ${colors.blue};
+    @media print {
+      font-size: 10pt;
+    }
   }
 
   main {
+    /* https://stackoverflow.com/questions/35820429/main-element-not-working-in-internet-explorer-11 */
+    display: block;
     background: ${colors.lightBackground};
   }
 `;

@@ -12,18 +12,16 @@ export default createGlobalStyle`
   h6 {
     color: ${colors.title};
     line-height: ${fonts.lineHeight};
-    font-weight: 700;
+    font-weight: normal;
     margin: ${spacing.xsmall} 0 ${spacing.small} 0;
   }
 
   h1 {
     font-size: ${fonts.sizeH1};
-    font-weight: 400;
   }
 
   h2 {
     font-size: ${fonts.sizeH2};
-    font-weight: 400;
   }
 
   h3 {
@@ -36,10 +34,12 @@ export default createGlobalStyle`
 
   h5 {
     font-size: ${fonts.sizeH5};
+    text-transform: uppercase;
   }
 
   h6 {
     font-size: ${fonts.sizeH6};
+    text-transform: uppercase;
   }
 
 `;
