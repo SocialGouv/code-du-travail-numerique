@@ -22,7 +22,7 @@ function Step({ form }) {
       />
       {age > 60 && (
         <YesNoQuestion
-          label="Le salarié pourrait il bénéficier de la retraite ?"
+          label="Le salarié pourrait-il bénéficier de la retraite ?"
           name="hasRetirementAge"
         />
       )}
