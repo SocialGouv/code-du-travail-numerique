@@ -92,10 +92,6 @@ export function Result({ form }) {
           formula={formula}
         />
       )}
-      <details>
-        <summary>state</summary>
-        <pre>{JSON.stringify(state, 0, 2)}</pre>
-      </details>
     </Container>
   );
 }

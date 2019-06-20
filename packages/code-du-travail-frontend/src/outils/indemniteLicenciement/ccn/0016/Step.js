@@ -3,7 +3,7 @@ import { Container } from "@cdt/ui";
 import { TextQuestion } from "../../components/TextQuestion";
 import { Categorie, CADRE } from "./Categorie";
 import { YesNoQuestion } from "../../components/YesNoQuestion";
-import { CategoryPeriod } from "./CategoryPeriod";
+import { CategoriePeriod } from "./CategoriePeriod";
 
 function Step({ form }) {
   const state = form.getState();
@@ -13,7 +13,7 @@ function Step({ form }) {
   return (
     <Container>
       <Categorie name="categorie" />
-      {askDetailedCategories && <CategoryPeriod />}
+      {askDetailedCategories && <CategoriePeriod />}
       <TextQuestion
         inputType="number"
         name="age"

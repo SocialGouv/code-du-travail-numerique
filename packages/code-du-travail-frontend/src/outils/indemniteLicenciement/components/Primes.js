@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@cdt/ui";
-import { Input } from "../stepStyles";
+import { Input, InlineError } from "../stepStyles";
 import { isNumber } from "../validators";
 
 function Primes({ name, onChange }) {
@@ -93,11 +93,6 @@ const Currency = styled.span`
 const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
   margin-left: ${spacing.interComponent};
   font-size: ${fonts.sizeSmall};
-`;
-const InlineError = styled.span`
-  font-weight: 600;
-  font-size: ${fonts.sizeSmall};
-  color: ${colors.darkerGrey};
 `;
 
 const AddButton = styled(Button).attrs(() => ({ type: "button" }))`

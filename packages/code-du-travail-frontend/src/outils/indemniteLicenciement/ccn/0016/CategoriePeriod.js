@@ -6,13 +6,17 @@ import { theme } from "@cdt/ui";
 
 import { isNumber } from "../../validators";
 
-function CategoryPeriod() {
+function CategoriePeriod() {
   return (
     <>
       <SectionTitle>
         Précisez les périodes éventuelles passées au statut de TAM ou employé
       </SectionTitle>
-      <Field name="tamDuration" validate={isNumber}>
+      <Field
+        name="tamDuration"
+        validate={isNumber}
+        subscribe={{ error: true, touched: true, invalid: true }}
+      >
         {({ input, meta: { error, touched, invalid } }) => {
           return (
             <VerticalLabel>
@@ -26,7 +30,7 @@ function CategoryPeriod() {
                   {...input}
                 />{" "}
                 mois
-                {error && touched && invalid && (
+                {error && touched && (
                   <ErrorWrapper>
                     <InlineError>{error}</InlineError>
                   </ErrorWrapper>
@@ -39,7 +43,7 @@ function CategoryPeriod() {
       <Field
         name="cadreDuration"
         validate={isNumber}
-        subscribe={{ error: true, touched: true, dirty: true }}
+        subscribe={{ error: true, touched: true, invalid: true }}
       >
         {({ input, meta: { error, touched, invalid } }) => {
           return (
@@ -54,9 +58,7 @@ function CategoryPeriod() {
                   {...input}
                 />{" "}
                 mois
-                {error && touched && invalid && (
-                  <InlineError>{error}</InlineError>
-                )}
+                {error && touched && <InlineError>{error}</InlineError>}
               </div>
             </VerticalLabel>
           );
@@ -66,7 +68,7 @@ function CategoryPeriod() {
   );
 }
 
-export { CategoryPeriod };
+export { CategoriePeriod };
 const { spacing } = theme;
 const VerticalLabel = styled.label`
   display: flex;
