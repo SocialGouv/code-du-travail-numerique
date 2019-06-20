@@ -34,14 +34,14 @@ router.get("/search", async ctx => {
   const facetBody = getFacetsBody({ query });
 
   // query data
-  const results = await elasticsearchClient.search({ index, body });
-  const snippetIndex = results.hits.hits.findIndex(
+  const response = await elasticsearchClient.search({ index, body });
+  const snippetIndex = response.body.hits.hits.findIndex(
     item => item._source.source === "snippet"
   );
   ctx.body = {
     hits: {
-      ...results.hits,
-      hits: results.hits.hits
+      ...response.body.hits,
+      hits: response.body.hits.hits
         .filter(item => item._source.source !== "snippet")
         .slice(0, 10)
     },
@@ -49,21 +49,21 @@ router.get("/search", async ctx => {
   };
   // only add snippet if it's found in the returned results
   if (
-    results.aggregations.bySource.buckets.length > 0 &&
+    response.body.aggregations.bySource.buckets.length > 0 &&
     snippetIndex > -1 &&
     snippetIndex < 10
   ) {
-    const [snippetResults] = results.aggregations.bySource.buckets;
+    const [snippetResults] = response.body.aggregations.bySource.buckets;
     ctx.body.snippet = snippetResults.bySource.hits.hits[0];
   }
 
   // facet data
-  const facetResults = await elasticsearchClient.search({
+  const facetResponse = await elasticsearchClient.search({
     index,
     body: facetBody
   });
-  if (facetResults.aggregations.document_count.buckets.length > 0) {
-    ctx.body.facets = facetResults.aggregations.document_count.buckets;
+  if (facetResponse.body.aggregations.document_count.buckets.length > 0) {
+    ctx.body.facets = facetResponse.body.aggregations.document_count.buckets;
   }
 });
 

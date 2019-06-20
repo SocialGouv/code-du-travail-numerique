@@ -17,7 +17,9 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {Object} Result.
  */
 router.get("/docsCount", async ctx => {
-  const { aggregations } = await elasticsearchClient.search({
+  const {
+    body: { aggregations }
+  } = await elasticsearchClient.search({
     index,
     type: index,
     body: {

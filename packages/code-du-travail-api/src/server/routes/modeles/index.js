@@ -21,7 +21,8 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/modeles", async ctx => {
   const body = getModeleBody();
-  ctx.body = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ index, body });
+  ctx.body = response.body;
 });
 
 module.exports = router;

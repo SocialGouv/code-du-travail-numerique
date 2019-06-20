@@ -66,16 +66,16 @@ router.get("/themes/:slug/items", async ctx => {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
   const body = getSearchByThemeBody({ slug });
-  const results = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ index, body });
 
-  if (results.hits.total === 0) {
+  if (response.body.hits.total === 0) {
     ctx.throw(204, `there is no documents associated to the theme ${slug}`);
   }
   ctx.body = {
     ...theme,
     children: getChildren(slug),
     breadcrumbs: getBreadcrumbs(slug),
-    documents: results.hits.hits
+    documents: response.body.hits.hits
   };
 });
 

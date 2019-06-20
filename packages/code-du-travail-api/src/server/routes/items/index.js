@@ -24,13 +24,13 @@ router.get("/items/:source/:slug", async ctx => {
   const { source, slug } = ctx.params;
 
   const body = getItemBySlugBody({ source, slug });
-  const results = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ index, body });
 
-  if (results.hits.total === 0) {
+  if (response.body.hits.total === 0) {
     ctx.throw(404, `there is no items that match ${slug} in ${source}`);
   }
 
-  const item = results.hits.hits[0];
+  const item = response.body.hits.hits[0];
   const relatedItems =
     ctx.params.source === "faq" ? await searchItemsFromTheme(item) : {};
 
@@ -52,11 +52,12 @@ router.get("/items/:source/:slug", async ctx => {
 router.get("/items/:id", async ctx => {
   const { id } = ctx.params;
 
-  ctx.body = await elasticsearchClient.get({
+  const response = await elasticsearchClient.get({
     index: index,
     type: index,
     id
   });
+  ctx.body = response.body;
 });
 
 /**
@@ -75,13 +76,13 @@ async function searchItemsFromTheme(item) {
   }
 
   const body = getRelatedDocumentBody({ themes, id: item._id });
-  const results = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ index, body });
 
-  if (results.aggregations.bySource.buckets.length === 0) {
+  if (response.body.aggregations.bySource.buckets.length === 0) {
     return {};
   }
 
-  const { buckets } = results.aggregations.bySource;
+  const { buckets } = response.body.aggregations.bySource;
 
   return buckets.reduce(
     (state, bucket) =>

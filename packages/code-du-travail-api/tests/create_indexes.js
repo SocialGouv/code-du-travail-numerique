@@ -61,6 +61,10 @@ async function createIndex(indexName, mapping, data) {
     logger.error("index documents", error);
   }
 }
-
+async function version() {
+  const { body } = await client.info();
+  logger.info(body.version.number);
+}
+version();
 createIndex(documentIndexName, documentMapping, documentsData);
 createIndex(annuaireIndexName, annuaireMapping, annuaireData);
