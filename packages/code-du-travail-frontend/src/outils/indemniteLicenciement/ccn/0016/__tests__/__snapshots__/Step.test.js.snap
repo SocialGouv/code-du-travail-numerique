@@ -178,7 +178,7 @@ exports[`<Step /> should ask detail about categories 1`] = `
       class="c5"
       for="2"
     >
-      Quel etait votre age à la date du licenciement ?
+      Quel etait votre âge à la date du licenciement ?
     </label>
     <div
       class="c6"
@@ -347,7 +347,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
       class="c3"
       for="3"
     >
-      Quel etait votre age à la date du licenciement ?
+      Quel etait votre âge à la date du licenciement ?
     </label>
     <div
       class="c4"
@@ -364,7 +364,7 @@ exports[`<Step /> should ask detail about retirement  1`] = `
     <p
       class="c6"
     >
-      Le salarié pourrait il bénéficier de la retraite ?
+      Le salarié pourrait-il bénéficier de la retraite ?
     </p>
     <div
       class="c7"
@@ -523,7 +523,7 @@ exports[`<Step /> should render 1`] = `
       class="c3"
       for="1"
     >
-      Quel etait votre age à la date du licenciement ?
+      Quel etait votre âge à la date du licenciement ?
     </label>
     <div
       class="c4"
