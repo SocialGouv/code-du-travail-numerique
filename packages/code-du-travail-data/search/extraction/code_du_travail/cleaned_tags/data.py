@@ -108,7 +108,7 @@ def inspect_code_du_travail_children(children):
 
             html = child['data']['bloc_textuel']
             if child['data']['nota']:
-              html += f"<p>Nota: {child['data']['nota']}</p>"
+                html += f"<p>Nota: {child['data']['nota']}</p>"
 
 
             CODE_DU_TRAVAIL_DICT[article_num] = {
