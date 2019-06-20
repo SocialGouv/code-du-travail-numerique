@@ -146,7 +146,7 @@ StepSalaires.propTypes = {
 
 export { StepSalaires, getSalairesPeriods };
 
-const { colors, fonts, spacing } = theme;
+const { colors, spacing } = theme;
 
 const NumberInput = styled(Input)`
   text-align: right;
@@ -166,4 +166,3 @@ const Currency = styled.span`
   top: 50%;
   transform: translateY(-50%);
 `;
-

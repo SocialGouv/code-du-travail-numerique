@@ -85,7 +85,7 @@ AbsencePeriods.propTypes = {
   name: PropTypes.string.isRequired
 };
 export { AbsencePeriods };
-const { colors, fonts, spacing } = theme;
+const { fonts, spacing } = theme;
 
 const AddButton = styled(Button)`
   margin: ${spacing.interComponent} 0;
