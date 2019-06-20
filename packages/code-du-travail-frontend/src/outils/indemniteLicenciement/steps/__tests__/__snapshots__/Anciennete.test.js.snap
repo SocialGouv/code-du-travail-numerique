@@ -56,7 +56,7 @@ exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] =
 .c0 {
   color: #53657d;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 <span

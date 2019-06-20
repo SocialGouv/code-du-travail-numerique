@@ -17,7 +17,7 @@ exports[`<Categorie /> should render 1`] = `
 }
 
 .c0 {
-  font-size: 1.4rem;
+  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
