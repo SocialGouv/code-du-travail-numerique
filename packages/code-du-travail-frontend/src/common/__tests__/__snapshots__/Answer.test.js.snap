@@ -430,6 +430,7 @@ exports[`<Answer /> should render 1`] = `
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   width: 100%;
+  height: 60px;
   font-size: inherit;
   font-family: inherit;
   line-height: 3.625rem;
@@ -1539,6 +1540,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   width: 100%;
+  height: 60px;
   font-size: inherit;
   font-family: inherit;
   line-height: 3.625rem;

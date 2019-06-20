@@ -315,6 +315,7 @@ const SearchInput = styled(DocumentSuggester)`
   margin: 0;
   padding: 0 12.8rem 0 4rem;
   width: 100%;
+  height: 60px;
   font-size: inherit;
   font-family: inherit;
   line-height: 3.625rem;
