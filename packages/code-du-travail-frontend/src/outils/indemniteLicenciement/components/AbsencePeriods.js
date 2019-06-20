@@ -42,6 +42,7 @@ function AbsencePeriods({ name, onChange }) {
                       <Input {...input} size="7" invalid={touched && invalid} />
                       <DelButton
                         variant="link"
+                        type="button"
                         onClick={() => fields.remove(index)}
                       >
                         Supprimer

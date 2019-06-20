@@ -191,6 +191,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
       <button
         aria-pressed="false"
         class="c5"
+        type="button"
       >
         Supprimer
       </button>
@@ -491,6 +492,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
       <button
         aria-pressed="false"
         class="c5"
+        type="button"
       >
         Supprimer
       </button>
