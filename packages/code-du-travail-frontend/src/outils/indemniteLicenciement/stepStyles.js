@@ -6,14 +6,19 @@ const { box, fonts, colors, spacing } = theme;
 export const Input = styled.input`
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: ${props => (props.type === "number" ? "right" : "left")};
   line-height: inherit;
-  width: ${props => `${parseFloat(props.size, 10)}em` || "auto"};
+  width: ${props => (props.size ? `${parseFloat(props.size, 10)}em` : "auto")};
   border-radius: ${box.borderRadius};
   border: 1px solid ${colors.elementBorder};
   padding: ${spacing.small} ${spacing.tiny};
   border-color: ${props =>
     props.invalid ? colors.dangerBackground : colors.elementBorder};
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 `;
 
 export const Label = styled.label`
@@ -68,4 +73,10 @@ export const Highlight = styled.strong`
 export const SmallText = styled.span`
   color: ${colors.darkText};
   font-style: italic;
+`;
+
+export const InlineError = styled.span`
+  color: ${colors.darkerGrey};
+  font-weight: 600;
+  font-size: ${fonts.sizeSmall};
 `;

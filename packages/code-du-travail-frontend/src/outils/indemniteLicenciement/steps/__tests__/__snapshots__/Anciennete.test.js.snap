@@ -54,9 +54,9 @@ exports[`<Anciennete /> should display error if anciennté < 12mois and licencie
 
 exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] = `
 .c0 {
-  margin-left: 1.25rem;
   color: #53657d;
   font-weight: 600;
+  font-size: 0.875rem;
 }
 
 <span
@@ -92,13 +92,21 @@ exports[`<Anciennete /> should render 1`] = `
 .c4 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
-  width: NaNem;
+  width: auto;
   border-radius: 0.25rem;
   border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
   border-color: #c9d3df;
+}
+
+.c4::-webkit-outer-spin-button,
+.c4::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c7 {

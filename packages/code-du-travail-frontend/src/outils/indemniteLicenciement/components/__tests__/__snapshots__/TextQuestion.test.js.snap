@@ -4,13 +4,21 @@ exports[`<TextQuestion /> should render 1`] = `
 .c2 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
-  width: NaNem;
+  width: auto;
   border-radius: 0.25rem;
   border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
   border-color: #c9d3df;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c0 {
@@ -57,13 +65,21 @@ exports[`<TextQuestion /> should render error 1`] = `
 .c2 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
-  width: NaNem;
+  width: auto;
   border-radius: 0.25rem;
   border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
   border-color: #c9d3df;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c0 {

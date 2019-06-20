@@ -5,7 +5,7 @@ import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
 import { Table as UITable, theme } from "@cdt/ui";
 
-import { Input } from "../stepStyles";
+import { Input, InlineError } from "../stepStyles";
 import { isNumber } from "../validators";
 
 function SalaireTempsPlein({ name }) {
@@ -88,7 +88,7 @@ SalaireTempsPlein.propTypes = {
 
 export { SalaireTempsPlein };
 
-const { colors, fonts, spacing } = theme;
+const { colors, spacing } = theme;
 
 const Table = styled(UITable)`
   & tr > td:nth-child(2) {
@@ -113,10 +113,4 @@ const Currency = styled.span`
   right: 0.25rem;
   top: 50%;
   transform: translateY(-50%);
-`;
-
-const InlineError = styled.span`
-  font-weight: 600;
-  font-size: ${fonts.sizeSmall};
-  color: ${colors.darkerGrey};
 `;

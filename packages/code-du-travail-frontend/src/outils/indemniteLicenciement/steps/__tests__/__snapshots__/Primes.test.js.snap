@@ -75,7 +75,7 @@ exports[`<StepPrimes /> should render 1`] = `
 .c6 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -84,6 +84,14 @@ exports[`<StepPrimes /> should render 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c5 {

@@ -5,7 +5,7 @@ import { Field } from "react-final-form";
 import { Container, theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input, SectionTitle } from "../stepStyles";
+import { Input, SectionTitle, InlineError } from "../stepStyles";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
   SalaireTempsPartiel,
@@ -146,7 +146,7 @@ StepSalaires.propTypes = {
 
 export { StepSalaires, getSalairesPeriods };
 
-const { colors, fonts, spacing } = theme;
+const { colors, spacing } = theme;
 
 const NumberInput = styled(Input)`
   text-align: right;
@@ -165,10 +165,4 @@ const Currency = styled.span`
   right: 0.25rem;
   top: 50%;
   transform: translateY(-50%);
-`;
-
-const InlineError = styled.span`
-  font-weight: 600;
-  font-size: ${fonts.sizeSmall};
-  color: ${colors.darkerGrey};
 `;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { Button, theme } from "@cdt/ui";
-import { Input } from "../stepStyles";
+import { Input, InlineError } from "../stepStyles";
 import { isNumber } from "../validators";
 import { OnChange } from "react-final-form-listeners";
 
@@ -85,7 +85,7 @@ AbsencePeriods.propTypes = {
   name: PropTypes.string.isRequired
 };
 export { AbsencePeriods };
-const { colors, fonts, spacing } = theme;
+const { fonts, spacing } = theme;
 
 const AddButton = styled(Button)`
   margin: ${spacing.interComponent} 0;
@@ -109,11 +109,6 @@ const CellHeader = styled.div`
 const DelButton = styled(Button)`
   margin-left: ${spacing.interComponent};
   font-size: ${fonts.sizeSmall};
-`;
-
-const InlineError = styled.div`
-  font-weight: 600;
-  color: ${colors.darkerGrey};
 `;
 
 export const motifs = [

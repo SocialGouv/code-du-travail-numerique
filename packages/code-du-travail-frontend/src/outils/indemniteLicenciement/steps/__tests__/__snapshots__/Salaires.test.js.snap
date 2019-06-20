@@ -132,7 +132,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 .c9 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -141,6 +141,14 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c9::-webkit-outer-spin-button,
+.c9::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c8 {
@@ -664,7 +672,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -673,6 +681,14 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c4 {
@@ -930,7 +946,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 .c10 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -941,10 +957,18 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   padding-right: 1rem;
 }
 
+.c10::-webkit-outer-spin-button,
+.c10::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .c12 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: left;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -953,6 +977,14 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   border-color: #c9d3df;
   text-align: right;
   padding-right: 1rem;
+}
+
+.c12::-webkit-outer-spin-button,
+.c12::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c11 {
