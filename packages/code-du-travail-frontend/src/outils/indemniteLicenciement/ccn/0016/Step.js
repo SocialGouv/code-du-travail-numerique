@@ -18,7 +18,7 @@ function Step({ form }) {
         inputType="number"
         name="age"
         size="5"
-        label="Quel etait votre age à la date du licenciement ?"
+        label="Quel etait votre âge à la date du licenciement ?"
       />
       {age > 60 && (
         <YesNoQuestion
