@@ -4,7 +4,7 @@ import ScreenReaderOnly from ".";
 
 describe("<ScreenReaderOnly />", () => {
   test("should render", () => {
-    const { container } = render(<ScreenReaderOnly />);
+    const { container } = render(<ScreenReaderOnly>SR Only</ScreenReaderOnly>);
     expect(container).toMatchSnapshot();
   });
 });
