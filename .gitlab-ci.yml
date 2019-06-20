@@ -1,216 +1,237 @@
 ---
 include:
-- /.gitlab-ci/variables.yml
-- /.gitlab-ci/extends.yml
+ - /.gitlab-ci/variables.yml
+ - /.gitlab-ci/extends.yml
 
-- '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
-- '/k8s/code-du-travail-data/.deploy-code-du-travail-data-k8s.yml'
-- '/k8s/code-du-travail-api/.deploy-code-du-travail-api-k8s.yml'
-- '/k8s/code-du-travail-frontend/.deploy-code-du-travail-frontend-k8s.yml'
-- '/k8s/code-du-travail-nlp/.deploy-code-du-travail-nlp-k8s.yml'
+# - '/k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
+# - '/k8s/code-du-travail-data/.deploy-code-du-travail-data-k8s.yml'
+# - '/k8s/code-du-travail-api/.deploy-code-du-travail-api-k8s.yml'
+# - '/k8s/code-du-travail-frontend/.deploy-code-du-travail-frontend-k8s.yml'
+# - '/k8s/code-du-travail-nlp/.deploy-code-du-travail-nlp-k8s.yml'
 
-- /.gitlab-ci/stages/prepare.yml
-- /.gitlab-ci/stages/quality.yml
-- /.gitlab-ci/stages/register.yml
-- /.gitlab-ci/stages/notify.yml
+# - /.gitlab-ci/stages/prepare.yml
+# - /.gitlab-ci/stages/quality.yml
+ #- /.gitlab-ci/stages/register.yml
+# - /.gitlab-ci/stages/notify.yml
 
 image: node:10-alpine
 
 stages:
-- "Prepare"
-- "Code Quality"
-- "Registration"
-- "Deploy"
-- "Notify Finished Deployment"
-- "Delete K8S Objects"
+  - "DockerData"
+# - "Prepare"
+# - "Code Quality"
+# - "Registration"
+# - "Deploy"
+# - "Notify Finished Deployment"
+# - "Delete K8S Objects"
 
 
-.deploy_stage: &deploy_stage
-  stage: "Deploy"
-  dependencies: []
-  services:
-    - docker:$DOCKER_VERSION-dind
-  variables: &deploy_stage_variables
-    IMAGE_TAG: $CI_COMMIT_SHA
-  before_script:
-    - source .gitlab-ci/env.sh
+# .deploy_stage: &deploy_stage
+#   stage: "Deploy"
+#   dependencies: []
+#   services:
+#     - docker:$DOCKER_VERSION-dind
+#   variables: &deploy_stage_variables
+#     IMAGE_TAG: $CI_COMMIT_SHA
+#   before_script:
+#     - source .gitlab-ci/env.sh
 
 
 ######################################
-### DEPLOY CDTN TO K8S DEV CLUSTER ###
+###### BUILD ES IMAGE WITH DATA ######
 ######################################
 
-Deploy Elasticsearch (dev):
-  <<: *deploy_stage
-  environment:
-    name: dev
-    url: $ELASTICSEARCH_HOST
-  extends: .deploy-elasticsearch-dev-k8s
+Build ES+data Docker image (dev):
+  extends: .base-docker-image-stage
   variables:
-    <<: *deploy_stage_variables
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
-
-Create Elasticsearch Index (dev):
-  <<: *deploy_stage
-  environment:
-    name: dev
-  extends: .deploy-code-du-travail-data-k8s
-  variables:
-    <<: *deploy_stage_variables
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
-
-Deploy @cdtn/api (dev):
-  <<: *deploy_stage
-  environment:
-    name: dev
-    url: $API_HOST
-  extends: .deploy-code-du-travail-api-k8s
-  variables:
-    <<: *deploy_stage_variables
-    ELASTICSEARCH_LOG_LEVEL: "trace"
-    APM_SERVER_ACTIVE: 0
-    APM_SERVER_URL: ""
-    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-    PORT: ${API_PORT}
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
-
-Deploy @cdtn/nlp (dev):
-  <<: *deploy_stage
-  environment:
-    name: dev
-    url: $NLP_HOST
-  extends: .deploy-code-du-travail-nlp-k8s
-  variables:
-    <<: *deploy_stage_variables
-    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-    FLASK_APP: ${FLASK_APP}
-    PORT: ${NLP_PORT}
-    SUGGEST_DATA: ${SUGGEST_DATA_URL}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
-
-Deploy @cdtn/frontend (dev):
-  <<: *deploy_stage
-  environment:
-    name: dev
-    url: $FRONTEND_HOST
-  extends: .deploy-code-du-travail-frontend-k8s
-  variables:
-    <<: *deploy_stage_variables
-    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-    PORT: ${FRONTEND_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
-
-########################################
-#### DEPLOY CDTN TO K8S PROD CLUSTER ###
-########################################
-
-Deploy Elasticsearch (prod):
-  <<: *deploy_stage
-  environment:
-    name: incubateur
-    url: $ELASTICSEARCH_HOST
-  extends: .deploy-elasticsearch-prod-k8s
-  variables:
-    <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  only:
-  - master
-
-Create Elasticsearch Index (prod):
-  <<: *deploy_stage
-  environment:
-    name: incubateur
-  extends: .deploy-code-du-travail-data-prod-k8s
-  variables:
-    <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  only:
-  - master
-
-Deploy @cdtn/api (prod):
-  <<: *deploy_stage
-  environment:
-    name: incubateur
-    url: $API_HOST
-  extends: .deploy-code-du-travail-api-prod-k8s
-  variables:
-    <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
-    ELASTICSEARCH_LOG_LEVEL: "trace"
-    APM_SERVER_ACTIVE: 0
-    APM_SERVER_URL: ""
-    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-    PORT: ${API_PORT}
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  only:
-  - master
-
-Deploy @cdtn/nlp (prod):
-  <<: *deploy_stage
-  environment:
-    name: incubateur
-    url: $NLP_HOST
-  extends: .deploy-code-du-travail-nlp-prod-k8s
-  variables:
-    <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
-    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-    FLASK_APP: ${FLASK_APP}
-    PORT: ${NLP_PORT}
-    SUGGEST_DATA: ${SUGGEST_DATA_URL}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  only:
-  - master
-
-Deploy @cdtn/frontend (prod):
-  <<: *deploy_stage
-  environment:
-    name: incubateur
-    url: $FRONTEND_HOST
-  extends: .deploy-code-du-travail-frontend-prod-k8s
-  variables:
-    <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
-    ENVIRONMENT: $CI_ENVIRONMENT_NAME
-    PORT: ${FRONTEND_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  only:
-  - master
-
-#######################################
-###       DELETE K8S OBJECTS        ###
-#######################################
-
-delete-k8s-objects:
-  stage: "Delete K8S Objects"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  environment:
-    name: dev
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/es-data
+  stage: "DockerData"
   before_script:
-  - /apps/create-kubeconfig.sh
+    - apk add --update curl && rm -rf /var/cache/apk/*
+    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
   script:
-  - python3 k8s/scripts/delete-k8s-objects.py
+    - echo "DockerData started"
+    - sh ./build-es.sh
+    - echo "DockerData finished"
   only:
-  - master
+  - docker-es-data
+
+
+# ######################################
+# ### DEPLOY CDTN TO K8S DEV CLUSTER ###
+# ######################################
+
+# Deploy Elasticsearch (dev):
+#   <<: *deploy_stage
+#   environment:
+#     name: dev
+#     url: $ELASTICSEARCH_HOST
+#   extends: .deploy-elasticsearch-dev-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     ES_PORT: ${ELASTICSEARCH_PORT}
+#     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   except:
+#   - master
+
+# Create Elasticsearch Index (dev):
+#   <<: *deploy_stage
+#   environment:
+#     name: dev
+#   extends: .deploy-code-du-travail-data-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     ES_PORT: ${ELASTICSEARCH_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   except:
+#   - master
+
+# Deploy @cdtn/api (dev):
+#   <<: *deploy_stage
+#   environment:
+#     name: dev
+#     url: $API_HOST
+#   extends: .deploy-code-du-travail-api-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     ELASTICSEARCH_LOG_LEVEL: "trace"
+#     APM_SERVER_ACTIVE: 0
+#     APM_SERVER_URL: ""
+#     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+#     PORT: ${API_PORT}
+#     ES_PORT: ${ELASTICSEARCH_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   except:
+#   - master
+
+# Deploy @cdtn/nlp (dev):
+#   <<: *deploy_stage
+#   environment:
+#     name: dev
+#     url: $NLP_HOST
+#   extends: .deploy-code-du-travail-nlp-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+#     FLASK_APP: ${FLASK_APP}
+#     PORT: ${NLP_PORT}
+#     SUGGEST_DATA: ${SUGGEST_DATA_URL}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   except:
+#   - master
+
+# Deploy @cdtn/frontend (dev):
+#   <<: *deploy_stage
+#   environment:
+#     name: dev
+#     url: $FRONTEND_HOST
+#   extends: .deploy-code-du-travail-frontend-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+#     PORT: ${FRONTEND_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   except:
+#   - master
+
+# ########################################
+# #### DEPLOY CDTN TO K8S PROD CLUSTER ###
+# ########################################
+
+# Deploy Elasticsearch (prod):
+#   <<: *deploy_stage
+#   environment:
+#     name: incubateur
+#     url: $ELASTICSEARCH_HOST
+#   extends: .deploy-elasticsearch-prod-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     HASH_BRANCH_NAME: ''
+#     ES_PORT: ${ELASTICSEARCH_PORT}
+#     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   only:
+#   - master
+
+# Create Elasticsearch Index (prod):
+#   <<: *deploy_stage
+#   environment:
+#     name: incubateur
+#   extends: .deploy-code-du-travail-data-prod-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     HASH_BRANCH_NAME: ''
+#     ES_PORT: ${ELASTICSEARCH_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   only:
+#   - master
+
+# Deploy @cdtn/api (prod):
+#   <<: *deploy_stage
+#   environment:
+#     name: incubateur
+#     url: $API_HOST
+#   extends: .deploy-code-du-travail-api-prod-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     HASH_BRANCH_NAME: ''
+#     ELASTICSEARCH_LOG_LEVEL: "trace"
+#     APM_SERVER_ACTIVE: 0
+#     APM_SERVER_URL: ""
+#     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+#     PORT: ${API_PORT}
+#     ES_PORT: ${ELASTICSEARCH_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   only:
+#   - master
+
+# Deploy @cdtn/nlp (prod):
+#   <<: *deploy_stage
+#   environment:
+#     name: incubateur
+#     url: $NLP_HOST
+#   extends: .deploy-code-du-travail-nlp-prod-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     HASH_BRANCH_NAME: ''
+#     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+#     FLASK_APP: ${FLASK_APP}
+#     PORT: ${NLP_PORT}
+#     SUGGEST_DATA: ${SUGGEST_DATA_URL}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   only:
+#   - master
+
+# Deploy @cdtn/frontend (prod):
+#   <<: *deploy_stage
+#   environment:
+#     name: incubateur
+#     url: $FRONTEND_HOST
+#   extends: .deploy-code-du-travail-frontend-prod-k8s
+#   variables:
+#     <<: *deploy_stage_variables
+#     HASH_BRANCH_NAME: ''
+#     ENVIRONMENT: $CI_ENVIRONMENT_NAME
+#     PORT: ${FRONTEND_PORT}
+#     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
+#   only:
+#   - master
+
+# #######################################
+# ###       DELETE K8S OBJECTS        ###
+# #######################################
+
+# delete-k8s-objects:
+#   stage: "Delete K8S Objects"
+#   image:
+#     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
+#     entrypoint: [""]
+#   environment:
+#     name: dev
+#   before_script:
+#   - /apps/create-kubeconfig.sh
+#   script:
+#   - python3 k8s/scripts/delete-k8s-objects.py
+#   only:
+#   - master
