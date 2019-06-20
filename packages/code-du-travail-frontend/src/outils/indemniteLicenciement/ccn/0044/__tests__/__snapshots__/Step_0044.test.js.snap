@@ -298,13 +298,21 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco and age 1`] = `
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: center;
+  text-align: right;
   line-height: inherit;
-  width: NaNem;
+  width: auto;
   border-radius: 0.25rem;
   border: 1px solid #c9d3df;
   padding: 0.625rem 0.25rem;
   border-color: #c9d3df;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .c1 {
