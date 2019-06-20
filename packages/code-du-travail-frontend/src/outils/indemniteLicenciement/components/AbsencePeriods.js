@@ -42,6 +42,7 @@ function AbsencePeriods({ name, onChange }) {
                       <Input {...input} size="7" invalid={touched && invalid} />
                       <DelButton
                         variant="link"
+                        type="button"
                         onClick={() => fields.remove(index)}
                       >
                         Supprimer
@@ -105,7 +106,7 @@ const CellHeader = styled.div`
   font-weight: 700;
 `;
 
-const DelButton = styled(Button).attrs(() => ({ type: "button" }))`
+const DelButton = styled(Button)`
   margin-left: ${spacing.interComponent};
   font-size: ${fonts.sizeSmall};
 `;

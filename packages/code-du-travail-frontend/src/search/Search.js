@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
-import { Button, Container, theme, Section } from "@cdt/ui";
+import { Button, Container, theme, Section, ScreenReaderOnly } from "@cdt/ui";
 
 import { Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
@@ -170,21 +170,22 @@ class Search extends React.Component {
 
     return (
       <React.Fragment>
-        <SearchSection variant="white" className="search-widget">
+        <SearchSection variant="white">
           <Container>
             <StyledSearch ref={this.searchRef}>
               <SearchLabel>
                 Posez votre question sur le droit du travail
               </SearchLabel>
-              <form className="search__form" onSubmit={this.onFormSubmit}>
-                <div className="search__fields">
-                  <SearchIconWithClipboard className="search__input__icon" />
-                  <label className="search__sources" htmlFor="contentSource">
-                    <span className="hidden">Filtrer par type de contenu</span>
-                    <ReponseIcon className="search__sources__icon" />
-                    <select
+              <SearchForm onSubmit={this.onFormSubmit}>
+                <SearchFields>
+                  <SearchInputIcon />
+                  <SearchSources htmlFor="contentSource">
+                    <ScreenReaderOnly type={"inline"}>
+                      Filtrer par type de contenu
+                    </ScreenReaderOnly>
+                    <SearchSourcesIcon />
+                    <SearchSourcesValue
                       id="contentSource"
-                      className="search__sources__value"
                       onChange={this.onChange}
                       onBlur={this.onChange}
                       value={source}
@@ -197,9 +198,9 @@ class Search extends React.Component {
                       <option value="modeles_de_courriers">Modèles</option>
                       <option value="outils">Outils</option>
                       <option value="annuaire">Annuaire</option>
-                    </select>
-                  </label>
-                  <DocumentSuggester
+                    </SearchSourcesValue>
+                  </SearchSources>
+                  <SearchInput
                     onChange={this.onChange}
                     query={query}
                     placeholder="Recherche"
@@ -207,11 +208,10 @@ class Search extends React.Component {
                     onSelect={this.onSelect}
                     onClear={this.onClear}
                     suggestions={suggestions}
-                    className="search__input"
                   />
-                </div>
+                </SearchFields>
                 <Button type="submit">Rechercher</Button>
-              </form>
+              </SearchForm>
             </StyledSearch>
           </Container>
         </SearchSection>
@@ -226,11 +226,14 @@ const { animations, box, breakpoints, colors, spacing, fonts } = theme;
 
 const SearchSection = styled(Section)`
   box-shadow: 0 10px 10px -10px ${colors.lightGrey};
+  @media print {
+    display: none;
+  }
 `;
 
 const SearchLabel = styled.p`
   margin-top: 0;
-  font-size: ${fonts.sizeH1};
+  font-size: ${fonts.sizeH2};
   line-height: ${fonts.lineHeight};
   color: ${colors.title};
 `;
@@ -239,105 +242,97 @@ const StyledSearch = styled.div`
   position: relative;
   padding: ${spacing.base} 0;
   text-align: center;
+`;
 
-  .search__form {
-    display: flex;
-    margin: 0 auto;
-    padding: var(--spacing-small) 0;
-    position: relative;
-    height: 5rem;
-    width: 90%;
+const SearchForm = styled.form`
+  display: flex;
+  margin: 0 auto;
+  padding: ${spacing.small} 0;
+  position: relative;
+  width: 90%;
+  & button {
+    margin-left: ${spacing.xsmall};
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+    height: auto;
     & button {
-      margin-left: ${spacing.xsmall};
+      margin-left: 0;
     }
   }
+`;
 
-  .search__fields {
-    display: flex;
-    flex: 1 1 auto;
-    position: relative;
+const SearchFields = styled.div`
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-bottom: ${spacing.xsmall};
   }
+`;
 
-  .search__input__icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: ${spacing.medium} 0 0 ${spacing.medium};
-    width: 2.55rem;
+const SearchInputIcon = styled(SearchIconWithClipboard)`
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: ${spacing.medium} 0 0 ${spacing.medium};
+  width: 2.55rem;
+  @media (max-width: ${breakpoints.mobile}) {
+    display: none;
   }
+`;
 
-  .search__sources {
-    display: flex;
-    position: absolute;
-    right: 0;
-    margin: ${spacing.small};
-    align-items: center;
-    background-color: ${colors.lighterGrey};
-    border: none;
-    border-radius: ${box.borderRadius};
+const SearchSources = styled.label`
+  display: flex;
+  position: absolute;
+  right: 0;
+  margin: ${spacing.small};
+  align-items: center;
+  background-color: ${colors.lighterGrey};
+  border: none;
+  border-radius: ${box.borderRadius};
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
   }
+`;
 
-  .search__sources__icon {
-    position: absolute;
-    margin: 0 calc(${spacing.medium} / 2);
-    width: 1.25rem;
-    height: 1.25rem;
-  }
+const SearchSourcesIcon = styled(ReponseIcon)`
+  position: absolute;
+  margin: 0 calc(${spacing.medium} / 2);
+  width: 1.25rem;
+  height: 1.25rem;
+`;
 
-  .search__sources__value {
-    padding: ${spacing.xsmall} ${spacing.large} ${spacing.xsmall}
-      ${spacing.larger};
-    color: ${colors.almostBlack};
-    background-color: transparent;
-    border: 1px solid transparent;
-  }
+const SearchSourcesValue = styled.select`
+  padding: ${spacing.xsmall} ${spacing.large} ${spacing.xsmall}
+    ${spacing.larger};
+  color: ${colors.almostBlack};
+  background-color: transparent;
+  border: 1px solid transparent;
+`;
 
-  .search__input {
-    margin: 0;
-    padding: 0 12.8rem 0 4rem;
-    height: 100%;
-    width: 100%;
-    font-size: inherit;
-    font-family: inherit;
-    line-height: calc(3.625rem - 1px);
-    color: inherit;
-    appearance: none;
-    background: ${colors.lightBackground};
-    border: 1px solid ${colors.elementBorder};
-    border-radius: ${box.borderRadius};
-    transition: border ${animations.transitionTiming} ease;
-  }
-
-  .search__input:focus {
+const SearchInput = styled(DocumentSuggester)`
+  margin: 0;
+  padding: 0 12.8rem 0 4rem;
+  width: 100%;
+  height: 60px;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 3.625rem;
+  color: inherit;
+  appearance: none;
+  background: ${colors.lightBackground};
+  border: 1px solid ${colors.elementBorder};
+  border-radius: ${box.borderRadius};
+  transition: border ${animations.transitionTiming} ease;
+  &:focus {
     border-color: ${colors.blueLight};
     outline: none;
   }
-
   @media (max-width: ${breakpoints.tablet}) {
-    .search__sources {
-      display: none;
-    }
-    .search__input {
-      padding-right: ${spacing.base};
-    }
+    padding-right: ${spacing.base};
   }
-
   @media (max-width: ${breakpoints.mobile}) {
-    .search__form {
-      flex-direction: column;
-      height: auto;
-      & button {
-        margin-left: 0;
-      }
-    }
-    .search__input__icon {
-      display: none;
-    }
-    .search__fields {
-      margin-bottom: ${spacing.xsmall};
-    }
-    .search__input {
-      padding: ${spacing.base};
-    }
+    padding: 0 ${spacing.base};
   }
 `;

@@ -11,7 +11,11 @@ exports[`<StepInfo /> should display error if contrat cdd 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -40,7 +44,11 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -60,8 +68,11 @@ exports[`<StepInfo /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

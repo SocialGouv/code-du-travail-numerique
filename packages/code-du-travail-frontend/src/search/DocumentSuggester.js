@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
+import { ScreenReaderOnly, theme } from "@cdt/ui";
+
+const { colors } = theme;
 
 import Html from "../common/Html";
 
@@ -53,21 +56,31 @@ export class DocumentSuggester extends React.Component {
   };
 
   render() {
-    const { query, onChange, onSearch, onClear, suggestions } = this.props;
+    const {
+      ariaLabel,
+      className,
+      inputId,
+      query,
+      onChange,
+      onSearch,
+      onClear,
+      placeholder,
+      suggestions
+    } = this.props;
     const inputProps = {
-      id: this.props.inputId,
+      id: inputId,
       name: "query",
-      placeholder: this.props.placeholder,
-      "aria-label": this.props.ariaLabel,
+      placeholder,
+      "aria-label": ariaLabel,
       type: "search",
-      className: this.props.className,
+      className,
       value: query,
       onChange,
       onKeyPress: this.onKeyPress
     };
     return (
-      <Label htmlFor={this.props.inputId}>
-        <span className="hidden">Rechercher</span>
+      <Label htmlFor={inputId}>
+        <ScreenReaderOnly type={"inline"}>Rechercher</ScreenReaderOnly>
         <Autosuggest
           id="cdtn-documents-suggester"
           ref={this.focusInput}
@@ -115,7 +128,7 @@ const SuggestionsContainer = styled.div`
     z-index: 100;
   }
   li[role="option"]:nth-child(2n + 1) {
-    background: #f7f7f7;
+    background: ${colors.elementBackground};
   }
 `;
 
@@ -149,6 +162,6 @@ const suggesterTheme = {
     cursor: "pointer"
   },
   suggestionHighlighted: {
-    background: "#eee"
+    background: colors.darkBackground
   }
 };

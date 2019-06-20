@@ -56,7 +56,7 @@ export function StepReducer(steps, action) {
       return steps.filter(step => !/branche_/.test(step.name));
     }
     default:
-      console.warning("action unknow", action);
+      console.warn("action unknow", action);
   }
   return steps;
 }

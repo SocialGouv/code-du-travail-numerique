@@ -44,8 +44,8 @@ class Modeles extends React.Component {
   }
 }
 
-const List = ({ className, items }) => (
-  <ul className={className}>
+const List = ({ items, ...props }) => (
+  <ul {...props}>
     {items.map(({ id, _source }) => (
       <Item key={id}>
         <Link

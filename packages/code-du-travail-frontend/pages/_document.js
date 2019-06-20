@@ -4,7 +4,7 @@ import { ServerStyleSheet } from "styled-components";
 import * as Sentry from "@sentry/browser";
 import "url-search-params";
 
-import GlobalStyles from "../src/layout/GlobalStyles";
+import GlobalStyles from "../src/layout/css/index.js";
 
 process.on("unhandledRejection", err => {
   Sentry.captureException(err);
@@ -39,12 +39,6 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           {this.props.styleTags}
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="/static/print.css"
-            media="print"
-          />
           <script
             crossOrigin="anonymous"
             src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.includes%2CArray.prototype.find%2CArray.prototype.findIndex%2CObject.setPrototypeOf%2CNumber.isFinite%2Cfetch%2CSymbol%2CSymbol.hasInstance%2CSymbol.isConcatSpreadable%2CSymbol.iterator%2CSymbol.unscopables%2CSymbol.toStringTag%2CSymbol.toPrimitive%2CSymbol.split%2CSymbol.search%2CSymbol.species%2CSymbol.replace%2CSymbol.match%2CSet%2CMap%2CWeakMap"

@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { colors, spacing } from "../../theme";
 
-const Section = ({ children, className, variant }) => (
-  <StyledSection variant={variant} className={className}>
+const Section = ({ children, variant, ...props }) => (
+  <StyledSection variant={variant} {...props}>
     {children}
   </StyledSection>
 );

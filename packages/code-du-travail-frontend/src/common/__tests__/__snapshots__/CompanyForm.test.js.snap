@@ -49,7 +49,7 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
 }
 
 .c3 {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 <div>
@@ -156,6 +156,10 @@ exports[`<CompanyForm /> should render 1`] = `
   margin-top: 20px;
 }
 
+.c2 {
+  font-style: italic;
+}
+
 <div>
   <form>
     <h3
@@ -172,7 +176,7 @@ exports[`<CompanyForm /> should render 1`] = `
         type="button"
       />
       <p
-        style="font-style: italic;"
+        class="c2"
       >
         Vous pouvez chercher le SIRET de votre entreprise sur 
         <a

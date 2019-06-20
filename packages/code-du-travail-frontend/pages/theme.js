@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import getConfig from "next/config";
-import { Alert, Container, Section } from "@cdt/ui";
+import styled from "styled-components";
+import { Alert, Container, Section, theme } from "@cdt/ui";
 import fetch from "isomorphic-unfetch";
 
 import { Link } from "../routes";
@@ -126,16 +127,15 @@ const NotFound = () => (
 );
 
 const BigError = ({ children }) => (
-  <div
-    style={{
-      fontSize: "1.3em",
-      textAlign: "center",
-      margin: "40px auto",
-      background: "var(--color-light-background)"
-    }}
-  >
+  <AlertWrapper>
     <Alert variant="warning">{children}</Alert>
-    <br />
-    <br />
-  </div>
+  </AlertWrapper>
 );
+
+const { colors, fonts, spacing } = theme;
+const AlertWrapper = styled.div`
+  margin: ${spacing.larger} auto;
+  font-size: ${fonts.sizeH4};
+  text-align: center;
+  background: ${colors.lightBackground};
+`;

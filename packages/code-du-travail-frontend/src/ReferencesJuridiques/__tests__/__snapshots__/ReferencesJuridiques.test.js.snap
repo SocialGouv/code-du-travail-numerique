@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferencesJuridiques /> should render 1`] = `
-.c14 {
+.c13 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -13,8 +13,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c2 > *:last-child {
+.c2 > *:first-child {
   margin-top: 0;
+}
+
+.c2 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -32,12 +35,15 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   background-color: #fff;
 }
 
-.c3 > *:last-child {
+.c3 > *:first-child {
   margin-top: 0;
+}
+
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
-.c12 {
+.c11 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -47,8 +53,8 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   height: 12px;
 }
 
-.c12::after,
-.c12::before {
+.c11::after,
+.c11::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -58,42 +64,42 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   content: "";
 }
 
-.c12::before {
+.c11::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c12::before,
-[aria-selected="true"] .c12::before {
+[aria-expanded="true"] .c11::before,
+[aria-selected="true"] .c11::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c12::after {
+.c11::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c12::after,
-[aria-selected="true"] .c12::after {
+[aria-expanded="true"] .c11::after,
+[aria-selected="true"] .c11::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c12::before,
-.c12::after {
+.c11::before,
+.c11::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,39 +115,47 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   cursor: pointer;
 }
 
-.c10:hover,
-.c10:focus,
-.c10:focus-within,
-.c10[aria-expanded="true"] {
+.c9:hover,
+.c9:focus,
+.c9:focus-within,
+.c9[aria-expanded="true"] {
   color: #006ab2;
 }
 
-.c8 {
+.c7 {
   background-color: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   overflow: hidden;
 }
 
-.c8 + .c7 {
+.c7 + .c6 {
   border-top: 1px solid #c9d3df;
 }
 
-.c8 .c9 {
+.c7 .c8 {
   padding-right: 1rem;
 }
 
-.c13 {
+.c12 {
   padding: 1rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c13.accordion__body--hidden {
+.c12 > *:first-child {
+  margin-top: 0;
+}
+
+.c12 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c12.accordion__body--hidden {
   display: none;
 }
 
-.c18 {
+.c17 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -163,13 +177,13 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c18:not([disabled]):active {
+.c17:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -177,7 +191,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   outline: none;
 }
 
-.c18[aria-pressed="true"] {
+.c17[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -186,21 +200,21 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c18[aria-pressed="true"]:not([disabled]):hover,
-.c18[aria-pressed="true"]:not([disabled]):focus {
+.c17[aria-pressed="true"]:not([disabled]):hover,
+.c17[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c18[aria-pressed="true"]:not([disabled]):active {
+.c17[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c18[disabled] {
+.c17[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c15 {
+.c14 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -210,14 +224,14 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   cursor: pointer;
 }
 
-.c16 {
+.c15 {
   position: relative;
   top: 1px;
   vertical-align: middle;
   margin-right: 1rem;
 }
 
-.c5 {
+.c4 {
   margin: 1.25rem 0;
   padding: 1rem;
   background-color: #ebeff3;
@@ -225,21 +239,21 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c6 {
+.c5 {
   margin-bottom: 1rem;
 }
 
-.c17 {
+.c16 {
   margin-bottom: 1.25rem;
   text-align: center;
 }
 
-.c11 {
+.c10 {
   display: inline-block;
   padding: 1rem;
 }
 
-.c19 {
+.c18 {
   display: inline-block;
   padding: 1rem;
 }
@@ -247,10 +261,6 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 .c0 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.c4 {
-  font-weight: bold;
 }
 
 @media print {
@@ -277,9 +287,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
       <div
         class="c3"
       >
-        <h2
-          class="c4"
-        >
+        <h2>
           Références juridiques
         </h2>
         <p>
@@ -289,53 +297,53 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             à cette réponse.
         </p>
         <div
-          class="c5"
+          class="c4"
         >
           <h3>
             L'accord de branche étendu s'applique
           </h3>
           <div
-            class="c6"
+            class="c5"
           >
             <div
-              class="c7 c8"
+              class="c6 c7"
             >
               <div
                 aria-controls="accordion__body-0"
                 aria-expanded="false"
-                class="c9 c10"
+                class="c8 c9"
                 id="accordion__title-0"
                 role="button"
                 tabindex="0"
               >
                 <span
-                  class="c11"
+                  class="c10"
                 >
                   Voir les articles du code du travail concernés
                 </span>
                 <div
-                  class="c12"
+                  class="c11"
                   role="presentation"
                 />
               </div>
               <div
                 aria-hidden="true"
                 aria-labelledby="accordion__title-0"
-                class="c13 accordion__body--hidden"
+                class="c12 accordion__body--hidden"
                 id="accordion__body-0"
               >
                 <ul
-                  class="c14"
+                  class="c13"
                 >
                   <li
                     class=""
                   >
                     <a
-                      class="c15"
+                      class="c14"
                       href="/code-du-travail/l1244-3"
                     >
                       <svg
-                        class="c16"
+                        class="c15"
                         viewBox="0 0 512 512"
                         width="18"
                       >
@@ -358,11 +366,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                     class=""
                   >
                     <a
-                      class="c15"
+                      class="c14"
                       href="/code-du-travail/l1244-4"
                     >
                       <svg
-                        class="c16"
+                        class="c15"
                         viewBox="0 0 512 512"
                         width="18"
                       >
@@ -389,11 +397,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
             Pour ces articles, si les accords négociés et étendus dans votre branche prévoient des mesures plus favorables que le Code du travail, alors ces mesures s'appliquent. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.
           </p>
           <div
-            class="c17"
+            class="c16"
           >
             <button
               aria-pressed="false"
-              class="c18"
+              class="c17"
             >
               Trouvez votre convention collective
             </button>
@@ -406,45 +414,45 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           class="accordion"
         >
           <div
-            class="c7 c8"
+            class="c6 c7"
           >
             <div
               aria-controls="accordion__body-1"
               aria-expanded="false"
-              class="c9 c10"
+              class="c8 c9"
               id="accordion__title-1"
               role="button"
               tabindex="0"
             >
               <span
-                class="c19"
+                class="c18"
               >
                 Voir les articles du code du travail concernés
               </span>
               <div
-                class="c12"
+                class="c11"
                 role="presentation"
               />
             </div>
             <div
               aria-hidden="true"
               aria-labelledby="accordion__title-1"
-              class="c13 accordion__body--hidden"
+              class="c12 accordion__body--hidden"
               id="accordion__body-1"
             >
               <ul
-                class="c14"
+                class="c13"
               >
                 <li
                   class=""
                 >
                   <a
-                    class="external-link__after c15"
+                    class="c14"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <svg
-                      class="c16"
+                      class="c15"
                       viewBox="0 0 512 512"
                       width="18"
                     >
@@ -468,12 +476,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   class=""
                 >
                   <a
-                    class="external-link__after c15"
+                    class="c14"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <svg
-                      class="c16"
+                      class="c15"
                       viewBox="0 0 512 512"
                       width="18"
                     >
@@ -497,11 +505,11 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                   class=""
                 >
                   <a
-                    class="c15"
+                    class="c14"
                     href="/kali/yyy"
                   >
                     <svg
-                      class="c16"
+                      class="c15"
                       viewBox="0 0 512 512"
                       width="18"
                     >

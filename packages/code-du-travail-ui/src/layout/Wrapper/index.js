@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { box, colors, spacing } from "../../theme";
 
-const Wrapper = ({ children, className, variant }) => {
+const Wrapper = ({ children, variant, ...props }) => {
   return (
-    <StyledWrapper className={className} variant={variant}>
+    <StyledWrapper variant={variant} {...props}>
       {children}
     </StyledWrapper>
   );
@@ -46,8 +46,10 @@ const StyledWrapper = styled.div`
       `;
     }
   }}
-  & > *:last-child {
+  & > *:first-child {
     margin-top: 0;
+  }
+  & > *:last-child {
     margin-bottom: 0;
   }
   @media print {

@@ -9,25 +9,22 @@ import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
 const { publicRuntimeConfig } = getConfig();
 
 const Footer = () => (
-  <footer className="site-footer" id="footer">
+  <StyledFooter>
     <Section>
-      <Container className="center">
+      <FirstContainerWrapper>
         <h2>Besoin d’un accompagnement personnalisé ?</h2>
-        <ContainerWrapper>
-          <Container narrow noPadding>
-            Les services de renseignement en droit du travail peuvent vous
-            donner des informations juridiques générales relatives au Code du
-            travail, aux conventions collectives, à la jurisprudence. Ils
-            peuvent également vous conseiller et vous orienter dans vos
-            démarches.
-          </Container>
-        </ContainerWrapper>
+        <SecondContainerWrapper narrow noPadding>
+          Les services de renseignement en droit du travail peuvent vous donner
+          des informations juridiques générales relatives au Code du travail,
+          aux conventions collectives, à la jurisprudence. Ils peuvent également
+          vous conseiller et vous orienter dans vos démarches.
+        </SecondContainerWrapper>
         <ServiceRenseignementModal>
           <Button variant="primary">
             Contacter les services de renseignement
           </Button>
         </ServiceRenseignementModal>
-      </Container>
+      </FirstContainerWrapper>
     </Section>
     <Section>
       <Links>
@@ -58,7 +55,6 @@ const Footer = () => (
                   "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
                   publicRuntimeConfig.PACKAGE_VERSION
                 }
-                className="external-link__after"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +67,6 @@ const Footer = () => (
                   "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
                   publicRuntimeConfig.PACKAGE_VERSION
                 }
-                className="external-link__after"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -88,7 +83,6 @@ const Footer = () => (
                 href={
                   "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
                 }
-                className="external-link__after"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -98,7 +92,6 @@ const Footer = () => (
             <StyledListItem key="1">
               <a
                 href={"https://incubateur.social.gouv.fr/"}
-                className="external-link__after"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -108,7 +101,6 @@ const Footer = () => (
             <StyledListItem key="2">
               <a
                 href={"https://beta.gouv.fr/"}
-                className="external-link__after"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -119,14 +111,24 @@ const Footer = () => (
         </Category>
       </Links>
     </Section>
-  </footer>
+  </StyledFooter>
 );
 
 export default Footer;
 
 const { breakpoints, colors, fonts, spacing } = theme;
 
-const ContainerWrapper = styled.div`
+const StyledFooter = styled.footer`
+  @media print {
+    display: none;
+  }
+`;
+
+const FirstContainerWrapper = styled(Container)`
+  text-align: center;
+`;
+
+const SecondContainerWrapper = styled(Container)`
   margin-bottom: ${spacing.interComponent};
   text-align: left;
 `;
@@ -150,7 +152,7 @@ const Category = styled.div`
 
 const CategoryTitle = styled.h3`
   font-size: ${fonts.sizeBase};
-  font-weight: 700;
+  font-weight: bold;
 `;
 
 const StyledListItem = styled(ListItem)`

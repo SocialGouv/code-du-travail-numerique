@@ -4,7 +4,7 @@ exports[`<Tag /> it should render a danger tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -29,7 +29,7 @@ exports[`<Tag /> it should render a info tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -54,7 +54,7 @@ exports[`<Tag /> it should render a primary tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -79,7 +79,7 @@ exports[`<Tag /> it should render a secondary tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -104,7 +104,7 @@ exports[`<Tag /> it should render a success tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -129,7 +129,7 @@ exports[`<Tag /> it should render a warning tag 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -154,7 +154,7 @@ exports[`<Tag /> should render 1`] = `
 .c0 {
   display: inline-block;
   padding: 0.5rem 0.625rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;
@@ -176,8 +176,10 @@ exports[`<Tag /> should render 1`] = `
 exports[`<Tag /> should render a small tag 1`] = `
 .c0 {
   display: inline-block;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
   text-align: center;
   white-space: nowrap;

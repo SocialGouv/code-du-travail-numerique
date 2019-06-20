@@ -26,12 +26,7 @@ const ConventionLink = ({ title, slug }) => (
 );
 
 const OtherLink = ({ title, url }) => (
-  <ReferenceLink
-    href={url}
-    rel="noopener noreferrer"
-    target="_blank"
-    className={"external-link__after"}
-  >
+  <ReferenceLink href={url} rel="noopener noreferrer" target="_blank">
     <Icon width="18" />
     Autre: {title}
   </ReferenceLink>

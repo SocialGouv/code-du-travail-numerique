@@ -1,5 +1,3 @@
-import { css } from "docz-plugin-css";
-
 export default {
   base: "/code-du-travail-numerique/",
   codeSandbox: false,
@@ -7,7 +5,7 @@ export default {
   src: "./src",
   files: "**/*.{markdown,mdx}",
   indexHtml: "src/index.html",
-  plugins: [css()],
+  plugins: [],
   port: "6969",
   title: "UI Styleguide",
   themeConfig: {

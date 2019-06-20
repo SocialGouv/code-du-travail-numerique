@@ -3,8 +3,6 @@ import Header from "./Header.js";
 import Footer from "./Footer.js";
 import { ErrorBoundary } from "../common/ErrorBoundary";
 
-import "@cdt/css";
-
 const HomeLayout = ({ children }) => {
   return (
     <React.Fragment>

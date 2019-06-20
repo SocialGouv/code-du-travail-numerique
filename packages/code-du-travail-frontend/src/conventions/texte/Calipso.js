@@ -1,19 +1,15 @@
-import React from "react";
+import styled from "styled-components";
 
-const Calipso = ({ calipso }) => (
-  <div
-    style={{
-      display: "inline-block",
-      backgroundColor: "rgb(0, 83, 179)",
-      color: "#fff",
-      borderRadius: "2px",
-      margin: "2px",
-      fontSize: "0.8rem",
-      padding: "2px 10px"
-    }}
-  >
-    {calipso}
-  </div>
-);
+import { theme } from "@cdt/ui";
 
-export default Calipso;
+const { box, colors, fonts, spacing } = theme;
+
+export default styled.div`
+  display: inline-block;
+  margin: ${spacing.tiny};
+  padding: ${spacing.tiny} ${spacing.small};
+  color: ${colors.white};
+  font-size: ${fonts.sizeXsmall};
+  background-color: ${colors.blue};
+  border-radius: ${box.borderRadius};
+`;

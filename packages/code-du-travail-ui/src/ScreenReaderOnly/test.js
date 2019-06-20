@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-testing-library";
-import AsideTitle from ".";
+import ScreenReaderOnly from ".";
 
-describe("<AsideTitle />", () => {
+describe("<ScreenReaderOnly />", () => {
   test("should render", () => {
-    const { container } = render(<AsideTitle>One Aside title</AsideTitle>);
+    const { container } = render(<ScreenReaderOnly>SR Only</ScreenReaderOnly>);
     expect(container).toMatchSnapshot();
   });
 });

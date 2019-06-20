@@ -25,26 +25,20 @@ const Article = ({
                   <Icon />
                 </IconWrapper>
               )}
-              <div>
-                <H1>{title}</H1>
-                <Meta>
-                  {sourceType && <Type>{sourceType}</Type>}
-                  {date && (
-                    <Date>
-                      Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
-                    </Date>
-                  )}
-                </Meta>
-              </div>
+              <h1>{title}</h1>
+              <Meta>
+                {sourceType && <Type>{sourceType}</Type>}
+                {date && (
+                  <Date>
+                    Mis à jour le&nbsp;: <DateValue>{date}</DateValue>
+                  </Date>
+                )}
+              </Meta>
               <Tags>
                 {tags.map(tag => (
-                  <Tag
-                    key={tag}
-                    style={{ cursor: "pointer" }}
-                    onClick={() => onTagClick(tag)}
-                  >
+                  <StyledTag key={tag} onClick={() => onTagClick(tag)}>
                     {tag}
-                  </Tag>
+                  </StyledTag>
                 ))}
               </Tags>
             </Header>
@@ -87,21 +81,20 @@ const { breakpoints, colors, fonts, spacing } = theme;
 
 const Header = styled(Container)`
   position: relative;
+  margin-bottom: ${spacing.interComponent};
 `;
+
+const ICON_WIDTH = "80px";
 
 const IconWrapper = styled.div`
   position: absolute;
   top: ${spacing.small};
-  left: calc(-60px - ${spacing.interComponent});
-  width: 60px;
+  left: calc(-${ICON_WIDTH} - ${spacing.interComponent});
+  width: ${ICON_WIDTH};
   color: ${colors.lightText};
   @media (max-width: ${breakpoints.desktop}) {
     display: none;
   }
-`;
-
-const H1 = styled.h1`
-  font-weight: 600;
 `;
 
 const Meta = styled.div`
@@ -134,4 +127,8 @@ const DateValue = styled.span`
 
 const Tags = styled.div`
   margin-left: -10px;
+`;
+
+const StyledTag = styled(Tag)`
+  cursor: pointer;
 `;

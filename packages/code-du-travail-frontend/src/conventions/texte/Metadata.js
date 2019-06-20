@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Table } from "@cdt/ui";
+import { Button, Table } from "@cdt/ui";
 
 const Metadata = ({ texte }) => {
   const { nature, date_texte, origine_publi } = texte.data;
@@ -10,9 +10,9 @@ const Metadata = ({ texte }) => {
   if (!expanded) {
     return (
       <div>
-        <ButtonLink eventHandler={() => setExpanded(true)}>
+        <Button variant={"link"} onClick={() => setExpanded(true)}>
           <i>afficher les détails de ce texte</i>
-        </ButtonLink>
+        </Button>
       </div>
     );
   }
@@ -43,20 +43,5 @@ Metadata.propTypes = {
   date_texte: PropTypes.string,
   origine_publi: PropTypes.string
 };
-
-const ButtonLink = ({ eventHandler, children }) => (
-  <a
-    onClick={eventHandler}
-    onKeyUp={eventHandler}
-    role="button"
-    tabIndex={0}
-    style={{
-      color: "black",
-      cursor: "pointer"
-    }}
-  >
-    {children}
-  </a>
-);
 
 export default Metadata;

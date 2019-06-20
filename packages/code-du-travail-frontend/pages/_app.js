@@ -5,8 +5,6 @@ import getConfig from "next/config";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 import * as Sentry from "@sentry/browser";
 
-import "@cdt/css";
-
 const {
   publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
 } = getConfig();

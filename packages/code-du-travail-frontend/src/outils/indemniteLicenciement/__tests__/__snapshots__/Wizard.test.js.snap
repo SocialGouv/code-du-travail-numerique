@@ -29,7 +29,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   padding-left: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #0053b3;
@@ -51,7 +51,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   padding-left: 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #adb9c9;
@@ -108,7 +108,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c5 {
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -251,7 +251,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   padding-left: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #adb9c9;
@@ -273,7 +273,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   padding-left: 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #0053b3;
@@ -330,7 +330,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
 }
 
 .c5 {
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -477,7 +477,7 @@ exports[`<Wizard /> should handle initialData 1`] = `
   padding-left: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #0053b3;
@@ -509,7 +509,7 @@ exports[`<Wizard /> should handle initialData 1`] = `
 }
 
 .c3 {
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -576,7 +576,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   padding-left: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #0053b3;
@@ -608,7 +608,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c3 {
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -678,7 +678,7 @@ exports[`<Wizard /> should render a step 1`] = `
   padding-left: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #0053b3;
@@ -700,7 +700,7 @@ exports[`<Wizard /> should render a step 1`] = `
   padding-left: 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
   color: #adb9c9;
@@ -757,7 +757,7 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c5 {
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

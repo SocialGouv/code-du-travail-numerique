@@ -11,7 +11,11 @@ exports[`<Alert /> it should render a danger alert 1`] = `
   border-color: #f08f99;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -37,7 +41,11 @@ exports[`<Alert /> it should render a info alert 1`] = `
   border-color: #abcff2;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -63,7 +71,11 @@ exports[`<Alert /> it should render a primary alert 1`] = `
   border-color: #003a61;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -89,7 +101,11 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
   border-color: #d1d1d1;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -115,7 +131,11 @@ exports[`<Alert /> it should render a success alert 1`] = `
   border-color: #ccea92;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -141,7 +161,11 @@ exports[`<Alert /> it should render a warning alert 1`] = `
   border-color: #fdd57b;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -167,7 +191,11 @@ exports[`<Alert /> should render 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

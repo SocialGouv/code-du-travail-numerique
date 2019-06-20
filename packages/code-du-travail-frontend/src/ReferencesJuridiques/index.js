@@ -40,7 +40,7 @@ class ReferencesJuridiques extends React.PureComponent {
       <StyledSection>
         <Container>
           <Wrapper variant="light">
-            <StyledHeading>Références juridiques</StyledHeading>
+            <h2>Références juridiques</h2>
             {explanatoryText}
             {hierarchieBlocElements}
             {autresReferences.length > 0 && (
@@ -75,8 +75,4 @@ export default ReferencesJuridiques;
 const StyledSection = styled(Section)`
   padding-top: ${spacing.base};
   padding-bottom: ${spacing.base};
-`;
-
-const StyledHeading = styled.h2`
-  font-weight: bold;
 `;

@@ -7,8 +7,11 @@ exports[`<StepIndemnite /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -28,13 +31,13 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 .c1 {
-  font-size: 1.4rem;
+  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
 
 .c2 {
-  font-size: 1.4rem;
+  font-size: 1.625rem;
   font-weight: 700;
   color: #0053b3;
 }

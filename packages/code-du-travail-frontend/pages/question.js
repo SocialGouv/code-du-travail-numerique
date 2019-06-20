@@ -6,7 +6,6 @@ import Answer from "../src/common/Answer";
 import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import {
-  AsideTitle,
   Container,
   List,
   LargeLink,
@@ -106,7 +105,7 @@ class Question extends React.Component {
         >
           {modeles_de_courriers.length > 0 && (
             <React.Fragment>
-              <AsideTitle>Télécharger le modèle</AsideTitle>
+              <h4>Télécharger le modèle</h4>
               <DownloadFile
                 title={modeles_de_courriers[0]._source.title}
                 file={`${API_URL}/docs/${
@@ -136,7 +135,7 @@ function MoreLinks({ items, icon, query, title, children }) {
         <SectionTitle>{title}</SectionTitle>
         {children}
         <List>
-          {items.map(({ _id, _source: slug, title, source, path = "" }) => (
+          {items.map(({ _id, _source: { slug, title, source, path = "" } }) => (
             <ListItem key={_id}>
               <Link
                 route={getRouteBySource(source)}
@@ -161,7 +160,6 @@ const { colors, spacing } = theme;
 
 const SectionTitle = styled.h2`
   text-align: center;
-  font-weight: 700;
 `;
 
 const DisclaimerContent = styled.div`

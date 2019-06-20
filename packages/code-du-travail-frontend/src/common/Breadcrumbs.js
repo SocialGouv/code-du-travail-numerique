@@ -36,7 +36,7 @@ export { Breadcrumbs };
 const { spacing, colors } = theme;
 
 const Nav = styled.nav`
-  background: ${colors.lightGrey};
+  background: ${colors.infoBackground};
 `;
 
 const NavItem = styled(ListItem)`

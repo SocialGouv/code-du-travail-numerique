@@ -7,7 +7,7 @@ import {
   List,
   ListItem,
   Section,
-  SrOnly,
+  ScreenReaderOnly,
   theme,
   Wrapper
 } from "@cdt/ui";
@@ -22,9 +22,9 @@ const SearchPage = ({ pageUrl, ogImage }) => {
     title: <AccordionItem>Modalités d’utilisation</AccordionItem>,
     body: (
       <>
-        <SrOnly>
+        <ScreenReaderOnly>
           <h1>Modalités d’utilisation</h1>
-        </SrOnly>
+        </ScreenReaderOnly>
         <h2>Traitement des données à caractère personnel</h2>
         <p>
           Le code du travail numérique ne vous demande ni ne stocke
@@ -140,9 +140,9 @@ const SearchPage = ({ pageUrl, ogImage }) => {
     title: <AccordionItem>Accessibilité</AccordionItem>,
     body: (
       <>
-        <SrOnly>
+        <ScreenReaderOnly>
           <h1>Accessibilité</h1>
-        </SrOnly>
+        </ScreenReaderOnly>
         <p>
           La conformité aux normes d’accessibilité numérique est un objectif
           ultérieur mais nous tâchons de rendre dès la conception, ce site
@@ -175,9 +175,9 @@ const SearchPage = ({ pageUrl, ogImage }) => {
     title: <AccordionItem>Sécurité</AccordionItem>,
     body: (
       <>
-        <SrOnly>
+        <ScreenReaderOnly>
           <h1>Sécurité</h1>
-        </SrOnly>
+        </ScreenReaderOnly>
         <p>
           Le site est protégé par un certificat électronique, matérialisé pour
           la grande majorité des navigateurs par un cadenas. Cette protection
@@ -191,9 +191,9 @@ const SearchPage = ({ pageUrl, ogImage }) => {
     title: <AccordionItem>Mentions légales</AccordionItem>,
     body: (
       <>
-        <SrOnly>
+        <ScreenReaderOnly>
           <h1>Mentions légales</h1>
-        </SrOnly>
+        </ScreenReaderOnly>
         <p>
           Le site est édité par l’
           <a href="https://incubateur.social.gouv.fr/">
@@ -274,7 +274,7 @@ const { colors, fonts, spacing } = theme;
 
 const AccordionItem = styled.div`
   padding: ${spacing.small};
-  font-size: ${fonts.sizeH1};
+  font-size: ${fonts.sizeH2};
   color: ${colors.title};
 `;
 

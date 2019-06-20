@@ -11,8 +11,11 @@ exports[`<ConventionExplainer /> is togglable 1`] = `
   background-color: #ebeff3;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -124,8 +127,11 @@ exports[`<ConventionExplainer /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

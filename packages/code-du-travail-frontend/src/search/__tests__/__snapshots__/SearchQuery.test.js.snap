@@ -50,7 +50,7 @@ exports[`<SearchQuery/> should render results 1`] = `
 
 .c7 {
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .c8 {

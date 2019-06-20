@@ -11,7 +11,11 @@ exports[`<ErroField /> should render error 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

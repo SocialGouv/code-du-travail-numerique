@@ -18,12 +18,7 @@ const fetchFiche = ({ slug }) =>
   );
 
 const Source = ({ name, url }) => (
-  <a
-    href={url}
-    className="external-link__after"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
   </a>
 );
@@ -75,7 +70,6 @@ const Intro = styled.div`
     margin-top: 0;
   }
   & > *:last-child {
-    margin-top: 0;
     margin-bottom: 0;
   }
 `;

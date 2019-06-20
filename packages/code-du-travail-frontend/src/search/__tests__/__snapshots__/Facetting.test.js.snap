@@ -9,7 +9,7 @@ exports[`<Facetting/> should render Facets 1`] = `
 
 .c2 {
   font-size: 0.9em;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;
   -ms-letter-spacing: 0.5px;

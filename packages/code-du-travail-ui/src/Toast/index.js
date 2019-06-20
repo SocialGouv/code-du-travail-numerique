@@ -6,17 +6,17 @@ import IconInfo from "react-feather/dist/icons/info";
 import IconSuccess from "react-feather/dist/icons/check";
 import IconClose from "react-feather/dist/icons/x";
 import Button from "../Button";
-import { box, colors, fonts, spacing } from "../theme";
+import { box, colors, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 
 const Toast = ({
   animate,
   children,
-  className,
   onRemove,
   timeout,
   variant,
-  wide
+  wide,
+  ...props
 }) => {
   let timer = null;
   let Icon = IconInfo;
@@ -38,12 +38,7 @@ const Toast = ({
   }, [timeout]);
 
   return (
-    <StyledToast
-      animate={animate}
-      variant={variant}
-      wide={wide}
-      className={className}
-    >
+    <StyledToast animate={animate} variant={variant} wide={wide} {...props}>
       <IconWrapper variant={variant}>
         <Icon />
       </IconWrapper>
@@ -131,8 +126,6 @@ const IconWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: ${spacing.base};
-  font-size: ${fonts.sizeH1};
-
   ${props => {
     return css`
       background-color: ${colors[`${props.variant}Background`]};

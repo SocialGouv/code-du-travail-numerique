@@ -90,11 +90,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
   animation: bcCCNc 0.35s ease-in;
 }
 
+.c12 > *:first-child {
+  margin-top: 0;
+}
+
+.c12 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c12.accordion__body--hidden {
   display: none;
 }
 
-.c6 {
+.c6:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -130,7 +138,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c4 {
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
@@ -224,12 +232,19 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin-top: 0;
 }
 
-.c1 {
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+.c18 > *:last-child {
+  margin-bottom: 0;
 }
 
-.c0 * > *:last-child {
+.c1 {
+  margin-bottom: 2rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 

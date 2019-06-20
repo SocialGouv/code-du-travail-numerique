@@ -23,7 +23,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   overflow-y: auto;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -152,6 +152,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 .c7 {
+  margin-top: 0.625rem;
+  width: 100%;
+}
+
+.c8 {
   display: block;
   margin-top: 1.25rem;
   color: #8393a7;
@@ -178,7 +183,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -265,14 +270,14 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             Saisissez votre numéro de département :
           </label>
           <input
-            class="full-width"
+            class="c7"
             id="id_1"
             maxlength="3"
             type="text"
           />
         </p>
         <small
-          class="c7"
+          class="c8"
         >
           Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
           <ul>
@@ -291,7 +296,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
           </ul>
         </small>
         <button
-          class="c8"
+          class="c9"
         >
           <svg
             fill="none"

@@ -7,8 +7,11 @@ exports[`<StepPrimes /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -128,7 +131,7 @@ exports[`<StepPrimes /> should render 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   margin-left: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .c8:focus,

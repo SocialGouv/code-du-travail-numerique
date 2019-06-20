@@ -11,7 +11,11 @@ exports[`<Anciennete /> should display error if anciennté < 8mois 1`] = `
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -33,7 +37,11 @@ exports[`<Anciennete /> should display error if anciennté < 12mois and licencie
   border-color: #cbd6e0;
 }
 
-.c0> *:last-child {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -73,8 +81,11 @@ exports[`<Anciennete /> should render 1`] = `
   padding: 0 1.25rem;
 }
 
-.c0 > *:last-child {
+.c0 > *:first-child {
   margin-top: 0;
+}
+
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -139,7 +150,7 @@ exports[`<Anciennete /> should render 1`] = `
 }
 
 .c1 {
-  font-size: 1.4rem;
+  font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }

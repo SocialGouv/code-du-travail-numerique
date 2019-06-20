@@ -14,7 +14,7 @@ import Table from "./Table";
 import Tabulator from "./Tabulator";
 import Title from "./Title";
 
-const { box, colors, fonts, spacing } = theme;
+const { box, colors, spacing } = theme;
 
 const parseChildren = (children, headingLevel) => (
   <ElementBuilder data={children} headingLevel={headingLevel} />
@@ -43,11 +43,14 @@ export function ElementBuilder({ data, headingLevel }) {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
     case "Introduction":
-      return (
-        <Introduction>
-          <ElementBuilder data={ignoreParagraph(data)} />
-        </Introduction>
-      );
+      if (ignoreParagraph(data)) {
+        return (
+          <Introduction>
+            <ElementBuilder data={ignoreParagraph(data)} />
+          </Introduction>
+        );
+      }
+      break;
     case "LienExterne":
       return <LienExterne data={data} />;
     case "LienExterneCommente":
@@ -119,9 +122,11 @@ const ANoter = styled.div`
   & > *:first-child {
     margin-top: 0;
   }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Introduction = styled.p`
   margin-bottom: ${spacing.large};
-  font-size: ${fonts.sizeH6};
 `;
