@@ -49,9 +49,6 @@ class Question extends React.Component {
       faq = []
     } = data.relatedItems;
 
-    console.log(data);
-    console.log(data.relatedItems);
-
     let author;
     switch (data._source.author) {
       case "DGT":
