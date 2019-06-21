@@ -2,7 +2,7 @@
 const find = require("unist-util-find");
 const queryString = require("query-string");
 const cdt = require("../code_du_travail/code-du-travail.json");
-const kali = require("../kali/kali.json");
+const kali = require("../kali/conventions.json");
 
 const isConventionCollective = qs => qs.idConvention;
 const isCodeDuTravail = qs => qs.cidTexte === "LEGITEXT000006072050";

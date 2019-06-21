@@ -4,9 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.6.0",
-    "promise-serial-exec": "^1.0.0",
-    "simple-oauth2": "^2.2.1"
+    "dila-api-client": "^0.0.3"
   },
   "scripts": {
     "start": "node fetch.js code-du-travail.json"

@@ -5,10 +5,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > ./kali.json"
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "dila-api-client": "^0.0.3",
+    "promise-serial-exec": "^1.0.0",
     "slugify": "^1.3.4"
   }
 }
