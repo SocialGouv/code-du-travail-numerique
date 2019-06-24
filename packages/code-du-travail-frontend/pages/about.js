@@ -4,12 +4,13 @@ import { Alert, Container, Section, Wrapper } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Metas } from "../src/common/Metas";
 
-const About = ({ pageUrl }) => (
+const About = ({ ogImage, pageUrl }) => (
   <PageLayout>
     <Metas
       url={pageUrl}
       title="À propos - Code du travail numérique"
       description="Service public gratuit pour faciliter l'accès au droit du travail. Obtenez une réponse détaillée à vos questions."
+      image={ogImage}
     />
     <Section>
       <Container narrow>

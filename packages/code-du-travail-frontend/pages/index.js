@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
+import styled from "styled-components";
+import { Toast, theme } from "@cdt/ui";
 
+import { Link } from "../routes";
 import Search from "../src/search/Search";
 import { HomeLayout } from "../src/layout/HomeLayout";
 import Themes from "../src/home/Themes";
@@ -20,6 +23,7 @@ const Home = ({ pageUrl, ogImage, data: { themes } }) => (
       description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
       image={ogImage}
     />
+    <ToastDroitDuTravail />
     <Search />
     <Themes themes={themes} />
     <Outils />
@@ -42,3 +46,40 @@ Home.getInitialProps = async () => {
   };
 };
 export default Home;
+
+const ToastDroitDuTravail = () => {
+  const [isToastHidden, setToastHidden] = useState(true);
+  useEffect(() => {
+    setToastHidden(localStorage.getItem("isToastHidden"));
+  });
+  if (isToastHidden) return null;
+  return (
+    <Wrapper>
+      <Toast
+        shadow
+        animate="from-top"
+        onRemove={() => {
+          localStorage.setItem("isToastHidden", true);
+          setToastHidden(true);
+        }}
+      >
+        <Link route="droit-du-travail">
+          <a>Le droit du travail, c‘est quoi ?</a>
+        </Link>
+      </Toast>
+    </Wrapper>
+  );
+};
+
+const { spacing } = theme;
+
+const Wrapper = styled.div`
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin: 0 auto;
+  padding: ${spacing.base};
+  z-index: 10000;
+  transform: translateX(-50%);
+`;
