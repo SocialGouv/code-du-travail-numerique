@@ -55,6 +55,7 @@ def populate_cdtn_documents():
                 'source': 'kali',
                 'slug': val['slug'],
                 'title': val['titre'],
+                'titleShort': val['titre_court'],
                 'text': f"IDCC {val['num']} {val['titre']}",
                 'url': val['url'],
                 'idcc': val['num'],

@@ -30,6 +30,15 @@ code_du_travail_numerique_mapping = {
                 },
             },
         },
+        # only for conventions from KALI:
+        "titleShort": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword"
+                }
+            }
+        },
         'text': {
             'type': 'text',
             'fields': {
