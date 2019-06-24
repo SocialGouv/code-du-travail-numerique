@@ -5,7 +5,7 @@ import { EchelonChimie } from "./EchelonChimie";
 import { YesNoQuestion } from "../../components/YesNoQuestion";
 import { TextQuestion } from "../../components/TextQuestion";
 
-function Step_Chimie() {
+function Step() {
   return (
     <Container>
       <h3>Chimie</h3>
@@ -42,4 +42,4 @@ function Step_Chimie() {
   );
 }
 
-export default Step_Chimie;
+export { Step };

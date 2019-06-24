@@ -4,6 +4,8 @@ exports[`getIndemnite 2k, 6ans d'ancienneté, 61ans, cadre, retraite possible 1`
 
 exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 10 + 3/10 * 2000 * 0"`;
 
+exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 2`] = `"4/10 * 2000 * 10 + 3/10 * 2000 * 0.41  + 4000- 6600"`;
+
 exports[`getIndemnite 2k, 12mois d'ancienneté, 55ans, ouvrier 1`] = `""`;
 
 exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, TAM 1`] = `"1/10 * 2000 * 2"`;

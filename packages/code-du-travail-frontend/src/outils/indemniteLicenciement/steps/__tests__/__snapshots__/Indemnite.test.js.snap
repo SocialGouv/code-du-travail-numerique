@@ -102,7 +102,7 @@ exports[`<StepIndemnite /> should render 1`] = `
         <div
           id="react-mathjax-preview-result"
         >
-          \`(1/4 * 2000 * 2.5) / 12\`
+          \`(1/4 * 2000 * 1.25) / 12 * 2\`
         </div>
       </div>
     </details>

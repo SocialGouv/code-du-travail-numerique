@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Step_0044 /> should ask for ope and licenciement eco 1`] = `
+exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -75,7 +75,7 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco 1`] = `
       Chimie
     </h3>
     <p>
-      Quel est votre échelon dans la convention collective ? 
+      Quel est votre échelon dans la convention collective ?
       <br />
       Vous pouvez le trouver sur votre bulletin de salaire
     </p>
@@ -280,7 +280,7 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco 1`] = `
 </div>
 `;
 
-exports[`<Step_0044 /> should ask for ope and licenciement eco and age 1`] = `
+exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -394,7 +394,7 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco and age 1`] = `
       Chimie
     </h3>
     <p>
-      Quel est votre échelon dans la convention collective ? 
+      Quel est votre échelon dans la convention collective ?
       <br />
       Vous pouvez le trouver sur votre bulletin de salaire
     </p>
@@ -616,7 +616,7 @@ exports[`<Step_0044 /> should ask for ope and licenciement eco and age 1`] = `
 </div>
 `;
 
-exports[`<Step_0044 /> should render 1`] = `
+exports[`<Step /> should render 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -665,7 +665,7 @@ exports[`<Step_0044 /> should render 1`] = `
       Chimie
     </h3>
     <p>
-      Quel est votre échelon dans la convention collective ? 
+      Quel est votre échelon dans la convention collective ?
       <br />
       Vous pouvez le trouver sur votre bulletin de salaire
     </p>

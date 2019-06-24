@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "react-testing-library";
-import Step_0044 from "../Step_0044";
+import { Step } from "../Step";
 import { Form } from "react-final-form";
 
-describe("<Step_0044 />", () => {
+describe("<Step />", () => {
   it("should render", () => {
     const onSubmit = jest.fn();
     const { container } = render(
-      <Form onSubmit={onSubmit} render={() => <Step_0044 />} />
+      <Form onSubmit={onSubmit} render={() => <Step />} />
     );
     expect(container).toMatchSnapshot();
   });
@@ -17,7 +17,7 @@ describe("<Step_0044 />", () => {
       <Form
         onSubmit={onSubmit}
         initialValues={{ anciennete: 6 }}
-        render={() => <Step_0044 />}
+        render={() => <Step />}
       />
     );
     expect(container).toMatchSnapshot();
@@ -28,7 +28,7 @@ describe("<Step_0044 />", () => {
       <Form
         onSubmit={onSubmit}
         initialValues={{ anciennete: 1.5 }}
-        render={() => <Step_0044 />}
+        render={() => <Step />}
       />
     );
     expect(container).toMatchSnapshot();

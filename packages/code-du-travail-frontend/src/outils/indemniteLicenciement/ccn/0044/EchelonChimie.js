@@ -4,7 +4,7 @@ import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
 
-import { coefficients } from "./0044_coefficient";
+import { coefficients } from "./coefficients";
 import { required } from "../../validators";
 import { Label } from "../../stepStyles";
 
@@ -33,7 +33,7 @@ function EchelonChimie({ name }) {
   return (
     <>
       <p>
-        Quel est votre échelon dans la convention collective ? <br />
+        Quel est votre échelon dans la convention collective ?<br />
         Vous pouvez le trouver sur votre bulletin de salaire
       </p>
       <Field name="echelon" validate={required}>

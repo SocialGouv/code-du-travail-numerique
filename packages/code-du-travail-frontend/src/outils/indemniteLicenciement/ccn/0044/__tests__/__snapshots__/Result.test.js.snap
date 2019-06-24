@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Result_0044 /> should render 1`] = `
+exports[`<Result /> should render 1`] = `
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -105,7 +105,7 @@ exports[`<Result_0044 /> should render 1`] = `
     <h2
       class="c1"
     >
-      Indemnité Conventionnelle
+      Convention collective nationale des industries chimiques et connexes
     </h2>
     <p>
       Le montant de l’indemnité est
@@ -144,7 +144,7 @@ exports[`<Result_0044 /> should render 1`] = `
       aria-pressed="false"
       class="c4"
     >
-       Recommencer une simulation 
+      Recommencer une simulation
     </button>
   </div>
 </div>

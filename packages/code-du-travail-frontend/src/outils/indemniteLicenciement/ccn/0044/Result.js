@@ -1,18 +1,16 @@
 import React from "react";
-
 import {
   getIndemnite as getIndemniteConventionnelle,
   getSalaireRef as getSalaireRefConventionnel
 } from "./indemnite";
-
 import { getIndemniteFromFinalForm } from "../../indemnite";
 import { IndemniteCCn } from "../../components/IndemniteConventionnelle";
 
-function ResultProprete({ form }) {
+function Result({ form }) {
   const state = form.getState();
 
   const {
-    salaires = [],
+    salaires,
     salaire,
     anciennete,
     dateNotification,
@@ -36,12 +34,7 @@ function ResultProprete({ form }) {
     salaire,
     dateNotification
   });
-
-  const {
-    indemniteConventionnelle,
-    formula,
-    error
-  } = getIndemniteConventionnelle({
+  const { indemniteConventionnelle, formula } = getIndemniteConventionnelle({
     salaireRef,
     indemnite: indemniteLegale,
     anciennete,
@@ -58,9 +51,8 @@ function ResultProprete({ form }) {
       formule={formula}
       formuleLegale={formuleLegale}
       branche={branche}
-      error={error}
     />
   );
 }
 
-export default ResultProprete;
+export { Result };

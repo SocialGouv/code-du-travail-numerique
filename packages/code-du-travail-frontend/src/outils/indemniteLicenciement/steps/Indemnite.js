@@ -17,10 +17,10 @@ function validateCCn(idcc) {
 }
 
 function StepIndemnite({ form }) {
-  const { indemnite, formula } = getIndemniteFromFinalForm(form);
+  const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
   return (
     <Container>
-      <IndemniteLegale indemnite={indemnite} formula={formula} />
+      <IndemniteLegale indemnite={indemniteLegale} formula={formuleLegale} />
       <br />
       <br />
       <SectionTitle>
