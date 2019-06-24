@@ -42,7 +42,7 @@ class Search extends React.Component {
       });
     }
     if (this.props.router.query.source) {
-      const source = this.props.router.query.source;
+      const source = this.props.router.query.source || "";
       const excludeSources = getExcludeSources(source);
       this.setState({ source, excludeSources });
     }
@@ -62,7 +62,7 @@ class Search extends React.Component {
     }
     this.setState({
       query: this.props.router.query.q,
-      source: this.props.router.query.source,
+      source: this.props.router.query.source || "",
       coord: coord,
       excludeSources: getExcludeSources(this.props.router.query.source || "")
     });
@@ -100,6 +100,9 @@ class Search extends React.Component {
         });
         return;
       case "source":
+        if (this.state.source === event.target.value) {
+          return;
+        }
         this.setState({
           source: event.target.value,
           excludeSources: getExcludeSources(event.target.value)

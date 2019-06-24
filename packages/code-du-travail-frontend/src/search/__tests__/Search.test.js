@@ -35,10 +35,19 @@ describe("<search />", () => {
     await waitForElement(() => getAllByRole("option"));
     expect(container).toMatchSnapshot();
   });
+
   it("should not navigate when user change facet if query is empty", () => {
     const { getBySelectText } = renderWithMock(<Search />);
     const select = getBySelectText(/Tous contenus/i);
     fireEvent.change(select, { target: { value: "faq" } });
+    expect(Router.pushRoute).not.toHaveBeenCalled();
+  });
+
+  it("should not navigate when user blur source facet", () => {
+    const { getBySelectText } = renderWithMock(<Search />, { query: { q } });
+    const select = getBySelectText(/Tous contenus/i);
+    fireEvent.focus(select);
+    fireEvent.blur(select);
     expect(Router.pushRoute).not.toHaveBeenCalled();
   });
 
