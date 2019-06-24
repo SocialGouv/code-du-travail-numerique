@@ -38,6 +38,10 @@ export const branches = [
       "Convention collective nationale Boucherie boucherie-charcuterie triperie"
   },
   {
+    value: "2120",
+    label: "Convention collective nationale des banques"
+  },
+  {
     value: "2344",
     label: "Convention collective nationale de la Sidérurgie"
   },

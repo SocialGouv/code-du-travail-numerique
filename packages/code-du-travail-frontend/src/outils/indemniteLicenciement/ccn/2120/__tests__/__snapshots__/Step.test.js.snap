@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Step /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  padding: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c4 {
+  max-width: 20rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h2
+      class="c1"
+    >
+      Motif du licenciement
+    </h2>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+        for="input-motif"
+      >
+        Préciser le motif de licenciement :
+      </label>
+      <select
+        class="c4"
+        id="input-motif"
+        name="motif"
+      >
+        <option
+          disabled=""
+          value=""
+        >
+          motifs...
+        </option>
+        <option
+          value="disciplinaire"
+        >
+          Motif disciplinaire
+        </option>
+        <option
+          value="non-disciplinaire"
+        >
+          Motif non disciplinaire
+        </option>
+        <option
+          value="eco"
+        >
+          Motif économique
+        </option>
+      </select>
+    </div>
+    <div
+      class="c2"
+    >
+      <label
+        class="c3"
+        for="input-categorie"
+      >
+        Précisez votre categorie professionnelle :
+      </label>
+      <select
+        class="c4"
+        id="input-categorie"
+        name="categorie"
+      >
+        <option
+          disabled=""
+          value=""
+        >
+          catégories...
+        </option>
+        <option
+          value="non-cadre"
+        >
+          Non cadre
+        </option>
+        <option
+          value="cadre"
+        >
+          Cadre
+        </option>
+        <option
+          value="ne-sais-pas"
+        >
+          Ne sait pas
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;

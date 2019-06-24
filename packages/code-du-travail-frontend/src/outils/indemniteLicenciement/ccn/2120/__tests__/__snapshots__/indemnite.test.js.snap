@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 1`] = `""`;
+
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 2`] = `"min(1/5 * 1846.15 * 21, 18 * (13 / 14.5) * 1846.15)"`;
+
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif economique 1`] = `"min(1/4 * 1846.15 * 21, 18 * (13 / 14.5) * 1846.15)"`;
+
+exports[`getIndemnite 2k, 12mois d'ancienneté 1`] = `""`;
+
+exports[`getIndemnite 2k, 19ans et 8mois d'ancienneté 1`] = `"min(1/5 * 1846.15 * 35, 18 * (13 / 14.5) * 1846.15)"`;
+
+exports[`getIndemnite 2k, 19ans et 8mois d'ancienneté, motif economique 1`] = `"min(1/4 * 1846.15 * 35, 18 * (13 / 14.5) * 1846.15)"`;
+
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000 1`] = `"min(1/5 * 1846.15 * 35, 15 * 1846.15)"`;
+
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000 1`] = `"min(1/4 * 1846.15 * 35, 18 * 1846.15)"`;
+
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000 1`] = `"min(1/5 * 1846.15 * 35, 15 * 1846.15)"`;
+
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000 1`] = `"min(1/5 * 1846.15 * 35, 15 * 1846.15)"`;

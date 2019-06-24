@@ -172,6 +172,11 @@ exports[`<StepIndemnite /> should render 1`] = `
           Convention collective nationale Boucherie boucherie-charcuterie triperie
         </option>
         <option
+          value="2120"
+        >
+          Convention collective nationale des banques
+        </option>
+        <option
           value="2344"
         >
           Convention collective nationale de la Sidérurgie
