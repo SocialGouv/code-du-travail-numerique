@@ -1,13 +1,8 @@
 import React from "react";
-import { render } from "react-testing-library";
 import Answer from "../Answer";
 import { icons } from "@cdt/ui/";
 
-import MockNextContext from "../../../test/MockNextContext";
-
-function renderWithMock(node, options) {
-  return render(<MockNextContext>{node}</MockNextContext>, options);
-}
+import { renderWithMock } from "../../../test/MockNextContext";
 
 describe("<Answer />", () => {
   it("should render", () => {
