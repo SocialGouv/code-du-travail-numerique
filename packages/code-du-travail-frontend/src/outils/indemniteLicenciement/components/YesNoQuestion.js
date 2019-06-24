@@ -34,7 +34,7 @@ function YesNoQuestion({ name, label, onChange }) {
           <span>Non</span>
         </Label>
       </RadioContainer>
-      <ErrorField name={name} immediate />
+      <ErrorField name={name} />
       {onChange && (
         <OnChange name={name}>{values => onChange(values)}</OnChange>
       )}

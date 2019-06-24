@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render, fireEvent } from "react-testing-library";
 import { ErrorField } from "../ErrorField";
 import { Form, Field } from "react-final-form";
 
@@ -8,7 +8,7 @@ describe("<ErroField />", () => {
     const onSubmit = jest.fn();
     const { container, getByTestId } = render(
       <Form
-        initialValues={{ absences: [{ type: "Grève", duration: 3 }] }}
+        initialValues={{ test: "a" }}
         onSubmit={onSubmit}
         render={() => (
           <>
@@ -24,7 +24,7 @@ describe("<ErroField />", () => {
       />
     );
     const input = getByTestId("test");
-    input.focus();
+    fireEvent.change(input, { target: { value: "" } });
     input.blur();
     expect(container).toMatchSnapshot();
   });
