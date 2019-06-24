@@ -108,7 +108,8 @@ exports[`<Result /> should render 1`] = `
       Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
     </h2>
     <p>
-      Le montant de l’indemnité est 
+      Le montant de l’indemnité est
+       
       <strong
         class="c2"
       >

@@ -62,7 +62,7 @@ function getIndemnite({
   if (avant27Sep2017 && anciennete >= 1) {
     if (isSmallAnciennete) {
       indemnite = (1 / 5) * salaireRef * anciennete;
-      formula = `(1/5 * ${round(salaireRef)} * ${anciennete}) / 12`;
+      formula = `(1/5 * ${round(salaireRef)} * ${round(anciennete)}) / 12`;
     } else {
       indemnite =
         (1 / 5) * salaireRef * anciennete +
@@ -74,7 +74,7 @@ function getIndemnite({
   } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {
       indemnite = (1 / 4) * salaireRef * anciennete;
-      formula = `(1/4 * ${round(salaireRef)} * ${anciennete}) / 12`;
+      formula = `(1/4 * ${round(salaireRef)} * ${round(anciennete)}) / 12`;
     } else {
       indemnite =
         (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
@@ -85,7 +85,7 @@ function getIndemnite({
   }
   if (inaptitude && indemnite > 0) {
     indemnite *= 2;
-    formula += "* 2";
+    formula += " * 2";
   }
 
   return {
@@ -118,12 +118,18 @@ function getIndemniteFromFinalForm(form) {
     primes
   });
 
-  return getIndemnite({
+  const { indemnite, formula } = getIndemnite({
     salaireRef,
     inaptitude,
     anciennete,
     dateNotification
   });
+
+  return {
+    salaireRefLegal: salaireRef,
+    indemniteLegale: indemnite,
+    formuleLegale: formula
+  };
 }
 
 export { getIndemnite, getSalaireRef, getIndemniteFromFinalForm, round };

@@ -19,7 +19,7 @@ const tests = [
     data: {
       ...initialData
     },
-    result: 500
+    result: 0
   },
   {
     title: "2k, 24mois d'ancienneté, 55ans, ouvrier",
@@ -123,6 +123,19 @@ const tests = [
       categorie: CADRE
     },
     result: 8000
+  },
+  {
+    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
+    data: {
+      ...initialData,
+      anciennete: 10.3,
+      age: 64,
+      hasRetirementAge: true,
+      tamDuration: 5,
+      cadreDuration: 120,
+      categorie: CADRE
+    },
+    result: 5650
   }
 ];
 describe("getIndemnite", () => {
@@ -143,5 +156,25 @@ describe("getIndemnite", () => {
       expect(res.indemniteConventionnelle).toBe(result);
       expect(res.formula).toMatchSnapshot();
     });
+  });
+  it("should return an error for anciennete < 2", () => {
+    const salaireRef = getSalaireRef({ ...initialData });
+    const { indemnite } = getIndemnite({
+      salaireRef,
+      ...initialData
+    });
+    const salaireRefConventionnel = getSalaireRefConventionnel({
+      ...initialData
+    });
+
+    const res = getIndemniteConventionnelle({
+      salaireRef: salaireRefConventionnel,
+      indemnite,
+      ...initialData
+    });
+
+    expect(res.error).toMatchInlineSnapshot(
+      `"Aucune indemnité de licenciement n’est prévue en deça de 2 ans d’ancienneté."`
+    );
   });
 });

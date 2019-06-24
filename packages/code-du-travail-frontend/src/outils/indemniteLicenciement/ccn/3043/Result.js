@@ -1,56 +1,33 @@
 import React from "react";
-import MathJax from "react-mathjax-preview";
-import { Container, Button } from "@cdt/ui";
-
-import { ErrorBoundary } from "../../../../common/ErrorBoundary";
 
 import {
   getIndemnite as getIndemniteConventionnelle,
   getSalaireRef as getSalaireRefConventionnel
 } from "./indemnite";
 
-import { branches } from "../../branches";
-import { getIndemnite, getSalaireRef } from "../../indemnite";
-import { SectionTitle, Highlight, SmallText } from "../../stepStyles";
+import { getIndemniteFromFinalForm } from "../../indemnite";
+import { IndemniteCCn } from "../../components/IndemniteConventionnelle";
 
 function ResultProprete({ form }) {
   const state = form.getState();
 
   const {
-    hasTempsPartiel = false,
-    hasSameSalaire = false,
-    inaptitude = false,
-    salairePeriods = [],
     salaires = [],
-    primes = [],
     salaire,
     anciennete,
     dateNotification,
-    branche,
     isEco,
     hasOpe,
     age,
-    groupe
+    groupe,
+    branche
   } = state.values;
 
-  const selectedBranche = branches.find(br => br.value === branche);
-
-  const salaireRefLegal = getSalaireRef({
-    hasTempsPartiel,
-    hasSameSalaire,
-    salaire,
-    salairePeriods,
-    salaires,
-    anciennete,
-    primes
-  });
-
-  const { indemnite } = getIndemnite({
-    salaireRef: salaireRefLegal,
-    anciennete,
-    inaptitude,
-    dateNotification
-  });
+  const {
+    salaireRefLegal,
+    indemniteLegale,
+    formuleLegale
+  } = getIndemniteFromFinalForm(form);
 
   const salaireRef = getSalaireRefConventionnel({
     salaireRefLegal,
@@ -59,13 +36,14 @@ function ResultProprete({ form }) {
     salaire,
     dateNotification
   });
+
   const {
     indemniteConventionnelle,
     formula,
     error
   } = getIndemniteConventionnelle({
     salaireRef,
-    indemnite,
+    indemnite: indemniteLegale,
     anciennete,
     isEco,
     hasOpe,
@@ -74,34 +52,14 @@ function ResultProprete({ form }) {
   });
 
   return (
-    <Container>
-      <SectionTitle>{selectedBranche.label}</SectionTitle>
-      {error ? (
-        <p>{error}</p>
-      ) : (
-        <React.Fragment>
-          <p>
-            Le montant de l’indemnité est{" "}
-            <Highlight>{indemniteConventionnelle} €</Highlight>{" "}
-            <SmallText>
-              {indemniteConventionnelle > indemnite
-                ? "sur la base du calcul de l'indemnité conventionelle"
-                : "sur la base du calcul de l’indemnité légale"}
-            </SmallText>
-          </p>
-          <br />
-          <details>
-            <summary>Voir le detail du calcul</summary>
-            <ErrorBoundary>
-              <MathJax math={"`" + formula + "`"} />
-            </ErrorBoundary>
-          </details>
-        </React.Fragment>
-      )}
-      <br />
-      <br />
-      <Button> Recommencer une simulation </Button>
-    </Container>
+    <IndemniteCCn
+      montant={indemniteConventionnelle}
+      indemniteLegale={indemniteLegale}
+      formule={formula}
+      formuleLegale={formuleLegale}
+      branche={branche}
+      error={error}
+    />
   );
 }
 

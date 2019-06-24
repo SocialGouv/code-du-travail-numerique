@@ -9,7 +9,7 @@ const initialValues = {
   fauteGrave: false,
   inaptitude: false,
   dateEntree: "2009-01-06",
-  anciennete: 10.583333,
+  anciennete: 10.58,
   dateNotification: "2019-06-03",
   dateSortie: "2019-09-02",
   hasAbsenceProlonge: false,

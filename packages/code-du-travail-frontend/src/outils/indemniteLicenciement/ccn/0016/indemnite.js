@@ -57,7 +57,8 @@ export function getIndemnite({
   let formula = "";
 
   if (Math.floor(anciennete) < 2) {
-    indemniteConventionnelle = indemnite;
+    error =
+      "Aucune indemnité de licenciement n’est prévue en deça de 2 ans d’ancienneté.";
   } else if (categorie === OUVRIER || categorie === TAM) {
     const bareme2_3 = {
       [OUVRIER]: { value: 1 / 10, label: "1/10" },
