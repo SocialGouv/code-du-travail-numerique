@@ -45,25 +45,23 @@ export default class Themes extends React.Component {
     return (
       <Section>
         <Container>
-          <Wrapper>
-            {title && <Title>{title}</Title>}
-            <Grid>
-              {themes.map(({ id, slug, label, parent }) => (
-                <GridCell key={slug + label}>
-                  <Link route="themes" params={{ slug: slug || "/" }} passHref>
-                    <Tile title={label}>
-                      <Category
-                        small={parent}
-                        title={label}
-                        icon={`/static/assets/icons/${iconsMap[id] ||
-                          "profiles.svg"}`}
-                      />
-                    </Tile>
-                  </Link>
-                </GridCell>
-              ))}
-            </Grid>
-          </Wrapper>
+          {title && <Title>{title}</Title>}
+          <Grid>
+            {themes.map(({ id, slug, label, parent }) => (
+              <GridCell key={slug + label}>
+                <Link route="themes" params={{ slug: slug || "/" }} passHref>
+                  <Tile title={label}>
+                    <Category
+                      small={parent}
+                      title={label}
+                      icon={`/static/assets/icons/${iconsMap[id] ||
+                        "profiles.svg"}`}
+                    />
+                  </Tile>
+                </Link>
+              </GridCell>
+            ))}
+          </Grid>
         </Container>
       </Section>
     );

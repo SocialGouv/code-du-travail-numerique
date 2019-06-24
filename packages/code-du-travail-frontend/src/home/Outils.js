@@ -53,36 +53,27 @@ export default class Outils extends React.PureComponent {
     return (
       <Section variant="white">
         <Container>
-          <Wrapper>
-            <Title>{title}</Title>
-            <Grid>
-              {outils.map(
-                ({
-                  title,
-                  text,
-                  icon,
-                  routeName = "index",
-                  slug,
-                  hrefTitle
-                }) => (
-                  <GridCell key={`${routeName}/${slug}`}>
-                    <Link
-                      route={routeName}
-                      params={slug ? { slug } : {}}
-                      passHref
-                    >
-                      <Tile title={hrefTitle}>
-                        <Category title={title} text={text} icon={icon} />
-                      </Tile>
-                    </Link>
-                  </GridCell>
-                )
-              )}
-              <GridCell>
-                <ConventionModal />
-              </GridCell>
-            </Grid>
-          </Wrapper>
+          <Title>{title}</Title>
+          <Grid>
+            {outils.map(
+              ({ title, text, icon, routeName = "index", slug, hrefTitle }) => (
+                <GridCell key={`${routeName}/${slug}`}>
+                  <Link
+                    route={routeName}
+                    params={slug ? { slug } : {}}
+                    passHref
+                  >
+                    <Tile title={hrefTitle}>
+                      <Category title={title} text={text} icon={icon} />
+                    </Tile>
+                  </Link>
+                </GridCell>
+              )
+            )}
+            <GridCell>
+              <ConventionModal />
+            </GridCell>
+          </Grid>
         </Container>
       </Section>
     );
