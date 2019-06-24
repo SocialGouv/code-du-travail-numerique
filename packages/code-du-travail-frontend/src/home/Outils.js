@@ -2,15 +2,7 @@ import React from "react";
 import { Link } from "../../routes";
 import styled from "styled-components";
 
-import {
-  Container,
-  Grid,
-  Category,
-  GridCell,
-  Section,
-  theme,
-  Wrapper
-} from "@cdt/ui";
+import { Container, Grid, Category, GridCell, Section, theme } from "@cdt/ui";
 import ConventionModal from "./ConventionModal";
 
 const outils = [
