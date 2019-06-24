@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import PropTypes from "prop-types";
 import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
@@ -9,7 +9,7 @@ import { Wizard } from "./Wizard";
 function CalculateurIndemnite() {
   const initialSteps = getInitialSteps();
   const [steps, dispatch] = useReducer(StepReducer, initialSteps);
-
+  const [values, setValues] = useState({});
   /**
    * The rules defined here allows to manage additionnal steps to the form
    */
@@ -25,7 +25,10 @@ function CalculateurIndemnite() {
       {async value => {
         if (value) {
           const module = await import(`./ccn/${value}`);
-          dispatch({ type: "add_branche", payload: module.steps });
+          const steps = module.steps.filter(({ condition = () => true }) =>
+            condition(values)
+          );
+          dispatch({ type: "add_branche", payload: steps });
         } else {
           dispatch({ type: "remove_branche" });
         }
@@ -47,7 +50,12 @@ function CalculateurIndemnite() {
       <Container>
         <Wrapper variant="light">
           <h1>Calculateur d&apos;indemnités de licenciement</h1>
-          <Wizard steps={steps} onSubmit={onSubmit} rules={rules} />
+          <Wizard
+            steps={steps}
+            onSubmit={onSubmit}
+            onUpdate={setValues}
+            rules={rules}
+          />
         </Wrapper>
       </Container>
     </Section>
