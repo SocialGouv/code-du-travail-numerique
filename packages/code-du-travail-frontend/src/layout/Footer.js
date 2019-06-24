@@ -32,16 +32,21 @@ const Footer = () => (
           <CategoryTitle>Code du travail numérique</CategoryTitle>
           <List>
             <StyledListItem key="0">
+              <Link route="droit-du-travail">
+                <a>Le droit du travail</a>
+              </Link>
+            </StyledListItem>
+            <StyledListItem key="1">
               <Link route="about">
                 <a>À propos</a>
               </Link>
             </StyledListItem>
-            <StyledListItem key="1">
+            <StyledListItem key="2">
               <Link route="mentions-legales">
                 <a>Mentions légales</a>
               </Link>
             </StyledListItem>
-            <StyledListItem key="2">
+            <StyledListItem key="3">
               <a href="mailto:codedutravail@beta.gouv.fr">Contact</a>
             </StyledListItem>
           </List>

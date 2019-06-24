@@ -1,0 +1,585 @@
+import React, { useState } from "react";
+import styled from "styled-components";
+import {
+  Accordion,
+  Button,
+  Container,
+  List,
+  ListItem,
+  Modal,
+  Section,
+  theme,
+  Toast
+} from "@cdt/ui";
+
+const Hierarchy = () => {
+  const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
+  const [isModal4MatieresOpen, setModal4MatieresOpen] = useState(false);
+  const [isModalGarantiesOpen, setModalGarantiesOpen] = useState(false);
+  return (
+    <>
+      <Section variant="white">
+        <Container narrow>
+          <h2>Existe-t-il une hiérarchie entre les textes ?</h2>
+          <p>
+            Comment déterminer quel texte s’applique quand il existe plusieurs
+            textes juridiques pour une même situation ? Quel texte est supérieur
+            à un autre ?
+          </p>
+          <p>
+            Le principe général en droit du travail est le suivant : lorsqu’il
+            existe plusieurs textes sur un même sujet, c’est le texte le plus
+            favorable au salarié qui s’applique. Ce principe continue a
+            s’appliquer en droit du travail mais il connaît quelques exceptions.
+          </p>
+          <p>
+            Pour vous aider à comprendre, vous trouverez ci-dessous un schèma
+            récapitulant l’articulation des textes entre eux.
+          </p>
+        </Container>
+        <Section>
+          <Container narrow>
+            <List>
+              <Li>
+                <NumberWrapper>
+                  <Number>1</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: <H3>Les textes internationaux et européens</H3>,
+                      body: (
+                        <>
+                          Les textes situés plus bas doivent être conformes aux
+                          textes internationaux et européens.
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+              <Li>
+                <NumberWrapper>
+                  <Number>2</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: <H3>La constitution</H3>,
+                      body: (
+                        <>
+                          Les textes situés plus bas doivent être conformes à la
+                          Constitution française ainsi qu’au bloc de
+                          constitutionnalité.
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+              <Li>
+                <NumberWrapper>
+                  <Number>3</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: (
+                        <H3>Lois, ordonnances et décrets (Code du travail) </H3>
+                      ),
+                      body: (
+                        <>
+                          <h4>
+                            Articulation entre le Code du travail et les
+                            conventions et accords collectifs
+                          </h4>
+                          <p>
+                            Il n’y a pas de règle d’articulation unique pour
+                            tous les articles du Code du travail. Il existe
+                            différentes articulations possibles :
+                          </p>
+                          <Accordion
+                            items={[
+                              {
+                                title: (
+                                  <h5>
+                                    Les conventions et accords collectifs
+                                    doivent respecter le Code du travail
+                                  </h5>
+                                ),
+                                body: (
+                                  <>
+                                    Il existe des règles dans le Code du travail
+                                    que les conventions et accords collectifs
+                                    doivent respecter. Les conventions et
+                                    accords collectifs peuvent toutefois prévoir
+                                    des mesures plus avantageuses pour le
+                                    salarié. Dans ce cas, c’est le texte le plus
+                                    avantageux pour le salarié qui s’applique.
+                                  </>
+                                )
+                              },
+                              {
+                                title: (
+                                  <h5>
+                                    Les conventions et accords collectifs
+                                    peuvent prévoir des mesures différentes que
+                                    celles posées par le Code du travail.
+                                  </h5>
+                                ),
+                                body: (
+                                  <>
+                                    Il existe d’autres règles dans le Code du
+                                    travail qui permettent aux conventions et
+                                    accords collectifs, sous certaines
+                                    conditions, de prévoir des règles
+                                    différentes de celles de la loi. Dans ce
+                                    cas, c’est l’accord collectif ou la
+                                    convention collective qui s’applique même
+                                    s’il est plus défavorable pour le salarié
+                                    que la loi.
+                                  </>
+                                )
+                              },
+                              {
+                                title: (
+                                  <h5>
+                                    Le Code du travail s’applique qu’en
+                                    l’absence de convention et d’accord
+                                    collectif sur le sujet
+                                  </h5>
+                                ),
+                                body: (
+                                  <>
+                                    Il existe également des règles dans le Code
+                                    du travail qui s’appliquent par défaut,
+                                    c’est-à-dire uniquement lorsqu’il n’y a pas
+                                    de convention ou d’accord collectif sur le
+                                    sujet. S’il existe une convention ou un
+                                    accord collectif sur le sujet alors la loi
+                                    ne s’applique pas.
+                                  </>
+                                )
+                              }
+                            ]}
+                          />
+                          <h4>
+                            Articulation entre le Code du travail et les
+                            Articulation entre le Code du travail et les autres
+                            textes situés en bas
+                          </h4>
+                          <p>
+                            Les textes situés en bas doivent respecter le Code
+                            du travail. Ils peuvent toutefois prévoir des
+                            mesures plus avantageuses pour le salarié que le
+                            Code du travail. Dans ce cas, c’est le texte le plus
+                            avantageux pour le salarié qui s’applique.
+                          </p>
+                          <h4>
+                            Attention à certaines règles du Code du travail !
+                          </h4>
+                          <p>
+                            Il existe des règles du Code du travail auxquelles
+                            tous les textes situés en bas ne peuvent pas déroger
+                            même si les textes sont plus avantageux pour le
+                            salarié. La loi interdit toute dérogation possible.
+                            Les textes situés en bas doivent purement et
+                            simplement respecter ces règles.
+                          </p>
+                          <p>
+                            <i>
+                              Exemple : la règle selon laquelle le Conseil des
+                              prud’hommes est le seul compétent pour les
+                              contentieux liés au travail.
+                            </i>
+                          </p>
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+              <Li>
+                <NumberWrapper>
+                  <Number>4</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: <H3>Les conventions et accords collectifs</H3>,
+                      body: (
+                        <>
+                          <h4>
+                            Articulation entre conventions et accords collectifs
+                            de niveaux différents
+                          </h4>
+                          <p>
+                            La règle qui détermine quel est le texte applicable
+                            est différente en fonction du niveau des textes
+                            comparés.
+                          </p>
+                          <Accordion
+                            items={[
+                              {
+                                title: (
+                                  <h5>
+                                    Articulation entre accord de branche et
+                                    accord d’entreprise
+                                  </h5>
+                                ),
+                                body: (
+                                  <>
+                                    <p>
+                                      Le principe est que l’accord d’entreprise
+                                      s’applique en priorité par rapport à
+                                      l’accord ou la convention de branche même
+                                      si, l’accord d’entreprise est plus
+                                      désavantageux pour le salarié que l’accord
+                                      de branche.
+                                    </p>
+                                    <Toast variant="warning">
+                                      Le principe ne s’applique pas dans{" "}
+                                      <Button
+                                        variant="link"
+                                        onClick={() =>
+                                          setModal13MatieresOpen(true)
+                                        }
+                                      >
+                                        13 matières
+                                      </Button>{" "}
+                                      où la loi reconnait la primauté à l’accord
+                                      de branche et{" "}
+                                      <Button
+                                        variant="link"
+                                        onClick={() =>
+                                          setModal4MatieresOpen(true)
+                                        }
+                                      >
+                                        4 matières
+                                      </Button>{" "}
+                                      où la branche elle même peut reconnaitre
+                                      sa primauté, sauf si l’accord d’entreprise
+                                      a{" "}
+                                      <Button
+                                        variant="link"
+                                        onClick={() =>
+                                          setModalGarantiesOpen(true)
+                                        }
+                                      >
+                                        des garanties au moins équivalentes
+                                      </Button>
+                                      .
+                                    </Toast>
+                                    <p>
+                                      Ces règles sont les mêmes pour
+                                      l’articulation entre accord de branche et
+                                      accord de groupe et entre accord de
+                                      branche et accord d’établissement.
+                                    </p>
+                                  </>
+                                )
+                              },
+                              {
+                                title: (
+                                  <h5>
+                                    Articulation entre accord de groupe et
+                                    accord d’entreprise
+                                  </h5>
+                                ),
+                                body: (
+                                  <>
+                                    L’accord de groupe s’applique en priorité
+                                    par rapport à l’accord d’entreprise ou
+                                    l’accord d’établissement si l’accord de
+                                    groupe l’indique dans son accord. Si rien
+                                    n’est indiqué dans l’accord de groupe alors
+                                    s’applique l’accord le plus avantageux pour
+                                    le salarié.
+                                  </>
+                                )
+                              },
+                              {
+                                title: (
+                                  <h5>
+                                    Articulation entre accord d’entreprise et
+                                    accord d’établissement
+                                  </h5>
+                                ),
+                                body: (
+                                  <>
+                                    L’accord d’entreprise s’applique par rapport
+                                    à l’accord d’établissement si l’accord
+                                    d’entreprise l’indique dans son accord. Si
+                                    rien n’est indiqué dans l’accord
+                                    d’entreprise alors s’applique l’accord le
+                                    plus avantageux pour le salarié.
+                                  </>
+                                )
+                              }
+                            ]}
+                          />
+                          <h4>
+                            Articulation entre les conventions et accords
+                            collectifs et les textes situés en bas
+                          </h4>
+                          <p>
+                            Les textes situés en bas doivent respecter les
+                            conventions et accords collectifs. Ils peuvent être
+                            plus avantageux pour le salarié. Dans ce cas, c’est
+                            le texte le plus avantageux pour le salarié qui
+                            s’applique.
+                          </p>
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+              <Li>
+                <NumberWrapper>
+                  <Number>5</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: (
+                        <H3>Les usages et les engagements unilatériaux</H3>
+                      ),
+                      body: (
+                        <>
+                          Les textes situés en bas doivent respecter les usages
+                          et les engagements unilatéraux. Ils peuvent être plus
+                          avantageux pour le salarié. Dans ce cas, c’est le
+                          texte le plus avantageux pour le salarié qui
+                          s’applique.
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+              <Li>
+                <NumberWrapper>
+                  <Number>6</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: <H3>Le réglement intérieur de l’entreprise</H3>,
+                      body: (
+                        <>
+                          Le contrat de travail doit respecter les textes situés
+                          en haut. Il peut être plus avantageux pour le salarié.
+                          Dans ce cas, c’est le texte le plus avantageux pour le
+                          salarié qui s’applique.
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+              <Li>
+                <NumberWrapper>
+                  <Number>7</Number>
+                </NumberWrapper>
+                <HierarchyAccordion
+                  items={[
+                    {
+                      title: <H3>Le contrat de travail</H3>,
+                      body: (
+                        <>
+                          Le contrat de travail doit respecter les textes situés
+                          en haut. Il peut prévoir des mesures plus avantageuse
+                          pour le salarié. Dans ce cas, c’est le contrat de
+                          travail qui s’applique.
+                        </>
+                      )
+                    }
+                  ]}
+                />
+              </Li>
+            </List>
+          </Container>
+        </Section>
+      </Section>
+      <Modal
+        isOpen={isModal13MatieresOpen}
+        onDismiss={() => setModal13MatieresOpen(false)}
+      >
+        <ListContainer>
+          <Ul>
+            <li>
+              Salaires <strong>minima</strong>
+            </li>
+            <li>Classifications</li>
+            <li>Mutualisation des fonds de financement du paritarisme</li>
+            <li>Mutualisation des fonds de la formation professionnelle</li>
+            <li>Protection sociale complémentaire</li>
+            <li>Durée du travail (certaines mesures seulement)</li>
+            <li>
+              CDD et contrats de travail temporaire (durée totale,
+              renouvellement, délai de carence et délai de transmission des
+              contrats)
+            </li>
+          </Ul>
+          <Ul>
+            <li> CDI de chantier</li>
+            <li>Egalité professionnelle </li>
+            <li>
+              Conditions et durées de renouvellement de la période d’essai
+            </li>
+            <li>
+              Transfert des contrats de travail en cas de changement de
+              prestataire
+            </li>
+            <li>
+              2 cas de mise à disposition d’un salarié temporaire auprès d’une
+              entreprise utilisatrice
+            </li>
+            <li>
+              Rémunération minimale du salarié porté et montant de l’indemnité
+              d’apport d’affaire
+            </li>
+          </Ul>
+        </ListContainer>
+      </Modal>
+      <Modal
+        isOpen={isModal4MatieresOpen}
+        onDismiss={() => setModal4MatieresOpen(false)}
+      >
+        <ListContainer>
+          <Ul>
+            <li>
+              La prévention des effets de l’exposition aux facteurs de risques
+              professionnels
+            </li>
+            <li>
+              L’insertion professionnelle et le maintien dans l’emploi des
+              travailleurs handicapés
+            </li>
+          </Ul>
+          <Ul>
+            <li>
+              Seuil de désignation, nombre et valorisation des parcours
+              syndicaux des délégués syndicaux
+            </li>
+            <li>Les primes pour travaux dangereux ou insalubres</li>
+          </Ul>
+        </ListContainer>
+      </Modal>
+      <Modal
+        isOpen={isModalGarantiesOpen}
+        onDismiss={() => setModalGarantiesOpen(false)}
+      >
+        <NoMarginContainer>
+          <p>
+            Si l’accord d’entreprise assure des garanties au moins équivalentes,
+            c’est-à-dire qu’il “fait aussi bien”, que la branche dans une des 17
+            matières alors il s’applique en priorité par rapport à la convention
+            ou l’accord de branche.
+            <br />
+            Pour cela, il faut comparer par matière (exemple, égalité
+            professionnelle) les mesures prévues par l’accord d’entreprise et
+            les mesures prévues par l’accord de branche.
+          </p>
+          <p>
+            Dans la matière en question, les mesures prévues par l’accord
+            d’entreprise doivent avoir au global la même valeur pour la
+            collectivité des salariés que les mesures prévues par l’accord de
+            branche. La collectivités des salariés ne doit pas y perdre.
+          </p>
+        </NoMarginContainer>
+      </Modal>
+    </>
+  );
+};
+
+export default Hierarchy;
+
+const { breakpoints, colors, fonts, spacing } = theme;
+
+const Li = styled(ListItem)`
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex-flow: column;
+    margin-top: ${spacing.interComponent};
+  }
+`;
+
+const NumberWrapper = styled.div`
+  position: absolute;
+  flex: 0 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -100px;
+  height: 100%;
+  @media (max-width: ${breakpoints.tablet}) {
+    flex: 0 0 auto;
+    position: relative;
+    left: 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: ${colors.elementBorder};
+    @media (max-width: ${breakpoints.tablet}) {
+      display: none;
+    }
+  }
+`;
+
+const Number = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem
+  height: 3rem;
+  color: ${colors.white};
+  font-size: ${fonts.sizeH4};
+  font-weight: bold;
+  background-color: ${colors.primaryBackground};
+  border-radius: 50%;
+`;
+
+const HierarchyAccordion = styled(Accordion)`
+  flex: 1 1 auto;
+  padding: ${spacing.small} 0;
+`;
+
+const H3 = styled.h3`
+  margin: ${spacing.small} ${spacing.base};
+`;
+
+const ListContainer = styled.div`
+  display: flex;
+  @media (max-width: ${breakpoints.mobile}) {
+    display: block;
+  }
+`;
+
+const Ul = styled.ul`
+  flex: 1 1 50%;
+  margin: 0;
+  & + & {
+    margin-left: ${spacing.interComponent};
+    @media (max-width: ${breakpoints.mobile}) {
+      margin-left: 0;
+    }
+  }
+`;
+
+const NoMarginContainer = styled.div`
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+`;

@@ -72,9 +72,15 @@ module.exports = routes()
   // http://localhost:3000/theme/rupture-de-contrat/la-rupture-conventionnelle
   .add({ name: "themes", page: "theme", pattern: "/themes/:slug*" })
 
+  // http://localhost:3000/droit-du-travail
+  .add({
+    name: "droit-du-travail",
+    page: "droit-du-travail",
+    pattern: "/droit-du-travail"
+  })
   // http://localhost:3000/a-propos
   .add({ name: "about", page: "about", pattern: "/a-propos" })
-  // http://localhost:3000/a-propos
+  // http://localhost:3000/mentions-legales
   .add({
     name: "mentions-legales",
     page: "mentions-legales",
