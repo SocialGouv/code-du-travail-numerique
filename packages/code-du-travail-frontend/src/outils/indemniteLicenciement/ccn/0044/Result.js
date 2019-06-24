@@ -2,11 +2,11 @@ import React from "react";
 import {
   getIndemnite as getIndemniteConventionnelle,
   getSalaireRef as getSalaireRefConventionnel
-} from "./0044_indemnite";
+} from "./indemnite";
 import { getIndemniteFromFinalForm } from "../../indemnite";
 import { IndemniteCCn } from "../../components/IndemniteConventionnelle";
 
-function Result_Chimie({ form }) {
+function Result({ form }) {
   const state = form.getState();
 
   const {
@@ -55,4 +55,4 @@ function Result_Chimie({ form }) {
   );
 }
 
-export default Result_Chimie;
+export { Result };

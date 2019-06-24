@@ -1,14 +1,14 @@
-import Step_0044 from "./Step_0044";
-import Result_0044 from "./Result_0044";
+import { Step } from "./Step";
+import { Result } from "./Result";
 
 export const steps = [
   {
-    component: Step_0044,
+    component: Step,
     name: "branche_infos",
     label: "Informations particulières"
   },
   {
-    component: Result_0044,
+    component: Result,
     name: "branche_result",
     label: "Indemnité conventionnelle"
   }

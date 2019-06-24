@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-testing-library";
-import Result_0044 from "../Result_0044";
+import { Result } from "../Result";
 import { Form } from "react-final-form";
 
 const initialValues = {
@@ -19,14 +19,14 @@ const initialValues = {
   groupe: "I"
 };
 
-describe("<Result_0044 />", () => {
+describe("<Result />", () => {
   it("should render", () => {
     const onSubmit = jest.fn();
     const { container } = render(
       <Form
         initialValues={initialValues}
         onSubmit={onSubmit}
-        render={({ form }) => <Result_0044 form={form} />}
+        render={({ form }) => <Result form={form} />}
       />
     );
     expect(container).toMatchSnapshot();

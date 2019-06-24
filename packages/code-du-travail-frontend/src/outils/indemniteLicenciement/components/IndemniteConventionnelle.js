@@ -49,7 +49,7 @@ function IndemniteCCn({
       )}
       <br />
       <br />
-      <Button> Recommencer une simulation </Button>
+      <Button>Recommencer une simulation</Button>
     </Container>
   );
 }

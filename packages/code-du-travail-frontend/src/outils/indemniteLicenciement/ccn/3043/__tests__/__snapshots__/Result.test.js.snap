@@ -144,7 +144,7 @@ exports[`<Result /> should render 1`] = `
       aria-pressed="false"
       class="c4"
     >
-       Recommencer une simulation 
+      Recommencer une simulation
     </button>
   </div>
 </div>

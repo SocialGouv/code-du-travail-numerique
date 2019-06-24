@@ -1,4 +1,4 @@
-import { getIndemnite, getSalaireRef } from "../0044_indemnite";
+import { getIndemnite, getSalaireRef } from "../indemnite";
 import {
   getIndemnite as getIndemniteLegale,
   getSalaireRef as getSalaireRefLegal
