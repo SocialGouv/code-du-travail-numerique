@@ -24,9 +24,8 @@ function getIdccBody({ query }) {
                 }
               },
               {
-                multi_match: {
-                  query: `${query}`,
-                  fields: "idcc.*"
+                prefix: {
+                  idcc: `${query}`
                 }
               },
               {
