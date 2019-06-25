@@ -44,6 +44,13 @@ module.exports = routes()
     pattern: "/modeles-de-courriers/:slug"
   })
 
+  // http://localhost:3000/liste-conventions
+  .add({
+    name: "liste-conventions",
+    page: "liste-conventions",
+    pattern: "/liste-conventions-collectives"
+  })
+
   // http://localhost:3000/kali/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
   .add({
     name: "kali",

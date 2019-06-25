@@ -28,7 +28,6 @@ class CompanyForm extends React.Component {
     const { company } = this.state;
     return (
       <form onSubmit={e => e.preventDefault()}>
-        <Title>Recherche par SIREN ou SIRET</Title>
         Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir
         votre convention collective&nbsp;:
         <SuggestWrapper>

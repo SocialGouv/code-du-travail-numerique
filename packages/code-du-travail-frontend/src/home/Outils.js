@@ -11,7 +11,6 @@ import {
   theme,
   Wrapper
 } from "@cdt/ui";
-import ConventionModal from "./ConventionModal";
 
 const outils = [
   {
@@ -38,6 +37,14 @@ const outils = [
     text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
     routeName: "outils",
     slug: "simulateur-embauche"
+  },
+  {
+    icon: "/static/assets/icons/book_web.svg",
+    title: "Conventions collectives",
+    hrefTitle: "Trouvez simplement la convention collective dont vous dépendez",
+    text: "Trouvez simplement la convention collective dont vous dépendez",
+    routeName: "liste-conventions",
+    slug: "liste-conventions-collectives"
   }
 ];
 
@@ -78,9 +85,6 @@ export default class Outils extends React.PureComponent {
                   </GridCell>
                 )
               )}
-              <GridCell>
-                <ConventionModal />
-              </GridCell>
             </Grid>
           </Wrapper>
         </Container>

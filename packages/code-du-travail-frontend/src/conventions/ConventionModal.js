@@ -39,7 +39,6 @@ class ConventionModal extends React.Component {
           />
         </Button>
         <Modal isOpen={modalIsOpen} onDismiss={this.closeModal}>
-          <ConventionForm onSearch={searchIdcc} />
           <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
         </Modal>
       </>
