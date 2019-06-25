@@ -22,11 +22,6 @@ const Hierarchy = () => {
         <Container narrow>
           <h2>Existe-t-il une hiérarchie entre les textes ?</h2>
           <p>
-            Comment déterminer quel texte s’applique quand il existe plusieurs
-            textes juridiques pour une même situation ? Quel texte est supérieur
-            à un autre ?
-          </p>
-          <p>
             Le principe général en droit du travail est le suivant : lorsqu’il
             existe plusieurs textes sur un même sujet, c’est le texte le plus
             favorable au salarié qui s’applique. Ce principe continue a
@@ -65,7 +60,7 @@ const Hierarchy = () => {
                 <HierarchyAccordion
                   items={[
                     {
-                      title: <H3>La constitution</H3>,
+                      title: <H3>La Constitution</H3>,
                       body: (
                         <>
                           Les textes situés plus bas doivent être conformes à la
@@ -95,8 +90,8 @@ const Hierarchy = () => {
                           </h4>
                           <p>
                             Il n’y a pas de règle d’articulation unique pour
-                            tous les articles du Code du travail. Il existe
-                            différentes articulations possibles :
+                            tous les articles du Code du travail. Il existe 3
+                            articulations possibles :
                           </p>
                           <Accordion
                             items={[
@@ -144,9 +139,9 @@ const Hierarchy = () => {
                               {
                                 title: (
                                   <h5>
-                                    Le Code du travail s’applique qu’en
-                                    l’absence de convention et d’accord
-                                    collectif sur le sujet
+                                    En l’absence de convention ou d’accord
+                                    collectif sur le sujet, le Code du travail
+                                    s’applique
                                   </h5>
                                 ),
                                 body: (
@@ -163,18 +158,6 @@ const Hierarchy = () => {
                               }
                             ]}
                           />
-                          <h4>
-                            Articulation entre le Code du travail et les
-                            Articulation entre le Code du travail et les autres
-                            textes situés en bas
-                          </h4>
-                          <p>
-                            Les textes situés en bas doivent respecter le Code
-                            du travail. Ils peuvent toutefois prévoir des
-                            mesures plus avantageuses pour le salarié que le
-                            Code du travail. Dans ce cas, c’est le texte le plus
-                            avantageux pour le salarié qui s’applique.
-                          </p>
                           <h4>
                             Attention à certaines règles du Code du travail !
                           </h4>
@@ -293,8 +276,8 @@ const Hierarchy = () => {
                                     l’accord d’établissement si l’accord de
                                     groupe l’indique dans son accord. Si rien
                                     n’est indiqué dans l’accord de groupe alors
-                                    s’applique l’accord le plus avantageux pour
-                                    le salarié.
+                                    l’accord le plus avantageux pour le salarié
+                                    s’applique.
                                   </>
                                 )
                               },
@@ -307,28 +290,17 @@ const Hierarchy = () => {
                                 ),
                                 body: (
                                   <>
-                                    L’accord d’entreprise s’applique par rapport
-                                    à l’accord d’établissement si l’accord
-                                    d’entreprise l’indique dans son accord. Si
-                                    rien n’est indiqué dans l’accord
-                                    d’entreprise alors s’applique l’accord le
-                                    plus avantageux pour le salarié.
+                                    L’accord d’entreprise s’applique en priorité
+                                    par rapport à l’accord d’établissement si
+                                    l’accord d’entreprise l’indique dans son
+                                    accord. Si rien n’est indiqué dans l’accord
+                                    d’entreprise alors l’accord le plus
+                                    avantageux pour le salarié s’applique.
                                   </>
                                 )
                               }
                             ]}
                           />
-                          <h4>
-                            Articulation entre les conventions et accords
-                            collectifs et les textes situés en bas
-                          </h4>
-                          <p>
-                            Les textes situés en bas doivent respecter les
-                            conventions et accords collectifs. Ils peuvent être
-                            plus avantageux pour le salarié. Dans ce cas, c’est
-                            le texte le plus avantageux pour le salarié qui
-                            s’applique.
-                          </p>
                         </>
                       )
                     }
@@ -347,11 +319,10 @@ const Hierarchy = () => {
                       ),
                       body: (
                         <>
-                          Les textes situés en bas doivent respecter les usages
-                          et les engagements unilatéraux. Ils peuvent être plus
-                          avantageux pour le salarié. Dans ce cas, c’est le
-                          texte le plus avantageux pour le salarié qui
-                          s’applique.
+                          Les usages et les engagements unilatéraux doivent
+                          respecter les textes situés en haut. Ils peuvent être
+                          plus avantageux pour le salarié. Dans ce cas, ce sont
+                          les textes les plus avantageux qui s’appliquent.
                         </>
                       )
                     }
@@ -368,10 +339,10 @@ const Hierarchy = () => {
                       title: <H3>Le réglement intérieur de l’entreprise</H3>,
                       body: (
                         <>
-                          Le contrat de travail doit respecter les textes situés
-                          en haut. Il peut être plus avantageux pour le salarié.
-                          Dans ce cas, c’est le texte le plus avantageux pour le
-                          salarié qui s’applique.
+                          Le règlement intérieur doit respecter les textes
+                          situés en haut. Il peut être plus avantageux pour le
+                          salarié. Dans ce cas, c’est le texte le plus
+                          avantageux pour le salarié qui s’applique.
                         </>
                       )
                     }
@@ -389,7 +360,7 @@ const Hierarchy = () => {
                       body: (
                         <>
                           Le contrat de travail doit respecter les textes situés
-                          en haut. Il peut prévoir des mesures plus avantageuse
+                          en haut. Il peut prévoir des mesures plus avantageuses
                           pour le salarié. Dans ce cas, c’est le contrat de
                           travail qui s’applique.
                         </>

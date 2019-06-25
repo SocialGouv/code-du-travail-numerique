@@ -1161,7 +1161,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                   </li>
                 </ul>
                 <p>
-                  Le Conseil de l’Europe, organisation intergouvernementale distincte de l’Union Europe, a adopté 2 textes importants en droit du travail :
+                  Le Conseil de l’Europe, organisation intergouvernementale distincte de l’Union Européenne, a adopté 2 textes importants en droit du travail :
                 </p>
                 <ul>
                   <li>
@@ -1381,9 +1381,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
           Existe-t-il une hiérarchie entre les textes ?
         </h2>
         <p>
-          Comment déterminer quel texte s’applique quand il existe plusieurs textes juridiques pour une même situation ? Quel texte est supérieur à un autre ?
-        </p>
-        <p>
           Le principe général en droit du travail est le suivant : lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte le plus favorable au salarié qui s’applique. Ce principe continue a s’appliquer en droit du travail mais il connaît quelques exceptions.
         </p>
         <p>
@@ -1475,7 +1472,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     <h3
                       class="c33"
                     >
-                      La constitution
+                      La Constitution
                     </h3>
                     <div
                       class="c21"
@@ -1539,7 +1536,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                       Articulation entre le Code du travail et les conventions et accords collectifs
                     </h4>
                     <p>
-                      Il n’y a pas de règle d’articulation unique pour tous les articles du Code du travail. Il existe différentes articulations possibles :
+                      Il n’y a pas de règle d’articulation unique pour tous les articles du Code du travail. Il existe 3 articulations possibles :
                     </p>
                     <div
                       class="accordion"
@@ -1612,7 +1609,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           tabindex="0"
                         >
                           <h5>
-                            Le Code du travail s’applique qu’en l’absence de convention et d’accord collectif sur le sujet
+                            En l’absence de convention ou d’accord collectif sur le sujet, le Code du travail s’applique
                           </h5>
                           <div
                             class="c21"
@@ -1629,12 +1626,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
                         </div>
                       </div>
                     </div>
-                    <h4>
-                      Articulation entre le Code du travail et les Articulation entre le Code du travail et les autres textes situés en bas
-                    </h4>
-                    <p>
-                      Les textes situés en bas doivent respecter le Code du travail. Ils peuvent toutefois prévoir des mesures plus avantageuses pour le salarié que le Code du travail. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
-                    </p>
                     <h4>
                       Attention à certaines règles du Code du travail !
                     </h4>
@@ -1826,7 +1817,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           class="c22 accordion__body--hidden"
                           id="accordion__body-19"
                         >
-                          L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors s’applique l’accord le plus avantageux pour le salarié.
+                          L’accord de groupe s’applique en priorité par rapport à l’accord d’entreprise ou l’accord d’établissement si l’accord de groupe l’indique dans son accord. Si rien n’est indiqué dans l’accord de groupe alors l’accord le plus avantageux pour le salarié s’applique.
                         </div>
                       </div>
                       <div
@@ -1854,16 +1845,10 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           class="c22 accordion__body--hidden"
                           id="accordion__body-20"
                         >
-                          L’accord d’entreprise s’applique par rapport à l’accord d’établissement si l’accord d’entreprise l’indique dans son accord. Si rien n’est indiqué dans l’accord d’entreprise alors s’applique l’accord le plus avantageux pour le salarié.
+                          L’accord d’entreprise s’applique en priorité par rapport à l’accord d’établissement si l’accord d’entreprise l’indique dans son accord. Si rien n’est indiqué dans l’accord d’entreprise alors l’accord le plus avantageux pour le salarié s’applique.
                         </div>
                       </div>
                     </div>
-                    <h4>
-                      Articulation entre les conventions et accords collectifs et les textes situés en bas
-                    </h4>
-                    <p>
-                      Les textes situés en bas doivent respecter les conventions et accords collectifs. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -1910,7 +1895,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c22 accordion__body--hidden"
                     id="accordion__body-12"
                   >
-                    Les textes situés en bas doivent respecter les usages et les engagements unilatéraux. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                    Les usages et les engagements unilatéraux doivent respecter les textes situés en haut. Ils peuvent être plus avantageux pour le salarié. Dans ce cas, ce sont les textes les plus avantageux qui s’appliquent.
                   </div>
                 </div>
               </div>
@@ -1957,7 +1942,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c22 accordion__body--hidden"
                     id="accordion__body-13"
                   >
-                    Le contrat de travail doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
+                    Le règlement intérieur doit respecter les textes situés en haut. Il peut être plus avantageux pour le salarié. Dans ce cas, c’est le texte le plus avantageux pour le salarié qui s’applique.
                   </div>
                 </div>
               </div>
@@ -2004,7 +1989,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
                     class="c22 accordion__body--hidden"
                     id="accordion__body-14"
                   >
-                    Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuse pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
+                    Le contrat de travail doit respecter les textes situés en haut. Il peut prévoir des mesures plus avantageuses pour le salarié. Dans ce cas, c’est le contrat de travail qui s’applique.
                   </div>
                 </div>
               </div>

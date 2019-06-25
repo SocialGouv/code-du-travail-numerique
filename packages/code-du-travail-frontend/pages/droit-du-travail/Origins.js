@@ -217,7 +217,7 @@ const accordionItemsRight = [
         </ul>
         <p>
           Le Conseil de l’Europe, organisation intergouvernementale distincte de
-          l’Union Europe, a adopté 2 textes importants en droit du travail :
+          l’Union Européenne, a adopté 2 textes importants en droit du travail :
         </p>
         <ul>
           <li>
