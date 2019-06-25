@@ -180,40 +180,38 @@ class Search extends React.Component {
                 Posez votre question sur le droit du travail
               </SearchLabel>
               <SearchForm onSubmit={this.onFormSubmit}>
-                <SearchFields>
-                  <SearchInputIcon />
-                  <SearchSources htmlFor="contentSource">
-                    <ScreenReaderOnly type={"inline"}>
-                      Filtrer par type de contenu
-                    </ScreenReaderOnly>
-                    <SearchSourcesIcon />
-                    <SearchSourcesValue
-                      id="contentSource"
-                      onChange={this.onChange}
-                      onBlur={this.onChange}
-                      value={source}
-                      name="source"
-                    >
-                      <option value="">Tous contenus</option>
-                      <option value="faq">Réponses</option>
-                      <option value="code_du_travail">Code du travail</option>
-                      <option value="fiches">Fiches</option>
-                      <option value="modeles_de_courriers">Modèles</option>
-                      <option value="outils">Outils</option>
-                      <option value="annuaire">Annuaire</option>
-                    </SearchSourcesValue>
-                  </SearchSources>
-                  <SearchInput
+                <SearchInputIcon />
+                <SearchInput
+                  onChange={this.onChange}
+                  query={query}
+                  placeholder="Recherche"
+                  onSearch={this.onSearch}
+                  onSelect={this.onSelect}
+                  onClear={this.onClear}
+                  suggestions={suggestions}
+                />
+                <SearchSources htmlFor="contentSource">
+                  <ScreenReaderOnly type={"inline"}>
+                    Filtrer par type de contenu
+                  </ScreenReaderOnly>
+                  <SearchSourcesIcon />
+                  <SearchSourcesValue
+                    id="contentSource"
                     onChange={this.onChange}
-                    query={query}
-                    placeholder="Recherche"
-                    onSearch={this.onSearch}
-                    onSelect={this.onSelect}
-                    onClear={this.onClear}
-                    suggestions={suggestions}
-                  />
-                </SearchFields>
-                <Button type="submit">Rechercher</Button>
+                    onBlur={this.onChange}
+                    value={source}
+                    name="source"
+                  >
+                    <option value="">Tous contenus</option>
+                    <option value="faq">Réponses</option>
+                    <option value="code_du_travail">Code du travail</option>
+                    <option value="fiches">Fiches</option>
+                    <option value="modeles_de_courriers">Modèles</option>
+                    <option value="outils">Outils</option>
+                    <option value="annuaire">Annuaire</option>
+                  </SearchSourcesValue>
+                </SearchSources>
+                <Submit type="submit">Rechercher</Submit>
               </SearchForm>
             </StyledSearch>
           </Container>
@@ -250,27 +248,12 @@ const StyledSearch = styled.div`
 const SearchForm = styled.form`
   display: flex;
   margin: 0 auto;
-  padding: ${spacing.small} 0;
+  padding: 0;
   position: relative;
   width: 90%;
-  & button {
-    margin-left: ${spacing.xsmall};
-  }
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
     height: auto;
-    & button {
-      margin-left: 0;
-    }
-  }
-`;
-
-const SearchFields = styled.div`
-  display: flex;
-  flex: 1 1 auto;
-  position: relative;
-  @media (max-width: ${breakpoints.mobile}) {
-    margin-bottom: ${spacing.xsmall};
   }
 `;
 
@@ -278,50 +261,22 @@ const SearchInputIcon = styled(SearchIconWithClipboard)`
   position: absolute;
   left: 0;
   top: 0;
-  padding: ${spacing.medium} 0 0 ${spacing.medium};
-  width: 2.55rem;
+  margin: ${spacing.base} 0 0 ${spacing.medium};
+  width: 1.3rem;
+  height: 1.3rem;
   @media (max-width: ${breakpoints.mobile}) {
     display: none;
   }
 `;
 
-const SearchSources = styled.label`
-  display: flex;
-  position: absolute;
-  right: 0;
-  margin: ${spacing.small};
-  align-items: center;
-  background-color: ${colors.lighterGrey};
-  border: none;
-  border-radius: ${box.borderRadius};
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
-const SearchSourcesIcon = styled(ReponseIcon)`
-  position: absolute;
-  margin: 0 calc(${spacing.medium} / 2);
-  width: 1.25rem;
-  height: 1.25rem;
-`;
-
-const SearchSourcesValue = styled.select`
-  padding: ${spacing.xsmall} ${spacing.large} ${spacing.xsmall}
-    ${spacing.larger};
-  color: ${colors.almostBlack};
-  background-color: transparent;
-  border: 1px solid transparent;
-`;
-
 const SearchInput = styled(DocumentSuggester)`
+  display: flex;
   margin: 0;
-  padding: 0 12.8rem 0 4rem;
+  padding: 0 ${spacing.base} 0 4rem;
   width: 100%;
-  height: 60px;
+  height: 50px;
   font-size: inherit;
   font-family: inherit;
-  line-height: 3.625rem;
   color: inherit;
   appearance: none;
   background: ${colors.lightBackground};
@@ -332,10 +287,45 @@ const SearchInput = styled(DocumentSuggester)`
     border-color: ${colors.blueLight};
     outline: none;
   }
-  @media (max-width: ${breakpoints.tablet}) {
-    padding-right: ${spacing.base};
-  }
   @media (max-width: ${breakpoints.mobile}) {
+    height: 50px;
     padding: 0 ${spacing.base};
+  }
+`;
+
+const SearchSources = styled.label`
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: ${spacing.xsmall};
+  background-color: ${colors.lighterGrey};
+  border: none;
+  border-radius: ${box.borderRadius};
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+const SearchSourcesIcon = styled(ReponseIcon)`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: translate(50%, -50%);
+`;
+
+const SearchSourcesValue = styled.select`
+  padding-left: ${spacing.larger};
+  color: ${colors.almostBlack};
+  background-color: transparent;
+  border: 1px solid transparent;
+`;
+
+const Submit = styled(Button)`
+  margin-left: ${spacing.xsmall};
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-left: 0;
+    margin-top: ${spacing.small};
   }
 `;
