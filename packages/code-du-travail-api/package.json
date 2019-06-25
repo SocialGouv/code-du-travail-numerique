@@ -10,9 +10,9 @@
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
-    "pretest": "ELASTICSEARCH_LOG_LEVEL=info node tests/create_indexes.js",
+    "pretest": "node tests/create_indexes.js",
     "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test jest",
-    "elastic": "ELASTICSEARCH_LOG_LEVEL=info node scripts/elastic.js"
+    "elastic": "node scripts/elastic.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,11 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
     "@cdt/data...courrier-type": "^2.1.0",
+    "@elastic/elasticsearch": "6",
     "@koa/cors": "^2.2.1",
     "commander": "^2.19.0",
     "dotenv": "^6.0.0",
     "elastic-apm-node": "^2.10.0",
-    "elasticsearch": "^15.0.0",
     "jest": "^23.6.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",

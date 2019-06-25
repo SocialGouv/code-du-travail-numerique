@@ -33,10 +33,11 @@ router.get(`/annuaire/search`, async ctx => {
       distance: defaultMaxSearchDistance,
       coord: { lon, lat }
     });
-    ctx.body = await elasticsearchClient.search({
+    const response = await elasticsearchClient.search({
       index,
       body
     });
+    ctx.body = response.body;
   } else {
     ctx.body = { total: 0, hits: { hits: [] } };
   }

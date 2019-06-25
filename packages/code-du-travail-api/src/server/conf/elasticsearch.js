@@ -1,17 +1,15 @@
 // https://github.com/elastic/elasticsearch-js
 
-const elasticsearch = require("elasticsearch");
+const { Client } = require("@elastic/elasticsearch");
 const { logger } = require("../utils/logger");
 
-const ELASTICSEARCH_URL = process.env.ELASTICSEARCH_URL || "localhost:9200";
-// Log level can be: info, debug or trace.
-const ELASTICSEARCH_LOG_LEVEL = process.env.ELASTICSEARCH_LOG_LEVEL || "trace";
+const ELASTICSEARCH_URL =
+  process.env.ELASTICSEARCH_URL || "http://localhost:9200";
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
-const client = new elasticsearch.Client({
-  host: ELASTICSEARCH_URL,
-  log: ELASTICSEARCH_LOG_LEVEL
+const client = new Client({
+  node: `${ELASTICSEARCH_URL}`
 });
 
 module.exports = client;

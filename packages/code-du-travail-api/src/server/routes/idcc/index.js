@@ -24,7 +24,8 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/idcc", async ctx => {
   const body = getIdccBody({ query: ctx.request.query.q });
 
-  ctx.body = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ index, body });
+  ctx.body = response.body;
 });
 
 /**
@@ -39,13 +40,13 @@ router.get("/idcc", async ctx => {
 router.get("/idcc/:num", async ctx => {
   const body = getIdccByNumBody({ query: ctx.params.num });
 
-  const results = await elasticsearchClient.search({ index, body });
+  const response = await elasticsearchClient.search({ index, body });
 
-  if (results.hits.total === 0) {
+  if (response.body.hits.total === 0) {
     ctx.throw(404, `no IDCC found for num ${ctx.params.num}`);
   }
 
-  ctx.body = { ...results.hits.hits[0] };
+  ctx.body = { ...response.body.hits.hits[0] };
 });
 
 module.exports = router;
