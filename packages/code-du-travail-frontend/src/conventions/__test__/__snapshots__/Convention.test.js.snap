@@ -349,16 +349,6 @@ exports[`<Convention /> should render 1`] = `
       >
         Texte salaires
       </li>
-      <li
-        aria-controls="react-tabs-9"
-        aria-disabled="false"
-        aria-selected="false"
-        class="c7"
-        id="react-tabs-8"
-        role="tab"
-      >
-        Textes d'extensions
-      </li>
     </ul>
     <div
       aria-labelledby="react-tabs-0"
@@ -386,7 +376,7 @@ exports[`<Convention /> should render 1`] = `
               </tr>
               <tr>
                 <th>
-                  Date de publication originale
+                  Date d’entrée en vigueur
                 </th>
                 <td>
                   01/11/1993
@@ -422,12 +412,6 @@ exports[`<Convention /> should render 1`] = `
       aria-labelledby="react-tabs-6"
       class="c8"
       id="react-tabs-7"
-      role="tabpanel"
-    />
-    <div
-      aria-labelledby="react-tabs-8"
-      class="c8"
-      id="react-tabs-9"
       role="tabpanel"
     />
   </div>
