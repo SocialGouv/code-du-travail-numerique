@@ -117,9 +117,9 @@ exports[`return search results for demission 1`] = `
 Object {
   "hits": Array [
     Object {
-      "_id": "cSE8L2sBhr0JJgc57grQ",
+      "_id": "WdlndGsBrAzODfpXDfg5",
       "_index": "code_du_travail_numerique",
-      "_score": 16.532152,
+      "_score": 16.53278,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",
@@ -130,9 +130,9 @@ Object {
       "relevance": 5,
     },
     Object {
-      "_id": "VCE8L2sBhr0JJgc5-AwT",
+      "_id": "PdlndGsBrAzODfpXFvrE",
       "_index": "code_du_travail_numerique",
-      "_score": 31.283283,
+      "_score": 31.28897,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "demission-comment-presenter-une-demission",
@@ -144,9 +144,9 @@ Object {
       "relevance": 5,
     },
     Object {
-      "_id": "CyA8L2sBhr0JJgc5zuAG",
+      "_id": "8NlmdGsBrAzODfpXvM1-",
       "_index": "code_du_travail_numerique",
-      "_score": 9.965512,
+      "_score": 9.976059,
       "_source": Object {
         "slug": "l1237-1",
         "source": "code_du_travail",
@@ -157,9 +157,9 @@ Object {
       "relevance": 5,
     },
     Object {
-      "_id": "YSA8L2sBhr0JJgc5zt8D",
+      "_id": "RtlmdGsBrAzODfpXvM1h",
       "_index": "code_du_travail_numerique",
-      "_score": 12.327942,
+      "_score": 12.340258,
       "_source": Object {
         "slug": "l1231-1",
         "source": "code_du_travail",
@@ -170,9 +170,9 @@ Object {
       "relevance": 5,
     },
     Object {
-      "_id": "byE8L2sBhr0JJgc56Akf",
+      "_id": "VNlndGsBrAzODfpXBPcm",
       "_index": "code_du_travail_numerique",
-      "_score": 29.333883,
+      "_score": 29.38531,
       "_source": Object {
         "slug": "peut-on-demissionner-pendant-ses-conges-payes",
         "source": "fiches_service_public",
@@ -183,9 +183,9 @@ Object {
       "relevance": 4,
     },
     Object {
-      "_id": "0CE8L2sBhr0JJgc56Akh",
+      "_id": "ttlndGsBrAzODfpXBPco",
       "_index": "code_du_travail_numerique",
-      "_score": 27.452456,
+      "_score": 27.494377,
       "_source": Object {
         "slug": "peut-on-demissionner-pendant-un-conge-maternite",
         "source": "fiches_service_public",
@@ -196,9 +196,9 @@ Object {
       "relevance": 4,
     },
     Object {
-      "_id": "kiE8L2sBhr0JJgc57grR",
+      "_id": "etlndGsBrAzODfpXDfg6",
       "_index": "code_du_travail_numerique",
-      "_score": 27.947882,
+      "_score": 27.990566,
       "_source": Object {
         "slug": "peut-on-demissionner-pendant-un-arret-maladie",
         "source": "fiches_service_public",
@@ -209,9 +209,9 @@ Object {
       "relevance": 4,
     },
     Object {
-      "_id": "_CE8L2sBhr0JJgc57grT",
+      "_id": "5dlndGsBrAzODfpXDfg8",
       "_index": "code_du_travail_numerique",
-      "_score": 27.35065,
+      "_score": 27.392416,
       "_source": Object {
         "slug": "peut-on-demissionner-pendant-un-conge-parental",
         "source": "fiches_service_public",
@@ -222,9 +222,9 @@ Object {
       "relevance": 4,
     },
     Object {
-      "_id": "VyE8L2sBhr0JJgc5-AwT",
+      "_id": "QNlndGsBrAzODfpXFvrE",
       "_index": "code_du_travail_numerique",
-      "_score": 28.288044,
+      "_score": 28.318968,
       "_source": Object {
         "anchor": "#Faut-il-respecter-un-preavis",
         "slug": "demission-faut-il-respecter-un-preavis",
@@ -236,9 +236,9 @@ Object {
       "relevance": 4,
     },
     Object {
-      "_id": "WiE8L2sBhr0JJgc5-AwT",
+      "_id": "Q9lndGsBrAzODfpXFvrE",
       "_index": "code_du_travail_numerique",
-      "_score": 33.22746,
+      "_score": 33.23731,
       "_source": Object {
         "anchor": "#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
         "slug": "demission-le-salarie-peut-il-demissionner-dans-le-cadre-dun-contrat-a-duree-determinee",
@@ -250,9 +250,9 @@ Object {
       "relevance": 4,
     },
     Object {
-      "_id": "wiE8L2sBhr0JJgc57grS",
+      "_id": "qtlndGsBrAzODfpXDfg7",
       "_index": "code_du_travail_numerique",
-      "_score": 25.260624,
+      "_score": 25.200104,
       "_source": Object {
         "slug": "demission-dune-assistante-maternelle",
         "source": "fiches_service_public",
@@ -263,9 +263,9 @@ Object {
       "relevance": 3,
     },
     Object {
-      "_id": "tCE8L2sBhr0JJgc57grR",
+      "_id": "nNlndGsBrAzODfpXDfg6",
       "_index": "code_du_travail_numerique",
-      "_score": 29.189297,
+      "_score": 29.233229,
       "_source": Object {
         "slug": "demission-du-salarie-a-domicile-employe-par-un-particulier",
         "source": "fiches_service_public",
@@ -276,9 +276,9 @@ Object {
       "relevance": 3,
     },
     Object {
-      "_id": "ViE8L2sBhr0JJgc5-AwT",
+      "_id": "P9lndGsBrAzODfpXFvrE",
       "_index": "code_du_travail_numerique",
-      "_score": 38.962616,
+      "_score": 39.01729,
       "_source": Object {
         "anchor": "#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
         "slug": "demission-le-refus-par-le-salarie-daccepter-un-changement-des-conditions-de-travail-est-il-une-demission",
@@ -290,9 +290,9 @@ Object {
       "relevance": 3,
     },
     Object {
-      "_id": "DCA8L2sBhr0JJgc5zuAG",
+      "_id": "8dlmdGsBrAzODfpXvM1-",
       "_index": "code_du_travail_numerique",
-      "_score": 10.396964,
+      "_score": 10.407834,
       "_source": Object {
         "slug": "l1237-2",
         "source": "code_du_travail",
@@ -303,9 +303,9 @@ Object {
       "relevance": 3,
     },
     Object {
-      "_id": "EyE8L2sBhr0JJgc57gvU",
+      "_id": "_NlndGsBrAzODfpXDfg8",
       "_index": "code_du_travail_numerique",
-      "_score": 29.824446,
+      "_score": 29.657969,
       "_source": Object {
         "slug": "peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
         "source": "fiches_service_public",
@@ -316,9 +316,9 @@ Object {
       "relevance": 2,
     },
     Object {
-      "_id": "WCE8L2sBhr0JJgc5-AwT",
+      "_id": "QdlndGsBrAzODfpXFvrE",
       "_index": "code_du_travail_numerique",
-      "_score": 26.292383,
+      "_score": 26.313335,
       "_source": Object {
         "anchor": "#Et-les-heures-pour-recherche-d-emploi",
         "slug": "demission-et-les-heures-pour-recherche-demploi",
