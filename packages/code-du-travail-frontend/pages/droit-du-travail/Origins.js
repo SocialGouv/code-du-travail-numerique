@@ -375,7 +375,8 @@ const { breakpoints, colors, spacing } = theme;
 const AccordionContainer = styled(Container)`
   display: flex;
   align-items: flex-start;
-  padding: ${spacing.larger} 0;
+  padding-top: ${spacing.larger};
+  padding-bottom: ${spacing.larger};
   @media (max-width: ${breakpoints.tablet}) {
     flex-wrap: wrap;
   }
