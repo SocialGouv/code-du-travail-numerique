@@ -1,0 +1,13 @@
+{
+  "name": "@cdt/data...glossary",
+  "private": true,
+  "version": "2.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js > glossary.json"
+  },
+  "dependencies": {
+    "google-spreadsheets": "^2.0.0"
+  }
+}
