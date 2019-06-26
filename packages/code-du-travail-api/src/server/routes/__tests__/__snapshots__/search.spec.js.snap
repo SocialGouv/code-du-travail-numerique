@@ -17,7 +17,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 7.8337746,
+        "_score": 10.606363,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -40,7 +40,7 @@ Object {
         "_type": "cdtn_document_test",
       },
     ],
-    "max_score": 7.8337746,
+    "max_score": 10.606363,
     "total": 2,
   },
 }

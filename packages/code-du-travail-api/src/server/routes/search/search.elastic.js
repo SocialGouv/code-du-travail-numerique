@@ -43,7 +43,8 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                 {
                   match: {
                     "title.article_id": {
-                      query: query
+                      query: query,
+                      boost: 5
                     }
                   }
                 },
