@@ -2,7 +2,7 @@
   {
     "titre": "Modèle de certificat de travail",
     "questions": ["comment rédiger un certificat de travail ?"],
-    "description": "Le certificat de travail est un document obligatoire remis par l'employeur au salarié à la date de fin du contrat de travail.",
+    "description": "Le certificat de travail est un document obligatoire remis par l’employeur au salarié à la date de fin du contrat de travail.",
     "tags": {
       "theme": ["rupture du contrat de travail", "documents de fin de contrat"],
       "themes": [200],
@@ -16,9 +16,9 @@
   },
   {
     "titre": "Convocation à entretien préalable",
-    "description": "L'employeur qui envisage de licencier un salarié doit le convoquer à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l'entretien préalable.",
+    "description": "L’employeur qui envisage de licencier un salarié doit le convoquer à un entretien préalable. La convocation, envoyée par lettre recommandée avec accusé de réception ou remise en main propre contre signature, doit parvenir à l’intéressé au moins 5 jours ouvrables avant l’entretien préalable.",
     "questions": [
-      "comment faire une demande d'entretier préalable en vue d'un licenciement"
+      "comment faire une demande d’entretien préalable en vue d’un licenciement"
     ],
     "tags": {
       "theme": "entretien préalable",
@@ -31,10 +31,10 @@
     "filename": "convocation-a-entretien-prealable.docx"
   },
   {
-    "titre": "Demande de rendez-vous en vue d'une rupture conventionnelle",
-    "description": "La rupture conventionnelle permet la rupture du CDI par commun accord (elle ne peut être imposée). L’employeur et le salarié conviennent du principe d’une rupture conventionnelle lors d’un ou plusieurs entretiens. Ce courrier n'est pas prévu dans la procédure, mais permettra de l'initier et pourra servir à déterminer votre consentement.",
+    "titre": "Demande de rendez-vous en vue d’une rupture conventionnelle",
+    "description": "La rupture conventionnelle permet la rupture du CDI par commun accord (elle ne peut être imposée). L’employeur et le salarié conviennent du principe d’une rupture conventionnelle lors d’un ou plusieurs entretiens. Ce courrier n’est pas prévu dans la procédure, mais permettra de l’initier et pourra servir à déterminer votre consentement.",
     "questions": [
-      "comment demander de rendez-vous en vue d'une rupture conventionnelle"
+      "comment demander de rendez-vous en vue d’une rupture conventionnelle"
     ],
     "tags": {
       "theme": "rupture conventionnelle",
@@ -63,14 +63,14 @@
     "filename": "demande-paiement-salaire-salarie.docx"
   },
   {
-    "titre": "Rupture du contrat en période d'essai",
-    "description": "Pendant la période d'essai, le contrat de travail peut être rompu librement par le salarié. Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "titre": "Rupture du contrat en période d’essai",
+    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par le salarié. Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
-      "comment rédiger une demande pour mettre fin à la période d'essai ?",
-      "comment faire pour rompre la période d'essai?"
+      "comment rédiger une demande pour mettre fin à la période d’essai ?",
+      "comment faire pour rompre la période d’essai?"
     ],
     "tags": {
-      "theme": "période d'essai",
+      "theme": "période d’essai",
       "themes": [3720, 3730],
       "type_de_contrat": "CDI",
       "profil": "salarié"
@@ -81,11 +81,11 @@
     "filename": "fin-periode-essai-initiative-du-salarie.docx"
   },
   {
-    "titre": "Rupture de période d'essai",
-    "description": "Pendant la période d'essai, le contrat de travail peut être rompu librement par l'employeur. Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
-    "questions": ["comment rédiger une rupture de période d'essai ?"],
+    "titre": "Rupture de période d’essai",
+    "description": "Pendant la période d’essai, le contrat de travail peut être rompu librement par l’employeur. Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
+    "questions": ["comment rédiger une rupture de période d’essai ?"],
     "tags": {
-      "theme": "période d'essai",
+      "theme": "période d’essai",
       "themes": [3720, 3730],
       "type_de_contrat": "CDI",
       "profil": "employeur"
@@ -97,7 +97,7 @@
   },
   {
     "titre": "Réclamation congés payés",
-    "description": "L'employeur a le dernier mot sur l'ordre de départ des congés payés. Vous devez pouvoir prendre l'ensemble des congés dus: L'employeur n'a pas le droit de vous les payer en lieu et place. Ce modèle de courrier vous aidera à demander à votre employeur la prise de vos congés de droit.",
+    "description": "L’employeur a le dernier mot sur l’ordre de départ des congés payés. Vous devez pouvoir prendre l’ensemble des congés dus: L’employeur n’a pas le droit de vous les payer en lieu et place. Ce modèle de courrier vous aidera à demander à votre employeur la prise de vos congés de droit.",
     "questions": [
       "faire une réclamation pour les congés payé ?",
       "rédiger une réclamation pour les congés payés"
@@ -144,7 +144,7 @@
     "filename": "reclamation-des-heures-sup.docx"
   },
   {
-    "titre": "réclamer son salaires en cas de non-fourniture de travail par l'employeur",
+    "titre": "réclamer son salaires en cas de non-fourniture de travail par l’employeur",
     "description": "le salarié qui fait l’objet d’un licenciement verbal peut saisir le conseil de prud’hommes afin d’obtenir des indemnités. Cette demande doit se faire avec une lettre recommandée à accusé de reception. Le demandeur doit aussi garder une copie de la lettre",
     "questions": [
       "Comment se faire payer ses salaires impayés après un renvoi oral?"
@@ -162,7 +162,7 @@
   },
   {
     "titre": "Prise en compte des temps de trajet dans le temps de travail (bâtiment)",
-    "description": "Le temps de trajet entre le siège de l’entreprise ou le dépôt et le chantier constitue du temps de travail effectif. Le salarié est en droit d'en réclamer la prise en compte de temps de travail dans la durée du travail et la rémunération.",
+    "description": "Le temps de trajet entre le siège de l’entreprise ou le dépôt et le chantier constitue du temps de travail effectif. Le salarié est en droit d’en réclamer la prise en compte de temps de travail dans la durée du travail et la rémunération.",
     "questions": [""],
     "tags": {
       "theme": "Temps de trajet",
@@ -193,7 +193,7 @@
   },
   {
     "titre": "Reçu pour solde de tout compte",
-    "description": "Le solde de tout compte est établi par l'employeur et remis (contre reçu) au salarié qui quitte son emploi.Ce document est un modèle de reçu pour solde de tout compte. C'est un document obligatoire de fin contrat.",
+    "description": "Le solde de tout compte est établi par l’employeur et remis (contre reçu) au salarié qui quitte son emploi.Ce document est un modèle de reçu pour solde de tout compte. C’est un document obligatoire de fin contrat.",
     "questions": ["comment rédiger un reçu pour solde de tout compte ?"],
     "tags": {
       "theme": "fin de contrat",
@@ -207,13 +207,13 @@
     "filename": "recu-solde-de-tout-compte.docx"
   },
   {
-    "titre": "Renouvellement de période d'essai",
-    "description": "La période d'essai peut être renouvelée, si la branche le prévoit et si cette possibilité est inscrite dans le contrat de travail ou la lettre d'engagement. Dans ces conditions, ce modèle permet de demander le renouvellement du contrat de travail.",
+    "titre": "Renouvellement de période d’essai",
+    "description": "La période d’essai peut être renouvelée, si la branche le prévoit et si cette possibilité est inscrite dans le contrat de travail ou la lettre d’engagement. Dans ces conditions, ce modèle permet de demander le renouvellement du contrat de travail.",
     "questions": [
-      "comment rédiger une demande de renouvellement de période d'essai ?"
+      "comment rédiger une demande de renouvellement de période d’essai ?"
     ],
     "tags": {
-      "theme": "période d'essai",
+      "theme": "période d’essai",
       "themes": [3760],
       "type_de_contrat": "CDI",
       "profil": "employeur"
@@ -225,7 +225,7 @@
   },
   {
     "titre": "Rupture d’un commun accord d’un contrat d’apprentissage",
-    "description": "Le contrat d'apprentissage peut être rompu par l'une ou l'autre des parties jusqu'à l'échéance des quarante-cinq premiers jours, consécutifs ou non, de formation pratique.",
+    "description": "Le contrat d’apprentissage peut être rompu par l’une ou l’autre des parties jusqu’à l’échéance des quarante-cinq premiers jours, consécutifs ou non, de formation pratique.",
     "questions": ["comment rompre un contrat d’apprentissage"],
     "tags": {
       "theme": "contrat d’apprentissage",
@@ -239,7 +239,7 @@
   },
   {
     "titre": "Rupture d’un commun accord d’un contrat à durée déterminé",
-    "description": "La rupture anticipée du contrat à déterminée n'est possible que dans certains cas de figure. La rupture d'un commun accord est l'un de ces cas : ce modèle permet à l'une des parties de demander à l'autre partie la rupture du CDD par ce biais.",
+    "description": "La rupture anticipée du contrat à déterminée n’est possible que dans certains cas de figure. La rupture d’un commun accord est l’un de ces cas : ce modèle permet à l’une des parties de demander à l’autre partie la rupture du CDD par ce biais.",
     "questions": ["comment rompre un CDD"],
     "tags": {
       "theme": "fin de contrat",
@@ -253,14 +253,14 @@
   },
   {
     "titre": "Signalement de faits pouvant relever du harcèlement moral sur mineur au travail",
-    "description": "Avant d'envoyer ce courrier, nous vous invitons à prendre contact avec l'agent de contrôle de l'inspection du travail qui suit votre entreprise.",
+    "description": "Avant d’envoyer ce courrier, nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail qui suit votre entreprise.",
     "questions": [
-      "Comment mettre fin à un contrat de travail d'un jeune travailleur en cas de faits pouvant relever du harcèlement moral."
+      "Comment mettre fin à un contrat de travail d’un jeune travailleur en cas de faits pouvant relever du harcèlement moral."
     ],
     "tags": {
       "theme": "harcèlement",
       "themes": [],
-      "type_de_contrat": "Contrat d'apprentissage"
+      "type_de_contrat": "Contrat d’apprentissage"
     },
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
@@ -269,14 +269,14 @@
   },
   {
     "titre": "Signalement de faits pouvant relever du harcèlement moral",
-    "description": "Avant d'envoyer ce courrier, nous vous invitons à prendre contact avec l'agent de contrôle de l'inspection du travail qui suit votre entreprise.",
+    "description": "Avant d’envoyer ce courrier, nous vous invitons à prendre contact avec l’agent de contrôle de l’inspection du travail qui suit votre entreprise.",
     "questions": [
       "Quelle sont les solutions en cas de maltraitance ou de harcellement au travail"
     ],
     "tags": {
       "theme": ["fin de contrat", "apprentissage", "harcèlement"],
       "themes": [59700, 10300],
-      "type_de_contrat": "Contrat d'apprentissage"
+      "type_de_contrat": "Contrat d’apprentissage"
     },
     "date_redaction": "26/10/2018",
     "redacteur": "cdtn",
@@ -285,7 +285,7 @@
   },
   {
     "titre": "Demande de dérogation pour un temps partiel",
-    "description": "Le salarié à temps partiel peut demander une durée du travail hebdomadaire inférieure à celle prévue soit par le code du travail ou par un accord de branche étendu. Le modèle permet d'en faire la demande.",
+    "description": "Le salarié à temps partiel peut demander une durée du travail hebdomadaire inférieure à celle prévue soit par le code du travail ou par un accord de branche étendu. Le modèle permet d’en faire la demande.",
     "questions": ["Comment faire une demande de temps partiel"],
     "tags": {
       "theme": "temps partiel",
@@ -298,9 +298,9 @@
     "filename": "temps-partiel-demande-de-derogation-du-salarie.docx"
   },
   {
-    "titre": "Relevé d'heures supplémentaires",
-    "description": "En cas d'horaires individualisé dans l'entreprise, l’employeur a l'obligation de mettre en place un dispositif de décompte de la durée du travail.",
-    "questions": ["Qu'est ce qu'un relevé d'heures supplémentaires ?"],
+    "titre": "Relevé d’heures supplémentaires",
+    "description": "En cas d’horaires individualisé dans l’entreprise, l’employeur a l’obligation de mettre en place un dispositif de décompte de la durée du travail.",
+    "questions": ["Qu’est ce qu’un relevé d’heures supplémentaires ?"],
     "tags": {
       "theme": "durée du travail",
       "themes": [21400, 20000],
