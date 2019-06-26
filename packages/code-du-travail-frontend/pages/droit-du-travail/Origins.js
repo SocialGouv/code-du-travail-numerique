@@ -27,7 +27,7 @@ const accordionItemsLeft = [
         </p>
         <p>
           <i>
-            Exemple de convention :{" "}
+            Exemple de convention&nbsp;:{" "}
             <a
               href="https://www.ilo.org/dyn/normlex/fr/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C158"
               target="_blank"
@@ -44,7 +44,7 @@ const accordionItemsLeft = [
         </p>
         <p>
           <i>
-            Exemples :{" "}
+            Exemples&nbsp;:{" "}
             <a
               href="https://www.ohchr.org/fr/professionalinterest/pages/ccpr.aspx"
               target="_blank"
@@ -87,7 +87,7 @@ const accordionItemsLeft = [
         </p>
         <p>
           Dans son préambule la Constitution de 1958 renvoie explicitement à 3
-          autres textes fondamentaux :{" "}
+          autres textes fondamentaux&nbsp;:{" "}
           <a
             href="https://www.conseil-constitutionnel.fr/le-bloc-de-constitutionnalite/declaration-des-droits-de-l-homme-et-du-citoyen-de-1789"
             target="_blank"
@@ -138,7 +138,7 @@ const accordionItemsLeft = [
           travail et des garanties sociales des salariés.
         </p>
         <p>
-          Ces textes peuvent être conclus à différents niveaux : au niveau
+          Ces textes peuvent être conclus à différents niveaux&nbsp;: au niveau
           interprofessionnel, au niveau d’une branche professionnelle, au niveau
           d’un groupe, au niveau d’une entreprise ou au niveau d’un
           établissement.
@@ -182,7 +182,7 @@ const accordionItemsRight = [
           </a>
           .
         </p>
-        <p>L’Union Européenne élabore différents types de textes :</p>
+        <p>L’Union Européenne élabore différents types de textes&nbsp;:</p>
         <ul>
           <li>des traités</li>
           <li>des règlements</li>
@@ -217,7 +217,8 @@ const accordionItemsRight = [
         </ul>
         <p>
           Le Conseil de l’Europe, organisation intergouvernementale distincte de
-          l’Union Européenne, a adopté 2 textes importants en droit du travail :
+          l’Union Européenne, a adopté 2 textes importants en droit du
+          travail&nbsp;:
         </p>
         <ul>
           <li>
@@ -277,12 +278,12 @@ const accordionItemsRight = [
         </p>
         <p>
           L’arrêté est un texte pris par une autorité administrative autre que
-          le Président de la République et le Premier Ministre : ministres, des
-          préfets, des maires...
+          le Président de la République et le Premier Ministre&nbsp;: ministres,
+          des préfets, des maires...
         </p>
         <p>
           <i>
-            Exemples : arrêté préfectoral déterminant la zone touristique
+            Exemples&nbsp;: arrêté préfectoral déterminant la zone touristique
             permettant l’ouverture le dimanche ou arrêté ministériel fixant le
             modèle de l’avis d’inaptitude
           </i>
@@ -309,7 +310,7 @@ const accordionItemsRight = [
           l’employeur d’accorder un avantage aux salariés.
         </p>
         <p>
-          <i>Exemples : Note de service, procès-verbal de désaccord...</i>
+          <i>Exemples&nbsp;: Note de service, procès-verbal de désaccord...</i>
         </p>
       </>
     )
@@ -347,27 +348,23 @@ const Origins = () => (
       <h2>Quels sont les textes à l’origine du droit du travail ?</h2>
       <p>
         Le droit du travail est construit par de nombreux textes juridiques dont
-        les sources sont diverses : sources internationales, sources européennes
-        et sources nationales. Vous trouverez les textes participant à la
-        construction du droit du travail en France ci-dessous.
+        les sources sont diverses&nbsp;: sources internationales, sources
+        européennes et sources nationales. Vous trouverez les textes participant
+        à la construction du droit du travail en France ci-dessous.
       </p>
     </Container>
-    <Section>
-      <AccordionContainer>
-        <OriginAccordion items={accordionItemsLeft} />
-        <OriginAccordion items={accordionItemsRight} />
-      </AccordionContainer>
-    </Section>
-    <Section>
-      <Container narrow>
-        <Toast>
-          La jurisprudence de la Cour Européenne des droits de l’Homme, de la
-          Cour de justice de l’Union européenne, du Conseil Constitutionnel, du
-          Conseil d’Etat et de la Cour de cassation influence également le droit
-          du travail en France.
-        </Toast>
-      </Container>
-    </Section>
+    <AccordionContainer>
+      <OriginAccordion items={accordionItemsLeft} />
+      <OriginAccordion items={accordionItemsRight} />
+    </AccordionContainer>
+    <Container narrow>
+      <Toast>
+        La jurisprudence de la Cour Européenne des droits de l’Homme, de la Cour
+        de justice de l’Union européenne, du Conseil Constitutionnel, du Conseil
+        d’Etat et de la Cour de cassation influence également le droit du
+        travail en France.
+      </Toast>
+    </Container>
   </Section>
 );
 
@@ -378,6 +375,7 @@ const { breakpoints, colors, spacing } = theme;
 const AccordionContainer = styled(Container)`
   display: flex;
   align-items: flex-start;
+  padding: ${spacing.larger} 0;
   @media (max-width: ${breakpoints.tablet}) {
     flex-wrap: wrap;
   }

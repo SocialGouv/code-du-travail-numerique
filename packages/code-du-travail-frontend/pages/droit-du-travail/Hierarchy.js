@@ -22,14 +22,14 @@ const Hierarchy = () => {
         <Container narrow>
           <h2>Existe-t-il une hiérarchie entre les textes ?</h2>
           <p>
-            Le principe général en droit du travail est le suivant : lorsqu’il
-            existe plusieurs textes sur un même sujet, c’est le texte le plus
-            favorable au salarié qui s’applique. Ce principe continue a
+            Le principe général en droit du travail est le suivant&nbsp;:
+            lorsqu’il existe plusieurs textes sur un même sujet, c’est le texte
+            le plus favorable au salarié qui s’applique. Ce principe continue a
             s’appliquer en droit du travail mais il connaît quelques exceptions.
           </p>
           <p>
             Pour vous aider à comprendre, vous trouverez ci-dessous un schèma
-            récapitulant l’articulation des textes entre eux.
+            récapitulant la hiérarchie des textes entre eux.
           </p>
         </Container>
         <Section>
@@ -85,13 +85,13 @@ const Hierarchy = () => {
                       body: (
                         <>
                           <h4>
-                            Articulation entre le Code du travail et les
+                            Hiérarchie entre le Code du travail et les
                             conventions et accords collectifs
                           </h4>
                           <p>
-                            Il n’y a pas de règle d’articulation unique pour
-                            tous les articles du Code du travail. Il existe 3
-                            articulations possibles :
+                            Il n’y a pas de règle de hiérarchie unique pour tous
+                            les articles du Code du travail. Il existe 3
+                            hiérarchies possibles&nbsp;:
                           </p>
                           <Accordion
                             items={[
@@ -124,15 +124,48 @@ const Hierarchy = () => {
                                 ),
                                 body: (
                                   <>
-                                    Il existe d’autres règles dans le Code du
-                                    travail qui permettent aux conventions et
-                                    accords collectifs, sous certaines
-                                    conditions, de prévoir des règles
-                                    différentes de celles de la loi. Dans ce
-                                    cas, c’est l’accord collectif ou la
-                                    convention collective qui s’applique même
-                                    s’il est plus défavorable pour le salarié
-                                    que la loi.
+                                    <p>
+                                      Il existe d’autres règles dans le Code du
+                                      travail qui permettent aux conventions et
+                                      accords collectifs, sous certaines
+                                      conditions, de prévoir des règles
+                                      différentes de celles de la loi. Dans ce
+                                      cas, c’est l’accord collectif ou la
+                                      convention collective qui s’applique même
+                                      s’il est plus défavorable pour le salarié
+                                      que la loi.
+                                    </p>
+                                    <p>
+                                      <i>
+                                        Exemples&nbsp;:
+                                        <ul>
+                                          <li>
+                                            Le taux de majoration des heures
+                                            supplémentaires&nbsp;: un accord
+                                            collectif peut prévoir dans une
+                                            certaine limite un taux inférieur à
+                                            25% (règle prévue par le Code du
+                                            travail).
+                                          </li>
+                                          <li>
+                                            Le congé sabbatique&nbsp;: un accord
+                                            collectif peut prévoir une durée
+                                            minimale et une durée maximale du
+                                            congé sabbatique différente de ce
+                                            que prévoit le code du travail.
+                                          </li>
+                                          <li>
+                                            Les négociations obligatoires en
+                                            entreprise&nbsp;: un accord
+                                            d’entreprise peut prévoir une
+                                            périodicité des négociations plus
+                                            longue que ce que prévoit le Code du
+                                            travail qui est principalement d’un
+                                            an.
+                                          </li>
+                                        </ul>
+                                      </i>
+                                    </p>
                                   </>
                                 )
                               },
@@ -146,13 +179,52 @@ const Hierarchy = () => {
                                 ),
                                 body: (
                                   <>
-                                    Il existe également des règles dans le Code
-                                    du travail qui s’appliquent par défaut,
-                                    c’est-à-dire uniquement lorsqu’il n’y a pas
-                                    de convention ou d’accord collectif sur le
-                                    sujet. S’il existe une convention ou un
-                                    accord collectif sur le sujet alors la loi
-                                    ne s’applique pas.
+                                    <p>
+                                      Il existe également des règles dans le
+                                      Code du travail qui s’appliquent par
+                                      défaut, c’est-à-dire uniquement lorsqu’il
+                                      n’y a pas de convention ou d’accord
+                                      collectif sur le sujet. S’il existe une
+                                      convention ou un accord collectif sur le
+                                      sujet alors la loi ne s’applique pas.
+                                    </p>
+                                    <p>
+                                      <i>
+                                        Exemples&nbsp;:
+                                        <ul>
+                                          <li>
+                                            Congés exceptionnels&nbsp;: en
+                                            l’absence d’accord collectif sur les
+                                            congés exceptionnels, ce que prévoit
+                                            le code du travail s’applique (4
+                                            jours pour mariage, 1 jour pour
+                                            mariage d’un enfant, 5 jours pour le
+                                            décès d’un enfant...)
+                                          </li>
+                                          <li>
+                                            Taux de majoration des heures
+                                            supplémentaires&nbsp;: en l’absence
+                                            d’accord collectif sur le taux de
+                                            majoration des heures
+                                            supplémentaires s’applique le code
+                                            du travail (25% de majoration pour
+                                            les 8 premières heures et 50% pour
+                                            les suivantes).
+                                          </li>
+                                          <li>
+                                            Aménagement du temps de travail sur
+                                            une période supérieure à la semaine
+                                            &nbsp;: en l’absence d’accord
+                                            collectif sur l’aménagement du temps
+                                            de travail, le code du travail
+                                            s’applique. L’employeur peut
+                                            aménager le temps de travail sur une
+                                            période de 9 semaines pour les
+                                            entreprises de moins de 50 salariés.
+                                          </li>
+                                        </ul>
+                                      </i>
+                                    </p>
                                   </>
                                 )
                               }
@@ -171,8 +243,8 @@ const Hierarchy = () => {
                           </p>
                           <p>
                             <i>
-                              Exemple : la règle selon laquelle le Conseil des
-                              prud’hommes est le seul compétent pour les
+                              Exemple&nbsp;: la règle selon laquelle le Conseil
+                              des prud’hommes est le seul compétent pour les
                               contentieux liés au travail.
                             </i>
                           </p>
@@ -193,7 +265,7 @@ const Hierarchy = () => {
                       body: (
                         <>
                           <h4>
-                            Articulation entre conventions et accords collectifs
+                            Hiérarchie entre conventions et accords collectifs
                             de niveaux différents
                           </h4>
                           <p>
@@ -201,106 +273,72 @@ const Hierarchy = () => {
                             est différente en fonction du niveau des textes
                             comparés.
                           </p>
-                          <Accordion
-                            items={[
-                              {
-                                title: (
-                                  <h5>
-                                    Articulation entre accord de branche et
-                                    accord d’entreprise
-                                  </h5>
-                                ),
-                                body: (
-                                  <>
-                                    <p>
-                                      Le principe est que l’accord d’entreprise
-                                      s’applique en priorité par rapport à
-                                      l’accord ou la convention de branche même
-                                      si, l’accord d’entreprise est plus
-                                      désavantageux pour le salarié que l’accord
-                                      de branche.
-                                    </p>
-                                    <Toast variant="warning">
-                                      Le principe ne s’applique pas dans{" "}
-                                      <Button
-                                        variant="link"
-                                        onClick={() =>
-                                          setModal13MatieresOpen(true)
-                                        }
-                                      >
-                                        13 matières
-                                      </Button>{" "}
-                                      où la loi reconnait la primauté à l’accord
-                                      de branche et{" "}
-                                      <Button
-                                        variant="link"
-                                        onClick={() =>
-                                          setModal4MatieresOpen(true)
-                                        }
-                                      >
-                                        4 matières
-                                      </Button>{" "}
-                                      où la branche elle même peut reconnaitre
-                                      sa primauté, sauf si l’accord d’entreprise
-                                      a{" "}
-                                      <Button
-                                        variant="link"
-                                        onClick={() =>
-                                          setModalGarantiesOpen(true)
-                                        }
-                                      >
-                                        des garanties au moins équivalentes
-                                      </Button>
-                                      .
-                                    </Toast>
-                                    <p>
-                                      Ces règles sont les mêmes pour
-                                      l’articulation entre accord de branche et
-                                      accord de groupe et entre accord de
-                                      branche et accord d’établissement.
-                                    </p>
-                                  </>
-                                )
-                              },
-                              {
-                                title: (
-                                  <h5>
-                                    Articulation entre accord de groupe et
-                                    accord d’entreprise
-                                  </h5>
-                                ),
-                                body: (
-                                  <>
-                                    L’accord de groupe s’applique en priorité
-                                    par rapport à l’accord d’entreprise ou
-                                    l’accord d’établissement si l’accord de
-                                    groupe l’indique dans son accord. Si rien
-                                    n’est indiqué dans l’accord de groupe alors
-                                    l’accord le plus avantageux pour le salarié
-                                    s’applique.
-                                  </>
-                                )
-                              },
-                              {
-                                title: (
-                                  <h5>
-                                    Articulation entre accord d’entreprise et
-                                    accord d’établissement
-                                  </h5>
-                                ),
-                                body: (
-                                  <>
-                                    L’accord d’entreprise s’applique en priorité
-                                    par rapport à l’accord d’établissement si
-                                    l’accord d’entreprise l’indique dans son
-                                    accord. Si rien n’est indiqué dans l’accord
-                                    d’entreprise alors l’accord le plus
-                                    avantageux pour le salarié s’applique.
-                                  </>
-                                )
-                              }
-                            ]}
-                          />
+                          <h5>
+                            Hiérarchie entre accord de branche et accord
+                            d’entreprise
+                          </h5>
+                          <p>
+                            Le principe est que l’accord d’entreprise s’applique
+                            en priorité par rapport à l’accord ou la convention
+                            de branche même si, l’accord d’entreprise est plus
+                            désavantageux pour le salarié que l’accord de
+                            branche.
+                          </p>
+                          <Toast variant="warning">
+                            Le principe ne s’applique pas dans{" "}
+                            <Button
+                              variant="link"
+                              onClick={() => setModal13MatieresOpen(true)}
+                            >
+                              13 matières
+                            </Button>{" "}
+                            où la loi reconnait la primauté à l’accord de
+                            branche et{" "}
+                            <Button
+                              variant="link"
+                              onClick={() => setModal4MatieresOpen(true)}
+                            >
+                              4 matières
+                            </Button>{" "}
+                            où la branche elle même peut reconnaitre sa
+                            primauté, sauf si l’accord d’entreprise a{" "}
+                            <Button
+                              variant="link"
+                              onClick={() => setModalGarantiesOpen(true)}
+                            >
+                              des garanties au moins équivalentes
+                            </Button>
+                            .
+                          </Toast>
+                          <p>
+                            Ces règles sont les mêmes pour la hiérarchie entre
+                            accord de branche et accord de groupe et entre
+                            accord de branche et accord d’établissement.
+                          </p>
+                          <h5>
+                            Hiérarchie entre accord de groupe et accord
+                            d’entreprise
+                          </h5>
+                          <p>
+                            L’accord de groupe s’applique en priorité par
+                            rapport à l’accord d’entreprise ou l’accord
+                            d’établissement si l’accord de groupe l’indique dans
+                            son accord. Si rien n’est indiqué dans l’accord de
+                            groupe alors l’accord le plus avantageux pour le
+                            salarié s’applique.
+                          </p>
+                          <h5>
+                            Hiérarchie entre accord d’entreprise et accord
+                            d’établissement
+                          </h5>
+                          <p>
+                            L’accord d’entreprise s’applique en priorité par
+                            rapport à l’accord d’établissement si l’accord
+                            d’entreprise l’indique dans son accord. Si rien
+                            n’est indiqué dans l’accord d’entreprise alors
+                            l’accord le plus avantageux pour le salarié
+                            s’applique.
+                          </p>
                         </>
                       )
                     }

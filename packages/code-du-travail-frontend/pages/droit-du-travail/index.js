@@ -15,11 +15,11 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
       description="Le droit du travail, c'est quoi ?"
       image={ogImage}
     />
-    <Section variant="white">
+    <StyledSection variant="white">
       <StyledContainer>
         <BigBlock>
           <Wrapper>
-            <h1>Le droit du travail, c’est quoi ?</h1>
+            <H1>Le droit du travail, c’est quoi ?</H1>
             <strong>
               Le droit du travail est l’ensemble des règles juridiques
               applicables aux relations entre employeurs privés et salariés, à
@@ -52,7 +52,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
           </Wrapper>
         </SmallBlock>
       </StyledContainer>
-    </Section>
+    </StyledSection>
     <Origins />
     <Hierarchy />
   </PageLayout>
@@ -60,7 +60,11 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
 
 export default DroitDuTravail;
 
-const { box, breakpoints, colors, spacing } = theme;
+const { box, breakpoints, colors, fonts, spacing } = theme;
+
+const StyledSection = styled(Section)`
+  padding: ${spacing.larger} 0;
+`;
 
 const StyledContainer = styled(Container)`
   position: relative;
@@ -87,6 +91,10 @@ const BigBlock = styled.div`
     padding: 0;
     margin-bottom: ${spacing.interComponent};
   }
+`;
+
+const H1 = styled.h1`
+  font-size: ${fonts.sizeH2};
 `;
 
 const SmallBlock = styled.div`

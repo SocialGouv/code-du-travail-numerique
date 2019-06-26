@@ -34,12 +34,10 @@ export default createGlobalStyle`
 
   h5 {
     font-size: ${fonts.sizeH5};
-    text-transform: uppercase;
   }
 
   h6 {
     font-size: ${fonts.sizeH6};
-    text-transform: uppercase;
   }
 
 `;
