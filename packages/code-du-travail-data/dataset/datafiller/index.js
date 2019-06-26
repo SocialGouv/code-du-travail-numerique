@@ -13,7 +13,7 @@ const toEsResults = results =>
     results.map(result =>
       limit(async () => ({
         ...result,
-        refs: await elastic.getReferences(result.refs)
+        refs: await elastic.getReferences(result)
       }))
     )
   );

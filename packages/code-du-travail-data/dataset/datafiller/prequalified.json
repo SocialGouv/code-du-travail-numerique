@@ -7281,19 +7281,6 @@
       {
         "_index": "code_du_travail_numerique",
         "_type": "code_du_travail_numerique",
-        "_id": "5tQWlGsBPUX8CkMHrGHW",
-        "_score": 30.067787,
-        "_source": {
-          "source": "fiches_service_public",
-          "title": "Contrat unique d'insertion (CUI) - Parcours emploi compétences (PEC)",
-          "slug": "contrat-unique-dinsertion-cui-parcours-emploi-competences-pec",
-          "url": "https://www.service-public.fr/particuliers/vosdroits/F21006"
-        },
-        "relevance": 5
-      },
-      {
-        "_index": "code_du_travail_numerique",
-        "_type": "code_du_travail_numerique",
         "_id": "Y9QWlGsBPUX8CkMHsmM7",
         "_score": 30.545605,
         "_source": {
