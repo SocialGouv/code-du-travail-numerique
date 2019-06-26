@@ -31,17 +31,22 @@ const Footer = () => (
         <Category>
           <CategoryTitle>Code du travail numérique</CategoryTitle>
           <List>
-            <StyledListItem key="0">
+            <StyledListItem>
+              <Link route="droit-du-travail">
+                <a>Le droit du travail</a>
+              </Link>
+            </StyledListItem>
+            <StyledListItem>
               <Link route="about">
                 <a>À propos</a>
               </Link>
             </StyledListItem>
-            <StyledListItem key="1">
+            <StyledListItem>
               <Link route="mentions-legales">
                 <a>Mentions légales</a>
               </Link>
             </StyledListItem>
-            <StyledListItem key="2">
+            <StyledListItem>
               <a href="mailto:codedutravail@beta.gouv.fr">Contact</a>
             </StyledListItem>
           </List>
@@ -49,7 +54,7 @@ const Footer = () => (
         <Category>
           <CategoryTitle>Aidez-nous à améliorer cet outil</CategoryTitle>
           <List>
-            <StyledListItem key="0">
+            <StyledListItem>
               <a
                 href={
                   "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
@@ -61,7 +66,7 @@ const Footer = () => (
                 Contribuer sur Github
               </a>
             </StyledListItem>
-            <StyledListItem key="1">
+            <StyledListItem>
               <a
                 href={
                   "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
@@ -78,7 +83,7 @@ const Footer = () => (
         <Category>
           <CategoryTitle>En collaboration avec</CategoryTitle>
           <List>
-            <StyledListItem key="0">
+            <StyledListItem>
               <a
                 href={
                   "https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -89,7 +94,7 @@ const Footer = () => (
                 La Direction Générale du Travail
               </a>
             </StyledListItem>
-            <StyledListItem key="1">
+            <StyledListItem>
               <a
                 href={"https://incubateur.social.gouv.fr/"}
                 target="_blank"
@@ -98,7 +103,7 @@ const Footer = () => (
                 L’incubateur des ministères sociaux
               </a>
             </StyledListItem>
-            <StyledListItem key="2">
+            <StyledListItem>
               <a
                 href={"https://beta.gouv.fr/"}
                 target="_blank"

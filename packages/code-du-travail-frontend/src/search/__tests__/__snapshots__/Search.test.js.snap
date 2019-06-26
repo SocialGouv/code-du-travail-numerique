@@ -20,7 +20,7 @@ exports[`<search /> should render 1`] = `
   background-color: #fff;
 }
 
-.c8:not(:focus):not(:active) {
+.c9:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -32,7 +32,7 @@ exports[`<search /> should render 1`] = `
   border: 0;
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -43,11 +43,11 @@ exports[`<search /> should render 1`] = `
   text-align: left;
 }
 
-.c10 ul {
+.c11 ul {
   z-index: 100;
 }
 
-.c10 li[role="option"]:nth-child(2n + 1) {
+.c11 li[role="option"]:nth-child(2n + 1) {
   background: #f5f7fa;
 }
 
@@ -62,13 +62,17 @@ exports[`<search /> should render 1`] = `
   color: #006ab2;
 }
 
+.c5 {
+  font-size: 1rem;
+}
+
 .c3 {
   position: relative;
   padding: 1rem 0;
   text-align: center;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,7 +83,7 @@ exports[`<search /> should render 1`] = `
   width: 90%;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   left: 0;
   top: 0;
@@ -88,7 +92,7 @@ exports[`<search /> should render 1`] = `
   height: 1.3rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,12 +114,12 @@ exports[`<search /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c9:focus {
+.c10:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c11 {
+.c12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -131,7 +135,7 @@ exports[`<search /> should render 1`] = `
   border-radius: 0.25rem;
 }
 
-.c12 {
+.c13 {
   position: absolute;
   top: 50%;
   left: 0;
@@ -142,14 +146,14 @@ exports[`<search /> should render 1`] = `
   transform: translate(50%,-50%);
 }
 
-.c13 {
+.c14 {
   padding-left: 2.5rem;
   color: #26353f;
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.c14 {
+.c15 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -172,13 +176,13 @@ exports[`<search /> should render 1`] = `
   margin-left: 0.5rem;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):focus {
+.c15:not([disabled]):hover,
+.c15:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c14:not([disabled]):active {
+.c15:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -186,7 +190,7 @@ exports[`<search /> should render 1`] = `
   outline: none;
 }
 
-.c14[aria-pressed="true"] {
+.c15[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -195,16 +199,16 @@ exports[`<search /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c14[aria-pressed="true"]:not([disabled]):hover,
-.c14[aria-pressed="true"]:not([disabled]):focus {
+.c15[aria-pressed="true"]:not([disabled]):hover,
+.c15[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c14[aria-pressed="true"]:not([disabled]):active {
+.c15[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c14[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -223,7 +227,7 @@ exports[`<search /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -232,26 +236,26 @@ exports[`<search /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     height: 50px;
     padding: 0 1rem;
   }
 }
 
 @media (max-width:980px) {
-  .c11 {
+  .c12 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c14 {
+  .c15 {
     margin-left: 0;
     margin-top: 0.625rem;
   }
@@ -271,12 +275,19 @@ exports[`<search /> should render 1`] = `
           class="c4"
         >
           Posez votre question sur le droit du travail
+          <br />
+          <a
+            class="c5"
+            href="/droit-du-travail"
+          >
+            Le droit du travail, c‘est quoi ?
+          </a>
         </p>
         <form
-          class="c5"
+          class="c6"
         >
           <svg
-            class="c6"
+            class="c7"
             viewBox="0 0 20 20"
           >
             <title />
@@ -287,11 +298,11 @@ exports[`<search /> should render 1`] = `
             />
           </svg>
           <label
-            class="c7"
+            class="c8"
             for="main-search-input"
           >
             <span
-              class="c8"
+              class="c9"
             >
               Rechercher
             </span>
@@ -305,7 +316,7 @@ exports[`<search /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c9"
+                class="c10"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -313,23 +324,23 @@ exports[`<search /> should render 1`] = `
                 value=""
               />
               <div
-                class="c10"
+                class="c11"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
             </div>
           </label>
           <label
-            class="c11"
+            class="c12"
             for="contentSource"
           >
             <span
-              class="c8"
+              class="c9"
             >
               Filtrer par type de contenu
             </span>
             <svg
-              class="c12"
+              class="c13"
               viewBox="0 0 512 512"
             >
               <title>
@@ -349,7 +360,7 @@ exports[`<search /> should render 1`] = `
               />
             </svg>
             <select
-              class="c13"
+              class="c14"
               id="contentSource"
               name="source"
             >
@@ -392,7 +403,7 @@ exports[`<search /> should render 1`] = `
           </label>
           <button
             aria-pressed="false"
-            class="c14"
+            class="c15"
             type="submit"
           >
             Rechercher
@@ -424,7 +435,7 @@ exports[`<search /> should render suggestions 1`] = `
   background-color: #fff;
 }
 
-.c8:not(:focus):not(:active) {
+.c9:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -436,15 +447,15 @@ exports[`<search /> should render suggestions 1`] = `
   border: 0;
 }
 
-.c12 {
+.c13 {
   display: inline-block;
 }
 
-.c11 p {
+.c12 p {
   margin: 0;
 }
 
-.c7 {
+.c8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -455,11 +466,11 @@ exports[`<search /> should render suggestions 1`] = `
   text-align: left;
 }
 
-.c10 ul {
+.c11 ul {
   z-index: 100;
 }
 
-.c10 li[role="option"]:nth-child(2n + 1) {
+.c11 li[role="option"]:nth-child(2n + 1) {
   background: #f5f7fa;
 }
 
@@ -474,13 +485,17 @@ exports[`<search /> should render suggestions 1`] = `
   color: #006ab2;
 }
 
+.c5 {
+  font-size: 1rem;
+}
+
 .c3 {
   position: relative;
   padding: 1rem 0;
   text-align: center;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -491,7 +506,7 @@ exports[`<search /> should render suggestions 1`] = `
   width: 90%;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   left: 0;
   top: 0;
@@ -500,7 +515,7 @@ exports[`<search /> should render suggestions 1`] = `
   height: 1.3rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -522,12 +537,12 @@ exports[`<search /> should render suggestions 1`] = `
   transition: border 250ms ease;
 }
 
-.c9:focus {
+.c10:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c13 {
+.c14 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -543,7 +558,7 @@ exports[`<search /> should render suggestions 1`] = `
   border-radius: 0.25rem;
 }
 
-.c14 {
+.c15 {
   position: absolute;
   top: 50%;
   left: 0;
@@ -554,14 +569,14 @@ exports[`<search /> should render suggestions 1`] = `
   transform: translate(50%,-50%);
 }
 
-.c15 {
+.c16 {
   padding-left: 2.5rem;
   color: #26353f;
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-.c16 {
+.c17 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -584,13 +599,13 @@ exports[`<search /> should render suggestions 1`] = `
   margin-left: 0.5rem;
 }
 
-.c16:not([disabled]):hover,
-.c16:not([disabled]):focus {
+.c17:not([disabled]):hover,
+.c17:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c16:not([disabled]):active {
+.c17:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -598,7 +613,7 @@ exports[`<search /> should render suggestions 1`] = `
   outline: none;
 }
 
-.c16[aria-pressed="true"] {
+.c17[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -607,16 +622,16 @@ exports[`<search /> should render suggestions 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c16[aria-pressed="true"]:not([disabled]):hover,
-.c16[aria-pressed="true"]:not([disabled]):focus {
+.c17[aria-pressed="true"]:not([disabled]):hover,
+.c17[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c16[aria-pressed="true"]:not([disabled]):active {
+.c17[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c16[disabled] {
+.c17[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -635,7 +650,7 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -644,26 +659,26 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     height: 50px;
     padding: 0 1rem;
   }
 }
 
 @media (max-width:980px) {
-  .c13 {
+  .c14 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c16 {
+  .c17 {
     margin-left: 0;
     margin-top: 0.625rem;
   }
@@ -683,12 +698,19 @@ exports[`<search /> should render suggestions 1`] = `
           class="c4"
         >
           Posez votre question sur le droit du travail
+          <br />
+          <a
+            class="c5"
+            href="/droit-du-travail"
+          >
+            Le droit du travail, c‘est quoi ?
+          </a>
         </p>
         <form
-          class="c5"
+          class="c6"
         >
           <svg
-            class="c6"
+            class="c7"
             viewBox="0 0 20 20"
           >
             <title />
@@ -699,11 +721,11 @@ exports[`<search /> should render suggestions 1`] = `
             />
           </svg>
           <label
-            class="c7"
+            class="c8"
             for="main-search-input"
           >
             <span
-              class="c8"
+              class="c9"
             >
               Rechercher
             </span>
@@ -717,7 +739,7 @@ exports[`<search /> should render suggestions 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c9"
+                class="c10"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -725,7 +747,7 @@ exports[`<search /> should render suggestions 1`] = `
                 value="yolo"
               />
               <div
-                class="c10"
+                class="c11"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               >
@@ -741,10 +763,10 @@ exports[`<search /> should render suggestions 1`] = `
                     style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                   >
                     <div
-                      class="c11"
+                      class="c12"
                     >
                       <div
-                        class="c12"
+                        class="c13"
                       >
                         foo
                       </div>
@@ -758,10 +780,10 @@ exports[`<search /> should render suggestions 1`] = `
                     style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                   >
                     <div
-                      class="c11"
+                      class="c12"
                     >
                       <div
-                        class="c12"
+                        class="c13"
                       >
                         foobar
                       </div>
@@ -775,10 +797,10 @@ exports[`<search /> should render suggestions 1`] = `
                     style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                   >
                     <div
-                      class="c11"
+                      class="c12"
                     >
                       <div
-                        class="c12"
+                        class="c13"
                       >
                         foo bar ?
                       </div>
@@ -792,10 +814,10 @@ exports[`<search /> should render suggestions 1`] = `
                     style="list-style-type: none; border-radius: 3px; padding: 5px; line-height: 2rem; cursor: pointer;"
                   >
                     <div
-                      class="c11"
+                      class="c12"
                     >
                       <div
-                        class="c12"
+                        class="c13"
                       >
                         foo bazzz
                       </div>
@@ -806,16 +828,16 @@ exports[`<search /> should render suggestions 1`] = `
             </div>
           </label>
           <label
-            class="c13"
+            class="c14"
             for="contentSource"
           >
             <span
-              class="c8"
+              class="c9"
             >
               Filtrer par type de contenu
             </span>
             <svg
-              class="c14"
+              class="c15"
               viewBox="0 0 512 512"
             >
               <title>
@@ -835,7 +857,7 @@ exports[`<search /> should render suggestions 1`] = `
               />
             </svg>
             <select
-              class="c15"
+              class="c16"
               id="contentSource"
               name="source"
             >
@@ -878,7 +900,7 @@ exports[`<search /> should render suggestions 1`] = `
           </label>
           <button
             aria-pressed="false"
-            class="c16"
+            class="c17"
             type="submit"
           >
             Rechercher

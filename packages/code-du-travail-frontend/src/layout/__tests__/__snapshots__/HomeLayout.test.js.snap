@@ -308,6 +308,15 @@ exports[`<HomeLayout /> should render 1`] = `
               class="c17"
             >
               <a
+                href="/droit-du-travail"
+              >
+                Le droit du travail
+              </a>
+            </li>
+            <li
+              class="c17"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

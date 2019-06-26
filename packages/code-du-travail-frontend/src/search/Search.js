@@ -5,7 +5,7 @@ import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
 import { Button, Container, theme, Section, ScreenReaderOnly } from "@cdt/ui";
 
-import { Router } from "../../routes";
+import { Link, Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
 import ReponseIcon from "../icons/ReponseIcon";
 import SearchIcon from "../icons/SearchIcon";
@@ -178,6 +178,10 @@ class Search extends React.Component {
             <StyledSearch ref={this.searchRef}>
               <SearchLabel>
                 Posez votre question sur le droit du travail
+                <br />
+                <Link route="droit-du-travail" passHref>
+                  <A>Le droit du travail, c‘est quoi ?</A>
+                </Link>
               </SearchLabel>
               <SearchForm onSubmit={this.onFormSubmit}>
                 <SearchInputIcon />
@@ -237,6 +241,10 @@ const SearchLabel = styled.p`
   font-size: ${fonts.sizeH2};
   line-height: ${fonts.lineHeight};
   color: ${colors.title};
+`;
+
+const A = styled.a`
+  font-size: ${fonts.sizeBase};
 `;
 
 const StyledSearch = styled.div`

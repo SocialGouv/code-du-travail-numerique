@@ -218,6 +218,15 @@ exports[`<Footer /> should render 1`] = `
               class="c12"
             >
               <a
+                href="/droit-du-travail"
+              >
+                Le droit du travail
+              </a>
+            </li>
+            <li
+              class="c12"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos
