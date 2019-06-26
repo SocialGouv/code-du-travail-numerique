@@ -16,7 +16,7 @@ class ConventionInfos extends React.Component {
               <td>{conteneur.num}</td>
             </tr>
             <tr>
-              <th>Date de publication originale</th>
+              <th>Date d’entrée en vigueur</th>
               <td>{format(conteneur.date_publi, "DD/MM/YYYY")}</td>
             </tr>
           </tbody>

@@ -45,16 +45,6 @@ const Convention = ({ convention, conteneur }) => (
             />
           ),
           key: "salaires"
-        },
-        {
-          tab: "Textes d'extensions",
-          panel: (
-            <ConventionListeTextes
-              conteneur={conteneur}
-              typeTextes={"extensions"}
-            />
-          ),
-          key: "extensions"
         }
       ]}
     />
