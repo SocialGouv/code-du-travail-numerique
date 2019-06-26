@@ -283,7 +283,7 @@ const accordionItemsRight = [
         </p>
         <p>
           <i>
-            Exemples&nbsp;: arrêté préfectoral déterminant la zone touristique
+            Exemple&nbsp;: arrêté préfectoral déterminant la zone touristique
             permettant l’ouverture le dimanche ou arrêté ministériel fixant le
             modèle de l’avis d’inaptitude
           </i>
