@@ -28,3 +28,5 @@ flags:
   react-fiche-service-public:
     paths:
       - packages/react-fiche-service-public
+
+comment: off
