@@ -1,0 +1,3479 @@
+[
+  {
+    "term": "Abrogation",
+    "definition": "Suppression pour l'avenir d'un acte administratif ou d'une règle de droit",
+    "definition_cdtn": "Suppression pour l'avenir d'un acte administratif ou d'une règle de droit (glossaire de Service Public)"
+  },
+  {
+    "term": "Abrogé",
+    "definition": "cas d’un article qui n’est plus en vigueur par suite d’une abrogation explicite par un avenant paru au Bulletin officiel des conventions collectives\n: cas de la convention collective ou des articles de celle-ci qui ne sont plus en vigueur suite à une abrogation explicite par un avenant paru au Bulletin officiel des conventions collectives",
+    "definition_cdtn": "Article qui ne s'applique plus suite à une abrogation explicite."
+  },
+  {
+    "term": "Accessoires de salaire ",
+    "definition": "Les accessoires de salaire désignent les différentes primes, avantages en nature, frais professionnels et indemnités versées par l’employeur en sus des salaires de base. On les dénomme également « compléments de salaire ». Ces accessoires font partie intégrante de la rémunération des salariés, mais n’ont généralement pas de caractère permanent. Les indemnités accessoires au salaire ne doivent pas être confondues avec les indemnités qui peuvent être versées en remplacement du salaire dans des circonstances particulières : congés payés, maladie ou accident, maternité, chômage partiel, chômage, etc.",
+    "definition_cdtn": "Les accessoires de salaire sont les autres éléments de rémunération versés par l'employeur qui s'ajoutent au salaire de base du salarié. Ils font partie de la rémunération du salarié. \nExemples : primes, avantages en nature, frais professionnels...\nSynonyme : les compléments de salaire. \n"
+  },
+  {
+    "term": "Accessoire de protection ",
+    "synonym": "epi \ngant\nequipement de protection individuelle"
+  },
+  {
+    "term": "Accident de mission",
+    "definition": "L’accident de mission, qui n’est défini expressément ni par le Code du travail ni par le Code de la Sécurité sociale, est une construction jurisprudentielle à partir de l’article L. 411-1 du Code de la Sécurité sociale. Concernant les salariés qui effectuent des déplacements pour le compte de l’entreprise (VRP, visites de client ou de chantier, formation, etc.), la jurisprudence a assoupli les critères retenus en matière d’accident du travail (survenance aux temps et lieux de travail). L’accident d’un salarié en mission est présumé être un accident du travail s’il survient à l’occasion d’un acte professionnel (crise cardiaque chez un client) ou d’un acte de la vie courante (décès dans la chambre d’hôtel).",
+    "definition_cdtn": "Accident survenu lorsque le salarié est en mission (déplacement ou exécution d'une tâche sur un lieu qui n'est pas le lieu habituel de travail). "
+  },
+  {
+    "term": "Accident de travail",
+    "abbrev": "AT\nADT"
+  },
+  {
+    "term": "Accident du travail- maladie professionnelle",
+    "abbrev": "AT MP"
+  },
+  {
+    "term": "Accompagnement intensif jeunes",
+    "abbrev": "AIJ"
+  },
+  {
+    "term": "Accord atypique",
+    "definition": "L’accord atypique est un accord conclu entre l’employeur et les représentants élus du personnel sans respect des règles applicables à la négociation collective.",
+    "definition_cdtn": "Accord conclu entre l'employeur et des représentants du personnel ou des salariés sans respecter les règles de validité des accords collectifs de travail posées par le code du travail."
+  },
+  {
+    "term": "Accord collectif",
+    "synonym": "accord collectif de travail ; accord paritaire",
+    "definition": "L’accord collectif, contrairement à la convention collective, ne traite que d’un ou de plusieurs sujets déterminés relatifs à l’ensemble des conditions d’emploi, de travail et de formation professionnelle des salariés et de leurs garanties sociales pour toutes les catégories professionnelles. Par exemple, il peut s’agir d’un accord collectif sur les salaires ou encore sur la prévoyance. Négociation et évolution. \nComme la convention collective, il résulte d’une négociation entre un ou plusieurs employeurs (ou une ou plusieurs organisations patronales) et une ou plusieurs organisations syndicales de salariés. Il peut être modifié ou amendé dans les mêmes conditions qu’une convention collective.\n\nL’accord collectif désigne la matérialisation, par un document écrit, du résultat de négociations menées entre des représentants du patronat et des salariés au nom de ceux-ci. Il peut être conclu au niveau national interprofessionnel ou être un accord d’entreprise. Il doit avoir été négocié et conclu dans un cadre réglementé quant à son objet et à sa portée, mais également quant à la représentation des parties. L’accord collectif traite d’un point particulier contrairement à la convention collective qui recouvre tous les aspects liés à la relation de travail.",
+    "definition_cdtn": "Accord conclu entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés en respectant des règles de validité issues du code du travail. Il peut être conclu à plusieurs niveaux : branche professionnelle, groupe, entreprise, établissement... \nL'accord collectif concerne un ou plusieurs thèmes contrairement à la convention collective qui traite de l'ensemble des conditions d’emploi, de travail et de formation professionnelle et des garanties sociales des salariés. "
+  },
+  {
+    "term": "Accord d'entreprise",
+    "synonym": "accord collectif d'entreprise",
+    "definition": "Accord collectif conclu au niveau de l’entreprise",
+    "definition_cdtn": "Accord collectif conclu au niveau d'une entreprise"
+  },
+  {
+    "term": "Accord de branche",
+    "definition": "Accord collectif conclu au niveau d’une branche d’activité ou d’un secteur professionnel.",
+    "definition_cdtn": "Accord collectif conclu au niveau d’une branche d’activité ou d’un secteur professionnel."
+  },
+  {
+    "term": "Accord de branche étendu",
+    "definition": "L'accord de branche étendu s'applique à toutes les entreprises du secteur d'activité visé par le texte. En ce sens, il se distingue de l'accord de branche \"ordinaire\" qui ne s'applique qu'aux entreprises adhérant à l'une des organisations patronales signataires de l'accord.",
+    "definition_cdtn": "Accord collectif conclu au niveau d'une branche professionnelle qui a été étendu par le Ministère du travail. Cela signifie que l'accord s'applique à toutes les entreprises qui entrent dans le champ visé par l'accord. "
+  },
+  {
+    "term": "Accord de branche non étendu",
+    "definition_cdtn": "Accord collectif conclu au niveau d'une branche professionnelle qui ne s'appliquent qu'aux entreprises ayant signé ou ayant adhéré à l'une des organisations patronales signataires de l'accord. "
+  },
+  {
+    "term": "Accord de groupe",
+    "definition_cdtn": "Accord collectif conclu au niveau d'un groupe"
+  },
+  {
+    "term": "Accord de méthode",
+    "definition_cdtn": "Accord conclu négocié entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés définissant la méthode de négociation. \nPar exemple, les principales étapes du déroulement des négociations, les informations partagées entre les négociateurs ou la procédure d'information et consultation du comité social et économique dans le cadre des licenciements économiques collectifs. "
+  },
+  {
+    "term": "accord de performance collective",
+    "abbrev": "APC",
+    "definition": "L’accord dit « de compétitivité ou de performance collective » a été créé par l’ordonnance n° 2017-1385 du 22 septembre 2017 ayant fusionné les accords de préservation ou de développement de l’emploi, les accords de réduction du temps de travail, de maintien de l’emploi et de mobilité interne.\n\nUn tel accord vise à répondre aux nécessités liées au fonctionnement de l’entreprise ou en vue de préserver ou de développer l’emploi, indépendamment de tout contexte de licenciement économique.\n\nL’accord peut prévoir :\n\nd’aménager la durée du travail, ses modalités d’organisation et de répartition ;\nd’aménager la rémunération des salariés dans le respect du SMIC et des salaires minima conventionnels ;\nde déterminer les conditions de la mobilité professionnelle ou géographique interne à l’entreprise."
+  },
+  {
+    "term": "Accord dérogatoire",
+    "definition": "Un accord dérogatoire est un accord collectif dérogeant à une ou plusieurs prescriptions légales ou réglementaires. Les différents cas de dérogation possibles sont détaillés par la réglementation.",
+    "definition_cdtn": "Accord collectif dérogeant à ce que prévoit le code du travail. L'accord dérogatoire peut être conclu uniquement dans des domaines précis et en respectant certaines conditions fixés par la loi. "
+  },
+  {
+    "term": "Accord interentreprises",
+    "definition_cdtn": "Accord collectif conclu au niveau de plusieurs entreprises n'appartenant pas au même groupe."
+  },
+  {
+    "term": "accord national interprofessionnel",
+    "abbrev": "ANI",
+    "synonym": "accords de grenelle \naccords matignon \naccords parodi",
+    "definition": "Accord collectif négocié au niveau national, couvrant l’ensemble des secteurs d’activités professionnelles et validé selon des modalités précisées par l’article L. 2232-2 du code du travail",
+    "definition_cdtn": "Accord collectif conclu au niveau national qui s'applique à plusieurs branches professionnelles. "
+  },
+  {
+    "term": "protocole d'accord préélectoral",
+    "abbrev": "PAP",
+    "synonym": "protocole préélectoral\naccord préélectoral",
+    "definition_cdtn": " Accord spécifique négocié entre l'employeur et les syndicats pour organiser les élections professionnelles des représentants du personnel (modalités d'organisation et de déroulement des élections, répartition des sièges...)"
+  },
+  {
+    "term": "Accord-cadre"
+  },
+  {
+    "term": "Acte réglementaire",
+    "definition": "Décision administrative à portée générale et impersonnelle. Par exemple, arrêté pris par un maire ou un président de conseil départemental ou régional.\nà la différence des actes administratifs \"individuels\", qui s'adressent à des destinataires identifiables, les actes réglementaires ont une portée générale et impersonnelle et visent ou concernent des catégories envisagées abstraitement et dans leur ensemble. ",
+    "definition_cdtn": "Décision administrative à portée générale et impersonnelle. Par exemple, arrêté pris par un maire ou un président de conseil départemental ou régional.\nà la différence des actes administratifs \"individuels\", qui s'adressent à des destinataires identifiables, les actes réglementaires ont une portée générale et impersonnelle et visent ou concernent des catégories envisagées abstraitement et dans leur ensemble. (Glossaire Service Public)"
+  },
+  {
+    "term": "Actes positifs de recherche d'emploi",
+    "definition": "Démarches régulières de recherche d'emploi pour lesquelles le demandeur d'emploi doit être en mesure de produire un justificatif (candidatures envoyées, participation à des sessions d'aide à la recherche d'un emploi...)",
+    "definition_cdtn": "Démarches régulières de recherche d'emploi pour lesquelles le demandeur d'emploi doit être en mesure de produire un justificatif (candidatures envoyées, participation à des sessions d'aide à la recherche d'un emploi...) (Glossaire Service Public)"
+  },
+  {
+    "term": "Action de formation conventionnée",
+    "abbrev": "AFC"
+  },
+  {
+    "term": "Action de formation en situation de travail",
+    "abbrev": "AFEST"
+  },
+  {
+    "term": "Actionnariat des salariés",
+    "definition": "L'actionnariat des salariés désigne le fait pour une entreprise d'intégrer ses salariés au sein de son actionnariat, autrement dit, de les autoriser à apporter des fonds dans son capital social. L'actionnariat des salariés représente souvent une part minoritaire dans le capital d'une entreprise. Un actionnariat salariés majoritaire reste très rare sur les marchés financiers.\n\nL'actionnariat des salariés correspond à la détention par les salariés des actions de leur entreprise. Un actionnaire salarié peut notamment avoir acquis les actions de son entreprise à l'occasion d'opérations d'offres d'actions réservées à tous les salariés (stock-options, R.E.S,...). Les dispositifs de l'actionnariat salarié permettent d'acquérir des actions dans des conditions préférentielles (rabais sur les prix, complément versé par l'entreprise (abondement),...).",
+    "definition_cdtn": "Le fait pour les salariés de participer au capital d'une société notamment par le biais d'actions. \nExemples de dispositifs d'actionnariat salarié : stock-options, attribution d'actions gratuites, augmentations de capital réservées aux adhérents des plans d'épargne entreprise...   "
+  },
+  {
+    "term": "actions de sociétés d'investissement à capital variable",
+    "abbrev": "SICAV"
+  },
+  {
+    "term": "Activité partielle",
+    "synonym": "chômage partiel\nchômage technique",
+    "definition_cdtn": "Dispositif permettant à un employeur, suite à des difficultés, de réduire ou de suspendre temporairement l'activité de ses salariés. A ce titre, l'employeur reçoit une allocation de l'Etat appelée allocation d'activité partielle. "
+  },
+  {
+    "term": "Activité partielle de longue durée",
+    "abbrev": "APLD"
+  },
+  {
+    "term": "activité principale exercée",
+    "abbrev": "APE",
+    "synonym": "code APE",
+    "definition": "Le code APE permet d'identifier la branche d'activité principale de l'entreprise ou du travailleur indépendant. Il est composé de 4 chiffres et 1 lettre, en référence à la nomenclature statistique nationale d'activités française.",
+    "definition_cdtn": "Le code APE permet d'identifier la branche d'activité principale de l'entreprise ou du travailleur indépendant. Il est composé de 4 chiffres et 1 lettre, en référence à la nomenclature statistique nationale d'activités française. (Glossaire Service Public)"
+  },
+  {
+    "term": "Activités sociales et culturelles",
+    "abbrev": "ASC",
+    "synonym": "Oeuvres sociales",
+    "definition_cdtn": "Selon les juges il s'agit de toute activité non obligatoire exercée principalement au bénéfice du personnel de l'entreprise, sans discrimination, en vue d'améliorer les conditions collectives d'emploi, de travail et de vie du personnel au sein de l'entreprise. \nExemples : titres-restaurants, crèches, bons d'achat, chèques-vacances..."
+  },
+  {
+    "term": "Adhésion (accord collectif ou convention collective) ",
+    "definition": "Peuvent adhérer à une convention ou à un accord toute organisation syndicale représentative de salariés ainsi que toute organisation syndicale ou association d’employeurs ou des employeurs pris individuellement (article L. 2261-3 du code du travail).\n\nL'adhésion consiste, pour un employeur ou une organisation syndicale, à contresigner une convention ou un accord collectif sans l'avoir négocié.",
+    "definition_cdtn": "L'adhésion est une procédure qui permet à une organisation syndicale de salariés ou à un employeur de contresigner un accord collectif ou une convention collective qui a déjà été négocié. Cette adhésion entraîne l'obligation de respecter la convention collective ou l'accord collectif en question. "
+  },
+  {
+    "term": "Affection de longue durée",
+    "abbrev": "ALD",
+    "synonym": "maladie de longue durée",
+    "definition": "Maladie grave et/ou chronique ouvrant droit à une prise en charge à 100 % par l'assurance maladie. Exemples : diabète, cancer, mucoviscidose, infection par le virus de l'immunodéficience humaine (VIH).",
+    "definition_cdtn": "Maladie grave et/ou chronique ouvrant droit à une prise en charge à 100 % par l'assurance maladie. Exemples : diabète, cancer, mucoviscidose, infection par le virus de l'immunodéficience humaine (VIH).\n(Glossaire Service Public)"
+  },
+  {
+    "term": "Affiliation ",
+    "synonym": "assujettissement",
+    "definition_cdtn": "C'est le fait d'être rattaché. \nAffiliation à la Sécurité Sociale : être rattaché au régime obligatoire de la Sécurité sociale"
+  },
+  {
+    "term": "Agence centrale des organismes de sécurité sociale",
+    "abbrev": "ACOSS"
+  },
+  {
+    "term": "Agence france entrepreneur",
+    "abbrev": "AFE"
+  },
+  {
+    "term": "agence locale pour l'emploi",
+    "abbrev": "ALE"
+  },
+  {
+    "term": "agence nationale de l'accueil des étrangers et des migrations",
+    "abbrev": "ANAEM"
+  },
+  {
+    "term": "Agence nationale de sécurité sanitaire de l'alimentation, de l'environnement et du travail",
+    "abbrev": "ANSES"
+  },
+  {
+    "term": "agence nationale pour l'amélioration des conditions de travail",
+    "abbrev": "ANACT"
+  },
+  {
+    "term": "agence nationale pour l'emploi",
+    "abbrev": "ANPE"
+  },
+  {
+    "term": "agence nationale pour l'insertion et la promotion des travailleurs d'outre- mer",
+    "abbrev": "ANT"
+  },
+  {
+    "term": "agence nationale pour la création d'entreprise",
+    "abbrev": "ANCE"
+  },
+  {
+    "term": "Agence nationale pour la formation professionnelle des adultes",
+    "abbrev": "AFPA",
+    "synonym": "association nationale pour la formation professionnelle des adultes \nassociation pour la formation professionnelle des adultes"
+  },
+  {
+    "term": "Agence nouvelle des solidarités actives",
+    "abbrev": "ANSA"
+  },
+  {
+    "term": "Agence régionale de santé",
+    "abbrev": "ARS"
+  },
+  {
+    "term": "agents chimiques dangereux",
+    "abbrev": "ACD"
+  },
+  {
+    "term": "Aide à l'embauche d'un premier salarié",
+    "abbrev": "PREM"
+  },
+  {
+    "term": "Aide à l'embauche dans les PME",
+    "abbrev": "EPME"
+  },
+  {
+    "term": "Aide à la recherche du premier emploi",
+    "abbrev": "ARPE"
+  },
+  {
+    "term": "Aide à la reprise ou à la création d’entreprise",
+    "abbrev": "ARCE"
+  },
+  {
+    "term": "aide à tierce personne allocation compensatrice pour tierce personne",
+    "abbrev": "ACTP"
+  },
+  {
+    "term": "aide au chômeur créant ou reprenant une entreprise",
+    "abbrev": "ACCRE \nACRE"
+  },
+  {
+    "term": "aide au conseil",
+    "synonym": "chèque conseil \nchéquier conseil"
+  },
+  {
+    "term": "Aide au retour à l’emploi",
+    "abbrev": "ARE",
+    "synonym": "allocation recherche d'emploi\nassedic\nallocation chômage\nallocation assurance chômage\nallocation d'aide au retour à l'emploi.\nindemnités chômage",
+    "definition_cdtn": "Somme versée aux chômeurs sous certaines conditions. "
+  },
+  {
+    "term": "Aide juridictionnelle ",
+    "abbrev": "AJ",
+    "definition_cdtn": "Aide financière qui permet aux personnes sans ressources ou ayant des revenus modestes d’obtenir la prise en charge de tout ou partie des frais d’un procès (avocat, huissier...)"
+  },
+  {
+    "term": "Aide individuelle à la formation",
+    "abbrev": "AIF"
+  },
+  {
+    "term": "aide personnalisée de retour à l'emploi",
+    "abbrev": "APRE"
+  },
+  {
+    "term": "Allocation aux adultes handicapés",
+    "abbrev": "AAH"
+  },
+  {
+    "term": "allocation chômeurs âgés",
+    "abbrev": "ACA"
+  },
+  {
+    "term": "allocation d'assurance chômage",
+    "synonym": "allocation chômage \nallocation unique dégressive aud"
+  },
+  {
+    "term": "allocation de cessation anticipée d'activité des travailleurs de l'amiante",
+    "abbrev": "ACAATA"
+  },
+  {
+    "term": "Allocation de fin de droits",
+    "abbrev": "AFD"
+  },
+  {
+    "term": "allocation de fin de formation",
+    "abbrev": "AFF"
+  },
+  {
+    "term": "Allocation de professionnalisation et de solidarité",
+    "abbrev": "APS"
+  },
+  {
+    "term": "allocation de remplacement pour l'emploi",
+    "abbrev": "ARPE"
+  },
+  {
+    "term": "allocation équivalent retraite",
+    "abbrev": "AER"
+  },
+  {
+    "term": "allocation journalière de présence parentale",
+    "abbrev": "AJPP"
+  },
+  {
+    "term": "allocation parentale d'éducation",
+    "abbrev": "APE"
+  },
+  {
+    "term": "allocation personnalisée d'autonomie",
+    "abbrev": "APA"
+  },
+  {
+    "term": "Allocation spéciale du fonds nationale de l'emploi",
+    "abbrev": "AS-FNE"
+  },
+  {
+    "term": "Allocation spécifique de solidarité",
+    "abbrev": "ASS"
+  },
+  {
+    "term": "allocation supplémentaire d'invalidité",
+    "abbrev": "ASI"
+  },
+  {
+    "term": "Allocation temporaire d’attente",
+    "abbrev": "ATA"
+  },
+  {
+    "term": "Allocation temporaire dégressive",
+    "abbrev": "ATD"
+  },
+  {
+    "term": "aménagement des locaux de travail",
+    "synonym": "conception des locaux de travail"
+  },
+  {
+    "term": "aménagement et réduction du temps de travail",
+    "abbrev": "ARTT"
+  },
+  {
+    "term": "Amplitude horaire",
+    "synonym": "Amplitude de travail\nAmplitude journalière du travail\nAmplitude journalière\nAmplitude de la journée de travail",
+    "definition": "la durée comprise entre le début et la fin de la journée de travail d’un salarié composée des temps de travail effectif et des temps de pause.",
+    "definition_cdtn": "C'est la durée entre la première prise de poste du salarié et la fin de la dernière prise de poste dans une journée de travail, temps de pause compris. \nExemple : un salarié qui commence à 8h puis termine à 12h et reprend son travail à 15h et termine à 21h, son amplitude horaire est de 13 heures (temps écoulé entre 8h et 21h). "
+  },
+  {
+    "term": "Année civile",
+    "definition": "Du 1er janvier au 31 décembre",
+    "definition_cdtn": "Du 1er janvier au 31 décembre (Glossaire Service Public)"
+  },
+  {
+    "term": "Annualisation du temps de travail",
+    "definition": "la modulation du temps de travail permet de faire varier la durée hebdomadaire de travail sur tout ou partie de l'année, à condition que cette durée n'excède pas, sur un an, 1 607 heures\nLes périodes de haute et de basse activité doivent ainsi se compenser.\nL’annualisation du temps de travail est un mode d’aménagement du temps de travail permettant d’étendre à l’année civile la période durant laquelle la durée du travail peut varier en fonction des besoins de l’entreprise. En pratique, il s’agit d’entreprises soumises à de grandes variations de leur volume d’activité.",
+    "definition_cdtn": "Aménagement du temps de travail des salariés qui permet de faire varier la durée du travail sur une année civile avec des périodes de haute et de basse activité. "
+  },
+  {
+    "term": "APE",
+    "synonym": "Code APE",
+    "definition": "Le code APE est attribué par l’institut national de la statistique et des études économiques (Insee) à toute entreprise et chacun de ses établissements lors de son inscription au répertoire SIRENE sur la base de la nomenclature d’activités française (NAF). Le code APE figure sur le bulletin de salaire. Il en est un élément obligatoire. Depuis le 1er janvier 2008, il est constitué de 5 positions : 4 chiffres et 1 lettre. Exemple : 92-7-A. Sur le site Légifrance : écrire sous la forme (sans espace) 92-7A. Le code APE et l’IDCC permettent d’identifier la convention collective. Une table de concordance entre le secteur d’activité (Code APE) et l’IDCC de la convention collective est disponible sur le site du ministère chargé du travail."
+  },
+  {
+    "term": "Appel",
+    "definition": "possibilité pour une partie de faire rejuger l'affaire par la juridiction supérieure si elle n’a pas obtenu, en tout ou partie, satisfaction devant un tribunal administratif ou une autre juridiction de premier ressort. En règle générale, c’est la cour administrative d’appel dont dépend le tribunal administratif qui a rendu le jugement contesté qui est compétente. Dans certains cas particuliers, l’appel doit être porté devant le Conseil d'État.",
+    "definition_cdtn": "Possibilité pour une personne concernée par un jugement de faire rejuger l'affaire par d'autres juges souvent de la juridiction supérieure. \nExemple : faire appel d'un jugement du conseil des prud'hommes devant la cour d'appel qui va rejuger l'affaire. "
+  },
+  {
+    "term": "Application.",
+    "definition": "Elle s’applique à tout salarié travaillant dans une entreprise couverte par une convention collective ou un accord collectif.\nIl s’applique à tout salarié travaillant dans une entreprise du ressort de cet accord collectif."
+  },
+  {
+    "term": "Arbitrage (droit du travail)",
+    "definition": "La procédure arbitrale est un mode juridictionnel consistant pour les parties à confier le règlement de leur différend à un ou plusieurs arbitres impartiaux et indépendants, qui rendront une sentence arbitrale qui s'imposera à elles. L'employeur et le salarié ne sont pas autorisés à prévoir une telle clause compromissoire dans le contrat de travail, et ne peuvent pas décider d'un commun accord de déroger à la compétence du conseil de prud'hommes."
+  },
+  {
+    "term": "Arrêt ",
+    "definition": "décision rendue par une cour administrative d'appel. Pour le Conseil d'État, le terme employé est celui de « décision ».\nlégi => Désigne les décisions de justice rendues par les cours d’appel, les cours administratives d’appel, les cours d’assises, la Cour de cassation et le Conseil d’État. Acte par lequel la Cour des comptes statue en matière de jugement des comptes (Les Chambres régionales et territoriales des comptes rendent des jugements)\nDécision prise par une cour d’appel, la Cour de cassation ou le Conseil d’Etat.",
+    "definition_cdtn": "Décision de justice prise par une cour d'appel, une cour administrative d'appel, une cour d'assises, la Cour de casation ou le Conseil d'Etat. \nLe Conseil d'Etat emploie également le terme \"décision\". "
+  },
+  {
+    "term": "Arrêt de travail",
+    "abbrev": "AT"
+  },
+  {
+    "term": "Arrêté",
+    "definition": "acte émanant d'une autorité administrative autre que le Président de la République ou le Premier ministre (ministre, préfet, maire).\nActe émanant d’une autorité administrative : ministre, préfet, maire.LEGIF\nDécision émanant d’une autorité administrative : ministre, préfet, maire.",
+    "definition_cdtn": "Décision émanant d’une autorité administrative autre que le Président de la République ou le Premier ministre. \nExemples : arrêté du maire, arrêté ministériel, arrêté préfectoral. "
+  },
+  {
+    "term": "Article étendu ",
+    "definition_cdtn": "Article d'une convention collective ou d'un accord collectif applicable uniquement aux employeurs (et par conséquent aux salariés) ayant adhéré à une organisation patronale signataire ou ayant signé le texte en cause."
+  },
+  {
+    "term": "Article non étendu",
+    "definition_cdtn": "Article d'une convention collective ou d'un accord collectif applicable à tous les employeurs (et par conséquent aux salariés) entrant dans le champs du texte en cause."
+  },
+  {
+    "term": "Article",
+    "definition": "L’article se définit comme la plus petite partie d’un texte de contrat, d’un texte de loi ou d’un règlement administratif qui, pour sa compréhension, se suffit à elle-même. Les codes sont divisés en livres, titres, chapitres, sections, sous-sections et articles. LEGI"
+  },
+  {
+    "term": "Assiette",
+    "definition": "Base de calcul",
+    "definition_cdtn": "Base de calcul (Glossaire Service Public)"
+  },
+  {
+    "term": "assistant maternel",
+    "abbrev": "assmat\nass. mat.\nass mat\nass.mat. \nass-mat",
+    "synonym": "assistant maternel du particuler employeur, nounou,"
+  },
+  {
+    "term": "Association de gestion des financements de la formation des chefs d'entreprise",
+    "abbrev": "AGEFICE"
+  },
+  {
+    "term": "Association de gestion du Fonds pour l’insertion des personnes handicapées",
+    "abbrev": "AGEFIPH"
+  },
+  {
+    "term": "Association de gestion du fonds pour l’insertion professionnelle des handicapés",
+    "abbrev": "AGEFIPH"
+  },
+  {
+    "term": "association des régimes de retraite complémentaire des salariés non cadres ",
+    "abbrev": "ARRCO",
+    "synonym": "association pour le régime de retraite complémentaire des salariés"
+  },
+  {
+    "term": "Association française pour la normalisation",
+    "abbrev": "AFNOR"
+  },
+  {
+    "term": "association générale des institutions de retraite des cadres",
+    "abbrev": "AGIRC"
+  },
+  {
+    "term": "Association intermédiaire",
+    "abbrev": "AI"
+  },
+  {
+    "term": "Association nationale des directeurs de missions locales",
+    "abbrev": "ANDML"
+  },
+  {
+    "term": "Association nationale des directeurs des ressources humaines",
+    "abbrev": "ANDRH"
+  },
+  {
+    "term": "Association nationale pour la formation professionnelle des adultes",
+    "abbrev": "AFPA"
+  },
+  {
+    "term": "association pour l'emploi dans l'industrie et le commerce",
+    "abbrev": "ASSEDIC"
+  },
+  {
+    "term": "association pour l'emploi des cadres",
+    "abbrev": "APEC"
+  },
+  {
+    "term": "Association pour l’emploi des cadres",
+    "abbrev": "APEC"
+  },
+  {
+    "term": "Association pour la gestion de la sécurité sociale des acteurs",
+    "abbrev": "AGESSA"
+  },
+  {
+    "term": "Association pour la gestion de la sécurité sociale des auteurs",
+    "abbrev": "AGESSA"
+  },
+  {
+    "term": "Association pour la gestion du fonds de financement",
+    "abbrev": "AGFF"
+  },
+  {
+    "term": "Association pour la gestion du régime de Garantie des salaires",
+    "abbrev": "AGS"
+  },
+  {
+    "term": "Association régionale des missions locales",
+    "abbrev": "ARML"
+  },
+  {
+    "term": "assurance garantie des salaires garantie de salaire garantie du paiement des salaires",
+    "abbrev": "AGS"
+  },
+  {
+    "term": "Astreinte",
+    "definition": "période pendant laquelle le salarié, sans être sur son lieu de travail et sans être à la disposition permanente et immédiate de l'employeur, doit être en mesure d'intervenir pour accomplir un travail au service de l'entreprise.",
+    "definition_cdtn": "C'est le temps pendant lequel le salarié a l'obligation d'être joignable et doit être en mesure d'intervenir pour effectuer un travail pour son entreprise, sans pour autant être à la disposition permanente et immédiate de son employeur. "
+  },
+  {
+    "term": "Atelier et chantier d’insertion",
+    "abbrev": "ACI"
+  },
+  {
+    "term": "Attestation Assedic",
+    "synonym": "attestation de l'employeur\nattestation d'emploi\nAttestation Pole Emploi"
+  },
+  {
+    "term": "Audience (élections professionnelles)"
+  },
+  {
+    "term": "Audience (juridictions)",
+    "definition": "Séance au cours de laquelle le tribunal interroge les parties, entend les plaidoiries et rend sa décision."
+  },
+  {
+    "term": "auto-entreprise",
+    "synonym": "auto-entrepreneur"
+  },
+  {
+    "term": "autorité de contrôle des assurances et des mutuelles",
+    "abbrev": "ACAM"
+  },
+  {
+    "term": "Autorité de la chose jugée",
+    "synonym": "Autorité de chose jugée",
+    "definition": "Se dit d'un jugement qui a une valeur légale et qui peut être contesté uniquement par les voies de recours prévues\nlorsqu’un jugement est prononcé, on dit qu’il acquiert l’autorité de la chose jugée. Cette autorité fait obstacle à la méconnaissance ou la contestation de ce qu’il juge.",
+    "definition_cdtn": "Se dit d'un jugement qui a une valeur légale et qui peut être contesté uniquement par les voies de recours prévues\nlorsqu’un jugement est prononcé, on dit qu’il acquiert l’autorité de la chose jugée. Cette autorité fait obstacle à la méconnaissance ou la contestation de ce qu’il juge. (Glossaire Service Public)"
+  },
+  {
+    "term": "Avantages en nature",
+    "definition": "lorsque l'employeur fournit à ses salariés des biens et des services correspondant à des besoins personnels, gratuitement ou moyennant une participation inférieure à leur valeur réelle. L'employeur permet au salarié de faire des économies sur des coûts qu'il aurait dû normalement supporter.\n\nLes avantages en nature sont des biens, des services ou des produits fournis aux salariés de l’entreprise gratuitement par l’employeur ou moyennant une participation très faible du salarié qui sont assimilés à du salaire. De la sorte, ils évitent aux salariés qui en bénéficient d’avoir à faire une dépense.",
+    "definition_cdtn": "Biens, produits ou services fournis par l'employeur à ses salariés gratuitement ou moyennant un prix inférieur à leur valeur réelle. \nExemples : logement ou nourriture gratuits ou à des prix préférentiels."
+  },
+  {
+    "term": "Avenant",
+    "definition": "Document complémentaire du contrat constatant une modification, une adaptation ou un complément qui y sont apportés d'un commun accord entre les deux parties\nIl s’agit d’un accord, qui complète et qui modifie un contrat principal ou une convention collective, signé par ceux qui l’ont conclu.",
+    "definition_cdtn": "Document complémentaire du contrat constatant une modification, une adaptation ou un complément qui y sont apportés d'un commun accord entre les deux parties\nIl s’agit d’un accord, qui complète et qui modifie un contrat principal ou une convention collective, signé par ceux qui l’ont conclu. (Glossaire Service Public)"
+  },
+  {
+    "term": "Avertissement ou blâme (droit du travail)",
+    "definition": "Reproches adressés par l'employeur au salarié, et notifiés par écrit, en raison du comportement fautif du salarié",
+    "definition_cdtn": "Reproches adressés par l'employeur au salarié, et notifiés par écrit, en raison du comportement fautif du salarié (Glossaire Service Public)"
+  },
+  {
+    "term": "Avis",
+    "definition": "Acte administratif consultatif avant une prise de décision de l’administration. Il n’est donc pas normatif, ne lie pas son émetteur mais peut néanmoins produire des effets de droit. Les juridictions suprêmes émettent des avis sur la régularité juridique des textes, sur leur forme et leur opportunité.LEGI"
+  },
+  {
+    "term": "Ayant droit (pour la Sécurité sociale)",
+    "definition": "Personne qui tient son droit à l'assurance maladie-maternité du fait de ses liens avec un assuré",
+    "definition_cdtn": "Personne qui tient son droit à l'assurance maladie-maternité du fait de ses liens avec un assuré (Glossaire Service Public)"
+  },
+  {
+    "term": "Base de données économiques et sociales",
+    "abbrev": "BDES",
+    "definition": "L'employeur d'au moins 50 salariés doit mettre à disposition du comité économique et social (CSE) ou des représentants du personnel une base de données économiques et sociales (BDES). Elle rassemble les informations sur les grandes orientations économiques et sociales de l'entreprise.",
+    "definition_cdtn": "Base de données regroupant des informations économiques et sociales de l'entreprise mise à disposition par l'employeur aux représentants du personnel."
+  },
+  {
+    "term": "Bassins d'emploi à redynamiser",
+    "abbrev": "BER",
+    "synonym": "activité économique"
+  },
+  {
+    "term": "Bâtiment travaux publics",
+    "abbrev": "BTP",
+    "synonym": "bâtiment-travaux publics \nbâtiment et travaux publics\nindustrie du bâtiment travaux publics"
+  },
+  {
+    "term": "Bénéficiaires des minima sociaux",
+    "abbrev": "BMS"
+  },
+  {
+    "term": "Bénéficiaires du RSA",
+    "abbrev": "BRSA"
+  },
+  {
+    "term": "Bilan pédagogique et financier",
+    "abbrev": "BPF"
+  },
+  {
+    "term": "Bilan social",
+    "definition_cdtn": "Document établi par l'employeur récapitulant des données chiffrées sur la situation sociale de l’entreprise de l'année en cours, d'années précédentes et d'années futures. \nExemples : emploi, rémunérations, conditions de travail, formation des salariés. "
+  },
+  {
+    "term": "Blâme",
+    "definition_cdtn": "Reproches adressés par l'employeur au salarié, et notifiés par écrit, en raison du comportement fautif du salarié (Glossaire Service Public)"
+  },
+  {
+    "term": "Bloc de constitutionnalité :",
+    "definition": "ll est constitué par l’ensemble des principes et dispositions à valeur constitutionnelle que le Parlement doit respecter dans l’exercice de son pouvoir législatif. Outre la Constitution, il comprend la Déclaration des droits de l’homme et du citoyen de 1789, le Préambule de la Constitution de 1946 et la charte de l’environnement 2004.\nLEGI"
+  },
+  {
+    "term": "BOCC (Bulletin officiel des conventions collectives)",
+    "definition": "Le BOCC est édité sous la responsabilité du ministère chargé du travail et du ministère chargé de l’agriculture. Il est diffusé par la direction de l’information légale et administrative. Y sont publiés les nouvelles conventions ainsi que les avenants, accords et annexes issus de la négociation entre syndicats de salariés et organismes représentant les employeurs. Il reprend également les arrêtés d’extension publiés au Journal officiel de la République française (JORF) jusqu’en 2010. Tous les textes concernant les conventions collectives y sont publiés."
+  },
+  {
+    "term": "Bon de délégation",
+    "definition": "document établi par un représentant du personnel pour attester, vis-à-vis de l’employeur, du temps consacré à l’exercice de son mandat.",
+    "definition_cdtn": "document ou formulaire établi par un représentant du personnel indiquant les heures qu'il a consacrées à l'exercice de son mandat"
+  },
+  {
+    "term": "Branche professionnelle",
+    "definition": "Regroupement de plusieurs entreprises ayant la même activité principale. Exemple : bâtiment, banque, habillement, hôtels cafés et restaurants...",
+    "definition_cdtn": "Regroupement de plusieurs entreprise appartenant à un même secteur d'activité et relevant d'un accord ou d'une convention collective.  "
+  },
+  {
+    "term": "Brevet d’études professionnelles",
+    "abbrev": "BEP"
+  },
+  {
+    "term": "Brevet de technicien supérieur",
+    "abbrev": "BTS"
+  },
+  {
+    "term": "Brochure",
+    "definition": "Ouvrage papier où sont regroupés par secteur d’activité les textes conventionnels signés."
+  },
+  {
+    "term": "Bulletin de paye",
+    "synonym": "bulletin de salaire \nfiche de paie\nBulletin de paie\nBulletin de travail",
+    "definition": "Document établi mensuellement (ou selon la périodicité de la paie) et récapitulant un certain nombre d’informations relatives au travail et à la rémunération du salarié :temps de travail et heures supplémentaires éventuellement effectuées, éléments et montant total du salaire brut (base et primes diverses), détail des cotisations sociales salariales et patronales, indemnités, total des salaires imposables et net à payer, cumuls sur l’année civile, congés (droits acquis, congés pris, solde).",
+    "definition_cdtn": "Document obligatoire établi par l'employeur, au moment du paiement du salaire, récapitulant un certaines informations comme la rémunératoin du salarié et le nombre d'heures travaillées.  Ce document doit être remis au salarié. "
+  },
+  {
+    "term": "bureau d'étude technique",
+    "synonym": "syntec"
+  },
+  {
+    "term": "Bureau international du travail",
+    "abbrev": "BIT"
+  },
+  {
+    "term": "Cadre dirigeant",
+    "definition": "Cadre auquel sont confiées des responsabilités dont l'importance implique une grande indépendance dans l'organisation de son emploi du temps, qui est habilité à prendre des décisions de façon largement autonome et qui perçoit une rémunération se situant dans les niveaux les plus élevés des systèmes de rémunération pratiqués dans l'entreprise ou l'établissement",
+    "definition_cdtn": "Cadre auquel sont confiées des responsabilités dont l'importance implique une grande indépendance dans l'organisation de son emploi du temps, qui est habilité à prendre des décisions de façon largement autonome et qui perçoit une rémunération se situant dans les niveaux les plus élevés des systèmes de rémunération pratiqués dans l'entreprise ou l'établissement (Glossaire Service Public)"
+  },
+  {
+    "term": "Caisse d'assurance retraite et de santé au travail",
+    "abbrev": "CARSAT"
+  },
+  {
+    "term": "Carence"
+  },
+  {
+    "term": "Cassation",
+    "definition": "Annulation par la Cour de cassation ou le Conseil d’État d’une décision de justice rendue contrairement aux règles de droit.\nLEGI"
+  },
+  {
+    "term": "Cause réelle et sérieuse de licenciement"
+  },
+  {
+    "term": "Centre d'information et de coordination de l'action sociale",
+    "abbrev": "CICAS"
+  },
+  {
+    "term": "centre de formation des apprentis",
+    "abbrev": "CFA"
+  },
+  {
+    "term": "Certificat de travail"
+  },
+  {
+    "term": "Cession d'entreprise "
+  },
+  {
+    "term": "Chambre :",
+    "definition": "Section spécialisée d’un tribunal ou d’une cour. Exemple : chambre civile, correctionnelle ou commerciale.\nLEGI"
+  },
+  {
+    "term": "Champ d’application"
+  },
+  {
+    "term": "Changement d'employeur"
+  },
+  {
+    "term": "Chèque emploi associatif",
+    "abbrev": "CEA"
+  },
+  {
+    "term": "chèque emploi service universel",
+    "abbrev": "CESU"
+  },
+  {
+    "term": "chiffre d'affaire",
+    "abbrev": "CA"
+  },
+  {
+    "term": "Chômage partiel",
+    "synonym": "activité partielle"
+  },
+  {
+    "term": "Circulaire (voir Instruction)",
+    "definition": "Texte émanant d’un ministre, d’un préfet, d’un recteur portant des recommandations destinées à expliciter un texte de loi ou règlement, de manière à les appliquer uniformément sur le territoire. Les circulaires réglementaires introduisent des règles nouvelles. LEGI\n: acte par lequel un ministre ou ses services donne notamment son interprétation d’un texte législatif."
+  },
+  {
+    "term": "Classification professionnelle"
+  },
+  {
+    "term": "Clause d'indexation",
+    "definition": "Disposition d’un contrat ou d’un jugement destinée à compenser la dépréciation monétaire (ou à tenir compte de l’inflation) entre le jour où la créance est évaluée et le jour du paiement",
+    "definition_cdtn": "Disposition d’un contrat ou d’un jugement destinée à compenser la dépréciation monétaire (ou à tenir compte de l’inflation) entre le jour où la créance est évaluée et le jour du paiement (Glossaire Service Public)"
+  },
+  {
+    "term": "Clause pénale",
+    "definition": "Clause qui engage le débiteur, en cas de manquement à une obligation contractuelle, à verser au créancier une somme d'argent dont le montant est fixé à l'avance",
+    "definition_cdtn": "Clause qui engage le débiteur, en cas de manquement à une obligation contractuelle, à verser au créancier une somme d'argent dont le montant est fixé à l'avance (Glossaire Service Public)"
+  },
+  {
+    "term": "Clause résolutoire",
+    "definition": "Clause prévoyant la résiliation automatique du contrat en cas de manquement à une obligation contractuelle par l'une des parties (exemple : non-paiement du loyer)",
+    "definition_cdtn": "Clause prévoyant la résiliation automatique du contrat en cas de manquement à une obligation contractuelle par l'une des parties (exemple : non-paiement du loyer) (Glossaire Service Public)"
+  },
+  {
+    "term": "Code NAF",
+    "synonym": "NAF"
+  },
+  {
+    "term": "Collège électoral"
+  },
+  {
+    "term": "Comité central d'entreprise",
+    "abbrev": "CCE"
+  },
+  {
+    "term": "Comité d'entreprise",
+    "abbrev": "CE"
+  },
+  {
+    "term": "Comité d'hygiène, de sécurité et des conditions de travail",
+    "abbrev": "CHSCT"
+  },
+  {
+    "term": "Comité social et économique ",
+    "abbrev": "CSE"
+  },
+  {
+    "term": "Comité social et économique central d'entreprise ",
+    "abbrev": "CSEC"
+  },
+  {
+    "term": "comités régionaux prévention des risques professionnels",
+    "abbrev": "CRPRP"
+  },
+  {
+    "term": "Commerce de détail",
+    "definition": "Vente de marchandises dans l'état où elles sont achetées (ou après transformations mineures) généralement à une clientèle de particuliers, quelles que soient les quantités vendues",
+    "definition_cdtn": "Vente de marchandises dans l'état où elles sont achetées (ou après transformations mineures) généralement à une clientèle de particuliers, quelles que soient les quantités vendues (Glossaire Service Public)"
+  },
+  {
+    "term": "Commissaire aux comptes",
+    "definition": "Membre d'une profession libérale réglementée, chargé du contrôle comptable, financier et juridique d'une société, dont il est indépendant. Il dispose d'un droit d'alerte en cas d'irrégularités dans la gestion du personnel dirigeant. ",
+    "definition_cdtn": "Membre d'une profession libérale réglementée, chargé du contrôle comptable, financier et juridique d'une société, dont il est indépendant. Il dispose d'un droit d'alerte en cas d'irrégularités dans la gestion du personnel dirigeant. (Glossaire Service Public)"
+  },
+  {
+    "term": "Commission nationale de l’informatique et des libertés",
+    "abbrev": "CNIL",
+    "definition": "Instituée en 1978, la Commission nationale de l’informatique et des libertés est une autorité administrative indépendante ayant pour mission essentielle de protéger la vie privée et les libertés individuelles ou publiques. Elle est chargée de veiller au respect de la loi nº 78-17 du 6 janvier 1978 dite « Informatique et libertés ». LEGI"
+  },
+  {
+    "term": "Commission nationale de la négociation collective",
+    "definition": "La Commission nationale de la négociation collective est chargée notamment d’émettre un avis sur les projets de loi, d’ordonnance et de décret relatifs aux règles générales portant sur les relations individuelles et collectives du travail, notamment celles concernant la négociation collective, et de donner un avis motivé au ministre chargé du travail sur l’extension et l’élargissement des conventions et accords collectifs ainsi que sur l’abrogation des arrêtés d’extension ou d’élargissement : Articles L. 2272-1 et suivants du code du travail"
+  },
+  {
+    "term": "Commission paritaire permanente de négociation et d'interprétation",
+    "abbrev": "CPPNI"
+  },
+  {
+    "term": "Commission santé, sécurité et conditions de travail",
+    "abbrev": "CSSCT"
+  },
+  {
+    "term": "Commissions paritaires régionales interprofessionnelles ",
+    "abbrev": "CPRI"
+  },
+  {
+    "term": "communauté economique européenne",
+    "abbrev": "CEE"
+  },
+  {
+    "term": "Compte personnel d'activité",
+    "abbrev": "CPA"
+  },
+  {
+    "term": "Compte personnel de formation",
+    "abbrev": "CPF"
+  },
+  {
+    "term": "Conciliation"
+  },
+  {
+    "term": "Congé de formation économique, sociale et syndicale",
+    "abbrev": "CFESS"
+  },
+  {
+    "term": "Congé individuel de formation ",
+    "abbrev": "CIF"
+  },
+  {
+    "term": "congédiement",
+    "synonym": "licenciement"
+  },
+  {
+    "term": "Congés payés",
+    "abbrev": "CP"
+  },
+  {
+    "term": "Conseil constitutionnel",
+    "definition": "Organe de contrôle et de consultation créé par la Ve  République. Sa mission principale est d’assurer le contrôle de la conformité des lois à la Constitution. Il veille également à la régularité des élections présidentielle, législatives et référendaires. LEGI"
+  },
+  {
+    "term": "conseil d'administration",
+    "abbrev": "CA"
+  },
+  {
+    "term": "Conseil d’État ",
+    "abbrev": "CE",
+    "definition": "juridiction au sommet de l’ordre des juridictions administratives. Sa fonction est à la fois de juger et de rendre des avis. Elle remplit notamment la même mission que la Cour de cassation, mais vis-à-vis des arrêts rendus par la cour administrative d’appel.\nJuridiction administrative suprême, le Conseil d’État, créé en 1799, est conseiller du Gouvernement. Il examine les projets de loi et d’ordonnance avant que ceux-ci ne soient soumis au conseil des ministres, ainsi que les projets de décret en Conseil d’État. Le Conseil d’État émet un avis sur la régularité juridique des textes, sur leur forme et sur leur opportunité administrative. Par sa section du contentieux qui juge des litiges entre une personne morale de droit public et des particuliers, le Conseil d’État unifie la jurisprudence administrative. LEGI"
+  },
+  {
+    "term": "Conseil de prud’hommes",
+    "abbrev": "CPH",
+    "definition": " : juridiction paritaire composée de conseillers prud’homaux nommés par un arrêté conjoint des ministères de la Justice et du Travail, sur proposition des organisations syndicales d’employeurs et de salariés. Elle a pour rôle de trancher les litiges concernant la conclusion, l’exécution ou la rupture du contrat de travail.\nJuridiction de premier degré chargée de juger les litiges individuels, nés d’un contrat de travail ou d’apprentissage, entre employeurs et employés ou apprentis : (licenciement, litige sur les salaires, les congés…), le conseil de prud’hommes est composé de juges non professionnels élus, les conseillers prud’homaux, qui sont, en nombre égal, des représentants des employeurs et des salariés. En cas de partage des voix, il est fait appel à un magistrat professionnel, lequel prend alors le titre de juge départiteur (LEGI)"
+  },
+  {
+    "term": "Constitution",
+    "definition": "Texte fondateur de la Ve  République, la Constitution du 4 octobre 1958 détermine la forme de l’État et la répartition des pouvoirs. C’est la norme fondamentale en droit interne. (LEGI)"
+  },
+  {
+    "term": "Contrat à durée déterminée",
+    "abbrev": "CDD"
+  },
+  {
+    "term": "Contrat d'accompagnement dans l'emploi",
+    "abbrev": "CUI-CAE"
+  },
+  {
+    "term": "contrat d'appui au projet d'entreprise",
+    "abbrev": "CAPE"
+  },
+  {
+    "term": "Contrat de sécurisation professionnelle",
+    "abbrev": "CSP"
+  },
+  {
+    "term": "Contrat de service",
+    "definition": "Accord par lequel une personne s'engage à fournir une prestation à une autre personne, en contrepartie d'une rétribution",
+    "definition_cdtn": "Accord par lequel une personne s'engage à fournir une prestation à une autre personne, en contrepartie d'une rétribution (Glossaire Service Public) "
+  },
+  {
+    "term": "Contrat de travail à durée déterminée d'insertion",
+    "abbrev": "CDDI"
+  },
+  {
+    "term": "contrat de travail à durée indéterminée",
+    "abbrev": "CDI"
+  },
+  {
+    "term": "Contrat de travail temporaire",
+    "abbrev": "CTT"
+  },
+  {
+    "term": "Contrat initiative-emploi",
+    "abbrev": "CIE"
+  },
+  {
+    "term": "Contrat unique d'insertion",
+    "abbrev": "CUI"
+  },
+  {
+    "term": "Contravention",
+    "definition": "Infraction que la loi punit d'une amende n'excédant pas 1 500 €, ou 3 000 € en cas de récidive"
+  },
+  {
+    "term": "Contribution",
+    "abbrev": "CONTRIB."
+  },
+  {
+    "term": "Contribution au financement des organisations syndicales"
+  },
+  {
+    "term": "Contribution au remboursement de la dette sociale",
+    "abbrev": "CRDS"
+  },
+  {
+    "term": "Contribution sociale généralisée",
+    "abbrev": "CSG"
+  },
+  {
+    "term": "Contrôleur du travail",
+    "abbrev": "CT"
+  },
+  {
+    "term": "Convention collective",
+    "abbrev": "CC",
+    "definition": "La convention collective est un accord écrit qui résulte de la négociation entre syndicats de salariés et employeurs. Elle traite de l’ensemble des conditions d’emploi, de travail et de formation professionnelle des salariés et de leurs garanties sociales pour toutes les catégories professionnelles. Elle peut être conclue : – au niveau d’une entreprise : elle s’applique alors uniquement aux salariés de cette entreprise – au niveau d’une branche professionnelle, par exemple : le textile, le bâtiment… – au niveau départemental, régional ou national."
+  },
+  {
+    "term": "Convention collective de branche"
+  },
+  {
+    "term": "Convention collective départementale",
+    "definition": "(voir Convention collective)"
+  },
+  {
+    "term": "convention collective nationale",
+    "abbrev": "CCN"
+  },
+  {
+    "term": "Convention collective régionale",
+    "definition": "(voir Convention collective)"
+  },
+  {
+    "term": "Convention de reclassement personnalisé",
+    "abbrev": "CRP"
+  },
+  {
+    "term": "coordonnateur sécurité et protection de la santé",
+    "abbrev": "CSPS"
+  },
+  {
+    "term": "Cotisation",
+    "abbrev": "COTIS."
+  },
+  {
+    "term": "Cour administrative d’appel :",
+    "definition": "Juridiction administrative du second degré qui réexamine une affaire déjà jugée par un tribunal administratif. LEGI"
+  },
+  {
+    "term": "Cour d’appel",
+    "abbrev": "CA",
+    "definition": ": juridiction devant laquelle sont portées les affaires jugées notamment par le tribunal de grande instance, le tribunal de commerce, le conseil de prud’hommes, en vue d’être rejugées. Elle peut confirmer ou infirmer le jugement (en totalité ou partiellement) en rendant un arrêt.\nJuridiction judiciaire du second degré qui réexamine une affaire déjà jugée par un tribunal de premier ressort. LEGI"
+  },
+  {
+    "term": "Cour de cassation ",
+    "abbrev": "CCASS",
+    "definition": ": juridiction placée au sommet de l’ordre judiciaire. Sa mission est de contrôler la bonne application de la loi et la motivation retenue par le juge du fond. Elle ne peut juger de l’existence des faits. Elle peut décider de casser (c’est-à-dire annuler) un arrêt rendu par la cour d’appel ou, au contraire, de le confirmer en rejetant le pourvoi en cassation.\nJuridiction suprême de l’ordre judiciaire, installée à Paris. Son rôle n’est pas de rejuger une affaire, mais de contrôler que les décisions de justice ont été rendues en conformité avec les règles de droit. Le recours exercé devant cette juridiction est appelé pourvoi en cassation (LEGI)"
+  },
+  {
+    "term": "Cour de justice de l’Union européenne",
+    "abbrev": "CJUE",
+    "definition": "Autorité judiciaire de l’Union européenne qui assure le respect du droit communautaire, dans l’interprétation et l’application des traités. Les décisions de cette cour s’imposent aux parties. LEGI"
+  },
+  {
+    "term": "Cour des comptes",
+    "definition": "Juridiction administrative spécialisée chargée de vérifier le bon usage des fonds publics, que ce soit par une administration, une collectivité territoriale ou une institution privée recevant des fonds publics. LEGI"
+  },
+  {
+    "term": "Cour européenne des droits de l’homme",
+    "abbrev": "CEDH",
+    "definition": "Juridiction installée à Strasbourg, compétente lorsqu’un État membre du Conseil de l’Europe ne respecte pas les droits et les libertés reconnus par la Convention européenne des droits de l’homme. LEGI"
+  },
+  {
+    "term": "Créance",
+    "definition": "Droit permettant à une personne d'exiger quelque chose d'une autre personne, en général le paiement d'une somme d'argent. Terme souvent utilisé pour désigner la somme due.",
+    "definition_cdtn": "Droit permettant à une personne d'exiger quelque chose d'une autre personne, en général le paiement d'une somme d'argent. Terme souvent utilisé pour désigner la somme due. (Glossaire Service Public)"
+  },
+  {
+    "term": "Crédit d'heures de délégation"
+  },
+  {
+    "term": "Débiteur"
+  },
+  {
+    "term": "Décision",
+    "definition": "Écrit contenant le résumé de l’affaire, la solution adoptée par la juridiction et les raisons ayant conduit à son adoption. On parle de « jugement » pour les tribunaux d’instance ou de grande instance, «d’arrêt » pour les cours d’appel, cours d’assises, Cour de cassation, Conseil d’État, et de «décision» pour le Conseil constitutionnel. LEGI\nUne décision, en dehors du cadre juridictionnel, est un acte émanant d’une administration ou d’une autorité administrative indépendante qui édicte une norme de portée générale et qui s’adresse à une ou plusieurs personnes de façon abstraite. Elle a ou non un caractère réglementaire avec un ou plusieurs destinataires désignés nominativement"
+  },
+  {
+    "term": "Déclaration annuelle des données sociales",
+    "abbrev": "DADS"
+  },
+  {
+    "term": "déclaration préalable à l'embauche",
+    "abbrev": "dpae"
+  },
+  {
+    "term": "Déclaration sociale nominative",
+    "abbrev": "DSN"
+  },
+  {
+    "term": "déclaration unique d'embauche",
+    "abbrev": "due"
+  },
+  {
+    "term": "Décret",
+    "definition": "acte administratif signé par le Président de la République ou le Premier ministre. On distingue les décrets individuels (nominations...) et les décrets réglementaires. Dans la hiérarchie des normes juridiques, au sommet de laquelle se trouve la Constitution, les décrets occupent une place inférieure aux traités, aux lois et aux principes généraux du droit mais supérieure aux arrêtés ministériels, préfectoraux, municipaux.\n\nActe de portée générale ou individuelle, émanant du pouvoir exécutif, signé par le Président de la République ou par le Premier ministre et, parfois, contresigné par un ou plusieurs ministres. LEGI"
+  },
+  {
+    "term": "Décret en Conseil d'État",
+    "definition": "décret pris après consultation obligatoire du Conseil d'État par le gouvernement sur son projet de décret."
+  },
+  {
+    "term": "Défendeur",
+    "definition": "dans un procès devant une juridiction administrative, le défendeur est l'adversaire du requérant."
+  },
+  {
+    "term": "délai congé",
+    "abbrev": "préavis"
+  },
+  {
+    "term": "Délai de carence"
+  },
+  {
+    "term": "délai de conservation",
+    "synonym": "date de péremption \ndate limite de consommation \ndate limite d'utilisation optimale"
+  },
+  {
+    "term": "Délai de forclusion"
+  },
+  {
+    "term": "Délai préfix"
+  },
+  {
+    "term": "délégation à la formation professionnelle",
+    "abbrev": "dfp"
+  },
+  {
+    "term": "Délégation aux affaires juridiques",
+    "abbrev": "DAJ"
+  },
+  {
+    "term": "Délégation de service public",
+    "abbrev": "DSP"
+  },
+  {
+    "term": "délégation générale à l'emploi et à la formation professionnelle",
+    "abbrev": "dgefp"
+  },
+  {
+    "term": "Délégation générale à l’emploi et à la formation professionnelle",
+    "abbrev": "DGEFP"
+  },
+  {
+    "term": "délégation interministérielle à l'aménagement et à la compétitivité des territoires",
+    "abbrev": "diact"
+  },
+  {
+    "term": "délégation régionale à la formation professionnelle",
+    "abbrev": "drfp"
+  },
+  {
+    "term": "Délégation Régionale au Commerce et à l'Artisanat",
+    "abbrev": "DRCA"
+  },
+  {
+    "term": "délégation unique du personnel",
+    "abbrev": "dup"
+  },
+  {
+    "term": "délégué du personnel",
+    "abbrev": "dp"
+  },
+  {
+    "term": "Délégué syndical",
+    "abbrev": "DS"
+  },
+  {
+    "term": "Délibéré",
+    "definition": "phase du jugement d’une affaire. Le délibéré a lieu après l’audience publique, il est secret. Les membres de la formation de jugement débattent alors de l’affaire et prennent une décision sur la solution à y donner. Le rapporteur public n’y participe pas."
+  },
+  {
+    "term": "Délit",
+    "definition": "Infraction jugée par le tribunal correctionnel et punie principalement d'une amende et/ou d'une peine d'emprisonnement inférieure à 10 ans",
+    "definition_cdtn": "Infraction jugée par le tribunal correctionnel et punie principalement d'une amende et/ou d'une peine d'emprisonnement inférieure à 10 ans (Glossaire Service Public)"
+  },
+  {
+    "term": "Délit d'entrave",
+    "definition": "Dans une entreprise, infraction d'un employeur qui porte atteinte à la mise en place et au bon déroulement de la mission des représentants du personnel et à l'exercice du droit syndical",
+    "definition_cdtn": "Dans une entreprise, infraction d'un employeur qui porte atteinte à la mise en place et au bon déroulement de la mission des représentants du personnel et à l'exercice du droit syndical (Glossaire Service Public)"
+  },
+  {
+    "term": "Demandeur ",
+    "definition": ": personne qui prend l’initiative d’un procès en soumettant au juge ses prétentions."
+  },
+  {
+    "term": "Demandeur d’emploi",
+    "abbrev": "DE"
+  },
+  {
+    "term": "Demandeur d’emploi de longue durée",
+    "abbrev": "DELD"
+  },
+  {
+    "term": "Demandeurs d'emploi de longue et très longue durée",
+    "abbrev": "DETLD"
+  },
+  {
+    "term": "Demandeurs d'emploi en fin de mois",
+    "abbrev": "DEFM"
+  },
+  {
+    "term": "Dénonciation",
+    "definition": "La convention et l’accord à durée indéterminée peuvent être dénoncés par les parties signataires.La convention ou l’accord prévoit les conditions dans lesquelles il peut être dénoncé, et notamment la durée du préavis qui doit précéder la dénonciation."
+  },
+  {
+    "term": "Départements et territoires d’Outre-mer",
+    "abbrev": "DOM-TOM"
+  },
+  {
+    "term": "Dépens",
+    "definition": "part des frais engendrés par le procès (frais d'expertise notamment) normalement supportés par la partie perdante. Les honoraires d'avocat ne sont pas compris dans les dépens (voir frais exposés non compris dans les dépens)."
+  },
+  {
+    "term": "Dérogation"
+  },
+  {
+    "term": "Désistement",
+    "definition": "le requérant peut toujours se désister, c'est-à-dire renoncer à son recours avant que la juridiction ne se prononce. Il le fait par exemple quand il a obtenu satisfaction, en tout ou partie, de l’administration avant le jugement, ou quand l’affaire ne présente plus d’intérêt pour lui."
+  },
+  {
+    "term": "Dévolution des biens du CSE ou du comité d'entreprise"
+  },
+  {
+    "term": "Directeur général",
+    "abbrev": "DG"
+  },
+  {
+    "term": "Direction (régionale) des entreprises, de la concurrence,\n de la consommation et de l’emploi (Direccte en Outre-mer)",
+    "abbrev": "DIECCTE"
+  },
+  {
+    "term": "Direction d’administration centrale",
+    "abbrev": "DAC"
+  },
+  {
+    "term": "Direction de l’animation de la recherche, des études et des statistiques",
+    "abbrev": "DARES"
+  },
+  {
+    "term": "Direction de l’information légale et administrative",
+    "abbrev": "DILA",
+    "definition": "La DILA est issue de la fusion en 2010 entre la direction des Journaux officiels et la direction de la Documentation française (cf. décret nº 2010-31 du 11 janvier 2010 relatif à la direction de l’information légale et administrative). La DILA a pour mission d’assurer la diffusion légale des textes législatifs et réglementaires et de favoriser l’accès des citoyens à la vie publique et au débat public"
+  },
+  {
+    "term": "Direction de la sécurité sociale",
+    "abbrev": "DSS"
+  },
+  {
+    "term": "direction de la sûreté des installations nucléaires",
+    "abbrev": "dsin"
+  },
+  {
+    "term": "direction départementale de l'équipement",
+    "abbrev": "dde"
+  },
+  {
+    "term": "direction départementale de la cohésion sociale",
+    "abbrev": "ddcs"
+  },
+  {
+    "term": "direction départementale du travail et de l'emploi",
+    "abbrev": "ddte"
+  },
+  {
+    "term": "Direction départementale du travail, de l’emploi et de la formation professionnelle",
+    "abbrev": "DDTEFP"
+  },
+  {
+    "term": "direction des relations du travail",
+    "abbrev": "drt"
+  },
+  {
+    "term": "Direction générale de la concurrence, de la consommation et de la répression des fraudes",
+    "abbrev": "DGCCRF"
+  },
+  {
+    "term": "Direction générale des entreprises",
+    "abbrev": "DGE"
+  },
+  {
+    "term": "Direction générale des outre-mer",
+    "abbrev": "DGOM"
+  },
+  {
+    "term": "Direction générale du travail",
+    "abbrev": "DGT"
+  },
+  {
+    "term": "direction régionale de l'équipement",
+    "abbrev": "dre"
+  },
+  {
+    "term": "Direction Régionale de la Concurrence, de la Consommation et de la Répression des Fraudes",
+    "abbrev": "DRCCRF"
+  },
+  {
+    "term": "Direction régionale des entreprises, de la concurrence, de la consommation et de l’emploi",
+    "abbrev": "direccte"
+  },
+  {
+    "term": "Direction régionale du travail, de l’emploi et de la formation professionnelle",
+    "abbrev": "drte\nDRT\ndrtefp",
+    "synonym": "Direction régionale du travail\ndirection régionale du travail et de l'emploi"
+  },
+  {
+    "term": "Directions régionales de la caisse des dépôts et consignations",
+    "abbrev": "DRCDC"
+  },
+  {
+    "term": "Directive (droit de l'Union européenne)",
+    "synonym": "Directive communautaire",
+    "definition": "dans le but d'harmoniser les législations en vigueur dans les différents États membres de l'Union européenne, les institutions de l'Union peuvent prendre des directives par lesquelles elles fixent aux États des résultats à atteindre, dans un délai déterminé, mais en leur laissant le choix des formes et des moyens.\n\nActe élaboré par les institutions européennes qui lie les États membres destinataires quant au résultat à atteindre, tout en leur laissant le choix des moyens et des formes pour y parvenir."
+  },
+  {
+    "term": "Dispositif d'initiation aux métiers en alternance",
+    "abbrev": "DIMA"
+  },
+  {
+    "term": "Dispositifs d’accompagnement renforcé",
+    "abbrev": "DAR"
+  },
+  {
+    "term": "Dispositifs locaux d’accompagnement",
+    "abbrev": "DLA"
+  },
+  {
+    "term": "Dividende",
+    "definition": "Partie des bénéfices d'une société distribuée aux actionnaires",
+    "definition_cdtn": "Partie des bénéfices d'une société distribuée aux actionnaires (Glossaire Service Public)"
+  },
+  {
+    "term": "document unique d'évaluation des risques",
+    "abbrev": "duerp\nduer\ndocument unique"
+  },
+  {
+    "term": "Dol ",
+    "definition": ": manœuvre visant à tromper une personne avant la signature d’un contrat, afin de l’inciter à signer."
+  },
+  {
+    "term": "Domicile",
+    "definition": "Lieu d'habitation officiel et habituel",
+    "definition_cdtn": "Lieu d'habitation officiel et habituel (Glossaire Service Public)"
+  },
+  {
+    "term": "Domiciliation d'une entreprise",
+    "definition": "Lieu correspondant à l'adresse administrative d'une entreprise, déclaré lors de l'immatriculation : siège social pour une société, domicile personnel d'un entrepreneur individuel, inscription auprès d'une société de domiciliation ou d'une pépinière.",
+    "definition_cdtn": "Lieu correspondant à l'adresse administrative d'une entreprise, déclaré lors de l'immatriculation : siège social pour une société, domicile personnel d'un entrepreneur individuel, inscription auprès d'une société de domiciliation ou d'une pépinière. (Glossaire Service Public)"
+  },
+  {
+    "term": "Dommages et intérêts",
+    "definition": "Somme d'argent destinée à réparer le préjudice subi\n: somme d’argent allouée à la victime d’un préjudice afin de le réparer.",
+    "definition_cdtn": "Somme d'argent destinée à réparer le préjudice subi\n: somme d’argent allouée à la victime d’un préjudice afin de le réparer. (Glossaire Service Public)"
+  },
+  {
+    "term": "droit communautaire",
+    "synonym": "droit européen"
+  },
+  {
+    "term": "Droit d'alerte"
+  },
+  {
+    "term": "droit du travail",
+    "synonym": "législation du travail \nréglementation du travail"
+  },
+  {
+    "term": "Droit individuel à la formation",
+    "abbrev": "DIF"
+  },
+  {
+    "term": "droit social européen",
+    "synonym": "droit social communautaire"
+  },
+  {
+    "term": "Droit syndical"
+  },
+  {
+    "term": "dumping social",
+    "synonym": "concurrence sociale"
+  },
+  {
+    "term": "DUP conventionnelle"
+  },
+  {
+    "term": "Duplicata",
+    "definition": "Double, copie d'un document ou d'un acte",
+    "definition_cdtn": "Double, copie d'un document ou d'un acte (Glossaire Service Public)"
+  },
+  {
+    "term": "durée d'assurance",
+    "synonym": "durée de cotisation"
+  },
+  {
+    "term": "École de la deuxième chance",
+    "abbrev": "E2C"
+  },
+  {
+    "term": "Effectif de l'entreprise"
+  },
+  {
+    "term": "Convention collective élargie"
+  },
+  {
+    "term": "Élections partielles"
+  },
+  {
+    "term": "Emploi d’avenir",
+    "abbrev": "EA\neav"
+  },
+  {
+    "term": "Employeurs multiples"
+  },
+  {
+    "term": "Emprisonnement",
+    "definition": "Peine de prison prononcée en cas de délit",
+    "definition_cdtn": "Peine de prison prononcée en cas de délit (Glossaire Service Public)"
+  },
+  {
+    "term": "En numéraire",
+    "definition": "Paiement en argent, qui peut être sous forme d'espèces, de chèques, de virements, etc.",
+    "definition_cdtn": "Paiement en argent, qui peut être sous forme d'espèces, de chèques, de virements, etc. (Glossaire Service Public)"
+  },
+  {
+    "term": "encouragement au développement d'entreprises nouvelles",
+    "abbrev": "eden"
+  },
+  {
+    "term": "engagement de développement de l'emploi et des compétences",
+    "abbrev": "edec"
+  },
+  {
+    "term": "Engagement de développement de l’emploi et des compétences",
+    "abbrev": "EDEC"
+  },
+  {
+    "term": "engagement de développement de la formation",
+    "abbrev": "eddf"
+  },
+  {
+    "term": "Engagement unilatéral de l'employeur"
+  },
+  {
+    "term": "Entité économique (notion)"
+  },
+  {
+    "term": "Entreprise adaptée",
+    "abbrev": "EA"
+  },
+  {
+    "term": "Entreprise d’insertion",
+    "abbrev": "EI"
+  },
+  {
+    "term": "Entreprise de taille intermédiaire",
+    "abbrev": "ETI",
+    "definition": "Entreprise employant entre 250 et 4 999 salariés, réalisant soit un chiffre d'affaires annuel inférieur à 1,5 milliard d'euros, soit un total de bilan inférieur à 2 milliards d'euros. Une entreprise qui a moins de 250 salariés, mais plus de 50 millions d'euros de chiffre d'affaires et plus de 43 millions d'euros de total de bilan, est aussi considérée comme une ETI.",
+    "definition_cdtn": "Entreprise employant entre 250 et 4 999 salariés, réalisant soit un chiffre d'affaires annuel inférieur à 1,5 milliard d'euros, soit un total de bilan inférieur à 2 milliards d'euros. Une entreprise qui a moins de 250 salariés, mais plus de 50 millions d'euros de chiffre d'affaires et plus de 43 millions d'euros de total de bilan, est aussi considérée comme une ETI. (Glossaire Service Public)"
+  },
+  {
+    "term": "Entreprise de travail temporaire",
+    "abbrev": "ETT",
+    "synonym": "entreprise travail temporaire"
+  },
+  {
+    "term": "Entreprise de travail temporaire d’insertion",
+    "abbrev": "ETTI"
+  },
+  {
+    "term": "entreprise unipersonnelle à responsabilité limitée",
+    "abbrev": "eurl"
+  },
+  {
+    "term": "entreprise utilisatrice",
+    "abbrev": "entreprise d'accueil\neu"
+  },
+  {
+    "term": "Entreprises de l’économie sociale et solidaire",
+    "abbrev": "ESS"
+  },
+  {
+    "term": "Équivalence"
+  },
+  {
+    "term": "Equivalence temps plein",
+    "abbrev": "ETP"
+  },
+  {
+    "term": "Equivalent temps plein travaillé",
+    "abbrev": "ETPT"
+  },
+  {
+    "term": "Espace économique européen (EEE)",
+    "definition": "Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Islande, Italie, Lettonie, Liechtenstein, Lituanie, Luxembourg, Malte, Norvège, Pays-Bas, Pologne, Portugal, République tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède"
+  },
+  {
+    "term": "Essai professionnel",
+    "synonym": "période d'essai"
+  },
+  {
+    "term": "Ester en justice ",
+    "definition": "fait « d’exercer ou introduire une action en justice ».\nparticiper à une instance en justice en tant que requérant, défendeur ou intervenant."
+  },
+  {
+    "term": "Etablissement et service d’aide par le travail",
+    "abbrev": "ESAT"
+  },
+  {
+    "term": "Etablissement pour l'insertion dans l'emploi",
+    "abbrev": "EPIDE"
+  },
+  {
+    "term": "Etablissement public à caractère industriel et commercial",
+    "abbrev": "ÉPIC"
+  },
+  {
+    "term": "Établissements distincts"
+  },
+  {
+    "term": "Etablissements publics à caractère administratif",
+    "abbrev": "EPA"
+  },
+  {
+    "term": "État d'ivresse manifeste",
+    "definition": "Comportement qui laisse présager qu'une personne a consommé de l'alcool de manière excessive",
+    "definition_cdtn": "Comportement qui laisse présager qu'une personne a consommé de l'alcool de manière excessive (Glossaire Service Public)"
+  },
+  {
+    "term": "Ethylotest",
+    "definition": "Appareil de mesure de l'alcool dans l'air expiré. Le fonctionnement est chimique (on souffle dans un ballon) ou électronique. Le résultat est exprimé en grammes par litre de sang.",
+    "definition_cdtn": "Appareil de mesure de l'alcool dans l'air expiré. Le fonctionnement est chimique (on souffle dans un ballon) ou électronique. Le résultat est exprimé en grammes par litre de sang.(Glossaire Service Public)"
+  },
+  {
+    "term": "Evaluation des politiques publiques",
+    "abbrev": "EPP"
+  },
+  {
+    "term": "Evaluation préalable à la création ou reprise d’entreprise",
+    "abbrev": "EPCE"
+  },
+  {
+    "term": "objectif projet de création ou reprise d’entreprise",
+    "abbrev": "OPCRE"
+  },
+  {
+    "term": "Exécution du jugement",
+    "definition": "les jugements et arrêts des juridictions s'imposent aux parties, qui doivent les exécuter. Il est possible de demander au juge d'ordonner à l'administration qu'elle exécute le jugement dans un certain délai, sous astreinte le cas échéant."
+  },
+  {
+    "term": "Exécution forcée ",
+    "definition": "Exécution d’un jugement imposée au débiteur sur sa personne ou sur ses biens par le ministère d’un officier public compétent et au besoin avec la force publique en observation de formalités prescrites par la loi."
+  },
+  {
+    "term": "Exécutoire ",
+    "definition": "Qui peut être mise à exécution au besoin par la force."
+  },
+  {
+    "term": "Exonération"
+  },
+  {
+    "term": "Expérimentation Territoriale contre le Chômage de Longue Durée",
+    "abbrev": "ETCLD"
+  },
+  {
+    "term": "Expertise",
+    "definition": "mesure ordonnée par le juge qui consiste à demander l'avis d'un expert sur des éléments techniques (par exemple médicales, géologiques, d’ingénierie). Le rapport de l’expert aide le juge à apprécier, par exemple, la part de responsabilité de chaque partie, le montant de chacun des préjudices subis, etc. Ce rapport est transmis par l’expert à la juridiction, qui le communique aux parties, afin qu’elles puissent en prendre connaissance et en débattre."
+  },
+  {
+    "term": "Extension",
+    "synonym": "Accord collectif étendu"
+  },
+  {
+    "term": "Extrait Kbis ",
+    "definition": "document officiel délivré par le greffe du tribunal de commerce qui constitue une sorte de carte d’identité d’une société. Y sont notamment mentionnés sa dénomination, sa forme sociale (SA, SARL, SAS, etc.), son capital social, son domaine d’activité ainsi que l’identité de ses dirigeants et les modifications publiées depuis sa création.\nDocument délivré par le greffe du tribunal de commerce attestant qu'une entreprise (extrait K bis) ou un établissement secondaire (extrait L bis) est enregistré(e) au registre du commerce et des sociétés (RCS)",
+    "definition_cdtn": "Document délivré par le greffe du tribunal de commerce attestant qu'une entreprise (extrait K bis) ou un établissement secondaire (extrait L bis) est enregistré(e) au registre du commerce et des sociétés (RCS) (Glossaire Service Public)"
+  },
+  {
+    "term": "Faute caractérisée"
+  },
+  {
+    "term": "Faute grave"
+  },
+  {
+    "term": "Faute inexcusable"
+  },
+  {
+    "term": "Faute lourde"
+  },
+  {
+    "term": "fédération de l'hospitalisation privée",
+    "abbrev": "fhp"
+  },
+  {
+    "term": "Fédération de la formation professionnelle",
+    "abbrev": "FFP"
+  },
+  {
+    "term": "Fédération des entreprises d’insertion",
+    "abbrev": "FEI"
+  },
+  {
+    "term": "fédération française des sociétés d'assurance",
+    "abbrev": "ffsa"
+  },
+  {
+    "term": "Fédération nationale des associations d’accueil et de réinsertion sociale",
+    "abbrev": "FNARS"
+  },
+  {
+    "term": "Fédération nationale des associations régionales de directeurs de CFA",
+    "abbrev": "FNADIR"
+  },
+  {
+    "term": "fédération syndicale mondiale",
+    "abbrev": "fsm"
+  },
+  {
+    "term": "fédération syndicale unitaire",
+    "abbrev": "fsu"
+  },
+  {
+    "term": "fermeture administrative",
+    "synonym": "fermeture d'établissement \nfermeture judiciaire"
+  },
+  {
+    "term": "fête du travail",
+    "synonym": "premier mai"
+  },
+  {
+    "term": "Fête légale"
+  },
+  {
+    "term": "Filiale"
+  },
+  {
+    "term": "Fin de non-recevoir",
+    "definition": "moyen de défense consistant à soutenir que la requête présentée au juge est irrecevable."
+  },
+  {
+    "term": "Fond d'indemnisation Victimes Amiante",
+    "abbrev": "FIVA"
+  },
+  {
+    "term": "fondation européenne pour l'amélioration des conditions de vie et de travail",
+    "abbrev": "fondact"
+  },
+  {
+    "term": "Fonds commun de placement",
+    "abbrev": "FCP"
+  },
+  {
+    "term": "Fonds d'assurance formation - travail temporaire",
+    "abbrev": "FAF-TT"
+  },
+  {
+    "term": "Fonds d’appui aux politiques d’insertion",
+    "abbrev": "FAPI"
+  },
+  {
+    "term": "Fonds de commerce"
+  },
+  {
+    "term": "fonds de financement de l'allocation personnalisée d'autonomie",
+    "abbrev": "ffapa"
+  },
+  {
+    "term": "fonds de financement des prestations sociales des non salariés agricoles",
+    "abbrev": "ffipsa"
+  },
+  {
+    "term": "fonds de garantie pour la création",
+    "abbrev": "fgif"
+  },
+  {
+    "term": "Fonds de mobilisation départementale pour l’insertion",
+    "abbrev": "FMDI"
+  },
+  {
+    "term": "fonds de réserve pour les retraites",
+    "abbrev": "frr"
+  },
+  {
+    "term": "fonds de solidarité vieillesse ",
+    "abbrev": "FSV"
+  },
+  {
+    "term": "Fonds départemental d’insertion",
+    "abbrev": "FDI"
+  },
+  {
+    "term": "Fonds européen de développement régional",
+    "abbrev": "FEDER"
+  },
+  {
+    "term": "fonds monétaire international",
+    "abbrev": "fmi"
+  },
+  {
+    "term": "fonds national d'aide au logement",
+    "abbrev": "fnal"
+  },
+  {
+    "term": "fonds national d'aménagement et de développement du territoire",
+    "abbrev": "fnadt"
+  },
+  {
+    "term": "Fonds national de développement et de modernisation de l’apprentissage",
+    "abbrev": "FNDMA"
+  },
+  {
+    "term": "Fonds National de Garantie des Salaires",
+    "abbrev": "FNGS"
+  },
+  {
+    "term": "fonds national de l'emploi",
+    "abbrev": "fne"
+  },
+  {
+    "term": "Fonds national de revitalisation des territoires",
+    "abbrev": "FNRT"
+  },
+  {
+    "term": "Fonds national des solidarités actives",
+    "abbrev": "FNSA"
+  },
+  {
+    "term": "Fonds national pour l’emploi",
+    "abbrev": "FNE"
+  },
+  {
+    "term": "Fonds paritaire de financement des syndicats"
+  },
+  {
+    "term": "Fonds paritaire de sécurisation des parcours professionnels",
+    "abbrev": "FPSPP"
+  },
+  {
+    "term": "Fonds pour la gestion du congé individuel de formation",
+    "abbrev": "FONGECIF"
+  },
+  {
+    "term": "Fonds social européen",
+    "abbrev": "FSE"
+  },
+  {
+    "term": "Fonds solidaire de garantie pour l’entreprenariat féminin et l’insertion",
+    "abbrev": "FOGECI"
+  },
+  {
+    "term": "Force exécutoire",
+    "definition": "Décision de justice pouvant être appliquée si besoin avec l'aide de la force publique",
+    "definition_cdtn": "Décision de justice pouvant être appliquée si besoin avec l'aide de la force publique (Glossaire Service Public)"
+  },
+  {
+    "term": "Force majeure",
+    "definition": "Événement exceptionnel, imprévisible et irrésistible justifiant de s'exonérer d'une obligation, d'un engagement ou d'une responsabilité (par exemple : catastrophe naturelle pour un contrat d'assurance, décès pour un contrat de travail...)",
+    "definition_cdtn": "Événement exceptionnel, imprévisible et irrésistible justifiant de s'exonérer d'une obligation, d'un engagement ou d'une responsabilité (par exemple : catastrophe naturelle pour un contrat d'assurance, décès pour un contrat de travail...)\n(glossaire Service Public)"
+  },
+  {
+    "term": "force ouvrière",
+    "abbrev": "FO",
+    "synonym": "cgt-fo"
+  },
+  {
+    "term": "Forclusion",
+    "definition": "Perte d'un droit à agir en justice en raison de l'expiration d'un délai\n\nirrecevabilité à saisir le juge au-delà de l'expiration du délai de recours contentieux.",
+    "definition_cdtn": "Perte d'un droit à agir en justice en raison de l'expiration d'un délai (Glossaire Service Public)"
+  },
+  {
+    "term": "Formation en situation de travail",
+    "abbrev": "FEST"
+  },
+  {
+    "term": "formation individualisée",
+    "synonym": "individualisation de la formation"
+  },
+  {
+    "term": "Formation ouverte et à distance",
+    "abbrev": "FOAD"
+  },
+  {
+    "term": "Formation professionnelle continue",
+    "abbrev": "FPC",
+    "synonym": "formation continue\neducation permanente \nFormation professionnelle permanente "
+  },
+  {
+    "term": "Fractionnement des congés payés"
+  },
+  {
+    "term": "Frais de déplacement",
+    "synonym": "frais de transport\nindemnité de transports"
+  },
+  {
+    "term": "Frais exposés et non compris dans les dépenses (article L. 761-1 du code de justice administrative)",
+    "definition": "frais de justice autres que les frais d’expertise et d’enquête (appelés les dépens, voir déf.). Il s’agit essentiellement des honoraires d’avocats. A l’issue du procès, la partie perdante peut être tenue de rembourser les frais non compris dans les dépens qu’une autre partie a exposés."
+  },
+  {
+    "term": "Fusion de sociétés"
+  },
+  {
+    "term": "Garantie européenne pour la jeunesse",
+    "abbrev": "GEJ"
+  },
+  {
+    "term": "Garantie jeunes",
+    "abbrev": "GJ"
+  },
+  {
+    "term": "gardien d'immeuble",
+    "synonym": "gardien"
+  },
+  {
+    "term": "Gestion des ressources humaines",
+    "abbrev": "GRH"
+  },
+  {
+    "term": "Gestion électronique de documents",
+    "abbrev": "GED"
+  },
+  {
+    "term": "Gestion prévisionnelle des emplois et des compétences",
+    "abbrev": "GPEC",
+    "synonym": "Gestion prévisionnelle des emplois"
+  },
+  {
+    "term": "Gestion prévisionnelle des emplois et des compétences territoriales",
+    "abbrev": "GPECT"
+  },
+  {
+    "term": "Grandes orientations de politiques économiques",
+    "abbrev": "GOPE"
+  },
+  {
+    "term": "Gratification"
+  },
+  {
+    "term": "Greffe",
+    "definition": "Service d'un tribunal composé de fonctionnaires qui assistent les magistrats dans leur mission\n\ndans une juridiction, ensemble des agents qui sont chargés de la réception et de l’enregistrement des requêtes, qui assistent les magistrats dans la conduite de l’instruction, qui organisent les audiences et qui notifient les décisions de justice.\n\n: service administratif d’un tribunal chargé de délivrer les jugements et de tenir le rôle (voir ce mot).",
+    "definition_cdtn": "Service d'un tribunal composé de fonctionnaires qui assistent les magistrats dans leur mission\r\n(Glossaire Service Public)"
+  },
+  {
+    "term": "Grief",
+    "definition": "1. une décision faisant grief est une décision qui a un impact sur la situation juridique d'une personne et qui peut en conséquence être contestée devant le juge. A titre de contre-exemple, un avis donné par une commission consultative ne fait pas grief et ne peut pas être attaqué : seule la décision prise par l'administration en se fondant sur cet avis pourra l’être.\n2. dans le contentieux électoral, le terme « grief » est synonyme de moyen. Il désigne les arguments juridiques mis en avant pour demander l’annulation des résultats d’une élection."
+  },
+  {
+    "term": "Grossesse pathologique",
+    "definition": "Grossesse qui menace directement la santé de la mère et de l'enfant",
+    "definition_cdtn": "Grossesse qui menace directement la santé de la mère et de l'enfant (Glossaire Service Public)"
+  },
+  {
+    "term": "Groupement d'intérêt économique",
+    "abbrev": "GIE"
+  },
+  {
+    "term": "Groupement d’employeurs pour l’insertion et la qualification",
+    "abbrev": "GEIQ"
+  },
+  {
+    "term": "Groupement d’intérêt public",
+    "abbrev": "GIP"
+  },
+  {
+    "term": "Groupements d’employeurs",
+    "abbrev": "GE"
+  },
+  {
+    "term": "Guichet unique du spectacle occasionnel",
+    "abbrev": "GUSO"
+  },
+  {
+    "term": "Guichet unique spectacle occasionnel (Guso)"
+  },
+  {
+    "term": "Haute Autorité de lutte contre les discriminations et pour l'égalité",
+    "abbrev": "HALDE",
+    "definition": "créée par la loi 2004-1486 du 30 décembre 2004"
+  },
+  {
+    "term": "handicapé physique",
+    "synonym": "déficient moteur \nhandicapé moteur \nimc \ninfirme moteur cérébral"
+  },
+  {
+    "term": "handicapé sensoriel",
+    "synonym": "déficient sensoriel"
+  },
+  {
+    "term": "harcèlement moral",
+    "abbrev": "harcèlement psychologique"
+  },
+  {
+    "term": "hausse",
+    "abbrev": "augmentation"
+  },
+  {
+    "term": "Haut commissariat aux compétences et à l'inclusion par l'emploi",
+    "abbrev": "HCCIE"
+  },
+  {
+    "term": "haut conseil interministériel de la comptabilité des organismes de sécurité sociale",
+    "abbrev": "hcicoss"
+  },
+  {
+    "term": "haut comité d'étude et d'information sur l'alcoolisme",
+    "abbrev": "hceia"
+  },
+  {
+    "term": "Homologation"
+  },
+  {
+    "term": "Horaire journalier de travail"
+  },
+  {
+    "term": "hôte de caisse",
+    "abbrev": "caissier caissière hôtesse de caisse"
+  },
+  {
+    "term": "Hôtel - café - restaurant",
+    "abbrev": "HCR",
+    "synonym": "hôtellerie café et restauration\nHôtel, café, restaurant"
+  },
+  {
+    "term": "Huissier de justice"
+  },
+  {
+    "term": "hydrocarbure",
+    "abbrev": "asphalte bitume goudron"
+  },
+  {
+    "term": "hygiène",
+    "abbrev": "règle d'hygiène"
+  },
+  {
+    "term": "Hyperbare",
+    "definition": "Lieu où la pression est supérieure à la pression atmosphérique (par exemple, sous l'eau, caisson hyperbare, enceinte de confinement de réacteur nucléaire, etc.)",
+    "definition_cdtn": "Lieu où la pression est supérieure à la pression atmosphérique (par exemple, sous l'eau, caisson hyperbare, enceinte de confinement de réacteur nucléaire, etc.) (Glossaire Service Public)"
+  },
+  {
+    "term": "identifiant des conventions collectives",
+    "abbrev": "IDCC",
+    "definition": "Pour faciliter le repérage de la convention collective applicable, il existe un numéro (code) unique d’identification des conventions collectives : l’IDCC (4 chiffres maximum). Il est attribué par le ministère du travail à chaque convention, quel que soit son champ d’application géographique, économique ou socioprofessionnel. L’IDCC est affecté au texte de base de la convention collective. Des textes issus de négociations ultérieures et/ou des textes portant sur les salaires peuvent lui être associés. On parle alors de «Textes attachés ». On trouve également des textes isolés, accords collectifs en lien avec un ou plusieurs IDCC et traitant d’un ou de plusieurs sujets précis. Vous pouvez rechercher l’IDCC de votre convention collective sur le site internet du ministère chargé du travail dans la rubrique «Liste des conventions collectives et de leur code IDCC valable pour l’année 2014» (en format PDF ou XLS) où un formulaire de recherche est disponible. Attention : ce code n’est pas le numéro de la brochure des Éditions des Journaux officiels dans laquelle est publiée la convention collective."
+  },
+  {
+    "term": "immeuble de grande hauteur",
+    "abbrev": "igh"
+  },
+  {
+    "term": "incapacité de travail",
+    "abbrev": "incapacité partielle \nincapacité permanente \nincapacité temporaire \nincapacité totale\nIncapacité médicale de travail"
+  },
+  {
+    "term": "Indemnité"
+  },
+  {
+    "term": "Indemnité différentielle de reclassement",
+    "abbrev": "IDR"
+  },
+  {
+    "term": "indemnités de congés payés",
+    "abbrev": "icp"
+  },
+  {
+    "term": "Indemnités journalières de sécurité sociale",
+    "abbrev": "ijss",
+    "synonym": "Indemnité journalière",
+    "definition": "Versées par la sécurité sociale aux salariés en arrêt de travail maladie ou consécutif à un accident de travail ou maladie professionnelle. Elles font partie de la catégorie des revenus de remplacement et sont soumises aux cotisations CSG et CRDS à des taux particuliers.",
+    "definition_cdtn": "Versées par la sécurité sociale aux salariés en arrêt de travail maladie ou consécutif à un accident de travail ou maladie professionnelle. Elles font partie de la catégorie des revenus de remplacement et sont soumises aux cotisations CSG et CRDS à des taux particuliers. (Glossaire Service Public)"
+  },
+  {
+    "term": "indexation des salaires",
+    "abbrev": "echelle mobile des salaires"
+  },
+  {
+    "term": "indice biotique",
+    "abbrev": "igb"
+  },
+  {
+    "term": "Indisponibilité des droits"
+  },
+  {
+    "term": "industrie du conditionnement",
+    "abbrev": "industrie de l'emballage"
+  },
+  {
+    "term": "industrie du pétrole",
+    "abbrev": "industrie pétrochimique"
+  },
+  {
+    "term": "industrie électronique",
+    "abbrev": "industrie électrique et électronique"
+  },
+  {
+    "term": "industrie mécanique",
+    "abbrev": "mécanique"
+  },
+  {
+    "term": "industrie métallurgique",
+    "abbrev": "métallurgie"
+  },
+  {
+    "term": "industrie papetière",
+    "abbrev": "industrie du papier"
+  },
+  {
+    "term": "industrie pharmaceutique",
+    "abbrev": "industrie du médicament \nlaboratoire pharmaceutique"
+  },
+  {
+    "term": "industrie sidérurgique",
+    "abbrev": "sidérurgie"
+  },
+  {
+    "term": "institut national de l'environnement industriel et des risques",
+    "abbrev": "ineris"
+  },
+  {
+    "term": "Infraction",
+    "definition": "Acte interdit par la loi et passible de sanctions pénales",
+    "definition_cdtn": "Acte interdit par la loi et passible de sanctions pénales (Glossaire Service Public)"
+  },
+  {
+    "term": "Initiative pour l’emploi des jeunes",
+    "abbrev": "IEJ"
+  },
+  {
+    "term": "Initiatives territoriales pour l'emploi",
+    "abbrev": "ITE"
+  },
+  {
+    "term": "Injonction",
+    "definition": "ordre adressé par le juge à l’administration afin qu’elle prenne les dispositions nécessaires à l’exécution d’une décision de justice. Cet ordre peut consister à obliger l’administration à prendre une mesure dans un sens déterminé ou bien à la contraindre à procéder à un nouvel examen d’une demande."
+  },
+  {
+    "term": "institut national de recherche et de sécurité pour la prévention des accidents du travail et des maladies professionnelles institut national de recherche et de sécurité",
+    "abbrev": "inrs"
+  },
+  {
+    "term": "insalubrité",
+    "abbrev": "salubrité"
+  },
+  {
+    "term": "institut national de la statistique et des études économiques",
+    "abbrev": "insee"
+  },
+  {
+    "term": "Insertion par l’activité économique",
+    "abbrev": "IAE"
+  },
+  {
+    "term": "insertion professionnelle",
+    "abbrev": "entrée dans la vie active \naccès à la vie professionnelle"
+  },
+  {
+    "term": "insertion sociale",
+    "abbrev": "réinsertion sociale"
+  },
+  {
+    "term": "Inspection du travail",
+    "abbrev": "IT"
+  },
+  {
+    "term": "Inspection générale des affaires sociales",
+    "abbrev": "IGAS"
+  },
+  {
+    "term": "installation classée pour la protection de l'environnement",
+    "abbrev": "icpe \ninstallation classée "
+  },
+  {
+    "term": "installation nucléaire de base",
+    "abbrev": "inb"
+  },
+  {
+    "term": "Instance",
+    "definition": "succession des actes de procédure allant du dépôt de la requête jusqu'au moment où le jugement est rendu.\n\nDésigne un litige porté devant une juridiction ainsi que l’ensemble constitué par les actes de la procédure, qui vont de la demande en justice jusqu’au jugement. En principe, en cas de recours, l’affaire donne lieu à une nouvelle instance devant une autre juridiction. (legi)\n\n: procédure judiciaire."
+  },
+  {
+    "term": "Instance de coordination de plusieurs CHSCT",
+    "abbrev": "ICCHSCT"
+  },
+  {
+    "term": "Instances représentatives du personnel",
+    "abbrev": "IRP",
+    "synonym": "Institution représentative du personnel"
+  },
+  {
+    "term": "Institut national de la statistique et des études économiques",
+    "abbrev": "INSEE"
+  },
+  {
+    "term": "Institut national du travail, de l’emploi et de la formation professionnelle",
+    "abbrev": "INTEFP",
+    "synonym": "institut national du travail"
+  },
+  {
+    "term": "Insuffisance de recherche d’emploi",
+    "abbrev": "IRE"
+  },
+  {
+    "term": "insuffisance professionnelle",
+    "abbrev": "incompétence professionnelle"
+  },
+  {
+    "term": "Intérêt à agir",
+    "definition": "pour saisir le juge d'un recours en annulation, un requérant doit justifier d'un intérêt pour agir : l'acte qu'il conteste doit l'affecter de façon suffisamment directe et certaine."
+  },
+  {
+    "term": "intérimaire",
+    "abbrev": "travailleur temporaire"
+  },
+  {
+    "term": "Intermittent du spectacle",
+    "definition": "Salarié engagé en contrat à durée déterminée (CDD) par un ou des employeurs publics ou privés, exerçant une activité soit d'artiste du spectacle vivant ou du cinéma et de l'audiovisuel (comédien, musicien, chansonnier par exemple), soit d'ouvrier ou technicien du spectacle dont l'employeur doit avoir une activité dans les secteurs du cinéma, audiovisuel, édition phonographique, radio, télédiffusion, spectacle vivant, prestation technique au service de de la création et de l'événement, des espaces de loisir, d'attractions et culturels et de la production de films d'animation.",
+    "definition_cdtn": "Salarié engagé en contrat à durée déterminée (CDD) par un ou des employeurs publics ou privés, exerçant une activité soit d'artiste du spectacle vivant ou du cinéma et de l'audiovisuel (comédien, musicien, chansonnier par exemple), soit d'ouvrier ou technicien du spectacle dont l'employeur doit avoir une activité dans les secteurs du cinéma, audiovisuel, édition phonographique, radio, télédiffusion, spectacle vivant, prestation technique au service de de la création et de l'événement, des espaces de loisir, d'attractions et culturels et de la production de films d'animation. (Glossaire Service Public)"
+  },
+  {
+    "term": "Intimé ",
+    "definition": ": partie à un procès qui se trouve en position de défendeur en appel (elle n’a pas exercé cette voie de recours)."
+  },
+  {
+    "term": "institut de protection et de sûreté nucléaire",
+    "abbrev": "ipsn"
+  },
+  {
+    "term": "Irrecevabilité",
+    "definition": "une requête est irrecevable si elle ne respecte pas les règles de la procédure contentieuse (par exemple, dépôt de la requête dans un délai précis, exposé de conclusions et moyens, intérêt pour agir). Dans ce cas, sauf régularisation de l’irrecevabilité (quand elle est possible), la requête doit être rejetée par le juge."
+  },
+  {
+    "term": "Jour calendaire",
+    "definition": "Correspond à la totalité des jours du calendrier de l'année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou chômés",
+    "definition_cdtn": "Correspond à la totalité des jours du calendrier de l'année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou chômés (Glossaire Service Public)"
+  },
+  {
+    "term": "Jour chômé",
+    "definition": "Jour non travaillé",
+    "definition_cdtn": "Jour non travaillé (Glossaire Service Public)"
+  },
+  {
+    "term": "Jour férié"
+  },
+  {
+    "term": "Jour franc",
+    "definition": "Jour qui dure de 0h à 24h. Un délai ainsi calculé ne tient pas compte du jour de la décision à l'origine du délai, ni du jour de l'échéance. Si le délai s'achève un samedi, un dimanche ou jour férié, il est reporté d'un jour.",
+    "definition_cdtn": "Jour qui dure de 0h à 24h. Un délai ainsi calculé ne tient pas compte du jour de la décision à l'origine du délai, ni du jour de l'échéance. Si le délai s'achève un samedi, un dimanche ou jour férié, il est reporté d'un jour. (Glossaire Service Public)"
+  },
+  {
+    "term": "Jour ouvrable",
+    "definition": "Correspond à tous les jours de la semaine, à l'exception du jour de repos hebdomadaire (généralement le dimanche) et des jours fériés habituellement non travaillés dans l'entreprise",
+    "definition_cdtn": "Correspond à tous les jours de la semaine, à l'exception du jour de repos hebdomadaire (généralement le dimanche) et des jours fériés habituellement non travaillés dans l'entreprise (Glossaire Service Public)"
+  },
+  {
+    "term": "Jour ouvré",
+    "definition": "Jour effectivement travaillé dans une entreprise ou une administration. On en compte 5 par semaine.",
+    "definition_cdtn": "Jour effectivement travaillé dans une entreprise ou une administration. On en compte 5 par semaine. (Glossaire Service Public)"
+  },
+  {
+    "term": "Journal officiel de la République française",
+    "abbrev": "jo\njorf",
+    "definition": "Publication gouvernementale qui assure l’information des administrés sur les lois, décrets et arrêtés à portée générale. Le JO est publié dans une version papier et dans une version électronique authentifiée. (JOEA)\nIl existe également un Journal officiel de l’Union européenne qui diffuse les textes et documents de l’Union européenne aux États membres. (LEGI)"
+  },
+  {
+    "term": "Judiciaire (juridiction)",
+    "definition": "les juridictions de l'ordre judiciaire jugent d'une part, les affaires pénales, et d'autre part, les litiges entre les particuliers mettant en jeu les règles du droit civil (droit de la famille, du droit du travail, du droit commercial... ). Elles relèvent du contrôle de la Cour de cassation."
+  },
+  {
+    "term": "Juge des référés ",
+    "definition": ": magistrat – en principe le président de la juridiction – ayant le pouvoir de se prononcer en cas d’urgence. La décision rendue est certes provisoire (dans l’attente d’un jugement sur le fond), mais elle est directement applicable."
+  },
+  {
+    "term": "Juge du fond",
+    "definition": ": magistrat qui juge à la fois les faits et le droit, par opposition à celui de la Cour de cassation."
+  },
+  {
+    "term": "Jugement",
+    "definition": "décision rendue par un tribunal administratif. Par extension, le mot « jugement » peut être employé comme un synonyme de « décision de justice ».\n\nDécision rendue par une juridiction de premier degré (tribunal d’instance, tribunal de commerce…). Au sens large, désigne toute décision de justice. (LEGI)\n\n: décision de justice rendue par un tribunal de premier ressort (tribunal d’instance, tribunal de grande instance, conseil de prud’hommes, etc.)."
+  },
+  {
+    "term": "Jugement définitif",
+    "synonym": "Jugement passé en force de chose jugée",
+    "definition": "Jugement dont toutes les voies de recours (opposition, appel, cassation) ont été utilisées ou pour lequel les délais pour faire opposition, appel ou de pourvoir en cassation sont expirés",
+    "definition_cdtn": "Jugement dont toutes les voies de recours (opposition, appel, cassation) ont été utilisées ou pour lequel les délais pour faire opposition, appel ou de pourvoir en cassation sont expirés (Glossaire Service Public)"
+  },
+  {
+    "term": "Jugement passé en force de chose jugée",
+    "definition": "Jugement qui n'est plus susceptible de recours, soit parce que les recours ont été épuisés, soit que les délais sont expirés",
+    "definition_cdtn": "Jugement qui n'est plus susceptible de recours, soit parce que les recours ont été épuisés, soit que les délais sont expirés (Glossaire Service Public)"
+  },
+  {
+    "term": "Juridiction",
+    "synonym": "compétence juridictionnelle tribunal du travail",
+    "definition": "institution (par exemple, tribunal, cour) chargée de juger au nom du peuple français.\n\nLieu où est rendue la justice : tribunal ou cour. (légi)"
+  },
+  {
+    "term": "Juridiction administrative",
+    "definition": "Tribunal ou cour qui juge les affaires opposant des personnes privées à des personnes publiques ou des personnes morales de droit public entre elles et qui mettent en cause une décision de l’État ou des collectivités territoriales (exemple : municipalités).(légi)\n\nTribunal administratif, cour administrative d'appel, Conseil d'État",
+    "definition_cdtn": "Tribunal administratif, cour administrative d'appel, Conseil d'État (Glossaire Service Public)"
+  },
+  {
+    "term": "juridiction du travail",
+    "synonym": "tribunal du travail"
+  },
+  {
+    "term": "Juridictions judiciaires",
+    "definition": "Tribunaux civils et pénaux",
+    "definition_cdtn": "Tribunaux civils et pénaux"
+  },
+  {
+    "term": "Jurisprudence",
+    "definition": "ensemble des décisions de justice qui interprètent, précisent le sens des textes de droit, et le cas échéant, complètent les lois et les règlements.\n\nEnsemble des décisions de justice. Elles interprètent, précisent le sens des textes du droit positif. Désigne également la solution faisant autorité, donnée par un juge ou une juridiction à un problème de droit. (légi)\n\nEnsemble des décisions de justice. Elles interprètent, précisent le sens des textes de droit. Ce terme désigne également la solution faisant autorité, donnée par un juge ou une juridiction à un problème de droit.\n\n: ensemble des décisions de justice. L’étude de ces décisions peut par exemple montrer qu’une question est toujours tranchée dans le même sens, la jurisprudence étant alors qualifiée de constante. Lorsqu’une jurisprudence constante change, on parle de revirement de jurisprudence. Une jurisprudence constante ne préjuge pas des futurs jugements, les juges du fond n’étant pas obligés de se conformer aux décisions de la Cour de cassation ou à d’autres décisions antérieures."
+  },
+  {
+    "term": "Licenciement",
+    "abbrev": "LIC"
+  },
+  {
+    "term": "licenciement de salariés protégés",
+    "abbrev": "lsp"
+  },
+  {
+    "term": "licenciement de salariés protégés",
+    "abbrev": "lsp",
+    "synonym": "Licenciement des représentants du personnel"
+  },
+  {
+    "term": "Lien de subordination"
+  },
+  {
+    "term": "Liquidation judiciaire",
+    "abbrev": "lj"
+  },
+  {
+    "term": "Lanceur d'alerte",
+    "synonym": "alerte éthique \ndénonciation professionnelle\nalerte professionnelle"
+  },
+  {
+    "term": "Litige",
+    "definition": "désaccord sur un fait ou un droit donnant lieu à un procès."
+  },
+  {
+    "term": "Lock-out"
+  },
+  {
+    "term": "Loi",
+    "definition": "Règle de droit écrite, de portée générale et impersonnelle. Elle s’applique à tous sans exception et nul n’est censé l’ignorer. Elle est délibérée, rédigée, amendée et votée par le Parlement (Assemblée nationale et Sénat) en termes identiques. Elle est promulguée (signée) par le Président de la République et publiée au Journal officiel de la République française (JO). (légi)\n\n: règle juridique contraignante et impersonnelle qui s’applique à tous. Elle est votée par le Parlement, par opposition aux règlements pris par le gouvernement. Dans le Code du travail, les textes issus de la loi sont précédés de la lettre L, ceux issus de décrets pris en Conseil d’État de la lettre R et ceux issus de décrets « simples » de la lettre D."
+  },
+  {
+    "term": "loi d'amnistie",
+    "abbrev": "amnistie"
+  },
+  {
+    "term": "Loi de finance rectificative",
+    "abbrev": "LFR"
+  },
+  {
+    "term": "Loi de finances initiale",
+    "abbrev": "LFI"
+  },
+  {
+    "term": "Loi de sécurisation de l’emploi",
+    "abbrev": "LSE"
+  },
+  {
+    "term": "Loi Sapin II"
+  },
+  {
+    "term": "Loi Travail"
+  },
+  {
+    "term": "loi organique relative aux lois de finances",
+    "abbrev": "lolf"
+  },
+  {
+    "term": "Maison de l'emploi",
+    "abbrev": "MDE"
+  },
+  {
+    "term": "Maison des artistes",
+    "abbrev": "MDA"
+  },
+  {
+    "term": "Maître d'œuvre",
+    "abbrev": "moe",
+    "definition": "Personne en charge du chantier dans sa conception et parfois dans son exécution. On distingue maître d’œuvre de conception et d'exécution, sur certains gros chantiers. Souvent, cette fonction est remplie par un architecte.",
+    "definition_cdtn": "Personne en charge du chantier dans sa conception et parfois dans son exécution. On distingue maître d’œuvre de conception et d'exécution, sur certains gros chantiers. Souvent, cette fonction est remplie par un architecte. (Glossaire Service Public)"
+  },
+  {
+    "term": "Maître d'ouvrage",
+    "abbrev": "moa",
+    "definition": "Personne publique ou privée pour le compte de laquelle des travaux ou un ouvrage immobilier sont réalisés",
+    "definition_cdtn": "Personne publique ou privée pour le compte de laquelle des travaux ou un ouvrage immobilier sont réalisés (Glossaire Service Public)"
+  },
+  {
+    "term": "maladie professionnelle",
+    "abbrev": "mp"
+  },
+  {
+    "term": "Mandat"
+  },
+  {
+    "term": "Mandat de service public",
+    "abbrev": "MSP"
+  },
+  {
+    "term": "Marché réglementé",
+    "definition": "Marché d'instruments financiers (actions, obligations, etc.) géré par une entreprise de marché selon des règles de fonctionnement (organisation, déontologie, transparence) contrôlées en France par l'Autorité des marchés financiers (AMF)",
+    "definition_cdtn": "Marché d'instruments financiers (actions, obligations, etc.) géré par une entreprise de marché selon des règles de fonctionnement (organisation, déontologie, transparence) contrôlées en France par l'Autorité des marchés financiers (AMF)\n(Glossaire Service Public)"
+  },
+  {
+    "term": "médecin du travail",
+    "abbrev": "mt"
+  },
+  {
+    "term": "médecin inspecteur du travail",
+    "abbrev": "mit"
+  },
+  {
+    "term": "Méthode de recrutement par simulation",
+    "abbrev": "MRS"
+  },
+  {
+    "term": "micro-entrepreneur",
+    "abbrev": "auto-entrepreneur"
+  },
+  {
+    "term": "Ministères économiques et financiers",
+    "abbrev": "MEFI"
+  },
+  {
+    "term": "Mise à pied conservatoire",
+    "abbrev": "MPC",
+    "definition": "Suspension préventive et provisoire d'un salarié de ses fonctions, dans l'attente d'une procédure de sanction, suite à une faute grave. Le salarié est dispensé d'exécuter son travail et son contrat est suspendu pendant une durée indéterminée.",
+    "definition_cdtn": "Suspension préventive et provisoire d'un salarié de ses fonctions, dans l'attente d'une procédure de sanction, suite à une faute grave. Le salarié est dispensé d'exécuter son travail et son contrat est suspendu pendant une durée indéterminée. (Glossaire Service Public)"
+  },
+  {
+    "term": "Mise à pied disciplinaire (droit du travail)",
+    "abbrev": "MPD",
+    "definition": "Sanction visant à suspendre temporairement le contrat de travail et la rémunération du salarié ayant eu un comportement fautif",
+    "definition_cdtn": "Sanction visant à suspendre temporairement le contrat de travail et la rémunération du salarié ayant eu un comportement fautif (Glossaire Service Public)"
+  },
+  {
+    "term": "Mise en cause"
+  },
+  {
+    "term": "Mise en demeure",
+    "abbrev": "med",
+    "definition": "Acte par lequel un créancier exige du débiteur le remboursement d'une dette sous peine de versement de dommages et intérêts. Adressé par lettre recommandée avec accusé de réception ou par acte d'huissier.",
+    "definition_cdtn": "Acte par lequel un créancier exige du débiteur le remboursement d'une dette sous peine de versement de dommages et intérêts. Adressé par lettre recommandée avec accusé de réception ou par acte d'huissier. (Glossaire Service Public)"
+  },
+  {
+    "term": "Mission des ressources humaines et des affaires générale",
+    "abbrev": "MRHAG"
+  },
+  {
+    "term": "Modernisation de l'action publique territoriale et d'affirmation des métropoles",
+    "abbrev": "MAPTAM"
+  },
+  {
+    "term": "Modification juridique de la situation de l'employeur",
+    "synonym": "changement de la situation juridique de l'employeur"
+  },
+  {
+    "term": "Motifs",
+    "definition": "éléments de droit et de fait sur lesquels est fondée une décision administrative ou la solution retenue par une décision de justice."
+  },
+  {
+    "term": "Motivation",
+    "definition": "exposé des motifs d’une décision administrative ou d’une décision de justice. Une décision de justice comporte obligatoirement une motivation."
+  },
+  {
+    "term": "Mouvement des entreprises de France",
+    "abbrev": "MEDEF"
+  },
+  {
+    "term": "Moyens",
+    "definition": "pour convaincre le juge que ses demandes sont fondées, raisons argumentées en droit et/ou en fait, invoquées par chaque partie dans son ou ses mémoires (par exemple, incompétence du signataire de l’acte, méconnaissance d’une disposition législative ou réglementaire)."
+  },
+  {
+    "term": "Mutation",
+    "definition": "Changement du lieu d'affectation du salarié dans un autre établissement de l'entreprise",
+    "definition_cdtn": "Changement du lieu d'affectation du salarié dans un autre établissement de l'entreprise (Glossaire Service Public)"
+  },
+  {
+    "term": "Mutation disciplinaire (droit du travail)",
+    "definition": "Changement d'affectation ou de lieu de travail décidé par l'employeur envers un salarié ayant eu un comportement fautif",
+    "definition_cdtn": "Changement d'affectation ou de lieu de travail décidé par l'employeur envers un salarié ayant eu un comportement fautif (Glossaire Service Public)"
+  },
+  {
+    "term": "Mutations technologiques"
+  },
+  {
+    "term": "Mutilé du travail",
+    "definition": "Accidenté du travail qui a subi une blessure portant atteinte à son intégrité physique de façon irréversible (amputation par exemple)",
+    "definition_cdtn": "Accidenté du travail qui a subi une blessure portant atteinte à son intégrité physique de façon irréversible (amputation par exemple) (Glossaire Service Public)"
+  },
+  {
+    "term": "Mutualité sociale agricole",
+    "abbrev": "MSA"
+  },
+  {
+    "term": "nomenclature d'activité française",
+    "abbrev": "NAF",
+    "synonym": "code NAF",
+    "definition": "(Conventions collectives) La nomenclature des activités française (NAF) est la nomenclature sur la base de laquelle est établi le code APE (activité principale exercée dans l’entreprise ou l’association). Le code APE et l’IDCC permettent d’identifier la convention collective. Une table de concordance entre le secteur d’activité (code APE) et l’IDCC de la convention collective est disponible sur le site du ministère chargé du travail."
+  },
+  {
+    "term": "Nécessités de service",
+    "definition": "Raisons objectives et particulières, tenant à la continuité du fonctionnement du service, pouvant justifier le refus par l'administration d'un droit ou d'un avantage à un agent public (un temps partiel, un congé, etc.)",
+    "definition_cdtn": "Raisons objectives et particulières, tenant à la continuité du fonctionnement du service, pouvant justifier le refus par l'administration d'un droit ou d'un avantage à un agent public (un temps partiel, un congé, etc.) (Glossaire Service Public)"
+  },
+  {
+    "term": "Négociation triennale "
+  },
+  {
+    "term": "Non-lieu",
+    "definition": "si le recours a perdu son utilité, le juge le constate en prononçant un non-lieu à statuer. Cette situation se produit notamment lorsque l’administration a donné satisfaction au requérant en cours de procédure."
+  },
+  {
+    "term": "Norme NF X35-102",
+    "definition": "La norme NF X35-102 définit les caractéristiques des locaux de travail à usage de bureaux intégrant des équipements bureautiques. Il s'agit d'une norme volontaire de l'AFNOR c'est-à-dire d'un cadre de référence non obligatoire, que l'entreprise peut choisir ou non d'appliquer. Élaborée en 1998, elle fait actuellement l'objet d'un travail de révision par les professionnels du secteur (concepteurs, ergonomes, médecins du travail, etc.) réunis en commission AFNOR.",
+    "definition_cdtn": "La norme NF X35-102 définit les caractéristiques des locaux de travail à usage de bureaux intégrant des équipements bureautiques. Il s'agit d'une norme volontaire de l'AFNOR c'est-à-dire d'un cadre de référence non obligatoire, que l'entreprise peut choisir ou non d'appliquer. Élaborée en 1998, elle fait actuellement l'objet d'un travail de révision par les professionnels du secteur (concepteurs, ergonomes, médecins du travail, etc.) réunis en commission AFNOR."
+  },
+  {
+    "term": "Notification",
+    "definition": "1. fait pour l’administration de communiquer une décision à la personne directement concernée. La date de notification marque le point de départ du délai de recours, durant lequel cette personne peut contester la décision.\n\nFormalité par laquelle un acte de procédure ou une décision est porté à la connaissance d’une personne"
+  },
+  {
+    "term": "Nouveau parcours du demandeur d’emploi",
+    "abbrev": "NPDE"
+  },
+  {
+    "term": "Nouvel accompagnement pour la création et la reprise d’entreprise",
+    "abbrev": "NACRE"
+  },
+  {
+    "term": "Nullité"
+  },
+  {
+    "term": "Numéro de brochure",
+    "definition": "C’est un numéro de 4 chiffres commençant par le chiffre 3, à inscrire sans espace (exemple : 3159). Il correspond à un ouvrage publié par les Éditions des Journaux officiels.Ce numéro concerne : – soit une seule convention collective (exemple : l’ouvrage 3159 est constitué de la convention collective nationale de la coiffure et professions connexes et d’un ensemble d’avenants et accords attachés à cette convention), ce qui est le cas le plus fréquent – soit plusieurs conventions et textes d’un même secteur d’activité (exemple : l’ouvrage 3154, qui concerne le négoce des matériaux de construction) – soit un ensemble d’accords professionnels et avenants d’un même secteur d’activité. Exemple : l’ouvrage 3109, qui concerne le secteur de la métallurgie. Vous pouvez consulter un ouvrage librement sur le site ou l’acheter à la librairie de la DILA, 29, quai Voltaire, 75007 Paris."
+  },
+  {
+    "term": "Numéro de code APE",
+    "synonym": "ape"
+  },
+  {
+    "term": "Numéro de code NAF",
+    "synonym": "naf"
+  },
+  {
+    "term": "Obligation d’emploi des travailleurs handicapés",
+    "abbrev": "OETH"
+  },
+  {
+    "term": "Obligation de sécurité de résultats"
+  },
+  {
+    "term": "Observatoires prospectifs des métiers et qualifications",
+    "abbrev": "OPMQ"
+  },
+  {
+    "term": "Office français de l’immigration et de l’intégration",
+    "abbrev": "OFFI"
+  },
+  {
+    "term": "Office français de protection des réfugiés et apatrides",
+    "abbrev": "OFPRA"
+  },
+  {
+    "term": "Offre publique d'acquisition ",
+    "abbrev": "OPA"
+  },
+  {
+    "term": "Offre raisonnable d’emploi",
+    "abbrev": "ORE"
+  },
+  {
+    "term": "Opérateur de compétences",
+    "abbrev": "OPC"
+  },
+  {
+    "term": "Opérateurs de placement spécialisés",
+    "abbrev": "OPS"
+  },
+  {
+    "term": "Opérateurs nationaux de l’emploi",
+    "abbrev": "ONE"
+  },
+  {
+    "term": "Opérateurs privés de placement",
+    "abbrev": "OPP"
+  },
+  {
+    "term": "Organisme professionnel de prévention du bâtiment et des travaux publics",
+    "abbrev": "OPPBTP"
+  },
+  {
+    "term": "Opposable",
+    "definition": "Qui ne peut être méconnu par les tiers, lesquels doivent en subir les effets et les respecter",
+    "definition_cdtn": "Qui ne peut être méconnu par les tiers, lesquels doivent en subir les effets et les respecter"
+  },
+  {
+    "term": "oralement",
+    "abbrev": "verbalement"
+  },
+  {
+    "term": "Ordonnance",
+    "definition": "Nom donné à certaines décisions de justice prises par un magistrat unique (président de juridiction, juge d'instruction, etc.). Par exemple, une ordonnance de renvoi devant le tribunal correctionnel prise par un juge d'instruction.\n\n1. décision de justice prise par un seul juge sans audience (par exemple, une ordonnance constatant l’irrecevabilité de la requête) ou par le juge des référés.\n2. le terme d’ordonnance désigne également certaines mesures d’instruction (par exemple, ordonnance de clôture d’instruction)\n\nDécision de justice rendue par le président d’une juridiction en référé ou sur requête, ou par un juge unique.",
+    "definition_cdtn": "Nom donné à certaines décisions de justice prises par un magistrat unique (président de juridiction, juge d'instruction, etc.). Par exemple, une ordonnance de renvoi devant le tribunal correctionnel prise par un juge d'instruction.\n\n1. décision de justice prise par un seul juge sans audience (par exemple, une ordonnance constatant l’irrecevabilité de la requête) ou par le juge des référés.\n2. le terme d’ordonnance désigne également certaines mesures d’instruction (par exemple, ordonnance de clôture d’instruction)\n\nDécision de justice rendue par le président d’une juridiction en référé ou sur requête, ou par un juge unique."
+  },
+  {
+    "term": "Ordre de juridiction",
+    "definition": "les juridictions sont groupées dans deux ordres : ordre judiciaire (contentieux civil et pénal), ordre administratif (contentieux administratifs). Les conflits de compétence entre les deux ordres de juridictions sont réglés par le Tribunal des conflits."
+  },
+  {
+    "term": "Ordre public",
+    "definition": "Ensemble des règles et principes fondamentaux du droit",
+    "definition_cdtn": "Ensemble des règles et principes fondamentaux du droit"
+  },
+  {
+    "term": "Organisation de coopération et de développement économiques",
+    "abbrev": "OCDE"
+  },
+  {
+    "term": "Organisation internationale du travail",
+    "abbrev": "OIT"
+  },
+  {
+    "term": "Organisme paritaire collecteur agréé",
+    "abbrev": "OPCA"
+  },
+  {
+    "term": "Organisme paritaire de gestion du congé individuel de formation",
+    "abbrev": "OPACIF"
+  },
+  {
+    "term": "Organismes collecteurs de la taxe d’apprentissage",
+    "abbrev": "OCTA"
+  },
+  {
+    "term": "Outplacement"
+  },
+  {
+    "term": "Pacte civil de solidarité",
+    "abbrev": "PACS"
+  },
+  {
+    "term": "Pactes territoriaux d’insertion",
+    "abbrev": "PTI"
+  },
+  {
+    "term": "Prestation d'accueil du jeune enfant",
+    "abbrev": "PAJE"
+  },
+  {
+    "term": "Parcours contractualisé vers l’emploi et l’autonomie",
+    "abbrev": "PACEA"
+  },
+  {
+    "term": "Parcours d’accompagnement personnalisé",
+    "abbrev": "PAP"
+  },
+  {
+    "term": "Part sociale",
+    "definition": "Droit de propriété sur le capital d'une société, détenu par un associé, et donnant droit à une participation pécuniaire aux bénéfices.",
+    "definition_cdtn": "Droit de propriété sur le capital d'une société, détenu par un associé, et donnant droit à une participation pécuniaire aux bénéfices."
+  },
+  {
+    "term": "Partenaire formation des entreprises et des salariés de l'économie sociale",
+    "abbrev": "UNIFORMATION"
+  },
+  {
+    "term": "Parties",
+    "definition": "ce sont le (les) requérant(s), le (les) défendeur(s), et dans certains cas les tiers intéressés par le litige."
+  },
+  {
+    "term": "patron",
+    "abbrev": "employeur"
+  },
+  {
+    "term": "Pays avec lesquels la France a signé une convention de sécurité sociale",
+    "definition": "Algérie, Andorre, Argentine, Bénin, Bosnie-Herzégovine, Brésil, Cameroun, Canada, Cap-Vert, Chili, Congo, Corée, Côte-d'Ivoire, États-Unis, Gabon, Îles anglo-normandes (Jersey, Guernesey, Aurigny, Herm, Jethou), Inde, Israël, Japon, Kosovo, Macédoine, Madagascar, Mali, Maroc, Mauritanie, Monaco, Monténégro, Niger, Nouvelle-Calédonie, Philippines, Polynésie-Française, Québec, Saint-Marin, Saint-Pierre et Miquelon, Sénégal, Serbie, Togo, Tunisie, Turquie, Uruguay",
+    "definition_cdtn": "Algérie, Andorre, Argentine, Bénin, Bosnie-Herzégovine, Brésil, Cameroun, Canada, Cap-Vert, Chili, Congo, Corée, Côte-d'Ivoire, États-Unis, Gabon, Îles anglo-normandes (Jersey, Guernesey, Aurigny, Herm, Jethou), Inde, Israël, Japon, Kosovo, Macédoine, Madagascar, Mali, Maroc, Mauritanie, Monaco, Monténégro, Niger, Nouvelle-Calédonie, Philippines, Polynésie-Française, Québec, Saint-Marin, Saint-Pierre et Miquelon, Sénégal, Serbie, Togo, Tunisie, Turquie, Uruguay"
+  },
+  {
+    "term": "Pays ayant conclu un accord avec la France sur l'immigration professionnelle",
+    "definition": "Bénin, Burkina-Faso, Cap-Vert, Congo, Gabon, Île Maurice, Sénégal et Tunisie",
+    "definition_cdtn": "Bénin, Burkina-Faso, Cap-Vert, Congo, Gabon, Île Maurice, Sénégal et Tunisie"
+  },
+  {
+    "term": "Pays ayant signé une convention relative à la circulation et au séjour",
+    "definition": "Bénin, Burkina-Faso, Cameroun, Centrafrique, Congo (Brazzaville), Côte d'ivoire, Gabon, Mali, Mauritanie, Niger, Sénégal et Togo",
+    "definition_cdtn": "Bénin, Burkina-Faso, Cameroun, Centrafrique, Congo (Brazzaville), Côte d'ivoire, Gabon, Mali, Mauritanie, Niger, Sénégal et Togo"
+  },
+  {
+    "term": "Pays de l'Union européenne",
+    "definition": "Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Italie, Lituanie, Lettonie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède",
+    "definition_cdtn": "Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Italie, Lituanie, Lettonie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède"
+  },
+  {
+    "term": "Pécule de libération",
+    "definition": "Partie de la rémunération du travail effectué par un détenu, qui lui est remise à sa libération",
+    "definition_cdtn": "Partie de la rémunération du travail effectué par un détenu, qui lui est remise à sa libération"
+  },
+  {
+    "term": "Pendante",
+    "definition": "se dit d'une affaire portée devant une juridiction et non encore tranchée."
+  },
+  {
+    "term": "Performance et outils de pilotage",
+    "abbrev": "POP"
+  },
+  {
+    "term": "Périmé",
+    "definition": "cas d’un article faisant l’objet d’une abrogation implicite"
+  },
+  {
+    "term": "Période d'essai"
+  },
+  {
+    "term": "Période de mise en situation en milieu professionnel",
+    "abbrev": "PMSMP"
+  },
+  {
+    "term": "Période probatoire"
+  },
+  {
+    "term": "Personne morale",
+    "definition": "Groupement de personnes physiques réunies pour accomplir quelque chose en commun (entreprises, sociétés civiles, associations, État, collectivités territoriales, etc.). Ce groupe peut aussi réunir des personnes physiques et des personnes morales. Il peut aussi n'être constitué que d'un seul membre (EURL par exemple).",
+    "definition_cdtn": "Groupement de personnes physiques réunies pour accomplir quelque chose en commun (entreprises, sociétés civiles, associations, État, collectivités territoriales, etc.). Ce groupe peut aussi réunir des personnes physiques et des personnes morales. Il peut aussi n'être constitué que d'un seul membre (EURL par exemple)."
+  },
+  {
+    "term": "Perte totale et irréversible d'autonomie",
+    "abbrev": "PTIA",
+    "definition": "Impossibilité absolue et définitive d'exercer une activité rémunérée, avec besoin de l'assistance d'une autre personne pour accomplir les actes ordinaires de la vie"
+  },
+  {
+    "term": "Petite et moyenne entreprise",
+    "abbrev": "PME"
+  },
+  {
+    "term": "Pla, d'investissement dans les compétences",
+    "abbrev": "PIC"
+  },
+  {
+    "term": "Plan d'épargne d'entreprise",
+    "abbrev": "PEE"
+  },
+  {
+    "term": "Plan d'épargne interentreprises",
+    "abbrev": "PEI"
+  },
+  {
+    "term": "Plan d'épargne pour la retraite collectif",
+    "abbrev": "PERCO"
+  },
+  {
+    "term": "Plan de départ volontaire",
+    "abbrev": "PDV"
+  },
+  {
+    "term": "plan de retrait amiante",
+    "abbrev": "pra"
+  },
+  {
+    "term": "Plan de sauvegarde de l’emploi",
+    "abbrev": "PSE"
+  },
+  {
+    "term": "Plan général de coordination",
+    "abbrev": "pgc"
+  },
+  {
+    "term": "Plan local pour l’insertion et l’emploi",
+    "abbrev": "PLIE"
+  },
+  {
+    "term": "Plan national de lutte contre la fraude",
+    "abbrev": "PNLF"
+  },
+  {
+    "term": "Plan régional pour l’insertion des travailleurs handicapés",
+    "abbrev": "PRITH"
+  },
+  {
+    "term": "Plan Régional Santé au Travail",
+    "abbrev": "PRST"
+  },
+  {
+    "term": "Plan santé travail",
+    "abbrev": "PST"
+  },
+  {
+    "term": "Plateforme de suivi et d’appui aux décrocheurs",
+    "abbrev": "PSAD"
+  },
+  {
+    "term": "PME au sens communautaire",
+    "definition": "Entreprise employant moins de 250 salariés, réalisant soit un chiffre d'affaires annuel inférieur à 50 millions d'euros, soit un total de bilan inférieur à 43 millions d'euros. Un dépassement de seuil n'a d'effet qu'après 2 exercices consécutifs.",
+    "definition_cdtn": "Entreprise employant moins de 250 salariés, réalisant soit un chiffre d'affaires annuel inférieur à 50 millions d'euros, soit un total de bilan inférieur à 43 millions d'euros. Un dépassement de seuil n'a d'effet qu'après 2 exercices consécutifs."
+  },
+  {
+    "term": "Pôle entreprises, économie, emploi (Direccte)",
+    "synonym": "PÔLE 3E"
+  },
+  {
+    "term": "Pourvoi",
+    "definition": "Nom donné au recours formé devant le Conseil d'État, afin d'obtenir la cassation d'une décision de justice rendue en dernier ressort (dans la majorité des cas par une cour administrative d’appel).\n\nActe par lequel un justiciable exerce une voie de recours contre un arrêt rendu par une cour d’appel ou un jugement rendu en dernier ressort (c’est-à-dire sans possibilité d’appel), en portant l’affaire devant la Cour de cassation. Le pourvoi en cassation doit être présenté obligatoirement par un avocat au Conseil d’État et à la Cour de cassation."
+  },
+  {
+    "term": "Pourvoi en cassation",
+    "synonym": "Recours en cassation",
+    "definition": "Recours formé devant la Cour de cassation contre une décision de justice d’une cour d’appel, d’une cour d’assises, ou d’un tribunal qui statue en dernier ressort.\nLa Cour de cassation ne rejuge pas les faits d’une affaire. Elle vérifie que les juges ont bien appliqué les règles de droit et qu’aucune entorse n’a été commise pendant la procédure. Le pourvoi désigne également le recours fait devant le Conseil d’État contre une décision d’une cour administrative d’appel ou d’un tribunal administratif qui statue en dernier ressort. (légi)"
+  },
+  {
+    "term": "Pouvoir disciplinaire de l'employeur"
+  },
+  {
+    "term": "Préjudice",
+    "definition": "tort causé par une activité ou une décision. Les préjudices peuvent être essentiellement matériels (perte de revenu...), corporels (invalidité...) ou moraux (perte d'un être cher...). On parle aussi de dommage."
+  },
+  {
+    "term": "Prélèvement à la source",
+    "abbrev": "PAS"
+  },
+  {
+    "term": "Préparation opérationnelle à l’emploi",
+    "abbrev": "POE"
+  },
+  {
+    "term": "Préretraitre progressive publique",
+    "abbrev": "PRP"
+  },
+  {
+    "term": "Prescription",
+    "definition": "Expiration d'un droit après un certain délai\n\nDélai dont l'expiration modifie une situation juridique (prescription quadriennale par exemple pour les dettes des personnes publiques).",
+    "definition_cdtn": "Expiration d'un droit après un certain délai (Glossaire Service Public)"
+  },
+  {
+    "term": "Prestataire de services dans l'Union européenne",
+    "definition": "Personne physique ou morale établie dans un pays de l'UE offrant un service temporaire rémunéré dans un autre pays membre, dans les mêmes conditions que celles imposées par ce pays à ses nationaux",
+    "definition_cdtn": "Personne physique ou morale établie dans un pays de l'UE offrant un service temporaire rémunéré dans un autre pays membre, dans les mêmes conditions que celles imposées par ce pays à ses nationaux (Glossaire Service Public)"
+  },
+  {
+    "term": "Prestation d'accueil du jeune enfant",
+    "abbrev": "PAJE"
+  },
+  {
+    "term": "Prestation de suivi pour l’emploi",
+    "abbrev": "PSDE"
+  },
+  {
+    "term": "Prime transitoire de solidarité",
+    "abbrev": "PTS"
+  },
+  {
+    "term": "principes généraux de prévention",
+    "abbrev": "pgp"
+  },
+  {
+    "term": "Priorités du plan national de lutte contre la fraude",
+    "abbrev": "PLLF"
+  },
+  {
+    "term": "Procédure d'admission des pourvois en cassation",
+    "definition": "procédure préalable qui permet de déterminer si un pourvoi en cassation présenté devant le Conseil d’Etat est, ou non, admis à être jugé. Pour cet examen préalable, la procédure n’est pas contradictoire : le Conseil d’Etat examine uniquement le pourvoi présenté par le requérant. Si ce pourvoi est irrecevable ou ne contient aucun moyen sérieux, il peut faire l’objet d’une décision de non-admission, qui contient des motifs très brefs et met fin au procès. Si, à l’inverse, le pourvoi est admis en cassation, il est alors communiqué au défendeur dans le cadre de l’instruction contradictoire et fera l’objet d’une décision motivée."
+  },
+  {
+    "term": "procès verbal",
+    "abbrev": "pv"
+  },
+  {
+    "term": "Proche aidant d'une personne âgée",
+    "definition": "Époux(se), partenaire de Pacs, concubin, parent ou allié (dits \"aidants familiaux\") ou personne résidant ou entretenant des liens étroits et stables, qui vient en aide de la personne âgée régulièrement ou fréquemment, à titre non professionnel, pour accomplir tout ou partie des actes ou activités de la vie quotidienne",
+    "definition_cdtn": "Époux(se), partenaire de Pacs, concubin, parent ou allié (dits \"aidants familiaux\") ou personne résidant ou entretenant des liens étroits et stables, qui vient en aide de la personne âgée régulièrement ou fréquemment, à titre non professionnel, pour accomplir tout ou partie des actes ou activités de la vie quotidienne (Glossaire Service Public)"
+  },
+  {
+    "term": "Produit intérieur brut",
+    "abbrev": "PIB"
+  },
+  {
+    "term": "Programme d’investissements d’avenir",
+    "abbrev": "PIA"
+  },
+  {
+    "term": "Programme national d’animation et d’évaluation",
+    "abbrev": "PNAE"
+  },
+  {
+    "term": "Programme national de réforme",
+    "abbrev": "PNR"
+  },
+  {
+    "term": "Programme opérationnel (FSE)",
+    "abbrev": "PO"
+  },
+  {
+    "term": "Programme opérationnel national (FSE)",
+    "abbrev": "PON"
+  },
+  {
+    "term": "Projet personnalisé d’accès à l’emploi",
+    "abbrev": "PPAE"
+  },
+  {
+    "term": "Propagande électorale"
+  },
+  {
+    "term": "Prorata temporis",
+    "definition": "Expression latine signifiant en proportion du temps effectivement écoulé. Permet d'effectuer un calcul en tenant compte du temps réel.",
+    "definition_cdtn": "Expression latine signifiant en proportion du temps effectivement écoulé. Permet d'effectuer un calcul en tenant compte du temps réel. (Glossaire Service Public)"
+  },
+  {
+    "term": "Prorogation",
+    "definition": "Maintien d'un droit (ou d'une situation) après la date à laquelle il devait prendre fin",
+    "definition_cdtn": "Maintien d'un droit (ou d'une situation) après la date à laquelle il devait prendre fin (Glossaire Service Public)"
+  },
+  {
+    "term": "protocole chargement-déchargemeent",
+    "synonym": "protocole de sécurité"
+  },
+  {
+    "term": "Protocole d’accord (ou Accord-cadre)",
+    "definition": "Texte conclu après négociation entre l’employeur (ou un syndicat ou groupement d’employeur) et les organisations syndicales représentatives pour fixer les modalités d’organisation d’une opération complexe à mettre en place (par exemple les modalités techniques d’un scrutin) ou ayant pour but d’améliorer les conditions de travail des salariés (par exemple, protocole d’accord relatif à la prévention des risques psychosociaux [RPS] dans la fonction publique)."
+  },
+  {
+    "term": "Protocole d'accord préélectoral",
+    "abbrev": "PAP"
+  },
+  {
+    "term": "Qualification professionnelle"
+  },
+  {
+    "term": "Quartier prioritaire de la politique de la ville",
+    "abbrev": "QPV"
+  },
+  {
+    "term": "Question préjudicielle",
+    "definition": "procédure qui permet au juge de transmettre une question échappant à sa compétence et posant une difficulté sérieuse à la juridiction compétente et de sursoir à statuer dans l’attente de sa réponse (par exemple, lorsque le juge administratif transmet au juge judiciaire une question portant sur la nationalité du requérant). Lorsque la question pose une difficulté sérieuse portant sur l’interprétation ou la validité d’un acte de l’Union européenne, elle est transmise à la Cour de justice de l’Union européenne."
+  },
+  {
+    "term": "Question prioritaire de constitutionnalité",
+    "abbrev": "QPC",
+    "definition": "procédure prévue par l'article 61-1 de la Constitution, par laquelle tout justiciable peut soutenir à l'occasion d'un procès, qu’une loi porte atteinte aux droits et libertés que la Constitution garantit.\nLorsqu’une QPC est soulevée devant un tribunal administratif ou une cour administrative d’appel, celle-ci est transmise au Conseil d’État dans les meilleurs délais, si les conditions légales sont remplies. Dans un délai de trois mois, le Conseil d’État procède alors à un second examen de cette question. Il la transmet au Conseil constitutionnel si la loi contestée est applicable au litige, si elle n’a pas déjà été déclarée conforme à la Constitution et si la question est nouvelle ou présente un caractère sérieux. A l’occasion d’un litige porté devant lui, le Conseil d’Etat peut aussi être directement saisi d’une telle question.\n\nProcédure introduite dans la Constitution (art. 61-1) en 2008, qui permet à tout justiciable, de demander au Conseil constitutionnel, à l’occasion d’un litige et, par le filtre de la Cour de cassation ou du Conseil d’État, si une disposition législative est ou non conforme à la Constitution. (légi)"
+  },
+  {
+    "term": "Quorum",
+    "definition": "Nombre minimum exigé de personnes présentes ou représentées pour qu'un vote ou une décision soit valable",
+    "definition_cdtn": "Nombre minimum exigé de personnes présentes ou représentées pour qu'un vote ou une décision soit valable (Glossaire Service Public)"
+  },
+  {
+    "term": "rachat d'entreprise",
+    "abbrev": "vente d'entreprise"
+  },
+  {
+    "term": "rayonnement ultraviolet de type a",
+    "abbrev": "uva"
+  },
+  {
+    "term": "rayonnement ultraviolet de type b",
+    "abbrev": "uvb"
+  },
+  {
+    "term": "rayonnement ultraviolet de type c",
+    "abbrev": "uvc"
+  },
+  {
+    "term": "Récépissé"
+  },
+  {
+    "term": "Recevable",
+    "definition": "se dit d'une requête présentée conformément aux règles de la procédure contentieuse, notamment de délais."
+  },
+  {
+    "term": "Récidive",
+    "definition": "Fait, pour une personne déjà condamnée, de commettre une nouvelle infraction identique ou assimilée, dans un certain délai, et pouvant entraîner une peine plus lourde que celle normalement prévue",
+    "definition_cdtn": "Fait, pour une personne déjà condamnée, de commettre une nouvelle infraction identique ou assimilée, dans un certain délai, et pouvant entraîner une peine plus lourde que celle normalement prévue (Glossaire Service Public)"
+  },
+  {
+    "term": "Reclassement (obligation de)"
+  },
+  {
+    "term": "Reconnaissance de la qualité de travailleur handicapé",
+    "abbrev": "RQTH"
+  },
+  {
+    "term": "Reconversion ou promotion par alternance",
+    "abbrev": "Pro-A"
+  },
+  {
+    "term": "Recours",
+    "definition": "1. recours administratif : demande faite à l’administration de revenir sur sa décision. Il peut s’agir d’un recours gracieux, adressé à l’autorité qui a pris la décision, ou bien d’un recours hiérarchique, adressé au supérieur. Dans certains cas, ce recours est obligatoire avant la saisine du juge."
+  },
+  {
+    "term": "Recours gracieux",
+    "definition": "recours administratif présenté à l'autorité qui a pris l'acte que l'on conteste."
+  },
+  {
+    "term": "Recours hiérarchique",
+    "definition": "recours administratif présenté au supérieur hiérarchique de l'autorité qui a pris l'acte que l'on conteste."
+  },
+  {
+    "term": "Recours juridictionnel suspensif",
+    "definition": "Recours exercé devant un juge qui a pour effet d'empêcher l'exécution d'une mesure ou d'une décision, tant que celui-ci n'a pas statué",
+    "definition_cdtn": "Recours exercé devant un juge qui a pour effet d'empêcher l'exécution d'une mesure ou d'une décision, tant que celui-ci n'a pas statué (Glossaire Service Public)"
+  },
+  {
+    "term": "Recours pour excès de pouvoir",
+    "definition": "recours ayant pour objet de demander au juge l'annulation d'un acte administratif considéré comme illégal."
+  },
+  {
+    "term": "Recours préalable",
+    "definition": "avant de saisir le juge, il est possible (et parfois obligatoire) de commencer par adresser une réclamation à l'auteur de la décision contestée (recours gracieux) ou à son supérieur (recours hiérarchique) pour lui demander de retirer sa décision ou d'attribuer une indemnité."
+  },
+  {
+    "term": "redressement judiciaire",
+    "abbrev": "RJ",
+    "synonym": "liquidation judiciaire"
+  },
+  {
+    "term": "Réduction du temps de travail",
+    "abbrev": "RTT"
+  },
+  {
+    "term": "Référé",
+    "definition": "Procédure contradictoire, rapide et simplifiée tendant à obtenir d’un juge unique (en l’occurrence, le président du tribunal de grande instance ou son délégué), toute mesure qui ne se heurte à aucune contestation sérieuse et que justifie l’existence d’un différend (art. 808 NCPC) ou toute mesure conservatoire ou de remise en état qui s’impose, pour prévenir un dommage imminent ou faire cesser un trouble manifestement illicite (art. 809 NCPC).\n\nprocédure permettant à un justiciable d’obtenir rapidement des mesures provisoires."
+  },
+  {
+    "term": "Régime d’assurance chômage",
+    "abbrev": "RAC"
+  },
+  {
+    "term": "Régime social des indépendants",
+    "abbrev": "RSI"
+  },
+  {
+    "term": "registre unique du personnel",
+    "abbrev": "rup"
+  },
+  {
+    "term": "Règlement",
+    "definition": "Il s’agit d’un acte de portée générale et impersonnelle édicté par les autorités exécutives compétentes (art. 37 de la Constitution). Il peut s’agir d’un règlement d’application destiné à assurer l’exécution d’une loi ou d’un règlement autonome pris spontanément dans les matières autres que celles réservées à la loi. (légi)"
+  },
+  {
+    "term": "Règlement amiable d'un litige",
+    "definition": "Permet de trouver une solution au conflit sans passer par la justice (simples échanges de courriers ou de mails, médiation, transaction pénale, etc.)",
+    "definition_cdtn": "Permet de trouver une solution au conflit sans passer par la justice (simples échanges de courriers ou de mails, médiation, transaction pénale, etc.) (Glossaire Service Public)"
+  },
+  {
+    "term": "Règlement d’exemption de notification par catégorie",
+    "abbrev": "RGEC"
+  },
+  {
+    "term": "Règlement général sur la protection des données",
+    "abbrev": "RGPD"
+  },
+  {
+    "term": "règlement intérieur",
+    "abbrev": "ri"
+  },
+  {
+    "term": "Règlement judiciaire"
+  },
+  {
+    "term": "réglementation sociale européenne",
+    "abbrev": "rse"
+  },
+  {
+    "term": "Régularisation",
+    "definition": "acte de procédure accompli par une partie en temps utile durant l’instance, qui a pour effet de rendre recevable son recours ou ses écritures (par exemple, lorsque le requérant n’a pas produit la décision qu’il attaque, il régularise son recours en la versant au dossier)."
+  },
+  {
+    "term": "Rémunération de fin de formation",
+    "abbrev": "R2F"
+  },
+  {
+    "term": "Répertoire national de la certification professionnelle",
+    "abbrev": "RNCP"
+  },
+  {
+    "term": "Représentant de section syndicale",
+    "abbrev": "RSS"
+  },
+  {
+    "term": "Représentant légal",
+    "definition": "Personne désignée par la loi pour représenter et défendre les intérêts d'une autre personne, qu'elle soit physique (par exemple, un enfant mineur représenté par son père ou par sa mère) ou morale (par exemple, une société représentée par son dirigeant)",
+    "definition_cdtn": "Personne désignée par la loi pour représenter et défendre les intérêts d'une autre personne, qu'elle soit physique (par exemple, un enfant mineur représenté par son père ou par sa mère) ou morale (par exemple, une société représentée par son dirigeant) (Glossaire Service Public)"
+  },
+  {
+    "term": "Représentation proportionnelle"
+  },
+  {
+    "term": "Représentativité (syndicale)"
+  },
+  {
+    "term": "Représentativité catégorielle"
+  },
+  {
+    "term": "Requérant",
+    "definition": "personne qui s'adresse au tribunal pour lui soumettre un litige."
+  },
+  {
+    "term": "Requête",
+    "definition": "Écrit permettant de saisir un tribunal\n\ndocument par lequel un justiciable saisit une juridiction d’un recours contentieux.",
+    "definition_cdtn": "Écrit permettant de saisir un tribunal (Glossaire Service Public)"
+  },
+  {
+    "term": "Rescrit"
+  },
+  {
+    "term": "Ressort",
+    "definition": "Ce terme désigne le champ ou l’étendue de la compétence d’une juridiction du point de vue géographique et du point de vue de la nature des litiges que la loi lui attribue. Dans un autre sens, le ressort permet de déterminer si un appel peut être exercé contre une décision : une décision rendue en premier ressort peut faire l’objet d’un appel, une décision en dernier ressort ne peut faire l’objet que d’un recours en cassation ou d’une opposition pour un jugement par défaut. (légi)"
+  },
+  {
+    "term": "Ressources humaines",
+    "abbrev": "RH"
+  },
+  {
+    "term": "Rétrogradation"
+  },
+  {
+    "term": "Revenu de solidarité active",
+    "abbrev": "RSA"
+  },
+  {
+    "term": "Revenus de remplacement",
+    "definition": "Revenus perçus en remplacement de la rémunération que l'on reçoit quand on travaille (exemples : allocations chômage, indemnités pour cause de maladie)",
+    "definition_cdtn": "Revenus perçus en remplacement de la rémunération que l'on reçoit quand on travaille (exemples : allocations chômage, indemnités pour cause de maladie) (Glossaire Service Public)"
+  },
+  {
+    "term": "Revenus nets catégoriels",
+    "definition": "Revenus (salaires, revenus fonciers et mobiliers, bénéfices agricoles, etc.) diminués des charges (pensions alimentaires, frais d'accueil des personnes âgées, etc.) et abattements fiscaux (personne âgée de plus de 65 ans, personne invalide, etc.)",
+    "definition_cdtn": "Revenus (salaires, revenus fonciers et mobiliers, bénéfices agricoles, etc.) diminués des charges (pensions alimentaires, frais d'accueil des personnes âgées, etc.) et abattements fiscaux (personne âgée de plus de 65 ans, personne invalide, etc.) (Glossaire Service Public)"
+  },
+  {
+    "term": "Révision (des conventions et accords)",
+    "definition": "L’avenant portant révision de tout ou partie d’une convention ou d’un accord se substitue de plein droit aux stipulations de la convention ou de l’accord qu’il modifie selon les dispositions de l’article L. 2261-8 du code du travail."
+  },
+  {
+    "term": "Risque professionnel"
+  },
+  {
+    "term": "Rôle",
+    "definition": "liste des affaires inscrites à l'audience, en vue d’être jugées. Elle est affichée dans les locaux de la juridiction.\n\n: registre sur lequel sont inscrites les affaires en cours dans un tribunal. À chaque affaire est attribué un numéro dit de « rôle général ». Au conseil de prud’hommes, le rôle d’audience est affiché devant la salle accueillant les audiences."
+  },
+  {
+    "term": "Rupture amiable",
+    "synonym": "rupture d'un commun accord\nrupture négociée"
+  },
+  {
+    "term": "Rupture conventionnelle",
+    "abbrev": "RC"
+  },
+  {
+    "term": "rupture conventionnelle de salariés protégés",
+    "abbrev": "rcsp"
+  },
+  {
+    "term": "Saisie des rémunérations"
+  },
+  {
+    "term": "Saisie et cession"
+  },
+  {
+    "term": "Saisie et cession des rémunérations"
+  },
+  {
+    "term": "Saisie et cession des rémunérations"
+  },
+  {
+    "term": "Saisie-exécution"
+  },
+  {
+    "term": "Saisine ",
+    "definition": ": formalité par laquelle une personne initie une procédure judiciaire."
+  },
+  {
+    "term": "Saisonnier",
+    "synonym": "travailleur saisonnier"
+  },
+  {
+    "term": "salaire minimum interprofessionnel de croissance",
+    "abbrev": "smic",
+    "synonym": "Salaire minimum de croissance"
+  },
+  {
+    "term": "Salaire minimum interprofessionnel garanti",
+    "abbrev": "SMIG"
+  },
+  {
+    "term": "salarié",
+    "synonym": "employé\ntravailleur"
+  },
+  {
+    "term": "Salarié mandaté"
+  },
+  {
+    "term": "Sanction administrative"
+  },
+  {
+    "term": "Sanction civile"
+  },
+  {
+    "term": "Sanction disciplinaire"
+  },
+  {
+    "term": "Sanction pénale"
+  },
+  {
+    "term": "Schéma régional de développement économique,\n  d'innovation et d'internationalisation",
+    "abbrev": "SRDEII"
+  },
+  {
+    "term": "Secrétariat général aux affaires européennes",
+    "abbrev": "SGAE"
+  },
+  {
+    "term": "Secrétariat général des ministères chargés des affaires sociales",
+    "abbrev": "SGMAS"
+  },
+  {
+    "term": "Secrétariat général pour les affaires régionales",
+    "abbrev": "SGAR"
+  },
+  {
+    "term": "Secrétariat-greffe"
+  },
+  {
+    "term": "Section d’apprentissage",
+    "abbrev": "SA"
+  },
+  {
+    "term": "Sécurité sociale",
+    "abbrev": "SS"
+  },
+  {
+    "term": "Séjour irrégulier",
+    "definition": "Situation d'un étranger qui n'est pas en possession des documents l'autorisant à rester en France",
+    "definition_cdtn": "Situation d'un étranger qui n'est pas en possession des documents l'autorisant à rester en France (Glossaire Service Public)"
+  },
+  {
+    "term": "Semaine (droit du travail)",
+    "synonym": "Semaine civile",
+    "definition": "Débute le lundi à 0 heure et se termine le dimanche à 24 heures, sauf si une convention ou un accord collectif d'entreprise ou d'établissement (ou, à défaut, une convention ou un accord de branche) fixe une autre période de 7 jours consécutifs",
+    "definition_cdtn": "Débute le lundi à 0 heure et se termine le dimanche à 24 heures, sauf si une convention ou un accord collectif d'entreprise ou d'établissement (ou, à défaut, une convention ou un accord de branche) fixe une autre période de 7 jours consécutifs (Glossaire Service Public)"
+  },
+  {
+    "term": "Service Commun Universitaire d'Information, d'Orientation \n et d'Insertion Professionnelle",
+    "abbrev": "SCUIO-IP"
+  },
+  {
+    "term": "Service de santé au travail"
+  },
+  {
+    "term": "Service militaire adapté",
+    "abbrev": "SMA"
+  },
+  {
+    "term": "Service militaire volontaire",
+    "abbrev": "SMV"
+  },
+  {
+    "term": "Service public de l’emploi",
+    "abbrev": "SPE"
+  },
+  {
+    "term": "Service public de l’emploi de proximité",
+    "abbrev": "SPE-P"
+  },
+  {
+    "term": "Service public de l’emploi régional",
+    "abbrev": "SPER"
+  },
+  {
+    "term": "Service public régional de l’orientation",
+    "abbrev": "SPRO"
+  },
+  {
+    "term": "Service publique de l’orientation",
+    "abbrev": "SPO"
+  },
+  {
+    "term": "Services d’intérêt économique général",
+    "abbrev": "SIEG"
+  },
+  {
+    "term": "Services régionaux de contrôle de la formation professionnelle",
+    "abbrev": "SRC"
+  },
+  {
+    "term": "Seuil d'effectifs"
+  },
+  {
+    "term": "Signataires",
+    "definition": "Syndicats de salariés et organismes représentant les employeurs signent les textes conventionnels après négociation collective dans les conditions juridiques en vigueur"
+  },
+  {
+    "term": "Signification",
+    "definition": "Acte par lequel une partie informe son adversaire d'un acte ou d'une décision de justice par l'intermédiaire d'un huissier de justice",
+    "definition_cdtn": "Acte par lequel une partie informe son adversaire d'un acte ou d'une décision de justice par l'intermédiaire d'un huissier de justice (Glossaire Service Public)"
+  },
+  {
+    "term": "Silence gardé par l'administration",
+    "definition": "Absence de décision de l'administration ou de réponse invitant l'usager à compléter son dossier",
+    "definition_cdtn": "Absence de décision de l'administration ou de réponse invitant l'usager à compléter son dossier (Glossaire Service Public)"
+  },
+  {
+    "term": "Société anonyme",
+    "abbrev": "SA"
+  },
+  {
+    "term": "Société coopérative d’intérêt collectif",
+    "abbrev": "SCIC"
+  },
+  {
+    "term": "Société coopérative et participative",
+    "abbrev": "SCOP"
+  },
+  {
+    "term": "société coopérative européenne",
+    "abbrev": "sce"
+  },
+  {
+    "term": "Solde de tout compte",
+    "abbrev": "STC"
+  },
+  {
+    "term": "SPE local",
+    "abbrev": "SPE-L"
+  },
+  {
+    "term": "Statut particulier",
+    "definition": "Ensemble des règles applicables en matière de recrutement, d'avancement, de promotion, de rémunération, etc., à tous les fonctionnaires membres d'un même corps ou cadre d'emplois",
+    "definition_cdtn": "Ensemble des règles applicables en matière de recrutement, d'avancement, de promotion, de rémunération, etc., à tous les fonctionnaires membres d'un même corps ou cadre d'emplois (Glossaire Service Public)"
+  },
+  {
+    "term": "Stratégie coordonnée emploi et formation professionnelle",
+    "abbrev": "SCEFOFP"
+  },
+  {
+    "term": "Stratégie de l’État en région",
+    "abbrev": "SER"
+  },
+  {
+    "term": "Stratégie européenne pour l’emploi",
+    "abbrev": "SEE"
+  },
+  {
+    "term": "Stratégie régionale pour l’emploi",
+    "abbrev": "SRE"
+  },
+  {
+    "term": "Structure d’insertion par l’activité économique",
+    "abbrev": "SIAE"
+  },
+  {
+    "term": "Subrogation"
+  },
+  {
+    "term": "suivi individuel renforcé",
+    "abbrev": "sir"
+  },
+  {
+    "term": "Sujétion",
+    "definition": "Contrainte particulière liée à un emploi ou un poste de travail (astreinte, travail de nuit ou le dimanche,...)",
+    "definition_cdtn": "Contrainte particulière liée à un emploi ou un poste de travail (astreinte, travail de nuit ou le dimanche,...) (Glossaire Service Public)"
+  },
+  {
+    "term": "Sursis à statuer",
+    "definition": "report du jugement d’une affaire jusqu’à un événement déterminé (par exemple, la réponse à une question préjudicielle, la remise d’un rapport d’expertise)."
+  },
+  {
+    "term": "surveillance médicale",
+    "synonym": "suivi médical"
+  },
+  {
+    "term": "Suspension du contrat de travail"
+  },
+  {
+    "term": "Syndicat"
+  },
+  {
+    "term": "syndicat confédération française de l'encadrement - confédération générale des cadres (cfe-cgc)",
+    "abbrev": "cfe"
+  },
+  {
+    "term": "syndicat confédération française démocratique du travail",
+    "abbrev": "cfdt"
+  },
+  {
+    "term": "syndicat confédération française des travailleurs chrétiens",
+    "abbrev": "cftc"
+  },
+  {
+    "term": "syndicat confédération générale du travail",
+    "abbrev": "cgt"
+  },
+  {
+    "term": "syndicat force ouvrière",
+    "abbrev": "fo"
+  },
+  {
+    "term": "système d'identification du répertoire des entreprises",
+    "abbrev": "siret",
+    "definition": "Identifiant géographique d'un établissement ou d'une entreprise, composé de 14 chiffres",
+    "definition_cdtn": "Identifiant géographique d'un établissement ou d'une entreprise, composé de 14 chiffres (Glossaire Service Public)"
+  },
+  {
+    "term": "système d'identification du répertoire des établissements",
+    "abbrev": "siren"
+  },
+  {
+    "term": "système d'information des prestations de service internationale",
+    "abbrev": "sipsi"
+  },
+  {
+    "term": "système d'inspection du travail",
+    "abbrev": "sit"
+  },
+  {
+    "term": "Système d'organisation en ligne des opérations",
+    "abbrev": "SOLON"
+  },
+  {
+    "term": "Système d’information",
+    "abbrev": "SI"
+  },
+  {
+    "term": "Système d’information décisionnel",
+    "abbrev": "SID"
+  },
+  {
+    "term": "Taxe d’apprentissage",
+    "abbrev": "TA"
+  },
+  {
+    "term": "Temps de travail effectif",
+    "definition": "Temps pendant lequel un salarié ou un agent public est à la disposition de l'employeur ou de l'administration et se conforme à ses directives sans pouvoir vaquer librement à ses occupations personnelles",
+    "definition_cdtn": "Temps pendant lequel un salarié ou un agent public est à la disposition de l'employeur ou de l'administration et se conforme à ses directives sans pouvoir vaquer librement à ses occupations personnelles (Glossaire Service Public)"
+  },
+  {
+    "term": "temps plein",
+    "synonym": "temps complet"
+  },
+  {
+    "term": "Terme précis"
+  },
+  {
+    "term": "Terme imprécis"
+  },
+  {
+    "term": "Territoires Zéro Chômeur de Longue Durée",
+    "abbrev": "TZCLD"
+  },
+  {
+    "term": "Texte attaché",
+    "definition": "On appelle « texte attaché» à une convention collective un texte, qui peut être un avenant, une annexe ou un accord modifiant le texte originel de la convention collective, issu de négociations ultérieures entre les partenaires sociaux. Les textes attachés sont publiés sous le même identifiant IDCC que le texte de base de la convention collective."
+  },
+  {
+    "term": "Texte de base",
+    "definition": "Le texte de base d’une convention collective est le texte originel de la convention ou d’un accord professionnel signé par les partenaires sociaux. Il pourra être modifié lors de négociations ultérieures par des avenants, annexes ou accords qui lui seront attachés."
+  },
+  {
+    "term": "Texte isolé",
+    "definition": "Accords collectifs en lien avec un ou plusieurs IDCC et/ou traitant d’un ou de plusieurs sujets précis."
+  },
+  {
+    "term": "Textes salaires",
+    "definition": "Regroupement sur le site Légifrance des textes conventionnels qui concernent les négociations salariales."
+  },
+  {
+    "term": "Tierce opposition",
+    "definition": "Recours permettant à une personne de contester la décision de justice, alors qu'elle n'était pas partie au procès",
+    "definition_cdtn": "Recours permettant à une personne de contester la décision de justice, alors qu'elle n'était pas partie au procès (Glossaire Service Public)"
+  },
+  {
+    "term": "titre emploi service entreprise",
+    "abbrev": "tese",
+    "synonym": "Titre emploi-service entreprise"
+  },
+  {
+    "term": "titre emploi simplifié",
+    "abbrev": "tes"
+  },
+  {
+    "term": "Titre exécutoire",
+    "definition": "Écrit permettant au créancier d'obtenir le recouvrement forcé de sa créance (saisie des biens)",
+    "definition_cdtn": "Écrit permettant au créancier d'obtenir le recouvrement forcé de sa créance (saisie des biens) (Glossaire Service Public)"
+  },
+  {
+    "term": "Titres-restaurant",
+    "synonym": "tickets restaurants"
+  },
+  {
+    "term": "Transaction"
+  },
+  {
+    "term": "Transfert d'entreprise"
+  },
+  {
+    "term": "Travail Alternatif Payé à la Journée",
+    "abbrev": "TAPAJ"
+  },
+  {
+    "term": "Travailleur frontalier",
+    "definition": "Personne qui habite en France, près de la frontière avec un autre pays et qui travaille quotidiennement dans cet autre pays",
+    "definition_cdtn": "Personne qui habite en France, près de la frontière avec un autre pays et qui travaille quotidiennement dans cet autre pays (Glossaire Service Public)"
+  },
+  {
+    "term": "Travailleurs handicapés",
+    "abbrev": "TH"
+  },
+  {
+    "term": "Travailleurs indépendants",
+    "abbrev": "TI"
+  },
+  {
+    "term": "travaux publics",
+    "abbrev": "tp"
+  },
+  {
+    "term": "très basse tension",
+    "abbrev": "tbt"
+  },
+  {
+    "term": "très basse tension de sécurité",
+    "abbrev": "tbts"
+  },
+  {
+    "term": "Très petite entreprise",
+    "abbrev": "TPE"
+  },
+  {
+    "term": "Tribunal administratif",
+    "definition": "juridiction, distincte des tribunaux judiciaires, chargée de résoudre les conflits mettant en cause un acte ou une décision de l'administration.\n\nJuridiction du premier degré de l’ordre administratif chargée de résoudre les litiges opposant des personnes privées (particuliers, sociétés privées, associations, etc.) à des personnes publiques ou opposant des collectivités territoriales entre elles. (légi)"
+  },
+  {
+    "term": "Tribunal d’instance",
+    "definition": "Juridiction du premier degré, à juge unique, chargée de régler les affaires civiles portant sur des sommes comprises entre 4 000 euros et 10 000 euros ainsi que certaines affaires prévues par la loi, sans considération de montant : les tutelles, le crédit à la consommation, la location d’habitation… Lorsque le tribunal d’instance statue en matière pénale, il prend le nom de tribunal de police. (légi)\n\nJuridiction civile en charge de traiter les litiges dont la somme en jeu est inférieure à 10000 euros, ainsi que ceux ayant trait notamment aux baux d’habitation, aux tutelles et aux crédits à la consommation. En droit du travail, cette juridiction statue sur la désignation des délégués syndicaux, la saisie des salaires et rémunération, une partie du contentieux lié aux élections des représentants du personnel."
+  },
+  {
+    "term": "Tribunal de grande instance ",
+    "abbrev": "TGI",
+    "definition": ": juridiction dite de droit commun, à laquelle sont dévolus l’ensemble des litiges qui ne sont pas attribués à une autre juridiction. En droit du travail, le tribunal de grande instance est compétent pour les litiges collectifs (pour ordonner, par exemple, l’expulsion de grévistes ou pour juger de la validité d’un plan de sauvegarde de l’emploi).\n\nJuridiction du premier degré chargée de juger les affaires civiles portant sur des sommes supérieures à 10 000 euros. Le TGI est seul compétent pour certaines affaires énumérées par la loi, quel que soit le montant : état civil, divorce, autorité parentale, adoption, succession… Lorsque le tribunal de grande instance statue en matière pénale, il prend le nom de tribunal correctionnel. (légi)"
+  },
+  {
+    "term": "Tribunal de première instance",
+    "definition": "Juridiction, en Polynésie française, en Nouvelle-Calédonie, à Saint-Pierre-et-Miquelon et à Wallis-et-Futuna qui a des attributions semblables à celles des tribunaux d’instances et des tribunaux de grandes instances que l’on trouve en métropole. (légi)"
+  },
+  {
+    "term": "Tribunal de première instance des communautés européennes",
+    "abbrev": "TICPE"
+  },
+  {
+    "term": "union nationale interprofessionnelle pour l'emploi dans l'industrie et le commerce",
+    "abbrev": "Unédic"
+  },
+  {
+    "term": "Union de recouvrement des cotisations de sécurité sociale et d’allocations familiales",
+    "abbrev": "URSAFF"
+  },
+  {
+    "term": "Union des employeurs de l’économie sociale et solidaire",
+    "abbrev": "UDES"
+  },
+  {
+    "term": "Union des industries et métiers de la métallurgie",
+    "abbrev": "UIMM"
+  },
+  {
+    "term": "Union européenne",
+    "abbrev": "UE",
+    "definition": "Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède",
+    "definition_cdtn": "Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède (Glossaire Service Public)"
+  },
+  {
+    "term": "Union nationale des entreprises adaptées",
+    "abbrev": "UNEA"
+  },
+  {
+    "term": "Union nationale des missions locales",
+    "abbrev": "UNML"
+  },
+  {
+    "term": "Union nationale interfédérale des œuvres et organismes\n  privés non lucratifs sanitaires et sociaux",
+    "abbrev": "UNIOPSS"
+  },
+  {
+    "term": "Union professionnelle artisanale",
+    "abbrev": "UPA"
+  },
+  {
+    "term": "Unité économique et sociale",
+    "abbrev": "UES"
+  },
+  {
+    "term": "Unité régionale (Direccte)",
+    "abbrev": "UR"
+  },
+  {
+    "term": "Usages (droit du travail)"
+  },
+  {
+    "term": "Usages locaux",
+    "definition": "Règles non écrites fixées par l'usage des lieux : coutumes locales qui s'appliquent à tous, ou usages propres qui s'appliquent à certaines catégories de personnes (agriculteurs, particuliers...)",
+    "definition_cdtn": "Règles non écrites fixées par l'usage des lieux : coutumes locales qui s'appliquent à tous, ou usages propres qui s'appliquent à certaines catégories de personnes (agriculteurs, particuliers...) (Glossaire Service Public)"
+  },
+  {
+    "term": "Vacant "
+  },
+  {
+    "term": "valeur limite d'exposition",
+    "abbrev": "vle"
+  },
+  {
+    "term": "Validation des acquis de l’expérience",
+    "abbrev": "VAE"
+  },
+  {
+    "term": "Vice du consentement"
+  },
+  {
+    "term": "Vigueur",
+    "definition": "cas d’un article de la convention collective applicable à la date courante (voir Convention collective)\n\ncas de la convention collective ou des articles de celle-ci applicables à la date courante"
+  },
+  {
+    "term": "Vigueur étendu",
+    "definition": "un arrêté d’extension est paru au JORF pour étendre la convention collective (voir Convention collective étendue)\n\n: un arrêté d’extension est paru au JORF pour étendre la convention collective ou des articles de celle-ci"
+  },
+  {
+    "term": "Vigueur non étendu",
+    "definition": "cas d’un article de la convention collective qui s’applique uniquement au niveau de l’entreprise, de la branche ou du champ géographique où la convention a été conclue (voir Convention collective)\n\ncas de la convention collective ou des articles de celle-ci qui s’appliquent uniquement au niveau de l’entreprise signataire"
+  },
+  {
+    "term": "Visas",
+    "definition": "première partie d’une décision juridictionnelle, qui résume la procédure en présentant notamment l’ensemble des mémoires produits par les parties, ce qu’elles demandent à la juridiction et les moyens qu’elles invoquent. Les visas recensent ensuite les textes sur lesquels le juge s’appuie pour rendre sa décision."
+  },
+  {
+    "term": "visite d'information et de prévention",
+    "abbrev": "vip"
+  },
+  {
+    "term": "Voies de recours",
+    "definition": "actions permettant un nouvel examen d'une décision, par l'administration elle-même ou par un tribunal (voir appel, cassation)."
+  },
+  {
+    "term": "voyageur représentant et placier",
+    "abbrev": "vrp"
+  },
+  {
+    "term": "Zone franche urbaine",
+    "abbrev": "ZFU",
+    "definition": "Zones regroupant des quartiers de plus de 10 000 habitants particulièrement défavorisés (taux de chômage élevé, proportion importante de jeunes non diplômés, faible potentiel fiscal, etc.).",
+    "definition_cdtn": "Zones regroupant des quartiers de plus de 10 000 habitants particulièrement défavorisés (taux de chômage élevé, proportion importante de jeunes non diplômés, faible potentiel fiscal, etc.). (Glossaire Service Public)"
+  },
+  {
+    "term": "zone de revitalisation rurale",
+    "abbrev": "zrr",
+    "definition": "Zone regroupant des territoires ruraux qui présentent des difficultés économiques et sociales, notamment une faible densité démographique, un déclin de la population totale (ou active) ou une forte proportion d'emplois agricoles.",
+    "definition_cdtn": "Zone regroupant des territoires ruraux qui présentent des difficultés économiques et sociales, notamment une faible densité démographique, un déclin de la population totale (ou active) ou une forte proportion d'emplois agricoles. (Glossaire Service Public)"
+  },
+  {
+    "term": "zone touristique",
+    "abbrev": "zt"
+  },
+  {
+    "term": "zone touristique internationale",
+    "abbrev": "zti"
+  },
+  {
+    "term": "zone urbaine sensible",
+    "abbrev": "zus",
+    "definition": "Grands ensembles et quartiers d'habitats dégradés considérés comme prioritaires au regard de leur situation socio-économique (fort taux de chômage notamment)",
+    "definition_cdtn": "Grands ensembles et quartiers d'habitats dégradés considérés comme prioritaires au regard de leur situation socio-économique (fort taux de chômage notamment) (Glossaire Service Public)"
+  },
+  {
+    "term": "Zones de restrucutration de la défense",
+    "abbrev": "ZRD"
+  },
+  {
+    "term": "Zones de revitalisation rurale",
+    "abbrev": "ZRR"
+  },
+  {
+    "term": "Zones touristiques et commerciales",
+    "abbrev": "ZTC"
+  },
+  {
+    "term": "Zone de redynamisation urbaine",
+    "abbrev": "ZRU"
+  }
+]
