@@ -38,3 +38,9 @@ spec:
           value: "https://${API_HOST}/api/v1"
         - name: SUGGEST_URL
           value: "https://${NLP_HOST}/api/suggest"
+        - name: PIWIK_URL
+          value: ${CI_PIWIK_URL}
+        - name: PIWIK_ID
+          value: ${CI_PIWIK_ID}
+        - name: SENTRY_PUBLIC_DSN
+          value: ${CI_SENTRY_PUBLIC_DSN}
