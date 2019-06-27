@@ -142,6 +142,7 @@ Test @cdtn/data:
 
 Send coverage result:
   stage: "Registration"
+  image: "node:10-stretch"
   dependencies:
     - Test @cdtn/api
     - Test @cdtn/frontend
