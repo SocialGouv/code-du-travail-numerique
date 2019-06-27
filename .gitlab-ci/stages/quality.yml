@@ -149,3 +149,5 @@ Send coverage result:
     - Test @socialgouv/react-fiche-service-public
   script:
     - npx codecov
+  only:
+    - master
