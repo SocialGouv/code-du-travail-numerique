@@ -24,8 +24,10 @@ function getIdccBody({ query }) {
                 }
               },
               {
-                prefix: {
-                  idcc: `${query}`
+                match_phrase_prefix: {
+                  "idcc.text": {
+                    query: `${query}`
+                  }
                 }
               },
               {
