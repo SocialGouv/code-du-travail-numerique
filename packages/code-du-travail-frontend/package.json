@@ -73,9 +73,6 @@
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
-    ],
-    "moduleNameMapper": {
-      ".css$": "<rootDir>/test/stubCss.js"
-    }
+    ]
   }
 }

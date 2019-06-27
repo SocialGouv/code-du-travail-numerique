@@ -13,7 +13,7 @@ import Themes from "../src/home/Themes";
 import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -66,7 +66,7 @@ class Theme extends React.Component {
 
   render() {
     const {
-      data: { theme },
+      data: { theme } = { theme: { children: [] } },
       pageUrl,
       ogImage
     } = this.props;

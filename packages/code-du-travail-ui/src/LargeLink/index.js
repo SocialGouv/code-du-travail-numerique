@@ -17,7 +17,7 @@ const LargeLink = ({ icon: Icon, children, ...props }) => (
 
 LargeLink.propTypes = {
   children: PropTypes.node.isRequired,
-  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.bool])
+  icon: PropTypes.oneOfType([PropTypes.func, PropTypes.bool])
 };
 
 LargeLink.defaultProps = {

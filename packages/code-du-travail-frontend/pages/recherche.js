@@ -8,7 +8,7 @@ import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import SearchResults from "../src/search/SearchResults";
 import { getExcludeSources } from "../src/sources";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }

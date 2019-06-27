@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-testing-library";
-import DroitDuTravail from "../droit-du-travail/index.js";
+import Kali from "../kali.js";
 
-describe("<DroitDuTravail />", () => {
+describe("<Kali />", () => {
   it("should render", () => {
-    const { container } = render(<DroitDuTravail />);
+    const { container } = render(<Kali />);
     expect(container).toMatchSnapshot();
   });
 });

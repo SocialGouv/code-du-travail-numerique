@@ -9,7 +9,7 @@ import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -25,8 +25,8 @@ class ModeleCourrier extends React.Component {
   }
 
   render() {
-    const { data, pageUrl, ogImage } = this.props;
-    const { description } = data._source;
+    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
+    const { description = "" } = data._source;
     if (data.status === 404) {
       return (
         <Answer
@@ -62,10 +62,9 @@ class ModeleCourrier extends React.Component {
           </Section>
           <h4>Télécharger le modèle</h4>
           <DownloadFile
-            title={data._source.title}
+            title={data._source.title || "modele"}
             file={`${API_URL}/docs/${data._source.filename}`}
             type="Modèle de document"
-            icon={ModeleCourrierIcon}
           />
         </Answer>
       </PageLayout>

@@ -20,8 +20,8 @@ export class SearchQuery extends React.Component {
     render: ({ status, result, query, source }) => {
       // result can be null, in case AsyncFetch is cleared
       const results = {
-        facets: result ? result.facets : [],
-        items: result ? result.hits.hits : []
+        facets: result && result.facets ? result.facets : [],
+        items: result && result.hits ? result.hits.hits : []
       };
       return (
         <div>

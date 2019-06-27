@@ -8,7 +8,7 @@ import { Container, Section, theme } from "@cdt/ui";
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }

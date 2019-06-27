@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-testing-library";
-import DroitDuTravail from "../droit-du-travail/index.js";
+import CodeDuTravail from "../code-du-travail.js";
 
-describe("<DroitDuTravail />", () => {
+describe("<CodeDuTravail />", () => {
   it("should render", () => {
-    const { container } = render(<DroitDuTravail />);
+    const { container } = render(<CodeDuTravail />);
     expect(container).toMatchSnapshot();
   });
 });

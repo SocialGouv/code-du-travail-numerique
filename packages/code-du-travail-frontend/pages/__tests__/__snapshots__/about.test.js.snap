@@ -1,0 +1,542 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About /> should render 1`] = `
+.c20 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c7 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c7 > *:first-child {
+  margin-top: 0;
+}
+
+.c7 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c14 > *:first-child {
+  margin-top: 0;
+}
+
+.c14 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
+  padding: 1.25rem 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #fff;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #d7e8f9;
+  border-color: #abcff2;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c15 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c15:not([disabled]):hover,
+.c15:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c15:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c15[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c15[aria-pressed="true"]:not([disabled]):hover,
+.c15[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c15[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c15[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c0 {
+  color: white;
+  background: currentColor;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c3:link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  width: 5rem;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.c5 {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c12 {
+  text-align: center;
+}
+
+.c13 {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c18 + .c17 {
+  padding-left: 1rem;
+}
+
+.c19 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.c21 {
+  margin: 0.5rem 0;
+}
+
+.c21 a {
+  color: #434956;
+}
+
+.c10 {
+  margin-top: 1.25rem;
+  margin-top: var(--spacing-inter-component);
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c7 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c14 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c8 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media print {
+  .c11 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 + .c17 {
+    padding-left: 0;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="/?q="
+          title="Code du travail numérique - retour à l'accueil"
+        >
+          <img
+            alt="symbole de la Marianne, site officiel du gouvernement"
+            class="c4"
+            src="/static/assets/img/marianne.svg"
+          />
+          <span
+            class="c5"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main
+    id="main"
+  >
+    <div
+      class="c6"
+    >
+      <div
+        class="c7"
+      >
+        <div
+          class="c8"
+        >
+          <h1>
+            À propos du code du travail numérique
+          </h1>
+          <div
+            class="c9"
+          >
+            Ce service public vous permet d’obtenir des réponses détaillées à des questions de droit de travail, ainsi que des fiches explicatives et les articles de loi correspondants.
+            <p
+              class="c10"
+            >
+              <a
+                href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+                title="lien vers l’ordonnance relative à la création du Code du travail numérique"
+              >
+                L’ouverture officielle du site est prévue pour 2020.
+              </a>
+            </p>
+          </div>
+          <p>
+            Seul un public expert maitrîse la complexité du droit du travail et de ses différentes sources de droit (conventions collectives, accords de branches et accords d’entreprises…). En plus de la diversité des sources de droit, la technicité de la matière la rend peu accessible pour les concernés : les employeurs et les salariés.
+          </p>
+          <p>
+            Or tous les actifs sont impactés tous les jours par le droit qui régit leurs relations au travail, qui, mal compris, mal appliqué, peut avoir des conséquences importantes pour le salarié comme pour l’employeur.
+          </p>
+          <p>
+            Les services de renseignement en droit du travail (dans les DIRECCTE) répondent à plus de 900 000 demandes par an concernant le droit du travail, des questions les plus simples aux cas les plus complexes.
+          </p>
+          <p>
+            L’objectif du code du travail numérique est d’améliorer la lisibilité du droit pour ceux qu’il concerne.
+          </p>
+          <p>
+            Construit avec les utilisateurs (employeurs et salariés) et les experts du terrain (inspecteur du travail services d’inspection du travail et de renseignements en droit du travail notamment), le service répondra aux questions que se posent les employeurs, notamment de TPE PME, quant aux règles applicables à leur situation, ainsi qu’à celles que se posent les salariés
+          </p>
+          <p>
+            Pour rendre le droit accessible et compréhensible, nous devons construire un modèle exécutable qui, en fonction de la situation d’une entreprise ou d’un salarié, sera capable de servir les droits et les obligations associées aux différentes thématiques comme la durée du travail, la rémunération, le contrat de travail (l’embauche, son exécution, sa rupture) ou la maladie par exemple. L’enjeu est donc d’identifier la source de droit applicable à des situations spécifiques et de donner une réponse claire sur les dispositions propres à la situation de l’utilisateur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="c11"
+  >
+    <div
+      class="c6"
+    >
+      <div
+        class="c12 c1"
+      >
+        <h2>
+          Besoin d’un accompagnement personnalisé ?
+        </h2>
+        <div
+          class="c13 c14"
+        >
+          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+        </div>
+        <button
+          aria-pressed="false"
+          class="c15"
+        >
+          Contacter les services de renseignement
+        </button>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <div
+        class="c16 c1"
+      >
+        <div
+          class="c17 c18"
+        >
+          <h3
+            class="c19"
+          >
+            Code du travail numérique
+          </h3>
+          <ul
+            class="c20"
+          >
+            <li
+              class="c21"
+            >
+              <a
+                href="/droit-du-travail"
+              >
+                Le droit du travail
+              </a>
+            </li>
+            <li
+              class="c21"
+            >
+              <a
+                href="/a-propos"
+              >
+                À propos
+              </a>
+            </li>
+            <li
+              class="c21"
+            >
+              <a
+                href="/mentions-legales"
+              >
+                Mentions légales
+              </a>
+            </li>
+            <li
+              class="c21"
+            >
+              <a
+                href="mailto:codedutravail@beta.gouv.fr"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c17 c18"
+        >
+          <h3
+            class="c19"
+          >
+            Aidez-nous à améliorer cet outil
+          </h3>
+          <ul
+            class="c20"
+          >
+            <li
+              class="c21"
+            >
+              <a
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Contribuer sur Github
+              </a>
+            </li>
+            <li
+              class="c21"
+            >
+              <a
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Journal des modifications
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c17 c18"
+        >
+          <h3
+            class="c19"
+          >
+            En collaboration avec
+          </h3>
+          <ul
+            class="c20"
+          >
+            <li
+              class="c21"
+            >
+              <a
+                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                La Direction Générale du Travail
+              </a>
+            </li>
+            <li
+              class="c21"
+            >
+              <a
+                href="https://incubateur.social.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                L’incubateur des ministères sociaux
+              </a>
+            </li>
+            <li
+              class="c21"
+            >
+              <a
+                href="https://beta.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                beta.gouv.fr
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

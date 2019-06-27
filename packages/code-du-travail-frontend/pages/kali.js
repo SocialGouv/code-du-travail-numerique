@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
 import Convention from "../src/conventions/Convention";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL, API_DILA2SQL_URL }

@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -33,7 +33,7 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data, pageUrl, ogImage } = this.props;
+    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
     const footer = (
       <Source name="Ministère du travail" url={data._source.url} />
     );

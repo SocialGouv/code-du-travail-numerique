@@ -1,8 +1,7 @@
 import React from "react";
 import Search from "../Search";
-import { fireEvent, waitForElement } from "react-testing-library";
+import { fireEvent, render, waitForElement } from "react-testing-library";
 
-import { renderWithMock } from "../../../test/MockNextContext";
 import { suggestResults } from "../search.service";
 import { Router } from "../../../routes";
 
@@ -20,15 +19,14 @@ suggestResults.mockResolvedValue(Promise.resolve(suggestions));
 
 describe("<search />", () => {
   it("should render", () => {
-    const { container } = renderWithMock(<Search />);
+    const { container } = render(<Search />);
     expect(container).toMatchSnapshot();
   });
 
   it("should render suggestions", async () => {
-    const { container, getAllByRole, getByLabelText } = renderWithMock(
-      <Search />,
-      { query: { q } }
-    );
+    const { container, getAllByRole, getByLabelText } = render(<Search />, {
+      query: { q }
+    });
     const input = getByLabelText(/rechercher/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
@@ -37,14 +35,14 @@ describe("<search />", () => {
   });
 
   it("should not navigate when user change facet if query is empty", () => {
-    const { getBySelectText } = renderWithMock(<Search />);
+    const { getBySelectText } = render(<Search />);
     const select = getBySelectText(/Tous contenus/i);
     fireEvent.change(select, { target: { value: "faq" } });
     expect(Router.pushRoute).not.toHaveBeenCalled();
   });
 
   it("should not navigate when user blur source facet", () => {
-    const { getBySelectText } = renderWithMock(<Search />, { query: { q } });
+    const { getBySelectText } = render(<Search />, { query: { q } });
     const select = getBySelectText(/Tous contenus/i);
     fireEvent.focus(select);
     fireEvent.blur(select);
@@ -52,7 +50,7 @@ describe("<search />", () => {
   });
 
   it("should navigate when user change facet if query is filled", () => {
-    const { getBySelectText, getByLabelText } = renderWithMock(<Search />);
+    const { getBySelectText, getByLabelText } = render(<Search />);
     const input = getByLabelText(/rechercher/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     const select = getBySelectText(/Tous contenus/i);
@@ -61,7 +59,7 @@ describe("<search />", () => {
   });
 
   it("should update input value when suggestion are hightlighted", async () => {
-    const { getByLabelText, getAllByRole } = renderWithMock(<Search />);
+    const { getByLabelText, getAllByRole } = render(<Search />);
     const input = getByLabelText(/rechercher/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();
