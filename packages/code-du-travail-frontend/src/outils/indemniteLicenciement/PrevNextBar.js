@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Button, theme } from "@cdt/ui";
 
-function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
+function PrevNextBar({ currentStepIndex, disabled, onPrev, stepsLength }) {
+  const previousVisible = currentStepIndex > 0;
+  const nextVisible = currentStepIndex < stepsLength - 1;
   return (
     <ButtonBar>
       {previousVisible && (
@@ -20,16 +22,13 @@ function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
   );
 }
 PrevNextBar.propTypes = {
-  onPrev: PropTypes.func,
+  currentStepIndex: PropTypes.number.isRequired,
   disabled: PropTypes.bool,
-  nextVisible: PropTypes.bool,
-  previousVisible: PropTypes.bool
+  onPrev: PropTypes.func.isRequired,
+  stepsLength: PropTypes.number.isRequired
 };
 PrevNextBar.defaultProps = {
-  onPrev: () => {},
-  disabled: false,
-  nextVisible: true,
-  previousVisible: true
+  disabled: false
 };
 
 export { PrevNextBar };

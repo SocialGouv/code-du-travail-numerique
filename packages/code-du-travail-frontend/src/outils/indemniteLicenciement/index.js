@@ -1,18 +1,32 @@
 import React, { useReducer } from "react";
-import PropTypes from "prop-types";
 import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
 
-import { StepReducer, getInitialSteps } from "./reducer";
-import { Wizard } from "./Wizard";
+import { stepReducer, getInitialStepsState } from "./stepReducer";
+import { Form } from "react-final-form";
+import arrayMutators from "final-form-arrays";
+import { StepNav } from "./StepNav";
+import { PrevNextBar } from "./PrevNextBar";
 
 function CalculateurIndemnite() {
-  const initialSteps = getInitialSteps();
-  const [steps, dispatch] = useReducer(StepReducer, initialSteps);
+  const [{ currentStepIndex, steps }, dispatch] = useReducer(
+    stepReducer,
+    getInitialStepsState()
+  );
 
-  /**
-   * The rules defined here allows to manage additionnal steps to the form
-   */
+  const Step = steps[currentStepIndex].component;
+
+  /* Form config stuff */
+
+  const validate = values => {
+    const Step = steps[currentStepIndex].component;
+    return Step.validate ? Step.validate(values) : {};
+  };
+
+  const decorators = steps
+    .map(step => step.component.decorator)
+    .filter(Boolean);
+
   const rules = [
     <OnChange key="rule-same-salaire" name="hasSameSalaire">
       {value =>
@@ -33,29 +47,54 @@ function CalculateurIndemnite() {
     </OnChange>
   ];
 
-  // when at the end, the form is submitted
-  // we reset the form data
-  const onSubmit = () => {
-    dispatch({
-      type: "reset",
-      payload: getInitialSteps()
-    });
+  const handlePageSubmit = (values, form) => {
+    if (currentStepIndex === steps.length - 1) {
+      // This means the user clicked on a "restart a new simulation" button
+      form.reset();
+      dispatch({
+        type: "reset",
+        payload: getInitialStepsState()
+      });
+    } else {
+      dispatch({ type: "next_step" });
+    }
   };
 
   return (
     <Section>
       <Container>
         <Wrapper variant="light">
-          <h1>Calculateur d&apos;indemnités de licenciement</h1>
-          <Wizard steps={steps} onSubmit={onSubmit} rules={rules} />
+          <h1>Calculateur d’indemnités de licenciement</h1>
+          <Form
+            validate={validate}
+            decorators={decorators}
+            mutators={{
+              ...arrayMutators
+            }}
+            onSubmit={handlePageSubmit}
+          >
+            {({ handleSubmit, form, invalid }) => {
+              return (
+                <>
+                  <form onSubmit={handleSubmit}>
+                    {rules}
+                    <StepNav activeIndex={currentStepIndex} steps={steps} />
+                    <Step form={form} />
+                    <PrevNextBar
+                      currentStepIndex={currentStepIndex}
+                      disabled={invalid}
+                      onPrev={() => dispatch({ type: "previous_step" })}
+                      stepsLength={steps.length}
+                    />
+                  </form>
+                </>
+              );
+            }}
+          </Form>
         </Wrapper>
       </Container>
     </Section>
   );
 }
-
-CalculateurIndemnite.propTypes = {
-  initialState: PropTypes.object
-};
 
 export { CalculateurIndemnite };

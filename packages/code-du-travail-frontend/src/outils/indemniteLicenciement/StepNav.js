@@ -5,10 +5,10 @@ import { theme } from "@cdt/ui";
  * For now, only <Step /> are used but stepItems will
  * allows to navigate between form's steps
  */
-export function StepItems({ activeIndex = 0, items = [] }) {
+export function StepNav({ activeIndex, steps }) {
   return (
-    <StepItemsContainer>
-      {items.map((item, index) => (
+    <StepNavContainer>
+      {steps.map((item, index) => (
         <Step
           key={item.name}
           label={item.label}
@@ -16,7 +16,7 @@ export function StepItems({ activeIndex = 0, items = [] }) {
           activeIndex={activeIndex}
         />
       ))}
-    </StepItemsContainer>
+    </StepNavContainer>
   );
 }
 
@@ -32,7 +32,7 @@ function Step({ label, index, activeIndex, ...props }) {
 
 const { colors, spacing, fonts } = theme;
 
-const StepItemsContainer = styled.div`
+const StepNavContainer = styled.div`
   border-bottom: 1px solid ${colors.grey};
   padding: ${spacing.interComponent} 0;
   display: flex;
