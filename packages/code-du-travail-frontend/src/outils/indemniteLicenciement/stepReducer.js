@@ -59,7 +59,7 @@ export function stepReducer(state, action) {
       });
       return {
         ...state,
-        step: newSteps
+        steps: newSteps
       };
     }
     case "remove_primes": {
