@@ -7,25 +7,21 @@ import {
   List,
   ListItem,
   Section,
-  ScreenReaderOnly,
   theme,
   Wrapper
 } from "@cdt/ui";
 
 import { PageLayout } from "../src/layout/PageLayout";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const SearchPage = ({ pageUrl, ogImage }) => {
   const accordionItems = [];
 
   accordionItems.push({
-    title: <AccordionItem>Modalités d’utilisation</AccordionItem>,
+    title: <h2>Modalités d’utilisation</h2>,
     body: (
       <>
-        <ScreenReaderOnly>
-          <h1>Modalités d’utilisation</h1>
-        </ScreenReaderOnly>
-        <h2>Traitement des données à caractère personnel</h2>
+        <h3>Traitement des données à caractère personnel</h3>
         <p>
           Le code du travail numérique ne vous demande ni ne stocke
           d’information nominative.
@@ -53,37 +49,37 @@ const SearchPage = ({ pageUrl, ogImage }) => {
             codedutravail@beta.gouv.fr
           </a>{" "}
           ou par voie postale :
-          <Address>
-            Direction des systèmes d’information
-            <br />
-            Ministère des affaires sociales et de la santé
-            <br />
-            39-43 Quai André Citroën
-            <br />
-            75015 PARIS
-          </Address>
         </p>
-        <h2>Utilisation de témoins de connexion (« cookies »)</h2>
+        <Address>
+          Direction des systèmes d’information
+          <br />
+          Ministère des affaires sociales et de la santé
+          <br />
+          39-43 Quai André Citroën
+          <br />
+          75015 PARIS
+        </Address>
+        <h3>Utilisation de témoins de connexion (« cookies »)</h3>
         <p>
           Nous collectons également des données par l’intermédiaire de
           dispositifs appelés “cookies” permettant d’établir des mesures
           statistiques de fréquentation et d’utilisation du site pouvant être
           utilisées à des fins de suivi et d’amélioration du service :
-          <StyledList>
-            <ListItem>
-              Les données collectées ne sont pas recoupées avec d’autres
-              traitements.
-            </ListItem>
-            <ListItem>
-              Le cookie déposé sert uniquement à la production de statistiques
-              anonymes.
-            </ListItem>
-            <ListItem>
-              Le cookie ne permet pas de suivre la navigation de l’internaute
-              sur d’autres sites.
-            </ListItem>
-          </StyledList>
         </p>
+        <StyledList>
+          <ListItem>
+            Les données collectées ne sont pas recoupées avec d’autres
+            traitements.
+          </ListItem>
+          <ListItem>
+            Le cookie déposé sert uniquement à la production de statistiques
+            anonymes.
+          </ListItem>
+          <ListItem>
+            Le cookie ne permet pas de suivre la navigation de l’internaute sur
+            d’autres sites.
+          </ListItem>
+        </StyledList>
         <p>
           La mesure d’audience (nombre de visites, pages consultées) est
           réalisée par un outil libre intitulé Matomo spécifiquement paramétré,
@@ -137,18 +133,15 @@ const SearchPage = ({ pageUrl, ogImage }) => {
   });
 
   accordionItems.push({
-    title: <AccordionItem>Accessibilité</AccordionItem>,
+    title: <h2>Accessibilité</h2>,
     body: (
       <>
-        <ScreenReaderOnly>
-          <h1>Accessibilité</h1>
-        </ScreenReaderOnly>
         <p>
           La conformité aux normes d’accessibilité numérique est un objectif
           ultérieur mais nous tâchons de rendre dès la conception, ce site
           accessible à toutes et à tous.
         </p>
-        <h2>Signaler un dysfonctionnement</h2>
+        <h3>Signaler un dysfonctionnement</h3>
         <p>
           Si vous rencontrez un défaut d’accessibilité vous empêchant d’accéder
           à un contenu ou une fonctionnalité du site, merci de nous en faire
@@ -159,7 +152,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           droit de faire parvenir vos doléances ou une demande de saisine au
           Défenseur des droits.
         </p>
-        <h2>En savoir plus</h2>
+        <h3>En savoir plus</h3>
         <p>
           Pour en savoir plus sur la politique d’accessibilité numérique de
           l’État :{" "}
@@ -172,58 +165,13 @@ const SearchPage = ({ pageUrl, ogImage }) => {
   });
 
   accordionItems.push({
-    title: <AccordionItem>Sécurité</AccordionItem>,
+    title: <h2>Sécurité</h2>,
     body: (
       <>
-        <ScreenReaderOnly>
-          <h1>Sécurité</h1>
-        </ScreenReaderOnly>
         <p>
           Le site est protégé par un certificat électronique, matérialisé pour
           la grande majorité des navigateurs par un cadenas. Cette protection
           participe à la confidentialité des échanges.
-        </p>
-      </>
-    )
-  });
-
-  accordionItems.push({
-    title: <AccordionItem>Mentions légales</AccordionItem>,
-    body: (
-      <>
-        <ScreenReaderOnly>
-          <h1>Mentions légales</h1>
-        </ScreenReaderOnly>
-        <p>
-          Le site est édité par l’
-          <a href="https://incubateur.social.gouv.fr/">
-            Incubateur des ministères sociaux
-          </a>{" "}
-          situé :
-          <Address>
-            Tour Mirabeau
-            <br />
-            39-43 Quai André Citroën
-            <br />
-            75015 PARIS
-            <br />
-            <br />
-            Tél. : 01 40 56 60 00
-          </Address>
-        </p>
-        <h2>Directeur de la publication</h2>
-        <p>Hélène BRISSET</p>
-        <h2>Hébergement</h2>
-        <p>
-          Ce site est hébergé en propre par le Ministère des Affaires sociales
-          et de la Santé :
-          <Address>
-            Ministère des affaires sociales et de la santé
-            <br />
-            14 avenue Duquesne
-            <br />
-            75530 PARIS
-          </Address>
         </p>
       </>
     )
@@ -241,11 +189,43 @@ const SearchPage = ({ pageUrl, ogImage }) => {
       <Section>
         <Container narrow>
           <Wrapper variant="light">
+            <h1>Mentions légales</h1>
             <Alert variant="warning">
               Ce site est en cours de construction, la fiabilité des réponses
               qui s’y trouvent ne sont pas garanties. L’ouverture officielle du
               site est prévue pour 2020.
             </Alert>
+            <p>
+              Le site est édité par l’
+              <a href="https://incubateur.social.gouv.fr/">
+                Incubateur des ministères sociaux
+              </a>{" "}
+              situé :
+            </p>
+            <Address>
+              Tour Mirabeau
+              <br />
+              39-43 Quai André Citroën
+              <br />
+              75015 PARIS
+              <br />
+              <br />
+              Tél. : 01 40 56 60 00
+            </Address>
+            <h3>Directeur de la publication</h3>
+            <p>Hélène BRISSET</p>
+            <h3>Hébergement</h3>
+            <p>
+              Ce site est hébergé en propre par le Ministère des Affaires
+              sociales et de la Santé :
+            </p>
+            <Address>
+              Ministère des affaires sociales et de la santé
+              <br />
+              14 avenue Duquesne
+              <br />
+              75530 PARIS
+            </Address>
             <Alert variant="info">
               <p>
                 Le{" "}
@@ -270,17 +250,11 @@ const SearchPage = ({ pageUrl, ogImage }) => {
 
 export default SearchPage;
 
-const { colors, fonts, spacing } = theme;
-
-const AccordionItem = styled.div`
-  padding: ${spacing.small};
-  font-size: ${fonts.sizeH2};
-  color: ${colors.title};
-`;
+const { spacing } = theme;
 
 const Address = styled.address`
   display: block;
-  margin-top: ${spacing.interComponent};
+  margin: ${spacing.interComponent} 0;
 `;
 
 const StyledList = styled(List)`

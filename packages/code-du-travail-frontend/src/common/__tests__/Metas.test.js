@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-testing-library";
-import { _Metas } from "../Metas";
+import Metas from "../Metas";
 
 describe("<Metas />", () => {
   it("should render", () => {
@@ -9,7 +9,7 @@ describe("<Metas />", () => {
     const description = "description";
     const image = "image.url";
     const { container } = render(
-      <_Metas url={url} title={title} description={description} image={image} />
+      <Metas url={url} title={title} description={description} image={image} />
     );
     expect(container).toMatchSnapshot();
   });

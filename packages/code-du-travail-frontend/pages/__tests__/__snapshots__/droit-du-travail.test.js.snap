@@ -1601,22 +1601,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <p>
                             Il existe d’autres règles dans le Code du travail qui permettent aux conventions et accords collectifs, sous certaines conditions, de prévoir des règles différentes de celles de la loi. Dans ce cas, c’est l’accord collectif ou la convention collective qui s’applique même s’il est plus défavorable pour le salarié que la loi.
                           </p>
-                          <p>
-                            <i>
-                              Exemples :
-                              <ul>
-                                <li>
-                                  Le taux de majoration des heures supplémentaires : un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
-                                </li>
-                                <li>
-                                  Le congé sabbatique : un accord collectif peut prévoir une durée minimale et une durée maximale du congé sabbatique différente de ce que prévoit le code du travail.
-                                </li>
-                                <li>
-                                  Les négociations obligatoires en entreprise : un accord d’entreprise peut prévoir une périodicité des négociations plus longue que ce que prévoit le Code du travail qui est principalement d’un an.
-                                </li>
-                              </ul>
-                            </i>
-                          </p>
+                          <i>
+                            Exemples :
+                            <ul>
+                              <li>
+                                Le taux de majoration des heures supplémentaires : un accord collectif peut prévoir dans une certaine limite un taux inférieur à 25% (règle prévue par le Code du travail).
+                              </li>
+                              <li>
+                                Le congé sabbatique : un accord collectif peut prévoir une durée minimale et une durée maximale du congé sabbatique différente de ce que prévoit le code du travail.
+                              </li>
+                              <li>
+                                Les négociations obligatoires en entreprise : un accord d’entreprise peut prévoir une périodicité des négociations plus longue que ce que prévoit le Code du travail qui est principalement d’un an.
+                              </li>
+                            </ul>
+                          </i>
                         </div>
                       </div>
                       <div
@@ -1647,22 +1645,20 @@ exports[`<DroitDuTravail /> should render 1`] = `
                           <p>
                             Il existe également des règles dans le Code du travail qui s’appliquent par défaut, c’est-à-dire uniquement lorsqu’il n’y a pas de convention ou d’accord collectif sur le sujet. S’il existe une convention ou un accord collectif sur le sujet alors la loi ne s’applique pas.
                           </p>
-                          <p>
-                            <i>
-                              Exemples :
-                              <ul>
-                                <li>
-                                  Congés exceptionnels : en l’absence d’accord collectif sur les congés exceptionnels, ce que prévoit le code du travail s’applique (4 jours pour mariage, 1 jour pour mariage d’un enfant, 5 jours pour le décès d’un enfant...)
-                                </li>
-                                <li>
-                                  Taux de majoration des heures supplémentaires : en l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
-                                </li>
-                                <li>
-                                  Aménagement du temps de travail sur une période supérieure à la semaine  : en l’absence d’accord collectif sur l’aménagement du temps de travail, le code du travail s’applique. L’employeur peut aménager le temps de travail sur une période de 9 semaines pour les entreprises de moins de 50 salariés.
-                                </li>
-                              </ul>
-                            </i>
-                          </p>
+                          <i>
+                            Exemples :
+                            <ul>
+                              <li>
+                                Congés exceptionnels : en l’absence d’accord collectif sur les congés exceptionnels, ce que prévoit le code du travail s’applique (4 jours pour mariage, 1 jour pour mariage d’un enfant, 5 jours pour le décès d’un enfant...)
+                              </li>
+                              <li>
+                                Taux de majoration des heures supplémentaires : en l’absence d’accord collectif sur le taux de majoration des heures supplémentaires s’applique le code du travail (25% de majoration pour les 8 premières heures et 50% pour les suivantes).
+                              </li>
+                              <li>
+                                Aménagement du temps de travail sur une période supérieure à la semaine  : en l’absence d’accord collectif sur l’aménagement du temps de travail, le code du travail s’applique. L’employeur peut aménager le temps de travail sur une période de 9 semaines pour les entreprises de moins de 50 salariés.
+                              </li>
+                            </ul>
+                          </i>
                         </div>
                       </div>
                     </div>

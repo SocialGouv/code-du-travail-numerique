@@ -6,13 +6,13 @@ import Search from "../src/search/Search";
 import { HomeLayout } from "../src/layout/HomeLayout";
 import Themes from "../src/home/Themes";
 import Outils from "../src/home/Outils";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const Home = ({ pageUrl, ogImage, data: { themes } }) => (
+const Home = ({ pageUrl, ogImage, data: { themes = [] } = {} }) => (
   <HomeLayout>
     <Metas
       url={pageUrl}

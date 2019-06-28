@@ -47,7 +47,7 @@ class AddressResults extends React.Component {
 
 export { AddressResults };
 
-function renderResults(results) {
+function renderResults(results = []) {
   if (results.length === 0) {
     return <NoResults />;
   } else {

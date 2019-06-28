@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container, Section, Wrapper, theme } from "@cdt/ui";
 
 import { PageLayout } from "../../src/layout/PageLayout";
-import { Metas } from "../../src/common/Metas";
+import Metas from "../../src/common/Metas";
 import Origins from "./Origins";
 import Hierarchy from "./Hierarchy";
 

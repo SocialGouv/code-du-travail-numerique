@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "react-testing-library";
-import DroitDuTravail from "../droit-du-travail/index.js";
+import FicheMT from "../fiche-ministere-travail";
 
-describe("<DroitDuTravail />", () => {
+describe("<FicheMT />", () => {
   it("should render", () => {
-    const { container } = render(<DroitDuTravail />);
+    const { container } = render(<FicheMT />);
     expect(container).toMatchSnapshot();
   });
 });

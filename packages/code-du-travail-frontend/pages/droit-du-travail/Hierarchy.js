@@ -135,37 +135,35 @@ const Hierarchy = () => {
                                       s’il est plus défavorable pour le salarié
                                       que la loi.
                                     </p>
-                                    <p>
-                                      <i>
-                                        Exemples&nbsp;:
-                                        <ul>
-                                          <li>
-                                            Le taux de majoration des heures
-                                            supplémentaires&nbsp;: un accord
-                                            collectif peut prévoir dans une
-                                            certaine limite un taux inférieur à
-                                            25% (règle prévue par le Code du
-                                            travail).
-                                          </li>
-                                          <li>
-                                            Le congé sabbatique&nbsp;: un accord
-                                            collectif peut prévoir une durée
-                                            minimale et une durée maximale du
-                                            congé sabbatique différente de ce
-                                            que prévoit le code du travail.
-                                          </li>
-                                          <li>
-                                            Les négociations obligatoires en
-                                            entreprise&nbsp;: un accord
-                                            d’entreprise peut prévoir une
-                                            périodicité des négociations plus
-                                            longue que ce que prévoit le Code du
-                                            travail qui est principalement d’un
-                                            an.
-                                          </li>
-                                        </ul>
-                                      </i>
-                                    </p>
+                                    <i>
+                                      Exemples&nbsp;:
+                                      <ul>
+                                        <li>
+                                          Le taux de majoration des heures
+                                          supplémentaires&nbsp;: un accord
+                                          collectif peut prévoir dans une
+                                          certaine limite un taux inférieur à
+                                          25% (règle prévue par le Code du
+                                          travail).
+                                        </li>
+                                        <li>
+                                          Le congé sabbatique&nbsp;: un accord
+                                          collectif peut prévoir une durée
+                                          minimale et une durée maximale du
+                                          congé sabbatique différente de ce que
+                                          prévoit le code du travail.
+                                        </li>
+                                        <li>
+                                          Les négociations obligatoires en
+                                          entreprise&nbsp;: un accord
+                                          d’entreprise peut prévoir une
+                                          périodicité des négociations plus
+                                          longue que ce que prévoit le Code du
+                                          travail qui est principalement d’un
+                                          an.
+                                        </li>
+                                      </ul>
+                                    </i>
                                   </>
                                 )
                               },
@@ -188,43 +186,40 @@ const Hierarchy = () => {
                                       convention ou un accord collectif sur le
                                       sujet alors la loi ne s’applique pas.
                                     </p>
-                                    <p>
-                                      <i>
-                                        Exemples&nbsp;:
-                                        <ul>
-                                          <li>
-                                            Congés exceptionnels&nbsp;: en
-                                            l’absence d’accord collectif sur les
-                                            congés exceptionnels, ce que prévoit
-                                            le code du travail s’applique (4
-                                            jours pour mariage, 1 jour pour
-                                            mariage d’un enfant, 5 jours pour le
-                                            décès d’un enfant...)
-                                          </li>
-                                          <li>
-                                            Taux de majoration des heures
-                                            supplémentaires&nbsp;: en l’absence
-                                            d’accord collectif sur le taux de
-                                            majoration des heures
-                                            supplémentaires s’applique le code
-                                            du travail (25% de majoration pour
-                                            les 8 premières heures et 50% pour
-                                            les suivantes).
-                                          </li>
-                                          <li>
-                                            Aménagement du temps de travail sur
-                                            une période supérieure à la semaine
-                                            &nbsp;: en l’absence d’accord
-                                            collectif sur l’aménagement du temps
-                                            de travail, le code du travail
-                                            s’applique. L’employeur peut
-                                            aménager le temps de travail sur une
-                                            période de 9 semaines pour les
-                                            entreprises de moins de 50 salariés.
-                                          </li>
-                                        </ul>
-                                      </i>
-                                    </p>
+                                    <i>
+                                      Exemples&nbsp;:
+                                      <ul>
+                                        <li>
+                                          Congés exceptionnels&nbsp;: en
+                                          l’absence d’accord collectif sur les
+                                          congés exceptionnels, ce que prévoit
+                                          le code du travail s’applique (4 jours
+                                          pour mariage, 1 jour pour mariage d’un
+                                          enfant, 5 jours pour le décès d’un
+                                          enfant...)
+                                        </li>
+                                        <li>
+                                          Taux de majoration des heures
+                                          supplémentaires&nbsp;: en l’absence
+                                          d’accord collectif sur le taux de
+                                          majoration des heures supplémentaires
+                                          s’applique le code du travail (25% de
+                                          majoration pour les 8 premières heures
+                                          et 50% pour les suivantes).
+                                        </li>
+                                        <li>
+                                          Aménagement du temps de travail sur
+                                          une période supérieure à la semaine
+                                          &nbsp;: en l’absence d’accord
+                                          collectif sur l’aménagement du temps
+                                          de travail, le code du travail
+                                          s’applique. L’employeur peut aménager
+                                          le temps de travail sur une période de
+                                          9 semaines pour les entreprises de
+                                          moins de 50 salariés.
+                                        </li>
+                                      </ul>
+                                    </i>
                                   </>
                                 )
                               }

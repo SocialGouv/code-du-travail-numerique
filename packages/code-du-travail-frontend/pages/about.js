@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Alert, Container, Section, Wrapper } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const About = ({ ogImage, pageUrl }) => (
   <PageLayout>

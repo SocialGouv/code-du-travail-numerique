@@ -10,7 +10,7 @@ import { theme } from "@cdt/ui";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -51,7 +51,7 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data, pageUrl, ogImage } = this.props;
+    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
 
     const footer = (
       <Source name="https://www.legifrance.gouv.fr" url={data._source.url} />

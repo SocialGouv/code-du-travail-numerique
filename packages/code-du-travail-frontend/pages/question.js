@@ -21,7 +21,7 @@ import { getRouteBySource, getLabelBySource } from "../src/sources";
 import ArticleIcon from "../src/icons/ArticleIcon";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
-import { Metas } from "../src/common/Metas";
+import Metas from "../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -40,7 +40,11 @@ class Question extends React.Component {
   }
 
   render() {
-    const { data, pageUrl, ogImage } = this.props;
+    const {
+      data = { _source: {}, relatedItems: {} },
+      pageUrl,
+      ogImage
+    } = this.props;
     const { query } = this.props.router;
 
     const {

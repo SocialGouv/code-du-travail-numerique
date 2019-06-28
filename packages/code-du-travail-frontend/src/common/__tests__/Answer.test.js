@@ -1,12 +1,12 @@
 import React from "react";
-import Answer from "../Answer";
+import { render } from "react-testing-library";
 import { icons } from "@cdt/ui/";
 
-import { renderWithMock } from "../../../test/MockNextContext";
+import Answer from "../Answer";
 
 describe("<Answer />", () => {
   it("should render", () => {
-    const { container } = renderWithMock(
+    const { container } = render(
       <Answer
         title="Article du code"
         intro="intro de l'article"
@@ -22,7 +22,7 @@ describe("<Answer />", () => {
     expect(container).toMatchSnapshot();
   });
   it("should render a breadcrumbs", () => {
-    const { container } = renderWithMock(
+    const { container } = render(
       <Answer
         title="Article du code"
         intro="intro de l'article"
