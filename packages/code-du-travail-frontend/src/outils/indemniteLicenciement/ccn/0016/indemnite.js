@@ -1,7 +1,7 @@
 import { round, sum } from "../../math";
 import { CADRE, TAM, OUVRIER } from "./Categorie";
 /**
- * calcul de l'indemnite de licenciement conventionnelle
+ * calcul de l’indemnite de licenciement conventionnelle
  * TRANSPORTS ROUTIERS ET ACTIVITÉS AUXILIAIRES DU TRANSPORT- IDCC 16
  * https://github.com/SocialGouv/code-du-travail-numerique/issues/896
  */

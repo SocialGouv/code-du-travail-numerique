@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import { ErrorField } from "./ErrorField";
-import { Label, RadioContainer, QuestionParagraphe } from "../stepStyles";
+import { Label, RadioContainer, QuestionParagraphe } from "./styledComponents";
 import { required } from "../validators";
 
 function TypeContrat() {

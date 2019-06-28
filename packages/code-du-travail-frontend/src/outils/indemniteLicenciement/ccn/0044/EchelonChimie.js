@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import { coefficients } from "./coefficients";
 import { required } from "../../validators";
-import { Label } from "../../stepStyles";
+import { Label } from "../../components/styledComponents";
 
 const groupeLabelByCoeff = coefficients.reduce(
   (state, { coefficient, groupe, label }) => {

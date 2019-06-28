@@ -5,7 +5,11 @@ import { Field } from "react-final-form";
 import { Container, theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input, SectionTitle, InlineError } from "../stepStyles";
+import {
+  Input,
+  SectionTitle,
+  InlineError
+} from "../components/styledComponents";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
   SalaireTempsPartiel,

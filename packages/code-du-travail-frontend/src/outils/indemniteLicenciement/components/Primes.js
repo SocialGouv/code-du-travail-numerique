@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@cdt/ui";
-import { Input, InlineError } from "../stepStyles";
+import { Input, InlineError } from "./styledComponents";
 import { isNumber } from "../validators";
 
 function Primes({ name, onChange }) {

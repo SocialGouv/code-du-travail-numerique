@@ -5,7 +5,7 @@ import { Button, Container, theme } from "@cdt/ui";
 import styled from "styled-components";
 
 import { branches } from "../branches";
-import { Label, SectionTitle } from "../stepStyles";
+import { Label, SectionTitle } from "../components/styledComponents";
 import { getIndemniteFromFinalForm } from "../indemnite";
 import { IndemniteLegale } from "../components/IndemniteLegale";
 

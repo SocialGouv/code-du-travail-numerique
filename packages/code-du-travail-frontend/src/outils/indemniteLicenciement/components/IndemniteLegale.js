@@ -5,7 +5,7 @@ import MathJax from "react-mathjax-preview";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
-import { SectionTitle, Highlight } from "../stepStyles";
+import { SectionTitle, Highlight } from "./styledComponents";
 
 function IndemniteLegale({ indemnite, formula }) {
   return (

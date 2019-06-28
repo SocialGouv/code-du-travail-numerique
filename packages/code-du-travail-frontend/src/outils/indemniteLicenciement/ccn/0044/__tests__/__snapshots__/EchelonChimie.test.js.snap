@@ -319,7 +319,7 @@ exports[`<EchelonChimie /> should render the selected echelon 1`] = `
   </select>
   <ul>
     <li>
-      Emploi impliquant l'exécution de travaux ne demandant qu'une mise au courant sommaire.
+      Emploi impliquant l’exécution de travaux ne demandant qu’une mise au courant sommaire.
     </li>
   </ul>
 </div>

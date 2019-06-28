@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 
 import { required } from "../../validators";
-import { Label, SectionTitle } from "../../stepStyles";
+import { Label, SectionTitle } from "../../components/styledComponents";
 
 export const OUVRIER = "ouvrier";
 export const TAM = "tam";

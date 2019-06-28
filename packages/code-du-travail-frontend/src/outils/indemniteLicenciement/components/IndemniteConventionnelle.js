@@ -3,7 +3,7 @@ import MathJax from "react-mathjax-preview";
 import { Alert, Button, Container } from "@cdt/ui";
 
 import { branches } from "../branches";
-import { SectionTitle, Highlight, SmallText } from "../stepStyles";
+import { SectionTitle, Highlight, SmallText } from "./styledComponents";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 function IndemniteCCn({
@@ -28,7 +28,7 @@ function IndemniteCCn({
             <Highlight>{Math.max(indemniteLegale, montant)} €</Highlight>{" "}
             <SmallText>
               {montant > indemniteLegale
-                ? "sur la base du calcul de l'indemnité conventionelle"
+                ? "sur la base du calcul de l’indemnité conventionelle"
                 : "sur la base du calcul de l’indemnité légale"}
             </SmallText>
           </p>

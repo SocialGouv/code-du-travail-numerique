@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "react-testing-library";
-import { StepItems } from "../StepItems";
+import { StepNav } from "../StepNav";
 
-describe("<StepItems />", () => {
+describe("<StepNav />", () => {
   it("should render", () => {
     const items = [
       { name: "step-1", label: "Step One" },
@@ -10,7 +10,7 @@ describe("<StepItems />", () => {
       { name: "step-3", label: "Step Three" }
     ];
 
-    const { container } = render(<StepItems items={items} activeIndex={1} />);
+    const { container } = render(<StepNav steps={items} activeIndex={1} />);
     expect(container).toMatchSnapshot();
   });
 });

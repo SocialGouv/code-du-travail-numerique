@@ -165,7 +165,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
           Congé sabbatique
         </option>
         <option>
-          Congé pour création d'entreprise
+          Congé pour création d’entreprise
         </option>
         <option>
           Congé de solidarité familiale
@@ -174,7 +174,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
           Congé de solidarité internationale
         </option>
         <option>
-          Congé parental d'éducation
+          Congé parental d’éducation
         </option>
         <option>
           Congé de proche aidant
@@ -474,7 +474,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
           Congé sabbatique
         </option>
         <option>
-          Congé pour création d'entreprise
+          Congé pour création d’entreprise
         </option>
         <option>
           Congé de solidarité familiale
@@ -483,7 +483,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
           Congé de solidarité internationale
         </option>
         <option>
-          Congé parental d'éducation
+          Congé parental d’éducation
         </option>
         <option>
           Congé de proche aidant

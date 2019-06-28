@@ -149,7 +149,7 @@ exports[`<StepIndemnite /> should render 1`] = `
         <option
           value="1518"
         >
-          Convention collective nationale de l'Animation
+          Convention collective nationale de l’Animation
         </option>
         <option
           value="0843"
@@ -179,12 +179,12 @@ exports[`<StepIndemnite /> should render 1`] = `
         <option
           value="0029"
         >
-          Etablissements privés d'hospitalisation (FEHAP)
+          Etablissements privés d’hospitalisation (FEHAP)
         </option>
         <option
           value="1596"
         >
-          Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)
+          Ouvriers du bâtiment (entreprises jusqu’à 10 salariés)
         </option>
         <option
           value="1597"

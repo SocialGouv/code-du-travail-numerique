@@ -4,7 +4,7 @@ import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@cdt/ui";
-import { Input, InlineError } from "../stepStyles";
+import { Input, InlineError } from "./styledComponents";
 import { isNumber } from "../validators";
 
 function SalaireTempsPartiel({ name, onChange }) {

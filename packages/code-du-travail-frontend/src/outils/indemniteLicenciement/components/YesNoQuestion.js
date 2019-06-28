@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { Label, RadioContainer, QuestionParagraphe } from "../stepStyles";
+import { Label, RadioContainer, QuestionParagraphe } from "./styledComponents";
 import { requiredBoolean } from "../validators";
 import { ErrorField } from "./ErrorField";
 

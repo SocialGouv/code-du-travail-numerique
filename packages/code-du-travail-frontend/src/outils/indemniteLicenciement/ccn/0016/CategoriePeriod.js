@@ -1,5 +1,9 @@
 import React from "react";
-import { SectionTitle, Input, InlineError } from "../../stepStyles";
+import {
+  SectionTitle,
+  Input,
+  InlineError
+} from "../../components/styledComponents";
 import { Field } from "react-final-form";
 import styled from "styled-components";
 import { theme } from "@cdt/ui";

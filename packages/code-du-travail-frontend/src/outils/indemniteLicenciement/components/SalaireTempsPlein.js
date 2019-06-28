@@ -5,7 +5,7 @@ import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
 import { Table as UITable, theme } from "@cdt/ui";
 
-import { Input, InlineError } from "../stepStyles";
+import { Input, InlineError } from "./styledComponents";
 import { isNumber } from "../validators";
 
 function SalaireTempsPlein({ name }) {

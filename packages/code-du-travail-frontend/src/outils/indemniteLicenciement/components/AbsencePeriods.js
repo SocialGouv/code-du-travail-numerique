@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { Button, theme } from "@cdt/ui";
-import { Input, InlineError } from "../stepStyles";
+import { Input, InlineError } from "./styledComponents";
 import { isNumber } from "../validators";
 import { OnChange } from "react-final-form-listeners";
 
@@ -116,10 +116,10 @@ export const motifs = [
   { label: "Grève", value: 1.0 },
   { label: "Mise à pied", value: 1.0 },
   { label: "Congé sabbatique", value: 1.0 },
-  { label: "Congé pour création d'entreprise", value: 1.0 },
+  { label: "Congé pour création d’entreprise", value: 1.0 },
   { label: "Congé de solidarité familiale", value: 1.0 },
   { label: "Congé de solidarité internationale", value: 1.0 },
-  { label: "Congé parental d'éducation", value: 0.5 },
+  { label: "Congé parental d’éducation", value: 0.5 },
   { label: "Congé de proche aidant", value: 1.0 },
   { label: "Congés sans solde", value: 1.0 },
   { label: "Arrêt maladie lié à un accident de trajet", value: 1.0 }
