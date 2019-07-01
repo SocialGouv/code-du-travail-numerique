@@ -8,8 +8,20 @@ const thesaurusSynonyms = thesaurus
   )
   .map(({ term, equivalent }) => `${term}, ${equivalent}`);
 
+function format(str) {
+  if (/=>/.test(str)) {
+    return str;
+  }
+  const [abbrev, ...tokens] = str
+    .split(",")
+    .sort((a, b) => a.length > b.length)
+    .map(t => t.trim());
+  return `${[...tokens, abbrev].join(", ")} => ${abbrev}`;
+}
+
 const synonyms = [...cdtn_synonyms, ...thesaurusSynonyms]
-  .map(str => str.toLowerCase())
+  .slice(0, 100)
+  .map(str => format(str).toLowerCase())
   .sort();
 
 module.exports = synonyms;
