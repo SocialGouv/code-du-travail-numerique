@@ -4,7 +4,7 @@ exports[`return a faq item with additionnal content from its source and slug 1`]
 Object {
   "_id": "6",
   "_index": "cdtn_document_test",
-  "_score": 1.9169226,
+  "_score": 4.344671,
   "_source": Object {
     "author": "DIRECCTE",
     "date": "01/12/2017",
@@ -82,7 +82,7 @@ exports[`return item from source and slug  1`] = `
 Object {
   "_id": "2",
   "_index": "cdtn_document_test",
-  "_score": 1.5804504,
+  "_score": 4.0081987,
   "_source": Object {
     "breadcrumbs": Array [
       Object {

@@ -3,10 +3,14 @@ function getSearchBody({ source, slug }) {
     size: 1,
     query: {
       bool: {
-        must: {
-          match: { source }
-        },
-        filter: { term: { slug } }
+        must: [
+          {
+            match: { source }
+          },
+          {
+            match: { slug }
+          }
+        ]
       }
     },
     _source: [
