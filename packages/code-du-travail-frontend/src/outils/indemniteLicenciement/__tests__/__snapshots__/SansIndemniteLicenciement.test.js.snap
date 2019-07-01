@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SansIndemniteLicenciement /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Convention collective nationale de l'Animation
+    </h3>
+    <p>
+      Pour votre branche, le calcul de l’indemnité de licenciement se base sur l’indemnité légale de licenciement.
+    </p>
+    <h2
+      class="c1"
+    >
+      Indemnité légale
+    </h2>
+    <p>
+      Le code du travail prévoit un montant minimum de
+       
+      <strong
+        class="c2"
+      >
+        3585
+         €
+      </strong>
+       pour votre indemnité de licenciement.
+    </p>
+    <br />
+    <details>
+      <summary>
+        Voir le detail du calcul
+      </summary>
+      <div
+        id="react-mathjax-preview"
+      >
+        <div
+          id="react-mathjax-preview-result"
+        >
+          \`(1/4 * 2390 * 6) / 12\`
+        </div>
+      </div>
+    </details>
+  </div>
+</div>
+`;
