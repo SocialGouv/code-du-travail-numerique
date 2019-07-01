@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "10",
       "_index": "cdtn_document_test",
-      "_score": 1.858978,
+      "_score": 1.8064516,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": "843",
@@ -19,7 +19,7 @@ Object {
     Object {
       "_id": "11",
       "_index": "cdtn_document_test",
-      "_score": 1.858978,
+      "_score": 1.7264521,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": "1747",
@@ -30,7 +30,7 @@ Object {
       "_type": "cdtn_document_test",
     },
   ],
-  "max_score": 1.858978,
+  "max_score": 1.8064516,
   "total": 2,
 }
 `;
@@ -57,7 +57,7 @@ Object {
     Object {
       "_id": "10",
       "_index": "cdtn_document_test",
-      "_score": 1.6673176,
+      "_score": 0.57498115,
       "_source": Object {
         "id": "KALICONT000005635886",
         "idcc": "843",
@@ -70,7 +70,7 @@ Object {
     Object {
       "_id": "11",
       "_index": "cdtn_document_test",
-      "_score": 1.6673176,
+      "_score": 0.57498115,
       "_source": Object {
         "id": "KALICONT000005635691",
         "idcc": "1747",
@@ -81,7 +81,7 @@ Object {
       "_type": "cdtn_document_test",
     },
   ],
-  "max_score": 1.6673176,
+  "max_score": 0.57498115,
   "total": 2,
 }
 `;

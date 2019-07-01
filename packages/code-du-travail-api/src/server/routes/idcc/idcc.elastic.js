@@ -24,14 +24,15 @@ function getIdccBody({ query }) {
                 }
               },
               {
-                multi_match: {
-                  query: `${query}`,
-                  fields: "idcc.*"
+                match_phrase_prefix: {
+                  "idcc.text": {
+                    query: `${query}`
+                  }
                 }
               },
               {
                 match_phrase_prefix: {
-                  "title.french_stemmed": {
+                  title: {
                     query: `${query}`
                   }
                 }
