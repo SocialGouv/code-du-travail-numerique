@@ -28,7 +28,7 @@ function getFacetsBody({ query }) {
                   match: {
                     "title.article_id": {
                       query: query,
-                      boost: 5
+                      boost: 3
                     }
                   }
                 },
