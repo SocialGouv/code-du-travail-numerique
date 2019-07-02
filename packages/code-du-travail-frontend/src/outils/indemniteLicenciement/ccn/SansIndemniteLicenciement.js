@@ -10,7 +10,7 @@ function Step({ form }) {
     values: { branche }
   } = form.getState();
 
-  const { indemnite, formula } = getIndemniteFromFinalForm(form);
+  const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
   const selectedBranche = branches.find(br => br.value === branche);
 
   return (
@@ -20,7 +20,7 @@ function Step({ form }) {
         Pour votre branche, le calcul de l’indemnité de licenciement se base sur
         l’indemnité légale de licenciement.
       </p>
-      <IndemniteLegale indemnite={indemnite} formula={formula} />
+      <IndemniteLegale indemnite={indemniteLegale} formula={formuleLegale} />
     </Container>
   );
 }
