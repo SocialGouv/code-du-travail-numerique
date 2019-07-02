@@ -20,7 +20,6 @@ function format(str) {
 }
 
 const synonyms = [...cdtn_synonyms, ...thesaurusSynonyms]
-  .slice(0, 100)
   .map(str => format(str).toLowerCase())
   .sort();
 
