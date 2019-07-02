@@ -50,7 +50,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
                 },
                 {
                   match: {
-                    "text.french_stemmed": {
+                    "text.french_with_synonyms": {
                       query: query
                     }
                   }
@@ -93,7 +93,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           },
           {
             match: {
-              "title.french_stemmed": {
+              "title.french_with_synonyms": {
                 query: query
               }
             }
@@ -101,7 +101,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           {
             query_string: {
               query:
-                '(title.french_stemmed:"fonction publique") OR (title.french_stemmed:"agent public")',
+                '(title.french_with_synonyms:"fonction publique") OR (title.french_with_synonyms:"agent public")',
               boost: -2000
             }
           }

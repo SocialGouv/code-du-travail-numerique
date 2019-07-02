@@ -24,9 +24,9 @@ code_du_travail_numerique_mapping = {
                     'analyzer': 'french',
                     'search_analyzer': 'french_indexing',
                 },
-                'french_stemmed': {
+                'french_with_synonyms': {
                     'type': 'text',
-                    'analyzer': 'french_stemmed',
+                    'analyzer': 'french_with_synonyms',
                 },
             },
         },
@@ -37,9 +37,9 @@ code_du_travail_numerique_mapping = {
                     'type': 'text',
                     'analyzer': 'french',
                 },
-                'french_stemmed': {
+                'french_with_synonyms': {
                     'type': 'text',
-                    'analyzer': 'french_stemmed',
+                    'analyzer': 'french_with_synonyms',
                 },
             },
         },

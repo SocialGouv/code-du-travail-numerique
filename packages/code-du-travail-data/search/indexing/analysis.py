@@ -59,7 +59,7 @@ analyzers = {
     'idcc_ape': {
         'tokenizer': 'whitespace',
     },
-    'french_stemmed': {
+    'french_with_synonyms': {
         'tokenizer': 'icu_tokenizer',
         'char_filter': [
             'html_strip'
@@ -68,7 +68,6 @@ analyzers = {
             'french_elision',
             'icu_folding',
             'lowercase',
-            'french_acronyms',
             'french_synonyms',
             'french_stop',
             'french_stemmer'
