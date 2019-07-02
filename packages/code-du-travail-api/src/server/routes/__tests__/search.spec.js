@@ -10,7 +10,7 @@ test("return search results for demission", async () => {
     "/api/v1/search?q=démission"
   );
   expect(response.status).toBe(200);
-  expect(response.body.hits).toMatchSnapshot();
+  expect(response.body).toMatchSnapshot();
 });
 
 test("return faq search results for demission ", async () => {
@@ -25,10 +25,10 @@ test("return faq search results for demission ", async () => {
     "fiches_service_public"
   ];
   const response = await request(app.callback()).get(
-    `/api/v1/search?q=démission&excludeSources=${excludeSources.join(",")}`
+    `/api/v1/search?q=la démission&excludeSources=${excludeSources.join(",")}`
   );
   expect(response.status).toBe(200);
-  expect(response.body.hits).toMatchSnapshot();
+  expect(response.body).toMatchSnapshot();
 });
 
 test("return faq search results for smic with snippet content", async () => {
