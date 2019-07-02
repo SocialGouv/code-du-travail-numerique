@@ -40,7 +40,6 @@ filters = {
     # liste de termes et leurs synonymes
     'french_synonyms': {
         'type': 'synonym',
-        'ignore_case': True,
         'expand': True,
         'synonyms': SYNONYMS,
     },
