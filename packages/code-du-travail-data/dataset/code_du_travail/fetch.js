@@ -1,89 +1,24 @@
 const fs = require("fs");
 const path = require("path");
-const fetch = require("node-fetch");
-const OAuth2 = require("simple-oauth2");
 const serialExec = require("promise-serial-exec");
+const DilaApi = require("@socialgouv/dila-api-client");
 
-const clientId = process.env.OAUTH_CLIENT_ID;
-const clientSecret = process.env.OAUTH_CLIENT_SECRET;
-
-const apiHost = "https://sandbox-api.aife.economie.gouv.fr";
-const tokenHost = "https://sandbox-oauth.aife.economie.gouv.fr";
-
-const credentials = {
-  client: {
-    id: clientId,
-    secret: clientSecret
-  },
-  auth: {
-    tokenHost,
-    tokenPath: "/api/oauth/token",
-    authorizePath: "/api/oauth/authorize"
-  },
-  options: {
-    authorizationMethod: "body"
-  }
-};
-
-// cache access token once received
-let globalToken;
-
-const getAccessToken = async () => {
-  if (globalToken) {
-    return globalToken;
-  }
-  const oauth2 = OAuth2.create(credentials);
-  try {
-    const result = await oauth2.clientCredentials.getToken({
-      scope: "openid"
-    });
-    const accessToken = oauth2.accessToken.create(result);
-    globalToken = accessToken.token.access_token;
-    return accessToken.token.access_token;
-  } catch (error) {
-    console.log("error", error);
-    console.log("Access Token error", error.message);
-  }
-};
-
-const dilaFetch = async ({ path, method = "POST", body }) => {
-  const token = await getAccessToken();
-  const url = `${apiHost}/${path}`;
-  const data = await fetch(url, {
-    method,
-    headers: {
-      "content-type": "application/json",
-      Authorization: `Bearer ${token}`
-    },
-    body
-  })
-    .then(r => r.json())
-    .catch(e => {
-      console.log("ERROR", e);
-      console.log({
-        url,
-        body,
-        token
-      });
-
-      throw e;
-    });
-
-  return data;
-};
+const dilaClient = new DilaApi();
 
 const tableMatieres = params =>
-  dilaFetch({
-    path: "dila/legifrance/lf-engine-app/consult/code/tableMatieres",
-    body: JSON.stringify(params)
+  dilaClient.fetch({
+    path: "consult/code/tableMatieres",
+    method: "POST",
+    params
   });
 
-const getArticle = async id =>
-  dilaFetch({
-    path: "dila/legifrance/lf-engine-app/consult/getArticle",
-    body: JSON.stringify({
+const getArticle = id =>
+  dilaClient.fetch({
+    path: "consult/getArticle",
+    method: "POST",
+    params: {
       id
-    })
+    }
   });
 
 const JSONLog = data => console.log(JSON.stringify(data, null, 2));
