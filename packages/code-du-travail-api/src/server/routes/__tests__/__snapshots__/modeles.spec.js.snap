@@ -27,6 +27,9 @@ Object {
     },
   ],
   "max_score": 0,
-  "total": 2,
+  "total": Object {
+    "relation": "eq",
+    "value": 2,
+  },
 }
 `;

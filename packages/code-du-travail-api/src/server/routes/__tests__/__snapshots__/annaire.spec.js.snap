@@ -6,7 +6,7 @@ Object {
     Object {
       "_id": "0",
       "_index": "cdtn_annuaire_test",
-      "_score": 0.48520303,
+      "_score": 0.48520297,
       "_source": Object {
         "address": Object {
           "city": "Le Pontet",
@@ -30,8 +30,11 @@ Object {
       "_type": "_doc",
     },
   ],
-  "max_score": 0.48520303,
-  "total": 1,
+  "max_score": 0.48520297,
+  "total": Object {
+    "relation": "eq",
+    "value": 1,
+  },
 }
 `;
 
@@ -70,6 +73,9 @@ Object {
     },
   ],
   "max_score": 0.6931472,
-  "total": 1,
+  "total": Object {
+    "relation": "eq",
+    "value": 1,
+  },
 }
 `;
