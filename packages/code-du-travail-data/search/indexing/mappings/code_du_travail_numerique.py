@@ -21,8 +21,8 @@ code_du_travail_numerique_mapping = {
                 },
                 'french': {
                     'type': 'text',
-                    'analyzer': 'french',
-                    'search_analyzer': 'french_indexing',
+                    'analyser': 'french_indexing',
+                    'search_analyzer': 'french',
                 },
                 'french_stemmed': {
                     'type': 'text',
