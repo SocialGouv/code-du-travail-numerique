@@ -21,7 +21,6 @@ router.get("/docsCount", async ctx => {
     body: { aggregations }
   } = await elasticsearchClient.search({
     index,
-    type: index,
     body: {
       size: 0,
       aggs: {

@@ -23,7 +23,7 @@ Object {
     ],
     "title": "Dans les HCR, quel est le préavis de démission ?",
   },
-  "_type": "cdtn_document_test",
+  "_type": "_doc",
   "relatedItems": Object {
     "faq": Array [
       Object {
@@ -35,7 +35,7 @@ Object {
           "source": "faq",
           "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
         },
-        "_type": "cdtn_document_test",
+        "_type": "_doc",
       },
     ],
   },
@@ -72,7 +72,7 @@ Object {
 (Article 30.1 de la convention collective nationale des hôtels, cafés, restaurants, que vous pouvez consulter sur le site https://legifrance.gouv.fr avec son numéro d’identification (IDCC) 1979).",
     "title": "Dans les HCR, quel est le préavis de démission ?",
   },
-  "_type": "cdtn_document_test",
+  "_type": "_doc",
   "_version": 1,
   "found": true,
 }
@@ -105,7 +105,7 @@ Object {
     "title": "Démission : comment présenter une démission ?",
     "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
   },
-  "_type": "cdtn_document_test",
+  "_type": "_doc",
   "relatedItems": Object {},
 }
 `;
