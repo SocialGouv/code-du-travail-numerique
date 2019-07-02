@@ -1,19 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { Router } from "../../routes";
 
 export default function Metas({ url, title, description, image }) {
-  useEffect(() => {
-    if (!url && Router && location) {
-      url = `${location.protocol}//${location.host}${Router.asPath}`;
-    }
-    if (!image && location) {
-      image = `${location.protocol}//${
-        location.hostname
-      }/static/images/social-preview.png`;
-    }
-  });
+  if (!url && Router && location) {
+    url = `${location.protocol}//${location.host}${Router.asPath}`;
+  }
+  if (!image && location) {
+    image = `${location.protocol}//${
+      location.hostname
+    }/static/images/social-preview.png`;
+  }
   return (
     <Head>
       <title>{title}</title>
