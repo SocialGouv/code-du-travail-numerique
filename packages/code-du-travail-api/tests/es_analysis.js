@@ -108,7 +108,7 @@ const char_filter = {
 const tokenizer = {
   article_id_tokenizer: {
     type: "simple_pattern",
-    pattern: "[LlRrDd].?[0123456789]{4}-[0123456789]{1,3}-?[0123456789]{1,3}?"
+    pattern: "[0123456789]{4}-[0123456789]{1,3}-?[0123456789]{1,3}?"
   }
 };
 

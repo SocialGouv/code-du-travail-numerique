@@ -48,10 +48,7 @@ async function createIndex(indexName, mappings, data) {
       index: indexName,
       body: data.reduce(
         (state, doc, i) =>
-          state.concat(
-            { index: { _index: indexName, _type: "_doc", _id: i } },
-            doc
-          ),
+          state.concat({ index: { _index: indexName, _id: i } }, doc),
         []
       )
     });

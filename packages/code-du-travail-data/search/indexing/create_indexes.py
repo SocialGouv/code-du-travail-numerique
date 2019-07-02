@@ -59,10 +59,7 @@ def create_index(index_name, mappings):
                 },
             },
         },
-        'mappings': {
-            '_doc': mappings,
-        },
-        'include_type_name': False
+        'mappings': mappings,
     }
     es.indices.create(index=index_name, body=request_body)
     logger.info("Index `%s` created.", index_name)
@@ -85,7 +82,6 @@ def create_documents(index_name, documents):
         {
             '_op_type': 'index',
             '_index': index_name,
-            '_type': '_doc',
             '_source': body
         }
         for body in documents
