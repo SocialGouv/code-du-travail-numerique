@@ -538,7 +538,7 @@ exports[`<Wizard /> should handle initialData 1`] = `
     </div>
     <input
       name="firstName"
-      value="lionel"
+      value=""
     />
     <div
       class="c3"
@@ -640,7 +640,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
     </div>
     <input
       name="firstName"
-      value="lionel"
+      value=""
     />
     <div
       class="c3"

@@ -37,45 +37,22 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
-  padding: 0;
-  text-align: center;
-  font-size: 1.15rem;
-  margin-right: 2em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 1.25rem;
-}
-
 .c8 {
-  font-size: 1.25rem;
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c3 {
@@ -184,7 +161,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   background-color: #adb9c9;
 }
 
-.c11 {
+.c9 {
   margin: 2.5rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -196,7 +173,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c12 {
+.c10 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -219,13 +196,13 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   margin-left: auto;
 }
 
-.c12:not([disabled]):hover,
-.c12:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c12:not([disabled]):active {
+.c10:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -233,7 +210,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   outline: none;
 }
 
-.c12[aria-pressed="true"] {
+.c10[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -242,16 +219,16 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c12[aria-pressed="true"]:not([disabled]):hover,
-.c12[aria-pressed="true"]:not([disabled]):focus {
+.c10[aria-pressed="true"]:not([disabled]):hover,
+.c10[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c12[aria-pressed="true"]:not([disabled]):active {
+.c10[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c12[disabled] {
+.c10[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -265,6 +242,13 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 
 @media print {
   .c2 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media print {
+  .c8 {
     border: none;
     padding: 0 5pt;
   }
@@ -295,7 +279,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
               >
                 1
               </span>
-              Informations générales
+              Introduction
             </span>
             <span
               class="c6"
@@ -305,7 +289,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
               >
                 2
               </span>
-              Ancienneté
+              Informations générales
             </span>
             <span
               class="c6"
@@ -315,7 +299,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
               >
                 3
               </span>
-              Salaires
+              Ancienneté
             </span>
             <span
               class="c6"
@@ -325,119 +309,45 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
               >
                 4
               </span>
+              Salaires
+            </span>
+            <span
+              class="c6"
+            >
+              <span
+                class="c7"
+              >
+                5
+              </span>
               Indemnité légale
             </span>
           </div>
           <div
             class="c1"
           >
-            <p
+            <div
               class="c8"
             >
-              Quel est votre type de contrat ?
-            </p>
-            <div
-              class="c9"
-            >
-              <label
-                class="c10"
-              >
-                <input
-                  name="contrat"
-                  type="radio"
-                  value="cdd"
-                />
-                <span>
-                  Contrat à durée determiné (CDD) ou contrat d’intérim
-                </span>
-              </label>
-              <label
-                class="c10"
-              >
-                <input
-                  name="contrat"
-                  type="radio"
-                  value="cdi"
-                />
-                <span>
-                  Contrat à durée indeterminé (CDI)
-                </span>
-              </label>
-            </div>
-            <p
-              class="c8"
-            >
-              Êtes-vous licencié(e) pour faute grave ou lourde ?
-            </p>
-            <div
-              class="c9"
-            >
-              <label
-                class="c10"
-              >
-                <input
-                  name="fauteGrave"
-                  type="radio"
-                  value="true"
-                />
-                <span>
-                  Oui
-                </span>
-              </label>
-              <label
-                class="c10"
-              >
-                <input
-                  name="fauteGrave"
-                  type="radio"
-                  value="false"
-                />
-                <span>
-                  Non
-                </span>
-              </label>
-            </div>
-            <p
-              class="c8"
-            >
-              Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
-            </p>
-            <div
-              class="c9"
-            >
-              <label
-                class="c10"
-              >
-                <input
-                  name="inaptitude"
-                  type="radio"
-                  value="true"
-                />
-                <span>
-                  Oui
-                </span>
-              </label>
-              <label
-                class="c10"
-              >
-                <input
-                  name="inaptitude"
-                  type="radio"
-                  value="false"
-                />
-                <span>
-                  Non
-                </span>
-              </label>
+              <p>
+                Cet outil permet de calculer l’indemnité minimale de licenciement d’un salarié.
+              </p>
+              <p>
+                Vous pourrez calculer simplement le montant de l’indemnité légale (définie par le Code du travail) et de l’indemnité conventionnelle (si votre branche d’activité prévoit un montant supérieur au Code du travail).
+              </p>
+              <p>
+                Cette simulation nécessite entre 5 et 10 minutes pour être complétée. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives à votre licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
+              </p>
+              <p>
+                Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez cet article (lien vers la fiche SP sur l’IDL). Pour commencer la simulation cliquez sur "Suivant".
+              </p>
             </div>
           </div>
           <div
-            class="c11"
+            class="c9"
           >
             <button
               aria-pressed="false"
-              class="c12"
-              disabled=""
+              class="c10"
             >
               Suivant
             </button>

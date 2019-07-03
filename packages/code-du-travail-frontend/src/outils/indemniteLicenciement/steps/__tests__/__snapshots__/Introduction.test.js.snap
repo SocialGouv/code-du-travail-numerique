@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIntro /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  border-color: transparent;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c1 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <p>
+        Cet outil permet de calculer l’indemnité minimale de licenciement d’un salarié.
+      </p>
+      <p>
+        Vous pourrez calculer simplement le montant de l’indemnité légale (définie par le Code du travail) et de l’indemnité conventionnelle (si votre branche d’activité prévoit un montant supérieur au Code du travail).
+      </p>
+      <p>
+        Cette simulation nécessite entre 5 et 10 minutes pour être complétée. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives à votre licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
+      </p>
+      <p>
+        Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez cet article (lien vers la fiche SP sur l’IDL). Pour commencer la simulation cliquez sur "Suivant".
+      </p>
+    </div>
+  </div>
+</div>
+`;
