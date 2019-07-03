@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getExcludeSources should return all sources execpt one that match value 1`] = `"fiches_service_public,fiches_ministere_travail,code_du_travail,conventions_collectives,modeles_de_courriers,themes,outils,idcc,kali"`;
+exports[`getExcludeSources should return all sources execpt one that match value 1`] = `"fiches_service_public,fiches_ministere_travail,code_du_travail,conventions_collectives,modeles_de_courriers,themes,outils,idcc,kali,external"`;
 
 exports[`getExcludeSources should return empty array if value is empty 1`] = `""`;

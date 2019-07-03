@@ -58,12 +58,6 @@ exports[`<SearchQuery/> should render results 1`] = `
   color: #53657d;
 }
 
-.c9 {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #adb9c9;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,9 +154,6 @@ exports[`<SearchQuery/> should render results 1`] = `
                     >
                       Réponses
                     </span>
-                    <span
-                      class="c9"
-                    />
                   </p>
                 </div>
               </a>
