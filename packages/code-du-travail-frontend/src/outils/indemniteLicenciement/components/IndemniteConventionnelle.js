@@ -28,7 +28,7 @@ function IndemniteCCn({
             <Highlight>{Math.max(indemniteLegale, montant)} €</Highlight>{" "}
             <SmallText>
               {montant > indemniteLegale
-                ? "sur la base du calcul de l'indemnité conventionelle"
+                ? "sur la base du calcul de l’indemnité conventionelle"
                 : "sur la base du calcul de l’indemnité légale"}
             </SmallText>
           </p>

@@ -39,7 +39,7 @@ function Wizard({
     } else {
       /**
        * we update initialValues so we can reset the property once form is finished
-       * if we don't update initialValues, initialValues will still equal to an empty object
+       * if we don’t update initialValues, initialValues will still equal to an empty object
        * and updating to another empty object will not trigger form values udate
        */
       setValues(values);

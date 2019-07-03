@@ -6,7 +6,7 @@ import {
 
 const tests = [
   {
-    title: "2k, 12mois d'ancienneté",
+    title: "2k, 12mois d’ancienneté",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -15,7 +15,7 @@ const tests = [
     }
   },
   {
-    title: "2k, 12mois d'ancienneté, OPE + licenciement eco",
+    title: "2k, 12mois d’ancienneté, OPE + licenciement eco",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -26,7 +26,7 @@ const tests = [
     }
   },
   {
-    title: "2k, 30mois d'ancienneté",
+    title: "2k, 30mois d’ancienneté",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -35,7 +35,7 @@ const tests = [
     }
   },
   {
-    title: "2k, 5ans d'ancienneté, 51ans",
+    title: "2k, 5ans d’ancienneté, 51ans",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -45,7 +45,7 @@ const tests = [
     }
   },
   {
-    title: "2k, 5ans d'ancienneté, 51ans, licenciement eco, OPE",
+    title: "2k, 5ans d’ancienneté, 51ans, licenciement eco, OPE",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -57,7 +57,7 @@ const tests = [
     }
   },
   {
-    title: "2k, 5ans d'ancienneté, 55ans",
+    title: "2k, 5ans d’ancienneté, 55ans",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -67,7 +67,7 @@ const tests = [
     }
   },
   {
-    title: "2k, 41ans d'ancienneté, 55ans",
+    title: "2k, 41ans d’ancienneté, 55ans",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,

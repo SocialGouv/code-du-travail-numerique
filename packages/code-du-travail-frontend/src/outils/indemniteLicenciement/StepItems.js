@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { theme } from "@cdt/ui";
 /**
  * For now, only <Step /> are used but stepItems will
- * allows to navigate between form's steps
+ * allows to navigate between form’s steps
  */
 export function StepItems({ activeIndex = 0, items = [] }) {
   return (

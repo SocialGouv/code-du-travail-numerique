@@ -16,7 +16,7 @@ export const branches = [
   },
   {
     value: "1518",
-    label: "Convention collective nationale de l'Animation"
+    label: "Convention collective nationale de l’Animation"
   },
   {
     value: "0843",
@@ -47,11 +47,11 @@ export const branches = [
   },
   {
     value: "0029",
-    label: "Etablissements privés d'hospitalisation (FEHAP)"
+    label: "Etablissements privés d’hospitalisation (FEHAP)"
   },
   {
     value: "1596",
-    label: "Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)"
+    label: "Ouvriers du bâtiment (entreprises jusqu’à 10 salariés)"
   },
   {
     value: "1597",

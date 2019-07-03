@@ -190,7 +190,7 @@ const tests = [
       dateNotification: "2017-11-01",
       absencePeriods: [
         {
-          type: "Congé parental d'éducation",
+          type: "Congé parental d’éducation",
           duration: 2
         }
       ],

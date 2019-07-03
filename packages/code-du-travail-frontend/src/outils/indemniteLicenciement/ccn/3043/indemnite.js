@@ -1,6 +1,6 @@
 import { round } from "../../math";
 /**
- * calcul de l'indemnite de licenciement conventionnelle
+ * calcul de l’indemnite de licenciement conventionnelle
  * PROPRETE ENTREPRISES ET SERVICES ASSOCIES - IDCC 3043
  * https://github.com/SocialGouv/code-du-travail-numerique/issues/883
  */
@@ -31,7 +31,7 @@ export function getIndemnite({ salaireRef, anciennete }) {
     formulas.push(` + 1/10 * ${round(salaireRef)} * ${remainingAnciennete}`);
   } else {
     error =
-      "Aucune indemnité de licenciement n'est prévue en deça de 2 ans d'ancienneté.";
+      "Aucune indemnité de licenciement n’est prévue en deça de 2 ans d’ancienneté.";
   }
 
   return {

@@ -50,7 +50,7 @@ function getIndemnite({
       indemniteConventionnelle,
       formula,
       error:
-        "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté"
+        "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d’un an d’ancienneté"
     };
   }
   if (motif === DISCIPLINAIRE) {

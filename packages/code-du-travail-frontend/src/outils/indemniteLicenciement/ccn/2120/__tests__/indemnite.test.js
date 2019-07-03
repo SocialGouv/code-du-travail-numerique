@@ -26,14 +26,14 @@ const initialData = {
 
 const tests = [
   {
-    title: "2k, 12mois d'ancienneté",
+    title: "2k, 12mois d’ancienneté",
     data: {
       ...initialData
     },
     result: 0
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
+    title: "2k, 10ans et 8mois d’ancienneté, motif disciplinaire",
     data: {
       ...initialData,
       dateEntree: "2009-01-01",
@@ -44,7 +44,7 @@ const tests = [
     result: 0
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
+    title: "2k, 10ans et 8mois d’ancienneté, motif disciplinaire",
     data: {
       ...initialData,
       dateEntree: "2009-01-01",
@@ -54,7 +54,7 @@ const tests = [
     result: 7753.84
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif economique",
+    title: "2k, 10ans et 8mois d’ancienneté, motif economique",
     data: {
       ...initialData,
       dateEntree: "2009-01-01",
@@ -65,7 +65,7 @@ const tests = [
     result: 9692.3
   },
   {
-    title: "2k, 19ans et 8mois d'ancienneté",
+    title: "2k, 19ans et 8mois d’ancienneté",
     data: {
       ...initialData,
       dateEntree: "2000-01-01",
@@ -75,7 +75,7 @@ const tests = [
     result: 16233.42
   },
   {
-    title: "2k, 19ans et 8mois d'ancienneté, motif economique",
+    title: "2k, 19ans et 8mois d’ancienneté, motif economique",
     data: {
       ...initialData,
       dateEntree: "2000-01-01",
@@ -86,7 +86,7 @@ const tests = [
     result: 19846.15
   },
   {
-    title: "2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000",
+    title: "2k, 20ans et 8mois d’ancienneté, cadre, embauche avant le 2000",
     data: {
       ...initialData,
       dateEntree: "1999-01-01",
@@ -98,7 +98,7 @@ const tests = [
   },
   {
     title:
-      "2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000",
+      "2k, 20ans et 8mois d’ancienneté, motif economique, embauche avant le 2000",
     data: {
       ...initialData,
       dateEntree: "1999-01-01",
@@ -110,7 +110,7 @@ const tests = [
     result: 21692.3
   },
   {
-    title: "2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000",
+    title: "2k, 20ans et 8mois d’ancienneté, non cadre, embauche avant le 2000",
     data: {
       ...initialData,
       dateEntree: "1999-01-01",
@@ -122,7 +122,7 @@ const tests = [
   },
   {
     title:
-      "2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000",
+      "2k, 20ans et 8mois d’ancienneté, ne-sait-pas, embauche avant le 2000",
     data: {
       ...initialData,
       dateEntree: "1999-01-01",
@@ -165,7 +165,7 @@ describe("getIndemnite", () => {
     });
 
     expect(res.error).toMatchInlineSnapshot(
-      `"La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté"`
+      `"La convention collective prévoit une indemnité conventionnelle de licenciement à partir d’un an d’ancienneté"`
     );
   });
   it("should return an error for motif disciplinaire", () => {

@@ -6,7 +6,7 @@ import {
 
 const echelon123 = [
   {
-    title: "2k, 12mois d'ancienneté",
+    title: "2k, 12mois d’ancienneté",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -16,7 +16,7 @@ const echelon123 = [
     expected: 500
   },
   {
-    title: "2k, 12mois d'ancienneté, OPE + licenciement eco",
+    title: "2k, 12mois d’ancienneté, OPE + licenciement eco",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -28,7 +28,7 @@ const echelon123 = [
     expected: 2000
   },
   {
-    title: "2k, 30mois d'ancienneté",
+    title: "2k, 30mois d’ancienneté",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -38,7 +38,7 @@ const echelon123 = [
     expected: 1500
   },
   {
-    title: "2k, 5ans d'ancienneté, 51ans",
+    title: "2k, 5ans d’ancienneté, 51ans",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -49,7 +49,7 @@ const echelon123 = [
     expected: 5000
   },
   {
-    title: "2k, 5ans d'ancienneté, 51ans, licenciement eco, OPE",
+    title: "2k, 5ans d’ancienneté, 51ans, licenciement eco, OPE",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -62,7 +62,7 @@ const echelon123 = [
     expected: 7000
   },
   {
-    title: "2k, 5ans d'ancienneté, 55ans",
+    title: "2k, 5ans d’ancienneté, 55ans",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -73,7 +73,7 @@ const echelon123 = [
     expected: 7000
   },
   {
-    title: "2k, 41ans d'ancienneté, 55ans",
+    title: "2k, 41ans d’ancienneté, 55ans",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -87,7 +87,7 @@ const echelon123 = [
 
 const echelon4 = [
   {
-    title: "2k, 12mois d'ancienneté, groupe IV",
+    title: "2k, 12mois d’ancienneté, groupe IV",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -98,7 +98,7 @@ const echelon4 = [
     expected: 500
   },
   {
-    title: "2k, 12mois d'ancienneté, groupe IV, OPE + licenciement eco",
+    title: "2k, 12mois d’ancienneté, groupe IV, OPE + licenciement eco",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -111,7 +111,7 @@ const echelon4 = [
     expected: 2000
   },
   {
-    title: "2k, 2ans d'ancienneté, groupe IV",
+    title: "2k, 2ans d’ancienneté, groupe IV",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -122,7 +122,7 @@ const echelon4 = [
     expected: 1200
   },
   {
-    title: "2k, 10ans d'ancienneté, groupe IV",
+    title: "2k, 10ans d’ancienneté, groupe IV",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -133,7 +133,7 @@ const echelon4 = [
     expected: 8000
   },
   {
-    title: "2k, 20ans d'ancienneté, groupe IV",
+    title: "2k, 20ans d’ancienneté, groupe IV",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -144,7 +144,7 @@ const echelon4 = [
     expected: 20000
   },
   {
-    title: "2k, 10ans d'ancienneté, 51ans, groupe IV",
+    title: "2k, 10ans d’ancienneté, 51ans, groupe IV",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -170,7 +170,7 @@ const echelon4 = [
     expected: 12000
   },
   {
-    title: "2k, 20ans d'ancienneté, 51ans, groupe IV",
+    title: "2k, 20ans d’ancienneté, 51ans, groupe IV",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -182,7 +182,7 @@ const echelon4 = [
     expected: 22000
   },
   {
-    title: "2k, 20ans d'ancienneté, 51ans, groupe IV, licenciement eco, OPE",
+    title: "2k, 20ans d’ancienneté, 51ans, groupe IV, licenciement eco, OPE",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -196,7 +196,7 @@ const echelon4 = [
     expected: 24000
   },
   {
-    title: "2k, 33ans d'ancienneté, 55ans, groupe IV, licenciement eco, OPE",
+    title: "2k, 33ans d’ancienneté, 55ans, groupe IV, licenciement eco, OPE",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -213,7 +213,7 @@ const echelon4 = [
 
 const echelon5 = [
   {
-    title: "2k, 12mois d'ancienneté, groupe V",
+    title: "2k, 12mois d’ancienneté, groupe V",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -224,7 +224,7 @@ const echelon5 = [
     expected: 500
   },
   {
-    title: "2k, 12mois d'ancienneté, groupe V, OPE + licenciement eco",
+    title: "2k, 12mois d’ancienneté, groupe V, OPE + licenciement eco",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -237,7 +237,7 @@ const echelon5 = [
     expected: 2000
   },
   {
-    title: "2k, 2ans d'ancienneté, groupe V",
+    title: "2k, 2ans d’ancienneté, groupe V",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -248,7 +248,7 @@ const echelon5 = [
     expected: 1600
   },
   {
-    title: "2k, 10ans d'ancienneté, groupe V",
+    title: "2k, 10ans d’ancienneté, groupe V",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -259,7 +259,7 @@ const echelon5 = [
     expected: 12000
   },
   {
-    title: "2k, 20ans d'ancienneté, groupe V",
+    title: "2k, 20ans d’ancienneté, groupe V",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -270,7 +270,7 @@ const echelon5 = [
     expected: 32000
   },
   {
-    title: "2k, 10ans d'ancienneté, 51ans, groupe V",
+    title: "2k, 10ans d’ancienneté, 51ans, groupe V",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -296,7 +296,7 @@ const echelon5 = [
     expected: 16000
   },
   {
-    title: "2k, 20ans d'ancienneté, 51ans, groupe V",
+    title: "2k, 20ans d’ancienneté, 51ans, groupe V",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -308,7 +308,7 @@ const echelon5 = [
     expected: 34000
   },
   {
-    title: "2k, 20ans d'ancienneté, 51ans, groupe V, licenciement eco, OPE",
+    title: "2k, 20ans d’ancienneté, 51ans, groupe V, licenciement eco, OPE",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,
@@ -322,7 +322,7 @@ const echelon5 = [
     expected: 36000
   },
   {
-    title: "2k, 23ans d'ancienneté, 55ans, groupe V, licenciement eco, OPE",
+    title: "2k, 23ans d’ancienneté, 55ans, groupe V, licenciement eco, OPE",
     data: {
       salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
       hasTempsPartiel: false,

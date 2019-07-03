@@ -15,14 +15,14 @@ const initialData = {
 };
 const tests = [
   {
-    title: "2k, 12mois d'ancienneté, 55ans, ouvrier",
+    title: "2k, 12mois d’ancienneté, 55ans, ouvrier",
     data: {
       ...initialData
     },
     result: 0
   },
   {
-    title: "2k, 24mois d'ancienneté, 55ans, ouvrier",
+    title: "2k, 24mois d’ancienneté, 55ans, ouvrier",
     data: {
       ...initialData,
       anciennete: 2
@@ -30,7 +30,7 @@ const tests = [
     result: 400
   },
   {
-    title: "2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible",
+    title: "2k, 24mois d’ancienneté, 61ans, ouvrier, retraite possible",
     data: {
       ...initialData,
       anciennete: 2,
@@ -40,7 +40,7 @@ const tests = [
     result: 320
   },
   {
-    title: "2k, 36mois d'ancienneté, 55ans, ouvrier",
+    title: "2k, 36mois d’ancienneté, 55ans, ouvrier",
     data: {
       ...initialData,
       anciennete: 3
@@ -48,7 +48,7 @@ const tests = [
     result: 1200
   },
   {
-    title: "2k, 24mois d'ancienneté, 55ans, TAM",
+    title: "2k, 24mois d’ancienneté, 55ans, TAM",
     data: {
       ...initialData,
       anciennete: 2,
@@ -57,7 +57,7 @@ const tests = [
     result: 400
   },
   {
-    title: "2k, 36mois d'ancienneté, 55ans, TAM",
+    title: "2k, 36mois d’ancienneté, 55ans, TAM",
     data: {
       ...initialData,
       anciennete: 3,
@@ -66,7 +66,7 @@ const tests = [
     result: 1800
   },
   {
-    title: "2k, 24mois d'ancienneté, 55ans, cadre",
+    title: "2k, 24mois d’ancienneté, 55ans, cadre",
     data: {
       ...initialData,
       anciennete: 2,
@@ -75,7 +75,7 @@ const tests = [
     result: 500
   },
   {
-    title: "2k, 36mois d'ancienneté, 55ans, cadre",
+    title: "2k, 36mois d’ancienneté, 55ans, cadre",
     data: {
       ...initialData,
       anciennete: 3,
@@ -86,7 +86,7 @@ const tests = [
     result: 2200
   },
   {
-    title: "2k, 36mois d'ancienneté, 61ans, cadre, retraite possible",
+    title: "2k, 36mois d’ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialData,
       anciennete: 3,
@@ -99,7 +99,7 @@ const tests = [
     result: 1760
   },
   {
-    title: "2k, 6ans d'ancienneté, 61ans, cadre, retraite possible",
+    title: "2k, 6ans d’ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialData,
       anciennete: 6,
@@ -112,7 +112,7 @@ const tests = [
     result: 3680
   },
   {
-    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
+    title: "2k, 10ans d’ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialData,
       anciennete: 10,
@@ -125,7 +125,7 @@ const tests = [
     result: 8000
   },
   {
-    title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
+    title: "2k, 10ans d’ancienneté, 61ans, cadre, retraite possible",
     data: {
       ...initialData,
       anciennete: 10.3,
