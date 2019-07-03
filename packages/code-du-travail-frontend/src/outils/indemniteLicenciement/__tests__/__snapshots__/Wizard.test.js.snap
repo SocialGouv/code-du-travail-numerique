@@ -448,7 +448,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
 </div>
 `;
 
-exports[`<Wizard /> should handle initialData 1`] = `
+exports[`<Wizard /> should handle initialValues 1`] = `
 .c0 {
   border-bottom: 1px solid #adb9c9;
   padding: 1.25rem 0;
@@ -538,7 +538,7 @@ exports[`<Wizard /> should handle initialData 1`] = `
     </div>
     <input
       name="firstName"
-      value=""
+      value="lionel"
     />
     <div
       class="c3"

@@ -72,13 +72,13 @@ describe("<Wizard />", () => {
     button.click();
     expect(container).toMatchSnapshot();
   });
-  it("should handle initialData", () => {
+  it("should handle initialValues", () => {
     const onSubmit = jest.fn();
     const { container } = render(
       <Wizard
         steps={[FinalFormStep]}
         onSubmit={onSubmit}
-        initialData={{ firstName: "lionel" }}
+        initialValues={{ firstName: "lionel" }}
       />
     );
     expect(container).toMatchSnapshot();
