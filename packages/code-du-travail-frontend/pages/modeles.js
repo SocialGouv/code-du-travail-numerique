@@ -14,7 +14,13 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchAllModeles = () => fetch(`${API_URL}/modeles`).then(r => r.json());
+const fetchAllModeles = () =>
+  fetch(`${API_URL}/modeles`).then(res => {
+    if (!res.ok) {
+      throw { statusCode: res.status, ...res };
+    }
+    return res.json();
+  });
 
 class Modeles extends React.Component {
   static async getInitialProps() {
@@ -23,7 +29,7 @@ class Modeles extends React.Component {
   }
 
   render() {
-    const { data, pageUrl, ogImage } = this.props;
+    const { data = { hits: {} }, pageUrl, ogImage } = this.props;
     return (
       <PageLayout>
         <Metas
@@ -44,7 +50,7 @@ class Modeles extends React.Component {
   }
 }
 
-const List = ({ items, ...props }) => (
+const List = ({ items = [], ...props }) => (
   <ul {...props}>
     {items.map(({ id, _source }) => (
       <Item key={id}>
