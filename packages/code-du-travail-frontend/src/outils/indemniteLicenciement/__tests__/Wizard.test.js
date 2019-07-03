@@ -90,7 +90,7 @@ describe("<Wizard />", () => {
       <Wizard
         steps={[FinalFormStep]}
         onSubmit={onSubmit}
-        initialData={{ firstName: "lionel" }}
+        initialValues={{ firstName: "lionel" }}
         rules={[<Rule key="key" />]}
       />
     );

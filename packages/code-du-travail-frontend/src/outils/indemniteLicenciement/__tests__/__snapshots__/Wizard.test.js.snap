@@ -640,7 +640,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
     </div>
     <input
       name="firstName"
-      value=""
+      value="lionel"
     />
     <div
       class="c3"
