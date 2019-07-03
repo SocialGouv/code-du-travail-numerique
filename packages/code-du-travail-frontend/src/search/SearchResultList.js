@@ -17,7 +17,7 @@ const SearchResult = ({ result }) => {
         <P>
           <Label>Source</Label>: <Label>{getLabelBySource(source)}</Label>
           {source && author ? " - " : null}
-          <Value>{author}</Value>
+          {author && <Value>{author}</Value>}
         </P>
       </Content>
     </React.Fragment>
@@ -47,16 +47,22 @@ const SearchResultList = ({ items, query }) => {
   return (
     <List>
       {items.map(({ _id, _source }, i) => (
-        <ListItem key={_id}>
-          <Link
-            route={getRouteBySource(_source.source)}
-            params={{ q: query, slug: _source.slug }}
-            passHref
-          >
-            <ListLink focused={i === 0}>
+        <ListItem key={_id + _source.url}>
+          {_source.source === "external" ? (
+            <ListLink focused={i === 0} href={_source.url} target="_blank">
               <SearchResult result={_source} />
             </ListLink>
-          </Link>
+          ) : (
+            <Link
+              route={getRouteBySource(_source.source)}
+              params={{ q: query, slug: _source.slug }}
+              passHref
+            >
+              <ListLink focused={i === 0}>
+                <SearchResult result={_source} />
+              </ListLink>
+            </Link>
+          )}
         </ListItem>
       ))}
     </List>

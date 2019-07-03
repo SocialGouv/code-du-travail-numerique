@@ -8,6 +8,7 @@ import ArticleIcon from "../icons/ArticleIcon";
 import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
 import DossierIcon from "../icons/DossierIcon";
 import OutilIcon from "../icons/OutilsIcon";
+import LinkIcon from "../icons/LinkIcon";
 
 const SourceIcon = ({ source = "" }) => {
   switch (source) {
@@ -27,6 +28,8 @@ const SourceIcon = ({ source = "" }) => {
       return <ResultIcon as={OutilIcon} />;
     case "kali":
       return <ResultIcon as={ArticleIcon} />;
+    case "external":
+      return <ResultIcon as={LinkIcon} />;
     default:
       return null;
   }

@@ -76,7 +76,8 @@ const replaceReference = async (title, ref) => {
     return {
       _source: {
         title: await getUrlTitle(ref.url),
-        url: ref.url
+        url: ref.url,
+        source: "external"
       },
       relevance: ref.relevance
     };

@@ -13,7 +13,8 @@ const sourcesPriority = [
   "faq",
   "fiche-service-public",
   "fiche-ministere-travail",
-  "code-du-travail"
+  "code-du-travail",
+  "external"
 ];
 
 const getSource = url => {

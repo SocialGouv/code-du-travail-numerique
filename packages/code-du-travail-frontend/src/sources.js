@@ -24,7 +24,8 @@ const labelBySource = {
   outils: "Outils",
   idcc: "Legifrance",
   kali: "Legifrance",
-  fiches: "Fiches"
+  fiches: "Fiches",
+  external: "Ressources externes"
 };
 
 export const getLabelBySource = src => labelBySource[src] || "";
