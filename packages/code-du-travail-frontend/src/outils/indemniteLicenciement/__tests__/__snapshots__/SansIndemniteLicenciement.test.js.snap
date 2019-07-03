@@ -39,7 +39,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
     class="c0"
   >
     <h3>
-      Convention collective nationale de l'Animation
+      Convention collective nationale de l’Animation
     </h3>
     <p>
       Pour votre branche, le calcul de l’indemnité de licenciement se base sur l’indemnité légale de licenciement.
