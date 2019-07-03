@@ -17,7 +17,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 9.220069,
+        "_score": 8.583372,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -29,7 +29,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 4.902408,
+        "_score": 4.803043,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -40,7 +40,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 9.220069,
+    "max_score": 8.583372,
     "total": 2,
   },
 }
@@ -75,7 +75,7 @@ Object {
       Object {
         "_id": "6",
         "_index": "cdtn_document_test",
-        "_score": 3.535817,
+        "_score": 3.114266,
         "_source": Object {
           "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
           "source": "faq",
@@ -86,7 +86,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 3.297092,
+        "_score": 2.7238865,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -95,7 +95,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 3.535817,
+    "max_score": 3.114266,
     "total": 2,
   },
 }
@@ -108,17 +108,13 @@ Object {
       "doc_count": 1,
       "key": "fiches_ministere_travail",
     },
-    Object {
-      "doc_count": 1,
-      "key": "fiches_service_public",
-    },
   ],
   "hits": Object {
     "hits": Array [
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 29.635727,
+        "_score": 11.971636,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -128,26 +124,14 @@ Object {
         },
         "_type": "_doc",
       },
-      Object {
-        "_id": "5",
-        "_index": "cdtn_document_test",
-        "_score": 3.6072366,
-        "_source": Object {
-          "slug": "demission-dune-assistante-maternelle",
-          "source": "fiches_service_public",
-          "title": "Démission d'une assistante maternelle",
-          "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-        },
-        "_type": "_doc",
-      },
     ],
-    "max_score": 29.635727,
-    "total": 3,
+    "max_score": 11.971636,
+    "total": 2,
   },
   "snippet": Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 25.251722,
+    "_score": 9.876759,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
