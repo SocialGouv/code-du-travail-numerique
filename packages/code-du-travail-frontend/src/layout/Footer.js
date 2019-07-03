@@ -162,7 +162,8 @@ const CategoryTitle = styled.h3`
 
 const StyledListItem = styled(ListItem)`
   margin: ${spacing.xsmall} 0;
-  a {
+  a,
+  a:visited {
     color: ${colors.darkText};
   }
 `;

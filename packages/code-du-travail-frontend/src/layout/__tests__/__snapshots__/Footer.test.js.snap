@@ -133,7 +133,8 @@ exports[`<Footer /> should render 1`] = `
   margin: 0.5rem 0;
 }
 
-.c12 a {
+.c12 a,
+.c12 a:visited {
   color: #434956;
 }
 

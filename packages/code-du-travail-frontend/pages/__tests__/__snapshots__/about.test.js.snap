@@ -234,7 +234,8 @@ exports[`<About /> should render 1`] = `
   margin: 0.5rem 0;
 }
 
-.c21 a {
+.c21 a,
+.c21 a:visited {
   color: #434956;
 }
 
