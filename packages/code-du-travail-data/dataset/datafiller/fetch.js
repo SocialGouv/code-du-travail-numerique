@@ -53,19 +53,31 @@ const getVariants = row => {
   const variants = [row.title.replace("-", " ")].concat(others);
   return [...new Set(variants)];
 };
+
+const sortByKey = key => (a, b) => {
+  if (a[key] < b[key]) {
+    return -1;
+  } else if (a[key] > b[key]) {
+    return 1;
+  }
+  return 0;
+};
+
 // import only valid data from datafiller
 // == has more than one ref
 const fetchAll = () =>
-  fetch(DATAFILLER_URL)
+  fetch(DATAFILLER_URL + "?_sort=title")
     .then(res => res.json())
     .then(json => json.data)
     .then(data => data.filter(item => item.refs && item.refs.length > 1))
     .then(rows =>
-      rows.map(row => ({
-        ...row,
-        refs: row.refs.filter(hasUrl).sort(sortRefs),
-        variants: getVariants(row)
-      }))
+      rows
+        .map(row => ({
+          ...row,
+          refs: row.refs.filter(hasUrl).sort(sortRefs),
+          variants: getVariants(row)
+        }))
+        .sort(sortByKey("title"))
     );
 
 module.exports = fetchAll;
