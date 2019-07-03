@@ -63,7 +63,24 @@ const getReference = (title, ref) => {
     });
 };
 
+const cleanTitle = title => title.trim();
+
+const getUrlTitle = url =>
+  fetch(url)
+    .then(r => r.text())
+    .then(text => text.match(/<title>([^<]+)<\/title>/i))
+    .then(matches => (matches && cleanTitle(matches[1])) || url);
+
 const replaceReference = async (title, ref) => {
+  if (ref.url.match(/^https?:/)) {
+    return {
+      _source: {
+        title: await getUrlTitle(ref.url),
+        url: ref.url
+      },
+      relevance: ref.relevance
+    };
+  }
   const hit = await getReference(title, ref);
   if (hit) {
     return {
@@ -71,12 +88,7 @@ const replaceReference = async (title, ref) => {
       relevance: ref.relevance
     };
   }
-  return {
-    _source: {
-      title,
-      url: ref.url
-    }
-  };
+  return;
 };
 
 // check refs against ES
