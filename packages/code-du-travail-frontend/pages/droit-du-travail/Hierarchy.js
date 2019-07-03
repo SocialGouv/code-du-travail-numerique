@@ -514,14 +514,13 @@ const Li = styled(ListItem)`
 
 const NumberWrapper = styled.div`
   position: absolute;
-  flex: 0 0 100px;
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: -100px;
+  left: -70px;
   height: 100%;
   @media (max-width: ${breakpoints.tablet}) {
-    flex: 0 0 auto;
     position: relative;
     left: 0;
   }

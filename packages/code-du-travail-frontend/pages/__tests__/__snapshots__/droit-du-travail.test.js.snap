@@ -519,9 +519,9 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c30 {
   position: absolute;
-  -webkit-flex: 0 0 100px;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -534,7 +534,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  left: -100px;
+  left: -70px;
   height: 100%;
 }
 
@@ -708,9 +708,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 @media (max-width:980px) {
   .c30 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
     position: relative;
     left: 0;
   }
