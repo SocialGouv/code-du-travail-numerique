@@ -29,16 +29,15 @@ export default class MyApp extends App {
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }
-    // pageUrl is only defined on serverside request
-    pageProps.pageUrl = ctx.req
-      ? `${ctx.req.protocol}://${ctx.req.headers.host}${ctx.req.path}`
-      : undefined;
-
-    pageProps.ogImage =
-      ctx.req &&
-      `${ctx.req.protocol}://${
+    // pageUrl and ogImage are only defined on serverside request
+    if (ctx.req) {
+      pageProps.pageUrl = `${ctx.req.protocol}://${ctx.req.headers.host}${
+        ctx.req.path
+      }`;
+      pageProps.ogImage = `${ctx.req.protocol}://${
         ctx.req.headers.host
       }/static/images/social-preview.png`;
+    }
 
     return { pageProps };
   }
