@@ -39,7 +39,6 @@ const filter = {
   // liste de termes et leurs synonymes
   french_synonyms: {
     type: "synonym",
-    ignore_case: true,
     expand: true,
     synonyms: synonyms
   },
@@ -59,14 +58,13 @@ const analyzer = {
   idcc_ape: {
     tokenizer: "whitespace"
   },
-  french_stemmed: {
+  french_with_synonyms: {
     tokenizer: "icu_tokenizer",
     char_filter: ["html_strip"],
     filter: [
       "french_elision",
       "icu_folding",
       "lowercase",
-      "french_acronyms",
       "french_synonyms",
       "french_stop",
       "french_stemmer"

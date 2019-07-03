@@ -54,7 +54,7 @@ router.get("/items/:id", async ctx => {
 
   const response = await elasticsearchClient.get({
     index: index,
-    type: index,
+    type: "_doc",
     id
   });
   ctx.body = response.body;

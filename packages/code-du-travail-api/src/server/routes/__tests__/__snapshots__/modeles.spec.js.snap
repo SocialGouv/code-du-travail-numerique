@@ -12,7 +12,7 @@ Object {
         "slug": "rupture-de-periode-dessai",
         "title": "Rupture de période d'essai",
       },
-      "_type": "cdtn_document_test",
+      "_type": "_doc",
     },
     Object {
       "_id": "13",
@@ -23,7 +23,7 @@ Object {
         "slug": "rupture-du-contrat-en-periode-dessai",
         "title": "Rupture du contrat en période d'essai",
       },
-      "_type": "cdtn_document_test",
+      "_type": "_doc",
     },
   ],
   "max_score": 0,

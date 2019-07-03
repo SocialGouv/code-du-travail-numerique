@@ -9,9 +9,9 @@ const annuaireData = require("./cdtn_annuaire_data.json");
 const documentIndexName = "cdtn_document_test";
 const annuaireIndexName = "cdtn_annuaire_test";
 
-async function createIndex(indexName, mapping, data) {
-  const exists = await client.indices.exists({ index: indexName });
-  if (exists) {
+async function createIndex(indexName, mappings, data) {
+  const { body } = await client.indices.exists({ index: indexName });
+  if (body) {
     try {
       await client.indices.delete({ index: indexName });
       logger.info(`Index ${indexName} deleted.`);
@@ -22,6 +22,7 @@ async function createIndex(indexName, mapping, data) {
   try {
     await client.indices.create({
       index: indexName,
+      includeTypeName: false,
       body: {
         settings: {
           number_of_shards: 1,
@@ -35,9 +36,7 @@ async function createIndex(indexName, mapping, data) {
             }
           }
         },
-        mappings: {
-          [indexName]: mapping
-        }
+        mappings: mappings
       }
     });
     logger.info(`Index ${indexName} created.`);
@@ -50,7 +49,7 @@ async function createIndex(indexName, mapping, data) {
       body: data.reduce(
         (state, doc, i) =>
           state.concat(
-            { index: { _index: indexName, _type: indexName, _id: i } },
+            { index: { _index: indexName, _type: "_doc", _id: i } },
             doc
           ),
         []

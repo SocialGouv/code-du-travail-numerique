@@ -41,7 +41,10 @@ def drop_index(index_name):
         logger.info("Index `%s` dropped.", index_name)
 
 
-def create_index(index_name, mapping_name, mapping):
+def create_index(index_name, mappings):
+    """
+    create the given index_name using given mappings.
+    """
     es = get_es_client()
     request_body = {
         'settings': {
@@ -57,8 +60,9 @@ def create_index(index_name, mapping_name, mapping):
             },
         },
         'mappings': {
-            mapping_name: mapping,
+            '_doc': mappings,
         },
+        'include_type_name': False
     }
     es.indices.create(index=index_name, body=request_body)
     logger.info("Index `%s` created.", index_name)
@@ -72,13 +76,16 @@ def chunks(l, n):
         yield l[i:i+n]
 
 
-def create_documents(index_name, type_name, documents):
+def create_documents(index_name, documents):
+    """
+    Fill the given index_name with documents.
+    """
     es = get_es_client()
     actions = [
         {
             '_op_type': 'index',
             '_index': index_name,
-            '_type': type_name,
+            '_type': '_doc',
             '_source': body
         }
         for body in documents
@@ -96,10 +103,10 @@ if __name__ == '__main__':
 
     name = 'code_du_travail_numerique'
     drop_index(name)
-    create_index(index_name=name, mapping_name=name, mapping=code_du_travail_numerique_mapping)
-    create_documents(index_name=name, type_name=name, documents=CDTN_DOCUMENTS)
+    create_index(index_name=name, mappings=code_du_travail_numerique_mapping)
+    create_documents(index_name=name, documents=CDTN_DOCUMENTS)
 
     name = 'cdtn_annuaire'
     drop_index(name)
-    create_index(index_name=name, mapping_name=name, mapping=cdtn_annuaire_mapping)
-    create_documents(index_name=name, type_name=name, documents=ANNUAIRE_DOCUMENTS)
+    create_index(index_name=name, mappings=cdtn_annuaire_mapping)
+    create_documents(index_name=name, documents=ANNUAIRE_DOCUMENTS)
