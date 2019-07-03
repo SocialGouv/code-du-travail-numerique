@@ -31,7 +31,8 @@ const labelBySource = {
 export const getLabelBySource = src => labelBySource[src] || "";
 export const getRouteBySource = src => routeBySource[src];
 
-const sources = Object.keys(routeBySource);
+// external doesnt have a route so we add it here
+const sources = Object.keys(routeBySource).concat(["external"]);
 export const getExcludeSources = value => {
   if (Boolean(value) === false) return "";
   return sources.filter(source => source.startsWith(value) === false).join(",");
