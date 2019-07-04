@@ -1,6 +1,5 @@
 import React, { useReducer, useState } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
 
