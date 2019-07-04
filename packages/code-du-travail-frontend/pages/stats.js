@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import { Alert, Container, Section, Wrapper, Grid, GridCell } from "@cdt/ui";
+import { Container, Section, Wrapper, Grid, GridCell } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 
 const About = () => (
@@ -22,27 +22,19 @@ const About = () => (
           <Grid>
             <GridCell>
               <h3>Contenus référencés</h3>
-              <Num>76576</Num>
+              <Num>14369</Num>
             </GridCell>
             <GridCell>
               <h3>Visites</h3>
-              <Num>23198</Num>
+              <Num>2992</Num>
             </GridCell>
             <GridCell>
               <h3>Recherches</h3>
-              <Num>41987</Num>
+              <Num>15368</Num>
             </GridCell>
             <GridCell>
               <h3>Consultations</h3>
-              <Num>47820</Num>
-            </GridCell>
-            <GridCell>
-              <h3>Taux de conversion</h3>
-              <Num>28 %</Num>
-            </GridCell>
-            <GridCell>
-              <h3>Taux de satisfaction</h3>
-              <Num>32 %</Num>
+              <Num>30736</Num>
             </GridCell>
           </Grid>
           <br />
