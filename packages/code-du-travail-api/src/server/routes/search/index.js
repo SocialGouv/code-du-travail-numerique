@@ -21,14 +21,16 @@ const router = new Router({ prefix: API_BASE_URL });
  *
  * @param {string} querystring.q A `q` querystring param containing the query to process.
  * @param {string} querystring.excludeSources A `excludeSources` querystring param containing the sources (comma separatied list) to exclude from the results
+ * @param {string} querystring.skipGuess A `skipGuess` querystring param indicates that we skip the prequalified search
  * @returns {Object} Results.
  */
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
+  const skipGuess = !!ctx.request.query.skipGuess;
   const excludeSources = (ctx.request.query.excludeSources || "").split(",");
 
   // shortcut ES if we find a known query
-  const knownQueryResult = getKnownQuery(query, excludeSources);
+  const knownQueryResult = !skipGuess && getKnownQuery(query, excludeSources);
 
   if (knownQueryResult) {
     ctx.body = knownQueryResult;
