@@ -18,7 +18,6 @@ const About = () => (
         <Wrapper variant="light">
           <h1>Statistiques du code du travail numérique</h1>
           <br />
-          <br />
           <Grid>
             <GridCell>
               <h3>Contenus référencés</h3>
@@ -38,7 +37,7 @@ const About = () => (
             </GridCell>
           </Grid>
           <br />
-          <br />
+          <p>Statistiques d’usage depuis le 1er Janvier 2019</p>
           <br />
           <br />
         </Wrapper>
