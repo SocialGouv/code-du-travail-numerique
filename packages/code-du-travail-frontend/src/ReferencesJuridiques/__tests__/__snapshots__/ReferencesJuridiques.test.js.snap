@@ -270,6 +270,12 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c3 {
     border: none;

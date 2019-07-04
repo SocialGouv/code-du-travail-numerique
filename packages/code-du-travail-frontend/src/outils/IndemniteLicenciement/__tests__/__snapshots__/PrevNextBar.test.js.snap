@@ -2,7 +2,7 @@
 
 exports[`<PrevNextBar /> should render 1`] = `
 .c0 {
-  margin: 2.5rem 0;
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,7 +156,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 
 exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 .c0 {
-  margin: 2.5rem 0;
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -311,7 +311,7 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 
 exports[`<PrevNextBar /> should render only next button 1`] = `
 .c0 {
-  margin: 2.5rem 0;
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -465,7 +465,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 
 exports[`<PrevNextBar /> should render only prev button 1`] = `
 .c0 {
-  margin: 2.5rem 0;
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

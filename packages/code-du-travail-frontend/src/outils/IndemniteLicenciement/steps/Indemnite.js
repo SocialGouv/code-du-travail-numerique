@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
-import { Button, Container, theme } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui";
 import styled from "styled-components";
 
 import { branches } from "../branches";
@@ -19,7 +19,7 @@ function validateCCn(idcc) {
 function StepIndemnite({ form }) {
   const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
   return (
-    <Container>
+    <>
       <IndemniteLegale indemnite={indemniteLegale} formula={formuleLegale} />
       <br />
       <br />
@@ -62,7 +62,7 @@ function StepIndemnite({ form }) {
           </>
         )}
       </Field>
-    </Container>
+    </>
   );
 }
 StepIndemnite.propTypes = {

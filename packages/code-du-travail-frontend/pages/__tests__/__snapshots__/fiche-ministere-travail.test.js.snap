@@ -725,6 +725,12 @@ exports[`<FicheMT /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c25 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c25 {
     border: none;

@@ -650,6 +650,12 @@ exports[`<DroitDuTravail /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c10 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c10 {
     border: none;

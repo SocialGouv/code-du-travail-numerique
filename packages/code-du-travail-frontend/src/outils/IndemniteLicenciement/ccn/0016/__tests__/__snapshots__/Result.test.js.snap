@@ -1,20 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> should render 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
@@ -74,78 +60,73 @@ exports[`<Result /> should render 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
+.c0 {
   font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
 
-.c2 {
+.c1 {
   font-size: 1.625rem;
   font-weight: 700;
   color: #0053b3;
 }
 
-.c3 {
+.c2 {
   color: #434956;
   font-style: italic;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
+.c3 {
+  margin-bottom: 1rem;
 }
 
 <div>
-  <div
+  <h2
     class="c0"
   >
-    <h2
+    Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+  </h2>
+  <p>
+    Le montant de l’indemnité est
+     
+    <strong
       class="c1"
     >
-      Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
-    </h2>
-    <p>
-      Le montant de l’indemnité est
-       
-      <strong
-        class="c2"
-      >
-        5650
-         €
-      </strong>
-       
-      <span
-        class="c3"
-      >
-        sur la base du calcul de l'indemnité conventionelle
-      </span>
-    </p>
-    <br />
-    <details>
-      <summary>
-        Voir le detail du calcul
-      </summary>
-      <div
-        id="react-mathjax-preview"
-      >
-        <div
-          id="react-mathjax-preview-result"
-        >
-          \`4/10 * 2000 * 10 + 3/10 * 2000 * 0.41  + 4000- 6600\`
-        </div>
-      </div>
-    </details>
-    <br />
-    <br />
-    <button
-      aria-pressed="false"
-      class="c4"
+      5650
+       €
+    </strong>
+     
+    <span
+      class="c2"
     >
-      Recommencer une simulation
-    </button>
-  </div>
+      sur la base du calcul de l'indemnité conventionelle
+    </span>
+  </p>
+  <br />
+  <details>
+    <summary
+      class="c3"
+    >
+      Voir le detail du calcul
+    </summary>
+    <div
+      id="react-mathjax-preview"
+    >
+      <div
+        id="react-mathjax-preview-result"
+      >
+        \`4/10 * 2000 * 10 + 3/10 * 2000 * 0.41  + 4000- 6600\`
+      </div>
+    </div>
+  </details>
+  <br />
+  <br />
+  <button
+    aria-pressed="false"
+    class="c4"
+  >
+    Recommencer une simulation
+  </button>
 </div>
 `;

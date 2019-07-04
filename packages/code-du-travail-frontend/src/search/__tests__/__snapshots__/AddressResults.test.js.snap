@@ -245,10 +245,22 @@ exports[`<AddressResults/> should render no results 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c2 {
     border: none;
     padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0.625rem 1.25rem;
   }
 }
 
@@ -607,10 +619,22 @@ exports[`<AddressResults/> should render results 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c2 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c2 {
     border: none;
     padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c10 {
+    padding: 0.625rem 1.25rem;
   }
 }
 

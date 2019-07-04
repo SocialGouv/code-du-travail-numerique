@@ -13,6 +13,10 @@ exports[`<IndemniteLegale /> should render error 1`] = `
   color: #0053b3;
 }
 
+.c2 {
+  margin-bottom: 1rem;
+}
+
 <div>
   <h2
     class="c0"
@@ -31,7 +35,9 @@ exports[`<IndemniteLegale /> should render error 1`] = `
   </p>
   <br />
   <details>
-    <summary>
+    <summary
+      class="c2"
+    >
       Voir le detail du calcul
     </summary>
     <div
@@ -60,6 +66,10 @@ exports[`<IndemniteLegale /> should render results 1`] = `
   color: #0053b3;
 }
 
+.c2 {
+  margin-bottom: 1rem;
+}
+
 <div>
   <h2
     class="c0"
@@ -78,7 +88,9 @@ exports[`<IndemniteLegale /> should render results 1`] = `
   </p>
   <br />
   <details>
-    <summary>
+    <summary
+      class="c2"
+    >
       Voir le detail du calcul
     </summary>
     <div

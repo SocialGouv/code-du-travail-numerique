@@ -15,6 +15,22 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c9 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c9 > *:first-child {
+  margin-top: 0;
+}
+
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   padding: 1.25rem 0;
 }
@@ -26,6 +42,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   border-style: solid;
   border-radius: 0.25rem;
   border-color: #c9d3df;
+  padding: 2rem 2.5rem;
   background-color: #fff;
 }
 
@@ -37,7 +54,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
+.c10 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -47,17 +64,18 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   border-color: transparent;
 }
 
-.c8 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
 .c3 {
   border-bottom: 1px solid #adb9c9;
-  padding: 1.25rem 0;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,47 +86,43 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 }
 
 .c4 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #0053b3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #0053b3;
 }
 
 .c6 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 1.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #adb9c9;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #adb9c9;
 }
 
 .c5 {
@@ -161,8 +175,8 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   background-color: #adb9c9;
 }
 
-.c9 {
-  margin: 2.5rem 0;
+.c11 {
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -173,7 +187,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c10 {
+.c12 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -196,13 +210,13 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   margin-left: auto;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c10:not([disabled]):active {
+.c12:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -210,7 +224,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   outline: none;
 }
 
-.c10[aria-pressed="true"] {
+.c12[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -219,18 +233,23 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):hover,
-.c10[aria-pressed="true"]:not([disabled]):focus {
+.c12[aria-pressed="true"]:not([disabled]):hover,
+.c12[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):active {
+.c12[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c10[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+}
+
+.c8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media print {
@@ -241,14 +260,33 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 }
 
 @media print {
+  .c9 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c2 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
   .c2 {
     border: none;
     padding: 0 5pt;
   }
 }
 
+@media (max-width:600px) {
+  .c10 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
-  .c8 {
+  .c10 {
     border: none;
     padding: 0 5pt;
   }
@@ -323,41 +361,45 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
             </span>
           </div>
           <div
-            class="c1"
+            class="c8 c9"
           >
             <div
-              class="c8"
+              class="c1"
             >
-              <p>
-                Ce simulateur est un outil qui permet d’estimer le montant de l’indemnité minimale de licenciement d’un salarié.
-              </p>
-              <p>
-                Vous pourrez simuler simplement le montant de l’indemnité légale définie par le Code du travail et le montant de l’indemnité conventionnelle de licenciement si votre branche d’activité prévoit un montant supérieur au Code du travail.
-              </p>
-              <p>
-                Cette simulation nécessite entre 5 et 10 minutes. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives à votre licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
-              </p>
-              <p>
-                Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez
-                 
-                <a
-                  href="/fiche-service-public/indemnite-de-licenciement"
-                >
-                  cet article
-                </a>
-                .
-              </p>
-              <p>
-                Pour commencer la simulation cliquez sur "Suivant".
-              </p>
+              <div
+                class="c10"
+              >
+                <p>
+                  Ce simulateur est un outil qui permet d’estimer le montant de l’indemnité minimale de licenciement d’un salarié.
+                </p>
+                <p>
+                  Vous pourrez simuler simplement le montant de l’indemnité légale définie par le Code du travail et le montant de l’indemnité conventionnelle de licenciement si votre branche d’activité prévoit un montant supérieur au Code du travail.
+                </p>
+                <p>
+                  Cette simulation nécessite entre 5 et 10 minutes. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives à votre licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
+                </p>
+                <p>
+                  Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez
+                   
+                  <a
+                    href="/fiche-service-public/indemnite-de-licenciement"
+                  >
+                    cet article
+                  </a>
+                  .
+                </p>
+                <p>
+                  Pour commencer la simulation cliquez sur "Suivant".
+                </p>
+              </div>
             </div>
           </div>
           <div
-            class="c9"
+            class="c11"
           >
             <button
               aria-pressed="false"
-              class="c10"
+              class="c12"
             >
               Suivant
             </button>

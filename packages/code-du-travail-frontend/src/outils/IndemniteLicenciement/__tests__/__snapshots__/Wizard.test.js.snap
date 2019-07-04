@@ -1,9 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Wizard /> should call navigate the previous step when click on précédent 1`] = `
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   border-bottom: 1px solid #adb9c9;
-  padding: 1.25rem 0;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,47 +31,43 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c1 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #0053b3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #0053b3;
 }
 
 .c3 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 1.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #adb9c9;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #adb9c9;
 }
 
 .c2 {
@@ -107,8 +120,8 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   background-color: #adb9c9;
 }
 
-.c5 {
-  margin: 2.5rem 0;
+.c7 {
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,7 +132,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   justify-content: space-between;
 }
 
-.c6 {
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -142,13 +155,13 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin-left: auto;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c8:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -156,7 +169,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c8[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -165,18 +178,30 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c8[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c6[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+}
+
+.c5 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
@@ -205,15 +230,19 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
         Second Step
       </span>
     </div>
-    <p>
-      Premiere Etape
-    </p>
     <div
-      class="c5"
+      class="c5 c6"
+    >
+      <p>
+        Premiere Etape
+      </p>
+    </div>
+    <div
+      class="c7"
     >
       <button
         aria-pressed="false"
-        class="c6"
+        class="c8"
       >
         Suivant
       </button>
@@ -223,9 +252,26 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 `;
 
 exports[`<Wizard /> should call navigate to the second step when click on Suivant 1`] = `
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   border-bottom: 1px solid #adb9c9;
-  padding: 1.25rem 0;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -235,48 +281,44 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   flex-wrap: wrap;
 }
 
-.c1 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #0053b3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #adb9c9;
 }
 
-.c3 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 1.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #adb9c9;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #0053b3;
 }
 
 .c4 {
@@ -329,8 +371,8 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   background-color: #adb9c9;
 }
 
-.c5 {
-  margin: 2.5rem 0;
+.c7 {
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -341,7 +383,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   justify-content: space-between;
 }
 
-.c6 {
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -364,13 +406,13 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   margin-right: auto;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c6:not([disabled]):active {
+.c8:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -378,7 +420,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c8[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -387,18 +429,30 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c8[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c6[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+}
+
+.c5 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
@@ -427,18 +481,22 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
         Second Step
       </span>
     </div>
-    <p>
-      Deuxieme Etape 
-      <button>
-        Submit
-      </button>
-    </p>
     <div
-      class="c5"
+      class="c5 c6"
+    >
+      <p>
+        Deuxieme Etape 
+        <button>
+          Submit
+        </button>
+      </p>
+    </div>
+    <div
+      class="c7"
     >
       <button
         aria-pressed="false"
-        class="c6"
+        class="c8"
         type="button"
       >
         Précédent
@@ -449,9 +507,26 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
 `;
 
 exports[`<Wizard /> should handle initialValues 1`] = `
+.c4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   border-bottom: 1px solid #adb9c9;
-  padding: 1.25rem 0;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,25 +537,23 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c1 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #0053b3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #0053b3;
 }
 
 .c2 {
@@ -508,8 +581,8 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   background-color: #0053b3;
 }
 
-.c3 {
-  margin: 2.5rem 0;
+.c5 {
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -518,6 +591,18 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media print {
+  .c4 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
@@ -536,21 +621,42 @@ exports[`<Wizard /> should handle initialValues 1`] = `
         final form
       </span>
     </div>
-    <input
-      name="firstName"
-      value="lionel"
-    />
     <div
-      class="c3"
+      class="c3 c4"
+    >
+      <input
+        name="firstName"
+        value="lionel"
+      />
+    </div>
+    <div
+      class="c5"
     />
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should inject rules component 1`] = `
+.c4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   border-bottom: 1px solid #adb9c9;
-  padding: 1.25rem 0;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -561,25 +667,23 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c1 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #0053b3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #0053b3;
 }
 
 .c2 {
@@ -607,8 +711,8 @@ exports[`<Wizard /> should inject rules component 1`] = `
   background-color: #0053b3;
 }
 
-.c3 {
-  margin: 2.5rem 0;
+.c5 {
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -617,6 +721,18 @@ exports[`<Wizard /> should inject rules component 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.c3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media print {
+  .c4 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
@@ -638,21 +754,42 @@ exports[`<Wizard /> should inject rules component 1`] = `
         final form
       </span>
     </div>
-    <input
-      name="firstName"
-      value="lionel"
-    />
     <div
-      class="c3"
+      class="c3 c4"
+    >
+      <input
+        name="firstName"
+        value="lionel"
+      />
+    </div>
+    <div
+      class="c5"
     />
   </form>
 </div>
 `;
 
 exports[`<Wizard /> should render a step 1`] = `
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c0 {
   border-bottom: 1px solid #adb9c9;
-  padding: 1.25rem 0;
+  margin-top: 1.25rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -663,47 +800,43 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c1 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #0053b3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #0053b3;
 }
 
 .c3 {
-  text-align: left;
-  -webkit-flex-basis: 130px;
-  -ms-flex-preferred-size: 130px;
-  flex-basis: 130px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 135px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 1.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
+  text-align: left;
+  color: #adb9c9;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1;
-  color: #adb9c9;
 }
 
 .c2 {
@@ -756,8 +889,8 @@ exports[`<Wizard /> should render a step 1`] = `
   background-color: #adb9c9;
 }
 
-.c5 {
-  margin: 2.5rem 0;
+.c7 {
+  margin-bottom: 0.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -768,7 +901,7 @@ exports[`<Wizard /> should render a step 1`] = `
   justify-content: space-between;
 }
 
-.c6 {
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -791,13 +924,13 @@ exports[`<Wizard /> should render a step 1`] = `
   margin-left: auto;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c8:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -805,7 +938,7 @@ exports[`<Wizard /> should render a step 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c8[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -814,18 +947,30 @@ exports[`<Wizard /> should render a step 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c8[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c6[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+}
+
+.c5 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
@@ -854,15 +999,19 @@ exports[`<Wizard /> should render a step 1`] = `
         Second Step
       </span>
     </div>
-    <p>
-      Premiere Etape
-    </p>
     <div
-      class="c5"
+      class="c5 c6"
+    >
+      <p>
+        Premiere Etape
+      </p>
+    </div>
+    <div
+      class="c7"
     >
       <button
         aria-pressed="false"
-        class="c6"
+        class="c8"
       >
         Suivant
       </button>

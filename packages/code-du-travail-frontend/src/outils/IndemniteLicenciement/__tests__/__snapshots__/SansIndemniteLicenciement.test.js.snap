@@ -27,6 +27,10 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
   color: #0053b3;
 }
 
+.c3 {
+  margin-bottom: 1rem;
+}
+
 @media print {
   .c0 {
     max-width: 100%;
@@ -62,7 +66,9 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
     </p>
     <br />
     <details>
-      <summary>
+      <summary
+        class="c3"
+      >
         Voir le detail du calcul
       </summary>
       <div

@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
-import { Container } from "@cdt/ui";
 
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import { Primes } from "../components/Primes";
 
 function StepPrimes({ form }) {
   return (
-    <Container>
+    <>
       <YesNoQuestion
         name="hasPrimes"
         label="Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois&nbsp;?"
@@ -36,7 +35,7 @@ function StepPrimes({ form }) {
           </>
         )}
       </Field>
-    </Container>
+    </>
   );
 }
 StepPrimes.propTypes = {

@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
 
@@ -48,7 +49,7 @@ function CalculateurIndemnite() {
   return (
     <Section>
       <Container>
-        <Wrapper variant="light">
+        <Wrapper size="large" variant="light">
           <h1>Calculateur d&apos;indemnités de licenciement</h1>
           <Wizard
             steps={steps}

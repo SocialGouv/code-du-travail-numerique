@@ -23,7 +23,6 @@ export const Input = styled.input`
 
 export const Label = styled.label`
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: flex;
@@ -79,4 +78,8 @@ export const InlineError = styled.span`
   color: ${colors.darkerGrey};
   font-weight: 600;
   font-size: ${fonts.sizeSmall};
+`;
+
+export const Summary = styled.summary`
+  margin-bottom: ${spacing.base};
 `;

@@ -128,6 +128,12 @@ exports[`<ConventionTexte /> should let you click on a toc item 1`] = `
   margin-bottom: 0.625rem;
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c3 {
     border: none;
@@ -14713,6 +14719,12 @@ exports[`<ConventionTexte /> should render 1`] = `
 
 .c11 {
   margin-bottom: 0.625rem;
+}
+
+@media (max-width:600px) {
+  .c3 {
+    padding: 0.625rem 1.25rem;
+  }
 }
 
 @media print {

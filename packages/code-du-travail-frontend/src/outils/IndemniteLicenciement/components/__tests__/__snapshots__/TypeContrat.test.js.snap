@@ -3,7 +3,6 @@
 exports[`<TypeContrat /> should render 1`] = `
 .c2 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;

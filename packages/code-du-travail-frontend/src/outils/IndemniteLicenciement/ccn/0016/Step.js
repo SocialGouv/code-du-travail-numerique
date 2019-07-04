@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "@cdt/ui";
 import { TextQuestion } from "../../components/TextQuestion";
 import { Categorie, CADRE } from "./Categorie";
 import { YesNoQuestion } from "../../components/YesNoQuestion";
@@ -11,7 +10,7 @@ function Step({ form }) {
   const askDetailedCategories = anciennete >= 3 && categorie === CADRE;
 
   return (
-    <Container>
+    <>
       <Categorie name="categorie" />
       {askDetailedCategories && <CategoriePeriod />}
       <TextQuestion
@@ -26,7 +25,7 @@ function Step({ form }) {
           name="hasRetirementAge"
         />
       )}
-    </Container>
+    </>
   );
 }
 

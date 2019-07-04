@@ -1,13 +1,12 @@
 import React from "react";
 import { Field } from "react-final-form";
-import { Container } from "@cdt/ui";
 import { EchelonChimie } from "./EchelonChimie";
 import { YesNoQuestion } from "../../components/YesNoQuestion";
 import { TextQuestion } from "../../components/TextQuestion";
 
 function Step() {
   return (
-    <Container>
+    <>
       <h3>Chimie</h3>
       <EchelonChimie name="groupe" />
 
@@ -38,7 +37,7 @@ function Step() {
           return null;
         }}
       </Field>
-    </Container>
+    </>
   );
 }
 

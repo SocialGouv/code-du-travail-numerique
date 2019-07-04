@@ -37,7 +37,7 @@ export { PrevNextBar };
 const { spacing } = theme;
 
 const ButtonBar = styled.div`
-  margin: ${spacing.larger} 0;
+  margin-bottom: ${spacing.small};
   display: flex;
   justify-content: space-between;
 `;
