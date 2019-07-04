@@ -338,7 +338,14 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
                 Cette simulation nécessite entre 5 et 10 minutes. Afin de pouvoir remplir les renseignements demandés, munissez-vous des informations relatives à votre licenciement (dates d’entrée et de sortie de l’entreprise, courrier de licenciement, derniers bulletins de salaire, etc.).
               </p>
               <p>
-                Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez cet article (lien vers la fiche SP sur l’IDL).
+                Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul, consultez
+                 
+                <a
+                  href="/fiche-service-public/indemnite-de-licenciement"
+                >
+                  cet article
+                </a>
+                .
               </p>
               <p>
                 Pour commencer la simulation cliquez sur "Suivant".

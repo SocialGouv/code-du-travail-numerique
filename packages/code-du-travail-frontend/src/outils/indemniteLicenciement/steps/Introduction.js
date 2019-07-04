@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Wrapper } from "@cdt/ui/";
 
+import { Link } from "../../../../routes";
+
 const StepIntro = () => (
   <Container>
     <Wrapper>
@@ -23,7 +25,15 @@ const StepIntro = () => (
       </p>
       <p>
         Pour en savoir plus sur l’indemnité de licenciement et son mode de
-        calcul, consultez cet article (lien vers la fiche SP sur l’IDL).
+        calcul, consultez{" "}
+        <Link
+          route="fiche-service-public"
+          params={{ slug: "indemnite-de-licenciement" }}
+          passHref
+        >
+          <a>cet article</a>
+        </Link>
+        .
       </p>
       <p>Pour commencer la simulation cliquez sur &quot;Suivant&quot;.</p>
     </Wrapper>
