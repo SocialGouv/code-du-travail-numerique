@@ -19,6 +19,12 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
   margin-bottom: 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c0 {
     border: none;
@@ -54,6 +60,12 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 
 .c0 > *:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
 }
 
 @media print {
@@ -93,6 +105,12 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
   margin-bottom: 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c0 {
     border: none;
@@ -129,6 +147,12 @@ exports[`<Wrapper /> should render a large wrapper 1`] = `
 
 .c0 > *:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
 }
 
 @media print {
