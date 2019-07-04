@@ -17,10 +17,22 @@ Retrouvez tous les composants UI utilisés dans le projet [Code du travail numé
   {Object.keys(colors)
     .filter(key => typeof colors[key] === "string")
     .map(key => (
-      <div key={key} style={{ padding: 5, background: colors[key] }}>
+      <div key={key} style={{ padding: 5 }}>
         <div>
+          <span
+            style={{
+              border:'1px solid silver',
+              width: 100,
+              height: '1em',
+              marginRight:10,
+              background: colors[key],
+              display: "inline-block"
+            }}
+          />
           {key} : {colors[key]}
+
         </div>
       </div>
     ))}
+
 </div>
