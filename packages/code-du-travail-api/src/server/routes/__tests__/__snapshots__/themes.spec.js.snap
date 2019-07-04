@@ -112,7 +112,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 0.7769157,
+      "_score": 0.77691567,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "slug": "demission-comment-presenter-une-demission",
@@ -125,7 +125,7 @@ Object {
     Object {
       "_id": "3",
       "_index": "cdtn_document_test",
-      "_score": 0.7769157,
+      "_score": 0.77691567,
       "_source": Object {
         "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
         "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
@@ -138,7 +138,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 0.7769157,
+      "_score": 0.77691567,
       "_source": Object {
         "slug": "demission-dun-salarie",
         "source": "fiches_service_public",

@@ -21,8 +21,8 @@ const cdtn_document_mapping = {
         },
         french: {
           type: "text",
-          analyzer: "french",
-          search_analyzer: "french_indexing"
+          analyzer: "french_indexing",
+          search_analyzer: "french"
         },
         french_with_synonyms: {
           type: "text",

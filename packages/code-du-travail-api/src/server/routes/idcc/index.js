@@ -42,7 +42,7 @@ router.get("/idcc/:num", async ctx => {
 
   const response = await elasticsearchClient.search({ index, body });
 
-  if (response.body.hits.total === 0) {
+  if (response.body.hits.total.value === 0) {
     ctx.throw(404, `no IDCC found for num ${ctx.params.num}`);
   }
 

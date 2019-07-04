@@ -17,7 +17,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 8.583372,
+        "_score": 16.501816,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -40,8 +40,11 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 8.583372,
-    "total": 2,
+    "max_score": 16.501816,
+    "total": Object {
+      "relation": "eq",
+      "value": 2,
+    },
   },
 }
 `;
@@ -59,14 +62,14 @@ Object {
     },
     Object {
       "doc_count": 2,
-      "key": "fiches_service_public",
-    },
-    Object {
-      "doc_count": 1,
       "key": "fiches_ministere_travail",
     },
     Object {
-      "doc_count": 1,
+      "doc_count": 2,
+      "key": "fiches_service_public",
+    },
+    Object {
+      "doc_count": 2,
       "key": "themes",
     },
   ],
@@ -96,7 +99,10 @@ Object {
       },
     ],
     "max_score": 3.114266,
-    "total": 2,
+    "total": Object {
+      "relation": "eq",
+      "value": 2,
+    },
   },
 }
 `;
@@ -114,7 +120,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 11.971636,
+        "_score": 15.135147,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -125,8 +131,11 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 11.971636,
-    "total": 2,
+    "max_score": 15.135147,
+    "total": Object {
+      "relation": "eq",
+      "value": 2,
+    },
   },
   "snippet": Object {
     "_id": "14",

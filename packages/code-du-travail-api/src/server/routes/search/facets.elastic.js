@@ -86,7 +86,7 @@ function getFacetsBody({ query }) {
             query_string: {
               query:
                 '(title.french_with_synonyms:"fonction publique") OR (title.french_with_synonyms:"agent public")',
-              boost: -2000
+              boost: 0.0002
             }
           }
         ]
