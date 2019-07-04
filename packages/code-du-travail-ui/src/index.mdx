@@ -3,7 +3,24 @@ name: Readme
 route: /
 ---
 
-# Readme
+import { colors } from "./theme";
 
-Beware, some components are also in the layout part of this documentation
+# Code du Travail numérique
 
+Retrouvez tous les composants UI utilisés dans le projet [Code du travail numérique](https://github.com/SocialGouv/code-du-travail-numerique)
+
+## Thème
+
+### Couleurs
+
+<div>
+  {Object.keys(colors)
+    .filter(key => typeof colors[key] === "string")
+    .map(key => (
+      <div key={key} style={{ padding: 5, background: colors[key] }}>
+        <div>
+          {key} : {colors[key]}
+        </div>
+      </div>
+    ))}
+</div>
