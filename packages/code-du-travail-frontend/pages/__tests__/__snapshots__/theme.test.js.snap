@@ -381,7 +381,8 @@ exports[`<Theme /> should render 1`] = `
   margin: 0.5rem 0;
 }
 
-.c32 a {
+.c32 a,
+.c32 a:visited {
   color: #434956;
 }
 

@@ -782,7 +782,8 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin: 0.5rem 0;
 }
 
-.c57 a {
+.c57 a,
+.c57 a:visited {
   color: #434956;
 }
 

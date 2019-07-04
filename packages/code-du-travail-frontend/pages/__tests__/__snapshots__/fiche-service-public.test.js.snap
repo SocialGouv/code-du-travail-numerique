@@ -699,7 +699,8 @@ exports[`<FicheSP /> should render 1`] = `
   margin: 0.5rem 0;
 }
 
-.c49 a {
+.c49 a,
+.c49 a:visited {
   color: #434956;
 }
 

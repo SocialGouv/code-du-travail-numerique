@@ -442,7 +442,8 @@ exports[`<Home /> should render 1`] = `
   margin: 0.5rem 0;
 }
 
-.c41 a {
+.c41 a,
+.c41 a:visited {
   color: #434956;
 }
 
