@@ -1,7 +1,7 @@
 const knownQueries = require("@cdt/data...datafiller/prequalified.json");
 
 // find known query if any
-const getKnownQuery = (query, excludeSources = []) => {
+const getSavedResult = (query, excludeSources = []) => {
   const knownQuery =
     query.length > 5 && knownQueries.find(q => q.variants.includes(query));
 
@@ -35,4 +35,4 @@ const makeFacets = refs =>
     return a;
   }, []);
 
-module.exports = getKnownQuery;
+module.exports = getSavedResult;
