@@ -7,7 +7,6 @@ import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -64,7 +63,7 @@ class Fiche extends React.Component {
   }
 }
 
-export default withRouter(withError(Fiche));
+export default withRouter(Fiche);
 
 const Intro = styled.div`
   & > *:first-child {

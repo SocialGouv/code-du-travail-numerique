@@ -9,7 +9,6 @@ import { PageLayout } from "../src/layout/PageLayout";
 import SearchResults from "../src/search/SearchResults";
 import { getExcludeSources } from "../src/sources";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -60,4 +59,4 @@ class SearchPage extends React.Component {
   }
 }
 
-export default withRouter(withError(SearchPage));
+export default withRouter(SearchPage);

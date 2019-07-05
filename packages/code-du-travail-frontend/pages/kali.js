@@ -6,7 +6,6 @@ import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
 import Convention from "../src/conventions/Convention";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL, API_DILA2SQL_URL }
@@ -64,4 +63,4 @@ class Kali extends React.Component {
   }
 }
 
-export default withRouter(withError(Kali));
+export default withRouter(Kali);

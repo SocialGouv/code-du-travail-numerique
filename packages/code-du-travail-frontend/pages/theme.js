@@ -14,7 +14,6 @@ import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -107,7 +106,7 @@ class Theme extends React.Component {
   }
 }
 
-export default withError(Theme);
+export default Theme;
 
 const NotFound = () => (
   <PageLayout>

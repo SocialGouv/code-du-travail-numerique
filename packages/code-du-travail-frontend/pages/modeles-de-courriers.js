@@ -10,7 +10,6 @@ import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -78,4 +77,4 @@ class ModeleCourrier extends React.Component {
   }
 }
 
-export default withRouter(withError(ModeleCourrier));
+export default withRouter(ModeleCourrier);

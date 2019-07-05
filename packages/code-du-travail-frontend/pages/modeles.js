@@ -9,7 +9,6 @@ import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -135,4 +134,4 @@ const Value = styled.span`
   color: ${colors.grey};
 `;
 
-export default withError(Modeles);
+export default Modeles;

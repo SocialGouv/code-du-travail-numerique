@@ -4,6 +4,7 @@ import App, { Container } from "next/app";
 import getConfig from "next/config";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 import * as Sentry from "@sentry/browser";
+import ErrorPage from "./_error";
 
 const {
   publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
@@ -27,7 +28,11 @@ export default class MyApp extends App {
     let pageProps = {};
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      try {
+        pageProps = await Component.getInitialProps(ctx);
+      } catch (err) {
+        pageProps = { statusCode: 500, message: err.message };
+      }
     }
     // pageUrl and ogImage are only defined on serverside request
     if (ctx.req) {
@@ -55,6 +60,9 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+    if (pageProps.statusCode) {
+      return <ErrorPage statusCode={pageProps.statusCode} />;
+    }
     return (
       <Container>
         <GitHubForkRibbon

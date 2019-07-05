@@ -7,7 +7,6 @@ import { HomeLayout } from "../src/layout/HomeLayout";
 import Themes from "../src/home/Themes";
 import Outils from "../src/home/Outils";
 import Metas from "../src/common/Metas";
-import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -38,4 +37,4 @@ Home.getInitialProps = async () => {
     }
   };
 };
-export default withError(Home);
+export default Home;
