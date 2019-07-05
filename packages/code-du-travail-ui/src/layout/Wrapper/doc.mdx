@@ -10,7 +10,7 @@ import Wrapper from ".";
 # Wrapper
 
 ---
-### The Wrapper component adds a few surrounding paddings and can have a specific background-color and border. It is usually the children of a Container component.
+### The Wrapper component adds default or large surrounding paddings and can have a specific background-color and border. It is usually the children of a Container component.
 ---
 
 <Playground>
@@ -39,6 +39,14 @@ import Wrapper from ".";
         <StyledWrapper variant="dark">
           <h2>
             Wrapper dark
+          </h2>
+          <div>
+            Lorem ipsum dolor sit amet
+          </div>
+        </StyledWrapper>
+        <StyledWrapper variant="dark" size="large">
+          <h2>
+            Wrapper large dark
           </h2>
           <div>
             Lorem ipsum dolor sit amet

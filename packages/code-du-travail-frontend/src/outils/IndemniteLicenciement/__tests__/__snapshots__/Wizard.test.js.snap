@@ -35,7 +35,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -55,7 +55,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -286,7 +286,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -306,7 +306,7 @@ exports[`<Wizard /> should call navigate to the second step when click on Suivan
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -541,7 +541,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -671,7 +671,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -804,7 +804,7 @@ exports[`<Wizard /> should render a step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -824,7 +824,7 @@ exports[`<Wizard /> should render a step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 135px;
+  width: 8.4375rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

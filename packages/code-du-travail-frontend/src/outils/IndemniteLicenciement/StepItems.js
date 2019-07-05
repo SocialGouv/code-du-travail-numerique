@@ -42,7 +42,7 @@ const StepItemsContainer = styled.div`
 
 const StepWrapper = styled.span`
   display: flex;
-  width: 135px;
+  width: 8.4375rem; // 135px
   align-items: center;
   padding: 0 ${spacing.tiny};
   font-size: ${fonts.sizeSmall};
