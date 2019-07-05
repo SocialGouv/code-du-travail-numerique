@@ -15,7 +15,7 @@ test("return search results for demission", async () => {
 
 test("return search results for demission from elastic", async () => {
   const response = await request(app.callback()).get(
-    "/api/v1/search?q=démission&skipGuess"
+    "/api/v1/search?q=démission&skipSavedResults"
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();
