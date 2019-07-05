@@ -13,6 +13,14 @@ test("return search results for demission", async () => {
   expect(response.body).toMatchSnapshot();
 });
 
+test("return search results for demission from elastic", async () => {
+  const response = await request(app.callback()).get(
+    "/api/v1/search?q=démission&skipGuess"
+  );
+  expect(response.status).toBe(200);
+  expect(response.body).toMatchSnapshot();
+});
+
 test("return faq search results for demission ", async () => {
   const excludeSources = [
     "code_du_travail",

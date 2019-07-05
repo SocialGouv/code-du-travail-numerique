@@ -26,7 +26,7 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
-  const skipGuess = !!ctx.request.query.skipGuess;
+  const skipGuess = ctx.request.query.skipGuess === "";
   const excludeSources = (ctx.request.query.excludeSources || "").split(",");
 
   // shortcut ES if we find a known query

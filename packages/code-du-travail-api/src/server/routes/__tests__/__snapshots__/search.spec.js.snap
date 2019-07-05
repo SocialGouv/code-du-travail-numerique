@@ -390,3 +390,157 @@ Object {
   },
 }
 `;
+
+exports[`return search results for demission from elastic 1`] = `
+Object {
+  "facets": Array [
+    Object {
+      "doc_count": 2,
+      "key": "code_du_travail",
+    },
+    Object {
+      "doc_count": 2,
+      "key": "faq",
+    },
+    Object {
+      "doc_count": 2,
+      "key": "fiches_ministere_travail",
+    },
+    Object {
+      "doc_count": 2,
+      "key": "fiches_service_public",
+    },
+    Object {
+      "doc_count": 2,
+      "key": "themes",
+    },
+  ],
+  "hits": Object {
+    "hits": Array [
+      Object {
+        "_id": "2",
+        "_index": "cdtn_document_test",
+        "_score": 6.2299156,
+        "_source": Object {
+          "anchor": "#Comment-presenter-une-demission",
+          "slug": "demission-comment-presenter-une-demission",
+          "source": "fiches_ministere_travail",
+          "title": "Démission : comment présenter une démission ?",
+          "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "4",
+        "_index": "cdtn_document_test",
+        "_score": 6.1712484,
+        "_source": Object {
+          "slug": "demission-dun-salarie",
+          "source": "fiches_service_public",
+          "title": "Démission d'un salarié",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "0",
+        "_index": "cdtn_document_test",
+        "_score": 5.5029116,
+        "_source": Object {
+          "slug": "themes/rupture-de-contrat/la-demission",
+          "source": "themes",
+          "title": "La démission",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "5",
+        "_index": "cdtn_document_test",
+        "_score": 5.4247,
+        "_source": Object {
+          "slug": "demission-dune-assistante-maternelle",
+          "source": "fiches_service_public",
+          "title": "Démission d'une assistante maternelle",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "6",
+        "_index": "cdtn_document_test",
+        "_score": 3.9596615,
+        "_source": Object {
+          "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
+          "source": "faq",
+          "title": "Dans les HCR, quel est le préavis de démission ?",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "7",
+        "_index": "cdtn_document_test",
+        "_score": 3.569282,
+        "_source": Object {
+          "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
+          "source": "faq",
+          "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "8",
+        "_index": "cdtn_document_test",
+        "_score": 3.3277068,
+        "_source": Object {
+          "slug": "r1225-18",
+          "source": "code_du_travail",
+          "title": "Article R1225-18",
+          "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "9",
+        "_index": "cdtn_document_test",
+        "_score": 3.2938848,
+        "_source": Object {
+          "slug": "r1442-22-4",
+          "source": "code_du_travail",
+          "title": "Article R1442-22-4",
+          "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "3",
+        "_index": "cdtn_document_test",
+        "_score": 2.5595078,
+        "_source": Object {
+          "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+          "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+          "source": "fiches_ministere_travail",
+          "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
+          "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "1",
+        "_index": "cdtn_document_test",
+        "_score": 0.9255789,
+        "_source": Object {
+          "slug": "themes/labandon-de-poste-est-il-une-demission",
+          "source": "themes",
+          "title": "L’abandon de poste est-il une démission ?",
+        },
+        "_type": "_doc",
+      },
+    ],
+    "max_score": 6.2299156,
+    "total": Object {
+      "relation": "eq",
+      "value": 10,
+    },
+  },
+}
+`;
