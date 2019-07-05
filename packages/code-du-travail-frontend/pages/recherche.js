@@ -21,13 +21,8 @@ class SearchPage extends React.Component {
       `${API_URL}/search?q=${query.q}&excludeSources=${excludeSources}`
     );
     if (!response.ok) {
-      return {
-        data: { facets: [], items: [] },
-        errorCode: response.status,
-        errorStatus: response.statusText
-      };
+      return { statusCode: response.status };
     }
-
     const {
       facets,
       snippet = {},

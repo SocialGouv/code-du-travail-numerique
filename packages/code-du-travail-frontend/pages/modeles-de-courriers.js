@@ -16,11 +16,16 @@ const {
 } = getConfig();
 
 const fetchCourrier = ({ slug }) =>
-  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`).then(r => r.json());
+  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`);
 
 class ModeleCourrier extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchCourrier(query);
+    const response = await fetchCourrier(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
+    }
+
+    const data = await response.json();
     return { data };
   }
 

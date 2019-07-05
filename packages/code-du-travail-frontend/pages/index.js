@@ -28,11 +28,7 @@ const Home = ({ pageUrl, ogImage, data: { themes = [] } = {} }) => (
 Home.getInitialProps = async () => {
   const response = await fetch(`${API_URL}/themes`);
   if (!response.ok) {
-    return {
-      data: { themes: [] },
-      errorCode: response.status,
-      errorStatus: response.statusText
-    };
+    return { statusCode: response.status };
   }
   const themes = await response.json();
   return {

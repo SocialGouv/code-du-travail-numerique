@@ -10,30 +10,33 @@ const {
   publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
 } = getConfig();
 
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
   Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
 }
 
-const notifySentry = statusCode => {
+const notifySentry = (statusCode, message) => {
   if (typeof window === "undefined") {
     return;
   }
   Sentry.withScope(scope => {
     scope.setTag(`ssr`, false);
-    Sentry.captureMessage(`Error ${statusCode}`, "error");
+    Sentry.captureMessage(
+      `Error ${statusCode}${message ? ` - ${message}` : ""}`,
+      "error"
+    );
   });
 };
 
 export default class Error extends React.Component {
   static async getInitialProps({ res, err }) {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-    return { statusCode };
+    return { statusCode, message: err.message };
   }
 
   componentDidMount() {
-    const { statusCode } = this.props;
+    const { statusCode, message } = this.props;
     if (statusCode && statusCode > 200) {
-      notifySentry(statusCode);
+      notifySentry(statusCode, message);
     }
   }
 
@@ -49,7 +52,9 @@ export default class Error extends React.Component {
                 : "Une erreur est apparue sur le client"}
               <br />
               <br />
-              <Link href="/">Retour à la page d’accueil</Link>
+              <Link href="/">
+                <a>Retour à la page d’accueil</a>
+              </Link>
             </P>
           </FlexCenterer>
         </Section>

@@ -25,9 +25,7 @@ class AnnuairePage extends React.Component {
 
     if (!response.ok) {
       return {
-        results: {},
-        errorCode: response.status,
-        errorStatus: response.statusText
+        statusCode: response.status
       };
     }
 

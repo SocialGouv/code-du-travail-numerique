@@ -14,17 +14,13 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchAllModeles = () =>
-  fetch(`${API_URL}/modeles`).then(res => {
-    if (!res.ok) {
-      throw { statusCode: res.status, ...res };
-    }
-    return res.json();
-  });
-
 class Modeles extends React.Component {
   static async getInitialProps() {
-    const data = await fetchAllModeles();
+    const response = await fetch(`${API_URL}/modeles`);
+    if (!response.ok) {
+      return { statusCode: response.status };
+    }
+    const data = await response.json();
     return { data };
   }
 

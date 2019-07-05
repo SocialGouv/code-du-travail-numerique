@@ -28,6 +28,7 @@ const { logger } = require("./utils/logger");
 const app = new Koa();
 const PORT = process.env.API_PORT || 1337;
 
+app.use(cors());
 /**
  * use a middleware for catching errors and re-emit them
  * so we can centralize error handling / logging
@@ -36,10 +37,10 @@ const PORT = process.env.API_PORT || 1337;
 app.use(async (ctx, next) => {
   try {
     await next();
-  } catch (err) {
-    ctx.status = err.status || 500;
-    ctx.body = { status: ctx.status, message: err.message };
-    ctx.app.emit("error", err, ctx);
+  } catch (error) {
+    const { statusCode = 500, message } = error;
+    ctx.throw(statusCode, message);
+    ctx.app.emit("error", error);
   }
 });
 
@@ -52,7 +53,6 @@ app.use(async (ctx, next) => {
   await next();
 });
 
-app.use(cors());
 app.use(bodyParser());
 
 app.use(annuaireRoutes.routes());
@@ -67,8 +67,8 @@ app.use(themesRoute.routes());
 app.use(docsRoutes);
 
 // centralize error logging
-app.on("error", error => {
-  logger.error(`${error.status || 500} - ${error.message}`);
+app.on("error", ({ statusCode, message }) => {
+  logger.error(`${statusCode} - ${message}`);
 });
 
 // Server.

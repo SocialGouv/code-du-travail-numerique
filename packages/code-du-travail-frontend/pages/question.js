@@ -27,15 +27,15 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchQuestion = ({ slug }) =>
-  fetch(`${API_URL}/items/faq/${slug}`).then(r => r.json());
+const fetchQuestion = ({ slug }) => fetch(`${API_URL}/items/faq/${slug}`);
 
 class Question extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchQuestion(query);
-    if (data.status === 404) {
-      return { data: { _source: {}, relatedItems: {} } };
+    const response = await fetchQuestion(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
     }
+    const data = await response.json();
     return { data };
   }
 

@@ -17,7 +17,7 @@ const {
 } = getConfig();
 
 const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
+  fetch(`${API_URL}/items/code_du_travail/${slug}`);
 
 const BreadCrumbs = ({ entry }) => {
   if (entries && !(entries.length > 0)) return null;
@@ -43,10 +43,11 @@ const Source = ({ name, url }) => (
 
 class Fiche extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchFiche(query);
-    if (data.status === 404) {
-      return { data: { _source: { path: "" } } };
+    const response = await fetchFiche(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
     }
+    const data = await response.json();
     return { data };
   }
 

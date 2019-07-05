@@ -52,11 +52,7 @@ class Theme extends React.Component {
   static async getInitialProps({ query: { slug } }) {
     const response = await fetch(`${API_URL}/themes/${slug ? slug : ""}`);
     if (!response.ok) {
-      return {
-        data: { theme: null },
-        errorCode: response.status,
-        errorStatus: response.statusText
-      };
+      return { statusCode: response.status };
     }
     const theme = await response.json();
     return {
