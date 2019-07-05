@@ -6,6 +6,11 @@ describe("getInitialSteps()", () => {
 Array [
   Object {
     "component": [Function],
+    "label": "Introduction",
+    "name": "introduction",
+  },
+  Object {
+    "component": [Function],
     "label": "Informations générales",
     "name": "infoGenerales",
   },

@@ -1,11 +1,17 @@
 import { StepInfo } from "./steps/Info";
 import { StepIndemnite } from "./steps/Indemnite";
+import { StepIntro } from "./steps/Introduction";
 import { StepAnciennete } from "./steps/Anciennete";
 import { StepSalaires } from "./steps/Salaires";
 import { StepPrimes } from "./steps/Primes";
 
 export function getInitialSteps() {
   return [
+    {
+      component: StepIntro,
+      name: "introduction",
+      label: "Introduction"
+    },
     {
       component: StepInfo,
       name: "infoGenerales",
