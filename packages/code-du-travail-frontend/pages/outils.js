@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { Alert, Container, theme } from "@cdt/ui";
 
 import Search from "../src/search/Search";
-import { CalculateurIndemnite } from "../src/outils/indemniteLicenciement";
+import { CalculateurIndemnite } from "../src/outils/IndemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
-import { SimulateurEmbauche } from "../src/outils/simulateur-emauche";
+import { SimulateurEmbauche } from "../src/outils/SimulateurEmbauche";
 import Metas from "../src/common/Metas";
 
 const BigError = ({ children }) => (
