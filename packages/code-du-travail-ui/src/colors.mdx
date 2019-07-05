@@ -1,0 +1,36 @@
+---
+name: Colors
+route: /colors
+---
+
+import { colors } from "./theme";
+import styled from "styled-components";
+
+export const Row = styled.span`
+  border: 1px solid silver;
+  width: 100px;
+  height: 1em;
+  margin-right: 10px;
+  display: inline-block;
+`;
+
+## Couleurs
+
+<div>
+  {Object.keys(colors)
+    .filter(key => typeof colors[key] === "string")
+    .map(key => (
+      <div key={key} style={{ padding: 5 }}>
+        <div>
+          <Row
+            style={{
+              background: colors[key]
+            }}
+          />
+          {key} : {colors[key]}
+
+        </div>
+      </div>
+    ))}
+
+</div>
