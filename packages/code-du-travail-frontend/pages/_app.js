@@ -11,7 +11,7 @@ const {
 
 import "../src/piwik";
 
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
   Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
 }
 

@@ -10,7 +10,7 @@ const {
   publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
 } = getConfig();
 
-if (typeof window !== "undefined") {
+if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
   Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
 }
 
