@@ -7,6 +7,7 @@ import fetch from "isomorphic-unfetch";
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import { AddressResults } from "../src/search/AddressResults";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -25,9 +26,7 @@ class AnnuairePage extends React.Component {
 
     if (!response.ok) {
       return {
-        results: {},
-        errorCode: response.status,
-        errorStatus: response.statusText
+        statusCode: response.status
       };
     }
 
@@ -61,4 +60,4 @@ class AnnuairePage extends React.Component {
   }
 }
 
-export default withRouter(AnnuairePage);
+export default withRouter(withError(AnnuairePage));

@@ -14,6 +14,7 @@ import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -52,11 +53,7 @@ class Theme extends React.Component {
   static async getInitialProps({ query: { slug } }) {
     const response = await fetch(`${API_URL}/themes/${slug ? slug : ""}`);
     if (!response.ok) {
-      return {
-        data: { theme: null },
-        errorCode: response.status,
-        errorStatus: response.statusText
-      };
+      return { statusCode: response.status };
     }
     const theme = await response.json();
     return {
@@ -110,7 +107,7 @@ class Theme extends React.Component {
   }
 }
 
-export default Theme;
+export default withError(Theme);
 
 const NotFound = () => (
   <PageLayout>

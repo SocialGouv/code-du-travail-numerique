@@ -9,6 +9,7 @@ import { PageLayout } from "../src/layout/PageLayout";
 import SearchResults from "../src/search/SearchResults";
 import { getExcludeSources } from "../src/sources";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -21,13 +22,8 @@ class SearchPage extends React.Component {
       `${API_URL}/search?q=${query.q}&excludeSources=${excludeSources}`
     );
     if (!response.ok) {
-      return {
-        data: { facets: [], items: [] },
-        errorCode: response.status,
-        errorStatus: response.statusText
-      };
+      return { statusCode: response.status };
     }
-
     const {
       facets,
       snippet = {},
@@ -64,4 +60,4 @@ class SearchPage extends React.Component {
   }
 }
 
-export default withRouter(SearchPage);
+export default withRouter(withError(SearchPage));

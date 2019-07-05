@@ -9,22 +9,19 @@ import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchAllModeles = () =>
-  fetch(`${API_URL}/modeles`).then(res => {
-    if (!res.ok) {
-      throw { statusCode: res.status, ...res };
-    }
-    return res.json();
-  });
-
 class Modeles extends React.Component {
   static async getInitialProps() {
-    const data = await fetchAllModeles();
+    const response = await fetch(`${API_URL}/modeles`);
+    if (!response.ok) {
+      return { statusCode: response.status };
+    }
+    const data = await response.json();
     return { data };
   }
 
@@ -138,4 +135,4 @@ const Value = styled.span`
   color: ${colors.grey};
 `;
 
-export default Modeles;
+export default withError(Modeles);

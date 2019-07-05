@@ -6,6 +6,7 @@ import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
 import Convention from "../src/conventions/Convention";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL, API_DILA2SQL_URL }
@@ -20,16 +21,18 @@ const fetchKali = ({ slug, idccNum }) => {
     .then(r => r.status != 404 && r._source);
 };
 
-const fetchConteneur = ({ id }) =>
-  fetch(`${API_DILA2SQL_URL}/base/KALI/conteneur/${id}`)
-    .then(r => r.json())
-    .then(r => r.data);
-
 class Kali extends React.Component {
   static async getInitialProps({ query }) {
     const convention = await fetchKali(query);
-    const conteneur = await fetchConteneur({ id: convention.id });
-    return { convention, conteneur };
+
+    const conteneurResponse = await fetch(
+      `${API_DILA2SQL_URL}/base/KALI/conteneur/${convention.id}`
+    );
+    if (!conteneurResponse.ok) {
+      return { statusCode: conteneurResponse.status };
+    }
+    const conteneur = await conteneurResponse.json();
+    return { convention, conteneur: conteneur.data };
   }
 
   render() {
@@ -61,4 +64,4 @@ class Kali extends React.Component {
   }
 }
 
-export default withRouter(Kali);
+export default withRouter(withError(Kali));

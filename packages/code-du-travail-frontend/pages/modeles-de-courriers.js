@@ -10,17 +10,23 @@ import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
 const fetchCourrier = ({ slug }) =>
-  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`).then(r => r.json());
+  fetch(`${API_URL}/items/modeles_de_courriers/${slug}`);
 
 class ModeleCourrier extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchCourrier(query);
+    const response = await fetchCourrier(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
+    }
+
+    const data = await response.json();
     return { data };
   }
 
@@ -72,4 +78,4 @@ class ModeleCourrier extends React.Component {
   }
 }
 
-export default withRouter(ModeleCourrier);
+export default withRouter(withError(ModeleCourrier));

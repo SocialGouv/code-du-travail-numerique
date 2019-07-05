@@ -11,13 +11,14 @@ import ArticleIcon from "../src/icons/ArticleIcon";
 import Answer from "../src/common/Answer";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
 const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/code_du_travail/${slug}`).then(r => r.json());
+  fetch(`${API_URL}/items/code_du_travail/${slug}`);
 
 const BreadCrumbs = ({ entry }) => {
   if (entries && !(entries.length > 0)) return null;
@@ -43,10 +44,11 @@ const Source = ({ name, url }) => (
 
 class Fiche extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchFiche(query);
-    if (data.status === 404) {
-      return { data: { _source: { path: "" } } };
+    const response = await fetchFiche(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
     }
+    const data = await response.json();
     return { data };
   }
 
@@ -81,7 +83,7 @@ class Fiche extends React.Component {
   }
 }
 
-export default withRouter(Fiche);
+export default withRouter(withError(Fiche));
 
 const { spacing } = theme;
 

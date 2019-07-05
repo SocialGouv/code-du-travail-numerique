@@ -7,6 +7,7 @@ import { HomeLayout } from "../src/layout/HomeLayout";
 import Themes from "../src/home/Themes";
 import Outils from "../src/home/Outils";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -28,11 +29,7 @@ const Home = ({ pageUrl, ogImage, data: { themes = [] } = {} }) => (
 Home.getInitialProps = async () => {
   const response = await fetch(`${API_URL}/themes`);
   if (!response.ok) {
-    return {
-      data: { themes: [] },
-      errorCode: response.status,
-      errorStatus: response.statusText
-    };
+    return { statusCode: response.status };
   }
   const themes = await response.json();
   return {
@@ -41,4 +38,4 @@ Home.getInitialProps = async () => {
     }
   };
 };
-export default Home;
+export default withError(Home);

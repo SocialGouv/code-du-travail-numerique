@@ -7,15 +7,14 @@ import Answer from "../src/common/Answer";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
 const fetchFiche = ({ slug }) =>
-  fetch(`${API_URL}/items/fiches_ministere_travail/${slug}`).then(r =>
-    r.json()
-  );
+  fetch(`${API_URL}/items/fiches_ministere_travail/${slug}`);
 
 const Source = ({ name, url }) => (
   <a href={url} target="_blank" rel="noopener noreferrer">
@@ -25,10 +24,12 @@ const Source = ({ name, url }) => (
 
 class Fiche extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchFiche(query);
-    if (data.status === 404) {
-      return { data: { _source: {} } };
+    const response = await fetchFiche(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
     }
+
+    const data = await response.json();
     return { data };
   }
 
@@ -63,7 +64,7 @@ class Fiche extends React.Component {
   }
 }
 
-export default withRouter(Fiche);
+export default withRouter(withError(Fiche));
 
 const Intro = styled.div`
   & > *:first-child {

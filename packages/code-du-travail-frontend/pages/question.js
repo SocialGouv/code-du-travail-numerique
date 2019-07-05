@@ -22,20 +22,21 @@ import ArticleIcon from "../src/icons/ArticleIcon";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
+import withError from "../src/lib/withError";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchQuestion = ({ slug }) =>
-  fetch(`${API_URL}/items/faq/${slug}`).then(r => r.json());
+const fetchQuestion = ({ slug }) => fetch(`${API_URL}/items/faq/${slug}`);
 
 class Question extends React.Component {
   static async getInitialProps({ query }) {
-    const data = await fetchQuestion(query);
-    if (data.status === 404) {
-      return { data: { _source: {}, relatedItems: {} } };
+    const response = await fetchQuestion(query);
+    if (!response.ok) {
+      return { statusCode: response.status };
     }
+    const data = await response.json();
     return { data };
   }
 
@@ -126,7 +127,7 @@ class Question extends React.Component {
   }
 }
 
-export default withRouter(Question);
+export default withRouter(withError(Question));
 
 function MoreLinks({ items, icon, query, title, children }) {
   if (items.length === 0) {
