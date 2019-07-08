@@ -44,3 +44,5 @@ spec:
           value: ${CI_PIWIK_SITE_ID}
         - name: SENTRY_PUBLIC_DSN
           value: ${CI_SENTRY_PUBLIC_DSN}
+        - name: FRONTEND_HOST
+          value: ${FRONTEND_HOST}

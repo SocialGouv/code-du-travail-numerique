@@ -38,3 +38,7 @@ spec:
           value: "http://${API_HOST}/api/v1"
         - name: SUGGEST_URL
           value: "http://${NLP_HOST}/api/suggest"
+        - name: ENVIRONMENT
+          value: ${ENVIRONMENT}
+        - name: FRONTEND_HOST
+          value: ${FRONTEND_HOST}
