@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
@@ -66,9 +65,6 @@ class Fiche extends React.Component {
           description={data._source.description}
           image={ogImage}
         />
-        <Head>
-          <link href={data._source.url} rel="canonical" />
-        </Head>
         <Answer
           title={data._source.title}
           intro={<BreadCrumbs entry={data._source.path} />}

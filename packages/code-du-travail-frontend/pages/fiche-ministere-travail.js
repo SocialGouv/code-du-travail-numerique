@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "next/router";
-import Head from "next/head";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
@@ -46,9 +45,6 @@ class Fiche extends React.Component {
           description={data._source.description}
           image={ogImage}
         />
-        <Head>
-          <link href={data._source.url} rel="canonical" />
-        </Head>
         <Answer
           title={data._source.title}
           emptyMessage="Cette fiche n'a pas été trouvée"
