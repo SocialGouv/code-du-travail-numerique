@@ -1,5 +1,6 @@
 import React from "react";
 import getConfig from "next/config";
+import Head from "next/head";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import { Container, Section } from "@cdt/ui";
@@ -42,6 +43,9 @@ class SearchPage extends React.Component {
     const { source = "", q = "" } = router.query;
     return (
       <PageLayout>
+        <Head>
+          <meta name="robots" content="noindex, follow" />
+        </Head>
         <Metas
           url={pageUrl}
           title={`${q} - Code du travail numérique`}
