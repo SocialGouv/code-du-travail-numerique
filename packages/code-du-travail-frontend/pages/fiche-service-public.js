@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Head from "next/head";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import getConfig from "next/config";
@@ -66,6 +67,9 @@ class Fiche extends React.Component {
           description={description}
           image={ogImage}
         />
+        <Head>
+          <link href={data._source.url} rel="canonical" />
+        </Head>
         <ServicePublic>
           <Answer
             title={title}
