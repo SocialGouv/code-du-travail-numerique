@@ -14,6 +14,8 @@ import Wrapper from "./Wrapper";
 ---
 ### The following order is usually respected : Section > Container > Wrapper
 #### More details are provided in each specific component documentation
+
+#### N.B. Although Wrapper is supposed to provide normalized spacing, you can always add paddings and marging anywhere needed. But you must use the spacing variables in the `theme.js` file.
 ---
 
 <Playground>
@@ -34,7 +36,7 @@ import Wrapper from "./Wrapper";
   </Section>
   <Section variant="dark">
     <Container>
-      <Wrapper variant="light"> This is a light wrapper inside a dark section</Wrapper>
+      <Wrapper variant="light" size="large"> This is a large light wrapper inside a dark section</Wrapper>
     </Container>
   </Section>
 </Playground>

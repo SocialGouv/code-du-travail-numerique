@@ -549,6 +549,12 @@ exports[`<Kali /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c20 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c20 {
     border: none;

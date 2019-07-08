@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
+import { Container, theme } from "@cdt/ui";
+
 import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";
 
@@ -70,7 +73,9 @@ function Wizard({
               <form onSubmit={handleSubmit}>
                 {rules}
                 <StepItems activeIndex={stepIndex} items={stepItems} />
-                <Step form={form} />
+                <StepWrapper narrow noPadding>
+                  <Step form={form} />
+                </StepWrapper>
                 <PrevNextBar
                   onPrev={prevStep}
                   nextVisible={nextVisible}
@@ -94,3 +99,10 @@ Wizard.propTypes = {
 };
 
 export { Wizard };
+
+const { spacing } = theme;
+
+const StepWrapper = styled(Container)`
+  margin-top: ${spacing.large};
+  margin-bottom: ${spacing.large};
+`;

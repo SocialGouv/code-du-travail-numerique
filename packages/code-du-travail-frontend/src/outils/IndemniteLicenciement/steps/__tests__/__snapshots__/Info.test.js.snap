@@ -62,23 +62,8 @@ exports[`<StepInfo /> should display error if fauteGrave 1`] = `
 `;
 
 exports[`<StepInfo /> should render 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c2 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -91,7 +76,7 @@ exports[`<StepInfo /> should render 1`] = `
   align-items: center;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,123 +95,112 @@ exports[`<StepInfo /> should render 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c1 {
+.c0 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <p
     class="c0"
   >
-    <p
-      class="c1"
-    >
-      Quel est votre type de contrat ?
-    </p>
-    <div
+    Quel est votre type de contrat ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
       class="c2"
     >
-      <label
-        class="c3"
-      >
-        <input
-          name="contrat"
-          type="radio"
-          value="cdd"
-        />
-        <span>
-          Contrat à durée determiné (CDD) ou contrat d’intérim
-        </span>
-      </label>
-      <label
-        class="c3"
-      >
-        <input
-          name="contrat"
-          type="radio"
-          value="cdi"
-        />
-        <span>
-          Contrat à durée indeterminé (CDI)
-        </span>
-      </label>
-    </div>
-    <p
-      class="c1"
-    >
-      Êtes-vous licencié(e) pour faute grave ou lourde ?
-    </p>
-    <div
+      <input
+        name="contrat"
+        type="radio"
+        value="cdd"
+      />
+      <span>
+        Contrat à durée determiné (CDD) ou contrat d’intérim
+      </span>
+    </label>
+    <label
       class="c2"
     >
-      <label
-        class="c3"
-      >
-        <input
-          name="fauteGrave"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c3"
-      >
-        <input
-          name="fauteGrave"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
-    <p
-      class="c1"
-    >
-      Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
-    </p>
-    <div
+      <input
+        name="contrat"
+        type="radio"
+        value="cdi"
+      />
+      <span>
+        Contrat à durée indeterminé (CDI)
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
+    Êtes-vous licencié(e) pour faute grave ou lourde ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
       class="c2"
     >
-      <label
-        class="c3"
-      >
-        <input
-          name="inaptitude"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c3"
-      >
-        <input
-          name="inaptitude"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
+      <input
+        name="fauteGrave"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="fauteGrave"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
+    Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou maladie professionnelle reconnue ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="inaptitude"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="inaptitude"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
   </div>
 </div>
 `;

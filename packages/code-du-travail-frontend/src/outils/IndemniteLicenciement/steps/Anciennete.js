@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container } from "@cdt/ui";
 import { Field } from "react-final-form";
 import createDecorator from "final-form-calculate";
 import { isAfter, differenceInMonths, format } from "date-fns";
@@ -69,7 +68,7 @@ function validate({
 
 function StepAnciennete({ form }) {
   return (
-    <Container>
+    <>
       <SectionTitle>Dates d’entrée et de sortie de l’entreprise</SectionTitle>
       <TextQuestion
         name="dateEntree"
@@ -117,7 +116,7 @@ function StepAnciennete({ form }) {
           ) : null
         }
       </Field>
-    </Container>
+    </>
   );
 }
 

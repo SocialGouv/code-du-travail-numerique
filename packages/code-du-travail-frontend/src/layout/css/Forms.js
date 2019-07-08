@@ -50,6 +50,7 @@ export default createGlobalStyle`
     display: inline-block;
     height: ${RADIO_SIZE};
     width: ${RADIO_SIZE};
+    flex-shrink: 0;
     margin: 0 ${spacing.xsmall} calc(1em / 10) 0;
     padding: 0;
     appearance: none;

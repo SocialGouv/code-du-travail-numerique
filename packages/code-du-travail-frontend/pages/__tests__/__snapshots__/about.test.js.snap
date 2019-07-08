@@ -265,6 +265,12 @@ exports[`<About /> should render 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c8 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c8 {
     border: none;

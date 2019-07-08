@@ -2,22 +2,7 @@
 
 exports[`<Step /> should ask for ope and licenciement eco 1`] = `
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c1 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -30,7 +15,7 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,253 +34,228 @@ exports[`<Step /> should ask for ope and licenciement eco 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-.c2 {
+.c1 {
   width: 100%;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <h3>
+    Chimie
+  </h3>
+  <p>
+    Quel est votre échelon dans la convention collective ?
+    <br />
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
     class="c0"
+    for="echelon"
   >
-    <h3>
-      Chimie
-    </h3>
-    <p>
-      Quel est votre échelon dans la convention collective ?
-      <br />
-      Vous pouvez le trouver sur votre bulletin de salaire
-    </p>
+    Sélectionnez un échelon
+  </label>
+  <select
+    class="c1"
+    id="echelon"
+    name="echelon"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="130"
+    >
+      130
+    </option>
+    <option
+      value="140"
+    >
+      140
+    </option>
+    <option
+      value="150"
+    >
+      150
+    </option>
+    <option
+      value="160"
+    >
+      160
+    </option>
+    <option
+      value="175"
+    >
+      175
+    </option>
+    <option
+      value="190"
+    >
+      190
+    </option>
+    <option
+      value="205"
+    >
+      205
+    </option>
+    <option
+      value="225"
+    >
+      225
+    </option>
+    <option
+      value="235"
+    >
+      235
+    </option>
+    <option
+      value="250"
+    >
+      250
+    </option>
+    <option
+      value="275"
+    >
+      275
+    </option>
+    <option
+      value="300"
+    >
+      300
+    </option>
+    <option
+      value="325"
+    >
+      325
+    </option>
+    <option
+      value="350"
+    >
+      350
+    </option>
+    <option
+      value="360"
+    >
+      360
+    </option>
+    <option
+      value="400"
+    >
+      400
+    </option>
+    <option
+      value="460"
+    >
+      460
+    </option>
+    <option
+      value="480"
+    >
+      480
+    </option>
+    <option
+      value="510"
+    >
+      510
+    </option>
+    <option
+      value="550"
+    >
+      550
+    </option>
+    <option
+      value="660"
+    >
+      660
+    </option>
+    <option
+      value="770"
+    >
+      770
+    </option>
+    <option
+      value="880"
+    >
+      880
+    </option>
+  </select>
+  <p
+    class="c2"
+  >
+    Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
+  </p>
+  <div
+    class="c3"
+  >
     <label
-      class="c1"
-      for="echelon"
+      class="c0"
     >
-      Sélectionnez un échelon
-    </label>
-    <select
-      class="c2"
-      id="echelon"
-      name="echelon"
-    >
-      <option
-        disabled=""
-        value=""
+      <input
+        name="hasOpe"
+        type="radio"
+        value="true"
       />
-      <option
-        value="130"
-      >
-        130
-      </option>
-      <option
-        value="140"
-      >
-        140
-      </option>
-      <option
-        value="150"
-      >
-        150
-      </option>
-      <option
-        value="160"
-      >
-        160
-      </option>
-      <option
-        value="175"
-      >
-        175
-      </option>
-      <option
-        value="190"
-      >
-        190
-      </option>
-      <option
-        value="205"
-      >
-        205
-      </option>
-      <option
-        value="225"
-      >
-        225
-      </option>
-      <option
-        value="235"
-      >
-        235
-      </option>
-      <option
-        value="250"
-      >
-        250
-      </option>
-      <option
-        value="275"
-      >
-        275
-      </option>
-      <option
-        value="300"
-      >
-        300
-      </option>
-      <option
-        value="325"
-      >
-        325
-      </option>
-      <option
-        value="350"
-      >
-        350
-      </option>
-      <option
-        value="360"
-      >
-        360
-      </option>
-      <option
-        value="400"
-      >
-        400
-      </option>
-      <option
-        value="460"
-      >
-        460
-      </option>
-      <option
-        value="480"
-      >
-        480
-      </option>
-      <option
-        value="510"
-      >
-        510
-      </option>
-      <option
-        value="550"
-      >
-        550
-      </option>
-      <option
-        value="660"
-      >
-        660
-      </option>
-      <option
-        value="770"
-      >
-        770
-      </option>
-      <option
-        value="880"
-      >
-        880
-      </option>
-    </select>
-    <p
-      class="c3"
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c0"
     >
-      Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
-    </p>
-    <div
-      class="c4"
+      <input
+        name="hasOpe"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c2"
+  >
+    Le motif de votre licenciement est-il économique ?
+  </p>
+  <div
+    class="c3"
+  >
+    <label
+      class="c0"
     >
-      <label
-        class="c1"
-      >
-        <input
-          name="hasOpe"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c1"
-      >
-        <input
-          name="hasOpe"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
-    <p
-      class="c3"
+      <input
+        name="isEco"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c0"
     >
-      Le motif de votre licenciement est-il économique ?
-    </p>
-    <div
-      class="c4"
-    >
-      <label
-        class="c1"
-      >
-        <input
-          name="isEco"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c1"
-      >
-        <input
-          name="isEco"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
+      <input
+        name="isEco"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
   </div>
 </div>
 `;
 
 exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
+.c6 {
   padding: 0;
   font-size: 1rem;
   text-align: right;
@@ -307,17 +267,16 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   border-color: #c9d3df;
 }
 
-.c7::-webkit-outer-spin-button,
-.c7::-webkit-inner-spin-button {
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
 
-.c1 {
+.c0 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -330,7 +289,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -349,14 +308,7 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c5 {
-  font-size: 1.25rem;
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-}
-
-.c3 {
+.c4 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
@@ -364,10 +316,17 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
 }
 
 .c2 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c1 {
   width: 100%;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -379,261 +338,235 @@ exports[`<Step /> should ask for ope and licenciement eco and age 1`] = `
   margin-bottom: 1.25rem;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <h3>
+    Chimie
+  </h3>
+  <p>
+    Quel est votre échelon dans la convention collective ?
+    <br />
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
     class="c0"
+    for="echelon"
   >
-    <h3>
-      Chimie
-    </h3>
-    <p>
-      Quel est votre échelon dans la convention collective ?
-      <br />
-      Vous pouvez le trouver sur votre bulletin de salaire
-    </p>
+    Sélectionnez un échelon
+  </label>
+  <select
+    class="c1"
+    id="echelon"
+    name="echelon"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="130"
+    >
+      130
+    </option>
+    <option
+      value="140"
+    >
+      140
+    </option>
+    <option
+      value="150"
+    >
+      150
+    </option>
+    <option
+      value="160"
+    >
+      160
+    </option>
+    <option
+      value="175"
+    >
+      175
+    </option>
+    <option
+      value="190"
+    >
+      190
+    </option>
+    <option
+      value="205"
+    >
+      205
+    </option>
+    <option
+      value="225"
+    >
+      225
+    </option>
+    <option
+      value="235"
+    >
+      235
+    </option>
+    <option
+      value="250"
+    >
+      250
+    </option>
+    <option
+      value="275"
+    >
+      275
+    </option>
+    <option
+      value="300"
+    >
+      300
+    </option>
+    <option
+      value="325"
+    >
+      325
+    </option>
+    <option
+      value="350"
+    >
+      350
+    </option>
+    <option
+      value="360"
+    >
+      360
+    </option>
+    <option
+      value="400"
+    >
+      400
+    </option>
+    <option
+      value="460"
+    >
+      460
+    </option>
+    <option
+      value="480"
+    >
+      480
+    </option>
+    <option
+      value="510"
+    >
+      510
+    </option>
+    <option
+      value="550"
+    >
+      550
+    </option>
+    <option
+      value="660"
+    >
+      660
+    </option>
+    <option
+      value="770"
+    >
+      770
+    </option>
+    <option
+      value="880"
+    >
+      880
+    </option>
+  </select>
+  <p
+    class="c2"
+  >
+    Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
+  </p>
+  <div
+    class="c3"
+  >
     <label
-      class="c1"
-      for="echelon"
-    >
-      Sélectionnez un échelon
-    </label>
-    <select
-      class="c2"
-      id="echelon"
-      name="echelon"
-    >
-      <option
-        disabled=""
-        value=""
-      />
-      <option
-        value="130"
-      >
-        130
-      </option>
-      <option
-        value="140"
-      >
-        140
-      </option>
-      <option
-        value="150"
-      >
-        150
-      </option>
-      <option
-        value="160"
-      >
-        160
-      </option>
-      <option
-        value="175"
-      >
-        175
-      </option>
-      <option
-        value="190"
-      >
-        190
-      </option>
-      <option
-        value="205"
-      >
-        205
-      </option>
-      <option
-        value="225"
-      >
-        225
-      </option>
-      <option
-        value="235"
-      >
-        235
-      </option>
-      <option
-        value="250"
-      >
-        250
-      </option>
-      <option
-        value="275"
-      >
-        275
-      </option>
-      <option
-        value="300"
-      >
-        300
-      </option>
-      <option
-        value="325"
-      >
-        325
-      </option>
-      <option
-        value="350"
-      >
-        350
-      </option>
-      <option
-        value="360"
-      >
-        360
-      </option>
-      <option
-        value="400"
-      >
-        400
-      </option>
-      <option
-        value="460"
-      >
-        460
-      </option>
-      <option
-        value="480"
-      >
-        480
-      </option>
-      <option
-        value="510"
-      >
-        510
-      </option>
-      <option
-        value="550"
-      >
-        550
-      </option>
-      <option
-        value="660"
-      >
-        660
-      </option>
-      <option
-        value="770"
-      >
-        770
-      </option>
-      <option
-        value="880"
-      >
-        880
-      </option>
-    </select>
-    <p
-      class="c3"
-    >
-      Est ce que votre entreprise est affiliée à une des organisations patronales employeur ?
-    </p>
-    <div
-      class="c4"
-    >
-      <label
-        class="c1"
-      >
-        <input
-          name="hasOpe"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c1"
-      >
-        <input
-          name="hasOpe"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
-    <p
-      class="c3"
-    >
-      Le motif de votre licenciement est-il économique ?
-    </p>
-    <div
-      class="c4"
-    >
-      <label
-        class="c1"
-      >
-        <input
-          name="isEco"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c1"
-      >
-        <input
-          name="isEco"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
-    <label
-      class="c5"
-      for="1"
-    >
-      Quel etait votre âge à la date du licenciement ?
-    </label>
-    <div
-      class="c6"
+      class="c0"
     >
       <input
-        class="c7"
-        id="1"
-        name="age"
-        type="number"
-        value=""
+        name="hasOpe"
+        type="radio"
+        value="true"
       />
-    </div>
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c0"
+    >
+      <input
+        name="hasOpe"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c2"
+  >
+    Le motif de votre licenciement est-il économique ?
+  </p>
+  <div
+    class="c3"
+  >
+    <label
+      class="c0"
+    >
+      <input
+        name="isEco"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c0"
+    >
+      <input
+        name="isEco"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <label
+    class="c4"
+    for="1"
+  >
+    Quel etait votre âge à la date du licenciement ?
+  </label>
+  <div
+    class="c5"
+  >
+    <input
+      class="c6"
+      id="1"
+      name="age"
+      type="number"
+      value=""
+    />
   </div>
 </div>
 `;
 
 exports[`<Step /> should render 1`] = `
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c1 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -646,160 +579,149 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
 }
 
-.c2 {
+.c1 {
   width: 100%;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <h3>
+    Chimie
+  </h3>
+  <p>
+    Quel est votre échelon dans la convention collective ?
+    <br />
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
     class="c0"
+    for="echelon"
   >
-    <h3>
-      Chimie
-    </h3>
-    <p>
-      Quel est votre échelon dans la convention collective ?
-      <br />
-      Vous pouvez le trouver sur votre bulletin de salaire
-    </p>
-    <label
-      class="c1"
-      for="echelon"
+    Sélectionnez un échelon
+  </label>
+  <select
+    class="c1"
+    id="echelon"
+    name="echelon"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="130"
     >
-      Sélectionnez un échelon
-    </label>
-    <select
-      class="c2"
-      id="echelon"
-      name="echelon"
+      130
+    </option>
+    <option
+      value="140"
     >
-      <option
-        disabled=""
-        value=""
-      />
-      <option
-        value="130"
-      >
-        130
-      </option>
-      <option
-        value="140"
-      >
-        140
-      </option>
-      <option
-        value="150"
-      >
-        150
-      </option>
-      <option
-        value="160"
-      >
-        160
-      </option>
-      <option
-        value="175"
-      >
-        175
-      </option>
-      <option
-        value="190"
-      >
-        190
-      </option>
-      <option
-        value="205"
-      >
-        205
-      </option>
-      <option
-        value="225"
-      >
-        225
-      </option>
-      <option
-        value="235"
-      >
-        235
-      </option>
-      <option
-        value="250"
-      >
-        250
-      </option>
-      <option
-        value="275"
-      >
-        275
-      </option>
-      <option
-        value="300"
-      >
-        300
-      </option>
-      <option
-        value="325"
-      >
-        325
-      </option>
-      <option
-        value="350"
-      >
-        350
-      </option>
-      <option
-        value="360"
-      >
-        360
-      </option>
-      <option
-        value="400"
-      >
-        400
-      </option>
-      <option
-        value="460"
-      >
-        460
-      </option>
-      <option
-        value="480"
-      >
-        480
-      </option>
-      <option
-        value="510"
-      >
-        510
-      </option>
-      <option
-        value="550"
-      >
-        550
-      </option>
-      <option
-        value="660"
-      >
-        660
-      </option>
-      <option
-        value="770"
-      >
-        770
-      </option>
-      <option
-        value="880"
-      >
-        880
-      </option>
-    </select>
-  </div>
+      140
+    </option>
+    <option
+      value="150"
+    >
+      150
+    </option>
+    <option
+      value="160"
+    >
+      160
+    </option>
+    <option
+      value="175"
+    >
+      175
+    </option>
+    <option
+      value="190"
+    >
+      190
+    </option>
+    <option
+      value="205"
+    >
+      205
+    </option>
+    <option
+      value="225"
+    >
+      225
+    </option>
+    <option
+      value="235"
+    >
+      235
+    </option>
+    <option
+      value="250"
+    >
+      250
+    </option>
+    <option
+      value="275"
+    >
+      275
+    </option>
+    <option
+      value="300"
+    >
+      300
+    </option>
+    <option
+      value="325"
+    >
+      325
+    </option>
+    <option
+      value="350"
+    >
+      350
+    </option>
+    <option
+      value="360"
+    >
+      360
+    </option>
+    <option
+      value="400"
+    >
+      400
+    </option>
+    <option
+      value="460"
+    >
+      460
+    </option>
+    <option
+      value="480"
+    >
+      480
+    </option>
+    <option
+      value="510"
+    >
+      510
+    </option>
+    <option
+      value="550"
+    >
+      550
+    </option>
+    <option
+      value="660"
+    >
+      660
+    </option>
+    <option
+      value="770"
+    >
+      770
+    </option>
+    <option
+      value="880"
+    >
+      880
+    </option>
+  </select>
 </div>
 `;

@@ -1,23 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -30,16 +15,20 @@ exports[`<StepIndemnite /> should render 1`] = `
   align-items: center;
 }
 
-.c1 {
+.c0 {
   font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
 
-.c2 {
+.c1 {
   font-size: 1.625rem;
   font-weight: 700;
   color: #0053b3;
+}
+
+.c2 {
+  margin-bottom: 1rem;
 }
 
 .c3 {
@@ -64,146 +53,137 @@ exports[`<StepIndemnite /> should render 1`] = `
   min-width: 400px;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <h2
     class="c0"
   >
-    <h2
+    Indemnité légale
+  </h2>
+  <p>
+    Le code du travail prévoit un montant minimum de
+     
+    <strong
       class="c1"
     >
-      Indemnité légale
-    </h2>
-    <p>
-      Le code du travail prévoit un montant minimum de
-       
-      <strong
-        class="c2"
-      >
-        1250
-         €
-      </strong>
-       pour votre indemnité de licenciement.
-    </p>
-    <br />
-    <details>
-      <summary>
-        Voir le detail du calcul
-      </summary>
+      1250
+       €
+    </strong>
+     pour votre indemnité de licenciement.
+  </p>
+  <br />
+  <details>
+    <summary
+      class="c2"
+    >
+      Voir le detail du calcul
+    </summary>
+    <div
+      id="react-mathjax-preview"
+    >
       <div
-        id="react-mathjax-preview"
+        id="react-mathjax-preview-result"
       >
-        <div
-          id="react-mathjax-preview-result"
-        >
-          \`(1/4 * 2000 * 1.25) / 12 * 2\`
-        </div>
+        \`(1/4 * 2000 * 1.25) / 12 * 2\`
       </div>
-    </details>
-    <br />
-    <br />
-    <h2
-      class="c1"
-    >
-      Votre convention collective peut prévoir un montant plus important
-    </h2>
-    <p>
-      Selon la convention collective dont vous dépendez, le montant minimum de votre indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
-    </p>
+    </div>
+  </details>
+  <br />
+  <br />
+  <h2
+    class="c0"
+  >
+    Votre convention collective peut prévoir un montant plus important
+  </h2>
+  <p>
+    Selon la convention collective dont vous dépendez, le montant minimum de votre indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
+  </p>
+  <label
+    class="c3"
+  >
     <label
-      class="c3"
+      class="c4"
+      for="ccn"
     >
-      <label
-        class="c4"
-        for="ccn"
-      >
-        Sélectionnez votre convention collective pour en savoir plus :
-      </label>
-      <select
-        class="c5"
-        id="ccn"
-        name="branche"
-      >
-        <option
-          disabled=""
-          value=""
-        >
-          ex: Industries chimique
-        </option>
-        <option
-          value="0016"
-        >
-          Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
-        </option>
-        <option
-          value="0044"
-        >
-          Convention collective nationale des industries chimiques et connexes
-        </option>
-        <option
-          value="1518"
-        >
-          Convention collective nationale de l'Animation
-        </option>
-        <option
-          value="0843"
-        >
-          Convention collective nationale de la Boulangerie-pâtisserie artisanale
-        </option>
-        <option
-          value="1351"
-        >
-          Convention collective nationale de la Prévention et sécurité
-        </option>
-        <option
-          value="1534"
-        >
-          Convention collective nationale Viandes industries commerces en gros
-        </option>
-        <option
-          value="0992"
-        >
-          Convention collective nationale Boucherie boucherie-charcuterie triperie
-        </option>
-        <option
-          value="2120"
-        >
-          Convention collective nationale des banques
-        </option>
-        <option
-          value="2344"
-        >
-          Convention collective nationale de la Sidérurgie
-        </option>
-        <option
-          value="0029"
-        >
-          Etablissements privés d'hospitalisation (FEHAP)
-        </option>
-        <option
-          value="1596"
-        >
-          Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)
-        </option>
-        <option
-          value="1597"
-        >
-          Ouvriers du bâtiment (entreprises de plus 10 salariés)
-        </option>
-        <option
-          value="3043"
-        >
-          Propreté : entreprises et services associés
-        </option>
-      </select>
-      
+      Sélectionnez votre convention collective pour en savoir plus :
     </label>
-  </div>
+    <select
+      class="c5"
+      id="ccn"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ex: Industries chimique
+      </option>
+      <option
+        value="0016"
+      >
+        Convention collective nationale des transports routiers et activités auxiliaires du transport du 21 décembre 1950
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes
+      </option>
+      <option
+        value="1518"
+      >
+        Convention collective nationale de l'Animation
+      </option>
+      <option
+        value="0843"
+      >
+        Convention collective nationale de la Boulangerie-pâtisserie artisanale
+      </option>
+      <option
+        value="1351"
+      >
+        Convention collective nationale de la Prévention et sécurité
+      </option>
+      <option
+        value="1534"
+      >
+        Convention collective nationale Viandes industries commerces en gros
+      </option>
+      <option
+        value="0992"
+      >
+        Convention collective nationale Boucherie boucherie-charcuterie triperie
+      </option>
+      <option
+        value="2120"
+      >
+        Convention collective nationale des banques
+      </option>
+      <option
+        value="2344"
+      >
+        Convention collective nationale de la Sidérurgie
+      </option>
+      <option
+        value="0029"
+      >
+        Etablissements privés d'hospitalisation (FEHAP)
+      </option>
+      <option
+        value="1596"
+      >
+        Ouvriers du bâtiment (entreprises jusqu'à 10 salariés)
+      </option>
+      <option
+        value="1597"
+      >
+        Ouvriers du bâtiment (entreprises de plus 10 salariés)
+      </option>
+      <option
+        value="3043"
+      >
+        Propreté : entreprises et services associés
+      </option>
+    </select>
+    
+  </label>
 </div>
 `;

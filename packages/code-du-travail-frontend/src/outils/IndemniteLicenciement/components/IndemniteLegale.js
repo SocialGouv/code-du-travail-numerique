@@ -5,11 +5,11 @@ import MathJax from "react-mathjax-preview";
 
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
-import { SectionTitle, Highlight } from "../stepStyles";
+import { SectionTitle, Highlight, Summary } from "../stepStyles";
 
 function IndemniteLegale({ indemnite, formula }) {
   return (
-    <React.Fragment>
+    <>
       <SectionTitle>Indemnité légale</SectionTitle>
       <p>
         Le code du travail prévoit un montant minimum de{" "}
@@ -18,12 +18,12 @@ function IndemniteLegale({ indemnite, formula }) {
       </p>
       <br />
       <details>
-        <summary>Voir le detail du calcul</summary>
+        <Summary>Voir le detail du calcul</Summary>
         <ErrorBoundary>
           <MathJax math={"`" + formula + "`"} />
         </ErrorBoundary>
       </details>
-    </React.Fragment>
+    </>
   );
 }
 

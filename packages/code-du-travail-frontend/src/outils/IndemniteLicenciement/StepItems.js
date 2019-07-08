@@ -23,10 +23,10 @@ export function StepItems({ activeIndex = 0, items = [] }) {
 function Step({ label, index, activeIndex, ...props }) {
   const isActive = activeIndex === index;
   return (
-    <StepBase index={index} isActive={isActive} {...props}>
+    <StepWrapper index={index} isActive={isActive} {...props}>
       <IndexCircle isActive={isActive}>{index + 1}</IndexCircle>
       {label}
-    </StepBase>
+    </StepWrapper>
   );
 }
 
@@ -34,22 +34,23 @@ const { colors, spacing, fonts } = theme;
 
 const StepItemsContainer = styled.div`
   border-bottom: 1px solid ${colors.grey};
-  padding: ${spacing.interComponent} 0;
+  margin-top: ${spacing.interComponent};
+  padding-bottom: ${spacing.interComponent};
   display: flex;
   flex-wrap: wrap;
 `;
 
-const StepBase = styled.span`
-  text-align: left;
-  flex-basis: 130px;
+const StepWrapper = styled.span`
   display: flex;
+  width: 8.4375rem; // 135px
   align-items: center;
-  padding-left: ${props => (props.index === 0 ? 0 : spacing.interComponent)};
-  text-decoration: none;
+  padding: 0 ${spacing.tiny};
   font-size: ${fonts.sizeSmall};
+  text-align: left;
+  color: ${props => (props.isActive ? colors.blue : colors.grey)};
+  text-decoration: none;
   font-weight: 600;
   line-height: 1;
-  color: ${props => (props.isActive ? colors.blue : colors.grey)};
 `;
 
 const IndexCircle = styled.span`

@@ -12,4 +12,10 @@ describe("<Wrapper />", () => {
       expect(container).toMatchSnapshot();
     }
   );
+  it("should render a large wrapper", () => {
+    const { container } = render(
+      <Wrapper size="large">I am a large wrapper</Wrapper>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

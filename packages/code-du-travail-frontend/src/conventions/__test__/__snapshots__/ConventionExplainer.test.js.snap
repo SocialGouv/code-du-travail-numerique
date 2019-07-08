@@ -90,6 +90,12 @@ exports[`<ConventionExplainer /> is togglable 1`] = `
   align-items: center;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c0 {
     border: none;
@@ -209,6 +215,12 @@ exports[`<ConventionExplainer /> should render 1`] = `
 .c3 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
 }
 
 @media print {

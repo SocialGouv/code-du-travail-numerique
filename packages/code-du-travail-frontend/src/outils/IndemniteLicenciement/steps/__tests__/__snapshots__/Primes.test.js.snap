@@ -1,23 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepPrimes /> should render 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c2 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -30,7 +15,7 @@ exports[`<StepPrimes /> should render 1`] = `
   align-items: center;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,14 +34,14 @@ exports[`<StepPrimes /> should render 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c1 {
+.c0 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,7 +57,7 @@ exports[`<StepPrimes /> should render 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c6 {
+.c5 {
   padding: 0;
   font-size: 1rem;
   text-align: left;
@@ -86,21 +71,21 @@ exports[`<StepPrimes /> should render 1`] = `
   padding-right: 1rem;
 }
 
-.c6::-webkit-outer-spin-button,
-.c6::-webkit-inner-spin-button {
+.c5::-webkit-outer-spin-button,
+.c5::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   position: relative;
   margin-right: 1.25rem;
 }
 
-.c7 {
+.c6 {
   color: #adb9c9;
   position: absolute;
   right: 0.25rem;
@@ -110,7 +95,7 @@ exports[`<StepPrimes /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c8 {
+.c7 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -142,14 +127,14 @@ exports[`<StepPrimes /> should render 1`] = `
   font-size: 0.875rem;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
+.c7:focus,
+.c7:hover,
+.c7:active {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c9 {
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -180,97 +165,86 @@ exports[`<StepPrimes /> should render 1`] = `
   margin: 1.25rem 0;
 }
 
-.c9:focus,
-.c9:hover,
-.c9:active {
+.c8:focus,
+.c8:hover,
+.c8:active {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <p
     class="c0"
   >
-    <p
-      class="c1"
-    >
-      Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois ?
-    </p>
-    <div
+    Avez-vous perçu des primes annuelles ou exceptionnelles au cours des 3 derniers mois ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
       class="c2"
     >
-      <label
-        class="c3"
-      >
-        <input
-          checked=""
-          name="hasPrimes"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c3"
-      >
-        <input
-          name="hasPrimes"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
-    <br />
-    <br />
-    <p>
-      Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
-    </p>
+      <input
+        checked=""
+        name="hasPrimes"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="hasPrimes"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <br />
+  <br />
+  <p>
+    Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
+  </p>
+  <div
+    class="c3"
+  >
     <div
       class="c4"
     >
-      <div
+      <input
         class="c5"
+        name="primes[0].prime"
+        size="10"
+        value="3000"
+      />
+      <span
+        aria-hidden="true"
+        class="c6"
       >
-        <input
-          class="c6"
-          name="primes[0].prime"
-          size="10"
-          value="3000"
-        />
-        <span
-          aria-hidden="true"
-          class="c7"
-        >
-          €
-        </span>
-      </div>
-      <button
-        aria-pressed="false"
-        class="c8"
-        type="button"
-      >
-        Supprimer
-      </button>
+        €
+      </span>
     </div>
     <button
       aria-pressed="false"
-      class="c9"
+      class="c7"
       type="button"
     >
-      Ajouter une prime
+      Supprimer
     </button>
   </div>
+  <button
+    aria-pressed="false"
+    class="c8"
+    type="button"
+  >
+    Ajouter une prime
+  </button>
 </div>
 `;

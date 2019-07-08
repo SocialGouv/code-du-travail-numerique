@@ -1,9 +1,9 @@
 import React from "react";
 import MathJax from "react-mathjax-preview";
-import { Alert, Button, Container } from "@cdt/ui";
+import { Alert, Button } from "@cdt/ui";
 
 import { branches } from "../branches";
-import { SectionTitle, Highlight, SmallText } from "../stepStyles";
+import { SectionTitle, Highlight, SmallText, Summary } from "../stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 function IndemniteCCn({
@@ -17,7 +17,7 @@ function IndemniteCCn({
   const selectedBranche = branches.find(br => br.value === branche);
 
   return (
-    <Container>
+    <>
       <SectionTitle>{selectedBranche.label}</SectionTitle>
       {error ? (
         <Alert>{error}</Alert>
@@ -34,7 +34,7 @@ function IndemniteCCn({
           </p>
           <br />
           <details>
-            <summary>Voir le detail du calcul</summary>
+            <Summary>Voir le detail du calcul</Summary>
             <ErrorBoundary>
               <MathJax
                 math={
@@ -50,7 +50,7 @@ function IndemniteCCn({
       <br />
       <br />
       <Button>Recommencer une simulation</Button>
-    </Container>
+    </>
   );
 }
 

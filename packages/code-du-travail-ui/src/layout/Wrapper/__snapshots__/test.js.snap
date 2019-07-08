@@ -19,6 +19,12 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
   margin-bottom: 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c0 {
     border: none;
@@ -54,6 +60,12 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 
 .c0 > *:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
 }
 
 @media print {
@@ -93,6 +105,12 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
   margin-bottom: 0;
 }
 
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c0 {
     border: none;
@@ -107,6 +125,48 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
     this is a Button 
     light
      
+  </div>
+</div>
+`;
+
+exports[`<Wrapper /> should render a large wrapper 1`] = `
+.c0 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  padding: 2rem 2.5rem;
+  border-color: transparent;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width:600px) {
+  .c0 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c0 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    I am a large wrapper
   </div>
 </div>
 `;

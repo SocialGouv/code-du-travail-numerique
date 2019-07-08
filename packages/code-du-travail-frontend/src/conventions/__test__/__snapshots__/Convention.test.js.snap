@@ -219,6 +219,12 @@ exports[`<Convention /> should render 1`] = `
   padding: 10px;
 }
 
+@media (max-width:600px) {
+  .c1 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
 @media print {
   .c1 {
     border: none;

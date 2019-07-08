@@ -48,7 +48,7 @@ function CalculateurIndemnite() {
   return (
     <Section>
       <Container>
-        <Wrapper variant="light">
+        <Wrapper size="large" variant="light">
           <h1>Calculateur d&apos;indemnités de licenciement</h1>
           <Wizard
             steps={steps}

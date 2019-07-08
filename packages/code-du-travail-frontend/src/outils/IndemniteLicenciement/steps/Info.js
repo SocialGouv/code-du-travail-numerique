@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "@cdt/ui/";
 import { TypeContrat } from "../components/TypeContrat";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 
@@ -38,7 +37,7 @@ function validate(values) {
 
 function StepInfo() {
   return (
-    <Container>
+    <>
       <TypeContrat />
       <YesNoQuestion
         name="fauteGrave"
@@ -49,7 +48,7 @@ function StepInfo() {
         label="Êtes-vous licencié(e) pour inaptitude suite à accident du travail ou
         maladie professionnelle reconnue&nbsp;?"
       />
-    </Container>
+    </>
   );
 }
 StepInfo.validate = validate;

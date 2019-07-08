@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { Container, theme } from "@cdt/ui";
+import { theme } from "@cdt/ui";
 
 import { SectionTitle, Label } from "../../stepStyles";
 
@@ -27,7 +27,7 @@ const optionCategorie = {
 
 function Step() {
   return (
-    <Container>
+    <>
       <SectionTitle>Motif du licenciement</SectionTitle>
       <Field name="motif">
         {({ input }) => {
@@ -73,7 +73,7 @@ function Step() {
           );
         }}
       </Field>
-    </Container>
+    </>
   );
 }
 

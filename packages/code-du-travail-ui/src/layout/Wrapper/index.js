@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { box, colors, spacing } from "../../theme";
+import { box, breakpoints, colors, spacing } from "../../theme";
 
 const Wrapper = ({ children, variant, ...props }) => {
   return (
@@ -14,11 +14,13 @@ const Wrapper = ({ children, variant, ...props }) => {
 Wrapper.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  variant: PropTypes.oneOf(["default", "light", "dark", "outline"])
+  size: PropTypes.oneOf(["default", "large"]),
+  variant: PropTypes.oneOf(["default", "light", "dark"])
 };
 
 Wrapper.defaultProps = {
   className: "",
+  size: "default",
   variant: "default"
 };
 
@@ -29,6 +31,13 @@ const StyledWrapper = styled.div`
   border-style: solid;
   border-radius: ${box.borderRadius};
   border-color: ${colors.elementBorder};
+  ${props => {
+    if (props.size === "large") {
+      return css`
+        padding: ${spacing.large} ${spacing.larger};
+      `;
+    }
+  }}
   ${props => {
     if (props.variant === "default") {
       return css`
@@ -51,6 +60,9 @@ const StyledWrapper = styled.div`
   }
   & > *:last-child {
     margin-bottom: 0;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${spacing.small} ${spacing.medium};
   }
   @media print {
     border: none;

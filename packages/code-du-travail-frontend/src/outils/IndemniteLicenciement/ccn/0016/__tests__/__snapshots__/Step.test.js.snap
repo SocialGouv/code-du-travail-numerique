@@ -1,20 +1,179 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Step /> should ask detail about categories 1`] = `
+.c3 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 5em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c1 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
 .c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
 }
 
-.c0 > *:first-child {
-  margin-top: 0;
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
 }
 
-.c0 > *:last-child {
-  margin-bottom: 0;
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
+<div>
+  <h2
+    class="c0"
+  >
+    Quel est votre catégorie dans la convention collective ?
+  </h2>
+  <p>
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
+    class="c1"
+    for="input-categorie"
+  >
+    Sélectionnez une catégorie
+  </label>
+  <select
+    id="input-categorie"
+    name="categorie"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="ouvrier"
+    >
+      Ouvriers et employés
+    </option>
+    <option
+      value="tam"
+    >
+      Techniciens et agents de maîtrise (TAM)
+    </option>
+    <option
+      value="cadre"
+    >
+      Cadre
+    </option>
+  </select>
+  <h2
+    class="c0"
+  >
+    Précisez les périodes éventuelles passées au statut de TAM ou employé
+  </h2>
+  <label
+    class="c2"
+  >
+    <p>
+      Période passée en tant que TAM ou employé
+    </p>
+    <div>
+      <input
+        class="c3"
+        min="0"
+        name="tamDuration"
+        size="5"
+        type="number"
+        value=""
+      />
+       
+      mois
+    </div>
+  </label>
+  <label
+    class="c2"
+  >
+    <p>
+      Période passée en tant que cadre
+    </p>
+    <div>
+      <input
+        class="c3"
+        min="0"
+        name="cadreDuration"
+        size="5"
+        type="number"
+        value=""
+      />
+       
+      mois
+    </div>
+  </label>
+  <label
+    class="c4"
+    for="2"
+  >
+    Quel etait votre âge à la date du licenciement ?
+  </label>
+  <div
+    class="c5"
+  >
+    <input
+      class="c3"
+      id="2"
+      name="age"
+      size="5"
+      type="number"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`<Step /> should ask detail about retirement  1`] = `
 .c4 {
   padding: 0;
   font-size: 1rem;
@@ -35,9 +194,8 @@ exports[`<Step /> should ask detail about categories 1`] = `
   margin: 0;
 }
 
-.c2 {
+.c1 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -48,208 +206,9 @@ exports[`<Step /> should ask detail about categories 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c5 {
-  font-size: 1.25rem;
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-}
-
-.c1 {
-  font-size: 1.625rem;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-<div>
-  <div
-    class="c0"
-  >
-    <h2
-      class="c1"
-    >
-      Quel est votre catégorie dans la convention collective ?
-    </h2>
-    <p>
-      Vous pouvez le trouver sur votre bulletin de salaire
-    </p>
-    <label
-      class="c2"
-      for="input-categorie"
-    >
-      Sélectionnez une catégorie
-    </label>
-    <select
-      id="input-categorie"
-      name="categorie"
-    >
-      <option
-        disabled=""
-        value=""
-      />
-      <option
-        value="ouvrier"
-      >
-        Ouvriers et employés
-      </option>
-      <option
-        value="tam"
-      >
-        Techniciens et agents de maîtrise (TAM)
-      </option>
-      <option
-        value="cadre"
-      >
-        Cadre
-      </option>
-    </select>
-    <h2
-      class="c1"
-    >
-      Précisez les périodes éventuelles passées au statut de TAM ou employé
-    </h2>
-    <label
-      class="c3"
-    >
-      <p>
-        Période passée en tant que TAM ou employé
-      </p>
-      <div>
-        <input
-          class="c4"
-          min="0"
-          name="tamDuration"
-          size="5"
-          type="number"
-          value=""
-        />
-         
-        mois
-      </div>
-    </label>
-    <label
-      class="c3"
-    >
-      <p>
-        Période passée en tant que cadre
-      </p>
-      <div>
-        <input
-          class="c4"
-          min="0"
-          name="cadreDuration"
-          size="5"
-          type="number"
-          value=""
-        />
-         
-        mois
-      </div>
-    </label>
-    <label
-      class="c5"
-      for="2"
-    >
-      Quel etait votre âge à la date du licenciement ?
-    </label>
-    <div
-      class="c6"
-    >
-      <input
-        class="c4"
-        id="2"
-        name="age"
-        size="5"
-        type="number"
-        value=""
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Step /> should ask detail about retirement  1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c5 {
-  padding: 0;
-  font-size: 1rem;
-  text-align: right;
-  line-height: inherit;
-  width: 5em;
-  border-radius: 0.25rem;
-  border: 1px solid #c9d3df;
-  padding: 0.625rem 0.25rem;
-  border-color: #c9d3df;
-}
-
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
-.c2 {
-  padding: 0;
-  text-align: center;
-  font-size: 1.15rem;
-  margin-right: 2em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -268,27 +227,27 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-.c6 {
+.c5 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-.c1 {
+.c0 {
   font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -300,126 +259,101 @@ exports[`<Step /> should ask detail about retirement  1`] = `
   margin-bottom: 1.25rem;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <h2
     class="c0"
   >
-    <h2
+    Quel est votre catégorie dans la convention collective ?
+  </h2>
+  <p>
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
+    class="c1"
+    for="input-categorie"
+  >
+    Sélectionnez une catégorie
+  </label>
+  <select
+    id="input-categorie"
+    name="categorie"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="ouvrier"
+    >
+      Ouvriers et employés
+    </option>
+    <option
+      value="tam"
+    >
+      Techniciens et agents de maîtrise (TAM)
+    </option>
+    <option
+      value="cadre"
+    >
+      Cadre
+    </option>
+  </select>
+  <label
+    class="c2"
+    for="3"
+  >
+    Quel etait votre âge à la date du licenciement ?
+  </label>
+  <div
+    class="c3"
+  >
+    <input
+      class="c4"
+      id="3"
+      name="age"
+      size="5"
+      type="number"
+      value="62"
+    />
+  </div>
+  <p
+    class="c5"
+  >
+    Le salarié pourrait-il bénéficier de la retraite ?
+  </p>
+  <div
+    class="c6"
+  >
+    <label
       class="c1"
     >
-      Quel est votre catégorie dans la convention collective ?
-    </h2>
-    <p>
-      Vous pouvez le trouver sur votre bulletin de salaire
-    </p>
-    <label
-      class="c2"
-      for="input-categorie"
-    >
-      Sélectionnez une catégorie
-    </label>
-    <select
-      id="input-categorie"
-      name="categorie"
-    >
-      <option
-        disabled=""
-        value=""
+      <input
+        name="hasRetirementAge"
+        type="radio"
+        value="true"
       />
-      <option
-        value="ouvrier"
-      >
-        Ouvriers et employés
-      </option>
-      <option
-        value="tam"
-      >
-        Techniciens et agents de maîtrise (TAM)
-      </option>
-      <option
-        value="cadre"
-      >
-        Cadre
-      </option>
-    </select>
-    <label
-      class="c3"
-      for="3"
-    >
-      Quel etait votre âge à la date du licenciement ?
+      <span>
+        Oui
+      </span>
     </label>
-    <div
-      class="c4"
+    <label
+      class="c1"
     >
       <input
-        class="c5"
-        id="3"
-        name="age"
-        size="5"
-        type="number"
-        value="62"
+        name="hasRetirementAge"
+        type="radio"
+        value="false"
       />
-    </div>
-    <p
-      class="c6"
-    >
-      Le salarié pourrait-il bénéficier de la retraite ?
-    </p>
-    <div
-      class="c7"
-    >
-      <label
-        class="c2"
-      >
-        <input
-          name="hasRetirementAge"
-          type="radio"
-          value="true"
-        />
-        <span>
-          Oui
-        </span>
-      </label>
-      <label
-        class="c2"
-      >
-        <input
-          name="hasRetirementAge"
-          type="radio"
-          value="false"
-        />
-        <span>
-          Non
-        </span>
-      </label>
-    </div>
+      <span>
+        Non
+      </span>
+    </label>
   </div>
 </div>
 `;
 
 exports[`<Step /> should render 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c5 {
+.c4 {
   padding: 0;
   font-size: 1rem;
   text-align: right;
@@ -431,17 +365,16 @@ exports[`<Step /> should render 1`] = `
   border-color: #c9d3df;
 }
 
-.c5::-webkit-outer-spin-button,
-.c5::-webkit-inner-spin-button {
+.c4::-webkit-outer-spin-button,
+.c4::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
 
-.c2 {
+.c1 {
   padding: 0;
-  text-align: center;
   font-size: 1.15rem;
   margin-right: 2em;
   display: -webkit-box;
@@ -454,20 +387,20 @@ exports[`<Step /> should render 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c2 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-.c1 {
+.c0 {
   font-size: 1.625rem;
   margin-top: 2rem;
   margin-bottom: 1.25rem;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -479,73 +412,62 @@ exports[`<Step /> should render 1`] = `
   margin-bottom: 1.25rem;
 }
 
-@media print {
-  .c0 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 <div>
-  <div
+  <h2
     class="c0"
   >
-    <h2
-      class="c1"
+    Quel est votre catégorie dans la convention collective ?
+  </h2>
+  <p>
+    Vous pouvez le trouver sur votre bulletin de salaire
+  </p>
+  <label
+    class="c1"
+    for="input-categorie"
+  >
+    Sélectionnez une catégorie
+  </label>
+  <select
+    id="input-categorie"
+    name="categorie"
+  >
+    <option
+      disabled=""
+      value=""
+    />
+    <option
+      value="ouvrier"
     >
-      Quel est votre catégorie dans la convention collective ?
-    </h2>
-    <p>
-      Vous pouvez le trouver sur votre bulletin de salaire
-    </p>
-    <label
-      class="c2"
-      for="input-categorie"
+      Ouvriers et employés
+    </option>
+    <option
+      value="tam"
     >
-      Sélectionnez une catégorie
-    </label>
-    <select
-      id="input-categorie"
-      name="categorie"
+      Techniciens et agents de maîtrise (TAM)
+    </option>
+    <option
+      value="cadre"
     >
-      <option
-        disabled=""
-        value=""
-      />
-      <option
-        value="ouvrier"
-      >
-        Ouvriers et employés
-      </option>
-      <option
-        value="tam"
-      >
-        Techniciens et agents de maîtrise (TAM)
-      </option>
-      <option
-        value="cadre"
-      >
-        Cadre
-      </option>
-    </select>
-    <label
-      class="c3"
-      for="1"
-    >
-      Quel etait votre âge à la date du licenciement ?
-    </label>
-    <div
+      Cadre
+    </option>
+  </select>
+  <label
+    class="c2"
+    for="1"
+  >
+    Quel etait votre âge à la date du licenciement ?
+  </label>
+  <div
+    class="c3"
+  >
+    <input
       class="c4"
-    >
-      <input
-        class="c5"
-        id="1"
-        name="age"
-        size="5"
-        type="number"
-        value=""
-      />
-    </div>
+      id="1"
+      name="age"
+      size="5"
+      type="number"
+      value=""
+    />
   </div>
 </div>
 `;
