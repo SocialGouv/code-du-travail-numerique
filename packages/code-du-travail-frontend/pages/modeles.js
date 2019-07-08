@@ -48,8 +48,8 @@ class Modeles extends React.Component {
 
 const List = ({ items = [], ...props }) => (
   <ul {...props}>
-    {items.map(({ id, _source }) => (
-      <Item key={id}>
+    {items.map(({ _id, _source }) => (
+      <li key={_id}>
         <Link
           route="modeles-de-courriers"
           params={{ slug: _source.slug }}
@@ -59,7 +59,7 @@ const List = ({ items = [], ...props }) => (
             <ModeleCourrier modele={_source} />
           </ModeleLink>
         </Link>
-      </Item>
+      </li>
     ))}
   </ul>
 );
@@ -91,7 +91,6 @@ const ModeleCourrierList = styled(List)`
 const Title = styled.h1`
   text-align: center;
 `;
-const Item = styled.li``;
 
 const ModeleLink = styled.a`
   display: flex;
