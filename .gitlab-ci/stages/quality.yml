@@ -107,6 +107,7 @@ Test @cdtn/api:
   artifacts:
     paths:
       - packages/code-du-travail-api/coverage
+  cache: {}
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$ELK_STACK_VERSION
   variables:
