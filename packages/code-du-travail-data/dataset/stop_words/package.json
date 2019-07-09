@@ -3,5 +3,8 @@
   "version": "2.1.0",
   "private": true,
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts":{
+    "start": "node index.js > stop_words.txt"
+  }
 }
