@@ -1,14 +1,16 @@
 // Custom server using Express.
 const express = require("express");
 const next = require("next");
-const routes = require("./routes");
-
+const routes = require("../routes");
+const expressSitemap = require('express-sitemap-xml');
+const getUrls = require("./get-urls")
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
  */
 const LIVEPROD = process.env.ENVIRONMENT === "production";
 const PORT = process.env.FRONTEND_PORT || 3000;
+const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const dev = process.env.NODE_ENV !== "production";
 
 const app = next({ dev });
@@ -27,7 +29,9 @@ const robotTxtHandler = (req, res) => {
   const robotsProd = [
     "User-agent: *",
     "Disallow: /assets/",
-    "Disallow: /images/"
+    "Disallow: /images/",
+    "",
+    `Sitemap: ${FRONTEND_HOST}/sitemap.xml`
   ].join("\n");
   const robotsDev = ["User-agent: *", "Disallow: /"].join("\n");
 
@@ -39,6 +43,8 @@ const robotTxtHandler = (req, res) => {
 
 app.prepare().then(() => {
   const server = express().get("/robots.txt", robotTxtHandler);
+  server.use(expressSitemap(getUrls, FRONTEND_HOST))
+
   if (!LIVEPROD) {
     server.use(disallowRobots);
   }
@@ -48,7 +54,7 @@ app.prepare().then(() => {
     // eslint-disable-next-line no-console
     console.log(`
 
-  > Ready on http://localhost:${PORT}
+  > Ready on ${FRONTEND_HOST}
 
   Environment:
 
