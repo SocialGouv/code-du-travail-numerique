@@ -31,8 +31,9 @@ Register elasticsearch image:
   - docker pull $IMAGE_NAME:$ELK_STACK_VERSION || true
   script:
   - echo "Build $IMAGE_NAME:$ELK_STACK_VERSION from $IMAGE_NAME:$ELK_STACK_VERSION"
-  - docker build --cache-from $IMAGE_NAME:$ELK_STACK_VERSION -t $IMAGE_NAME:$ELK_STACK_VERSION $CONTEXT
+  - docker build --cache-from $IMAGE_NAME:$ELK_STACK_VERSION -t $IMAGE_NAME:$ELK_STACK_VERSION --file $DOCKERFILE $CONTEXT
   - docker push $IMAGE_NAME
 variables:
-  CONTEXT: packages/code-du-travail-data/elasticsearch.Dockerfile
+  CONTEXT: packages/code-du-travail-data
+  DOCKERFILE: packages/code-du-travail-data/elasticsearch.Dockerfile
   IMAGE_NAME: $CI_REGISTRY_IMAGE/elasticsearch
