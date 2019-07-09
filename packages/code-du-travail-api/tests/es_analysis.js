@@ -38,8 +38,7 @@ const filter = {
   },
   // liste de termes et leurs synonymes
   french_synonyms: {
-    type: "synonym",
-    expand: true,
+    type: "synonym_graph",
     synonyms: synonyms
   },
   // Il existe 3 stemmer pour le francais french, light_french, minimal_french
@@ -77,7 +76,8 @@ const analyzer = {
       "icu_folding",
       "lowercase",
       "french_stop",
-      "french_stemmer"
+      "french_stemmer",
+      "french_acronyms"
     ]
   },
   french_indexing: {
