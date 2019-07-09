@@ -121,7 +121,7 @@ Test @cdtn/api:
       while
         ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
         [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 3 ; done ;
+      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
     #
     - yarn workspace @cdt/api test --coverage
 
