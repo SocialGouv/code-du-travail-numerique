@@ -108,7 +108,7 @@ Test @cdtn/api:
     paths:
       - packages/code-du-travail-api/coverage
   services:
-    - $CI_REGISTRY_IMAGE/elasticsearch:$ELK_STACK_VERSION
+    - $CI_REGISTRY_IMAGE/code-du-travail-numerique:$ELK_STACK_VERSION
   variables:
     GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
