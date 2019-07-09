@@ -63,7 +63,7 @@ function getFacetsBody({ query }) {
           },
           {
             match: {
-              "tags.theme": {
+              "tags.keywords": {
                 query: `theme:${query}`
               }
             }
@@ -79,6 +79,30 @@ function getFacetsBody({ query }) {
             match: {
               "title.french_with_synonyms": {
                 query: query
+              }
+            }
+          },
+          {
+            match: {
+              source: {
+                query: "outils",
+                boost: 1.1
+              }
+            }
+          },
+          {
+            match: {
+              source: {
+                query: "modeles_de_courriers",
+                boost: 1.1
+              }
+            }
+          },
+          {
+            match: {
+              source: {
+                query: "faq",
+                boost: 1.1
               }
             }
           },

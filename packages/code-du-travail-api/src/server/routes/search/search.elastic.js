@@ -99,6 +99,30 @@ function getSearchBody({ query, size, excludeSources = [] }) {
             }
           },
           {
+            match: {
+              source: {
+                query: "outils",
+                boost: 1.1
+              }
+            }
+          },
+          {
+            match: {
+              source: {
+                query: "modeles_de_courriers",
+                boost: 1.1
+              }
+            }
+          },
+          {
+            match: {
+              source: {
+                query: "faq",
+                boost: 1.1
+              }
+            }
+          },
+          {
             query_string: {
               query:
                 '(title.french_with_synonyms:"fonction publique") OR (title.french_with_synonyms:"agent public")',
