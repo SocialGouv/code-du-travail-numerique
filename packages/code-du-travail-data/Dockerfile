@@ -16,7 +16,6 @@ COPY ./dataset/code_du_travail/themes.csv ./dataset/code_du_travail/themes.csv
 COPY ./dataset/code_du_travail/code-du-travail.json ./dataset/code_du_travail/code-du-travail.json
 COPY ./dataset/fiches_ministere_travail/fiches-min-travail.json ./dataset/fiches_ministere_travail/fiches-min-travail.json
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
-COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/annuaire/annuaire.data.json ./dataset/annuaire/annuaire.data.json
 COPY ./dataset/kali/kali.json ./dataset/kali/kali.json
 COPY ./dataset/fiches_service_public/fiches-sp-travail.json ./dataset/fiches_service_public/fiches-sp-travail.json

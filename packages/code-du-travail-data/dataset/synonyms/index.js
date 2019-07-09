@@ -26,5 +26,5 @@ const synonyms = [...cdtn_synonyms, ...thesaurusSynonyms]
 module.exports = synonyms;
 
 if (module === require.main) {
-  console.log(JSON.stringify(synonyms, null, 2));
+  console.log(synonyms.map(w => console.log(w)));
 }

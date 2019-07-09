@@ -5,6 +5,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > synonyms.json"
+    "start": "node index.js > synonyms.txt"
   }
 }

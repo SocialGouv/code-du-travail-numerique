@@ -1,4 +1,3 @@
-const synonyms = require("@cdt/data...synonyms");
 const stopwords = require("@cdt/data...stopwords");
 
 const filter = {
@@ -40,7 +39,7 @@ const filter = {
   french_synonyms: {
     type: "synonym",
     expand: true,
-    synonyms: synonyms
+    synonyms_path: "analysis/synonyms.txt"
   },
   // Il existe 3 stemmer pour le francais french, light_french, minimal_french
   // light french et le median

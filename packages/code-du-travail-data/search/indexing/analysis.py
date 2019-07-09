@@ -1,4 +1,3 @@
-from search.extraction.synonyms.data import SYNONYMS
 from search.extraction.stop_words.data import STOP_WORDS
 
 
@@ -41,7 +40,7 @@ filters = {
     'french_synonyms': {
         'type': 'synonym',
         'expand': True,
-        'synonyms': SYNONYMS,
+        'synonyms_path': "analysis/synonyms.txt",
     },
     # Il existe 3 stemmer pour le francais french, light_french, minimal_french
     # light french et le median
