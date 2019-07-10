@@ -98,14 +98,14 @@ Wizard.propTypes = {
   stepReducer: PropTypes.func.isRequired,
   initialSteps: PropTypes.arrayOf(
     PropTypes.shape({
-      component: PropTypes.element.isRequired,
+      component: PropTypes.func.isRequired,
       name: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired
     })
   ).isRequired,
   initialStepIndex: PropTypes.number,
   initialValues: PropTypes.object,
-  Rules: PropTypes.element
+  Rules: PropTypes.func
 };
 
 export { Wizard };
