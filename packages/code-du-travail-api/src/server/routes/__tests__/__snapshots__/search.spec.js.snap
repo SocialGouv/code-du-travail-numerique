@@ -17,7 +17,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 16.501816,
+        "_score": 8.563123,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -40,7 +40,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 16.501816,
+    "max_score": 8.563123,
     "total": Object {
       "relation": "eq",
       "value": 2,
@@ -78,7 +78,7 @@ Object {
       Object {
         "_id": "6",
         "_index": "cdtn_document_test",
-        "_score": 5.2228813,
+        "_score": 3.114266,
         "_source": Object {
           "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
           "source": "faq",
@@ -89,7 +89,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 4.8325014,
+        "_score": 2.7238865,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -98,7 +98,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 5.2228813,
+    "max_score": 3.114266,
     "total": Object {
       "relation": "eq",
       "value": 2,
@@ -120,7 +120,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 15.135147,
+        "_score": 11.971638,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -131,7 +131,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 15.135147,
+    "max_score": 11.971638,
     "total": Object {
       "relation": "eq",
       "value": 2,
@@ -420,7 +420,7 @@ Object {
       Object {
         "_id": "2",
         "_index": "cdtn_document_test",
-        "_score": 6.2299156,
+        "_score": 4.5139155,
         "_source": Object {
           "anchor": "#Comment-presenter-une-demission",
           "slug": "demission-comment-presenter-une-demission",
@@ -433,7 +433,7 @@ Object {
       Object {
         "_id": "4",
         "_index": "cdtn_document_test",
-        "_score": 6.1712484,
+        "_score": 4.3167367,
         "_source": Object {
           "slug": "demission-dun-salarie",
           "source": "fiches_service_public",
@@ -443,31 +443,9 @@ Object {
         "_type": "_doc",
       },
       Object {
-        "_id": "6",
-        "_index": "cdtn_document_test",
-        "_score": 6.0682764,
-        "_source": Object {
-          "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-          "source": "faq",
-          "title": "Dans les HCR, quel est le préavis de démission ?",
-        },
-        "_type": "_doc",
-      },
-      Object {
-        "_id": "7",
-        "_index": "cdtn_document_test",
-        "_score": 5.677897,
-        "_source": Object {
-          "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-          "source": "faq",
-          "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
-        },
-        "_type": "_doc",
-      },
-      Object {
         "_id": "0",
         "_index": "cdtn_document_test",
-        "_score": 5.5029116,
+        "_score": 4.0259256,
         "_source": Object {
           "slug": "themes/rupture-de-contrat/la-demission",
           "source": "themes",
@@ -476,14 +454,36 @@ Object {
         "_type": "_doc",
       },
       Object {
+        "_id": "6",
+        "_index": "cdtn_document_test",
+        "_score": 3.9596615,
+        "_source": Object {
+          "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
+          "source": "faq",
+          "title": "Dans les HCR, quel est le préavis de démission ?",
+        },
+        "_type": "_doc",
+      },
+      Object {
         "_id": "5",
         "_index": "cdtn_document_test",
-        "_score": 5.4247,
+        "_score": 3.7086992,
         "_source": Object {
           "slug": "demission-dune-assistante-maternelle",
           "source": "fiches_service_public",
           "title": "Démission d'une assistante maternelle",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+        },
+        "_type": "_doc",
+      },
+      Object {
+        "_id": "7",
+        "_index": "cdtn_document_test",
+        "_score": 3.569282,
+        "_source": Object {
+          "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
+          "source": "faq",
+          "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
         },
         "_type": "_doc",
       },
@@ -514,7 +514,7 @@ Object {
       Object {
         "_id": "3",
         "_index": "cdtn_document_test",
-        "_score": 2.5595078,
+        "_score": 1.0665257,
         "_source": Object {
           "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
           "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
@@ -536,7 +536,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 6.2299156,
+    "max_score": 4.5139155,
     "total": Object {
       "relation": "eq",
       "value": 10,
