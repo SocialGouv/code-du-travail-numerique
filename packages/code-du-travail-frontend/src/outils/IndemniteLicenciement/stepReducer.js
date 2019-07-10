@@ -5,41 +5,39 @@ import { StepAnciennete } from "./steps/Anciennete";
 import { StepSalaires } from "./steps/Salaires";
 import { StepPrimes } from "./steps/Primes";
 
-export function getInitialSteps() {
-  return [
-    {
-      component: StepIntro,
-      name: "introduction",
-      label: "Introduction"
-    },
-    {
-      component: StepInfo,
-      name: "infoGenerales",
-      label: "Informations générales"
-    },
-    {
-      component: StepAnciennete,
-      name: "anciennete",
-      label: "Ancienneté"
-    },
-    {
-      component: StepSalaires,
-      name: "salaires",
-      label: "Salaires"
-    },
-    {
-      component: StepIndemnite,
-      name: "indemniteLegale",
-      label: "Indemnité légale"
-    }
-  ];
-}
+export const initialSteps = [
+  {
+    component: StepIntro,
+    name: "introduction",
+    label: "Introduction"
+  },
+  {
+    component: StepInfo,
+    name: "infoGenerales",
+    label: "Informations générales"
+  },
+  {
+    component: StepAnciennete,
+    name: "anciennete",
+    label: "Ancienneté"
+  },
+  {
+    component: StepSalaires,
+    name: "salaires",
+    label: "Salaires"
+  },
+  {
+    component: StepIndemnite,
+    name: "indemniteLegale",
+    label: "Indemnité légale"
+  }
+];
 
-export function StepReducer(steps, action) {
+export function stepReducer(steps, action) {
   switch (action.type) {
-    case "reset":
-      return action.payload;
-
+    case "reset": {
+      return [...initialSteps];
+    }
     case "add_primes": {
       const salaireIndex = steps.findIndex(step => step.name === "salaires");
       const newSteps = steps.filter(step => step.name !== "primes");
@@ -63,6 +61,6 @@ export function StepReducer(steps, action) {
     }
     default:
       console.warn("action unknow", action);
+      return steps;
   }
-  return steps;
 }

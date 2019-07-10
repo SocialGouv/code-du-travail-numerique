@@ -1,8 +1,8 @@
-import { StepReducer, getInitialSteps } from "../reducer";
+import { stepReducer, initialSteps } from "../stepReducer";
 
 describe("getInitialSteps()", () => {
   it("should return default steps", () => {
-    expect(getInitialSteps()).toMatchInlineSnapshot(`
+    expect(initialSteps).toMatchInlineSnapshot(`
 Array [
   Object {
     "component": [Function],
@@ -36,36 +36,35 @@ Array [
 
 describe("reducer", () => {
   it("should handle reset action", () => {
-    const items = [{ label: "test" }];
-    expect(StepReducer([], { type: "reset", payload: items })).toEqual(items);
+    expect(stepReducer([], { type: "reset" })).toEqual(initialSteps);
   });
   it("should handle add_primes after salaires", () => {
     const initialSteps = [{ name: "salaires" }];
-    const newState = StepReducer(initialSteps, { type: "add_primes" });
+    const newState = stepReducer(initialSteps, { type: "add_primes" });
 
     expect(newState.findIndex(step => step.name === "primes")).toEqual(1);
   });
   it("should handle add_primes after salaires", () => {
     const initialSteps = [];
-    const newState = StepReducer(initialSteps, { type: "add_primes" });
+    const newState = stepReducer(initialSteps, { type: "add_primes" });
 
     expect(newState.findIndex(step => step.name === "primes")).toEqual(0);
   });
   it("should handle remove_primes", () => {
     const initialSteps = [];
-    const newState = StepReducer(initialSteps, { type: "remove_primes" });
+    const newState = stepReducer(initialSteps, { type: "remove_primes" });
 
     expect(newState.findIndex(step => step.name === "primes")).toEqual(-1);
   });
   it("should not fail when handle remove_primes", () => {
     const initialSteps = [];
-    const newState = StepReducer(initialSteps, { type: "remove_primes" });
+    const newState = stepReducer(initialSteps, { type: "remove_primes" });
 
     expect(newState.findIndex(step => step.name === "primes")).toEqual(-1);
   });
   it("should handle add_branche", () => {
     const initialSteps = [];
-    const newState = StepReducer(initialSteps, {
+    const newState = stepReducer(initialSteps, {
       type: "add_branche",
       payload: [{ name: "branche_1" }, { name: "branche_2" }]
     });
@@ -76,7 +75,7 @@ describe("reducer", () => {
   });
   it("should not fail to remove_branche when steps are empty", () => {
     const initialSteps = [];
-    const newState = StepReducer(initialSteps, {
+    const newState = stepReducer(initialSteps, {
       type: "remove_branche"
     });
 
@@ -88,7 +87,7 @@ describe("reducer", () => {
       { name: "branche_1" },
       { name: "branche_2" }
     ];
-    const newState = StepReducer(initialSteps, {
+    const newState = stepReducer(initialSteps, {
       type: "remove_branche"
     });
 
