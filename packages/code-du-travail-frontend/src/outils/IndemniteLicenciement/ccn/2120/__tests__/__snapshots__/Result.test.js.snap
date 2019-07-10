@@ -88,7 +88,13 @@ exports[`<Result /> should render 1`] = `
     Convention collective nationale des banques
   </h2>
   <p>
-    Le montant de l’indemnité est
+    L’indemnité conventionnelle est de 
+    NaN
+    <br />
+    L’indemnité légale est de 
+    0
+    <br />
+    Le montant de l’indemnité est de
      
     <strong
       class="c1"

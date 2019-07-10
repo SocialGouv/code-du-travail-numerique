@@ -53,44 +53,48 @@ function getIndemnite({
   anciennete,
   dateNotification
 }) {
-  let formula;
+  let formuleLegale;
 
   const avant27Sep2017 = isAfter(new Date("2017-09-27"), dateNotification);
 
-  let indemnite = 0;
+  let indemniteLegale = 0;
   const isSmallAnciennete = anciennete <= 10; // 10 years
   if (avant27Sep2017 && anciennete >= 1) {
     if (isSmallAnciennete) {
-      indemnite = (1 / 5) * salaireRef * anciennete;
-      formula = `(1/5 * ${round(salaireRef)} * ${round(anciennete)}) / 12`;
+      indemniteLegale = (1 / 5) * salaireRef * anciennete;
+      formuleLegale = `(1/5 * ${round(salaireRef)} * ${round(
+        anciennete
+      )}) / 12`;
     } else {
-      indemnite =
+      indemniteLegale =
         (1 / 5) * salaireRef * anciennete +
         (2 / 15) * salaireRef * (anciennete - 10);
-      formula = `(1/5  * ${round(salaireRef)} * 10) + (2/5 * ${round(
+      formuleLegale = `(1/5  * ${round(salaireRef)} * 10) + (2/5 * ${round(
         salaireRef
       )} * (${round(anciennete)} - 10))`;
     }
   } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {
-      indemnite = (1 / 4) * salaireRef * anciennete;
-      formula = `(1/4 * ${round(salaireRef)} * ${round(anciennete)}) / 12`;
+      indemniteLegale = (1 / 4) * salaireRef * anciennete;
+      formuleLegale = `(1/4 * ${round(salaireRef)} * ${round(
+        anciennete
+      )}) / 12`;
     } else {
-      indemnite =
+      indemniteLegale =
         (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
-      formula = `(1/4 * ${round(salaireRef)} * 10) + (1/3 * ${round(
+      formuleLegale = `(1/4 * ${round(salaireRef)} * 10) + (1/3 * ${round(
         salaireRef
       )} * (${round(anciennete)} - 10))`;
     }
   }
-  if (inaptitude && indemnite > 0) {
-    indemnite *= 2;
-    formula += " * 2";
+  if (inaptitude && indemniteLegale > 0) {
+    indemniteLegale *= 2;
+    formuleLegale += " * 2";
   }
 
   return {
-    indemnite: round(indemnite),
-    formula
+    indemniteLegale: round(indemniteLegale),
+    formuleLegale
   };
 }
 
@@ -118,7 +122,7 @@ function getIndemniteFromFinalForm(form) {
     primes
   });
 
-  const { indemnite, formula } = getIndemnite({
+  const { indemniteLegale, formuleLegale } = getIndemnite({
     salaireRef,
     inaptitude,
     anciennete,
@@ -127,8 +131,8 @@ function getIndemniteFromFinalForm(form) {
 
   return {
     salaireRefLegal: salaireRef,
-    indemniteLegale: indemnite,
-    formuleLegale: formula
+    indemniteLegale,
+    formuleLegale
   };
 }
 

@@ -42,7 +42,7 @@ export function Result({ form }) {
   const {
     error,
     indemniteConventionnelle,
-    formula
+    formuleConventionnelle
   } = getIndemniteConventionnelle({
     age,
     categorie,
@@ -56,9 +56,9 @@ export function Result({ form }) {
 
   return (
     <IndemniteCCn
-      montant={indemniteConventionnelle}
+      indemniteConventionnelle={indemniteConventionnelle}
       indemniteLegale={indemniteLegale}
-      formule={formula}
+      formuleConventionnelle={formuleConventionnelle}
       formuleLegale={formuleLegale}
       branche={branche}
       error={error}

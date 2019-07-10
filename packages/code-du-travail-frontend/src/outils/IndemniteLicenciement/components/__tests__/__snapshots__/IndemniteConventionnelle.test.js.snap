@@ -29,11 +29,11 @@ exports[`<IndemniteLegale /> should render error 1`] = `
     <strong
       class="c1"
     >
+      42
        €
     </strong>
      pour votre indemnité de licenciement.
   </p>
-  <br />
   <details>
     <summary
       class="c2"
@@ -46,7 +46,7 @@ exports[`<IndemniteLegale /> should render error 1`] = `
       <div
         id="react-mathjax-preview-result"
       >
-        \`undefined\`
+        \`42 / 3.14\`
       </div>
     </div>
   </details>
@@ -82,11 +82,11 @@ exports[`<IndemniteLegale /> should render results 1`] = `
     <strong
       class="c1"
     >
+      42
        €
     </strong>
      pour votre indemnité de licenciement.
   </p>
-  <br />
   <details>
     <summary
       class="c2"
@@ -99,7 +99,7 @@ exports[`<IndemniteLegale /> should render results 1`] = `
       <div
         id="react-mathjax-preview-result"
       >
-        \`undefined\`
+        \`42 / 3.14\`
       </div>
     </div>
   </details>

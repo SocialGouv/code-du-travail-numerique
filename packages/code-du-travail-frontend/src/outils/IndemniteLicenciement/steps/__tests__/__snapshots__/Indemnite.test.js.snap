@@ -46,6 +46,7 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 .c5 {
+  margin-top: 0.625rem;
   margin-right: 1.25rem;
   -webkit-flex: 1 1 70%;
   -ms-flex: 1 1 70%;
@@ -70,7 +71,6 @@ exports[`<StepIndemnite /> should render 1`] = `
     </strong>
      pour votre indemnité de licenciement.
   </p>
-  <br />
   <details>
     <summary
       class="c2"
@@ -87,8 +87,6 @@ exports[`<StepIndemnite /> should render 1`] = `
       </div>
     </div>
   </details>
-  <br />
-  <br />
   <h2
     class="c0"
   >
@@ -115,7 +113,7 @@ exports[`<StepIndemnite /> should render 1`] = `
         disabled=""
         value=""
       >
-        ex: Industries chimique
+        Selectionner
       </option>
       <option
         value="0016"
@@ -141,6 +139,11 @@ exports[`<StepIndemnite /> should render 1`] = `
         value="1351"
       >
         Convention collective nationale de la Prévention et sécurité
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
       </option>
       <option
         value="1534"

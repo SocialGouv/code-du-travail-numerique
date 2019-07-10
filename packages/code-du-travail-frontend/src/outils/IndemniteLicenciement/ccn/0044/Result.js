@@ -34,7 +34,10 @@ function Result({ form }) {
     salaire,
     dateNotification
   });
-  const { indemniteConventionnelle, formula } = getIndemniteConventionnelle({
+  const {
+    indemniteConventionnelle,
+    formuleConventionnelle
+  } = getIndemniteConventionnelle({
     salaireRef,
     indemnite: indemniteLegale,
     anciennete,
@@ -46,9 +49,9 @@ function Result({ form }) {
 
   return (
     <IndemniteCCn
-      montant={indemniteConventionnelle}
+      indemniteConventionnelle={indemniteConventionnelle}
       indemniteLegale={indemniteLegale}
-      formule={formula}
+      formuleConventionnelle={formuleConventionnelle}
       formuleLegale={formuleLegale}
       branche={branche}
     />

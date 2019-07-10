@@ -237,7 +237,7 @@ describe("getIndemnite", () => {
     it(`${test.title} should return ${test.expected}`, () => {
       const salaireRef = getSalaireRef(test.data);
       const res = getIndemnite({ salaireRef, ...test.data });
-      expect(res.indemnite).toEqual(round(test.expected));
+      expect(res.indemniteLegale).toEqual(round(test.expected));
     });
   });
   it("should return 0 when anciennete < 8mois", () => {
@@ -245,7 +245,7 @@ describe("getIndemnite", () => {
       ...tests[0].data,
       anciennete: 7 / 12
     });
-    expect(res.indemnite).toEqual(0);
+    expect(res.indemniteLegale).toEqual(0);
   });
   it("should return 0 when anciennete < 12mois", () => {
     const res = getIndemnite({
@@ -253,6 +253,6 @@ describe("getIndemnite", () => {
       anciennete: 11 / 12,
       dateNotification: "2017-01-01"
     });
-    expect(res.indemnite).toEqual(0);
+    expect(res.indemniteLegale).toEqual(0);
   });
 });

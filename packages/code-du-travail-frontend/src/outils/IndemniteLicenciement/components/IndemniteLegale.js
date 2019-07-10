@@ -7,20 +7,19 @@ import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 import { SectionTitle, Highlight, Summary } from "../stepStyles";
 
-function IndemniteLegale({ indemnite, formula }) {
+function IndemniteLegale({ indemniteLegale, formuleLegale }) {
   return (
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
       <p>
         Le code du travail prévoit un montant minimum de{" "}
-        <Highlight>{indemnite} €</Highlight> pour votre indemnité de
+        <Highlight>{indemniteLegale} €</Highlight> pour votre indemnité de
         licenciement.
       </p>
-      <br />
       <details>
         <Summary>Voir le detail du calcul</Summary>
         <ErrorBoundary>
-          <MathJax math={"`" + formula + "`"} />
+          <MathJax math={"`" + formuleLegale + "`"} />
         </ErrorBoundary>
       </details>
     </>
@@ -28,8 +27,8 @@ function IndemniteLegale({ indemnite, formula }) {
 }
 
 IndemniteLegale.propTypes = {
-  indemnite: PropTypes.number.isRequired,
-  formula: PropTypes.string.isRequired
+  indemniteLegale: PropTypes.number.isRequired,
+  formuleLegale: PropTypes.string.isRequired
 };
 
 export { IndemniteLegale };

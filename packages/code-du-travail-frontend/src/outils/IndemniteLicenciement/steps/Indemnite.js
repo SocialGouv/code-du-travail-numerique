@@ -20,9 +20,10 @@ function StepIndemnite({ form }) {
   const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
   return (
     <>
-      <IndemniteLegale indemnite={indemniteLegale} formula={formuleLegale} />
-      <br />
-      <br />
+      <IndemniteLegale
+        indemniteLegale={indemniteLegale}
+        formuleLegale={formuleLegale}
+      />
       <SectionTitle>
         Votre convention collective peut prévoir un montant plus important
       </SectionTitle>
@@ -36,31 +37,36 @@ function StepIndemnite({ form }) {
         subscribe={{ error: true, dirty: true }}
         validate={validateCCn}
       >
-        {({ input, meta: { error, dirty } }) => (
-          <>
-            <SelectWrapper>
-              <Label htmlFor="ccn">
-                Sélectionnez votre convention collective pour en savoir plus :
-              </Label>
-              <Select {...input} id="ccn">
-                <option disabled value="">
-                  ex: Industries chimique
-                </option>
-                {branches.map(branche => (
-                  <option value={branche.value} key={branche.value}>
-                    {branche.label}
+        {({ input, meta: { error, dirty } }) => {
+          return (
+            <>
+              <SelectWrapper>
+                <Label htmlFor="ccn">
+                  Sélectionnez votre convention collective pour en savoir plus :
+                </Label>
+                <Select {...input} id="ccn">
+                  <option disabled value="">
+                    Selectionner
                   </option>
-                ))}
-              </Select>
-              {input.value && input.value.length > 0 && (
-                <CancelButton variant="link" onClick={() => input.onChange("")}>
-                  annuler
-                </CancelButton>
-              )}
-            </SelectWrapper>
-            {error && dirty && <span>{error}</span>}
-          </>
-        )}
+                  {branches.map(branche => (
+                    <option value={branche.value} key={branche.value}>
+                      {branche.label}
+                    </option>
+                  ))}
+                </Select>
+                {input.value && input.value.length > 0 && (
+                  <CancelButton
+                    variant="link"
+                    onClick={() => input.onChange("")}
+                  >
+                    annuler
+                  </CancelButton>
+                )}
+              </SelectWrapper>
+              {error && dirty && <span>{error}</span>}
+            </>
+          );
+        }}
       </Field>
     </>
   );
@@ -79,6 +85,7 @@ const SelectWrapper = styled.label`
 `;
 
 const Select = styled.select`
+  margin-top: ${spacing.small};
   margin-right: ${spacing.interComponent};
   flex: 1 1 70%;
   min-width: 400px;
