@@ -34,7 +34,6 @@ exports[`<IndemniteLegale /> should render 1`] = `
     </strong>
      pour votre indemnité de licenciement.
   </p>
-  <br />
   <details>
     <summary
       class="c2"

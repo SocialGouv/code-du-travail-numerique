@@ -39,7 +39,7 @@ function ResultProprete({ form }) {
 
   const {
     indemniteConventionnelle,
-    formula,
+    formuleConventionnelle,
     error
   } = getIndemniteConventionnelle({
     salaireRef,
@@ -53,9 +53,9 @@ function ResultProprete({ form }) {
 
   return (
     <IndemniteCCn
-      montant={indemniteConventionnelle}
+      indemniteConventionnelle={indemniteConventionnelle}
       indemniteLegale={indemniteLegale}
-      formule={formula}
+      formuleConventionnelle={formuleConventionnelle}
       formuleLegale={formuleLegale}
       branche={branche}
       error={error}

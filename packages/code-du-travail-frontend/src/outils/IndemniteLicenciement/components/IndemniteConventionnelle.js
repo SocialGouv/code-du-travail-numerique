@@ -8,9 +8,9 @@ import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 function IndemniteCCn({
   branche,
-  montant,
+  indemniteConventionnelle,
   indemniteLegale,
-  formule,
+  formuleConventionnelle,
   formuleLegale,
   error
 }) {
@@ -24,10 +24,16 @@ function IndemniteCCn({
       ) : (
         <React.Fragment>
           <p>
-            Le montant de l’indemnité est{" "}
-            <Highlight>{Math.max(indemniteLegale, montant)} €</Highlight>{" "}
+            L’indemnité conventionnelle est de {indemniteConventionnelle}
+            <br />
+            L’indemnité légale est de {indemniteLegale}
+            <br />
+            Le montant de l’indemnité est de{" "}
+            <Highlight>
+              {Math.max(indemniteLegale, indemniteConventionnelle)} €
+            </Highlight>{" "}
             <SmallText>
-              {montant > indemniteLegale
+              {indemniteConventionnelle > indemniteLegale
                 ? "sur la base du calcul de l'indemnité conventionelle"
                 : "sur la base du calcul de l’indemnité légale"}
             </SmallText>
@@ -39,7 +45,9 @@ function IndemniteCCn({
               <MathJax
                 math={
                   "`" +
-                  (montant > indemniteLegale ? formule : formuleLegale) +
+                  (indemniteConventionnelle > indemniteLegale
+                    ? formuleConventionnelle
+                    : formuleLegale) +
                   "`"
                 }
               />

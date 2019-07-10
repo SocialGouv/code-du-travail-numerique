@@ -88,7 +88,13 @@ exports[`<Result /> should render 1`] = `
     Propreté : entreprises et services associés
   </h2>
   <p>
-    Le montant de l’indemnité est
+    L’indemnité conventionnelle est de 
+    1000
+    <br />
+    L’indemnité légale est de 
+    2500
+    <br />
+    Le montant de l’indemnité est de
      
     <strong
       class="c1"

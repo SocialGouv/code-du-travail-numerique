@@ -60,6 +60,7 @@ export default createGlobalStyle`
     background: ${colors.white};
     border: 1px solid ${colors.elementBorder};
     border-radius: 50%;
+    cursor: pointer;
   }
   input[type="radio"]:checked {
     background-color: ${colors.white};

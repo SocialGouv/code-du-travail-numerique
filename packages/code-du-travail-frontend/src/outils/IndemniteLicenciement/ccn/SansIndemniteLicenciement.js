@@ -20,7 +20,10 @@ function Step({ form }) {
         Pour votre branche, le calcul de l’indemnité de licenciement se base sur
         l’indemnité légale de licenciement.
       </p>
-      <IndemniteLegale indemnite={indemniteLegale} formula={formuleLegale} />
+      <IndemniteLegale
+        indemniteLegale={indemniteLegale}
+        formuleLegale={formuleLegale}
+      />
     </Container>
   );
 }
