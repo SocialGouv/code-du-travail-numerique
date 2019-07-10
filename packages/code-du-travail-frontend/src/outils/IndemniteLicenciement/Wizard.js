@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
@@ -9,14 +9,14 @@ import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";
 
 function Wizard({
-  initialValues = {},
+  initialSteps,
   initialStepIndex = 0,
-  steps,
-  onSubmit,
-  onUpdate,
-  rules = null
+  initialValues = {},
+  Rules = null,
+  stepReducer
 }) {
   const [stepIndex, setStepIndex] = useState(initialStepIndex);
+  const [steps, dispatch] = useReducer(stepReducer, initialSteps);
 
   const prevStep = () => {
     setStepIndex(Math.max(0, stepIndex - 1));
@@ -36,12 +36,13 @@ function Wizard({
   const handlePageSubmit = (values, form) => {
     // This means the user clicked on a "restart a new simulation" button
     if (stepIndex === steps.length - 1) {
-      onSubmit(values);
       form.reset();
+      dispatch({
+        type: "reset"
+      });
       setStepIndex(0);
     } else {
       nextStep();
-      onUpdate && onUpdate(values);
     }
   };
   const stepItems = steps.map(({ name, label }) => ({
@@ -71,7 +72,9 @@ function Wizard({
           return (
             <>
               <form onSubmit={handleSubmit}>
-                {rules}
+                {Rules && (
+                  <Rules values={form.getState().values} dispatch={dispatch} />
+                )}
                 <StepItems activeIndex={stepIndex} items={stepItems} />
                 <StepWrapper narrow noPadding>
                   <Step form={form} />
@@ -92,10 +95,17 @@ function Wizard({
 }
 
 Wizard.propTypes = {
-  steps: PropTypes.array.isRequired,
-  initialValues: PropTypes.object,
+  stepReducer: PropTypes.func.isRequired,
+  initialSteps: PropTypes.arrayOf(
+    PropTypes.shape({
+      component: PropTypes.element.isRequired,
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    })
+  ).isRequired,
   initialStepIndex: PropTypes.number,
-  onSubmit: PropTypes.func.isRequired
+  initialValues: PropTypes.object,
+  Rules: PropTypes.element
 };
 
 export { Wizard };
