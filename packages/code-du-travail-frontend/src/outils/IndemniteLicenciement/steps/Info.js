@@ -38,7 +38,7 @@ function validate(values) {
 function StepInfo() {
   return (
     <>
-      <TypeContrat />
+      <TypeContrat name="contrat" />
       <YesNoQuestion
         name="fauteGrave"
         label="Êtes-vous licencié(e) pour faute grave ou lourde&nbsp;?"

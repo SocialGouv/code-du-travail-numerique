@@ -1,10 +1,16 @@
 import React from "react";
-import { Field } from "react-final-form";
-import { ErrorField } from "./ErrorField";
-import { Label, RadioContainer, QuestionParagraphe } from "../stepStyles";
-import { required } from "../validators";
+import PropTypes from "prop-types";
 
-function TypeContrat() {
+import { Field } from "react-final-form";
+import {
+  Label,
+  RadioContainer,
+  QuestionParagraphe
+} from "../../common/stepStyles";
+import { required } from "../../common/validators";
+import { ErrorField } from "./ErrorField";
+
+function TypeContrat({ name }) {
   return (
     <>
       <QuestionParagraphe>
@@ -15,7 +21,7 @@ function TypeContrat() {
           <Field
             component="input"
             type="radio"
-            name="contrat"
+            name={name}
             value="cdd"
             validate={required}
           />
@@ -25,16 +31,20 @@ function TypeContrat() {
           <Field
             component="input"
             type="radio"
-            name="contrat"
+            name={name}
             value="cdi"
             validate={required}
           />
           <span>Contrat à durée indeterminé (CDI)</span>
         </Label>
       </RadioContainer>
-      <ErrorField name="contrat" immediate />
+      <ErrorField name={name} />
     </>
   );
 }
+
+TypeContrat.propTypes = {
+  name: PropTypes.string.isRequired
+};
 
 export { TypeContrat };
