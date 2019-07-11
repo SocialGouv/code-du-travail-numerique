@@ -8,6 +8,7 @@ import { CalculateurIndemnite } from "../src/outils/IndemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
 import { SimulateurEmbauche } from "../src/outils/SimulateurEmbauche";
 import Metas from "../src/common/Metas";
+import { SimulateurIndemnitePrecarite } from "../src/outils/IndemnitePrecarite";
 
 const BigError = ({ children }) => (
   <StyledContainer>
@@ -32,6 +33,12 @@ const getOutilFromCode = function(code) {
         description:
           "Simuler le coût d'une embauche en France et calculer le salaire net à partir du brut : CDD, statut cadre, cotisations sociales, retraite…",
         outil: SimulateurEmbauche
+      };
+    case "indemnite-precarite":
+      return {
+        title: "Calculer une indemnite de précarité",
+        description: "Calculez votre indemnité de précarité",
+        outil: SimulateurIndemnitePrecarite
       };
     default:
       return {
