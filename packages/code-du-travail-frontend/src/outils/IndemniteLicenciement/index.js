@@ -4,7 +4,7 @@ import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
 
 import { stepReducer, initialSteps } from "./stepReducer";
-import { Wizard } from "./Wizard";
+import { Wizard } from "../common/Wizard";
 
 function CalculateurIndemnite() {
   /**

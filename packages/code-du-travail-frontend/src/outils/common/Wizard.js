@@ -13,7 +13,7 @@ function Wizard({
   initialStepIndex = 0,
   initialValues = {},
   Rules = null,
-  stepReducer
+  stepReducer = step => step
 }) {
   const [stepIndex, setStepIndex] = useState(initialStepIndex);
   const [steps, dispatch] = useReducer(stepReducer, initialSteps);
@@ -95,7 +95,7 @@ function Wizard({
 }
 
 Wizard.propTypes = {
-  stepReducer: PropTypes.func.isRequired,
+  stepReducer: PropTypes.func,
   initialSteps: PropTypes.arrayOf(
     PropTypes.shape({
       component: PropTypes.func.isRequired,

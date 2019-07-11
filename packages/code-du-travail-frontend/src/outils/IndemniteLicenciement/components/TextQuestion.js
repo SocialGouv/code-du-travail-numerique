@@ -1,8 +1,8 @@
 import React from "react";
 import { Field } from "react-final-form";
-import { required } from "../validators";
+import { required } from "../../common/validators";
 
-import { Input, QuestionLabel, InlineError } from "../stepStyles";
+import { Input, QuestionLabel, InlineError } from "../../common/stepStyles";
 import { UID } from "react-uid";
 import { theme } from "@cdt/ui";
 import styled from "styled-components";

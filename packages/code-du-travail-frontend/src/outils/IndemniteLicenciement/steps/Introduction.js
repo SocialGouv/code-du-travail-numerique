@@ -29,7 +29,6 @@ const StepIntro = () => (
         <Link
           route="fiche-service-public"
           params={{ slug: "indemnite-de-licenciement" }}
-          passHref
         >
           <a>cet article</a>
         </Link>

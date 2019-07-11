@@ -3,7 +3,12 @@ import MathJax from "react-mathjax-preview";
 import { Alert, Button } from "@cdt/ui";
 
 import { branches } from "../branches";
-import { SectionTitle, Highlight, SmallText, Summary } from "../stepStyles";
+import {
+  SectionTitle,
+  Highlight,
+  SmallText,
+  Summary
+} from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 
 function IndemniteCCn({

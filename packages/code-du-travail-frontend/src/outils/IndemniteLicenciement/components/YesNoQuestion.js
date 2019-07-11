@@ -2,15 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { OnChange } from "react-final-form-listeners";
-import { Label, RadioContainer, QuestionParagraphe } from "../stepStyles";
-import { requiredBoolean } from "../validators";
+import {
+  Label,
+  RadioContainer,
+  QuestionParagraphe
+} from "../../common/stepStyles";
+import { requiredBoolean } from "../../common/validators";
 import { ErrorField } from "./ErrorField";
 
-function YesNoQuestion({ name, label, onChange }) {
+function YesNoQuestion({ name, label, onChange, ...otherProps }) {
   return (
     <>
       <QuestionParagraphe>{label}</QuestionParagraphe>
-      <RadioContainer>
+      <RadioContainer {...otherProps}>
         <Label>
           <Field
             parse={value => value === "true"}

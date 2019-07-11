@@ -1,4 +1,4 @@
-import { round } from "../../math";
+import { round } from "../../../common/math";
 /**
  * calcul de l'indemnite de licenciement conventionnelle
  * PROPRETE ENTREPRISES ET SERVICES ASSOCIES - IDCC 3043
