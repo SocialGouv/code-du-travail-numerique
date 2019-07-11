@@ -1,0 +1,422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Salaires /> should add a salaire 1`] = `
+.c3 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: left;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c2 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.c4 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c1 {
+  margin-right: 0.625rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-right: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c6:focus,
+.c6:hover,
+.c6:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <p>
+    Indiquez vos salaires bruts perçus pendant votre contrat *
+  </p>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="3"
+    >
+      Montant :
+    </label>
+    <div
+      class="c2"
+    >
+      <input
+        class="c3"
+        id="3"
+        name="salaires[0].salaire"
+        size="10"
+        value=""
+      />
+      <span
+        aria-hidden="true"
+        class="c4"
+      >
+        €
+      </span>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c5"
+      type="button"
+    >
+      Supprimer
+    </button>
+  </div>
+  <button
+    aria-pressed="false"
+    class="c6"
+    type="button"
+  >
+    Ajouter un salaire
+  </button>
+</div>
+`;
+
+exports[`<Salaires /> should delete a salaires 1`] = `
+.c0 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c0:focus,
+.c0:hover,
+.c0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <p>
+    Indiquez vos salaires bruts perçus pendant votre contrat *
+  </p>
+  <button
+    aria-pressed="false"
+    class="c0"
+    type="button"
+  >
+    Ajouter un salaire
+  </button>
+</div>
+`;
+
+exports[`<Salaires /> should render 1`] = `
+.c3 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: left;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c2 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.c4 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c1 {
+  margin-right: 0.625rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.c5 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-right: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c6:focus,
+.c6:hover,
+.c6:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <p>
+    Indiquez vos salaires bruts perçus pendant votre contrat *
+  </p>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="1"
+    >
+      Montant :
+    </label>
+    <div
+      class="c2"
+    >
+      <input
+        class="c3"
+        id="1"
+        name="salaires[0].salaire"
+        size="10"
+        value="3000"
+      />
+      <span
+        aria-hidden="true"
+        class="c4"
+      >
+        €
+      </span>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c5"
+      type="button"
+    >
+      Supprimer
+    </button>
+  </div>
+  <button
+    aria-pressed="false"
+    class="c6"
+    type="button"
+  >
+    Ajouter un salaire
+  </button>
+</div>
+`;

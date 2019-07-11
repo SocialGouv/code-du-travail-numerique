@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c4 {
+  font-size: 0.875rem;
+}
+
+.c5 {
+  margin: 1rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Prime de précarité
+  </h2>
+  <p>
+    Votre prime de précarité (appelée également 
+    <em>
+      indemnité de fin de CDD
+    </em>
+    ) est estimée à 
+    <strong
+      class="c1"
+    >
+      2000
+    </strong>
+     €.
+  </p>
+  <details>
+    <summary
+      class="c2"
+    >
+      Detail du calcul
+    </summary>
+    <div>
+      <strong
+        class="c3"
+      >
+        Élements saisis :
+      </strong>
+      <ul
+        class=""
+      >
+        <li
+          class="c4"
+        >
+          somme des salaires
+           : 
+          20000
+        </li>
+      </ul>
+      <strong
+        class="c3"
+      >
+        Calcul :
+      </strong>
+      <div
+        class="c5"
+      >
+        <div
+          id="react-mathjax-preview"
+        >
+          <div
+            id="react-mathjax-preview-result"
+          >
+            \`1/10 * somme(salaires)\`
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <p>
+    En savoir plus sur la prime de précarité d’un
+     
+    <a
+      href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
+    >
+      salarié en CDD
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c4 {
+  font-size: 0.875rem;
+}
+
+.c5 {
+  margin: 1rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Prime de précarité
+  </h2>
+  <p>
+    Votre prime de précarité (appelée également 
+    <em>
+      indemnité de fin de mission
+    </em>
+    ) est estimée à 
+    <strong
+      class="c1"
+    >
+      300
+    </strong>
+     €.
+  </p>
+  <details>
+    <summary
+      class="c2"
+    >
+      Detail du calcul
+    </summary>
+    <div>
+      <strong
+        class="c3"
+      >
+        Élements saisis :
+      </strong>
+      <ul
+        class=""
+      >
+        <li
+          class="c4"
+        >
+          somme des salaires
+           : 
+          3000
+        </li>
+      </ul>
+      <strong
+        class="c3"
+      >
+        Calcul :
+      </strong>
+      <div
+        class="c5"
+      >
+        <div
+          id="react-mathjax-preview"
+        >
+          <div
+            id="react-mathjax-preview-result"
+          >
+            \`1/10 * somme(salaires)\`
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <p>
+    En savoir plus sur la prime de précarité d’un
+     
+    <a
+      href="/fiche-service-public/contrat-de-travail-temporaire-interim"
+    >
+      salarié en contrat de travail temporaire (contrat d’intérim)
+    </a>
+  </p>
+</div>
+`;
