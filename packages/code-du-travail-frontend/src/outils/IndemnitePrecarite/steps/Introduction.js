@@ -5,10 +5,11 @@ function StepIntro() {
     <>
       <p>
         Le salarié en CDD ou en contrat de travail temporaire (contrat
-        d’intérim) peut bénéficier à la fin de son contrat d’une prime de
-        précarité également appelée indemnité de fin de CDD ou indemnité de fin
-        de mission. Cette prime de précarité est égale au minimum à 10 % de la
-        rémunération brute totale versée au salarié durant le contrat.
+        d’intérim) peut bénéficier, à la fin de son contrat de travail, d’une
+        prime de précarité également appelée indemnité de fin de CDD ou
+        indemnité de fin de mission. Cette prime de précarité est égale au
+        minimum à 10 % de la rémunération brute totale versée au salarié durant
+        le contrat.
       </p>
       <p>
         Le simulateur de la prime de précarité est un outil qui permet de

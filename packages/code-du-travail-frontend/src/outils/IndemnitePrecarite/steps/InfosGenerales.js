@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert } from "@cdt/ui";
+import { Toast } from "@cdt/ui";
 import { Field } from "react-final-form";
 
 import { TypeContrat } from "../components/TypeContrat";
@@ -17,7 +17,7 @@ function StepInfosGenerales() {
               return (
                 <>
                   <QuestionLabel as="p">
-                    Votre type de CDD fait-il partie de la liste suivante :
+                    Votre type de CDD fait-il partie de la liste suivante&nbsp;:
                   </QuestionLabel>
                   <ul>
                     <li>CDD saisonnier ou CDD d’usage</li>
@@ -45,20 +45,19 @@ function StepInfosGenerales() {
               return (
                 <>
                   <YesNoQuestion
-                    label="Avez vous un contrat de mission-formation"
+                    label="Avez vous un contrat de mission-formation&nbsp;?"
                     name="cttFormation"
                   />
                   <Field name="cttFormation">
                     {({ input }) =>
                       input.value === false ? (
-                        <Alert variant="info">
+                        <Toast variant="info">
                           Attention : si vous avez un contrat de travail
-                          temporaire (contrat d’intérim) saisonnier ou d’usage,
-                          un accord d’entreprise ou d’établissement peut
-                          dispenser votre entreprise de travail temporaire
-                          (l’entreprise d’intérim) de vous verser une indemnité
-                          de précarité.
-                        </Alert>
+                          temporaire saisonnier ou d’usage, un accord
+                          d’entreprise ou d’établissement peut dispenser votre
+                          entreprise de travail temporaire (l’entreprise
+                          d’intérim) de vous verser une indemnité de précarité.
+                        </Toast>
                       ) : null
                     }
                   </Field>

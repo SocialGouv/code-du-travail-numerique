@@ -164,7 +164,7 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   <p
     class="c3"
   >
-    Votre type de CDD fait-il partie de la liste suivante :
+    Votre type de CDD fait-il partie de la liste suivante :
   </p>
   <ul>
     <li>
@@ -299,7 +299,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   <p
     class="c0"
   >
-    Avez vous un contrat de mission-formation
+    Avez vous un contrat de mission-formation ?
   </p>
   <div
     class="c1"

@@ -113,40 +113,6 @@ exports[`<StepInfosSpecifiques /> should render cdd infos step 1`] = `
   <p
     class="c0"
   >
-    À la fin de votre CDD, avez-vous refusé un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente ?
-  </p>
-  <div
-    class="c1"
-    data-testid="refusCDIFindeContrat"
-  >
-    <label
-      class="c2"
-    >
-      <input
-        name="refusCDIFindeContrat"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
-    </label>
-    <label
-      class="c2"
-    >
-      <input
-        name="refusCDIFindeContrat"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
     Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure ?
   </p>
   <div
@@ -260,7 +226,7 @@ exports[`<StepInfosSpecifiques /> should render ctt infos step 1`] = `
   <p
     class="c0"
   >
-    Votre contrat de travail temporaire (contrat d'intérim) a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
+    Votre contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
   </p>
   <div
     class="c1"
@@ -294,7 +260,7 @@ exports[`<StepInfosSpecifiques /> should render ctt infos step 1`] = `
   <p
     class="c0"
   >
-    A la fin de votre contrat de travail temporaire (contrat d'intérim), avez-vous été immédiatement embauché en CDI au sein de l'entreprise dans laquelle vous effectuiez votre mission ?
+    À la fin de votre contrat d'intérim, avez-vous été immédiatement embauché en CDI au sein de l'entreprise dans laquelle vous effectuiez votre mission ?
   </p>
   <div
     class="c1"
@@ -328,7 +294,7 @@ exports[`<StepInfosSpecifiques /> should render ctt infos step 1`] = `
   <p
     class="c0"
   >
-    Avez-vous refusé la mise en œuvre de la souplesse prévue dans votre contrat de travail temporaire (contrat d'intérim)
+    Avez-vous refusé la mise en œuvre de la souplesse prévue dans votre contrat d’intérim ?
   </p>
   <div
     class="c1"

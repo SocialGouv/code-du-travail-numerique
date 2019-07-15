@@ -8,7 +8,7 @@ describe("<StepIndemnite />", () => {
     const { container } = render(
       <Form
         initialValues={{
-          typeContrat: "cdd",
+          contrat: "cdd",
           typeRemuneration: "mensuel",
           salaires: Array.from({ length: 10 }).fill({ salaire: 2000 })
         }}
@@ -22,7 +22,7 @@ describe("<StepIndemnite />", () => {
     const { container } = render(
       <Form
         initialValues={{
-          typeContrat: "ctt",
+          contrat: "ctt",
           typeRemuneration: "total",
           salaire: 3000
         }}

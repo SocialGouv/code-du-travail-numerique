@@ -272,7 +272,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
         class="c2"
       >
         <h1>
-          Simulateur d’indemnités de précarité
+          Simulateur de la prime de précarité
         </h1>
         <form>
           <div
@@ -333,7 +333,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             class="c8 c9"
           >
             <p>
-              Le salarié en CDD ou en contrat de travail temporaire (contrat d’intérim) peut bénéficier à la fin de son contrat d’une prime de précarité également appelée indemnité de fin de CDD ou indemnité de fin de mission. Cette prime de précarité est égale au minimum à 10 % de la rémunération brute totale versée au salarié durant le contrat.
+              Le salarié en CDD ou en contrat de travail temporaire (contrat d’intérim) peut bénéficier, à la fin de son contrat de travail, d’une prime de précarité également appelée indemnité de fin de CDD ou indemnité de fin de mission. Cette prime de précarité est égale au minimum à 10 % de la rémunération brute totale versée au salarié durant le contrat.
             </p>
             <p>
               Le simulateur de la prime de précarité est un outil qui permet de calculer la prime de précarité d’un salarié.

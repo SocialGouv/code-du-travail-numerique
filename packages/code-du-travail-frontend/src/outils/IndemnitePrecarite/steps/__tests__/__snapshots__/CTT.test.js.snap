@@ -45,7 +45,7 @@ exports[`<StepCTT /> should render 1`] = `
   <p
     class="c0"
   >
-    Votre contrat de travail temporaire (contrat d'intérim) a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
+    Votre contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
   </p>
   <div
     class="c1"
@@ -79,7 +79,7 @@ exports[`<StepCTT /> should render 1`] = `
   <p
     class="c0"
   >
-    A la fin de votre contrat de travail temporaire (contrat d'intérim), avez-vous été immédiatement embauché en CDI au sein de l'entreprise dans laquelle vous effectuiez votre mission ?
+    À la fin de votre contrat d'intérim, avez-vous été immédiatement embauché en CDI au sein de l'entreprise dans laquelle vous effectuiez votre mission ?
   </p>
   <div
     class="c1"
@@ -113,7 +113,7 @@ exports[`<StepCTT /> should render 1`] = `
   <p
     class="c0"
   >
-    Avez-vous refusé la mise en œuvre de la souplesse prévue dans votre contrat de travail temporaire (contrat d'intérim)
+    Avez-vous refusé la mise en œuvre de la souplesse prévue dans votre contrat d’intérim ?
   </p>
   <div
     class="c1"

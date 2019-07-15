@@ -113,40 +113,6 @@ exports[`<StepCDD /> should render 1`] = `
   <p
     class="c0"
   >
-    À la fin de votre CDD, avez-vous refusé un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente ?
-  </p>
-  <div
-    class="c1"
-    data-testid="refusCDIFindeContrat"
-  >
-    <label
-      class="c2"
-    >
-      <input
-        name="refusCDIFindeContrat"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
-    </label>
-    <label
-      class="c2"
-    >
-      <input
-        name="refusCDIFindeContrat"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
-  </div>
-  <p
-    class="c0"
-  >
     Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure ?
   </p>
   <div

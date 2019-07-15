@@ -13,8 +13,7 @@ function renderForm() {
 
 const testQuestions = [
   ["finContratPeriodeDessai", true],
-  ["propositionCDIFindeContrat", false],
-  ["refusCDIFindeContrat", true],
+  ["propositionCDIFindeContrat", true],
   ["interruptionFauteGrave", true],
   ["refusRenouvellementAuto", true]
 ];
@@ -36,4 +35,20 @@ describe("<StepCDD />", () => {
       expect(getByText(/pas le droit à une indemnité/i)).toBeTruthy();
     }
   );
+  it("should ask for CDI refusal only if there is proposition", () => {
+    const { getByText, getByTestId } = renderForm();
+    const propositionCDI = getByTestId(
+      "propositionCDIFindeContrat"
+    ).querySelector(`input[value=false]`);
+    fireEvent.click(propositionCDI);
+    // blur is need to force validation in react-testing-lib
+    fireEvent.blur(propositionCDI);
+    const refusCDI = getByTestId("refusCDIFindeContrat").querySelector(
+      `input[value=true]`
+    );
+    fireEvent.click(refusCDI);
+    // blur is need to force validation in react-testing-lib
+    fireEvent.blur(refusCDI);
+    expect(getByText(/pas le droit à une indemnité/i)).toBeTruthy();
+  });
 });

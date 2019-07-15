@@ -1,7 +1,8 @@
 import React from "react";
-import { theme } from "@cdt/ui";
+import { theme, Toast } from "@cdt/ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
+
 import { getIndemnitePrecarite } from "../indemnite";
 import { Summary, Highlight, SectionTitle } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
@@ -9,7 +10,7 @@ import { Link } from "../../../../routes";
 
 function StepIndemnite({ form }) {
   const state = form.getState();
-  const { typeContrat, typeRemuneration, salaires, salaire } = state.values;
+  const { contrat, typeRemuneration, salaires, salaire } = state.values;
   const { indemnite, formule, inputs } = getIndemnitePrecarite({
     typeRemuneration,
     salaire,
@@ -17,7 +18,7 @@ function StepIndemnite({ form }) {
   });
 
   const altName =
-    typeContrat === "cdd"
+    contrat === "cdd"
       ? "indemnité de fin de CDD"
       : "indemnité de fin de mission";
   const entries = Object.entries(inputs);
@@ -50,9 +51,19 @@ function StepIndemnite({ form }) {
           </ErrorBoundary>
         </div>
       </details>
+      <Toast variant="info">
+        Attention : l’estimation est basée sur le montant de la prime de
+        précarité prévu par le code du travail qui est de 10% de la rémunération
+        totale brute perçue par le salarié. Une convention ou un accord
+        collectif de branche étendu ou une convention ou un accord d’entreprise
+        ou d’établissement peut prévoir de limiter le montant de l’indemnité à
+        hauteur de 6 %, dès lors que des contreparties sont offertes à ces
+        salariés, notamment sous la forme d’un accès privilégié à la formation
+        professionnelle.
+      </Toast>
       <p>
         En savoir plus sur la prime de précarité d’un{" "}
-        {typeContrat === "cdd" ? (
+        {contrat === "cdd" ? (
           <Link
             route="fiche-service-public"
             params={{ slug: "fin-dun-contrat-a-duree-determinee-cdd" }}
@@ -81,7 +92,9 @@ const Heading = styled.strong`
   font-size: ${fonts.sizeSmall};
 `;
 const List = styled.ul`
-  /* list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 6 10"><path fill="currentColor" d="M0 4h5v1H0z"/></svg>'); */
+  list-style-image: url("data:image/svg+xml;,${encodeURIComponent(
+    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 6 10'><path fill='currentColor' d='M0 4h5v1H0z'/></svg>"
+  )}");
 `;
 const Item = styled.li`
   font-size: ${fonts.sizeSmall};
