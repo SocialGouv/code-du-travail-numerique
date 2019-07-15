@@ -4,7 +4,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
 .c3 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -157,6 +157,7 @@ exports[`<Salaires /> should add a salaire 1`] = `
         id="3"
         name="salaires[0].salaire"
         size="10"
+        type="number"
         value=""
       />
       <span
@@ -241,7 +242,7 @@ exports[`<Salaires /> should render 1`] = `
 .c3 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -394,6 +395,7 @@ exports[`<Salaires /> should render 1`] = `
         id="1"
         name="salaires[0].salaire"
         size="10"
+        type="number"
         value="3000"
       />
       <span

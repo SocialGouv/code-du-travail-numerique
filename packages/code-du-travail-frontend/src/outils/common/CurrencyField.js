@@ -18,9 +18,10 @@ function CurrencyField({ name, label, children = null, ...inputProps }) {
           {label && <p>{label}</p>}
           <CurrencyWrapper>
             <NumberInput
+              type="number"
+              size="10"
               {...inputProps}
               {...input}
-              size="10"
               invalid={touched && invalid}
             />
             <Currency aria-hidden="true">€</Currency>
