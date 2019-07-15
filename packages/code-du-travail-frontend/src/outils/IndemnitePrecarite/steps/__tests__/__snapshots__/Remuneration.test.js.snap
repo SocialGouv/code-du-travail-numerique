@@ -1,0 +1,468 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepRemuneration /> should render multiple inputs 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c6 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c6::-webkit-outer-spin-button,
+.c6::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c5 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.c7 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c4 {
+  margin-right: 0.625rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.c8 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-right: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.c8:focus,
+.c8:hover,
+.c8:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c9 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #0053b3;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin: 1.25rem 0;
+}
+
+.c9:focus,
+.c9:hover,
+.c9:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Sélectionnez la manière dont vous souhaitez indiquer votre rémunération ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="typeRemuneration"
+        type="radio"
+        value="total"
+      />
+      <span>
+        En indiquant le 
+        <strong>
+          montant total
+        </strong>
+         des rémunérations.
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        checked=""
+        name="typeRemuneration"
+        type="radio"
+        value="mensuel"
+      />
+      <span>
+        En indiquant le 
+        <strong>
+          salaire mensuel
+        </strong>
+         pour chaque mois.
+      </span>
+    </label>
+  </div>
+  <p>
+    Indiquez vos salaires mensuels bruts perçus pendant votre contrat *
+  </p>
+  <div
+    class="c3"
+  >
+    <label
+      class="c4"
+      for="1"
+    >
+      Montant :
+    </label>
+    <div
+      class="c5"
+    >
+      <input
+        class="c6"
+        id="1"
+        name="salaires[0].salaire"
+        size="10"
+        type="number"
+        value="2000"
+      />
+      <span
+        aria-hidden="true"
+        class="c7"
+      >
+        €
+      </span>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c8"
+      type="button"
+    >
+      Supprimer
+    </button>
+  </div>
+  <div
+    class="c3"
+  >
+    <label
+      class="c4"
+      for="2"
+    >
+      Montant :
+    </label>
+    <div
+      class="c5"
+    >
+      <input
+        class="c6"
+        id="2"
+        name="salaires[1].salaire"
+        size="10"
+        type="number"
+        value="1500"
+      />
+      <span
+        aria-hidden="true"
+        class="c7"
+      >
+        €
+      </span>
+    </div>
+    <button
+      aria-pressed="false"
+      class="c8"
+      type="button"
+    >
+      Supprimer
+    </button>
+  </div>
+  <button
+    aria-pressed="false"
+    class="c9"
+    type="button"
+  >
+    Ajouter un salaire
+  </button>
+  <p
+    class="c10"
+  >
+    * Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+  </p>
+</div>
+`;
+
+exports[`<StepRemuneration /> should render one input 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c4 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c4::-webkit-outer-spin-button,
+.c4::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c3 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1rem;
+}
+
+.c5 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c6 {
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Sélectionnez la manière dont vous souhaitez indiquer votre rémunération ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        checked=""
+        name="typeRemuneration"
+        type="radio"
+        value="total"
+      />
+      <span>
+        En indiquant le 
+        <strong>
+          montant total
+        </strong>
+         des rémunérations.
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="typeRemuneration"
+        type="radio"
+        value="mensuel"
+      />
+      <span>
+        En indiquant le 
+        <strong>
+          salaire mensuel
+        </strong>
+         pour chaque mois.
+      </span>
+    </label>
+  </div>
+  <p>
+    Indiquez votre rémunération totale brute perçue pendant votre contrat *
+  </p>
+  <div
+    class="c3"
+  >
+    <input
+      class="c4"
+      name="salaire"
+      size="10"
+      type="number"
+      value="3000"
+    />
+    <span
+      aria-hidden="true"
+      class="c5"
+    >
+      €
+    </span>
+  </div>
+  <p
+    class="c6"
+  >
+    * Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
+  </p>
+</div>
+`;

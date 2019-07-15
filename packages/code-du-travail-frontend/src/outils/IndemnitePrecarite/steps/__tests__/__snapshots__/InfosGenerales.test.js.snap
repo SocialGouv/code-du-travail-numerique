@@ -1,0 +1,333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInfosGenerales /> should render 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Quel est votre type de contrat ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="contrat"
+        type="radio"
+        value="cdd"
+      />
+      <span>
+        Contrat à durée déterminée (CDD)
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="contrat"
+        type="radio"
+        value="ctt"
+      />
+      <span>
+        Contrat de travail temporaire (Contrat d’intérim)
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<StepInfosGenerales /> should render with CDD 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Quel est votre type de contrat ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        checked=""
+        name="contrat"
+        type="radio"
+        value="cdd"
+      />
+      <span>
+        Contrat à durée déterminée (CDD)
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="contrat"
+        type="radio"
+        value="ctt"
+      />
+      <span>
+        Contrat de travail temporaire (Contrat d’intérim)
+      </span>
+    </label>
+  </div>
+  <p
+    class="c3"
+  >
+    Votre type de CDD fait-il partie de la liste suivante :
+  </p>
+  <ul>
+    <li>
+      CDD saisonnier ou CDD d’usage
+    </li>
+    <li>
+      Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)
+    </li>
+    <li>
+      Contrat de professionnalisation ou Contrat d’apprentissage
+    </li>
+    <li>
+      CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires
+    </li>
+    <li>
+      Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié
+    </li>
+    <li>
+      CCD dans le cadre d’un congé de mobilité
+    </li>
+  </ul>
+  <p
+    class="c0"
+  />
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="typeCdd"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="typeCdd"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<StepInfosGenerales /> should render with CTT 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Quel est votre type de contrat ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="contrat"
+        type="radio"
+        value="cdd"
+      />
+      <span>
+        Contrat à durée déterminée (CDD)
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        checked=""
+        name="contrat"
+        type="radio"
+        value="ctt"
+      />
+      <span>
+        Contrat de travail temporaire (Contrat d’intérim)
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
+    Avez vous un contrat de mission-formation ?
+  </p>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="cttFormation"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="cttFormation"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+</div>
+`;

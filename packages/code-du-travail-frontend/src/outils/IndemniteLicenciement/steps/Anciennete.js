@@ -7,7 +7,7 @@ import { isAfter, differenceInMonths, format } from "date-fns";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import { TextQuestion } from "../components/TextQuestion";
 import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
-import { SectionTitle } from "../stepStyles";
+import { SectionTitle } from "../../common/stepStyles";
 import { ErrorComputedField } from "../components/ErrorField";
 
 function validate({

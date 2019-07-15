@@ -1,4 +1,4 @@
-import { round, sum } from "../../math";
+import { round, sum } from "../../../common/math";
 import { CADRE, TAM, OUVRIER } from "./Categorie";
 /**
  * calcul de l'indemnite de licenciement conventionnelle

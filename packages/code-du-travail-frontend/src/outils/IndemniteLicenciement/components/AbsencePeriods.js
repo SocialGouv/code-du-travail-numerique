@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { Button, theme } from "@cdt/ui";
-import { Input, InlineError } from "../stepStyles";
-import { isNumber } from "../validators";
+import { Input, InlineError } from "../../common/stepStyles";
+import { isNumber } from "../../common/validators";
 import { OnChange } from "react-final-form-listeners";
 
 function AbsencePeriods({ name, onChange }) {

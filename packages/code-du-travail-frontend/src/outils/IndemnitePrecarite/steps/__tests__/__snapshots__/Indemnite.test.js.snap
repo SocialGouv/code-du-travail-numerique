@@ -1,0 +1,316 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIndemnite /> should render cdd indemnite 1`] = `
+.c7 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #d7e8f9;
+  box-shadow: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #d7e8f9;
+}
+
+.c9 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c4 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%206%2010'%3E%3Cpath%20fill%3D'currentColor'%20d%3D'M0%204h5v1H0z'%2F%3E%3C%2Fsvg%3E");
+}
+
+.c5 {
+  font-size: 0.875rem;
+}
+
+.c6 {
+  margin: 1rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Prime de précarité
+  </h2>
+  <p>
+    Votre prime de précarité (appelée également 
+    <em>
+      indemnité de fin de CDD
+    </em>
+    ) est estimée à 
+    <strong
+      class="c1"
+    >
+      2000
+    </strong>
+     €.
+  </p>
+  <details>
+    <summary
+      class="c2"
+    >
+      Detail du calcul
+    </summary>
+    <div>
+      <strong
+        class="c3"
+      >
+        Élements saisis :
+      </strong>
+      <ul
+        class="c4"
+      >
+        <li
+          class="c5"
+        >
+          somme des salaires
+           : 
+          20000
+        </li>
+      </ul>
+      <strong
+        class="c3"
+      >
+        Calcul :
+      </strong>
+      <div
+        class="c6"
+      >
+        <div
+          id="react-mathjax-preview"
+        >
+          <div
+            id="react-mathjax-preview-result"
+          >
+            \`1/10 * somme(salaires)\`
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <div
+    class="c7"
+  >
+    <div
+      class="c8"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+    </div>
+    <div
+      class="c9"
+      role="alert"
+    >
+      Attention : l’estimation est basée sur le montant de la prime de précarité prévu par le code du travail qui est de 10% de la rémunération totale brute perçue par le salarié. Une convention ou un accord collectif de branche étendu ou une convention ou un accord d’entreprise ou d’établissement peut prévoir de limiter le montant de l’indemnité à hauteur de 6 %, dès lors que des contreparties sont offertes à ces salariés, notamment sous la forme d’un accès privilégié à la formation professionnelle.
+    </div>
+  </div>
+  <p>
+    En savoir plus sur la prime de précarité d’un
+     
+    <a
+      href="/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"
+    >
+      salarié en CDD
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<StepIndemnite /> should render ctt indemnite 1`] = `
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c4 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%206%2010'%3E%3Cpath%20fill%3D'currentColor'%20d%3D'M0%204h5v1H0z'%2F%3E%3C%2Fsvg%3E");
+}
+
+.c5 {
+  font-size: 0.875rem;
+}
+
+.c6 {
+  margin: 1rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Prime de précarité
+  </h2>
+  <p>
+    Votre prime de précarité (appelée également 
+    <em>
+      indemnité de fin de mission
+    </em>
+    ) est estimée à 
+    <strong
+      class="c1"
+    >
+      300
+    </strong>
+     €.
+  </p>
+  <details>
+    <summary
+      class="c2"
+    >
+      Detail du calcul
+    </summary>
+    <div>
+      <strong
+        class="c3"
+      >
+        Élements saisis :
+      </strong>
+      <ul
+        class="c4"
+      >
+        <li
+          class="c5"
+        >
+          somme des salaires
+           : 
+          3000
+        </li>
+      </ul>
+      <strong
+        class="c3"
+      >
+        Calcul :
+      </strong>
+      <div
+        class="c6"
+      >
+        <div
+          id="react-mathjax-preview"
+        >
+          <div
+            id="react-mathjax-preview-result"
+          >
+            \`1/10 * somme(salaires)\`
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <p>
+    En savoir plus sur la prime de précarité d’un
+     
+    <a
+      href="/fiche-service-public/contrat-de-travail-temporaire-interim"
+    >
+      salarié en contrat de travail temporaire (contrat d’intérim)
+    </a>
+  </p>
+</div>
+`;

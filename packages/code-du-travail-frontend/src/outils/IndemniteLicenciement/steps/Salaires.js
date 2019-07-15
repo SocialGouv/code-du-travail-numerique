@@ -5,7 +5,7 @@ import { Field } from "react-final-form";
 import { theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input, SectionTitle, InlineError } from "../stepStyles";
+import { Input, SectionTitle, InlineError } from "../../common/stepStyles";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
   SalaireTempsPartiel,
@@ -13,7 +13,7 @@ import {
   TEMPS_PLEIN
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
-import { isNumber } from "../validators";
+import { isNumber } from "../../common/validators";
 import { motifs } from "../components/AbsencePeriods";
 
 function StepSalaires({ form }) {

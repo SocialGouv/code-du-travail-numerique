@@ -50,4 +50,34 @@
     "references": ["L1221-7", "L1221-9", "L1221-6", "L1221-8"],
     "branche": []
   }
+  ,
+  {
+    "titre": "Simulateur d'indemnité de précarité",
+    "code": "indemnite-precarite",
+    "questions": [
+      "fin de contrat cdd",
+      "prime fin de contrat",
+      "prime de précarité",
+      "indemnité fin de contrat",
+      "indemnité cdd",
+      "calcul de la prime de précarité",
+      "Comment se calcul la prime de précarité",
+      "montant prime de précarité",
+      "montant indemnité fin de contrat"
+    ],
+    "theme": "15-salaire,-primes-et-avantages",
+    "themes": [300, 28300, 21512],
+    "catégorie": [],
+    "type_de_contrat": [],
+    "travailleur_particulier": [],
+    "date": "14/03/2019",
+    "branche": [],
+    "references": [
+      "L1243-8",
+      "L1243-9",
+      "L1243-10",
+      "L1251-32",
+      "L1251-33"
+    ]
+  }
 ]

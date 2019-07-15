@@ -3,7 +3,7 @@ import { Field } from "react-final-form";
 import styled from "styled-components";
 import { theme } from "@cdt/ui";
 
-import { SectionTitle, Label } from "../../stepStyles";
+import { SectionTitle, Label } from "../../../common/stepStyles";
 
 export const DISCIPLINAIRE = "disciplinaire";
 export const NON_DISCIPLINAIRE = "non-disciplinaire";

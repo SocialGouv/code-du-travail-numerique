@@ -1,5 +1,5 @@
 import { isAfter } from "date-fns";
-import { round, sum } from "./math";
+import { round, sum } from "../common/math";
 /**
  * Compute the salaire de Réference
  * used in the indemnité calculus

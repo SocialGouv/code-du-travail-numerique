@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 import { Wizard } from "../Wizard";
-import { stepReducer } from "../stepReducer";
+import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Field } from "react-final-form";
 
 const FirstStep = () => <p>Premiere Etape</p>;
