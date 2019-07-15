@@ -13,7 +13,8 @@ function Salaires({ name, onChange }) {
         {({ fields }) => (
           <>
             <p>
-              Indiquez vos salaires bruts perçus pendant votre contrat&nbsp;*
+              Indiquez vos salaires mensuels bruts perçus pendant votre
+              contrat&nbsp;*
             </p>
             {fields.map((name, index) => (
               <Row key={index}>

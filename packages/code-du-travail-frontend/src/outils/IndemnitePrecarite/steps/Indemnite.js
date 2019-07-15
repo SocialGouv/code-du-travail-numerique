@@ -51,16 +51,18 @@ function StepIndemnite({ form }) {
           </ErrorBoundary>
         </div>
       </details>
-      <Toast variant="info">
-        Attention : l’estimation est basée sur le montant de la prime de
-        précarité prévu par le code du travail qui est de 10% de la rémunération
-        totale brute perçue par le salarié. Une convention ou un accord
-        collectif de branche étendu ou une convention ou un accord d’entreprise
-        ou d’établissement peut prévoir de limiter le montant de l’indemnité à
-        hauteur de 6 %, dès lors que des contreparties sont offertes à ces
-        salariés, notamment sous la forme d’un accès privilégié à la formation
-        professionnelle.
-      </Toast>
+      {contrat === "cdd" && (
+        <Toast variant="info">
+          Attention : l’estimation est basée sur le montant de la prime de
+          précarité prévu par le code du travail qui est de 10% de la
+          rémunération totale brute perçue par le salarié. Une convention ou un
+          accord collectif de branche étendu ou une convention ou un accord
+          d’entreprise ou d’établissement peut prévoir de limiter le montant de
+          l’indemnité à hauteur de 6 %, dès lors que des contreparties sont
+          offertes à ces salariés, notamment sous la forme d’un accès privilégié
+          à la formation professionnelle.
+        </Toast>
+      )}
       <p>
         En savoir plus sur la prime de précarité d’un{" "}
         {contrat === "cdd" ? (

@@ -31,7 +31,7 @@ describe("<StepCTT />", () => {
       fireEvent.click(radio);
       // blur is need to force validation in react-testing-lib
       fireEvent.blur(radio);
-      expect(getByText(/pas le droit à une indemnité/i)).toBeTruthy();
+      expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
     }
   );
 });

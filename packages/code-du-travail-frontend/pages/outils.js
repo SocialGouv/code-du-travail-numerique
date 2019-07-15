@@ -37,7 +37,7 @@ const getOutilFromCode = function(code) {
     case "indemnite-precarite":
       return {
         title: "Calculer une indemnite de précarité",
-        description: "Calculez votre indemnité de précarité",
+        description: "Calculez votre prime de précarité",
         outil: SimulateurIndemnitePrecarite
       };
     default:

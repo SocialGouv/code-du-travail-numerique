@@ -56,7 +56,7 @@ function StepInfosGenerales() {
                           temporaire saisonnier ou d’usage, un accord
                           d’entreprise ou d’établissement peut dispenser votre
                           entreprise de travail temporaire (l’entreprise
-                          d’intérim) de vous verser une indemnité de précarité.
+                          d’intérim) de vous verser une prime de précarité.
                         </Toast>
                       ) : null
                     }

@@ -32,7 +32,7 @@ describe("<StepCDD />", () => {
       fireEvent.click(radio);
       // blur is need to force validation in react-testing-lib
       fireEvent.blur(radio);
-      expect(getByText(/pas le droit à une indemnité/i)).toBeTruthy();
+      expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
     }
   );
   it("should ask for CDI refusal only if there is proposition", () => {
@@ -49,6 +49,6 @@ describe("<StepCDD />", () => {
     fireEvent.click(refusCDI);
     // blur is need to force validation in react-testing-lib
     fireEvent.blur(refusCDI);
-    expect(getByText(/pas le droit à une indemnité/i)).toBeTruthy();
+    expect(getByText(/pas le droit à une prime/i)).toBeTruthy();
   });
 });

@@ -225,7 +225,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
     </label>
   </div>
   <p>
-    Indiquez vos salaires bruts perçus pendant votre contrat *
+    Indiquez vos salaires mensuels bruts perçus pendant votre contrat *
   </p>
   <div
     class="c3"

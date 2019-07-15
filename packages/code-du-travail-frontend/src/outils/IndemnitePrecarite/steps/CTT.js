@@ -5,15 +5,15 @@ function validate(values) {
   const errors = {};
   if (values.ruptureContratFauteGrave === true) {
     errors.ruptureContratFauteGrave =
-      "Lorsque le contrat de travail temporaire (contrat d'intérim) est rompu de manière anticipée à l’initiative du salarié, pour faute grave ou en cas de force majeure, le salarié n’a pas le droit à une indemnité de précarité.";
+      "Lorsque le contrat de travail temporaire (contrat d'intérim) est rompu de manière anticipée à l’initiative du salarié, pour faute grave ou en cas de force majeure, le salarié n’a pas le droit à une prime de précarité.";
   }
   if (values.propositionCDIFinContrat === true) {
     errors.propositionCDIFinContrat =
-      "Le salarié en contrat de travail temporaire (contrat d'intérim) qui est immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission n’a pas le droit à une indemnité de précarité.";
+      "Le salarié en contrat de travail temporaire (contrat d'intérim) qui est immédiatement embauché en CDI au sein de l'entreprise dans laquelle il effectuait sa mission n’a pas le droit à une prime de précarité.";
   }
   if (values.refusSouplesse === true) {
     errors.refusSouplesse =
-      "Le salarié en contrat d'intérim qui refuse la mise en œuvre de la souplesse prévue dans son contrat n’a pas le droit à une indemnité de précarité.";
+      "Le salarié en contrat d'intérim qui refuse la mise en œuvre de la souplesse prévue dans son contrat n’a pas le droit à une prime de précarité.";
   }
   return errors;
 }

@@ -6,23 +6,23 @@ function validate(values) {
   const errors = {};
   if (values.finContratPeriodeDessai === true) {
     errors.finContratPeriodeDessai =
-      "Lorsque le CDD a été rompu pendant la période d’essai, le salarié en CDD n’a pas le droit à une indemnité de précarité.";
+      "Lorsque le CDD a été rompu pendant la période d’essai, le salarié en CDD n’a pas le droit à une prime de précarité.";
   }
   if (values.propositionCDIFindeContrat === true) {
     errors.propositionCDIFindeContrat =
-      "Le salarié en CDD qui est immédiatement embauché dans l’entreprise en CDI, sans interruption, sur un même poste ou sur un poste différent, n’a pas le droit à une indemnité de précarité.";
+      "Le salarié en CDD qui est immédiatement embauché dans l’entreprise en CDI, sans interruption, sur un même poste ou sur un poste différent, n’a pas le droit à une prime de précarité.";
   }
   if (values.refusCDIFindeContrat === true) {
     errors.refusCDIFindeContrat =
-      "Le salarié en CDD qui refuse un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente, n’a pas le droit à une indemnité de précarité.";
+      "Le salarié en CDD qui refuse un CDI pour occuper le même emploi ou un emploi similaire dans l’entreprise avec une rémunération au moins équivalente, n’a pas le droit à une prime de précarité.";
   }
   if (values.interruptionFauteGrave === true) {
     errors.interruptionFauteGrave =
-      "Lorsque le CDD est rompu de manière anticipée à l’initiative du salarié, pour faute grave, pour faute lourde ou en cas de force majeure, le salarié en CDD n’a pas le droit à une indemnité de précarité.";
+      "Lorsque le CDD est rompu de manière anticipée à l’initiative du salarié, pour faute grave, pour faute lourde ou en cas de force majeure, le salarié en CDD n’a pas le droit à une prime de précarité.";
   }
   if (values.refusRenouvellementAuto === true) {
     errors.refusRenouvellementAuto =
-      "Le salarié en CDD qui refuse le renouvellement de son CDD alors que son contrat prévoyait son renouvellement automatique n’a pas le droit à une indemnité de précarité.";
+      "Le salarié en CDD qui refuse le renouvellement de son CDD alors que son contrat prévoyait son renouvellement automatique n’a pas le droit à une prime de précarité.";
   }
   return errors;
 }
