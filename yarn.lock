@@ -2005,10 +2005,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@elastic/elasticsearch@6":
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/@elastic/elasticsearch/-/elasticsearch-6.8.0.tgz#a6e7cd341427e9a72a56c015f5360b2f1976ea03"
-  integrity sha512-MllSdDT+3HQ7X2lxyfVCCbS/5b2UdVwT2EH49bJBBsUUl4vtmG2mmA/Q607mmixw/sK7cHiu5v3kNchCxu9wRg==
+"@elastic/elasticsearch@7":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@elastic/elasticsearch/-/elasticsearch-7.2.0.tgz#c200090b3164733affc960c6e09a8c650dc7a45a"
+  integrity sha512-n4t7XX5NLf4KuFVx7h/0V3WgF5BLRWUDvRyYMf+iRbR2dvZSD3BFYSqw757uDcXOE5lnxhJHBoT6CptpA6HW0g==
   dependencies:
     debug "^4.1.1"
     decompress-response "^4.2.0"
