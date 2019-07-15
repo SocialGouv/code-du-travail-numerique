@@ -64,7 +64,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const Highlight = styled.strong`
-  font-size: ${fonts.sizeH3};
+  font-size: ${fonts.sizeH4};
   font-weight: 700;
   color: ${colors.blue};
 `;

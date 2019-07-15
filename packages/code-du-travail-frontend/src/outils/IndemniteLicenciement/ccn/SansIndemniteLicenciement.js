@@ -10,7 +10,11 @@ function Step({ form }) {
     values: { branche }
   } = form.getState();
 
-  const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
+  const {
+    indemniteLegale,
+    formuleLegale,
+    inputLegals
+  } = getIndemniteFromFinalForm(form);
   const selectedBranche = branches.find(br => br.value === branche);
 
   return (
@@ -23,6 +27,7 @@ function Step({ form }) {
       <IndemniteLegale
         indemniteLegale={indemniteLegale}
         formuleLegale={formuleLegale}
+        inputLegals={inputLegals}
       />
     </Container>
   );

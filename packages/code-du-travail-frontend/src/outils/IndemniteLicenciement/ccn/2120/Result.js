@@ -21,7 +21,11 @@ export function Result({ form }) {
     categorie
   } = state.values;
 
-  const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
+  const {
+    indemniteLegale,
+    formuleLegale,
+    inputLegals
+  } = getIndemniteFromFinalForm(form);
   const salaireRef = getSalaireRef({
     hasTempsPartiel,
     hasSameSalaire,
@@ -33,7 +37,8 @@ export function Result({ form }) {
   const {
     error,
     indemniteConventionnelle,
-    formuleConventionnelle
+    formuleConventionnelle,
+    inputConventionnels
   } = getIndemnite({
     salaireRef,
     dateEntree,
@@ -50,6 +55,8 @@ export function Result({ form }) {
       formuleLegale={formuleLegale}
       branche={branche}
       error={error}
+      inputLegals={inputLegals}
+      inputConventionnels={inputConventionnels}
     />
   );
 }

@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import MathJax from "react-mathjax-preview";
+import { FormulaDetails } from "./FormulaDetails";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
 
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
-
-import { SectionTitle, Highlight, Summary } from "../../common/stepStyles";
-
-function IndemniteLegale({ indemniteLegale, formuleLegale }) {
+function IndemniteLegale({ indemniteLegale, formuleLegale, inputLegals }) {
   return (
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
@@ -16,12 +13,7 @@ function IndemniteLegale({ indemniteLegale, formuleLegale }) {
         <Highlight>{indemniteLegale} €</Highlight> pour votre indemnité de
         licenciement.
       </p>
-      <details>
-        <Summary>Voir le detail du calcul</Summary>
-        <ErrorBoundary>
-          <MathJax math={"`" + formuleLegale + "`"} />
-        </ErrorBoundary>
-      </details>
+      <FormulaDetails formula={formuleLegale} values={inputLegals} />
     </>
   );
 }

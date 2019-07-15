@@ -1,15 +1,11 @@
 import React from "react";
-import MathJax from "react-mathjax-preview";
-import { Alert, Button } from "@cdt/ui";
+import { theme, Alert, Button, Toast } from "@cdt/ui";
+import styled from "styled-components";
 
 import { branches } from "../branches";
-import {
-  SectionTitle,
-  Highlight,
-  SmallText,
-  Summary
-} from "../../common/stepStyles";
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
+import { Montant } from "./Montant";
+import { FormulaDetails } from "./FormulaDetails";
 
 function IndemniteCCn({
   branche,
@@ -17,7 +13,9 @@ function IndemniteCCn({
   indemniteLegale,
   formuleConventionnelle,
   formuleLegale,
-  error
+  error,
+  inputLegals = {},
+  inputConventionnels = {}
 }) {
   const selectedBranche = branches.find(br => br.value === branche);
 
@@ -29,35 +27,52 @@ function IndemniteCCn({
       ) : (
         <React.Fragment>
           <p>
-            L’indemnité conventionnelle est de {indemniteConventionnelle}
-            <br />
-            L’indemnité légale est de {indemniteLegale}
-            <br />
-            Le montant de l’indemnité est de{" "}
+            À partir des éléments que vous avez saisis, votre indémnité de
+            licenciement est estimée à{" "}
             <Highlight>
-              {Math.max(indemniteLegale, indemniteConventionnelle)} €
+              {Math.max(
+                indemniteLegale,
+                indemniteConventionnelle
+              ).toLocaleString(undefined, {
+                currency: "EUR",
+                style: "currency",
+                minimumFractionDigits: 2
+              })}
             </Highlight>{" "}
-            <SmallText>
-              {indemniteConventionnelle > indemniteLegale
-                ? "sur la base du calcul de l'indemnité conventionelle"
-                : "sur la base du calcul de l’indemnité légale"}
-            </SmallText>
+            <b>brut</b>
           </p>
-          <br />
-          <details>
-            <Summary>Voir le detail du calcul</Summary>
-            <ErrorBoundary>
-              <MathJax
-                math={
-                  "`" +
-                  (indemniteConventionnelle > indemniteLegale
-                    ? formuleConventionnelle
-                    : formuleLegale) +
-                  "`"
-                }
+          <p>
+            Il s’agit du montant le plus favorable entre votre indemnité légale
+            et votre indemnité conventionnelle.
+          </p>
+          <ColumnWrapper>
+            <Column first={indemniteConventionnelle < indemniteLegale}>
+              <Heading>Votre indemnite légale</Heading>
+              <Montant
+                primary={indemniteConventionnelle < indemniteLegale}
+                value={indemniteLegale}
               />
-            </ErrorBoundary>
-          </details>
+              <FormulaDetails formula={formuleLegale} values={inputLegals} />
+            </Column>
+            <Column first={indemniteConventionnelle > indemniteLegale}>
+              <Heading>Votre indemnite conventionnelle</Heading>
+
+              <Montant
+                primary={indemniteConventionnelle > indemniteLegale}
+                value={indemniteConventionnelle}
+              />
+              <FormulaDetails
+                formula={formuleConventionnelle}
+                values={inputConventionnels}
+              />
+            </Column>
+          </ColumnWrapper>
+
+          <Toast variant="info">
+            Un accord collectif d’entreprise, le contrat de travail et un usage
+            peuvent prévoir une formule de calcul plus avantageuse pour le
+            salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.{" "}
+          </Toast>
         </React.Fragment>
       )}
       <br />
@@ -68,3 +83,22 @@ function IndemniteCCn({
 }
 
 export { IndemniteCCn };
+
+const { spacing, fonts } = theme;
+
+const ColumnWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: ${spacing.large} -${spacing.small};
+  flex-wrap: wrap;
+`;
+
+const Column = styled.section`
+  padding: 0 ${spacing.small};
+  order: ${({ first }) => (first ? 0 : 1)};
+  margin-bottom: ${spacing.large};
+`;
+
+const Heading = styled.h2`
+  font-size: ${fonts.sizeH4};
+`;
