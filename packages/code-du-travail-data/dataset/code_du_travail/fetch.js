@@ -24,27 +24,25 @@ const getArticle = id =>
 const JSONLog = data => console.log(JSON.stringify(data, null, 2));
 
 // embed article details into the section
-const embedArticles = async section => {
-  return {
-    ...section,
-    articles: await Promise.all(
-      section.articles
-        .filter(article => article.etat === "VIGUEUR")
-        .map(
-          article =>
-            console.log(`getArticle ${article.id}`) || getArticle(article.id)
-        )
-    ),
-    sections: await serialExec(
-      section.sections
-        .filter(section => section.etat === "VIGUEUR")
-        .map(section => () =>
-          console.log(`embedArticles section ${section.id}`) ||
-          embedArticles(section)
-        )
-    ) //.then(wait(500))
-  };
-};
+const embedArticles = async section => ({
+  ...section,
+  articles: await Promise.all(
+    section.articles
+      .filter(article => article.etat === "VIGUEUR")
+      .map(
+        article =>
+          console.log(`getArticle ${article.id}`) || getArticle(article.id)
+      )
+  ),
+  sections: await serialExec(
+    section.sections
+      .filter(section => section.etat === "VIGUEUR")
+      .map(section => () =>
+        console.log(`embedArticles section ${section.id}`) ||
+        embedArticles(section)
+      )
+  )
+});
 
 // get structure + content
 const getFullCode = params =>
