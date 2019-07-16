@@ -92,6 +92,7 @@ describe("getIndemnite", () => {
         ...test.data
       });
       expect(res.indemniteConventionnelle).toMatchSnapshot();
+      expect(res.formuleConventionnelle).toMatchSnapshot();
     });
   });
 });

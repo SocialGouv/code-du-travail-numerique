@@ -2,9 +2,18 @@ import React from "react";
 import { render } from "react-testing-library";
 import { Result } from "../Result";
 import { Form } from "react-final-form";
+import { CADRE, ECONOMIQUE } from "../Step";
 
 const initialValues = {
-  branche: "2120"
+  salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
+  hasTempsPartiel: false,
+  dateEntree: "1999-01-01",
+  dateSortie: "2019-09-01",
+  anciennete: 20.667,
+  motif: ECONOMIQUE,
+  categorie: CADRE,
+  branche: "2120",
+  age: "55"
 };
 
 describe("<Result />", () => {

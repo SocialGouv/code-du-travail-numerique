@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepIndemnite /> should render 1`] = `
-.c4 {
+.c9 {
   padding: 0;
   font-size: 1.15rem;
   margin-right: 2em;
@@ -22,16 +22,37 @@ exports[`<StepIndemnite /> should render 1`] = `
 }
 
 .c1 {
-  font-size: 1.625rem;
+  font-size: 1.375rem;
   font-weight: 700;
   color: #0053b3;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
-.c3 {
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c4 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c5 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%206%2010'%3E%3Cpath%20fill%3D'currentColor'%20d%3D'M0%204h5v1H0z'%2F%3E%3C%2Fsvg%3E");
+}
+
+.c6 {
+  font-size: 0.875rem;
+}
+
+.c7 {
+  margin: 1rem 0;
+}
+
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -45,7 +66,7 @@ exports[`<StepIndemnite /> should render 1`] = `
   align-items: center;
 }
 
-.c5 {
+.c10 {
   margin-top: 0.625rem;
   margin-right: 1.25rem;
   -webkit-flex: 1 1 70%;
@@ -71,19 +92,60 @@ exports[`<StepIndemnite /> should render 1`] = `
     </strong>
      pour votre indemnité de licenciement.
   </p>
-  <details>
+  <details
+    class="c2"
+  >
     <summary
-      class="c2"
+      class="c3"
     >
       Voir le detail du calcul
     </summary>
+    <strong
+      class="c4"
+    >
+      Élements saisis :
+    </strong>
+    <ul
+      class="c5"
+    >
+      <li
+        class="c6"
+      >
+        salaire de réference (Sref)
+         : 
+        2000
+      </li>
+      <li
+        class="c6"
+      >
+        licenciement pour inapttitude
+         : 
+        oui
+      </li>
+      <li
+        class="c6"
+      >
+        ancienneté totale (A)
+         : 
+        1.25
+      </li>
+    </ul>
+    <strong
+      class="c4"
+    >
+      Formule
+    </strong>
     <div
-      id="react-mathjax-preview"
+      class="c7"
     >
       <div
-        id="react-mathjax-preview-result"
+        id="react-mathjax-preview"
       >
-        \`(1/4 * 2000 * 1.25) / 12 * 2\`
+        <div
+          id="react-mathjax-preview-result"
+        >
+          \`1/4 * Sref * A * 2\`
+        </div>
       </div>
     </div>
   </details>
@@ -96,16 +158,16 @@ exports[`<StepIndemnite /> should render 1`] = `
     Selon la convention collective dont vous dépendez, le montant minimum de votre indemnité de licenciement peut être supérieur au montant de l’indemnité légale.
   </p>
   <label
-    class="c3"
+    class="c8"
   >
     <label
-      class="c4"
+      class="c9"
       for="ccn"
     >
       Sélectionnez votre convention collective pour en savoir plus :
     </label>
     <select
-      class="c5"
+      class="c10"
       id="ccn"
       name="branche"
     >
