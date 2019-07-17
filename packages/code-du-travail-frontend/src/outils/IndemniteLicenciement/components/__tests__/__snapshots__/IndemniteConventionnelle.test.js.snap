@@ -356,7 +356,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     <strong
       class="c1"
     >
-      € 2,000.00
+      2,000.00
+       €
     </strong>
      
     <b>
@@ -386,9 +387,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c7"
         >
-          € 42.00
-           
-          brut
+          42.00
+           € brut
         </span>
       </div>
       <details
@@ -459,9 +459,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c16"
         >
-          € 2,000.00
-           
-          brut
+          2,000.00
+           € brut
         </span>
       </div>
       <details
@@ -821,7 +820,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     <strong
       class="c1"
     >
-      € 2,000.00
+      2,000.00
+       €
     </strong>
      
     <b>
@@ -851,9 +851,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <span
           class="c7"
         >
-          € 2,000.00
-           
-          brut
+          2,000.00
+           € brut
         </span>
       </div>
       <details
@@ -924,9 +923,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
         <span
           class="c16"
         >
-          € 1,337.00
-           
-          brut
+          1,337.00
+           € brut
         </span>
       </div>
       <details

@@ -8,11 +8,10 @@ function Montant({ value, primary }) {
       <Bar primary={primary} />
       <Value primary={primary}>
         {value.toLocaleString("fr-FR", {
-          currency: "EUR",
-          style: "currency",
+          maximumFractionDigit: 2,
           minimumFractionDigits: 2
-        })}{" "}
-        brut
+        })}
+        &nbsp;€ brut
       </Value>
     </Wrapper>
   );

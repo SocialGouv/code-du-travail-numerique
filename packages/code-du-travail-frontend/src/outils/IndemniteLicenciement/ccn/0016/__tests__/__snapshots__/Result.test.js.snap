@@ -250,7 +250,8 @@ exports[`<Result /> should render 1`] = `
     <strong
       class="c1"
     >
-      € 5,650.00
+      5,650.00
+       €
     </strong>
      
     <b>
@@ -280,9 +281,8 @@ exports[`<Result /> should render 1`] = `
         <span
           class="c7"
         >
-          € 5,386.66
-           
-          brut
+          5,386.66
+           € brut
         </span>
       </div>
       <details
@@ -367,9 +367,8 @@ exports[`<Result /> should render 1`] = `
         <span
           class="c16"
         >
-          € 5,650.00
-           
-          brut
+          5,650.00
+           € brut
         </span>
       </div>
       <details

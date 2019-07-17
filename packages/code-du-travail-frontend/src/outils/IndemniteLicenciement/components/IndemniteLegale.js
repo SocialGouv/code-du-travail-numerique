@@ -12,10 +12,10 @@ function IndemniteLegale({ indemnite, infoCalcul }) {
         Le code du travail prévoit un montant minimum de{" "}
         <Highlight>
           {indemnite.toLocaleString("fr-FR", {
-            currency: "EUR",
-            style: "currency",
+            maximumFractionDigits: 2,
             minimumFractionDigits: 2
           })}
+          &nbsp;€
         </Highlight>{" "}
         pour votre indemnité de licenciement.
       </p>

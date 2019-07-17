@@ -80,7 +80,8 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
       <strong
         class="c2"
       >
-        € 3,585.00
+        3,585.00
+         €
       </strong>
        
       pour votre indemnité de licenciement.

@@ -33,10 +33,10 @@ function IndemniteCCn({
                 indemniteLegale,
                 indemniteConventionnelle
               ).toLocaleString(undefined, {
-                currency: "EUR",
-                style: "currency",
+                maximumFractionDigits: 2,
                 minimumFractionDigits: 2
               })}
+              &nbsp;€
             </Highlight>{" "}
             <b>brut</b>
           </p>
