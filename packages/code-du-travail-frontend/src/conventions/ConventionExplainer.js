@@ -33,20 +33,18 @@ class ConventionExplainer extends React.Component {
         </Title>
         {!hidden && (
           <React.Fragment>
-            <SubTitle>
-              Qu’est ce qu’une convention collective ?
-            </SubTitle>
+            <SubTitle>Qu’est ce qu’une convention collective ?</SubTitle>
             <p>
               Une convention collective est un accord négocié entre des
               organisations syndicales de salariés et des organisations
               d’employeurs.
               <br />
               Elle permet d’aménager les règles issues du code du travail
-              concernant les conditions d’emploi, la formation
-              professionnelle, le travail des salariés et les garanties
-              sociales aux spécificités des secteurs d’activité et
-              géographiques concernés. Elle peut également prévoir d’autres
-              mesures qui ne sont pas prévues par le code du travail.
+              concernant les conditions d’emploi, la formation professionnelle,
+              le travail des salariés et les garanties sociales aux spécificités
+              des secteurs d’activité et géographiques concernés. Elle peut
+              également prévoir d’autres mesures qui ne sont pas prévues par le
+              code du travail.
             </p>
             <SubTitle>
               Une convention collective de branche s’applique-t-elle à ma
@@ -57,16 +55,17 @@ class ConventionExplainer extends React.Component {
               branche doit être applicable à votre entreprise.
               <br />
               L’employeur a l’obligation d’appliquer la convention collective
-              lorsque l’entreprise entre dans le champ d’application professionnel
-              et géographie défini par la convention et que :
+              lorsque l’entreprise entre dans le champ d’application
+              professionnel et géographie défini par la convention et que :
             </p>
             <ul>
               <li>
-                La convention collective de branche a été étendue par le ministère du travail.
+                La convention collective de branche a été étendue par le
+                ministère du travail.
               </li>
               <li>
-                L’entreprise est adhérente à une organisation patronale signataire
-                de la convention collective.
+                L’entreprise est adhérente à une organisation patronale
+                signataire de la convention collective.
               </li>
             </ul>
           </React.Fragment>
