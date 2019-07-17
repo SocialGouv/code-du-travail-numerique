@@ -239,7 +239,7 @@ exports[`<ConventionExplainer /> should render 1`] = `
       class="c1"
       href="#"
     >
-      Explications sur les conventions collectives nationales
+      Plus d’informations sur les conventions collectives
       <div
         class="c2"
         role="presentation"
@@ -267,10 +267,10 @@ exports[`<ConventionExplainer /> should render 1`] = `
     </p>
     <ul>
       <li>
-        La convention collective de branche a été étendue par le ministère du travail
+        La convention collective de branche a été étendue par le ministère du travail.
       </li>
       <li>
-        L’entreprise est adhérente à une organisation patronale signataire de la convention collective
+        L’entreprise est adhérente à une organisation patronale signataire de la convention collective.
       </li>
     </ul>
   </div>

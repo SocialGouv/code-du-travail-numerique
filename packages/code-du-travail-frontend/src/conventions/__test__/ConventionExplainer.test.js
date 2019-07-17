@@ -13,10 +13,10 @@ describe("<ConventionExplainer />", () => {
       <ConventionExplainer />
     );
     fireEvent.click(
-      getByText(/Plus d'informations sur les conventions collectives/)
+      getByText(/Plus d’informations sur les conventions collectives/)
     );
     await wait(() => {
-      queryByText(/Qu'est ce qu'une convention collective \?/) == null;
+      queryByText(/Qu’est ce qu’une convention collective \?/) == null;
     });
     expect(container).toMatchSnapshot();
   });

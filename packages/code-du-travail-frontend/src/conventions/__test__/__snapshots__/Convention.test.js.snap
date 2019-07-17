@@ -298,10 +298,10 @@ exports[`<Convention /> should render 1`] = `
       </p>
       <ul>
         <li>
-          La convention collective de branche a été étendue par le ministère du travail
+          La convention collective de branche a été étendue par le ministère du travail.
         </li>
         <li>
-          L’entreprise est adhérente à une organisation patronale signataire de la convention collective
+          L’entreprise est adhérente à une organisation patronale signataire de la convention collective.
         </li>
       </ul>
     </div>
