@@ -1,21 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 1`] = `""`;
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 1`] = `
+Object {
+  "formula": "-",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 2`] = `"min(1/5 * 1846.15 * 21, 18 * (13 / 14.5) * 1846.15)"`;
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 2`] = `
+Object {
+  "formula": "1/5 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 21,
+    "nombre de semestres avant 2002 (S1)": 0,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif economique 1`] = `"min(1/4 * 1846.15 * 21, 18 * (13 / 14.5) * 1846.15)"`;
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif economique 1`] = `
+Object {
+  "formula": "1/4 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif économique",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 21,
+    "nombre de semestres avant 2002 (S1)": 0,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 12mois d'ancienneté 1`] = `""`;
+exports[`getIndemnite 2k, 12mois d'ancienneté 1`] = `
+Object {
+  "formula": "-",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 19ans et 8mois d'ancienneté 1`] = `"min(1/5 * 1846.15 * 35, 18 * (13 / 14.5) * 1846.15)"`;
+exports[`getIndemnite 2k, 19ans et 8mois d'ancienneté 1`] = `
+Object {
+  "formula": "1/2 * 13/14.5 * Sref * S1 + 1/5 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 35,
+    "nombre de semestres avant 2002 (S1)": 4,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 19ans et 8mois d'ancienneté, motif economique 1`] = `"min(1/4 * 1846.15 * 35, 18 * (13 / 14.5) * 1846.15)"`;
+exports[`getIndemnite 2k, 19ans et 8mois d'ancienneté, motif economique 1`] = `
+Object {
+  "formula": "1/2 * Sref * S1 + 1/4 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif économique",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 35,
+    "nombre de semestres avant 2002 (S1)": 4,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000 1`] = `"min(1/5 * 1846.15 * 35, 15 * 1846.15)"`;
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000 1`] = `
+Object {
+  "formula": "1/2 * 13/14.5 * Sref * S1 + 1/5 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Cadre",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 35,
+    "nombre de semestres avant 2002 (S1)": 6,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000 1`] = `"min(1/4 * 1846.15 * 35, 18 * 1846.15)"`;
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000 1`] = `
+Object {
+  "formula": "1/2 * Sref * S1 + 1/4 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Cadre",
+    "Motif du licenciement": "Motif économique",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 35,
+    "nombre de semestres avant 2002 (S1)": 6,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000 1`] = `"min(1/5 * 1846.15 * 35, 15 * 1846.15)"`;
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000 1`] = `
+Object {
+  "formula": "1/2 * 13/14.5 * Sref * S1 + 1/5 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 35,
+    "nombre de semestres avant 2002 (S1)": 6,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000 1`] = `"min(1/5 * 1846.15 * 35, 15 * 1846.15)"`;
+exports[`getIndemnite 2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000 1`] = `
+Object {
+  "formula": "1/2 * 13/14.5 * Sref * S1 + 1/5 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Non cadre",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 35,
+    "nombre de semestres avant 2002 (S1)": 6,
+  },
+}
+`;

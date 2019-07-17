@@ -1,25 +1,157 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getIndemnite 2k, 6ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 5 + 3/10 * 2000 * 1 - 920"`;
+exports[`getIndemnite 2k, 6ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `
+Object {
+  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt  - \\"minoration\\"",
+  "labels": Object {
+    "catégorie": "cadre",
+    "durée comme TAM, en mois, (Dt)": 12,
+    "durée comme cadre, en mois, (Dc)": 60,
+    "en age de partir à la retraite": "oui",
+    "majoration": 0,
+    "minoration": 920,
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 10 + 3/10 * 2000 * 0"`;
+exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 1`] = `
+Object {
+  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt",
+  "labels": Object {
+    "catégorie": "cadre",
+    "durée comme cadre, en mois, (Dc)": 120,
+    "en age de partir à la retraite": "oui",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 2`] = `"4/10 * 2000 * 10 + 3/10 * 2000 * 0.41  + 4000- 6600"`;
+exports[`getIndemnite 2k, 10ans d'ancienneté, 61ans, cadre, retraite possible 2`] = `
+Object {
+  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt  + \\"majoration\\" - \\"minoration\\"",
+  "labels": Object {
+    "catégorie": "cadre",
+    "durée comme TAM, en mois, (Dt)": 5,
+    "durée comme cadre, en mois, (Dc)": 120,
+    "en age de partir à la retraite": "oui",
+    "majoration": 4000,
+    "minoration": 6600,
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 12mois d'ancienneté, 55ans, ouvrier 1`] = `""`;
+exports[`getIndemnite 2k, 12mois d'ancienneté, 55ans, ouvrier 1`] = `
+Object {
+  "formula": "-",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 1,
+    "catégorie": "ouvrier",
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, TAM 1`] = `"1/10 * 2000 * 2"`;
+exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, TAM 1`] = `
+Object {
+  "formula": "1/10 * Sref * A",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 2,
+    "catégorie": "tam",
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, cadre 1`] = `""`;
+exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, cadre 1`] = `
+Object {
+  "formula": "-",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 2,
+    "catégorie": "cadre",
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, ouvrier 1`] = `"1/10 * 2000 * 2"`;
+exports[`getIndemnite 2k, 24mois d'ancienneté, 55ans, ouvrier 1`] = `
+Object {
+  "formula": "1/10 * Sref * A",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 2,
+    "catégorie": "ouvrier",
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible 1`] = `"1/10 * 2000 * 2 - 80"`;
+exports[`getIndemnite 2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible 1`] = `
+Object {
+  "formula": "1/10 * Sref * A  - \\"minoration\\"",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 2,
+    "catégorie": "ouvrier",
+    "en age de partir à la retraite": "oui",
+    "majoration": 0,
+    "minoration": 80,
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, TAM 1`] = `"3/10 * 2000 * 3"`;
+exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, TAM 1`] = `
+Object {
+  "formula": "3/10 * Sref * A",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 3,
+    "catégorie": "tam",
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, cadre 1`] = `"4/10 * 2000 * 2 + 3/10 * 2000 * 1"`;
+exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, cadre 1`] = `
+Object {
+  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt",
+  "labels": Object {
+    "catégorie": "cadre",
+    "durée comme TAM, en mois, (Dt)": 12,
+    "durée comme cadre, en mois, (Dc)": 24,
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, ouvrier 1`] = `"2/10 * 2000 * 3"`;
+exports[`getIndemnite 2k, 36mois d'ancienneté, 55ans, ouvrier 1`] = `
+Object {
+  "formula": "2/10 * Sref * A",
+  "labels": Object {
+    "ancienneté totale, en année, (A)": 3,
+    "catégorie": "ouvrier",
+    "en age de partir à la retraite": "non",
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;
 
-exports[`getIndemnite 2k, 36mois d'ancienneté, 61ans, cadre, retraite possible 1`] = `"4/10 * 2000 * 2 + 3/10 * 2000 * 1 - 440"`;
+exports[`getIndemnite 2k, 36mois d'ancienneté, 61ans, cadre, retraite possible 1`] = `
+Object {
+  "formula": "4/10 * Sref * Dc + 3/10 * Sref * Dt  - \\"minoration\\"",
+  "labels": Object {
+    "catégorie": "cadre",
+    "durée comme TAM, en mois, (Dt)": 12,
+    "durée comme cadre, en mois, (Dc)": 24,
+    "en age de partir à la retraite": "oui",
+    "majoration": 0,
+    "minoration": 440,
+    "salaire de référence (Sref)": 2000,
+  },
+}
+`;

@@ -6,7 +6,9 @@ import {
   NE_SAIT_PAS,
   DISCIPLINAIRE,
   NON_DISCIPLINAIRE,
-  ECONOMIQUE
+  ECONOMIQUE,
+  optionCategorie,
+  optionMotifs
 } from "./Step";
 
 function getSalaireRef({
@@ -42,13 +44,20 @@ function getIndemnite({
   motif
 }) {
   let indemniteConventionnelle = 0;
-  let formuleConventionnelle = "";
+  let formula = "";
   let error;
-
+  let labels = {
+    "Salaire de référence (Sref)": round(salaireRef),
+    "Motif du licenciement": optionMotifs[motif],
+    Catégorie: optionCategorie[categorie]
+  };
   if (anciennete < 1) {
     return {
       indemniteConventionnelle,
-      formuleConventionnelle,
+      infoCalculConventionnel: {
+        formula: "-",
+        labels
+      },
       error:
         "La convention collective prévoit une indemnité conventionnelle de licenciement à partir d'un an d'ancienneté"
     };
@@ -56,7 +65,10 @@ function getIndemnite({
   if (motif === DISCIPLINAIRE) {
     return {
       indemniteConventionnelle,
-      formuleConventionnelle,
+      infoCalculConventionnel: {
+        formula: "-",
+        labels
+      },
       error:
         "La convention collective prévoit le droit à l’indemnité légale en cas de licenciement pour motif disciplinaire, sauf pour faute grave ou lourde"
     };
@@ -69,30 +81,25 @@ function getIndemnite({
     differenceInMonths(dateSortie, max(dateEntree, year2002)) / 6
   );
 
+  labels["nombre de semestres avant 2002 (S1)"] = round(nbSemestreAvant2002);
+  labels["nombre de semestres après 2002 (S2)"] = round(nbSemestreApres2002);
+
   if (motif === NON_DISCIPLINAIRE) {
     if (nbSemestreAvant2002 > 0) {
       indemniteConventionnelle =
         (1 / 2) * (13 / 14.5) * salaireRef * nbSemestreAvant2002;
-      formuleConventionnelle = `1/2 * 13/14.5 * ${round(salaireRef)} * ${round(
-        nbSemestreAvant2002
-      )} + `;
+      formula = `1/2 * 13/14.5 * Sref * S1 + `;
     }
 
     indemniteConventionnelle += (1 / 5) * salaireRef * nbSemestreApres2002;
-    formuleConventionnelle = `1/5 * ${round(salaireRef)} * ${round(
-      nbSemestreApres2002
-    )}`;
+    formula += `1/5 * Sref * S2`;
   } else if (motif === ECONOMIQUE) {
     if (nbSemestreAvant2002 > 0) {
       indemniteConventionnelle = (1 / 2) * salaireRef * nbSemestreAvant2002;
-      formuleConventionnelle = `1/2 * ${round(salaireRef)} * ${round(
-        nbSemestreAvant2002
-      )} + `;
+      formula = `1/2 * Sref * S1 + `;
     }
     indemniteConventionnelle += (1 / 4) * salaireRef * nbSemestreApres2002;
-    formuleConventionnelle = `1/4 * ${round(salaireRef)} * ${round(
-      nbSemestreApres2002
-    )}`;
+    formula += `1/4 * Sref * S2`;
   }
 
   const isEmbaucheAfter1999 = isAfter(dateEntree, new Date("1999-12-31"));
@@ -103,30 +110,29 @@ function getIndemnite({
       [NON_CADRE]: 18,
       [NE_SAIT_PAS]: 18
     };
-    indemniteConventionnelle = Math.min(
-      indemniteConventionnelle,
+
+    if (
+      indemniteConventionnelle >
       plafond[categorie] * (13 / 14.5) * salaireRef
-    );
-    formuleConventionnelle = `min(${formuleConventionnelle}, ${
-      plafond[categorie]
-    } * (13 / 14.5) * ${round(salaireRef)})`;
+    ) {
+      indemniteConventionnelle = plafond[categorie] * (13 / 14.5) * salaireRef;
+      formula = `${plafond[categorie]} * (13 / 14.5) * Sref)`;
+    }
   } else {
     const plafond = {
       [ECONOMIQUE]: 18,
       [NON_DISCIPLINAIRE]: 15
     };
-    indemniteConventionnelle = Math.min(
-      indemniteConventionnelle,
-      plafond[motif] * salaireRef
-    );
-    formuleConventionnelle = `min(${formuleConventionnelle}, ${
-      plafond[motif]
-    } * ${round(salaireRef)})`;
+
+    if (indemniteConventionnelle > plafond[motif] * salaireRef) {
+      indemniteConventionnelle = plafond[motif] * salaireRef;
+      formula = `${plafond[motif]} * Sref)`;
+    }
   }
 
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    formuleConventionnelle,
+    infoCalculConventionnel: { formula, labels },
     error
   };
 }

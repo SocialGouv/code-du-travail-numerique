@@ -346,6 +346,7 @@ describe("getIndemnite", () => {
       });
       const res = getIndemnite({ salaireRef, indemnite, ...test.data });
       expect(res.indemniteConventionnelle).toEqual(test.expected);
+      expect(res.infoCalculConventionnel).toMatchSnapshot();
     });
   });
   it("should return 500 when anciennete > 12 && < 24", () => {

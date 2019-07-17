@@ -13,13 +13,13 @@ export const CADRE = "cadre";
 export const NON_CADRE = "non-cadre";
 export const NE_SAIT_PAS = "ne-sais-pas";
 
-const optionMotifs = {
+export const optionMotifs = {
   [DISCIPLINAIRE]: "Motif disciplinaire",
   [NON_DISCIPLINAIRE]: "Motif non disciplinaire",
   [ECONOMIQUE]: "Motif économique"
 };
 
-const optionCategorie = {
+export const optionCategorie = {
   [NON_CADRE]: "Non cadre",
   [CADRE]: "Cadre",
   [NE_SAIT_PAS]: "Ne sait pas"

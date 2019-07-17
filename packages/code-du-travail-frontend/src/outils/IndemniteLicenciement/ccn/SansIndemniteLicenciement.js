@@ -10,7 +10,7 @@ function Step({ form }) {
     values: { branche }
   } = form.getState();
 
-  const { indemniteLegale, formuleLegale } = getIndemniteFromFinalForm(form);
+  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
   const selectedBranche = branches.find(br => br.value === branche);
 
   return (
@@ -21,8 +21,8 @@ function Step({ form }) {
         l’indemnité légale de licenciement.
       </p>
       <IndemniteLegale
-        indemniteLegale={indemniteLegale}
-        formuleLegale={formuleLegale}
+        indemnite={indemniteLegale}
+        infoCalcul={infoCalculLegal}
       />
     </Container>
   );

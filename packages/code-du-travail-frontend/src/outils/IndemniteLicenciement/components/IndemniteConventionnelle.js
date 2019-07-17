@@ -1,22 +1,19 @@
 import React from "react";
-import MathJax from "react-mathjax-preview";
-import { Alert, Button } from "@cdt/ui";
+import PropTypes from "prop-types";
+import { theme, Alert, Button, Toast } from "@cdt/ui";
+import styled from "styled-components";
 
 import { branches } from "../branches";
-import {
-  SectionTitle,
-  Highlight,
-  SmallText,
-  Summary
-} from "../../common/stepStyles";
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
+import { Montant } from "./Montant";
+import { FormulaDetails } from "./FormulaDetails";
 
 function IndemniteCCn({
   branche,
   indemniteConventionnelle,
   indemniteLegale,
-  formuleConventionnelle,
-  formuleLegale,
+  infoCalculLegal,
+  infoCalculConventionnel,
   error
 }) {
   const selectedBranche = branches.find(br => br.value === branche);
@@ -29,35 +26,47 @@ function IndemniteCCn({
       ) : (
         <React.Fragment>
           <p>
-            L’indemnité conventionnelle est de {indemniteConventionnelle}
-            <br />
-            L’indemnité légale est de {indemniteLegale}
-            <br />
-            Le montant de l’indemnité est de{" "}
+            À partir des éléments que vous avez saisis, votre indémnité de
+            licenciement est estimée à{" "}
             <Highlight>
-              {Math.max(indemniteLegale, indemniteConventionnelle)} €
-            </Highlight>{" "}
-            <SmallText>
-              {indemniteConventionnelle > indemniteLegale
-                ? "sur la base du calcul de l'indemnité conventionelle"
-                : "sur la base du calcul de l’indemnité légale"}
-            </SmallText>
+              {Math.max(
+                indemniteLegale,
+                indemniteConventionnelle
+              ).toLocaleString(undefined, {
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2
+              })}
+              &nbsp;€ brut
+            </Highlight>
           </p>
-          <br />
-          <details>
-            <Summary>Voir le detail du calcul</Summary>
-            <ErrorBoundary>
-              <MathJax
-                math={
-                  "`" +
-                  (indemniteConventionnelle > indemniteLegale
-                    ? formuleConventionnelle
-                    : formuleLegale) +
-                  "`"
-                }
+          <p>
+            Il s’agit du montant le plus favorable entre votre indemnité légale
+            et votre indemnité conventionnelle.
+          </p>
+          <ColumnWrapper>
+            <Column first={indemniteConventionnelle < indemniteLegale}>
+              <Heading>Votre indemnite légale</Heading>
+              <Montant
+                primary={indemniteConventionnelle < indemniteLegale}
+                value={indemniteLegale}
               />
-            </ErrorBoundary>
-          </details>
+              <FormulaDetails infoCalcul={infoCalculLegal} />
+            </Column>
+            <Column first={indemniteConventionnelle > indemniteLegale}>
+              <Heading>Votre indemnite conventionnelle</Heading>
+              <Montant
+                primary={indemniteConventionnelle > indemniteLegale}
+                value={indemniteConventionnelle}
+              />
+              <FormulaDetails infoCalcul={infoCalculConventionnel} />
+            </Column>
+          </ColumnWrapper>
+
+          <Toast variant="info">
+            Un accord collectif d’entreprise, le contrat de travail et un usage
+            peuvent prévoir une formule de calcul plus avantageuse pour le
+            salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.{" "}
+          </Toast>
         </React.Fragment>
       )}
       <br />
@@ -66,5 +75,37 @@ function IndemniteCCn({
     </>
   );
 }
+IndemniteCCn.propTypes = {
+  branche: PropTypes.string.isRequired,
+  indemniteConventionnelle: PropTypes.number.isRequired,
+  indemniteLegale: PropTypes.number.isRequired,
+  error: PropTypes.string,
+  infoCalculLegal: PropTypes.shape({
+    formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+  }).isRequired,
+  infoCalculConventionnel: PropTypes.shape({
+    formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+  }).isRequired
+};
 
 export { IndemniteCCn };
+
+const { spacing, fonts } = theme;
+
+const ColumnWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: ${spacing.large} -${spacing.small};
+  flex-wrap: wrap;
+`;
+
+const Column = styled.section`
+  padding: 0 ${spacing.small};
+  order: ${({ first }) => (first ? 0 : 1)};
+`;
+
+const Heading = styled.h2`
+  font-size: ${fonts.sizeH4};
+`;

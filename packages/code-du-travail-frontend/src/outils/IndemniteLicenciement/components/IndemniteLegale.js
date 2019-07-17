@@ -1,34 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import MathJax from "react-mathjax-preview";
+import { FormulaDetails } from "./FormulaDetails";
+import { SectionTitle, Highlight } from "../../common/stepStyles";
 
-import { ErrorBoundary } from "../../../common/ErrorBoundary";
-
-import { SectionTitle, Highlight, Summary } from "../../common/stepStyles";
-
-function IndemniteLegale({ indemniteLegale, formuleLegale }) {
+function IndemniteLegale({ indemnite, infoCalcul }) {
   return (
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
       <p>
         Le code du travail prévoit un montant minimum de{" "}
-        <Highlight>{indemniteLegale} €</Highlight> pour votre indemnité de
-        licenciement.
+        <Highlight>
+          {indemnite.toLocaleString("fr-FR", {
+            maximumFractionDigits: 2,
+            minimumFractionDigits: 2
+          })}
+          &nbsp;€ brut
+        </Highlight>{" "}
+        pour votre indemnité de licenciement.
       </p>
-      <details>
-        <Summary>Voir le detail du calcul</Summary>
-        <ErrorBoundary>
-          <MathJax math={"`" + formuleLegale + "`"} />
-        </ErrorBoundary>
-      </details>
+      <FormulaDetails infoCalcul={infoCalcul} />
     </>
   );
 }
 
 IndemniteLegale.propTypes = {
-  indemniteLegale: PropTypes.number.isRequired,
-  formuleLegale: PropTypes.string.isRequired
+  indemnite: PropTypes.number.isRequired,
+  infoCalcul: PropTypes.shape({
+    formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+  }).isRequired
 };
 
 export { IndemniteLegale };
