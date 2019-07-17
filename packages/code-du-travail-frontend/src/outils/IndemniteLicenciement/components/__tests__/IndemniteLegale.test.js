@@ -7,7 +7,7 @@ describe("<IndemniteLegale />", () => {
     const { container } = render(
       <IndemniteLegale
         indemnite={42}
-        infosCalcul={{
+        infoCalcul={{
           formula: "1337% * 3.14",
           labels: { value: 1 }
         }}

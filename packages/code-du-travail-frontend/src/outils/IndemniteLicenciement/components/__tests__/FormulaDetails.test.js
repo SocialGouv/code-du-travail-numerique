@@ -10,7 +10,7 @@ describe("<FormulaDetails />", () => {
       "Value 2": 1
     };
     const { container } = render(
-      <FormulaDetails infosCalcul={{ labels, formula }} />
+      <FormulaDetails infoCalcul={{ labels, formula }} />
     );
     expect(container).toMatchSnapshot();
   });

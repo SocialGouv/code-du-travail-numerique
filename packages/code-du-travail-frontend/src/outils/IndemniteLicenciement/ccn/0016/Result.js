@@ -26,7 +26,7 @@ export function Result({ form }) {
     hasRetirementAge = false
   } = state.values;
 
-  const { indemniteLegale, infosCalculLegal } = getIndemniteFromFinalForm(form);
+  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
 
   const salaireRefConventionnel = getSalaireRefConventionnel({
     hasTempsPartiel,
@@ -42,7 +42,7 @@ export function Result({ form }) {
   const {
     error,
     indemniteConventionnelle,
-    infosCalculConventionnel
+    infoCalculConventionnel
   } = getIndemniteConventionnelle({
     age,
     categorie,
@@ -57,8 +57,8 @@ export function Result({ form }) {
     <IndemniteCCn
       indemniteConventionnelle={indemniteConventionnelle}
       indemniteLegale={indemniteLegale}
-      infosCalculLegal={infosCalculLegal}
-      infosCalculConventionnel={infosCalculConventionnel}
+      infoCalculLegal={infoCalculLegal}
+      infoCalculConventionnel={infoCalculConventionnel}
       branche={branche}
       error={error}
     />

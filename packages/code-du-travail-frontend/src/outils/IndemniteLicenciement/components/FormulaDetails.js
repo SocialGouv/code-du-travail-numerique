@@ -7,7 +7,7 @@ import MathJax from "react-mathjax-preview";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import { Summary } from "../../common/stepStyles";
 
-function FormulaDetails({ infosCalcul: { labels, formula } }) {
+function FormulaDetails({ infoCalcul: { labels, formula } }) {
   return (
     <Details>
       <Summary>Voir le detail du calcul</Summary>
@@ -32,7 +32,7 @@ function FormulaDetails({ infosCalcul: { labels, formula } }) {
 export { FormulaDetails };
 
 FormulaDetails.propTypes = {
-  infosCalcul: PropTypes.shape({
+  infoCalcul: PropTypes.shape({
     labels: PropTypes.object.isRequired,
     formula: PropTypes.string.isRequired
   })

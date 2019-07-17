@@ -189,6 +189,6 @@ export function getIndemnite({
 
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    infosCalculConventionnel: { formula, labels }
+    infoCalculConventionnel: { formula, labels }
   };
 }

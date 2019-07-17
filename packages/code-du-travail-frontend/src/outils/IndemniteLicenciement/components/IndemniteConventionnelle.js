@@ -12,8 +12,8 @@ function IndemniteCCn({
   branche,
   indemniteConventionnelle,
   indemniteLegale,
-  infosCalculLegal,
-  infosCalculConventionnel,
+  infoCalculLegal,
+  infoCalculConventionnel,
   error
 }) {
   const selectedBranche = branches.find(br => br.value === branche);
@@ -51,7 +51,7 @@ function IndemniteCCn({
                 primary={indemniteConventionnelle < indemniteLegale}
                 value={indemniteLegale}
               />
-              <FormulaDetails infosCalcul={infosCalculLegal} />
+              <FormulaDetails infoCalcul={infoCalculLegal} />
             </Column>
             <Column first={indemniteConventionnelle > indemniteLegale}>
               <Heading>Votre indemnite conventionnelle</Heading>
@@ -59,7 +59,7 @@ function IndemniteCCn({
                 primary={indemniteConventionnelle > indemniteLegale}
                 value={indemniteConventionnelle}
               />
-              <FormulaDetails infosCalcul={infosCalculConventionnel} />
+              <FormulaDetails infoCalcul={infoCalculConventionnel} />
             </Column>
           </ColumnWrapper>
 
@@ -81,11 +81,11 @@ IndemniteCCn.propTypes = {
   indemniteConventionnelle: PropTypes.number.isRequired,
   indemniteLegale: PropTypes.number.isRequired,
   error: PropTypes.string,
-  infosCalculLegal: PropTypes.shape({
+  infoCalculLegal: PropTypes.shape({
     formula: PropTypes.string.isRequired,
     labels: PropTypes.object.isRequired
   }).isRequired,
-  infosCalculConventionnel: PropTypes.shape({
+  infoCalculConventionnel: PropTypes.shape({
     formula: PropTypes.string.isRequired,
     labels: PropTypes.object.isRequired
   }).isRequired

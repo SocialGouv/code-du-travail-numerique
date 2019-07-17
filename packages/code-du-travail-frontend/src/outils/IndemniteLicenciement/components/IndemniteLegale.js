@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { FormulaDetails } from "./FormulaDetails";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
-function IndemniteLegale({ indemnite, infosCalcul }) {
+function IndemniteLegale({ indemnite, infoCalcul }) {
   return (
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
@@ -19,14 +19,14 @@ function IndemniteLegale({ indemnite, infosCalcul }) {
         </Highlight>{" "}
         pour votre indemnité de licenciement.
       </p>
-      <FormulaDetails infosCalcul={infosCalcul} />
+      <FormulaDetails infoCalcul={infoCalcul} />
     </>
   );
 }
 
 IndemniteLegale.propTypes = {
   indemnite: PropTypes.number.isRequired,
-  infosCalcul: PropTypes.shape({
+  infoCalcul: PropTypes.shape({
     formula: PropTypes.string.isRequired,
     labels: PropTypes.object.isRequired
   }).isRequired

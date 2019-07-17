@@ -17,12 +17,12 @@ function validateCCn(idcc) {
 }
 
 function StepIndemnite({ form }) {
-  const { indemniteLegale, infosCalculLegal } = getIndemniteFromFinalForm(form);
+  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
   return (
     <>
       <IndemniteLegale
         indemnite={indemniteLegale}
-        infosCalcul={infosCalculLegal}
+        infoCalcul={infoCalculLegal}
       />
       <SectionTitle>
         Votre convention collective peut prévoir un montant plus important

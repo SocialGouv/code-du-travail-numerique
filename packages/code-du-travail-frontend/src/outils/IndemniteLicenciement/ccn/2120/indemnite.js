@@ -54,7 +54,7 @@ function getIndemnite({
   if (anciennete < 1) {
     return {
       indemniteConventionnelle,
-      infosCalculConventionnel: {
+      infoCalculConventionnel: {
         formula: "-",
         labels
       },
@@ -65,7 +65,7 @@ function getIndemnite({
   if (motif === DISCIPLINAIRE) {
     return {
       indemniteConventionnelle,
-      infosCalculConventionnel: {
+      infoCalculConventionnel: {
         formula: "-",
         labels
       },
@@ -132,7 +132,7 @@ function getIndemnite({
 
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    infosCalculConventionnel: { formula, labels },
+    infoCalculConventionnel: { formula, labels },
     error
   };
 }

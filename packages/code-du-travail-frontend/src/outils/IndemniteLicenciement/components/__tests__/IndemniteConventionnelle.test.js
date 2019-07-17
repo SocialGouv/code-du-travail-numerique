@@ -18,11 +18,11 @@ describe("<IndemniteCCn />", () => {
         branche="0044"
         indemniteLegale={42}
         indemniteConventionnelle={2000}
-        infosCalculLegal={{
+        infoCalculLegal={{
           labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
           formula: "Sref * A"
         }}
-        infosCalculConventionnel={{
+        infoCalculConventionnel={{
           formula: "1337 * Sref * foo",
           labels: {
             "salaire de ref (Sref)": 1337,
@@ -39,11 +39,11 @@ describe("<IndemniteCCn />", () => {
         branche="0044"
         indemniteLegale={2000}
         indemniteConventionnelle={1337}
-        infosCalculLegal={{
+        infoCalculLegal={{
           labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
           formula: "Sref * A"
         }}
-        infosCalculConventionnel={{
+        infoCalculConventionnel={{
           formula: "1337 * Sref * foo",
           labels: {
             "salaire de ref (Sref)": 1337,
@@ -60,11 +60,11 @@ describe("<IndemniteCCn />", () => {
         branche="0044"
         indemniteLegale={42}
         indemniteConventionnelle={1200}
-        infosCalculLegal={{
+        infoCalculLegal={{
           labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
           formula: "Sref * A"
         }}
-        infosCalculConventionnel={{
+        infoCalculConventionnel={{
           formula: "1337 * Sref * foo",
           labels: {
             "salaire de ref (Sref)": 1337,

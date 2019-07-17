@@ -46,7 +46,7 @@ export function getIndemnite({ salaireRef, anciennete }) {
 
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    infosCalculConventionnel: {
+    infoCalculConventionnel: {
       formula: formula.map(formula => `( ${formula} )`).join(" + "),
       labels
     },

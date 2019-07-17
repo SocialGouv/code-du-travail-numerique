@@ -93,7 +93,7 @@ function getIndemnite({
 
   return {
     indemniteLegale: round(indemniteLegale),
-    infosCalculLegal: { formula, labels }
+    infoCalculLegal: { formula, labels }
   };
 }
 
@@ -121,7 +121,7 @@ function getIndemniteFromFinalForm(form) {
     primes
   });
 
-  const { indemniteLegale, infosCalculLegal } = getIndemnite({
+  const { indemniteLegale, infoCalculLegal } = getIndemnite({
     salaireRef,
     inaptitude,
     anciennete,
@@ -131,7 +131,7 @@ function getIndemniteFromFinalForm(form) {
   return {
     salaireRefLegal: salaireRef,
     indemniteLegale,
-    infosCalculLegal
+    infoCalculLegal
   };
 }
 
