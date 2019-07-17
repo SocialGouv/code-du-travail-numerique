@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "react-testing-library";
-import { StepAnciennete } from "../Anciennete";
+import { StepAnciennete, computeAnciennete } from "../Anciennete";
 import { Form } from "react-final-form";
 
 function renderForm(data) {
@@ -67,5 +67,31 @@ describe("<Anciennete />", () => {
     const dateSortie = getByLabelText(/date de sortie/i);
     fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
     expect(getByText(/est dûe au-delà de 12 mois/i)).toMatchSnapshot();
+  });
+});
+
+describe("computeAncienneté", () => {
+  it("should compute ancienneté", () => {
+    expect(
+      computeAnciennete({ dateEntree: "2017-04-01", dateSortie: "2018-04-01" })
+    ).toEqual(1);
+  });
+  it("should compute ancienneté with periods of absence", () => {
+    expect(
+      computeAnciennete({
+        dateEntree: "2017-04-01",
+        dateSortie: "2018-04-01",
+        absencePeriods: [{ type: "Congés sans solde", duration: "6" }]
+      })
+    ).toEqual(0.5);
+  });
+  it("should compute ancienneté with periods of absence divided by two for Congé parental", () => {
+    expect(
+      computeAnciennete({
+        dateEntree: "2016-04-01",
+        dateSortie: "2018-04-01",
+        absencePeriods: [{ type: "Congé parental d'éducation", duration: "6" }]
+      })
+    ).toEqual(1.75);
   });
 });
