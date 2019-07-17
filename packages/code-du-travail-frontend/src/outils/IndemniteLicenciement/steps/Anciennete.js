@@ -130,24 +130,27 @@ StepAnciennete.validate = validate;
 StepAnciennete.decorator = createDecorator({
   field: /date|absencePeriods/,
   updates: {
-    anciennete: (_, { dateEntree, dateSortie, absencePeriods = [] }) => {
-      const dEntree = new Date(dateEntree);
-      const dSortie = new Date(dateSortie);
-      // on calcule totalAbsence en mois par année (ex: 12mois = 1)
-      // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
-      const totalAbsence =
-        (absencePeriods || [])
-          .filter(period => Boolean(period.duration))
-          .reduce((total, item) => {
-            const motif = motifs.find(motif => motif.label === item.type);
-            return total + item.duration * motif.value;
-          }, 0) / 12;
-      return (differenceInMonths(dSortie, dEntree) - totalAbsence) / 12;
-    }
+    anciennete: (_, values) => computeAnciennete(values)
   }
 });
 
 StepAnciennete.propTypes = {
   form: PropTypes.object.isRequired
 };
-export { StepAnciennete };
+
+function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
+  const dEntree = new Date(dateEntree);
+  const dSortie = new Date(dateSortie);
+  // on calcule totalAbsence en mois par année (ex: 12mois = 1)
+  // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
+  const totalAbsence =
+    (absencePeriods || [])
+      .filter(period => Boolean(period.duration))
+      .reduce((total, item) => {
+        const motif = motifs.find(motif => motif.label === item.type);
+        return total + item.duration * motif.value;
+      }, 0) / 12;
+  return differenceInMonths(dSortie, dEntree) / 12 - totalAbsence;
+}
+
+export { StepAnciennete, computeAnciennete };
