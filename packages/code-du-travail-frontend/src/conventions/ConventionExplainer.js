@@ -28,7 +28,7 @@ class ConventionExplainer extends React.Component {
             sessionStorage.setItem(HIDDEN_KEY, (!hidden).toString());
           }}
         >
-          Explications sur les conventions collectives nationales
+          Plus d&apos;informations sur les conventions collectives
           <VerticalArrow />
         </Title>
         {!hidden && (
@@ -43,9 +43,9 @@ class ConventionExplainer extends React.Component {
               <br />
               Elle permet d&apos;aménager les règles issues du code du travail
               concernant les conditions d&apos;emploi, la formation
-              professionnelle, le travail des salariés et de leurs garanties
-              sociales aux spécificités du secteurs d&apos;activité et
-              géographique concernés. Elle peut également prévoir d&apos;autres
+              professionnelle, le travail des salariés et les garanties
+              sociales aux spécificités des secteurs d&apos;activité et
+              géographiques concernés. Elle peut également prévoir d&apos;autres
               mesures qui ne sont pas prévues par le code du travail.
             </p>
             <SubTitle>
@@ -63,13 +63,13 @@ class ConventionExplainer extends React.Component {
             </p>
             <ul>
               <li>
-                soit une convention collective de branche a été étendue par le
-                Ministère du travail rendant la convention collective
+                soit la convention collective de branche a été étendue par le
+                ministère du travail rendant la convention collective
                 obligatoire pour toutes les entreprises qui entrent dans son
                 champ d&apos;application professionnel et géographique.
               </li>
               <li>
-                soit votre entreprise est signataire ou adhérente à une
+                soit votre entreprise est adhérente à une
                 organisation patronale signataire de la convention collective.
               </li>
             </ul>
