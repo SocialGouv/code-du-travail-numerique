@@ -12,7 +12,7 @@ describe("<ConventionExplainer />", () => {
     const { getByText, queryByText, container } = render(
       <ConventionExplainer />
     );
-    fireEvent.click(getByText(/Explications sur les conventions/));
+    fireEvent.click(getByText(/Plus d'informations sur les conventions collectives/));
     await wait(() => {
       queryByText(/Qu'est ce qu'une convention collective \?/) == null;
     });
