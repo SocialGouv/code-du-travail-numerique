@@ -154,7 +154,7 @@ describe("getIndemnite", () => {
         ...data
       });
       expect(res.indemniteConventionnelle).toBe(result);
-      expect(res.formuleConventionnelle).toMatchSnapshot();
+      expect(res.infosCalculConventionnel).toMatchSnapshot();
     });
   });
   it("should return an error for anciennete < 2", () => {

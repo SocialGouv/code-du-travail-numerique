@@ -193,7 +193,7 @@ exports[`<Result /> should render 1`] = `
 }
 
 .c11 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%206%2010'%3E%3Cpath%20fill%3D'currentColor'%20d%3D'M0%204h5v1H0z'%2F%3E%3C%2Fsvg%3E");
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .c12 {
@@ -304,21 +304,21 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c12"
           >
-            salaire de réference (Sref)
+            Salaire de réference (Sref)
              : 
             2000
           </li>
           <li
             class="c12"
           >
-            licenciement pour inapttitude
+            Licenciement pour inaptitude
              : 
             non
           </li>
           <li
             class="c12"
           >
-            ancienneté totale (A)
+            Ancienneté totale (A)
              : 
             5
           </li>
@@ -405,7 +405,7 @@ exports[`<Result /> should render 1`] = `
           <li
             class="c12"
           >
-            Ancienneté au dela de 10ans (A3)
+            Ancienneté au delà de 10ans (A3)
              : 
             0
           </li>

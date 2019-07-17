@@ -4,12 +4,13 @@ import { FormulaDetails } from "../FormulaDetails";
 
 describe("<FormulaDetails />", () => {
   it("should render", () => {
-    const values = {
+    const formula = "1337% * 3.14";
+    const labels = {
       "value 1": "foo",
       "Value 2": 1
     };
     const { container } = render(
-      <FormulaDetails values={values} formula="1337% * 3.14" />
+      <FormulaDetails infosCalcul={{ labels, formula }} />
     );
     expect(container).toMatchSnapshot();
   });

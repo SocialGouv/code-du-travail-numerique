@@ -144,7 +144,7 @@ describe("getIndemnite", () => {
         salaireRef
       });
       expect(res.indemniteConventionnelle).toBe(result);
-      expect(res.formuleConventionnelle).toMatchSnapshot();
+      expect(res.infosCalculConventionnel).toMatchSnapshot();
     });
   });
 

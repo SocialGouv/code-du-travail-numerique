@@ -24,8 +24,7 @@ function Result({ form }) {
   const {
     salaireRefLegal,
     indemniteLegale,
-    formuleLegale,
-    inputLegals
+    infosCalculLegal
   } = getIndemniteFromFinalForm(form);
 
   const salaireRef = getSalaireRefConventionnel({
@@ -37,8 +36,7 @@ function Result({ form }) {
   });
   const {
     indemniteConventionnelle,
-    formuleConventionnelle,
-    inputConventionnels
+    infosCalculConventionnel
   } = getIndemniteConventionnelle({
     salaireRef,
     indemnite: indemniteLegale,
@@ -53,11 +51,9 @@ function Result({ form }) {
     <IndemniteCCn
       indemniteConventionnelle={indemniteConventionnelle}
       indemniteLegale={indemniteLegale}
-      formuleConventionnelle={formuleConventionnelle}
-      formuleLegale={formuleLegale}
+      infosCalculLegal={infosCalculLegal}
+      infosCalculConventionnel={infosCalculConventionnel}
       branche={branche}
-      inputLegals={inputLegals}
-      inputConventionnels={inputConventionnels}
     />
   );
 }

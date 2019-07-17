@@ -4,23 +4,32 @@ import PropTypes from "prop-types";
 import { FormulaDetails } from "./FormulaDetails";
 import { SectionTitle, Highlight } from "../../common/stepStyles";
 
-function IndemniteLegale({ indemniteLegale, formuleLegale, inputLegals }) {
+function IndemniteLegale({ indemnite, infosCalcul }) {
   return (
     <>
       <SectionTitle>Indemnité légale</SectionTitle>
       <p>
         Le code du travail prévoit un montant minimum de{" "}
-        <Highlight>{indemniteLegale} €</Highlight> pour votre indemnité de
-        licenciement.
+        <Highlight>
+          {indemnite.toLocaleString("fr-FR", {
+            currency: "EUR",
+            style: "currency",
+            minimumFractionDigits: 2
+          })}
+        </Highlight>{" "}
+        pour votre indemnité de licenciement.
       </p>
-      <FormulaDetails formula={formuleLegale} values={inputLegals} />
+      <FormulaDetails infosCalcul={infosCalcul} />
     </>
   );
 }
 
 IndemniteLegale.propTypes = {
-  indemniteLegale: PropTypes.number.isRequired,
-  formuleLegale: PropTypes.string.isRequired
+  indemnite: PropTypes.number.isRequired,
+  infosCalcul: PropTypes.shape({
+    formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+  }).isRequired
 };
 
 export { IndemniteLegale };

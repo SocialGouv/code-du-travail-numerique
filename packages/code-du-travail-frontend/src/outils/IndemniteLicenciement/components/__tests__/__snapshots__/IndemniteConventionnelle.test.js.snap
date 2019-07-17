@@ -299,7 +299,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 }
 
 .c11 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%206%2010'%3E%3Cpath%20fill%3D'currentColor'%20d%3D'M0%204h5v1H0z'%2F%3E%3C%2Fsvg%3E");
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .c12 {
@@ -356,7 +356,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     <strong
       class="c1"
     >
-      € 1,337.00
+      € 2,000.00
     </strong>
      
     <b>
@@ -459,7 +459,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c16"
         >
-          € 1,337.00
+          € 2,000.00
            
           brut
         </span>
@@ -764,7 +764,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 }
 
 .c11 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%206%2010'%3E%3Cpath%20fill%3D'currentColor'%20d%3D'M0%204h5v1H0z'%2F%3E%3C%2Fsvg%3E");
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .c12 {

@@ -7,13 +7,13 @@ import MathJax from "react-mathjax-preview";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
 import { Summary } from "../../common/stepStyles";
 
-function FormulaDetails({ values, formula }) {
+function FormulaDetails({ infosCalcul: { labels, formula } }) {
   return (
     <Details>
       <Summary>Voir le detail du calcul</Summary>
       <HeadingDetails>Élements saisis :</HeadingDetails>
       <ListDetails>
-        {Object.entries(values).map(([label, value], index) => (
+        {Object.entries(labels).map(([label, value], index) => (
           <ItemDetails key={index}>
             {label}&nbsp;: {value}
           </ItemDetails>
@@ -32,11 +32,13 @@ function FormulaDetails({ values, formula }) {
 export { FormulaDetails };
 
 FormulaDetails.propTypes = {
-  values: PropTypes.object.isRequired,
-  formula: PropTypes.string.isRequired
+  infosCalcul: PropTypes.shape({
+    labels: PropTypes.object.isRequired,
+    formula: PropTypes.string.isRequired
+  })
 };
 
-const { spacing, fonts } = theme;
+const { colors, spacing, fonts } = theme;
 
 const Details = styled.details`
   margin-top: ${spacing.interComponent};
@@ -49,7 +51,9 @@ const HeadingDetails = styled.strong`
 
 const ListDetails = styled.ul`
   list-style-image: url("data:image/svg+xml;,${encodeURIComponent(
-    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 6 10'><path fill='currentColor' d='M0 4h5v1H0z'/></svg>"
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 6 10"><path fill="${
+      colors.darkGrey
+    }" d="M0 4h5v1H0z"/></svg>`
   )}");
 `;
 

@@ -6,9 +6,11 @@ describe("<IndemniteLegale />", () => {
   it("should render", () => {
     const { container } = render(
       <IndemniteLegale
-        indemniteLegale={42}
-        formuleLegale="1337% * 3.14"
-        inputLegals={{ value: 1 }}
+        indemnite={42}
+        infosCalcul={{
+          formula: "1337% * 3.14",
+          labels: { value: 1 }
+        }}
       />
     );
     expect(container).toMatchSnapshot();

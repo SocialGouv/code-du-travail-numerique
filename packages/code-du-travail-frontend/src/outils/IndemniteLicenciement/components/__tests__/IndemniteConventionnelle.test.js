@@ -17,13 +17,17 @@ describe("<IndemniteCCn />", () => {
       <IndemniteCCn
         branche="0044"
         indemniteLegale={42}
-        inputLegals={{ "salaire ref (Sref)": 42, "anciennete (A)": 32 }}
-        formuleLegale="Sref * A"
-        indemniteConventionnelle={1337}
-        formuleConventionnelle="1337 * Sref * foo"
-        inputConventionnels={{
-          "salaire de ref (Sref)": 1337,
-          foo: "bar"
+        indemniteConventionnelle={2000}
+        infosCalculLegal={{
+          labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
+          formula: "Sref * A"
+        }}
+        infosCalculConventionnel={{
+          formula: "1337 * Sref * foo",
+          labels: {
+            "salaire de ref (Sref)": 1337,
+            foo: "bar"
+          }
         }}
       />
     );
@@ -34,13 +38,17 @@ describe("<IndemniteCCn />", () => {
       <IndemniteCCn
         branche="0044"
         indemniteLegale={2000}
-        inputLegals={{ "salaire ref (Sref)": 42, "anciennete (A)": 32 }}
-        formuleLegale="Sref * A"
         indemniteConventionnelle={1337}
-        formuleConventionnelle="1337 * Sref * foo"
-        inputConventionnels={{
-          "salaire de ref (Sref)": 1337,
-          foo: "bar"
+        infosCalculLegal={{
+          labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
+          formula: "Sref * A"
+        }}
+        infosCalculConventionnel={{
+          formula: "1337 * Sref * foo",
+          labels: {
+            "salaire de ref (Sref)": 1337,
+            foo: "bar"
+          }
         }}
       />
     );
@@ -51,13 +59,17 @@ describe("<IndemniteCCn />", () => {
       <IndemniteCCn
         branche="0044"
         indemniteLegale={42}
-        inputLegals={{ "salaire ref (Sref)": 42, "anciennete (A)": 32 }}
-        formuleLegale="Sref * A"
         indemniteConventionnelle={1200}
-        formuleConventionnelle="1200 * Sref * foo"
-        inputConventionnels={{
-          "salaire de ref (Sref)": 1337,
-          foo: "bar"
+        infosCalculLegal={{
+          labels: { "salaire ref (Sref)": 42, "anciennete (A)": 32 },
+          formula: "Sref * A"
+        }}
+        infosCalculConventionnel={{
+          formula: "1337 * Sref * foo",
+          labels: {
+            "salaire de ref (Sref)": 1337,
+            foo: "bar"
+          }
         }}
         error="lorem ipsum"
       />

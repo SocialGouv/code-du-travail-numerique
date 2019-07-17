@@ -12,44 +12,44 @@ export function getSalaireRef({ salaireRefLegal }) {
 export function getIndemnite({ salaireRef, anciennete }) {
   let error;
   let indemniteConventionnelle = 0;
-  let formulesConventionnelles = [];
+  let formula = [];
   const trancheAnciennete = {
     a10: Math.max(0, round(anciennete - 10)),
     a5: Math.min(5, Math.max(0, round(anciennete - 5))),
     a2: Math.min(5, round(anciennete))
   };
 
-  let inputConventionnels = {
+  let labels = {
     "Salaire de référence (Sref)": round(salaireRef),
     "Ancienneté entre 2 et 5ans (A1)": trancheAnciennete.a2,
     "Ancienneté 6 ens 10ans (A2)": trancheAnciennete.a5,
-    "Ancienneté au dela de 10ans (A3)": trancheAnciennete.a10
+    "Ancienneté au delà de 10ans (A3)": trancheAnciennete.a10
   };
 
   if (trancheAnciennete.a10) {
     indemniteConventionnelle += (1 / 5) * salaireRef * trancheAnciennete.a10;
-    formulesConventionnelles.push(`1/5 * Sref * ${trancheAnciennete.a10}`);
+    formula.push(`1/5 * Sref * ${trancheAnciennete.a10}`);
   }
 
   if (trancheAnciennete.a5) {
     indemniteConventionnelle += (1 / 6) * salaireRef * trancheAnciennete.a10;
-    formulesConventionnelles.push(`1/6 * Sref * ${trancheAnciennete.a5}`);
+    formula.push(`1/6 * Sref * ${trancheAnciennete.a5}`);
   }
 
   if (trancheAnciennete.a2 > 2) {
     indemniteConventionnelle += (1 / 10) * salaireRef * trancheAnciennete.a2;
-    formulesConventionnelles.push(`1/10 * Sref * ${trancheAnciennete.a2}`);
+    formula.push(`1/10 * Sref * ${trancheAnciennete.a2}`);
   } else {
     error =
-      "Aucune indemnité de licenciement n'est prévue en deça de 2 ans d'ancienneté.";
+      "Aucune indemnité de licenciement n'est prévue en deçà de 2 ans d'ancienneté.";
   }
 
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    formuleConventionnelle: formulesConventionnelles
-      .map(formula => `( ${formula} )`)
-      .join(" + "),
-    inputConventionnels,
+    infosCalculConventionnel: {
+      formula: formula.map(formula => `( ${formula} )`).join(" + "),
+      labels
+    },
     error
   };
 }

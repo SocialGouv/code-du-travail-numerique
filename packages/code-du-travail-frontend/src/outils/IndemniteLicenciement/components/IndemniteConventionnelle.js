@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { theme, Alert, Button, Toast } from "@cdt/ui";
 import styled from "styled-components";
 
@@ -11,11 +12,9 @@ function IndemniteCCn({
   branche,
   indemniteConventionnelle,
   indemniteLegale,
-  formuleConventionnelle,
-  formuleLegale,
-  error,
-  inputLegals = {},
-  inputConventionnels = {}
+  infosCalculLegal,
+  infosCalculConventionnel,
+  error
 }) {
   const selectedBranche = branches.find(br => br.value === branche);
 
@@ -52,19 +51,15 @@ function IndemniteCCn({
                 primary={indemniteConventionnelle < indemniteLegale}
                 value={indemniteLegale}
               />
-              <FormulaDetails formula={formuleLegale} values={inputLegals} />
+              <FormulaDetails infosCalcul={infosCalculLegal} />
             </Column>
             <Column first={indemniteConventionnelle > indemniteLegale}>
               <Heading>Votre indemnite conventionnelle</Heading>
-
               <Montant
                 primary={indemniteConventionnelle > indemniteLegale}
                 value={indemniteConventionnelle}
               />
-              <FormulaDetails
-                formula={formuleConventionnelle}
-                values={inputConventionnels}
-              />
+              <FormulaDetails infosCalcul={infosCalculConventionnel} />
             </Column>
           </ColumnWrapper>
 
@@ -81,6 +76,20 @@ function IndemniteCCn({
     </>
   );
 }
+IndemniteCCn.propTypes = {
+  branche: PropTypes.string.isRequired,
+  indemniteConventionnelle: PropTypes.number.isRequired,
+  indemniteLegale: PropTypes.number.isRequired,
+  error: PropTypes.string,
+  infosCalculLegal: PropTypes.shape({
+    formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+  }).isRequired,
+  infosCalculConventionnel: PropTypes.shape({
+    formula: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+  }).isRequired
+};
 
 export { IndemniteCCn };
 

@@ -7,7 +7,7 @@ function Montant({ value, primary }) {
     <Wrapper>
       <Bar primary={primary} />
       <Value primary={primary}>
-        {value.toLocaleString(undefined, {
+        {value.toLocaleString("fr-FR", {
           currency: "EUR",
           style: "currency",
           minimumFractionDigits: 2

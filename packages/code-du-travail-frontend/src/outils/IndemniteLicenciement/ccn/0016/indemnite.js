@@ -54,8 +54,8 @@ export function getIndemnite({
 }) {
   let error;
   let indemniteConventionnelle = 0;
-  let formuleConventionnelle = "";
-  let inputConventionnels = {
+  let formula = "-";
+  let labels = {
     "salaire de référence (Sref)": salaireRef,
     ...(!tamDuration &&
       !cadreDuration && { "ancienneté totale, en année, (A)": anciennete }),
@@ -83,8 +83,8 @@ export function getIndemnite({
     const bareme = anciennete >= 3 ? bareme3plus : bareme2_3;
     indemniteConventionnelle =
       bareme[categorie].value * salaireRef * anciennete;
-    formuleConventionnelle = `${bareme[categorie].label} * Sref * A`;
-    inputConventionnels.bareme = bareme;
+    formula = `${bareme[categorie].label} * Sref * A`;
+    labels.bareme = bareme;
   } else {
     // categorie === CADRE
     if (anciennete >= 3) {
@@ -94,7 +94,7 @@ export function getIndemnite({
         (4 / 10) * salaireRef * (cadreDuration / 12) +
         (3 / 10) * salaireRef * (tamDuration / 12);
 
-      formuleConventionnelle = `4/10 * Sref * Dc + 3/10 * Sref * Dt`;
+      formula = `4/10 * Sref * Dc + 3/10 * Sref * Dt`;
     } else {
       // 2 <= ancienete < 3
       indemniteConventionnelle = indemnite;
@@ -115,18 +115,15 @@ export function getIndemnite({
       majoration = salaireRef * baremeMajorationAnciennete[tranche];
     }
     if (majoration < minoration) {
-      inputConventionnels.majoration = majoration;
-      inputConventionnels.minoration = minoration;
+      labels.majoration = majoration;
+      labels.minoration = minoration;
       indemniteConventionnelle += majoration - minoration;
-      formuleConventionnelle += ` ${
-        majoration > 0 ? ` + "majoration"` : ""
-      } - "minoration"`;
+      formula += ` ${majoration > 0 ? ` + "majoration"` : ""} - "minoration"`;
     }
   }
   return {
     indemniteConventionnelle: round(indemniteConventionnelle),
-    formuleConventionnelle,
-    inputConventionnels,
+    infosCalculConventionnel: { formula, labels },
     error
   };
 }

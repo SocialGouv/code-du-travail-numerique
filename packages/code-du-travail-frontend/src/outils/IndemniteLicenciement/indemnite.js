@@ -53,13 +53,13 @@ function getIndemnite({
   anciennete,
   dateNotification
 }) {
-  let formuleLegale;
-  let inputLegals = {
-    "salaire de réference (Sref)": salaireRef,
-    "licenciement pour inapttitude": inaptitude ? "oui" : "non",
-    "ancienneté totale (A)": anciennete,
+  let formula = "-";
+  let labels = {
+    "Salaire de réference (Sref)": salaireRef,
+    "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
+    "Ancienneté totale (A)": anciennete,
     ...(anciennete - 10 > 0 && {
-      "ancienneté au dela de 10ans (A2)": round(anciennete - 10)
+      "Ancienneté au delà de 10ans (A2)": round(anciennete - 10)
     })
   };
   const avant27Sep2017 = isAfter(new Date("2017-09-27"), dateNotification);
@@ -69,32 +69,31 @@ function getIndemnite({
   if (avant27Sep2017 && anciennete >= 1) {
     if (isSmallAnciennete) {
       indemniteLegale = (1 / 5) * salaireRef * anciennete;
-      formuleLegale = `1/5 * Sref * A`;
+      formula = `1/5 * Sref * A`;
     } else {
       indemniteLegale =
         (1 / 5) * salaireRef * anciennete +
         (2 / 15) * salaireRef * (anciennete - 10);
-      formuleLegale = `(1/5  * Sref * 10) + (2/5 * Sref * "A2")`;
+      formula = `(1/5  * Sref * 10) + (2/5 * Sref * "A2")`;
     }
   } else if (!avant27Sep2017 && anciennete >= 8 / 12) {
     if (isSmallAnciennete) {
       indemniteLegale = (1 / 4) * salaireRef * anciennete;
-      formuleLegale = `1/4 * Sref * A`;
+      formula = `1/4 * Sref * A`;
     } else {
       indemniteLegale =
         (1 / 4) * salaireRef * 10 + (1 / 3) * salaireRef * (anciennete - 10);
-      formuleLegale = `(1/4 * Sref * 10) + (1/3 * Sref * "A2")`;
+      formula = `(1/4 * Sref * 10) + (1/3 * Sref * "A2")`;
     }
   }
   if (inaptitude && indemniteLegale > 0) {
     indemniteLegale *= 2;
-    formuleLegale += " * 2";
+    formula += " * 2";
   }
 
   return {
     indemniteLegale: round(indemniteLegale),
-    formuleLegale,
-    inputLegals
+    infosCalculLegal: { formula, labels }
   };
 }
 
@@ -122,7 +121,7 @@ function getIndemniteFromFinalForm(form) {
     primes
   });
 
-  const { indemniteLegale, formuleLegale, inputLegals } = getIndemnite({
+  const { indemniteLegale, infosCalculLegal } = getIndemnite({
     salaireRef,
     inaptitude,
     anciennete,
@@ -132,8 +131,7 @@ function getIndemniteFromFinalForm(form) {
   return {
     salaireRefLegal: salaireRef,
     indemniteLegale,
-    formuleLegale,
-    inputLegals
+    infosCalculLegal
   };
 }
 
