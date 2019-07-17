@@ -20,7 +20,7 @@ const getReference = (title, ref) => {
     match: {
       slug: {
         query: slug,
-        minimum_should_match: "70%"
+        minimum_should_match: "95%"
       }
     }
   };
