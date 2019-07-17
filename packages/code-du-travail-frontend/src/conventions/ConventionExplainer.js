@@ -28,7 +28,7 @@ class ConventionExplainer extends React.Component {
             sessionStorage.setItem(HIDDEN_KEY, (!hidden).toString());
           }}
         >
-          Plus d&apos;informations sur les conventions collectives
+          Plus d’informations sur les conventions collectives
           <VerticalArrow />
         </Title>
         {!hidden && (
