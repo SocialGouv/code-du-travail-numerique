@@ -9,7 +9,6 @@ from slugify import slugify
 
 from search import settings
 from search.indexing.strip_html import strip_html
-from search.extraction.code_du_travail.cleaned_tags.data import CODE_DU_TRAVAIL_DICT
 from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRAVAIL
 
 logger = settings.get_logger(__name__)
@@ -45,6 +44,16 @@ def make_slug(text, seed):
       )
     ), to_lower=True)
 
+# flattend code tree structure to articles
+def flattenCodeArticles(children):
+    articles=[]
+    for child in children:
+        if child.get('type') == 'article':
+            articles.append(child)
+        if child.get('children', []):
+            articles += flattenCodeArticles(child.get('children'))
+    return articles
+
 
 def populate_cdtn_documents():
     with open(os.path.join(settings.BASE_DIR, 'dataset/kali/kali.json')) as json_data:
@@ -61,6 +70,24 @@ def populate_cdtn_documents():
                 'id': val['id']
             })
 
+    with open(os.path.join(settings.BASE_DIR, 'dataset/code_du_travail/code-du-travail.json')) as json_data:
+        tree = json.load(json_data)
+        articles = flattenCodeArticles(tree.get('children'))
+        logger.info("Load %s articles from code-du-travail", len(articles))
+        for article in articles:
+            article_data = article["data"];
+            url = f"https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle={article_data['id']}&cidTexte=LEGITEXT000006072050"
+            CDTN_DOCUMENTS.append({
+                'source': 'code_du_travail',
+                'text': article_data['bloc_textuel'],
+                'description': article_data['bloc_textuel'][:article_data['bloc_textuel'].find(" ", 150)],
+                'slug': article_data['num'].lower(),
+                'title': article_data['titre'],
+                'html': article_data['bloc_textuel'],
+                'date_debut': article_data['date_debut'],
+                'url': url
+            })
+    return;
     logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
     for val in CODE_DU_TRAVAIL_DICT.values():
         breadcrumbs = ", ".join(list(OrderedDict.fromkeys(filter(None, val['path'].split("/"))))[1:])
