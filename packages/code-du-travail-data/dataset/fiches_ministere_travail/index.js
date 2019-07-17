@@ -21,6 +21,11 @@ const formatAnchor = node => {
 };
 
 function parseDom(dom, url) {
+  const internalId = $(
+    dom.window.document,
+    "meta[name='SPIP.identifier']"
+  ).getAttribute("content");
+
   const description = $(
     dom.window.document,
     "meta[name=description]"
@@ -84,6 +89,7 @@ function parseDom(dom, url) {
     .textContent.trim()
     .split(" - Ministère du Travail");
   const result = {
+    internalId,
     description,
     ariane,
     tags,
