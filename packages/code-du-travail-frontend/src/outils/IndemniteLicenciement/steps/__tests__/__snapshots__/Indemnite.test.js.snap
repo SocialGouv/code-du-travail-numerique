@@ -88,7 +88,7 @@ exports[`<StepIndemnite /> should render 1`] = `
       class="c1"
     >
       1,250.00
-       €
+       € brut
     </strong>
      
     pour votre indemnité de licenciement.

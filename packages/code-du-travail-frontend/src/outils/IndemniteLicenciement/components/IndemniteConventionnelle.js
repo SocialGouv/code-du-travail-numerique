@@ -36,9 +36,8 @@ function IndemniteCCn({
                 maximumFractionDigits: 2,
                 minimumFractionDigits: 2
               })}
-              &nbsp;€
-            </Highlight>{" "}
-            <b>brut</b>
+              &nbsp;€ brut
+            </Highlight>
           </p>
           <p>
             Il s’agit du montant le plus favorable entre votre indemnité légale
@@ -105,7 +104,6 @@ const ColumnWrapper = styled.div`
 const Column = styled.section`
   padding: 0 ${spacing.small};
   order: ${({ first }) => (first ? 0 : 1)};
-  margin-bottom: ${spacing.large};
 `;
 
 const Heading = styled.h2`

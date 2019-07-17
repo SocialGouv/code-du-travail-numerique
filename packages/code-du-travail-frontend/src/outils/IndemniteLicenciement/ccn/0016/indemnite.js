@@ -84,7 +84,6 @@ export function getIndemnite({
     indemniteConventionnelle =
       bareme[categorie].value * salaireRef * anciennete;
     formula = `${bareme[categorie].label} * Sref * A`;
-    labels.bareme = bareme;
   } else {
     // categorie === CADRE
     if (anciennete >= 3) {

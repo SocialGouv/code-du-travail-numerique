@@ -329,7 +329,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-  margin-bottom: 2rem;
 }
 
 .c14 {
@@ -337,7 +336,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  margin-bottom: 2rem;
 }
 
 .c4 {
@@ -357,12 +355,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
       class="c1"
     >
       2,000.00
-       €
+       € brut
     </strong>
-     
-    <b>
-      brut
-    </b>
   </p>
   <p>
     Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
@@ -793,7 +787,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-  margin-bottom: 2rem;
 }
 
 .c3 {
@@ -801,7 +794,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  margin-bottom: 2rem;
 }
 
 .c4 {
@@ -821,12 +813,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
       class="c1"
     >
       2,000.00
-       €
+       € brut
     </strong>
-     
-    <b>
-      brut
-    </b>
   </p>
   <p>
     Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.

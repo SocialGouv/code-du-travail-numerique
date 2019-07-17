@@ -223,7 +223,6 @@ exports[`<Result /> should render 1`] = `
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  margin-bottom: 2rem;
 }
 
 .c14 {
@@ -231,7 +230,6 @@ exports[`<Result /> should render 1`] = `
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-  margin-bottom: 2rem;
 }
 
 .c4 {
@@ -251,12 +249,8 @@ exports[`<Result /> should render 1`] = `
       class="c1"
     >
       2,500.00
-       €
+       € brut
     </strong>
-     
-    <b>
-      brut
-    </b>
   </p>
   <p>
     Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
