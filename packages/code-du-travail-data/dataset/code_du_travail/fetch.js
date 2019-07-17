@@ -12,16 +12,34 @@ const tableMatieres = params =>
     params
   });
 
-const getArticle = id =>
-  dilaClient.fetch({
-    path: "consult/getArticle",
-    method: "POST",
-    params: {
-      id
-    }
-  });
+const getArticle = (id, tries = 0) =>
+  dilaClient
+    .fetch({
+      path: "consult/getArticle",
+      method: "POST",
+      params: {
+        id
+      }
+    })
+    // try 3 tentatives
+    .catch(e => {
+      console.log("getArticle.catch", e);
+      if (tries < 3) {
+        return getArticle(id, tries + 1);
+      }
+      throw e;
+    });
 
 const JSONLog = data => console.log(JSON.stringify(data, null, 2));
+
+// parties dites anciennes
+const uselessSections = [
+  "LEGISCTA000006101375", // Partie législative ancienne
+  "LEGISCTA000006107985", // Partie réglementaire ancienne - Décrets en Conseil d'Etat
+  "LEGISCTA000006169868" // Partie réglementaire ancienne - Décrets simples
+];
+
+const isUselessSection = section => uselessSections.includes(section.id);
 
 // embed article details into the section
 const embedArticles = async section => ({
@@ -37,6 +55,7 @@ const embedArticles = async section => ({
   sections: await serialExec(
     section.sections
       .filter(section => section.etat === "VIGUEUR")
+      .filter(section => !isUselessSection(section))
       .map(section => () =>
         console.log(`embedArticles section ${section.id}`) ||
         embedArticles(section)
