@@ -56,21 +56,17 @@ class ConventionExplainer extends React.Component {
               Pour pouvoir s&apos;appliquer à vous, la convention collective de
               branche doit être applicable à votre entreprise.
               <br />
-              Lorsque votre entreprise entre dans le champ professionnel et
-              géographique d&apos;une convention collective de branche, il
-              existe deux situations dans lesquelles votre entreprise a
-              l&apos;obligation de l&apos;appliquer :
+              L&apos;employeur a l&apos;obligation d’appliquer la convention collective
+              lorsque l&apos;entreprise entre dans le champ d&apos;application professionnel
+              et géographie défini par la convention et que :
             </p>
             <ul>
               <li>
-                soit la convention collective de branche a été étendue par le
-                ministère du travail rendant la convention collective
-                obligatoire pour toutes les entreprises qui entrent dans son
-                champ d&apos;application professionnel et géographique.
+                La convention collective de branche a été étendue par le ministère du travail.
               </li>
               <li>
-                soit votre entreprise est adhérente à une
-                organisation patronale signataire de la convention collective.
+                L&apos;entreprise est adhérente à une organisation patronale signataire
+                de la convention collective.
               </li>
             </ul>
           </React.Fragment>
