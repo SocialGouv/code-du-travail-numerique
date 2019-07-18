@@ -60,7 +60,7 @@ exports[`<Result /> should render 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c17 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -82,7 +82,7 @@ exports[`<Result /> should render 1`] = `
   box-shadow: none;
 }
 
-.c18 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +103,7 @@ exports[`<Result /> should render 1`] = `
   background-color: #d7e8f9;
 }
 
-.c19 {
+.c3 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -122,14 +122,86 @@ exports[`<Result /> should render 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c1 {
+.c4 {
   font-size: 1.375rem;
   font-weight: 700;
   color: #0053b3;
 }
 
-.c9 {
+.c12 {
   margin-bottom: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  border-radius: 0.25rem;
+  background-color: #0053b3;
+  width: calc(50% * 1);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.c18 {
+  border-radius: 0.25rem;
+  background-color: #53657d;
+  width: calc(50% * 0.4);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.c10 {
+  margin-left: 1rem;
+  color: #0053b3;
+  font-size: 1.875rem;
+}
+
+.c19 {
+  margin-left: 1rem;
+  color: #53657d;
+  font-size: 1.375rem;
+}
+
+.c11 {
+  margin-top: 1.25rem;
+}
+
+.c13 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c14 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c15 {
+  font-size: 0.875rem;
+}
+
+.c16 {
+  margin: 1rem 0;
 }
 
 .c5 {
@@ -137,103 +209,61 @@ exports[`<Result /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c6 {
-  border-radius: 0.25rem;
-  background-color: #0053b3;
-  width: 50%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  padding: 1em;
-}
-
-.c15 {
-  border-radius: 0.25rem;
-  background-color: #53657d;
-  width: 50%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  padding: 1em;
-}
-
-.c7 {
-  margin-left: 1rem;
-  color: #0053b3;
-  font-size: 1.875rem;
-}
-
-.c16 {
-  margin-left: 1rem;
-  color: #53657d;
-  font-size: 1.375rem;
-}
-
-.c8 {
-  margin-top: 1.25rem;
-}
-
-.c10 {
-  font-weight: bold;
-  font-size: 0.875rem;
-}
-
-.c11 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c12 {
-  font-size: 0.875rem;
-}
-
-.c13 {
-  margin: 1rem 0;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 2rem -0.625rem;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
-.c3 {
+.c6 {
   padding: 0 0.625rem;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
 }
 
-.c14 {
+.c17 {
   padding: 0 0.625rem;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
 }
 
-.c4 {
+.c7 {
   font-size: 1.375rem;
+}
+
+@media (max-width:980px) {
+  .c8 {
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c9 {
+    width: calc(100% * 1);
+  }
+}
+
+@media (max-width:980px) {
+  .c18 {
+    width: calc(100% * 0.4);
+  }
+}
+
+@media (max-width:980px) {
+  .c10 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c19 {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 <div>
@@ -242,193 +272,11 @@ exports[`<Result /> should render 1`] = `
   >
     Propreté : entreprises et services associés
   </h2>
-  <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
-     
-    <strong
-      class="c1"
-    >
-      2,500.00
-       € brut
-    </strong>
-  </p>
-  <p>
-    Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
-  </p>
   <div
-    class="c2"
-  >
-    <section
-      class="c3"
-    >
-      <h2
-        class="c4"
-      >
-        Votre indemnite légale
-      </h2>
-      <div
-        class="c5"
-      >
-        <div
-          class="c6"
-        />
-        <span
-          class="c7"
-        >
-          2,500.00
-           € brut
-        </span>
-      </div>
-      <details
-        class="c8"
-      >
-        <summary
-          class="c9"
-        >
-          Voir le detail du calcul
-        </summary>
-        <strong
-          class="c10"
-        >
-          Élements saisis :
-        </strong>
-        <ul
-          class="c11"
-        >
-          <li
-            class="c12"
-          >
-            Salaire de réference (Sref)
-             : 
-            2000
-          </li>
-          <li
-            class="c12"
-          >
-            Licenciement pour inaptitude
-             : 
-            non
-          </li>
-          <li
-            class="c12"
-          >
-            Ancienneté totale (A)
-             : 
-            5
-          </li>
-        </ul>
-        <strong
-          class="c10"
-        >
-          Formule
-        </strong>
-        <div
-          class="c13"
-        >
-          <div
-            id="react-mathjax-preview"
-          >
-            <div
-              id="react-mathjax-preview-result"
-            >
-              \`1/4 * Sref * A\`
-            </div>
-          </div>
-        </div>
-      </details>
-    </section>
-    <section
-      class="c14"
-    >
-      <h2
-        class="c4"
-      >
-        Votre indemnite conventionnelle
-      </h2>
-      <div
-        class="c5"
-      >
-        <div
-          class="c15"
-        />
-        <span
-          class="c16"
-        >
-          1,000.00
-           € brut
-        </span>
-      </div>
-      <details
-        class="c8"
-      >
-        <summary
-          class="c9"
-        >
-          Voir le detail du calcul
-        </summary>
-        <strong
-          class="c10"
-        >
-          Élements saisis :
-        </strong>
-        <ul
-          class="c11"
-        >
-          <li
-            class="c12"
-          >
-            Salaire de référence (Sref)
-             : 
-            2000
-          </li>
-          <li
-            class="c12"
-          >
-            Ancienneté entre 2 et 5ans (A1)
-             : 
-            5
-          </li>
-          <li
-            class="c12"
-          >
-            Ancienneté 6 ens 10ans (A2)
-             : 
-            0
-          </li>
-          <li
-            class="c12"
-          >
-            Ancienneté au delà de 10ans (A3)
-             : 
-            0
-          </li>
-        </ul>
-        <strong
-          class="c10"
-        >
-          Formule
-        </strong>
-        <div
-          class="c13"
-        >
-          <div
-            id="react-mathjax-preview"
-          >
-            <div
-              id="react-mathjax-preview-result"
-            >
-              \`( 1/10 * Sref * 5 )\`
-            </div>
-          </div>
-        </div>
-      </details>
-    </section>
-  </div>
-  <div
-    class="c17"
+    class="c1"
   >
     <div
-      class="c18"
+      class="c2"
     >
       <svg
         fill="none"
@@ -461,15 +309,194 @@ exports[`<Result /> should render 1`] = `
       </svg>
     </div>
     <div
-      class="c19"
+      class="c3"
       role="alert"
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
-       
     </div>
   </div>
-  <br />
-  <br />
+  <p>
+    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+     
+    <strong
+      class="c4"
+    >
+      2,500.00
+       € brut
+    </strong>
+  </p>
+  <p>
+    Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
+  </p>
+  <div
+    class="c5"
+  >
+    <section
+      class="c6"
+    >
+      <h2
+        class="c7"
+      >
+        Votre indemnite légale
+      </h2>
+      <div
+        class="c8"
+      >
+        <div
+          class="c9"
+        />
+        <span
+          class="c10"
+        >
+          2,500.00
+           € brut
+        </span>
+      </div>
+      <details
+        class="c11"
+      >
+        <summary
+          class="c12"
+        >
+          Voir le detail du calcul
+        </summary>
+        <strong
+          class="c13"
+        >
+          Élements saisis :
+        </strong>
+        <ul
+          class="c14"
+        >
+          <li
+            class="c15"
+          >
+            Salaire de réference (Sref)
+             : 
+            2000
+          </li>
+          <li
+            class="c15"
+          >
+            Licenciement pour inaptitude
+             : 
+            non
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté totale (A)
+             : 
+            5
+          </li>
+        </ul>
+        <strong
+          class="c13"
+        >
+          Formule
+        </strong>
+        <div
+          class="c16"
+        >
+          <div
+            id="react-mathjax-preview"
+          >
+            <div
+              id="react-mathjax-preview-result"
+            >
+              \`1/4 * Sref * A\`
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section
+      class="c17"
+    >
+      <h2
+        class="c7"
+      >
+        Votre indemnite conventionnelle
+      </h2>
+      <div
+        class="c8"
+      >
+        <div
+          class="c18"
+        />
+        <span
+          class="c19"
+        >
+          1,000.00
+           € brut
+        </span>
+      </div>
+      <details
+        class="c11"
+      >
+        <summary
+          class="c12"
+        >
+          Voir le detail du calcul
+        </summary>
+        <strong
+          class="c13"
+        >
+          Élements saisis :
+        </strong>
+        <ul
+          class="c14"
+        >
+          <li
+            class="c15"
+          >
+            Salaire de référence (Sref)
+             : 
+            2000
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté entre 2 et 5ans (A1)
+             : 
+            5
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté 6 ens 10ans (A2)
+             : 
+            0
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté au delà de 10ans (A3)
+             : 
+            0
+          </li>
+        </ul>
+        <strong
+          class="c13"
+        >
+          Formule
+        </strong>
+        <div
+          class="c16"
+        >
+          <div
+            id="react-mathjax-preview"
+          >
+            <div
+              id="react-mathjax-preview-result"
+            >
+              \`( 1/10 * Sref * 5 )\`
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+  </div>
   <button
     aria-pressed="false"
     class="c20"

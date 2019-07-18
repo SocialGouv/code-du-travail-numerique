@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Montant /> renders with primary and first 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  border-radius: 0.25rem;
+  background-color: #0053b3;
+  width: calc(50% * 0.7);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.c2 {
+  margin-left: 1rem;
+  color: #0053b3;
+  font-size: 1.875rem;
+}
+
+@media (max-width:980px) {
+  .c0 {
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: calc(100% * 0.7);
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+    <span
+      class="c2"
+    >
+      10.00
+       € brut
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<Montant /> renders with ratio 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  border-radius: 0.25rem;
+  background-color: #53657d;
+  width: calc(50% * 0.7);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.c2 {
+  margin-left: 1rem;
+  color: #53657d;
+  font-size: 1.375rem;
+}
+
+@media (max-width:980px) {
+  .c0 {
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c1 {
+    width: calc(100% * 0.7);
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    />
+    <span
+      class="c2"
+    >
+      10.00
+       € brut
+    </span>
+  </div>
+</div>
+`;

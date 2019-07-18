@@ -1,25 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<IndemniteCCn /> should render error 1`] = `
-.c1 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
+exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
+.c23 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -41,13 +23,13 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c2:not([disabled]):active {
+.c23:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -55,7 +37,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   outline: none;
 }
 
-.c2[aria-pressed="true"] {
+.c23[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -64,18 +46,117 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c2[aria-pressed="true"]:not([disabled]):hover,
-.c2[aria-pressed="true"]:not([disabled]):focus {
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c2[aria-pressed="true"]:not([disabled]):active {
+.c23[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c2[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #d7e8f9;
+  box-shadow: none;
+}
+
+.c21 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #fee5ad;
+  box-shadow: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #d7e8f9;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
 }
 
 .c0 {
@@ -84,27 +165,469 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   margin-bottom: 1.25rem;
 }
 
+.c4 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #0053b3;
+}
+
+.c12 {
+  margin-bottom: 1rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c18 {
+  border-radius: 0.25rem;
+  background-color: #0053b3;
+  width: calc(50% * 1);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.c9 {
+  border-radius: 0.25rem;
+  background-color: #53657d;
+  width: calc(50% * 0.9100320789890648);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
+.c19 {
+  margin-left: 1rem;
+  color: #0053b3;
+  font-size: 1.875rem;
+}
+
+.c10 {
+  margin-left: 1rem;
+  color: #53657d;
+  font-size: 1.375rem;
+}
+
+.c11 {
+  margin-top: 1.25rem;
+}
+
+.c13 {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.c14 {
+  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.c15 {
+  font-size: 0.875rem;
+}
+
+.c16 {
+  margin: 1rem 0;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c17 {
+  padding: 0 0.625rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.c6 {
+  padding: 0 0.625rem;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c7 {
+  font-size: 1.375rem;
+}
+
+.c20 {
+  margin: 1.25rem 0;
+}
+
+@media (max-width:980px) {
+  .c8 {
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c18 {
+    width: calc(100% * 1);
+  }
+}
+
+@media (max-width:980px) {
+  .c9 {
+    width: calc(100% * 0.9100320789890648);
+  }
+}
+
+@media (max-width:980px) {
+  .c19 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c10 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 <div>
   <h2
     class="c0"
   >
-    Convention collective nationale des industries chimiques et connexes
+    Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
   </h2>
   <div
     class="c1"
   >
-    lorem ipsum
+    <div
+      class="c2"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+    </div>
+    <div
+      class="c3"
+      role="alert"
+    >
+      Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
+    </div>
+  </div>
+  <p>
+    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
+     
+    <strong
+      class="c4"
+    >
+      17,444.44
+       € brut
+    </strong>
+  </p>
+  <p>
+    Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
+  </p>
+  <div
+    class="c5"
+  >
+    <section
+      class="c6"
+    >
+      <h2
+        class="c7"
+      >
+        Votre indemnite légale
+      </h2>
+      <div
+        class="c8"
+      >
+        <div
+          class="c9"
+        />
+        <span
+          class="c10"
+        >
+          15,875.00
+           € brut
+        </span>
+      </div>
+      <details
+        class="c11"
+      >
+        <summary
+          class="c12"
+        >
+          Voir le detail du calcul
+        </summary>
+        <strong
+          class="c13"
+        >
+          Élements saisis :
+        </strong>
+        <ul
+          class="c14"
+        >
+          <li
+            class="c15"
+          >
+            Salaire de réference (Sref)
+             : 
+            4500
+          </li>
+          <li
+            class="c15"
+          >
+            Licenciement pour inaptitude
+             : 
+            non
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté totale (A)
+             : 
+            13.08
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté au delà de 10ans (A2)
+             : 
+            3.08
+          </li>
+        </ul>
+        <strong
+          class="c13"
+        >
+          Formule
+        </strong>
+        <div
+          class="c16"
+        >
+          <div
+            id="react-mathjax-preview"
+          >
+            <div
+              id="react-mathjax-preview-result"
+            >
+              \`(1/4 * Sref * 10) + (1/3 * Sref * "A2")\`
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section
+      class="c17"
+    >
+      <h2
+        class="c7"
+      >
+        Votre indemnite conventionnelle
+      </h2>
+      <div
+        class="c8"
+      >
+        <div
+          class="c18"
+        />
+        <span
+          class="c19"
+        >
+          17,444.44
+           € brut
+        </span>
+      </div>
+      <details
+        class="c11"
+      >
+        <summary
+          class="c12"
+        >
+          Voir le detail du calcul
+        </summary>
+        <strong
+          class="c13"
+        >
+          Élements saisis :
+        </strong>
+        <ul
+          class="c14"
+        >
+          <li
+            class="c15"
+          >
+            Coefficient d'indemnité conventionnel (C)
+             : 
+            0.33
+          </li>
+          <li
+            class="c15"
+          >
+            Salaire de référence (Sref)
+             : 
+            4000
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté conventionnelle (A)
+             : 
+            13.08
+          </li>
+          <li
+            class="c15"
+          >
+            Plafond d'indemnité conventionnel en mois (Pmois)
+             : 
+            12
+          </li>
+        </ul>
+        <strong
+          class="c13"
+        >
+          Formule
+        </strong>
+        <div
+          class="c16"
+        >
+          <div
+            id="react-mathjax-preview"
+          >
+            <div
+              id="react-mathjax-preview-result"
+            >
+              \`(C * Sref * A) &lt;= Pmois * Sref\`
+            </div>
+          </div>
+        </div>
+      </details>
+    </section>
+  </div>
+  <div
+    class="c20 c21"
+  >
+    <div
+      class="c22"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="9"
+          y2="13"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <div
+      class="c3"
+      role="alert"
+    >
+      Si un emploi équivalent a été trouvé
+      <ul>
+        <li>
+          par votre employeur
+        </li>
+        <li>
+          dans une autre entreprise
+        </li>
+        <li>
+          avant la fin du préavis
+        </li>
+        <li>
+          et que vous l’acceptez
+        </li>
+      </ul>
+      Alors l’indemnité de licenciement conventionnelle est réduite d’un tiers et passe donc à
+       
+      <strong
+        class="c4"
+      >
+        11629.62
+         €
+      </strong>
+      <br />
+      Attention, ce tier (
+      5814.81
+       €) vous est dû si la période d’essai dans ce nouvel emploi reste sans suite.
+    </div>
   </div>
   <button
     aria-pressed="false"
-    class="c2"
+    class="c23"
   >
     Recommencer une simulation
   </button>
 </div>
 `;
 
-exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
+exports[`<Result /> renders legal indemnite 1`] = `
 .c20 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
@@ -245,22 +768,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c9 {
   border-radius: 0.25rem;
-  background-color: #53657d;
-  width: calc(50% * 0.021);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  padding: 1em;
-}
-
-.c18 {
-  border-radius: 0.25rem;
   background-color: #0053b3;
   width: calc(50% * 1);
   display: -webkit-inline-box;
@@ -275,16 +782,32 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   padding: 1em;
 }
 
+.c18 {
+  border-radius: 0.25rem;
+  background-color: #53657d;
+  width: calc(50% * 0.5494311811023621);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
 .c10 {
   margin-left: 1rem;
-  color: #53657d;
-  font-size: 1.375rem;
+  color: #0053b3;
+  font-size: 1.875rem;
 }
 
 .c19 {
   margin-left: 1rem;
-  color: #0053b3;
-  font-size: 1.875rem;
+  color: #53657d;
+  font-size: 1.375rem;
 }
 
 .c11 {
@@ -320,16 +843,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c6 {
   padding: 0 0.625rem;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
 }
 
 .c17 {
   padding: 0 0.625rem;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .c7 {
@@ -346,13 +869,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 @media (max-width:980px) {
   .c9 {
-    width: calc(100% * 0.021);
+    width: calc(100% * 1);
   }
 }
 
 @media (max-width:980px) {
   .c18 {
-    width: calc(100% * 1);
+    width: calc(100% * 0.5494311811023621);
   }
 }
 
@@ -374,7 +897,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   <h2
     class="c0"
   >
-    Convention collective nationale des industries chimiques et connexes
+    Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
   </h2>
   <div
     class="c1"
@@ -425,7 +948,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     <strong
       class="c4"
     >
-      2,000.00
+      15,875.00
        € brut
     </strong>
   </p>
@@ -452,7 +975,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c10"
         >
-          42.00
+          15,875.00
            € brut
         </span>
       </div>
@@ -475,16 +998,30 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <li
             class="c15"
           >
-            salaire ref (Sref)
+            Salaire de réference (Sref)
              : 
-            42
+            4500
           </li>
           <li
             class="c15"
           >
-            anciennete (A)
+            Licenciement pour inaptitude
              : 
-            32
+            non
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté totale (A)
+             : 
+            13.08
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté au delà de 10ans (A2)
+             : 
+            3.08
           </li>
         </ul>
         <strong
@@ -501,7 +1038,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
             <div
               id="react-mathjax-preview-result"
             >
-              \`Sref * A\`
+              \`(1/4 * Sref * 10) + (1/3 * Sref * "A2")\`
             </div>
           </div>
         </div>
@@ -524,7 +1061,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
         <span
           class="c19"
         >
-          2,000.00
+          8,722.22
            € brut
         </span>
       </div>
@@ -547,16 +1084,30 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
           <li
             class="c15"
           >
-            salaire de ref (Sref)
+            Coefficient d'indemnité conventionnel (C)
              : 
-            1337
+            0.33
           </li>
           <li
             class="c15"
           >
-            foo
+            Salaire de référence (Sref)
              : 
-            bar
+            2000
+          </li>
+          <li
+            class="c15"
+          >
+            Ancienneté conventionnelle (A)
+             : 
+            13.08
+          </li>
+          <li
+            class="c15"
+          >
+            Plafond d'indemnité conventionnel en mois (Pmois)
+             : 
+            12
           </li>
         </ul>
         <strong
@@ -573,492 +1124,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
             <div
               id="react-mathjax-preview-result"
             >
-              \`1337 * Sref * foo\`
-            </div>
-          </div>
-        </div>
-      </details>
-    </section>
-  </div>
-  <button
-    aria-pressed="false"
-    class="c20"
-  >
-    Recommencer une simulation
-  </button>
-</div>
-`;
-
-exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
-.c20 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-}
-
-.c20:not([disabled]):hover,
-.c20:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c20:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c20[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c20[aria-pressed="true"]:not([disabled]):hover,
-.c20[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c20[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c1 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 48px;
-  width: auto;
-  background-color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  -webkit-animation: none;
-  animation: none;
-  border-color: #d7e8f9;
-  box-shadow: none;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #d7e8f9;
-}
-
-.c3 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem;
-  color: #434956;
-  text-align: left;
-}
-
-.c0 {
-  font-size: 1.625rem;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.c4 {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: #0053b3;
-}
-
-.c12 {
-  margin-bottom: 1rem;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c9 {
-  border-radius: 0.25rem;
-  background-color: #0053b3;
-  width: calc(50% * 1);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  padding: 1em;
-}
-
-.c18 {
-  border-radius: 0.25rem;
-  background-color: #53657d;
-  width: calc(50% * 0.6685);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  padding: 1em;
-}
-
-.c19 {
-  margin-left: 1rem;
-  color: #53657d;
-  font-size: 1.375rem;
-}
-
-.c10 {
-  margin-left: 1rem;
-  color: #0053b3;
-  font-size: 1.875rem;
-}
-
-.c11 {
-  margin-top: 1.25rem;
-}
-
-.c13 {
-  font-weight: bold;
-  font-size: 0.875rem;
-}
-
-.c14 {
-  list-style-image: url("data:image/svg+xml;,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%206%2010%22%3E%3Cpath%20fill%3D%22%238393a7%22%20d%3D%22M0%204h5v1H0z%22%2F%3E%3C%2Fsvg%3E");
-}
-
-.c15 {
-  font-size: 0.875rem;
-}
-
-.c16 {
-  margin: 1rem 0;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c17 {
-  padding: 0 0.625rem;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-}
-
-.c6 {
-  padding: 0 0.625rem;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-}
-
-.c7 {
-  font-size: 1.375rem;
-}
-
-@media (max-width:980px) {
-  .c8 {
-    -webkit-flex-flow: wrap;
-    -ms-flex-flow: wrap;
-    flex-flow: wrap;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    width: calc(100% * 1);
-  }
-}
-
-@media (max-width:980px) {
-  .c18 {
-    width: calc(100% * 0.6685);
-  }
-}
-
-@media (max-width:980px) {
-  .c19 {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-@media (max-width:980px) {
-  .c10 {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-<div>
-  <h2
-    class="c0"
-  >
-    Convention collective nationale des industries chimiques et connexes
-  </h2>
-  <div
-    class="c1"
-  >
-    <div
-      class="c2"
-    >
-      <svg
-        fill="none"
-        height="24"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        width="24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="16"
-          y2="12"
-        />
-        <line
-          x1="12"
-          x2="12"
-          y1="8"
-          y2="8"
-        />
-      </svg>
-    </div>
-    <div
-      class="c3"
-      role="alert"
-    >
-      Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
-    </div>
-  </div>
-  <p>
-    À partir des éléments que vous avez saisis, votre indémnité de licenciement est estimée à
-     
-    <strong
-      class="c4"
-    >
-      2,000.00
-       € brut
-    </strong>
-  </p>
-  <p>
-    Il s’agit du montant le plus favorable entre votre indemnité légale et votre indemnité conventionnelle.
-  </p>
-  <div
-    class="c5"
-  >
-    <section
-      class="c6"
-    >
-      <h2
-        class="c7"
-      >
-        Votre indemnite légale
-      </h2>
-      <div
-        class="c8"
-      >
-        <div
-          class="c9"
-        />
-        <span
-          class="c10"
-        >
-          2,000.00
-           € brut
-        </span>
-      </div>
-      <details
-        class="c11"
-      >
-        <summary
-          class="c12"
-        >
-          Voir le detail du calcul
-        </summary>
-        <strong
-          class="c13"
-        >
-          Élements saisis :
-        </strong>
-        <ul
-          class="c14"
-        >
-          <li
-            class="c15"
-          >
-            salaire ref (Sref)
-             : 
-            42
-          </li>
-          <li
-            class="c15"
-          >
-            anciennete (A)
-             : 
-            32
-          </li>
-        </ul>
-        <strong
-          class="c13"
-        >
-          Formule
-        </strong>
-        <div
-          class="c16"
-        >
-          <div
-            id="react-mathjax-preview"
-          >
-            <div
-              id="react-mathjax-preview-result"
-            >
-              \`Sref * A\`
-            </div>
-          </div>
-        </div>
-      </details>
-    </section>
-    <section
-      class="c17"
-    >
-      <h2
-        class="c7"
-      >
-        Votre indemnite conventionnelle
-      </h2>
-      <div
-        class="c8"
-      >
-        <div
-          class="c18"
-        />
-        <span
-          class="c19"
-        >
-          1,337.00
-           € brut
-        </span>
-      </div>
-      <details
-        class="c11"
-      >
-        <summary
-          class="c12"
-        >
-          Voir le detail du calcul
-        </summary>
-        <strong
-          class="c13"
-        >
-          Élements saisis :
-        </strong>
-        <ul
-          class="c14"
-        >
-          <li
-            class="c15"
-          >
-            salaire de ref (Sref)
-             : 
-            1337
-          </li>
-          <li
-            class="c15"
-          >
-            foo
-             : 
-            bar
-          </li>
-        </ul>
-        <strong
-          class="c13"
-        >
-          Formule
-        </strong>
-        <div
-          class="c16"
-        >
-          <div
-            id="react-mathjax-preview"
-          >
-            <div
-              id="react-mathjax-preview-result"
-            >
-              \`1337 * Sref * foo\`
+              \`(C * Sref * A) &lt;= Pmois * Sref\`
             </div>
           </div>
         </div>

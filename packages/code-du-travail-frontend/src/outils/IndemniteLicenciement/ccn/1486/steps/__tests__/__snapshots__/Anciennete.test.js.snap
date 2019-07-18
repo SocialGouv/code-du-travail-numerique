@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Anciennete /> renders AncienneteCE component 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 7em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Activité exclusive et régulière
+  </h2>
+  <p>
+    Renseignez la durée pendant laquelle le salarié a exercé une activité exclusive et régulière pour le compte de la société.
+  </p>
+  <label
+    class="c1"
+    for="ancienneteCE"
+  >
+    Durée (en mois):
+  </label>
+  <input
+    class="c2"
+    id="ancienneteCE"
+    name="brancheAncienneteCE"
+    size="7"
+    type="number"
+    value=""
+  />
+  <h2
+    class="c0"
+  >
+    Activité supplémentaire
+  </h2>
+  <p>
+    Renseignez le nombre d’années pendant lesquelles le salarié a perçu au moins 11 bulletins de salaire sur 12 et au moins 3 fois la valeur du SMIC.
+  </p>
+  <label
+    class="c1"
+    for="ancienneteEnqueteur"
+  >
+    Total (en années):
+  </label>
+  <input
+    class="c2"
+    id="ancienneteEnqueteur"
+    name="brancheAncienneteEnqueteur"
+    size="7"
+    type="number"
+    value="0"
+  />
+</div>
+`;
+
+exports[`<Anciennete /> renders AncienneteCE component 2`] = `
+.c2 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 7em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Activité exclusive et régulière
+  </h2>
+  <p>
+    Renseignez la durée pendant laquelle le salarié a exercé une activité exclusive et régulière pour le compte de la société.
+  </p>
+  <label
+    class="c1"
+    for="ancienneteCE"
+  >
+    Durée (en mois):
+  </label>
+  <input
+    class="c2"
+    id="ancienneteCE"
+    name="brancheAncienneteCE"
+    size="7"
+    type="number"
+    value=""
+  />
+  <h2
+    class="c0"
+  >
+    Activité supplémentaire
+  </h2>
+  <p>
+    Renseignez le nombre d’années pendant lesquelles le salarié a perçu au moins 11 bulletins de salaire sur 12 et au moins 3 fois la valeur du SMIC.
+  </p>
+  <label
+    class="c1"
+    for="ancienneteEnqueteur"
+  >
+    Total (en années):
+  </label>
+  <input
+    class="c2"
+    id="ancienneteEnqueteur"
+    name="brancheAncienneteEnqueteur"
+    size="7"
+    type="number"
+    value="0"
+  />
+</div>
+`;
+
+exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
+.c1 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #fee5ad;
+  box-shadow: none;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c5 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c8 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c6 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+@media (max-width:600px) {
+  .c1 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c1 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Contrats antérieurs
+  </h2>
+  <div
+    class="c1"
+  >
+    <p>
+      Si vous avez été auparavant employé par la même société et que la fin du/des contrat(s) n’est pas imputable à l’une des raisons suivantes:
+    </p>
+    <ul>
+      <li>
+        démission
+      </li>
+      <li>
+        licenciement pour faute grave ou faute lourde
+      </li>
+    </ul>
+    <p>
+      alors
+       
+      <strong>
+        la durée de ce(s) contrat(s) s’ajoute à votre ancienneté
+      </strong>
+      .
+    </p>
+  </div>
+  <div
+    class="c2 c3"
+  >
+    <div
+      class="c4"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="9"
+          y2="13"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <div
+      class="c5"
+      role="alert"
+    >
+      Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
+    </div>
+  </div>
+  <p
+    class="c6"
+  >
+    Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheContrat"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheContrat"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+</div>
+`;

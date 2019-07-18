@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Categorie /> renders 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Catégorie
+  </h2>
+  <p>
+    Quel est votre catégorie dans la convention collective ?
+    <br />
+    Vous pouvez le trouver sur votre bulletin de paie
+  </p>
+  <label
+    class="c1"
+    for="categorie"
+  >
+    Sélectionnez une catégorie
+  </label>
+  <select
+    id="categorie"
+    name="brancheCategorie"
+  >
+    <option
+      disabled=""
+      value=""
+    >
+      Sélectionner
+    </option>
+    <option
+      value="ETAM"
+    >
+      Employé, Technicien, Agent de Maîtrise
+    </option>
+    <option
+      value="IC"
+    >
+      Ingénieur Cadre
+    </option>
+    <option
+      value="CENI"
+    >
+      Chargé d'enquête non intermittent
+    </option>
+    <option
+      value="CEI"
+    >
+      Chargé d'enquête intermittent
+    </option>
+  </select>
+</div>
+`;

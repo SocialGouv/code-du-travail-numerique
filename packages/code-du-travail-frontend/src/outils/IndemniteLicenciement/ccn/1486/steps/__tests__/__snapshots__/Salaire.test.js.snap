@@ -1,0 +1,1532 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Salaire /> renders 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #d7e8f9;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #fee5ad;
+  box-shadow: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #d7e8f9;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c8 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c6 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c3 {
+  margin-top: 1.25rem;
+}
+
+<div>
+  <div
+    class="c0"
+    type="info"
+  >
+    <div
+      class="c1"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Le salaire à renseigner pour cette convention collective inclut:
+      <ul>
+        <li>
+          les primes prévues au contrat de travail
+        </li>
+      </ul>
+      <strong>
+        mais elle exclut
+      </strong>
+      :
+      <ul>
+        <li>
+          les heures supplémentaires au delà de l’heure normale de l’entreprise
+        </li>
+        <li>
+          les majorations/indemnités liées à un déplacement ou un détachement
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c3 c4"
+  >
+    <div
+      class="c5"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="9"
+          y2="13"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Attention, les éventuelles 
+      <strong>
+        primes
+      </strong>
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+      <br />
+      Aussi, si il y en a, les mois effectués en
+       
+      <strong>
+        temps partiel
+      </strong>
+       sont à considérer comme ceux effectués en temps plein.
+    </div>
+  </div>
+  <p
+    class="c6"
+  >
+    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #d7e8f9;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #fee5ad;
+  box-shadow: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #d7e8f9;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c8 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c6 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c3 {
+  margin-top: 1.25rem;
+}
+
+<div>
+  <div
+    class="c0"
+    type="info"
+  >
+    <div
+      class="c1"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Le salaire à renseigner pour cette convention collective inclut:
+      <ul>
+        <li>
+          les primes prévues au contrat de travail
+        </li>
+      </ul>
+      <strong>
+        mais elle exclut
+      </strong>
+      :
+      <ul>
+        <li>
+          les heures supplémentaires au delà de l’heure normale de l’entreprise
+        </li>
+        <li>
+          les majorations/indemnités liées à un déplacement ou un détachement
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c3 c4"
+  >
+    <div
+      class="c5"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="9"
+          y2="13"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Attention, les éventuelles 
+      <strong>
+        primes
+      </strong>
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+      <br />
+      Aussi, si il y en a, les mois effectués en
+       
+      <strong>
+        temps partiel
+      </strong>
+       sont à considérer comme ceux effectués en temps plein.
+    </div>
+  </div>
+  <p
+    class="c6"
+  >
+    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        checked=""
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c6"
+  >
+    Avez-vous eu le même salaire lors des 12 derniers mois ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewRegularSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewRegularSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<Salaire /> renders a table of fields of type number 1`] = `
+.c9 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c9:before,
+.c9:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c9:before {
+  left: -2rem;
+}
+
+.c9:after {
+  right: -2rem;
+}
+
+.c10 {
+  overflow-x: auto;
+}
+
+.c12 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c12 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c12 td,
+.c12 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c12 th {
+  background: #ebeff3;
+}
+
+.c12 thead,
+.c12 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f5f7fa;
+}
+
+.c12 tfoot {
+  vertical-align: top;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #d7e8f9;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #fee5ad;
+  box-shadow: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #d7e8f9;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c8 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c6 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c3 {
+  margin-top: 1.25rem;
+}
+
+.c11 tr > td:nth-child(2) {
+  text-align: left;
+  width: 70%;
+}
+
+.c14 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c14::-webkit-outer-spin-button,
+.c14::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c13 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c15 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div>
+  <div
+    class="c0"
+    type="info"
+  >
+    <div
+      class="c1"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Le salaire à renseigner pour cette convention collective inclut:
+      <ul>
+        <li>
+          les primes prévues au contrat de travail
+        </li>
+      </ul>
+      <strong>
+        mais elle exclut
+      </strong>
+      :
+      <ul>
+        <li>
+          les heures supplémentaires au delà de l’heure normale de l’entreprise
+        </li>
+        <li>
+          les majorations/indemnités liées à un déplacement ou un détachement
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c3 c4"
+  >
+    <div
+      class="c5"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="9"
+          y2="13"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Attention, les éventuelles 
+      <strong>
+        primes
+      </strong>
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+      <br />
+      Aussi, si il y en a, les mois effectués en
+       
+      <strong>
+        temps partiel
+      </strong>
+       sont à considérer comme ceux effectués en temps plein.
+    </div>
+  </div>
+  <p
+    class="c6"
+  >
+    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        checked=""
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c6"
+  >
+    Avez-vous eu le même salaire lors des 12 derniers mois ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewRegularSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        checked=""
+        name="hasBrancheNewRegularSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <div
+    class="c9"
+  >
+    <div
+      class="c10"
+    >
+      <table
+        class="c11 c12"
+      >
+        <thead>
+          <tr>
+            <th>
+              Mois
+            </th>
+            <th>
+              Salaire mensuel ajusté (primes et temps partiel inclus)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label
+                for="salaire0"
+              >
+                juillet 2019
+              </label>
+            </td>
+            <td>
+              <div
+                class="c13"
+              >
+                <input
+                  class="c14"
+                  id="salaire0"
+                  name="brancheNewIrregularSalaire[0].salary"
+                  size="10"
+                  type="number"
+                  value=""
+                />
+                <span
+                  aria-hidden="true"
+                  class="c15"
+                >
+                  €
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label
+                for="salaire1"
+              >
+                juin 2019
+              </label>
+            </td>
+            <td>
+              <div
+                class="c13"
+              >
+                <input
+                  class="c14"
+                  id="salaire1"
+                  name="brancheNewIrregularSalaire[1].salary"
+                  size="10"
+                  type="number"
+                  value=""
+                />
+                <span
+                  aria-hidden="true"
+                  class="c15"
+                >
+                  €
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Salaire /> renders an input field of type number 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #d7e8f9;
+  box-shadow: none;
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: auto;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: none;
+  animation: none;
+  border-color: #fee5ad;
+  box-shadow: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #d7e8f9;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c8 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c6 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c3 {
+  margin-top: 1.25rem;
+}
+
+.c10 {
+  padding: 0;
+  font-size: 1rem;
+  text-align: right;
+  line-height: inherit;
+  width: 10em;
+  border-radius: 0.25rem;
+  border: 1px solid #c9d3df;
+  padding: 0.625rem 0.25rem;
+  border-color: #c9d3df;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.c10::-webkit-outer-spin-button,
+.c10::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.c9 {
+  display: inline-block;
+  position: relative;
+  margin-right: 1.25rem;
+}
+
+.c11 {
+  color: #adb9c9;
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div>
+  <div
+    class="c0"
+    type="info"
+  >
+    <div
+      class="c1"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="16"
+          y2="12"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="8"
+          y2="8"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Le salaire à renseigner pour cette convention collective inclut:
+      <ul>
+        <li>
+          les primes prévues au contrat de travail
+        </li>
+      </ul>
+      <strong>
+        mais elle exclut
+      </strong>
+      :
+      <ul>
+        <li>
+          les heures supplémentaires au delà de l’heure normale de l’entreprise
+        </li>
+        <li>
+          les majorations/indemnités liées à un déplacement ou un détachement
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="c3 c4"
+  >
+    <div
+      class="c5"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="9"
+          y2="13"
+        />
+        <line
+          x1="12"
+          x2="12"
+          y1="17"
+          y2="17"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
+      role="alert"
+    >
+      Attention, les éventuelles 
+      <strong>
+        primes
+      </strong>
+       renseignées précédemment ne seront pas prises en compte dans le calcul de l’indemnité de votre convention collective. Si vous en avez perçues, merci de les intégrer à votre rémunération ci-après.
+      <br />
+      Aussi, si il y en a, les mois effectués en
+       
+      <strong>
+        temps partiel
+      </strong>
+       sont à considérer comme ceux effectués en temps plein.
+    </div>
+  </div>
+  <p
+    class="c6"
+  >
+    De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        checked=""
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c6"
+  >
+    Avez-vous eu le même salaire lors des 12 derniers mois ?
+  </p>
+  <div
+    class="c7"
+  >
+    <label
+      class="c8"
+    >
+      <input
+        checked=""
+        name="hasBrancheNewRegularSalaire"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c8"
+    >
+      <input
+        name="hasBrancheNewRegularSalaire"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p>
+    Salaire mensuel ajusté (primes et temps partiel inclus)
+  </p>
+  <div
+    class="c9"
+  >
+    <input
+      class="c10"
+      name="brancheNewRegularSalaire"
+      size="10"
+      type="number"
+      value=""
+    />
+    <span
+      aria-hidden="true"
+      class="c11"
+    >
+      €
+    </span>
+  </div>
+</div>
+`;
