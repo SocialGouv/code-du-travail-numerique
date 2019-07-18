@@ -1,11 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
-import { theme } from "@cdt/ui";
 
 import ArticleIcon from "../src/icons/ArticleIcon";
 import Answer from "../src/common/Answer";
@@ -66,4 +64,3 @@ class Fiche extends React.Component {
 }
 
 export default withRouter(Fiche);
-
