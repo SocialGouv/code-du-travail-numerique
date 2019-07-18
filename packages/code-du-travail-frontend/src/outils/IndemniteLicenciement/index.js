@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import { OnChange } from "react-final-form-listeners";
 import { Section, Container, Wrapper } from "@cdt/ui";
 
-import { stepReducer, initialSteps } from "./stepReducer";
+import {
+  stepPrime,
+  stepSalaires,
+  stepReducer,
+  initialSteps
+} from "./stepReducer";
 import { Wizard } from "../common/Wizard";
 
 function CalculateurIndemnite() {
@@ -15,8 +20,11 @@ function CalculateurIndemnite() {
       <OnChange key="rule-same-salaire" name="hasSameSalaire">
         {value =>
           value === false
-            ? dispatch({ type: "add_primes" })
-            : dispatch({ type: "remove_primes" })
+            ? dispatch({
+                type: "add_step",
+                payload: { insertAfter: stepSalaires.name, step: stepPrime }
+              })
+            : dispatch({ type: "remove_step", payload: stepPrime.name })
         }
       </OnChange>
       <OnChange key="rule-branche" name="branche">
@@ -43,8 +51,6 @@ function CalculateurIndemnite() {
           <Wizard
             stepReducer={stepReducer}
             initialSteps={initialSteps}
-            initialValues={{}}
-            initialStepIndex={0}
             Rules={Rules}
           />
         </Wrapper>
