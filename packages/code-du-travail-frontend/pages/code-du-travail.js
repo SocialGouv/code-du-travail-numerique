@@ -67,7 +67,6 @@ class Fiche extends React.Component {
         />
         <Answer
           title={data._source.title}
-          intro={<BreadCrumbs entry={data._source.path} />}
           date={format(new Date(data._source.date_debut), "D MMMM YYYY", {
             locale: frLocale
           })}
