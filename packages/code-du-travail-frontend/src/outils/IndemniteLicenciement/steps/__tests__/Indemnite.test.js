@@ -3,7 +3,7 @@ import { render } from "react-testing-library";
 import { StepIndemnite } from "../Indemnite";
 import { Form } from "react-final-form";
 
-const initialData = {
+const initialValues = {
   hasTempsPartiel: false,
   salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
   anciennete: 15 / 12,
@@ -16,7 +16,7 @@ describe("<StepIndemnite />", () => {
     const onSubmit = jest.fn();
     const { container } = render(
       <Form
-        initialValues={initialData}
+        initialValues={initialValues}
         onSubmit={onSubmit}
         render={({ form }) => <StepIndemnite form={form} />}
       />

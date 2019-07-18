@@ -1,6 +1,6 @@
-import { stepReducer, initialSteps } from "../stepReducer";
+import { stepPrime, stepReducer, initialSteps } from "../stepReducer";
 
-describe("getInitialSteps()", () => {
+describe("initialSteps", () => {
   it("should return default steps", () => {
     expect(initialSteps).toMatchInlineSnapshot(`
 Array [
@@ -12,7 +12,7 @@ Array [
   Object {
     "component": [Function],
     "label": "Informations générales",
-    "name": "infoGenerales",
+    "name": "info_generales",
   },
   Object {
     "component": [Function],
@@ -27,7 +27,7 @@ Array [
   Object {
     "component": [Function],
     "label": "Indemnité légale",
-    "name": "indemniteLegale",
+    "name": "indemnite_legale",
   },
 ]
 `);
@@ -35,32 +35,49 @@ Array [
 });
 
 describe("reducer", () => {
-  it("should handle reset action", () => {
+  it("handles reset action", () => {
     expect(stepReducer([], { type: "reset" })).toEqual(initialSteps);
   });
-  it("should handle add_primes after salaires", () => {
+  it("handles add_step after salaires", () => {
     const initialSteps = [{ name: "salaires" }];
-    const newState = stepReducer(initialSteps, { type: "add_primes" });
+    const newState = stepReducer(initialSteps, {
+      type: "add_step",
+      payload: { insertAfter: "salaires", step: stepPrime }
+    });
 
-    expect(newState.findIndex(step => step.name === "primes")).toEqual(1);
+    expect(newState.findIndex(step => step.name === "primes")).toBe(1);
+    expect(newState[1]).toEqual(stepPrime);
   });
-  it("should handle add_primes after salaires", () => {
-    const initialSteps = [];
-    const newState = stepReducer(initialSteps, { type: "add_primes" });
+  it("does not add step at all if there is no previous step that matches", () => {
+    const initialSteps = [{}, {}];
+    const newState = stepReducer(initialSteps, {
+      type: "add_step",
+      payload: { insertAfter: "salaires", step: stepPrime }
+    });
 
-    expect(newState.findIndex(step => step.name === "primes")).toEqual(0);
+    expect(newState.findIndex(step => step.name === stepPrime.name)).toEqual(0);
   });
-  it("should handle remove_primes", () => {
-    const initialSteps = [];
-    const newState = stepReducer(initialSteps, { type: "remove_primes" });
+  it("handles remove_step", () => {
+    const initialSteps = [{}, stepPrime, {}];
+    const newState = stepReducer(initialSteps, {
+      type: "remove_step",
+      payload: stepPrime.name
+    });
 
-    expect(newState.findIndex(step => step.name === "primes")).toEqual(-1);
+    expect(newState.findIndex(step => step.name === stepPrime.name)).toEqual(
+      -1
+    );
   });
-  it("should not fail when handle remove_primes", () => {
-    const initialSteps = [];
-    const newState = stepReducer(initialSteps, { type: "remove_primes" });
+  it("does not fail when removing unexisting step", () => {
+    const initialSteps = [{}];
+    const newState = stepReducer(initialSteps, {
+      type: "remove_step",
+      payload: { insertAfter: "salaires", stepPrime }
+    });
 
-    expect(newState.findIndex(step => step.name === "primes")).toEqual(-1);
+    expect(newState.findIndex(step => step.name === stepPrime.name)).toEqual(
+      -1
+    );
   });
   it("should handle add_branche", () => {
     const initialSteps = [];
