@@ -62,7 +62,6 @@ def populate_cdtn_documents():
         articles = json.load(json_data)
         logger.info("Load %s articles from code-du-travail", len(articles))
         for article in articles:
-            url = f"https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle={article['id']}&cidTexte=LEGITEXT000006072050" #pylint: disable=line-too-long
             CDTN_DOCUMENTS.append({
                 'source': 'code_du_travail',
                 'text': article['bloc_textuel'],
@@ -71,7 +70,7 @@ def populate_cdtn_documents():
                 'title': article['titre'],
                 'html': article['bloc_textuel'],
                 'date_debut': article['date_debut'],
-                'url': url
+                'url': article['url']
             })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/fiches_service_public/fiches-sp-travail.json')) as json_data:

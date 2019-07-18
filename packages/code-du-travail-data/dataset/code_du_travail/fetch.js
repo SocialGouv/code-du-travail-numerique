@@ -91,11 +91,15 @@ const fixArticleNum = article => {
   return article.article.num;
 };
 
+const getArticleUrl = id =>
+  `https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=${id}&cidTexte=LEGITEXT000006072050`;
+
 // simpler article
 const toArticle = article => ({
   id: article.article.id,
   cid: article.article.cid,
   num: article.article.num,
+  url: getArticleUrl(article.article.id),
   slug: slugify(fixArticleNum(article), { lower: true }),
   nota: article.article.notaHtml,
   bloc_textuel: article.article.texteHtml,
