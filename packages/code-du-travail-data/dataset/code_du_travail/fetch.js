@@ -79,11 +79,22 @@ const getCodeDuTravail = async () => {
   return articles;
 };
 
+// if unknown annexe, add id as suffix to prevent duplicates slugs
+const fixArticleNum = article => {
+  if (
+    article.article.num.match(/^annexe\s/i) &&
+    !article.article.num.includes("article")
+  ) {
+    return `${article.article.num} ${article.article.id}`;
+  }
+  return article.article.num;
+};
+
 // simpler article
 const toArticle = article => ({
   id: article.article.id,
   cid: article.article.cid,
-  num: article.article.num,
+  num: fixArticleNum(article),
   nota: article.article.notaHtml,
   bloc_textuel: article.article.texteHtml,
   titre: `Article ${article.article.num}`,
