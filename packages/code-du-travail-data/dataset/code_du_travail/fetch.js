@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const pAll = require("p-all");
 const flatten = require("lodash.flatten");
+const slugify = require("slugify");
 
 const DilaApi = require("@socialgouv/dila-api-client");
 
@@ -94,7 +95,8 @@ const fixArticleNum = article => {
 const toArticle = article => ({
   id: article.article.id,
   cid: article.article.cid,
-  num: fixArticleNum(article),
+  num: article.article.num,
+  slug: slugify(fixArticleNum(article), { lower: true }),
   nota: article.article.notaHtml,
   bloc_textuel: article.article.texteHtml,
   titre: `Article ${article.article.num}`,

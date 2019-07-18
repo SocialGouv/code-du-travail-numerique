@@ -67,7 +67,7 @@ def populate_cdtn_documents():
                 'source': 'code_du_travail',
                 'text': article['bloc_textuel'],
                 'description': article['bloc_textuel'][:article['bloc_textuel'].find(" ", 150)],
-                'slug': article['num'].lower(),
+                'slug': article['slug'],
                 'title': article['titre'],
                 'html': article['bloc_textuel'],
                 'date_debut': article['date_debut'],
