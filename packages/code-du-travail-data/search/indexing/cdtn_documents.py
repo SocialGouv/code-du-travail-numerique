@@ -4,7 +4,6 @@ import os
 import base64
 import hashlib
 
-from collections import OrderedDict
 from slugify import slugify
 
 from search import settings
