@@ -5,8 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "@socialgouv/dila-api-client": "^1.0.1",
+    "lodash.flatten": "^4.4.0",
     "node-fetch": "^2.6.0",
-    "promise-serial-exec": "^1.0.0",
+    "p-all": "^2.1.0",
     "simple-oauth2": "^2.2.1"
   },
   "scripts": {

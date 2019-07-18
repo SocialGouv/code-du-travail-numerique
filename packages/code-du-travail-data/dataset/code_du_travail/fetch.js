@@ -1,11 +1,24 @@
 const fs = require("fs");
 const path = require("path");
-const serialExec = require("promise-serial-exec");
+const pAll = require("p-all");
+const flatten = require("lodash.flatten");
+
 const DilaApi = require("@socialgouv/dila-api-client");
 
 const dilaClient = new DilaApi();
 
-const tableMatieres = params =>
+// parties dites anciennes
+const uselessSections = [
+  "LEGISCTA000006101375", // Partie législative ancienne
+  "LEGISCTA000006107985", // Partie réglementaire ancienne - Décrets en Conseil d'Etat
+  "LEGISCTA000006169868" // Partie réglementaire ancienne - Décrets simples
+];
+
+const JSONLog = data => console.log(JSON.stringify(data, null, 2));
+
+const isUselessSection = section => uselessSections.includes(section.id);
+
+const getTableMatieres = params =>
   dilaClient.fetch({
     path: "consult/code/tableMatieres",
     method: "POST",
@@ -21,94 +34,60 @@ const getArticle = (id, tries = 0) =>
         id
       }
     })
+    // slimify content
+    .then(toArticle)
     // try 3 tentatives
     .catch(e => {
-      console.log("getArticle.catch", e);
+      console.log(`getArticle.catch ${id} (${tries}/3)`, e);
       if (tries < 3) {
         return getArticle(id, tries + 1);
       }
       throw e;
     });
 
-const JSONLog = data => console.log(JSON.stringify(data, null, 2));
-
-// parties dites anciennes
-const uselessSections = [
-  "LEGISCTA000006101375", // Partie législative ancienne
-  "LEGISCTA000006107985", // Partie réglementaire ancienne - Décrets en Conseil d'Etat
-  "LEGISCTA000006169868" // Partie réglementaire ancienne - Décrets simples
-];
-
-const isUselessSection = section => uselessSections.includes(section.id);
-
-// embed article details into the section
-const embedArticles = async section => ({
-  ...section,
-  articles: await Promise.all(
-    section.articles
+// get all articles ids for a given section
+const getArticlesId = section =>
+  flatten([
+    ...section.articles
       .filter(article => article.etat === "VIGUEUR")
-      .map(
-        article =>
-          console.log(`getArticle ${article.id}`) || getArticle(article.id)
-      )
-  ),
-  sections: await serialExec(
-    section.sections
+      .map(article => [article.id]),
+    ...section.sections
       .filter(section => section.etat === "VIGUEUR")
       .filter(section => !isUselessSection(section))
-      .map(section => () =>
-        console.log(`embedArticles section ${section.id}`) ||
-        embedArticles(section)
-      )
-  )
-});
+      .map(section => getArticlesId(section))
+  ]);
 
-// get structure + content
-const getFullCode = params =>
-  tableMatieres(params).then(tbl => console.log(tbl) || embedArticles(tbl));
+// get full code from DILA API
+const getCodeDuTravail = async () => {
+  const now = new Date().getTime();
 
-// get full code from DILA, then slimify the file. from 229Mb to 19Mb
-const getCodeDuTravail = () =>
-  getFullCode({
-    date: new Date().getTime(),
+  // get structure
+  const code = await getTableMatieres({
+    date: now,
     sctId: "",
     textId: "LEGITEXT000006072050"
-  }).then(code => ({
-    type: "code",
-    data: {
-      cid: "LEGITEXT000006072050",
-      titre: "Code du travail",
-      titrefull: "Code du travail"
-    },
-    children: [...code.sections.map(toSection), ...code.articles.map(toArticle)]
-  }));
+  });
 
-// simpler section
-const toSection = section => ({
-  type: "section",
-  data: {
-    id: section.id,
-    cid: section.cid,
-    titre_ta: section.title
-  },
-  children: [
-    ...section.sections.map(toSection),
-    ...section.articles.map(toArticle)
-  ]
-});
+  // extract related articles ids
+  const articlesIds = getArticlesId(code);
+
+  // fetch articles concurrently
+  const articles = await pAll(articlesIds.map(id => () => getArticle(id)), {
+    concurrency: 10
+  });
+
+  return articles;
+};
 
 // simpler article
 const toArticle = article => ({
-  type: "article",
-  data: {
-    id: article.article.id,
-    cid: article.article.cid,
-    num: article.article.num,
-    nota: article.article.notaHtml,
-    bloc_textuel: article.article.texteHtml,
-    titre: `Article ${article.article.num}`,
-    date_debut: new Date(article.article.dateDebut).toISOString()
-  }
+  id: article.article.id,
+  cid: article.article.cid,
+  num: article.article.num,
+  nota: article.article.notaHtml,
+  bloc_textuel: article.article.texteHtml,
+  titre: `Article ${article.article.num}`,
+  date_debut: new Date(article.article.dateDebut).toISOString()
 });
 
 if (require.main === module) {

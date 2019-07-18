@@ -44,17 +44,6 @@ def make_slug(text, seed):
       )
     ), to_lower=True)
 
-# flattend code tree structure to articles
-def flattenCodeArticles(children):
-    articles=[]
-    for child in children:
-        if child.get('type') == 'article':
-            articles.append(child)
-        if child.get('children', []):
-            articles += flattenCodeArticles(child.get('children'))
-    return articles
-
-
 def populate_cdtn_documents():
     with open(os.path.join(settings.BASE_DIR, 'dataset/kali/kali.json')) as json_data:
         data = json.load(json_data)
@@ -71,20 +60,18 @@ def populate_cdtn_documents():
             })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/code_du_travail/code-du-travail.json')) as json_data:
-        tree = json.load(json_data)
-        articles = flattenCodeArticles(tree.get('children'))
+        articles = json.load(json_data)
         logger.info("Load %s articles from code-du-travail", len(articles))
         for article in articles:
-            article_data = article["data"];
-            url = f"https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle={article_data['id']}&cidTexte=LEGITEXT000006072050"
+            url = f"https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle={article['id']}&cidTexte=LEGITEXT000006072050"
             CDTN_DOCUMENTS.append({
                 'source': 'code_du_travail',
-                'text': article_data['bloc_textuel'],
-                'description': article_data['bloc_textuel'][:article_data['bloc_textuel'].find(" ", 150)],
-                'slug': article_data['num'].lower(),
-                'title': article_data['titre'],
-                'html': article_data['bloc_textuel'],
-                'date_debut': article_data['date_debut'],
+                'text': article['bloc_textuel'],
+                'description': article['bloc_textuel'][:article['bloc_textuel'].find(" ", 150)],
+                'slug': article['num'].lower(),
+                'title': article['titre'],
+                'html': article['bloc_textuel'],
+                'date_debut': article['date_debut'],
                 'url': url
             })
     return;
