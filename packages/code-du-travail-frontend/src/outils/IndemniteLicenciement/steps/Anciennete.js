@@ -104,7 +104,7 @@ function StepAnciennete({ form }) {
       />
       <Field name="hasAbsenceProlonge">
         {({ input }) =>
-          input.value === true ? (
+          input.value && (
             <AbsencePeriods
               name="absencePeriods"
               onChange={absencePeriods => {
@@ -113,7 +113,7 @@ function StepAnciennete({ form }) {
                 }
               }}
             />
-          ) : null
+          )
         }
       </Field>
     </>

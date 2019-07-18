@@ -16,28 +16,23 @@ function TextQuestion({ name, label, inputType = "text", size }) {
           <QuestionWrapper>
             <Field
               name={name}
-              subscribe={{ touched: true, invalid: true }}
               validate={required}
-              render={({ input, meta: { touched, invalid } }) => (
-                <Input
-                  {...input}
-                  id={id}
-                  type={inputType}
-                  invalid={touched && invalid}
-                  size={size}
-                />
+              render={({ input, meta: { dirty, error, invalid, touched } }) => (
+                <>
+                  <Input
+                    {...input}
+                    id={id}
+                    type={inputType}
+                    invalid={touched && invalid}
+                    size={size}
+                  />
+                  {error && (dirty || touched) && (
+                    <ErrorWrapper>
+                      <InlineError>{error}</InlineError>
+                    </ErrorWrapper>
+                  )}
+                </>
               )}
-            />
-            <Field
-              name={name}
-              subscribe={{ error: true, dirty: true, touched: true }}
-              render={({ meta: { error, dirty, touched } }) =>
-                (error && dirty) || (error && touched) ? (
-                  <ErrorWrapper>
-                    <InlineError>{error}</InlineError>
-                  </ErrorWrapper>
-                ) : null
-              }
             />
           </QuestionWrapper>
         </>

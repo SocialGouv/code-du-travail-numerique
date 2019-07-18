@@ -17,12 +17,12 @@ export const initialSteps = [
   },
   {
     component: StepInfosGenerales,
-    name: "infoGenerales",
+    name: "info_generales",
     label: "Informations générales"
   },
   {
     component: StepInfosSpecifiques,
-    name: "infoSpecifique",
+    name: "info_specifique",
     label: "Situations spécifiques"
   },
   {

@@ -9,13 +9,6 @@ import { Label, SectionTitle } from "../../common/stepStyles";
 import { getIndemniteFromFinalForm } from "../indemnite";
 import { IndemniteLegale } from "../components/IndemniteLegale";
 
-function validateCCn(idcc) {
-  const selectedBranche = branches.find(branche => branche.value === idcc);
-  if (!selectedBranche) {
-    return "Cette branche n’est pas encore intégrée.";
-  }
-}
-
 function StepIndemnite({ form }) {
   const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
   return (
@@ -32,11 +25,7 @@ function StepIndemnite({ form }) {
         votre indemnité de licenciement peut être supérieur au montant de
         l’indemnité légale.
       </p>
-      <Field
-        name="branche"
-        subscribe={{ error: true, dirty: true }}
-        validate={validateCCn}
-      >
+      <Field name="branche" subscribe={{ error: true, dirty: true }}>
         {({ input, meta: { error, dirty } }) => {
           return (
             <>
@@ -46,7 +35,7 @@ function StepIndemnite({ form }) {
                 </Label>
                 <Select {...input} id="ccn">
                   <option disabled value="">
-                    Selectionner
+                    Sélectionner
                   </option>
                   {branches.map(branche => (
                     <option value={branche.value} key={branche.value}>
@@ -85,7 +74,6 @@ const SelectWrapper = styled.label`
 `;
 
 const Select = styled.select`
-  margin-top: ${spacing.small};
   margin-right: ${spacing.interComponent};
   flex: 1 1 70%;
   min-width: 400px;
