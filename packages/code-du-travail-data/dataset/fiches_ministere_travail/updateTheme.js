@@ -4,8 +4,11 @@ async function updateTheme(fiches) {
   const themeMapping = await getThemeMapping();
   fiches.forEach(fiche => {
     const [_, slug] = fiche.url.match(/\/([\w-]+)\/?$/);
-    console.error(slug);
     fiche.themeCdtn = themeMapping[slug];
+    if (!fiche.themeCdtn) {
+      console.error(`${fiche.title} - (${fiche.internalId}) has no theme`)
+      fiche.themeCdtn = [];
+    }
   });
 }
 
