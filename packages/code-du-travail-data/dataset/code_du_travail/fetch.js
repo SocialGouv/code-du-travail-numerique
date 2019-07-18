@@ -38,7 +38,7 @@ const getArticle = (id, tries = 0) =>
     .then(toArticle)
     // try 3 tentatives
     .catch(e => {
-      console.log(`getArticle.catch ${id} (${tries}/3)`, e);
+      console.log(`getArticle.catch ${id} (${tries + 1}/3)`, e);
       if (tries < 3) {
         return getArticle(id, tries + 1);
       }
@@ -73,7 +73,7 @@ const getCodeDuTravail = async () => {
 
   // fetch articles concurrently
   const articles = await pAll(articlesIds.map(id => () => getArticle(id)), {
-    concurrency: 10
+    concurrency: 20
   });
 
   return articles;
