@@ -74,22 +74,6 @@ def populate_cdtn_documents():
                 'date_debut': article['date_debut'],
                 'url': url
             })
-    return;
-    logger.info("Load %s documents from code-du-travail", len(CODE_DU_TRAVAIL_DICT))
-    for val in CODE_DU_TRAVAIL_DICT.values():
-        breadcrumbs = ", ".join(list(OrderedDict.fromkeys(filter(None, val['path'].split("/"))))[1:])
-        CDTN_DOCUMENTS.append({
-            'source': 'code_du_travail',
-            'text': val['bloc_textuel'],
-            'description': val['bloc_textuel'][:val['bloc_textuel'].find(" ", 150)] + "… (" + breadcrumbs + ")",
-            'slug': val['num'].lower(),
-            'title': val['titre'],
-            'html': val['html'],
-            'path': val['path'],
-            'themes': val['themes'],
-            'date_debut': val['date_debut'],
-            'url': val['url'],
-        })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/fiches_service_public/fiches-sp-travail.json')) as json_data:
         data = json.load(json_data)
