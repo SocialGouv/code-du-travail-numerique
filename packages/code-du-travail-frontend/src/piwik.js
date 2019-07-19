@@ -23,7 +23,7 @@ if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
       if (previousPath) {
         matopush([
           "setReferrerUrl",
-          `${window.location.origin}/${previousPath}`
+          `${window.location.origin}${previousPath}`
         ]);
       }
       if (/^\/recherche/.test(path)) {
