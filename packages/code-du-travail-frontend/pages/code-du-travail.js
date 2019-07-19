@@ -1,11 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import { format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
-import { theme } from "@cdt/ui";
 
 import ArticleIcon from "../src/icons/ArticleIcon";
 import Answer from "../src/common/Answer";
@@ -19,22 +17,6 @@ const {
 const fetchFiche = ({ slug }) =>
   fetch(`${API_URL}/items/code_du_travail/${slug}`);
 
-const BreadCrumbs = ({ entry }) => {
-  if (entries && !(entries.length > 0)) return null;
-  const entries = entry
-    .split("/")
-    .map(s => s.trim())
-    .filter(Boolean);
-  return (
-    <Nav aria-label="breadcrumb">
-      <Ol>
-        {entries.map((entry, i) => (
-          <Li key={i}>{entry}</Li>
-        ))}
-      </Ol>
-    </Nav>
-  );
-};
 const Source = ({ name, url }) => (
   <a href={url} target="_blank" rel="noopener noreferrer">
     Voir le contenu original sur : {name}{" "}
@@ -67,7 +49,6 @@ class Fiche extends React.Component {
         />
         <Answer
           title={data._source.title}
-          intro={<BreadCrumbs entry={data._source.path} />}
           date={format(new Date(data._source.date_debut), "D MMMM YYYY", {
             locale: frLocale
           })}
@@ -83,32 +64,3 @@ class Fiche extends React.Component {
 }
 
 export default withRouter(Fiche);
-
-const { spacing } = theme;
-
-const Nav = styled.nav`
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const Ol = styled.ol`
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const Li = styled.li`
-  & + & {
-    padding-left: ${spacing.small};
-    &:before {
-      content: "/";
-      display: inline-block;
-      padding-right: ${spacing.small};
-    }
-  }
-`;
