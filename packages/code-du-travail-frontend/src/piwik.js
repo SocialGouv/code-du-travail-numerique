@@ -24,13 +24,15 @@ if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
           `${window.location.origin}${previousPath}`
         ]);
       }
+      matopush(["setDocumentTitle", document.title]);
+      matopush(["setCustomUrl", path]);
+      matopush(["deleteCustomVariables", "page"]);
+      matopush(["setGenerationTimeMs", 0]);
       if (/^\/recherche/.test(path)) {
         // matopush(["setCustomUrl", path]);
         // matopush(["setCustomUrl", "/" + window.location.hash.substr(1)]);
         matopush(["trackSiteSearch", q, source]);
       } else {
-        matopush(["setDocumentTitle", document.title]);
-        matopush(["setCustomUrl", path]);
         matopush(["trackPageView"]);
       }
       matopush(["enableLinkTracking"]);
