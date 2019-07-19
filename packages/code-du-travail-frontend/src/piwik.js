@@ -18,8 +18,6 @@ if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
     }
     setTimeout(() => {
       const { q, source } = Router.query;
-      matopush(["setCustomUrl", path]);
-      matopush(["setDocumentTitle", document.title]);
       if (previousPath) {
         matopush([
           "setReferrerUrl",
@@ -31,6 +29,8 @@ if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
         // matopush(["setCustomUrl", "/" + window.location.hash.substr(1)]);
         matopush(["trackSiteSearch", q, source]);
       } else {
+        matopush(["setDocumentTitle", document.title]);
+        matopush(["setCustomUrl", path]);
         matopush(["trackPageView"]);
       }
       matopush(["enableLinkTracking"]);
