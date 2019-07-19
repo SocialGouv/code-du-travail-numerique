@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import ReactPiwik from "react-piwik";
 import { withRouter } from "next/router";
 import { Button, Container, theme, Section, ScreenReaderOnly } from "@cdt/ui";
 
@@ -13,6 +12,7 @@ import { getExcludeSources } from "../sources";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { suggestResults } from "./search.service";
 import { withClipboard } from "../common/withClipboard.hoc";
+import { matopush } from "../piwik";
 
 const suggestMaxResults = 5;
 
@@ -79,7 +79,6 @@ class Search extends React.Component {
     if (this.state.query) {
       const routeName =
         this.state.source === "annuaire" ? "annuaire" : "recherche";
-      ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
       Router.pushRoute(routeName, {
         q: this.state.query,
         source: this.state.source
@@ -124,7 +123,7 @@ class Search extends React.Component {
     const { source, query } = this.state;
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
-      ReactPiwik.push(["trackEvent", "selectedSource", source]);
+      matopush(["trackEvent", "selectedSource", source]);
       Router.pushRoute("annuaire", {
         q: suggestion._source.title,
         coord: `${lon}:${lat}`,
@@ -132,8 +131,7 @@ class Search extends React.Component {
       });
       return;
     }
-    ReactPiwik.push(["trackEvent", "selectedSuggestion", query, suggestion]);
-    ReactPiwik.push(["trackSiteSearch", this.state.query, this.state.source]);
+    matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
     Router.pushRoute("recherche", { q: suggestion, source });
   };
 

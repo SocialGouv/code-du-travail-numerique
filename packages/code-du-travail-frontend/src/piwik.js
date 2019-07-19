@@ -1,4 +1,3 @@
-import ReactPiwik from "react-piwik";
 import { Router } from "../routes";
 import getConfig from "next/config";
 
@@ -7,15 +6,47 @@ const {
 } = getConfig();
 
 if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
-  const piwik = new ReactPiwik({
+  initPiwik({
     url: PIWIK_URL,
-    siteId: PIWIK_SITE_ID,
-    trackErrors: true
+    siteId: PIWIK_SITE_ID
   });
-  ReactPiwik.push(["trackPageView"]);
+  matopush(["enableHeartBeatTimer"]);
+  matopush(["trackPageView"]);
+
   Router.events.on("routeChangeComplete", path => {
-    piwik.track({ path });
+    setTimeout(() => {
+      const { q, source } = Router.query;
+      if (/^\/recherche/.test(path)) {
+        matopush(["trackSiteSearch", q, source]);
+      } else {
+        matopush(["trackPageView"]);
+      }
+    }, 0);
   });
 } else if (typeof window !== "undefined") {
   window._paq = [];
+}
+
+function initPiwik({
+  siteId,
+  url,
+  jsTrackerFile = "piwik.js",
+  phpTrackerFile = "piwik.php"
+}) {
+  window._paq = window._paq || [];
+  matopush(["setSiteId", siteId]);
+  matopush(["setTrackerUrl", `${url}/${phpTrackerFile}`]);
+  matopush(["enableLinkTracking"]);
+
+  const scriptElement = document.createElement("script");
+  const refElement = document.getElementsByTagName("script")[0];
+  scriptElement.type = "text/javascript";
+  scriptElement.async = true;
+  scriptElement.defer = true;
+  scriptElement.src = `${url}/${jsTrackerFile}`;
+  refElement.parentNode.insertBefore(scriptElement, refElement);
+}
+
+export function matopush(args) {
+  window._paq.push(args);
 }

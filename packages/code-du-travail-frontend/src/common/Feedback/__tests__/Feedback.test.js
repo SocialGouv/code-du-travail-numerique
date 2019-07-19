@@ -5,19 +5,18 @@ import { Feedback } from "..";
 
 global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
 
-jest.mock("react-piwik", () => {
+jest.mock("../../../piwik", () => {
   let events = [];
   return {
+    matopush: event => events.push(event),
     events,
-    push: event => events.push(event),
-    flush: () => {
+    flushEvents() {
       events = [];
     }
   };
 });
-const ReactPiwik = require("react-piwik");
-
-afterEach(ReactPiwik.flush);
+const { events, flushEvents } = require("../../../piwik");
+afterEach(flushEvents);
 
 describe("<Feedback/>", () => {
   it("should render", () => {
@@ -68,8 +67,8 @@ describe("<Feedback/>", () => {
     );
     const button = getByText(/oui/i);
     button.click();
-    expect(JSON.stringify(ReactPiwik.events)).toMatchSnapshot();
-    ReactPiwik.flush();
+    expect(JSON.stringify(events)).toMatchSnapshot();
+    flushEvents();
   });
   it("should send piwik event when click no", () => {
     const { getByText } = render(
@@ -82,6 +81,6 @@ describe("<Feedback/>", () => {
     );
     const button = getByText(/non/i);
     button.click();
-    expect(JSON.stringify(ReactPiwik.events)).toMatchSnapshot();
+    expect(JSON.stringify(events)).toMatchSnapshot();
   });
 });

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Section, theme, Wrapper } from "@cdt/ui";
 import styled from "styled-components";
-import ReactPiwik from "react-piwik";
+import { matopush } from "../../piwik";
 
 import { FeedbackForm } from "./FeedbackForm";
 import {
@@ -22,7 +22,7 @@ function Feedback({
   const [isSent, setSent] = useState(false); // false, true,
 
   const onSetSatisfaction = answer => {
-    ReactPiwik.push([
+    matopush([
       "trackEvent",
       "feedback",
       answer ? "positive" : "negative",
@@ -42,7 +42,7 @@ function Feedback({
   };
 
   const submitFeedback = data => {
-    ReactPiwik.push([
+    matopush([
       "trackEvent",
       "feedback",
       isSatisfied ? "submit positive form" : "submit negative form",
