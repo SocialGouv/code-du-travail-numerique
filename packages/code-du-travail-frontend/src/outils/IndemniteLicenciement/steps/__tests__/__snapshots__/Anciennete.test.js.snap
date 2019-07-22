@@ -255,5 +255,6 @@ exports[`<Anciennete /> should render 1`] = `
       </span>
     </label>
   </div>
+  
 </div>
 `;

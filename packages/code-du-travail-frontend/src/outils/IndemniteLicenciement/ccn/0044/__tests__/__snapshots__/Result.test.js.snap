@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> should render 1`] = `
-.c20 {
+.c21 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -23,13 +23,13 @@ exports[`<Result /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):focus {
+.c21:not([disabled]):hover,
+.c21:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c20:not([disabled]):active {
+.c21:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -37,7 +37,7 @@ exports[`<Result /> should render 1`] = `
   outline: none;
 }
 
-.c20[aria-pressed="true"] {
+.c21[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -46,21 +46,21 @@ exports[`<Result /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c20[aria-pressed="true"]:not([disabled]):hover,
-.c20[aria-pressed="true"]:not([disabled]):focus {
+.c21[aria-pressed="true"]:not([disabled]):hover,
+.c21[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c20[aria-pressed="true"]:not([disabled]):active {
+.c21[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c20[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -82,7 +82,7 @@ exports[`<Result /> should render 1`] = `
   box-shadow: none;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +103,7 @@ exports[`<Result /> should render 1`] = `
   background-color: #d7e8f9;
 }
 
-.c19 {
+.c20 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -142,7 +142,7 @@ exports[`<Result /> should render 1`] = `
 .c6 {
   border-radius: 0.25rem;
   background-color: #53657d;
-  width: 50%;
+  width: calc(50% * 0.8333333333333334);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -158,7 +158,7 @@ exports[`<Result /> should render 1`] = `
 .c15 {
   border-radius: 0.25rem;
   background-color: #0053b3;
-  width: 50%;
+  width: calc(50% * 1);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -212,10 +212,6 @@ exports[`<Result /> should render 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 2rem -0.625rem;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .c3 {
@@ -234,6 +230,44 @@ exports[`<Result /> should render 1`] = `
 
 .c4 {
   font-size: 1.375rem;
+}
+
+.c17 {
+  margin: 1.25rem 0;
+}
+
+@media (max-width:980px) {
+  .c5 {
+    -webkit-flex-flow: wrap;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
+    width: calc(100% * 0.8333333333333334);
+  }
+}
+
+@media (max-width:980px) {
+  .c15 {
+    width: calc(100% * 1);
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c16 {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 <div>
@@ -425,10 +459,10 @@ exports[`<Result /> should render 1`] = `
     </section>
   </div>
   <div
-    class="c17"
+    class="c17 c18"
   >
     <div
-      class="c18"
+      class="c19"
     >
       <svg
         fill="none"
@@ -461,18 +495,15 @@ exports[`<Result /> should render 1`] = `
       </svg>
     </div>
     <div
-      class="c19"
+      class="c20"
       role="alert"
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
-       
     </div>
   </div>
-  <br />
-  <br />
   <button
     aria-pressed="false"
-    class="c20"
+    class="c21"
   >
     Recommencer une simulation
   </button>

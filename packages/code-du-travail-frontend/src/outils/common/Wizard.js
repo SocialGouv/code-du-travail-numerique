@@ -77,7 +77,7 @@ function Wizard({
                 )}
                 <StepItems activeIndex={stepIndex} items={stepItems} />
                 <StepWrapper narrow noPadding>
-                  <Step form={form} />
+                  <Step form={form} dispatch={dispatch} />
                 </StepWrapper>
                 <PrevNextBar
                   onPrev={prevStep}

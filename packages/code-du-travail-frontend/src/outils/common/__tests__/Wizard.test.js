@@ -14,12 +14,12 @@ const SecondStep = () => (
 );
 const steps = [
   {
-    name: "firstStep",
+    name: "first_step",
     label: "First Step",
     component: FirstStep
   },
   {
-    name: "secondStep",
+    name: "second_step",
     label: "Second Step",
     component: SecondStep
   }
@@ -28,7 +28,7 @@ const steps = [
 const AdditionalStep = () => <Field name="firstName" component="input" />;
 const additionalStep = {
   label: "Name",
-  name: "additional step",
+  name: "additional_step",
   component: AdditionalStep
 };
 

@@ -4,7 +4,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 .c4 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 7em;
   border-radius: 0.25rem;
@@ -68,6 +68,10 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -127,7 +131,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 
 <div>
   <p>
-    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuel de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
   <div
     class="c0"
@@ -194,6 +198,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
         class="c4"
         name="absences[0].duration"
         size="7"
+        type="number"
         value=""
       />
       <button
@@ -263,6 +268,10 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -283,7 +292,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 
 <div>
   <p>
-    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuel de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
   <div
     class="c0"
@@ -313,7 +322,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
 .c4 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 7em;
   border-radius: 0.25rem;
@@ -377,6 +386,10 @@ exports[`<AbsencePeriods /> should render 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   margin-bottom: 0.25rem;
 }
 
@@ -436,7 +449,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
 
 <div>
   <p>
-    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuel de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
   <div
     class="c0"
@@ -503,6 +516,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
         class="c4"
         name="absences[0].duration"
         size="7"
+        type="number"
         value="3"
       />
       <button

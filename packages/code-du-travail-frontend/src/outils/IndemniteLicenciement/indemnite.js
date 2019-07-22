@@ -55,9 +55,9 @@ function getIndemnite({
 }) {
   let formula = "-";
   let labels = {
-    "Salaire de réference (Sref)": salaireRef,
+    "Salaire de réference (Sref)": round(salaireRef),
     "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
-    "Ancienneté totale (A)": anciennete,
+    "Ancienneté totale (A)": round(anciennete),
     ...(anciennete - 10 > 0 && {
       "Ancienneté au delà de 10ans (A2)": round(anciennete - 10)
     })

@@ -5,6 +5,18 @@ import { StepAnciennete } from "./steps/Anciennete";
 import { StepSalaires } from "./steps/Salaires";
 import { StepPrimes } from "./steps/Primes";
 
+export const stepSalaires = {
+  component: StepSalaires,
+  name: "salaires",
+  label: "Salaires"
+};
+
+export const stepPrime = {
+  component: StepPrimes,
+  label: "Primes",
+  name: "primes"
+};
+
 export const initialSteps = [
   {
     component: StepIntro,
@@ -13,7 +25,7 @@ export const initialSteps = [
   },
   {
     component: StepInfo,
-    name: "infoGenerales",
+    name: "info_generales",
     label: "Informations générales"
   },
   {
@@ -21,46 +33,40 @@ export const initialSteps = [
     name: "anciennete",
     label: "Ancienneté"
   },
-  {
-    component: StepSalaires,
-    name: "salaires",
-    label: "Salaires"
-  },
+  stepSalaires,
   {
     component: StepIndemnite,
-    name: "indemniteLegale",
+    name: "indemnite_legale",
     label: "Indemnité légale"
   }
 ];
 
-export function stepReducer(steps, action) {
-  switch (action.type) {
+export function stepReducer(steps, { type, payload }) {
+  switch (type) {
     case "reset": {
       return [...initialSteps];
     }
-    case "add_primes": {
-      const salaireIndex = steps.findIndex(step => step.name === "salaires");
-      const newSteps = steps.filter(step => step.name !== "primes");
-      newSteps.splice(salaireIndex + 1, 0, {
-        component: StepPrimes,
-        label: "Primes",
-        name: "primes"
-      });
+    case "add_step": {
+      const previousStepIndex = steps.findIndex(
+        step => step.name === payload.insertAfter
+      );
+      const newSteps = steps.filter(step => step.name !== payload.step.name);
+      newSteps.splice(previousStepIndex + 1, 0, payload.step);
       return newSteps;
     }
-    case "remove_primes": {
-      return steps.filter(step => step.name !== "primes");
+    case "remove_step": {
+      return steps.filter(step => step.name !== payload);
     }
     case "add_branche": {
       return steps
         .filter(step => !/branche_/.test(step.name))
-        .concat(...action.payload);
+        .concat(...payload);
     }
     case "remove_branche": {
       return steps.filter(step => !/branche_/.test(step.name));
     }
     default:
-      console.warn("action unknow", action);
+      console.warn("action unknow", { type, payload });
       return steps;
   }
 }

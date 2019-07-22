@@ -60,6 +60,7 @@ function SalaireTempsPlein({ name }) {
                             <NumberInput
                               {...input}
                               size="10"
+                              type="number"
                               id={`salary${index}`}
                               invalid={touched && invalid}
                             />

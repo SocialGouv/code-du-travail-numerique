@@ -69,7 +69,7 @@ export function getIndemnite({
 
   if (Math.floor(anciennete) < 2) {
     error =
-      "Aucune indemnité de licenciement n’est prévue en deça de 2 ans d’ancienneté.";
+      "Aucune indemnité de licenciement n’est prévue en deçà de 2 ans d’ancienneté.";
   } else if (categorie === OUVRIER || categorie === TAM) {
     const bareme2_3 = {
       [OUVRIER]: { value: 1 / 10, label: "1/10" },

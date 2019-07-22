@@ -79,6 +79,11 @@ export const InlineError = styled.span`
   font-weight: 600;
   font-size: ${fonts.sizeSmall};
 `;
+export const BlockError = styled.div`
+  color: ${colors.darkerGrey};
+  font-weight: 600;
+  font-size: ${fonts.sizeSmall};
+`;
 
 export const Summary = styled.summary`
   margin-bottom: ${spacing.base};

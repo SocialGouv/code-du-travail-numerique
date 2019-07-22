@@ -76,7 +76,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -98,7 +98,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -216,6 +216,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
         class="c5"
         name="periods[0].duration"
         size="8"
+        type="number"
         value=""
       />
     </div>
@@ -227,6 +228,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
           class="c7"
           name="periods[0].salary"
           size="10"
+          type="number"
           value=""
         />
         <span
@@ -331,7 +333,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -353,7 +355,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -471,6 +473,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
         class="c5"
         name="periods[0].duration"
         size="8"
+        type="number"
         value="6"
       />
     </div>
@@ -482,6 +485,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
           class="c7"
           name="periods[0].salary"
           size="10"
+          type="number"
           value="1000"
         />
         <span
@@ -586,7 +590,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 .c5 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 8em;
   border-radius: 0.25rem;
@@ -608,7 +612,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
 .c7 {
   padding: 0;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
   line-height: inherit;
   width: 10em;
   border-radius: 0.25rem;
@@ -726,6 +730,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         class="c5"
         name="periods[0].duration"
         size="8"
+        type="number"
         value="12"
       />
     </div>
@@ -737,6 +742,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
           class="c7"
           name="periods[0].salary"
           size="10"
+          type="number"
           value="2000"
         />
         <span
@@ -780,6 +786,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         class="c5"
         name="periods[1].duration"
         size="8"
+        type="number"
         value="6"
       />
     </div>
@@ -791,6 +798,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
           class="c7"
           name="periods[1].salary"
           size="10"
+          type="number"
           value="1000"
         />
         <span

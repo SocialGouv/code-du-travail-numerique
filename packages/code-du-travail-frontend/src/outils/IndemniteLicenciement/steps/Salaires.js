@@ -89,6 +89,7 @@ function StepSalaires({ form }) {
                             <NumberInput
                               {...input}
                               size="10"
+                              type="number"
                               invalid={touched && invalid}
                             />
                             <Currency aria-hidden="true">€</Currency>

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { Button, theme } from "@cdt/ui";
-import { Input, InlineError } from "../../common/stepStyles";
+import { Input, BlockError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 import { OnChange } from "react-final-form-listeners";
 
@@ -15,7 +15,7 @@ function AbsencePeriods({ name, onChange }) {
         <>
           <p>
             Les congés maternité, arrêts de travail liés à une maladie
-            professionnelle, congés individuel de formation (Cif) et stage de
+            professionnelle, congés individuels de formation (Cif) et stage de
             fin d’étude de plus de 2 mois ne sont pas considérés comme des
             absences. Merci de ne pas les renseigner.
           </p>
@@ -39,7 +39,12 @@ function AbsencePeriods({ name, onChange }) {
                   subscribe={{ error: true, touched: true }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
-                      <Input {...input} size="7" invalid={touched && invalid} />
+                      <Input
+                        {...input}
+                        size="7"
+                        type="number"
+                        invalid={touched && invalid}
+                      />
                       <DelButton
                         variant="link"
                         type="button"
@@ -47,9 +52,9 @@ function AbsencePeriods({ name, onChange }) {
                       >
                         Supprimer
                       </DelButton>
-                      {error && touched && invalid ? (
-                        <InlineError>{error}</InlineError>
-                      ) : null}
+                      {error && touched && invalid && (
+                        <BlockError>{error}</BlockError>
+                      )}
                     </>
                   )}
                 />
@@ -93,6 +98,7 @@ const AddButton = styled(Button)`
 const Row = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: ${spacing.tiny};
 `;
 const MotifCell = styled.div`

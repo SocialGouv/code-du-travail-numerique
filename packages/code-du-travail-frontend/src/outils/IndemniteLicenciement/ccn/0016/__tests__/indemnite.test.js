@@ -5,7 +5,7 @@ import {
 import { getIndemnite, getSalaireRef } from "../../../indemnite";
 import { OUVRIER, TAM, CADRE } from "../Categorie";
 
-const initialData = {
+const initialValues = {
   salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
   hasTempsPartiel: false,
   anciennete: 1,
@@ -17,14 +17,14 @@ const tests = [
   {
     title: "2k, 12mois d'ancienneté, 55ans, ouvrier",
     data: {
-      ...initialData
+      ...initialValues
     },
     result: 0
   },
   {
     title: "2k, 24mois d'ancienneté, 55ans, ouvrier",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 2
     },
     result: 400
@@ -32,7 +32,7 @@ const tests = [
   {
     title: "2k, 24mois d'ancienneté, 61ans, ouvrier, retraite possible",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 2,
       age: 61,
       hasRetirementAge: true
@@ -42,7 +42,7 @@ const tests = [
   {
     title: "2k, 36mois d'ancienneté, 55ans, ouvrier",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 3
     },
     result: 1200
@@ -50,7 +50,7 @@ const tests = [
   {
     title: "2k, 24mois d'ancienneté, 55ans, TAM",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 2,
       categorie: TAM
     },
@@ -59,7 +59,7 @@ const tests = [
   {
     title: "2k, 36mois d'ancienneté, 55ans, TAM",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 3,
       categorie: TAM
     },
@@ -68,7 +68,7 @@ const tests = [
   {
     title: "2k, 24mois d'ancienneté, 55ans, cadre",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 2,
       categorie: CADRE
     },
@@ -77,7 +77,7 @@ const tests = [
   {
     title: "2k, 36mois d'ancienneté, 55ans, cadre",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 3,
       tamDuration: 12,
       cadreDuration: 24,
@@ -88,7 +88,7 @@ const tests = [
   {
     title: "2k, 36mois d'ancienneté, 61ans, cadre, retraite possible",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 3,
       age: 61,
       hasRetirementAge: true,
@@ -101,7 +101,7 @@ const tests = [
   {
     title: "2k, 6ans d'ancienneté, 61ans, cadre, retraite possible",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 6,
       age: 61,
       hasRetirementAge: true,
@@ -114,7 +114,7 @@ const tests = [
   {
     title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 10,
       age: 61,
       hasRetirementAge: true,
@@ -127,7 +127,7 @@ const tests = [
   {
     title: "2k, 10ans d'ancienneté, 61ans, cadre, retraite possible",
     data: {
-      ...initialData,
+      ...initialValues,
       anciennete: 10.3,
       age: 64,
       hasRetirementAge: true,
@@ -158,23 +158,23 @@ describe("getIndemnite", () => {
     });
   });
   it("should return an error for anciennete < 2", () => {
-    const salaireRef = getSalaireRef({ ...initialData });
+    const salaireRef = getSalaireRef({ ...initialValues });
     const { indemnite } = getIndemnite({
       salaireRef,
-      ...initialData
+      ...initialValues
     });
     const salaireRefConventionnel = getSalaireRefConventionnel({
-      ...initialData
+      ...initialValues
     });
 
     const res = getIndemniteConventionnelle({
       salaireRef: salaireRefConventionnel,
       indemnite,
-      ...initialData
+      ...initialValues
     });
 
     expect(res.error).toMatchInlineSnapshot(
-      `"Aucune indemnité de licenciement n’est prévue en deça de 2 ans d’ancienneté."`
+      `"Aucune indemnité de licenciement n’est prévue en deçà de 2 ans d’ancienneté."`
     );
   });
 });

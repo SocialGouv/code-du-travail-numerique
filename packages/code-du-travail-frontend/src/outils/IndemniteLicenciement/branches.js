@@ -28,6 +28,11 @@ export const branches = [
     label: "Convention collective nationale de la Prévention et sécurité"
   },
   {
+    value: "1486",
+    label:
+      "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987"
+  },
+  {
     value: "1534",
     label:
       "Convention collective nationale Viandes industries commerces en gros"

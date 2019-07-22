@@ -12,7 +12,7 @@ import {
   ECONOMIQUE
 } from "../Step";
 
-const initialData = {
+const initialValues = {
   salaires: Array.from({ length: 12 }).fill({ salary: 2000 }),
   hasTempsPartiel: false,
   categorie: NE_SAIT_PAS,
@@ -28,14 +28,14 @@ const tests = [
   {
     title: "2k, 12mois d'ancienneté",
     data: {
-      ...initialData
+      ...initialValues
     },
     result: 0
   },
   {
     title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       motif: DISCIPLINAIRE,
@@ -46,7 +46,7 @@ const tests = [
   {
     title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       anciennete: 10.667
@@ -56,7 +56,7 @@ const tests = [
   {
     title: "2k, 10ans et 8mois d'ancienneté, motif economique",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       anciennete: 10.667,
@@ -67,7 +67,7 @@ const tests = [
   {
     title: "2k, 19ans et 8mois d'ancienneté",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "2000-01-01",
       dateSortie: "2019-09-01",
       anciennete: 19.667
@@ -77,7 +77,7 @@ const tests = [
   {
     title: "2k, 19ans et 8mois d'ancienneté, motif economique",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "2000-01-01",
       dateSortie: "2019-09-01",
       anciennete: 19.667,
@@ -88,7 +88,7 @@ const tests = [
   {
     title: "2k, 20ans et 8mois d'ancienneté, cadre, embauche avant le 2000",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
@@ -100,7 +100,7 @@ const tests = [
     title:
       "2k, 20ans et 8mois d'ancienneté, motif economique, embauche avant le 2000",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
@@ -112,7 +112,7 @@ const tests = [
   {
     title: "2k, 20ans et 8mois d'ancienneté, non cadre, embauche avant le 2000",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
@@ -124,7 +124,7 @@ const tests = [
     title:
       "2k, 20ans et 8mois d'ancienneté, ne-sait-pas, embauche avant le 2000",
     data: {
-      ...initialData,
+      ...initialValues,
       dateEntree: "1999-01-01",
       dateSortie: "2019-09-01",
       anciennete: 20.667,
@@ -149,19 +149,19 @@ describe("getIndemnite", () => {
   });
 
   it("should return an error for anciennete < 2", () => {
-    const salaireRef = getSalaireRef({ ...initialData });
+    const salaireRef = getSalaireRef({ ...initialValues });
     const { indemnite } = getIndemnite({
       salaireRef,
-      ...initialData
+      ...initialValues
     });
     const salaireRefConventionnel = getSalaireRefConventionnel({
-      ...initialData
+      ...initialValues
     });
 
     const res = getIndemniteConventionnelle({
       salaireRef: salaireRefConventionnel,
       indemnite,
-      ...initialData
+      ...initialValues
     });
 
     expect(res.error).toMatchInlineSnapshot(
@@ -169,19 +169,19 @@ describe("getIndemnite", () => {
     );
   });
   it("should return an error for motif disciplinaire", () => {
-    const salaireRef = getSalaireRef({ ...initialData });
+    const salaireRef = getSalaireRef({ ...initialValues });
     const { indemnite } = getIndemnite({
       salaireRef,
-      ...initialData
+      ...initialValues
     });
     const salaireRefConventionnel = getSalaireRefConventionnel({
-      ...initialData
+      ...initialValues
     });
 
     const res = getIndemniteConventionnelle({
       salaireRef: salaireRefConventionnel,
       indemnite,
-      ...initialData,
+      ...initialValues,
       dateEntree: "2009-01-01",
       dateSortie: "2019-09-01",
       anciennete: 10.667,
