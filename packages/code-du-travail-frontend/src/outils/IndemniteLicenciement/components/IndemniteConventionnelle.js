@@ -9,8 +9,8 @@ import { Montant } from "./Montant";
 import { FormulaDetails } from "./FormulaDetails";
 
 function IndemniteCCn({
-  AdditionnalContent,
   branche,
+  children,
   indemniteConventionnelle,
   indemniteLegale,
   infoCalculLegal,
@@ -28,12 +28,7 @@ function IndemniteCCn({
       {error ? (
         <Alert>{error}</Alert>
       ) : (
-        <React.Fragment>
-          <Toast variant="info">
-            Un accord collectif d’entreprise, le contrat de travail et un usage
-            peuvent prévoir une formule de calcul plus avantageuse pour le
-            salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
-          </Toast>
+        <>
           <p>
             À partir des éléments que vous avez saisis, votre indémnité de
             licenciement est estimée à{" "}
@@ -80,12 +75,14 @@ function IndemniteCCn({
               <FormulaDetails infoCalcul={infoCalculConventionnel} />
             </Row>
           </RowWrapper>
-
-          {isIndemniteConventionnelleBigger && AdditionnalContent && (
-            <AdditionnalContent />
-          )}
-        </React.Fragment>
+          {children}
+        </>
       )}
+      <StyledToast variant="info">
+        Un accord collectif d’entreprise, le contrat de travail et un usage
+        peuvent prévoir une formule de calcul plus avantageuse pour le salarié.
+        Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
+      </StyledToast>
       <Button>Recommencer une simulation</Button>
     </>
   );
@@ -121,4 +118,8 @@ const Row = styled.section`
 
 const Heading = styled.h2`
   font-size: ${fonts.sizeH4};
+`;
+
+const StyledToast = styled(Toast)`
+  margin: ${spacing.interComponent} 0;
 `;

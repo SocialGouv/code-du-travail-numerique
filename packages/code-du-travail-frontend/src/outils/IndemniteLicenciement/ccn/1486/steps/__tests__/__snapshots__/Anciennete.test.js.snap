@@ -183,25 +183,7 @@ exports[`<Anciennete /> renders AncienneteCE component 2`] = `
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
-.c1 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 0.25rem;
-  border-color: #c9d3df;
-  background-color: #ebeff3;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
+.c2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -223,7 +205,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   box-shadow: none;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,7 +226,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   background-color: #fee5ad;
 }
 
-.c5 {
+.c4 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -257,7 +239,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c8 {
+.c7 {
   padding: 0;
   font-size: 1.15rem;
   margin-right: 2em;
@@ -271,7 +253,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -290,7 +272,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c6 {
+.c5 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
@@ -303,21 +285,8 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c2 {
+.c1 {
   margin-top: 1.25rem;
-}
-
-@media (max-width:600px) {
-  .c1 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c1 {
-    border: none;
-    padding: 0 5pt;
-  }
 }
 
 <div>
@@ -326,34 +295,30 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   >
     Contrats antérieurs
   </h2>
+  <p>
+    Si vous avez été auparavant employé par la même société et que la fin du/des contrat(s) n’est pas imputable à l’une des raisons suivantes:
+  </p>
+  <ul>
+    <li>
+      démission
+    </li>
+    <li>
+      licenciement pour faute grave ou faute lourde
+    </li>
+  </ul>
+  <p>
+    alors
+     
+    <strong>
+      la durée de ce(s) contrat(s) s’ajoute à votre ancienneté
+    </strong>
+    .
+  </p>
   <div
-    class="c1"
-  >
-    <p>
-      Si vous avez été auparavant employé par la même société et que la fin du/des contrat(s) n’est pas imputable à l’une des raisons suivantes:
-    </p>
-    <ul>
-      <li>
-        démission
-      </li>
-      <li>
-        licenciement pour faute grave ou faute lourde
-      </li>
-    </ul>
-    <p>
-      alors
-       
-      <strong>
-        la durée de ce(s) contrat(s) s’ajoute à votre ancienneté
-      </strong>
-      .
-    </p>
-  </div>
-  <div
-    class="c2 c3"
+    class="c1 c2"
   >
     <div
-      class="c4"
+      class="c3"
     >
       <svg
         fill="none"
@@ -384,22 +349,22 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       </svg>
     </div>
     <div
-      class="c5"
+      class="c4"
       role="alert"
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
   </div>
   <p
-    class="c6"
+    class="c5"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
   </p>
   <div
-    class="c7"
+    class="c6"
   >
     <label
-      class="c8"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"
@@ -411,7 +376,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       </span>
     </label>
     <label
-      class="c8"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"

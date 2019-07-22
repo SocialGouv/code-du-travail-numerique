@@ -11,17 +11,13 @@ import { IndemniteCCn } from "../../../components/IndemniteConventionnelle";
 function Result({ form }) {
   const data = form.getState().values;
 
-  const {
-    indemniteLegale,
-    salaireRefLegal,
-    infoCalculLegal
-  } = getIndemniteFromFinalForm(form);
+  const { indemniteLegale, infoCalculLegal } = getIndemniteFromFinalForm(form);
 
   const {
     indemniteConventionnelle,
     infoCalculConventionnel,
     error
-  } = getIndemniteConventionnelle(data, salaireRefLegal);
+  } = getIndemniteConventionnelle(data);
 
   const IndemniteWarning = () => (
     <StyledToast variant="warning">
@@ -36,8 +32,8 @@ function Result({ form }) {
       et passe donc à{" "}
       <Highlight>{round((indemniteConventionnelle * 2) / 3)}&nbsp;€</Highlight>
       <br />
-      Attention, ce tier ({round(indemniteConventionnelle / 3)}&nbsp;€) vous est
-      dû si la période d’essai dans ce nouvel emploi reste sans suite.
+      Attention, ce tiers ({round(indemniteConventionnelle / 3)}&nbsp;€) vous
+      est dû si la période d’essai dans ce nouvel emploi reste sans suite.
     </StyledToast>
   );
 
@@ -45,12 +41,13 @@ function Result({ form }) {
     <IndemniteCCn
       indemniteConventionnelle={indemniteConventionnelle}
       indemniteLegale={indemniteLegale}
-      AdditionnalContent={IndemniteWarning}
       infoCalculLegal={infoCalculLegal}
       infoCalculConventionnel={infoCalculConventionnel}
       branche={data.branche}
       error={error}
-    />
+    >
+      {indemniteConventionnelle > indemniteLegale ? <IndemniteWarning /> : null}
+    </IndemniteCCn>
   );
 }
 

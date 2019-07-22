@@ -33,7 +33,7 @@ export const initialSteps = [
     name: "anciennete",
     label: "Ancienneté"
   },
-  { ...stepSalaires },
+  stepSalaires,
   {
     component: StepIndemnite,
     name: "indemnite_legale",

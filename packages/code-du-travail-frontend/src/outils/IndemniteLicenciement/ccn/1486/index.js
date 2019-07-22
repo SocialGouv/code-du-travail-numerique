@@ -17,8 +17,8 @@ export const stepSalaire = {
 
 export const steps = [
   { component: Categorie, name: "branche_category", label: "Catégorie" },
-  { ...stepAnciennete },
-  { ...stepSalaire },
+  stepAnciennete,
+  stepSalaire,
   {
     component: Result,
     name: "branche_result",

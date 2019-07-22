@@ -26,7 +26,7 @@ function TextQuestion({ name, label, inputType = "text", size }) {
                     invalid={touched && invalid}
                     size={size}
                   />
-                  {error && (dirty || touched) && (
+                  {error && dirty && (
                     <ErrorWrapper>
                       <InlineError>{error}</InlineError>
                     </ErrorWrapper>

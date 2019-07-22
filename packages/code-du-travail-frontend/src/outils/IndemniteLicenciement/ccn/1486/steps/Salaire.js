@@ -14,67 +14,47 @@ export const Salaire = ({ form }) => {
   const data = form.getState().values;
   return (
     <>
-      <Toast type="info">
-        Le salaire à renseigner pour cette convention collective inclut:
-        <ul>
-          <li>les primes prévues au contrat de travail</li>
-        </ul>
-        <strong>mais elle exclut</strong>:
-        <ul>
-          <li>
-            les heures supplémentaires au delà de l’heure normale de
-            l’entreprise
-          </li>
-          <li>
-            les majorations/indemnités liées à un déplacement ou un détachement
-          </li>
-        </ul>
-      </Toast>
-      <StyledToast variant="warning">
-        Attention, les éventuelles <strong>primes</strong> renseignées
-        précédemment ne seront pas prises en compte dans le calcul de
-        l’indemnité de votre convention collective. Si vous en avez perçues,
-        merci de les intégrer à votre rémunération ci-après.
-        <br />
-        Aussi, si il y en a, les mois effectués en{" "}
-        <strong>temps partiel</strong> sont à considérer comme ceux effectués en
-        temps plein.
-      </StyledToast>
+      <Notice />
       <YesNoQuestion
         name="hasBrancheNewSalaire"
         label="De ce fait, avez-vous une modification à faire dans la déclaration de votre salaire&nbsp;?"
       />
-      {data.hasBrancheNewSalaire && <NewSalaire form={form} data={data} />}
+      {data.hasBrancheNewSalaire && (
+        <>
+          <YesNoQuestion
+            name="hasBrancheNewRegularSalaire"
+            label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
+            onChange={hasSameSalaire => {
+              if (hasSameSalaire) {
+                form.change("brancheNewIrregularSalaire", undefined);
+              } else {
+                form.change(
+                  "brancheNewIrregularSalaire",
+                  Array.from({ length: 12 }).map((_, index) => ({
+                    label: format(
+                      subMonths(data.dateSortie, index),
+                      "MMMM YYYY",
+                      {
+                        locale: frLocale
+                      }
+                    ),
+                    salary: null
+                  }))
+                );
+                form.change("brancheNewRegularSalaire", undefined);
+              }
+            }}
+          />
+          {data.hasBrancheNewRegularSalaire === true && <RegularNewSalaire />}
+          {data.hasBrancheNewRegularSalaire === false && (
+            <IrregularNewSalaire />
+          )}
+        </>
+      )}
     </>
   );
 };
 
-const NewSalaire = ({ form, data }) => (
-  <>
-    <YesNoQuestion
-      name="hasBrancheNewRegularSalaire"
-      label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
-      onChange={hasSameSalaire => {
-        if (hasSameSalaire) {
-          form.change("brancheNewIrregularSalaire", undefined);
-        } else {
-          form.change(
-            "brancheNewIrregularSalaire",
-            Array.from({ length: 12 }).map((_, index) => ({
-              label: format(subMonths(data.dateSortie, index), "MMMM YYYY", {
-                locale: frLocale
-              }),
-              salary: null
-            }))
-          );
-          form.change("brancheNewRegularSalaire", undefined);
-        }
-      }}
-    />
-    {data.hasBrancheNewRegularSalaire === true && <RegularNewSalaire />}
-    {data.hasBrancheNewRegularSalaire === false && <IrregularNewSalaire />}
-  </>
-);
 const RegularNewSalaire = () => (
   <>
     <Field
@@ -173,6 +153,35 @@ const IrregularNewSalaire = () => (
         </>
       )}
     </FieldArray>
+  </>
+);
+
+const Notice = () => (
+  <>
+    <p>Le salaire à renseigner pour cette convention collective inclut:</p>
+    <ul>
+      <li>les primes prévues au contrat de travail</li>
+    </ul>
+    <strong>mais elle exclut</strong>:
+    <ul>
+      <li>
+        les heures supplémentaires au delà de l’heure normale de l’entreprise
+      </li>
+      <li>
+        les majorations/indemnités liées à un déplacement ou un détachement
+      </li>
+    </ul>
+    <StyledToast variant="warning">
+      Attention, les éventuelles <strong>primes</strong> renseignées
+      précédemment ne seront pas prises en compte dans le calcul de l’indemnité
+      de votre convention collective. Si vous en avez perçues, merci de les
+      intégrer à votre rémunération ci-après.
+      <br />
+      Aussi, si il y en a, les mois effectués en <strong>
+        temps partiel
+      </strong>{" "}
+      sont à considérer comme ceux effectués en temps plein.
+    </StyledToast>
   </>
 );
 

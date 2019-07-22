@@ -57,11 +57,22 @@ const tests = [
     result: 19625
   },
   {
+    title: "CEI",
+    data: {
+      ...initialValues,
+      brancheCategorie: "CEI",
+      hasBrancheContrat: false,
+      brancheAncienneteEnqueteur: "3",
+      brancheAncienneteCE: "75"
+    },
+    result: 8325
+  },
+  {
     title: "CENI avec ajustement salaire",
     data: {
       ...initialValues,
       brancheCategorie: "CENI",
-      brancheAncienneteEnqueteur: "20",
+      brancheAncienneteEnqueteur: "4",
       brancheAncienneteCE: "75",
       hasBrancheNewSalaire: true,
       hasBrancheNewRegularSalaire: false,
@@ -116,7 +127,7 @@ const tests = [
         }
       ]
     },
-    result: 19228.12
+    result: 6256.77
   }
 ];
 describe("getIndemnite", () => {
@@ -125,9 +136,7 @@ describe("getIndemnite", () => {
       const {
         indemniteConventionnelle,
         infoCalculConventionnel
-      } = getIndemniteConventionnelle({
-        ...data
-      });
+      } = getIndemniteConventionnelle(data);
       expect(indemniteConventionnelle).toBe(result);
       expect(infoCalculConventionnel).toMatchSnapshot();
     });

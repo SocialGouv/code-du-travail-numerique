@@ -11,9 +11,6 @@ import {
 } from "../../../../common/stepStyles";
 import { isNumber } from "../../../../common/validators";
 
-export const ANCIENNETE_CE_KEY = "brancheAncienneteCE";
-export const ANCIENNETE_CE_ENQUETEUR_KEY = "brancheAncienneteEnqueteur";
-
 export const AncienneteCE = () => {
   return (
     <>
@@ -24,7 +21,7 @@ export const AncienneteCE = () => {
       </p>
 
       <Field
-        name={ANCIENNETE_CE_KEY}
+        name={"brancheAncienneteCE"}
         validate={isNumber}
         render={({ input, meta: { error, invalid, touched } }) => (
           <>
@@ -47,7 +44,7 @@ export const AncienneteCE = () => {
         SMIC.
       </p>
       <Field
-        name={ANCIENNETE_CE_ENQUETEUR_KEY}
+        name={"brancheAncienneteEnqueteur"}
         validate={isNumber}
         defaultValue={0}
         render={({ input, meta: { error, invalid, touched } }) => (

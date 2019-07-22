@@ -1,13 +1,21 @@
 import React from "react";
 import { render } from "react-testing-library";
 import { Form } from "react-final-form";
+import arrayMutators from "final-form-arrays";
 import { Salaire } from "../Salaire";
 
 describe("<Salaire />", () => {
   it("renders", () => {
     const onSubmit = jest.fn();
     const { container } = render(
-      <Form onSubmit={onSubmit}>{({ form }) => <Salaire form={form} />}</Form>
+      <Form
+        onSubmit={onSubmit}
+        mutators={{
+          ...arrayMutators
+        }}
+      >
+        {({ form }) => <Salaire form={form} />}
+      </Form>
     );
     expect(container).toMatchSnapshot();
   });
@@ -15,7 +23,13 @@ describe("<Salaire />", () => {
     const onSubmit = jest.fn();
     const initialValues = { hasBrancheNewSalaire: true };
     const { container } = render(
-      <Form onSubmit={onSubmit} initialValues={initialValues}>
+      <Form
+        onSubmit={onSubmit}
+        mutators={{
+          ...arrayMutators
+        }}
+        initialValues={initialValues}
+      >
         {({ form }) => <Salaire form={form} />}
       </Form>
     );
@@ -28,7 +42,13 @@ describe("<Salaire />", () => {
       hasBrancheNewRegularSalaire: true
     };
     const { container } = render(
-      <Form onSubmit={onSubmit} initialValues={initialValues}>
+      <Form
+        onSubmit={onSubmit}
+        mutators={{
+          ...arrayMutators
+        }}
+        initialValues={initialValues}
+      >
         {({ form }) => <Salaire form={form} />}
       </Form>
     );
@@ -51,7 +71,13 @@ describe("<Salaire />", () => {
       ]
     };
     const { container } = render(
-      <Form onSubmit={onSubmit} initialValues={initialValues}>
+      <Form
+        onSubmit={onSubmit}
+        mutators={{
+          ...arrayMutators
+        }}
+        initialValues={initialValues}
+      >
         {({ form }) => <Salaire form={form} />}
       </Form>
     );

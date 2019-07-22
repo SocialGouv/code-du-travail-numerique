@@ -1,4 +1,5 @@
 import { round, sum } from "../../../common/math";
+import { getSalaireRef } from "../../indemnite";
 
 const COEFF_ETAM_0 = 1 / 4;
 const COEFF_ETAM_1 = 0.3;
@@ -23,7 +24,7 @@ function getAncienneteConventionnelle({
   if (brancheCategorie === "CEI" || brancheCategorie === "CENI") {
     ancienneteConventionnelle +=
       parseFloat(brancheAncienneteCE) / 12 +
-      parseInt(brancheAncienneteEnqueteur); // We only accept round years
+      Math.floor(brancheAncienneteEnqueteur); // We only accept round years
   } else {
     // categorie is ETAM or IC
     ancienneteConventionnelle += parseFloat(ancienneteLegale);
@@ -61,8 +62,8 @@ function getSalaireRefConventionnel({
   }
 }
 
-export function getIndemniteConventionnelle(
-  {
+export function getIndemniteConventionnelle(data) {
+  const {
     // Generiques
     anciennete: ancienneteLegale,
     salaire,
@@ -83,9 +84,7 @@ export function getIndemniteConventionnelle(
     hasBrancheNewRegularSalaire,
     brancheNewRegularSalaire,
     brancheNewIrregularSalaire
-  },
-  salaireRefLegal
-) {
+  } = data;
   // First of all, compute the new anciennete
   const ancienneteConventionnelle = getAncienneteConventionnelle({
     brancheCategorie,
@@ -100,7 +99,7 @@ export function getIndemniteConventionnelle(
   let formula;
   let error;
   if (brancheCategorie === "CEI") {
-    salaireRefConventionnel = round(salaireRefLegal);
+    salaireRefConventionnel = round(getSalaireRef(data));
   } else if (hasBrancheNewSalaire) {
     salaireRefConventionnel = getSalaireRefConventionnel({
       hasTempsPartiel: false,
@@ -143,32 +142,43 @@ export function getIndemniteConventionnelle(
     error = ERROR_LABEL;
   }
 
-  const inedmniteMax = maxMonthIndemnite * salaireRefConventionnel;
+  const indemniteMax = maxMonthIndemnite * salaireRefConventionnel;
   const previousIndemnites =
     hasBrancheContrat &&
     brancheContrat.considered &&
     parseFloat(brancheContrat.indemnite);
 
-  let labels = {
-    "Coefficient d'indemnité conventionnel (C)": round(coefficient),
-    "Salaire de référence (Sref)": round(salaireRefConventionnel),
-    "Ancienneté conventionnelle (A)": round(ancienneteConventionnelle),
-    "Plafond d'indemnité conventionnel en mois (Pmois)": maxMonthIndemnite,
-    ...(previousIndemnites && {
-      "Indemnité de licenciement perçue précédemment ( I )": previousIndemnites
-    })
-  };
-
-  formula = `(C * Sref * A${previousIndemnites ? " - I" : ""}) <= Pmois * Sref`;
-  const indemniteConventionnelleNotFloored = round(
+  const indemniteConventionnelleNotCeiled = round(
     coefficient * salaireRefConventionnel * ancienneteConventionnelle -
       (previousIndemnites || 0)
   );
 
-  const indemniteConventionnelle = Math.min(
-    indemniteConventionnelleNotFloored,
-    inedmniteMax
-  );
+  const isCeilingReached = indemniteMax <= indemniteConventionnelleNotCeiled;
+
+  const indemniteConventionnelle = isCeilingReached
+    ? indemniteMax
+    : indemniteConventionnelleNotCeiled;
+
+  let labels = {
+    "Salaire de référence (Sref)": round(salaireRefConventionnel),
+    ...(isCeilingReached && {
+      "Plafond d'indemnité conventionnel en mois (Pmois)": maxMonthIndemnite
+    }),
+    ...(!isCeilingReached && {
+      "Coefficient d'indemnité conventionnel (C)": round(coefficient)
+    }),
+    ...(!isCeilingReached && {
+      "Ancienneté conventionnelle (A)": round(ancienneteConventionnelle)
+    }),
+    ...(!isCeilingReached &&
+      previousIndemnites && {
+        "Indemnité de licenciement perçue précédemment ( I )": previousIndemnites
+      })
+  };
+
+  formula = isCeilingReached
+    ? `Pmois * Sref`
+    : `(C * Sref * A${previousIndemnites ? " - I" : ""})`;
 
   return {
     indemniteConventionnelle,

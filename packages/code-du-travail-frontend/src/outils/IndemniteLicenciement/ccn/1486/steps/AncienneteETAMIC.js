@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { Toast, theme, Wrapper } from "@cdt/ui";
+import { Toast, theme } from "@cdt/ui";
 
 import {
   BlockError,
@@ -23,23 +23,21 @@ export const AncienneteETAMIC = ({ form }) => {
   return (
     <>
       <SectionTitle>Contrats antérieurs</SectionTitle>
-      <Wrapper variant="dark">
-        <p>
-          Si vous avez été auparavant employé par la même société et que la fin
-          du/des contrat(s) n’est pas imputable à l’une des raisons suivantes:
-        </p>
-        <ul>
-          <li>démission</li>
-          <li>licenciement pour faute grave ou faute lourde</li>
-        </ul>
-        <p>
-          alors{" "}
-          <strong>
-            la durée de ce(s) contrat(s) s’ajoute à votre ancienneté
-          </strong>
-          .
-        </p>
-      </Wrapper>
+      <p>
+        Si vous avez été auparavant employé par la même société et que la fin
+        du/des contrat(s) n’est pas imputable à l’une des raisons suivantes:
+      </p>
+      <ul>
+        <li>démission</li>
+        <li>licenciement pour faute grave ou faute lourde</li>
+      </ul>
+      <p>
+        alors{" "}
+        <strong>
+          la durée de ce(s) contrat(s) s’ajoute à votre ancienneté
+        </strong>
+        .
+      </p>
       <StyledToast variant="warning">
         Dans le cas de la démission, l’employeur peut accepter de prendre en
         compte la durée du contrat de travail correspondant pour l’appréciation
@@ -80,24 +78,20 @@ export const AncienneteETAMIC = ({ form }) => {
               </>
             )}
           />
-          {data[CONTRAT_KEY] && Boolean(parseInt(data[CONTRAT_KEY].duration)) && (
-            <>
-              <StyledToast variant="info">
-                Il est important de préciser l’indemnité de licenciement
-                éventuellement perçue lors d’un précédent licenciement dans la
-                même entreprise. L’employeur actuel peut la déduire de
-                l’indemnité de licenciement en train d’être calculée.
-              </StyledToast>
-              <CurrencyField
-                name={`${CONTRAT_KEY}.indemnite`}
-                label="Indemnité de licenciement précédemment perçue"
-              />
-              <YesNoQuestion
-                name={`${CONTRAT_KEY}.considered`}
-                label="Souhaitez vous déduire cette indemnité&nbsp;?"
-              />
-            </>
-          )}
+          <StyledToast variant="info">
+            Il est important de préciser l’indemnité de licenciement
+            éventuellement perçue lors d’un précédent licenciement dans la même
+            entreprise. L’employeur actuel peut la déduire de l’indemnité de
+            licenciement en train d’être calculée.
+          </StyledToast>
+          <CurrencyField
+            name={`${CONTRAT_KEY}.indemnite`}
+            label="Indemnité de licenciement précédemment perçue"
+          />
+          <YesNoQuestion
+            name={`${CONTRAT_KEY}.considered`}
+            label="Souhaitez vous déduire cette indemnité&nbsp;?"
+          />
         </>
       )}
     </>
