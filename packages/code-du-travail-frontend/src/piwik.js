@@ -9,8 +9,6 @@ if (typeof window !== "undefined" && PIWIK_URL && PIWIK_SITE_ID) {
     url: PIWIK_URL,
     siteId: PIWIK_SITE_ID
   });
-  matopush(["setCustomUrl", location.path]);
-  matopush(["setDocumentTitle", document.title]);
   matopush(["trackPageView"]);
   let previousPath;
   Router.events.on("routeChangeComplete", path => {
