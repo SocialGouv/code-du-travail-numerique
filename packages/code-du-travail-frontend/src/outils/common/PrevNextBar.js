@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button, theme } from "@cdt/ui";
+import { Button, Container, theme } from "@cdt/ui";
 
 function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
   return (
-    <ButtonBar>
+    <StyledContainer narrow noPadding>
       {previousVisible && (
         <PreviousButton type="button" onClick={onPrev} variant="secondary">
           Précédent
@@ -16,7 +16,7 @@ function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
           Suivant
         </NextButton>
       )}
-    </ButtonBar>
+    </StyledContainer>
   );
 }
 PrevNextBar.propTypes = {
@@ -36,10 +36,10 @@ export { PrevNextBar };
 
 const { spacing } = theme;
 
-const ButtonBar = styled.div`
-  margin-bottom: ${spacing.small};
+const StyledContainer = styled(Container)`
+  margin: ${spacing.large} 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: ;
 `;
 const NextButton = styled(Button)`
   margin-left: auto;

@@ -121,15 +121,11 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c7 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c8 {
@@ -193,8 +189,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 }
 
 .c5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -238,7 +233,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       </p>
     </div>
     <div
-      class="c7"
+      class="c7 c6"
     >
       <button
         aria-pressed="false"
@@ -372,15 +367,11 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 }
 
 .c7 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c8 {
@@ -444,8 +435,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 }
 
 .c5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -492,7 +482,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
       </p>
     </div>
     <div
-      class="c7"
+      class="c7 c6"
     >
       <button
         aria-pressed="false"
@@ -627,15 +617,11 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c7 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c8 {
@@ -699,8 +685,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 }
 
 .c5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -754,7 +739,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       </p>
     </div>
     <div
-      class="c7"
+      class="c7 c6"
     >
       <button
         aria-pressed="false"
@@ -888,15 +873,11 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c7 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c8 {
@@ -960,8 +941,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
 }
 
 .c5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -1008,7 +988,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
       </p>
     </div>
     <div
-      class="c7"
+      class="c7 c6"
     >
       <button
         aria-pressed="false"
@@ -1142,15 +1122,11 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 .c7 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c8 {
@@ -1214,8 +1190,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 }
 
 .c5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -1262,7 +1237,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       </p>
     </div>
     <div
-      class="c7"
+      class="c7 c6"
     >
       <button
         aria-pressed="false"
@@ -1397,15 +1372,11 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c7 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c8 {
@@ -1469,8 +1440,7 @@ exports[`<Wizard /> should render a step 1`] = `
 }
 
 .c5 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -1514,7 +1484,7 @@ exports[`<Wizard /> should render a step 1`] = `
       </p>
     </div>
     <div
-      class="c7"
+      class="c7 c6"
     >
       <button
         aria-pressed="false"

@@ -113,6 +113,5 @@ export { Wizard };
 const { spacing } = theme;
 
 const StepWrapper = styled(Container)`
-  margin-top: ${spacing.large};
-  margin-bottom: ${spacing.large};
+  margin: ${spacing.large} 0;
 `;
