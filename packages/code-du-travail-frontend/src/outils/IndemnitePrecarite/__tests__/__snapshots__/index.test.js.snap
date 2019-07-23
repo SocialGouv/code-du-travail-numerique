@@ -158,15 +158,11 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
 }
 
 .c10 {
-  margin-bottom: 0.625rem;
+  margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c11 {
@@ -230,8 +226,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
 }
 
 .c8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 @media print {
@@ -346,7 +341,7 @@ exports[`<SimulateurIndemnitePrecarite /> should render 1`] = `
             </p>
           </div>
           <div
-            class="c10"
+            class="c10 c9"
           >
             <button
               aria-pressed="false"
