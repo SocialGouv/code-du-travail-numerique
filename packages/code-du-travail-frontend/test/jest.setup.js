@@ -13,10 +13,6 @@ jest.mock("next-server/config", () => () => ({
   }
 }));
 
-jest.mock("../src/piwik", () => ({
-  matopush: jest.fn()
-}));
-
 // HACK(lionelB): trick to prevent @reach-modal warning if styles are not imported
 // jsdom doesn"t support it for now @see https://github.com/jsdom/jsdom/issues/1895
 // We will be able to use :
