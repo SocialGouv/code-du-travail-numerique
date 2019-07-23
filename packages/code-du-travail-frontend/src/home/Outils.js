@@ -77,7 +77,7 @@ export default class Outils extends React.PureComponent {
               <Tile>
                 <Category
                   title="Prochainement"
-                  text="Découvrez d'autres outils"
+                  text="Bientôt d'autres outils disponibles..."
                   icon="/static/assets/icons/time.svg"
                 />
               </Tile>

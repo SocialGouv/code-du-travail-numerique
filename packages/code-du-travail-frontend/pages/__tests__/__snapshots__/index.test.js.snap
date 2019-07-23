@@ -959,7 +959,7 @@ exports[`<Home /> should render 1`] = `
                 <p
                   class="c28"
                 >
-                  Découvrez d'autres outils
+                  Bientôt d'autres outils disponibles...
                 </p>
               </div>
             </a>
