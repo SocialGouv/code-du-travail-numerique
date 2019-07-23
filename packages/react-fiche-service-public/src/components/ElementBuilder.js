@@ -82,6 +82,8 @@ export function ElementBuilder({ data, headingLevel }) {
     case "Chapitre":
     case "SousChapitre":
       return parseChildren(data.$, headingLevel);
+    case "Expression":
+      return <i>{parseChildren(data.$, headingLevel)}</i>;
     case "MiseEnEvidence":
     case "Valeur":
       return <strong>{parseChildren(data.$, headingLevel)}</strong>;
