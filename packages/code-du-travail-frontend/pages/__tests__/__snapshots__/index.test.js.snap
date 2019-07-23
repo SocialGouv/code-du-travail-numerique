@@ -884,6 +884,35 @@ exports[`<Home /> should render 1`] = `
           <li
             class="c23"
           >
+            <a
+              class="c24"
+              href="/outils/indemnite-precarite"
+              title="Calculez la prime de précarité"
+            >
+              <div
+                class="c25"
+              >
+                <img
+                  alt=""
+                  class="c26"
+                  src="/static/assets/icons/coins.svg"
+                />
+                <h3
+                  class="c27"
+                >
+                  Prime de précarité
+                </h3>
+                <p
+                  class="c28"
+                >
+                  Simulez la prime de précarité d’un salarié.
+                </p>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c23"
+          >
             <button
               class="c29"
             >
@@ -907,6 +936,33 @@ exports[`<Home /> should render 1`] = `
                 </p>
               </div>
             </button>
+          </li>
+          <li
+            class="c23"
+          >
+            <a
+              class="c24"
+            >
+              <div
+                class="c25"
+              >
+                <img
+                  alt=""
+                  class="c26"
+                  src="/static/assets/icons/time.svg"
+                />
+                <h3
+                  class="c27"
+                >
+                  Prochainement
+                </h3>
+                <p
+                  class="c28"
+                >
+                  Découvrez d'autres outils
+                </p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
