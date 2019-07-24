@@ -6,11 +6,11 @@ import GitHubForkRibbon from "react-github-fork-ribbon";
 import * as Sentry from "@sentry/browser";
 import ErrorPage from "./_error";
 
-const {
-  publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
-} = getConfig();
+import { initPiwik } from "../src/piwik";
 
-import "../src/piwik";
+const {
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID, SENTRY_PUBLIC_DSN }
+} = getConfig();
 
 if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
   Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
@@ -45,6 +45,10 @@ export default class MyApp extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    initPiwik({ siteId: PIWIK_SITE_ID, piwikUrl: PIWIK_URL });
   }
 
   componentDidCatch(error, errorInfo) {

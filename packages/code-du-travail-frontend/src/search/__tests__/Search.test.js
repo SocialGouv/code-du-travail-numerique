@@ -10,6 +10,10 @@ jest.mock("../search.service.js", () => ({
   searchResults: jest.fn()
 }));
 
+jest.mock("../../piwik", () => ({
+  matopush: jest.fn()
+}));
+
 Router.pushRoute = jest.fn();
 
 const q = "foo";

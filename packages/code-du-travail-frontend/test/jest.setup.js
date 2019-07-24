@@ -12,9 +12,6 @@ jest.mock("next-server/config", () => () => ({
     PACKAGE_VERSION: "x.y.z"
   }
 }));
-jest.mock("react-piwik", () => ({
-  push: jest.fn()
-}));
 
 // HACK(lionelB): trick to prevent @reach-modal warning if styles are not imported
 // jsdom doesn"t support it for now @see https://github.com/jsdom/jsdom/issues/1895
