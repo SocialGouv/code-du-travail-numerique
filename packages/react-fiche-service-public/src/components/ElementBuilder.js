@@ -94,11 +94,7 @@ export function ElementBuilder({ data, headingLevel }) {
     // These ones are still to be defined
     case "LienIntra":
     case "LienInterne":
-      // there are empty links sometimes...
-      if (data.$) {
-        return parseChildren(data.$, headingLevel);
-      }
-      return null;
+      return parseChildren(data.$, headingLevel);
     // Otherwise we simply ignore the element
     default:
       return null;
@@ -106,15 +102,13 @@ export function ElementBuilder({ data, headingLevel }) {
 }
 
 ElementBuilder.propTypes = {
-  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   headingLevel: PropTypes.number
 };
 
 ElementBuilder.defaultProps = {
   headingLevel: 0
 };
-
-export default ElementBuilder;
 
 const ANoter = styled.div`
   margin-bottom: ${spacing.base};

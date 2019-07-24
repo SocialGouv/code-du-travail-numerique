@@ -1,21 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-import FicheBuilder from "./ElementBuilder";
+import { ElementBuilder } from "./ElementBuilder";
 
 class FicheServicePublic extends React.PureComponent {
   render() {
     return (
-      <StyledElementBuilder>
-        <FicheBuilder {...this.props} />
-      </StyledElementBuilder>
+      <Div>
+        <ElementBuilder {...this.props} />
+      </Div>
     );
   }
 }
 
 export default FicheServicePublic;
 
-const StyledElementBuilder = styled.div`
+const Div = styled.div`
   & > *:first-child {
     margin-top: 0;
   }

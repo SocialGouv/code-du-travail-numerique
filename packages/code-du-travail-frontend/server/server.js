@@ -2,8 +2,8 @@
 const express = require("express");
 const next = require("next");
 const routes = require("../routes");
-const expressSitemap = require('express-sitemap-xml');
-const getUrls = require("./get-urls")
+const expressSitemap = require("express-sitemap-xml");
+const getUrls = require("./get-urls");
 /**
  * this env variable is use to target developpement / staging deployement
  * in order to block indexing bot using a x-robot-header and an appropriate robots.txt
@@ -17,7 +17,7 @@ const app = next({ dev });
 const handler = routes.getRequestHandler(app);
 
 /**
- * This middleware is only osed for dev / staging deployement
+ * This middleware is only used for dev / staging deployement
  * to block crawler that come to the page without checking robots.txt
  */
 const disallowRobots = (_, res, next) => {
@@ -43,7 +43,7 @@ const robotTxtHandler = (req, res) => {
 
 app.prepare().then(() => {
   const server = express().get("/robots.txt", robotTxtHandler);
-  server.use(expressSitemap(getUrls, FRONTEND_HOST))
+  server.use(expressSitemap(getUrls, FRONTEND_HOST));
 
   if (!LIVEPROD) {
     server.use(disallowRobots);
