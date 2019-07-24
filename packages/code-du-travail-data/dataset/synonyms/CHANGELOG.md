@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/SocialGouv/code-du-travail-frontend/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
+
+
+### Bug Fixes
+
+* **data:** fix typo in synonyms ([#1018](https://github.com/SocialGouv/code-du-travail-frontend/issues/1018)) ([876e9f3](https://github.com/SocialGouv/code-du-travail-frontend/commit/876e9f3))
+* **data:** improve cdtn synonyms syntax ([#982](https://github.com/SocialGouv/code-du-travail-frontend/issues/982)) ([bec2c3b](https://github.com/SocialGouv/code-du-travail-frontend/commit/bec2c3b))
+
+
+
+
+
 # 2.1.0 (2019-03-26)
 
 
