@@ -30,6 +30,14 @@ const outils = [
     text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
     routeName: "outils",
     slug: "simulateur-embauche"
+  },
+  {
+    icon: "/static/assets/icons/coins.svg",
+    title: "Prime de précarité",
+    hrefTitle: "Calculez la prime de précarité",
+    text: "Simulez la prime de précarité d’un salarié.",
+    routeName: "outils",
+    slug: "indemnite-precarite"
   }
 ];
 
@@ -64,6 +72,15 @@ export default class Outils extends React.PureComponent {
             )}
             <GridCell>
               <ConventionModal />
+            </GridCell>
+            <GridCell>
+              <Tile>
+                <Category
+                  title="Prochainement"
+                  text="Bientôt d'autres outils disponibles..."
+                  icon="/static/assets/icons/time.svg"
+                />
+              </Tile>
             </GridCell>
           </Grid>
         </Container>
