@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
+
+
+### Bug Fixes
+
+* **api:** add a boost to article_id match ([#970](https://github.com/SocialGouv/code-du-travail-numerique/issues/970)) ([7b2ab7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/7b2ab7f)), closes [#936](https://github.com/SocialGouv/code-du-travail-numerique/issues/936)
+* **data:** FAQ : remove invalid answer in ([#1029](https://github.com/SocialGouv/code-du-travail-numerique/issues/1029)) ([f88e006](https://github.com/SocialGouv/code-du-travail-numerique/commit/f88e006))
+* **data:** fix french indexing ([#983](https://github.com/SocialGouv/code-du-travail-numerique/issues/983)) ([00e4e13](https://github.com/SocialGouv/code-du-travail-numerique/commit/00e4e13))
+* **data:** fix typo in cdtn mapping ([#995](https://github.com/SocialGouv/code-du-travail-numerique/issues/995)) ([2031ba3](https://github.com/SocialGouv/code-du-travail-numerique/commit/2031ba3))
+* **data:** fix typo in synonyms ([#1018](https://github.com/SocialGouv/code-du-travail-numerique/issues/1018)) ([876e9f3](https://github.com/SocialGouv/code-du-travail-numerique/commit/876e9f3))
+* **data:** improve cdtn synonyms syntax ([#982](https://github.com/SocialGouv/code-du-travail-numerique/issues/982)) ([bec2c3b](https://github.com/SocialGouv/code-du-travail-numerique/commit/bec2c3b))
+* **data:** typo in modele lettre ([#974](https://github.com/SocialGouv/code-du-travail-numerique/issues/974)) ([92509af](https://github.com/SocialGouv/code-du-travail-numerique/commit/92509af)), closes [#975](https://github.com/SocialGouv/code-du-travail-numerique/issues/975)
+* **data:** update fiches Mt data with and internal ID to track fiche ID ([#1033](https://github.com/SocialGouv/code-du-travail-numerique/issues/1033)) ([0c7777a](https://github.com/SocialGouv/code-du-travail-numerique/commit/0c7777a))
+
+
+### Features
+
+* **data:** add datafiller results to api ([#906](https://github.com/SocialGouv/code-du-travail-numerique/issues/906)) ([c4f5810](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4f5810)), closes [#887](https://github.com/SocialGouv/code-du-travail-numerique/issues/887)
+* **data:** add glossary terms to dataset ([#977](https://github.com/SocialGouv/code-du-travail-numerique/issues/977)) ([330748c](https://github.com/SocialGouv/code-du-travail-numerique/commit/330748c)), closes [#976](https://github.com/SocialGouv/code-du-travail-numerique/issues/976)
+* **frontend:** add page /stats for ([#895](https://github.com/SocialGouv/code-du-travail-numerique/issues/895)) ([8f87f27](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f87f27)), closes [#873](https://github.com/SocialGouv/code-du-travail-numerique/issues/873) [#873](https://github.com/SocialGouv/code-du-travail-numerique/issues/873)
+* **frontend:** add simulateur indemnite precarite ([#1023](https://github.com/SocialGouv/code-du-travail-numerique/issues/1023)) ([f6327bc](https://github.com/SocialGouv/code-du-travail-numerique/commit/f6327bc)), closes [#933](https://github.com/SocialGouv/code-du-travail-numerique/issues/933)
+
+
+
+
+
 # [2.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.2.0...v2.3.0) (2019-04-10)
 
 

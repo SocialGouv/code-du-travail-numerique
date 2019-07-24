@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
+
+
+### Bug Fixes
+
+* **api:** add a boost to article_id match ([#970](https://github.com/SocialGouv/code-du-travail-numerique/issues/970)) ([7b2ab7f](https://github.com/SocialGouv/code-du-travail-numerique/commit/7b2ab7f)), closes [#936](https://github.com/SocialGouv/code-du-travail-numerique/issues/936)
+* **data:** fix french indexing ([#983](https://github.com/SocialGouv/code-du-travail-numerique/issues/983)) ([00e4e13](https://github.com/SocialGouv/code-du-travail-numerique/commit/00e4e13))
+* **data:** improve cdtn synonyms syntax ([#982](https://github.com/SocialGouv/code-du-travail-numerique/issues/982)) ([bec2c3b](https://github.com/SocialGouv/code-du-travail-numerique/commit/bec2c3b))
+
+
+### Features
+
+* **api:** add qs.skipSavedResults to bypass datafiller results ([#1004](https://github.com/SocialGouv/code-du-travail-numerique/issues/1004)) ([12c1cd4](https://github.com/SocialGouv/code-du-travail-numerique/commit/12c1cd4))
+* **api:** boost document sources ([#1017](https://github.com/SocialGouv/code-du-travail-numerique/issues/1017)) ([4836103](https://github.com/SocialGouv/code-du-travail-numerique/commit/4836103))
+* **api:** improve searching for conventions by IDCC prefixes ([1e2aa84](https://github.com/SocialGouv/code-du-travail-numerique/commit/1e2aa84))
+* **data:** add datafiller results to api ([#906](https://github.com/SocialGouv/code-du-travail-numerique/issues/906)) ([c4f5810](https://github.com/SocialGouv/code-du-travail-numerique/commit/c4f5810)), closes [#887](https://github.com/SocialGouv/code-du-travail-numerique/issues/887)
+
+
+
+
+
 # [2.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.1.0...v2.2.0) (2019-04-09)
 
 
