@@ -1,18 +1,22 @@
 version: "3"
 
 services:
-  # In production, dockerize the frontend
+  # In production, use registry image
+  elasticsearch:
+    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/elasticsearch:$CDTN_HASH
+    ports:
+      - 9200:920
+
   frontend:
-    image: socialgouv/code-du-travail-numerique-frontend:latest
+    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/frontend:$CDTN_HASH
     restart: always
     env_file:
       - .env
     ports:
       - $FRONTEND_PORT:$FRONTEND_PORT
 
-  # In production, dockerize the API
   api:
-    image: socialgouv/code-du-travail-numerique-api:latest
+    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/api:$CDTN_HASH
     restart: always
     env_file:
       - .env
@@ -28,5 +32,10 @@ services:
       - ./packages/code-du-travail-data/dataset/courrier-type/docx:/code-du-travail-data/dataset/courrier-type/docx
 
   nlp_api:
+    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/nlp:$CDTN_HASH
+    restart: always
     environment:
       - FLASK_ENV=production
+
+  python:
+    image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$CDTN_HASH

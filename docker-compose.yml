@@ -2,8 +2,6 @@ version: "3"
 
 services:
   elasticsearch:
-    build:
-      context: ./docker/elasticsearch
     ulimits:
       memlock:
         soft: -1
@@ -17,9 +15,7 @@ services:
       - .env
     depends_on:
       - elasticsearch
-    build:
-      context: ./packages/code-du-travail-data
-      dockerfile: ./Dockerfile
+
 
   nlp_api:
     restart: always
@@ -27,9 +23,7 @@ services:
       - .env
     ports:
       - $NLP_PORT:$NLP_PORT
-    build:
-      context: ./packages/code-du-travail-nlp
-      dockerfile: ./Dockerfile
+
 
 volumes:
   esdata:
