@@ -13,6 +13,8 @@ _steps:
       - export TZ=Europe/Paris
       - curl -o- -L https://yarnpkg.com/install.sh | bash
       - export PATH="$HOME/.yarn/bin:$PATH"
+    install:
+      - yarn --frozen-lockfile
 
 _environments:
   - &github_keys
@@ -28,11 +30,6 @@ jobs:
       name: Pull Request Stage
       env:
         - ELASTICSEARCH_LOG_LEVEL=info
-      before_install:
-        - curl -o- -L https://yarnpkg.com/install.sh | bash
-        - export PATH="$HOME/.yarn/bin:$PATH"
-      install:
-        - yarn --frozen-lockfile
       before_script:
         - docker-compose up -d elasticsearch
 
