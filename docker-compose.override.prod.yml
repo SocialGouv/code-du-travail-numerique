@@ -5,7 +5,7 @@ services:
   elasticsearch:
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/elasticsearch:$CDTN_HASH
     ports:
-      - 9200:920
+      - 9200:9200
 
   frontend:
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/frontend:$CDTN_HASH

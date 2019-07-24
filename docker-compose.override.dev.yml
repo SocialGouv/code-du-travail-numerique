@@ -11,14 +11,12 @@ services:
   python:
     build:
       context: ./packages/code-du-travail-data
-      dockerfile: ./Dockerfile
     volumes:
       - ./packages/code-du-travail-data/:/app
 
   nlp_api:
     build:
       context: ./packages/code-du-travail-nlp
-      dockerfile: ./Dockerfile
     environment:
       - FLASK_RUN_PORT=$NLP_PORT
       - FLASK_ENV=development
