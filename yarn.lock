@@ -14061,11 +14061,6 @@ react-perfect-scrollbar@^1.4.4:
     perfect-scrollbar "^1.4.0"
     prop-types "^15.6.1"
 
-react-piwik@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.npmjs.org/react-piwik/-/react-piwik-1.6.0.tgz#3b9eee55167d953824867791cd5288593d652d66"
-  integrity sha512-ANK/SDDA3z827vcY8w77tTC8pOkpMSw1xNs5ifImho92oNS1rIfiTdVXNW7TpqP3a8hU+p9AxPAgPZhmkYtyzw==
-
 react-simple-code-editor@^0.9.0:
   version "0.9.10"
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.9.10.tgz#1ab5ea7215687ed918c6d0dae90736cf01890905"
