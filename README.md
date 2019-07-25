@@ -169,20 +169,6 @@ env:
 > - build Docker images
 > - push them to DockerHub
 
-Wait for the Travis Jobs to be fully done, including the push to DockerHub.
-
-SSH into the Dev Server (your SSH key needs to be added first, ask @revolunet)
-
-```sh
-cd dev
-git checkout master && git pull
-sh scripts/deploy-dev.sh
-```
-
-> This will:
-> - Pull the latest docker images from DockerHub
-> - Update containers with the new images
-
 Optionally needed:
 
 - update environment variables with `vim dev/.env`
@@ -209,6 +195,18 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 <br>
 <br>
 <br>
+
+## Deployment policy
+Tags can be automaticly deployed See https://github.com/SocialGouv/code-du-travail-numerique/deployments
+
+### Auto
+Trigger a custom build on Travis (in the "More options" right menu) on the tag v* you with a custom config:
+
+```
+env:
+  global:
+    - PRODUCTION=true 
+```
 
 ## Architecture
 
