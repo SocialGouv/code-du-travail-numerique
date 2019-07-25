@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepResult /> should render 1`] = `
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Durée du préavis de démission
+  </h2>
+  <p>
+    Le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu’une convention collective ou un accord d’entreprise voire un usage en prévoit les durées et modalités.
+  </p>
+</div>
+`;

@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInformations /> should render 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Quelle est votre convention collective ?
+  </h2>
+  <label
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="ccn"
+    >
+      Sélectionnez votre convention collective pour en savoir plus :
+    </label>
+    <select
+      class="c3"
+      id="ccn"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        Selectionner
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976
+      </option>
+      <option
+        value="0000"
+      >
+        Je ne sais pas
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes
+      </option>
+      <option
+        value="0843"
+      >
+        Convention collective nationale de la Boulangerie-pâtisserie artisanale
+      </option>
+    </select>
+    
+  </label>
+</div>
+`;

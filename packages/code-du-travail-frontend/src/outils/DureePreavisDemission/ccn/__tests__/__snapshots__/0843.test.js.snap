@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Result0843 /> should render 1`] = `
+.c0 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+<div>
+  <p>
+    En cas de démission, la 
+    <em>
+      Convention collective nationale de la Boulangerie-pâtisserie artisanale
+    </em>
+     prévoit le respect d’un préavis d’une durée de 
+    <strong>
+      2 mois
+    </strong>
+     pour un
+     
+    cadre
+  </p>
+  <div
+    class="c0"
+  >
+    Le contrat de travail, un accord collectif d’entreprise ou un usage peuvent prévoir une durée de préavis plus courte. Vous pouvez également convenir d’une dispense par accord avec l’employeur.
+  </div>
+</div>
+`;
+
+exports[`<Step0843 /> should render 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations spécifiques
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-category"
+    >
+      Préciser votre catégorie professionnelle.
+    </label>
+    <select
+      class="c3"
+      id="input-category"
+      name="category"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="ouvrier"
+      >
+        ouvriers et employés
+      </option>
+      <option
+        value="etam"
+      >
+        ETAM
+      </option>
+      <option
+        value="manager"
+      >
+        cadre
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<Step0843 /> should render seniority 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations spécifiques
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-category"
+    >
+      Préciser votre catégorie professionnelle.
+    </label>
+    <select
+      class="c3"
+      id="input-category"
+      name="category"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="ouvrier"
+      >
+        ouvriers et employés
+      </option>
+      <option
+        value="etam"
+      >
+        ETAM
+      </option>
+      <option
+        value="manager"
+      >
+        cadre
+      </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-seniority"
+    >
+      Préciser votre ancienneté dans l’entreprise.
+    </label>
+    <select
+      class="c3"
+      id="input-seniority"
+      name="seniority"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="<6"
+      >
+        moins de 6 mois
+      </option>
+      <option
+        value="6<a<24"
+      >
+        entre 6 et 24 mois
+      </option>
+      <option
+        value=">24"
+      >
+        supérieure à 24 mois
+      </option>
+    </select>
+  </div>
+</div>
+`;
