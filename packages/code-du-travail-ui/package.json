@@ -1,6 +1,6 @@
 {
   "name": "@cdt/ui",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "private": true,
   "description": "Composants ReactJS du Code du travail numérique",
   "main": "lib/index.js",
