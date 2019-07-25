@@ -154,6 +154,15 @@ env:
     - RELEASE=true
 ```
 
+You can change the lerna arguments though the LERNA_ARGS variable.
+
+ ```yml
+env:
+  global:
+    - LERNA_ARGS="--force-publish --yes --preid next"
+    - RELEASE=true
+```
+
 > This will :
 > - tag the release on GitHub
 > - update the changelogs
