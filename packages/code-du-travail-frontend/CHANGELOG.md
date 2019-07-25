@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.5.0) (2019-07-25)
+
+
+### Bug Fixes
+
+* **fiche-sp:** add support of Expression element ([#1045](https://github.com/SocialGouv/code-du-travail-numerique/issues/1045)) ([9f50028](https://github.com/SocialGouv/code-du-travail-numerique/commit/9f50028))
+* **frontend:** disallow web crawlers for dev / staging deployment  ([#1008](https://github.com/SocialGouv/code-du-travail-numerique/issues/1008)) ([a14be3e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a14be3e)), closes [#985](https://github.com/SocialGouv/code-du-travail-numerique/issues/985)
+* **frontend:** display error message in ccn infos ([#961](https://github.com/SocialGouv/code-du-travail-numerique/issues/961)) ([0730a0f](https://github.com/SocialGouv/code-du-travail-numerique/commit/0730a0f)), closes [#960](https://github.com/SocialGouv/code-du-travail-numerique/issues/960)
+* **frontend:** fix idl anciennete ([#1032](https://github.com/SocialGouv/code-du-travail-numerique/issues/1032)) ([1226cf5](https://github.com/SocialGouv/code-du-travail-numerique/commit/1226cf5)), closes [#1025](https://github.com/SocialGouv/code-du-travail-numerique/issues/1025)
+* **frontend:** fix key warning when render modeles list ([#1007](https://github.com/SocialGouv/code-du-travail-numerique/issues/1007)) ([a493342](https://github.com/SocialGouv/code-du-travail-numerique/commit/a493342))
+* **frontend:** fix source blur in search ([#958](https://github.com/SocialGouv/code-du-travail-numerique/issues/958)) ([7a1d139](https://github.com/SocialGouv/code-du-travail-numerique/commit/7a1d139))
+* **frontend:** fix undefined meta ([#990](https://github.com/SocialGouv/code-du-travail-numerique/issues/990)) ([a417e1e](https://github.com/SocialGouv/code-du-travail-numerique/commit/a417e1e))
+* **frontend:** fix wrong link styles ([#1001](https://github.com/SocialGouv/code-du-travail-numerique/issues/1001)) ([85140d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/85140d1))
+* **frontend:** handle http error properly for modeles page ([#993](https://github.com/SocialGouv/code-du-travail-numerique/issues/993)) ([8baa5d5](https://github.com/SocialGouv/code-du-travail-numerique/commit/8baa5d5))
+* **frontend:** improve CCN explanation text ([#1034](https://github.com/SocialGouv/code-du-travail-numerique/issues/1034)) ([a3e3cab](https://github.com/SocialGouv/code-du-travail-numerique/commit/a3e3cab)), closes [#1011](https://github.com/SocialGouv/code-du-travail-numerique/issues/1011)
+* **frontend:** intempestive re-render of form ([#1019](https://github.com/SocialGouv/code-du-travail-numerique/issues/1019)) ([35e4da5](https://github.com/SocialGouv/code-du-travail-numerique/commit/35e4da5))
+* **frontend:** make search bar consistent ([#969](https://github.com/SocialGouv/code-du-travail-numerique/issues/969)) ([e202e36](https://github.com/SocialGouv/code-du-travail-numerique/commit/e202e36))
+* **frontend:** show age question on ccn 44 ([#950](https://github.com/SocialGouv/code-du-travail-numerique/issues/950)) ([00ff373](https://github.com/SocialGouv/code-du-travail-numerique/commit/00ff373)), closes [#943](https://github.com/SocialGouv/code-du-travail-numerique/issues/943)
+* **frontend:** typo in filename ([#1000](https://github.com/SocialGouv/code-du-travail-numerique/issues/1000)) ([923b21d](https://github.com/SocialGouv/code-du-travail-numerique/commit/923b21d))
+* **frontend:** update matomo tracking ([#1041](https://github.com/SocialGouv/code-du-travail-numerique/issues/1041)) ([b8c9064](https://github.com/SocialGouv/code-du-travail-numerique/commit/b8c9064))
+* **idl:** fix regression [#986](https://github.com/SocialGouv/code-du-travail-numerique/issues/986) + add snapshot ([#989](https://github.com/SocialGouv/code-du-travail-numerique/issues/989)) ([4f99625](https://github.com/SocialGouv/code-du-travail-numerique/commit/4f99625))
+
+
+### Features
+
+* **frontend:** add ccn 2120 to idl  ([#966](https://github.com/SocialGouv/code-du-travail-numerique/issues/966)) ([cc0bcc2](https://github.com/SocialGouv/code-du-travail-numerique/commit/cc0bcc2)), closes [#931](https://github.com/SocialGouv/code-du-travail-numerique/issues/931)
+* **frontend:** add page /stats for ([#895](https://github.com/SocialGouv/code-du-travail-numerique/issues/895)) ([8f87f27](https://github.com/SocialGouv/code-du-travail-numerique/commit/8f87f27)), closes [#873](https://github.com/SocialGouv/code-du-travail-numerique/issues/873) [#873](https://github.com/SocialGouv/code-du-travail-numerique/issues/873)
+* **frontend:** add simulateur indemnite precarite ([#1023](https://github.com/SocialGouv/code-du-travail-numerique/issues/1023)) ([f6327bc](https://github.com/SocialGouv/code-du-travail-numerique/commit/f6327bc)), closes [#933](https://github.com/SocialGouv/code-du-travail-numerique/issues/933)
+* **frontend:** add syntech to calculateur ([#1026](https://github.com/SocialGouv/code-du-travail-numerique/issues/1026)) ([3cfdb0c](https://github.com/SocialGouv/code-du-travail-numerique/commit/3cfdb0c))
+* **frontend:** bootstrap sitemap.xml ([#1009](https://github.com/SocialGouv/code-du-travail-numerique/issues/1009)) ([34a3374](https://github.com/SocialGouv/code-du-travail-numerique/commit/34a3374))
+* **frontend:** conventions publish date wording update + remove extensions textes ([749c891](https://github.com/SocialGouv/code-du-travail-numerique/commit/749c891))
+* **home:** promote outil precarite ([#1046](https://github.com/SocialGouv/code-du-travail-numerique/issues/1046)) ([206bfa0](https://github.com/SocialGouv/code-du-travail-numerique/commit/206bfa0))
+* **outil-idl:** exclude some CCNS, fix [#886](https://github.com/SocialGouv/code-du-travail-numerique/issues/886) ([#893](https://github.com/SocialGouv/code-du-travail-numerique/issues/893)) ([89e8c53](https://github.com/SocialGouv/code-du-travail-numerique/commit/89e8c53))
+
+
+### Reverts
+
+* **frontend:** remove canonical metas ([#1010](https://github.com/SocialGouv/code-du-travail-numerique/issues/1010)) ([623fead](https://github.com/SocialGouv/code-du-travail-numerique/commit/623fead))
+
+
+
+
+
 # [2.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
 
 

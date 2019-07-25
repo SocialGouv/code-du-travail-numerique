@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.5.0) (2019-07-25)
+
+
+### Bug Fixes
+
+* **data:** update fiches Mt data with and internal ID to track fiche ID ([#1033](https://github.com/SocialGouv/code-du-travail-numerique/issues/1033)) ([0c7777a](https://github.com/SocialGouv/code-du-travail-numerique/commit/0c7777a))
+
+
+
+
+
 # [2.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
 
 

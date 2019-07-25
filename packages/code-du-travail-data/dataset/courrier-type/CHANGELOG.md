@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.5.0) (2019-07-25)
+
+
+### Bug Fixes
+
+* **data:** typo in modele lettre ([#974](https://github.com/SocialGouv/code-du-travail-numerique/issues/974)) ([92509af](https://github.com/SocialGouv/code-du-travail-numerique/commit/92509af)), closes [#975](https://github.com/SocialGouv/code-du-travail-numerique/issues/975)
+
+
+
+
+
 # [2.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
 
 

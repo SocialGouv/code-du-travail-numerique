@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.5.0) (2019-07-25)
+
+
+### Features
+
+* **styleguide:** expose theme colors ([#1003](https://github.com/SocialGouv/code-du-travail-numerique/issues/1003)) ([3f05515](https://github.com/SocialGouv/code-du-travail-numerique/commit/3f05515))
+
+
+
+
+
 # [2.4.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.3.2-spring...v2.4.0) (2019-07-24)
 
 
