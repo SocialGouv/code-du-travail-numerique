@@ -1,7 +1,3 @@
-import React from "react";
-import { render } from "react-testing-library";
-import { Form } from "react-final-form";
-
 import {
   Step1486,
   Result1486,

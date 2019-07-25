@@ -1,7 +1,3 @@
-import React from "react";
-import { render } from "react-testing-library";
-import { Form } from "react-final-form";
-
 import {
   Step1979,
   Result1979,
@@ -13,31 +9,22 @@ import {
   BETWEEN_6_AND_24_MONTH,
   MORE_THAN_24_MONTH
 } from "../1979";
+import { renderForm } from "../../../../../test/renderForm";
 
 describe("<Step1979 />", () => {
   it("should render", () => {
-    const onSubmit = jest.fn();
-    const { container } = render(
-      <Form onSubmit={onSubmit} render={() => <Step1979 />} />
-    );
+    const { container } = renderForm(Step1979);
     expect(container).toMatchSnapshot();
   });
 });
 
 describe("<Result1979 />", () => {
   it("should render", () => {
-    const onSubmit = jest.fn();
-    const { container } = render(
-      <Form
-        onSubmit={onSubmit}
-        initialValues={{
-          branche: "1979",
-          category: MANAGER,
-          seniority: MORE_THAN_24_MONTH
-        }}
-        render={({ form }) => <Result1979 form={form} />}
-      />
-    );
+    const { container } = renderForm(Result1979, {
+      branche: "1979",
+      category: MANAGER,
+      seniority: MORE_THAN_24_MONTH
+    });
     expect(container).toMatchSnapshot();
   });
 });
