@@ -31,7 +31,7 @@ if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH_DOT=""
   export ELASTICSEARCH_HOST=elasticsearch:${ES_PORT};
 else
-  export BRANCH_HASH_DOT = "${BRANCH_HASH}."
+  export BRANCH_HASH_DOT="${BRANCH_HASH}."
   export ELASTICSEARCH_HOST=elasticsearch-${BRANCH_HASH}:${ES_PORT};
 fi
 
