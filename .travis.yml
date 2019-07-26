@@ -73,4 +73,3 @@ jobs:
         - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
       script:
         - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:=--yes}
-        - yarn lerna publish from-git --yes
