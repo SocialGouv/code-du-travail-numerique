@@ -199,7 +199,6 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 ## Deployment policy
 Tags can be automaticly deployed See https://github.com/SocialGouv/code-du-travail-numerique/deployments
 
-### Auto
 Trigger a custom build on Travis (in the "More options" right menu) on the tag v* you with a custom config:
 
 ```
