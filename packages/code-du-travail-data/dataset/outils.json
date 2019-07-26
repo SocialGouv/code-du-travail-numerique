@@ -84,9 +84,12 @@
     "titre": "Simulateur de délais de préavis",
     "code": "preavis-demission",
     "questions": [
-      "préavis de démission",
+      "preavis de demission",
       "preavis de demission CDI",
-      "délais avant démission"
+      "délais avant démission",
+      "durée du préavis",
+      "calculer la durée de son préavis",
+      "calcul durée préavis démission"
     ],
     "theme": "37-demission",
     "themes": [],
