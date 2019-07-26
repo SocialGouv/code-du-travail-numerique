@@ -3,18 +3,22 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { theme } from "@cdt/ui";
+import { OnChange } from "react-final-form-listeners";
 
 import { Label, QuestionParagraphe } from "../common/stepStyles";
 import { required } from "../common/validators";
 import { ErrorField } from "../IndemniteLicenciement/components/ErrorField";
 
-function RadioQuestion({ name, label, options }) {
+function RadioQuestion({ name, label, options, onChange }) {
   return (
     <>
       <Fieldset>
         <QuestionParagraphe as="legend">{label}</QuestionParagraphe>
         <Radios name={name} options={options} />
         <ErrorField name={name} />
+        {onChange && (
+          <OnChange name={name}>{values => onChange(values)}</OnChange>
+        )}
       </Fieldset>
     </>
   );
@@ -23,7 +27,8 @@ function RadioQuestion({ name, label, options }) {
 RadioQuestion.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  options: PropTypes.object.isRequired
+  options: PropTypes.object.isRequired,
+  onChange: PropTypes.func
 };
 
 export { RadioQuestion };

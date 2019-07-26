@@ -53,7 +53,7 @@ export function Result0044({ form }) {
       <p>
         En cas de démission, la <em>{ccLabel}</em> prévoit le respect d’un
         préavis d’une durée de <strong>{preavis}</strong> pour un employé avec
-        un coéfficient <em>{COEFFICIENTS[values.coefficient]}</em>
+        un coefficient <em>{COEFFICIENTS[values.coefficient]}</em>
       </p>
       <Alert>
         Le contrat de travail, un accord collectif d’entreprise ou un usage

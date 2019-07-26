@@ -10,7 +10,7 @@ function StepResult() {
       <p>
         Le code du travail ne prévoit pas une durée précise du préavis de
         démission. Il prévoit qu’une convention collective ou un accord
-        d’entreprise voire un usage en prévoit les durées et modalités.
+        d’entreprise, voire un usage, en prévoit les durées et modalités.
       </p>
     </>
   );

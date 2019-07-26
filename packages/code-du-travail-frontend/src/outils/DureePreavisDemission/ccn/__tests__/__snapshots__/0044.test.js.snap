@@ -29,7 +29,7 @@ exports[`<Result0044 /> should render 1`] = `
     <strong>
       15 jours
     </strong>
-     pour un employé avec un coéfficient 
+     pour un employé avec un coefficient 
     <em>
       inférieur à 160
     </em>
