@@ -26,11 +26,12 @@ const getTitleTagName = ({ type, level }) => {
   }
 };
 
+// Title never receives type prop here ??
 const Title = styled.span`
   margin-top: ${props =>
-    props.type != "article" && props.level === 0 ? theme.spacing.large : "0"};
+    props.type !== "article" && props.level === 0 ? theme.spacing.large : "0"};
   font-size: ${props =>
-    props.type == "article"
+    props.type === "article"
       ? theme.fonts.sizeH6
       : props.level === 0
       ? theme.fonts.sizeH5

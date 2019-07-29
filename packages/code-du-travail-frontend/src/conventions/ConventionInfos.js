@@ -24,7 +24,7 @@ class ConventionInfos extends React.Component {
 
         <p>
           <a target="_blank" rel="noopener noreferrer" href={url}>
-            Voir la convention sur Legifrance ↗
+            Voir la convention sur Legifrance
           </a>
         </p>
       </React.Fragment>

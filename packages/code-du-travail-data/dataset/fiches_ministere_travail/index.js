@@ -1,6 +1,6 @@
 const JSDOM = require("jsdom").JSDOM;
 const ora = require("ora");
-const { batchPromise } = require("@cdt/data...kali/utils");
+const { batchPromise } = require("./utils");
 const urls = require("./ministere-travail-liste-fiches.json");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));

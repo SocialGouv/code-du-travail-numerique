@@ -2,7 +2,7 @@
 const find = require("unist-util-find");
 const queryString = require("query-string");
 const cdt = require("../code_du_travail/code-du-travail.json");
-const kali = require("../kali/kali.json");
+const conventions = require("../conventions-collectives/ccn-list.json");
 
 const isConventionCollective = qs => qs.idConvention;
 const isCodeDuTravail = qs => qs.cidTexte === "LEGITEXT000006072050";
@@ -72,11 +72,13 @@ const parseReference = reference => {
         // resolve related articles from CDT structure
         return getArticlesFromSection(qs.idSectionTA);
       }
-    case "convention-collective":
-      const { id, slug, title } = kali.find(
+      break;
+    case "convention-collective": {
+      const { id, slug, title } = conventions.find(
         convention => convention.id === qs.idConvention
       );
       return [createCCRef(id, slug, title)];
+    }
     case "journal-officiel":
       return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
     default:

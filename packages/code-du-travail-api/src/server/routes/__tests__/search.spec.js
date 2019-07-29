@@ -27,7 +27,7 @@ test("return faq search results for demission ", async () => {
     "fiche",
     "modele_courrier",
     "idcc",
-    "kali",
+    "conventions_collectives",
     "themes",
     "fiches_ministere_travail",
     "fiches_service_public"

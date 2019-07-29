@@ -1,11 +1,11 @@
 {
-  "name": "@cdt/data...kali",
+  "name": "@cdt/data...conventions_collectives",
   "version": "2.5.1",
   "private": true,
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > ./kali.json"
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",

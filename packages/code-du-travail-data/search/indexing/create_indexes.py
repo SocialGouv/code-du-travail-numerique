@@ -9,6 +9,9 @@ from search.indexing import analysis
 from search.indexing.cdtn_documents import CDTN_DOCUMENTS
 from search.indexing.mappings.code_du_travail_numerique import code_du_travail_numerique_mapping
 
+from search.indexing.ccn_documents import CCN_DOCUMENTS
+from search.indexing.mappings.ccn_mapping import ccn_mapping
+
 from search.indexing.mappings.annuaire import cdtn_annuaire_mapping
 from search.indexing.annuaire_documents import ANNUAIRE_DOCUMENTS
 
@@ -59,7 +62,7 @@ def create_index(index_name, mappings):
                 },
             },
         },
-        'mappings': mappings,
+        #'mappings': mappings,
     }
     es.indices.create(index=index_name, body=request_body)
     logger.info("Index `%s` created.", index_name)
@@ -97,12 +100,17 @@ if __name__ == '__main__':
     # Use 1 index by type, see:
     # https://www.elastic.co/blog/index-type-parent-child-join-now-future-in-elasticsearch
 
-    name = 'code_du_travail_numerique'
+    name = 'conventions_collectives'
     drop_index(name)
-    create_index(index_name=name, mappings=code_du_travail_numerique_mapping)
-    create_documents(index_name=name, documents=CDTN_DOCUMENTS)
+    create_index(index_name=name, mappings=ccn_mapping)
+    create_documents(index_name=name, documents=CCN_DOCUMENTS)
 
-    name = 'cdtn_annuaire'
-    drop_index(name)
-    create_index(index_name=name, mappings=cdtn_annuaire_mapping)
-    create_documents(index_name=name, documents=ANNUAIRE_DOCUMENTS)
+    # name = 'code_du_travail_numerique'
+    # drop_index(name)
+    # create_index(index_name=name, mappings=code_du_travail_numerique_mapping)
+    # create_documents(index_name=name, documents=CDTN_DOCUMENTS)
+
+    # name = 'cdtn_annuaire'
+    # drop_index(name)
+    # create_index(index_name=name, mappings=cdtn_annuaire_mapping)
+    # create_documents(index_name=name, documents=ANNUAIRE_DOCUMENTS)

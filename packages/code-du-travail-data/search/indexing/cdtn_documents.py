@@ -44,12 +44,12 @@ def make_slug(text, seed):
     ), to_lower=True)
 
 def populate_cdtn_documents():
-    with open(os.path.join(settings.BASE_DIR, 'dataset/kali/kali.json')) as json_data:
+    with open(os.path.join(settings.BASE_DIR, 'dataset/conventions_collectives/ccn-list.json')) as json_data:
         data = json.load(json_data)
-        logger.info("Load %s documents from kali", len(data))
+        logger.info("Load %s documents from conventions collectives", len(data))
         for val in data:
             CDTN_DOCUMENTS.append({
-                'source': 'kali',
+                'source': 'conventions_collectives',
                 'slug': val['slug'],
                 'title': val['titre'],
                 'text': f"IDCC {val['num']} {val['titre']}",

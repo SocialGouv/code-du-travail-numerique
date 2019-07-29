@@ -11,24 +11,18 @@ import debounce from "../lib/pDebounce";
 class ConventionTexte extends React.Component {
   constructor(props) {
     super(props);
-    const baseState = { tocbotEnabled: false, tocbotMounted: false };
-    if (props.preloadedTexte) {
-      const texte = props.preloadedTexte;
-      const topNode = this.getFirstNodeWithChildren(texte);
-      this.state = { ...baseState, topNode, texte, loaded: true };
-    } else {
-      this.state = { ...baseState, loaded: false };
-    }
+    this.state = {
+      tocbotEnabled: false,
+      tocbotMounted: false,
+      loaded: false
+    };
   }
 
   async componentDidMount() {
-    if (this.state.texte) {
-      return false;
-    }
     const { id } = this.props;
     const texte = await fetchTexte({ id });
-    const topNode = this.getFirstNodeWithChildren(texte);
-    this.setState({ texte, topNode, loaded: true });
+    const rootNode = this.getFirstNodeWithChildren(texte);
+    this.setState({ texte, rootNode, loaded: true });
     this.onResize();
     this.resizeEventHandler = debounce(() => this.onResize(), 250);
     window.addEventListener("resize", this.resizeEventHandler);
@@ -66,34 +60,34 @@ class ConventionTexte extends React.Component {
   }
 
   getFirstNodeWithChildren(texte) {
-    let topNode = texte;
-    while (topNode.children && topNode.children.length == 1) {
-      topNode = topNode.children[0];
+    let rootNode = texte;
+    while (rootNode.children && rootNode.children.length == 1) {
+      rootNode = rootNode.children[0];
     }
-    return topNode.children ? topNode : texte;
+    return rootNode.children ? rootNode : texte;
   }
 
   onChangeSummaryTitleExpanded = (sectionId, expanded) => {
-    const { topNode } = this.state;
-    const sectionIdx = topNode.children.findIndex(
+    const { rootNode } = this.state;
+    const sectionIdx = rootNode.children.findIndex(
       child => child.data.id == sectionId
     );
-    const newSection = { ...topNode.children[sectionIdx], expanded };
-    const newChildren = [...topNode.children];
+    const newSection = { ...rootNode.children[sectionIdx], expanded };
+    const newChildren = [...rootNode.children];
     newChildren[sectionIdx] = newSection;
-    const newRootNode = { ...topNode, children: newChildren };
-    this.setState({ topNode: newRootNode });
+    const newRootNode = { ...rootNode, children: newChildren };
+    this.setState({ rootNode: newRootNode });
   };
 
   render() {
-    const { loaded, texte, topNode, tocbotEnabled } = this.state;
+    const { loaded, texte, rootNode, tocbotEnabled } = this.state;
     return (
       <Wrapper>
         {!loaded && "chargement ..."}
         {loaded && (
           <SidebarWrapper>
             <Sidebar
-              node={topNode}
+              node={rootNode}
               onSummaryTitleToggleExpanded={this.onChangeSummaryTitleExpanded}
               tocbotEnabled={tocbotEnabled}
             />
@@ -101,7 +95,7 @@ class ConventionTexte extends React.Component {
         )}
         {loaded && (
           <ContentWrapper>
-            <Content node={topNode} texte={texte} />
+            <Content node={rootNode} texte={texte} />
           </ContentWrapper>
         )}
       </Wrapper>

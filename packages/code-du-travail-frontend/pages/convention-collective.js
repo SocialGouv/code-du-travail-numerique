@@ -13,7 +13,7 @@ const {
 
 const fetchKali = ({ slug, idccNum }) => {
   const url = slug
-    ? `${API_URL}/items/kali/${slug}`
+    ? `${API_URL}/items/conventions_collectives/${slug}`
     : `${API_URL}/idcc/${idccNum}`;
   return fetch(url)
     .then(r => r.json())
