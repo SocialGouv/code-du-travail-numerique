@@ -9,7 +9,7 @@ for file in $(curl -Ls $SUGGEST_DATA_URL); do
  count=$((count+1))
 done;
 
-curl -L https://gist.githubusercontent.com/ArmandGiraud/1a1559091689c036235f380c7136e45a/raw/2ab712066057d8659f1ed9a42739a45c07b39d17/content.json > data/content.json
+curl -L https://gist.githubusercontent.com/ArmandGiraud/a39fe6bfb7052579e1ea49c1318b8134/raw/5d7d40d461397222609d167db9ac9fe03c12abed/content.json > data/content.json
 
 cat data/data-*.txt > data/data.txt
 rm data/data-*
