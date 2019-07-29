@@ -12,3 +12,5 @@ def add_suggest(app, suggester):
       results =  suggester.auto_suggest_fast(input)
       results = [r[0] for r in results]
       return jsonify(results)
+
+

@@ -1,5 +1,7 @@
-FROM python:3.7.2-stretch
+FROM tensorflow/tensorflow:latest-py3
 
+RUN apt-get clean
+RUN apt-get -y install python3-venv git curl unzip
 ENV PYTHONIOENCODING="UTF-8"
 ENV FLASK_APP api
 WORKDIR /app
