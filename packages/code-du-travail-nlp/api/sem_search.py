@@ -52,13 +52,20 @@ class SemSearch():
         questions = [query]
         self.question_results = self.session.run(self.question_embeddings, {self.q_placeholder:questions})
         res = np.inner(self.question_results["outputs"], self.response_results["outputs"])
-        return [self._return_hit(self.slugs[a], self.titles[a]) for a in res[0].argsort()[::-1]][:k]
+        hits =  [self._return_hit(self.slugs[a], self.titles[a]) for a in res[0].argsort()[::-1]][:k]
+        return {
+            "hits":{
+                "total" : len(hits),
+                "hits":hits
+            },
+            "facets":[]
+        }
 
     def _return_hit(self, slug, title):
         source, slug_short = slug.split("/")[1:]
         return {
             "_source":{
-            "source":source,
+            "source":source.replace("-", "_").replace("fiche", "fiches"), # need clean source in format fiches_service_public...
             "slug":slug_short,
             "title": title
             },
