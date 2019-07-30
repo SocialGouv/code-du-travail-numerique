@@ -8,12 +8,16 @@ from flask import request
 from flask import jsonify
 from flask_cors import CORS, cross_origin
 
+from typing import List
+
 content_path = "./data/content.json"
 cache_path = "~/Downloads"
 
+stringvec = List[str]
+
 class SemSearch():
 
-    def __init__(self, content_path):
+    def __init__(self, content_path: str):
         with open(content_path,  "r") as f:
             content = json.load(f)
         
@@ -48,7 +52,7 @@ class SemSearch():
     def build_responses(self):
         self.response_results = self.session.run(self.response_embeddings, {self.r_placeholder:self.titles,
                                                                             self.c_placeholder: self.context})
-    def predict_slugs(self, query, k = 10):
+    def predict_slugs(self, query: str, k: int = 10):
         questions = [query]
         self.question_results = self.session.run(self.question_embeddings, {self.q_placeholder:questions})
         res = np.inner(self.question_results["outputs"], self.response_results["outputs"])
@@ -61,7 +65,7 @@ class SemSearch():
             "facets":[]
         }
 
-    def _return_hit(self, slug, title):
+    def _return_hit(self, slug: stringvec, title: stringvec):
         source, slug_short = slug.split("/")[1:]
         return {
             "_source":{
@@ -77,9 +81,9 @@ def add_search(app, ss):
     @app.route('/api/search', methods=['GET'])
     @cross_origin()
     def search():
-      query = request.args.get('q')
-      results = ss.predict_slugs(query)
-      return jsonify(results)
+        query = request.args.get('q')
+        results = ss.predict_slugs(query)
+        return jsonify(results)
 
 if __name__ == "__main__":
     ss = SemSearch(content_path)
