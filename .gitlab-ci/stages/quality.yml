@@ -93,37 +93,6 @@ Test @socialgouv/react-fiche-service-public:
     - mkdir -p $CI_PROJECT_DIR/$CONTEXT
     - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
-Test @cdtn/api:
-  <<: *quality_stage
-  <<: *master_based_stage
-  artifacts:
-    paths:
-      - packages/code-du-travail-api/coverage
-  services:
-    - $CI_REGISTRY_IMAGE/elasticsearch:$ELK_STACK_VERSION
-  variables:
-    GIT_STRATEGY: none
-    ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
-    ELASTICSEARCH_LOG_LEVEL: info
-  script:
-    # NOTE(douglasduteil): the elasticsearch health check must be last
-    # As we block the job waiting for elasticsearch to be up.
-    - |-
-      retry=60;
-      while
-        ! curl -sS "$ELASTICSEARCH_URL/_cat/health?h=status" &&
-        [[ $(( retry-- )) -gt 0 ]];
-      do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
-    #
-    - yarn workspace @cdt/api test --coverage
-
-    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
-    # As Gitlab artifacts paths seems to only support relative path, I copy the
-    # coverage folder to the relative project directory
-    - export CONTEXT=packages/code-du-travail-api
-    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
-    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
-
 Test @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
@@ -136,7 +105,6 @@ Send coverage result:
   stage: "Registration"
   image: "node:10-stretch"
   dependencies:
-    - Test @cdtn/api
     - Test @cdtn/frontend
     - Test @cdtn/ui
     - Test @socialgouv/react-fiche-service-public
