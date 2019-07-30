@@ -25,14 +25,6 @@
     - pip install pylint
     - pip install -r requirements.txt
 
-#
-
-Lint @cdtn/api:
-  <<: *quality_stage
-  <<: *master_based_stage
-  script:
-    - yarn workspace @cdt/api lint
-
 Lint @cdtn/ui:
   <<: *quality_stage
   <<: *master_based_stage
