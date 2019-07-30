@@ -4,6 +4,7 @@ const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
  
 const router = new Router({ prefix: API_BASE_URL });
+
 /**
  * Return documents matching the given query.
  *
@@ -17,7 +18,7 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
   const response = await fetch(
-    ``http://0.0.0.0:5000/api/search?q=${query}``
+    http://0.0.0.0:5000/api/search?q=${query}`
   );
   const results = await response.json();
   ctx.body = {
