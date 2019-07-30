@@ -15,6 +15,7 @@ services:
       - FLASK_RUN_PORT=$NLP_PORT
       - FLASK_ENV=development
       - FLASK_DEBUG=1
+      - NLP_URL=nlp
     volumes:
       - ./packages/code-du-travail-nlp/:/app
 

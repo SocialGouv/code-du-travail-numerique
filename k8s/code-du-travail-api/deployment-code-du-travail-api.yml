@@ -44,3 +44,5 @@ spec:
           value: "${APM_SERVER_ACTIVE}"
         - name: APM_SERVER_URL
           value: "${APM_SERVER_URL}"
+        - name: NLP_URL
+          value: http://cdtn-nlp${HASH_BRANCH_NAME}
