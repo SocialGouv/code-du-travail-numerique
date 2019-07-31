@@ -3,6 +3,8 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 import tf_sentencepiece
+import unicodedata
+from nltk import word_tokenize
 
 from flask import request
 from flask import jsonify
@@ -11,17 +13,23 @@ from flask_cors import CORS, cross_origin
 from typing import List
 
 content_path = "./data/content.json"
+stops_path = "./data/stops.txt"
 cache_path = "~/Downloads"
 
 stringvec = List[str]
 
 class SemSearch():
 
-    def __init__(self, content_path: str):
+    def __init__(self, content_path: str, stops_path: str):
         with open(content_path,  "r") as f:
             content = json.load(f)
-        
-        self.titles = [c["title"] for c in content]
+
+        with open(stops_path,  "r") as f:
+            stops = f.read().splitlines()
+    
+        self.stops = {self.strip_accents(k):"" for k in stops} # make a hashtable for performance
+
+        self.titles = [self.remove_stops(c["title"]) for c in content]
         self.context = [c["text"] for c in content]
         self.slugs = [c["slug"] for c in content]
 
@@ -53,7 +61,9 @@ class SemSearch():
         self.response_results = self.session.run(self.response_embeddings, {self.r_placeholder:self.titles,
                                                                             self.c_placeholder: self.context})
     def predict_slugs(self, query: str, k: int = 10):
-        questions = [query]
+        query = self.remove_stops(query)
+        questions = [self.strip_accents(query)]
+
         self.question_results = self.session.run(self.question_embeddings, {self.q_placeholder:questions})
         res = np.inner(self.question_results["outputs"], self.response_results["outputs"])
         hits =  [self._return_hit(self.slugs[a], self.titles[a]) for a in res[0].argsort()[::-1]][:k]
@@ -77,6 +87,16 @@ class SemSearch():
 
         }
 
+    def strip_accents(self, s: str):
+        return ''.join(c for c in unicodedata.normalize('NFD', s)
+                  if unicodedata.category(c) != 'Mn')
+
+    def remove_stops(self, string: str):
+        tokens = string.split()
+        tokens_filtered = [t for t in tokens if self.stops.get(t.lower()) is None]
+        return " ".join(tokens_filtered)
+
+#_______________ utils to add api route
 def add_search(app, ss):
     @app.route('/api/search', methods=['GET'])
     @cross_origin()
@@ -86,7 +106,7 @@ def add_search(app, ss):
         return jsonify(results)
 
 if __name__ == "__main__":
-    ss = SemSearch(content_path)
+    ss = SemSearch(content_path, content_path)
     print(ss.predict_slugs("congés sans solde"))
     
 

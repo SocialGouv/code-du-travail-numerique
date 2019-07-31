@@ -15,6 +15,6 @@ cat data/data-*.txt > data/data.txt
 rm data/data-*
 
 # start the serveur
-gunicorn -t 200 -k gevent -w 2 -b :${NLP_PORT} "api:create_app()"
+gunicorn -t 300 -k gevent -w 2 -b :${NLP_PORT} "api:create_app()"
 
 
