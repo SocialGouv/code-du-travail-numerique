@@ -18,14 +18,12 @@ const CC = ({ idcc }) => {
   const data = kali.find(c => formatIdCc(c.num) === formatIdCc(idcc));
   if (data) {
     return (
-      <div style={{ margin: "10px 0" }}>
-        <div style={{ display: "flex", alignItems: "baseline" }}>
-          <Badge
-            title="Numéro de convention collective"
-            style={{ marginRight: 10 }}
-          >
+      <Box>
+        <Flex>
+          <Badge title="Numéro de convention collective">
             IDCC {formatIdCc(idcc)}
           </Badge>
+          <Spacer />
           <a
             target="_blank"
             style={{ textDecoration: "none", color: theme.colors.lightText }}
@@ -36,21 +34,15 @@ const CC = ({ idcc }) => {
           >
             {data.titre}
           </a>
-        </div>
-      </div>
+        </Flex>
+      </Box>
     );
   }
   return null;
 };
 
-const BadgeSiret = ({ siret }) => (
-  <Badge
-    style={{
-      width: 140,
-      height: 22
-    }}
-    title="Numéro SIRET"
-  >
+const BadgeSiret = styled(({ siret }) => (
+  <Badge title="Numéro SIRET">
     <a
       target="_blank"
       rel="noopener noreferrer"
@@ -59,7 +51,10 @@ const BadgeSiret = ({ siret }) => (
       {siret}
     </a>
   </Badge>
-);
+))`
+  width: 140px;
+  height: 22px;
+`;
 
 // demo app
 // userland UI
@@ -77,8 +72,7 @@ const Search = () => {
         Saisissez le nom de votre entreprise, la convention collective ou le
         numéro SIRET
       </p>
-      <input
-        style={{ width: "100%" }}
+      <Input
         placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
         value={query}
         type="text"
@@ -101,18 +95,13 @@ const Search = () => {
                     {results.map(result => (
                       <tr key={result.id}>
                         <td>
-                          <div
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-between"
-                            }}
-                          >
+                          <Flex>
                             <ResultLabel>{result.label}</ResultLabel>
                             {result.siret && (
                               <BadgeSiret siret={result.siret} />
                             )}
-                          </div>
-                          <div style={{ marginTop: 10, marginLeft: 10 }}>
+                          </Flex>
+                          <CCsContainer>
                             {result.idcc.length ? (
                               result.idcc.map(id => <CC key={id} idcc={id} />)
                             ) : (
@@ -121,7 +110,7 @@ const Search = () => {
                                 entreprise
                               </div>
                             )}
-                          </div>
+                          </CCsContainer>
                         </td>
                       </tr>
                     ))}
@@ -137,6 +126,31 @@ const Search = () => {
     </Container>
   );
 };
+
+const Input = styled.input`
+  width: 100%;
+`;
+
+const Box = styled.div`
+  margin: 10px 0;
+`;
+
+const CCsContainer = styled.div`
+  margin-top: 10px;
+  margin-left: 10px;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+`;
+
+const Spacer = styled.div`
+  display: inline-block;
+  width: 10px;
+  flex: 0 0 auto;
+`;
 
 const ResultLabel = styled.div`
   flex: 1 0 auto;
