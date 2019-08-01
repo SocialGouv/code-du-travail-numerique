@@ -30,7 +30,9 @@ const CC = ({ idcc }) => {
             target="_blank"
             style={{ textDecoration: "none", color: theme.colors.lightText }}
             rel="noopener noreferrer"
-            href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${data.id}`}
+            href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${
+              data.id
+            }`}
           >
             {data.titre}
           </a>
