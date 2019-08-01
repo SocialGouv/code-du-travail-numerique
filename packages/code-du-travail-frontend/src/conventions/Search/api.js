@@ -106,11 +106,13 @@ export const loadResults = async query => {
     }
     return results.filter(r => r.idcc && r.idcc.length);
     // direct search by siret with API sirene
-  } else if (type === "siret") {
+  }
+  if (type === "siret") {
     const etablissement = await searchBySiret(query.trim());
     return [etablissement];
     // search local idcc list
-  } else if (type === "idcc") {
+  }
+  if (type === "idcc") {
     const matches = fuseCCIds.search(query.trim());
     // only show 1 result when perfect
     if (matches && matches.length && matches[0].num === query.trim()) {
@@ -121,7 +123,8 @@ export const loadResults = async query => {
           idcc: matches.map(match => match.num).slice(0, 1)
         }
       ];
-    } else if (matches && matches.length) {
+    }
+    if (matches && matches.length) {
       // show first 5 results
       return [
         {

@@ -24,16 +24,15 @@ const CC = ({ idcc }) => {
             IDCC {formatIdCc(idcc)}
           </Tag>
           <Spacer />
-          <a
+          <CCLink
             target="_blank"
-            style={{ textDecoration: "none", color: theme.colors.lightText }}
             rel="noopener noreferrer"
             href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${
               data.id
             }`}
           >
             {data.titre}
-          </a>
+          </CCLink>
         </Flex>
       </Box>
     );
@@ -78,7 +77,7 @@ const Search = () => {
       <SearchCC
         query={query}
         render={({ status, results }) => (
-          <div style={{ marginTop: 25 }}>
+          <ResultsContainer>
             {status === "loading" && (
               <div>Recherche des convention collectives...</div>
             )}
@@ -113,12 +112,20 @@ const Search = () => {
             ) : (
               ""
             )}
-          </div>
+          </ResultsContainer>
         )}
       />
     </Container>
   );
 };
+
+const ResultsContainer = styled.div`
+  margin-top: ${theme.spacing.medium};
+`;
+
+const CCLink = styled.a`
+  color: ${theme.colors.lightText};
+`;
 
 const Input = styled.input`
   width: 100%;
