@@ -46,3 +46,5 @@ spec:
           value: ${CI_SENTRY_PUBLIC_DSN}
         - name: FRONTEND_HOST
           value: ${FRONTEND_HOST}
+        - name: ENVIRONMENT
+          value: ${ENVIRONMENT}
