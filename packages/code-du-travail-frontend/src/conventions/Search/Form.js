@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import kali from "@socialgouv/kali-data/data/index.json";
 
-import { theme, Container, Table } from "@cdt/ui";
+import { theme, Container, Table, Tag } from "@cdt/ui";
 
 import SearchHoc from "./SearchHoc";
 
@@ -20,9 +20,9 @@ const CC = ({ idcc }) => {
     return (
       <Box>
         <Flex>
-          <Badge title="Numéro de convention collective">
+          <Tag title="Numéro de convention collective" variant="info">
             IDCC {formatIdCc(idcc)}
-          </Badge>
+          </Tag>
           <Spacer />
           <a
             target="_blank"
@@ -41,8 +41,8 @@ const CC = ({ idcc }) => {
   return null;
 };
 
-const BadgeSiret = styled(({ siret }) => (
-  <Badge title="Numéro SIRET">
+const TagSiret = ({ siret }) => (
+  <Tag title="Numéro SIRET" size="small" variant="info">
     <a
       target="_blank"
       rel="noopener noreferrer"
@@ -50,11 +50,8 @@ const BadgeSiret = styled(({ siret }) => (
     >
       {siret}
     </a>
-  </Badge>
-))`
-  width: 140px;
-  height: 22px;
-`;
+  </Tag>
+);
 
 // demo app
 // userland UI
@@ -97,9 +94,7 @@ const Search = () => {
                         <td>
                           <Flex>
                             <ResultLabel>{result.label}</ResultLabel>
-                            {result.siret && (
-                              <BadgeSiret siret={result.siret} />
-                            )}
+                            {result.siret && <TagSiret siret={result.siret} />}
                           </Flex>
                           <CCsContainer>
                             {result.idcc.length ? (
@@ -132,12 +127,11 @@ const Input = styled.input`
 `;
 
 const Box = styled.div`
-  margin: 10px 0;
+  margin: ${theme.spacing.small} 0;
 `;
 
 const CCsContainer = styled.div`
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: ${theme.spacing.small};
 `;
 
 const Flex = styled.div`
@@ -148,36 +142,20 @@ const Flex = styled.div`
 
 const Spacer = styled.div`
   display: inline-block;
-  width: 10px;
+  width: ${theme.spacing.small};
   flex: 0 0 auto;
 `;
 
 const ResultLabel = styled.div`
   flex: 1 0 auto;
   fontsize: ${theme.fonts.sizeH4};
-  margin-right: 5px;
+  margin-right: ${theme.spacing.tiny};
   overflow: hidden;
   text-overflow: ellipsis;
   whitespace: nowrap;
   max-width: calc(100% - 200px);
   font-weight: bold;
   color: ${theme.colors.blue};
-`;
-
-const Badge = styled.span`
-  border-radius: ${theme.box.borderRadius};
-  background: ${theme.colors.infoBackground};
-  color: ${theme.colors.darkText};
-  padding: 2px 5px;
-  font-size: 0.8em;
-  text-align: center;
-  a {
-    color: ${theme.colors.darkText};
-    text-decoration: none;
-    &::after {
-      display: none !important;
-    }
-  }
 `;
 
 export default Search;
