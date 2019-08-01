@@ -107,7 +107,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   overflow-y: auto;
 }
 
-.c8 {
+.c10 {
   position: absolute;
   top: 0;
   right: 0;
@@ -158,6 +158,14 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   width: 2.5rem;
   display: inline-block;
   margin: 1rem;
+}
+
+.c9 {
+  margin-top: 1.25rem;
+}
+
+.c8 {
+  width: 100%;
 }
 
 .c0 {
@@ -211,7 +219,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c10 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -274,19 +282,19 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
           </p>
           <input
+            class="c8"
             placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
-            style="width: 100%;"
             type="text"
             value=""
           />
           <div
-            style="margin-top: 25px;"
+            class="c9"
           >
             
           </div>
         </div>
         <button
-          class="c8"
+          class="c10"
         >
           <svg
             fill="none"
