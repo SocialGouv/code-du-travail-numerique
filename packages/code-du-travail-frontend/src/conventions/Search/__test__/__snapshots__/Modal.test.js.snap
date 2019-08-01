@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConventionModal /> should render 1`] = `
+.c1 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c4 {
+  color: #4c5467;
+  font-size: 0.875rem;
+}
+
+.c3 {
+  color: #0053b3;
+  font-size: 1.125rem;
+}
+
+.c2 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.c0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.c0 > * {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c0:focus > *,
+.c0:active > *,
+.c0:hover > * {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 2px 2px #bfdeff;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <img
+        alt=""
+        class="c2"
+        src="/static/assets/icons/book_web.svg"
+      />
+      <h3
+        class="c3"
+      >
+        Votre convention collective
+      </h3>
+      <p
+        class="c4"
+      >
+        Trouvez simplement la convention collective dont vous dépendez
+      </p>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<ConventionModal /> should render a popup when click on button 1`] = `
+.c5 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  overflow: auto;
+}
+
+.c6 {
+  position: relative;
+  margin: 10vh auto;
+  padding: 2rem;
+  width: 50vw;
+  max-height: calc(100vh - 2 * 10vh);
+  background: white;
+  border-radius: 0.25rem;
+  outline: none;
+  overflow-y: auto;
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.625rem;
+  color: #8393a7;
+  line-height: 0;
+  background: transparent;
+  border: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.c7 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c7 > *:first-child {
+  margin-top: 0;
+}
+
+.c7 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 100%;
+}
+
+.c4 {
+  color: #4c5467;
+  font-size: 0.875rem;
+}
+
+.c3 {
+  color: #0053b3;
+  font-size: 1.125rem;
+}
+
+.c2 {
+  width: 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.c0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+
+.c0 > * {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.c0:focus > *,
+.c0:active > *,
+.c0:hover > * {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 2px 2px #bfdeff;
+}
+
+@media (max-width:1200px) {
+  .c6 {
+    width: 60vw;
+  }
+}
+
+@media (max-width:980px) {
+  .c6 {
+    width: 80vw;
+  }
+}
+
+@media (max-width:600px) {
+  .c6 {
+    margin: 1rem;
+    max-height: calc(100vh - 2 * 1rem);
+    width: calc(100% - 2 * 1rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    position: fixed;
+    top: 0.625rem;
+    right: 0.625rem;
+  }
+}
+
+@media print {
+  .c7 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<body>
+  <div
+    aria-hidden="true"
+  >
+    <button
+      class="c0"
+    >
+      <div
+        class="c1"
+      >
+        <img
+          alt=""
+          class="c2"
+          src="/static/assets/icons/book_web.svg"
+        />
+        <h3
+          class="c3"
+        >
+          Votre convention collective
+        </h3>
+        <p
+          class="c4"
+        >
+          Trouvez simplement la convention collective dont vous dépendez
+        </p>
+      </div>
+    </button>
+  </div>
+  <reach-portal>
+    <div
+      class="c5"
+      data-reach-dialog-overlay="true"
+    >
+      <div
+        aria-modal="true"
+        class="c6"
+        data-reach-dialog-content="true"
+        tabindex="-1"
+      >
+        <div
+          class="c7"
+        >
+          <h3>
+            Recherche de convention collective
+          </h3>
+          <p>
+            Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
+          </p>
+          <input
+            placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+            style="width: 100%;"
+            type="text"
+            value=""
+          />
+          <div
+            style="margin-top: 25px;"
+          >
+            
+          </div>
+        </div>
+        <button
+          class="c8"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            title="fermer la modale"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </reach-portal>
+</body>
+`;

@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<search /> should render 1`] = `
-.c9:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -30,6 +18,18 @@ exports[`<search /> should render 1`] = `
 .c1 {
   padding: 1.25rem 0;
   background-color: #fff;
+}
+
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 .c8 {
@@ -416,18 +416,6 @@ exports[`<search /> should render 1`] = `
 `;
 
 exports[`<search /> should render suggestions 1`] = `
-.c9:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -445,6 +433,18 @@ exports[`<search /> should render suggestions 1`] = `
 .c1 {
   padding: 1.25rem 0;
   background-color: #fff;
+}
+
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 .c13 {

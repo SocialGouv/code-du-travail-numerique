@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionCollective /> should render 1`] = `
-.c9:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -116,6 +104,18 @@ exports[`<ConventionCollective /> should render 1`] = `
 .c32:active {
   position: relative;
   top: 1px;
+}
+
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 .c27 {

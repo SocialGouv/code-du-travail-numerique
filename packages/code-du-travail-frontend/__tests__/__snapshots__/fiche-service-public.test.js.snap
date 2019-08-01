@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FicheSP /> should render 1`] = `
-.c15:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c48 {
   margin: 0;
   padding: 0;
@@ -197,6 +185,18 @@ exports[`<FicheSP /> should render 1`] = `
 .c38:active {
   position: relative;
   top: 1px;
+}
+
+.c15:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 .c33 {

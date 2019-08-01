@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD:packages/code-du-travail-frontend/src/home/__tests__/ConventionModal.test.js
 import { render } from "@testing-library/react";
 import ConventionModal from "../ConventionModal";
 
@@ -7,11 +8,15 @@ jest.mock("../../common/convention.service", () => ({
   searchCompanies: jest.fn(),
   getCompany: jest.fn()
 }));
+=======
+import { render } from "react-testing-library";
+import ConventionModal from "../Modal";
+>>>>>>> tests:packages/code-du-travail-frontend/src/conventions/Search/__test__/Modal.test.js
 
 // Trouvez votre convention collective
 
 describe("<ConventionModal />", () => {
-  it("should render a button", () => {
+  it("should render", () => {
     const { container } = render(<ConventionModal />);
     expect(container).toMatchSnapshot();
   });
@@ -22,7 +27,9 @@ describe("<ConventionModal />", () => {
     );
     const button = getByText(/votre convention collective/i);
     button.click();
-    const input = getByPlaceholderText(/Convention collective/i);
+    const input = getByPlaceholderText(
+      /Ex: 'Corso Balard' ou '82161143100015' ou '1486'/i
+    );
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
@@ -34,7 +41,9 @@ describe("<ConventionModal />", () => {
     const el = document.body.querySelector("[data-reach-dialog-overlay]");
     el.click();
     expect(
-      queryByPlaceholderText(/Convention collective ou code NAF/i)
+      queryByPlaceholderText(
+        /Ex: 'Corso Balard' ou '82161143100015' ou '1486'/i
+      )
     ).toBeNull();
   });
 });
