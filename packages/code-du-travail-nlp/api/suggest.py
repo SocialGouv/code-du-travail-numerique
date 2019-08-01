@@ -9,6 +9,6 @@ def add_suggest(app, suggester):
   @cross_origin()
   def suggest():
       input = request.args.get('q')
-      results =  suggester.auto_suggest_fast(input)
+      results =  suggester.auto_suggest_fast(input, nb_next_words=12)
       results = [r[0] for r in results]
       return jsonify(results)
