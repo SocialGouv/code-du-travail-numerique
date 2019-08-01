@@ -2146,6 +2146,14 @@
     eslint-plugin-jest "^22.15.2"
     eslint-plugin-prettier "~3.1.0"
 
+"@socialgouv/kali-data@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.0.2.tgz#8a344744b5e98137f98e9b0fbf14bcf75fdf673e"
+  integrity sha512-nZlMf60LHMFxtd9XMmDL3kMWiezHFiVZ9PlJh58QKioOCtkQoOuj5FiTWv612KUvLRAKhVt6y/c339t8fXOyiA==
+  dependencies:
+    "@socialgouv/dila-api-client" "^1.0.1"
+    p-map "^3.0.0"
+
 "@socialgouv/kali-data@~1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.0.3.tgz#37cf77aa4eedfb6b54b02a8765a525df847195cc"
@@ -5115,6 +5123,11 @@ dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmjs.org/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
+
+debounce-promise@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/debounce-promise/-/debounce-promise-3.1.2.tgz#320fb8c7d15a344455cd33cee5ab63530b6dc7c5"
+  integrity sha512-rZHcgBkbYavBeD9ej6sP56XfG53d51CD4dnaw989YX/nZ/ZJfgRx/9ePKmTNiUiyQvh4mtrMoS3OAWW+yoYtpg==
 
 debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
