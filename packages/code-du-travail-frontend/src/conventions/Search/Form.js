@@ -5,7 +5,7 @@ import kali from "@socialgouv/kali-data/data/index.json";
 
 import { theme, Container, Table, Tag } from "@cdt/ui";
 
-import SearchHoc from "./SearchHoc";
+import SearchCC from "./SearchCC";
 
 // normalize idcc nums
 const formatIdCc = num => {
@@ -75,48 +75,46 @@ const Search = () => {
         type="text"
         onChange={onInputChange}
       />
-      <SearchHoc
+      <SearchCC
         query={query}
-        render={({ status, results }) =>
-          (
-            <div style={{ marginTop: 25 }}>
-              {status === "loading" && (
-                <div>Recherche des convention collectives...</div>
-              )}
-              {status === "error" && (
-                <div>Aucun résultat pour votre recherche.</div>
-              )}
-              {status === "success" && results && results.length ? (
-                <Table stripes>
-                  <tbody>
-                    {results.map(result => (
-                      <tr key={result.id}>
-                        <td>
-                          <Flex>
-                            <ResultLabel>{result.label}</ResultLabel>
-                            {result.siret && <TagSiret siret={result.siret} />}
-                          </Flex>
-                          <CCsContainer>
-                            {result.idcc.length ? (
-                              result.idcc.map(id => <CC key={id} idcc={id} />)
-                            ) : (
-                              <div className="text-danger">
-                                Aucune convention collective connue pour cette
-                                entreprise
-                              </div>
-                            )}
-                          </CCsContainer>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              ) : (
-                ""
-              )}
-            </div>
-          ) || null
-        }
+        render={({ status, results }) => (
+          <div style={{ marginTop: 25 }}>
+            {status === "loading" && (
+              <div>Recherche des convention collectives...</div>
+            )}
+            {status === "error" && (
+              <div>Aucun résultat pour votre recherche.</div>
+            )}
+            {status === "success" && results && results.length ? (
+              <Table stripes>
+                <tbody>
+                  {results.map(result => (
+                    <tr key={result.id}>
+                      <td>
+                        <Flex>
+                          <ResultLabel>{result.label}</ResultLabel>
+                          {result.siret && <TagSiret siret={result.siret} />}
+                        </Flex>
+                        <CCsContainer>
+                          {result.idcc.length ? (
+                            result.idcc.map(id => <CC key={id} idcc={id} />)
+                          ) : (
+                            <div className="text-danger">
+                              Aucune convention collective connue pour cette
+                              entreprise
+                            </div>
+                          )}
+                        </CCsContainer>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            ) : (
+              ""
+            )}
+          </div>
+        )}
       />
     </Container>
   );

@@ -4,7 +4,7 @@ import { loadResults } from "./api";
 
 // a render prop that return idcc search results
 // todo: package as a module
-const SearchHoc = ({ query, render }) => {
+const SearchCC = ({ query, render }) => {
   const [results, setResults] = useState();
   const [status, setStatus] = useState("idle");
 
@@ -32,4 +32,4 @@ const SearchHoc = ({ query, render }) => {
   return render({ status, results });
 };
 
-export default SearchHoc;
+export default SearchCC;
