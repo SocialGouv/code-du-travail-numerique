@@ -7,4 +7,4 @@ tf-sentencepiece
 tensorflow_hub
 tensorflow==1.13.1
 gevent
-nltk
+unidecode
