@@ -18,6 +18,7 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
   const response = await fetch(
+    
     `${process.env.NLP_URL}:5000/api/search?q=${query}`
   );
   const results = await response.json();
