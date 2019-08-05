@@ -1,7 +1,5 @@
 import React from "react";
 
-import { SectionTitle } from "../../../../common/stepStyles";
-
 export const AncienneteCE = () => {
   return (
     <p>

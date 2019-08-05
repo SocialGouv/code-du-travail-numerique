@@ -107,8 +107,6 @@ function getIndemnite({
     formula += `1/4 * Sref * S2`;
   }
 
-  console.log("Indemnite conv :", indemniteConventionnelle);
-
   const isEmbaucheAfter1999 = isAfter(dEntree, new Date("1999-12-31"));
 
   if (isEmbaucheAfter1999) {
