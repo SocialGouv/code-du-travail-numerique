@@ -6,6 +6,8 @@ import { theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { Input, SectionTitle, InlineError } from "../../common/stepStyles";
+import { isNumber } from "../../common/validators";
+import { parse } from "../../common/date";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import {
   SalaireTempsPartiel,
@@ -13,7 +15,6 @@ import {
   TEMPS_PLEIN
 } from "../components/SalaireTempsPartiel";
 import { SalaireTempsPlein } from "../components/SalaireTempsPlein";
-import { isNumber } from "../../common/validators";
 import { motifs } from "../components/AbsencePeriods";
 
 function StepSalaires({ form }) {
@@ -114,8 +115,8 @@ function StepSalaires({ form }) {
 }
 
 function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
-  const dEntree = new Date(dateEntree);
-  const dSortie = new Date(dateSortie);
+  const dEntree = parse(dateEntree);
+  const dSortie = parse(dateSortie);
 
   const totalAbsence = (absencePeriods || [])
     .filter(period => Boolean(period.duration))
@@ -131,7 +132,7 @@ function getSalairesPeriods({ dateEntree, dateSortie, absencePeriods }) {
 
   return Array.from({ length: nbMonthes }).map((_, index) => {
     return {
-      label: format(subMonths(dSortie, index), "MMMM YYYY", {
+      label: format(subMonths(dSortie, index), "MMMM yyyy", {
         locale: frLocale
       }),
       salary: null

@@ -4,10 +4,12 @@ import { Field } from "react-final-form";
 import createDecorator from "final-form-calculate";
 import { isAfter, differenceInMonths, format } from "date-fns";
 
+import { SectionTitle } from "../../common/stepStyles";
+import { isDate } from "../../common/validators";
+import { parse } from "../../common/date";
 import { YesNoQuestion } from "../components/YesNoQuestion";
 import { TextQuestion } from "../components/TextQuestion";
 import { AbsencePeriods, motifs } from "../components/AbsencePeriods";
-import { SectionTitle } from "../../common/stepStyles";
 import { ErrorComputedField } from "../components/ErrorField";
 
 function validate({
@@ -17,15 +19,15 @@ function validate({
   absencePeriods = []
 }) {
   const errors = {};
-  const dEntree = new Date(dateEntree);
-  const dSortie = new Date(dateSortie);
-  const dNotification = new Date(dateNotification);
+  const dEntree = parse(dateEntree);
+  const dSortie = parse(dateSortie);
+  const dNotification = parse(dateNotification);
 
   if (dateEntree && dateSortie && isAfter(dEntree, dSortie)) {
     errors.dateSortie = (
       <>
         La date de sortie doit se situer après le
-        <strong> {format(dEntree, "DD MMMM YYYY")}</strong>
+        <strong> {format(dEntree, "dd MMMM yyyy")}</strong>
       </>
     );
   }
@@ -41,16 +43,7 @@ function validate({
   if (
     dateEntree &&
     dateSortie &&
-    isAfter(new Date("2017-09-27"), dNotification) &&
-    differenceInMonths(dNotification, dEntree) - totalAbsence < 12
-  ) {
-    errors.anciennete =
-      "L’indemnité de licenciement est dûe au-delà de 12 mois d’ancienneté";
-  }
-  if (
-    dateEntree &&
-    dateSortie &&
-    isAfter(dNotification, new Date("2017-09-27")) &&
+    dNotification &&
     differenceInMonths(dNotification, dEntree) - totalAbsence < 8
   ) {
     errors.anciennete =
@@ -60,7 +53,7 @@ function validate({
   if (dateNotification && dateSortie && isAfter(dNotification, dSortie)) {
     errors.dateNotification = `La date de notification doit se situer avant la date de sortie`;
   }
-  if (dateNotification && dateEntree && isAfter(dateEntree, dNotification)) {
+  if (dateNotification && dateEntree && isAfter(dEntree, dNotification)) {
     errors.dateNotification = `La date de notification doit se situer après la date d’entrée`;
   }
   return errors;
@@ -74,16 +67,22 @@ function StepAnciennete({ form }) {
         name="dateEntree"
         label="Quelle est votre date d’entrée dans l’entreprise&nbsp;?"
         inputType="date"
+        validate={isDate}
+        placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <TextQuestion
         name="dateNotification"
         label="À quelle date votre licenciement vous a-t-il été notifié&nbsp;?"
         inputType="date"
+        validate={isDate}
+        placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <TextQuestion
         name="dateSortie"
         label="Quelle est votre date de sortie de l’entreprise (incluant la durée de votre préavis)&nbsp;?"
         inputType="date"
+        validate={isDate}
+        placeholder=" jj/mm/yyyy" // placeholder for safari desktop which does not support input type date
       />
       <ErrorComputedField name="anciennete" />
       <SectionTitle>Période d’absence prolongée (plus d’un mois)</SectionTitle>
@@ -139,8 +138,9 @@ StepAnciennete.propTypes = {
 };
 
 function computeAnciennete({ dateEntree, dateSortie, absencePeriods = [] }) {
-  const dEntree = new Date(dateEntree);
-  const dSortie = new Date(dateSortie);
+  const dEntree = parse(dateEntree);
+  const dSortie = parse(dateSortie);
+
   // on calcule totalAbsence en mois par année (ex: 12mois = 1)
   // pour pouvoir ensuite le retranché de l’anciennété qui est aussi en mois par année
   const totalAbsence =

@@ -1,4 +1,6 @@
 import { isAfter } from "date-fns";
+
+import { parse } from "../common/date";
 import { round, sum } from "../common/math";
 /**
  * Compute the salaire de Réference
@@ -53,6 +55,7 @@ function getIndemnite({
   anciennete,
   dateNotification
 }) {
+  const dNotification = parse(dateNotification);
   let formula = "-";
   let labels = {
     "Salaire de réference (Sref)": round(salaireRef),
@@ -62,7 +65,7 @@ function getIndemnite({
       "Ancienneté au delà de 10ans (A2)": round(anciennete - 10)
     })
   };
-  const avant27Sep2017 = isAfter(new Date("2017-09-27"), dateNotification);
+  const avant27Sep2017 = isAfter(new Date("2017-09-27"), dNotification);
 
   let indemniteLegale = 0;
   const isSmallAnciennete = anciennete <= 10; // 10 years

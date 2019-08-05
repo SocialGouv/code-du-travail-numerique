@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { Table } from "@cdt/ui";
 
 class ConventionInfos extends React.Component {
@@ -17,7 +17,7 @@ class ConventionInfos extends React.Component {
             </tr>
             <tr>
               <th>Date d’entrée en vigueur</th>
-              <td>{format(conteneur.date_publi, "DD/MM/YYYY")}</td>
+              <td>{format(parseISO(conteneur.date_publi), "dd/MM/yyyy")}</td>
             </tr>
           </tbody>
         </Table>
