@@ -1,79 +1,16 @@
 import React from "react";
-import styled from "styled-components";
-import { Field } from "react-final-form";
-import { theme } from "@cdt/ui";
 
-import {
-  InlineError,
-  Input,
-  Label,
-  SectionTitle
-} from "../../../../common/stepStyles";
-import { isNumber } from "../../../../common/validators";
+import { SectionTitle } from "../../../../common/stepStyles";
 
 export const AncienneteCE = () => {
   return (
-    <>
-      <SectionTitle>Activité exclusive et régulière</SectionTitle>
-      <p>
-        Renseignez la durée pendant laquelle le salarié a exercé une activité
-        exclusive et régulière pour le compte de la société.
-      </p>
-
-      <Field
-        name={"brancheAncienneteCE"}
-        validate={isNumber}
-        render={({ input, meta: { error, invalid, touched } }) => (
-          <>
-            <StyledLabel htmlFor="ancienneteCE">Durée (en mois):</StyledLabel>
-            <Input
-              {...input}
-              id="ancienneteCE"
-              type="number"
-              size="7"
-              invalid={touched && invalid}
-            />
-            {error && touched && <StyledInlineError>{error}</StyledInlineError>}
-          </>
-        )}
-      />
-      <SectionTitle>Activité supplémentaire</SectionTitle>
-      <p>
-        Renseignez le nombre d’années pendant lesquelles le salarié a perçu au
-        moins 11 bulletins de salaire sur 12 et au moins 3 fois la valeur du
-        SMIC.
-      </p>
-      <Field
-        name={"brancheAncienneteEnqueteur"}
-        validate={isNumber}
-        defaultValue={0}
-        render={({ input, meta: { error, invalid, touched } }) => (
-          <>
-            <StyledLabel htmlFor="ancienneteEnqueteur">
-              Total (en années):
-            </StyledLabel>
-            <Input
-              {...input}
-              id="ancienneteEnqueteur"
-              type="number"
-              size="7"
-              invalid={touched && invalid}
-            />
-            {error && touched && <StyledInlineError>{error}</StyledInlineError>}
-          </>
-        )}
-      />
-    </>
+    <p>
+      La convention collective prévoit que l’ancienneté des chargés d’enquête
+      s’apprécie en tenant compte du temps d’activité « exclusive et régulière »
+      pour le compte de l’institut et des années pendant lesquelles le salarié
+      aura reçu 11 bulletins de salaire sur 12 en percevant au moins 3 fois la
+      valeur du S.M.I.C. Le simulateur considère que le salarié remplit ces
+      conditions pour le calcul de l’indemnité de licenciement.
+    </p>
   );
 };
-
-const { spacing } = theme;
-
-const StyledLabel = styled(Label)`
-  margin-top: ${spacing.interComponent};
-  margin-bottom: ${spacing.small};
-`;
-
-const StyledInlineError = styled(InlineError)`
-  margin-left: ${spacing.interComponent};
-`;

@@ -16,21 +16,17 @@ function getAncienneteConventionnelle({
   brancheCategorie,
   ancienneteLegale,
   hasBrancheContrat,
-  brancheContrat,
-  brancheAncienneteCE,
-  brancheAncienneteEnqueteur
+  brancheContrat
 }) {
   let ancienneteConventionnelle = 0;
-  if (brancheCategorie === "CEI" || brancheCategorie === "CENI") {
-    ancienneteConventionnelle +=
-      parseFloat(brancheAncienneteCE) / 12 +
-      Math.floor(brancheAncienneteEnqueteur); // We only accept round years
-  } else {
-    // categorie is ETAM or IC
-    ancienneteConventionnelle += parseFloat(ancienneteLegale);
-    if (hasBrancheContrat) {
-      ancienneteConventionnelle += parseFloat(brancheContrat.duration) / 12;
-    }
+
+  ancienneteConventionnelle += parseFloat(ancienneteLegale);
+  // categorie is ETAM or IC
+  if (
+    (brancheCategorie !== "CEI" || brancheCategorie !== "CENI") &&
+    hasBrancheContrat
+  ) {
+    ancienneteConventionnelle += parseFloat(brancheContrat.duration) / 12;
   }
   return ancienneteConventionnelle;
 }
@@ -76,9 +72,6 @@ export function getIndemniteConventionnelle(data) {
     // Ancienneté ETAM/CI
     hasBrancheContrat,
     brancheContrat,
-    // Ancienneté CE
-    brancheAncienneteCE,
-    brancheAncienneteEnqueteur,
     // Ajustement Salaire
     hasBrancheNewSalaire,
     hasBrancheNewRegularSalaire,
@@ -90,9 +83,7 @@ export function getIndemniteConventionnelle(data) {
     brancheCategorie,
     ancienneteLegale,
     hasBrancheContrat,
-    brancheContrat,
-    brancheAncienneteCE,
-    brancheAncienneteEnqueteur
+    brancheContrat
   });
 
   let salaireRefConventionnel;
