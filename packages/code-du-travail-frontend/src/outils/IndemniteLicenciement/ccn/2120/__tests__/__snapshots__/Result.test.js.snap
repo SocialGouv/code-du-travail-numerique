@@ -141,22 +141,6 @@ exports[`<Result /> should render 1`] = `
 
 .c6 {
   border-radius: 0.25rem;
-  background-color: #53657d;
-  width: calc(50% * 0.5583239213914615);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  padding: 1em;
-}
-
-.c15 {
-  border-radius: 0.25rem;
   background-color: #0053b3;
   width: calc(50% * 1);
   display: -webkit-inline-box;
@@ -171,16 +155,32 @@ exports[`<Result /> should render 1`] = `
   padding: 1em;
 }
 
+.c15 {
+  border-radius: 0.25rem;
+  background-color: #53657d;
+  width: calc(50% * NaN);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+}
+
 .c7 {
   margin-left: 1rem;
-  color: #53657d;
-  font-size: 1.375rem;
+  color: #0053b3;
+  font-size: 1.875rem;
 }
 
 .c16 {
   margin-left: 1rem;
-  color: #0053b3;
-  font-size: 1.875rem;
+  color: #53657d;
+  font-size: 1.375rem;
 }
 
 .c8 {
@@ -216,16 +216,16 @@ exports[`<Result /> should render 1`] = `
 
 .c3 {
   padding: 0 0.625rem;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
 }
 
 .c14 {
   padding: 0 0.625rem;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .c4 {
@@ -246,13 +246,13 @@ exports[`<Result /> should render 1`] = `
 
 @media (max-width:980px) {
   .c6 {
-    width: calc(100% * 0.5583239213914615);
+    width: calc(100% * 1);
   }
 }
 
 @media (max-width:980px) {
   .c15 {
-    width: calc(100% * 1);
+    width: calc(100% * NaN);
   }
 }
 
@@ -282,7 +282,7 @@ exports[`<Result /> should render 1`] = `
     <strong
       class="c1"
     >
-      21,692.30
+      -NaN
        € brut
     </strong>
   </p>
@@ -395,7 +395,7 @@ exports[`<Result /> should render 1`] = `
         <span
           class="c16"
         >
-          21,692.30
+          NaN
            € brut
         </span>
       </div>
@@ -441,14 +441,14 @@ exports[`<Result /> should render 1`] = `
           >
             nombre de semestres avant 2002 (S1)
              : 
-            6
+            NaN
           </li>
           <li
             class="c12"
           >
             nombre de semestres après 2002 (S2)
              : 
-            35
+            NaN
           </li>
         </ul>
         <strong
@@ -465,7 +465,7 @@ exports[`<Result /> should render 1`] = `
             <div
               id="react-mathjax-preview-result"
             >
-              \`1/2 * Sref * S1 + 1/4 * Sref * S2\`
+              \`1/4 * Sref * S2\`
             </div>
           </div>
         </div>

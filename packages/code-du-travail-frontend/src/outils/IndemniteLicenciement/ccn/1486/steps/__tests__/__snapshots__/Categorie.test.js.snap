@@ -25,18 +25,18 @@ exports[`<Categorie /> renders 1`] = `
   <h2
     class="c0"
   >
-    Catégorie
+    Catégorie professionnelle
   </h2>
   <p>
-    Quel est votre catégorie dans la convention collective ?
+    Quelle est votre catégorie d’après la convention collective ?
     <br />
-    Vous pouvez le trouver sur votre bulletin de paie
+    Vous pouvez la trouver sur votre bulletin de paie.
   </p>
   <label
     class="c1"
     for="categorie"
   >
-    Sélectionnez une catégorie
+    Sélectionnez une catégorie professionnelle
   </label>
   <select
     id="categorie"

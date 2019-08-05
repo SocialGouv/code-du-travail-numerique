@@ -37,6 +37,19 @@ Object {
 }
 `;
 
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif non disciplinaire 1`] = `
+Object {
+  "formula": "1/5 * Sref * S2",
+  "labels": Object {
+    "Catégorie": "Ne sait pas",
+    "Motif du licenciement": "Motif non disciplinaire",
+    "Salaire de référence (Sref)": 1846.15,
+    "nombre de semestres après 2002 (S2)": 21,
+    "nombre de semestres avant 2002 (S1)": 0,
+  },
+}
+`;
+
 exports[`getIndemnite 2k, 12mois d'ancienneté 1`] = `
 Object {
   "formula": "-",

@@ -28,6 +28,12 @@ exports[`<TextQuestion /> should render 1`] = `
   margin-bottom: 0.625rem;
 }
 
+.c4 {
+  color: #53657d;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -38,6 +44,11 @@ exports[`<TextQuestion /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 1.25rem;
+}
+
+.c3 {
+  display: inline-block;
+  margin-left: 1.25rem;
 }
 
 <div>
@@ -57,6 +68,13 @@ exports[`<TextQuestion /> should render 1`] = `
       type="text"
       value="hello"
     />
+    <div
+      class="c3"
+    >
+      <span
+        class="c4"
+      />
+    </div>
   </div>
 </div>
 `;
