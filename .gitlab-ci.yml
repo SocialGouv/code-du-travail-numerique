@@ -49,6 +49,7 @@ Deploy Elasticsearch (dev):
   variables:
     <<: *deploy_stage_variables
     ES_PORT: ${ELASTICSEARCH_PORT}
+    CONTEXT: elasticsearch
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   except:
