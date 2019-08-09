@@ -128,6 +128,7 @@ Deploy Elasticsearch (prod):
   extends: .deploy-elasticsearch-prod-k8s
   variables:
     <<: *deploy_stage_variables
+    CONTEXT: elasticsearch
     HASH_BRANCH_NAME: ''
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
@@ -175,6 +176,7 @@ Deploy @cdtn/nlp (prod):
   extends: .deploy-code-du-travail-nlp-prod-k8s
   variables:
     <<: *deploy_stage_variables
+    CONTEXT: nlp
     HASH_BRANCH_NAME: ''
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     FLASK_APP: ${FLASK_APP}
