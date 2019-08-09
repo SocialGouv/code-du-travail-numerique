@@ -19,7 +19,8 @@ _steps:
 _environments:
   - &github_keys
     - secure: "ix7y9J6eRWDEj/cwa5c6MgTb4+VceDR5AZLaM5oHDd/8M02LNaoPfIzKWNXXklHOYrLlHRUBJAUkiCt3IYU1qC850mnjjvTMInGiSxKQ+NWBewgmEhmhGfOCCvFBRFscIw6/yhynpDi8Yz2TMHgy+jSm0Gef6sSrDftuV6318pWdgk5dE7wWkNIb2SZvGjCPZnGFniKG29y1s2zmdiQjGZZ0ZtmWPnU2uDrWm/Z5y6oNI/JNKR895/MapyLtPReK2YlXsRqiTl29pf7YV/+sZPyp96OALFqfs3QCI1SZnYLooV4WG4syGBQ8Z1nYmL321gDH2ap/a3Dp5y3pRzQR69u0e+9YfvuVyWUIrnMCUCHbmq2FKv8rGbE+21YlkZlMwbAxbMTLi8jH9CHFQ76wlVnXRruo2jUPX9TnhSVSWvxC9OXW8Pxtp+nF+BNsjvIifX2pCZfXwrxzZtSSa54B3eOyIZp8ZnIlftMBKPIEZkbFie7AvkNDpj/dg6NcVuIYYJf7exWBadKLMPAtwx1tp3bxuAWRr80DwlwLSaLQaXVwGnuXBs5HrnoFd/KqwY+ZGNRVdCwHLJ8o6BL7li4e4d6SjqU7XfvqzpeLNrQXvM/YSrIRRK+kyd4AipjjFpGklDJvdXaxP4nGkUoB7yumrMvtTwYGzcjoS4i3ajvkElc="
-
+  - &gitlab_keys
+    - secure: "UJt9Pf4anqd3pN90fKwUZN4V8jm1t8/CRcDdCmX6whsIjvi8ixhSPzGZwHWHyrcZawGaiYEzqVnttadrq18zAa/k9D47TCeE+N0+v+59bihoZoYrknZohGVZ2Qp09JFi5gOQW4mv9DBGdnUO3YX4kMo43T6AL2MdW5oXrt51C4gshXwRzU3hz7bwTNChytT8obs89FwPZtyggQlcf4pklcV3yEHWOYtBRtwzzTKLp9YInWU3r0i5uJXibrzag+lkwlA3jCNedl7YL6bIU04ZjcrVTl8Ti1IXpTzQm4moi/zuj+NZH5O9sDVYivGhzmzeH44lpqFVlQvECtyeprjfu3up5d/TqeSx8/1MKJr9E4LyIAIka6Ck0CyAGEaAK/VZqXte4ATy7dOzKHTSEZY7zh+9nLBCoRCRwgXYLbuxOx7+IR3IJdeKKwCucsN689fP3wIxdyu7WkkeYg5XwPPFvvXSAaYt8Suvydf9v06WTRneek9Sx3o7h3P1TLUwIMryMTp0HdVqBPEs/0j/rMFC7s5Q4D++/HGxoexfVEaMRp015uMnDKLb/fUbDD+YtK4lVsuEx6uH3eSOsfZXJpRE64DtViorrz0V+2VvPs9LU7clKH7MPNOZkf9uG13aGDz0COGlAbmqzuVGjJijuVLEbK+E/tPFseAs6g6xN24SX7w="
 #
 
 jobs:
@@ -73,3 +74,18 @@ jobs:
         - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
       script:
         - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:=--yes}
+
+    - stage: Go Prod
+          if: env(PRODUCTION)
+          name: A tag is going to production 🏭
+          branches:
+            only:
+            - /v.*/
+          env: *gitlab_keys
+          script:
+            >-
+              curl -X POST
+              -F token=${GITLAB_TOKEN}
+              -F ref=${TRAVIS_BRANCH}
+              -F "variables[PRODUCTION]=true"
+              https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline

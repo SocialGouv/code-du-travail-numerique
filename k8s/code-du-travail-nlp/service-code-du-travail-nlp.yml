@@ -1,14 +1,16 @@
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: cdtn-nlp${HASH_BRANCH_NAME}
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   labels:
-    app: cdtn-nlp${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+    git/branch: ${BRANCH_NAME}
+    git/commit: ${COMMIT}
+    gitlab/job: "${JOB_ID}"
 spec:
   selector:
-    app: cdtn-nlp${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   ports:
   - port: ${PORT}
     name: nlp

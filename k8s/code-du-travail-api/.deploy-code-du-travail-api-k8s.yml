@@ -15,7 +15,7 @@
   - kubectl apply -f k8s/code-du-travail-api/service-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/ingress-cdtn-api.yml
   #
-  - echo "CDTN api available at - http://${API_HOST}"
+  - echo "CDTN api available at - ${API_URL}"
   allow_failure: false
 
 .deploy-code-du-travail-api-prod-k8s:
@@ -33,5 +33,5 @@
   - kubectl apply -f k8s/code-du-travail-api/service-cdtn-api.yml
   - kubectl apply -f k8s/code-du-travail-api/ingress-cdtn-api.yml
   #
-  - echo "CDTN api available at - http://${API_HOST}"
+  - echo "CDTN api available at - ${API_URL}"
   allow_failure: false

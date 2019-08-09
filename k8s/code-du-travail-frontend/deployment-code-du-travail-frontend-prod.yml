@@ -35,9 +35,9 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: "https://${API_HOST}/api/v1"
+          value: "${API_URL}/api/v1"
         - name: SUGGEST_URL
-          value: "https://${NLP_HOST}/api/suggest"
+          value: "${NLP_URL}/api/suggest"
         - name: PIWIK_URL
           value: ${CI_PIWIK_URL}
         - name: PIWIK_SITE_ID

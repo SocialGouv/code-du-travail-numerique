@@ -35,9 +35,9 @@ spec:
           periodSeconds: 5
         env:
         - name: API_URL
-          value: "http://${API_HOST}/api/v1"
+          value: "${API_URL}/api/v1"
         - name: SUGGEST_URL
-          value: "http://${NLP_HOST}/api/suggest"
+          value: "${NLP_URL}/api/suggest"
         - name: ENVIRONMENT
           value: ${ENVIRONMENT}
         - name: FRONTEND_HOST
