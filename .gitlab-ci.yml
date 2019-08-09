@@ -54,7 +54,7 @@ Deploy Elasticsearch (dev):
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
     refs:
-      - branch
+      - branches
 
 Create Elasticsearch Index (dev):
   <<: *deploy_stage
@@ -67,7 +67,7 @@ Create Elasticsearch Index (dev):
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
     refs:
-      - branch
+      - branches
 
 Deploy @cdtn/api (dev):
   <<: *deploy_stage
@@ -86,7 +86,7 @@ Deploy @cdtn/api (dev):
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
     refs:
-      - branch
+      - branches
 
 Deploy @cdtn/nlp (dev):
   <<: *deploy_stage
@@ -104,7 +104,7 @@ Deploy @cdtn/nlp (dev):
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
     refs:
-      - branch
+      - branches
 
 Deploy @cdtn/frontend (dev):
   <<: *deploy_stage
@@ -119,7 +119,7 @@ Deploy @cdtn/frontend (dev):
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
     refs:
-      - branch
+      - branches
 
 ########################################
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
@@ -134,7 +134,7 @@ Deploy Elasticsearch (prod):
   variables:
     <<: *deploy_stage_variables
     CONTEXT: elasticsearch
-    HASH_BRANCH_NAME: ''
+    HASH_branches_NAME: ''
     ES_PORT: ${ELASTICSEARCH_PORT}
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
@@ -149,7 +149,7 @@ Create Elasticsearch Index (prod):
   extends: .deploy-code-du-travail-data-prod-k8s
   variables:
     <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
+    HASH_branches_NAME: ''
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
@@ -164,7 +164,7 @@ Deploy @cdtn/api (prod):
   extends: .deploy-code-du-travail-api-prod-k8s
   variables:
     <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
+    HASH_branches_NAME: ''
     ELASTICSEARCH_LOG_LEVEL: "trace"
     APM_SERVER_ACTIVE: 0
     APM_SERVER_URL: ""
@@ -185,7 +185,7 @@ Deploy @cdtn/nlp (prod):
   variables:
     <<: *deploy_stage_variables
     CONTEXT: nlp
-    HASH_BRANCH_NAME: ''
+    HASH_branches_NAME: ''
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     FLASK_APP: ${FLASK_APP}
     PORT: ${NLP_PORT}
@@ -203,7 +203,7 @@ Deploy @cdtn/frontend (prod):
   extends: .deploy-code-du-travail-frontend-prod-k8s
   variables:
     <<: *deploy_stage_variables
-    HASH_BRANCH_NAME: ''
+    HASH_branches_NAME: ''
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${FRONTEND_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
