@@ -38,7 +38,7 @@ fi
 
 export API_HOST="api.${DOMAIN}";
 export ELASTICSEARCH_HOST="${K8S_NAMESPACE}-elasticsearch-${BRANCH_HASH}";
-export ELASTICSEARCH_URL="${ELASTICSEARCH_HOST}:${ES_PORT}";
+export ELASTICSEARCH_URL="http://${ELASTICSEARCH_HOST}:${ES_PORT}";
 export FRONTEND_HOST="${DOMAIN}";
 export NLP_HOST="nlp.${DOMAIN}";
 
