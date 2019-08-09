@@ -53,7 +53,7 @@ Deploy Elasticsearch (dev):
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - branch
 
 Create Elasticsearch Index (dev):
@@ -66,7 +66,7 @@ Create Elasticsearch Index (dev):
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - branch
 
 Deploy @cdtn/api (dev):
@@ -85,7 +85,7 @@ Deploy @cdtn/api (dev):
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - branch
 
 Deploy @cdtn/nlp (dev):
@@ -103,7 +103,7 @@ Deploy @cdtn/nlp (dev):
     SUGGEST_DATA: ${SUGGEST_DATA_URL}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - branch
 
 Deploy @cdtn/frontend (dev):
@@ -118,7 +118,7 @@ Deploy @cdtn/frontend (dev):
     PORT: ${FRONTEND_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - branch
 
 ########################################
@@ -139,7 +139,7 @@ Deploy Elasticsearch (prod):
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - tags
 
 Create Elasticsearch Index (prod):
@@ -153,7 +153,7 @@ Create Elasticsearch Index (prod):
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - tags
 
 Deploy @cdtn/api (prod):
@@ -173,7 +173,7 @@ Deploy @cdtn/api (prod):
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - tags
 
 Deploy @cdtn/nlp (prod):
@@ -192,7 +192,7 @@ Deploy @cdtn/nlp (prod):
     SUGGEST_DATA: ${SUGGEST_DATA_URL}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-    ref:
+    refs:
       - tags
 
 Deploy @cdtn/frontend (prod):
@@ -211,7 +211,7 @@ Deploy @cdtn/frontend (prod):
     PIWIK_ID: $CI_PIWIK_ID
     SENTRY_PUBLIC_DSN: $CI_SENTRY_PUBLIC_DSN
   only:
-    ref:
+    refs:
       - tags
 
 #######################################
@@ -230,5 +230,5 @@ delete-k8s-objects:
   script:
   - python3 k8s/scripts/delete-k8s-objects.py
   only:
-    ref:
+    refs:
       - master
