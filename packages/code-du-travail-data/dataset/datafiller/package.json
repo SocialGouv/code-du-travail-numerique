@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data...datafiller",
-  "version": "2.5.1",
+  "version": "3.0.0-next.0",
   "private": true,
   "main": "index.js",
   "license": "MIT",

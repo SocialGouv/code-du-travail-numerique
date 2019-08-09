@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-next.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.5.1...v3.0.0-next.0) (2019-08-09)
+
+
+### Bug Fixes
+
+* **data:** update fiches sp following [#1075](https://github.com/SocialGouv/code-du-travail-numerique/issues/1075) ([#1081](https://github.com/SocialGouv/code-du-travail-numerique/issues/1081)) ([cfb2f2c](https://github.com/SocialGouv/code-du-travail-numerique/commit/cfb2f2c))
+
+
+
+
+
 ## [2.5.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.5.0...v2.5.1) (2019-07-25)
 
 **Note:** Version bump only for package @cdt/data

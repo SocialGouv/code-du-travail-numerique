@@ -1,6 +1,6 @@
 {
   "name": "@cdt/data",
-  "version": "2.5.1",
+  "version": "3.0.0-next.0",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
   "main": "index.js",
