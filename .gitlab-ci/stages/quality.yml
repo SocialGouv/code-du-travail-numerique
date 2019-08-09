@@ -90,7 +90,7 @@ Test @cdtn/api:
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
     #
-    - yarn workspace @cdt/api test --coverag
+    - yarn workspace @cdt/api test --coverage
 
 Test @cdtn/data:
   <<: *quality_stage
