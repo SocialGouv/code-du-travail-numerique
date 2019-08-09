@@ -76,16 +76,15 @@ jobs:
         - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:=--yes}
 
     - stage: Go Prod
-          if: env(PRODUCTION)
-          name: A tag is going to production 🏭
-          branches:
-            only:
-            - /v.*/
-          env: *gitlab_keys
-          script:
-            >-
-              curl -X POST
-              -F token=${GITLAB_TOKEN}
-              -F ref=${TRAVIS_BRANCH}
-              -F "variables[PRODUCTION]=true"
-              https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
+      if: env(PRODUCTION)
+      name: A tag is going to production 🏭
+      branches:
+        only:
+          - /v.*/
+      env: *gitlab_keys
+      script: >-
+        curl -X POST
+        -F token=${GITLAB_TOKEN}
+        -F ref=${TRAVIS_BRANCH}
+        -F "variables[PRODUCTION]=true"
+        https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
