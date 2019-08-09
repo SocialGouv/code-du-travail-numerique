@@ -14,10 +14,10 @@ function AbsencePeriods({ name, onChange }) {
       {({ fields }) => (
         <>
           <p>
-            Les congés maternité, arrêts de travail liés à une maladie
-            professionnelle, congés individuels de formation (Cif) et stage de
-            fin d’étude de plus de 2 mois ne sont pas considérés comme des
-            absences. Merci de ne pas les renseigner.
+            Les congés maternité, arrêts de travail liés à un accident du
+            travail ou une maladie professionnelle, congés individuels de
+            formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont
+            pas considérés comme des absences. Merci de ne pas les renseigner.
           </p>
           <Row key={name}>
             <CellHeader as={MotifCell}>Motif</CellHeader>
