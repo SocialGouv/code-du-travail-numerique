@@ -213,22 +213,3 @@ Deploy @cdtn/frontend (prod):
   only:
     refs:
       - tags
-
-#######################################
-###       DELETE K8S OBJECTS        ###
-#######################################
-
-delete-k8s-objects:
-  stage: "Delete K8S Objects"
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  environment:
-    name: dev
-  before_script:
-  - /apps/create-kubeconfig.sh
-  script:
-  - python3 k8s/scripts/delete-k8s-objects.py
-  only:
-    refs:
-      - master
