@@ -136,11 +136,10 @@ $ sh scripts/deploy-dev.sh
 <br>
 <br>
 
-## Release policy (preprod environment)
+## Release policy
 
-This is the process to release to the preprod URL: https://codedutravail-dev.num.social.gouv.fr/
-
-To deploy in production, ask @revolunet
+Development environment : http://master.code-du-travail-numerique.dev.factory.social.gouv.fr
+This is the process to release to the preprod URL like : `https://x-y-z.codedutravail-dev.num.social.gouv.fr/`
 
 ### Auto
 
