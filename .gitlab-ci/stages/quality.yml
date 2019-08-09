@@ -56,57 +56,24 @@ Lint @cdtn/data:
 Test @cdtn/frontend:
   <<: *quality_stage
   <<: *master_based_stage
-  artifacts:
-    paths:
-      - packages/code-du-travail-frontend/coverage
   script:
     - yarn workspace @cdt/frontend test --coverage
-
-    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
-    # As Gitlab artifacts paths seems to only support relative path, I copy the
-    # coverage folder to the relative project directory
-    - export CONTEXT=packages/code-du-travail-frontend
-    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
-    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
 Test @cdtn/ui:
   <<: *quality_stage
   <<: *master_based_stage
-  artifacts:
-    paths:
-      - packages/code-du-travail-ui/coverage
   script:
     - yarn workspace @cdt/ui test --coverage
-
-    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
-    # As Gitlab artifacts paths seems to only support relative path, I copy the
-    # coverage folder to the relative project directory
-    - export CONTEXT=packages/code-du-travail-ui
-    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
-    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
 Test @socialgouv/react-fiche-service-public:
   <<: *quality_stage
   <<: *master_based_stage
-  artifacts:
-    paths:
-      - packages/react-fiche-service-public/coverage
   script:
     - yarn workspace @socialgouv/react-fiche-service-public test --coverage
-
-    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
-    # As Gitlab artifacts paths seems to only support relative path, I copy the
-    # coverage folder to the relative project directory
-    - export CONTEXT=packages/react-fiche-service-public
-    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
-    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
 
 Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
-  artifacts:
-    paths:
-      - packages/code-du-travail-api/coverage
   services:
     - $CI_REGISTRY_IMAGE/elasticsearch:$ELK_STACK_VERSION
   variables:
@@ -123,32 +90,10 @@ Test @cdtn/api:
         [[ $(( retry-- )) -gt 0 ]];
       do echo "Waiting for Elasticsearch to go Green ($retry)" ; sleep 1 ; done ;
     #
-    - yarn workspace @cdt/api test --coverage
-
-    # NOTE(douglasduteil): Move the coverage to an artifact friendly place <3
-    # As Gitlab artifacts paths seems to only support relative path, I copy the
-    # coverage folder to the relative project directory
-    - export CONTEXT=packages/code-du-travail-api
-    - mkdir -p $CI_PROJECT_DIR/$CONTEXT
-    - cp -r /app/$CONTEXT/coverage $CI_PROJECT_DIR/$CONTEXT/coverage
+    - yarn workspace @cdt/api test --coverag
 
 Test @cdtn/data:
   <<: *quality_stage
   <<: *python_based_stage
   script:
     - python search/indexing/document_slug_checker.py -v
-
-#
-
-Send coverage result:
-  stage: "Registration"
-  image: "node:10-stretch"
-  dependencies:
-    - Test @cdtn/api
-    - Test @cdtn/frontend
-    - Test @cdtn/ui
-    - Test @socialgouv/react-fiche-service-public
-  script:
-    - npx codecov
-  only:
-    - master

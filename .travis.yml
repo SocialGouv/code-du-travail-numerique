@@ -27,8 +27,8 @@ jobs:
   include:
     - <<: *node_stage
       stage: Main
-      if: type = pull_request
-      name: Pull Request Stage
+      if: NOT (env(RELEASE) OR env(PRODUCTION))
+      name: Main Stage
       env:
         - ELASTICSEARCH_LOG_LEVEL=info
       before_script:
@@ -54,7 +54,8 @@ jobs:
         - travis_fold start "yarn.test"
         - yarn run -- test --stream -- --coverage
         - travis_fold end "yarn.test"
-      after_success: npx codecov
+      after_success:
+        - npx codecov
 
     - <<: *node_stage
       stage: Release
