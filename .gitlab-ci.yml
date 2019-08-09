@@ -93,6 +93,7 @@ Deploy @cdtn/nlp (dev):
   extends: .deploy-code-du-travail-nlp-k8s
   variables:
     <<: *deploy_stage_variables
+    CONTEXT: nlp
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     FLASK_APP: ${FLASK_APP}
     PORT: ${NLP_PORT}

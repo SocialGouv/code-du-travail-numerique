@@ -1,11 +1,13 @@
 ---
-apiVersion: extensions/v1beta1
+apiVersion: v1
 kind: Ingress
 metadata:
-  name: cdtn-nlp${HASH_BRANCH_NAME}
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   labels:
-    app: cdtn-nlp${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+    git/branch: ${BRANCH_NAME}
+    git/commit: ${COMMIT}
+    gitlab/job: "${JOB_ID}"
 spec:
   rules:
   - host: ${NLP_HOST}
@@ -13,5 +15,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: cdtn-nlp${HASH_BRANCH_NAME}
+          serviceName: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
           servicePort: ${PORT}
