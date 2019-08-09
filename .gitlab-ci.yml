@@ -52,8 +52,9 @@ Deploy Elasticsearch (dev):
     CONTEXT: elasticsearch
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
+  only:
+    ref:
+      - branch
 
 Create Elasticsearch Index (dev):
   <<: *deploy_stage
@@ -64,8 +65,9 @@ Create Elasticsearch Index (dev):
     <<: *deploy_stage_variables
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
+  only:
+    ref:
+      - branch
 
 Deploy @cdtn/api (dev):
   <<: *deploy_stage
@@ -82,8 +84,9 @@ Deploy @cdtn/api (dev):
     PORT: ${API_PORT}
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
+  only:
+    ref:
+      - branch
 
 Deploy @cdtn/nlp (dev):
   <<: *deploy_stage
@@ -99,8 +102,9 @@ Deploy @cdtn/nlp (dev):
     PORT: ${NLP_PORT}
     SUGGEST_DATA: ${SUGGEST_DATA_URL}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
+  only:
+    ref:
+      - branch
 
 Deploy @cdtn/frontend (dev):
   <<: *deploy_stage
@@ -113,8 +117,9 @@ Deploy @cdtn/frontend (dev):
     ENVIRONMENT: $CI_ENVIRONMENT_NAME
     PORT: ${FRONTEND_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  except:
-  - master
+  only:
+    ref:
+      - branch
 
 ########################################
 #### DEPLOY CDTN TO K8S PROD CLUSTER ###
@@ -134,7 +139,8 @@ Deploy Elasticsearch (prod):
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-  - master
+    ref:
+      - tags
 
 Create Elasticsearch Index (prod):
   <<: *deploy_stage
@@ -147,7 +153,8 @@ Create Elasticsearch Index (prod):
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-  - master
+    ref:
+      - tags
 
 Deploy @cdtn/api (prod):
   <<: *deploy_stage
@@ -166,7 +173,8 @@ Deploy @cdtn/api (prod):
     ES_PORT: ${ELASTICSEARCH_PORT}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-  - master
+    ref:
+      - tags
 
 Deploy @cdtn/nlp (prod):
   <<: *deploy_stage
@@ -184,7 +192,8 @@ Deploy @cdtn/nlp (prod):
     SUGGEST_DATA: ${SUGGEST_DATA_URL}
     CDTN_REGISTRY: $CI_REGISTRY_IMAGE
   only:
-  - master
+    ref:
+      - tags
 
 Deploy @cdtn/frontend (prod):
   <<: *deploy_stage
@@ -202,7 +211,8 @@ Deploy @cdtn/frontend (prod):
     PIWIK_ID: $CI_PIWIK_ID
     SENTRY_PUBLIC_DSN: $CI_SENTRY_PUBLIC_DSN
   only:
-  - master
+    ref:
+      - tags
 
 #######################################
 ###       DELETE K8S OBJECTS        ###
@@ -220,4 +230,5 @@ delete-k8s-objects:
   script:
   - python3 k8s/scripts/delete-k8s-objects.py
   only:
-  - master
+    ref:
+      - master
