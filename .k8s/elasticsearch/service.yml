@@ -16,7 +16,7 @@ spec:
 
   clusterIP: None
   ports:
-    - port: ${ES_PORT}
+    - port: ${PORT}
       name: rest
     - port: ${ES_INTER_NODE}
       name: inter-node

@@ -19,7 +19,7 @@ spec:
         app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     spec:
       containers:
-      - image:  ${CDTN_REGISTRY}/nlp:${IMAGE_TAG}
+      - image:  ${REGISTRY}/nlp:${IMAGE_TAG}
         name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
         ports:
         - containerPort: ${PORT}

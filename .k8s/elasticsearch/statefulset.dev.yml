@@ -41,7 +41,7 @@ spec:
             add:
             - IPC_LOCK
             - SYS_RESOURCE
-        image: ${CDTN_REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
+        image: ${REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
         env:
         - name: ES_JAVA_OPTS
           valueFrom:
@@ -52,17 +52,17 @@ spec:
           httpGet:
             scheme: HTTP
             path: /_cluster/health
-            port: ${ES_PORT}
+            port: ${PORT}
           initialDelaySeconds: 5
           periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
             path: /_cluster/health?local=true
-            port: ${ES_PORT}
+            port: ${PORT}
           initialDelaySeconds: 5
         ports:
-        - containerPort: ${ES_PORT}
+        - containerPort: ${PORT}
           name: es-http
         - containerPort: ${ES_INTER_NODE}
           name: es-transport

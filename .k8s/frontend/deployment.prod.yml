@@ -17,7 +17,7 @@ spec:
         app: cdtn-frontend${HASH_BRANCH_NAME}
     spec:
       containers:
-      - image:  ${CDTN_REGISTRY}/frontend:${IMAGE_TAG}
+      - image:  ${REGISTRY}/frontend:${IMAGE_TAG}
         name: cdtn-frontend
         ports:
         - containerPort: ${PORT}

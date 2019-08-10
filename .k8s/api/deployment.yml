@@ -17,7 +17,7 @@ spec:
         app: cdtn-api${HASH_BRANCH_NAME}
     spec:
       containers:
-      - image:  ${CDTN_REGISTRY}/api:${IMAGE_TAG}
+      - image:  ${REGISTRY}/api:${IMAGE_TAG}
         name: cdtn-api${HASH_BRANCH_NAME}
         ports:
         - containerPort: ${PORT}

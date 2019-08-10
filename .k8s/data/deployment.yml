@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: cdtn-data${HASH_BRANCH_NAME}
-    image: ${CDTN_REGISTRY}/data:${IMAGE_TAG}
+    image: ${REGISTRY}/data:${IMAGE_TAG}
     env:
     - name: ELASTICSEARCH_URL
       value: "${ELASTICSEARCH_URL}"

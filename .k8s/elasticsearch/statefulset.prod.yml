@@ -22,14 +22,14 @@ spec:
         emptyDir: {}
       containers:
       - name: elasticsearch
-        image: ${CDTN_REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
+        image: ${REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
         resources:
           limits:
             cpu: 1000m
           requests:
             cpu: 100m
         ports:
-        - containerPort: ${ES_PORT}
+        - containerPort: ${PORT}
           name: rest
           protocol: TCP
         - containerPort: ${ES_INTER_NODE}
