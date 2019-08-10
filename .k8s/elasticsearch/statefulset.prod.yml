@@ -2,10 +2,13 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: es-cluster
+  name: ${K8S_NAMESPACE}-es-cluster-${BRANCH_HASH}
   labels:
-    app: es-cluster${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE-es-cluster-${BRANCH_HASH}
+    git/branch: ${BRANCH_NAME}
+  annotations:
+    git/commit: ${COMMIT}
+    gitlab/job: "${JOB_ID}"
 spec:
   serviceName: elasticsearch
   replicas: 1
@@ -22,7 +25,7 @@ spec:
         emptyDir: {}
       containers:
       - name: elasticsearch
-        image: ${REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
+        image: ${IMAGE_NAME}:${IMAGE_TAG}
         resources:
           limits:
             cpu: 1000m
@@ -40,7 +43,7 @@ spec:
           mountPath: /usr/share/elasticsearch/data
         env:
         - name: cluster.name
-          value: es-cluster-cdtn
+          value: ${K8S_NAMESPACE}-es-cluster
         - name: node.name
           valueFrom:
             fieldRef:

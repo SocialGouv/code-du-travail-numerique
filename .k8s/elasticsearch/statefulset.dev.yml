@@ -4,8 +4,11 @@ kind: StatefulSet
 metadata:
   name: ${ELASTICSEARCH_HOST}
   labels:
-    app: ${ELASTICSEARCH_HOST}
-    branch: cdtn${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+    git/branch: ${BRANCH_NAME}
+  annotations:
+    git/commit: ${COMMIT}
+    gitlab/job: "${JOB_ID}"
 spec:
   serviceName: ${ELASTICSEARCH_HOST}
   replicas: 1
@@ -41,12 +44,12 @@ spec:
             add:
             - IPC_LOCK
             - SYS_RESOURCE
-        image: ${REGISTRY}/elasticsearch:${ELK_STACK_VERSION}
+        image: ${IMAGE_NAME}:${IMAGE_TAG}
         env:
         - name: ES_JAVA_OPTS
           valueFrom:
             configMapKeyRef:
-              name: es-config${HASH_BRANCH_NAME}
+              name: ${K8S_NAMESPACE}-es-config-${BRANCH_HASH}
               key: ES_JAVA_OPTS
         livenessProbe:
           httpGet:
@@ -67,17 +70,17 @@ spec:
         - containerPort: ${ES_INTER_NODE}
           name: es-transport
         volumeMounts:
-        - name: es-data${HASH_BRANCH_NAME}
+        - name: ${K8S_NAMESPACE}-es-data-${BRANCH_HASH}
           mountPath: /usr/share/elasticsearch/data
-        - name: elasticsearch-config${HASH_BRANCH_NAME}
+        - name: ${K8S_NAMESPACE}-elasticsearch-config-${BRANCH_HASH}
           mountPath: /usr/share/elasticsearch/config/elasticsearch.yml
           subPath: elasticsearch.yml
       volumes:
-      - name: elasticsearch-config${HASH_BRANCH_NAME}
+      - name: ${K8S_NAMESPACE}-elasticsearch-config-${BRANCH_HASH}
         configMap:
-          name: es-config${HASH_BRANCH_NAME}
+          name: ${K8S_NAMESPACE}-es-config-${BRANCH_HASH}
           items:
           - key: elasticsearch.yml
             path: elasticsearch.yml
-      - name: es-data${HASH_BRANCH_NAME}
+      - name: ${K8S_NAMESPACE}-es-data-${BRANCH_HASH}
         emptyDir: {}

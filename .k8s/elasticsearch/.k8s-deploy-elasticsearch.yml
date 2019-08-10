@@ -1,32 +1,19 @@
-.deploy-elasticsearch-dev-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+.k8s-deploy-elasticsearch-dev:
+  extends: .base_docker_kube_image_stage
   script:
-  - export HASH_BRANCH_NAME=-$BRANCH_HASH
-  #
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/elasticsearch/configmap-elasticsearch-dev.yml > k8s/elasticsearch/configmap-cdtn-elasticsearch-dev.yml
-  - envsubst < k8s/elasticsearch/statefulset-elasticsearch-dev.yml > k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
-  - envsubst < k8s/elasticsearch/service-elasticsearch.yml > k8s/elasticsearch/service-cdtn-elasticsearch.yml
-  #
-  - kubectl apply -f k8s/elasticsearch/configmap-cdtn-elasticsearch-dev.yml
-  - kubectl apply -f k8s/elasticsearch/statefulset-cdtn-elasticsearch-dev.yml
-  - kubectl apply -f k8s/elasticsearch/service-cdtn-elasticsearch.yml
-  allow_failure: false
+    - envsubst < ./.k8s/elasticsearch/configmap.yml > ./configmap.yml
+    - envsubst < ./.k8s/elasticsearch/service.yml > ./service.yml
+    - envsubst < ./.k8s/elasticsearch/statefulset.dev.yml > ./statefulset.yml
+    #
+    - kubectl apply -f ./configmap.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./statefulset.yml
 
-
-.deploy-elasticsearch-prod-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+.k8s-deploy-elasticsearch-prod:
+  extends: .base_docker_kube_image_stage
   script:
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/elasticsearch/statefulset-elasticsearch.yml > k8s/elasticsearch/statefulset-cdtn-elasticsearch-prod.yml
-  - envsubst < k8s/elasticsearch/service-elasticsearch.yml > k8s/elasticsearch/service-cdtn-elasticsearch-prod.yml
-  #
-  - kubectl apply -f k8s/elasticsearch/statefulset-cdtn-elasticsearch-prod.yml
-  - kubectl apply -f k8s/elasticsearch/service-cdtn-elasticsearch-prod.yml
-  allow_failure: false
+    - envsubst < ./.k8s/elasticsearch/service.yml > ./service.yml
+    - envsubst < ./.k8s/elasticsearch/statefulset.prod.yml > ./statefulset.yml
+    #
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./statefulset.yml

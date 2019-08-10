@@ -2,6 +2,7 @@
 
 include:
   - /.k8s/api/.k8s-deploy-api.yml
+  - /.k8s/elasticsearch/.k8s-deploy-elasticsearch.yml
   - /.k8s/frontend/.k8s-deploy-frontend.yml
 
 #
@@ -90,4 +91,28 @@ Deploy @cdtn/frontend (dev):
 Deploy @cdtn/frontend (incubateur):
   extends: .k8s-deploy-frontend-prod
   <<: *deploy_frontend
+  <<: *incubateur_stage
+
+#
+
+.deploy-elasticsearch: &deploy_elasticsearch
+  <<: *deploy_stage
+  variables:
+    <<: *deploy_stage_variables
+    CONTEXT: elasticsearch
+    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/elasticsearch
+    IMAGE_TAG: ${ELK_STACK_VERSION}
+    PORT: ${ELASTICSEARCH_PORT}
+
+#
+
+Deploy elasticsearch (dev):
+  extends: .k8s-deploy-elasticsearch-dev
+  <<: *deploy_elasticsearch
+  <<: *dev_stage
+
+Deploy elasticsearch (incubateur):
+  extends: .k8s-deploy-elasticsearch-prod
+  <<: *deploy_elasticsearch
   <<: *incubateur_stage
