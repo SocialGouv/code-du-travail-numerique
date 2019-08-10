@@ -1,7 +1,7 @@
 #
 
 .prepare_stage: &prepare_stage
-  extends: .base-docker-image-stage
+  extends: .base_register_stage
   stage: "Prepare"
   dependencies: []
   before_script:
@@ -22,7 +22,7 @@ Register socialgouv/cdtn base image:
     IMAGE_NAME: $CI_REGISTRY_IMAGE
 
 Register elasticsearch image:
-  extends: .base-docker-image-stage
+  extends: .base_register_stage
   stage: "Prepare"
   dependencies: []
   before_script:
