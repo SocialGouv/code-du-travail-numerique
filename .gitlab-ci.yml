@@ -3,18 +3,10 @@ include:
 - /.gitlab-ci/variables.yml
 - /.gitlab-ci/extends.yml
 
-- '/.k8s/elasticsearch/.deploy-elasticsearch-k8s.yml'
-- '/.k8s/data/.deploy-code-du-travail-data-k8s.yml'
-- '/.k8s/api/.deploy-code-du-travail-api-k8s.yml'
-- '/.k8s/frontend/.deploy-code-du-travail-frontend-k8s.yml'
-- '/.k8s/nlp/.deploy-code-du-travail-nlp-k8s.yml'
-
 - /.gitlab-ci/stages/prepare.yml
 - /.gitlab-ci/stages/quality.yml
 - /.gitlab-ci/stages/register.yml
 - /.gitlab-ci/stages/notify.yml
-
-image: node:10-alpine
 
 stages:
 - "Prepare"

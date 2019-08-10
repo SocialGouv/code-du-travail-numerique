@@ -1,37 +1,24 @@
-.deploy-code-du-travail-frontend-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+.k8s-deploy-frontend-dev:
+  extends: .base_docker_kube_image_stage
   script:
-  - export HASH_BRANCH_NAME=-$BRANCH_HASH
-  #
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/code-du-travail-frontend/deployment-code-du-travail-frontend.yml > k8s/code-du-travail-frontend/deployment-cdtn-frontend.yml
-  - envsubst < k8s/code-du-travail-frontend/service-code-du-travail-frontend.yml > k8s/code-du-travail-frontend/service-cdtn-frontend.yml
-  - envsubst < k8s/code-du-travail-frontend/ingress-code-du-travail-frontend.yml > k8s/code-du-travail-frontend/ingress-cdtn-frontend.yml
-  #
-  - kubectl apply -f k8s/code-du-travail-frontend/deployment-cdtn-frontend.yml
-  - kubectl apply -f k8s/code-du-travail-frontend/service-cdtn-frontend.yml
-  - kubectl apply -f k8s/code-du-travail-frontend/ingress-cdtn-frontend.yml
-  - echo "CDTN frontend available at - http://${FRONTEND_HOST}"
-  allow_failure: false
+    - envsubst < ./.k8s/frontend/deployment.dev.yml > ./deployment.yml
+    - envsubst < ./.k8s/frontend/service.yml > ./service.yml
+    - envsubst < ./.k8s/frontend/ingress.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml
 
-.deploy-code-du-travail-frontend-prod-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+
+.k8s-deploy-frontend-prod:
+  extends: .base_docker_kube_image_stage
   script:
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/code-du-travail-frontend/deployment-code-du-travail-frontend-prod.yml > k8s/code-du-travail-frontend/deployment-cdtn-frontend-prod.yml
-  - envsubst < k8s/code-du-travail-frontend/service-code-du-travail-frontend.yml > k8s/code-du-travail-frontend/service-cdtn-frontend.yml
-  - envsubst < k8s/code-du-travail-frontend/ingress-code-du-travail-frontend.yml > k8s/code-du-travail-frontend/ingress-cdtn-frontend.yml
-  - envsubst < k8s/code-du-travail-certificate/certificate-code-du-travail.yml > k8s/code-du-travail-certificate/certificate-cdtn.yml
-  #
-  - kubectl apply -f k8s/code-du-travail-frontend/deployment-cdtn-frontend-prod.yml
-  - kubectl apply -f k8s/code-du-travail-frontend/service-cdtn-frontend.yml
-  - kubectl apply -f k8s/code-du-travail-frontend/ingress-cdtn-frontend.yml
-  - kubectl apply -f k8s/code-du-travail-certificate/certificate-cdtn.yml
-  - echo "CDTN frontend available at - https://${FRONTEND_HOST}"
-  allow_failure: false
+    - envsubst < ./.k8s/certificate/certificate.yml > ./certificate.yml
+    - envsubst < ./.k8s/frontend/deployment.prod.yml > ./deployment.yml
+    - envsubst < ./.k8s/frontend/service.yml > ./service.yml
+    - envsubst < ./.k8s/frontend/ingress-prod.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./certificate.yml
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml

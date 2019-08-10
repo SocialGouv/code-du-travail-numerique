@@ -8,7 +8,12 @@
   services:
     - docker:$DOCKER_VERSION-dind
 
-.base-docker-kube-image-stage:
+#
+
+.base_docker_kube_image_stage:
   image:
     name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
     entrypoint: [""]
+  before_script:
+    - source ./.gitlab-ci/env.sh
+    - /apps/create-kubeconfig.sh
