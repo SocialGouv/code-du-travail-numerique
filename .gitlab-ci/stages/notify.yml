@@ -15,7 +15,7 @@ Notify Starting Deployment:
   <<: *notify_stage
   stage: "Registration"
   script:
-    - sh ./k8s/scripts/get-deploy-id.sh
+    - sh ./.k8s/scripts/get-deploy-id.sh
     - echo "GitHub deployment id '$(cat github_deploy_id)'"
   artifacts:
     paths:
@@ -32,7 +32,7 @@ Notify Fail:
   script:
     - echo "Notify Failure to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
     - export URL="http://${FRONTEND_HOST}"
-    - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
+    - sh ./.k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) failure
 
 Notify Success:
   <<: *notify_stage
@@ -43,4 +43,4 @@ Notify Success:
   script:
     - echo "Notify Success to GitHub deployment id '$(cat $DEPLOY_ID_FILE)'"
     - export URL="http://${FRONTEND_HOST}"
-    - sh ./k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success
+    - sh ./.k8s/scripts/send-url.sh $(cat $DEPLOY_ID_FILE) success
