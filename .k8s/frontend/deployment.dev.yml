@@ -2,47 +2,47 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: cdtn-frontend${HASH_BRANCH_NAME}
-  labels:
-    app: cdtn-frontend${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdtn-frontend${HASH_BRANCH_NAME}
+      app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   template:
     metadata:
       labels:
-        app: cdtn-frontend${HASH_BRANCH_NAME}
+        app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+        git/branch: ${BRANCH_NAME}
+        git/commit: ${COMMIT}
+        gitlab/job: "${JOB_ID}"
     spec:
       containers:
-      - image:  ${REGISTRY}/frontend:${IMAGE_TAG}
-        name: cdtn-frontend
-        ports:
-        - containerPort: ${PORT}
-        livenessProbe:
-          httpGet:
-            path: /
-            port: ${PORT}
-          initialDelaySeconds: 3
-          periodSeconds: 5
-        readinessProbe:
-          httpGet:
-            path: /
-            port: ${PORT}
-          initialDelaySeconds: 3
-          periodSeconds: 5
-        env:
-        - name: API_URL
-          value: "${API_URL}/api/v1"
-        - name: SUGGEST_URL
-          value: "${NLP_URL}/api/suggest"
-        - name: ENVIRONMENT
-          value: ${ENVIRONMENT}
-        - name: FRONTEND_HOST
-          value: ${FRONTEND_HOST}
-        - name: PIWIK_URL
-          value: ${CI_PIWIK_URL}
-        - name: PIWIK_SITE_ID
-          value: ${CI_PIWIK_SITE_ID}
+        - image: ${IMAGE_NAME}:${IMAGE_TAG}
+          name: ${K8S_NAMESPACE}-${CONTEXT}
+          ports:
+            - containerPort: ${PORT}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: ${PORT}
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /
+              port: ${PORT}
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          env:
+            - name: API_URL
+              value: "${API_URL}/api/v1"
+            - name: SUGGEST_URL
+              value: "${NLP_URL}/api/suggest"
+            - name: ENVIRONMENT
+              value: ${ENVIRONMENT}
+            - name: FRONTEND_HOST
+              value: ${FRONTEND_HOST}
+            - name: PIWIK_URL
+              value: ${CI_PIWIK_URL}
+            - name: PIWIK_SITE_ID
+              value: ${CI_PIWIK_SITE_ID}

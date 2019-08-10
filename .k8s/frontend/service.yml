@@ -2,13 +2,15 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: cdtn-frontend${HASH_BRANCH_NAME}
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   labels:
-    app: cdtn-frontend${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+    git/branch: ${BRANCH_NAME}
+    git/commit: ${COMMIT}
+    gitlab/job: "${JOB_ID}"
 spec:
   selector:
-    app: cdtn-frontend${HASH_BRANCH_NAME}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   ports:
-  - port: ${PORT}
-    name: frontend
+    - port: ${PORT}
+      name: ${CONTEXT}
