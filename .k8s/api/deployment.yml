@@ -2,45 +2,45 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: cdtn-api${HASH_BRANCH_NAME}
-  labels:
-    app: cdtn-api${HASH_BRANCH_NAME}
-    branch: cdtn${HASH_BRANCH_NAME}
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cdtn-api${HASH_BRANCH_NAME}
+      app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   template:
     metadata:
       labels:
-        app: cdtn-api${HASH_BRANCH_NAME}
+        app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+        git/branch: ${BRANCH_NAME}
+        git/commit: ${COMMIT}
+        gitlab/job: "${JOB_ID}"
     spec:
       containers:
-      - image:  ${REGISTRY}/api:${IMAGE_TAG}
-        name: cdtn-api${HASH_BRANCH_NAME}
-        ports:
-        - containerPort: ${PORT}
-        livenessProbe:
-          httpGet:
-            path: /api/v1/version
-            port: ${PORT}
-          initialDelaySeconds: 3
-          periodSeconds: 5
-        readinessProbe:
-          httpGet:
-            path: /api/v1/version
-            port: ${PORT}
-          initialDelaySeconds: 3
-          periodSeconds: 5
-        env:
-        - name: API_PORT
-          value: "1337"
-        - name: ELASTICSEARCH_URL
-          value: "${ELASTICSEARCH_URL}"
-        - name: ELASTICSEARCH_LOG_LEVEL
-          value: "${ELASTICSEARCH_LOG_LEVEL}"
-        - name: APM_SERVER_ACTIVE
-          value: "${APM_SERVER_ACTIVE}"
-        - name: APM_SERVER_URL
-          value: "${APM_SERVER_URL}"
+        - image: ${IMAGE_NAME}:${IMAGE_TAG}
+          name: ${K8S_NAMESPACE}-${CONTEXT}
+          ports:
+            - containerPort: ${PORT}
+          livenessProbe:
+            httpGet:
+              path: /api/v1/version
+              port: ${PORT}
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /api/v1/version
+              port: ${PORT}
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          env:
+          - name: API_PORT
+            value: "${API_PORT}"
+          - name: ELASTICSEARCH_URL
+            value: "${ELASTICSEARCH_URL}"
+          - name: ELASTICSEARCH_LOG_LEVEL
+            value: "${ELASTICSEARCH_LOG_LEVEL}"
+          - name: APM_SERVER_ACTIVE
+            value: "${APM_SERVER_ACTIVE}"
+          - name: APM_SERVER_URL
+            value: "${APM_SERVER_URL}"

@@ -1,37 +1,10 @@
-.deploy-code-du-travail-api-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+.k8s-deploy-api:
+  extends: .base_docker_kube_image_stage
   script:
-  - export HASH_BRANCH_NAME=-$BRANCH_HASH
-  #
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/code-du-travail-api/deployment-code-du-travail-api.yml > k8s/code-du-travail-api/deployment-cdtn-api.yml
-  - envsubst < k8s/code-du-travail-api/service-code-du-travail-api.yml > k8s/code-du-travail-api/service-cdtn-api.yml
-  - envsubst < k8s/code-du-travail-api/ingress-code-du-travail-api.yml > k8s/code-du-travail-api/ingress-cdtn-api.yml
-  #
-  - kubectl apply -f k8s/code-du-travail-api/deployment-cdtn-api.yml
-  - kubectl apply -f k8s/code-du-travail-api/service-cdtn-api.yml
-  - kubectl apply -f k8s/code-du-travail-api/ingress-cdtn-api.yml
-  #
-  - echo "CDTN api available at - ${API_URL}"
-  allow_failure: false
-
-.deploy-code-du-travail-api-prod-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  script:
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/code-du-travail-api/deployment-code-du-travail-api.yml > k8s/code-du-travail-api/deployment-cdtn-api.yml
-  - envsubst < k8s/code-du-travail-api/service-code-du-travail-api.yml > k8s/code-du-travail-api/service-cdtn-api.yml
-  - envsubst < k8s/code-du-travail-api/ingress-code-du-travail-api.yml > k8s/code-du-travail-api/ingress-cdtn-api.yml
-  #
-  - kubectl apply -f k8s/code-du-travail-api/deployment-cdtn-api.yml
-  - kubectl apply -f k8s/code-du-travail-api/service-cdtn-api.yml
-  - kubectl apply -f k8s/code-du-travail-api/ingress-cdtn-api.yml
-  #
-  - echo "CDTN api available at - ${API_URL}"
-  allow_failure: false
+    - envsubst < ./.k8s/api/deployment.yml > ./deployment.yml
+    - envsubst < ./.k8s/api/service.yml > ./service.yml
+    - envsubst < ./.k8s/api/ingress.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml
