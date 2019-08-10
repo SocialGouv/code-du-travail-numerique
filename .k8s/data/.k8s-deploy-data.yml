@@ -1,24 +1,6 @@
-.deploy-code-du-travail-data-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
+.k8s-deploy-data:
+  extends: .base_docker_kube_image_stage
   script:
-  - export HASH_BRANCH_NAME=-$BRANCH_HASH
-  #
-  - /apps/create-kubeconfig.sh
-  #
-  - envsubst < k8s/code-du-travail-data/deployment-code-du-travail-data.yml > k8s/code-du-travail-data/deployment-cdtn-data.yml
-  #
-  - k8s/code-du-travail-data/scripts/create-code-du-travail-elasticsearch-index.sh $HASH_BRANCH_NAME
-  allow_failure: false
-
-.deploy-code-du-travail-data-prod-k8s:
-  image:
-    name: $CI_REGISTRY/$IMAGE_INFRA_BASE_NAME/docker-kube:latest
-    entrypoint: [""]
-  script:
-  - /apps/create-kubeconfig.sh
-  - envsubst < k8s/code-du-travail-data/deployment-code-du-travail-data.yml > k8s/code-du-travail-data/deployment-cdtn-data.yml
-  #
-  - k8s/code-du-travail-data/scripts/create-code-du-travail-elasticsearch-index.sh $HASH_BRANCH_NAME
-  allow_failure: false
+    - envsubst < ./.k8s/data/deployment.yml > ./deployment.yml
+    #
+    - ./.k8s/data/create-index.sh ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
