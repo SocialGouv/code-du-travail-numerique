@@ -1,0 +1,59 @@
+#
+
+include:
+  - /.k8s/frontend/.k8s-deploy-frontend.yml
+
+#
+
+.deploy_stage: &deploy_stage
+  stage: "Deploy"
+  dependencies: []
+  services:
+    - docker:dind
+  variables: &deploy_stage_variables
+    IMAGE_TAG: $CI_COMMIT_SHA
+    REGISTRY: $CI_REGISTRY_IMAGE
+
+.incubateur_stage: &incubateur_stage
+  environment:
+    name: incubateur
+  only:
+    refs:
+      - tags
+
+.dev_stage: &dev_stage
+  environment:
+    name: dev
+  only:
+    refs:
+      - branches
+
+#
+#
+#
+
+.deploy-frontend: &deploy_frontend
+  <<: *deploy_stage
+  variables:
+    <<: *deploy_stage_variables
+    CONTEXT: frontend
+    IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
+    PORT: ${FRONTEND_PORT}
+  after_script:
+    # NOTE(douglasduteil): re-run env.sh
+    # Because the `after_script` runs in a separated shell context.
+    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    - source ./.gitlab-ci/env.sh
+    - echo "Frontend available at - ${FRONTEND_URL}"
+
+#
+
+Deploy @cdtn/frontend (dev):
+  extends: .k8s-deploy-frontend-dev
+  <<: *deploy_frontend
+  <<: *dev_stage
+
+Deploy @cdtn/frontend (incubateur):
+  extends: .k8s-deploy-frontend-prod
+  <<: *deploy_frontend
+  <<: *incubateur_stage

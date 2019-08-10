@@ -6,6 +6,7 @@ include:
 - /.gitlab-ci/stages/prepare.yml
 - /.gitlab-ci/stages/quality.yml
 - /.gitlab-ci/stages/register.yml
+- /.gitlab-ci/stages/deploy.yml
 - /.gitlab-ci/stages/notify.yml
 
 stages:
@@ -32,21 +33,6 @@ stages:
 ### DEPLOY CDTN TO K8S DEV CLUSTER ###
 ######################################
 
-Deploy Elasticsearch (dev):
-  <<: *deploy_stage
-  environment:
-    name: dev
-    url: $ELASTICSEARCH_HOST
-  extends: .deploy-elasticsearch-dev-k8s
-  variables:
-    <<: *deploy_stage_variables
-    ES_PORT: ${ELASTICSEARCH_PORT}
-    CONTEXT: elasticsearch
-    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
-    CDTN_REGISTRY: $CI_REGISTRY_IMAGE
-  only:
-    refs:
-      - branches
 
 Create Elasticsearch Index (dev):
   <<: *deploy_stage
