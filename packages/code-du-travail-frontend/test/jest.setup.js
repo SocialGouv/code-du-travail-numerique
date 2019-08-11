@@ -9,7 +9,7 @@ jest.mock("next-server/config", () => () => ({
     API_DILA2SQL_URL: "https://api.dila2sql.num.social.gouv.fr/v1",
     SUGGEST_URL: "suggest.url/suggest",
     API_ADDRESS: "addresse-api.data",
-    PACKAGE_VERSION: "x.y.z"
+    PACKAGE_VERSION: "vX.Y.Z"
   }
 }));
 
