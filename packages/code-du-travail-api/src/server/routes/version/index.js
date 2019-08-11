@@ -12,7 +12,9 @@ const router = new Router({ prefix: API_BASE_URL });
  * @returns {string} The current api version.
  */
 router.get("/version", ctx => {
-  ctx.body = { version: require("../../../../package.json").version };
+  const version =
+    process.env.VERSION || require("../../../../package.json").version;
+  ctx.body = { version };
 });
 
 module.exports = router;
