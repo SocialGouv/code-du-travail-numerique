@@ -12,5 +12,5 @@ spec:
   selector:
     app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   ports:
-  - port: ${PORT}
-    name: nlp
+    - port: ${PORT}
+      name: ${CONTEXT}

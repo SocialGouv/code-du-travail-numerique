@@ -19,28 +19,28 @@ spec:
         app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     spec:
       containers:
-      - image:  ${REGISTRY}/nlp:${IMAGE_TAG}
-        name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
-        ports:
-        - containerPort: ${PORT}
-        livenessProbe:
-          failureThreshold: 5
-          httpGet:
-            path: /
-            port: ${PORT}
-          initialDelaySeconds: 300
-          periodSeconds: 5
-        readinessProbe:
-          failureThreshold: 5
-          httpGet:
-            path: /
-            port: ${PORT}
-          initialDelaySeconds: 300
-          periodSeconds: 5
-        env:
-        - name: NLP_PORT
-          value: "${PORT}"
-        - name: FLASK_APP
-          value: "api"
-        - name: SUGGEST_DATA_URL
-          value: "${SUGGEST_DATA}"
+        - image: ${IMAGE_NAME}:${IMAGE_TAG}
+          name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+          ports:
+            - containerPort: ${PORT}
+          livenessProbe:
+            failureThreshold: 5
+            httpGet:
+              path: /
+              port: ${PORT}
+            initialDelaySeconds: 300
+            periodSeconds: 5
+          readinessProbe:
+            failureThreshold: 5
+            httpGet:
+              path: /
+              port: ${PORT}
+            initialDelaySeconds: 300
+            periodSeconds: 5
+          env:
+            - name: NLP_PORT
+              value: "${PORT}"
+            - name: FLASK_APP
+              value: "api"
+            - name: SUGGEST_DATA_URL
+              value: "${SUGGEST_DATA_URL}"

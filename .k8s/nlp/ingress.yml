@@ -6,14 +6,15 @@ metadata:
   labels:
     app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     git/branch: ${BRANCH_NAME}
+  annotations:
     git/commit: ${COMMIT}
     gitlab/job: "${JOB_ID}"
 spec:
   rules:
-  - host: ${NLP_HOST}
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
-          servicePort: ${PORT}
+    - host: ${NLP_HOST}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+              servicePort: ${PORT}
