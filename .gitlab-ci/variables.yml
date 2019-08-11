@@ -1,7 +1,6 @@
 variables:
   API_PORT: 1337
   APM_SERVER_PORT: 8200
-  HASH_SIZE: 7
   DOCKER_COMPOSE_VERSION: "1.23.2"
   DOCKER_DRIVER: overlay2
   DOCKER_HOST: tcp://localhost:2375
@@ -11,6 +10,7 @@ variables:
   ELK_STACK_VERSION: 7.2.0
   FRONTEND_PORT: 3000
   GIT_STRATEGY: fetch
+  HASH_SIZE: 7
   IMAGE_INFRA_BASE_NAME: infra/images-docker
   KIBANA_PORT: 5601
   NLP_PORT: 5000
