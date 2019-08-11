@@ -1,0 +1,175 @@
+#
+
+include:
+  - /.k8s/api/.k8s-deploy-api.yml
+  - /.k8s/data/.k8s-deploy-data.yml
+  - /.k8s/elasticsearch/.k8s-deploy-elasticsearch.yml
+  - /.k8s/frontend/.k8s-deploy-frontend.yml
+  - /.k8s/nlp/.k8s-deploy-nlp.yml
+
+#
+
+.deploy_stage: &deploy_stage
+  stage: "Deploy"
+  dependencies: []
+  services:
+    - docker:dind
+  variables: &deploy_stage_variables
+    IMAGE_TAG: $CI_COMMIT_SHA
+    REGISTRY: ${CI_REGISTRY_IMAGE}
+
+.incubateur_stage: &incubateur_stage
+  environment:
+    name: incubateur
+  only:
+    refs:
+      - tags
+
+.dev_stage: &dev_stage
+  environment:
+    name: dev
+  only:
+    refs:
+      - branches
+
+#
+#
+#
+
+.deploy-api: &deploy_api
+  <<: *deploy_stage
+  extends: .k8s-deploy-api
+  variables:
+    <<: *deploy_stage_variables
+    APM_SERVER_ACTIVE: 0
+    APM_SERVER_URL: ""
+    CONTEXT: api
+    ELASTICSEARCH_LOG_LEVEL: trace
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/api
+    PORT: ${API_PORT}
+  after_script:
+    # NOTE(douglasduteil): re-run env.sh
+    # Because the `after_script` runs in a separated shell context.
+    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    - source ./.gitlab-ci/env.sh
+    - echo "Api available at - ${API_URL}"
+
+#
+
+Deploy @cdtn/api (dev):
+  <<: *deploy_api
+  <<: *dev_stage
+
+Deploy @cdtn/api (incubateur):
+  <<: *deploy_api
+  <<: *incubateur_stage
+
+
+#
+#
+#
+
+.deploy-frontend: &deploy_frontend
+  <<: *deploy_stage
+  variables:
+    <<: *deploy_stage_variables
+    CONTEXT: frontend
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/frontend
+    PORT: ${FRONTEND_PORT}
+  after_script:
+    # NOTE(douglasduteil): re-run env.sh
+    # Because the `after_script` runs in a separated shell context.
+    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    - source ./.gitlab-ci/env.sh
+    - echo "Frontend available at - ${FRONTEND_URL}"
+
+#
+
+Deploy @cdtn/frontend (dev):
+  extends: .k8s-deploy-frontend-dev
+  <<: *deploy_frontend
+  <<: *dev_stage
+
+Deploy @cdtn/frontend (incubateur):
+  extends: .k8s-deploy-frontend-prod
+  <<: *deploy_frontend
+  <<: *incubateur_stage
+
+#
+#
+#
+
+.deploy-elasticsearch: &deploy_elasticsearch
+  <<: *deploy_stage
+  variables:
+    <<: *deploy_stage_variables
+    CONTEXT: elasticsearch
+    ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/elasticsearch
+    IMAGE_TAG: ${ELK_STACK_VERSION}
+    PORT: ${ELASTICSEARCH_PORT}
+
+#
+
+Deploy elasticsearch (dev):
+  extends: .k8s-deploy-elasticsearch-dev
+  <<: *deploy_elasticsearch
+  <<: *dev_stage
+
+Deploy elasticsearch (incubateur):
+  extends: .k8s-deploy-elasticsearch-prod
+  <<: *deploy_elasticsearch
+  <<: *incubateur_stage
+
+#
+#
+#
+
+.deploy-data: &deploy_data
+  <<: *deploy_stage
+  extends: .k8s-deploy-data
+  variables:
+    <<: *deploy_stage_variables
+    CONTEXT: data
+    ES_PORT: ${ELASTICSEARCH_PORT}
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
+
+#
+
+Create Elasticsearch Index (dev):
+  <<: *deploy_data
+  <<: *dev_stage
+
+Create Elasticsearch Index (incubateur):
+  <<: *deploy_data
+  <<: *incubateur_stage
+
+
+#
+#
+#
+
+.deploy-nlp: &deploy_nlp
+  <<: *deploy_stage
+  extends: .k8s-deploy-nlp
+  variables:
+    <<: *deploy_stage_variables
+    CONTEXT: nlp
+    PORT: ${NLP_PORT}
+    IMAGE_NAME: ${CI_REGISTRY_IMAGE}/nlp
+  after_script:
+    # NOTE(douglasduteil): re-run env.sh
+    # Because the `after_script` runs in a separated shell context.
+    # see https://docs.gitlab.com/ee/ci/variables/where_variables_can_be_used.html#execution-shell-environment
+    - source ./.gitlab-ci/env.sh
+    - echo "NLP api available at - ${NLP_URL}"
+
+#
+
+Deploy @cdtn/nlp (dev):
+  <<: *deploy_nlp
+  <<: *dev_stage
+
+Deploy @cdtn/nlp (incubateur):
+  <<: *deploy_nlp
+  <<: *incubateur_stage

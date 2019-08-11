@@ -1,0 +1,24 @@
+.k8s-deploy-frontend-dev:
+  extends: .base_docker_kube_image_stage
+  script:
+    - envsubst < ./.k8s/frontend/deployment.dev.yml > ./deployment.yml
+    - envsubst < ./.k8s/frontend/service.yml > ./service.yml
+    - envsubst < ./.k8s/frontend/ingress.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml
+
+
+.k8s-deploy-frontend-prod:
+  extends: .base_docker_kube_image_stage
+  script:
+    - envsubst < ./.k8s/certificate/certificate.yml > ./certificate.yml
+    - envsubst < ./.k8s/frontend/deployment.prod.yml > ./deployment.yml
+    - envsubst < ./.k8s/frontend/service.yml > ./service.yml
+    - envsubst < ./.k8s/frontend/ingress-prod.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./certificate.yml
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml

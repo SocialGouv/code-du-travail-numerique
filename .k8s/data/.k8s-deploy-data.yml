@@ -1,0 +1,6 @@
+.k8s-deploy-data:
+  extends: .base_docker_kube_image_stage
+  script:
+    - envsubst < ./.k8s/data/deployment.yml > ./deployment.yml
+    #
+    - ./.k8s/data/create-index.sh ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
