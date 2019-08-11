@@ -8,6 +8,8 @@ import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
 
 const { publicRuntimeConfig } = getConfig();
 
+const GITHUB_REPO = "https://github.com/SocialGouv/code-du-travail-numerique";
+
 const Footer = () => (
   <StyledFooter>
     <Section>
@@ -56,10 +58,9 @@ const Footer = () => (
           <List>
             <StyledListItem>
               <a
-                href={
-                  "https://github.com/SocialGouv/code-du-travail-numerique/tree/v" +
+                href={`${GITHUB_REPO}/tree/${
                   publicRuntimeConfig.PACKAGE_VERSION
-                }
+                }`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -67,16 +68,25 @@ const Footer = () => (
               </a>
             </StyledListItem>
             <StyledListItem>
-              <a
-                href={
-                  "https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/v" +
-                  publicRuntimeConfig.PACKAGE_VERSION
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Journal des modifications
-              </a>
+              {(() => {
+                const packageVersion =
+                  publicRuntimeConfig.PACKAGE_VERSION || "";
+                const isTag = packageVersion[0] === "v";
+                const path = isTag
+                  ? "releases/tag"
+                  : packageVersion === "master"
+                  ? "commits"
+                  : "compare";
+                return (
+                  <a
+                    href={`${GITHUB_REPO}/${path}/${packageVersion}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Journal des modifications
+                  </a>
+                );
+              })()}
             </StyledListItem>
           </List>
         </Category>

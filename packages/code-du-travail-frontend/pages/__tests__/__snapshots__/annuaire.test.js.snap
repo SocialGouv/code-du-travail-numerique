@@ -1036,7 +1036,7 @@ exports[`<Annuaire /> should render 1`] = `
               class="c41"
             >
               <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vx.y.z"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -1047,7 +1047,7 @@ exports[`<Annuaire /> should render 1`] = `
               class="c41"
             >
               <a
-                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vx.y.z"
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
                 rel="noopener noreferrer"
                 target="_blank"
               >

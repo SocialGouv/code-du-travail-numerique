@@ -36,13 +36,15 @@ spec:
           env:
             - name: API_URL
               value: "${API_URL}/api/v1"
-            - name: SUGGEST_URL
-              value: "${NLP_URL}/api/suggest"
             - name: ENVIRONMENT
               value: ${ENVIRONMENT}
             - name: FRONTEND_HOST
               value: ${FRONTEND_HOST}
-            - name: PIWIK_URL
-              value: ${CI_PIWIK_URL}
             - name: PIWIK_SITE_ID
               value: ${CI_PIWIK_SITE_ID}
+            - name: PIWIK_URL
+              value: ${CI_PIWIK_URL}
+            - name: SUGGEST_URL
+              value: "${NLP_URL}/api/suggest"
+            - name: VERSION
+              value: "${VERSION}"

@@ -36,15 +36,17 @@ spec:
           env:
             - name: API_URL
               value: "${API_URL}/api/v1"
-            - name: SUGGEST_URL
-              value: "${NLP_URL}/api/suggest"
-            - name: PIWIK_URL
-              value: ${CI_PIWIK_URL}
-            - name: PIWIK_SITE_ID
-              value: ${CI_PIWIK_SITE_ID}
-            - name: SENTRY_PUBLIC_DSN
-              value: ${CI_SENTRY_PUBLIC_DSN}
-            - name: FRONTEND_HOST
-              value: ${FRONTEND_HOST}
             - name: ENVIRONMENT
               value: ${ENVIRONMENT}
+            - name: FRONTEND_HOST
+              value: ${FRONTEND_HOST}
+            - name: PIWIK_SITE_ID
+              value: ${CI_PIWIK_SITE_ID}
+            - name: PIWIK_URL
+              value: ${CI_PIWIK_URL}
+            - name: SENTRY_PUBLIC_DSN
+              value: ${CI_SENTRY_PUBLIC_DSN}
+            - name: SUGGEST_URL
+              value: "${NLP_URL}/api/suggest"
+            - name: VERSION
+              value: "${VERSION}"
