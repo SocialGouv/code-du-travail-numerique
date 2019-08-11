@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0-next.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.0-next.0...v3.0.0-next.1) (2019-08-11)
+
+
+### Features
+
+* **react-fiche-service-public:** is depending on @cdt/ui ([#1092](https://github.com/SocialGouv/code-du-travail-numerique/issues/1092)) ([ac8f4c0](https://github.com/SocialGouv/code-du-travail-numerique/commit/ac8f4c0))
+
+
+
+
+
 # [3.0.0-next.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v2.5.1...v3.0.0-next.0) (2019-08-09)
 
 **Note:** Version bump only for package @socialgouv/react-fiche-service-public
