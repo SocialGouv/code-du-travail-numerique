@@ -71,6 +71,7 @@ Deploy @cdtn/api (incubateur):
 
 .deploy-frontend: &deploy_frontend
   <<: *deploy_stage
+  extends: .k8s-deploy-frontend
   variables:
     <<: *deploy_stage_variables
     CONTEXT: frontend
@@ -86,12 +87,10 @@ Deploy @cdtn/api (incubateur):
 #
 
 Deploy @cdtn/frontend (dev):
-  extends: .k8s-deploy-frontend-dev
   <<: *deploy_frontend
   <<: *dev_stage
 
 Deploy @cdtn/frontend (incubateur):
-  extends: .k8s-deploy-frontend-prod
   <<: *deploy_frontend
   <<: *incubateur_stage
 

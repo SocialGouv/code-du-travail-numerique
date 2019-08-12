@@ -1,9 +1,10 @@
 .k8s-deploy-api:
   extends: .base_docker_kube_image_stage
   script:
+    #
     - envsubst < ./.k8s/api/deployment.yml > ./deployment.yml
     - envsubst < ./.k8s/api/service.yml > ./service.yml
-    - envsubst < ./.k8s/api/ingress.yml > ./ingress.yml
+    - envsubst < ./.k8s/api/ingress${SUFFIX}.yml > ./ingress.yml
     #
     - kubectl apply -f ./deployment.yml
     - kubectl apply -f ./service.yml
