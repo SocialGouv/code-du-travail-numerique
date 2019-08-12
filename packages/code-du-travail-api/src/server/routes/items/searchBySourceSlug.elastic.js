@@ -22,7 +22,7 @@ function getSearchBody({ source, slug }) {
       "filename", // filename
       "intro",
       "html",
-      "id", // idcc, kali
+      "id",
       "path", // code-du-travail
       "raw", // service-public
       "references_juridiques", // service-public, ministere-travail

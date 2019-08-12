@@ -7,7 +7,7 @@ function getIdccBody({ query }) {
         filter: [
           {
             term: {
-              source: "kali"
+              source: "conventions_collectives"
             }
           }
         ],
