@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
 
@@ -34,27 +34,34 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
+    const {
+      data: { _source: { title, description, date_debut, html, url } } = {
+        _source: {}
+      },
+      pageUrl,
+      ogImage
+    } = this.props;
 
-    const footer = (
-      <Source name="https://www.legifrance.gouv.fr" url={data._source.url} />
-    );
+    const footer = <Source name="https://www.legifrance.gouv.fr" url={url} />;
     return (
       <PageLayout>
         <Metas
           url={pageUrl}
-          title={data._source.title}
-          description={data._source.description}
+          title={title}
+          description={description}
           image={ogImage}
         />
         <Answer
-          title={data._source.title}
-          date={format(new Date(data._source.date_debut), "D MMMM YYYY", {
-            locale: frLocale
-          })}
+          title={title}
+          date={
+            date_debut &&
+            format(parseISO(date_debut), "dd MMMM yyyy", {
+              locale: frLocale
+            })
+          }
           icon={ArticleIcon}
           emptyMessage="Article introuvable"
-          html={data._source.html}
+          html={html}
           footer={footer}
           sourceType="Code du travail"
         />

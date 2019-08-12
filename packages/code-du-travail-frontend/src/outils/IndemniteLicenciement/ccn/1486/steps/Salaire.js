@@ -6,6 +6,7 @@ import { subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { Table as UITable, theme, Toast } from "@cdt/ui";
 
+import { parse } from "../../../../common/date";
 import { Input, InlineError } from "../../../../common/stepStyles";
 import { isNumber } from "../../../../common/validators";
 import { YesNoQuestion } from "../../../components/YesNoQuestion";
@@ -32,8 +33,8 @@ export const Salaire = ({ form }) => {
                   "brancheNewIrregularSalaire",
                   Array.from({ length: 12 }).map((_, index) => ({
                     label: format(
-                      subMonths(data.dateSortie, index),
-                      "MMMM YYYY",
+                      subMonths(parse(data.dateSortie), index),
+                      "MMMM yyyy",
                       {
                         locale: frLocale
                       }

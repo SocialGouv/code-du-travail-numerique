@@ -1,4 +1,5 @@
 import { sum, round } from "../../../common/math";
+import { parse } from "../../../common/date";
 import { max, min, isAfter, differenceInMonths } from "date-fns";
 import {
   CADRE,
@@ -43,6 +44,9 @@ function getIndemnite({
   categorie = NON_CADRE,
   motif
 }) {
+  const dEntree = parse(dateEntree);
+  const dSortie = parse(dateSortie);
+
   let indemniteConventionnelle = 0;
   let formula = "";
   let error;
@@ -74,11 +78,12 @@ function getIndemnite({
     };
   }
   const year2002 = new Date("2002-01-01");
+
   const nbSemestreAvant2002 = Math.floor(
-    differenceInMonths(year2002, min(year2002, dateEntree)) / 6
+    differenceInMonths(year2002, min([year2002, dEntree])) / 6
   );
   const nbSemestreApres2002 = Math.floor(
-    differenceInMonths(dateSortie, max(dateEntree, year2002)) / 6
+    differenceInMonths(dSortie, max([dEntree, year2002])) / 6
   );
 
   labels["nombre de semestres avant 2002 (S1)"] = round(nbSemestreAvant2002);
@@ -102,7 +107,7 @@ function getIndemnite({
     formula += `1/4 * Sref * S2`;
   }
 
-  const isEmbaucheAfter1999 = isAfter(dateEntree, new Date("1999-12-31"));
+  const isEmbaucheAfter1999 = isAfter(dEntree, new Date("1999-12-31"));
 
   if (isEmbaucheAfter1999) {
     let plafond = {

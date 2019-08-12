@@ -4,7 +4,7 @@ exports[`getIndemnite CEI 1`] = `
 Object {
   "formula": "(C * Sref * A)",
   "labels": Object {
-    "Ancienneté conventionnelle (A)": 9.25,
+    "Ancienneté conventionnelle (A)": 13.08,
     "Coefficient d'indemnité conventionnel (C)": 0.2,
     "Salaire de référence (Sref)": 4500,
   },
@@ -15,7 +15,7 @@ exports[`getIndemnite CENI avec ajustement salaire 1`] = `
 Object {
   "formula": "(C * Sref * A)",
   "labels": Object {
-    "Ancienneté conventionnelle (A)": 10.25,
+    "Ancienneté conventionnelle (A)": 13.08,
     "Coefficient d'indemnité conventionnel (C)": 0.25,
     "Salaire de référence (Sref)": 2441.66,
   },

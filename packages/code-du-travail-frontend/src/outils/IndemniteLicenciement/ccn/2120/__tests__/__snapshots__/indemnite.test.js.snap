@@ -11,12 +11,12 @@ Object {
 }
 `;
 
-exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif disciplinaire 2`] = `
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif economique 1`] = `
 Object {
-  "formula": "1/5 * Sref * S2",
+  "formula": "1/4 * Sref * S2",
   "labels": Object {
     "Catégorie": "Ne sait pas",
-    "Motif du licenciement": "Motif non disciplinaire",
+    "Motif du licenciement": "Motif économique",
     "Salaire de référence (Sref)": 1846.15,
     "nombre de semestres après 2002 (S2)": 21,
     "nombre de semestres avant 2002 (S1)": 0,
@@ -24,12 +24,12 @@ Object {
 }
 `;
 
-exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif economique 1`] = `
+exports[`getIndemnite 2k, 10ans et 8mois d'ancienneté, motif non disciplinaire 1`] = `
 Object {
-  "formula": "1/4 * Sref * S2",
+  "formula": "1/5 * Sref * S2",
   "labels": Object {
     "Catégorie": "Ne sait pas",
-    "Motif du licenciement": "Motif économique",
+    "Motif du licenciement": "Motif non disciplinaire",
     "Salaire de référence (Sref)": 1846.15,
     "nombre de semestres après 2002 (S2)": 21,
     "nombre de semestres avant 2002 (S1)": 0,

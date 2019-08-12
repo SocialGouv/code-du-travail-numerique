@@ -7,7 +7,14 @@ import { UID } from "react-uid";
 import { theme } from "@cdt/ui";
 import styled from "styled-components";
 
-function TextQuestion({ name, label, inputType = "text", size }) {
+function TextQuestion({
+  name,
+  label,
+  inputType = "text",
+  size,
+  validate = () => true,
+  ...props
+}) {
   return (
     <UID>
       {id => (
@@ -16,11 +23,15 @@ function TextQuestion({ name, label, inputType = "text", size }) {
           <QuestionWrapper>
             <Field
               name={name}
-              validate={required}
-              render={({ input, meta: { dirty, error, invalid, touched } }) => (
+              validate={value => {
+                return validate(value) || required(value);
+              }}
+              subscribe={{ error: true, touched: true }}
+              render={({ input, meta: { error, invalid, touched, dirty } }) => (
                 <>
                   <Input
                     {...input}
+                    {...props}
                     id={id}
                     type={inputType}
                     invalid={touched && invalid}

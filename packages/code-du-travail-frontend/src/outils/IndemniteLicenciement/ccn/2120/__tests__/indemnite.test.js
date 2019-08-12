@@ -44,7 +44,7 @@ const tests = [
     result: 0
   },
   {
-    title: "2k, 10ans et 8mois d'ancienneté, motif disciplinaire",
+    title: "2k, 10ans et 8mois d'ancienneté, motif non disciplinaire",
     data: {
       ...initialValues,
       dateEntree: "2009-01-01",

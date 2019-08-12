@@ -131,7 +131,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 
 <div>
   <p>
-    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+    Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
   <div
     class="c0"
@@ -292,7 +292,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 
 <div>
   <p>
-    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+    Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
   <div
     class="c0"
@@ -449,7 +449,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
 
 <div>
   <p>
-    Les congés maternité, arrêts de travail liés à une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
+    Les congés maternité, arrêts de travail liés à un accident du travail ou une maladie professionnelle, congés individuels de formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont pas considérés comme des absences. Merci de ne pas les renseigner.
   </p>
   <div
     class="c0"

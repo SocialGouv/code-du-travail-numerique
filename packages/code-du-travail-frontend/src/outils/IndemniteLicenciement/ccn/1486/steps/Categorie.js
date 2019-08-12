@@ -17,15 +17,17 @@ const CATEGORIES = {
 
 export const Categorie = ({ dispatch }) => (
   <>
-    <SectionTitle>Catégorie</SectionTitle>
+    <SectionTitle>Catégorie professionnelle</SectionTitle>
     <p>
-      Quel est votre catégorie dans la convention collective ?<br />
-      Vous pouvez le trouver sur votre bulletin de paie
+      Quelle est votre catégorie d’après la convention collective ?<br />
+      Vous pouvez la trouver sur votre bulletin de paie.
     </p>
     <Field name={CATEGORIE_KEY} validate={required}>
       {({ input }) => (
         <>
-          <Label htmlFor="categorie">Sélectionnez une catégorie</Label>
+          <Label htmlFor="categorie">
+            Sélectionnez une catégorie professionnelle
+          </Label>
           <select {...input} id="categorie">
             <option disabled value="">
               Sélectionner

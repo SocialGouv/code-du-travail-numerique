@@ -61,19 +61,15 @@ const tests = [
     data: {
       ...initialValues,
       brancheCategorie: "CEI",
-      hasBrancheContrat: false,
-      brancheAncienneteEnqueteur: "3",
-      brancheAncienneteCE: "75"
+      hasBrancheContrat: false
     },
-    result: 8325
+    result: 11775
   },
   {
     title: "CENI avec ajustement salaire",
     data: {
       ...initialValues,
       brancheCategorie: "CENI",
-      brancheAncienneteEnqueteur: "4",
-      brancheAncienneteCE: "75",
       hasBrancheNewSalaire: true,
       hasBrancheNewRegularSalaire: false,
       brancheNewIrregularSalaire: [
@@ -127,7 +123,7 @@ const tests = [
         }
       ]
     },
-    result: 6256.77
+    result: 7986.28
   }
 ];
 describe("getIndemnite", () => {

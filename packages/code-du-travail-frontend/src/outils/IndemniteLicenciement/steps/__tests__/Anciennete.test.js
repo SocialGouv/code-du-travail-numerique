@@ -59,15 +59,6 @@ describe("<Anciennete />", () => {
     fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
     expect(getByText(/est dûe au-delà de 8 mois/i)).toMatchSnapshot();
   });
-  it("should display error if anciennté < 12mois and licenciement in 2017", () => {
-    const { getByLabelText, getByText } = renderForm({
-      dateEntree: "2017-04-02",
-      dateNotification: "2017-09-02"
-    });
-    const dateSortie = getByLabelText(/date de sortie/i);
-    fireEvent.change(dateSortie, { target: { value: "2018-12-31" } });
-    expect(getByText(/est dûe au-delà de 12 mois/i)).toMatchSnapshot();
-  });
 });
 
 describe("computeAncienneté", () => {
