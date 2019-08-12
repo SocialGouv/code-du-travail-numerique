@@ -4,7 +4,7 @@ kind: StatefulSet
 metadata:
   name: ${K8S_NAMESPACE}-es-cluster-${BRANCH_HASH}
   labels:
-    app: ${K8S_NAMESPACE-es-cluster-${BRANCH_HASH}
+    app: ${K8S_NAMESPACE}-es-cluster-${BRANCH_HASH}
     git/branch: ${BRANCH_NAME}
   annotations:
     git/commit: ${COMMIT}
