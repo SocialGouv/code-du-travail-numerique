@@ -11,7 +11,16 @@ const {
 } = getConfig();
 
 if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
-  Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
+  const packageVersion = publicRuntimeConfig.PACKAGE_VERSION || "";
+  const isProduction =
+    packageVersion && location.href.indexOf(packageVersion) >= 0;
+  const environment = isProduction ? "production": "preproduction";
+  Sentry.init({
+    dsn: SENTRY_PUBLIC_DSN,
+    debug: true,
+    environment,
+    release: packageVersion
+  });
 }
 
 const notifySentry = (statusCode, message) => {
