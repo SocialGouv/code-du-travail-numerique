@@ -1,7 +1,8 @@
 const JSDOM = require("jsdom").JSDOM;
+const pLimit = require("p-limit");
 const ora = require("ora");
-const { batchPromise } = require("@cdt/data...kali/utils");
 const urls = require("./ministere-travail-liste-fiches.json");
+const { splitArticle } = require("./articleSplitter");
 
 const $$ = (node, selector) => Array.from(node.querySelectorAll(selector));
 const $ = (node, selector) => node.querySelector(selector);
@@ -49,7 +50,7 @@ function parseDom(dom, url) {
       };
     });
 
-  const article = $(dom.window.document, ".main-article");
+  const article = $(dom.window.document, "main");
   $$(article, "a").forEach(formatAnchor);
 
   $$(article, "img")
@@ -85,9 +86,7 @@ function parseDom(dom, url) {
     dom.window.document,
     "span.main-article__tag.tag--encart"
   ).map(n => n.textContent.trim());
-  const [title] = $(dom.window.document, "title")
-    .textContent.trim()
-    .split(" - Ministère du Travail");
+  const title = $(article, "h1").textContent.trim();
   const result = {
     internalId,
     description,
@@ -126,6 +125,7 @@ function parseDom(dom, url) {
   return result;
 }
 
+const limit = pLimit(15);
 let count = 0;
 const spinner = ora(`fetching 0/${urls.length}`).start();
 
@@ -145,9 +145,13 @@ async function parseFiche(url) {
 }
 
 async function parseFiches(urls) {
-  const results = await batchPromise(urls, 15, parseFiche);
+  const inputs = urls.map(url => limit(() => parseFiche(url)));
+  const results = await Promise.all(inputs);
+  const fiches = results
+    .map(splitArticle)
+    .reduce((state, documents) => state.concat(documents), []);
   spinner.stop().clear();
-  console.log(JSON.stringify(results.filter(Boolean), null, 2));
+  console.log(JSON.stringify(fiches.filter(Boolean), null, 2));
 }
 
 if (module === require.main) {
