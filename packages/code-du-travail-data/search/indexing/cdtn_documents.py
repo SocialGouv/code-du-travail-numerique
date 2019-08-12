@@ -73,7 +73,9 @@ def populate_cdtn_documents():
                 'url': article['url']
             })
 
-    with open(os.path.join(settings.BASE_DIR, 'dataset/fiches_service_public/fiches-sp-travail.json')) as json_data:
+    with open(
+        os.path.join(settings.BASE_DIR, 'dataset/fiches_service_public/fiches-sp-travail.json')
+    ) as json_data:
         data = json.load(json_data)
         logger.info("Load %s documents from fiches-service-public", len(data))
         for val in data:
