@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Alert, Container, Section, Wrapper } from "@cdt/ui";
+import { Alert, Container, Section, theme, Wrapper } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";
 
@@ -83,7 +83,8 @@ const About = ({ ogImage, pageUrl }) => (
 );
 export default About;
 
+const { spacing } = theme;
+
 const P = styled.p`
-  margin-top: 1.25rem;
-  margin-top: var(--spacing-inter-component);
+  margin-top: ${spacing.interComponent};
 `;

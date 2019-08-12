@@ -89,7 +89,7 @@ exports[`<ReferenceList /> should render 1`] = `
     >
       <a
         class="c1"
-        href="/kali/zzz"
+        href="/convention-collective/zzz"
       >
         <svg
           class="c2"

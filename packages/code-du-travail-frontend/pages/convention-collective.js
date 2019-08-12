@@ -8,30 +8,30 @@ import Convention from "../src/conventions/Convention";
 import Metas from "../src/common/Metas";
 
 const {
-  publicRuntimeConfig: { API_URL, API_DILA2SQL_URL }
+  publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const fetchKali = ({ slug, idccNum }) => {
-  const url = slug
-    ? `${API_URL}/items/kali/${slug}`
-    : `${API_URL}/idcc/${idccNum}`;
-  return fetch(url)
-    .then(r => r.json())
-    .then(r => r.status != 404 && r._source);
-};
-
-class Kali extends React.Component {
-  static async getInitialProps({ query }) {
-    const convention = await fetchKali(query);
-
-    const conteneurResponse = await fetch(
-      `${API_DILA2SQL_URL}/base/KALI/conteneur/${convention.id}`
-    );
-    if (!conteneurResponse.ok) {
-      return { statusCode: conteneurResponse.status };
+class ConventionCollective extends React.Component {
+  static async getInitialProps({ query: { slug, idccNum } }) {
+    const responseConvention = slug
+      ? await fetch(`${API_URL}/items/conventions_collectives/${slug}`)
+      : await fetch(`${API_URL}/idcc/${idccNum}`);
+    if (!responseConvention.ok) {
+      return { statusCode: responseConvention.status };
     }
-    const conteneur = await conteneurResponse.json();
-    return { convention, conteneur: conteneur.data };
+    const convention = await responseConvention
+      .json()
+      .then(data => data._source);
+
+    const responseContainer = await fetch(
+      `${API_URL}/conventions/${convention.id}`
+    );
+    if (!responseContainer.ok) {
+      return { statusCode: responseContainer.status };
+    }
+    const container = await responseContainer.json().then(data => data._source);
+
+    return { convention, container };
   }
 
   render() {
@@ -40,7 +40,7 @@ class Kali extends React.Component {
         <Answer emptyMessage="Cette convention collective n'a pas été trouvée" />
       );
     }
-    const { pageUrl, ogImage, convention, conteneur } = this.props;
+    const { pageUrl, ogImage, convention, container } = this.props;
     const { title } = convention;
     return (
       <PageLayout>
@@ -56,11 +56,11 @@ class Kali extends React.Component {
           footer="Informations fournies par la DILA"
           wide
         >
-          <Convention convention={convention} conteneur={conteneur} />
+          <Convention convention={convention} container={container} />
         </Answer>
       </PageLayout>
     );
   }
 }
 
-export default withRouter(Kali);
+export default withRouter(ConventionCollective);

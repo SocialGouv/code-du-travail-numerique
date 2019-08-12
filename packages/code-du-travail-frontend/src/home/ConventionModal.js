@@ -52,23 +52,23 @@ export default ConventionModal;
 const { box, colors } = theme;
 
 const Button = styled.button`
-  appearance: none;
-  border: none;
-  background: transparent;
-  padding: 0%;
-  text-decoration: none;
-  cursor: pointer;
-  display: block;
+  padding: 0;
+  width: 100%;
   height: 100%;
+  text-decoration: none;
+  background: transparent;
+  border: none;
   border-radius: ${box.borderRadius};
+  appearance: none;
+  cursor: pointer;
   & > * {
     transition: all 0.2s ease;
   }
   :focus > *,
   :active > *,
   :hover > * {
-    transform: scale(1.1);
     border: 1px solid ${colors.focus};
     box-shadow: 0 0 2px 2px ${colors.focusShadow};
+    transform: scale(1.1);
   }
 `;

@@ -3,7 +3,6 @@ import "jest-styled-components";
 jest.mock("next-server/config", () => () => ({
   publicRuntimeConfig: {
     API_ADDRESS: "addresse-api.data",
-    API_DILA2SQL_URL: "https://api.dila2sql.num.social.gouv.fr/v1",
     API_SIRET2IDCC_URL: "siret2idcc.url",
     API_URL: "api.url",
     PACKAGE_VERSION: "vX.Y.Z",

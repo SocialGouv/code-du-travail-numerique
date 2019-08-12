@@ -88,7 +88,7 @@ const Subtitle = styled.div`
 `;
 
 const ConventionPreview = ({ slug, idcc, title }) => {
-  const route = slug ? "kali" : "kali-idcc";
+  const route = slug ? "convention-collective" : "convention-collective-idcc";
   const params = slug ? { slug } : { idccNum: idcc };
   return (
     <Link route={route} params={params}>

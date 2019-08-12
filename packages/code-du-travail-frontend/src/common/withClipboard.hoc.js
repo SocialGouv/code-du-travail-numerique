@@ -9,7 +9,7 @@ const sourceByRoute = {
   themes: "themes",
   outils: "outils",
   idcc: "idcc",
-  kali: "kali"
+  "convention-collective": "conventions_collectives"
 };
 function translateSource(path) {
   return path.replace(

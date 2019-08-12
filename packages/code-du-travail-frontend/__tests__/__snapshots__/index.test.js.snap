@@ -448,18 +448,18 @@ exports[`<Home /> should render 1`] = `
 }
 
 .c29 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none;
-  background: transparent;
-  padding: 0%;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   cursor: pointer;
-  display: block;
-  height: 100%;
-  border-radius: 0.25rem;
 }
 
 .c29 > * {
@@ -470,11 +470,11 @@ exports[`<Home /> should render 1`] = `
 .c29:focus > *,
 .c29:active > *,
 .c29:hover > * {
+  border: 1px solid #80bdff;
+  box-shadow: 0 0 2px 2px #bfdeff;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  border: 1px solid #80bdff;
-  box-shadow: 0 0 2px 2px #bfdeff;
 }
 
 .c21 {

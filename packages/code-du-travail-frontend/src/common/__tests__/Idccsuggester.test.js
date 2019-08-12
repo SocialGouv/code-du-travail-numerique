@@ -4,7 +4,7 @@ import { fireEvent, render, waitForElement } from "@testing-library/react";
 import { IdccSuggester } from "../IdccSuggester";
 
 const item = {
-  source: "kali",
+  source: "conventions_collectives",
   slug: "result-slug",
   title: "item title",
   url: "item.url",
