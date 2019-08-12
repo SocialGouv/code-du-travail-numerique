@@ -14,7 +14,8 @@ COPY ./dataset/fiches_ministere_travail/fiches-min-travail.json ./dataset/fiches
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/annuaire/annuaire.data.json ./dataset/annuaire/annuaire.data.json
-COPY ./dataset/kali/kali.json ./dataset/kali/kali.json
+COPY ./dataset/conventions_collectives/ccn-list.json ./dataset/conventions_collectives/ccn-list.json
+COPY ./dataset/conventions_collectives/ccn-documents.json ./dataset/conventions_collectives/ccn-documents.json
 COPY ./dataset/fiches_service_public/fiches-sp-travail.json ./dataset/fiches_service_public/fiches-sp-travail.json
 COPY ./dataset/themes/themes.json ./dataset/themes/themes.json
 COPY ./dataset/faq.json ./dataset/faq.json
