@@ -6,6 +6,10 @@ metadata:
 spec:
   secretName: ${CERTIFICATE_NAME}-secret
   dnsNames:
+    # HACK(douglasduteil): Avoid Let's Encrypt CN length error
+    # Failed to finalize order: acme: urn:ietf:params:acme:error:malformed:
+    # Error finalizing order :: CN was longer than 64 bytes
+    - ${BRANCH_HASH}.${K8S_NAMESPACE}.social.gouv.fr
     - ${FRONTEND_HOST}
     - ${API_HOST}
     - ${NLP_HOST}
@@ -14,6 +18,10 @@ spec:
       - http01:
           ingressClass: nginx
         domains:
+          # HACK(douglasduteil): Avoid Let's Encrypt CN length error
+          # Failed to finalize order: acme: urn:ietf:params:acme:error:malformed:
+          # Error finalizing order :: CN was longer than 64 bytes
+          - ${BRANCH_HASH}.${K8S_NAMESPACE}.social.gouv.fr
           - ${FRONTEND_HOST}
           - ${API_HOST}
           - ${NLP_HOST}
