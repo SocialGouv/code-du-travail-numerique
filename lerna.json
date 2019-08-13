@@ -11,5 +11,5 @@
     "packages/*"
   ],
   "useWorkspaces": true,
-  "version": "3.0.0-next.4"
+  "version": "3.0.0"
 }
