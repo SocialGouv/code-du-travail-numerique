@@ -562,8 +562,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 3rem height:3rem;
   color: #fff;
   font-size: 1.375rem;
   font-weight: bold;
@@ -602,10 +601,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 
 .c9 {
   position: relative;
-  left: 4%;
-  -webkit-flex-basis: 80%;
-  -ms-flex-preferred-size: 80%;
-  flex-basis: 80%;
+  left: 4% flex-basis:80%;
   padding-right: 8%;
   background-color: #f5f7fa;
   border-radius: 0.25rem;

@@ -44,7 +44,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
-          {/* https://www.zachleat.com/web/comprehensive-webfonts/#font-face */}
           <link rel="stylesheet" type="text/css" href="/static/fonts.css" />
           <meta charSet="utf-8" />
           <meta
