@@ -6,5 +6,5 @@ const { colors } = theme;
 export default createGlobalStyle`
   mark {
     background: ${colors.markBackground};
-
+  }
 `;
