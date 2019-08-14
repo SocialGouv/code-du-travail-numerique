@@ -47,7 +47,7 @@ export NLP_HOST="nlp.${DOMAIN}";
 
 #
 
-if [[ -n "${PRODUCTION+x}" ]]; then
+if [[ -n "${COMMIT_TAG}" ]]; then
   export API_URL="https://${API_HOST}"
   export FRONTEND_URL="https://${FRONTEND_HOST}"
   export NLP_URL="https://${NLP_HOST}"
