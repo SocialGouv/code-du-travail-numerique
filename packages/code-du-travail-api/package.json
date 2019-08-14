@@ -1,6 +1,6 @@
 {
   "name": "@cdt/api",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
-    "@cdt/data...courrier-type": "^3.0.2",
+    "@cdt/data...courrier-type": "^3.0.3",
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^2.2.1",
     "commander": "^2.19.0",
