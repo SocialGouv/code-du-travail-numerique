@@ -1,6 +1,6 @@
 {
   "name": "@cdt/frontend",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Code du travail frontend",
   "private": true,
   "homepage": "https://code-du-travail.beta.gouv.fr/",
@@ -15,11 +15,11 @@
     "test": "NODE_ENV=test jest"
   },
   "dependencies": {
-    "@cdt/data": "^3.0.3",
-    "@cdt/ui": "^3.0.3",
+    "@cdt/data": "^3.0.4",
+    "@cdt/ui": "^3.0.4",
     "@sentry/browser": "^4.1.0",
     "@socialgouv/next-routes": "^1.5.1",
-    "@socialgouv/react-fiche-service-public": "^3.0.3",
+    "@socialgouv/react-fiche-service-public": "^3.0.4",
     "@zeit/next-source-maps": "^0.0.3",
     "date-fns": "^2.0.0-beta.3",
     "express": "^4.16.3",
