@@ -10,15 +10,15 @@ metadata:
     git/commit: ${COMMIT}
     gitlab/job: "${JOB_ID}"
 spec:
-  serviceName: elasticsearch
+  serviceName: ${ELASTICSEARCH_HOST}
   replicas: 1
   selector:
     matchLabels:
-      app: elasticsearch
+      app: ${ELASTICSEARCH_HOST}
   template:
     metadata:
       labels:
-        app: elasticsearch
+        app: ${ELASTICSEARCH_HOST}
     spec:
       volumes:
       - name: data
