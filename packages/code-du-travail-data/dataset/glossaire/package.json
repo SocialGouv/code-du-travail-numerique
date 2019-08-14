@@ -1,7 +1,7 @@
 {
   "name": "@cdt/data...glossary",
   "private": true,
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
