@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: ${K8S_NAMESPACE}-es-cluster-${BRANCH_HASH}
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
   labels:
-    app: ${K8S_NAMESPACE}-es-cluster-${BRANCH_HASH}
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
     git/branch: ${BRANCH_NAME}
   annotations:
     git/commit: ${COMMIT}
@@ -43,7 +43,7 @@ spec:
           mountPath: /usr/share/elasticsearch/data
         env:
         - name: cluster.name
-          value: ${K8S_NAMESPACE}-es-cluster
+          value: ${K8S_NAMESPACE}-${CONTEXT}
         - name: node.name
           valueFrom:
             fieldRef:
