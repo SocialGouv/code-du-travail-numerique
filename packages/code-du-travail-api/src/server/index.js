@@ -26,7 +26,7 @@ const themesRoute = require("./routes/themes");
 const { logger } = require("./utils/logger");
 
 const app = new Koa();
-const PORT = process.env.API_PORT || 1337;
+const PORT = process.env.PORT || 1337;
 
 app.use(cors());
 /**
