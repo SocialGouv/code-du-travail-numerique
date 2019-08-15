@@ -34,8 +34,8 @@ spec:
             initialDelaySeconds: 3
             periodSeconds: 5
           env:
-          - name: API_PORT
-            value: "${API_PORT}"
+          - name: PORT
+            value: "${PORT}"
           - name: APM_SERVER_ACTIVE
             value: "${APM_SERVER_ACTIVE}"
           - name: APM_SERVER_URL

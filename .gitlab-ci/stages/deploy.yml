@@ -46,7 +46,7 @@ include:
     CONTEXT: api
     ELASTICSEARCH_LOG_LEVEL: trace
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/api
-    PORT: ${API_PORT}
+    PORT: 80
   after_script:
     # NOTE(douglasduteil): re-run env.sh
     # Because the `after_script` runs in a separated shell context.
