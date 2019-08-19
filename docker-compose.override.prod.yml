@@ -3,6 +3,7 @@ version: "3"
 services:
   # In production, use registry image
   elasticsearch:
+    restart: always
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/elasticsearch:$CDTN_HASH
     ports:
       - 9200:9200
