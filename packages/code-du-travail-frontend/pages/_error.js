@@ -7,11 +7,23 @@ import { PageLayout } from "../src/layout/PageLayout";
 const Sentry = require("@sentry/browser");
 
 const {
-  publicRuntimeConfig: { SENTRY_PUBLIC_DSN }
+  publicRuntimeConfig: { SENTRY_PUBLIC_DSN, PACKAGE_VERSION }
 } = getConfig();
 
 if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
-  Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
+  const packageVersion = PACKAGE_VERSION || "";
+  // NOTE(douglasduteil): is pre production if we can find the version in the url
+  // All "http://<version>.code-du-travail-numerique.[...].fr" are preprod
+  // "http://code-du-travail-numerique.[...].fr" is prod
+  const isPreProduction =
+    packageVersion && location.href.indexOf(packageVersion) >= 0;
+  const environment = isPreProduction ? "preproduction" : "production";
+  Sentry.init({
+    dsn: SENTRY_PUBLIC_DSN,
+    debug: true,
+    environment,
+    release: packageVersion
+  });
 }
 
 const notifySentry = (statusCode, message) => {

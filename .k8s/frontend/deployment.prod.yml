@@ -45,7 +45,10 @@ spec:
             - name: PIWIK_URL
               value: ${CI_PIWIK_URL}
             - name: SENTRY_PUBLIC_DSN
-              value: ${CI_SENTRY_PUBLIC_DSN}
+              valueFrom:
+                secretKeyRef:
+                  name: cdtn-secret
+                  key: SENTRY_PUBLIC_DSN
             - name: SUGGEST_URL
               value: "${NLP_URL}/api/suggest"
             - name: VERSION
