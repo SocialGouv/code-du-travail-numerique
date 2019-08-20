@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const { format, addMonths } = require("date-fns");
 
-const MATOMO_URL = process.env.MATOMO_URL || "https://stats.num.social.gouv.fr";
+const MATOMO_URL = process.env.MATOMO_URL || "https://matomo.tools.factory.social.gouv.fr";
 const MATOMO_SITE_ID = process.env.MATOMO_SITE_ID || 4;
 const ES_URL = process.env.ES_URL || "http://127.0.0.1:9200";
 
