@@ -253,7 +253,7 @@ env:
     - p : name of `p`roduct (we differentiate ES and nav by themes for now)
     - s : `s`tatus of the issue
     - o : name of the dedicated t`o`ol
-- Piwik : https://stats.num.social.gouv.fr
+- Piwik : https://matomo.tools.factory.social.gouv.fr
 - Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
 
 <br>
