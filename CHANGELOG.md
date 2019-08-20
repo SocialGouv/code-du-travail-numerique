@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.4...v3.1.0) (2019-08-20)
+
+
+### Features
+
+* **frontend:** use new matomo :sparkles: ([#1102](https://github.com/SocialGouv/code-du-travail-numerique/issues/1102)) ([853d7cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/853d7cf))
+* **frontend:** use new sentry :sparkles: ([#1096](https://github.com/SocialGouv/code-du-travail-numerique/issues/1096)) ([016ce6c](https://github.com/SocialGouv/code-du-travail-numerique/commit/016ce6c))
+
+
+
+
+
 ## [3.0.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.3...v3.0.4) (2019-08-14)
 
 **Note:** Version bump only for package @socialgouv/code-du-travail
