@@ -11,20 +11,6 @@
   before_script:
     - cd /app
 
-.python_based_stage: &python_based_stage
-  image: python:$PYTHON_VERSION
-  variables:
-    PIPENV_VENV_IN_PROJECT: 1
-    PIPENV_IGNORE_VIRTUALENVS: 1
-    PYTHONPATH: .
-  before_script:
-    - cd packages/code-du-travail-data
-    - apk add --no-cache build-base
-    - python -m venv venv
-    - . venv/bin/activate
-    - pip install pylint
-    - pip install -r requirements.txt
-
 #
 
 Lint @cdtn/api:
@@ -47,9 +33,9 @@ Lint @cdtn/frontend:
 
 Lint @cdtn/data:
   <<: *quality_stage
-  <<: *python_based_stage
+  <<: *master_based_stage
   script:
-    - pylint --output-format=colorized search
+    - yarn workspace @cdt/data lint
 
 #
 
@@ -94,6 +80,6 @@ Test @cdtn/api:
 
 Test @cdtn/data:
   <<: *quality_stage
-  <<: *python_based_stage
+  <<: *master_based_stage
   script:
-    - python search/indexing/document_slug_checker.py -v
+    - yarn workspace @cdt/data check-slugs

@@ -9,7 +9,7 @@ services:
     volumes:
       - esdata:/usr/share/elasticsearch/data
 
-  python:
+  data:
     restart: "no"
     env_file:
       - .env
