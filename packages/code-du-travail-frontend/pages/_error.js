@@ -1,43 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import getConfig from "next/config";
 import styled from "styled-components";
 import { Section, theme } from "@cdt/ui";
 import { PageLayout } from "../src/layout/PageLayout";
-const Sentry = require("@sentry/browser");
+import { initializeSentry, notifySentry } from "../src/sentry";
 
-const {
-  publicRuntimeConfig: { SENTRY_PUBLIC_DSN, PACKAGE_VERSION }
-} = getConfig();
-
-if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
-  const packageVersion = PACKAGE_VERSION || "";
-  // NOTE(douglasduteil): is pre production if we can find the version in the url
-  // All "http://<version>.code-du-travail-numerique.[...].fr" are preprod
-  // "http://code-du-travail-numerique.[...].fr" is prod
-  const isPreProduction =
-    packageVersion && location.href.indexOf(packageVersion) >= 0;
-  const environment = isPreProduction ? "preproduction" : "production";
-  Sentry.init({
-    dsn: SENTRY_PUBLIC_DSN,
-    debug: true,
-    environment,
-    release: packageVersion
-  });
-}
-
-const notifySentry = (statusCode, message) => {
-  if (typeof window === "undefined") {
-    return;
-  }
-  Sentry.withScope(scope => {
-    scope.setTag(`ssr`, false);
-    Sentry.captureMessage(
-      `Error ${statusCode}${message ? ` - ${message}` : ""}`,
-      "error"
-    );
-  });
-};
+initializeSentry();
 
 export default class Error extends React.Component {
   static async getInitialProps({ res, err }) {
@@ -47,7 +15,7 @@ export default class Error extends React.Component {
 
   componentDidMount() {
     const { statusCode, message } = this.props;
-    if (statusCode && statusCode > 200) {
+    if (statusCode && statusCode >= 400) {
       notifySentry(statusCode, message);
     }
   }

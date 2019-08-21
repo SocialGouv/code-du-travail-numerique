@@ -7,14 +7,13 @@ import * as Sentry from "@sentry/browser";
 import ErrorPage from "./_error";
 
 import { initPiwik } from "../src/piwik";
+import { initializeSentry } from "../src/sentry";
 
 const {
-  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID, SENTRY_PUBLIC_DSN }
+  publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
 } = getConfig();
 
-if (typeof window !== "undefined" && SENTRY_PUBLIC_DSN) {
-  Sentry.init({ dsn: SENTRY_PUBLIC_DSN, debug: true });
-}
+initializeSentry();
 
 export default class MyApp extends App {
   // HACK @lionelb from https://github.com/zeit/next.js/issues/4687#issuecomment-432608667
