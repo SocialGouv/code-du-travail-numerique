@@ -3,10 +3,10 @@ const getThemeMapping = require("./cdtn-theme-mt.js");
 async function updateTheme(fiches) {
   const themeMapping = await getThemeMapping();
   fiches.forEach(fiche => {
-    const [_, slug] = fiche.url.match(/\/([\w-]+)\/?$/);
+    const [, slug] = fiche.url.match(/\/([\w-]+)\/?$/);
     fiche.themeCdtn = themeMapping[slug];
     if (!fiche.themeCdtn) {
-      console.error(`${fiche.title} - (${fiche.internalId}) has no theme`)
+      console.error(`${fiche.title} - (${fiche.internalId}) has no theme`);
       fiche.themeCdtn = [];
     }
   });

@@ -8,7 +8,6 @@ from slugify import slugify
 
 from search import settings
 from search.indexing.strip_html import strip_html
-from search.extraction.fiches_ministere_travail.data import FICHES_MINISTERE_TRAVAIL
 
 logger = settings.get_logger(__name__)
 logger.setLevel(logging.INFO)
@@ -91,22 +90,24 @@ def populate_cdtn_documents():
                 'url': val['url'],
             })
 
-    logger.info("Load %s documents from fiches-ministere-travail", len(FICHES_MINISTERE_TRAVAIL))
-    for val in FICHES_MINISTERE_TRAVAIL:
-        CDTN_DOCUMENTS.append({
-            'source': 'fiches_ministere_travail',
-            'slug': slugify(val['title'], to_lower=True),
-            'text': val['text'],
-            'description': val['description'],
-            'anchor': val['anchor'],
-            'intro': val['intro'],
-            'html': val["html"],
-            'title': val['title'],
-            'url': val['url'],
-            'breadcrumbs': val['breadcrumbs'],
-            'theme': val['breadcrumbs'][-1]['slug'] if val['breadcrumbs'] else None,
-            'date': val.get('date'),
-        })
+    with open(os.path.join(settings.BASE_DIR, 'dataset/fiches_ministere_travail/fiches-min-travail.json')) as json_data:
+        data = json.load(json_data)
+        logger.info("Load %s documents from fiches-ministere-travail", len(data))
+        for val in data:
+            CDTN_DOCUMENTS.append({
+                'source': 'fiches_ministere_travail',
+                'slug': val['slug'],
+                'text': val['text'],
+                'description': val['description'],
+                'anchor': val['anchor'],
+                'intro': val['intro'],
+                'html': val["html"],
+                'title': val['title'],
+                'url': val['url'],
+                'breadcrumbs': val['themeCdtn'],
+                'theme': val['themeCdtn'][-1]['slug'] if val['themeCdtn'] else None,
+                'date': val.get('date'),
+            })
 
     with open(os.path.join(settings.BASE_DIR, 'dataset/themes/themes.json')) as json_data:
         data = json.load(json_data)
