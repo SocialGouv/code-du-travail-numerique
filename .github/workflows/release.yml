@@ -1,0 +1,15 @@
+name: Node CI
+
+on: repository_dispatch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        version: 10.x
+    - name: Make a new release
+      run: |
+        yarn lerna version
