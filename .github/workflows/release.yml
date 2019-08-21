@@ -1,15 +1,20 @@
 name: Node CI
 
-on: repository_dispatch
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
-      with:
-        version: 10.x
-    - name: Make a new release
-      run: |
-        yarn lerna version
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          version: 10.x
+      - name: Make a new release
+        run: |
+          yarn lerna version
