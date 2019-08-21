@@ -4,7 +4,7 @@ import { initializeSentry, notifySentry } from "../sentry";
 jest.mock("@sentry/browser", () => ({
   captureMessage: jest.fn(),
   init: jest.fn(),
-  withScope: jest.fn(cb => cb({ setTag: jest.fn()}))
+  withScope: jest.fn(cb => cb({ setTag: jest.fn() }))
 }));
 
 test("should initialize sentry in production mode", () => {
@@ -38,7 +38,10 @@ test("should initialize sentry in pre-production mode", () => {
 });
 
 test("should notify sentry", () => {
-  notifySentry(418, "I'm a teapot")
+  notifySentry(418, "I'm a teapot");
 
-  expect(Sentry.captureMessage).toHaveBeenCalledWith("Error 418 - I'm a teapot", "error")
-})
+  expect(Sentry.captureMessage).toHaveBeenCalledWith(
+    "Error 418 - I'm a teapot",
+    "error"
+  );
+});

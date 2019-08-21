@@ -1,4 +1,4 @@
-import Sentry from "@sentry/browser"
+import Sentry from "@sentry/browser";
 import getConfig from "next/config";
 
 const {
@@ -8,7 +8,7 @@ const {
 const isEnable = typeof window !== "undefined" && SENTRY_PUBLIC_DSN;
 
 export function initializeSentry() {
-  if(!isEnable) {
+  if (!isEnable) {
     return;
   }
 
@@ -27,7 +27,7 @@ export function initializeSentry() {
   });
 }
 
-export function notifySentry (statusCode, message) {
+export function notifySentry(statusCode, message) {
   if (!isEnable) {
     return;
   }
@@ -39,4 +39,4 @@ export function notifySentry (statusCode, message) {
       "error"
     );
   });
-};
+}
