@@ -7,7 +7,7 @@ FROM ${BASE_IMAGE} as cdtn-base-image
 FROM node:10-alpine
 
 COPY ./package.json /app/package.json
-COPY ./dist /app/dist
+COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
 COPY ./dataset/code_du_travail/themes.csv ./dataset/code_du_travail/themes.csv
 COPY ./dataset/code_du_travail/code-du-travail.json ./dataset/code_du_travail/code-du-travail.json
 COPY ./dataset/fiches_ministere_travail/fiches-min-travail.json ./dataset/fiches_ministere_travail/fiches-min-travail.json
