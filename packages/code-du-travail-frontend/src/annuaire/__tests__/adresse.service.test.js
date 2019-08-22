@@ -23,7 +23,7 @@ describe("adresse service", () => {
     const apiMatcher = new RegExp(
       `${API_ADDRESS}\\/\\?q=${query}&type=housenumber&limit=5$`
     );
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(apiMatcher);
     expect(results).toMatchSnapshot();
   });

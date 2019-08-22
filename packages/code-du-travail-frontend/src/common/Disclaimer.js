@@ -6,7 +6,7 @@ const Disclaimer = () => {
   const [isDisclaimerHidden, setDisclaimerHidden] = useState(true);
   useEffect(() => {
     setDisclaimerHidden(sessionStorage.getItem("isDisclaimerHidden"));
-  });
+  }, []);
   if (isDisclaimerHidden) return null;
   return (
     <Wrapper>

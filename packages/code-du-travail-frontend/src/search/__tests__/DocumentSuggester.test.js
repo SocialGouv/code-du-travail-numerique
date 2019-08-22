@@ -52,7 +52,7 @@ describe("<DocumentSuggester />", () => {
     const input = getByPlaceholderText(/search foo/i);
     const mockEvent = { target: { value: "test" } };
     fireEvent.change(input, mockEvent);
-    expect(onChange).toBeCalled();
+    expect(onChange).toHaveBeenCalled();
   });
   it("should call onSearch after input has changed", () => {
     const onSearch = jest.fn();
@@ -65,7 +65,9 @@ describe("<DocumentSuggester />", () => {
     const input = getByPlaceholderText(/search foo/i);
     const mockEvent = { target: { value: "test" } };
     fireEvent.change(input, mockEvent);
-    expect(onSearch).toBeCalledWith(expect.objectContaining({ value: "test" }));
+    expect(onSearch).toHaveBeenCalledWith(
+      expect.objectContaining({ value: "test" })
+    );
   });
 
   it("should call onSelect when user clicks some option", () => {

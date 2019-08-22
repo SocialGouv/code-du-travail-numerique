@@ -19,7 +19,7 @@ describe("convention service", () => {
         })
     });
     const results = await searchIdcc("foo");
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(/api\.url\/idcc\?q=foo$/);
     expect(results).toMatchSnapshot();
   });
@@ -40,7 +40,7 @@ describe("convention service", () => {
         })
     });
     const results = await searchCompanies("34048927839394");
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(
       /siret2idcc\.url\/api\/v1\/companies\?siret=34048927839394$/
     );
@@ -63,7 +63,7 @@ describe("convention service", () => {
         })
     });
     await searchCompanies("340 489 278 39394");
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(
       /siret2idcc\.url\/api\/v1\/companies\?siret=34048927839394$/
     );
@@ -83,7 +83,7 @@ describe("convention service", () => {
         })
     });
     const results = await getCompany("34048927839394");
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(
       /siret2idcc\.url\/api\/v1\/company\/34048927839394$/
     );
