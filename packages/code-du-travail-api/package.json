@@ -31,7 +31,7 @@
     "@koa/cors": "^2.2.1",
     "commander": "^2.19.0",
     "dotenv": "^6.0.0",
-    "elastic-apm-node": "^2.10.0",
+    "elastic-apm-node": "^2.15.0",
     "jest": "^23.6.0",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
