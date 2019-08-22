@@ -2,7 +2,6 @@ import React from "react";
 
 import Code from "./Code";
 import FocusRing from "./FocusRing";
-import Fonts from "./Fonts";
 import Forms from "./Forms";
 import Headings from "./Headings";
 import Hr from "./Hr";
@@ -17,7 +16,6 @@ const GlobalStyles = () => (
   <>
     <Code />
     <FocusRing />
-    <Fonts />
     <Forms />
     <Headings />
     <Hr />

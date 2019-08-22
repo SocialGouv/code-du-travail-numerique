@@ -15,19 +15,36 @@ process.on("uncaughtException", err => {
 });
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />)
-    );
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
   render() {
     return (
       <html lang="fr" prefix="og: http://ogp.me/ns#">
         <Head>
+          <link rel="stylesheet" type="text/css" href="/static/fonts.css" />
           <meta charSet="utf-8" />
           <meta
             name="viewport"
@@ -38,7 +55,6 @@ export default class MyDocument extends Document {
             content="k5625aNLEYRAFI6MIHOJNN4gfMeDVhdsTIe2ZEtxAqU"
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
-          {this.props.styleTags}
           <script
             crossOrigin="anonymous"
             src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.includes%2CArray.prototype.find%2CArray.prototype.findIndex%2CObject.setPrototypeOf%2CNumber.isFinite%2Cfetch%2CSymbol%2CSymbol.hasInstance%2CSymbol.isConcatSpreadable%2CSymbol.iterator%2CSymbol.unscopables%2CSymbol.toStringTag%2CSymbol.toPrimitive%2CSymbol.split%2CSymbol.search%2CSymbol.species%2CSymbol.replace%2CSymbol.match%2CSet%2CMap%2CWeakMap"
