@@ -12,8 +12,6 @@
     "build": "NODE_ENV=production rollup --config",
     "lint": "eslint src/**/*.js",
     "prepush": "yarn lint && yarn test",
-    "prepublishOnly": "yarn build && yarn gh-pages",
-    "gh-pages": "yarn docz:build && gh-pages -d .docz/dist",
     "start": "docz dev",
     "docz:build": "docz build",
     "test": "jest"
@@ -40,7 +38,6 @@
     "docz": "1.2.0",
     "docz-theme-default": "1.2.0",
     "eslint": "^5.13.0",
-    "gh-pages": "^2.0.1",
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
     "prettier": "^1.16.4",
