@@ -49,13 +49,15 @@ class Fiche extends React.Component {
           title={data._source.title}
           emptyMessage="Cette fiche n'a pas été trouvée"
           intro={
-            <Intro dangerouslySetInnerHTML={{ __html: data._source.intro }} />
+            data._source.intro && (
+              <Intro dangerouslySetInnerHTML={{ __html: data._source.intro }} />
+            )
           }
           html={data._source.html}
           footer={footer}
           icon={ReponseIcon}
           date={data._source.date}
-          sourceType="Fiche ministère du travail"
+          sourceType="Fiche ministère du Travail"
           breadcrumbs={data._source.breadcrumbs}
         />
       </PageLayout>
