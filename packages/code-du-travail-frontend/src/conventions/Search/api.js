@@ -17,7 +17,7 @@ const fuseCCNames = new Fuse(kali, {
   matchAllTokens: true,
   tokenize: true,
   findAllMatches: true,
-  keys: ["titre"]
+  keys: ["title", "shortTitle"]
 });
 
 // parametres fuse.js pour le search IDCC
@@ -106,17 +106,25 @@ export const loadResults = async query => {
       results.push(
         ...ccs.map(cc => ({
           id: cc.id,
-          label: `IDCC ${cc.num}`,
-          idcc: [cc.num]
+          label: "Convention collective",
+          idcc: [cc.num],
+          conventions: [
+            {
+              num: cc.num,
+              title: cc.title
+            }
+          ]
         }))
       );
     }
     // fulltext search API Sirene
     const etablissements = await searchByName(query.trim());
     if (etablissements && etablissements.length) {
-      results.push(...etablissements);
+      results.push(
+        ...etablissements.filter(r => r.conventions && r.conventions.length)
+      );
     }
-    return results.filter(r => r.conventions && r.conventions.length);
+    return results;
     // direct search by siret with API sirene
   }
   if (type === "siret") {
@@ -132,7 +140,8 @@ export const loadResults = async query => {
         {
           id: query,
           label: `IDCC ${query}`,
-          idcc: matches.map(match => match.num).slice(0, 1)
+          idcc: matches.map(match => match.num).slice(0, 1),
+          conventions: matches.slice(0, 1)
         }
       ];
     }
@@ -142,7 +151,8 @@ export const loadResults = async query => {
         {
           id: query,
           label: `IDCC ${query}`,
-          idcc: matches.map(match => match.num).slice(0, 5)
+          idcc: matches.map(match => match.num).slice(0, 5),
+          conventions: matches.slice(0, 5)
         }
       ];
     }
