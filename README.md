@@ -41,7 +41,11 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 # > In parallel, in another terminal <
 
 # Launch indexing script
-$ docker-compose run --rm python
+$ docker-compose run --rm data
+
+# or alternatively
+$ yarn workspace @cdt/data populate
+
 ```
 
 If some error appears for the nlp_api container, run `docker-compose down`, then run 
@@ -58,24 +62,6 @@ the data checklist above again, then run `docker-compose build nlp_api`, and, fi
 
 ```sh
 $ yarn dev
-```
-
-You can see which data will be indexed into ES by using the `--verbose` option:
-
-```sh
-# To check code tu travail data :
- 
-# 2) Data with "tags" renamed by hand :
-$ docker-compose run --rm  --entrypoint "python search/extraction/code_du_travail/cleaned_tags/data.py -v"  python
-
-# To check fiches Ministère du Travail data :
-$ docker-compose run --rm  --entrypoint "python search/extraction/fiches_ministere_travail/data.py -v"  python
-
-# To check fiches services public data :
-$ docker-compose run --rm  --entrypoint "python search/extraction/fiches_service_public/data.py -v" python
-
-# To check synonymes dictionary:
-$ docker-compose run --rm --entrypoint "python search/extraction/synonyms/data.py -v" python
 ```
 
 If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn build`.
@@ -116,19 +102,6 @@ $ yarn workspace <package-name> test
 
 # For example for "code-du-travail-frontend"
 $ yarn workspace @cdt/frontend test
-```
-
-### Prod
-
-```sh
-# copy and edit the sample environment file
-$ cp .env.sample .env
-
-# Use prod containers configs
-$ cp docker-compose.override.prod.yml docker-compose.override.yml
-
-# update dev server
-$ sh scripts/deploy-dev.sh
 ```
 
 <br>
