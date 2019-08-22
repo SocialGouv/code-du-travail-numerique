@@ -81,7 +81,7 @@ const Search = () => {
                 <tbody>
                   {results.map(
                     result =>
-                      console.log(result) || (
+                      (
                         <tr key={result.id}>
                           <td>
                             <Flex>
