@@ -1,4 +1,4 @@
-FROM python:3.7.2-stretch
+FROM python:3.8.0b1-stretch
 
 ENV PYTHONIOENCODING="UTF-8"
 ENV PYTHONUNBUFFERED=1
