@@ -32,7 +32,7 @@
     "@babel/preset-react": "^7.0.0",
     "@socialgouv/eslint-config-react": "^0.9.4",
     "babel-jest": "^24.5.0",
-    "docz": "1.0.0-rc.7",
+    "docz": "1.2.0",
     "docz-theme-default": "1.0.0-rc.7",
     "eslint": "^5.13.0",
     "jest": "^24.5.0",
