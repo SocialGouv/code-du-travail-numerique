@@ -33,7 +33,7 @@
     "@socialgouv/eslint-config-react": "^0.9.4",
     "babel-jest": "^24.5.0",
     "docz": "1.2.0",
-    "docz-theme-default": "1.0.0-rc.7",
+    "docz-theme-default": "1.2.0",
     "eslint": "^5.13.0",
     "jest": "^24.5.0",
     "jest-styled-components": "^6.3.1",
