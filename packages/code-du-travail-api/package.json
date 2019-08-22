@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ncc build ./src/server/index.js -o dist",
+    "postbuild": "cp -r ../../node_modules/elastic-apm-node/lib/instrumentation/modules ./dist",
     "lint": "eslint src/*",
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
