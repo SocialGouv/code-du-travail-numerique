@@ -1,2 +1,2 @@
-elasticsearch==7.0.2
+elasticsearch==7.0.4
 awesome-slugify==1.6.5
