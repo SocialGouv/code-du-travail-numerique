@@ -25,8 +25,8 @@
     "husky": "^1.2.0",
     "lerna": "^3.16.4"
   },
-  "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^0.7.2"
+  "resolutions": {
+    "@babel/core": "7.5.5"
   },
   "workspaces": [
     "packages/*",
