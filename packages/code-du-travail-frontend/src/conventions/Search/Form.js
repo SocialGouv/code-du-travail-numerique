@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import kali from "@socialgouv/kali-data/data/index.json";
-
 import { theme, Container, Table, Tag } from "@cdt/ui";
 
 import SearchCC from "./SearchCC";
@@ -32,7 +30,6 @@ const CC = ({ id, num, titre }) => {
       </Flex>
     </Box>
   );
-  return null;
 };
 
 const TagSiret = ({ siret }) => (
