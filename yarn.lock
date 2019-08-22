@@ -9738,15 +9738,14 @@ json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   resolved "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
-json2csv@^4.3.3:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/json2csv/-/json2csv-4.3.3.tgz#56fcd75f8dde4a8fa2ea82e6314cd55f2c1fe68c"
-  integrity sha512-IJjHMFW2W6cJ7+QpA2g5GU8CYACKq/HudbOSr8rqqEmBBsKN6Q2t0BIPtAzmJteSn88CkS+LBEnG/KBrJEkbOQ==
+json2csv@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/json2csv/-/json2csv-4.5.2.tgz#75f0808cb89ed8ef7e338445a510a3cd3e385dfe"
+  integrity sha512-Te2Knce3VfLKyurH3AolM6Y781ZE+R3jQ+0YQ0HYLiubyicST/19vML24e1dpScaaEQb+1Q1t5IcGXr6esM9Lw==
   dependencies:
     commander "^2.15.1"
     jsonparse "^1.3.1"
     lodash.get "^4.4.2"
-    lodash.set "^4.3.2"
 
 json3@^3.3.2:
   version "3.3.2"
