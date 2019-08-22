@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.5.0",
-    "@zeit/ncc": "^0.1.16",
+    "@zeit/ncc": "^0.20.4",
     "axios": "^0.18.0",
     "csvtojson": "^2.0.8",
     "eslint": "^5.13.0",
