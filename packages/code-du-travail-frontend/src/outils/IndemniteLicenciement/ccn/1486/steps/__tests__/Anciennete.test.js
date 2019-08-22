@@ -14,7 +14,7 @@ describe("<Anciennete />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("renders AncienneteCE component", () => {
+  it("renders AncienneteCE component with initialValues CATEGORIE_KEY=CEI", () => {
     const onSubmit = jest.fn();
     const initialValues = {};
     initialValues[CATEGORIE_KEY] = "CEI";
@@ -25,7 +25,7 @@ describe("<Anciennete />", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it("renders AncienneteCE component", () => {
+  it("renders AncienneteCE component with initialValues CATEGORIE_KEY=CENI", () => {
     const onSubmit = jest.fn();
     const initialValues = {};
     initialValues[CATEGORIE_KEY] = "CENI";

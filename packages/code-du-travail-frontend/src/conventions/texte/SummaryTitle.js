@@ -14,7 +14,7 @@ const SummaryTitle = ({ node, onToggleExpanded, tocbotEnabled }) => {
       event.preventDefault();
       onToggleExpanded(id, !expanded);
     },
-    [id, expanded]
+    [onToggleExpanded, id, expanded]
   );
 
   if (!node.children || node.children.length === 0) {

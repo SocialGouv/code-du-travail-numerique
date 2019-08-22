@@ -15,12 +15,12 @@ const query = "foo";
 describe("suggest service", () => {
   it("should not make a request until debounce time is ellapsed", () => {
     suggestResults("bar");
-    expect(fetch).not.toBeCalled();
+    expect(fetch).not.toHaveBeenCalled();
   });
   it("should make a request unless debounce time is ellapsed", () => {
     suggestResults(query);
     jest.runAllTimers();
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
     expect(results).toMatchSnapshot();
   });
@@ -28,7 +28,7 @@ describe("suggest service", () => {
     suggestResults(query);
     suggestResults(query);
     jest.runAllTimers();
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
     expect(results).toMatchSnapshot();
   });
@@ -41,7 +41,7 @@ describe("search service", () => {
     searchResults(query);
     searchResults(query);
 
-    expect(fetch).toBeCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(
       /api\.url\/search\?q=foo&excludeSources=$/
     );

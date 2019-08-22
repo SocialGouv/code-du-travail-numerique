@@ -36,11 +36,10 @@ describe("<ReferencesJuridiques />", () => {
       references
     );
     expect(concernedBlocs).toHaveProperty("size", 2);
-    let blocScopedReferences = [];
-    expect(
-      concernedBlocs.forEach(value => {
-        blocScopedReferences = blocScopedReferences.concat(value);
-      })
+
+    const blocScopedReferences = Array.from(concernedBlocs).reduce(
+      (memo, [, value]) => memo.concat(value),
+      []
     );
     expect(blocScopedReferences).toHaveLength(3);
     expect(autresReferences).toHaveLength(2);
