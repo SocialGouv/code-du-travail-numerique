@@ -82,4 +82,5 @@ Test @cdtn/data:
   <<: *quality_stage
   <<: *master_based_stage
   script:
+    - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
