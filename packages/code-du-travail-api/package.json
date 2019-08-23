@@ -49,7 +49,7 @@
     "eslint": "^5.13.0",
     "google-spreadsheets": "^2.0.0",
     "json2csv": "^4.5.2",
-    "nodemon": "^1.18.7",
+    "nodemon": "^1.19.1",
     "p-limit": "^2.1.0",
     "superagent": "^4.1.0",
     "supertest": "^3.3.0"
