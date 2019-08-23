@@ -64,7 +64,7 @@ describe("situations", () => {
     });
   });
   describe("getOptions", () => {
-    it("should return options for a question key, given a situation", () => {
+    it("should return options for a question key", () => {
       const situations = filterSituations();
       expect(getOptions(situations, "foo")).toEqual([
         ["bar", "bar"],
@@ -85,7 +85,7 @@ describe("situations", () => {
     it("should return empty questions array", () => {
       expect(getPastQuestions({})).toEqual([]);
     });
-    it("should return a tuple array of questions key and questions option", () => {
+    it("should return a tuple array of questions key and questions option for branche", () => {
       expect(getPastQuestions({ branche: "10" })).toEqual([
         [
           "branche",
@@ -93,7 +93,7 @@ describe("situations", () => {
         ]
       ]);
     });
-    it("should return a tuple array of questions key and questions option", () => {
+    it("should return a tuple array of questions key and questions option for branch and bar", () => {
       expect(getPastQuestions({ branche: "10", foo: "bar" })).toEqual([
         [
           "branche",
@@ -119,39 +119,39 @@ describe("situations", () => {
     <React.Fragment>
       <React.Fragment>
         <React.Fragment>
-          appartenant à la catégorie 
+          appartenant à la catégorie
           <em>
             Etam
           </em>
         </React.Fragment>
-        , 
+        ,
         <React.Fragment>
-          avec 
+          avec
           <em>
             30
           </em>
            d’ancienneté
         </React.Fragment>
       </React.Fragment>
-      , 
+      ,
       <React.Fragment>
-        dans le groupe 
+        dans le groupe
         <em>
           IV
         </em>
       </React.Fragment>
     </React.Fragment>
-    , 
+    ,
     <React.Fragment>
-      avec un échelon de 
+      avec un échelon de
       <em>
         375
       </em>
     </React.Fragment>
   </React.Fragment>
-  , 
+  ,
   <React.Fragment>
-    avec un coefficient 
+    avec un coefficient
     <em>
       12
     </em>
