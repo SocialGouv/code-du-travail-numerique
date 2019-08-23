@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "p-limit": "^2.2.0"
+    "p-limit": "^2.2.1"
   },
   "scripts": {
     "start": "node index.js prequalified.json"
