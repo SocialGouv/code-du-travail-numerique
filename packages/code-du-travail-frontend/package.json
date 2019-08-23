@@ -55,10 +55,10 @@
     "@babel/preset-env": "^7.5.5",
     "@socialgouv/eslint-config-react": "^0.9.4",
     "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.5.0",
+    "babel-jest": "^24.9.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^5.13.0",
-    "jest": "^24.5.0",
+    "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.16.4",
     "react-testing-library": "^6.0.3"
