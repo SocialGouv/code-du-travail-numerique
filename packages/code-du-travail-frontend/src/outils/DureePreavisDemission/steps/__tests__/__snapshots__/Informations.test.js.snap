@@ -21,18 +21,159 @@ exports[`<StepInformations /> should render 1`] = `
   margin-bottom: 1.25rem;
 }
 
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+}
+
 .c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-branche"
+    >
+      Quelle est votre convention collective?
+    </label>
+    <select
+      class="c3"
+      id="input-branche"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="1672"
+      >
+        assurances societes
+      </option>
+      <option
+        value="1090"
+      >
+        automobile services
+      </option>
+      <option
+        value="2120"
+      >
+        banque
+      </option>
+      <option
+        value="0843"
+      >
+        boulangerie patisserie entreprises artisanales
+      </option>
+      <option
+        value="1606"
+      >
+        bricolage vente au detail en libre-service
+      </option>
+      <option
+        value="1486"
+      >
+        bureaux d'etudes techniques
+      </option>
+      <option
+        value="1147"
+      >
+        cabinets medicaux
+      </option>
+      <option
+        value="0044"
+      >
+        chimie industrie
+      </option>
+      <option
+        value="1505"
+      >
+        fruits legumes epicerie produits laitiers
+      </option>
+      <option
+        value="1483"
+      >
+        habillement articles textiles commerce de detail
+      </option>
+      <option
+        value="0675"
+      >
+        habillement commerce succursales
+      </option>
+      <option
+        value="1979"
+      >
+        hotels cafes restaurants (hcr)
+      </option>
+      <option
+        value="1996"
+      >
+        pharmacie d'officine
+      </option>
+      <option
+        value="3043"
+      >
+        proprete entreprises et services associes
+      </option>
+      <option
+        value="3127"
+      >
+        services a la personne entreprises
+      </option>
+      <option
+        value="2511"
+      >
+        sport
+      </option>
+      <option
+        value="1404"
+      >
+        tracteurs materiels agricoles commerce reparation
+      </option>
+      <option
+        value="0000"
+      >
+        Je ne sais pas
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render catégorie 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .c3 {
@@ -44,59 +185,438 @@ exports[`<StepInformations /> should render 1`] = `
   min-width: 400px;
 }
 
+.c1 {
+  margin: 1.25rem 0;
+}
+
 <div>
   <h2
     class="c0"
   >
-    Quelle est votre convention collective ?
+    Informations sur le statut du salarié
   </h2>
-  <label
+  <div
     class="c1"
   >
     <label
       class="c2"
-      for="ccn"
+      for="input-branche"
     >
-      Sélectionnez votre convention collective pour en savoir plus :
+      Quelle est votre convention collective?
     </label>
     <select
       class="c3"
-      id="ccn"
+      id="input-branche"
       name="branche"
     >
       <option
         disabled=""
         value=""
       >
-        Selectionner
+        ...
+      </option>
+      <option
+        value="1672"
+      >
+        assurances societes
+      </option>
+      <option
+        value="1090"
+      >
+        automobile services
+      </option>
+      <option
+        value="2120"
+      >
+        banque
+      </option>
+      <option
+        value="0843"
+      >
+        boulangerie patisserie entreprises artisanales
+      </option>
+      <option
+        value="1606"
+      >
+        bricolage vente au detail en libre-service
       </option>
       <option
         value="1486"
       >
-        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987
+        bureaux d'etudes techniques
+      </option>
+      <option
+        value="1147"
+      >
+        cabinets medicaux
+      </option>
+      <option
+        value="0044"
+      >
+        chimie industrie
+      </option>
+      <option
+        value="1505"
+      >
+        fruits legumes epicerie produits laitiers
+      </option>
+      <option
+        value="1483"
+      >
+        habillement articles textiles commerce de detail
+      </option>
+      <option
+        value="0675"
+      >
+        habillement commerce succursales
       </option>
       <option
         value="1979"
       >
-        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976
+        hotels cafes restaurants (hcr)
+      </option>
+      <option
+        value="1996"
+      >
+        pharmacie d'officine
+      </option>
+      <option
+        value="3043"
+      >
+        proprete entreprises et services associes
+      </option>
+      <option
+        value="3127"
+      >
+        services a la personne entreprises
+      </option>
+      <option
+        value="2511"
+      >
+        sport
+      </option>
+      <option
+        value="1404"
+      >
+        tracteurs materiels agricoles commerce reparation
       </option>
       <option
         value="0000"
       >
         Je ne sais pas
       </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-catégorie"
+    >
+      Quelle est la catégorie professionnelle ?
+    </label>
+    <select
+      class="c3"
+      id="input-catégorie"
+      name="catégorie"
+    >
       <option
-        value="0044"
+        disabled=""
+        value=""
       >
-        Convention collective nationale des industries chimiques et connexes
+        ...
+      </option>
+      <option
+        value="Agent de maîtrise"
+      >
+        Agent de maîtrise
+      </option>
+      <option
+        value="Employé"
+      >
+        Employé
+      </option>
+      <option
+        value="Ingénieur, Cadre"
+      >
+        Ingénieur, Cadre
+      </option>
+      <option
+        value="Technicien"
+      >
+        Technicien
+      </option>
+      <option
+        value="ouvriers"
+      >
+        ouvriers
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render coefficient 1`] = `
+.c4 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-branche"
+    >
+      Quelle est votre convention collective?
+    </label>
+    <select
+      class="c3"
+      id="input-branche"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="1672"
+      >
+        assurances societes
+      </option>
+      <option
+        value="1090"
+      >
+        automobile services
+      </option>
+      <option
+        value="2120"
+      >
+        banque
       </option>
       <option
         value="0843"
       >
-        Convention collective nationale de la Boulangerie-pâtisserie artisanale
+        boulangerie patisserie entreprises artisanales
+      </option>
+      <option
+        value="1606"
+      >
+        bricolage vente au detail en libre-service
+      </option>
+      <option
+        value="1486"
+      >
+        bureaux d'etudes techniques
+      </option>
+      <option
+        value="1147"
+      >
+        cabinets medicaux
+      </option>
+      <option
+        value="0044"
+      >
+        chimie industrie
+      </option>
+      <option
+        value="1505"
+      >
+        fruits legumes epicerie produits laitiers
+      </option>
+      <option
+        value="1483"
+      >
+        habillement articles textiles commerce de detail
+      </option>
+      <option
+        value="0675"
+      >
+        habillement commerce succursales
+      </option>
+      <option
+        value="1979"
+      >
+        hotels cafes restaurants (hcr)
+      </option>
+      <option
+        value="1996"
+      >
+        pharmacie d'officine
+      </option>
+      <option
+        value="3043"
+      >
+        proprete entreprises et services associes
+      </option>
+      <option
+        value="3127"
+      >
+        services a la personne entreprises
+      </option>
+      <option
+        value="2511"
+      >
+        sport
+      </option>
+      <option
+        value="1404"
+      >
+        tracteurs materiels agricoles commerce reparation
+      </option>
+      <option
+        value="0000"
+      >
+        Je ne sais pas
       </option>
     </select>
-    
-  </label>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-catégorie"
+    >
+      Quelle est la catégorie professionnelle ?
+    </label>
+    <select
+      class="c3"
+      id="input-catégorie"
+      name="catégorie"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="Agent de maîtrise"
+      >
+        Agent de maîtrise
+      </option>
+      <option
+        value="Employé"
+      >
+        Employé
+      </option>
+      <option
+        value="Ingénieur, Cadre"
+      >
+        Ingénieur, Cadre
+      </option>
+      <option
+        value="Technicien"
+      >
+        Technicien
+      </option>
+      <option
+        value="ouvriers"
+      >
+        ouvriers
+      </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-coefficient"
+    >
+      Quel est le coefficient hiérarchique?
+    </label>
+    <select
+      class="c3"
+      id="input-coefficient"
+      name="coefficient"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="190 > coefficient >= 160"
+      >
+        190 &gt; coefficient &gt;= 160
+      </option>
+      <option
+        value=">=190"
+      >
+        &gt;=190
+      </option>
+      <option
+        value="coefficient < 160"
+      >
+        coefficient &lt; 160
+      </option>
+    </select>
+  </div>
+  <div
+    class="c4"
+  >
+    Si vous ne connaissez pas le 
+    coefficient hiérarchique
+    , munissez-vous du dernier bulletin de salaire, où ce dernier doit obligatoirement figurer. Cette information se trouve souvent dans l’en-tête.
+  </div>
 </div>
 `;

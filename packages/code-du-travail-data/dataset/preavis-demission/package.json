@@ -1,0 +1,13 @@
+{
+  "name": "@cdt/data...preavis-demission",
+  "version": "3.0.4",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js > ./data.json"
+  },
+  "dependencies": {
+    "google-spreadsheets": "^2.0.0"
+  }
+}

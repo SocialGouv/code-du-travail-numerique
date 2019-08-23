@@ -10,11 +10,14 @@ import { required } from "./validators";
 
 function SelectQuestion({ name, label, options, onChange }) {
   const uid = `input-${name}`;
+  if (!Array.isArray(options)) {
+    options = Object.entries(options);
+  }
   return (
     <Field
       name={name}
       validate={required}
-      subscribe={{ error: true, dirty: true }}
+      subscription={{ value: true, error: true, dirty: true }}
     >
       {({ input, meta: { error, dirty } }) => {
         return (
@@ -24,11 +27,20 @@ function SelectQuestion({ name, label, options, onChange }) {
               <option disabled value="">
                 ...
               </option>
-              {Object.entries(options).map(([key, label]) => (
-                <option value={key} key={key}>
-                  {label}
-                </option>
-              ))}
+              {options.map(option => {
+                let key, label;
+                if (Array.isArray(option)) {
+                  [key, label] = option;
+                } else {
+                  key = label = option;
+                }
+
+                return (
+                  <option value={key} key={key}>
+                    {label}
+                  </option>
+                );
+              })}
             </Select>
             {error && dirty && <InlineError>{error}</InlineError>}
             {onChange && (
@@ -44,7 +56,7 @@ function SelectQuestion({ name, label, options, onChange }) {
 SelectQuestion.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  options: PropTypes.object.isRequired,
+  options: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
   onChange: PropTypes.func
 };
 
