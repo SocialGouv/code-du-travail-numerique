@@ -1,17 +1,13 @@
-FROM python:3.8.0b1-stretch
+ARG TAG_BASE_IMAGE=master
+ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
+ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 
-ENV PYTHONIOENCODING="UTF-8"
-ENV PYTHONUNBUFFERED=1
-ENV PYTHONPATH=.
+FROM ${BASE_IMAGE} as cdtn-base-image
 
-WORKDIR /app
+FROM node:10-alpine
 
-COPY requirements.txt .
-
-RUN python -m venv venv
-RUN . venv/bin/activate
-RUN pip install -r requirements.txt
-
+COPY ./package.json /app/package.json
+COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
 COPY ./dataset/code_du_travail/themes.csv ./dataset/code_du_travail/themes.csv
 COPY ./dataset/code_du_travail/code-du-travail.json ./dataset/code_du_travail/code-du-travail.json
 COPY ./dataset/fiches_ministere_travail/fiches-min-travail.json ./dataset/fiches_ministere_travail/fiches-min-travail.json
@@ -27,6 +23,6 @@ COPY ./dataset/faq-snippets.json ./dataset/faq-snippets.json
 COPY ./dataset/export-courriers.json ./dataset/export-courriers.json
 COPY ./dataset/outils.json ./dataset/outils.json
 
-COPY ./search ./search
+WORKDIR /app
 
-ENTRYPOINT ["python", "/app/search/indexing/create_indexes.py"]
+ENTRYPOINT ["yarn", "populate"]

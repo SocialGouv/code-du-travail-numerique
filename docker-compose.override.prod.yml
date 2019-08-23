@@ -38,5 +38,5 @@ services:
     environment:
       - FLASK_ENV=production
 
-  python:
+  data:
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$CDTN_HASH

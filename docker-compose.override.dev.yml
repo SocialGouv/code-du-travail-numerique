@@ -8,7 +8,7 @@ services:
     ports:
       - 9200:9200
 
-  python:
+  data:
     build:
       context: ./packages/code-du-travail-data
     volumes:

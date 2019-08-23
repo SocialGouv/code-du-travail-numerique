@@ -3,8 +3,17 @@
   "version": "3.1.0",
   "description": "Ce dépôt de code permet d'indexer différentes sources de données relatives au Code du travail dans Elasticsearch.",
   "private": true,
-  "main": "index.js",
-  "scripts": {},
+  "main": "indexing/index.js",
+  "scripts": {
+    "build": "ncc build ./indexing/index.js -o dist",
+    "lint": "eslint ./indexing/*",
+    "prepush": "yarn lint",
+    "populate-dev": "node -r esm indexing/index.js",
+    "populate": "node ./dist/index.js",
+    "check-slugs": "node -r esm indexing/slug_checker",
+    "dump": "node -r esm dump",
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SocialGouv/code-du-travail-numerique.git"
@@ -13,5 +22,26 @@
   "bugs": {
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
-  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme"
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.3.0",
+    "esm": "^3.2.25",
+    "striptags": "^3.1.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@socialgouv/eslint-config-recommended": "^0.5.0",
+    "@zeit/ncc": "^0.1.16",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.5.0",
+    "eslint": "^5.13.0",
+    "jest": "^24.5.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "indexing/**/*.js"
+    ]
+  }
 }
