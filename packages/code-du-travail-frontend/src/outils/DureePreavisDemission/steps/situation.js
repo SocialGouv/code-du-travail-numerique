@@ -3,12 +3,12 @@ import data from "@cdt/data...preavis-demission/data.json";
 
 // humanize questions
 export const questions = {
-  branche: "Quelle est votre convention collective?",
-  catégorie: "Quelle est la catégorie professionnelle ?",
-  ancienneté: "Quelle est l'ancienneté ?",
-  groupe: "Quel est votre groupe ?",
-  coefficient: "Quel est le coefficient hiérarchique?",
-  echelon: "Quel est votre échelon ?"
+  branche: "Quelle est votre convention collective ?",
+  catégorie: "Quelle est la catégorie professionnelle du salarié ?",
+  ancienneté: "Quelle est l'ancienneté du salarié ?",
+  groupe: "Quel est le groupe du salarié ?",
+  coefficient: "Quel est le coefficient hiérarchique  du salarié ?",
+  echelon: "Quel est l'échelon du salarié ?"
 };
 
 export const labels = {
@@ -58,16 +58,6 @@ function getRecapLabel([key, value]) {
   }
 }
 
-function sortCriteria(a, b) {
-  if (a === "branche") {
-    return -1;
-  } else if (b === "branche") {
-    return 1;
-  } else {
-    return a.localeCompare(b);
-  }
-}
-
 function getCCList() {
   const o = Object.entries(
     data.reduce(
@@ -98,15 +88,23 @@ export function filterSituations(values = {}) {
 }
 
 export function getNextQuestionKey(possibleSituations, values = {}) {
-  const dupCriteria = possibleSituations
-    .map(({ criteria }) => Object.keys(criteria))
-    .reduce((state, value) => state.concat(value), []);
+  const dupCriteria = possibleSituations.reduce((state, { criteria }) => {
+    const availableCriteria = Object.keys(criteria).filter(
+      criterion => !values.hasOwnProperty(criterion) && !values[criterion]
+    );
+    for (const criterion of availableCriteria) {
+      state[criterion] = (state[criterion] || 0) + 1;
+    }
+    return state;
+  }, {});
 
-  const [criterion] = [...new Set(dupCriteria)]
-    .filter(criteria => !values.hasOwnProperty(criteria) && !values[criteria])
-    .sort(sortCriteria);
-
-  return criterion;
+  const [criterion] = Object.entries(dupCriteria).sort(
+    ([, countA], [, countB]) => countA < countB
+  );
+  if (criterion) {
+    return criterion[0];
+  }
+  return;
 }
 
 export function getOptions(possibleSituations, nextQuestionKey) {
@@ -119,16 +117,21 @@ export function getOptions(possibleSituations, nextQuestionKey) {
   return [...new Set(dupValues)]
     .filter(Boolean)
     .sort()
-    .map(a => [a, a]);
+    .map(a => [a, a.replace(/[0-9]+ /, "")]);
 }
 
 export function getPastQuestions(values) {
   let questions = {};
   let answers = [];
-  for (const key of Object.keys(values).sort(sortCriteria)) {
+  let situations = filterSituations(questions);
+  let questionKey = getNextQuestionKey(situations, questions);
+
+  while (values.hasOwnProperty(questionKey)) {
+    questions[questionKey] = values[questionKey];
+    answers.push([questionKey, getOptions(situations, questionKey)]);
+
     let situations = filterSituations(questions);
-    questions[key] = values[key];
-    answers.push([key, getOptions(situations, key)]);
+    questionKey = getNextQuestionKey(situations, questions);
   }
   return answers;
 }

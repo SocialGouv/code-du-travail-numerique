@@ -5,7 +5,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -21,7 +21,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "Ouvrier, Employé",
+      "catégorie": "1 Ouvriers, Employés",
       "ancienneté": "<6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -38,7 +38,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "Ouvrier, Employé",
+      "catégorie": "1 Ouvriers, Employés",
       "ancienneté": "6 mois à 24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -55,7 +55,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "Ouvrier, Employé",
+      "catégorie": "1 Ouvriers, Employés",
       "ancienneté": ">24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -72,7 +72,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "ETAM",
+      "catégorie": "2 ETAM",
       "ancienneté": "<6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -89,7 +89,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "ETAM",
+      "catégorie": "2 ETAM",
       "ancienneté": "6 mois à 24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -106,7 +106,7 @@
         "idcc": "0843",
         "label": "boulangerie patisserie entreprises artisanales"
       },
-      "catégorie": "ETAM",
+      "catégorie": "2 ETAM",
       "ancienneté": ">24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -123,7 +123,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "ouvriers",
+      "catégorie": "0 Ouvriers",
       "coefficient": "coefficient < 160"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -140,7 +140,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "ouvriers",
+      "catégorie": "0 Ouvriers",
       "coefficient": "190 > coefficient >= 160"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -157,7 +157,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "ouvriers",
+      "catégorie": "0 Ouvriers",
       "coefficient": ">=190"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -174,7 +174,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "coefficient": "coefficient < 160"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -191,7 +191,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "coefficient": "190 > coefficient >= 160"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -208,7 +208,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "coefficient": ">=190"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -225,7 +225,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Technicien",
+      "catégorie": "1 Techniciens",
       "groupe": "I à III",
       "coefficient": "190 > coefficient >= 160"
     },
@@ -243,7 +243,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Technicien",
+      "catégorie": "1 Techniciens",
       "groupe": "I à III",
       "coefficient": ">=190"
     },
@@ -261,7 +261,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Technicien",
+      "catégorie": "1 Techniciens",
       "groupe": "IV",
       "coefficient": "<275"
     },
@@ -279,7 +279,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Technicien",
+      "catégorie": "1 Techniciens",
       "groupe": "IV",
       "coefficient": ">=275"
     },
@@ -297,7 +297,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "groupe": "IV",
       "coefficient": "<275"
     },
@@ -315,7 +315,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "groupe": "IV",
       "coefficient": ">=275"
     },
@@ -333,7 +333,7 @@
         "idcc": "0044",
         "label": "chimie industrie"
       },
-      "catégorie": "Ingénieur, Cadre",
+      "catégorie": "3 Ingénieurs, Cadres",
       "groupe": "V"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -350,7 +350,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "<6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -367,7 +367,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "6 mois à 24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -384,7 +384,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": ">24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -401,7 +401,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "ancienneté": "<6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -418,7 +418,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "ancienneté": "6 mois à 24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -435,7 +435,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "ancienneté": ">24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -452,7 +452,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Cadre",
+      "catégorie": "4 Cadres",
       "ancienneté": "<6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -469,7 +469,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Cadre",
+      "catégorie": "4 Cadres",
       "ancienneté": "6 mois à 24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -486,7 +486,7 @@
         "idcc": "1979",
         "label": "hotels cafes restaurants (hcr)"
       },
-      "catégorie": "Cadre",
+      "catégorie": "4 Cadres",
       "ancienneté": ">24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -503,7 +503,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Maîtrise",
+      "catégorie": "3 Maîtrises",
       "ancienneté": "<24 mois",
       "coefficient": "200<355"
     },
@@ -521,7 +521,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Maîtrise",
+      "catégorie": "3 Maîtrises",
       "ancienneté": ">24 mois",
       "coefficient": "200<355"
     },
@@ -539,7 +539,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Maîtrise",
+      "catégorie": "3 Maîtrises",
       "ancienneté": "<24 mois",
       "coefficient": "400<500"
     },
@@ -557,7 +557,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Maîtrise",
+      "catégorie": "3 Maîtrises",
       "ancienneté": ">24 mois",
       "coefficient": "400<500"
     },
@@ -575,7 +575,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Ingénieur, Cadre"
+      "catégorie": "3 Ingénieurs, Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -591,7 +591,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Chargé d'enquête intermittent",
+      "catégorie": "4 Chargés d'enquête intermittent",
       "ancienneté": "<24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -608,7 +608,7 @@
         "idcc": "1486",
         "label": "bureaux d'etudes techniques"
       },
-      "catégorie": "Chargé d'enquête intermittent",
+      "catégorie": "4 Chargés d'enquête intermittent",
       "ancienneté": ">24 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -625,7 +625,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "agent de propreté",
+      "catégorie": "0 Agents de propreté",
       "ancienneté": "1 mois à 6 mois "
     },
     "theme": "droit au préavis - durée du préavis",
@@ -642,7 +642,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "agent de propreté",
+      "catégorie": "0 Agents de propreté",
       "ancienneté": "6 mois à 2 ans"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -659,7 +659,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "agent de propreté",
+      "catégorie": "0 Agents de propreté",
       "ancienneté": "plus de 2 ans"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -676,7 +676,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "1 mois à 2 ans"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -693,7 +693,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "plus de 2 ans"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -710,7 +710,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "Technicien et agent de maîtrise",
+      "catégorie": "2 Techniciens et agents de maîtrise",
       "ancienneté": "2 mois à 2 ans"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -727,7 +727,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "Technicien et agent de maîtrise",
+      "catégorie": "2 Techniciens et agents de maîtrise",
       "ancienneté": "plus de 2 ans"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -744,7 +744,7 @@
         "idcc": "3043",
         "label": "proprete entreprises et services associes"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -760,7 +760,7 @@
         "idcc": "1672",
         "label": "assurances societes"
       },
-      "catégorie": "Non-cadre (Classes 1 à 4)"
+      "catégorie": "1 Non-cadres (Classes 1 à 4)"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -776,7 +776,7 @@
         "idcc": "1672",
         "label": "assurances societes"
       },
-      "catégorie": "Cadre (Classes 5 à 7)"
+      "catégorie": "2 Cadres (Classes 5 à 7)"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -792,7 +792,7 @@
         "idcc": "1996",
         "label": "pharmacie d'officine"
       },
-      "catégorie": "Non-cadre"
+      "catégorie": "0 Non-cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -808,7 +808,7 @@
         "idcc": "1996",
         "label": "pharmacie d'officine"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -824,7 +824,7 @@
         "idcc": "1147",
         "label": "cabinets medicaux"
       },
-      "catégorie": "Non-cadre",
+      "catégorie": "0 Non-cadres",
       "ancienneté": "moins de 6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -841,7 +841,7 @@
         "idcc": "1147",
         "label": "cabinets medicaux"
       },
-      "catégorie": "Non-cadre",
+      "catégorie": "0 Non-cadres",
       "ancienneté": "au moins 6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -858,7 +858,7 @@
         "idcc": "1147",
         "label": "cabinets medicaux"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -906,7 +906,7 @@
         "idcc": "2120",
         "label": "banque"
       },
-      "catégorie": "Technicien"
+      "catégorie": "1 Techniciens"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -922,7 +922,7 @@
         "idcc": "2120",
         "label": "banque"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -938,7 +938,7 @@
         "idcc": "1606",
         "label": "bricolage vente au detail en libre-service"
       },
-      "catégorie": "Employé"
+      "catégorie": "1 Employés"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -954,7 +954,7 @@
         "idcc": "1606",
         "label": "bricolage vente au detail en libre-service"
       },
-      "catégorie": "Agent de maîtrise"
+      "catégorie": "3 Agents de maîtrise"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -970,7 +970,7 @@
         "idcc": "1606",
         "label": "bricolage vente au detail en libre-service"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -986,7 +986,7 @@
         "idcc": "2511",
         "label": "sport"
       },
-      "catégorie": "Ouvrier, Employé"
+      "catégorie": "1 Ouvriers, Employés"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1002,7 +1002,7 @@
         "idcc": "2511",
         "label": "sport"
       },
-      "catégorie": "Technicien et agent de maîtrise"
+      "catégorie": "1 Techniciens et agents de maîtrise"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1018,7 +1018,7 @@
         "idcc": "2511",
         "label": "sport"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1034,7 +1034,7 @@
         "idcc": "0675",
         "label": "habillement commerce succursales"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "plus de 1 mois et moins de 6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1051,7 +1051,7 @@
         "idcc": "0675",
         "label": "habillement commerce succursales"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "de plus de 6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1068,7 +1068,7 @@
         "idcc": "0675",
         "label": "habillement commerce succursales"
       },
-      "catégorie": "Agent de maîtrise"
+      "catégorie": "3 Agent de maîtrise"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1084,7 +1084,7 @@
         "idcc": "0675",
         "label": "habillement commerce succursales"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadre"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1100,7 +1100,7 @@
         "idcc": "1090",
         "label": "automobile services"
       },
-      "catégorie": "Ouvrier, Employé",
+      "catégorie": "1 Ouvriers, Employés",
       "echelon": "1 et 2"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1117,7 +1117,7 @@
         "idcc": "1090",
         "label": "automobile services"
       },
-      "catégorie": "Ouvrier, Employé",
+      "catégorie": "1 Ouvriers, Employés",
       "echelon": "3 à 12"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1134,7 +1134,7 @@
         "idcc": "1090",
         "label": "automobile services"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "echelon": "17 à 19"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1151,7 +1151,7 @@
         "idcc": "1090",
         "label": "automobile services"
       },
-      "catégorie": "Agent de maîtrise",
+      "catégorie": "3 Agents de maîtrise",
       "echelon": "20 à 25"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1168,7 +1168,7 @@
         "idcc": "1090",
         "label": "automobile services"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1184,7 +1184,7 @@
         "idcc": "1483",
         "label": "habillement articles textiles commerce de detail"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "moins de 6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1201,7 +1201,7 @@
         "idcc": "1483",
         "label": "habillement articles textiles commerce de detail"
       },
-      "catégorie": "Employé",
+      "catégorie": "1 Employés",
       "ancienneté": "de plus de 6 mois"
     },
     "theme": "droit au préavis - durée du préavis",
@@ -1218,7 +1218,7 @@
         "idcc": "1483",
         "label": "habillement articles textiles commerce de detail"
       },
-      "catégorie": "Agent de maîtrise"
+      "catégorie": "3 Agents de maîtrise"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1234,7 +1234,7 @@
         "idcc": "1483",
         "label": "habillement articles textiles commerce de detail"
       },
-      "catégorie": "Cadre"
+      "catégorie": "4 Cadres"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1250,7 +1250,7 @@
         "idcc": "1505",
         "label": "fruits legumes epicerie produits laitiers"
       },
-      "catégorie": "Ouvrier, Employé (niveaux I, II, III, IV)"
+      "catégorie": "1 Ouvriers, Employés (niveaux I, II, III, IV)"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1266,7 +1266,7 @@
         "idcc": "1505",
         "label": "fruits legumes epicerie produits laitiers"
       },
-      "catégorie": "Agent de maîtrise (niveau V)"
+      "catégorie": "4 Agents de maîtrise (niveau V)"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1282,7 +1282,7 @@
         "idcc": "1505",
         "label": "fruits legumes epicerie produits laitiers"
       },
-      "catégorie": "Cadre (niveau VI) "
+      "catégorie": "5 Cadres (niveau VI) "
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1298,7 +1298,7 @@
         "idcc": "1404",
         "label": "tracteurs materiels agricoles commerce reparation"
       },
-      "catégorie": "Ouvrier, Employé (niveaux I et II) "
+      "catégorie": "1 Ouvriers, Employés (niveaux I et II) "
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1314,7 +1314,7 @@
         "idcc": "1404",
         "label": "tracteurs materiels agricoles commerce reparation"
       },
-      "catégorie": "Ouvrier, Employé (niveau III)"
+      "catégorie": "2 Ouvriers, Employés (niveau III)"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1330,7 +1330,7 @@
         "idcc": "1404",
         "label": "tracteurs materiels agricoles commerce reparation"
       },
-      "catégorie": "Agent de maîtrise (niveau IV et V)"
+      "catégorie": "3 Agents de maîtrise (niveau IV et V)"
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
@@ -1346,7 +1346,7 @@
         "idcc": "1404",
         "label": "tracteurs materiels agricoles commerce reparation"
       },
-      "catégorie": "Cadre (niveau VI et plus) "
+      "catégorie": "5 Cadres (niveau VI et plus) "
     },
     "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
