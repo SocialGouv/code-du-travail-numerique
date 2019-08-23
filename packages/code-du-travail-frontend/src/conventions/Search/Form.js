@@ -79,34 +79,28 @@ const Search = () => {
             {status === "success" && results && results.length ? (
               <Table stripes>
                 <tbody>
-                  {results.map(
-                    result =>
-                      (
-                        <tr key={result.id}>
-                          <td>
-                            <Flex>
-                              <ResultLabel>{result.label}</ResultLabel>
-                              {result.siret && (
-                                <TagSiret siret={result.siret} />
-                              )}
-                            </Flex>
-                            <CCsContainer>
-                              {result.conventions &&
-                              result.conventions.length ? (
-                                result.conventions.map(convention => (
-                                  <CC key={convention.id} {...convention} />
-                                ))
-                              ) : (
-                                <div className="text-danger">
-                                  Aucune convention collective connue pour cette
-                                  entreprise
-                                </div>
-                              )}
-                            </CCsContainer>
-                          </td>
-                        </tr>
-                      )
-                  )}
+                  {results.map(result => (
+                    <tr key={result.id}>
+                      <td>
+                        <Flex>
+                          <ResultLabel>{result.label}</ResultLabel>
+                          {result.siret && <TagSiret siret={result.siret} />}
+                        </Flex>
+                        <CCsContainer>
+                          {result.conventions && result.conventions.length ? (
+                            result.conventions.map(convention => (
+                              <CC key={convention.id} {...convention} />
+                            ))
+                          ) : (
+                            <div className="text-danger">
+                              Aucune convention collective connue pour cette
+                              entreprise
+                            </div>
+                          )}
+                        </CCsContainer>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             ) : (
