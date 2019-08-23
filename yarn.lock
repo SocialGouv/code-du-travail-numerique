@@ -12953,10 +12953,10 @@ react-final-form@^4.1.0:
   dependencies:
     "@babel/runtime" "^7.3.4"
 
-react-github-fork-ribbon@0.5.1:
-  version "0.5.1"
-  resolved "https://registry.npmjs.org/react-github-fork-ribbon/-/react-github-fork-ribbon-0.5.1.tgz#35ab2815b2b5b02cb2ebd7d1bb46fee0c43ed5bb"
-  integrity sha512-IJfP9vOWQmZ8wiCEAyWJ84RHOLJTty3Odzf1xgp3/LtQJJf1bGCmKYRuXUt8UMVmtHzREG5U9BOPWw3rMikkzg==
+react-github-fork-ribbon@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-github-fork-ribbon/-/react-github-fork-ribbon-0.6.0.tgz#8b7454fec5bd5481af7fdf6d0fc8aa7653373301"
+  integrity sha512-lmobEGwg1k/JGMJMbiWNh3dd+5HUtePVqUu1LPr5L65MiK6mnn7ZgkGpFYXLijPxO9hD7x+f9qUrEzeazQdx2g==
 
 react-hot-loader@^4.12.11:
   version "4.12.11"
