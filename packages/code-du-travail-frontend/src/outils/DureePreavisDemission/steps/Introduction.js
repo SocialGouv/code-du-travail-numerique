@@ -4,7 +4,7 @@ function StepIntro() {
   return (
     <>
       <p>
-        En cas de démission, le salarié ne peut quitter l’entreprise
+        En cas de démission, le salarié ne peut pas quitter l’entreprise
         immédiatement après avoir informé l’employeur de ses intentions. Il doit
         rester dans l’entreprise durant une certaine période, qu’on appelle
         préavis ou parfois délai congé.

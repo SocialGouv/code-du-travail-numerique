@@ -36,8 +36,8 @@ function StepResult({ form }) {
           )}
           <Toast variant="info">
             Le contrat de travail, un accord collectif d’entreprise ou un usage
-            peuvent prévoir une durée de préavis plus courte. Vous pouvez
-            également convenir d’une dispense par accord avec l’employeur.
+            peut prévoir une durée de préavis plus courte. L’employeur peut
+            dispenser le salarié d’exécuter le préavis.
           </Toast>
         </>
       );
