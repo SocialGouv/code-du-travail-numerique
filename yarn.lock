@@ -5199,15 +5199,15 @@ data-urls@^1.0.0, data-urls@^1.0.1:
     whatwg-mimetype "^2.1.0"
     whatwg-url "^7.0.0"
 
-date-fns@^1.3.0, date-fns@^1.30.1:
+date-fns@^1.3.0:
   version "1.30.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
 
-date-fns@^2.0.0-beta.3:
-  version "2.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0-beta.3.tgz#2e28f5af945930f774ddd778e184d68227101d55"
-  integrity sha512-z5O262BvHPhwUvA1weXH+AZodygnZUcORERw8hjwBUrRPGrAo2e/rjXfC8Ykf1OGJZGDuLnK/WXbEZBIc0exGQ==
+date-fns@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0.tgz#52f05c6ae1fe0e395670082c72b690ab781682d0"
+  integrity sha512-nGZDA64Ktq5uTWV4LEH3qX+foV4AguT5qxwRlJDzJtf57d4xLNwtwrfb7SzKCoikoae8Bvxf0zdaEG/xWssp/w==
 
 date-now@^0.1.4:
   version "0.1.4"

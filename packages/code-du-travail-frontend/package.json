@@ -21,7 +21,7 @@
     "@socialgouv/next-routes": "^1.5.1",
     "@socialgouv/react-fiche-service-public": "^3.0.4",
     "@zeit/next-source-maps": "^0.0.3",
-    "date-fns": "^2.0.0-beta.3",
+    "date-fns": "^2.0.0",
     "express": "^4.17.1",
     "express-sitemap-xml": "^1.1.0",
     "final-form": "^4.12.0",
