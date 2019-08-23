@@ -38,7 +38,7 @@
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.0",
     "winston": "^3.1.0"
   },
   "devDependencies": {
