@@ -2,5 +2,6 @@
   "extends": [
     "github>SocialGouv/renovate-config",
     ":automergeAll"
-  ]
+  ],
+  "prConcurrentLimit": 2
 }
