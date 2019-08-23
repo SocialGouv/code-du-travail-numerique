@@ -112,9 +112,7 @@ class Question extends React.Component {
               <h4>Télécharger le modèle</h4>
               <DownloadFile
                 title={modeles_de_courriers[0]._source.title}
-                file={`${API_URL}/docs/${
-                  modeles_de_courriers[0]._source.filename
-                }`}
+                file={`${API_URL}/docs/${modeles_de_courriers[0]._source.filename}`}
                 type="Modèle de document"
                 icon={ModeleCourrierIcon}
               />

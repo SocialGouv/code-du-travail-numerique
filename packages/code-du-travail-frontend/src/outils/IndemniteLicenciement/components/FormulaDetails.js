@@ -51,9 +51,7 @@ const HeadingDetails = styled.strong`
 
 const ListDetails = styled.ul`
   list-style-image: url("data:image/svg+xml;,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 6 10"><path fill="${
-      colors.darkGrey
-    }" d="M0 4h5v1H0z"/></svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 6 10"><path fill="${colors.darkGrey}" d="M0 4h5v1H0z"/></svg>`
   )}");
 `;
 
