@@ -10343,10 +10343,10 @@ mamacro@^0.0.3:
   resolved "https://registry.yarnpkg.com/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
   integrity sha512-qMEwh+UujcQ+kbz3T6V+wAmO2U8veoq2w+3wY8MquqwVA3jChfwY+Tk52GZKDfACEPjuZ7r2oJLejwpt8jtwTA==
 
-mammoth@^1.4.6:
-  version "1.4.7"
-  resolved "https://registry.npmjs.org/mammoth/-/mammoth-1.4.7.tgz#c9c2e6d5d4ba6feab996c2b66f2c2c3d69acaadd"
-  integrity sha512-vN13//bwnOhYPYArerIHXgDV6hhSzpyQjdtoRaJjMU9z60DBQlb/A2Ug59QBVgjWiJXpVUH0sLmXunbFg5J0EQ==
+mammoth@^1.4.8:
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/mammoth/-/mammoth-1.4.8.tgz#f750c9e92bae294b2d3bc89066373546a3d7512c"
+  integrity sha512-NacMivDBGIDyMOUdh4M3faInP8qXg+NhlZDGf3k3X3oo2IJGizQ4pwqYuWGbRk7YGpTIyz9ushl45a0GePqYSw==
   dependencies:
     argparse "~1.0.3"
     bluebird "~3.4.0"

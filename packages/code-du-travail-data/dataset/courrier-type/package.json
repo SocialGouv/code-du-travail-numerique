@@ -13,6 +13,6 @@
   "author": "Lionel Breduillieard <lionel@lumographe.fr>",
   "license": "ISC",
   "dependencies": {
-    "mammoth": "^1.4.6"
+    "mammoth": "^1.4.8"
   }
 }
