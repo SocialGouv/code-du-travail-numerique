@@ -42,7 +42,7 @@
     "react-github-fork-ribbon": "0.5.1",
     "react-mathjax-preview": "^0.1.10",
     "react-switch": "^3.0.4",
-    "react-uid": "^2.0.1",
+    "react-uid": "^2.2.0",
     "speakingurl": "14.0.1",
     "styled-components": "^4.3.2",
     "tocbot": "^4.7.0",
