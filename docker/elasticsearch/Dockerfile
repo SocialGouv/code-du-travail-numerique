@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.3.1
 
 RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --silent analysis-icu
 
