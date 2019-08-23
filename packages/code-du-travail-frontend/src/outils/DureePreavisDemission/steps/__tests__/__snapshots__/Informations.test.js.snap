@@ -47,7 +47,7 @@ exports[`<StepInformations /> should render 1`] = `
       class="c2"
       for="input-branche"
     >
-      Quelle est votre convention collective?
+      Quelle est votre convention collective ?
     </label>
     <select
       class="c3"
@@ -202,7 +202,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       class="c2"
       for="input-branche"
     >
-      Quelle est votre convention collective?
+      Quelle est votre convention collective ?
     </label>
     <select
       class="c3"
@@ -314,7 +314,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       class="c2"
       for="input-catégorie"
     >
-      Quelle est la catégorie professionnelle ?
+      Quelle est la catégorie professionnelle du salarié ?
     </label>
     <select
       class="c3"
@@ -328,29 +328,29 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="Agent de maîtrise"
+        value="0 Ouvriers"
       >
-        Agent de maîtrise
+        Ouvriers
       </option>
       <option
-        value="Employé"
+        value="1 Employés"
       >
-        Employé
+        Employés
       </option>
       <option
-        value="Ingénieur, Cadre"
+        value="1 Techniciens"
       >
-        Ingénieur, Cadre
+        Techniciens
       </option>
       <option
-        value="Technicien"
+        value="3 Agents de maîtrise"
       >
-        Technicien
+        Agents de maîtrise
       </option>
       <option
-        value="ouvriers"
+        value="3 Ingénieurs, Cadres"
       >
-        ouvriers
+        Ingénieurs, Cadres
       </option>
     </select>
   </div>
@@ -422,7 +422,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       class="c2"
       for="input-branche"
     >
-      Quelle est votre convention collective?
+      Quelle est votre convention collective ?
     </label>
     <select
       class="c3"
@@ -534,7 +534,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       class="c2"
       for="input-catégorie"
     >
-      Quelle est la catégorie professionnelle ?
+      Quelle est la catégorie professionnelle du salarié ?
     </label>
     <select
       class="c3"
@@ -548,29 +548,29 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="Agent de maîtrise"
+        value="0 Ouvriers"
       >
-        Agent de maîtrise
+        Ouvriers
       </option>
       <option
-        value="Employé"
+        value="1 Employés"
       >
-        Employé
+        Employés
       </option>
       <option
-        value="Ingénieur, Cadre"
+        value="1 Techniciens"
       >
-        Ingénieur, Cadre
+        Techniciens
       </option>
       <option
-        value="Technicien"
+        value="3 Agents de maîtrise"
       >
-        Technicien
+        Agents de maîtrise
       </option>
       <option
-        value="ouvriers"
+        value="3 Ingénieurs, Cadres"
       >
-        ouvriers
+        Ingénieurs, Cadres
       </option>
     </select>
   </div>
@@ -581,7 +581,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       class="c2"
       for="input-coefficient"
     >
-      Quel est le coefficient hiérarchique?
+      Quel est le coefficient hiérarchique  du salarié ?
     </label>
     <select
       class="c3"
@@ -597,7 +597,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       <option
         value="190 > coefficient >= 160"
       >
-        190 &gt; coefficient &gt;= 160
+        &gt; coefficient &gt;= 160
       </option>
       <option
         value=">=190"

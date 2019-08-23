@@ -21,39 +21,40 @@ export const labels = {
 };
 
 function getRecapLabel([key, value]) {
+  const displayedValue = `${value}`.replace(/[0-9]+ /, "");
   switch (key) {
     case "catégorie":
       return (
         <>
-          appartenant à la catégorie <em>{value}</em>
+          appartenant à la catégorie <em>{displayedValue}</em>
         </>
       );
     case "ancienneté":
       return (
         <>
-          avec <em>{value}</em> d’ancienneté
+          avec <em>{displayedValue}</em> d’ancienneté
         </>
       );
     case "groupe":
       return (
         <>
-          dans le groupe <em>{value}</em>
+          dans le groupe <em>{displayedValue}</em>
         </>
       );
     case "coefficient":
       return (
         <>
-          avec un coefficient <em>{value}</em>
+          avec un coefficient <em>{displayedValue}</em>
         </>
       );
     case "echelon":
       return (
         <>
-          avec un échelon de <em>{value}</em>
+          avec un échelon de <em>{displayedValue}</em>
         </>
       );
     default: {
-      return value;
+      return displayedValue;
     }
   }
 }
@@ -99,7 +100,17 @@ export function getNextQuestionKey(possibleSituations, values = {}) {
   }, {});
 
   const [criterion] = Object.entries(dupCriteria).sort(
-    ([, countA], [, countB]) => countA < countB
+    ([critA, countA], [critB, countB]) => {
+      if (countA === countB) {
+        if (critA === "branche") {
+          return -1;
+        } else if (critB === "branche") {
+          return 1;
+        }
+        return critB.localeCompare(critA);
+      }
+      return countB - countA;
+    }
   );
   if (criterion) {
     return criterion[0];

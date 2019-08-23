@@ -58,11 +58,12 @@ describe("situations", () => {
       const situations = filterSituations();
       expect(getNextQuestionKey(situations)).toBe("branche");
     });
-    it("should return bar question key", () => {
+    it("should return foo question key", () => {
       const situations = filterSituations();
-      expect(getNextQuestionKey(situations, { branche: "10" })).toBe("bar");
+      expect(getNextQuestionKey(situations, { branche: "10" })).toBe("foo");
     });
   });
+
   describe("getOptions", () => {
     it("should return options for a question key", () => {
       const situations = filterSituations();
@@ -108,56 +109,12 @@ describe("situations", () => {
       expect(
         recapSituation({
           catégorie: "Etam",
-          ancienneté: 30,
+          ancienneté: "30",
           groupe: "IV",
-          echelon: 375,
-          coefficient: 12
+          echelon: "375",
+          coefficient: "12"
         })
-      ).toMatchInlineSnapshot(`
-<React.Fragment>
-  <React.Fragment>
-    <React.Fragment>
-      <React.Fragment>
-        <React.Fragment>
-          appartenant à la catégorie
-          <em>
-            Etam
-          </em>
-        </React.Fragment>
-        ,
-        <React.Fragment>
-          avec
-          <em>
-            30
-          </em>
-           d’ancienneté
-        </React.Fragment>
-      </React.Fragment>
-      ,
-      <React.Fragment>
-        dans le groupe
-        <em>
-          IV
-        </em>
-      </React.Fragment>
-    </React.Fragment>
-    ,
-    <React.Fragment>
-      avec un échelon de
-      <em>
-        375
-      </em>
-    </React.Fragment>
-  </React.Fragment>
-  ,
-  <React.Fragment>
-    avec un coefficient
-    <em>
-      12
-    </em>
-  </React.Fragment>
-</React.Fragment>
-`);
+      ).toMatchSnapshot();
     });
   });
 });

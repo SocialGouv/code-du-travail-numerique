@@ -88,7 +88,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
      
     appartenant à la catégorie 
     <em>
-      Ingénieur, Cadre
+      Ingénieurs, Cadres
     </em>
     , 
     dans le groupe 
@@ -136,7 +136,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       class="c3"
       role="alert"
     >
-      Le contrat de travail, un accord collectif d’entreprise ou un usage peuvent prévoir une durée de préavis plus courte. Vous pouvez également convenir d’une dispense par accord avec l’employeur.
+      Le contrat de travail, un accord collectif d’entreprise ou un usage peut prévoir une durée de préavis plus courte. L’employeur peut dispenser le salarié d’exécuter le préavis.
     </div>
   </div>
 </div>
