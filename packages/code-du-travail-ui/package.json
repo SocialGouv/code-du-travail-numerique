@@ -45,7 +45,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.11",
-    "react-testing-library": "^6.0.0",
+    "react-testing-library": "^8.0.1",
     "rollup": "^1.20.2",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.0.2",
