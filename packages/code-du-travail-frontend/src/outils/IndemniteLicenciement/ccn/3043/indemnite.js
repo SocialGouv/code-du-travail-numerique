@@ -12,14 +12,14 @@ export function getSalaireRef({ salaireRefLegal }) {
 export function getIndemnite({ salaireRef, anciennete }) {
   let error;
   let indemniteConventionnelle = 0;
-  let formula = [];
+  const formula = [];
   const trancheAnciennete = {
     a10: Math.max(0, round(anciennete - 10)),
     a5: Math.min(5, Math.max(0, round(anciennete - 5))),
     a2: Math.min(5, round(anciennete))
   };
 
-  let labels = {
+  const labels = {
     "Salaire de référence (Sref)": round(salaireRef),
     "Ancienneté entre 2 et 5ans (A1)": trancheAnciennete.a2,
     "Ancienneté 6 ens 10ans (A2)": trancheAnciennete.a5,

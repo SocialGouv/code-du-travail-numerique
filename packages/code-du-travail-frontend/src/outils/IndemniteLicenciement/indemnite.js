@@ -57,7 +57,7 @@ function getIndemnite({
 }) {
   const dNotification = parse(dateNotification);
   let formula = "-";
-  let labels = {
+  const labels = {
     "Salaire de réference (Sref)": round(salaireRef),
     "Licenciement pour inaptitude": inaptitude ? "oui" : "non",
     "Ancienneté totale (A)": round(anciennete),

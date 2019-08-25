@@ -87,7 +87,6 @@ export function getIndemniteConventionnelle(data) {
   });
 
   let salaireRefConventionnel;
-  let formula;
   let error;
   if (brancheCategorie === "CEI") {
     salaireRefConventionnel = round(getSalaireRef(data));
@@ -150,7 +149,7 @@ export function getIndemniteConventionnelle(data) {
     ? indemniteMax
     : indemniteConventionnelleNotCeiled;
 
-  let labels = {
+  const labels = {
     "Salaire de référence (Sref)": round(salaireRefConventionnel),
     ...(isCeilingReached && {
       "Plafond d'indemnité conventionnel en mois (Pmois)": maxMonthIndemnite
@@ -167,7 +166,7 @@ export function getIndemniteConventionnelle(data) {
       })
   };
 
-  formula = isCeilingReached
+  const formula = isCeilingReached
     ? `Pmois * Sref`
     : `(C * Sref * A${previousIndemnites ? " - I" : ""})`;
 
