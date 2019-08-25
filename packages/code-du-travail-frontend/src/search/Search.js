@@ -146,9 +146,7 @@ class Search extends React.Component {
         ? searchAddress(value).then(results =>
             results.map(item => ({
               _source: {
-                title: `${item.properties.name}, ${item.properties.postcode} ${
-                  item.properties.city
-                }`,
+                title: `${item.properties.name}, ${item.properties.postcode} ${item.properties.city}`,
                 coord: item.geometry.coordinates
               }
             }))

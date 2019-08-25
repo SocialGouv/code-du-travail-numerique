@@ -8,9 +8,7 @@ export default function Metas({ url, title, description, image }) {
     url = `${location.protocol}//${location.host}${Router.asPath}`;
   }
   if (!image && location) {
-    image = `${location.protocol}//${
-      location.hostname
-    }/static/images/social-preview.png`;
+    image = `${location.protocol}//${location.hostname}/static/images/social-preview.png`;
   }
   return (
     <Head>

@@ -58,9 +58,7 @@ const Footer = () => (
           <List>
             <StyledListItem>
               <a
-                href={`${GITHUB_REPO}/tree/${
-                  publicRuntimeConfig.PACKAGE_VERSION
-                }`}
+                href={`${GITHUB_REPO}/tree/${publicRuntimeConfig.PACKAGE_VERSION}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
