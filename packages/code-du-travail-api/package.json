@@ -30,7 +30,7 @@
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^2.2.1",
     "commander": "^2.19.0",
-    "dotenv": "^6.0.0",
+    "dotenv": "^8.1.0",
     "elastic-apm-node": "^2.15.0",
     "jest": "^23.6.0",
     "koa": "^2.8.1",
