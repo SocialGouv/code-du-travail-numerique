@@ -15715,10 +15715,10 @@ unist-util-map@^1.0.3:
   dependencies:
     object-assign "^4.0.1"
 
-unist-util-parents@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/unist-util-parents/-/unist-util-parents-1.0.1.tgz#65d78cb54dd4db003d80bc3843facb596b9a5e9e"
-  integrity sha512-0StvA75QtG+xxlKD/IJtEZFpKAECYQGb7yY12z6sE+pfgEU0dsRGrnMsuhM9IV8KZcNOSDnVGML/m+k3kq31SQ==
+unist-util-parents@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/unist-util-parents/-/unist-util-parents-1.0.2.tgz#f982bf0feb4fa472d60209224bfb42f513468673"
+  integrity sha512-GwY81F/q2KMYi+A7+A0QZCJX/GlmRfeU4fRlEmndSgLGPWLBBcR/xKb5B5irFSzzrbTK94XgBQ++s7c9/Jdoig==
   dependencies:
     es6-weak-map "^2.0.1"
 
