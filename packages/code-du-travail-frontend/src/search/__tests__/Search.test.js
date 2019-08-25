@@ -1,6 +1,6 @@
 import React from "react";
 import Search from "../Search";
-import { fireEvent, render, waitForElement } from "react-testing-library";
+import { fireEvent, render, waitForElement } from "@testing-library/react";
 
 import { suggestResults } from "../search.service";
 import { Router } from "../../../routes";

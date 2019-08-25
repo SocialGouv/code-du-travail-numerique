@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 import { EchelonChimie } from "../EchelonChimie";
 import { Form } from "react-final-form";
 

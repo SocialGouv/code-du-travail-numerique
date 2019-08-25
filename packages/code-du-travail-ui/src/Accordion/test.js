@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import Accordion from ".";
 
 const items = [{ title: "This is the title", body: "this is the body" }];

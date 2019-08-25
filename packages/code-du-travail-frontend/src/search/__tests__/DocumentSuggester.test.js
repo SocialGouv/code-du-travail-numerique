@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "react-testing-library";
+import { fireEvent, render } from "@testing-library/react";
 
 import { DocumentSuggester } from "../DocumentSuggester";
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];

@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { LienExterne, LienExterneCommente } from "../LienExterne";
 import lienExterneCommenteDataMock from "./mocks/lienExterneCommenteData.json";
 import lienExterneDataMock from "./mocks/lienExterneData.json";

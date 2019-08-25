@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
 import { Salaire } from "../Salaire";

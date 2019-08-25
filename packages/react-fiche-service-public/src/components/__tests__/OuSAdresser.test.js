@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import OuSAdresser from "../OuSAdresser";
 import classicData from "./mocks/ouSAdresserClassicData.json";
 import ressourceWebData from "./mocks/ouSAdresserWebData.json";

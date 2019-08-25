@@ -1,7 +1,7 @@
 import React from "react";
 import arrayMutators from "final-form-arrays";
 
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { StepRemuneration } from "../Remuneration";
 import { Form } from "react-final-form";
 
