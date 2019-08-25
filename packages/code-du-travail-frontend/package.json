@@ -39,7 +39,7 @@
     "react-final-form": "^4.1.0",
     "react-final-form-arrays": "^2.0.3",
     "react-final-form-listeners": "^1.0.2",
-    "react-github-fork-ribbon": "0.5.1",
+    "react-github-fork-ribbon": "0.6.0",
     "react-mathjax-preview": "^0.1.10",
     "react-switch": "^3.0.4",
     "react-uid": "^2.2.0",
