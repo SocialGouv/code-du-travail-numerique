@@ -29,7 +29,7 @@ export function getIndemnite({
   const anneeAncienete = Math.floor(anciennete);
   let indemniteConventionnelle = 0;
   let formula = "-";
-  let labels = {
+  const labels = {
     "Salaire de référence (Sref)": salaireRef,
     "ancienneté totale": round(anciennete),
     "ancienneté (en année entière)": anneeAncienete,

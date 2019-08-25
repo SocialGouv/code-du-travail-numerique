@@ -50,7 +50,7 @@ function getIndemnite({
   let indemniteConventionnelle = 0;
   let formula = "";
   let error;
-  let labels = {
+  const labels = {
     "Salaire de référence (Sref)": round(salaireRef),
     "Motif du licenciement": optionMotifs[motif],
     Catégorie: optionCategorie[categorie]
@@ -110,7 +110,7 @@ function getIndemnite({
   const isEmbaucheAfter1999 = isAfter(dEntree, new Date("1999-12-31"));
 
   if (isEmbaucheAfter1999) {
-    let plafond = {
+    const plafond = {
       [CADRE]: 24,
       [NON_CADRE]: 18,
       [NE_SAIT_PAS]: 18

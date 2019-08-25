@@ -55,7 +55,7 @@ export function getIndemnite({
   let error;
   let indemniteConventionnelle = 0;
   let formula = "-";
-  let labels = {
+  const labels = {
     "salaire de référence (Sref)": salaireRef,
     ...(!tamDuration &&
       !cadreDuration && { "ancienneté totale, en année, (A)": anciennete }),
