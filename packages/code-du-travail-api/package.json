@@ -51,7 +51,7 @@
     "json2csv": "^4.5.2",
     "nodemon": "^1.19.1",
     "p-limit": "^2.2.1",
-    "superagent": "^4.1.0",
+    "superagent": "^5.1.0",
     "supertest": "^4.0.2"
   },
   "jest": {
