@@ -52,7 +52,7 @@
     "nodemon": "^1.19.1",
     "p-limit": "^2.2.1",
     "superagent": "^4.1.0",
-    "supertest": "^3.3.0"
+    "supertest": "^4.0.2"
   },
   "jest": {
     "collectCoverageFrom": [
