@@ -7,7 +7,7 @@ jest.useFakeTimers();
 
 describe("<FeedbackForm />", () => {
   it("renders if user is satisfied", () => {
-    const { container, getByLabelText } = render(
+    const { container, getByDisplayValue } = render(
       <FeedbackForm
         query="Initial query"
         sourceType="Fiches Service Public"
@@ -18,11 +18,11 @@ describe("<FeedbackForm />", () => {
         isSatisfied={true}
       />
     );
-    expect(container.querySelector("[value='Initial query']")).toBeTruthy();
+    expect(getByDisplayValue("Initial query")).toBeTruthy();
     expect(container).toMatchSnapshot();
   });
   it("renders if user is no satisfied", () => {
-    const { container } = render(
+    const { container, getByDisplayValue } = render(
       <FeedbackForm
         query="Initial query"
         sourceType="Fiches Service Public"
@@ -33,7 +33,7 @@ describe("<FeedbackForm />", () => {
         isSatisfied={false}
       />
     );
-    expect(container.querySelector("[value='Initial query']")).toBeTruthy();
+    expect(getByDisplayValue("Initial query")).toBeTruthy();
     expect(container).toMatchSnapshot();
   });
 

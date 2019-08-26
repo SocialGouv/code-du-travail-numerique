@@ -12,10 +12,10 @@ describe("<ConventionTexte />", () => {
   });
 
   it("should let you click on a toc item", () => {
-    const { container, getByText } = render(
+    const { debug, container, getAllByText } = render(
       <ConventionTexte id={texte.data.id} preloadedTexte={texte} />
     );
-    const articleLink = getByText(/Titre Ier : Dispositions générales/);
+    const [articleLink] = getAllByText(/Titre Ier : Dispositions générales/i);
     fireEvent.click(articleLink);
     fireEvent.scroll(container, { target: { scrollY: 1000 } });
 

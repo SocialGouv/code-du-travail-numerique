@@ -24,7 +24,7 @@ describe("<SalaireTempsPartiel />", () => {
   });
   it("should delete a period", async () => {
     const onSubmit = jest.fn();
-    const { container, getByText } = render(
+    const { container, getAllByText } = render(
       <Form
         initialValues={{
           periods: [
@@ -37,14 +37,14 @@ describe("<SalaireTempsPartiel />", () => {
         render={() => <SalaireTempsPartiel name="periods" />}
       />
     );
-    const deleteButton = getByText(/supprimer/i);
+    const [deleteButton] = getAllByText(/supprimer/i);
     deleteButton.click();
     await wait(() => {});
     expect(container).toMatchSnapshot();
   });
   it("should add a period", async () => {
     const onSubmit = jest.fn();
-    const { container, getByText } = render(
+    const { container, getByText, getAllByText } = render(
       <Form
         mutators={{ ...arrayMutators }}
         onSubmit={onSubmit}
@@ -53,7 +53,7 @@ describe("<SalaireTempsPartiel />", () => {
     );
     const addButton = getByText(/ajouter/i);
     addButton.click();
-    await wait(() => getByText(/supprimer/i));
+    await wait(() => getAllByText(/supprimer/i));
     expect(container).toMatchSnapshot();
   });
 });

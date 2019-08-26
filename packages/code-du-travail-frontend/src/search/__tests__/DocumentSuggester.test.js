@@ -72,14 +72,14 @@ describe("<DocumentSuggester />", () => {
 
   it("should call onSelect when user clicks some option", () => {
     const onSelect = jest.fn();
-    const { getByRole, getByPlaceholderText } = renderDocumentSuggester({
+    const { getAllByRole, getByPlaceholderText } = renderDocumentSuggester({
       placeholder: "the place to be",
       suggestions,
       onSelect
     });
     const input = getByPlaceholderText(/the place to be/i);
     input.focus();
-    const option = getByRole("option");
+    const [option] = getAllByRole("option");
     option.click();
     expect(onSelect).toHaveBeenCalledWith(suggestions[0], expect.anything());
   });
