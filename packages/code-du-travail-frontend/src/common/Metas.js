@@ -4,12 +4,12 @@ import Head from "next/head";
 import { Router } from "../../routes";
 
 export default function Metas({ url, title, description, image }) {
-  if (!url && Router && location) {
-    url = `${location.protocol}//${location.host}${Router.asPath}`;
+  if (typeof window !== "undefined") {
+    const { asPath: path } = Router || { asPath: "" };
+    url = url || `${location.protocol}//${location.host}${path}`;
+    image = image || `${location.protocol}//${location.hostname}/static/images/social-preview.png`;
   }
-  if (!image && location) {
-    image = `${location.protocol}//${location.hostname}/static/images/social-preview.png`;
-  }
+
   return (
     <Head>
       <title>{title}</title>
