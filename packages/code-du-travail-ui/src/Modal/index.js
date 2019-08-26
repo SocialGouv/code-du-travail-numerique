@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
-import X from "react-feather/dist/icons/x";
+import { X } from "react-feather";
 import { box, breakpoints, colors, spacing } from "../theme";
 import ScreenReaderOnly from "../ScreenReaderOnly";
 
