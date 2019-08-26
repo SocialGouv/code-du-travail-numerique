@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Theme from "../theme.js";
+import MentionLegales from "../pages/mentions-legales.js";
 
-describe("<Theme />", () => {
+describe("<MentionLegales />", () => {
   it("should render", () => {
-    const { container } = render(<Theme />);
+    const { container } = render(<MentionLegales />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import FicheSP from "../fiche-service-public";
+import Kali from "../pages/kali.js";
 
-describe("<FicheSP />", () => {
+describe("<Kali />", () => {
   it("should render", () => {
-    const { container } = render(<FicheSP />);
+    const { container } = render(<Kali />);
     expect(container).toMatchSnapshot();
   });
 });

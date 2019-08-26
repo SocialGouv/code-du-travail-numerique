@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Home from "../index.js";
+import Outils from "../pages/outils.js";
 
-describe("<Home />", () => {
+describe("<Outils />", () => {
   it("should render", () => {
-    const { container } = render(<Home />);
+    const { container } = render(<Outils />);
     expect(container).toMatchSnapshot();
   });
 });

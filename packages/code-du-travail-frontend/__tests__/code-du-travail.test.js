@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Outils from "../outils.js";
+import CodeDuTravail from "../pages/code-du-travail.js";
 
-describe("<Outils />", () => {
+describe("<CodeDuTravail />", () => {
   it("should render", () => {
-    const { container } = render(<Outils />);
+    const { container } = render(<CodeDuTravail />);
     expect(container).toMatchSnapshot();
   });
 });

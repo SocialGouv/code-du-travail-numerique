@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import CodeDuTravail from "../code-du-travail.js";
+import Annuaire from "../pages/annuaire.js";
 
-describe("<CodeDuTravail />", () => {
+describe("<Annuaire />", () => {
   it("should render", () => {
-    const { container } = render(<CodeDuTravail />);
+    const { container } = render(<Annuaire />);
     expect(container).toMatchSnapshot();
   });
 });
