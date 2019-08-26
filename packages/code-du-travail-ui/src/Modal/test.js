@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { render, fireEvent } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import { Modal } from ".";
+
+// force cleanup dom since we use portal
+afterEach(cleanup);
 
 describe("<Modal />", () => {
   it("does not render at first and then render", () => {
