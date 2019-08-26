@@ -12,7 +12,7 @@ describe("<ConventionTexte />", () => {
   });
 
   it("should let you click on a toc item", () => {
-    const { debug, container, getAllByText } = render(
+    const { container, getAllByText } = render(
       <ConventionTexte id={texte.data.id} preloadedTexte={texte} />
     );
     const [articleLink] = getAllByText(/Titre Ier : Dispositions générales/i);
