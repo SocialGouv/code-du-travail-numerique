@@ -25,7 +25,10 @@ function StepIndemnite({ form }) {
         votre indemnité de licenciement peut être supérieur au montant de
         l’indemnité légale.
       </p>
-      <Field name="branche" subscribe={{ error: true, dirty: true }}>
+      <Field
+        name="branche"
+        subscription={{ value: true, error: true, dirty: true }}
+      >
         {({ input, meta: { error, dirty } }) => {
           return (
             <>

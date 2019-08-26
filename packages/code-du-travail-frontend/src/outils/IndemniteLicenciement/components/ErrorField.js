@@ -7,9 +7,9 @@ function ErrorField({ name }) {
   return (
     <Field
       name={name}
-      subscribe={{ error: true, dirty: true }}
-      render={({ meta: { error, touched, dirty } }) =>
-        (error && dirty) || (error && touched) ? <Alert>{error}</Alert> : null
+      subscription={{ error: true, dirty: true, touched: true }}
+      render={({ meta: { error, dirty, touched } }) =>
+        (error && touched) || (error && dirty) ? <Alert>{error}</Alert> : null
       }
     />
   );
@@ -22,7 +22,6 @@ function ErrorComputedField({ name }) {
   return (
     <Field
       name={name}
-      subscribe={{ error: true }}
       render={({ meta: { error } }) => (error ? <Alert>{error}</Alert> : null)}
     />
   );
