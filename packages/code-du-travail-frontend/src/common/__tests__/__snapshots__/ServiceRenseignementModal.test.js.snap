@@ -229,103 +229,124 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   </div>
   <reach-portal>
     <div
-      class="c1"
-      data-reach-dialog-overlay="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <div
-        aria-modal="true"
-        class="c2"
-        data-reach-dialog-content="true"
-        tabindex="-1"
-      >
-        <h4>
-          Contacter les services de renseignement par téléphone
-        </h4>
+      <div>
         <div
-          class="c3"
+          class="c1"
+          data-reach-dialog-overlay="true"
         >
-          <a
-            class="c4"
-            href="tel:+0033806000126"
+          <div
+            aria-modal="true"
+            class="c2"
+            data-reach-dialog-content="true"
+            tabindex="-1"
           >
-            <strong
-              class="c5"
+            <h4>
+              Contacter les services de renseignement par téléphone
+            </h4>
+            <div
+              class="c3"
             >
-              0 806 000 126
-            </strong>
-            <em
-              class="c6"
+              <a
+                class="c4"
+                href="tel:+0033806000126"
+              >
+                <strong
+                  class="c5"
+                >
+                  0 806 000 126
+                </strong>
+                <em
+                  class="c6"
+                >
+                  Service gratuit + prix appel
+                </em>
+              </a>
+            </div>
+            <h4>
+              Trouver les coordonnées du service de renseignement de mon département
+            </h4>
+            <p>
+              <label
+                for="id_1"
+              >
+                Saisissez votre numéro de département :
+              </label>
+              <input
+                class="c7"
+                id="id_1"
+                maxlength="3"
+                type="text"
+              />
+            </p>
+            <small
+              class="c8"
             >
-              Service gratuit + prix appel
-            </em>
-          </a>
+              Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
+              <ul>
+                <li>
+                  les demandes d'intervention en entreprise
+                </li>
+                <li>
+                  le règlement des litiges, et la consitution des dossiers prud'homaux
+                </li>
+                <li>
+                  les calculs de droit au chômage
+                </li>
+                <li>
+                  vous renseigner sur les cotisations sociales
+                </li>
+              </ul>
+            </small>
+            <button
+              class="c9"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                title="fermer la modale"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <h4>
-          Trouver les coordonnées du service de renseignement de mon département
-        </h4>
-        <p>
-          <label
-            for="id_1"
-          >
-            Saisissez votre numéro de département :
-          </label>
-          <input
-            class="c7"
-            id="id_1"
-            maxlength="3"
-            type="text"
-          />
-        </p>
-        <small
-          class="c8"
-        >
-          Attention, ces services délivrent une information juridique, ils ne sont pas compétents pour :
-          <ul>
-            <li>
-              les demandes d'intervention en entreprise
-            </li>
-            <li>
-              le règlement des litiges, et la consitution des dossiers prud'homaux
-            </li>
-            <li>
-              les calculs de droit au chômage
-            </li>
-            <li>
-              vous renseigner sur les cotisations sociales
-            </li>
-          </ul>
-        </small>
-        <button
-          class="c9"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            title="fermer la modale"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
       </div>
     </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
   </reach-portal>
 </body>
 `;
