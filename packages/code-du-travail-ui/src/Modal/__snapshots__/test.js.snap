@@ -76,47 +76,68 @@ exports[`<Modal /> does not render at first and then render 2`] = `
 
 <reach-portal>
     <div
-      class="c0"
-      data-reach-dialog-overlay="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <div
-        aria-modal="true"
-        class="c1"
-        data-reach-dialog-content="true"
-        tabindex="-1"
-      >
-        Some content
-        <button
-          class="c2"
+      <div>
+        <div
+          class="c0"
+          data-reach-dialog-overlay="true"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            title="fermer la modale"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            aria-modal="true"
+            class="c1"
+            data-reach-dialog-content="true"
+            tabindex="-1"
           >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
+            Some content
+            <button
+              class="c2"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                title="fermer la modale"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
   </reach-portal>
 </body>
 `;
@@ -163,44 +184,65 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
 
 <reach-portal>
     <div
-      class="c0"
-      data-reach-dialog-overlay="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <span
-        class="c1"
-      >
-        This won't be displayed
-        <button
-          class="c2"
+      <div>
+        <div
+          class="c0"
+          data-reach-dialog-overlay="true"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            title="fermer la modale"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="c1"
           >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </span>
+            This won't be displayed
+            <button
+              class="c2"
+            >
+              <svg
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                title="fermer la modale"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </button>
+          </span>
+        </div>
+      </div>
     </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
   </reach-portal>
 </body>
 `;
