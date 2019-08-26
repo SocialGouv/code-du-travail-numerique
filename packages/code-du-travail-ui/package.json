@@ -22,7 +22,7 @@
     "react-dom": "16.x"
   },
   "dependencies": {
-    "@reach/dialog": "^0.1.2",
+    "@reach/dialog": "^0.2.9",
     "polished": "^3.4.1",
     "react-accessible-accordion": "^2.4.5",
     "react-feather": "1.1.0",
