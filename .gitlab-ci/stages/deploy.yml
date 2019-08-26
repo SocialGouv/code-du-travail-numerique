@@ -105,7 +105,6 @@ Deploy @cdtn/frontend (incubateur):
     CONTEXT: elasticsearch
     ES_INTER_NODE: ${ELASTICSEARCH_INTER_NODE_PORT}
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/elasticsearch
-    IMAGE_TAG: ${ELK_STACK_VERSION}
     PORT: ${ELASTICSEARCH_PORT}
 
 #

@@ -50,7 +50,13 @@ function SalaireTempsPlein({ name }) {
                         });
                         return parseFloat(value) || null;
                       }}
-                      subscribe={{ blur: true, error: true, touched: true }}
+                      subscription={{
+                        value: true,
+                        error: true,
+                        touched: true,
+                        invalid: true,
+                        blur: true
+                      }}
                       render={({
                         input,
                         meta: { touched, error, invalid }

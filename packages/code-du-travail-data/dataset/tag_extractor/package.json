@@ -1,7 +1,7 @@
 {
   "name": "@cdt/data...tags",
   "private": true,
-  "version": "3.0.4",
+  "version": "3.1.1",
   "description": "extract tags from json faq, output markdown",
   "main": "index.js",
   "scripts": {

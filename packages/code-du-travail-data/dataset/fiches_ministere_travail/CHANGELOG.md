@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency jsdom to v15 ([#1174](https://github.com/SocialGouv/code-du-travail-numerique/issues/1174)) ([8983090](https://github.com/SocialGouv/code-du-travail-numerique/commit/8983090))
+* **deps:** update dependency ora to ^3.4.0 ([#1144](https://github.com/SocialGouv/code-du-travail-numerique/issues/1144)) ([239a5df](https://github.com/SocialGouv/code-du-travail-numerique/commit/239a5df))
+* **deps:** update dependency p-limit to ^2.2.1 ([#1145](https://github.com/SocialGouv/code-du-travail-numerique/issues/1145)) ([44b268a](https://github.com/SocialGouv/code-du-travail-numerique/commit/44b268a))
+* **deps:** update dependency superagent to v5 ([#1181](https://github.com/SocialGouv/code-du-travail-numerique/issues/1181)) ([d34b91a](https://github.com/SocialGouv/code-du-travail-numerique/commit/d34b91a))
+
+
+
+
+
 ## [3.0.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.3...v3.0.4) (2019-08-14)
 
 **Note:** Version bump only for package @cdt/data...fiches_ministere_travail

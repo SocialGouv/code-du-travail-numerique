@@ -4,6 +4,8 @@ import { DialogContent, DialogOverlay } from "@reach/dialog";
 import styled from "styled-components";
 import X from "react-feather/dist/icons/x";
 import { box, breakpoints, colors, spacing } from "../theme";
+import ScreenReaderOnly from "../ScreenReaderOnly";
+
 export class Modal extends React.Component {
   render() {
     const {
@@ -18,8 +20,9 @@ export class Modal extends React.Component {
       <StyledDialogOverlay isOpen={isOpen} onDismiss={onDismiss} {...props}>
         <Wrapper>
           {children}
-          <CloseIcon onClick={onDismiss}>
-            <X title="fermer la modale" />
+          <CloseIcon title="fermer la modale" onClick={onDismiss}>
+            <ScreenReaderOnly>fermer la modale</ScreenReaderOnly>
+            <X aria-hidden />
           </CloseIcon>
         </Wrapper>
       </StyledDialogOverlay>

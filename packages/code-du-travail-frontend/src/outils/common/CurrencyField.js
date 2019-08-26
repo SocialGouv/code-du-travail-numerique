@@ -11,17 +11,17 @@ function CurrencyField({ name, label, children = null, ...inputProps }) {
     <Field
       name={name}
       validate={isNumber}
-      subscribe={{ error: true, touched: true }}
+      subscription={{ value: true, error: true, touched: true, invalid: true }}
     >
       {({ input, meta: { touched, error, invalid } }) => (
         <>
           {label && <p>{label}</p>}
           <CurrencyWrapper>
             <NumberInput
-              type="number"
-              size="10"
               {...inputProps}
               {...input}
+              type="number"
+              size="10"
               invalid={touched && invalid}
             />
             <Currency aria-hidden="true">€</Currency>

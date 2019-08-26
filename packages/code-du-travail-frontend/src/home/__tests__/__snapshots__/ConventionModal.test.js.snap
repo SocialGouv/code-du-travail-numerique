@@ -85,6 +85,18 @@ exports[`<ConventionModal /> should render a button 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
+.c13:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c5 {
   position: fixed;
   top: 0;
@@ -259,166 +271,193 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   </div>
   <reach-portal>
     <div
-      class="c5"
-      data-reach-dialog-overlay="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <div
-        aria-modal="true"
-        class="c6"
-        data-reach-dialog-content="true"
-        tabindex="-1"
-      >
-        <form>
-          <h2>
-            Trouvez votre convention collective
-          </h2>
-          <div>
-            <h3
-              class="c7"
-            >
-              Recherche par nom ou par identifiant
-            </h3>
-            Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
-            <div
-              class="c8"
-            >
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-1"
-                role="combobox"
-                style="position: relative;"
-              >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-1"
-                  autocomplete="off"
-                  class="full-width"
-                  name="query"
-                  placeholder="Convention collective"
-                  type="search"
-                  value=""
-                />
-                <div
-                  class="c9"
-                  id="react-autowhatever-1"
-                  role="listbox"
-                />
-              </div>
-            </div>
-            <div
-              class="c10"
-            >
-              Comment trouver ma convention collective ?
-            </div>
-            <ul>
-              <li>
-                Elle doit figurer au 
-                <b>
-                  bulletin de paie
-                </b>
-                , et sur une notice remise à l’embauche ou 
-                <b>
-                  sur le contrat de travail
-                </b>
-              </li>
-              <li>
-                Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
-              </li>
-            </ul>
-            <div
-              class="c10"
-            >
-              Quelle est la convention collective applicable ?
-            </div>
-            <ul>
-              <li>
-                En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
-              </li>
-            </ul>
-          </div>
-        </form>
-        <form>
-          <h3
-            class="c7"
-          >
-            Recherche par SIREN ou SIRET
-          </h3>
-          Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir votre convention collective :
-          <div
-            class="c8"
-          >
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-1"
-              role="combobox"
-              style="position: relative;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-1"
-                autocomplete="off"
-                class="full-width"
-                name="query"
-                placeholder="Numéro de SIRET à 14 chiffres"
-                type="search"
-                value=""
-              />
-              <div
-                class="c9"
-                id="react-autowhatever-1"
-                role="listbox"
-              />
-            </div>
-            <p>
-              <span>
-                 
-              </span>
-            </p>
-            <p
-              class="c11"
-            >
-              Vous pouvez chercher le SIRET de votre entreprise sur 
-              <a
-                href="https://entreprise.data.gouv.fr/"
-              >
-                entreprise.data.gouv.fr
-              </a>
-            </p>
-          </div>
-        </form>
-        <button
-          class="c12"
+      <div>
+        <div
+          class="c5"
+          data-reach-dialog-overlay="true"
         >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            title="fermer la modale"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            aria-modal="true"
+            class="c6"
+            data-reach-dialog-content="true"
+            tabindex="-1"
           >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
+            <form>
+              <h2>
+                Trouvez votre convention collective
+              </h2>
+              <div>
+                <h3
+                  class="c7"
+                >
+                  Recherche par nom ou par identifiant
+                </h3>
+                Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
+                <div
+                  class="c8"
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-owns="react-autowhatever-1"
+                    role="combobox"
+                    style="position: relative;"
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="react-autowhatever-1"
+                      autocomplete="off"
+                      class="full-width"
+                      name="query"
+                      placeholder="Convention collective"
+                      type="search"
+                      value=""
+                    />
+                    <div
+                      class="c9"
+                      id="react-autowhatever-1"
+                      role="listbox"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="c10"
+                >
+                  Comment trouver ma convention collective ?
+                </div>
+                <ul>
+                  <li>
+                    Elle doit figurer au 
+                    <b>
+                      bulletin de paie
+                    </b>
+                    , et sur une notice remise à l’embauche ou 
+                    <b>
+                      sur le contrat de travail
+                    </b>
+                  </li>
+                  <li>
+                    Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
+                  </li>
+                </ul>
+                <div
+                  class="c10"
+                >
+                  Quelle est la convention collective applicable ?
+                </div>
+                <ul>
+                  <li>
+                    En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
+                  </li>
+                </ul>
+              </div>
+            </form>
+            <form>
+              <h3
+                class="c7"
+              >
+                Recherche par SIREN ou SIRET
+              </h3>
+              Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir votre convention collective :
+              <div
+                class="c8"
+              >
+                <div
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-owns="react-autowhatever-1"
+                  role="combobox"
+                  style="position: relative;"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="react-autowhatever-1"
+                    autocomplete="off"
+                    class="full-width"
+                    name="query"
+                    placeholder="Numéro de SIRET à 14 chiffres"
+                    type="search"
+                    value=""
+                  />
+                  <div
+                    class="c9"
+                    id="react-autowhatever-1"
+                    role="listbox"
+                  />
+                </div>
+                <p>
+                  <span>
+                     
+                  </span>
+                </p>
+                <p
+                  class="c11"
+                >
+                  Vous pouvez chercher le SIRET de votre entreprise sur 
+                  <a
+                    href="https://entreprise.data.gouv.fr/"
+                  >
+                    entreprise.data.gouv.fr
+                  </a>
+                </p>
+              </div>
+            </form>
+            <button
+              class="c12"
+              title="fermer la modale"
+            >
+              <div
+                class="c13"
+              >
+                fermer la modale
+              </div>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
   </reach-portal>
 </body>
 `;

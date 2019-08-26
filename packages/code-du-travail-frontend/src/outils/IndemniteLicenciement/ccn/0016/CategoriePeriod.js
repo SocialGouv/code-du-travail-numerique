@@ -15,7 +15,12 @@ function CategoriePeriod() {
       <Field
         name="tamDuration"
         validate={isNumber}
-        subscribe={{ error: true, touched: true, invalid: true }}
+        subscription={{
+          value: true,
+          error: true,
+          touched: true,
+          invalid: true
+        }}
       >
         {({ input, meta: { error, touched, invalid } }) => {
           return (
@@ -23,11 +28,11 @@ function CategoriePeriod() {
               <p>Période passée en tant que TAM ou employé</p>
               <div>
                 <Input
+                  {...input}
                   size="5"
                   min="0"
                   type="number"
                   invalid={touched && invalid}
-                  {...input}
                 />{" "}
                 mois
                 {error && touched && (
@@ -43,7 +48,12 @@ function CategoriePeriod() {
       <Field
         name="cadreDuration"
         validate={isNumber}
-        subscribe={{ error: true, touched: true, invalid: true }}
+        subscription={{
+          value: true,
+          error: true,
+          touched: true,
+          invalid: true
+        }}
       >
         {({ input, meta: { error, touched, invalid } }) => {
           return (
@@ -51,11 +61,11 @@ function CategoriePeriod() {
               <p>Période passée en tant que cadre</p>
               <div>
                 <Input
+                  {...input}
                   size="5"
                   min="0"
                   type="number"
                   invalid={touched && invalid}
-                  {...input}
                 />{" "}
                 mois
                 {error && touched && <InlineError>{error}</InlineError>}

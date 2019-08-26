@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency csvtojson to ^2.0.10 ([#1135](https://github.com/SocialGouv/code-du-travail-numerique/issues/1135)) ([c001a04](https://github.com/SocialGouv/code-du-travail-numerique/commit/c001a04))
+
+
+
+
+
 ## [3.0.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.3...v3.0.4) (2019-08-14)
 
 **Note:** Version bump only for package @cdt/data...themes

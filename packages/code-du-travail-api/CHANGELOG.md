@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
+
+
+### Bug Fixes
+
+* **api:** manualy add missing elastic-apm-node instrumentation modules ([edc9191](https://github.com/SocialGouv/code-du-travail-numerique/commit/edc9191))
+* **deps:** update dependency @koa/cors to v3 ([#1166](https://github.com/SocialGouv/code-du-travail-numerique/issues/1166)) ([d3d1656](https://github.com/SocialGouv/code-du-travail-numerique/commit/d3d1656))
+* **deps:** update dependency axios to ^0.19.0 ([#1134](https://github.com/SocialGouv/code-du-travail-numerique/issues/1134)) ([1fe54d2](https://github.com/SocialGouv/code-du-travail-numerique/commit/1fe54d2))
+* **deps:** update dependency commander to v3 ([#1168](https://github.com/SocialGouv/code-du-travail-numerique/issues/1168)) ([23be96a](https://github.com/SocialGouv/code-du-travail-numerique/commit/23be96a))
+* **deps:** update dependency csvtojson to ^2.0.10 ([#1135](https://github.com/SocialGouv/code-du-travail-numerique/issues/1135)) ([c001a04](https://github.com/SocialGouv/code-du-travail-numerique/commit/c001a04))
+* **deps:** update dependency dotenv to v8 ([#1169](https://github.com/SocialGouv/code-du-travail-numerique/issues/1169)) ([136fe82](https://github.com/SocialGouv/code-du-travail-numerique/commit/136fe82))
+* **deps:** update dependency elastic-apm-node to ^2.15.0 ([#1137](https://github.com/SocialGouv/code-du-travail-numerique/issues/1137)) ([0a94189](https://github.com/SocialGouv/code-du-travail-numerique/commit/0a94189))
+* **deps:** update dependency jest to v24 ([#1173](https://github.com/SocialGouv/code-du-travail-numerique/issues/1173)) ([7ad4a36](https://github.com/SocialGouv/code-du-travail-numerique/commit/7ad4a36))
+* **deps:** update dependency koa to ^2.8.1 ([#1141](https://github.com/SocialGouv/code-du-travail-numerique/issues/1141)) ([495e106](https://github.com/SocialGouv/code-du-travail-numerique/commit/495e106))
+* **deps:** update dependency node-fetch to ^2.6.0 ([#1143](https://github.com/SocialGouv/code-du-travail-numerique/issues/1143)) ([2214335](https://github.com/SocialGouv/code-du-travail-numerique/commit/2214335))
+* **deps:** update dependency p-limit to ^2.2.1 ([#1145](https://github.com/SocialGouv/code-du-travail-numerique/issues/1145)) ([44b268a](https://github.com/SocialGouv/code-du-travail-numerique/commit/44b268a))
+* **deps:** update dependency superagent to v5 ([#1181](https://github.com/SocialGouv/code-du-travail-numerique/issues/1181)) ([d34b91a](https://github.com/SocialGouv/code-du-travail-numerique/commit/d34b91a))
+* **deps:** update dependency winston to ^3.2.1 ([#1159](https://github.com/SocialGouv/code-du-travail-numerique/issues/1159)) ([d6ca9ba](https://github.com/SocialGouv/code-du-travail-numerique/commit/d6ca9ba))
+
+
+
+
+
 # [3.1.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.4...v3.1.0) (2019-08-20)
 
 **Note:** Version bump only for package @cdt/api

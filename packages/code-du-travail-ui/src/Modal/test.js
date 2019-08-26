@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { render, fireEvent, cleanup } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import { Modal } from ".";
 
 // force cleanup dom since we use portal
@@ -29,7 +29,8 @@ describe("<Modal />", () => {
         Some content
       </Modal>
     );
-    fireEvent.click(getByTitle("fermer la modale"));
+    const closeBt = getByTitle("fermer la modale");
+    closeBt.click();
     expect(onDismiss).toHaveBeenCalledTimes(1);
   });
   it("renders the provided wrapper", () => {
