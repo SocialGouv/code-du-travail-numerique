@@ -2124,26 +2124,16 @@
     node-fetch "^2.6.0"
     simple-oauth2 "^2.2.1"
 
-"@socialgouv/eslint-config-react@^0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-0.9.5.tgz#ef85462afddce9ac3d6a6c69505442173e5469f4"
-  integrity sha512-8DslXJoe3Ad4aIrdlf36NAnc6XvSDRVhXPPVfxYsdlCdtkP94YIw9Cccy7/cOesaKYCyNPD36aZWjV9DrIaMjA==
+"@socialgouv/eslint-config-react@^0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-react/-/eslint-config-react-0.9.6.tgz#faafa063f7318097df4917faafa841d245a28b9a"
+  integrity sha512-PulgJ14NmOhFNMT0S5OnVbyAlXE6ru+42JBHt6JDvCK343hKmLcaJ+pe7h+30IOoabeY19pjEAgKYWUSCv2R/w==
   dependencies:
-    "@socialgouv/eslint-config-recommended" "^0.9.5"
-    babel-eslint "^10.0.2"
+    "@socialgouv/eslint-config-recommended" "^0.9.6"
+    babel-eslint "^10.0.3"
     eslint-plugin-jsx-a11y "~6.2.3"
     eslint-plugin-react "~7.14.3"
     eslint-plugin-react-hooks "~2.0.1"
-
-"@socialgouv/eslint-config-recommended@^0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.9.5.tgz#d570f60c499c499aa22ff851f822da44843172f9"
-  integrity sha512-5ROIS3eX212vxgEhJSDBxcowP12cxGEskJM6IoaZgqx0Yd4WzwnRt8d/IPw+cqPuzY1JvaijkGOLiYIwmZjqVQ==
-  dependencies:
-    eslint-config-prettier "~6.1.0"
-    eslint-plugin-import "~2.18.2"
-    eslint-plugin-jest "^22.15.2"
-    eslint-plugin-prettier "~3.1.0"
 
 "@socialgouv/eslint-config-recommended@^0.9.6":
   version "0.9.6"
@@ -3398,18 +3388,6 @@ babel-core@7.0.0-bridge.0:
   version "7.0.0-bridge.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
   integrity sha512-poPX9mZH/5CSanm50Q+1toVci6pv5KSRv/5TWCwtzQS5XEwn40BcCrgIeMFWP9CKKIniKXNxoIOnOq4VVlGXhg==
-
-babel-eslint@^10.0.2:
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.2.tgz#182d5ac204579ff0881684b040560fdcc1558456"
-  integrity sha512-UdsurWPtgiPgpJ06ryUnuaSXC2s0WoSZnQmEpbAH65XZSdwowgN5MvyP7e88nW07FYXv72erVtpBkxyDVKhH1Q==
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/parser" "^7.0.0"
-    "@babel/traverse" "^7.0.0"
-    "@babel/types" "^7.0.0"
-    eslint-scope "3.7.1"
-    eslint-visitor-keys "^1.0.0"
 
 babel-eslint@^10.0.3:
   version "10.0.3"
@@ -6218,14 +6196,6 @@ eslint-plugin-react@~7.14.3:
     object.values "^1.1.0"
     prop-types "^15.7.2"
     resolve "^1.10.1"
-
-eslint-scope@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.npmjs.org/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
-  integrity sha1-PWPD7f2gLgbgGkUq2IyqzHzctug=
-  dependencies:
-    esrecurse "^4.1.0"
-    estraverse "^4.1.1"
 
 eslint-scope@^4.0.0:
   version "4.0.0"

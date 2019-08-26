@@ -33,7 +33,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@socialgouv/eslint-config-react": "^0.9.5",
+    "@socialgouv/eslint-config-react": "^0.9.6",
     "babel-jest": "^24.9.0",
     "docz": "1.2.0",
     "docz-theme-default": "1.2.0",
