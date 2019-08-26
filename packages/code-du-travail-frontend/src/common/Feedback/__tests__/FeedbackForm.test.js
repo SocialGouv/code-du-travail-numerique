@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, wait } from "react-testing-library";
+import { fireEvent, render, wait } from "@testing-library/react";
 
 import { FeedbackForm } from "../FeedbackForm";
 
@@ -7,7 +7,7 @@ jest.useFakeTimers();
 
 describe("<FeedbackForm />", () => {
   it("renders if user is satisfied", () => {
-    const { container, getByValue } = render(
+    const { container, getByDisplayValue } = render(
       <FeedbackForm
         query="Initial query"
         sourceType="Fiches Service Public"
@@ -18,11 +18,11 @@ describe("<FeedbackForm />", () => {
         isSatisfied={true}
       />
     );
-    expect(getByValue("Initial query")).toBeTruthy();
+    expect(getByDisplayValue("Initial query")).toBeTruthy();
     expect(container).toMatchSnapshot();
   });
   it("renders if user is no satisfied", () => {
-    const { container, getByValue } = render(
+    const { container, getByDisplayValue } = render(
       <FeedbackForm
         query="Initial query"
         sourceType="Fiches Service Public"
@@ -33,7 +33,7 @@ describe("<FeedbackForm />", () => {
         isSatisfied={false}
       />
     );
-    expect(getByValue("Initial query")).toBeTruthy();
+    expect(getByDisplayValue("Initial query")).toBeTruthy();
     expect(container).toMatchSnapshot();
   });
 

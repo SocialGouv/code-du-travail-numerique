@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, wait } from "react-testing-library";
+import { fireEvent, render, wait } from "@testing-library/react";
 import ConventionExplainer from "../ConventionExplainer";
 
 describe("<ConventionExplainer />", () => {

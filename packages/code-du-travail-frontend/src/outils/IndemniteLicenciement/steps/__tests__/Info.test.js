@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 import { StepInfo } from "../Info";
 import { Form } from "react-final-form";
 
@@ -33,8 +33,8 @@ describe("<StepInfo />", () => {
   });
 
   it("should display error if fauteGrave", () => {
-    const { getByLabelText, getByText } = renderForm({});
-    const fauteGrave = getByLabelText(/oui/i);
+    const { getAllByLabelText, getByText } = renderForm({});
+    const [fauteGrave] = getAllByLabelText(/oui/i);
     fireEvent.click(fauteGrave);
     // blur is need to force validation in react-testing-lib
     fireEvent.blur(fauteGrave);

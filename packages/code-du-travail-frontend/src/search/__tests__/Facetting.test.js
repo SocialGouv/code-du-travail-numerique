@@ -1,6 +1,6 @@
 import React from "react";
 import { Faceting } from "../Faceting";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 
 const data = [
   { key: "foo", doc_count: 14 },

@@ -61,7 +61,7 @@
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
     "prettier": "^1.18.2",
-    "react-testing-library": "^6.0.3"
+    "@testing-library/react": "^8.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -69,6 +69,7 @@
       "src/**/*.js"
     ],
     "setupFilesAfterEnv": [
+      "@testing-library/react/cleanup-after-each",
       "<rootDir>/test/jest.setup.js"
     ],
     "testPathIgnorePatterns": [

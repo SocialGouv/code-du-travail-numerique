@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchQuery } from "../SearchQuery";
-import { render, waitForElement } from "react-testing-library";
+import { render, waitForElement } from "@testing-library/react";
 
 const results = {
   facets: [],

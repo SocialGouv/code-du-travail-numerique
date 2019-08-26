@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import CodeDuTravail from "../code-du-travail.js";
 
 describe("<CodeDuTravail />", () => {

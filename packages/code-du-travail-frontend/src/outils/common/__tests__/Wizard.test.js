@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { Wizard } from "../Wizard";
 import { stepReducer } from "../../IndemniteLicenciement/stepReducer";
 import { Field } from "react-final-form";

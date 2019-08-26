@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { render } from "react-testing-library";
+import { render, cleanup } from "@testing-library/react";
 import { Modal } from ".";
+
+// force cleanup dom since we use portal
+afterEach(cleanup);
 
 describe("<Modal />", () => {
   it("does not render at first and then render", () => {
@@ -21,12 +24,12 @@ describe("<Modal />", () => {
   });
   it("calls the callback when closing", () => {
     const onDismiss = jest.fn();
-    const { getAllByTitle } = render(
+    const { getByTitle } = render(
       <Modal isOpen={true} onDismiss={onDismiss}>
         Some content
       </Modal>
     );
-    const [closeBt] = getAllByTitle("fermer la modale");
+    const closeBt = getByTitle("fermer la modale");
     closeBt.click();
     expect(onDismiss).toHaveBeenCalledTimes(1);
   });

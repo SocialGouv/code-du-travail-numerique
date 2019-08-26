@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 import ConventionTexte from "../ConventionTexte";
 import texte from "./texte.json";
 
@@ -12,10 +12,10 @@ describe("<ConventionTexte />", () => {
   });
 
   it("should let you click on a toc item", () => {
-    const { container, getByText } = render(
+    const { container, getAllByText } = render(
       <ConventionTexte id={texte.data.id} preloadedTexte={texte} />
     );
-    const articleLink = getByText(/Titre Ier : Dispositions générales/);
+    const [articleLink] = getAllByText(/Titre Ier : Dispositions générales/i);
     fireEvent.click(articleLink);
     fireEvent.scroll(container, { target: { scrollY: 1000 } });
 
