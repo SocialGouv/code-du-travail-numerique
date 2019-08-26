@@ -2145,6 +2145,16 @@
     eslint-plugin-jest "^22.15.2"
     eslint-plugin-prettier "~3.1.0"
 
+"@socialgouv/eslint-config-recommended@^0.9.6":
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.9.6.tgz#98b11a4569237225f4130f1f93ea0e3e9df48ee5"
+  integrity sha512-+rt2qnabFCqef6VACnWkJzjkK+xj16wWDPa15+FsEw2ZbAeDDsFbTvN9N3s9sUq+z89lGg/9Xcs2D7RTR/5p9g==
+  dependencies:
+    eslint-config-prettier "~6.1.0"
+    eslint-plugin-import "~2.18.2"
+    eslint-plugin-jest "^22.15.2"
+    eslint-plugin-prettier "~3.1.0"
+
 "@socialgouv/next-routes@^1.5.1":
   version "1.5.1"
   resolved "https://registry.npmjs.org/@socialgouv/next-routes/-/next-routes-1.5.1.tgz#e39202d353c5f807204a013d86b8a7a52e08c117"
