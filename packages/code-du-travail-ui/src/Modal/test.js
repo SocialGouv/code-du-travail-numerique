@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { render, cleanup } from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 import { Modal } from ".";
 
 // force cleanup dom since we use portal
