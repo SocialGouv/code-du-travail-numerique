@@ -61,7 +61,7 @@ Test @cdtn/api:
   <<: *quality_stage
   <<: *master_based_stage
   services:
-    - $CI_REGISTRY_IMAGE/elasticsearch:$ELK_STACK_VERSION
+    - $CI_REGISTRY_IMAGE/elasticsearch:$CI_COMMIT_SHA
   variables:
     GIT_STRATEGY: none
     ELASTICSEARCH_URL: http://localhost:$ELASTICSEARCH_PORT
