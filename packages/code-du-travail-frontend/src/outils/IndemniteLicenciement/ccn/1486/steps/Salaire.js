@@ -61,7 +61,12 @@ const RegularNewSalaire = () => (
     <Field
       name="brancheNewRegularSalaire"
       validate={isNumber}
-      subscribe={{ error: true, touched: true }}
+      subscription={{
+        value: true,
+        error: true,
+        touched: true,
+        invalid: true
+      }}
     >
       {({ input, meta: { touched, error, invalid } }) => (
         <>
@@ -120,10 +125,11 @@ const IrregularNewSalaire = () => (
                         });
                         return parseFloat(value) || null;
                       }}
-                      subscribe={{
-                        blur: true,
+                      subscription={{
+                        value: true,
                         error: true,
-                        touched: true
+                        touched: true,
+                        invalid: true
                       }}
                       render={({
                         input,

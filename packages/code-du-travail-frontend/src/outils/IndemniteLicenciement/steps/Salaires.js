@@ -78,7 +78,12 @@ function StepSalaires({ form }) {
                     <Field
                       name="salaire"
                       validate={isNumber}
-                      subscribe={{ error: true, touched: true }}
+                      subscription={{
+                        value: true,
+                        error: true,
+                        touched: true,
+                        invalid: true
+                      }}
                     >
                       {({ input, meta: { touched, error, invalid } }) => (
                         <>

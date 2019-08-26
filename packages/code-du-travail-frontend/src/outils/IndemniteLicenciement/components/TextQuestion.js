@@ -24,9 +24,15 @@ function TextQuestion({
             <Field
               name={name}
               validate={value => {
-                return validate(value) || required(value);
+                return required(value) || validate(value);
               }}
-              subscribe={{ error: true, touched: true }}
+              subscription={{
+                value: true,
+                error: true,
+                touched: true,
+                dirty: true,
+                invalid: true
+              }}
               render={({ input, meta: { error, invalid, touched, dirty } }) => (
                 <>
                   <Input
@@ -37,7 +43,7 @@ function TextQuestion({
                     invalid={touched && invalid}
                     size={size}
                   />
-                  {error && dirty && (
+                  {invalid && dirty && (
                     <ErrorWrapper>
                       <InlineError>{error}</InlineError>
                     </ErrorWrapper>

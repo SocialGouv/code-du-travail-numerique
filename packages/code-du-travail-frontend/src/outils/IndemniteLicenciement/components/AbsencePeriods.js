@@ -36,7 +36,12 @@ function AbsencePeriods({ name, onChange }) {
                 <Field
                   name={`${name}.duration`}
                   validate={isNumber}
-                  subscribe={{ error: true, touched: true }}
+                  subscription={{
+                    value: true,
+                    error: true,
+                    touched: true,
+                    invalid: true
+                  }}
                   render={({ input, meta: { touched, error, invalid } }) => (
                     <>
                       <Input

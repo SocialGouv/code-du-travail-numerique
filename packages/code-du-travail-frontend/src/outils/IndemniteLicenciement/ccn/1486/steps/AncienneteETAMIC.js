@@ -61,7 +61,12 @@ export const AncienneteETAMIC = ({ form }) => {
           <Field
             name={`${CONTRAT_KEY}.duration`}
             validate={isNumber}
-            subscribe={{ error: true, touched: true }}
+            subscription={{
+              value: true,
+              error: true,
+              touched: true,
+              invalid: true
+            }}
             render={({ input, meta: { touched, error, invalid } }) => (
               <>
                 <Label htmlFor="duration">
