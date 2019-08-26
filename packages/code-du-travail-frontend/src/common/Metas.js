@@ -7,7 +7,9 @@ export default function Metas({ url, title, description, image }) {
   if (typeof window !== "undefined") {
     const { asPath: path } = Router || { asPath: "" };
     url = url || `${location.protocol}//${location.host}${path}`;
-    image = image || `${location.protocol}//${location.hostname}/static/images/social-preview.png`;
+    image =
+      image ||
+      `${location.protocol}//${location.hostname}/static/images/social-preview.png`;
   }
 
   return (
