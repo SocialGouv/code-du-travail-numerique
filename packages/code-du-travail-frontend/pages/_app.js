@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import App, { Container } from "next/app";
+import App from "next/app";
 import getConfig from "next/config";
 import GitHubForkRibbon from "react-github-fork-ribbon";
 import * as Sentry from "@sentry/browser";
@@ -63,7 +63,7 @@ export default class MyApp extends App {
       return <ErrorPage statusCode={pageProps.statusCode} />;
     }
     return (
-      <Container>
+      <>
         <GitHubForkRibbon
           href="//github.com/SocialGouv/code-du-travail-explorer"
           rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default class MyApp extends App {
           version bêta
         </GitHubForkRibbon>
         <Component {...pageProps} />
-      </Container>
+      </>
     );
   }
 }
