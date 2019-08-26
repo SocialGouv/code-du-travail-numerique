@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @reach/dialog to ^0.2.9 ([#1133](https://github.com/SocialGouv/code-du-travail-numerique/issues/1133)) ([2c08992](https://github.com/SocialGouv/code-du-travail-numerique/commit/2c08992))
+* **deps:** update dependency polished to ^3.4.1 ([#1146](https://github.com/SocialGouv/code-du-travail-numerique/issues/1146)) ([65c5d3d](https://github.com/SocialGouv/code-du-travail-numerique/commit/65c5d3d))
+
+
+
+
+
 ## [3.0.4](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.0.3...v3.0.4) (2019-08-14)
 
 **Note:** Version bump only for package @cdt/ui
