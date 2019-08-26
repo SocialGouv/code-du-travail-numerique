@@ -42,7 +42,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^0.9.5",
+    "@socialgouv/eslint-config-recommended": "^0.9.6",
     "@zeit/ncc": "^0.20.4",
     "axios": "^0.19.0",
     "csvtojson": "^2.0.10",
