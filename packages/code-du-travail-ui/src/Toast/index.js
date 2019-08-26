@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import IconWarning from "react-feather/dist/icons/alert-triangle";
-import IconInfo from "react-feather/dist/icons/info";
-import IconSuccess from "react-feather/dist/icons/check";
-import IconClose from "react-feather/dist/icons/x";
+import { AlertTriangle } from "react-feather";
+import { Info } from "react-feather";
+import { Check } from "react-feather";
+import { X } from "react-feather";
 import Button from "../Button";
 import { box, colors, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
+
+const VARIANT_TO_ICON = {
+  info: Info,
+  success: Check,
+  warning: AlertTriangle
+};
 
 const Toast = ({
   animate,
@@ -19,9 +25,8 @@ const Toast = ({
   ...props
 }) => {
   let timer = null;
-  let Icon = IconInfo;
-  if (variant === "warning") Icon = IconWarning;
-  if (variant === "success") Icon = IconSuccess;
+
+  const Icon = VARIANT_TO_ICON[variant];
 
   useEffect(() => {
     if (timer) {
@@ -46,7 +51,7 @@ const Toast = ({
       {onRemove ? (
         <ButtonWrapper>
           <Button variant="icon" aria-label="Fermer" onClick={onRemove}>
-            <IconClose />
+            <X />
           </Button>
         </ButtonWrapper>
       ) : null}
