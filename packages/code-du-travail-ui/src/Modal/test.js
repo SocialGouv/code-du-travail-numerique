@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { render, fireEvent } from "react-testing-library";
+import { render } from "react-testing-library";
 import { Modal } from ".";
 
 describe("<Modal />", () => {
@@ -21,12 +21,13 @@ describe("<Modal />", () => {
   });
   it("calls the callback when closing", () => {
     const onDismiss = jest.fn();
-    const { getByTitle } = render(
+    const { getAllByTitle } = render(
       <Modal isOpen={true} onDismiss={onDismiss}>
         Some content
       </Modal>
     );
-    fireEvent.click(getByTitle("fermer la modale"));
+    const [closeBt] = getAllByTitle("fermer la modale");
+    closeBt.click();
     expect(onDismiss).toHaveBeenCalledTimes(1);
   });
   it("renders the provided wrapper", () => {
