@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Answer /> should render 1`] = `
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -120,18 +132,6 @@ exports[`<Answer /> should render 1`] = `
 .c41:active {
   position: relative;
   top: 1px;
-}
-
-.c9:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c36 {
@@ -1087,6 +1087,18 @@ exports[`<Answer /> should render 1`] = `
 `;
 
 exports[`<Answer /> should render a breadcrumbs 1`] = `
+.c9:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c18 {
   margin: 0;
   padding: 0;
@@ -1212,18 +1224,6 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c45:active {
   position: relative;
   top: 1px;
-}
-
-.c9:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
 }
 
 .c40 {

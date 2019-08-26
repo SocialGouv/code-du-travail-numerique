@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
+.c10:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c1 {
   position: fixed;
   top: 0;
@@ -311,15 +323,21 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
             </small>
             <button
               class="c9"
+              title="fermer la modale"
             >
+              <div
+                class="c10"
+              >
+                fermer la modale
+              </div>
               <svg
+                aria-hidden="true"
                 fill="none"
                 height="24"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                title="fermer la modale"
                 viewBox="0 0 24 24"
                 width="24"
                 xmlns="http://www.w3.org/2000/svg"

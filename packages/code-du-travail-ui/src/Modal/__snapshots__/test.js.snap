@@ -11,7 +11,19 @@ exports[`<Modal /> does not render at first and then render 2`] = `
   <div
     aria-hidden="true"
   />
-  .c0 {
+  .c3:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c0 {
   position: fixed;
   top: 0;
   right: 0;
@@ -102,15 +114,21 @@ exports[`<Modal /> does not render at first and then render 2`] = `
             Some content
             <button
               class="c2"
+              title="fermer la modale"
             >
+              <div
+                class="c3"
+              >
+                fermer la modale
+              </div>
               <svg
+                aria-hidden="true"
                 fill="none"
                 height="24"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                title="fermer la modale"
                 viewBox="0 0 24 24"
                 width="24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +165,19 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
   <div
     aria-hidden="true"
   />
-  .c0 {
+  .c3:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c0 {
   position: fixed;
   top: 0;
   right: 0;
@@ -207,15 +237,21 @@ exports[`<Modal /> renders the provided wrapper 1`] = `
             This won't be displayed
             <button
               class="c2"
+              title="fermer la modale"
             >
+              <div
+                class="c3"
+              >
+                fermer la modale
+              </div>
               <svg
+                aria-hidden="true"
                 fill="none"
                 height="24"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                title="fermer la modale"
                 viewBox="0 0 24 24"
                 width="24"
                 xmlns="http://www.w3.org/2000/svg"
