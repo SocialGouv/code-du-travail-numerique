@@ -21,53 +21,72 @@ const {
 
 // return breadcrumbs components
 const getBreadcrumbs = (items = []) => {
-  if (items.length === 0) {
-    return [];
-  }
-  const root = [
+  const crumbs = [
     <Link key="root" route="themes">
       <a title="Tous les thèmes">Thèmes</a>
     </Link>
   ];
 
-  const leaf = items.map((item, index) => {
-    if (index === items.length - 1) {
+  if (!items || items.length === 0) {
+    return crumbs;
+  }
+
+  const leaves = items
+    .filter(i => !!i.title)
+    .map((item, index) => {
+      if (index === items.length - 1) {
+        return (
+          <span title={`voir le contenu du thème ${item.title}`}>
+            {item.title}
+          </span>
+        );
+      }
       return (
-        <span title={`voir le contenu du thème ${item.label}`}>
-          {item.label}
-        </span>
+        <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
+          <a title={item.title}>{item.title}</a>
+        </Link>
       );
-    }
-    return (
-      <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
-        <a title={item.label}>{item.label}</a>
-      </Link>
-    );
-  });
-  return [root].concat(leaf);
+    });
+
+  return crumbs.concat(leaves);
 };
 
 // Theme page
 class Theme extends React.Component {
   static async getInitialProps({ query: { slug } }) {
-    const response = await fetch(`${API_URL}/themes/${slug ? slug : ""}`);
+    const response = await fetch(`${API_URL}/themes${slug ? `/${slug}` : ""}`);
     if (!response.ok) {
       return { statusCode: response.status };
     }
     const theme = await response.json();
-    return {
-      data: { theme }
-    };
+    if (theme.hits.hits.length) {
+      if (slug) {
+        return {
+          theme: theme.hits.hits[0]._source
+        };
+      } else {
+        // root
+        return {
+          theme: {
+            children: theme.hits.hits.map(t => t._source)
+          }
+        };
+      }
+    }
+    throw new Error("Theme not found");
   }
 
   render() {
-    const {
-      data: { theme } = { theme: { children: [] } },
-      pageUrl,
-      ogImage
-    } = this.props;
-    const breadcrumbs = getBreadcrumbs(theme.breadcrumbs);
-    const isRootTheme = theme && !theme.slug;
+    const { theme, pageUrl, ogImage } = this.props;
+    const breadcrumbs = getBreadcrumbs(
+      (theme.parents || []).concat([
+        {
+          title: theme.title,
+          slug: theme.slug
+        }
+      ])
+    );
+    const isRootTheme = theme && !theme.parents;
     if (!theme) {
       return <NotFound />;
     }
@@ -82,7 +101,7 @@ class Theme extends React.Component {
         />
         <Search />
         <Breadcrumbs items={breadcrumbs} />
-        {theme.children.length > 0 && (
+        {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes
               title={isRootTheme ? undefined : null}

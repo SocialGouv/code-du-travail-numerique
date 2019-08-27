@@ -25,6 +25,7 @@ const Home = ({ pageUrl, ogImage, data: { themes = [] } = {} }) => (
     <Outils />
   </HomeLayout>
 );
+
 Home.getInitialProps = async () => {
   const response = await fetch(`${API_URL}/themes`);
   if (!response.ok) {
@@ -33,7 +34,7 @@ Home.getInitialProps = async () => {
   const themes = await response.json();
   return {
     data: {
-      themes: themes.children
+      themes: themes.hits.hits.map(t => t._source)
     }
   };
 };

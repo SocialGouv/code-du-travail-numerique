@@ -27,32 +27,28 @@ export default class Themes extends React.Component {
   static propTypes = {
     themes: PropTypes.arrayOf(
       PropTypes.shape({
-        label: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
         slug: PropTypes.string.isRequired
       }).isRequired
-    ),
-    title: PropTypes.string
-  };
-
-  static defaultProps = {
-    title: "Retrouvez nos réponses thématiques"
+    )
   };
 
   render() {
-    const { title, themes } = this.props;
+    const { themes } = this.props;
+    console.log("themes", themes);
     if (!(themes.length > 0)) return null;
     return (
       <Section>
         <Container>
-          {title && <Title>{title}</Title>}
+          {<Title>Thèmes</Title>}
           <Grid>
-            {themes.map(({ id, slug, label, parent }) => (
-              <GridCell key={slug + label}>
+            {themes.map(({ id, slug, title, parent }) => (
+              <GridCell key={slug + title}>
                 <Link route="themes" params={{ slug: slug || "/" }} passHref>
-                  <Tile title={label}>
+                  <Tile title={title}>
                     <Category
                       small={parent}
-                      title={label}
+                      title={title}
                       icon={`/static/assets/icons/${iconsMap[id] ||
                         "profiles.svg"}`}
                     />
