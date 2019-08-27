@@ -7,7 +7,7 @@ import fetch from "isomorphic-unfetch";
 
 import { Link } from "../routes";
 import Search from "../src/search/Search";
-import { SearchQuery } from "../src/search/SearchQuery";
+import { SearchResultList } from "../src/search/SearchResultList";
 
 import Themes from "../src/home/Themes";
 import { searchResults } from "../src/search/search.service";
@@ -60,6 +60,7 @@ class Theme extends React.Component {
     }
     const theme = await response.json();
     if (theme.hits.hits.length) {
+      // show a single theme
       if (slug) {
         return {
           theme: theme.hits.hits[0]._source
@@ -95,8 +96,8 @@ class Theme extends React.Component {
       <PageLayout>
         <Metas
           url={pageUrl}
-          title={`${theme.label} - Code du travail numérique`}
-          description={`Explorez les contenus autour du thème ${theme.label}`}
+          title={`${theme.title} - Code du travail numérique`}
+          description={`Explorez les contenus autour du thème ${theme.title}`}
           image={ogImage}
         />
         <Search />
@@ -112,11 +113,7 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <Section>
             <Container>
-              <SearchQuery
-                query={theme.label}
-                excludeSources="themes"
-                fetch={searchResults}
-              />
+              <SearchResultList items={theme.refs} />
             </Container>
           </Section>
         )}
