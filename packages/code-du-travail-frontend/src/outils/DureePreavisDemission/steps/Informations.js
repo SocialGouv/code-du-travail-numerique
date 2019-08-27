@@ -18,8 +18,8 @@ function StepInformations({ form }) {
   const nextQuestionKey = getNextQuestionKey(possibleSituations, values);
   const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
   const pastQuestions = getPastQuestions(values);
-  const showHelp = ["groupe", "coefficient", "echelon"].find(
-    key => key === nextQuestionKey
+  const showHelp = ["groupe", "coefficient", "echelon"].includes(
+    nextQuestionKey
   );
 
   return (
@@ -33,10 +33,10 @@ function StepInformations({ form }) {
           label={questions[key]}
           onChange={() => {
             form.batch(() => {
-              const resetFormProps = pastQuestions.slice(
-                pastQuestions.findIndex(([k]) => k === key) + 1
+              const resetFormProps = Object.keys(values).filter(
+                k => !pastQuestions.find(([key]) => k === key)
               );
-              resetFormProps.forEach(([key]) => form.change(key, undefined));
+              resetFormProps.forEach(key => form.change(key, undefined));
             });
           }}
         />
@@ -55,6 +55,7 @@ function StepInformations({ form }) {
           figurer. Cette information se trouve souvent dans l’en-tête.
         </Alert>
       )}
+      {<pre>{JSON.stringify(values, 0, 2)}</pre>}
     </>
   );
 }
