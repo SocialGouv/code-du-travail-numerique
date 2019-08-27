@@ -8,21 +8,26 @@ import { Input, BlockError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 import { OnChange } from "react-final-form-listeners";
 
-function AbsencePeriods({ name, onChange }) {
+function AbsencePeriods({ name, visible, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (
         <>
-          <p>
-            Les congés maternité, arrêts de travail liés à un accident du
-            travail ou une maladie professionnelle, congés individuels de
-            formation (Cif) et stage de fin d’étude de plus de 2 mois ne sont
-            pas considérés comme des absences. Merci de ne pas les renseigner.
-          </p>
-          <Row key={name}>
-            <CellHeader as={MotifCell}>Motif</CellHeader>
-            <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
-          </Row>
+          {visible && (
+            <>
+              <p>
+                Les congés maternité, arrêts de travail liés à un accident du
+                travail ou une maladie professionnelle, congés individuels de
+                formation (Cif) et stage de fin d’étude de plus de 2 mois ne
+                sont pas considérés comme des absences. Merci de ne pas les
+                renseigner.
+              </p>
+              <Row key={name}>
+                <CellHeader as={MotifCell}>Motif</CellHeader>
+                <CellHeader as={DurationCell}>Durée (en mois)</CellHeader>
+              </Row>
+            </>
+          )}
           {fields.map((name, index) => (
             <Row key={name}>
               <MotifCell>
@@ -66,18 +71,20 @@ function AbsencePeriods({ name, onChange }) {
               </DurationCell>
             </Row>
           ))}
-          <AddButton
-            variant="link"
-            type="button"
-            onClick={() =>
-              fields.push({
-                type: "Absence pour maladie non professionnelle",
-                duration: null
-              })
-            }
-          >
-            Ajouter une période
-          </AddButton>
+          {visible && (
+            <AddButton
+              variant="link"
+              type="button"
+              onClick={() =>
+                fields.push({
+                  type: "Absence pour maladie non professionnelle",
+                  duration: null
+                })
+              }
+            >
+              Ajouter une période
+            </AddButton>
+          )}
           {onChange && (
             <OnChange name={name}>
               {values => {
