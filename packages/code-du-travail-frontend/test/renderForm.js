@@ -1,6 +1,5 @@
-/* global jest */
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 import { Form } from "react-final-form";
 
 export function renderForm(Component, data) {

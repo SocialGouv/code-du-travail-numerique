@@ -91,7 +91,8 @@ export function filterSituations(values = {}) {
 export function getNextQuestionKey(possibleSituations, values = {}) {
   const dupCriteria = possibleSituations.reduce((state, { criteria }) => {
     const availableCriteria = Object.keys(criteria).filter(
-      criterion => !values.hasOwnProperty(criterion) && !values[criterion]
+      criterion =>
+        !Object.hasOwnProperty.call(values, criterion) && !values[criterion]
     );
     for (const criterion of availableCriteria) {
       state[criterion] = (state[criterion] || 0) + 1;
@@ -132,16 +133,16 @@ export function getOptions(possibleSituations, nextQuestionKey) {
 }
 
 export function getPastQuestions(values) {
-  let questions = {};
-  let answers = [];
-  let situations = filterSituations(questions);
+  const questions = {};
+  const answers = [];
+  const situations = filterSituations(questions);
   let questionKey = getNextQuestionKey(situations, questions);
 
-  while (values.hasOwnProperty(questionKey)) {
+  while (Object.prototype.hasOwnProperty.call(values, questionKey)) {
     questions[questionKey] = values[questionKey];
     answers.push([questionKey, getOptions(situations, questionKey)]);
 
-    let situations = filterSituations(questions);
+    const situations = filterSituations(questions);
     questionKey = getNextQuestionKey(situations, questions);
   }
   return answers;
