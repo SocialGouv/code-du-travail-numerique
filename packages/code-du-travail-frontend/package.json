@@ -47,7 +47,6 @@
     "styled-components": "^4.3.2",
     "tocbot": "^4.7.1",
     "unist-util-find": "^1.0.1",
-    "unist-util-parents": "^1.0.2",
     "url-search-params": "^1.1.0"
   },
   "devDependencies": {
