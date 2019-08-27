@@ -12403,13 +12403,6 @@ react-style-singleton@^1.1.0:
     invariant "^2.2.4"
     tslib "^1.0.0"
 
-react-switch@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/react-switch/-/react-switch-3.0.4.tgz#52958b2736b4d21b4f0050997955c5365019ca7b"
-  integrity sha512-11WipoiPNHZx4fWzF/fsYXu+w+HZb8tzNTo7ymaJES8uc3nJZl46rxg1DAB1u669W7SOnshDNnJZOi28IblOeg==
-  dependencies:
-    prop-types "^15.6.1"
-
 react-tabs@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-tabs/-/react-tabs-3.0.0.tgz#60311a17c755eb6aa9b3310123e67db421605127"
