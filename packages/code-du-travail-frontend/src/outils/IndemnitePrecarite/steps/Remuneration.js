@@ -18,41 +18,34 @@ function StepRemuneration({ form }) {
         }}
       />
       <Field name="typeRemuneration">
-        {({ input }) => {
-          if (input.value === "total") {
-            return (
+        {({ input }) => (
+          <>
+            {input.value === "total" && (
               <>
                 <CurrencyField
                   name="salaire"
                   label="Indiquez votre rémunération totale brute perçue pendant votre contrat&nbsp;*"
                 />
-                <Info>
-                  * Majorations, indemnités, primes et accessoires compris sauf
-                  les remboursements de frais et l’indemnité de congés payés.
-                </Info>
               </>
-            );
-          } else if (input.value === "mensuel") {
-            return (
-              <>
-                <Salaires
-                  name="salaires"
-                  onChange={salaires => {
-                    if (salaires.length === 0) {
-                      form.change("typeRemuneration", "total");
-                    }
-                  }}
-                />
-                <Info>
-                  * Majorations, indemnités, primes et accessoires compris sauf
-                  les remboursements de frais et l’indemnité de congés payés.
-                </Info>
-              </>
-            );
-          } else {
-            return null;
-          }
-        }}
+            )}
+            <Salaires
+              visible={input.value === "mensuel"}
+              name="salaires"
+              onChange={salaires => {
+                if (salaires.length === 0) {
+                  form.change("typeRemuneration", "total");
+                }
+              }}
+            />
+
+            {["mensuel", "total"].includes(input.value) && (
+              <Info>
+                * Majorations, indemnités, primes et accessoires compris sauf
+                les remboursements de frais et l’indemnité de congés payés.
+              </Info>
+            )}
+          </>
+        )}
       </Field>
     </>
   );
