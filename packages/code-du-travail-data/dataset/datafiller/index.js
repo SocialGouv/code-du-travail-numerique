@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const pLimit = require("p-limit");
 
-const fetchAll = require("./fetch");
+const fetchRequetes = require("./fetch-requetes");
 const elastic = require("./elastic");
 
 const limit = pLimit(5);
@@ -19,7 +19,7 @@ const toEsResults = results =>
   );
 
 const main = async () => {
-  const data = await fetchAll().then(toEsResults);
+  const data = await fetchRequetes().then(toEsResults);
   if (process.argv.length === 3) {
     const outPath = path.join(__dirname, process.argv[2]);
     fs.writeFile(outPath, JSON.stringify(data, null, 2), () => {

@@ -4,20 +4,25 @@ import { logger } from "./logger";
 import { documentMapping } from "./document.mapping";
 import { annuaireMapping } from "./annuaire.mapping";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
+import { themesMapping } from "./themes.mapping";
 import { version, createIndex, indexDocumentsBatched } from "./es_client.utils";
 import { cdtnDocumentsGen, cdtnCcnGen } from "./populate";
 
 import annuaire from "../dataset/annuaire/annuaire.data.json";
 import conventionList from "@socialgouv/kali-data/data/index.json";
+import themes from "../dataset/themes/themes.data.json";
 
 const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
-const CDTN_ANNUAIRE_NAME =
+const ANNUAIRE_INDEX_NAME =
   process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_annuaire";
 
 const CDTN_CCN_NAME =
   process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
+
+const THEMES_INDEX_NAME =
+  process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_themes";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
@@ -63,13 +68,27 @@ async function main() {
   // Indexing Annuaire data
   await createIndex({
     client,
-    indexName: CDTN_ANNUAIRE_NAME,
+    indexName: ANNUAIRE_INDEX_NAME,
     mappings: annuaireMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: CDTN_ANNUAIRE_NAME,
-    documents: annuaire
+    indexName: ANNUAIRE_INDEX_NAME,
+    documents: annuaire,
+    size: 500
+  });
+
+  // Indexing Themes data
+  await createIndex({
+    client,
+    indexName: THEMES_INDEX_NAME,
+    mappings: themesMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: THEMES_INDEX_NAME,
+    documents: themes,
+    size: 500
   });
 }
 

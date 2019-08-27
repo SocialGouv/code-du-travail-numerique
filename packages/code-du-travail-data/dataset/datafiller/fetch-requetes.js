@@ -1,11 +1,13 @@
 const fetch = require("node-fetch");
 
 /*
- fetch raw datafiller data, filter and sort properly
+ fetch raw datafiller requetes data, filter and sort properly
 */
 
 const DATAFILLER_URL =
-  "https://datafiller.num.social.gouv.fr/kinto/v1/buckets/datasets/collections/requetes/records";
+  process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
+
+const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records`;
 
 // for 2nd sort order after relevance
 // higher is better
@@ -56,7 +58,7 @@ const getVariants = row => {
 // import only valid data from datafiller
 // == has more than one ref
 const fetchAll = () =>
-  fetch(DATAFILLER_URL)
+  fetch(RECORDS_URL)
     .then(res => res.json())
     .then(json => json.data)
     .then(data => data.filter(item => item.refs && item.refs.length > 1))
