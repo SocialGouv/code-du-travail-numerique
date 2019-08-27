@@ -46,35 +46,4 @@ router.get("/themes/:slug", async ctx => {
   ctx.body = response.body;
 });
 
-/**
- * Return the items that match a given slug
- *
- * @example
- * http://localhost:1337/api/v1/themes/:slug/items
- *
- * @returns {Object} An object containing the matching theme and its related documents.
- */
-
-router.get("/themes/:slug/items", async ctx => {
-  const { slug } = ctx.params;
-  const theme = getTheme(slug);
-  if (!theme) {
-    ctx.throw(404, `there is no theme that match ${slug}`);
-  }
-  const body = getSearchByThemeBody({ slug });
-  const {
-    body: { hits }
-  } = await elasticsearchClient.search({ index, body });
-
-  if (hits.total.value === 0) {
-    ctx.throw(204, `there is no documents associated to the theme ${slug}`);
-  }
-  ctx.body = {
-    ...theme,
-    children: getChildren(slug),
-    breadcrumbs: getBreadcrumbs(slug),
-    documents: hits.hits
-  };
-});
-
 module.exports = router;
