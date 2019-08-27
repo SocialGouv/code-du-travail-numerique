@@ -5631,6 +5631,11 @@ domexception@^1.0.1:
   dependencies:
     webidl-conversions "^4.0.2"
 
+dompurify@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-1.0.11.tgz#fe0f4a40d147f7cebbe31a50a1357539cfc1eb4d"
+  integrity sha512-XywCTXZtc/qCX3iprD1pIklRVk/uhl8BKpkTxr+ZyMVUzSUg7wkQXRBp/euJ5J5moa1QvfpvaPQVP71z1O59dQ==
+
 domutils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.npmjs.org/domutils/-/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
@@ -12090,11 +12095,12 @@ react-live@2.0.1:
     react-simple-code-editor "^0.9.0"
     unescape "^0.2.0"
 
-react-mathjax-preview@^0.1.10:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/react-mathjax-preview/-/react-mathjax-preview-0.1.10.tgz#40c625d39b193c3cff665087b48e225f4f0b2a04"
-  integrity sha1-QMYl05sZPDz/ZlCHtI4iX08LKgQ=
+react-mathjax-preview@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/react-mathjax-preview/-/react-mathjax-preview-0.1.13.tgz#4d37dd24e6f24682417f396fab3dbdf983c8a100"
+  integrity sha512-cLUT90IEGWRCvu2PAIG6o20O7kOW0dVQ8zF5I2pPkIi6/sL4KJxw9LkbVCW+4AzGjYd6fP+XOaS+5zizcME7/A==
   dependencies:
+    dompurify "^1.0.11"
     load-script "^1.0.0"
 
 react-perfect-scrollbar@^1.5.0:
