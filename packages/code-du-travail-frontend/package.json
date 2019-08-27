@@ -37,7 +37,7 @@
     "react-dom": "^16.9.0",
     "react-feather": "2.0.3",
     "react-final-form": "^6.3.0",
-    "react-final-form-arrays": "^2.0.3",
+    "react-final-form-arrays": "^3.1.1",
     "react-final-form-listeners": "^1.0.2",
     "react-github-fork-ribbon": "0.6.0",
     "react-mathjax-preview": "^0.1.10",
