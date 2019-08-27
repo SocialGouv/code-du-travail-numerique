@@ -7,9 +7,9 @@ const {
 } = require("@cdt/data...themes/query");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchByThemeBody = require("../search/searchByTheme.elastic");
+const { getRootThemesQuery, getThemeQuery } = require("./search.elastic.js");
 
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const index = "cdtn_themes";
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -21,12 +21,12 @@ const router = new Router({ prefix: API_BASE_URL });
  *
  * @returns {Object} An object containing the matching theme .
  */
-router.get("/themes", ctx => {
-  ctx.body = {
-    label: "Thèmes",
-    children: getChildren(null)
-  };
+router.get("/themes", async ctx => {
+  const body = getRootThemesQuery({});
+  const response = await elasticsearchClient.search({ index, body });
+  ctx.body = response.body;
 });
+
 /**
  * Return the theme that match a given slug
  *
@@ -36,18 +36,14 @@ router.get("/themes", ctx => {
  * @returns {Object} An object containing the matching theme .
  */
 
-router.get("/themes/:slug", ctx => {
+router.get("/themes/:slug", async ctx => {
   const { slug } = ctx.params;
-  const theme = getTheme(slug);
-  if (!theme) {
+  const body = getThemeQuery({ slug });
+  const response = await elasticsearchClient.search({ index, body });
+  if (!response) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
-
-  ctx.body = {
-    ...theme,
-    children: getChildren(slug),
-    breadcrumbs: getBreadcrumbs(slug)
-  };
+  ctx.body = response.body;
 });
 
 /**
