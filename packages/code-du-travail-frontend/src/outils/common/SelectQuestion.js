@@ -69,6 +69,7 @@ const Select = styled.select`
   margin-right: ${spacing.interComponent};
   flex: 1 1 70%;
   min-width: 400px;
+  max-width: 100%;
 `;
 
 const Wrapper = styled.div`

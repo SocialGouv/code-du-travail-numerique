@@ -73,7 +73,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
     En cas de démission, la convention collective
      
     <strong>
-      chimie industrie
+      Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
        (
       0044
       )
@@ -93,7 +93,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
     , 
     dans le groupe 
     <em>
-      V
+      IV
     </em>
   </p>
   <div
@@ -146,6 +146,14 @@ exports[`<StepResult /> should render with no cc 1`] = `
 <div>
   <p>
     Le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu’une convention collective ou un accord d’entreprise, voire un usage, en prévoit les durées et modalités.
+  </p>
+  <p>
+    <a
+      href="https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+      title="Consultez l’article l 1237-1"
+    >
+      Article L 1237-1
+    </a>
   </p>
 </div>
 `;

@@ -55,7 +55,6 @@ function StepInformations({ form }) {
           figurer. Cette information se trouve souvent dans l’en-tête.
         </Alert>
       )}
-      {<pre>{JSON.stringify(values, 0, 2)}</pre>}
     </>
   );
 }

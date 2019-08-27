@@ -8,14 +8,14 @@ import {
 
 jest.mock("@cdt/data...preavis-demission/data.json", () => [
   {
-    criteria: { foo: "baz", bar: "baz", branche: { idcc: "10", label: "dix" } }
+    criteria: { foo: "2| baz", bar: "baz", branche: { id: "10", label: "dix" } }
   },
-  { criteria: { foo: "foo", branche: { idcc: "10", label: "dix" } } },
+  { criteria: { foo: "1| foo", branche: { id: "10", label: "dix" } } },
   {
     criteria: {
-      foo: "bar",
+      foo: "3| bar",
       bar: "foo",
-      branche: { idcc: "20", label: "vingt" }
+      branche: { id: "20", label: "vingt" }
     }
   }
 ]);
@@ -28,25 +28,25 @@ describe("situations", () => {
     it("should return no situation", () => {
       expect(filterSituations({ foo: "bim" }).length).toBe(0);
     });
-    it("should return only situation that match branche:10", () => {
+    it("should return only situation that match id:10", () => {
       expect(filterSituations({ branche: "10" })).toEqual([
         {
           criteria: {
-            foo: "baz",
+            foo: "2| baz",
             bar: "baz",
-            branche: { idcc: "10", label: "dix" }
+            branche: { id: "10", label: "dix" }
           }
         },
-        { criteria: { foo: "foo", branche: { idcc: "10", label: "dix" } } }
+        { criteria: { foo: "1| foo", branche: { id: "10", label: "dix" } } }
       ]);
     });
     it("should render only situation that match foo and branch", () => {
-      expect(filterSituations({ foo: "baz", branche: "10" })).toEqual([
+      expect(filterSituations({ foo: "2| baz", branche: "10" })).toEqual([
         {
           criteria: {
-            foo: "baz",
+            foo: "2| baz",
             bar: "baz",
-            branche: { idcc: "10", label: "dix" }
+            branche: { id: "10", label: "dix" }
           }
         }
       ]);
@@ -68,17 +68,17 @@ describe("situations", () => {
     it("should return options for a question key", () => {
       const situations = filterSituations();
       expect(getOptions(situations, "foo")).toEqual([
-        ["bar", "bar"],
-        ["baz", "baz"],
-        ["foo", "foo"]
+        ["1| foo", "foo"],
+        ["2| baz", "baz"],
+        ["3| bar", "bar"]
       ]);
     });
     it("should return options for a question key, given a situation", () => {
       const situations = filterSituations({ branche: "10" });
 
       expect(getOptions(situations, "foo")).toEqual([
-        ["baz", "baz"],
-        ["foo", "foo"]
+        ["1| foo", "foo"],
+        ["2| baz", "baz"]
       ]);
     });
   });
@@ -88,19 +88,13 @@ describe("situations", () => {
     });
     it("should return a tuple array of questions key and questions option for branche", () => {
       expect(getPastQuestions({ branche: "10" })).toEqual([
-        [
-          "branche",
-          [["10", "dix"], ["20", "vingt"], ["0000", "Je ne sais pas"]]
-        ]
+        ["branche", [["10", "dix"], ["20", "vingt"]]]
       ]);
     });
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
-      expect(getPastQuestions({ branche: "10", foo: "bar" })).toEqual([
-        [
-          "branche",
-          [["10", "dix"], ["20", "vingt"], ["0000", "Je ne sais pas"]]
-        ],
-        ["foo", [["baz", "baz"], ["foo", "foo"]]]
+      expect(getPastQuestions({ branche: "10", foo: "2| baz" })).toEqual([
+        ["branche", [["10", "dix"], ["20", "vingt"]]],
+        ["foo", [["1| foo", "foo"], ["2| baz", "baz"]]]
       ]);
     });
   });

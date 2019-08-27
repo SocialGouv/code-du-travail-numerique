@@ -5,8 +5,8 @@ describe("<StepResult />", () => {
   it("should render CC answer", () => {
     const { container } = renderForm(StepResult, {
       branche: "0044",
-      catégorie: "3 Ingénieurs, Cadres",
-      groupe: "V"
+      catégorie: "16| Ingénieurs, Cadres",
+      groupe: "2| IV"
     });
     expect(container).toMatchSnapshot();
   });

@@ -2,1358 +2,1127 @@
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0000",
+        "label": "Je ne sais pas"
+      }
+    },
+    "type": "préavis de démission",
+    "answer": "Le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal conventionnel, un accord d'entreprise voire un usage en prévoit les durées et modalités. ",
+    "ref": "Article L 1237-1",
+    "refUrl": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000006901174&cidTexte=LEGITEXT000006072050&dateTexte=20080501"
+  },
+  {
+    "criteria": {
+      "branche": {
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "1| Ouvriers",
+      "coefficient": "1| inférieur à 160"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "15 jours",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1 Ouvriers, Employés",
-      "ancienneté": "<6 mois"
+      "catégorie": "1| Ouvriers",
+      "coefficient": "2| entre 160 (inclus) et 190"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 semaine",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1 Ouvriers, Employés",
-      "ancienneté": "6 mois à 24 mois"
+      "catégorie": "1| Ouvriers",
+      "coefficient": "3| supérieur à 190 (inclus)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 semaines",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1 Ouvriers, Employés",
-      "ancienneté": ">24 mois"
+      "catégorie": "15| Agents de maîtrise",
+      "groupe": "2| IV",
+      "coefficient": "4| inférieur à 275"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 semaines",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "2 ETAM",
-      "ancienneté": "<6 mois"
+      "catégorie": "15| Agents de maîtrise",
+      "groupe": "2| IV",
+      "coefficient": "5| supérieur à 275 (inclus)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 semaine",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "2 ETAM",
-      "ancienneté": "6 mois à 24 mois"
+      "catégorie": "16| Ingénieurs, Cadres",
+      "groupe": "2| IV"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 semaines",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0843",
-        "label": "boulangerie patisserie entreprises artisanales"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "2 ETAM",
-      "ancienneté": ">24 mois"
+      "catégorie": "4| Employés",
+      "coefficient": "1| inférieur à 160"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 semaines",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "15 jours",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "0 Ouvriers",
-      "coefficient": "coefficient < 160"
+      "catégorie": "4| Employés",
+      "coefficient": "2| entre 160 (inclus) et 190"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "15 jours",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "0 Ouvriers",
-      "coefficient": "190 > coefficient >= 160"
+      "catégorie": "4| Employés",
+      "coefficient": "3| supérieur à 190 (inclus)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "0 Ouvriers",
-      "coefficient": ">=190"
+      "catégorie": "5| Techniciens",
+      "groupe": "1| de I à III",
+      "coefficient": "2| entre 160 (inclus) et 190"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1 Employés",
-      "coefficient": "coefficient < 160"
+      "catégorie": "5| Techniciens",
+      "groupe": "1| de I à III",
+      "coefficient": "3| supérieur à 190 (inclus)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "15 jours",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1 Employés",
-      "coefficient": "190 > coefficient >= 160"
+      "catégorie": "5| Techniciens",
+      "groupe": "2| IV",
+      "coefficient": "4| inférieur à 275"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0044",
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1 Employés",
-      "coefficient": ">=190"
+      "catégorie": "5| Techniciens",
+      "groupe": "2| IV",
+      "coefficient": "5| supérieur à 275 (inclus)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "3 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0675",
+        "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
-      "catégorie": "1 Techniciens",
-      "groupe": "I à III",
-      "coefficient": "190 > coefficient >= 160"
+      "catégorie": "15| Agents de maîtrise"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 9 de l'avenant Maîtrise Convention collective nationale du 30 juin 1972",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0675",
+        "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
-      "catégorie": "1 Techniciens",
-      "groupe": "I à III",
-      "coefficient": ">=190"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 13 de l'avenant Cadres Convention collective nationale du 30 juin 1972\r\n",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752482&cidTexte=KALITEXT000005679774&idConvention=KALICONT000005635617&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0675",
+        "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
-      "catégorie": "1 Techniciens",
-      "groupe": "IV",
-      "coefficient": "<275"
+      "catégorie": "4| Employés",
+      "ancienneté": "3| de 1 mois à 6 mois "
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "15 jours",
+    "ref": "Article 38 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0675",
+        "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
-      "catégorie": "1 Techniciens",
-      "groupe": "IV",
-      "coefficient": ">=275"
+      "catégorie": "4| Employés",
+      "ancienneté": "2| plus de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 38 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "3 Agents de maîtrise",
-      "groupe": "IV",
-      "coefficient": "<275"
+      "catégorie": "14| ETAM",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "1 semaine",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "3 Agents de maîtrise",
-      "groupe": "IV",
-      "coefficient": ">=275"
+      "catégorie": "14| ETAM",
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": null,
-    "refCdt": null
+    "answer": "2 semaines",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0044",
-        "label": "chimie industrie"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "3 Ingénieurs, Cadres",
-      "groupe": "V"
+      "catégorie": "14| ETAM",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 semaines",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "<6 mois"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "8 jours",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "6 mois à 24 mois"
+      "catégorie": "6| Ouvriers, Employés",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "15 jours",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 semaine",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "1 Employés",
-      "ancienneté": ">24 mois"
+      "catégorie": "6| Ouvriers, Employés",
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 semaines",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "0843",
+        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "3 Agents de maîtrise",
-      "ancienneté": "<6 mois"
+      "catégorie": "6| Ouvriers, Employés",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "15 jours",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 semaines",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "1090",
+        "label": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981."
       },
-      "catégorie": "3 Agents de maîtrise",
-      "ancienneté": "6 mois à 24 mois"
+      "catégorie": "15| Agents de maîtrise",
+      "échelon": "3| de 17 à 19"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 4.10 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "1090",
+        "label": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981."
       },
-      "catégorie": "3 Agents de maîtrise",
-      "ancienneté": ">24 mois"
+      "catégorie": "15| Agents de maîtrise",
+      "échelon": "4| de 20 à 25"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 4.10 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "1090",
+        "label": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981."
       },
-      "catégorie": "4 Cadres",
-      "ancienneté": "<6 mois"
+      "catégorie": "19| Cadres",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 4.10 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "1090",
+        "label": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981."
       },
-      "catégorie": "4 Cadres",
-      "ancienneté": "6 mois à 24 mois"
+      "catégorie": "6| Ouvriers, Employés",
+      "échelon": "1| 1 et 2"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 semaines",
+    "ref": "Article 2.12 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1979",
-        "label": "hotels cafes restaurants (hcr)"
+        "id": "1090",
+        "label": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981."
       },
-      "catégorie": "4 Cadres",
-      "ancienneté": ">24 mois"
+      "catégorie": "6| Ouvriers, Employés",
+      "échelon": "2| de 3 à 12"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 2.12 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1147",
+        "label": "Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981"
       },
-      "catégorie": "3 Maîtrises",
-      "ancienneté": "<24 mois",
-      "coefficient": "200<355"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 25 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1147",
+        "label": "Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981"
       },
-      "catégorie": "3 Maîtrises",
-      "ancienneté": ">24 mois",
-      "coefficient": "200<355"
+      "catégorie": "3| Non-cadres",
+      "ancienneté": "2| plus de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "15 jours",
+    "ref": "Article 25 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1147",
+        "label": "Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981"
       },
-      "catégorie": "3 Maîtrises",
-      "ancienneté": "<24 mois",
-      "coefficient": "400<500"
+      "catégorie": "3| Non-cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 25 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1404",
+        "label": "Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012"
       },
-      "catégorie": "3 Maîtrises",
-      "ancienneté": ">24 mois",
-      "coefficient": "400<500"
+      "catégorie": "10| Ouvriers, Employés (niveaux I et II) "
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 3.41.0 de la convention collective ",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1404",
+        "label": "Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012"
       },
-      "catégorie": "3 Ingénieurs, Cadres"
+      "catégorie": "11| Ouvriers, Employés (niveau III)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 3.41.0 de la convention collective ",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1404",
+        "label": "Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012"
       },
-      "catégorie": "4 Chargés d'enquête intermittent",
-      "ancienneté": "<24 mois"
+      "catégorie": "18| Agents de maîtrise (niveau IV et V)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 3.41.0 de la convention collective ",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1486",
-        "label": "bureaux d'etudes techniques"
+        "id": "1404",
+        "label": "Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012"
       },
-      "catégorie": "4 Chargés d'enquête intermittent",
-      "ancienneté": ">24 mois"
+      "catégorie": "23| Cadres (niveau VI et plus) "
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": null,
-    "refCcUrl": null,
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 6.50 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356071&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1483",
+        "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
-      "catégorie": "0 Agents de propreté",
-      "ancienneté": "1 mois à 6 mois "
+      "catégorie": "15| Agents de maîtrise"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 jours",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 9 du Chapitre II de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1483",
+        "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
-      "catégorie": "0 Agents de propreté",
-      "ancienneté": "6 mois à 2 ans"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 semaine",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 9 du Chapitre II de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1483",
+        "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
-      "catégorie": "0 Agents de propreté",
-      "ancienneté": "plus de 2 ans"
+      "catégorie": "4| Employés",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 semaine",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 semaines",
+    "ref": "Article 14 du Chapitre Ier de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1483",
+        "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "1 mois à 2 ans"
+      "catégorie": "4| Employés",
+      "ancienneté": "2| plus de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 14 du Chapitre Ier de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "plus de 2 ans"
+      "catégorie": "16| Ingénieurs, Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "2 Techniciens et agents de maîtrise",
-      "ancienneté": "2 mois à 2 ans"
+      "catégorie": "17| Maîtrises",
+      "ancienneté": "7| moins de 2 ans",
+      "coefficient": "6| de 200 à 355"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "2 Techniciens et agents de maîtrise",
-      "ancienneté": "plus de 2 ans"
+      "catégorie": "17| Maîtrises",
+      "ancienneté": "8| plus de 2 ans",
+      "coefficient": "6| de 200 à 355"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3043",
-        "label": "proprete entreprises et services associes"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "17| Maîtrises",
+      "ancienneté": "7| moins de 2 ans",
+      "coefficient": "7| de 400 à 500"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 4.11.2 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1672",
-        "label": "assurances societes"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "1 Non-cadres (Classes 1 à 4)"
+      "catégorie": "17| Maîtrises",
+      "ancienneté": "8| plus de 2 ans",
+      "coefficient": "7| de 400 à 500"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 91 a) de la convention collective ",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1672",
-        "label": "assurances societes"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "2 Cadres (Classes 5 à 7)"
+      "catégorie": "20| Chargés d'enquête intermittent",
+      "ancienneté": "7| moins de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article II. 6 de l'accord relatif aux dispositions particulières \" Cadres \"",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=B48AED9DB5F1742E99768AF572DBFEF2.tpdjo13v_1?idSectionTA=KALISCTA000026688794&cidTexte=KALITEXT000005654666&idConvention=KALICONT000005635918",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1996",
-        "label": "pharmacie d'officine"
+        "id": "1486",
+        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "0 Non-cadres"
+      "catégorie": "20| Chargés d'enquête intermittent",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 20 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005829411&cidTexte=KALITEXT000005671152&dateTexte=20180607",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1996",
-        "label": "pharmacie d'officine"
+        "id": "1505",
+        "label": "Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988."
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "21| Agents de maîtrise (niveau V)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 6 de la convention collective nationale du 3 décembre 1997 relative aux dispositions particulières applicables aux cadres",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AEA06E7172B0964736B47818AC28E3F3.tpdila23v_2?idArticle=KALIARTI000005829442&cidTexte=KALITEXT000005671154&dateTexte=20170816",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 3.7 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1147",
-        "label": "cabinets medicaux"
+        "id": "1505",
+        "label": "Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988."
       },
-      "catégorie": "0 Non-cadres",
-      "ancienneté": "moins de 6 mois"
+      "catégorie": "23| Cadres (niveau VI) "
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "15 jours",
-    "refCc": "Article 25 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 3.7 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1147",
-        "label": "cabinets medicaux"
+        "id": "1505",
+        "label": "Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988."
       },
-      "catégorie": "0 Non-cadres",
-      "ancienneté": "au moins 6 mois"
+      "catégorie": "8| Ouvriers, Employés (niveaux I, II, III, IV)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 25 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 3.7 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1147",
-        "label": "cabinets medicaux"
+        "id": "1606",
+        "label": "Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  "
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "15| Agents de maîtrise"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 25 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005856089&cidTexte=KALITEXT000005681857&dateTexte=20121022",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 8 de l'annexe \"agents de maîtrise\" ",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0832656ABC6E21C910218E6299A686E0.tpdila23v_2?idArticle=KALIARTI000005870771&cidTexte=KALITEXT000005687528&dateTexte=19930629"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3127",
-        "label": "services a la personne entreprises"
+        "id": "1606",
+        "label": "Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  "
       },
-      "ancienneté": "6 mois à moins de 2 ans"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 8 de l'annexe \"cadres\" ",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005731919&cidTexte=KALITEXT000005687530&idConvention=KALICONT000005635871"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "3127",
-        "label": "services a la personne entreprises"
+        "id": "1606",
+        "label": "Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  "
       },
-      "ancienneté": "2 ans et plus"
+      "catégorie": "4| Employés"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 9.1 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000024633414&cidTexte=KALITEXT000005687520&idConvention=KALICONT000005635871&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "2120",
-        "label": "banque"
+        "id": "1672",
+        "label": "Convention collective nationale des sociétés d'assurances du 27 mai 1992"
       },
-      "catégorie": "1 Techniciens"
+      "catégorie": "13| Cadres (Classes à 7)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 30 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article II. 6 de l'accord relatif aux dispositions particulières \" Cadres \"",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=B48AED9DB5F1742E99768AF572DBFEF2.tpdjo13v_1?idSectionTA=KALISCTA000026688794&cidTexte=KALITEXT000005654666&idConvention=KALICONT000005635918"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "2120",
-        "label": "banque"
+        "id": "1672",
+        "label": "Convention collective nationale des sociétés d'assurances du 27 mai 1992"
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "9| Non-cadres (Classes à 4)"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 30 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 91 a) de la convention collective ",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=E0FA42F1D98C3A5E305111F72B4DD513.tpdjo06v_1?idSectionTA=KALISCTA000005765066&cidTexte=KALITEXT000005654646&idConvention=KALICONT000005635918"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1606",
-        "label": "bricolage vente au detail en libre-service"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "1 Employés"
+      "catégorie": "15| Agents de maîtrise",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 9.1 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000024633414&cidTexte=KALITEXT000005687520&idConvention=KALICONT000005635871&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "15 jours",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1606",
-        "label": "bricolage vente au detail en libre-service"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "3 Agents de maîtrise"
+      "catégorie": "15| Agents de maîtrise",
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 8 de l'annexe \"agents de maîtrise\" ",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=0832656ABC6E21C910218E6299A686E0.tpdila23v_2?idArticle=KALIARTI000005870771&cidTexte=KALITEXT000005687528&dateTexte=19930629",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1606",
-        "label": "bricolage vente au detail en libre-service"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "15| Agents de maîtrise",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 8 de l'annexe \"cadres\" ",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005731919&cidTexte=KALITEXT000005687530&idConvention=KALICONT000005635871",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "2511",
-        "label": "sport"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "1 Ouvriers, Employés"
+      "catégorie": "19| Cadres",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 4.4.1. de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "2511",
-        "label": "sport"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "1 Techniciens et agents de maîtrise"
+      "catégorie": "19| Cadres",
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 4.4.1. de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "2511",
-        "label": "sport"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "19| Cadres",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 4.4.1. de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0675",
-        "label": "habillement commerce succursales"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "plus de 1 mois et moins de 6 mois"
+      "catégorie": "4| Employés",
+      "ancienneté": "1| moins de 6 mois"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "15 jours",
-    "refCc": "Article 38 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "8 jours",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0675",
-        "label": "habillement commerce succursales"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "de plus de 6 mois"
+      "catégorie": "4| Employés",
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 38 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=087F78E34949639D3C28EC165BE5AB3A.tplgfr32s_2?idSectionTA=KALISCTA000005723965&cidTexte=KALITEXT000005679762&idConvention=KALICONT000005635617",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "15 jours",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0675",
-        "label": "habillement commerce succursales"
+        "id": "1979",
+        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "3 Agent de maîtrise"
+      "catégorie": "4| Employés",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 9 de l'avenant Maîtrise Convention collective nationale du 30 juin 1972",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752473&cidTexte=KALITEXT000005679768&idConvention=KALICONT000005635617&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": null,
+    "refUrl": null
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "0675",
-        "label": "habillement commerce succursales"
+        "id": "1996",
+        "label": "Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998)."
       },
-      "catégorie": "4 Cadre"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 13 de l'avenant Cadres Convention collective nationale du 30 juin 1972\r\n",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005752482&cidTexte=KALITEXT000005679774&idConvention=KALICONT000005635617&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 6 de la convention collective nationale du 3 décembre 1997 relative aux dispositions particulières applicables aux cadres",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AEA06E7172B0964736B47818AC28E3F3.tpdila23v_2?idArticle=KALIARTI000005829442&cidTexte=KALITEXT000005671154&dateTexte=20170816"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1090",
-        "label": "automobile services"
+        "id": "1996",
+        "label": "Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998)."
       },
-      "catégorie": "1 Ouvriers, Employés",
-      "echelon": "1 et 2"
+      "catégorie": "3| Non-cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 semaines",
-    "refCc": "Article 2.12 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 20 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005829411&cidTexte=KALITEXT000005671152&dateTexte=20180607"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1090",
-        "label": "automobile services"
+        "id": "2120",
+        "label": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004."
       },
-      "catégorie": "1 Ouvriers, Employés",
-      "echelon": "3 à 12"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 2.12 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865064&categorieLien=cid",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 30 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1090",
-        "label": "automobile services"
+        "id": "2120",
+        "label": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004."
       },
-      "catégorie": "3 Agents de maîtrise",
-      "echelon": "17 à 19"
+      "catégorie": "5| Techniciens"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 4.10 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 30 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000005758006&cidTexte=KALITEXT000005678018&idConvention=KALICONT000005635780&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1090",
-        "label": "automobile services"
+        "id": "2511",
+        "label": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006"
       },
-      "catégorie": "3 Agents de maîtrise",
-      "echelon": "20 à 25"
+      "catégorie": "12| Techniciens et agents de maîtrise"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 4.10 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 4.4.1. de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1090",
-        "label": "automobile services"
+        "id": "2511",
+        "label": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006"
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 4.10 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?cidTexte=KALITEXT000005685156&idArticle=KALIARTI000005865234&categorieLien=cid",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 4.4.1. de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1483",
-        "label": "habillement articles textiles commerce de detail"
+        "id": "2511",
+        "label": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006"
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "moins de 6 mois"
+      "catégorie": "6| Ouvriers, Employés"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 semaines",
-    "refCc": "Article 14 du Chapitre Ier de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 4.4.1. de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000021063914&cidTexte=KALITEXT000017577657&dateTexte=20140411"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1483",
-        "label": "habillement articles textiles commerce de detail"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "1 Employés",
-      "ancienneté": "de plus de 6 mois"
+      "catégorie": "12| Techniciens et agents de maîtrise",
+      "ancienneté": "5| de 2 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 14 du Chapitre Ier de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761249&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594&dateTexte=29990101",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1483",
-        "label": "habillement articles textiles commerce de detail"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "3 Agents de maîtrise"
+      "catégorie": "12| Techniciens et agents de maîtrise",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 9 du Chapitre II de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1483",
-        "label": "habillement articles textiles commerce de detail"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "4 Cadres"
+      "catégorie": "19| Cadres"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 9 du Chapitre II de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005750625&cidTexte=KALITEXT000005675211&idConvention=KALICONT000005635594",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "3 mois",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1505",
-        "label": "fruits legumes epicerie produits laitiers"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "1 Ouvriers, Employés (niveaux I, II, III, IV)"
+      "catégorie": "2| Agents de propreté",
+      "ancienneté": "3| de 1 mois à 6 mois "
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 3.7 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 jours",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1505",
-        "label": "fruits legumes epicerie produits laitiers"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "4 Agents de maîtrise (niveau V)"
+      "catégorie": "2| Agents de propreté",
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 3.7 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 semaine",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1505",
-        "label": "fruits legumes epicerie produits laitiers"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "5 Cadres (niveau VI) "
+      "catégorie": "2| Agents de propreté",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 3.7 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=CECFB7040D4AD808574E3CBBFE8B1E43.tplgfr34s_1?idSectionTA=KALISCTA000005757025&cidTexte=KALITEXT000005689370&idConvention=KALICONT000005635421",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 semaine",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1404",
-        "label": "tracteurs materiels agricoles commerce reparation"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "1 Ouvriers, Employés (niveaux I et II) "
+      "catégorie": "4| Employés",
+      "ancienneté": "4| de 1 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "1 mois",
-    "refCc": "Article 3.41.0 de la convention collective ",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1404",
-        "label": "tracteurs materiels agricoles commerce reparation"
+        "id": "3043",
+        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "2 Ouvriers, Employés (niveau III)"
+      "catégorie": "4| Employés",
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "2 mois",
-    "refCc": "Article 3.41.0 de la convention collective ",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 4.11.2 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1404",
-        "label": "tracteurs materiels agricoles commerce reparation"
+        "id": "3127",
+        "label": "Convention collective nationale des entreprises de services à la personne du 20 septembre 2012"
       },
-      "catégorie": "3 Agents de maîtrise (niveau IV et V)"
+      "ancienneté": "6| de 6 mois à 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 3.41.0 de la convention collective ",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356039&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "1 mois",
+    "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
   },
   {
     "criteria": {
       "branche": {
-        "idcc": "1404",
-        "label": "tracteurs materiels agricoles commerce reparation"
+        "id": "3127",
+        "label": "Convention collective nationale des entreprises de services à la personne du 20 septembre 2012"
       },
-      "catégorie": "5 Cadres (niveau VI et plus) "
+      "ancienneté": "8| plus de 2 ans"
     },
-    "theme": "droit au préavis - durée du préavis",
     "type": "préavis de démission",
-    "answerCc": "3 mois",
-    "refCc": "Article 6.50 de la convention collective",
-    "refCcUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=AA399426F344A1C9D191D4546FE00E59.tplgfr41s_1?idArticle=KALIARTI000026356071&cidTexte=KALITEXT000026355879&dateTexte=29990101&categorieLien=id",
-    "answerCdt": "le code du travail ne prévoit pas une durée précise du préavis de démission. Il prévoit qu'un texte du niveau légal  conventionnel, un accord d'entreprise voire un usage en prévoitles durées et modalités. ",
-    "refCdt": "Article L 1237-1"
+    "answer": "2 mois",
+    "ref": "Article 2 de la section 1 du Chapitre 4 de la Partie II de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do;jsessionid=3429E84F009E9522894D791FC4F0085E.tplgfr25s_1?idSectionTA=KALISCTA000027029046&cidTexte=KALITEXT000026943196&idConvention=KALICONT000027084096&dateTexte=29990101"
   }
 ]

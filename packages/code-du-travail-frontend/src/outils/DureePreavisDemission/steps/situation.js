@@ -1,9 +1,11 @@
 import React from "react";
 import data from "@cdt/data...preavis-demission/data.json";
 
+export const ccCriterionName = "branche";
+
 // humanize questions
 export const questions = {
-  branche: "Quelle est votre convention collective ?",
+  [ccCriterionName]: "Quelle est votre convention collective ?",
   catégorie: "Quelle est la catégorie professionnelle du salarié ?",
   ancienneté: "Quelle est l'ancienneté du salarié ?",
   groupe: "Quel est le groupe du salarié ?",
@@ -12,7 +14,7 @@ export const questions = {
 };
 
 export const labels = {
-  branche: "convention collective",
+  [ccCriterionName]: "convention collective",
   catégorie: "catégorie professionnelle",
   ancienneté: "ancienneté",
   groupe: "groupe",
@@ -20,8 +22,8 @@ export const labels = {
   echelon: "échelon"
 };
 
-function getRecapLabel([key, value]) {
-  const displayedValue = `${value}`.replace(/[0-9]+ /, "");
+export function getRecapLabel([key, value]) {
+  const displayedValue = `${value}`.replace(/[0-9]+\|/, "").trim();
   switch (key) {
     case "catégorie":
       return (
@@ -64,21 +66,20 @@ function getCCList() {
     data.reduce(
       (state, data) => ({
         ...state,
-        [data.criteria.branche.idcc]: data.criteria.branche.label
+        [data.criteria[ccCriterionName].id]:
+          data.criteria[ccCriterionName].label
       }),
       {}
     )
-  )
-    .sort(([, a], [, b]) => a.localeCompare(b))
-    .concat([["0000", "Je ne sais pas"]]);
+  ).sort(([, a], [, b]) => a.localeCompare(b));
   return o;
 }
 
 const createValuesMatcher = values => ({ criteria }) =>
   Object.entries(values).every(([key, value]) => {
     // special case for branche
-    if (key === "branche") {
-      return criteria[key].idcc === value;
+    if (key === ccCriterionName) {
+      return criteria[key].id === value;
     }
     return criteria[key] === value;
   });
@@ -103,9 +104,9 @@ export function getNextQuestionKey(possibleSituations, values = {}) {
   const [criterion] = Object.entries(dupCriteria).sort(
     ([critA, countA], [critB, countB]) => {
       if (countA === countB) {
-        if (critA === "branche") {
+        if (critA === ccCriterionName) {
           return -1;
-        } else if (critB === "branche") {
+        } else if (critB === ccCriterionName) {
           return 1;
         }
         return critB.localeCompare(critA);
@@ -120,7 +121,7 @@ export function getNextQuestionKey(possibleSituations, values = {}) {
 }
 
 export function getOptions(possibleSituations, nextQuestionKey) {
-  if (nextQuestionKey === "branche") {
+  if (nextQuestionKey === ccCriterionName) {
     return getCCList();
   }
   const dupValues = possibleSituations.map(
@@ -128,21 +129,25 @@ export function getOptions(possibleSituations, nextQuestionKey) {
   );
   return [...new Set(dupValues)]
     .filter(Boolean)
-    .sort()
-    .map(a => [a, a.replace(/[0-9]+ /, "")]);
+    .sort((a, b) => {
+      const [, numA] = a.match(/([0-9]+)\|/) || [];
+      const [, numB] = b.match(/([0-9]+)\|/) || [];
+      return numA && numB ? numA - numB : a.localeCompare(b);
+    })
+    .map(a => [a, a.replace(/[0-9]+\|/, "").trim()]);
 }
 
 export function getPastQuestions(values) {
   const questions = {};
   const answers = [];
-  const situations = filterSituations(questions);
+  let situations = filterSituations(questions);
   let questionKey = getNextQuestionKey(situations, questions);
 
   while (Object.prototype.hasOwnProperty.call(values, questionKey)) {
     questions[questionKey] = values[questionKey];
     answers.push([questionKey, getOptions(situations, questionKey)]);
 
-    const situations = filterSituations(questions);
+    situations = filterSituations(questions);
     questionKey = getNextQuestionKey(situations, questions);
   }
   return answers;
@@ -150,7 +155,7 @@ export function getPastQuestions(values) {
 
 export function recapSituation(criteria) {
   return Object.entries(criteria)
-    .filter(([key]) => key !== "branche")
+    .filter(([key]) => key !== ccCriterionName)
     .reduce(
       (state, item) =>
         state ? (

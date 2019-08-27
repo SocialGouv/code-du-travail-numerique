@@ -28,6 +28,7 @@ exports[`<StepInformations /> should render 1`] = `
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
   min-width: 400px;
+  max-width: 100%;
 }
 
 .c1 {
@@ -61,89 +62,89 @@ exports[`<StepInformations /> should render 1`] = `
         ...
       </option>
       <option
-        value="1672"
-      >
-        assurances societes
-      </option>
-      <option
-        value="1090"
-      >
-        automobile services
-      </option>
-      <option
         value="2120"
       >
-        banque
+        Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
       </option>
       <option
         value="0843"
       >
-        boulangerie patisserie entreprises artisanales
-      </option>
-      <option
-        value="1606"
-      >
-        bricolage vente au detail en libre-service
-      </option>
-      <option
-        value="1486"
-      >
-        bureaux d'etudes techniques
-      </option>
-      <option
-        value="1147"
-      >
-        cabinets medicaux
-      </option>
-      <option
-        value="0044"
-      >
-        chimie industrie
-      </option>
-      <option
-        value="1505"
-      >
-        fruits legumes epicerie produits laitiers
-      </option>
-      <option
-        value="1483"
-      >
-        habillement articles textiles commerce de detail
-      </option>
-      <option
-        value="0675"
-      >
-        habillement commerce succursales
-      </option>
-      <option
-        value="1979"
-      >
-        hotels cafes restaurants (hcr)
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.
       </option>
       <option
         value="1996"
       >
-        pharmacie d'officine
+        Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
       </option>
       <option
         value="3043"
       >
-        proprete entreprises et services associes
+        Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011
       </option>
       <option
         value="3127"
       >
-        services a la personne entreprises
+        Convention collective nationale des entreprises de services à la personne du 20 septembre 2012
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+      </option>
+      <option
+        value="0675"
+      >
+        Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).
+      </option>
+      <option
+        value="1672"
+      >
+        Convention collective nationale des sociétés d'assurances du 27 mai 1992
+      </option>
+      <option
+        value="1606"
+      >
+        Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  
+      </option>
+      <option
+        value="1483"
+      >
+        Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+      </option>
+      <option
+        value="1505"
+      >
+        Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+      </option>
+      <option
+        value="1090"
+      >
+        Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.
+      </option>
+      <option
+        value="1147"
+      >
+        Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981
       </option>
       <option
         value="2511"
       >
-        sport
+        Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006
       </option>
       <option
         value="1404"
       >
-        tracteurs materiels agricoles commerce reparation
+        Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012
       </option>
       <option
         value="0000"
@@ -183,6 +184,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
   min-width: 400px;
+  max-width: 100%;
 }
 
 .c1 {
@@ -216,89 +218,89 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="1672"
-      >
-        assurances societes
-      </option>
-      <option
-        value="1090"
-      >
-        automobile services
-      </option>
-      <option
         value="2120"
       >
-        banque
+        Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
       </option>
       <option
         value="0843"
       >
-        boulangerie patisserie entreprises artisanales
-      </option>
-      <option
-        value="1606"
-      >
-        bricolage vente au detail en libre-service
-      </option>
-      <option
-        value="1486"
-      >
-        bureaux d'etudes techniques
-      </option>
-      <option
-        value="1147"
-      >
-        cabinets medicaux
-      </option>
-      <option
-        value="0044"
-      >
-        chimie industrie
-      </option>
-      <option
-        value="1505"
-      >
-        fruits legumes epicerie produits laitiers
-      </option>
-      <option
-        value="1483"
-      >
-        habillement articles textiles commerce de detail
-      </option>
-      <option
-        value="0675"
-      >
-        habillement commerce succursales
-      </option>
-      <option
-        value="1979"
-      >
-        hotels cafes restaurants (hcr)
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.
       </option>
       <option
         value="1996"
       >
-        pharmacie d'officine
+        Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
       </option>
       <option
         value="3043"
       >
-        proprete entreprises et services associes
+        Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011
       </option>
       <option
         value="3127"
       >
-        services a la personne entreprises
+        Convention collective nationale des entreprises de services à la personne du 20 septembre 2012
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+      </option>
+      <option
+        value="0675"
+      >
+        Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).
+      </option>
+      <option
+        value="1672"
+      >
+        Convention collective nationale des sociétés d'assurances du 27 mai 1992
+      </option>
+      <option
+        value="1606"
+      >
+        Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  
+      </option>
+      <option
+        value="1483"
+      >
+        Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+      </option>
+      <option
+        value="1505"
+      >
+        Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+      </option>
+      <option
+        value="1090"
+      >
+        Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.
+      </option>
+      <option
+        value="1147"
+      >
+        Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981
       </option>
       <option
         value="2511"
       >
-        sport
+        Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006
       </option>
       <option
         value="1404"
       >
-        tracteurs materiels agricoles commerce reparation
+        Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012
       </option>
       <option
         value="0000"
@@ -328,27 +330,27 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="0 Ouvriers"
+        value="1| Ouvriers"
       >
         Ouvriers
       </option>
       <option
-        value="1 Employés"
+        value="4| Employés"
       >
         Employés
       </option>
       <option
-        value="1 Techniciens"
+        value="5| Techniciens"
       >
         Techniciens
       </option>
       <option
-        value="3 Agents de maîtrise"
+        value="15| Agents de maîtrise"
       >
         Agents de maîtrise
       </option>
       <option
-        value="3 Ingénieurs, Cadres"
+        value="16| Ingénieurs, Cadres"
       >
         Ingénieurs, Cadres
       </option>
@@ -403,6 +405,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
   -ms-flex: 1 1 70%;
   flex: 1 1 70%;
   min-width: 400px;
+  max-width: 100%;
 }
 
 .c1 {
@@ -436,89 +439,89 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="1672"
-      >
-        assurances societes
-      </option>
-      <option
-        value="1090"
-      >
-        automobile services
-      </option>
-      <option
         value="2120"
       >
-        banque
+        Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
       </option>
       <option
         value="0843"
       >
-        boulangerie patisserie entreprises artisanales
-      </option>
-      <option
-        value="1606"
-      >
-        bricolage vente au detail en libre-service
-      </option>
-      <option
-        value="1486"
-      >
-        bureaux d'etudes techniques
-      </option>
-      <option
-        value="1147"
-      >
-        cabinets medicaux
-      </option>
-      <option
-        value="0044"
-      >
-        chimie industrie
-      </option>
-      <option
-        value="1505"
-      >
-        fruits legumes epicerie produits laitiers
-      </option>
-      <option
-        value="1483"
-      >
-        habillement articles textiles commerce de detail
-      </option>
-      <option
-        value="0675"
-      >
-        habillement commerce succursales
-      </option>
-      <option
-        value="1979"
-      >
-        hotels cafes restaurants (hcr)
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.
       </option>
       <option
         value="1996"
       >
-        pharmacie d'officine
+        Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
       </option>
       <option
         value="3043"
       >
-        proprete entreprises et services associes
+        Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011
       </option>
       <option
         value="3127"
       >
-        services a la personne entreprises
+        Convention collective nationale des entreprises de services à la personne du 20 septembre 2012
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+      </option>
+      <option
+        value="0675"
+      >
+        Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).
+      </option>
+      <option
+        value="1672"
+      >
+        Convention collective nationale des sociétés d'assurances du 27 mai 1992
+      </option>
+      <option
+        value="1606"
+      >
+        Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  
+      </option>
+      <option
+        value="1483"
+      >
+        Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+      </option>
+      <option
+        value="1505"
+      >
+        Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+      </option>
+      <option
+        value="1090"
+      >
+        Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.
+      </option>
+      <option
+        value="1147"
+      >
+        Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981
       </option>
       <option
         value="2511"
       >
-        sport
+        Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006
       </option>
       <option
         value="1404"
       >
-        tracteurs materiels agricoles commerce reparation
+        Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012
       </option>
       <option
         value="0000"
@@ -548,27 +551,27 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="0 Ouvriers"
+        value="1| Ouvriers"
       >
         Ouvriers
       </option>
       <option
-        value="1 Employés"
+        value="4| Employés"
       >
         Employés
       </option>
       <option
-        value="1 Techniciens"
+        value="5| Techniciens"
       >
         Techniciens
       </option>
       <option
-        value="3 Agents de maîtrise"
+        value="15| Agents de maîtrise"
       >
         Agents de maîtrise
       </option>
       <option
-        value="3 Ingénieurs, Cadres"
+        value="16| Ingénieurs, Cadres"
       >
         Ingénieurs, Cadres
       </option>
@@ -595,19 +598,19 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="190 > coefficient >= 160"
+        value="1| inférieur à 160"
       >
-        &gt; coefficient &gt;= 160
+        inférieur à 160
       </option>
       <option
-        value=">=190"
+        value="2| entre 160 (inclus) et 190"
       >
-        &gt;=190
+        entre 160 (inclus) et 190
       </option>
       <option
-        value="coefficient < 160"
+        value="3| supérieur à 190 (inclus)"
       >
-        coefficient &lt; 160
+        supérieur à 190 (inclus)
       </option>
     </select>
   </div>
