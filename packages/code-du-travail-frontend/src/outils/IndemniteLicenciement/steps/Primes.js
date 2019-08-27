@@ -21,18 +21,15 @@ function StepPrimes({ form }) {
       <br />
       <Field name="hasPrimes">
         {({ input }) => (
-          <>
-            {input.value === true ? (
-              <Primes
-                name="primes"
-                onChange={primes => {
-                  if (primes.length === 0) {
-                    form.change("hasPrimes", false);
-                  }
-                }}
-              />
-            ) : null}
-          </>
+          <Primes
+            name="primes"
+            visible={input.value}
+            onChange={primes => {
+              if (primes.length === 0) {
+                form.change("hasPrimes", false);
+              }
+            }}
+          />
         )}
       </Field>
     </>
