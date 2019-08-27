@@ -24,7 +24,7 @@
   "dependencies": {
     "@reach/dialog": "^0.2.9",
     "polished": "^3.4.1",
-    "react-accessible-accordion": "^2.4.5",
+    "react-accessible-accordion": "^3.0.0",
     "react-feather": "2.0.3",
     "react-tabs": "^3.0.0"
   },
