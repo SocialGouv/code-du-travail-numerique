@@ -5,7 +5,7 @@ import { Field } from "react-final-form";
 import { theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input, SectionTitle, InlineError } from "../../common/stepStyles";
+import { Input, InlineError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 import { parse } from "../../common/date";
 import { YesNoQuestion } from "../components/YesNoQuestion";
@@ -73,43 +73,47 @@ function StepSalaires({ form }) {
                 }}
               />
               <Field name="hasSameSalaire">
-                {({ input }) =>
-                  input.value === true ? (
-                    <Field
-                      name="salaire"
-                      validate={isNumber}
-                      subscription={{
-                        value: true,
-                        error: true,
-                        touched: true,
-                        invalid: true
-                      }}
-                    >
-                      {({ input, meta: { touched, error, invalid } }) => (
-                        <>
-                          <p>
-                            Salaire mensuel brut (prendre en compte les primes
-                            et avantages en nature)
-                          </p>
-                          <CurrencyWrapper>
-                            <NumberInput
-                              {...input}
-                              size="10"
-                              type="number"
-                              invalid={touched && invalid}
-                            />
-                            <Currency aria-hidden="true">€</Currency>
-                          </CurrencyWrapper>
-                          {error && touched && invalid ? (
-                            <InlineError>{error}</InlineError>
-                          ) : null}
-                        </>
-                      )}
-                    </Field>
-                  ) : input.value === false ? (
-                    <SalaireTempsPlein name="salaires" />
-                  ) : null
-                }
+                {({ input }) => (
+                  <>
+                    {input.value && (
+                      <Field
+                        name="salaire"
+                        validate={isNumber}
+                        subscription={{
+                          value: true,
+                          error: true,
+                          touched: true,
+                          invalid: true
+                        }}
+                      >
+                        {({ input, meta: { touched, error, invalid } }) => (
+                          <>
+                            <p>
+                              Salaire mensuel brut (prendre en compte les primes
+                              et avantages en nature)
+                            </p>
+                            <CurrencyWrapper>
+                              <NumberInput
+                                {...input}
+                                size="10"
+                                type="number"
+                                invalid={touched && invalid}
+                              />
+                              <Currency aria-hidden="true">€</Currency>
+                            </CurrencyWrapper>
+                            {error && touched && invalid ? (
+                              <InlineError>{error}</InlineError>
+                            ) : null}
+                          </>
+                        )}
+                      </Field>
+                    )}
+                    <SalaireTempsPlein
+                      name="salaires"
+                      visible={input.value === false}
+                    />
+                  </>
+                )}
               </Field>
             </>
           ) : null
