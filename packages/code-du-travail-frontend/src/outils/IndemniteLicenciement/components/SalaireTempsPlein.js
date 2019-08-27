@@ -8,26 +8,22 @@ import { Table as UITable, theme } from "@cdt/ui";
 import { Input, InlineError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
-function SalaireTempsPlein({ name, visible }) {
+function SalaireTempsPlein({ name }) {
   return (
     <FieldArray name={name}>
-      {({ fields }) => (
-        <>
+      {({ fields }) =>
+        fields.length > 0 && (
           <Table>
-            {visible && (
-              <>
-                <caption>
-                  Salaire mensuel brut (prendre en compte les primes et
-                  avantages en nature)
-                </caption>
-                <thead>
-                  <tr>
-                    <th>Mois</th>
-                    <th>Salaire mensuel brut</th>
-                  </tr>
-                </thead>
-              </>
-            )}
+            <caption>
+              Salaire mensuel brut (prendre en compte les primes et avantages en
+              nature)
+            </caption>
+            <thead>
+              <tr>
+                <th>Mois</th>
+                <th>Salaire mensuel brut</th>
+              </tr>
+            </thead>
             <tbody>
               {fields.map((name, index) => (
                 <tr key={name}>
@@ -87,8 +83,8 @@ function SalaireTempsPlein({ name, visible }) {
               ))}
             </tbody>
           </Table>
-        </>
-      )}
+        )
+      }
     </FieldArray>
   );
 }

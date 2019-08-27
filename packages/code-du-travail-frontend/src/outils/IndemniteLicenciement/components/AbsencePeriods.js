@@ -8,7 +8,7 @@ import { Input, BlockError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 import { OnChange } from "react-final-form-listeners";
 
-function AbsencePeriods({ name, visible, onChange }) {
+function AbsencePeriods({ name, visible = true, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (

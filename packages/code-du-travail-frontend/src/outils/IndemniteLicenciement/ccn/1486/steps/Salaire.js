@@ -50,10 +50,7 @@ export const Salaire = ({ form }) => {
             <RegularNewSalaire name="brancheNewRegularSalaire" />
           )}
 
-          <IrregularNewSalaire
-            name="brancheNewIrregularSalaire"
-            visible={data.hasBrancheNewRegularSalaire === false}
-          />
+          <IrregularNewSalaire name="brancheNewIrregularSalaire" />
         </>
       )}
     </>
@@ -91,22 +88,18 @@ const RegularNewSalaire = ({ name }) => (
   </>
 );
 
-const IrregularNewSalaire = ({ name, visible }) => (
+const IrregularNewSalaire = ({ name }) => (
   <>
     <FieldArray name={name}>
-      {({ fields }) => (
-        <>
+      {({ fields }) =>
+        fields.length > 0 && (
           <Table>
-            {visible && (
-              <thead>
-                <tr>
-                  <th>Mois</th>
-                  <th>
-                    Salaire mensuel ajusté (primes et temps partiel inclus)
-                  </th>
-                </tr>
-              </thead>
-            )}
+            <thead>
+              <tr>
+                <th>Mois</th>
+                <th>Salaire mensuel ajusté (primes et temps partiel inclus)</th>
+              </tr>
+            </thead>
             <tbody>
               {fields.map((name, index) => (
                 <tr key={name}>
@@ -165,8 +158,8 @@ const IrregularNewSalaire = ({ name, visible }) => (
               ))}
             </tbody>
           </Table>
-        </>
-      )}
+        )
+      }
     </FieldArray>
   </>
 );

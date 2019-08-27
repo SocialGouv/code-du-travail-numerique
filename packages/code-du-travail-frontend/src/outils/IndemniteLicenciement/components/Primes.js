@@ -8,7 +8,7 @@ import { Button, theme } from "@cdt/ui";
 import { Input, InlineError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
-function Primes({ name, visible, onChange }) {
+function Primes({ name, visible = true, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (

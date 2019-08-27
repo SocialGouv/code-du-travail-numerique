@@ -6,7 +6,7 @@ import { Button, theme } from "@cdt/ui";
 import { CurrencyField } from "../../common/CurrencyField";
 import { UID } from "react-uid";
 
-function Salaires({ name, visible, onChange }) {
+function Salaires({ name, visible = true, onChange }) {
   return (
     <>
       <FieldArray name={name}>

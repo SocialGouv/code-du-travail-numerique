@@ -7,7 +7,7 @@ import { Button, theme } from "@cdt/ui";
 import { Input, InlineError, SectionTitle } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
-function SalaireTempsPartiel({ name, visible, onChange }) {
+function SalaireTempsPartiel({ name, visible = true, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (

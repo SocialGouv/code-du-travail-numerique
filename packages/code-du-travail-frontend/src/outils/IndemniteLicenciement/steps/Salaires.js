@@ -106,10 +106,7 @@ function StepSalaires({ form }) {
                           )}
                         </Field>
                       )}
-                      <SalaireTempsPlein
-                        name="salaires"
-                        visible={input.value === false}
-                      />
+                      <SalaireTempsPlein name="salaires" />
                     </>
                   )}
                 </Field>
