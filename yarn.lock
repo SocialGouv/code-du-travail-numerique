@@ -867,7 +867,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
@@ -12264,13 +12264,12 @@ react-feather@^1.1.6:
   resolved "https://registry.yarnpkg.com/react-feather/-/react-feather-1.1.6.tgz#2a547e3d5cd5e383d3da0128d593cbdb3c1b32f7"
   integrity sha512-iCofWhTjX+vQwvDmg7o6vg0XrUg1c41yBDZG+l83nz1FiCsleJoUgd3O+kHpOeWMXuPrRIFfCixvcqyOLGOgIg==
 
-react-final-form-arrays@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/react-final-form-arrays/-/react-final-form-arrays-2.0.3.tgz#938bd0d62741ab59c6a680968f79eac029e37333"
-  integrity sha512-iHGGAbOVsTlp/lhE6EUsqzhjPZSvcExLWE91Qx0remHOJvQ2wkxHe8HTA9KBlId8YJ1fkz6g417GTq/1IFnL9w==
+react-final-form-arrays@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-final-form-arrays/-/react-final-form-arrays-3.1.1.tgz#39d23e7ede966e418cad209e8fde46da1d603e99"
+  integrity sha512-e6S1x9597cvI4QPniOPmllXXandDAqCCuBo4AvXstZYgcV8whsqzk8aCrmQEy6eEfy2tEhvn6f4VI1GY+JBRsg==
   dependencies:
-    "@babel/runtime" "^7.3.4"
-    react-lifecycles-compat "^3.0.4"
+    "@babel/runtime" "^7.4.5"
 
 react-final-form-listeners@^1.0.2:
   version "1.0.2"
@@ -12279,12 +12278,13 @@ react-final-form-listeners@^1.0.2:
   dependencies:
     "@babel/runtime" "^7.1.5"
 
-react-final-form@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/react-final-form/-/react-final-form-4.1.0.tgz#4e1b513de164771b2b824f3fb9c0548014255971"
-  integrity sha512-O8p1EPQ/PFWNcX3bYGsLzuo/KnGeNfGfFi2UAX8jXLXrGcGdTfZMnyo/DFHdEKA9aKso61d/PHekQ9sst0cOmw==
+react-final-form@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/react-final-form/-/react-final-form-6.3.0.tgz#b85ae123a3796b3e0c8f56033c8a5037f4497e76"
+  integrity sha512-jijhXR1fFGUBQwNOSqF4MK8XJO7Ynl1p8vcFsnQS0INSkGI52+4IagjUgtHj3w8EviIHPFK/Eflji6FELUl07w==
   dependencies:
-    "@babel/runtime" "^7.3.4"
+    "@babel/runtime" "^7.4.5"
+    ts-essentials "^2.0.8"
 
 react-focus-lock@^1.17.7:
   version "1.19.1"
@@ -14780,6 +14780,11 @@ tryer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
+
+ts-essentials@^2.0.8:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-2.0.12.tgz#c9303f3d74f75fa7528c3d49b80e089ab09d8745"
+  integrity sha512-3IVX4nI6B5cc31/GFFE+i8ey/N2eA0CZDbo6n0yrz0zDX8ZJ8djmU1p+XRz7G3is0F3bB3pu2pAroFdAWQKU3w==
 
 tslib@^1.0.0, tslib@^1.9.3:
   version "1.10.0"
