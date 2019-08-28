@@ -12,7 +12,7 @@
 
 ## Installation
 
-Make sure you're using NodeJS 10.15 (9 or 11 won't work).
+Make sure you're using NodeJS 10+.
 
 ```sh
 # Install all the packages
