@@ -1,6 +1,6 @@
 import striptags from "striptags";
 import crypto from "crypto";
-
+import fs from "fs";
 import { logger } from "./logger";
 import slugify from "../slugify";
 
@@ -258,15 +258,22 @@ function* cdtnDocumentsGen() {
 export const conventionTextType = {
   BASE: "base",
   SALARY: "salaires",
-  ADDITIONNAL: "attaches"
+  ATTACHED: "attaches"
 };
 
-function* cdtnCcnGen(list, batchSize = 250) {
-  let data = [];
-  for (const { id } of list) {
-    const path = `@socialgouv/kali-data/data/${id}.json`;
-    const { sections, ...ccContent } = require(path);
+/**
+ *
+ * @param {array} list - a array of document absctract
+ * @param {number} batchSize - the max size of the batch
+ */
+function* cdtnCcnGen(list, batchSize = 20000000) {
+  let buffer = [];
+  let bufferSize = 0;
 
+  for (const { id } of list) {
+    const jsonPath = `@socialgouv/kali-data/data/${id}.json`;
+    const { sections, ...ccContent } = require(jsonPath);
+    const jsonSize = getFileSize(jsonPath);
     const texteDeBase = sections[0];
     const textesAttaches = sections.find(
       section => section.title === "Textes Attachés"
@@ -274,18 +281,21 @@ function* cdtnCcnGen(list, batchSize = 250) {
     const texteSalaires = sections.find(
       section => section.title === "Textes Salaires"
     );
+    const data = [];
+
     data.push({
       ...ccContent,
       texteDeBase,
       conventionId: id,
       type: conventionTextType.BASE
     });
+
     if (textesAttaches) {
       data.push({
         ...textesAttaches,
         id: `${id}-attaches`,
         conventionId: id,
-        type: "attaches"
+        type: conventionTextType.ATTACHED
       });
     }
     if (texteSalaires) {
@@ -293,20 +303,30 @@ function* cdtnCcnGen(list, batchSize = 250) {
         ...texteSalaires,
         id: `${id}-salaires`,
         conventionId: id,
-        type: "salaires"
+        type: conventionTextType.SALARY
       });
     }
 
-    if (data.length >= batchSize) {
-      yield data.slice(0, batchSize);
-      data = data.slice(batchSize);
+    if (bufferSize + jsonSize >= batchSize) {
+      console.log(`batch max size ${bufferSize}`);
+      yield buffer;
+      buffer = [].concat(data);
+      bufferSize = jsonSize;
+    } else {
+      buffer = buffer.concat(data);
+      bufferSize += jsonSize;
     }
   }
-  if (data.length > 0) {
-    yield data;
+  if (buffer.length > 0) {
+    yield buffer;
   }
 }
 
+function getFileSize(filepath) {
+  const path = require.resolve(filepath);
+  const { size } = fs.statSync(path);
+  return size;
+}
 export {
   flattenTags,
   makeSlug,
