@@ -31,6 +31,20 @@ const client = new Client({
 async function main() {
   await version({ client });
   // Indexing document data
+  // Indexing CCN data
+
+  await createIndex({
+    client,
+    indexName: CDTN_CCN_NAME,
+    mappings: conventionCollectiveMapping
+  });
+  for (const documents of cdtnCcnGen(conventionList, 100)) {
+    await indexDocumentsBatched({
+      indexName: CDTN_CCN_NAME,
+      client,
+      documents
+    });
+  }
 
   await createIndex({
     client,
@@ -57,20 +71,6 @@ async function main() {
     indexName: CDTN_ANNUAIRE_NAME,
     documents: annuaire
   });
-
-  // Indexing CCN data
-  await createIndex({
-    client,
-    indexName: CDTN_CCN_NAME,
-    mappings: conventionCollectiveMapping
-  });
-  for (const documents of cdtnCcnGen(conventionList, 250)) {
-    await indexDocumentsBatched({
-      indexName: CDTN_CCN_NAME,
-      client,
-      documents
-    });
-  }
 }
 
 main();
