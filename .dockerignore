@@ -1,2 +1,7 @@
-node_modules
-packages/*/node_modules
+*.md
+.git
+**/dist
+**/build
+**/node_modules
+**/.next
+**/coverage
