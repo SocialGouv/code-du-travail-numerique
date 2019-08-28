@@ -264,10 +264,9 @@ export const conventionTextType = {
 function* cdtnCcnGen(list, batchSize = 250) {
   let data = [];
   for (const { id } of list) {
-    const {
-      sections,
-      ...ccContent
-    } = require(`@socialgouv/kali-data/data/${id}.json`);
+    const path = `@socialgouv/kali-data/data/${id}.json`;
+    const { sections, ...ccContent } = require(path);
+
     const texteDeBase = sections[0];
     const textesAttaches = sections.find(
       section => section.title === "Textes Attachés"
