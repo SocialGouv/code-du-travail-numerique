@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD:packages/code-du-travail-frontend/__tests__/__snapshots__/kali.test.js.snap
-exports[`<Kali /> should render 1`] = `
+exports[`<ConventionCollective /> should render 1`] = `
 .c9:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -14,11 +13,6 @@ exports[`<Kali /> should render 1`] = `
   border: 0;
 }
 
-||||||| merged common ancestors:packages/code-du-travail-frontend/pages/__tests__/__snapshots__/kali.test.js.snap
-exports[`<Kali /> should render 1`] = `
-=======
-exports[`<ConventionCollective /> should render 1`] = `
->>>>>>> feature(frontend): update UI with new ccn data:packages/code-du-travail-frontend/pages/__tests__/__snapshots__/convention-collective.test.js.snap
 .c2 {
   max-width: 1200px;
   margin: 0 auto;

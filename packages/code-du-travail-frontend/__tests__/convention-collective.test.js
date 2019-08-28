@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "react-testing-library";
-import ConventionCollective from "../convention-collective.js";
+import { render } from "@testing-library/react";
+import ConventionCollective from "../pages/convention-collective.js";
 
 describe("<ConventionCollective />", () => {
   it("should render", () => {

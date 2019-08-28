@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, wait } from "react-testing-library";
+import { render, fireEvent, wait } from "@testing-library/react";
 
 import { mockFetch } from "../../../test/mockFetch";
 import ListTextes from "../Convention/ListTextes";
