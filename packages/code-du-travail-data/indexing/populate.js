@@ -5,7 +5,7 @@ import { logger } from "./logger";
 import slugify from "../slugify";
 
 const SOURCES = {
-  CCN: "kali",
+  CCN: "conventions_collectives",
   CDT: "code_du_travail",
   SHEET_SP: "fiches_service_public",
   SHEET_MT: "fiches_ministere_travail",
@@ -57,7 +57,7 @@ function getDuplicateSlugs(allDocuments) {
 
 function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
-  yield require("../dataset/kali/kali.json").map(
+  yield require("../dataset/conventions_collectives/ccn-list.json").map(
     ({ slug, titre, url, num, id }) => ({
       source: SOURCES.CCN,
       id,
@@ -255,4 +255,63 @@ function* cdtnDocumentsGen() {
   );
 }
 
-export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };
+export const conventionTextType = {
+  BASE: "base",
+  SALARY: "salaires",
+  ADDITIONNAL: "attaches"
+};
+
+function* cdtnCcnGen(list, batchSize = 250) {
+  let data = [];
+  for (const { id } of list) {
+    const {
+      sections,
+      ...ccContent
+    } = require(`@socialgouv/kali-data/data/${id}.json`);
+    const texteDeBase = sections[0];
+    const textesAttaches = sections.find(
+      section => section.title === "Textes Attachés"
+    );
+    const texteSalaires = sections.find(
+      section => section.title === "Textes Salaires"
+    );
+    data.push({
+      ...ccContent,
+      texteDeBase,
+      conventionId: id,
+      type: conventionTextType.BASE
+    });
+    if (textesAttaches) {
+      data.push({
+        ...textesAttaches,
+        id: `${id}-attaches`,
+        conventionId: id,
+        type: "attaches"
+      });
+    }
+    if (texteSalaires) {
+      data.push({
+        ...texteSalaires,
+        id: `${id}-salaires`,
+        conventionId: id,
+        type: "salaires"
+      });
+    }
+
+    if (data.length >= batchSize) {
+      yield data.slice(0, batchSize);
+      data = data.slice(batchSize);
+    }
+  }
+  if (data.length > 0) {
+    yield data;
+  }
+}
+
+export {
+  flattenTags,
+  makeSlug,
+  getDuplicateSlugs,
+  cdtnDocumentsGen,
+  cdtnCcnGen
+};

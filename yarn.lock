@@ -14370,11 +14370,6 @@ to-vfile@^5.0.2:
     is-buffer "^2.0.0"
     vfile "^3.0.0"
 
-tocbot@^4.7.1:
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/tocbot/-/tocbot-4.7.1.tgz#fea49329c9bf4fb0329ee6c164e5094368bf6307"
-  integrity sha512-GcX4H9Lhba3QURVHhc9CBl/kS4BrBSzAHSNvdqa2lZnmKWnaeEaUIjNFJPLS8IV3u1GrG3o+9B0kQF7VqYTPTA==
-
 toidentifier@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"

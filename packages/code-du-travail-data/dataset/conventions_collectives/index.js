@@ -8,9 +8,7 @@ const slugifiedConventions = conventions.map(convention => ({
   slug: slugify(`${convention.num}-${convention.titre}`.substring(0, 80), {
     lower: true
   }),
-  url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${
-    convention.id
-  }`
+  url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${convention.id}`
 }));
 
 fs.writeFileSync(
