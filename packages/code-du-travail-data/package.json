@@ -25,7 +25,7 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^7.3.0",
-    "@socialgouv/kali-data": "^1.0.3",
+    "@socialgouv/kali-data": "~1.0.3",
     "esm": "^3.2.25",
     "striptags": "^3.1.1",
     "winston": "^3.2.1"

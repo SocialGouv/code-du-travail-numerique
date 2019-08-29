@@ -38,7 +38,7 @@ async function main() {
     indexName: CDTN_CCN_NAME,
     mappings: conventionCollectiveMapping
   });
-  for (const documents of cdtnCcnGen(conventionList, 20000000)) {
+  for (const documents of cdtnCcnGen(conventionList, 10000000)) {
     await indexDocumentsBatched({
       indexName: CDTN_CCN_NAME,
       client,

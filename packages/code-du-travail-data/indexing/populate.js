@@ -265,7 +265,7 @@ export const conventionTextType = {
  * @param {array} list - a array of document absctract
  * @param {number} batchSize - the max size of the batch
  */
-function* cdtnCcnGen(list, batchSize = 20000000) {
+function* cdtnCcnGen(list, batchSize = 10000000) {
   let buffer = [];
   let bufferSize = 0;
 
