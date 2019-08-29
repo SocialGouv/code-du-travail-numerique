@@ -1,2 +1,13 @@
-node_modules
-packages/*/node_modules
+*.md
+.git
+**/__pycache__
+**/venv
+**/dist
+**/build
+**/node_modules
+**/.next
+**/.docz
+**/coverage
+**/annuaire/data
+**/fiches_service_public/data
+**/code-du-travail-nlp/data
