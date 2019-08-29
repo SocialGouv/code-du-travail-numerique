@@ -1,6 +1,6 @@
 const { promisify } = require("util");
 const GoogleSpreadsheets = require("google-spreadsheets");
-const conventionsColl = require("@cdt/data...kali/kali.json");
+const conventionsColl = require("@socialgouv/kali-data/data/index.json");
 
 const SPREADSHEET_KEY = "1zd_hShEui8BHK0349GpDUZRkCcQ9syIZ9gSrkYKRdo0";
 const getCells = promisify(GoogleSpreadsheets.cells);
@@ -41,7 +41,7 @@ function getHeaders(row) {
 async function getData() {
   const { cells } = await getCells({
     key: SPREADSHEET_KEY,
-    worksheet: 1
+    worksheet: 2
   });
 
   const [headersRow] = Object.values(cells).slice(0, 1);
@@ -49,9 +49,8 @@ async function getData() {
   const headers = getHeaders(headersRow);
   const createRowWithHeaders = headers => row => transformRow(headers, row);
   const rowTransformer = createRowWithHeaders(headers);
-  // the 2 first columns are headers
   return Object.values(cells)
-    .slice(2)
+    .slice(1)
     .map(rowTransformer);
 }
 
@@ -76,7 +75,7 @@ function transformRow(headers, row) {
         const label = conventionsById[row[index].value] || "Je ne sais pas";
         data.criteria["branche"] = { id, label };
       } else {
-        data.criteria[key] = row[index].value;
+        data.criteria[key] = row[index].value || undefined;
       }
     }
   }
