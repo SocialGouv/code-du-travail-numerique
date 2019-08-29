@@ -113,9 +113,9 @@ function* cdtnDocumentsGen() {
       source: SOURCES.SHEET_SP,
       title,
       slug: slugify(title),
-      description: description,
+      description,
       breadcrumbs: parents,
-      theme: theme,
+      theme,
       text,
       raw,
       date,
@@ -134,7 +134,8 @@ function* cdtnDocumentsGen() {
       anchor,
       intro,
       html,
-      themeCdtn,
+      parents,
+      theme,
       date,
       url
     }) => ({
@@ -145,8 +146,8 @@ function* cdtnDocumentsGen() {
       description,
       text,
       html,
-      breadcrumbs: themeCdtn,
-      theme: themeCdtn && themeCdtn[themeCdtn.length - 1].slug,
+      breadcrumbs: parents,
+      theme,
       date,
       url,
       anchor
