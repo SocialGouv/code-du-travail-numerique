@@ -31,8 +31,18 @@ const sourcesPriority = [
   "faq",
   "fiche-service-public",
   "fiche-ministere-travail",
+  "external",
   "code-du-travail"
 ];
+
+const sortByKey = key => (a, b) => {
+  if (a[key] < b[key]) {
+    return -1;
+  } else if (a[key] > b[key]) {
+    return 1;
+  }
+  return 0;
+};
 
 const getSource = url => {
   const source = url.match(/^\/([^/]+)\//);
@@ -79,11 +89,13 @@ const fetchAll = () =>
     .then(json => json.data)
     .then(data => data.filter(item => item.refs && item.refs.length > 1))
     .then(rows =>
-      rows.map(row => ({
-        ...row,
-        refs: row.refs.filter(hasUrl).sort(sortRefs),
-        variants: getVariants(row)
-      }))
+      rows
+        .map(row => ({
+          ...row,
+          refs: row.refs.filter(hasUrl).sort(sortRefs),
+          variants: getVariants(row)
+        }))
+        .sort(sortByKey("title"))
     );
 
 module.exports = fetchAll;
