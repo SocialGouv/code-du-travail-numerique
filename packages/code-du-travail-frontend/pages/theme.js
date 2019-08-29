@@ -103,7 +103,7 @@ class Theme extends React.Component {
           image={ogImage}
         />
         <Search />
-        <Breadcrumbs items={breadcrumbs} />
+        {breadcrumbs.length > 1 && <Breadcrumbs items={breadcrumbs} />}
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes
