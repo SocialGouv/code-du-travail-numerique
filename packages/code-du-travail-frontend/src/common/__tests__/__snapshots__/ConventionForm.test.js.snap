@@ -71,7 +71,7 @@ exports[`<ConventionForm /> should display idcc item once click on suggestion 1`
         class="c1"
       >
         <a
-          href="/kali/200-convention-des-poulaillers"
+          href="/convention-collective/200-convention-des-poulaillers"
         >
           IDCC 
            

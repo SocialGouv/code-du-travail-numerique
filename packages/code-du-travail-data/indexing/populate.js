@@ -1,11 +1,10 @@
 import striptags from "striptags";
 import crypto from "crypto";
-
 import { logger } from "./logger";
 import slugify from "../slugify";
 
 const SOURCES = {
-  CCN: "kali",
+  CCN: "conventions_collectives",
   CDT: "code_du_travail",
   SHEET_SP: "fiches_service_public",
   SHEET_MT: "fiches_ministere_travail",
@@ -57,15 +56,15 @@ function getDuplicateSlugs(allDocuments) {
 
 function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
-  yield require("../dataset/kali/kali.json").map(
-    ({ slug, titre, url, num, id }) => ({
+  yield require("@socialgouv/kali-data/data/index.json").map(
+    ({ titre, num, id }) => ({
       source: SOURCES.CCN,
       id,
       idcc: num,
       title: titre,
-      slug: slug,
+      slug: slugify(`${num}-${titre}`.substring(0, 80)),
       text: `IDCC ${num} ${titre}`,
-      url
+      url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
     })
   );
 
@@ -255,4 +254,78 @@ function* cdtnDocumentsGen() {
   );
 }
 
-export { flattenTags, makeSlug, getDuplicateSlugs, cdtnDocumentsGen };
+export const conventionTextType = {
+  BASE: "base",
+  SALARY: "salaires",
+  ATTACHED: "attaches"
+};
+
+/**
+ *
+ * @param {array} list - a array of document absctract
+ * @param {number} batchSize - the max size of the batch
+ */
+function* cdtnCcnGen(list, batchSize = 10000000) {
+  let buffer = [];
+  let bufferSize = 0;
+
+  for (const { id } of list) {
+    const jsonPath = `@socialgouv/kali-data/data/${id}.json`;
+    const { sections, ...ccContent } = require(jsonPath);
+    const texteDeBase = sections[0];
+    const textesAttaches = sections.find(
+      section => section.title === "Textes Attachés"
+    );
+    const texteSalaires = sections.find(
+      section => section.title === "Textes Salaires"
+    );
+    const data = [];
+
+    data.push({
+      ...ccContent,
+      texteDeBase,
+      conventionId: id,
+      type: conventionTextType.BASE
+    });
+
+    if (textesAttaches) {
+      data.push({
+        ...textesAttaches,
+        id: `${id}-attaches`,
+        conventionId: id,
+        type: conventionTextType.ATTACHED
+      });
+    }
+    if (texteSalaires) {
+      data.push({
+        ...texteSalaires,
+        id: `${id}-salaires`,
+        conventionId: id,
+        type: conventionTextType.SALARY
+      });
+    }
+
+    const jsonSize = JSON.stringify(data).length;
+
+    if (bufferSize + jsonSize >= batchSize) {
+      console.log(`batch max size ${bufferSize}`);
+      yield buffer;
+      buffer = [].concat(data);
+      bufferSize = jsonSize;
+    } else {
+      buffer = buffer.concat(data);
+      bufferSize += jsonSize;
+    }
+  }
+  if (buffer.length > 0) {
+    yield buffer;
+  }
+}
+
+export {
+  flattenTags,
+  makeSlug,
+  getDuplicateSlugs,
+  cdtnDocumentsGen,
+  cdtnCcnGen
+};

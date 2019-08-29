@@ -118,7 +118,7 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
             data-testid="companyIdcc"
           >
             <a
-              href="/kali-idcc/200"
+              href="/convention-collective-idcc/200"
             >
               IDCC 
               200
@@ -130,7 +130,7 @@ exports[`<CompanyForm /> should display the company and its IDCCs once you click
             data-testid="companyIdcc"
           >
             <a
-              href="/kali-idcc/86"
+              href="/convention-collective-idcc/86"
             >
               IDCC 
               86

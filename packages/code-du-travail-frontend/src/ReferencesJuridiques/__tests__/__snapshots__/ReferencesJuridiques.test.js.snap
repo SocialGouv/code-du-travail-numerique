@@ -512,7 +512,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
                 >
                   <a
                     class="c14"
-                    href="/kali/yyy"
+                    href="/convention-collective/yyy"
                   >
                     <svg
                       class="c15"

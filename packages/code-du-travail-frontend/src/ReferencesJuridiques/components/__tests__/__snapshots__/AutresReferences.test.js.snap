@@ -209,7 +209,7 @@ exports[`<AutresReferences /> should render 1`] = `
           >
             <a
               class="c8"
-              href="/kali/yyy"
+              href="/convention-collective/yyy"
             >
               <svg
                 class="c9"

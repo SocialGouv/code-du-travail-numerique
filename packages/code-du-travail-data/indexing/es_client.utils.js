@@ -57,7 +57,12 @@ async function bulkIndexDocuments({ client, indexName, documents }) {
   }
 }
 
-async function indexDocumentsBatched({ client, indexName, documents, size }) {
+async function indexDocumentsBatched({
+  client,
+  indexName,
+  documents,
+  size = 1000
+}) {
   logger.info(`Loaded ${documents.length} documents`);
   for (const chunk of chunks(documents, size)) {
     await bulkIndexDocuments({ client, indexName, documents: chunk });

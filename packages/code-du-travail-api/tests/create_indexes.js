@@ -5,9 +5,11 @@ const documentMapping = require("./cdtn_document_mapping");
 const documentsData = require("./cdtn_document_data.json");
 const annuaireMapping = require("./cdtn_annuaire_mapping");
 const annuaireData = require("./cdtn_annuaire_data.json");
+const conventionData = require("./convention_data.json");
 
 const documentIndexName = "cdtn_document_test";
 const annuaireIndexName = "cdtn_annuaire_test";
+const conventionsIndexName = "convention_test";
 
 async function createIndex(indexName, mappings, data) {
   const { body } = await client.indices.exists({ index: indexName });
@@ -36,7 +38,7 @@ async function createIndex(indexName, mappings, data) {
             }
           }
         },
-        mappings: mappings
+        ...(mappings && { mappings })
       }
     });
     logger.info(`Index ${indexName} created.`);
@@ -64,3 +66,4 @@ async function version() {
 version();
 createIndex(documentIndexName, documentMapping, documentsData);
 createIndex(annuaireIndexName, annuaireMapping, annuaireData);
+createIndex(conventionsIndexName, null, conventionData);

@@ -1,7 +1,7 @@
 const ora = require("ora");
 const request = require("superagent");
 
-const { batchPromise } = require("@cdt/data...kali/utils");
+const { batchPromise } = require("./utils");
 const urls = require("./ministere-travail-liste-fiches.json");
 
 let count = 0;

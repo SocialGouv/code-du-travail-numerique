@@ -17,7 +17,7 @@ const CodeDuTravailLink = ({ title, slug }) => (
 );
 
 const ConventionLink = ({ title, slug }) => (
-  <Link route="kali" params={{ slug }} passHref>
+  <Link route="convention-collective" params={{ slug }} passHref>
     <ReferenceLink>
       <Icon width={18} />
       Convention collective: {title}

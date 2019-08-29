@@ -6,9 +6,6 @@ module.exports = withSourceMaps({
 
   publicRuntimeConfig: {
     API_ADDRESS: "https://api-adresse.data.gouv.fr/search",
-    API_DILA2SQL_URL:
-      process.env.API_DILA2SQL_URL ||
-      "https://api.dila2sql.num.social.gouv.fr/v1",
     API_SIRET2IDCC_URL:
       process.env.API_SIRET2IDCC_URL || "https://siret2idcc.num.social.gouv.fr",
     API_URL: process.env.API_URL || "http://127.0.0.1:1337/api/v1",

@@ -241,7 +241,6 @@ exports[`<About /> should render 1`] = `
 
 .c10 {
   margin-top: 1.25rem;
-  margin-top: var(--spacing-inter-component);
 }
 
 @media print {

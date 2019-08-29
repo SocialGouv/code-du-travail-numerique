@@ -25,7 +25,7 @@ const SourceIcon = ({ source = "" }) => {
       return <ResultIcon as={DossierIcon} />;
     case "outils":
       return <ResultIcon as={OutilIcon} />;
-    case "kali":
+    case "conventions_collectives":
       return <ResultIcon as={ArticleIcon} />;
     default:
       return null;

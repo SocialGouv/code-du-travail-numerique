@@ -3,15 +3,21 @@ import { Client } from "@elastic/elasticsearch";
 import { logger } from "./logger";
 import { documentMapping } from "./document.mapping";
 import { annuaireMapping } from "./annuaire.mapping";
+import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { version, createIndex, indexDocumentsBatched } from "./es_client.utils";
-import { cdtnDocumentsGen } from "./populate";
+import { cdtnDocumentsGen, cdtnCcnGen } from "./populate";
+
 import annuaire from "../dataset/annuaire/annuaire.data.json";
+import conventionList from "@socialgouv/kali-data/data/index.json";
 
 const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 const CDTN_ANNUAIRE_NAME =
   process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_annuaire";
+
+const CDTN_CCN_NAME =
+  process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
@@ -25,6 +31,21 @@ const client = new Client({
 async function main() {
   await version({ client });
   // Indexing document data
+  // Indexing CCN data
+
+  await createIndex({
+    client,
+    indexName: CDTN_CCN_NAME,
+    mappings: conventionCollectiveMapping
+  });
+  for (const documents of cdtnCcnGen(conventionList, 10000000)) {
+    await indexDocumentsBatched({
+      indexName: CDTN_CCN_NAME,
+      client,
+      documents
+    });
+  }
+
   await createIndex({
     client,
     indexName: CDTN_INDEX_NAME,
@@ -48,8 +69,7 @@ async function main() {
   await indexDocumentsBatched({
     client,
     indexName: CDTN_ANNUAIRE_NAME,
-    documents: annuaire,
-    size: 500
+    documents: annuaire
   });
 }
 

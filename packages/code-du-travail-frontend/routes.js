@@ -44,18 +44,18 @@ module.exports = routes()
     pattern: "/modeles-de-courriers/:slug"
   })
 
-  // http://localhost:3000/kali/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
+  // http://localhost:3000/convention-collective/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
   .add({
-    name: "kali",
-    page: "kali",
-    pattern: "/kali/:slug"
+    name: "convention-collective",
+    page: "convention-collective",
+    pattern: "/convention-collective/:slug"
   })
 
-  // http://localhost:3000/kali/1930-nouvelle-convention-collective-nationale-des-metiers-de-la-transformation-des-gr
+  // http://localhost:3000/convention-collective-idcc/1930
   .add({
-    name: "kali-idcc",
-    page: "kali",
-    pattern: "/kali-idcc/:idccNum"
+    name: "convention-collective-idcc",
+    page: "convention-collective",
+    pattern: "/convention-collective-idcc/:idccNum"
   })
 
   // http://localhost:3000/outils/indemnite-licenciement
