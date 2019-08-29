@@ -1,0 +1,605 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInformations /> should render 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-branche"
+    >
+      Quelle est votre convention collective ?
+    </label>
+    <select
+      class="c3"
+      id="input-branche"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="2120"
+      >
+        Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
+      </option>
+      <option
+        value="0843"
+      >
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.
+      </option>
+      <option
+        value="1996"
+      >
+        Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
+      </option>
+      <option
+        value="3043"
+      >
+        Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011
+      </option>
+      <option
+        value="3127"
+      >
+        Convention collective nationale des entreprises de services à la personne du 20 septembre 2012
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+      </option>
+      <option
+        value="0675"
+      >
+        Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).
+      </option>
+      <option
+        value="1672"
+      >
+        Convention collective nationale des sociétés d'assurances du 27 mai 1992
+      </option>
+      <option
+        value="1606"
+      >
+        Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  
+      </option>
+      <option
+        value="1483"
+      >
+        Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+      </option>
+      <option
+        value="1505"
+      >
+        Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+      </option>
+      <option
+        value="1090"
+      >
+        Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.
+      </option>
+      <option
+        value="1147"
+      >
+        Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981
+      </option>
+      <option
+        value="2511"
+      >
+        Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006
+      </option>
+      <option
+        value="1404"
+      >
+        Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012
+      </option>
+      <option
+        value="0000"
+      >
+        Je ne sais pas
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render catégorie 1`] = `
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-branche"
+    >
+      Quelle est votre convention collective ?
+    </label>
+    <select
+      class="c3"
+      id="input-branche"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="2120"
+      >
+        Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
+      </option>
+      <option
+        value="0843"
+      >
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.
+      </option>
+      <option
+        value="1996"
+      >
+        Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
+      </option>
+      <option
+        value="3043"
+      >
+        Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011
+      </option>
+      <option
+        value="3127"
+      >
+        Convention collective nationale des entreprises de services à la personne du 20 septembre 2012
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+      </option>
+      <option
+        value="0675"
+      >
+        Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).
+      </option>
+      <option
+        value="1672"
+      >
+        Convention collective nationale des sociétés d'assurances du 27 mai 1992
+      </option>
+      <option
+        value="1606"
+      >
+        Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  
+      </option>
+      <option
+        value="1483"
+      >
+        Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+      </option>
+      <option
+        value="1505"
+      >
+        Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+      </option>
+      <option
+        value="1090"
+      >
+        Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.
+      </option>
+      <option
+        value="1147"
+      >
+        Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981
+      </option>
+      <option
+        value="2511"
+      >
+        Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006
+      </option>
+      <option
+        value="1404"
+      >
+        Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012
+      </option>
+      <option
+        value="0000"
+      >
+        Je ne sais pas
+      </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-catégorie"
+    >
+      Quelle est la catégorie professionnelle du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-catégorie"
+      name="catégorie"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="7| Ouvriers, Employés, Techniciens"
+      >
+        Ouvriers, Employés, Techniciens
+      </option>
+      <option
+        value="12| Techniciens et agents de maîtrise"
+      >
+        Techniciens et agents de maîtrise
+      </option>
+      <option
+        value="16| Ingénieurs, Cadres"
+      >
+        Ingénieurs, Cadres
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<StepInformations /> should render coefficient 1`] = `
+.c4 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c3 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Informations sur le statut du salarié
+  </h2>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-branche"
+    >
+      Quelle est votre convention collective ?
+    </label>
+    <select
+      class="c3"
+      id="input-branche"
+      name="branche"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="2120"
+      >
+        Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004.
+      </option>
+      <option
+        value="0843"
+      >
+        Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.
+      </option>
+      <option
+        value="1996"
+      >
+        Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998).
+      </option>
+      <option
+        value="1486"
+      >
+        Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. 
+      </option>
+      <option
+        value="3043"
+      >
+        Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011
+      </option>
+      <option
+        value="3127"
+      >
+        Convention collective nationale des entreprises de services à la personne du 20 septembre 2012
+      </option>
+      <option
+        value="1979"
+      >
+        Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997
+      </option>
+      <option
+        value="0044"
+      >
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+      </option>
+      <option
+        value="0675"
+      >
+        Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973).
+      </option>
+      <option
+        value="1672"
+      >
+        Convention collective nationale des sociétés d'assurances du 27 mai 1992
+      </option>
+      <option
+        value="1606"
+      >
+        Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  
+      </option>
+      <option
+        value="1483"
+      >
+        Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004
+      </option>
+      <option
+        value="1505"
+      >
+        Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988.
+      </option>
+      <option
+        value="1090"
+      >
+        Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981.
+      </option>
+      <option
+        value="1147"
+      >
+        Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981
+      </option>
+      <option
+        value="2511"
+      >
+        Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006
+      </option>
+      <option
+        value="1404"
+      >
+        Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012
+      </option>
+      <option
+        value="0000"
+      >
+        Je ne sais pas
+      </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-catégorie"
+    >
+      Quelle est la catégorie professionnelle du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-catégorie"
+      name="catégorie"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="7| Ouvriers, Employés, Techniciens"
+      >
+        Ouvriers, Employés, Techniciens
+      </option>
+      <option
+        value="12| Techniciens et agents de maîtrise"
+      >
+        Techniciens et agents de maîtrise
+      </option>
+      <option
+        value="16| Ingénieurs, Cadres"
+      >
+        Ingénieurs, Cadres
+      </option>
+    </select>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+      for="input-coefficient"
+    >
+      Quel est le coefficient hiérarchique  du salarié ?
+    </label>
+    <select
+      class="c3"
+      id="input-coefficient"
+      name="coefficient"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="1| inférieur à 160"
+      >
+        inférieur à 160
+      </option>
+      <option
+        value="2| entre 160 (inclus) et 190"
+      >
+        entre 160 (inclus) et 190
+      </option>
+      <option
+        value="3| supérieur à 190 (inclus)"
+      >
+        supérieur à 190 (inclus)
+      </option>
+    </select>
+  </div>
+  <div
+    class="c4"
+  >
+    Si vous ne connaissez pas le 
+    coefficient hiérarchique
+    , munissez-vous du dernier bulletin de salaire, où ce dernier doit obligatoirement figurer. Cette information se trouve souvent dans l’en-tête.
+  </div>
+</div>
+`;

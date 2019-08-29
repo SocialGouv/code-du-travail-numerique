@@ -4,11 +4,13 @@ import styled from "styled-components";
 import { Alert, Container, theme } from "@cdt/ui";
 
 import Search from "../src/search/Search";
-import { CalculateurIndemnite } from "../src/outils/IndemniteLicenciement";
 import { PageLayout } from "../src/layout/PageLayout";
-import { SimulateurEmbauche } from "../src/outils/SimulateurEmbauche";
 import Metas from "../src/common/Metas";
+
+import { CalculateurIndemnite } from "../src/outils/IndemniteLicenciement";
+import { SimulateurEmbauche } from "../src/outils/SimulateurEmbauche";
 import { SimulateurIndemnitePrecarite } from "../src/outils/IndemnitePrecarite";
+import { DureePreavisDemission } from "../src/outils/DureePreavisDemission";
 
 const BigError = ({ children }) => (
   <StyledContainer>
@@ -39,6 +41,12 @@ const getOutilFromCode = function(code) {
         title: "Calculer une indemnite de précarité",
         description: "Calculez votre prime de précarité",
         outil: SimulateurIndemnitePrecarite
+      };
+    case "preavis-demission":
+      return {
+        title: "Calculer un préavis de démission",
+        description: "Calculer un préavis de démission",
+        outil: DureePreavisDemission
       };
     default:
       return {

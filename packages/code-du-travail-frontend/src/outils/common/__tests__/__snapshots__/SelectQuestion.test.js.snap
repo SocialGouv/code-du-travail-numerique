@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectQuestion /> should render with default value 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.c0 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="input-foo"
+    >
+      Une question ?
+    </label>
+    <select
+      class="c2"
+      id="input-foo"
+      name="foo"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="foo"
+      >
+        label foo
+      </option>
+      <option
+        value="baz"
+      >
+        label baz
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`<SelectQuestion /> should render with selectedValue value 1`] = `
+.c1 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.c0 {
+  margin: 1.25rem 0;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="input-foo"
+    >
+      Une question ?
+    </label>
+    <select
+      class="c2"
+      id="input-foo"
+      name="foo"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="foo"
+      >
+        label foo
+      </option>
+      <option
+        value="baz"
+      >
+        label baz
+      </option>
+    </select>
+  </div>
+</div>
+`;

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`situations recapSituation should return a text recap 1`] = `
+<React.Fragment>
+  <React.Fragment>
+    <React.Fragment>
+      <React.Fragment>
+        <React.Fragment>
+          appartenant à la catégorie 
+          <strong>
+            Etam
+          </strong>
+        </React.Fragment>
+        , 
+        <React.Fragment>
+          ayant 
+          <strong>
+            30
+          </strong>
+           d’ancienneté
+        </React.Fragment>
+      </React.Fragment>
+      , 
+      <React.Fragment>
+        dans le groupe 
+        <strong>
+          IV
+        </strong>
+      </React.Fragment>
+    </React.Fragment>
+    , 
+    <React.Fragment>
+      avec un échelon de 
+      <strong>
+        375
+      </strong>
+    </React.Fragment>
+  </React.Fragment>
+  , 
+  <React.Fragment>
+    avec un coefficient 
+    <strong>
+      12
+    </strong>
+  </React.Fragment>
+</React.Fragment>
+`;
