@@ -87,7 +87,9 @@ class Theme extends React.Component {
         }
       ])
     );
-    const isRootTheme = theme && !theme.parents;
+    const isRootTheme = !theme.title;
+    theme.children && theme.children.length && !theme.children[0].parent;
+
     if (!theme) {
       return <NotFound />;
     }
@@ -105,7 +107,7 @@ class Theme extends React.Component {
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes
-              title={isRootTheme ? undefined : null}
+              title={isRootTheme ? undefined : theme.title}
               themes={theme.children}
             />
           </Section>

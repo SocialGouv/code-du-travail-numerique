@@ -28,12 +28,20 @@ const BackToResultsLink = ({ query }) => {
     </BacklinkContainer>
   );
 };
+const ROOT_CRUMB = {
+  title: "Thèmes",
+  slug: null
+};
+
 function getBreadcrumbs(items = []) {
-  return items.map(({ slug, label }) => (
-    <Link key={slug} route="themes" params={{ slug }}>
-      <a title={`Voir le theme ${label}`}>{label}</a>
-    </Link>
-  ));
+  return [ROOT_CRUMB]
+    .concat(items.slice(0, -1))
+    .map(({ slug, title }) => (
+      <Link key={slug} route="themes" params={{ slug }}>
+        <a title={`Voir le theme ${title}`}>{title}</a>
+      </Link>
+    ))
+    .concat([<span>{items[items.length - 1].title}</span>]);
 }
 function Answer({
   router,

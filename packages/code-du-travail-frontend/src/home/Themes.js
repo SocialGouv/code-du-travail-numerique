@@ -25,6 +25,7 @@ const iconsMap = {
 
 export default class Themes extends React.Component {
   static propTypes = {
+    title: PropTypes.string,
     themes: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
@@ -34,13 +35,12 @@ export default class Themes extends React.Component {
   };
 
   render() {
-    const { themes } = this.props;
-    console.log("themes", themes);
+    const { title, themes } = this.props;
     if (!(themes.length > 0)) return null;
     return (
       <Section>
         <Container>
-          {<Title>Thèmes</Title>}
+          <Title>{title || "Thèmes"}</Title>
           <Grid>
             {themes.map(({ id, slug, title, parent }) => (
               <GridCell key={slug + title}>
