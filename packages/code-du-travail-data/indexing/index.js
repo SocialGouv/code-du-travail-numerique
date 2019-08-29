@@ -8,9 +8,9 @@ import { themesMapping } from "./themes.mapping";
 import { version, createIndex, indexDocumentsBatched } from "./es_client.utils";
 import { cdtnDocumentsGen, cdtnCcnGen } from "./populate";
 
-import annuaire from "../dataset/annuaire/annuaire.data.json";
 import conventionList from "@socialgouv/kali-data/data/index.json";
-import themes from "../dataset/themes/themes.data.json";
+import annuaire from "../dataset/annuaire/annuaire.data.json";
+import themes from "../dataset/datafiller/themes.data.json";
 
 const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";

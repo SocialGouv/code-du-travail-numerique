@@ -101,7 +101,8 @@ function* cdtnDocumentsGen() {
       id,
       title,
       description,
-      themeCdtn,
+      parents,
+      theme,
       text,
       raw,
       date,
@@ -113,8 +114,8 @@ function* cdtnDocumentsGen() {
       title,
       slug: slugify(title),
       description: description,
-      breadcrumbs: themeCdtn,
-      theme: themeCdtn && themeCdtn[themeCdtn.length - 1].slug,
+      breadcrumbs: parents,
+      theme: theme,
       text,
       raw,
       date,
@@ -153,11 +154,13 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Themes ===");
-  yield require("../dataset/themes/themes.json").map(({ slug, label }) => ({
-    source: SOURCES.THEMES,
-    title: label,
-    slug
-  }));
+  yield require("../dataset/datafiller/themes.data.json").map(
+    ({ slug, title }) => ({
+      source: SOURCES.THEMES,
+      title: title,
+      slug
+    })
+  );
 
   logger.info("=== Courriers ===");
   yield require("../dataset/export-courriers.json").map(
