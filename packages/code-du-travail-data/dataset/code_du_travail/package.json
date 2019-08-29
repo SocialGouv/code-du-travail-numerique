@@ -9,7 +9,7 @@
     "lodash.flatten": "^4.4.0",
     "node-fetch": "^2.6.0",
     "p-all": "^2.1.0",
-    "simple-oauth2": "^2.2.1",
+    "simple-oauth2": "^2.3.0",
     "slugify": "^1.3.4"
   },
   "scripts": {
