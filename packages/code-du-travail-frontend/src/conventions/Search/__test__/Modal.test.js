@@ -1,17 +1,6 @@
 import React from "react";
-<<<<<<< HEAD:packages/code-du-travail-frontend/src/home/__tests__/ConventionModal.test.js
 import { render } from "@testing-library/react";
-import ConventionModal from "../ConventionModal";
-
-jest.mock("../../common/convention.service", () => ({
-  searchIdcc: jest.fn(),
-  searchCompanies: jest.fn(),
-  getCompany: jest.fn()
-}));
-=======
-import { render } from "react-testing-library";
 import ConventionModal from "../Modal";
->>>>>>> tests:packages/code-du-travail-frontend/src/conventions/Search/__test__/Modal.test.js
 
 // Trouvez votre convention collective
 
