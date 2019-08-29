@@ -1,10 +1,5 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
-const {
-  getTheme,
-  getBreadcrumbs,
-  getChildren
-} = require("@cdt/data...themes/query");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchByThemeBody = require("../search/searchByTheme.elastic");
 const {
@@ -89,6 +84,7 @@ router.get("/themes/:slug", async ctx => {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
   // rewrite refs to match documents inside ES index
+  // todo(perf): we should group ES resolution
   const responseBody = {
     ...response.body,
     hits: {
