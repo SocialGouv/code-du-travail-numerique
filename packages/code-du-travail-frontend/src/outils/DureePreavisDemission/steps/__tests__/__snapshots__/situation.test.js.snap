@@ -7,41 +7,41 @@ exports[`situations recapSituation should return a text recap 1`] = `
       <React.Fragment>
         <React.Fragment>
           appartenant à la catégorie 
-          <em>
+          <strong>
             Etam
-          </em>
+          </strong>
         </React.Fragment>
         , 
         <React.Fragment>
-          avec 
-          <em>
+          ayant 
+          <strong>
             30
-          </em>
+          </strong>
            d’ancienneté
         </React.Fragment>
       </React.Fragment>
       , 
       <React.Fragment>
         dans le groupe 
-        <em>
+        <strong>
           IV
-        </em>
+        </strong>
       </React.Fragment>
     </React.Fragment>
     , 
     <React.Fragment>
       avec un échelon de 
-      <em>
+      <strong>
         375
-      </em>
+      </strong>
     </React.Fragment>
   </React.Fragment>
   , 
   <React.Fragment>
     avec un coefficient 
-    <em>
+    <strong>
       12
-    </em>
+    </strong>
   </React.Fragment>
 </React.Fragment>
 `;

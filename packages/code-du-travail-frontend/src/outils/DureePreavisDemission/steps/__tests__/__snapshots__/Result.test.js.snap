@@ -70,31 +70,20 @@ exports[`<StepResult /> should render CC answer 1`] = `
     Durée du préavis
   </h2>
   <p>
-    En cas de démission, la convention collective
-     
-    <strong>
-      Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
-       (
-      0044
-      )
-    </strong>
-     
-    prévoit le respect d’un préavis d’une durée de
-     
+    En cas de démission, la 
+    Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+     (
+    0044
+    ) prévoit le respect d’un préavis d’une durée de 
     <strong>
       3 mois
     </strong>
-     pour un salarié
-     
+     pour un salarié 
     appartenant à la catégorie 
-    <em>
+    <strong>
       Ingénieurs, Cadres
-    </em>
-    , 
-    dans le groupe 
-    <em>
-      IV
-    </em>
+    </strong>
+    .
   </p>
   <div
     class="c1"
@@ -136,7 +125,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
       class="c3"
       role="alert"
     >
-      Le contrat de travail, un accord collectif d’entreprise ou un usage peut prévoir une durée de préavis plus courte. L’employeur peut dispenser le salarié d’exécuter le préavis.
+      Si le contrat de travail, un accord collectif d’entreprise ou un usage prévoit une durée de préavis différente, il faut appliquer la durée la plus courte.
     </div>
   </div>
 </div>

@@ -330,24 +330,14 @@ exports[`<StepInformations /> should render catégorie 1`] = `
         ...
       </option>
       <option
-        value="1| Ouvriers"
+        value="7| Ouvriers, Employés, Techniciens"
       >
-        Ouvriers
+        Ouvriers, Employés, Techniciens
       </option>
       <option
-        value="4| Employés"
+        value="12| Techniciens et agents de maîtrise"
       >
-        Employés
-      </option>
-      <option
-        value="5| Techniciens"
-      >
-        Techniciens
-      </option>
-      <option
-        value="15| Agents de maîtrise"
-      >
-        Agents de maîtrise
+        Techniciens et agents de maîtrise
       </option>
       <option
         value="16| Ingénieurs, Cadres"
@@ -551,24 +541,14 @@ exports[`<StepInformations /> should render coefficient 1`] = `
         ...
       </option>
       <option
-        value="1| Ouvriers"
+        value="7| Ouvriers, Employés, Techniciens"
       >
-        Ouvriers
+        Ouvriers, Employés, Techniciens
       </option>
       <option
-        value="4| Employés"
+        value="12| Techniciens et agents de maîtrise"
       >
-        Employés
-      </option>
-      <option
-        value="5| Techniciens"
-      >
-        Techniciens
-      </option>
-      <option
-        value="15| Agents de maîtrise"
-      >
-        Agents de maîtrise
+        Techniciens et agents de maîtrise
       </option>
       <option
         value="16| Ingénieurs, Cadres"

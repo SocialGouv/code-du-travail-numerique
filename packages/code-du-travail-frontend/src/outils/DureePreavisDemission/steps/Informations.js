@@ -33,9 +33,15 @@ function StepInformations({ form }) {
           label={questions[key]}
           onChange={() => {
             form.batch(() => {
-              const resetFormProps = Object.keys(values).filter(
-                k => !pastQuestions.find(([key]) => k === key)
-              );
+              // list keys that no longer exist
+              const resetFormProps = Object.keys(values)
+                .filter(k => !pastQuestions.find(([key]) => k === key))
+                .concat(
+                  // list keys that need to be reseted
+                  pastQuestions
+                    .slice(pastQuestions.findIndex(([k]) => k === key) + 1)
+                    .map(([key]) => key)
+                );
               resetFormProps.forEach(key => form.change(key, undefined));
             });
           }}

@@ -15,7 +15,7 @@ describe("<StepInformations />", () => {
   it("should render coefficient", () => {
     const { container } = renderForm(StepInformations, {
       branche: "0044",
-      catégorie: "4| Employés"
+      catégorie: "7| Ouvriers, Employés, Techniciens"
     });
     expect(container).toMatchSnapshot();
   });

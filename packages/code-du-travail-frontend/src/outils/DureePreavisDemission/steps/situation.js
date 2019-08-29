@@ -28,31 +28,31 @@ export function getRecapLabel([key, value]) {
     case "catégorie":
       return (
         <>
-          appartenant à la catégorie <em>{displayedValue}</em>
+          appartenant à la catégorie <strong>{displayedValue}</strong>
         </>
       );
     case "ancienneté":
       return (
         <>
-          avec <em>{displayedValue}</em> d’ancienneté
+          ayant <strong>{displayedValue}</strong> d’ancienneté
         </>
       );
     case "groupe":
       return (
         <>
-          dans le groupe <em>{displayedValue}</em>
+          dans le groupe <strong>{displayedValue}</strong>
         </>
       );
     case "coefficient":
       return (
         <>
-          avec un coefficient <em>{displayedValue}</em>
+          avec un coefficient <strong>{displayedValue}</strong>
         </>
       );
     case "echelon":
       return (
         <>
-          avec un échelon de <em>{displayedValue}</em>
+          avec un échelon de <strong>{displayedValue}</strong>
         </>
       );
     default: {

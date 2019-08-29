@@ -28,19 +28,15 @@ function StepResult({ form }) {
         <>
           <SectionTitle>Durée du préavis</SectionTitle>
           <p>
-            En cas de démission, la convention collective{" "}
-            <strong>
-              {ccLabel} ({id})
-            </strong>{" "}
-            prévoit le respect d’un préavis d’une durée de{" "}
-            <strong>{situation.answer}</strong> pour un salarié{" "}
-            {recapSituation(situation.criteria)}
+            En cas de démission, la {ccLabel} ({id}) prévoit le respect d’un
+            préavis d’une durée de <strong>{situation.answer}</strong> pour un
+            salarié {recapSituation(situation.criteria)}.
           </p>
           {situation.ref && situation.refUrl && getRef(situation)}
           <Toast variant="info">
-            Le contrat de travail, un accord collectif d’entreprise ou un usage
-            peut prévoir une durée de préavis plus courte. L’employeur peut
-            dispenser le salarié d’exécuter le préavis.
+            Si le contrat de travail, un accord collectif d’entreprise ou un
+            usage prévoit une durée de préavis différente, il faut appliquer la
+            durée la plus courte.
           </Toast>
         </>
       );

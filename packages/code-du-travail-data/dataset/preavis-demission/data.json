@@ -17,12 +17,12 @@
         "id": "0044",
         "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1| Ouvriers",
+      "catégorie": "7| Ouvriers, Employés, Techniciens",
       "coefficient": "1| inférieur à 160"
     },
     "type": "préavis de démission",
     "answer": "15 jours",
-    "ref": null,
+    "ref": "Avenant n°1 article 27",
     "refUrl": null
   },
   {
@@ -31,12 +31,12 @@
         "id": "0044",
         "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1| Ouvriers",
+      "catégorie": "7| Ouvriers, Employés, Techniciens",
       "coefficient": "2| entre 160 (inclus) et 190"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
-    "ref": null,
+    "ref": "Avenant n°1 article 27",
     "refUrl": null
   },
   {
@@ -45,12 +45,12 @@
         "id": "0044",
         "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "1| Ouvriers",
+      "catégorie": "7| Ouvriers, Employés, Techniciens",
       "coefficient": "3| supérieur à 190 (inclus)"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
-    "ref": null,
+    "ref": "Avenant n°1 article 27",
     "refUrl": null
   },
   {
@@ -59,13 +59,12 @@
         "id": "0044",
         "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "15| Agents de maîtrise",
-      "groupe": "2| IV",
+      "catégorie": "12| Techniciens et agents de maîtrise",
       "coefficient": "4| inférieur à 275"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
-    "ref": null,
+    "ref": "Avenant n°2 article 20",
     "refUrl": null
   },
   {
@@ -74,55 +73,12 @@
         "id": "0044",
         "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "15| Agents de maîtrise",
-      "groupe": "2| IV",
+      "catégorie": "12| Techniciens et agents de maîtrise",
       "coefficient": "5| supérieur à 275 (inclus)"
     },
     "type": "préavis de démission",
-    "answer": "3 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "16| Ingénieurs, Cadres",
-      "groupe": "2| IV"
-    },
-    "type": "préavis de démission",
-    "answer": "3 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "4| Employés",
-      "coefficient": "1| inférieur à 160"
-    },
-    "type": "préavis de démission",
-    "answer": "15 jours",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "4| Employés",
-      "coefficient": "2| entre 160 (inclus) et 190"
-    },
-    "type": "préavis de démission",
     "answer": "1 mois",
-    "ref": null,
+    "ref": "Avenant n°2 article 20",
     "refUrl": null
   },
   {
@@ -131,72 +87,11 @@
         "id": "0044",
         "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
       },
-      "catégorie": "4| Employés",
-      "coefficient": "3| supérieur à 190 (inclus)"
-    },
-    "type": "préavis de démission",
-    "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "5| Techniciens",
-      "groupe": "1| de I à III",
-      "coefficient": "2| entre 160 (inclus) et 190"
-    },
-    "type": "préavis de démission",
-    "answer": "1 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "5| Techniciens",
-      "groupe": "1| de I à III",
-      "coefficient": "3| supérieur à 190 (inclus)"
-    },
-    "type": "préavis de démission",
-    "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "5| Techniciens",
-      "groupe": "2| IV",
-      "coefficient": "4| inférieur à 275"
-    },
-    "type": "préavis de démission",
-    "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
-      },
-      "catégorie": "5| Techniciens",
-      "groupe": "2| IV",
-      "coefficient": "5| supérieur à 275 (inclus)"
+      "catégorie": "16| Ingénieurs, Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
-    "ref": null,
+    "ref": "Avenant n°3 article 4",
     "refUrl": null
   },
   {
@@ -218,7 +113,7 @@
         "id": "0675",
         "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -232,7 +127,7 @@
         "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
       "catégorie": "4| Employés",
-      "ancienneté": "3| de 1 mois à 6 mois "
+      "ancienneté": "2| de 1 mois à 6 mois "
     },
     "type": "préavis de démission",
     "answer": "15 jours",
@@ -246,7 +141,7 @@
         "label": "Convention collective nationale des maisons à succursales de vente au détail d'habillement du 30 juin 1972.  Etendue par arrêté du 8 décembre 1972 (JO du 7 janvier 1973)."
       },
       "catégorie": "4| Employés",
-      "ancienneté": "2| plus de 6 mois"
+      "ancienneté": "3| plus de 6 mois"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
@@ -259,13 +154,13 @@
         "id": "0843",
         "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "14| ETAM",
-      "ancienneté": "1| moins de 6 mois"
+      "catégorie": "19| Personnel de fabrication, personnel de vente et personnel de services",
+      "ancienneté": "1| 6 mois ou moins"
     },
     "type": "préavis de démission",
     "answer": "1 semaine",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 32 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -273,13 +168,13 @@
         "id": "0843",
         "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "14| ETAM",
-      "ancienneté": "6| de 6 mois à 2 ans"
+      "catégorie": "19| Personnel de fabrication, personnel de vente et personnel de services",
+      "ancienneté": "3| plus de 6 mois"
     },
     "type": "préavis de démission",
     "answer": "2 semaines",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 32 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005873153&cidTexte=KALITEXT000005688564&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -287,68 +182,12 @@
         "id": "0843",
         "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
       },
-      "catégorie": "14| ETAM",
-      "ancienneté": "8| plus de 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "2 semaines",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0843",
-        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
-      },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0843",
-        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
-      },
-      "catégorie": "6| Ouvriers, Employés",
-      "ancienneté": "1| moins de 6 mois"
-    },
-    "type": "préavis de démission",
-    "answer": "1 semaine",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0843",
-        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
-      },
-      "catégorie": "6| Ouvriers, Employés",
-      "ancienneté": "6| de 6 mois à 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "2 semaines",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "0843",
-        "label": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978."
-      },
-      "catégorie": "6| Ouvriers, Employés",
-      "ancienneté": "8| plus de 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "2 semaines",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 6 de l'annexe : Statut du personnel d'encadrement",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000038678849&cidTexte=KALITEXT000005688564&dateTexte=20190827"
   },
   {
     "criteria": {
@@ -384,8 +223,8 @@
         "id": "1090",
         "label": "Convention collective nationale du commerce et de la réparation de l'automobile, du cycle et du motocycle et des activités connexes, ainsi que du contrôle technique automobile du 15 janvier 1981. Etendue par arrêté du 30 octobre 1981 JONC 3 décembre 1981."
       },
-      "catégorie": "19| Cadres",
-      "ancienneté": "1| moins de 6 mois"
+      "catégorie": "20| Cadres",
+      "ancienneté": "1| 6 mois ou moins"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -426,7 +265,7 @@
         "id": "1147",
         "label": "Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981"
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -440,7 +279,7 @@
         "label": "Convention collective nationale du personnel des cabinets médicaux  du 14 octobre 1981"
       },
       "catégorie": "3| Non-cadres",
-      "ancienneté": "2| plus de 6 mois"
+      "ancienneté": "3| plus de 6 mois"
     },
     "type": "préavis de démission",
     "answer": "15 jours",
@@ -505,7 +344,7 @@
         "id": "1404",
         "label": "Convention collective nationale métropolitaine des entreprises de la maintenance, distribution et location de matériels agricoles, de travaux publics, de bâtiment, de manutention, de motoculture de plaisance et activités connexes, dite SDLM du 23 avril 2012"
       },
-      "catégorie": "23| Cadres (niveau VI et plus) "
+      "catégorie": "25| Cadres (niveau VI et plus) "
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -531,7 +370,7 @@
         "id": "1483",
         "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -545,7 +384,7 @@
         "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
       "catégorie": "4| Employés",
-      "ancienneté": "1| moins de 6 mois"
+      "ancienneté": "1| 6 mois ou moins"
     },
     "type": "préavis de démission",
     "answer": "2 semaines",
@@ -559,7 +398,7 @@
         "label": "Convention collective nationale du commerce de détail de l'habillement et des articles textiles du 25 novembre 1987, révisée par avenant du 17 juin 2004"
       },
       "catégorie": "4| Employés",
-      "ancienneté": "2| plus de 6 mois"
+      "ancienneté": "3| plus de 6 mois"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
@@ -576,8 +415,8 @@
     },
     "type": "préavis de démission",
     "answer": "3 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 15 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -585,14 +424,14 @@
         "id": "1486",
         "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "17| Maîtrises",
-      "ancienneté": "7| moins de 2 ans",
+      "catégorie": "14| ETAM",
+      "ancienneté": "7| 2 ans ou moins",
       "coefficient": "6| de 200 à 355"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 15 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -600,14 +439,14 @@
         "id": "1486",
         "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "17| Maîtrises",
+      "catégorie": "14| ETAM",
       "ancienneté": "8| plus de 2 ans",
       "coefficient": "6| de 200 à 355"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 15 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -615,14 +454,14 @@
         "id": "1486",
         "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "17| Maîtrises",
-      "ancienneté": "7| moins de 2 ans",
+      "catégorie": "14| ETAM",
+      "ancienneté": "7| 2 ans ou moins",
       "coefficient": "7| de 400 à 500"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 15 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -630,14 +469,14 @@
         "id": "1486",
         "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "17| Maîtrises",
+      "catégorie": "14| ETAM",
       "ancienneté": "8| plus de 2 ans",
       "coefficient": "7| de 400 à 500"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 15 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005851434&cidTexte=KALITEXT000005679895&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -645,27 +484,12 @@
         "id": "1486",
         "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
       },
-      "catégorie": "20| Chargés d'enquête intermittent",
-      "ancienneté": "7| moins de 2 ans"
+      "catégorie": "21| Chargés d'enquête intermittents"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "1486",
-        "label": "Convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils du 15 décembre 1987. "
-      },
-      "catégorie": "20| Chargés d'enquête intermittent",
-      "ancienneté": "8| plus de 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "2 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 21 de l'annexe relative aux enquêteurs",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCC.do?idSectionTA=KALISCTA000005761991&cidTexte=KALITEXT000005679885&idConvention=KALICONT000005635173&dateTexte=29990101"
   },
   {
     "criteria": {
@@ -673,7 +497,7 @@
         "id": "1505",
         "label": "Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988."
       },
-      "catégorie": "21| Agents de maîtrise (niveau V)"
+      "catégorie": "22| Agents de maîtrise (niveau V)"
     },
     "type": "préavis de démission",
     "answer": "2 mois",
@@ -686,7 +510,7 @@
         "id": "1505",
         "label": "Convention collective nationale du commerce de détail des fruits et légumes, épicerie et produits laitiers du 15 avril 1988.  Etendue par arrêté du 20 juin 1988, JORF 25 juin 1988."
       },
-      "catégorie": "23| Cadres (niveau VI) "
+      "catégorie": "24| Cadres (niveau VI) "
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -725,7 +549,7 @@
         "id": "1606",
         "label": "Convention collective nationale du bricolage (Vente au détail en libre-service) du 30 septembre 1991.  "
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -778,7 +602,7 @@
         "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
       "catégorie": "15| Agents de maîtrise",
-      "ancienneté": "1| moins de 6 mois"
+      "ancienneté": "1| 6 mois ou moins"
     },
     "type": "préavis de démission",
     "answer": "15 jours",
@@ -819,13 +643,13 @@
         "id": "1979",
         "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "19| Cadres",
-      "ancienneté": "1| moins de 6 mois"
+      "catégorie": "20| Cadres",
+      "ancienneté": "1| 6 mois ou moins"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 30.1 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -833,27 +657,13 @@
         "id": "1979",
         "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
-      "catégorie": "19| Cadres",
-      "ancienneté": "6| de 6 mois à 2 ans"
+      "catégorie": "20| Cadres",
+      "ancienneté": "3| plus de 6 mois"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
-    "ref": null,
-    "refUrl": null
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "1979",
-        "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
-      },
-      "catégorie": "19| Cadres",
-      "ancienneté": "8| plus de 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "3 mois",
-    "ref": null,
-    "refUrl": null
+    "ref": "Article 30.1 de la convention collective",
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do;jsessionid=DD88109D2F553DCDAAF4B80768DD7546.tplgfr25s_1?idArticle=KALIARTI000005826296&cidTexte=KALITEXT000005670044&dateTexte=29990101&categorieLien=id"
   },
   {
     "criteria": {
@@ -862,7 +672,7 @@
         "label": "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997"
       },
       "catégorie": "4| Employés",
-      "ancienneté": "1| moins de 6 mois"
+      "ancienneté": "1| 6 mois ou moins"
     },
     "type": "préavis de démission",
     "answer": "8 jours",
@@ -903,7 +713,7 @@
         "id": "1996",
         "label": "Convention collective nationale de la pharmacie d'officine du 3 décembre 1997.  Etendue par arrêté du 13 août 1998 (JO du 8 septembre 1998)."
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -929,7 +739,7 @@
         "id": "2120",
         "label": "Convention collective nationale de la banque du 10 janvier 2000.  Etendue par arrêté du 17 novembre 2004 JORF 11 décembre 2004."
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -968,7 +778,7 @@
         "id": "2511",
         "label": "Convention collective nationale du sport du 7 juillet 2005 étendue par arrêté du 21 novembre 2006"
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -1022,7 +832,7 @@
         "id": "3043",
         "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "19| Cadres"
+      "catégorie": "20| Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
@@ -1036,7 +846,7 @@
         "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
       "catégorie": "2| Agents de propreté",
-      "ancienneté": "3| de 1 mois à 6 mois "
+      "ancienneté": "2| de 1 mois à 6 mois "
     },
     "type": "préavis de démission",
     "answer": "2 jours",
@@ -1050,7 +860,7 @@
         "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
       "catégorie": "2| Agents de propreté",
-      "ancienneté": "6| de 6 mois à 2 ans"
+      "ancienneté": "3| plus de 6 mois"
     },
     "type": "préavis de démission",
     "answer": "1 semaine",
@@ -1063,36 +873,7 @@
         "id": "3043",
         "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
       },
-      "catégorie": "2| Agents de propreté",
-      "ancienneté": "8| plus de 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "1 semaine",
-    "ref": "Article 4.11.2 de la convention collective",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "3043",
-        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
-      },
-      "catégorie": "4| Employés",
-      "ancienneté": "4| de 1 mois à 2 ans"
-    },
-    "type": "préavis de démission",
-    "answer": "1 mois",
-    "ref": "Article 4.11.2 de la convention collective",
-    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000027172424&cidTexte=KALITEXT000027172340"
-  },
-  {
-    "criteria": {
-      "branche": {
-        "id": "3043",
-        "label": "Convention collective nationale des entreprises de propreté et services associés du 26 juillet 2011"
-      },
-      "catégorie": "4| Employés",
-      "ancienneté": "8| plus de 2 ans"
+      "catégorie": "4| Employés"
     },
     "type": "préavis de démission",
     "answer": "1 mois",
