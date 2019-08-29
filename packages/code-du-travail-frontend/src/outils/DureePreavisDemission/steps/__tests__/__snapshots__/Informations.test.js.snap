@@ -99,7 +99,7 @@ exports[`<StepInformations /> should render 1`] = `
       <option
         value="0044"
       >
-        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956
       </option>
       <option
         value="0675"
@@ -255,7 +255,7 @@ exports[`<StepInformations /> should render catégorie 1`] = `
       <option
         value="0044"
       >
-        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956
       </option>
       <option
         value="0675"
@@ -466,7 +466,7 @@ exports[`<StepInformations /> should render coefficient 1`] = `
       <option
         value="0044"
       >
-        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952
+        Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956
       </option>
       <option
         value="0675"
