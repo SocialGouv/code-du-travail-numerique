@@ -1,11 +1,15 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import { StepAnciennete, computeAnciennete } from "../Anciennete";
+import arrayMutators from "final-form-arrays";
 import { Form } from "react-final-form";
+import { StepAnciennete, computeAnciennete } from "../Anciennete";
 
 function renderForm(data) {
   return render(
     <Form
+      mutators={{
+        ...arrayMutators
+      }}
       validate={StepAnciennete.validate}
       initialValues={{ ...data }}
       onSubmit={jest.fn()}

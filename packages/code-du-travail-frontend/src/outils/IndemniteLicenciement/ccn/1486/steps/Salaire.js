@@ -46,20 +46,21 @@ export const Salaire = ({ form }) => {
               }
             }}
           />
-          {data.hasBrancheNewRegularSalaire === true && <RegularNewSalaire />}
-          {data.hasBrancheNewRegularSalaire === false && (
-            <IrregularNewSalaire />
+          {data.hasBrancheNewRegularSalaire === true && (
+            <RegularNewSalaire name="brancheNewRegularSalaire" />
           )}
+
+          <IrregularNewSalaire name="brancheNewIrregularSalaire" />
         </>
       )}
     </>
   );
 };
 
-const RegularNewSalaire = () => (
+const RegularNewSalaire = ({ name }) => (
   <>
     <Field
-      name="brancheNewRegularSalaire"
+      name={name}
       validate={isNumber}
       subscription={{
         value: true,
@@ -87,11 +88,11 @@ const RegularNewSalaire = () => (
   </>
 );
 
-const IrregularNewSalaire = () => (
+const IrregularNewSalaire = ({ name }) => (
   <>
-    <FieldArray name={"brancheNewIrregularSalaire"}>
-      {({ fields }) => (
-        <>
+    <FieldArray name={name}>
+      {({ fields }) =>
+        fields.length > 0 && (
           <Table>
             <thead>
               <tr>
@@ -157,8 +158,8 @@ const IrregularNewSalaire = () => (
               ))}
             </tbody>
           </Table>
-        </>
-      )}
+        )
+      }
     </FieldArray>
   </>
 );

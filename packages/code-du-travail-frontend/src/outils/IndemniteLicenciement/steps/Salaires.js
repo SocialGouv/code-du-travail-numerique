@@ -5,7 +5,7 @@ import { Field } from "react-final-form";
 import { theme } from "@cdt/ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Input, SectionTitle, InlineError } from "../../common/stepStyles";
+import { Input, InlineError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 import { parse } from "../../common/date";
 import { YesNoQuestion } from "../components/YesNoQuestion";
@@ -41,79 +41,79 @@ function StepSalaires({ form }) {
         }}
       />
       <Field name="hasTempsPartiel">
-        {({ input }) =>
-          input.value === true ? (
-            <>
-              <SectionTitle>Périodes de travail</SectionTitle>
-              <p>Renseigner vos différentes périodes de travail</p>
-              <SalaireTempsPartiel
-                name="salairePeriods"
-                onChange={salairePeriods => {
-                  if (salairePeriods.length === 0) {
-                    form.change("hasTempsPartiel", false);
-                  }
-                }}
-              />
-            </>
-          ) : input.value === false ? (
-            <>
-              <YesNoQuestion
-                name="hasSameSalaire"
-                label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
-                onChange={hasSameSalaire => {
-                  if (hasSameSalaire) {
-                    form.change("salaires", []);
-                  } else {
-                    form.batch(() => {
-                      const { values } = form.getState();
-                      form.change("salaires", getSalairesPeriods(values));
-                      form.change("salaire", null);
-                    });
-                  }
-                }}
-              />
-              <Field name="hasSameSalaire">
-                {({ input }) =>
-                  input.value === true ? (
-                    <Field
-                      name="salaire"
-                      validate={isNumber}
-                      subscription={{
-                        value: true,
-                        error: true,
-                        touched: true,
-                        invalid: true
-                      }}
-                    >
-                      {({ input, meta: { touched, error, invalid } }) => (
-                        <>
-                          <p>
-                            Salaire mensuel brut (prendre en compte les primes
-                            et avantages en nature)
-                          </p>
-                          <CurrencyWrapper>
-                            <NumberInput
-                              {...input}
-                              size="10"
-                              type="number"
-                              invalid={touched && invalid}
-                            />
-                            <Currency aria-hidden="true">€</Currency>
-                          </CurrencyWrapper>
-                          {error && touched && invalid ? (
-                            <InlineError>{error}</InlineError>
-                          ) : null}
-                        </>
-                      )}
-                    </Field>
-                  ) : input.value === false ? (
-                    <SalaireTempsPlein name="salaires" />
-                  ) : null
+        {({ input }) => (
+          <>
+            <SalaireTempsPartiel
+              name="salairePeriods"
+              visible={input.value}
+              onChange={salairePeriods => {
+                if (salairePeriods.length === 0) {
+                  form.change("hasTempsPartiel", false);
                 }
-              </Field>
-            </>
-          ) : null
-        }
+              }}
+            />
+
+            {input.value === false && (
+              <>
+                <YesNoQuestion
+                  name="hasSameSalaire"
+                  label="Avez-vous eu le même salaire lors des 12 derniers mois&nbsp;?"
+                  onChange={hasSameSalaire => {
+                    if (hasSameSalaire) {
+                      form.change("salaires", []);
+                    } else {
+                      form.batch(() => {
+                        const { values } = form.getState();
+                        form.change("salaires", getSalairesPeriods(values));
+                        form.change("salaire", null);
+                      });
+                    }
+                  }}
+                />
+                <Field name="hasSameSalaire">
+                  {({ input }) => (
+                    <>
+                      {input.value && (
+                        <Field
+                          name="salaire"
+                          validate={isNumber}
+                          subscription={{
+                            value: true,
+                            error: true,
+                            touched: true,
+                            invalid: true
+                          }}
+                        >
+                          {({ input, meta: { touched, error, invalid } }) => (
+                            <>
+                              <p>
+                                Salaire mensuel brut (prendre en compte les
+                                primes et avantages en nature)
+                              </p>
+                              <CurrencyWrapper>
+                                <NumberInput
+                                  {...input}
+                                  size="10"
+                                  type="number"
+                                  invalid={touched && invalid}
+                                />
+                                <Currency aria-hidden="true">€</Currency>
+                              </CurrencyWrapper>
+                              {error && touched && invalid ? (
+                                <InlineError>{error}</InlineError>
+                              ) : null}
+                            </>
+                          )}
+                        </Field>
+                      )}
+                      <SalaireTempsPlein name="salaires" />
+                    </>
+                  )}
+                </Field>
+              </>
+            )}
+          </>
+        )}
       </Field>
     </>
   );

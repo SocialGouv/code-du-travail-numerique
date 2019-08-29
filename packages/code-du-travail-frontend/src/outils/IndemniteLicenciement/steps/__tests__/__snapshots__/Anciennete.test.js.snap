@@ -233,5 +233,6 @@ exports[`<Anciennete /> should render 1`] = `
     </label>
   </div>
   
+  
 </div>
 `;

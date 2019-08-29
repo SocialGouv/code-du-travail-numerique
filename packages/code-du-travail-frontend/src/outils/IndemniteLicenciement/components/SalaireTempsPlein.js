@@ -11,8 +11,8 @@ import { isNumber } from "../../common/validators";
 function SalaireTempsPlein({ name }) {
   return (
     <FieldArray name={name}>
-      {({ fields }) => (
-        <>
+      {({ fields }) =>
+        fields.length > 0 && (
           <Table>
             <caption>
               Salaire mensuel brut (prendre en compte les primes et avantages en
@@ -83,8 +83,8 @@ function SalaireTempsPlein({ name }) {
               ))}
             </tbody>
           </Table>
-        </>
-      )}
+        )
+      }
     </FieldArray>
   );
 }

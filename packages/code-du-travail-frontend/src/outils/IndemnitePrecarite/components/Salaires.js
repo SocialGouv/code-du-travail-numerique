@@ -6,16 +6,18 @@ import { Button, theme } from "@cdt/ui";
 import { CurrencyField } from "../../common/CurrencyField";
 import { UID } from "react-uid";
 
-function Salaires({ name, onChange }) {
+function Salaires({ name, visible = true, onChange }) {
   return (
     <>
       <FieldArray name={name}>
         {({ fields }) => (
           <>
-            <p>
-              Indiquez vos salaires mensuels bruts perçus pendant votre
-              contrat&nbsp;*
-            </p>
+            {visible && (
+              <p>
+                Indiquez vos salaires mensuels bruts perçus pendant votre
+                contrat&nbsp;*
+              </p>
+            )}
             {fields.map((name, index) => (
               <Row key={index}>
                 <UID>
@@ -35,12 +37,14 @@ function Salaires({ name, onChange }) {
                 </UID>
               </Row>
             ))}
-            <AddButton
-              variant="link"
-              onClick={() => fields.push({ salaire: null })}
-            >
-              Ajouter un salaire
-            </AddButton>
+            {visible > 0 && (
+              <AddButton
+                variant="link"
+                onClick={() => fields.push({ salaire: null })}
+              >
+                Ajouter un salaire
+              </AddButton>
+            )}
             {onChange && (
               <OnChange name={name}>{values => onChange(values)}</OnChange>
             )}

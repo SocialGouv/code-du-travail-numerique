@@ -8,15 +8,17 @@ import { Button, theme } from "@cdt/ui";
 import { Input, InlineError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
-function Primes({ name, onChange }) {
+function Primes({ name, visible = true, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (
         <>
-          <p>
-            Primes annuelles ou exceptionnelles perçues au cours des 3 derniers
-            mois
-          </p>
+          {visible && (
+            <p>
+              Primes annuelles ou exceptionnelles perçues au cours des 3
+              derniers mois
+            </p>
+          )}
           {fields.map((name, index) => (
             <Row key={name}>
               <Field
@@ -49,12 +51,14 @@ function Primes({ name, onChange }) {
               </DelButton>
             </Row>
           ))}
-          <AddButton
-            variant="link"
-            onClick={() => fields.push({ prime: null })}
-          >
-            Ajouter une prime
-          </AddButton>
+          {visible && (
+            <AddButton
+              variant="link"
+              onClick={() => fields.push({ prime: null })}
+            >
+              Ajouter une prime
+            </AddButton>
+          )}
           {onChange && (
             <OnChange name={name}>{values => onChange(values)}</OnChange>
           )}

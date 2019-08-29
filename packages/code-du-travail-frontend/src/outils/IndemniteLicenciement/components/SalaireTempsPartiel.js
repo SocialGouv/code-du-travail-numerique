@@ -4,19 +4,25 @@ import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import { Button, theme } from "@cdt/ui";
-import { Input, InlineError } from "../../common/stepStyles";
+import { Input, InlineError, SectionTitle } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 
-function SalaireTempsPartiel({ name, onChange }) {
+function SalaireTempsPartiel({ name, visible = true, onChange }) {
   return (
     <FieldArray name={name}>
       {({ fields }) => (
         <>
-          <Row>
-            <CellHeader as={CellType}>Type de contrat</CellHeader>
-            <CellHeader as={CellDuration}>Durée en mois</CellHeader>
-            <CellHeader>Rémunération</CellHeader>
-          </Row>
+          {visible && (
+            <>
+              <SectionTitle>Périodes de travail</SectionTitle>
+              <p>Renseigner vos différentes périodes de travail</p>
+              <Row>
+                <CellHeader as={CellType}>Type de contrat</CellHeader>
+                <CellHeader as={CellDuration}>Durée en mois</CellHeader>
+                <CellHeader>Rémunération</CellHeader>
+              </Row>
+            </>
+          )}
           {fields.map((name, index) => (
             <Row key={name}>
               <CellType>
@@ -92,19 +98,21 @@ function SalaireTempsPartiel({ name, onChange }) {
               </div>
             </Row>
           ))}
-          <AddButton
-            variant="link"
-            type="button"
-            onClick={() =>
-              fields.push({
-                type: TEMPS_PARTIEL,
-                duration: null,
-                salary: null
-              })
-            }
-          >
-            Ajouter une période
-          </AddButton>
+          {visible && (
+            <AddButton
+              variant="link"
+              type="button"
+              onClick={() =>
+                fields.push({
+                  type: TEMPS_PARTIEL,
+                  duration: null,
+                  salary: null
+                })
+              }
+            >
+              Ajouter une période
+            </AddButton>
+          )}
           {onChange && (
             <OnChange name={name}>{values => onChange(values)}</OnChange>
           )}
