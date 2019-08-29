@@ -34,6 +34,9 @@ const ROOT_CRUMB = {
 };
 
 function getBreadcrumbs(items = []) {
+  if (!items.length) {
+    return [];
+  }
   return [ROOT_CRUMB]
     .concat(items.slice(0, -1))
     .map(({ slug, title }) => (
@@ -41,7 +44,9 @@ function getBreadcrumbs(items = []) {
         <a title={`Voir le theme ${title}`}>{title}</a>
       </Link>
     ))
-    .concat([<span>{items[items.length - 1].title}</span>]);
+    .concat(
+      (items.length && [<span>{items[items.length - 1].title}</span>]) || []
+    );
 }
 function Answer({
   router,
@@ -64,7 +69,9 @@ function Answer({
         <title>{title}</title>
       </Head>
       <Search />
-      <Breadcrumbs items={getBreadcrumbs(breadcrumbs)} />
+      {breadcrumbs.length && (
+        <Breadcrumbs items={getBreadcrumbs(breadcrumbs)} />
+      )}
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (
