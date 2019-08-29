@@ -1,6 +1,5 @@
 import striptags from "striptags";
 import crypto from "crypto";
-import fs from "fs";
 import { logger } from "./logger";
 import slugify from "../slugify";
 
@@ -57,15 +56,15 @@ function getDuplicateSlugs(allDocuments) {
 
 function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
-  yield require("../dataset/conventions_collectives/ccn-list.json").map(
-    ({ slug, titre, url, num, id }) => ({
+  yield require("@socialgouv/kali-data/data/index.json").map(
+    ({ titre, num, id }) => ({
       source: SOURCES.CCN,
       id,
       idcc: num,
       title: titre,
-      slug: slug,
+      slug: slugify(`${num}-${titre}`.substring(0, 80)),
       text: `IDCC ${num} ${titre}`,
-      url
+      url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
     })
   );
 
@@ -273,7 +272,6 @@ function* cdtnCcnGen(list, batchSize = 20000000) {
   for (const { id } of list) {
     const jsonPath = `@socialgouv/kali-data/data/${id}.json`;
     const { sections, ...ccContent } = require(jsonPath);
-    const jsonSize = getFileSize(jsonPath);
     const texteDeBase = sections[0];
     const textesAttaches = sections.find(
       section => section.title === "Textes Attachés"
@@ -307,6 +305,8 @@ function* cdtnCcnGen(list, batchSize = 20000000) {
       });
     }
 
+    const jsonSize = JSON.stringify(data).length;
+
     if (bufferSize + jsonSize >= batchSize) {
       console.log(`batch max size ${bufferSize}`);
       yield buffer;
@@ -322,11 +322,6 @@ function* cdtnCcnGen(list, batchSize = 20000000) {
   }
 }
 
-function getFileSize(filepath) {
-  const path = require.resolve(filepath);
-  const { size } = fs.statSync(path);
-  return size;
-}
 export {
   flattenTags,
   makeSlug,
