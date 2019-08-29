@@ -1,4 +1,9 @@
 const fetch = require("node-fetch");
+const pLimit = require("p-limit");
+
+const elastic = require("./elastic");
+
+const limit = pLimit(5);
 
 /*
  fetch raw datafiller requetes data, filter and sort properly
@@ -8,6 +13,17 @@ const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records`;
+
+// convert datafiller references to valid ES references
+const toEsResults = results =>
+  Promise.all(
+    results.map(result =>
+      limit(async () => ({
+        ...result,
+        refs: await elastic.getReferences(result)
+      }))
+    )
+  );
 
 // for 2nd sort order after relevance
 // higher is better
@@ -74,6 +90,7 @@ module.exports = fetchAll;
 
 if (require.main === module) {
   fetchAll()
+    .then(toEsResults)
     .then(data => console.log(JSON.stringify(data, null, 2)))
     .catch(console.log);
 }

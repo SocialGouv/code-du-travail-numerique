@@ -1,13 +1,12 @@
 const fetch = require("node-fetch");
-const slugify = require("slugify");
+const slugify = require("../../slugify");
 
 /*
  fetch raw datafiller themes data, filter and sort properly
 */
 
 const DATAFILLER_URL =
-  process.env.DATAFILLER_URL ||
-  "https://cdtn:givemedata@datafiller.num.social.gouv.fr";
+  process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records?_limit=1000`;
 

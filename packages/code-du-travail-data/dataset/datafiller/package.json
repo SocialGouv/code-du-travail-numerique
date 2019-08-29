@@ -5,10 +5,11 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "debug": "^4.1.1",
     "node-fetch": "^2.6.0",
     "p-limit": "^2.2.1"
   },
   "scripts": {
-    "start": "node index.js prequalified.json"
+    "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json"
   }
 }

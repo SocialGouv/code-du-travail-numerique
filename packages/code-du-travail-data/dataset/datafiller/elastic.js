@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const debug = require("debug")("@cdt/data...datafiller/elastic");
 
 // fetch datafiller results then check against ES index using a slug match
 const ES_URL = process.env.ELASTICSEARCH_URL || "http://127.0.0.1:9200";
@@ -43,13 +44,13 @@ const getReference = (result, ref) => {
       }
       if (res.hits.hits.length) {
         if (res.hits.hits.length > 1) {
-          console.log(
+          debug(
             `ERROR | ${result.title} | ${slug} | plusieurs résultats trouvés`
           );
           return;
         }
         if (res.hits.hits[0]._source.slug !== slug) {
-          console.log(
+          debug(
             `FIXED | ${result.title} | ${slug} | ${
               res.hits.hits[0]._source.slug
             }`
@@ -60,14 +61,14 @@ const getReference = (result, ref) => {
           relevance: ref.relevance
         };
       }
-      console.log(`ERROR | ${result.title} | ${slug} | not found in ES`);
+      debug(`ERROR | ${result.title} | ${slug} | not found in ES`);
     })
     .catch(e => {
       if (slug.match(/^http/)) {
         // silent for external links
         return false;
       }
-      console.log("ERROR", e);
+      // console.log("ERROR", e);
       return false;
     });
 };
