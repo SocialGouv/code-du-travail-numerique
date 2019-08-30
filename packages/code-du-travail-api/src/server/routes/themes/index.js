@@ -1,7 +1,6 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const getSearchByThemeBody = require("../search/searchByTheme.elastic");
 const {
   getRootThemesQuery,
   getThemeQuery,

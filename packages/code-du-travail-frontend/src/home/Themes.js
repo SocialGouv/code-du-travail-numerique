@@ -34,13 +34,17 @@ export default class Themes extends React.Component {
     )
   };
 
+  static defaultProps = {
+    title: "Retrouvez nos réponses thématiques"
+  };
+
   render() {
     const { title, themes } = this.props;
     if (!(themes.length > 0)) return null;
     return (
       <Section>
         <Container>
-          <Title>{title || "Thèmes"}</Title>
+          <Title>{title}</Title>
           <Grid>
             {themes.map(({ id, slug, title, parent }) => (
               <GridCell key={slug + title}>

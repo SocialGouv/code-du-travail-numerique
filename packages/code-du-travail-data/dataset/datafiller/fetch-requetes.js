@@ -3,6 +3,8 @@ const pLimit = require("p-limit");
 
 const elastic = require("./elastic");
 
+const { sortByKey, getVariants } = require("./utils");
+
 const limit = pLimit(5);
 
 /*
@@ -35,15 +37,6 @@ const sourcesPriority = [
   "code-du-travail"
 ];
 
-const sortByKey = key => (a, b) => {
-  if (a[key] < b[key]) {
-    return -1;
-  } else if (a[key] > b[key]) {
-    return 1;
-  }
-  return 0;
-};
-
 const getSource = url => {
   const source = url.match(/^\/([^/]+)\//);
   return (source && source[1]) || "external";
@@ -74,13 +67,6 @@ const sortRefs = (a, b) => {
 
 const hasUrl = row => !!row.url;
 
-const getVariants = row => {
-  const others =
-    (row.variants && row.variants.split("\n").map(variant => variant.trim())) ||
-    [];
-  const variants = [row.title.replace("-", " ")].concat(others);
-  return [...new Set(variants)];
-};
 // import only valid data from datafiller
 // == has more than one ref
 const fetchAll = () =>

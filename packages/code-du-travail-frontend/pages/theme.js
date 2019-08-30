@@ -31,22 +31,20 @@ const getBreadcrumbs = (items = []) => {
     return crumbs;
   }
 
-  const leaves = items
-    .filter(i => !!i.title)
-    .map((item, index) => {
-      if (index === items.length - 1) {
-        return (
-          <span title={`voir le contenu du thème ${item.title}`}>
-            {item.title}
-          </span>
-        );
-      }
+  const leaves = items.map((item, index) => {
+    if (index === items.length - 1) {
       return (
-        <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
-          <a title={item.title}>{item.title}</a>
-        </Link>
+        <span title={`voir le contenu du thème ${item.title}`}>
+          {item.title}
+        </span>
       );
-    });
+    }
+    return (
+      <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
+        <a title={item.title}>{item.title}</a>
+      </Link>
+    );
+  });
 
   return crumbs.concat(leaves);
 };

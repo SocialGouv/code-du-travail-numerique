@@ -1,6 +1,8 @@
 const fetch = require("node-fetch");
 const slugify = require("../../slugify");
 
+const { sortByKey, getVariants } = require("./utils");
+
 /*
  fetch raw datafiller themes data, filter and sort properly
 */
@@ -11,14 +13,6 @@ const DATAFILLER_URL =
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records?_limit=1000`;
 
 const hasUrl = row => !!row.url;
-
-const getVariants = row => {
-  const others =
-    (row.variants && row.variants.split("\n").map(variant => variant.trim())) ||
-    [];
-  const variants = [row.title.replace("-", " ")].concat(others);
-  return [...new Set(variants)];
-};
 
 const getSlug = row => `${row.position || 1}-${slugify(row.title)}`;
 
@@ -36,19 +30,10 @@ const getParents = (rows, row) => {
   return parts;
 };
 
-const sortByKey = key => (a, b) => {
-  if (a[key] < b[key]) {
-    return -1;
-  } else if (a[key] > b[key]) {
-    return 1;
-  }
-  return 0;
-};
-
 const getChildren = (rows, row) =>
   rows
     .filter(node => node.parent === row.id)
-    .map(node => ({ ...node, slug: getSlug(node) }));
+    .map(node => ({ title: node.title, slug: getSlug(node) }));
 
 // import only valid data from datafiller
 // == has more than one ref

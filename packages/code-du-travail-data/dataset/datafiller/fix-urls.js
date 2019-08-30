@@ -50,10 +50,6 @@ const fixAll = async () =>
   fetch(RECORDS_URL)
     .then(res => res.json())
     .then(json => json.data)
-    // DEBUG
-    // .then(rows =>
-    //   rows.filter(row => row.title === "rupture-assistance-maternelle")
-    // )
     .then(rows =>
       Promise.all(
         rows.map(row =>
@@ -64,8 +60,6 @@ const fixAll = async () =>
         )
       )
     );
-// DEBUG
-//.then(rows => console.log(JSON.stringify(rows, null, 2)) || rows);
 
 if (require.main === module) {
   fixAll()
