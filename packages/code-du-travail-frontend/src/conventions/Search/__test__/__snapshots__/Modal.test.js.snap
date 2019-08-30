@@ -85,6 +85,18 @@ exports[`<ConventionModal /> should render 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
+.c11:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c5 {
   position: fixed;
   top: 0;
@@ -263,67 +275,94 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   </div>
   <reach-portal>
     <div
-      class="c5"
-      data-reach-dialog-overlay="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <div
-        aria-modal="true"
-        class="c6"
-        data-reach-dialog-content="true"
-        tabindex="-1"
-      >
+      <div>
         <div
-          class="c7"
+          class="c5"
+          data-reach-dialog-overlay="true"
         >
-          <h3>
-            Recherche de convention collective
-          </h3>
-          <p>
-            Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
-          </p>
-          <input
-            class="c8"
-            placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
-            type="text"
-            value=""
-          />
           <div
-            class="c9"
+            aria-modal="true"
+            class="c6"
+            data-reach-dialog-content="true"
+            tabindex="-1"
           >
-            
+            <div
+              class="c7"
+            >
+              <h3>
+                Recherche de convention collective
+              </h3>
+              <p>
+                Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
+              </p>
+              <input
+                class="c8"
+                placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+                type="text"
+                value=""
+              />
+              <div
+                class="c9"
+              >
+                
+              </div>
+            </div>
+            <button
+              class="c10"
+              title="fermer la modale"
+            >
+              <div
+                class="c11"
+              >
+                fermer la modale
+              </div>
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="18"
+                  x2="6"
+                  y1="6"
+                  y2="18"
+                />
+                <line
+                  x1="6"
+                  x2="18"
+                  y1="6"
+                  y2="18"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <button
-          class="c10"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            title="fermer la modale"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
       </div>
     </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
   </reach-portal>
 </body>
 `;
