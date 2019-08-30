@@ -9,7 +9,7 @@
     "p-limit": "^2.2.1"
   },
   "scripts": {
-    "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json",
-    "fix-urls": "node fix-urls.js"
+    "prestart": "node fix-urls.js",
+    "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json"
   }
 }
