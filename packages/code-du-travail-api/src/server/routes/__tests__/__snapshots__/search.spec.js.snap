@@ -156,7 +156,7 @@ Object {
   "snippet": Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 24.535465,
+    "_score": 24.535463,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
