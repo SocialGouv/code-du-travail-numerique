@@ -15,7 +15,7 @@
     "criteria": {
       "branche": {
         "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956"
       },
       "catégorie": "7| Ouvriers, Employés, Techniciens",
       "coefficient": "1| inférieur à 160"
@@ -23,13 +23,13 @@
     "type": "préavis de démission",
     "answer": "15 jours",
     "ref": "Avenant n°1 article 27",
-    "refUrl": null
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
   },
   {
     "criteria": {
       "branche": {
         "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956"
       },
       "catégorie": "7| Ouvriers, Employés, Techniciens",
       "coefficient": "2| entre 160 (inclus) et 190"
@@ -37,13 +37,13 @@
     "type": "préavis de démission",
     "answer": "1 mois",
     "ref": "Avenant n°1 article 27",
-    "refUrl": null
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
   },
   {
     "criteria": {
       "branche": {
         "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956"
       },
       "catégorie": "7| Ouvriers, Employés, Techniciens",
       "coefficient": "3| supérieur à 190 (inclus)"
@@ -51,13 +51,13 @@
     "type": "préavis de démission",
     "answer": "2 mois",
     "ref": "Avenant n°1 article 27",
-    "refUrl": null
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846394&cidTexte=KALITEXT000005677782&dateTexte=20190829"
   },
   {
     "criteria": {
       "branche": {
         "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956"
       },
       "catégorie": "12| Techniciens et agents de maîtrise",
       "coefficient": "4| inférieur à 275"
@@ -65,13 +65,13 @@
     "type": "préavis de démission",
     "answer": "2 mois",
     "ref": "Avenant n°2 article 20",
-    "refUrl": null
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20190829"
   },
   {
     "criteria": {
       "branche": {
         "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956"
       },
       "catégorie": "12| Techniciens et agents de maîtrise",
       "coefficient": "5| supérieur à 275 (inclus)"
@@ -79,20 +79,20 @@
     "type": "préavis de démission",
     "answer": "1 mois",
     "ref": "Avenant n°2 article 20",
-    "refUrl": null
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846461&cidTexte=KALITEXT000005677795&dateTexte=20190829"
   },
   {
     "criteria": {
       "branche": {
         "id": "0044",
-        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952"
+        "label": "Convention collective nationale des industries chimiques et connexes du 30 décembre 1952. Étendue par arrêté du 13 novembre 1956 JONC 12 décembre 1956"
       },
       "catégorie": "16| Ingénieurs, Cadres"
     },
     "type": "préavis de démission",
     "answer": "3 mois",
     "ref": "Avenant n°3 article 4",
-    "refUrl": null
+    "refUrl": "https://www.legifrance.gouv.fr/affichIDCCArticle.do?idArticle=KALIARTI000005846301&cidTexte=KALITEXT000005677770&dateTexte=20190829"
   },
   {
     "criteria": {
