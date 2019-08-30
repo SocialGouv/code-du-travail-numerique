@@ -10,9 +10,10 @@ COPY ./package.json /app/package.json
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist /app/dist
 COPY --from=cdtn-base-image /app/node_modules/@socialgouv/kali-data/package.json /app/node_modules/@socialgouv/kali-data/package.json
 COPY --from=cdtn-base-image /app/node_modules/@socialgouv/kali-data/data /app/node_modules/@socialgouv/kali-data/data
+COPY --from=cdtn-base-image /app/node_modules/@socialgouv/legi-data/package.json /app/node_modules/@socialgouv/legi-data/package.json
+COPY --from=cdtn-base-image /app/node_modules/@socialgouv/legi-data/data/LEGITEXT000006072050.json /app/node_modules/@socialgouv/legi-data/data
 
-COPY ./dataset/code_du_travail/themes.csv ./dataset/code_du_travail/themes.csv
-COPY ./dataset/code_du_travail/code-du-travail.json ./dataset/code_du_travail/code-du-travail.json
+
 COPY ./dataset/fiches_ministere_travail/fiches-min-travail.json ./dataset/fiches_ministere_travail/fiches-min-travail.json
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json

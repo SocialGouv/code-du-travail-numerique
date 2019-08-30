@@ -83,7 +83,7 @@ function* cdtnDocumentsGen() {
   logger.info("=== Code du travail ===");
   yield selectAll(
     "article",
-    require("@socialgouv/kali-data/data/LEGITEXT000006072050.json")
+    require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
   ).map(({ data: { id, num, date_debut, title, texte, texteHtml } }) => ({
     source: SOURCES.CDT,
     title,
