@@ -29,7 +29,6 @@
     "@cdt/data...courrier-type": "^3.1.1",
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.0.0",
-    "commander": "^3.0.0",
     "dotenv": "^8.1.0",
     "elastic-apm-node": "^2.16.1",
     "jest": "^24.9.0",
@@ -44,13 +43,8 @@
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.9.6",
     "@zeit/ncc": "^0.20.4",
-    "axios": "^0.19.0",
-    "csvtojson": "^2.0.10",
     "eslint": "^6.2.2",
-    "google-spreadsheets": "^2.0.0",
-    "json2csv": "^4.5.2",
     "nodemon": "^1.19.1",
-    "p-limit": "^2.2.1",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
   },
