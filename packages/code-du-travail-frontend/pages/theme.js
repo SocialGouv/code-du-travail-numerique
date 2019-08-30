@@ -10,7 +10,6 @@ import Search from "../src/search/Search";
 import { SearchResultList } from "../src/search/SearchResultList";
 
 import Themes from "../src/home/Themes";
-import { searchResults } from "../src/search/search.service";
 import { PageLayout } from "../src/layout/PageLayout";
 import { Breadcrumbs } from "../src/common/Breadcrumbs";
 import Metas from "../src/common/Metas";
