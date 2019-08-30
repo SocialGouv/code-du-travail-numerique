@@ -12,6 +12,24 @@ const DATAFILLER_URL =
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records?_limit=1000`;
 
+/*
+
+ {
+  id: "fzef-zefzef-zefzef-zefzef",
+  title: "some title",
+  variants: "variant 1\nvariant 2\nvariant 3",
+  parent: "nbz-zefzef-yukyuk-qcqc",
+  refs:[{
+    url: "/fiche-service-public/titre-de-la-fiche,
+    position: 1
+  },{
+    url: "/fiche-service-public/titre-de-la-fiche-2,
+    position: 2
+  }]
+ }
+
+*/
+
 const hasUrl = row => !!row.url;
 
 const getSlug = row => `${row.position || 1}-${slugify(row.title)}`;

@@ -15,6 +15,22 @@ const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
 const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records`;
+/*
+
+ {
+  id: "fzef-zefzef-zefzef-zefzef",
+  title: "some title",
+  variants: "variant 1\nvariant 2\nvariant 3",
+  refs:[{
+    url: "/fiche-service-public/titre-de-la-fiche,
+    relevance: 5
+  },{
+    url: "/fiche-service-public/titre-de-la-fiche-2,
+    relevance: 2
+  }]
+ }
+
+*/
 
 // convert datafiller references to valid ES references
 const toEsResults = results =>
