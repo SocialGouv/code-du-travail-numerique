@@ -2,6 +2,7 @@ import striptags from "striptags";
 import crypto from "crypto";
 import { logger } from "./logger";
 import slugify from "../slugify";
+import { selectAll } from "unist-util-select";
 
 const SOURCES = {
   CCN: "conventions_collectives",
@@ -34,6 +35,17 @@ function makeSlug(text, seed) {
       .replace(/\+/g, "-")
       .replace(/\//g, "_")}}`
   );
+}
+
+function getArticleUrl(id) {
+  return `https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=${id}&cidTexte=LEGITEXT000006072050`;
+}
+
+function fixArticleNum(id, num) {
+  if (num.match(/^annexe\s/i) && !num.includes("article")) {
+    return `${num} ${id}`;
+  }
+  return num;
 }
 
 /**
@@ -69,18 +81,19 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Code du travail ===");
-  yield require("../dataset/code_du_travail/code-du-travail.json").map(
-    ({ bloc_textuel, slug, titre, date_debut, url }) => ({
-      source: SOURCES.CDT,
-      title: titre,
-      slug,
-      description: bloc_textuel.slice(0, bloc_textuel.indexOf("…", 150)),
-      text: bloc_textuel,
-      html: bloc_textuel,
-      date_debut,
-      url
-    })
-  );
+  yield selectAll(
+    "article",
+    require("@socialgouv/kali-data/data/LEGITEXT000006072050.json")
+  ).map(({ data: { id, num, date_debut, title, texte, texteHtml } }) => ({
+    source: SOURCES.CDT,
+    title,
+    slug: slugify(fixArticleNum(id, num)),
+    description: texte.slice(0, texte.indexOf("…", 150)),
+    html: texteHtml,
+    texte,
+    date_debut,
+    url: getArticleUrl(id)
+  }));
 
   logger.info("=== Fiches SP ===");
   yield require("../dataset/fiches_service_public/fiches-sp-travail.json").map(
