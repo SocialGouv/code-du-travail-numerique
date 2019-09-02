@@ -5,18 +5,18 @@ Object {
   "breadcrumbs": null,
   "children": Array [
     Object {
-      "slug": "12-contrat-de-travail",
-      "title": "Contrat de travail",
-    },
-    Object {
       "slug": "11-embauche",
       "title": "Embauche",
+    },
+    Object {
+      "slug": "12-contrat-de-travail",
+      "title": "Contrat de travail",
     },
   ],
   "position": 1,
   "refs": Array [
     Object {
-      "_id": "TAS672wBqwk-TdFK2rsP",
+      "_id": "VARo8mwBqwk-TdFKX_bt",
       "_index": "code_du_travail_numerique",
       "_score": 29.750992,
       "_source": Object {
@@ -40,7 +40,7 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "dAS672wBqwk-TdFK2rsP",
+      "_id": "fARo8mwBqwk-TdFKX_bu",
       "_index": "code_du_travail_numerique",
       "_score": 30.446411,
       "_source": Object {
@@ -64,7 +64,7 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "dgS672wBqwk-TdFK2rsP",
+      "_id": "fgRo8mwBqwk-TdFKX_bu",
       "_index": "code_du_travail_numerique",
       "_score": 32.206154,
       "_source": Object {
@@ -133,49 +133,9 @@ Object {
       "title": "Embauche et contrat de travail",
     },
     Object {
-      "position": 2,
-      "slug": "2-salaire-et-remuneration",
-      "title": "Salaire et Rémunération",
-    },
-    Object {
-      "position": 3,
-      "slug": "3-temps-de-travail",
-      "title": "Temps de travail",
-    },
-    Object {
-      "position": 4,
-      "slug": "4-conges-et-repos",
-      "title": "Congés et repos",
-    },
-    Object {
-      "position": 5,
-      "slug": "5-emploi-et-formation-professionnelle",
-      "title": "Emploi et formation professionnelle",
-    },
-    Object {
-      "position": 6,
-      "slug": "6-sante-securite-et-conditions-de-travail",
-      "title": "Santé, sécurité et conditions de travail",
-    },
-    Object {
-      "position": 7,
-      "slug": "7-representation-du-personnel-et-negociation-collective",
-      "title": "Représentation du personnel et négociation collective",
-    },
-    Object {
-      "position": 8,
-      "slug": "8-depart-de-lentreprise",
-      "title": "Départ de l'entreprise",
-    },
-    Object {
-      "position": 9,
-      "slug": "9-conflits-au-travail-et-controle-de-la-reglementation",
-      "title": "Conflits au travail et contrôle de la réglementation",
-    },
-    Object {
-      "position": 11,
-      "slug": "11-embauche",
-      "title": "Embauche",
+      "position": 644,
+      "slug": "644-handicap",
+      "title": "Handicap",
     },
   ],
 }
