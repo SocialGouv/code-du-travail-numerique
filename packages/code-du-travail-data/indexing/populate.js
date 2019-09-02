@@ -84,9 +84,9 @@ function* cdtnDocumentsGen() {
   yield selectAll(
     "article",
     require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
-  ).map(({ data: { id, num, date_debut, title, texte, texteHtml } }) => ({
+  ).map(({ data: { id, num, date_debut, texte, texteHtml } }) => ({
     source: SOURCES.CDT,
-    title,
+    title: fixArticleNum(id, num),
     slug: slugify(fixArticleNum(id, num)),
     description: texte.slice(0, texte.indexOf("…", 150)),
     html: texteHtml,
