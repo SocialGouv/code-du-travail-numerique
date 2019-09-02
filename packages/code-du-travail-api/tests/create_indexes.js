@@ -26,7 +26,7 @@ async function main() {
   await createIndex({
     client,
     indexName: documentIndexName,
-    mapping: documentMapping
+    mappings: documentMapping
   });
   await indexDocumentsBatched({
     client,
@@ -37,7 +37,7 @@ async function main() {
   await createIndex({
     client,
     indexName: themeIndexName,
-    mapping: themesMapping
+    mappings: themesMapping
   });
   await indexDocumentsBatched({
     client,
@@ -48,7 +48,7 @@ async function main() {
   await createIndex({
     client,
     indexName: conventionsIndexName,
-    mapping: conventionCollectiveMapping
+    mappings: conventionCollectiveMapping
   });
   await indexDocumentsBatched({
     client,
@@ -59,7 +59,7 @@ async function main() {
   await createIndex({
     client,
     indexName: annuaireIndexName,
-    mapping: annuaireMapping
+    mappings: annuaireMapping
   });
   await indexDocumentsBatched({
     client,
