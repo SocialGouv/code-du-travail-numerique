@@ -40,7 +40,9 @@ router.get("/themes", async ctx => {
     index: indexThemes,
     body
   });
-  ctx.body = response.body;
+  ctx.body = {
+    children: response.body.hits.hits.map(t => t._source)
+  };
 });
 
 /**

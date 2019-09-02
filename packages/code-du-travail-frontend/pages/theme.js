@@ -19,33 +19,33 @@ const {
 } = getConfig();
 
 // return breadcrumbs components
-const getBreadcrumbs = (items = []) => {
+const getBreadcrumbs = theme => {
   const crumbs = [
     <Link key="root" route="themes">
       <a title="Tous les thèmes">Thèmes</a>
     </Link>
   ];
 
-  if (!items || items.length === 0) {
-    return crumbs;
+  const leaves =
+    (theme.breadcrumbs &&
+      theme.breadcrumbs.map((item, index) => (
+        <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
+          <a title={item.title}>{item.title}</a>
+        </Link>
+      ))) ||
+    [];
+
+  crumbs.push(...leaves);
+
+  if (theme.title && theme.slug) {
+    crumbs.push(
+      <span title={`voir le contenu du thème ${theme.title}`}>
+        {theme.title}
+      </span>
+    );
   }
 
-  const leaves = items.map((item, index) => {
-    if (index === items.length - 1) {
-      return (
-        <span title={`voir le contenu du thème ${item.title}`}>
-          {item.title}
-        </span>
-      );
-    }
-    return (
-      <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
-        <a title={item.title}>{item.title}</a>
-      </Link>
-    );
-  });
-
-  return crumbs.concat(leaves);
+  return crumbs;
 };
 
 // Theme page
@@ -76,14 +76,7 @@ class Theme extends React.Component {
 
   render() {
     const { theme, pageUrl, ogImage } = this.props;
-    const breadcrumbs = getBreadcrumbs(
-      (theme.parents || []).concat([
-        {
-          title: theme.title,
-          slug: theme.slug
-        }
-      ])
-    );
+    const breadcrumbs = getBreadcrumbs(theme);
     const isRootTheme = !theme.title;
 
     if (!theme) {
@@ -99,7 +92,7 @@ class Theme extends React.Component {
           image={ogImage}
         />
         <Search />
-        {breadcrumbs.length > 1 && <Breadcrumbs items={breadcrumbs} />}
+        <Breadcrumbs items={breadcrumbs} />
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes

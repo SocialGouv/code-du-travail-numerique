@@ -37,7 +37,7 @@ function getBreadcrumbs(items = []) {
   if (!items.length) {
     return [];
   }
-  return [ROOT_CRUMB].map(({ slug, title }) => (
+  return [ROOT_CRUMB, ...items].map(({ slug, title }) => (
     <Link key={slug} route="themes" params={{ slug }}>
       <a title={`Voir le theme ${title}`}>{title}</a>
     </Link>
@@ -64,9 +64,7 @@ function Answer({
         <title>{title}</title>
       </Head>
       <Search />
-      {breadcrumbs.length && (
-        <Breadcrumbs items={getBreadcrumbs(breadcrumbs)} />
-      )}
+      <Breadcrumbs items={getBreadcrumbs(breadcrumbs)} />
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (

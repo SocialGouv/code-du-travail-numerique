@@ -16,7 +16,7 @@ function getRootThemesQuery() {
 
 function getThemeQuery({ slug }) {
   return {
-    _source: ["title", "slug", "position", "parents", "children", "refs"],
+    _source: ["title", "slug", "position", "breadcrumbs", "children", "refs"],
     sort: [{ position: { order: "asc" } }],
     query: {
       term: {
@@ -30,8 +30,6 @@ function getThemeQuery({ slug }) {
 
 function getBySlug({ source, slug }) {
   return {
-    //_source: ["title", "slug", "position", "parents", "children", "refs"],
-    //sort: [{ position: { order: "asc" } }],
     query: {
       bool: {
         must: [

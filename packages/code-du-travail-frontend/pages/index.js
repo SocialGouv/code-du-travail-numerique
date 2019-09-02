@@ -12,7 +12,7 @@ const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-const Home = ({ pageUrl, ogImage, data: { themes = [] } = {} }) => (
+const Home = ({ pageUrl, ogImage, children = [] }) => (
   <HomeLayout>
     <Metas
       url={pageUrl}
@@ -21,7 +21,7 @@ const Home = ({ pageUrl, ogImage, data: { themes = [] } = {} }) => (
       image={ogImage}
     />
     <Search />
-    <Themes themes={themes} />
+    <Themes themes={children} />
     <Outils />
   </HomeLayout>
 );
@@ -31,11 +31,8 @@ Home.getInitialProps = async () => {
   if (!response.ok) {
     return { statusCode: response.status };
   }
-  const themes = await response.json();
-  return {
-    data: {
-      themes: themes.hits.hits.map(t => t._source)
-    }
-  };
+  const { children } = await response.json();
+  return { children };
 };
+
 export default Home;
