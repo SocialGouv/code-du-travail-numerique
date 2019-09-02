@@ -108,7 +108,8 @@ const getUrlTitle = url =>
   fetch(url)
     .then(r => r.text())
     .then(text => text.match(/<title>([^<]+)<\/title>/i))
-    .then(matches => (matches && cleanTitle(matches[1])) || url);
+    .then(matches => (matches && cleanTitle(matches[1])) || url)
+    .catch(err => url);
 
 const replaceReference = async (title, ref) => {
   // fetch page title for external urls
@@ -128,7 +129,11 @@ const replaceReference = async (title, ref) => {
       _source: {
         title: ref.title,
         url: ref.url,
-        source: "code_du_travail"
+        source: "code_du_travail",
+        slug: ref.url
+          .split("/")
+          .slice(2)
+          .join("/")
       },
       relevance: ref.relevance
     };
@@ -138,7 +143,11 @@ const replaceReference = async (title, ref) => {
       _source: {
         title: ref.title,
         url: ref.url,
-        source: "themes"
+        source: "themes",
+        slug: ref.url
+          .split("/")
+          .slice(2)
+          .join("/")
       },
       relevance: ref.relevance
     };

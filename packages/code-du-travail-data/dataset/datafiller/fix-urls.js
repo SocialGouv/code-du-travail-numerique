@@ -12,8 +12,6 @@ fix datafiller urls based on ES results
 const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
-const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records`;
-
 const serial = pLimit(1);
 
 const replaceReference = async (title, ref) => {
@@ -50,26 +48,32 @@ const sortByKey = key => (a, b) => {
 // check refs against ES
 const getReferences = row =>
   Promise.all(
-    row.refs.filter(ref => ref.url).map(ref => replaceReference(row.title, ref))
+    (row.refs &&
+      row.refs
+        .filter(ref => ref.url)
+        .map(ref => replaceReference(row.title, ref))) ||
+      []
   ).then(arr => arr.filter(Boolean).sort(sortByKey("relevance")));
 
-const fixAll = async () =>
-  fetch(RECORDS_URL)
+const fixCollection = async collection => {
+  const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/${collection}/records`;
+  const records = await fetch(RECORDS_URL)
     .then(res => res.json())
-    .then(json => json.data)
-    .then(rows =>
-      Promise.all(
-        rows.map(row =>
-          serial(async () => ({
-            ...row,
-            refs: await getReferences(row)
-          }))
-        )
-      )
-    );
+    .then(json => json.data);
 
-const patchRecord = (id, values) =>
-  fetch(RECORDS_URL + `/${id}`, {
+  return await Promise.all(
+    records.map(row =>
+      serial(async () => ({
+        ...row,
+        refs: await getReferences(row)
+      }))
+    )
+  );
+};
+
+const patchRecord = (collection, id, values) => {
+  const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/${collection}/records`;
+  return fetch(RECORDS_URL + `/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
@@ -78,21 +82,30 @@ const patchRecord = (id, values) =>
       data: values
     })
   });
+};
 
-if (require.main === module) {
-  fixAll()
-    .then(data =>
-      Promise.all(
-        data.map(row =>
-          serial(() =>
-            // patch each record with fixed urls
-            patchRecord(row.id, {
-              refs: row.refs
-            })
-          )
-        )
+const fixReferences = async collection => {
+  debug(`fixReferences in collection ${collection}`);
+  const fixedRecords = await fixCollection(collection);
+  patchRecords = await Promise.all(
+    fixedRecords.map(row =>
+      serial(() =>
+        // patch each record with fixed urls
+        patchRecord(collection, row.id, {
+          refs: row.refs
+        })
       )
     )
-    .then(() => console.log("OK, finished"))
+  );
+};
+
+const fixAllReferences = () =>
+  Promise.all([fixReferences("requetes"), fixReferences("themes")]);
+
+if (require.main === module) {
+  fixAllReferences()
+    .then(() => {
+      console.log("Done!");
+    })
     .catch(console.log);
 }
