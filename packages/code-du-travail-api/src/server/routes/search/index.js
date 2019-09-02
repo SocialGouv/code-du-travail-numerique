@@ -42,9 +42,8 @@ router.get("/search", async ctx => {
 
   // we add 1 to maxResults in case we have a snippet document in the results
   // we filter results to remove snippet document from main results
-  const size = Math.min(ctx.request.query.size || MAX_RESULTS + 1, 100);
-
-  const body = getSearchBody({ query, size, excludeSources });
+  const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
+  const body = getSearchBody({ query, size: size + 1, excludeSources });
   const facetBody = getFacetsBody({ query });
 
   // query data
@@ -57,7 +56,7 @@ router.get("/search", async ctx => {
       ...response.body.hits,
       hits: response.body.hits.hits
         .filter(item => item._source.source !== "snippet")
-        .slice(0, 10)
+        .slice(0, size)
     },
     facets: []
   };
@@ -65,7 +64,7 @@ router.get("/search", async ctx => {
   if (
     response.body.aggregations.bySource.buckets.length > 0 &&
     snippetIndex > -1 &&
-    snippetIndex < 10
+    snippetIndex < size
   ) {
     const [snippetResults] = response.body.aggregations.bySource.buckets;
     ctx.body.snippet = snippetResults.bySource.hits.hits[0];
