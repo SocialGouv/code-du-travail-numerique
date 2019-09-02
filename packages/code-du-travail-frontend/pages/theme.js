@@ -85,10 +85,7 @@ class Theme extends React.Component {
         <Breadcrumbs items={breadcrumbs} />
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
-            <Themes
-              title={isRootTheme && theme.title}
-              themes={theme.children}
-            />
+            <Themes title={theme.title} themes={theme.children} />
           </Section>
         )}
         {!isRootTheme && (
