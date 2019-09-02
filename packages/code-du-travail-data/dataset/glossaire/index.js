@@ -5,18 +5,20 @@ const getCells = promisify(GoogleSpreadsheets.cells);
 const SPREADSHEET_KEY = "1WrmotMiu4kBxRTKW47Q3CzNjxc0GycfAilSHcXH_hfA";
 
 const columns = {
-  term: 2,
-  abbrev: 3,
-  synonym: 4,
-  definition: 6,
-  definition_cdtn: 7
+  term: 1,
+  abbrev: 2,
+  synonym: 3,
+  definition: 4,
+  reference: 5
 };
 
 function transformRow(row) {
   return Object.entries(columns).reduce(
     (state, [key, colIndex]) => ({
       ...state,
-      [key]: row.hasOwnProperty(colIndex) ? row[colIndex].value : undefined
+      [key]: Object.hasOwnProperty.call(row, colIndex)
+        ? row[colIndex].value
+        : undefined
     }),
     {}
   );
@@ -25,11 +27,11 @@ function transformRow(row) {
 async function getGlossaire() {
   const { cells } = await getCells({
     key: SPREADSHEET_KEY,
-    worksheet: 1
+    worksheet: 2
   });
   return Object.values(cells)
     .slice(1)
-    .filter(row => row.hasOwnProperty("1"))
+    .filter(row => Object.hasOwnProperty.call(row, "1"))
     .map(transformRow);
 }
 
