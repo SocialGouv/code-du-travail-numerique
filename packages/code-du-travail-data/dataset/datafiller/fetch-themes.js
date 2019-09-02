@@ -67,11 +67,11 @@ const fetchAll = () =>
           variants: getVariants(row)
         }))
         .map(row => {
-          const parents = row.parent && getParents(rows, row);
+          const breadcrumbs = row.parent && getParents(rows, row);
           const children = getChildren(rows, row).sort(sortByKey("position"));
           return {
             slug: getSlug(row),
-            parents,
+            breadcrumbs,
             children,
             refs: row.refs,
             position: row.position,

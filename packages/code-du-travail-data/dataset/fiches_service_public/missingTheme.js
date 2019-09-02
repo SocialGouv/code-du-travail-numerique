@@ -5,7 +5,8 @@ const isFicheQR = fiche => fiche.type === "Fiche Question-réponse";
 const isFicheParticulier = fiche => fiche.url.match(/particuliers/);
 const isFicheAssociation = fiche => fiche.url.match(/associations/);
 const isFicheEntreprise = fiche => fiche.url.match(/professionnels/);
-const hasNoTheme = fiche => !fiche.parents || fiche.parents.length === 0;
+const hasNoTheme = fiche =>
+  !fiche.breadcrumbs || fiche.breadcrumbs.length === 0;
 const printFicheLink = fiche => console.log(`- [${fiche.id}](${fiche.url})`);
 
 const themeLessFiches = fiches.filter(hasNoTheme);

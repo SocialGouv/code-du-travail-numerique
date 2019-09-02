@@ -6,12 +6,12 @@ async function updateTheme(fiches) {
     const theme = themes.find(theme =>
       theme.refs.map(r => r.url.split("#")[0]).includes(ficheUrl)
     );
-    fiche.theme = theme && theme.slug;
-    fiche.parents =
+    fiche.themeSlug = theme && theme.slug;
+    fiche.breadcrumbs =
       theme &&
       (
-        (theme.parents &&
-          theme.parents.map(node => ({
+        (theme.breadcrumbs &&
+          theme.breadcrumbs.map(node => ({
             title: node.title,
             slug: node.slug
           }))) ||
