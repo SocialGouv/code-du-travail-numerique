@@ -8,7 +8,8 @@ const routeBySource = {
   themes: "themes",
   outils: "outils",
   idcc: "idcc",
-  conventions_collectives: "convention-collective"
+  conventions_collectives: "convention-collective",
+  external: "external"
 };
 
 // mapping elastic search source type -> source label
@@ -22,7 +23,8 @@ const labelBySource = {
   outils: "Outils",
   idcc: "Legifrance",
   conventions_collectives: "Legifrance",
-  fiches: "Fiches"
+  fiches: "Fiches",
+  external: "Lien externe"
 };
 
 const sources = Object.keys(routeBySource);
