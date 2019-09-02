@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return 404 when slug match no themes 1`] = `Object {}`;
-
 exports[`return theme data for slug 1-embauche-et-contrat-de-travail 1`] = `
 Object {
   "breadcrumbs": null,

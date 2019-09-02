@@ -66,7 +66,7 @@ router.get("/themes/:slug", async ctx => {
     index: indexThemes,
     body
   });
-  if (!response) {
+  if (!response || response.body.hits.hits.length === 0) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
 
