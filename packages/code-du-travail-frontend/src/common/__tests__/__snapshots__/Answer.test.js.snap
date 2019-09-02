@@ -1996,10 +1996,10 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             class="c19"
           >
             <a
-              href="/themes/tag-1"
-              title="Voir le theme tag1"
+              href="/themes"
+              title="Voir le theme Thèmes"
             >
-              tag1
+              Thèmes
             </a>
           </li>
           <li
@@ -2012,11 +2012,23 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             class="c19"
           >
             <a
+              href="/themes/tag-1"
+              title="Voir le theme undefined"
+            />
+          </li>
+          <li
+            aria-hidden="true"
+            class="c20"
+          >
+             » 
+          </li>
+          <li
+            class="c19"
+          >
+            <a
               href="/themes/tag-2"
-              title="Voir le theme tag2"
-            >
-              tag2
-            </a>
+              title="Voir le theme undefined"
+            />
           </li>
         </ul>
       </div>
