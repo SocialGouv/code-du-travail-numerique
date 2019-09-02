@@ -49,6 +49,16 @@ it("getVariants should handle no variants", () => {
   ).toEqual(["title"]);
 });
 
+it("getVariants should trim texts", () => {
+  expect(
+    getVariants({
+      title: " title ",
+      variants: `     page
+          page2 `
+    })
+  ).toEqual(["title", "page", "page2"]);
+});
+
 it("getVariants should handle no variants", () => {
   expect(
     getVariants({
