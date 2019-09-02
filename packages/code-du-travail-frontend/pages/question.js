@@ -2,6 +2,9 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
+
+import { getRouteBySource, getLabelBySource } from "@cdt/sources";
+
 import Answer from "../src/common/Answer";
 import { DownloadFile } from "../src/common/DownloadFile";
 import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
@@ -17,7 +20,7 @@ import {
 import styled from "styled-components";
 
 import { Link } from "../routes";
-import { getRouteBySource, getLabelBySource } from "../src/sources";
+
 import ArticleIcon from "../src/icons/ArticleIcon";
 import ReponseIcon from "../src/icons/ReponseIcon";
 import { PageLayout } from "../src/layout/PageLayout";
@@ -112,7 +115,9 @@ class Question extends React.Component {
               <h4>Télécharger le modèle</h4>
               <DownloadFile
                 title={modeles_de_courriers[0]._source.title}
-                file={`${API_URL}/docs/${modeles_de_courriers[0]._source.filename}`}
+                file={`${API_URL}/docs/${
+                  modeles_de_courriers[0]._source.filename
+                }`}
                 type="Modèle de document"
                 icon={ModeleCourrierIcon}
               />

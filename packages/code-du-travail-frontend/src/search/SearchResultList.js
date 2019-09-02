@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { List, ListItem, theme } from "@cdt/ui-old";
+import { getRouteBySource, getLabelBySource } from "@cdt/sources";
 
 import { Link } from "../../routes";
-import { getRouteBySource, getLabelBySource } from "../sources";
+
 import { SourceIcon } from "./SourceIcon";
 
 const SearchResult = ({ result }) => {

@@ -7,19 +7,7 @@ const {
   getBySlug
 } = require("./search.elastic.js");
 
-// mapping elastic search source type -> route name
-const routeBySource = {
-  faq: "question",
-  fiches_service_public: "fiche-service-public",
-  fiches_ministere_travail: "fiche-ministere-travail",
-  code_du_travail: "code-du-travail",
-  conventions_collectives: "convention-collective",
-  modeles_de_courriers: "modeles-de-courriers",
-  themes: "themes",
-  outils: "outils",
-  idcc: "idcc",
-  kali: "kali"
-};
+const { getSourceByRoute } = require("@cdt/sources");
 
 const indexContenus = "code_du_travail_numerique";
 const indexThemes = "cdtn_themes";
@@ -54,12 +42,9 @@ router.get("/themes", async ctx => {
  * @returns {Object} An object containing the matching theme .
  */
 
-const sourceToEsSource = source =>
-  Object.keys(routeBySource).find(key => routeBySource[key] === source);
-
 const extractFromUrl = url => {
   const [source, slug] = url.split("/").filter(Boolean);
-  return [sourceToEsSource(source), slug];
+  return [getSourceByRoute(source), slug];
 };
 
 const toEsRef = async ref => {

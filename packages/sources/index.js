@@ -14,7 +14,7 @@ const routeBySource = {
 // mapping elastic search source type -> source label
 const labelBySource = {
   faq: "Réponses",
-  fiches_service_public: "Service Public",
+  fiches_service_public: "service-public.fr",
   fiches_ministere_travail: "Ministère du Travail",
   code_du_travail: "Code du travail",
   modeles_de_courriers: "Courrier Type",
@@ -25,11 +25,26 @@ const labelBySource = {
   fiches: "Fiches"
 };
 
-export const getLabelBySource = src => labelBySource[src] || "";
-export const getRouteBySource = src => routeBySource[src];
-
 const sources = Object.keys(routeBySource);
-export const getExcludeSources = value => {
+
+// code_du_travail -> Code du travail
+const getLabelBySource = src => labelBySource[src] || "";
+
+// code_du_travail -> code-du-travail
+const getRouteBySource = src => routeBySource[src];
+
+// code-du-travail -> code_du_travail
+const getSourceByRoute = slug =>
+  sources.find(key => routeBySource[key] === slug);
+
+const getExcludeSources = value => {
   if (Boolean(value) === false) return "";
   return sources.filter(source => source.startsWith(value) === false).join(",");
+};
+
+module.exports = {
+  getExcludeSources,
+  getLabelBySource,
+  getRouteBySource,
+  getSourceByRoute
 };

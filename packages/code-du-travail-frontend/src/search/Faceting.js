@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { List, ListItem, theme } from "@cdt/ui-old";
 import styled from "styled-components";
 
+import { List, ListItem, theme } from "@cdt/ui-old";
+import { getLabelBySource } from "@cdt/sources";
+
 import { Link } from "../../routes";
-import { getLabelBySource } from "../sources";
 
 class Faceting extends React.Component {
   static propTypes = {
