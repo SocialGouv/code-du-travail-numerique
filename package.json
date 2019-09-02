@@ -22,7 +22,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
-    "husky": "^3.0.4",
+    "husky": "^3.0.5",
     "lerna": "^3.16.4"
   },
   "resolutions": {
