@@ -85,7 +85,6 @@ class Theme extends React.Component {
       ])
     );
     const isRootTheme = !theme.title;
-    theme.children && theme.children.length && !theme.children[0].parent;
 
     if (!theme) {
       return <NotFound />;
@@ -104,7 +103,7 @@ class Theme extends React.Component {
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes
-              title={isRootTheme ? undefined : theme.title}
+              title={isRootTheme && theme.title}
               themes={theme.children}
             />
           </Section>
@@ -112,7 +111,10 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <Section>
             <Container>
-              <SearchResultList items={theme.refs} />
+              {(theme.refs && theme.refs.length && (
+                <SearchResultList items={theme.refs} />
+              )) ||
+                null}
             </Container>
           </Section>
         )}
