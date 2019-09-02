@@ -77,7 +77,7 @@ class Theme extends React.Component {
       <PageLayout>
         <Metas
           url={pageUrl}
-          title={`${theme.title} - Code du travail numérique`}
+          title={`${theme.title || "Thèmes"} - Code du travail numérique`}
           description={`Explorez les contenus autour du thème ${theme.title}`}
           image={ogImage}
         />
