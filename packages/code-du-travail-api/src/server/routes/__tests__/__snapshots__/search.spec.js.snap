@@ -29,7 +29,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 4.8197875,
+        "_score": 4.6383643,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -68,17 +68,13 @@ Object {
       "doc_count": 2,
       "key": "fiches_service_public",
     },
-    Object {
-      "doc_count": 2,
-      "key": "themes",
-    },
   ],
   "hits": Object {
     "hits": Array [
       Object {
         "_id": "6",
         "_index": "cdtn_document_test",
-        "_score": 5.113161,
+        "_score": 5.464524,
         "_source": Object {
           "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
           "source": "faq",
@@ -89,7 +85,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 4.877703,
+        "_score": 5.089569,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -98,7 +94,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 5.113161,
+    "max_score": 5.464524,
     "total": Object {
       "relation": "eq",
       "value": 2,
@@ -124,7 +120,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 31.971472,
+        "_score": 30.89951,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -137,7 +133,7 @@ Object {
       Object {
         "_id": "5",
         "_index": "cdtn_document_test",
-        "_score": 3.3810153,
+        "_score": 3.2733152,
         "_source": Object {
           "slug": "demission-dune-assistante-maternelle",
           "source": "fiches_service_public",
@@ -147,7 +143,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 31.971472,
+    "max_score": 30.89951,
     "total": Object {
       "relation": "eq",
       "value": 3,
@@ -156,7 +152,7 @@ Object {
   "snippet": Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 24.535463,
+    "_score": 23.673704,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
@@ -414,17 +410,13 @@ Object {
       "doc_count": 2,
       "key": "fiches_service_public",
     },
-    Object {
-      "doc_count": 2,
-      "key": "themes",
-    },
   ],
   "hits": Object {
     "hits": Array [
       Object {
         "_id": "2",
         "_index": "cdtn_document_test",
-        "_score": 6.2828298,
+        "_score": 7.389551,
         "_source": Object {
           "anchor": "#Comment-presenter-une-demission",
           "slug": "demission-comment-presenter-une-demission",
@@ -437,7 +429,7 @@ Object {
       Object {
         "_id": "4",
         "_index": "cdtn_document_test",
-        "_score": 6.2170944,
+        "_score": 7.33976,
         "_source": Object {
           "slug": "demission-dun-salarie",
           "source": "fiches_service_public",
@@ -447,9 +439,21 @@ Object {
         "_type": "_doc",
       },
       Object {
+        "_id": "5",
+        "_index": "cdtn_document_test",
+        "_score": 6.5451794,
+        "_source": Object {
+          "slug": "demission-dune-assistante-maternelle",
+          "source": "fiches_service_public",
+          "title": "Démission d'une assistante maternelle",
+          "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+        },
+        "_type": "_doc",
+      },
+      Object {
         "_id": "6",
         "_index": "cdtn_document_test",
-        "_score": 5.958556,
+        "_score": 6.3099194,
         "_source": Object {
           "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
           "source": "faq",
@@ -460,7 +464,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 5.7230988,
+        "_score": 5.934964,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -469,32 +473,22 @@ Object {
         "_type": "_doc",
       },
       Object {
-        "_id": "0",
+        "_id": "3",
         "_index": "cdtn_document_test",
-        "_score": 5.5297966,
+        "_score": 3.5642507,
         "_source": Object {
-          "slug": "themes/rupture-de-contrat/la-demission",
-          "source": "themes",
-          "title": "La démission",
-        },
-        "_type": "_doc",
-      },
-      Object {
-        "_id": "5",
-        "_index": "cdtn_document_test",
-        "_score": 5.4831285,
-        "_source": Object {
-          "slug": "demission-dune-assistante-maternelle",
-          "source": "fiches_service_public",
-          "title": "Démission d'une assistante maternelle",
-          "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
+          "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+          "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
+          "source": "fiches_ministere_travail",
+          "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
+          "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
         },
         "_type": "_doc",
       },
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 3.3424914,
+        "_score": 3.38286,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -506,7 +500,7 @@ Object {
       Object {
         "_id": "9",
         "_index": "cdtn_document_test",
-        "_score": 3.3002841,
+        "_score": 3.3176193,
         "_source": Object {
           "slug": "r1442-22-4",
           "source": "code_du_travail",
@@ -515,35 +509,11 @@ Object {
         },
         "_type": "_doc",
       },
-      Object {
-        "_id": "3",
-        "_index": "cdtn_document_test",
-        "_score": 2.6140954,
-        "_source": Object {
-          "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-          "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
-          "source": "fiches_ministere_travail",
-          "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
-          "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-        },
-        "_type": "_doc",
-      },
-      Object {
-        "_id": "1",
-        "_index": "cdtn_document_test",
-        "_score": 0.97530663,
-        "_source": Object {
-          "slug": "themes/labandon-de-poste-est-il-une-demission",
-          "source": "themes",
-          "title": "L’abandon de poste est-il une démission ?",
-        },
-        "_type": "_doc",
-      },
     ],
-    "max_score": 6.2828298,
+    "max_score": 7.389551,
     "total": Object {
       "relation": "eq",
-      "value": 10,
+      "value": 8,
     },
   },
 }
