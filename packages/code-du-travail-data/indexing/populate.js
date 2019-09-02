@@ -90,7 +90,7 @@ function* cdtnDocumentsGen() {
     slug: slugify(fixArticleNum(id, num)),
     description: texte.slice(0, texte.indexOf("…", 150)),
     html: texteHtml,
-    texte,
+    text: texte,
     date_debut,
     url: getArticleUrl(id)
   }));
