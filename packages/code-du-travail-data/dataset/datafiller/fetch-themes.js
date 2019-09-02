@@ -34,6 +34,9 @@ const hasUrl = row => !!row.url;
 
 const getSlug = row => `${row.position || 1}-${slugify(row.title)}`;
 
+const slimify = keys => obj =>
+  keys.reduce((a, k) => ({ ...a, [k]: obj[k] }), {});
+
 // for breadcrumbs
 const getParents = (rows, row) => {
   let parent = row.parent;
@@ -45,7 +48,7 @@ const getParents = (rows, row) => {
     }
     parent = node.parent;
   }
-  return parts;
+  return parts.map(slimify(["title", "slug"]));
 };
 
 const getChildren = (rows, row) =>

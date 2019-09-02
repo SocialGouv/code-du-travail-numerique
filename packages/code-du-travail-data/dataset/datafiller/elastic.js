@@ -4,13 +4,38 @@ const debug = require("debug")("@cdt/data...datafiller/elastic");
 // fetch datafiller results then check against ES index using a slug match
 const ES_URL = process.env.ELASTICSEARCH_URL || "http://127.0.0.1:9200";
 
-// remove prefix (source)
-const getSlug = url => url.replace(/^(\/[^/]+\/)(.*)/, "$2");
+// split source + prefix (source)
+const getSlug = url => {
+  const match = url.match(/^\/([^/]+)\/(.*)/);
+  if (match) {
+    return [slugToSource(match[1]), match[2]];
+  }
+  return [,];
+};
+
+// mapping elastic search source type -> route name
+const routeBySource = {
+  faq: "question",
+  fiches_service_public: "fiche-service-public",
+  fiches_ministere_travail: "fiche-ministere-travail",
+  code_du_travail: "code-du-travail",
+  conventions_collectives: "convention-collective",
+  modeles_de_courriers: "modeles-de-courriers",
+  themes: "themes",
+  outils: "outils",
+  idcc: "idcc",
+  kali: "kali"
+};
+
+const slugToSource = slug =>
+  Object.keys(routeBySource).find(r => routeBySource[r] === slug);
 
 // try to get the local ES reference for a given "result" (= a reference slug in datafiller)
 const getReference = (title, ref) => {
-  const slug = getSlug(ref.url);
-
+  const [source, slug] = getSlug(ref.url);
+  if (!source) {
+    return false;
+  }
   if (slug.match(/^https?:\/\//)) {
     console.log(`EXTERNAL | ${title} | ${slug} | external link`);
     return false;
@@ -18,11 +43,19 @@ const getReference = (title, ref) => {
 
   // find the good slug
   const query = {
-    match: {
-      slug: {
-        query: slug,
-        minimum_should_match: "95%"
-      }
+    bool: {
+      must: [
+        {
+          match: {
+            slug: {
+              query: slug
+            }
+          }
+        },
+        {
+          term: { source }
+        }
+      ]
     }
   };
 
@@ -49,7 +82,7 @@ const getReference = (title, ref) => {
         }
         if (res.hits.hits[0]._source.slug !== slug) {
           debug(
-            `FIXED | ${title} | ${slug} | ${res.hits.hits[0]._source.slug}`
+            `found | ${title} | ${slug} | ${res.hits.hits[0]._source.slug}`
           );
         }
         return {
@@ -78,12 +111,34 @@ const getUrlTitle = url =>
     .then(matches => (matches && cleanTitle(matches[1])) || url);
 
 const replaceReference = async (title, ref) => {
+  // fetch page title for external urls
   if (ref.url.match(/^https?:/)) {
     return {
       _source: {
         title: await getUrlTitle(ref.url),
         url: ref.url,
         source: "external"
+      },
+      relevance: ref.relevance
+    };
+  }
+  // dont rewrite code-du-travail urls
+  if (ref.url.match(/^\/code-du-travail\//)) {
+    return {
+      _source: {
+        title: ref.title,
+        url: ref.url,
+        source: "code_du_travail"
+      },
+      relevance: ref.relevance
+    };
+  }
+  if (ref.url.match(/^\/themes\//)) {
+    return {
+      _source: {
+        title: ref.title,
+        url: ref.url,
+        source: "themes"
       },
       relevance: ref.relevance
     };

@@ -1,7 +1,9 @@
 const fetch = require("node-fetch");
 const pLimit = require("p-limit");
+const debug = require("debug")("@cdt/data...datafiller/fix-urls");
 
 const { getReference } = require("./elastic");
+const { isFixableUrl } = require("./utils");
 
 /*
 fix datafiller urls based on ES results
@@ -15,17 +17,22 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/req
 const serial = pLimit(1);
 
 const replaceReference = async (title, ref) => {
-  const hit = await getReference(title, ref);
-  if (hit) {
-    const oldUrl = ref.url;
-    const newUrl = ref.url.replace(/^(\/[^/]+\/)(.*)/, `$1${hit._source.slug}`);
-    if (newUrl !== oldUrl) {
-      console.log("FIX URL", oldUrl, newUrl);
-      return {
-        ...ref,
-        // replace slug only
-        url: newUrl
-      };
+  if (isFixableUrl(ref.url)) {
+    const hit = await getReference(title, ref);
+    if (hit) {
+      const oldUrl = ref.url;
+      const newUrl = ref.url.replace(
+        /^(\/[^/]+\/)(.*)/,
+        `$1${hit._source.slug}`
+      );
+      if (newUrl !== oldUrl) {
+        debug(`set new url '${newUrl}' for '${oldUrl}'`);
+        return {
+          ...ref,
+          // replace slug only
+          url: newUrl
+        };
+      }
     }
   }
   return ref;
@@ -61,6 +68,17 @@ const fixAll = async () =>
       )
     );
 
+const patchRecord = (id, values) =>
+  fetch(RECORDS_URL + `/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      data: values
+    })
+  });
+
 if (require.main === module) {
   fixAll()
     .then(data =>
@@ -68,16 +86,8 @@ if (require.main === module) {
         data.map(row =>
           serial(() =>
             // patch each record with fixed urls
-            fetch(RECORDS_URL + `/${row.id}`, {
-              method: "PATCH",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                data: {
-                  refs: row.refs
-                }
-              })
+            patchRecord(row.id, {
+              refs: row.refs
             })
           )
         )
