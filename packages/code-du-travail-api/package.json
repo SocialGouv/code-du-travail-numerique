@@ -10,8 +10,8 @@
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
-    "pretest": "node tests/create_indexes.js",
-    "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test ELASTICSEARCH_CONVENTION_INDEX=convention_test jest",
+    "pretest": "node -r esm tests/create_indexes.js",
+    "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test  ELASTICSEARCH_THEMES_INDEX=cdtn_theme_test jest",
     "elastic": "node scripts/elastic.js"
   },
   "repository": {
@@ -44,7 +44,13 @@
     "@socialgouv/eslint-config-recommended": "^0.9.6",
     "@zeit/ncc": "^0.20.4",
     "eslint": "^6.3.0",
-    "nodemon": "^1.19.2",
+    "axios": "^0.19.0",
+    "csvtojson": "^2.0.10",
+    "eslint": "^6.2.2",
+    "esm": "^3.2.25",
+    "google-spreadsheets": "^2.0.0",
+    "json2csv": "^4.5.2",
+    "nodemon": "^1.19.1",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
   },

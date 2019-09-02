@@ -1,33 +1,48 @@
+const SOURCES = {
+  CCN: "conventions_collectives",
+  CDT: "code_du_travail",
+  SHEET_SP: "fiches_service_public",
+  SHEET_MT: "fiches_ministere_travail",
+  THEMES: "themes",
+  TOOLS: "outils",
+  LETTERS: "modeles_de_courriers",
+  FAQ: "faq",
+  SNIPPET: "snippet",
+  IDCC: "idcc",
+  SHEET: "fiches",
+  EXTERNALS: "external"
+};
+
 // mapping elastic search source type -> route name
 const routeBySource = {
-  faq: "question",
-  fiches_service_public: "fiche-service-public",
-  fiches_ministere_travail: "fiche-ministere-travail",
-  code_du_travail: "code-du-travail",
-  modeles_de_courriers: "modeles-de-courriers",
-  themes: "themes",
-  outils: "outils",
-  idcc: "idcc",
-  conventions_collectives: "convention-collective",
-  external: "external"
+  [SOURCES.FAQ]: "question",
+  [SOURCES.SHEET_SP]: "fiche-service-public",
+  [SOURCES.SHEET_MT]: "fiche-ministere-travail",
+  [SOURCES.CDT]: "code-du-travail",
+  [SOURCES.LETTERS]: "modeles-de-courriers",
+  [SOURCES.THEMES]: "themes",
+  [SOURCES.TOOLS]: "outils",
+  [SOURCES.IDCC]: "idcc",
+  [SOURCES.CCN]: "convention-collective",
+  [SOURCES.EXTERNALS]: "external"
 };
 
 // mapping elastic search source type -> source label
 const labelBySource = {
-  faq: "Réponses",
-  fiches_service_public: "service-public.fr",
-  fiches_ministere_travail: "Ministère du Travail",
-  code_du_travail: "Code du travail",
-  modeles_de_courriers: "Courrier Type",
-  themes: "Themes",
-  outils: "Outils",
-  idcc: "Legifrance",
-  conventions_collectives: "Legifrance",
-  fiches: "Fiches",
-  external: "Lien externe"
+  [SOURCES.FAQ]: "Réponses",
+  [SOURCES.SHEET_SP]: "service-public.fr",
+  [SOURCES.SHEET_MT]: "Ministère du Travail",
+  [SOURCES.CDT]: "Code du travail",
+  [SOURCES.LETTERS]: "Courrier Type",
+  [SOURCES.THEMES]: "Themes",
+  [SOURCES.TOOLS]: "Outils",
+  [SOURCES.IDCC]: "Legifrance",
+  [SOURCES.CCN]: "Legifrance",
+  [SOURCES.EXTERNALS]: "Lien externe",
+  [SOURCES.SHEET]: "Fiches"
 };
 
-const sources = Object.keys(routeBySource);
+const sources = Object.values(SOURCES);
 
 // code_du_travail -> Code du travail
 const getLabelBySource = src => labelBySource[src] || "";
@@ -45,6 +60,7 @@ const getExcludeSources = value => {
 };
 
 module.exports = {
+  SOURCES,
   getExcludeSources,
   getLabelBySource,
   getRouteBySource,

@@ -10,7 +10,8 @@ const {
 const { getSourceByRoute } = require("@cdt/sources");
 
 const indexContenus = "code_du_travail_numerique";
-const indexThemes = "cdtn_themes";
+
+const index = process.env.ELASTICSEARCH_THEMES_INDEX || "cdtn_themes";
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -25,7 +26,7 @@ const router = new Router({ prefix: API_BASE_URL });
 router.get("/themes", async ctx => {
   const body = getRootThemesQuery({});
   const response = await elasticsearchClient.search({
-    index: indexThemes,
+    index,
     body
   });
   ctx.body = {
@@ -63,7 +64,7 @@ router.get("/themes/:slug", async ctx => {
   const { slug } = ctx.params;
   const body = getThemeQuery({ slug });
   const response = await elasticsearchClient.search({
-    index: indexThemes,
+    index,
     body
   });
   if (!response || response.body.hits.hits.length === 0) {

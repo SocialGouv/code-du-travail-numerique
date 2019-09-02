@@ -1,69 +1,71 @@
-const client = require("../src/server/conf/elasticsearch");
-const { analyzer, filter, char_filter, tokenizer } = require("./es_analysis");
-const { logger } = require("../src/server/utils/logger");
-const documentMapping = require("./cdtn_document_mapping");
-const documentsData = require("./cdtn_document_data.json");
-const annuaireMapping = require("./cdtn_annuaire_mapping");
-const annuaireData = require("./cdtn_annuaire_data.json");
-const conventionData = require("./convention_data.json");
+import client from "../src/server/conf/elasticsearch";
+import {
+  version,
+  createIndex,
+  indexDocumentsBatched
+} from "@cdt/data/indexing/es_client.utils";
+import { SOURCES } from "@cdt/sources";
+
+import { documentMapping } from "@cdt/data/indexing/document.mapping";
+import documents from "./cdtn_document_data.json";
+import { annuaireMapping } from "@cdt/data/indexing/annuaire.mapping";
+import annuaires from "./cdtn_annuaire_data.json";
+import { conventionCollectiveMapping } from "@cdt/data/indexing/convention_collective.mapping";
+import conventions from "./convention_data.json";
+import { themesMapping } from "@cdt/data/indexing/themes.mapping";
+
+const themes = documents.filter(document => document.source === SOURCES.THEMES);
 
 const documentIndexName = "cdtn_document_test";
+const themeIndexName = "cdtn_theme_test";
 const annuaireIndexName = "cdtn_annuaire_test";
-const conventionsIndexName = "convention_test";
+const conventionsIndexName = "cdtn_convention_test";
 
-async function createIndex(indexName, mappings, data) {
-  const { body } = await client.indices.exists({ index: indexName });
-  if (body) {
-    try {
-      await client.indices.delete({ index: indexName });
-      logger.info(`Index ${indexName} deleted.`);
-    } catch (error) {
-      logger.error("index delete", error);
-    }
-  }
-  try {
-    await client.indices.create({
-      index: indexName,
-      includeTypeName: false,
-      body: {
-        settings: {
-          number_of_shards: 1,
-          number_of_replicas: 0,
-          index: {
-            analysis: {
-              filter,
-              analyzer,
-              char_filter,
-              tokenizer
-            }
-          }
-        },
-        ...(mappings && { mappings })
-      }
-    });
-    logger.info(`Index ${indexName} created.`);
-  } catch (error) {
-    logger.error("index create", error);
-  }
-  try {
-    await client.bulk({
-      index: indexName,
-      body: data.reduce(
-        (state, doc, i) =>
-          state.concat({ index: { _index: indexName, _id: i } }, doc),
-        []
-      )
-    });
-    logger.info(`Index ${data.length} documents.`);
-  } catch (error) {
-    logger.error("index documents", error);
-  }
+async function main() {
+  await version({ client });
+  await createIndex({
+    client,
+    indexName: documentIndexName,
+    mapping: documentMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: documentIndexName,
+    documents: documents
+  });
+
+  await createIndex({
+    client,
+    indexName: themeIndexName,
+    mapping: themesMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: themeIndexName,
+    documents: themes
+  });
+
+  await createIndex({
+    client,
+    indexName: conventionsIndexName,
+    mapping: conventionCollectiveMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: conventionsIndexName,
+    documents: conventions
+  });
+
+  await createIndex({
+    client,
+    indexName: annuaireIndexName,
+    mapping: annuaireMapping
+  });
+  await indexDocumentsBatched({
+    client,
+    indexName: annuaireIndexName,
+    documents: annuaires
+  });
 }
-async function version() {
-  const { body } = await client.info();
-  logger.info(body.version.number);
-}
-version();
-createIndex(documentIndexName, documentMapping, documentsData);
-createIndex(annuaireIndexName, annuaireMapping, annuaireData);
-createIndex(conventionsIndexName, null, conventionData);
+
+main();
