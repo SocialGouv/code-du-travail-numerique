@@ -32,20 +32,16 @@ function getBySlug({ source, slug }) {
   return {
     query: {
       bool: {
-        must: [
-          {
-            term: {
-              source: {
-                value: source
-              }
-            }
-          },
-          {
-            match: {
-              slug
-            }
+        must: {
+          match: {
+            slug
           }
-        ]
+        },
+        filter: {
+          term: {
+            source
+          }
+        }
       }
     }
   };
