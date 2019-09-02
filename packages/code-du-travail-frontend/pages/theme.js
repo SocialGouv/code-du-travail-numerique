@@ -56,20 +56,10 @@ class Theme extends React.Component {
       return { statusCode: response.status };
     }
     const theme = await response.json();
-    if (theme.hits.hits.length) {
-      // show a single theme
-      if (slug) {
-        return {
-          theme: theme.hits.hits[0]._source
-        };
-      } else {
-        // root
-        return {
-          theme: {
-            children: theme.hits.hits.map(t => t._source)
-          }
-        };
-      }
+    if (theme) {
+      return {
+        theme
+      };
     }
     throw new Error("Theme not found");
   }

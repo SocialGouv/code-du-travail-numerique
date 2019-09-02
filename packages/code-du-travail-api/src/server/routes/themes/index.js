@@ -84,28 +84,14 @@ router.get("/themes/:slug", async ctx => {
   if (!response) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
-  // rewrite refs to match documents inside ES index
-  // todo(perf): we should group ES resolution
-  const responseBody = {
-    ...response.body,
-    hits: {
-      hits: await Promise.all(
-        response.body.hits.hits.map(async hit => {
-          const refs = await Promise.all(
-            (hit._source.refs || []).map(ref => toEsRef(ref))
-          );
-          return {
-            ...hit,
-            _source: {
-              ...hit._source,
-              refs
-            }
-          };
-        })
-      )
-    }
+
+  const hit = response.body.hits.hits[0];
+  const refs = await Promise.all((hit._source.refs || []).map(toEsRef));
+
+  ctx.body = {
+    ...hit._source,
+    refs
   };
-  ctx.body = responseBody;
 });
 
 module.exports = router;
