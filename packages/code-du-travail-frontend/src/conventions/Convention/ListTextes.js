@@ -21,7 +21,7 @@ const ListTextes = ({ conventionId, typeTextes }) => {
 
   useEffect(() => {
     getTextes();
-  }, [conventionId, typeTextes, getTextes]);
+  }, [conventionId, typeTextes]);
 
   if (!isLoaded) return <div>chargement ...</div>;
 

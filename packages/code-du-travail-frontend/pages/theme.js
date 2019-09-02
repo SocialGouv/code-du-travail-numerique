@@ -29,7 +29,7 @@ const getBreadcrumbs = theme => {
   const leaves =
     (theme &&
       theme.breadcrumbs &&
-      theme.breadcrumbs.map((item, index) => (
+      theme.breadcrumbs.map(item => (
         <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
           <a title={item.title}>{item.title}</a>
         </Link>
