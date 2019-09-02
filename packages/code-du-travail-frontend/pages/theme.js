@@ -27,7 +27,8 @@ const getBreadcrumbs = theme => {
   ];
 
   const leaves =
-    (theme.breadcrumbs &&
+    (theme &&
+      theme.breadcrumbs &&
       theme.breadcrumbs.map((item, index) => (
         <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
           <a title={item.title}>{item.title}</a>
@@ -37,7 +38,7 @@ const getBreadcrumbs = theme => {
 
   crumbs.push(...leaves);
 
-  if (theme.title && theme.slug) {
+  if (theme && theme.title && theme.slug) {
     crumbs.push(
       <span title={`voir le contenu du thème ${theme.title}`}>
         {theme.title}
@@ -67,11 +68,12 @@ class Theme extends React.Component {
   render() {
     const { theme, pageUrl, ogImage } = this.props;
     const breadcrumbs = getBreadcrumbs(theme);
-    const isRootTheme = !theme.title;
 
     if (!theme) {
       return <NotFound />;
     }
+
+    const isRootTheme = !theme.title;
 
     return (
       <PageLayout>
