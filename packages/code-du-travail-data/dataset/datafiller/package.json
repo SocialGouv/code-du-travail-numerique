@@ -10,6 +10,10 @@
   },
   "scripts": {
     "prestart": "node fix-urls.js",
+    "test": "jest",
     "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json"
+  },
+  "devDependencies": {
+    "jest-cli": "^24.9.0"
   }
 }

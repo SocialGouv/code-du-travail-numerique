@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sortByKey should sort by integer key 1`] = `
+Array [
+  Object {
+    "a": 1,
+    "b": 3,
+    "c": "r1234-5",
+  },
+  Object {
+    "a": 28,
+    "b": 0,
+    "c": "r1235",
+  },
+  Object {
+    "a": 32,
+    "b": 12,
+    "c": "r223",
+  },
+  Object {
+    "a": 277,
+    "b": 1,
+    "c": "r1234-2",
+  },
+]
+`;
+
+exports[`sortByKey should sort by integer key 2`] = `
+Array [
+  Object {
+    "a": 28,
+    "b": 0,
+    "c": "r1235",
+  },
+  Object {
+    "a": 277,
+    "b": 1,
+    "c": "r1234-2",
+  },
+  Object {
+    "a": 1,
+    "b": 3,
+    "c": "r1234-5",
+  },
+  Object {
+    "a": 32,
+    "b": 12,
+    "c": "r223",
+  },
+]
+`;
+
+exports[`sortByKey should sort by string key 1`] = `
+Array [
+  Object {
+    "a": 277,
+    "b": 1,
+    "c": "r1234-2",
+  },
+  Object {
+    "a": 1,
+    "b": 3,
+    "c": "r1234-5",
+  },
+  Object {
+    "a": 28,
+    "b": 0,
+    "c": "r1235",
+  },
+  Object {
+    "a": 32,
+    "b": 12,
+    "c": "r223",
+  },
+]
+`;
