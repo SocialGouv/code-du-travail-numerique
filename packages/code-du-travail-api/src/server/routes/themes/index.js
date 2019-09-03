@@ -25,6 +25,7 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/themes", async ctx => {
   const body = getRootThemesQuery({});
+  console.log("----index name", index);
   const response = await elasticsearchClient.search({
     index,
     body
@@ -63,6 +64,7 @@ const toEsRef = async ref => {
 router.get("/themes/:slug", async ctx => {
   const { slug } = ctx.params;
   const body = getThemeQuery({ slug });
+  console.log("----index name", index);
   const response = await elasticsearchClient.search({
     index,
     body

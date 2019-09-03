@@ -6,7 +6,7 @@ function getRootThemesQuery() {
       bool: {
         must_not: {
           exists: {
-            field: "parents"
+            field: "breadcrumbs"
           }
         }
       }
@@ -19,9 +19,11 @@ function getThemeQuery({ slug }) {
     _source: ["title", "slug", "position", "breadcrumbs", "children", "refs"],
     sort: [{ position: { order: "asc" } }],
     query: {
-      term: {
-        slug: {
-          value: slug
+      bool: {
+        filter: {
+          term: {
+            slug
+          }
         }
       }
     }
