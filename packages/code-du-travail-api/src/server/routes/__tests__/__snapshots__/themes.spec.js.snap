@@ -16,14 +16,22 @@ Object {
   "position": 1,
   "refs": Array [
     Object {
-      "_id": "VARo8mwBqwk-TdFKX_bt",
+      "_id": "yotX8WwBvfOozGPT2WYi",
       "_index": "code_du_travail_numerique",
-      "_score": 29.750992,
+      "_score": 29.817045,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
-            "slug": "1-embauche-et-contrat-de-travail",
-            "title": "Embauche et contrat de travail",
+            "id": 5,
+            "label": "Santé, sécurité et conditions de travail",
+            "parent": null,
+            "slug": "5-sante,-securite-et-conditions-de-travail",
+          },
+          Object {
+            "id": 32,
+            "label": "Travailleurs et secteurs spécifiques",
+            "parent": "5-sante,-securite-et-conditions-de-travail",
+            "slug": "32-travailleurs-et-secteurs-specifiques",
           },
         ],
         "date": "04/02/2019",
@@ -34,20 +42,29 @@ Object {
         "slug": "prestations-sociales-pour-les-artistes-auteurs",
         "source": "fiches_service_public",
         "text": "Les artistes auteurs rattachés, par le biais de l'Agessa ou de la Maison des artistes, au régime général de sécurité sociale, bénéficient des mêmes prestations de l'assurance maladie, maternité, invalidité et décès que les salariés, sauf pour les accidents du travail et maladies professionnelles. Cependant, les modes de calcul des indemnités sont spécifiques. Personnes bénéficiaires Les artistes auteurs d'œuvres littéraires et dramatiques, musicales, chorégraphiques, graphiques, plastiques, cinématographiques, audiovisuelles ou photographiques qui justifient un revenu au moins égal, au cours d'une année civile, à 9 027 € (correspondant à 900 fois le Smic horaire). Le droit aux prestations sociales s'appliquent aux artistes et à leur famille. L'ouverture des droits est acquise du 1 er juillet au 30 juin. Assurance maladie-maternité L'assurance maladie prend en charge : les dépenses de santé (consultations, actes chirurgicaux, hospitalisation, pharmacie) ; les indemnités journalières pour arrêt de travail. Les prestations en nature sont remboursées à partir de la première affiliation même si les cotisations ne sont pas à jour. Le versement des indemnités journalières, au contraire, suppose obligatoirement que les cotisations soient à jour. L'indemnité pour arrêt de travail, versée après 3 jours de carence, est égale à 50 % du gain journalier de base (revenus annuels divisés par 365) et plafonnée à 1,8 fois le Smic. Quand l'arrêt de travail dépasse 6 mois, les artistes, pour continuer à percevoir les indemnités, doivent être immatriculés depuis au moins 12 mois au premier jour du mois concerné par l'interruption de travail. Les indemnités journalières pour maternité ou paternité, versées sans délai de carence, sont dues si l'artiste est immatriculé depuis au moins 10 mois à la date présumée de l'accouchement (ou de l'adoption). Elles sont calculées sur une assiette diminuée des cotisation sociales obligatoires. Les indemnités journalières sont soumises aux prélèvements sociaux ( 0,50 % au titre de la CRDS, 6,2 % au titre de la CSG). À partir de 3 enfants à charge, l'indemnité est majorée dès le 31 e jour d'arrêt de travail continu et est portée à 66,66 % du revenu de référence. Les demandes de prestations familiales doivent être adressées à la caisse d'allocations familiales du domicile de l'artiste. Un artiste auteur radié du régime général bénéficie d'une protection sociale maintenue pendant 1 an. Après cette période, il peut demander la couverture maladie universelle (CMU). À noter les artistes auteurs ne sont pas couverts pour les accidents du travail et les maladies professionnelles. Ils peuvent souscrire une assurance volontaire contre ces risques auprès de la caisse de l'assurance maladie. Pension d'invalidité L'artiste auteur doit effectuer sa demande de pension d'invalidité à la caisse primaire d'assurance maladie (CPAM) (la Cramif pour les départements d'Île-de-France). En cas de cumul entre la pension et la reprise d'une activité indépendante ou salariée, le montant cumulé de la pension et des revenus doit rester inférieur au salaire moyen perçu pendant l’année civile précédant l’arrêt de travail suivi d'invalidité. Le calcul de la pension d'invalidité est effectué sur le montant retenu pour le calcul des cotisations et dépend de la capacité de travailler ou non. Capital décès L'assurance décès concerne les ayants droits de l'artiste. Son montant journalier est obtenu en divisant les revenus de l'année civile antérieure au décès par 365. La demande d'allocation doit être effectuée auprès du centre de Sécurité sociale du domicile. Pension de retraite Les cotisations à l'assurance vieillesse de base donnent droit à la retraite du régime général. Pour liquider la retraite et arrêter son activité, l'artiste auteur doit, avant la clôture de son compte, avoir cotisé sur le dernier bénéfice déclaré. La personne peut continuer son activité après liquidation de sa retraite. Les cotisations versées après ne sont pas validées. La Maison des artistes ou l'Agessa peut lui fournir un relevé individuel de compte vieillesse (nombre de mois cotisés, base de calcul et taux de cotisations). Les artistes auteurs bénéficient du régime complémentaire de l'IRCEC. La pension minimale est de 30 points, soit 177,90 € par an, soumise à cotisation (CSG : 6,2, % CRDS : 0,50 % ). Le montant est majoré de 10 % pour avoir eu 3 enfants. ",
+        "theme": "32-travailleurs-et-secteurs-specifiques",
         "title": "Prestations sociales pour les artistes auteurs",
         "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F23750",
       },
       "_type": "_doc",
     },
     Object {
-      "_id": "fARo8mwBqwk-TdFKX_bu",
+      "_id": "8otX8WwBvfOozGPT2WYi",
       "_index": "code_du_travail_numerique",
-      "_score": 30.446411,
+      "_score": 29.174013,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
-            "slug": "1-embauche-et-contrat-de-travail",
-            "title": "Embauche et contrat de travail",
+            "id": 6,
+            "label": "Représentation du personnel et négociation collective",
+            "parent": null,
+            "slug": "6-representation-du-personnel-et-negociation-collective",
+          },
+          Object {
+            "id": 36,
+            "label": "Négociations de branche",
+            "parent": "6-representation-du-personnel-et-negociation-collective",
+            "slug": "36-negociations-de-branche",
           },
         ],
         "date": "23/05/2019",
@@ -58,20 +75,29 @@ Object {
         "slug": "a-quoi-correspond-le-code-ape",
         "source": "fiches_service_public",
         "text": "Le code APE (activité principale exercée) permet d'identifier la branche d'activité principale de l'entreprise ou du travailleur indépendant. Sa fonction principale est statistique. Il est composé de 4 chiffres + 1 lettre, en référence à la nomenclature statistique nationale d'activités française ( NAF rév. 2 ). Ce code est attribué par l'Insee lors de l'immatriculation ou la déclaration d'activité de l'entreprise, en fonction de l'activité principale déclarée et réellement exercée. Ce n'est pas le libellé du code APE qui détermine les activités exercées dans l'entreprise, mais bien celles inscrites sur l'extrait du RCS . Si une entreprise exerce plusieurs activités, la ventilation du chiffre d'affaires ou des effectifs selon les branches est utilisée comme critère pour déterminer l'activité principale. Le code APE doit figurer sur les bulletins de paie des salariés. Demande de modification Si le code APE ne correspond pas ou plus à l'activité principale, il est nécessaire d'en demander la modification. En cas de changement d'activité Si l'activité de l'entreprise a changé, la demande de modification doit être adressée au centre de formalités des entreprises (CFE) dont vous dépendez qui effectuera les démarches nécessaires. Centre de formalités des entreprises (CFE)  Ministère chargé de l'économie Pour la correction d'une anomalie Si vous n'avez pas changé d'activité et que vous estimez que le code APE attribué par l'Insee doit être corrigé, il est nécessaire de le signaler à l'Insee. Selon que la demande de modification concerne l'entreprise ou seulement un établissement, les formulaires sont différents. Demande de modification du code d'activité principale (APE) d'une association Institut national de la statistique et des études économiques (Insee) Demande de modification du code d'activité principale (APE) d'un établissement Institut national de la statistique et des études économiques (Insee) En cas de double immatriculation (2 Siren et 2 Siret) Cette double immatriculation (deux Siren ou deux Siret) doit être signalée par écrit à la direction régionale de l'Insee compétente pour le département d'implantation du siège social ou de l'établissement. Dans l'éventualité de la suppression d'un double Siret, l'Insee se chargera de la notification aux administrations concernées. Direction régionale de l'Insee insee_siren_siret  Institut national de la statistique et des études économiques (Insee) ",
+        "theme": "36-negociations-de-branche",
         "title": "À quoi correspond le code APE ?",
         "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F33050",
       },
       "_type": "_doc",
     },
     Object {
-      "_id": "fgRo8mwBqwk-TdFKX_bu",
+      "_id": "9ItX8WwBvfOozGPT2WYi",
       "_index": "code_du_travail_numerique",
-      "_score": 32.206154,
+      "_score": 32.216736,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
-            "slug": "1-embauche-et-contrat-de-travail",
-            "title": "Embauche et contrat de travail",
+            "id": 6,
+            "label": "Représentation du personnel et négociation collective",
+            "parent": null,
+            "slug": "6-representation-du-personnel-et-negociation-collective",
+          },
+          Object {
+            "id": 36,
+            "label": "Négociations de branche",
+            "parent": "6-representation-du-personnel-et-negociation-collective",
+            "slug": "36-negociations-de-branche",
           },
         ],
         "date": "12/10/2018",
@@ -93,6 +119,7 @@ Object {
         "slug": "contribution-patronale-au-dialogue-social",
         "source": "fiches_service_public",
         "text": "Depuis le 1er janvier 2015, une nouvelle contribution patronale permet de financer la mise en place d'un fonds paritaire dédié au financement des organisations syndicales de salariés et des organisations professionnelles d'employeurs. Il s'agit de la contribution au dialogue social. Redevables Cette contribution est due par : les employeurs de droit privé ; les employeurs de droit public employant du personnel dans les conditions du droit privé : établissement national, établissement public à caractère industriel et commercial (EPIC), caisse locale de Sécurité sociale, chambre de commerce, par exemple ; les particuliers-employeurs. L'assujettissement de l'employeur à la contribution n'a aucun lien avec l'éventualité de la présence syndicale dans l'entreprise ou de l'adhésion à une organisation professionnelle d'employeurs. La contribution est due quel que soit l'effectif de l'entreprise, et quelle que soit son activité. Salariés concernés Doivent être prises en compte toutes les rémunérations versées à un salarié titulaire d'un contrat de travail relevant du code du travail, y compris les salariés détachés affiliés au régime de protection sociale français, les apprentis, les employés au pair, les bénéficiaires d'un contrat aidé. En sont exclues toutes les personnes n'ayant pas  la qualité de salarié : les stagiaires rémunérés par une gratification de stage ; les aides familiaux étrangers ; les accueillants familiaux ; les travailleurs handicapés employés dans un établissement et service d'aide par le travail (ESAT) ; les titulaires d'un mandat social : gérant d'une SARL , président directeur général d'un société anonyme ou dirigeant d'une Scop par exemple. Dans le cas où un salarié travaille pour plusieurs employeurs, chaque employeur, s'il est redevable de la contribution, doit contribuer sur la part de rémunération qu'il verse. À savoir les employeurs d'apprentis en sont exonérés, s'ils  sont artisans,  inscrits au répertoire des métiers, ou s'ils emploient moins de 11 salariés au 31 décembre précédant la date de conclusion du contrat d'apprentissage. Taux et base de calcul Le taux de la contribution est fixé à 0,016 % des rémunérations  servant de base de calcul des cotisations de sécurité sociale. L'assiette des cotisations et contributions sociales, c'est-à-dire la base sur laquelle elles sont calculées, est constituée de toutes les sommes et tous les avantages attribués en contrepartie ou à l'occasion du travail effectué. Il s'agit notamment des éléments de rémunération suivants : salaire brut (y compris les heures supplémentaires ou complémentaires) ; primes et indemnités ; prestations sociales complémentaires ; revenus de remplacement en cas d'arrêt maladie, maternité ou accident de travail ; prestations familiales extralégales ; avantages en espèces servis par le comité d'entreprise ; avantages en nature (nourriture et logement, mise à disposition de voiture pour l'usage privé des salariés, par exemple). D'autres éléments de rémunération ne sont pas soumis à cotisation, et sont donc exclus de la base de calcul : indemnités journalières versées par la sécurité sociale ; revenus de remplacement : pensions de retraite et d'invalidité, allocations de chômage et de préretraite ; primes liées à l'intéressement ou à la participation des salariés aux résultats de l'entreprise (dans le cadre d'un accord collectif) ; gratifications liées à la remise de la médaille d'honneur du travail, dans la limite du salaire mensuel de base ; indemnités considérées comme des dommages et intérêts ; contributions patronales de retraite supplémentaire et de prévoyance complémentaire ; remboursement de frais professionnels pouvant être justifiés. Versement La contribution est versée selon les mêmes conditions que les cotisations sociales et doit figurer sur le bordereau récapitulatif de cotisation (BRC) Urssaf, CGSS ou MSA sous les codes suivants : CTP 026 pour les particuliers employeurs ; CTP 027 pour les employeurs de droit privé et les personnes publiques ; CTP 028 pour les utilisateurs de titre de travail simplifiés (Tese, Tesa, TEF). ",
+        "theme": "36-negociations-de-branche",
         "title": "Contribution patronale au dialogue social",
         "url": "https://www.service-public.fr/professionnels-entreprises/vosdroits/F33308",
       },
@@ -131,11 +158,6 @@ Object {
       "position": 1,
       "slug": "1-embauche-et-contrat-de-travail",
       "title": "Embauche et contrat de travail",
-    },
-    Object {
-      "position": 644,
-      "slug": "644-handicap",
-      "title": "Handicap",
     },
   ],
 }
