@@ -8,6 +8,6 @@
     "start": "node index.js > glossary.json"
   },
   "dependencies": {
-    "google-spreadsheets": "^2.0.0"
+    "node-fetch": "^2.6.0"
   }
 }
