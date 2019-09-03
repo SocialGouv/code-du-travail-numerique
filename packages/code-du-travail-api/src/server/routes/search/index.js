@@ -1,3 +1,4 @@
+const utils = require("./utils");
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
 
@@ -47,16 +48,24 @@ router.get("/search", async ctx => {
   const facetBody = getFacetsBody({ query });
 
   // query data
-  const response = await elasticsearchClient.search({ index, body });
-  const snippetIndex = response.body.hits.hits.findIndex(
+
+  const [esResults, semResults] = await Promise.all([
+    elasticsearchClient.search({ index, body }),
+    fetch(`http://0.0.0.0:5005/api/search?q=${query}`).then(data => data.json())
+  ]);
+
+  const semResultWithKey = utils.addKey(semResults.hits.hits);
+  const esResultWithKey = utils.addKey(esResults.body.hits.hits);
+  const results = utils.merge(semResultWithKey, esResultWithKey, MAX_RESULTS);
+  const resultsNoDuplicate = utils.removeDuplicate(results);
+
+  const snippetIndex = esResults.body.hits.hits.findIndex(
     item => item._source.source === "snippet"
   );
   ctx.body = {
     hits: {
-      ...response.body.hits,
-      hits: response.body.hits.hits
-        .filter(item => item._source.source !== "snippet")
-        .slice(0, size)
+
+      hits: resultsNoDuplicate.filter(item => item._source.source !== "snippet").slice(0, size)
     },
     facets: []
   };
