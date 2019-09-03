@@ -4,17 +4,19 @@ import styled from "styled-components";
 
 import { box, breakpoints, colors, spacing } from "../theme";
 
-const LargeLink = ({ icon: Icon, children, ...props }) => (
-  <StyledLink {...props}>
-    {Icon && (
-      <IconWrapper>
-        <Icon />
-      </IconWrapper>
-    )}
-    <span>{children}</span>
-  </StyledLink>
+const LargeLink = React.forwardRef(
+  ({ icon: Icon, children, ...props }, ref) => (
+    <StyledLink {...props} ref={ref}>
+      {Icon && (
+        <IconWrapper>
+          <Icon />
+        </IconWrapper>
+      )}
+      <span>{children}</span>
+    </StyledLink>
+  )
 );
-
+LargeLink.displayName = "LargeLink";
 LargeLink.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.oneOfType([PropTypes.func, PropTypes.bool])

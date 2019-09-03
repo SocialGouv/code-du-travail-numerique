@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import { Router } from "../../routes";
+import { useRouter } from "next/router";
 
 export default function Metas({ url, title, description, image }) {
+  const router = useRouter();
   if (typeof window !== "undefined") {
-    const { asPath: path } = Router || { asPath: "" };
+    const { asPath: path } = router || { asPath: "POFPOF" };
     url = url || `${location.protocol}//${location.host}${path}`;
     image =
       image ||

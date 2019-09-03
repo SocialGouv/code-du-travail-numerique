@@ -1,9 +1,9 @@
 import React from "react";
 import getConfig from "next/config";
+import Link from "next/link";
 import styled from "styled-components";
 import { Button, Container, List, ListItem, Section, theme } from "@cdt/ui-old";
 
-import { Link } from "../../routes";
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
 
 const { publicRuntimeConfig } = getConfig();
@@ -34,17 +34,17 @@ const Footer = () => (
           <CategoryTitle>Code du travail numérique</CategoryTitle>
           <List>
             <StyledListItem>
-              <Link route="droit-du-travail">
+              <Link href="/droit-du-travail">
                 <a>Le droit du travail</a>
               </Link>
             </StyledListItem>
             <StyledListItem>
-              <Link route="about">
+              <Link href="/a-propos">
                 <a>À propos</a>
               </Link>
             </StyledListItem>
             <StyledListItem>
-              <Link route="mentions-legales">
+              <Link href="/mentions-legales">
                 <a>Mentions légales</a>
               </Link>
             </StyledListItem>

@@ -242,7 +242,7 @@ exports[`<Themes /> should render 1`] = `
         >
           <a
             class="c5"
-            href="/themes/5-sante%2C-securite-et-conditions-de-travail"
+            href="/themes/5-sante,-securite-et-conditions-de-travail"
             title="Santé, sécurité et conditions de travail"
           >
             <div

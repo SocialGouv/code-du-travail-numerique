@@ -1,19 +1,19 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import getConfig from "next/config";
 import styled from "styled-components";
 import { Alert, Container, Section, theme } from "@cdt/ui-old";
 import fetch from "isomorphic-unfetch";
 
-import { Link } from "../routes";
-import Search from "../src/search/Search";
-import { SearchQuery } from "../src/search/SearchQuery";
+import Search from "../../src/search/Search";
+import { SearchQuery } from "../../src/search/SearchQuery";
 
-import Themes from "../src/home/Themes";
-import { searchResults } from "../src/search/search.service";
-import { PageLayout } from "../src/layout/PageLayout";
-import { Breadcrumbs } from "../src/common/Breadcrumbs";
-import Metas from "../src/common/Metas";
+import Themes from "../../src/home/Themes";
+import { searchResults } from "../../src/search/search.service";
+import { PageLayout } from "../../src/layout/PageLayout";
+import { Breadcrumbs } from "../../src/common/Breadcrumbs";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -25,7 +25,7 @@ const getBreadcrumbs = (items = []) => {
     return [];
   }
   const root = [
-    <Link key="root" route="themes">
+    <Link key="root" href="/themes">
       <a title="Tous les thèmes">Thèmes</a>
     </Link>
   ];
@@ -39,7 +39,7 @@ const getBreadcrumbs = (items = []) => {
       );
     }
     return (
-      <Link key={item.slug} route="themes" params={{ slug: item.slug }}>
+      <Link key={item.slug} href="/themes/[theme]" as={`/themes/${item.slug}`}>
         <a title={item.label}>{item.label}</a>
       </Link>
     );
@@ -50,7 +50,7 @@ const getBreadcrumbs = (items = []) => {
 // Theme page
 class Theme extends React.Component {
   static async getInitialProps({ query: { slug } }) {
-    const response = await fetch(`${API_URL}/themes/${slug ? slug : ""}`);
+    const response = await fetch(`${API_URL}/themes${slug ? `/${slug}` : ""}`);
     if (!response.ok) {
       return { statusCode: response.status };
     }

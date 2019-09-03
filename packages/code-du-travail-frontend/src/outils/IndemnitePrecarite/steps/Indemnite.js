@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { theme, Toast } from "@cdt/ui-old";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
@@ -6,7 +7,6 @@ import MathJax from "react-mathjax-preview";
 import { getIndemnitePrecarite } from "../indemnite";
 import { Summary, Highlight, SectionTitle } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
-import { Link } from "../../../../routes";
 
 function StepIndemnite({ form }) {
   const state = form.getState();
@@ -67,15 +67,15 @@ function StepIndemnite({ form }) {
         En savoir plus sur la prime de précarité d’un{" "}
         {contrat === "cdd" ? (
           <Link
-            route="fiche-service-public"
-            params={{ slug: "fin-dun-contrat-a-duree-determinee-cdd" }}
+            href="/fiche-service-public/[slug]"
+            as={"/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"}
           >
             <a>salarié en CDD</a>
           </Link>
         ) : (
           <Link
-            route="fiche-service-public"
-            params={{ slug: "contrat-de-travail-temporaire-interim" }}
+            href="/fiche-service-public/[slug]"
+            as={"/fiche-service-public/contrat-de-travail-temporaire-interim"}
           >
             <a>salarié en contrat de travail temporaire (contrat d’intérim)</a>
           </Link>

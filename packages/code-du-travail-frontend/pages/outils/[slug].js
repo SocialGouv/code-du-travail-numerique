@@ -1,16 +1,15 @@
 import React from "react";
-import { withRouter } from "next/router";
 import styled from "styled-components";
 import { Alert, Container, theme } from "@cdt/ui-old";
 
-import Search from "../src/search/Search";
-import { PageLayout } from "../src/layout/PageLayout";
-import Metas from "../src/common/Metas";
+import Search from "../../src/search/Search";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Metas from "../../src/common/Metas";
 
-import { CalculateurIndemnite } from "../src/outils/IndemniteLicenciement";
-import { SimulateurEmbauche } from "../src/outils/SimulateurEmbauche";
-import { SimulateurIndemnitePrecarite } from "../src/outils/IndemnitePrecarite";
-import { DureePreavisDemission } from "../src/outils/DureePreavisDemission";
+import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
+import { SimulateurEmbauche } from "../../src/outils/SimulateurEmbauche";
+import { SimulateurIndemnitePrecarite } from "../../src/outils/IndemnitePrecarite";
+import { DureePreavisDemission } from "../../src/outils/DureePreavisDemission";
 
 const BigError = ({ children }) => (
   <StyledContainer>
@@ -20,38 +19,38 @@ const BigError = ({ children }) => (
 
 const OutilIntrouvable = () => <BigError>Cet outil est introuvable</BigError>;
 
-const getOutilFromCode = function(code) {
-  switch (code) {
+const getSimulator = function(name) {
+  switch (name) {
     case "indemnite-licenciement":
       return {
         title: "Calculer une indemnité de licenciement",
         description:
           "Calculez votre indemnité de licenciement en tenant compte des dispositions conventionnelles",
-        outil: CalculateurIndemnite
+        component: CalculateurIndemnite
       };
     case "simulateur-embauche":
       return {
         title: "Simulateur d'embauche",
         description:
           "Simuler le coût d'une embauche en France et calculer le salaire net à partir du brut : CDD, statut cadre, cotisations sociales, retraite…",
-        outil: SimulateurEmbauche
+        component: SimulateurEmbauche
       };
     case "indemnite-precarite":
       return {
         title: "Calculer une indemnite de précarité",
         description: "Calculez votre prime de précarité",
-        outil: SimulateurIndemnitePrecarite
+        component: SimulateurIndemnitePrecarite
       };
     case "preavis-demission":
       return {
         title: "Calculer un préavis de démission",
         description: "Calculer un préavis de démission",
-        outil: DureePreavisDemission
+        component: DureePreavisDemission
       };
     default:
       return {
         title: "Outil introuvable",
-        outil: OutilIntrouvable
+        component: OutilIntrouvable
       };
   }
 };
@@ -59,13 +58,11 @@ const getOutilFromCode = function(code) {
 class Outils extends React.Component {
   static async getInitialProps({ query }) {
     // we don't request data from api since outils are client side only
-    return { data: { _source: { slug: query.slug } } };
+    return { slug: query.slug, searchTerm: query.q };
   }
   render() {
-    const { data = { _source: {} }, router, pageUrl, ogImage } = this.props;
-    const { outil: Outil, title, description } = getOutilFromCode(
-      data._source.slug
-    );
+    const { searchTerm, slug, pageUrl, ogImage } = this.props;
+    const { component: Simulator, title, description } = getSimulator(slug);
     return (
       <PageLayout>
         <Metas
@@ -75,14 +72,14 @@ class Outils extends React.Component {
           image={ogImage}
         />
         <Search />
-        <Outil q={router.query.q} />
+        <Simulator q={searchTerm} />
         <Source>-</Source>
       </PageLayout>
     );
   }
 }
 
-export default withRouter(Outils);
+export default Outils;
 
 const { colors, fonts, spacing } = theme;
 

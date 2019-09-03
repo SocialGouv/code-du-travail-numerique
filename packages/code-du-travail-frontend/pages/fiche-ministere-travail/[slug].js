@@ -3,10 +3,10 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import Answer from "../src/common/Answer";
-import ReponseIcon from "../src/icons/ReponseIcon";
-import { PageLayout } from "../src/layout/PageLayout";
-import Metas from "../src/common/Metas";
+import Answer from "../../src/common/Answer";
+import ReponseIcon from "../../src/icons/ReponseIcon";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }

@@ -4,12 +4,12 @@ import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import { Section, Wrapper } from "@cdt/ui-old";
 
-import Html from "../src/common/Html";
-import { DownloadFile } from "../src/common/DownloadFile";
-import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import Answer from "../src/common/Answer";
-import { PageLayout } from "../src/layout/PageLayout";
-import Metas from "../src/common/Metas";
+import Html from "../../src/common/Html";
+import { DownloadFile } from "../../src/common/DownloadFile";
+import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
+import Answer from "../../src/common/Answer";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }

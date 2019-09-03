@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import CodeDuTravail from "../pages/code-du-travail.js";
+import CodeDuTravail from "../pages/code-du-travail/[slug]";
 
 describe("<CodeDuTravail />", () => {
   it("should render", () => {

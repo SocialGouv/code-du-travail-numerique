@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { Alert, theme } from "@cdt/ui-old";
 
-import { Link } from "../../routes";
+import Link from "next/link";
 
 import { getLabelBySource } from "../sources";
 import { SearchResultList } from "./SearchResultList";
@@ -46,7 +46,12 @@ class SearchResults extends React.Component {
             <p>
               Vous pouvez élargir la recherche en intégrant&nbsp;
               <strong>
-                <Link route="recherche" params={{ q: query, source: "" }}>
+                <Link
+                  href={{
+                    pathname: "/recherche",
+                    query: { q: query, source: "" }
+                  }}
+                >
                   <a>les autres sources de documents</a>
                 </Link>
               </strong>

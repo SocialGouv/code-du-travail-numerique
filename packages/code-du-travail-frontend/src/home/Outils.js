@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "../../routes";
+import Link from "next/link";
 import styled from "styled-components";
 
 import {
@@ -19,8 +19,8 @@ const outils = [
     hrefTitle: "Démarrer une simulation ",
     text:
       "Calculez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
-    routeName: "outils",
-    slug: "indemnite-licenciement"
+    href: "/outils/[slug]",
+    slug: "/outils/indemnite-licenciement"
   },
   {
     icon: "/static/assets/icons/message_web.svg",
@@ -28,23 +28,23 @@ const outils = [
     hrefTitle: "Voir tous les modèles de courriers",
     text:
       "Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail",
-    routeName: "modeles"
+    href: "/modeles-de-courriers"
   },
   {
     icon: "/static/assets/icons/salary_web.svg",
     title: "Simulateur d'embauche",
     hrefTitle: "Voir tous les modèles de courriers",
     text: "Estimez le salaire lors d'une embauche : total employeur, brut, net",
-    routeName: "outils",
-    slug: "simulateur-embauche"
+    href: "/outils/[slug]",
+    slug: "/outils/simulateur-embauche"
   },
   {
     icon: "/static/assets/icons/coins.svg",
     title: "Prime de précarité",
     hrefTitle: "Calculez la prime de précarité",
     text: "Simulez la prime de précarité d’un salarié.",
-    routeName: "outils",
-    slug: "indemnite-precarite"
+    href: "/outils/[slug]",
+    slug: "/outils/indemnite-precarite"
   }
 ];
 
@@ -62,21 +62,15 @@ export default class Outils extends React.PureComponent {
         <Container>
           <Title>{title}</Title>
           <Grid>
-            {outils.map(
-              ({ title, text, icon, routeName = "index", slug, hrefTitle }) => (
-                <GridCell key={`${routeName}/${slug}`}>
-                  <Link
-                    route={routeName}
-                    params={slug ? { slug } : {}}
-                    passHref
-                  >
-                    <Tile title={hrefTitle}>
-                      <Category title={title} text={text} icon={icon} />
-                    </Tile>
-                  </Link>
-                </GridCell>
-              )
-            )}
+            {outils.map(({ title, text, icon, href, slug, hrefTitle }) => (
+              <GridCell key={slug || href}>
+                <Link href={href} as={slug} passHref>
+                  <Tile title={hrefTitle}>
+                    <Category title={title} text={text} icon={icon} />
+                  </Tile>
+                </Link>
+              </GridCell>
+            ))}
             <GridCell>
               <ConventionModal />
             </GridCell>

@@ -1,9 +1,9 @@
 import React from "react";
+import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { List, ListItem, theme } from "@cdt/ui-old";
 
-import { Link } from "../../routes";
 import { getRouteBySource, getLabelBySource } from "../sources";
 import { SourceIcon } from "./SourceIcon";
 
@@ -49,8 +49,13 @@ const SearchResultList = ({ items, query }) => {
       {items.map(({ _id, _source }, i) => (
         <ListItem key={_id}>
           <Link
-            route={getRouteBySource(_source.source)}
-            params={{ q: query, slug: _source.slug }}
+            href={{
+              pathname: `/${getRouteBySource(_source.source)}/[slug]`,
+              query: { q: query, slug: _source.slug }
+            }}
+            as={`/${getRouteBySource(_source.source)}/${
+              _source.slug
+            }?q=${query}`}
             passHref
           >
             <ListLink focused={i === 0}>

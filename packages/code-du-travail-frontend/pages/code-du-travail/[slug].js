@@ -5,10 +5,10 @@ import { format, parseISO } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import getConfig from "next/config";
 
-import ArticleIcon from "../src/icons/ArticleIcon";
-import Answer from "../src/common/Answer";
-import { PageLayout } from "../src/layout/PageLayout";
-import Metas from "../src/common/Metas";
+import ArticleIcon from "../../src/icons/ArticleIcon";
+import Answer from "../../src/common/Answer";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }

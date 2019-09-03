@@ -1,14 +1,14 @@
 import React from "react";
 import getConfig from "next/config";
+import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import { Link } from "../routes";
 import { Container, Section, theme } from "@cdt/ui-old";
 
-import Search from "../src/search/Search";
-import { PageLayout } from "../src/layout/PageLayout";
-import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
-import Metas from "../src/common/Metas";
+import Search from "../../src/search/Search";
+import { PageLayout } from "../../src/layout/PageLayout";
+import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -51,8 +51,8 @@ const List = ({ items = [], ...props }) => (
     {items.map(({ _id, _source }) => (
       <li key={_id}>
         <Link
-          route="modeles-de-courriers"
-          params={{ slug: _source.slug }}
+          href="modeles-de-courriers/[courrier]"
+          as={`modeles-de-courriers/${_source.slug}`}
           passHref
         >
           <ModeleLink>

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "next/link";
 import { List, ListItem, theme } from "@cdt/ui-old";
 import styled from "styled-components";
 
-import { Link } from "../../routes";
 import { getLabelBySource } from "../sources";
 
 class Faceting extends React.Component {
@@ -36,7 +36,6 @@ class Faceting extends React.Component {
 
   render() {
     const { query, source } = this.props;
-
     return (
       <nav>
         <ListTitle>Type de réponse</ListTitle>
@@ -44,8 +43,10 @@ class Faceting extends React.Component {
           {this.state.facets.map(([key, count]) => (
             <StyledListItem key={key}>
               <Link
-                route="recherche"
-                params={{ q: query, source: key }}
+                href={{
+                  pathname: "/recherche",
+                  query: { q: query, source: key }
+                }}
                 passHref
               >
                 <Text active={key === source}>
@@ -55,7 +56,13 @@ class Faceting extends React.Component {
             </StyledListItem>
           ))}
           <StyledListItem>
-            <Link route="recherche" params={{ q: query, source: "" }} passHref>
+            <Link
+              href={{
+                pathname: "/recherche",
+                query: { q: query }
+              }}
+              passHref
+            >
               <Text active={!source}>Toutes les réponses</Text>
             </Link>
           </StyledListItem>

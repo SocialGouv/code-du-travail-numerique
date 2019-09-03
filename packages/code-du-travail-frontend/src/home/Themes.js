@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Link } from "../../routes";
+import Link from "next/link";
 
 import {
   Container,
@@ -48,7 +48,7 @@ export default class Themes extends React.Component {
           <Grid>
             {themes.map(({ id, slug, label, parent }) => (
               <GridCell key={slug + label}>
-                <Link route="themes" params={{ slug: slug || "/" }} passHref>
+                <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
                   <Tile title={label}>
                     <Category
                       small={parent}

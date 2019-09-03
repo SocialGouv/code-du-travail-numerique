@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Outils from "../pages/outils.js";
+import Outils from "../pages/outils/[slug]";
 
 describe("<Outils />", () => {
   it("should render", () => {

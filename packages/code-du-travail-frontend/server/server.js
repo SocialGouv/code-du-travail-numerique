@@ -1,7 +1,6 @@
 // Custom server using Express.
 const express = require("express");
 const next = require("next");
-const routes = require("../routes");
 const expressSitemap = require("express-sitemap-xml");
 const getUrls = require("./get-urls");
 /**
@@ -14,7 +13,7 @@ const FRONTEND_HOST = process.env.FRONTEND_HOST || `http://localhost:${PORT}`;
 const dev = process.env.NODE_ENV !== "production";
 
 const app = next({ dev });
-const handler = routes.getRequestHandler(app);
+const handler = app.getRequestHandler();
 
 /**
  * This middleware is only used for dev / staging deployement
