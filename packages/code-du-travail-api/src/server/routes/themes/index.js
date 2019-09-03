@@ -9,9 +9,10 @@ const {
 
 const { getSourceByRoute } = require("@cdt/sources");
 
-const indexContenus = "code_du_travail_numerique";
+const indexContenus =
+  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
-const index = process.env.ELASTICSEARCH_THEMES_INDEX || "cdtn_themes";
+const index = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
 
 const router = new Router({ prefix: API_BASE_URL });
 
