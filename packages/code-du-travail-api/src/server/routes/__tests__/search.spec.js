@@ -39,7 +39,7 @@ test("return faq search results for demission ", async () => {
     "themes",
     "fiches_ministere_travail",
     "fiches_service_public"
-  ];//
+  ];
   const response = await request(app.callback()).get(
     `/api/v1/search?q=la démission&excludeSources=${excludeSources.join(",")}`
   );
