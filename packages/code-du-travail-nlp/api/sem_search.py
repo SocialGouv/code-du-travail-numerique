@@ -66,7 +66,7 @@ class SemSearch():
 
         self.question_results = self.session.run(self.question_embeddings, {self.q_placeholder:questions})
         res = np.inner(self.question_results["outputs"], self.response_results["outputs"])
-        hits =  [self._return_hit(self.slugs[a], self.titles[a]) for a in res[0].argsort()[::-1]][:k]
+        hits =  [self._return_hit(self.slugs[a], self.titles[a], res[0][a]) for a in res[0].argsort()[::-1]][:k]
         return {
             "hits":{
                 "total" : len(hits),
@@ -75,13 +75,15 @@ class SemSearch():
             "facets":[]
         }
 
-    def _return_hit(self, slug: stringvec, title: stringvec):
+    def _return_hit(self, slug: stringvec, title: stringvec, score: float):
+        """simple utility to return a dict from slugs, titles and score"""
         source, slug_short = slug.split("/")[1:]
         return {
             "_source":{
             "source":source.replace("-", "_").replace("fiche", "fiches"), # need clean source in format fiches_service_public...
             "slug":slug_short,
-            "title": title
+            "title": title,
+            "_score_sem": float(score) # float necessary to make numpy float json serializable
             },
             "_id":slug.replace("/", "")
 
