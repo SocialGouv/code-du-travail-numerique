@@ -25,13 +25,13 @@ spec:
             httpGet:
               path: /api/v1/version
               port: ${PORT}
-            initialDelaySeconds: 3
+            initialDelaySeconds: 300
             periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /api/v1/version
               port: ${PORT}
-            initialDelaySeconds: 3
+            initialDelaySeconds: 300
             periodSeconds: 5
           env:
           - name: PORT
@@ -46,3 +46,5 @@ spec:
             value: "${ELASTICSEARCH_URL}"
           - name: VERSION
             value: "${VERSION}"
+          - name: NLP_URL
+            value: http://cdtn-nlp${HASH_BRANCH_NAME}

@@ -47,11 +47,9 @@ router.get("/search", async ctx => {
   const body = getSearchBody({ query, size: size + 1, excludeSources });
   const facetBody = getFacetsBody({ query });
 
-  // query data
-
   const [esResults, semResults] = await Promise.all([
     elasticsearchClient.search({ index, body }),
-    fetch(`http://0.0.0.0:5005/api/search?q=${query}&excludeSources=${excludeSources}`).then(data => data.json())
+    fetch(`${process.env.NLP_URL}:5000/api/search?q=${query}&excludeSources=${excludeSources}`).then(data => data.json())
   ]);
 
   const semResultWithKey = utils.addKey(semResults.hits.hits);
