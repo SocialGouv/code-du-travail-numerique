@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ConventionModal /> should render a button 1`] = `
+exports[`<ConventionModal /> should render 1`] = `
 .c1 {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
@@ -85,7 +85,7 @@ exports[`<ConventionModal /> should render a button 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c13:not(:focus):not(:active) {
+.c11:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -119,7 +119,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   overflow-y: auto;
 }
 
-.c12 {
+.c10 {
   position: absolute;
   top: 0;
   right: 0;
@@ -130,6 +130,20 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   border: none;
   -webkit-appearance: none;
   cursor: pointer;
+}
+
+.c7 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c7 > *:first-child {
+  margin-top: 0;
+}
+
+.c7 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c1 {
@@ -158,29 +172,12 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   margin: 1rem;
 }
 
-.c9 li[role="option"]:nth-child(2n + 1) {
-  background: #f7f7f7;
+.c9 {
+  margin-top: 1.25rem;
 }
 
 .c8 {
-  margin-top: 10px;
-}
-
-.c7 {
-  color: #000;
-  font-size: 1.2em;
-  margin-top: 20px;
-}
-
-.c10 {
-  color: #666;
-  font-size: 1em;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-}
-
-.c11 {
-  font-style: italic;
+  width: 100%;
 }
 
 .c0 {
@@ -234,10 +231,17 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c10 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
+  }
+}
+
+@media print {
+  .c7 {
+    max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -294,132 +298,33 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
             data-reach-dialog-content="true"
             tabindex="-1"
           >
-            <form>
-              <h2>
-                Trouvez votre convention collective
-              </h2>
-              <div>
-                <h3
-                  class="c7"
-                >
-                  Recherche par nom ou par identifiant
-                </h3>
-                Saisissez l’identifiant de convention collective (IDCC) ou le nom de la branche :
-                <div
-                  class="c8"
-                >
-                  <div
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-owns="react-autowhatever-1"
-                    role="combobox"
-                    style="position: relative;"
-                  >
-                    <input
-                      aria-autocomplete="list"
-                      aria-controls="react-autowhatever-1"
-                      autocomplete="off"
-                      class="full-width"
-                      name="query"
-                      placeholder="Convention collective"
-                      type="search"
-                      value=""
-                    />
-                    <div
-                      class="c9"
-                      id="react-autowhatever-1"
-                      role="listbox"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="c10"
-                >
-                  Comment trouver ma convention collective ?
-                </div>
-                <ul>
-                  <li>
-                    Elle doit figurer au 
-                    <b>
-                      bulletin de paie
-                    </b>
-                    , et sur une notice remise à l’embauche ou 
-                    <b>
-                      sur le contrat de travail
-                    </b>
-                  </li>
-                  <li>
-                    Sur l’affichage obligatoire dans l’entreprise (avec les modalités de consultation en entreprise)
-                  </li>
-                </ul>
-                <div
-                  class="c10"
-                >
-                  Quelle est la convention collective applicable ?
-                </div>
-                <ul>
-                  <li>
-                    En principe celle relevant de l’activité principale dans l’entreprise pour les cas les plus simples.
-                  </li>
-                </ul>
-              </div>
-            </form>
-            <form>
-              <h3
-                class="c7"
-              >
-                Recherche par SIREN ou SIRET
+            <div
+              class="c7"
+            >
+              <h3>
+                Recherche de convention collective
               </h3>
-              Saisissez le numéro de SIREN ou SIRET de votre entreprise afin d’obtenir votre convention collective :
-              <div
+              <p>
+                Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
+              </p>
+              <input
                 class="c8"
+                placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+                type="text"
+                value=""
+              />
+              <div
+                class="c9"
               >
-                <div
-                  aria-expanded="false"
-                  aria-haspopup="listbox"
-                  aria-owns="react-autowhatever-1"
-                  role="combobox"
-                  style="position: relative;"
-                >
-                  <input
-                    aria-autocomplete="list"
-                    aria-controls="react-autowhatever-1"
-                    autocomplete="off"
-                    class="full-width"
-                    name="query"
-                    placeholder="Numéro de SIRET à 14 chiffres"
-                    type="search"
-                    value=""
-                  />
-                  <div
-                    class="c9"
-                    id="react-autowhatever-1"
-                    role="listbox"
-                  />
-                </div>
-                <p>
-                  <span>
-                     
-                  </span>
-                </p>
-                <p
-                  class="c11"
-                >
-                  Vous pouvez chercher le SIRET de votre entreprise sur 
-                  <a
-                    href="https://entreprise.data.gouv.fr/"
-                  >
-                    entreprise.data.gouv.fr
-                  </a>
-                </p>
+                
               </div>
-            </form>
+            </div>
             <button
-              class="c12"
+              class="c10"
               title="fermer la modale"
             >
               <div
-                class="c13"
+                class="c11"
               >
                 fermer la modale
               </div>

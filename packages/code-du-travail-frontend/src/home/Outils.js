@@ -3,7 +3,7 @@ import { Link } from "../../routes";
 import styled from "styled-components";
 
 import { Container, Grid, Category, GridCell, Section, theme } from "@cdt/ui";
-import ConventionModal from "./ConventionModal";
+import ConventionModal from "../conventions/Search/Modal";
 
 const outils = [
   {

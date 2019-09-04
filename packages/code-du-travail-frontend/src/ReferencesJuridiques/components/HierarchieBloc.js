@@ -2,8 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Accordion, Button, Modal, theme } from "@cdt/ui";
-import { ConventionForm } from "../../common/ConventionForm";
-import { searchIdcc } from "../../common/convention.service";
+import ConventionForm from "../../conventions/Search/Form";
 import TYPE_REFERENCE from "../typeReference";
 import ReferenceList from "./ReferenceList";
 
@@ -49,16 +48,16 @@ class HierarchieBloc extends React.PureComponent {
         <StyledAccordion items={items} />
         <p>{text}</p>
         {hasCCSearch && (
-          <>
+          <React.Fragment>
             <CCButtonWrapper>
               <Button onClick={this.openModal}>
                 Trouvez votre convention collective
               </Button>
             </CCButtonWrapper>
             <Modal isOpen={this.state.modalIsOpen} onDismiss={this.closeModal}>
-              <ConventionForm onSearch={searchIdcc} />
+              <ConventionForm />
             </Modal>
-          </>
+          </React.Fragment>
         )}
       </BlocWrapper>
     );

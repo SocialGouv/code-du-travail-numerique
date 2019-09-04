@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Category, Modal, theme } from "@cdt/ui";
-import { ConventionForm } from "../common/ConventionForm";
-import { CompanyForm } from "../common/CompanyForm";
-import {
-  searchIdcc,
-  searchCompanies,
-  getCompany
-} from "../common/convention.service";
+
+import ConventionForm from "./Form";
 
 class ConventionModal extends React.Component {
   state = {
@@ -30,7 +25,7 @@ class ConventionModal extends React.Component {
   render() {
     const { modalIsOpen } = this.state;
     return (
-      <>
+      <React.Fragment>
         <Button onClick={this.openModal}>
           <Category
             title="Votre convention collective"
@@ -39,10 +34,9 @@ class ConventionModal extends React.Component {
           />
         </Button>
         <Modal isOpen={modalIsOpen} onDismiss={this.closeModal}>
-          <ConventionForm onSearch={searchIdcc} />
-          <CompanyForm onSearch={searchCompanies} getCompany={getCompany} />
+          <ConventionForm />
         </Modal>
-      </>
+      </React.Fragment>
     );
   }
 }

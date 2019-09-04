@@ -1,17 +1,11 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ConventionModal from "../ConventionModal";
-
-jest.mock("../../common/convention.service", () => ({
-  searchIdcc: jest.fn(),
-  searchCompanies: jest.fn(),
-  getCompany: jest.fn()
-}));
+import ConventionModal from "../Modal";
 
 // Trouvez votre convention collective
 
 describe("<ConventionModal />", () => {
-  it("should render a button", () => {
+  it("should render", () => {
     const { container } = render(<ConventionModal />);
     expect(container).toMatchSnapshot();
   });
@@ -22,7 +16,9 @@ describe("<ConventionModal />", () => {
     );
     const button = getByText(/votre convention collective/i);
     button.click();
-    const input = getByPlaceholderText(/Convention collective/i);
+    const input = getByPlaceholderText(
+      /Ex: 'Corso Balard' ou '82161143100015' ou '1486'/i
+    );
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
   });
@@ -34,7 +30,9 @@ describe("<ConventionModal />", () => {
     const el = document.body.querySelector("[data-reach-dialog-overlay]");
     el.click();
     expect(
-      queryByPlaceholderText(/Convention collective ou code NAF/i)
+      queryByPlaceholderText(
+        /Ex: 'Corso Balard' ou '82161143100015' ou '1486'/i
+      )
     ).toBeNull();
   });
 });
