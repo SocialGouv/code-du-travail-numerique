@@ -48,4 +48,3 @@ test("test merge one missing", () => {
     expect(utils.merge(...t.input)).toEqual(t.expected);
   });
 });
-
