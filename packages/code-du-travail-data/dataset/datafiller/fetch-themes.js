@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const slugify = require("../../slugify");
 
-const { sortByKey, getVariants } = require("./utils");
+const { sortByKey, getVariants, sortRowRefs, slimify } = require("./utils");
 
 /*
  fetch raw datafiller themes data, filter and sort properly
@@ -30,12 +30,9 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/the
 
 */
 
-const hasUrl = row => !!row.url;
-
 const getSlug = row => `${row.position || 1}-${slugify(row.title)}`;
 
-const slimify = keys => obj =>
-  keys.reduce((a, k) => ({ ...a, [k]: obj[k] }), {});
+const slimifyTheme = obj => slimify(obj, ["title", "slug"]);
 
 // for breadcrumbs
 const getParents = (rows, row) => {
@@ -46,9 +43,9 @@ const getParents = (rows, row) => {
     if (node) {
       parts.unshift({ ...node, slug: getSlug(node) });
     }
-    parent = node.parent;
+    parent = node && node.parent;
   }
-  return parts.map(slimify(["title", "slug"]));
+  return parts.map(slimifyTheme);
 };
 
 const getChildren = (rows, row) =>
@@ -58,32 +55,27 @@ const getChildren = (rows, row) =>
 
 // import only valid data from datafiller
 // == has more than one ref
-const fetchAll = () =>
-  fetch(RECORDS_URL, { params: { _limit: 1000 } })
+const fetchAll = async () => {
+  const records = await fetch(RECORDS_URL, { params: { _limit: 1000 } })
     .then(res => res.json())
-    .then(json => json.data)
-    .then(rows =>
-      rows
-        .map(row => ({
-          ...row,
-          refs: (row.refs && row.refs.filter(hasUrl)) || [],
-          variants: getVariants(row)
-        }))
-        .map(row => {
-          const breadcrumbs = row.parent && getParents(rows, row);
-          const children = getChildren(rows, row).sort(sortByKey("position"));
-          return {
-            slug: getSlug(row),
-            breadcrumbs,
-            children,
-            refs: row.refs,
-            position: row.position,
-            title: row.title,
-            subTitle: row.subTitle,
-            intro: row.intro
-          };
-        })
-    );
+    .then(json => json.data);
+
+  const sortedRows = records.map(sortRowRefs).sort(sortByKey("title"));
+
+  const treeRows = sortedRows.map(row => {
+    const breadcrumbs = row.parent && getParents(sortedRows, row);
+    const children = getChildren(sortedRows, row).sort(sortByKey("position"));
+    return {
+      ...row,
+      slug: getSlug(row),
+      breadcrumbs,
+      children,
+      variants: getVariants(row)
+    };
+  });
+
+  return treeRows;
+};
 
 module.exports = fetchAll;
 

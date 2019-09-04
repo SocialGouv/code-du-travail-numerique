@@ -25,7 +25,7 @@ Array [
 ]
 `;
 
-exports[`sortByKey should sort by integer key 2`] = `
+exports[`sortByKey should sort by integer key 2 1`] = `
 Array [
   Object {
     "a": 28,
@@ -71,6 +71,46 @@ Array [
     "a": 32,
     "b": 12,
     "c": "r223",
+  },
+]
+`;
+
+exports[`sortRefs sort refs by relevance and source type 1`] = `
+Array [
+  Object {
+    "id": 7,
+    "relevance": 5,
+    "url": "/fiche-ministere-travail/7",
+  },
+  Object {
+    "id": 4,
+    "relevance": 5,
+    "url": "/code-du-travail/4",
+  },
+  Object {
+    "id": 3,
+    "relevance": 3,
+    "url": "/fiche-service-public/3",
+  },
+  Object {
+    "id": 2,
+    "relevance": 2,
+    "url": "/fiche-service-public/2",
+  },
+  Object {
+    "id": 6,
+    "relevance": 2,
+    "url": "/external/6",
+  },
+  Object {
+    "id": 1,
+    "relevance": 2,
+    "url": "/code-du-travail/1",
+  },
+  Object {
+    "id": 5,
+    "relevance": 2,
+    "url": "/code-du-travail/5",
   },
 ]
 `;

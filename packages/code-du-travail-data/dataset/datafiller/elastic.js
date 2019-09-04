@@ -44,18 +44,18 @@ const getReference = (title, ref) => {
   // find the good slug
   const query = {
     bool: {
-      must: [
-        {
-          match: {
-            slug: {
-              query: slug
-            }
+      must: {
+        match: {
+          slug: {
+            query: slug
           }
-        },
-        {
-          term: { source }
         }
-      ]
+      },
+      filter: {
+        term: {
+          source
+        }
+      }
     }
   };
 
@@ -75,6 +75,7 @@ const getReference = (title, ref) => {
       if (!res.hits) {
         throw res;
       }
+
       if (res.hits.hits.length) {
         if (res.hits.hits.length > 1) {
           debug(`ERROR | ${title} | ${slug} | plusieurs résultats trouvés`);
