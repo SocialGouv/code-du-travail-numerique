@@ -17,20 +17,20 @@ export const Row = styled.span`
 # Colors
 
 <div>
-  {Object.keys(colors)
-    .filter(key => typeof colors[key] === "string")
-    .map(key => (
-      <div key={key} style={{ padding: 5 }}>
-        <div>
-          <Row
-            style={{
-              background: colors[key]
-            }}
-          />
-          {key} : {colors[key]}
-
+  {
+    Object.keys(colors)
+      .filter(key => typeof colors[key] === "string")
+      .map(key => (
+        <div key={key} style={{ padding: 5 }}>
+          <div>
+            <Row
+              style={{
+                background: colors[key]
+              }}
+            />
+            {key} : {colors[key]}
+          </div>
         </div>
-      </div>
-    ))}
-
+      ))
+  }
 </div>
