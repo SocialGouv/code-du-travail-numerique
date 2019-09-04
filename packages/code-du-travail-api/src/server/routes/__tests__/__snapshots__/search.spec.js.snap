@@ -17,7 +17,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 16.850159,
+        "_score": 16.501816,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -29,7 +29,7 @@ Object {
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 4.6383643,
+        "_score": 4.6238427,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -40,7 +40,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 16.850159,
+    "max_score": 16.501816,
     "total": Object {
       "relation": "eq",
       "value": 2,
@@ -74,7 +74,7 @@ Object {
       Object {
         "_id": "6",
         "_index": "cdtn_document_test",
-        "_score": 5.464524,
+        "_score": 5.6223745,
         "_source": Object {
           "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
           "source": "faq",
@@ -85,7 +85,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 5.089569,
+        "_score": 5.0342846,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -94,7 +94,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 5.464524,
+    "max_score": 5.6223745,
     "total": Object {
       "relation": "eq",
       "value": 2,
@@ -110,17 +110,13 @@ Object {
       "doc_count": 1,
       "key": "fiches_ministere_travail",
     },
-    Object {
-      "doc_count": 1,
-      "key": "fiches_service_public",
-    },
   ],
   "hits": Object {
     "hits": Array [
       Object {
         "_id": "15",
         "_index": "cdtn_document_test",
-        "_score": 30.89951,
+        "_score": 14.67506,
         "_source": Object {
           "anchor": "#A-qui-s-applique-le-SMIC",
           "slug": "le-smic-a-qui-sapplique-le-smic",
@@ -130,29 +126,17 @@ Object {
         },
         "_type": "_doc",
       },
-      Object {
-        "_id": "5",
-        "_index": "cdtn_document_test",
-        "_score": 3.2733152,
-        "_source": Object {
-          "slug": "demission-dune-assistante-maternelle",
-          "source": "fiches_service_public",
-          "title": "Démission d'une assistante maternelle",
-          "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-        },
-        "_type": "_doc",
-      },
     ],
-    "max_score": 30.89951,
+    "max_score": 14.67506,
     "total": Object {
       "relation": "eq",
-      "value": 3,
+      "value": 2,
     },
   },
   "snippet": Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 23.673704,
+    "_score": 9.5135565,
     "_source": Object {
       "html": "<p>Au 1er janvier 2019, le montant du <accronym title='Salaire minimum interprofessionnel de croissance' lang='fr'>SMIC</accronym> brut horaire s'établit à <b>10,03&nbsp;€</b> en métropole, en Guadeloupe, en Guyane, en Martinique, à La Réunion, à Saint-Barthélemy, à Saint-Martin et à Saint-Pierre-et-Miquelon.<br/> Soit <b>1521,22&nbsp;€</b> mensuels sur la base de la durée légale du travail de 35 heures hebdomadaires</p>",
       "references": Array [
@@ -364,7 +348,7 @@ Object {
       Object {
         "_id": "2",
         "_index": "cdtn_document_test",
-        "_score": 7.389551,
+        "_score": 7.3222866,
         "_source": Object {
           "anchor": "#Comment-presenter-une-demission",
           "slug": "demission-comment-presenter-une-demission",
@@ -377,7 +361,7 @@ Object {
       Object {
         "_id": "4",
         "_index": "cdtn_document_test",
-        "_score": 7.33976,
+        "_score": 7.2790303,
         "_source": Object {
           "slug": "demission-dun-salarie",
           "source": "fiches_service_public",
@@ -389,7 +373,7 @@ Object {
       Object {
         "_id": "5",
         "_index": "cdtn_document_test",
-        "_score": 6.5451794,
+        "_score": 6.468056,
         "_source": Object {
           "slug": "demission-dune-assistante-maternelle",
           "source": "fiches_service_public",
@@ -401,7 +385,7 @@ Object {
       Object {
         "_id": "6",
         "_index": "cdtn_document_test",
-        "_score": 6.3099194,
+        "_score": 6.4677696,
         "_source": Object {
           "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
           "source": "faq",
@@ -412,7 +396,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 5.934964,
+        "_score": 5.8796797,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -423,7 +407,7 @@ Object {
       Object {
         "_id": "3",
         "_index": "cdtn_document_test",
-        "_score": 3.5642507,
+        "_score": 3.4885364,
         "_source": Object {
           "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
           "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
@@ -436,7 +420,7 @@ Object {
       Object {
         "_id": "8",
         "_index": "cdtn_document_test",
-        "_score": 3.38286,
+        "_score": 3.369451,
         "_source": Object {
           "slug": "r1225-18",
           "source": "code_du_travail",
@@ -448,7 +432,7 @@ Object {
       Object {
         "_id": "9",
         "_index": "cdtn_document_test",
-        "_score": 3.3176193,
+        "_score": 3.311926,
         "_source": Object {
           "slug": "r1442-22-4",
           "source": "code_du_travail",
@@ -458,7 +442,7 @@ Object {
         "_type": "_doc",
       },
     ],
-    "max_score": 7.389551,
+    "max_score": 7.3222866,
     "total": Object {
       "relation": "eq",
       "value": 8,
