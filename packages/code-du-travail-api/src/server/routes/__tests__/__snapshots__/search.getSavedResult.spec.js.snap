@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should exclude sources 1`] = `
+Object {
+  "facets": Array [
+    Object {
+      "doc_count": 1,
+      "key": "source2",
+    },
+    Object {
+      "doc_count": 1,
+      "key": "source3",
+    },
+  ],
+  "hits": Object {
+    "hits": Array [
+      Object {
+        "_source": Object {
+          "anchor": "#anchor2",
+          "slug": "slug2",
+          "source": "source2",
+          "title": "title2",
+          "url": "url2",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`should not return when no match 1`] = `undefined`;
+
+exports[`should return result for some variant 1`] = `
+Object {
+  "facets": Array [
+    Object {
+      "doc_count": 1,
+      "key": "source2",
+    },
+    Object {
+      "doc_count": 1,
+      "key": "source3",
+    },
+  ],
+  "hits": Object {
+    "hits": Array [
+      Object {
+        "_source": Object {
+          "anchor": "#anchor2",
+          "slug": "slug2",
+          "source": "source2",
+          "title": "title2",
+          "url": "url2",
+        },
+      },
+      Object {
+        "_source": Object {
+          "slug": "slug3",
+          "source": "source3",
+          "title": "title3",
+          "url": "url3",
+        },
+      },
+    ],
+  },
+}
+`;
