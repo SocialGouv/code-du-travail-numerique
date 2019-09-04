@@ -348,31 +348,44 @@ exports[`<FicheServicePublic /> should render 1`] = `
         </div>
         <div
           class="c7"
+          data-accordion-component="Accordion"
         >
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-0"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-0"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                De quoi s'agit-il ?
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-0"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-0"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  De quoi s'agit-il ?
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-0"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-0"
+              aria-labelledby="accordion__heading-0"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-0"
             >
               <p>
                 La démission est un mode de rupture du contrat de travail qui  vous permet de quitter votre entreprise sans avoir à justifier cette décision.
@@ -390,28 +403,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </div>
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-1"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-1"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                Conditions
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-1"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-1"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  Conditions
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-1"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-1"
+              aria-labelledby="accordion__heading-1"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-1"
             >
               <p>
                 Le salarié peut mettre fin à son contrat de travail dans les cas suivants :
@@ -472,28 +497,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </div>
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-2"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-2"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                Volonté de démissionner
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-2"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-2"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  Volonté de démissionner
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-2"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-2"
+              aria-labelledby="accordion__heading-2"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-2"
             >
               <p>
                 Pour qu'une démission soit valable, vous devez manifester de façon claire et non équivoque votre volonté de mettre fin au contrat de travail.
@@ -538,28 +575,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </div>
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-3"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-3"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                Procédure
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-3"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-3"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  Procédure
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-3"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-3"
+              aria-labelledby="accordion__heading-3"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-3"
             >
               <p>
                 Pour manifester votre volonté claire et non équivoque de démissionner, vous devez nécessairement prévenir votre employeur.
@@ -606,28 +655,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </div>
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-4"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-4"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                Préavis
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-4"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-4"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  Préavis
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-4"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-4"
+              aria-labelledby="accordion__heading-4"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-4"
             >
               <p>
                 Vous ne pouvez pas quitter votre travail dès que vous avez signifié votre démission à votre employeur. Vous continuez de travailler jusqu'à la fin de votre contrat de travail, dans le respect du délai de préavis prévu (sauf en cas de dispense du préavis).
@@ -829,31 +890,44 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   </p>
                   <div
                     class="c7"
+                    data-accordion-component="Accordion"
                   >
                     <div
                       class="c8 c9"
+                      data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-controls="accordion__body-7"
-                        aria-expanded="false"
-                        class="c10"
-                        id="accordion__title-7"
-                        role="button"
-                        tabindex="0"
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
                       >
-                        <h6>
-                          Accord de l'employeur
-                        </h6>
                         <div
-                          class="c11"
-                          role="presentation"
-                        />
+                          aria-controls="accordion__panel-5"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c10"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-5"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <h6>
+                            Accord de l'employeur
+                          </h6>
+                          <div
+                            class="c11"
+                            role="presentation"
+                          />
+                        </div>
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__title-7"
-                        class="c12 accordion__body--hidden"
-                        id="accordion__body-7"
+                        aria-labelledby="accordion__heading-5"
+                        class="c12"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-5"
                       >
                         <p>
                           
@@ -868,28 +942,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
                     </div>
                     <div
                       class="c8 c9"
+                      data-accordion-component="AccordionItem"
                     >
                       <div
-                        aria-controls="accordion__body-8"
-                        aria-expanded="false"
-                        class="c10"
-                        id="accordion__title-8"
-                        role="button"
-                        tabindex="0"
+                        aria-level="3"
+                        class="accordion__heading"
+                        data-accordion-component="AccordionItemHeading"
+                        role="heading"
                       >
-                        <h6>
-                          Refus de l'employeur
-                        </h6>
                         <div
-                          class="c11"
-                          role="presentation"
-                        />
+                          aria-controls="accordion__panel-6"
+                          aria-disabled="false"
+                          aria-expanded="false"
+                          class="c10"
+                          data-accordion-component="AccordionItemButton"
+                          id="accordion__heading-6"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <h6>
+                            Refus de l'employeur
+                          </h6>
+                          <div
+                            class="c11"
+                            role="presentation"
+                          />
+                        </div>
                       </div>
                       <div
                         aria-hidden="true"
-                        aria-labelledby="accordion__title-8"
-                        class="c12 accordion__body--hidden"
-                        id="accordion__body-8"
+                        aria-labelledby="accordion__heading-6"
+                        class="c12"
+                        data-accordion-component="AccordionItemPanel"
+                        hidden=""
+                        id="accordion__panel-6"
                       >
                         <p>
                           Si votre employeur refuse, vous devez effectuer votre préavis, sous peine de devoir lui verser une indemnité d'un montant égal à la rémunération brute que vous auriez perçue si vous aviez travaillé.
@@ -972,28 +1058,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </div>
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-5"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-5"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                Indemnisation
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-7"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-7"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  Indemnisation
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-5"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-5"
+              aria-labelledby="accordion__heading-7"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-7"
             >
               <p>
                 <strong>
@@ -1059,28 +1157,40 @@ exports[`<FicheServicePublic /> should render 1`] = `
           </div>
           <div
             class="c8 c9"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-6"
-              aria-expanded="false"
-              class="c10"
-              id="accordion__title-6"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <h3>
-                Documents remis au salarié
-              </h3>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-8"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c10"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-8"
+                role="button"
+                tabindex="0"
+              >
+                <h3>
+                  Documents remis au salarié
+                </h3>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-6"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-6"
+              aria-labelledby="accordion__heading-8"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-8"
             >
               <p>
                 L'employeur doit remettre au salarié les documents suivants :

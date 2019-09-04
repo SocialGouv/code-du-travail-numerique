@@ -226,33 +226,46 @@ exports[`<HierarchieBloc /> should render 1`] = `
     </h3>
     <div
       class="c1"
+      data-accordion-component="Accordion"
     >
       <div
         class="c2 c3"
+        data-accordion-component="AccordionItem"
       >
         <div
-          aria-controls="accordion__body-0"
-          aria-expanded="false"
-          class="c4 c5"
-          id="accordion__title-0"
-          role="button"
-          tabindex="0"
+          aria-level="3"
+          class="accordion__heading"
+          data-accordion-component="AccordionItemHeading"
+          role="heading"
         >
-          <span
-            class="c6"
-          >
-            Voir les articles du code du travail concernés
-          </span>
           <div
-            class="c7"
-            role="presentation"
-          />
+            aria-controls="accordion__panel-0"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="c4 c5"
+            data-accordion-component="AccordionItemButton"
+            id="accordion__heading-0"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="c6"
+            >
+              Voir les articles du code du travail concernés
+            </span>
+            <div
+              class="c7"
+              role="presentation"
+            />
+          </div>
         </div>
         <div
           aria-hidden="true"
-          aria-labelledby="accordion__title-0"
-          class="c8 accordion__body--hidden"
-          id="accordion__body-0"
+          aria-labelledby="accordion__heading-0"
+          class="c8"
+          data-accordion-component="AccordionItemPanel"
+          hidden=""
+          id="accordion__panel-0"
         >
           <ul
             class="c9"

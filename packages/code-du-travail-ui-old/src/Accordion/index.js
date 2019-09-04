@@ -75,7 +75,7 @@ const StyledSingleAccordionItem = styled(StyledMultipleAccordionItem)`
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
   overflow: hidden;
-  & ${AccordionItemHeading} {
+  & ${StyledAccordionItemButton} {
     padding-right: ${spacing.base};
   }
 `;
