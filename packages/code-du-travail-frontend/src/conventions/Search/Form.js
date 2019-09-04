@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { theme, Container, Table, Tag } from "@cdt/ui";
+import { theme, Container, Table, Tag } from "@cdt/ui-old";
 
 import SearchCC from "./SearchCC";
 
