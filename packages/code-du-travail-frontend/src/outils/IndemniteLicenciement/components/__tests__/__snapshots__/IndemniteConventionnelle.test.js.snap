@@ -19,7 +19,38 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c7:hover {
+  color: #8c94a6;
+}
+
+.c7:active {
+  position: relative;
+  top: 1px;
+}
+
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -41,13 +72,13 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c6:not([disabled]):active {
+.c8:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -55,7 +86,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   outline: none;
 }
 
-.c6[aria-pressed="true"] {
+.c8[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -64,16 +95,16 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c6[aria-pressed="true"]:not([disabled]):active {
+.c8[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c6[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -132,6 +163,25 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   padding: 1rem;
   color: #434956;
   text-align: left;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c0 {
@@ -197,10 +247,44 @@ exports[`<IndemniteCCn /> should render error 1`] = `
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
     </div>
+    <div
+      class="c6"
+    >
+      <button
+        aria-label="Fermer"
+        aria-pressed="false"
+        class="c7"
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <button
     aria-pressed="false"
-    class="c6"
+    class="c8"
   >
     Recommencer une simulation
   </button>
@@ -208,7 +292,38 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 `;
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
-.c21 {
+.c22 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c22:hover {
+  color: #8c94a6;
+}
+
+.c22:active {
+  position: relative;
+  top: 1px;
+}
+
+.c23 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -230,13 +345,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   border-bottom-color: #0053b3;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c21:not([disabled]):active {
+.c23:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -244,7 +359,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   outline: none;
 }
 
-.c21[aria-pressed="true"] {
+.c23[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -253,16 +368,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):active {
+.c23[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c21[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -321,6 +436,25 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   padding: 1rem;
   color: #434956;
   text-align: left;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c0 {
@@ -686,10 +820,44 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
     </div>
+    <div
+      class="c21"
+    >
+      <button
+        aria-label="Fermer"
+        aria-pressed="false"
+        class="c22"
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <button
     aria-pressed="false"
-    class="c21"
+    class="c23"
   >
     Recommencer une simulation
   </button>
@@ -697,7 +865,38 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 `;
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
-.c21 {
+.c22 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c22:hover {
+  color: #8c94a6;
+}
+
+.c22:active {
+  position: relative;
+  top: 1px;
+}
+
+.c23 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -719,13 +918,13 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   border-bottom-color: #0053b3;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c21:not([disabled]):active {
+.c23:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -733,7 +932,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   outline: none;
 }
 
-.c21[aria-pressed="true"] {
+.c23[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -742,16 +941,16 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):active {
+.c23[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c21[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -810,6 +1009,25 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   padding: 1rem;
   color: #434956;
   text-align: left;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .c0 {
@@ -1175,10 +1393,44 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
     </div>
+    <div
+      class="c21"
+    >
+      <button
+        aria-label="Fermer"
+        aria-pressed="false"
+        class="c22"
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <button
     aria-pressed="false"
-    class="c21"
+    class="c23"
   >
     Recommencer une simulation
   </button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
@@ -11,17 +11,17 @@ const ListTextes = ({ conventionId, typeTextes }) => {
   const [textes, setTextes] = useState([]);
   const [selectedTexte, setSelectedTexte] = useState(null);
 
-  const getTextes = async () => {
+  const getTextes = useCallback(async () => {
     setIsLoaded(false);
     const textesContainer = await getConventionTextes(conventionId, typeTextes);
 
     setTextes(textesContainer.sections || []);
     setIsLoaded(true);
-  };
+  }, [conventionId, typeTextes]);
 
   useEffect(() => {
     getTextes();
-  }, [conventionId, typeTextes]);
+  }, [getTextes]);
 
   if (!isLoaded) return <div>chargement ...</div>;
 

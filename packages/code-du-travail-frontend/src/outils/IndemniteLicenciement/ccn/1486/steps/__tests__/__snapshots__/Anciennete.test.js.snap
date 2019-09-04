@@ -17,6 +17,37 @@ exports[`<Anciennete /> renders AncienneteCE component with initialValues CATEGO
 `;
 
 exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
+.c6 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c6:hover {
+  color: #8c94a6;
+}
+
+.c6:active {
+  position: relative;
+  top: 1px;
+}
+
 .c2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -73,7 +104,26 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   text-align: left;
 }
 
-.c7 {
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c9 {
   padding: 0;
   font-size: 1.15rem;
   margin-right: 2em;
@@ -87,7 +137,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -106,7 +156,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c5 {
+.c7 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
@@ -188,17 +238,51 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
+    <div
+      class="c5"
+    >
+      <button
+        aria-label="Fermer"
+        aria-pressed="false"
+        class="c6"
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
   <p
-    class="c5"
+    class="c7"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
   </p>
   <div
-    class="c6"
+    class="c8"
   >
     <label
-      class="c7"
+      class="c9"
     >
       <input
         name="hasBrancheContrat"
@@ -210,7 +294,7 @@ exports[`<Anciennete /> renders AncienneteETAMIC component 1`] = `
       </span>
     </label>
     <label
-      class="c7"
+      class="c9"
     >
       <input
         name="hasBrancheContrat"
