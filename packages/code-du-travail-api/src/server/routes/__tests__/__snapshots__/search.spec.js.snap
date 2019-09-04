@@ -186,22 +186,15 @@ Object {
   "hits": Object {
     "hits": Array [
       Object {
-        "_id": "fAS672wBqwk-TdFK2roL",
-        "_index": "code_du_travail_numerique",
-        "_score": 19.639053,
         "_source": Object {
           "slug": "demission-dun-salarie",
           "source": "fiches_service_public",
           "title": "Démission d'un salarié",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
         },
-        "_type": "_doc",
         "relevance": 5,
       },
       Object {
-        "_id": "bgS672wBqwk-TdFK4rzp",
-        "_index": "code_du_travail_numerique",
-        "_score": 33.858376,
         "_source": Object {
           "anchor": "#Comment-presenter-une-demission",
           "slug": "la-demission-comment-presenter-une-demission",
@@ -209,7 +202,6 @@ Object {
           "title": "La démission: comment présenter une démission ?",
           "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
         },
-        "_type": "_doc",
         "relevance": 5,
       },
       Object {
@@ -231,61 +223,42 @@ Object {
         "relevance": 5,
       },
       Object {
-        "_id": "dwS672wBqwk-TdFK2rkH",
-        "_index": "code_du_travail_numerique",
-        "_score": 32.341908,
         "_source": Object {
           "slug": "peut-on-demissionner-pendant-ses-conges-payes",
           "source": "fiches_service_public",
           "title": "Peut-on démissionner pendant ses congés payés ?",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F12598",
         },
-        "_type": "_doc",
         "relevance": 4,
       },
       Object {
-        "_id": "2QS672wBqwk-TdFK2rkJ",
-        "_index": "code_du_travail_numerique",
-        "_score": 30.67354,
         "_source": Object {
           "slug": "peut-on-demissionner-pendant-un-conge-maternite",
           "source": "fiches_service_public",
           "title": "Peut-on démissionner pendant un congé maternité ?",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F1730",
         },
-        "_type": "_doc",
         "relevance": 4,
       },
       Object {
-        "_id": "nQS672wBqwk-TdFK2roM",
-        "_index": "code_du_travail_numerique",
-        "_score": 31.136574,
         "_source": Object {
           "slug": "peut-on-demissionner-pendant-un-arret-maladie",
           "source": "fiches_service_public",
           "title": "Peut-on démissionner pendant un arrêt maladie ?",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F31679",
         },
-        "_type": "_doc",
         "relevance": 4,
       },
       Object {
-        "_id": "CAS672wBqwk-TdFK2rsO",
-        "_index": "code_du_travail_numerique",
-        "_score": 30.566902,
         "_source": Object {
           "slug": "peut-on-demissionner-pendant-un-conge-parental",
           "source": "fiches_service_public",
           "title": "Peut-on démissionner pendant un congé parental ?",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F540",
         },
-        "_type": "_doc",
         "relevance": 4,
       },
       Object {
-        "_id": "dAS672wBqwk-TdFK4rzp",
-        "_index": "code_du_travail_numerique",
-        "_score": 34.987484,
         "_source": Object {
           "anchor": "#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
           "slug": "la-demission-le-salarie-peut-il-demissionner-dans-le-cadre-dun-contrat-a-duree-determinee",
@@ -293,13 +266,9 @@ Object {
           "title": "La démission: le salarié peut-il « démissionner » dans le cadre d’un contrat à durée déterminée ?",
           "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
         },
-        "_type": "_doc",
         "relevance": 4,
       },
       Object {
-        "_id": "cQS672wBqwk-TdFK4rzp",
-        "_index": "code_du_travail_numerique",
-        "_score": 30.848864,
         "_source": Object {
           "anchor": "#Faut-il-respecter-un-preavis",
           "slug": "la-demission-faut-il-respecter-un-preavis",
@@ -307,39 +276,27 @@ Object {
           "title": "La démission: faut-il respecter un préavis ?",
           "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Faut-il-respecter-un-preavis",
         },
-        "_type": "_doc",
         "relevance": 4,
       },
       Object {
-        "_id": "vwS672wBqwk-TdFK2roM",
-        "_index": "code_du_travail_numerique",
-        "_score": 32.190506,
         "_source": Object {
           "slug": "demission-du-salarie-a-domicile-employe-par-un-particulier",
           "source": "fiches_service_public",
           "title": "Démission du salarié à domicile employé par un particulier",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F32431",
         },
-        "_type": "_doc",
         "relevance": 3,
       },
       Object {
-        "_id": "zQS672wBqwk-TdFK2roN",
-        "_index": "code_du_travail_numerique",
-        "_score": 28.229462,
         "_source": Object {
           "slug": "demission-dune-assistante-maternelle",
           "source": "fiches_service_public",
           "title": "Démission d'une assistante maternelle",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
         },
-        "_type": "_doc",
         "relevance": 3,
       },
       Object {
-        "_id": "cAS672wBqwk-TdFK4rzp",
-        "_index": "code_du_travail_numerique",
-        "_score": 40.833202,
         "_source": Object {
           "anchor": "#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
           "slug": "la-demission-le-refus-par-le-salarie-daccepter-un-changement-des-conditions-de-travail-est-il-une-demission",
@@ -347,7 +304,6 @@ Object {
           "title": "La démission: le refus, par le salarié, d’accepter un changement des conditions de travail est-il une démission ?",
           "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
         },
-        "_type": "_doc",
         "relevance": 3,
       },
       Object {
@@ -360,22 +316,15 @@ Object {
         "relevance": 3,
       },
       Object {
-        "_id": "HwS672wBqwk-TdFK2rsO",
-        "_index": "code_du_travail_numerique",
-        "_score": 32.635666,
         "_source": Object {
           "slug": "peut-on-percevoir-lallocation-chomage-en-cas-de-demission",
           "source": "fiches_service_public",
           "title": "Peut-on percevoir l'allocation chômage en cas de démission ?",
           "url": "https://www.service-public.fr/particuliers/vosdroits/F89",
         },
-        "_type": "_doc",
         "relevance": 2,
       },
       Object {
-        "_id": "cgS672wBqwk-TdFK4rzp",
-        "_index": "code_du_travail_numerique",
-        "_score": 28.947145,
         "_source": Object {
           "anchor": "#Et-les-heures-pour-recherche-d-emploi",
           "slug": "la-demission-et-les-heures-pour-recherche-demploi",
@@ -383,7 +332,6 @@ Object {
           "title": "La démission: et les heures pour recherche d’emploi ?",
           "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Et-les-heures-pour-recherche-d-emploi",
         },
-        "_type": "_doc",
         "relevance": 2,
       },
     ],
