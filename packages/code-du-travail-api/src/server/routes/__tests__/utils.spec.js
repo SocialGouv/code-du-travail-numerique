@@ -1,6 +1,4 @@
-const utils = require("./utils");
-
-// test merge:
+const utils = require("../search/utils");
 
 const tests = [
   {
@@ -19,10 +17,7 @@ const tests = [
       ]
     ],
     expected: [{ title: 1, score: 2 }, { title: 2, score: 4 }]
-  }
-];
-
-const test_one_missing = [
+  },
   {
     input: [
       [
@@ -37,14 +32,12 @@ const test_one_missing = [
   }
 ];
 
+const test_one_missing = [
+  
+];
+
 test("test merge two", () => {
   tests.forEach(t => {
-    expect(utils.merge(...t.input)).toEqual(t.expected);
-  });
-});
-
-test("test merge one missing", () => {
-  test_one_missing.forEach(t => {
-    expect(utils.merge(...t.input)).toEqual(t.expected);
+    expect(utils.merge(t.input[0], t.input[1], 10)).toEqual(t.expected);
   });
 });
