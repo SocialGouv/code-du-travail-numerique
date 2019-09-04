@@ -5,8 +5,6 @@ import { theme, Container, Table, Tag } from "@cdt/ui-old";
 
 import SearchCC from "./SearchCC";
 
-
-
 // link to a CC
 const CC = ({ id, num, title }) => {
   return (
