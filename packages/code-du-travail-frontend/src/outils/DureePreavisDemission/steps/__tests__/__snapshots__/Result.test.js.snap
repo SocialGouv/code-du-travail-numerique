@@ -1,37 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepResult /> should render CC answer 1`] = `
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
-}
-
-.c5:hover {
-  color: #8c94a6;
-}
-
-.c5:active {
-  position: relative;
-  top: 1px;
-}
-
 .c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -86,25 +55,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
   padding: 1rem;
   color: #434956;
   text-align: left;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c0 {
@@ -184,40 +134,6 @@ exports[`<StepResult /> should render CC answer 1`] = `
       role="alert"
     >
       Si le contrat de travail, un accord collectif d’entreprise ou un usage prévoit une durée de préavis différente, il faut appliquer la durée la plus courte.
-    </div>
-    <div
-      class="c4"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c5"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
     </div>
   </div>
 </div>

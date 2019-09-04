@@ -1,38 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
-.c22 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
-}
-
-.c22:hover {
-  color: #8c94a6;
-}
-
-.c22:active {
-  position: relative;
-  top: 1px;
-}
-
-.c26 {
+.c24 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -54,13 +23,13 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c26:not([disabled]):hover,
-.c26:not([disabled]):focus {
+.c24:not([disabled]):hover,
+.c24:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c26:not([disabled]):active {
+.c24:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -68,7 +37,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   outline: none;
 }
 
-.c26[aria-pressed="true"] {
+.c24[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -77,21 +46,21 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c26[aria-pressed="true"]:not([disabled]):hover,
-.c26[aria-pressed="true"]:not([disabled]):focus {
+.c24[aria-pressed="true"]:not([disabled]):hover,
+.c24[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c26[aria-pressed="true"]:not([disabled]):active {
+.c24[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c26[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c24 {
+.c22 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -135,7 +104,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   box-shadow: none;
 }
 
-.c25 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,25 +157,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   padding: 1rem;
   color: #434956;
   text-align: left;
-}
-
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c0 {
@@ -325,7 +275,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   font-size: 1.375rem;
 }
 
-.c23 {
+.c21 {
   margin: 1.25rem 0;
 }
 
@@ -621,46 +571,12 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
       5814.81
        €) vous est dû si la période d’essai dans ce nouvel emploi reste sans suite.
     </div>
-    <div
-      class="c21"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c22"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
   <div
-    class="c23 c24"
+    class="c21 c22"
   >
     <div
-      class="c25"
+      class="c23"
     >
       <svg
         fill="none"
@@ -698,44 +614,10 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
     </div>
-    <div
-      class="c21"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c22"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
   <button
     aria-pressed="false"
-    class="c26"
+    class="c24"
   >
     Recommencer une simulation
   </button>
@@ -743,38 +625,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 `;
 
 exports[`<Result /> renders legal indemnite 1`] = `
-.c22 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
-}
-
-.c22:hover {
-  color: #8c94a6;
-}
-
-.c22:active {
-  position: relative;
-  top: 1px;
-}
-
-.c23 {
+.c21 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -796,13 +647,13 @@ exports[`<Result /> renders legal indemnite 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c23:not([disabled]):hover,
-.c23:not([disabled]):focus {
+.c21:not([disabled]):hover,
+.c21:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c23:not([disabled]):active {
+.c21:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -810,7 +661,7 @@ exports[`<Result /> renders legal indemnite 1`] = `
   outline: none;
 }
 
-.c23[aria-pressed="true"] {
+.c21[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -819,16 +670,16 @@ exports[`<Result /> renders legal indemnite 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):hover,
-.c23[aria-pressed="true"]:not([disabled]):focus {
+.c21[aria-pressed="true"]:not([disabled]):hover,
+.c21[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):active {
+.c21[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c23[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -887,25 +738,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
   padding: 1rem;
   color: #434956;
   text-align: left;
-}
-
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c0 {
@@ -1292,44 +1124,10 @@ exports[`<Result /> renders legal indemnite 1`] = `
     >
       Un accord collectif d’entreprise, le contrat de travail et un usage peuvent prévoir une formule de calcul plus avantageuse pour le salarié. Dans ce cas, le salarié perçoit l’indemnité la plus élevée.
     </div>
-    <div
-      class="c21"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c22"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
   <button
     aria-pressed="false"
-    class="c23"
+    class="c21"
   >
     Recommencer une simulation
   </button>

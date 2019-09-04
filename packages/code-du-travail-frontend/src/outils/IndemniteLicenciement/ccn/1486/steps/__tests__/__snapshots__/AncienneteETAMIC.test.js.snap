@@ -1,37 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideration 1`] = `
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
-}
-
-.c6:hover {
-  color: #8c94a6;
-}
-
-.c6:active {
-  position: relative;
-  top: 1px;
-}
-
 .c2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -54,7 +23,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   box-shadow: none;
 }
 
-.c11 {
+.c9 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -97,7 +66,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   background-color: #fee5ad;
 }
 
-.c12 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,26 +100,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   text-align: left;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c10 {
+.c8 {
   padding: 0;
   font-size: 1rem;
   text-align: right;
@@ -162,15 +112,15 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   border-color: #c9d3df;
 }
 
-.c10::-webkit-outer-spin-button,
-.c10::-webkit-inner-spin-button {
+.c8::-webkit-outer-spin-button,
+.c8::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
 
-.c9 {
+.c7 {
   padding: 0;
   font-size: 1.15rem;
   margin-right: 2em;
@@ -184,7 +134,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   align-items: center;
 }
 
-.c8 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -203,7 +153,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   margin-bottom: 1.25rem;
 }
 
-.c7 {
+.c5 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
@@ -216,7 +166,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   margin-bottom: 1.25rem;
 }
 
-.c14 {
+.c12 {
   padding: 0;
   font-size: 1rem;
   text-align: right;
@@ -230,21 +180,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   padding-right: 1rem;
 }
 
-.c14::-webkit-outer-spin-button,
-.c14::-webkit-inner-spin-button {
+.c12::-webkit-outer-spin-button,
+.c12::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   margin: 0;
 }
 
-.c13 {
+.c11 {
   display: inline-block;
   position: relative;
   margin-right: 1rem;
 }
 
-.c15 {
+.c13 {
   color: #adb9c9;
   position: absolute;
   right: 0.25rem;
@@ -323,51 +273,17 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
-    <div
-      class="c5"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c6"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
   <p
-    class="c7"
+    class="c5"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
   </p>
   <div
-    class="c8"
+    class="c6"
   >
     <label
-      class="c9"
+      class="c7"
     >
       <input
         checked=""
@@ -380,7 +296,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c9"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"
@@ -393,13 +309,13 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     </label>
   </div>
   <label
-    class="c9"
+    class="c7"
     for="duration"
   >
     Durée des contrats de travail précédents (en mois)
   </label>
   <input
-    class="c10"
+    class="c8"
     id="duration"
     name="brancheContrat.duration"
     size="7"
@@ -407,10 +323,10 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     value="3"
   />
   <div
-    class="c1 c11"
+    class="c1 c9"
   >
     <div
-      class="c12"
+      class="c10"
     >
       <svg
         fill="none"
@@ -448,49 +364,15 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     >
       Il est important de préciser l’indemnité de licenciement éventuellement perçue lors d’un précédent licenciement dans la même entreprise. L’employeur actuel peut la déduire de l’indemnité de licenciement en train d’être calculée.
     </div>
-    <div
-      class="c5"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c6"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
   <p>
     Indemnité de licenciement précédemment perçue
   </p>
   <div
-    class="c13"
+    class="c11"
   >
     <input
-      class="c14"
+      class="c12"
       name="brancheContrat.indemnite"
       size="10"
       type="number"
@@ -498,21 +380,21 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     />
     <span
       aria-hidden="true"
-      class="c15"
+      class="c13"
     >
       €
     </span>
   </div>
   <p
-    class="c7"
+    class="c5"
   >
     Souhaitez vous déduire cette indemnité ?
   </p>
   <div
-    class="c8"
+    class="c6"
   >
     <label
-      class="c9"
+      class="c7"
     >
       <input
         name="brancheContrat.considered"
@@ -524,7 +406,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
       </span>
     </label>
     <label
-      class="c9"
+      class="c7"
     >
       <input
         checked=""
@@ -541,37 +423,6 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 `;
 
 exports[`<AncienneteETAMIC /> renders 1`] = `
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
-}
-
-.c6:hover {
-  color: #8c94a6;
-}
-
-.c6:active {
-  position: relative;
-  top: 1px;
-}
-
 .c2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -628,26 +479,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   text-align: left;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c9 {
+.c7 {
   padding: 0;
   font-size: 1.15rem;
   margin-right: 2em;
@@ -661,7 +493,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -680,7 +512,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c7 {
+.c5 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
@@ -762,51 +594,17 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
     >
       Dans le cas de la démission, l’employeur peut accepter de prendre en compte la durée du contrat de travail correspondant pour l’appréciation de l’ancienneté.
     </div>
-    <div
-      class="c5"
-    >
-      <button
-        aria-label="Fermer"
-        aria-pressed="false"
-        class="c6"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="18"
-            x2="6"
-            y1="6"
-            y2="18"
-          />
-          <line
-            x1="6"
-            x2="18"
-            y1="6"
-            y2="18"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
   <p
-    class="c7"
+    class="c5"
   >
     Avez-vous un/des contrat(s) antérieur(s) à déclarer ?
   </p>
   <div
-    class="c8"
+    class="c6"
   >
     <label
-      class="c9"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"
@@ -818,7 +616,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
       </span>
     </label>
     <label
-      class="c9"
+      class="c7"
     >
       <input
         name="hasBrancheContrat"
