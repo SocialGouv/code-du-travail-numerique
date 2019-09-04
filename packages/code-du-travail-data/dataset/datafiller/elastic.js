@@ -1,6 +1,8 @@
 const fetch = require("node-fetch");
 const debug = require("debug")("@cdt/data...datafiller/elastic");
 
+const { slimify } = require("./utils");
+
 // fetch datafiller results then check against ES index using a slug match
 const ES_URL = process.env.ELASTICSEARCH_URL || "http://127.0.0.1:9200";
 
@@ -10,7 +12,6 @@ const getSlug = url => {
   if (match) {
     return [slugToSource(match[1]), match[2]];
   }
-  return [,];
 };
 
 // mapping elastic search source type -> route name
@@ -32,7 +33,11 @@ const slugToSource = slug =>
 
 // try to get the local ES reference for a given "result" (= a reference slug in datafiller)
 const getReference = (title, ref) => {
-  const [source, slug] = getSlug(ref.url);
+  const parts = getSlug(ref.url);
+  if (!parts) {
+    return false;
+  }
+  const [source, slug] = parts;
   if (!source) {
     return false;
   }
@@ -87,7 +92,7 @@ const getReference = (title, ref) => {
           );
         }
         return {
-          ...res.hits.hits[0],
+          ...slimify(res.hits.hits[0], ["_source"]),
           relevance: ref.relevance
         };
       }
