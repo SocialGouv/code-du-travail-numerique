@@ -1,33 +1,12 @@
 import debounce from "debounce-promise";
 import memoize from "memoizee";
-import Fuse from "fuse.js";
-
-import kali from "@socialgouv/kali-data/data/index.json";
 
 import getQueryType from "./getQueryType";
+import { searchIdcc } from "../services";
 
 const SIRET2IDCC_URL =
   process.env.API_SIRET2IDCC_URL ||
   "https://siret2idcc.incubateur.social.gouv.fr/api/v1";
-
-// parametres fuse.js pour le search texte
-const fuseCCNames = new Fuse(kali, {
-  threshold: 0.2,
-  shouldSort: true,
-  matchAllTokens: true,
-  tokenize: true,
-  findAllMatches: true,
-  keys: ["title", "shortTitle"]
-});
-
-// parametres fuse.js pour le search IDCC
-const fuseCCIds = new Fuse(kali, {
-  threshold: 0.1,
-  location: 0,
-  distance: 10,
-  shouldSort: true,
-  keys: ["num"]
-});
 
 // format results API Sirene. embed the IDCC numbers at runtime
 const formatResultEntreprise = async result => ({
@@ -94,6 +73,12 @@ const apiSiret2idcc = memoize(
 const searchByName = debounce(apiEntrepriseFullText, 300);
 const searchBySiret = debounce(apiEntrepriseSiret, 300);
 
+const idcc2num = ({ idcc, id, slug, title }) => ({
+  id,
+  slug,
+  title,
+  num: `0000${idcc}`.slice(-4)
+});
 // build a result list based on query type
 export const loadResults = async query => {
   const type = getQueryType(query);
@@ -101,20 +86,16 @@ export const loadResults = async query => {
   if (type === "text") {
     const results = [];
     // local CCNS list search
-    const ccs = fuseCCNames.search(query.trim());
-    if (ccs && ccs.length) {
+    // const ccs = fuseCCNames.search(query.trim());
+    const ccns = await searchIdcc(query.trim());
+
+    if (ccns && ccns.length) {
       results.push(
-        ...ccs.map(cc => ({
-          id: cc.id,
+        ...ccns.map(({ _source, _source: { id, idcc } }) => ({
+          id,
           label: "Convention collective",
-          idcc: [cc.num],
-          conventions: [
-            {
-              id: cc.id,
-              num: cc.num,
-              title: cc.title
-            }
-          ]
+          idcc: `0000${idcc}`.slice(-4),
+          conventions: [idcc2num(_source)]
         }))
       );
     }
@@ -134,14 +115,16 @@ export const loadResults = async query => {
     // search local idcc list
   }
   if (type === "idcc") {
-    const matches = fuseCCIds.search(query.trim());
+    // const matches = fuseCCIds.search(query.trim());
+    const results = await searchIdcc(query.trim());
+
+    const matches = results.map(({ _source }) => idcc2num(_source));
     // only show 1 result when perfect
-    if (matches && matches.length && matches[0].num === query.trim()) {
+    if (matches && matches.length && matches[0].idcc === query.trim()) {
       return [
         {
           id: query,
           label: `IDCC ${query}`,
-          idcc: matches.map(match => match.num).slice(0, 1),
           conventions: matches.slice(0, 1)
         }
       ];
@@ -152,7 +135,6 @@ export const loadResults = async query => {
         {
           id: query,
           label: `IDCC ${query}`,
-          idcc: matches.map(match => match.num).slice(0, 5),
           conventions: matches.slice(0, 5)
         }
       ];

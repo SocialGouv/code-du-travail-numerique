@@ -8,7 +8,7 @@ const SearchCC = ({ query, render }) => {
   const [results, setResults] = useState();
   const [status, setStatus] = useState("idle");
 
-  async function load() {
+  async function load(query) {
     if (query) {
       setStatus("loading");
       setResults([]);
@@ -27,7 +27,7 @@ const SearchCC = ({ query, render }) => {
 
   // load results when query change
   useEffect(() => {
-    load();
+    load(query);
   }, [query]);
 
   return render({ status, results });

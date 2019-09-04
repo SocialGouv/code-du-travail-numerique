@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`convention service can get a single company with IDCCs 1`] = `undefined`;
-
 exports[`convention service can search IDCCs 1`] = `
 Array [
   Object {
@@ -12,5 +10,3 @@ Array [
   },
 ]
 `;
-
-exports[`convention service can search companies 1`] = `undefined`;
