@@ -4,7 +4,7 @@ import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
 import { subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
-import { Table as UITable, theme, Toast } from "@cdt/ui";
+import { Table as UITable, theme, Toast } from "@cdt/ui-old";
 
 import { parse } from "../../../../common/date";
 import { Input, InlineError } from "../../../../common/stepStyles";

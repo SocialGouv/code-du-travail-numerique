@@ -2,7 +2,14 @@ import React from "react";
 import { Link } from "../../routes";
 import styled from "styled-components";
 
-import { Container, Grid, Category, GridCell, Section, theme } from "@cdt/ui";
+import {
+  Container,
+  Grid,
+  Category,
+  GridCell,
+  Section,
+  theme
+} from "@cdt/ui-old";
 import ConventionModal from "../conventions/Search/Modal";
 
 const outils = [

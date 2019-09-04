@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import styled from "styled-components";
-import { ScreenReaderOnly, theme } from "@cdt/ui";
+import { ScreenReaderOnly, theme } from "@cdt/ui-old";
 
 const { colors } = theme;
 

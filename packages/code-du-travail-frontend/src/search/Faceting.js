@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { List, ListItem, theme } from "@cdt/ui";
+import { List, ListItem, theme } from "@cdt/ui-old";
 import styled from "styled-components";
 
 import { Link } from "../../routes";

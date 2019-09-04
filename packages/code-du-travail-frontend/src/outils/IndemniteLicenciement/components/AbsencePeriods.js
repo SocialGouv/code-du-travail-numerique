@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
-import { Button, theme } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui-old";
 import { Input, BlockError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 import { OnChange } from "react-final-form-listeners";

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { List, ListItem, theme } from "@cdt/ui";
+import { List, ListItem, theme } from "@cdt/ui-old";
 import { Link } from "../../../routes";
 import TYPE_REFERENCE from "../typeReference";
 import ArticleIcon from "../../icons/ArticleIcon";

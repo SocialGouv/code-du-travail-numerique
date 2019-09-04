@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import { Container, Section, Wrapper, Grid, GridCell } from "@cdt/ui";
+import { Container, Section, Wrapper, Grid, GridCell } from "@cdt/ui-old";
 import { PageLayout } from "../src/layout/PageLayout";
 
 const About = () => (

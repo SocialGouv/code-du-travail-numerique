@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import getConfig from "next/config";
 import styled from "styled-components";
-import { Alert, Container, Section, theme } from "@cdt/ui";
+import { Alert, Container, Section, theme } from "@cdt/ui-old";
 import fetch from "isomorphic-unfetch";
 
 import { Link } from "../routes";

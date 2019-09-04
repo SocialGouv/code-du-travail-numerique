@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { theme } from "@cdt/ui";
+import { theme } from "@cdt/ui-old";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 

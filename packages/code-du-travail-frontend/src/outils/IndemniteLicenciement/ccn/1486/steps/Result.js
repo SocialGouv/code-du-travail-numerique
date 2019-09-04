@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Toast, theme } from "@cdt/ui";
+import { Toast, theme } from "@cdt/ui-old";
 
 import { getIndemniteConventionnelle } from "../indemnite";
 import { getIndemniteFromFinalForm } from "../../../indemnite";

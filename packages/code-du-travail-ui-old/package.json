@@ -1,5 +1,5 @@
 {
-  "name": "@cdt/ui",
+  "name": "@cdt/ui-old",
   "version": "3.1.1",
   "private": true,
   "description": "Composants ReactJS du Code du travail numérique",
@@ -53,7 +53,7 @@
     "rollup-plugin-replace": "^2.2.0",
     "styled-components": "^4.3.2"
   },
-  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/packages/code-du-travail-ui",
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/packages/code-du-travail-ui-old",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
-import { Button, theme } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui-old";
 import styled from "styled-components";
 
 import { branches } from "../branches";

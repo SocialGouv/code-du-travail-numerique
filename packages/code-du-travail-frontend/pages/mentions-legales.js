@@ -9,7 +9,7 @@ import {
   Section,
   theme,
   Wrapper
-} from "@cdt/ui";
+} from "@cdt/ui-old";
 
 import { PageLayout } from "../src/layout/PageLayout";
 import Metas from "../src/common/Metas";

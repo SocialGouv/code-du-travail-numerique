@@ -10,7 +10,7 @@ import {
   Section,
   theme,
   Toast
-} from "@cdt/ui";
+} from "@cdt/ui-old";
 
 const Hierarchy = () => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);

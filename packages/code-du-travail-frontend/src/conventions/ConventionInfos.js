@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { format, parseISO } from "date-fns";
-import { Table } from "@cdt/ui";
+import { Table } from "@cdt/ui-old";
 
 class ConventionInfos extends React.Component {
   render() {

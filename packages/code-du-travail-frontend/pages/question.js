@@ -13,7 +13,7 @@ import {
   Section,
   theme,
   icons
-} from "@cdt/ui";
+} from "@cdt/ui-old";
 import styled from "styled-components";
 
 import { Link } from "../routes";

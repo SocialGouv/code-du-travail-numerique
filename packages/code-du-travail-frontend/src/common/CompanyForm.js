@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { X } from "react-feather";
 import styled from "styled-components";
-import { Button, theme } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui-old";
 import { CompanySuggester } from "./CompanySuggester";
 import { ConventionPreview, SuggestWrapper, Title } from "./ConventionForm";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import getConfig from "next/config";
 import styled from "styled-components";
-import { Button, Container, List, ListItem, Section, theme } from "@cdt/ui";
+import { Button, Container, List, ListItem, Section, theme } from "@cdt/ui-old";
 
 import { Link } from "../../routes";
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";

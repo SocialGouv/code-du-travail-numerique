@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Table as UITable } from "@cdt/ui";
+import { Table as UITable } from "@cdt/ui-old";
 
 import { ElementBuilder } from "./ElementBuilder";
 import { ignoreParagraph, getText } from "../utils";

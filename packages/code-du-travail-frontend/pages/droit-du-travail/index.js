@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, Section, Wrapper, theme } from "@cdt/ui";
+import { Container, Section, Wrapper, theme } from "@cdt/ui-old";
 
 import { PageLayout } from "../../src/layout/PageLayout";
 import Metas from "../../src/common/Metas";

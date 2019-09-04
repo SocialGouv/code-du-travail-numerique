@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Section, theme, Wrapper } from "@cdt/ui";
+import { Section, theme, Wrapper } from "@cdt/ui-old";
 import { sortByIntOrdre } from "../../utils";
 import SidebarItem from "./SidebarItem";
 

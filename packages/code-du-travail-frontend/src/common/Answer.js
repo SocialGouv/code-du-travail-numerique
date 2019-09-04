@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import { withRouter } from "next/router";
-import { Alert, Container, theme, Wrapper } from "@cdt/ui";
+import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
 import { Link } from "../../routes";
 import Article from "../common/Article";
 import { Breadcrumbs } from "./Breadcrumbs";

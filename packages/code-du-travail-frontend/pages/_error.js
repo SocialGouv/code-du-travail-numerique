@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { Section, theme } from "@cdt/ui";
+import { Section, theme } from "@cdt/ui-old";
 import { PageLayout } from "../src/layout/PageLayout";
 import { initializeSentry, notifySentry } from "../src/sentry";
 

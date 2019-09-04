@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";
-import { Container, theme } from "@cdt/ui";
+import { Container, theme } from "@cdt/ui-old";
 
 import { StepItems } from "./StepItems";
 import { PrevNextBar } from "./PrevNextBar";

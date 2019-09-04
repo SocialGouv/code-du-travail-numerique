@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Category, Modal, theme } from "@cdt/ui";
+import { Category, Modal, theme } from "@cdt/ui-old";
 
 import ConventionForm from "./Form";
 

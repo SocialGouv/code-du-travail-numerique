@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert } from "@cdt/ui";
+import { Alert } from "@cdt/ui-old";
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";
 
