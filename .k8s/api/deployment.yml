@@ -48,4 +48,3 @@ spec:
             value: "${VERSION}"
           - name: NLP_URL
             value: "${NLP_API_URL}"
-          
