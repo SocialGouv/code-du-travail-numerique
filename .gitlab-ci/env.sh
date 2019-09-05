@@ -36,6 +36,7 @@ else
   export DOMAIN="${BRANCH_HASH}.${DOMAIN}";
 fi
 
+
 #
 
 export API_HOST="api.${DOMAIN}";
@@ -44,7 +45,8 @@ export ELASTICSEARCH_HOST="${K8S_NAMESPACE}-elasticsearch-${BRANCH_HASH}";
 export ELASTICSEARCH_URL="http://${ELASTICSEARCH_HOST}:${ELASTICSEARCH_PORT}";
 export FRONTEND_HOST="${DOMAIN}";
 export NLP_HOST="nlp.${DOMAIN}";
-export NLP_API_URL="nlp_api${DOMAIN}";
+export NLP_API_HOST="${K8S_NAMESPACE}-nlp-${BRANCH_HASH}";
+export NLP_API_URL="http://${NLP_API_HOST}:${NLP_PORT}"
 
 #
 
