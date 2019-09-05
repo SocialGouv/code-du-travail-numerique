@@ -44,7 +44,8 @@ router.get("/search", async ctx => {
   // we add 1 to maxResults in case we have a snippet document in the results
   // we filter results to remove snippet document from main results
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
-  const body = getSearchBody({ query, size: size + 1, excludeSources });
+  const body = getSearchBody({ query, size: size, excludeSources });
+
   const facetBody = getFacetsBody({ query });
 
   const [esResults, semResults] = await Promise.all([
