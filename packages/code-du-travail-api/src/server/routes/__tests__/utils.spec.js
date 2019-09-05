@@ -32,8 +32,6 @@ const tests = [
   }
 ];
 
-
-
 const test_key = [
   {
     input: [
@@ -44,13 +42,15 @@ const test_key = [
         }
       }
     ],
-    expected: [{
-      _source: {
-        slug: "whateverslug",
-        source: "fiches"
-      },
-      key: "ficheswhateverslug"
-    }]
+    expected: [
+      {
+        _source: {
+          slug: "whateverslug",
+          source: "fiches"
+        },
+        key: "ficheswhateverslug"
+      }
+    ]
   },
   {
     input: [
@@ -62,16 +62,17 @@ const test_key = [
       }
     ],
 
-    expected:[{
-      _source: {
-        slug: "anotherkey",
-        source: "fiches"
-      }, key: "fichesanotherkey"
-    }]
+    expected: [
+      {
+        _source: {
+          slug: "anotherkey",
+          source: "fiches"
+        },
+        key: "fichesanotherkey"
+      }
+    ]
   }
 ];
-
-
 
 const test_dupl = [
   {
@@ -85,10 +86,12 @@ const test_dupl = [
         key: "hey"
       }
     ],
-    expected: [{
-      whatever: "whatever",
-      key: "hey"
-    }]
+    expected: [
+      {
+        whatever: "whatever",
+        key: "hey"
+      }
+    ]
   }
 ];
 
@@ -110,5 +113,3 @@ test("test remove duplicates", () => {
     expect(utils.removeDuplicate(t.input)).toEqual(t.expected);
   });
 });
-
-

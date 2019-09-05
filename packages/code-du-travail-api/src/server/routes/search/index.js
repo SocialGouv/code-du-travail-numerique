@@ -46,7 +46,7 @@ router.get("/search", async ctx => {
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
   const body = getSearchBody({ query, size: size + 1, excludeSources });
   const facetBody = getFacetsBody({ query });
-  
+
   const [esResults, semResults] = await Promise.all([
     elasticsearchClient.search({ index, body }),
     fetch(
