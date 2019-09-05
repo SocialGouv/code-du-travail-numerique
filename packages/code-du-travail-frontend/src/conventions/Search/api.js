@@ -110,6 +110,7 @@ export const loadResults = async query => {
           idcc: [cc.num],
           conventions: [
             {
+              id: cc.id,
               num: cc.num,
               title: cc.title
             }
