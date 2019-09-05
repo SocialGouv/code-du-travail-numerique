@@ -1,3 +1,21 @@
+export const idccPayload = {
+  hits: {
+    hits: [
+      {
+        _source: {
+          id: "KALICONT000005635886",
+          idcc: "843",
+          slug:
+            "843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-1976",
+          title:
+            "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+          url:
+            "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635886"
+        }
+      }
+    ]
+  }
+};
 export const convention = {
   id: "KALICONT000005635691",
   title:

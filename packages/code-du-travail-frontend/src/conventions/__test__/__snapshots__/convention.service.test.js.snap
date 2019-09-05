@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convention service can get convention 1`] = `undefined`;
+
+exports[`convention service can search IDCCs 1`] = `
+Array [
+  Object {
+    "id": "KALICONT000005635886",
+    "num": "0843",
+    "slug": "843-convention-collective-nationale-de-la-boulangerie-patisserie-du-19-mars-1976",
+    "title": "Convention collective nationale de la boulangerie-pâtisserie du 19 mars 1976.  Etendue par arrêté du 21 juin 1978 JONC 28 juillet 1978.",
+  },
+]
+`;

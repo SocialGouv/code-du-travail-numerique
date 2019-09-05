@@ -5,19 +5,13 @@ import { theme, Container, Table, Tag } from "@cdt/ui-old";
 
 import SearchCC from "./SearchCC";
 
-// normalize idcc nums
-const formatIdCc = num => {
-  while (num && num.length < 4) num = "0" + num;
-  return num;
-};
-
 // link to a CC
 const CC = ({ id, num, title }) => {
   return (
     <Box>
       <Flex>
         <Tag title="Numéro de convention collective" variant="info">
-          IDCC {formatIdCc(num)}
+          IDCC {`0000${num}`.slice(-4)}
         </Tag>
         <Spacer />
         <CCLink

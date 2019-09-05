@@ -1,98 +1,9 @@
-import debounce from "debounce-promise";
-import memoize from "memoizee";
-import Fuse from "fuse.js";
-
-import kali from "@socialgouv/kali-data/data/index.json";
-
 import getQueryType from "./getQueryType";
-
-const SIRET2IDCC_URL =
-  process.env.API_SIRET2IDCC_URL ||
-  "https://siret2idcc.incubateur.social.gouv.fr/api/v1";
-
-// parametres fuse.js pour le search texte
-const fuseCCNames = new Fuse(kali, {
-  threshold: 0.2,
-  shouldSort: true,
-  matchAllTokens: true,
-  tokenize: true,
-  findAllMatches: true,
-  keys: ["title", "shortTitle"]
-});
-
-// parametres fuse.js pour le search IDCC
-const fuseCCIds = new Fuse(kali, {
-  threshold: 0.1,
-  location: 0,
-  distance: 10,
-  shouldSort: true,
-  keys: ["num"]
-});
-
-// format results API Sirene. embed the IDCC numbers at runtime
-const formatResultEntreprise = async result => ({
-  id: result.id,
-  siret: result.siret,
-  conventions: await apiSiret2idcc(result.siret),
-  label: `${result.nom_raison_sociale} ${result.code_postal ||
-    ""} ${result.libelle_commune || ""}`
-});
-
-// format a set of results API Sirene
-const formatFullTextResults = apiData =>
-  (apiData.etablissement &&
-    apiData.etablissement.map &&
-    Promise.all(
-      apiData.etablissement.filter(Boolean).map(formatResultEntreprise)
-    )) ||
-  Promise.resolve();
-
-// api entreprise full text call
-const apiEntrepriseFullText = memoize(
-  async query =>
-    await fetch(
-      `https://entreprise.data.gouv.fr/api/sirene/v1/full_text/${encodeURIComponent(
-        query
-      )}`
-    )
-      .then(r => r.json())
-      .then(formatFullTextResults)
-      .catch(() => []),
-  { promise: true }
-);
-
-// api entreprise siret call
-const apiEntrepriseSiret = memoize(
-  async siret =>
-    await fetch(
-      `https://entreprise.data.gouv.fr/api/sirene/v1/siret/${encodeURIComponent(
-        siret
-      )}`
-    )
-      .then(r => r.json())
-      .then(
-        data => data.etablissement && formatResultEntreprise(data.etablissement)
-      ),
-  { promise: true }
-);
-
-// api siret2idcc call
-const apiSiret2idcc = memoize(
-  async siret =>
-    await fetch(`${SIRET2IDCC_URL}/${siret}`)
-      .then(r => r.json())
-      .then(
-        data =>
-          (data.error && []) ||
-          data.filter(convention => convention.num !== "9999")
-      )
-      .catch(() => []),
-  { promise: true }
-);
-
-// debounced versions
-const searchByName = debounce(apiEntrepriseFullText, 300);
-const searchBySiret = debounce(apiEntrepriseSiret, 300);
+import { searchConvention } from "../convention.service";
+import {
+  searchEntrepriseByName,
+  searchEntrepriseBySiret
+} from "../entreprise.service";
 
 // build a result list based on query type
 export const loadResults = async query => {
@@ -101,25 +12,21 @@ export const loadResults = async query => {
   if (type === "text") {
     const results = [];
     // local CCNS list search
-    const ccs = fuseCCNames.search(query.trim());
-    if (ccs && ccs.length) {
+    // const ccs = fuseCCNames.search(query.trim());
+    const ccns = await searchConvention(query.trim());
+
+    if (ccns && ccns.length) {
       results.push(
-        ...ccs.map(cc => ({
-          id: cc.id,
+        ...ccns.map(ccn => ({
+          id: ccn.id,
           label: "Convention collective",
-          idcc: [cc.num],
-          conventions: [
-            {
-              id: cc.id,
-              num: cc.num,
-              title: cc.title
-            }
-          ]
+          idcc: `0000${ccn.idcc}`.slice(-4),
+          conventions: [ccn]
         }))
       );
     }
     // fulltext search API Sirene
-    const etablissements = await searchByName(query.trim());
+    const etablissements = await searchEntrepriseByName(query.trim());
     if (etablissements && etablissements.length) {
       results.push(
         ...etablissements.filter(r => r.conventions && r.conventions.length)
@@ -129,19 +36,20 @@ export const loadResults = async query => {
     // direct search by siret with API sirene
   }
   if (type === "siret") {
-    const etablissement = await searchBySiret(query.trim());
+    const etablissement = await searchEntrepriseBySiret(query.trim());
     return (etablissement && [etablissement]) || [];
     // search local idcc list
   }
   if (type === "idcc") {
-    const matches = fuseCCIds.search(query.trim());
+    // const matches = fuseCCIds.search(query.trim());
+    const matches = await searchConvention(query.trim());
+
     // only show 1 result when perfect
-    if (matches && matches.length && matches[0].num === query.trim()) {
+    if (matches && matches.length && matches[0].idcc === query.trim()) {
       return [
         {
           id: query,
           label: `IDCC ${query}`,
-          idcc: matches.map(match => match.num).slice(0, 1),
           conventions: matches.slice(0, 1)
         }
       ];
@@ -152,7 +60,6 @@ export const loadResults = async query => {
         {
           id: query,
           label: `IDCC ${query}`,
-          idcc: matches.map(match => match.num).slice(0, 5),
           conventions: matches.slice(0, 5)
         }
       ];

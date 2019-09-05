@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Info from "../Convention/Info";
-import { convention, containerAndTexteDeBase } from "./sampleData";
+import { convention, containerAndTexteDeBase } from "./api.conventions.mock";
 
 describe("<Info />", () => {
   it("renders", () => {

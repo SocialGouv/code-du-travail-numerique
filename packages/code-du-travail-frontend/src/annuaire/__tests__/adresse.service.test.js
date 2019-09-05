@@ -1,6 +1,10 @@
 import { searchAddress } from "../adresse.service";
 import getConfig from "next/config";
-import { mockFetch } from "../../../test/mockFetch";
+
+import fetch from "isomorphic-unfetch";
+import { fetchResponse } from "../../../test/mockFetch";
+
+jest.mock("isomorphic-unfetch");
 
 const {
   publicRuntimeConfig: { API_ADDRESS }
@@ -18,7 +22,7 @@ const query = "foo";
 
 describe("adresse service", () => {
   test("searchAddress: should make a request on api-adresse", async () => {
-    mockFetch(Promise.resolve(addressData));
+    fetch.mockResolvedValue(fetchResponse(addressData));
     const results = await searchAddress(query);
     const apiMatcher = new RegExp(
       `${API_ADDRESS}\\/\\?q=${query}&type=housenumber&limit=5$`

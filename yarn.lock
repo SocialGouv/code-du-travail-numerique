@@ -2132,14 +2132,6 @@
     eslint-plugin-jest "^22.16.0"
     eslint-plugin-prettier "~3.1.0"
 
-"@socialgouv/kali-data@^1.1.1":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.2.3.tgz#f792e0c1cd0e4ebea413982a17358e205d7c126e"
-  integrity sha512-OSMY+uK7/5ZmQuxECtJUWl/5hQg5/Q584BxEOSW9ngZhP6AnrW/FMY/4TyZhNXj6NhLoVmdEgvX/YVaOTYxyWw==
-  dependencies:
-    "@socialgouv/dila-api-client" "^1.0.1"
-    p-map "^3.0.0"
-
 "@socialgouv/kali-data@~1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@socialgouv/kali-data/-/kali-data-1.0.3.tgz#37cf77aa4eedfb6b54b02a8765a525df847195cc"
@@ -6718,11 +6710,6 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
-
-fuse.js@3.4.5:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.5.tgz#8954fb43f9729bd5dbcb8c08f251db552595a7a6"
-  integrity sha512-s9PGTaQIkT69HaeoTVjwGsLfb8V8ScJLx5XGFcKHg0MqLUH/UZ4EKOtqtXX9k7AFqCGxD1aJmYb8Q5VYDibVRQ==
 
 gauge@~2.7.3:
   version "2.7.4"

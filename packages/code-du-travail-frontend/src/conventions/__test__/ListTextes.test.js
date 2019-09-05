@@ -1,9 +1,15 @@
 import React from "react";
 import { render, fireEvent, wait } from "@testing-library/react";
 
-import { mockFetch } from "../../../test/mockFetch";
 import ListTextes from "../Convention/ListTextes";
-import { containerAndTexteDeBase, textesSalaires } from "./sampleData";
+import {
+  containerAndTexteDeBase,
+  textesSalaires
+} from "./api.conventions.mock";
+
+jest.mock("isomorphic-unfetch");
+import fetch from "isomorphic-unfetch";
+import { fetchResponse } from "../../../test/mockFetch";
 
 /**
  * TODO: mock response so snapshot show real ui, but we have
@@ -12,7 +18,7 @@ import { containerAndTexteDeBase, textesSalaires } from "./sampleData";
  **/
 
 describe("<ListTextes />", () => {
-  mockFetch(Promise.resolve({ _source: textesSalaires }));
+  fetch.mockResolvedValue(fetchResponse({ _source: textesSalaires }));
   it("renders a list of textes", async () => {
     const { container } = render(
       <ListTextes

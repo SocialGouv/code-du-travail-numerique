@@ -1,6 +1,6 @@
-export function mockFetch(data) {
-  global.fetch = jest.fn().mockResolvedValue({
+export function fetchResponse(data = {}) {
+  return {
     ok: true,
-    json: () => data
-  });
+    json: () => Promise.resolve(data)
+  };
 }
