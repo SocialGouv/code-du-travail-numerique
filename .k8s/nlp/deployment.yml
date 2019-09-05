@@ -28,14 +28,14 @@ spec:
             httpGet:
               path: /
               port: ${PORT}
-            initialDelaySeconds: 5
+            initialDelaySeconds: 300
             periodSeconds: 5
           readinessProbe:
             failureThreshold: 5
             httpGet:
               path: /
               port: ${PORT}
-            initialDelaySeconds: 5
+            initialDelaySeconds: 300
             periodSeconds: 5
           env:
             - name: NLP_PORT
