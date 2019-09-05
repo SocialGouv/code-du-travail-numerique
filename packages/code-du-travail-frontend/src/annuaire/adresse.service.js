@@ -1,6 +1,8 @@
+import fetch from "isomorphic-unfetch";
 import getConfig from "next/config";
 import memoizee from "memoizee";
 import debounce from "../lib/pDebounce";
+
 const {
   publicRuntimeConfig: { API_ADDRESS }
 } = getConfig();

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { theme } from "@cdt/ui-old/";
-import { getConventionTextes } from "../services";
+import { getConventionTextes } from "../convention.service";
 import Texte from "./Texte";
 
 const ListTextes = ({ conventionId, typeTextes }) => {

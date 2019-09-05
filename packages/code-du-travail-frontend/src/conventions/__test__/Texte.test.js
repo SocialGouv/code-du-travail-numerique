@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Texte from "../Convention/Texte";
-import { containerAndTexteDeBase } from "./sampleData";
+import { containerAndTexteDeBase } from "./api.conventions.mock";
 
 describe("<Texte />", () => {
   it("renders without a title", () => {
