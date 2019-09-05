@@ -47,4 +47,5 @@ spec:
           - name: VERSION
             value: "${VERSION}"
           - name: NLP_URL
-            value: http://cdtn-nlp${HASH_BRANCH_NAME}
+            value: "${NLP_API_URL}"
+          
