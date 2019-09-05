@@ -5589,7 +5589,7 @@ elastic-apm-http-client@^8.2.1:
     stream-chopper "^3.0.1"
     unicode-byte-truncate "^1.0.0"
 
-elastic-apm-node@^2.16.1:
+elastic-apm-node@^2.16.2:
   version "2.16.2"
   resolved "https://registry.yarnpkg.com/elastic-apm-node/-/elastic-apm-node-2.16.2.tgz#928f7dd6fc00c9a3c0ca034225f57eb2886e8b1f"
   integrity sha512-QBUk8pSSRtIUKIK+R5LNKTGu+rWpP2QHNXMc9M1EvClzsDDfST4TivXBZHokAKFHADQhoAaziXQrj0knSU0D3Q==
