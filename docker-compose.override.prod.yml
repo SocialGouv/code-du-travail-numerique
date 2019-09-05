@@ -40,3 +40,4 @@ services:
 
   data:
     image: registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:$CDTN_HASH
+    restart: always
