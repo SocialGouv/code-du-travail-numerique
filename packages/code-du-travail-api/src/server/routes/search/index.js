@@ -50,7 +50,7 @@ router.get("/search", async ctx => {
   const [esResults, semResults] = await Promise.all([
     elasticsearchClient.search({ index, body }),
     fetch(
-      `${process.env.NLP_URL}api/search?q=${query}&excludeSources=${excludeSources}`
+      `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
     ).then(data => data.json())
   ]);
 
