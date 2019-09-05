@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { Container, Section, Tag, theme, Wrapper } from "@cdt/ui/";
+import { Container, Section, Tag, theme, Wrapper } from "@cdt/ui-old/";
 
 const Article = ({
   title,

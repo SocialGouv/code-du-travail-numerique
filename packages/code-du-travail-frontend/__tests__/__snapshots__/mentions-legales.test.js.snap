@@ -544,31 +544,44 @@ exports[`<MentionLegales /> should render 1`] = `
           </div>
           <div
             class="accordion"
+            data-accordion-component="Accordion"
           >
             <div
               class="c12 c13"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__body-0"
-                aria-expanded="false"
-                class="c14"
-                id="accordion__title-0"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <h2>
-                  Modalités d’utilisation
-                </h2>
                 <div
-                  class="c15"
-                  role="presentation"
-                />
+                  aria-controls="accordion__panel-0"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c14"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-0"
+                  role="button"
+                  tabindex="0"
+                >
+                  <h2>
+                    Modalités d’utilisation
+                  </h2>
+                  <div
+                    class="c15"
+                    role="presentation"
+                  />
+                </div>
               </div>
               <div
                 aria-hidden="true"
-                aria-labelledby="accordion__title-0"
-                class="c16 accordion__body--hidden"
-                id="accordion__body-0"
+                aria-labelledby="accordion__heading-0"
+                class="c16"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-0"
               >
                 <h3>
                   Traitement des données à caractère personnel
@@ -674,28 +687,40 @@ exports[`<MentionLegales /> should render 1`] = `
             </div>
             <div
               class="c12 c13"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__body-1"
-                aria-expanded="false"
-                class="c14"
-                id="accordion__title-1"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <h2>
-                  Accessibilité
-                </h2>
                 <div
-                  class="c15"
-                  role="presentation"
-                />
+                  aria-controls="accordion__panel-1"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c14"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-1"
+                  role="button"
+                  tabindex="0"
+                >
+                  <h2>
+                    Accessibilité
+                  </h2>
+                  <div
+                    class="c15"
+                    role="presentation"
+                  />
+                </div>
               </div>
               <div
                 aria-hidden="true"
-                aria-labelledby="accordion__title-1"
-                class="c16 accordion__body--hidden"
-                id="accordion__body-1"
+                aria-labelledby="accordion__heading-1"
+                class="c16"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-1"
               >
                 <p>
                   La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre dès la conception, ce site accessible à toutes et à tous.
@@ -725,28 +750,40 @@ exports[`<MentionLegales /> should render 1`] = `
             </div>
             <div
               class="c12 c13"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__body-2"
-                aria-expanded="false"
-                class="c14"
-                id="accordion__title-2"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <h2>
-                  Sécurité
-                </h2>
                 <div
-                  class="c15"
-                  role="presentation"
-                />
+                  aria-controls="accordion__panel-2"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c14"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-2"
+                  role="button"
+                  tabindex="0"
+                >
+                  <h2>
+                    Sécurité
+                  </h2>
+                  <div
+                    class="c15"
+                    role="presentation"
+                  />
+                </div>
               </div>
               <div
                 aria-hidden="true"
-                aria-labelledby="accordion__title-2"
-                class="c16 accordion__body--hidden"
-                id="accordion__body-2"
+                aria-labelledby="accordion__heading-2"
+                class="c16"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-2"
               >
                 <p>
                   Le site est protégé par un certificat électronique, matérialisé pour la grande majorité des navigateurs par un cadenas. Cette protection participe à la confidentialité des échanges.

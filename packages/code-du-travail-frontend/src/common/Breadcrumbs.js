@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Container, List, ListItem, Section, theme } from "@cdt/ui";
+import { Container, List, ListItem, Section, theme } from "@cdt/ui-old";
 
 const Breadcrumbs = ({ items = [] }) => {
   if (items.length === 0) {

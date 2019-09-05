@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Modal } from "@cdt/ui";
+import { Modal } from "@cdt/ui-old";
 import { ServiceRenseignement } from "./ServiceRenseignement";
 
 class ServiceRenseignementModal extends React.Component {

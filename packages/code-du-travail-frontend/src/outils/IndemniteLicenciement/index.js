@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { OnChange } from "react-final-form-listeners";
-import { Section, Container, Wrapper } from "@cdt/ui";
+import { Section, Container, Wrapper } from "@cdt/ui-old";
 
 import {
   stepPrime,

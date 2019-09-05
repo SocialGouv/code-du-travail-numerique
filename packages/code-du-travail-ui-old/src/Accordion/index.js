@@ -4,8 +4,9 @@ import styled from "styled-components";
 import {
   Accordion as RootAccordion,
   AccordionItem,
-  AccordionItemTitle,
-  AccordionItemBody
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel
 } from "react-accessible-accordion";
 import { box, colors, spacing } from "../theme";
 import VerticalArrow from "../VerticalArrow";
@@ -21,16 +22,16 @@ class Accordion extends React.PureComponent {
         : StyledSingleAccordionItem;
 
     return (
-      <RootAccordion accordion={false} {...props}>
+      <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
         {items.map((item, index) => (
           <StyledAccordionItem key={index}>
-            <StyledAccordionItemTitle>
-              <>
+            <AccordionItemHeading>
+              <StyledAccordionItemButton>
                 {item.title}
                 <VerticalArrow />
-              </>
-            </StyledAccordionItemTitle>
-            <StyledAccordionItemBody>{item.body}</StyledAccordionItemBody>
+              </StyledAccordionItemButton>
+            </AccordionItemHeading>
+            <StyledAccordionItemPanel>{item.body}</StyledAccordionItemPanel>
           </StyledAccordionItem>
         ))}
       </RootAccordion>
@@ -56,7 +57,7 @@ const StyledMultipleAccordionItem = styled(AccordionItem)`
   }
 `;
 
-const StyledAccordionItemTitle = styled(AccordionItemTitle)`
+const StyledAccordionItemButton = styled(AccordionItemButton)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,12 +75,12 @@ const StyledSingleAccordionItem = styled(StyledMultipleAccordionItem)`
   border: 1px solid ${colors.elementBorder};
   border-radius: ${box.borderRadius};
   overflow: hidden;
-  & ${StyledAccordionItemTitle} {
+  & ${StyledAccordionItemButton} {
     padding-right: ${spacing.base};
   }
 `;
 
-const StyledAccordionItemBody = styled(AccordionItemBody)`
+const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   padding: ${spacing.base};
   animation: ${fadeIn} 0.35s ease-in;
   & > *:first-child {
@@ -88,6 +89,7 @@ const StyledAccordionItemBody = styled(AccordionItemBody)`
   & > *:last-child {
     margin-bottom: 0;
   }
+  /* This might not work anymore */
   &.accordion__body--hidden {
     display: none;
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button, Container, theme } from "@cdt/ui";
+import { Button, Container, theme } from "@cdt/ui-old";
 
 function PrevNextBar({ onPrev, disabled, nextVisible, previousVisible }) {
   return (

@@ -2,7 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withRouter } from "next/router";
-import { Button, Container, theme, Section, ScreenReaderOnly } from "@cdt/ui";
+import {
+  Button,
+  Container,
+  theme,
+  Section,
+  ScreenReaderOnly
+} from "@cdt/ui-old";
 
 import { Link, Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";

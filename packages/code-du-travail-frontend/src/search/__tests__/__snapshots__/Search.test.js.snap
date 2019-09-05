@@ -311,6 +311,7 @@ exports[`<search /> should render 1`] = `
               aria-haspopup="listbox"
               aria-owns="react-autowhatever-cdtn-documents-suggester"
               role="combobox"
+              style="flex: 1;"
             >
               <input
                 aria-autocomplete="list"
@@ -734,6 +735,7 @@ exports[`<search /> should render suggestions 1`] = `
               aria-haspopup="listbox"
               aria-owns="react-autowhatever-cdtn-documents-suggester"
               role="combobox"
+              style="flex: 1;"
             >
               <input
                 aria-autocomplete="list"

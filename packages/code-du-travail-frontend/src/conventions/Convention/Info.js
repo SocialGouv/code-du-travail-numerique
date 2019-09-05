@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { format } from "date-fns";
-import { Table } from "@cdt/ui";
+import { Table } from "@cdt/ui-old";
 
 const Info = ({
   convention: { url },

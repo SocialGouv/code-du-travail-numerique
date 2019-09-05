@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "next/router";
 import styled from "styled-components";
-import { Alert, Container, theme } from "@cdt/ui";
+import { Alert, Container, theme } from "@cdt/ui-old";
 
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";

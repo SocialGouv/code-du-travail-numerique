@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { Section, Wrapper } from "@cdt/ui";
+import { Section, Wrapper } from "@cdt/ui-old";
 
 import Html from "../src/common/Html";
 import { DownloadFile } from "../src/common/DownloadFile";

@@ -3,7 +3,7 @@ import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { Link } from "../routes";
-import { Container, Section, theme } from "@cdt/ui";
+import { Container, Section, theme } from "@cdt/ui-old";
 
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";

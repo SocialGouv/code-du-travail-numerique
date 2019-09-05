@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { X } from "react-feather";
 import styled from "styled-components";
-import { Button } from "@cdt/ui";
+import { Button } from "@cdt/ui-old";
 import { IdccSuggester } from "./IdccSuggester";
 import { Link } from "../../routes";
 

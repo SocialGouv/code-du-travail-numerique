@@ -40,11 +40,14 @@ const OverflowWrapper = ({ children, shadowColor, ...props }) => {
     }
 
     onResize();
+    // we need to keep track of the current element cause it
+    // may change before we remove the event listener
+    const currentScrollableElement = scrollableElement.current;
     window.addEventListener("resize", onResize);
-    scrollableElement.current.addEventListener("scroll", onScroll);
+    currentScrollableElement.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("resize", onResize);
-      scrollableElement.current.removeEventListener("scroll", onScroll);
+      currentScrollableElement.removeEventListener("scroll", onScroll);
     };
   });
   return (

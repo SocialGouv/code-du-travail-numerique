@@ -1,4 +1,4 @@
-# # Code-du-travail - UI (@cdt/ui)
+# # Code-du-travail - UI (@cdt/ui-old)
 
 > Private internal module 
 
@@ -6,7 +6,7 @@
 
 ```js
 
-import { Container, Alert } "@cdt/ui"
+import { Container, Alert } "@cdt/ui-old"
 
 const App = (
   <Container>

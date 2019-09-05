@@ -2,7 +2,7 @@ import React from "react";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
 import styled from "styled-components";
-import { Button, theme } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui-old";
 import { CurrencyField } from "../../common/CurrencyField";
 import { UID } from "react-uid";
 

@@ -789,6 +789,7 @@ exports[`<Annuaire /> should render 1`] = `
                 aria-haspopup="listbox"
                 aria-owns="react-autowhatever-cdtn-documents-suggester"
                 role="combobox"
+                style="flex: 1;"
               >
                 <input
                   aria-autocomplete="list"

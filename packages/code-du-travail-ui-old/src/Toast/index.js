@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { AlertTriangle } from "react-feather";
-import { Info } from "react-feather";
-import { Check } from "react-feather";
-import { X } from "react-feather";
+import { AlertTriangle, Info, Check, X } from "react-feather";
+
 import Button from "../Button";
 import { box, colors, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
@@ -24,23 +22,17 @@ const Toast = ({
   wide,
   ...props
 }) => {
-  let timer = null;
-
   const Icon = VARIANT_TO_ICON[variant];
 
   useEffect(() => {
-    if (timer) {
-      clearTimeout(this.timer);
-    }
-    if (timeout) {
+    let timer;
+    if (timeout && onRemove) {
       timer = setTimeout(onRemove, timeout);
     }
     return () => {
-      if (timer) {
-        clearTimeout(timer);
-      }
+      if (timer) clearTimeout(timer);
     };
-  }, [timeout]);
+  }, [onRemove, timeout]);
 
   return (
     <StyledToast animate={animate} variant={variant} wide={wide} {...props}>

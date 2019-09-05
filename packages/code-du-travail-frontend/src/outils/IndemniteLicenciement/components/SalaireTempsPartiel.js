@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import { OnChange } from "react-final-form-listeners";
-import { Button, theme } from "@cdt/ui";
+import { Button, theme } from "@cdt/ui-old";
 import { Input, InlineError, SectionTitle } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";
 

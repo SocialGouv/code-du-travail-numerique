@@ -1,5 +1,5 @@
 import React from "react";
-import { theme, Toast } from "@cdt/ui";
+import { theme, Toast } from "@cdt/ui-old";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 

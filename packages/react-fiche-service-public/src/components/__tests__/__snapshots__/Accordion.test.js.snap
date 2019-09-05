@@ -115,31 +115,44 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
   </p>
   <div
     class="c0"
+    data-accordion-component="Accordion"
   >
     <div
       class="c1 c2"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-0"
-        aria-expanded="false"
-        class="c3"
-        id="accordion__title-0"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        <h2>
-          titre 1
-        </h2>
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-0"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-0"
+          role="button"
+          tabindex="0"
+        >
+          <h2>
+            titre 1
+          </h2>
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-0"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-0"
+        aria-labelledby="accordion__heading-0"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-0"
       >
         <p>
           paragraphe 1-1
@@ -151,28 +164,40 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     </div>
     <div
       class="c1 c2"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-1"
-        aria-expanded="false"
-        class="c3"
-        id="accordion__title-1"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        <h2>
-          titre 2
-        </h2>
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-1"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-1"
+          role="button"
+          tabindex="0"
+        >
+          <h2>
+            titre 2
+          </h2>
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-1"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-1"
+        aria-labelledby="accordion__heading-1"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-1"
       >
         <p>
           paragraphe 2-1
@@ -187,28 +212,40 @@ exports[`<Accordion /> should have two different levels of headings 1`] = `
     </div>
     <div
       class="c1 c2"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-2"
-        aria-expanded="false"
-        class="c3"
-        id="accordion__title-2"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        <h2>
-          titre 3
-        </h2>
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-2"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-2"
+          role="button"
+          tabindex="0"
+        >
+          <h2>
+            titre 3
+          </h2>
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-2"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-2"
+        aria-labelledby="accordion__heading-2"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-2"
       >
         <p>
           paragraphe 3-1
@@ -337,31 +374,44 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
   </p>
   <div
     class="c0"
+    data-accordion-component="Accordion"
   >
     <div
       class="c1 c2"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-3"
-        aria-expanded="false"
-        class="c3"
-        id="accordion__title-3"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        <h5>
-          titre 1
-        </h5>
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-3"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-3"
+          role="button"
+          tabindex="0"
+        >
+          <h5>
+            titre 1
+          </h5>
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-3"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-3"
+        aria-labelledby="accordion__heading-3"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-3"
       >
         <p>
           paragraphe 1-1
@@ -373,28 +423,40 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     </div>
     <div
       class="c1 c2"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-4"
-        aria-expanded="false"
-        class="c3"
-        id="accordion__title-4"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        <h5>
-          titre 2
-        </h5>
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-4"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-4"
+          role="button"
+          tabindex="0"
+        >
+          <h5>
+            titre 2
+          </h5>
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-4"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-4"
+        aria-labelledby="accordion__heading-4"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-4"
       >
         <p>
           paragraphe 2-1
@@ -409,28 +471,40 @@ exports[`<Accordion /> should render all, siblings included 1`] = `
     </div>
     <div
       class="c1 c2"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-5"
-        aria-expanded="false"
-        class="c3"
-        id="accordion__title-5"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        <h5>
-          titre 3
-        </h5>
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-5"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-5"
+          role="button"
+          tabindex="0"
+        >
+          <h5>
+            titre 3
+          </h5>
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-5"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-5"
+        aria-labelledby="accordion__heading-5"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-5"
       >
         <p>
           paragraphe 3-1

@@ -3,7 +3,7 @@ import getConfig from "next/config";
 import Head from "next/head";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
-import { Container, Section } from "@cdt/ui";
+import { Container, Section } from "@cdt/ui-old";
 
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";

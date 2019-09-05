@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "@cdt/ui";
+import { theme } from "@cdt/ui-old";
 
 const { box, fonts, colors, spacing } = theme;
 

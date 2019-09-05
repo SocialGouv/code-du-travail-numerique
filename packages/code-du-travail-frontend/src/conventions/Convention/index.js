@@ -4,7 +4,7 @@ import Info from "./Info";
 import Texte from "./Texte";
 import Explainer from "./Explainer";
 import ListTextes from "./ListTextes";
-import { Tabs } from "@cdt/ui";
+import { Tabs } from "@cdt/ui-old";
 
 const Convention = ({ convention, container }) => {
   return (

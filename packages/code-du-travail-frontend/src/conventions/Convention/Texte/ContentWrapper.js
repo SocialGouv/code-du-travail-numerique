@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Content from "./Content";
-import { Section, theme } from "@cdt/ui";
+import { Section, theme } from "@cdt/ui-old";
 
 const ContentWrapper = ({ data, title }) => {
   return (

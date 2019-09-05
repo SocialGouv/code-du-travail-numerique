@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Alert, Button, theme } from "@cdt/ui";
+import { Alert, Button, theme } from "@cdt/ui-old";
 
 import { feedbackUrl } from "./feedback.service";
 

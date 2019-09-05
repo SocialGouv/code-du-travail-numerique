@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { icons } from "@cdt/ui/";
+import { icons } from "@cdt/ui-old/";
 
 import Answer from "../Answer";
 

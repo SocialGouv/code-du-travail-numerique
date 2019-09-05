@@ -1,5 +1,5 @@
 import React from "react";
-import { Toast } from "@cdt/ui";
+import { Toast } from "@cdt/ui-old";
 import { Field } from "react-final-form";
 
 import { TypeContrat } from "../components/TypeContrat";

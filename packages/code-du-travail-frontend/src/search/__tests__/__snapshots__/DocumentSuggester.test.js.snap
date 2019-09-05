@@ -47,6 +47,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
       aria-haspopup="listbox"
       aria-owns="react-autowhatever-cdtn-documents-suggester"
       role="combobox"
+      style="flex: 1;"
     >
       <input
         aria-autocomplete="list"
@@ -123,6 +124,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
       aria-haspopup="listbox"
       aria-owns="react-autowhatever-cdtn-documents-suggester"
       role="combobox"
+      style="flex: 1;"
     >
       <input
         aria-autocomplete="list"

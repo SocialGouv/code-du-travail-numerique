@@ -116,29 +116,42 @@ exports[`<Accordion /> should render 1`] = `
 <div>
   <div
     class="accordion"
+    data-accordion-component="Accordion"
   >
     <div
       class="c0 c1"
+      data-accordion-component="AccordionItem"
     >
       <div
-        aria-controls="accordion__body-0"
-        aria-expanded="false"
-        class="c2 c3"
-        id="accordion__title-0"
-        role="button"
-        tabindex="0"
+        aria-level="3"
+        class="accordion__heading"
+        data-accordion-component="AccordionItemHeading"
+        role="heading"
       >
-        This is the title
         <div
-          class="c4"
-          role="presentation"
-        />
+          aria-controls="accordion__panel-0"
+          aria-disabled="false"
+          aria-expanded="false"
+          class="c2 c3"
+          data-accordion-component="AccordionItemButton"
+          id="accordion__heading-0"
+          role="button"
+          tabindex="0"
+        >
+          This is the title
+          <div
+            class="c4"
+            role="presentation"
+          />
+        </div>
       </div>
       <div
         aria-hidden="true"
-        aria-labelledby="accordion__title-0"
-        class="c5 accordion__body--hidden"
-        id="accordion__body-0"
+        aria-labelledby="accordion__heading-0"
+        class="c5"
+        data-accordion-component="AccordionItemPanel"
+        hidden=""
+        id="accordion__panel-0"
       >
         this is the body
       </div>

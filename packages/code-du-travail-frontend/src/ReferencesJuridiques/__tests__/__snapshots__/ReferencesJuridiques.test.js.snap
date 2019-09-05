@@ -310,33 +310,46 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
           </h3>
           <div
             class="c5"
+            data-accordion-component="Accordion"
           >
             <div
               class="c6 c7"
+              data-accordion-component="AccordionItem"
             >
               <div
-                aria-controls="accordion__body-0"
-                aria-expanded="false"
-                class="c8 c9"
-                id="accordion__title-0"
-                role="button"
-                tabindex="0"
+                aria-level="3"
+                class="accordion__heading"
+                data-accordion-component="AccordionItemHeading"
+                role="heading"
               >
-                <span
-                  class="c10"
-                >
-                  Voir les articles du code du travail concernés
-                </span>
                 <div
-                  class="c11"
-                  role="presentation"
-                />
+                  aria-controls="accordion__panel-0"
+                  aria-disabled="false"
+                  aria-expanded="false"
+                  class="c8 c9"
+                  data-accordion-component="AccordionItemButton"
+                  id="accordion__heading-0"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="c10"
+                  >
+                    Voir les articles du code du travail concernés
+                  </span>
+                  <div
+                    class="c11"
+                    role="presentation"
+                  />
+                </div>
               </div>
               <div
                 aria-hidden="true"
-                aria-labelledby="accordion__title-0"
-                class="c12 accordion__body--hidden"
-                id="accordion__body-0"
+                aria-labelledby="accordion__heading-0"
+                class="c12"
+                data-accordion-component="AccordionItemPanel"
+                hidden=""
+                id="accordion__panel-0"
               >
                 <ul
                   class="c13"
@@ -418,33 +431,46 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
         </h3>
         <div
           class="accordion"
+          data-accordion-component="Accordion"
         >
           <div
             class="c6 c7"
+            data-accordion-component="AccordionItem"
           >
             <div
-              aria-controls="accordion__body-1"
-              aria-expanded="false"
-              class="c8 c9"
-              id="accordion__title-1"
-              role="button"
-              tabindex="0"
+              aria-level="3"
+              class="accordion__heading"
+              data-accordion-component="AccordionItemHeading"
+              role="heading"
             >
-              <span
-                class="c18"
-              >
-                Voir les articles du code du travail concernés
-              </span>
               <div
-                class="c11"
-                role="presentation"
-              />
+                aria-controls="accordion__panel-1"
+                aria-disabled="false"
+                aria-expanded="false"
+                class="c8 c9"
+                data-accordion-component="AccordionItemButton"
+                id="accordion__heading-1"
+                role="button"
+                tabindex="0"
+              >
+                <span
+                  class="c18"
+                >
+                  Voir les articles du code du travail concernés
+                </span>
+                <div
+                  class="c11"
+                  role="presentation"
+                />
+              </div>
             </div>
             <div
               aria-hidden="true"
-              aria-labelledby="accordion__title-1"
-              class="c12 accordion__body--hidden"
-              id="accordion__body-1"
+              aria-labelledby="accordion__heading-1"
+              class="c12"
+              data-accordion-component="AccordionItemPanel"
+              hidden=""
+              id="accordion__panel-1"
             >
               <ul
                 class="c13"

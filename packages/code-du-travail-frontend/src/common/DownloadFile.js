@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { LargeLink, theme } from "@cdt/ui";
+import { LargeLink, theme } from "@cdt/ui-old";
 
 import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
 

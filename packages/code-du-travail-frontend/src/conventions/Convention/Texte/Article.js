@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { theme } from "@cdt/ui/";
+import { theme } from "@cdt/ui-old/";
 
 const ETAT_LABEL = {
   MODIFIE: "Modifie",
