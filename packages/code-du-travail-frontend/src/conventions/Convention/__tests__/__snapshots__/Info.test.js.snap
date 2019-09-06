@@ -84,9 +84,7 @@ exports[`<Info /> renders 1`] = `
             <th>
               IDCC
             </th>
-            <td>
-              3205
-            </td>
+            <td />
           </tr>
           <tr>
             <th>

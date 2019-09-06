@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Info from "../Convention/Info";
-import { convention, containerAndTexteDeBase } from "./api.conventions.mock";
+import Info from "../Info";
+import { convention, texteDeBase } from "../../__tests__/api.conventions.mock";
 
 describe("<Info />", () => {
   it("renders", () => {
     const { container } = render(
-      <Info convention={convention} container={containerAndTexteDeBase} />
+      <Info convention={convention} container={texteDeBase} />
     );
     expect(container).toMatchSnapshot();
   });

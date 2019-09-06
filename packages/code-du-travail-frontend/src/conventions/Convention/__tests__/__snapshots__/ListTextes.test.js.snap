@@ -1,0 +1,490 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListTextes /> renders a list of textes 1`] = `
+.c0 {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  border: 0;
+  text-align: left;
+  background-color: inherit;
+  color: #0053b3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+<div>
+  <ul>
+    <li>
+      <button
+        class="c0"
+      >
+        Avenant n° 0914 du 8 avril 2016 relatif aux rémunérations minimales au 1er mai 2016
+      </button>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<ListTextes /> renders a text 1`] = `
+.c3 {
+  padding: 1.25rem 0;
+}
+
+.c5 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
+  font-size: 0.875rem;
+}
+
+.c7 {
+  display: block;
+  padding: 0.25rem 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7:hover {
+  font-weight: bold;
+}
+
+.c4 {
+  max-height: 100%;
+  overflow: auto;
+}
+
+.c11 {
+  margin-bottom: 0.625rem;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c12 {
+  margin-bottom: 0.625rem;
+}
+
+.c10 {
+  font-size: 1.625rem;
+}
+
+.c9 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.c0 {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  border: 0;
+  text-align: left;
+  background-color: inherit;
+  color: #0053b3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+@media (max-width:600px) {
+  .c5 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c5 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (min-width:980px) {
+  .c2 {
+    -webkit-flex: 0 1 35%;
+    -ms-flex: 0 1 35%;
+    flex: 0 1 35%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c8 {
+    -webkit-flex: 0 1 65%;
+    -ms-flex: 0 1 65%;
+    flex: 0 1 65%;
+    overflow: scroll;
+  }
+}
+
+@media (min-width:980px) {
+  .c1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    &lt; Retour à la liste des textes
+  </button>
+  <h2 />
+  <div
+    class="c1"
+  >
+    <div
+      class="c2 c3"
+    >
+      <div
+        class="c4 c5"
+      >
+        <ol>
+          <li
+            class="c6"
+          >
+            <a
+              class="c7"
+              href="#KALIARTI000033084096"
+            >
+              Objet de l'avenant
+            </a>
+          </li>
+          <li
+            class="c6"
+          >
+            <a
+              class="c7"
+              href="#KALIARTI000033084097"
+            >
+              Revalorisation des salaires minima
+            </a>
+          </li>
+          <li
+            class="c6"
+          >
+            <a
+              class="c7"
+              href="#KALIARTI000033084098"
+            >
+              Date d'application
+            </a>
+          </li>
+          <li
+            class="c6"
+          >
+            <a
+              class="c7"
+              href="#KALIARTI000033084099"
+            >
+              Formalité, publicité
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div
+      class="c8 c3"
+    >
+      <h2
+        class="c9"
+      >
+        Avenant n° 0914 du 8 avril 2016 relatif aux rémunérations minimales au 1er mai 2016
+      </h2>
+      <h3
+        class="c10"
+        id="KALIARTI000033084096"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000033084096"
+      >
+        Objet de l'avenant
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Le présent avenant s'applique aux salariés entrant dans le champ d'application de la convention collective nationale du personnel des coopératives de consommateurs et a pour objet de déterminer les évolutions des salaires minima à compter du 1er mai 2016.
+        </p>
+      </div>
+      <h3
+        class="c10"
+        id="KALIARTI000033084097"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000033084097"
+      >
+        Revalorisation des salaires minima
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Les parties signataires du présent avenant conviennent des modalités suivantes de revalorisation des salaires minima :
+        </p>
+        <p
+          align="right"
+        >
+          <br />
+          (En euros.)
+        </p>
+        <p
+          align="left"
+        />
+        <div
+          align="center"
+        >
+          <center>
+            <table
+              border="1"
+            >
+              <tbody>
+                <tr>
+                  <th>
+                    Groupe
+                  </th>
+                  <th>
+                    Salaire mensuel minimal
+                  </th>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    1
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 466,62
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    2
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 471,75
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    3
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 476,83
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    4
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 481,90
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    5
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 503,22
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    6
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 561,07
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    7
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 672,72
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    8 a
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    1 945,76
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    8 b
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    2 060,45
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    9 a
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    2 153,83
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align="center"
+                  >
+                    9 b
+                  </td>
+                  <td
+                    align="center"
+                  >
+                    2 809,52
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
+        </div>
+        <p />
+      </div>
+      <h3
+        class="c10"
+        id="KALIARTI000033084098"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000033084098"
+      >
+        Date d'application
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Les dispositions du présent avenant sont applicables au 1er mai 2016.
+        </p>
+      </div>
+      <h3
+        class="c10"
+        id="KALIARTI000033084099"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000033084099"
+      >
+        Formalité, publicité
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Cet avenant fera l'objet des formalités de dépôt prévues aux 
+          <a
+            alt="Code du travail - art. L2231-6 (V)"
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
+          >
+            articles L. 2231-6 et suivants du code du travail
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

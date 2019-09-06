@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, wait } from "@testing-library/react";
-import Explainer from "../Convention/Explainer";
+import Explainer from "../Explainer";
 
 describe("<Explainer />", () => {
   it("is togglable", async () => {

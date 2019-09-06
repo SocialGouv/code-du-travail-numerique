@@ -3,27 +3,30 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { theme } from "@cdt/ui-old/";
-import { sortByIntOrdre } from "../../utils";
+
 import Article from "./Article";
 
 // Beware, this one is recusrive !
-const Content = ({ data, depth }) => {
-  const { sections = [], articles = [] } = data;
-  const contents = sections.concat(articles);
-  contents.sort(sortByIntOrdre);
+const Content = ({ node, depth }) => {
+  const { type, children = [] } = node;
+  if (type === "article") {
+    return <Article node={node} />;
+  }
+
   return (
     <>
-      {contents.map((content, index) => {
+      {children.map(childNode => {
         // if node has a content key, it can only be an article
-        if (content.content) {
-          return <Article key={index} {...content} />;
-        }
         return (
-          <React.Fragment key={index}>
-            <Title id={content.id} depth={depth} as={depth ? "h4" : "h3"}>
-              {content.title}
+          <React.Fragment key={`content-${childNode.data.id}`}>
+            <Title
+              id={childNode.data.id}
+              depth={depth}
+              as={depth ? "h4" : "h3"}
+            >
+              {childNode.data.title}
             </Title>
-            <Content data={content} depth={depth + 1} />
+            <Content node={childNode} depth={depth + 1} />
           </React.Fragment>
         );
       })}
@@ -32,15 +35,12 @@ const Content = ({ data, depth }) => {
 };
 
 Content.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string,
-    id: PropTypes.string.isRequired,
-    sections: PropTypes.array,
-    articles: PropTypes.arrayOf(
-      PropTypes.shape({
-        content: PropTypes.string
-      })
-    )
+  node: PropTypes.shape({
+    data: PropTypes.shape({
+      title: PropTypes.string,
+      id: PropTypes.string.isRequired
+    }),
+    children: PropTypes.array
   }).isRequired,
   depth: PropTypes.number.isRequired
 };

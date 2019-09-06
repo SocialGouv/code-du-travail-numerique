@@ -19,20 +19,26 @@ const Convention = ({ convention, container }) => {
           },
           {
             tab: "Texte de base",
-            panel: <Texte data={container.texteDeBase} />,
+            panel: <Texte node={container.content} />,
             key: "texte-de-base"
           },
           {
             tab: "Texte attachés",
             panel: (
-              <ListTextes conventionId={container.id} typeTextes={"attaches"} />
+              <ListTextes
+                conventionId={container.conventionId}
+                typeTextes={"attaches"}
+              />
             ),
             key: "attaches"
           },
           {
             tab: "Texte salaires",
             panel: (
-              <ListTextes conventionId={container.id} typeTextes={"salaires"} />
+              <ListTextes
+                conventionId={container.conventionId}
+                typeTextes={"salaires"}
+              />
             ),
             key: "salaires"
           }
@@ -45,7 +51,7 @@ const Convention = ({ convention, container }) => {
 Convention.propTypes = {
   convention: PropTypes.object.isRequired,
   container: PropTypes.shape({
-    texteDeBase: PropTypes.object.isRequired
+    content: PropTypes.object.isRequired
   }).isRequired
 };
 

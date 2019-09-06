@@ -30,7 +30,9 @@ function getSearchBody({ source, slug }) {
       "tags", // code-du-travail
       "title",
       "url",
-      "breadcrumbs"
+      "breadcrumbs",
+      "idcc",
+      "date_publi" // convention-collective
     ]
   };
 }

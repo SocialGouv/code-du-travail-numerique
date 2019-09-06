@@ -14,7 +14,11 @@ const ETAT_LABEL = {
   REMPLACE: "Remplace"
 };
 
-const Article = ({ id, etat, surtitre, content }) => {
+const Article = ({
+  node: {
+    data: { id, etat, surtitre, content }
+  }
+}) => {
   return (
     <>
       <Status>{ETAT_LABEL[etat]}</Status>
@@ -25,10 +29,14 @@ const Article = ({ id, etat, surtitre, content }) => {
 };
 
 Article.propTypes = {
-  id: PropTypes.string.isRequired,
-  surtitre: PropTypes.string,
-  etat: PropTypes.oneOf(Object.keys(ETAT_LABEL)),
-  content: PropTypes.string.isRequired
+  node: PropTypes.shape({
+    data: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      surtitre: PropTypes.string,
+      etat: PropTypes.oneOf(Object.keys(ETAT_LABEL)),
+      content: PropTypes.string.isRequired
+    })
+  })
 };
 
 export default Article;

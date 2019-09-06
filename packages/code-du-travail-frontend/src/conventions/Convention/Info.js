@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { Table } from "@cdt/ui-old";
 
 const Info = ({
-  convention: { url },
-  container: { date_publi, num, categorisation }
+  convention: { url, date_publi, idcc },
+  container: { categorisation }
 }) => {
   return (
     <>
@@ -13,12 +13,12 @@ const Info = ({
         <tbody>
           <tr>
             <th>IDCC</th>
-            <td>{num}</td>
+            <td>{idcc}</td>
           </tr>
           {date_publi && (
             <tr>
               <th>Date d’entrée en vigueur</th>
-              <td>{format(date_publi, "DD/MM/YYYY")}</td>
+              <td>{format(parseISO(date_publi), "dd/MM/yyyy")}</td>
             </tr>
           )}
           {categorisation && (
