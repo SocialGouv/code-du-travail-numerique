@@ -33,8 +33,8 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
     "@socialgouv/eslint-config-recommended": "^0.9.6",
     "@zeit/ncc": "^0.20.4",
     "babel-eslint": "^10.0.3",
