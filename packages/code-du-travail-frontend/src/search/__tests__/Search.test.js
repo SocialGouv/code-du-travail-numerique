@@ -1,9 +1,8 @@
 import React from "react";
 import Search from "../Search";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
-
+import Router from "next/router";
 import { suggestResults } from "../search.service";
-import { Router } from "next/router";
 
 jest.mock("../search.service.js", () => ({
   suggestResults: jest.fn(),
@@ -12,10 +11,6 @@ jest.mock("../search.service.js", () => ({
 
 jest.mock("../../piwik", () => ({
   matopush: jest.fn()
-}));
-
-jest.mock("next/router", () => ({
-  push: jest.fn()
 }));
 
 const q = "foo";
