@@ -70,13 +70,11 @@ function getDuplicateSlugs(allDocuments) {
 function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ id, num, title, shortTitle, date_publi }) => ({
+    ({ id, num, title }) => ({
       source: SOURCES.CCN,
       id,
       idcc: num,
       title,
-      shortTitle,
-      date_publi,
       slug: slugify(`${num}-${title}`.substring(0, 80)),
       text: `IDCC ${num} ${title}`,
       url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
@@ -285,7 +283,7 @@ function* cdtnCcnGen(list, batchSize = 10000000) {
   let buffer = [];
   let bufferSize = 0;
 
-  for (const { id } of list) {
+  for (const { id, shortTitle, date_publi, url } of list) {
     const jsonPath = `@socialgouv/kali-data/data/${id}.json`;
     const tree = require(jsonPath);
     const {
@@ -303,7 +301,15 @@ function* cdtnCcnGen(list, batchSize = 10000000) {
       node => node.data.title === "Textes Salaires"
     );
     const data = [];
-    const meta = { num, title, categorisation, conventionId: id };
+    const meta = {
+      idcc: num,
+      title,
+      shortTitle,
+      date_publi,
+      categorisation,
+      conventionId: id,
+      url
+    };
     data.push({
       ...meta,
       type: conventionTextType.BASE,

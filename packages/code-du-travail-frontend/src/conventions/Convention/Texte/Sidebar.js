@@ -6,8 +6,14 @@ import { Section, theme, Wrapper } from "@cdt/ui-old";
 import SidebarItem from "./SidebarItem";
 
 const Sidebar = ({ node }) => {
-  const { children, type } = node;
-  if (type === "article") {
+  const { children = [] } = node;
+
+  const childSections = children.filter(
+    ({ type, data: { surtitre } }) =>
+      type === "section" || (type === "article" && surtitre)
+  );
+
+  if (childSections.length <= 1) {
     return null;
   }
 

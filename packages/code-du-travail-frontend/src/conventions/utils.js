@@ -1,9 +1,6 @@
-export const sortByIntOrdre = (a, b) => {
-  if (a.intOrdre < b.intOrdre) {
-    return -1;
-  }
-  if (a.intOrdre > b.intOrdre) {
-    return 1;
-  }
-  return 0;
+export const sortByIntOrdre = (
+  { data: { intOrdre: intOrdreA } },
+  { data: { intOrdre: intOrdreB } }
+) => {
+  return intOrdreA - intOrdreB;
 };

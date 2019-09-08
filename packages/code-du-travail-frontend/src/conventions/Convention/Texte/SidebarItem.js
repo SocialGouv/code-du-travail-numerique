@@ -13,12 +13,19 @@ const SidebarItem = ({ node }) => {
   } = node;
   const [isExpanded, setExpanded] = useState(false);
   if (type === "article") {
+    if (!surtitre) {
+      return null;
+    }
     return (
       <Li>
         <Link href={`#${id}`}>{surtitre}</Link>
       </Li>
     );
   }
+  const childNodes = children.filter(
+    ({ type, data: { surtitre } }) =>
+      type === "section" || (type === "article" && surtitre)
+  );
 
   return (
     <Li>
@@ -31,7 +38,8 @@ const SidebarItem = ({ node }) => {
           setExpanded(!isExpanded);
         }}
       >
-        {title}&nbsp;{isExpanded ? "▲" : "▼"}
+        {title}&nbsp;
+        {childNodes.length === 0 ? null : isExpanded ? "▲" : "▼"}
       </Link>
       {isExpanded && (
         <ol>

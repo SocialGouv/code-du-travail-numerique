@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import { format, parseISO } from "date-fns";
 import { Table } from "@cdt/ui-old";
 
-const Info = ({
-  convention: { url, date_publi, idcc },
-  container: { categorisation }
-}) => {
+const Info = ({ container: { idcc, categorisation, date_publi, url } }) => {
   return (
     <>
       <Table>
@@ -43,11 +40,9 @@ const Info = ({
 };
 
 Info.propTypes = {
-  convention: PropTypes.shape({
-    url: PropTypes.string
-  }).isRequired,
   container: PropTypes.shape({
-    num: PropTypes.string,
+    url: PropTypes.string,
+    idcc: PropTypes.string,
     date_publi: PropTypes.string,
     categorisation: PropTypes.array
   }).isRequired

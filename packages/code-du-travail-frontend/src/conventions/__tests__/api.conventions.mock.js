@@ -27,11 +27,15 @@ export const convention = {
 };
 
 export const texteDeBase = {
-  num: "3205",
+  idcc: "3205",
   title:
     "Convention collective des coopératives de consommation du 23 novembre 2018 (21e édition)",
   categorisation: ["Coopératives de consommation (23 novembre 2018)"],
   conventionId: "KALICONT000030185307",
+  shortTitle: "Coopératives De Consommateurs Salariés",
+  date_publi: "2019-01-01T00:00:00.000Z",
+  url:
+    "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000030185307",
   type: "base",
   content: {
     type: "section",
@@ -475,10 +479,14 @@ export const texteDeBase = {
   }
 };
 export const textesAttaches = {
-  num: "3205",
+  idcc: "3205",
   title: "Textes Attachés",
   categorisation: ["Coopératives de consommation (23 novembre 2018)"],
   conventionId: "KALICONT000030185307",
+  shortTitle: "Coopératives De Consommateurs Salariés",
+  date_publi: "2019-01-01T00:00:00.000Z",
+  url:
+    "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000030185307",
   type: "salaires",
   content: {
     type: "section",
@@ -2387,10 +2395,14 @@ export const textesAttaches = {
   }
 };
 export const textesSalaires = {
-  num: "3205",
+  idcc: "3205",
   title: "Textes Salaires",
   categorisation: ["Coopératives de consommation (23 novembre 2018)"],
   conventionId: "KALICONT000030185307",
+  shortTitle: "Coopératives De Consommateurs Salariés",
+  date_publi: "2019-01-01T00:00:00.000Z",
+  url:
+    "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000030185307",
   type: "attaches",
   content: {
     type: "section",

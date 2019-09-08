@@ -135,7 +135,6 @@ exports[`<Texte /> renders with a title 1`] = `
             >
               Préambule
                
-              ▼
             </a>
           </li>
           <li
@@ -303,16 +302,7 @@ exports[`<Texte /> renders with a title 1`] = `
             >
               Annexes
                
-              ▼
             </a>
-          </li>
-          <li
-            class="c5"
-          >
-            <a
-              class="c6"
-              href="#KALIARTI000038531122"
-            />
           </li>
         </ol>
       </div>
@@ -1247,6 +1237,29 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
       </div>
       <h3
         class="c9"
+        id="KALIARTI000038531122"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c12"
+      >
+        <p>
+          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L2231-6 (V)"
+          >
+            article L. 2231-6
+          </a>
+           et suivants du code de travail.
+        </p>
+      </div>
+      <h3
+        class="c9"
         id="KALISCTA000038524058"
       >
         Annexes
@@ -1420,29 +1433,6 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
           .
         </p>
       </div>
-      <h3
-        class="c9"
-        id="KALIARTI000038531122"
-      />
-      <div
-        class="c11"
-      >
-        Article non étendu
-      </div>
-      <div
-        class="c12"
-      >
-        <p>
-          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
-          <a
-            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
-            title="Code du travail - art. L2231-6 (V)"
-          >
-            article L. 2231-6
-          </a>
-           et suivants du code de travail.
-        </p>
-      </div>
     </div>
   </div>
 </div>
@@ -1578,7 +1568,6 @@ exports[`<Texte /> renders without a title 1`] = `
             >
               Préambule
                
-              ▼
             </a>
           </li>
           <li
@@ -1746,16 +1735,7 @@ exports[`<Texte /> renders without a title 1`] = `
             >
               Annexes
                
-              ▼
             </a>
-          </li>
-          <li
-            class="c5"
-          >
-            <a
-              class="c6"
-              href="#KALIARTI000038531122"
-            />
           </li>
         </ol>
       </div>
@@ -2685,6 +2665,29 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
       </div>
       <h3
         class="c8"
+        id="KALIARTI000038531122"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c11"
+      >
+        <p>
+          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L2231-6 (V)"
+          >
+            article L. 2231-6
+          </a>
+           et suivants du code de travail.
+        </p>
+      </div>
+      <h3
+        class="c8"
         id="KALISCTA000038524058"
       >
         Annexes
@@ -2856,29 +2859,6 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
             accord-cadre GPEC du 28 octobre 2009
           </a>
           .
-        </p>
-      </div>
-      <h3
-        class="c8"
-        id="KALIARTI000038531122"
-      />
-      <div
-        class="c10"
-      >
-        Article non étendu
-      </div>
-      <div
-        class="c11"
-      >
-        <p>
-          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
-          <a
-            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
-            title="Code du travail - art. L2231-6 (V)"
-          >
-            article L. 2231-6
-          </a>
-           et suivants du code de travail.
         </p>
       </div>
     </div>

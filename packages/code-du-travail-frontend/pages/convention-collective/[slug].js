@@ -55,7 +55,7 @@ class ConventionCollective extends React.Component {
           footer="Informations fournies par la DILA"
           wide
         >
-          <Convention convention={convention} container={container} />
+          <Convention container={container} />
         </Answer>
       </PageLayout>
     );

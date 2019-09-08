@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { theme } from "@cdt/ui-old/";
 
 import Article from "./Article";
-
+import { sortByIntOrdre } from "../../utils";
 // Beware, this one is recusrive !
 const Content = ({ node, depth }) => {
   const { type, children = [] } = node;
@@ -15,8 +15,7 @@ const Content = ({ node, depth }) => {
 
   return (
     <>
-      {children.map(childNode => {
-        // if node has a content key, it can only be an article
+      {children.sort(sortByIntOrdre).map(childNode => {
         return (
           <React.Fragment key={`content-${childNode.data.id}`}>
             <Title

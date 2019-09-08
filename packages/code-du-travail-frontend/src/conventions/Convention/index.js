@@ -6,7 +6,7 @@ import Explainer from "./Explainer";
 import ListTextes from "./ListTextes";
 import { Tabs } from "@cdt/ui-old";
 
-const Convention = ({ convention, container }) => {
+const Convention = ({ container }) => {
   return (
     <>
       <Explainer />
@@ -14,7 +14,7 @@ const Convention = ({ convention, container }) => {
         data={[
           {
             tab: "Informations",
-            panel: <Info convention={convention} container={container} />,
+            panel: <Info container={container} />,
             key: "infos"
           },
           {
@@ -49,8 +49,8 @@ const Convention = ({ convention, container }) => {
 };
 
 Convention.propTypes = {
-  convention: PropTypes.object.isRequired,
   container: PropTypes.shape({
+    conventionId: PropTypes.string.isRequired,
     content: PropTypes.object.isRequired
   }).isRequired
 };
