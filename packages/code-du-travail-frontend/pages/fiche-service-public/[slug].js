@@ -4,11 +4,11 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
-import ReferencesJuridiques from "../src/ReferencesJuridiques";
-import Answer from "../src/common/Answer";
-import ReponseIcon from "../src/icons/ReponseIcon";
-import { PageLayout } from "../src/layout/PageLayout";
-import Metas from "../src/common/Metas";
+import ReferencesJuridiques from "../../src/ReferencesJuridiques";
+import Answer from "../../src/common/Answer";
+import ReponseIcon from "../../src/icons/ReponseIcon";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Metas from "../../src/common/Metas";
 
 const ServicePublic = styled.div`
   .sp__Titre {

@@ -3,7 +3,7 @@ import Head from "next/head";
 import styled from "styled-components";
 import { withRouter } from "next/router";
 import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
-import { Link } from "../../routes";
+import Link from "next/link";
 import Article from "../common/Article";
 import { Breadcrumbs } from "./Breadcrumbs";
 import Disclaimer from "../common/Disclaimer";
@@ -22,7 +22,7 @@ const BackToResultsLink = ({ query }) => {
 
   return (
     <BacklinkContainer>
-      <Link route="recherche" params={{ ...query }}>
+      <Link href={{ pathname: "/recherche", query }}>
         <a>{"< Retour aux résultats"}</a>
       </Link>
     </BacklinkContainer>
@@ -30,7 +30,7 @@ const BackToResultsLink = ({ query }) => {
 };
 function getBreadcrumbs(items = []) {
   return items.map(({ slug, label }) => (
-    <Link key={slug} route="themes" params={{ slug }}>
+    <Link key={slug} href="/themes[slug]" as={`/themes/${slug}`}>
       <a title={`Voir le theme ${label}`}>{label}</a>
     </Link>
   ));

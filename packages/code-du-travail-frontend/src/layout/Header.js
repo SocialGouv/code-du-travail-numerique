@@ -1,18 +1,15 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
 import { Container } from "@cdt/ui-old";
-import { Link } from "../../routes";
 
 const Header = () => (
   <StyledHeader>
     <Container>
       <Wrapper>
-        <Link route="index">
-          <LogoWrapper
-            href="/?q="
-            title="Code du travail numérique - retour à l'accueil"
-          >
+        <Link href="/?q=" passHref>
+          <LogoWrapper title="Code du travail numérique - retour à l'accueil">
             <Logo
               src={"/static/assets/img/marianne.svg"}
               alt="symbole de la Marianne, site officiel du gouvernement"

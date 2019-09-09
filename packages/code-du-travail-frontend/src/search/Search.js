@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { withRouter } from "next/router";
+import Router, { withRouter } from "next/router";
+import Link from "next/link";
 import {
   Button,
   Container,
@@ -10,7 +11,6 @@ import {
   ScreenReaderOnly
 } from "@cdt/ui-old";
 
-import { Link, Router } from "../../routes";
 import { searchAddress } from "../annuaire/adresse.service";
 import ReponseIcon from "../icons/ReponseIcon";
 import SearchIcon from "../icons/SearchIcon";
@@ -84,10 +84,13 @@ class Search extends React.Component {
   submitQuery = () => {
     if (this.state.query) {
       const routeName =
-        this.state.source === "annuaire" ? "annuaire" : "recherche";
-      Router.pushRoute(routeName, {
-        q: this.state.query,
-        source: this.state.source
+        this.state.source === "annuaire" ? "/annuaire" : "/recherche";
+      Router.push({
+        pathname: routeName,
+        query: {
+          q: this.state.query,
+          source: this.state.source
+        }
       });
     }
   };
@@ -114,10 +117,13 @@ class Search extends React.Component {
         });
         if (this.state.query) {
           const routeName =
-            event.target.value === "annuaire" ? "annuaire" : "recherche";
-          Router.pushRoute(routeName, {
-            q: this.state.query,
-            source: event.target.value
+            event.target.value === "annuaire" ? "/annuaire" : "/recherche";
+          Router.push({
+            pathname: routeName,
+            query: {
+              q: this.state.query,
+              source: event.target.value
+            }
           });
         }
     }
@@ -130,15 +136,21 @@ class Search extends React.Component {
     if (source === "annuaire") {
       const [lon, lat] = suggestion._source.coord;
       matopush(["trackEvent", "selectedSource", source]);
-      Router.pushRoute("annuaire", {
-        q: suggestion._source.title,
-        coord: `${lon}:${lat}`,
-        source
+      Router.push({
+        pathname: "/annuaire",
+        query: {
+          q: suggestion._source.title,
+          coord: `${lon}:${lat}`,
+          source
+        }
       });
       return;
     }
     matopush(["trackEvent", "selectedSuggestion", query, suggestion]);
-    Router.pushRoute("recherche", { q: suggestion, source });
+    Router.push({
+      pathname: "/recherche",
+      query: { q: suggestion, source }
+    });
   };
 
   onClear = () => {
@@ -181,7 +193,7 @@ class Search extends React.Component {
               <SearchLabel>
                 Posez votre question sur le droit du travail
                 <br />
-                <Link route="droit-du-travail" passHref>
+                <Link href="/droit-du-travail" passHref>
                   <A>Le droit du travail, c‘est quoi ?</A>
                 </Link>
               </SearchLabel>

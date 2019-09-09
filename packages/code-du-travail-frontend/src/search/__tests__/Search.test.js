@@ -1,9 +1,8 @@
 import React from "react";
 import Search from "../Search";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
-
+import Router from "next/router";
 import { suggestResults } from "../search.service";
-import { Router } from "../../../routes";
 
 jest.mock("../search.service.js", () => ({
   suggestResults: jest.fn(),
@@ -13,8 +12,6 @@ jest.mock("../search.service.js", () => ({
 jest.mock("../../piwik", () => ({
   matopush: jest.fn()
 }));
-
-Router.pushRoute = jest.fn();
 
 const q = "foo";
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
@@ -42,7 +39,7 @@ describe("<search />", () => {
     const { getByDisplayValue } = render(<Search />);
     const select = getByDisplayValue(/Tous contenus/i);
     fireEvent.change(select, { target: { value: "faq" } });
-    expect(Router.pushRoute).not.toHaveBeenCalled();
+    expect(Router.push).not.toHaveBeenCalled();
   });
 
   it("should not navigate when user blur source facet", () => {
@@ -50,7 +47,7 @@ describe("<search />", () => {
     const select = getByDisplayValue(/Tous contenus/i);
     fireEvent.focus(select);
     fireEvent.blur(select);
-    expect(Router.pushRoute).not.toHaveBeenCalled();
+    expect(Router.push).not.toHaveBeenCalled();
   });
 
   it("should navigate when user change facet if query is filled", () => {
@@ -59,7 +56,7 @@ describe("<search />", () => {
     fireEvent.change(input, { target: { value: "yolo" } });
     const select = getByDisplayValue(/Tous contenus/i);
     fireEvent.change(select, { target: { value: "faq" } });
-    expect(Router.pushRoute).toHaveBeenCalled();
+    expect(Router.push).toHaveBeenCalled();
   });
 
   it("should update input value when suggestion are hightlighted", async () => {

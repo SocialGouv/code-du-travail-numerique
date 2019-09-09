@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Question from "../pages/question.js";
+import Question from "../pages/question/[slug]";
 
 describe("<Question />", () => {
   it("should render", () => {

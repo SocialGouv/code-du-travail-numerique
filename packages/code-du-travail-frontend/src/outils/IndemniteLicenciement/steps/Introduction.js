@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Link } from "../../../../routes";
+import Link from "next/link";
 
 const StepIntro = () => (
   <>
@@ -24,8 +23,8 @@ const StepIntro = () => (
       Pour en savoir plus sur l’indemnité de licenciement et son mode de calcul,
       consultez{" "}
       <Link
-        route="fiche-service-public"
-        params={{ slug: "indemnite-de-licenciement" }}
+        href="/fiche-service-public/[slug]"
+        as={`/fiche-service-public/indemnite-de-licenciement`}
       >
         <a>cet article</a>
       </Link>

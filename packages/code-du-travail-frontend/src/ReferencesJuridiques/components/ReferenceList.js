@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { List, ListItem, theme } from "@cdt/ui-old";
-import { Link } from "../../../routes";
+import Link from "next/link";
 import TYPE_REFERENCE from "../typeReference";
 import ArticleIcon from "../../icons/ArticleIcon";
 
 const { box, colors, spacing } = theme;
 
 const CodeDuTravailLink = ({ title, slug }) => (
-  <Link route="code-du-travail" params={{ slug }} passHref>
+  <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
     <ReferenceLink>
       <Icon width={18} />
       {title}
@@ -17,7 +17,11 @@ const CodeDuTravailLink = ({ title, slug }) => (
 );
 
 const ConventionLink = ({ title, slug }) => (
-  <Link route="convention-collective" params={{ slug }} passHref>
+  <Link
+    href="/convention-collective/[slug]"
+    as={`/convention-collective/${slug}`}
+    passHref
+  >
     <ReferenceLink>
       <Icon width={18} />
       Convention collective: {title}

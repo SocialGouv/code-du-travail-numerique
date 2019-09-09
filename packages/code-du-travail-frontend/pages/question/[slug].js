@@ -2,9 +2,9 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import Answer from "../src/common/Answer";
-import { DownloadFile } from "../src/common/DownloadFile";
-import ModeleCourrierIcon from "../src/icons/ModeleCourrierIcon";
+import Answer from "../../src/common/Answer";
+import { DownloadFile } from "../../src/common/DownloadFile";
+import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import {
   Container,
   List,
@@ -16,12 +16,12 @@ import {
 } from "@cdt/ui-old";
 import styled from "styled-components";
 
-import { Link } from "../routes";
-import { getRouteBySource, getLabelBySource } from "../src/sources";
-import ArticleIcon from "../src/icons/ArticleIcon";
-import ReponseIcon from "../src/icons/ReponseIcon";
-import { PageLayout } from "../src/layout/PageLayout";
-import Metas from "../src/common/Metas";
+import Link from "next/link";
+import { getRouteBySource, getLabelBySource } from "../../src/sources";
+import ArticleIcon from "../../src/icons/ArticleIcon";
+import ReponseIcon from "../../src/icons/ReponseIcon";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -140,8 +140,11 @@ function MoreLinks({ items, icon, query, title, children }) {
           {items.map(({ _id, _source: { slug, title, source, path = "" } }) => (
             <ListItem key={_id}>
               <Link
-                route={getRouteBySource(source)}
-                params={{ q: query, slug: slug }}
+                href={{
+                  pathname: `/${getRouteBySource(source)}[slug]`,
+                  query: { q: query }
+                }}
+                as={`/${getRouteBySource(source)}/${slug}?q=${query}`}
                 passHref
               >
                 <LargeLink icon={icon}>

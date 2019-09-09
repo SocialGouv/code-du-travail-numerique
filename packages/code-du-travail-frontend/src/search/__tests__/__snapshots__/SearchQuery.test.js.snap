@@ -118,7 +118,7 @@ exports[`<SearchQuery/> should render results 1`] = `
             >
               <a
                 class="c4"
-                href="/question/mer-il-est-fou?q=search%20test"
+                href="/question/mer-il-est-fou?q=search test"
               >
                 <svg
                   class="c5"

@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Theme from "../pages/theme.js";
+import About from "../pages/a-propos";
 
-describe("<Theme />", () => {
+describe("<About />", () => {
   it("should render", () => {
-    const { container } = render(<Theme />);
+    const { container } = render(<About />);
     expect(container).toMatchSnapshot();
   });
 });

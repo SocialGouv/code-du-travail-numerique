@@ -2,20 +2,20 @@ import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import Answer from "../src/common/Answer";
-import { PageLayout } from "../src/layout/PageLayout";
-import Convention from "../src/conventions/Convention";
-import Metas from "../src/common/Metas";
+import Answer from "../../src/common/Answer";
+import { PageLayout } from "../../src/layout/PageLayout";
+import Convention from "../../src/conventions/Convention";
+import Metas from "../../src/common/Metas";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
 class ConventionCollective extends React.Component {
-  static async getInitialProps({ query: { slug, idccNum } }) {
-    const responseConvention = slug
-      ? await fetch(`${API_URL}/items/conventions_collectives/${slug}`)
-      : await fetch(`${API_URL}/idcc/${idccNum}`);
+  static async getInitialProps({ query: { slug } }) {
+    const responseConvention = await fetch(
+      `${API_URL}/items/conventions_collectives/${slug}`
+    );
     if (!responseConvention.ok) {
       return { statusCode: responseConvention.status };
     }
