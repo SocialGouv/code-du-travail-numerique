@@ -21,6 +21,13 @@ spec:
       containers:
         - image: ${IMAGE_NAME}:${IMAGE_TAG}
           name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "2"
+            requests:
+              memory: "1024Mi"
+              cpu: "1"
           ports:
             - containerPort: ${PORT}
           livenessProbe:
