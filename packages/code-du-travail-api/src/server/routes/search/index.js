@@ -59,9 +59,9 @@ router.get("/search", async ctx => {
   const results = utils.merge(semResultWithKey, esResultWithKey, MAX_RESULTS);
   const resultsNoDuplicate = utils.removeDuplicate(results);
 
-  const snippetIndex = esResults.body.hits.hits.findIndex(
-    item => item._source.source === "snippet"
-  );
+  // const snippetIndex = esResults.body.hits.hits.findIndex(
+  //   item => item._source.source === "snippet"
+  // );
   ctx.body = {
     hits: {
       hits: resultsNoDuplicate
