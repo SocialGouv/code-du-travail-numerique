@@ -15,16 +15,6 @@ Object {
   "hits": Object {
     "hits": Array [
       Object {
-        "_id": "fiche-ministere-travaildemission-comment-presenter-une-demission",
-        "_source": Object {
-          "_score_sem": 0.2543585002422333,
-          "slug": "demission-comment-presenter-une-demission",
-          "source": "fiches_ministere_travail",
-          "title": "Démission : comment présenter une démission ?",
-        },
-        "key": "fiches_ministere_travaildemission-comment-presenter-une-demission",
-      },
-      Object {
         "_id": "8",
         "_index": "cdtn_document_test",
         "_score": 16.501816,
@@ -36,16 +26,6 @@ Object {
         },
         "_type": "_doc",
         "key": "code_du_travailr1225-18",
-      },
-      Object {
-        "_id": "fiche-service-publicdemission-d-un-salarie",
-        "_source": Object {
-          "_score_sem": 0.18947656452655792,
-          "slug": "demission-d-un-salarie",
-          "source": "fiches_service_public",
-          "title": "Démission d'un salarié",
-        },
-        "key": "fiches_service_publicdemission-d-un-salarie",
       },
       Object {
         "_id": "15",
@@ -60,66 +40,6 @@ Object {
         },
         "_type": "_doc",
         "key": "fiches_ministere_travaille-smic-a-qui-sapplique-le-smic",
-      },
-      Object {
-        "_id": "fiche-service-publicle-salarie-peut-il-revenir-sur-sa-demission",
-        "_source": Object {
-          "_score_sem": 0.186964213848114,
-          "slug": "le-salarie-peut-il-revenir-sur-sa-demission",
-          "source": "fiches_service_public",
-          "title": "Le salarié peut-il revenir sur sa démission ?",
-        },
-        "key": "fiches_service_publicle-salarie-peut-il-revenir-sur-sa-demission",
-      },
-      Object {
-        "_id": "fiche-ministere-travaildemission-faut-il-respecter-un-preavis",
-        "_source": Object {
-          "_score_sem": 0.18393316864967346,
-          "slug": "demission-faut-il-respecter-un-preavis",
-          "source": "fiches_ministere_travail",
-          "title": "Démission : faut-il respecter un préavis ?",
-        },
-        "key": "fiches_ministere_travaildemission-faut-il-respecter-un-preavis",
-      },
-      Object {
-        "_id": "fiche-ministere-travaildemission-labsence-prolongee-du-salarie-est-elle-une-demission",
-        "_source": Object {
-          "_score_sem": 0.1733897477388382,
-          "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
-          "source": "fiches_ministere_travail",
-          "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
-        },
-        "key": "fiches_ministere_travaildemission-labsence-prolongee-du-salarie-est-elle-une-demission",
-      },
-      Object {
-        "_id": "fiche-ministere-travaildemission-le-refus-par-le-salarie-daccepter-un-changement-des-conditions-de-travail-est-il-une-demission",
-        "_source": Object {
-          "_score_sem": 0.17146745324134827,
-          "slug": "demission-le-refus-par-le-salarie-daccepter-un-changement-des-conditions-de-travail-est-il-une-demission",
-          "source": "fiches_ministere_travail",
-          "title": "Démission : le refus, par le salarié, d’accepter un changement des conditions de travail est-il une démission ?",
-        },
-        "key": "fiches_ministere_travaildemission-le-refus-par-le-salarie-daccepter-un-changement-des-conditions-de-travail-est-il-une-demission",
-      },
-      Object {
-        "_id": "fiche-ministere-travailrupture-conventionnelle-en-quoi-consiste-lhomologation-de-la-convention",
-        "_source": Object {
-          "_score_sem": 0.16799695789813995,
-          "slug": "rupture-conventionnelle-en-quoi-consiste-lhomologation-de-la-convention",
-          "source": "fiches_ministere_travail",
-          "title": "Rupture conventionnelle : en quoi consiste l’homologation de la convention ?",
-        },
-        "key": "fiches_ministere_travailrupture-conventionnelle-en-quoi-consiste-lhomologation-de-la-convention",
-      },
-      Object {
-        "_id": "fiche-service-publicdemission-d-une-assistante-maternelle",
-        "_source": Object {
-          "_score_sem": 0.1642654687166214,
-          "slug": "demission-d-une-assistante-maternelle",
-          "source": "fiches_service_public",
-          "title": "Démission d'une assistante maternelle",
-        },
-        "key": "fiches_service_publicdemission-d-une-assistante-maternelle",
       },
     ],
   },

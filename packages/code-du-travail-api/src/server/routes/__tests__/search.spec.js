@@ -3,6 +3,7 @@ const Koa = require("koa");
 const router = require("../search");
 
 const nlpFakeData = require("./sem_search.json");
+const nlpFakeDataArticles = require("./sem_search_art.json");
 // mock fetch function
 jest.mock("node-fetch", () => jest.fn());
 const fetch = require("node-fetch");
@@ -13,6 +14,7 @@ app.use(router.routes());
 test("return search results for demission from datafiller", async () => {
   // nlp api will return fake data
   fetch.mockResolvedValue({ json: () => nlpFakeData });
+  
 
   const response = await request(app.callback()).get(
     "/api/v1/search?q=démission"
@@ -66,8 +68,10 @@ test("return search results for demission from elastic", async () => {
 //   expect(response.status).toBe(200);
 //   expect(response.body).toMatchSnapshot();
 // });
-const nlpFakeDataArticles = require("./sem_search.json");
+
+
 test("return article results when searching with article id", async () => {
+  fetch.mockResolvedValue({ json: () => nlpFakeDataArticles });
   const response = await request(app.callback()).get(
     `/api/v1/search?q=R1225-18`
   );
