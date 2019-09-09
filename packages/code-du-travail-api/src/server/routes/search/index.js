@@ -6,6 +6,8 @@ const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
 const getFacetsBody = require("./facets.elastic");
 const getSavedResult = require("./search.savedResults");
+const fetch = require("node-fetch");
+console.log(fetch)
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
@@ -53,6 +55,7 @@ router.get("/search", async ctx => {
       `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
     ).then(data => data.json())
   ]);
+  
 
   const semResultWithKey = utils.addKey(semResults.hits.hits);
   const esResultWithKey = utils.addKey(esResults.body.hits.hits);
