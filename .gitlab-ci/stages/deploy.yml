@@ -131,7 +131,10 @@ Deploy elasticsearch (incubateur):
     CONTEXT: data
     ES_PORT: ${ELASTICSEARCH_PORT}
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
-
+  artifacts:
+    paths:
+    - dist
+    expire_in: 1 week
 #
 
 Create Elasticsearch Index (dev):
