@@ -5,7 +5,7 @@
   "private": true,
   "main": "indexing/index.js",
   "scripts": {
-    "build": "ncc build ./indexing/index.js -o dist && yarn dump > dump.data.json",
+    "build": "ncc build ./indexing/index.js -o dist && yarn dump > dist/dump.data.json",
     "lint": "eslint ./indexing/*",
     "prepush": "yarn lint",
     "populate-dev": "node -r esm indexing/index.js",

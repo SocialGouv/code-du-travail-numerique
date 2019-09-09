@@ -14,7 +14,7 @@ RUN apt-get -y install curl unzip
 WORKDIR /app
 
 COPY requirements.txt .
-COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dump.data.json ./data/content.json
+COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/content.json
 
 # get suggester files. todo: minio
 RUN echo '#!/bin/sh                                               \n\
