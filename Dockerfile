@@ -45,4 +45,4 @@ COPY ./packages /app/packages
 
 RUN yarn build
 
-COPY ./packages/code-du-travail-data/dist/data.dump.json /app/packages/code-du-travail-data/dist/dump.data.json
+COPY ./packages/code-du-travail-data/dist/dump.data.json /app/packages/code-du-travail-data/dist/dump.data.json
