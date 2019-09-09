@@ -17,7 +17,7 @@ COPY requirements.txt .
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/content.json
 
 # get suggester files. todo: minio
-RUN echo '#!/bin/sh                                               \n\
+RUN echo '#!/bin/sh                                                \n\
 count=0                                                            \n\
 # download suggester data                                          \n\
 mkdir data || true                                                 \n\
