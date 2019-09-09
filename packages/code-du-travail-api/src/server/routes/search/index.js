@@ -64,8 +64,9 @@ router.get("/search", async ctx => {
   );
   ctx.body = {
     hits: {
-
-      hits: resultsNoDuplicate.filter(item => item._source.source !== "snippet").slice(0, size)
+      hits: resultsNoDuplicate
+        .filter(item => item._source.source !== "snippet")
+        .slice(0, size)
     },
     facets: []
   };
