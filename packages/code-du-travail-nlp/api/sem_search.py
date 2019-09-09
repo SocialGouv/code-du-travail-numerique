@@ -5,10 +5,6 @@ import numpy as np
 import tf_sentencepiece
 import unidecode
 
-from flask import request
-from flask import jsonify
-from flask_cors import CORS, cross_origin
-
 from typing import List
 
 content_path = "./data/content.json"
@@ -116,15 +112,6 @@ class SemSearch():
         return " ".join(tokens_filtered)
 
 #_______________ utils to add api route
-def add_search(app, ss):
-    @app.route('/api/search', methods=['GET'])
-    @cross_origin()
-    def search():
-        query = request.args.get('q')
-        exclude_sources = request.args.get("excludeSources")
-        print(exclude_sources)
-        results = ss.predict_slugs(query, exclude_sources)
-        return jsonify(results)
 
 if __name__ == "__main__":
     ss = SemSearch(content_path, content_path)

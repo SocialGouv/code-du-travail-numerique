@@ -1,6 +1,6 @@
 from flask import Flask
 from api.suggest import add_suggest
-from api.sem_search import add_search
+from api.search import add_search
 from autosuggest import AutoSuggestor
 from .sem_search import SemSearch
 import os

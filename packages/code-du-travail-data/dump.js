@@ -1,6 +1,7 @@
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { logger } from "./indexing/logger";
 
+const fs = require("fs");
 //
 logger.silent = true;
 
@@ -16,4 +17,9 @@ for (const documents of cdtnDocumentsGen()) {
   );
 }
 //eslint-disable-next-line no-console
-console.log(JSON.stringify(slugs, 0, 2));
+const json = JSON.stringify(slugs, 0, 2);
+
+fs.writeFile("dump.json", json, "utf8", function(err) {
+  if (err) throw err;
+  console.log("Dump created..");
+});
