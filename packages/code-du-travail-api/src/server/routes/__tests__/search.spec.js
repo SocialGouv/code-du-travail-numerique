@@ -14,7 +14,6 @@ app.use(router.routes());
 test("return search results for demission from datafiller", async () => {
   // nlp api will return fake data
   fetch.mockResolvedValue({ json: () => nlpFakeData });
-  
 
   const response = await request(app.callback()).get(
     "/api/v1/search?q=démission"
@@ -68,7 +67,6 @@ test("return search results for demission from elastic", async () => {
 //   expect(response.status).toBe(200);
 //   expect(response.body).toMatchSnapshot();
 // });
-
 
 test("return article results when searching with article id", async () => {
   fetch.mockResolvedValue({ json: () => nlpFakeDataArticles });

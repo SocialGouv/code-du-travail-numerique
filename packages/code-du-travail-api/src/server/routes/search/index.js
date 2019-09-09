@@ -54,7 +54,6 @@ router.get("/search", async ctx => {
       `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
     ).then(data => data.json())
   ]);
-  
 
   const semResultWithKey = utils.addKey(semResults.hits.hits);
   const esResultWithKey = utils.addKey(esResults.body.hits.hits);
