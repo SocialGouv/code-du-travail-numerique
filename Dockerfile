@@ -44,3 +44,5 @@ COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
 RUN yarn build
+
+COPY ./packages/code-du-travail-data/dist/data.dump.json /app/packages/code-du-travail-data/dist/dump.data.json
