@@ -133,7 +133,7 @@ Deploy elasticsearch (incubateur):
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
   artifacts:
     paths:
-    - dist
+    - /app/dist
     expire_in: 1 week
 #
 
