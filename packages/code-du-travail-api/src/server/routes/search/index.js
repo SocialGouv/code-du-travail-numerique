@@ -4,7 +4,13 @@ const API_BASE_URL = require("../v1.prefix");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
+<<<<<<< HEAD
 const getSavedResult = require("./search.getSavedResult");
+=======
+const getFacetsBody = require("./facets.elastic");
+const getSavedResult = require("./search.savedResults");
+const fetch = require("node-fetch");
+>>>>>>> updaet test
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
