@@ -269,12 +269,12 @@
     ],
     "children": [
       {
-        "title": "Départ dans le cadre d'un accord de performance collective",
-        "slug": "862-depart-dans-le-cadre-dun-accord-de-performance-collective"
-      },
-      {
         "title": "Prise d'acte et résiliation judiciaire",
         "slug": "861-prise-dacte-et-resiliation-judiciaire"
+      },
+      {
+        "title": "Départ dans le cadre d'un accord de performance collective",
+        "slug": "862-depart-dans-le-cadre-dun-accord-de-performance-collective"
       }
     ],
     "variants": [
@@ -432,28 +432,16 @@
     ],
     "children": [
       {
+        "title": "Lieu de travail",
+        "slug": "611-lieu-de-travail"
+      },
+      {
         "title": "Droit d'alerte et de retrait des salariés",
         "slug": "612-droit-dalerte-et-de-retrait-des-salaries"
       },
       {
-        "title": "Egalité professionnelle",
-        "slug": "617-egalite-professionnelle"
-      },
-      {
         "title": "Equipements de travail et de protection",
         "slug": "613-equipements-de-travail-et-de-protection"
-      },
-      {
-        "title": "Harcèlement et discrimination",
-        "slug": "616-harcelement-et-discrimination"
-      },
-      {
-        "title": "Libertés du salarié",
-        "slug": "618-libertes-du-salarie"
-      },
-      {
-        "title": "Lieu de travail",
-        "slug": "611-lieu-de-travail"
       },
       {
         "title": "Règlement intérieur d'une entreprise",
@@ -462,6 +450,18 @@
       {
         "title": "Télétravail",
         "slug": "615-teletravail"
+      },
+      {
+        "title": "Harcèlement et discrimination",
+        "slug": "616-harcelement-et-discrimination"
+      },
+      {
+        "title": "Egalité professionnelle",
+        "slug": "617-egalite-professionnelle"
+      },
+      {
+        "title": "Libertés du salarié",
+        "slug": "618-libertes-du-salarie"
       }
     ],
     "variants": [
@@ -505,16 +505,16 @@
         "slug": "91-greve"
       },
       {
+        "title": "Sanctions disciplinaires",
+        "slug": "92-sanctions-disciplinaires"
+      },
+      {
         "title": "Inspection du travail",
         "slug": "93-inspection-du-travail"
       },
       {
         "title": "Le conseil des prud'hommes",
         "slug": "94-le-conseil-des-prudhommes"
-      },
-      {
-        "title": "Sanctions disciplinaires",
-        "slug": "92-sanctions-disciplinaires"
       },
       {
         "title": "Travail illégal",
@@ -560,20 +560,20 @@
     ],
     "children": [
       {
-        "title": "Autres congés",
-        "slug": "414-autres-conges"
+        "title": "Congés payés",
+        "slug": "411-conges-payes"
       },
       {
         "title": "Congés liés à la naissance et à l'enfance",
         "slug": "412-conges-lies-a-la-naissance-et-a-lenfance"
       },
       {
-        "title": "Congés payés",
-        "slug": "411-conges-payes"
-      },
-      {
         "title": "Congés pour événément familial",
         "slug": "413-conges-pour-evenement-familial"
+      },
+      {
+        "title": "Autres congés",
+        "slug": "414-autres-conges"
       }
     ],
     "variants": [
@@ -645,24 +645,24 @@
     "breadcrumbs": null,
     "children": [
       {
-        "title": "Compte épargne-temps (CET)",
-        "slug": "45-compte-epargne-temps-cet"
-      },
-      {
         "title": "Congés",
         "slug": "41-conges"
       },
       {
-        "title": "Dimanches, jours fériés et ponts",
-        "slug": "44-dimanches-jours-feries-et-ponts"
+        "title": "Repos",
+        "slug": "42-repos"
       },
       {
         "title": "Réduction du temps de travail (RTT)",
         "slug": "43-reduction-du-temps-de-travail-rtt"
       },
       {
-        "title": "Repos",
-        "slug": "42-repos"
+        "title": "Dimanches, jours fériés et ponts",
+        "slug": "44-dimanches-jours-feries-et-ponts"
+      },
+      {
+        "title": "Compte épargne-temps (CET)",
+        "slug": "45-compte-epargne-temps-cet"
       }
     ],
     "variants": [
@@ -1157,12 +1157,16 @@
     ],
     "children": [
       {
+        "title": "Contrat à durée indéterminée (CDI)",
+        "slug": "121-contrat-a-duree-indeterminee-cdi"
+      },
+      {
         "title": "Contrat à durée déterminée (CDD)",
         "slug": "122-contrat-a-duree-determinee-cdd"
       },
       {
-        "title": "Contrat à durée indéterminée (CDI)",
-        "slug": "121-contrat-a-duree-indeterminee-cdi"
+        "title": "Contrat de travail temporaire (intérim)",
+        "slug": "123-contrat-de-travail-temporaire-interim"
       },
       {
         "title": "Contrat d'apprentissage",
@@ -1171,10 +1175,6 @@
       {
         "title": "Contrat de professionnalisation",
         "slug": "125-contrat-de-professionnalisation"
-      },
-      {
-        "title": "Contrat de travail temporaire (intérim)",
-        "slug": "123-contrat-de-travail-temporaire-interim"
       },
       {
         "title": "Contrats d'insertion et emplois aidés",
@@ -1612,20 +1612,16 @@
     "breadcrumbs": null,
     "children": [
       {
-        "title": "Autres départs",
-        "slug": "86-autres-departs"
-      },
-      {
         "title": "Démission",
         "slug": "81-demission"
       },
       {
-        "title": "Documents à remettre au salarié",
-        "slug": "87-documents-a-remettre-au-salarie"
-      },
-      {
         "title": "Fin d'un CDD - CTT",
         "slug": "82-fin-dun-cdd-ctt"
+      },
+      {
+        "title": "Rupture conventionnelle",
+        "slug": "83-rupture-conventionnelle"
       },
       {
         "title": "Licenciement",
@@ -1636,8 +1632,12 @@
         "slug": "85-retraite"
       },
       {
-        "title": "Rupture conventionnelle",
-        "slug": "83-rupture-conventionnelle"
+        "title": "Autres départs",
+        "slug": "86-autres-departs"
+      },
+      {
+        "title": "Documents à remettre au salarié",
+        "slug": "87-documents-a-remettre-au-salarie"
       }
     ],
     "variants": [
@@ -1914,12 +1914,12 @@
     ],
     "children": [
       {
-        "title": "Convention de forfait (en heures ou en jours)",
-        "slug": "313-convention-de-forfait-en-heures-ou-en-jours"
-      },
-      {
         "title": "Durée du travail à temps complet",
         "slug": "312-duree-du-travail-a-temps-complet"
+      },
+      {
+        "title": "Convention de forfait (en heures ou en jours)",
+        "slug": "313-convention-de-forfait-en-heures-ou-en-jours"
       },
       {
         "title": "Durée du travail d'un jeune avant 18 ans",
@@ -2036,16 +2036,32 @@
     ],
     "children": [
       {
-        "title": "Détachement",
-        "slug": "116-detachement"
+        "title": "Méthodes de recrutement",
+        "slug": "111-methodes-de-recrutement"
+      },
+      {
+        "title": "Formalités d'embauche",
+        "slug": "112-formalites-dembauche"
+      },
+      {
+        "title": "Période d'essai",
+        "slug": "113-periode-dessai"
+      },
+      {
+        "title": "Travailleurs étrangers",
+        "slug": "114-travailleurs-etrangers"
       },
       {
         "title": "Expatriation",
         "slug": "115-expatriation"
       },
       {
-        "title": "Formalités d'embauche",
-        "slug": "112-formalites-dembauche"
+        "title": "Détachement",
+        "slug": "116-detachement"
+      },
+      {
+        "title": "Stage",
+        "slug": "117-stage"
       },
       {
         "title": "Handicap",
@@ -2054,22 +2070,6 @@
       {
         "title": "Jeunes",
         "slug": "119-jeunes"
-      },
-      {
-        "title": "Méthodes de recrutement",
-        "slug": "111-methodes-de-recrutement"
-      },
-      {
-        "title": "Période d'essai",
-        "slug": "113-periode-dessai"
-      },
-      {
-        "title": "Stage",
-        "slug": "117-stage"
-      },
-      {
-        "title": "Travailleurs étrangers",
-        "slug": "114-travailleurs-etrangers"
       }
     ],
     "variants": [
@@ -2097,12 +2097,12 @@
     "breadcrumbs": null,
     "children": [
       {
-        "title": "Contrat de travail",
-        "slug": "12-contrat-de-travail"
-      },
-      {
         "title": "Embauche",
         "slug": "11-embauche"
+      },
+      {
+        "title": "Contrat de travail",
+        "slug": "12-contrat-de-travail"
       }
     ],
     "variants": [
@@ -2132,36 +2132,36 @@
     ],
     "children": [
       {
-        "title": "Compte personnel d'activité (CPA)",
-        "slug": "523-compte-personnel-dactivite-cpa"
-      },
-      {
-        "title": "Demandeurs d'emploi",
-        "slug": "527-demandeurs-demploi"
-      },
-      {
-        "title": "Jeunes travailleur",
-        "slug": "525-jeunes-travailleur"
+        "title": "Les structures d'insertion",
+        "slug": "521-les-structures-dinsertion"
       },
       {
         "title": "Les aides à l'emploi",
         "slug": "522-les-aides-a-lemploi"
       },
       {
-        "title": "Les structures d'insertion",
-        "slug": "521-les-structures-dinsertion"
-      },
-      {
-        "title": "Politique de l'emploi",
-        "slug": "528-politique-de-lemploi"
+        "title": "Compte personnel d'activité (CPA)",
+        "slug": "523-compte-personnel-dactivite-cpa"
       },
       {
         "title": "Seniors",
         "slug": "524-seniors"
       },
       {
+        "title": "Jeunes travailleur",
+        "slug": "525-jeunes-travailleur"
+      },
+      {
         "title": "Travailleurs handicapés",
         "slug": "526-travailleurs-handicapes"
+      },
+      {
+        "title": "Demandeurs d'emploi",
+        "slug": "527-demandeurs-demploi"
+      },
+      {
+        "title": "Politique de l'emploi",
+        "slug": "528-politique-de-lemploi"
       }
     ],
     "variants": [
@@ -2179,16 +2179,16 @@
     "breadcrumbs": null,
     "children": [
       {
+        "title": "Formation professionnelle",
+        "slug": "51-formation-professionnelle"
+      },
+      {
         "title": "Emploi",
         "slug": "52-emploi"
       },
       {
         "title": "Entreprises en difficulté",
         "slug": "53-entreprises-en-difficulte"
-      },
-      {
-        "title": "Formation professionnelle",
-        "slug": "51-formation-professionnelle"
       }
     ],
     "variants": [
@@ -2504,32 +2504,32 @@
     ],
     "children": [
       {
-        "title": "Acteurs de la formation",
-        "slug": "517-acteurs-de-la-formation"
+        "title": "Dispositifs d'accès à la formation",
+        "slug": "511-dispositifs-dacces-a-la-formation"
       },
       {
         "title": "Compte personnel de formation (CPF)",
         "slug": "512-compte-personnel-de-formation-cpf"
       },
       {
+        "title": "Validation des acquis de l'expérience (VAE)",
+        "slug": "513-validation-des-acquis-de-lexperience-vae"
+      },
+      {
         "title": "Congés et absences pour formation",
         "slug": "514-conges-et-absences-pour-formation"
-      },
-      {
-        "title": "Dispositifs d'accès à la formation",
-        "slug": "511-dispositifs-dacces-a-la-formation"
-      },
-      {
-        "title": "La certification professionnelle",
-        "slug": "516-la-certification-professionnelle"
       },
       {
         "title": "Publics et mesures spécifiques",
         "slug": "515-publics-et-mesures-specifiques"
       },
       {
-        "title": "Validation des acquis de l'expérience (VAE)",
-        "slug": "513-validation-des-acquis-de-lexperience-vae"
+        "title": "La certification professionnelle",
+        "slug": "516-la-certification-professionnelle"
+      },
+      {
+        "title": "Acteurs de la formation",
+        "slug": "517-acteurs-de-la-formation"
       }
     ],
     "variants": [
@@ -3207,12 +3207,12 @@
         "slug": "841-licenciement-economique"
       },
       {
-        "title": "Licenciement pour inaptitude",
-        "slug": "843-licenciement-pour-inaptitude"
-      },
-      {
         "title": "Licenciement pour motif personnel",
         "slug": "842-licenciement-pour-motif-personnel"
+      },
+      {
+        "title": "Licenciement pour inaptitude",
+        "slug": "843-licenciement-pour-inaptitude"
       }
     ],
     "variants": [
@@ -4208,12 +4208,12 @@
         "slug": "421-pause"
       },
       {
-        "title": "Repos hebdomadaire et dominical",
-        "slug": "423-repos-hebdomadaire-et-dominical"
-      },
-      {
         "title": "Repos quotidien",
         "slug": "422-repos-quotidien"
+      },
+      {
+        "title": "Repos hebdomadaire et dominical",
+        "slug": "423-repos-hebdomadaire-et-dominical"
       }
     ],
     "variants": [
@@ -4407,6 +4407,10 @@
     "breadcrumbs": null,
     "children": [
       {
+        "title": "Représentation du personnel",
+        "slug": "71-representation-du-personnel"
+      },
+      {
         "title": "Les syndicats dans l'entreprise",
         "slug": "72-les-syndicats-dans-lentreprise"
       },
@@ -4417,10 +4421,6 @@
       {
         "title": "Négociations de branche",
         "slug": "74-negociations-de-branche"
-      },
-      {
-        "title": "Représentation du personnel",
-        "slug": "71-representation-du-personnel"
       }
     ],
     "variants": [
@@ -4534,12 +4534,12 @@
     ],
     "children": [
       {
-        "title": "Départ volontaire à la retraite",
-        "slug": "852-depart-volontaire-a-la-retraite"
-      },
-      {
         "title": "Mise à la retraite",
         "slug": "851-mise-a-la-retraite"
+      },
+      {
+        "title": "Départ volontaire à la retraite",
+        "slug": "852-depart-volontaire-a-la-retraite"
       },
       {
         "title": "Pré-retraite",
@@ -4780,20 +4780,20 @@
     ],
     "children": [
       {
-        "title": "Compte professionnel de prévention (C2P)",
-        "slug": "623-compte-professionnel-de-prevention-c2p"
+        "title": "Risques professionnels",
+        "slug": "621-risques-professionnels"
       },
       {
         "title": "Obligations générales de prévention",
         "slug": "622-obligations-generales-de-prevention"
       },
       {
-        "title": "Prévention de la pénibilité",
-        "slug": "624-prevention-de-la-penibilite"
+        "title": "Compte professionnel de prévention (C2P)",
+        "slug": "623-compte-professionnel-de-prevention-c2p"
       },
       {
-        "title": "Risques professionnels",
-        "slug": "621-risques-professionnels"
+        "title": "Prévention de la pénibilité",
+        "slug": "624-prevention-de-la-penibilite"
       }
     ],
     "variants": [
@@ -4820,12 +4820,12 @@
     ],
     "children": [
       {
-        "title": "Rupture conventionnelle collective",
-        "slug": "832-rupture-conventionnelle-collective"
-      },
-      {
         "title": "Rupture conventionnelle individuelle",
         "slug": "831-rupture-conventionnelle-individuelle"
+      },
+      {
+        "title": "Rupture conventionnelle collective",
+        "slug": "832-rupture-conventionnelle-collective"
       }
     ],
     "variants": [
@@ -5029,8 +5029,8 @@
     "breadcrumbs": null,
     "children": [
       {
-        "title": "Épargne salariale",
-        "slug": "24-epargne-salariale"
+        "title": "Salaire",
+        "slug": "21-salaire"
       },
       {
         "title": "Primes et avantages",
@@ -5041,8 +5041,8 @@
         "slug": "23-remboursement-des-frais-de-transport"
       },
       {
-        "title": "Salaire",
-        "slug": "21-salaire"
+        "title": "Épargne salariale",
+        "slug": "24-epargne-salariale"
       },
       {
         "title": "Smic (Salaire minimum de croissance)",
@@ -5108,16 +5108,16 @@
     ],
     "children": [
       {
+        "title": "Maladie",
+        "slug": "631-maladie"
+      },
+      {
         "title": "Accident du travail et maladie professionnelle",
         "slug": "632-accident-du-travail-et-maladie-professionnelle"
       },
       {
         "title": "Inaptitude",
         "slug": "633-inaptitude"
-      },
-      {
-        "title": "Maladie",
-        "slug": "631-maladie"
       },
       {
         "title": "Suivi médical des salariés",
@@ -5362,24 +5362,24 @@
     "breadcrumbs": null,
     "children": [
       {
-        "title": "Aménagement du temps de travail",
-        "slug": "33-amenagement-du-temps-de-travail"
-      },
-      {
-        "title": "Astreintes et équivalences",
-        "slug": "35-astreintes-et-equivalences"
-      },
-      {
         "title": "Durée du travail",
         "slug": "31-duree-du-travail"
+      },
+      {
+        "title": "Temps partiel",
+        "slug": "32-temps-partiel"
+      },
+      {
+        "title": "Aménagement du temps de travail",
+        "slug": "33-amenagement-du-temps-de-travail"
       },
       {
         "title": "Heures supplémentaires",
         "slug": "34-heures-supplementaires"
       },
       {
-        "title": "Temps partiel",
-        "slug": "32-temps-partiel"
+        "title": "Astreintes et équivalences",
+        "slug": "35-astreintes-et-equivalences"
       },
       {
         "title": "Travail de nuit et en soiréee",
@@ -5586,20 +5586,20 @@
     ],
     "children": [
       {
-        "title": "Femme enceinte - Maternité",
-        "slug": "642-femme-enceinte-maternite"
-      },
-      {
-        "title": "Handicap",
-        "slug": "644-handicap"
-      },
-      {
         "title": "Jeunes travailleurs",
         "slug": "641-jeunes-travailleurs"
       },
       {
+        "title": "Femme enceinte - Maternité",
+        "slug": "642-femme-enceinte-maternite"
+      },
+      {
         "title": "Travailleur à domicile",
         "slug": "643-travailleur-a-domicile"
+      },
+      {
+        "title": "Handicap",
+        "slug": "644-handicap"
       },
       {
         "title": "Travailleur de nuit",

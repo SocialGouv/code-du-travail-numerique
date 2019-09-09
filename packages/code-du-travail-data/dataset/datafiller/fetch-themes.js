@@ -51,7 +51,9 @@ const getParents = (rows, row) => {
 const getChildren = (rows, row) =>
   rows
     .filter(node => node.parent === row.id)
-    .map(node => ({ title: node.title, slug: getSlug(node) }));
+    .sort(sortByKey("position"))
+    .map(node => ({ title: node.title, slug: getSlug(node) }))
+
 
 // import only valid data from datafiller
 // == has more than one ref
@@ -64,7 +66,7 @@ const fetchAll = async () => {
 
   const treeRows = sortedRows.map(row => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);
-    const children = getChildren(sortedRows, row).sort(sortByKey("position"));
+    const children = getChildren(sortedRows, row);
     return {
       ...row,
       slug: getSlug(row),
