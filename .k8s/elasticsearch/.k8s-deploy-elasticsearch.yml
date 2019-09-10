@@ -4,8 +4,6 @@
     - envsubst < ./.k8s/elasticsearch/configmap.yml > ./configmap.yml
     - envsubst < ./.k8s/elasticsearch/service.yml > ./service.yml
     - envsubst < ./.k8s/elasticsearch/statefulset.dev.yml > ./statefulset.yml
-    - env
-    - cat ./statefulset.yml
     #
     - kubectl apply -f ./configmap.yml
     - kubectl apply -f ./service.yml
