@@ -17,12 +17,12 @@ stringvec = List[str]
 class SemSearch():
 
     def __init__(self, content_path: str, stops_path: str):
-        with open(content_path,  "r") as f:
-            content = json.load(f)
+        with open(content_path, "r") as f:
+            content = list(filter(lambda row: "text" in row, json.load(f)))
 
-        with open(stops_path,  "r") as f:
+        with open(stops_path, "r") as f:
             stops = f.read().splitlines()
-    
+
         self.stops = {self.strip_accents(k):"" for k in stops} # make a hashtable for performance
 
         self.titles = [c["title"] for c in content]
@@ -116,5 +116,5 @@ class SemSearch():
 if __name__ == "__main__":
     ss = SemSearch(content_path, content_path)
     print(ss.predict_slugs("congés sans solde"))
-    
+
 
