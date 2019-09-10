@@ -15,7 +15,7 @@ include:
   services:
     - docker:dind
   variables: &deploy_stage_variables
-    IMAGE_TAG: $CI_COMMIT_SHA
+    IMAGE_TAG: ${CI_COMMIT_SHA}
     REGISTRY: ${CI_REGISTRY_IMAGE}
 
 .incubateur_stage: &incubateur_stage
