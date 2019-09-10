@@ -64,7 +64,6 @@ Deploy @cdtn/api (incubateur):
   <<: *deploy_api
   <<: *incubateur_stage
 
-
 #
 #
 #
@@ -131,10 +130,7 @@ Deploy elasticsearch (incubateur):
     CONTEXT: data
     ES_PORT: ${ELASTICSEARCH_PORT}
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/data
-  artifacts:
-    paths:
-    - /app/dist
-    expire_in: 1 week
+
 #
 
 Create Elasticsearch Index (dev):
@@ -144,7 +140,6 @@ Create Elasticsearch Index (dev):
 Create Elasticsearch Index (incubateur):
   <<: *deploy_data
   <<: *incubateur_stage
-
 
 #
 #
