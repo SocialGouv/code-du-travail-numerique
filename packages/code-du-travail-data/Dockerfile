@@ -27,4 +27,4 @@ COPY ./dataset/outils.json ./dataset/outils.json
 
 WORKDIR /app
 
-ENTRYPOINT ["sh", "entrypoint.sh"]
+ENTRYPOINT ["yarn", "populate"]

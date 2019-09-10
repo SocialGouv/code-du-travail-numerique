@@ -1,2 +1,0 @@
-yarn populate
-yarn dump
