@@ -18,7 +18,7 @@ class SemSearch():
 
     def __init__(self, content_path: str, stops_path: str):
         with open(content_path, "r") as f:
-            content = list(filter(lambda row: "text" in row and "-" in row.get("slug"), json.load(f)))
+            content = list(filter(lambda row: "text" in row and "/" in row.get("slug"), json.load(f)))
 
         with open(stops_path, "r") as f:
             stops = f.read().splitlines()
