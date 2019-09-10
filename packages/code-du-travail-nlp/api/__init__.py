@@ -35,3 +35,5 @@ def create_app():
   add_search(app, ss)
 
   return app
+
+app = create_app()
