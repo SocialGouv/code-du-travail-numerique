@@ -32,10 +32,10 @@ spec:
       - name: ${ELASTICSEARCH_HOST}
         resources:
           limits:
-            memory: "640Mi"
+            memory: "1024Mi"
             cpu: "1.5"
           requests:
-            memory: "256Mi"
+            memory: "512Mi"
             cpu: "0.5"
         securityContext:
           privileged: true
@@ -56,14 +56,14 @@ spec:
             scheme: HTTP
             path: /_cluster/health
             port: ${PORT}
-          initialDelaySeconds: 5
+          initialDelaySeconds: 30
           periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
             path: /_cluster/health?local=true
             port: ${PORT}
-          initialDelaySeconds: 5
+          initialDelaySeconds: 30
         ports:
         - containerPort: ${PORT}
           name: es-http
