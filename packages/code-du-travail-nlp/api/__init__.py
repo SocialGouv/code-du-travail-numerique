@@ -7,6 +7,7 @@ import os
 
 data_path = os.path.join(
   os.path.dirname(os.path.abspath(__name__)),
+  "..",
   "data"
 )
 content_path = os.path.join(data_path, 'content.json')
