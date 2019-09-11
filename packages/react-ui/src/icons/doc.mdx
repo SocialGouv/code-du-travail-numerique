@@ -1,0 +1,22 @@
+---
+name: Icons
+menu: Component
+---
+
+import styled from "styled-components";
+import { Playground, Props } from "docz";
+import * as icons from ".";
+
+# Icons
+
+<Playground>
+  {
+    () => {
+      return Object.entries(icons).map(([name, Icon]) => <div key={name}>
+          <p>{name}</p>
+          <Icon width="3rem" />
+        </div>
+      )
+    }
+  }
+</Playground>

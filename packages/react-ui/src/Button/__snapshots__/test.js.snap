@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> it renders a Button danger 1`] = `
+.c0 {
+  padding: 0.625rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 0.874rem;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 1.375rem;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  color: #ffffff;
+  background-color: #d7777b;
+  border: 1px solid #d7777b;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus,
+.c0:not([disabled]):active {
+  box-shadow: 2px 3px 9px rgba(215,119,123,0.7);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    danger
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> it renders a Button info 1`] = `
+.c0 {
+  padding: 0.625rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 0.874rem;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 1.375rem;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  color: #003b80;
+  background-color: #ffda17;
+  border: 1px solid #ffda17;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus,
+.c0:not([disabled]):active {
+  box-shadow: 2px 3px 9px rgba(255,218,23,0.7);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    info
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> it renders a Button outlined 1`] = `
+.c0 {
+  padding: 0.625rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 0.874rem;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 1.375rem;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  color: #003b80;
+  background-color: #ffffff;
+  border: 1px solid #0366D4;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus,
+.c0:not([disabled]):active {
+  box-shadow: 2px 3px 9px rgba(3,102,212,0.7);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    outlined
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> it renders a Button primary 1`] = `
+.c0 {
+  padding: 0.625rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 0.874rem;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 1.375rem;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  color: #ffffff;
+  background-color: #0366D4;
+  border: 1px solid #0366D4;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus,
+.c0:not([disabled]):active {
+  box-shadow: 2px 3px 9px rgba(3,102,212,0.7);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    primary
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> it renders a Button secondary 1`] = `
+.c0 {
+  padding: 0.625rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 0.874rem;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 1.375rem;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  color: #ffffff;
+  background-color: #6ec5cc;
+  border: 1px solid #6ec5cc;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus,
+.c0:not([disabled]):active {
+  box-shadow: 2px 3px 9px rgba(110,197,204,0.7);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    this is a Button 
+    secondary
+     
+  </button>
+</div>
+`;
+
+exports[`<Button /> renders 1`] = `
+.c0 {
+  padding: 0.625rem 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 0.874rem;
+  font-weight: 700;
+  vertical-align: middle;
+  border-radius: 1.375rem;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 250ms ease;
+  transition: box-shadow 250ms ease;
+  color: #ffffff;
+  background-color: #0366D4;
+  border: 1px solid #0366D4;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.c0:not([disabled]):hover,
+.c0:not([disabled]):focus,
+.c0:not([disabled]):active {
+  box-shadow: 2px 3px 9px rgba(3,102,212,0.7);
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    A button
+  </button>
+</div>
+`;

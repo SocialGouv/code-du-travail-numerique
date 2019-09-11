@@ -1,0 +1,25 @@
+---
+name: Button
+menu: Component
+---
+
+import { Playground, Props } from "docz";
+import { variants } from "../theme";
+import { Button } from ".";
+
+# Button
+
+<Playground>
+  {
+    () => variants.concat(["outlined"]).map((variant) => (
+      <div key={variant} style={{margin: "1rem"}}>
+        <span style={{display: "inline-block", marginRight: "2rem"}}>
+          <Button variant={variant}>{variant} button</Button>
+        </span>
+        <Button variant={variant} disabled>{variant} button disabled</Button>
+      </div>
+    ))
+  }
+</Playground>
+
+<Props of={Button} />
