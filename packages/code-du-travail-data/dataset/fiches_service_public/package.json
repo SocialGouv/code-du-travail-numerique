@@ -22,7 +22,6 @@
     "fetchData": "node fetchData.js",
     "start": "yarn backup && node index.js > fiches-sp-travail.json",
     "report": "node diff.js && node missingTheme.js",
-    "poststart": "yarn updateTheme && yarn report",
-    "test": "jest"
+    "poststart": "yarn updateTheme && yarn report"
   }
 }

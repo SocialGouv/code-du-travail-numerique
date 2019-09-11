@@ -16,13 +16,14 @@
   },
   "dependencies": {
     "@cdt/data": "^3.1.1",
+    "@cdt/data...preavis-demission": "3.0.4",
     "@cdt/ui-old": "^3.1.1",
     "@sentry/browser": "^5.6.3",
     "@socialgouv/react-fiche-service-public": "^3.1.1",
     "@zeit/next-source-maps": "^0.0.3",
     "date-fns": "^2.2.1",
-    "express": "^4.17.1",
     "debounce-promise": "^3.1.2",
+    "express": "^4.17.1",
     "express-sitemap-xml": "^1.1.0",
     "final-form": "^4.18.5",
     "final-form-arrays": "^3.0.1",
@@ -30,6 +31,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "memoizee": "^0.4.14",
     "next": "^9.0.5",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-autosuggest": "9.4.3",
     "react-delay": "^0.1.0",
@@ -50,14 +52,15 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@socialgouv/eslint-config-react": "^0.9.6",
+    "@testing-library/react": "^9.1.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.3.0",
+    "eslint-plugin-react-hooks": "^2.0.1",
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
-    "prettier": "^1.18.2",
-    "@testing-library/react": "^9.1.4"
+    "prettier": "^1.18.2"
   },
   "jest": {
     "collectCoverageFrom": [

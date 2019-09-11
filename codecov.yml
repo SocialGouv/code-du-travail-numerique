@@ -11,6 +11,9 @@ coverage:
       ui-old:
         target: 80%
         flags: ui-old
+      react-ui:
+        target: 80%
+        flags: react-ui
       react-fiche-service-public:
         target: 80%
         flags: react-fiche-service-public
@@ -25,6 +28,9 @@ flags:
   ui-old:
     paths:
       - packages/code-du-travail-ui-old
+  react-ui:
+    paths:
+      - packages/react-ui
   react-fiche-service-public:
     paths:
       - packages/react-fiche-service-public
