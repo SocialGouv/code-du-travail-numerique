@@ -23,11 +23,11 @@ spec:
           name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
           resources:
             limits:
-              memory: "1024Mi"
-              cpu: "2"
+              memory: "12000Mi"
+              cpu: "3"
             requests:
-              memory: "1024Mi"
-              cpu: "1"
+              memory: "12000Mi"
+              cpu: "3"
           ports:
             - containerPort: ${PORT}
           livenessProbe:
@@ -35,14 +35,14 @@ spec:
             httpGet:
               path: /
               port: ${PORT}
-            initialDelaySeconds: 300
+            initialDelaySeconds: 3000
             periodSeconds: 5
           readinessProbe:
             failureThreshold: 5
             httpGet:
               path: /
               port: ${PORT}
-            initialDelaySeconds: 300
+            initialDelaySeconds: 3000
             periodSeconds: 5
           env:
             - name: NLP_PORT

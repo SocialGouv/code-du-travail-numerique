@@ -112,7 +112,7 @@ class SemSearch():
         return {
             "_source": {
                 # need clean source in format fiches_service_public...
-                "source": source.replace("-", "_").replace("fiche", "fiches"),
+                "source": source,
                 "slug": slug_short,
                 "title": title,
                 # float necessary to make numpy float json serializable
