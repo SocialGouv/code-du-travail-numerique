@@ -30,7 +30,7 @@ def create_app():
 
     @app.route('/')
     def hello():
-        return 'suggest api'
+        return 'NLP api'
 
     add_suggest(app, suggester)
     add_search(app, ss)

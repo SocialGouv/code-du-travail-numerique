@@ -23,9 +23,10 @@ def add_slash(c):
 class SemSearch():
 
     def __init__(self, content_path: str, stops_path: str):
+        print("loading data...")
         with open(content_path, "r") as f:
             content = list(filter(
-                lambda row: "text" in row, json.load(f)))
+                lambda row: "text" in row and not "code_du_travail" in row.get('slug'), json.load(f)))
         content = list(map(add_slash, content))
 
         with open(stops_path, "r") as f:
@@ -38,6 +39,7 @@ class SemSearch():
         self.context = [c["text"] for c in content]
         self.slugs = [c["slug"] for c in content]
 
+        print("Indexing {} documents ...".format(str(len(self.slugs))))
         self.load_graph()
         self.build_responses()
 
