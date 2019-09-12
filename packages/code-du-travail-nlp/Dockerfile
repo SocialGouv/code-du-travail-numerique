@@ -34,6 +34,7 @@ RUN ./download-suggester.sh
 
 ENV PYTHONIOENCODING="UTF-8"
 ENV FLASK_APP api
+ENV FLASK_APP="development"
 
 RUN apt-get -y install python3-venv git
 RUN python -m venv venv

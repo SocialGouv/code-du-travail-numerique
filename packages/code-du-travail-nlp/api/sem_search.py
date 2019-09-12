@@ -15,12 +15,18 @@ cache_path = "~/Downloads"
 stringvec = List[str]
 
 
+def add_slash(c):
+    c["slug"] = "/{}".format(c["slug"])
+    return c
+
+
 class SemSearch():
 
     def __init__(self, content_path: str, stops_path: str):
         with open(content_path, "r") as f:
             content = list(filter(
-                lambda row: "text" in row and "/" in row.get("slug"), json.load(f)))[:200]
+                lambda row: "text" in row, json.load(f)))
+        content = list(map(add_slash, content))
 
         with open(stops_path, "r") as f:
             stops = f.read().splitlines()
@@ -64,7 +70,7 @@ class SemSearch():
         self.response_results = self.session.run(self.response_embeddings, {self.r_placeholder: responses,
                                                                             self.c_placeholder: self.context})
 
-    def predict_slugs(self, query: str, exclude_sources: list = [], k: int = 10):
+    def predict_slugs(self, query: str, exclude_sources: str = "", k: int = 10):
         query = self.remove_stops(self.strip_accents(query))
         questions = [query]
 
@@ -72,6 +78,7 @@ class SemSearch():
             self.question_embeddings, {self.q_placeholder: questions})
         res = np.inner(
             self.question_results["outputs"], self.response_results["outputs"])
+
         res_formatted = [{"slug": self.slugs[a],
                           "title": self.titles[a],
                           "score": res[0][a],
@@ -97,7 +104,7 @@ class SemSearch():
 
     def slug2source(self, slug):
         source, _ = slug.split("/")[1:]
-        return source.replace("-", "_").replace("fiche", "fiches")
+        return source
 
     def _return_hit(self, slug: stringvec, title: stringvec, score: float):
         """simple utility to return a dict from slugs, titles and score"""
