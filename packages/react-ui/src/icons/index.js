@@ -1,1 +1,10 @@
-export { default as Question } from "./Question";
+export { ArrowDown } from "./ArrowDown";
+export { Cross } from "./Cross";
+export { Eye } from "./Eye";
+export { Hammer } from "./Hammer";
+export { Info } from "./Info";
+export { Lightbulb } from "./Lightbulb";
+export { Magnifier } from "./Magnifier";
+export { Warning } from "./Warning";
+export { WavingHand } from "./WavingHand";
+export { Wrench } from "./Wrench";

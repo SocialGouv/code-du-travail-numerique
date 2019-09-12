@@ -12,7 +12,7 @@ import * as icons from ".";
 <Playground>
   {
     () => {
-      return Object.entries(icons).map(([name, Icon]) => <div key={name}>
+      return Object.entries(icons).map(([name, Icon]) => <div style={{margin: "1rem", width: "2rem"}}key={name}>
           <p>{name}</p>
           <Icon width="3rem" />
         </div>
