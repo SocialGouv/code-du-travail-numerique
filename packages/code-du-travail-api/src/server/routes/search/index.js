@@ -1,16 +1,11 @@
-const utils = require("./utils");
 const Router = require("koa-router");
-const API_BASE_URL = require("../v1.prefix");
+const fetch = require("node-fetch");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
+const API_BASE_URL = require("../v1.prefix");
+const utils = require("./utils");
 const getSearchBody = require("./search.elastic");
-<<<<<<< HEAD
 const getSavedResult = require("./search.getSavedResult");
-=======
-const getFacetsBody = require("./facets.elastic");
-const getSavedResult = require("./search.savedResults");
-const fetch = require("node-fetch");
->>>>>>> updaet test
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";

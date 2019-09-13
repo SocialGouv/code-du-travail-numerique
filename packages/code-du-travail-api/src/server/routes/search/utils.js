@@ -20,18 +20,12 @@ const merge = (res1, res2, max_result) => {
 const addKey = res =>
   res.map(a => ({ ...a, key: a._source.source + a._source.slug }));
 
-// ugly remove duplicates objects on key (scrores will be different), if anoyne see optimization
-const removeDuplicate = arr => {
-  const seen = [];
-  const res = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (!seen.includes(arr[i].key)) {
-      seen.push(arr[i].key);
-      res.push(arr[i]);
-    }
-  }
-  return res;
-};
+// Remove Duplicates
+
+const removeDuplicate = arr =>
+  Object.values(
+    arr.reduce((values, current) => ({ ...values, [current.key]: current }), {})
+  );
 
 exports.merge = merge;
 exports.addKey = addKey;

@@ -82,7 +82,7 @@ const test_dupl = [
         key: "hey"
       },
       {
-        otherever: "whatvvero",
+        whatever: "whatever",
         key: "hey"
       }
     ],
