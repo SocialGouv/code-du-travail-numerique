@@ -40,7 +40,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@socialgouv/eslint-config-recommended": "^0.9.6",
+    "@socialgouv/eslint-config-recommended": "^0.10.0",
     "@zeit/ncc": "^0.20.5",
     "eslint": "^6.3.0",
     "nodemon": "^1.19.2",

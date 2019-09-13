@@ -2122,7 +2122,17 @@
     eslint-plugin-react "~7.14.3"
     eslint-plugin-react-hooks "~2.0.1"
 
-"@socialgouv/eslint-config-recommended@^0.9.6", "@socialgouv/eslint-config-recommended@^0.9.7":
+"@socialgouv/eslint-config-recommended@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.10.0.tgz#acb687a7ad0b0d7375808dbc0548981250e3e23e"
+  integrity sha512-G4WxwHPFGKbtnye5NweKUaRCUi31B/H7LllywytO1aC+Cco0EYzc/2kxD7ckD0SSom5dsjOjXqO/Pf4R3pR8cw==
+  dependencies:
+    eslint-config-prettier "~6.3.0"
+    eslint-plugin-import "~2.18.2"
+    eslint-plugin-jest "^22.17.0"
+    eslint-plugin-prettier "~3.1.0"
+
+"@socialgouv/eslint-config-recommended@^0.9.7":
   version "0.9.7"
   resolved "https://registry.yarnpkg.com/@socialgouv/eslint-config-recommended/-/eslint-config-recommended-0.9.7.tgz#16a69c34fbb2664482cf36934a08c73380972d8a"
   integrity sha512-SAp6beTr9aXNkFhqE7NWfxJDmrEHej6cZRo0sD8pxlxiMzKclM/kk698S0Xiad9kXnBMxMNYj9Yadnk6+fQO0g==
@@ -5829,6 +5839,13 @@ eslint-config-prettier@~6.1.0:
   dependencies:
     get-stdin "^6.0.0"
 
+eslint-config-prettier@~6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.3.0.tgz#e73b48e59dc49d950843f3eb96d519e2248286a3"
+  integrity sha512-EWaGjlDAZRzVFveh2Jsglcere2KK5CJBhkNSa1xs3KfMUGdRiT7lG089eqPdvlzWHpAqaekubOsOMu8W8Yk71A==
+  dependencies:
+    get-stdin "^6.0.0"
+
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.2.tgz#58f15fb839b8d0576ca980413476aab2472db66a"
@@ -5866,6 +5883,13 @@ eslint-plugin-jest@^22.16.0:
   version "22.16.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.16.0.tgz#30c4e0e9dc331beb2e7369b70dd1363690c1ce05"
   integrity sha512-eBtSCDhO1k7g3sULX/fuRK+upFQ7s548rrBtxDyM1fSoY7dTWp/wICjrJcDZKVsW7tsFfH22SG+ZaxG5BZodIg==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "^1.13.0"
+
+eslint-plugin-jest@^22.17.0:
+  version "22.17.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.17.0.tgz#dc170ec8369cd1bff9c5dd8589344e3f73c88cf6"
+  integrity sha512-WT4DP4RoGBhIQjv+5D0FM20fAdAUstfYAf/mkufLNTojsfgzc5/IYW22cIg/Q4QBavAZsROQlqppiWDpFZDS8Q==
   dependencies:
     "@typescript-eslint/experimental-utils" "^1.13.0"
 

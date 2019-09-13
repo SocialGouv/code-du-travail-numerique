@@ -35,7 +35,7 @@
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
-    "@socialgouv/eslint-config-recommended": "^0.9.6",
+    "@socialgouv/eslint-config-recommended": "^0.10.0",
     "@zeit/ncc": "^0.20.5",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
