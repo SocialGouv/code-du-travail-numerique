@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "../test-utils";
 import { variants } from "../theme";
-import Button from ".";
+import { Button } from ".";
 
 describe("<Button />", () => {
   it("renders", () => {
