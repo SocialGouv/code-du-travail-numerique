@@ -26,9 +26,9 @@
     "@cdt/ui-old": "^3.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@socialgouv/eslint-config-react": "^0.9.6",
     "babel-jest": "^24.9.0",
