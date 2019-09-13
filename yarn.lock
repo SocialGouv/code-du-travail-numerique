@@ -11708,10 +11708,10 @@ react-live@2.0.1:
     react-simple-code-editor "^0.9.0"
     unescape "^0.2.0"
 
-react-mathjax-preview@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/react-mathjax-preview/-/react-mathjax-preview-0.1.13.tgz#4d37dd24e6f24682417f396fab3dbdf983c8a100"
-  integrity sha512-cLUT90IEGWRCvu2PAIG6o20O7kOW0dVQ8zF5I2pPkIi6/sL4KJxw9LkbVCW+4AzGjYd6fP+XOaS+5zizcME7/A==
+react-mathjax-preview@^0.1.15:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/react-mathjax-preview/-/react-mathjax-preview-0.1.15.tgz#bb01c0755606e4ab5172f89c50c55a4c7eb112ee"
+  integrity sha512-buwaiHwa+L0qGTevmzrPHggvJPZOtbZok0UqflV0xRBhsfx4E7fGgEYoEv+LkyoO2K+FnkHKSZx6Rsi7QIHo9Q==
   dependencies:
     dompurify "^1.0.11"
     load-script "^1.0.0"
