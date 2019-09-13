@@ -1,0 +1,60 @@
+---
+name: Wrapper
+menu: Layout
+---
+
+import styled from "styled-components";
+import { Playground, Props } from "docz";
+import Wrapper from ".";
+
+# Wrapper
+
+---
+### The Wrapper component adds default or large surrounding paddings and can have a specific background-color and border. It is usually the children of a Container component.
+---
+
+<Playground>
+  {
+    () => {
+      const StyledWrapper = styled(Wrapper)({
+        marginTop: "30px"
+      });
+      return <>
+        <StyledWrapper>
+          <h2>
+            Wrapper standard
+          </h2>
+          <div>
+            Lorem ipsum dolor sit amet
+          </div>
+        </StyledWrapper>
+        <StyledWrapper variant="light">
+          <h2>
+            Wrapper light
+          </h2>
+          <div>
+            Lorem ipsum dolor sit amet
+          </div>
+        </StyledWrapper>
+        <StyledWrapper variant="dark">
+          <h2>
+            Wrapper dark
+          </h2>
+          <div>
+            Lorem ipsum dolor sit amet
+          </div>
+        </StyledWrapper>
+        <StyledWrapper variant="dark" size="large">
+          <h2>
+            Wrapper large dark
+          </h2>
+          <div>
+            Lorem ipsum dolor sit amet
+          </div>
+        </StyledWrapper>
+      </>;
+    }
+  }
+</Playground>
+
+<Props of={Wrapper} />

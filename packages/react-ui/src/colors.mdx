@@ -1,0 +1,34 @@
+---
+name: Colors
+menu: Theme
+---
+
+import { useContext } from "react";
+import { Playground, Props } from "docz";
+import { ThemeContext } from "styled-components";
+
+# Colors
+
+<Playground>
+  {
+    () => {
+      const Colors = () => {
+      const theme = useContext(ThemeContext);
+        return Object.keys(theme).map(key => (
+          <div key={key} style={{display: "flex", alignItems: "center"}}>
+            <span key={key} style={{
+              display: "inline-block",
+              margin: "10px",
+              width: "100px",
+              height: "1em",
+              background: theme[key],
+              border: "1px solid silver"
+            }} />
+            <span>{key} : {colors[key]}</span>
+          </div>
+        ));
+      };
+      return <Colors />;
+    }
+  }
+</Playground>

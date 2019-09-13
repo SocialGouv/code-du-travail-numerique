@@ -1,37 +1,55 @@
-export const animation = {
-  timings: {
-    transition: "250ms"
-  }
+export const variants = [
+  "primary",
+  "secondary",
+  "info",
+  "success",
+  "warning",
+  "danger"
+];
+
+export const colors = {
+  black: "#0c0c0e",
+  almostBlack: "#26353f",
+  blue: "#0053b3",
+  blueLight: "#006be6",
+  blueDark: "#003b80",
+
+  elementBackground: "#f5f7fa",
+  elementBorder: "#c9d3df",
+  white: "#fff",
+
+  lighterGrey: "#ebeff3",
+  lightGrey: "#c9d3df",
+  grey: "#adb9c9",
+  darkGrey: "#8393a7",
+  darkerGrey: "#53657d",
+
+  title: "#006ab2",
+
+  lightBackground: "#f9f9fc",
+  lightText: "#4c5467",
+
+  darkBackground: "#ebeff3",
+  darkText: "#434956",
+  /// ui colours
+  markBackground: "#fff28e",
+  focus: "#80bdff",
+  focusShadow: "#bfdeff",
+  primaryBackground: "#005994",
+  secondaryBackground: "#eaeaea",
+  successBackground: "#e0f2bd",
+  infoBackground: "#d7e8f9",
+  warningBackground: "#fee5ad",
+  dangerBackground: "#f6bcc2"
 };
 
-export const box = {
-  borderRadius: {
-    rounded: "50%"
-  },
-  shadow: "2px 3px 9px"
-};
-
-export const breakpoints = ["600", "1280"];
-breakpoints.tablet = `min-width: ${breakpoints[0]}px`;
-breakpoints.desktop = `min-width: ${breakpoints[1]}px`;
-
-export const font = {
-  weights: {
-    default: "400",
-    bold: "700"
-  },
-  lineHeights: {
-    default: 1.5,
-    headings: 1.25
-  },
-  sizes: [0.75, 0.874, 1, 1.125, 2]
-};
-font.sizes.default = `${font.sizes[1]}rem`;
-font.sizes.Heading1 = `${font.sizes[4]}rem`;
-font.sizes.Heading2 = `${font.sizes[3]}rem`;
-font.sizes.Heading3 = `${font.sizes[2]}rem`;
-font.sizes.link = `${font.sizes[0]}rem`;
-font.sizes.small = `${font.sizes[0]}rem`;
+// adding colour shortcuts
+colors.primaryText = colors.white;
+colors.secondaryText = colors.black;
+colors.successText = colors.black;
+colors.infoText = colors.black;
+colors.warningText = colors.black;
+colors.dangerText = colors.black;
 
 /* Rem with a 16px base:
   20px = 1.25rem => (20 * 1) / 16
@@ -39,62 +57,42 @@ font.sizes.small = `${font.sizes[0]}rem`;
   10px => 0.625rem
   etc.
 */
-export const space = [0, 0.25, 0.5, 0.625, 1, 1.25, 2, 2.5];
-space.tiny = `${space[1]}rem`; // 4px;
-space.smaller = `${space[2]}rem`; // 8px;
-space.small = `${space[3]}rem`; // 10px;
-space.default = `${space[4]}rem`; // 16px;
-space.gutter = `${space[5]}rem`; // 20px;
-space.large = `${space[6]}rem`; // 32px;
-space.larger = `${space[7]}rem`; // 40px;
-
-export const variants = ["primary", "secondary", "info", "danger"];
-
-const colors = {
-  black: "#2c2c2e",
-  grey: {
-    dark: "#9299A2",
-    light: "#c9d3df"
-  },
-  white: "#ffffff",
-
-  text: {
-    dark: "#003b80",
-    alt: "#0366d4",
-    light: "#ffffff"
-  }
+export const spacing = {
+  tiny: "0.25rem", // 4px
+  xsmall: "0.5rem", // 8px
+  small: "0.625rem", // 10px
+  base: "1rem", // 16px
+  medium: "1.25rem", // 20px
+  large: "2rem", // 32px
+  larger: "2.5rem", // 40px
+  interComponent: "1.25rem"
 };
 
-colors.primary = {
-  default: "#0366D4",
-  light: "#ecf4fc",
-  textOnLight: colors.text.dark,
-  textOnDefault: colors.text.light
-};
-colors.secondary = {
-  default: "#6ec5cc",
-  light: "#e9f6f7",
-  textOnLight: colors.text.dark,
-  textOnDefault: colors.text.light
-};
-colors.info = {
-  default: "#ffda17",
-  light: "#fff6d9",
-  textOnLight: colors.text.dark,
-  textOnDefault: colors.text.dark
-};
-colors.danger = {
-  default: "#d7777b",
-  light: "#f6d5cd",
-  textOnLight: colors.text.dark,
-  textOnDefault: colors.text.light
+export const fonts = {
+  sizeBase: "1rem", // should be 16px
+  lineHeight: "1.4",
+  sizeXsmall: "0.75rem", // 12px
+  sizeSmall: "0.875rem", // 14px
+  sizeH1: "2.25rem",
+  sizeH2: "1.875rem",
+  sizeH3: "1.625rem",
+  sizeH4: "1.375rem",
+  sizeH5: "1.125rem",
+  sizeH6: "1rem"
 };
 
-const gradients = {
-  primary: "linear-gradient(90deg, #0F6FDA, #3696FF)"
+export const breakpoints = {
+  desktop: "1200px",
+  tablet: "980px",
+  mobile: "600px"
 };
 
-export const theme = {
-  colors,
-  gradients
+export const box = {
+  lightBorderRadius: "0.2rem",
+  borderRadius: "0.25rem",
+  shadow: `0 5px 10px 0 ${colors.lightGrey}`
+};
+
+export const animations = {
+  transitionTiming: "250ms"
 };

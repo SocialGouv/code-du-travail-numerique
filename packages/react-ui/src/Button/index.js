@@ -1,57 +1,118 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { transparentize } from "polished";
-import { animation, box, font, space, variants } from "../theme";
+import { darken, lighten, transparentize } from "polished";
 
-// We don't want the children, variant props to be passed down to the button
+import { animations, box, fonts, spacing, variants } from "../theme";
+
+// We don't want the variant prop to be passed down to the button
 // eslint-disable-next-line
-const RootButton = ({ children, variant, onClick, ...props }) => {
+const RootButton = ({ children, pressed, variant, onClick, ...props }) => {
   return (
-    <button {...props} onClick={onClick}>
+    <button aria-pressed={pressed} {...props} onClick={onClick}>
       {children}
     </button>
   );
 };
 
 const StyledButton = styled(RootButton)`
-  padding: ${space.small} ${space.large};
+  padding: ${spacing.small} ${spacing.base};
   appearance: none;
   text-align: center;
   line-height: inherit;
-  font-size: ${font.sizes.default};
-  font-weight: ${font.weights.bold};
+  font-size: ${fonts.sizeBase};
+  font-weight: 600;
   vertical-align: middle;
-  border-radius: 1.375rem;
-  box-shadow: none;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: ${box.borderRadius};
   cursor: pointer;
-  transition: box-shadow ${animation.timings.transition} ease;
-  &[disabled] {
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
+  transition: background-color ${animations.transitionTiming} ease;
+
   ${props => {
-    let color, backgroundColor, border;
-    if (props.variant === "outlined") {
-      color = props.theme.colors.text.dark;
-      backgroundColor = props.theme.colors.white;
-      border = props.theme.colors.primary.default;
-    } else {
-      color = props.theme.colors[props.variant].textOnDefault;
-      backgroundColor = props.theme.colors[props.variant].default;
-      border = props.theme.colors[props.variant].default;
+    let color = props.theme.primaryText;
+    let backgroundColor = props.theme.blueLight;
+    if (props.variant === "link") {
+      return css`
+        padding: 0;
+        vertical-align: initial;
+        text-align: left;
+        line-height: initial;
+        color: ${props.theme.blue};
+        font-weight: normal;
+        font-size: inherit;
+        background: none;
+        border: none;
+        border-radius: 0;
+        text-decoration: underline;
+        &:focus,
+        &:hover,
+        &:active {
+          text-decoration: none;
+        }
+      `;
     }
-    const shadowColor = transparentize(0.3, border);
+    if (props.variant === "icon") {
+      return css`
+        padding: ${spacing.base};
+        color: ${props.theme.darkText};
+        line-height: 0;
+        border: none;
+        &:hover {
+          color: ${lighten(0.3, props.theme.darkText)};
+        }
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      `;
+    }
+
+    if (props.variant !== "default") {
+      backgroundColor = props.theme[`${props.variant}Background`];
+      color = props.theme[`${props.variant}Text`];
+    }
+
     return css`
       color: ${color};
-      background-color: ${backgroundColor};
-      border: 1px solid ${border};
+      background: ${backgroundColor};
+      border-color: ${backgroundColor};
+      border-bottom-color: ${darken(0.1, backgroundColor)};
       :not([disabled]) {
         &:hover,
-        &:focus,
-        &:active {
-          box-shadow: ${box.shadow} ${shadowColor};
+        &:focus {
+          background: ${lighten(0.05, backgroundColor)};
+          color: ${lighten(0.05, color)};
         }
+        &:active {
+          color: ${lighten(0.1, color)};
+          background: ${lighten(0.1, backgroundColor)};
+          border-width: 2px 1px 1px 1px;
+          border-color: ${backgroundColor};
+          outline: none;
+        }
+      }
+      &[aria-pressed="true"] {
+        color: ${lighten(0.05, color)};
+        background: ${lighten(0.05, backgroundColor)};
+        border-width: 2px 1px 1px 1px;
+        border-color: ${backgroundColor};
+        border-top-color: ${darken(0.1, backgroundColor)};
+        box-shadow: inset 0 1px 2px 0 ${darken(0.1, backgroundColor)};
+        :not([disabled]) {
+          &:hover,
+          &:focus {
+            background-color: ${backgroundColor};
+          }
+          &:active {
+            border-top-color: ${darken(0.1, backgroundColor)};
+          }
+        }
+      }
+      /* keep it last so it overrides other styles */
+      &[disabled] {
+        cursor: not-allowed;
+        color: ${transparentize(0.6, color)};
       }
     `;
   }}
@@ -63,13 +124,13 @@ export const Button = ({ children, ...props }) => (
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
+  variant: PropTypes.oneOf(["default", "icon", "link"].concat(variants)),
   onClick: PropTypes.func,
-  variant: PropTypes.oneOf(variants.concat(["outlined"]))
+  pressed: PropTypes.bool
 };
 
 Button.defaultProps = {
+  variant: "default",
   onClick: () => {},
-  disabled: false,
-  variant: "primary"
+  pressed: false
 };

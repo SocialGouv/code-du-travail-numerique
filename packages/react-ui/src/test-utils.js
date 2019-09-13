@@ -3,10 +3,14 @@ import PropTypes from "prop-types";
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { theme } from "./theme";
+import { colors } from "./theme";
 
 const AllTheProviders = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={colors}>
+      <>{children}</>
+    </ThemeProvider>
+  );
 };
 
 AllTheProviders.propTypes = {

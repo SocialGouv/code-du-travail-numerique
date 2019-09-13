@@ -4,22 +4,46 @@ menu: Component
 ---
 
 import { Playground, Props } from "docz";
+import { X } from "react-feather";
+import { Maximize } from "react-feather";
+import Section from "../layout/Section"
 import { variants } from "../theme";
 import { Button } from ".";
 
 # Button
 
+## Standard buttons
+
 <Playground>
   {
-    () => variants.concat(["outlined"]).map((variant) => (
-      <div key={variant} style={{margin: "1rem"}}>
-        <span style={{display: "inline-block", marginRight: "2rem"}}>
-          <Button variant={variant}>{variant} button</Button>
-        </span>
+    () => ["default"].concat(variants).map((variant) => (
+      <Section>
+        <Button variant={variant}>{variant} button</Button>
+        {" "}
         <Button variant={variant} disabled>{variant} button disabled</Button>
-      </div>
+        {" "}
+        <Button variant={variant} pressed>{variant} button pressed</Button>
+      </Section>
     ))
   }
+</Playground>
+
+## Special buttons
+
+<Playground>
+  <Section>
+    <Button variant="link">Button link</Button>
+  </Section>
+  <Section>
+    <Button variant="icon">
+      <X />
+    </Button>
+  </Section>
+  <Section>
+    <Button variant="icon">
+      <Maximize />
+    </Button>
+  </Section>
 </Playground>
 
 <Props of={Button} />

@@ -6,38 +6,27 @@ import { invert } from "polished";
 import { theme as fullTheme } from "@socialgouv/react-ui";
 import { ThemeContext } from "./theme-context";
 
-const { theme: initialTheme, variants } = fullTheme;
+const { colors: initialTheme } = fullTheme;
+
+console.log("full theme is :", fullTheme);
+console.log("initial theme is :", initialTheme);
 
 const RootWrapper = ({ children }) => {
   const [theme, setTheme] = useState(initialTheme);
+  console.log("Theme is :", theme);
   const toggleColors = () => {
-    setTheme({
-      ...theme,
-      colors: {
-        black: invert(theme.colors.black),
-        grey: {
-          dark: invert(theme.colors.grey.dark),
-          light: invert(theme.colors.grey.light)
-        },
-        white: invert(theme.colors.white),
-        text: {
-          dark: invert(theme.colors.text.dark),
-          alt: invert(theme.colors.text.alt),
-          light: invert(theme.colors.text.light)
-        },
-        ...variants.reduce((acc, variant) => {
-          acc[variant] = { ...theme.colors[variant] };
-          Object.keys(acc[variant]).map(key => {
-            acc[variant][key] = invert(acc[variant][key]);
-          });
-          return acc;
-        }, {})
-      }
-    });
+    setTheme(
+      Object.keys(theme).reduce((newTheme, key) => {
+        newTheme[key] = invert(theme[key]);
+        return newTheme;
+      }, {})
+    );
   };
   return (
     <ThemeContext.Provider value={{ theme, toggleColors }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <>{children}</>
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
-import { variants } from "../theme";
 import { render } from "../test-utils";
-import { Button } from ".";
+import { variants } from "../theme";
+import Button from ".";
 
 describe("<Button />", () => {
   it("renders", () => {
@@ -9,7 +9,7 @@ describe("<Button />", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test.each(["outlined"].concat(variants))(
+  test.each(["icon", "link"].concat(variants))(
     "it renders a Button %s",
     variant => {
       const { container } = render(
@@ -18,4 +18,12 @@ describe("<Button />", () => {
       expect(container).toMatchSnapshot();
     }
   );
+
+  it("can be toggled programmatically", () => {
+    const { getByText, rerender } = render(<Button pressed>label</Button>);
+    const button = getByText("label");
+    expect(button.getAttribute("aria-pressed")).toBe("true");
+    rerender(<Button>label</Button>);
+    expect(button.getAttribute("aria-pressed")).toBe("false");
+  });
 });
