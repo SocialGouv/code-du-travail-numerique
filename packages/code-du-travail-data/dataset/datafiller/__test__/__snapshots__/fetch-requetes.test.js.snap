@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convert datafiller data from API 1`] = `
+Array [
+  Object {
+    "refs": Array [
+      Object {
+        "_source": Object {
+          "slug": "fiche-2",
+        },
+        "relevance": 5,
+      },
+      Object {
+        "_source": Object {
+          "source": "external",
+          "title": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+          "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+        },
+        "relevance": 5,
+      },
+      Object {
+        "_source": Object {
+          "slug": "l1221-3",
+          "source": "code_du_travail",
+          "title": "Article L1221-3",
+          "url": "/code-du-travail/l1221-3",
+        },
+        "relevance": 5,
+      },
+      Object {
+        "_source": Object {
+          "slug": "fiche-3",
+        },
+        "relevance": 4,
+      },
+      Object {
+        "_source": Object {
+          "slug": "conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
+        },
+        "relevance": 2,
+      },
+    ],
+    "theme": "theme1",
+    "title": "title1",
+    "variants": Array [
+      "title1",
+      "known-query1",
+      "known-query2",
+    ],
+  },
+  Object {
+    "refs": Array [
+      Object {
+        "_source": Object {
+          "slug": "l3221-3",
+          "source": "code_du_travail",
+          "title": "Article L3221-3",
+          "url": "/code-du-travail/l3221-3",
+        },
+        "relevance": 5,
+      },
+      Object {
+        "_source": Object {
+          "slug": "le-salaire-quelles-sont-les-modalites-de-paiement",
+        },
+        "relevance": 3,
+      },
+      Object {
+        "_source": Object {
+          "slug": "theme1",
+          "source": "themes",
+          "title": "Thématique",
+          "url": "/themes/theme1",
+        },
+        "relevance": 1,
+      },
+    ],
+    "theme": "theme2",
+    "title": "title2",
+    "variants": Array [
+      "title2",
+      "known-query3",
+      "known-query4",
+    ],
+  },
+]
+`;
+
+exports[`refs should be sorted by relevance and source type 1`] = `
+Array [
+  Object {
+    "_source": Object {
+      "slug": "fiche-2",
+    },
+    "relevance": 5,
+  },
+  Object {
+    "_source": Object {
+      "source": "external",
+      "title": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+      "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
+    },
+    "relevance": 5,
+  },
+  Object {
+    "_source": Object {
+      "slug": "l1221-3",
+      "source": "code_du_travail",
+      "title": "Article L1221-3",
+      "url": "/code-du-travail/l1221-3",
+    },
+    "relevance": 5,
+  },
+  Object {
+    "_source": Object {
+      "slug": "fiche-3",
+    },
+    "relevance": 4,
+  },
+  Object {
+    "_source": Object {
+      "slug": "conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
+    },
+    "relevance": 2,
+  },
+]
+`;
