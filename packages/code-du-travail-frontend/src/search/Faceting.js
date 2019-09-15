@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import { List, ListItem, theme } from "@cdt/ui-old";
 import styled from "styled-components";
+
+import { List, ListItem, theme } from "@cdt/ui-old";
 import { getLabelBySource } from "@cdt/sources";
 
 class Faceting extends React.Component {

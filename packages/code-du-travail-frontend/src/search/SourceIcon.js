@@ -16,7 +16,6 @@ const SourceIcon = ({ source = "" }) => {
     case "fiches_service_public":
     case "fiches_ministere_travail":
       return <ResultIcon as={ReponseIcon} />;
-
     case "code_du_travail":
       return <ResultIcon as={ArticleIcon} />;
     case "modeles_de_courriers":
@@ -28,7 +27,7 @@ const SourceIcon = ({ source = "" }) => {
     case "conventions_collectives":
       return <ResultIcon as={ArticleIcon} />;
     default:
-      return null;
+      return <ResultIcon as={ArticleIcon} />;
   }
 };
 SourceIcon.propTypes = {

@@ -14,9 +14,9 @@ export default createGlobalStyle`
   a:active {
     text-decoration: none;
   }
-  a[target="_blank"]:after,
-  a[href^="http://"]:not([href*="social.gouv.fr"]):after,
-  a[href^="https://"]:not([href*="social.gouv.fr"]):after{
+  a[target="_blank"]:not(.no-after):after,
+  a[href^="http://"]:not(.no-after):not([href*="social.gouv.fr"]):after,
+  a[href^="https://"]:not(.no-after):not([href*="social.gouv.fr"]):after{
     content: "";
     position: relative;
     top: 1px;

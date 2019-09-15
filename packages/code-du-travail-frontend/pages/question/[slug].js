@@ -1,10 +1,12 @@
 import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
+import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import Answer from "../../src/common/Answer";
-import { DownloadFile } from "../../src/common/DownloadFile";
-import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
+import styled from "styled-components";
+
+import { getRouteBySource, getLabelBySource } from "@cdt/sources";
+
 import {
   Container,
   List,
@@ -14,11 +16,10 @@ import {
   theme,
   icons
 } from "@cdt/ui-old";
-import styled from "styled-components";
 
-import Link from "next/link";
-import { getRouteBySource, getLabelBySource } from "@cdt/sources";
-
+import Answer from "../../src/common/Answer";
+import { DownloadFile } from "../../src/common/DownloadFile";
+import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import ArticleIcon from "../../src/icons/ArticleIcon";
 import ReponseIcon from "../../src/icons/ReponseIcon";
 import { PageLayout } from "../../src/layout/PageLayout";

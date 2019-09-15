@@ -3,7 +3,6 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { List, ListItem, theme } from "@cdt/ui-old";
-
 import { getRouteBySource, getLabelBySource } from "@cdt/sources";
 
 import { SourceIcon } from "./SourceIcon";
@@ -49,20 +48,31 @@ const SearchResultList = ({ items, query }) => {
     <List>
       {items.map(({ _id, _source }, i) => (
         <ListItem key={_id}>
-          <Link
-            href={{
-              pathname: `/${getRouteBySource(_source.source)}/[slug]`,
-              query: { q: query, slug: _source.slug }
-            }}
-            as={`/${getRouteBySource(_source.source)}/${
-              _source.slug
-            }?q=${query}`}
-            passHref
-          >
-            <ListLink focused={i === 0}>
+          {_source.source === "external" ? (
+            <ListLink
+              focused={i === 0}
+              href={_source.url}
+              target="_blank"
+              className="no-after"
+            >
               <SearchResult result={_source} />
             </ListLink>
-          </Link>
+          ) : (
+            <Link
+              href={{
+                pathname: `/${getRouteBySource(_source.source)}/[slug]`,
+                query: { q: query, slug: _source.slug }
+              }}
+              as={`/${getRouteBySource(_source.source)}/${
+                _source.slug
+              }?q=${query}`}
+              passHref
+            >
+              <ListLink focused={i === 0}>
+                <SearchResult result={_source} />
+              </ListLink>
+            </Link>
+          )}
         </ListItem>
       ))}
     </List>
