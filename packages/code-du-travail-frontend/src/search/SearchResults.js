@@ -29,30 +29,52 @@ class ListLink extends React.Component {
 const SearchResults = ({ items = [], query }) => {
   return (
     <List>
-      {items.map(({ _id, _source: { source, slug, author, title } }, i) => (
-        <ListItem key={_id}>
-          <Link
-            href={{
-              pathname: `/${getRouteBySource(source)}/[slug]`,
-              query: { q: query, slug: slug }
-            }}
-            as={`/${getRouteBySource(source)}/${slug}?q=${query}`}
-            passHref
-          >
-            <ListLink focused={i === 0}>
-              <SourceIcon source={source} />
-              <Content>
-                <strong>{title.replace(/ \?/, " ?")}</strong>
-                <P>
-                  <Span>Source</Span>: <Span>{getLabelBySource(source)}</Span>
-                  {source && author ? " - " : null}
-                  <Value>{author}</Value>
-                </P>
-              </Content>
-            </ListLink>
-          </Link>
-        </ListItem>
-      ))}
+      {items.map(
+        ({ _id, _source: { url, source, slug, author, title } }, i) => (
+          <ListItem key={_id}>
+            {source === "external" ? (
+              <ListLink
+                focused={i === 0}
+                href={url}
+                target="_blank"
+                className="no-after"
+              >
+                <SourceIcon source={source} />
+                <Content>
+                  <strong>{title.replace(/ \?/, " ?")}</strong>
+                  <P>
+                    <Span>Source</Span>: <Span>{getLabelBySource(source)}</Span>
+                    {source && author ? " - " : null}
+                    <Value>{author}</Value>
+                  </P>
+                </Content>
+              </ListLink>
+            ) : (
+              <Link
+                href={{
+                  pathname: `/${getRouteBySource(source)}/[slug]`,
+                  query: { q: query, slug: slug }
+                }}
+                as={`/${getRouteBySource(source)}/${slug}?q=${query}`}
+                passHref
+              >
+                <ListLink focused={i === 0}>
+                  <SourceIcon source={source} />
+                  <Content>
+                    <strong>{title.replace(/ \?/, " ?")}</strong>
+                    <P>
+                      <Span>Source</Span>:{" "}
+                      <Span>{getLabelBySource(source)}</Span>
+                      {source && author ? " - " : null}
+                      <Value>{author}</Value>
+                    </P>
+                  </Content>
+                </ListLink>
+              </Link>
+            )}
+          </ListItem>
+        )
+      )}
     </List>
   );
 };

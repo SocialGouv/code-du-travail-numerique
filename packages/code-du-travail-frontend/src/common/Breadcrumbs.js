@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Container, List, ListItem, Section, theme } from "@cdt/ui-old";
 
 const Breadcrumbs = ({ items = [] }) => {
-  if (items.length === 0) {
+  if (!items || items.length === 0) {
     return null;
   }
   return (

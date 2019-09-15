@@ -25,13 +25,13 @@ const iconsMap = {
 
 export default class Themes extends React.Component {
   static propTypes = {
+    title: PropTypes.string,
     themes: PropTypes.arrayOf(
       PropTypes.shape({
-        label: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
         slug: PropTypes.string.isRequired
       }).isRequired
-    ),
-    title: PropTypes.string
+    )
   };
 
   static defaultProps = {
@@ -44,15 +44,15 @@ export default class Themes extends React.Component {
     return (
       <Section>
         <Container>
-          {title && <Title>{title}</Title>}
+          <Title>{title}</Title>
           <Grid>
-            {themes.map(({ id, slug, label, parent }) => (
-              <GridCell key={slug + label}>
+            {themes.map(({ id, slug, title, parent }) => (
+              <GridCell key={slug + title}>
                 <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
-                  <Tile title={label}>
+                  <Tile title={title}>
                     <Category
                       small={Boolean(parent)}
-                      title={label}
+                      title={title}
                       icon={`/static/assets/icons/${iconsMap[id] ||
                         "profiles.svg"}`}
                     />
