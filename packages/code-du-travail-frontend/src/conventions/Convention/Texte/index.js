@@ -25,10 +25,10 @@ const Texte = ({ node, title }) => {
 };
 
 Texte.propTypes = {
+  title: PropTypes.string,
   node: PropTypes.shape({
-    data: PropTypes.shape({
-      title: PropTypes.string
-    }),
+    type: PropTypes.string,
+    data: PropTypes.object,
     children: PropTypes.array
   }).isRequired
 };

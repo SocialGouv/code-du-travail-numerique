@@ -12,8 +12,8 @@ const Sidebar = ({ node }) => {
     ({ type, data: { surtitre } }) =>
       type === "section" || (type === "article" && surtitre)
   );
-
-  if (childSections.length <= 1) {
+  // We want to hide the sidebar if there is less than 2 items
+  if (childSections.length < 2) {
     return null;
   }
 

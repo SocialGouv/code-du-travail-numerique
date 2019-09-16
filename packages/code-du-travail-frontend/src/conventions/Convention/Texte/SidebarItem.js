@@ -12,6 +12,7 @@ const SidebarItem = ({ node }) => {
     children = []
   } = node;
   const [isExpanded, setExpanded] = useState(false);
+
   if (type === "article") {
     if (!surtitre) {
       return null;
@@ -22,6 +23,7 @@ const SidebarItem = ({ node }) => {
       </Li>
     );
   }
+  // We only want to show section or article with a surtitre in the sidebar
   const childNodes = children.filter(
     ({ type, data: { surtitre } }) =>
       type === "section" || (type === "article" && surtitre)

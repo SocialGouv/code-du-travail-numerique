@@ -10,7 +10,7 @@ import { sortByIntOrdre } from "../../utils";
 const Content = ({ node, depth }) => {
   const { type, children = [] } = node;
   if (type === "article") {
-    return <Article node={node} />;
+    return <Article item={node.data} />;
   }
 
   return (
