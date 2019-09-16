@@ -23,10 +23,6 @@ services:
       - .env
     depends_on:
       - elasticsearch
-    environment:
-      # defaults for production
-      - APM_SERVER_URL=http://apm:8200
-      - APM_SERVER_ACTIVE=1
     ports:
       - $API_PORT:$API_PORT
     volumes:

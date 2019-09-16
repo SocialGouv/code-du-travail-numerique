@@ -29,7 +29,6 @@
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.0.0",
     "dotenv": "^8.1.0",
-    "elastic-apm-node": "^2.16.1",
     "jest": "^24.9.0",
     "koa": "^2.8.1",
     "koa-bodyparser": "^4.2.1",
