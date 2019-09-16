@@ -12,8 +12,8 @@ async function getGlossaire() {
   return items.data.map(({ title, abbrs, variants, definition, refs }) => ({
     title,
     slug: slugify(title),
-    abbrs,
-    variants,
+    abbrs: [...new Set(abbrs.split("\n").filter(Boolean))],
+    variants: [...new Set(variants.split("\n").filter(Boolean))],
     definition,
     refs
   }));

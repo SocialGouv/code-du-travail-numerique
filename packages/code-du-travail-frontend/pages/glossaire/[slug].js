@@ -33,16 +33,16 @@ function Term({ pageUrl, ogImage }) {
                 <th>Définition</th>
                 <td>{term.definition}</td>
               </tr>
-              {term.abbrs ? (
+              {term.abbrs.length > 0 ? (
                 <tr>
                   <th>Abbréviation</th>
-                  <td>{term.abbrs}</td>
+                  <td>{term.abbrs.join(", ")}</td>
                 </tr>
               ) : null}
-              {term.variants ? (
+              {term.variants.length > 0 ? (
                 <tr>
                   <th>Variantes</th>
-                  <td>{term.variants}</td>
+                  <td>{term.variants.join(", ")}</td>
                 </tr>
               ) : null}
               {term.refs.length > 0 ? (
