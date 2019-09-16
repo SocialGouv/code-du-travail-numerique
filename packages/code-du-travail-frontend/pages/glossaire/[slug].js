@@ -50,15 +50,15 @@ function Term({ pageUrl, ogImage }) {
                   <th>Références</th>
                   <td>
                     <ul>
-                      {term.refs.map(ref => (
-                        <li key={ref}>
+                      {term.refs.map(({ url }) => (
+                        <li key={url}>
                           <a
-                            href={ref}
+                            href={url}
                             target="_blank"
                             title="voir la référence"
                             rel="nofollow noreferrer noopener"
                           >
-                            {ref}
+                            {url}
                           </a>
                         </li>
                       ))}
