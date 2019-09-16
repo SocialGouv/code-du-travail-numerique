@@ -9,6 +9,7 @@
     "p-limit": "^2.2.1"
   },
   "scripts": {
-    "start": "node index.js prequalified.json"
+    "start": "node index.js prequalified.json",
+    "glossary": "node glossary.js > glossary.data.json"
   }
 }

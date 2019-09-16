@@ -1,5 +1,5 @@
 import React from "react";
-import glossary from "@cdt/data...glossary/glossary.data.json";
+import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Link from "next/link";
 
 import styled from "styled-components";
