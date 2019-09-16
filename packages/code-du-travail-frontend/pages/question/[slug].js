@@ -17,7 +17,8 @@ import {
 import styled from "styled-components";
 
 import Link from "next/link";
-import { getRouteBySource, getLabelBySource } from "../../src/sources";
+import { getRouteBySource, getLabelBySource } from "@cdt/sources";
+
 import ArticleIcon from "../../src/icons/ArticleIcon";
 import ReponseIcon from "../../src/icons/ReponseIcon";
 import { PageLayout } from "../../src/layout/PageLayout";

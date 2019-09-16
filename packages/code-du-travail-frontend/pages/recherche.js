@@ -4,11 +4,11 @@ import Head from "next/head";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 import { Container, Section } from "@cdt/ui-old";
+import { getExcludeSources } from "@cdt/sources";
 
 import Search from "../src/search/Search";
 import { PageLayout } from "../src/layout/PageLayout";
 import SearchResults from "../src/search/SearchResults";
-import { getExcludeSources } from "../src/sources";
 import Metas from "../src/common/Metas";
 
 const {

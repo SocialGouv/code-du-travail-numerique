@@ -1,4 +1,4 @@
-import { getExcludeSources } from "../sources";
+const { getExcludeSources } = require("../index");
 
 test("getExcludeSources should return empty array if value is empty", () => {
   expect(getExcludeSources("")).toMatchSnapshot();
