@@ -41,8 +41,6 @@ include:
   extends: .k8s-deploy-api
   variables:
     <<: *deploy_stage_variables
-    APM_SERVER_ACTIVE: 0
-    APM_SERVER_URL: ""
     CONTEXT: api
     ELASTICSEARCH_LOG_LEVEL: trace
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/api

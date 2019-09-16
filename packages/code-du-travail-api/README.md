@@ -21,8 +21,6 @@ $ docker run --rm \
     --name cdtn_api \
     -p 1337:80 \
     -e PORT=80 \
-    -e APM_SERVER_ACTIVE=false \
-    -e APM_SERVER_URL="http://apm" \
     -e ELASTICSEARCH_LOG_LEVEL="info" \
     -e ELASTICSEARCH_URL="http://elasticsearch:9200" \
     -e VERSION="foo" \
@@ -49,8 +47,6 @@ $ docker run --rm \
     --name cdtn_api \
     -p 1337:80 \
     -e PORT=80 \
-    -e APM_SERVER_ACTIVE=false \
-    -e APM_SERVER_URL="http://apm" \
     -e ELASTICSEARCH_LOG_LEVEL="info" \
     -e ELASTICSEARCH_URL="http://localhost:9200" \
     -e VERSION="local" \
@@ -67,9 +63,6 @@ Créez un fichier `.env` (utilisé par Docker) :
 # adresse de l'elastic search
 ELASTICSEARCH_URL=http://code-du-travail-data-elasticsearch:9200
 ELASTICSEARCH_LOG_LEVEL=trace
-
-APM_SERVER_URL=http://code-du-travail-apm-server:8200
-APM_SERVER_ACTIVE=1
 
 API_PORT=1337
 

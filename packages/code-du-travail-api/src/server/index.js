@@ -1,11 +1,3 @@
-// Set up Elastic APM agent: the agent must be started before any other modules.
-// https://www.elastic.co/guide/en/apm/agent/nodejs/current/koa.html
-require("elastic-apm-node").start({
-  serviceName: "code-du-travail-api",
-  serverUrl: process.env.APM_SERVER_URL,
-  active: process.env.APM_SERVER_ACTIVE
-});
-
 require("dotenv").config();
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
