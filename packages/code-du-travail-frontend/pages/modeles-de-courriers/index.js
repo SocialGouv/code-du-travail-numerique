@@ -51,7 +51,7 @@ const List = ({ items = [], ...props }) => (
     {items.map(({ _id, _source }) => (
       <li key={_id}>
         <Link
-          href="modeles-de-courriers/[courrier]"
+          href="modeles-de-courriers/[slug]"
           as={`modeles-de-courriers/${_source.slug}`}
           passHref
         >
