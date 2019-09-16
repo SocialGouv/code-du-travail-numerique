@@ -1,12 +1,11 @@
 import React from "react";
+import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { Alert, theme } from "@cdt/ui-old";
+import { getLabelBySource } from "@cdt/sources";
 
-import Link from "next/link";
-
-import { getLabelBySource } from "../sources";
 import { SearchResultList } from "./SearchResultList";
 import { Faceting } from "./Faceting";
 

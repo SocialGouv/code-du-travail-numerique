@@ -10,11 +10,11 @@ import {
   Section,
   ScreenReaderOnly
 } from "@cdt/ui-old";
+import { getExcludeSources } from "@cdt/sources";
 
 import { searchAddress } from "../annuaire/adresse.service";
 import ReponseIcon from "../icons/ReponseIcon";
 import SearchIcon from "../icons/SearchIcon";
-import { getExcludeSources } from "../sources";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { suggestResults } from "./search.service";
 import { withClipboard } from "../common/withClipboard.hoc";
