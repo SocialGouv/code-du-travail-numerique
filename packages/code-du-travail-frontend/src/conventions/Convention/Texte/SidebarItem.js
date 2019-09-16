@@ -3,24 +3,31 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { theme } from "@cdt/ui-old";
-import { sortByIntOrdre } from "../../utils";
 
 // Beware, this one is recursive !
-const SidebarItem = ({ data }) => {
-  const { title, surtitre, id, sections = [], articles = [] } = data;
+const SidebarItem = ({ node }) => {
+  const {
+    type,
+    data: { title, id, surtitre },
+    children = []
+  } = node;
   const [isExpanded, setExpanded] = useState(false);
 
-  const contents = sections
-    .concat(articles.filter(article => !!article.surtitre))
-    .sort(sortByIntOrdre);
-
-  if (!contents.length) {
+  if (type === "article") {
+    if (!surtitre) {
+      return null;
+    }
     return (
       <Li>
-        <Link href={`#${id}`}>{title || surtitre}</Link>
+        <Link href={`#${id}`}>{surtitre}</Link>
       </Li>
     );
   }
+  // We only want to show section or article with a surtitre in the sidebar
+  const childNodes = children.filter(
+    ({ type, data: { surtitre } }) =>
+      type === "section" || (type === "article" && surtitre)
+  );
 
   return (
     <Li>
@@ -33,12 +40,13 @@ const SidebarItem = ({ data }) => {
           setExpanded(!isExpanded);
         }}
       >
-        {title || surtitre}&nbsp;{isExpanded ? "▲" : "▼"}
+        {title}&nbsp;
+        {childNodes.length === 0 ? null : isExpanded ? "▲" : "▼"}
       </Link>
       {isExpanded && (
         <ol>
-          {contents.map((section, index) => (
-            <SidebarItem key={index} data={section} />
+          {children.map(childNode => (
+            <SidebarItem key={childNode.data.id} node={childNode} />
           ))}
         </ol>
       )}
@@ -47,12 +55,14 @@ const SidebarItem = ({ data }) => {
 };
 
 SidebarItem.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string,
-    surtitle: PropTypes.string,
-    id: PropTypes.string.isRequired,
-    sections: PropTypes.array,
-    articles: PropTypes.array
+  node: PropTypes.shape({
+    type: PropTypes.string,
+    data: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string,
+      surtitre: PropTypes.string
+    }),
+    children: PropTypes.array
   }).isRequired
 };
 

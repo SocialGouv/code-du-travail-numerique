@@ -3,22 +3,26 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import { Section, theme, Wrapper } from "@cdt/ui-old";
-import { sortByIntOrdre } from "../../utils";
 import SidebarItem from "./SidebarItem";
 
-const Sidebar = ({ data }) => {
-  const { sections = [], articles = [] } = data;
-  const contents = sections
-    .concat(articles.filter(article => !!article.surtitre))
-    .sort(sortByIntOrdre);
+const Sidebar = ({ node }) => {
+  const { children = [] } = node;
 
-  if (!contents.length || contents.length === 1) return null;
+  const childSections = children.filter(
+    ({ type, data: { surtitre } }) =>
+      type === "section" || (type === "article" && surtitre)
+  );
+  // We want to hide the sidebar if there is less than 2 items
+  if (childSections.length < 2) {
+    return null;
+  }
+
   return (
     <StyledSection>
       <StyledWrapper variant="dark">
         <ol>
-          {contents.map((content, index) => (
-            <SidebarItem key={index} data={content} />
+          {children.map((childNode, index) => (
+            <SidebarItem key={index} node={childNode} />
           ))}
         </ol>
       </StyledWrapper>
@@ -27,10 +31,8 @@ const Sidebar = ({ data }) => {
 };
 
 SidebarItem.propTypes = {
-  data: PropTypes.shape({
-    surtitle: PropTypes.string,
-    sections: PropTypes.array,
-    articles: PropTypes.array
+  node: PropTypes.shape({
+    children: PropTypes.array
   }).isRequired
 };
 

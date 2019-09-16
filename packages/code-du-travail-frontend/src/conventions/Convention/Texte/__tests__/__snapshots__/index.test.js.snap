@@ -1,0 +1,2867 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Texte /> renders with a title 1`] = `
+.c2 {
+  padding: 1.25rem 0;
+}
+
+.c4 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  font-size: 0.875rem;
+}
+
+.c6 {
+  display: block;
+  padding: 0.25rem 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover {
+  font-weight: bold;
+}
+
+.c3 {
+  max-height: 100%;
+  overflow: auto;
+}
+
+.c11 {
+  margin-bottom: 0.625rem;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c12 {
+  margin-bottom: 0.625rem;
+}
+
+.c9 {
+  font-size: 1.625rem;
+}
+
+.c10 {
+  font-size: 1.375rem;
+}
+
+.c8 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c4 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (min-width:980px) {
+  .c1 {
+    -webkit-flex: 0 1 35%;
+    -ms-flex: 0 1 35%;
+    flex: 0 1 35%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c7 {
+    -webkit-flex: 0 1 65%;
+    -ms-flex: 0 1 65%;
+    flex: 0 1 65%;
+    overflow: scroll;
+  }
+}
+
+@media (min-width:980px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+      >
+        <ol>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524044"
+            >
+              Préambule
+               
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524045"
+            >
+              Titre Ier Clauses générales
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524046"
+            >
+              Titre II Droit syndical et représentants du personnel
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524047"
+            >
+              Titre III Embauche
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524048"
+            >
+              Titre IV Salaires et primes
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524049"
+            >
+              Titre V Modification du contrat de travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524050"
+            >
+              Titre VI Durée du travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524051"
+            >
+              Titre VII Congés payés. – Congés pour événements familiaux. – Congés d'ancienneté
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524052"
+            >
+              Titre VIII Maladie et accident. – Maternité. – Accident du travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524053"
+            >
+              Titre IX Suspension du contrat de travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524054"
+            >
+              Titre X Rupture du contrat de travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524055"
+            >
+              Titre XI Dispositions particulières aux jeunes et à l'égalité entre hommes et femmes
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524056"
+            >
+              Titre XII Hygiène, sécurité et santé au travail. – Services de santé au travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524057"
+            >
+              Titre XIII Dispositions générales relatives à l'emploi
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524058"
+            >
+              Annexes
+               
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div
+      class="c7 c2"
+    >
+      <h2
+        class="c8"
+      >
+        This title must be in snapshot
+      </h2>
+      <h3
+        class="c9"
+        id="KALISCTA000038524044"
+      >
+        Préambule
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524059"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          Le mouvement coopératif est le fruit d'une histoire de plus d'un siècle. Cette longue évolution a été constamment guidée par la volonté d'assurer le progrès économique et le progrès humain. Il en est ainsi des rapports des sociétés coopératives de consommateurs avec leurs salariés et les organisations syndicales qui les représentent.
+        </p>
+        <p
+          align="left"
+        >
+          Dans cet esprit et dans le prolongement des textes fondateurs, notamment la charte syndicale de 1920 modifiée en 1936, les signataires décident d'adapter leurs relations contractuelles aux mutations du mouvement coopératif résultant des transformations économiques et sociales. Les signataires demeurent convaincus de la nécessité d'être syndiqués, coopérateurs et consommateurs.
+        </p>
+        <p
+          align="left"
+        >
+          Il est ainsi déclaré ce qui suit :
+        </p>
+        <p
+          align="left"
+        >
+          Une coopérative de consommateurs en sa qualité de structure de l'économie sociale est plus qu'une simple association de membres réunis pour réaliser une activité commerciale. Les partenaires sociaux des coopératives de consommateurs ont la responsabilité de s'assurer que l'intérêt général constitue une priorité. La réalisation de cet objectif ne doit pas pour autant faire obstacle au développement économique de la coopérative et à la promotion de ses salariés.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives de consommateurs et leurs filiales s'efforceront d'être dans leurs relations sociales un exemple de responsabilité mutuelle et de force collective.
+        </p>
+        <p
+          align="left"
+        >
+          Les parties contractantes s'engagent à créer dans leurs relations sociales internes des liens nouveaux par une action permanente de formation et d'information dans la confiance réciproque et la considération.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives de consommateurs et leurs filiales assureront à leurs employés, les conditions de travail requises pour pouvoir contribuer effectivement à l'efficacité économique de leur coopérative.
+        </p>
+        <p
+          align="left"
+        >
+          Toutefois, les coopératives de consommateurs comme toutes les entreprises, doivent accomplir un effort important dans le sens de la compétitivité. Elles doivent faire évoluer leurs méthodes et leurs structures pour éviter d'être mises en état d'infériorité dans le contexte économique qui est le leur.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives réaffirment néanmoins la nécessité de promouvoir le rôle complémentaire que jouent les divers acteurs de l'entreprise et notamment les salariés représentés par leurs organisations syndicales. En conséquence, les organisations syndicales doivent demeurer associées au développement des coopératives dans des conditions compatibles avec le pouvoir démocratique des sociétaires usagers. Cette reconnaissance du rôle des partenaires est réaffirmée par la présente convention.
+        </p>
+        <p
+          align="left"
+        >
+          Enfin, les parties contractantes s'efforceront de participer au développement harmonieux de l'entreprise dans une perspective de promotion individuelle et collective.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives de consommateurs proclament que leur finalité est le service de l'homme.
+        </p>
+        <p
+          align="left"
+        >
+          Le texte signé le 23 novembre 2018 constitue la 21e édition de la CCN du 20 avril 1956 qui entre en application le 1er janvier 2019.
+        </p>
+        <p />
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524045"
+      >
+        Titre Ier Clauses générales
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524073"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524073"
+      >
+        Commission paritaire nationale de l'emploi
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          La commission paritaire nationale de l'emploi est une instance paritaire qui est dédiée aux questions d'emploi et de formation.
+        </p>
+        <p
+          align="center"
+        >
+          Attributions
+        </p>
+        <p
+          align="left"
+        >
+          Les attributions suivantes sont confiées à la CPNE :
+        </p>
+        <p
+          align="left"
+        >
+          a) Attributions en matière d'emploi :
+        </p>
+        <p
+          align="left"
+        >
+          – permettre l'information réciproque des organisations syndicales représentatives dans la branche des coopératives de consommateurs sur la situation de l'emploi dans les sociétés coopératives ;
+        </p>
+        <p
+          align="left"
+        >
+          – étudier la situation de l'emploi et des qualifications, son évolution au cours des mois précédents et son évolution prévisible.
+        </p>
+        <p
+          align="left"
+        >
+          La commission se saisira uniquement des problèmes ayant une incidence d'une ampleur nationale ou de caractère interrégional et fera en tant que de besoin toutes démarches utiles ;
+        </p>
+        <p
+          align="left"
+        >
+          – procéder à toutes études permettant une meilleure connaissance des réalités de l'emploi dans la branche.
+        </p>
+        <p
+          align="left"
+        >
+          b) Attributions en matière de formation professionnelle :
+        </p>
+        <p
+          align="left"
+        >
+          Exercer les attributions qui lui sont conférées par l'accord sur l'organisation de la formation professionnelle conclu au niveau de la branche et notamment examiner l'évolution quantitative et qualitative des emplois et des qualifications de la branche en prenant pour base les données collectées par l'observatoire prospectif des emplois et des qualifications dont les modalités de fonctionnement ont été précisées par 
+          <a
+            (vne)'=""
+            des=""
+            emplois=""
+            et=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000005667428&categorieLien=cid"
+            observatoire=""
+            prospectif=""
+            qualifications=""
+            title="Création d"
+            un=""
+          >
+            accord du 10 février 2006
+          </a>
+          .
+        </p>
+        <p
+          align="left"
+        >
+          Participer à l'étude des moyens de formation, de perfectionnement et de réadaptation professionnels, existant pour les différents niveaux de qualification en vigueur au sein des sociétés coopératives.
+        </p>
+        <p
+          align="left"
+        >
+          Promouvoir, en liaison avec l'opérateur désigné par la branche, la politique de formation dans la branche de la FNCC.
+        </p>
+        <p
+          align="left"
+        >
+          Formuler toutes observations et toutes propositions utiles en se référant notamment aux domaines des formations considérés comme prioritaires par la branche.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524046"
+      >
+        Titre II Droit syndical et représentants du personnel
+      </h3>
+      <h4
+        class="c10"
+        id="KALISCTA000038524075"
+      >
+        Chapitre Ier Droit syndical
+      </h4>
+      <h4
+        class="c10"
+        id="KALIARTI000038524152"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524152"
+      >
+        Congés de formation économique, sociale et syndicale
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          Les salariés appelés à exercer des fonctions syndicales bénéficient du congé de formation économique, sociale et syndicale prévu à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000033010890&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L2145-5 (V)"
+          >
+            article L. 2145-5
+          </a>
+          .
+          <br />
+          
+La durée totale des congés pris à ce titre dans l'année par un salarié ne peut excéder 18 jours. Chaque congé ne peut être inférieur à 1 demi-journée.
+        </p>
+        <p
+          align="left"
+        >
+          Les salariés désireux de participer à des stages ou sessions de formation économique et sociale ou de formation syndicale organisés soit par des centres rattachés à des organisations syndicales de salariés reconnues représentatives sur le plan national, soit par des institutions spécialisées, ont droit, sur leur demande, à un ou plusieurs congés.
+        </p>
+        <p
+          align="left"
+        >
+          La demande à l'employeur doit être faite par lettre recommandée avec avis de réception au moins 30 jours avant le début du stage. L'employeur doit répondre dans les 8 jours et ne peut refuser ou reporter la demande que sur des motifs d'effectif simultanément absent ou des raisons de service. Le refus peut être contesté devant le conseil de prud'hommes.
+        </p>
+        <p
+          align="left"
+        >
+          Ce ou ces congés donnent lieu au maintien intégral du salaire et ne sont pas déduits des heures de délégation.
+        </p>
+        <p
+          align="left"
+        >
+          Elle ne peut excéder 18 jours pour les animateurs des stages et sessions et pour les salariés appelés à exercer des responsabilités syndicales.
+        </p>
+        <p
+          align="left"
+        >
+          La durée du congé est assimilée à du travail effectif pour la détermination des droits résultants du contrat de travail.
+        </p>
+        <p
+          align="left"
+        >
+          Les organisations syndicales auront le choix de la désignation de l'organisme formateur.
+        </p>
+        <p
+          align="left"
+        >
+          Les membres du comité social et économique bénéficient de la formation nécessaire à l'exercice de leurs missions en matière de santé, de sécurité et de conditions de travail. Cette formation est dispensée lors la première prise de mandat selon les conditions légales et réglementaires en vigueur.
+        </p>
+        <p
+          align="left"
+        >
+          Le nombre total de jours de congés susceptibles d'être pris chaque année par l'ensemble des salariés de l'établissement au titre de ces formations ne peut dépasser un maximum fixé par voie réglementaire compte tenu de l'effectif de l'établissement.
+        </p>
+        <p
+          align="left"
+        >
+          Cet arrêté fixe également, compte tenu de l'effectif de l'établissement, le nombre maximum de jours de congés pouvant être utilisés par les animateurs et par les salariés appelés à exercer des responsabilités syndicales, ainsi que le pourcentage maximum de salariés pouvant être simultanément absents au titre des congés mentionnés au premier alinéa.
+        </p>
+      </div>
+      <h4
+        class="c10"
+        id="KALISCTA000038524076"
+      >
+        Chapitre II Comité social et économique
+      </h4>
+      <h4
+        class="c10"
+        id="KALIARTI000038524157"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524157"
+      >
+        Comité social et économique
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="center"
+        >
+          Dispositions 13.I à 13.IV supprimées
+          <br />
+          
+13.V. Financement des activités sociales et culturelles du CSE
+        </p>
+        <p
+          align="left"
+        >
+          La contribution versée chaque année par l'employeur pour financer s'il y a lieu des activités sociales et culturelles du CSE est fixée par accord d'entreprise, à défaut, elles se calculent conformément aux dispositions législatives et réglementaires en vigueur.
+        </p>
+        <p
+          align="center"
+        >
+          13.VI. Fonctionnement
+        </p>
+        <p
+          align="left"
+        >
+          Le comité social et économique est présidé par l'employeur ou son représentant assisté éventuellement de trois collaborateurs au maximum mais dans la limite du nombre de représentants salariés au CSE.
+        </p>
+        <p
+          align="left"
+        >
+          Le comité se réunit sur convocation du président selon le calendrier prévu par accord d'entreprise, ou au minimum selon le calendrier réglementaire.
+        </p>
+        <p
+          align="left"
+        >
+          Il peut, en outre, tenir d'autres réunions à la demande de la majorité de ses membres.
+        </p>
+        <p
+          align="left"
+        >
+          Les réunions ne peuvent avoir lieu en dehors des heures normales de travail, sauf cas exceptionnels, les heures ainsi utilisées sont rémunérées ou récupérées.
+        </p>
+        <p
+          align="left"
+        >
+          Le CSE peut mettre en place des commissions de travail. Selon l'effectif de l'entreprise des commissions sont légalement obligatoires. Un accord d'entreprise fixe les conditions de fonctionnement des commissions, à défaut, elles sont fixées par le CSE.
+        </p>
+        <p
+          align="left"
+        >
+          Le temps passé aux séances des commissions sera payé comme temps de travail.
+        </p>
+        <p
+          align="left"
+        >
+          La mission des membres des comités peut également s'exercer à l'extérieur de l'entreprise. Le temps ainsi passé sera rémunéré comme temps de travail, à condition que leur absence soit causée par leur activité, telle qu'elle est définie par la loi ou par la présente convention.
+        </p>
+        <p
+          align="center"
+        >
+          13.VII. Entreprises multisites
+        </p>
+        <p
+          align="left"
+        >
+          En fonction de l'organisation de l'entreprise et de la taille des sites, des CSE d'établissements et un CSE central doivent être mis en place.
+        </p>
+        <p
+          align="left"
+        >
+          À défaut d'accord d'entreprise prévoyant une organisation territoriale de l'entreprise, la mise en place de ces instances se fait conformément aux dispositions légales en vigueur.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524047"
+      >
+        Titre III Embauche
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524081"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524081"
+      >
+        Période d'essai pour les contrats à durée déterminée
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          La période d'essai ne pourra excéder une durée calculée à raison de 1 jour par semaine, dans la limite de 2 semaines, lorsque la durée initialement prévue du contrat est égale à 6 mois et de 1 mois dans les autres cas.
+        </p>
+        <p
+          align="left"
+        >
+          Le contrat à durée déterminée, quel que soit son motif, ne peut avoir ni pour objet ni pour effet de pourvoir durablement un emploi lié à l'activité normale et permanente de l'entreprise. Les entreprises ne peuvent recourir au contrat à durée déterminée que dans les cas et aux conditions définies par les dispositions législatives et réglementaires en vigueur.
+        </p>
+        <p
+          align="left"
+        >
+          Ainsi et notamment, il ne pourra être conclu que pour l'exécution d'une tâche précise et temporaire et essentiellement dans les cas suivants :
+          <br />
+          
+– remplacement d'un salarié absent ;
+          <br />
+          
+– accroissement temporaire de l'activité de l'entreprise ;
+          <br />
+          
+– emplois à caractère saisonnier ;
+          <br />
+          
+– travaux urgents ;
+          <br />
+          
+– de départ définitif précédant la suppression du poste de travail ;
+          <br />
+          
+– dans le cadre des mesures pour l'emploi ou pour assurer une formation professionnelle.
+        </p>
+        <p
+          align="left"
+        >
+          Dans l'hypothèse de la transformation d'un contrat à durée déterminée en contrat à durée indéterminée, l'ancienneté acquise au cours du premier contrat sera prise en compte.
+        </p>
+        <p
+          align="left"
+        >
+          Les parties contractantes reconnaissent la nécessité de pouvoir recourir aux contrats à durée déterminée, même pour des durées courtes, pour répondre à des besoins ponctuels (opérations promotionnelles par exemple ou à l'occasion de périodes traditionnellement chargées comme les fêtes de fin d'année). Le recours à ce type de contrat doit rester dans le cadre des dispositions de la présente convention, ou de celles des accords d'entreprise et doit faire l'objet d'un suivi par les partenaires sociaux dans l'entreprise pour vérifier que leur utilisation reste bien celle prévue par le présent article.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524048"
+      >
+        Titre IV Salaires et primes
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524085"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524085"
+      >
+        Prime de transport
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Lorsqu'une société créera un entrepôt dans une localité excentrée par rapport au siège social, elle pourra examiner, avec les représentants du personnel, les conditions dans lesquelles il sera accordé au personnel travaillant dans ces entrepôts une prime de transport dont les modalités seront déterminées par accord entre la direction et les représentants du personnel.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524049"
+      >
+        Titre V Modification du contrat de travail
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524088"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524088"
+      >
+        (supprimé)
+      </h5>
+      <div
+        class="c12"
+      />
+      <h3
+        class="c9"
+        id="KALISCTA000038524050"
+      >
+        Titre VI Durée du travail
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524094"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524094"
+      >
+        Temps de pause. – Pause casse-croûte
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="center"
+        >
+          26.I. Temps de pause
+        </p>
+        <p
+          align="left"
+        >
+          Aucun temps de travail quotidien ne peut atteindre 6 heures consécutives sans que le salarié bénéficie d'un temps de pause de 20 minutes consécutives. Ce dernier ne sera rémunéré que si le salarié ne peut vaquer librement à ses occupations et demeure sous les directives de l'employeur.
+        </p>
+        <p
+          align="center"
+        >
+          26.II. Pause casse-croûte
+        </p>
+        <p
+          align="left"
+        >
+          Le personnel travaillant pendant 8 heures consécutives bénéficiera d'une pause casse-croûte de 1 demi-heure prise sur le temps de travail ; en outre, il sera attribué à ce personnel une prime de panier égale à 1 demi-heure du salaire horaire d'un salarié qui ne pourra être inférieur au Smic ou un avantage en nature équivalent.
+        </p>
+        <p
+          align="left"
+        >
+          Les avantages de même nature supérieurs aux dispositions précédentes restent acquis.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524051"
+      >
+        Titre VII Congés payés. – Congés pour événements familiaux. – Congés d'ancienneté
+      </h3>
+      <h4
+        class="c10"
+        id="KALISCTA000038524095"
+      >
+        Chapitre Ier Congés payés
+      </h4>
+      <h4
+        class="c10"
+        id="KALIARTI000038524162"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524162"
+      >
+        Indemnité de congés payés
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          L'indemnité de congé est calculée sur la base de la rémunération totale définie à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006902659&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L3141-22 (V)"
+          >
+            article L. 3141-22 du code du travail
+          </a>
+           perçue par le salarié au cours de la période prise en considération pour l'application de son droit au congé.
+        </p>
+        <p
+          align="left"
+        >
+          Cette indemnité se calcule sur la base de 1/10 de la rémunération perçue au cours de la période de référence.
+        </p>
+        <p
+          align="left"
+        >
+          En aucun cas cette indemnité ne peut être inférieure au salaire que le travailleur aurait perçu s'il avait continué à travailler normalement pendant la période de son congé, en raison, tout à la fois, du salaire gagné pendant la période précédant le congé et la durée du travail effectif contractuel de l'établissement.
+        </p>
+        <p
+          align="left"
+        >
+          Dans la fixation de l'indemnité de congé, il doit être tenu compte de tous les avantages accessoires et des avantages en nature dont les travailleurs ne continueraient pas à jouir pendant la durée du congé.
+        </p>
+        <p
+          align="left"
+        >
+          Quand un salarié part en congé, il peut, avant son départ, demander, au moins 8 jours à l'avance, à percevoir, outre le salaire qui lui est dû à cette date, ses indemnités de congés payés.
+        </p>
+      </div>
+      <h4
+        class="c10"
+        id="KALISCTA000038524096"
+      >
+        Chapitre II Congés pour événements familiaux et congé d'ancienneté
+      </h4>
+      <h4
+        class="c10"
+        id="KALIARTI000038524167"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524167"
+      >
+        Congé d'ancienneté
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          La durée des congés d'ancienneté est de :
+          <br />
+          
+– 1 jour après 20 ans de services coopératifs ;
+          <br />
+          
+– 2 jours après 25 ans de services coopératifs ;
+          <br />
+          
+– 3 jours après 30 ans de services coopératifs.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524052"
+      >
+        Titre VIII Maladie et accident. – Maternité. – Accident du travail
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524104"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524104"
+      >
+        Dispositions générales
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          1° Dans tous les cas prévus aux articles 35, 36, 37, quand l'intéressé a épuisé son droit à allocation pendant une période de 12 mois consécutifs, la reconduction de ce droit est subordonnée à une reprise effective et continue du travail pendant 3 mois au moins.
+        </p>
+        <p
+          align="left"
+        >
+          2° La garantie de salaire prévue ci-dessus sera payée sous déduction
+        </p>
+        <p
+          align="left"
+        >
+          a) De la valeur des prestations en espèces auxquelles l'intéressé a droit du fait de la sécurité sociale ou de tout autre régime de prévoyance auquel l'employeur participe et pour la quotité correspondant à ses versements ;
+        </p>
+        <p
+          align="left"
+        >
+          b) Des indemnités versées par les responsables de l'accident ou leurs assureurs au titre de pertes de salaires.
+        </p>
+        <p
+          align="left"
+        >
+          Les différentes prestations devront faire l'objet d'une déclaration justifiée de l'intéressé.
+        </p>
+        <p
+          align="left"
+        >
+          À défaut, la société se réserve le droit de ne plus appliquer les dispositions du présent article.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524053"
+      >
+        Titre IX Suspension du contrat de travail
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524107"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524107"
+      >
+        Démission pour élever un enfant et congé parental d'éducation
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="center"
+        >
+          41.I. Démission pour élever un enfant
+        </p>
+        <p
+          align="left"
+        >
+          Pour élever son enfant, tout(e) salarié(e) peut, sous réserve d'en informer son employeur par lettre recommandée avec demande d'avis de réception au moins 15 jours à l'avance, résilier son contrat de travail à l'issue du congé de maternité ou d'adoption ou, le cas échéant, 2 mois après la naissance ou l'arrivée au foyer de l'enfant, sans être tenu de respecter le délai de préavis, ni de payer de ce fait une indemnité de rupture.
+        </p>
+        <p
+          align="left"
+        >
+          Le (la) salarié(e) peut, dans l'année suivant la rupture de son contrat de travail, solliciter dans les mêmes formes, son réembauchage ; l'employeur est alors tenu pendant 1 an, de l'embaucher par priorité dans les emplois auxquels sa qualification lui permet de prétendre et de lui accorder en cas de réemploi, le bénéfice de tous les avantages qu'il (elle) avait acquis au moment de son départ.
+        </p>
+        <p
+          align="center"
+        >
+          41.II. Congé parental d'éducation
+        </p>
+        <p
+          align="left"
+        >
+          Le congé parental d'éducation est un droit dont les conditions sont fixées par la loi.
+        </p>
+        <p
+          align="center"
+        >
+          41.III. Congé de présence parentale
+        </p>
+        <p
+          align="left"
+        >
+          Le congé de présence parentale est accordé dans les conditions prévues par la loi, afin de permettre à un père ou une mère d'assurer une présence soutenue ou des soins permanents à un enfant de moins de 20 ans victime d'une maladie, d'un handicap ou d'un accident grave.
+        </p>
+        <p
+          align="left"
+        >
+          À l'issue de son congé, le/la salarié(e) doit retrouver son précédent emploi ou un emploi similaire assorti d'une rémunération au moins équivalente.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524054"
+      >
+        Titre X Rupture du contrat de travail
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524110"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524110"
+      >
+        Gratification de fin de carrière
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          Lors de leur départ en retraite volontaire, les salariés visés par la présente convention recevront une gratification de fin de carrière égale à :
+          <br />
+          
+– 1 mois de salaire pour 10 ans de services coopératifs ;
+          <br />
+          
+– 2 mois de salaire pour 15 ans de services coopératifs ;
+          <br />
+          
+– 3 mois de salaire pour 20 ans de services coopératifs.
+        </p>
+        <p
+          align="left"
+        >
+          Après 20 ans de services coopératifs, la gratification est égale à 3 mois de salaire plus 1/5 de mois de salaire au-delà de 20 ans par année de présence continue.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524055"
+      >
+        Titre XI Dispositions particulières aux jeunes et à l'égalité entre hommes et femmes
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524112"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524112"
+      >
+        Égalité professionnelle. – Égalité de traitement
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          Les employeurs s'engagent à respecter les dispositions législatives relatives à l'égalité de rémunération entre les hommes et les femmes. Ils s'interdisent en conséquence de prendre des décisions concernant les relations du travail, notamment l'emploi, les rémunérations, l'exécution du contrat de travail d'un salarié en considération du sexe ou de la situation de famille ou sur la base de critères de choix différents selon le sexe ou la situation de famille.
+        </p>
+        <p
+          align="left"
+        >
+          En particulier, tout employeur est tenu d'assurer pour un même travail ou un travail de valeur égale, l'égalité de rémunération entre les hommes et les femmes et ce, conformément aux 
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006902817&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L3221-1 (V)"
+          >
+            dispositions des articles L. 3221-1 et suivants du code du travail
+          </a>
+          .
+        </p>
+        <p
+          align="left"
+        >
+          Il est précisé en outre qu'aucun salarié ne peut être sanctionné ou licencié en raison de son origine, de son sexe, de sa situation de famille, de son appartenance à une ethnie, une nation ou une race, de ses opinions politiques, de ses activités syndicales ou mutualistes, de l'exercice normal du droit de grève ou de ses convictions religieuses.
+        </p>
+        <p
+          align="left"
+        >
+          Un bilan sera réalisé chaque année lors de la négociation annuelle à partir des éléments contenus dans les bilans sociaux.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524056"
+      >
+        Titre XII Hygiène, sécurité et santé au travail. – Services de santé au travail
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524117"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524117"
+      >
+        Visite des chauffeurs
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          La société remboursera intégralement sur justification, le coût des visites périodiques prévues pour les chauffeurs par le 
+          <a
+            href="/affichCode.do?cidTexte=LEGITEXT000006074228&dateTexte=&categorieLien=cid"
+            title="Code de la route. (V)"
+          >
+            code de la route
+          </a>
+           et le temps passé à ces visites médicales.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524057"
+      >
+        Titre XIII Dispositions générales relatives à l'emploi
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524127"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524127"
+      >
+        Préavis
+      </h5>
+      <div
+        class="c12"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Le salarié congédié dans le cadre d'un licenciement collectif résultant de fusions, mutations, concentrations, décentralisation ou d'opérations de modernisation, et qui a trouvé un nouvel emploi en cours de préavis, pourra quitter la société sans avoir à payer l'indemnité de préavis correspondant à la partie non exécutée de son préavis et en conservant le bénéfice de son indemnité de licenciement légale ou conventionnelle.
+          <br />
+          Les heures de l'article 42.III pour recherche d'emploi pourront être utilisées en une seule fois.
+          <br />
+          La prise en charge par Pôle emploi des salariés licenciés et l'application à ces salariés des dispositions du régime d'assurance chômage doivent être facilitées par les coopératives régionales qui assurent à cet effet tous les contacts nécessaires avec les agences de Pôle emploi compétentes.
+          <br />
+          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'article L. 2231-6 et suivants du code de travail.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALIARTI000038531122"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c12"
+      >
+        <p>
+          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L2231-6 (V)"
+          >
+            article L. 2231-6
+          </a>
+           et suivants du code de travail.
+        </p>
+      </div>
+      <h3
+        class="c9"
+        id="KALISCTA000038524058"
+      >
+        Annexes
+      </h3>
+      <h4
+        class="c10"
+        id="KALIARTI000038524128"
+      />
+      <div
+        class="c11"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c12"
+      >
+        <p>
+          Annexes 
+        </p>
+        <p>
+          1) 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000030160120&idSectionTA=KALISCTA000030185297&categorieLien=cid"
+            title="Convention collective du 16 octobre 2014 (20e é... -  Annexe II (VNE)"
+          >
+            Additif fixant les conditions de travail des cadres et assimilés du 16 octobre 2014
+          </a>
+          .
+        </p>
+        <p>
+          2) 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000030160120&idSectionTA=KALISCTA000030185289&categorieLien=cid"
+            title="Convention collective du 16 octobre 2014 (20e é... -  Annexe I (VNE)"
+          >
+            Additif fixant les conditions de travail des agents de maîtrise du 16 octobre 2014
+          </a>
+          .
+        </p>
+        <p>
+          3) Classifications et rémunérations : 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000037351516&categorieLien=cid"
+            title="Classifications (VNE)"
+          >
+            accord du 25 janvier 2018
+          </a>
+          .
+        </p>
+        <p>
+          4) Formation professionnelle et OPCA de la branche : 
+          <br />
+          – 
+          <a
+            (vne)'=""
+            emploi=""
+            et=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000031254741&categorieLien=cid"
+            parcours=""
+            professionnels=""
+            title="Formation, sécurisation de l"
+          >
+            accord du 25 juin 2015 : relatif à la formation, à la sécurisation de l'emploi et aux parcours professionnels 
+          </a>
+          ; 
+          <br />
+          – accord du 30 octobre 2018 : choix de l'OPCO. 
+        </p>
+        <p>
+          5) Aménagement du temps de travail : 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000029131285&categorieLien=cid"
+            title="Temps partiel (VNE)"
+          >
+            accord du 13 février 2014 sur temps partiels 
+          </a>
+          ; 
+          <br />
+          – 
+          <a
+            (vne)'=""
+            encadrement=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000032748802&categorieLien=cid"
+            title="Forfaits jours de l"
+          >
+            accord du 28 janvier 2016 sur les forfaits jours
+          </a>
+          . 
+        </p>
+        <p>
+          6) Autres accords : 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000023589738&categorieLien=cid"
+            title="Prévention du stress et des facteurs psychosociaux (VNE)"
+          >
+            accord du 9 juillet 2010 sur le stress 
+          </a>
+          ; 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000034156917&categorieLien=cid"
+            title="Egalité professionnelle entre les femmes et les hommes (VNE)"
+          >
+            accord du 27 octobre 2016 sur l'égalité professionnelle
+          </a>
+          . 
+        </p>
+        <p>
+          7) Prévoyance et frais de santé : 
+          <br />
+          – accord du 25 juin 2015 sur les frais de santé ; 
+          <br />
+          – 
+          <a
+            (vne)'=""
+            cadres=""
+            de=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000034156892&categorieLien=cid"
+            les=""
+            pour=""
+            retraite=""
+            régime=""
+            surcomplémentaire=""
+            title="Création d"
+            un=""
+          >
+            accord du 27 octobre 2016 article 83 pour les cadres
+          </a>
+          . 
+        </p>
+        <p>
+          Rappel : 
+          <br />
+          Les accords suivants ne sont pas repris en annexe de la présente édition de la CCN. Toutefois, les partenaires sociaux tiennent à rappeler l'importance qu'ont pu avoir ces accords dans les relations sociales de la branche : 
+          <br />
+          – accord-cadre du 6 février 2002 sur les CQP ; 
+          <br />
+          – accord du 6 avril 2006 sur l'observatoire ; 
+          <br />
+          – cahier des charges des CQP du 16 mai 2006 ; 
+          <br />
+          – accord du 21 juin 2006 sur le CQP boucher ; 
+          <br />
+          – accord du 21 juin 2006 sur le CQP poissonnier ; 
+          <br />
+          – accord du 1er avril 2011 sur le choix de l'OPCA ; 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000020314352&categorieLien=cid"
+            title="Emploi des personnes handicapées (VNE)"
+          >
+            accord du 5 novembre 2008 sur l'emploi des handicapés
+          </a>
+           ; 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000022425458&categorieLien=cid"
+            title="Développement de la GPEC (VNE)"
+          >
+            accord-cadre GPEC du 28 octobre 2009
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Texte /> renders without a title 1`] = `
+.c2 {
+  padding: 1.25rem 0;
+}
+
+.c4 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  font-size: 0.875rem;
+}
+
+.c6 {
+  display: block;
+  padding: 0.25rem 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover {
+  font-weight: bold;
+}
+
+.c3 {
+  max-height: 100%;
+  overflow: auto;
+}
+
+.c10 {
+  margin-bottom: 0.625rem;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.c11 {
+  margin-bottom: 0.625rem;
+}
+
+.c8 {
+  font-size: 1.625rem;
+}
+
+.c9 {
+  font-size: 1.375rem;
+}
+
+@media (max-width:600px) {
+  .c4 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c4 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (min-width:980px) {
+  .c1 {
+    -webkit-flex: 0 1 35%;
+    -ms-flex: 0 1 35%;
+    flex: 0 1 35%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c7 {
+    -webkit-flex: 0 1 65%;
+    -ms-flex: 0 1 65%;
+    flex: 0 1 65%;
+    overflow: scroll;
+  }
+}
+
+@media (min-width:980px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+      >
+        <ol>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524044"
+            >
+              Préambule
+               
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524045"
+            >
+              Titre Ier Clauses générales
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524046"
+            >
+              Titre II Droit syndical et représentants du personnel
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524047"
+            >
+              Titre III Embauche
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524048"
+            >
+              Titre IV Salaires et primes
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524049"
+            >
+              Titre V Modification du contrat de travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524050"
+            >
+              Titre VI Durée du travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524051"
+            >
+              Titre VII Congés payés. – Congés pour événements familiaux. – Congés d'ancienneté
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524052"
+            >
+              Titre VIII Maladie et accident. – Maternité. – Accident du travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524053"
+            >
+              Titre IX Suspension du contrat de travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524054"
+            >
+              Titre X Rupture du contrat de travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524055"
+            >
+              Titre XI Dispositions particulières aux jeunes et à l'égalité entre hommes et femmes
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524056"
+            >
+              Titre XII Hygiène, sécurité et santé au travail. – Services de santé au travail
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524057"
+            >
+              Titre XIII Dispositions générales relatives à l'emploi
+               
+              ▼
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              class="c6"
+              href="#KALISCTA000038524058"
+            >
+              Annexes
+               
+            </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div
+      class="c7 c2"
+    >
+      <h3
+        class="c8"
+        id="KALISCTA000038524044"
+      >
+        Préambule
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524059"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          Le mouvement coopératif est le fruit d'une histoire de plus d'un siècle. Cette longue évolution a été constamment guidée par la volonté d'assurer le progrès économique et le progrès humain. Il en est ainsi des rapports des sociétés coopératives de consommateurs avec leurs salariés et les organisations syndicales qui les représentent.
+        </p>
+        <p
+          align="left"
+        >
+          Dans cet esprit et dans le prolongement des textes fondateurs, notamment la charte syndicale de 1920 modifiée en 1936, les signataires décident d'adapter leurs relations contractuelles aux mutations du mouvement coopératif résultant des transformations économiques et sociales. Les signataires demeurent convaincus de la nécessité d'être syndiqués, coopérateurs et consommateurs.
+        </p>
+        <p
+          align="left"
+        >
+          Il est ainsi déclaré ce qui suit :
+        </p>
+        <p
+          align="left"
+        >
+          Une coopérative de consommateurs en sa qualité de structure de l'économie sociale est plus qu'une simple association de membres réunis pour réaliser une activité commerciale. Les partenaires sociaux des coopératives de consommateurs ont la responsabilité de s'assurer que l'intérêt général constitue une priorité. La réalisation de cet objectif ne doit pas pour autant faire obstacle au développement économique de la coopérative et à la promotion de ses salariés.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives de consommateurs et leurs filiales s'efforceront d'être dans leurs relations sociales un exemple de responsabilité mutuelle et de force collective.
+        </p>
+        <p
+          align="left"
+        >
+          Les parties contractantes s'engagent à créer dans leurs relations sociales internes des liens nouveaux par une action permanente de formation et d'information dans la confiance réciproque et la considération.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives de consommateurs et leurs filiales assureront à leurs employés, les conditions de travail requises pour pouvoir contribuer effectivement à l'efficacité économique de leur coopérative.
+        </p>
+        <p
+          align="left"
+        >
+          Toutefois, les coopératives de consommateurs comme toutes les entreprises, doivent accomplir un effort important dans le sens de la compétitivité. Elles doivent faire évoluer leurs méthodes et leurs structures pour éviter d'être mises en état d'infériorité dans le contexte économique qui est le leur.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives réaffirment néanmoins la nécessité de promouvoir le rôle complémentaire que jouent les divers acteurs de l'entreprise et notamment les salariés représentés par leurs organisations syndicales. En conséquence, les organisations syndicales doivent demeurer associées au développement des coopératives dans des conditions compatibles avec le pouvoir démocratique des sociétaires usagers. Cette reconnaissance du rôle des partenaires est réaffirmée par la présente convention.
+        </p>
+        <p
+          align="left"
+        >
+          Enfin, les parties contractantes s'efforceront de participer au développement harmonieux de l'entreprise dans une perspective de promotion individuelle et collective.
+        </p>
+        <p
+          align="left"
+        >
+          Les coopératives de consommateurs proclament que leur finalité est le service de l'homme.
+        </p>
+        <p
+          align="left"
+        >
+          Le texte signé le 23 novembre 2018 constitue la 21e édition de la CCN du 20 avril 1956 qui entre en application le 1er janvier 2019.
+        </p>
+        <p />
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524045"
+      >
+        Titre Ier Clauses générales
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524073"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524073"
+      >
+        Commission paritaire nationale de l'emploi
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          La commission paritaire nationale de l'emploi est une instance paritaire qui est dédiée aux questions d'emploi et de formation.
+        </p>
+        <p
+          align="center"
+        >
+          Attributions
+        </p>
+        <p
+          align="left"
+        >
+          Les attributions suivantes sont confiées à la CPNE :
+        </p>
+        <p
+          align="left"
+        >
+          a) Attributions en matière d'emploi :
+        </p>
+        <p
+          align="left"
+        >
+          – permettre l'information réciproque des organisations syndicales représentatives dans la branche des coopératives de consommateurs sur la situation de l'emploi dans les sociétés coopératives ;
+        </p>
+        <p
+          align="left"
+        >
+          – étudier la situation de l'emploi et des qualifications, son évolution au cours des mois précédents et son évolution prévisible.
+        </p>
+        <p
+          align="left"
+        >
+          La commission se saisira uniquement des problèmes ayant une incidence d'une ampleur nationale ou de caractère interrégional et fera en tant que de besoin toutes démarches utiles ;
+        </p>
+        <p
+          align="left"
+        >
+          – procéder à toutes études permettant une meilleure connaissance des réalités de l'emploi dans la branche.
+        </p>
+        <p
+          align="left"
+        >
+          b) Attributions en matière de formation professionnelle :
+        </p>
+        <p
+          align="left"
+        >
+          Exercer les attributions qui lui sont conférées par l'accord sur l'organisation de la formation professionnelle conclu au niveau de la branche et notamment examiner l'évolution quantitative et qualitative des emplois et des qualifications de la branche en prenant pour base les données collectées par l'observatoire prospectif des emplois et des qualifications dont les modalités de fonctionnement ont été précisées par 
+          <a
+            (vne)'=""
+            des=""
+            emplois=""
+            et=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000005667428&categorieLien=cid"
+            observatoire=""
+            prospectif=""
+            qualifications=""
+            title="Création d"
+            un=""
+          >
+            accord du 10 février 2006
+          </a>
+          .
+        </p>
+        <p
+          align="left"
+        >
+          Participer à l'étude des moyens de formation, de perfectionnement et de réadaptation professionnels, existant pour les différents niveaux de qualification en vigueur au sein des sociétés coopératives.
+        </p>
+        <p
+          align="left"
+        >
+          Promouvoir, en liaison avec l'opérateur désigné par la branche, la politique de formation dans la branche de la FNCC.
+        </p>
+        <p
+          align="left"
+        >
+          Formuler toutes observations et toutes propositions utiles en se référant notamment aux domaines des formations considérés comme prioritaires par la branche.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524046"
+      >
+        Titre II Droit syndical et représentants du personnel
+      </h3>
+      <h4
+        class="c9"
+        id="KALISCTA000038524075"
+      >
+        Chapitre Ier Droit syndical
+      </h4>
+      <h4
+        class="c9"
+        id="KALIARTI000038524152"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524152"
+      >
+        Congés de formation économique, sociale et syndicale
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          Les salariés appelés à exercer des fonctions syndicales bénéficient du congé de formation économique, sociale et syndicale prévu à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000033010890&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L2145-5 (V)"
+          >
+            article L. 2145-5
+          </a>
+          .
+          <br />
+          
+La durée totale des congés pris à ce titre dans l'année par un salarié ne peut excéder 18 jours. Chaque congé ne peut être inférieur à 1 demi-journée.
+        </p>
+        <p
+          align="left"
+        >
+          Les salariés désireux de participer à des stages ou sessions de formation économique et sociale ou de formation syndicale organisés soit par des centres rattachés à des organisations syndicales de salariés reconnues représentatives sur le plan national, soit par des institutions spécialisées, ont droit, sur leur demande, à un ou plusieurs congés.
+        </p>
+        <p
+          align="left"
+        >
+          La demande à l'employeur doit être faite par lettre recommandée avec avis de réception au moins 30 jours avant le début du stage. L'employeur doit répondre dans les 8 jours et ne peut refuser ou reporter la demande que sur des motifs d'effectif simultanément absent ou des raisons de service. Le refus peut être contesté devant le conseil de prud'hommes.
+        </p>
+        <p
+          align="left"
+        >
+          Ce ou ces congés donnent lieu au maintien intégral du salaire et ne sont pas déduits des heures de délégation.
+        </p>
+        <p
+          align="left"
+        >
+          Elle ne peut excéder 18 jours pour les animateurs des stages et sessions et pour les salariés appelés à exercer des responsabilités syndicales.
+        </p>
+        <p
+          align="left"
+        >
+          La durée du congé est assimilée à du travail effectif pour la détermination des droits résultants du contrat de travail.
+        </p>
+        <p
+          align="left"
+        >
+          Les organisations syndicales auront le choix de la désignation de l'organisme formateur.
+        </p>
+        <p
+          align="left"
+        >
+          Les membres du comité social et économique bénéficient de la formation nécessaire à l'exercice de leurs missions en matière de santé, de sécurité et de conditions de travail. Cette formation est dispensée lors la première prise de mandat selon les conditions légales et réglementaires en vigueur.
+        </p>
+        <p
+          align="left"
+        >
+          Le nombre total de jours de congés susceptibles d'être pris chaque année par l'ensemble des salariés de l'établissement au titre de ces formations ne peut dépasser un maximum fixé par voie réglementaire compte tenu de l'effectif de l'établissement.
+        </p>
+        <p
+          align="left"
+        >
+          Cet arrêté fixe également, compte tenu de l'effectif de l'établissement, le nombre maximum de jours de congés pouvant être utilisés par les animateurs et par les salariés appelés à exercer des responsabilités syndicales, ainsi que le pourcentage maximum de salariés pouvant être simultanément absents au titre des congés mentionnés au premier alinéa.
+        </p>
+      </div>
+      <h4
+        class="c9"
+        id="KALISCTA000038524076"
+      >
+        Chapitre II Comité social et économique
+      </h4>
+      <h4
+        class="c9"
+        id="KALIARTI000038524157"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524157"
+      >
+        Comité social et économique
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="center"
+        >
+          Dispositions 13.I à 13.IV supprimées
+          <br />
+          
+13.V. Financement des activités sociales et culturelles du CSE
+        </p>
+        <p
+          align="left"
+        >
+          La contribution versée chaque année par l'employeur pour financer s'il y a lieu des activités sociales et culturelles du CSE est fixée par accord d'entreprise, à défaut, elles se calculent conformément aux dispositions législatives et réglementaires en vigueur.
+        </p>
+        <p
+          align="center"
+        >
+          13.VI. Fonctionnement
+        </p>
+        <p
+          align="left"
+        >
+          Le comité social et économique est présidé par l'employeur ou son représentant assisté éventuellement de trois collaborateurs au maximum mais dans la limite du nombre de représentants salariés au CSE.
+        </p>
+        <p
+          align="left"
+        >
+          Le comité se réunit sur convocation du président selon le calendrier prévu par accord d'entreprise, ou au minimum selon le calendrier réglementaire.
+        </p>
+        <p
+          align="left"
+        >
+          Il peut, en outre, tenir d'autres réunions à la demande de la majorité de ses membres.
+        </p>
+        <p
+          align="left"
+        >
+          Les réunions ne peuvent avoir lieu en dehors des heures normales de travail, sauf cas exceptionnels, les heures ainsi utilisées sont rémunérées ou récupérées.
+        </p>
+        <p
+          align="left"
+        >
+          Le CSE peut mettre en place des commissions de travail. Selon l'effectif de l'entreprise des commissions sont légalement obligatoires. Un accord d'entreprise fixe les conditions de fonctionnement des commissions, à défaut, elles sont fixées par le CSE.
+        </p>
+        <p
+          align="left"
+        >
+          Le temps passé aux séances des commissions sera payé comme temps de travail.
+        </p>
+        <p
+          align="left"
+        >
+          La mission des membres des comités peut également s'exercer à l'extérieur de l'entreprise. Le temps ainsi passé sera rémunéré comme temps de travail, à condition que leur absence soit causée par leur activité, telle qu'elle est définie par la loi ou par la présente convention.
+        </p>
+        <p
+          align="center"
+        >
+          13.VII. Entreprises multisites
+        </p>
+        <p
+          align="left"
+        >
+          En fonction de l'organisation de l'entreprise et de la taille des sites, des CSE d'établissements et un CSE central doivent être mis en place.
+        </p>
+        <p
+          align="left"
+        >
+          À défaut d'accord d'entreprise prévoyant une organisation territoriale de l'entreprise, la mise en place de ces instances se fait conformément aux dispositions légales en vigueur.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524047"
+      >
+        Titre III Embauche
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524081"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524081"
+      >
+        Période d'essai pour les contrats à durée déterminée
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          La période d'essai ne pourra excéder une durée calculée à raison de 1 jour par semaine, dans la limite de 2 semaines, lorsque la durée initialement prévue du contrat est égale à 6 mois et de 1 mois dans les autres cas.
+        </p>
+        <p
+          align="left"
+        >
+          Le contrat à durée déterminée, quel que soit son motif, ne peut avoir ni pour objet ni pour effet de pourvoir durablement un emploi lié à l'activité normale et permanente de l'entreprise. Les entreprises ne peuvent recourir au contrat à durée déterminée que dans les cas et aux conditions définies par les dispositions législatives et réglementaires en vigueur.
+        </p>
+        <p
+          align="left"
+        >
+          Ainsi et notamment, il ne pourra être conclu que pour l'exécution d'une tâche précise et temporaire et essentiellement dans les cas suivants :
+          <br />
+          
+– remplacement d'un salarié absent ;
+          <br />
+          
+– accroissement temporaire de l'activité de l'entreprise ;
+          <br />
+          
+– emplois à caractère saisonnier ;
+          <br />
+          
+– travaux urgents ;
+          <br />
+          
+– de départ définitif précédant la suppression du poste de travail ;
+          <br />
+          
+– dans le cadre des mesures pour l'emploi ou pour assurer une formation professionnelle.
+        </p>
+        <p
+          align="left"
+        >
+          Dans l'hypothèse de la transformation d'un contrat à durée déterminée en contrat à durée indéterminée, l'ancienneté acquise au cours du premier contrat sera prise en compte.
+        </p>
+        <p
+          align="left"
+        >
+          Les parties contractantes reconnaissent la nécessité de pouvoir recourir aux contrats à durée déterminée, même pour des durées courtes, pour répondre à des besoins ponctuels (opérations promotionnelles par exemple ou à l'occasion de périodes traditionnellement chargées comme les fêtes de fin d'année). Le recours à ce type de contrat doit rester dans le cadre des dispositions de la présente convention, ou de celles des accords d'entreprise et doit faire l'objet d'un suivi par les partenaires sociaux dans l'entreprise pour vérifier que leur utilisation reste bien celle prévue par le présent article.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524048"
+      >
+        Titre IV Salaires et primes
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524085"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524085"
+      >
+        Prime de transport
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Lorsqu'une société créera un entrepôt dans une localité excentrée par rapport au siège social, elle pourra examiner, avec les représentants du personnel, les conditions dans lesquelles il sera accordé au personnel travaillant dans ces entrepôts une prime de transport dont les modalités seront déterminées par accord entre la direction et les représentants du personnel.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524049"
+      >
+        Titre V Modification du contrat de travail
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524088"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524088"
+      >
+        (supprimé)
+      </h5>
+      <div
+        class="c11"
+      />
+      <h3
+        class="c8"
+        id="KALISCTA000038524050"
+      >
+        Titre VI Durée du travail
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524094"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524094"
+      >
+        Temps de pause. – Pause casse-croûte
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="center"
+        >
+          26.I. Temps de pause
+        </p>
+        <p
+          align="left"
+        >
+          Aucun temps de travail quotidien ne peut atteindre 6 heures consécutives sans que le salarié bénéficie d'un temps de pause de 20 minutes consécutives. Ce dernier ne sera rémunéré que si le salarié ne peut vaquer librement à ses occupations et demeure sous les directives de l'employeur.
+        </p>
+        <p
+          align="center"
+        >
+          26.II. Pause casse-croûte
+        </p>
+        <p
+          align="left"
+        >
+          Le personnel travaillant pendant 8 heures consécutives bénéficiera d'une pause casse-croûte de 1 demi-heure prise sur le temps de travail ; en outre, il sera attribué à ce personnel une prime de panier égale à 1 demi-heure du salaire horaire d'un salarié qui ne pourra être inférieur au Smic ou un avantage en nature équivalent.
+        </p>
+        <p
+          align="left"
+        >
+          Les avantages de même nature supérieurs aux dispositions précédentes restent acquis.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524051"
+      >
+        Titre VII Congés payés. – Congés pour événements familiaux. – Congés d'ancienneté
+      </h3>
+      <h4
+        class="c9"
+        id="KALISCTA000038524095"
+      >
+        Chapitre Ier Congés payés
+      </h4>
+      <h4
+        class="c9"
+        id="KALIARTI000038524162"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524162"
+      >
+        Indemnité de congés payés
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          L'indemnité de congé est calculée sur la base de la rémunération totale définie à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006902659&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L3141-22 (V)"
+          >
+            article L. 3141-22 du code du travail
+          </a>
+           perçue par le salarié au cours de la période prise en considération pour l'application de son droit au congé.
+        </p>
+        <p
+          align="left"
+        >
+          Cette indemnité se calcule sur la base de 1/10 de la rémunération perçue au cours de la période de référence.
+        </p>
+        <p
+          align="left"
+        >
+          En aucun cas cette indemnité ne peut être inférieure au salaire que le travailleur aurait perçu s'il avait continué à travailler normalement pendant la période de son congé, en raison, tout à la fois, du salaire gagné pendant la période précédant le congé et la durée du travail effectif contractuel de l'établissement.
+        </p>
+        <p
+          align="left"
+        >
+          Dans la fixation de l'indemnité de congé, il doit être tenu compte de tous les avantages accessoires et des avantages en nature dont les travailleurs ne continueraient pas à jouir pendant la durée du congé.
+        </p>
+        <p
+          align="left"
+        >
+          Quand un salarié part en congé, il peut, avant son départ, demander, au moins 8 jours à l'avance, à percevoir, outre le salaire qui lui est dû à cette date, ses indemnités de congés payés.
+        </p>
+      </div>
+      <h4
+        class="c9"
+        id="KALISCTA000038524096"
+      >
+        Chapitre II Congés pour événements familiaux et congé d'ancienneté
+      </h4>
+      <h4
+        class="c9"
+        id="KALIARTI000038524167"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524167"
+      >
+        Congé d'ancienneté
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          La durée des congés d'ancienneté est de :
+          <br />
+          
+– 1 jour après 20 ans de services coopératifs ;
+          <br />
+          
+– 2 jours après 25 ans de services coopératifs ;
+          <br />
+          
+– 3 jours après 30 ans de services coopératifs.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524052"
+      >
+        Titre VIII Maladie et accident. – Maternité. – Accident du travail
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524104"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524104"
+      >
+        Dispositions générales
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          1° Dans tous les cas prévus aux articles 35, 36, 37, quand l'intéressé a épuisé son droit à allocation pendant une période de 12 mois consécutifs, la reconduction de ce droit est subordonnée à une reprise effective et continue du travail pendant 3 mois au moins.
+        </p>
+        <p
+          align="left"
+        >
+          2° La garantie de salaire prévue ci-dessus sera payée sous déduction
+        </p>
+        <p
+          align="left"
+        >
+          a) De la valeur des prestations en espèces auxquelles l'intéressé a droit du fait de la sécurité sociale ou de tout autre régime de prévoyance auquel l'employeur participe et pour la quotité correspondant à ses versements ;
+        </p>
+        <p
+          align="left"
+        >
+          b) Des indemnités versées par les responsables de l'accident ou leurs assureurs au titre de pertes de salaires.
+        </p>
+        <p
+          align="left"
+        >
+          Les différentes prestations devront faire l'objet d'une déclaration justifiée de l'intéressé.
+        </p>
+        <p
+          align="left"
+        >
+          À défaut, la société se réserve le droit de ne plus appliquer les dispositions du présent article.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524053"
+      >
+        Titre IX Suspension du contrat de travail
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524107"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524107"
+      >
+        Démission pour élever un enfant et congé parental d'éducation
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="center"
+        >
+          41.I. Démission pour élever un enfant
+        </p>
+        <p
+          align="left"
+        >
+          Pour élever son enfant, tout(e) salarié(e) peut, sous réserve d'en informer son employeur par lettre recommandée avec demande d'avis de réception au moins 15 jours à l'avance, résilier son contrat de travail à l'issue du congé de maternité ou d'adoption ou, le cas échéant, 2 mois après la naissance ou l'arrivée au foyer de l'enfant, sans être tenu de respecter le délai de préavis, ni de payer de ce fait une indemnité de rupture.
+        </p>
+        <p
+          align="left"
+        >
+          Le (la) salarié(e) peut, dans l'année suivant la rupture de son contrat de travail, solliciter dans les mêmes formes, son réembauchage ; l'employeur est alors tenu pendant 1 an, de l'embaucher par priorité dans les emplois auxquels sa qualification lui permet de prétendre et de lui accorder en cas de réemploi, le bénéfice de tous les avantages qu'il (elle) avait acquis au moment de son départ.
+        </p>
+        <p
+          align="center"
+        >
+          41.II. Congé parental d'éducation
+        </p>
+        <p
+          align="left"
+        >
+          Le congé parental d'éducation est un droit dont les conditions sont fixées par la loi.
+        </p>
+        <p
+          align="center"
+        >
+          41.III. Congé de présence parentale
+        </p>
+        <p
+          align="left"
+        >
+          Le congé de présence parentale est accordé dans les conditions prévues par la loi, afin de permettre à un père ou une mère d'assurer une présence soutenue ou des soins permanents à un enfant de moins de 20 ans victime d'une maladie, d'un handicap ou d'un accident grave.
+        </p>
+        <p
+          align="left"
+        >
+          À l'issue de son congé, le/la salarié(e) doit retrouver son précédent emploi ou un emploi similaire assorti d'une rémunération au moins équivalente.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524054"
+      >
+        Titre X Rupture du contrat de travail
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524110"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524110"
+      >
+        Gratification de fin de carrière
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          Lors de leur départ en retraite volontaire, les salariés visés par la présente convention recevront une gratification de fin de carrière égale à :
+          <br />
+          
+– 1 mois de salaire pour 10 ans de services coopératifs ;
+          <br />
+          
+– 2 mois de salaire pour 15 ans de services coopératifs ;
+          <br />
+          
+– 3 mois de salaire pour 20 ans de services coopératifs.
+        </p>
+        <p
+          align="left"
+        >
+          Après 20 ans de services coopératifs, la gratification est égale à 3 mois de salaire plus 1/5 de mois de salaire au-delà de 20 ans par année de présence continue.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524055"
+      >
+        Titre XI Dispositions particulières aux jeunes et à l'égalité entre hommes et femmes
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524112"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524112"
+      >
+        Égalité professionnelle. – Égalité de traitement
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          Les employeurs s'engagent à respecter les dispositions législatives relatives à l'égalité de rémunération entre les hommes et les femmes. Ils s'interdisent en conséquence de prendre des décisions concernant les relations du travail, notamment l'emploi, les rémunérations, l'exécution du contrat de travail d'un salarié en considération du sexe ou de la situation de famille ou sur la base de critères de choix différents selon le sexe ou la situation de famille.
+        </p>
+        <p
+          align="left"
+        >
+          En particulier, tout employeur est tenu d'assurer pour un même travail ou un travail de valeur égale, l'égalité de rémunération entre les hommes et les femmes et ce, conformément aux 
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006902817&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L3221-1 (V)"
+          >
+            dispositions des articles L. 3221-1 et suivants du code du travail
+          </a>
+          .
+        </p>
+        <p
+          align="left"
+        >
+          Il est précisé en outre qu'aucun salarié ne peut être sanctionné ou licencié en raison de son origine, de son sexe, de sa situation de famille, de son appartenance à une ethnie, une nation ou une race, de ses opinions politiques, de ses activités syndicales ou mutualistes, de l'exercice normal du droit de grève ou de ses convictions religieuses.
+        </p>
+        <p
+          align="left"
+        >
+          Un bilan sera réalisé chaque année lors de la négociation annuelle à partir des éléments contenus dans les bilans sociaux.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524056"
+      >
+        Titre XII Hygiène, sécurité et santé au travail. – Services de santé au travail
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524117"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524117"
+      >
+        Visite des chauffeurs
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          La société remboursera intégralement sur justification, le coût des visites périodiques prévues pour les chauffeurs par le 
+          <a
+            href="/affichCode.do?cidTexte=LEGITEXT000006074228&dateTexte=&categorieLien=cid"
+            title="Code de la route. (V)"
+          >
+            code de la route
+          </a>
+           et le temps passé à ces visites médicales.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524057"
+      >
+        Titre XIII Dispositions générales relatives à l'emploi
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524127"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <h5
+        id="KALIARTI000038524127"
+      >
+        Préavis
+      </h5>
+      <div
+        class="c11"
+      >
+        <p
+          align="left"
+        >
+          <br />
+          Le salarié congédié dans le cadre d'un licenciement collectif résultant de fusions, mutations, concentrations, décentralisation ou d'opérations de modernisation, et qui a trouvé un nouvel emploi en cours de préavis, pourra quitter la société sans avoir à payer l'indemnité de préavis correspondant à la partie non exécutée de son préavis et en conservant le bénéfice de son indemnité de licenciement légale ou conventionnelle.
+          <br />
+          Les heures de l'article 42.III pour recherche d'emploi pourront être utilisées en une seule fois.
+          <br />
+          La prise en charge par Pôle emploi des salariés licenciés et l'application à ces salariés des dispositions du régime d'assurance chômage doivent être facilitées par les coopératives régionales qui assurent à cet effet tous les contacts nécessaires avec les agences de Pôle emploi compétentes.
+          <br />
+          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'article L. 2231-6 et suivants du code de travail.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALIARTI000038531122"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c11"
+      >
+        <p>
+          Cette 21e édition de la CCN du 20 avril 1956 fera l'objet des formalités de dépôt prévues à l'
+          <a
+            href="/affichCodeArticle.do?cidTexte=LEGITEXT000006072050&idArticle=LEGIARTI000006901675&dateTexte=&categorieLien=cid"
+            title="Code du travail - art. L2231-6 (V)"
+          >
+            article L. 2231-6
+          </a>
+           et suivants du code de travail.
+        </p>
+      </div>
+      <h3
+        class="c8"
+        id="KALISCTA000038524058"
+      >
+        Annexes
+      </h3>
+      <h4
+        class="c9"
+        id="KALIARTI000038524128"
+      />
+      <div
+        class="c10"
+      >
+        Article non étendu
+      </div>
+      <div
+        class="c11"
+      >
+        <p>
+          Annexes 
+        </p>
+        <p>
+          1) 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000030160120&idSectionTA=KALISCTA000030185297&categorieLien=cid"
+            title="Convention collective du 16 octobre 2014 (20e é... -  Annexe II (VNE)"
+          >
+            Additif fixant les conditions de travail des cadres et assimilés du 16 octobre 2014
+          </a>
+          .
+        </p>
+        <p>
+          2) 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000030160120&idSectionTA=KALISCTA000030185289&categorieLien=cid"
+            title="Convention collective du 16 octobre 2014 (20e é... -  Annexe I (VNE)"
+          >
+            Additif fixant les conditions de travail des agents de maîtrise du 16 octobre 2014
+          </a>
+          .
+        </p>
+        <p>
+          3) Classifications et rémunérations : 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000037351516&categorieLien=cid"
+            title="Classifications (VNE)"
+          >
+            accord du 25 janvier 2018
+          </a>
+          .
+        </p>
+        <p>
+          4) Formation professionnelle et OPCA de la branche : 
+          <br />
+          – 
+          <a
+            (vne)'=""
+            emploi=""
+            et=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000031254741&categorieLien=cid"
+            parcours=""
+            professionnels=""
+            title="Formation, sécurisation de l"
+          >
+            accord du 25 juin 2015 : relatif à la formation, à la sécurisation de l'emploi et aux parcours professionnels 
+          </a>
+          ; 
+          <br />
+          – accord du 30 octobre 2018 : choix de l'OPCO. 
+        </p>
+        <p>
+          5) Aménagement du temps de travail : 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000029131285&categorieLien=cid"
+            title="Temps partiel (VNE)"
+          >
+            accord du 13 février 2014 sur temps partiels 
+          </a>
+          ; 
+          <br />
+          – 
+          <a
+            (vne)'=""
+            encadrement=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000032748802&categorieLien=cid"
+            title="Forfaits jours de l"
+          >
+            accord du 28 janvier 2016 sur les forfaits jours
+          </a>
+          . 
+        </p>
+        <p>
+          6) Autres accords : 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000023589738&categorieLien=cid"
+            title="Prévention du stress et des facteurs psychosociaux (VNE)"
+          >
+            accord du 9 juillet 2010 sur le stress 
+          </a>
+          ; 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000034156917&categorieLien=cid"
+            title="Egalité professionnelle entre les femmes et les hommes (VNE)"
+          >
+            accord du 27 octobre 2016 sur l'égalité professionnelle
+          </a>
+          . 
+        </p>
+        <p>
+          7) Prévoyance et frais de santé : 
+          <br />
+          – accord du 25 juin 2015 sur les frais de santé ; 
+          <br />
+          – 
+          <a
+            (vne)'=""
+            cadres=""
+            de=""
+            href="/affichIDCC.do?cidTexte=KALITEXT000034156892&categorieLien=cid"
+            les=""
+            pour=""
+            retraite=""
+            régime=""
+            surcomplémentaire=""
+            title="Création d"
+            un=""
+          >
+            accord du 27 octobre 2016 article 83 pour les cadres
+          </a>
+          . 
+        </p>
+        <p>
+          Rappel : 
+          <br />
+          Les accords suivants ne sont pas repris en annexe de la présente édition de la CCN. Toutefois, les partenaires sociaux tiennent à rappeler l'importance qu'ont pu avoir ces accords dans les relations sociales de la branche : 
+          <br />
+          – accord-cadre du 6 février 2002 sur les CQP ; 
+          <br />
+          – accord du 6 avril 2006 sur l'observatoire ; 
+          <br />
+          – cahier des charges des CQP du 16 mai 2006 ; 
+          <br />
+          – accord du 21 juin 2006 sur le CQP boucher ; 
+          <br />
+          – accord du 21 juin 2006 sur le CQP poissonnier ; 
+          <br />
+          – accord du 1er avril 2011 sur le choix de l'OPCA ; 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000020314352&categorieLien=cid"
+            title="Emploi des personnes handicapées (VNE)"
+          >
+            accord du 5 novembre 2008 sur l'emploi des handicapés
+          </a>
+           ; 
+          <br />
+          – 
+          <a
+            href="/affichIDCC.do?cidTexte=KALITEXT000022425458&categorieLien=cid"
+            title="Développement de la GPEC (VNE)"
+          >
+            accord-cadre GPEC du 28 octobre 2009
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

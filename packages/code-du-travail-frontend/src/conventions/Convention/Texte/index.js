@@ -6,28 +6,30 @@ import Sidebar from "./Sidebar";
 import ContentWrapper from "./ContentWrapper";
 import styled from "styled-components";
 
-const Texte = ({ data, title }) => {
-  let rootSection = data;
+const Texte = ({ node, title }) => {
+  let rootSection = node;
   // skip the first content level if it's only a "wrapper"
   if (
-    rootSection.sections &&
-    rootSection.sections.length === 1 &&
-    rootSection.sections[0].sections
+    rootSection.children &&
+    rootSection.children.length === 1 &&
+    rootSection.children[0].children
   ) {
-    rootSection = data.sections[0];
+    rootSection = node.children[0];
   }
   return (
     <Wrapper>
-      <Sidebar data={rootSection} />
-      <ContentWrapper data={rootSection} title={title} />
+      <Sidebar node={rootSection} />
+      <ContentWrapper node={rootSection} title={title} />
     </Wrapper>
   );
 };
 
 Texte.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string,
-    sections: PropTypes.array
+  title: PropTypes.string,
+  node: PropTypes.shape({
+    type: PropTypes.string,
+    data: PropTypes.object,
+    children: PropTypes.array
   }).isRequired
 };
 

@@ -60,6 +60,9 @@
     "@testing-library/react": "^9.1.4"
   },
   "jest": {
+    "testMatch": [
+      "**/__tests__/**/*?(*.)+(test|spec).[jt]s?(x)"
+    ],
     "collectCoverageFrom": [
       "!src/**/*mock.js",
       "src/**/*.js"

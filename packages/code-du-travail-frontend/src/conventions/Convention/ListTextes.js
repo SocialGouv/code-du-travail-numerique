@@ -14,8 +14,7 @@ const ListTextes = ({ conventionId, typeTextes }) => {
   const getTextes = useCallback(async () => {
     setIsLoaded(false);
     const textesContainer = await getConventionTextes(conventionId, typeTextes);
-
-    setTextes(textesContainer.sections || []);
+    setTextes(textesContainer.content.children || []);
     setIsLoaded(true);
   }, [conventionId, typeTextes]);
 
@@ -25,24 +24,29 @@ const ListTextes = ({ conventionId, typeTextes }) => {
 
   if (!isLoaded) return <div>chargement ...</div>;
 
-  if (selectedTexte)
+  if (selectedTexte) {
     return (
       <>
         <Button onClick={() => setSelectedTexte(null)}>
           &lt; Retour à la liste des textes
         </Button>
         <h2>{selectedTexte.titrefull}</h2>
-        <Texte data={selectedTexte} title={selectedTexte.title} />
+        <Texte node={selectedTexte} title={selectedTexte.data.title} />
       </>
     );
+  }
 
-  if (!textes.length) return <div>Aucun texte</div>;
+  if (!textes.length) {
+    return <div>Aucun texte</div>;
+  }
 
   return (
     <ul>
       {textes.map(texte => (
-        <li key={texte.id}>
-          <Button onClick={() => setSelectedTexte(texte)}>{texte.title}</Button>
+        <li key={texte.data.id}>
+          <Button onClick={() => setSelectedTexte(texte)}>
+            {texte.data.title}
+          </Button>
         </li>
       ))}
     </ul>

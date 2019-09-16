@@ -5,18 +5,17 @@ import styled from "styled-components";
 import Content from "./Content";
 import { Section, theme } from "@cdt/ui-old";
 
-const ContentWrapper = ({ data, title }) => {
+const ContentWrapper = ({ node, title }) => {
   return (
     <StyledSection>
       {title && <H2>{title}</H2>}
-      <Content depth={0} data={data} />
+      <Content depth={0} node={node} />
     </StyledSection>
   );
 };
 
 ContentWrapper.propTypes = {
-  data: PropTypes.object.isRequired,
-  title: PropTypes.string
+  node: PropTypes.object.isRequired
 };
 
 export default ContentWrapper;

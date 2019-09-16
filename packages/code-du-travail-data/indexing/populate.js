@@ -3,6 +3,7 @@ import crypto from "crypto";
 import { logger } from "./logger";
 import slugify from "../slugify";
 import { selectAll } from "unist-util-select";
+import find from "unist-util-find";
 
 const SOURCES = {
   CCN: "conventions_collectives",
@@ -69,13 +70,13 @@ function getDuplicateSlugs(allDocuments) {
 function* cdtnDocumentsGen() {
   logger.info("=== Conventions Collectives ===");
   yield require("@socialgouv/kali-data/data/index.json").map(
-    ({ titre, num, id }) => ({
+    ({ id, num, title }) => ({
       source: SOURCES.CCN,
       id,
       idcc: num,
-      title: titre,
-      slug: slugify(`${num}-${titre}`.substring(0, 80)),
-      text: `IDCC ${num} ${titre}`,
+      title,
+      slug: slugify(`${num}-${title}`.substring(0, 80)),
+      text: `IDCC ${num} ${title}`,
       url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
     })
   );
@@ -282,46 +283,60 @@ function* cdtnCcnGen(list, batchSize = 10000000) {
   let buffer = [];
   let bufferSize = 0;
 
-  for (const { id } of list) {
+  for (const { id, shortTitle, date_publi, url } of list) {
     const jsonPath = `@socialgouv/kali-data/data/${id}.json`;
-    const { sections, ...ccContent } = require(jsonPath);
-    const texteDeBase = sections[0];
-    const textesAttaches = sections.find(
-      section => section.title === "Textes Attachés"
+    const tree = require(jsonPath);
+    const {
+      data: { num, title, categorisation }
+    } = tree;
+    const texteDeBase = find(tree, node =>
+      node.data.title.startsWith("Texte de base")
     );
-    const texteSalaires = sections.find(
-      section => section.title === "Textes Salaires"
+    const textesAttaches = find(
+      tree,
+      node => node.data.title === "Textes Attachés"
+    );
+    const texteSalaires = find(
+      tree,
+      node => node.data.title === "Textes Salaires"
     );
     const data = [];
-
-    data.push({
-      ...ccContent,
-      texteDeBase,
+    const meta = {
+      idcc: num,
+      title,
+      shortTitle,
+      date_publi,
+      categorisation,
       conventionId: id,
-      type: conventionTextType.BASE
+      url
+    };
+    data.push({
+      ...meta,
+      type: conventionTextType.BASE,
+      content: texteDeBase
     });
 
     if (textesAttaches) {
       data.push({
-        ...textesAttaches,
-        id: `${id}-attaches`,
-        conventionId: id,
-        type: conventionTextType.ATTACHED
+        ...meta,
+        title: textesAttaches.data.title,
+        type: conventionTextType.ATTACHED,
+        content: textesAttaches
       });
     }
     if (texteSalaires) {
       data.push({
-        ...texteSalaires,
-        id: `${id}-salaires`,
-        conventionId: id,
-        type: conventionTextType.SALARY
+        ...meta,
+        title: texteSalaires.data.title,
+        type: conventionTextType.SALARY,
+        content: texteSalaires
       });
     }
 
     const jsonSize = JSON.stringify(data).length;
 
     if (bufferSize + jsonSize >= batchSize) {
-      console.log(`batch max size ${bufferSize}`);
+      logger.debug(`batch max size ${bufferSize}`);
       yield buffer;
       buffer = [].concat(data);
       bufferSize = jsonSize;

@@ -30,7 +30,6 @@ class ConventionCollective extends React.Component {
       return { statusCode: responseContainer.status };
     }
     const container = await responseContainer.json().then(data => data._source);
-
     return { convention, container };
   }
 
@@ -56,7 +55,7 @@ class ConventionCollective extends React.Component {
           footer="Informations fournies par la DILA"
           wide
         >
-          <Convention convention={convention} container={container} />
+          <Convention container={container} />
         </Answer>
       </PageLayout>
     );

@@ -1,15 +1,12 @@
 import React from "react";
 import { render, fireEvent, wait } from "@testing-library/react";
 
-import ListTextes from "../Convention/ListTextes";
-import {
-  containerAndTexteDeBase,
-  textesSalaires
-} from "./api.conventions.mock";
+import ListTextes from "../ListTextes";
+import { textesSalaires } from "../../__tests__/api.conventions.mock";
 
 jest.mock("isomorphic-unfetch");
 import fetch from "isomorphic-unfetch";
-import { fetchResponse } from "../../../test/mockFetch";
+import { fetchResponse } from "../../../../test/mockFetch";
 
 /**
  * TODO: mock response so snapshot show real ui, but we have
@@ -22,7 +19,7 @@ describe("<ListTextes />", () => {
   it("renders a list of textes", async () => {
     const { container } = render(
       <ListTextes
-        conventionId={containerAndTexteDeBase.id}
+        conventionId={textesSalaires.conventionId}
         typeTextes={"salaires"}
       />
     );
@@ -33,7 +30,7 @@ describe("<ListTextes />", () => {
   it("renders a text", async () => {
     const { container, getByText } = render(
       <ListTextes
-        conventionId={containerAndTexteDeBase.id}
+        conventionId={textesSalaires.conventionId}
         typeTextes={"salaires"}
       />
     );
