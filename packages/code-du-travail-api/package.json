@@ -41,7 +41,7 @@
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.10.0",
     "@zeit/ncc": "^0.20.5",
-    "eslint": "^6.3.0",
+    "eslint": "^6.4.0",
     "nodemon": "^1.19.2",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
