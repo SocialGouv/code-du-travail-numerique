@@ -3,7 +3,7 @@ import glossary from "@cdt/data...glossary/glossary.data.json";
 import Link from "next/link";
 
 import styled from "styled-components";
-import { Container, Section } from "@cdt/ui-old";
+import { List, ListItem, Container, Section, theme } from "@cdt/ui-old";
 
 import Search from "../../src/search/Search";
 import { PageLayout } from "../../src/layout/PageLayout";
@@ -74,18 +74,32 @@ function Glossary({ letters }) {
 }
 
 function GlossaryNavigation({ letters }) {
-  return letters.map(({ letter, terms }) => {
-    if (terms.length > 0) {
-      return (
-        <a key={`letter-${letter}`} href={`#ancre-${letter}`}>
-          {letter}
-        </a>
-      );
-    }
-    return <span key={`letter-${letter}`}>{letter}</span>;
-  });
+  return (
+    <List>
+      {letters.map(({ letter, terms }) => {
+        if (terms.length > 0) {
+          return (
+            <Item key={`letter-${letter}`}>
+              <a href={`#ancre-${letter}`}>{letter}</a>
+            </Item>
+          );
+        }
+        return (
+          <Item key={`letter-${letter}`}>
+            <span>{letter}</span>
+          </Item>
+        );
+      })}
+    </List>
+  );
 }
+const { spacing, fonts } = theme;
 
 const Title = styled.h1`
   text-align: center;
+`;
+const Item = styled(ListItem)`
+  display: inline-block;
+  padding: ${spacing.tiny};
+  font-size: ${fonts.sizeH5};
 `;

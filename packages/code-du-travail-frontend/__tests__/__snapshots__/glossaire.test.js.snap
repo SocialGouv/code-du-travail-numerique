@@ -13,7 +13,7 @@ exports[`<Glossaire /> should render 1`] = `
   border: 0;
 }
 
-.c33 {
+.c24 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -48,7 +48,7 @@ exports[`<Glossaire /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c27 {
+.c29 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -56,11 +56,11 @@ exports[`<Glossaire /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c27 > *:first-child {
+.c29 > *:first-child {
   margin-top: 0;
 }
 
-.c27 > *:last-child {
+.c29 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -73,7 +73,7 @@ exports[`<Glossaire /> should render 1`] = `
   padding: 1.25rem 0;
 }
 
-.c28 {
+.c30 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -95,13 +95,13 @@ exports[`<Glossaire /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c28:not([disabled]):hover,
-.c28:not([disabled]):focus {
+.c30:not([disabled]):hover,
+.c30:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c28:not([disabled]):active {
+.c30:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -109,7 +109,7 @@ exports[`<Glossaire /> should render 1`] = `
   outline: none;
 }
 
-.c28[aria-pressed="true"] {
+.c30[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -118,16 +118,16 @@ exports[`<Glossaire /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c28[aria-pressed="true"]:not([disabled]):hover,
-.c28[aria-pressed="true"]:not([disabled]):focus {
+.c30[aria-pressed="true"]:not([disabled]):hover,
+.c30[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c28[aria-pressed="true"]:not([disabled]):active {
+.c30[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c28[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -363,16 +363,16 @@ exports[`<Glossaire /> should render 1`] = `
   text-decoration: none;
 }
 
-.c25 {
+.c27 {
   text-align: center;
 }
 
-.c26 {
+.c28 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c29 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -383,26 +383,32 @@ exports[`<Glossaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c31 + .c30 {
+.c33 + .c32 {
   padding-left: 1rem;
 }
 
-.c32 {
+.c34 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c34 {
+.c35 {
   margin: 0.5rem 0;
 }
 
-.c34 a,
-.c34 a:visited {
+.c35 a,
+.c35 a:visited {
   color: #434956;
 }
 
 .c23 {
   text-align: center;
+}
+
+.c25 {
+  display: inline-block;
+  padding: 0.25rem;
+  font-size: 1.125rem;
 }
 
 @media print {
@@ -420,7 +426,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
-  .c27 {
+  .c29 {
     max-width: 100%;
     padding: 0;
   }
@@ -468,13 +474,13 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media print {
-  .c24 {
+  .c26 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c29 {
+  .c31 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -482,7 +488,7 @@ exports[`<Glossaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c31 + .c30 {
+  .c33 + .c32 {
     padding-left: 0;
   }
 }
@@ -683,128 +689,236 @@ exports[`<Glossaire /> should render 1`] = `
         >
           Glossaire
         </h1>
-        <a
-          href="#ancre-A"
+        <ul
+          class="c24"
         >
-          A
-        </a>
-        <a
-          href="#ancre-B"
-        >
-          B
-        </a>
-        <a
-          href="#ancre-C"
-        >
-          C
-        </a>
-        <a
-          href="#ancre-D"
-        >
-          D
-        </a>
-        <a
-          href="#ancre-E"
-        >
-          E
-        </a>
-        <a
-          href="#ancre-F"
-        >
-          F
-        </a>
-        <a
-          href="#ancre-G"
-        >
-          G
-        </a>
-        <a
-          href="#ancre-H"
-        >
-          H
-        </a>
-        <a
-          href="#ancre-I"
-        >
-          I
-        </a>
-        <a
-          href="#ancre-J"
-        >
-          J
-        </a>
-        <span>
-          K
-        </span>
-        <a
-          href="#ancre-L"
-        >
-          L
-        </a>
-        <a
-          href="#ancre-M"
-        >
-          M
-        </a>
-        <a
-          href="#ancre-N"
-        >
-          N
-        </a>
-        <a
-          href="#ancre-O"
-        >
-          O
-        </a>
-        <a
-          href="#ancre-P"
-        >
-          P
-        </a>
-        <a
-          href="#ancre-Q"
-        >
-          Q
-        </a>
-        <a
-          href="#ancre-R"
-        >
-          R
-        </a>
-        <a
-          href="#ancre-S"
-        >
-          S
-        </a>
-        <a
-          href="#ancre-T"
-        >
-          T
-        </a>
-        <a
-          href="#ancre-U"
-        >
-          U
-        </a>
-        <a
-          href="#ancre-V"
-        >
-          V
-        </a>
-        <span>
-          W
-        </span>
-        <span>
-          X
-        </span>
-        <span>
-          Y
-        </span>
-        <a
-          href="#ancre-Z"
-        >
-          Z
-        </a>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-A"
+            >
+              A
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-B"
+            >
+              B
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-C"
+            >
+              C
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-D"
+            >
+              D
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-E"
+            >
+              E
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-F"
+            >
+              F
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-G"
+            >
+              G
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-H"
+            >
+              H
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-I"
+            >
+              I
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-J"
+            >
+              J
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <span>
+              K
+            </span>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-L"
+            >
+              L
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-M"
+            >
+              M
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-N"
+            >
+              N
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-O"
+            >
+              O
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-P"
+            >
+              P
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-Q"
+            >
+              Q
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-R"
+            >
+              R
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-S"
+            >
+              S
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-T"
+            >
+              T
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-U"
+            >
+              U
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-V"
+            >
+              V
+            </a>
+          </li>
+          <li
+            class="c25"
+          >
+            <span>
+              W
+            </span>
+          </li>
+          <li
+            class="c25"
+          >
+            <span>
+              X
+            </span>
+          </li>
+          <li
+            class="c25"
+          >
+            <span>
+              Y
+            </span>
+          </li>
+          <li
+            class="c25"
+          >
+            <a
+              href="#ancre-Z"
+            >
+              Z
+            </a>
+          </li>
+        </ul>
         <div>
           <h2
             id="ancre-A"
@@ -2834,25 +2948,25 @@ exports[`<Glossaire /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c24"
+    class="c26"
   >
     <div
       class="c21"
     >
       <div
-        class="c25 c1"
+        class="c27 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c26 c27"
+          class="c28 c29"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
           aria-pressed="false"
-          class="c28"
+          class="c30"
         >
           Contacter les services de renseignement
         </button>
@@ -2862,21 +2976,21 @@ exports[`<Glossaire /> should render 1`] = `
       class="c21"
     >
       <div
-        class="c29 c1"
+        class="c31 c1"
       >
         <div
-          class="c30 c31"
+          class="c32 c33"
         >
           <h3
-            class="c32"
+            class="c34"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c33"
+            class="c24"
           >
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="/droit-du-travail"
@@ -2885,7 +2999,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="/a-propos"
@@ -2894,7 +3008,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="/mentions-legales"
@@ -2903,7 +3017,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -2914,18 +3028,18 @@ exports[`<Glossaire /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c30 c31"
+          class="c32 c33"
         >
           <h3
-            class="c32"
+            class="c34"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c33"
+            class="c24"
           >
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -2936,7 +3050,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -2949,18 +3063,18 @@ exports[`<Glossaire /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c30 c31"
+          class="c32 c33"
         >
           <h3
-            class="c32"
+            class="c34"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c33"
+            class="c24"
           >
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -2971,7 +3085,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -2982,7 +3096,7 @@ exports[`<Glossaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c34"
+              class="c35"
             >
               <a
                 href="https://beta.gouv.fr/"
