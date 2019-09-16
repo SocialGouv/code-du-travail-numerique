@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const slugify = require("@cdt/data/slugify");
 
 const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
@@ -10,6 +11,7 @@ async function getGlossaire() {
   const items = await response.json();
   return items.data.map(({ title, abbrs, variants, definition, refs }) => ({
     title,
+    slug: slugify(title),
     abbrs,
     variants,
     definition,

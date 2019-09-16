@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js > glossary.json"
+    "start": "node index.js > glossary.data.json"
   },
   "dependencies": {
     "node-fetch": "^2.6.0"

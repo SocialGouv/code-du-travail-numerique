@@ -26,7 +26,12 @@ COPY ./packages/code-du-travail-data/dataset/datafiller/package.json /app/packag
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
 COPY ./packages/code-du-travail-data/dataset/preavis-demission/package.json /app/packages/code-du-travail-data/dataset/preavis-demission/package.json
+<<<<<<< HEAD
 COPY ./packages/sources/package.json /app/packages/sources/package.json
+||||||| merged common ancestors
+=======
+COPY ./packages/code-du-travail-data/dataset/glossary/package.json /app/packages/code-du-travail-data/dataset/glossary/package.json
+>>>>>>> feat(glossary): add glossary pages
 
 # PERF(douglasduteil): put packages that are more likely to change in order here
 # By order of "more likely to change" the frontend, the api, etc... are changing
