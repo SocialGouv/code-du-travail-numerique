@@ -1,15 +1,34 @@
-const getThemeMapping = require("./cdtnThemeSP.js");
+const themes = require("../datafiller/themes.data.json");
+const slugify = require("../../slugify");
 
 async function updateTheme(fiches) {
-  const themeMapping = await getThemeMapping();
   fiches.forEach(fiche => {
-    fiche.themeCdtn = themeMapping[fiche.id] || [];
+    const ficheUrl = `/fiche-service-public/${slugify(fiche.title)}`;
+    const theme = themes.find(theme =>
+      theme.refs.map(r => r.url).includes(ficheUrl)
+    );
+    fiche.themeSlug = theme && theme.slug;
+    fiche.breadcrumbs =
+      theme &&
+      (
+        (theme.breadcrumbs &&
+          theme.breadcrumbs.map(node => ({
+            title: node.title,
+            slug: node.slug
+          }))) ||
+        []
+      ).concat([
+        {
+          title: theme.title,
+          slug: theme.slug
+        }
+      ]);
   });
 }
 
 async function main() {
   const fiches = require("./fiches-sp-travail.json");
-  await updateTheme(fiches);
+  updateTheme(fiches);
   console.log(JSON.stringify(fiches, null, 2));
 }
 
