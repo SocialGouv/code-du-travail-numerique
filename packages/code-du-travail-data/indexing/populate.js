@@ -97,7 +97,7 @@ function* cdtnDocumentsGen() {
   }));
 
   logger.info("=== Fiches SP ===");
-  yield require("../dataset/fiches_service_public/fiches-sp-travail.json").map(
+  yield require("../dataset/fiches_service_public/fiches-sp.json").map(
     ({
       id,
       title,
@@ -126,7 +126,7 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Fiches MT ===");
-  yield require("../dataset/fiches_ministere_travail/fiches-min-travail.json").map(
+  yield require("../dataset/fiches_ministere_travail/fiches-mt.json").map(
     ({
       title,
       slug,

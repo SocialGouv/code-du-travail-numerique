@@ -1,4 +1,4 @@
-const fiches = require("./fiches-min-travail.json");
+const fiches = require("./fiches-mt.json");
 
 const hasNoTheme = fiche =>
   !fiche.breadcrumbs || fiche.breadcrumbs.length === 0;
