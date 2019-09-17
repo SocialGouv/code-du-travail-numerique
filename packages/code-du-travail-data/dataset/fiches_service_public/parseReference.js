@@ -22,7 +22,10 @@ const getTextType = qs => {
 
 // resolve article.num in LEGI extract
 const getArticleNumFromId = id => {
-  const article = find(cdt, node => node.data.id === id);
+  const article = find(
+    cdt,
+    node => node.type === "article" && node.data.id === id
+  );
   return article && article.data.num;
 };
 
