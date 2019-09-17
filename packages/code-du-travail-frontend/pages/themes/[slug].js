@@ -7,10 +7,10 @@ import { Alert, Container, Section, theme } from "@cdt/ui-old";
 import fetch from "isomorphic-unfetch";
 
 import Search from "../../src/search/Search";
-import { SearchQuery } from "../../src/search/SearchQuery";
+import { SearchResults } from "../../src/search/SearchResults";
+import { fetchSearchResults } from "../../src/search/search.service";
 
 import Themes from "../../src/home/Themes";
-import { searchResults } from "../../src/search/search.service";
 import { PageLayout } from "../../src/layout/PageLayout";
 import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
@@ -49,20 +49,36 @@ const getBreadcrumbs = (items = []) => {
 
 // Theme page
 class Theme extends React.Component {
-  static async getInitialProps({ query: { slug } }) {
-    const response = await fetch(`${API_URL}/themes${slug ? `/${slug}` : ""}`);
-    if (!response.ok) {
-      return { statusCode: response.status };
+  static async getInitialProps({ query: { slug: query } }) {
+    const [searchThemeResponse, searchResults] = await Promise.all([
+      fetch(`${API_URL}/themes${query ? `/${query}` : ""}`),
+      fetchSearchResults({
+        query,
+        excludeSources: "themes"
+      })
+    ]);
+    if (!searchThemeResponse.ok) {
+      return { statusCode: searchThemeResponse.status };
     }
-    const theme = await response.json();
+    const theme = await searchThemeResponse.json();
+
+    const { facets, hits: { hits: items } = { hits: [] } } = searchResults;
+
     return {
-      data: { theme }
+      theme,
+      searchResults: {
+        facets,
+        items
+      },
+      query
     };
   }
 
   render() {
     const {
-      data: { theme } = { theme: { children: [] } },
+      theme = { children: [] },
+      searchResults: { items } = { items: [] },
+      query,
       pageUrl,
       ogImage
     } = this.props;
@@ -92,12 +108,8 @@ class Theme extends React.Component {
         )}
         {!isRootTheme && (
           <Section>
-            <Container>
-              <SearchQuery
-                query={theme.label}
-                excludeSources="themes"
-                fetch={searchResults}
-              />
+            <Container narrow>
+              <SearchResults query={query} items={items} />
             </Container>
           </Section>
         )}

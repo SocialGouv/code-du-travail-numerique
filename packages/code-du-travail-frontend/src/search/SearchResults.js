@@ -2,129 +2,111 @@ import React from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { getRouteBySource, getLabelBySource } from "@cdt/sources";
+import { List, ListItem, theme } from "@cdt/ui-old";
 
-import { Alert, theme } from "@cdt/ui-old";
-import { getLabelBySource } from "@cdt/sources";
+import { SourceIcon } from "./SourceIcon";
 
-import { SearchResultList } from "./SearchResultList";
-import { Faceting } from "./Faceting";
-
-class SearchResults extends React.Component {
+class ListLink extends React.Component {
+  ref = React.createRef();
   static propTypes = {
-    query: PropTypes.string,
-    source: PropTypes.string,
-    results: PropTypes.shape({
-      snippet: PropTypes.shape({
-        html: PropTypes.string,
-        references: PropTypes.arrayOf(
-          PropTypes.shape({
-            url: PropTypes.string,
-            titre: PropTypes.string
-          })
-        )
-      }),
-      facets: PropTypes.array,
-      items: PropTypes.array
-    }).isRequired
+    focused: PropTypes.bool
   };
-
   static defaultProps = {
-    query: "",
-    source: "",
-    results: { facets: [], items: [] }
+    focused: false
   };
+  componentDidMount() {
+    if (this.ref.current && this.props.focused) {
+      this.ref.current.focus();
+    }
+  }
 
   render() {
-    const { results, query, source } = this.props;
-    // No results.
-    if (results.items.length === 0) {
-      return (
-        <Alert>
-          Nous n’avons pas trouvé de résultat pour votre recherche.
-          {source.length > 0 && (
-            <p>
-              Vous pouvez élargir la recherche en intégrant&nbsp;
-              <strong>
-                <Link
-                  href={{
-                    pathname: "/recherche",
-                    query: { q: query, source: "" }
-                  }}
-                >
-                  <a>les autres sources de documents</a>
-                </Link>
-              </strong>
-            </p>
-          )}
-        </Alert>
-      );
-    }
-    return (
-      <SearhResultLayout>
-        {results.facets.length > 0 && (
-          <Aside>
-            <Faceting data={results.facets} query={query} source={source} />
-          </Aside>
-        )}
-        <Content>
-          {results.snippet && (
-            <ResultSnippet>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: results.snippet.html
-                }}
-              />
-              {results.snippet.references && (
-                <SourceLink
-                  href={results.snippet.references[0].url}
-                  target="_blank"
-                  norel
-                  noopener
-                >
-                  {results.snippet.references[0].titre}
-                </SourceLink>
-              )}
-            </ResultSnippet>
-          )}
-          <h3>{source ? getLabelBySource(source) : "Questions et réponses"}</h3>
-          <SearchResultList items={results.items} query={query} />
-        </Content>
-      </SearhResultLayout>
-    );
+    return <A ref={this.ref} {...this.props} />;
   }
 }
 
-export default SearchResults;
+const SearchResults = ({ items = [], query }) => {
+  return (
+    <List>
+      {items.map(({ _id, _source: { source, slug, author, title } }, i) => (
+        <ListItem key={_id}>
+          <Link
+            href={{
+              pathname: `/${getRouteBySource(source)}/[slug]`,
+              query: { q: query, slug: slug }
+            }}
+            as={`/${getRouteBySource(source)}/${slug}?q=${query}`}
+            passHref
+          >
+            <ListLink focused={i === 0}>
+              <SourceIcon source={source} />
+              <Content>
+                <strong>{title.replace(/ \?/, " ?")}</strong>
+                <P>
+                  <Span>Source</Span>: <Span>{getLabelBySource(source)}</Span>
+                  {source && author ? " - " : null}
+                  <Value>{author}</Value>
+                </P>
+              </Content>
+            </ListLink>
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  );
+};
 
-const { breakpoints, colors, spacing, fonts, box } = theme;
+SearchResults.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      _source: PropTypes.shape({
+        title: PropTypes.string,
+        source: PropTypes.string,
+        slug: PropTypes.string
+      })
+    })
+  )
+};
 
-const SearhResultLayout = styled.div`
+export { SearchResults };
+
+const { colors, spacing, fonts, box } = theme;
+
+const A = styled.a`
   display: flex;
-  justify-content: space-between;
-  @media (max-width: ${breakpoints.mobile}) {
-    flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: ${box.borderRadius};
+  padding: ${spacing.base};
+  :link {
+    text-decoration: none;
   }
-`;
-
-const Aside = styled.div`
-  flex: 1 1 auto;
-  margin-right: ${spacing.base};
+  :hover {
+    border-color: ${colors.elementBorder};
+    background: ${colors.darkBackground};
+  }
+  :hover strong {
+    text-decoration: underline;
+  }
 `;
 
 const Content = styled.div`
-  flex: 1 1 65%;
+  padding-left: ${spacing.base};
 `;
-
-const ResultSnippet = styled.div`
-  border-radius: ${box.borderRadius};
-  background-color: ${colors.white};
-  padding: ${spacing.small};
-  margin-bottom: ${spacing.large};
-  p {
-    font-size: 1.1rem;
-  }
-`;
-
-const SourceLink = styled.a`
+const P = styled.p`
+  margin-bottom: 0;
   font-size: ${fonts.sizeSmall};
+`;
+
+const Span = styled.span`
+  font-weight: 700;
+  color: ${colors.darkerGrey};
+`;
+
+const Value = styled.span`
+  font-weight: 700;
+  text-transform: uppercase;
+  color: ${colors.grey};
 `;

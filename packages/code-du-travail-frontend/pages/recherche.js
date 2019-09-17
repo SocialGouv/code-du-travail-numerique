@@ -1,46 +1,39 @@
 import React from "react";
-import getConfig from "next/config";
 import Head from "next/head";
 import { withRouter } from "next/router";
-import fetch from "isomorphic-unfetch";
-import { Container, Section } from "@cdt/ui-old";
-import { getExcludeSources } from "@cdt/sources";
+import { Alert, Container, Section } from "@cdt/ui-old";
 
 import Search from "../src/search/Search";
+import { fetchSearchResults } from "../src/search/search.service";
+import { SearchResults } from "../src/search/SearchResults";
 import { PageLayout } from "../src/layout/PageLayout";
-import SearchResults from "../src/search/SearchResults";
+
 import Metas from "../src/common/Metas";
 
-const {
-  publicRuntimeConfig: { API_URL }
-} = getConfig();
-
 class SearchPage extends React.Component {
-  static async getInitialProps({ query }) {
-    const excludeSources = getExcludeSources(query.source);
-    const response = await fetch(
-      `${API_URL}/search?q=${query.q}&excludeSources=${excludeSources}`
-    );
-    if (!response.ok) {
-      return { statusCode: response.status };
-    }
+  static async getInitialProps({ query: { q: query } }) {
     const {
       facets,
-      snippet = {},
-      hits: { hits }
-    } = await response.json();
+      hits: { hits: items } = { hits: [] }
+    } = await fetchSearchResults({
+      query
+    });
     return {
-      data: {
+      searchResults: {
         facets,
-        snippet: snippet._source,
-        items: hits
+        items
       }
     };
   }
 
   render() {
-    const { router, data, pageUrl, ogImage } = this.props;
-    const { source = "", q = "" } = router.query;
+    const {
+      router,
+      searchResults: { items } = { items: [] },
+      pageUrl,
+      ogImage
+    } = this.props;
+    const { q: query = "" } = router.query;
     return (
       <PageLayout>
         <Head>
@@ -48,14 +41,23 @@ class SearchPage extends React.Component {
         </Head>
         <Metas
           url={pageUrl}
-          title={`${q} - Code du travail numérique`}
+          title={`${query} - Code du travail numérique`}
           description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
           image={ogImage}
         />
         <Search />
         <Section>
-          <Container>
-            <SearchResults query={q} results={data} source={source} />
+          <Container narrow>
+            {items.length === 0 ? (
+              <Alert>
+                Nous n’avons pas trouvé de résultat pour votre recherche.
+              </Alert>
+            ) : (
+              <>
+                <h1>{`Résultats pour "${query}"`}</h1>
+                <SearchResults items={items} query={query} />
+              </>
+            )}
           </Container>
         </Section>
       </PageLayout>
