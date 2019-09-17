@@ -11,11 +11,9 @@ const getSavedResult = (query, excludeSources = []) => {
     // apply source filters if any
     // build facets
     return {
-      hits: {
-        hits: knownQuery.refs.filter(
-          ref => !excludeSources.includes(ref._source.source)
-        )
-      },
+      items: knownQuery.refs.filter(
+        ref => !excludeSources.includes(ref._source.source)
+      ),
       facets: makeFacets(knownQuery.refs)
     };
   }

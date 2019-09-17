@@ -18,7 +18,7 @@ test("return 3 search results for demission from elastic if size = 3", async () 
     "/api/v1/search?q=démission&skipSavedResults&size=3"
   );
   expect(response.status).toBe(200);
-  expect(response.body.hits.hits.length).toBe(3);
+  expect(response.body.items.length).toBe(3);
 });
 
 test("return search results for demission from elastic", async () => {

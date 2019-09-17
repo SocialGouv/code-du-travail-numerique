@@ -4,8 +4,7 @@ import { fireEvent, render, waitForElement } from "@testing-library/react";
 import { fetchSuggestResults } from "../search.service";
 
 jest.mock("../search.service.js", () => ({
-  fetchSuggestResults: jest.fn(),
-  fetchSearchResults: jest.fn()
+  fetchSuggestResults: jest.fn()
 }));
 
 jest.mock("../../piwik", () => ({
@@ -15,7 +14,7 @@ jest.mock("../../piwik", () => ({
 const q = "foo";
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
-fetchSuggestResults.mockResolvedValue(Promise.resolve(suggestions));
+fetchSuggestResults.mockResolvedValue(suggestions);
 
 describe("<search />", () => {
   it("should render", () => {

@@ -62,14 +62,9 @@ class Theme extends React.Component {
     }
     const theme = await searchThemeResponse.json();
 
-    const { facets, hits: { hits: items } = { hits: [] } } = searchResults;
-
     return {
       theme,
-      searchResults: {
-        facets,
-        items
-      },
+      searchResults,
       query
     };
   }

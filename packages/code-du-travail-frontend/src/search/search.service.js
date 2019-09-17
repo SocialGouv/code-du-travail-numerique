@@ -34,7 +34,10 @@ const suggestMin = query =>
 // memoize search results
 const fetchSearchResultsMemoized = memoizee(fetchSearchResults, {
   promise: true,
-  primitive: true,
+  // make sure the params get serialized correctly so memoize works well
+  normalizer: function(args) {
+    return JSON.stringify(args[0]);
+  },
   length: 1 // ensure memoize work for function with es6 default params
 });
 

@@ -48,11 +48,7 @@ router.get("/search", async ctx => {
   const response = await elasticsearchClient.search({ index, body });
 
   ctx.body = {
-    hits: {
-      ...response.body.hits,
-      hits: response.body.hits.hits
-    },
-    facets: []
+    items: response.body.hits.hits
   };
 
   // facet data

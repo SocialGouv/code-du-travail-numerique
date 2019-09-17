@@ -12,17 +12,11 @@ import Metas from "../src/common/Metas";
 
 class SearchPage extends React.Component {
   static async getInitialProps({ query: { q: query } }) {
-    const {
-      facets,
-      hits: { hits: items } = { hits: [] }
-    } = await fetchSearchResults({
+    const searchResults = await fetchSearchResults({
       query
     });
     return {
-      searchResults: {
-        facets,
-        items
-      }
+      searchResults
     };
   }
 
