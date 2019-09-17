@@ -11,7 +11,11 @@ const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 const MAX_RESULTS = 10;
-//const timeout = 3000;
+const TIMEOUT = 3000;
+const timeout = setTimeout(() => {
+  controller.abort();
+}, TIMEOUT);
+const controller = new AbortController();
 const router = new Router({ prefix: API_BASE_URL });
 
 /**
@@ -48,12 +52,18 @@ router.get("/search", async ctx => {
   const [esResults, semResults] = await Promise.all([
     elasticsearchClient.search({ index, body }),
     fetch(
-      `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
+      `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`,
+      { signal: controller.signal }
     )
       .then(data => data.json())
-      .catch(() => {
-        console.log("NLP api request failed");
-        return [];
+      .catch(err => {
+        if (err.name === "AbortError") {
+          console.log("error was aborted after timeout");
+          return [];
+        }
+      })
+      .finally(() => {
+        clearTimeout(timeout);
       })
   ]);
 
