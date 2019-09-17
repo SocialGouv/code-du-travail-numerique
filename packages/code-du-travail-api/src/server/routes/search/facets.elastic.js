@@ -4,8 +4,7 @@ function getFacetsBody({ query }) {
     aggregations: {
       document_count: {
         terms: {
-          field: "source",
-          exclude: ["snippet"]
+          field: "source"
         }
       }
     },

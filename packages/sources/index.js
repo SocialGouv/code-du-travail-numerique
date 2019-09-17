@@ -7,7 +7,6 @@ const SOURCES = {
   TOOLS: "outils",
   LETTERS: "modeles_de_courriers",
   FAQ: "faq",
-  SNIPPET: "snippet",
   IDCC: "idcc",
   SHEET: "fiches",
   EXTERNALS: "external"
@@ -54,14 +53,8 @@ const getRouteBySource = src => routeBySource[src];
 const getSourceByRoute = slug =>
   sources.find(key => routeBySource[key] === slug);
 
-const getExcludeSources = value => {
-  if (Boolean(value) === false) return "";
-  return sources.filter(source => source.startsWith(value) === false).join(",");
-};
-
 module.exports = {
   SOURCES,
-  getExcludeSources,
   getLabelBySource,
   getRouteBySource,
   getSourceByRoute

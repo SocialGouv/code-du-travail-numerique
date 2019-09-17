@@ -5,8 +5,7 @@ function getSearchBody({ query, size, excludeSources = [] }) {
     aggregations: {
       bySource: {
         terms: {
-          field: "source",
-          include: "snippet"
+          field: "source"
         },
         aggs: {
           bySource: {

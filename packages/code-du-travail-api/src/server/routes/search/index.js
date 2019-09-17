@@ -40,35 +40,20 @@ router.get("/search", async ctx => {
     return;
   }
 
-  // we add 1 to maxResults in case we have a snippet document in the results
-  // we filter results to remove snippet document from main results
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
-  const body = getSearchBody({ query, size: size + 1, excludeSources });
+  const body = getSearchBody({ query, size, excludeSources });
   const facetBody = getFacetsBody({ query });
 
   // query data
   const response = await elasticsearchClient.search({ index, body });
-  const snippetIndex = response.body.hits.hits.findIndex(
-    item => item._source.source === "snippet"
-  );
+
   ctx.body = {
     hits: {
       ...response.body.hits,
       hits: response.body.hits.hits
-        .filter(item => item._source.source !== "snippet")
-        .slice(0, size)
     },
     facets: []
   };
-  // only add snippet if it's found in the returned results
-  if (
-    response.body.aggregations.bySource.buckets.length > 0 &&
-    snippetIndex > -1 &&
-    snippetIndex < size
-  ) {
-    const [snippetResults] = response.body.aggregations.bySource.buckets;
-    ctx.body.snippet = snippetResults.bySource.hits.hits[0];
-  }
 
   // facet data
   const facetResponse = await elasticsearchClient.search({
