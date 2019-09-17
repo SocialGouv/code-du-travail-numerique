@@ -11,7 +11,7 @@ const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 const MAX_RESULTS = 10;
-const timeout = 3000;
+//const timeout = 3000;
 const router = new Router({ prefix: API_BASE_URL });
 
 /**
@@ -46,7 +46,7 @@ router.get("/search", async ctx => {
   // query data
 
   const [esResults, semResults] = await Promise.all([
-    elasticsearchClient.search({ index, body, timeout }),
+    elasticsearchClient.search({ index, body }),
     fetch(
       `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
     )
