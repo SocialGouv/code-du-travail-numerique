@@ -33,7 +33,7 @@ router.get("/search", async ctx => {
 
   // shortcut ES if we find a known query
   const knownQueryResult =
-    !skipSavedResults && getSavedResult(query, excludeSources);
+    !skipSavedResults && (await getSavedResult(query, excludeSources));
 
   if (knownQueryResult) {
     ctx.body = knownQueryResult;

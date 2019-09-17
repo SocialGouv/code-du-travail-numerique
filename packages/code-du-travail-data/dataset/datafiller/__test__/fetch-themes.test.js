@@ -6,33 +6,33 @@ const requetes = [
       {
         url: "/code-du-travail/l1221-3",
         title: "Article L1221-3",
-        relevance: 5
+        position: 5
       },
       {
         url:
           "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
         title:
           "Conclusion du contrat de travail \u00e0 dur\u00e9e d\u00e9termin\u00e9e (CDD)",
-        relevance: 2
+        position: 2
       },
       {
         url: "/fiche-service-public/fiche-3",
         title: "Fiche 3",
-        relevance: 4
+        position: 4
       },
       {
         url: "/fiche-service-public/fiche-2",
         title: "Fiche 2",
-        relevance: 5
+        position: 5
       },
       {
         url:
           "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-        relevance: 5
+        position: 5
       },
       {
         url: "/some-unknown-source/test",
-        relevance: 5
+        position: 5
       }
     ],
     title: "title1",
@@ -44,18 +44,18 @@ const requetes = [
       {
         url: "/code-du-travail/l3221-3",
         title: "Article L3221-3",
-        relevance: 5
+        position: 5
       },
       {
         url: "/themes/theme1",
         title: "Thématique",
-        relevance: 1
+        position: 1
       },
       {
         url:
           "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
         title: "Le salaire : quelles sont les modalités de paiement ?",
-        relevance: 3
+        position: 3
       }
     ],
     theme: "theme2",
@@ -68,18 +68,18 @@ const requetes = [
       {
         url: "/code-du-travail/l3221-3",
         title: "Article L3221-3",
-        relevance: 5
+        position: 5
       },
       {
         url: "/themes/theme1",
         title: "Thématique",
-        relevance: 1
+        position: 1
       },
       {
         url:
           "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
         title: "Le salaire : quelles sont les modalités de paiement ?",
-        relevance: 3
+        position: 3
       }
     ],
     theme: "theme3",

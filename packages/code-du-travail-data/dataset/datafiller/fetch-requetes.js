@@ -1,11 +1,6 @@
 const fetch = require("node-fetch");
-const pLimit = require("p-limit");
 
-const elastic = require("./elastic");
-
-const { sortByKey, getVariants, sortRowRefs } = require("./utils");
-
-const limit = pLimit(5);
+const { sortByKey, sortRowRefs, getVariants, decodeHTML } = require("./utils");
 
 /*
  fetch raw datafiller requetes data, filter and sort properly
@@ -32,6 +27,29 @@ const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/req
 
 */
 
+// fetch title from remote url
+const getPageTitle = async url => {
+  const text = await fetch(url).then(r => r.text());
+  const matches = text.match(/<title>([^<]+)<\/title>/i);
+  if (matches) {
+    return decodeHTML(matches[1]);
+  }
+  return url;
+};
+
+const getTitle = item => {
+  if (item.title) {
+    return item.title;
+  }
+  if (item.url && item.url.match(/^https?:\/\//)) {
+    return getPageTitle(item.url);
+  }
+  return item.url;
+};
+
+const fixRefsTitles = refs =>
+  Promise.all(refs.map(async ref => ({ ...ref, title: await getTitle(ref) })));
+
 // import only valid data from datafiller
 // == has more than one ref
 const fetchAll = async () => {
@@ -39,22 +57,21 @@ const fetchAll = async () => {
     .then(res => res.json())
     .then(json => json.data);
 
-  const rowsWithRefs = requetes.filter(
-    item => item.refs && item.refs.length > 1
-  );
-  const sortedRows = rowsWithRefs.map(sortRowRefs).sort(sortByKey("title"));
-
-  const rowsWithEsResults = await Promise.all(
-    sortedRows.map(result =>
-      limit(async () => ({
-        ...result,
-        refs: await elastic.getReferences(result),
-        variants: getVariants(result)
+  const rows = await Promise.all(
+    requetes
+      .filter(item => item.refs && item.refs.length > 1)
+      // add title for external links
+      .map(async item => ({
+        ...item,
+        refs: await fixRefsTitles(item.refs),
+        variants: getVariants(item)
       }))
-    )
   );
 
-  return rowsWithEsResults;
+  const sortedRows = await rows
+    .map(sortRowRefs(node => -node.relevance))
+    .sort(sortByKey("title"));
+  return sortedRows;
 };
 
 module.exports = fetchAll;
