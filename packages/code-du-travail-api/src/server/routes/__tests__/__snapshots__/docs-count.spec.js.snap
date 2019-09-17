@@ -32,10 +32,6 @@ Object {
         "doc_count": 2,
         "key": "themes",
       },
-      Object {
-        "doc_count": 1,
-        "key": "snippet",
-      },
     ],
     "doc_count_error_upper_bound": 0,
     "sum_other_doc_count": 0,

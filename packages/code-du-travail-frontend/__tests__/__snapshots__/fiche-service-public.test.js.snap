@@ -13,7 +13,7 @@ exports[`<FicheSP /> should render 1`] = `
   border: 0;
 }
 
-.c48 {
+.c45 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -33,22 +33,22 @@ exports[`<FicheSP /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c25 {
+.c22 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c25 > *:first-child {
+.c22 > *:first-child {
   margin-top: 0;
 }
 
-.c25 > *:last-child {
+.c22 > *:last-child {
   margin-bottom: 0;
 }
 
-.c42 {
+.c39 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -56,11 +56,11 @@ exports[`<FicheSP /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c42 > *:first-child {
+.c39 > *:first-child {
   margin-top: 0;
 }
 
-.c42 > *:last-child {
+.c39 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -69,11 +69,11 @@ exports[`<FicheSP /> should render 1`] = `
   background-color: #fff;
 }
 
-.c24 {
+.c21 {
   padding: 1.25rem 0;
 }
 
-.c26 {
+.c23 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -81,24 +81,6 @@ exports[`<FicheSP /> should render 1`] = `
   border-radius: 0.25rem;
   border-color: #c9d3df;
   background-color: #ebeff3;
-}
-
-.c26 > *:first-child {
-  margin-top: 0;
-}
-
-.c26 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c23 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #fee5ad;
-  border-color: #fdd57b;
 }
 
 .c23 > *:first-child {
@@ -109,7 +91,25 @@ exports[`<FicheSP /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c43 {
+.c20 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
+}
+
+.c20 > *:first-child {
+  margin-top: 0;
+}
+
+.c20 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c40 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -131,13 +131,13 @@ exports[`<FicheSP /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c43:not([disabled]):hover,
-.c43:not([disabled]):focus {
+.c40:not([disabled]):hover,
+.c40:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c43:not([disabled]):active {
+.c40:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -145,7 +145,7 @@ exports[`<FicheSP /> should render 1`] = `
   outline: none;
 }
 
-.c43[aria-pressed="true"] {
+.c40[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -154,21 +154,21 @@ exports[`<FicheSP /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c43[aria-pressed="true"]:not([disabled]):hover,
-.c43[aria-pressed="true"]:not([disabled]):focus {
+.c40[aria-pressed="true"]:not([disabled]):hover,
+.c40[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c43[aria-pressed="true"]:not([disabled]):active {
+.c40[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c43[disabled] {
+.c40[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c38 {
+.c35 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -190,16 +190,16 @@ exports[`<FicheSP /> should render 1`] = `
   border: none;
 }
 
-.c38:hover {
+.c35:hover {
   color: #8c94a6;
 }
 
-.c38:active {
+.c35:active {
   position: relative;
   top: 1px;
 }
 
-.c33 {
+.c30 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -221,7 +221,7 @@ exports[`<FicheSP /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c34 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,7 +242,7 @@ exports[`<FicheSP /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c35 {
+.c32 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -255,7 +255,7 @@ exports[`<FicheSP /> should render 1`] = `
   text-align: left;
 }
 
-.c37 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -274,7 +274,7 @@ exports[`<FicheSP /> should render 1`] = `
   justify-content: center;
 }
 
-.c32 {
+.c29 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -282,7 +282,7 @@ exports[`<FicheSP /> should render 1`] = `
   z-index: 1000;
 }
 
-.c36 {
+.c33 {
   padding: 0 0.25rem;
 }
 
@@ -334,7 +334,7 @@ exports[`<FicheSP /> should render 1`] = `
   margin: 0 auto;
   padding: 0;
   position: relative;
-  width: 90%;
+  width: 70%;
 }
 
 .c13 {
@@ -374,40 +374,6 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 .c18 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-left: 0.5rem;
-  background-color: #ebeff3;
-  border: none;
-  border-radius: 0.25rem;
-}
-
-.c19 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  -webkit-transform: translate(50%,-50%);
-  -ms-transform: translate(50%,-50%);
-  transform: translate(50%,-50%);
-}
-
-.c20 {
-  padding-left: 2.5rem;
-  color: #26353f;
-  background-color: transparent;
-  border: 1px solid transparent;
-}
-
-.c21 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -430,13 +396,13 @@ exports[`<FicheSP /> should render 1`] = `
   margin-left: 0.5rem;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):focus {
+.c18:not([disabled]):hover,
+.c18:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c21:not([disabled]):active {
+.c18:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -444,7 +410,7 @@ exports[`<FicheSP /> should render 1`] = `
   outline: none;
 }
 
-.c21[aria-pressed="true"] {
+.c18[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -453,25 +419,25 @@ exports[`<FicheSP /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
+.c18[aria-pressed="true"]:not([disabled]):hover,
+.c18[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):active {
+.c18[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c21[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c27 {
+.c24 {
   margin-bottom: 1rem;
 }
 
-.c28 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -482,7 +448,7 @@ exports[`<FicheSP /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c30 {
+.c27 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -505,13 +471,13 @@ exports[`<FicheSP /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c30:not([disabled]):hover,
-.c30:not([disabled]):focus {
+.c27:not([disabled]):hover,
+.c27:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c30:not([disabled]):active {
+.c27:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -519,7 +485,7 @@ exports[`<FicheSP /> should render 1`] = `
   outline: none;
 }
 
-.c30[aria-pressed="true"] {
+.c27[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -528,25 +494,25 @@ exports[`<FicheSP /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c30[aria-pressed="true"]:not([disabled]):hover,
-.c30[aria-pressed="true"]:not([disabled]):focus {
+.c27[aria-pressed="true"]:not([disabled]):hover,
+.c27[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c30[aria-pressed="true"]:not([disabled]):active {
+.c27[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c30[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c30 + .c29 {
+.c27 + .c26 {
   margin-left: 1rem;
 }
 
-.c31 {
+.c28 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -569,13 +535,13 @@ exports[`<FicheSP /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c31:not([disabled]):hover,
-.c31:not([disabled]):focus {
+.c28:not([disabled]):hover,
+.c28:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c31:not([disabled]):active {
+.c28:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -583,7 +549,7 @@ exports[`<FicheSP /> should render 1`] = `
   outline: none;
 }
 
-.c31[aria-pressed="true"] {
+.c28[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -592,25 +558,25 @@ exports[`<FicheSP /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c31[aria-pressed="true"]:not([disabled]):hover,
-.c31[aria-pressed="true"]:not([disabled]):focus {
+.c28[aria-pressed="true"]:not([disabled]):hover,
+.c28[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c31[aria-pressed="true"]:not([disabled]):active {
+.c28[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c31[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c31 + .c29 {
+.c28 + .c26 {
   margin-left: 1rem;
 }
 
-.c22 {
+.c19 {
   margin: 20%;
   font-size: 1.875rem;
   text-align: center;
@@ -666,16 +632,16 @@ exports[`<FicheSP /> should render 1`] = `
   text-decoration: none;
 }
 
-.c40 {
+.c37 {
   text-align: center;
 }
 
-.c41 {
+.c38 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c44 {
+.c41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -686,21 +652,21 @@ exports[`<FicheSP /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c46 + .c45 {
+.c43 + .c42 {
   padding-left: 1rem;
 }
 
-.c47 {
+.c44 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c49 {
+.c46 {
   margin: 0.5rem 0;
 }
 
-.c49 a,
-.c49 a:visited {
+.c46 a,
+.c46 a:visited {
   color: #434956;
 }
 
@@ -716,27 +682,27 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 @media print {
-  .c25 {
+  .c22 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c42 {
+  .c39 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c23 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c26 {
+  .c23 {
     border: none;
     padding: 0 5pt;
   }
@@ -748,12 +714,19 @@ exports[`<FicheSP /> should render 1`] = `
   }
 }
 
+@media (max-width:980px) {
+  .c12 {
+    width: 100%;
+  }
+}
+
 @media (max-width:600px) {
   .c12 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     height: auto;
+    width: 100%;
   }
 }
 
@@ -770,27 +743,21 @@ exports[`<FicheSP /> should render 1`] = `
   }
 }
 
-@media (max-width:980px) {
-  .c18 {
-    display: none;
-  }
-}
-
 @media (max-width:600px) {
-  .c21 {
+  .c18 {
     margin-left: 0;
     margin-top: 0.625rem;
   }
 }
 
 @media print {
-  .c39 {
+  .c36 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c44 {
+  .c41 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -798,7 +765,7 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c46 + .c45 {
+  .c43 + .c42 {
     padding-left: 0;
   }
 }
@@ -909,80 +876,9 @@ exports[`<FicheSP /> should render 1`] = `
                   />
                 </div>
               </label>
-              <label
-                class="c18"
-                for="contentSource"
-              >
-                <span
-                  class="c15"
-                >
-                  Filtrer par type de contenu
-                </span>
-                <svg
-                  class="c19"
-                  viewBox="0 0 512 512"
-                >
-                  <title>
-                    Icône réponse
-                  </title>
-                  <path
-                    d="M346 319c-5.522 0-10 4.477-10 10v69c0 27.57-22.43 50-50 50H178.032c-5.521 0-9.996 4.473-10 9.993l-.014 19.882-23.868-23.867a10.003 10.003 0 0 0-9.171-6.008H70c-27.57 0-50-22.43-50-50V244c0-27.57 22.43-50 50-50h101c5.522 0 10-4.477 10-10s-4.478-10-10-10H70c-38.598 0-70 31.402-70 70v154c0 38.598 31.402 70 70 70h59.858l41.071 41.071a9.997 9.997 0 0 0 10.894 2.169 10 10 0 0 0 6.177-9.233l.024-34.007H286c38.598 0 70-31.402 70-70v-69c0-5.523-4.478-10-10-10z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M366.655 0h-25.309C261.202 0 196 65.202 196 145.346s65.202 145.345 145.345 145.345h25.309c12.509 0 24.89-1.589 36.89-4.729l37.387 37.366A10 10 0 0 0 458 316.255v-57.856c15.829-12.819 28.978-29.012 38.206-47.102C506.687 190.751 512 168.562 512 145.346 512 65.202 446.798 0 366.655 0zm75.328 245.535a10.003 10.003 0 0 0-3.983 7.988v38.6l-24.471-24.458a10.003 10.003 0 0 0-10.006-2.485c-11.903 3.658-24.307 5.512-36.868 5.512h-25.309c-69.117 0-125.346-56.23-125.346-125.346C216 76.23 272.23 20 341.346 20h25.309C435.771 20 492 76.23 492 145.346c0 39.731-18.23 76.249-50.017 100.189z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M399.033 109.421c-1.443-20.935-18.319-37.811-39.255-39.254-11.868-.815-23.194 3.188-31.863 11.281-8.55 7.981-13.453 19.263-13.453 30.954 0 5.523 4.478 10 10 10s10-4.477 10-10c0-6.259 2.522-12.06 7.1-16.333 4.574-4.269 10.552-6.382 16.842-5.948 11.028.76 19.917 9.649 20.677 20.676.768 11.137-6.539 20.979-17.373 23.403-8.778 1.964-14.908 9.592-14.908 18.549v24.025c0 5.523 4.478 10 10 10 5.523 0 10-4.477 9.999-10v-23.226c20.15-4.868 33.669-23.306 32.234-44.127zM363.87 209.26a10.076 10.076 0 0 0-7.07-2.93c-2.63 0-5.21 1.07-7.07 2.93a10.076 10.076 0 0 0-2.93 7.07c0 2.64 1.071 5.22 2.93 7.08 1.86 1.86 4.44 2.92 7.07 2.92s5.21-1.06 7.07-2.92a10.1 10.1 0 0 0 2.93-7.08c0-2.63-1.071-5.21-2.93-7.07zM275 310H64c-5.522 0-10 4.477-10 10s4.478 10 10 10h211c5.523 0 10-4.477 10-10s-4.478-10-10-10zm7.069 58.93A10.072 10.072 0 0 0 275 366c-2.63 0-5.21 1.07-7.07 2.93A10.071 10.071 0 0 0 265 376c0 2.63 1.07 5.21 2.93 7.07 1.86 1.86 4.44 2.93 7.07 2.93s5.21-1.07 7.069-2.93A10.055 10.055 0 0 0 285 376c0-2.63-1.071-5.21-2.931-7.07zM235.667 366H64c-5.522 0-10 4.477-10 10s4.478 10 10 10h171.667c5.523 0 10-4.477 10-10s-4.478-10-10-10zM210 254H64c-5.522 0-10 4.477-10 10s4.478 10 10 10h146c5.523 0 10-4.477 10-10s-4.478-10-10-10z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <select
-                  class="c20"
-                  id="contentSource"
-                  name="source"
-                >
-                  <option
-                    value=""
-                  >
-                    Tous contenus
-                  </option>
-                  <option
-                    value="faq"
-                  >
-                    Réponses
-                  </option>
-                  <option
-                    value="code_du_travail"
-                  >
-                    Code du travail
-                  </option>
-                  <option
-                    value="fiches"
-                  >
-                    Fiches
-                  </option>
-                  <option
-                    value="modeles_de_courriers"
-                  >
-                    Modèles
-                  </option>
-                  <option
-                    value="outils"
-                  >
-                    Outils
-                  </option>
-                  <option
-                    value="annuaire"
-                  >
-                    Annuaire
-                  </option>
-                </select>
-              </label>
               <button
                 aria-pressed="false"
-                class="c21"
+                class="c18"
                 type="submit"
               >
                 Rechercher
@@ -992,40 +888,40 @@ exports[`<FicheSP /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c22 c1"
+        class="c19 c1"
       >
         <div
-          class="c23"
+          class="c20"
         >
           Cette fiche n'a pas été trouvée
         </div>
       </div>
       <div
-        class="c24"
+        class="c21"
       >
         <div
-          class="c25"
+          class="c22"
         >
           <div
-            class="c26"
+            class="c23"
           >
             <h3
-              class="c27"
+              class="c24"
             >
               Avez-vous trouvé la réponse à votre question ?
             </h3>
             <p
-              class="c28"
+              class="c25"
             >
               <button
                 aria-pressed="false"
-                class="c29 c30"
+                class="c26 c27"
               >
                 Non
               </button>
               <button
                 aria-pressed="false"
-                class="c29 c31"
+                class="c26 c28"
               >
                 Oui
               </button>
@@ -1034,13 +930,13 @@ exports[`<FicheSP /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c32"
+        class="c29"
       >
         <div
-          class="c33"
+          class="c30"
         >
           <div
-            class="c34"
+            class="c31"
           >
             <svg
               fill="none"
@@ -1071,12 +967,12 @@ exports[`<FicheSP /> should render 1`] = `
             </svg>
           </div>
           <div
-            class="c35"
+            class="c32"
             role="alert"
           >
             Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
             <a
-              class="c36"
+              class="c33"
               href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
               rel="noopener noreferrer"
               target="_blank"
@@ -1087,12 +983,12 @@ exports[`<FicheSP /> should render 1`] = `
             est prévue pour 2020.
           </div>
           <div
-            class="c37"
+            class="c34"
           >
             <button
               aria-label="Fermer"
               aria-pressed="false"
-              class="c38"
+              class="c35"
             >
               <svg
                 fill="none"
@@ -1125,49 +1021,49 @@ exports[`<FicheSP /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c39"
+    class="c36"
   >
     <div
-      class="c24"
+      class="c21"
     >
       <div
-        class="c40 c1"
+        class="c37 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c41 c42"
+          class="c38 c39"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
           aria-pressed="false"
-          class="c43"
+          class="c40"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c24"
+      class="c21"
     >
       <div
-        class="c44 c1"
+        class="c41 c1"
       >
         <div
-          class="c45 c46"
+          class="c42 c43"
         >
           <h3
-            class="c47"
+            class="c44"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c48"
+            class="c45"
           >
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="/droit-du-travail"
@@ -1176,7 +1072,7 @@ exports[`<FicheSP /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="/a-propos"
@@ -1185,7 +1081,7 @@ exports[`<FicheSP /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="/mentions-legales"
@@ -1194,7 +1090,7 @@ exports[`<FicheSP /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -1205,18 +1101,18 @@ exports[`<FicheSP /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c45 c46"
+          class="c42 c43"
         >
           <h3
-            class="c47"
+            class="c44"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c48"
+            class="c45"
           >
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -1227,7 +1123,7 @@ exports[`<FicheSP /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -1240,18 +1136,18 @@ exports[`<FicheSP /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c45 c46"
+          class="c42 c43"
         >
           <h3
-            class="c47"
+            class="c44"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c48"
+            class="c45"
           >
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -1262,7 +1158,7 @@ exports[`<FicheSP /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -1273,7 +1169,7 @@ exports[`<FicheSP /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c49"
+              class="c46"
             >
               <a
                 href="https://beta.gouv.fr/"

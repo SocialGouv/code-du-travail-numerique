@@ -4,7 +4,7 @@ exports[`return a faq item with additionnal content from its source and slug 1`]
 Object {
   "_id": "6",
   "_index": "cdtn_document_test",
-  "_score": 4.344671,
+  "_score": 4.2234216,
   "_source": Object {
     "author": "DIRECCTE",
     "date": "01/12/2017",
@@ -29,7 +29,7 @@ Object {
       Object {
         "_id": "7",
         "_index": "cdtn_document_test",
-        "_score": 0.8453953,
+        "_score": 0.66301036,
         "_source": Object {
           "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
           "source": "faq",
@@ -82,7 +82,7 @@ exports[`return item from source and slug  1`] = `
 Object {
   "_id": "2",
   "_index": "cdtn_document_test",
-  "_score": 4.0081987,
+  "_score": 3.8869493,
   "_source": Object {
     "breadcrumbs": Array [
       Object {

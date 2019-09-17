@@ -47,12 +47,6 @@ test("return faq search results for demission ", async () => {
   expect(response.body).toMatchSnapshot();
 });
 
-test("return faq search results for smic with snippet content", async () => {
-  const response = await request(app.callback()).get(`/api/v1/search?q=smic`);
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
-
 test("return article results when searching with article id", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/search?q=R1225-18`
