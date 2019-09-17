@@ -27,7 +27,7 @@ async function updateTheme(fiches) {
 }
 
 async function main() {
-  const fiches = require("./fiches-sp-travail.json");
+  const fiches = require("./fiches-sp.json");
   updateTheme(fiches);
   console.log(JSON.stringify(fiches, null, 2));
 }
