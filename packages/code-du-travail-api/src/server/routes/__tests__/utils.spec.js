@@ -73,10 +73,15 @@ const test_key = [
     ]
   }
 ];
+// add a test to check preserved order
 
 const test_dupl = [
   {
     input: [
+      {
+        whatever: "whatever",
+        key: "a"
+      },
       {
         whatever: "whatever",
         key: "hey"
@@ -84,12 +89,24 @@ const test_dupl = [
       {
         whatever: "whatever",
         key: "hey"
+      },
+      {
+        whatever: "whatever",
+        key: "c"
       }
     ],
     expected: [
       {
         whatever: "whatever",
+        key: "a"
+      },
+      {
+        whatever: "whatever",
         key: "hey"
+      },
+      {
+        whatever: "whatever",
+        key: "c"
       }
     ]
   }

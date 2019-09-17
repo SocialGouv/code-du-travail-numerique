@@ -11,7 +11,7 @@ const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
 const MAX_RESULTS = 10;
-
+const timeout = 3000;
 const router = new Router({ prefix: API_BASE_URL });
 
 /**
@@ -40,17 +40,21 @@ router.get("/search", async ctx => {
     ctx.body = knownQueryResult;
     return;
   }
-
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
   const body = getSearchBody({ query, size, excludeSources });
 
   // query data
 
   const [esResults, semResults] = await Promise.all([
-    elasticsearchClient.search({ index, body }),
+    elasticsearchClient.search({ index, body, timeout }),
     fetch(
       `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
-    ).then(data => data.json())
+    )
+      .then(data => data.json())
+      .catch(() => {
+        console.log("NLP api request failed");
+        return [];
+      })
   ]);
 
   const semResultWithKey = utils.addKey(semResults.hits.hits);

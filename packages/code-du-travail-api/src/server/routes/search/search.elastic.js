@@ -1,5 +1,6 @@
-function getSearchBody({ query, size, excludeSources = [] }) {
+function getSearchBody({ query, size, timeout, excludeSources = [] }) {
   return {
+    requestTimeout: timeout,
     size: size,
     _source: ["title", "source", "slug", "anchor", "url"],
     query: {
