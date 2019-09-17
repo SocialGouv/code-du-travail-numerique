@@ -763,6 +763,7 @@ exports[`<Answer /> should render 1`] = `
   </div>
   <div
     class="c13"
+    data-main-content="true"
   >
     <div
       class="c2"
@@ -1816,6 +1817,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   </nav>
   <div
     class="c14"
+    data-main-content="true"
   >
     <div
       class="c2"

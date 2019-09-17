@@ -31,7 +31,7 @@ function Term({ pageUrl, ogImage }) {
             <tbody>
               <tr>
                 <th>Définition</th>
-                <td>{term.definition}</td>
+                <td dangerouslySetInnerHTML={{ __html: term.definition }} />
               </tr>
               {term.abbrs.length > 0 ? (
                 <tr>

@@ -1004,6 +1004,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     </div>
     <div
       class="c18"
+      data-main-content="true"
     >
       <div
         class="c1"

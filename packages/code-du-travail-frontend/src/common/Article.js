@@ -15,7 +15,7 @@ const Article = ({
   children
 }) => {
   return (
-    <Section>
+    <Section data-main-content>
       <Container>
         <Wrapper variant="light">
           <Section>

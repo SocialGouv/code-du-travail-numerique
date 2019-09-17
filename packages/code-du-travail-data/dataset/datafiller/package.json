@@ -6,7 +6,9 @@
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "p-limit": "^2.2.1"
+    "p-limit": "^2.2.1",
+    "remark": "^11.0.1",
+    "remark-html": "^10.0.0"
   },
   "scripts": {
     "start": "node index.js prequalified.json",
