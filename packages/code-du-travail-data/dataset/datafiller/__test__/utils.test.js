@@ -157,7 +157,7 @@ describe("sortRefs", () => {
   ];
 
   it("sort refs by relevance and source type", () => {
-    expect(refs.sort(sortRefs)).toMatchSnapshot();
+    expect(refs.sort(sortRefs(node => -node.relevance))).toMatchSnapshot();
   });
 });
 

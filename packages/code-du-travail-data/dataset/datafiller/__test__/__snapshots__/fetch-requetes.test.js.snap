@@ -5,39 +5,34 @@ Array [
   Object {
     "refs": Array [
       Object {
-        "_source": Object {
-          "slug": "fiche-2",
-        },
         "relevance": 5,
+        "title": "/some-unknown-source/test",
+        "url": "/some-unknown-source/test",
       },
       Object {
-        "_source": Object {
-          "source": "external",
-          "title": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-          "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-        },
         "relevance": 5,
+        "title": "Fiche 2",
+        "url": "/fiche-service-public/fiche-2",
       },
       Object {
-        "_source": Object {
-          "slug": "l1221-3",
-          "source": "code_du_travail",
-          "title": "Article L1221-3",
-          "url": "/code-du-travail/l1221-3",
-        },
         "relevance": 5,
+        "title": "HTML page title",
+        "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       },
       Object {
-        "_source": Object {
-          "slug": "fiche-3",
-        },
+        "relevance": 5,
+        "title": "Article L1221-3",
+        "url": "/code-du-travail/l1221-3",
+      },
+      Object {
         "relevance": 4,
+        "title": "Fiche 3",
+        "url": "/fiche-service-public/fiche-3",
       },
       Object {
-        "_source": Object {
-          "slug": "conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
-        },
         "relevance": 2,
+        "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
+        "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
       },
     ],
     "theme": "theme1",
@@ -51,28 +46,19 @@ Array [
   Object {
     "refs": Array [
       Object {
-        "_source": Object {
-          "slug": "l3221-3",
-          "source": "code_du_travail",
-          "title": "Article L3221-3",
-          "url": "/code-du-travail/l3221-3",
-        },
         "relevance": 5,
+        "title": "Article L3221-3",
+        "url": "/code-du-travail/l3221-3",
       },
       Object {
-        "_source": Object {
-          "slug": "le-salaire-quelles-sont-les-modalites-de-paiement",
-        },
         "relevance": 3,
+        "title": "Le salaire : quelles sont les modalités de paiement ?",
+        "url": "/fiche-ministere-travail/le-salaire-quelles-sont-les-modalites-de-paiement",
       },
       Object {
-        "_source": Object {
-          "slug": "theme1",
-          "source": "themes",
-          "title": "Thématique",
-          "url": "/themes/theme1",
-        },
         "relevance": 1,
+        "title": "Thématique",
+        "url": "/themes/theme1",
       },
     ],
     "theme": "theme2",
@@ -89,39 +75,34 @@ Array [
 exports[`refs should be sorted by relevance and source type 1`] = `
 Array [
   Object {
-    "_source": Object {
-      "slug": "fiche-2",
-    },
     "relevance": 5,
+    "title": "/some-unknown-source/test",
+    "url": "/some-unknown-source/test",
   },
   Object {
-    "_source": Object {
-      "source": "external",
-      "title": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-      "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
-    },
     "relevance": 5,
+    "title": "Fiche 2",
+    "url": "/fiche-service-public/fiche-2",
   },
   Object {
-    "_source": Object {
-      "slug": "l1221-3",
-      "source": "code_du_travail",
-      "title": "Article L1221-3",
-      "url": "/code-du-travail/l1221-3",
-    },
     "relevance": 5,
+    "title": "HTML page title",
+    "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
   },
   Object {
-    "_source": Object {
-      "slug": "fiche-3",
-    },
+    "relevance": 5,
+    "title": "Article L1221-3",
+    "url": "/code-du-travail/l1221-3",
+  },
+  Object {
     "relevance": 4,
+    "title": "Fiche 3",
+    "url": "/fiche-service-public/fiche-3",
   },
   Object {
-    "_source": Object {
-      "slug": "conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
-    },
     "relevance": 2,
+    "title": "Conclusion du contrat de travail à durée déterminée (CDD)",
+    "url": "/fiche-service-public/conclusion-du-contrat-de-travail-a-duree-determinee-cdd",
   },
 ]
 `;

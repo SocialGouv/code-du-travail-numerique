@@ -67,6 +67,8 @@ const requetes = [
 const getBaseUrl = url => url.replace(/^(https?:\/\/[^/]+)\//, "/");
 
 const FETCH_SAMPLES = {
+  "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14": () =>
+    `Hello HTML <title>HTML page title</title>`,
   "/kinto/v1/buckets/datasets/collections/requetes/records": () => ({
     data: requetes
   }),
@@ -87,7 +89,8 @@ const mockResponse = (url, options) =>
   Promise.resolve({
     ok: true,
     status: 200,
-    json: () => FETCH_SAMPLES[getBaseUrl(url)](url, options)
+    json: () => FETCH_SAMPLES[getBaseUrl(url)](url, options),
+    text: () => FETCH_SAMPLES[url](url, options)
   });
 
 jest.mock("node-fetch", () => mockResponse);
@@ -103,4 +106,3 @@ test("refs should be sorted by relevance and source type", async () => {
   const result = await fetchRequetes();
   expect(result[0].refs).toMatchSnapshot();
 });
-

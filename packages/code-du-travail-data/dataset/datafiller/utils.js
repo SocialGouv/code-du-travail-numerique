@@ -29,6 +29,22 @@ const isFixableUrl = url =>
       url.match(/^\/fiche-ministere-travail\//)
   );
 
+const entities = {
+  amp: "&",
+  apos: "'",
+  "#x27": "'",
+  "#x2F": "/",
+  "#39": "'",
+  "#47": "/",
+  lt: "<",
+  gt: ">",
+  nbsp: " ",
+  quot: '"'
+};
+
+const decodeHTML = text =>
+  text.replace(/&([^;]+);/gm, (match, entity) => entities[entity] || match);
+
 const sourcesPriority = [
   "faq",
   "fiche-service-public",
@@ -42,13 +58,13 @@ const getSource = url => {
   return (source && source[1]) || "external";
 };
 
-// sort datafiller references by relevance and source
-const sortRefs = (a, b) => {
+// sort datafiller references by key and source
+const sortRefs = cb => (a, b) => {
   // 1st sort by relevance
-  if (a.relevance < b.relevance) {
-    return 1;
-  } else if (a.relevance > b.relevance) {
+  if (cb(a) < cb(b)) {
     return -1;
+  } else if (cb(a) > cb(b)) {
+    return 1;
   }
   // 2nd sort by sourcesPriority
   if (
@@ -68,9 +84,9 @@ const sortRefs = (a, b) => {
 const hasUrl = row => !!row.url;
 
 // filter and sort row refs
-const sortRowRefs = row => ({
+const sortRowRefs = cb => row => ({
   ...row,
-  refs: (row.refs && row.refs.filter(hasUrl).sort(sortRefs)) || []
+  refs: (row.refs && row.refs.filter(hasUrl).sort(sortRefs(cb))) || []
 });
 
 const slimify = (obj, keys) =>
@@ -82,5 +98,6 @@ module.exports = {
   isFixableUrl,
   sortRefs,
   sortRowRefs,
-  slimify
+  slimify,
+  decodeHTML
 };
