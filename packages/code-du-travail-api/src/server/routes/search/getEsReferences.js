@@ -20,11 +20,15 @@ const indexQuery = { index };
 
 // for a set of given urls, fetch related ES documents
 const getEsReferences = async (refs = []) => {
-  const queries = refs
+  const queries = refs && refs
     .filter(ref => isInternalUrl(ref.url))
     .map(ref => getDocumentByUrlQuery(ref.url))
     .filter(Boolean)
-    .flatMap(query => [indexQuery, query]);
+    .flatMap(query => [indexQuery, query]) || []
+
+  if (!queries.length) {
+    return []
+  }
 
   // get all known urls results
   const response = await elasticsearchClient.msearch({
