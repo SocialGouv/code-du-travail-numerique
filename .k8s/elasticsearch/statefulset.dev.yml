@@ -56,14 +56,14 @@ spec:
             scheme: HTTP
             path: /_cluster/health
             port: ${PORT}
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           periodSeconds: 5
         readinessProbe:
           httpGet:
             scheme: HTTP
             path: /_cluster/health?local=true
             port: ${PORT}
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
         ports:
         - containerPort: ${PORT}
           name: es-http
