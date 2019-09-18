@@ -9,15 +9,14 @@ const getSavedResult = require("./search.getSavedResult");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
 const MAX_RESULTS = 10;
-const TIMEOUT = 3000;
-const timeout = setTimeout(() => {
-  controller.abort();
-}, TIMEOUT);
-const controller = new AbortController();
+const MAX_TIMEOUT = 2000;
 const router = new Router({ prefix: API_BASE_URL });
 
+/**
+ */
 /**
  * Return documents matching the given query.
  *
@@ -44,29 +43,45 @@ router.get("/search", async ctx => {
     ctx.body = knownQueryResult;
     return;
   }
+  // remove console.log when stavble
+  console.log(
+    `querying sem search on: ${NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
+  );
+
+  // we filter results to remove snippet document from main results
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
-  const body = getSearchBody({ query, size, excludeSources });
+  const body = getSearchBody({
+    query,
+    size: size,
+    excludeSources
+  });
+  const facetBody = getFacetsBody({ query });
 
-  // query data
+  const pTimeout = (promise, timeout) =>
+    new Promise((resolve, reject) => {
+      setTimeout(() => reject("max timeout elapsed"), timeout);
+      promise.then(resolve, reject);
+    });
 
-  const [esResults, semResults] = await Promise.all([
-    elasticsearchClient.search({ index, body }),
+  const esResponse = pTimeout(
+    elasticsearchClient.search({ index, size, body }),
+    MAX_TIMEOUT
+  ).catch(err => {
+    console.error("es", err);
+    return { body: { hits: { hits: [] } } };
+  });
+
+  const semResponse = pTimeout(
     fetch(
-      `${process.env.NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`,
-      { signal: controller.signal }
-    )
-      .then(data => data.json())
-      .catch(err => {
-        if (err.name === "AbortError") {
-          console.log("error was aborted after timeout");
-          return [];
-        }
-      })
-      .finally(() => {
-        clearTimeout(timeout);
-      })
-  ]);
+      `${NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
+    ).then(response => response.json()),
+    MAX_TIMEOUT
+  ).catch(err => {
+    console.error("nlp", err);
+    return { hits: { hits: [] } };
+  });
 
+  const [esResults, semResults] = await Promise.all([esResponse, semResponse]);
   const semResultWithKey = utils.addKey(semResults.hits.hits);
   const esResultWithKey = utils.addKey(esResults.body.hits.hits);
   const results = utils.merge(semResultWithKey, esResultWithKey, MAX_RESULTS);

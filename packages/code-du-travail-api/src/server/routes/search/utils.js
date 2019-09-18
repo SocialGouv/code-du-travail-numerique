@@ -27,6 +27,11 @@ const removeDuplicate = arr =>
     arr.reduce((values, current) => ({ ...values, [current.key]: current }), {})
   );
 
-exports.merge = merge;
-exports.addKey = addKey;
-exports.removeDuplicate = removeDuplicate;
+const mergePipe = (a, b) => {
+  ak = addKey(a);
+  bk = addKey(b);
+  res = merge(ak, bk);
+  return removeDuplicate(res);
+};
+
+exports.mergePipe = mergePipe;
