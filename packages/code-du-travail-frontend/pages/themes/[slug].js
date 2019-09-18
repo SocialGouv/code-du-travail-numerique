@@ -7,7 +7,6 @@ import fetch from "isomorphic-unfetch";
 
 import Search from "../../src/search/Search";
 import { SearchResults } from "../../src/search/SearchResults";
-import { fetchSearchResults } from "../../src/search/search.service";
 
 import Themes from "../../src/home/Themes";
 import { PageLayout } from "../../src/layout/PageLayout";
@@ -21,10 +20,10 @@ const {
 // Theme page
 class Theme extends React.Component {
   static async getInitialProps({ query: { slug: query } }) {
-    const [searchThemeResponse, searchResults] = await Promise.all([
-      fetch(`${API_URL}/themes${query ? `/${query}` : ""}`),
-      fetchSearchResults(query, "themes")
-    ]);
+    const searchThemeResponse = await fetch(
+      `${API_URL}/themes${query ? `/${query}` : ""}`
+    );
+
     if (!searchThemeResponse.ok) {
       return { statusCode: searchThemeResponse.status };
     }
@@ -33,19 +32,12 @@ class Theme extends React.Component {
 
     return {
       theme,
-      searchResults,
       query
     };
   }
 
   render() {
-    const {
-      theme = { children: [] },
-      searchResults,
-      query,
-      pageUrl,
-      ogImage
-    } = this.props;
+    const { theme = { children: [] }, query, pageUrl, ogImage } = this.props;
 
     const isRootTheme = theme && !theme.slug;
 
@@ -71,7 +63,7 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <Section>
             <Container narrow>
-              <SearchResults query={query} items={searchResults} />
+              <SearchResults query={query} items={theme.refs} />
             </Container>
           </Section>
         )}
