@@ -26,7 +26,7 @@ class ListLink extends React.Component {
   }
 }
 
-const SearchResults = ({ items = [], query }) => {
+const SearchResults = ({ items = [], query = "" }) => {
   return (
     <List>
       {items.map(
@@ -80,6 +80,7 @@ const SearchResults = ({ items = [], query }) => {
 };
 
 SearchResults.propTypes = {
+  query: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

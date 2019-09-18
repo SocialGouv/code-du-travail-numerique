@@ -37,7 +37,7 @@ class Theme extends React.Component {
   }
 
   render() {
-    const { theme = { children: [] }, query, pageUrl, ogImage } = this.props;
+    const { theme = { children: [] }, pageUrl, ogImage } = this.props;
 
     const isRootTheme = theme && !theme.slug;
 
@@ -63,7 +63,7 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <Section>
             <Container narrow>
-              <SearchResults query={query} items={theme.refs} />
+              <SearchResults items={theme.refs} />
             </Container>
           </Section>
         )}
