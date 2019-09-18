@@ -5,17 +5,7 @@ import slugify from "../slugify";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
 
-const SOURCES = {
-  CCN: "conventions_collectives",
-  CDT: "code_du_travail",
-  SHEET_SP: "fiches_service_public",
-  SHEET_MT: "fiches_ministere_travail",
-  THEMES: "themes",
-  TOOLS: "outils",
-  LETTERS: "modeles_de_courriers",
-  FAQ: "faq",
-  SNIPPET: "snippet"
-};
+import { SOURCES } from "@cdt/sources";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -267,6 +257,19 @@ function* cdtnDocumentsGen() {
         date_expiration: date_expiration,
         references,
         author: redacteur
+      };
+    }
+  );
+
+  logger.info("=== Contributions ===");
+  yield require("../dataset/contributions/contributions.data.json").map(
+    ({ value, answers }) => {
+      return {
+        source: SOURCES.CONTRIBUTIONS,
+        title: value,
+        slug: slugify(value),
+        text: (answers.general && answers.general.value) || value,
+        answers
       };
     }
   );

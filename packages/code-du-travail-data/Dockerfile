@@ -25,6 +25,7 @@ COPY ./dataset/faq-contributions.json ./dataset/faq-contributions.json
 COPY ./dataset/faq-snippets.json ./dataset/faq-snippets.json
 COPY ./dataset/export-courriers.json ./dataset/export-courriers.json
 COPY ./dataset/outils.json ./dataset/outils.json
+COPY ./dataset/contributions/contributions.data.json ./contributions/contributions.data.json
 
 WORKDIR /app
 
