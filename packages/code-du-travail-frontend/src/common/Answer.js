@@ -66,27 +66,27 @@ function Answer({
       document.querySelectorAll("[data-main-content] p, [data-main-content] li")
     ).reduce((state, node) => {
       glossary.forEach(item => {
-        const regexp = new RegExp(item.title, "gi");
+        const regexp = new RegExp(`${item.title}s?`, "gi");
         node.innerHTML = node.innerHTML.replace(
           regexp,
-          `<span data-tooltip-target="${item.slug}"></span>`
+          `<span data-tooltip-slug="${item.slug}" data-tooltip-term="$&"></span>`
         );
       });
 
       return state.concat(
-        Array.from(node.querySelectorAll("[data-tooltip-target]")).map(
-          node => ({
-            node,
-            item: glossaryBySlug[node.getAttribute("data-tooltip-target")]
-          })
-        )
+        Array.from(node.querySelectorAll("[data-tooltip-slug]")).map(node => ({
+          node,
+          term: node.getAttribute("data-tooltip-term"),
+          definition:
+            glossaryBySlug[node.getAttribute("data-tooltip-slug")].definition
+        }))
       );
     }, []);
     setPortalComponents(
-      nodes.map(({ node, item }, i) => {
+      nodes.map(({ node, term, definition }, i) => {
         return (
           <Portal key={`item-${i}`} node={node}>
-            <DefinitonTerm item={item} />
+            <DefinitonTerm term={term} definition={definition} />
           </Portal>
         );
       })
@@ -138,14 +138,14 @@ const Portal = ({ node, children }) => {
   return ReactDOM.createPortal(children, node);
 };
 
-const DefinitonTerm = ({ item: { title, definition } }) => {
+const DefinitonTerm = ({ term, definition }) => {
   return (
     <>
       <StyledTooltip
         label={<div dangerouslySetInnerHTML={{ __html: definition }} />}
         aria-label={definition}
       >
-        <Underline>{title}</Underline>
+        <Underline>{term}</Underline>
       </StyledTooltip>
     </>
   );
