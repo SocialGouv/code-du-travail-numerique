@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { getRouteBySource, getLabelBySource } from "@cdt/sources";
 import { List, ListItem, theme } from "@cdt/ui-old";
 
-import { SourceIcon } from "../SourceIcon";
+import { SourceIcon } from "./SourceIcon";
 
 class ListLink extends React.Component {
   ref = React.createRef();
