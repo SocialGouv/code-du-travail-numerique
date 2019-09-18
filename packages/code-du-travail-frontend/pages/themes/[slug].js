@@ -46,22 +46,9 @@ class Theme extends React.Component {
       pageUrl,
       ogImage
     } = this.props;
+
     const isRootTheme = theme && !theme.slug;
 
-    console.log("theme", theme);
-    /*
-    const theme = await response.json();
-    if (theme) {
-      return {
-        theme
-      };
-    }
-    throw new Error("Theme not found");
-  }
-
-  render() {
-    const { theme, pageUrl, ogImage } = this.props;
-*/
     if (!theme) {
       return <NotFound />;
     }
