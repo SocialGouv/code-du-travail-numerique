@@ -1,7 +1,7 @@
 function getSearchBody({ query, size, excludeSources = [] }) {
   return {
     size: size,
-    _source: ["title", "source", "slug", "anchor", "url"],
+    _source: ["title", "source", "slug", "description", "anchor", "url"],
     query: {
       bool: {
         must_not: {

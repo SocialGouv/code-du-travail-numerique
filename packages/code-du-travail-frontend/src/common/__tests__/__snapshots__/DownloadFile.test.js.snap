@@ -58,9 +58,7 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
 
 @media (max-width:600px) {
   .c1 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
+    display: none;
   }
 }
 

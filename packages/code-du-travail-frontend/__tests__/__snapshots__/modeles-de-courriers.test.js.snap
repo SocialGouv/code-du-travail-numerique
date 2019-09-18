@@ -802,9 +802,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 @media (max-width:600px) {
   .c27 {
-    -webkit-flex: 0 0 2rem;
-    -ms-flex: 0 0 2rem;
-    flex: 0 0 2rem;
+    display: none;
   }
 }
 
