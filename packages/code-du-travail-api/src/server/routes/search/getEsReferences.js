@@ -18,16 +18,23 @@ const makeHit = data => ({
 
 const indexQuery = { index };
 
+const flatten = arr => arr.reduce((a, c) => [...a, ...c], []);
+
 // for a set of given urls, fetch related ES documents
 const getEsReferences = async (refs = []) => {
-  const queries = refs && refs
-    .filter(ref => isInternalUrl(ref.url))
-    .map(ref => getDocumentByUrlQuery(ref.url))
-    .filter(Boolean)
-    .flatMap(query => [indexQuery, query]) || []
+  const queries =
+    (refs &&
+      flatten(
+        refs
+          .filter(ref => isInternalUrl(ref.url))
+          .map(ref => getDocumentByUrlQuery(ref.url))
+          .filter(Boolean)
+          .map(query => [indexQuery, query])
+      )) ||
+    [];
 
   if (!queries.length) {
-    return []
+    return [];
   }
 
   // get all known urls results
