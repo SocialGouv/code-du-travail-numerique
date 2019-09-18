@@ -33,18 +33,6 @@ function Term({ pageUrl, ogImage }) {
                 <th>Définition</th>
                 <td dangerouslySetInnerHTML={{ __html: term.definition }} />
               </tr>
-              {term.abbrs.length > 0 ? (
-                <tr>
-                  <th>Abbréviation</th>
-                  <td>{term.abbrs.join(", ")}</td>
-                </tr>
-              ) : null}
-              {term.variants.length > 0 ? (
-                <tr>
-                  <th>Variantes</th>
-                  <td>{term.variants.join(", ")}</td>
-                </tr>
-              ) : null}
               {term.refs.length > 0 ? (
                 <tr>
                   <th>Références</th>
