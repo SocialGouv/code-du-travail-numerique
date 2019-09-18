@@ -42,7 +42,7 @@ const getEsReferences = async (refs = []) => {
     body: [...queries]
   });
 
-  const responses = response.body.responses.flatMap(r => r.hits.hits);
+  const responses = flatten(response.body.responses.map(r => r.hits.hits));
 
   // mix with non ES-results (ex: external)
   const hits = refs
