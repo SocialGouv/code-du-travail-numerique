@@ -749,7 +749,7 @@ exports[`<Term /> should render 1`] = `
         <h1
           class="c23"
         >
-          accord d'entreprise
+          Accord d'entreprise
         </h1>
         <div
           class="c24"
@@ -769,22 +769,6 @@ exports[`<Term /> should render 1`] = `
                     <p>
                       Accord collectif de travail conclu au niveau d'une entreprise.
                     </p>
-                  </td>
-                </tr>
-                <tr>
-                  <th>
-                    Abbréviation
-                  </th>
-                  <td>
-                    ACE
-                  </td>
-                </tr>
-                <tr>
-                  <th>
-                    Variantes
-                  </th>
-                  <td>
-                    accord collectif d'entreprise
                   </td>
                 </tr>
               </tbody>

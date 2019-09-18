@@ -930,315 +930,308 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/a-titre-conservatoire"
               >
-                à titre conservatoire
+                A titre conservatoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/abrogation"
               >
-                abrogation
+                Abrogation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/abroge"
               >
-                abrogé
+                Abrogé
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accessoires-de-salaire"
               >
-                accessoires de salaire 
+                Accessoires de salaire 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accident-de-mission"
               >
-                accident de mission
+                Accident de mission
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accident-de-travail"
               >
-                accident de travail
+                Accident de travail
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-atypique"
               >
-                accord atypique
+                Accord atypique
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-collectif"
               >
-                accord collectif
+                Accord collectif
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-dentreprise"
               >
-                accord d'entreprise
+                Accord d'entreprise
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-de-branche"
               >
-                accord de branche
+                Accord de branche
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-de-branche-etendu"
               >
-                accord de branche étendu
+                Accord de branche étendu
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-de-branche-non-etendu"
               >
-                accord de branche non étendu
+                Accord de branche non étendu
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-de-groupe"
               >
-                accord de groupe
+                Accord de groupe
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-de-methode"
               >
-                accord de méthode
+                Accord de méthode
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-derogatoire"
               >
-                accord dérogatoire
+                Accord dérogatoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-interentreprises"
               >
-                accord interentreprises
+                Accord interentreprises
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/accord-national-interprofessionnel"
               >
-                accord national interprofessionnel
-              </a>
-            </li>
-            <li>
-              <a
-                href="/glossaire/accord-paritaire"
-              >
-                accord paritaire"
+                Accord national interprofessionnel
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/acte-reglementaire"
               >
-                acte réglementaire
+                Acte réglementaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/actes-positifs-de-recherche-demploi"
               >
-                actes positifs de recherche d'emploi
+                Actes positifs de recherche d'emploi
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/actionnariat-des-salaries"
               >
-                actionnariat des salariés
+                Actionnariat des salariés
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/activite-partielle"
               >
-                activité partielle
+                Activité partielle
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/activite-principale-exercee"
+                href="/glossaire/activite-principale-exercee-ape"
               >
-                activité principale exercée
+                Activité principale exercée (APE)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/activites-sociales-et-culturelles"
+                href="/glossaire/activites-sociales-et-culturelles-asc"
               >
-                activités sociales et culturelles
+                Activités sociales et culturelles (ASC)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/adhesion-accord-collectif-ou-convention-collective"
               >
-                adhésion (accord collectif ou convention collective) 
+                Adhésion (accord collectif ou convention collective) 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/affection-de-longue-duree"
+                href="/glossaire/affection-de-longue-duree-ald"
               >
-                affection de longue durée
+                Affection de longue durée (ALD)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/affiliation"
               >
-                affiliation
+                Affiliation
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/aide-au-retour-a-lemploi"
+                href="/glossaire/aide-au-retour-a-lemploi-are"
               >
-                aide au retour à l’emploi
+                Aide au retour à l’emploi (ARE)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/aide-juridictionnelle"
+                href="/glossaire/aide-juridictionnelle-aj"
               >
-                aide juridictionnelle 
+                Aide juridictionnelle (AJ)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/amplitude-horaire"
               >
-                amplitude horaire
+                Amplitude horaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/annee-civile"
               >
-                année civile
+                Année civile
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/annualisation-du-temps-de-travail"
               >
-                annualisation du temps de travail
+                Annualisation du temps de travail
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/appel"
               >
-                appel
+                Appel 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/arret"
               >
-                arrêt
+                Arrêt
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/arrete"
               >
-                arrêté
+                Arrêté
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/article-etendu"
               >
-                article étendu 
+                Article étendu 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/article-non-etendu"
               >
-                article non étendu
+                Article non étendu
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/assiette"
               >
-                assiette
+                Assiette
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/astreinte"
               >
-                astreinte
+                Astreinte
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/audience-electorale"
               >
-                audience électorale
+                Audience électorale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/autorite-de-la-chose-jugee"
               >
-                autorité de la chose jugée
+                Autorité de la chose jugée
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/avantages-en-nature"
               >
-                avantages en nature
+                Avantages en nature
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/avenant"
               >
-                avenant
+                Avenant
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/avertissement"
               >
-                avertissement
+                Avertissement
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/ayant-droit"
               >
-                ayant droit
+                Ayant droit
               </a>
             </li>
           </ul>
@@ -1252,37 +1245,37 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/base-de-donnees-economiques-et-sociales"
+                href="/glossaire/base-de-donnees-economiques-et-sociales-bdes"
               >
-                base de données économiques et sociales
+                Base de données économiques et sociales (BDES)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/bilan-social"
               >
-                bilan social
+                Bilan social
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/bon-de-delegation"
               >
-                bon de délégation
+                Bon de délégation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/branche-professionnelle"
               >
-                branche professionnelle
+                Branche professionnelle
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/bulletin-de-paye"
               >
-                bulletin de paye
+                Bulletin de paye
               </a>
             </li>
           </ul>
@@ -1298,231 +1291,231 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/cadre-dirigeant"
               >
-                cadre dirigeant
+                Cadre dirigeant
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/certificat-de-travail"
               >
-                certificat de travail
+                Certificat de travail
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/chambre-sociale-de-la-cour-de-cassation"
               >
-                chambre sociale de la cour de cassation
+                Chambre sociale de la cour de cassation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/champ-dapplication-dun-accord-collectif"
               >
-                champ d’application d'un accord collectif
+                Champ d’application d'un accord collectif
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/circulaire"
               >
-                circulaire
+                Circulaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/classification-professionnelle"
               >
-                classification professionnelle
+                Classification professionnelle
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/clause-dindexation"
               >
-                clause d'indexation
+                Clause d'indexation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/clause-penale"
               >
-                clause pénale
+                Clause pénale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/clause-resolutoire"
               >
-                clause résolutoire
+                Clause résolutoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/coefficient-hierarchique"
               >
-                coefficient hiérarchique
+                Coefficient hiérarchique
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/comite-social-et-economique"
+                href="/glossaire/comite-social-et-economique-cse"
               >
-                comité social et économique 
+                Comité social et économique (CSE)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/commissaire-aux-comptes"
               >
-                commissaire aux comptes
+                Commissaire aux comptes
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/commission-nationale-de-linformatique-et-des-libertes"
+                href="/glossaire/commission-nationale-de-linformatique-et-des-libertes-cnil"
               >
-                commission nationale de l’informatique et des libertés
+                Commission nationale de l’informatique et des libertés (CNIL)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/commission-sante-securite-et-conditions-de-travail"
+                href="/glossaire/commission-sante-securite-et-conditions-de-travail-cssct"
               >
-                commission santé, sécurité et conditions de travail
+                Commission santé, sécurité et conditions de travail (CSSCT)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/conciliation"
               >
-                conciliation
+                Conciliation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/conges-familiaux"
               >
-                congés familiaux
+                Congés familiaux
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/conges-speciaux"
               >
-                congés spéciaux
+                Congés spéciaux
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/conseil-detat"
               >
-                conseil d’état 
+                Conseil d’Etat 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/conseil-de-prudhommes"
+                href="/glossaire/conseil-de-prudhommes-cph"
               >
-                conseil de prud’hommes
+                Conseil de prud’hommes (CPH)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/conseiller-du-salarie"
               >
-                conseiller du salarié
+                Conseiller du salarié
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/conseiller-prudhomal"
               >
-                conseiller prud'homal
+                Conseiller prud'homal
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/constitution"
               >
-                constitution
+                Constitution
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/contrat-de-service"
               >
-                contrat de service
+                Contrat de service
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/contravention"
               >
-                contravention
+                Contravention
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/convention-collective"
               >
-                convention collective
+                Convention collective
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/convention-collective-de-branche"
               >
-                convention collective de branche
+                Convention collective de branche
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/cour-administrative-dappel"
+                href="/glossaire/cour-administrative-dappel-caa"
               >
-                cour administrative d’appel
+                Cour administrative d’appel (CAA)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/cour-dappel"
               >
-                cour d’appel
+                Cour d’appel
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/cour-de-cassation"
               >
-                cour de cassation 
+                Cour de cassation 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/cour-de-justice-de-lunion-europeenne"
+                href="/glossaire/cour-de-justice-de-lunion-europeenne-cjue"
               >
-                cour de justice de l’union européenne
+                Cour de justice de l’Union Européenne (CJUE)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/cour-europeenne-des-droits-de-lhomme"
+                href="/glossaire/cour-europeenne-des-droits-de-lhomme-cedh"
               >
-                cour européenne des droits de l’homme
+                Cour européenne des droits de l’homme (CEDH)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/creance"
               >
-                créance
+                Créance
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/credit-dheures-de-delegation"
               >
-                crédit d'heures de délégation
+                Crédit d'heures de délégation
               </a>
             </li>
           </ul>
@@ -1538,154 +1531,154 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/de-gre-a-gre"
               >
-                de gré à gré
+                De gré à gré
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/decret"
               >
-                décret
+                Décret
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/decret-en-conseil-detat"
               >
-                décret en conseil d'état
+                Décret en conseil d'état
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/defenseur"
+                href="/glossaire/defendeur"
               >
-                défenseur 
+                Défendeur 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/defenseur-syndical"
               >
-                défenseur syndical
+                Défenseur syndical
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/delai-de-carence"
               >
-                délai de carence
+                Délai de carence
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/delai-de-prevenance"
               >
-                délai de prévenance
+                Délai de prévenance
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/delibere"
               >
-                délibéré
+                Délibéré
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/delit"
               >
-                délit
+                Délit
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/delit-dentrave"
               >
-                délit d'entrave
+                Délit d'entrave
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/demandeur"
               >
-                demandeur 
+                Demandeur 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/denonciation-dun-accord-collectif"
               >
-                dénonciation d'un accord collectif
+                Dénonciation d'un accord collectif
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/depens"
               >
-                dépens
+                Dépens
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/derogation"
               >
-                dérogation
+                Dérogation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/disposition"
               >
-                disposition
+                Disposition
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/dividende"
               >
-                dividende
+                Dividende
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/domicile"
               >
-                domicile
+                Domicile
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/domiciliation-dune-entreprise"
               >
-                domiciliation d'une entreprise
+                Domiciliation d'une entreprise
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/dommages-et-interets"
               >
-                dommages et intérêts
+                Dommages et intérêts
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/droit-communautaire"
               >
-                droit communautaire
+                Droit communautaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/droit-du-travail"
               >
-                droit du travail
+                Droit du travail
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/duplicata"
               >
-                duplicata
+                Duplicata
               </a>
             </li>
           </ul>
@@ -1701,77 +1694,70 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/echelon"
               >
-                échelon
+                Echelon
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/effectif-de-lentreprise"
               >
-                effectif de l'entreprise
+                Effectif de l'entreprise
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/eligible"
               >
-                eligible
+                Eligible
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/emprisonnement"
               >
-                emprisonnement
+                Emprisonnement
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/en-numeraire"
               >
-                en numéraire
+                En numéraire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/engagement-unilateral-de-lemployeur"
               >
-                engagement unilatéral de l'employeur
+                Engagement unilatéral de l'employeur
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/entreprise-de-taille-intermediaire"
+                href="/glossaire/entreprise-de-taille-intermediaire-eti"
               >
-                entreprise de taille intermédiaire
+                Entreprise de taille intermédiaire (ETI)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/ester-en-justice"
               >
-                ester en justice 
+                Ester en justice 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/etat-divresse-manifeste"
               >
-                état d'ivresse manifeste
-              </a>
-            </li>
-            <li>
-              <a
-                href="/glossaire/exemples-des-donnees-presentes-emploi-remunerations-conditions-de-travail-formation-des-salaries"
-              >
-                Exemples des données présentes : emploi, rémunérations, conditions de travail, formation des salariés."
+                Etat d'ivresse manifeste
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/extrait-kbis"
               >
-                extrait kbis 
+                Extrait kbis 
               </a>
             </li>
           </ul>
@@ -1787,56 +1773,56 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/faute-grave"
               >
-                faute grave
+                Faute grave
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/faute-inexcusable-de-lemployeur"
               >
-                faute inexcusable de l'employeur
+                Faute inexcusable de l'employeur
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/faute-lourde"
               >
-                faute lourde
+                Faute lourde
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/filiale"
               >
-                filiale
+                Filiale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/force-executoire"
               >
-                force exécutoire
+                Force exécutoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/force-majeure"
               >
-                force majeure
+                Force majeure
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/forclusion"
               >
-                forclusion
+                Forclusion
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/fractionnement-des-conges-payes"
               >
-                fractionnement des congés payés
+                Fractionnement des congés payés
               </a>
             </li>
           </ul>
@@ -1852,28 +1838,28 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/gratification"
               >
-                gratification
+                Gratification
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/gratification-stagiaire"
               >
-                gratification stagiaire
+                Gratification stagiaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/greffe"
               >
-                greffe
+                Greffe
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/grossesse-pathologique"
               >
-                grossesse pathologique
+                Grossesse pathologique
               </a>
             </li>
           </ul>
@@ -1889,35 +1875,35 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/heures-complementaires"
               >
-                heures complémentaires
+                Heures complémentaires
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/heures-dequivalence"
               >
-                heures d'équivalence
+                Heures d'équivalence
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/heures-pour-recherche-demploi"
               >
-                heures pour recherche d'emploi
+                Heures pour recherche d'emploi
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/homologation"
               >
-                homologation
+                Homologation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/hyperbare"
               >
-                hyperbare
+                Hyperbare
               </a>
             </li>
           </ul>
@@ -1931,16 +1917,9 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/indemnite-de-la-securite-sociale"
-              >
-                indemnité de la sécurité sociale"
-              </a>
-            </li>
-            <li>
-              <a
                 href="/glossaire/indemnites"
               >
-                indemnités
+                Indemnités
               </a>
             </li>
             <li>
@@ -1954,35 +1933,35 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/indexation-des-salaires"
               >
-                indexation des salaires
+                Indexation des salaires
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/infraction"
               >
-                infraction
+                Infraction
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/instance"
               >
-                instance
+                Instance
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/institutions-representatives-du-personnel"
+                href="/glossaire/institutions-representatives-du-personnel-irp"
               >
-                institutions représentatives du personnel
+                Institutions représentatives du personnel (IRP)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/intermittent-du-spectacle"
               >
-                intermittent du spectacle
+                Intermittent du spectacle
               </a>
             </li>
           </ul>
@@ -1998,84 +1977,84 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/jour-calendaire"
               >
-                jour calendaire
+                Jour calendaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jour-chome"
               >
-                jour chômé
+                Jour chômé
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jour-ferie"
               >
-                jour férié
+                Jour férié
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jour-franc"
               >
-                jour franc
+                Jour franc
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jour-ouvrable"
               >
-                jour ouvrable
+                Jour ouvrable
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jour-ouvre"
               >
-                jour ouvré
+                Jour ouvré
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jours-de-fractionnement"
               >
-                jours de fractionnement
+                Jours de fractionnement
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jugement-definitif"
               >
-                jugement définitif
+                Jugement définitif
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jugement-passe-en-force-de-chose-jugee"
               >
-                jugement passé en force de chose jugée
+                Jugement passé en force de chose jugée
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/juridiction-administrative"
+                href="/glossaire/juridictions-administratives"
               >
-                juridiction administrative
+                Juridictions administratives
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/juridiction-judiciaire"
+                href="/glossaire/juridictions-judiciaires"
               >
-                juridiction judiciaire
+                Juridictions judiciaires
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/jurisprudence"
               >
-                jurisprudence
+                Jurisprudence
               </a>
             </li>
           </ul>
@@ -2091,77 +2070,70 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/licenciement-disciplinaire"
               >
-                licenciement disciplinaire
-              </a>
-            </li>
-            <li>
-              <a
-                href="/glossaire/licenciement-injustifie"
-              >
-                licenciement injustifié"
+                Licenciement disciplinaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/licenciement-irregulier"
               >
-                licenciement irrégulier
+                Licenciement irrégulier
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/licenciement-nul"
               >
-                licenciement nul
+                Licenciement nul
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/licenciement-pour-motif-economique"
               >
-                licenciement pour motif économique
+                Licenciement pour motif économique
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/licenciement-pour-motif-personnel"
               >
-                licenciement pour motif personnel
+                Licenciement pour motif personnel
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/licenciement-sans-cause-reelle-et-serieuse"
               >
-                licenciement sans cause réelle et sérieuse 
+                Licenciement sans cause réelle et sérieuse 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/lien-de-subordination"
               >
-                lien de subordination
+                Lien de subordination
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/liquidation-judiciaire"
               >
-                liquidation judiciaire
+                Liquidation judiciaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/litige"
               >
-                litige
+                Litige
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/lock-out"
               >
-                lock-out
+                Lock-out
               </a>
             </li>
           </ul>
@@ -2175,107 +2147,93 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/maitre-doeuvre"
-              >
-                maître d'œuvre
-              </a>
-            </li>
-            <li>
-              <a
-                href="/glossaire/maitre-douvrage"
-              >
-                maître d'ouvrage
-              </a>
-            </li>
-            <li>
-              <a
                 href="/glossaire/maladie-professionnelle"
               >
-                maladie professionnelle
+                Maladie professionnelle
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mandat-dun-representant-du-personnel"
               >
-                mandat d'un représentant du personnel
+                Mandat d'un représentant du personnel
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mandataire-social"
               >
-                mandataire social
+                Mandataire social
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/marche-reglemente"
               >
-                marché réglementé
+                Marché réglementé
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mensualisation"
               >
-                mensualisation
+                Mensualisation
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/minimum-garanti"
+                href="/glossaire/minimum-garanti-mg"
               >
-                minimum garanti
+                Minimum garanti (MG)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mise-a-pied-conservatoire"
               >
-                mise à pied conservatoire
+                Mise à pied conservatoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mise-a-pied-disciplinaire"
               >
-                mise à pied disciplinaire
+                Mise à pied disciplinaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mise-en-demeure"
               >
-                mise en demeure
+                Mise en demeure
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/modification-juridique-de-la-situation-de-lemployeur"
               >
-                modification juridique de la situation de l'employeur
+                Modification juridique de la situation de l'employeur
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mutation"
               >
-                mutation
+                Mutation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mutation-disciplinaire"
               >
-                mutation disciplinaire
+                Mutation disciplinaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/mutile-du-travail"
               >
-                mutilé du travail
+                Mutilé du travail
               </a>
             </li>
           </ul>
@@ -2289,30 +2247,23 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/necessites-de-service"
-              >
-                nécessités de service
-              </a>
-            </li>
-            <li>
-              <a
                 href="/glossaire/negociation-triennale"
               >
-                négociation triennale 
+                Négociation triennale 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/norme-nf-x35-102"
               >
-                norme nf x35-102
+                Norme nf x35-102
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/notification"
               >
-                notification
+                Notification
               </a>
             </li>
           </ul>
@@ -2326,30 +2277,30 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/operateurs-de-competences"
+                href="/glossaire/operateurs-de-competences-opco"
               >
-                opérateurs de compétences
+                Opérateurs de compétences (OPCO)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/ordre-du-jour"
               >
-                ordre du jour
+                Ordre du jour
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/ordre-public"
               >
-                ordre public
+                Ordre public
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/outplacement"
               >
-                outplacement
+                Outplacement
               </a>
             </li>
           </ul>
@@ -2365,140 +2316,140 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/part-sociale"
               >
-                part sociale
+                Part sociale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/parties-au-contrat-de-travail"
               >
-                parties au contrat de travail
+                Parties au contrat de travail
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/pays-avec-lesquels-la-france-a-signe-une-convention-de-securite-sociale"
               >
-                pays avec lesquels la france a signé une convention de sécurité sociale
+                Pays avec lesquels la france a signé une convention de sécurité sociale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/pays-ayant-conclu-un-accord-avec-la-france-sur-limmigration-professionnelle"
               >
-                pays ayant conclu un accord avec la france sur l'immigration professionnelle
+                Pays ayant conclu un accord avec la France sur l'immigration professionnelle
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/pays-de-lunion-europeenne"
               >
-                pays de l'union européenne
+                Pays de l'Union Européenne
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/pecule-de-liberation"
               >
-                pécule de libération
+                Pécule de libération
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/penibilite-au-travail"
               >
-                pénibilité au travail
+                Pénibilité au travail
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/periode-probatoire"
               >
-                période probatoire
+                Période probatoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/personne-morale"
               >
-                personne morale
+                Personne morale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/pme-au-sens-communautaire"
               >
-                pme au sens communautaire
+                PME au sens communautaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/pourvoi-en-cassation"
               >
-                pourvoi en cassation
+                Pourvoi en cassation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/preavis"
               >
-                préavis
+                Préavis
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/prejudice"
               >
-                préjudice
+                Préjudice
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/prescription"
               >
-                prescription
+                Prescription
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/prestataire-de-services-dans-lunion-europeenne"
               >
-                prestataire de services dans l'union européenne
+                Prestataire de services dans l'Union Européenne
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/proche-aidant-dune-personne-agee"
               >
-                proche aidant d'une personne âgée
+                Proche aidant d'une personne âgée
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/propagande-electorale"
               >
-                propagande électorale
+                Propagande électorale
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/prorata-temporis"
               >
-                prorata temporis
+                Prorata temporis
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/prorogation"
               >
-                prorogation
+                Prorogation
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/protocole-daccord-preelectoral"
+                href="/glossaire/protocole-daccord-preelectoral-pap"
               >
-                protocole d'accord préélectoral
+                Protocole d'accord préélectoral (PAP)
               </a>
             </li>
           </ul>
@@ -2514,7 +2465,7 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/quorum"
               >
-                quorum
+                Quorum
               </a>
             </li>
           </ul>
@@ -2530,119 +2481,119 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/recidive"
               >
-                récidive
+                Récidive
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/recours-hierarchique"
               >
-                recours hiérarchique
+                Recours hiérarchique
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/recours-juridictionnel-suspensif"
               >
-                recours juridictionnel suspensif
+                Recours juridictionnel suspensif
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/redressement-judiciaire"
               >
-                redressement judiciaire
+                Redressement judiciaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/refere"
               >
-                référé
+                Référé
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/reglement-amiable-dun-litige"
               >
-                règlement amiable d'un litige
+                Règlement amiable d'un litige
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/representant-legal"
               >
-                représentant légal
+                Représentant légal
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/requerant"
               >
-                requérant
+                Requérant
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/requete"
               >
-                requête
+                Requête
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/rescrit"
               >
-                rescrit
+                Rescrit
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/rescrit-social"
               >
-                rescrit social
+                Rescrit social
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/retrogradation"
               >
-                rétrogradation
+                Rétrogradation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/revenus-de-remplacement"
               >
-                revenus de remplacement
+                Revenus de remplacement
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/revenus-nets-categoriels"
               >
-                revenus nets catégoriels
+                Revenus nets catégoriels
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/risque-professionnel"
               >
-                risque professionnel
+                Risque professionnel
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/risque-psychosociaux"
+                href="/glossaire/risque-psychosociaux-rps"
               >
-                risque psychosociaux
+                Risque psychosociaux (RPS)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/rupture-amiable"
               >
-                rupture amiable
+                Rupture amiable
               </a>
             </li>
           </ul>
@@ -2658,105 +2609,105 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/salarie-mandate"
               >
-                salarié mandaté
+                Salarié mandaté
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/sanction-disciplinaire"
               >
-                sanction disciplinaire
+                Sanction disciplinaire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/secretariat-greffe"
               >
-                secrétariat-greffe
+                Secrétariat-greffe
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/sejour-irregulier"
               >
-                séjour irrégulier
+                Séjour irrégulier
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/semaine"
+                href="/glossaire/semaine-droit-du-travail"
               >
-                semaine
+                Semaine (droit du travail)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/seuil-deffectifs"
               >
-                seuil d'effectifs
+                Seuil d'effectifs
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/signification"
               >
-                signification
+                Signification
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/silence-garde-par-ladministration"
               >
-                silence gardé par l'administration
+                Silence gardé par l'administration
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/statut-particulier"
               >
-                statut particulier
+                Statut particulier
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/subrogation"
               >
-                subrogation
+                Subrogation
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/sujetion"
               >
-                sujétion
+                Sujétion
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/sursis-a-statuer"
               >
-                sursis à statuer
+                Sursis à statuer
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/suspension-du-contrat-de-travail"
               >
-                suspension du contrat de travail
+                Suspension du contrat de travail
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/systeme-didentification-du-repertoire-des-entreprises"
+                href="/glossaire/systeme-didentification-du-repertoire-des-entreprises-siret"
               >
-                système d'identification du répertoire des entreprises
+                Système d'identification du répertoire des entreprises (SIRET)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/systeme-informatique-du-repertoire-des-entreprises"
+                href="/glossaire/systeme-informatique-du-repertoire-des-entreprises-siren"
               >
-                système informatique du répertoire des entreprises
+                Système informatique du répertoire des entreprises (SIREN)
               </a>
             </li>
           </ul>
@@ -2772,70 +2723,70 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/temps-de-travail-effectif"
               >
-                temps de travail effectif
+                Temps de travail effectif
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/terme-imprecis"
               >
-                terme imprécis
+                Terme imprécis
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/terme-precis"
               >
-                terme précis
+                Terme précis
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/texte-attache"
               >
-                texte attaché
+                Texte attaché
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/texte-de-base"
               >
-                texte de base
+                Texte de base
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/textes-salaires"
               >
-                textes salaires
+                Textes salaires
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/titre-executoire"
               >
-                titre exécutoire
+                Titre exécutoire
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/transaction"
               >
-                transaction
+                Transaction
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/transfert-dentreprise"
               >
-                transfert d'entreprise
+                Transfert d'entreprise
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/travailleur-frontalier"
               >
-                travailleur frontalier
+                Travailleur frontalier
               </a>
             </li>
           </ul>
@@ -2849,30 +2800,30 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/union-europeenne"
+                href="/glossaire/union-europeenne-ue"
               >
-                union européenne
+                Union Européenne (UE)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/unite-economique-et-sociale"
+                href="/glossaire/unite-economique-et-sociale-ues"
               >
-                unité économique et sociale
+                Unité économique et sociale (UES)
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/usages"
               >
-                usages
+                Usages
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/usages-locaux"
               >
-                usages locaux
+                Usages locaux
               </a>
             </li>
           </ul>
@@ -2888,21 +2839,21 @@ exports[`<Glossaire /> should render 1`] = `
               <a
                 href="/glossaire/vacant"
               >
-                vacant 
+                Vacant 
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/vigueur"
               >
-                vigueur
+                Vigueur
               </a>
             </li>
             <li>
               <a
                 href="/glossaire/voies-de-recours"
               >
-                voies de recours
+                Voies de recours
               </a>
             </li>
           </ul>
@@ -2916,30 +2867,30 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/zone-de-revitalisation-rurale"
+                href="/glossaire/zone-de-revitalisation-rurale-zrr"
               >
-                zone de revitalisation rurale
+                Zone de revitalisation rurale (ZRR)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/zone-franche-urbaine"
+                href="/glossaire/zone-franche-urbaine-zfu"
               >
-                zone franche urbaine
+                Zone franche urbaine (ZFU)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/zone-touristique-internationale"
+                href="/glossaire/zone-touristique-internationale-zti"
               >
-                zone touristique internationale
+                Zone touristique internationale (ZTI)
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/zone-urbaine-sensible"
+                href="/glossaire/zone-urbaine-sensible-zus"
               >
-                zone urbaine sensible
+                Zone urbaine sensible (ZUS)
               </a>
             </li>
           </ul>
