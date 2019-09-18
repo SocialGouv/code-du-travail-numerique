@@ -4,11 +4,8 @@ jest.mock(
     {
       refs: [
         {
-          _source: {
-            source: "faq",
-            title: "title1",
-            slug: "slug1"
-          }
+          title: "title1",
+          url: "/faq/slug1"
         }
       ],
       theme: "theme1",
@@ -18,21 +15,12 @@ jest.mock(
     {
       refs: [
         {
-          _source: {
-            anchor: "#anchor2",
-            source: "source2",
-            title: "title2",
-            slug: "slug2",
-            url: "url2"
-          }
+          title: "title2",
+          url: "/fiche-service-public/slug2"
         },
         {
-          _source: {
-            title: "title3",
-            url: "url3",
-            source: "source3",
-            slug: "slug3"
-          }
+          title: "title3",
+          url: "/code-du-travail/url3"
         }
       ],
       theme: "theme2",
@@ -46,14 +34,14 @@ jest.mock(
 
 const getSavedResult = require("../search/search.getSavedResult");
 
-it("should return result for some variant", () => {
-  expect(getSavedResult("known-query4")).toMatchSnapshot();
+it("should return result for some variant", async () => {
+  expect(await getSavedResult("known-query4")).toMatchSnapshot();
 });
 
-it("should not return when no match", () => {
-  expect(getSavedResult("unknown-query")).toMatchSnapshot();
+it("should not return when no match", async () => {
+  expect(await getSavedResult("unknown-query")).toMatchSnapshot();
 });
 
-it("should exclude sources", () => {
-  expect(getSavedResult("known-query3", ["source3"])).toMatchSnapshot();
+it("should exclude sources", async () => {
+  expect(await getSavedResult("known-query3", ["source3"])).toMatchSnapshot();
 });

@@ -26,7 +26,7 @@ const getEsReferences = async (refs = []) => {
     (refs &&
       flatten(
         refs
-          .filter(ref => isInternalUrl(ref.url))
+          .filter(ref => console.log("ref1", ref) || isInternalUrl(ref.url))
           .map(ref => getDocumentByUrlQuery(ref.url))
           .filter(Boolean)
           .map(query => [indexQuery, query])
