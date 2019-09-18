@@ -23,7 +23,7 @@ const routeBySource = {
   [SOURCES.IDCC]: "idcc",
   [SOURCES.CCN]: "convention-collective",
   [SOURCES.EXTERNALS]: "external",
-  [SOURCES.CONTRIBUTIONS]: "contributions"
+  [SOURCES.CONTRIBUTIONS]: "contribution"
 };
 
 // mapping elastic search source type -> source label

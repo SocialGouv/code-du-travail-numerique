@@ -32,7 +32,8 @@ function getSearchBody({ source, slug }) {
       "url",
       "breadcrumbs",
       "idcc",
-      "date_publi" // convention-collective
+      "date_publi", // convention-collective
+      "answers" // contributions
     ]
   };
 }
