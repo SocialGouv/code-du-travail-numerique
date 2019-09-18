@@ -74,7 +74,7 @@ class ServiceRenseignement extends React.Component {
             <li>{"les demandes d'intervention en entreprise"}</li>
             <li>
               {
-                "le règlement des litiges, et la consitution des dossiers prud'homaux"
+                "le règlement des litiges, et la constitution des dossiers prud'homaux"
               }
             </li>
             <li>{"les calculs de droit au chômage"}</li>
