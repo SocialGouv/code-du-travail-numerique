@@ -5,25 +5,15 @@ Object {
   "facets": Array [
     Object {
       "doc_count": 1,
-      "key": "source2",
+      "key": "fiches_service_public",
     },
     Object {
       "doc_count": 1,
-      "key": "source3",
+      "key": "code_du_travail",
     },
   ],
   "hits": Object {
-    "hits": Array [
-      Object {
-        "_source": Object {
-          "anchor": "#anchor2",
-          "slug": "slug2",
-          "source": "source2",
-          "title": "title2",
-          "url": "url2",
-        },
-      },
-    ],
+    "hits": Array [],
   },
 }
 `;
@@ -35,33 +25,15 @@ Object {
   "facets": Array [
     Object {
       "doc_count": 1,
-      "key": "source2",
+      "key": "fiches_service_public",
     },
     Object {
       "doc_count": 1,
-      "key": "source3",
+      "key": "code_du_travail",
     },
   ],
   "hits": Object {
-    "hits": Array [
-      Object {
-        "_source": Object {
-          "anchor": "#anchor2",
-          "slug": "slug2",
-          "source": "source2",
-          "title": "title2",
-          "url": "url2",
-        },
-      },
-      Object {
-        "_source": Object {
-          "slug": "slug3",
-          "source": "source3",
-          "title": "title3",
-          "url": "url3",
-        },
-      },
-    ],
+    "hits": Array [],
   },
 }
 `;
