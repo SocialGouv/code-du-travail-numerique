@@ -38,8 +38,8 @@ describe("search service", () => {
     fetch.mockClear();
   });
   it("should make a request once", () => {
-    fetchSearchResults({ query });
-    fetchSearchResults({ query });
+    fetchSearchResults(query);
+    fetchSearchResults(query);
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(

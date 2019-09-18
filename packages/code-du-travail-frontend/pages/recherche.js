@@ -12,21 +12,12 @@ import Metas from "../src/common/Metas";
 
 class SearchPage extends React.Component {
   static async getInitialProps({ query: { q: query } }) {
-    const searchResults = await fetchSearchResults({
-      query
-    });
-    return {
-      searchResults
-    };
+    const items = await fetchSearchResults(query);
+    return { items };
   }
 
   render() {
-    const {
-      router,
-      searchResults: { items } = { items: [] },
-      pageUrl,
-      ogImage
-    } = this.props;
+    const { router, items = [], pageUrl, ogImage } = this.props;
     const { q: query = "" } = router.query;
     return (
       <PageLayout>

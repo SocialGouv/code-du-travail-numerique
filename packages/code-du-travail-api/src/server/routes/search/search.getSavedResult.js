@@ -9,29 +9,10 @@ const getSavedResult = (query, excludeSources = []) => {
   if (knownQuery) {
     // build an ES result for a known query
     // apply source filters if any
-    // build facets
-    return {
-      items: knownQuery.refs.filter(
-        ref => !excludeSources.includes(ref._source.source)
-      ),
-      facets: makeFacets(knownQuery.refs)
-    };
+    return knownQuery.refs.filter(
+      ref => !excludeSources.includes(ref._source.source)
+    );
   }
 };
-
-// builds facets manually
-const makeFacets = refs =>
-  refs.reduce((a, c) => {
-    const source = c._source.source;
-    if (!a.find(facet => facet.key === source)) {
-      a.push({
-        key: source,
-        doc_count: 0
-      });
-    }
-    const facet = a.find(facet => facet.key === source);
-    facet.doc_count++;
-    return a;
-  }, []);
 
 module.exports = getSavedResult;

@@ -3,7 +3,6 @@ const API_BASE_URL = require("../v1.prefix");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getSearchBody = require("./search.elastic");
-const getFacetsBody = require("./facets.elastic");
 const getSavedResult = require("./search.getSavedResult");
 
 const index =
@@ -42,23 +41,11 @@ router.get("/search", async ctx => {
 
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
   const body = getSearchBody({ query, size, excludeSources });
-  const facetBody = getFacetsBody({ query });
 
   // query data
   const response = await elasticsearchClient.search({ index, body });
 
-  ctx.body = {
-    items: response.body.hits.hits
-  };
-
-  // facet data
-  const facetResponse = await elasticsearchClient.search({
-    index,
-    body: facetBody
-  });
-  if (facetResponse.body.aggregations.document_count.buckets.length > 0) {
-    ctx.body.facets = facetResponse.body.aggregations.document_count.buckets;
-  }
+  ctx.body = response.body.hits.hits;
 });
 
 module.exports = router;

@@ -52,10 +52,7 @@ class Theme extends React.Component {
   static async getInitialProps({ query: { slug: query } }) {
     const [searchThemeResponse, searchResults] = await Promise.all([
       fetch(`${API_URL}/themes${query ? `/${query}` : ""}`),
-      fetchSearchResults({
-        query,
-        excludeSources: "themes"
-      })
+      fetchSearchResults(query, "themes")
     ]);
     if (!searchThemeResponse.ok) {
       return { statusCode: searchThemeResponse.status };
@@ -72,7 +69,7 @@ class Theme extends React.Component {
   render() {
     const {
       theme = { children: [] },
-      searchResults: { items } = { items: [] },
+      searchResults,
       query,
       pageUrl,
       ogImage
@@ -104,7 +101,7 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <Section>
             <Container narrow>
-              <SearchResults query={query} items={items} />
+              <SearchResults query={query} items={searchResults} />
             </Container>
           </Section>
         )}

@@ -70,34 +70,32 @@ const Search = ({ router }) => {
   };
 
   return (
-    <React.Fragment>
-      <SearchSection variant="white">
-        <Container>
-          <StyledSearch ref={searchRef}>
-            <SearchLabel>
-              Posez votre question sur le droit du travail
-              <br />
-              <Link href="/droit-du-travail" passHref>
-                <A>Le droit du travail, c‘est quoi ?</A>
-              </Link>
-            </SearchLabel>
-            <SearchForm onSubmit={onFormSubmit}>
-              <SearchInputIcon />
-              <SearchInput
-                onChange={onChange}
-                query={query}
-                placeholder="Recherche"
-                onSearch={onSearch}
-                onSelect={onSelect}
-                onClear={onClear}
-                suggestions={suggestions}
-              />
-              <Submit type="submit">Rechercher</Submit>
-            </SearchForm>
-          </StyledSearch>
-        </Container>
-      </SearchSection>
-    </React.Fragment>
+    <SearchSection variant="white">
+      <Container>
+        <StyledSearch ref={searchRef}>
+          <SearchLabel>
+            Posez votre question sur le droit du travail
+            <br />
+            <Link href="/droit-du-travail" passHref>
+              <A>Le droit du travail, c‘est quoi ?</A>
+            </Link>
+          </SearchLabel>
+          <SearchForm onSubmit={onFormSubmit}>
+            <SearchInputIcon />
+            <SearchInput
+              onChange={onChange}
+              query={query}
+              placeholder="Recherche"
+              onSearch={onSearch}
+              onSelect={onSelect}
+              onClear={onClear}
+              suggestions={suggestions}
+            />
+            <Submit type="submit">Rechercher</Submit>
+          </SearchForm>
+        </StyledSearch>
+      </Container>
+    </SearchSection>
   );
 };
 
