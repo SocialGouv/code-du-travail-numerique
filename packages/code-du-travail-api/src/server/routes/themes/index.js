@@ -43,15 +43,15 @@ router.get("/themes/:slug", async ctx => {
     index,
     body
   });
-  if (!response || response.body.hits.hits.length === 0) {
+  if (response.body.hits.hits.length === 0) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
 
-  const hit = response.body.hits.hits[0];
-  const refs = await getEsReferences(hit._source.refs);
+  const theme = response.body.hits.hits[0];
+  const refs = await getEsReferences(theme._source.refs);
 
   ctx.body = {
-    ...hit._source,
+    ...theme._source,
     refs
   };
 });
