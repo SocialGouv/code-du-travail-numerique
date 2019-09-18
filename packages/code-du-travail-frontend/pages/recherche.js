@@ -19,7 +19,9 @@ class SearchPage extends React.Component {
   static async getInitialProps({ query }) {
     const excludeSources = getExcludeSources(query.source);
     const response = await fetch(
-      `${API_URL}/search?q=${query.q}&excludeSources=${excludeSources}`
+      `${API_URL}/search?q=${encodeURIComponent(
+        query.q
+      )}&excludeSources=${encodeURIComponent(excludeSources)}`
     );
     if (!response.ok) {
       return { statusCode: response.status };
