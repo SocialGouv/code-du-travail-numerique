@@ -1,22 +1,30 @@
 [
   {
-    "title": "à titre conservatoire",
+    "title": "A titre conservatoire",
     "slug": "a-titre-conservatoire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Mesure d'urgence prise par précaution.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R37450"
+      }
+    ]
   },
   {
-    "title": "abrogation",
+    "title": "Abrogation",
     "slug": "abrogation",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Suppression pour l'avenir d'un acte administratif ou d'une règle de droit.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R16145"
+      }
+    ]
   },
   {
-    "title": "abrogé",
+    "title": "Abrogé",
     "slug": "abroge",
     "abbrs": [],
     "variants": [],
@@ -24,7 +32,7 @@
     "refs": []
   },
   {
-    "title": "accessoires de salaire ",
+    "title": "Accessoires de salaire ",
     "slug": "accessoires-de-salaire",
     "abbrs": [],
     "variants": [
@@ -34,7 +42,7 @@
     "refs": []
   },
   {
-    "title": "accident de mission",
+    "title": "Accident de mission",
     "slug": "accident-de-mission",
     "abbrs": [],
     "variants": [],
@@ -42,7 +50,7 @@
     "refs": []
   },
   {
-    "title": "accident de travail",
+    "title": "Accident de travail",
     "slug": "accident-de-travail",
     "abbrs": [
       "AT",
@@ -57,7 +65,7 @@
     ]
   },
   {
-    "title": "accord atypique",
+    "title": "Accord atypique",
     "slug": "accord-atypique",
     "abbrs": [],
     "variants": [],
@@ -65,17 +73,18 @@
     "refs": []
   },
   {
-    "title": "accord collectif",
+    "title": "Accord collectif",
     "slug": "accord-collectif",
     "abbrs": [],
     "variants": [
-      "accord collectif de travail"
+      "accord collectif de travail",
+      "accord paritaire"
     ],
-    "definition": "",
+    "definition": "<p>Accord conclu entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés en respectant des règles de validité issues du code du travail. Il peut être conclu à plusieurs niveaux : branche professionnelle, groupe, entreprise, établissement... </p><p>L'accord collectif concerne un ou plusieurs thèmes contrairement à la convention collective qui traite de l'ensemble des conditions d’emploi, de travail et de formation professionnelle et des garanties sociales des salariés.Exemple : un accord collectif sur le temps de travail, un accord collectif sur les salaires...</p>",
     "refs": []
   },
   {
-    "title": "accord d'entreprise",
+    "title": "Accord d'entreprise",
     "slug": "accord-dentreprise",
     "abbrs": [
       "ACE"
@@ -87,7 +96,7 @@
     "refs": []
   },
   {
-    "title": "accord de branche",
+    "title": "Accord de branche",
     "slug": "accord-de-branche",
     "abbrs": [],
     "variants": [],
@@ -95,7 +104,7 @@
     "refs": []
   },
   {
-    "title": "accord de branche étendu",
+    "title": "Accord de branche étendu",
     "slug": "accord-de-branche-etendu",
     "abbrs": [],
     "variants": [],
@@ -103,7 +112,7 @@
     "refs": []
   },
   {
-    "title": "accord de branche non étendu",
+    "title": "Accord de branche non étendu",
     "slug": "accord-de-branche-non-etendu",
     "abbrs": [],
     "variants": [],
@@ -111,7 +120,7 @@
     "refs": []
   },
   {
-    "title": "accord de groupe",
+    "title": "Accord de groupe",
     "slug": "accord-de-groupe",
     "abbrs": [],
     "variants": [],
@@ -119,7 +128,7 @@
     "refs": []
   },
   {
-    "title": "accord de méthode",
+    "title": "Accord de méthode",
     "slug": "accord-de-methode",
     "abbrs": [],
     "variants": [],
@@ -127,7 +136,7 @@
     "refs": []
   },
   {
-    "title": "accord dérogatoire",
+    "title": "Accord dérogatoire",
     "slug": "accord-derogatoire",
     "abbrs": [],
     "variants": [
@@ -137,7 +146,7 @@
     "refs": []
   },
   {
-    "title": "accord interentreprises",
+    "title": "Accord interentreprises",
     "slug": "accord-interentreprises",
     "abbrs": [],
     "variants": [],
@@ -145,7 +154,7 @@
     "refs": []
   },
   {
-    "title": "accord national interprofessionnel",
+    "title": "Accord national interprofessionnel",
     "slug": "accord-national-interprofessionnel",
     "abbrs": [
       "ANI"
@@ -159,39 +168,31 @@
     "refs": []
   },
   {
-    "title": "accord paritaire\"",
-    "slug": "accord-paritaire",
-    "abbrs": [
-      "Accord conclu entre un employeur ou des représentants d'employeurs et une ou plusieurs organisations syndicales de salariés en respectant des règles de validité issues du code du travail. Il peut être conclu à plusieurs niveaux : branche professionnelle",
-      "groupe",
-      "entreprise",
-      "établissement...  L'accord collectif concerne un ou plusieurs thèmes contrairement à la convention collective qui traite de l'ensemble des conditions d’emploi",
-      "de travail et de formation professionnelle et des garanties sociales des salariés.  Exemple : un accord collectif sur le temps de travail",
-      "un accord collectif sur les salaires",
-      "etc."
-    ],
-    "variants": [],
-    "definition": "",
-    "refs": []
-  },
-  {
-    "title": "acte réglementaire",
+    "title": "Acte réglementaire",
     "slug": "acte-reglementaire",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Décision administrative à portée générale et impersonnelle. Par exemple, arrêté pris par un maire ou un président de conseil départemental ou régional. A la différence des actes administratifs \"individuels\", qui s'adressent à des destinataires identifiables, les actes réglementaires ont une portée générale et impersonnelle et visent ou concernent des catégories envisagées abstraitement et dans leur ensemble.</p>",
-    "refs": []
+    "definition": "<p>Décision administrative à portée générale et impersonnelle. </p><p>Par exemple, arrêté pris par un maire ou un président de conseil départemental ou régional. </p>",
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R51598"
+      }
+    ]
   },
   {
-    "title": "actes positifs de recherche d'emploi",
+    "title": "Actes positifs de recherche d'emploi",
     "slug": "actes-positifs-de-recherche-demploi",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Démarches régulières de recherche d'emploi pour lesquelles le demandeur d'emploi doit être en mesure de produire un justificatif (candidatures envoyées, participation à des sessions d'aide à la recherche d'un emploi, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R52115"
+      }
+    ]
   },
   {
-    "title": "actionnariat des salariés",
+    "title": "Actionnariat des salariés",
     "slug": "actionnariat-des-salaries",
     "abbrs": [],
     "variants": [],
@@ -199,7 +200,7 @@
     "refs": []
   },
   {
-    "title": "activité partielle",
+    "title": "Activité partielle",
     "slug": "activite-partielle",
     "abbrs": [],
     "variants": [
@@ -210,8 +211,8 @@
     "refs": []
   },
   {
-    "title": "activité principale exercée",
-    "slug": "activite-principale-exercee",
+    "title": "Activité principale exercée (APE)",
+    "slug": "activite-principale-exercee-ape",
     "abbrs": [
       "APE"
     ],
@@ -219,11 +220,15 @@
       "code ape"
     ],
     "definition": "<p>Le code APE permet d'identifier la branche d'activité principale de l'entreprise ou du travailleur indépendant. Il est composé de 4 chiffres et 1 lettre, en référence à la nomenclature statistique nationale d'activités française (NAF).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R53057"
+      }
+    ]
   },
   {
-    "title": "activités sociales et culturelles",
-    "slug": "activites-sociales-et-culturelles",
+    "title": "Activités sociales et culturelles (ASC)",
+    "slug": "activites-sociales-et-culturelles-asc",
     "abbrs": [
       "ASC"
     ],
@@ -238,7 +243,7 @@
     ]
   },
   {
-    "title": "adhésion (accord collectif ou convention collective) ",
+    "title": "Adhésion (accord collectif ou convention collective) ",
     "slug": "adhesion-accord-collectif-ou-convention-collective",
     "abbrs": [],
     "variants": [],
@@ -246,8 +251,8 @@
     "refs": []
   },
   {
-    "title": "affection de longue durée",
-    "slug": "affection-de-longue-duree",
+    "title": "Affection de longue durée (ALD)",
+    "slug": "affection-de-longue-duree-ald",
     "abbrs": [
       "ALD"
     ],
@@ -255,10 +260,14 @@
       "maladie de longue durée"
     ],
     "definition": "<p>Maladie grave et/ou chronique ouvrant droit à une prise en charge à 100% par l'assurance maladie.</p><p>Exemples : diabète, cancer, mucoviscidose, infection par le virus de l'immunodéficience humaine (VIH), etc.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R10877"
+      }
+    ]
   },
   {
-    "title": "affiliation",
+    "title": "Affiliation",
     "slug": "affiliation",
     "abbrs": [],
     "variants": [
@@ -268,8 +277,8 @@
     "refs": []
   },
   {
-    "title": "aide au retour à l’emploi",
-    "slug": "aide-au-retour-a-lemploi",
+    "title": "Aide au retour à l’emploi (ARE)",
+    "slug": "aide-au-retour-a-lemploi-are",
     "abbrs": [
       "ARE"
     ],
@@ -285,17 +294,21 @@
     "refs": []
   },
   {
-    "title": "aide juridictionnelle ",
-    "slug": "aide-juridictionnelle",
+    "title": "Aide juridictionnelle (AJ)",
+    "slug": "aide-juridictionnelle-aj",
     "abbrs": [
       "AJ"
     ],
     "variants": [],
     "definition": "<p>Aide financière qui permet aux personnes sans ressources ou ayant des revenus modestes d’obtenir la prise en charge de tout ou partie des frais d’un procès (avocat, huissier...).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1032"
+      }
+    ]
   },
   {
-    "title": "amplitude horaire",
+    "title": "Amplitude horaire",
     "slug": "amplitude-horaire",
     "abbrs": [],
     "variants": [
@@ -308,15 +321,19 @@
     "refs": []
   },
   {
-    "title": "année civile",
+    "title": "Année civile",
     "slug": "annee-civile",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Du 1er janvier au 31 décembre.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire"
+      }
+    ]
   },
   {
-    "title": "annualisation du temps de travail",
+    "title": "Annualisation du temps de travail",
     "slug": "annualisation-du-temps-de-travail",
     "abbrs": [],
     "variants": [
@@ -326,15 +343,19 @@
     "refs": []
   },
   {
-    "title": "appel",
+    "title": "Appel ",
     "slug": "appel",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Voie de recours par laquelle une partie à un procès demande un nouveau jugement de l'affaire par une juridiction supérieure.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R53896"
+      }
+    ]
   },
   {
-    "title": "arrêt",
+    "title": "Arrêt",
     "slug": "arret",
     "abbrs": [],
     "variants": [],
@@ -342,7 +363,7 @@
     "refs": []
   },
   {
-    "title": "arrêté",
+    "title": "Arrêté",
     "slug": "arrete",
     "abbrs": [],
     "variants": [],
@@ -350,7 +371,7 @@
     "refs": []
   },
   {
-    "title": "article étendu ",
+    "title": "Article étendu ",
     "slug": "article-etendu",
     "abbrs": [],
     "variants": [],
@@ -358,7 +379,7 @@
     "refs": []
   },
   {
-    "title": "article non étendu",
+    "title": "Article non étendu",
     "slug": "article-non-etendu",
     "abbrs": [],
     "variants": [],
@@ -366,15 +387,19 @@
     "refs": []
   },
   {
-    "title": "assiette",
+    "title": "Assiette",
     "slug": "assiette",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Base de calcul.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R13084"
+      }
+    ]
   },
   {
-    "title": "astreinte",
+    "title": "Astreinte",
     "slug": "astreinte",
     "abbrs": [],
     "variants": [],
@@ -386,7 +411,7 @@
     ]
   },
   {
-    "title": "audience électorale",
+    "title": "Audience électorale",
     "slug": "audience-electorale",
     "abbrs": [],
     "variants": [],
@@ -394,17 +419,21 @@
     "refs": []
   },
   {
-    "title": "autorité de la chose jugée",
+    "title": "Autorité de la chose jugée",
     "slug": "autorite-de-la-chose-jugee",
     "abbrs": [],
     "variants": [
       "autorité de chose jugée"
     ],
     "definition": "<p>Se dit d'un jugement qui a une valeur légale et qui peut être contesté uniquement par les voies de recours prévues.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R31039"
+      }
+    ]
   },
   {
-    "title": "avantages en nature",
+    "title": "Avantages en nature",
     "slug": "avantages-en-nature",
     "abbrs": [],
     "variants": [],
@@ -412,34 +441,46 @@
     "refs": []
   },
   {
-    "title": "avenant",
+    "title": "Avenant",
     "slug": "avenant",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Document complémentaire du contrat constatant une modification, une adaptation ou un complément qui y sont apportés d'un commun accord entre les deux parties. </p><p>Exemple : avenant à l'accord collectif, avenant au contrat de travail, etc.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R10829"
+      }
+    ]
   },
   {
-    "title": "avertissement",
+    "title": "Avertissement",
     "slug": "avertissement",
     "abbrs": [],
     "variants": [
       "blâme"
     ],
     "definition": "<p>Reproches adressés par l'employeur au salarié, et notifiés par écrit, en raison du comportement fautif du salarié.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R46983"
+      }
+    ]
   },
   {
-    "title": "ayant droit",
+    "title": "Ayant droit",
     "slug": "ayant-droit",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Personne qui tient son droit à l'assurance maladie-maternité du fait de ses liens avec un assuré.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R13146"
+      }
+    ]
   },
   {
-    "title": "base de données économiques et sociales",
-    "slug": "base-de-donnees-economiques-et-sociales",
+    "title": "Base de données économiques et sociales (BDES)",
+    "slug": "base-de-donnees-economiques-et-sociales-bdes",
     "abbrs": [
       "BDES"
     ],
@@ -448,15 +489,15 @@
     "refs": []
   },
   {
-    "title": "bilan social",
+    "title": "Bilan social",
     "slug": "bilan-social",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Document établi par l'employeur récapitulant des données chiffrées sur la situation sociale de l’entreprise de l'année en cours, d'années précédentes et d'années futures.</p>",
+    "definition": "<p>Document établi par l'employeur récapitulant des données chiffrées sur la situation sociale de l’entreprise de l'année en cours, d'années précédentes et d'années futures.</p><p>Exemples des données présentes : emploi, rémunérations, conditions de travail, formation des salariés. </p>",
     "refs": []
   },
   {
-    "title": "bon de délégation",
+    "title": "Bon de délégation",
     "slug": "bon-de-delegation",
     "abbrs": [],
     "variants": [],
@@ -464,15 +505,19 @@
     "refs": []
   },
   {
-    "title": "branche professionnelle",
+    "title": "Branche professionnelle",
     "slug": "branche-professionnelle",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Regroupement de plusieurs entreprises appartenant à un même secteur d'activité et relevant d'un accord ou d'une convention collective.  </p><p>Exemple : métallurgie, hôtels cafés et restaurants, coiffure, boulangerie-pâtisserie, banque, bâtiment, hospitalisation privée, etc.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://travail-emploi.gouv.fr/archives/archives-courantes/loi-travail-2016/les-principales-mesures-de-la-loi-travail/article/branches-professionnelles"
+      }
+    ]
   },
   {
-    "title": "bulletin de paye",
+    "title": "Bulletin de paye",
     "slug": "bulletin-de-paye",
     "abbrs": [],
     "variants": [
@@ -486,15 +531,19 @@
     "refs": []
   },
   {
-    "title": "cadre dirigeant",
+    "title": "Cadre dirigeant",
     "slug": "cadre-dirigeant",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Cadre auquel sont confiées des responsabilités dont l'importance implique une grande indépendance dans l'organisation de son emploi du temps, qui est habilité à prendre des décisions de façon largement autonome et qui perçoit une rémunération se situant dans les niveaux les plus élevés des systèmes de rémunération pratiqués dans l'entreprise ou l'établissement.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R50822"
+      }
+    ]
   },
   {
-    "title": "certificat de travail",
+    "title": "Certificat de travail",
     "slug": "certificat-de-travail",
     "abbrs": [],
     "variants": [],
@@ -502,7 +551,7 @@
     "refs": []
   },
   {
-    "title": "chambre sociale de la cour de cassation",
+    "title": "Chambre sociale de la cour de cassation",
     "slug": "chambre-sociale-de-la-cour-de-cassation",
     "abbrs": [],
     "variants": [],
@@ -510,7 +559,7 @@
     "refs": []
   },
   {
-    "title": "champ d’application d'un accord collectif",
+    "title": "Champ d’application d'un accord collectif",
     "slug": "champ-dapplication-dun-accord-collectif",
     "abbrs": [],
     "variants": [],
@@ -518,7 +567,7 @@
     "refs": []
   },
   {
-    "title": "circulaire",
+    "title": "Circulaire",
     "slug": "circulaire",
     "abbrs": [],
     "variants": [],
@@ -526,7 +575,7 @@
     "refs": []
   },
   {
-    "title": "classification professionnelle",
+    "title": "Classification professionnelle",
     "slug": "classification-professionnelle",
     "abbrs": [],
     "variants": [
@@ -537,31 +586,43 @@
     "refs": []
   },
   {
-    "title": "clause d'indexation",
+    "title": "Clause d'indexation",
     "slug": "clause-dindexation",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Disposition d’un contrat ou d’un jugement destinée à compenser la dépréciation monétaire (ou à tenir compte de l’inflation) entre le jour où la créance est évaluée et le jour du paiement.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R2289"
+      }
+    ]
   },
   {
-    "title": "clause pénale",
+    "title": "Clause pénale",
     "slug": "clause-penale",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Clause qui engage le débiteur, en cas de manquement à une obligation contractuelle, à verser au créancier une somme d'argent dont le montant est fixé à l'avance.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R19480"
+      }
+    ]
   },
   {
-    "title": "clause résolutoire",
+    "title": "Clause résolutoire",
     "slug": "clause-resolutoire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Clause prévoyant la résiliation automatique du contrat en cas de manquement à une obligation contractuelle par l'une des parties (exemple : non-paiement du loyer).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1061"
+      }
+    ]
   },
   {
-    "title": "coefficient hiérarchique",
+    "title": "Coefficient hiérarchique",
     "slug": "coefficient-hierarchique",
     "abbrs": [],
     "variants": [
@@ -572,8 +633,8 @@
     "refs": []
   },
   {
-    "title": "comité social et économique ",
-    "slug": "comite-social-et-economique",
+    "title": "Comité social et économique (CSE)",
+    "slug": "comite-social-et-economique-cse",
     "abbrs": [
       "CSE"
     ],
@@ -582,16 +643,20 @@
     "refs": []
   },
   {
-    "title": "commissaire aux comptes",
+    "title": "Commissaire aux comptes",
     "slug": "commissaire-aux-comptes",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Membre d'une profession libérale réglementée, chargé du contrôle comptable, financier et juridique d'une société, dont il est indépendant. Il dispose d'un droit d'alerte en cas d'irrégularités dans la gestion du personnel dirigeant.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R32143"
+      }
+    ]
   },
   {
-    "title": "commission nationale de l’informatique et des libertés",
-    "slug": "commission-nationale-de-linformatique-et-des-libertes",
+    "title": "Commission nationale de l’informatique et des libertés (CNIL)",
+    "slug": "commission-nationale-de-linformatique-et-des-libertes-cnil",
     "abbrs": [
       "CNIL"
     ],
@@ -600,8 +665,8 @@
     "refs": []
   },
   {
-    "title": "commission santé, sécurité et conditions de travail",
-    "slug": "commission-sante-securite-et-conditions-de-travail",
+    "title": "Commission santé, sécurité et conditions de travail (CSSCT)",
+    "slug": "commission-sante-securite-et-conditions-de-travail-cssct",
     "abbrs": [
       "CSSCT"
     ],
@@ -610,7 +675,7 @@
     "refs": []
   },
   {
-    "title": "conciliation",
+    "title": "Conciliation",
     "slug": "conciliation",
     "abbrs": [],
     "variants": [],
@@ -618,7 +683,7 @@
     "refs": []
   },
   {
-    "title": "congés familiaux",
+    "title": "Congés familiaux",
     "slug": "conges-familiaux",
     "abbrs": [],
     "variants": [],
@@ -626,7 +691,7 @@
     "refs": []
   },
   {
-    "title": "congés spéciaux",
+    "title": "Congés spéciaux",
     "slug": "conges-speciaux",
     "abbrs": [],
     "variants": [],
@@ -634,7 +699,7 @@
     "refs": []
   },
   {
-    "title": "conseil d’état ",
+    "title": "Conseil d’Etat ",
     "slug": "conseil-detat",
     "abbrs": [
       "CE"
@@ -644,8 +709,8 @@
     "refs": []
   },
   {
-    "title": "conseil de prud’hommes",
-    "slug": "conseil-de-prudhommes",
+    "title": "Conseil de prud’hommes (CPH)",
+    "slug": "conseil-de-prudhommes-cph",
     "abbrs": [
       "CPH"
     ],
@@ -654,15 +719,15 @@
     "refs": []
   },
   {
-    "title": "conseiller du salarié",
+    "title": "Conseiller du salarié",
     "slug": "conseiller-du-salarie",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Il peut assister le salarié à l'entretien préalable de licenciement, lorsqu'il n'y a pas de représentants du personnels élus dans l'entreprise. Le salarié peut choisir le conseiller du salarié qui va l'assiister sur une liste, diffusée en mairie ou dans les DIRECCTE.</p>",
+    "definition": "<p>Il peut assister le salarié à l'entretien préalable de licenciement, lorsqu'il n'y a pas de représentants du personnels élus dans l'entreprise. Le salarié peut choisir le conseiller du salarié qui va l'assister sur une liste, diffusée en mairie ou dans les DIRECCTE.</p>",
     "refs": []
   },
   {
-    "title": "conseiller prud'homal",
+    "title": "Conseiller prud'homal",
     "slug": "conseiller-prudhomal",
     "abbrs": [],
     "variants": [],
@@ -670,7 +735,7 @@
     "refs": []
   },
   {
-    "title": "constitution",
+    "title": "Constitution",
     "slug": "constitution",
     "abbrs": [],
     "variants": [],
@@ -678,23 +743,31 @@
     "refs": []
   },
   {
-    "title": "contrat de service",
+    "title": "Contrat de service",
     "slug": "contrat-de-service",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Accord par lequel une personne s'engage à fournir une prestation à une autre personne, en contrepartie d'une rétribution.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R52726"
+      }
+    ]
   },
   {
-    "title": "contravention",
+    "title": "Contravention",
     "slug": "contravention",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Infraction que la loi punit d'une amende n'excédant pas 1 500 €, ou 3 000 € en cas de récidive.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R49228"
+      }
+    ]
   },
   {
-    "title": "convention collective",
+    "title": "Convention collective",
     "slug": "convention-collective",
     "abbrs": [
       "CC"
@@ -704,7 +777,7 @@
     "refs": []
   },
   {
-    "title": "convention collective de branche",
+    "title": "Convention collective de branche",
     "slug": "convention-collective-de-branche",
     "abbrs": [],
     "variants": [],
@@ -712,8 +785,8 @@
     "refs": []
   },
   {
-    "title": "cour administrative d’appel",
-    "slug": "cour-administrative-dappel",
+    "title": "Cour administrative d’appel (CAA)",
+    "slug": "cour-administrative-dappel-caa",
     "abbrs": [
       "CAA"
     ],
@@ -722,7 +795,7 @@
     "refs": []
   },
   {
-    "title": "cour d’appel",
+    "title": "Cour d’appel",
     "slug": "cour-dappel",
     "abbrs": [
       "CA"
@@ -732,7 +805,7 @@
     "refs": []
   },
   {
-    "title": "cour de cassation ",
+    "title": "Cour de cassation ",
     "slug": "cour-de-cassation",
     "abbrs": [
       "CCASS"
@@ -742,8 +815,8 @@
     "refs": []
   },
   {
-    "title": "cour de justice de l’union européenne",
-    "slug": "cour-de-justice-de-lunion-europeenne",
+    "title": "Cour de justice de l’Union Européenne (CJUE)",
+    "slug": "cour-de-justice-de-lunion-europeenne-cjue",
     "abbrs": [
       "CJUE"
     ],
@@ -752,8 +825,8 @@
     "refs": []
   },
   {
-    "title": "cour européenne des droits de l’homme",
-    "slug": "cour-europeenne-des-droits-de-lhomme",
+    "title": "Cour européenne des droits de l’homme (CEDH)",
+    "slug": "cour-europeenne-des-droits-de-lhomme-cedh",
     "abbrs": [
       "CEDH"
     ],
@@ -762,15 +835,19 @@
     "refs": []
   },
   {
-    "title": "créance",
+    "title": "Créance",
     "slug": "creance",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Droit permettant à une personne d'exiger quelque chose d'une autre personne, en général le paiement d'une somme d'argent. Terme souvent utilisé pour désigner la somme due.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12474"
+      }
+    ]
   },
   {
-    "title": "crédit d'heures de délégation",
+    "title": "Crédit d'heures de délégation",
     "slug": "credit-dheures-de-delegation",
     "abbrs": [],
     "variants": [],
@@ -778,7 +855,7 @@
     "refs": []
   },
   {
-    "title": "de gré à gré",
+    "title": "De gré à gré",
     "slug": "de-gre-a-gre",
     "abbrs": [],
     "variants": [],
@@ -786,7 +863,7 @@
     "refs": []
   },
   {
-    "title": "décret",
+    "title": "Décret",
     "slug": "decret",
     "abbrs": [],
     "variants": [],
@@ -794,7 +871,7 @@
     "refs": []
   },
   {
-    "title": "décret en conseil d'état",
+    "title": "Décret en conseil d'état",
     "slug": "decret-en-conseil-detat",
     "abbrs": [],
     "variants": [],
@@ -802,15 +879,19 @@
     "refs": []
   },
   {
-    "title": "défenseur ",
-    "slug": "defenseur",
+    "title": "Défendeur ",
+    "slug": "defendeur",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Personne contre laquelle une action en justice est engagée.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R31717"
+      }
+    ]
   },
   {
-    "title": "défenseur syndical",
+    "title": "Défenseur syndical",
     "slug": "defenseur-syndical",
     "abbrs": [],
     "variants": [],
@@ -818,15 +899,19 @@
     "refs": []
   },
   {
-    "title": "délai de carence",
+    "title": "Délai de carence",
     "slug": "delai-de-carence",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Délai qui doit s'écouler entre 2 évènements. </p><p>Exemples : </p><ul><li><p>Délai de carence entre 2 CDD, c'est-à-dire délai qui doit s'écouler entre la fin du premier CDD et le début du second CDD. </p></li><li><p>Délai de carence de 3 jours en cas d'arrêt maladie entre le moment où l'arrêt maladie est fait et le moment du versement des indemnités journalières par le Caisse primaire d'assurance maladie.</p></li></ul>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R52042"
+      }
+    ]
   },
   {
-    "title": "délai de prévenance",
+    "title": "Délai de prévenance",
     "slug": "delai-de-prevenance",
     "abbrs": [],
     "variants": [],
@@ -834,7 +919,7 @@
     "refs": []
   },
   {
-    "title": "délibéré",
+    "title": "Délibéré",
     "slug": "delibere",
     "abbrs": [],
     "variants": [],
@@ -842,23 +927,31 @@
     "refs": []
   },
   {
-    "title": "délit",
+    "title": "Délit",
     "slug": "delit",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Infraction jugée par le tribunal correctionnel et punie principalement d'une amende et/ou d'une peine d'emprisonnement inférieure à 10 ans.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R49229"
+      }
+    ]
   },
   {
-    "title": "délit d'entrave",
+    "title": "Délit d'entrave",
     "slug": "delit-dentrave",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Dans une entreprise, infraction d'un employeur qui porte atteinte à la mise en place et au bon déroulement de la mission des représentants du personnel et à l'exercice du droit syndical.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R37571"
+      }
+    ]
   },
   {
-    "title": "demandeur ",
+    "title": "Demandeur ",
     "slug": "demandeur",
     "abbrs": [],
     "variants": [],
@@ -866,7 +959,7 @@
     "refs": []
   },
   {
-    "title": "dénonciation d'un accord collectif",
+    "title": "Dénonciation d'un accord collectif",
     "slug": "denonciation-dun-accord-collectif",
     "abbrs": [],
     "variants": [],
@@ -874,7 +967,7 @@
     "refs": []
   },
   {
-    "title": "dépens",
+    "title": "Dépens",
     "slug": "depens",
     "abbrs": [],
     "variants": [],
@@ -882,7 +975,7 @@
     "refs": []
   },
   {
-    "title": "dérogation",
+    "title": "Dérogation",
     "slug": "derogation",
     "abbrs": [],
     "variants": [],
@@ -890,7 +983,7 @@
     "refs": []
   },
   {
-    "title": "disposition",
+    "title": "Disposition",
     "slug": "disposition",
     "abbrs": [],
     "variants": [],
@@ -898,39 +991,55 @@
     "refs": []
   },
   {
-    "title": "dividende",
+    "title": "Dividende",
     "slug": "dividende",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Partie des bénéfices d'une société distribuée aux actionnaires.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1005"
+      }
+    ]
   },
   {
-    "title": "domicile",
+    "title": "Domicile",
     "slug": "domicile",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Lieu d'habitation officiel et habituel.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R14609"
+      }
+    ]
   },
   {
-    "title": "domiciliation d'une entreprise",
+    "title": "Domiciliation d'une entreprise",
     "slug": "domiciliation-dune-entreprise",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Lieu correspondant à l'adresse administrative d'une entreprise, déclaré lors de l'immatriculation : siège social pour une société, domicile personnel d'un entrepreneur individuel, inscription auprès d'une société de domiciliation ou d'une pépinière.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R34095"
+      }
+    ]
   },
   {
-    "title": "dommages et intérêts",
+    "title": "Dommages et intérêts",
     "slug": "dommages-et-interets",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Somme d'argent destinée à réparer le préjudice subi.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12532"
+      }
+    ]
   },
   {
-    "title": "droit communautaire",
+    "title": "Droit communautaire",
     "slug": "droit-communautaire",
     "abbrs": [],
     "variants": [
@@ -940,26 +1049,30 @@
     "refs": []
   },
   {
-    "title": "droit du travail",
+    "title": "Droit du travail",
     "slug": "droit-du-travail",
     "abbrs": [],
     "variants": [
       "législation du travail",
       "réglementation du travail"
     ],
-    "definition": "<p>Voir la page d'introduction au droit du travail.</p>",
+    "definition": "<p>Voir la <a href=\"/droit-du-travail\">page d'introduction au droit du travail</a>.</p>",
     "refs": []
   },
   {
-    "title": "duplicata",
+    "title": "Duplicata",
     "slug": "duplicata",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Copie d'un document.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R13034"
+      }
+    ]
   },
   {
-    "title": "échelon",
+    "title": "Echelon",
     "slug": "echelon",
     "abbrs": [],
     "variants": [],
@@ -967,7 +1080,7 @@
     "refs": []
   },
   {
-    "title": "effectif de l'entreprise",
+    "title": "Effectif de l'entreprise",
     "slug": "effectif-de-lentreprise",
     "abbrs": [],
     "variants": [],
@@ -975,7 +1088,7 @@
     "refs": []
   },
   {
-    "title": "eligible",
+    "title": "Eligible",
     "slug": "eligible",
     "abbrs": [],
     "variants": [],
@@ -983,23 +1096,31 @@
     "refs": []
   },
   {
-    "title": "emprisonnement",
+    "title": "Emprisonnement",
     "slug": "emprisonnement",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Peine de prison prononcée en cas de délit.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R18486"
+      }
+    ]
   },
   {
-    "title": "en numéraire",
+    "title": "En numéraire",
     "slug": "en-numeraire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Paiement en argent, qui peut être sous forme d'espèces, de chèques, de virements, etc.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R2399"
+      }
+    ]
   },
   {
-    "title": "engagement unilatéral de l'employeur",
+    "title": "Engagement unilatéral de l'employeur",
     "slug": "engagement-unilateral-de-lemployeur",
     "abbrs": [],
     "variants": [],
@@ -1007,17 +1128,21 @@
     "refs": []
   },
   {
-    "title": "entreprise de taille intermédiaire",
-    "slug": "entreprise-de-taille-intermediaire",
+    "title": "Entreprise de taille intermédiaire (ETI)",
+    "slug": "entreprise-de-taille-intermediaire-eti",
     "abbrs": [
       "ETI"
     ],
     "variants": [],
     "definition": "<p>Entreprise employant entre 250 et 4 999 salariés, réalisant soit un chiffre d'affaires annuel inférieur à 1,5 milliard d'euros, soit un total de bilan inférieur à 2 milliards d'euros. Une entreprise qui a moins de 250 salariés, mais plus de 50 millions d'euros de chiffre d'affaires et plus de 43 millions d'euros de total de bilan, est aussi considérée comme une ETI.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R43863"
+      }
+    ]
   },
   {
-    "title": "ester en justice ",
+    "title": "Ester en justice ",
     "slug": "ester-en-justice",
     "abbrs": [],
     "variants": [],
@@ -1025,31 +1150,31 @@
     "refs": []
   },
   {
-    "title": "état d'ivresse manifeste",
+    "title": "Etat d'ivresse manifeste",
     "slug": "etat-divresse-manifeste",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Comportement qui laisse présager qu'une personne a consommé de l'alcool de manière excessive.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R43174"
+      }
+    ]
   },
   {
-    "title": "Exemples des données présentes : emploi, rémunérations, conditions de travail, formation des salariés.\"",
-    "slug": "exemples-des-donnees-presentes-emploi-remunerations-conditions-de-travail-formation-des-salaries",
-    "abbrs": [],
-    "variants": [],
-    "definition": "",
-    "refs": []
-  },
-  {
-    "title": "extrait kbis ",
+    "title": "Extrait kbis ",
     "slug": "extrait-kbis",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Document délivré par le greffe du tribunal de commerce attestant qu'une entreprise (extrait K bis) ou un établissement secondaire (extrait L bis) est enregistré au registre du commerce et des sociétés (RCS).</p>",
-    "refs": []
+    "definition": "<p>Document délivré par le greffe du tribunal de commerce attestant qu'une entreprise (extrait K bis) ou un établissement secondaire (extrait L bis) est enregistré(e) au registre du commerce et des sociétés (RCS).</p>",
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12146"
+      }
+    ]
   },
   {
-    "title": "faute grave",
+    "title": "Faute grave",
     "slug": "faute-grave",
     "abbrs": [],
     "variants": [],
@@ -1057,7 +1182,7 @@
     "refs": []
   },
   {
-    "title": "faute inexcusable de l'employeur",
+    "title": "Faute inexcusable de l'employeur",
     "slug": "faute-inexcusable-de-lemployeur",
     "abbrs": [],
     "variants": [],
@@ -1065,7 +1190,7 @@
     "refs": []
   },
   {
-    "title": "faute lourde",
+    "title": "Faute lourde",
     "slug": "faute-lourde",
     "abbrs": [],
     "variants": [],
@@ -1073,7 +1198,7 @@
     "refs": []
   },
   {
-    "title": "filiale",
+    "title": "Filiale",
     "slug": "filiale",
     "abbrs": [],
     "variants": [],
@@ -1081,31 +1206,43 @@
     "refs": []
   },
   {
-    "title": "force exécutoire",
+    "title": "Force exécutoire",
     "slug": "force-executoire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Décision de justice pouvant être appliquée si besoin avec l'aide de la force publique.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R51102"
+      }
+    ]
   },
   {
-    "title": "force majeure",
+    "title": "Force majeure",
     "slug": "force-majeure",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Événement exceptionnel, imprévisible et irrésistible justifiant de s'exonérer d'une obligation, d'un engagement ou d'une responsabilité (exemple : catastrophe naturelle pour un contrat d'assurance, décès pour un contrat de travail, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R38200"
+      }
+    ]
   },
   {
-    "title": "forclusion",
+    "title": "Forclusion",
     "slug": "forclusion",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Perte d'un droit à agir en justice en raison de l'expiration d'un délai.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1078"
+      }
+    ]
   },
   {
-    "title": "fractionnement des congés payés",
+    "title": "Fractionnement des congés payés",
     "slug": "fractionnement-des-conges-payes",
     "abbrs": [],
     "variants": [],
@@ -1113,7 +1250,7 @@
     "refs": []
   },
   {
-    "title": "gratification",
+    "title": "Gratification",
     "slug": "gratification",
     "abbrs": [],
     "variants": [],
@@ -1121,7 +1258,7 @@
     "refs": []
   },
   {
-    "title": "gratification stagiaire",
+    "title": "Gratification stagiaire",
     "slug": "gratification-stagiaire",
     "abbrs": [],
     "variants": [],
@@ -1129,23 +1266,31 @@
     "refs": []
   },
   {
-    "title": "greffe",
+    "title": "Greffe",
     "slug": "greffe",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Service d'un tribunal composé de fonctionnaires qui assistent les magistrats dans leur mission.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12700"
+      }
+    ]
   },
   {
-    "title": "grossesse pathologique",
+    "title": "Grossesse pathologique",
     "slug": "grossesse-pathologique",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Grossesse qui menace directement la santé de la mère et de l'enfant.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R51966"
+      }
+    ]
   },
   {
-    "title": "heures complémentaires",
+    "title": "Heures complémentaires",
     "slug": "heures-complementaires",
     "abbrs": [],
     "variants": [],
@@ -1153,7 +1298,7 @@
     "refs": []
   },
   {
-    "title": "heures d'équivalence",
+    "title": "Heures d'équivalence",
     "slug": "heures-dequivalence",
     "abbrs": [],
     "variants": [],
@@ -1161,7 +1306,7 @@
     "refs": []
   },
   {
-    "title": "heures pour recherche d'emploi",
+    "title": "Heures pour recherche d'emploi",
     "slug": "heures-pour-recherche-demploi",
     "abbrs": [],
     "variants": [
@@ -1171,7 +1316,7 @@
     "refs": []
   },
   {
-    "title": "homologation",
+    "title": "Homologation",
     "slug": "homologation",
     "abbrs": [],
     "variants": [],
@@ -1179,25 +1324,19 @@
     "refs": []
   },
   {
-    "title": "hyperbare",
+    "title": "Hyperbare",
     "slug": "hyperbare",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Lieu où la pression est supérieure à la pression atmosphérique (par exemple : sous l'eau, caisson hyperbare, enceinte de confinement de réacteur nucléaire, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R46445"
+      }
+    ]
   },
   {
-    "title": "indemnité de la sécurité sociale\"",
-    "slug": "indemnite-de-la-securite-sociale",
-    "abbrs": [
-      "Versées par la sécurité sociale aux salariés en arrêt de travail maladie ou consécutif à un accident de travail ou maladie professionnelle. Elles font partie de la catégorie des revenus de remplacement et sont soumises aux cotisations CSG et CRDS à des taux particuliers."
-    ],
-    "variants": [],
-    "definition": "",
-    "refs": []
-  },
-  {
-    "title": "indemnités",
+    "title": "Indemnités",
     "slug": "indemnites",
     "abbrs": [],
     "variants": [],
@@ -1211,13 +1350,18 @@
       "IJSS"
     ],
     "variants": [
-      "indemnité journalière"
+      "indemnité journalière",
+      "indemnité de la sécurité sociale"
     ],
-    "definition": "",
-    "refs": []
+    "definition": "<p>Versées par la sécurité sociale aux salariés en arrêt de travail maladie ou consécutif à un accident de travail ou maladie professionnelle. Elles font partie de la catégorie des revenus de remplacement et sont soumises aux cotisations CSG et CRDS à des taux particuliers. </p>",
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R51445"
+      }
+    ]
   },
   {
-    "title": "indexation des salaires",
+    "title": "Indexation des salaires",
     "slug": "indexation-des-salaires",
     "abbrs": [],
     "variants": [
@@ -1227,15 +1371,19 @@
     "refs": []
   },
   {
-    "title": "infraction",
+    "title": "Infraction",
     "slug": "infraction",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Acte interdit par la loi et passible de sanctions pénales.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R10272"
+      }
+    ]
   },
   {
-    "title": "instance",
+    "title": "Instance",
     "slug": "instance",
     "abbrs": [],
     "variants": [],
@@ -1243,8 +1391,8 @@
     "refs": []
   },
   {
-    "title": "institutions représentatives du personnel",
-    "slug": "institutions-representatives-du-personnel",
+    "title": "Institutions représentatives du personnel (IRP)",
+    "slug": "institutions-representatives-du-personnel-irp",
     "abbrs": [
       "IRP"
     ],
@@ -1255,31 +1403,43 @@
     "refs": []
   },
   {
-    "title": "intermittent du spectacle",
+    "title": "Intermittent du spectacle",
     "slug": "intermittent-du-spectacle",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Salarié engagé en contrat à durée déterminée (CDD) par un ou des employeurs publics ou privés, exerçant une activité soit d'artiste du spectacle vivant ou du cinéma et de l'audiovisuel (comédien, musicien, chansonnier par exemple), soit d'ouvrier ou technicien du spectacle dont l'employeur doit avoir une activité dans l'un des secteurs suivants : cinéma, audiovisuel, édition phonographique, radio, télédiffusion, spectacle vivant, prestation technique au service de la création et de l'événement, espaces de loisir, attractions culturelles, production de films d'animation.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R43518"
+      }
+    ]
   },
   {
-    "title": "jour calendaire",
+    "title": "Jour calendaire",
     "slug": "jour-calendaire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Jour du calendrier de l'année civile, du 1er janvier au 31 décembre, y compris les jours fériés ou chômés.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1092"
+      }
+    ]
   },
   {
-    "title": "jour chômé",
+    "title": "Jour chômé",
     "slug": "jour-chome",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Jour non travaillé.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R33413"
+      }
+    ]
   },
   {
-    "title": "jour férié",
+    "title": "Jour férié",
     "slug": "jour-ferie",
     "abbrs": [
       "JF"
@@ -1291,31 +1451,43 @@
     "refs": []
   },
   {
-    "title": "jour franc",
+    "title": "Jour franc",
     "slug": "jour-franc",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Jour qui dure de 0h à 24h. Un délai ainsi calculé ne tient pas compte du jour de la décision à l'origine du délai, ni du jour de l'échéance. Si le délai s'achève un samedi, un dimanche ou jour férié, il est reporté d'un jour.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1008"
+      }
+    ]
   },
   {
-    "title": "jour ouvrable",
+    "title": "Jour ouvrable",
     "slug": "jour-ouvrable",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Correspond à tous les jours de la semaine, à l'exception du jour de repos hebdomadaire (généralement le dimanche) et des jours fériés habituellement non travaillés dans l'entreprise.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R17508"
+      }
+    ]
   },
   {
-    "title": "jour ouvré",
+    "title": "Jour ouvré",
     "slug": "jour-ouvre",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Jour effectivement travaillé dans une entreprise ou une administration. On en compte 5 par semaine.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R17509"
+      }
+    ]
   },
   {
-    "title": "jours de fractionnement",
+    "title": "Jours de fractionnement",
     "slug": "jours-de-fractionnement",
     "abbrs": [],
     "variants": [
@@ -1328,41 +1500,57 @@
     "refs": []
   },
   {
-    "title": "jugement définitif",
+    "title": "Jugement définitif",
     "slug": "jugement-definitif",
     "abbrs": [],
     "variants": [
       "jugement passé en force de chose jugée"
     ],
     "definition": "<p>Jugement dont toutes les voies de recours (opposition, appel, cassation) ont été utilisées ou pour lequel les délais pour faire opposition, appel ou un pourvoi en cassation sont expirés.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R19325"
+      }
+    ]
   },
   {
-    "title": "jugement passé en force de chose jugée",
+    "title": "Jugement passé en force de chose jugée",
     "slug": "jugement-passe-en-force-de-chose-jugee",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Jugement qui n'est plus susceptible de recours, soit parce que les recours ont été épuisés, soit que les délais sont expirés.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R15859"
+      }
+    ]
   },
   {
-    "title": "juridiction administrative",
-    "slug": "juridiction-administrative",
+    "title": "Juridictions administratives",
+    "slug": "juridictions-administratives",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Tribunal administratif, cour administrative d'appel, Conseil d'État.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R50605"
+      }
+    ]
   },
   {
-    "title": "juridiction judiciaire",
-    "slug": "juridiction-judiciaire",
+    "title": "Juridictions judiciaires",
+    "slug": "juridictions-judiciaires",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Tribunaux civils et pénaux.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R50606"
+      }
+    ]
   },
   {
-    "title": "jurisprudence",
+    "title": "Jurisprudence",
     "slug": "jurisprudence",
     "abbrs": [],
     "variants": [],
@@ -1370,7 +1558,7 @@
     "refs": []
   },
   {
-    "title": "licenciement disciplinaire",
+    "title": "Licenciement disciplinaire",
     "slug": "licenciement-disciplinaire",
     "abbrs": [],
     "variants": [
@@ -1380,26 +1568,15 @@
     "refs": []
   },
   {
-    "title": "licenciement injustifié\"",
-    "slug": "licenciement-injustifie",
-    "abbrs": [
-      "Licenciement injustifié",
-      "c'est-à-dire qui n'a pas de motif réel et sérieux pour justifier le licenciement."
-    ],
-    "variants": [],
-    "definition": "",
-    "refs": []
-  },
-  {
-    "title": "licenciement irrégulier",
+    "title": "Licenciement irrégulier",
     "slug": "licenciement-irregulier",
     "abbrs": [],
     "variants": [],
-    "definition": "<p>Licenciement dont la procédure n'a pas été respectée sans que cela ne remette en cause la justification du lienciement.</p>",
+    "definition": "<p>Licenciement dont la procédure n'a pas été respectée sans que cela ne remette en cause la justification du licenciement.</p>",
     "refs": []
   },
   {
-    "title": "licenciement nul",
+    "title": "Licenciement nul",
     "slug": "licenciement-nul",
     "abbrs": [],
     "variants": [],
@@ -1407,7 +1584,7 @@
     "refs": []
   },
   {
-    "title": "licenciement pour motif économique",
+    "title": "Licenciement pour motif économique",
     "slug": "licenciement-pour-motif-economique",
     "abbrs": [],
     "variants": [
@@ -1417,7 +1594,7 @@
     "refs": []
   },
   {
-    "title": "licenciement pour motif personnel",
+    "title": "Licenciement pour motif personnel",
     "slug": "licenciement-pour-motif-personnel",
     "abbrs": [],
     "variants": [
@@ -1427,27 +1604,32 @@
     "refs": []
   },
   {
-    "title": "licenciement sans cause réelle et sérieuse ",
+    "title": "Licenciement sans cause réelle et sérieuse ",
     "slug": "licenciement-sans-cause-reelle-et-serieuse",
     "abbrs": [
       "LSCRS"
     ],
     "variants": [
-      "licenciement abusif"
+      "licenciement abusif",
+      "licenciement injustifié"
     ],
-    "definition": "",
+    "definition": "<p>Licenciement injustifié, c'est-à-dire qui n'a pas de motif réel et sérieux pour justifier le licenciement. </p>",
     "refs": []
   },
   {
-    "title": "lien de subordination",
+    "title": "Lien de subordination",
     "slug": "lien-de-subordination",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Quel que soit le type de contrat de travail, lien par lequel l'employeur exerce son pouvoir de direction sur l'employé : pouvoir de donner des ordres, d'en contrôler l'exécution et de sanctionner la mauvaise exécution des ordres.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/professionnels-entreprises/glossaire/R54147"
+      }
+    ]
   },
   {
-    "title": "liquidation judiciaire",
+    "title": "Liquidation judiciaire",
     "slug": "liquidation-judiciaire",
     "abbrs": [],
     "variants": [],
@@ -1455,7 +1637,7 @@
     "refs": []
   },
   {
-    "title": "litige",
+    "title": "Litige",
     "slug": "litige",
     "abbrs": [],
     "variants": [],
@@ -1463,7 +1645,7 @@
     "refs": []
   },
   {
-    "title": "lock-out",
+    "title": "Lock-out",
     "slug": "lock-out",
     "abbrs": [],
     "variants": [],
@@ -1471,27 +1653,7 @@
     "refs": []
   },
   {
-    "title": "maître d'œuvre",
-    "slug": "maitre-doeuvre",
-    "abbrs": [
-      "moe"
-    ],
-    "variants": [],
-    "definition": "<p>Personne en charge du chantier dans sa conception et parfois dans son exécution. On distingue maître d’œuvre de conception et d'exécution, sur certains gros chantiers. Souvent, cette fonction est remplie par un architecte.</p>",
-    "refs": []
-  },
-  {
-    "title": "maître d'ouvrage",
-    "slug": "maitre-douvrage",
-    "abbrs": [
-      "moa"
-    ],
-    "variants": [],
-    "definition": "<p>Personne publique ou privée pour le compte de laquelle des travaux ou un ouvrage immobilier sont réalisés.</p>",
-    "refs": []
-  },
-  {
-    "title": "maladie professionnelle",
+    "title": "Maladie professionnelle",
     "slug": "maladie-professionnelle",
     "abbrs": [],
     "variants": [],
@@ -1499,7 +1661,7 @@
     "refs": []
   },
   {
-    "title": "mandat d'un représentant du personnel",
+    "title": "Mandat d'un représentant du personnel",
     "slug": "mandat-dun-representant-du-personnel",
     "abbrs": [],
     "variants": [],
@@ -1507,7 +1669,7 @@
     "refs": []
   },
   {
-    "title": "mandataire social",
+    "title": "Mandataire social",
     "slug": "mandataire-social",
     "abbrs": [],
     "variants": [],
@@ -1515,15 +1677,19 @@
     "refs": []
   },
   {
-    "title": "marché réglementé",
+    "title": "Marché réglementé",
     "slug": "marche-reglemente",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Marché d'instruments financiers (actions, obligations, etc.) géré par une entreprise de marché selon des règles de fonctionnement (organisation, déontologie, transparence) contrôlées en France par l'Autorité des marchés financiers (AMF).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1004"
+      }
+    ]
   },
   {
-    "title": "mensualisation",
+    "title": "Mensualisation",
     "slug": "mensualisation",
     "abbrs": [],
     "variants": [],
@@ -1531,8 +1697,8 @@
     "refs": []
   },
   {
-    "title": "minimum garanti",
-    "slug": "minimum-garanti",
+    "title": "Minimum garanti (MG)",
+    "slug": "minimum-garanti-mg",
     "abbrs": [
       "MG"
     ],
@@ -1541,37 +1707,49 @@
     "refs": []
   },
   {
-    "title": "mise à pied conservatoire",
+    "title": "Mise à pied conservatoire",
     "slug": "mise-a-pied-conservatoire",
     "abbrs": [
       "MPC"
     ],
     "variants": [],
     "definition": "<p>Suspension préventive et provisoire d'un salarié de ses fonctions, dans l'attente d'une procédure de sanction, suite à une faute grave. Le salarié est dispensé d'exécuter son travail et son contrat est suspendu pendant une durée indéterminée.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R32331"
+      }
+    ]
   },
   {
-    "title": "mise à pied disciplinaire",
+    "title": "Mise à pied disciplinaire",
     "slug": "mise-a-pied-disciplinaire",
     "abbrs": [
       "MPD"
     ],
     "variants": [],
     "definition": "<p>Sanction visant à suspendre temporairement le contrat de travail et la rémunération du salarié ayant eu un comportement fautif.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R46984"
+      }
+    ]
   },
   {
-    "title": "mise en demeure",
+    "title": "Mise en demeure",
     "slug": "mise-en-demeure",
     "abbrs": [
       "med"
     ],
     "variants": [],
     "definition": "<p>Acte par lequel un créancier exige du débiteur le remboursement d'une dette sous peine de versement de dommages et intérêts. Adressé par lettre recommandée avec accusé de réception ou par acte d'huissier.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R2705"
+      }
+    ]
   },
   {
-    "title": "modification juridique de la situation de l'employeur",
+    "title": "Modification juridique de la situation de l'employeur",
     "slug": "modification-juridique-de-la-situation-de-lemployeur",
     "abbrs": [],
     "variants": [
@@ -1581,39 +1759,43 @@
     "refs": []
   },
   {
-    "title": "mutation",
+    "title": "Mutation",
     "slug": "mutation",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Changement du lieu d'affectation du salarié dans un autre établissement de l'entreprise.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R52796"
+      }
+    ]
   },
   {
-    "title": "mutation disciplinaire",
+    "title": "Mutation disciplinaire",
     "slug": "mutation-disciplinaire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Changement d'affectation ou de lieu de travail décidé par l'employeur envers un salarié ayant eu un comportement fautif.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R46985"
+      }
+    ]
   },
   {
-    "title": "mutilé du travail",
+    "title": "Mutilé du travail",
     "slug": "mutile-du-travail",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Accidenté du travail qui a subi une blessure portant atteinte à son intégrité physique de façon irréversible (amputation par exemple).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R31320"
+      }
+    ]
   },
   {
-    "title": "nécessités de service",
-    "slug": "necessites-de-service",
-    "abbrs": [],
-    "variants": [],
-    "definition": "<p>Raisons objectives et particulières, tenant à la continuité du fonctionnement du service, pouvant justifier le refus par l'administration d'un droit ou d'un avantage à un agent public (un temps partiel, un congé, etc.).</p>",
-    "refs": []
-  },
-  {
-    "title": "négociation triennale ",
+    "title": "Négociation triennale ",
     "slug": "negociation-triennale",
     "abbrs": [],
     "variants": [],
@@ -1621,33 +1803,45 @@
     "refs": []
   },
   {
-    "title": "norme nf x35-102",
+    "title": "Norme nf x35-102",
     "slug": "norme-nf-x35-102",
     "abbrs": [],
     "variants": [],
     "definition": "<p>La norme NF X35-102 définit les caractéristiques des locaux de travail à usage de bureaux intégrant des équipements bureautiques. Il s'agit d'une norme volontaire de l'AFNOR c'est-à-dire d'un cadre de référence non obligatoire, que l'entreprise peut choisir ou non d'appliquer. Élaborée en 1998, elle fait actuellement l'objet d'un travail de révision par les professionnels du secteur (concepteurs, ergonomes, médecins du travail, etc.) réunis en commission AFNOR.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R53092"
+      }
+    ]
   },
   {
-    "title": "notification",
+    "title": "Notification",
     "slug": "notification",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Formalité par laquelle un acte de procédure ou une décision est porté à la connaissance d’une personne.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R14732"
+      }
+    ]
   },
   {
-    "title": "opérateurs de compétences",
-    "slug": "operateurs-de-competences",
+    "title": "Opérateurs de compétences (OPCO)",
+    "slug": "operateurs-de-competences-opco",
     "abbrs": [
       "OPCO"
     ],
     "variants": [],
     "definition": "<p>Accompagnent la formation professionnelle. Depuis le 1er avril 2019, les opérateurs de compétences (OCPO) remplacent les organismes paritaires collecteurs agréées (OPCA). Ils financent l'apprentissage, apportent leur aide pour élaborer les certifications professionnelles et à la définition des besoins en formation des entreprises.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R54075"
+      }
+    ]
   },
   {
-    "title": "ordre du jour",
+    "title": "Ordre du jour",
     "slug": "ordre-du-jour",
     "abbrs": [
       "ODJ"
@@ -1657,15 +1851,21 @@
     "refs": []
   },
   {
-    "title": "ordre public",
+    "title": "Ordre public",
     "slug": "ordre-public",
-    "abbrs": [],
+    "abbrs": [
+      "OP"
+    ],
     "variants": [],
     "definition": "<p>Ensemble des règles et principes fondamentaux du droit.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R50177"
+      }
+    ]
   },
   {
-    "title": "outplacement",
+    "title": "Outplacement",
     "slug": "outplacement",
     "abbrs": [],
     "variants": [],
@@ -1673,15 +1873,19 @@
     "refs": []
   },
   {
-    "title": "part sociale",
+    "title": "Part sociale",
     "slug": "part-sociale",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Droit de propriété sur le capital d'une société, détenu par un associé, et donnant droit à une participation pécuniaire aux bénéfices.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R32914"
+      }
+    ]
   },
   {
-    "title": "parties au contrat de travail",
+    "title": "Parties au contrat de travail",
     "slug": "parties-au-contrat-de-travail",
     "abbrs": [],
     "variants": [],
@@ -1689,39 +1893,55 @@
     "refs": []
   },
   {
-    "title": "pays avec lesquels la france a signé une convention de sécurité sociale",
+    "title": "Pays avec lesquels la france a signé une convention de sécurité sociale",
     "slug": "pays-avec-lesquels-la-france-a-signe-une-convention-de-securite-sociale",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Algérie, Andorre, Argentine, Bénin, Bosnie-Herzégovine, Brésil, Cameroun, Canada, Cap-Vert, Chili, Congo, Corée, Côte-d'Ivoire, États-Unis, Gabon, Îles anglo-normandes (Jersey, Guernesey, Aurigny, Herm, Jethou), Inde, Israël, Japon, Kosovo, Macédoine, Madagascar, Mali, Maroc, Mauritanie, Monaco, Monténégro, Niger, Nouvelle-Calédonie, Philippines, Polynésie-Française, Québec, Saint-Marin, Saint-Pierre et Miquelon, Sénégal, Serbie, Togo, Tunisie, Turquie, Uruguay.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R51560"
+      }
+    ]
   },
   {
-    "title": "pays ayant conclu un accord avec la france sur l'immigration professionnelle",
+    "title": "Pays ayant conclu un accord avec la France sur l'immigration professionnelle",
     "slug": "pays-ayant-conclu-un-accord-avec-la-france-sur-limmigration-professionnelle",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Bénin, Burkina-Faso, Cap-Vert, Congo, Gabon, Île Maurice, Sénégal et Tunisie.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R46021"
+      }
+    ]
   },
   {
-    "title": "pays de l'union européenne",
+    "title": "Pays de l'Union Européenne",
     "slug": "pays-de-lunion-europeenne",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Italie, Lituanie, Lettonie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R41270"
+      }
+    ]
   },
   {
-    "title": "pécule de libération",
+    "title": "Pécule de libération",
     "slug": "pecule-de-liberation",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Partie de la rémunération du travail effectué par un détenu, qui lui est remise à sa libération.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R2502"
+      }
+    ]
   },
   {
-    "title": "pénibilité au travail",
+    "title": "Pénibilité au travail",
     "slug": "penibilite-au-travail",
     "abbrs": [],
     "variants": [
@@ -1731,7 +1951,7 @@
     "refs": []
   },
   {
-    "title": "période probatoire",
+    "title": "Période probatoire",
     "slug": "periode-probatoire",
     "abbrs": [],
     "variants": [],
@@ -1739,23 +1959,31 @@
     "refs": []
   },
   {
-    "title": "personne morale",
+    "title": "Personne morale",
     "slug": "personne-morale",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Groupement de personnes physiques réunies pour accomplir quelque chose en commun (entreprises, sociétés civiles, associations, État, collectivités territoriales, etc.). Ce groupe peut aussi réunir des personnes physiques et des personnes morales. Il peut aussi n'être constitué que d'un seul membre (EURL par exemple).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R40703"
+      }
+    ]
   },
   {
-    "title": "pme au sens communautaire",
+    "title": "PME au sens communautaire",
     "slug": "pme-au-sens-communautaire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Entreprise employant moins de 250 salariés, réalisant soit un chiffre d'affaires annuel inférieur à 50 millions d'euros, soit un total de bilan inférieur à 43 millions d'euros. Un dépassement de seuil n'a d'effet qu'après 2 exercices consécutifs.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R35723"
+      }
+    ]
   },
   {
-    "title": "pourvoi en cassation",
+    "title": "Pourvoi en cassation",
     "slug": "pourvoi-en-cassation",
     "abbrs": [],
     "variants": [],
@@ -1763,7 +1991,7 @@
     "refs": []
   },
   {
-    "title": "préavis",
+    "title": "Préavis",
     "slug": "preavis",
     "abbrs": [],
     "variants": [],
@@ -1771,7 +1999,7 @@
     "refs": []
   },
   {
-    "title": "préjudice",
+    "title": "Préjudice",
     "slug": "prejudice",
     "abbrs": [],
     "variants": [],
@@ -1779,31 +2007,43 @@
     "refs": []
   },
   {
-    "title": "prescription",
+    "title": "Prescription",
     "slug": "prescription",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Expiration d'un droit après un certain délai.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R16087"
+      }
+    ]
   },
   {
-    "title": "prestataire de services dans l'union européenne",
+    "title": "Prestataire de services dans l'Union Européenne",
     "slug": "prestataire-de-services-dans-lunion-europeenne",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Personne physique ou morale établie dans un pays de l'UE offrant un service temporaire rémunéré dans un autre pays membre, dans les mêmes conditions que celles imposées par ce pays à ses nationaux.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R17768"
+      }
+    ]
   },
   {
-    "title": "proche aidant d'une personne âgée",
+    "title": "Proche aidant d'une personne âgée",
     "slug": "proche-aidant-dune-personne-agee",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Époux(se), partenaire de Pacs, concubin, parent ou allié (dits \"aidants familiaux\") ou personne résidant ou entretenant des liens étroits et stables, qui vient en aide de la personne âgée régulièrement ou fréquemment, à titre non professionnel, pour accomplir tout ou partie des actes ou activités de la vie quotidienne.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R43628"
+      }
+    ]
   },
   {
-    "title": "propagande électorale",
+    "title": "Propagande électorale",
     "slug": "propagande-electorale",
     "abbrs": [],
     "variants": [],
@@ -1811,49 +2051,65 @@
     "refs": []
   },
   {
-    "title": "prorata temporis",
+    "title": "Prorata temporis",
     "slug": "prorata-temporis",
     "abbrs": [],
     "variants": [],
     "definition": "<p>En proportion du temps effectivement écoulé. Permet d'effectuer un calcul en tenant compte du temps réel.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R35326"
+      }
+    ]
   },
   {
-    "title": "prorogation",
+    "title": "Prorogation",
     "slug": "prorogation",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Maintien d'un droit (ou d'une situation) après la date à laquelle il devait prendre fin.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1129"
+      }
+    ]
   },
   {
-    "title": "protocole d'accord préélectoral",
-    "slug": "protocole-daccord-preelectoral",
+    "title": "Protocole d'accord préélectoral (PAP)",
+    "slug": "protocole-daccord-preelectoral-pap",
     "abbrs": [
       "PAP"
     ],
     "variants": [],
-    "definition": "<p>Accord négocié entre l'employeur et les syndicats représentatifis de l'entreprise, il est préalable aux élections professionnelles et a pour objet de fixer les modalités d'organisation et de déroulement des futures élections.</p>",
+    "definition": "<p>Accord négocié entre l'employeur et les syndicats représentatifs de l'entreprise, il est préalable aux élections professionnelles et a pour objet de fixer les modalités d'organisation et de déroulement des futures élections.</p>",
     "refs": []
   },
   {
-    "title": "quorum",
+    "title": "Quorum",
     "slug": "quorum",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Nombre minimum exigé de personnes présentes ou représentées pour qu'un vote ou une décision soit valable.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R37974"
+      }
+    ]
   },
   {
-    "title": "récidive",
+    "title": "Récidive",
     "slug": "recidive",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Fait, pour une personne déjà condamnée, de commettre une nouvelle infraction identique ou assimilée, dans un certain délai, et pouvant entraîner une peine plus lourde que celle normalement prévue.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R731"
+      }
+    ]
   },
   {
-    "title": "recours hiérarchique",
+    "title": "Recours hiérarchique",
     "slug": "recours-hierarchique",
     "abbrs": [],
     "variants": [],
@@ -1861,15 +2117,19 @@
     "refs": []
   },
   {
-    "title": "recours juridictionnel suspensif",
+    "title": "Recours juridictionnel suspensif",
     "slug": "recours-juridictionnel-suspensif",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Recours exercé devant un juge qui a pour effet d'empêcher l'exécution d'une mesure ou d'une décision, tant que celui-ci n'a pas statué.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R19521"
+      }
+    ]
   },
   {
-    "title": "redressement judiciaire",
+    "title": "Redressement judiciaire",
     "slug": "redressement-judiciaire",
     "abbrs": [
       "RJ"
@@ -1879,7 +2139,7 @@
     "refs": []
   },
   {
-    "title": "référé",
+    "title": "Référé",
     "slug": "refere",
     "abbrs": [],
     "variants": [],
@@ -1887,23 +2147,31 @@
     "refs": []
   },
   {
-    "title": "règlement amiable d'un litige",
+    "title": "Règlement amiable d'un litige",
     "slug": "reglement-amiable-dun-litige",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Permet de trouver une solution au conflit sans passer par la justice (simples échanges de courriers ou de mails, médiation, transaction pénale, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R52598"
+      }
+    ]
   },
   {
-    "title": "représentant légal",
+    "title": "Représentant légal",
     "slug": "representant-legal",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Personne désignée par la loi pour représenter et défendre les intérêts d'une autre personne, qu'elle soit physique (par exemple, un enfant mineur représenté par son père ou par sa mère) ou morale (par exemple, une société représentée par son dirigeant).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R10398"
+      }
+    ]
   },
   {
-    "title": "requérant",
+    "title": "Requérant",
     "slug": "requerant",
     "abbrs": [],
     "variants": [],
@@ -1911,15 +2179,19 @@
     "refs": []
   },
   {
-    "title": "requête",
+    "title": "Requête",
     "slug": "requete",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Écrit permettant de saisir un tribunal.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12542"
+      }
+    ]
   },
   {
-    "title": "rescrit",
+    "title": "Rescrit",
     "slug": "rescrit",
     "abbrs": [],
     "variants": [],
@@ -1927,7 +2199,7 @@
     "refs": []
   },
   {
-    "title": "rescrit social",
+    "title": "Rescrit social",
     "slug": "rescrit-social",
     "abbrs": [],
     "variants": [],
@@ -1935,7 +2207,7 @@
     "refs": []
   },
   {
-    "title": "rétrogradation",
+    "title": "Rétrogradation",
     "slug": "retrogradation",
     "abbrs": [],
     "variants": [],
@@ -1943,23 +2215,31 @@
     "refs": []
   },
   {
-    "title": "revenus de remplacement",
+    "title": "Revenus de remplacement",
     "slug": "revenus-de-remplacement",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Revenus perçus en remplacement de la rémunération que l'on reçoit quand on travaille (exemples : allocations chômage, indemnités pour cause de maladie, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12461"
+      }
+    ]
   },
   {
-    "title": "revenus nets catégoriels",
+    "title": "Revenus nets catégoriels",
     "slug": "revenus-nets-categoriels",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Revenus (salaires, revenus fonciers et mobiliers, bénéfices agricoles, etc.) diminués des charges (pensions alimentaires, frais d'accueil des personnes âgées, etc.) et abattements fiscaux (personne âgée de plus de 65 ans, personne invalide, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R10278"
+      }
+    ]
   },
   {
-    "title": "risque professionnel",
+    "title": "Risque professionnel",
     "slug": "risque-professionnel",
     "abbrs": [],
     "variants": [],
@@ -1967,8 +2247,8 @@
     "refs": []
   },
   {
-    "title": "risque psychosociaux",
-    "slug": "risque-psychosociaux",
+    "title": "Risque psychosociaux (RPS)",
+    "slug": "risque-psychosociaux-rps",
     "abbrs": [
       "RPS"
     ],
@@ -1977,7 +2257,7 @@
     "refs": []
   },
   {
-    "title": "rupture amiable",
+    "title": "Rupture amiable",
     "slug": "rupture-amiable",
     "abbrs": [],
     "variants": [],
@@ -1985,7 +2265,7 @@
     "refs": []
   },
   {
-    "title": "salarié mandaté",
+    "title": "Salarié mandaté",
     "slug": "salarie-mandate",
     "abbrs": [],
     "variants": [],
@@ -1993,7 +2273,7 @@
     "refs": []
   },
   {
-    "title": "sanction disciplinaire",
+    "title": "Sanction disciplinaire",
     "slug": "sanction-disciplinaire",
     "abbrs": [],
     "variants": [],
@@ -2001,7 +2281,7 @@
     "refs": []
   },
   {
-    "title": "secrétariat-greffe",
+    "title": "Secrétariat-greffe",
     "slug": "secretariat-greffe",
     "abbrs": [],
     "variants": [],
@@ -2009,23 +2289,31 @@
     "refs": []
   },
   {
-    "title": "séjour irrégulier",
+    "title": "Séjour irrégulier",
     "slug": "sejour-irregulier",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Situation d'un étranger qui n'est pas en possession des documents l'autorisant à rester en France.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R49996"
+      }
+    ]
   },
   {
-    "title": "semaine",
-    "slug": "semaine",
+    "title": "Semaine (droit du travail)",
+    "slug": "semaine-droit-du-travail",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Débute le lundi à 0 heure et se termine le dimanche à 24 heures, sauf si une convention ou un accord collectif d'entreprise ou d'établissement (ou, à défaut, une convention ou un accord de branche) fixe une autre période de 7 jours consécutifs.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R38690"
+      }
+    ]
   },
   {
-    "title": "seuil d'effectifs",
+    "title": "Seuil d'effectifs",
     "slug": "seuil-deffectifs",
     "abbrs": [],
     "variants": [],
@@ -2033,31 +2321,43 @@
     "refs": []
   },
   {
-    "title": "signification",
+    "title": "Signification",
     "slug": "signification",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Acte par lequel une partie informe son adversaire d'un acte ou d'une décision de justice par l'intermédiaire d'un huissier de justice.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R10915"
+      }
+    ]
   },
   {
-    "title": "silence gardé par l'administration",
+    "title": "Silence gardé par l'administration",
     "slug": "silence-garde-par-ladministration",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Absence de décision de l'administration ou de réponse invitant l'usager à compléter son dossier.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R43891"
+      }
+    ]
   },
   {
-    "title": "statut particulier",
+    "title": "Statut particulier",
     "slug": "statut-particulier",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Ensemble des règles applicables en matière de recrutement, d'avancement, de promotion, de rémunération, etc. à tous les fonctionnaires membres d'un même corps ou cadre d'emplois.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R17710"
+      }
+    ]
   },
   {
-    "title": "subrogation",
+    "title": "Subrogation",
     "slug": "subrogation",
     "abbrs": [],
     "variants": [],
@@ -2065,15 +2365,19 @@
     "refs": []
   },
   {
-    "title": "sujétion",
+    "title": "Sujétion",
     "slug": "sujetion",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Contrainte particulière liée à un emploi ou un poste de travail (astreinte, travail de nuit ou le dimanche, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1098"
+      }
+    ]
   },
   {
-    "title": "sursis à statuer",
+    "title": "Sursis à statuer",
     "slug": "sursis-a-statuer",
     "abbrs": [],
     "variants": [],
@@ -2081,7 +2385,7 @@
     "refs": []
   },
   {
-    "title": "suspension du contrat de travail",
+    "title": "Suspension du contrat de travail",
     "slug": "suspension-du-contrat-de-travail",
     "abbrs": [],
     "variants": [],
@@ -2089,18 +2393,22 @@
     "refs": []
   },
   {
-    "title": "système d'identification du répertoire des entreprises",
-    "slug": "systeme-didentification-du-repertoire-des-entreprises",
+    "title": "Système d'identification du répertoire des entreprises (SIRET)",
+    "slug": "systeme-didentification-du-repertoire-des-entreprises-siret",
     "abbrs": [
       "SIRET"
     ],
     "variants": [],
     "definition": "<p>Identifiant géographique d'un établissement ou d'une entreprise, composé de 14 chiffres.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1041"
+      }
+    ]
   },
   {
-    "title": "système informatique du répertoire des entreprises",
-    "slug": "systeme-informatique-du-repertoire-des-entreprises",
+    "title": "Système informatique du répertoire des entreprises (SIREN)",
+    "slug": "systeme-informatique-du-repertoire-des-entreprises-siren",
     "abbrs": [
       "SIREN"
     ],
@@ -2109,15 +2417,19 @@
     "refs": []
   },
   {
-    "title": "temps de travail effectif",
+    "title": "Temps de travail effectif",
     "slug": "temps-de-travail-effectif",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Temps pendant lequel un salarié ou un agent public est à la disposition de l'employeur ou de l'administration et se conforme à ses directives sans pouvoir vaquer librement à ses occupations personnelles.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R32095"
+      }
+    ]
   },
   {
-    "title": "terme imprécis",
+    "title": "Terme imprécis",
     "slug": "terme-imprecis",
     "abbrs": [],
     "variants": [],
@@ -2125,7 +2437,7 @@
     "refs": []
   },
   {
-    "title": "terme précis",
+    "title": "Terme précis",
     "slug": "terme-precis",
     "abbrs": [],
     "variants": [],
@@ -2133,7 +2445,7 @@
     "refs": []
   },
   {
-    "title": "texte attaché",
+    "title": "Texte attaché",
     "slug": "texte-attache",
     "abbrs": [],
     "variants": [],
@@ -2141,7 +2453,7 @@
     "refs": []
   },
   {
-    "title": "texte de base",
+    "title": "Texte de base",
     "slug": "texte-de-base",
     "abbrs": [],
     "variants": [],
@@ -2149,7 +2461,7 @@
     "refs": []
   },
   {
-    "title": "textes salaires",
+    "title": "Textes salaires",
     "slug": "textes-salaires",
     "abbrs": [],
     "variants": [],
@@ -2157,15 +2469,19 @@
     "refs": []
   },
   {
-    "title": "titre exécutoire",
+    "title": "Titre exécutoire",
     "slug": "titre-executoire",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Écrit permettant au créancier d'obtenir le recouvrement forcé de sa créance (saisie des biens).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R1056"
+      }
+    ]
   },
   {
-    "title": "transaction",
+    "title": "Transaction",
     "slug": "transaction",
     "abbrs": [],
     "variants": [],
@@ -2173,7 +2489,7 @@
     "refs": []
   },
   {
-    "title": "transfert d'entreprise",
+    "title": "Transfert d'entreprise",
     "slug": "transfert-dentreprise",
     "abbrs": [],
     "variants": [],
@@ -2181,26 +2497,34 @@
     "refs": []
   },
   {
-    "title": "travailleur frontalier",
+    "title": "Travailleur frontalier",
     "slug": "travailleur-frontalier",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Personne qui habite en France, près de la frontière avec un autre pays et qui travaille quotidiennement dans cet autre pays.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R2829"
+      }
+    ]
   },
   {
-    "title": "union européenne",
-    "slug": "union-europeenne",
+    "title": "Union Européenne (UE)",
+    "slug": "union-europeenne-ue",
     "abbrs": [
       "UE"
     ],
     "variants": [],
     "definition": "<p>Allemagne, Autriche, Belgique, Bulgarie, Chypre, Croatie, Danemark, Espagne, Estonie, Finlande, France, Grèce, Hongrie, Irlande, Italie, Lettonie, Lituanie, Luxembourg, Malte, Pays-Bas, Pologne, Portugal, République Tchèque, Roumanie, Royaume-Uni, Slovaquie, Slovénie, Suède.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R45280"
+      }
+    ]
   },
   {
-    "title": "unité économique et sociale",
-    "slug": "unite-economique-et-sociale",
+    "title": "Unité économique et sociale (UES)",
+    "slug": "unite-economique-et-sociale-ues",
     "abbrs": [
       "UES"
     ],
@@ -2209,7 +2533,7 @@
     "refs": []
   },
   {
-    "title": "usages",
+    "title": "Usages",
     "slug": "usages",
     "abbrs": [],
     "variants": [],
@@ -2217,15 +2541,19 @@
     "refs": []
   },
   {
-    "title": "usages locaux",
+    "title": "Usages locaux",
     "slug": "usages-locaux",
     "abbrs": [],
     "variants": [],
     "definition": "<p>Règles non écrites fixées par l'usage des lieux : coutumes locales qui s'appliquent à tous, ou usages propres qui s'appliquent à certaines catégories de personnes (agriculteurs, particuliers, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R12915"
+      }
+    ]
   },
   {
-    "title": "vacant ",
+    "title": "Vacant ",
     "slug": "vacant",
     "abbrs": [],
     "variants": [],
@@ -2237,7 +2565,7 @@
     ]
   },
   {
-    "title": "vigueur",
+    "title": "Vigueur",
     "slug": "vigueur",
     "abbrs": [],
     "variants": [],
@@ -2245,7 +2573,7 @@
     "refs": []
   },
   {
-    "title": "voies de recours",
+    "title": "Voies de recours",
     "slug": "voies-de-recours",
     "abbrs": [],
     "variants": [],
@@ -2253,28 +2581,36 @@
     "refs": []
   },
   {
-    "title": "zone de revitalisation rurale",
-    "slug": "zone-de-revitalisation-rurale",
+    "title": "Zone de revitalisation rurale (ZRR)",
+    "slug": "zone-de-revitalisation-rurale-zrr",
     "abbrs": [
       "ZRR"
     ],
     "variants": [],
     "definition": "<p>Zone regroupant des territoires ruraux qui présentent des difficultés économiques et sociales, notamment une faible densité démographique, un déclin de la population totale (ou active) ou une forte proportion d'emplois agricoles.</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R41204"
+      }
+    ]
   },
   {
-    "title": "zone franche urbaine",
-    "slug": "zone-franche-urbaine",
+    "title": "Zone franche urbaine (ZFU)",
+    "slug": "zone-franche-urbaine-zfu",
     "abbrs": [
       "ZFU"
     ],
     "variants": [],
     "definition": "<p>Zones regroupant des quartiers de plus de 10 000 habitants particulièrement défavorisés (taux de chômage élevé, proportion importante de jeunes non diplômés, faible potentiel fiscal, etc.).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R41206"
+      }
+    ]
   },
   {
-    "title": "zone touristique internationale",
-    "slug": "zone-touristique-internationale",
+    "title": "Zone touristique internationale (ZTI)",
+    "slug": "zone-touristique-internationale-zti",
     "abbrs": [
       "ZTI"
     ],
@@ -2283,13 +2619,17 @@
     "refs": []
   },
   {
-    "title": "zone urbaine sensible",
-    "slug": "zone-urbaine-sensible",
+    "title": "Zone urbaine sensible (ZUS)",
+    "slug": "zone-urbaine-sensible-zus",
     "abbrs": [
       "ZUS"
     ],
     "variants": [],
     "definition": "<p>Grands ensembles et quartiers d'habitats dégradés considérés comme prioritaires au regard de leur situation socio-économique (fort taux de chômage notamment).</p>",
-    "refs": []
+    "refs": [
+      {
+        "url": "https://www.service-public.fr/particuliers/glossaire/R41205"
+      }
+    ]
   }
 ]
