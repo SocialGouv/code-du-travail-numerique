@@ -18,7 +18,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 6.421474,
+      "_score": 8.338396,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
@@ -81,7 +81,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 10.322577,
+      "_score": 12.2395,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
@@ -113,7 +113,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 10.907885,
+      "_score": 12.488335,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "breadcrumbs": Array [
