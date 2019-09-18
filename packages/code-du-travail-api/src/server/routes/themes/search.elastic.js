@@ -30,27 +30,7 @@ function getThemeQuery({ slug }) {
   };
 }
 
-function getBySlug({ source, slug }) {
-  return {
-    query: {
-      bool: {
-        must: {
-          match: {
-            slug
-          }
-        },
-        filter: {
-          term: {
-            source
-          }
-        }
-      }
-    }
-  };
-}
-
 module.exports = {
   getRootThemesQuery,
-  getThemeQuery,
-  getBySlug
+  getThemeQuery
 };
