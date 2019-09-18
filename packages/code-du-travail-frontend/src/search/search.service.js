@@ -6,8 +6,8 @@ const {
   publicRuntimeConfig: { API_URL, SUGGEST_URL }
 } = getConfig();
 
-const fetchResults = endpoint => async (query = "", excludeSources = "") => {
-  const url = `${API_URL}/${endpoint}?q=${encodeURIComponent(
+const fetchSearchResults = async (query = "", excludeSources = "") => {
+  const url = `${API_URL}/search?q=${encodeURIComponent(
     query
   )}&excludeSources=${encodeURIComponent(excludeSources)}`;
   const response = await fetch(url);
@@ -17,9 +17,8 @@ const fetchResults = endpoint => async (query = "", excludeSources = "") => {
   const json = await response.json();
   return json;
 };
-const searchResults = fetchResults("search");
 
-const suggestResults = async query => {
+const fetchSuggestResults = async query => {
   const url = `${SUGGEST_URL}?q=${query}`;
   const response = await fetch(url);
 
@@ -30,24 +29,27 @@ const suggestResults = async query => {
 };
 
 const suggestMin = query =>
-  query.length > 2 ? suggestResults(query) : Promise.resolve([]);
+  query.length > 2 ? fetchSuggestResults(query) : Promise.resolve([]);
 
 // memoize search results
-const searchResultsMemoized = memoizee(searchResults, {
+const fetchSearchResultsMemoized = memoizee(fetchSearchResults, {
   promise: true,
-  length: 2 // ensure memoize work for function with es6 default params
+  length: 1 // ensure memoize work for function with es6 default params
 });
 
 // memoize suggestions results
-const suggestResultsMemoized = memoizee(suggestMin, {
+const fetchSuggestResultsMemoized = memoizee(suggestMin, {
   promise: true,
   length: 1 // ensure memoize work for function with es6 default params
 });
 
 // debounce memoized suggestions results
-const suggestResultDebounce = pDebounce(suggestResultsMemoized, 200);
+const fetchSuggestResultsDebounced = pDebounce(
+  fetchSuggestResultsMemoized,
+  200
+);
 
 export {
-  suggestResultDebounce as suggestResults,
-  searchResultsMemoized as searchResults
+  fetchSuggestResultsDebounced as fetchSuggestResults,
+  fetchSearchResultsMemoized as fetchSearchResults
 };

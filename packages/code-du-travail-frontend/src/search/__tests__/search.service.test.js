@@ -1,4 +1,4 @@
-import { searchResults, suggestResults } from "../search.service";
+import { fetchSearchResults, fetchSuggestResults } from "../search.service";
 
 jest.useFakeTimers();
 
@@ -14,19 +14,19 @@ const query = "foo";
 
 describe("suggest service", () => {
   it("should not make a request until debounce time is ellapsed", () => {
-    suggestResults("bar");
+    fetchSuggestResults("bar");
     expect(fetch).not.toHaveBeenCalled();
   });
   it("should make a request unless debounce time is ellapsed", () => {
-    suggestResults(query);
+    fetchSuggestResults(query);
     jest.runAllTimers();
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
     expect(results).toMatchSnapshot();
   });
   it("should make a request once", () => {
-    suggestResults(query);
-    suggestResults(query);
+    fetchSuggestResults(query);
+    fetchSuggestResults(query);
     jest.runAllTimers();
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
@@ -38,8 +38,8 @@ describe("search service", () => {
     fetch.mockClear();
   });
   it("should make a request once", () => {
-    searchResults(query);
-    searchResults(query);
+    fetchSearchResults(query);
+    fetchSearchResults(query);
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(

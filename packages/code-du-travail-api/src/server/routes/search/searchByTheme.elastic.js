@@ -6,7 +6,7 @@ function getSearchByThemeBody({ slug }) {
       bool: {
         must_not: {
           terms: {
-            source: ["snippet", "themes"]
+            source: ["themes"]
           }
         },
         must: [

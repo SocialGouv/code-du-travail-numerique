@@ -22,7 +22,6 @@ COPY ./dataset/fiches_service_public/fiches-sp-travail.json ./dataset/fiches_ser
 COPY ./dataset/themes/themes.json ./dataset/themes/themes.json
 COPY ./dataset/faq.json ./dataset/faq.json
 COPY ./dataset/faq-contributions.json ./dataset/faq-contributions.json
-COPY ./dataset/faq-snippets.json ./dataset/faq-snippets.json
 COPY ./dataset/export-courriers.json ./dataset/export-courriers.json
 COPY ./dataset/outils.json ./dataset/outils.json
 

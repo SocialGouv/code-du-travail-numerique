@@ -51,7 +51,7 @@ export default class Themes extends React.Component {
                 <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
                   <Tile title={label}>
                     <Category
-                      small={parent}
+                      small={Boolean(parent)}
                       title={label}
                       icon={`/static/assets/icons/${iconsMap[id] ||
                         "profiles.svg"}`}

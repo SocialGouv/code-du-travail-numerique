@@ -2,24 +2,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
   return {
     size: size,
     _source: ["title", "source", "slug", "anchor", "url"],
-    aggregations: {
-      bySource: {
-        terms: {
-          field: "source",
-          include: "snippet"
-        },
-        aggs: {
-          bySource: {
-            top_hits: {
-              size: 1,
-              _source: {
-                includes: ["html", "references"]
-              }
-            }
-          }
-        }
-      }
-    },
     query: {
       bool: {
         must_not: {

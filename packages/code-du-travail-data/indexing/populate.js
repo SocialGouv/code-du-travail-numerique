@@ -13,8 +13,7 @@ const SOURCES = {
   THEMES: "themes",
   TOOLS: "outils",
   LETTERS: "modeles_de_courriers",
-  FAQ: "faq",
-  SNIPPET: "snippet"
+  FAQ: "faq"
 };
 
 function flattenTags(tags = []) {
@@ -234,35 +233,6 @@ function* cdtnDocumentsGen() {
         date: date_redaction,
         date_expiration: date_expiration,
         author: "DIRRECTE"
-      };
-    }
-  );
-
-  logger.info("=== Faq snippets ===");
-  yield require("../dataset/faq-snippets.json").map(
-    ({
-      question,
-      reponse,
-      date_redaction,
-      date_expiration,
-      tags,
-      references,
-      redacteur
-    }) => {
-      const faqText = striptags(reponse);
-      const flatTags = flattenTags(tags);
-      return {
-        source: SOURCES.SNIPPET,
-        title: question,
-        slug: slugify(question),
-        text: faqText,
-        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-        html: reponse,
-        tags: flatTags,
-        date: date_redaction,
-        date_expiration: date_expiration,
-        references,
-        author: redacteur
       };
     }
   );
