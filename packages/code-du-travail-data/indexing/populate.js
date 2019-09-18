@@ -1,20 +1,11 @@
 import striptags from "striptags";
 import crypto from "crypto";
-import { logger } from "./logger";
-import slugify from "../slugify";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
+import { SOURCES } from "@cdt/sources";
 
-const SOURCES = {
-  CCN: "conventions_collectives",
-  CDT: "code_du_travail",
-  SHEET_SP: "fiches_service_public",
-  SHEET_MT: "fiches_ministere_travail",
-  THEMES: "themes",
-  TOOLS: "outils",
-  LETTERS: "modeles_de_courriers",
-  FAQ: "faq"
-};
+import { logger } from "./logger";
+import slugify from "../slugify";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
