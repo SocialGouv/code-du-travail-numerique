@@ -24,13 +24,11 @@ const flatten = arr => arr.reduce((a, c) => [...a, ...c], []);
 const getEsReferences = async (refs = []) => {
   const queries =
     (refs &&
-      flatten(
-        refs
-          .filter(ref => isInternalUrl(ref.url))
-          .map(ref => getDocumentByUrlQuery(ref.url))
-          .filter(Boolean)
-          .map(query => [indexQuery, query])
-      )) ||
+      refs
+        .filter(ref => isInternalUrl(ref.url))
+        .map(ref => getDocumentByUrlQuery(ref.url))
+        .filter(Boolean)
+        .reduce((state, query) => state.concat(indexQuery, query), [])) ||
     [];
 
   if (!queries.length) {
