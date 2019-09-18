@@ -27,7 +27,6 @@ COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-
 COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
 COPY ./packages/code-du-travail-data/dataset/preavis-demission/package.json /app/packages/code-du-travail-data/dataset/preavis-demission/package.json
 COPY ./packages/sources/package.json /app/packages/sources/package.json
-COPY ./packages/code-du-travail-data/dataset/glossaire/package.json /app/packages/code-du-travail-data/dataset/glossaire/package.json
 
 
 # PERF(douglasduteil): put packages that are more likely to change in order here
