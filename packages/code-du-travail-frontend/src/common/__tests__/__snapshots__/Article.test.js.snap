@@ -152,6 +152,7 @@ exports[`<Article /> should render 1`] = `
 <div>
   <div
     class="c0"
+    data-main-content="true"
   >
     <div
       class="c1"

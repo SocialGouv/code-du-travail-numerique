@@ -6,11 +6,14 @@
   "dependencies": {
     "debug": "^4.1.1",
     "node-fetch": "^2.6.0",
-    "p-limit": "^2.2.1"
+    "p-limit": "^2.2.1",
+    "remark": "^11.0.1",
+    "remark-html": "^10.0.0"
   },
   "scripts": {
+    "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json",
     "test": "jest",
-    "start": "node fetch-requetes.js > prequalified.data.json && node fetch-themes.js > themes.data.json"
+    "glossary": "node glossary.js > glossary.data.json"
   },
   "devDependencies": {
     "jest-cli": "^24.9.0"

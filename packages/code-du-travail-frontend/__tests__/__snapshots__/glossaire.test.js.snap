@@ -1,0 +1,2976 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Glossaire /> should render 1`] = `
+.c14:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c21 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c19 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c19 > *:first-child {
+  margin-top: 0;
+}
+
+.c19 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c26 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c26 > *:first-child {
+  margin-top: 0;
+}
+
+.c26 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c7 {
+  padding: 1.25rem 0;
+  background-color: #fff;
+}
+
+.c18 {
+  padding: 1.25rem 0;
+}
+
+.c27 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c27:not([disabled]):hover,
+.c27:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c27:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c27[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c27[aria-pressed="true"]:not([disabled]):hover,
+.c27[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c27[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c13 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.c16 ul {
+  z-index: 100;
+}
+
+.c16 li[role="option"]:nth-child(2n + 1) {
+  background: #f5f7fa;
+}
+
+.c6 {
+  box-shadow: 0 10px 10px -10px #c9d3df;
+}
+
+.c9 {
+  margin-top: 0;
+  font-size: 1.875rem;
+  line-height: 1.4;
+  color: #006ab2;
+}
+
+.c10 {
+  font-size: 1rem;
+}
+
+.c8 {
+  position: relative;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 70%;
+}
+
+.c12 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem 0 0 1.25rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0 1rem 0 4rem;
+  width: 100%;
+  height: 50px;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
+}
+
+.c15:focus {
+  border-color: #006be6;
+  outline: none;
+}
+
+.c17 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+  margin-left: 0.5rem;
+}
+
+.c17:not([disabled]):hover,
+.c17:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c17:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c17[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c17[aria-pressed="true"]:not([disabled]):hover,
+.c17[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c17[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c17[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c0 {
+  color: white;
+  background: currentColor;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c3:link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  width: 5rem;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.c5 {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24 {
+  text-align: center;
+}
+
+.c25 {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c30 + .c29 {
+  padding-left: 1rem;
+}
+
+.c31 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.c32 {
+  margin: 0.5rem 0;
+}
+
+.c32 a,
+.c32 a:visited {
+  color: #434956;
+}
+
+.c20 {
+  text-align: center;
+}
+
+.c22 {
+  display: inline-block;
+  padding: 0.25rem;
+  font-size: 1.125rem;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c19 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c26 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    height: 50px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    margin-left: 0;
+    margin-top: 0.625rem;
+  }
+}
+
+@media print {
+  .c23 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c28 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 + .c29 {
+    padding-left: 0;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="/?q="
+          title="Code du travail numérique - retour à l'accueil"
+        >
+          <img
+            alt="symbole de la Marianne, site officiel du gouvernement"
+            class="c4"
+            src="/static/assets/img/marianne.svg"
+          />
+          <span
+            class="c5"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main
+    id="main"
+  >
+    <div
+      class="c6 c7"
+    >
+      <div
+        class="c1"
+      >
+        <div
+          class="c8"
+        >
+          <p
+            class="c9"
+          >
+            Posez votre question sur le droit du travail
+            <br />
+            <a
+              class="c10"
+              href="/droit-du-travail"
+            >
+              Le droit du travail, c‘est quoi ?
+            </a>
+          </p>
+          <form
+            class="c11"
+          >
+            <svg
+              class="c12"
+              viewBox="0 0 20 20"
+            >
+              <title />
+              <path
+                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <label
+              class="c13"
+              for="main-search-input"
+            >
+              <span
+                class="c14"
+              >
+                Rechercher
+              </span>
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-cdtn-documents-suggester"
+                role="combobox"
+                style="flex: 1;"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-cdtn-documents-suggester"
+                  autocomplete="off"
+                  class="c15"
+                  id="main-search-input"
+                  name="query"
+                  placeholder="Recherche"
+                  type="search"
+                  value=""
+                />
+                <div
+                  class="c16"
+                  id="react-autowhatever-cdtn-documents-suggester"
+                  role="listbox"
+                />
+              </div>
+            </label>
+            <button
+              aria-pressed="false"
+              class="c17"
+              type="submit"
+            >
+              Rechercher
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c18"
+    >
+      <div
+        class="c19"
+      >
+        <h1
+          class="c20"
+        >
+          Glossaire
+        </h1>
+        <ul
+          class="c21"
+        >
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-A"
+            >
+              A
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-B"
+            >
+              B
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-C"
+            >
+              C
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-D"
+            >
+              D
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-E"
+            >
+              E
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-F"
+            >
+              F
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-G"
+            >
+              G
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-H"
+            >
+              H
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-I"
+            >
+              I
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-J"
+            >
+              J
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <span>
+              K
+            </span>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-L"
+            >
+              L
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-M"
+            >
+              M
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-N"
+            >
+              N
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-O"
+            >
+              O
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-P"
+            >
+              P
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-Q"
+            >
+              Q
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-R"
+            >
+              R
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-S"
+            >
+              S
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-T"
+            >
+              T
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-U"
+            >
+              U
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-V"
+            >
+              V
+            </a>
+          </li>
+          <li
+            class="c22"
+          >
+            <span>
+              W
+            </span>
+          </li>
+          <li
+            class="c22"
+          >
+            <span>
+              X
+            </span>
+          </li>
+          <li
+            class="c22"
+          >
+            <span>
+              Y
+            </span>
+          </li>
+          <li
+            class="c22"
+          >
+            <a
+              href="#ancre-Z"
+            >
+              Z
+            </a>
+          </li>
+        </ul>
+        <div>
+          <h2
+            id="ancre-A"
+          >
+            A
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/a-titre-conservatoire"
+              >
+                A titre conservatoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/abrogation"
+              >
+                Abrogation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/abroge"
+              >
+                Abrogé
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accessoires-de-salaire"
+              >
+                Accessoires de salaire 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accident-de-mission"
+              >
+                Accident de mission
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accident-de-travail"
+              >
+                Accident de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-atypique"
+              >
+                Accord atypique
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-collectif"
+              >
+                Accord collectif
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-dentreprise"
+              >
+                Accord d'entreprise
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-de-branche"
+              >
+                Accord de branche
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-de-branche-etendu"
+              >
+                Accord de branche étendu
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-de-branche-non-etendu"
+              >
+                Accord de branche non étendu
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-de-groupe"
+              >
+                Accord de groupe
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-de-methode"
+              >
+                Accord de méthode
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-derogatoire"
+              >
+                Accord dérogatoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-interentreprises"
+              >
+                Accord interentreprises
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/accord-national-interprofessionnel"
+              >
+                Accord national interprofessionnel
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/acte-reglementaire"
+              >
+                Acte réglementaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/actes-positifs-de-recherche-demploi"
+              >
+                Actes positifs de recherche d'emploi
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/actionnariat-des-salaries"
+              >
+                Actionnariat des salariés
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/activite-partielle"
+              >
+                Activité partielle
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/activite-principale-exercee"
+              >
+                Activité principale exercée
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/activites-sociales-et-culturelles"
+              >
+                Activités sociales et culturelles 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/adhesion-accord-collectif-ou-convention-collective"
+              >
+                Adhésion (accord collectif ou convention collective) 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/affection-de-longue-duree"
+              >
+                Affection de longue durée 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/affiliation"
+              >
+                Affiliation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/aide-au-retour-a-lemploi"
+              >
+                Aide au retour à l’emploi 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/aide-juridictionnelle"
+              >
+                Aide juridictionnelle 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/amplitude-horaire"
+              >
+                Amplitude horaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/annee-civile"
+              >
+                Année civile
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/annualisation-du-temps-de-travail"
+              >
+                Annualisation du temps de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/appel"
+              >
+                Appel 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/arret"
+              >
+                Arrêt
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/arret-de-travail"
+              >
+                arrêt de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/arrete"
+              >
+                Arrêté
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/article-etendu"
+              >
+                Article étendu 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/article-non-etendu"
+              >
+                Article non étendu
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/assiette"
+              >
+                Assiette
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/astreinte"
+              >
+                Astreinte
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/audience-electorale"
+              >
+                Audience électorale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/autorite-de-la-chose-jugee"
+              >
+                Autorité de la chose jugée
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/avantages-en-nature"
+              >
+                Avantages en nature
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/avenant"
+              >
+                Avenant
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/avertissement"
+              >
+                Avertissement
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/ayant-droit"
+              >
+                Ayant droit
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-B"
+          >
+            B
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/base-de-donnees-economiques-et-sociales"
+              >
+                Base de données économiques et sociales 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/bilan-social"
+              >
+                Bilan social
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/bon-de-delegation"
+              >
+                Bon de délégation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/branche-professionnelle"
+              >
+                Branche professionnelle
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/bulletin-de-paye"
+              >
+                Bulletin de paye
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-C"
+          >
+            C
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/cadre-dirigeant"
+              >
+                Cadre dirigeant
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/certificat-de-travail"
+              >
+                Certificat de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/chambre-sociale-de-la-cour-de-cassation"
+              >
+                Chambre sociale de la cour de cassation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/champ-dapplication-dun-accord-collectif"
+              >
+                Champ d’application d'un accord collectif
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/circulaire"
+              >
+                Circulaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/classification-professionnelle"
+              >
+                Classification professionnelle
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/clause-dindexation"
+              >
+                Clause d'indexation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/clause-penale"
+              >
+                Clause pénale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/clause-resolutoire"
+              >
+                Clause résolutoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/coefficient-hierarchique"
+              >
+                Coefficient hiérarchique
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/comite-social-et-economique"
+              >
+                Comité social et économique 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/commissaire-aux-comptes"
+              >
+                Commissaire aux comptes
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/commission-nationale-de-linformatique-et-des-libertes"
+              >
+                Commission nationale de l’informatique et des libertés 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/commission-sante-securite-et-conditions-de-travail"
+              >
+                Commission santé, sécurité et conditions de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conciliation"
+              >
+                Conciliation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conges-familiaux"
+              >
+                Congés familiaux
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conges-speciaux"
+              >
+                Congés spéciaux
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conseil-detat"
+              >
+                Conseil d’Etat 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conseil-de-prudhommes"
+              >
+                Conseil de prud’hommes 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conseiller-du-salarie"
+              >
+                Conseiller du salarié
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/conseiller-prudhomal"
+              >
+                Conseiller prud'homal
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/constitution"
+              >
+                Constitution
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/contrat-de-service"
+              >
+                Contrat de service
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/contravention"
+              >
+                Contravention
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/convention-collective"
+              >
+                Convention collective
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/convention-collective-de-branche"
+              >
+                Convention collective de branche
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/cour-administrative-dappel-caa"
+              >
+                Cour administrative d’appel (CAA)
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/cour-dappel"
+              >
+                Cour d’appel
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/cour-de-cassation"
+              >
+                Cour de cassation 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/cour-de-justice-de-lunion-europeenne"
+              >
+                Cour de justice de l’Union Européenne 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/cour-europeenne-des-droits-de-lhomme"
+              >
+                Cour européenne des droits de l’homme 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/creance"
+              >
+                Créance
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/credit-dheures-de-delegation"
+              >
+                Crédit d'heures de délégation
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-D"
+          >
+            D
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/de-gre-a-gre"
+              >
+                De gré à gré
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/decret"
+              >
+                Décret
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/decret-en-conseil-detat"
+              >
+                Décret en conseil d'état
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/defendeur"
+              >
+                Défendeur 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/defenseur-syndical"
+              >
+                Défenseur syndical
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/delai-de-carence"
+              >
+                Délai de carence
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/delai-de-prevenance"
+              >
+                Délai de prévenance
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/delibere"
+              >
+                Délibéré
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/delit"
+              >
+                Délit
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/delit-dentrave"
+              >
+                Délit d'entrave
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/demandeur"
+              >
+                Demandeur 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/denonciation-dun-accord-collectif"
+              >
+                Dénonciation d'un accord collectif
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/depens"
+              >
+                Dépens
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/derogation"
+              >
+                Dérogation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/disposition"
+              >
+                Disposition
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/dividende"
+              >
+                Dividende
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/domicile"
+              >
+                Domicile
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/domiciliation-dune-entreprise"
+              >
+                Domiciliation d'une entreprise
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/dommages-et-interets"
+              >
+                Dommages et intérêts
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/droit-communautaire"
+              >
+                Droit communautaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/droit-du-travail"
+              >
+                Droit du travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/duplicata"
+              >
+                Duplicata
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-E"
+          >
+            E
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/echelon"
+              >
+                Echelon
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/effectif-de-lentreprise"
+              >
+                Effectif de l'entreprise
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/eligible"
+              >
+                Eligible
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/emprisonnement"
+              >
+                Emprisonnement
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/en-numeraire"
+              >
+                En numéraire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/engagement-unilateral-de-lemployeur"
+              >
+                Engagement unilatéral de l'employeur
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/entreprise-de-taille-intermediaire"
+              >
+                Entreprise de taille intermédiaire 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/ester-en-justice"
+              >
+                Ester en justice 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/etat-divresse-manifeste"
+              >
+                Etat d'ivresse manifeste
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/extrait-kbis"
+              >
+                Extrait kbis 
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-F"
+          >
+            F
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/faute-grave"
+              >
+                Faute grave
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/faute-inexcusable-de-lemployeur"
+              >
+                Faute inexcusable de l'employeur
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/faute-lourde"
+              >
+                Faute lourde
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/filiale"
+              >
+                Filiale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/force-executoire"
+              >
+                Force exécutoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/force-majeure"
+              >
+                Force majeure
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/forclusion"
+              >
+                Forclusion
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/fractionnement-des-conges-payes"
+              >
+                Fractionnement des congés payés
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-G"
+          >
+            G
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/gratification"
+              >
+                Gratification
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/gratification-stagiaire"
+              >
+                Gratification stagiaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/greffe"
+              >
+                Greffe
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/grossesse-pathologique"
+              >
+                Grossesse pathologique
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-H"
+          >
+            H
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/heures-complementaires"
+              >
+                Heures complémentaires
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/heures-dequivalence"
+              >
+                Heures d'équivalence
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/heures-pour-recherche-demploi"
+              >
+                Heures pour recherche d'emploi
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/homologation"
+              >
+                Homologation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/hyperbare"
+              >
+                Hyperbare
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-I"
+          >
+            I
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/indemnites"
+              >
+                Indemnités
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/indemnites-journalieres-de-securite-sociale"
+              >
+                indemnités journalières de sécurité sociale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/indexation-des-salaires"
+              >
+                Indexation des salaires
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/infraction"
+              >
+                Infraction
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/instance"
+              >
+                Instance
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/institutions-representatives-du-personnel"
+              >
+                Institutions représentatives du personnel 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/intermittent-du-spectacle"
+              >
+                Intermittent du spectacle
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-J"
+          >
+            J
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/jour-calendaire"
+              >
+                Jour calendaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jour-chome"
+              >
+                Jour chômé
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jour-ferie"
+              >
+                Jour férié
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jour-franc"
+              >
+                Jour franc
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jour-ouvrable"
+              >
+                Jour ouvrable
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jour-ouvre"
+              >
+                Jour ouvré
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jours-de-fractionnement"
+              >
+                Jours de fractionnement
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jugement-definitif"
+              >
+                Jugement définitif
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jugement-passe-en-force-de-chose-jugee"
+              >
+                Jugement passé en force de chose jugée
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/juridictions-administratives"
+              >
+                Juridictions administratives
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/juridictions-judiciaires"
+              >
+                Juridictions judiciaires
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/jurisprudence"
+              >
+                Jurisprudence
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-L"
+          >
+            L
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/licenciement-disciplinaire"
+              >
+                Licenciement disciplinaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/licenciement-irregulier"
+              >
+                Licenciement irrégulier
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/licenciement-nul"
+              >
+                Licenciement nul
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/licenciement-pour-motif-economique"
+              >
+                Licenciement pour motif économique
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/licenciement-pour-motif-personnel"
+              >
+                Licenciement pour motif personnel
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/licenciement-sans-cause-reelle-et-serieuse"
+              >
+                Licenciement sans cause réelle et sérieuse 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/lien-de-subordination"
+              >
+                Lien de subordination
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/liquidation-judiciaire"
+              >
+                Liquidation judiciaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/litige"
+              >
+                Litige
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/lock-out"
+              >
+                Lock-out
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-M"
+          >
+            M
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/maladie-professionnelle"
+              >
+                Maladie professionnelle
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mandat-dun-representant-du-personnel"
+              >
+                Mandat d'un représentant du personnel
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mandataire-social"
+              >
+                Mandataire social
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/marche-reglemente"
+              >
+                Marché réglementé
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mensualisation"
+              >
+                Mensualisation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/minimum-garanti"
+              >
+                Minimum garanti 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mise-a-pied-conservatoire"
+              >
+                Mise à pied conservatoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mise-a-pied-disciplinaire"
+              >
+                Mise à pied disciplinaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mise-en-demeure"
+              >
+                Mise en demeure
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/modification-juridique-de-la-situation-de-lemployeur"
+              >
+                Modification juridique de la situation de l'employeur
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mutation"
+              >
+                Mutation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mutation-disciplinaire"
+              >
+                Mutation disciplinaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/mutile-du-travail"
+              >
+                Mutilé du travail
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-N"
+          >
+            N
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/negociation-triennale"
+              >
+                Négociation triennale 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/norme-nf-x35-102"
+              >
+                Norme nf x35-102
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/notification"
+              >
+                Notification
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-O"
+          >
+            O
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/operateurs-de-competences"
+              >
+                Opérateurs de compétences 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/ordre-du-jour"
+              >
+                Ordre du jour
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/ordre-public"
+              >
+                Ordre public
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/outplacement"
+              >
+                Outplacement
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-P"
+          >
+            P
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/part-sociale"
+              >
+                Part sociale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/parties-au-contrat-de-travail"
+              >
+                Parties au contrat de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/pays-avec-lesquels-la-france-a-signe-une-convention-de-securite-sociale"
+              >
+                Pays avec lesquels la france a signé une convention de sécurité sociale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/pays-ayant-conclu-un-accord-avec-la-france-sur-limmigration-professionnelle"
+              >
+                Pays ayant conclu un accord avec la France sur l'immigration professionnelle
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/pays-de-lunion-europeenne"
+              >
+                Pays de l'Union Européenne
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/pecule-de-liberation"
+              >
+                Pécule de libération
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/penibilite"
+              >
+                Pénibilité 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/periode-probatoire"
+              >
+                Période probatoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/personne-morale"
+              >
+                Personne morale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/pme-au-sens-communautaire"
+              >
+                PME au sens communautaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/pourvoi-en-cassation"
+              >
+                Pourvoi en cassation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/preavis"
+              >
+                Préavis
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/prejudice"
+              >
+                Préjudice
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/prescription"
+              >
+                Prescription
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/prestataire-de-services-dans-lunion-europeenne"
+              >
+                Prestataire de services dans l'Union Européenne
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/proche-aidant-dune-personne-agee"
+              >
+                Proche aidant d'une personne âgée
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/propagande-electorale"
+              >
+                Propagande électorale
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/prorata-temporis"
+              >
+                Prorata temporis
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/prorogation"
+              >
+                Prorogation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/protocole-daccord-preelectoral-pap"
+              >
+                Protocole d'accord préélectoral (PAP)
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-Q"
+          >
+            Q
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/quorum"
+              >
+                Quorum
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-R"
+          >
+            R
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/recidive"
+              >
+                Récidive
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/recours-hierarchique"
+              >
+                Recours hiérarchique
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/recours-juridictionnel-suspensif"
+              >
+                Recours juridictionnel suspensif
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/redressement-judiciaire"
+              >
+                Redressement judiciaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/refere"
+              >
+                Référé
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/reglement-amiable-dun-litige"
+              >
+                Règlement amiable d'un litige
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/representant-legal"
+              >
+                Représentant légal
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/requerant"
+              >
+                Requérant
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/requete"
+              >
+                Requête
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/rescrit"
+              >
+                Rescrit
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/rescrit-social"
+              >
+                Rescrit social
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/retrogradation"
+              >
+                Rétrogradation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/revenus-de-remplacement"
+              >
+                Revenus de remplacement
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/revenus-nets-categoriels"
+              >
+                Revenus nets catégoriels
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/risque-professionnel"
+              >
+                Risque professionnel
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/risque-psychosociaux"
+              >
+                Risque psychosociaux
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/rupture-amiable"
+              >
+                Rupture amiable
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-S"
+          >
+            S
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/salarie-mandate"
+              >
+                Salarié mandaté
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/sanction-disciplinaire"
+              >
+                Sanction disciplinaire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/secretariat-greffe"
+              >
+                Secrétariat-greffe
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/sejour-irregulier"
+              >
+                Séjour irrégulier
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/semaine"
+              >
+                Semaine 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/seuil-deffectifs"
+              >
+                Seuil d'effectifs
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/signification"
+              >
+                Signification
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/silence-garde-par-ladministration"
+              >
+                Silence gardé par l'administration
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/statut-particulier"
+              >
+                Statut particulier
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/subrogation"
+              >
+                Subrogation
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/sujetion"
+              >
+                Sujétion
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/sursis-a-statuer"
+              >
+                Sursis à statuer
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/suspension-du-contrat-de-travail"
+              >
+                Suspension du contrat de travail
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/systeme-didentification-du-repertoire-des-entreprises"
+              >
+                Système d'identification du répertoire des entreprises 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/systeme-informatique-du-repertoire-des-entreprises"
+              >
+                Système informatique du répertoire des entreprises 
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-T"
+          >
+            T
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/temps-de-travail-effectif"
+              >
+                Temps de travail effectif
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/terme-imprecis"
+              >
+                Terme imprécis
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/terme-precis"
+              >
+                Terme précis
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/texte-attache"
+              >
+                Texte attaché
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/texte-de-base"
+              >
+                Texte de base
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/textes-salaires"
+              >
+                Textes salaires
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/titre-executoire"
+              >
+                Titre exécutoire
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/transaction"
+              >
+                Transaction
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/transfert-dentreprise"
+              >
+                Transfert d'entreprise
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/travailleur-frontalier"
+              >
+                Travailleur frontalier
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-U"
+          >
+            U
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/union-europeenne"
+              >
+                Union Européenne 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/unite-economique-et-sociale"
+              >
+                Unité économique et sociale 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/usages"
+              >
+                Usages
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/usages-locaux"
+              >
+                Usages locaux
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-V"
+          >
+            V
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/vacant"
+              >
+                Vacant 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/valeur-limite-dexposition"
+              >
+                valeur limite d'exposition
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/vigueur"
+              >
+                Vigueur
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/voies-de-recours"
+              >
+                Voies de recours
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2
+            id="ancre-Z"
+          >
+            Z
+          </h2>
+          <ul>
+            <li>
+              <a
+                href="/glossaire/zone-de-revitalisation-rurale"
+              >
+                Zone de revitalisation rurale 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/zone-franche-urbaine"
+              >
+                Zone franche urbaine 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/zone-touristique-internationale"
+              >
+                Zone touristique internationale 
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/zone-urbaine-sensible"
+              >
+                Zone urbaine sensible 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="c23"
+  >
+    <div
+      class="c18"
+    >
+      <div
+        class="c24 c1"
+      >
+        <h2>
+          Besoin d’un accompagnement personnalisé ?
+        </h2>
+        <div
+          class="c25 c26"
+        >
+          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+        </div>
+        <button
+          aria-pressed="false"
+          class="c27"
+        >
+          Contacter les services de renseignement
+        </button>
+      </div>
+    </div>
+    <div
+      class="c18"
+    >
+      <div
+        class="c28 c1"
+      >
+        <div
+          class="c29 c30"
+        >
+          <h3
+            class="c31"
+          >
+            Code du travail numérique
+          </h3>
+          <ul
+            class="c21"
+          >
+            <li
+              class="c32"
+            >
+              <a
+                href="/droit-du-travail"
+              >
+                Le droit du travail
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
+                href="/a-propos"
+              >
+                À propos
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
+                href="/mentions-legales"
+              >
+                Mentions légales
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
+                href="mailto:codedutravail@beta.gouv.fr"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c29 c30"
+        >
+          <h3
+            class="c31"
+          >
+            Aidez-nous à améliorer cet outil
+          </h3>
+          <ul
+            class="c21"
+          >
+            <li
+              class="c32"
+            >
+              <a
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Contribuer sur Github
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Journal des modifications
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c29 c30"
+        >
+          <h3
+            class="c31"
+          >
+            En collaboration avec
+          </h3>
+          <ul
+            class="c21"
+          >
+            <li
+              class="c32"
+            >
+              <a
+                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                La Direction Générale du Travail
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
+                href="https://incubateur.social.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                L’incubateur des ministères sociaux
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
+                href="https://beta.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                beta.gouv.fr
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

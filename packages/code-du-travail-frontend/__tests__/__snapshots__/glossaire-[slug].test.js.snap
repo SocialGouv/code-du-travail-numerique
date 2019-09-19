@@ -1,0 +1,849 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Term /> should render 1`] = `
+.c14:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c33 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c19 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c19 > *:first-child {
+  margin-top: 0;
+}
+
+.c19 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c27 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c27 > *:first-child {
+  margin-top: 0;
+}
+
+.c27 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c7 {
+  padding: 1.25rem 0;
+  background-color: #fff;
+}
+
+.c18 {
+  padding: 1.25rem 0;
+}
+
+.c28 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+  border-bottom-color: #003a61;
+}
+
+.c28:not([disabled]):hover,
+.c28:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c28:not([disabled]):active {
+  color: #fff;
+  background: #0078c7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  outline: none;
+}
+
+.c28[aria-pressed="true"] {
+  color: #fff;
+  background: #0068ae;
+  border-width: 2px 1px 1px 1px;
+  border-color: #005994;
+  border-top-color: #003a61;
+  box-shadow: inset 0 1px 2px 0 #003a61;
+}
+
+.c28[aria-pressed="true"]:not([disabled]):hover,
+.c28[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #005994;
+}
+
+.c28[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #003a61;
+}
+
+.c28[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c21 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c21:before,
+.c21:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c21:before {
+  left: -2rem;
+}
+
+.c21:after {
+  right: -2rem;
+}
+
+.c22 {
+  overflow-x: auto;
+}
+
+.c23 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c23 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c23 td,
+.c23 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c23 th {
+  background: #ebeff3;
+}
+
+.c23 thead,
+.c23 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f5f7fa;
+}
+
+.c23 tfoot {
+  vertical-align: top;
+}
+
+.c13 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.c16 ul {
+  z-index: 100;
+}
+
+.c16 li[role="option"]:nth-child(2n + 1) {
+  background: #f5f7fa;
+}
+
+.c6 {
+  box-shadow: 0 10px 10px -10px #c9d3df;
+}
+
+.c9 {
+  margin-top: 0;
+  font-size: 1.875rem;
+  line-height: 1.4;
+  color: #006ab2;
+}
+
+.c10 {
+  font-size: 1rem;
+}
+
+.c8 {
+  position: relative;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 70%;
+}
+
+.c12 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem 0 0 1.25rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0 1rem 0 4rem;
+  width: 100%;
+  height: 50px;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  -webkit-transition: border 250ms ease;
+  transition: border 250ms ease;
+}
+
+.c15:focus {
+  border-color: #006be6;
+  outline: none;
+}
+
+.c17 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+  margin-left: 0.5rem;
+}
+
+.c17:not([disabled]):hover,
+.c17:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c17:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c17[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c17[aria-pressed="true"]:not([disabled]):hover,
+.c17[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c17[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c17[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c0 {
+  color: white;
+  background: currentColor;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c3:link {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  width: 5rem;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.c5 {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c25 {
+  text-align: center;
+}
+
+.c26 {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c31 + .c30 {
+  padding-left: 1rem;
+}
+
+.c32 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.c34 {
+  margin: 0.5rem 0;
+}
+
+.c34 a,
+.c34 a:visited {
+  color: #434956;
+}
+
+.c20 {
+  text-align: center;
+}
+
+@media print {
+  .c1 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c19 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c27 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:980px) {
+  .c11 {
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c15 {
+    height: 50px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:600px) {
+  .c17 {
+    margin-left: 0;
+    margin-top: 0.625rem;
+  }
+}
+
+@media print {
+  .c24 {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .c29 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c31 + .c30 {
+    padding-left: 0;
+  }
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="/?q="
+          title="Code du travail numérique - retour à l'accueil"
+        >
+          <img
+            alt="symbole de la Marianne, site officiel du gouvernement"
+            class="c4"
+            src="/static/assets/img/marianne.svg"
+          />
+          <span
+            class="c5"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main
+    id="main"
+  >
+    <div
+      class="c6 c7"
+    >
+      <div
+        class="c1"
+      >
+        <div
+          class="c8"
+        >
+          <p
+            class="c9"
+          >
+            Posez votre question sur le droit du travail
+            <br />
+            <a
+              class="c10"
+              href="/droit-du-travail"
+            >
+              Le droit du travail, c‘est quoi ?
+            </a>
+          </p>
+          <form
+            class="c11"
+          >
+            <svg
+              class="c12"
+              viewBox="0 0 20 20"
+            >
+              <title />
+              <path
+                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <label
+              class="c13"
+              for="main-search-input"
+            >
+              <span
+                class="c14"
+              >
+                Rechercher
+              </span>
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="react-autowhatever-cdtn-documents-suggester"
+                role="combobox"
+                style="flex: 1;"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="react-autowhatever-cdtn-documents-suggester"
+                  autocomplete="off"
+                  class="c15"
+                  id="main-search-input"
+                  name="query"
+                  placeholder="Recherche"
+                  type="search"
+                  value=""
+                />
+                <div
+                  class="c16"
+                  id="react-autowhatever-cdtn-documents-suggester"
+                  role="listbox"
+                />
+              </div>
+            </label>
+            <button
+              aria-pressed="false"
+              class="c17"
+              type="submit"
+            >
+              Rechercher
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c18"
+    >
+      <div
+        class="c19"
+      >
+        <h1
+          class="c20"
+        >
+          Accord d'entreprise
+        </h1>
+        <div
+          class="c21"
+        >
+          <div
+            class="c22"
+          >
+            <table
+              class="c23"
+            >
+              <tbody>
+                <tr>
+                  <th>
+                    Définition
+                  </th>
+                  <td>
+                    <p>
+                      Accord collectif de travail conclu au niveau d'une entreprise.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p>
+          <a
+            href="/glossaire"
+          >
+            Retour
+          </a>
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="c24"
+  >
+    <div
+      class="c18"
+    >
+      <div
+        class="c25 c1"
+      >
+        <h2>
+          Besoin d’un accompagnement personnalisé ?
+        </h2>
+        <div
+          class="c26 c27"
+        >
+          Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
+        </div>
+        <button
+          aria-pressed="false"
+          class="c28"
+        >
+          Contacter les services de renseignement
+        </button>
+      </div>
+    </div>
+    <div
+      class="c18"
+    >
+      <div
+        class="c29 c1"
+      >
+        <div
+          class="c30 c31"
+        >
+          <h3
+            class="c32"
+          >
+            Code du travail numérique
+          </h3>
+          <ul
+            class="c33"
+          >
+            <li
+              class="c34"
+            >
+              <a
+                href="/droit-du-travail"
+              >
+                Le droit du travail
+              </a>
+            </li>
+            <li
+              class="c34"
+            >
+              <a
+                href="/a-propos"
+              >
+                À propos
+              </a>
+            </li>
+            <li
+              class="c34"
+            >
+              <a
+                href="/mentions-legales"
+              >
+                Mentions légales
+              </a>
+            </li>
+            <li
+              class="c34"
+            >
+              <a
+                href="mailto:codedutravail@beta.gouv.fr"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c30 c31"
+        >
+          <h3
+            class="c32"
+          >
+            Aidez-nous à améliorer cet outil
+          </h3>
+          <ul
+            class="c33"
+          >
+            <li
+              class="c34"
+            >
+              <a
+                href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Contribuer sur Github
+              </a>
+            </li>
+            <li
+              class="c34"
+            >
+              <a
+                href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Journal des modifications
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="c30 c31"
+        >
+          <h3
+            class="c32"
+          >
+            En collaboration avec
+          </h3>
+          <ul
+            class="c33"
+          >
+            <li
+              class="c34"
+            >
+              <a
+                href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                La Direction Générale du Travail
+              </a>
+            </li>
+            <li
+              class="c34"
+            >
+              <a
+                href="https://incubateur.social.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                L’incubateur des ministères sociaux
+              </a>
+            </li>
+            <li
+              class="c34"
+            >
+              <a
+                href="https://beta.gouv.fr/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                beta.gouv.fr
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

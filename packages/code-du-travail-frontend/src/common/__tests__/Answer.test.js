@@ -41,4 +41,20 @@ describe("<Answer />", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it("should render tooltip", () => {
+    const { container } = render(
+      <Answer
+        title="Article du code"
+        intro="intro de l'article"
+        html="<p class='test-content'>Contenu au format <strong>html</strong> contenant des tooltip sur certains mot comme rescrit. match aussi les abbréviation comme APE mais pas ape ou ses variantes comme code ape</p>"
+        footer="pied de page"
+        date="03/11/1979"
+        sourceType="social groove"
+        icon={icons.Question}
+      >
+        <div>Contenu supplémentaire</div>
+      </Answer>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
