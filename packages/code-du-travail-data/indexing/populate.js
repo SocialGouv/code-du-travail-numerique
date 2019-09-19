@@ -178,10 +178,11 @@ function* cdtnDocumentsGen() {
   );
   logger.info("=== Outils ===");
   yield require("../dataset/outils.json").map(
-    ({ titre, code, questions, themes, date, branche }) => ({
+    ({ branche, code, date, description, questions, themes, titre }) => ({
       source: SOURCES.TOOLS,
       title: titre,
       slug: slugify(code),
+      description,
       text: questions.join("\n"),
       themes: themes,
       date,

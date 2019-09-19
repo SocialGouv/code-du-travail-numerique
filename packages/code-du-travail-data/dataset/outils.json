@@ -1,6 +1,6 @@
 [
   {
-    "titre": "calculateur d'indemnité de licenciement",
+    "titre": "Simulateur d'indemnité de licenciement",
     "code": "indemnite-licenciement",
     "questions": [
       "Quelle est mon indemnité de licenciement",
@@ -11,6 +11,7 @@
       "indemnité de licenciement en cas d'alternance temps plein temps partiel",
       "calculez le montant d'une indemnité de licenciement en fonction de votre situation"
     ],
+    "description": "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
     "theme": "Licenciement",
     "themes": [300, 28300, 21512],
     "type_de_contrat": ["CDI"],
@@ -41,6 +42,7 @@
       "cout embauche CDD",
       "cout embauche CDI"
     ],
+    "description": "Estimez le salaire lors d'une embauche : total employeur, brut, net",
     "theme": "Embauche",
     "themes": [3800, 42200, 42300],
     "catégorie": [],
@@ -65,6 +67,7 @@
       "montant prime de précarité",
       "montant indemnité fin de contrat"
     ],
+    "description": "Calculez la prime de précarité",
     "theme": "15-salaire,-primes-et-avantages",
     "themes": [300, 28300, 21512],
     "catégorie": [],
@@ -91,6 +94,7 @@
       "calculer la durée de son préavis",
       "calcul durée préavis démission"
     ],
+    "description": "Connaître la durée du préavis de démission",
     "theme": "37-demission",
     "themes": [],
     "catégorie": [],
