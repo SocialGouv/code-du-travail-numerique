@@ -82,17 +82,18 @@ router.get("/search", async ctx => {
   });
 
   const [esResults, semResults] = await Promise.all([esResponse, semResponse]);
-  const semResultWithKey = utils.addKey(semResults.hits.hits);
-  const esResultWithKey = utils.addKey(esResults.body.hits.hits);
-  const results = utils.merge(semResultWithKey, esResultWithKey, MAX_RESULTS);
-  const resultsNoDuplicate = utils.removeDuplicate(results);
+  const results = utils.mergePipe(
+    semResults.hits.hits,
+    esResults.body.hits.hits,
+    MAX_RESULTS
+  );
 
   // const snippetIndex = esResults.body.hits.hits.findIndex(
   //   item => item._source.source === "snippet"
   // );
   ctx.body = {
     hits: {
-      hits: resultsNoDuplicate
+      hits: results
         .filter(item => item._source.source !== "snippet")
         .slice(0, size)
     },
