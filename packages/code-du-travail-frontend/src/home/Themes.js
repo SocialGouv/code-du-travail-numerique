@@ -25,6 +25,7 @@ const iconsMap = {
 
 export default class Themes extends React.Component {
   static propTypes = {
+    isRoot: PropTypes.bool,
     title: PropTypes.string,
     themes: PropTypes.arrayOf(
       PropTypes.shape({
@@ -35,23 +36,24 @@ export default class Themes extends React.Component {
   };
 
   static defaultProps = {
-    title: "Retrouvez nos réponses thématiques"
+    title: "Retrouvez nos réponses thématiques",
+    isRoot: true
   };
 
   render() {
-    const { title, themes } = this.props;
+    const { title, themes, isRoot } = this.props;
     if (!(themes.length > 0)) return null;
     return (
       <Section>
         <Container>
           <Title>{title}</Title>
           <Grid>
-            {themes.map(({ id, slug, title, parent }) => (
+            {themes.map(({ id, slug, title }) => (
               <GridCell key={slug + title}>
                 <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
                   <Tile title={title}>
                     <Category
-                      small={Boolean(parent)}
+                      small={Boolean(!isRoot)}
                       title={title}
                       icon={`/static/assets/icons/${iconsMap[id] ||
                         "profiles.svg"}`}
