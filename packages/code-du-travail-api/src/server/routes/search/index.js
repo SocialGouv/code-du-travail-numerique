@@ -55,7 +55,6 @@ router.get("/search", async ctx => {
     size: size,
     excludeSources
   });
-  const facetBody = getFacetsBody({ query });
 
   const pTimeout = (promise, timeout) =>
     new Promise((resolve, reject) => {
@@ -73,7 +72,7 @@ router.get("/search", async ctx => {
 
   const semResponse = pTimeout(
     fetch(
-      `${NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
+      `${NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}&size=${size}`
     ).then(response => response.json()),
     MAX_TIMEOUT
   ).catch(err => {
@@ -88,28 +87,7 @@ router.get("/search", async ctx => {
     MAX_RESULTS
   );
 
-  // const snippetIndex = esResults.body.hits.hits.findIndex(
-  //   item => item._source.source === "snippet"
-  // );
-  ctx.body = {
-    hits: {
-      hits: results
-        .filter(item => item._source.source !== "snippet")
-        .slice(0, size)
-    },
-    facets: []
-  };
-  // only add snippet if it's found in the returned results
-  // if (
-  //   response.body.aggregations.bySource.buckets.length > 0 &&
-  //   snippetIndex > -1 &&
-  //   snippetIndex < size
-  // ) {
-  //   const [snippetResults] = response.body.aggregations.bySource.buckets;
-  //   ctx.body.snippet = snippetResults.bySource.hits.hits[0];
-  // }
-
-  ctx.body = response.body.hits.hits;
+  ctx.body = results.slice(0, size);
 });
 
 module.exports = router;

@@ -62,15 +62,6 @@ test("return search results for demission from elastic", async () => {
 //   expect(response.body).toMatchSnapshot();
 // });
 
-<<<<<<< HEAD
-=======
-// test("return faq search results for smic with snippet content", async () => {
-//   const response = await request(app.callback()).get(`/api/v1/search?q=smic`);
-//   expect(response.status).toBe(200);
-//   expect(response.body).toMatchSnapshot();
-// });
-
->>>>>>> updaet test
 test("return article results when searching with article id", async () => {
   fetch.mockResolvedValue({ json: () => nlpFakeDataArticles });
   const response = await request(app.callback()).get(
