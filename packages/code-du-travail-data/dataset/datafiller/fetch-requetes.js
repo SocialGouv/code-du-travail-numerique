@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-const { sortByKey, sortRowRefs, getVariants, decodeHTML } = require("./utils");
+const { sortRowRefsByRelevance, getVariants, decodeHTML } = require("./utils");
 
 /*
  fetch raw datafiller requetes data, filter and sort properly
@@ -68,9 +68,8 @@ const fetchAll = async () => {
       }))
   );
 
-  const sortedRows = await rows
-    .map(sortRowRefs(node => -node.relevance))
-    .sort(sortByKey("title"));
+  const sortedRows = await rows.map(sortRowRefsByRelevance);
+
   return sortedRows;
 };
 

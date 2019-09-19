@@ -1,28 +1,4 @@
-const {
-  slimify,
-  isFixableUrl,
-  getVariants,
-  sortByKey,
-  sortRefs
-} = require("../utils");
-
-describe("isFixableUrl", () => {
-  it("should try to fix fiches SP url", () => {
-    expect(isFixableUrl("/fiche-service-public/hello")).toEqual(true);
-  });
-
-  it("should try to fix fiches MT url", () => {
-    expect(isFixableUrl("/fiche-ministere-travail/hello")).toEqual(true);
-  });
-
-  it("should not try to fix random url", () => {
-    expect(isFixableUrl("/hello/world")).toEqual(false);
-  });
-
-  it("should not try to fix cdt url", () => {
-    expect(isFixableUrl("/code-du-travail/l1134-4")).toEqual(false);
-  });
-});
+const { slimify, getVariants, sortByKey, sortRefs } = require("../utils");
 
 describe("getVariants", () => {
   it("should split lines", () => {

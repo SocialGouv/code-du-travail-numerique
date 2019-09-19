@@ -1,7 +1,12 @@
 const fetch = require("node-fetch");
 const slugify = require("../../slugify");
 
-const { sortByKey, getVariants, sortRowRefs, slimify } = require("./utils");
+const {
+  sortByKey,
+  getVariants,
+  sortRowRefsByPosition,
+  slimify
+} = require("./utils");
 
 /*
  fetch raw datafiller themes data, filter and sort properly
@@ -10,7 +15,7 @@ const { sortByKey, getVariants, sortRowRefs, slimify } = require("./utils");
 const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
-const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records?_limit=1000`;
+const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records`;
 
 /*
 
@@ -61,9 +66,7 @@ const fetchAll = async () => {
     .then(res => res.json())
     .then(json => json.data);
 
-  const sortedRows = records
-    .map(sortRowRefs(node => node.position))
-    .sort(sortByKey("title"));
+  const sortedRows = records.map(sortRowRefsByPosition);
 
   const treeRows = sortedRows.map(row => {
     const breadcrumbs = row.parent && getParents(sortedRows, row);

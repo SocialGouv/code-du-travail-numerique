@@ -1,3 +1,5 @@
+const { SOURCES } = require("@cdt/sources");
+
 const numCompare = (a, b) => {
   if (a < b) {
     return -1;
@@ -23,12 +25,6 @@ const getVariants = row => {
   return [...new Set(variants)];
 };
 
-const isFixableUrl = url =>
-  Boolean(
-    url.match(/^\/fiche-service-public\//) ||
-      url.match(/^\/fiche-ministere-travail\//)
-  );
-
 const entities = {
   amp: "&",
   apos: "'",
@@ -46,11 +42,11 @@ const decodeHTML = text =>
   text.replace(/&([^;]+);/gm, (match, entity) => entities[entity] || match);
 
 const sourcesPriority = [
-  "faq",
-  "fiche-service-public",
-  "fiche-ministere-travail",
-  "external",
-  "code-du-travail"
+  SOURCES.FAQ,
+  SOURCES.SHEET_SP,
+  SOURCES.SHEET_MT,
+  SOURCES.EXTERNAL,
+  SOURCES.CDT
 ];
 
 const getSource = url => {
@@ -60,25 +56,13 @@ const getSource = url => {
 
 // sort datafiller references by key and source
 const sortRefs = cb => (a, b) => {
-  // 1st sort by relevance
-  if (cb(a) < cb(b)) {
-    return -1;
-  } else if (cb(a) > cb(b)) {
-    return 1;
+  if (cb(a) === cb(b)) {
+    return (
+      sourcesPriority.indexOf(getSource(a.url)) -
+      sourcesPriority.indexOf(getSource(b.url))
+    );
   }
-  // 2nd sort by sourcesPriority
-  if (
-    sourcesPriority.indexOf(getSource(a.url)) <
-    sourcesPriority.indexOf(getSource(b.url))
-  ) {
-    return -1;
-  } else if (
-    sourcesPriority.indexOf(getSource(a.url)) >
-    sourcesPriority.indexOf(getSource(b.url))
-  ) {
-    return 1;
-  }
-  return 0;
+  return cb(a) - cb(b);
 };
 
 const hasUrl = row => !!row.url;
@@ -89,15 +73,19 @@ const sortRowRefs = cb => row => ({
   refs: (row.refs && row.refs.filter(hasUrl).sort(sortRefs(cb))) || []
 });
 
+const sortRowRefsByPosition = sortRowRefs(node => node.position);
+const sortRowRefsByRelevance = sortRowRefs(node => -node.relevance);
+
 const slimify = (obj, keys) =>
   keys.reduce((a, k) => ({ ...a, [k]: obj[k] }), {});
 
 module.exports = {
   sortByKey,
   getVariants,
-  isFixableUrl,
   sortRefs,
   sortRowRefs,
+  sortRowRefsByPosition,
+  sortRowRefsByRelevance,
   slimify,
   decodeHTML
 };
