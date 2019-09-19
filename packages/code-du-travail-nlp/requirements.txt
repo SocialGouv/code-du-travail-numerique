@@ -5,6 +5,6 @@ git+https://github.com/SocialGouv/autosuggest.git
 sentencepiece
 tf-sentencepiece
 tensorflow_hub
-tensorflow==1.13.1
+tensorflow==1.14.0
 gevent
 unidecode
