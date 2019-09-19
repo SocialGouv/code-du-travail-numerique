@@ -78,14 +78,14 @@ Array [
 exports[`sortRefs sort refs by relevance and source type 1`] = `
 Array [
   Object {
-    "id": 4,
-    "relevance": 5,
-    "url": "/code-du-travail/4",
-  },
-  Object {
     "id": 7,
     "relevance": 5,
     "url": "/fiche-ministere-travail/7",
+  },
+  Object {
+    "id": 4,
+    "relevance": 5,
+    "url": "/code-du-travail/4",
   },
   Object {
     "id": 3,
@@ -93,9 +93,9 @@ Array [
     "url": "/fiche-service-public/3",
   },
   Object {
-    "id": 1,
+    "id": 6,
     "relevance": 2,
-    "url": "/code-du-travail/1",
+    "url": "/external/6",
   },
   Object {
     "id": 2,
@@ -103,14 +103,14 @@ Array [
     "url": "/fiche-service-public/2",
   },
   Object {
+    "id": 1,
+    "relevance": 2,
+    "url": "/code-du-travail/1",
+  },
+  Object {
     "id": 5,
     "relevance": 2,
     "url": "/code-du-travail/5",
-  },
-  Object {
-    "id": 6,
-    "relevance": 2,
-    "url": "/external/6",
   },
 ]
 `;

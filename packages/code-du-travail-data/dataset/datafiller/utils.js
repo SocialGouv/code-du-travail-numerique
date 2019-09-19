@@ -1,4 +1,4 @@
-const { SOURCES } = require("@cdt/sources");
+const { SOURCES, getSourceByRoute } = require("@cdt/sources");
 
 const numCompare = (a, b) => {
   if (a < b) {
@@ -51,15 +51,15 @@ const sourcesPriority = [
 
 const getSource = url => {
   const source = url.match(/^\/([^/]+)\//);
-  return (source && source[1]) || "external";
+  return (source && getSourceByRoute(source[1])) || "external";
 };
 
 // sort datafiller references by key and source
 const sortRefs = cb => (a, b) => {
   if (cb(a) === cb(b)) {
     return (
-      sourcesPriority.indexOf(getSource(b.url)) -
-      sourcesPriority.indexOf(getSource(a.url))
+      sourcesPriority.indexOf(getSource(a.url)) -
+      sourcesPriority.indexOf(getSource(b.url))
     );
   }
   return cb(a) - cb(b);
