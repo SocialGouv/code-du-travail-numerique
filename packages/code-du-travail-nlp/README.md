@@ -34,6 +34,7 @@ pip install -r requirements.txt
 ## Démarer l'api en local
 
 L'api utise Flask et tourne sur le port 5000.
+:bulb: voir [Data](#Data) pour l'ajout des données
 
 ```
 . venv/bin/activate
@@ -48,8 +49,19 @@ deactivate
 
 ## Data
 
-Pour l'instant, on héberge les données dans des hébergées dans gist anonymes. 
+Pour l'instant, on héberge les données dans des hébergées dans gist anonymes.
+
+La donnée indexée dans l'api search est crée au moment du build de l'image de base:
+in root directory:
+
+`docker build . -t cdtn_base`
+
+puis dans le package nlp:
+
+`docker build --build-arg BASE_IMAGE=cdtn_base --build-arg SUGGEST_DATA_URL="https://gist.githubusercontent.com/ArmandGiraud/aaa65ed694e6b8d46918d44e41bae9e4/raw/2b5fa5ff67d87bbf08b33fecfe2fb98e15c73a06/data-test.txt" . -t nlp --no-cache`
+
+Pour lancer le container nlp:
+
+`docker run -e NLP_PORT=5000 -p 5000:5000 nlp`
+
 Le script pour télécharger les données est exéctuté avant de lancer le container nlp
-
-
-

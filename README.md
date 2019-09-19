@@ -48,7 +48,7 @@ $ yarn workspace @cdt/data populate
 
 ```
 
-If some error appears for the nlp_api container, run `docker-compose down`, then run 
+If some error appears for the nlp_api container, run `docker-compose down`, then run
 the data checklist above again, then run `docker-compose build nlp_api`, and, finally, reinitialize data for elasticsearch.
 
 <br>
@@ -116,7 +116,7 @@ This is the process to release to the preprod URL like : `https://x-y-z.codedutr
 
 ### Auto
 
-First, trigger a custom build on [Travis CI > code-du-travail-numerique]((https://travis-ci.com/SocialGouv/code-du-travail-numerique)) > master branch > in the "More options" right menu > trigger custom build.
+First, trigger a custom build on [Travis CI > code-du-travail-numerique](<(https://travis-ci.com/SocialGouv/code-du-travail-numerique)>) > master branch > in the "More options" right menu > trigger custom build.
 Add a message like "Release v2.1.0".
 Use this YAML config:
 
@@ -128,7 +128,7 @@ env:
 
 You can change the lerna arguments though the LERNA_ARGS variable.
 
- ```yml
+```yml
 env:
   global:
     - LERNA_ARGS="--force-publish --yes --preid next"
@@ -136,6 +136,7 @@ env:
 ```
 
 > This will :
+>
 > - tag the release on GitHub
 > - update the changelogs
 > - build Docker images
@@ -169,14 +170,15 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 <br>
 
 ## Deployment policy
+
 Tags can be automaticly deployed See https://github.com/SocialGouv/code-du-travail-numerique/deployments
 
-Trigger a custom build on Travis (in the "More options" right menu) on the tag v* you with a custom config:
+Trigger a custom build on Travis (in the "More options" right menu) on the tag v\* you with a custom config:
 
 ```
 env:
   global:
-    - PRODUCTION=true 
+    - PRODUCTION=true
 ```
 
 ## Architecture
@@ -185,8 +187,8 @@ env:
      +--------+          +----------------+
      |        |          |                |
      |  data  +---------->  elastisearch  |
-     |        |          |                | 
-     +--------+          +----------------+ 
+     |        |          |                |
+     +--------+          +----------------+
                                  |
                                  |
                              +-------+

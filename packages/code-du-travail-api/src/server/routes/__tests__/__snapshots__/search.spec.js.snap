@@ -13,6 +13,7 @@ Array [
       "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
     },
     "_type": "_doc",
+    "key": "code_du_travailr1225-18",
   },
   Object {
     "_id": "14",
@@ -26,38 +27,12 @@ Array [
       "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-remuneration/article/le-smic-374531#A-qui-s-applique-le-SMIC",
     },
     "_type": "_doc",
+    "key": "fiches_ministere_travaille-smic-a-qui-sapplique-le-smic",
   },
 ]
 `;
 
-exports[`return faq search results for demission  1`] = `
-Array [
-  Object {
-    "_id": "6",
-    "_index": "cdtn_document_test",
-    "_score": 4.918913,
-    "_source": Object {
-      "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-      "source": "faq",
-      "title": "Dans les HCR, quel est le préavis de démission ?",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "7",
-    "_index": "cdtn_document_test",
-    "_score": 4.5606866,
-    "_source": Object {
-      "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-      "source": "faq",
-      "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
-    },
-    "_type": "_doc",
-  },
-]
-`;
-
-exports[`return search results for demission 1`] = `
+exports[`return search results for demission from datafiller 1`] = `
 Array [
   Object {
     "_id": "VNQWlGsBPUX8CkMHsmI2",
@@ -271,129 +246,6 @@ Array [
     },
     "_type": "_doc",
     "relevance": 2,
-  },
-]
-`;
-
-exports[`return search results for demission from elastic 1`] = `
-Array [
-  Object {
-    "_id": "2",
-    "_index": "cdtn_document_test",
-    "_score": 5.7323427,
-    "_source": Object {
-      "anchor": "#Comment-presenter-une-demission",
-      "slug": "demission-comment-presenter-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "Démission : comment présenter une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "4",
-    "_index": "cdtn_document_test",
-    "_score": 5.6862044,
-    "_source": Object {
-      "slug": "demission-dun-salarie",
-      "source": "fiches_service_public",
-      "title": "Démission d'un salarié",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "6",
-    "_index": "cdtn_document_test",
-    "_score": 5.5819235,
-    "_source": Object {
-      "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-      "source": "faq",
-      "title": "Dans les HCR, quel est le préavis de démission ?",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "7",
-    "_index": "cdtn_document_test",
-    "_score": 5.2236967,
-    "_source": Object {
-      "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-      "source": "faq",
-      "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "0",
-    "_index": "cdtn_document_test",
-    "_score": 5.050114,
-    "_source": Object {
-      "slug": "themes/rupture-de-contrat/la-demission",
-      "source": "themes",
-      "title": "La démission",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "5",
-    "_index": "cdtn_document_test",
-    "_score": 5.015183,
-    "_source": Object {
-      "slug": "demission-dune-assistante-maternelle",
-      "source": "fiches_service_public",
-      "title": "Démission d'une assistante maternelle",
-      "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "8",
-    "_index": "cdtn_document_test",
-    "_score": 3.10985,
-    "_source": Object {
-      "slug": "r1225-18",
-      "source": "code_du_travail",
-      "title": "Article R1225-18",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "9",
-    "_index": "cdtn_document_test",
-    "_score": 3.0124035,
-    "_source": Object {
-      "slug": "r1442-22-4",
-      "source": "code_du_travail",
-      "title": "Article R1442-22-4",
-      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "3",
-    "_index": "cdtn_document_test",
-    "_score": 2.3741677,
-    "_source": Object {
-      "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
-      "source": "fiches_ministere_travail",
-      "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
-      "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-    },
-    "_type": "_doc",
-  },
-  Object {
-    "_id": "1",
-    "_index": "cdtn_document_test",
-    "_score": 0.8541407,
-    "_source": Object {
-      "slug": "themes/labandon-de-poste-est-il-une-demission",
-      "source": "themes",
-      "title": "L’abandon de poste est-il une démission ?",
-    },
-    "_type": "_doc",
   },
 ]
 `;
