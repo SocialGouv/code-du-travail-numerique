@@ -6,8 +6,8 @@ Array [
     "refs": Array [
       Object {
         "relevance": 5,
-        "title": "/some-unknown-source/test",
-        "url": "/some-unknown-source/test",
+        "title": "Article L1221-3",
+        "url": "/code-du-travail/l1221-3",
       },
       Object {
         "relevance": 5,
@@ -21,8 +21,8 @@ Array [
       },
       Object {
         "relevance": 5,
-        "title": "Article L1221-3",
-        "url": "/code-du-travail/l1221-3",
+        "title": "/some-unknown-source/test",
+        "url": "/some-unknown-source/test",
       },
       Object {
         "relevance": 4,
@@ -76,8 +76,8 @@ exports[`refs should be sorted by relevance and source type 1`] = `
 Array [
   Object {
     "relevance": 5,
-    "title": "/some-unknown-source/test",
-    "url": "/some-unknown-source/test",
+    "title": "Article L1221-3",
+    "url": "/code-du-travail/l1221-3",
   },
   Object {
     "relevance": 5,
@@ -91,8 +91,8 @@ Array [
   },
   Object {
     "relevance": 5,
-    "title": "Article L1221-3",
-    "url": "/code-du-travail/l1221-3",
+    "title": "/some-unknown-source/test",
+    "url": "/some-unknown-source/test",
   },
   Object {
     "relevance": 4,

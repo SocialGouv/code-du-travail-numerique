@@ -5,7 +5,7 @@ Array [
   Object {
     "_id": "8",
     "_index": "cdtn_document_test",
-    "_score": 16.611963,
+    "_score": 16.32855,
     "_source": Object {
       "slug": "r1225-18",
       "source": "code_du_travail",
@@ -18,7 +18,7 @@ Array [
   Object {
     "_id": "14",
     "_index": "cdtn_document_test",
-    "_score": 4.527043,
+    "_score": 4.5136433,
     "_source": Object {
       "anchor": "#A-qui-s-applique-le-SMIC",
       "slug": "le-smic-a-qui-sapplique-le-smic",

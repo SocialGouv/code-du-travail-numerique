@@ -58,8 +58,8 @@ const getSource = url => {
 const sortRefs = cb => (a, b) => {
   if (cb(a) === cb(b)) {
     return (
-      sourcesPriority.indexOf(getSource(a.url)) -
-      sourcesPriority.indexOf(getSource(b.url))
+      sourcesPriority.indexOf(getSource(b.url)) -
+      sourcesPriority.indexOf(getSource(a.url))
     );
   }
   return cb(a) - cb(b);
