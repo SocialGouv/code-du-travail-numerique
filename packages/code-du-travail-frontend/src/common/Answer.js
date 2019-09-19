@@ -63,14 +63,19 @@ function Answer({
   const [portalComponents, setPortalComponents] = useState();
   useEffect(() => {
     const nodes = Array.from(
-      document.querySelectorAll("[data-main-content] p, [data-main-content] li")
+      document.querySelectorAll(
+        "[data-main-content] p, [data-main-content] li:not([role=tab])"
+      )
     ).reduce((state, node) => {
       glossary.forEach(item => {
-        const regexp = new RegExp(`${item.title}s?`, "gi");
-        node.innerHTML = node.innerHTML.replace(
-          regexp,
-          `<span data-tooltip-slug="${item.slug}" data-tooltip-term="$&"></span>`
-        );
+        const words = [...new Set([item.title, ...item.variants])];
+        words.forEach(word => {
+          const regexp = new RegExp(`\\b${word}\\b`, "gi");
+          node.innerHTML = node.innerHTML.replace(
+            regexp,
+            `<span data-tooltip-slug="${item.slug}" data-tooltip-term="$&"></span>`
+          );
+        });
       });
 
       return state.concat(
