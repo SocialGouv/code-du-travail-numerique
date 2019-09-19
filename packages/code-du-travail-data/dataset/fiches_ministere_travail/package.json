@@ -16,8 +16,7 @@
   },
   "scripts": {
     "prestart": "node verifyUrl.js",
-    "start": "node index.js > fiches-min-travail.json",
-    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-min-travail.json",
-    "poststart": "yarn updateTheme && node report.js"
+    "start": "node index.js > fiches-mt.json",
+    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-mt.json && node report.js"
   }
 }

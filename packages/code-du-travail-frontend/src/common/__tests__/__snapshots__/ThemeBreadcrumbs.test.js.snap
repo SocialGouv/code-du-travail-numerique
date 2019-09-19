@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 1`] = `
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 1.25rem 0;
+}
+
+.c0 {
+  background: #d7e8f9;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+}
+
+.c4:first-child {
+  padding-left: 0;
+}
+
+.c5 {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <ul
+          class="c3"
+        >
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes"
+              title="Voir le theme Thèmes"
+            >
+              Thèmes
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes/theme-1"
+              title="Voir le theme theme 1"
+            >
+              theme 1
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes/theme-2"
+              title="Voir le theme theme 2"
+            >
+              theme 2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = `
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 1.25rem 0;
+}
+
+.c0 {
+  background: #d7e8f9;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+}
+
+.c4:first-child {
+  padding-left: 0;
+}
+
+.c5 {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <ul
+          class="c3"
+        >
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes"
+              title="Voir le theme Thèmes"
+            >
+              Thèmes
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes/theme-1"
+              title="Voir le theme theme 1"
+            >
+              theme 1
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes/theme-2"
+              title="Voir le theme theme 2"
+            >
+              theme 2
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <span
+              title="voir le contenu du thème title theme"
+            >
+              title theme
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`<ThemeBreadcrumbs /> should render nothing 1`] = `<div />`;

@@ -5,11 +5,11 @@ import { withRouter } from "next/router";
 import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
 import Link from "next/link";
 import Article from "../common/Article";
-import { Breadcrumbs } from "./Breadcrumbs";
 import Disclaimer from "../common/Disclaimer";
 import Html from "../common/Html";
 import Search from "../search/Search";
 import { Feedback } from "../common/Feedback";
+import { ThemeBreadcrumbs } from "../common/ThemeBreadcrumbs";
 
 const BigError = ({ children }) => (
   <StyledContainer>
@@ -28,13 +28,7 @@ const BackToResultsLink = ({ query }) => {
     </BacklinkContainer>
   );
 };
-function getBreadcrumbs(items = []) {
-  return items.map(({ slug, label }) => (
-    <Link key={slug} href="/themes[slug]" as={`/themes/${slug}`}>
-      <a title={`Voir le theme ${label}`}>{label}</a>
-    </Link>
-  ));
-}
+
 function Answer({
   router,
   title,
@@ -56,7 +50,7 @@ function Answer({
         <title>{title}</title>
       </Head>
       <Search />
-      <Breadcrumbs items={getBreadcrumbs(breadcrumbs)} />
+      <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
       {(html || children) && (

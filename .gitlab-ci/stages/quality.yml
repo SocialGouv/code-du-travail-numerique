@@ -84,3 +84,4 @@ Test @cdtn/data:
   script:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
+    - yarn workspace @cdt/data...datafiller test

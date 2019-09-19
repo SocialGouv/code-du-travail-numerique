@@ -1243,28 +1243,6 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-left: -10px;
 }
 
-.c13 {
-  background: #d7e8f9;
-}
-
-.c16 {
-  display: inline-block;
-  padding: 0.625rem 1.25rem;
-}
-
-.c16:first-child {
-  padding-left: 0;
-}
-
-.c17 {
-  display: inline-block;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .c36 {
   position: fixed;
   bottom: 0;
@@ -1567,6 +1545,28 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-left: 1rem;
 }
 
+.c13 {
+  background: #d7e8f9;
+}
+
+.c16 {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+}
+
+.c16:first-child {
+  padding-left: 0;
+}
+
+.c17 {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .c27 {
   margin: 1rem auto;
 }
@@ -1784,6 +1784,22 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         <ul
           class="c15"
         >
+          <li
+            class="c16"
+          >
+            <a
+              href="/themes"
+              title="Voir le theme Thèmes"
+            >
+              Thèmes
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c17"
+          >
+             » 
+          </li>
           <li
             class="c16"
           >

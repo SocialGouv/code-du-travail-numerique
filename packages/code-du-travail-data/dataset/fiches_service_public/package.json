@@ -7,6 +7,7 @@
     "url": "https://github.com/SocialGouv/code-du-travail-numerique/issues"
   },
   "dependencies": {
+    "@socialgouv/legi-data": "^1.1.0",
     "adm-zip": "0.4.13",
     "axios": "^0.19.0",
     "lodash.uniqby": "^4.7.0",
@@ -16,13 +17,12 @@
     "xml-js": "^1.6.11"
   },
   "scripts": {
-    "backup": "cp fiches-sp-travail.json fiches-sp-travail.old.json ",
+    "backup": "cp fiches-sp.json fiches-sp.old.json ",
     "diff": "node diff.js",
-    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-sp-travail.json ",
+    "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-sp.json  && yarn report",
     "fetchData": "node fetchData.js",
-    "start": "yarn backup && node index.js > fiches-sp-travail.json",
+    "start": "yarn backup && node index.js > fiches-sp.json",
     "report": "node diff.js && node missingTheme.js",
-    "poststart": "yarn updateTheme && yarn report",
     "test": "jest"
   }
 }
