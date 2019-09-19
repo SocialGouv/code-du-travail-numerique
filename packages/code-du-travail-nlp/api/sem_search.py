@@ -3,7 +3,7 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 import tf_sentencepiece
-import unidecode
+import unicodedata
 
 from typing import List
 
@@ -16,7 +16,7 @@ stringvec = List[str]
 
 
 def add_slash(c):
-    c["slug"] = "/{}".format(c["slug"])
+    c["slug"] = f"/{c['slug']}"
     return c
 
 
@@ -26,14 +26,15 @@ class SemSearch():
         print("loading data...")
         with open(content_path, "r") as f:
             content = list(filter(
-                lambda row: "text" in row and not "code_du_travail" in row.get('slug'), json.load(f)))
+                lambda row: "text" in row and "code_du_travail" not in row.get('slug'), json.load(f)))
         content = list(map(add_slash, content))
 
         with open(stops_path, "r") as f:
             stops = f.read().splitlines()
 
         # make a hashtable for performance
-        self.stops = {self.strip_accents(k): "" for k in stops}
+        strp = self.strip_accents
+        self.stops = dict.fromkeys(map(strp, stops), "")
 
         self.titles = [c["title"] for c in content]
         self.context = [c["text"] for c in content]
@@ -130,7 +131,7 @@ class SemSearch():
         }
 
     def strip_accents(self, s: str):
-        return unidecode.unidecode(s)
+        return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
 
     def remove_stops(self, string: str):
         tokens = string.split()
