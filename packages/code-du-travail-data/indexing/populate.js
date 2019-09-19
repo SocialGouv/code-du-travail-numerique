@@ -1,20 +1,11 @@
 import striptags from "striptags";
 import crypto from "crypto";
-import { logger } from "./logger";
-import slugify from "../slugify";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
+import { SOURCES } from "@cdt/sources";
 
-const SOURCES = {
-  CCN: "conventions_collectives",
-  CDT: "code_du_travail",
-  SHEET_SP: "fiches_service_public",
-  SHEET_MT: "fiches_ministere_travail",
-  THEMES: "themes",
-  TOOLS: "outils",
-  LETTERS: "modeles_de_courriers",
-  FAQ: "faq"
-};
+import { logger } from "./logger";
+import slugify from "../slugify";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -96,12 +87,13 @@ function* cdtnDocumentsGen() {
   }));
 
   logger.info("=== Fiches SP ===");
-  yield require("../dataset/fiches_service_public/fiches-sp-travail.json").map(
+  yield require("../dataset/fiches_service_public/fiches-sp.json").map(
     ({
       id,
       title,
       description,
-      themeCdtn,
+      breadcrumbs,
+      theme,
       text,
       raw,
       date,
@@ -112,9 +104,9 @@ function* cdtnDocumentsGen() {
       source: SOURCES.SHEET_SP,
       title,
       slug: slugify(title),
-      description: description,
-      breadcrumbs: themeCdtn,
-      theme: themeCdtn && themeCdtn[themeCdtn.length - 1].slug,
+      description,
+      breadcrumbs,
+      theme,
       text,
       raw,
       date,
@@ -124,7 +116,7 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Fiches MT ===");
-  yield require("../dataset/fiches_ministere_travail/fiches-min-travail.json").map(
+  yield require("../dataset/fiches_ministere_travail/fiches-mt.json").map(
     ({
       title,
       slug,
@@ -133,7 +125,8 @@ function* cdtnDocumentsGen() {
       anchor,
       intro,
       html,
-      themeCdtn,
+      breadcrumbs,
+      theme,
       date,
       url
     }) => ({
@@ -144,8 +137,8 @@ function* cdtnDocumentsGen() {
       description,
       text,
       html,
-      breadcrumbs: themeCdtn,
-      theme: themeCdtn && themeCdtn[themeCdtn.length - 1].slug,
+      breadcrumbs,
+      theme,
       date,
       url,
       anchor
@@ -153,11 +146,13 @@ function* cdtnDocumentsGen() {
   );
 
   logger.info("=== Themes ===");
-  yield require("../dataset/themes/themes.json").map(({ slug, label }) => ({
-    source: SOURCES.THEMES,
-    title: label,
-    slug
-  }));
+  yield require("../dataset/datafiller/themes.data.json").map(
+    ({ slug, title }) => ({
+      source: SOURCES.THEMES,
+      title: title,
+      slug
+    })
+  );
 
   logger.info("=== Courriers ===");
   yield require("../dataset/export-courriers.json").map(
@@ -187,10 +182,11 @@ function* cdtnDocumentsGen() {
   );
   logger.info("=== Outils ===");
   yield require("../dataset/outils.json").map(
-    ({ titre, code, questions, themes, date, branche }) => ({
+    ({ branche, code, date, description, questions, themes, titre }) => ({
       source: SOURCES.TOOLS,
       title: titre,
       slug: slugify(code),
+      description,
       text: questions.join("\n"),
       themes: themes,
       date,

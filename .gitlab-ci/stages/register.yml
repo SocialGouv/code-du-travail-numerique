@@ -44,5 +44,8 @@ Register nlp image:
   <<: *build_and_push_stage
   variables:
     CONTEXT: packages/code-du-travail-nlp
-    DOCKER_BUILD_ARGS: ""
+    DOCKER_BUILD_ARGS: >-
+      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
+      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
+      --build-arg SUGGEST_DATA_URL=$SUGGEST_DATA_URL
     IMAGE_NAME: $CI_REGISTRY_IMAGE/nlp

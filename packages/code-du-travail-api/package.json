@@ -10,8 +10,8 @@
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
-    "pretest": "node tests/create_indexes.js",
-    "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test ELASTICSEARCH_CONVENTION_INDEX=convention_test jest",
+    "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
+    "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test ELASTICSEARCH_THEME_INDEX=cdtn_theme_test jest",
     "elastic": "node scripts/elastic.js"
   },
   "repository": {
@@ -37,7 +37,8 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "node-fetch": "^2.6.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "abort-controller": "3.0.0"
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.10.0",

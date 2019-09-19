@@ -15,10 +15,10 @@ import ConventionModal from "../conventions/Search/Modal";
 const outils = [
   {
     icon: "/static/assets/icons/point-of-service_web.svg",
-    title: "Calculateur d'indemnités de licenciements",
+    title: "Simulateur d'indemnités de licenciements",
     hrefTitle: "Démarrer une simulation ",
     text:
-      "Calculez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
+      "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
     href: "/outils/[slug]",
     slug: "/outils/indemnite-licenciement"
   },

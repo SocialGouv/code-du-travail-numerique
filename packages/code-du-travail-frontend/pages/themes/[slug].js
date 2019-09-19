@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 import getConfig from "next/config";
 import styled from "styled-components";
 import { Alert, Container, Section, theme } from "@cdt/ui-old";
@@ -8,74 +7,40 @@ import fetch from "isomorphic-unfetch";
 
 import Search from "../../src/search/Search";
 import { SearchResults } from "../../src/search/SearchResults";
-import { fetchSearchResults } from "../../src/search/search.service";
 
 import Themes from "../../src/home/Themes";
 import { PageLayout } from "../../src/layout/PageLayout";
-import { Breadcrumbs } from "../../src/common/Breadcrumbs";
 import Metas from "../../src/common/Metas";
+import { ThemeBreadcrumbs } from "../../src/common/ThemeBreadcrumbs";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
 
-// return breadcrumbs components
-const getBreadcrumbs = (items = []) => {
-  if (items.length === 0) {
-    return [];
-  }
-  const root = [
-    <Link key="root" href="/themes">
-      <a title="Tous les thèmes">Thèmes</a>
-    </Link>
-  ];
-
-  const leaf = items.map((item, index) => {
-    if (index === items.length - 1) {
-      return (
-        <span title={`voir le contenu du thème ${item.label}`}>
-          {item.label}
-        </span>
-      );
-    }
-    return (
-      <Link key={item.slug} href="/themes/[theme]" as={`/themes/${item.slug}`}>
-        <a title={item.label}>{item.label}</a>
-      </Link>
-    );
-  });
-  return [root].concat(leaf);
-};
-
 // Theme page
 class Theme extends React.Component {
   static async getInitialProps({ query: { slug: query } }) {
-    const [searchThemeResponse, searchResults] = await Promise.all([
-      fetch(`${API_URL}/themes${query ? `/${query}` : ""}`),
-      fetchSearchResults(query, "themes")
-    ]);
+    const searchThemeResponse = await fetch(
+      `${API_URL}/themes${query ? `/${query}` : ""}`
+    );
+
     if (!searchThemeResponse.ok) {
       return { statusCode: searchThemeResponse.status };
     }
+
     const theme = await searchThemeResponse.json();
 
     return {
       theme,
-      searchResults,
       query
     };
   }
 
   render() {
-    const {
-      theme = { children: [] },
-      searchResults,
-      query,
-      pageUrl,
-      ogImage
-    } = this.props;
-    const breadcrumbs = getBreadcrumbs(theme.breadcrumbs);
+    const { theme = { children: [] }, pageUrl, ogImage } = this.props;
+
     const isRootTheme = theme && !theme.slug;
+
     if (!theme) {
       return <NotFound />;
     }
@@ -84,16 +49,17 @@ class Theme extends React.Component {
       <PageLayout>
         <Metas
           url={pageUrl}
-          title={`${theme.label} - Code du travail numérique`}
-          description={`Explorez les contenus autour du thème ${theme.label}`}
+          title={`${theme.title || "Thèmes"} - Code du travail numérique`}
+          description={`Explorez les contenus autour du thème ${theme.title}`}
           image={ogImage}
         />
         <Search />
-        <Breadcrumbs items={breadcrumbs} />
-        {theme.children.length > 0 && (
+        <ThemeBreadcrumbs theme={theme} />
+        {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes
-              title={isRootTheme ? undefined : null}
+              isRoot={isRootTheme}
+              title={theme.title}
               themes={theme.children}
             />
           </Section>
@@ -101,7 +67,7 @@ class Theme extends React.Component {
         {!isRootTheme && (
           <Section>
             <Container narrow>
-              <SearchResults query={query} items={searchResults} />
+              <SearchResults items={theme.refs} />
             </Container>
           </Section>
         )}

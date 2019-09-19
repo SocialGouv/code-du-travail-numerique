@@ -47,10 +47,6 @@ jobs:
         - yarn lint --stream
         - travis_fold end "yarn.lint"
         #
-        - travis_fold start "node.create_indexes"
-        - node packages/code-du-travail-api/tests/create_indexes.js
-        - travis_fold end "node.create_indexes"
-        #
         - travis_fold start "yarn.test"
         - yarn run -- test --stream -- --coverage
         - travis_fold end "yarn.test"

@@ -32,8 +32,8 @@ describe("<Answer />", () => {
         sourceType="social groove"
         icon={icons.Question}
         breadcrumbs={[
-          { label: "tag1", slug: "tag-1" },
-          { label: "tag2", slug: "tag-2" }
+          { title: "tag1", slug: "tag-1" },
+          { title: "tag2", slug: "tag-2" }
         ]}
       >
         <div>Contenu supplémentaire</div>

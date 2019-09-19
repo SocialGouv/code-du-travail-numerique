@@ -5,13 +5,13 @@
   "private": true,
   "main": "indexing/index.js",
   "scripts": {
-    "build": "ncc build ./indexing/index.js -o dist",
+    "build": "ncc build ./indexing/index.js -o dist && yarn -s dump > ./dist/dump.data.json",
     "lint": "eslint ./indexing/*",
     "prepush": "yarn lint",
     "populate-dev": "node -r esm indexing/index.js",
     "populate": "node ./dist/index.js",
     "check-slugs": "node -r esm indexing/slug_checker",
-    "dump": "node -r esm dump",
+    "dump": "node -r esm dump.js",
     "test": "jest"
   },
   "repository": {

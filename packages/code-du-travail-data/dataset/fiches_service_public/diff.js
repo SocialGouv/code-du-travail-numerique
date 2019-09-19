@@ -1,5 +1,5 @@
-const prevFiches = require("./fiches-sp-travail.old.json");
-const nextFiches = require("./fiches-sp-travail.json");
+const prevFiches = require("./fiches-sp.old.json");
+const nextFiches = require("./fiches-sp.json");
 
 // Toutes les fiches précédentes qui ne sont plus dans les fiches suivantes
 const suppressedFiches = prevFiches.filter(

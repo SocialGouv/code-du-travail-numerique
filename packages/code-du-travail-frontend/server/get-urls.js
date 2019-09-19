@@ -1,4 +1,4 @@
-const themes = require("@cdt/data...themes/themes.json");
+const themes = require("@cdt/data...datafiller/themes.data.json");
 
 async function getUrls() {
   return Promise.resolve(

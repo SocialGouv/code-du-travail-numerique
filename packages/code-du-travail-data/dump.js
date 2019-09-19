@@ -1,7 +1,6 @@
 import { cdtnDocumentsGen } from "./indexing/populate";
 import { logger } from "./indexing/logger";
 
-//
 logger.silent = true;
 
 let slugs = [];
@@ -15,5 +14,8 @@ for (const documents of cdtnDocumentsGen()) {
     }))
   );
 }
+
+const json = JSON.stringify(slugs, 0, 2);
+
 //eslint-disable-next-line no-console
-console.log(JSON.stringify(slugs, 0, 2));
+console.log(json);

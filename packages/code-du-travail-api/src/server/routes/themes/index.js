@@ -1,15 +1,10 @@
 const Router = require("koa-router");
 const API_BASE_URL = require("../v1.prefix");
-const {
-  getTheme,
-  getBreadcrumbs,
-  getChildren
-} = require("@cdt/data...themes/query");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
-const getSearchByThemeBody = require("../search/searchByTheme.elastic");
+const { getRootThemesQuery, getThemeQuery } = require("./search.elastic.js");
+const getEsReferences = require("../search/getEsReferences");
 
-const index =
-  process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
+const index = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
 
 const router = new Router({ prefix: API_BASE_URL });
 
@@ -21,12 +16,17 @@ const router = new Router({ prefix: API_BASE_URL });
  *
  * @returns {Object} An object containing the matching theme .
  */
-router.get("/themes", ctx => {
+router.get("/themes", async ctx => {
+  const body = getRootThemesQuery({});
+  const response = await elasticsearchClient.search({
+    index,
+    body
+  });
   ctx.body = {
-    label: "Thèmes",
-    children: getChildren(null)
+    children: response.body.hits.hits.map(t => t._source)
   };
 });
+
 /**
  * Return the theme that match a given slug
  *
@@ -36,48 +36,23 @@ router.get("/themes", ctx => {
  * @returns {Object} An object containing the matching theme .
  */
 
-router.get("/themes/:slug", ctx => {
+router.get("/themes/:slug", async ctx => {
   const { slug } = ctx.params;
-  const theme = getTheme(slug);
-  if (!theme) {
+  const body = getThemeQuery({ slug });
+  const response = await elasticsearchClient.search({
+    index,
+    body
+  });
+  if (response.body.hits.hits.length === 0) {
     ctx.throw(404, `there is no theme that match ${slug}`);
   }
 
+  const theme = response.body.hits.hits[0];
+  const refs = await getEsReferences(theme._source.refs);
+
   ctx.body = {
-    ...theme,
-    children: getChildren(slug),
-    breadcrumbs: getBreadcrumbs(slug)
-  };
-});
-
-/**
- * Return the items that match a given slug
- *
- * @example
- * http://localhost:1337/api/v1/themes/:slug/items
- *
- * @returns {Object} An object containing the matching theme and its related documents.
- */
-
-router.get("/themes/:slug/items", async ctx => {
-  const { slug } = ctx.params;
-  const theme = getTheme(slug);
-  if (!theme) {
-    ctx.throw(404, `there is no theme that match ${slug}`);
-  }
-  const body = getSearchByThemeBody({ slug });
-  const {
-    body: { hits }
-  } = await elasticsearchClient.search({ index, body });
-
-  if (hits.total.value === 0) {
-    ctx.throw(204, `there is no documents associated to the theme ${slug}`);
-  }
-  ctx.body = {
-    ...theme,
-    children: getChildren(slug),
-    breadcrumbs: getBreadcrumbs(slug),
-    documents: hits.hits
+    ...theme._source,
+    refs
   };
 });
 
