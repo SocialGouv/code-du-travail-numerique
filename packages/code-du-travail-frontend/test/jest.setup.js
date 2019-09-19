@@ -1,6 +1,6 @@
 import "jest-styled-components";
 
-jest.mock("next-server/config", () => () => ({
+jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
     API_ADDRESS: "addresse-api.data",
     API_SIRET2IDCC_URL: "siret2idcc.url",
