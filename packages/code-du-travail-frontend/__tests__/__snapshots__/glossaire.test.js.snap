@@ -971,16 +971,16 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/activite-principale-exercee-ape"
+                href="/glossaire/activite-principale-exercee"
               >
-                Activité principale exercée (APE)
+                Activité principale exercée
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/activites-sociales-et-culturelles-asc"
+                href="/glossaire/activites-sociales-et-culturelles"
               >
-                Activités sociales et culturelles (ASC)
+                Activités sociales et culturelles 
               </a>
             </li>
             <li>
@@ -992,9 +992,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/affection-de-longue-duree-ald"
+                href="/glossaire/affection-de-longue-duree"
               >
-                Affection de longue durée (ALD)
+                Affection de longue durée 
               </a>
             </li>
             <li>
@@ -1006,16 +1006,16 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/aide-au-retour-a-lemploi-are"
+                href="/glossaire/aide-au-retour-a-lemploi"
               >
-                Aide au retour à l’emploi (ARE)
+                Aide au retour à l’emploi 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/aide-juridictionnelle-aj"
+                href="/glossaire/aide-juridictionnelle"
               >
-                Aide juridictionnelle (AJ)
+                Aide juridictionnelle 
               </a>
             </li>
             <li>
@@ -1051,6 +1051,13 @@ exports[`<Glossaire /> should render 1`] = `
                 href="/glossaire/arret"
               >
                 Arrêt
+              </a>
+            </li>
+            <li>
+              <a
+                href="/glossaire/arret-de-travail"
+              >
+                arrêt de travail
               </a>
             </li>
             <li>
@@ -1141,9 +1148,9 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/base-de-donnees-economiques-et-sociales-bdes"
+                href="/glossaire/base-de-donnees-economiques-et-sociales"
               >
-                Base de données économiques et sociales (BDES)
+                Base de données économiques et sociales 
               </a>
             </li>
             <li>
@@ -1255,9 +1262,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/comite-social-et-economique-cse"
+                href="/glossaire/comite-social-et-economique"
               >
-                Comité social et économique (CSE)
+                Comité social et économique 
               </a>
             </li>
             <li>
@@ -1269,16 +1276,16 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/commission-nationale-de-linformatique-et-des-libertes-cnil"
+                href="/glossaire/commission-nationale-de-linformatique-et-des-libertes"
               >
-                Commission nationale de l’informatique et des libertés (CNIL)
+                Commission nationale de l’informatique et des libertés 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/commission-sante-securite-et-conditions-de-travail-cssct"
+                href="/glossaire/commission-sante-securite-et-conditions-de-travail"
               >
-                Commission santé, sécurité et conditions de travail (CSSCT)
+                Commission santé, sécurité et conditions de travail
               </a>
             </li>
             <li>
@@ -1311,9 +1318,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/conseil-de-prudhommes-cph"
+                href="/glossaire/conseil-de-prudhommes"
               >
-                Conseil de prud’hommes (CPH)
+                Conseil de prud’hommes 
               </a>
             </li>
             <li>
@@ -1388,16 +1395,16 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/cour-de-justice-de-lunion-europeenne-cjue"
+                href="/glossaire/cour-de-justice-de-lunion-europeenne"
               >
-                Cour de justice de l’Union Européenne (CJUE)
+                Cour de justice de l’Union Européenne 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/cour-europeenne-des-droits-de-lhomme-cedh"
+                href="/glossaire/cour-europeenne-des-droits-de-lhomme"
               >
-                Cour européenne des droits de l’homme (CEDH)
+                Cour européenne des droits de l’homme 
               </a>
             </li>
             <li>
@@ -1630,9 +1637,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/entreprise-de-taille-intermediaire-eti"
+                href="/glossaire/entreprise-de-taille-intermediaire"
               >
-                Entreprise de taille intermédiaire (ETI)
+                Entreprise de taille intermédiaire 
               </a>
             </li>
             <li>
@@ -1848,9 +1855,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/institutions-representatives-du-personnel-irp"
+                href="/glossaire/institutions-representatives-du-personnel"
               >
-                Institutions représentatives du personnel (IRP)
+                Institutions représentatives du personnel 
               </a>
             </li>
             <li>
@@ -2078,9 +2085,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/minimum-garanti-mg"
+                href="/glossaire/minimum-garanti"
               >
-                Minimum garanti (MG)
+                Minimum garanti 
               </a>
             </li>
             <li>
@@ -2173,9 +2180,9 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/operateurs-de-competences-opco"
+                href="/glossaire/operateurs-de-competences"
               >
-                Opérateurs de compétences (OPCO)
+                Opérateurs de compétences 
               </a>
             </li>
             <li>
@@ -2252,9 +2259,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/penibilite-au-travail"
+                href="/glossaire/penibilite"
               >
-                Pénibilité au travail
+                Pénibilité 
               </a>
             </li>
             <li>
@@ -2480,9 +2487,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/risque-psychosociaux-rps"
+                href="/glossaire/risque-psychosociaux"
               >
-                Risque psychosociaux (RPS)
+                Risque psychosociaux
               </a>
             </li>
             <li>
@@ -2531,9 +2538,9 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/semaine-droit-du-travail"
+                href="/glossaire/semaine"
               >
-                Semaine (droit du travail)
+                Semaine 
               </a>
             </li>
             <li>
@@ -2594,16 +2601,16 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
-                href="/glossaire/systeme-didentification-du-repertoire-des-entreprises-siret"
+                href="/glossaire/systeme-didentification-du-repertoire-des-entreprises"
               >
-                Système d'identification du répertoire des entreprises (SIRET)
+                Système d'identification du répertoire des entreprises 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/systeme-informatique-du-repertoire-des-entreprises-siren"
+                href="/glossaire/systeme-informatique-du-repertoire-des-entreprises"
               >
-                Système informatique du répertoire des entreprises (SIREN)
+                Système informatique du répertoire des entreprises 
               </a>
             </li>
           </ul>
@@ -2696,16 +2703,16 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/union-europeenne-ue"
+                href="/glossaire/union-europeenne"
               >
-                Union Européenne (UE)
+                Union Européenne 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/unite-economique-et-sociale-ues"
+                href="/glossaire/unite-economique-et-sociale"
               >
-                Unité économique et sociale (UES)
+                Unité économique et sociale 
               </a>
             </li>
             <li>
@@ -2740,6 +2747,13 @@ exports[`<Glossaire /> should render 1`] = `
             </li>
             <li>
               <a
+                href="/glossaire/valeur-limite-dexposition"
+              >
+                valeur limite d'exposition
+              </a>
+            </li>
+            <li>
+              <a
                 href="/glossaire/vigueur"
               >
                 Vigueur
@@ -2763,30 +2777,30 @@ exports[`<Glossaire /> should render 1`] = `
           <ul>
             <li>
               <a
-                href="/glossaire/zone-de-revitalisation-rurale-zrr"
+                href="/glossaire/zone-de-revitalisation-rurale"
               >
-                Zone de revitalisation rurale (ZRR)
+                Zone de revitalisation rurale 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/zone-franche-urbaine-zfu"
+                href="/glossaire/zone-franche-urbaine"
               >
-                Zone franche urbaine (ZFU)
+                Zone franche urbaine 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/zone-touristique-internationale-zti"
+                href="/glossaire/zone-touristique-internationale"
               >
-                Zone touristique internationale (ZTI)
+                Zone touristique internationale 
               </a>
             </li>
             <li>
               <a
-                href="/glossaire/zone-urbaine-sensible-zus"
+                href="/glossaire/zone-urbaine-sensible"
               >
-                Zone urbaine sensible (ZUS)
+                Zone urbaine sensible 
               </a>
             </li>
           </ul>

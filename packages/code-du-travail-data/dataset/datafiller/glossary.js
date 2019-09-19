@@ -12,7 +12,8 @@ async function getGlossaire() {
   const response = await fetch(RECORDS_URL);
   const items = await response.json();
   return items.data
-    .map(({ title, abbrs, variants, definition, refs }) => ({
+    .filter(({ title, definition }) => title !== "" && definition !== "")
+    .map(({ title, abbrs = "", variants = "", definition, refs = [] }) => ({
       title,
       slug: slugify(title),
       abbrs: [...new Set(abbrs.split("\n").filter(Boolean))],

@@ -2901,7 +2901,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                 </span>
                 . match aussi les abbréviation comme 
                 <span
-                  data-tooltip-slug="activite-principale-exercee-ape"
+                  data-tooltip-slug="activite-principale-exercee"
                   data-tooltip-term="APE"
                 >
                   <span
@@ -2914,7 +2914,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                 </span>
                  mais pas ape ou ses variantes comme 
                 <span
-                  data-tooltip-slug="activite-principale-exercee-ape"
+                  data-tooltip-slug="activite-principale-exercee"
                   data-tooltip-term="code ape"
                 >
                   <span
