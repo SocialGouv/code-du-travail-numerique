@@ -35,7 +35,7 @@ function Term({ pageUrl, ogImage }) {
               </tr>
               {term.refs.length > 0 ? (
                 <tr>
-                  <th>Références</th>
+                  <th>Sources</th>
                   <td>
                     <ul>
                       {term.refs.map(({ url }) => (
