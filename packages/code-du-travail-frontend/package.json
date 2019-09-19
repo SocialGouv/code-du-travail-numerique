@@ -52,12 +52,7 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@socialgouv/eslint-config-react": "^0.10.0",
-<<<<<<< HEAD
     "@testing-library/react": "^9.1.4",
-||||||| merged common ancestors
-=======
-    "@testing-library/react": "^9.1.3",
->>>>>>> master
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-styled-components": "^1.10.6",
