@@ -5,3 +5,4 @@ dist
 docker-compose.override.yml
 __pycache__
 packages/code-du-travail-data/dump.json
+package-lock.json
