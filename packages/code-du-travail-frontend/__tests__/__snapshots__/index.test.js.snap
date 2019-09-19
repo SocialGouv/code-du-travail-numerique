@@ -710,12 +710,12 @@ exports[`<Home /> should render 1`] = `
                 <h3
                   class="c24"
                 >
-                  Calculateur d'indemnités de licenciements
+                  Simulateur d'indemnités de licenciements
                 </h3>
                 <p
                   class="c25"
                 >
-                  Calculez simplement le montant d'une indemnité de licenciement en fonction de votre situation
+                  Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation
                 </p>
               </div>
             </a>
