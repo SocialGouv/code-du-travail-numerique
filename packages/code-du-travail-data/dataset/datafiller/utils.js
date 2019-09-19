@@ -51,7 +51,7 @@ const sourcesPriority = [
 
 const getSource = url => {
   const source = url.match(/^\/([^/]+)\//);
-  return (source && getSourceByRoute(source[1])) || "external";
+  return (source && getSourceByRoute(source[1])) || SOURCES.EXTERNAL;
 };
 
 // sort datafiller references by key and source

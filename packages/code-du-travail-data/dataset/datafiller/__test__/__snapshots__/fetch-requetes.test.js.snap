@@ -6,6 +6,11 @@ Array [
     "refs": Array [
       Object {
         "relevance": 5,
+        "title": "Fiche 2",
+        "url": "/fiche-service-public/fiche-2",
+      },
+      Object {
+        "relevance": 5,
         "title": "HTML page title",
         "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       },
@@ -13,11 +18,6 @@ Array [
         "relevance": 5,
         "title": "/some-unknown-source/test",
         "url": "/some-unknown-source/test",
-      },
-      Object {
-        "relevance": 5,
-        "title": "Fiche 2",
-        "url": "/fiche-service-public/fiche-2",
       },
       Object {
         "relevance": 5,
@@ -76,6 +76,11 @@ exports[`refs should be sorted by relevance and source type 1`] = `
 Array [
   Object {
     "relevance": 5,
+    "title": "Fiche 2",
+    "url": "/fiche-service-public/fiche-2",
+  },
+  Object {
+    "relevance": 5,
     "title": "HTML page title",
     "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
   },
@@ -83,11 +88,6 @@ Array [
     "relevance": 5,
     "title": "/some-unknown-source/test",
     "url": "/some-unknown-source/test",
-  },
-  Object {
-    "relevance": 5,
-    "title": "Fiche 2",
-    "url": "/fiche-service-public/fiche-2",
   },
   Object {
     "relevance": 5,

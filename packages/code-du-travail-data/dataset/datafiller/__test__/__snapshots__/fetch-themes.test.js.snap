@@ -28,16 +28,16 @@ Array [
       },
       Object {
         "position": 5,
+        "title": "Fiche 2",
+        "url": "/fiche-service-public/fiche-2",
+      },
+      Object {
+        "position": 5,
         "url": "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14",
       },
       Object {
         "position": 5,
         "url": "/some-unknown-source/test",
-      },
-      Object {
-        "position": 5,
-        "title": "Fiche 2",
-        "url": "/fiche-service-public/fiche-2",
       },
       Object {
         "position": 5,
