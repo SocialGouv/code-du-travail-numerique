@@ -68,11 +68,13 @@ function Answer({
       )
     ).reduce((state, node) => {
       glossary.forEach(item => {
-        const words = [...new Set([item.title, ...item.variants])];
-        words.forEach(word => {
-          const regexp = new RegExp(`\\b${word}\\b`, "gi");
+        const patterns = [...new Set([item.title, ...item.variants])]
+          .map(term => new RegExp(`\\b${term}\\b`, "gi"))
+          .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
+
+        patterns.forEach(pattern => {
           node.innerHTML = node.innerHTML.replace(
-            regexp,
+            pattern,
             `<span data-tooltip-slug="${item.slug}" data-tooltip-term="$&"></span>`
           );
         });

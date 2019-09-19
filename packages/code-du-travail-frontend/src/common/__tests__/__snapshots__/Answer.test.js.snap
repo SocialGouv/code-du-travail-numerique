@@ -2899,6 +2899,32 @@ exports[`<Answer /> should render tooltip 1`] = `
                     rescrit
                   </span>
                 </span>
+                . match aussi les abbréviation comme 
+                <span
+                  data-tooltip-slug="activite-principale-exercee-ape"
+                  data-tooltip-term="APE"
+                >
+                  <span
+                    aria-describedby="tooltip:2"
+                    class="c25"
+                    data-reach-tooltip-trigger=""
+                  >
+                    APE
+                  </span>
+                </span>
+                 mais pas ape ou ses variantes comme 
+                <span
+                  data-tooltip-slug="activite-principale-exercee-ape"
+                  data-tooltip-term="code ape"
+                >
+                  <span
+                    aria-describedby="tooltip:3"
+                    class="c25"
+                    data-reach-tooltip-trigger=""
+                  >
+                    code ape
+                  </span>
+                </span>
               </p>
             </div>
             <div>
