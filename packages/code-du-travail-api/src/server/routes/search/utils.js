@@ -30,9 +30,7 @@ const removeDuplicate = arr =>
 const mergePipe = (a, b, max_result) => {
   const ak = addKey(a);
   const bk = addKey(b);
-  console.log(ak);
   const res = merge(ak, bk, max_result);
-  console.log(res);
   return removeDuplicate(res);
 };
 

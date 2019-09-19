@@ -72,7 +72,12 @@ class SemSearch():
         self.response_results = self.session.run(self.response_embeddings, {self.r_placeholder: responses,
                                                                             self.c_placeholder: self.context})
 
-    def predict_slugs(self, query: str, exclude_sources: str = "", k: int = 10):
+    def predict_slugs(self, query: str, exclude_sources: str = "", k=10):
+        if k:
+            k = int(k)
+        else:
+            k = 10
+
         query = self.remove_stops(self.strip_accents(query))
         questions = [query]
 
@@ -138,4 +143,4 @@ class SemSearch():
 
 if __name__ == "__main__":
     ss = SemSearch(content_path, content_path)
-    print(ss.predict_slugs("congés sans solde"))
+    print(ss.predict_slugs("congés sans solde", k=24))
