@@ -44,7 +44,7 @@ const ListLink = ({
     >
       <LargeLink
         ref={ref}
-        variant={source === "outils" ? "rainbow" : "light"}
+        variant={source === SOURCES.TOOLS ? "highlight" : "light"}
         {...otherProps}
       />
     </Link>

@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-import { paleRainbow } from "../keyframes";
 import { box, breakpoints, colors, spacing } from "../theme";
 
 const LargeLink = React.forwardRef(
@@ -37,33 +36,20 @@ const StyledLink = styled.a`
   padding: ${spacing.medium};
   text-decoration: none;
   ${props => {
-    if (props.variant === "rainbow") {
+    if (props.variant === "highlight") {
       return css`
-        background: linear-gradient(
-          90deg,
-          #ffaebc,
-          #ffaebc,
-          #ffdaae,
-          #f6ffae,
-          #cfffae,
-          #aeffd8,
-          #aef4ff,
-          #aeccff,
-          #e5aeff,
-          #ffaebc
-        );
-        background-size: 2000% 2000%;
-        animation: ${paleRainbow} 5s linear infinite;
+        background-color: ${colors.white};
+        border: 1px solid ${colors.primaryBackground};
       `;
     } else {
       return css`
         background-color: ${props.variant === "light"
           ? colors.white
           : colors.elementBackground};
+        border: 1px ${colors.elementBorder} solid;
       `;
     }
   }};
-  border: 1px ${colors.elementBorder} solid;
   border-radius: ${box.borderRadius};
   margin-bottom: ${spacing.interComponent};
   transition: 200ms color, 200ms box-shadow;

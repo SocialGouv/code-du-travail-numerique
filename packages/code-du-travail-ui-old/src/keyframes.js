@@ -1,10 +1,5 @@
 import { keyframes } from "styled-components";
 
-export const paleRainbow = keyframes`
-  0%{background-position:0% 51%}
-  100%{background-position:100% 50%}
-`;
-
 export const fadeIn = keyframes`
   0% {opacity: 0;}
   100% {opacity: 1;}
