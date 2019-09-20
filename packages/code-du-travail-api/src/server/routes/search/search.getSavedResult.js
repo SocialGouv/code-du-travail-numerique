@@ -13,11 +13,7 @@ const getSavedResult = async query => {
     // get ES results for a known query
     logger.info(`getSavedResult: ${knownQuery.title}`);
     const refs = await getEsReferences(knownQuery.refs);
-    return {
-      hits: {
-        hits: refs
-      }
-    };
+    return refs;
   }
 };
 
