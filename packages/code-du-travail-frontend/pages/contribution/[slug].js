@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
+import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 
 import { icons } from "@cdt/ui-old";
+import slugify from "@cdt/data/slugify";
 
 import Answer from "../../src/common/Answer";
 import SearchConvention from "../../src/conventions/Search/Form";
@@ -33,7 +35,19 @@ const AnswersCC = ({ answers }) => {
         <div>
           <h3>Convention {convention.title}</h3>
           {(answer && (
-            <div dangerouslySetInnerHTML={{ __html: answer.html }}></div>
+            <div>
+              <div dangerouslySetInnerHTML={{ __html: answer.html }}></div>
+              <div>
+                <Link
+                  href="/convention-collective/[slug]"
+                  as={`/convention-collective/${slugify(
+                    `${convention.num} ${convention.title}`
+                  )}`}
+                >
+                  <a>Lien vers la convention collective complète</a>
+                </Link>
+              </div>
+            </div>
           )) || (
             <div>
               Désolé nous n&apos;avons pas de réponse pour cette convention
@@ -77,12 +91,12 @@ class Contribution extends React.Component {
           image={ogImage}
         />
         <Answer
-          title={title}
-          emptyMessage="Cette question n'a pas été trouvée"
-          html={answers.general.html}
-          sourceType="Réponse détaillée"
-          icon={icons.Question}
           intro={<h3>Que dit le code du travail ?</h3>}
+          title={title}
+          sourceType="Réponse détaillée"
+          html={answers.general.html}
+          emptyMessage="Cette question n'a pas été trouvée"
+          icon={icons.Question}
         >
           <AnswersCC answers={answers.conventions} />
         </Answer>
