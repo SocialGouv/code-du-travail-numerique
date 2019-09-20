@@ -85,7 +85,7 @@ exports[`<ConventionModal /> should render 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
-.c11:not(:focus):not(:active) {
+.c10:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -119,7 +119,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   overflow-y: auto;
 }
 
-.c10 {
+.c9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -170,10 +170,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   width: 2.5rem;
   display: inline-block;
   margin: 1rem;
-}
-
-.c9 {
-  margin-top: 1.25rem;
 }
 
 .c8 {
@@ -231,7 +227,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -313,18 +309,14 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 type="text"
                 value=""
               />
-              <div
-                class="c9"
-              >
-                
-              </div>
+              
             </div>
             <button
-              class="c10"
+              class="c9"
               title="fermer la modale"
             >
               <div
-                class="c11"
+                class="c10"
               >
                 fermer la modale
               </div>
