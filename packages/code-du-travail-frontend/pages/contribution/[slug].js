@@ -23,6 +23,10 @@ const fetchQuestion = ({ slug }) =>
 const AnswersCC = ({ answers }) => {
   const [convention, setConvention] = useState();
   const answer = convention && answers.find(a => a.idcc === convention.num);
+  // following data/populate.js slug rule
+  const slugConvention =
+    convention &&
+    slugify(`${convention.num}-${convention.title}`.substring(0, 80));
   return (
     <div>
       <div style={{ background: "#efefef", padding: 10, margin: "20px 0" }}>
@@ -40,9 +44,7 @@ const AnswersCC = ({ answers }) => {
               <div>
                 <Link
                   href="/convention-collective/[slug]"
-                  as={`/convention-collective/${slugify(
-                    `${convention.num} ${convention.title}`
-                  )}`}
+                  as={`/convention-collective/${slugConvention}`}
                 >
                   <a>Lien vers la convention collective complète</a>
                 </Link>
