@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "@cdt/ui-old";
-import { getLabelBySource } from "@cdt/sources";
+import { SOURCES, getLabelBySource } from "@cdt/sources";
 
 export const LinkContent = ({ author, description = "", source, title }) => {
   const summary =
@@ -10,11 +10,13 @@ export const LinkContent = ({ author, description = "", source, title }) => {
       : description;
   return (
     <>
-      <Source>
-        <span>{`${getLabelBySource(source)}${
-          author ? ` - ${author}` : ""
-        }`}</span>
-      </Source>
+      {source !== SOURCES.THEMES && (
+        <Source>
+          <span>{`${getLabelBySource(source)}${
+            author ? ` - ${author}` : ""
+          }`}</span>
+        </Source>
+      )}
       <H3>{title}</H3>
       {summary && <Summary>{summary}</Summary>}
     </>

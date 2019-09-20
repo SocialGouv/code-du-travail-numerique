@@ -8,23 +8,13 @@ import { Themes } from "./Themes";
 
 const SearchResults = ({ items = [], isSearch, query }) => {
   const { matches, law, themes } = groupByDisplayCategory(items);
-  const matchesId = "search-matches";
-  const lawId = "law-matches";
-  const themesId = "themes-matches";
   return (
     <>
       {matches.length > 0 && (
-        <Matches
-          isSearch={isSearch}
-          id={matchesId}
-          items={matches}
-          query={query}
-        />
+        <Matches isSearch={isSearch} items={matches} query={query} />
       )}
-      {law.length > 0 && <Law id={lawId} items={law} query={query} />}
-      {themes.length > 0 && (
-        <Themes id={themesId} items={themes} query={query} />
-      )}
+      {law.length > 0 && <Law items={law} query={query} />}
+      {themes.length > 0 && <Themes items={themes} query={query} />}
     </>
   );
 };

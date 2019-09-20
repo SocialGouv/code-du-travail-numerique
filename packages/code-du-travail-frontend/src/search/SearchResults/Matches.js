@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { getRouteBySource } from "@cdt/sources";
+import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { Container, LargeLink, List, ListItem, theme } from "@cdt/ui-old";
 
 import { getSourceIcon } from "../utils";
@@ -20,7 +20,7 @@ const ListLink = ({
       ref.current.focus();
     }
   }, [focused]);
-  if (source === "external") {
+  if (source === SOURCES.EXTERNALS) {
     return (
       <LargeLink
         ref={ref}

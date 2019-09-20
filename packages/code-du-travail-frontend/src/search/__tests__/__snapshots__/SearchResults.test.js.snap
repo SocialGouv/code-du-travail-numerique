@@ -92,9 +92,7 @@ exports[`<SearchResults/> should render results 1`] = `
   <div
     class="c0"
   >
-    <h2
-      id="search-matches"
-    >
+    <h2>
       Contenu correspondant
     </h2>
     <ul
