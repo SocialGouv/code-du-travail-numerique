@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { box, breakpoints, colors, spacing } from "../theme";
 
 const LargeLink = React.forwardRef(
-  ({ icon: Icon, children, ...props }, ref) => (
-    <StyledLink {...props} ref={ref}>
+  ({ icon: Icon, children, variant, ...props }, ref) => (
+    <StyledLink {...props} variant={variant} ref={ref}>
       {Icon && (
         <IconWrapper>
           <Icon />
@@ -19,11 +19,13 @@ const LargeLink = React.forwardRef(
 LargeLink.displayName = "LargeLink";
 LargeLink.propTypes = {
   children: PropTypes.node.isRequired,
-  icon: PropTypes.oneOfType([PropTypes.func, PropTypes.bool])
+  icon: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
+  variant: PropTypes.string.isRequired
 };
 
 LargeLink.defaultProps = {
-  icon: false
+  icon: false,
+  variant: "dark"
 };
 
 export default LargeLink;
@@ -33,8 +35,21 @@ const StyledLink = styled.a`
   align-items: center;
   padding: ${spacing.medium};
   text-decoration: none;
-  background-color: ${colors.elementBackground};
-  border: 1px ${colors.elementBorder} solid;
+  ${props => {
+    if (props.variant === "highlight") {
+      return css`
+        background-color: ${colors.white};
+        border: 1px solid ${colors.primaryBackground};
+      `;
+    } else {
+      return css`
+        background-color: ${props.variant === "light"
+          ? colors.white
+          : colors.elementBackground};
+        border: 1px ${colors.elementBorder} solid;
+      `;
+    }
+  }};
   border-radius: ${box.borderRadius};
   margin-bottom: ${spacing.interComponent};
   transition: 200ms color, 200ms box-shadow;
@@ -53,7 +68,7 @@ const IconWrapper = styled.span`
   flex: 0 0 3rem;
   margin-right: 1rem;
   @media (max-width: ${breakpoints.mobile}) {
-    flex: 0 0 2rem;
+    display: none;
   }
   color: ${colors.lightText};
 `;

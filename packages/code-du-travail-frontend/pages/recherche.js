@@ -32,18 +32,15 @@ class SearchPage extends React.Component {
         />
         <Search />
         <Section>
-          <Container narrow>
-            {items.length === 0 ? (
+          {items.length === 0 ? (
+            <Container narrow>
               <Alert>
                 Nous n’avons pas trouvé de résultat pour votre recherche.
               </Alert>
-            ) : (
-              <>
-                <h1>{`Résultats pour "${query}"`}</h1>
-                <SearchResults items={items} query={query} />
-              </>
-            )}
-          </Container>
+            </Container>
+          ) : (
+            <SearchResults items={items} isSearch query={query} />
+          )}
         </Section>
       </PageLayout>
     );

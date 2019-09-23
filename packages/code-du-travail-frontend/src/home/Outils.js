@@ -12,7 +12,7 @@ import {
 } from "@cdt/ui-old";
 import ConventionModal from "../conventions/Search/Modal";
 
-const outils = [
+export const outils = [
   {
     icon: "/static/assets/icons/point-of-service_web.svg",
     title: "Simulateur d'indemnités de licenciements",
@@ -48,47 +48,42 @@ const outils = [
   }
 ];
 
-export default class Outils extends React.PureComponent {
-  static propTypes = {};
-
-  static defaultProps = {
-    title: "Découvrez nos outils"
-  };
-
-  render() {
-    const { title } = this.props;
-    return (
-      <Section variant="white">
-        <Container>
-          <Title>{title}</Title>
-          <Grid>
-            {outils.map(({ title, text, icon, href, slug, hrefTitle }) => (
-              <GridCell key={slug || href}>
-                <Link href={href} as={slug} passHref>
-                  <Tile title={hrefTitle}>
-                    <Category title={title} text={text} icon={icon} />
-                  </Tile>
-                </Link>
-              </GridCell>
-            ))}
-            <GridCell>
-              <ConventionModal />
-            </GridCell>
-            <GridCell>
-              <Tile>
-                <Category
-                  title="Prochainement"
-                  text="Bientôt d'autres outils disponibles..."
-                  icon="/static/assets/icons/time.svg"
-                />
+const Outils = ({ title }) => (
+  <Section variant="white">
+    <Container>
+      <Title>{title}</Title>
+      <Grid>
+        {outils.map(({ title, text, icon, href, slug, hrefTitle }) => (
+          <GridCell key={slug || href}>
+            <Link href={href} as={slug} passHref>
+              <Tile title={hrefTitle}>
+                <Category title={title} text={text} icon={icon} />
               </Tile>
-            </GridCell>
-          </Grid>
-        </Container>
-      </Section>
-    );
-  }
-}
+            </Link>
+          </GridCell>
+        ))}
+        <GridCell>
+          <ConventionModal />
+        </GridCell>
+        <GridCell>
+          <Tile>
+            <Category
+              title="Prochainement"
+              text="Bientôt d'autres outils disponibles..."
+              icon="/static/assets/icons/time.svg"
+            />
+          </Tile>
+        </GridCell>
+      </Grid>
+    </Container>
+  </Section>
+);
+
+Outils.defaultProps = {
+  title: "Découvrez nos outils"
+};
+
+export default React.memo(Outils);
 
 const { box, spacing, colors } = theme;
 

@@ -30,11 +30,11 @@ const router = new Router({ prefix: API_BASE_URL });
  */
 router.get("/search", async ctx => {
   const query = ctx.request.query.q;
+  const excludeSources = (ctx.request.query.excludeSources || "").split(",");
+
   const skipSavedResults =
     Boolean(ctx.request.query.skipSavedResults) ||
     ctx.request.query.skipSavedResults === "";
-  const excludeSources = (ctx.request.query.excludeSources || "").split(",");
-
   // shortcut ES if we find a known query
   const knownQueryResult =
     !skipSavedResults && (await getSavedResult(query, excludeSources));

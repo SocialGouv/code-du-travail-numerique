@@ -7,4 +7,12 @@ describe("<LargeLink />", () => {
     const { container } = render(<LargeLink>Ok</LargeLink>);
     expect(container).toMatchSnapshot();
   });
+  test("should render light", () => {
+    const { container } = render(<LargeLink variant="light">Ok</LargeLink>);
+    expect(container).toMatchSnapshot();
+  });
+  test("should render highlighted", () => {
+    const { container } = render(<LargeLink variant="highlight">Ok</LargeLink>);
+    expect(container).toMatchSnapshot();
+  });
 });
