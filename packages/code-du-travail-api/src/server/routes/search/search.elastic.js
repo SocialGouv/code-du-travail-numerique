@@ -2,11 +2,6 @@ function getSearchBody({ query, size, excludeSources = [] }) {
   return {
     size: size,
     _source: ["title", "source", "slug", "description", "anchor", "url"],
-    highlight: {
-      fields: {
-        "text.french": {}
-      }
-    },
     query: {
       bool: {
         must_not: {

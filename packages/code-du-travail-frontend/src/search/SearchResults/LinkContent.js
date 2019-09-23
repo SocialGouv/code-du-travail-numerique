@@ -3,26 +3,11 @@ import styled from "styled-components";
 import { theme } from "@cdt/ui-old";
 import { SOURCES, getLabelBySource } from "@cdt/sources";
 
-export const LinkContent = ({
-  author,
-  description = "",
-  highlight,
-  source,
-  title
-}) => {
-  let summary =
+export const LinkContent = ({ author, description = "", source, title }) => {
+  const summary =
     description.length > 160
       ? description.slice(0, description.indexOf(" ", 160)) + "…"
       : description;
-  if (highlight) {
-    let i = 0;
-    summary = "";
-    while (i < 3 && highlight["text.french"][i]) {
-      summary += highlight["text.french"][i];
-      summary += " [...] ";
-      i++;
-    }
-  }
   return (
     <>
       {source !== SOURCES.THEMES && (
@@ -33,7 +18,7 @@ export const LinkContent = ({
         </Source>
       )}
       <H3>{title}</H3>
-      {summary && <Summary dangerouslySetInnerHTML={{ __html: summary }} />}
+      {summary && <Summary>{summary}</Summary>}
     </>
   );
 };
@@ -54,7 +39,4 @@ const H3 = styled.h3`
 const Summary = styled.p`
   margin: 0;
   color: ${colors.darkText};
-  em {
-    font-weight: bold;
-  }
 `;
