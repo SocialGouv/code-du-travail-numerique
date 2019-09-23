@@ -26,7 +26,7 @@
   "dependencies": {
     "@elastic/elasticsearch": "^7.3.0",
     "@socialgouv/kali-data": "1.2.6",
-    "@socialgouv/legi-data": "^1.1.0",
+    "@socialgouv/legi-data": "^1.1.1",
     "esm": "^3.2.25",
     "striptags": "^3.1.1",
     "unist-util-find": "^1.0.1",
