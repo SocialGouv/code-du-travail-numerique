@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* **demission:** udpate data format ([#1210](https://github.com/SocialGouv/code-du-travail-numerique/issues/1210)) ([af15e15](https://github.com/SocialGouv/code-du-travail-numerique/commit/af15e15))
+* **deps:** update dependency @sentry/browser to ^5.6.3 ([#1209](https://github.com/SocialGouv/code-du-travail-numerique/issues/1209)) ([2ea07c4](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ea07c4))
+* **deps:** update dependency date-fns to ^2.2.1 ([#1234](https://github.com/SocialGouv/code-du-travail-numerique/issues/1234)) ([00c6c63](https://github.com/SocialGouv/code-du-travail-numerique/commit/00c6c63))
+* **deps:** update dependency next to ^9.0.6 ([#1273](https://github.com/SocialGouv/code-du-travail-numerique/issues/1273)) ([19ab795](https://github.com/SocialGouv/code-du-travail-numerique/commit/19ab795))
+* **deps:** update dependency next to v9 ([#1175](https://github.com/SocialGouv/code-du-travail-numerique/issues/1175)) ([63a277c](https://github.com/SocialGouv/code-du-travail-numerique/commit/63a277c))
+* **deps:** update dependency react-feather to v2 ([#1177](https://github.com/SocialGouv/code-du-travail-numerique/issues/1177)) ([49aacc5](https://github.com/SocialGouv/code-du-travail-numerique/commit/49aacc5))
+* **deps:** update dependency react-final-form to v6 ([#1178](https://github.com/SocialGouv/code-du-travail-numerique/issues/1178)) ([27249d4](https://github.com/SocialGouv/code-du-travail-numerique/commit/27249d4))
+* **deps:** update dependency react-mathjax-preview to ^0.1.13 ([#1153](https://github.com/SocialGouv/code-du-travail-numerique/issues/1153)) ([592b9e7](https://github.com/SocialGouv/code-du-travail-numerique/commit/592b9e7))
+* **deps:** update dependency react-mathjax-preview to ^0.1.15 ([#1247](https://github.com/SocialGouv/code-du-travail-numerique/issues/1247)) ([8251f7c](https://github.com/SocialGouv/code-du-travail-numerique/commit/8251f7c))
+* **deps:** update dependency react-mathjax-preview to ^0.1.16 ([#1270](https://github.com/SocialGouv/code-du-travail-numerique/issues/1270)) ([21850cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/21850cf))
+* **finalform:** rename subscribe  prop into subscription ([#1187](https://github.com/SocialGouv/code-du-travail-numerique/issues/1187)) ([a4839b2](https://github.com/SocialGouv/code-du-travail-numerique/commit/a4839b2))
+* **frontend:** @sentry/browser does not contain a default export ([#1188](https://github.com/SocialGouv/code-du-travail-numerique/issues/1188)) ([2e9ec2e](https://github.com/SocialGouv/code-du-travail-numerique/commit/2e9ec2e))
+* **frontend:** fix courrier slug name ([#1261](https://github.com/SocialGouv/code-du-travail-numerique/issues/1261)) ([df81795](https://github.com/SocialGouv/code-du-travail-numerique/commit/df81795))
+* **frontend:** remove empty files ([#1266](https://github.com/SocialGouv/code-du-travail-numerique/issues/1266)) ([5839a3e](https://github.com/SocialGouv/code-du-travail-numerique/commit/5839a3e))
+* **frontend:** typo in modal SDR ([#1285](https://github.com/SocialGouv/code-du-travail-numerique/issues/1285)) ([e6c620c](https://github.com/SocialGouv/code-du-travail-numerique/commit/e6c620c))
+* **polyfill:** use k8s version ([#1284](https://github.com/SocialGouv/code-du-travail-numerique/issues/1284)) ([7e486f9](https://github.com/SocialGouv/code-du-travail-numerique/commit/7e486f9))
+* **search-ccn:** fix missing id for search by cc ([#1228](https://github.com/SocialGouv/code-du-travail-numerique/issues/1228)) ([8719c12](https://github.com/SocialGouv/code-du-travail-numerique/commit/8719c12))
+
+
+### Features
+
+* add packages/sources to centralize shared data ([#1265](https://github.com/SocialGouv/code-du-travail-numerique/issues/1265)) ([ed10207](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed10207))
+* search CCN ([#1077](https://github.com/SocialGouv/code-du-travail-numerique/issues/1077)) ([563dc82](https://github.com/SocialGouv/code-du-travail-numerique/commit/563dc82))
+* **data:** add description to outils ([#1286](https://github.com/SocialGouv/code-du-travail-numerique/issues/1286)) ([949d841](https://github.com/SocialGouv/code-du-travail-numerique/commit/949d841))
+* themes indexation ([#1263](https://github.com/SocialGouv/code-du-travail-numerique/issues/1263)) ([557e184](https://github.com/SocialGouv/code-du-travail-numerique/commit/557e184))
+* **glossaire:** add glossary page and tooltip([#1269](https://github.com/SocialGouv/code-du-travail-numerique/issues/1269)) ([7defed9](https://github.com/SocialGouv/code-du-travail-numerique/commit/7defed9)), closes [#1186](https://github.com/SocialGouv/code-du-travail-numerique/issues/1186)
+
+
+
+
+
 ## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
 
 

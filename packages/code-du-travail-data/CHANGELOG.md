@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* **data:** add title to cdt documents ([#1220](https://github.com/SocialGouv/code-du-travail-numerique/issues/1220)) ([8a85ab0](https://github.com/SocialGouv/code-du-travail-numerique/commit/8a85ab0))
+* **data:** fix cdt indexed text filed name ([#1219](https://github.com/SocialGouv/code-du-travail-numerique/issues/1219)) ([c1ecba9](https://github.com/SocialGouv/code-du-travail-numerique/commit/c1ecba9))
+* **data:** use @cdt/sources package ([#1275](https://github.com/SocialGouv/code-du-travail-numerique/issues/1275)) ([ad263d1](https://github.com/SocialGouv/code-du-travail-numerique/commit/ad263d1))
+* **demission:** udpate data format ([#1210](https://github.com/SocialGouv/code-du-travail-numerique/issues/1210)) ([af15e15](https://github.com/SocialGouv/code-du-travail-numerique/commit/af15e15))
+* **deps:** update dependency date-fns to ^2.2.1 ([#1234](https://github.com/SocialGouv/code-du-travail-numerique/issues/1234)) ([00c6c63](https://github.com/SocialGouv/code-du-travail-numerique/commit/00c6c63))
+* **deps:** update dependency query-string to ^6.8.3 ([#1216](https://github.com/SocialGouv/code-du-travail-numerique/issues/1216)) ([26e1e5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/26e1e5c))
+* **deps:** update dependency slugify to ^1.3.5 ([#1238](https://github.com/SocialGouv/code-du-travail-numerique/issues/1238)) ([2ab4a5f](https://github.com/SocialGouv/code-du-travail-numerique/commit/2ab4a5f))
+
+
+### Features
+
+* **data:** add description to outils ([#1286](https://github.com/SocialGouv/code-du-travail-numerique/issues/1286)) ([949d841](https://github.com/SocialGouv/code-du-travail-numerique/commit/949d841))
+* themes indexation ([#1263](https://github.com/SocialGouv/code-du-travail-numerique/issues/1263)) ([557e184](https://github.com/SocialGouv/code-du-travail-numerique/commit/557e184))
+* **glossaire:** add glossary page and tooltip([#1269](https://github.com/SocialGouv/code-du-travail-numerique/issues/1269)) ([7defed9](https://github.com/SocialGouv/code-du-travail-numerique/commit/7defed9)), closes [#1186](https://github.com/SocialGouv/code-du-travail-numerique/issues/1186)
+
+
+
+
+
 ## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
 
 

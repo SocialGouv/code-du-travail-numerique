@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* **api:** make size work as expected ([#1218](https://github.com/SocialGouv/code-du-travail-numerique/issues/1218)) ([44f9f40](https://github.com/SocialGouv/code-du-travail-numerique/commit/44f9f40))
+* **api:** return direct results for getSavedResult ([#1288](https://github.com/SocialGouv/code-du-travail-numerique/issues/1288)) ([05e5a67](https://github.com/SocialGouv/code-du-travail-numerique/commit/05e5a67))
+* **deps:** update dependency elastic-apm-node to ^2.16.0 ([#1191](https://github.com/SocialGouv/code-du-travail-numerique/issues/1191)) ([06a8482](https://github.com/SocialGouv/code-du-travail-numerique/commit/06a8482))
+* **deps:** update dependency elastic-apm-node to ^2.16.1 ([#1204](https://github.com/SocialGouv/code-du-travail-numerique/issues/1204)) ([46ddeec](https://github.com/SocialGouv/code-du-travail-numerique/commit/46ddeec))
+
+
+### Features
+
+* add packages/sources to centralize shared data ([#1265](https://github.com/SocialGouv/code-du-travail-numerique/issues/1265)) ([ed10207](https://github.com/SocialGouv/code-du-travail-numerique/commit/ed10207))
+* themes indexation ([#1263](https://github.com/SocialGouv/code-du-travail-numerique/issues/1263)) ([557e184](https://github.com/SocialGouv/code-du-travail-numerique/commit/557e184))
+
+
+
+
+
 ## [3.1.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.0...v3.1.1) (2019-08-26)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@cdt/api",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "",
   "private": true,
   "main": "index.js",
@@ -26,9 +26,10 @@
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique#readme",
   "dependencies": {
     "@cdt/data...courrier-type": "^3.1.1",
-    "@cdt/sources": "^1.0.0",
+    "@cdt/sources": "^3.2.0",
     "@elastic/elasticsearch": "7",
     "@koa/cors": "^3.0.0",
+    "abort-controller": "3.0.0",
     "dotenv": "^8.1.0",
     "jest": "^24.9.0",
     "koa": "^2.8.1",
@@ -37,8 +38,7 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "node-fetch": "^2.6.0",
-    "winston": "^3.2.1",
-    "abort-controller": "3.0.0"
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@socialgouv/eslint-config-recommended": "^0.10.0",

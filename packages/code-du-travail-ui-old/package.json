@@ -1,6 +1,6 @@
 {
   "name": "@cdt/ui-old",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "private": true,
   "description": "Composants ReactJS du Code du travail numérique",
   "main": "lib/index.js",
@@ -34,6 +34,7 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@socialgouv/eslint-config-react": "^0.10.0",
+    "@testing-library/react": "^9.1.4",
     "babel-jest": "^24.9.0",
     "docz": "1.3.2",
     "docz-theme-default": "1.2.0",
@@ -45,7 +46,6 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.13",
-    "@testing-library/react": "^9.1.4",
     "rollup": "^1.21.4",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
