@@ -2182,10 +2182,10 @@
     "@socialgouv/dila-api-client" "^1.0.1"
     p-map "^3.0.0"
 
-"@socialgouv/legi-data@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.0.tgz#820e44b66e8c8e2728c0422d009f52ee890d7666"
-  integrity sha512-lEI9AulaVSQ4S8VW5bC/ulsw2nCG5lEmkV3mF6WPjInvylEqypmg152c0d2FNJMOsnVDhIX09/w9e/szpcL2ww==
+"@socialgouv/legi-data@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.1.tgz#f79b07b0d803bca107495d6d5955e40887621fcb"
+  integrity sha512-864LeEgyHDbIaOqhfSqQaj8oZWLpa/ZNQu054Xz1QxKNtS44wUk8jNl9ployb2Wv7MWRA1FjtFq2GqCWvIwyMw==
   dependencies:
     "@socialgouv/dila-api-client" "^1.0.1"
     debug "^4.1.1"

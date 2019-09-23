@@ -11,10 +11,10 @@
     node-fetch "^2.6.0"
     simple-oauth2 "^2.2.1"
 
-"@socialgouv/legi-data@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.0.tgz#820e44b66e8c8e2728c0422d009f52ee890d7666"
-  integrity sha512-lEI9AulaVSQ4S8VW5bC/ulsw2nCG5lEmkV3mF6WPjInvylEqypmg152c0d2FNJMOsnVDhIX09/w9e/szpcL2ww==
+"@socialgouv/legi-data@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/legi-data/-/legi-data-1.1.1.tgz#f79b07b0d803bca107495d6d5955e40887621fcb"
+  integrity sha512-864LeEgyHDbIaOqhfSqQaj8oZWLpa/ZNQu054Xz1QxKNtS44wUk8jNl9ployb2Wv7MWRA1FjtFq2GqCWvIwyMw==
   dependencies:
     "@socialgouv/dila-api-client" "^1.0.1"
     debug "^4.1.1"
@@ -360,10 +360,10 @@ punycode@2.x.x:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-query-string@^6.8.2:
-  version "6.8.2"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.2.tgz#36cb7e452ae11a4b5e9efee83375e0954407b2f6"
-  integrity sha512-J3Qi8XZJXh93t2FiKyd/7Ec6GNifsjKXUsVFkSBj/kjLsDylWhnCz4NT1bkPcKotttPW+QbKGqqPH8OoI2pdqw==
+query-string@^6.8.3:
+  version "6.8.3"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.3.tgz#fd9fb7ffb068b79062b43383685611ee47777d4b"
+  integrity sha512-llcxWccnyaWlODe7A9hRjkvdCKamEKTh+wH8ITdTc3OhchaqUZteiSCX/2ablWHVrkVIe04dntnaZJ7BdyW0lQ==
   dependencies:
     decode-uri-component "^0.2.0"
     split-on-first "^1.0.0"
