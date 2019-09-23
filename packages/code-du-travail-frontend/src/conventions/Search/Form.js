@@ -47,6 +47,8 @@ const TagSiret = ({ siret }) => (
 const Search = ({
   title = "Recherche de convention collective",
   resetOnClick = true,
+  style,
+  className,
   onSelectConvention
 }) => {
   const [query, setQuery] = useState("");
@@ -64,7 +66,7 @@ const Search = ({
   };
 
   return (
-    <Container>
+    <Container style={style} className={className}>
       {title && <h3>{title}</h3>}
       <p>
         Saisissez le nom de votre entreprise, la convention collective ou le
