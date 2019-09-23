@@ -4,7 +4,6 @@ import getConfig from "next/config";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import MDX from "mdx-runtime-slim";
 
 import { Accordion, Alert, icons } from "@cdt/ui-old";
 import slugify from "@cdt/data/slugify";
@@ -13,6 +12,7 @@ import Answer from "../../src/common/Answer";
 import SearchConvention from "../../src/conventions/Search/Form";
 import { PageLayout } from "../../src/layout/PageLayout";
 import Metas from "../../src/common/Metas";
+import Mdx from "../../src/common/Mdx";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -21,50 +21,95 @@ const {
 const fetchQuestion = ({ slug }) =>
   fetch(`${API_URL}/items/contributions/${slug}`);
 
-// wrap section in Accordion if section has a @data-title
-const AnswerSection = props =>
-  props["data-title"] ? (
-    <StyledAccordion
-      items={[
-        {
-          title: (
-            <h3 style={{ paddingLeft: 10, marginBottom: 10 }}>
-              {props["data-title"]}
-            </h3>
-          ),
-          body: props.children
-        }
-      ]}
-    />
-  ) : (
-    <section {...props} />
-  );
+// basic article matcher for internal links
+const makeArticlesLinks = markdown => {
+  const articleRegex = /([^[])([LRD]\d+[^\s]+)\b/gi;
+  let match;
+  let str2 = markdown;
+  while ((match = articleRegex.exec(markdown))) {
+    str2 = str2.replace(
+      new RegExp(`[^[](${match[2]})`),
+      (_, match2) =>
+        `${match[1]}[${match[2]}](/code-du-travail/${match2.toLowerCase()})`
+    );
+  }
+  return str2;
+};
+
+// Tus
+const tests = [
+  "Article L3123-5",
+  "Article L3123-5 et L234-12",
+  "Article L3123-5 et [L234-12](http://travail.gouv.fr)",
+  "Article L3123-5, L3123-7, L3123-52-1",
+  "Article L3123-5, L3123-7, L3123-52-1 et L3123-7, L3123-52-1",
+  "XD2432-1",
+  "D12"
+];
+
+// wrap section in custom components if section has a @data-type
+const AnswerSection = props => {
+  switch (props["data-type"]) {
+    // situations
+    case "tab":
+      return (
+        <StyledAccordion
+          items={[
+            {
+              title: <h3>{props["data-title"]}</h3>,
+              body: props.children
+            }
+          ]}
+        />
+      );
+    // sources juridiques
+    case "source":
+      return (
+        <Alert variant="info">
+          SOURCE
+          <div {...props} />
+        </Alert>
+      );
+    // hierarchie des normes
+    case "hdn":
+      return (
+        <Alert variant="secondary">
+          HDN
+          <div {...props} />
+        </Alert>
+      );
+    default:
+      return <section {...props} />;
+  }
+};
 
 const components = {
   section: AnswerSection
 };
 
-// filter answers by CC
-const AnswersCC = ({ answers }) => {
+// search CC + display filtered answer
+const AnswersConventions = ({ answers }) => {
   const [convention, setConvention] = useState();
   const answer = convention && answers.find(a => a.idcc === convention.num);
+
   // following data/populate.js slug rules
   const slugConvention =
     convention &&
     slugify(`${convention.num}-${convention.title}`.substring(0, 80));
 
   return (
-    <div style={{ marginTop: 40 }}>
+    <React.Fragment>
       <h3>Que dit votre convention collective ?</h3>
-      <div style={{ padding: 10, margin: "20px 0" }}>
-        <SearchConvention title="" onSelectConvention={setConvention} />
-      </div>
+      <StyledSearchConvention title="" onSelectConvention={setConvention} />
       {convention && (
-        <div>
-          <h3>Convention {convention.title}</h3>
+        <React.Fragment>
+          <h4>Convention {convention.title}</h4>
           {(answer && (
             <div>
-              <MDX components={components}>{answer.markdown}</MDX>
+              <Mdx
+                markdown={makeArticlesLinks(answer.markdown)}
+                components={components}
+              />
               <div>
                 <Link
                   href="/convention-collective/[slug]"
@@ -80,9 +125,9 @@ const AnswersCC = ({ answers }) => {
               collective
             </Alert>
           )}
-        </div>
+        </React.Fragment>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 
@@ -107,32 +152,55 @@ class Contribution extends React.Component {
     } = this.props;
 
     const { title, answers, description } = data._source;
+    //console.log("answers", answers
 
     return (
-      <PageLayout>
-        <Metas
-          url={pageUrl}
-          title={title}
-          description={description}
-          image={ogImage}
-        />
-        <Answer
-          title={title}
-          sourceType="Réponse détaillée"
-          emptyMessage="Cette question n'a pas été trouvée"
-          icon={icons.Question}
-        >
-          <h3>Que dit le code du travail ?</h3>
-          <MDX components={components}>
-            {answers.general && answers.general.markdown}
-          </MDX>
-          <AnswersCC answers={answers.conventions} />
-        </Answer>
-      </PageLayout>
+      <div>
+        <PageLayout>
+          <Metas
+            url={pageUrl}
+            title={title}
+            description={description}
+            image={ogImage}
+          />
+          <Answer
+            title={title}
+            sourceType="Réponse détaillée"
+            emptyMessage="Cette question n'a pas été trouvée"
+            icon={icons.Question}
+          >
+            <h3>Que dit le code du travail ?</h3>
+            {answers.general && (
+              <Mdx
+                markdown={makeArticlesLinks(answers.general.markdown)}
+                components={components}
+              />
+            )}
+            <Spacer />
+            <AnswersConventions answers={answers.conventions} />
+          </Answer>
+        </PageLayout>
+      </div>
     );
   }
 }
 
-const StyledAccordion = styled(Accordion)``;
+const StyledSearchConvention = styled(SearchConvention)`
+  padding: 10px;
+  margin: 20px 0;
+`;
+
+const StyledAccordion = styled(Accordion)`
+  *[data-accordion-component="AccordionItem"] {
+    margin-bottom: 20px;
+  }
+  *[data-accordion-component="AccordionItemButton"] {
+    padding-left: 10px;
+  }
+`;
+
+const Spacer = styled.div`
+  height: 40px;
+`;
 
 export default withRouter(Contribution);

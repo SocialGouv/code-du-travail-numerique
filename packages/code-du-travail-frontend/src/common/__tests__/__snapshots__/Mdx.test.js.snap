@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Mdx /> should render 1`] = `
+<div>
+  <div>
+    <p>
+      Hello 
+      <strong>
+        world
+      </strong>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Mdx /> should render custom components 1`] = `
+<div>
+  <div>
+    <p>
+      Hello 
+      <div
+        style="color: red;"
+      >
+        world
+      </div>
+    </p>
+  </div>
+</div>
+`;
