@@ -83,7 +83,7 @@ Outils.defaultProps = {
   title: "Découvrez nos outils"
 };
 
-export default Outils;
+export default React.memo(Outils);
 
 const { box, spacing, colors } = theme;
 

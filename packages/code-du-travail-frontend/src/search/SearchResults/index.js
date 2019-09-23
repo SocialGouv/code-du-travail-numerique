@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { groupByDisplayCategory } from "../utils";
-import { Matches } from "./Matches";
+import { Results } from "./Results";
 import { Law } from "./Law";
 import { Themes } from "./Themes";
 
@@ -11,7 +11,7 @@ const SearchResults = ({ items = [], isSearch, query }) => {
   return (
     <>
       {matches.length > 0 && (
-        <Matches isSearch={isSearch} items={matches} query={query} />
+        <Results isSearch={isSearch} items={matches} query={query} />
       )}
       {law.length > 0 && <Law items={law} query={query} />}
       {themes.length > 0 && <Themes items={themes} query={query} />}

@@ -29,6 +29,7 @@ export const getSourceIcon = (source = "") => {
 export const groupBySource = items =>
   items.reduce((accumulator, item) => {
     const itemSource = item._source.source;
+    item._source.highlight = item.highlight;
     if (accumulator[itemSource]) {
       accumulator[itemSource].push(item._source);
     } else {
@@ -43,6 +44,7 @@ export const groupByDisplayCategory = items =>
   items.reduce(
     (accumulator, item) => {
       const itemSource = item._source.source;
+      item._source.highlight = item.highlight;
       if (itemSource === SOURCES.THEMES) {
         accumulator.themes.push(item._source);
       } else if (law.includes(itemSource)) {
