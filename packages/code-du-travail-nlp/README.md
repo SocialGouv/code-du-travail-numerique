@@ -6,7 +6,7 @@ Cette api en python est appellée par frontend afin de proposer des suggestion d
 
 Vous devez avoir python 3.7 installé en local sur votre machine
 
-## Données utilisée.
+## Données utilisée
 
 L'api de suggestion utilise des données pour faire des suggestions
 Ces données sont montées sur un volume docker. Lors du premier lancement ou pour mettre à jour
@@ -19,35 +19,35 @@ Pour exemple, l'url
 
 Pour spliter un fichier texte en plusieur fichier.
 
-```
+```sh
 split -l 300000 data_raw.txt data-part.
 ```
 
 ## Installation en local
 
-```
+```sh
 python -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Démarer l'api en local
+## Démarer l'api python
 
 L'api utise Flask et tourne sur le port 5000.
 :bulb: voir [Data](#Data) pour l'ajout des données
 
-```
+```sh
 . venv/bin/activate
 FLASK_ENV=development FLASK_APP=api flask run
 ```
 
 ## Desactiver venv
 
-```
+```sh
 deactivate
 ```
 
-## Démarer l'api en local
+## Docker
 
 Pour cela, il faut d'abord une image du monorepo.
 
