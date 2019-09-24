@@ -23,10 +23,10 @@ spec:
           name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
           resources:
             limits:
-              memory: "8000Mi"
+              memory: "10Gi"
               cpu: "3"
             requests:
-              memory: "4000Mi"
+              memory: "4Gi"
               cpu: "2"
           ports:
             - containerPort: ${PORT}
