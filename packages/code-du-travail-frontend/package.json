@@ -49,8 +49,8 @@
     "url-search-params": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@socialgouv/eslint-config-react": "^0.10.0",
     "@testing-library/react": "^9.1.4",
     "babel-eslint": "^10.0.3",
