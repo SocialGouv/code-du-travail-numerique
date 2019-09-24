@@ -69,7 +69,7 @@ const getBaseUrl = url => url.replace(/^(https?:\/\/[^/]+)\//, "/");
 const FETCH_SAMPLES = {
   "https://www.telerc.travail.gouv.fr/RuptureConventionnellePortailPublic/jsp/site/Portal.jsp?page_id=14": () =>
     `Hello HTML <title>HTML page title</title>`,
-  "/kinto/v1/buckets/datasets/collections/requetes/records": () => ({
+  "/kinto/v1/buckets/datasets/collections/requetes/records?_sort=title": () => ({
     data: requetes
   }),
   "/code_du_travail_numerique/_search": (url, { body } = {}) => ({
