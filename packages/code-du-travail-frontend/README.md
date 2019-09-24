@@ -2,31 +2,26 @@
 
 Ce dépôt de code contient le frontend du site web du Code du Travail Numérique.
 
-- Prototype dispo sur : https://codedutravail-dev.num.social.gouv.fr
+- Prototype dispo sur : http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/
 
-## Installation de l'environnement de développement
+## Lancer l'environnement de développement
 
-**Important** : pour tourner en local ce projet nécessite les serveurs actifs des dépôts de code [`code-du-travail-data`](https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data) (serveur Elasticsearch) et [`code-du-travail-api`](https://github.com/SocialGouv/code-du-travail-api) (serveur API).
+**Important** : pour tourner en local, ce projet nécessite les services api et elasticsearch  
 
-Créez un fichier `.env` :
+```sh
+# for local dev
+$ yarn workspace @cdt/frontend dev
+```
+Par default, en developpement l'api nlp est remplacée par un endpoint du service api
+Toutefois, vous pouvez lancer l'application front sans le le mock de l'api nlp.
 
-```shell
-NODE_ENV=development
-API_URL=https://127.0.0.1:1337/api/v1
-SENTRY_PUBLIC_DSN=https://path/to/sentry
-PORT=3000
+```sh
+# for local dev
+$ yarn workspace @cdt/frontend dev-with-nlp
 ```
 
-Puis :
+## Lancer la version build du frontend
 
-```bash
-$ npm install
-$ npm run dev
+```sh
+$ yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start
 ```
-
-## Build de production
-
-- éditer `.env`
-- éditer `docker-compose.override.yml`
-
-puis `docker-compose up`

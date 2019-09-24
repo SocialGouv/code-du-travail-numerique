@@ -21,7 +21,29 @@ $ yarn
 
 Note: environment file are created at _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`
 
-### Running services locally using .dev config
+### Running nlp service locally using .dev config
+
+By default nlp api is mocked with our local node api. 
+To launch the nodejs API without mock, you should use
+
+```sh
+# for local dev using nodemon
+$ yarn workspace @cdt/api dev-with-nlp
+
+# or to test the built version
+$ yarn workspace @cdt/api build && yarn workspace @cdt/api start
+```
+
+To launch the frontend app without mock, you should use
+
+```sh
+# for local dev
+$ yarn workspace @cdt/frontend dev-with-nlp
+
+# or to test the built version
+$ yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start
+```
+
 
 Before doing anything, update environment variables in the non versioned `.env` file. A versioned `.env.sample` file will help you to do so.
 Then, ensure that you also have the correct params in the unversioned `docker-compose.override.yml` file
@@ -37,16 +59,14 @@ $ docker build . -t cdtn_master:local
 Then you can launch services using docker-compose
 
 ```sh
-# start elasticsearch
-$ docker-compose up elasticsearch
-
 # start elasticsearch + nlp_api
 $ docker-compose up elasticsearch nlp_api
+```
+### Running elasticsearch service locally
 
-# start elasticsearch + nlp_api + kibana
-$ docker-compose up elasticsearch nlp_api kibana
-
-
+```sh
+# start elasticsearch
+$ docker-compose up elasticsearch
 #
 # Wait for the message:
 #
@@ -54,10 +74,7 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 
 # > In parallel, in another terminal <
 
-# Launch indexing script
-$ docker-compose run --rm data
-
-# or alternatively
+# Launch indexing script 
 $ yarn workspace @cdt/data populate-dev
 
 ```
