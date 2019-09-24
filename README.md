@@ -44,7 +44,6 @@ $ yarn workspace @cdt/frontend dev-with-nlp
 $ yarn workspace @cdt/frontend build && yarn workspace @cdt/frontend start
 ```
 
-
 Before doing anything, update environment variables in the non versioned `.env` file. A versioned `.env.sample` file will help you to do so.
 Then, ensure that you also have the correct params in the unversioned `docker-compose.override.yml` file
 
@@ -62,6 +61,7 @@ Then you can launch services using docker-compose
 # start elasticsearch + nlp_api
 $ docker-compose up elasticsearch nlp_api
 ```
+
 ### Running elasticsearch service locally
 
 ```sh
@@ -78,6 +78,7 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 $ yarn workspace @cdt/data populate-dev
 
 ```
+
 Each packages readme also details how to build and run a locally version of the service using docker.
 
 ## Usage
@@ -92,7 +93,7 @@ If you get weird errors like an `Invariant Violation`, try to rebuild with `yarn
 
 ### UI
 
-The UI components are showcased here: [https://socialgouv.github.io/code-du-travail-numerique/](https://socialgouv.github.io/code-du-travail-numerique/)
+The UI components are showcased here: <https://socialgouv.github.io/code-du-travail-numerique/>
 
 ### Build
 
@@ -135,12 +136,12 @@ $ yarn workspace @cdt/frontend test
 
 ## Release policy
 
-Development environment : http://master.code-du-travail-numerique.dev.factory.social.gouv.fr
+Development environment : <http://master.code-du-travail-numerique.dev.factory.social.gouv.fr>
 This is the process to release to the preprod URL like : `https://x-y-z.codedutravail-dev.num.social.gouv.fr/`
 
 ### Auto
 
-First, trigger a custom build on [Travis CI > code-du-travail-numerique](<(https://travis-ci.com/SocialGouv/code-du-travail-numerique)>) > master branch > in the "More options" right menu > trigger custom build.
+First, trigger a custom build on [Travis CI > code-du-travail-numerique]((https://travis-ci.com/SocialGouv/code-du-travail-numerique)) > master branch > in the "More options" right menu > trigger custom build.
 Add a message like "Release v2.1.0".
 Use this YAML config:
 
@@ -161,15 +162,15 @@ env:
 
 > This will :
 >
-> - tag the release on GitHub
-> - update the changelogs
-> - build Docker images
-> - push them to DockerHub
+> -  tag the release on GitHub
+> -  update the changelogs
+> -  build Docker images
+> -  push them to DockerHub
 
 Optionally needed:
 
-- update environment variables with `vim dev/.env`
-- refresh NLP data with: `sh dev/scripts/download-nlp-data.sh`
+-   update environment variables with `vim dev/.env`
+-   refresh NLP data with: `sh dev/scripts/download-nlp-data.sh`
 
 ### Manual
 
@@ -195,7 +196,7 @@ $ CONVENTIONAL_GITHUB_RELEASER_TOKEN==************ npx conventional-github-relea
 
 ## Deployment policy
 
-Tags can be automaticly deployed See https://github.com/SocialGouv/code-du-travail-numerique/deployments
+Tags can be automaticly deployed See <https://github.com/SocialGouv/code-du-travail-numerique/deployments>
 
 Trigger a custom build on Travis (in the "More options" right menu) on the tag v\* you with a custom config:
 
@@ -239,28 +240,29 @@ env:
 
 ### Demos
 
-- Production 
-  - https://code.travail.gouv.fr/ (previously codedutravail.num.social.gouv.fr )
+-  Production 
+  -  <https://code.travail.gouv.fr/> (previously codedutravail.num.social.gouv.fr )
 
-- master (dev) 
-  - http://master.code-du-travail-numerique.dev.factory.social.gouv.fr(previously codedutravail-dev.num.social.gouv.fr)
+-  master (dev) 
+  -  <http://master.code-du-travail-numerique.dev.factory.social.gouv.fr(previously> codedutravail-dev.num.social.gouv.fr)
 
-- staging (tag): 
-  - https://v3-2-0.code-du-travail-numerique.incubateur.social.gouv.fr
-  - https://v3-1-0.code-du-travail-numerique.incubateur.social.gouv.fr
+-  staging (tag): 
+  -  <https://v3-2-0.code-du-travail-numerique.incubateur.social.gouv.fr>
+  -  <https://v3-1-0.code-du-travail-numerique.incubateur.social.gouv.fr>
 
 ### Tools
 
-- Issues GitHub : https://github.com/SocialGouv/code-du-travail-numerique/issues
-  - nomenclature des labels :
-    - t : `t`ype of issue
-    - p : name of `p`roduct (we differentiate ES and nav by themes for now)
-    - s : `s`tatus of the issue
-    - o : name of the dedicated t`o`ol
-- Matomo (piwik) : https://matomo.tools.factory.social.gouv.fr
-- Sentry : https://sentry.tools.factory.social.gouv.fr
-- Mattermost : https://mattermost.num.social.gouv.fr/
-- Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
+-  Issues GitHub : <https://github.com/SocialGouv/code-du-travail-numerique/issues>
+-  nomenclature des labels :
+    -  t : `t`ype of issue
+    -  p : name of `p`roduct (we differentiate ES and nav by themes for now)
+    -  s : `s`tatus of the issue
+    -  o : name of the dedicated t`o`ol
+
+-  Matomo (piwik) : <https://matomo.tools.factory.social.gouv.fr>
+-  Sentry : <https://sentry.tools.factory.social.gouv.fr>
+-  Mattermost : <https://mattermost.num.social.gouv.fr/>
+-  Trello orga : <https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique>
 
 <br>
 <br>
@@ -269,9 +271,9 @@ env:
 
 ## Setup
 
-- ElasticSearch & nlp : `docker-compose up elasticsearch nlp_api`
-- API : `yarn api`
-- FrontEnd : `yarn frontend`
+-  ElasticSearch & nlp : `docker-compose up elasticsearch nlp_api`
+-  API : `yarn api`
+-  FrontEnd : `yarn frontend`
 
 <br>
 <br>
@@ -280,9 +282,9 @@ env:
 
 ## Contributions
 
-- Work on feature branches
-- Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
-- Submit PR on current's sprint branch
+-  Work on feature branches
+-  Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
+-  Submit PR on current's sprint branch
 
 <br>
 <br>
