@@ -6,7 +6,7 @@ Cette api en python est appellée par frontend afin de proposer des suggestion d
 
 Vous devez avoir python 3.7 installé en local sur votre machine
 
-## Données utilisée.
+## Données utilisée
 
 L'api de suggestion utilise des données pour faire des suggestions
 Ces données sont montées sur un volume docker. Lors du premier lancement ou pour mettre à jour
@@ -19,49 +19,73 @@ Pour exemple, l'url
 
 Pour spliter un fichier texte en plusieur fichier.
 
-```
+```sh
 split -l 300000 data_raw.txt data-part.
 ```
 
 ## Installation en local
 
-```
+```sh
 python -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Démarer l'api en local
+## Démarer l'api python
 
 L'api utise Flask et tourne sur le port 5000.
 :bulb: voir [Data](#Data) pour l'ajout des données
 
-```
+```sh
 . venv/bin/activate
 FLASK_ENV=development FLASK_APP=api flask run
 ```
 
 ## Desactiver venv
 
-```
+```sh
 deactivate
 ```
 
-## Data
+## Docker
 
-Pour l'instant, on héberge les données dans des hébergées dans gist anonymes.
+Pour cela, il faut d'abord une image du monorepo.
 
-La donnée indexée dans l'api search est crée au moment du build de l'image de base:
-in root directory:
+```sh
+# Creation d'une image locale
+# Depuis le dossier racine
+$ docker build . -t cdtn_master:local
+```
 
-`docker build . -t cdtn_base`
+ou 
 
-puis dans le package nlp:
+```sh
+# Récuperation d'une image depuis l'annuaire gitlab
+$ docker pull registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash>
 
-`docker build --build-arg BASE_IMAGE=cdtn_base --build-arg SUGGEST_DATA_URL="https://gist.githubusercontent.com/ArmandGiraud/aaa65ed694e6b8d46918d44e41bae9e4/raw/2b5fa5ff67d87bbf08b33fecfe2fb98e15c73a06/data-test.txt" . -t nlp --no-cache`
+$ docker tag registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash> ctdn_master:local
+```
 
-Pour lancer le container nlp:
+## Démarer l'api nlp en local via docker
 
-`docker run -e NLP_PORT=5000 -p 5000:5000 nlp`
+```sh
+# Creation de l'image nlp
+$ docker build -t cdtn_nlp:local --build-arg BASE_IMAGE=ctdn_master:local .
+# Démarrage en local
+$ docker run --rm \
+    --name cdtn_nlp
+    -p 5000:5000
+    -e NLP_PORT=5000  nlp
+    cdtn_nlp:local
+```
+
+## Démarer l'api nlp en local via docker-compose
+
+Copier la configuration `docker-compose.override.dev.yml dans le docker-compose.override.yml
+
+```sh
+$ docker-compose up elasticsearch nlp_api
+```
+
 
 Le script pour télécharger les données est exéctuté avant de lancer le container nlp

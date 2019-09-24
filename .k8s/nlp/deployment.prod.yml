@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+  labels:
+    app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+    git/branch: ${BRANCH_NAME}
+    git/commit: ${COMMIT}
+    gitlab/job: "${JOB_ID}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+  template:
+    metadata:
+      labels:
+        app: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+    spec:
+      containers:
+        - image: ${IMAGE_NAME}:${IMAGE_TAG}
+          name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
+          resources:
+            limits:
+              memory: "10Gi"
+              cpu: "3"
+            requests:
+              memory: "4Gi"
+              cpu: "2"
+          ports:
+            - containerPort: ${PORT}
+          livenessProbe:
+            failureThreshold: 5
+            httpGet:
+              path: /
+              port: ${PORT}
+            initialDelaySeconds: 500
+            periodSeconds: 5
+          readinessProbe:
+            failureThreshold: 5
+            httpGet:
+              path: /
+              port: ${PORT}
+            initialDelaySeconds: 500
+            periodSeconds: 5
+          env:
+            - name: NLP_PORT
+              value: "${PORT}"
+            - name: FLASK_APP
+              value: "api"
+            - name: SUGGEST_DATA_URL
+              value: "${SUGGEST_DATA_URL}"

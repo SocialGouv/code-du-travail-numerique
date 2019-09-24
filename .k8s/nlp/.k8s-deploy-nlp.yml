@@ -1,7 +1,18 @@
-.k8s-deploy-nlp:
+.k8s-deploy-nlp-dev:
   extends: .base_docker_kube_image_stage
   script:
-    - envsubst < ./.k8s/nlp/deployment.yml > ./deployment.yml
+    - envsubst < ./.k8s/nlp/deployment.dev.yml > ./deployment.yml
+    - envsubst < ./.k8s/nlp/service.yml > ./service.yml
+    - envsubst < ./.k8s/nlp/ingress${SUFFIX}.yml > ./ingress.yml
+    #
+    - kubectl apply -f ./deployment.yml
+    - kubectl apply -f ./service.yml
+    - kubectl apply -f ./ingress.yml
+
+.k8s-deploy-nlp-prod:
+  extends: .base_docker_kube_image_stage
+  script:
+    - envsubst < ./.k8s/nlp/deployment.prod.yml > ./deployment.yml
     - envsubst < ./.k8s/nlp/service.yml > ./service.yml
     - envsubst < ./.k8s/nlp/ingress${SUFFIX}.yml > ./ingress.yml
     #

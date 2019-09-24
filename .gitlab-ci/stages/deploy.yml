@@ -145,7 +145,6 @@ Create Elasticsearch Index (incubateur):
 
 .deploy-nlp: &deploy_nlp
   <<: *deploy_stage
-  extends: .k8s-deploy-nlp
   variables:
     <<: *deploy_stage_variables
     CONTEXT: nlp
@@ -161,9 +160,11 @@ Create Elasticsearch Index (incubateur):
 #
 
 Deploy @cdtn/nlp (dev):
+  extends: .k8s-deploy-nlp-dev
   <<: *deploy_nlp
   <<: *dev_stage
 
 Deploy @cdtn/nlp (incubateur):
+  extends: .k8s-deploy-nlp-prod
   <<: *deploy_nlp
   <<: *incubateur_stage

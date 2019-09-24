@@ -60,6 +60,19 @@ app.use(themesRoute.routes());
 
 app.use(docsRoutes);
 
+if (process.env.NODE_ENV !== "production") {
+  const Router = require("koa-router");
+  const nlpRoutes = new Router({ prefix: "/nlp" });
+  console.log("DEV MODE");
+  nlpRoutes.get("/suggest", async ctx => {
+    ctx.body = [];
+  });
+  nlpRoutes.get("/api/search", async ctx => {
+    ctx.body = { hits: { hits: [] } };
+  });
+  app.use(nlpRoutes.routes());
+}
+
 // centralize error logging
 app.on("error", ({ statusCode, message }) => {
   logger.error(`${statusCode} - ${message}`);

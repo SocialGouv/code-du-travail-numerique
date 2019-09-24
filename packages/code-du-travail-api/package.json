@@ -8,8 +8,9 @@
     "build": "ncc build ./src/server/index.js -o dist",
     "lint": "eslint src/**/*.js",
     "prepush": "yarn lint",
-    "start": "node ./dist/index.js",
-    "dev": "nodemon ./src/server/index.js",
+    "start": "NODE_ENV=production node ./dist/index.js",
+    "dev": "NLP_URL=http://localhost:1337/nlp nodemon ./src/server/index.js",
+    "dev-with-nlp": "nodemon ./src/server/index.js",
     "pretest": "NODE_ENV=test node -r esm tests/create_indexes.js",
     "test": "ELASTICSEARCH_DOCUMENT_INDEX=cdtn_document_test ELASTICSEARCH_ANNUAIRE_INDEX=cdtn_annuaire_test ELASTICSEARCH_CONVENTION_INDEX=cdtn_convention_test ELASTICSEARCH_THEME_INDEX=cdtn_theme_test jest",
     "elastic": "node scripts/elastic.js"

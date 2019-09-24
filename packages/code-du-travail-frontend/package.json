@@ -7,7 +7,8 @@
   "keywords": [],
   "main": "src/index.js",
   "scripts": {
-    "dev": "node server/server.js",
+    "dev": "SUGGEST_URL=http://localhost:1337/nlp/suggest node server/server.js",
+    "dev-with-nlp":  "node server/server.js",
     "lint": "eslint src/* pages/*",
     "prepush": "yarn lint && yarn test",
     "start": "NODE_ENV=production node server/server.js",
