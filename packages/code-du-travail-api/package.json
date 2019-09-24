@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ncc build ./src/server/index.js -o dist",
-    "lint": "eslint src/*",
+    "lint": "eslint src/**/*.js",
     "prepush": "yarn lint",
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/server/index.js",
