@@ -161,9 +161,11 @@ Create Elasticsearch Index (incubateur):
 #
 
 Deploy @cdtn/nlp (dev):
+  extends: .k8s-deploy-nlp-dev
   <<: *deploy_nlp
   <<: *dev_stage
 
 Deploy @cdtn/nlp (incubateur):
+  extends: .k8s-deploy-nlp-prod
   <<: *deploy_nlp
   <<: *incubateur_stage

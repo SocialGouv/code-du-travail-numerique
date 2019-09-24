@@ -23,11 +23,11 @@ spec:
           name: ${K8S_NAMESPACE}-${CONTEXT}-${BRANCH_HASH}
           resources:
             limits:
-              memory: "30000Mi"
+              memory: "8000Mi"
               cpu: "3"
             requests:
-              memory: "30000Mi"
-              cpu: "3"
+              memory: "4000Mi"
+              cpu: "2"
           ports:
             - containerPort: ${PORT}
           livenessProbe:
