@@ -15,7 +15,7 @@ const {
 const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
-const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records`;
+const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/themes/records?_sort=title`;
 
 /*
 
