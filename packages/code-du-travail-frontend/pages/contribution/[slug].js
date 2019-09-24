@@ -36,16 +36,16 @@ const makeArticlesLinks = markdown => {
   return str2;
 };
 
-// Tus
-const tests = [
-  "Article L3123-5",
-  "Article L3123-5 et L234-12",
-  "Article L3123-5 et [L234-12](http://travail.gouv.fr)",
-  "Article L3123-5, L3123-7, L3123-52-1",
-  "Article L3123-5, L3123-7, L3123-52-1 et L3123-7, L3123-52-1",
-  "XD2432-1",
-  "D12"
-];
+// Tus : TODO
+// const tests = [
+//   "Article L3123-5",
+//   "Article L3123-5 et L234-12",
+//   "Article L3123-5 et [L234-12](http://travail.gouv.fr)",
+//   "Article L3123-5, L3123-7, L3123-52-1",
+//   "Article L3123-5, L3123-7, L3123-52-1 et L3123-7, L3123-52-1",
+//   "XD2432-1",
+//   "D12"
+// ];
 
 // wrap section in custom components if section has a @data-type
 const AnswerSection = props => {
