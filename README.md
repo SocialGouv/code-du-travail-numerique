@@ -21,17 +21,31 @@ $ yarn
 
 Note: environment file are created at _postinstall_ (see [scripts/setup-env.js](scripts/setup-env.js)) according to `NODE_ENV`
 
-### Data
+### Running services locally using .dev config.
 
 Before doing anything, update environment variables in the non versioned `.env` file. A versioned `.env.sample` file will help you to do so.
-Beware that `SUGGEST_DATA_URL` is a test url in the `.env.sample` file.
 Then, ensure that you also have the correct params in the unversioned `docker-compose.override.yml` file
 
-Finally, to (re)initialize data for elasticsearch:
+If you opted for the `docker-compose.override.dev.yml` config (Good choice !) you will need to have a local monorepo image.
+So let's build it.
 
 ```sh
-# Start elasticsearch
-$ docker-compose up
+# Build the monorepo image
+$ docker build . -t cdtn_master:local
+```
+
+Then you can launch services using docker-compose
+
+```sh
+# start elasticsearch
+$ docker-compose up elasticsearch
+
+# start elasticsearch + nlp_api
+$ docker-compose up elasticsearch nlp_api
+
+# start elasticsearch + nlp_api + kibana
+$ docker-compose up elasticsearch nlp_api kibana
+
 
 #
 # Wait for the message:
@@ -44,21 +58,14 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 $ docker-compose run --rm data
 
 # or alternatively
-$ yarn workspace @cdt/data populate
+$ yarn workspace @cdt/data populate-dev
 
 ```
-
-If some error appears for the nlp_api container, run `docker-compose down`, then run
-the data checklist above again, then run `docker-compose build nlp_api`, and, finally, reinitialize data for elasticsearch.
-
-<br>
-<br>
-<br>
-<br>
+Each packages readme also details how to build and run a locally version of the service using docker.
 
 ## Usage
 
-### Local development
+### Javascript development
 
 ```sh
 $ yarn dev
@@ -215,21 +222,24 @@ env:
 
 ### Demos
 
-- Prod - https://codedutravail.num.social.gouv.fr/
-- Dev - https://codedutravail-dev.num.social.gouv.fr
+- Production - https://code.travail.gouv.fr/ (previously https://codedutravail.num.social.gouv.fr/)
+- master (dev) - http://master.code-du-travail-numerique.dev.factory.social.gouv.fr/  (previously https://codedutravail-dev.num.social.gouv.fr/)
+- staging (tag): 
+  - https://v3-2-0.code-du-travail-numerique.incubateur.social.gouv.fr/
+  - https://v3-1-0.code-du-travail-numerique.incubateur.social.gouv.fr/
 
 ### Tools
 
-- Slack : https://incubateur-mas.slack.com
-- Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
 - Issues GitHub : [https://github.com/SocialGouv/code-du-travail-numerique/issues]
   - nomenclature des labels :
     - t : `t`ype of issue
     - p : name of `p`roduct (we differentiate ES and nav by themes for now)
     - s : `s`tatus of the issue
     - o : name of the dedicated t`o`ol
-- Piwik : https://matomo.tools.factory.social.gouv.fr
-- Sentry : https://sentry.num.social.gouv.fr/incubateur/code-du-travail-numerique
+- Matomo (piwik) : https://matomo.tools.factory.social.gouv.fr
+- Sentry : https://sentry.tools.factory.social.gouv.fr
+- Mattermost : https://mattermost.num.social.gouv.fr/
+- Trello orga : https://trello.com/b/mZfSEZhg/code-du-travail-num%C3%A9rique
 
 <br>
 <br>
@@ -238,7 +248,7 @@ env:
 
 ## Setup
 
-- ElasticSearch : `docker-compose up`
+- ElasticSearch & nlp : `docker-compose up elasticsearch nlp_api`
 - API : `yarn api`
 - FrontEnd : `yarn frontend`
 

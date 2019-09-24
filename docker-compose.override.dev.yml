@@ -11,19 +11,19 @@ services:
   data:
     build:
       context: ./packages/code-du-travail-data
-    volumes:
-      - ./packages/code-du-travail-data/:/app
+      args:
+        BASE_IMAGE: cdtn_master:local
 
   nlp_api:
     build:
       context: ./packages/code-du-travail-nlp
+      args:
+        BASE_IMAGE: cdtn_master:local
     environment:
       - FLASK_RUN_PORT=$NLP_PORT
       - FLASK_ENV=development
       - FLASK_DEBUG=1
       - NLP_URL=http://localhost
-    volumes:
-      - ./packages/code-du-travail-nlp/:/app
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.3.1
