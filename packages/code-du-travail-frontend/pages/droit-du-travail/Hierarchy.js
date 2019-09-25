@@ -542,7 +542,7 @@ const Number = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem
+  width: 3rem;
   height: 3rem;
   color: ${colors.white};
   font-size: ${fonts.sizeH4};
