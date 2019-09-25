@@ -34,15 +34,20 @@ class NotReady(Exception):
         return rv
 
 
-class Ready:
+class NLP:
     def __init__(self):
         self.ready = {}
         self.data = {}
+        self.threads = []
 
     def __bool__(self):
         if not self.ready:
             return False
         return all(self.ready.values()) # return true iff all are services are ready
+
+    @property
+    def is_ready(self):
+        return bool(self)
 
     @property
     def what(self):
@@ -52,15 +57,27 @@ class Ready:
         if not self.ready.get(target, False):
             raise NotReady(error_message)
 
-    def get(self, target):
+    def get(self, target, check_ready=True):
+        if check_ready:
+            self.check_status(target)
         return self.data.get(target)
 
     def __getitem__(self, item):
         return self.data.get(item)
 
+    def set(self, target, data=None):
+        self.data[target] = data
+        self.ready[target] = True
 
-is_ready = Ready()
+    def queue(self, thread):
+        self.threads.append(thread)
 
+    def load(self):
+        for thread in self.threads:
+            thread.start()
+
+
+nlp = NLP()
 
 
 def load_nlp(app):
@@ -70,9 +87,11 @@ def load_nlp(app):
         response.status_code = error.status_code
         return response
 
-    add_ready(app, is_ready)
-    add_suggest(app, is_ready, queries_path, stops_path)
-    add_search(app, is_ready, content_path, stops_path)
+    add_ready(app, nlp)
+    add_suggest(app, nlp, queries_path, stops_path)
+    add_search(app, nlp, content_path, stops_path)
+
+    nlp.load()
 
     
     
