@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 
-import { Accordion, Alert, icons } from "@cdt/ui-old";
+import { Accordion, Alert, icons, Button } from "@cdt/ui-old";
 import slugify from "@cdt/data/slugify";
 
 import Answer from "../../src/common/Answer";
@@ -103,7 +103,9 @@ const AnswersConventions = ({ answers }) => {
   return (
     <React.Fragment>
       <h3>Que dit votre convention collective ?</h3>
-      <StyledSearchConvention title="" onSelectConvention={setConvention} />
+      {!convention && (
+        <StyledSearchConvention title="" onSelectConvention={setConvention} />
+      )}
       {convention && (
         <React.Fragment>
           <h4>Convention {convention.title}</h4>
@@ -136,6 +138,11 @@ const AnswersConventions = ({ answers }) => {
               </Link>
             </div>
           )}
+          <br />
+          <br />
+          <Button variant="primary" onClick={() => setConvention(null)}>
+            Changer de convention collective
+          </Button>
         </React.Fragment>
       )}
     </React.Fragment>
