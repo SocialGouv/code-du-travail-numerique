@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 
@@ -12,11 +13,12 @@ import Answer from "../../src/common/Answer";
 import SearchConvention from "../../src/conventions/Search/Form";
 import { PageLayout } from "../../src/layout/PageLayout";
 import Metas from "../../src/common/Metas";
-import Mdx from "../../src/common/Mdx";
 
 const {
   publicRuntimeConfig: { API_URL }
 } = getConfig();
+
+const DynamicMdx = dynamic(() => import("../../src/common/Mdx"));
 
 const fetchQuestion = ({ slug }) =>
   fetch(`${API_URL}/items/contributions/${slug}`);
@@ -106,7 +108,7 @@ const AnswersConventions = ({ answers }) => {
           <h4>Convention {convention.title}</h4>
           {(answer && (
             <div>
-              <Mdx
+              <DynamicMdx
                 markdown={makeArticlesLinks(answer.markdown)}
                 components={components}
               />
@@ -160,7 +162,6 @@ class Contribution extends React.Component {
     } = this.props;
 
     const { title, answers, description } = data._source;
-    //console.log("answers", answers
 
     return (
       <div>
@@ -179,7 +180,7 @@ class Contribution extends React.Component {
           >
             <h3>Que dit le code du travail ?</h3>
             {answers.generic && (
-              <Mdx
+              <DynamicMdx
                 markdown={makeArticlesLinks(answers.generic.markdown)}
                 components={components}
               />
