@@ -20,8 +20,6 @@ COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
 COPY ./dataset/annuaire/annuaire.data.json ./dataset/annuaire/annuaire.data.json
 COPY ./dataset/fiches_service_public/fiches-sp.json ./dataset/fiches_service_public/fiches-sp.json
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
-COPY ./dataset/faq.json ./dataset/faq.json
-COPY ./dataset/faq-contributions.json ./dataset/faq-contributions.json
 COPY ./dataset/export-courriers.json ./dataset/export-courriers.json
 COPY ./dataset/outils.json ./dataset/outils.json
 

@@ -6,7 +6,6 @@ const SOURCES = {
   THEMES: "themes",
   TOOLS: "outils",
   LETTERS: "modeles_de_courriers",
-  FAQ: "faq",
   IDCC: "idcc",
   SHEET: "fiches",
   EXTERNALS: "external"
@@ -14,7 +13,6 @@ const SOURCES = {
 
 // mapping elastic search source type -> route name
 const routeBySource = {
-  [SOURCES.FAQ]: "question",
   [SOURCES.SHEET_SP]: "fiche-service-public",
   [SOURCES.SHEET_MT]: "fiche-ministere-travail",
   [SOURCES.CDT]: "code-du-travail",
@@ -28,7 +26,6 @@ const routeBySource = {
 
 // mapping elastic search source type -> source label
 const labelBySource = {
-  [SOURCES.FAQ]: "Réponses",
   [SOURCES.SHEET_SP]: "service-public.fr",
   [SOURCES.SHEET_MT]: "Ministère du Travail",
   [SOURCES.CDT]: "Code du travail",
