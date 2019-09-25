@@ -105,14 +105,14 @@ const AnswersConventions = ({ answers }) => {
   const slugConvention = convention && getConventionSlug(convention);
 
   return (
-    <React.Fragment>
+    <Section>
       <h3>Que dit votre convention collective ?</h3>
       {!convention && (
         <StyledSearchConvention title="" onSelectConvention={setConvention} />
       )}
       {convention && (
         <React.Fragment>
-          <h4>Convention {convention.title}</h4>
+          <h6>Convention {convention.title}</h6>
           {(answer && (
             <div>
               <DynamicMdx
@@ -148,7 +148,7 @@ const AnswersConventions = ({ answers }) => {
           </Button>
         </React.Fragment>
       )}
-    </React.Fragment>
+    </Section>
   );
 };
 
@@ -173,7 +173,6 @@ class Contribution extends React.Component {
     } = this.props;
 
     const { title, answers, description } = data._source;
-
     return (
       <div>
         <PageLayout>
@@ -189,14 +188,15 @@ class Contribution extends React.Component {
             emptyMessage="Cette question n'a pas été trouvée"
             icon={icons.Question}
           >
-            <h3>Que dit le code du travail ?</h3>
             {answers.generic && (
-              <DynamicMdx
-                markdown={makeArticlesLinks(answers.generic.markdown)}
-                components={components}
-              />
+              <Section style={{ marginBottom: 20 }}>
+                <h3>Que dit le code du travail ?</h3>
+                <DynamicMdx
+                  markdown={makeArticlesLinks(answers.generic.markdown)}
+                  components={components}
+                />
+              </Section>
             )}
-            <Spacer />
             <AnswersConventions answers={answers.conventions} />
           </Answer>
         </PageLayout>
@@ -204,6 +204,13 @@ class Contribution extends React.Component {
     );
   }
 }
+
+const Section = styled.section`
+  padding: 10px 20px;
+  background: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+`;
 
 const StyledSearchConvention = styled(SearchConvention)`
   padding: 10px;
