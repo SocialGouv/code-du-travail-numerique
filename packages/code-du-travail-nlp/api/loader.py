@@ -49,7 +49,7 @@ class Ready:
         return list(self.ready)
 
     def check_status(self, target, error_message='NLP API is not ready yet...'):
-        if not self.ready.get(target):
+        if not self.ready.get(target, False):
             raise NotReady(error_message)
 
     def get(self, target):
