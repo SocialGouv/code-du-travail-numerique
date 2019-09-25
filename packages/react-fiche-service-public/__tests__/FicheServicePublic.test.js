@@ -5,7 +5,9 @@ import ficheDataMock from "./ficheData.mock.json";
 
 describe("<FicheServicePublic />", () => {
   it("should render", () => {
-    const { container } = render(<FicheServicePublic data={ficheDataMock.$} />);
+    const { container } = render(
+      <FicheServicePublic data={ficheDataMock.children} />
+    );
     expect(container).toMatchSnapshot();
   });
 });

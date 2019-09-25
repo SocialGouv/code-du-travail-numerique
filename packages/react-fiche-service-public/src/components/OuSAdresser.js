@@ -16,10 +16,11 @@ class OuSAdresser extends React.PureComponent {
   };
   render() {
     const { data, headingLevel } = this.props;
-    const label = getText(data.$.find(child => child.name === "Titre"));
+    const label = getText(data.children.find(child => child.name === "Titre"));
     let content = null;
-    if (data.$.find(child => child.name === "RessourceWeb")) {
-      const url = data.$.find(child => child.name === "RessourceWeb")._.URL;
+    if (data.children.find(child => child.name === "RessourceWeb")) {
+      const url = data.children.find(child => child.name === "RessourceWeb")
+        .attributes.URL;
       content = (
         <a href={url} rel="noopener noreferrer" target="_blank">
           {label}
@@ -28,7 +29,7 @@ class OuSAdresser extends React.PureComponent {
     } else {
       content = (
         <ElementBuilder
-          data={data.$.find(child => child.name === "Texte")}
+          data={data.children.find(child => child.name === "Texte")}
           headingLevel={headingLevel + 1}
         />
       );

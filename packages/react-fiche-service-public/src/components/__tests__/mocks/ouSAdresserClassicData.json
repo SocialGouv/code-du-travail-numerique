@@ -1,32 +1,32 @@
 {
   "type":"element",
   "name":"OuSAdresser",
-  "_":{
+  "attributes":{
     "ID":"R14971",
     "type":"pas pris en compte"
   },
-  "$":[
+  "children":[
     {
       "type":"element",
       "name":"Titre",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"pas pris en compte"
+          "text":"pas pris en compte"
         }
       ]
     },
     {
       "type":"element",
       "name":"Texte",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"Un paragraphe tout bête"
+              "text":"Un paragraphe tout bête"
             }
           ]
         }

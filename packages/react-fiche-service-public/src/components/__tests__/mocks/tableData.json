@@ -1,21 +1,21 @@
 {
   "type":"element",
   "name":"Tableau",
-  "$":[
+  "children":[
     {
       "type":"element",
       "name":"Titre",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"Conditions ouvrant droit à la retraite anticipée pour carrière longue"
+          "text":"Conditions ouvrant droit à la retraite anticipée pour carrière longue"
         }
       ]
     },
     {
       "type":"element",
       "name":"Colonne",
-      "_":{
+      "attributes":{
         "largeur":"13",
         "type":"header"
       }
@@ -23,7 +23,7 @@
     {
       "type":"element",
       "name":"Colonne",
-      "_":{
+      "attributes":{
         "largeur":"19",
         "type":"normal"
       }
@@ -31,7 +31,7 @@
     {
       "type":"element",
       "name":"Colonne",
-      "_":{
+      "attributes":{
         "largeur":"19",
         "type":"normal"
       }
@@ -39,7 +39,7 @@
     {
       "type":"element",
       "name":"Colonne",
-      "_":{
+      "attributes":{
         "largeur":"28",
         "type":"normal"
       }
@@ -47,7 +47,7 @@
     {
       "type":"element",
       "name":"Colonne",
-      "_":{
+      "attributes":{
         "largeur":"28",
         "type":"normal"
       }
@@ -55,24 +55,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"header"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"Année de naissance"
+                  "text":"Année de naissance"
                 }
               ]
             }
@@ -81,17 +81,17 @@
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"Âge de départ à la retraite envisagé (à partir de)"
+                  "text":"Âge de départ à la retraite envisagé (à partir de)"
                 }
               ]
             }
@@ -100,17 +100,17 @@
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"Durée d'assurance minimale cotisée (en trimestres)"
+                  "text":"Durée d'assurance minimale cotisée (en trimestres)"
                 }
               ]
             }
@@ -119,17 +119,17 @@
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionHorizontale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"Durée d'assurance minimale en début de carrière"
+                  "text":"Durée d'assurance minimale en début de carrière"
                 }
               ]
             }
@@ -140,21 +140,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"header"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"Si vous êtes né entre janvier et septembre"
+                  "text":"Si vous êtes né entre janvier et septembre"
                 }
               ]
             }
@@ -163,14 +163,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"Si vous êtes né entre octobre et décembre"
+                  "text":"Si vous êtes né entre octobre et décembre"
                 }
               ]
             }
@@ -181,24 +181,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"1959"
+                  "text":"1959"
                 }
               ]
             }
@@ -207,14 +207,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"57 ans et 8 mois"
+                  "text":"57 ans et 8 mois"
                 }
               ]
             }
@@ -223,14 +223,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"175"
+                  "text":"175"
                 }
               ]
             }
@@ -239,32 +239,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -275,32 +275,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -313,21 +313,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -336,14 +336,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"167"
+                  "text":"167"
                 }
               ]
             }
@@ -352,32 +352,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -388,32 +388,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -426,24 +426,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"1960"
+                  "text":"1960"
                 }
               ]
             }
@@ -452,14 +452,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"58 ans"
+                  "text":"58 ans"
                 }
               ]
             }
@@ -468,14 +468,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"175"
+                  "text":"175"
                 }
               ]
             }
@@ -484,32 +484,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -520,32 +520,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -558,21 +558,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -581,14 +581,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"167"
+                  "text":"167"
                 }
               ]
             }
@@ -597,32 +597,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -633,32 +633,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -671,24 +671,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"1961, 1962 ou 1963"
+                  "text":"1961, 1962 ou 1963"
                 }
               ]
             }
@@ -697,14 +697,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"58 ans"
+                  "text":"58 ans"
                 }
               ]
             }
@@ -713,14 +713,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"176"
+                  "text":"176"
                 }
               ]
             }
@@ -729,32 +729,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -765,32 +765,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -803,21 +803,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -826,14 +826,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"168"
+                  "text":"168"
                 }
               ]
             }
@@ -842,32 +842,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -878,32 +878,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -916,24 +916,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"1964, 1965 ou 1966"
+                  "text":"1964, 1965 ou 1966"
                 }
               ]
             }
@@ -942,14 +942,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"58 ans"
+                  "text":"58 ans"
                 }
               ]
             }
@@ -958,14 +958,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"177"
+                  "text":"177"
                 }
               ]
             }
@@ -974,32 +974,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1010,32 +1010,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1048,21 +1048,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -1071,14 +1071,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"169"
+                  "text":"169"
                 }
               ]
             }
@@ -1087,32 +1087,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1123,32 +1123,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1161,24 +1161,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"1967, 1968 ou 1969"
+                  "text":"1967, 1968 ou 1969"
                 }
               ]
             }
@@ -1187,14 +1187,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"58 ans"
+                  "text":"58 ans"
                 }
               ]
             }
@@ -1203,14 +1203,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"178"
+                  "text":"178"
                 }
               ]
             }
@@ -1219,32 +1219,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1255,32 +1255,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1293,21 +1293,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -1316,14 +1316,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"170"
+                  "text":"170"
                 }
               ]
             }
@@ -1332,32 +1332,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1368,32 +1368,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1406,24 +1406,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"1970, 1971 ou 1972"
+                  "text":"1970, 1971 ou 1972"
                 }
               ]
             }
@@ -1432,14 +1432,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"58 ans"
+                  "text":"58 ans"
                 }
               ]
             }
@@ -1448,14 +1448,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"179"
+                  "text":"179"
                 }
               ]
             }
@@ -1464,32 +1464,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1500,32 +1500,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1538,21 +1538,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -1561,14 +1561,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"171"
+                  "text":"171"
                 }
               ]
             }
@@ -1577,32 +1577,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1613,32 +1613,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1651,24 +1651,24 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "_":{
+          "attributes":{
             "fusionVerticale":"2"
           },
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"À partir de 1973"
+                  "text":"À partir de 1973"
                 }
               ]
             }
@@ -1677,14 +1677,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"58 ans"
+                  "text":"58 ans"
                 }
               ]
             }
@@ -1693,14 +1693,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"180"
+                  "text":"180"
                 }
               ]
             }
@@ -1709,32 +1709,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1745,32 +1745,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"16 ans"
+                      "text":"16 ans"
                     }
                   ]
                 }
@@ -1783,21 +1783,21 @@
     {
       "type":"element",
       "name":"Rangée",
-      "_":{
+      "attributes":{
         "type":"normal"
       },
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"60 ans"
+                  "text":"60 ans"
                 }
               ]
             }
@@ -1806,14 +1806,14 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"172"
+                  "text":"172"
                 }
               ]
             }
@@ -1822,32 +1822,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"5"
+                      "text":"5"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }
@@ -1858,32 +1858,32 @@
         {
           "type":"element",
           "name":"Cellule",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"4"
+                      "text":"4"
                     }
                   ]
                 },
                 {
                   "type":"text",
-                  "$":" trimestres à la fin de l'année des "
+                  "text":" trimestres à la fin de l'année des "
                 },
                 {
                   "type":"element",
                   "name":"MiseEnEvidence",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"20 ans"
+                      "text":"20 ans"
                     }
                   ]
                 }

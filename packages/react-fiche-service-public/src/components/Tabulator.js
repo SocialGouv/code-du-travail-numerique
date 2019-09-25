@@ -18,9 +18,9 @@ class Tabulator extends React.PureComponent {
         ? previousHeadingLevel + 1
         : previousHeadingLevel;
 
-    const tabsData = data.$.map(tab => {
-      const title = tab.$.find(el => el.name === "Titre");
-      const content = tab.$.filter(el => el.name !== "Titre");
+    const tabsData = data.children.map(tab => {
+      const title = tab.children.find(el => el.name === "Titre");
+      const content = tab.children.filter(el => el.name !== "Titre");
       return {
         tab: (
           <ElementBuilder

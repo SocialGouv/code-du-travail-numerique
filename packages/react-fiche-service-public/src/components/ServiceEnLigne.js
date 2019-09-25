@@ -13,10 +13,10 @@ class ServiceEnLigne extends React.PureComponent {
   };
   render() {
     const { data } = this.props;
-    const type = data._.type;
-    const url = data._.URL;
-    const title = getText(data.$[0]);
-    const source = getText(data.$[1]);
+    const type = data.attributes.type;
+    const url = data.attributes.URL;
+    const title = getText(data.children[0]);
+    const source = getText(data.children[1]);
     return (
       <Wrapper>
         <Type>{type}</Type>

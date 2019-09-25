@@ -32,12 +32,12 @@ export function ElementBuilder({ data, headingLevel }) {
     ));
   }
   if (data.type === "text") {
-    return data.$;
+    return data.text;
   }
   switch (data.name) {
     // Complex elements, we don't immediately parse their children
     case "BlocCas":
-      if (data._.affichage === "onglet") {
+      if (data.attributes.affichage === "onglet") {
         return <Tabulator data={data} headingLevel={headingLevel} />;
       } else {
         return <Accordion data={data} headingLevel={headingLevel} />;
@@ -67,10 +67,10 @@ export function ElementBuilder({ data, headingLevel }) {
     case "Tableau":
       return <Table data={data} headingLevel={headingLevel} />;
     case "Texte":
-      if (data.$.find(child => child.name === "Chapitre")) {
+      if (data.children.find(child => child.name === "Chapitre")) {
         return <Accordion data={data} headingLevel={headingLevel} />;
       }
-      return parseChildren(data.$, headingLevel);
+      return parseChildren(data.children, headingLevel);
     case "Titre":
       return <Title level={headingLevel}>{getText(data)}</Title>;
     // "Simple" elements, we can immediately parse their children
@@ -78,23 +78,23 @@ export function ElementBuilder({ data, headingLevel }) {
     case "ASavoir":
     case "Attention":
     case "Rappel":
-      return <ANoter>{parseChildren(data.$, headingLevel)}</ANoter>;
+      return <ANoter>{parseChildren(data.children, headingLevel)}</ANoter>;
     case "Chapitre":
     case "SousChapitre":
-      return parseChildren(data.$, headingLevel);
+      return parseChildren(data.children, headingLevel);
     case "Expression":
-      return <i>{parseChildren(data.$, headingLevel)}</i>;
+      return <i>{parseChildren(data.children, headingLevel)}</i>;
     case "MiseEnEvidence":
     case "Valeur":
-      return <strong>{parseChildren(data.$, headingLevel)}</strong>;
+      return <strong>{parseChildren(data.children, headingLevel)}</strong>;
     case "Paragraphe":
-      return <p>{parseChildren(data.$, headingLevel)}</p>;
+      return <p>{parseChildren(data.children, headingLevel)}</p>;
     case "Exposant":
-      return <sup>{parseChildren(data.$, headingLevel)}</sup>;
+      return <sup>{parseChildren(data.children, headingLevel)}</sup>;
     // These ones are still to be defined
     case "LienIntra":
     case "LienInterne":
-      return parseChildren(data.$, headingLevel);
+      return parseChildren(data.children, headingLevel);
     // Otherwise we simply ignore the element
     default:
       return null;

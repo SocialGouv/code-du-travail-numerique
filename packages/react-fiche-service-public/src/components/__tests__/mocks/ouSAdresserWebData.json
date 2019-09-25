@@ -1,58 +1,58 @@
 {
   "type":"element",
   "name":"OuSAdresser",
-  "_":{
+  "attributes":{
     "ID":"R11621",
     "type":"pas pris en compte"
   },
-  "$":[
+  "children":[
     {
       "type":"element",
       "name":"Titre",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"Label du lien !"
+          "text":"Label du lien !"
         }
       ]
     },
     {
       "type":"element",
       "name":"Complement",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"pas pris en compte"
+          "text":"pas pris en compte"
         }
       ]
     },
     {
       "type":"element",
       "name":"PivotLocal",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"par pris en compte"
+          "text":"par pris en compte"
         }
       ]
     },
     {
       "type":"element",
       "name":"RessourceWeb",
-      "_":{
+      "attributes":{
         "URL":"url du lien"
       }
     },
     {
       "type":"element",
       "name":"Source",
-      "_":{
+      "attributes":{
         "ID":"R30663"
       },
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"pas pris en compte"
+          "text":"pas pris en compte"
         }
       ]
     }
