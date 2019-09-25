@@ -4,6 +4,12 @@ module.exports = withSourceMaps({
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,
 
+  webpack: (config, { isServer }) => {
+    // Fixes npm packages that depend on `fs` module like mdx/runtime
+    if (!isServer) config.node = { fs: "empty" };
+    return config;
+  },
+
   publicRuntimeConfig: {
     API_ADDRESS: "https://api-adresse.data.gouv.fr/search",
     API_SIRET2IDCC_URL:

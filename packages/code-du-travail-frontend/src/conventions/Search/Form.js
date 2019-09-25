@@ -65,7 +65,7 @@ const Search = ({
 
   return (
     <Container>
-      <h3>{title}</h3>
+      {title && <h3>{title}</h3>}
       <p>
         Saisissez le nom de votre entreprise, la convention collective ou le
         numéro SIRET

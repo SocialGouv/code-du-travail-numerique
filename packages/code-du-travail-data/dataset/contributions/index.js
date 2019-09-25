@@ -1,8 +1,4 @@
 const fetch = require("node-fetch");
-const remark = require("remark");
-const html = require("remark-html");
-
-const compiler = remark().use(html, { sanitize: true });
 
 const fetchContributions = async () => {
   const agreements = await fetch(
@@ -24,7 +20,7 @@ const fetchContributions = async () => {
     answers
       .filter(a => a.question_id === questionId && !!a.agreement_id)
       .map(ccAnswer => ({
-        html: compiler.processSync(ccAnswer.value).contents.replace(/\n/g, ""),
+        markdown: ccAnswer.value,
         idcc: getAgreementIdcc(ccAnswer.agreement_id)
       }));
 
@@ -36,9 +32,7 @@ const fetchContributions = async () => {
       return;
     }
     return {
-      html: compiler
-        .processSync(genericAnswer.value)
-        .contents.replace(/\n/g, "")
+      markdown: genericAnswer.value
     };
   };
 
