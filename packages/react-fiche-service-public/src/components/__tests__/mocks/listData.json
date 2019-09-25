@@ -1,25 +1,25 @@
 {
   "type":"element",
   "name":"Liste",
-  "_":{
+  "attributes":{
     "type":"puce"
   },
-  "$":[
+  "children":[
     {
       "type":"element",
       "name":"Item",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Titre",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"title"
+                  "text":"title"
                 }
               ]
             }
@@ -30,14 +30,14 @@
     {
       "type":"element",
       "name":"Item",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"ok"
+              "text":"ok"
             }
           ]
         }

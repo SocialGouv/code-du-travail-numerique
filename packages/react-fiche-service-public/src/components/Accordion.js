@@ -9,7 +9,7 @@ const { spacing } = theme;
 
 const isItemOfAccordion = element =>
   (element.name === "Chapitre" || element.name === "Cas") &&
-  element.$.find(child => child.name === "Titre");
+  element.children.find(child => child.name === "Titre");
 
 class AccordionWrapper extends React.PureComponent {
   static propTypes = {
@@ -18,18 +18,23 @@ class AccordionWrapper extends React.PureComponent {
   };
   render() {
     const { data, headingLevel } = this.props;
-    const firstIndexOfAccordionItem = data.$.findIndex(isItemOfAccordion);
-    const accordionItems = data.$.filter(isItemOfAccordion).map(
-      accordionItem => {
+    const firstIndexOfAccordionItem = data.children.findIndex(
+      isItemOfAccordion
+    );
+    const accordionItems = data.children
+      .filter(isItemOfAccordion)
+      .map(accordionItem => {
         const title = (
           <ElementBuilder
-            data={accordionItem.$.find(child => child.name === "Titre")}
+            data={accordionItem.children.find(child => child.name === "Titre")}
             headingLevel={headingLevel}
           />
         );
         const body = (
           <ElementBuilder
-            data={accordionItem.$.filter(child => child.name !== "Titre")}
+            data={accordionItem.children.filter(
+              child => child.name !== "Titre"
+            )}
             headingLevel={headingLevel + 1}
           />
         );
@@ -37,21 +42,27 @@ class AccordionWrapper extends React.PureComponent {
           title,
           body
         };
-      }
-    );
+      });
 
-    const beforeAccordionElements = data.$.slice(
-      0,
-      firstIndexOfAccordionItem
-    ).map((element, index) => (
-      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
-    ));
+    const beforeAccordionElements = data.children
+      .slice(0, firstIndexOfAccordionItem)
+      .map((element, index) => (
+        <ElementBuilder
+          key={index}
+          data={element}
+          headingLevel={headingLevel}
+        />
+      ));
 
-    const afterAccordionElements = data.$.slice(
-      firstIndexOfAccordionItem + accordionItems.length
-    ).map((element, index) => (
-      <ElementBuilder key={index} data={element} headingLevel={headingLevel} />
-    ));
+    const afterAccordionElements = data.children
+      .slice(firstIndexOfAccordionItem + accordionItems.length)
+      .map((element, index) => (
+        <ElementBuilder
+          key={index}
+          data={element}
+          headingLevel={headingLevel}
+        />
+      ));
     return (
       <>
         {beforeAccordionElements}

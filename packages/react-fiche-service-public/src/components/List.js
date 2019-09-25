@@ -15,13 +15,13 @@ class List extends React.PureComponent {
   };
   render() {
     const { data, headingLevel } = this.props;
-    const items = data.$.map((item, index) => (
+    const items = data.children.map((item, index) => (
       <StyledLi key={index}>
-        <ElementBuilder data={item.$} headingLevel={headingLevel + 1} />
+        <ElementBuilder data={item.children} headingLevel={headingLevel + 1} />
       </StyledLi>
     ));
 
-    if (data._.type === "puce") {
+    if (data.attributes.type === "puce") {
       return <ul>{items}</ul>;
     }
     return <ol>{items}</ol>;

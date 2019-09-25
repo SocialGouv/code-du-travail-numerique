@@ -1,16 +1,16 @@
 {
-  "$":[
+  "children":[
     {
       "type":"element",
       "name":"Titre",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"titre 0"
+              "text":"titre 0"
             }
           ]
         }
@@ -19,28 +19,28 @@
     {
       "type":"element",
       "name":"Paragraphe",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"paragraphe 0"
+          "text":"paragraphe 0"
         }
       ]
     },
     {
       "type":"element",
       "name":"Chapitre",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Titre",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"titre 1"
+                  "text":"titre 1"
                 }
               ]
             }
@@ -49,20 +49,20 @@
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"paragraphe 1-1"
+              "text":"paragraphe 1-1"
             }
           ]
         },
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"paragraphe 1-2"
+              "text":"paragraphe 1-2"
             }
           ]
         }
@@ -71,18 +71,18 @@
     {
       "type":"element",
       "name":"Chapitre",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Titre",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"titre 2"
+                  "text":"titre 2"
                 }
               ]
             }
@@ -91,38 +91,38 @@
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"paragraphe 2-1"
+              "text":"paragraphe 2-1"
             }
           ]
         },
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"paragraphe 2-2"
+              "text":"paragraphe 2-2"
             }
           ]
         },
         {
           "type":"element",
           "name":"Texte",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Titre",
-              "$":[
+              "children":[
                 {
                   "type":"element",
                   "name":"Paragraphe",
-                  "$":[
+                  "children":[
                     {
                       "type":"text",
-                      "$":"titre 2-1"
+                      "text":"titre 2-1"
                     }
                   ]
                 }
@@ -135,18 +135,18 @@
     {
       "type":"element",
       "name":"Chapitre",
-      "$":[
+      "children":[
         {
           "type":"element",
           "name":"Titre",
-          "$":[
+          "children":[
             {
               "type":"element",
               "name":"Paragraphe",
-              "$":[
+              "children":[
                 {
                   "type":"text",
-                  "$":"titre 3"
+                  "text":"titre 3"
                 }
               ]
             }
@@ -155,10 +155,10 @@
         {
           "type":"element",
           "name":"Paragraphe",
-          "$":[
+          "children":[
             {
               "type":"text",
-              "$":"paragraphe 3-1"
+              "text":"paragraphe 3-1"
             }
           ]
         }
@@ -167,10 +167,10 @@
     {
       "type":"element",
       "name":"Paragraphe",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"paragraphe 4"
+          "text":"paragraphe 4"
         }
       ]
     }

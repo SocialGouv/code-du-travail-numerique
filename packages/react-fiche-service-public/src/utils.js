@@ -1,10 +1,12 @@
 // beware, this one is recursive
 export function getText(element = { text: "" }, separator = " ") {
   if (element.type === "text") {
-    return element.$.trim();
+    return element.text.trim();
   }
-  if (element.$) {
-    return element.$.map(child => getText(child, separator)).join(separator);
+  if (element.children) {
+    return element.children
+      .map(child => getText(child, separator))
+      .join(separator);
   }
   if (Array.isArray(element)) {
     return element.map(child => getText(child, separator)).join(separator);
@@ -13,12 +15,12 @@ export function getText(element = { text: "" }, separator = " ") {
 }
 
 export const ignoreParagraph = element =>
-  element.$.map(child => {
+  element.children.map(child => {
     if (child.name === "Texte") {
       return ignoreParagraph(child);
     }
     if (child.name === "Paragraphe") {
-      return child.$;
+      return child.children;
     }
     return child;
   });

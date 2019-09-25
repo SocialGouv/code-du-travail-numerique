@@ -15,25 +15,25 @@ class Table extends React.PureComponent {
   render() {
     const { data, headingLevel } = this.props;
 
-    const title = data.$.find(child => child.name === "Titre");
-    const headingRows = data.$.filter(
-      child => child.name === "Rangée" && child._.type === "header"
+    const title = data.children.find(child => child.name === "Titre");
+    const headingRows = data.children.filter(
+      child => child.name === "Rangée" && child.attributes.type === "header"
     );
-    const rows = data.$.filter(
-      child => child.name === "Rangée" && child._.type === "normal"
+    const rows = data.children.filter(
+      child => child.name === "Rangée" && child.attributes.type === "normal"
     );
 
-    const columns = data.$.filter(child => child.name === "Colonne");
+    const columns = data.children.filter(child => child.name === "Colonne");
     const isHeaderCell = columnIndex => {
-      return columns[columnIndex]._.type === ROW_HEADER;
+      return columns[columnIndex].attributes.type === ROW_HEADER;
     };
 
     const handleSpan = el => {
       let colSpan = 1;
       let rowSpan = 1;
-      if (el._) {
-        colSpan = el._.fusionHorizontale || 1;
-        rowSpan = el._.fusionVerticale || 1;
+      if (el.attributes) {
+        colSpan = el.attributes.fusionHorizontale || 1;
+        rowSpan = el.attributes.fusionVerticale || 1;
       }
       return {
         colSpan,
@@ -48,9 +48,9 @@ class Table extends React.PureComponent {
           <thead>
             {headingRows.map((tr, rowIndex) => (
               <tr key={rowIndex}>
-                {tr.$.map((th, columnIndex) => (
+                {tr.children.map((th, columnIndex) => (
                   <th key={columnIndex} {...handleSpan(th)}>
-                    {th.$ && (
+                    {th.children && (
                       <ElementBuilder
                         data={ignoreParagraph(th)}
                         headingLevel={headingLevel}
@@ -65,9 +65,9 @@ class Table extends React.PureComponent {
         <tbody>
           {rows.map((tr, rowIndex) => (
             <tr key={rowIndex}>
-              {tr.$.map((td, columnIndex) => {
+              {tr.children.map((td, columnIndex) => {
                 const Cell = isHeaderCell(columnIndex) ? "th" : "td";
-                if (!td.$) {
+                if (!td.children) {
                   return <Cell />;
                 }
                 return (

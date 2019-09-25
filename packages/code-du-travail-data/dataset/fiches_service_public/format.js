@@ -1,25 +1,26 @@
 const parseReference = require("./parseReference");
-const getChild = (element, name) => element.$.find(el => el.name === name);
+const getChild = (element, name) =>
+  element.children.find(el => el.name === name);
 
 // Beware, this one is recursive
 function getText(element = { text: "" }) {
   if (element.type === "text") {
-    return element.$.trim();
+    return element.text.trim();
   }
-  if (element.$) {
-    return element.$.map(child => getText(child)).join(" ");
+  if (element.children) {
+    return element.children.map(child => getText(child)).join(" ");
   }
   return "";
 }
 
 const format = fiche => {
-  if (!fiche.$[0].name === "Publication") return null;
+  if (!fiche.children[0].name === "Publication") return null;
 
-  const publication = fiche.$[0];
-  const { ID: id, type } = publication._;
+  const publication = fiche.children[0];
+  const { ID: id, type } = publication.attributes;
 
   // We filter out the elements we will never use nor display
-  publication.$ = publication.$.filter(
+  publication.children = publication.children.filter(
     child => child.name !== "OuSAdresser" && child.name !== "ServiceEnLigne"
   );
 
@@ -39,9 +40,8 @@ const format = fiche => {
   const listeSituations = getText(getChild(publication, "ListeSituations"));
   const text = intro + " " + texte + " " + listeSituations;
 
-  const references_juridiques = publication.$.filter(
-    el => el.name === "Reference"
-  )
+  const references_juridiques = publication.children
+    .filter(el => el.name === "Reference")
     .map(parseReference)
     .reduce((acc, val) => acc.concat(val), []) // flatten the array
     .filter(Boolean);
