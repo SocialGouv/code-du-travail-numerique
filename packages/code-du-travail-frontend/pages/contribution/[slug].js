@@ -89,15 +89,16 @@ const components = {
   section: AnswerSection
 };
 
+// following data/populate.js slug rules
+const getConventionSlug = convention =>
+  slugify(`${convention.num}-${convention.title}`.substring(0, 80));
+
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
   const [convention, setConvention] = useState();
   const answer = convention && answers.find(a => a.idcc === convention.num);
 
-  // following data/populate.js slug rules
-  const slugConvention =
-    convention &&
-    slugify(`${convention.num}-${convention.title}`.substring(0, 80));
+  const slugConvention = convention && getConventionSlug(convention);
 
   return (
     <React.Fragment>

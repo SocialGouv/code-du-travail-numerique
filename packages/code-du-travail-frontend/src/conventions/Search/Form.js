@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
+import slugify from "@cdt/data/slugify";
 import { theme, Container, Table, Tag } from "@cdt/ui-old";
 
 import SearchCC from "./SearchCC";
 
-// link to a CC
-const CC = ({ id, num, title, onClick }) => {
+// following data/populate.js slug rules
+const getConventionSlug = convention =>
+  slugify(`${convention.num}-${convention.title}`.substring(0, 80));
+
+// link to a Convention
+const Convention = ({ num, title, onClick }) => {
   return (
     <Box>
       <Flex>
@@ -15,15 +21,19 @@ const CC = ({ id, num, title, onClick }) => {
         </Tag>
         <Spacer />
         {onClick ? (
-          <CCLink onClick={onClick}>{title}</CCLink>
+          <ConventionLink onClick={onClick}>{title}</ConventionLink>
         ) : (
-          <CCLink
+          <ConventionLink
+            as={Link}
             target={`_blank`}
             rel="noopener noreferrer"
-            href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`}
+            href={`/conventions-collectives/${getConventionSlug({
+              num,
+              title
+            })}`}
           >
             {title}
-          </CCLink>
+          </ConventionLink>
         )}
       </Flex>
     </Box>
@@ -99,10 +109,10 @@ const Search = ({
                             <ResultLabel>{result.label}</ResultLabel>
                             {result.siret && <TagSiret siret={result.siret} />}
                           </Flex>
-                          <CCsContainer>
+                          <ConventionsContainer>
                             {result.conventions && result.conventions.length ? (
                               result.conventions.map(convention => (
-                                <CC
+                                <Convention
                                   onClick={
                                     onSelectConvention &&
                                     (() => selectConvention(convention))
@@ -117,7 +127,7 @@ const Search = ({
                                 entreprise
                               </div>
                             )}
-                          </CCsContainer>
+                          </ConventionsContainer>
                         </td>
                       </tr>
                     ))}
@@ -138,7 +148,7 @@ const ResultsContainer = styled.div`
   margin-top: ${theme.spacing.medium};
 `;
 
-const CCLink = styled.a`
+const ConventionLink = styled.a`
   color: ${theme.colors.lightText};
   cursor: pointer;
 `;
@@ -151,7 +161,7 @@ const Box = styled.div`
   margin: ${theme.spacing.small} 0;
 `;
 
-const CCsContainer = styled.div`
+const ConventionsContainer = styled.div`
   margin-top: ${theme.spacing.small};
 `;
 
