@@ -14,7 +14,6 @@ async function createIndex({ client, indexName, mappings }) {
   try {
     await client.indices.create({
       index: indexName,
-      includeTypeName: false,
       body: {
         settings: {
           number_of_shards: 1,

@@ -34,18 +34,20 @@ const client = new Client({
 });
 
 async function main() {
+  const ts = Date.now();
+
   await version({ client });
   // Indexing document data
   // Indexing CCN data
 
   await createIndex({
     client,
-    indexName: CDTN_CCN_NAME,
+    indexName: `${CDTN_CCN_NAME}-${ts}`,
     mappings: conventionCollectiveMapping
   });
   for (const documents of cdtnCcnGen(conventionList, 10000000)) {
     await indexDocumentsBatched({
-      indexName: CDTN_CCN_NAME,
+      indexName: `${CDTN_CCN_NAME}-${ts}`,
       client,
       documents
     });
@@ -53,12 +55,12 @@ async function main() {
 
   await createIndex({
     client,
-    indexName: CDTN_INDEX_NAME,
+    indexName: `${CDTN_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
   for (const documents of cdtnDocumentsGen()) {
     await indexDocumentsBatched({
-      indexName: CDTN_INDEX_NAME,
+      indexName: `${CDTN_INDEX_NAME}-${ts}`,
       client,
       documents,
       size: 1000
@@ -68,12 +70,12 @@ async function main() {
   // Indexing Annuaire data
   await createIndex({
     client,
-    indexName: ANNUAIRE_INDEX_NAME,
+    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
     mappings: annuaireMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: ANNUAIRE_INDEX_NAME,
+    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
     documents: annuaire,
     size: 500
   });
@@ -81,15 +83,26 @@ async function main() {
   // Indexing Themes data
   await createIndex({
     client,
-    indexName: THEMES_INDEX_NAME,
+    indexName: `${THEMES_INDEX_NAME}-${ts}`,
     mappings: themesMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: THEMES_INDEX_NAME,
+    indexName: `${THEMES_INDEX_NAME}-${ts}`,
     documents: themes,
     size: 500
   });
+
+  await client.indices.putAlias(
+    `${ANNUAIRE_INDEX_NAME}-${ts}`,
+    ANNUAIRE_INDEX_NAME
+  );
+  await client.indices.putAlias(
+    `${THEMES_INDEX_NAME}-${ts}`,
+    THEMES_INDEX_NAME
+  );
+  await client.indices.putAlias(`${CDTN_CCN_NAME}-${ts}`, CDTN_CCN_NAME);
+  await client.indices.putAlias(`${CDTN_INDEX_NAME}-${ts}`, CDTN_INDEX_NAME);
 }
 
 main();
