@@ -1,4 +1,3 @@
-import striptags from "striptags";
 import crypto from "crypto";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
