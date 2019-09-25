@@ -6,10 +6,14 @@
     "updated_at": "2019-08-08T07:44:01.781512+00:00",
     "index": 46,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "#### Si la convention collective, un accord d’entreprise ou le contrat de travail prévoit des mesures plus favorables pour le salarié, l’employeur doit l’appliquer."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.\n\nPour les salariés dépendant de l'ancienne convention collective nationale du commerce de gros des tissus, tapis et linges de maison, un accord prévoit des mesures particulières. En cas de maladie survenant pendant que le salarié est en congé annuel, les jours de maladie inclus\ndans cette période ne sont pas déduits de la durée du congé. Toutefois, en cas de maladie survenue\npendant les congés payés et entraînant un arrêt de travail de 90 jours au moins, le salarié pourra\nreporter les jours de maladie indemnisés pendant son congé sur une période ultérieure, en\nrespectant les modalités générales de prise des congés payés.\n\nCes dispositions concernent les salariés dont le contrat de travail est en cours au 1er octobre 2019. Elles s'appliquent jusqu'au 1er octobre 2020.\n\nLa convention collective ne prévoit rien pour les autres salariés.",
           "idcc": "0573"
@@ -192,10 +196,14 @@
     "updated_at": "2019-08-08T07:43:04.480998+00:00",
     "index": 37,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "#### La convention collective, un accord collectif d’entreprise ou le contrat de travail peut prévoir des règles différentes. Dans ce cas, il faut appliquer la mesure la plus favorable pour les salariés."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0573"
@@ -383,6 +391,10 @@
     "index": 5,
     "answers": {
       "conventions": [
+        {
+          "markdown": "*voir la question 3*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 3*",
           "idcc": "2120"
@@ -579,6 +591,10 @@
     "answers": {
       "conventions": [
         {
+          "markdown": "Si les conditions n'ont pas permis d'apprécier le travail exécuté, la période d'essai peut être renouvelée une fois, par accord de l'employeur et du salarié, dans le respect des durées prévues par la convention collective.",
+          "idcc": "1351"
+        },
+        {
           "markdown": "La convention collective prévoit le renouvellement de la période d'essai pour les salariés en CDI de la catégorie professionnelle \"techniciens\". Celle-ci peut être renouvelée une fois, par accord écrit entre l'employeur et le salarié.  \n\nLa période d'essai pour les salariés de la catégorie professionnelle \"cadres\" ne peut pas être renouvelée.",
           "idcc": "2120"
         },
@@ -772,10 +788,15 @@
     "updated_at": "2019-08-05T15:26:45.889434+00:00",
     "index": 3,
     "answers": {
-      "general": {
-        "markdown": "Le code du travail prévoit la durée maximale de la période d’essai. Il précise que dans certains cas, la période d’essai est automatiquement réduite ou supprimée.\n\nEn effet, il ne peut pas y avoir de période d’essai en cas d’embauche en CDI, CDD ou contrat d’intérim après la fin du contrat d’apprentissage, sauf si une convention collective ou un accord d’entreprise en prévoit une.\n\nEn outre, la durée de la période d’essai normalement prévue est automatiquement réduite dans les cas suivants :\n\n- En cas de poursuite du contrat de travail en CDI après la fin d’un CDD, la durée du CDD est déduite de la période d’essai du CDI,\n- En cas d’embauche après la fin du contrat d’intérim, la durée des missions effectuées par le salarié dans l'entreprise au cours des 3 mois précédant l'embauche, est déduite de la période d'essai,\n- En cas d’embauche après un stage intégré à un cursus pédagogique réalisé lors de la dernière année d'études, la durée de ce stage est déduite de la période d’essai, dans la limite de la moitié de la durée normalement applicable. Une convention collective ou un accord d’entreprise peut prévoir une mesure plus avantageuse pour le salarié.\n\nLa durée de la période d'essai varie en fonction du type de contrat de travail. \n\n<section data-type=\"tab\" data-title=\"CDI\">\n\n**CDI**\n\nLa période d’essai, appelée période d’essai initiale, peut être renouvelée une fois. Sa durée varie en fonction de la catégorie professionnelle du salarié.\n\nOuvriers et Employés : \n- Durée de la période d’essai initiale : 2 mois\n- Durée totale de la période d’essai avec renouvellement : 4 mois\n\nAgents de maîtrise :\n- Durée de la période d’essai initiale : 3 mois\n- Durée totale de la période d’essai avec renouvellement : 6 mois\n\nCadres :\n- Durée de la période d’essai initiale : 4 mois\n- Durée totale de la période d’essai avec renouvellement : 8 mois\n\n<section data-type=\"hdn\">\n\nUne durée plus longue de la période d’essai peut être prévue par une convention ou un accord de branche conclu avant le 26 juin 2008.\n\nUne durée plus courte peut être prévue par une convention ou un accord de branche, un accord collectif de groupe, d’entreprise ou d’établissement, s’ils ont été conclus après le 26 juin 2008.\n\nLe contrat de travail peut toujours prévoir une durée de la période d’essai plus courte que le code du travail ou la convention collective. Il ne peut pas prévoir une durée plus longue.\n\n</section>\n\n<section data-type=\"source\" text=\"cdt\">\n\nArticle L1221-19, L1221-21 et L1221-22\n\n</section>\n\n</section>\n\n<section data-type=\"tab\" data-title=\"CDD\">  \n\n**CDD**\n\nLa durée de la période d’essai dépend de la durée du CDD. Si le CDD n’a pas de terme précis, la durée de la période d’essai est fixée par rapport à la durée minimale du CDD.\n\n- CDD de 6 mois maximum : 1 jour par semaine de travail, sans dépasser 2 semaines de période d’essai ;\n- CDD de plus de 6 mois : 1 mois maximum.\n\n<section data-type=\"hdn\">\n\nSi la convention collective, un accord d’entreprise ou le contrat de travail prévoit une durée plus courte, il faut l’appliquer. Ils ne peuvent pas prévoir une durée plus longue que celle fixée par le code du travail.\n\n</section>\n\n<section data-type=\"source\" text=\"cdt\">\n\nArticle L1242-10\n\n</section>\n\n</section>\n\n<section data-type=\"tab\" data-title=\"Contrat de mission (intérim)\"> \n\n**Contrat de mission (intérim)**\n\nLa durée de la période d’essai est fixée par l’accord de branche, ou à défaut par l’accord d’entreprise, ou à défaut par la loi. La durée de la période d’essai dépend de la durée du contrat d’intérim.\n\n- Contrat de mission de 1 mois maximum : 2 jours\n- Contrat de mission de 1 à 2 mois : 3 jours\n- Contrat de mission de plus de 2 mois : 5 jours\n\n<section data-type=\"hdn\">\n\nSi la convention collective, un accord d’entreprise ou le contrat de travail prévoit une durée plus courte, il faut l’appliquer. Ils ne peuvent pas prévoir une durée plus longue que celle fixée par le code du travail.\n\n</section>\n\n<section data-type=\"source\" text=\"cdt\">\n\nArticle L1251-14\n\n</section>\n\n</section>\n\n<section data-type=\"tab\" data-title=\"Contrat d’apprentissage\">\n \n**Contrat d'apprentissage**\n\nLe code du travail n’évoque pas la période d’essai du contrat d'apprentissage. Il prévoit que ce peut être librement rompu par l’employeur ou l’apprenti (et son représentant s’il est mineur) pendant les 45 premiers jours, consécutifs ou non, de formation pratique en entreprise effectuée par l'apprenti. \n\n<section data-type=\"source\" text=\"cdt\">\n\nArticle L6222-18\n\n</section>\n\n</section>\n\n<section type=\"tab\" name=\"Contrat de travail à temps partiel\">\n\n**Contrat de travail à temps partiel**\n\nLa durée de la période d’essai du contrat de travail à temps partiel est celle du CDD ou du CDI, selon le type de contrat qui a été conclu. La période d'essai d'un salarié à temps partiel ne peut avoir une durée calendaire supérieure à celle du salarié à temps complet.\n\n<section data-type=\"source\" text=\"cdt\">\n\nArticle L3123-5 \n\n</section>\n\n</section>\n\n<section data-type=\"tab\" data-title=\"Contrat de professionnalisation\">\n\n**Contrat de professionnalisation**\n\nLa durée de la période d’essai du contrat de professionnalisation est celle du CDD ou du CDI, selon le type de contrat qui a été conclu.\n\n</section>\n\n<section data-type=\"tab\" data-title=\"Contrat de portage salarial\">\n\n**Contrat de portage salarial**\n\nLa durée de la période d’essai du contrat de portage salarial est celle du CDD ou du CDI, selon le type de contrat qui a été conclu.\n\n</section>"
-      },
       "conventions": [
+        {
+          "markdown": "Les durées de la période d'essai prévues par la convention collective ont été fixées par un avenant* conclu après le 26 juin 2008.\n\nPour les salariés en CDI, la durée maximale de la période d'essai est égale à :\n\n- Agents d'exploitation, employés administratifs et techniciens : 2 mois pour la période d'essai initiale, 1 mois pour la période d'essai renouvelée (donc 3 mois au total) ;\n\n- Agents de Maîtrise : 3 mois pour la période d'essai initiale, 3 mois pour la période d'essai renouvelée (donc 6 mois au total) ;\n\n- Cadres : 4 mois pour la période d'essai initiale, 4 mois pour la période d'essai renouvelée (donc 8 mois au total).\n\n**L'avenant a été conclu le 16 juillet 2009.*",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "Les durées de la période d'essai ont été fixées par une convention collective conclue après le 26 juin 2008. \n\nEn cas d'embauche dans l'entreprise à l'issue du stage intégré à un cursus pédagogique réalisé lors de la dernière année d'études, la durée de ce stage est déduite de la période d'essai, sans que cela ait pour effet de réduire cette dernière de plus de la moitié, renouvellement compris.\n\nPour un salarié en CDI, la convention collective prévoit que la durée maximale de la période d'essai est de :\n\n- Pour les employés : 2 mois pour la période d'essai initiale, 2 mois pour la période d'essai renouvelée (donc 4 mois au total) ;\n- Pour les agents de maîtrise : 3 mois pour la période d'essai initiale, 2 mois pour la période d'essai renouvelée (donc 5 mois au total) ;\n- Pour les salariés cadres : 4 mois pour la période d'essai initiale, 2 mois pour la période d'essai renouvelée (donc 6 mois au total). \n\nPour un salarié en CDD, la durée de la période d'essai est de :\n\n* 1 jour par semaine dans la limite de 2 semaines, lorsque la durée initialement du CDD est égale à 6 mois ou moins ;\n* 1 mois maximum pour les CDD d'une durée initiale supérieure à 6 mois.",
+          "idcc": "3127"
+        },
         {
           "markdown": "Les durées de la période d'essai prévues par la convention collective ont été fixées par un avenant* conclu après le 26 juin 2008. \n\nPour le salarié en CDI, la durée maximale de la période d'essai est égale à :\n\n* Pour les ouvriers et employés : 1 mois pour la période d'essai initiale, 1 mois pour la période de renouvellement ;\n* Pour les techniciens et agents de maîtrise : 2 mois pour la période d'essai initiale, 2 mois pour la période de renouvellement ;\n* Pour les cadres : 3 mois pour la période d'essai initiale, 3 mois pour la période de renouvellement.\n\nPour le salarié en CDD spécifique, il ne peut pas y avoir de période d'essai. \n\n**L'avenant a été conclu le 24 novembre 2008.*",
           "idcc": "2511"
@@ -966,10 +987,14 @@
     "updated_at": "2019-07-25T16:06:45.778221+00:00",
     "index": 42,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail prévoit le montant de l’indemnité de départ à la retraite. \n\n#### Si la convention collective, un accord d’entreprise ou le contrat de travail prévoit des mesures plus favorables pour le salarié, l’employeur doit l’appliquer.\n\n#### *(Exemple : certaines conventions collectives prévoient le versement d’une indemnité de départ à la retraite sans condition d’ancienneté. Dans ce cas, le salarié qui a moins de 10 ans d’ancienneté a droit à cette indemnité. A partir de 10 ans d’ancienneté, il aura droit à l’indemnité la plus favorable entre celle prévue par la convention collective et celle prévue par le code du travail.)*"
       },
       "conventions": [
+        {
+          "markdown": "En cas de départ à la retraite, le salarié a droit à une indemnité. Son montant dépend de la catégorie professionnelle du salarié. \n\n#### 1. Agents d'exploitation, employés administratifs et techniciens\n\nL'indemnité de départ à la retraite est égale à :\n\n- 0,5 mois de salaire après 5 ans d'ancienneté ;\n- 1 mois de salaire après 10 ans d'ancienneté ;\n- 2 mois de salaire après 15 ans d'ancienneté ;\n- 3 mois de salaire après 20 ans d'ancienneté.\n\n#### 2. Agents de maîtrise\n\nL'indemnité de départ à la retraite est égale à :\n\n- 0,5 mois de salaire après 5 ans d'ancienneté ;\n- 1 mois et demi de salaire après 10 ans d'ancienneté ;\n- 2 mois et demi de salaire après 15 ans d'ancienneté ;\n- 4 mois de salaire après 20 ans d'ancienneté.\n\n#### 3. Cadres\n\nL'indemnité de départ à la retraite est égale à :\n\n- 1 mois de salaire de 5 à 10 ans d'ancienneté ;\n- 2 mois de salaire de 10 à 15 ans d'ancienneté ;\n- 3 mois de salaire de 15 à 20 ans d'ancienneté ;\n- 4 mois de salaire après 20 ans d'ancienneté.",
+          "idcc": "1351"
+        },
         {
           "markdown": "A compter de 5 ans d’ancienneté, le salarié a droit à une indemnité en cas départ volontaire à la retraite égale à :\n\n- 1,5 mois après 5 ans d’ancienneté ;\n- 2,5 mois après 10 ans d’ancienneté ;\n- 3 mois après 15 ans d’ancienneté ;\n- 4 mois après 20 ans d’ancienneté ;\n- 4,5 mois après 25 ans d’ancienneté ;\n- 5 mois après 30 ans d’ancienneté ;\n- 6 mois après 35 ans d’ancienneté ;\n- 7,5 mois après 40 ans d’ancienneté.\n\nL’indemnité est calculée sur la base de la rémunération totale mensuelle du mois précédant le préavis de départ à la retraite. Celle-ci ne peut pas être inférieure à la moyenne des rémunérations mensuelles des 12 mois précédant le préavis.\n\nPour les salariés étant passés à temps partiel à partir de 55 ans et ayant une ancienneté d’au moins 35 ans, l’indemnité est calculée sur la base d’un salaire à temps plein.",
           "idcc": "0044"
@@ -1156,10 +1181,14 @@
     "updated_at": "2019-07-23T15:58:14.094541+00:00",
     "index": 39,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail ne prévoit pas de prime d’ancienneté. \n\n#### La prime d'ancienneté peut être prévue par une convention collective, un accord collectif d’entreprise ou le contrat de travail. Dans ce cas, il faut appliquer la mesure la plus favorable pour les salariés."
       },
       "conventions": [
+        {
+          "markdown": "La prime d'ancienneté est versée à tous les salariés sauf les cadres, ayant plus de 4 ans d'ancienneté. Elle s'ajoute au salaire réel du salarié. Elle est calculée sur le salaire minimal conventionnel de la qualification du salarié aux taux suivants : \n\n- Ancienneté supérieure à 4 ans : taux à 2% ;\n- Ancienneté supérieure à 7 ans : taux à 5% ;\n- Ancienneté supérieure à 10 ans : taux à 8% ;\n- Ancienneté supérieure à 12 ans : taux à 10% ;\n- Ancienneté supérieure à 15 ans : taux à 12%.\n\nLe changement du taux de la prime s'applique :\n- le mois qui suit la date anniversaire de l'entrée du salarié dans l'entreprise, ou, \n- le mois même de la date anniversaire, si le salarié est rentré le premier jour travaillé du mois.\n\nLes salariés à temps partiel ont droit à la prime, calculée proportionnellement à leur temps de présence.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit pas de prime d'ancienneté.\n\nElle définit un avantage salarial appelé \"garantie d'ancienneté\". Il s'agit d'une majoration individuelle du salaire conventionnel mensuel selon un certain barème. Le salaire de base ainsi déterminé figure tel quel sur le bulletin de salaire déterminant la valeur du taux horaire. La convention collective prévoit ainsi une rémunération globale minimum calculée en fonction de l'ancienneté du salarié mais ne crée pas une prime d'ancienneté.",
           "idcc": "0573"
@@ -1350,10 +1379,14 @@
     "updated_at": "2019-07-23T15:57:40.877789+00:00",
     "index": 17,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "(extrait de la fiche MP) https://travail-emploi.gouv.fr/droit-du-travail/les-contrats-de-travail/article/le-contrat-de-travail-temporaire    \n\nA l’expiration d’un contrat de mission, il ne peut être recouru, pour pourvoir le poste du salarié dont le contrat a pris fin, ni à un contrat à durée déterminée (CDD) ni à un contrat de mission, avant l’expiration d’un délai de carence calculé en fonction de la durée du contrat de mission incluant, le cas échéant, son ou ses renouvellements.\nLa convention ou l’accord de branche étendu de l’entreprise utilisatrice peut fixer les modalités de calcul de ce délai de carence, en respectant le principe selon lequel le contrat de mission, quel que soit son motif, ne peut avoir ni pour objet ni pour effet de pourvoir durablement un emploi lié à l’activité normale et permanente de l’entreprise utilisatrice.  \n- La disposition mentionnée ci-dessus est issue de l’ordonnance du 22 septembre 2017 citée en référence, applicable sur ce point aux contrats conclus à compter du 24 septembre 2017.\n- Les jours pris en compte pour apprécier le délai devant séparer les deux contrats sont les jours d’ouverture de l’entreprise ou de l’établissement utilisateurs. Par exemple, en cas de fermeture les samedis et dimanches, ces deux jours ne sont pas décomptés pour déterminer le délai de carence.   \n\nA défaut de stipulation dans la convention ou l’accord de branche étendu de l’entreprise utilisatrice, le délai de carence est égal :  \n1° Au tiers de la durée du contrat de mission venu à expiration si la durée du contrat incluant, le cas échéant, son ou ses renouvellements, est de quatorze jours ou plus. Ainsi, un poste pourvu par un contrat de travail temporaire de trois mois ne peut faire l’objet d’un nouveau contrat de travail temporaire avant l’expiration d’un délai de carence d’un mois ;   \n2° A la moitié de la durée du contrat de mission venu à expiration si la durée du contrat incluant, le cas échéant, son ou ses renouvellements, est inférieure à quatorze jours. Un poste pourvu en contrat de travail temporaire pendant 10 jours ne peut donc faire l’objet d’un nouveau contrat de travail temporaire avant l’expiration d’un délai de 5 jours.  \n\n**Situations dans lesquelles le délai de carence est exclu**  \nLa convention ou l’accord de branche étendu de l’entreprise utilisatrice peut prévoir les cas dans lesquels le délai de carence n’est pas applicable.  \nA défaut de stipulation dans cette convention ou cet accord de branche étendu, le délai de carence n’est pas applicable :  \n1.\tLorsque le contrat de mission est conclu pour assurer le remplacement d’un salarié temporairement absent ou dont le contrat de travail est suspendu, en cas de nouvelle absence du salarié remplacé ;  \n2.\tLorsque le contrat de mission est conclu pour l’exécution de travaux urgents nécessités par des mesures de sécurité ;  \n3.\tLorsque le contrat de travail à durée déterminée est conclu pour pourvoir un emploi à caractère saisonnier ou pour lequel, dans certains secteurs d’activité définis par décret ou par voie de convention ou d’accord collectif étendu, il est d’usage constant de ne pas recourir au contrat de travail à durée indéterminée en raison de la nature de l’activité exercée et du caractère par nature temporaire de cet emploi ;  \n4.\tLorsque le contrat est conclu pour assurer le remplacement de l’une des personnes mentionnées aux 4° et 5° de l’article L. 1251-6 du code du travail (chef d’entreprise artisanale, industrielle ou commerciale, profession libérale, chef d’exploitation agricole, aide familial…) ;  \n5.\tLorsque le salarié est à l’initiative d’une rupture anticipée du contrat ;\n6.\tLorsque le salarié refuse le renouvellement de son contrat de mission, pour la durée du contrat non renouvelé. \n\n#### La durée du délai de carence entre 2 contrats de mission (ou contrats d’intérim) prévue par le code du travail s’applique si la convention collective ne fixe pas cette durée."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective renvoie au code du travail.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -1540,10 +1573,82 @@
     "updated_at": "2019-07-19T09:43:49.245858+00:00",
     "index": 49,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": ""
       },
       "conventions": [
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "2700"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "2980"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "3053"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "2630"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1274"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1867"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "2264"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "2614"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1387"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1525"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1577"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1592"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1813"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "0948"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1007"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "1059"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "0828"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0843"
@@ -1866,10 +1971,14 @@
     "updated_at": "2019-07-17T12:12:30.323378+00:00",
     "index": 48,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Les primes pour travaux dangereux et pour travaux insalubres ne sont pas prévues par le code du travail. Elles sont prévues par une convention collective ou un accord collectif d’entreprise."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0573"
@@ -2056,10 +2165,18 @@
     "updated_at": "2019-07-15T10:17:00.877961+00:00",
     "index": 35,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail ne prévoit pas que le salarié a le droit de s’absenter pendant son préavis pour pouvoir rechercher un nouvel emploi. \n\n#### La convention collective ou un accord collectif d’entreprise peut prévoir cette possibilité. Dans ce cas, il faut appliquer la mesure la plus favorable pour les salariés."
       },
       "conventions": [
+        {
+          "markdown": "Le salarié, qui a été licencié, a droit à 2 heures d'absence par jour ouvré pour rechercher un emploi, sauf en cas licenciement pour faute. Ces 2 heures sont fixées d'un commun accord par l'employeur et le salarié. Ils peuvent décider, par écrit, de les regrouper. En l'absence d'accord, elles sont fixées un jour par l' employeur et le suivant par le salarié. La rémunération du salarié est maintenue. \n\nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.\n\nLe salarié qui a démissionné ne bénéficie pas de ces heures d'absence pour recherche d'emploi.",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "Pendant la période de préavis de démission ou de licenciement, le salarié peut s'absenter 50 heures par mois pour rechercher un emploi. Ces absences n'entrainent pas de réduction du salaire. \n\nLes heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Les heures peuvent être groupées d'un commun accord. \n\nLe salarié qui a trouvé un emploi ne peut plus utiliser ces heures.",
+          "idcc": "0292"
+        },
         {
           "markdown": "Pendant le préavis, le salarié peut s'absenter pendant un nombre d'heures égal, par mois de préavis, à la durée hebdomadaire du travail dans l'établissement, pour rechercher un emploi. Il est précisé que :\n\n- Les ouvriers, employés et techniciens (groupes I à III) ont automatiquement droit à ces heures d'absence ;\n- Les agents de maîtrise et techniciens (groupe IV) peuvent utiliser ces heures après en avoir informé la Direction ;\n- Les ingénieures et cadres (groupe V) peuvent s'absenter après avoir trouvé un accord avec la Direction.\n\nCes absences pour recherche d’emploi seront payées.\n\nPour les ouvriers, employés et techniciens (groupes I à III), la convention collective précise que les absences seront fixées un jour par le salarié et un jour par l'employeur. Si l'employeur et le salarié trouvent un accord, ces heures d'absence pourront être groupées en partie ou en totalité.\n\nLes heures non utilisées ne seront pas payées.",
           "idcc": "0044"
@@ -2099,10 +2216,6 @@
         {
           "markdown": "Pendant le préavis, le salarié a le droit de s'absenter 2 heures par jour pour rechercher un emploi, sans réduction de salaire. Le salarié à temps partiel bénéficie du même droit, proratisé en fonction de son temps de présence.\n\nLes heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, elles sont fixées à tour de rôle par l'employeur et le salarié. L'employeur peut autoriser par écrit le salarié à cumuler ses heures pour recherche d'emploi en fin de période de préavis, si les nécessités du service le permettent.",
           "idcc": "1527"
-        },
-        {
-          "markdown": "Pendant la période de préavis de démission ou de licenciement, le salarié peut s'absenter 50 heures par mois pour rechercher un emploi. Ces absences n'entrainent pas de réduction du salaire. \n\nLes heures d'absence sont fixées d'un commun accord entre l'employeur et le salarié. En l'absence d'accord, les heures sont fixées à tour de rôle par l'employeur et par le salarié. Les heures peuvent être groupées d'un commun accord. \n\nLe salarié qui a trouvé un emploi ne peut plus utilisées ces heures.",
-          "idcc": "0292"
         },
         {
           "markdown": "Pendant le préavis, le salarié peut s'absenter pour rechercher un emploi, pendant 6 jours ouvrés par mois. Ces jours sont pris chaque mois en une ou plusieurs fois, en principe par demi-journée. Les heures d'absence seront fixées pour moitié par l'employeur et pour moitié par le salarié, moyennant avis réciproque. \n\nCes heures sont rémunérées uniquement en cas de licenciement.\n\nSi ces heures ne sont pas utilisées, aucune indemnité particulière n'est due au salarié.",
@@ -2246,10 +2359,14 @@
     "updated_at": "2019-07-15T09:40:07.464621+00:00",
     "index": 29,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "En cas de mise à la retraite, le salarié doit effectuer un préavis. Sa durée est celle prévue en cas de licenciement. Elle dépend de l’ancienneté du salarié dans l’entreprise : \n\n- Pour le salarié ayant moins de 6 mois d'ancienneté dans l'entreprise, le code du travail ne prévoit pas de durée de préavis. Il faut appliquer la durée prévue par la convention collective, un accord collectif, le contrat de travail ou un usage. \n- Pour le salarié ayant entre 6 mois d'ancienneté et moins de 2 ans d'ancienneté dans l'entreprise, le salarié doit effectuer un préavis de 1 mois. \n- Pour le salarié ayant 2 ans et plus d'ancienneté dans l'entreprise, le salarié doit effectuer un préavis de 2 mois.\n\n#### Si la convention collective, un accord collectif, le contrat de travail ou un usage prévoit des durées de préavis différentes de celles fixées par le code du travail, l’employeur doit appliquer la durée la plus longue. La convention collective peut prévoir soit la durée du préavis en cas de départ à la retraite soit uniquement la durée du préavis en cas de licenciement, durée qui s’applique alors au salarié mis à la retraite si elle est plus longue que celle prévue par le code du travail. \n\nLa durée du préavis d'un travailleur handicapé est égale au double de la durée fixée pour les autres salariés, mais elle ne peut pas dépasser 3 mois maximum. Cette limite ne s’applique pas si la convention ou l'accord collectif ou, à défaut, un usage prévoit un préavis d'une durée égale ou supérieure à 3 mois."
       },
       "conventions": [
+        {
+          "markdown": "En cas de mise à la retraite, la durée du préavis est égale à :\n\n- Agents d'exploitation, employés administratifs et techniciens : 2 mois ;\n- Agents de maîtrise : 2 mois;\n- Cadres : 3 mois.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne fixe pas la durée du préavis en cas de mise à la retraite. Elle prévoit uniquement la durée du préavis en cas de licenciement, qui est égale à :\n\n- Ouvriers, employés et techniciens (groupes I à III):\n  - Coefficient inférieur à 190 : 1 mois pour une ancienneté inférieure à 2 ans, 2 mois à partir de 2 ans d'ancienneté ;\n  - Coefficient de 190 et plus : 2 mois.\n\n- Agents de maîtrise et techniciens (groupe IV) :\n  - Coefficient inférieur à 275 : 2 mois ;\n  - Coefficient de 275 et plus : 3 mois;\n\n- Ingénieurs et cadres (groupe V) : 3 mois.",
           "idcc": "0044"
@@ -2440,10 +2557,14 @@
     "updated_at": "2019-07-15T09:39:49.569532+00:00",
     "index": 26,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "En cas de départ à la retraite, le salarié doit effectuer un préavis. Sa durée est celle prévue en cas de licenciement. Elle dépend de l’ancienneté de l’ancienneté du salarié dans l’entreprise : \n\n- Pour le salarié ayant moins de 6 mois d'ancienneté dans l'entreprise, le code du travail ne prévoit pas de durée de préavis. Il faut appliquer la durée prévue par la convention collective, un accord collectif, le contrat de travail ou un usage. \n- Pour le salarié ayant entre 6 mois d'ancienneté et moins de 2 ans d'ancienneté dans l'entreprise, le salarié doit effectuer un préavis de 1 mois. \n- Pour le salarié ayant 2 ans et plus d'ancienneté dans l'entreprise, le salarié doit effectuer un préavis de 2 mois.\n\n#### Si la convention collective, un accord collectif d’entreprise ou le contrat de travail prévoit des durées de préavis différentes de celle fixée par le code du travail, il faut appliquer la durée la plus courte. La convention collective peut prévoir soit la durée du préavis en cas de départ à la retraite soit uniquement la durée du préavis en cas de licenciement, durée qui s’applique alors au salarié si elle est plus courte que celle prévue par le code du travail. \n\nLa durée du préavis d'un travailleur handicapé est égale au double de la durée fixée pour les autres salariés, mais elle ne peut pas dépasser 3 mois maximum. Cette limite ne s’applique pas si la convention ou l'accord collectif ou, à défaut, un usage prévoit un préavis d'une durée égale ou supérieure à 3 mois."
       },
       "conventions": [
+        {
+          "markdown": "En cas de départ à la retraite, la durée du préavis est égale à :\n\n- Agents d'exploitation, employés administratifs et techniciens : 2 mois ;\n- Agents de maîtrise : 2 mois;\n- Cadres : 3 mois.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit pas la durée du préavis en cas de départ à la retraite. Elle prévoit seulement la durée du préavis en cas de licenciement, qui est égale à :\n\n- Ouvriers, employés et techniciens (groupes I à III):\n  - Coefficient inférieur à 190 : 1 mois pour une ancienneté inférieure à 2 ans, 2 mois à partir de 2 ans d'ancienneté ;\n  - Coefficient de 190 et plus : 2 mois.\n\n- Agents de maîtrise et techniciens (groupe IV) :\n  - Coefficient inférieur à 275 : 2 mois ;\n  - Coefficient de 275 et plus : 3 mois;\n\n- Ingénieurs et cadres (groupe V) : 3 mois.",
           "idcc": "0044"
@@ -2634,10 +2755,14 @@
     "updated_at": "2019-07-15T09:35:21.874729+00:00",
     "index": 20,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "**Cas général**\n\nLa durée du préavis de démission est fixée :\n\n- Soit par convention collective ou accord collectif\n- Soit par les usages pratiqués dans la localité et dans la profession\n- Soit par le droit local (en Alsace-Moselle)\n\n#### Votre contrat de travail peut prévoir un préavis de démission, qui s'applique si sa durée est plus courte que celle prévue par la convention collective, l'accord collectif ou les usages.\n\nSi vous travaillez à temps partiel, la durée calendaire du préavis de démission est la même que celle d'un salarié à temps plein.\n\n**Contrat de mission**\n\nUn préavis s'applique si le salarié rompt son contrat pour un contrat à durée indéterminée (CDI) après la période d'essai (sauf s'il en est dispensé par l'employeur).\n\nCe préavis est calculé à raison d'un jour par semaine, compte tenu de :\n\n- La durée du contrat, renouvellement inclus, si celui-ci comporte un terme précis\n- La durée effectuée, si le contrat ne comporte pas de terme précis\n\nLa durée totale du préavis ne peut pas être inférieure à 1 jour, ni supérieure à 2 semaines.\n\nLe décompte s'effectue en jours ouvrés."
       },
       "conventions": [
+        {
+          "markdown": "En cas de démission, la durée du préavis dépend de la catégorie professionnelle du salarié. Les durées définies ci-dessous s'appliquent en cas de rupture du contrat de travail en dehors de la période d'essai.\n\n#### 1. Agents d'exploitation, employés administratifs et techniciens\n\nLa durée du préavis est égale à :\n\n- Agents d'exploitation, employés administratifs et techniciens, niveaux I à III :\n\n  - Ancienneté de 15 jours à 1 mois : 1 jour ouvré ;\n  - Ancienneté de plus de 1 mois à 2 mois : 2 jours ouvrés ;\n  - Ancienneté de plus de 2 mois à 6 mois : 7 jours \ncalendaires ;\n  - Ancienneté de plus de 6 mois à 2 ans : 1 mois ;\n  - Ancienneté de plus de 2 ans : 1 mois ;\n\n- Agents d'exploitation, employés administratifs et techniciens, niveaux IV à V :\n\n  - Ancienneté de 15 jours à 1 mois : 1 jour ouvré ;\n  - Ancienneté de plus de 1 mois à 2 mois : 2 jours ouvrés ;\n  - Ancienneté de plus de 2 mois à 6 mois : 14 jours \ncalendaires ;\n  - Ancienneté de plus de 6 mois à 2 ans : 1 mois ;\n  - Ancienneté de plus de 2 ans : 2 mois.\n\n#### 2. Agents de maîtrise\n\nLa durée du préavis est égale à :\n\n- Agents de maîtrise, niveaux I à III :\n\n  - Ancienneté de plus de 15 jours à 2 mois : 1 semaine ;\n  - Ancienneté de plus de 2 mois à 3 mois : 1 semaine ;\n  - Ancienneté de plus de 3 mois à 6 mois : 2 semaines ;\n  - Ancienneté de plus de 6 mois à 2 ans : 1 mois ;\n  - Ancienneté de plus de 2 ans : 1 mois ;\n\n- Agents de maîtrise, niveaux IV à V :\n\n  - Ancienneté de plus de 15 jours à 2 mois : 1 semaine ;\n  - Ancienneté de plus de 2 mois à 3 mois : 2 semaines ;\n  - Ancienneté de plus de 3 mois à 6 mois : 2 semaines ;\n  - Ancienneté de plus de 6 mois à 2 ans : 2 mois ;\n  - Ancienneté de plus de 2 ans : 3 mois.\n\n#### 3. Cadres\n\nLa durée du préavis est égale à :\n\n  - Ancienneté de 15 jours à 1 mois : 7 jours calendaires ;\n  - Ancienneté de plus de 1 mois à 3 mois : 14 jours calendaires ;\n  - Ancienneté de plus de 3 mois à 6 mois : 1 mois ;\n  - Ancienneté de plus de 6 mois à 1 an : 2 mois ;\n  - Ancienneté de plus de 1 an : 3 mois.",
+          "idcc": "1351"
+        },
         {
           "markdown": "En cas de démission, la durée du préavis est égale à :\n\n- Employés et ouvriers : 1 mois ;\n- Agents de maitrise et techniciens : 2 mois ;\n- Cadres : 3 mois.",
           "idcc": "0573"
@@ -2828,10 +2953,14 @@
     "updated_at": "2019-07-15T09:35:13.155816+00:00",
     "index": 22,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 20*"
       },
       "conventions": [
+        {
+          "markdown": "*voir la question 20*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 20*",
           "idcc": "0573"
@@ -3018,10 +3147,18 @@
     "updated_at": "2019-07-15T09:35:03.030124+00:00",
     "index": 23,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "#### Si la convention collective, un accord collectif, le contrat de travail ou un usage prévoit des durées de préavis de celles fixées par le code du travail, l’employeur doit appliquer la durée la plus longue."
       },
       "conventions": [
+        {
+          "markdown": "En cas de licenciement, la durée du préavis dépend de la catégorie professionnelle du salarié. Les durées définies ci-dessous s'appliquent en cas de rupture du contrat de travail en dehors de la période d'essai.\n\nLe salarié n'a pas droit au préavis en cas de licenciement pour faute grave ou faute lourde.\n\n#### 1. Agents d'exploitation, employés administratifs et techniciens\n\nLa durée du préavis est égale à :\n\n- Agents d'exploitation, employés administratifs et techniciens, niveaux I à III :\n\n  - Ancienneté de 15 jours à 1 mois : 1 jour ouvré ;\n  - Ancienneté de plus de 1 mois à 2 mois : 2 jours ouvrés ;\n  - Ancienneté de plus de 2 mois à 6 mois : 7 jours \ncalendaires ;\n  - Ancienneté de plus de 6 mois à 2 ans : 1 mois ;\n  - Ancienneté de plus de 2 ans : 2 mois ;\n\n- Agents d'exploitation, employés administratifs et techniciens, niveaux IV à V :\n\n  - Ancienneté de 15 jours à 1 mois : 1 jour ouvré ;\n  - Ancienneté de plus de 1 mois à 2 mois : 2 jours ouvrés ;\n  - Ancienneté de plus de 2 mois à 6 mois : 14 jours \ncalendaires ;\n  - Ancienneté de plus de 6 mois à 2 ans : 1 mois ;\n  - Ancienneté de plus de 2 ans : 2 mois.\n\n#### 2. Agents de maîtrise\n\nLa durée du préavis à respecter est égale à :\n\n- Agents de maîtrise, niveaux I à III :\n\n  - Ancienneté de plus de 15 jours à 2 mois : 1 semaine ;\n  - Ancienneté de plus de 2 mois à 3 mois : 1 semaine ;\n  - Ancienneté de plus de 3 mois à 6 mois : 2 semaines ;\n  - Ancienneté de plus de 6 mois à 2 ans : 1 mois ;\n  - Ancienneté de plus de 2 ans : 2 mois ;\n\n- Agents de maîtrise, niveaux IV à V :\n\n  - Ancienneté de plus de 15 jours à 2 mois : 1 semaine ;\n  - Ancienneté de plus de 2 mois à 3 mois : 2 semaines ;\n  - Ancienneté de plus de 3 mois à 6 mois : 2 semaines ;\n  - Ancienneté de plus de 6 mois à 2 ans : 2 mois ;\n  - Ancienneté de plus de 2 ans : 3 mois.\n\n#### 3. Cadres\n\nLa durée du préavis à respecter est égale à :\n\n  - Ancienneté de 15 jours à 1 mois : 7 jours calendaires ;\n  - Ancienneté de plus de 1 mois à 3 mois : 14 jours calendaires ;\n  - Ancienneté de plus de 3 mois à 6 mois : 1 mois ;\n  - Ancienneté de plus de 6 mois à 1 an : 2 mois ;\n  - Ancienneté de plus de 1 an : 3 mois.",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "En cas de retrait de l'enfant (rupture du contrat de travail à l'initiative de l'employeur), la durée du préavis est de :\n\n- 15 jours calendaires pour le salarié ayant moins d'un an d'ancienneté avec l'employeur;\n- 1 mois calendaire pour le salarié ayant plus de 1 an d'ancienneté avec l'employeur.\n\nLe salarié n'a pas droit au préavis en cas de faute grave ou de faute lourde.",
+          "idcc": "2395"
+        },
         {
           "markdown": "En cas de licenciement, la durée du préavis dépend de la classification du salarié et de son ancienneté :\n\n- Pour les salariés non-cadres (classes 1 à 4), ayant une ancienneté inférieure à 2 ans : 1 mois,\n- Pour les salariés non-cadres (classes 1 à 4), ayant une ancienneté d'au moins 2 ans : 2 mois,\n- Pour les salariés cadres (classes 5 à 7) : 3 mois.\n\nLe salarié n'a pas droit au préavis en cas de licenciement pour faute grave ou faute lourde.",
           "idcc": "1672"
@@ -3208,10 +3345,14 @@
     "updated_at": "2019-07-15T09:34:53.9997+00:00",
     "index": 24,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 23*"
       },
       "conventions": [
+        {
+          "markdown": "*voir la question 23*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 23*",
           "idcc": "0573"
@@ -3402,10 +3543,14 @@
     "updated_at": "2019-07-15T09:34:45.362466+00:00",
     "index": 28,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 26*"
       },
       "conventions": [
+        {
+          "markdown": "*voir question 26*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la questions 26*",
           "idcc": "0573"
@@ -3592,10 +3737,14 @@
     "updated_at": "2019-07-15T09:34:33.954529+00:00",
     "index": 30,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 29*"
       },
       "conventions": [
+        {
+          "markdown": "*voir la question 29*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 29*",
           "idcc": "0573"
@@ -3786,10 +3935,14 @@
     "updated_at": "2019-07-15T09:34:26.356577+00:00",
     "index": 25,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 23*"
       },
       "conventions": [
+        {
+          "markdown": "*voir la question 23*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 23*",
           "idcc": "0573"
@@ -3976,10 +4129,14 @@
     "updated_at": "2019-07-15T09:34:09.571569+00:00",
     "index": 27,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 26*"
       },
       "conventions": [
+        {
+          "markdown": "*voir question 26*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la questions 26*",
           "idcc": "0573"
@@ -4170,10 +4327,14 @@
     "updated_at": "2019-07-15T09:33:49.219285+00:00",
     "index": 31,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 29*"
       },
       "conventions": [
+        {
+          "markdown": "*voir la question 29*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 29*",
           "idcc": "0573"
@@ -4360,10 +4521,14 @@
     "updated_at": "2019-07-15T09:33:40.310808+00:00",
     "index": 21,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir la question 20*"
       },
       "conventions": [
+        {
+          "markdown": "*voir la question 20*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir la question 20*",
           "idcc": "0573"
@@ -4557,6 +4722,10 @@
       "conventions": [
         {
           "markdown": "La convention collective ne prévoit rien sur ce point. L’employeur ne peut donc pas embaucher en CDI de chantier ou d’opération.",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point. L’employeur ne peut donc pas embaucher en CDI de chantier ou d’opération.",
           "idcc": "0573"
         },
         {
@@ -4741,10 +4910,14 @@
     "updated_at": "2019-07-15T08:40:39.053063+00:00",
     "index": 34,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Nouvelle question 34 : \"Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLe préavis de démission doit être exécuté en totalité par l’employeur et le salarié, sauf dans les cas suivants :\n\n- L’employeur et le salarié se mettent d’accord pour que le préavis ne soit pas exécuté. Dans ce cas, l’employeur n’est pas obligé de rémunérer la partie non travaillée du préavis.\n- Le salarié prend des congés pendant le préavis, avec l’accord de l’employeur. Dans ce cas, la date de fin de préavis est repoussée de la même durée que celle des congés.\n- L’entreprise est fermée pour les congés annuels. Dans ce cas, le préavis est entièrement payé et il termine à sa date de fin normale. Il n’est pas prolongé.\n- Le salarié commet une faute grave ou lourde pendant le préavis. L’employeur peut mettre fin immédiatement au préavis et cesse de verser le salaire à compter de cette date. Il ne doit pas appliquer la procédure de licenciement. \n- La convention collective ou un accord collectif prévoit que le salarié peut s’absenter pour une recherche d’emploi.\n\n#### Si la convention collective ou un accord collectif d’entreprise prévoit des règles différentes, il faut appliquer la mesure la plus favorable pour les salariés."
       },
       "conventions": [
+        {
+          "markdown": "Nouvelle question 34 : \"Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLa convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "Nouvelle question 34 : \"Le préavis de démission doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLa convention collective ne prévoit rien sur ce point.\n\nElle précise uniquement que le salarié peut s'absenter pour rechercher un emploi sous certaines conditions.",
           "idcc": "0573"
@@ -4931,12 +5104,16 @@
     "updated_at": "2019-07-15T08:39:40.921413+00:00",
     "index": 50,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail prévoit plusieurs congés pour événements familiaux (naissance, mariage, etc.). \n\n*Insérer la fiche MT*\n\nhttps://travail-emploi.gouv.fr/droit-du-travail/les-absences-pour-maladie-et-conges-pour-evenements-familiaux/article/les-conges-pour-evenements-familiaux\n\n#### La convention collective, un accord d’entreprise ou le contrat de travail peut prévoit des durées différentes ou des congés supplémentaires. Dans ce cas, l’employeur doit appliquer les mesures les plus favorables pour les salariés."
       },
       "conventions": [
         {
-          "markdown": "Le salarié qui a au moins 1 an d'ancienneté a droit aux congés pour événements familiaux suivants :\n\n- Mariage du salarié : 3 jours ouvrables ;\n- Décès du conjoint, du père, de la mère ou d'un enfant de ce salarié : 1 jour ouvrable.",
+          "markdown": "Le salarié qui a au moins 1 an d'ancienneté a droit, sur justification, aux congés pour événements familiaux suivants :\n\n- Mariage du salarié : 1 semaine calendaire ;\n- Mariage d'un enfant : 2 jours ouvrés ;\n- Mariage du frère ou de la sœur : 1 jour ouvré ;\n- Décès du conjoint : 3 jours ouvrés ;\n- Décès du père ou de la mère : 1 jour ouvré ;\n- Décès d'un enfant : 3 jours ouvrés ;\n- Décès du père ou de la mère du conjoint : 1 jour ouvré ;\n- Décès du frère ou de la sœur : 1 jour ouvré ;\n- Pour chaque naissance survenue au foyer ou pour l'arrivée d'un enfant en vue de son adoption : 3 jours ouvrés ; \n- Présélection militaire : 3 jours ouvrés.\n\nPendant ces congés, la rémunération du salarié est maintenue. Dans le cas de rémunération variable, le salaire est calculé sur la base de la dernière période de paie.\n\nCes jours d'absence exceptionnelle devront être pris sans fractionnement au moment des événements en cause. Ils sont assimilés à des jours de travail effectif pour la détermination de la durée du congé annuel.\n\nA l'exception du mariage du salarié, ces congés ne peuvent pas être pris si l'événement se produit pendant une période d'absence dont la durée permet au salarié de faire face aux obligations entraînées par l'événement.\n\nLes salariés ayant une ancienneté d'au moins 1 an dans l'entreprise et qui assument seuls la garde effective d'un ou plusieurs enfants ont droit à des autorisations d'absence d'au maximum 4 jours par année civile, pour garder leur enfant malade âgé de moins de 12 ans. Chaque absence doit être justifiée par certificat médical. Ces absences peuvent être prises soit par journée, soit par demi-journée. Elles sont rémunérées à 50 % du salaire qu'aurait perçu l'intéressé s'il avait travaillé.",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "Le salarié qui a au moins 1 an d'ancienneté a droit aux congés, avec maintien de la rémunération, pour événements familiaux suivants :\n\n- Mariage du salarié : 3 jours ouvrables ;\n- Décès du conjoint, du père, de la mère ou d'un enfant de ce salarié : 1 jour ouvrable.",
           "idcc": "0044"
         },
         {
@@ -5122,6 +5299,14 @@
     "index": 2,
     "answers": {
       "conventions": [
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "0086"
+        },
+        {
+          "markdown": "*à traiter ultérieurement*",
+          "idcc": "0934"
+        },
         {
           "markdown": "*A traiter ultérieurement*",
           "idcc": "2609"
@@ -5554,6 +5739,10 @@
     "answers": {
       "conventions": [
         {
+          "markdown": "La convention collective prévoit uniquement que le contrat de travail doit préciser la période d'essai.",
+          "idcc": "1351"
+        },
+        {
           "markdown": "La convention collective prévoit qu'en plus des matières visées par la loi, le contrat de travail doit préciser :\n\n- la nature du contra (CDI, CDD, etc.), \n- les conditions d'emploi, dont la classification dans la grille conventionnelle, le montant et le mode de rémunération.",
           "idcc": "2120"
         },
@@ -5743,10 +5932,14 @@
     "updated_at": "2019-06-22T20:23:56.356093+00:00",
     "index": 12,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Fiche SP sur cette question*  \n\n#### La durée du CDD prévue par le code du travail s’applique si la convention collective ne fixe pas cette durée, sauf pour le CDD à objet défini et les CDD conclus au titre de l’article L. 1243-3 du code du travail."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -5933,7 +6126,14 @@
     "updated_at": "2019-06-22T20:23:51.629407+00:00",
     "index": 1,
     "answers": {
+      "generic": {
+        "markdown": "Le code du travail n'impose pas à l'employeur d’informer les salariés des postes créés ou qui se libèrent dans l’entreprise, sauf dans 3 cas : \n\n- Le salarié à temps partiel qui souhaite occuper un emploi d'une durée au moins égale à 24 heures ou un emploi à temps plein. Ce salarié bénéficie d’une priorité pour l’attribution d’un emploi dans la même catégorie professionnelle ou d’un emploi équivalent. L’employeur doit l’informer des postes libres correspondants.\n- Le salarié à temps plein qui souhaite occuper un emploi à temps partiel. Ce salarié bénéficie d’une priorité pour l’attribution d’un emploi dans la même catégorie professionnelle ou d’un emploi équivalent. L’employeur doit l’informer des postes libres correspondants.\n- Le salarié en télétravail qui souhaite occuper ou reprendre un poste sans télétravail. L’employeur doit l’informer des postes disponibles et lui donner la priorité s’il se porte candidat.\n\n<section data-type=\"hdn\">\n\nSi une convention collective, un accord collectif d’entreprise ou le contrat de travail prévoit des mesures plus favorables pour le salarié, l’employeur doit l’appliquer.\n\n</section>"
+      },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "L’employeur doit informer les salariés, par voie d'affichage, des catégories professionnelles dans lesquelles des postes sont vacants. Aucune priorité à l'embauche n'est prévue, en cas de poste libre ou créé dans l'entreprise.",
           "idcc": "0573"
@@ -6148,10 +6348,14 @@
     "updated_at": "2019-06-22T19:37:18.287272+00:00",
     "index": 13,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Fiche SP sur cette question*  \n\n#### La durée du délai de carence entre 2 CDD prévue par le code du travail s’applique si la convention collective ne fixe pas cette durée."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -6338,10 +6542,11 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 45,
     "answers": {
-      "general": {
-        "markdown": "**Arrêt maladie non professionnelle (et en dehors d’un accident du travail)**\n\nL’employeur verse au salarié une indemnité pour compléter celle versée par la sécurité sociale. Cette indemnité est aussi appelée « maintien de salaire ». Si la convention collective prévoit une indemnité plus avantageuse, elle s’applique.\n\n*Fiche Service Public sur « Arrêt maladie : indemnités journalières versées au salarié », dont l’un des volets traite du maintien de salaire. Est-ce possible de ne faire apparaître que cette partie ?*\n\nhttps://www.service-public.fr/particuliers/vosdroits/F3053 \n\nSource : Article L1226-1, article L1226-1-1, articles D1226-1 à D1226-8\n\n**Arrêt de travail pour maladie professionnelle** \n\nL’employeur verse au salarié une indemnité pour compléter celle versée par la sécurité sociale, aussi appelé maintien de salaire. Si la convention collective prévoit une indemnité plus avantageuse, elle s’applique.\n\n*Fiche Service Public sur « Maladie professionnelle : indemnités journalières pendant l’arrêt de travail », dont l’un des volets traite du maintien de salaire. Est-ce possible de ne faire apparaître que cette partie ?*\n\nhttps://www.service-public.fr/particuliers/vosdroits/F32148 \n\nSource : Article L1226-1, article L1226-1-1, articles D1226-1 à D1226-8\n\n**Arrêt de travail pour accident de travail**\n\nL’employeur verse au salarié une indemnité pour compléter celle versée par la sécurité sociale, aussi appelé maintien de salaire. Si la convention collective prévoit une indemnité plus avantageuse, elle s’applique.\n\n*Fiche Service Public sur « Accident du travail : indemnités journalières pendant l’arrêt de travail », dont l’un des volets traite du maintien de salaire. Est-ce possible de ne faire apparaître que cette partie ?*\n\nhttps://www.service-public.fr/particuliers/vosdroits/F175\n\nSource : Article L1226-1, article L1226-1-1, articles D1226-1 à D1226-8\n\n\n#### Si la convention collective, un accord d’entreprise ou le contrat de travail prévoit des mesures différentes, il faut appliquer les mesures les plus favorables pour les salariés."
-      },
       "conventions": [
+        {
+          "markdown": "Le salarié a droit à un maintien de salaire pendant son arrêt de travail à condition d'avoir transmis son arrêt de travail à l'employeur dans un délai de 2 jours et être pris en charge par la sécurité sociale. Le salaire pris en compte pour le maintien de salaire est :\n\n- celui que le salarié aurait perçu s'il avait travaillé, à l'exclusion des primes et des indemnités ayant le caractère d'un remboursement de frais,\n- après déduction des indemnités de la sécurité sociale et des régimes de prévoyance.\n\nLe montant et la durée de ce maintien de salaire dépendent de la catégorie professionnelle du salarié.\n\n#### 1. Agents d'exploitation, employés administratifs et techniciens\n\nAprès un délai de carence de 10 jours, le montant et la durée du maintien de salaire sont les suivants :\n\n- Plus de 3 ans d’ancienneté : maintien de 90% du salaire pendant 30 jours ; maintien de 70% du salaire les 30 jours suivants ;\n- Plus de 8 ans d’ancienneté : maintien de 90% du salaire pendant 45 jours ; maintien de 70% du salaire les 45 jours suivants ;\n- Plus de 13 ans d’ancienneté : maintien de 90% du salaire pendant 60 jours ; maintien de 70% du salaire les 45 jours suivants ;\n- Plus de 18 ans d’ancienneté : maintien de 90% du salaire pendant 60 jours ; maintien de 70% du salaire les 75 jours suivants ;\n- Plus de 23 ans d’ancienneté : maintien de 90% du salaire pendant 75 jours ; maintien de 70% du salaire les 75 jours suivants ;\n- Plus de 28 ans d’ancienneté : maintien de 90% du salaire pendant 90 jours ; maintien de 70% du salaire les 90 jours suivants.\n\nSi plusieurs congés de maladie sont accordés au cours d'une période de 12 mois consécutifs, la durée totale d'indemnisation du salarié ne peut pas dépasser, au cours de cette même année, la durée à laquelle son ancienneté lui donne droit le premier jour de l'arrêt de travail.\n\n#### 2. Agents de maîtrise\n\nAprès un délai de carence de 3 jours, le montant et la durée du maintien de salaire sont les suivants :\n\n- Plus de 2 ans d’ancienneté : maintien de 90% du salaire pendant 30 jours ; maintien de 70% du salaire les 30 jours suivants ;\n- Plus de 8 ans d’ancienneté : maintien de 90% du salaire pendant 45 jours ; maintien de 70% du salaire les 45 jours suivants ;\n- Plus de 13 ans d’ancienneté : maintien de 90% du salaire pendant 60 jours ; maintien de 70% du salaire les 60 jours suivants ;\n- Plus de 18 ans d’ancienneté : maintien de 90% du salaire pendant 75 jours ; maintien de 70% du salaire les 75 jours suivants ;\n- Plus de 23 ans d’ancienneté : maintien de 90% du salaire pendant 75 jours ; maintien de 70% du salaire les 90 jours suivants ;\n- Plus de 28 ans d’ancienneté : maintien de 90% du salaire pendant 105 jours ; maintien de 70% du salaire les 105 jours suivants.\n\nSi plusieurs congés de maladie sont accordés au cours d'une période de 12 mois consécutifs, la durée totale d'indemnisation du salarié ne peut pas dépasser, au cours de cette même année, la durée à laquelle son ancienneté lui donne droit le premier jour de l'arrêt de travail.\n\n#### 3. Cadres\n\nAucun délai de carence ne s'applique. Le montant et la durée du maintien de salaire sont les suivants :\n\n- Plus de 1 an d’ancienneté : maintien de 90% du salaire pendant 30 jours ; maintien de 70% du salaire les 45 jours suivants ;\n- Plus de 5 ans d’ancienneté : maintien de 90% du salaire pendant 45 jours ; maintien de 70% du salaire les 60 jours suivants ;\n- Plus de 10 ans d’ancienneté : maintien de 90% du salaire pendant 60 jours ; maintien de 70% du salaire les 90 jours suivants ;\n- Plus de 15 ans d’ancienneté : maintien de 90% du salaire pendant 90 jours ; maintien de 70% du salaire les 120 jours suivants ;\n- Plus de 20 ans d’ancienneté : maintien de 90% du salaire pendant 120 jours ; maintien de 70% du salaire les 150 jours suivants.\n\nSi plusieurs congés de maladie sont accordés au cours d'une période de 12 mois consécutifs, la durée totale d'indemnisation du salarié ne peut pas dépasser, au cours de cette même année, la durée à laquelle son ancienneté lui donne droit le premier jour de l'arrêt de travail.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective prévoit qu'à compter d'un an d'ancienneté, le salarié a droit à un maintien de salaire pendant son arrêt de travail pour maladie dans les conditions suivantes.\n\n#### 1. Employés et ouvriers\n\nLe salarié a droit à :\n\n- Pendant les 30 premiers jours d’arrêt, maintien de la rémunération à 90%, après déduction des indemnités de la sécurité sociale et des régimes de prévoyance (part employeur). Cette durée sera augmentée de 10 jours pour chaque période complète de 5 ans d'ancienneté.\n\n- Pendant les 30 jours suivants, maintien des 2/3 de la rémunération, après déduction des indemnités de la sécurité sociale et des régimes de prévoyance (part employeur). Cette durée sera augmentée de 10 jours pour chaque période complète de 5 ans d'ancienneté.\n\nChaque durée est augmentée de 10 jours en cas d'accident du travail ou de maladie professionnelle.\n\nDans tous les cas, la durée totale de l'indemnisation ne pourra être que de 90 jours maximum.\n\nSi plusieurs congés de maladie donnent droit à un maintien de salaire au cours d'une année civile, la durée totale d'indemnisation ne peut dépasser au total celle des périodes fixées ci-dessus.\n\nLa rémunération à prendre en considération est celle correspondant à l'horaire pratiqué, pendant l'absence du salarié dans l'établissement ou partie d'établissement, si cette absence n'entraîne pas une augmentation de l'horaire pour le personnel restant au travail.\n\nLe salarié ne doit pas percevoir un montant supérieur à la rémunération nette qu'il aurait effectivement perçue s'il avait continué de travailler.\n\nL'ancienneté du salarié s'apprécie au premier jour de l'absence pour maladie.\n\nLors de chaque arrêt de travail, les délais d'indemnisation commenceront à courir :\n\n- à compter du 1er jour d'absence, en cas d'accident de travail ou de maladie professionnelle (à l'exclusion des accidents de trajet) ;\n- à compter du 1er jour d'hospitalisation réelle ou à domicile ;\n- à compter du 8e jour d'absence dans tous les autres cas.\n\nSi plusieurs absences pour maladie ou accident ont été indemnisées au cours d'une période de 12 mois, la durée totale d'indemnisation ne dépasse pas celle prévue ci-dessus.\n\n#### 2. Agents de maîtrise et techniciens du secteur alimentaire et du secteur non alimentaire\n\nDe 1 an à 3 ans d'ancienneté, le salarié a droit au maintien de salaire dans les conditions prévues pour les employés et ouvriers.\n\nPour une ancienneté supérieure à 3 ans, le salarié a droit à un maintien de salaire à 100% pendant :\n\n- Ancienneté de 3 à 4 ans inclus : 2 mois en cas de maladie et 2,5 mois en cas d'accident du travail ;\n- Ancienneté de 5 à 9 ans inclus : 2,5 mois en cas de maladie et 3 mois en cas d'accident du travail ;\n- Ancienneté de 10 à 19 ans inclus : 3 mois en cas de maladie et 4 mois en cas d'accident du travail ;\n- Ancienneté d'au moins 20 ans : 4 mois en cas de maladie et 6 mois en cas d'accident du travail.\n\nL'indemnisation est versée à partir du 8ème jour d'arrêt de travail, ou dès le 1er jour en cas d'accident du travail ou d'hospitalisation.\n\n#### 3. Cadres\n\nDe 1 an à 3 ans d'ancienneté dans l'entreprise ou jusqu'à 2 ans d'ancienneté en qualité de cadre, le salarié a droit au maintien de salaire dans les conditions prévues pour les employés et ouvriers.\n\nPour une ancienneté supérieure, le salarié cadre a droit à un maintien de salaire à 100% pendant :\n\n- Jusqu'à 4 ans inclus d'ancienneté dans l'entreprise : 3 mois en cas de maladie ou 4 mois en cas d'accident du travail ;\n- De 5 à 9 ans inclus d'ancienneté dans l'entreprise : 4 mois en cas de maladie ou 5 mois en cas d'accident du travail ;\n- A partir de 10 ans d'ancienneté dans l'entreprise : 5 mois en cas de maladie ou 7 mois en cas d'accident du travail.\n\nEn cas d'accident du travail, le salarié a droit au maintien de salaire à 100% à partir d'un ancienneté.",
           "idcc": "0573"
@@ -6524,10 +6729,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 44,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "<fiche href=\"https://www.service-public.fr/particuliers/vosdroits/F2265\">\n\n</fiche>\n\n<section type =\"hdr\">\n\nSi la convention collective, un accord d’entreprise ou le contrat de travail prévoit des mesures plus favorables, l’employeur doit l’appliquer.\n\n</section>"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "1996"
@@ -6710,10 +6919,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 43,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "**Conditions**\n\nPour être indemnisée, vous devez remplir les conditions suivantes :\n\n- être affiliée à la Sécurité sociale depuis au moins 10 mois à la date présumée de l'accouchement,\n- cesser votre activité professionnelle pendant au moins 8 semaines,\n- soit avoir travaillé au moins 150 heures au cours des 3 mois civils ou des 90 jours précédant l'arrêt, soit avoir cotisé, au cours des 6 mois civils précédant l'arrêt, sur la base d'une rémunération au moins égale à 1 015 fois le montant du Smic horaire fixé au début de cette période.\n\nExemple : le congé a débuté le 1er juillet 2019 pour une date présumée d'accouchement au 1er septembre 2019.\n\nLe droit aux IJ est ouvert si :\n\n- vous étiez déjà affiliée à la Sécurité sociale avant novembre 2018,\n- et vous avez travaillé au moins 150 heures entre le 1er avril 2019 et le 30 juin 2019 ou, si la condition n'est pas remplie, vous avez cotisé entre le 1er juillet 2018 et le 30 juin 2019 sur la base d'une rémunération au moins égale à 10 180,45 €.\n\n**Montant** \n\nLa CPAM verse des indemnités journalières (IJ), dont le montant est fixé selon les étapes de calcul suivantes :\n\n- Calcul du salaire journalier de base : somme des 3 derniers salaires bruts perçus avant la date d'interruption du travail, divisé par 91,25\n- Montant maximal du salaire journalier de base : Le salaire pris en compte ne peut pas dépasser le plafond mensuel de la sécurité sociale en vigueur lors du dernier jour du mois qui précède l'arrêt (soit 3 377 € par mois en 2019, ou 3 311 € en 2018).\n- Taux forfaitaire appliqué par la CPAM : la CPAM retire à ce salaire journalier de base un taux forfaitaire de 21%.\n- Montant minimal et montant maximal des IJ : le montant ne peut pas être inférieur à 9,53 € ni supérieur à 87,71 € par jour.\n\n**Versement**\n\nLes IJ sont versées tous les 14 jours.\n\n#### Si la convention collective, un accord d’entreprise ou le contrat de travail prévoit des mesures plus favorables pour la salariée, l’employeur doit l’appliquer."
       },
       "conventions": [
+        {
+          "markdown": "Les salariées, ayant un an d'ancienneté dans l'entreprise, bénéficient d'un maintien de leur salaire net, après déduction des indemnités journalières de la sécurité sociale, pendant les 16 semaines du congé de maternité.",
+          "idcc": "1351"
+        },
         {
           "markdown": "Les salariées, ayant un an d'ancienneté dans l'entreprise, bénéficient d'un maintien de leur salaire à 100%, après déduction des indemnités journalières de la sécurité sociale et des régimes de prévoyance, pendant le congé de maternité. \n\nPour les salariés cadres, le maintien de salaire est égale à 75 % de leur salaire pendant les 4 premières semaines du congé de maternité.",
           "idcc": "0573"
@@ -6896,10 +7109,26 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 41,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Lorsque l’employeur est une personne morale (société, association, etc.), le décès de son représentant n’a aucune conséquence sur les contrats de travail. Dans certains cas, les héritiers ou les autres représentants de la société peuvent décider de :\n\n- Vendre l’entreprise dans son ensemble : dans ce cas, les contrats de travail sont transférés automatiquement à l’acheteur, en application de l’article L. 1224-1 du code du travail. Ce principe s'applique aux entreprises et aux salariés.\n- Fermer l’entreprise : dans ce cas, les salariés seront licenciés pour motif économique en application de l’article L. 1233-3 du code du travail. \n\nLorsque l’employeur est un particulier, il faut appliquer la convention collective correspondante."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "0714"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1577"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "2630"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "2980"
@@ -7294,10 +7523,66 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 40,
     "answers": {
-      "general": {
-        "markdown": "La perte de marché n’a pas de conséquence sur le contrat de travail, sauf dans les cas suivants :\n\n- Si la perte de marché entraîne le transfert d’une entité économique autonome au sens de l’article L. 1224-1 du code du travail, le contrat de travail du salarié sera automatiquement transféré au repreneur. Ce principe s'applique aux entreprises et aux salariés.  \n- Si l’employeur peut justifier un motif économique prévu par l’article L. 1233-3 du code du travail (difficultés économiques, sauvegarde de la compétitivité, etc.), il peut licencier le ou les salariés pour motif économique.\n- Si la convention collective applicable prévoit que la perte de marché entraîne le transfert des contrats de travail des salariés, l’employeur et le repreneur appliquent la convention collective dans les conditions qu’elle prévoit."
+      "generic": {
+        "markdown": "La perte de marché n’a pas de conséquence sur le contrat de travail, sauf dans les cas suivants :\n\n- Si la perte de marché entraîne le transfert d’une entité économique autonome au sens de l’article L1224-1 du code du travail, le contrat de travail du salarié sera automatiquement transféré au repreneur. Ce principe s'applique aux entreprises et aux salariés.  \n\n- Si l’employeur peut justifier un motif économique prévu par l’article L1233-3 du code du travail (difficultés économiques, sauvegarde de la compétitivité, etc.), il peut licencier le ou les salariés pour motif économique.\n\n- Si la convention collective applicable prévoit que la perte de marché entraîne le transfert des contrats de travail des salariés, l’employeur et le repreneur appliquent la convention collective dans les conditions qu’elle prévoit."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "2630"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1525"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1577"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1592"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1813"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "2615"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "0714"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "0828"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1274"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1387"
+        },
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1472"
+        },
+        {
+          "markdown": "La perte de marché peut entraîner l'application de l'article L1224-1 du code du travail, c'est-à-dire le transfert automatique des contrats de travail au repreneur.\n\nSi ce n'est pas le cas, la convention collective prévoit qu'en cas de changement de prestataire, l’entreprise entrante doit reprendre les salariés affectés au marché. Le transfert des contrats de travail s'impose à l'entreprise sortante et à l'entreprise entrante. La convention collective s'applique uniquement, si les deux entreprises entrent dans son champ d'application. \n\n#### 1. Les salariés concernés par la reprise des contrats de travail\n\nL'entreprise entrante doit reprendre les contrats de travail des salariés avec un CDI en cours avec l'entreprise, ou un CDD de remplacement, et qui répondent à toutes les conditions suivantes :\n\n- disposer des documents d'identité et d'autorisation de travail en cours de validité ;\n- selon le cas, être titulaire de :\n  - l'aptitude professionnelle démontrée par la détention d'un titre ou par la conformité aux conditions d'expérience acquise en application des dispositions réglementaires en vigueur ;\n  - la carte professionnelle délivrée par la préfecture ou du récépissé attestant de la demande de carte professionnelle ;\n- justifier des formations réglementairement requises et être à jour des éventuels recyclages nécessaires, pour l'exercice de la qualification attribuée et/ou la nature du site (notamment, par exemple : SSIAP, sûreté aéroportuaire, etc.) ;\n- effectuer plus de 50 % de son temps de travail sur le périmètre sortant – ou au service de celui-ci pour le personnel d'encadrement opérationnel – cette condition étant appréciée sur les 9 derniers mois qui précèdent le transfert. Dans ce cas, l'entreprise entrante doit proposer au salarié transféré un volume horaire au moins équivalent à la globalité de son horaire précédent effectué sur le périmètre sortant objet du transfert ;\n- à la date du transfert, avoir effectivement accompli au moins 900 heures de vacation sur le périmètre sortant au cours des 9 mois précédents. Cette condition doit s'apprécier au prorata pour les salariés titulaires d'un contrat de travail à temps partiel ou effectuant plus de 50 % de leur temps de travail sur le périmètre sortant. Pour tous les représentants du personnel affectés sur le périmètre sortant, les heures consacrées à l'exercice de leurs mandats électifs ou désignatifs sont considérées comme des heures de vacation ;\n- ne pas être dans une situation de préavis (exécuté ou pas) ;\n- ne pas avoir été reconnu médicalement inapte à tenir le poste.\n\nLes autres salariés continuent de travailler pour l'entreprise sortante. \n\n#### 2. Information des salariés\n\nL'entreprise sortante envoie aux salariés concernés un courrier les informant du transfert. Ce courrier doit obligatoirement mentionner :\n- la date à laquelle l'entreprise entrante s'est fait connaître à l'entreprise sortante ;\n- la date prévisionnelle du transfert.\n\nL'entreprise entrante informera chacun des salariés concernés, par un courrier recommandé avec avis de réception ou remis en main propre contre décharge, de son transfert en son sein.\n\n#### 3. Les conséquences sur les contrats de travail\n\nSi les conditions définies ci-dessus sont réalisées, les contrats de travail sont obligatoirement transférés à l'entreprise entrante. En cas d'affectation partielle à l'activité (égale ou supérieure à 50 %), le contrat est repris par l'entreprise entrante avec un volume horaire au moins équivalent à la globalité de son horaire précédent effectué sur le marché concerné.\n\nL'entreprise sortante règle au salarié toute rémunération (congés payés acquis et en cours, solde des primes dues, heures supplémentaires, heures complémentaires) et plus généralement toutes indemnités, quelle qu'en soit la nature, acquises au moment du transfert. Elle remet également au salarié un certificat de travail et toutes attestations (formation initiale, formation qualifiante, etc.).\n\nL'entreprise entrante établit un avenant au contrat de travail pour mentionner le changement d'employeur et la reprise des clauses du contrat de travail dont :\n\n- l'ancienneté du salarié ;\n- les niveau, échelon, coefficient et emploi constituant la classification ;\n- le salaire de base et des primes constantes soumises à cotisation, payées chaque mois et figurant sur les 9 derniers bulletins de paie ainsi que les éventuels éléments bruts de rémunération contractuels, à l'exclusion de ceux ayant le même objet déjà pris en charge sous une autre forme par l'entreprise entrante ;\n- le droit à un congé sans solde équivalant aux droits acquis à la date du transfert et pris conformément aux dispositions légales régissant les conditions de départ en congé payé. \n\nL'avenant au CDD pour remplacement d'un salarié absent prend fin au jour du retour à son poste du salarié remplacé.\n\nLe nouvel employeur remet cet avenant aux salariés au plus tard dans les 8 jours ouvrables suivants le début effectif des prestations.\n\nLes autres éléments de salaire non soumis à cotisations sociales ne sont pas repris, sauf ceux prévus par la convention collective nationale des entreprises de prévention et de sécurité.\n\nLes salariés bénéficieront du statut collectif du nouvel employeur, qui remplacera dès le premier jour du transfert celui du précédent employeur.",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "La perte de marché peut entraîner l'application de l'article L1224-1 du code du travail, c'est-à-dire le transfert automatique des contrats de travail au repreneur.\n\nSi ce n'est pas le cas, la convention collective prévoit qu'en cas de changement de prestataire, l’entreprise entrante doit reprendre les salariés affectés au marché. Le transfert des contrats de travail s'impose à l'entreprise sortante et à l'entreprise entrante. La convention collective s'applique uniquement, si les deux entreprises entrent dans son champ d'application. \n\n#### 1. Les salariés concernés par la reprise des contrats de travail\n\nL'entreprise entrante doit reprendre les contrats de travail des salariés avec un contrat de travail en cours avec l'entreprise et répondent aux conditions suivantes :\n\n- justifier d'une affectation sur l'activité concernée depuis au moins 6 mois calendaires ;\n- être affecté majoritairement à l'activité concernée. Si ce n'est pas le cas, les entreprises concernées et le salarié peuvent décider que le contrat de travail sera tout de même transféré ;\n- ne pas avoir été absent pendant les 4 derniers mois calendaires précédant le transfert, excepté pour les salariés en congé maternité, congé parental d'éducation et congé d'adoption, en arrêt maladie, accident de travail ou maladie professionnelle, et pour les salariés en congé de formation. \n\nLes autres salariés continuent de travailler pour l'entreprise sortante. \n\n#### 2. Information des salariés\n\nChaque entreprise devra informer les salariés le plus tôt possible et au plus tard avant la passation effective des contrats de travail, de l'évolution de l'activité et du sort du personnel concerné.\n\n#### 3. Les conséquences sur les contrats de travail\n\nSi les conditions définies ci-dessus sont réalisées, les contrats de travail sont obligatoirement transférés à l'entreprise entrante. \n\nAvant le transfert des contrats de travail, l'entreprise cédant l'activité doit remettre une attestation d'emploi à chaque salarié concerné. Cette attestation précise le poste occupé, les congés payés acquis (y compris les congés payés reportés) et les dates pendant lesquelles le salarié aura été à son service.\n\nL'entreprise cédante doit verser à chaque salarié concerné par le transfert :\n\n- les congés payés reportés à la date précédant le transfert ;\n- les éventuels JRTT acquis et non compensés au jour précédant le transfert ;\n- les jours fériés garantis acquis et non compensés au jour précédant le transfert.\n\nL'entreprise entrante établit un avenant au contrat de travail pour mentionner le changement d'employeur et la reprise des clauses du contrat (ancienneté, qualification, rémunération annuelle totale) applicables au moment de la reprise des contrats de travail. Le nouvel employeur remet cet avenant aux salariés dans les 15 jours ouvrables suivants le transfert.\n\nLes salariés bénéficieront du statut collectif du nouvel employeur, qui remplacera dès le premier jour du transfert celui du précédent employeur.",
+          "idcc": "1979"
+        },
+        {
+          "markdown": "La perte de marché peut entraîner l'application de l'article L1224-1 du code du travail, c'est-à-dire le transfert automatique des contrats de travail au repreneur.\n\nSi ce n'est pas le cas, la convention collective prévoit qu'en cas de perte de marché, l’entreprise entrante doit reprendre les salariés affectés au marché faisant l’objet de reprise. Le transfert des contrats de travail s'impose à l'entreprise sortante et à l'entreprise entrante. La convention collective s'applique uniquement, si les deux entreprises entrent dans son champ d'application. \n\n#### 1. Les salariés concernés par la reprise des contrats de travail\n\nL'entreprise entrante doit reprendre les contrats de travail des salariés qui appartiennent à : \n\n* L'un des 4 premiers niveaux de la filière d'emplois «exploitation» (agent de service, agent qualifié de service, agent très qualifié de service et chef d'équipe) et passer sur le marché concerné 30 % de son temps de travail total effectué pour le compte de l'entreprise sortante ;\n* L'un des 2 premiers échelons du niveau agent de maîtrise (MP1 et MP2) et être affecté exclusivement sur le marché concerné.\n\nCes salariés doivent être en CDI et :\n* Justifier d'une affectation sur le marché d'au moins 6 mois à la date d'expiration du contrat commercial ou du marché public ;\n* Ne pas être absent depuis 4 mois ou plus à la date d'expiration du contrat. À cette date, seules les salariées en congé maternité seront reprises sans limitation de leur temps d'absence. La totalité de la durée de l'absence sera prise en compte, congé de maternité compris, pour l'appréciation de cette condition d'absence de 4 mois ou plus, dans l'hypothèse où la salariée ne serait pas en congé de maternité à la date d'expiration du contrat commercial ou du marché public.\n\nLes salariés en CDD de remplacement sont également concernés. \n\nLes autres salariés continuent de travailler pour l'entreprise sortante. \n\n#### 2. Les conséquences sur les contrats de travail\n\nLes contrats de travail sont obligatoirement transférés à l'entreprise entrante. Celle-ci établit et transmet au salarié un avenant au contrat de travail pour mentionner le changement d'employeur et la reprise des clauses du contrat. \n\nLe salarié bénéficiera du maintien de sa rémunération mensuelle brute correspondant au nombre d'heures habituellement effectuées sur le marché repris et les éléments de salaire à périodicité fixe.\n\nLes salariés bénéficieront du statut collectif du nouvel employeur, qui remplacera dès le premier jour du transfert celui du précédent employeur.",
+          "idcc": "3043"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0016"
@@ -7329,10 +7614,6 @@
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "2755"
-        },
-        {
-          "markdown": "La perte de marché peut entraîner l'application de l'article L. 1224-1 du code du travail, c'est-à-dire le transfert automatique des contrats de travail au repreneur.\n\nSi la perte de marché ou l'activité fait l'objet d'un changement d'employeur n'entraînant pas l'application de plein droit de l'article L. 1224-1 du code du travail\n\nLa convention collective prévoit les modalités de poursuite des relations de travail.",
-          "idcc": "1979"
         },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
@@ -7623,10 +7904,6 @@
           "idcc": "2511"
         },
         {
-          "markdown": "La convention collective prévoit qu'en cas de perte de marché, l’entreprise entrante doit reprendre les salariés affectés au marché faisant l’objet de reprise. Le transfert des contrats de travail s'impose à l'entreprise sortante et à l'entreprise entrante. \n\n#### 1. Les salariés concernés par la reprise des contrats de travail\n\nL'entreprise entrante doit reprendre les contrats de travail des salariés qui appartiennent à : \n\n* L'un des 4 premiers niveaux de la filière d'emplois «exploitation» (agent de service, agent qualifié de service, agent très qualifié de service et chef d'équipe) et passer sur le marché concerné 30 % de son temps de travail total effectué pour le compte de l'entreprise sortante ;\n* L'un des 2 premiers échelons du niveau agent de maîtrise (MP1 et MP2) et être affecté exclusivement sur le marché concerné.\n\nCes salariés doivent être en CDI et :\n* Justifier d'une affectation sur le marché d'au moins 6 mois à la date d'expiration du contrat commercial ou du marché public ;\n* Ne pas être absent depuis 4 mois ou plus à la date d'expiration du contrat. À cette date, seules les salariées en congé maternité seront reprises sans limitation de leur temps d'absence. La totalité de la durée de l'absence sera prise en compte, congé de maternité compris, pour l'appréciation de cette condition d'absence de 4 mois ou plus, dans l'hypothèse où la salariée ne serait pas en congé de maternité à la date d'expiration du contrat commercial ou du marché public.\n\nLes salariés en CDD de remplacement sont également concernés. \n\nLes autres salariés continuent de travailler pour l'entreprise sortante. \n\n#### 2. Les conséquences sur les contrats de travail\n\nLes contrats de travail sont obligatoirement transférés à l'entreprise entrante. Elle établit un avenant au contrat de travail pour mentionner le changement d'employeur et la reprise des clauses du contrat. \n\nLe salarié bénéficiera du maintien de sa rémunération mensuelle brute correspondant au nombre d'heures habituellement effectuées sur le marché repris et les éléments de salaire à périodicité fixe.\n\nLes salariés bénéficieront du statut collectif du nouvel employeur qui se rempllacera dès le premier jour de la reprise celui du précédent employeur. \n\n",
-          "idcc": "3043"
-        },
-        {
           "markdown": "La convention collective ne prévoit rien sur ce point. ",
           "idcc": "3127"
         },
@@ -7652,10 +7929,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 38,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "L'ancienneté du salarié est habituellement mentionnée sur le bulletin de salaire.\n\nLa convention collective ou l’accord collectif peut prévoir comment s’apprécie l’ancienneté du salarié."
       },
       "conventions": [
+        {
+          "markdown": "L'ancienneté dans l'entreprise correspond au temps pendant lequel le salarié a été employé d'une façon continue dans cette entreprise. Sont notamment considérés comme temps de présence dans l'entreprise pour le calcul de l'ancienneté :\n\n- Le temps passé dans les différents établissements de l'entreprise ;\n- Les congés payés annuels ou congés exceptionnels résultant d'un accord conventionnel ou d'un accord entre le salarié et l'employeur ;\n- Les arrêts de travail pour maladie, accident ou maternité dans la limite de la période de maintien de salaire prévue par la convention collective ;\n- Les divers congés assimilés par la loi à une période de travail effectif et pour la durée prévue par celle-ci ;\n- Les périodes passées dans l'entreprise avant l'interruption du contrat pour raisons personnelles à l'issue du congé de maternité, si la salariée a répondu favorablement à une première offre de réembauchage et a été réintégrée .",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0573"
@@ -7846,10 +8127,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 36,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "L’employeur et le salarié doivent respecter le préavis (en cas de licenciement, démission, etc.). Si l’un d’eux ne respecte pas le préavis, le second peut saisir le conseil de prud’hommes pour obtenir le paiement d’une indemnité égale au salaire qui aurait été versé pendant la durée du préavis non exécuté. \n\nConcernant le non-respect du délai de prévenance (parfois appelé préavis) pendant la période d’essai, le code du travail ne précise pas la sanction en cas de non-respect par le salarié.\n\nSi l’employeur ne respecte pas le délai de prévenance au moment de la fin de la période d’essai, il devra payer au salarié une indemnité égale au montant des salaires et avantages (y compris l’indemnité compensatrice de congés payés) que le salarié aurait perçus s'il avait travaillé jusqu'à la fin du délai de prévenance."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0573"
@@ -8036,10 +8321,22 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 33,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Nouvelle question 33 : \"Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLe préavis de licenciement doit être exécuté en totalité par l’employeur et le salarié, y compris si le salarié a retrouvé un emploi. Mais, le préavis n’est pas exécuté si : \n\n-\tL’employeur et le salarié se mettent d’accord pour que le préavis ne soit pas exécuté. Dans ce cas, le préavis est rémunéré normalement, par les salaires et primes que le salarié aurait reçus s’il avait travaillé. \n- Le salarié prend des congés pendant le préavis, avec l’accord de l’employeur. Dans ce cas, la date de fin de préavis est repoussée de la même durée que celle des congés.\n- La convention collective ou un accord collectif prévoit que le salarié peut s’absenter pour une recherche d’emploi ou être dispensé d'exécuter le préavis.\n\n#### Si la convention collective ou un accord collectif d’entreprise prévoit des règles différentes, il faut appliquer la mesure la plus favorable pour les salariés."
       },
       "conventions": [
+        {
+          "markdown": "Nouvelle question 33 : \"Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLa convention collective prévoit uniquement que l'employeur peut dispenser le salarié d'exécuter le préavis, quelle que soit sa motivation. Dans ce cas, la rémunération du salarié est maintenue, sauf si la dispense a été demandée par le salarié.  \n\nLa convention collective précise également que le salarié peut s'absenter pour rechercher un emploi sous certaines conditions.",
+          "idcc": "1351"
+        },
+        {
+          "markdown": "*Nouvelle formulation de la question 33 : Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?*\n\nLa convention collective ne prévoit rien sur ce point.",
+          "idcc": "2120"
+        },
+        {
+          "markdown": "Nouvelle question 33 : \"Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLa convention collective prévoit qu'il est possible de ne pas exécuter le préavis de licenciement dans les cas suivants : \n\n* Si le salarié licencié trouve un travail avant la fin de son préavis, il a le droit de quitter son emploi. L'employeur ne pourra pas lui réclamer le paiement d'une indemnité compensatrice de préavis.\n* Pendant le préavis et jusqu'à ce qu'il ait retrouvé du travail, le salarié licencié est autorisé à s'absenter pour rechercher un emploi dans la limite de 50 heures par mois. Pendant ces absences, son salaire est maintenu. Ces heures peuvent être groupées en tout ou en partie, avec l'accord de l'employeur. Cette autorisation d'absence prend fin lorsque le salarié a retrouvé un emploi.\n* L'employeur peut dispenser le salarié d'exécuter tout le préavis ou une partie seulement. Cette dispense entraîne le versement d'une indemnité compensatrice correspondant au total des salaires et avantages, y compris l'indemnité de congés payés, que le salarié aurait reçus s'il avait accompli son travail. Elle n'a pas pour conséquence d'avancer la date à laquelle le contrat prend juridiquement fin.\n\nEn dehors de ces cas, le salarié qui ne respecte pas son préavis doit verser à l'employeur une indemnité égale à la rémunération nette qu'il aurait reçue pour la période du préavis restant à courir. Le montant de cette indemnité peut être imputé par l'employeur sur les sommes dont il est redevable au salarié, notamment à titre d'indemnité compensatrice de congés payés.",
+          "idcc": "1672"
+        },
         {
           "markdown": "Nouvelle question 33 : \"Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nEn cas de licenciement, si le salarié justifie avoir retrouvé un emploi, l'employeur lui accorde toutes les facilités pour lui permettre d'occuper son nouveau poste. \n\nLe salarié cadre qui a retrouvé un emploi peut quitter l'entreprise, à tout moment pendant le préavis. \n\nDans ces situations, le salarié ne devra pas verser à l'employeur l’indemnité prévue pour non-respect du préavis.\n\nEn outre, le salarié peut s'absenter pour rechercher un emploi sous certaines conditions.",
           "idcc": "0044"
@@ -8205,16 +8502,8 @@
           "idcc": "1606"
         },
         {
-          "markdown": "Nouvelle question 33 : \"Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLa convention collective prévoit qu'il est possible de ne pas exécuter le préavis de licenciement dans les cas suivants : \n\n* Si le salarié licencié trouve un travail avant la fin de son préavis, il a le droit de quitter son emploi. L'employeur ne pourra pas lui réclamer le paiement d'une indemnité compensatrice de préavis.\n* Pendant le préavis et jusqu'à ce qu'il ait retrouvé du travail, le salarié licencié est autorisé à s'absenter pour rechercher un emploi dans la limite de 50 heures par mois. Pendant ces absences, son salaire est maintenu. Ces heures peuvent être groupées en tout ou en partie, avec l'accord de l'employeur. Cette autorisation d'absence prend fin lorsque le salarié a retrouvé un emploi.\n* L'employeur peut dispenser le salarié d'exécuter tout le préavis ou une partie seulement. Cette dispense de tout ou partie du préavis entraîne le versement d'une indemnité compensatrice correspondant au total des salaires et avantages, y compris l'indemnité de congés payés, que le salarié aurait reçus s'il avait accompli son travail. Elle n'a pas pour conséquence d'avancer la date à laquelle le contrat prend juridiquement fin.\n\nEn dehors de ces cas, le salarié qui ne respecte pas son préavis doit verser à l'employeur une indemnité égale à la rémunération nette qu'il aurait reçue pour la période du préavis restant à courir. Le montant de cette indemnité peut être imputé par l'employeur sur les sommes dont il est redevable au salarié, notamment à titre d'indemnité compensatrice de congés payés.",
-          "idcc": "1672"
-        },
-        {
           "markdown": "Nouvelle question 33 : \"Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?\"\n\nLa convention collective prévoit les cas, dans lesquels il est possible de ne pas exécuter le préavis : \n\n#### 1. Pour la catégorie professionnelle des employés\n\nL'employeur peut décider de dispenser le salarié d'effectuer son préavis. Il devra l'en informer dans la lettre de licenciement. La dispense par l'employeur de l'exécution du préavis n'entraîne aucune diminution des salaires et avantages, y compris l'indemnité de congés payés, que le salarié aurait reçus s'il avait accompli son travail.\n\n#### 2. Pour les agents de maîtrise et cadres\n\nDans tous les cas, l'employeur peut dispenser le personnel d'encadrement d'effectuer le préavis. Il devra l'en informer dans la notification du licenciement par lettre recommandée avec accusé de réception et lui verser l'ensemble du préavis et des indemnités légales et conventionnelles qui lui sont dues.\n\nSi le personnel d'encadrement licencié a l'obligation d'occuper un nouvel emploi avant la fin de la période du préavis, il peut quitter son poste, sans avoir à payer une indemnité pour non-respect du préavis, dans les conditions suivantes :\n* La moitié du préavis a été exécutée,\n* Il en informe l'employeur 15 jours à l'avance.\n\nEn cas de licenciement pour cause économique, le salarié pourra quitter l'entrepruse dans un délai de 15 jours à compter de la première présentation de la lettre de licenciement au domicile du salarié.\n\nEnfin, pendant le préavis, les salariés peuvent s'absenter pour rechercher un emploi.",
           "idcc": "1483"
-        },
-        {
-          "markdown": "*Nouvelle formulation de la question 33 : Le préavis de licenciement doit-il être exécuté en totalité ? Y compris si le salarié a retrouvé un emploi ?*\n\nLa convention collective ne prévoit rien sur ce point.\n\n(Renvoi au code du travail.)\n",
-          "idcc": "2120"
         }
       ]
     }
@@ -8226,10 +8515,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 32,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Voir les questions 33 et 34*"
       },
       "conventions": [
+        {
+          "markdown": "*voir les questions 33 et 34*",
+          "idcc": "1351"
+        },
         {
           "markdown": "*voir les questions 33 et 34*",
           "idcc": "0573"
@@ -8416,10 +8709,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 19,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "#### La convention collective peut prévoir des mesures sur le cumul d’emplois par le salarié (loyauté du salarié, clause d’exclusivité, etc.)."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.\n\nLe salarié peut cumuler des emplois dans les conditions prévues par le code du travail.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective prévoit que le cumul d'emplois est possible. Dans ce cas, le salarié doit respecter les limites des durées maximum de temps de travail prévues par le code du travail (10 heures/jour, 48 heures par semaine ou 44 heures par semaine, calculées sur une période de 12 semaines consécutives). Il doit informer chacun de ses employeurs de ses autres engagements contractuels.",
           "idcc": "2511"
@@ -8714,10 +9011,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 18,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "(extrait de la fiche SP) https://www.service-public.fr/particuliers/vosdroits/F11215 \n\n**Conditions**  \nÀ la fin de chaque mission, le salarié doit percevoir, en complément de son salaire, une indemnité de fin de mission, plus souvent appelée prime de précarité.\nToutefois, le versement de cette prime n'est pas dû en cas de :\n- Conclusion d'un CDI avec l'entreprise utilisatrice immédiatement après la fin de la mission\n- Complément de formation professionnelle dispensée au salarié par l'entreprise utilisatrice à l'issue de la mission\n- Rupture anticipée du contrat à l'initiative du salarié\n- Rupture anticipée du contrat pour faute grave ou pour force majeure\n- Mission à caractère saisonnier \n \n**Montant**  \nLe montant de l'indemnité est au moins égal à 10 % de la rémunération totale brute, renouvellement du contrat inclus.\n\n#### Si une convention collective, un accord collectif d’entreprise ou le contrat de travail prévoit des mesures plus favorables pour le salarié, l’employeur doit l’appliquer."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective renvoie au code du travail.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -8904,10 +9205,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 16,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "(extrait de la fiche) https://www.service-public.fr/particuliers/vosdroits/F11215 \n\n#### La durée du contrat de mission (ou contrat d’intérim) prévue par le code du travail s’applique si la convention collective ne fixe pas cette durée."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective renvoie au code du travail.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -9094,10 +9399,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 15,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Fiche SP sur cette question"
       },
       "conventions": [
+        {
+          "markdown": "L'activité des sociétés de la branche ne figure pas dans la liste des secteurs d'activité prévue par la loi (article D. 1242-1 du code du travail) permettant le recours à un CDD d'usage. La convention collective ne comporte aucune disposition à ce sujet. L'entreprise ne peut pas embaucher des salariés en CDD d'usage.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La liste des secteurs d'activité prévue par la loi (article D. 1242-1 du code du travail) permettant le recours à un CDD d'usage vise le sport professionnel. La convention collective prévoit qu'un CDD d'usage peut être conclu dans les cas suivants : \n\n* CDD lié à l'organisation d'une manifestation sportive nationale, internationale ou d'une ampleur exceptionnelle (appelé contrat d'intervention). Les salariés sont embauchés pour la durée de la manifestation et occupent des postes directement liées à son organisation et à son bon déroulement. Pour ces contrats, la durée du travail peut être portée à 60 heures par semaine pendant au maximum 3 semaines consécutives. A l'issue du contrat, le salarié perçoit une indemnité égale à 10 % des salaires bruts versés pendant le contrat.\n\n* CDD des sportifs et entraîneurs professionnels (appelé CDD spécifique). Il est conclu pour au moins une saison sportive (12 mois) et au maximum 5 saisons (60 mois). Il peut être renouvelé sans limitation.\n\n* CDD des entraîneurs principaux de centres de formation. Il est conclu pour au moins deux saisons (24 mois) et prolongé sans limitation par tranches de 12 mois.\n\n* CDD des sportifs en centre de formation. Il est conclu pour la même durée que la convention de formation.",
           "idcc": "2511"
@@ -9284,10 +9593,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 14,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "(extrait de la fiche SP) https://www.service-public.fr/particuliers/vosdroits/F40   \n\n**Principe**\n\nLe salarié a droit à une indemnité de fin de contrat (dite prime de précarité) lorsque le CDD arrive à son terme. Toutefois, dans certains cas, l'indemnité n'est pas versée.\n\n**Cas où le salarié ne perçoit pas l'indemnité**\n\nL'indemnité de fin de contrat n'est pas due dans les cas suivants :\n\n- Embauche en CDI à l'issue du CDD (y compris lorsque le CDD a été renouvelé)\n- Refus d'un CDI proposé au salarié pour occuper le même emploi ou un emploi similaire, avec une rémunération au moins équivalente\n- Faute grave\n- Force majeure\n- CDD d'usage\n- Contrat aidé (contrat unique d'insertion (CUI) - Parcours emploi compétences (PEC), contrat de professionnalisation, contrat d'apprentissage, CDD senior) sauf si une convention collective prévoit le contraire\n- Contrat pour lequel l'employeur s'est engagé à assurer un complément de formation professionnelle au salarié\n- Contrat conclu avec un jeune pendant ses vacances scolaires ou universitaires\n- Contrat saisonnier.\n\n**Montant**\n\nL'indemnité de fin de contrat est égale au minimum à 10 % de la rémunération brute totale versée durant le contrat.  \n\n#### Toutefois, ce pourcentage peut être limité à 6 % par une convention ou un accord collectif de branche étendu (ou par convention ou accord d'entreprise ou d'établissement). Dans ce cas, des contreparties doivent être offertes au salarié, notamment sous la forme d'un accès privilégié à la formation professionnelle (action de formation, bilan de compétences)."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -9474,10 +9787,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 11,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le nombre de renouvellements du contrat de travail dépend du type de contrat.\n\n**CDD**  \nFiche Service Public dédiée à cette question :\n\nhttps://www.service-public.fr/particuliers/vosdroits/F38 \n\n#### Le nombre de renouvellements prévu par le code du travail s’applique si la convention collective applicable ne fixe pas ce nombre.\n\n**Contrat de mission (intérim)**  \n\n(extrait de la fiche SP) https://www.service-public.fr/particuliers/vosdroits/F11215  \n\nQuel que soit son terme (précis ou non), le contrat de mission peut être renouvelé 2 fois si la durée totale du contrat, compte tenu du renouvellement, ne dépasse pas la durée maximale autorisée.\nLes conditions de ce renouvellement doivent obligatoirement être fixées au sein :\n- d'une clause insérée dans le contrat de travail\n- ou d'un avenant proposé au salarié avant le terme prévu initialement.\n\n**Contrat d’apprentissage**  \nLe contrat d’apprentissage peut être renouvelé une fois en cas d’échec lors de l’obtention du diplôme ou du titre professionnel. Dans ce cas, le contrat peut être prolongé pour un an maximum.\n\n*Source : Article L6222-11*\n\n**Contrat de professionnalisation**  \n\n(extrait de la fiche) https://www.service-public.fr/particuliers/vosdroits/F15478  \nSi le contrat de professionnalisation est à durée déterminée, il peut être renouvelé 1 fois si le bénéficiaire ayant obtenu la qualification visée prépare une qualification supérieure ou complémentaire.\n\nLe CDD peut également être renouvelé si le bénéficiaire n'a pas obtenu la qualification visée pour l'un des motifs suivants :\n\n- échec à l'obtention de la qualification,\n- maternité,\n- maladie,\n- accident du travail,\n- ou défaillance de l'organisme de formation.\n\n**Contrat de portage salarial à durée déterminée**  \nLe contrat de portage salarial à durée déterminée peut être renouvelé 2 fois pour une durée, qui ajoutée à la durée initiale du contrat, est de 18 mois maximum. La durée peut être de 21 mois par accord entre le salarié porté et l’entreprise de portage pour permettre au salarié porté de prospecter de nouveaux clients. Les conditions de renouvellement sont prévues par le contrat de travail ou un avenant.\n\n*Source : Article L1254-17, article L1254-12, article L1254-13*"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective ne prévoit rien sur ce point.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective ne prévoit rien sur ce point.",
           "idcc": "0044"
@@ -9664,7 +9981,7 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 51,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "#### Si un accord d’entreprise, un usage, un engagement unilatéral ou le contrat de travail prévoit des primes différentes de celles prévues par la convention collective, l’employeur doit appliquer les mesures les plus favorables pour les salariés."
       },
       "conventions": [
@@ -9826,10 +10143,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 52,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail prévoit les conditions de travail du dimanche. \n\n*Fiche Service Public dédiée à cette question*\n\nhttps://www.service-public.fr/particuliers/vosdroits/F13887 \n\n\n#### Si la convention collective ou l’accord d’entreprise prévoit des mesures plus favorables pour les salariés, l’employeur doit les appliquer."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective affirme la nécessité d'assurer un service de jour comme de nuit, quels que soient les jours de la semaine, en raison du caractère spécifique de la sécurité et de la continuité de ses obligations. \n\nEn cas de chômage un jour férié, la rémunération du salarié est maintenue s'il a travaillé la journée de travail précédant le jour férié et la journée de travail suivante. En cas d'absence l'un de ces jours, la rémunération est également maintenue si le salarié a bénéficié d'une autorisation d'absence préalablement accordée par le chef d'entreprise ou le chef d'établissement. Les heures de travail perdues en raison du chômage d'un jour férié ne peuvent être récupérées.\n\nEn cas de travail un jour férié, le salarié a droit, en plus du salaire correspondant au travail effectué le jour férié, à une indemnité égale au montant de ce salaire (donc une majoration de 100%). Si le salarié le décide, cette indemnité peut être remplacée par un temps de repos équivalent obligatoirement pris dans le mois suivant.\n\nCes principes s'appliquent aussi aux jours de fêtes martiniquaises suivants :\n\n- Mardi gras ;\n- Vendredi saint ;\n- 2 novembre.\n\nConcernant le 1er mai,  ce sont les dispositions du code du travail qui s'appliquent : le salarié qui travaille un 1er mai a droit au doublement de sa rémunération.",
+          "idcc": "1351"
+        },
         {
           "markdown": "Le 1er mai est chômé et payé s’il tombe un jour habituellement travaillé. En cas de travail exceptionnel ce jour-là, la rémunération est majorée de 100%.\n\nLes jours fériés ordinaires ne sont pas obligatoirement chômés et payés. Décidé par l'employeur, le chômage des jours fériés ordinaires tombant un jour habituellement travaillé n'entraîne pas de diminution de la rémunération si le salarié remplit les conditions suivantes :\n\n- avoir 3 mois d'ancienneté chez le même employeur ;\n- avoir été présent le dernier jour de travail qui précède le jour férié et le premier jour qui lui fait suite, sauf autorisation d'absence préalablement accordée ;\n- en cas de travail à temps complet (40 heures par semaine) : avoir accompli 200 heures de travail au moins au cours des 2 mois qui précèdent le jour férié ;\n- en cas de travail à temps partiel : avoir accompli un nombre d'heures réduit proportionnellement par rapport à un horaire hebdomadaire de 40 heures.\n\nSi le jour férié est travaillé, il est rémunéré sans majoration.",
           "idcc": "2111"
@@ -9984,10 +10305,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 53,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail prévoit si les jours fériés sont chômés (et payés) ou peuvent être travaillés. \n\n*Fiche Service Public dédiée à cette question*\n\nhttps://www.service-public.fr/particuliers/vosdroits/F2405 \n\n\n#### Si la convention collective ou l’accord d’entreprise prévoit des mesures différentes, il faut appliquer les mesures les plus favorables pour les salariés."
       },
       "conventions": [
+        {
+          "markdown": "La convention collective affirme la nécessité d'assurer un service de jour comme de nuit, quels que soient les jours de la semaine, en raison du caractère spécifique de la sécurité et de la continuité de ses obligations. \n\nEn cas de travail le dimanche, les heures travaillées sont majorées de 10%. Cette majoration se cumule avec celle du travail de nuit et/ ou d'un jour férié.\n\nDans les entreprises de sûreté aérienne et aéroportuaire, les heures travaillées le dimanche sont majorées de 50%. Cette majoration se cumule avec celle du travail de nuit.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective encadre le travail du dimanche pour les ouvriers, employés, techniciens (groupes I à III). \n\nSi le dimanche ne fait pas partie de l'horaire habituel de travail, le salarié peut travailler exceptionnellement ce jour-là, notamment pour exécuter des travaux urgents ou pour faire face à un surcroît d'activité.\n\nDans ce cas, il a droit à une majoration de 40 % par heure effectuée de jour ou de nuit. Cette majoration s'ajoute aux majorations pour heures supplémentaires.",
           "idcc": "0044"
@@ -10146,10 +10471,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 10,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "*Fiche Service Public*  \n\n#### La convention collective ou l’accord collectif peut prévoir les conditions de la clause de non-concurrence (montant de la contrepartie financière, durée, etc.). Ces conditions s’appliquent si elles respectent les principes légaux. (Exemple : si la convention collective prévoit une contrepartie financière différente selon que le salarié démissionne ou est licencié, il faudra appliquer la somme la plus élevée dans tous les cas de rupture du contrat de travail.)"
       },
       "conventions": [
+        {
+          "markdown": "La convention collective prévoit que la clause de non-concurrence fait l'objet d’un écrit entre l'employeur et le salarié. Elle ne peut pas être prévue par un accord verbal, un règlement intérieur ou un contrat collectif.",
+          "idcc": "1351"
+        },
         {
           "markdown": "La convention collective encadre les modalités de la clause de non-concurrence.\n\n#### 1. Accord des parties sur la clause de non-concurrence\n\nLa clause de non-concurrence doit figurer dans le contrat de travail ou la lettre d’engagement. \n\nElle peut être introduite ou supprimée par avenant en cours de contrat, avec l'accord de l'employeur et du salarié.\n\nLa clause de non-concurrence peut également être supprimée unilatéralement par l'employeur. Cette suppression ne prendra effet que si le salarié n'est pas licencié dans un délai de un an à dater de sa notification.\n\n#### 2. Durée de la clause de non-concurrence et contrepartie financière\n\nLa clause de non-concurrence a une durée maximum de :\n\n- Cas général : 2 ans,\n- En présence de certaines fabrication ayant un caractère particulièrement délicat ou secret : 4 ans.\n\nL’indemnité de non-concurrence est versée mensuellement. Elle est au moins égale à :\n\n- 1/3 de la rémunération mensuelle, quand l'interdiction vise un produit ou une technique de fabrication pouvant s'appliquer à un ou plusieurs produits ;\n- 2/3 de la rémunération mensuelle, quand l'interdiction vise plusieurs produits ou plusieurs techniques de fabrication ;\n- 100% de la rémunération mensuelle, pendant chaque année supplémentaire au-delà de 2 ans, en cas de caractère particulièrement délicat ou secret de certaines fabrications.\n\nSi, pendant la période d'application de la clause de non-concurrence, le minimum correspondant au coefficient du salarié venait à être modifié, l'indemnité serait modifiée proportionnellement à la rémunération dont aurait bénéficié le salarié s'il avait conservé son emploi.\n\n#### 3. Renonciation à la clause de non-concurrence par l'employeur\n\nEn cas de rupture du contrat de travail à l'initiative de l'employeur, il peut libérer par écrit, au moment de la notification de la rupture, le salarié de la clause de non-concurrence. La renonciation par l'employeur nécessite l'accord exprès ou implicite du salarié. Dans ce cas, l'indemnité mensuelle sera payée pendant 3 mois à partir de la fin du préavis.\n\nEn cas de rupture du contrat de travail à l'initiative du salarié, celui-ci doit rappeler par écrit et d'une façon explicite à son employeur l'existence de la clause de non-concurrence. L'employeur aura un délai de 3 semaines pour libérer par écrit le salarié de la clause de non-concurrence. Dans ce cas, l'indemnité mensuelle sera payée pendant 3 mois à partir de la fin du préavis.\n\nQuand la clause de non-concurrence a une durée supérieure à 2 ans, l'employeur peut : \n- Se décharger du paiement de l'indemnité pour les troisième et quatrième années en en informant le salarié au moment de la notification de la rupture du contrat de travail ;\n- Se décharger du paiement de la moitié de l'indemnité due pour la 4ème année en prévenant le salarié un an après la notification de la rupture du contrat de travail et en libérant le salarié de la clause pour la quatrième année.",
           "idcc": "0044"
@@ -10341,6 +10670,10 @@
     "index": 6,
     "answers": {
       "conventions": [
+        {
+          "markdown": "La convention collective prévoit que  la période d'essai est prolongée d'un temps égal aux absences du salarié pendant cette période. Cette règle s'applique en cas d'arrêt maladie pendant la période d'essai.",
+          "idcc": "1351"
+        },
         {
           "markdown": "En cas d'absence du salarié (pour maladie, ou en raison de la fermeture saisonnière de l'entreprise), la période d'essai est prolongée d'une durée identique à celle à l'absence.",
           "idcc": "0573"
@@ -10537,6 +10870,10 @@
     "answers": {
       "conventions": [
         {
+          "markdown": "Chaque embauche est confirmée par un contrat de travail écrit, précisant les conditions du poste. Ce contrat est établi en deux exemplaires signés par l'employeur et le salarié. Chacun en conserve un exemplaire.",
+          "idcc": "1351"
+        },
+        {
           "markdown": "La convention collective prévoit uniquement des mesures pour les ingénieurs et cadres.\n\nA la fin de la période d'essai, l'ingénieur ou le cadre dont l'engagement est devenu définitif reçoit dans un délai de 8 jours, en double exemplaire, une lettre d'engagement précisant les conditions du poste. Le salarié doit retourner l'un des exemplaires, daté et revêtu de sa signature précédée de la mention manuscrite \"Lu et approuvé\".",
           "idcc": "0573"
         },
@@ -10726,10 +11063,14 @@
     "updated_at": "2019-05-08T20:54:59.923739+00:00",
     "index": 47,
     "answers": {
-      "general": {
+      "generic": {
         "markdown": "Le code du travail prévoit une protection différente du salarié en cas de maladie non professionnelle et en cas de maladie professionnelle ou accident du travail. \n\n**En cas de maladie non professionnelle ou accident non professionnel**\n\nLe code du travail prévoit que l’employeur ne peut pas licencier le salarié en raison de son état de santé. S’il invoque la maladie du salarié, le licenciement est discriminatoire et donc nul. \n\nToutefois, l’employeur peut licencier le salarié dans certains cas.\n\nhttps://www.service-public.fr/particuliers/vosdroits/F133 \n\nSource : Article L1132-1, article L1132-4\n\n**En cas de maladie professionnelle ou accident du travail**\n\nLe code du travail prévoit une protection du salarié en cas de maladie professionnelle ou accident du travail.\n\nhttps://travail-emploi.gouv.fr/droit-du-travail/les-absences-pour-maladie-et-conges-pour-evenements-familiaux/article/l-arret-de-travail-pour-accident-du-travail-ou-maladie-professionnelle \n\nSource : Article L1226-7, article L1226-8, article L1226-9\n\n\n#### Si la convention collective, un accord d’entreprise ou le contrat de travail prévoit des mesures plus favorables pour le salarié, l’employeur doit l’appliquer."
       },
       "conventions": [
+        {
+          "markdown": "L'employeur ne peut pas licencier le salarié en arrêt maladie pour le remplacer pendant :\n\n- la période de maintien de salaire prévue par la convention collective, ou ;\n- 6 semaines, si le salarié n'a pas suffisamment d'ancienneté pour bénéficier du maintien de salaire.",
+          "idcc": "1351"
+        },
         {
           "markdown": "L'employeur ne peut pas licencier le salarié absent pour maladie, aucune incapacité ne l'empêche de reprendre son travail, pendant :\n\n- 3 mois en cas d'ancienneté entre 1 an et 3 ans,\n- 6 mois pour une ancienneté supérieure à 3 ans.\n\nDans le cas où un salarié viendrait à être absent pour cause de maladie ou d'accident 2 ou plusieurs fois au cours d'une période de 12 mois consécutifs, la garantie d'emploi s'applique pendant une période totale correspondant aux durées fixées ci-dessus.\n\nEn cas d'absence suite à un accident du travail ou une maladie professionnelle, le code du travail s'applique.",
           "idcc": "0573"
