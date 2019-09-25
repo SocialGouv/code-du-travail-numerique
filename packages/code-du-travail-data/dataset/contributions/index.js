@@ -13,12 +13,14 @@ const fetchContributions = async () => {
     `https://contributions-api.codedutravail.num.social.gouv.fr/questions?select=*&order=updated_at.desc`
   ).then(r => r.json());
 
-  const getAgreementIdcc = agreementId =>
-    agreements.find(a => a.id === agreementId).idcc;
+  const getAgreementIdcc = agreementId => {
+    const agreement = agreements.find(a => a.id === agreementId);
+    return agreement && agreement.idcc;
+  };
 
   const getConventionsAnswers = questionId =>
     answers
-      .filter(a => a.question_id === questionId && !!a.agreement_id)
+      .filter(a => a.question_id === questionId && a.agreement_id !== null)
       .map(ccAnswer => ({
         markdown: ccAnswer.value,
         idcc: getAgreementIdcc(ccAnswer.agreement_id)
