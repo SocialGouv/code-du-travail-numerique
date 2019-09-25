@@ -61,7 +61,7 @@ spec:
         readinessProbe:
           httpGet:
             scheme: HTTP
-            path: /_cat/indices/code_du_travail_numerique
+            path: /_cluster/health
             port: ${PORT}
           initialDelaySeconds: 60
           periodSeconds: 5

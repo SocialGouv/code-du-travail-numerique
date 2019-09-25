@@ -53,3 +53,22 @@ spec:
               value: "${NLP_URL}/api/suggest"
             - name: VERSION
               value: "${VERSION}"
+      initContainers:
+        - name: wait-for-api
+          image: alpine
+          imagePullPolicy: Always
+          command:
+            - sh
+            - -c
+            - |
+              apk --no-cache --update add curl;
+
+              retry=120; # 5s * (12 * 10) = 10min
+              while
+                ! curl -sS ${API_URL}/api/v1/version" &&
+                [[ $(( retry-- )) -gt 0 ]];
+              do echo "Waiting for api to be available ($(( retry )))" ; sleep 5s ; done ;
+
+              [[ $(( retry )) -lt 1 ]] && exit 128;
+
+              echo Ready;

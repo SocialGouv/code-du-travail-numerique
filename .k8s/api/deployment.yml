@@ -36,11 +36,28 @@ spec:
           env:
           - name: PORT
             value: "${PORT}"
-          - name: ELASTICSEARCH_LOG_LEVEL
-            value: "${ELASTICSEARCH_LOG_LEVEL}"
           - name: ELASTICSEARCH_URL
             value: "${ELASTICSEARCH_URL}"
           - name: VERSION
             value: "${VERSION}"
           - name: NLP_URL
             value: "${NLP_API_URL}"
+      initContainers:
+        - name: wait-for-elasticsearch
+          image: alpine
+          imagePullPolicy: Always
+          command:
+            - sh
+            - -c
+            - |
+              apk --no-cache --update add curl;
+
+              retry=120; # 5s * (12 * 10) = 10min
+              while
+                ! curl -sS "${ELASTICSEARCH_URL}/_cat/indices/code_du_travail_numerique" &&
+                [[ $(( retry-- )) -gt 0 ]];
+              do echo "Waiting for Elasticsearch incides to go Green ($(( retry )))" ; sleep 5s ; done ;
+
+              [[ $(( retry )) -lt 1 ]] && exit 128;
+
+              echo Ready;
