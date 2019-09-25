@@ -22,6 +22,7 @@ def add_search(app, is_ready, content_path, stops_path):
     def search():
         is_ready.check_status('search')
         ss = is_ready.get('search')
+        print("sem search is ready...")
 
         # maybe add a default to get (risky because of no exclude sources)
         query = request.args.get('q')

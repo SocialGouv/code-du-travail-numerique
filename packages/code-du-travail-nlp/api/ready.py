@@ -2,7 +2,7 @@ from flask import jsonify
 from flask_cors import CORS, cross_origin
 
 
-def add_search(app, is_ready):
+def add_ready(app, is_ready):
     @app.route('/api/ready', methods=['GET'])
     @cross_origin()
     def ready():

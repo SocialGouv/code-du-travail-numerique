@@ -42,7 +42,7 @@ class Ready:
     def __bool__(self):
         if not self.ready:
             return False
-        return all(self.ready.values())
+        return all(self.ready.values()) # return true iff all are services are ready
 
     @property
     def what(self):
