@@ -1,8 +1,10 @@
 from flask import Flask
 from api.suggest import add_suggest
 from api.search import add_search
+from api.index import add_index
+from api.ready import add_not_ready, add_ready
 from autosuggest import AutoSuggestor
-from .sem_search import SemSearch
+from .semsearch2 import SemSearch
 import os
 
 data_path = os.path.join(
@@ -15,26 +17,28 @@ stops_path = os.path.join(data_path, 'stops.txt')
 
 
 def create_app():
+    app = Flask(__name__)
+    
+    @app.route('/')
+    def hello():
+        return 'NLP api'
+
+    add_not_ready(app)
+
     suggester = AutoSuggestor(
         queries_path=queries_path,
         stops_path=stops_path,
         build_precount=False
     )
 
-    ss = SemSearch(content_path, stops_path)
-
-    app = Flask(__name__)
     app.config['JSON_AS_ASCII'] = False
 
-    app.logger.info("Flask app started ")
-
-    @app.route('/')
-    def hello():
-        return 'NLP api'
 
     add_suggest(app, suggester)
-    add_search(app, ss)
-
+    add_search(app)
+    add_ready(app)
+    add_index(app)
+    app.logger.info("Flask app started ")
     return app
 
 
