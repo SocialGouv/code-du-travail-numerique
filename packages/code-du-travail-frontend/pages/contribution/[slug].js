@@ -226,8 +226,4 @@ const StyledAccordion = styled(Accordion)`
   }
 `;
 
-const Spacer = styled.div`
-  height: 40px;
-`;
-
 export default withRouter(Contribution);
