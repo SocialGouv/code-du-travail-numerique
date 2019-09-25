@@ -562,7 +562,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 3rem height:3rem;
+  width: 3rem;
+  height: 3rem;
   color: #fff;
   font-size: 1.375rem;
   font-weight: bold;
