@@ -6,22 +6,21 @@ import threading
 from .sem_search import SemSearch
 
 
-def load_in_background(is_ready, content_path, stops_path):
+def load_in_background(nlp, content_path, stops_path):
     ss = SemSearch(content_path, stops_path)
-    is_ready.data['search'] = ss
-    is_ready.ready['search'] = True
+    nlp.set('search', ss)
 
 
-def add_search(app, is_ready, content_path, stops_path):
+def add_search(app, nlp, content_path, stops_path):
 
-    thread = threading.Thread(target=load_in_background, args=(is_ready, content_path, stops_path))
-    thread.start()
+    thread = threading.Thread(target=load_in_background, args=(nlp, content_path, stops_path))
+    # thread.start()
+    nlp.queue(thread)
 
     @app.route('/api/search', methods=['GET'])
     @cross_origin()
     def search():
-        is_ready.check_status('search')
-        ss = is_ready.get('search')
+        ss = nlp.get('search', check_ready=True)
 
         # maybe add a default to get (risky because of no exclude sources)
         query = request.args.get('q')
