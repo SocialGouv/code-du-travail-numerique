@@ -170,9 +170,9 @@ class Contribution extends React.Component {
             icon={icons.Question}
           >
             <h3>Que dit le code du travail ?</h3>
-            {answers.general && (
+            {answers.generic && (
               <Mdx
-                markdown={makeArticlesLinks(answers.general.markdown)}
+                markdown={makeArticlesLinks(answers.generic.markdown)}
                 components={components}
               />
             )}

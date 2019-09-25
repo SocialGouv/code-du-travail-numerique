@@ -39,7 +39,7 @@ const fetchContributions = async () => {
   const allAnswers = questions.map(question => ({
     ...question,
     answers: {
-      general: getGenericAnswer(question.id),
+      generic: getGenericAnswer(question.id),
       conventions: getConventionsAnswers(question.id)
     }
   }));
