@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { withRouter } from "next/router";
 import getConfig from "next/config";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
+import createPersistedState from "use-persisted-state";
 
 import { Accordion, Alert, icons, Button } from "@cdt/ui-old";
 import slugify from "@cdt/data/slugify";
@@ -13,6 +14,9 @@ import Answer from "../../src/common/Answer";
 import SearchConvention from "../../src/conventions/Search/Form";
 import { PageLayout } from "../../src/layout/PageLayout";
 import Metas from "../../src/common/Metas";
+
+// store selected convention in localStorage
+const useConventionState = createPersistedState("convention");
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -95,7 +99,7 @@ const getConventionSlug = convention =>
 
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
-  const [convention, setConvention] = useState();
+  const [convention, setConvention] = useConventionState(null);
   const answer = convention && answers.find(a => a.idcc === convention.num);
 
   const slugConvention = convention && getConventionSlug(convention);
@@ -138,7 +142,6 @@ const AnswersConventions = ({ answers }) => {
               </Link>
             </div>
           )}
-          <br />
           <br />
           <Button variant="primary" onClick={() => setConvention(null)}>
             Changer de convention collective
