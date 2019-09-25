@@ -697,7 +697,7 @@ exports[`<Home /> should render 1`] = `
             <a
               class="c21"
               href="/outils/indemnite-licenciement"
-              title="Démarrer une simulation "
+              title="Démarrer une simulation d'indemnités de licenciements"
             >
               <div
                 class="c22"
@@ -716,6 +716,35 @@ exports[`<Home /> should render 1`] = `
                   class="c25"
                 >
                   Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation
+                </p>
+              </div>
+            </a>
+          </li>
+          <li
+            class="c20"
+          >
+            <a
+              class="c21"
+              href="/outils/preavis-demission"
+              title="Démarrer une simulation de durée de préavis de démission"
+            >
+              <div
+                class="c22"
+              >
+                <img
+                  alt=""
+                  class="c23"
+                  src="/static/assets/icons/outils.svg"
+                />
+                <h3
+                  class="c24"
+                >
+                  Simulateur de délais de préavis de démission
+                </h3>
+                <p
+                  class="c25"
+                >
+                  Connaître la durée du préavis de démission.
                 </p>
               </div>
             </a>

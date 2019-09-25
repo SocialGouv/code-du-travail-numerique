@@ -16,11 +16,19 @@ export const outils = [
   {
     icon: "/static/assets/icons/point-of-service_web.svg",
     title: "Simulateur d'indemnités de licenciements",
-    hrefTitle: "Démarrer une simulation ",
+    hrefTitle: "Démarrer une simulation d'indemnités de licenciements",
     text:
       "Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation",
     href: "/outils/[slug]",
     slug: "/outils/indemnite-licenciement"
+  },
+  {
+    icon: "/static/assets/icons/outils.svg",
+    title: "Simulateur de délais de préavis de démission",
+    hrefTitle: "Démarrer une simulation de durée de préavis de démission",
+    text: "Connaître la durée du préavis de démission.",
+    href: "/outils/[slug]",
+    slug: "/outils/preavis-demission"
   },
   {
     icon: "/static/assets/icons/message_web.svg",
