@@ -120,10 +120,18 @@ const AnswersConventions = ({ answers }) => {
               </div>
             </div>
           )) || (
-            <Alert variant="warning">
-              Désolé nous n&apos;avons pas de réponse pour cette convention
-              collective
-            </Alert>
+            <div>
+              <Alert variant="warning">
+                Désolé nous n&apos;avons pas de réponse pour cette convention
+                collective
+              </Alert>
+              <Link
+                href="/convention-collective/[slug]"
+                as={`/convention-collective/${slugConvention}`}
+              >
+                <a>Consulter la convention collective complète</a>
+              </Link>
+            </div>
           )}
         </React.Fragment>
       )}
