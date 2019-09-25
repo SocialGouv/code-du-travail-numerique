@@ -54,7 +54,7 @@ spec:
 
               retry=120; # 5s * (12 * 10) = 10min
               while
-                ! curl -sS "${ELASTICSEARCH_URL}/_cat/indices/code_du_travail_numerique" &&
+                ! curl -sS --fail "${ELASTICSEARCH_URL}/_cat/indices/code_du_travail_numerique" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for Elasticsearch incides to go Green ($(( retry )))" ; sleep 5s ; done ;
 
