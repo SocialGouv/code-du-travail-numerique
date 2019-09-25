@@ -25,13 +25,13 @@ spec:
             httpGet:
               path: /
               port: ${PORT}
-            initialDelaySeconds: 3
+            initialDelaySeconds: 10
             periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /
               port: ${PORT}
-            initialDelaySeconds: 3
+            initialDelaySeconds: 10
             periodSeconds: 5
           env:
             - name: API_URL
@@ -61,6 +61,24 @@ spec:
               retry=120; # 5s * (12 * 10) = 10min
               while
                 ! curl -sS --fail "${API_URL}/api/v1/version" &&
+                [[ $(( retry-- )) -gt 0 ]];
+              do echo "Waiting for api to respond ($(( retry )))" ; sleep 5s ; done ;
+
+              [[ $(( retry )) -lt 1 ]] && exit 128;
+
+              echo Ready;
+        - name: wait-for-nlp
+          image: alpine
+          imagePullPolicy: Always
+          command:
+            - sh
+            - -c
+            - |
+              apk --no-cache --update add curl;
+
+              retry=120; # 5s * (12 * 10) = 10min
+              while
+                ! curl -sS --fail "${NLP_URL}" &&
                 [[ $(( retry-- )) -gt 0 ]];
               do echo "Waiting for api to respond ($(( retry )))" ; sleep 5s ; done ;
 

@@ -25,13 +25,13 @@ spec:
             httpGet:
               path: /api/v1/version
               port: ${PORT}
-            initialDelaySeconds: 5
+            initialDelaySeconds: 10
             periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /api/v1/version
               port: ${PORT}
-            initialDelaySeconds: 5
+            initialDelaySeconds: 10
             periodSeconds: 5
           env:
           - name: PORT
