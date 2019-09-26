@@ -15,8 +15,6 @@ def create_app():
 
     load_nlp(app)
 
-    load_nlp(app)
-
     @app.route('/')
     def hello():
         return 'NLP api'

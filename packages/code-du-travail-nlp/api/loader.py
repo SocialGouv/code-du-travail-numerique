@@ -51,7 +51,7 @@ class NLP:
 
     @property
     def what(self):
-        return list(self.ready)
+        return [k for k, v in self.ready.items() if v]
 
     def check_status(self, target, error_message='NLP API is not ready yet...'):
         if not self.ready.get(target, False):
