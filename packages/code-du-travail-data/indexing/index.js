@@ -38,19 +38,19 @@ async function main() {
 
   await version({ client });
 
-  // Indexing CCN data
-  await createIndex({
-    client,
-    indexName: `${CDTN_CCN_NAME}-${ts}`,
-    mappings: conventionCollectiveMapping
-  });
-  for (const documents of cdtnCcnGen(conventionList, 10000000)) {
-    await indexDocumentsBatched({
-      indexName: `${CDTN_CCN_NAME}-${ts}`,
-      client,
-      documents
-    });
-  }
+  // // Indexing CCN data
+  // await createIndex({
+  //   client,
+  //   indexName: `${CDTN_CCN_NAME}-${ts}`,
+  //   mappings: conventionCollectiveMapping
+  // });
+  // for (const documents of cdtnCcnGen(conventionList, 10000000)) {
+  //   await indexDocumentsBatched({
+  //     indexName: `${CDTN_CCN_NAME}-${ts}`,
+  //     client,
+  //     documents
+  //   });
+  // }
 
   // Indexing document data
   await createIndex({
@@ -58,7 +58,8 @@ async function main() {
     indexName: `${CDTN_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
-  for (const documents of cdtnDocumentsGen()) {
+  for (const documentsPromise of cdtnDocumentsGen()) {
+    const documents = await Promise.all(documentsPromise);
     await indexDocumentsBatched({
       indexName: `${CDTN_INDEX_NAME}-${ts}`,
       client,
@@ -67,31 +68,31 @@ async function main() {
     });
   }
 
-  // Indexing Annuaire data
-  await createIndex({
-    client,
-    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
-    mappings: annuaireMapping
-  });
-  await indexDocumentsBatched({
-    client,
-    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
-    documents: annuaire,
-    size: 500
-  });
+  // // Indexing Annuaire data
+  // await createIndex({
+  //   client,
+  //   indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
+  //   mappings: annuaireMapping
+  // });
+  // await indexDocumentsBatched({
+  //   client,
+  //   indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
+  //   documents: annuaire,
+  //   size: 500
+  // });
 
-  // Indexing Themes data
-  await createIndex({
-    client,
-    indexName: `${THEMES_INDEX_NAME}-${ts}`,
-    mappings: themesMapping
-  });
-  await indexDocumentsBatched({
-    client,
-    indexName: `${THEMES_INDEX_NAME}-${ts}`,
-    documents: themes,
-    size: 500
-  });
+  // // Indexing Themes data
+  // await createIndex({
+  //   client,
+  //   indexName: `${THEMES_INDEX_NAME}-${ts}`,
+  //   mappings: themesMapping
+  // });
+  // await indexDocumentsBatched({
+  //   client,
+  //   indexName: `${THEMES_INDEX_NAME}-${ts}`,
+  //   documents: themes,
+  //   size: 500
+  // });
   // Creating alias
   await client.indices.putAlias({
     index: `${ANNUAIRE_INDEX_NAME}-${ts}`,
