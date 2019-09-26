@@ -11,7 +11,6 @@ jest.mock("../../piwik", () => ({
   matopush: jest.fn()
 }));
 
-const q = "foo";
 const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
 fetchSuggestResults.mockResolvedValue(suggestions);
