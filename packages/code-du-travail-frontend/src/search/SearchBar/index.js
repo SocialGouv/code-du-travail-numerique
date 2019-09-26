@@ -1,28 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Router, { withRouter } from "next/router";
-import Link from "next/link";
-import { Button, Container, theme, Section } from "@cdt/ui-old";
+import { Button, theme } from "@cdt/ui-old";
 
-import SearchIcon from "../icons/SearchIcon";
+import SearchIcon from "../../icons/SearchIcon";
+import { matopush } from "../../piwik";
+import { fetchSuggestResults } from "../search.service";
 import { DocumentSuggester } from "./DocumentSuggester";
-import { fetchSuggestResults } from "./search.service";
-import { matopush } from "../piwik";
 
 const suggestMaxResults = 5;
 
-const Search = ({ router }) => {
+const SearchBar = ({ router }) => {
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
   const [suggestions, setSuggestions] = useState([]);
 
-  const searchRef = useRef(null);
-
   useEffect(() => {
     setQuery(router.query.q);
-    if (searchRef.current && searchRef.current.scrollIntoView) {
-      searchRef.current.scrollIntoView({ behavior: "smooth" });
-    }
   }, [router.query.q]);
 
   const onFormSubmit = e => {
@@ -65,78 +59,37 @@ const Search = ({ router }) => {
       console.error("fetch error", error);
     }
   };
-
   return (
-    <SearchSection variant="white">
-      <Container>
-        <StyledSearch ref={searchRef}>
-          <SearchLabel>
-            Posez votre question sur le droit du travail
-            <br />
-            <Link href="/droit-du-travail" passHref>
-              <A>Le droit du travail, c‘est quoi ?</A>
-            </Link>
-          </SearchLabel>
-          <SearchForm onSubmit={onFormSubmit}>
-            <SearchInputIcon />
-            <SearchInput
-              onChange={onChange}
-              query={query}
-              placeholder="Recherche"
-              onSearch={onSearch}
-              onSelect={onSelect}
-              onClear={onClear}
-              suggestions={suggestions}
-            />
-            <Submit type="submit">Rechercher</Submit>
-          </SearchForm>
-        </StyledSearch>
-      </Container>
-    </SearchSection>
+    <SearchForm onSubmit={onFormSubmit}>
+      <SearchInputIcon />
+      <SearchInput
+        onChange={onChange}
+        query={query}
+        placeholder="Recherche"
+        onSearch={onSearch}
+        onSelect={onSelect}
+        onClear={onClear}
+        suggestions={suggestions}
+      />
+      <Submit type="submit">Rechercher</Submit>
+    </SearchForm>
   );
 };
 
-export default withRouter(Search);
+export default withRouter(SearchBar);
 
-const { animations, box, breakpoints, colors, spacing, fonts } = theme;
-
-const SearchSection = styled(Section)`
-  box-shadow: 0 10px 10px -10px ${colors.lightGrey};
-  @media print {
-    display: none;
-  }
-`;
-
-const SearchLabel = styled.p`
-  margin-top: 0;
-  font-size: ${fonts.sizeH2};
-  line-height: ${fonts.lineHeight};
-  color: ${colors.title};
-`;
-
-const A = styled.a`
-  font-size: ${fonts.sizeBase};
-`;
-
-const StyledSearch = styled.div`
-  position: relative;
-  padding: ${spacing.base} 0;
-  text-align: center;
-`;
+const { animations, box, breakpoints, colors, spacing } = theme;
 
 const SearchForm = styled.form`
   display: flex;
-  margin: 0 auto;
-  padding: 0;
   position: relative;
-  width: 70%;
-  @media (max-width: ${breakpoints.tablet}) {
-    width: 100%;
-  }
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+  color: ${colors.darkText};
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
     height: auto;
-    width: 100%;
   }
 `;
 
@@ -160,7 +113,6 @@ const SearchInput = styled(DocumentSuggester)`
   height: 50px;
   font-size: inherit;
   font-family: inherit;
-  color: inherit;
   appearance: none;
   background: ${colors.lightBackground};
   border: 1px solid ${colors.elementBorder};

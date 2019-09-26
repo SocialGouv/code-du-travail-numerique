@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { theme } from "@cdt/ui-old/";
 
+import Html from "../../../common/Html";
+
 const ETAT_LABEL = {
   MODIFIE: "Modifie",
   DENONCE: "Dénonce",
@@ -19,7 +21,7 @@ const Article = ({ item: { id, etat, surtitre, content } }) => {
     <>
       <Status>{ETAT_LABEL[etat]}</Status>
       {surtitre && <h5 id={id}>{surtitre}</h5>}
-      <ArticleContent dangerouslySetInnerHTML={{ __html: content }} />
+      <ArticleContent>{content}</ArticleContent>
     </>
   );
 };
@@ -44,6 +46,6 @@ const Status = styled.div`
   font-size: 1em;
 `;
 
-const ArticleContent = styled.div`
+const ArticleContent = styled(Html)`
   margin-bottom: ${spacing.small};
 `;
