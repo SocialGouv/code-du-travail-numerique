@@ -4,8 +4,7 @@ import Head from "next/head";
 import { withRouter } from "next/router";
 import fetch from "isomorphic-unfetch";
 
-import Search from "../src/search/Search";
-import { PageLayout } from "../src/layout/PageLayout";
+import { Layout } from "../src/layout/Layout";
 import { AddressResults } from "../src/search/AddressResults";
 
 const {
@@ -39,7 +38,7 @@ class AnnuairePage extends React.Component {
     const { router, results } = this.props;
     const { q = "", source = "" } = router.query;
     return (
-      <PageLayout>
+      <Layout>
         <Head>
           <title>{q} - Code du travail numérique</title>
           <meta
@@ -47,14 +46,13 @@ class AnnuairePage extends React.Component {
             content="Retrouvez les interlocuteurs qui peuvent vous accompagner dans vos questions et démarches sur le droit du travail."
           />
         </Head>
-        <Search />
         <AddressResults
           query={q}
           results={results}
           source={source}
           url={router.asPath}
         />
-      </PageLayout>
+      </Layout>
     );
   }
 }

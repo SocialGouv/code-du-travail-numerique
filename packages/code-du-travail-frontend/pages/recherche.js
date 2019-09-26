@@ -3,10 +3,9 @@ import Head from "next/head";
 import { withRouter } from "next/router";
 import { Alert, Container, Section } from "@cdt/ui-old";
 
-import Search from "../src/search/Search";
 import { fetchSearchResults } from "../src/search/search.service";
 import { SearchResults } from "../src/search/SearchResults";
-import { PageLayout } from "../src/layout/PageLayout";
+import { Layout } from "../src/layout/Layout";
 
 import Metas from "../src/common/Metas";
 
@@ -20,7 +19,7 @@ class SearchPage extends React.Component {
     const { router, items = [], pageUrl, ogImage } = this.props;
     const { q: query = "" } = router.query;
     return (
-      <PageLayout>
+      <Layout>
         <Head>
           <meta name="robots" content="noindex, follow" />
         </Head>
@@ -30,7 +29,6 @@ class SearchPage extends React.Component {
           description="Posez votre question sur le droit du travail et obtenez une réponse personalisée à vos questions (formation, rupture de contrat, démission, indémnités)."
           image={ogImage}
         />
-        <Search />
         <Section>
           {items.length === 0 ? (
             <Container narrow>
@@ -42,7 +40,7 @@ class SearchPage extends React.Component {
             <SearchResults items={items} isSearch query={query} />
           )}
         </Section>
-      </PageLayout>
+      </Layout>
     );
   }
 }

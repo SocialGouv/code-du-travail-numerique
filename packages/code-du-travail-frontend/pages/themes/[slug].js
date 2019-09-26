@@ -1,17 +1,15 @@
 import React from "react";
-import Head from "next/head";
 import getConfig from "next/config";
 import styled from "styled-components";
 import { Alert, Container, Section, theme } from "@cdt/ui-old";
 import fetch from "isomorphic-unfetch";
 
-import Search from "../../src/search/Search";
 import { SearchResults } from "../../src/search/SearchResults";
 
-import Themes from "../../src/home/Themes";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import { ThemeBreadcrumbs } from "../../src/common/ThemeBreadcrumbs";
+import Themes from "../../src/common/Themes";
 
 const {
   publicRuntimeConfig: { API_URL }
@@ -20,9 +18,7 @@ const {
 // Theme page
 class Theme extends React.Component {
   static async getInitialProps({ query: { slug } }) {
-    const searchThemeResponse = await fetch(
-      `${API_URL}/themes${slug ? `/${slug}` : ""}`
-    );
+    const searchThemeResponse = await fetch(`${API_URL}/themes/${slug}`);
 
     if (!searchThemeResponse.ok) {
       return { statusCode: searchThemeResponse.status };
@@ -36,64 +32,57 @@ class Theme extends React.Component {
   }
 
   render() {
-    const { theme = { children: [] }, pageUrl, ogImage } = this.props;
-
-    const isRootTheme = theme && !theme.slug;
+    const { theme = {}, pageUrl, ogImage } = this.props;
 
     if (!theme) {
-      return <NotFound />;
+      return (
+        <Layout>
+          <Metas
+            url={pageUrl}
+            title="Thème introuvable - Code du travail numérique"
+            description={`Explorez les contenus autour du thème ${theme.title}`}
+            image={ogImage}
+          />
+          <Section variant="white">
+            <Container>
+              <AlertWrapper>
+                <Alert variant="warning">Ce thème n’a pas été trouvé</Alert>
+              </AlertWrapper>
+            </Container>
+          </Section>
+        </Layout>
+      );
     }
 
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
-          title={`${theme.title || "Thèmes"} - Code du travail numérique`}
+          title={`${theme.title} - Code du travail numérique`}
           description={`Explorez les contenus autour du thème ${theme.title}`}
           image={ogImage}
         />
-        <Search />
         <ThemeBreadcrumbs theme={theme} />
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
             <Themes
-              isRoot={isRootTheme}
+              isRoot={false}
               title={theme.title}
               themes={theme.children}
             />
           </Section>
         )}
-        {!isRootTheme && theme.refs.length > 0 && (
+        {theme.refs && theme.refs.length > 0 && (
           <Section>
             <SearchResults items={theme.refs} />
           </Section>
         )}
-      </PageLayout>
+      </Layout>
     );
   }
 }
 
 export default Theme;
-
-const NotFound = () => (
-  <PageLayout>
-    <Head>
-      <title>Theme introuvable : Code du travail numérique</title>
-    </Head>
-    <Search />
-    <Section variant="white">
-      <Container>
-        <BigError>Ce thème n’a pas été trouvé</BigError>
-      </Container>
-    </Section>
-  </PageLayout>
-);
-
-const BigError = ({ children }) => (
-  <AlertWrapper>
-    <Alert variant="warning">{children}</Alert>
-  </AlertWrapper>
-);
 
 const { colors, fonts, spacing } = theme;
 const AlertWrapper = styled.div`

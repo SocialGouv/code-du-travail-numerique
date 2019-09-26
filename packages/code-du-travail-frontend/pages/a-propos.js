@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Alert, Container, Section, theme, Wrapper } from "@cdt/ui-old";
-import { PageLayout } from "../src/layout/PageLayout";
+import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 
 const About = ({ ogImage, pageUrl }) => (
-  <PageLayout>
+  <Layout>
     <Metas
       url={pageUrl}
       title="À propos - Code du travail numérique"
@@ -79,7 +79,7 @@ const About = ({ ogImage, pageUrl }) => (
         </Wrapper>
       </Container>
     </Section>
-  </PageLayout>
+  </Layout>
 );
 export default About;
 

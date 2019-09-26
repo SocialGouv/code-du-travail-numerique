@@ -3,7 +3,7 @@ import { withRouter } from "next/router";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import Answer from "../../src/common/Answer";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Convention from "../../src/conventions/Convention";
 import Metas from "../../src/common/Metas";
 
@@ -42,7 +42,7 @@ class ConventionCollective extends React.Component {
     const { pageUrl, ogImage, convention, container } = this.props;
     const { title } = convention;
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title={title}
@@ -57,7 +57,7 @@ class ConventionCollective extends React.Component {
         >
           <Convention container={container} />
         </Answer>
-      </PageLayout>
+      </Layout>
     );
   }
 }

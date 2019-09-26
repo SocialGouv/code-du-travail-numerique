@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { Section, theme } from "@cdt/ui-old";
-import { PageLayout } from "../src/layout/PageLayout";
+import { Layout } from "../src/layout/Layout";
 import { initializeSentry, notifySentry } from "../src/sentry";
 
 initializeSentry();
@@ -23,7 +23,7 @@ export default class Error extends React.Component {
   render() {
     const { statusCode } = this.props;
     return (
-      <PageLayout>
+      <Layout>
         <Section variant="light">
           <FlexCenterer>
             <P>
@@ -38,7 +38,7 @@ export default class Error extends React.Component {
             </P>
           </FlexCenterer>
         </Section>
-      </PageLayout>
+      </Layout>
     );
   }
 }

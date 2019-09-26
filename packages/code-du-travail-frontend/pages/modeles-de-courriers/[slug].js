@@ -8,7 +8,7 @@ import Html from "../../src/common/Html";
 import { DownloadFile } from "../../src/common/DownloadFile";
 import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import Answer from "../../src/common/Answer";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
@@ -41,7 +41,7 @@ class ModeleCourrier extends React.Component {
       );
     }
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title={`Modèle de courrier :  ${data._source.title}`}
@@ -72,7 +72,7 @@ class ModeleCourrier extends React.Component {
             type="Modèle de document"
           />
         </Answer>
-      </PageLayout>
+      </Layout>
     );
   }
 }
