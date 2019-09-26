@@ -168,7 +168,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const BacklinkContainer = styled(Container)`
-  margin-top: ${spacing.base};
+  padding-top: ${spacing.base};
 `;
 
 const IntroWrapper = styled(Wrapper)`
