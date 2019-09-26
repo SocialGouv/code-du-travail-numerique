@@ -6,14 +6,15 @@ import threading
 from .sem_search import SemSearch
 
 
-def load_in_background(nlp, content_path, stops_path):
+def load_in_background(nlp, app, content_path, stops_path):
     ss = SemSearch(content_path, stops_path)
+    app.logger.info("🔋 sem_search ready")
     nlp.set('search', ss)
 
 
 def add_search(app, nlp, content_path, stops_path):
 
-    thread = threading.Thread(target=load_in_background, args=(nlp, content_path, stops_path))
+    thread = threading.Thread(target=load_in_background, args=(nlp, app, content_path, stops_path))
     # thread.start()
     nlp.queue(thread)
 
