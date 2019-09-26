@@ -33,7 +33,7 @@ exports[`<Outils /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c24 {
+.c25 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -41,15 +41,15 @@ exports[`<Outils /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c24 > *:first-child {
+.c25 > *:first-child {
   margin-top: 0;
 }
 
-.c24 > *:last-child {
+.c25 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -154,7 +154,7 @@ exports[`<Outils /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c7 {
+.c6 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -336,7 +336,7 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c25 {
+.c24 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -391,14 +391,14 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c24 {
+  .c25 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c7 {
+  .c6 {
     display: none;
   }
 }
@@ -574,7 +574,7 @@ exports[`<Outils /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c1 c18"
+      class="c18 c1"
     >
       <div
         class="c19"
@@ -595,7 +595,7 @@ exports[`<Outils /> should render 1`] = `
       class="c22"
     >
       <div
-        class="c1 c23"
+        class="c23 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -617,7 +617,7 @@ exports[`<Outils /> should render 1`] = `
       class="c22"
     >
       <div
-        class="c1 c27"
+        class="c27 c1"
       >
         <div
           class="c28 c29"

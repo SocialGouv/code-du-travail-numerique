@@ -42,7 +42,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -224,7 +224,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c1 {
+.c0 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -529,7 +529,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     display: none;
   }
 }
@@ -652,7 +652,7 @@ exports[`<ConventionCollective /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c2 c13"
+    class="c13 c2"
   >
     <div
       class="c14"

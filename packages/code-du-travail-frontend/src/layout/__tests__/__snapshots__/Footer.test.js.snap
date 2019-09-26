@@ -7,21 +7,21 @@ exports[`<Footer /> should render 1`] = `
   list-style-type: none;
 }
 
-.c2 {
+.c3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c2 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -29,11 +29,11 @@ exports[`<Footer /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c4 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -100,11 +100,11 @@ exports[`<Footer /> should render 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c3 {
+.c2 {
   text-align: center;
 }
 
-.c5 {
+.c4 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -139,14 +139,14 @@ exports[`<Footer /> should render 1`] = `
 }
 
 @media print {
-  .c2 {
+  .c3 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c4 {
+  .c5 {
     max-width: 100%;
     padding: 0;
   }
@@ -202,7 +202,7 @@ exports[`<Footer /> should render 1`] = `
       class="c1"
     >
       <div
-        class="c2 c7"
+        class="c7 c3"
       >
         <div
           class="c8 c9"

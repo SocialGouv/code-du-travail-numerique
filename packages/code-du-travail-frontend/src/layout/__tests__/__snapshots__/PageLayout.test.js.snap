@@ -21,7 +21,7 @@ exports[`<PageLayout /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
+.c10 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -29,11 +29,11 @@ exports[`<PageLayout /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c9 > *:first-child {
+.c10 > *:first-child {
   margin-top: 0;
 }
 
-.c9 > *:last-child {
+.c10 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -154,7 +154,7 @@ exports[`<PageLayout /> should render 1`] = `
   text-align: center;
 }
 
-.c10 {
+.c9 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -196,7 +196,7 @@ exports[`<PageLayout /> should render 1`] = `
 }
 
 @media print {
-  .c9 {
+  .c10 {
     max-width: 100%;
     padding: 0;
   }
@@ -267,7 +267,7 @@ exports[`<PageLayout /> should render 1`] = `
       class="c7"
     >
       <div
-        class="c1 c8"
+        class="c8 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -289,7 +289,7 @@ exports[`<PageLayout /> should render 1`] = `
       class="c7"
     >
       <div
-        class="c1 c12"
+        class="c12 c1"
       >
         <div
           class="c13 c14"

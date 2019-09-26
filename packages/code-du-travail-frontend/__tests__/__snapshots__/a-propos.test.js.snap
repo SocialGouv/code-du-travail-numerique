@@ -36,7 +36,7 @@ exports[`<About /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c13 {
+.c14 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -44,11 +44,11 @@ exports[`<About /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c13 > *:first-child {
+.c14 > *:first-child {
   margin-top: 0;
 }
 
-.c13 > *:last-child {
+.c14 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -205,7 +205,7 @@ exports[`<About /> should render 1`] = `
   text-align: center;
 }
 
-.c14 {
+.c13 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -258,7 +258,7 @@ exports[`<About /> should render 1`] = `
 }
 
 @media print {
-  .c13 {
+  .c14 {
     max-width: 100%;
     padding: 0;
   }
@@ -387,7 +387,7 @@ exports[`<About /> should render 1`] = `
       class="c6"
     >
       <div
-        class="c1 c12"
+        class="c12 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -409,7 +409,7 @@ exports[`<About /> should render 1`] = `
       class="c6"
     >
       <div
-        class="c1 c16"
+        class="c16 c1"
       >
         <div
           class="c17 c18"
