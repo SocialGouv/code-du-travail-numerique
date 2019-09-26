@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Explainer /> is togglable 1`] = `
-.c1 {
+.c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -11,11 +11,11 @@ exports[`<Explainer /> is togglable 1`] = `
   background-color: #ebeff3;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -75,7 +75,7 @@ exports[`<Explainer /> is togglable 1`] = `
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c0 {
+.c1 {
   margin-bottom: 1.25rem;
 }
 
@@ -95,13 +95,13 @@ exports[`<Explainer /> is togglable 1`] = `
 }
 
 @media (max-width:600px) {
-  .c1 {
+  .c0 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c1 {
+  .c0 {
     border: none;
     padding: 0 5pt;
   }

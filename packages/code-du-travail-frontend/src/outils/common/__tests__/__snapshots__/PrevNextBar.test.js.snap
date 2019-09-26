@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PrevNextBar /> should render 1`] = `
-.c1 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -9,15 +9,15 @@ exports[`<PrevNextBar /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -146,7 +146,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
@@ -174,7 +174,7 @@ exports[`<PrevNextBar /> should render 1`] = `
 `;
 
 exports[`<PrevNextBar /> should render disabled buttons 1`] = `
-.c1 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -182,15 +182,15 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -319,7 +319,7 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
@@ -348,7 +348,7 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 `;
 
 exports[`<PrevNextBar /> should render only next button 1`] = `
-.c1 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -356,15 +356,15 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -493,7 +493,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
@@ -521,7 +521,7 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 `;
 
 exports[`<PrevNextBar /> should render only prev button 1`] = `
-.c1 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -529,15 +529,15 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   max-width: 46.25rem;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -606,7 +606,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }

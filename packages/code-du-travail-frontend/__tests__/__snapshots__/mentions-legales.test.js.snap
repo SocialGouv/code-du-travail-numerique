@@ -36,7 +36,7 @@ exports[`<MentionLegales /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c21 {
+.c20 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -44,11 +44,11 @@ exports[`<MentionLegales /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c21 > *:first-child {
+.c20 > *:first-child {
   margin-top: 0;
 }
 
-.c21 > *:last-child {
+.c20 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -324,7 +324,7 @@ exports[`<MentionLegales /> should render 1`] = `
   text-align: center;
 }
 
-.c20 {
+.c21 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -387,7 +387,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 @media print {
-  .c21 {
+  .c20 {
     max-width: 100%;
     padding: 0;
   }
@@ -802,7 +802,7 @@ exports[`<MentionLegales /> should render 1`] = `
       class="c6"
     >
       <div
-        class="c19 c1"
+        class="c1 c19"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -824,7 +824,7 @@ exports[`<MentionLegales /> should render 1`] = `
       class="c6"
     >
       <div
-        class="c23 c1"
+        class="c1 c23"
       >
         <div
           class="c24 c25"

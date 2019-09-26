@@ -33,7 +33,7 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   overflow-x: auto;
 }
 
-.c3 {
+.c2 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -42,34 +42,34 @@ exports[`<SalaireTempsPlein /> should autofill blank input 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c3 caption {
+.c2 caption {
   padding: 0.625rem 0;
   text-align: center;
   font-style: italic;
 }
 
-.c3 td,
-.c3 th {
+.c2 td,
+.c2 th {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
 }
 
-.c3 th {
+.c2 th {
   background: #ebeff3;
 }
 
-.c3 thead,
-.c3 tfoot {
+.c2 thead,
+.c2 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
   background: #f5f7fa;
 }
 
-.c3 tfoot {
+.c2 tfoot {
   vertical-align: top;
 }
 
-.c2 tr > td:nth-child(2) {
+.c3 tr > td:nth-child(2) {
   text-align: left;
   width: 70%;
 }
@@ -234,7 +234,7 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   overflow-x: auto;
 }
 
-.c3 {
+.c2 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -243,34 +243,34 @@ exports[`<SalaireTempsPlein /> should render 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c3 caption {
+.c2 caption {
   padding: 0.625rem 0;
   text-align: center;
   font-style: italic;
 }
 
-.c3 td,
-.c3 th {
+.c2 td,
+.c2 th {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
 }
 
-.c3 th {
+.c2 th {
   background: #ebeff3;
 }
 
-.c3 thead,
-.c3 tfoot {
+.c2 thead,
+.c2 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
   background: #f5f7fa;
 }
 
-.c3 tfoot {
+.c2 tfoot {
   vertical-align: top;
 }
 
-.c2 tr > td:nth-child(2) {
+.c3 tr > td:nth-child(2) {
   text-align: left;
   width: 70%;
 }

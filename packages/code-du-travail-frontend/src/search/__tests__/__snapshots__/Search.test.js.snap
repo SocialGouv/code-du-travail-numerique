@@ -27,7 +27,7 @@ exports[`<search /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
+.c0 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -51,7 +51,7 @@ exports[`<search /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c0 {
+.c1 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -187,7 +187,7 @@ exports[`<search /> should render 1`] = `
 }
 
 @media print {
-  .c0 {
+  .c1 {
     display: none;
   }
 }
@@ -339,7 +339,7 @@ exports[`<search /> should render suggestions 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
+.c0 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -371,7 +371,7 @@ exports[`<search /> should render suggestions 1`] = `
   background: #f5f7fa;
 }
 
-.c0 {
+.c1 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -507,7 +507,7 @@ exports[`<search /> should render suggestions 1`] = `
 }
 
 @media print {
-  .c0 {
+  .c1 {
     display: none;
   }
 }
