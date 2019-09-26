@@ -1,3 +1,4 @@
+import logging
 import json
 import tensorflow as tf
 import tensorflow_hub as hub
