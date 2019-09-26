@@ -16,7 +16,7 @@ def add_search(app, nlp, content_path, stops_path):
 
     thread = threading.Thread(target=load_in_background, args=(nlp, app, content_path, stops_path))
     # thread.start()
-    nlp.queue(thread)
+    nlp.queue('search', thread)
 
     @app.route('/api/search', methods=['GET'])
     @cross_origin()

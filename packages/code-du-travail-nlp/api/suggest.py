@@ -20,7 +20,7 @@ def load_in_background(nlp, app, queries_path, stops_path):
 def add_suggest(app, nlp, queries_path, stops_path):
 
   thread = threading.Thread(target=load_in_background, args=(nlp, app, queries_path, stops_path))
-  nlp.queue(thread)
+  nlp.queue('suggester', thread)
 
   @app.route('/api/suggest', methods=['GET'])
   @cross_origin()
