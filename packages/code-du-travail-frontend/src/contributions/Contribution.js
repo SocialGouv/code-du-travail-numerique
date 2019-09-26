@@ -4,7 +4,7 @@ import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 
 import slugify from "@cdt/data/slugify";
-import { Accordion, Alert, Button } from "@cdt/ui-old";
+import { Accordion, Alert, Button, theme } from "@cdt/ui-old";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import Mdx from "../../src/common/Mdx";
@@ -31,7 +31,7 @@ const AnswerSection = props => {
     // sources juridiques
     case "source":
       return (
-        <Alert variant="secondary">
+        <Alert variant="info">
           <h4>Sources juridiques</h4>
           <div {...props} />
         </Alert>
@@ -39,8 +39,8 @@ const AnswerSection = props => {
     // hierarchie des normes
     case "hdn":
       return (
-        <Alert variant="secondary">
-          <h4>Hierarchie des normes</h4>
+        <Alert variant="info">
+          <h4>Texte juridique applicable</h4>
           <div {...props} />
         </Alert>
       );
@@ -124,19 +124,19 @@ const AnswersConventions = ({ answers }) => {
 const Contribution = ({ answers }) => (
   <React.Fragment>
     {answers.generic && (
-      <Section bgColor="white" style={{ marginBottom: 20 }}>
-        <h3>Que dit le code du travail ?</h3>
+      <SectionCdt bgColor="white" style={{ marginBottom: 20 }}>
+        <h2>Que dit le code du travail ?</h2>
         <Mdx
           markdown={makeArticlesLinks(answers.generic.markdown)}
           components={components}
         />
-      </Section>
+      </SectionCdt>
     )}
     {answers.conventions && (
-      <Section>
-        <h3>Que dit votre convention collective ?</h3>
+      <SectionConvention>
+        <h2>Que dit votre convention collective ?</h2>
         <AnswersConventions answers={answers.conventions} />
-      </Section>
+      </SectionConvention>
     )}
   </React.Fragment>
 );
@@ -145,24 +145,31 @@ const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
 `;
 
-const Section = styled.section`
-  padding: 10px 20px;
-  background: ${props => (props.bgColor ? props.bgColor : "#f6f6f6")};
-  border-radius: 3px;
+const SectionCdt = styled.section`
+  padding: ${theme.spacing.small} ${theme.spacing.medium};
+  background: white;
+`;
+
+const SectionConvention = styled.section`
+  padding: ${theme.spacing.small} ${theme.spacing.medium};
+  background: #f6f6f6;
+  border-radius: ${theme.box.lightBorderRadius};
   border: 1px solid #efefef;
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`
-  padding: 10px;
-  margin: 20px 0;
+  padding: ${theme.spacing.small};
+  margin: ${theme.spacing.medium} 0;
 `;
 
 const StyledAccordion = styled(Accordion)`
   *[data-accordion-component="AccordionItem"] {
-    margin-bottom: 20px;
+    &:nth-of-type(1) {
+      border-bottom: 1px solid ${theme.colors.elementBorder};
+    }
   }
   *[data-accordion-component="AccordionItemButton"] {
-    padding-left: 10px;
+    padding-left: ${theme.spacing.small};
   }
 `;
 

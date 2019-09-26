@@ -2,8 +2,6 @@ import React from "react";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 
-import { icons } from "@cdt/ui-old";
-
 import Answer from "../../src/common/Answer";
 import Contribution from "../../src/contributions/Contribution";
 import { PageLayout } from "../../src/layout/PageLayout";
@@ -48,9 +46,8 @@ class PageContribution extends React.Component {
           />
           <Answer
             title={title}
-            sourceType="Réponse détaillée"
+            sourceType="Réponse personnalisée selon votre convention collective"
             emptyMessage="Cette question n'a pas été trouvée"
-            icon={icons.Question}
           >
             <Contribution answers={answers} />
           </Answer>

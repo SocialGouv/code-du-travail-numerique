@@ -75,8 +75,9 @@ const Search = ({
     <Container style={style} className={className}>
       {title && <h3>{title}</h3>}
       <p>
-        Saisissez le nom de votre entreprise, la convention collective ou le
-        numéro SIRET
+        Afin de sélectionner votre convention collective, saisissez le nom de
+        votre entreprise, son numéro SIRET, ou directement le nom de votre
+        convention collective.
       </p>
       <Input
         placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
