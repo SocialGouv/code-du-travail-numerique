@@ -38,9 +38,9 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
           readinessProbe:
-            failureThreshold: 5
+            failureThreshold: 10
             httpGet:
-              path: /ready
+              path: /api/ready
               port: ${PORT}
             initialDelaySeconds: 30
             periodSeconds: 10
