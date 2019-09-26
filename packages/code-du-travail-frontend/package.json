@@ -45,7 +45,7 @@
     "react-mathjax-preview": "^0.1.16",
     "react-uid": "^2.2.0",
     "speakingurl": "14.0.1",
-    "styled-components": "^4.3.2",
+    "styled-components": "^4.4.0",
     "unist-util-find": "^1.0.1",
     "url-search-params": "^1.1.0"
   },

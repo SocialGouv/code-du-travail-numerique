@@ -36,7 +36,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c42 {
+.c41 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -44,15 +44,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c42 > *:first-child {
+.c41 > *:first-child {
   margin-top: 0;
 }
 
-.c42 > *:last-child {
+.c41 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7 {
+.c6 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -449,7 +449,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   text-align: center;
 }
 
-.c41 {
+.c42 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -582,7 +582,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   margin: 0.625rem 1rem;
 }
 
-.c6 {
+.c7 {
   padding: 2.5rem 0;
 }
 
@@ -641,7 +641,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 @media print {
-  .c42 {
+  .c41 {
     max-width: 100%;
     padding: 0;
   }
@@ -792,7 +792,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       class="c6 c7"
     >
       <div
-        class="c8 c1"
+        class="c1 c8"
       >
         <div
           class="c9"
@@ -846,7 +846,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
         </p>
       </div>
       <div
-        class="c15 c1"
+        class="c1 c15"
       >
         <div
           class="c16 c17"
@@ -1475,7 +1475,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c7"
+      class="c6"
     >
       <div
         class="c14"
@@ -2197,7 +2197,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       class="c27"
     >
       <div
-        class="c40 c1"
+        class="c1 c40"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -2219,7 +2219,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       class="c27"
     >
       <div
-        class="c44 c1"
+        class="c1 c44"
       >
         <div
           class="c45 c46"
