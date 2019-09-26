@@ -69,7 +69,8 @@ class NLP:
         self.data[target] = data
         self.ready[target] = True
 
-    def queue(self, thread):
+    def queue(self, target, thread):
+        self.ready[target] = False
         self.threads.append(thread)
 
     def load(self):
