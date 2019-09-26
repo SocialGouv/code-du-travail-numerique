@@ -7,12 +7,9 @@ import { Button, Container, theme, Section } from "@cdt/ui-old";
 import SearchIcon from "../icons/SearchIcon";
 import { DocumentSuggester } from "./DocumentSuggester";
 import { fetchSuggestResults } from "./search.service";
-import { withClipboard } from "../common/withClipboard.hoc";
 import { matopush } from "../piwik";
 
 const suggestMaxResults = 5;
-
-const SearchIconWithClipboard = withClipboard(SearchIcon);
 
 const Search = ({ router }) => {
   // query in the input box
@@ -143,7 +140,7 @@ const SearchForm = styled.form`
   }
 `;
 
-const SearchInputIcon = styled(SearchIconWithClipboard)`
+const SearchInputIcon = styled(SearchIcon)`
   position: absolute;
   left: 0;
   top: 0;

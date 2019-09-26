@@ -8,7 +8,6 @@ import OutilIcon from "../icons/OutilsIcon";
 
 export const getSourceIcon = (source = "") => {
   switch (source) {
-    case SOURCES.FAQ:
     case SOURCES.SHEET_SP:
     case SOURCES.SHEET_MT:
       return ReponseIcon;
