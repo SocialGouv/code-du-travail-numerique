@@ -48,6 +48,17 @@ Lint Dockerfiles:
         hadolint ${i}
       done
 
+Lint shell scripts:
+  <<: *quality_stage
+  image: koalaman/shellcheck-alpine:stable
+  script:
+    - |-
+      for i in $(find . -name "*.sh" | grep -v node_modules); do
+        echo ""
+        echo "[+] ShellCheck ${i}"
+        shellcheck ${i}
+      done
+
 Test @cdtn/frontend:
   <<: *quality_stage
   <<: *master_based_stage
