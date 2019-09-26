@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Contribution /> should render with both answers 1`] = `
+.c3 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c0 {
+  padding: 10px 20px;
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+
+.c1 {
+  padding: 10px 20px;
+  background: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+
+.c2 {
+  padding: 10px;
+  margin: 20px 0;
+}
+
+@media print {
+  .c3 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+    style="margin-bottom: 20px;"
+  >
+    <h3>
+      Que dit le code du travail ?
+    </h3>
+    <div>
+      <p>
+        hello 
+        <strong>
+          generic
+        </strong>
+      </p>
+    </div>
+  </section>
+  <section
+    class="c1"
+  >
+    <h3>
+      Que dit votre convention collective ?
+    </h3>
+    <div
+      class="c2 c3"
+    >
+      
+      <p>
+        Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
+      </p>
+      <input
+        class="c4"
+        placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+        type="text"
+        value=""
+      />
+      
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render with conventions answer 1`] = `
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c0 {
+  padding: 10px 20px;
+  background: #f6f6f6;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+
+.c1 {
+  padding: 10px;
+  margin: 20px 0;
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <h3>
+      Que dit votre convention collective ?
+    </h3>
+    <div
+      class="c1 c2"
+    >
+      
+      <p>
+        Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
+      </p>
+      <input
+        class="c3"
+        placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+        type="text"
+        value=""
+      />
+      
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render with generic answer 1`] = `
+.c0 {
+  padding: 10px 20px;
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+}
+
+<div>
+  <section
+    class="c0"
+    style="margin-bottom: 20px;"
+  >
+    <h3>
+      Que dit le code du travail ?
+    </h3>
+    <div>
+      <p>
+        hello 
+        <strong>
+          world
+        </strong>
+      </p>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<Contribution /> should render with no answer 1`] = `<div />`;
