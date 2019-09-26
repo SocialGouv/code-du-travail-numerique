@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import slugify from "@cdt/data/slugify";
-import { theme, Container, Table, Tag } from "@cdt/ui-old";
+import { theme, Container, Table } from "@cdt/ui-old";
 
 import SearchCC from "./SearchCC";
 
@@ -165,12 +165,6 @@ const Flex = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-`;
-
-const Spacer = styled.div`
-  display: inline-block;
-  width: ${theme.spacing.small};
-  flex: 0 0 auto;
 `;
 
 const ResultLabel = styled.div`
