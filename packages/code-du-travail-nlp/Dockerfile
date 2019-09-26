@@ -16,7 +16,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install curl=7.58.0-2ub
 WORKDIR /app
 
 COPY requirements.txt .
-COPY ./scripts ./scripts
+COPY ./scripts/download-suggester.sh ./scripts/download-suggester.sh
 COPY --from=cdtn-base-image /app/packages/code-du-travail-data/dist/dump.data.json ./data/content.json
 
 RUN sh ./scripts/download-suggester.sh
@@ -34,5 +34,6 @@ RUN . venv/bin/activate
 RUN pip install -r requirements.txt
 
 COPY ./api ./api
+COPY ./scripts/entrypoint.sh ./scripts/entrypoint.sh
 
 ENTRYPOINT ["sh", "scripts/entrypoint.sh"]

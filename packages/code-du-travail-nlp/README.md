@@ -63,19 +63,19 @@ ou
 # Récuperation d'une image depuis l'annuaire gitlab
 $ docker pull registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash>
 
-$ docker tag registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash> ctdn_master:local
+$ docker tag registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash> cdtn_master:local
 ```
 
 ## Démarer l'api nlp en local via docker
 
 ```sh
 # Creation de l'image nlp
-$ docker build -t cdtn_nlp:local --build-arg BASE_IMAGE=ctdn_master:local .
+$ docker build -t cdtn_nlp:local --build-arg BASE_IMAGE=cdtn_master:local .
 # Démarrage en local
 $ docker run --rm \
     --name cdtn_nlp
     -p 5000:5000
-    -e NLP_PORT=5000  nlp
+    -e NLP_PORT=5000
     cdtn_nlp:local
 ```
 

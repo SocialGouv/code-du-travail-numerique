@@ -34,15 +34,15 @@ $ curl http://localhost:1337/api/v1/version
 # You need a parent monorepo image !
 # You can download it from our registry
 $ docker pull registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash>
-$ docker tag registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash> ctdn_master:local
+$ docker tag registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique:<commit hash> cdtn_master:local
 
 # Or build it
 # From where this README.md is :
-$ docker build -t ctdn_master:local ../..
+$ docker build -t cdtn_master:local ../..
 
 #
 
-$ docker build -t cdtn_api:local --build-arg BASE_IMAGE=ctdn_master:local .
+$ docker build -t cdtn_api:local --build-arg BASE_IMAGE=cdtn_master:local .
 $ docker run --rm \
     --name cdtn_api \
     -p 1337:80 \
