@@ -75,7 +75,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c2 {
+.c1 {
   -webkit-flex-basis: 25rem;
   -ms-flex-preferred-size: 25rem;
   flex-basis: 25rem;
@@ -86,7 +86,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   margin-right: 1.25rem;
 }
 
-.c1 {
+.c2 {
   font-weight: 700;
 }
 
@@ -142,7 +142,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
       Motif
     </div>
     <div
-      class="c1 c3"
+      class="c3 c2"
     >
       Durée (en mois)
     </div>
@@ -151,7 +151,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
     class="c0"
   >
     <div
-      class="c2"
+      class="c1"
     >
       <select
         name="absences[0].type"
@@ -275,7 +275,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c2 {
+.c1 {
   -webkit-flex-basis: 25rem;
   -ms-flex-preferred-size: 25rem;
   flex-basis: 25rem;
@@ -286,7 +286,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   margin-right: 1.25rem;
 }
 
-.c1 {
+.c2 {
   font-weight: 700;
 }
 
@@ -303,7 +303,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
       Motif
     </div>
     <div
-      class="c1 c3"
+      class="c3 c2"
     >
       Durée (en mois)
     </div>
@@ -393,7 +393,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c2 {
+.c1 {
   -webkit-flex-basis: 25rem;
   -ms-flex-preferred-size: 25rem;
   flex-basis: 25rem;
@@ -404,7 +404,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
   margin-right: 1.25rem;
 }
 
-.c1 {
+.c2 {
   font-weight: 700;
 }
 
@@ -460,7 +460,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
       Motif
     </div>
     <div
-      class="c1 c3"
+      class="c3 c2"
     >
       Durée (en mois)
     </div>
@@ -469,7 +469,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
     class="c0"
   >
     <div
-      class="c2"
+      class="c1"
     >
       <select
         name="absences[0].type"

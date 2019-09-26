@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideration 1`] = `
-.c2 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -204,7 +204,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   transform: translateY(-50%);
 }
 
-.c1 {
+.c2 {
   margin-top: 1.25rem;
 }
 
@@ -323,7 +323,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
     value="3"
   />
   <div
-    class="c1 c9"
+    class="c9 c2"
   >
     <div
       class="c10"
@@ -423,7 +423,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
 `;
 
 exports[`<AncienneteETAMIC /> renders 1`] = `
-.c2 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -525,7 +525,7 @@ exports[`<AncienneteETAMIC /> renders 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c1 {
+.c2 {
   margin-top: 1.25rem;
 }
 
