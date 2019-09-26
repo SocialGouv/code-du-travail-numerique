@@ -16,10 +16,6 @@ const Convention = ({ num, title, onClick }) => {
   return (
     <Box>
       <Flex>
-        <Tag title="Numéro de convention collective" variant="info">
-          IDCC {`0000${num}`.slice(-4)}
-        </Tag>
-        <Spacer />
         {onClick ? (
           <ConventionLink onClick={onClick}>{title}</ConventionLink>
         ) : (
@@ -41,15 +37,15 @@ const Convention = ({ num, title, onClick }) => {
 };
 
 const TagSiret = ({ siret }) => (
-  <Tag title="Numéro SIRET" size="small" variant="info">
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={`https://entreprise.data.gouv.fr/etablissement/${siret}`}
-    >
-      {siret}
-    </a>
-  </Tag>
+  <a
+    title="Ouvrir la fiche entreprise"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ fontSize: "0.8em" }}
+    href={`https://entreprise.data.gouv.fr/etablissement/${siret}`}
+  >
+    {siret}
+  </a>
 );
 
 // demo app
@@ -100,7 +96,7 @@ const Search = ({
                 <div>Aucun résultat pour votre recherche.</div>
               )}
               {status === "success" && results && results.length ? (
-                <Table stripes>
+                <Table>
                   <tbody>
                     {results.map(result => (
                       <tr key={result.id}>

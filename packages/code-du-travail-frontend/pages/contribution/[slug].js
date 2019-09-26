@@ -72,7 +72,7 @@ const AnswerSection = props => {
     case "source":
       return (
         <Alert variant="info">
-          SOURCE
+          <h4>Sources juridiques</h4>
           <div {...props} />
         </Alert>
       );
@@ -80,7 +80,7 @@ const AnswerSection = props => {
     case "hdn":
       return (
         <Alert variant="secondary">
-          HDN
+          <h4>Hierarchie des normes</h4>
           <div {...props} />
         </Alert>
       );
@@ -94,15 +94,27 @@ const components = {
 };
 
 // following data/populate.js slug rules
-const getConventionSlug = convention =>
-  slugify(`${convention.num}-${convention.title}`.substring(0, 80));
+const getConventionSlug = ({ num, title }) =>
+  slugify(`${num}-${title}`.substring(0, 80));
+
+const LinkConvention = ({ num, title }) => {
+  const slugConvention = getConventionSlug({ num, title });
+  return (
+    <Link
+      href="/convention-collective/[slug]"
+      as={`/convention-collective/${slugConvention}`}
+    >
+      <Button variant="secondary">
+        Consulter la convention collective complète
+      </Button>
+    </Link>
+  );
+};
 
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
   const [convention, setConvention] = useConventionState(null);
   const answer = convention && answers.find(a => a.idcc === convention.num);
-
-  const slugConvention = convention && getConventionSlug(convention);
 
   return (
     <Section>
@@ -112,36 +124,33 @@ const AnswersConventions = ({ answers }) => {
       )}
       {convention && (
         <React.Fragment>
-          <h6>Convention {convention.title}</h6>
+          <h6>Convention {convention.shortTitle || convention.title}</h6>
           {(answer && (
-            <div>
-              <DynamicMdx
-                markdown={makeArticlesLinks(answer.markdown)}
-                components={components}
-              />
-              <div>
-                <Link
-                  href="/convention-collective/[slug]"
-                  as={`/convention-collective/${slugConvention}`}
-                >
-                  <a>Consulter la convention collective complète</a>
-                </Link>
+            <React.Fragment>
+              <div
+                style={{
+                  backgroundColor: "white",
+                  padding: 10,
+                  marginBottom: 20
+                }}
+              >
+                <DynamicMdx
+                  markdown={makeArticlesLinks(answer.markdown)}
+                  components={components}
+                />
               </div>
-            </div>
+              <LinkConvention num={convention.num} title={convention.title} />
+            </React.Fragment>
           )) || (
-            <div>
-              <Alert variant="warning">
+            <React.Fragment>
+              <NoConventionAlert variant="warning">
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
-              </Alert>
-              <Link
-                href="/convention-collective/[slug]"
-                as={`/convention-collective/${slugConvention}`}
-              >
-                <a>Consulter la convention collective complète</a>
-              </Link>
-            </div>
+              </NoConventionAlert>
+              <LinkConvention num={convention.num} title={convention.title} />
+            </React.Fragment>
           )}
+          <br />
           <br />
           <Button variant="primary" onClick={() => setConvention(null)}>
             Changer de convention collective
@@ -189,7 +198,7 @@ class Contribution extends React.Component {
             icon={icons.Question}
           >
             {answers.generic && (
-              <Section style={{ marginBottom: 20 }}>
+              <Section bgColor="white" style={{ marginBottom: 20 }}>
                 <h3>Que dit le code du travail ?</h3>
                 <DynamicMdx
                   markdown={makeArticlesLinks(answers.generic.markdown)}
@@ -205,9 +214,13 @@ class Contribution extends React.Component {
   }
 }
 
+const NoConventionAlert = styled(Alert)`
+  margin: 40px 0;
+`;
+
 const Section = styled.section`
   padding: 10px 20px;
-  background: #f6f6f6;
+  background: ${props => (props.bgColor ? props.bgColor : "#f6f6f6")};
   border-radius: 3px;
   border: 1px solid #efefef;
 `;
