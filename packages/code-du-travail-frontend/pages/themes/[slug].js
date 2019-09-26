@@ -31,8 +31,7 @@ class Theme extends React.Component {
     const theme = await searchThemeResponse.json();
 
     return {
-      theme,
-      slug
+      theme
     };
   }
 
