@@ -15,7 +15,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -23,11 +23,11 @@ exports[`<Article /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c4 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -53,7 +53,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c4 {
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -106,7 +106,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media print {
-  .c4 {
+  .c3 {
     max-width: 100%;
     padding: 0;
   }
@@ -218,7 +218,7 @@ exports[`<Article /> should render 1`] = `
             />
           </div>
           <div
-            class="c4"
+            class="c3"
           >
             this is an Article
           </div>

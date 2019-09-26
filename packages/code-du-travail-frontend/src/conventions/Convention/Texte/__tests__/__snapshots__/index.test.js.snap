@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Texte /> renders with a title 1`] = `
-.c2 {
+.c1 {
   padding: 1.25rem 0;
 }
 
-.c4 {
+.c3 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -15,11 +15,11 @@ exports[`<Texte /> renders with a title 1`] = `
   background-color: #ebeff3;
 }
 
-.c4 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -38,7 +38,7 @@ exports[`<Texte /> renders with a title 1`] = `
   font-weight: bold;
 }
 
-.c3 {
+.c4 {
   max-height: 100%;
   overflow: auto;
 }
@@ -68,20 +68,20 @@ exports[`<Texte /> renders with a title 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (min-width:980px) {
-  .c1 {
+  .c2 {
     -webkit-flex: 0 1 35%;
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
@@ -308,7 +308,7 @@ exports[`<Texte /> renders with a title 1`] = `
       </div>
     </div>
     <div
-      class="c7 c2"
+      class="c1 c7"
     >
       <h2
         class="c8"
@@ -1439,11 +1439,11 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
 `;
 
 exports[`<Texte /> renders without a title 1`] = `
-.c2 {
+.c1 {
   padding: 1.25rem 0;
 }
 
-.c4 {
+.c3 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -1453,11 +1453,11 @@ exports[`<Texte /> renders without a title 1`] = `
   background-color: #ebeff3;
 }
 
-.c4 > *:first-child {
+.c3 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c3 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1476,7 +1476,7 @@ exports[`<Texte /> renders without a title 1`] = `
   font-weight: bold;
 }
 
-.c3 {
+.c4 {
   max-height: 100%;
   overflow: auto;
 }
@@ -1501,20 +1501,20 @@ exports[`<Texte /> renders without a title 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c3 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c3 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (min-width:980px) {
-  .c1 {
+  .c2 {
     -webkit-flex: 0 1 35%;
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
@@ -1741,7 +1741,7 @@ exports[`<Texte /> renders without a title 1`] = `
       </div>
     </div>
     <div
-      class="c7 c2"
+      class="c1 c7"
     >
       <h3
         class="c8"

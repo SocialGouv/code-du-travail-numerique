@@ -48,7 +48,7 @@ exports[`<FicheSP /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c39 {
+.c38 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -56,15 +56,15 @@ exports[`<FicheSP /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c39 > *:first-child {
+.c38 > *:first-child {
   margin-top: 0;
 }
 
-.c39 > *:last-child {
+.c38 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8 {
+.c7 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -305,7 +305,7 @@ exports[`<FicheSP /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c7 {
+.c8 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -636,7 +636,7 @@ exports[`<FicheSP /> should render 1`] = `
   text-align: center;
 }
 
-.c38 {
+.c39 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -689,7 +689,7 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 @media print {
-  .c39 {
+  .c38 {
     max-width: 100%;
     padding: 0;
   }
@@ -709,7 +709,7 @@ exports[`<FicheSP /> should render 1`] = `
 }
 
 @media print {
-  .c7 {
+  .c8 {
     display: none;
   }
 }
@@ -888,7 +888,7 @@ exports[`<FicheSP /> should render 1`] = `
         </div>
       </div>
       <div
-        class="c19 c1"
+        class="c1 c19"
       >
         <div
           class="c20"
@@ -1027,7 +1027,7 @@ exports[`<FicheSP /> should render 1`] = `
       class="c21"
     >
       <div
-        class="c37 c1"
+        class="c1 c37"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -1049,7 +1049,7 @@ exports[`<FicheSP /> should render 1`] = `
       class="c21"
     >
       <div
-        class="c41 c1"
+        class="c1 c41"
       >
         <div
           class="c42 c43"
