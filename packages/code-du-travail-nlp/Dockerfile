@@ -26,9 +26,11 @@ ENV FLASK_APP api
 ENV FLASK_APP="development"
 
 RUN python -m venv venv
+
+# hadolint ignore=SC1091
 RUN . venv/bin/activate
 
-# shellcheck disable=SC1091
+# hadolint ignore=SC1091
 RUN pip install -r requirements.txt
 
 COPY ./api ./api
