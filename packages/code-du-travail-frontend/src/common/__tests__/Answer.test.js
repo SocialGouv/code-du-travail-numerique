@@ -57,4 +57,20 @@ describe("<Answer />", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it("should render tooltip for words with diacritics without breaking html", () => {
+    const { container } = render(
+      <Answer
+        title="Article du code"
+        intro="intro de l'article"
+        html="<p class='test-content'>Contenu au format <strong>indemnités</strong>comme code ape</p>"
+        footer="pied de page"
+        date="03/11/1979"
+        sourceType="social groove"
+        icon={icons.Question}
+      >
+        <div>Contenu supplémentaire</div>
+      </Answer>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

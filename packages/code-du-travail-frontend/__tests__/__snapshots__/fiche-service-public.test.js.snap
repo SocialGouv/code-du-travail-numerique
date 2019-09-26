@@ -286,6 +286,149 @@ exports[`<FicheSP /> should render 1`] = `
   padding: 0 0.25rem;
 }
 
+.c24 {
+  margin-bottom: 1rem;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c27 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c27:not([disabled]):hover,
+.c27:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c27:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c27[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c27[aria-pressed="true"]:not([disabled]):hover,
+.c27[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c27[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c27 + .c26 {
+  margin-left: 1rem;
+}
+
+.c28 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+  min-width: 7rem;
+}
+
+.c28:not([disabled]):hover,
+.c28:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c28:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c28[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c28[aria-pressed="true"]:not([disabled]):hover,
+.c28[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c28[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c28[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c28 + .c26 {
+  margin-left: 1rem;
+}
+
 .c14 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -431,149 +574,6 @@ exports[`<FicheSP /> should render 1`] = `
 .c18[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
-}
-
-.c24 {
-  margin-bottom: 1rem;
-}
-
-.c25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-}
-
-.c27 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
-  min-width: 7rem;
-}
-
-.c27:not([disabled]):hover,
-.c27:not([disabled]):focus {
-  background: #f7f7f7;
-  color: #18181c;
-}
-
-.c27:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  outline: none;
-}
-
-.c27[aria-pressed="true"] {
-  color: #18181c;
-  background: #f7f7f7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
-}
-
-.c27[aria-pressed="true"]:not([disabled]):hover,
-.c27[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
-}
-
-.c27[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
-}
-
-.c27[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c27 + .c26 {
-  margin-left: 1rem;
-}
-
-.c28 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  min-width: 7rem;
-}
-
-.c28:not([disabled]):hover,
-.c28:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c28:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c28[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c28[aria-pressed="true"]:not([disabled]):hover,
-.c28[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c28[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c28[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c28 + .c26 {
-  margin-left: 1rem;
 }
 
 .c19 {
