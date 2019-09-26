@@ -2,14 +2,16 @@ ARG TAG_BASE_IMAGE=master
 ARG REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
 ARG BASE_IMAGE=${REGISTRY}:${TAG_BASE_IMAGE}
 
+# hadolint ignore=DL3006
 FROM ${BASE_IMAGE} as cdtn-base-image
 FROM tensorflow/tensorflow:1.14.0-py3
 
 ARG SUGGEST_DATA_URL=https://gist.githubusercontent.com/ArmandGiraud/aaa65ed694e6b8d46918d44e41bae9e4/raw/2b5fa5ff67d87bbf08b33fecfe2fb98e15c73a06/data-test.txt
 ENV SUGGEST_DATA_URL=$SUGGEST_DATA_URL
 
-RUN apt-get update
-RUN apt-get -y install curl unzip git python3-venv
+RUN apt-get update && apt-get -y --no-install-recommends install curl=7.55 unzip=6.0 git=2.2 python3-venv=3.4 \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -25,6 +27,8 @@ ENV FLASK_APP="development"
 
 RUN python -m venv venv
 RUN . venv/bin/activate
+
+# shellcheck disable=SC1091
 RUN pip install -r requirements.txt
 
 COPY ./api ./api

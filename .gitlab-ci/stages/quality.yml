@@ -37,7 +37,16 @@ Lint @cdtn/data:
   script:
     - yarn workspace @cdt/data lint
 
-#
+Lint Dockerfiles:
+  <<: *quality_stage
+  image: hadolint/hadolint:latest-debian
+  script:
+    - |-
+      for i in $(find . -name Dockerfile); do
+        echo ""
+        echo "[+] hadolint ${i}"
+        hadolint ${i}
+      done
 
 Test @cdtn/frontend:
   <<: *quality_stage
