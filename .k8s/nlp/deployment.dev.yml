@@ -42,8 +42,8 @@ spec:
             httpGet:
               path: /ready
               port: ${PORT}
-            initialDelaySeconds: 10
-            periodSeconds: 5
+            initialDelaySeconds: 30
+            periodSeconds: 10
           env:
             - name: NLP_PORT
               value: "${PORT}"
