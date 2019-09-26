@@ -33,7 +33,7 @@ exports[`<Theme /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c22 {
+.c21 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -41,15 +41,15 @@ exports[`<Theme /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c22 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c22 > *:last-child {
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
-.c7 {
+.c6 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -136,7 +136,7 @@ exports[`<Theme /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c6 {
+.c7 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -318,7 +318,7 @@ exports[`<Theme /> should render 1`] = `
   text-align: center;
 }
 
-.c21 {
+.c22 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -360,14 +360,14 @@ exports[`<Theme /> should render 1`] = `
 }
 
 @media print {
-  .c22 {
+  .c21 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c6 {
+  .c7 {
     display: none;
   }
 }
@@ -550,7 +550,7 @@ exports[`<Theme /> should render 1`] = `
       class="c19"
     >
       <div
-        class="c20 c1"
+        class="c1 c20"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -572,7 +572,7 @@ exports[`<Theme /> should render 1`] = `
       class="c19"
     >
       <div
-        class="c24 c1"
+        class="c1 c24"
       >
         <div
           class="c25 c26"
