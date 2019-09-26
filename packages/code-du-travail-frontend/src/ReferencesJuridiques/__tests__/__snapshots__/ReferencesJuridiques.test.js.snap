@@ -21,7 +21,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
+.c0 {
   padding: 1.25rem 0;
 }
 
@@ -258,7 +258,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   padding: 1rem;
 }
 
-.c0 {
+.c1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

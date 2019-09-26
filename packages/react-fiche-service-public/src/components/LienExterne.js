@@ -9,8 +9,12 @@ export class LienExterneCommente extends React.PureComponent {
   };
   render() {
     const { data } = this.props;
-    const commentaire = data.$.find(child => child.name === "Commentaire");
-    const lienExterne = data.$.find(child => child.name === "LienExterne");
+    const commentaire = data.children.find(
+      child => child.name === "Commentaire"
+    );
+    const lienExterne = data.children.find(
+      child => child.name === "LienExterne"
+    );
     return (
       <>
         {getText(commentaire)}
@@ -28,7 +32,7 @@ export class LienExterne extends React.PureComponent {
   };
   render() {
     const { data } = this.props;
-    const url = data._.URL;
+    const url = data.attributes.URL;
     const label = getText(data);
     return (
       <a href={url} rel="noopener noreferrer" target="_blank">

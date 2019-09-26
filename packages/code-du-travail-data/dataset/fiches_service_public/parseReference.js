@@ -60,7 +60,7 @@ const createJORef = (id, title, url) => ({
 });
 
 const parseReference = reference => {
-  const { URL: url } = reference._;
+  const { URL: url } = reference.attributes;
   const qs = queryString.parse(url.split("?")[1]);
   const type = getTextType(qs);
   switch (type) {
@@ -83,7 +83,9 @@ const parseReference = reference => {
       return [createCCRef(id, slug, title)];
     }
     case "journal-officiel":
-      return [createJORef(qs.cidTexte, reference.$[0].$[0].$, url)];
+      return [
+        createJORef(qs.cidTexte, reference.children[0].children[0].text, url)
+      ];
     default:
       return [];
   }

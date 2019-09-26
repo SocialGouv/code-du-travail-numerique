@@ -6,20 +6,20 @@ import threading
 from autosuggest import AutoSuggestor
 
 
-def load_in_background(nlp, queries_path, stops_path):
-  suggester = AutoSuggestor(
+def load_in_background(nlp, app, queries_path, stops_path):
+      suggester = AutoSuggestor(
           queries_path=queries_path,
           stops_path=stops_path,
           build_precount=False
       )
-  nlp.set('suggester', suggester)
+      app.logger.info("💡 suggestion ready")
+      nlp.set('suggester', suggester)
 
 
 
 def add_suggest(app, nlp, queries_path, stops_path):
 
-  thread = threading.Thread(target=load_in_background, args=(nlp, queries_path, stops_path))
-  # thread.start()
+  thread = threading.Thread(target=load_in_background, args=(nlp, app, queries_path, stops_path))
   nlp.queue(thread)
 
   @app.route('/api/suggest', methods=['GET'])

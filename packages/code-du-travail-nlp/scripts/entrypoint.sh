@@ -5,6 +5,6 @@ set -exu pipefail
 
 
 # start the serveur
-gunicorn -t 3000 -k gevent -w 1 -b :${NLP_PORT} "api:create_app()" --log-level "debug" --log-file "-"
+gunicorn -t 3000 --threads 4 -w 2 -b :${NLP_PORT} "api:create_app()"
 
 

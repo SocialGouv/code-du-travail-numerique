@@ -34,31 +34,33 @@ const client = new Client({
 });
 
 async function main() {
-  await version({ client });
-  // Indexing document data
-  // Indexing CCN data
+  const ts = Date.now();
 
+  await version({ client });
+
+  // Indexing CCN data
   await createIndex({
     client,
-    indexName: CDTN_CCN_NAME,
+    indexName: `${CDTN_CCN_NAME}-${ts}`,
     mappings: conventionCollectiveMapping
   });
   for (const documents of cdtnCcnGen(conventionList, 10000000)) {
     await indexDocumentsBatched({
-      indexName: CDTN_CCN_NAME,
+      indexName: `${CDTN_CCN_NAME}-${ts}`,
       client,
       documents
     });
   }
 
+  // Indexing document data
   await createIndex({
     client,
-    indexName: CDTN_INDEX_NAME,
+    indexName: `${CDTN_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
   for (const documents of cdtnDocumentsGen()) {
     await indexDocumentsBatched({
-      indexName: CDTN_INDEX_NAME,
+      indexName: `${CDTN_INDEX_NAME}-${ts}`,
       client,
       documents,
       size: 1000
@@ -68,12 +70,12 @@ async function main() {
   // Indexing Annuaire data
   await createIndex({
     client,
-    indexName: ANNUAIRE_INDEX_NAME,
+    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
     mappings: annuaireMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: ANNUAIRE_INDEX_NAME,
+    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
     documents: annuaire,
     size: 500
   });
@@ -81,15 +83,37 @@ async function main() {
   // Indexing Themes data
   await createIndex({
     client,
-    indexName: THEMES_INDEX_NAME,
+    indexName: `${THEMES_INDEX_NAME}-${ts}`,
     mappings: themesMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: THEMES_INDEX_NAME,
+    indexName: `${THEMES_INDEX_NAME}-${ts}`,
     documents: themes,
     size: 500
   });
+  // Creating alias
+  await client.indices.putAlias({
+    index: `${ANNUAIRE_INDEX_NAME}-${ts}`,
+    name: ANNUAIRE_INDEX_NAME
+  });
+  await client.indices.putAlias({
+    index: `${THEMES_INDEX_NAME}-${ts}`,
+    name: THEMES_INDEX_NAME
+  });
+  await client.indices.putAlias({
+    index: `${CDTN_CCN_NAME}-${ts}`,
+    name: CDTN_CCN_NAME
+  });
+  await client.indices.putAlias({
+    index: `${CDTN_INDEX_NAME}-${ts}`,
+    name: CDTN_INDEX_NAME
+  });
 }
 
-main();
+try {
+  main();
+} catch (error) {
+  console.error(error);
+  process.exit(-1);
+}

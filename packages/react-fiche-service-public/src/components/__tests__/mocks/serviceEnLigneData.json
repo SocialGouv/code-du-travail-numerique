@@ -1,32 +1,32 @@
 {
   "type":"element",
   "name":"ServiceEnLigne",
-  "_":{
+  "attributes":{
     "ID":"un id",
     "URL":"url à retoruver dans le lien",
     "type":"Se retrouve dans en entête"
   },
-  "$":[
+  "children":[
     {
       "type":"element",
       "name":"Titre",
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"Texte qui se retrouve dans le lien"
+          "text":"Texte qui se retrouve dans le lien"
         }
       ]
     },
     {
       "type":"element",
       "name":"Source",
-      "_":{
+      "attributes":{
         "ID":"R30608"
       },
-      "$":[
+      "children":[
         {
           "type":"text",
-          "$":"Source qui se retrouve sous le lien"
+          "text":"Source qui se retrouve sous le lien"
         }
       ]
     }

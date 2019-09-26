@@ -61,9 +61,10 @@ spec:
         readinessProbe:
           httpGet:
             scheme: HTTP
-            path: /_cluster/health?local=true
+            path: /_cluster/health
             port: ${PORT}
           initialDelaySeconds: 60
+          periodSeconds: 5
         ports:
         - containerPort: ${PORT}
           name: es-http
