@@ -1,40 +1,23 @@
 from flask import Flask
-from api.suggest import add_suggest
-from api.search import add_search
-from autosuggest import AutoSuggestor
-from .sem_search import SemSearch
-import os
 
-data_path = os.path.join(
-    os.path.dirname(os.path.abspath(__name__)),
-    "data"
-)
-content_path = os.path.join(data_path, 'content.json')
-queries_path = os.path.join(data_path, 'data.txt')
-stops_path = os.path.join(data_path, 'stops.txt')
+from .loader import load_nlp
+import os, logging
 
 
 def create_app():
-    suggester = AutoSuggestor(
-        queries_path=queries_path,
-        stops_path=stops_path,
-        build_precount=False
-    )
-
-    ss = SemSearch(content_path, stops_path)
-
     app = Flask(__name__)
     app.config['JSON_AS_ASCII'] = False
+    gunicorn_logger = logging.getLogger("gunicorn.error")
+    app.logger.handlers.extend(gunicorn_logger.handlers)
+    app.logger.setLevel(gunicorn_logger.level)
 
-    app.logger.info("Flask app started ")
+    app.logger.info("🌶  Flask app started !")
+
+    load_nlp(app)
 
     @app.route('/')
-    def hello():
+    def hello():  # pylint: disable=unused-variable
         return 'NLP api'
-
-    add_suggest(app, suggester)
-    add_search(app, ss)
-
     return app
 
 
