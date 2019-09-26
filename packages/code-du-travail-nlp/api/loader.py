@@ -83,7 +83,7 @@ nlp = NLP()
 
 def load_nlp(app):
     @app.errorhandler(NotReady)
-    def handle_not_ready(error):
+    def handle_not_ready(error): # pylint: disable=unused-variable
         response = jsonify(error.to_dict())
         response.status_code = error.status_code
         return response
@@ -93,8 +93,3 @@ def load_nlp(app):
     add_search(app, nlp, content_path, stops_path)
 
     nlp.load()
-
-    
-    
-
-

@@ -1,6 +1,6 @@
 from flask import request
 from flask import jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import cross_origin
 import threading
 
 from .sem_search import SemSearch
@@ -20,7 +20,7 @@ def add_search(app, nlp, content_path, stops_path):
 
     @app.route('/api/search', methods=['GET'])
     @cross_origin()
-    def search():
+    def search():  # pylint: disable=unused-variable
         ss = nlp.get('search', check_ready=True)
 
         # maybe add a default to get (risky because of no exclude sources)

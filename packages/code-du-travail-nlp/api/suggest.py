@@ -1,6 +1,6 @@
 from flask import request
 from flask import jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import cross_origin
 import threading
 
 from autosuggest import AutoSuggestor
@@ -24,7 +24,7 @@ def add_suggest(app, nlp, queries_path, stops_path):
 
   @app.route('/api/suggest', methods=['GET'])
   @cross_origin()
-  def suggest():
+  def suggest():  # pylint: disable=unused-variable
     suggester = nlp.get('suggester', check_ready=True)
     input = request.args.get('q')
     results =  suggester.auto_suggest_fast(input, nb_next_words=12)

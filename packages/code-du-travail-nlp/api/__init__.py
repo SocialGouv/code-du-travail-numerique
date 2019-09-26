@@ -16,7 +16,7 @@ def create_app():
     load_nlp(app)
 
     @app.route('/')
-    def hello():
+    def hello():  # pylint: disable=unused-variable
         return 'NLP api'
     return app
 
