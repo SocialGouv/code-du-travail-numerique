@@ -1,7 +1,7 @@
 #
 
 .build_and_push_stage: &build_and_push_stage
-  extends: .base_register_stage
+  extends: .base_docker_image_stage
   stage: "Registration"
   dependencies: []
   before_script:
