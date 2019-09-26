@@ -28,11 +28,11 @@ exports[`<ListTextes /> renders a list of textes 1`] = `
 `;
 
 exports[`<ListTextes /> renders a text 1`] = `
-.c2 {
+.c3 {
   padding: 1.25rem 0;
 }
 
-.c4 {
+.c5 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -42,11 +42,11 @@ exports[`<ListTextes /> renders a text 1`] = `
   background-color: #ebeff3;
 }
 
-.c4 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c4 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -65,7 +65,7 @@ exports[`<ListTextes /> renders a text 1`] = `
   font-weight: bold;
 }
 
-.c5 {
+.c4 {
   max-height: 100%;
   overflow: auto;
 }
@@ -104,20 +104,20 @@ exports[`<ListTextes /> renders a text 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c4 {
+  .c5 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (min-width:980px) {
-  .c3 {
+  .c2 {
     -webkit-flex: 0 1 35%;
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
@@ -212,7 +212,7 @@ exports[`<ListTextes /> renders a text 1`] = `
       </div>
     </div>
     <div
-      class="c2 c8"
+      class="c8 c3"
     >
       <h2
         class="c9"

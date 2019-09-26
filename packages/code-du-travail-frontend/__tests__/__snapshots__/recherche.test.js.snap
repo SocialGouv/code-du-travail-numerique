@@ -48,7 +48,7 @@ exports[`<Recherche /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c23 {
+.c24 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -56,15 +56,15 @@ exports[`<Recherche /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c23 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -169,7 +169,7 @@ exports[`<Recherche /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c7 {
+.c6 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -351,7 +351,7 @@ exports[`<Recherche /> should render 1`] = `
   text-align: center;
 }
 
-.c24 {
+.c23 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
@@ -400,14 +400,14 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media print {
-  .c23 {
+  .c24 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c7 {
+  .c6 {
     display: none;
   }
 }
@@ -603,7 +603,7 @@ exports[`<Recherche /> should render 1`] = `
       class="c18"
     >
       <div
-        class="c1 c22"
+        class="c22 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
@@ -625,7 +625,7 @@ exports[`<Recherche /> should render 1`] = `
       class="c18"
     >
       <div
-        class="c1 c26"
+        class="c26 c1"
       >
         <div
           class="c27 c28"

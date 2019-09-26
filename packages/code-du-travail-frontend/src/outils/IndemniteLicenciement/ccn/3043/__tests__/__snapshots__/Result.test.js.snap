@@ -60,7 +60,7 @@ exports[`<Result /> should render 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c17 {
+.c18 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -232,7 +232,7 @@ exports[`<Result /> should render 1`] = `
   font-size: 1.375rem;
 }
 
-.c18 {
+.c17 {
   margin: 1.25rem 0;
 }
 

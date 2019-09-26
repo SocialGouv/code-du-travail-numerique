@@ -27,7 +27,7 @@ exports[`<Answer /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c15 {
+.c16 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -35,11 +35,11 @@ exports[`<Answer /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c15 > *:first-child {
+.c16 > *:first-child {
   margin-top: 0;
 }
 
-.c15 > *:last-child {
+.c16 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -58,7 +58,7 @@ exports[`<Answer /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -85,7 +85,7 @@ exports[`<Answer /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c23 {
+.c24 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -95,11 +95,11 @@ exports[`<Answer /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c23 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -209,7 +209,7 @@ exports[`<Answer /> should render 1`] = `
   justify-content: center;
 }
 
-.c16 {
+.c15 {
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -285,7 +285,7 @@ exports[`<Answer /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c1 {
+.c0 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -556,7 +556,7 @@ exports[`<Answer /> should render 1`] = `
   margin-left: 1rem;
 }
 
-.c24 {
+.c23 {
   margin: 1rem auto;
 }
 
@@ -575,7 +575,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media print {
-  .c15 {
+  .c16 {
     max-width: 100%;
     padding: 0;
   }
@@ -602,13 +602,13 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     border: none;
     padding: 0 5pt;
   }
@@ -639,7 +639,7 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     display: none;
   }
 }
@@ -829,7 +829,7 @@ exports[`<Answer /> should render 1`] = `
             />
           </div>
           <div
-            class="c15"
+            class="c16"
           >
             <div
               class="c23 c24"
@@ -866,7 +866,7 @@ exports[`<Answer /> should render 1`] = `
       class="c26"
     >
       <div
-        class="c23"
+        class="c24"
       >
         <h3
           class="c27"
@@ -1017,7 +1017,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c19 {
+.c20 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -1025,11 +1025,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   max-width: 46.25rem;
 }
 
-.c19 > *:first-child {
+.c20 > *:first-child {
   margin-top: 0;
 }
 
-.c19 > *:last-child {
+.c20 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1048,7 +1048,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -1075,7 +1075,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c27 {
+.c28 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -1085,11 +1085,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #ebeff3;
 }
 
-.c27 > *:first-child {
+.c28 > *:first-child {
   margin-top: 0;
 }
 
-.c27 > *:last-child {
+.c28 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -1199,7 +1199,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: center;
 }
 
-.c20 {
+.c19 {
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -1275,7 +1275,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background: #f5f7fa;
 }
 
-.c1 {
+.c0 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -1568,7 +1568,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   user-select: none;
 }
 
-.c28 {
+.c27 {
   margin: 1rem auto;
 }
 
@@ -1587,7 +1587,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media print {
-  .c19 {
+  .c20 {
     max-width: 100%;
     padding: 0;
   }
@@ -1614,13 +1614,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c27 {
+  .c28 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c27 {
+  .c28 {
     border: none;
     padding: 0 5pt;
   }
@@ -1651,7 +1651,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     display: none;
   }
 }
@@ -1899,7 +1899,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             />
           </div>
           <div
-            class="c19"
+            class="c20"
           >
             <div
               class="c27 c28"
@@ -1936,7 +1936,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
       class="c30"
     >
       <div
-        class="c27"
+        class="c28"
       >
         <h3
           class="c31"
@@ -2081,7 +2081,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c15 {
+.c16 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -2089,11 +2089,11 @@ exports[`<Answer /> should render tooltip 1`] = `
   max-width: 46.25rem;
 }
 
-.c15 > *:first-child {
+.c16 > *:first-child {
   margin-top: 0;
 }
 
-.c15 > *:last-child {
+.c16 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -2112,7 +2112,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c0 {
+.c1 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -2139,7 +2139,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c23 {
+.c24 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -2149,11 +2149,11 @@ exports[`<Answer /> should render tooltip 1`] = `
   background-color: #ebeff3;
 }
 
-.c23 > *:first-child {
+.c24 > *:first-child {
   margin-top: 0;
 }
 
-.c23 > *:last-child {
+.c24 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -2263,7 +2263,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   justify-content: center;
 }
 
-.c16 {
+.c15 {
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -2339,7 +2339,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   background: #f5f7fa;
 }
 
-.c1 {
+.c0 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -2610,7 +2610,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-left: 1rem;
 }
 
-.c24 {
+.c23 {
   margin: 1rem auto;
 }
 
@@ -2633,7 +2633,7 @@ exports[`<Answer /> should render tooltip 1`] = `
 }
 
 @media print {
-  .c15 {
+  .c16 {
     max-width: 100%;
     padding: 0;
   }
@@ -2660,13 +2660,13 @@ exports[`<Answer /> should render tooltip 1`] = `
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c24 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c23 {
+  .c24 {
     border: none;
     padding: 0 5pt;
   }
@@ -2697,7 +2697,7 @@ exports[`<Answer /> should render tooltip 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     display: none;
   }
 }
@@ -2887,7 +2887,7 @@ exports[`<Answer /> should render tooltip 1`] = `
             />
           </div>
           <div
-            class="c15"
+            class="c16"
           >
             <div
               class="c23 c24"
@@ -2963,7 +2963,7 @@ exports[`<Answer /> should render tooltip 1`] = `
       class="c27"
     >
       <div
-        class="c23"
+        class="c24"
       >
         <h3
           class="c28"
