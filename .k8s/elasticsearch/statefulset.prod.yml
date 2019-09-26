@@ -25,12 +25,26 @@ spec:
         emptyDir: {}
       containers:
       - name: elasticsearch
-        image: ${IMAGE_NAME}:${IMAGE_TAG}
         resources:
           limits:
             cpu: 1000m
           requests:
             cpu: 100m
+        image: ${IMAGE_NAME}:${IMAGE_TAG}
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /_cluster/health
+            port: ${PORT}
+          initialDelaySeconds: 60
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /_cluster/health
+            port: ${PORT}
+          initialDelaySeconds: 60
+          periodSeconds: 5
         ports:
         - containerPort: ${PORT}
           name: rest
