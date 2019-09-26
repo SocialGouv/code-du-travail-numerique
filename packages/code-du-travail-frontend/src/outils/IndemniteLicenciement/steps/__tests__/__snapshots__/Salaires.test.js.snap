@@ -33,7 +33,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   overflow-x: auto;
 }
 
-.c5 {
+.c6 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -42,30 +42,30 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c5 caption {
+.c6 caption {
   padding: 0.625rem 0;
   text-align: center;
   font-style: italic;
 }
 
-.c5 td,
-.c5 th {
+.c6 td,
+.c6 th {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
 }
 
-.c5 th {
+.c6 th {
   background: #ebeff3;
 }
 
-.c5 thead,
-.c5 tfoot {
+.c6 thead,
+.c6 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
   background: #f5f7fa;
 }
 
-.c5 tfoot {
+.c6 tfoot {
   vertical-align: top;
 }
 
@@ -109,7 +109,7 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c6 tr > td:nth-child(2) {
+.c5 tr > td:nth-child(2) {
   text-align: left;
   width: 70%;
 }
@@ -867,7 +867,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c5 {
+.c6 {
   -webkit-flex-basis: 15rem;
   -ms-flex-preferred-size: 15rem;
   flex-basis: 15rem;
@@ -881,7 +881,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   margin-right: 1.25rem;
 }
 
-.c6 {
+.c5 {
   font-weight: 700;
 }
 
@@ -1039,12 +1039,12 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
       Type de contrat
     </div>
     <div
-      class="c7 c6"
+      class="c5 c7"
     >
       Durée en mois
     </div>
     <div
-      class="c6"
+      class="c5"
     >
       Rémunération
     </div>
@@ -1053,7 +1053,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     class="c4"
   >
     <div
-      class="c5"
+      class="c6"
     >
       <select
         class="c8"
@@ -1109,7 +1109,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
     class="c4"
   >
     <div
-      class="c5"
+      class="c6"
     >
       <select
         class="c8"

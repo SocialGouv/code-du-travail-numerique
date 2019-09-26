@@ -15,7 +15,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
+.c9 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -23,11 +23,11 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c8 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -225,7 +225,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c9 {
+.c8 {
   margin: 2rem 0;
 }
 
@@ -237,7 +237,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
 }
 
 @media print {
-  .c8 {
+  .c9 {
     max-width: 100%;
     padding: 0;
   }
@@ -318,7 +318,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             </p>
           </div>
           <div
-            class="c8 c10"
+            class="c10 c9"
           >
             <button
               aria-pressed="false"

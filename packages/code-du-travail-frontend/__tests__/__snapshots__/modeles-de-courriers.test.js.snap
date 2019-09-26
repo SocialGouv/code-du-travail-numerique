@@ -33,7 +33,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c20 {
+.c21 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -41,11 +41,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c20 > *:first-child {
+.c21 > *:first-child {
   margin-top: 0;
 }
 
-.c20 > *:last-child {
+.c21 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -64,7 +64,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c7 {
   padding: 1.25rem 0;
   background-color: #fff;
 }
@@ -323,7 +323,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   font-size: var(--font-size-xsmall);
 }
 
-.c21 {
+.c20 {
   position: relative;
   margin-bottom: 1.25rem;
 }
@@ -387,7 +387,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background: #f5f7fa;
 }
 
-.c7 {
+.c6 {
   box-shadow: 0 10px 10px -10px #c9d3df;
 }
 
@@ -761,7 +761,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
-  .c20 {
+  .c21 {
     max-width: 100%;
     padding: 0;
   }
@@ -825,7 +825,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
-  .c7 {
+  .c6 {
     display: none;
   }
 }
@@ -1052,7 +1052,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               />
             </div>
             <div
-              class="c20"
+              class="c21"
             >
               
               <div
@@ -1247,13 +1247,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       class="c18"
     >
       <div
-        class="c1 c46"
+        class="c46 c1"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c20 c47"
+          class="c47 c21"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
@@ -1269,7 +1269,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       class="c18"
     >
       <div
-        class="c1 c49"
+        class="c49 c1"
       >
         <div
           class="c50 c51"

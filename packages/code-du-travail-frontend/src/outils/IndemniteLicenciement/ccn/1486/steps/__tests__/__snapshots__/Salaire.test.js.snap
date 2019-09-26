@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Salaire /> renders 1`] = `
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -97,7 +97,7 @@ exports[`<Salaire /> renders 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c1 {
+.c0 {
   margin-top: 1.25rem;
 }
 
@@ -211,7 +211,7 @@ exports[`<Salaire /> renders 1`] = `
 `;
 
 exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -307,7 +307,7 @@ exports[`<Salaire /> renders a question asking about income's regularity 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c1 {
+.c0 {
   margin-top: 1.25rem;
 }
 
@@ -487,7 +487,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   overflow-x: auto;
 }
 
-.c9 {
+.c10 {
   text-align: left;
   empty-cells: show;
   background-color: #fff;
@@ -496,34 +496,34 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c9 caption {
+.c10 caption {
   padding: 0.625rem 0;
   text-align: center;
   font-style: italic;
 }
 
-.c9 td,
-.c9 th {
+.c10 td,
+.c10 th {
   padding: 0.625rem 1rem;
   border: 1px solid #c9d3df;
 }
 
-.c9 th {
+.c10 th {
   background: #ebeff3;
 }
 
-.c9 thead,
-.c9 tfoot {
+.c10 thead,
+.c10 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
   background: #f5f7fa;
 }
 
-.c9 tfoot {
+.c10 tfoot {
   vertical-align: top;
 }
 
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -619,11 +619,11 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c1 {
+.c0 {
   margin-top: 1.25rem;
 }
 
-.c10 tr > td:nth-child(2) {
+.c9 tr > td:nth-child(2) {
   text-align: left;
   width: 70%;
 }
@@ -893,7 +893,7 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
 `;
 
 exports[`<Salaire /> renders an input field of type number 1`] = `
-.c0 {
+.c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -989,7 +989,7 @@ exports[`<Salaire /> renders an input field of type number 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c1 {
+.c0 {
   margin-top: 1.25rem;
 }
 
