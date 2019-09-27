@@ -25,7 +25,5 @@ def add_search(app, nlp, content_path, stops_path):
 
         # maybe add a default to get (risky because of no exclude sources)
         query = request.args.get('q')
-        exclude_sources = request.args.get("excludeSources")
-        size = request.args.get("size")
-        results = ss.predict_slugs(query, exclude_sources, size)
+        results = ss.predict_slugs(query) # return a vector directly
         return jsonify(results)
