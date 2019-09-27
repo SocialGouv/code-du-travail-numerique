@@ -301,7 +301,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
                 Recherche de convention collective
               </h3>
               <p>
-                Saisissez le nom de votre entreprise, la convention collective ou le numéro SIRET
+                Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
               </p>
               <input
                 class="c8"
