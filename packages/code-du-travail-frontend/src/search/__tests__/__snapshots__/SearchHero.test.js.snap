@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SearchLanding /> should render 1`] = `
+exports[`<SearchHero /> should render 1`] = `
 .c10:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
