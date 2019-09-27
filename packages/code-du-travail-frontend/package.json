@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@cdt/data": "^3.2.0",
+    "@cdt/data...datafiller": "^3.2.0",
+    "@cdt/data...preavis-demission": "^3.2.0",
     "@cdt/sources": "^3.2.0",
     "@cdt/ui-old": "^3.2.0",
     "@reach/tooltip": "^0.2.2",
@@ -67,7 +69,8 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "jest-styled-components": "^6.3.3",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2"
   },
   "jest": {
     "testMatch": [

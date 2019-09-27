@@ -14,6 +14,7 @@ import { Modal } from ".";
 // HACK(douglasduteil): mock the check style function from `@reach/utils`
 // As `@reach/*` packages are using the "checkStyles" function from `@reach/utils`
 // to warn us about missing stylesheet, we silent it with a mock 💩
+// eslint-disable-next-line import/no-extraneous-dependencies
 require("@reach/utils").checkStyles = jest.fn();
 
 // force cleanup dom since we use portal
