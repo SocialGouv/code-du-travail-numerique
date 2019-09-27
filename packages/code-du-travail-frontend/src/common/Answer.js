@@ -75,7 +75,7 @@ function Answer({
 
         patterns.forEach(pattern => {
           node.innerHTML = node.innerHTML.replace(pattern, function(match) {
-            if (new RegExp("^[^\\w${frDiacritics}]").test(match)) {
+            if (new RegExp(`^[^\\w${frDiacritics}]`).test(match)) {
               // Since match string can start with a space, we trim it and insert the space before the tooltip markup
               return `${match.slice(0, 1)}<span data-tooltip-slug="${
                 item.slug
