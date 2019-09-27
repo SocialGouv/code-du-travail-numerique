@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
 import { Container, Section, Wrapper, Grid, GridCell } from "@cdt/ui-old";
-import { PageLayout } from "../src/layout/PageLayout";
+import { Layout } from "../src/layout/Layout";
 
 const About = () => (
-  <PageLayout>
+  <Layout>
     <Head>
       <title>Statistiques du code du travail numérique</title>
       <meta
@@ -43,7 +43,7 @@ const About = () => (
         </Wrapper>
       </Container>
     </Section>
-  </PageLayout>
+  </Layout>
 );
 
 const Num = styled.div`

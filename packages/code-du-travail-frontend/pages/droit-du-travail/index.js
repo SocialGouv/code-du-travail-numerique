@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Section, Wrapper, theme } from "@cdt/ui-old";
 
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import Origins from "./Origins";
 import Hierarchy from "./Hierarchy";
 
 const DroitDuTravail = ({ ogImage, pageUrl }) => (
-  <PageLayout>
+  <Layout>
     <Metas
       url={pageUrl}
       title="Le droit du travail - Code du travail numérique"
@@ -55,7 +55,7 @@ const DroitDuTravail = ({ ogImage, pageUrl }) => (
     </StyledSection>
     <Origins />
     <Hierarchy />
-  </PageLayout>
+  </Layout>
 );
 
 export default DroitDuTravail;

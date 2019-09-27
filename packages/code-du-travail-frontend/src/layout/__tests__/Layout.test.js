@@ -1,14 +1,14 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { HomeLayout } from "../HomeLayout";
+import { Layout } from "../Layout";
 
-describe("<HomeLayout />", () => {
+describe("<Layout />", () => {
   it("should render", () => {
     const { container } = render(
-      <HomeLayout>
+      <Layout>
         <h1>home</h1>
         <span>content</span>
-      </HomeLayout>
+      </Layout>
     );
     expect(container).toMatchSnapshot();
   });

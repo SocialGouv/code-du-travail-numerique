@@ -37,7 +37,7 @@ export default class Themes extends React.Component {
 
   static defaultProps = {
     title: "Retrouvez nos réponses thématiques",
-    isRoot: true
+    isRoot: false
   };
 
   render() {
@@ -53,7 +53,7 @@ export default class Themes extends React.Component {
                 <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
                   <Tile title={title}>
                     <Category
-                      small={Boolean(!isRoot)}
+                      small={!isRoot}
                       title={title}
                       icon={`/static/assets/icons/${iconsMap[id] ||
                         "profiles.svg"}`}

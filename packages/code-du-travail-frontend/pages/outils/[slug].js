@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Alert, Container, theme } from "@cdt/ui-old";
 
-import Search from "../../src/search/Search";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 import { CalculateurIndemnite } from "../../src/outils/IndemniteLicenciement";
@@ -64,17 +63,16 @@ class Outils extends React.Component {
     const { searchTerm, slug, pageUrl, ogImage } = this.props;
     const { component: Simulator, title, description } = getSimulator(slug);
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title={title}
           description={description}
           image={ogImage}
         />
-        <Search />
         <Simulator q={searchTerm} />
         <Source>-</Source>
-      </PageLayout>
+      </Layout>
     );
   }
 }

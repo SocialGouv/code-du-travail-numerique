@@ -27,6 +27,22 @@ exports[`<Themes /> should render 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c8 {
@@ -35,9 +51,9 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c7 {
-  width: 2.5rem;
+  width: 2rem;
   display: inline-block;
-  margin: 1rem;
+  margin: 0.2rem 0.625rem 0.2rem 0;
 }
 
 .c3 {

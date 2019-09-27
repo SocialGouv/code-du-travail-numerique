@@ -5,8 +5,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import { Container, Section, theme } from "@cdt/ui-old";
 
-import Search from "../../src/search/Search";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import Metas from "../../src/common/Metas";
 
@@ -27,21 +26,20 @@ class Modeles extends React.Component {
   render() {
     const { data = { hits: {} }, pageUrl, ogImage } = this.props;
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title="Modèles de courriers - Code du travail numérique"
           description="Retrouvez l'ensemble des modèles de courriers à votre disposition."
           image={ogImage}
         />
-        <Search />
         <Section>
           <Container narrow>
             <Title>Les modèles de documents à télécharger</Title>
             <ModeleCourrierList items={data.hits.hits} />
           </Container>
         </Section>
-      </PageLayout>
+      </Layout>
     );
   }
 }

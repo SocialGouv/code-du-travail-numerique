@@ -6,7 +6,7 @@ import { ScreenReaderOnly, theme } from "@cdt/ui-old";
 
 const { colors } = theme;
 
-import Html from "../common/Html";
+import Html from "../../common/Html";
 
 export class DocumentSuggester extends React.Component {
   static propTypes = {

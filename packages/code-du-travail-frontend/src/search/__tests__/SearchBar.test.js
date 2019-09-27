@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "../Search";
+import SearchBar from "../SearchBar";
 import { fireEvent, render, waitForElement } from "@testing-library/react";
 import { fetchSuggestResults } from "../search.service";
 
@@ -16,14 +16,14 @@ const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
 fetchSuggestResults.mockResolvedValue(suggestions);
 
-describe("<search />", () => {
+describe("<SearchBar />", () => {
   it("should render", () => {
-    const { container } = render(<Search />);
+    const { container } = render(<SearchBar />);
     expect(container).toMatchSnapshot();
   });
 
   it("should render suggestions", async () => {
-    const { container, getAllByRole, getByLabelText } = render(<Search />, {
+    const { container, getAllByRole, getByLabelText } = render(<SearchBar />, {
       query: { q }
     });
     const input = getByLabelText(/rechercher/i);
@@ -34,7 +34,7 @@ describe("<search />", () => {
   });
 
   it("should update input value when suggestion are hightlighted", async () => {
-    const { getByLabelText, getAllByRole } = render(<Search />);
+    const { getByLabelText, getAllByRole } = render(<SearchBar />);
     const input = getByLabelText(/rechercher/i);
     fireEvent.change(input, { target: { value: "yolo" } });
     input.focus();

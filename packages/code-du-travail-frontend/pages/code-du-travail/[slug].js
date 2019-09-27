@@ -7,7 +7,7 @@ import getConfig from "next/config";
 
 import ArticleIcon from "../../src/icons/ArticleIcon";
 import Answer from "../../src/common/Answer";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
@@ -44,7 +44,7 @@ class Fiche extends React.Component {
 
     const footer = <Source name="https://www.legifrance.gouv.fr" url={url} />;
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title={title}
@@ -65,7 +65,7 @@ class Fiche extends React.Component {
           footer={footer}
           sourceType="Code du travail"
         />
-      </PageLayout>
+      </Layout>
     );
   }
 }

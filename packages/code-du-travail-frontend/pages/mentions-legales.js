@@ -11,7 +11,7 @@ import {
   Wrapper
 } from "@cdt/ui-old";
 
-import { PageLayout } from "../src/layout/PageLayout";
+import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
 
 const SearchPage = ({ pageUrl, ogImage }) => {
@@ -178,7 +178,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
   });
 
   return (
-    <PageLayout>
+    <Layout>
       <Metas
         url={pageUrl}
         title="Mentions légales - Code du travail numérique"
@@ -244,7 +244,7 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           </Wrapper>
         </Container>
       </Section>
-    </PageLayout>
+    </Layout>
   );
 };
 

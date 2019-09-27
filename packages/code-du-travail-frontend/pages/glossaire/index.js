@@ -5,21 +5,19 @@ import Link from "next/link";
 import styled from "styled-components";
 import { List, ListItem, Container, Section, theme } from "@cdt/ui-old";
 
-import Search from "../../src/search/Search";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 function Glossaire({ pageUrl, ogImage }) {
   const termsByLetters = getGlossaryLetters(glossary);
   return (
-    <PageLayout>
+    <Layout>
       <Metas
         url={pageUrl}
         title="Glossaire - Code du travail numérique"
         description="Retrouvez l'ensemble des termes utilisés fréquemment sur le code du travail numérique et leur explication"
         image={ogImage}
       />
-      <Search />
       <Section>
         <Container narrow>
           <Title>Glossaire</Title>
@@ -27,7 +25,7 @@ function Glossaire({ pageUrl, ogImage }) {
           <Glossary letters={termsByLetters} />
         </Container>
       </Section>
-    </PageLayout>
+    </Layout>
   );
 }
 

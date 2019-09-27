@@ -7,7 +7,7 @@ import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import ReferencesJuridiques from "../../src/ReferencesJuridiques";
 import Answer from "../../src/common/Answer";
 import ReponseIcon from "../../src/icons/ReponseIcon";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const ServicePublic = styled.div`
@@ -59,7 +59,7 @@ class Fiche extends React.Component {
     } = data;
     const footer = <Source name="service-public.fr" url={url} />;
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title={title}
@@ -85,7 +85,7 @@ class Fiche extends React.Component {
             raw && <FicheServicePublic data={raw.children} />}
           </Answer>
         </ServicePublic>
-      </PageLayout>
+      </Layout>
     );
   }
 }
