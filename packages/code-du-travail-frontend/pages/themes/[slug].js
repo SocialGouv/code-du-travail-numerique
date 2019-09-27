@@ -1,7 +1,6 @@
 import React from "react";
 import getConfig from "next/config";
-import styled from "styled-components";
-import { Alert, Container, Section, theme } from "@cdt/ui-old";
+import { Section } from "@cdt/ui-old";
 import fetch from "isomorphic-unfetch";
 
 import { SearchResults } from "../../src/search/SearchResults";
@@ -34,26 +33,6 @@ class Theme extends React.Component {
   render() {
     const { theme = {}, pageUrl, ogImage } = this.props;
 
-    if (!theme) {
-      return (
-        <Layout>
-          <Metas
-            url={pageUrl}
-            title="Thème introuvable - Code du travail numérique"
-            description={`Explorez les contenus autour du thème ${theme.title}`}
-            image={ogImage}
-          />
-          <Section variant="white">
-            <Container>
-              <AlertWrapper>
-                <Alert variant="warning">Ce thème n’a pas été trouvé</Alert>
-              </AlertWrapper>
-            </Container>
-          </Section>
-        </Layout>
-      );
-    }
-
     return (
       <Layout>
         <Metas
@@ -65,11 +44,7 @@ class Theme extends React.Component {
         <ThemeBreadcrumbs theme={theme} />
         {theme.children && theme.children.length > 0 && (
           <Section variant="white">
-            <Themes
-              isRoot={false}
-              title={theme.title}
-              themes={theme.children}
-            />
+            <Themes title={theme.title} themes={theme.children} />
           </Section>
         )}
         {theme.refs && theme.refs.length > 0 && (
@@ -83,11 +58,3 @@ class Theme extends React.Component {
 }
 
 export default Theme;
-
-const { colors, fonts, spacing } = theme;
-const AlertWrapper = styled.div`
-  margin: ${spacing.larger} auto;
-  font-size: ${fonts.sizeH4};
-  text-align: center;
-  background: ${colors.lightBackground};
-`;

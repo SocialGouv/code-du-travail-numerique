@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Router, { withRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { Button, theme } from "@cdt/ui-old";
 
 import SearchIcon from "../../icons/SearchIcon";
@@ -10,7 +10,8 @@ import { DocumentSuggester } from "./DocumentSuggester";
 
 const suggestMaxResults = 5;
 
-const SearchBar = ({ router }) => {
+const SearchBar = () => {
+  const router = useRouter();
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
   const [suggestions, setSuggestions] = useState([]);
@@ -76,7 +77,7 @@ const SearchBar = ({ router }) => {
   );
 };
 
-export default withRouter(SearchBar);
+export default SearchBar;
 
 const { animations, box, breakpoints, colors, spacing } = theme;
 

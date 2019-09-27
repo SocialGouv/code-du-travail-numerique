@@ -6,7 +6,7 @@ import { Container, theme } from "@cdt/ui-old";
 
 import SearchBar from "../search/SearchBar";
 
-const Header = ({ hasSearch = true }) => (
+const Header = ({ hideSearch = false }) => (
   <StyledHeader>
     <StyledContainer>
       <Link href="/" passHref>
@@ -22,7 +22,7 @@ const Header = ({ hasSearch = true }) => (
           </Title>
         </LogoWrapper>
       </Link>
-      {hasSearch && (
+      {!hideSearch && (
         <SearchBarWrapper>
           <SearchBar />
         </SearchBarWrapper>

@@ -19,7 +19,7 @@ const ThemesPage = ({ pageUrl, ogImage, children = [] }) => (
       image={ogImage}
     />
     <Section variant="white">
-      <Themes themes={children} />
+      <Themes isRoot={true} themes={children} />
     </Section>
   </Layout>
 );

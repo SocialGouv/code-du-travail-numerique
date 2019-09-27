@@ -1,5 +1,5 @@
 import React from "react";
-import SearchLanding from "../SearchLanding";
+import SearchHero from "../SearchHero";
 import { render } from "@testing-library/react";
 import { fetchSuggestResults } from "../search.service";
 
@@ -15,9 +15,9 @@ const suggestions = ["foo", "foobar", "foo bar ?", "foo bazzz"];
 
 fetchSuggestResults.mockResolvedValue(suggestions);
 
-describe("<SearchLanding />", () => {
+describe("<SearchHero />", () => {
   it("should render", () => {
-    const { container } = render(<SearchLanding />);
+    const { container } = render(<SearchHero />);
     expect(container).toMatchSnapshot();
   });
 });
