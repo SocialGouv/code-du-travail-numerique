@@ -103,7 +103,7 @@ exports[`<SearchResults/> should render results 1`] = `
       >
         <a
           class="c2"
-          href="/question/mer-il-est-fouq=search test"
+          href="/question/mer-il-est-fou?q=search test"
         >
           <span
             class="c3"

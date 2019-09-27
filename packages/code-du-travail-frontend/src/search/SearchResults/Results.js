@@ -11,7 +11,7 @@ import { LinkContent } from "./LinkContent";
 const ListLink = ({
   focused,
   item: { source, slug, url },
-  query = null,
+  query,
   ...otherProps
 }) => {
   const ref = useRef(null);
@@ -39,7 +39,7 @@ const ListLink = ({
         pathname: `/${getRouteBySource(source)}/[slug]`,
         query: { ...(query && { q: query }), slug: slug }
       }}
-      as={`/${getRouteBySource(source)}/${slug}${query && `q=${query}`}`}
+      as={`/${getRouteBySource(source)}/${slug}${query ? `?q=${query}` : ""}`}
       passHref
     >
       <LargeLink

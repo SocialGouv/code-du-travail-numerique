@@ -29,8 +29,9 @@ export const Themes = ({ items, query }) => (
                     slug: item.slug
                   }
                 }}
-                as={`/${getRouteBySource(item.source)}/${item.slug}${query &&
-                  `q=${query}`}`}
+                as={`/${getRouteBySource(item.source)}/${item.slug}${
+                  query ? `?q=${query}` : ""
+                }`}
                 passHref
               >
                 <LargeLink icon={getSourceIcon(item.source)}>
