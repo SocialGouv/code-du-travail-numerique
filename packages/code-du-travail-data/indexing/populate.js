@@ -1,4 +1,3 @@
-import striptags from "striptags";
 import crypto from "crypto";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
@@ -192,45 +191,6 @@ function* cdtnDocumentsGen() {
       date,
       branche
     })
-  );
-
-  logger.info("=== Faq ===");
-  yield require("../dataset/faq.json").map(
-    ({ question, reponse, date, tags, source }) => {
-      const faqText = striptags(reponse);
-      const flatTags = flattenTags(tags);
-      return {
-        source: SOURCES.FAQ,
-        title: question,
-        slug: makeSlug(question, flatTags.join("-")),
-        text: faqText,
-        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-        html: reponse,
-        tags: flatTags,
-        date,
-        author: source ? source : "DIRRECTE"
-      };
-    }
-  );
-
-  logger.info("=== Faq contributions ===");
-  yield require("../dataset/faq-contributions.json").map(
-    ({ question, reponse, date_redaction, date_expiration, tags }) => {
-      const faqText = striptags(reponse);
-      const flatTags = flattenTags(tags);
-      return {
-        source: SOURCES.FAQ,
-        title: question,
-        slug: makeSlug(question, flatTags.join("-")),
-        text: faqText,
-        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-        html: reponse,
-        tags: flatTags,
-        date: date_redaction,
-        date_expiration: date_expiration,
-        author: "DIRRECTE"
-      };
-    }
   );
 }
 
