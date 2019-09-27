@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Layout /> should render 1`] = `
+exports[`<Question /> should render 1`] = `
 .c10:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -13,7 +13,7 @@ exports[`<Layout /> should render 1`] = `
   border: 0;
 }
 
-.c24 {
+.c40 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -37,7 +37,6 @@ exports[`<Layout /> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  padding: 0;
   max-width: 46.25rem;
 }
 
@@ -49,11 +48,63 @@ exports[`<Layout /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c15 {
+.c33 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c33 > *:first-child {
+  margin-top: 0;
+}
+
+.c33 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c16 {
   padding: 1.25rem 0;
 }
 
-.c19 {
+.c18 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c18 > *:first-child {
+  margin-top: 0;
+}
+
+.c18 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c15 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
+}
+
+.c15 > *:first-child {
+  margin-top: 0;
+}
+
+.c15 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c35 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -75,13 +126,13 @@ exports[`<Layout /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):focus {
+.c35:not([disabled]):hover,
+.c35:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c19:not([disabled]):active {
+.c35:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -89,7 +140,7 @@ exports[`<Layout /> should render 1`] = `
   outline: none;
 }
 
-.c19[aria-pressed="true"] {
+.c35[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -98,18 +149,285 @@ exports[`<Layout /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):hover,
-.c19[aria-pressed="true"]:not([disabled]):focus {
+.c35[aria-pressed="true"]:not([disabled]):hover,
+.c35[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):active {
+.c35[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c19[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
+}
+
+.c30 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c30:hover {
+  color: #8c94a6;
+}
+
+.c30:active {
+  position: relative;
+  top: 1px;
+}
+
+.c25 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: iowhYu 0.3s ease-out;
+  animation: iowhYu 0.3s ease-out;
+  border-color: #fee5ad;
+  box-shadow: 0 5px 10px 0 #c9d3df;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c27 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c24 {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  z-index: 1000;
+}
+
+.c28 {
+  padding: 0 0.25rem;
+}
+
+.c19 {
+  margin-bottom: 1rem;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c22 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-bottom-color: #d1d1d1;
+  min-width: 7rem;
+}
+
+.c22:not([disabled]):hover,
+.c22:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c22:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  outline: none;
+}
+
+.c22[aria-pressed="true"] {
+  color: #18181c;
+  background: #f7f7f7;
+  border-width: 2px 1px 1px 1px;
+  border-color: #eaeaea;
+  border-top-color: #d1d1d1;
+  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+}
+
+.c22[aria-pressed="true"]:not([disabled]):hover,
+.c22[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c22[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c22[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c22 + .c21 {
+  margin-left: 1rem;
+}
+
+.c23 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+  min-width: 7rem;
+}
+
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c23:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c23[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c23[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c23[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c23 + .c21 {
+  margin-left: 1rem;
+}
+
+.c14 {
+  margin: 20%;
+  font-size: 1.875rem;
+  text-align: center;
 }
 
 .c9 {
@@ -301,16 +619,16 @@ exports[`<Layout /> should render 1`] = `
   max-width: 600px;
 }
 
-.c16 {
+.c32 {
   text-align: center;
 }
 
-.c18 {
+.c34 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c20 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -321,21 +639,21 @@ exports[`<Layout /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c22 + .c21 {
+.c38 + .c37 {
   padding-left: 1rem;
 }
 
-.c23 {
+.c39 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c25 {
+.c41 {
   margin: 0.5rem 0;
 }
 
-.c25 a,
-.c25 a:visited {
+.c41 a,
+.c41 a:visited {
   color: #434956;
 }
 
@@ -350,6 +668,26 @@ exports[`<Layout /> should render 1`] = `
   .c17 {
     max-width: 100%;
     padding: 0;
+  }
+}
+
+@media print {
+  .c33 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c18 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c18 {
+    border: none;
+    padding: 0 5pt;
   }
 }
 
@@ -407,13 +745,13 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media print {
-  .c14 {
+  .c31 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c36 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -421,7 +759,7 @@ exports[`<Layout /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c22 + .c21 {
+  .c38 + .c37 {
     padding-left: 0;
   }
 }
@@ -516,57 +854,182 @@ exports[`<Layout /> should render 1`] = `
   <main
     id="main"
   >
-    <h1>
-      home
-    </h1>
-    <span>
-      content
-    </span>
-  </main>
-  <footer
-    class="c14"
-  >
     <div
-      class="c15"
+      class="c1 c14"
     >
       <div
-        class="c1 c16"
+        class="c15"
+      >
+        Cette question n'a pas été trouvée
+      </div>
+    </div>
+    <div
+      class="c16"
+    >
+      <div
+        class="c17"
+      >
+        <div
+          class="c18"
+        >
+          <h3
+            class="c19"
+          >
+            Avez-vous trouvé la réponse à votre question ?
+          </h3>
+          <p
+            class="c20"
+          >
+            <button
+              aria-pressed="false"
+              class="c21 c22"
+            >
+              Non
+            </button>
+            <button
+              aria-pressed="false"
+              class="c21 c23"
+            >
+              Oui
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c24"
+    >
+      <div
+        class="c25"
+      >
+        <div
+          class="c26"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="9"
+              y2="13"
+            />
+            <line
+              x1="12"
+              x2="12"
+              y1="17"
+              y2="17"
+            />
+          </svg>
+        </div>
+        <div
+          class="c27"
+          role="alert"
+        >
+          Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
+          <a
+            class="c28"
+            href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="consulter l'ordonance"
+          >
+            L’ouverture officielle du site
+          </a>
+          est prévue pour 2020.
+        </div>
+        <div
+          class="c29"
+        >
+          <button
+            aria-label="Fermer"
+            aria-pressed="false"
+            class="c30"
+          >
+            <svg
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="18"
+                x2="6"
+                y1="6"
+                y2="18"
+              />
+              <line
+                x1="6"
+                x2="18"
+                y1="6"
+                y2="18"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    class="c31"
+  >
+    <div
+      class="c16"
+    >
+      <div
+        class="c1 c32"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c17 c18"
+          class="c33 c34"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
           aria-pressed="false"
-          class="c19"
+          class="c35"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c15"
+      class="c16"
     >
       <div
-        class="c1 c20"
+        class="c1 c36"
       >
         <div
-          class="c21 c22"
+          class="c37 c38"
         >
           <h3
-            class="c23"
+            class="c39"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c24"
+            class="c40"
           >
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="/droit-du-travail"
@@ -575,7 +1038,7 @@ exports[`<Layout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="/a-propos"
@@ -584,7 +1047,7 @@ exports[`<Layout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="/mentions-legales"
@@ -593,7 +1056,7 @@ exports[`<Layout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -604,18 +1067,18 @@ exports[`<Layout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c21 c22"
+          class="c37 c38"
         >
           <h3
-            class="c23"
+            class="c39"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c24"
+            class="c40"
           >
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -626,7 +1089,7 @@ exports[`<Layout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -639,18 +1102,18 @@ exports[`<Layout /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c21 c22"
+          class="c37 c38"
         >
           <h3
-            class="c23"
+            class="c39"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c24"
+            class="c40"
           >
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -661,7 +1124,7 @@ exports[`<Layout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -672,7 +1135,7 @@ exports[`<Layout /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c25"
+              class="c41"
             >
               <a
                 href="https://beta.gouv.fr/"

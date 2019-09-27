@@ -1,22 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConventionCollective /> should render 1`] = `
-.c9:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-.c2 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c4 > *:first-child {
+  margin-top: 0;
+}
+
+.c4 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  padding: 1.25rem 0;
+}
+
+.c5 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  border-color: #c9d3df;
+  background-color: #ebeff3;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
 }
 
 .c2 > *:first-child {
@@ -27,67 +70,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c16 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c16 > *:first-child {
-  margin-top: 0;
-}
-
-.c16 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c0 {
-  padding: 1.25rem 0;
-  background-color: #fff;
-}
-
-.c15 {
-  padding: 1.25rem 0;
-}
-
 .c17 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 0.25rem;
-  border-color: #c9d3df;
-  background-color: #ebeff3;
-}
-
-.c17 > *:first-child {
-  margin-top: 0;
-}
-
-.c17 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c14 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #fee5ad;
-  border-color: #fdd57b;
-}
-
-.c14 > *:first-child {
-  margin-top: 0;
-}
-
-.c14 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c29 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -109,16 +92,16 @@ exports[`<ConventionCollective /> should render 1`] = `
   border: none;
 }
 
-.c29:hover {
+.c17:hover {
   color: #8c94a6;
 }
 
-.c29:active {
+.c17:active {
   position: relative;
   top: 1px;
 }
 
-.c24 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -140,7 +123,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c25 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,7 +144,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c26 {
+.c14 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -174,7 +157,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   text-align: left;
 }
 
-.c28 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,7 +176,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: center;
 }
 
-.c23 {
+.c11 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -201,15 +184,15 @@ exports[`<ConventionCollective /> should render 1`] = `
   z-index: 1000;
 }
 
-.c27 {
+.c15 {
   padding: 0 0.25rem;
 }
 
-.c18 {
+.c6 {
   margin-bottom: 1rem;
 }
 
-.c19 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -220,7 +203,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c21 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -243,13 +226,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c21:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -257,7 +240,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   outline: none;
 }
 
-.c21[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -266,25 +249,25 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c21[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c21 + .c20 {
+.c9 + .c8 {
   margin-left: 1rem;
 }
 
-.c22 {
+.c10 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -307,13 +290,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c22:not([disabled]):active {
+.c10:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -321,7 +304,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   outline: none;
 }
 
-.c22[aria-pressed="true"] {
+.c10[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -330,243 +313,54 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):hover,
-.c22[aria-pressed="true"]:not([disabled]):focus {
+.c10[aria-pressed="true"]:not([disabled]):hover,
+.c10[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):active {
+.c10[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c22[disabled] {
+.c10[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c22 + .c20 {
+.c10 + .c8 {
   margin-left: 1rem;
 }
 
-.c8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: left;
-}
-
-.c11 ul {
-  z-index: 100;
-}
-
-.c11 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
-}
-
 .c1 {
-  box-shadow: 0 10px 10px -10px #c9d3df;
-}
-
-.c4 {
-  margin-top: 0;
-  font-size: 1.875rem;
-  line-height: 1.4;
-  color: #006ab2;
-}
-
-.c5 {
-  font-size: 1rem;
-}
-
-.c3 {
-  position: relative;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  width: 70%;
-}
-
-.c7 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 1rem 0 0 1.25rem;
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0 1rem 0 4rem;
-  width: 100%;
-  height: 50px;
-  font-size: inherit;
-  font-family: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  -webkit-transition: border 250ms ease;
-  transition: border 250ms ease;
-}
-
-.c10:focus {
-  border-color: #006be6;
-  outline: none;
-}
-
-.c12 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  margin-left: 0.5rem;
-}
-
-.c12:not([disabled]):hover,
-.c12:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c12:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c12[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c12[aria-pressed="true"]:not([disabled]):hover,
-.c12[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c12[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c12[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c13 {
   margin: 20%;
   font-size: 1.875rem;
   text-align: center;
 }
 
 @media print {
-  .c2 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c16 {
+  .c4 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c17 {
+  .c5 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c17 {
+  .c5 {
     border: none;
     padding: 0 5pt;
-  }
-}
-
-@media print {
-  .c1 {
-    display: none;
-  }
-}
-
-@media (max-width:980px) {
-  .c6 {
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-  }
-}
-
-@media (max-width:600px) {
-  .c7 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c10 {
-    height: 50px;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:600px) {
-  .c12 {
-    margin-left: 0;
-    margin-top: 0.625rem;
   }
 }
 
@@ -577,115 +371,35 @@ exports[`<ConventionCollective /> should render 1`] = `
     <div
       class="c2"
     >
-      <div
-        class="c3"
-      >
-        <p
-          class="c4"
-        >
-          Posez votre question sur le droit du travail
-          <br />
-          <a
-            class="c5"
-            href="/droit-du-travail"
-          >
-            Le droit du travail, c‘est quoi ?
-          </a>
-        </p>
-        <form
-          class="c6"
-        >
-          <svg
-            class="c7"
-            viewBox="0 0 20 20"
-          >
-            <title />
-            <path
-              d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <label
-            class="c8"
-            for="main-search-input"
-          >
-            <span
-              class="c9"
-            >
-              Rechercher
-            </span>
-            <div
-              aria-expanded="false"
-              aria-haspopup="listbox"
-              aria-owns="react-autowhatever-cdtn-documents-suggester"
-              role="combobox"
-              style="flex: 1;"
-            >
-              <input
-                aria-autocomplete="list"
-                aria-controls="react-autowhatever-cdtn-documents-suggester"
-                autocomplete="off"
-                class="c10"
-                id="main-search-input"
-                name="query"
-                placeholder="Recherche"
-                type="search"
-                value=""
-              />
-              <div
-                class="c11"
-                id="react-autowhatever-cdtn-documents-suggester"
-                role="listbox"
-              />
-            </div>
-          </label>
-          <button
-            aria-pressed="false"
-            class="c12"
-            type="submit"
-          >
-            Rechercher
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div
-    class="c2 c13"
-  >
-    <div
-      class="c14"
-    >
       Cette convention collective n'a pas été trouvée
     </div>
   </div>
   <div
-    class="c15"
+    class="c3"
   >
     <div
-      class="c16"
+      class="c4"
     >
       <div
-        class="c17"
+        class="c5"
       >
         <h3
-          class="c18"
+          class="c6"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c19"
+          class="c7"
         >
           <button
             aria-pressed="false"
-            class="c20 c21"
+            class="c8 c9"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c20 c22"
+            class="c8 c10"
           >
             Oui
           </button>
@@ -694,13 +408,13 @@ exports[`<ConventionCollective /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c23"
+    class="c11"
   >
     <div
-      class="c24"
+      class="c12"
     >
       <div
-        class="c25"
+        class="c13"
       >
         <svg
           fill="none"
@@ -731,12 +445,12 @@ exports[`<ConventionCollective /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c26"
+        class="c14"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c27"
+          class="c15"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -747,12 +461,12 @@ exports[`<ConventionCollective /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c28"
+        class="c16"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c29"
+          class="c17"
         >
           <svg
             fill="none"
