@@ -14,7 +14,7 @@ data_path = os.path.join(
     os.path.dirname(os.path.abspath(__name__)),
     "data"
 )
-content_path = os.path.join(data_path, 'content.json')
+
 queries_path = os.path.join(data_path, 'data.txt')
 stops_path = os.path.join(data_path, 'stops.txt')
 
@@ -44,7 +44,8 @@ class NLP:
     def __bool__(self):
         if not self.ready:
             return False
-        return all(self.ready.values()) # return true iff all are services are ready
+        # return true iff all are services are ready
+        return all(self.ready.values())
 
     @property
     def is_ready(self):
@@ -84,14 +85,14 @@ nlp = NLP()
 
 def load_nlp(app):
     @app.errorhandler(NotReady)
-    def handle_not_ready(error): # pylint: disable=unused-variable
+    def handle_not_ready(error):  # pylint: disable=unused-variable
         response = jsonify(error.to_dict())
         response.status_code = error.status_code
         return response
 
     add_ready(app, nlp)
     add_suggest(app, nlp, queries_path, stops_path)
-    add_search(app, nlp, content_path, stops_path)
+    add_search(app, nlp, stops_path)
     add_index(app, nlp)
 
     nlp.load()

@@ -9,13 +9,13 @@ import unicodedata
 from typing import List
 import time
 
-content_path = "../data/content.json"
 stops_path = "../data/stops.txt"
 
 cache_path = "~/Downloads"
 
 stringvec = List[str]
 logger = logging.getLogger("gunicorn.errror")
+
 
 def add_slash(c):
     c["slug"] = f"/{c['slug']}"
@@ -24,7 +24,7 @@ def add_slash(c):
 
 class SemSearch():
 
-    def __init__(self, content_path: str, stops_path: str):
+    def __init__(self, stops_path: str):
         logger.info("Init Semsearch.. 🦀")
         start = time.time()
 
@@ -35,7 +35,6 @@ class SemSearch():
         strp = self.strip_accents
         self.stops = dict.fromkeys(map(strp, stops), "")
 
-        
         self.load_graph()
         logger.info("loading graph 🕸")
         end = time.time()
@@ -76,7 +75,8 @@ class SemSearch():
 
     def compute_batch_vectors(self, strings, contexts):
         cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
-        out = self.session.run(self.response_embeddings, {self.r_placeholder: cleanStr, self.c_placeholder: contexts})
+        out = self.session.run(self.response_embeddings, {
+                               self.r_placeholder: cleanStr, self.c_placeholder: contexts})
         return out["outputs"].tolist()
 
     def predict_slugs(self, query: str):
@@ -135,4 +135,4 @@ class SemSearch():
 
 
 if __name__ == "__main__":
-    ss = SemSearch(content_path, content_path)
+    ss = SemSearch(stops_paths)

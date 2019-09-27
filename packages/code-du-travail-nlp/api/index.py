@@ -3,6 +3,7 @@ from flask import jsonify
 from flask_cors import cross_origin
 import threading
 
+
 class InvalidUsage(Exception):
     status_code = 400
 
@@ -17,7 +18,6 @@ class InvalidUsage(Exception):
         rv = dict(self.payload or ())
         rv['message'] = self.message
         return rv
-
 
 
 def add_index(app, nlp):
@@ -35,7 +35,7 @@ def add_index(app, nlp):
                         'titles':["hello world", "cdd"]
                         'contexts':["bonjour", "texte sur le cdd"]"""
             raise InvalidUsage(message, status_code=422)
-        
+
         if len(titles) != len(contexts):
             message = "titles and contexts arrays should\
              have the same length\
@@ -50,6 +50,3 @@ def add_index(app, nlp):
         response = jsonify(error.to_dict())
         response.status_code = error.status_code
         return response
-
-
-
