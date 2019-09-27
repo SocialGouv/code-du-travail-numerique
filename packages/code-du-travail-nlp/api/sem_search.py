@@ -71,7 +71,8 @@ class SemSearch():
 
     def compute_vector(self, string, context):
         cleanStr = self.remove_stops(self.strip_accents(string))
-        return self.session.run(self.response_embeddings, {self.r_placeholder: [cleanStr], self.c_placeholder: [context]})
+        out = self.session.run(self.response_embeddings, {self.r_placeholder: [cleanStr], self.c_placeholder: [context]})
+        return out["outputs"].tolist()
 
     def compute_batch_vectors(self, strings, contexts):
         cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
