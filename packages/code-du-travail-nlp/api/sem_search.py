@@ -1,3 +1,4 @@
+
 import logging
 import json
 import tensorflow as tf
@@ -5,17 +6,16 @@ import tensorflow_hub as hub
 import numpy as np
 import tf_sentencepiece
 import unicodedata
-
 from typing import List
+import time
 
-content_path = "./data/content.json"
-stops_path = "./data/stops.txt"
+content_path = "../data/content.json"
+stops_path = "../data/stops.txt"
 
 cache_path = "~/Downloads"
 
 stringvec = List[str]
-
-logger = logging.getLogger("gunicorn.error")
+logger = logging.getLogger("gunicorn.errror")
 
 def add_slash(c):
     c["slug"] = f"/{c['slug']}"
@@ -25,11 +25,8 @@ def add_slash(c):
 class SemSearch():
 
     def __init__(self, content_path: str, stops_path: str):
-        logger.info("📠 loading data...")
-        with open(content_path, "r") as f:
-            content = list(filter(
-                lambda row: "text" in row and "code_du_travail" not in row.get('slug'), json.load(f)))
-        content = list(map(add_slash, content))
+        logger.info("Init Semsearch.. 🦀")
+        start = time.time()
 
         with open(stops_path, "r") as f:
             stops = f.read().splitlines()
@@ -38,13 +35,11 @@ class SemSearch():
         strp = self.strip_accents
         self.stops = dict.fromkeys(map(strp, stops), "")
 
-        self.titles = [c["title"] for c in content]
-        self.context = [c["text"] for c in content]
-        self.slugs = [c["slug"] for c in content]
-
-        logger.info("Indexing {} documents ...".format(str(len(self.slugs))))
+        
         self.load_graph()
-        self.build_responses()
+        logger.info("loading graph 🕸")
+        end = time.time()
+        logger.info("SemSearch ready in {} secondes ✅".format(end-start))
 
     def load_graph(self):
         g = tf.Graph()
@@ -75,36 +70,22 @@ class SemSearch():
         self.response_results = self.session.run(self.response_embeddings, {self.r_placeholder: responses,
                                                                             self.c_placeholder: self.context})
 
-    def predict_slugs(self, query: str, exclude_sources: str = "", k=10):
-        if k:
-            k = int(k)
-        else:
-            k = 10
+    def compute_vector(self, string, context):
+        cleanStr = self.remove_stops(self.strip_accents(string))
+        return self.session.run(self.response_embeddings, {self.r_placeholder: [cleanStr], self.c_placeholder: [context]})
 
+    def compute_batch_vectors(self, strings, contexts):
+        cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
+        out = self.session.run(self.response_embeddings, {self.r_placeholder: cleanStr, self.c_placeholder: contexts})
+        return out["outputs"].tolist()
+
+    def predict_slugs(self, query: str):
         query = self.remove_stops(self.strip_accents(query))
         questions = [query]
 
         self.question_results = self.session.run(
             self.question_embeddings, {self.q_placeholder: questions})
-        res = np.inner(
-            self.question_results["outputs"], self.response_results["outputs"])
-
-        res_formatted = [{"slug": self.slugs[a],
-                          "title": self.titles[a],
-                          "score": res[0][a],
-                          "source": self.slug2source(self.slugs[a])}
-                         for a in res[0].argsort()[::-1]]
-        res_filtered = self.filter_sources(res_formatted, exclude_sources)
-        hits = [self._return_hit(d["slug"], d["title"], d["score"])
-                for d in res_filtered][:k]
-        # hits =  [self._return_hit(self.slugs[a], self.titles[a], res[0][a]) for a in res[0].argsort()[::-1]][:k]
-        return {
-            "hits": {
-                "total": len(hits),
-                "hits": hits
-            },
-            "facets": []
-        }
+        return self.question_results["outputs"].tolist()
 
     def filter_sources(self, slug_list, exclude_sources):
         if exclude_sources:
@@ -132,6 +113,15 @@ class SemSearch():
 
         }
 
+    def compute_scores(self, content_path):
+        with open(content_path, "r") as f:
+            data = json.load(f)
+            data = list(map(add_slash, data))
+
+            return [
+                dict(item, vector_title=self.response_results["outputs"][self.slugs.index(item['slug'])].tolist()) for item in tqdm.tqdm(data) if item["slug"] in self.slugs
+            ]
+
     def strip_accents(self, s: str):
         return unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode('utf-8')
 
@@ -146,4 +136,3 @@ class SemSearch():
 
 if __name__ == "__main__":
     ss = SemSearch(content_path, content_path)
-    print(ss.predict_slugs("congés sans solde", k=24))
