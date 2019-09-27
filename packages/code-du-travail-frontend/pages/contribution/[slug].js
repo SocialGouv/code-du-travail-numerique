@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 
 import Answer from "../../src/common/Answer";
 import Contribution from "../../src/contributions/Contribution";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
@@ -37,7 +37,7 @@ class PageContribution extends React.Component {
     const { title, answers, description } = data._source;
     return (
       <div>
-        <PageLayout>
+        <Layout>
           <Metas
             url={pageUrl}
             title={title}
@@ -51,7 +51,7 @@ class PageContribution extends React.Component {
           >
             <Contribution answers={answers} />
           </Answer>
-        </PageLayout>
+        </Layout>
       </div>
     );
   }
