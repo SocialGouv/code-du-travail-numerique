@@ -19,9 +19,9 @@ const {
 
 // Theme page
 class Theme extends React.Component {
-  static async getInitialProps({ query: { slug: query } }) {
+  static async getInitialProps({ query: { slug } }) {
     const searchThemeResponse = await fetch(
-      `${API_URL}/themes${query ? `/${query}` : ""}`
+      `${API_URL}/themes${slug ? `/${slug}` : ""}`
     );
 
     if (!searchThemeResponse.ok) {
@@ -31,13 +31,12 @@ class Theme extends React.Component {
     const theme = await searchThemeResponse.json();
 
     return {
-      theme,
-      query
+      theme
     };
   }
 
   render() {
-    const { theme = { children: [] }, query, pageUrl, ogImage } = this.props;
+    const { theme = { children: [] }, pageUrl, ogImage } = this.props;
 
     const isRootTheme = theme && !theme.slug;
 
@@ -66,7 +65,7 @@ class Theme extends React.Component {
         )}
         {!isRootTheme && theme.refs.length > 0 && (
           <Section>
-            <SearchResults query={query} items={theme.refs} />
+            <SearchResults items={theme.refs} />
           </Section>
         )}
       </PageLayout>
