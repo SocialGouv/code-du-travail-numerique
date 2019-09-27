@@ -1,3 +1,4 @@
+import logging
 import json
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -14,6 +15,7 @@ cache_path = "~/Downloads"
 
 stringvec = List[str]
 
+logger = logging.getLogger("gunicorn.error")
 
 def add_slash(c):
     c["slug"] = f"/{c['slug']}"
@@ -23,7 +25,7 @@ def add_slash(c):
 class SemSearch():
 
     def __init__(self, content_path: str, stops_path: str):
-        print("loading data...")
+        logger.info("📠 loading data...")
         with open(content_path, "r") as f:
             content = list(filter(
                 lambda row: "text" in row and "code_du_travail" not in row.get('slug'), json.load(f)))
@@ -40,7 +42,7 @@ class SemSearch():
         self.context = [c["text"] for c in content]
         self.slugs = [c["slug"] for c in content]
 
-        print("Indexing {} documents ...".format(str(len(self.slugs))))
+        logger.info("Indexing {} documents ...".format(str(len(self.slugs))))
         self.load_graph()
         self.build_responses()
 

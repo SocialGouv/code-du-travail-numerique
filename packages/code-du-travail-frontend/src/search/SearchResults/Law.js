@@ -24,9 +24,14 @@ export const Law = ({ items, query }) => (
               <Link
                 href={{
                   pathname: `/${getRouteBySource(item.source)}/[slug]`,
-                  query: { q: query, slug: item.slug }
+                  query: {
+                    ...(query && { q: query }),
+                    slug: item.slug
+                  }
                 }}
-                as={`/${getRouteBySource(item.source)}/${item.slug}?q=${query}`}
+                as={`/${getRouteBySource(item.source)}/${item.slug}${
+                  query ? `?q=${query}` : ""
+                }`}
                 passHref
               >
                 <LargeLink icon={getSourceIcon(item.source)}>

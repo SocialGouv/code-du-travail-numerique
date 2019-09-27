@@ -1,20 +1,18 @@
+import glossary from "@cdt/data...datafiller/glossary.data.json";
+import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
+import Tooltip from "@reach/tooltip";
+import Head from "next/head";
+import Link from "next/link";
+import { withRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
-import Head from "next/head";
 import styled from "styled-components";
-import { withRouter } from "next/router";
-import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
-import Link from "next/link";
 import Article from "../common/Article";
 import Disclaimer from "../common/Disclaimer";
-import Html from "../common/Html";
-import Search from "../search/Search";
 import { Feedback } from "../common/Feedback";
+import Html from "../common/Html";
 import { ThemeBreadcrumbs } from "../common/ThemeBreadcrumbs";
-
-import Tooltip from "@reach/tooltip";
-
-import glossary from "@cdt/data...datafiller/glossary.data.json";
+import Search from "../search/Search";
 
 const glossaryBySlug = glossary.reduce(
   (state, item) => ({ ...state, [item.slug]: item }),
@@ -62,15 +60,29 @@ function Answer({
       )
     ).reduce((state, node) => {
       glossary.forEach(item => {
+        // we cannot use \b word boundary since \w does not match diacritics
+        // So we do a kind of \b equivalent.
+        // the main différence is that matched pattern can include a whitespace as first char
+        const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
+        const wordBoundaryStart = `(?:^|[^\\w${frDiacritics}])`;
+        const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
         const patterns = [...new Set([item.title, ...item.variants])]
-          .map(term => new RegExp(`\\b${term}\\b`, "gi"))
+          .map(
+            term =>
+              new RegExp(`${wordBoundaryStart}${term}${wordBoundaryEnd}`, "gi")
+          )
           .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
 
         patterns.forEach(pattern => {
-          node.innerHTML = node.innerHTML.replace(
-            pattern,
-            `<span data-tooltip-slug="${item.slug}" data-tooltip-term="$&"></span>`
-          );
+          node.innerHTML = node.innerHTML.replace(pattern, function(match) {
+            if (new RegExp(`^[^\\w${frDiacritics}]`).test(match)) {
+              // Since match string can start with a space, we trim it and insert the space before the tooltip markup
+              return `${match.slice(0, 1)}<span data-tooltip-slug="${
+                item.slug
+              }" data-tooltip-term="${match.slice(1)}"></span>`;
+            }
+            return `<span data-tooltip-slug="${item.slug}" data-tooltip-term="${match}"></span>`;
+          });
         });
       });
 
@@ -146,7 +158,7 @@ const DefinitonTerm = ({ term, definition }) => {
         label={<div dangerouslySetInnerHTML={{ __html: definition }} />}
         aria-label={definition}
       >
-        <Underline>{term}</Underline>
+        <Underline tabIndex="0">{term}</Underline>
       </StyledTooltip>
     </>
   );

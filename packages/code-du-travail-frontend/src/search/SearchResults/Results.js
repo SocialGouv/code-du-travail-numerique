@@ -37,9 +37,9 @@ const ListLink = ({
     <Link
       href={{
         pathname: `/${getRouteBySource(source)}/[slug]`,
-        query: { q: query, slug: slug }
+        query: { ...(query && { q: query }), slug: slug }
       }}
-      as={`/${getRouteBySource(source)}/${slug}?q=${query}`}
+      as={`/${getRouteBySource(source)}/${slug}${query ? `?q=${query}` : ""}`}
       passHref
     >
       <LargeLink

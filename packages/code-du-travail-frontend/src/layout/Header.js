@@ -8,7 +8,7 @@ const Header = () => (
   <StyledHeader>
     <Container>
       <Wrapper>
-        <Link href="/?q=" passHref>
+        <Link href="/" passHref>
           <LogoWrapper title="Code du travail numérique - retour à l'accueil">
             <Logo
               src={"/static/assets/img/marianne.svg"}
