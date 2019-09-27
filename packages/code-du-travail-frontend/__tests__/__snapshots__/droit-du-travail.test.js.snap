@@ -766,7 +766,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
       >
         <a
           class="c3"
-          href="/?q="
+          href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
