@@ -13,5 +13,6 @@ stages:
 - "Prepare"
 - "Code Quality"
 - "Registration"
+- "Data"
 - "Deploy"
 - "Notify Finished Deployment"

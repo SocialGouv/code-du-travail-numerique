@@ -36,4 +36,8 @@ RUN pip install -r requirements.txt
 COPY ./api ./api
 COPY ./scripts/entrypoint.sh ./scripts/entrypoint.sh
 
+ENV PYTHONPATH=.
+
+RUN python scripts/dump.py
+
 ENTRYPOINT ["sh", "scripts/entrypoint.sh"]

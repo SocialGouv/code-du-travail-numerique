@@ -31,15 +31,6 @@ Register frontend image:
       --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
     IMAGE_NAME: $CI_REGISTRY_IMAGE/frontend
 
-Register data image:
-  <<: *build_and_push_stage
-  variables:
-    CONTEXT: packages/code-du-travail-data
-    DOCKER_BUILD_ARGS: >-
-      --build-arg REGISTRY=$CI_REGISTRY_IMAGE
-      --build-arg TAG_BASE_IMAGE=$CI_COMMIT_SHA
-    IMAGE_NAME: $CI_REGISTRY_IMAGE/data
-
 Register nlp image:
   <<: *build_and_push_stage
   variables:

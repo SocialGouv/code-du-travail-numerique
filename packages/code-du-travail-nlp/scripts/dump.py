@@ -25,10 +25,10 @@ with open(dump_path, "r") as dump:
     endSem = time.time()
     logger.info("SemSearch ready in {:.2f}sec⚡️".format(endSem - start))
     for document in documents:
-        if ("text" in document and "code_du_travail" not in document.get('slug')):
+        if document.get("text") and document.get("source") != "code_du_travail":
             document["title_vector"] = ss.compute_vector(document.get("title"), document.get("text"))
 
     with open(dump_path.replace(".json", ".tf.json"), 'w') as fp:
-        json.dump(documents, fp)
+        json.dump(documents, fp, ensure_ascii=False)
     end = time.time()
     logger.info("Dump with vectors done in {:.2f}sec 🤖".format(end-start))
