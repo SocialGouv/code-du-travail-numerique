@@ -6,16 +6,6 @@ import { SOURCES } from "@cdt/sources";
 
 import { logger } from "./logger";
 import slugify from "../slugify";
-import fetch from "node-fetch";
-
-const NLP_URL = process.env.NLP_URL || "http://localhost:5000/api/search";
-const fetchVectors = async title => {
-  const vector = await fetch(`${NLP_URL}?q=${title}`).then(response =>
-    response.json()
-  );
-  console.log(vector);
-  return vector;
-};
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -68,107 +58,105 @@ function getDuplicateSlugs(allDocuments) {
 }
 
 function* cdtnDocumentsGen() {
-  // logger.info("=== Conventions Collectives ===");
-  // yield require("@socialgouv/kali-data/data/index.json").map(
-  //   ({ id, num, title }) => ({
-  //     source: SOURCES.CCN,
-  //     id,
-  //     idcc: num,
-  //     title,
-  //     slug: slugify(`${num}-${title}`.substring(0, 80)),
-  //     text: `IDCC ${num} ${title}`,
-  //     url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
-  //   })
-  // );
+  logger.info("=== Conventions Collectives ===");
+  yield require("@socialgouv/kali-data/data/index.json").map(
+    ({ id, num, title }) => ({
+      source: SOURCES.CCN,
+      id,
+      idcc: num,
+      title,
+      slug: slugify(`${num}-${title}`.substring(0, 80)),
+      text: `IDCC ${num} ${title}`,
+      url: `https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`
+    })
+  );
 
-  // logger.info("=== Code du travail ===");
-  // yield selectAll(
-  //   "article",
-  //   require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
-  // ).map(({ data: { id, num, date_debut, texte, texteHtml } }) => ({
-  //   source: SOURCES.CDT,
-  //   title: fixArticleNum(id, num),
-  //   slug: slugify(fixArticleNum(id, num)),
-  //   description: texte.slice(0, texte.indexOf("…", 150)),
-  //   html: texteHtml,
-  //   text: texte,
-  //   date_debut,
-  //   url: getArticleUrl(id)
-  // }));
+  logger.info("=== Code du travail ===");
+  yield selectAll(
+    "article",
+    require("@socialgouv/legi-data/data/LEGITEXT000006072050.json")
+  ).map(({ data: { id, num, date_debut, texte, texteHtml } }) => ({
+    source: SOURCES.CDT,
+    title: fixArticleNum(id, num),
+    slug: slugify(fixArticleNum(id, num)),
+    description: texte.slice(0, texte.indexOf("…", 150)),
+    html: texteHtml,
+    text: texte,
+    date_debut,
+    url: getArticleUrl(id)
+  }));
 
-  // logger.info("=== Fiches SP ===");
-  // yield require("../dataset/fiches_service_public/fiches-sp.json").map(
-  //   ({
-  //     id,
-  //     title,
-  //     description,
-  //     breadcrumbs,
-  //     theme,
-  //     text,
-  //     raw,
-  //     date,
-  //     references_juridiques,
-  //     url
-  //   }) => ({
-  //     id,
-  //     source: SOURCES.SHEET_SP,
-  //     title,
-  //     slug: slugify(title),
-  //     title_vector: vectors[`/${SOURCES.SHEET_SP}/${slugify(title)}`],
-  //     description,
-  //     breadcrumbs,
-  //     theme,
-  //     text,
-  //     raw,
-  //     date,
-  //     references_juridiques,
-  //     url
-  //   })
-  // );
+  logger.info("=== Fiches SP ===");
+  yield require("../dataset/fiches_service_public/fiches-sp.json").map(
+    ({
+      id,
+      title,
+      description,
+      breadcrumbs,
+      theme,
+      text,
+      raw,
+      date,
+      references_juridiques,
+      url
+    }) => ({
+      id,
+      source: SOURCES.SHEET_SP,
+      title,
+      slug: slugify(title),
+      description,
+      breadcrumbs,
+      theme,
+      text,
+      raw,
+      date,
+      references_juridiques,
+      url
+    })
+  );
 
-  // logger.info("=== Fiches MT ===");
-  // yield require("../dataset/fiches_ministere_travail/fiches-mt.json").map(
-  //   ({
-  //     title,
-  //     slug,
-  //     text,
-  //     description,
-  //     anchor,
-  //     intro,
-  //     html,
-  //     breadcrumbs,
-  //     theme,
-  //     date,
-  //     url
-  //   }) => ({
-  //     source: SOURCES.SHEET_MT,
-  //     title_vector: vectors[`/${SOURCES.SHEET_MT}/${slug}`],
-  //     title,
-  //     slug,
-  //     intro,
-  //     description,
-  //     text,
-  //     html,
-  //     breadcrumbs,
-  //     theme,
-  //     date,
-  //     url,
-  //     anchor
-  //   })
-  // );
+  logger.info("=== Fiches MT ===");
+  yield require("../dataset/fiches_ministere_travail/fiches-mt.json").map(
+    ({
+      title,
+      slug,
+      text,
+      description,
+      anchor,
+      intro,
+      html,
+      breadcrumbs,
+      theme,
+      date,
+      url
+    }) => ({
+      source: SOURCES.SHEET_MT,
+      title,
+      slug,
+      intro,
+      description,
+      text,
+      html,
+      breadcrumbs,
+      theme,
+      date,
+      url,
+      anchor
+    })
+  );
 
-  // logger.info("=== Themes ===");
-  // yield require("../dataset/datafiller/themes.data.json").map(
-  //   ({ slug, title }) => ({
-  //     source: SOURCES.THEMES,
-  //     title: title,
-  //     slug
-  //   })
-  // );
+  logger.info("=== Themes ===");
+  yield require("../dataset/datafiller/themes.data.json").map(
+    ({ slug, title }) => ({
+      source: SOURCES.THEMES,
+      title: title,
+      slug
+    })
+  );
 
   logger.info("=== Courriers ===");
   yield require("../dataset/export-courriers.json").map(
-    async ({
+    ({
       titre,
       filename,
       description,
@@ -182,7 +170,6 @@ function* cdtnDocumentsGen() {
       source: SOURCES.LETTERS,
       title: titre,
       slug: slugify(titre),
-      title_vector: await fetchVectors(`/${SOURCES.LETTERS}/${slugify(titre)}`),
       description,
       text: questions.join("\n"),
       html,
@@ -193,61 +180,60 @@ function* cdtnDocumentsGen() {
       tags: flattenTags(tags)
     })
   );
-  // logger.info("=== Outils ===");
-  // yield require("../dataset/outils.json").map(
-  //   ({ branche, code, date, description, questions, themes, titre }) => ({
-  //     source: SOURCES.TOOLS,
-  //     title: titre,
-  //     slug: slugify(code),
-  //     title_vector: vectors[`/${SOURCES.TOOLS}/${slugify(code)}`],
-  //     description,
-  //     text: questions.join("\n"),
-  //     themes: themes,
-  //     date,
-  //     branche
-  //   })
-  // );
+  logger.info("=== Outils ===");
+  yield require("../dataset/outils.json").map(
+    ({ branche, code, date, description, questions, themes, titre }) => ({
+      source: SOURCES.TOOLS,
+      title: titre,
+      slug: slugify(code),
+      description,
+      text: questions.join("\n"),
+      themes: themes,
+      date,
+      branche
+    })
+  );
 
-  // logger.info("=== Faq ===");
-  // yield require("../dataset/faq.json").map(
-  //   ({ question, reponse, date, tags, source }) => {
-  //     const faqText = striptags(reponse);
-  //     const flatTags = flattenTags(tags);
-  //     const slug = makeSlug(question, flatTags.join("-"));
-  //     return {
-  //       source: SOURCES.FAQ,
-  //       title: question,
-  //       slug,
-  //       text: faqText,
-  //       description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-  //       html: reponse,
-  //       tags: flatTags,
-  //       date,
-  //       author: source ? source : "DIRRECTE"
-  //     };
-  //   }
-  // );
+  logger.info("=== Faq ===");
+  yield require("../dataset/faq.json").map(
+    ({ question, reponse, date, tags, source }) => {
+      const faqText = striptags(reponse);
+      const flatTags = flattenTags(tags);
+      const slug = makeSlug(question, flatTags.join("-"));
+      return {
+        source: SOURCES.FAQ,
+        title: question,
+        slug,
+        text: faqText,
+        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
+        html: reponse,
+        tags: flatTags,
+        date,
+        author: source ? source : "DIRRECTE"
+      };
+    }
+  );
 
-  // logger.info("=== Faq contributions ===");
-  // yield require("../dataset/faq-contributions.json").map(
-  //   ({ question, reponse, date_redaction, date_expiration, tags }) => {
-  //     const faqText = striptags(reponse);
-  //     const flatTags = flattenTags(tags);
-  //     const slug = makeSlug(question, flatTags.join("-"));
-  //     return {
-  //       source: SOURCES.FAQ,
-  //       title: question,
-  //       slug,
-  //       text: faqText,
-  //       description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-  //       html: reponse,
-  //       tags: flatTags,
-  //       date: date_redaction,
-  //       date_expiration: date_expiration,
-  //       author: "DIRRECTE"
-  //     };
-  //   }
-  // );
+  logger.info("=== Faq contributions ===");
+  yield require("../dataset/faq-contributions.json").map(
+    ({ question, reponse, date_redaction, date_expiration, tags }) => {
+      const faqText = striptags(reponse);
+      const flatTags = flattenTags(tags);
+      const slug = makeSlug(question, flatTags.join("-"));
+      return {
+        source: SOURCES.FAQ,
+        title: question,
+        slug,
+        text: faqText,
+        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
+        html: reponse,
+        tags: flatTags,
+        date: date_redaction,
+        date_expiration: date_expiration,
+        author: "DIRRECTE"
+      };
+    }
+  );
 }
 
 export const conventionTextType = {
