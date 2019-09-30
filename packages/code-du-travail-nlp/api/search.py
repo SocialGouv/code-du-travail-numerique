@@ -14,7 +14,8 @@ def load_in_background(nlp, app, content_path, stops_path):
 
 def add_search(app, nlp, content_path, stops_path):
 
-    thread = threading.Thread(target=load_in_background, args=(nlp, app, content_path, stops_path))
+    thread = threading.Thread(target=load_in_background, args=(
+        nlp, app, content_path, stops_path))
     # thread.start()
     nlp.queue('search', thread)
 
@@ -24,7 +25,7 @@ def add_search(app, nlp, content_path, stops_path):
         ss = nlp.get('search', check_ready=True)
 
         # maybe add a default to get (risky because of no exclude sources)
-        query = request.args.get('q')
+        query = request.args.get('q', default="")
         exclude_sources = request.args.get("excludeSources")
         size = request.args.get("size")
         results = ss.predict_slugs(query, exclude_sources, size)
