@@ -9,7 +9,7 @@ const { sortRowRefsByRelevance, getVariants, decodeHTML } = require("./utils");
 const DATAFILLER_URL =
   process.env.DATAFILLER_URL || "https://datafiller.num.social.gouv.fr";
 
-const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records`;
+const RECORDS_URL = `${DATAFILLER_URL}/kinto/v1/buckets/datasets/collections/requetes/records?_sort=title`;
 /*
 
  {

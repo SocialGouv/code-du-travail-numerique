@@ -22,6 +22,7 @@ COPY ./dataset/fiches_service_public/fiches-sp.json ./dataset/fiches_service_pub
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 COPY ./dataset/export-courriers.json ./dataset/export-courriers.json
 COPY ./dataset/outils.json ./dataset/outils.json
+COPY ./dataset/contributions/contributions.data.json ./contributions/contributions.data.json
 
 WORKDIR /app
 

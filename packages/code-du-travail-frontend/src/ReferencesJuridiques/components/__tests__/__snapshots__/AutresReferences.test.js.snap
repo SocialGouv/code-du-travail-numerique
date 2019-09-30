@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AutresReferences /> should render 1`] = `
-.c7 {
+.c6 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c5 {
+.c4 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -17,8 +17,8 @@ exports[`<AutresReferences /> should render 1`] = `
   height: 12px;
 }
 
-.c5::after,
-.c5::before {
+.c4::after,
+.c4::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -28,42 +28,46 @@ exports[`<AutresReferences /> should render 1`] = `
   content: "";
 }
 
-.c5::before {
+.c4::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c5::before,
-[aria-selected="true"] .c5::before {
+[aria-expanded="true"] .c4::before,
+[aria-selected="true"] .c4::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c5::after {
+.c4::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c5::after,
-[aria-selected="true"] .c5::after {
+[aria-expanded="true"] .c4::after,
+[aria-selected="true"] .c4::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c5::before,
-.c5::after {
+.c4::before,
+.c4::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c3 {
+.c1 + .c0 {
+  border-top: 1px solid #c9d3df;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,47 +83,32 @@ exports[`<AutresReferences /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3:hover,
-.c3:focus,
-.c3:focus-within,
-.c3[aria-expanded="true"] {
+.c2:hover,
+.c2:focus,
+.c2:focus-within,
+.c2[aria-expanded="true"] {
   color: #006ab2;
 }
 
-.c1 {
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-.c1 + .c0 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c1 .c2 {
-  padding-right: 1rem;
-}
-
-.c6 {
+.c5 {
   padding: 1rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c6 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
-.c6.accordion__body--hidden {
+.c5.accordion__body--hidden {
   display: none;
 }
 
-.c8 {
+.c7 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -129,14 +118,14 @@ exports[`<AutresReferences /> should render 1`] = `
   cursor: pointer;
 }
 
-.c9 {
+.c8 {
   position: relative;
   top: 1px;
   vertical-align: middle;
   margin-right: 1rem;
 }
 
-.c4 {
+.c3 {
   display: inline-block;
   padding: 1rem;
 }
@@ -160,19 +149,19 @@ exports[`<AutresReferences /> should render 1`] = `
           aria-controls="accordion__panel-0"
           aria-disabled="false"
           aria-expanded="false"
-          class="c2 c3"
+          class="c2"
           data-accordion-component="AccordionItemButton"
           id="accordion__heading-0"
           role="button"
           tabindex="0"
         >
           <span
-            class="c4"
+            class="c3"
           >
             Voir les articles du code du travail concernés
           </span>
           <div
-            class="c5"
+            class="c4"
             role="presentation"
           />
         </div>
@@ -180,24 +169,24 @@ exports[`<AutresReferences /> should render 1`] = `
       <div
         aria-hidden="true"
         aria-labelledby="accordion__heading-0"
-        class="c6"
+        class="c5"
         data-accordion-component="AccordionItemPanel"
         hidden=""
         id="accordion__panel-0"
       >
         <ul
-          class="c7"
+          class="c6"
         >
           <li
             class=""
           >
             <a
-              class="c8"
+              class="c7"
               rel="noopener noreferrer"
               target="_blank"
             >
               <svg
-                class="c9"
+                class="c8"
                 viewBox="0 0 512 512"
                 width="18"
               >
@@ -221,11 +210,11 @@ exports[`<AutresReferences /> should render 1`] = `
             class=""
           >
             <a
-              class="c8"
+              class="c7"
               href="/convention-collective/yyy"
             >
               <svg
-                class="c9"
+                class="c8"
                 viewBox="0 0 512 512"
                 width="18"
               >

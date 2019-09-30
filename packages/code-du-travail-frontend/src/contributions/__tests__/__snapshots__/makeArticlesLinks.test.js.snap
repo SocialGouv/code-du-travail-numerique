@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should detect Article D.  3123-5 correctly 1`] = `"Article [D.  3123-5](/code-du-travail/d3123-5)"`;
+
+exports[`should detect Article L  3123-5 correctly 1`] = `"Article [L  3123-5](/code-du-travail/l3123-5)"`;
+
+exports[`should detect Article L-3123-5 correctly 1`] = `"Article [L-3123-5](/code-du-travail/l3123-5)"`;
+
+exports[`should detect Article L-3123-5, L.3123-7, L 3123-52-1, L. 3123-52-1 correctly 1`] = `"Article [L-3123-5](/code-du-travail/l3123-5), [L.3123-7](/code-du-travail/l3123-7), [L 3123-52-1](/code-du-travail/l3123-52-1), [L. 3123-52-1](/code-du-travail/l3123-52-1)"`;
+
+exports[`should detect Article L3123-5 correctly 1`] = `"Article [L3123-5](/code-du-travail/l3123-5)"`;
+
+exports[`should detect Article L3123-5 et [L234-12](http://travail.gouv.fr) correctly 1`] = `"Article [L3123-5](/code-du-travail/l3123-5) et [L234-12](http://travail.gouv.fr)"`;
+
+exports[`should detect Article L3123-5 et L234-12 correctly 1`] = `"Article [L3123-5](/code-du-travail/l3123-5) et [L234-12](/code-du-travail/l234-12)"`;
+
+exports[`should detect Article L3123-5, L3123-7, L3123-52-1 correctly 1`] = `"Article [L3123-5](/code-du-travail/l3123-5), [L3123-7](/code-du-travail/l3123-7), [L3123-52-1](/code-du-travail/l3123-52-1)"`;
+
+exports[`should detect Article L3123-5, L3123-7, L3123-52-1 et L3123-7, L3123-52-1 correctly 1`] = `"Article [L3123-5](/code-du-travail/l3123-5), [L3123-7](/code-du-travail/l3123-7), [L3123-52-1](/code-du-travail/l3123-52-1) et [L3123-7](/code-du-travail/l3123-7), [L3123-52-1](/code-du-travail/l3123-52-1)"`;
+
+exports[`should detect Article R.3123-5 correctly 1`] = `"Article [R.3123-5](/code-du-travail/r3123-5)"`;
+
+exports[`should detect D12 correctly 1`] = `"D12"`;
+
+exports[`should detect XD2432-1 correctly 1`] = `"XD2432-1"`;

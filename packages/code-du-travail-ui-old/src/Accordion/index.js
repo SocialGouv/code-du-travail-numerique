@@ -8,7 +8,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
-import { box, colors, spacing } from "../theme";
+import { colors, spacing } from "../theme";
 import VerticalArrow from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 
@@ -16,15 +16,10 @@ class Accordion extends React.PureComponent {
   render() {
     const { items, ...props } = this.props;
 
-    const StyledAccordionItem =
-      items.length > 1
-        ? StyledMultipleAccordionItem
-        : StyledSingleAccordionItem;
-
     return (
       <RootAccordion allowZeroExpanded allowMultipleExpanded {...props}>
         {items.map((item, index) => (
-          <StyledAccordionItem key={index}>
+          <StyledMultipleAccordionItem key={index}>
             <AccordionItemHeading>
               <StyledAccordionItemButton>
                 {item.title}
@@ -32,7 +27,7 @@ class Accordion extends React.PureComponent {
               </StyledAccordionItemButton>
             </AccordionItemHeading>
             <StyledAccordionItemPanel>{item.body}</StyledAccordionItemPanel>
-          </StyledAccordionItem>
+          </StyledMultipleAccordionItem>
         ))}
       </RootAccordion>
     );
@@ -67,16 +62,6 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   &:focus-within,
   &[aria-expanded="true"] {
     color: ${colors.title};
-  }
-`;
-
-const StyledSingleAccordionItem = styled(StyledMultipleAccordionItem)`
-  background-color: ${colors.lightBackground};
-  border: 1px solid ${colors.elementBorder};
-  border-radius: ${box.borderRadius};
-  overflow: hidden;
-  & ${StyledAccordionItemButton} {
-    padding-right: ${spacing.base};
   }
 `;
 

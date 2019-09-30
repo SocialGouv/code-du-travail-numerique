@@ -8,7 +8,8 @@ const SOURCES = {
   LETTERS: "modeles_de_courriers",
   IDCC: "idcc",
   SHEET: "fiches",
-  EXTERNALS: "external"
+  EXTERNALS: "external",
+  CONTRIBUTIONS: "contributions"
 };
 
 // mapping elastic search source type -> route name
@@ -21,7 +22,8 @@ const routeBySource = {
   [SOURCES.TOOLS]: "outils",
   [SOURCES.IDCC]: "idcc",
   [SOURCES.CCN]: "convention-collective",
-  [SOURCES.EXTERNALS]: "external"
+  [SOURCES.EXTERNALS]: "external",
+  [SOURCES.CONTRIBUTIONS]: "contribution"
 };
 
 // mapping elastic search source type -> source label
@@ -35,7 +37,8 @@ const labelBySource = {
   [SOURCES.IDCC]: "Legifrance",
   [SOURCES.CCN]: "Legifrance",
   [SOURCES.EXTERNALS]: "Lien externe",
-  [SOURCES.SHEET]: "Fiches"
+  [SOURCES.SHEET]: "Fiches",
+  [SOURCES.CONTRIBUTIONS]: "Contributions"
 };
 
 const sources = Object.values(SOURCES);

@@ -125,7 +125,7 @@ function Answer({
           {html && <Html>{html}</Html>}
           {children}
           {portalComponents}
-          <Footer>{footer}</Footer>
+          {footer && <Footer>{footer}</Footer>}
         </Article>
       )}
       {additionalContent}

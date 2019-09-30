@@ -1,10 +1,10 @@
 import crypto from "crypto";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
-import { SOURCES } from "@cdt/sources";
 
 import { logger } from "./logger";
 import slugify from "../slugify";
+import { SOURCES } from "@cdt/sources";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -191,6 +191,19 @@ function* cdtnDocumentsGen() {
       date,
       branche
     })
+  );
+
+  logger.info("=== Contributions ===");
+  yield require("../dataset/contributions/contributions.data.json").map(
+    ({ value, answers }) => {
+      return {
+        source: SOURCES.CONTRIBUTIONS,
+        title: value,
+        slug: slugify(value),
+        text: (answers.general && answers.general.value) || value,
+        answers
+      };
+    }
   );
 }
 

@@ -8,7 +8,7 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "SUGGEST_URL=http://localhost:1337/nlp/suggest node server/server.js",
-    "dev-with-nlp":  "node server/server.js",
+    "dev-with-nlp": "node server/server.js",
     "lint": "eslint src/* pages/*",
     "prepush": "yarn lint && yarn test",
     "start": "NODE_ENV=production node server/server.js",
@@ -31,6 +31,7 @@
     "final-form-arrays": "^3.0.1",
     "final-form-calculate": "^1.3.1",
     "isomorphic-unfetch": "^3.0.0",
+    "mdx-runtime-slim": "^1.4.5",
     "memoizee": "^0.4.14",
     "next": "^9.0.7",
     "react": "^16.10.1",
@@ -44,10 +45,16 @@
     "react-github-fork-ribbon": "0.6.0",
     "react-mathjax-preview": "^0.1.16",
     "react-uid": "^2.2.0",
+    "rehype-raw": "^4.0.1",
+    "rehype-react": "^4.0.1",
+    "remark-parse": "^7.0.1",
+    "remark-rehype": "^5.0.0",
     "speakingurl": "14.0.1",
     "styled-components": "^4.4.0",
+    "unified": "^8.4.0",
     "unist-util-find": "^1.0.1",
-    "url-search-params": "^1.1.0"
+    "url-search-params": "^1.1.0",
+    "use-persisted-state": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
