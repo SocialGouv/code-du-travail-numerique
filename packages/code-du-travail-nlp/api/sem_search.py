@@ -137,4 +137,4 @@ class SemSearch():
 
 
 if __name__ == "__main__":
-    ss = SemSearch(stops_paths)
+    ss = SemSearch(stops_path)

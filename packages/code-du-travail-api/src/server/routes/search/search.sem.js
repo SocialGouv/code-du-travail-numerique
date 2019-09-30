@@ -1,5 +1,4 @@
 function getSemQuery({ query_vector, size, sources = [] }) {
-  console.log(sources);
   return {
     size: size,
     _source: ["title", "source", "slug", "anchor", "url"],
