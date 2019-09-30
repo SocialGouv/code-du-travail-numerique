@@ -40,7 +40,7 @@ spec:
           readinessProbe:
             failureThreshold: 10
             httpGet:
-              path: /api/ready
+              path: /api/search?q=démission
               port: ${PORT}
             initialDelaySeconds: 30
             periodSeconds: 10
