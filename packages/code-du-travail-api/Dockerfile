@@ -15,4 +15,6 @@ COPY --from=cdtn-base-image /app/node_modules/@cdt/data...courrier-type /node_mo
 
 WORKDIR /app
 
+USER node
+
 ENTRYPOINT ["yarn", "start"]
