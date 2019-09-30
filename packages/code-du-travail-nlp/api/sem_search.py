@@ -71,8 +71,9 @@ class SemSearch():
 
     def compute_vector(self, string, context):
         cleanStr = self.remove_stops(self.strip_accents(string))
-        out = self.session.run(self.response_embeddings, {self.r_placeholder: [cleanStr], self.c_placeholder: [context]})
-        return out["outputs"].tolist()
+        out = self.session.run(self.response_embeddings, {self.r_placeholder: [
+                               cleanStr], self.c_placeholder: [context]})
+        return out["outputs"].squeeze().tolist()
 
     def compute_batch_vectors(self, strings, contexts):
         cleanStr = [self.remove_stops(self.strip_accents(s)) for s in strings]
@@ -86,7 +87,7 @@ class SemSearch():
 
         self.question_results = self.session.run(
             self.question_embeddings, {self.q_placeholder: questions})
-        return self.question_results["outputs"].tolist()
+        return self.question_results["outputs"].squeeze().tolist()
 
     def filter_sources(self, slug_list, exclude_sources):
         if exclude_sources:
