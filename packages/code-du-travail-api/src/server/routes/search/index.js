@@ -52,8 +52,9 @@ router.get("/search", async ctx => {
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
 
   const query_vector = await fetch(`${NLP_URL}/api/search?q=${query}`).then(
-    response => response.json()
+    response => (response = response.json())
   );
+
   const semSources = [
     SOURCES.SHEET_MT,
     SOURCES.SHEET_SP,
@@ -61,7 +62,6 @@ router.get("/search", async ctx => {
     SOURCES.TOOLS,
     SOURCES.THEMES
   ];
-
   const {
     body: {
       responses: [esResponse, semResponse]
@@ -74,11 +74,11 @@ router.get("/search", async ctx => {
       { ...getSemBody({ query_vector, size, sources: semSources }) }
     ]
   });
-  const results = utils.mergePipe(
-    semResponse.hits.hits,
-    esResponse.hits.hits,
-    MAX_RESULTS
-  );
+
+  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
+  const { hits: { hits: bem25Hits } = { hits: [] } } = esResponse;
+
+  const results = utils.mergePipe(semanticHits, bem25Hits, MAX_RESULTS);
 
   ctx.body = results.slice(0, size);
 });
