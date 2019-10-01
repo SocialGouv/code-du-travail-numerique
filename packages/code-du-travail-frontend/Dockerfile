@@ -7,4 +7,6 @@ FROM ${BASE_IMAGE}
 
 WORKDIR /app
 
+USER node
+
 ENTRYPOINT ["yarn", "workspace", "@cdt/frontend", "start"]
