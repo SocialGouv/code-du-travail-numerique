@@ -1,7 +1,6 @@
 from flask import request
 from flask import jsonify
 from flask_cors import cross_origin
-import threading
 
 
 class InvalidUsage(Exception):
@@ -46,7 +45,7 @@ def add_index(app, nlp):
         return jsonify(results)
 
     @app.errorhandler(InvalidUsage)
-    def handle_invalid_usage(error):
+    def handle_invalid_usage(error): # pylint: disable=unused-variable
         response = jsonify(error.to_dict())
         response.status_code = error.status_code
         return response

@@ -5,6 +5,7 @@ Ce fichier est récupéré de l'image [NLP](../code_du_travail_nlp/README.md#Doc
 Ce document est par la suite utilisé par le container data pour réaliser l'indexation.
 
 ## Données
+
 Par defaut, le script d'indexation va chercher les données dans l'arborescence `/packages/code-du-travail-nlp/data` 
 mais il possible de changer ce chemin avec la variable d'environnement `DUMP_PATH`.
 
@@ -27,7 +28,6 @@ via la commande docker suivante.
 ```sh
 $ docker run --rm --entrypoint cat cdtn_nlp:local  /app/data/dump.tf.json  > dump.data.json
 ```
-
 
 ## Schéma
 
