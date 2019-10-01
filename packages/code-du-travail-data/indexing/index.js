@@ -150,7 +150,10 @@ async function main() {
 }
 
 main().catch(response => {
-  logger.error(response);
-  logger.error(response.body.error);
+  if (response.body) {
+    logger.error(response.body.error);
+  } else {
+    logger.error(response);
+  }
   process.exit(-1);
 });
