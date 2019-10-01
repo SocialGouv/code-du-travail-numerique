@@ -77,6 +77,19 @@ async function indexDocumentsBatched({
   }
 }
 
+async function deleteOldIndex({ client, patterns, timestamp }) {
+  const { body: indices } = await client.cat.indices({ format: "json" });
+
+  const IndicesToDelete = getIndicesToDelete(patterns, timestamp, indices);
+  const pIndicesToDelete = IndicesToDelete.map(({ index }) =>
+    client.indices.delete({ index })
+  );
+
+  return Promise.all(pIndicesToDelete).then(() => {
+    logger.info(`Remove ${pIndicesToDelete.length} old indices`);
+  });
+}
+
 function* chunks(items, size) {
   for (const val of range(0, items.length, size)) {
     yield items.slice(val, val + size);
@@ -116,6 +129,7 @@ export {
   bulkIndexDocuments,
   version,
   indexDocumentsBatched,
+  deleteOldIndex,
   chunks,
   range,
   getIndicesToDelete

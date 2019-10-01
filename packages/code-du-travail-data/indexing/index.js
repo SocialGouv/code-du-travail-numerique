@@ -9,7 +9,7 @@ import {
   version,
   createIndex,
   indexDocumentsBatched,
-  getIndicesToDelete
+  deleteOldIndex
 } from "./es_client.utils";
 import { cdtnCcnGen } from "./populate";
 
@@ -116,23 +116,13 @@ async function main() {
     name: CDTN_INDEX_NAME
   });
 
-  const { body: indices } = await client.cat.indices({ format: "json" });
-
   const patterns = [
     CDTN_INDEX_NAME,
     THEMES_INDEX_NAME,
     CDTN_CCN_NAME,
     ANNUAIRE_INDEX_NAME
   ];
-
-  const IndicesToDelete = getIndicesToDelete(patterns, ts, indices);
-  const pIndicesToDelete = IndicesToDelete.map(({ index }) =>
-    client.indices.delete({ index })
-  );
-
-  return Promise.all(pIndicesToDelete).then(() => {
-    logger.info(`Remove ${pIndicesToDelete.length} old indices`);
-  });
+  await deleteOldIndex({ client, patterns, timestamp: ts });
 }
 
 main().catch(response => {
