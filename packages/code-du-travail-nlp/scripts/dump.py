@@ -23,8 +23,8 @@ with open(dump_path, "r") as dump:
     ss = SemSearch(stops_path)
     endSem = time.time()
     logger.info("SemSearch ready in {:.2f}sec⚡️".format(endSem - start))
-    documents = [dict(d, text="")
-                 for d in documents if d.get("source") == "themes"]
+    documents = [dict(d, text="") if d.get("source") == "themes" else d
+                 for d in documents]
     for document in documents:
         if document.get("source") != "code_du_travail":
             document["title_vector"] = ss.compute_vector(
