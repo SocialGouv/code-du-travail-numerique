@@ -62,7 +62,6 @@ const Search = ({
     setQuery(value);
   };
   const selectConvention = convention => {
-    console.log("-------", { onSelectConvention });
     if (onSelectConvention) {
       onSelectConvention(convention);
       if (resetOnClick) {
