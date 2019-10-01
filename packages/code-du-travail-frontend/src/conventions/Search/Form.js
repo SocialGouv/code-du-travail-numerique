@@ -1,58 +1,83 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
-import { theme, Container, Table, Tag } from "@cdt/ui-old";
+import slugify from "@cdt/data/slugify";
+import { theme, Container, Table } from "@cdt/ui-old";
 
 import SearchCC from "./SearchCC";
 
-// link to a CC
-const CC = ({ id, num, title }) => {
+// following data/populate.js slug rules
+const getConventionSlug = convention =>
+  slugify(`${convention.num}-${convention.title}`.substring(0, 80));
+
+// link to a Convention
+const Convention = ({ num, title, onClick }) => {
   return (
     <Box>
       <Flex>
-        <Tag title="Numéro de convention collective" variant="info">
-          IDCC {`0000${num}`.slice(-4)}
-        </Tag>
-        <Spacer />
-        <CCLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href={`https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=${id}`}
-        >
-          {title}
-        </CCLink>
+        {onClick ? (
+          <ConventionLink onClick={onClick}>{title}</ConventionLink>
+        ) : (
+          <ConventionLink
+            as={Link}
+            target={`_blank`}
+            rel="noopener noreferrer"
+            href={`/conventions-collectives/${getConventionSlug({
+              num,
+              title
+            })}`}
+          >
+            {title}
+          </ConventionLink>
+        )}
       </Flex>
     </Box>
   );
 };
 
 const TagSiret = ({ siret }) => (
-  <Tag title="Numéro SIRET" size="small" variant="info">
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={`https://entreprise.data.gouv.fr/etablissement/${siret}`}
-    >
-      {siret}
-    </a>
-  </Tag>
+  <a
+    title="Ouvrir la fiche entreprise"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ fontSize: "0.8em" }}
+    href={`https://entreprise.data.gouv.fr/etablissement/${siret}`}
+  >
+    {siret}
+  </a>
 );
 
 // demo app
 // userland UI
-const Search = () => {
+const Search = ({
+  title = "Recherche de convention collective",
+  resetOnClick = true,
+  style,
+  className,
+  onSelectConvention
+}) => {
   const [query, setQuery] = useState("");
   const onInputChange = e => {
     const value = e.target.value;
     setQuery(value);
   };
+  const selectConvention = convention => {
+    if (onSelectConvention) {
+      onSelectConvention(convention);
+      if (resetOnClick) {
+        setQuery("");
+      }
+    }
+  };
 
   return (
-    <Container>
-      <h3>Recherche de convention collective</h3>
+    <Container style={style} className={className}>
+      {title && <h3>{title}</h3>}
       <p>
-        Saisissez le nom de votre entreprise, la convention collective ou le
-        numéro SIRET
+        Afin de sélectionner votre convention collective, saisissez le nom de
+        votre entreprise, son numéro SIRET, ou directement le nom de votre
+        convention collective.
       </p>
       <Input
         placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
@@ -62,46 +87,55 @@ const Search = () => {
       />
       <SearchCC
         query={query}
-        render={({ status, results }) => (
-          <ResultsContainer>
-            {status === "loading" && (
-              <div>Recherche des convention collectives...</div>
-            )}
-            {status === "error" && (
-              <div>Aucun résultat pour votre recherche.</div>
-            )}
-            {status === "success" && results && results.length ? (
-              <Table stripes>
-                <tbody>
-                  {results.map(result => (
-                    <tr key={result.id}>
-                      <td>
-                        <Flex>
-                          <ResultLabel>{result.label}</ResultLabel>
-                          {result.siret && <TagSiret siret={result.siret} />}
-                        </Flex>
-                        <CCsContainer>
-                          {result.conventions && result.conventions.length ? (
-                            result.conventions.map(convention => (
-                              <CC key={convention.id} {...convention} />
-                            ))
-                          ) : (
-                            <div className="text-danger">
-                              Aucune convention collective connue pour cette
-                              entreprise
-                            </div>
-                          )}
-                        </CCsContainer>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            ) : (
-              ""
-            )}
-          </ResultsContainer>
-        )}
+        render={({ status, results }) =>
+          query && (
+            <ResultsContainer>
+              {status === "loading" && (
+                <div>Recherche des convention collectives...</div>
+              )}
+              {status === "error" && (
+                <div>Aucun résultat pour votre recherche.</div>
+              )}
+              {status === "success" && results && results.length ? (
+                <Table>
+                  <tbody>
+                    {results.map(result => (
+                      <tr key={result.id}>
+                        <td>
+                          <Flex>
+                            <ResultLabel>{result.label}</ResultLabel>
+                            {result.siret && <TagSiret siret={result.siret} />}
+                          </Flex>
+                          <ConventionsContainer>
+                            {result.conventions && result.conventions.length ? (
+                              result.conventions.map(convention => (
+                                <Convention
+                                  onClick={
+                                    onSelectConvention &&
+                                    (() => selectConvention(convention))
+                                  }
+                                  key={convention.id}
+                                  {...convention}
+                                />
+                              ))
+                            ) : (
+                              <div className="text-danger">
+                                Aucune convention collective connue pour cette
+                                entreprise
+                              </div>
+                            )}
+                          </ConventionsContainer>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              ) : (
+                ""
+              )}
+            </ResultsContainer>
+          )
+        }
       />
     </Container>
   );
@@ -111,8 +145,9 @@ const ResultsContainer = styled.div`
   margin-top: ${theme.spacing.medium};
 `;
 
-const CCLink = styled.a`
+const ConventionLink = styled.a`
   color: ${theme.colors.lightText};
+  cursor: pointer;
 `;
 
 const Input = styled.input`
@@ -123,7 +158,7 @@ const Box = styled.div`
   margin: ${theme.spacing.small} 0;
 `;
 
-const CCsContainer = styled.div`
+const ConventionsContainer = styled.div`
   margin-top: ${theme.spacing.small};
 `;
 
@@ -131,12 +166,6 @@ const Flex = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-`;
-
-const Spacer = styled.div`
-  display: inline-block;
-  width: ${theme.spacing.small};
-  flex: 0 0 auto;
 `;
 
 const ResultLabel = styled.div`

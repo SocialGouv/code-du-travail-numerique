@@ -22,7 +22,7 @@ import { DownloadFile } from "../../src/common/DownloadFile";
 import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import ArticleIcon from "../../src/icons/ArticleIcon";
 import ReponseIcon from "../../src/icons/ReponseIcon";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
 const {
@@ -92,7 +92,7 @@ class Question extends React.Component {
     );
 
     return (
-      <PageLayout>
+      <Layout>
         <Metas
           url={pageUrl}
           title={data._source.title}
@@ -121,7 +121,7 @@ class Question extends React.Component {
             </React.Fragment>
           )}
         </Answer>
-      </PageLayout>
+      </Layout>
     );
   }
 }

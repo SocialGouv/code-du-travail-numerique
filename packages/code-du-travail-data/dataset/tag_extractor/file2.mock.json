@@ -1,9 +1,0 @@
-[
-  {
-    "tags": {
-      "foo": ["foo", "bar"],
-      "bar": "bar",
-      "fizz": "buzz"
-    }
-  }
-]

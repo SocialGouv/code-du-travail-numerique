@@ -3,7 +3,6 @@ const withSourceMaps = require("@zeit/next-source-maps");
 module.exports = withSourceMaps({
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,
-
   publicRuntimeConfig: {
     API_ADDRESS: "https://api-adresse.data.gouv.fr/search",
     API_SIRET2IDCC_URL:

@@ -5,9 +5,9 @@ import { useRouter } from "next/router";
 import styled from "styled-components";
 import { Container, Section, Table } from "@cdt/ui-old";
 
-import Search from "../../src/search/Search";
-import { PageLayout } from "../../src/layout/PageLayout";
+import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
+import Html from "../../src/common/Html";
 
 function Term({ pageUrl, ogImage }) {
   const router = useRouter();
@@ -15,14 +15,13 @@ function Term({ pageUrl, ogImage }) {
   const [term] = glossary.filter(term => slug === term.slug);
 
   return (
-    <PageLayout>
+    <Layout>
       <Metas
         url={pageUrl}
         title={`${term.title} - Code du travail numérique`}
         description={term.definition}
         image={ogImage}
       />
-      <Search />
       <Section>
         <Container narrow>
           <Title>{term.title}</Title>
@@ -31,7 +30,9 @@ function Term({ pageUrl, ogImage }) {
             <tbody>
               <tr>
                 <th>Définition</th>
-                <td dangerouslySetInnerHTML={{ __html: term.definition }} />
+                <td>
+                  <Html>{term.definition}</Html>
+                </td>
               </tr>
               {term.refs.length > 0 ? (
                 <tr>
@@ -63,7 +64,7 @@ function Term({ pageUrl, ogImage }) {
           </p>
         </Container>
       </Section>
-    </PageLayout>
+    </Layout>
   );
 }
 

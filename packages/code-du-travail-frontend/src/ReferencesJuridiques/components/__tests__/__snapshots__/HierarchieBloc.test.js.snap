@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HierarchieBloc /> should render 1`] = `
-.c9 {
+.c8 {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.c7 {
+.c6 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -17,8 +17,8 @@ exports[`<HierarchieBloc /> should render 1`] = `
   height: 12px;
 }
 
-.c7::after,
-.c7::before {
+.c6::after,
+.c6::before {
   display: block;
   position: absolute;
   top: 50%;
@@ -28,42 +28,46 @@ exports[`<HierarchieBloc /> should render 1`] = `
   content: "";
 }
 
-.c7::before {
+.c6::before {
   left: 4px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-[aria-expanded="true"] .c7::before,
-[aria-selected="true"] .c7::before {
+[aria-expanded="true"] .c6::before,
+[aria-selected="true"] .c6::before {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-.c7::after {
+.c6::after {
   right: 4px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
-[aria-expanded="true"] .c7::after,
-[aria-selected="true"] .c7::after {
+[aria-expanded="true"] .c6::after,
+[aria-selected="true"] .c6::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.c7::before,
-.c7::after {
+.c6::before,
+.c6::after {
   -webkit-transition: -webkit-transform 0.25s ease,-webkit-transform 0.25s ease;
   -webkit-transition: transform 0.25s ease,-webkit-transform 0.25s ease;
   transition: transform 0.25s ease,-webkit-transform 0.25s ease;
 }
 
-.c5 {
+.c3 + .c2 {
+  border-top: 1px solid #c9d3df;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,47 +83,32 @@ exports[`<HierarchieBloc /> should render 1`] = `
   cursor: pointer;
 }
 
-.c5:hover,
-.c5:focus,
-.c5:focus-within,
-.c5[aria-expanded="true"] {
+.c4:hover,
+.c4:focus,
+.c4:focus-within,
+.c4[aria-expanded="true"] {
   color: #006ab2;
 }
 
-.c3 {
-  background-color: #f9f9fc;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  overflow: hidden;
-}
-
-.c3 + .c2 {
-  border-top: 1px solid #c9d3df;
-}
-
-.c3 .c4 {
-  padding-right: 1rem;
-}
-
-.c8 {
+.c7 {
   padding: 1rem;
   -webkit-animation: bcCCNc 0.35s ease-in;
   animation: bcCCNc 0.35s ease-in;
 }
 
-.c8 > *:first-child {
+.c7 > *:first-child {
   margin-top: 0;
 }
 
-.c8 > *:last-child {
+.c7 > *:last-child {
   margin-bottom: 0;
 }
 
-.c8.accordion__body--hidden {
+.c7.accordion__body--hidden {
   display: none;
 }
 
-.c13 {
+.c12 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -141,13 +130,13 @@ exports[`<HierarchieBloc /> should render 1`] = `
   border-bottom-color: #0053b3;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):focus {
+.c12:not([disabled]):hover,
+.c12:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c13:not([disabled]):active {
+.c12:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -155,7 +144,7 @@ exports[`<HierarchieBloc /> should render 1`] = `
   outline: none;
 }
 
-.c13[aria-pressed="true"] {
+.c12[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -164,21 +153,21 @@ exports[`<HierarchieBloc /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c13[aria-pressed="true"]:not([disabled]):hover,
-.c13[aria-pressed="true"]:not([disabled]):focus {
+.c12[aria-pressed="true"]:not([disabled]):hover,
+.c12[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c13[aria-pressed="true"]:not([disabled]):active {
+.c12[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c13[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c10 {
+.c9 {
   display: block;
   margin-top: 1rem;
   padding: 1rem;
@@ -188,7 +177,7 @@ exports[`<HierarchieBloc /> should render 1`] = `
   cursor: pointer;
 }
 
-.c11 {
+.c10 {
   position: relative;
   top: 1px;
   vertical-align: middle;
@@ -207,12 +196,12 @@ exports[`<HierarchieBloc /> should render 1`] = `
   margin-bottom: 1rem;
 }
 
-.c12 {
+.c11 {
   margin-bottom: 1.25rem;
   text-align: center;
 }
 
-.c6 {
+.c5 {
   display: inline-block;
   padding: 1rem;
 }
@@ -242,19 +231,19 @@ exports[`<HierarchieBloc /> should render 1`] = `
             aria-controls="accordion__panel-0"
             aria-disabled="false"
             aria-expanded="false"
-            class="c4 c5"
+            class="c4"
             data-accordion-component="AccordionItemButton"
             id="accordion__heading-0"
             role="button"
             tabindex="0"
           >
             <span
-              class="c6"
+              class="c5"
             >
               Voir les articles du code du travail concernés
             </span>
             <div
-              class="c7"
+              class="c6"
               role="presentation"
             />
           </div>
@@ -262,23 +251,23 @@ exports[`<HierarchieBloc /> should render 1`] = `
         <div
           aria-hidden="true"
           aria-labelledby="accordion__heading-0"
-          class="c8"
+          class="c7"
           data-accordion-component="AccordionItemPanel"
           hidden=""
           id="accordion__panel-0"
         >
           <ul
-            class="c9"
+            class="c8"
           >
             <li
               class=""
             >
               <a
-                class="c10"
+                class="c9"
                 href="/code-du-travail/l1244-3"
               >
                 <svg
-                  class="c11"
+                  class="c10"
                   viewBox="0 0 512 512"
                   width="18"
                 >
@@ -301,11 +290,11 @@ exports[`<HierarchieBloc /> should render 1`] = `
               class=""
             >
               <a
-                class="c10"
+                class="c9"
                 href="/code-du-travail/l1244-4"
               >
                 <svg
-                  class="c11"
+                  class="c10"
                   viewBox="0 0 512 512"
                   width="18"
                 >
@@ -332,11 +321,11 @@ exports[`<HierarchieBloc /> should render 1`] = `
       Pour ces articles, si les accords négociés et étendus dans votre branche prévoient des mesures plus favorables que le Code du travail, alors ces mesures s'appliquent. Votre entreprise ne peut pas conclure d'accord sur ces thèmes.
     </p>
     <div
-      class="c12"
+      class="c11"
     >
       <button
         aria-pressed="false"
-        class="c13"
+        class="c12"
       >
         Trouvez votre convention collective
       </button>

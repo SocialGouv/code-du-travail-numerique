@@ -9,10 +9,9 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Article from "../common/Article";
 import Disclaimer from "../common/Disclaimer";
-import { Feedback } from "../common/Feedback";
 import Html from "../common/Html";
+import { Feedback } from "../common/Feedback";
 import { ThemeBreadcrumbs } from "../common/ThemeBreadcrumbs";
-import Search from "../search/Search";
 
 const glossaryBySlug = glossary.reduce(
   (state, item) => ({ ...state, [item.slug]: item }),
@@ -75,7 +74,7 @@ function Answer({
 
         patterns.forEach(pattern => {
           node.innerHTML = node.innerHTML.replace(pattern, function(match) {
-            if (new RegExp("^[^\\w${frDiacritics}]").test(match)) {
+            if (new RegExp(`^[^\\w${frDiacritics}]`).test(match)) {
               // Since match string can start with a space, we trim it and insert the space before the tooltip markup
               return `${match.slice(0, 1)}<span data-tooltip-slug="${
                 item.slug
@@ -107,11 +106,10 @@ function Answer({
     return function cleanEffect() {};
   }, [children, html]);
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>{title}</title>
       </Head>
-      <Search />
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       {!html && !children && <BigError>{emptyMessage}</BigError>}
@@ -127,7 +125,7 @@ function Answer({
           {html && <Html>{html}</Html>}
           {children}
           {portalComponents}
-          <Footer>{footer}</Footer>
+          {footer && <Footer>{footer}</Footer>}
         </Article>
       )}
       {additionalContent}
@@ -139,7 +137,7 @@ function Answer({
         title={title}
       />
       <Disclaimer />
-    </React.Fragment>
+    </>
   );
 }
 
@@ -154,10 +152,7 @@ const Portal = ({ node, children }) => {
 const DefinitonTerm = ({ term, definition }) => {
   return (
     <>
-      <StyledTooltip
-        label={<div dangerouslySetInnerHTML={{ __html: definition }} />}
-        aria-label={definition}
-      >
+      <StyledTooltip label={<Html>{definition}</Html>} aria-label={definition}>
         <Underline tabIndex="0">{term}</Underline>
       </StyledTooltip>
     </>
@@ -173,7 +168,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const BacklinkContainer = styled(Container)`
-  margin-top: ${spacing.base};
+  padding-top: ${spacing.base};
 `;
 
 const IntroWrapper = styled(Wrapper)`

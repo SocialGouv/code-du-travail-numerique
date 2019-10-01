@@ -83,6 +83,14 @@ function getSearchBody({ query, size, excludeSources = [] }) {
           {
             match: {
               source: {
+                query: "contributions",
+                boost: 1.2
+              }
+            }
+          },
+          {
+            match: {
+              source: {
                 query: "outils",
                 boost: 1.1
               }

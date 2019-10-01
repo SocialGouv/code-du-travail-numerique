@@ -25,6 +25,6 @@ def add_search(app, nlp, stops_path):
         ss = nlp.get('search', check_ready=True)
 
         # maybe add a default to get (risky because of no exclude sources)
-        query = request.args.get('q')
+        query = request.args.get('q', default="")
         results = ss.predict_slugs(query)  # return a vector directly
         return jsonify(results)

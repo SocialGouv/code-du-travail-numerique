@@ -7,6 +7,7 @@ RUN apk add --no-cache --update curl=7.64.0-r3
 #
 
 WORKDIR /app
+RUN chown node:node /app
 
 #
 
@@ -45,3 +46,5 @@ COPY ./lerna.json /app/lerna.json
 COPY ./packages /app/packages
 
 RUN yarn build
+
+USER node

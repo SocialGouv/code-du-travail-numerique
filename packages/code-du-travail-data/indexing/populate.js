@@ -1,11 +1,10 @@
-import striptags from "striptags";
 import crypto from "crypto";
 import { selectAll } from "unist-util-select";
 import find from "unist-util-find";
-import { SOURCES } from "@cdt/sources";
 
 import { logger } from "./logger";
 import slugify from "../slugify";
+import { SOURCES } from "@cdt/sources";
 
 function flattenTags(tags = []) {
   return Object.entries(tags).reduce((state, [key, value]) => {
@@ -194,43 +193,15 @@ function* cdtnDocumentsGen() {
     })
   );
 
-  logger.info("=== Faq ===");
-  yield require("../dataset/faq.json").map(
-    ({ question, reponse, date, tags, source }) => {
-      const faqText = striptags(reponse);
-      const flatTags = flattenTags(tags);
-      const slug = makeSlug(question, flatTags.join("-"));
+  logger.info("=== Contributions ===");
+  yield require("../dataset/contributions/contributions.data.json").map(
+    ({ value, answers }) => {
       return {
-        source: SOURCES.FAQ,
-        title: question,
-        slug,
-        text: faqText,
-        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-        html: reponse,
-        tags: flatTags,
-        date,
-        author: source ? source : "DIRRECTE"
-      };
-    }
-  );
-
-  logger.info("=== Faq contributions ===");
-  yield require("../dataset/faq-contributions.json").map(
-    ({ question, reponse, date_redaction, date_expiration, tags }) => {
-      const faqText = striptags(reponse);
-      const flatTags = flattenTags(tags);
-      const slug = makeSlug(question, flatTags.join("-"));
-      return {
-        source: SOURCES.FAQ,
-        title: question,
-        slug,
-        text: faqText,
-        description: faqText.slice(0, faqText.indexOf(" ", 150)) + "…",
-        html: reponse,
-        tags: flatTags,
-        date: date_redaction,
-        date_expiration: date_expiration,
-        author: "DIRRECTE"
+        source: SOURCES.CONTRIBUTIONS,
+        title: value,
+        slug: slugify(value),
+        text: (answers.general && answers.general.value) || value,
+        answers
       };
     }
   );

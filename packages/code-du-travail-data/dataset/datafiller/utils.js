@@ -42,7 +42,6 @@ const decodeHTML = text =>
   text.replace(/&([^;]+);/gm, (match, entity) => entities[entity] || match);
 
 const sourcesPriority = [
-  SOURCES.FAQ,
   SOURCES.SHEET_SP,
   SOURCES.SHEET_MT,
   SOURCES.EXTERNAL,

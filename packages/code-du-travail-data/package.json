@@ -28,7 +28,6 @@
     "@socialgouv/kali-data": "1.2.6",
     "@socialgouv/legi-data": "^1.1.1",
     "esm": "^3.2.25",
-    "striptags": "^3.1.1",
     "unist-util-find": "^1.0.1",
     "unist-util-select": "^2.0.2",
     "winston": "^3.2.1"
@@ -40,7 +39,7 @@
     "@zeit/ncc": "^0.20.5",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "eslint": "^6.4.0",
+    "eslint": "^6.5.1",
     "jest": "^24.9.0"
   },
   "jest": {
