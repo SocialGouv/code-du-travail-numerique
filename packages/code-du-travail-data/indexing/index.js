@@ -5,7 +5,12 @@ import { documentMapping } from "./document.mapping";
 import { annuaireMapping } from "./annuaire.mapping";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { themesMapping } from "./themes.mapping";
-import { version, createIndex, indexDocumentsBatched } from "./es_client.utils";
+import {
+  version,
+  createIndex,
+  indexDocumentsBatched,
+  getIndicesToDelete
+} from "./es_client.utils";
 import { cdtnCcnGen } from "./populate";
 
 import conventionList from "@socialgouv/kali-data/data/index.json";
@@ -111,38 +116,19 @@ async function main() {
     name: CDTN_INDEX_NAME
   });
 
-  const currentIndices = [
-    `${CDTN_INDEX_NAME}-${ts}`,
-    `${THEMES_INDEX_NAME}-${ts}`,
-    `${CDTN_CCN_NAME}-${ts}`,
-    `${ANNUAIRE_INDEX_NAME}-${ts}`
-  ];
-
-  function isCdtnIndex({ index }) {
-    const patterns = [
-      CDTN_INDEX_NAME,
-      THEMES_INDEX_NAME,
-      CDTN_CCN_NAME,
-      ANNUAIRE_INDEX_NAME
-    ];
-    return patterns.some(pattern => index.startsWith(`${pattern}-`));
-  }
-
   const { body: indices } = await client.cat.indices({ format: "json" });
 
-  const pIndicesToDelete = indices
-    .filter(({ index }) => !currentIndices.includes(index))
-    .filter(isCdtnIndex)
-    .sort(({ index: indexA }, { index: indexB }) => {
-      const [, typeA = "", tsA = 0] = indexA.match(/(\w+)-(\d+)/);
-      const [, typeB = "", tsB = 0] = indexB.match(/(\w+)-(\d+)/);
-      if (typeA === typeB) {
-        return parseInt(tsA) - parseInt(tsB);
-      }
-      return typeA - typeB;
-    })
-    .slice(0, -1) // on garde le plus recent au cas ou
-    .map(({ index }) => client.indices.delete({ index }));
+  const patterns = [
+    CDTN_INDEX_NAME,
+    THEMES_INDEX_NAME,
+    CDTN_CCN_NAME,
+    ANNUAIRE_INDEX_NAME
+  ];
+
+  const IndicesToDelete = getIndicesToDelete(patterns, ts, indices);
+  const pIndicesToDelete = IndicesToDelete.map(({ index }) =>
+    client.indices.delete({ index })
+  );
 
   return Promise.all(pIndicesToDelete).then(() => {
     logger.info(`Remove ${pIndicesToDelete.length} old indices`);

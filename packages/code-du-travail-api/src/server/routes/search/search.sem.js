@@ -1,4 +1,7 @@
 function getSemQuery({ query_vector, size, sources = [] }) {
+  if (sources.lenght === 0) {
+    throw new Error("[getSemQuery] sources should not be empty");
+  }
   return {
     size: size,
     _source: ["title", "source", "slug", "anchor", "url"],
