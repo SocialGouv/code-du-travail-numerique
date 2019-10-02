@@ -1,3 +1,4 @@
+import fetch from "isomorphic-unfetch";
 import {
   searchEntrepriseBySiret,
   searchEntrepriseByName,
@@ -10,23 +11,22 @@ import {
   siretIdccPayload
 } from "./api.entretrise.mock";
 
-import fetch from "isomorphic-unfetch";
 import { fetchResponse } from "../../../test/mockFetch";
 
 jest.mock("isomorphic-unfetch");
 
 fetch.mockImplementation(url => {
+  let results;
   if (url.startsWith(`${API_ENTREPRISE}/full_text`)) {
-    return Promise.resolve(fetchResponse(fulltextPayload));
+    results = fulltextPayload;
   } else if (url.startsWith(`${API_ENTREPRISE}/siret`)) {
-    return Promise.resolve(fetchResponse(siretPayload));
+    results = siretPayload;
   } else if (url.startsWith(`${SIRET2IDCC_URL}/80258570300027`)) {
-    return Promise.resolve(fetchResponse(siretIdccPayload));
+    results = siretIdccPayload;
   } else if (url.startsWith(`${SIRET2IDCC_URL}/80258570300035`)) {
-    return Promise.resolve(fetchResponse([]));
-  } else {
-    Promise.resolve(fetchResponse());
+    results = [];
   }
+  return Promise.resolve(fetchResponse(results));
 });
 
 describe("api entreprise", () => {

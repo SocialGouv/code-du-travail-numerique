@@ -1,50 +1,48 @@
+import fetch from "isomorphic-unfetch";
 import { fetchSearchResults, fetchSuggestResults } from "../search.service";
 
-jest.useFakeTimers();
+import { fetchResponse } from "../../../test/mockFetch";
 
-const results = {
-  foo: "bar"
-};
-global.fetch = jest.fn().mockResolvedValue({
-  ok: true,
-  json: () => Promise.resolve(results)
-});
+jest.mock("isomorphic-unfetch");
 
+const results = ["test", "doesn't matter"];
 const query = "foo";
+
+fetch.mockImplementation(() => {
+  return Promise.resolve(fetchResponse(results));
+});
 
 describe("suggest service", () => {
   it("should not make a request until debounce time is ellapsed", () => {
     fetchSuggestResults("bar");
     expect(fetch).not.toHaveBeenCalled();
   });
-  it("should make a request unless debounce time is ellapsed", () => {
-    fetchSuggestResults(query);
-    jest.runAllTimers();
+  it("should make a request unless debounce time is ellapsed", async () => {
+    const fetchResults = await fetchSuggestResults(query);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
-    expect(results).toMatchSnapshot();
+    expect(fetchResults).toEqual(results);
   });
-  it("should make a request once", () => {
-    fetchSuggestResults(query);
-    fetchSuggestResults(query);
-    jest.runAllTimers();
+  it("should make a request once", async () => {
+    await fetchSuggestResults(query);
+    const fetchResults = await fetchSuggestResults(query);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch("suggest.url/suggest?q=foo");
-    expect(results).toMatchSnapshot();
+    expect(fetchResults).toEqual(results);
   });
 });
 describe("search service", () => {
   beforeEach(() => {
     fetch.mockClear();
   });
-  it("should make a request once", () => {
+  it("should make a request once", async () => {
     fetchSearchResults(query);
-    fetchSearchResults(query);
+    const fetchResults = await fetchSearchResults(query);
 
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch.mock.calls[0][0]).toMatch(
       /api\.url\/search\?q=foo&excludeSources=$/
     );
-    expect(results).toMatchSnapshot();
+    expect(fetchResults).toEqual(results);
   });
 });
