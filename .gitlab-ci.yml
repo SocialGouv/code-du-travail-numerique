@@ -6,6 +6,7 @@ include:
 - /.gitlab-ci/stages/prepare.yml
 - /.gitlab-ci/stages/quality.yml
 - /.gitlab-ci/stages/register.yml
+- /.gitlab-ci/stages/data.yml
 - /.gitlab-ci/stages/deploy.yml
 - /.gitlab-ci/stages/notify.yml
 
@@ -13,5 +14,6 @@ stages:
 - "Prepare"
 - "Code Quality"
 - "Registration"
+- "Data"
 - "Deploy"
 - "Notify Finished Deployment"

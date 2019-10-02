@@ -1,6 +1,6 @@
 # API NLP
 
-Cette api en python est appellée par frontend afin de proposer des suggestion de recherche en fonction de la requete de l'utilisateur.
+Cette api en python est appellée par frontend afin de proposer des suggestion de recherche en fonction de la requete de l'utilisateur. L'api est aussi utilisé pour transformer une requete en vecteur pour la recherche sémantique.
 
 ## Pré-requis
 
@@ -8,20 +8,15 @@ Vous devez avoir python 3.7 installé en local sur votre machine
 
 ## Données utilisée
 
-L'api de suggestion utilise des données pour faire des suggestions
-Ces données sont montées sur un volume docker. Lors du premier lancement ou pour mettre à jour
-le jeu de donnée, vous pouvez modifier la variable d'environnement `SUGGEST_DATA_URL` et
-lancer le script `scripts download-nlp-data.sh` pour récupérer d'autres données.
-`SUGGEST_DATA_URL` contient l'url d'un gist qui liste plusieurs gist de données,
-ceux-ci sont ensuite ré-assemblé dans un seul fichier.
-Les données sont stockéss sur plusieurs gist car les documents sont volumineux.
-Pour exemple, l'url
-
+Les données de suggestions sont hébergés sur des plusieurs gist.
+Le point d'entrés est un gist qui référence les gist du dataset.
 Pour spliter un fichier texte en plusieur fichier.
-
 ```sh
 split -l 300000 data_raw.txt data-part.
 ```
+
+Vous pouvez modifier l'url des données au moment du build de l'image en définissant l'argument
+`--build-arg SUGGEST_DATA_URL=http//gist.url`.
 
 ## Installation en local
 
@@ -34,7 +29,7 @@ pip install -r requirements.txt
 ## Démarer l'api python
 
 L'api utise Flask et tourne sur le port 5000.
-:bulb: voir [Data](#Data) pour l'ajout des données
+:bulb: voir [Data](#Data) pour l'ajout des données. 
 
 ```sh
 . venv/bin/activate
@@ -48,6 +43,12 @@ deactivate
 ```
 
 ## Docker
+
+L'image docker NLP contient un dump des documents ainsi que leur vecteur associé.
+Un premier fichier de dump (provenant de l'image monorepo) et copié dans l'image.
+L'image continer un deuxieme fichier de dump où les documents (sauf les articles du code du travail) sont enrichis d'un vecteur qui servira pour la recherche sémantique.  
+Ce travail est réalisé par le script `scripts/dump.py`. Il est possible de spécifier le chemin du fichier source via la variable d'environement `DUMP_PATH`
+Ce dump est par la suite utilisé par le container [DATA](../code_du_travail_nlp/README.md) pour réaliser l'indexation.
 
 Pour cela, il faut d'abord une image du monorepo.
 
@@ -86,6 +87,3 @@ Copier la configuration `docker-compose.override.dev.yml dans le docker-compose.
 ```sh
 $ docker-compose up elasticsearch nlp_api
 ```
-
-
-Le script pour télécharger les données est exéctuté avant de lancer le container nlp

@@ -19,17 +19,16 @@ const Convention = ({ num, title, onClick }) => {
         {onClick ? (
           <ConventionLink onClick={onClick}>{title}</ConventionLink>
         ) : (
-          <ConventionLink
-            as={Link}
-            target={`_blank`}
-            rel="noopener noreferrer"
-            href={`/conventions-collectives/${getConventionSlug({
+          <Link
+            href="/convention-collective/[slug]"
+            as={`/convention-collective/${getConventionSlug({
               num,
               title
             })}`}
+            passHref
           >
-            {title}
-          </ConventionLink>
+            <ConventionLink>{title}</ConventionLink>
+          </Link>
         )}
       </Flex>
     </Box>

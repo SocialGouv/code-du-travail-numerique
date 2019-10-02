@@ -68,7 +68,7 @@ if (process.env.NODE_ENV !== "production") {
     ctx.body = [];
   });
   nlpRoutes.get("/api/search", async ctx => {
-    ctx.body = { hits: { hits: [] } };
+    ctx.body = [];
   });
   app.use(nlpRoutes.routes());
 }

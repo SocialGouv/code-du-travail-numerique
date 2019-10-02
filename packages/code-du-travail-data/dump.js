@@ -3,19 +3,9 @@ import { logger } from "./indexing/logger";
 
 logger.silent = true;
 
-let slugs = [];
-
-for (const documents of cdtnDocumentsGen()) {
-  slugs = slugs.concat(
-    documents.map(({ source, slug, title, text }) => ({
-      title,
-      text,
-      slug: `${source}/${slug}`
-    }))
-  );
+let documents = [];
+for (const docs of cdtnDocumentsGen()) {
+  documents = documents.concat(docs);
 }
-
-const json = JSON.stringify(slugs, 0, 2);
-
 //eslint-disable-next-line no-console
-console.log(json);
+console.log(JSON.stringify(documents, 0, 2));

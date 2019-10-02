@@ -26,7 +26,7 @@ spec:
         - -c
         - |
           apk --no-cache --update add curl;
-
+          sleep 10s # delay wait for elastic to be sure elastic had been removed first
           retry=120; # 5s * (12 * 10) = 10min
           while
             ! curl -sS "${ELASTICSEARCH_URL}/_cat/health?h=status" &&

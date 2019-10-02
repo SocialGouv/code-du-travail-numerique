@@ -77,6 +77,19 @@ async function indexDocumentsBatched({
   }
 }
 
+async function deleteOldIndex({ client, patterns, timestamp }) {
+  const { body: indices } = await client.cat.indices({ format: "json" });
+
+  const IndicesToDelete = getIndicesToDelete(patterns, timestamp, indices);
+  const pIndicesToDelete = IndicesToDelete.map(({ index }) =>
+    client.indices.delete({ index })
+  );
+
+  return Promise.all(pIndicesToDelete).then(() => {
+    logger.info(`Remove ${pIndicesToDelete.length} old indices`);
+  });
+}
+
 function* chunks(items, size) {
   for (const val of range(0, items.length, size)) {
     yield items.slice(val, val + size);
@@ -90,11 +103,34 @@ function range(start, end, size = 1) {
   );
 }
 
+function getIndicesToDelete(patterns, timestamp, indices) {
+  function isCdtnIndex({ index }) {
+    return patterns.some(pattern => index.startsWith(`${pattern}-`));
+  }
+
+  const currentIndices = patterns.map(pattern => `${pattern}-${timestamp}`);
+
+  return indices
+    .filter(({ index }) => !currentIndices.includes(index))
+    .filter(isCdtnIndex)
+    .sort(({ index: indexA }, { index: indexB }) => {
+      const [, typeA = "", tsA = 0] = indexA.match(/(\w+)-(\d+)/);
+      const [, typeB = "", tsB = 0] = indexB.match(/(\w+)-(\d+)/);
+      if (tsA === tsB) {
+        return typeA - typeB;
+      }
+      return parseInt(tsA) - parseInt(tsB);
+    })
+    .slice(0, -patterns.length);
+}
+
 export {
   createIndex,
   bulkIndexDocuments,
   version,
   indexDocumentsBatched,
+  deleteOldIndex,
   chunks,
-  range
+  range,
+  getIndicesToDelete
 };

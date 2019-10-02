@@ -5,8 +5,13 @@ import { documentMapping } from "./document.mapping";
 import { annuaireMapping } from "./annuaire.mapping";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { themesMapping } from "./themes.mapping";
-import { version, createIndex, indexDocumentsBatched } from "./es_client.utils";
-import { cdtnDocumentsGen, cdtnCcnGen } from "./populate";
+import {
+  version,
+  createIndex,
+  indexDocumentsBatched,
+  deleteOldIndex
+} from "./es_client.utils";
+import { cdtnCcnGen } from "./populate";
 
 import conventionList from "@socialgouv/kali-data/data/index.json";
 import annuaire from "../dataset/annuaire/annuaire.data.json";
@@ -26,6 +31,9 @@ const THEMES_INDEX_NAME =
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
+
+const DUMP_PATH =
+  process.env.DUMP_PATH || "../../code-du-travail-nlp/data/dump.tf.json";
 
 logger.info(`ElasticSearch at ${ELASTICSEARCH_URL}`);
 
@@ -58,14 +66,13 @@ async function main() {
     indexName: `${CDTN_INDEX_NAME}-${ts}`,
     mappings: documentMapping
   });
-  for (const documents of cdtnDocumentsGen()) {
-    await indexDocumentsBatched({
-      indexName: `${CDTN_INDEX_NAME}-${ts}`,
-      client,
-      documents,
-      size: 1000
-    });
-  }
+
+  const documents = require(DUMP_PATH);
+  await indexDocumentsBatched({
+    indexName: `${CDTN_INDEX_NAME}-${ts}`,
+    client,
+    documents
+  });
 
   // Indexing Annuaire data
   await createIndex({
@@ -76,8 +83,7 @@ async function main() {
   await indexDocumentsBatched({
     client,
     indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
-    documents: annuaire,
-    size: 500
+    documents: annuaire
   });
 
   // Indexing Themes data
@@ -89,9 +95,9 @@ async function main() {
   await indexDocumentsBatched({
     client,
     indexName: `${THEMES_INDEX_NAME}-${ts}`,
-    documents: themes,
-    size: 500
+    documents: themes
   });
+
   // Creating alias
   await client.indices.putAlias({
     index: `${ANNUAIRE_INDEX_NAME}-${ts}`,
@@ -109,11 +115,21 @@ async function main() {
     index: `${CDTN_INDEX_NAME}-${ts}`,
     name: CDTN_INDEX_NAME
   });
+
+  const patterns = [
+    CDTN_INDEX_NAME,
+    THEMES_INDEX_NAME,
+    CDTN_CCN_NAME,
+    ANNUAIRE_INDEX_NAME
+  ];
+  await deleteOldIndex({ client, patterns, timestamp: ts });
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(error);
+main().catch(response => {
+  if (response.body) {
+    logger.error(response.body.error);
+  } else {
+    logger.error(response);
+  }
   process.exit(-1);
-}
+});

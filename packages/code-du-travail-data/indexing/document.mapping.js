@@ -12,6 +12,10 @@ export const documentMapping = {
     url: {
       type: "keyword"
     },
+    title_vector: {
+      type: "dense_vector",
+      dims: 512
+    },
     title: {
       type: "text",
       fields: {

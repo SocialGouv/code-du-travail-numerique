@@ -1,18 +1,20 @@
 const Router = require("koa-router");
 const fetch = require("node-fetch");
+const { SOURCES } = require("@cdt/sources");
 
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const API_BASE_URL = require("../v1.prefix");
 const utils = require("./utils");
-const getSearchBody = require("./search.elastic");
-const getSavedResult = require("./search.getSavedResult");
+const { logger } = require("../../utils/logger");
 
+const getSearchBody = require("./search.elastic");
+const getSemBody = require("./search.sem");
+const getSavedResult = require("./search.getSavedResult");
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 const NLP_URL = process.env.NLP_URL || "http://localhost:5000";
 
 const MAX_RESULTS = 10;
-const MAX_TIMEOUT = 2000;
 const router = new Router({ prefix: API_BASE_URL });
 
 /**
@@ -44,48 +46,39 @@ router.get("/search", async ctx => {
     return;
   }
   // remove console.log when stavble
-  console.log(
-    `querying sem search on: ${NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}`
-  );
+  logger.info(`querying sem search on: ${NLP_URL}/api/search?q=${query}`);
 
   // we filter results to remove snippet document from main results
   const size = Math.min(ctx.request.query.size || MAX_RESULTS, 100);
-  const body = getSearchBody({
-    query,
-    size: size,
-    excludeSources
-  });
 
-  const pTimeout = (promise, timeout) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => reject("max timeout elapsed"), timeout);
-      promise.then(resolve, reject);
-    });
-
-  const esResponse = pTimeout(
-    elasticsearchClient.search({ index, size, body }),
-    MAX_TIMEOUT
-  ).catch(err => {
-    console.error("es", err);
-    return { body: { hits: { hits: [] } } };
-  });
-
-  const semResponse = pTimeout(
-    fetch(
-      `${NLP_URL}/api/search?q=${query}&excludeSources=${excludeSources}&size=${size}`
-    ).then(response => response.json()),
-    MAX_TIMEOUT
-  ).catch(err => {
-    console.error("nlp", err);
-    return { hits: { hits: [] } };
-  });
-
-  const [esResults, semResults] = await Promise.all([esResponse, semResponse]);
-  const results = utils.mergePipe(
-    semResults.hits.hits,
-    esResults.body.hits.hits,
-    MAX_RESULTS
+  const query_vector = await fetch(`${NLP_URL}/api/search?q=${query}`).then(
+    response => (response = response.json())
   );
+
+  const semSources = [
+    SOURCES.SHEET_MT,
+    SOURCES.SHEET_SP,
+    SOURCES.LETTERS,
+    SOURCES.TOOLS,
+    SOURCES.THEMES
+  ];
+  const {
+    body: {
+      responses: [esResponse, semResponse]
+    }
+  } = await elasticsearchClient.msearch({
+    body: [
+      { index },
+      { ...getSearchBody({ query, size, excludeSources }) },
+      { index },
+      { ...getSemBody({ query_vector, size, sources: semSources }) }
+    ]
+  });
+
+  const { hits: { hits: semanticHits } = { hits: [] } } = semResponse;
+  const { hits: { hits: bem25Hits } = { hits: [] } } = esResponse;
+
+  const results = utils.mergePipe(semanticHits, bem25Hits, MAX_RESULTS);
 
   ctx.body = results.slice(0, size);
 });
