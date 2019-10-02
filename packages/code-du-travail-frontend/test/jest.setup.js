@@ -1,11 +1,5 @@
 import "jest-styled-components";
-import {
-  // idccPayload,
-  // convention,
-  // texteDeBase,
-  // textesAttaches,
-  textesSalaires
-} from "../src/conventions/__tests__/api.conventions.mock";
+import { textesSalaires } from "../src/conventions/__tests__/api.conventions.mock";
 
 import { fetchResponse } from "./mockFetch";
 
