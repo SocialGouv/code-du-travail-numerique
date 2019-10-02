@@ -21,7 +21,6 @@
     "diff": "node diff.js",
     "updateTheme": "node updateTheme.js > out.json && mv out.json fiches-sp.json  && yarn report",
     "start": "yarn backup && node index.js > fiches-sp.json",
-    "report": "node diff.js && node missingTheme.js",
-    "test": "jest"
+    "report": "node diff.js && node missingTheme.js"
   }
 }
