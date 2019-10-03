@@ -14925,10 +14925,21 @@ unified@^7.1.0:
     vfile "^3.0.0"
     x-is-string "^0.1.0"
 
-unified@^8.2.0, unified@^8.4.0:
+unified@^8.2.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/unified/-/unified-8.4.0.tgz#5bb8a05c2a0b9dcc56152312ad8e4578a0d90af7"
   integrity sha512-hQqeCrzqqS3vk8WbvbjYgaxe9WqmZF32Y3lz/kY5A8/5RdJbxoa4yOIAYpSEvqii9n2MTI2OL1+ByoVJYLhlUg==
+  dependencies:
+    bail "^1.0.0"
+    extend "^3.0.0"
+    is-plain-obj "^2.0.0"
+    trough "^1.0.0"
+    vfile "^4.0.0"
+
+unified@^8.4.1:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-8.4.1.tgz#99bd0393f58a139eaa51832cfbcc0e7f6573a1e1"
+  integrity sha512-YPj/uIIZSO7mMIZQj/5Z3hDl4lshWYRQGs5TgUCjHTVdklUWH+O94mK5Cy77SEcmEUwGhnUcudMuH/zIwporqw==
   dependencies:
     bail "^1.0.0"
     extend "^3.0.0"
