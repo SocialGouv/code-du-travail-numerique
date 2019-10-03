@@ -263,6 +263,11 @@ exports[`<About /> should render 1`] = `
   color: #8c94a6;
 }
 
+.c15:active {
+  position: relative;
+  top: 1px;
+}
+
 .c0 {
   background: #fff;
 }

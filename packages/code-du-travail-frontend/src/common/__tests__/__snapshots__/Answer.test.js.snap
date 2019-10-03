@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Answer /> should render 1`] = `
-.c1 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
-.c3 {
+.c5 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -23,34 +23,34 @@ exports[`<Answer /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c3 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c3 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
-.c14 {
+.c17 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c14 > *:first-child {
+.c17 > *:first-child {
   margin-top: 0;
 }
 
-.c14 > *:last-child {
+.c17 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c3 {
   padding: 1.25rem 0;
 }
 
-.c2 {
+.c4 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -58,15 +58,15 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fff;
 }
 
-.c2 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c11 {
+.c12 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -74,15 +74,15 @@ exports[`<Answer /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c11 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c26 {
+.c29 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -104,11 +104,16 @@ exports[`<Answer /> should render 1`] = `
   border: none;
 }
 
-.c26:hover {
+.c29:hover {
   color: #8c94a6;
 }
 
-.c21 {
+.c29:active {
+  position: relative;
+  top: 1px;
+}
+
+.c24 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -130,7 +135,7 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c22 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,7 +156,7 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c23 {
+.c26 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -164,7 +169,7 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c25 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -183,20 +188,12 @@ exports[`<Answer /> should render 1`] = `
   justify-content: center;
 }
 
-.c4 {
+.c6 {
   position: relative;
   margin-bottom: 1.25rem;
 }
 
-.c5 {
-  position: absolute;
-  top: 0.625rem;
-  left: calc(-80px - 1.25rem);
-  width: 80px;
-  color: #4c5467;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -207,28 +204,28 @@ exports[`<Answer /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c7 {
+.c8 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c8 {
+.c9 {
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
 
-.c9 {
+.c10 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c10 {
+.c11 {
   margin-left: -10px;
 }
 
-.c20 {
+.c23 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -236,15 +233,15 @@ exports[`<Answer /> should render 1`] = `
   z-index: 1000;
 }
 
-.c24 {
+.c27 {
   padding: 0 0.25rem;
 }
 
-.c15 {
+.c18 {
   margin-bottom: 1rem;
 }
 
-.c16 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -255,7 +252,7 @@ exports[`<Answer /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c18 {
+.c21 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -278,13 +275,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c18:not([disabled]):hover,
-.c18:not([disabled]):focus {
-  background: #fbfcfd;
+.c21:not([disabled]):hover,
+.c21:not([disabled]):focus {
+  background: #f7f7f7;
   color: #18181c;
 }
 
-.c18:not([disabled]):active {
+.c21:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -292,7 +289,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c18[aria-pressed="true"] {
+.c21[aria-pressed="true"] {
   color: #18181c;
   background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
@@ -301,25 +298,25 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
-.c18[aria-pressed="true"]:not([disabled]):hover,
-.c18[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
+.c21[aria-pressed="true"]:not([disabled]):hover,
+.c21[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
 }
 
-.c18[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
+.c21[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
 }
 
-.c18[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c18 + .c17 {
+.c21 + .c20 {
   margin-left: 1rem;
 }
 
-.c19 {
+.c22 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -342,13 +339,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):focus {
+.c22:not([disabled]):hover,
+.c22:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c19:not([disabled]):active {
+.c22:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -356,7 +353,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c19[aria-pressed="true"] {
+.c22[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -365,29 +362,68 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):hover,
-.c19[aria-pressed="true"]:not([disabled]):focus {
+.c22[aria-pressed="true"]:not([disabled]):hover,
+.c22[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):active {
+.c22[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c19[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c19 + .c17 {
+.c22 + .c20 {
   margin-left: 1rem;
 }
 
-.c12 {
-  margin: 1rem auto;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.c2 {
+  width: 70%;
+}
+
+.c15 {
+  padding: 2rem 0;
+  width: 30%;
+  color: #0053b3;
+}
+
+.c15 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c16 {
+  position: -webkit-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  border-left: 1px solid #0053b3;
+  padding: 0 1rem;
+}
+
+.c16 li {
+  margin: 1rem 0;
 }
 
 .c13 {
+  margin: 1rem auto;
+}
+
+.c14 {
   margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
@@ -395,60 +431,54 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c14 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c2 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c11 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:1200px) {
   .c5 {
-    display: none;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c17 {
+    max-width: 100%;
+    padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c4 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c4 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c12 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -460,136 +490,143 @@ exports[`<Answer /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c15 {
+    display: none;
   }
 }
 
 <div>
   <div
-    class="c0"
-    data-main-content="true"
+    class="c0 c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
+        data-main-content="true"
       >
         <div
           class="c0"
         >
           <div
-            class="c3 c4"
+            class="c4"
           >
             <div
-              class="c5"
+              class="c3"
             >
-              <svg
-                viewBox="0 0 50 50"
+              <div
+                class="c5 c6"
               >
-                <title>
-                  question
-                </title>
-                <g
-                  fill="currentColor"
-                  fill-rule="evenodd"
+                <h1>
+                  Article du code
+                </h1>
+                <div
+                  class="c7"
                 >
-                  <path
-                    d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
-                  />
-                  <path
-                    d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
-                  />
-                  <path
-                    d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
-                  />
-                </g>
-              </svg>
-            </div>
-            <h1>
-              Article du code
-            </h1>
-            <div
-              class="c6"
-            >
-              <span
-                class="c7"
+                  <span
+                    class="c8"
+                  >
+                    social groove
+                  </span>
+                  <span
+                    class="c9"
+                  >
+                    Mis à jour le : 
+                    <span
+                      class="c10"
+                    >
+                      03/11/1979
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="c11"
+                />
+              </div>
+              <div
+                class="c5"
               >
-                social groove
-              </span>
-              <span
-                class="c8"
-              >
-                Mis à jour le : 
-                <span
-                  class="c9"
+                <div
+                  class="c12 c13"
                 >
-                  03/11/1979
-                </span>
-              </span>
-            </div>
-            <div
-              class="c10"
-            />
-          </div>
-          <div
-            class="c3"
-          >
-            <div
-              class="c11 c12"
-            >
-              intro de l'article
-            </div>
-            <div>
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
-            <div
-              class="c13"
-            >
-              pied de page
+                  intro de l'article
+                </div>
+                <div>
+                  <p
+                    class="test-content"
+                  >
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
+                <div
+                  class="c14"
+                >
+                  pied de page
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="c0"
-  >
     <div
-      class="c14"
+      class="c15"
     >
       <div
-        class="c11"
+        class="c16"
+      >
+        <strong>
+          Les articles pouvant vous interesser :
+        </strong>
+        <ul />
+      </div>
+    </div>
+  </div>
+  <div
+    class="c3"
+  >
+    <div
+      class="c17"
+    >
+      <div
+        class="c12"
       >
         <h3
-          class="c15"
+          class="c18"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c16"
+          class="c19"
         >
           <button
             aria-pressed="false"
-            class="c17 c18"
+            class="c20 c21"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c17 c19"
+            class="c20 c22"
           >
             Oui
           </button>
@@ -598,13 +635,13 @@ exports[`<Answer /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c20"
+    class="c23"
   >
     <div
-      class="c21"
+      class="c24"
     >
       <div
-        class="c22"
+        class="c25"
       >
         <svg
           fill="none"
@@ -635,12 +672,12 @@ exports[`<Answer /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c23"
+        class="c26"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c24"
+          class="c27"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -651,12 +688,12 @@ exports[`<Answer /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c25"
+        class="c28"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c26"
+          class="c29"
         >
           <svg
             fill="none"
@@ -710,7 +747,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c9 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -718,11 +755,817 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   max-width: 46.25rem;
 }
 
-.c7 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c7 > *:last-child {
+.c9 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c21 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c21 > *:first-child {
+  margin-top: 0;
+}
+
+.c21 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 1.25rem 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.c8 > *:first-child {
+  margin-top: 0;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c16 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background-color: #ebeff3;
+}
+
+.c16 > *:first-child {
+  margin-top: 0;
+}
+
+.c16 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c33 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+}
+
+.c33:hover {
+  color: #8c94a6;
+}
+
+.c33:active {
+  position: relative;
+  top: 1px;
+}
+
+.c28 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 48px;
+  width: 100%;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  -webkit-animation: iowhYu 0.3s ease-out;
+  animation: iowhYu 0.3s ease-out;
+  border-color: #fee5ad;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c29 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fee5ad;
+}
+
+.c30 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 1rem;
+  color: #434956;
+  text-align: left;
+}
+
+.c32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c10 {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c12 {
+  color: #4c5467;
+  font-weight: 600;
+}
+
+.c13 {
+  margin-left: 1rem;
+  color: #4c5467;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.c14 {
+  color: #4c5467;
+  font-weight: 600;
+}
+
+.c15 {
+  margin-left: -10px;
+}
+
+.c27 {
+  position: fixed;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  z-index: 1000;
+}
+
+.c31 {
+  padding: 0 0.25rem;
+}
+
+.c22 {
+  margin-bottom: 1rem;
+}
+
+.c23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c25 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
+  min-width: 7rem;
+}
+
+.c25:not([disabled]):hover,
+.c25:not([disabled]):focus {
+  background: #f7f7f7;
+  color: #18181c;
+}
+
+.c25:not([disabled]):active {
+  color: #242429;
+  background: #fff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #ebeff3;
+  outline: none;
+}
+
+.c25[aria-pressed="true"] {
+  color: #18181c;
+  background: #fbfcfd;
+  border-width: 2px 1px 1px 1px;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
+}
+
+.c25[aria-pressed="true"]:not([disabled]):hover,
+.c25[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
+}
+
+.c25[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
+}
+
+.c25[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c25 + .c24 {
+  margin-left: 1rem;
+}
+
+.c26 {
+  padding: 0.625rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+  border-bottom-color: #0053b3;
+  min-width: 7rem;
+}
+
+.c26:not([disabled]):hover,
+.c26:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c26:not([disabled]):active {
+  color: #fff;
+  background: #1a85ff;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  outline: none;
+}
+
+.c26[aria-pressed="true"] {
+  color: #fff;
+  background: #07f;
+  border-width: 2px 1px 1px 1px;
+  border-color: #006be6;
+  border-top-color: #0053b3;
+  box-shadow: inset 0 1px 2px 0 #0053b3;
+}
+
+.c26[aria-pressed="true"]:not([disabled]):hover,
+.c26[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #006be6;
+}
+
+.c26[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #0053b3;
+}
+
+.c26[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c26 + .c24 {
+  margin-left: 1rem;
+}
+
+.c0 {
+  background: #e5f1fe;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+}
+
+.c4:first-child {
+  padding-left: 0;
+}
+
+.c5 {
+  display: inline-block;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.c7 {
+  width: 70%;
+}
+
+.c19 {
+  padding: 2rem 0;
+  width: 30%;
+  color: #0053b3;
+}
+
+.c19 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c20 {
+  position: -webkit-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  border-left: 1px solid #0053b3;
+  padding: 0 1rem;
+}
+
+.c20 li {
+  margin: 1rem 0;
+}
+
+.c17 {
+  margin: 1rem auto;
+}
+
+.c18 {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  background-color: #f9f9fc;
+  border-radius: 0.25rem;
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c9 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c21 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c8 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c16 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c16 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:600px) {
+  .c13 {
+    margin-left: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c19 {
+    display: none;
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <ul
+          class="c3"
+        >
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes"
+              title="Voir le theme Thèmes"
+            >
+              Thèmes
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes/tag-1"
+              title="Voir le theme tag1"
+            >
+              tag1
+            </a>
+          </li>
+          <li
+            aria-hidden="true"
+            class="c5"
+          >
+             » 
+          </li>
+          <li
+            class="c4"
+          >
+            <a
+              href="/themes/tag-2"
+              title="Voir le theme tag2"
+            >
+              tag2
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="c2 c6"
+  >
+    <div
+      class="c7"
+    >
+      <div
+        class="c1"
+        data-main-content="true"
+      >
+        <div
+          class="c2"
+        >
+          <div
+            class="c8"
+          >
+            <div
+              class="c1"
+            >
+              <div
+                class="c9 c10"
+              >
+                <h1>
+                  Article du code
+                </h1>
+                <div
+                  class="c11"
+                >
+                  <span
+                    class="c12"
+                  >
+                    social groove
+                  </span>
+                  <span
+                    class="c13"
+                  >
+                    Mis à jour le : 
+                    <span
+                      class="c14"
+                    >
+                      03/11/1979
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="c15"
+                />
+              </div>
+              <div
+                class="c9"
+              >
+                <div
+                  class="c16 c17"
+                >
+                  intro de l'article
+                </div>
+                <div>
+                  <p
+                    class="test-content"
+                  >
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
+                <div
+                  class="c18"
+                >
+                  pied de page
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c19"
+    >
+      <div
+        class="c20"
+      >
+        <strong>
+          Les articles pouvant vous interesser :
+        </strong>
+        <ul />
+      </div>
+    </div>
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c21"
+    >
+      <div
+        class="c16"
+      >
+        <h3
+          class="c22"
+        >
+          Avez-vous trouvé la réponse à votre question ?
+        </h3>
+        <p
+          class="c23"
+        >
+          <button
+            aria-pressed="false"
+            class="c24 c25"
+          >
+            Non
+          </button>
+          <button
+            aria-pressed="false"
+            class="c24 c26"
+          >
+            Oui
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c27"
+  >
+    <div
+      class="c28"
+    >
+      <div
+        class="c29"
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="9"
+            y2="13"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="17"
+            y2="17"
+          />
+        </svg>
+      </div>
+      <div
+        class="c30"
+        role="alert"
+      >
+        Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
+        <a
+          class="c31"
+          href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
+          rel="noopener noreferrer"
+          target="_blank"
+          title="consulter l'ordonance"
+        >
+          L’ouverture officielle du site
+        </a>
+        est prévue pour 2020.
+      </div>
+      <div
+        class="c32"
+      >
+        <button
+          aria-label="Fermer"
+          aria-pressed="false"
+          class="c33"
+        >
+          <svg
+            fill="none"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="18"
+              x2="6"
+              y1="6"
+              y2="18"
+            />
+            <line
+              x1="6"
+              x2="18"
+              y1="6"
+              y2="18"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Answer /> should render tooltip 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -741,11 +1584,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
+.c3 {
   padding: 1.25rem 0;
 }
 
-.c6 {
+.c4 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -753,15 +1596,15 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #fff;
 }
 
-.c6 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c6 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c12 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -769,11 +1612,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #ebeff3;
 }
 
-.c15 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c15 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -801,6 +1644,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c30:hover {
   color: #8c94a6;
+}
+
+.c30:active {
+  position: relative;
+  top: 1px;
 }
 
 .c25 {
@@ -878,20 +1726,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: center;
 }
 
-.c8 {
+.c6 {
   position: relative;
   margin-bottom: 1.25rem;
 }
 
-.c9 {
-  position: absolute;
-  top: 0.625rem;
-  left: calc(-80px - 1.25rem);
-  width: 80px;
-  color: #4c5467;
-}
-
-.c10 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -902,24 +1742,24 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   align-items: flex-end;
 }
 
-.c11 {
+.c8 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c12 {
+.c9 {
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
 
-.c13 {
+.c10 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c14 {
+.c11 {
   margin-left: -10px;
 }
 
@@ -975,7 +1815,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c22:not([disabled]):hover,
 .c22:not([disabled]):focus {
-  background: #fbfcfd;
+  background: #f7f7f7;
   color: #18181c;
 }
 
@@ -998,11 +1838,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c22[aria-pressed="true"]:not([disabled]):hover,
 .c22[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
+  background-color: #eaeaea;
 }
 
 .c22[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
+  border-top-color: #d1d1d1;
 }
 
 .c22[disabled] {
@@ -1078,48 +1918,69 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-left: 1rem;
 }
 
-.c0 {
-  background: #e5f1fe;
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
-.c4 {
-  display: inline-block;
-  padding: 0.625rem 1.25rem;
-}
-
-.c4:first-child {
-  padding-left: 0;
-}
-
-.c5 {
-  display: inline-block;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.c2 {
+  width: 70%;
 }
 
 .c16 {
-  margin: 1rem auto;
+  padding: 2rem 0;
+  width: 30%;
+  color: #0053b3;
+}
+
+.c16 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c17 {
+  position: -webkit-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  border-left: 1px solid #0053b3;
+  padding: 0 1rem;
+}
+
+.c17 li {
+  margin: 1rem 0;
+}
+
+.c13 {
+  margin: 1rem auto;
+}
+
+.c15 {
   margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
   border-radius: 0.25rem;
 }
 
+.c14 {
+  border-bottom: 1px dotted #006be6;
+}
+
 @media print {
-  .c2 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c7 {
+  .c5 {
     max-width: 100%;
     padding: 0;
   }
@@ -1133,39 +1994,33 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c4 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c6 {
+  .c4 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (max-width:600px) {
-  .c15 {
+  .c12 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c15 {
+  .c12 {
     border: none;
     padding: 0 5pt;
   }
 }
 
-@media (max-width:1200px) {
-  .c9 {
-    display: none;
-  }
-}
-
 @media (max-width:600px) {
-  .c10 {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -1177,176 +2032,167 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 @media (max-width:600px) {
-  .c12 {
+  .c9 {
     margin-left: 0;
   }
 }
 
+@media (max-width:980px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c16 {
+    display: none;
+  }
+}
+
 <div>
-  <nav
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <ul
-          class="c3"
-        >
-          <li
-            class="c4"
-          >
-            <a
-              href="/themes"
-              title="Voir le theme Thèmes"
-            >
-              Thèmes
-            </a>
-          </li>
-          <li
-            aria-hidden="true"
-            class="c5"
-          >
-             » 
-          </li>
-          <li
-            class="c4"
-          >
-            <a
-              href="/themes/tag-1"
-              title="Voir le theme tag1"
-            >
-              tag1
-            </a>
-          </li>
-          <li
-            aria-hidden="true"
-            class="c5"
-          >
-             » 
-          </li>
-          <li
-            class="c4"
-          >
-            <a
-              href="/themes/tag-2"
-              title="Voir le theme tag2"
-            >
-              tag2
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <div
-    class="c1"
-    data-main-content="true"
+    class="c0 c1"
   >
     <div
       class="c2"
     >
       <div
-        class="c6"
+        class="c3"
+        data-main-content="true"
       >
         <div
-          class="c1"
+          class="c0"
         >
           <div
-            class="c7 c8"
+            class="c4"
           >
             <div
-              class="c9"
+              class="c3"
             >
-              <svg
-                viewBox="0 0 50 50"
+              <div
+                class="c5 c6"
               >
-                <title>
-                  question
-                </title>
-                <g
-                  fill="currentColor"
-                  fill-rule="evenodd"
+                <h1>
+                  Article du code
+                </h1>
+                <div
+                  class="c7"
                 >
-                  <path
-                    d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
-                  />
-                  <path
-                    d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
-                  />
-                  <path
-                    d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
-                  />
-                </g>
-              </svg>
-            </div>
-            <h1>
-              Article du code
-            </h1>
-            <div
-              class="c10"
-            >
-              <span
-                class="c11"
+                  <span
+                    class="c8"
+                  >
+                    social groove
+                  </span>
+                  <span
+                    class="c9"
+                  >
+                    Mis à jour le : 
+                    <span
+                      class="c10"
+                    >
+                      03/11/1979
+                    </span>
+                  </span>
+                </div>
+                <div
+                  class="c11"
+                />
+              </div>
+              <div
+                class="c5"
               >
-                social groove
-              </span>
-              <span
-                class="c12"
-              >
-                Mis à jour le : 
-                <span
-                  class="c13"
+                <div
+                  class="c12 c13"
                 >
-                  03/11/1979
-                </span>
-              </span>
-            </div>
-            <div
-              class="c14"
-            />
-          </div>
-          <div
-            class="c7"
-          >
-            <div
-              class="c15 c16"
-            >
-              intro de l'article
-            </div>
-            <div>
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
-            <div
-              class="c17"
-            >
-              pied de page
+                  intro de l'article
+                </div>
+                <div>
+                  <p
+                    class="test-content"
+                  >
+                    Contenu au format 
+                    <strong>
+                      html
+                    </strong>
+                     contenant des tooltip sur certains mot comme 
+                    <span
+                      data-tooltip-slug="rescrit"
+                      data-tooltip-term="rescrit"
+                    >
+                      <span
+                        aria-describedby="tooltip:1"
+                        class="c14"
+                        data-reach-tooltip-trigger=""
+                        tabindex="0"
+                      >
+                        rescrit
+                      </span>
+                    </span>
+                    . match aussi les abbréviation comme 
+                    <span
+                      data-tooltip-slug="activite-principale-exercee"
+                      data-tooltip-term="APE"
+                    >
+                      <span
+                        aria-describedby="tooltip:2"
+                        class="c14"
+                        data-reach-tooltip-trigger=""
+                        tabindex="0"
+                      >
+                        APE
+                      </span>
+                    </span>
+                     mais pas ape ou ses variantes comme 
+                    <span
+                      data-tooltip-slug="activite-principale-exercee"
+                      data-tooltip-term="code ape"
+                    >
+                      <span
+                        aria-describedby="tooltip:3"
+                        class="c14"
+                        data-reach-tooltip-trigger=""
+                        tabindex="0"
+                      >
+                        code ape
+                      </span>
+                    </span>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
+                <div
+                  class="c15"
+                >
+                  pied de page
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div
+      class="c16"
+    >
+      <div
+        class="c17"
+      >
+        <strong>
+          Les articles pouvant vous interesser :
+        </strong>
+        <ul />
+      </div>
+    </div>
   </div>
   <div
-    class="c1"
+    class="c3"
   >
     <div
       class="c18"
     >
       <div
-        class="c15"
+        class="c12"
       >
         <h3
           class="c19"
@@ -1464,757 +2310,22 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 </div>
 `;
 
-exports[`<Answer /> should render tooltip 1`] = `
-.c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c3 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c3 > *:first-child {
-  margin-top: 0;
-}
-
-.c3 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c15 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c15 > *:first-child {
-  margin-top: 0;
-}
-
-.c15 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c0 {
-  padding: 1.25rem 0;
-}
-
-.c2 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #fff;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c11 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-}
-
-.c11 > *:first-child {
-  margin-top: 0;
-}
-
-.c11 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c27 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
-}
-
-.c27:hover {
-  color: #8c94a6;
-}
-
-.c22 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 48px;
-  width: 100%;
-  background-color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.25rem;
-  -webkit-animation: iowhYu 0.3s ease-out;
-  animation: iowhYu 0.3s ease-out;
-  border-color: #fee5ad;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
-.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #fee5ad;
-}
-
-.c24 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 1rem;
-  color: #434956;
-  text-align: left;
-}
-
-.c26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c4 {
-  position: relative;
-  margin-bottom: 1.25rem;
-}
-
-.c5 {
-  position: absolute;
-  top: 0.625rem;
-  left: calc(-80px - 1.25rem);
-  width: 80px;
-  color: #4c5467;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c7 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
-.c8 {
-  margin-left: 1rem;
-  color: #4c5467;
-  font-size: 0.875rem;
-  display: inline-block;
-}
-
-.c9 {
-  color: #4c5467;
-  font-weight: 600;
-}
-
-.c10 {
-  margin-left: -10px;
-}
-
-.c21 {
-  position: fixed;
-  bottom: 0;
-  padding: 1rem;
-  width: 100%;
-  z-index: 1000;
-}
-
-.c25 {
-  padding: 0 0.25rem;
-}
-
-.c16 {
-  margin-bottom: 1rem;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-}
-
-.c19 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
-  min-width: 7rem;
-}
-
-.c19:not([disabled]):hover,
-.c19:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c19:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c19[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c19[aria-pressed="true"]:not([disabled]):hover,
-.c19[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c19[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c19[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c19 + .c18 {
-  margin-left: 1rem;
-}
-
-.c20 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  min-width: 7rem;
-}
-
-.c20:not([disabled]):hover,
-.c20:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c20:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c20[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c20[aria-pressed="true"]:not([disabled]):hover,
-.c20[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c20[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c20[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c20 + .c18 {
-  margin-left: 1rem;
-}
-
-.c12 {
-  margin: 1rem auto;
-}
-
-.c14 {
-  margin-top: 2.5rem;
-  padding: 1rem;
-  background-color: #f9f9fc;
-  border-radius: 0.25rem;
-}
-
-.c13 {
-  border-bottom: 1px dotted #006be6;
-}
-
-@media print {
-  .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c15 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c2 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c11 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:1200px) {
-  .c5 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c6 {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:600px) {
-  .c8 {
-    margin-left: 0;
-  }
-}
-
-<div>
-  <div
-    class="c0"
-    data-main-content="true"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <div
-          class="c0"
-        >
-          <div
-            class="c3 c4"
-          >
-            <div
-              class="c5"
-            >
-              <svg
-                viewBox="0 0 50 50"
-              >
-                <title>
-                  question
-                </title>
-                <g
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                >
-                  <path
-                    d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
-                  />
-                  <path
-                    d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
-                  />
-                  <path
-                    d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
-                  />
-                </g>
-              </svg>
-            </div>
-            <h1>
-              Article du code
-            </h1>
-            <div
-              class="c6"
-            >
-              <span
-                class="c7"
-              >
-                social groove
-              </span>
-              <span
-                class="c8"
-              >
-                Mis à jour le : 
-                <span
-                  class="c9"
-                >
-                  03/11/1979
-                </span>
-              </span>
-            </div>
-            <div
-              class="c10"
-            />
-          </div>
-          <div
-            class="c3"
-          >
-            <div
-              class="c11 c12"
-            >
-              intro de l'article
-            </div>
-            <div>
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
-                  html
-                </strong>
-                 contenant des tooltip sur certains mot comme 
-                <span
-                  data-tooltip-slug="rescrit"
-                  data-tooltip-term="rescrit"
-                >
-                  <span
-                    aria-describedby="tooltip:1"
-                    class="c13"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    rescrit
-                  </span>
-                </span>
-                . match aussi les abbréviation comme 
-                <span
-                  data-tooltip-slug="activite-principale-exercee"
-                  data-tooltip-term="APE"
-                >
-                  <span
-                    aria-describedby="tooltip:2"
-                    class="c13"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    APE
-                  </span>
-                </span>
-                 mais pas ape ou ses variantes comme 
-                <span
-                  data-tooltip-slug="activite-principale-exercee"
-                  data-tooltip-term="code ape"
-                >
-                  <span
-                    aria-describedby="tooltip:3"
-                    class="c13"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
-                  >
-                    code ape
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
-            <div
-              class="c14"
-            >
-              pied de page
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="c0"
-  >
-    <div
-      class="c15"
-    >
-      <div
-        class="c11"
-      >
-        <h3
-          class="c16"
-        >
-          Avez-vous trouvé la réponse à votre question ?
-        </h3>
-        <p
-          class="c17"
-        >
-          <button
-            aria-pressed="false"
-            class="c18 c19"
-          >
-            Non
-          </button>
-          <button
-            aria-pressed="false"
-            class="c18 c20"
-          >
-            Oui
-          </button>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    class="c21"
-  >
-    <div
-      class="c22"
-    >
-      <div
-        class="c23"
-      >
-        <svg
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="9"
-            y2="13"
-          />
-          <line
-            x1="12"
-            x2="12"
-            y1="17"
-            y2="17"
-          />
-        </svg>
-      </div>
-      <div
-        class="c24"
-        role="alert"
-      >
-        Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
-        <a
-          class="c25"
-          href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="consulter l'ordonance"
-        >
-          L’ouverture officielle du site
-        </a>
-        est prévue pour 2020.
-      </div>
-      <div
-        class="c26"
-      >
-        <button
-          aria-label="Fermer"
-          aria-pressed="false"
-          class="c27"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="18"
-              x2="6"
-              y1="6"
-              y2="18"
-            />
-            <line
-              x1="6"
-              x2="18"
-              y1="6"
-              y2="18"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<Answer /> should render tooltip for words with diacritics without breaking html 1`] = `
-.c1 {
+.c0 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-.c1 > *:first-child {
+.c0 > *:first-child {
   margin-top: 0;
 }
 
-.c1 > *:last-child {
+.c0 > *:last-child {
   margin-bottom: 0;
 }
 
-.c3 {
+.c5 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -2222,34 +2333,34 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   max-width: 46.25rem;
 }
 
-.c3 > *:first-child {
+.c5 > *:first-child {
   margin-top: 0;
 }
 
-.c3 > *:last-child {
+.c5 > *:last-child {
   margin-bottom: 0;
 }
 
-.c15 {
+.c18 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c15 > *:first-child {
+.c18 > *:first-child {
   margin-top: 0;
 }
 
-.c15 > *:last-child {
+.c18 > *:last-child {
   margin-bottom: 0;
 }
 
-.c0 {
+.c3 {
   padding: 1.25rem 0;
 }
 
-.c2 {
+.c4 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -2257,15 +2368,15 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   background-color: #fff;
 }
 
-.c2 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c2 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
-.c11 {
+.c12 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -2273,15 +2384,15 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   background-color: #ebeff3;
 }
 
-.c11 > *:first-child {
+.c12 > *:first-child {
   margin-top: 0;
 }
 
-.c11 > *:last-child {
+.c12 > *:last-child {
   margin-bottom: 0;
 }
 
-.c27 {
+.c30 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2303,11 +2414,16 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   border: none;
 }
 
-.c27:hover {
+.c30:hover {
   color: #8c94a6;
 }
 
-.c22 {
+.c30:active {
+  position: relative;
+  top: 1px;
+}
+
+.c25 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2329,7 +2445,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c23 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2350,7 +2466,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   background-color: #fee5ad;
 }
 
-.c24 {
+.c27 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2363,7 +2479,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   text-align: left;
 }
 
-.c26 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2382,20 +2498,12 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   justify-content: center;
 }
 
-.c4 {
+.c6 {
   position: relative;
   margin-bottom: 1.25rem;
 }
 
-.c5 {
-  position: absolute;
-  top: 0.625rem;
-  left: calc(-80px - 1.25rem);
-  width: 80px;
-  color: #4c5467;
-}
-
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2406,28 +2514,28 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   align-items: flex-end;
 }
 
-.c7 {
+.c8 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c8 {
+.c9 {
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
 
-.c9 {
+.c10 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c10 {
+.c11 {
   margin-left: -10px;
 }
 
-.c21 {
+.c24 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -2435,15 +2543,15 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   z-index: 1000;
 }
 
-.c25 {
+.c28 {
   padding: 0 0.25rem;
 }
 
-.c16 {
+.c19 {
   margin-bottom: 1rem;
 }
 
-.c17 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2454,7 +2562,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   justify-content: space-around;
 }
 
-.c19 {
+.c22 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2477,13 +2585,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   min-width: 7rem;
 }
 
-.c19:not([disabled]):hover,
-.c19:not([disabled]):focus {
-  background: #fbfcfd;
+.c22:not([disabled]):hover,
+.c22:not([disabled]):focus {
+  background: #f7f7f7;
   color: #18181c;
 }
 
-.c19:not([disabled]):active {
+.c22:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -2491,7 +2599,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   outline: none;
 }
 
-.c19[aria-pressed="true"] {
+.c22[aria-pressed="true"] {
   color: #18181c;
   background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
@@ -2500,25 +2608,25 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):hover,
-.c19[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
+.c22[aria-pressed="true"]:not([disabled]):hover,
+.c22[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
 }
 
-.c19[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
+.c22[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
 }
 
-.c19[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c19 + .c18 {
+.c22 + .c21 {
   margin-left: 1rem;
 }
 
-.c20 {
+.c23 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2541,13 +2649,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   min-width: 7rem;
 }
 
-.c20:not([disabled]):hover,
-.c20:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c20:not([disabled]):active {
+.c23:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -2555,7 +2663,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   outline: none;
 }
 
-.c20[aria-pressed="true"] {
+.c23[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -2564,94 +2672,127 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c20[aria-pressed="true"]:not([disabled]):hover,
-.c20[aria-pressed="true"]:not([disabled]):focus {
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c20[aria-pressed="true"]:not([disabled]):active {
+.c23[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c20[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c20 + .c18 {
+.c23 + .c21 {
   margin-left: 1rem;
 }
 
-.c12 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.c2 {
+  width: 70%;
+}
+
+.c16 {
+  padding: 2rem 0;
+  width: 30%;
+  color: #0053b3;
+}
+
+.c16 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17 {
+  position: -webkit-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  border-left: 1px solid #0053b3;
+  padding: 0 1rem;
+}
+
+.c17 li {
+  margin: 1rem 0;
+}
+
+.c13 {
   margin: 1rem auto;
 }
 
-.c14 {
+.c15 {
   margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
   border-radius: 0.25rem;
 }
 
-.c13 {
+.c14 {
   border-bottom: 1px dotted #006be6;
 }
 
 @media print {
-  .c1 {
+  .c0 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media print {
-  .c3 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c15 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c2 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c2 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c11 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:1200px) {
   .c5 {
-    display: none;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c18 {
+    max-width: 100%;
+    padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c4 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c4 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c12 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c12 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -2663,162 +2804,169 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     margin-left: 0;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:980px) {
+  .c16 {
+    display: none;
   }
 }
 
 <div>
   <div
-    class="c0"
-    data-main-content="true"
+    class="c0 c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
+        data-main-content="true"
       >
         <div
           class="c0"
         >
           <div
-            class="c3 c4"
+            class="c4"
           >
             <div
-              class="c5"
+              class="c3"
             >
-              <svg
-                viewBox="0 0 50 50"
+              <div
+                class="c5 c6"
               >
-                <title>
-                  question
-                </title>
-                <g
-                  fill="currentColor"
-                  fill-rule="evenodd"
+                <h1>
+                  Article du code
+                </h1>
+                <div
+                  class="c7"
                 >
-                  <path
-                    d="M33.045 30.728a.951.951 0 0 0-.955.946v6.533c0 2.61-2.143 4.733-4.775 4.733H17.003a.951.951 0 0 0-.955.947l-.001 1.882-2.28-2.26a.955.955 0 0 0-.876-.569H6.685c-2.633 0-4.775-2.123-4.775-4.733v-14.58c0-2.61 2.142-4.734 4.775-4.734h9.647a.951.951 0 0 0 .955-.946.951.951 0 0 0-.955-.947H6.685C3 17 0 19.973 0 23.627v14.58c0 3.654 2.999 6.627 6.685 6.627h5.717l3.922 3.889a.96.96 0 0 0 1.04.205.946.946 0 0 0 .59-.874l.003-3.22h9.358C31 44.834 34 41.86 34 38.207v-6.533a.951.951 0 0 0-.955-.946z"
-                  />
-                  <path
-                    d="M35.201 0H32.8C25.189 0 19 6.195 19 13.81s6.19 13.811 13.798 13.811h2.403a13.82 13.82 0 0 0 3.502-.45l3.55 3.551a.949.949 0 0 0 1.62-.672v-5.498a13.942 13.942 0 0 0 3.627-4.475c.995-1.952 1.5-4.06 1.5-6.267C49 6.195 42.81 0 35.201 0zm7.152 23.33a.95.95 0 0 0-.379.76v3.667l-2.323-2.324a.948.948 0 0 0-.95-.236c-1.13.347-2.307.524-3.5.524H32.8c-6.562 0-11.9-5.343-11.9-11.91 0-6.568 5.338-11.91 11.9-11.91H35.2c6.562 0 11.9 5.342 11.9 11.91 0 3.775-1.73 7.245-4.748 9.52z"
-                  />
-                  <path
-                    d="M37.99 10.71a4.005 4.005 0 0 0-3.708-3.7A4 4 0 0 0 30 10.99a.944.944 0 0 0 1.89 0c0-.59.238-1.136.67-1.539a2.099 2.099 0 0 1 1.591-.56 2.109 2.109 0 0 1 1.954 1.948 2.096 2.096 0 0 1-1.641 2.206 1.785 1.785 0 0 0-1.409 1.748v2.264a.944.944 0 0 0 1.89 0V14.87a3.971 3.971 0 0 0 3.045-4.16zM34.707 19.293A1.01 1.01 0 0 0 34 19a1.01 1.01 0 0 0-.707.293A1.008 1.008 0 0 0 33 20c0 .264.107.522.293.708a1.006 1.006 0 0 0 1.414 0A1.01 1.01 0 0 0 35 20c0-.263-.107-.52-.293-.707zM26.048 30H5.952C5.426 30 5 30.448 5 31s.426 1 .952 1h20.096c.526 0 .952-.448.952-1s-.426-1-.952-1zM26.707 35.293A1.007 1.007 0 0 0 26 35c-.263 0-.521.107-.707.293A1.007 1.007 0 0 0 25 36c0 .263.107.521.293.707.186.186.444.293.707.293.263 0 .521-.107.707-.293.186-.186.293-.443.293-.707 0-.263-.107-.521-.293-.707zM23.009 35H5.99A.996.996 0 0 0 5 36c0 .552.444 1 .991 1H23.01A.996.996 0 0 0 24 36c0-.552-.444-1-.991-1zM20.036 25H5.964C5.432 25 5 25.448 5 26s.432 1 .964 1h14.072c.532 0 .964-.448.964-1s-.432-1-.964-1z"
-                  />
-                </g>
-              </svg>
-            </div>
-            <h1>
-              Article du code
-            </h1>
-            <div
-              class="c6"
-            >
-              <span
-                class="c7"
-              >
-                social groove
-              </span>
-              <span
-                class="c8"
-              >
-                Mis à jour le : 
-                <span
-                  class="c9"
-                >
-                  03/11/1979
-                </span>
-              </span>
-            </div>
-            <div
-              class="c10"
-            />
-          </div>
-          <div
-            class="c3"
-          >
-            <div
-              class="c11 c12"
-            >
-              intro de l'article
-            </div>
-            <div>
-              <p
-                class="test-content"
-              >
-                Contenu au format 
-                <strong>
                   <span
-                    data-tooltip-slug="indemnites"
-                    data-tooltip-term="indemnités"
+                    class="c8"
                   >
+                    social groove
+                  </span>
+                  <span
+                    class="c9"
+                  >
+                    Mis à jour le : 
                     <span
-                      aria-describedby="tooltip:4"
-                      class="c13"
-                      data-reach-tooltip-trigger=""
-                      tabindex="0"
+                      class="c10"
                     >
-                      indemnités
+                      03/11/1979
                     </span>
                   </span>
-                </strong>
-                comme 
-                <span
-                  data-tooltip-slug="activite-principale-exercee"
-                  data-tooltip-term="code ape"
+                </div>
+                <div
+                  class="c11"
+                />
+              </div>
+              <div
+                class="c5"
+              >
+                <div
+                  class="c12 c13"
                 >
-                  <span
-                    aria-describedby="tooltip:5"
-                    class="c13"
-                    data-reach-tooltip-trigger=""
-                    tabindex="0"
+                  intro de l'article
+                </div>
+                <div>
+                  <p
+                    class="test-content"
                   >
-                    code ape
-                  </span>
-                </span>
-              </p>
-            </div>
-            <div>
-              Contenu supplémentaire
-            </div>
-            <div
-              class="c14"
-            >
-              pied de page
+                    Contenu au format 
+                    <strong>
+                      <span
+                        data-tooltip-slug="indemnites"
+                        data-tooltip-term="indemnités"
+                      >
+                        <span
+                          aria-describedby="tooltip:4"
+                          class="c14"
+                          data-reach-tooltip-trigger=""
+                          tabindex="0"
+                        >
+                          indemnités
+                        </span>
+                      </span>
+                    </strong>
+                    comme 
+                    <span
+                      data-tooltip-slug="activite-principale-exercee"
+                      data-tooltip-term="code ape"
+                    >
+                      <span
+                        aria-describedby="tooltip:5"
+                        class="c14"
+                        data-reach-tooltip-trigger=""
+                        tabindex="0"
+                      >
+                        code ape
+                      </span>
+                    </span>
+                  </p>
+                </div>
+                <div>
+                  Contenu supplémentaire
+                </div>
+                <div
+                  class="c15"
+                >
+                  pied de page
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="c0"
-  >
     <div
-      class="c15"
+      class="c16"
     >
       <div
-        class="c11"
+        class="c17"
+      >
+        <strong>
+          Les articles pouvant vous interesser :
+        </strong>
+        <ul />
+      </div>
+    </div>
+  </div>
+  <div
+    class="c3"
+  >
+    <div
+      class="c18"
+    >
+      <div
+        class="c12"
       >
         <h3
-          class="c16"
+          class="c19"
         >
           Avez-vous trouvé la réponse à votre question ?
         </h3>
         <p
-          class="c17"
+          class="c20"
         >
           <button
             aria-pressed="false"
-            class="c18 c19"
+            class="c21 c22"
           >
             Non
           </button>
           <button
             aria-pressed="false"
-            class="c18 c20"
+            class="c21 c23"
           >
             Oui
           </button>
@@ -2827,13 +2975,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
     </div>
   </div>
   <div
-    class="c21"
+    class="c24"
   >
     <div
-      class="c22"
+      class="c25"
     >
       <div
-        class="c23"
+        class="c26"
       >
         <svg
           fill="none"
@@ -2864,12 +3012,12 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
         </svg>
       </div>
       <div
-        class="c24"
+        class="c27"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c25"
+          class="c28"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2880,12 +3028,12 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
         est prévue pour 2020.
       </div>
       <div
-        class="c26"
+        class="c29"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c27"
+          class="c30"
         >
           <svg
             fill="none"

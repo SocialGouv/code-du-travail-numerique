@@ -102,6 +102,11 @@ exports[`<SearchBar /> should render 1`] = `
   color: #8c94a6;
 }
 
+.c5:active {
+  position: relative;
+  top: 1px;
+}
+
 @media (max-width:600px) {
   .c0 {
     -webkit-flex-direction: column;
@@ -283,6 +288,11 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 
 .c7:hover {
   color: #8c94a6;
+}
+
+.c7:active {
+  position: relative;
+  top: 1px;
 }
 
 @media (max-width:600px) {

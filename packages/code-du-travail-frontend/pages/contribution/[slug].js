@@ -27,8 +27,7 @@ class PageContribution extends React.Component {
   render() {
     const {
       data = {
-        _source: {},
-        relatedItems: {}
+        _source: {}
       },
       pageUrl,
       ogImage
