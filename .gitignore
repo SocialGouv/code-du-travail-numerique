@@ -7,4 +7,4 @@ __pycache__
 packages/code-du-travail-data/dump.json
 package-lock.json
 yarn-error.log
-
+.DS_Store
