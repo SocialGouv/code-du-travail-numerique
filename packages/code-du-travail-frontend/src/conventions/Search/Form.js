@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Spinner from "react-svg-spinner";
 
 import slugify from "@cdt/data/slugify";
 import { theme, Container, Table } from "@cdt/ui-old";
@@ -90,7 +91,9 @@ const Search = ({
           query && (
             <ResultsContainer>
               {status === "loading" && (
-                <div>Recherche des convention collectives...</div>
+                <div>
+                  <Spinner /> Recherche des convention collectives...
+                </div>
               )}
               {status === "error" && (
                 <div>Aucun résultat pour votre recherche.</div>
