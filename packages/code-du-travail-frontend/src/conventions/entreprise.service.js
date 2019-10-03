@@ -3,8 +3,8 @@ import memoizee from "memoizee";
 import debounce from "debounce-promise";
 
 export const SIRET2IDCC_URL =
-  process.env.API_SIRET2IDCC_URL || "http://127.0.0.1:3004/api/v2";
-//"https://siret2idcc.incubateur.social.gouv.fr/api/v2";
+  process.env.API_SIRET2IDCC_URL ||
+  "https://siret2idcc.incubateur.social.gouv.fr/api/v2";
 
 export const API_ENTREPRISE = "https://entreprise.data.gouv.fr/api/sirene/v1";
 
