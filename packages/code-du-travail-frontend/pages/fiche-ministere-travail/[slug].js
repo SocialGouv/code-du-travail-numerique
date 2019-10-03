@@ -38,6 +38,7 @@ class Fiche extends React.Component {
     const footer = (
       <Source name="Ministère du travail" url={data._source.url} />
     );
+
     return (
       <Layout>
         <Metas
@@ -48,6 +49,7 @@ class Fiche extends React.Component {
         />
         <Answer
           title={data._source.title}
+          relatedItems={data.relatedItems}
           emptyMessage="Cette fiche n'a pas été trouvée"
           intro={data._source.intro && <Intro>{data._source.intro} </Intro>}
           html={data._source.html}

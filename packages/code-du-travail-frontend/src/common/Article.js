@@ -9,7 +9,6 @@ const Article = ({
   tags,
   sourceType,
   date,
-  icon: Icon,
   wide,
   onTagClick,
   children
@@ -20,11 +19,6 @@ const Article = ({
         <Wrapper variant="light">
           <Section>
             <Header narrow={!wide} noPadding>
-              {Icon && (
-                <IconWrapper>
-                  <Icon />
-                </IconWrapper>
-              )}
               <h1>{title}</h1>
               <Meta>
                 {sourceType && <Type>{sourceType}</Type>}
@@ -61,7 +55,6 @@ Article.propTypes = {
   children: PropTypes.node,
   date: PropTypes.string,
   sourceType: PropTypes.string,
-  icon: PropTypes.func,
   wide: PropTypes.bool,
   /** list of tags */
   tags: PropTypes.array,
@@ -82,19 +75,6 @@ const { breakpoints, colors, fonts, spacing } = theme;
 const Header = styled(Container)`
   position: relative;
   margin-bottom: ${spacing.interComponent};
-`;
-
-const ICON_WIDTH = "80px";
-
-const IconWrapper = styled.div`
-  position: absolute;
-  top: ${spacing.small};
-  left: calc(-${ICON_WIDTH} - ${spacing.interComponent});
-  width: ${ICON_WIDTH};
-  color: ${colors.lightText};
-  @media (max-width: ${breakpoints.desktop}) {
-    display: none;
-  }
 `;
 
 const Meta = styled.div`
