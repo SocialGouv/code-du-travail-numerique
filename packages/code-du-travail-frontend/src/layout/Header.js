@@ -2,26 +2,29 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { Container, theme } from "@cdt/ui-old";
+import { Container, Tag, theme } from "@cdt/ui-old";
 
 import SearchBar from "../search/SearchBar";
 
 const Header = ({ hideSearch = false }) => (
   <StyledHeader>
     <StyledContainer>
-      <Link href="/" passHref>
-        <LogoWrapper title="Code du travail numérique - retour à l'accueil">
-          <Logo
-            src={"/static/assets/img/marianne.svg"}
-            alt="symbole de la Marianne, site officiel du gouvernement"
-          />
-          <Title>
-            Code du travail
-            <br />
-            numérique
-          </Title>
-        </LogoWrapper>
-      </Link>
+      <LeftWrapper>
+        <Link href="/" passHref>
+          <LogoWrapper title="Code du travail numérique - retour à l'accueil">
+            <Logo
+              src={"/static/assets/img/marianne.svg"}
+              alt="symbole de la Marianne, site officiel du gouvernement"
+            />
+            <Title>
+              Code du travail
+              <br />
+              numérique
+            </Title>
+          </LogoWrapper>
+        </Link>
+        <StyledTag variant="success">Version Bêta</StyledTag>
+      </LeftWrapper>
       {!hideSearch && (
         <SearchBarWrapper>
           <SearchBar />
@@ -50,6 +53,11 @@ const StyledContainer = styled(Container)`
     align-items: flex-start;
   }
 `;
+const LeftWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const LogoWrapper = styled.a`
   display: flex;
   align-items: center;
@@ -75,12 +83,19 @@ const Title = styled.span`
   text-decoration: none;
 `;
 
+const StyledTag = styled(Tag)`
+  margin-left: ${spacing.interComponent};
+`;
+
 const SearchBarWrapper = styled.div`
-  width: 100%;
-  max-width: 600px;
+  width: 350px;
   @media (max-width: ${breakpoints.tablet}) {
     margin-top: ${spacing.interComponent};
-    max-width: 100%;
+    width: 70%;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-top: ${spacing.interComponent};
+    width: 100%;
   }
 `;
 export default Header;

@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import { Container, LargeLink, List, ListItem, theme } from "@cdt/ui-old";
 
-import { getSourceIcon } from "../utils";
 import { LinkContent } from "./LinkContent";
 
 const ListLink = ({
@@ -59,7 +58,7 @@ ListLink.defaultProps = {
   focused: false
 };
 
-export const Results = ({ hasFocus, id, isSearch, items, query }) => {
+export const Results = ({ id, isSearch, items, query }) => {
   return (
     <Container narrow>
       {isSearch ? (
@@ -69,15 +68,10 @@ export const Results = ({ hasFocus, id, isSearch, items, query }) => {
       )}
       <List>
         {items.map((item, i) => {
-          const { source, slug } = item;
+          const { slug } = item;
           return (
             <ListItem key={slug}>
-              <ListLink
-                icon={getSourceIcon(source)}
-                focused={hasFocus && i === 0}
-                item={item}
-                query={query}
-              >
+              <ListLink focused={i === 0} item={item} query={query}>
                 <LinkContent {...item} />
               </ListLink>
             </ListItem>

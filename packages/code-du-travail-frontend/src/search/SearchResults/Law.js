@@ -11,7 +11,6 @@ import {
 } from "@cdt/ui-old";
 
 import { LinkContent } from "./LinkContent";
-import { getSourceIcon } from "../utils";
 
 export const Law = ({ items, query }) => (
   <Section>
@@ -34,7 +33,7 @@ export const Law = ({ items, query }) => (
                 }`}
                 passHref
               >
-                <LargeLink icon={getSourceIcon(item.source)}>
+                <LargeLink>
                   <LinkContent {...item} />
                 </LargeLink>
               </Link>

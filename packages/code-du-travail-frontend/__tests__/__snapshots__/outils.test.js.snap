@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Outils /> should render 1`] = `
-.c10:not(:focus):not(:active) {
+.c12:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -13,7 +13,7 @@ exports[`<Outils /> should render 1`] = `
   border: 0;
 }
 
-.c27 {
+.c29 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -33,7 +33,7 @@ exports[`<Outils /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c20 {
+.c22 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -41,19 +41,19 @@ exports[`<Outils /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c20 > *:first-child {
+.c22 > *:first-child {
   margin-top: 0;
 }
 
-.c20 > *:last-child {
+.c22 > *:last-child {
   margin-bottom: 0;
 }
 
-.c18 {
+.c20 {
   padding: 1.25rem 0;
 }
 
-.c15 {
+.c17 {
   margin-bottom: 1rem;
   padding: 0.625rem 1.25rem;
   border: 1px solid transparent;
@@ -63,15 +63,15 @@ exports[`<Outils /> should render 1`] = `
   border-color: #fdd57b;
 }
 
-.c15 > *:first-child {
+.c17 > *:first-child {
   margin-top: 0;
 }
 
-.c15 > *:last-child {
+.c17 > *:last-child {
   margin-bottom: 0;
 }
 
-.c22 {
+.c24 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -93,13 +93,13 @@ exports[`<Outils /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):focus {
+.c24:not([disabled]):hover,
+.c24:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c22:not([disabled]):active {
+.c24:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -107,7 +107,7 @@ exports[`<Outils /> should render 1`] = `
   outline: none;
 }
 
-.c22[aria-pressed="true"] {
+.c24[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -116,21 +116,34 @@ exports[`<Outils /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):hover,
-.c22[aria-pressed="true"]:not([disabled]):focus {
+.c24[aria-pressed="true"]:not([disabled]):hover,
+.c24[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):active {
+.c24[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c22[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c9 {
+.c7 {
+  display: inline-block;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #e0f2bd;
+}
+
+.c11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -141,42 +154,33 @@ exports[`<Outils /> should render 1`] = `
   text-align: left;
 }
 
-.c12 ul {
+.c14 ul {
   z-index: 100;
 }
 
-.c12 li[role="option"]:nth-child(2n + 1) {
+.c14 li[role="option"]:nth-child(2n + 1) {
   background: #f5f7fa;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  max-width: 800px;
   color: #434956;
+  overflow: visible;
 }
 
-.c8 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 1rem 0 0 1.25rem;
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0 1rem 0 4rem;
+  padding: 0 calc(50px + 0.625rem) 0 1rem;
   width: 100%;
   height: 50px;
   font-size: inherit;
@@ -191,12 +195,12 @@ exports[`<Outils /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c11:focus {
+.c13:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c13 {
+.c15 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -212,48 +216,21 @@ exports[`<Outils /> should render 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  margin-left: 0.5rem;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  height: calc(50px - 2px);
+  width: calc(50px - 2px);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c13:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c13[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c13[aria-pressed="true"]:not([disabled]):hover,
-.c13[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c13[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c13[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
+.c15:hover {
+  color: #8c94a6;
 }
 
 .c0 {
@@ -282,6 +259,21 @@ exports[`<Outils /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -291,44 +283,47 @@ exports[`<Outils /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3:link {
+.c4:link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c4 {
+.c5 {
   width: 5rem;
   height: 100%;
   margin-right: 1rem;
 }
 
-.c5 {
+.c6 {
   font-size: 1.125rem;
   line-height: 1.4;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6 {
-  width: 100%;
-  max-width: 600px;
+.c8 {
+  margin-left: 1.25rem;
 }
 
-.c19 {
-  text-align: center;
+.c9 {
+  width: 350px;
 }
 
 .c21 {
+  text-align: center;
+}
+
+.c23 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c23 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -339,31 +334,31 @@ exports[`<Outils /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c25 + .c24 {
+.c27 + .c26 {
   padding-left: 1rem;
 }
 
-.c26 {
+.c28 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c28 {
+.c30 {
   margin: 0.5rem 0;
 }
 
-.c28 a,
-.c28 a:visited {
+.c30 a,
+.c30 a:visited {
   color: #434956;
 }
 
-.c14 {
+.c16 {
   margin: 20%;
   font-size: 1.875rem;
   text-align: center;
 }
 
-.c16 {
+.c18 {
   margin-top: 50px;
   padding: 0.625rem;
   text-align: center;
@@ -378,14 +373,14 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media print {
-  .c20 {
+  .c22 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c10 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -394,22 +389,8 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    height: 50px;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:600px) {
   .c13 {
-    margin-left: 0;
-    margin-top: 0.625rem;
+    padding: 0 1rem;
   }
 }
 
@@ -431,20 +412,27 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c9 {
     margin-top: 1.25rem;
-    max-width: 100%;
+    width: 70%;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    margin-top: 1.25rem;
+    width: 100%;
   }
 }
 
 @media print {
-  .c17 {
+  .c19 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c23 {
+  .c25 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -452,7 +440,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c25 + .c24 {
+  .c27 + .c26 {
     padding-left: 0;
   }
 }
@@ -464,47 +452,45 @@ exports[`<Outils /> should render 1`] = `
     <div
       class="c1 c2"
     >
-      <a
-        class="c3"
-        href="/"
-        title="Code du travail numérique - retour à l'accueil"
-      >
-        <img
-          alt="symbole de la Marianne, site officiel du gouvernement"
-          class="c4"
-          src="/static/assets/img/marianne.svg"
-        />
-        <span
-          class="c5"
-        >
-          Code du travail
-          <br />
-          numérique
-        </span>
-      </a>
       <div
-        class="c6"
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="/"
+          title="Code du travail numérique - retour à l'accueil"
+        >
+          <img
+            alt="symbole de la Marianne, site officiel du gouvernement"
+            class="c5"
+            src="/static/assets/img/marianne.svg"
+          />
+          <span
+            class="c6"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
+        </a>
+        <div
+          class="c7 c8"
+        >
+          Version Bêta
+        </div>
+      </div>
+      <div
+        class="c9"
       >
         <form
-          class="c7"
+          class="c10"
         >
-          <svg
-            class="c8"
-            viewBox="0 0 20 20"
-          >
-            <title />
-            <path
-              d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
           <label
-            class="c9"
+            class="c11"
             for="main-search-input"
           >
             <span
-              class="c10"
+              class="c12"
             >
               Rechercher
             </span>
@@ -519,7 +505,7 @@ exports[`<Outils /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c11"
+                class="c13"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -527,7 +513,7 @@ exports[`<Outils /> should render 1`] = `
                 value=""
               />
               <div
-                class="c12"
+                class="c14"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
@@ -535,10 +521,19 @@ exports[`<Outils /> should render 1`] = `
           </label>
           <button
             aria-pressed="false"
-            class="c13"
+            class="c15"
             type="submit"
           >
-            Rechercher
+            <svg
+              viewBox="0 0 20 20"
+            >
+              <title />
+              <path
+                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
           </button>
         </form>
       </div>
@@ -548,64 +543,64 @@ exports[`<Outils /> should render 1`] = `
     id="main"
   >
     <div
-      class="c1 c14"
+      class="c1 c16"
     >
       <div
-        class="c15"
+        class="c17"
       >
         Cet outil est introuvable
       </div>
     </div>
     <div
-      class="c16"
+      class="c18"
     >
       -
     </div>
   </main>
   <footer
-    class="c17"
+    class="c19"
   >
     <div
-      class="c18"
+      class="c20"
     >
       <div
-        class="c1 c19"
+        class="c1 c21"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c20 c21"
+          class="c22 c23"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
           aria-pressed="false"
-          class="c22"
+          class="c24"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c18"
+      class="c20"
     >
       <div
-        class="c1 c23"
+        class="c1 c25"
       >
         <div
-          class="c24 c25"
+          class="c26 c27"
         >
           <h3
-            class="c26"
+            class="c28"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c27"
+            class="c29"
           >
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="/droit-du-travail"
@@ -614,7 +609,7 @@ exports[`<Outils /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="/a-propos"
@@ -623,7 +618,7 @@ exports[`<Outils /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="/mentions-legales"
@@ -632,7 +627,7 @@ exports[`<Outils /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -643,18 +638,18 @@ exports[`<Outils /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c24 c25"
+          class="c26 c27"
         >
           <h3
-            class="c26"
+            class="c28"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c27"
+            class="c29"
           >
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -665,7 +660,7 @@ exports[`<Outils /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -678,18 +673,18 @@ exports[`<Outils /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c24 c25"
+          class="c26 c27"
         >
           <h3
-            class="c26"
+            class="c28"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c27"
+            class="c29"
           >
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -700,7 +695,7 @@ exports[`<Outils /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -711,7 +706,7 @@ exports[`<Outils /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c28"
+              class="c30"
             >
               <a
                 href="https://beta.gouv.fr/"

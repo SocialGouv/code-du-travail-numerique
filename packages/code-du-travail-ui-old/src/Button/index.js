@@ -73,10 +73,6 @@ const StyledButton = styled(Button)`
         &:hover {
           color: ${lighten(0.3, colors.darkText)};
         }
-        &:active {
-          position: relative;
-          top: 1px;
-        }
       `;
     }
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render 1`] = `
-.c10:not(:focus):not(:active) {
+.c12:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -27,7 +27,20 @@ exports[`<Header /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
+.c7 {
+  display: inline-block;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #e0f2bd;
+}
+
+.c11 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -38,42 +51,33 @@ exports[`<Header /> should render 1`] = `
   text-align: left;
 }
 
-.c12 ul {
+.c14 ul {
   z-index: 100;
 }
 
-.c12 li[role="option"]:nth-child(2n + 1) {
+.c14 li[role="option"]:nth-child(2n + 1) {
   background: #f5f7fa;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  max-width: 800px;
   color: #434956;
+  overflow: visible;
 }
 
-.c8 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 1rem 0 0 1.25rem;
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0 1rem 0 4rem;
+  padding: 0 calc(50px + 0.625rem) 0 1rem;
   width: 100%;
   height: 50px;
   font-size: inherit;
@@ -88,12 +92,12 @@ exports[`<Header /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c11:focus {
+.c13:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c13 {
+.c15 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -109,48 +113,21 @@ exports[`<Header /> should render 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  margin-left: 0.5rem;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  border: none;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  height: calc(50px - 2px);
+  width: calc(50px - 2px);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c13:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c13[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c13[aria-pressed="true"]:not([disabled]):hover,
-.c13[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c13[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c13[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
+.c15:hover {
+  color: #8c94a6;
 }
 
 .c0 {
@@ -179,6 +156,21 @@ exports[`<Header /> should render 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -188,32 +180,35 @@ exports[`<Header /> should render 1`] = `
   cursor: pointer;
 }
 
-.c3:link {
+.c4:link {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3:hover {
+.c4:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c4 {
+.c5 {
   width: 5rem;
   height: 100%;
   margin-right: 1rem;
 }
 
-.c5 {
+.c6 {
   font-size: 1.125rem;
   line-height: 1.4;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6 {
-  width: 100%;
-  max-width: 600px;
+.c8 {
+  margin-left: 1.25rem;
+}
+
+.c9 {
+  width: 350px;
 }
 
 @media print {
@@ -224,7 +219,7 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c10 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -233,22 +228,8 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c11 {
-    height: 50px;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:600px) {
   .c13 {
-    margin-left: 0;
-    margin-top: 0.625rem;
+    padding: 0 1rem;
   }
 }
 
@@ -270,9 +251,16 @@ exports[`<Header /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c9 {
     margin-top: 1.25rem;
-    max-width: 100%;
+    width: 70%;
+  }
+}
+
+@media (max-width:600px) {
+  .c9 {
+    margin-top: 1.25rem;
+    width: 100%;
   }
 }
 
@@ -283,47 +271,45 @@ exports[`<Header /> should render 1`] = `
     <div
       class="c1 c2"
     >
-      <a
-        class="c3"
-        href="/"
-        title="Code du travail numérique - retour à l'accueil"
-      >
-        <img
-          alt="symbole de la Marianne, site officiel du gouvernement"
-          class="c4"
-          src="/static/assets/img/marianne.svg"
-        />
-        <span
-          class="c5"
-        >
-          Code du travail
-          <br />
-          numérique
-        </span>
-      </a>
       <div
-        class="c6"
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="/"
+          title="Code du travail numérique - retour à l'accueil"
+        >
+          <img
+            alt="symbole de la Marianne, site officiel du gouvernement"
+            class="c5"
+            src="/static/assets/img/marianne.svg"
+          />
+          <span
+            class="c6"
+          >
+            Code du travail
+            <br />
+            numérique
+          </span>
+        </a>
+        <div
+          class="c7 c8"
+        >
+          Version Bêta
+        </div>
+      </div>
+      <div
+        class="c9"
       >
         <form
-          class="c7"
+          class="c10"
         >
-          <svg
-            class="c8"
-            viewBox="0 0 20 20"
-          >
-            <title />
-            <path
-              d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
-              fill="currentColor"
-              fill-rule="evenodd"
-            />
-          </svg>
           <label
-            class="c9"
+            class="c11"
             for="main-search-input"
           >
             <span
-              class="c10"
+              class="c12"
             >
               Rechercher
             </span>
@@ -338,7 +324,7 @@ exports[`<Header /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c11"
+                class="c13"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -346,7 +332,7 @@ exports[`<Header /> should render 1`] = `
                 value=""
               />
               <div
-                class="c12"
+                class="c14"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
@@ -354,10 +340,19 @@ exports[`<Header /> should render 1`] = `
           </label>
           <button
             aria-pressed="false"
-            class="c13"
+            class="c15"
             type="submit"
           >
-            Rechercher
+            <svg
+              viewBox="0 0 20 20"
+            >
+              <title />
+              <path
+                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+            </svg>
           </button>
         </form>
       </div>
