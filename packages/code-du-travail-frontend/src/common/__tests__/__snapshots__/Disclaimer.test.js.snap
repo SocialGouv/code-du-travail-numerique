@@ -27,11 +27,6 @@ exports[`<Disclaimer /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c6:active {
-  position: relative;
-  top: 1px;
-}
-
 .c1 {
   box-sizing: border-box;
   display: -webkit-inline-box;
