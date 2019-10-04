@@ -10,6 +10,7 @@ import Html from "../../common/Html";
 
 export class DocumentSuggester extends React.Component {
   static propTypes = {
+    hasFocus: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     onSearch: PropTypes.func.isRequired,
     onSelect: PropTypes.func.isRequired,
@@ -20,16 +21,11 @@ export class DocumentSuggester extends React.Component {
   };
 
   static defaultProps = {
+    hasFocus: false,
     query: "",
     inputId: "main-search-input",
     excludeSources: "",
     suggestions: []
-  };
-
-  focusInput = autoSuggest => {
-    if (autoSuggest !== null && this.props.query.trim().length === 0) {
-      autoSuggest.input.focus();
-    }
   };
 
   onSuggestionSelected = (event, data) => {
@@ -83,7 +79,6 @@ export class DocumentSuggester extends React.Component {
         <ScreenReaderOnly type={"inline"}>Rechercher</ScreenReaderOnly>
         <Autosuggest
           id="cdtn-documents-suggester"
-          ref={this.focusInput}
           theme={suggesterTheme}
           suggestions={suggestions}
           alwaysRenderSuggestions={false}

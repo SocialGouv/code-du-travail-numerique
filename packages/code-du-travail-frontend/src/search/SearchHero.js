@@ -17,7 +17,7 @@ const SearchHero = () => (
           </Link>
         </SearchLabel>
         <SearchBarWrapper>
-          <SearchBar />
+          <SearchBar hasFocus hasButton />
         </SearchBarWrapper>
       </StyledSearch>
     </Container>
@@ -54,8 +54,12 @@ const StyledSearch = styled.div`
 
 const SearchBarWrapper = styled.div`
   margin: 0 auto;
-  width: 70%;
+  width: 750px;
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
+  }
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    max-width: 400px;
   }
 `;

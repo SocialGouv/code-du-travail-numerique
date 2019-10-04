@@ -10,7 +10,7 @@ import { DocumentSuggester } from "./DocumentSuggester";
 
 const suggestMaxResults = 5;
 
-const SearchBar = () => {
+const SearchBar = ({ hasFocus = false, hasButton = false }) => {
   const router = useRouter();
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
@@ -62,8 +62,10 @@ const SearchBar = () => {
   };
   return (
     <SearchForm onSubmit={onFormSubmit}>
-      <SearchInputIcon />
+      {hasButton && <SearchInputIcon />}
       <SearchInput
+        hasFocus={hasFocus}
+        hasButton={hasButton}
         onChange={onChange}
         query={query}
         placeholder="Recherche"
@@ -72,7 +74,13 @@ const SearchBar = () => {
         onClear={onClear}
         suggestions={suggestions}
       />
-      <Submit type="submit">Rechercher</Submit>
+      {hasButton ? (
+        <SubmitButton type="submit">Rechercher</SubmitButton>
+      ) : (
+        <SubmitIcon type="submit" variant="icon">
+          <SearchIcon />
+        </SubmitIcon>
+      )}
     </SearchForm>
   );
 };
@@ -81,13 +89,15 @@ export default SearchBar;
 
 const { animations, box, breakpoints, colors, spacing } = theme;
 
+const inputHeight = "50px";
+
 const SearchForm = styled.form`
   display: flex;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  max-width: 800px;
   color: ${colors.darkText};
+  overflow: visible;
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
     height: auto;
@@ -109,9 +119,13 @@ const SearchInputIcon = styled(SearchIcon)`
 const SearchInput = styled(DocumentSuggester)`
   display: flex;
   margin: 0;
-  padding: 0 ${spacing.base} 0 4rem;
+  padding: 0
+    ${({ hasButton }) =>
+      hasButton
+        ? `${spacing.base} 0 4rem`
+        : `calc(${inputHeight} + ${spacing.small}) 0 ${spacing.base}`};
   width: 100%;
-  height: 50px;
+  height: ${inputHeight};
   font-size: inherit;
   font-family: inherit;
   appearance: none;
@@ -124,15 +138,23 @@ const SearchInput = styled(DocumentSuggester)`
     outline: none;
   }
   @media (max-width: ${breakpoints.mobile}) {
-    height: 50px;
     padding: 0 ${spacing.base};
   }
 `;
 
-const Submit = styled(Button)`
+const SubmitButton = styled(Button)`
   margin-left: ${spacing.xsmall};
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
     margin-top: ${spacing.small};
   }
+`;
+const SubmitIcon = styled(Button)`
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  height: calc(${inputHeight} - 2px);
+  width: calc(${inputHeight} - 2px);
+  border-top-right-radius: ${box.borderRadius};
+  border-bottom-right-radius: ${box.borderRadius};
 `;
