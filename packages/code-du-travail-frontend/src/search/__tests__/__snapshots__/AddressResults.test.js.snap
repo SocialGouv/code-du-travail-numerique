@@ -15,21 +15,6 @@ exports[`<AddressResults/> should render no results 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c4 > *:first-child {
-  margin-top: 0;
-}
-
-.c4 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   padding: 1.25rem 0;
 }
@@ -50,7 +35,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   margin-bottom: 0;
 }
 
-.c5 {
+.c4 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -58,11 +43,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   background-color: #ebeff3;
 }
 
-.c5 > *:first-child {
+.c4 > *:first-child {
   margin-top: 0;
 }
 
-.c5 > *:last-child {
+.c4 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -84,11 +69,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   margin-bottom: 0;
 }
 
-.c6 {
+.c5 {
   margin-bottom: 1rem;
 }
 
-.c7 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,7 +84,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   justify-content: space-around;
 }
 
-.c9 {
+.c8 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -122,13 +107,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
-  background: #fbfcfd;
+.c8:not([disabled]):hover,
+.c8:not([disabled]):focus {
+  background: #f7f7f7;
   color: #18181c;
 }
 
-.c9:not([disabled]):active {
+.c8:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -136,7 +121,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c9[aria-pressed="true"] {
+.c8[aria-pressed="true"] {
   color: #18181c;
   background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
@@ -145,25 +130,25 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
+.c8[aria-pressed="true"]:not([disabled]):hover,
+.c8[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
+.c8[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
 }
 
-.c9[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c9 + .c8 {
+.c8 + .c7 {
   margin-left: 1rem;
 }
 
-.c10 {
+.c9 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -186,13 +171,13 @@ exports[`<AddressResults/> should render no results 1`] = `
   min-width: 7rem;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c10:not([disabled]):active {
+.c9:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -200,7 +185,7 @@ exports[`<AddressResults/> should render no results 1`] = `
   outline: none;
 }
 
-.c10[aria-pressed="true"] {
+.c9[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -209,33 +194,26 @@ exports[`<AddressResults/> should render no results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):hover,
-.c10[aria-pressed="true"]:not([disabled]):focus {
+.c9[aria-pressed="true"]:not([disabled]):hover,
+.c9[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):active {
+.c9[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c10[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c10 + .c8 {
+.c9 + .c7 {
   margin-left: 1rem;
 }
 
 @media print {
   .c1 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c4 {
     max-width: 100%;
     padding: 0;
   }
@@ -255,13 +233,13 @@ exports[`<AddressResults/> should render no results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c5 {
+  .c4 {
     border: none;
     padding: 0 5pt;
   }
@@ -286,28 +264,28 @@ exports[`<AddressResults/> should render no results 1`] = `
           class="c0"
         >
           <div
-            class="c4"
+            class="c1"
           >
             <div
-              class="c5"
+              class="c4"
             >
               <h3
-                class="c6"
+                class="c5"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c7"
+                class="c6"
               >
                 <button
                   aria-pressed="false"
-                  class="c8 c9"
+                  class="c7 c8"
                 >
                   Non
                 </button>
                 <button
                   aria-pressed="false"
-                  class="c8 c10"
+                  class="c7 c9"
                 >
                   Oui
                 </button>
@@ -336,21 +314,6 @@ exports[`<AddressResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c9 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c9 > *:first-child {
-  margin-top: 0;
-}
-
-.c9 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c0 {
   padding: 1.25rem 0;
 }
@@ -371,7 +334,7 @@ exports[`<AddressResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c10 {
+.c9 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -379,11 +342,11 @@ exports[`<AddressResults/> should render results 1`] = `
   background-color: #ebeff3;
 }
 
-.c10 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c10 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -414,11 +377,11 @@ exports[`<AddressResults/> should render results 1`] = `
   background-color: white;
 }
 
-.c11 {
+.c10 {
   margin-bottom: 1rem;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -429,7 +392,7 @@ exports[`<AddressResults/> should render results 1`] = `
   justify-content: space-around;
 }
 
-.c14 {
+.c13 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -452,13 +415,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):focus {
-  background: #fbfcfd;
+.c13:not([disabled]):hover,
+.c13:not([disabled]):focus {
+  background: #f7f7f7;
   color: #18181c;
 }
 
-.c14:not([disabled]):active {
+.c13:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -466,7 +429,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c14[aria-pressed="true"] {
+.c13[aria-pressed="true"] {
   color: #18181c;
   background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
@@ -475,25 +438,25 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
-.c14[aria-pressed="true"]:not([disabled]):hover,
-.c14[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
+.c13[aria-pressed="true"]:not([disabled]):hover,
+.c13[aria-pressed="true"]:not([disabled]):focus {
+  background-color: #eaeaea;
 }
 
-.c14[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
+.c13[aria-pressed="true"]:not([disabled]):active {
+  border-top-color: #d1d1d1;
 }
 
-.c14[disabled] {
+.c13[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c14 + .c13 {
+.c13 + .c12 {
   margin-left: 1rem;
 }
 
-.c15 {
+.c14 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -516,13 +479,13 @@ exports[`<AddressResults/> should render results 1`] = `
   min-width: 7rem;
 }
 
-.c15:not([disabled]):hover,
-.c15:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c15:not([disabled]):active {
+.c14:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -530,7 +493,7 @@ exports[`<AddressResults/> should render results 1`] = `
   outline: none;
 }
 
-.c15[aria-pressed="true"] {
+.c14[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -539,21 +502,21 @@ exports[`<AddressResults/> should render results 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c15[aria-pressed="true"]:not([disabled]):hover,
-.c15[aria-pressed="true"]:not([disabled]):focus {
+.c14[aria-pressed="true"]:not([disabled]):hover,
+.c14[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c15[aria-pressed="true"]:not([disabled]):active {
+.c14[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c15[disabled] {
+.c14[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c15 + .c13 {
+.c14 + .c12 {
   margin-left: 1rem;
 }
 
@@ -604,13 +567,6 @@ exports[`<AddressResults/> should render results 1`] = `
   }
 }
 
-@media print {
-  .c9 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:600px) {
   .c2 {
     padding: 0.625rem 1.25rem;
@@ -625,13 +581,13 @@ exports[`<AddressResults/> should render results 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
+  .c9 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c10 {
+  .c9 {
     border: none;
     padding: 0 5pt;
   }
@@ -702,28 +658,28 @@ exports[`<AddressResults/> should render results 1`] = `
           class="c0"
         >
           <div
-            class="c9"
+            class="c1"
           >
             <div
-              class="c10"
+              class="c9"
             >
               <h3
-                class="c11"
+                class="c10"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c12"
+                class="c11"
               >
                 <button
                   aria-pressed="false"
-                  class="c13 c14"
+                  class="c12 c13"
                 >
                   Non
                 </button>
                 <button
                   aria-pressed="false"
-                  class="c13 c15"
+                  class="c12 c14"
                 >
                   Oui
                 </button>

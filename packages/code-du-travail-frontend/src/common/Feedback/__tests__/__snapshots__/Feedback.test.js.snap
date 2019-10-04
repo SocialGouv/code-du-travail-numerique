@@ -5,7 +5,6 @@ exports[`<Feedback/> should render 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 46.25rem;
 }
 
 .c1 > *:first-child {
@@ -241,7 +240,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 46.25rem;
 }
 
 .c1 > *:first-child {
@@ -542,7 +540,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
-  max-width: 46.25rem;
 }
 
 .c1 > *:first-child {
