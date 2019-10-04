@@ -174,11 +174,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c42:active {
-  position: relative;
-  top: 1px;
-}
-
 .c25 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -610,11 +605,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c15:hover {
   color: #8c94a6;
-}
-
-.c15:active {
-  position: relative;
-  top: 1px;
 }
 
 .c0 {
