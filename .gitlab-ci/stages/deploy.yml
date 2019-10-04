@@ -24,13 +24,17 @@ include:
   only:
     refs:
       - tags
+    variables:
+      - $PRODUCTION
 
 .dev_stage: &dev_stage
   environment:
     name: dev
-  only:
+  except:
     refs:
-      - branches
+      - tags
+    variables:
+      - $PRODUCTION
 
 #
 #

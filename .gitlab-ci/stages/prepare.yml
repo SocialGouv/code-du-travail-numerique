@@ -4,7 +4,9 @@
   extends: .base_register_stage
   stage: "Prepare"
   dependencies: []
-
+  except:
+    variables:
+      - $PRODUCTION
 #
 
 Register socialgouv/cdtn base image:
