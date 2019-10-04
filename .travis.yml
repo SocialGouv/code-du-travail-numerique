@@ -58,20 +58,14 @@ jobs:
       stage: Release
       if: env(RELEASE)
       name: Make a new release 🎉
-      git:
-        # NOTE(douglasduteil): disable git --depth
-        # Try to have all the commits for the release Change Log
-        # see travis-ci/travis-ci#3412
-        depth: 9999999 # Over 9000 !
       env:
         - *github_keys
-      before_script:
-        - git checkout ${TRAVIS_BRANCH}
-        - git config user.name "Social Groovy Bot"
-        - git config user.email "45039513+SocialGroovyBot@users.noreply.github.com"
-        - git remote set-url origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
-      script:
-        - GH_TOKEN=${GITHUB_TOKEN} yarn lerna version ${LERNA_ARGS:=--yes}
+      script: >-
+        curl -X POST
+        -F token=${GITLAB_TOKEN}
+        -F ref=${TRAVIS_BRANCH}
+        -F "variables[RELEASE]=true"
+        https://gitlab.factory.social.gouv.fr/api/v4/projects/51/trigger/pipeline
 
     - stage: Go Prod
       if: env(PRODUCTION)
