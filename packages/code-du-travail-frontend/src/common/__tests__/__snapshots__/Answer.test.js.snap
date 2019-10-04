@@ -71,7 +71,7 @@ exports[`<Answer /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c29 {
+.c26 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -93,16 +93,16 @@ exports[`<Answer /> should render 1`] = `
   border: none;
 }
 
-.c29:hover {
+.c26:hover {
   color: #8c94a6;
 }
 
-.c29:active {
+.c26:active {
   position: relative;
   top: 1px;
 }
 
-.c24 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -124,7 +124,7 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c25 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,7 +145,7 @@ exports[`<Answer /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c26 {
+.c23 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -158,7 +158,7 @@ exports[`<Answer /> should render 1`] = `
   text-align: left;
 }
 
-.c28 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -214,7 +214,7 @@ exports[`<Answer /> should render 1`] = `
   margin-left: -10px;
 }
 
-.c23 {
+.c20 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -222,15 +222,15 @@ exports[`<Answer /> should render 1`] = `
   z-index: 1000;
 }
 
-.c27 {
+.c24 {
   padding: 0 0.25rem;
 }
 
-.c18 {
+.c15 {
   margin-bottom: 1rem;
 }
 
-.c19 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,7 +241,7 @@ exports[`<Answer /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c21 {
+.c18 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -264,13 +264,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c21:not([disabled]):hover,
-.c21:not([disabled]):focus {
+.c18:not([disabled]):hover,
+.c18:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c21:not([disabled]):active {
+.c18:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -278,7 +278,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c21[aria-pressed="true"] {
+.c18[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -287,25 +287,25 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
+.c18[aria-pressed="true"]:not([disabled]):hover,
+.c18[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c21[aria-pressed="true"]:not([disabled]):active {
+.c18[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c21[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c21 + .c20 {
+.c18 + .c17 {
   margin-left: 1rem;
 }
 
-.c22 {
+.c19 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -328,13 +328,13 @@ exports[`<Answer /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):focus {
+.c19:not([disabled]):hover,
+.c19:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c22:not([disabled]):active {
+.c19:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -342,7 +342,7 @@ exports[`<Answer /> should render 1`] = `
   outline: none;
 }
 
-.c22[aria-pressed="true"] {
+.c19[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -351,21 +351,21 @@ exports[`<Answer /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):hover,
-.c22[aria-pressed="true"]:not([disabled]):focus {
+.c19[aria-pressed="true"]:not([disabled]):hover,
+.c19[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):active {
+.c19[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c22[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c22 + .c20 {
+.c19 + .c17 {
   margin-left: 1rem;
 }
 
@@ -581,7 +581,7 @@ exports[`<Answer /> should render 1`] = `
       class="c15"
     >
       <div
-        class="c16"
+        class="c3"
       >
         <strong>
           Les articles pouvant vous interesser :
@@ -597,7 +597,7 @@ exports[`<Answer /> should render 1`] = `
       class="c24"
     >
       <div
-        class="c25"
+        class="c22"
       >
         <svg
           fill="none"
@@ -628,12 +628,12 @@ exports[`<Answer /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c26"
+        class="c23"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c27"
+          class="c24"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -644,12 +644,12 @@ exports[`<Answer /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c28"
+        class="c25"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c29"
+          class="c26"
         >
           <svg
             fill="none"
@@ -759,7 +759,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-bottom: 0;
 }
 
-.c33 {
+.c30 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -781,16 +781,16 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   border: none;
 }
 
-.c33:hover {
+.c30:hover {
   color: #8c94a6;
 }
 
-.c33:active {
+.c30:active {
   position: relative;
   top: 1px;
 }
 
-.c28 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -812,7 +812,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c29 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -833,7 +833,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   background-color: #fee5ad;
 }
 
-.c30 {
+.c27 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -846,7 +846,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   text-align: left;
 }
 
-.c32 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -902,7 +902,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   margin-left: -10px;
 }
 
-.c27 {
+.c24 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -910,15 +910,15 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   z-index: 1000;
 }
 
-.c31 {
+.c28 {
   padding: 0 0.25rem;
 }
 
-.c22 {
+.c19 {
   margin-bottom: 1rem;
 }
 
-.c23 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -929,7 +929,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   justify-content: space-around;
 }
 
-.c25 {
+.c22 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -952,13 +952,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c25:not([disabled]):hover,
-.c25:not([disabled]):focus {
+.c22:not([disabled]):hover,
+.c22:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c25:not([disabled]):active {
+.c22:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -966,7 +966,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c25[aria-pressed="true"] {
+.c22[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -975,25 +975,25 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c25[aria-pressed="true"]:not([disabled]):hover,
-.c25[aria-pressed="true"]:not([disabled]):focus {
+.c22[aria-pressed="true"]:not([disabled]):hover,
+.c22[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c25[aria-pressed="true"]:not([disabled]):active {
+.c22[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c25[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c25 + .c24 {
+.c22 + .c21 {
   margin-left: 1rem;
 }
 
-.c26 {
+.c23 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1016,13 +1016,13 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   min-width: 7rem;
 }
 
-.c26:not([disabled]):hover,
-.c26:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c26:not([disabled]):active {
+.c23:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1030,7 +1030,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   outline: none;
 }
 
-.c26[aria-pressed="true"] {
+.c23[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1039,21 +1039,21 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c26[aria-pressed="true"]:not([disabled]):hover,
-.c26[aria-pressed="true"]:not([disabled]):focus {
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c26[aria-pressed="true"]:not([disabled]):active {
+.c23[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c26[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c26 + .c24 {
+.c23 + .c21 {
   margin-left: 1rem;
 }
 
@@ -1349,7 +1349,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
       class="c19"
     >
       <div
-        class="c20"
+        class="c1"
       >
         <strong>
           Les articles pouvant vous interesser :
@@ -1365,7 +1365,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
       class="c28"
     >
       <div
-        class="c29"
+        class="c26"
       >
         <svg
           fill="none"
@@ -1396,12 +1396,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         </svg>
       </div>
       <div
-        class="c30"
+        class="c27"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c31"
+          class="c28"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -1412,12 +1412,12 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c32"
+        class="c29"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c33"
+          class="c30"
         >
           <svg
             fill="none"
@@ -1521,7 +1521,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-bottom: 0;
 }
 
-.c30 {
+.c27 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1543,16 +1543,16 @@ exports[`<Answer /> should render tooltip 1`] = `
   border: none;
 }
 
-.c30:hover {
+.c27:hover {
   color: #8c94a6;
 }
 
-.c30:active {
+.c27:active {
   position: relative;
   top: 1px;
 }
 
-.c25 {
+.c22 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1574,7 +1574,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c26 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1595,7 +1595,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   background-color: #fee5ad;
 }
 
-.c27 {
+.c24 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1608,7 +1608,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   text-align: left;
 }
 
-.c29 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1664,7 +1664,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-left: -10px;
 }
 
-.c24 {
+.c21 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -1672,15 +1672,15 @@ exports[`<Answer /> should render tooltip 1`] = `
   z-index: 1000;
 }
 
-.c28 {
+.c25 {
   padding: 0 0.25rem;
 }
 
-.c19 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c20 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1691,7 +1691,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   justify-content: space-around;
 }
 
-.c22 {
+.c19 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1714,13 +1714,13 @@ exports[`<Answer /> should render tooltip 1`] = `
   min-width: 7rem;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):focus {
+.c19:not([disabled]):hover,
+.c19:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c22:not([disabled]):active {
+.c19:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -1728,7 +1728,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   outline: none;
 }
 
-.c22[aria-pressed="true"] {
+.c19[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -1737,25 +1737,25 @@ exports[`<Answer /> should render tooltip 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):hover,
-.c22[aria-pressed="true"]:not([disabled]):focus {
+.c19[aria-pressed="true"]:not([disabled]):hover,
+.c19[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):active {
+.c19[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c22[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c22 + .c21 {
+.c19 + .c18 {
   margin-left: 1rem;
 }
 
-.c23 {
+.c20 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1778,13 +1778,13 @@ exports[`<Answer /> should render tooltip 1`] = `
   min-width: 7rem;
 }
 
-.c23:not([disabled]):hover,
-.c23:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c23:not([disabled]):active {
+.c20:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -1792,7 +1792,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   outline: none;
 }
 
-.c23[aria-pressed="true"] {
+.c20[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -1801,21 +1801,21 @@ exports[`<Answer /> should render tooltip 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):hover,
-.c23[aria-pressed="true"]:not([disabled]):focus {
+.c20[aria-pressed="true"]:not([disabled]):hover,
+.c20[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):active {
+.c20[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c23[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c23 + .c21 {
+.c20 + .c18 {
   margin-left: 1rem;
 }
 
@@ -2075,13 +2075,13 @@ exports[`<Answer /> should render tooltip 1`] = `
     </div>
   </div>
   <div
-    class="c24"
+    class="c21"
   >
     <div
-      class="c25"
+      class="c22"
     >
       <div
-        class="c26"
+        class="c23"
       >
         <svg
           fill="none"
@@ -2112,12 +2112,12 @@ exports[`<Answer /> should render tooltip 1`] = `
         </svg>
       </div>
       <div
-        class="c27"
+        class="c24"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c28"
+          class="c25"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2128,12 +2128,12 @@ exports[`<Answer /> should render tooltip 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c29"
+        class="c26"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c30"
+          class="c27"
         >
           <svg
             fill="none"
@@ -2237,7 +2237,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   margin-bottom: 0;
 }
 
-.c30 {
+.c27 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2259,16 +2259,16 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   border: none;
 }
 
-.c30:hover {
+.c27:hover {
   color: #8c94a6;
 }
 
-.c30:active {
+.c27:active {
   position: relative;
   top: 1px;
 }
 
-.c25 {
+.c22 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2290,7 +2290,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   box-shadow: 0 5px 10px 0 #c9d3df;
 }
 
-.c26 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2311,7 +2311,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   background-color: #fee5ad;
 }
 
-.c27 {
+.c24 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2324,7 +2324,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   text-align: left;
 }
 
-.c29 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2380,7 +2380,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   margin-left: -10px;
 }
 
-.c24 {
+.c21 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -2388,15 +2388,15 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   z-index: 1000;
 }
 
-.c28 {
+.c25 {
   padding: 0 0.25rem;
 }
 
-.c19 {
+.c16 {
   margin-bottom: 1rem;
 }
 
-.c20 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2407,7 +2407,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   justify-content: space-around;
 }
 
-.c22 {
+.c19 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2430,13 +2430,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   min-width: 7rem;
 }
 
-.c22:not([disabled]):hover,
-.c22:not([disabled]):focus {
+.c19:not([disabled]):hover,
+.c19:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c22:not([disabled]):active {
+.c19:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -2444,7 +2444,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   outline: none;
 }
 
-.c22[aria-pressed="true"] {
+.c19[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -2453,25 +2453,25 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):hover,
-.c22[aria-pressed="true"]:not([disabled]):focus {
+.c19[aria-pressed="true"]:not([disabled]):hover,
+.c19[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c22[aria-pressed="true"]:not([disabled]):active {
+.c19[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c22[disabled] {
+.c19[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c22 + .c21 {
+.c19 + .c18 {
   margin-left: 1rem;
 }
 
-.c23 {
+.c20 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2494,13 +2494,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   min-width: 7rem;
 }
 
-.c23:not([disabled]):hover,
-.c23:not([disabled]):focus {
+.c20:not([disabled]):hover,
+.c20:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c23:not([disabled]):active {
+.c20:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -2508,7 +2508,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   outline: none;
 }
 
-.c23[aria-pressed="true"] {
+.c20[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -2517,21 +2517,21 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):hover,
-.c23[aria-pressed="true"]:not([disabled]):focus {
+.c20[aria-pressed="true"]:not([disabled]):hover,
+.c20[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c23[aria-pressed="true"]:not([disabled]):active {
+.c20[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c23[disabled] {
+.c20[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c23 + .c21 {
+.c20 + .c18 {
   margin-left: 1rem;
 }
 
@@ -2775,13 +2775,13 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
     </div>
   </div>
   <div
-    class="c24"
+    class="c21"
   >
     <div
-      class="c25"
+      class="c22"
     >
       <div
-        class="c26"
+        class="c23"
       >
         <svg
           fill="none"
@@ -2812,12 +2812,12 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
         </svg>
       </div>
       <div
-        class="c27"
+        class="c24"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c28"
+          class="c25"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -2828,12 +2828,12 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
         est prévue pour 2020.
       </div>
       <div
-        class="c29"
+        class="c26"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c30"
+          class="c27"
         >
           <svg
             fill="none"

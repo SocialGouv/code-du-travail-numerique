@@ -174,7 +174,7 @@ exports[`<FicheSP /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c37:active {
+.c34:active {
   position: relative;
   top: 1px;
 }

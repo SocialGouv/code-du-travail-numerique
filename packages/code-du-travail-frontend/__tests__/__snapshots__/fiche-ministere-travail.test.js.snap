@@ -174,7 +174,7 @@ exports[`<FicheMT /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c36:active {
+.c33:active {
   position: relative;
   top: 1px;
 }
