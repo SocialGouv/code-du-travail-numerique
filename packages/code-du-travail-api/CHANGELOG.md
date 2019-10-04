@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.2.0...v3.3.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **api:** refine npm lint script glob ([#1313](https://github.com/SocialGouv/code-du-travail-numerique/issues/1313)) ([f0ed124](https://github.com/SocialGouv/code-du-travail-numerique/commit/f0ed124))
+* **docker:** update docker-compose config ([#1312](https://github.com/SocialGouv/code-du-travail-numerique/issues/1312)) ([786dd5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/786dd5c))
+* **nlp:** update nlp docker config ([#1324](https://github.com/SocialGouv/code-du-travail-numerique/issues/1324)) ([1d1785a](https://github.com/SocialGouv/code-du-travail-numerique/commit/1d1785a))
+
+
+### Features
+
+* **frontend:** new search ux ([#1291](https://github.com/SocialGouv/code-du-travail-numerique/issues/1291)) ([2eb33b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/2eb33b1))
+
+
+
+
+
 # [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.2.0...v3.3.0) (2019-10-04)
+
+
+### Features
+
+* **frontend:** new search ux ([#1291](https://github.com/SocialGouv/code-du-travail-numerique/issues/1291)) ([2eb33b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/2eb33b1))
+
+
+
+
+
 # [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
 
 **Note:** Version bump only for package @cdt/ui-old

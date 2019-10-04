@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.2.0...v3.3.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **docker:** update docker-compose config ([#1312](https://github.com/SocialGouv/code-du-travail-numerique/issues/1312)) ([786dd5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/786dd5c))
+* **nlp:** update nlp docker config ([#1324](https://github.com/SocialGouv/code-du-travail-numerique/issues/1324)) ([1d1785a](https://github.com/SocialGouv/code-du-travail-numerique/commit/1d1785a))
+
+
+### Features
+
+* **nlp:** load api sync ([#1330](https://github.com/SocialGouv/code-du-travail-numerique/issues/1330)) ([0bd93ce](https://github.com/SocialGouv/code-du-travail-numerique/commit/0bd93ce))
+
+
+
+
+
 # [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
 
 **Note:** Version bump only for package @cdt/nlp
