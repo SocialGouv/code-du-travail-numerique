@@ -5,7 +5,6 @@
 export BRANCH_NAME=${BRANCH_NAME:=$CI_COMMIT_REF_SLUG}
 export COMMIT_TAG=${COMMIT_TAG:=$CI_COMMIT_TAG}
 export COMMIT=${COMMIT:=$CI_COMMIT_SHA}
-export ENVIRONMENT=${ENVIRONMENT:="dev.factory"};
 export HASH_SIZE=${HASH_SIZE:=7}
 export JOB_ID=${JOB_ID:=$CI_JOB_ID}
 export PROJECT_PATH=${PROJECT_PATH:=$CI_PROJECT_PATH}
@@ -14,8 +13,6 @@ export VERSION=${VERSION:=$CI_COMMIT_REF_NAME}
 
 BRANCH_NAME_HASHED=$( printf "${BRANCH_NAME}" | sha1sum | cut -c1-${HASH_SIZE} )
 export BRANCH_HASH=${BRANCH_HASH:=$BRANCH_NAME_HASHED}
-
-export DOMAIN="code-du-travail-numerique.${ENVIRONMENT}.social.gouv.fr";
 
 #
 
@@ -32,8 +29,9 @@ fi
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   export BRANCH_HASH=prod;
+  export DOMAIN="code-du-travail-numerique.incubateur.social.gouv.fr";
 else
-  export DOMAIN="${BRANCH_HASH}.${DOMAIN}";
+  export DOMAIN="${BRANCH_HASH}.code-du-travail-numerique.dev.factory.social.gouv.fr";
 fi
 
 
@@ -61,7 +59,7 @@ else
 fi
 
 printenv | grep -E \
-  "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|ENVIRONMENT|CLUSTER_NAME|HASH_SIZE|JOB_ID" \
+  "BRANCH_HASH|BRANCH_NAME|BRANCH_HASH_DOT|COMMIT|COMMIT_TAG|DOMAIN|CLUSTER_NAME|HASH_SIZE|JOB_ID" \
   | sort
 printenv | grep -E \
   "API_HOST|API_URL|ELASTICSEARCH_HOST|FRONTEND_HOST|FRONTEND_URL|NLP_HOST|NLP_URL" \

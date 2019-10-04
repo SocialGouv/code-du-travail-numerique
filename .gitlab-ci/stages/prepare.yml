@@ -4,16 +4,52 @@
   extends: .base_register_stage
   stage: "Prepare"
   dependencies: []
-  except:
-    variables:
-      - $PRODUCTION
+
 #
 
-Register socialgouv/cdtn base image:
+Register new socialgouv/cdtn base image:
   <<: *prepare_stage
   variables:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
+  only:
+    changes:
+      - yarn.lock
+      - package.lock
+      - packages/**/package.lock
+  except:
+    variables:
+      - $PRODUCTION
+
+
+Register previous socialgouv/cdtn base image:
+  <<: *prepare_stage
+  variables:
+    CONTEXT: .
+    IMAGE_NAME: $CI_REGISTRY_IMAGE
+  except:
+    changes:
+      - yarn.lock
+      - package.lock
+      - packages/**/package.lock
+    variables:
+      - $PRODUCTION
+  script:
+    - >
+      if [[ -n "${CI_COMMIT_TAG}" ]]; then
+        export TAG=$(printf "${CI_COMMIT_TAG}" | sed "s/^v//")
+      else
+        export TAG=$CI_COMMIT_REF_SLUG
+      fi
+    #
+    - docker pull $IMAGE_NAME:master || true
+    - echo "> docker tag ${IMAGE_NAME}:master ${IMAGE_NAME}:${TAG}"
+    - docker tag $IMAGE_NAME:master $IMAGE_NAME:$CI_COMMIT_SHA
+    - echo "> docker tag ${IMAGE_NAME}:master ${IMAGE_NAME}:${CI_COMMIT_SHA}"
+    - docker tag $IMAGE_NAME:master $IMAGE_NAME:$TAG
+    - docker push $IMAGE_NAME:$CI_COMMIT_SHA
+    - docker push $IMAGE_NAME:$TAG
+#
 
 Register elasticsearch image:
   <<: *prepare_stage

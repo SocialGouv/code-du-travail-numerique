@@ -10,6 +10,8 @@ PROJECT_PATH=${PROJECT_PATH:=$CI_PROJECT_PATH}
 
 if [[ -n "${PRODUCTION+x}" ]]; then
   ENVIRONMENT=production
+else
+  ENVIRONMENT=development
 fi
 
 if [[ -z ${DEPLOY_ID} ]] || ! [[ ${STATE} = "success" || ${STATE} = "failure" ]]; then

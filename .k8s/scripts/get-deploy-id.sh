@@ -20,6 +20,8 @@ fi
 if [[ -n "${PRODUCTION+x}" ]]; then
   ENVIRONMENT=production
   PRODUCTION_ENVIRONMENT=true
+else
+  ENVIRONMENT=development
 fi
 
 curl -0 -sS \
