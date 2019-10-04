@@ -30,9 +30,15 @@ class ModeleCourrier extends React.Component {
   }
 
   render() {
-    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
-    const { description = "" } = data._source;
-    if (data.status === 404) {
+    const {
+      data: {
+        _source: { date, description = "", filename, html, title },
+        status
+      } = { _source: {} },
+      pageUrl,
+      ogImage
+    } = this.props;
+    if (status === 404) {
       return (
         <Answer
           emptyMessage="Modèle de courrier introuvable"
@@ -44,7 +50,7 @@ class ModeleCourrier extends React.Component {
       <Layout>
         <Metas
           url={pageUrl}
-          title={`Modèle de courrier :  ${data._source.title}`}
+          title={`Modèle de courrier :  ${title}`}
           description={
             description.slice(0, description.indexOf(" ", 150)) + "…"
           }
@@ -52,23 +58,23 @@ class ModeleCourrier extends React.Component {
         />
 
         <Answer
-          title={`Modèle de courrier :  ${data._source.title}`}
+          title={`Modèle de courrier :  ${title}`}
           emptyMessage="Modèle de courrier introuvable"
           intro={description}
           footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
           icon={ModeleCourrierIcon}
-          date={data._source.date}
+          date={date}
           sourceType="Modèle de document"
         >
           <Section>
             <Wrapper variant="light">
-              <Html>{data._source.html}</Html>
+              <Html>{html}</Html>
             </Wrapper>
           </Section>
           <h4>Télécharger le modèle</h4>
           <DownloadFile
-            title={data._source.title || "modele"}
-            file={`${API_URL}/docs/${data._source.filename}`}
+            title={title || "modele"}
+            file={`${API_URL}/docs/${filename}`}
             type="Modèle de document"
           />
         </Answer>
