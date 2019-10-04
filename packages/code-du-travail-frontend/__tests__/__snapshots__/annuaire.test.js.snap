@@ -13,7 +13,7 @@ exports[`<Annuaire /> should render 1`] = `
   border: 0;
 }
 
-.c35 {
+.c34 {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -33,22 +33,7 @@ exports[`<Annuaire /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c19 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c19 > *:first-child {
-  margin-top: 0;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c28 {
+.c27 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -56,11 +41,11 @@ exports[`<Annuaire /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c28 > *:first-child {
+.c27 > *:first-child {
   margin-top: 0;
 }
 
-.c28 > *:last-child {
+.c27 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -86,7 +71,7 @@ exports[`<Annuaire /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c20 {
+.c19 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border-width: 1px;
@@ -96,11 +81,11 @@ exports[`<Annuaire /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c20 > *:first-child {
+.c19 > *:first-child {
   margin-top: 0;
 }
 
-.c20 > *:last-child {
+.c19 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -122,7 +107,7 @@ exports[`<Annuaire /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c30 {
+.c29 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -144,13 +129,13 @@ exports[`<Annuaire /> should render 1`] = `
   border-bottom-color: #003a61;
 }
 
-.c30:not([disabled]):hover,
-.c30:not([disabled]):focus {
+.c29:not([disabled]):hover,
+.c29:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c30:not([disabled]):active {
+.c29:not([disabled]):active {
   color: #fff;
   background: #0078c7;
   border-width: 2px 1px 1px 1px;
@@ -158,7 +143,7 @@ exports[`<Annuaire /> should render 1`] = `
   outline: none;
 }
 
-.c30[aria-pressed="true"] {
+.c29[aria-pressed="true"] {
   color: #fff;
   background: #0068ae;
   border-width: 2px 1px 1px 1px;
@@ -167,16 +152,16 @@ exports[`<Annuaire /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #003a61;
 }
 
-.c30[aria-pressed="true"]:not([disabled]):hover,
-.c30[aria-pressed="true"]:not([disabled]):focus {
+.c29[aria-pressed="true"]:not([disabled]):hover,
+.c29[aria-pressed="true"]:not([disabled]):focus {
   background-color: #005994;
 }
 
-.c30[aria-pressed="true"]:not([disabled]):active {
+.c29[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #003a61;
 }
 
-.c30[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -370,16 +355,16 @@ exports[`<Annuaire /> should render 1`] = `
   width: 350px;
 }
 
-.c27 {
+.c26 {
   text-align: center;
 }
 
-.c29 {
+.c28 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c31 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -390,29 +375,29 @@ exports[`<Annuaire /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c33 + .c32 {
+.c32 + .c31 {
   padding-left: 1rem;
 }
 
-.c34 {
+.c33 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c36 {
+.c35 {
   margin: 0.5rem 0;
 }
 
-.c36 a,
-.c36 a:visited {
+.c35 a,
+.c35 a:visited {
   color: #434956;
 }
 
-.c21 {
+.c20 {
   margin-bottom: 1rem;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -423,7 +408,7 @@ exports[`<Annuaire /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c24 {
+.c23 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -446,13 +431,13 @@ exports[`<Annuaire /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c24:not([disabled]):hover,
-.c24:not([disabled]):focus {
+.c23:not([disabled]):hover,
+.c23:not([disabled]):focus {
   background: #f7f7f7;
   color: #18181c;
 }
 
-.c24:not([disabled]):active {
+.c23:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -460,7 +445,7 @@ exports[`<Annuaire /> should render 1`] = `
   outline: none;
 }
 
-.c24[aria-pressed="true"] {
+.c23[aria-pressed="true"] {
   color: #18181c;
   background: #f7f7f7;
   border-width: 2px 1px 1px 1px;
@@ -469,25 +454,25 @@ exports[`<Annuaire /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #d1d1d1;
 }
 
-.c24[aria-pressed="true"]:not([disabled]):hover,
-.c24[aria-pressed="true"]:not([disabled]):focus {
+.c23[aria-pressed="true"]:not([disabled]):hover,
+.c23[aria-pressed="true"]:not([disabled]):focus {
   background-color: #eaeaea;
 }
 
-.c24[aria-pressed="true"]:not([disabled]):active {
+.c23[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #d1d1d1;
 }
 
-.c24[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c24 + .c23 {
+.c23 + .c22 {
   margin-left: 1rem;
 }
 
-.c25 {
+.c24 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -510,13 +495,13 @@ exports[`<Annuaire /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c25:not([disabled]):hover,
-.c25:not([disabled]):focus {
+.c24:not([disabled]):hover,
+.c24:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c25:not([disabled]):active {
+.c24:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -524,7 +509,7 @@ exports[`<Annuaire /> should render 1`] = `
   outline: none;
 }
 
-.c25[aria-pressed="true"] {
+.c24[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -533,21 +518,21 @@ exports[`<Annuaire /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c25[aria-pressed="true"]:not([disabled]):hover,
-.c25[aria-pressed="true"]:not([disabled]):focus {
+.c24[aria-pressed="true"]:not([disabled]):hover,
+.c24[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c25[aria-pressed="true"]:not([disabled]):active {
+.c24[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c25[disabled] {
+.c24[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c25 + .c23 {
+.c24 + .c22 {
   margin-left: 1rem;
 }
 
@@ -559,14 +544,7 @@ exports[`<Annuaire /> should render 1`] = `
 }
 
 @media print {
-  .c19 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c28 {
+  .c27 {
     max-width: 100%;
     padding: 0;
   }
@@ -586,13 +564,13 @@ exports[`<Annuaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c20 {
+  .c19 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c20 {
+  .c19 {
     border: none;
     padding: 0 5pt;
   }
@@ -645,13 +623,13 @@ exports[`<Annuaire /> should render 1`] = `
 }
 
 @media print {
-  .c26 {
+  .c25 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c31 {
+  .c30 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -659,7 +637,7 @@ exports[`<Annuaire /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c33 + .c32 {
+  .c32 + .c31 {
     padding-left: 0;
   }
 }
@@ -779,28 +757,28 @@ exports[`<Annuaire /> should render 1`] = `
             class="c16"
           >
             <div
-              class="c19"
+              class="c1"
             >
               <div
-                class="c20"
+                class="c19"
               >
                 <h3
-                  class="c21"
+                  class="c20"
                 >
                   Avez-vous trouvé la réponse à votre question ?
                 </h3>
                 <p
-                  class="c22"
+                  class="c21"
                 >
                   <button
                     aria-pressed="false"
-                    class="c23 c24"
+                    class="c22 c23"
                   >
                     Non
                   </button>
                   <button
                     aria-pressed="false"
-                    class="c23 c25"
+                    class="c22 c24"
                   >
                     Oui
                   </button>
@@ -813,25 +791,25 @@ exports[`<Annuaire /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c26"
+    class="c25"
   >
     <div
       class="c16"
     >
       <div
-        class="c1 c27"
+        class="c1 c26"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c28 c29"
+          class="c27 c28"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
           aria-pressed="false"
-          class="c30"
+          class="c29"
         >
           Contacter les services de renseignement
         </button>
@@ -841,21 +819,21 @@ exports[`<Annuaire /> should render 1`] = `
       class="c16"
     >
       <div
-        class="c1 c31"
+        class="c1 c30"
       >
         <div
-          class="c32 c33"
+          class="c31 c32"
         >
           <h3
-            class="c34"
+            class="c33"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c35"
+            class="c34"
           >
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="/droit-du-travail"
@@ -873,7 +851,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="/a-propos"
@@ -882,7 +860,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="/mentions-legales"
@@ -891,7 +869,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -902,18 +880,18 @@ exports[`<Annuaire /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c32 c33"
+          class="c31 c32"
         >
           <h3
-            class="c34"
+            class="c33"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c35"
+            class="c34"
           >
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -924,7 +902,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -937,18 +915,18 @@ exports[`<Annuaire /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c32 c33"
+          class="c31 c32"
         >
           <h3
-            class="c34"
+            class="c33"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c35"
+            class="c34"
           >
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -959,7 +937,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -970,7 +948,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="https://beta.gouv.fr/"
