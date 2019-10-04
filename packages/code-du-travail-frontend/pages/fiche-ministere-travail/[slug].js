@@ -34,30 +34,36 @@ class Fiche extends React.Component {
   }
 
   render() {
-    const { data = { _source: {} }, pageUrl, ogImage } = this.props;
-    const footer = (
-      <Source name="Ministère du travail" url={data._source.url} />
-    );
-
+    const {
+      data: {
+        _source: { title, description, date, html, breadcrumbs, intro, url },
+        relatedItems
+      } = {
+        _source: {}
+      },
+      pageUrl,
+      ogImage
+    } = this.props;
+    const footer = <Source name="Ministère du travail" url={url} />;
     return (
       <Layout>
         <Metas
           url={pageUrl}
-          title={data._source.title}
-          description={data._source.description}
+          title={title}
+          description={description}
           image={ogImage}
         />
         <Answer
-          title={data._source.title}
-          relatedItems={data.relatedItems}
+          title={title}
+          relatedItems={relatedItems}
           emptyMessage="Cette fiche n'a pas été trouvée"
-          intro={data._source.intro && <Intro>{data._source.intro} </Intro>}
-          html={data._source.html}
+          intro={intro && <Intro>{intro} </Intro>}
+          html={html}
           footer={footer}
           icon={ReponseIcon}
-          date={data._source.date}
+          date={date}
           sourceType="Fiche ministère du Travail"
-          breadcrumbs={data._source.breadcrumbs}
+          breadcrumbs={breadcrumbs}
         />
       </Layout>
     );

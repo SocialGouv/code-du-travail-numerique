@@ -55,7 +55,8 @@ class Fiche extends React.Component {
         references_juridiques,
         title,
         url
-      }
+      },
+      relatedItems
     } = data;
     const footer = <Source name="service-public.fr" url={url} />;
     return (
@@ -69,6 +70,7 @@ class Fiche extends React.Component {
         <ServicePublic>
           <Answer
             title={title}
+            relatedItems={relatedItems}
             emptyMessage="Cette fiche n'a pas été trouvée"
             html={html}
             footer={footer}
