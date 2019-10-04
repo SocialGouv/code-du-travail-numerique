@@ -97,11 +97,6 @@ exports[`<Answer /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c26:active {
-  position: relative;
-  top: 1px;
-}
-
 .c21 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -783,11 +778,6 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c30:hover {
   color: #8c94a6;
-}
-
-.c30:active {
-  position: relative;
-  top: 1px;
 }
 
 .c25 {
@@ -1547,11 +1537,6 @@ exports[`<Answer /> should render tooltip 1`] = `
   color: #8c94a6;
 }
 
-.c27:active {
-  position: relative;
-  top: 1px;
-}
-
 .c22 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -2261,11 +2246,6 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 .c27:hover {
   color: #8c94a6;
-}
-
-.c27:active {
-  position: relative;
-  top: 1px;
 }
 
 .c22 {
