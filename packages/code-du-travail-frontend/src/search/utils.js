@@ -1,30 +1,5 @@
 import { SOURCES } from "@cdt/sources";
 
-import ReponseIcon from "../icons/ReponseIcon";
-import ArticleIcon from "../icons/ArticleIcon";
-import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
-import DossierIcon from "../icons/DossierIcon";
-import OutilIcon from "../icons/OutilsIcon";
-
-export const getSourceIcon = (source = "") => {
-  switch (source) {
-    case SOURCES.SHEET_SP:
-    case SOURCES.SHEET_MT:
-      return ReponseIcon;
-    case SOURCES.CDT:
-    case SOURCES.CCN:
-      return ArticleIcon;
-    case SOURCES.LETTERS:
-      return ModeleCourrierIcon;
-    case SOURCES.TOOLS:
-      return OutilIcon;
-    case SOURCES.THEMES:
-      return DossierIcon;
-    default:
-      return null;
-  }
-};
-
 export const groupBySource = items =>
   items.reduce((accumulator, item) => {
     const itemSource = item._source.source;

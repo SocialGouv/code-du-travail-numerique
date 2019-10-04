@@ -17,7 +17,7 @@ export const LinkContent = ({ author, description = "", source, title }) => {
           }`}</span>
         </Source>
       )}
-      <H3>{title}</H3>
+      <H3 noMargin={!summary}>{title}</H3>
       {summary && <Summary>{summary}</Summary>}
     </>
   );
@@ -31,7 +31,7 @@ const Source = styled.p`
 `;
 
 const H3 = styled.h3`
-  margin-top: 0;
+  ${({ noMargin }) => (noMargin ? `margin: 0;` : `margin-top: 0;`)}
   font-size: ${fonts.sizeH5};
   font-weight: bold;
 `;
