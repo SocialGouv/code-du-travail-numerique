@@ -57,7 +57,7 @@ function Feedback({
 
   return (
     <Section>
-      <Container narrow>
+      <Container>
         <Wrapper variant="dark">
           <Title>Avez-vous trouvé la réponse à votre question ?</Title>
           {isSatisfied === null && (
