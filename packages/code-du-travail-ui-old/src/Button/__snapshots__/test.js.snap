@@ -99,11 +99,6 @@ exports[`<Button /> it renders a Button icon 1`] = `
   color: #8c94a6;
 }
 
-.c0:active {
-  position: relative;
-  top: 1px;
-}
-
 <div>
   <button
     aria-pressed="false"
