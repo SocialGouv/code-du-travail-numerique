@@ -28,6 +28,12 @@ export class DocumentSuggester extends React.Component {
     suggestions: []
   };
 
+  focusInput = autoSuggest => {
+    if (autoSuggest !== null && this.props.hasFocus) {
+      autoSuggest.input.focus();
+    }
+  };
+
   onSuggestionSelected = (event, data) => {
     this.props.onSelect(data.suggestion, event);
   };
@@ -79,6 +85,7 @@ export class DocumentSuggester extends React.Component {
         <ScreenReaderOnly type={"inline"}>Rechercher</ScreenReaderOnly>
         <Autosuggest
           id="cdtn-documents-suggester"
+          ref={this.focusInput}
           theme={suggesterTheme}
           suggestions={suggestions}
           alwaysRenderSuggestions={false}
