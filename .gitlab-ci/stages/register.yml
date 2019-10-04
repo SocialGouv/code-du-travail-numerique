@@ -3,15 +3,6 @@
 .build_and_push_stage: &build_and_push_stage
   extends: .base_register_stage
   stage: "Registration"
-  dependencies: []
-  before_script:
-    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u gitlab-ci-token --password-stdin
-  script:
-    - docker pull $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA || true
-    - docker build $DOCKER_BUILD_ARGS --cache-from $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA -t $IMAGE_NAME:$CI_COMMIT_SHA $CONTEXT
-    - docker push $IMAGE_NAME
-
-#
 
 Register api image:
   <<: *build_and_push_stage
