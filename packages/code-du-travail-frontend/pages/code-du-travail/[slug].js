@@ -35,7 +35,10 @@ class Fiche extends React.Component {
 
   render() {
     const {
-      data: { _source: { title, description, date_debut, html, url } } = {
+      data: {
+        _source: { title, description, date_debut, html, url },
+        relatedItems
+      } = {
         _source: {}
       },
       pageUrl,
@@ -53,6 +56,7 @@ class Fiche extends React.Component {
         />
         <Answer
           title={title}
+          relatedItems={relatedItems}
           date={
             date_debut &&
             format(parseISO(date_debut), "dd MMMM yyyy", {

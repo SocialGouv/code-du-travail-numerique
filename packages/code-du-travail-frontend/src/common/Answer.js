@@ -55,7 +55,6 @@ function Answer({
 }) {
   const portalComponents = usePortals(children, html);
   const linkedResults = groupByDisplayCategory(relatedItems);
-  console.log("CONSOLE LOG: linkedResults", linkedResults);
 
   return (
     <>
@@ -65,7 +64,7 @@ function Answer({
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       <StyledWrapper>
-        <StyledContent>
+        <StyledContent isFull={linkedResults.matches.length === 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
@@ -82,13 +81,22 @@ function Answer({
             </Article>
           )}
           {additionalContent}
+          <Feedback
+            query={router.query.q}
+            sourceType={sourceType}
+            sourceFilter={router.query.source}
+            url={router.asPath}
+            title={title}
+          />
         </StyledContent>
-        <StyledMenu>
-          <StyledMenuList>
-            <strong>Les articles pouvant vous interesser :</strong>
-            <ul>
-              {/* {(linkedResults &&
-                linkedResults
+        {linkedResults.matches.length > 0 && (
+          <StyledMenu>
+            <StyledMenuList>
+              <StyledMenuTitle>
+                Les articles pouvant vous interesser :
+              </StyledMenuTitle>
+              <ul>
+                {linkedResults.matches
                   .filter(link => link.title !== title)
                   .slice(0, 3)
                   .map(link => (
@@ -96,21 +104,15 @@ function Answer({
                       <Link
                         href={`/${getRouteBySource(link.source)}/${link.slug}`}
                       >
-                        {link.title}
+                        <a>{link.title}</a>
                       </Link>
                     </li>
-                  ))) || <>Chargement...</>} */}
-            </ul>
-          </StyledMenuList>
-        </StyledMenu>
+                  ))}
+              </ul>
+            </StyledMenuList>
+          </StyledMenu>
+        )}
       </StyledWrapper>
-      <Feedback
-        query={router.query.q}
-        sourceType={sourceType}
-        sourceFilter={router.query.source}
-        url={router.asPath}
-        title={title}
-      />
       <Disclaimer />
     </>
   );
@@ -144,12 +146,13 @@ const StyledContainer = styled(Container)`
 
 const StyledWrapper = styled(Container)`
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding: 0;
 `;
 
 const StyledContent = styled.div`
-  width: 70%;
+  width: ${props => (props.isFull ? "80%" : "70%")};
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
@@ -159,11 +162,10 @@ const StyledMenu = styled.div`
   padding: 2rem 0;
   width: 30%;
   color: ${colors.blue};
-  & a {
-    text-decoration: none;
-  }
   @media (max-width: ${breakpoints.tablet}) {
-    display: none;
+    padding: 4rem 2rem 7rem 0;
+    margin: 0 ${spacing.medium};
+    width: 100%;
   }
 `;
 
@@ -175,6 +177,18 @@ const StyledMenuList = styled.div`
   padding: 0 ${spacing.base};
   & li {
     margin: ${spacing.base} 0;
+  }
+  @media (max-width: ${breakpoints.tablet}) {
+    position: relative;
+  }
+`;
+
+const StyledMenuTitle = styled.div`
+  font-size: ${fonts.sizeBase};
+  font-weight: bold;
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: ${fonts.sizeH2};
+    font-weight: normal;
   }
 `;
 
