@@ -12,7 +12,9 @@
     "lint": "lerna run lint --parallel",
     "postinstall": "node scripts/setup-env.js",
     "start": "lerna run start --parallel",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,8 @@
   },
   "dependencies": {
     "husky": "^3.0.8",
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "snyk": "^1.231.0"
   },
   "resolutions": {
     "@babel/core": "7.6.2",
@@ -42,5 +45,6 @@
   },
   "engines": {
     "node": ">= 10.15"
-  }
+  },
+  "snyk": true
 }
