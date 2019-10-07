@@ -495,7 +495,7 @@ exports[`<Answer /> should render 1`] = `
                   <span
                     class="c9"
                   >
-                    Mis à jour le : 
+                    Mis à jour le :
                     <span
                       class="c10"
                     >
@@ -519,7 +519,7 @@ exports[`<Answer /> should render 1`] = `
                   <p
                     class="test-content"
                   >
-                    Contenu au format 
+                    Contenu au format
                     <strong>
                       html
                     </strong>
@@ -1178,7 +1178,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             aria-hidden="true"
             class="c5"
           >
-             » 
+             »
           </li>
           <li
             class="c4"
@@ -1194,7 +1194,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             aria-hidden="true"
             class="c5"
           >
-             » 
+             »
           </li>
           <li
             class="c4"
@@ -1246,7 +1246,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                   <span
                     class="c13"
                   >
-                    Mis à jour le : 
+                    Mis à jour le :
                     <span
                       class="c14"
                     >
@@ -1270,7 +1270,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
                   <p
                     class="test-content"
                   >
-                    Contenu au format 
+                    Contenu au format
                     <strong>
                       html
                     </strong>
@@ -1915,7 +1915,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                   <span
                     class="c9"
                   >
-                    Mis à jour le : 
+                    Mis à jour le :
                     <span
                       class="c10"
                     >
@@ -1939,11 +1939,11 @@ exports[`<Answer /> should render tooltip 1`] = `
                   <p
                     class="test-content"
                   >
-                    Contenu au format 
+                    Contenu au format
                     <strong>
                       html
                     </strong>
-                     contenant des tooltip sur certains mot comme 
+                     contenant des tooltip sur certains mot comme
                     <span
                       data-tooltip-slug="rescrit"
                       data-tooltip-term="rescrit"
@@ -1957,7 +1957,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                         rescrit
                       </span>
                     </span>
-                    . match aussi les abbréviation comme 
+                    . match aussi les abbréviation comme
                     <span
                       data-tooltip-slug="activite-principale-exercee"
                       data-tooltip-term="APE"
@@ -1971,7 +1971,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                         APE
                       </span>
                     </span>
-                     mais pas ape ou ses variantes comme 
+                     mais pas ape ou ses variantes comme
                     <span
                       data-tooltip-slug="activite-principale-exercee"
                       data-tooltip-term="code ape"
@@ -2491,6 +2491,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   margin-left: 1rem;
 }
 
+<<<<<<< HEAD
 .c14 {
   border-bottom: 1px dotted #006be6;
 }
@@ -2525,6 +2526,42 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   border-radius: 0.25rem;
 }
 
+=======
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.c2 {
+  width: 80%;
+}
+
+.c13 {
+  margin: 1rem auto;
+}
+
+.c15 {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  background-color: #f9f9fc;
+  border-radius: 0.25rem;
+}
+
+.c14 {
+  border-bottom: 1px dotted #006be6;
+}
+
+>>>>>>> a662062b34070a744835ad9feb6116117f7ae1cd
 @media print {
   .c0 {
     max-width: 100%;
@@ -2620,13 +2657,22 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                 >
                   <span
                     class="c8"
+<<<<<<< HEAD
                   >
                     social groove
                   </span>
                   <span
                     class="c9"
                   >
-                    Mis à jour le : 
+=======
+                  >
+                    social groove
+                  </span>
+                  <span
+                    class="c9"
+                  >
+>>>>>>> a662062b34070a744835ad9feb6116117f7ae1cd
+                    Mis à jour le :
                     <span
                       class="c10"
                     >
@@ -2650,7 +2696,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                   <p
                     class="test-content"
                   >
-                    Contenu au format 
+                    Contenu au format
                     <strong>
                       <span
                         data-tooltip-slug="indemnites"
@@ -2666,7 +2712,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                         </span>
                       </span>
                     </strong>
-                    comme 
+                    comme
                     <span
                       data-tooltip-slug="activite-principale-exercee"
                       data-tooltip-term="code ape"
