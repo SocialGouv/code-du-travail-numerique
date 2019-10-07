@@ -1,5 +1,6 @@
 export const feedbackUrl = "https://formspree.io/xbalrgzm";
 export const feedbackLightUrl = "https://formspree.io/mlpjjlom";
+import fetch from "isomorphic-unfetch";
 
 export function postFeedback(url, data) {
   return fetch(url, {
