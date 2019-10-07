@@ -707,6 +707,15 @@ exports[`<Term /> should render 1`] = `
               class="c32"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c32"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

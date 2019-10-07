@@ -1259,6 +1259,15 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               class="c52"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c52"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

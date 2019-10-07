@@ -1039,6 +1039,15 @@ exports[`<FicheSP /> should render 1`] = `
               class="c44"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c44"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

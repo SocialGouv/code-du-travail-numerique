@@ -228,6 +228,15 @@ exports[`<Footer /> should render 1`] = `
               class="c12"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c12"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos
