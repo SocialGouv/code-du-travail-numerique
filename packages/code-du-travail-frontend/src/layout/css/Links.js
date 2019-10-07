@@ -6,7 +6,7 @@ export default createGlobalStyle`
   a,
   a:visited {
     text-decoration: underline;
-    color: ${colors.blue};
+    color: ${colors.blueDark};
   }
 
   a:focus,

@@ -370,7 +370,7 @@ const Origins = () => (
 
 export default Origins;
 
-const { breakpoints, colors, spacing } = theme;
+const { breakpoints, box, spacing } = theme;
 
 const AccordionContainer = styled(Container)`
   display: flex;
@@ -390,7 +390,7 @@ const OriginAccordion = styled(Accordion)`
   @media (max-width: ${breakpoints.tablet}) {
     flex: 0 0 100%;
     & + & {
-      border-top: 1px solid ${colors.elementBorder};
+      border-top: ${box.border};
       margin-left: 0;
     }
   }

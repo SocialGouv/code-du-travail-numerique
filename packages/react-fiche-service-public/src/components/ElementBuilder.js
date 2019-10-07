@@ -113,7 +113,7 @@ ElementBuilder.defaultProps = {
 const ANoter = styled.div`
   margin-bottom: ${spacing.base};
   padding: ${spacing.base};
-  background-color: ${colors.elementBackground};
+  background-color: ${colors.lightBackground};
   border-radius: ${box.borderRadius};
   & > *:first-child {
     margin-top: 0;

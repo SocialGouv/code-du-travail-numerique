@@ -10,10 +10,10 @@ export const Input = styled.input`
   line-height: inherit;
   width: ${props => (props.size ? `${parseFloat(props.size, 10)}em` : "auto")};
   border-radius: ${box.borderRadius};
-  border: 1px solid ${colors.elementBorder};
+  border: ${box.border};
   padding: ${spacing.small} ${spacing.tiny};
   border-color: ${props =>
-    props.invalid ? colors.dangerBackground : colors.elementBorder};
+    props.invalid ? colors.dangerBackground : colors.lightGrey};
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;
@@ -66,7 +66,7 @@ export const SectionTitle = styled.h2`
 export const Highlight = styled.strong`
   font-size: ${fonts.sizeH4};
   font-weight: 700;
-  color: ${colors.blue};
+  color: ${colors.blueDark};
 `;
 
 export const SmallText = styled.span`

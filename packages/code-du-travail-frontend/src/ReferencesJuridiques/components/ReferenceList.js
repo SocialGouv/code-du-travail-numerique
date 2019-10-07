@@ -63,8 +63,8 @@ const ReferenceLink = styled.a`
   display: block;
   margin-top: ${spacing.base};
   padding: ${spacing.base};
-  background-color: ${colors.elementBackground};
-  border: 1px solid ${colors.elementBorder};
+  background-color: ${colors.lightBackground};
+  border: ${box.border};
   border-radius: ${box.borderRadius};
   cursor: pointer;
 `;

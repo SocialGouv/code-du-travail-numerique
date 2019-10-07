@@ -10,7 +10,7 @@ export default createGlobalStyle`
   h4,
   h5,
   h6 {
-    color: ${colors.title};
+    color: ${colors.blueDark};
     line-height: ${fonts.lineHeight};
     font-weight: normal;
     margin: ${spacing.xsmall} 0 ${spacing.small} 0;

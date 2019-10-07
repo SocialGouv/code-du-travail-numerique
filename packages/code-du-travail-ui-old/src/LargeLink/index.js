@@ -39,14 +39,14 @@ const StyledLink = styled.a`
     if (props.variant === "highlight") {
       return css`
         background-color: ${colors.white};
-        border: 1px solid ${colors.primaryBackground};
+        border: 1px solid ${colors.blueDark};
       `;
     } else {
       return css`
         background-color: ${props.variant === "light"
           ? colors.white
-          : colors.elementBackground};
-        border: 1px ${colors.elementBorder} solid;
+          : colors.lightBackground};
+        border: ${box.boder};
       `;
     }
   }};

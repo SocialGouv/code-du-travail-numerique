@@ -46,14 +46,14 @@ const Type = styled.div`
   margin-bottom: ${spacing.xsmall};
   font-weight: bold;
   font-size: 1.1rem;
-  color: ${colors.title};
+  color: ${colors.blueDark};
 `;
 
 const ButtonLink = styled.a`
   &:link,
   &:visited {
     display: inline-block;
-    background-color: ${colors.primaryBackground};
+    background-color: ${colors.blueDark};
     color: ${colors.primaryText};
     text-decoration: none;
     padding: ${spacing.xsmall};

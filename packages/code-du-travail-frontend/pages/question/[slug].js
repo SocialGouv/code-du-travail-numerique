@@ -171,7 +171,7 @@ const SectionTitle = styled.h2`
 
 const DisclaimerContent = styled.div`
   margin-bottom: ${spacing.interComponent};
-  color: ${colors.darkerGRey};
+  color: ${colors.darkerGrey};
 `;
 
 const Title = styled.strong`

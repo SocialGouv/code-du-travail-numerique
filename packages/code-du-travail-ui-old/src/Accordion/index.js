@@ -8,7 +8,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel
 } from "react-accessible-accordion";
-import { colors, spacing } from "../theme";
+import { box, colors, spacing } from "../theme";
 import VerticalArrow from "../VerticalArrow";
 import { fadeIn } from "../keyframes";
 
@@ -48,7 +48,7 @@ export default Accordion;
 
 const StyledMultipleAccordionItem = styled(AccordionItem)`
   & + & {
-    border-top: 1px solid ${colors.elementBorder};
+    border-top: ${box.border};
   }
 `;
 
@@ -61,7 +61,7 @@ const StyledAccordionItemButton = styled(AccordionItemButton)`
   &:focus,
   &:focus-within,
   &[aria-expanded="true"] {
-    color: ${colors.title};
+    color: ${colors.blueDark};
   }
 `;
 

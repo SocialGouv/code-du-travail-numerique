@@ -100,7 +100,7 @@ const ModeleLink = styled.a`
     text-decoration: none;
   }
   :hover {
-    border-color: ${colors.elementBorder};
+    border-color: ${colors.lightGrey};
     background: ${colors.darkBackground};
   }
   :hover strong {

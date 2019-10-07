@@ -7,26 +7,35 @@ const basic_styles = `<style>
 .courrier-destinataire {display: flex; align-items: flex-end; flex-direction:column;}
 .courrier-signature {display: flex; flex-direction:column; align-items: flex-end;}
 .editable {color: blue}
-</style>`
+</style>`;
 const options = {
   styleMap: [
     "p[style-name='signature'] => div.courrier-signature > p:fresh",
     "p[style-name='expediteur'] => div.courrier-expediteur > p:fresh",
     "p[style-name='destinataire'] => div.courrier-destinataire > p:fresh",
-    "p[style-name='Titre'] => h3.courrier-titre:fresh",
+    "p[style-name='Titre'] => h3.courrier-titre:fresh"
   ]
 };
 
 const convertFile2Html = ({ filename, ...rest }) => {
   return mammoth
-    .convertToHtml({
-      path: `${__dirname}/${DOC_DIR}/${filename}`,
-    }, options)
-    .then(result =>  ({
-        filename,
-        ...rest,
-        html: basic_styles + result.value.replace(/\t/g, ' ').replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
-      }));
-}
+    .convertToHtml(
+      {
+        path: `${__dirname}/${DOC_DIR}/${filename}`
+      },
+      options
+    )
+    .then(result => ({
+      filename,
+      ...rest,
+      html:
+        basic_styles +
+        result.value
+          .replace(/\t/g, " ")
+          .replace(/(«[^»]+»)/g, "<span class='editable'>$1</span>")
+    }));
+};
 
-Promise.all(data.map(convertFile2Html)).then(result => console.log(JSON.stringify(result, null, 2)));
+Promise.all(data.map(convertFile2Html)).then(result =>
+  console.log(JSON.stringify(result, null, 2))
+);

@@ -83,7 +83,7 @@ const BigBlock = styled.div`
   left: 4%
   flex-basis: 80%;
   padding-right: 8%;
-  background-color: ${colors.elementBackground};
+  background-color: ${colors.lightBackground};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     flex-basis: 100%;

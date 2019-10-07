@@ -8,42 +8,36 @@ export const variants = [
 ];
 
 export const colors = {
-  black: "#0c0c0e",
-  almostBlack: "#26353f",
-  blue: "#0053b3",
   blueLight: "#006be6",
-  blueDark: "#003b80",
+  blueDark: "#005994",
 
-  elementBackground: "#f5f7fa",
-  elementBorder: "#c9d3df",
   white: "#fff",
 
-  lighterGrey: "#ebeff3",
+  lightBackground: "#f9f9fc",
+  darkBackground: "#ebeff3",
+
   lightGrey: "#c9d3df",
   grey: "#adb9c9",
   darkGrey: "#8393a7",
   darkerGrey: "#53657d",
 
-  title: "#006ab2",
-
-  lightBackground: "#f9f9fc",
   lightText: "#4c5467",
-
-  darkBackground: "#ebeff3",
   darkText: "#434956",
-  /// ui colours
+
+  black: "#0c0c0e",
+
   markBackground: "#fff28e",
-  focus: "#80bdff",
-  focusShadow: "#bfdeff",
-  primaryBackground: "#005994",
-  secondaryBackground: "#eaeaea",
   successBackground: "#e0f2bd",
-  infoBackground: "#d7e8f9",
+  infoBackground: "#e5f1fe",
   warningBackground: "#fee5ad",
-  dangerBackground: "#f6bcc2"
+  dangerBackground: "#f6bcc2",
+  focus: "#80bdff"
 };
 
 // adding colour shortcuts
+colors.primaryBackground = colors.blueDark;
+colors.secondaryBackground = colors.darkBackground;
+colors.focusShadow = colors.infoBackground;
 colors.primaryText = colors.white;
 colors.secondaryText = colors.black;
 colors.successText = colors.black;
@@ -89,8 +83,9 @@ export const breakpoints = {
 
 export const box = {
   lightBorderRadius: "0.2rem",
+  border: `1px solid ${colors.lightGrey}`,
   borderRadius: "0.25rem",
-  shadow: `0 5px 10px 0 ${colors.lightGrey}`
+  shadow: `0 5px 10px 0 ${colors.darkBackground}`
 };
 
 export const animations = {
