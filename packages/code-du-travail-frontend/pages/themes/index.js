@@ -1,6 +1,7 @@
 import React from "react";
 import getConfig from "next/config";
 import { Section } from "@cdt/ui-old";
+import fetch from "isomorphic-unfetch";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
