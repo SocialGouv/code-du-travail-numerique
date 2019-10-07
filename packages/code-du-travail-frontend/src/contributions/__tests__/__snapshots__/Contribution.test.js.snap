@@ -75,7 +75,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       </p>
       <input
         class="c4"
-        placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         type="text"
         value=""
       />
@@ -139,7 +139,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       </p>
       <input
         class="c3"
-        placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         type="text"
         value=""
       />

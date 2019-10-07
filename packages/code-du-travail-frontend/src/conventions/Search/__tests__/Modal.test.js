@@ -17,7 +17,7 @@ describe("<ConventionModal />", () => {
     const button = getByText(/votre convention collective/i);
     button.click();
     const input = getByPlaceholderText(
-      /Ex: 'Corso Balard' ou '82161143100015' ou '1486'/i
+      /Nom d'entreprise, SIRET, nom de convention collective/i
     );
     expect(input).toBeTruthy();
     expect(baseElement).toMatchSnapshot();
@@ -31,7 +31,7 @@ describe("<ConventionModal />", () => {
     el.click();
     expect(
       queryByPlaceholderText(
-        /Ex: 'Corso Balard' ou '82161143100015' ou '1486'/i
+        /Nom d'entreprise, SIRET, nom de convention collective/i
       )
     ).toBeNull();
   });
