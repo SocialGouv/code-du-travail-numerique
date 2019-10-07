@@ -37,8 +37,8 @@ exports[`<Alert /> it should render a info alert 1`] = `
   border: 1px solid transparent;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #d7e8f9;
-  border-color: #abcff2;
+  background: #e5f1fe;
+  border-color: #b4d7fc;
 }
 
 .c0 > *:first-child {
@@ -97,8 +97,8 @@ exports[`<Alert /> it should render a secondary alert 1`] = `
   border: 1px solid transparent;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #cbd6e0;
 }
 
 .c0 > *:first-child {

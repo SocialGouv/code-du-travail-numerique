@@ -10,7 +10,6 @@ exports[`<Montant /> renders with primary and first 1`] = `
 
 .c1 {
   border-radius: 0.25rem;
-  background-color: #0053b3;
   width: calc(50% * 0.7);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -26,7 +25,6 @@ exports[`<Montant /> renders with primary and first 1`] = `
 
 .c2 {
   margin-left: 1rem;
-  color: #0053b3;
   font-size: 1.875rem;
 }
 
@@ -78,7 +76,7 @@ exports[`<Montant /> renders with ratio 1`] = `
 
 .c1 {
   border-radius: 0.25rem;
-  background-color: #53657d;
+  background-color: #4c5467;
   width: calc(50% * 0.7);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -94,7 +92,7 @@ exports[`<Montant /> renders with ratio 1`] = `
 
 .c2 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 1.375rem;
 }
 

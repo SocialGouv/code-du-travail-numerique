@@ -7,7 +7,7 @@ exports[`<ListTextes /> renders a list of textes 1`] = `
   border: 0;
   text-align: left;
   background-color: inherit;
-  color: #0053b3;
+  color: #005994;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-size: inherit;
@@ -35,10 +35,8 @@ exports[`<ListTextes /> renders a text 1`] = `
 .c4 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -96,7 +94,7 @@ exports[`<ListTextes /> renders a text 1`] = `
   border: 0;
   text-align: left;
   background-color: inherit;
-  color: #0053b3;
+  color: #005994;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-size: inherit;

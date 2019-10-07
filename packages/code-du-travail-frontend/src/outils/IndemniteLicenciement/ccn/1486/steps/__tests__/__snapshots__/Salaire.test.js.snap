@@ -508,15 +508,11 @@ exports[`<Salaire /> renders a table of fields of type number 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c9 th {
-  background: #ebeff3;
-}
-
 .c9 thead,
 .c9 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c9 tfoot {

@@ -33,7 +33,7 @@ exports[`<Category /> should render small 1`] = `
 }
 
 .c2 {
-  color: #0053b3;
+  color: #005994;
   font-size: 1.125rem;
 }
 
@@ -83,7 +83,7 @@ exports[`<Category /> should render with default props 1`] = `
 }
 
 .c2 {
-  color: #0053b3;
+  color: #005994;
   font-size: 1.125rem;
 }
 

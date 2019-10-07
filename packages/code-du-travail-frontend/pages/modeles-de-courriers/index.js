@@ -122,7 +122,7 @@ const Icon = styled(ModeleCourrierIcon)`
 
 const Label = styled.span`
   font-weight: 700;
-  color: ${colors.darkerGrey};
+  color: ${colors.lightText};
 `;
 
 const Value = styled.span`

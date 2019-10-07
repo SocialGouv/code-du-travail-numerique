@@ -29,7 +29,7 @@ exports[`<TextQuestion /> should render 1`] = `
 }
 
 .c4 {
-  color: #53657d;
+  color: #4c5467;
   font-weight: 600;
   font-size: 0.875rem;
 }

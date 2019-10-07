@@ -36,7 +36,7 @@ exports[`<Tag /> it should render a info tag 1`] = `
   line-height: 1rem;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #d7e8f9;
+  background: #e5f1fe;
 }
 
 <div>
@@ -86,7 +86,7 @@ exports[`<Tag /> it should render a secondary tag 1`] = `
   line-height: 1rem;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #eaeaea;
+  background: #ebeff3;
 }
 
 <div>

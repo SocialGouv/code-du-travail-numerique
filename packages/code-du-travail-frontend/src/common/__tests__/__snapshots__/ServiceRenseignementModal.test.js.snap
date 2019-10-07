@@ -118,12 +118,12 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   text-align: center;
   font-weight: bold;
   background-color: #fff;
-  border: 1px solid #003b80;
+  border: 1px solid #005994;
 }
 
 .c5 {
   padding: 0 1rem;
-  color: #003b80;
+  color: #005994;
   font-size: 2rem;
 }
 
@@ -145,7 +145,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   color: #fff;
   font-style: normal;
   font-size: 1rem;
-  background-color: #003b80;
+  background-color: #005994;
 }
 
 .c6::before {

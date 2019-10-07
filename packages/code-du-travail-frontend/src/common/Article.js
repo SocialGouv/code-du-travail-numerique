@@ -113,7 +113,7 @@ const Type = styled.span`
 
 const Date = styled.span`
   margin-left: ${spacing.base};
-  color: ${colors.darkerGrey};
+  color: ${colors.lightText};
   font-size: ${fonts.sizeSmall};
   display: inline-block;
   @media (max-width: ${breakpoints.mobile}) {

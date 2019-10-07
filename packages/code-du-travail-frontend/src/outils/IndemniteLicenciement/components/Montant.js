@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 const Bar = styled.div`
   border-radius: ${box.borderRadius};
   background-color: ${({ primary }) =>
-    primary ? colors.blue : colors.darkerGrey};
+    primary ? colors.blue : colors.lightText};
   width: ${({ ratio }) => `calc(50% * ${ratio})`};
   display: inline-flex;
   align-items: center;
@@ -42,7 +42,7 @@ const Bar = styled.div`
 `;
 const Value = styled.span`
   margin-left: ${spacing.base};
-  color: ${({ primary }) => (primary ? colors.blue : colors.darkerGrey)};
+  color: ${({ primary }) => (primary ? colors.blue : colors.lightText)};
   font-size: ${({ primary }) => (primary ? fonts.sizeH2 : fonts.sizeH4)};
   @media (max-width: ${breakpoints.tablet}) {
     margin-left: 0;

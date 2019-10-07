@@ -26,9 +26,9 @@ exports[`<Contribution /> should render with both answers 1`] = `
 
 .c1 {
   padding: 0.625rem 1.25rem;
-  background: #f6f6f6;
+  background: #f9f9fc;
   border-radius: 0.2rem;
-  border: 1px solid #efefef;
+  border: 1px solid #c9d3df;
 }
 
 .c3 {
@@ -106,9 +106,9 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
 
 .c0 {
   padding: 0.625rem 1.25rem;
-  background: #f6f6f6;
+  background: #f9f9fc;
   border-radius: 0.2rem;
-  border: 1px solid #efefef;
+  border: 1px solid #c9d3df;
 }
 
 .c2 {

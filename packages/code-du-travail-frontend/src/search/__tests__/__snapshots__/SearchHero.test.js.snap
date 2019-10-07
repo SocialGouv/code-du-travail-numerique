@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchHero /> should render 1`] = `
-.c10:not(:focus):not(:active) {
+.c11:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -32,7 +32,7 @@ exports[`<SearchHero /> should render 1`] = `
   background-color: #fff;
 }
 
-.c9 {
+.c10 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -43,15 +43,15 @@ exports[`<SearchHero /> should render 1`] = `
   text-align: left;
 }
 
-.c12 ul {
+.c13 ul {
   z-index: 100;
 }
 
-.c12 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+.c13 li[role="option"]:nth-child(2n + 1) {
+  background: #f9f9fc;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,11 +59,10 @@ exports[`<SearchHero /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: #434956;
   overflow: visible;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   left: 0;
   top: 0;
@@ -72,7 +71,7 @@ exports[`<SearchHero /> should render 1`] = `
   height: 1.3rem;
 }
 
-.c11 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,12 +92,12 @@ exports[`<SearchHero /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c11:focus {
+.c12:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c13 {
+.c14 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -121,13 +120,13 @@ exports[`<SearchHero /> should render 1`] = `
   margin-left: 0.5rem;
 }
 
-.c13:not([disabled]):hover,
-.c13:not([disabled]):focus {
+.c14:not([disabled]):hover,
+.c14:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c13:not([disabled]):active {
+.c14:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -135,7 +134,7 @@ exports[`<SearchHero /> should render 1`] = `
   outline: none;
 }
 
-.c13[aria-pressed="true"] {
+.c14[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -144,43 +143,49 @@ exports[`<SearchHero /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c13[aria-pressed="true"]:not([disabled]):hover,
-.c13[aria-pressed="true"]:not([disabled]):focus {
+.c14[aria-pressed="true"]:not([disabled]):hover,
+.c14[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c13[aria-pressed="true"]:not([disabled]):active {
+.c14[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c13[disabled] {
+.c14[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
 .c1 {
-  box-shadow: 0 10px 10px -10px #c9d3df;
-}
-
-.c4 {
-  margin-top: 0;
-  font-size: 1.875rem;
-  line-height: 1.4;
-  color: #006ab2;
-}
-
-.c5 {
-  font-size: 1rem;
+  padding-bottom: 2.5rem;
+  background-color: #e5f1fe;
 }
 
 .c3 {
-  position: relative;
-  padding: 1rem 0;
-  text-align: center;
+  margin-top: 0;
+  line-height: 1.4;
+  color: #005994;
+}
+
+.c4 {
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: bold;
 }
 
 .c6 {
-  margin: 0 auto;
+  display: block;
+  margin-bottom: 0.625rem;
+  font-size: 1.375rem;
+  color: #005994;
+}
+
+.c7 {
+  margin: 0;
   width: 750px;
 }
 
@@ -192,7 +197,7 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c8 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -201,19 +206,19 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c8 {
+  .c9 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
   }
 }
 
 @media (max-width:600px) {
-  .c13 {
+  .c14 {
     margin-left: 0;
     margin-top: 0.625rem;
   }
@@ -226,13 +231,13 @@ exports[`<SearchHero /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c6 {
+  .c7 {
     width: 100%;
   }
 }
 
 @media (max-width:600px) {
-  .c6 {
+  .c7 {
     width: 100%;
     max-width: 400px;
   }
@@ -245,81 +250,93 @@ exports[`<SearchHero /> should render 1`] = `
     <div
       class="c2"
     >
-      <div
+      <header
         class="c3"
       >
-        <p
+        <h1
           class="c4"
         >
-          Posez votre question sur le droit du travail
+          Bienvenue sur 
           <br />
-          <a
+          <span
             class="c5"
-            href="/droit-du-travail"
           >
-            Le droit du travail, c‘est quoi ?
-          </a>
-        </p>
-        <div
-          class="c6"
+            le Code du travail numérique
+          </span>
+        </h1>
+        <p
+          class=""
         >
-          <form
-            class="c7"
+          Vous cherchez une information sur le droit du travail ? Vous avez besoin d’accompagnement ?
+          <br />
+          Nous vous proposons des réponses accessibles et personnalisées selon votre situation.
+        </p>
+      </header>
+      <label
+        class="c6"
+        for="searchbar"
+      >
+         Recherchez par mots clefs
+      </label>
+      <div
+        class="c7"
+      >
+        <form
+          class="c8"
+        >
+          <svg
+            class="c9"
+            viewBox="0 0 20 20"
           >
-            <svg
-              class="c8"
-              viewBox="0 0 20 20"
-            >
-              <title />
-              <path
-                d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
-                fill="currentColor"
-                fill-rule="evenodd"
-              />
-            </svg>
-            <label
-              class="c9"
-              for="main-search-input"
-            >
-              <span
-                class="c10"
-              >
-                Rechercher
-              </span>
-              <div
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-owns="react-autowhatever-cdtn-documents-suggester"
-                role="combobox"
-                style="flex: 1;"
-              >
-                <input
-                  aria-autocomplete="list"
-                  aria-controls="react-autowhatever-cdtn-documents-suggester"
-                  autocomplete="off"
-                  class="c11"
-                  id="main-search-input"
-                  name="query"
-                  placeholder="Recherche"
-                  type="search"
-                  value=""
-                />
-                <div
-                  class="c12"
-                  id="react-autowhatever-cdtn-documents-suggester"
-                  role="listbox"
-                />
-              </div>
-            </label>
-            <button
-              aria-pressed="false"
-              class="c13"
-              type="submit"
+            <title />
+            <path
+              d="M17.876 8.939c0 2.197-.819 4.208-2.123 5.773l4.023 4.022a.72.72 0 0 1 0 1.043.735.735 0 0 1-.522.223.736.736 0 0 1-.52-.223l-4.023-4.023a8.813 8.813 0 0 1-5.772 2.123C4.022 17.877 0 13.855 0 8.939 0 4.022 4.023 0 8.939 0c4.915 0 8.937 4.023 8.937 8.939zM9.001 16.5c4.124 0 7.499-3.375 7.499-7.5S13.125 1.5 9 1.5C4.877 1.5 1.5 4.875 1.5 9s3.376 7.5 7.5 7.5z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <label
+            class="c10"
+            for="searchbar"
+          >
+            <span
+              class="c11"
             >
               Rechercher
-            </button>
-          </form>
-        </div>
+            </span>
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="react-autowhatever-cdtn-documents-suggester"
+              role="combobox"
+              style="flex: 1;"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-autowhatever-cdtn-documents-suggester"
+                autocomplete="off"
+                class="c12"
+                id="searchbar"
+                name="query"
+                placeholder="Recherche"
+                type="search"
+                value=""
+              />
+              <div
+                class="c13"
+                id="react-autowhatever-cdtn-documents-suggester"
+                role="listbox"
+              />
+            </div>
+          </label>
+          <button
+            aria-pressed="false"
+            class="c14"
+            type="submit"
+          >
+            Rechercher
+          </button>
+        </form>
       </div>
     </div>
   </div>

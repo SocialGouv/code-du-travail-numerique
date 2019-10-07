@@ -23,7 +23,7 @@ const Header = ({ hideSearch = false }) => (
             </Title>
           </LogoWrapper>
         </Link>
-        <StyledTag variant="success">Version Bêta</StyledTag>
+        <StyledTag variant="info">Version Bêta</StyledTag>
       </LeftWrapper>
       {!hideSearch && (
         <SearchBarWrapper>

@@ -46,7 +46,7 @@ exports[`<Themes /> should render 1`] = `
 }
 
 .c8 {
-  color: #0053b3;
+  color: #005994;
   font-size: 1.125rem;
 }
 
@@ -116,7 +116,7 @@ exports[`<Themes /> should render 1`] = `
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   border: 1px solid #80bdff;
-  box-shadow: 0 0 2px 2px #bfdeff;
+  box-shadow: 0 0 2px 2px #e5f1fe;
 }
 
 @media print {

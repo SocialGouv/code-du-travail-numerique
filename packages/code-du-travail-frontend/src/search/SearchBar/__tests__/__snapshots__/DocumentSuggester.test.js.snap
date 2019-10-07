@@ -29,7 +29,7 @@ exports[`<DocumentSuggester /> should render 1`] = `
 }
 
 .c2 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 <div>
@@ -106,7 +106,7 @@ exports[`<DocumentSuggester /> should render suggestions 1`] = `
 }
 
 .c2 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 <div>

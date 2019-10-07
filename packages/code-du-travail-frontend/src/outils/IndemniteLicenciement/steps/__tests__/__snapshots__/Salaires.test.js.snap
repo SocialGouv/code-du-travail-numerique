@@ -54,15 +54,11 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c5 th {
-  background: #ebeff3;
-}
-
 .c5 thead,
 .c5 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c5 tfoot {
@@ -837,7 +833,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   vertical-align: initial;
   text-align: left;
   line-height: initial;
-  color: #0053b3;
+  color: #005994;
   font-weight: normal;
   font-size: inherit;
   background: none;
@@ -968,7 +964,7 @@ exports[`<StepSalaires /> should render tempsPartiel 1`] = `
   vertical-align: initial;
   text-align: left;
   line-height: initial;
-  color: #0053b3;
+  color: #005994;
   font-weight: normal;
   font-size: inherit;
   background: none;

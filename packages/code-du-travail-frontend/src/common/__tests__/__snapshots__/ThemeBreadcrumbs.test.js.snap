@@ -26,7 +26,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 }
 
 .c0 {
-  background: #d7e8f9;
+  background: #e5f1fe;
 }
 
 .c4 {
@@ -142,7 +142,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 }
 
 .c0 {
-  background: #d7e8f9;
+  background: #e5f1fe;
 }
 
 .c4 {

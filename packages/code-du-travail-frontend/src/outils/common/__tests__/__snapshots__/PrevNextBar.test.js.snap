@@ -102,15 +102,15 @@ exports[`<PrevNextBar /> should render 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   margin-right: auto;
 }
 
 .c2:not([disabled]):hover,
 .c2:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -118,26 +118,26 @@ exports[`<PrevNextBar /> should render 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c2[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):hover,
 .c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c2[disabled] {
@@ -275,15 +275,15 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   margin-right: auto;
 }
 
 .c2:not([disabled]):hover,
 .c2:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -291,26 +291,26 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c2[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):hover,
 .c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c2[disabled] {
@@ -449,15 +449,15 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   margin-right: auto;
 }
 
 .c2:not([disabled]):hover,
 .c2:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -465,26 +465,26 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c2[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):hover,
 .c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c2[disabled] {
@@ -562,15 +562,15 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   margin-right: auto;
 }
 
 .c2:not([disabled]):hover,
 .c2:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -578,26 +578,26 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c2[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):hover,
 .c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c2[disabled] {

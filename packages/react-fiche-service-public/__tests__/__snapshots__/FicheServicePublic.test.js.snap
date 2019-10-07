@@ -93,7 +93,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c10:focus,
 .c10:focus-within,
 .c10[aria-expanded="true"] {
-  color: #006ab2;
+  color: #005994;
 }
 
 .c12 {
@@ -195,7 +195,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin-bottom: 0.5rem;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #006ab2;
+  color: #005994;
 }
 
 .c16:link,
@@ -212,7 +212,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c16:hover,
 .c16:focus,
 .c16:active {
-  background-color: #003b80;
+  background-color: #005994;
 }
 
 .c17 {
@@ -224,7 +224,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c18 {
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #f5f7fa;
+  background-color: #f9f9fc;
   border-radius: 0.25rem;
 }
 

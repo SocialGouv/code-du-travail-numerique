@@ -19,7 +19,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -41,7 +41,7 @@ exports[`<StepResult /> should render CC answer 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c3 {

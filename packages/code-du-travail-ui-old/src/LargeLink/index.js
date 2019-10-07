@@ -46,7 +46,7 @@ const StyledLink = styled.a`
         background-color: ${props.variant === "light"
           ? colors.white
           : colors.lightBackground};
-        border: ${box.boder};
+        border: ${box.border};
       `;
     }
   }};

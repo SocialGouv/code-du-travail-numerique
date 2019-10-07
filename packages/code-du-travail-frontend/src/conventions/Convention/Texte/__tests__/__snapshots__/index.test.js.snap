@@ -8,10 +8,8 @@ exports[`<Texte /> renders with a title 1`] = `
 .c3 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -1446,10 +1444,8 @@ exports[`<Texte /> renders without a title 1`] = `
 .c3 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 

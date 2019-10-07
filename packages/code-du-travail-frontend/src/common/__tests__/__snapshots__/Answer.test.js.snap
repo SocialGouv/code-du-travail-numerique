@@ -53,10 +53,8 @@ exports[`<Answer /> should render 1`] = `
 .c2 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -71,10 +69,8 @@ exports[`<Answer /> should render 1`] = `
 .c11 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -131,7 +127,7 @@ exports[`<Answer /> should render 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c22 {
@@ -218,7 +214,7 @@ exports[`<Answer /> should render 1`] = `
 
 .c8 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
@@ -276,15 +272,15 @@ exports[`<Answer /> should render 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   min-width: 7rem;
 }
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -292,26 +288,26 @@ exports[`<Answer /> should render 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c18[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c18[aria-pressed="true"]:not([disabled]):hover,
 .c18[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c18[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c18[disabled] {
@@ -752,10 +748,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c6 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -770,10 +764,8 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 .c15 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -830,7 +822,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c26 {
@@ -917,7 +909,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c12 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
@@ -975,15 +967,15 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   min-width: 7rem;
 }
 
 .c22:not([disabled]):hover,
 .c22:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -991,26 +983,26 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c22[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c22[aria-pressed="true"]:not([disabled]):hover,
 .c22[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c22[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c22[disabled] {
@@ -1087,7 +1079,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 }
 
 .c0 {
-  background: #d7e8f9;
+  background: #e5f1fe;
 }
 
 .c4 {
@@ -1525,10 +1517,8 @@ exports[`<Answer /> should render tooltip 1`] = `
 .c2 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -1543,10 +1533,8 @@ exports[`<Answer /> should render tooltip 1`] = `
 .c11 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -1603,7 +1591,7 @@ exports[`<Answer /> should render tooltip 1`] = `
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c23 {
@@ -1690,7 +1678,7 @@ exports[`<Answer /> should render tooltip 1`] = `
 
 .c8 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
@@ -1748,15 +1736,15 @@ exports[`<Answer /> should render tooltip 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   min-width: 7rem;
 }
 
 .c19:not([disabled]):hover,
 .c19:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -1764,26 +1752,26 @@ exports[`<Answer /> should render tooltip 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c19[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c19[aria-pressed="true"]:not([disabled]):hover,
 .c19[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c19[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c19[disabled] {
@@ -2264,10 +2252,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 .c2 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -2282,10 +2268,8 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 .c11 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -2342,7 +2326,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
   border-color: #fee5ad;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c23 {
@@ -2429,7 +2413,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 .c8 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
@@ -2487,15 +2471,15 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   min-width: 7rem;
 }
 
 .c19:not([disabled]):hover,
 .c19:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -2503,26 +2487,26 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c19[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c19[aria-pressed="true"]:not([disabled]):hover,
 .c19[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c19[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c19[disabled] {

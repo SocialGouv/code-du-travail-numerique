@@ -23,10 +23,8 @@ exports[`<Feedback/> should render 1`] = `
 .c2 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -70,15 +68,15 @@ exports[`<Feedback/> should render 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
   min-width: 7rem;
 }
 
 .c6:not([disabled]):hover,
 .c6:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -86,26 +84,26 @@ exports[`<Feedback/> should render 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c6[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c6[aria-pressed="true"]:not([disabled]):hover,
 .c6[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c6[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c6[disabled] {
@@ -261,10 +259,8 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 .c2 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -355,7 +351,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   vertical-align: initial;
   text-align: left;
   line-height: initial;
-  color: #0053b3;
+  color: #005994;
   font-weight: normal;
   font-size: inherit;
   background: none;
@@ -564,10 +560,8 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 .c2 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 

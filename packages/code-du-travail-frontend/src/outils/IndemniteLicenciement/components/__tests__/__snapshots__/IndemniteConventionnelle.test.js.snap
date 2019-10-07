@@ -96,7 +96,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -118,7 +118,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c5 {
@@ -285,7 +285,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -307,7 +307,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c20 {
@@ -332,7 +332,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 .c1 {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #0053b3;
+  color: #005994;
 }
 
 .c9 {
@@ -348,7 +348,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c6 {
   border-radius: 0.25rem;
-  background-color: #53657d;
+  background-color: #4c5467;
   width: calc(50% * 0.021);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -364,7 +364,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c15 {
   border-radius: 0.25rem;
-  background-color: #0053b3;
   width: calc(50% * 1);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -380,13 +379,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 .c7 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 1.375rem;
 }
 
 .c16 {
   margin-left: 1rem;
-  color: #0053b3;
   font-size: 1.875rem;
 }
 
@@ -774,7 +772,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -796,7 +794,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c20 {
@@ -821,7 +819,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 .c1 {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #0053b3;
+  color: #005994;
 }
 
 .c9 {
@@ -837,7 +835,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c6 {
   border-radius: 0.25rem;
-  background-color: #0053b3;
   width: calc(50% * 1);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -853,7 +850,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c15 {
   border-radius: 0.25rem;
-  background-color: #53657d;
+  background-color: #4c5467;
   width: calc(50% * 0.6685);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -869,13 +866,12 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
 
 .c16 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 1.375rem;
 }
 
 .c7 {
   margin-left: 1rem;
-  color: #0053b3;
   font-size: 1.875rem;
 }
 

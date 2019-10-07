@@ -75,12 +75,12 @@ export const SmallText = styled.span`
 `;
 
 export const InlineError = styled.span`
-  color: ${colors.darkerGrey};
+  color: ${colors.lightText};
   font-weight: 600;
   font-size: ${fonts.sizeSmall};
 `;
 export const BlockError = styled.div`
-  color: ${colors.darkerGrey};
+  color: ${colors.lightText};
   font-weight: 600;
   font-size: ${fonts.sizeSmall};
 `;

@@ -78,7 +78,7 @@ exports[`<Result /> should render 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -100,7 +100,7 @@ exports[`<Result /> should render 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c20 {
@@ -125,7 +125,7 @@ exports[`<Result /> should render 1`] = `
 .c1 {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #0053b3;
+  color: #005994;
 }
 
 .c9 {
@@ -141,7 +141,6 @@ exports[`<Result /> should render 1`] = `
 
 .c6 {
   border-radius: 0.25rem;
-  background-color: #0053b3;
   width: calc(50% * 1);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -157,7 +156,7 @@ exports[`<Result /> should render 1`] = `
 
 .c15 {
   border-radius: 0.25rem;
-  background-color: #53657d;
+  background-color: #4c5467;
   width: calc(50% * 0.4);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -173,13 +172,12 @@ exports[`<Result /> should render 1`] = `
 
 .c7 {
   margin-left: 1rem;
-  color: #0053b3;
   font-size: 1.875rem;
 }
 
 .c16 {
   margin-left: 1rem;
-  color: #53657d;
+  color: #4c5467;
   font-size: 1.375rem;
 }
 
