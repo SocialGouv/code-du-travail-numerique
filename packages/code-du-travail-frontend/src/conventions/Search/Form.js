@@ -44,7 +44,7 @@ const TagSiret = ({ siret }) => (
     style={{ fontSize: "0.8em" }}
     href={`https://entreprise.data.gouv.fr/etablissement/${siret}`}
   >
-    {siret}
+    Fiche entreprise
   </a>
 );
 
@@ -80,7 +80,7 @@ const Search = ({
         convention collective.
       </p>
       <Input
-        placeholder="Ex: 'Corso Balard' ou '82161143100015' ou '1486' "
+        placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         value={query}
         type="text"
         onChange={onInputChange}
