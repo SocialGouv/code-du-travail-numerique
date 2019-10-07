@@ -4,19 +4,16 @@ import debounce from "debounce-promise";
 
 export const SIRET2IDCC_URL =
   process.env.API_SIRET2IDCC_URL ||
-  "https://siret2idcc.incubateur.social.gouv.fr/api/v1";
+  "https://siret2idcc.incubateur.social.gouv.fr/api/v2";
 
 export const API_ENTREPRISE = "https://entreprise.data.gouv.fr/api/sirene/v1";
+
 // api siret2idcc call
 const apiSiret2idcc = memoizee(
-  siret =>
-    fetch(`${SIRET2IDCC_URL}/${siret}`)
+  sirets =>
+    fetch(`${SIRET2IDCC_URL}/${sirets}`)
       .then(r => r.json())
-      .then(
-        data =>
-          (data.error && []) ||
-          data.filter(convention => convention.num !== "9999")
-      )
+      .then(data => (data.error && []) || data)
       .catch(() => []),
   { promise: true }
 );
@@ -24,7 +21,9 @@ const apiSiret2idcc = memoizee(
 // api entreprise full text call
 const apiEntrepriseFullText = memoizee(
   query =>
-    fetch(`${API_ENTREPRISE}/full_text/${encodeURIComponent(query)}`)
+    fetch(
+      `${API_ENTREPRISE}/full_text/${encodeURIComponent(query)}?per_page=50`
+    )
       .then(r => r.json())
       .then(formatFullTextResults)
       .catch(() => []),
@@ -36,29 +35,46 @@ const apiEntrepriseSiret = memoizee(
   siret =>
     fetch(`${API_ENTREPRISE}/siret/${encodeURIComponent(siret)}`)
       .then(r => r.json())
-      .then(
-        data => data.etablissement && formatResultEntreprise(data.etablissement)
-      ),
+      .then(async data => {
+        if (data.etablissement) {
+          return {
+            ...formatEtablissement(data.etablissement),
+            conventions: await apiSiret2idcc(data.etablissement.siret)
+          };
+        }
+      }),
   { promise: true }
 );
 
 // format results API Sirene. embed the IDCC numbers at runtime
-const formatResultEntreprise = async result => ({
+const formatEtablissement = result => ({
   id: result.id,
   siret: result.siret,
-  conventions: await apiSiret2idcc(result.siret),
   label: `${result.nom_raison_sociale} ${result.code_postal ||
     ""} ${result.libelle_commune || ""}`
 });
 
-// format a set of results API Sirene
-const formatFullTextResults = apiData =>
-  (apiData.etablissement &&
-    apiData.etablissement.map &&
-    Promise.all(
-      apiData.etablissement.filter(Boolean).map(formatResultEntreprise)
-    )) ||
-  Promise.resolve();
+// format a set of results from API Sirene
+const formatFullTextResults = async apiData => {
+  if (Array.isArray(apiData.etablissement)) {
+    // fetch all conventions in a single call
+    const conventions = await apiSiret2idcc(
+      apiData.etablissement.map(etablissement => etablissement.siret).join(",")
+    );
+    return apiData.etablissement.map(etablissement => {
+      const conventionsEtablissement = conventions.find(
+        result => result.siret === etablissement.siret
+      );
+      return {
+        ...formatEtablissement(etablissement),
+        conventions:
+          (conventionsEtablissement && conventionsEtablissement.conventions) ||
+          []
+      };
+    });
+  }
+  return Promise.resolve();
+};
 
 const searchEntrepriseByName = debounce(apiEntrepriseFullText, 300);
 const searchEntrepriseBySiret = debounce(apiEntrepriseSiret, 300);

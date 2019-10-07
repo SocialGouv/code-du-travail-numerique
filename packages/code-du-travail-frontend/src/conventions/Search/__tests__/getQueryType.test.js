@@ -6,8 +6,7 @@ test.each`
   ${`airbus`}          | ${`text`}
   ${`148`}             | ${`idcc`}
   ${`1486`}            | ${`idcc`}
-  ${`148614869`}       | ${`siren`}
-  ${`1486148697777`}   | ${`siret`}
+  ${`14861486977779`}  | ${`siret`}
 `("returns $expected when $query", ({ query, expected }) => {
   expect(getQueryType(query)).toBe(expected);
 });
