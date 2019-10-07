@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from "react";
-import glossary from "@cdt/data...datafiller/glossary.data.json";
+import React from "react";
 import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
-import Tooltip from "@reach/tooltip";
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";
-import ReactDOM from "react-dom";
 import styled from "styled-components";
 import Article from "../common/Article";
 import Disclaimer from "../common/Disclaimer";
-import Html from "../common/Html";
 import { Feedback } from "../common/Feedback";
+import Html from "../common/Html";
+import useGlossary from "../glossary";
 import { ThemeBreadcrumbs } from "../common/ThemeBreadcrumbs";
 import { groupByDisplayCategory } from "../search/utils";
 import { getRouteBySource } from "@cdt/sources";
-
-const glossaryBySlug = glossary.reduce(
-  (state, item) => ({ ...state, [item.slug]: item }),
-  {}
-);
 
 const BigError = ({ children }) => (
   <StyledContainer>
@@ -53,7 +46,7 @@ function Answer({
   relatedItems = [],
   emptyMessage = "Aucun résultat"
 }) {
-  const portalComponents = usePortals(children, html);
+  const glossaryItems = useGlossary(children, html);
   const linkedResults = groupByDisplayCategory(relatedItems);
 
   return (
@@ -64,7 +57,7 @@ function Answer({
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       <StyledWrapper>
-        <StyledContent isFull={linkedResults.matches.length === 0}>
+        <StyledContent hasResults={linkedResults.matches.length === 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
@@ -76,7 +69,7 @@ function Answer({
               {intro && <IntroWrapper variant="dark">{intro}</IntroWrapper>}
               {html && <Html>{html}</Html>}
               {children}
-              {portalComponents}
+              {glossaryItems}
               {footer && <Footer>{footer}</Footer>}
             </Article>
           )}
@@ -102,7 +95,8 @@ function Answer({
                   .map(link => (
                     <li key={link.title}>
                       <Link
-                        href={`/${getRouteBySource(link.source)}/${link.slug}`}
+                        href={`/${getRouteBySource(link.source)}/[slug]`}
+                        as={`/${getRouteBySource(link.source)}/${link.slug}`}
                       >
                         <a>{link.title}</a>
                       </Link>
@@ -120,22 +114,6 @@ function Answer({
 
 export default withRouter(Answer);
 
-const Portal = ({ node, children }) => {
-  if (!node) return null;
-
-  return ReactDOM.createPortal(children, node);
-};
-
-const DefinitonTerm = ({ term, definition }) => {
-  return (
-    <>
-      <StyledTooltip label={<Html>{definition}</Html>} aria-label={definition}>
-        <Underline tabIndex="0">{term}</Underline>
-      </StyledTooltip>
-    </>
-  );
-};
-
 const { box, breakpoints, colors, fonts, spacing } = theme;
 
 const StyledContainer = styled(Container)`
@@ -152,25 +130,24 @@ const StyledWrapper = styled(Container)`
 `;
 
 const StyledContent = styled.div`
-  width: ${props => (props.isFull ? "80%" : "70%")};
+  width: ${props => (props.hasResults ? "80%" : "70%")};
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
 `;
 
 const StyledMenu = styled.div`
-  padding: 2rem 0;
+  padding: ${spacing.large} 0;
   width: 30%;
   color: ${colors.blue};
   @media (max-width: ${breakpoints.tablet}) {
-    padding: 4rem 2rem 7rem 0;
+    padding: 4rem ${spacing.large} 7rem 0;
     margin: 0 ${spacing.medium};
     width: 100%;
   }
 `;
 
 const StyledMenuList = styled.div`
-  position: -webkit-sticky;
   position: sticky;
   top: ${spacing.base};
   border-left: 1px solid ${colors.blue};
@@ -206,79 +183,3 @@ const Footer = styled.div`
   background-color: ${colors.lightBackground};
   border-radius: ${box.borderRadius};
 `;
-
-const StyledTooltip = styled(Tooltip)`
-  z-index: 10;
-  pointer-events: none;
-  position: absolute;
-  padding: 0.25em 0.5em;
-  box-shadow: ${box.shadow};
-  width: 300px;
-  max-width: 70vw;
-  font-size: ${fonts.sizeBase};
-  background: ${colors.elementBackground};
-  color: ${colors.lightText};
-  border: solid 1px ${colors.elementBorder};
-`;
-
-const Underline = styled.span`
-  border-bottom: 1px dotted ${colors.blueLight};
-`;
-
-function usePortals(children, html) {
-  const [portalComponents, setPortalComponents] = useState();
-  useEffect(() => {
-    const nodes = Array.from(
-      document.querySelectorAll(
-        "[data-main-content] p, [data-main-content] li:not([role=tab])"
-      )
-    ).reduce((state, node) => {
-      glossary.forEach(item => {
-        // we cannot use \b word boundary since \w does not match diacritics
-        // So we do a kind of \b equivalent.
-        // the main différence is that matched pattern can include a whitespace as first char
-        const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
-        const wordBoundaryStart = `(?:^|[^\\w${frDiacritics}])`;
-        const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
-        const patterns = [...new Set([item.title, ...item.variants])]
-          .map(
-            term =>
-              new RegExp(`${wordBoundaryStart}${term}${wordBoundaryEnd}`, "gi")
-          )
-          .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
-
-        patterns.forEach(pattern => {
-          node.innerHTML = node.innerHTML.replace(pattern, function(match) {
-            if (new RegExp(`^[^\\w${frDiacritics}]`).test(match)) {
-              // Since match string can start with a space, we trim it and insert the space before the tooltip markup
-              return `${match.slice(0, 1)}<span data-tooltip-slug="${
-                item.slug
-              }" data-tooltip-term="${match.slice(1)}"></span>`;
-            }
-            return `<span data-tooltip-slug="${item.slug}" data-tooltip-term="${match}"></span>`;
-          });
-        });
-      });
-
-      return state.concat(
-        Array.from(node.querySelectorAll("[data-tooltip-slug]")).map(node => ({
-          node,
-          term: node.getAttribute("data-tooltip-term"),
-          definition:
-            glossaryBySlug[node.getAttribute("data-tooltip-slug")].definition
-        }))
-      );
-    }, []);
-    setPortalComponents(
-      nodes.map(({ node, term, definition }, i) => {
-        return (
-          <Portal key={`item-${i}`} node={node}>
-            <DefinitonTerm term={term} definition={definition} />
-          </Portal>
-        );
-      })
-    );
-    return function cleanEffect() {};
-  }, [children, html]);
-  return portalComponents;
-}
