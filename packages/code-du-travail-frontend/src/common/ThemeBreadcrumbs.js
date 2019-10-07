@@ -18,8 +18,12 @@ export const ThemeBreadcrumbs = ({ theme, breadcrumbs = [] }) => {
   const themesCrumbs = [ROOT_CRUMB, ...crumbs].map(({ slug, title }) => (
     <Link
       key={slug}
-      href={`/themes${(slug && `/[${slug}]`) || ""}`}
+      href={{
+        pathname: `/themes${(slug && "/[slug]") || ""}`,
+        query: { slug }
+      }}
       as={`/themes${(slug && `/${slug}`) || ""}`}
+      passHref
     >
       <a title={`Voir le theme ${title}`}>{title}</a>
     </Link>
