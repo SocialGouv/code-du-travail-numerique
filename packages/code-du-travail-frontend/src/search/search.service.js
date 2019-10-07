@@ -1,5 +1,6 @@
 import getConfig from "next/config";
 import memoizee from "memoizee";
+import fetch from "isomorphic-unfetch";
 
 import pDebounce from "../lib/pDebounce";
 
