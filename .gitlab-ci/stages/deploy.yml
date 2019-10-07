@@ -21,6 +21,8 @@ include:
 .incubateur_stage: &incubateur_stage
   environment:
     name: incubateur
+  variables: &deploy_stage_variables
+    ENVIRONMENT: production
   only:
     refs:
       - tags
