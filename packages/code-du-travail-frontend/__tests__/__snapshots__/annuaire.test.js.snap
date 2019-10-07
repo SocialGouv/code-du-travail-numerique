@@ -837,7 +837,7 @@ exports[`<Annuaire /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c36"
+              class="c35"
             >
               <a
                 href="/glossaire"
