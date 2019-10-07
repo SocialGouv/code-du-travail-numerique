@@ -17,6 +17,7 @@ Register new socialgouv/cdtn base image:
       - yarn.lock
       - package.lock
       - packages/**/package.lock
+      - packages/code-du-travail-data/**/*.js
   except:
     variables:
       - $PRODUCTION
@@ -32,6 +33,7 @@ Register previous socialgouv/cdtn base image:
       - yarn.lock
       - package.lock
       - packages/**/package.lock
+      - packages/code-du-travail-data/**/*.js
     variables:
       - $PRODUCTION
   script:
