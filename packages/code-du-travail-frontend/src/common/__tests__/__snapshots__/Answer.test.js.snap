@@ -1768,6 +1768,10 @@ exports[`<Answer /> should render tooltip 1`] = `
   margin-left: 1rem;
 }
 
+.c14 {
+  border-bottom: 1px dotted #006be6;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1796,10 +1800,6 @@ exports[`<Answer /> should render tooltip 1`] = `
   padding: 1rem;
   background-color: #f9f9fc;
   border-radius: 0.25rem;
-}
-
-.c14 {
-  border-bottom: 1px dotted #006be6;
 }
 
 @media print {
@@ -2475,6 +2475,10 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   margin-left: 1rem;
 }
 
+.c14 {
+  border-bottom: 1px dotted #006be6;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2503,10 +2507,6 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
   padding: 1rem;
   background-color: #f9f9fc;
   border-radius: 0.25rem;
-}
-
-.c14 {
-  border-bottom: 1px dotted #006be6;
 }
 
 @media print {
