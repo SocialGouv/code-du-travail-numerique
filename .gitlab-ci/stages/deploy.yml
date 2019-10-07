@@ -21,8 +21,6 @@ include:
 .incubateur_stage: &incubateur_stage
   environment:
     name: incubateur
-  variables:
-    ENVIRONMENT: production
   only:
     refs:
       - tags
@@ -75,7 +73,7 @@ Deploy @cdtn/api (incubateur):
 .deploy-frontend: &deploy_frontend
   <<: *deploy_stage
   extends: .k8s-deploy-frontend
-  variables:
+  variables: &deploy_stage_variable_frontend
     <<: *deploy_stage_variables
     CONTEXT: frontend
     IMAGE_NAME: ${CI_REGISTRY_IMAGE}/frontend
@@ -96,6 +94,9 @@ Deploy @cdtn/frontend (dev):
 Deploy @cdtn/frontend (incubateur):
   <<: *deploy_frontend
   <<: *incubateur_stage
+  variables:
+    <<: *deploy_stage_variable_frontend
+    ENVIRONMENT: production
 
 #
 #
