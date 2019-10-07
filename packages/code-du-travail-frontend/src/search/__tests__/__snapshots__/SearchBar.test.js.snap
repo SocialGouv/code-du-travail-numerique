@@ -29,7 +29,7 @@ exports[`<SearchBar /> should render 1`] = `
 }
 
 .c4 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c0 {
@@ -40,7 +40,6 @@ exports[`<SearchBar /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: #434956;
   overflow: visible;
 }
 
@@ -213,7 +212,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
 }
 
 .c4 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c0 {
@@ -224,7 +223,6 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: #434956;
   overflow: visible;
 }
 

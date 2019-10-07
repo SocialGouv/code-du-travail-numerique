@@ -122,7 +122,7 @@ exports[`<Theme /> should render 1`] = `
   line-height: 1rem;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #e0f2bd;
+  background: #e5f1fe;
 }
 
 .c11 {
@@ -141,7 +141,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c14 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c10 {
@@ -152,7 +152,6 @@ exports[`<Theme /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: #434956;
   overflow: visible;
 }
 
@@ -216,8 +215,7 @@ exports[`<Theme /> should render 1`] = `
 }
 
 .c0 {
-  color: white;
-  background: currentColor;
+  background: #fff;
 }
 
 .c2 {

@@ -4,10 +4,8 @@ exports[`<Convention /> renders 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -128,15 +126,11 @@ exports[`<Convention /> renders 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c11 th {
-  background: #ebeff3;
-}
-
 .c11 thead,
 .c11 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c11 tfoot {

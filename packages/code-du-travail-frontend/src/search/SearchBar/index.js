@@ -10,7 +10,7 @@ import { DocumentSuggester } from "./DocumentSuggester";
 
 const suggestMaxResults = 5;
 
-const SearchBar = ({ hasFocus = false, hasButton = false }) => {
+const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
   const router = useRouter();
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
@@ -64,6 +64,7 @@ const SearchBar = ({ hasFocus = false, hasButton = false }) => {
     <SearchForm onSubmit={onFormSubmit}>
       {hasButton && <SearchInputIcon />}
       <SearchInput
+        inputId={inputId}
         hasFocus={hasFocus}
         hasButton={hasButton}
         onChange={onChange}
@@ -96,7 +97,6 @@ const SearchForm = styled.form`
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: ${colors.darkText};
   overflow: visible;
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
@@ -130,7 +130,7 @@ const SearchInput = styled(DocumentSuggester)`
   font-family: inherit;
   appearance: none;
   background: ${colors.lightBackground};
-  border: 1px solid ${colors.elementBorder};
+  border: ${box.border};
   border-radius: ${box.borderRadius};
   transition: border ${animations.transitionTiming} ease;
   &:focus {

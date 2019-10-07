@@ -37,7 +37,7 @@ exports[`<SearchResults/> should render results 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #fff;
-  border: 1px #c9d3df solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   margin-bottom: 1.25rem;
   -webkit-transition: 200ms color,200ms box-shadow;
@@ -52,8 +52,8 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c2:active,
 .c2:hover {
-  color: #003b80;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c3 {

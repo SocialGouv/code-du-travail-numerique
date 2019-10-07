@@ -15,7 +15,7 @@ export function Category({ title, text, icon, small = false }) {
 
 const CategoryWrapper = styled.div`
   padding: ${spacing.small} ${spacing.base};
-  border: 1px solid ${colors.elementBorder};
+  border: ${box.border};
   border-radius: ${box.borderRadius};
   background: ${colors.white};
   text-decoration: none;
@@ -46,7 +46,7 @@ export const Text = styled.p`
 `;
 
 export const Title = styled.h3`
-  color: ${colors.blue};
+  color: ${colors.blueDark};
   font-size: ${fonts.sizeH5};
 `;
 

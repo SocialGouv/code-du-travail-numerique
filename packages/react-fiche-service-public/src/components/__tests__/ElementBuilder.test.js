@@ -76,7 +76,7 @@ const tests = [
         .c0 {
           margin-bottom: 1rem;
           padding: 1rem;
-          background-color: #f5f7fa;
+          background-color: #f9f9fc;
           border-radius: 0.25rem;
         }
 

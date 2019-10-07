@@ -129,14 +129,14 @@ exports[`<Button /> it renders a Button info 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #d7e8f9;
-  border-color: #d7e8f9;
-  border-bottom-color: #abcff2;
+  background: #e5f1fe;
+  border-color: #e5f1fe;
+  border-bottom-color: #b4d7fc;
 }
 
 .c0:not([disabled]):hover,
 .c0:not([disabled]):focus {
-  background: #edf5fc;
+  background: #fefeff;
   color: #18181c;
 }
 
@@ -144,26 +144,26 @@ exports[`<Button /> it renders a Button info 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   outline: none;
 }
 
 .c0[aria-pressed="true"] {
   color: #18181c;
-  background: #edf5fc;
+  background: #fefeff;
   border-width: 2px 1px 1px 1px;
-  border-color: #d7e8f9;
-  border-top-color: #abcff2;
-  box-shadow: inset 0 1px 2px 0 #abcff2;
+  border-color: #e5f1fe;
+  border-top-color: #b4d7fc;
+  box-shadow: inset 0 1px 2px 0 #b4d7fc;
 }
 
 .c0[aria-pressed="true"]:not([disabled]):hover,
 .c0[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c0[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #abcff2;
+  border-top-color: #b4d7fc;
 }
 
 .c0[disabled] {
@@ -204,7 +204,7 @@ exports[`<Button /> it renders a Button link 1`] = `
   vertical-align: initial;
   text-align: left;
   line-height: initial;
-  color: #0053b3;
+  color: #005994;
   font-weight: normal;
   font-size: inherit;
   background: none;
@@ -323,14 +323,14 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
-  background: #eaeaea;
-  border-color: #eaeaea;
-  border-bottom-color: #d1d1d1;
+  background: #ebeff3;
+  border-color: #ebeff3;
+  border-bottom-color: #cbd6e0;
 }
 
 .c0:not([disabled]):hover,
 .c0:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -338,26 +338,26 @@ exports[`<Button /> it renders a Button secondary 1`] = `
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
+  border-color: #ebeff3;
   outline: none;
 }
 
 .c0[aria-pressed="true"] {
   color: #18181c;
-  background: #f7f7f7;
+  background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
-  border-color: #eaeaea;
-  border-top-color: #d1d1d1;
-  box-shadow: inset 0 1px 2px 0 #d1d1d1;
+  border-color: #ebeff3;
+  border-top-color: #cbd6e0;
+  box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
 .c0[aria-pressed="true"]:not([disabled]):hover,
 .c0[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c0[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c0[disabled] {

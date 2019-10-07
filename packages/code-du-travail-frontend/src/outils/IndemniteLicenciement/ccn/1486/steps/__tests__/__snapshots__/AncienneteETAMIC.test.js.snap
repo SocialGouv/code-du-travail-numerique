@@ -41,7 +41,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -84,7 +84,7 @@ exports[`<AncienneteETAMIC /> asks to fill duration, indemnité and consideratio
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c4 {

@@ -141,35 +141,37 @@ const Contribution = ({ answers }) => (
   </React.Fragment>
 );
 
+const { box, colors, spacing } = theme;
+
 const NoConventionAlert = styled(Alert)`
   margin: 40px 0;
 `;
 
 const SectionCdt = styled.section`
-  padding: ${theme.spacing.small} ${theme.spacing.medium};
+  padding: ${spacing.small} ${spacing.medium};
   background: white;
 `;
 
 const SectionConvention = styled.section`
-  padding: ${theme.spacing.small} ${theme.spacing.medium};
-  background: #f6f6f6;
-  border-radius: ${theme.box.lightBorderRadius};
-  border: 1px solid #efefef;
+  padding: ${spacing.small} ${spacing.medium};
+  background: ${colors.lightBackground};
+  border-radius: ${box.lightBorderRadius};
+  border: ${box.border};
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`
-  padding: ${theme.spacing.small};
-  margin: ${theme.spacing.medium} 0;
+  padding: ${spacing.small};
+  margin: ${spacing.medium} 0;
 `;
 
 const StyledAccordion = styled(Accordion)`
   *[data-accordion-component="AccordionItem"] {
     &:nth-of-type(1) {
-      border-bottom: 1px solid ${theme.colors.elementBorder};
+      border-bottom: ${box.border};
     }
   }
   *[data-accordion-component="AccordionItemButton"] {
-    padding-left: ${theme.spacing.small};
+    padding-left: ${spacing.small};
   }
 `;
 

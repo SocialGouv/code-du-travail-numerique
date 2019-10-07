@@ -23,7 +23,7 @@ const Header = ({ hideSearch = false }) => (
             </Title>
           </LogoWrapper>
         </Link>
-        <StyledTag variant="success">Version Bêta</StyledTag>
+        <StyledTag variant="info">Version Bêta</StyledTag>
       </LeftWrapper>
       {!hideSearch && (
         <SearchBarWrapper>
@@ -34,11 +34,10 @@ const Header = ({ hideSearch = false }) => (
   </StyledHeader>
 );
 
-const { breakpoints, fonts, spacing } = theme;
+const { breakpoints, colors, fonts, spacing } = theme;
 
 const StyledHeader = styled.header`
-  color: white;
-  background: currentColor;
+  background: ${colors.white};
 `;
 
 const StyledContainer = styled(Container)`

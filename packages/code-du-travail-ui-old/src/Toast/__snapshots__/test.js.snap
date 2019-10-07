@@ -19,8 +19,8 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  border-color: #e5f1fe;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c1 {
@@ -41,7 +41,7 @@ exports[`<Toast /> Should render alternative wide toast 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c2 {
@@ -123,7 +123,7 @@ exports[`<Toast /> render default info toast 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -145,7 +145,7 @@ exports[`<Toast /> render default info toast 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c2 {
@@ -421,7 +421,7 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: iowhYu 0.3s ease-out;
   animation: iowhYu 0.3s ease-out;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -443,7 +443,7 @@ exports[`<Toast /> render with from-bottom animated toast 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c2 {
@@ -526,7 +526,7 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: kqOaZP 0.5s ease-out;
   animation: kqOaZP 0.5s ease-out;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -548,7 +548,7 @@ exports[`<Toast /> render with from-left animated toast 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c2 {
@@ -631,7 +631,7 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: geNrKo 0.5s ease-out;
   animation: geNrKo 0.5s ease-out;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -653,7 +653,7 @@ exports[`<Toast /> render with from-right animated toast 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c2 {
@@ -736,7 +736,7 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: jYyoao 0.3s ease-out;
   animation: jYyoao 0.3s ease-out;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -758,7 +758,7 @@ exports[`<Toast /> render with from-top animated toast 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c2 {

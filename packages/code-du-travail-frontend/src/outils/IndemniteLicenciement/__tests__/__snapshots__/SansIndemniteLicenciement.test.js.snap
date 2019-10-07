@@ -24,7 +24,7 @@ exports[`<SansIndemniteLicenciement /> should render 1`] = `
 .c2 {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #0053b3;
+  color: #005994;
 }
 
 .c4 {

@@ -13,8 +13,8 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
   padding: 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #f5f7fa;
-  border: 1px #c9d3df solid;
+  background-color: #f9f9fc;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   margin-bottom: 1.25rem;
   -webkit-transition: 200ms color,200ms box-shadow;
@@ -29,8 +29,8 @@ exports[`<DownloadFile /> should render with courrier icon 1`] = `
 
 .c0:active,
 .c0:hover {
-  color: #003b80;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c1 {

@@ -27,10 +27,8 @@ Wrapper.defaultProps = {
 const StyledWrapper = styled.div`
   padding: ${spacing.small} ${spacing.medium};
   color: ${colors.darkText};
-  border-width: 1px;
-  border-style: solid;
+  border: ${box.border};
   border-radius: ${box.borderRadius};
-  border-color: ${colors.elementBorder};
   ${props => {
     if (props.size === "large") {
       return css`

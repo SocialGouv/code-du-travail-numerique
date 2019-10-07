@@ -4,10 +4,8 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #ebeff3;
 }
 
@@ -47,10 +45,8 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   border-color: transparent;
 }
 
@@ -90,10 +86,8 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -133,10 +127,8 @@ exports[`<Wrapper /> should render a large wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   padding: 2rem 2.5rem;
   border-color: transparent;
 }

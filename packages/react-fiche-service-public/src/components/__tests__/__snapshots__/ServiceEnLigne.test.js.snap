@@ -26,7 +26,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
   margin-bottom: 0.5rem;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #006ab2;
+  color: #005994;
 }
 
 .c2:link,
@@ -43,7 +43,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
 .c2:hover,
 .c2:focus,
 .c2:active {
-  background-color: #003b80;
+  background-color: #005994;
 }
 
 .c3 {

@@ -54,15 +54,11 @@ exports[`<Table /> should render with th, td, colspan etc. 1`] = `
   border: 1px solid #c9d3df;
 }
 
-.c2 th {
-  background: #ebeff3;
-}
-
 .c2 thead,
 .c2 tfoot {
   padding: 0.625rem 1rem;
   vertical-align: bottom;
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c2 tfoot {

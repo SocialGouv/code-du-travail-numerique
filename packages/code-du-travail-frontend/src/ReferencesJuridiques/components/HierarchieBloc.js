@@ -81,7 +81,7 @@ const BlocWrapper = styled.div`
   margin: ${spacing.medium} 0;
   padding: ${spacing.base};
   background-color: ${colors.darkBackground};
-  border: 1px solid ${colors.elementBorder};
+  border: ${box.border};
   border-radius: ${box.borderRadius};
 `;
 

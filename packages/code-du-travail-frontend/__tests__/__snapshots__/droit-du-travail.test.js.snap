@@ -81,10 +81,8 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c20 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   border-color: transparent;
 }
 
@@ -176,7 +174,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 .c30:focus,
 .c30:focus-within,
 .c30[aria-expanded="true"] {
-  color: #006ab2;
+  color: #005994;
 }
 
 .c32 {
@@ -217,7 +215,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   vertical-align: initial;
   text-align: left;
   line-height: initial;
-  color: #0053b3;
+  color: #005994;
   font-weight: normal;
   font-size: inherit;
   background: none;
@@ -303,7 +301,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   line-height: 1rem;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #e0f2bd;
+  background: #e5f1fe;
 }
 
 .c33 {
@@ -324,7 +322,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   border-radius: 0.25rem;
   -webkit-animation: none;
   animation: none;
-  border-color: #d7e8f9;
+  border-color: #e5f1fe;
   box-shadow: none;
 }
 
@@ -368,7 +366,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
 }
 
 .c44 {
@@ -421,7 +419,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c14 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c10 {
@@ -432,7 +430,6 @@ exports[`<DroitDuTravail /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: #434956;
   overflow: visible;
 }
 
@@ -496,8 +493,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
 }
 
 .c0 {
-  color: white;
-  background: currentColor;
+  background: #fff;
 }
 
 .c2 {
@@ -735,7 +731,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   position: relative;
   left: 4% flex-basis:80%;
   padding-right: 8%;
-  background-color: #f5f7fa;
+  background-color: #f9f9fc;
   border-radius: 0.25rem;
 }
 
@@ -753,7 +749,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
   -webkit-flex-basis: 410px;
   -ms-flex-preferred-size: 410px;
   flex-basis: 410px;
-  background-color: #d7e8f9;
+  background-color: #e5f1fe;
   border-radius: 0.25rem;
 }
 

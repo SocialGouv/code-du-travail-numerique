@@ -100,7 +100,7 @@ const ModeleLink = styled.a`
     text-decoration: none;
   }
   :hover {
-    border-color: ${colors.elementBorder};
+    border-color: ${colors.lightGrey};
     background: ${colors.darkBackground};
   }
   :hover strong {
@@ -122,7 +122,7 @@ const Icon = styled(ModeleCourrierIcon)`
 
 const Label = styled.span`
   font-weight: 700;
-  color: ${colors.darkerGrey};
+  color: ${colors.lightText};
 `;
 
 const Value = styled.span`

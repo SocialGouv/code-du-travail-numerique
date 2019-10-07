@@ -68,7 +68,7 @@ const Button = styled.button`
   border: 0;
   text-align: left;
   background-color: inherit;
-  color: ${colors.blue};
+  color: ${colors.blueDark};
   text-decoration: underline;
   font-size: inherit;
   cursor: pointer;

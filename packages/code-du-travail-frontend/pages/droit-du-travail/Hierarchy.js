@@ -530,7 +530,7 @@ const NumberWrapper = styled.div`
     left: 50%;
     width: 1px;
     height: 100%;
-    background-color: ${colors.elementBorder};
+    background-color: ${colors.lightGrey};
     @media (max-width: ${breakpoints.tablet}) {
       display: none;
     }
@@ -547,7 +547,7 @@ const Number = styled.div`
   color: ${colors.white};
   font-size: ${fonts.sizeH4};
   font-weight: bold;
-  background-color: ${colors.primaryBackground};
+  background-color: ${colors.blueDark};
   border-radius: 50%;
 `;
 

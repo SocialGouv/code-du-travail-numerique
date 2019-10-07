@@ -28,7 +28,7 @@ exports[`<Anciennete /> should display error if anciennté < 8mois 1`] = `
 
 exports[`<Anciennete /> should display error if dateEntre after dateSortie 1`] = `
 .c0 {
-  color: #53657d;
+  color: #4c5467;
   font-weight: 600;
   font-size: 0.875rem;
 }

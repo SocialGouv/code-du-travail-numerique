@@ -74,8 +74,8 @@ const StyledTab = styled(Tab)`
   padding: ${spacing.small} ${spacing.base};
   font-size: ${fonts.sizeH5};
   background-color: ${colors.darkBackground};
-  border: 1px solid ${colors.elementBorder};
-  border-bottom: 1px solid ${colors.primaryBackground};
+  border: ${box.border};
+  border-bottom: 1px solid ${colors.blueDark};
   border-radius: ${box.lightBorderRadius} ${box.lightBorderRadius} 0 0;
   cursor: pointer;
   &:hover {
@@ -83,12 +83,12 @@ const StyledTab = styled(Tab)`
   }
   &[aria-selected="true"] {
     color: ${colors.primaryText};
-    background-color: ${colors.primaryBackground};
+    background-color: ${colors.blueDark};
   }
   @media (max-width: ${breakpoints.tablet}) {
     flex: 1 1 auto;
     margin: ${spacing.tiny};
-    border-bottom: 1px solid ${colors.elementBorder};
+    border-bottom: ${box.border};
     border-radius: ${box.lightBorderRadius};
   }
 `;
@@ -96,7 +96,7 @@ const StyledTab = styled(Tab)`
 const StyledTabPanel = styled(TabPanel)`
   &.react-tabs__tab-panel--selected {
     padding: ${spacing.base};
-    border: 1px solid ${colors.primaryBackground};
+    border: 1px solid ${colors.blueDark};
     border-radius: 0 ${box.borderRadius} ${box.borderRadius} ${box.borderRadius};
     @media (max-width: ${breakpoints.tablet}) {
       margin-top: ${spacing.tiny};

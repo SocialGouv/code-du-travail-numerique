@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
 import OverflowWrapper from "../OverflowWrapper";
-import { colors, spacing } from "../theme";
+import { box, colors, spacing } from "../theme";
 
 const Table = ({ children, ...props }) => (
   <OverflowWrapper>
@@ -23,7 +23,7 @@ const StyledTable = styled.table`
   background-color: ${colors.white};
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid ${colors.elementBorder};
+  border: ${box.border};
 
   caption {
     padding: ${spacing.small} 0;
@@ -35,25 +35,25 @@ const StyledTable = styled.table`
     props.stripes &&
     css`
       tr:nth-child(even) {
-        background-color: ${colors.elementBackground}};
+        background-color: ${colors.lightBackground}};
       }
     `}
 
   td,
   th {
     padding: ${spacing.small} ${spacing.base};
-    border: 1px solid ${colors.elementBorder};
+    border: ${box.border};
   }
 
   th {
-    background: ${colors.lighterGrey};
+    background: ${colors.darkBackgorund};
   }
 
   thead,
   tfoot {
     padding: ${spacing.small} ${spacing.base};
     vertical-align: bottom;
-    background: ${colors.elementBackground};
+    background: ${colors.lightBackground};
   }
 
   tfoot {

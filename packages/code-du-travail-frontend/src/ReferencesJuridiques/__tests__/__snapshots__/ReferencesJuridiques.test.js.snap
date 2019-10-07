@@ -28,10 +28,8 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 .c3 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -123,7 +121,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
 .c8:focus,
 .c8:focus-within,
 .c8[aria-expanded="true"] {
-  color: #006ab2;
+  color: #005994;
 }
 
 .c11 {
@@ -207,7 +205,7 @@ exports[`<ReferencesJuridiques /> should render 1`] = `
   display: block;
   margin-top: 1rem;
   padding: 1rem;
-  background-color: #f5f7fa;
+  background-color: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   cursor: pointer;

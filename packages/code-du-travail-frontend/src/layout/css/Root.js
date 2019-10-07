@@ -21,7 +21,7 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background: ${colors.darkBackground};
-    border-top: 5px solid ${colors.blue};
+    border-top: 5px solid ${colors.blueDark};
     @media print {
       font-size: 10pt;
     }

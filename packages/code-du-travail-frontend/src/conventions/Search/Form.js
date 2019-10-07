@@ -179,7 +179,7 @@ const ResultLabel = styled.div`
   whitespace: nowrap;
   max-width: calc(100% - 200px);
   font-weight: bold;
-  color: ${theme.colors.blue};
+  color: ${theme.colors.blueDark};
 `;
 
 export default Search;

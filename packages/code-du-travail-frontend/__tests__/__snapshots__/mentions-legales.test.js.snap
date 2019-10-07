@@ -71,10 +71,8 @@ exports[`<MentionLegales /> should render 1`] = `
 .c18 {
   padding: 0.625rem 1.25rem;
   color: #434956;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
-  border-color: #c9d3df;
   background-color: #fff;
 }
 
@@ -166,7 +164,7 @@ exports[`<MentionLegales /> should render 1`] = `
 .c24:focus,
 .c24:focus-within,
 .c24[aria-expanded="true"] {
-  color: #006ab2;
+  color: #005994;
 }
 
 .c26 {
@@ -211,8 +209,8 @@ exports[`<MentionLegales /> should render 1`] = `
   border: 1px solid transparent;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #d7e8f9;
-  border-color: #abcff2;
+  background: #e5f1fe;
+  border-color: #b4d7fc;
 }
 
 .c21 > *:first-child {
@@ -292,7 +290,7 @@ exports[`<MentionLegales /> should render 1`] = `
   line-height: 1rem;
   border-radius: 0.25rem;
   color: #0c0c0e;
-  background: #e0f2bd;
+  background: #e5f1fe;
 }
 
 .c11 {
@@ -311,7 +309,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c14 li[role="option"]:nth-child(2n + 1) {
-  background: #f5f7fa;
+  background: #f9f9fc;
 }
 
 .c10 {
@@ -322,7 +320,6 @@ exports[`<MentionLegales /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  color: #434956;
   overflow: visible;
 }
 
@@ -386,8 +383,7 @@ exports[`<MentionLegales /> should render 1`] = `
 }
 
 .c0 {
-  color: white;
-  background: currentColor;
+  background: #fff;
 }
 
 .c2 {
