@@ -75,7 +75,6 @@ Release:
 Production:
   <<: *notify_stage
   stage: "Notify Finished Deployment"
-  image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
   when: manual
   only:
     - tags
