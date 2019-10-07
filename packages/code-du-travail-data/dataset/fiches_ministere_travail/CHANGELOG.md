@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.2.0...v3.3.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ora to v4 ([#1298](https://github.com/SocialGouv/code-du-travail-numerique/issues/1298)) ([34472c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/34472c8))
+
+
+### Features
+
+* **data:** add new fiches MT ([#1306](https://github.com/SocialGouv/code-du-travail-numerique/issues/1306)) ([99b1039](https://github.com/SocialGouv/code-du-travail-numerique/commit/99b1039))
+
+
+
+
+
 # [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
 
 

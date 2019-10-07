@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.2.0...v3.3.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency date-fns to ^2.3.0 ([#1315](https://github.com/SocialGouv/code-du-travail-numerique/issues/1315)) ([39cf467](https://github.com/SocialGouv/code-du-travail-numerique/commit/39cf467))
+* **docker:** update docker-compose config ([#1312](https://github.com/SocialGouv/code-du-travail-numerique/issues/1312)) ([786dd5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/786dd5c))
+* **frontend:** backlink ([#1339](https://github.com/SocialGouv/code-du-travail-numerique/issues/1339)) ([830187a](https://github.com/SocialGouv/code-du-travail-numerique/commit/830187a))
+* **frontend:** missing coma ([#1325](https://github.com/SocialGouv/code-du-travail-numerique/issues/1325)) ([4903562](https://github.com/SocialGouv/code-du-travail-numerique/commit/4903562))
+* **tooltip:** fix matchRegexp for startwith pattern ([#1340](https://github.com/SocialGouv/code-du-travail-numerique/issues/1340)) ([9588ae0](https://github.com/SocialGouv/code-du-travail-numerique/commit/9588ae0))
+* **tooltip:** update pattern matching code ([#1334](https://github.com/SocialGouv/code-du-travail-numerique/issues/1334)) ([6c9c2e2](https://github.com/SocialGouv/code-du-travail-numerique/commit/6c9c2e2)), closes [#1305](https://github.com/SocialGouv/code-du-travail-numerique/issues/1305)
+
+
+### Features
+
+* **data:** use new fiches vdd package ([#1316](https://github.com/SocialGouv/code-du-travail-numerique/issues/1316)) ([b93aa51](https://github.com/SocialGouv/code-du-travail-numerique/commit/b93aa51))
+* **frontend:** add search into header ([#1338](https://github.com/SocialGouv/code-du-travail-numerique/issues/1338)) ([9a4bd5e](https://github.com/SocialGouv/code-du-travail-numerique/commit/9a4bd5e))
+* **frontend:** new search ux ([#1291](https://github.com/SocialGouv/code-du-travail-numerique/issues/1291)) ([2eb33b1](https://github.com/SocialGouv/code-du-travail-numerique/commit/2eb33b1))
+
+
+
+
+
 # [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
 
 

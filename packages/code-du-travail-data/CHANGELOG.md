@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.2.0...v3.3.0) (2019-10-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @socialgouv/legi-data to ^1.1.1 ([#1301](https://github.com/SocialGouv/code-du-travail-numerique/issues/1301)) ([ddeeef4](https://github.com/SocialGouv/code-du-travail-numerique/commit/ddeeef4))
+* **deps:** update dependency date-fns to ^2.3.0 ([#1315](https://github.com/SocialGouv/code-du-travail-numerique/issues/1315)) ([39cf467](https://github.com/SocialGouv/code-du-travail-numerique/commit/39cf467))
+* **deps:** update dependency libxmljs to ^0.19.7 ([#1297](https://github.com/SocialGouv/code-du-travail-numerique/issues/1297)) ([219b1fa](https://github.com/SocialGouv/code-du-travail-numerique/commit/219b1fa))
+* **deps:** update dependency ora to v4 ([#1298](https://github.com/SocialGouv/code-du-travail-numerique/issues/1298)) ([34472c8](https://github.com/SocialGouv/code-du-travail-numerique/commit/34472c8))
+* **docker:** update docker-compose config ([#1312](https://github.com/SocialGouv/code-du-travail-numerique/issues/1312)) ([786dd5c](https://github.com/SocialGouv/code-du-travail-numerique/commit/786dd5c))
+
+
+### Features
+
+* **data:** add new fiches MT ([#1306](https://github.com/SocialGouv/code-du-travail-numerique/issues/1306)) ([99b1039](https://github.com/SocialGouv/code-du-travail-numerique/commit/99b1039))
+* **data:** use new fiches vdd package ([#1316](https://github.com/SocialGouv/code-du-travail-numerique/issues/1316)) ([b93aa51](https://github.com/SocialGouv/code-du-travail-numerique/commit/b93aa51))
+
+
+
+
+
 # [3.2.0](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.1.1...v3.2.0) (2019-09-23)
 
 
