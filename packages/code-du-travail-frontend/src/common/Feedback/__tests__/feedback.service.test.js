@@ -1,6 +1,8 @@
 import { feedbackUrl, postFeedback } from "../feedback.service";
+import fetch from "isomorphic-unfetch";
+jest.mock("isomorphic-unfetch");
 
-global.fetch = jest.fn().mockResolvedValue({ json: () => ({ error: false }) });
+fetch.mockResolvedValue({ json: () => ({ error: false }) });
 
 const data = { foo: "bar" };
 
