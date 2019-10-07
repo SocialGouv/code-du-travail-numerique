@@ -862,6 +862,15 @@ exports[`<Annuaire /> should render 1`] = `
               class="c36"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c36"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

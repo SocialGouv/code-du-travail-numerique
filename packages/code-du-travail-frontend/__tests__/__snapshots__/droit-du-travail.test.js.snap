@@ -2485,6 +2485,15 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c55"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c55"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

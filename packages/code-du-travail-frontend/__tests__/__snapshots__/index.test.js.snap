@@ -1025,6 +1025,15 @@ exports[`<Home /> should render 1`] = `
               class="c42"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c42"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

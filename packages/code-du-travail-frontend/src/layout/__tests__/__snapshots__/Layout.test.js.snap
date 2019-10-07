@@ -573,6 +573,15 @@ exports[`<Layout /> should render 1`] = `
               class="c27"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c27"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

@@ -2832,6 +2832,15 @@ exports[`<Glossaire /> should render 1`] = `
               class="c30"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c30"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

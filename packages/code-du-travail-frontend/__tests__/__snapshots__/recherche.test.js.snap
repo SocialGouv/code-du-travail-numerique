@@ -620,6 +620,15 @@ exports[`<Recherche /> should render 1`] = `
               class="c29"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c29"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos

@@ -39,6 +39,11 @@ const Footer = () => (
               </Link>
             </StyledListItem>
             <StyledListItem>
+              <Link href="/glossaire">
+                <a>Glossaire</a>
+              </Link>
+            </StyledListItem>
+            <StyledListItem>
               <Link href="/a-propos">
                 <a>À propos</a>
               </Link>

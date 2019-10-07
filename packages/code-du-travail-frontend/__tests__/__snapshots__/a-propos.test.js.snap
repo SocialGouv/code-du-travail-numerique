@@ -690,6 +690,15 @@ exports[`<About /> should render 1`] = `
               class="c31"
             >
               <a
+                href="/glossaire"
+              >
+                Glossaire
+              </a>
+            </li>
+            <li
+              class="c31"
+            >
+              <a
                 href="/a-propos"
               >
                 À propos
