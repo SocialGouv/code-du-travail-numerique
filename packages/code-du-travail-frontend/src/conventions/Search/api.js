@@ -5,6 +5,8 @@ import {
   searchEntrepriseBySiret
 } from "../entreprise.service";
 
+const cleanIdcc = str => (str && str.replace(/^0+/, "").trim()) || "";
+
 // build a result list based on query type
 export const loadResults = async query => {
   const type = getQueryType(query);
@@ -40,14 +42,19 @@ export const loadResults = async query => {
     // search local idcc list
   }
   if (type === "idcc") {
-    const matches = await searchConvention(query.trim());
+    const matches = await searchConvention(cleanIdcc(query));
+
     // only show 1 result when perfect
-    if (matches && matches.length && matches[0].num === query.trim()) {
+    const perfectMatch =
+      matches &&
+      matches.length &&
+      matches.find(match => cleanIdcc(match.num) === cleanIdcc(query));
+    if (perfectMatch) {
       return [
         {
           id: query,
-          label: `IDCC ${query}`,
-          conventions: matches.slice(0, 1)
+          label: `IDCC ${perfectMatch.num}`,
+          conventions: [perfectMatch]
         }
       ];
     }
