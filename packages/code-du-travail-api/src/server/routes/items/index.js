@@ -1,9 +1,11 @@
 const Router = require("koa-router");
-const API_BASE_URL = require("../v1.prefix");
+const { SOURCES } = require("@cdt/sources");
 
+const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getItemBySlugBody = require("./searchBySourceSlug.elastic");
-const getRelatedDocumentBody = require("./relatedDocument.elastic");
+
+const getSearch = require("../search/getSearch");
 
 const index =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
@@ -31,8 +33,13 @@ router.get("/items/:source/:slug", async ctx => {
   }
 
   const item = response.body.hits.hits[0];
-  const relatedItems =
-    ctx.params.source === "faq" ? await searchItemsFromTheme(item) : {};
+
+  // Get current item title to find related items
+  const { title } = item._source;
+  const relatedItems = await getSearch({
+    q: title,
+    excludeSources: `${SOURCES.CDT}, ${SOURCES.THEMES}`
+  });
 
   ctx.body = {
     ...item,
@@ -59,38 +66,5 @@ router.get("/items/:id", async ctx => {
   });
   ctx.body = response.body;
 });
-
-/**
- * Return documents matching item themes, grouped by source.
- *
- * @param {object} :item The item
- * @returns {Object} Result: documents that match item's themes, group by source.
- */
-async function searchItemsFromTheme(item) {
-  const themes = (item._source.tags || [])
-    .filter(tag => tag.match(/^themes/))
-    .map(theme => theme.split(":")[1]);
-
-  if (themes.length === 0) {
-    return {};
-  }
-
-  const body = getRelatedDocumentBody({ themes, id: item._id });
-  const response = await elasticsearchClient.search({ index, body });
-
-  if (response.body.aggregations.bySource.buckets.length === 0) {
-    return {};
-  }
-
-  const { buckets } = response.body.aggregations.bySource;
-
-  return buckets.reduce(
-    (state, bucket) =>
-      bucket.doc_count > 0
-        ? { ...state, [bucket.key]: bucket.bySource.hits.hits }
-        : state,
-    {}
-  );
-}
 
 module.exports = router;

@@ -15,11 +15,34 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c5 {
+  padding: 1.25rem 0;
+}
+
+.c6 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background-color: #ebeff3;
+}
+
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c4 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #fee5ad;
+  border-color: #fdd57b;
 }
 
 .c4 > *:first-child {
@@ -30,45 +53,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  padding: 1.25rem 0;
-}
-
-.c5 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #fee5ad;
-  border-color: #fdd57b;
-}
-
-.c2 > *:first-child {
-  margin-top: 0;
-}
-
-.c2 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c17 {
+.c18 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -90,11 +75,11 @@ exports[`<ConventionCollective /> should render 1`] = `
   border: none;
 }
 
-.c17:hover {
+.c18:hover {
   color: #8c94a6;
 }
 
-.c12 {
+.c13 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -116,7 +101,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,7 +122,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c14 {
+.c15 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -150,7 +135,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   text-align: left;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,7 +154,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: center;
 }
 
-.c11 {
+.c12 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -177,15 +162,15 @@ exports[`<ConventionCollective /> should render 1`] = `
   z-index: 1000;
 }
 
-.c15 {
+.c16 {
   padding: 0 0.25rem;
 }
 
-.c6 {
+.c7 {
   margin-bottom: 1rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -196,7 +181,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c9 {
+.c10 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -219,13 +204,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
+.c10:not([disabled]):hover,
+.c10:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c9:not([disabled]):active {
+.c10:not([disabled]):active {
   color: #242429;
   background: #fff;
   border-width: 2px 1px 1px 1px;
@@ -233,7 +218,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   outline: none;
 }
 
-.c9[aria-pressed="true"] {
+.c10[aria-pressed="true"] {
   color: #18181c;
   background: #fbfcfd;
   border-width: 2px 1px 1px 1px;
@@ -242,25 +227,25 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #cbd6e0;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
+.c10[aria-pressed="true"]:not([disabled]):hover,
+.c10[aria-pressed="true"]:not([disabled]):focus {
   background-color: #ebeff3;
 }
 
-.c9[aria-pressed="true"]:not([disabled]):active {
+.c10[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #cbd6e0;
 }
 
-.c9[disabled] {
+.c10[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c9 + .c8 {
+.c10 + .c9 {
   margin-left: 1rem;
 }
 
-.c10 {
+.c11 {
   padding: 0.625rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -283,13 +268,13 @@ exports[`<ConventionCollective /> should render 1`] = `
   min-width: 7rem;
 }
 
-.c10:not([disabled]):hover,
-.c10:not([disabled]):focus {
+.c11:not([disabled]):hover,
+.c11:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c10:not([disabled]):active {
+.c11:not([disabled]):active {
   color: #fff;
   background: #1a85ff;
   border-width: 2px 1px 1px 1px;
@@ -297,7 +282,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   outline: none;
 }
 
-.c10[aria-pressed="true"] {
+.c11[aria-pressed="true"] {
   color: #fff;
   background: #07f;
   border-width: 2px 1px 1px 1px;
@@ -306,28 +291,47 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: inset 0 1px 2px 0 #0053b3;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):hover,
-.c10[aria-pressed="true"]:not([disabled]):focus {
+.c11[aria-pressed="true"]:not([disabled]):hover,
+.c11[aria-pressed="true"]:not([disabled]):focus {
   background-color: #006be6;
 }
 
-.c10[aria-pressed="true"]:not([disabled]):active {
+.c11[aria-pressed="true"]:not([disabled]):active {
   border-top-color: #0053b3;
 }
 
-.c10[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c10 + .c8 {
+.c11 + .c9 {
   margin-left: 1rem;
 }
 
-.c1 {
+.c3 {
   margin: 20%;
   font-size: 1.875rem;
   text-align: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.c2 {
+  width: 80%;
 }
 
 @media print {
@@ -337,23 +341,22 @@ exports[`<ConventionCollective /> should render 1`] = `
   }
 }
 
-@media print {
-  .c4 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
 @media (max-width:600px) {
-  .c5 {
+  .c6 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c5 {
+  .c6 {
     border: none;
     padding: 0 5pt;
+  }
+}
+
+@media (max-width:980px) {
+  .c2 {
+    width: 100%;
   }
 }
 
@@ -364,50 +367,58 @@ exports[`<ConventionCollective /> should render 1`] = `
     <div
       class="c2"
     >
-      Cette convention collective n'a pas été trouvée
-    </div>
-  </div>
-  <div
-    class="c3"
-  >
-    <div
-      class="c4"
-    >
+      <div
+        class="c0 c3"
+      >
+        <div
+          class="c4"
+        >
+          Cette convention collective n'a pas été trouvée
+        </div>
+      </div>
       <div
         class="c5"
       >
-        <h3
-          class="c6"
+        <div
+          class="c0"
         >
-          Avez-vous trouvé la réponse à votre question ?
-        </h3>
-        <p
-          class="c7"
-        >
-          <button
-            aria-pressed="false"
-            class="c8 c9"
+          <div
+            class="c6"
           >
-            Non
-          </button>
-          <button
-            aria-pressed="false"
-            class="c8 c10"
-          >
-            Oui
-          </button>
-        </p>
+            <h3
+              class="c7"
+            >
+              Avez-vous trouvé la réponse à votre question ?
+            </h3>
+            <p
+              class="c8"
+            >
+              <button
+                aria-pressed="false"
+                class="c9 c10"
+              >
+                Non
+              </button>
+              <button
+                aria-pressed="false"
+                class="c9 c11"
+              >
+                Oui
+              </button>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div
-    class="c11"
+    class="c12"
   >
     <div
-      class="c12"
+      class="c13"
     >
       <div
-        class="c13"
+        class="c14"
       >
         <svg
           fill="none"
@@ -438,12 +449,12 @@ exports[`<ConventionCollective /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c14"
+        class="c15"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c15"
+          class="c16"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -454,12 +465,12 @@ exports[`<ConventionCollective /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c16"
+        class="c17"
       >
         <button
           aria-label="Fermer"
           aria-pressed="false"
-          class="c17"
+          class="c18"
         >
           <svg
             fill="none"

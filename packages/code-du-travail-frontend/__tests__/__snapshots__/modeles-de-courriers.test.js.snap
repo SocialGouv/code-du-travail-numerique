@@ -33,7 +33,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
+.c20 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -41,34 +41,19 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c18 > *:first-child {
+.c20 > *:first-child {
   margin-top: 0;
 }
 
-.c18 > *:last-child {
+.c20 > *:last-child {
   margin-bottom: 0;
 }
 
-.c29 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c29 > *:first-child {
-  margin-top: 0;
-}
-
-.c29 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c16 {
+.c18 {
   padding: 1.25rem 0;
 }
 
-.c17 {
+.c19 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -76,11 +61,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background-color: #fff;
 }
 
-.c17 > *:first-child {
+.c19 > *:first-child {
   margin-top: 0;
 }
 
-.c17 > *:last-child {
+.c19 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -185,7 +170,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   color: #8c94a6;
 }
 
-.c24 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -205,19 +190,19 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   transition: 200ms color,200ms box-shadow;
 }
 
-.c24:visited {
+.c25:visited {
   color: #434956;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c24:active,
-.c24:hover {
+.c25:active,
+.c25:hover {
   color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c25 {
+.c26 {
   -webkit-flex: 0 0 3rem;
   -ms-flex: 0 0 3rem;
   flex: 0 0 3rem;
@@ -313,29 +298,21 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   justify-content: center;
 }
 
-.c26 {
+.c27 {
   color: #434956;
   font-weight: bold;
 }
 
-.c27 {
+.c28 {
   font-size: var(--font-size-xsmall);
 }
 
-.c19 {
+.c21 {
   position: relative;
   margin-bottom: 1.25rem;
 }
 
-.c20 {
-  position: absolute;
-  top: 0.625rem;
-  left: calc(-80px - 1.25rem);
-  width: 80px;
-  color: #4c5467;
-}
-
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -346,12 +323,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c22 {
+.c23 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c23 {
+.c24 {
   margin-left: -10px;
 }
 
@@ -510,7 +487,26 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-left: 1rem;
 }
 
-.c28 {
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.c17 {
+  width: 80%;
+}
+
+.c29 {
   margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
@@ -732,59 +728,46 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
-  .c18 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media print {
-  .c29 {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-
-@media (max-width:600px) {
-  .c17 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c17 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:600px) {
-  .c30 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c30 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    display: none;
-  }
-}
-
-@media (max-width:1200px) {
   .c20 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c19 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c19 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c30 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c30 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
+@media (max-width:600px) {
+  .c26 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c21 {
+  .c22 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -792,6 +775,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
+  }
+}
+
+@media (max-width:980px) {
+  .c17 {
+    width: 100%;
   }
 }
 
@@ -959,152 +948,141 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     id="main"
   >
     <div
-      class="c16"
-      data-main-content="true"
+      class="c1 c16"
     >
       <div
-        class="c1"
+        class="c17"
       >
         <div
-          class="c17"
+          class="c18"
+          data-main-content="true"
         >
           <div
-            class="c16"
+            class="c1"
           >
             <div
-              class="c18 c19"
+              class="c19"
             >
               <div
-                class="c20"
-              >
-                <svg
-                  viewBox="0 0 512 512"
-                >
-                  <title>
-                    Icône modèle de courrier
-                  </title>
-                  <path
-                    d="M496 489.618V186.57c0-3.121-3.925-7.048-7.75-9.967l-79.212-57.49V55.584c0-6.242-5.233-10.47-10.467-10.47h-90.283L262.29 11.585c-3.12-2.115-8.354-2.115-11.575 0l-45.997 33.526h-90.283c-6.24 0-10.468 5.236-10.468 10.471v62.825L23.75 176.702c-4.73 2.92-7.75 6.746-7.75 9.968v305.063c0 5.94 4.73 10.068 9.662 10.47h459.77c6.743-.1 10.568-5.336 10.568-12.585zm-19.929-284.222v265.395L302.853 332.053 476.07 205.396zm-7.75-18.424l-59.283 43.192v-86.787l59.283 43.595zM256.051 31.42l18.418 13.592h-36.938l18.52-13.592zm132.052 34.634v179.413L256.05 341.718l-132.053-96.25V66.053h264.106zM36.03 205.396l173.22 126.657-173.22 139.543v-266.2zm68.04 25.573l-60.793-44.3 60.793-44.198v88.498zM54.85 482.168l171.206-137.832 23.652 17.317c4.53 3.423 7.952 3.423 12.582 0l23.652-17.317 172.213 137.832H54.85z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M185.831 116.78h141.356v20.339H185.831zM185.831 180.847h141.356v20.339H185.831zM185.831 244.915h141.356v20.339H185.831z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-              <h1>
-                Modèle de courrier :  undefined
-              </h1>
-              <div
-                class="c21"
-              >
-                <span
-                  class="c22"
-                >
-                  Modèle de document
-                </span>
-              </div>
-              <div
-                class="c23"
-              />
-            </div>
-            <div
-              class="c18"
-            >
-              
-              <div
-                class="c16"
+                class="c18"
               >
                 <div
-                  class="c17"
+                  class="c20 c21"
                 >
-                  <div />
-                </div>
-              </div>
-              <h4>
-                Télécharger le modèle
-              </h4>
-              <a
-                class="c24"
-                href="api.url/docs/undefined"
-                title="Télécharger le courrier type"
-              >
-                <span
-                  class="c25"
-                >
-                  <svg
-                    viewBox="0 0 512 512"
-                  >
-                    <title>
-                      Icône modèle de courrier
-                    </title>
-                    <path
-                      d="M496 489.618V186.57c0-3.121-3.925-7.048-7.75-9.967l-79.212-57.49V55.584c0-6.242-5.233-10.47-10.467-10.47h-90.283L262.29 11.585c-3.12-2.115-8.354-2.115-11.575 0l-45.997 33.526h-90.283c-6.24 0-10.468 5.236-10.468 10.471v62.825L23.75 176.702c-4.73 2.92-7.75 6.746-7.75 9.968v305.063c0 5.94 4.73 10.068 9.662 10.47h459.77c6.743-.1 10.568-5.336 10.568-12.585zm-19.929-284.222v265.395L302.853 332.053 476.07 205.396zm-7.75-18.424l-59.283 43.192v-86.787l59.283 43.595zM256.051 31.42l18.418 13.592h-36.938l18.52-13.592zm132.052 34.634v179.413L256.05 341.718l-132.053-96.25V66.053h264.106zM36.03 205.396l173.22 126.657-173.22 139.543v-266.2zm68.04 25.573l-60.793-44.3 60.793-44.198v88.498zM54.85 482.168l171.206-137.832 23.652 17.317c4.53 3.423 7.952 3.423 12.582 0l23.652-17.317 172.213 137.832H54.85z"
-                      fill="currentColor"
-                    />
-                    <path
-                      d="M185.831 116.78h141.356v20.339H185.831zM185.831 180.847h141.356v20.339H185.831zM185.831 244.915h141.356v20.339H185.831z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <span>
+                  <h1>
+                    Modèle de courrier :  undefined
+                  </h1>
                   <div
-                    class="c26"
+                    class="c22"
                   >
-                    <span>
-                      modele
-                    </span>
-                    <br />
                     <span
-                      class="c27"
+                      class="c23"
                     >
                       Modèle de document
                     </span>
                   </div>
-                </span>
-              </a>
-              <div
-                class="c28"
-              >
-                Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région
+                  <div
+                    class="c24"
+                  />
+                </div>
+                <div
+                  class="c20"
+                >
+                  
+                  <div
+                    class="c18"
+                  >
+                    <div
+                      class="c19"
+                    >
+                      <div />
+                    </div>
+                  </div>
+                  <h4>
+                    Télécharger le modèle
+                  </h4>
+                  <a
+                    class="c25"
+                    href="api.url/docs/undefined"
+                    title="Télécharger le courrier type"
+                  >
+                    <span
+                      class="c26"
+                    >
+                      <svg
+                        viewBox="0 0 512 512"
+                      >
+                        <title>
+                          Icône modèle de courrier
+                        </title>
+                        <path
+                          d="M496 489.618V186.57c0-3.121-3.925-7.048-7.75-9.967l-79.212-57.49V55.584c0-6.242-5.233-10.47-10.467-10.47h-90.283L262.29 11.585c-3.12-2.115-8.354-2.115-11.575 0l-45.997 33.526h-90.283c-6.24 0-10.468 5.236-10.468 10.471v62.825L23.75 176.702c-4.73 2.92-7.75 6.746-7.75 9.968v305.063c0 5.94 4.73 10.068 9.662 10.47h459.77c6.743-.1 10.568-5.336 10.568-12.585zm-19.929-284.222v265.395L302.853 332.053 476.07 205.396zm-7.75-18.424l-59.283 43.192v-86.787l59.283 43.595zM256.051 31.42l18.418 13.592h-36.938l18.52-13.592zm132.052 34.634v179.413L256.05 341.718l-132.053-96.25V66.053h264.106zM36.03 205.396l173.22 126.657-173.22 139.543v-266.2zm68.04 25.573l-60.793-44.3 60.793-44.198v88.498zM54.85 482.168l171.206-137.832 23.652 17.317c4.53 3.423 7.952 3.423 12.582 0l23.652-17.317 172.213 137.832H54.85z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M185.831 116.78h141.356v20.339H185.831zM185.831 180.847h141.356v20.339H185.831zM185.831 244.915h141.356v20.339H185.831z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      <div
+                        class="c27"
+                      >
+                        <span>
+                          modele
+                        </span>
+                        <br />
+                        <span
+                          class="c28"
+                        >
+                          Modèle de document
+                        </span>
+                      </div>
+                    </span>
+                  </a>
+                  <div
+                    class="c29"
+                  >
+                    Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="c16"
-    >
-      <div
-        class="c29"
-      >
         <div
-          class="c30"
+          class="c18"
         >
-          <h3
-            class="c31"
+          <div
+            class="c1"
           >
-            Avez-vous trouvé la réponse à votre question ?
-          </h3>
-          <p
-            class="c32"
-          >
-            <button
-              aria-pressed="false"
-              class="c33 c34"
+            <div
+              class="c30"
             >
-              Non
-            </button>
-            <button
-              aria-pressed="false"
-              class="c33 c35"
-            >
-              Oui
-            </button>
-          </p>
+              <h3
+                class="c31"
+              >
+                Avez-vous trouvé la réponse à votre question ?
+              </h3>
+              <p
+                class="c32"
+              >
+                <button
+                  aria-pressed="false"
+                  class="c33 c34"
+                >
+                  Non
+                </button>
+                <button
+                  aria-pressed="false"
+                  class="c33 c35"
+                >
+                  Oui
+                </button>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1202,7 +1180,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     class="c43"
   >
     <div
-      class="c16"
+      class="c18"
     >
       <div
         class="c1 c44"
@@ -1211,7 +1189,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c18 c45"
+          class="c20 c45"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
@@ -1224,7 +1202,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c16"
+      class="c18"
     >
       <div
         class="c1 c47"

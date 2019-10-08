@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { icons } from "@cdt/ui-old/";
 
 import Answer from "../Answer";
 
@@ -14,7 +13,6 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
-        icon={icons.Question}
       >
         <div>Contenu supplémentaire</div>
       </Answer>
@@ -30,7 +28,6 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
-        icon={icons.Question}
         breadcrumbs={[
           { title: "tag1", slug: "tag-1" },
           { title: "tag2", slug: "tag-2" }
@@ -50,7 +47,6 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
-        icon={icons.Question}
       >
         <div>Contenu supplémentaire</div>
       </Answer>
@@ -66,7 +62,6 @@ describe("<Answer />", () => {
         footer="pied de page"
         date="03/11/1979"
         sourceType="social groove"
-        icon={icons.Question}
       >
         <div>Contenu supplémentaire</div>
       </Answer>
