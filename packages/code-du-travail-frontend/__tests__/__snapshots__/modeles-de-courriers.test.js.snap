@@ -198,8 +198,8 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c25:active,
 .c25:hover {
-  color: #003b80;
-  box-shadow: 0 5px 10px 0 #c9d3df;
+  color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
 .c26 {
@@ -384,7 +384,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c34:not([disabled]):hover,
 .c34:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -407,11 +407,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 
 .c34[aria-pressed="true"]:not([disabled]):hover,
 .c34[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c34[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c34[disabled] {

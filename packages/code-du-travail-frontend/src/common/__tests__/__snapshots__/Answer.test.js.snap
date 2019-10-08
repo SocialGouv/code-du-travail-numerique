@@ -257,7 +257,7 @@ exports[`<Answer /> should render 1`] = `
 
 .c18:not([disabled]):hover,
 .c18:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -280,11 +280,11 @@ exports[`<Answer /> should render 1`] = `
 
 .c18[aria-pressed="true"]:not([disabled]):hover,
 .c18[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c18[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c18[disabled] {
@@ -924,7 +924,7 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c22:not([disabled]):hover,
 .c22:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -947,11 +947,11 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
 
 .c22[aria-pressed="true"]:not([disabled]):hover,
 .c22[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c22[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c22[disabled] {
@@ -1665,7 +1665,7 @@ exports[`<Answer /> should render tooltip 1`] = `
 
 .c19:not([disabled]):hover,
 .c19:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -1688,11 +1688,11 @@ exports[`<Answer /> should render tooltip 1`] = `
 
 .c19[aria-pressed="true"]:not([disabled]):hover,
 .c19[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c19[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c19[disabled] {
@@ -2372,7 +2372,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 .c19:not([disabled]):hover,
 .c19:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -2395,11 +2395,11 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
 
 .c19[aria-pressed="true"]:not([disabled]):hover,
 .c19[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c19[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c19[disabled] {

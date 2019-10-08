@@ -312,7 +312,7 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 .c25:not([disabled]):hover,
 .c25:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -335,11 +335,11 @@ exports[`<CodeDuTravail /> should render 1`] = `
 
 .c25[aria-pressed="true"]:not([disabled]):hover,
 .c25[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c25[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c25[disabled] {

@@ -422,7 +422,7 @@ exports[`<Annuaire /> should render 1`] = `
 
 .c23:not([disabled]):hover,
 .c23:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -445,11 +445,11 @@ exports[`<Annuaire /> should render 1`] = `
 
 .c23[aria-pressed="true"]:not([disabled]):hover,
 .c23[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c23[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c23[disabled] {

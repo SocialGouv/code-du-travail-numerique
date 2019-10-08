@@ -109,7 +109,7 @@ exports[`<AddressResults/> should render no results 1`] = `
 
 .c8:not([disabled]):hover,
 .c8:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -132,11 +132,11 @@ exports[`<AddressResults/> should render no results 1`] = `
 
 .c8[aria-pressed="true"]:not([disabled]):hover,
 .c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c8[disabled] {
@@ -417,7 +417,7 @@ exports[`<AddressResults/> should render results 1`] = `
 
 .c13:not([disabled]):hover,
 .c13:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -440,11 +440,11 @@ exports[`<AddressResults/> should render results 1`] = `
 
 .c13[aria-pressed="true"]:not([disabled]):hover,
 .c13[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c13[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c13[disabled] {

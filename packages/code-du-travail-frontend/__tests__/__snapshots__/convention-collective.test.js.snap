@@ -206,7 +206,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 .c10:not([disabled]):hover,
 .c10:not([disabled]):focus {
-  background: #f7f7f7;
+  background: #fbfcfd;
   color: #18181c;
 }
 
@@ -229,11 +229,11 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 .c10[aria-pressed="true"]:not([disabled]):hover,
 .c10[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #eaeaea;
+  background-color: #ebeff3;
 }
 
 .c10[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #d1d1d1;
+  border-top-color: #cbd6e0;
 }
 
 .c10[disabled] {
