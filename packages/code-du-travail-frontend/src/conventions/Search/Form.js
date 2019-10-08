@@ -149,8 +149,7 @@ const Search = ({
                           ))}
                         </React.Fragment>
                       )}
-                      !== 0
-                      {resultsEntreprises.length && (
+                      {resultsEntreprises.length !== 0 && (
                         <React.Fragment>
                           <TitleResults>
                             <td>Entreprises</td>
