@@ -35,7 +35,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "mdx-runtime-slim": "^1.4.5",
     "memoizee": "^0.4.14",
-    "next": "^9.0.8",
+    "next": "^9.1.1",
     "react": "^16.10.2",
     "react-autosuggest": "9.4.3",
     "react-delay": "^0.1.0",
