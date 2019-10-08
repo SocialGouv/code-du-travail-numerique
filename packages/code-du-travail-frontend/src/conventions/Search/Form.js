@@ -74,17 +74,6 @@ const SearchResult = ({ label, siret, conventions, selectConvention }) => (
   </tr>
 );
 
-const _TitleResults = ({ className, title }) => (
-  <tr className={className}>
-    <td>{title}</td>
-  </tr>
-);
-
-const TitleResults = styled(_TitleResults)`
-  font-weight: bold;
-  background: ${theme.colors.infoBackground};
-`;
-
 // demo app
 // userland UI
 const Search = ({
@@ -140,12 +129,14 @@ const Search = ({
                 {status === "error" && (
                   <div>Aucun résultat pour votre recherche.</div>
                 )}
-                {(status === "success" && results && results.length && (
+                {status === "success" && results && results.length !== 0 && (
                   <Table>
                     <tbody>
-                      {(resultsConventions.length && (
+                      {resultsConventions.length !== 0 && (
                         <React.Fragment>
-                          <TitleResults title="Conventions collectives" />
+                          <TitleResults>
+                            <td>Conventions collectives</td>
+                          </TitleResults>
                           {resultsConventions.map(result => (
                             <SearchResult
                               key={result.id}
@@ -157,11 +148,13 @@ const Search = ({
                             />
                           ))}
                         </React.Fragment>
-                      )) ||
-                        null}
-                      {(resultsEntreprises.length && (
+                      )}
+                      !== 0
+                      {resultsEntreprises.length && (
                         <React.Fragment>
-                          <TitleResults title="Entreprises" />
+                          <TitleResults>
+                            <td>Entreprises</td>
+                          </TitleResults>
                           {resultsEntreprises.map(result => (
                             <SearchResult
                               key={result.id}
@@ -170,12 +163,10 @@ const Search = ({
                             />
                           ))}
                         </React.Fragment>
-                      )) ||
-                        null}
+                      )}
                     </tbody>
                   </Table>
-                )) ||
-                  null}
+                )}
               </ResultsContainer>
             )
           );
@@ -184,6 +175,11 @@ const Search = ({
     </Container>
   );
 };
+
+const TitleResults = styled.tr`
+  font-weight: bold;
+  background: ${theme.colors.infoBackground};
+`;
 
 const ResultsContainer = styled.div`
   margin-top: ${theme.spacing.medium};
