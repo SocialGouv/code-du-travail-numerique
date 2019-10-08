@@ -7,12 +7,14 @@ Array [
     "id": 112277319,
     "label": "CORSO BALARD 75004 PARIS 4E ARRONDISSEMENT",
     "siret": "80258570300035",
+    "type": "entreprise",
   },
   Object {
     "conventions": Array [],
     "id": 108527673,
     "label": "CORSO BALARD 75015 PARIS 15E ARRONDISSEMENT",
     "siret": "80258570300027",
+    "type": "entreprise",
   },
 ]
 `;
@@ -38,6 +40,7 @@ Object {
   "id": 108527673,
   "label": "CORSO BALARD 75015 PARIS 15E ARRONDISSEMENT",
   "siret": "80258570300027",
+  "type": "entreprise",
 }
 `;
 
@@ -62,5 +65,6 @@ Object {
   "id": 108527673,
   "label": "CORSO BALARD 75015 PARIS 15E ARRONDISSEMENT",
   "siret": "80258570300027",
+  "type": "entreprise",
 }
 `;

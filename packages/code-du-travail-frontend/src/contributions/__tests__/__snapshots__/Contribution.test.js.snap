@@ -76,7 +76,7 @@ exports[`<Contribution /> should render with both answers 1`] = `
       <input
         class="c4"
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-        type="text"
+        type="search"
         value=""
       />
       
@@ -140,7 +140,7 @@ exports[`<Contribution /> should render with conventions answer 1`] = `
       <input
         class="c3"
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-        type="text"
+        type="search"
         value=""
       />
       

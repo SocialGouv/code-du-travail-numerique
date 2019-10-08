@@ -48,6 +48,32 @@ const TagSiret = ({ siret }) => (
   </a>
 );
 
+const SearchResult = ({ label, siret, conventions, selectConvention }) => (
+  <tr>
+    <td>
+      <Flex>
+        <ResultLabel>{label}</ResultLabel>
+        {siret && <TagSiret siret={siret} />}
+      </Flex>
+      <ConventionsContainer>
+        {conventions && conventions.length ? (
+          conventions.map(convention => (
+            <Convention
+              onClick={selectConvention && (() => selectConvention(convention))}
+              key={convention.id}
+              {...convention}
+            />
+          ))
+        ) : (
+          <div className="text-danger">
+            Aucune convention collective connue pour cette entreprise
+          </div>
+        )}
+      </ConventionsContainer>
+    </td>
+  </tr>
+);
+
 // demo app
 // userland UI
 const Search = ({
@@ -82,66 +108,77 @@ const Search = ({
       <Input
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         value={query}
-        type="text"
+        type="search"
         onChange={onInputChange}
       />
       <SearchCC
         query={query}
-        render={({ status, results }) =>
-          query && (
-            <ResultsContainer>
-              {status === "loading" && (
-                <div>
-                  <Spinner /> Recherche des convention collectives...
-                </div>
-              )}
-              {status === "error" && (
-                <div>Aucun résultat pour votre recherche.</div>
-              )}
-              {status === "success" && results && results.length ? (
-                <Table>
-                  <tbody>
-                    {results.map(result => (
-                      <tr key={result.id}>
-                        <td>
-                          <Flex>
-                            <ResultLabel>{result.label}</ResultLabel>
-                            {result.siret && <TagSiret siret={result.siret} />}
-                          </Flex>
-                          <ConventionsContainer>
-                            {result.conventions && result.conventions.length ? (
-                              result.conventions.map(convention => (
-                                <Convention
-                                  onClick={
-                                    onSelectConvention &&
-                                    (() => selectConvention(convention))
-                                  }
-                                  key={convention.id}
-                                  {...convention}
-                                />
-                              ))
-                            ) : (
-                              <div className="text-danger">
-                                Aucune convention collective connue pour cette
-                                entreprise
-                              </div>
-                            )}
-                          </ConventionsContainer>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              ) : (
-                ""
-              )}
-            </ResultsContainer>
-          )
-        }
+        render={({ status, results }) => {
+          const resultsConventions =
+            results && results.filter(r => r.type === "convention");
+          const resultsEntreprises =
+            results && results.filter(r => r.type === "entreprise");
+          return (
+            query && (
+              <ResultsContainer>
+                {status === "loading" && (
+                  <div>
+                    <Spinner /> Recherche des convention collectives...
+                  </div>
+                )}
+                {status === "error" && (
+                  <div>Aucun résultat pour votre recherche.</div>
+                )}
+                {status === "success" && results && results.length !== 0 && (
+                  <Table>
+                    <tbody>
+                      {resultsConventions.length !== 0 && (
+                        <React.Fragment>
+                          <TitleResults>
+                            <td>Conventions collectives</td>
+                          </TitleResults>
+                          {resultsConventions.map(result => (
+                            <SearchResult
+                              key={result.id}
+                              {...result}
+                              selectConvention={
+                                // only use callback when defined. otherwise, use <Link/>
+                                onSelectConvention && selectConvention
+                              }
+                            />
+                          ))}
+                        </React.Fragment>
+                      )}
+                      {resultsEntreprises.length !== 0 && (
+                        <React.Fragment>
+                          <TitleResults>
+                            <td>Entreprises</td>
+                          </TitleResults>
+                          {resultsEntreprises.map(result => (
+                            <SearchResult
+                              key={result.id}
+                              {...result}
+                              selectConvention={selectConvention}
+                            />
+                          ))}
+                        </React.Fragment>
+                      )}
+                    </tbody>
+                  </Table>
+                )}
+              </ResultsContainer>
+            )
+          );
+        }}
       />
     </Container>
   );
 };
+
+const TitleResults = styled.tr`
+  font-weight: bold;
+  background: ${theme.colors.infoBackground};
+`;
 
 const ResultsContainer = styled.div`
   margin-top: ${theme.spacing.medium};

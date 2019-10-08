@@ -306,7 +306,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
               <input
                 class="c8"
                 placeholder="Nom d'entreprise, SIRET, nom de convention collective"
-                type="text"
+                type="search"
                 value=""
               />
               

@@ -6,6 +6,7 @@ import {
 } from "../entreprise.service";
 
 const cleanIdcc = str => (str && str.replace(/^0+/, "").trim()) || "";
+const formatIdcc = str => `0000${str}`.slice(-4);
 
 // build a result list based on query type
 export const loadResults = async query => {
@@ -19,9 +20,9 @@ export const loadResults = async query => {
     if (ccns && ccns.length) {
       results.push(
         ...ccns.map(ccn => ({
+          type: "convention",
           id: ccn.id,
-          label: "Convention collective",
-          idcc: `0000${ccn.idcc}`.slice(-4),
+          idcc: formatIdcc(ccn.idcc),
           conventions: [ccn]
         }))
       );
@@ -52,6 +53,7 @@ export const loadResults = async query => {
     if (perfectMatch) {
       return [
         {
+          type: "convention",
           id: query,
           label: `IDCC ${perfectMatch.num}`,
           conventions: [perfectMatch]
@@ -62,8 +64,8 @@ export const loadResults = async query => {
     if (matches && matches.length) {
       // show first 5 results
       return matches.slice(0, 5).map(match => ({
+        type: "convention",
         id: match.num,
-        label: `IDCC ${match.num}`,
         conventions: [match]
       }));
     }
