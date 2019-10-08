@@ -48,6 +48,7 @@ const apiEntrepriseSiret = memoizee(
 
 // format results API Sirene. embed the IDCC numbers at runtime
 const formatEtablissement = result => ({
+  type: "entreprise",
   id: result.id,
   siret: result.siret,
   label: `${result.nom_raison_sociale} ${result.code_postal ||
