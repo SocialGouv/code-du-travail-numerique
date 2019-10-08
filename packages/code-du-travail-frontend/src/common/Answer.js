@@ -157,6 +157,7 @@ const StyledMenuList = styled.div`
   }
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
+    margin-bottom: 4rem;
   }
 `;
 
