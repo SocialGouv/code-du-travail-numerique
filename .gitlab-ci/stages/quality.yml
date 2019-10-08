@@ -97,3 +97,13 @@ Test @cdtn/data:
     - yarn workspace @cdt/data test
     - yarn workspace @cdt/data check-slugs
     - yarn workspace @cdt/data...datafiller test
+
+Test @cdtn/frontend SDR data:
+  <<: *quality_stage
+  image: node:12-alpine
+  allow_failure: true
+  before_script:
+    - apk add --update jq curl
+  script:
+    - |-
+      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 curl --fail > /dev/null
