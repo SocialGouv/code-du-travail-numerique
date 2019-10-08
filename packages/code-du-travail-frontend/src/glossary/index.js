@@ -17,7 +17,7 @@ const StyledTooltip = styled(Tooltip)`
   width: 300px;
   max-width: 70vw;
   font-size: ${fonts.sizeBase};
-  background: ${colors.elementBackground};
+  background: ${colors.lightBackground};
   color: ${colors.lightText};
   border: solid 1px ${colors.elementBorder};
 `;

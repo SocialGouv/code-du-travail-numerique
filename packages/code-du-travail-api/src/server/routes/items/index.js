@@ -1,6 +1,7 @@
 const Router = require("koa-router");
-const API_BASE_URL = require("../v1.prefix");
+const { SOURCES } = require("@cdt/sources");
 
+const API_BASE_URL = require("../v1.prefix");
 const elasticsearchClient = require("../../conf/elasticsearch.js");
 const getItemBySlugBody = require("./searchBySourceSlug.elastic");
 
@@ -37,7 +38,7 @@ router.get("/items/:source/:slug", async ctx => {
   const { title } = item._source;
   const relatedItems = await getSearch({
     q: title,
-    excludeSources: ""
+    excludeSources: `${SOURCES.CDT}, ${SOURCES.THEMES}`
   });
 
   ctx.body = {

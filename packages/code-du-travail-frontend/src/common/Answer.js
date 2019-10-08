@@ -57,7 +57,7 @@ function Answer({
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
       <StyledContainer>
-        <StyledContent hasResults={linkedResults.matches.length === 0}>
+        <StyledContent hasResults={linkedResults.matches.length > 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
             <Article
@@ -93,14 +93,14 @@ function Answer({
                   .filter(link => link.title !== title)
                   .slice(0, 3)
                   .map(link => (
-                    <li key={link.title}>
+                    <StyledLi key={link.slug}>
                       <Link
                         href={`/${getRouteBySource(link.source)}/[slug]`}
                         as={`/${getRouteBySource(link.source)}/${link.slug}`}
                       >
                         <a>{link.title}</a>
                       </Link>
-                    </li>
+                    </StyledLi>
                   ))}
               </ul>
             </StyledMenuList>
@@ -130,7 +130,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const StyledContent = styled.div`
-  width: ${props => (props.hasResults ? "80%" : "70%")};
+  width: ${props => (props.hasResults ? "70%" : "80%")};
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }
@@ -152,13 +152,14 @@ const StyledMenuList = styled.div`
   top: ${spacing.base};
   border-left: 1px solid ${colors.blue};
   padding: 0 ${spacing.base};
-  & li {
-    margin: ${spacing.base} 0;
-  }
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     margin-bottom: 4rem;
   }
+`;
+
+const StyledLi = styled.li`
+  margin: ${spacing.base} 0;
 `;
 
 const StyledMenuTitle = styled.div`
