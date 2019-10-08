@@ -14,9 +14,9 @@ import { groupByDisplayCategory } from "../search/utils";
 import { getRouteBySource } from "@cdt/sources";
 
 const BigError = ({ children }) => (
-  <StyledContainer>
+  <StyledErrorContainer>
     <Alert variant="warning">{children}</Alert>
-  </StyledContainer>
+  </StyledErrorContainer>
 );
 
 const BackToResultsLink = ({ query }) => {
@@ -56,7 +56,7 @@ function Answer({
       </Head>
       <ThemeBreadcrumbs breadcrumbs={breadcrumbs} />
       <BackToResultsLink query={router.query} />
-      <StyledWrapper>
+      <StyledContainer>
         <StyledContent hasResults={linkedResults.matches.length === 0}>
           {!html && !children && <BigError>{emptyMessage}</BigError>}
           {(html || children) && (
@@ -106,7 +106,7 @@ function Answer({
             </StyledMenuList>
           </StyledMenu>
         )}
-      </StyledWrapper>
+      </StyledContainer>
       <Disclaimer />
     </>
   );
@@ -116,13 +116,13 @@ export default withRouter(Answer);
 
 const { box, breakpoints, colors, fonts, spacing } = theme;
 
-const StyledContainer = styled(Container)`
+const StyledErrorContainer = styled(Container)`
   margin: 20%;
   font-size: ${fonts.sizeH2};
   text-align: center;
 `;
 
-const StyledWrapper = styled(Container)`
+const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -141,7 +141,7 @@ const StyledMenu = styled.div`
   width: 30%;
   color: ${colors.blue};
   @media (max-width: ${breakpoints.tablet}) {
-    padding: 4rem ${spacing.large} 7rem 0;
+    padding: ${spacing.large} 0;
     margin: 0 ${spacing.medium};
     width: 100%;
   }
@@ -164,6 +164,7 @@ const StyledMenuTitle = styled.div`
   font-size: ${fonts.sizeBase};
   font-weight: bold;
   @media (max-width: ${breakpoints.tablet}) {
+    padding-bottom: ${spacing.large};
     font-size: ${fonts.sizeH2};
     font-weight: normal;
   }
