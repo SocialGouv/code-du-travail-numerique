@@ -9,7 +9,9 @@ function slugify(string) {
     .toString()
     .toLowerCase()
     .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+    .replace(p, function(c) {
+      return b.charAt(a.indexOf(c));
+    }) // Replace special characters
     .replace(/\./g, "-") // Replace . with '-'
     .replace(/&/g, "-et-") // Replace & with ''
     .replace(/œ/g, "oe") // Replace & with 'and'
