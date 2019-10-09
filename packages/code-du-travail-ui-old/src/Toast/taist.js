@@ -2,6 +2,7 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import Toast from "../Toast";
 
+// unusable test for now because of the button import
 describe("<Toast />", () => {
   it("render default info toast", () => {
     const { container } = render(<Toast>Default info content</Toast>);
