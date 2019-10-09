@@ -3,7 +3,7 @@ function slugify(string) {
     "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_:;()";
   const b =
     "aaaaaaaaacccddeeeeeeegghiiiiilmnnnnoooooprrsssssttuuuuuuuuuwxyyzzz-------";
-  const p = new RegExp(`[${a}]`, "g");
+  const p = new RegExp("[" + a + "]", "g");
 
   return string
     .toString()
