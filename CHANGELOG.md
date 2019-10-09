@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.3.1...v3.3.2) (2019-10-09)
+
+
+### Bug Fixes
+
+* **polyfill:** add Object.values for Edge ([#1393](https://github.com/SocialGouv/code-du-travail-numerique/issues/1393)) ([128a7cf](https://github.com/SocialGouv/code-du-travail-numerique/commit/128a7cf))
+
+
+
+
+
 ## [3.3.1](https://github.com/SocialGouv/code-du-travail-numerique/compare/v3.3.0...v3.3.1) (2019-10-08)
 
 
