@@ -1,6 +1,12 @@
 const request = require("supertest");
 const Koa = require("koa");
 const router = require("../items");
+const nlpFakeData = require("./sem_search.json");
+const fetch = require("node-fetch");
+
+// mock fetch function
+jest.mock("node-fetch");
+fetch.mockResolvedValue({ json: () => nlpFakeData });
 
 const app = new Koa();
 app.use(router.routes());
@@ -14,14 +20,6 @@ test("return item from its id", async () => {
 test("return item from source and slug ", async () => {
   const response = await request(app.callback()).get(
     `/api/v1/items/fiches_ministere_travail/demission-comment-presenter-une-demission`
-  );
-  expect(response.status).toBe(200);
-  expect(response.body).toMatchSnapshot();
-});
-
-test("return a faq item with additionnal content from its source and slug", async () => {
-  const response = await request(app.callback()).get(
-    `/api/v1/items/faq/dans-les-hcr-quel-est-le-preavis-de-demission`
   );
   expect(response.status).toBe(200);
   expect(response.body).toMatchSnapshot();

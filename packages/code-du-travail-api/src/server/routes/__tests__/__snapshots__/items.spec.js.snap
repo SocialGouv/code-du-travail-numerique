@@ -1,142 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`return a faq item with additionnal content from its source and slug 1`] = `
-Object {
-  "_id": "6",
-  "_index": "cdtn_document_test",
-  "_score": 17.06999,
-  "_source": Object {
-    "author": "DIRECCTE",
-    "date": "01/12/2017",
-    "html": "<p>Le préavis de démission diffère suivant la qualification. Il est de :</p><ul>
-<li>8 jours pour les employés ayant moins de 6 mois d’ancienneté, de 15 jours pour ceux ayant entre 6 mois et moins de 2 ans d’ancienneté, et d’1 mois pour ceux ayant 2 ans d’ancienneté et plus,</li>
-<li>15 jours pour les agents de maîtrise ayant moins de 6 mois d’ancienneté, d’1 mois pour ceux ayant entre 6 mois et moins de 2 ans d’ancienneté, et de 2 mois pour ceux ayant 2 ans d’ancienneté et plus.</li>
-<li>1 mois pour les cadres ayant moins de 6 mois d’ancienneté, et 3 mois pour ceux ayant 6 mois d’ancienneté et plus.</li>
-</ul><p>(Article 30.1 de la convention collective nationale des hôtels, cafés, restaurants, que vous pouvez consulter sur le site <a href=\\"https://legifrance.gouv.fr\\">https://legifrance.gouv.fr</a> avec son numéro d’identification (IDCC) 1979).</p>",
-    "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-    "tags": Array [
-      "themes:2000",
-      "theme:rupture du contrat",
-      "theme:démission",
-      "theme:préavis",
-      "branche:hôtels, cafés et restaurants",
-    ],
-    "title": "Dans les HCR, quel est le préavis de démission ?",
-  },
-  "_type": "_doc",
-  "relatedItems": Array [
-    Object {
-      "_id": "6",
-      "_index": "cdtn_document_test",
-      "_score": 37.374424,
-      "_source": Object {
-        "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
-        "source": "faq",
-        "title": "Dans les HCR, quel est le préavis de démission ?",
-      },
-      "_type": "_doc",
-      "key": "faqdans-les-hcr-quel-est-le-preavis-de-demission",
-    },
-    Object {
-      "_id": "7",
-      "_index": "cdtn_document_test",
-      "_score": 9.045769,
-      "_source": Object {
-        "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-        "source": "faq",
-        "title": "J'occupe un poste de vendeuse en boulangerie-pâtisserie et je viens de poser ma démission. Quelles sont les conséquences d’un arrêt maladie pendant la période de préavis ? Est-ce que je peux être sanctionnée en cas d’arrêt de travail ?",
-      },
-      "_type": "_doc",
-      "key": "faqjoccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
-    },
-    Object {
-      "_id": "4",
-      "_index": "cdtn_document_test",
-      "_score": 6.598495,
-      "_source": Object {
-        "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
-        "slug": "demission-dun-salarie",
-        "source": "fiches_service_public",
-        "title": "Démission d'un salarié",
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
-      },
-      "_type": "_doc",
-      "key": "fiches_service_publicdemission-dun-salarie",
-    },
-    Object {
-      "_id": "5",
-      "_index": "cdtn_document_test",
-      "_score": 6.227458,
-      "_source": Object {
-        "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. Au terme de celui-ci, l'employeur remet les documents de fin de contrat.",
-        "slug": "demission-dune-assistante-maternelle",
-        "source": "fiches_service_public",
-        "title": "Démission d'une assistante maternelle",
-        "url": "https://www.service-public.fr/particuliers/vosdroits/F33164",
-      },
-      "_type": "_doc",
-      "key": "fiches_service_publicdemission-dune-assistante-maternelle",
-    },
-    Object {
-      "_id": "2",
-      "_index": "cdtn_document_test",
-      "_score": 3.9201581,
-      "_source": Object {
-        "anchor": "#Comment-presenter-une-demission",
-        "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-        "slug": "demission-comment-presenter-une-demission",
-        "source": "fiches_ministere_travail",
-        "title": "Démission : comment présenter une démission ?",
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#Comment-presenter-une-demission",
-      },
-      "_type": "_doc",
-      "key": "fiches_ministere_travaildemission-comment-presenter-une-demission",
-    },
-    Object {
-      "_id": "3",
-      "_index": "cdtn_document_test",
-      "_score": 2.713635,
-      "_source": Object {
-        "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
-        "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
-        "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
-        "source": "fiches_ministere_travail",
-        "title": "Démission : l’absence prolongée du salarié est-elle une démission ?",
-        "url": "https://travail-emploi.gouv.fr/droit-du-travail/la-rupture-du-contrat-de-travail/article/la-demission#L-absence-prolongee-du-salarie-est-elle-une-demission",
-      },
-      "_type": "_doc",
-      "key": "fiches_ministere_travaildemission-labsence-prolongee-du-salarie-est-elle-une-demission",
-    },
-    Object {
-      "_id": "8",
-      "_index": "cdtn_document_test",
-      "_score": 1.6175604,
-      "_source": Object {
-        "slug": "r1225-18",
-        "source": "code_du_travail",
-        "title": "Article R1225-18",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "_doc",
-      "key": "code_du_travailr1225-18",
-    },
-    Object {
-      "_id": "9",
-      "_index": "cdtn_document_test",
-      "_score": 1.1543089,
-      "_source": Object {
-        "slug": "r1442-22-4",
-        "source": "code_du_travail",
-        "title": "Article R1442-22-4",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "_doc",
-      "key": "code_du_travailr1442-22-4",
-    },
-  ],
-}
-`;
-
 exports[`return item from its id 1`] = `
 Object {
   "_id": "6",
@@ -205,7 +68,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 21.238884,
+      "_score": 20.930048,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
@@ -220,7 +83,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 7.1408544,
+      "_score": 6.9938016,
       "_source": Object {
         "description": "L'assistante maternelle (ou assistant maternel) agréée qui souhaite rompre son contrat de travail doit informer le particulier employeur par écrit et respecter un préavis. Au terme de celui-ci, l'employeur remet les documents de fin de contrat.",
         "slug": "demission-dune-assistante-maternelle",
@@ -234,7 +97,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 5.7624264,
+      "_score": 6.0801697,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -246,7 +109,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 5.177784,
+      "_score": 5.0822577,
       "_source": Object {
         "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
         "slug": "demission-dun-salarie",
@@ -260,7 +123,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 4.944805,
+      "_score": 4.865374,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -270,22 +133,9 @@ Object {
       "key": "faqjoccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
     },
     Object {
-      "_id": "8",
-      "_index": "cdtn_document_test",
-      "_score": 3.4238825,
-      "_source": Object {
-        "slug": "r1225-18",
-        "source": "code_du_travail",
-        "title": "Article R1225-18",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000018537778&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "_doc",
-      "key": "code_du_travailr1225-18",
-    },
-    Object {
       "_id": "3",
       "_index": "cdtn_document_test",
-      "_score": 2.8439517,
+      "_score": 2.7256262,
       "_source": Object {
         "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
         "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
@@ -296,19 +146,6 @@ Object {
       },
       "_type": "_doc",
       "key": "fiches_ministere_travaildemission-labsence-prolongee-du-salarie-est-elle-une-demission",
-    },
-    Object {
-      "_id": "9",
-      "_index": "cdtn_document_test",
-      "_score": 2.5385752,
-      "_source": Object {
-        "slug": "r1442-22-4",
-        "source": "code_du_travail",
-        "title": "Article R1442-22-4",
-        "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000033748111&cidTexte=LEGITEXT000006072050",
-      },
-      "_type": "_doc",
-      "key": "code_du_travailr1442-22-4",
     },
   ],
 }
