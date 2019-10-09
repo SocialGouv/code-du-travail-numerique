@@ -30,11 +30,9 @@
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/preset-env": "7.6.2"
   },
-  "workspaces": [
-    "packages/*",
-    "packages/code-du-travail-data/dataset/!(fiches_service_public)",
-    "packages/code-du-travail-data/dataset/code_du_travail/eposeidon_script"
-  ],
+  "workspaces": {
+    "packages": ["packages/*", "packages/code-du-travail-data/dataset/*"]
+  },
   "husky": {
     "hooks": {
       "pre-push": "lerna run --stream --parallel prepush"
