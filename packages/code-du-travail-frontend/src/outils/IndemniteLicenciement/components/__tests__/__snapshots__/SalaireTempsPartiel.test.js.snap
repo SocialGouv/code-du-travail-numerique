@@ -1,14 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SalaireTempsPartiel /> should add a period 1`] = `
-.c0 {
-  font-size: 1.625rem;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.c11 {
-  padding: 0.625rem 1rem;
+.c10 {
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -17,9 +11,8 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
@@ -35,14 +28,23 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   border-radius: 0;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  margin: 1.25rem 0;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c10:focus,
+.c10:hover,
+.c10:active {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c12 {
+  margin: 1.25rem 0;
 }
 
 .c1 {
@@ -138,43 +140,9 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
   transform: translateY(-50%);
 }
 
-.c10 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c11 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
-}
-
-.c10:focus,
-.c10:hover,
-.c10:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -253,8 +221,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
         </span>
       </div>
       <button
-        aria-pressed="false"
-        class="c10"
+        class="c10 c11"
         type="button"
       >
         Supprimer
@@ -262,8 +229,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
-    class="c11"
+    class="c10 c12"
     type="button"
   >
     Ajouter une période
@@ -272,14 +238,8 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 `;
 
 exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
-.c0 {
-  font-size: 1.625rem;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.c11 {
-  padding: 0.625rem 1rem;
+.c10 {
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -288,9 +248,8 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
@@ -306,14 +265,23 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   border-radius: 0;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  margin: 1.25rem 0;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c10:focus,
+.c10:hover,
+.c10:active {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c12 {
+  margin: 1.25rem 0;
 }
 
 .c1 {
@@ -409,43 +377,9 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
   transform: translateY(-50%);
 }
 
-.c10 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c11 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
-}
-
-.c10:focus,
-.c10:hover,
-.c10:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -524,8 +458,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
         </span>
       </div>
       <button
-        aria-pressed="false"
-        class="c10"
+        class="c10 c11"
         type="button"
       >
         Supprimer
@@ -533,8 +466,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
-    class="c11"
+    class="c10 c12"
     type="button"
   >
     Ajouter une période
@@ -543,14 +475,8 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 `;
 
 exports[`<SalaireTempsPartiel /> should render 1`] = `
-.c0 {
-  font-size: 1.625rem;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.c11 {
-  padding: 0.625rem 1rem;
+.c10 {
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -559,9 +485,8 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
@@ -577,14 +502,23 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   border-radius: 0;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  margin: 1.25rem 0;
 }
 
-.c11:focus,
-.c11:hover,
-.c11:active {
+.c10:focus,
+.c10:hover,
+.c10:active {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c12 {
+  margin: 1.25rem 0;
 }
 
 .c1 {
@@ -680,43 +614,9 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c10 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c11 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
-}
-
-.c10:focus,
-.c10:hover,
-.c10:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -795,8 +695,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </span>
       </div>
       <button
-        aria-pressed="false"
-        class="c10"
+        class="c10 c11"
         type="button"
       >
         Supprimer
@@ -851,8 +750,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
         </span>
       </div>
       <button
-        aria-pressed="false"
-        class="c10"
+        class="c10 c11"
         type="button"
       >
         Supprimer
@@ -860,8 +758,7 @@ exports[`<SalaireTempsPartiel /> should render 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
-    class="c11"
+    class="c10 c12"
     type="button"
   >
     Ajouter une période

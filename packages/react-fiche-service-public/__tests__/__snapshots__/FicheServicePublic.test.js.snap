@@ -625,7 +625,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
                   Modèle de document
                 </div>
                 <a
-                  class="c16"
+                  class="c16 no-after"
                   href="https://www.service-public.fr/simulateur/calcul/Demission"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -1251,7 +1251,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
         Modèle de document
       </div>
       <a
-        class="c16"
+        class="c16 no-after"
         href="https://www.service-public.fr/simulateur/calcul/Demission"
         rel="noopener noreferrer"
         target="_blank"

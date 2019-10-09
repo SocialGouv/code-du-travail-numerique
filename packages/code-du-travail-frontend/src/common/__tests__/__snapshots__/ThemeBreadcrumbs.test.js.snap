@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 1`] = `
-.c3 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,6 +17,13 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 
 .c1 {
   padding: 1.25rem 0;
+  color: #434956;
+}
+
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c0 {
@@ -116,12 +117,6 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
 `;
 
 exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = `
-.c3 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c2 {
   max-width: 1200px;
   margin: 0 auto;
@@ -138,6 +133,13 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
 
 .c1 {
   padding: 1.25rem 0;
+  color: #434956;
+}
+
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c0 {

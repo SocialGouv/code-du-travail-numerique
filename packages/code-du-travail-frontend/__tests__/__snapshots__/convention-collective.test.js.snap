@@ -17,6 +17,7 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 .c5 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c6 {
@@ -33,6 +34,70 @@ exports[`<ConventionCollective /> should render 1`] = `
 
 .c6 > *:last-child {
   margin-bottom: 0;
+}
+
+.c9 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c12 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c4 {
@@ -53,8 +118,8 @@ exports[`<ConventionCollective /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
-  padding: 0.625rem 1rem;
+.c19 {
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -63,23 +128,23 @@ exports[`<ConventionCollective /> should render 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   padding: 1rem;
   color: #434956;
   line-height: 0;
+  background-color: transparent;
   border: none;
 }
 
-.c18:hover {
+.c19:hover {
   color: #8c94a6;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -101,7 +166,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,7 +187,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c15 {
+.c16 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -135,7 +200,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   text-align: left;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,7 +219,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: center;
 }
 
-.c12 {
+.c13 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -162,7 +227,7 @@ exports[`<ConventionCollective /> should render 1`] = `
   z-index: 1000;
 }
 
-.c16 {
+.c17 {
   padding: 0 0.25rem;
 }
 
@@ -181,131 +246,11 @@ exports[`<ConventionCollective /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c10 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
-  min-width: 7rem;
-}
-
-.c10:not([disabled]):hover,
-.c10:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c10:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c10[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c10[aria-pressed="true"]:not([disabled]):hover,
-.c10[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c10[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c10[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c10 + .c9 {
-  margin-left: 1rem;
-}
-
 .c11 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
   min-width: 7rem;
 }
 
-.c11:not([disabled]):hover,
-.c11:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c11:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c11[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c11[aria-pressed="true"]:not([disabled]):hover,
-.c11[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c11[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c11[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c11 + .c9 {
+.c11 + .c10 {
   margin-left: 1rem;
 }
 
@@ -394,14 +339,12 @@ exports[`<ConventionCollective /> should render 1`] = `
               class="c8"
             >
               <button
-                aria-pressed="false"
-                class="c9 c10"
+                class="c9 c10 c11"
               >
                 Non
               </button>
               <button
-                aria-pressed="false"
-                class="c9 c11"
+                class="c12 c10 c11"
               >
                 Oui
               </button>
@@ -412,13 +355,13 @@ exports[`<ConventionCollective /> should render 1`] = `
     </div>
   </div>
   <div
-    class="c12"
+    class="c13"
   >
     <div
-      class="c13"
+      class="c14"
     >
       <div
-        class="c14"
+        class="c15"
       >
         <svg
           fill="none"
@@ -449,12 +392,12 @@ exports[`<ConventionCollective /> should render 1`] = `
         </svg>
       </div>
       <div
-        class="c15"
+        class="c16"
         role="alert"
       >
         Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
         <a
-          class="c16"
+          class="c17"
           href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
           rel="noopener noreferrer"
           target="_blank"
@@ -465,12 +408,11 @@ exports[`<ConventionCollective /> should render 1`] = `
         est prévue pour 2020.
       </div>
       <div
-        class="c17"
+        class="c18"
       >
         <button
           aria-label="Fermer"
-          aria-pressed="false"
-          class="c18"
+          class="c19"
         >
           <svg
             fill="none"

@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AddressResults/> should render no results 1`] = `
+.c3 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -17,6 +35,7 @@ exports[`<AddressResults/> should render no results 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c2 {
@@ -51,22 +70,68 @@ exports[`<AddressResults/> should render no results 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
+.c7 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
   background: #ebeff3;
-  border-color: #cbd6e0;
+  border-color: #ebeff3;
 }
 
-.c3 > *:first-child {
-  margin-top: 0;
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
 }
 
-.c3 > *:last-child {
-  margin-bottom: 0;
+.c7[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c10 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c10:not([disabled]):hover,
+.c10:not([disabled]):active,
+.c10:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c5 {
@@ -84,131 +149,11 @@ exports[`<AddressResults/> should render no results 1`] = `
   justify-content: space-around;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
-  min-width: 7rem;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c8:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c8 + .c7 {
-  margin-left: 1rem;
-}
-
 .c9 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
   min-width: 7rem;
 }
 
-.c9:not([disabled]):hover,
-.c9:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c9:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c9[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c9[aria-pressed="true"]:not([disabled]):hover,
-.c9[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c9[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c9[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c9 + .c7 {
+.c9 + .c8 {
   margin-left: 1rem;
 }
 
@@ -278,14 +223,12 @@ exports[`<AddressResults/> should render no results 1`] = `
                 class="c6"
               >
                 <button
-                  aria-pressed="false"
-                  class="c7 c8"
+                  class="c7 c8 c9"
                 >
                   Non
                 </button>
                 <button
-                  aria-pressed="false"
-                  class="c7 c9"
+                  class="c10 c8 c9"
                 >
                   Oui
                 </button>
@@ -300,6 +243,33 @@ exports[`<AddressResults/> should render no results 1`] = `
 `;
 
 exports[`<AddressResults/> should render results 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  margin: 0 calc(1.25rem * -1);
+  padding: 0;
+}
+
+.c4 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 1.25rem;
+  padding: 1rem;
+  width: calc(100% / 3 - 2 * 1.25rem);
+  list-style-type: none;
+  background-color: white;
+}
+
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -316,6 +286,7 @@ exports[`<AddressResults/> should render results 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c2 {
@@ -350,31 +321,68 @@ exports[`<AddressResults/> should render results 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: wrap;
-  -ms-flex-flow: wrap;
-  flex-flow: wrap;
-  margin: 0 calc(1.25rem * -1);
-  padding: 0;
+.c12 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
 }
 
-.c4 {
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin: 1.25rem;
-  padding: 1rem;
-  width: calc(100% / 3 - 2 * 1.25rem);
-  list-style-type: none;
-  background-color: white;
+.c12:not([disabled]):hover,
+.c12:not([disabled]):active,
+.c12:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c15 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c15:not([disabled]):hover,
+.c15:not([disabled]):active,
+.c15:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c15[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c10 {
@@ -392,131 +400,11 @@ exports[`<AddressResults/> should render results 1`] = `
   justify-content: space-around;
 }
 
-.c13 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
-  min-width: 7rem;
-}
-
-.c13:not([disabled]):hover,
-.c13:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c13:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c13[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c13[aria-pressed="true"]:not([disabled]):hover,
-.c13[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c13[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c13[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c13 + .c12 {
-  margin-left: 1rem;
-}
-
 .c14 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
   min-width: 7rem;
 }
 
-.c14:not([disabled]):hover,
-.c14:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c14:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c14[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c14[aria-pressed="true"]:not([disabled]):hover,
-.c14[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c14[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c14[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c14 + .c12 {
+.c14 + .c13 {
   margin-left: 1rem;
 }
 
@@ -560,6 +448,18 @@ exports[`<AddressResults/> should render results 1`] = `
   line-height: 1.5;
 }
 
+@media (max-width:980px) {
+  .c4 {
+    width: calc(100% / 2 - 2 * 1.25rem);
+  }
+}
+
+@media (max-width:600px) {
+  .c4 {
+    width: calc(100% - 1 * 1.25rem);
+  }
+}
+
 @media print {
   .c1 {
     max-width: 100%;
@@ -590,18 +490,6 @@ exports[`<AddressResults/> should render results 1`] = `
   .c9 {
     border: none;
     padding: 0 5pt;
-  }
-}
-
-@media (max-width:980px) {
-  .c4 {
-    width: calc(100% / 2 - 2 * 1.25rem);
-  }
-}
-
-@media (max-width:600px) {
-  .c4 {
-    width: calc(100% - 1 * 1.25rem);
   }
 }
 
@@ -672,14 +560,12 @@ exports[`<AddressResults/> should render results 1`] = `
                 class="c11"
               >
                 <button
-                  aria-pressed="false"
-                  class="c12 c13"
+                  class="c12 c13 c14"
                 >
                   Non
                 </button>
                 <button
-                  aria-pressed="false"
-                  class="c12 c14"
+                  class="c15 c13 c14"
                 >
                   Oui
                 </button>

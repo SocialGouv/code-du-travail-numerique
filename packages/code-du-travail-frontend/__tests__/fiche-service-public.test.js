@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "../test/utils";
 import FicheSP from "../pages/fiche-service-public/[slug]";
 
 describe("<FicheSP />", () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "../test/utils";
 import ModelesDeCourriers from "../pages/modeles-de-courriers/[slug]";
 
 describe("<ModelesDeCourriers />", () => {

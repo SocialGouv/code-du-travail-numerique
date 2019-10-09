@@ -1,5 +1,5 @@
 import React from "react";
-import { render, getByTitle } from "@testing-library/react";
+import { render, getByTitle } from "../../../test/utils";
 import { DownloadFile } from "../DownloadFile";
 
 describe("<DownloadFile />", () => {

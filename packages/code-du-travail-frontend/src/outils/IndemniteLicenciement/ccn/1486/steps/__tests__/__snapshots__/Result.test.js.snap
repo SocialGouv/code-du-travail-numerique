@@ -2,7 +2,7 @@
 
 exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 .c24 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -11,48 +11,21 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
-  border-bottom-color: #0053b3;
 }
 
 .c24:not([disabled]):hover,
+.c24:not([disabled]):active,
 .c24:not([disabled]):focus {
   background: #07f;
   color: #fff;
-}
-
-.c24:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c24[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c24[aria-pressed="true"]:not([disabled]):hover,
-.c24[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c24[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
 }
 
 .c24[disabled] {
@@ -614,7 +587,6 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
     class="c24"
   >
     Recommencer une simulation
@@ -624,7 +596,7 @@ exports[`<Result /> renders conventionnal indemnite with warning toast 1`] = `
 
 exports[`<Result /> renders legal indemnite 1`] = `
 .c21 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -633,48 +605,21 @@ exports[`<Result /> renders legal indemnite 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
-  border-bottom-color: #0053b3;
 }
 
 .c21:not([disabled]):hover,
+.c21:not([disabled]):active,
 .c21:not([disabled]):focus {
   background: #07f;
   color: #fff;
-}
-
-.c21:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c21[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c21[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
 }
 
 .c21[disabled] {
@@ -1122,7 +1067,6 @@ exports[`<Result /> renders legal indemnite 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
     class="c21"
   >
     Recommencer une simulation

@@ -30,6 +30,7 @@ exports[`<ListTextes /> renders a list of textes 1`] = `
 exports[`<ListTextes /> renders a text 1`] = `
 .c2 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c4 {

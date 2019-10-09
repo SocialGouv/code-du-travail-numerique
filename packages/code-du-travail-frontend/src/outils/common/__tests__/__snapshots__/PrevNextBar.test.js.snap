@@ -17,6 +17,70 @@ exports[`<PrevNextBar /> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c2 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c4 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 .c1 {
   margin: 2rem 0;
   display: -webkit-box;
@@ -25,124 +89,12 @@ exports[`<PrevNextBar /> should render 1`] = `
   display: flex;
 }
 
-.c3 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c5 {
   margin-left: auto;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c3:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c3[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c3[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c2 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
+.c3 {
   margin-right: auto;
-}
-
-.c2:not([disabled]):hover,
-.c2:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c2:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c2[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):hover,
-.c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c2[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
 }
 
 @media print {
@@ -157,15 +109,13 @@ exports[`<PrevNextBar /> should render 1`] = `
     class="c0 c1"
   >
     <button
-      aria-pressed="false"
-      class="c2"
+      class="c2 c3"
       type="button"
     >
       Précédent
     </button>
     <button
-      aria-pressed="false"
-      class="c3"
+      class="c4 c5"
     >
       Suivant
     </button>
@@ -190,6 +140,70 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   margin-bottom: 0;
 }
 
+.c2 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c4 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 .c1 {
   margin: 2rem 0;
   display: -webkit-box;
@@ -198,124 +212,12 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   display: flex;
 }
 
-.c3 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c5 {
   margin-left: auto;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c3:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c3[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c3[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c2 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
+.c3 {
   margin-right: auto;
-}
-
-.c2:not([disabled]):hover,
-.c2:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c2:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c2[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):hover,
-.c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c2[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
 }
 
 @media print {
@@ -330,15 +232,13 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
     class="c0 c1"
   >
     <button
-      aria-pressed="false"
-      class="c2"
+      class="c2 c3"
       type="button"
     >
       Précédent
     </button>
     <button
-      aria-pressed="false"
-      class="c3"
+      class="c4 c5"
       disabled=""
     >
       Suivant
@@ -364,6 +264,70 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   margin-bottom: 0;
 }
 
+.c2 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c2:not([disabled]):hover,
+.c2:not([disabled]):active,
+.c2:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c4 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c4:not([disabled]):hover,
+.c4:not([disabled]):active,
+.c4:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 .c1 {
   margin: 2rem 0;
   display: -webkit-box;
@@ -372,124 +336,12 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   display: flex;
 }
 
-.c3 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c5 {
   margin-left: auto;
 }
 
-.c3:not([disabled]):hover,
-.c3:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c3:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c3[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c3[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c2 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
+.c3 {
   margin-right: auto;
-}
-
-.c2:not([disabled]):hover,
-.c2:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c2:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c2[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):hover,
-.c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c2[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
 }
 
 @media print {
@@ -504,15 +356,13 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
     class="c0 c1"
   >
     <button
-      aria-pressed="false"
-      class="c2"
+      class="c2 c3"
       type="button"
     >
       Précédent
     </button>
     <button
-      aria-pressed="false"
-      class="c3"
+      class="c4 c5"
     >
       Suivant
     </button>
@@ -537,16 +387,8 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  margin: 2rem 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -555,54 +397,38 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #0c0c0e;
   background: #ebeff3;
   border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
-  margin-right: auto;
 }
 
 .c2:not([disabled]):hover,
+.c2:not([disabled]):active,
 .c2:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c2:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c2[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):hover,
-.c2[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c2[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
 .c2[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
+}
+
+.c1 {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-right: auto;
 }
 
 @media print {
@@ -617,8 +443,7 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
     class="c0 c1"
   >
     <button
-      aria-pressed="false"
-      class="c2"
+      class="c2 c3"
       type="button"
     >
       Précédent

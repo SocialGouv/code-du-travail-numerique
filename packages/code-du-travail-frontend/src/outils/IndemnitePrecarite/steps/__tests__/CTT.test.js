@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "../../../../../test/utils";
 import { StepCTT } from "../CTT";
 import { Form } from "react-final-form";
 

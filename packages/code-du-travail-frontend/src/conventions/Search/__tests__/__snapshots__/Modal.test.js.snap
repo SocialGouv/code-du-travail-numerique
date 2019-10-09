@@ -85,6 +85,20 @@ exports[`<ConventionModal /> should render 1`] = `
 `;
 
 exports[`<ConventionModal /> should render a popup when click on button 1`] = `
+.c7 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c7 > *:first-child {
+  margin-top: 0;
+}
+
+.c7 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c10:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -130,20 +144,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   border: none;
   -webkit-appearance: none;
   cursor: pointer;
-}
-
-.c7 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c7 > *:first-child {
-  margin-top: 0;
-}
-
-.c7 > *:last-child {
-  margin-bottom: 0;
 }
 
 .c1 {
@@ -206,6 +206,13 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
   transform: scale(1.1);
 }
 
+@media print {
+  .c7 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 @media (max-width:1200px) {
   .c6 {
     width: 60vw;
@@ -231,13 +238,6 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
-  }
-}
-
-@media print {
-  .c7 {
-    max-width: 100%;
-    padding: 0;
   }
 }
 

@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> should render 1`] = `
+.c5 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.c5:hover {
+  color: #8c94a6;
+}
+
 .c2:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -40,7 +66,6 @@ exports[`<SearchBar /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  overflow: visible;
 }
 
 .c3 {
@@ -59,7 +84,7 @@ exports[`<SearchBar /> should render 1`] = `
   appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
 }
@@ -69,26 +94,7 @@ exports[`<SearchBar /> should render 1`] = `
   outline: none;
 }
 
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
+.c6 {
   position: absolute;
   right: 1px;
   top: 1px;
@@ -96,10 +102,6 @@ exports[`<SearchBar /> should render 1`] = `
   width: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-}
-
-.c5:hover {
-  color: #8c94a6;
 }
 
 @media (max-width:600px) {
@@ -156,8 +158,7 @@ exports[`<SearchBar /> should render 1`] = `
       </div>
     </label>
     <button
-      aria-pressed="false"
-      class="c5"
+      class="c5 c6"
       type="submit"
     >
       <svg
@@ -176,6 +177,32 @@ exports[`<SearchBar /> should render 1`] = `
 `;
 
 exports[`<SearchBar /> should render suggestions 1`] = `
+.c7 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.c7:hover {
+  color: #8c94a6;
+}
+
 .c2:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -223,7 +250,6 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  overflow: visible;
 }
 
 .c3 {
@@ -242,7 +268,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
 }
@@ -252,26 +278,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   outline: none;
 }
 
-.c7 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
+.c8 {
   position: absolute;
   right: 1px;
   top: 1px;
@@ -279,10 +286,6 @@ exports[`<SearchBar /> should render suggestions 1`] = `
   width: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-}
-
-.c7:hover {
-  color: #8c94a6;
 }
 
 @media (max-width:600px) {
@@ -413,8 +416,7 @@ exports[`<SearchBar /> should render suggestions 1`] = `
       </div>
     </label>
     <button
-      aria-pressed="false"
-      class="c7"
+      class="c7 c8"
       type="submit"
     >
       <svg

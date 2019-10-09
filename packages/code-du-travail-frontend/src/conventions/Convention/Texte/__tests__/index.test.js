@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "../../../../../test/utils";
 import Texte from "..";
 import { texteDeBase } from "../../../__tests__/api.conventions.mock";
 

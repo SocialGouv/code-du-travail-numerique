@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "../test/utils";
 import Theme from "../pages/themes/[slug]";
 
 describe("<Theme />", () => {

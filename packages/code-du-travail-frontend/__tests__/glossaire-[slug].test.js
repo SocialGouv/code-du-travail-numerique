@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "../test/utils";
 import Term from "../pages/glossaire/[slug]";
 
 jest.mock("next/router", () => ({

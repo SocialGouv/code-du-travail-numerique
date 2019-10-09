@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AbsencePeriods /> should add a period 1`] = `
+.c5 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c4 {
   padding: 0;
   font-size: 1rem;
@@ -21,42 +57,8 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   margin: 0;
 }
 
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7 {
   margin: 1.25rem 0;
-}
-
-.c6:focus,
-.c6:hover,
-.c6:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0 {
@@ -90,43 +92,9 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
   font-weight: 700;
 }
 
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c6 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
-}
-
-.c5:focus,
-.c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -202,8 +170,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
         value=""
       />
       <button
-        aria-pressed="false"
-        class="c5"
+        class="c5 c6"
         type="button"
       >
         Supprimer
@@ -211,8 +178,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
-    class="c6"
+    class="c5 c7"
     type="button"
   >
     Ajouter une période
@@ -222,7 +188,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 
 exports[`<AbsencePeriods /> should delete a period 1`] = `
 .c4 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -231,9 +197,8 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
@@ -249,7 +214,6 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
   border-radius: 0;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  margin: 1.25rem 0;
 }
 
 .c4:focus,
@@ -257,6 +221,10 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 .c4:active {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c5 {
+  margin: 1.25rem 0;
 }
 
 .c0 {
@@ -309,8 +277,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
-    class="c4"
+    class="c4 c5"
     type="button"
   >
     Ajouter une période
@@ -319,6 +286,42 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 `;
 
 exports[`<AbsencePeriods /> should render 1`] = `
+.c5 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:focus,
+.c5:hover,
+.c5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c4 {
   padding: 0;
   font-size: 1rem;
@@ -339,42 +342,8 @@ exports[`<AbsencePeriods /> should render 1`] = `
   margin: 0;
 }
 
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7 {
   margin: 1.25rem 0;
-}
-
-.c6:focus,
-.c6:hover,
-.c6:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0 {
@@ -408,43 +377,9 @@ exports[`<AbsencePeriods /> should render 1`] = `
   font-weight: 700;
 }
 
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c6 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
-}
-
-.c5:focus,
-.c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -520,8 +455,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
         value="3"
       />
       <button
-        aria-pressed="false"
-        class="c5"
+        class="c5 c6"
         type="button"
       >
         Supprimer
@@ -529,8 +463,7 @@ exports[`<AbsencePeriods /> should render 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
-    class="c6"
+    class="c5 c7"
     type="button"
   >
     Ajouter une période
