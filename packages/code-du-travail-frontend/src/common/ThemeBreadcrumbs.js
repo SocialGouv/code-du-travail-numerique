@@ -39,4 +39,3 @@ export const ThemeBreadcrumbs = ({ theme, breadcrumbs = [] }) => {
 
   return <Breadcrumbs items={themesCrumbs} />;
 };
-
