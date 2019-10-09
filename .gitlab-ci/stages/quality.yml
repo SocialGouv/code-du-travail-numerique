@@ -100,7 +100,7 @@ Test @cdtn/data:
 
 Test @cdtn/frontend SDR data:
   <<: *quality_stage
-  image: node:12-alpine
+  image: alpine:3.10
   allow_failure: true
   before_script:
     - apk add --update jq curl
