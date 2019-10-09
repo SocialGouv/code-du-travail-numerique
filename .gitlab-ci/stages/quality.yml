@@ -106,4 +106,4 @@ Test @cdtn/frontend SDR data:
     - apk add --update jq curl
   script:
     - |-
-      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 curl --fail > /dev/null
+      jq ".[].url" ./packages/code-du-travail-frontend/src/data/services-de-renseignement.json | xargs -n 1 curl -L --head --fail > /dev/null
