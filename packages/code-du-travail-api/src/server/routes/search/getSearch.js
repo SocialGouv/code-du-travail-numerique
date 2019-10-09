@@ -29,14 +29,18 @@ const getSearch = async querystring => {
     return knownQueryResult;
   }
   // remove console.log when stavble
-  logger.info(`querying sem search on: ${NLP_URL}/api/search?q=${query}`);
+  logger.info(
+    `querying sem search on: ${NLP_URL}/api/search?q=${encodeURIComponent(
+      query
+    )}`
+  );
 
   // we filter results to remove snippet document from main results
   const size = Math.min(querystring.size || MAX_RESULTS, 100);
 
-  const query_vector = await fetch(`${NLP_URL}/api/search?q=${query}`).then(
-    response => (response = response.json())
-  );
+  const query_vector = await fetch(
+    `${NLP_URL}/api/search?q=${encodeURIComponent(query)}`
+  ).then(response => (response = response.json()));
 
   const semSources = [
     SOURCES.SHEET_MT,
