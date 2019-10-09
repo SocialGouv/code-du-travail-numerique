@@ -3,6 +3,9 @@
 .build_and_push_stage: &build_and_push_stage
   extends: .base_register_stage
   stage: "Registration"
+  except:
+    variables:
+      - $PRODUCTION
 
 Register api image:
   <<: *build_and_push_stage

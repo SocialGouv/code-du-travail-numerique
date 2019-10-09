@@ -23,18 +23,19 @@ include:
     name: incubateur
   only:
     refs:
-      - tags
+      - triggers
     variables:
       - $PRODUCTION
+
+#
 
 .dev_stage: &dev_stage
   environment:
     name: dev
-  except:
+  only:
     refs:
       - tags
-    variables:
-      - $PRODUCTION
+      - branches
 
 #
 #

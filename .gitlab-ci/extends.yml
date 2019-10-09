@@ -3,11 +3,6 @@
   services:
     - docker:$DOCKER_VERSION-dind
 
-.base-docker-compose-image-stage:
-  image: docker/compose:$DOCKER_COMPOSE_VERSION
-  services:
-    - docker:$DOCKER_VERSION-dind
-
 #
 
 .base_docker_kube_image_stage:
