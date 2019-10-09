@@ -44,14 +44,21 @@ const labelBySource = {
 const sources = Object.values(SOURCES);
 
 // code_du_travail -> Code du travail
-const getLabelBySource = src => labelBySource[src] || "";
+function getLabelBySource(src) {
+  return labelBySource[src] || "";
+}
 
 // code_du_travail -> code-du-travail
-const getRouteBySource = src => routeBySource[src];
+function getRouteBySource(src) {
+  return routeBySource[src];
+}
 
 // code-du-travail -> code_du_travail
-const getSourceByRoute = slug =>
-  sources.find(key => routeBySource[key] === slug);
+function getSourceByRoute(slug) {
+  return sources.find(function(key) {
+    return routeBySource[key] === slug;
+  });
+}
 
 module.exports = {
   SOURCES,
