@@ -1,7 +1,7 @@
 import React from "react";
 import { UID } from "react-uid";
 import styled from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 import servicesDeRenseignement from "../data/services-de-renseignement.json";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@cdt/ui-old";
+import { Container } from "@socialgouv/react-ui";
 
 import { IndemniteLegale } from "../components/IndemniteLegale";
 import { branches } from "../branches";

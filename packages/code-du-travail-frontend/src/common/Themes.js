@@ -3,14 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
 
-import {
-  Container,
-  Grid,
-  Category,
-  GridCell,
-  Section,
-  theme
-} from "@cdt/ui-old";
+import { Grid, Category, GridCell } from "@cdt/ui-old";
+import { Container, Section, theme } from "@socialgouv/react-ui";
 
 const iconsMap = {
   1: "hiring-1.svg",

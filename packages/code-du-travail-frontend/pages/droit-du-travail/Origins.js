@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Accordion, Container, Section, theme, Toast } from "@cdt/ui-old";
+import { Accordion, Toast } from "@cdt/ui-old";
+import { Container, Section, theme } from "@socialgouv/react-ui";
 
 const accordionItemsLeft = [
   {

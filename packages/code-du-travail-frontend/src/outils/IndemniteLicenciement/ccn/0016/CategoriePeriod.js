@@ -2,7 +2,7 @@ import React from "react";
 import { SectionTitle, Input, InlineError } from "../../../common/stepStyles";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 import { isNumber } from "../../../common/validators";
 

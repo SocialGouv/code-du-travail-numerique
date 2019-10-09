@@ -1,9 +1,11 @@
 import React from "react";
-import { Alert, Container, theme, Wrapper } from "@cdt/ui-old";
+import { Alert } from "@cdt/ui-old";
+import { Container, theme, Wrapper } from "@socialgouv/react-ui";
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import styled from "styled-components";
+
 import Article from "../common/Article";
 import Disclaimer from "../common/Disclaimer";
 import { Feedback } from "../common/Feedback";

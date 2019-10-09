@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 const { colors } = theme;
 export default createGlobalStyle`

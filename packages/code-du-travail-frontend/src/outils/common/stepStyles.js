@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 const { box, fonts, colors, spacing } = theme;
 

@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import App from "next/app";
 import getConfig from "next/config";
+import { ThemeProvider } from "styled-components";
 import * as Sentry from "@sentry/browser";
+import { theme } from "@socialgouv/react-ui";
 import ErrorPage from "./_error";
 
 import { initPiwik } from "../src/piwik";
@@ -59,8 +61,16 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     if (pageProps.statusCode) {
-      return <ErrorPage statusCode={pageProps.statusCode} />;
+      return (
+        <ThemeProvider theme={theme.colors}>
+          <ErrorPage statusCode={pageProps.statusCode} />{" "}
+        </ThemeProvider>
+      );
     }
-    return <Component {...pageProps} />;
+    return (
+      <ThemeProvider theme={theme.colors}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    );
   }
 }

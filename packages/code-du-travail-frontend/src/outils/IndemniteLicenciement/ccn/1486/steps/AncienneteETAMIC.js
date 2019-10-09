@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { Toast, theme } from "@cdt/ui-old";
+import { Toast } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 import {
   BlockError,

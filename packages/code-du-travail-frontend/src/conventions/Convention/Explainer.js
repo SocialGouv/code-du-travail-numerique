@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-import { theme, VerticalArrow, Wrapper } from "@cdt/ui-old";
+import { VerticalArrow } from "@cdt/ui-old";
+import { theme, Wrapper } from "@socialgouv/react-ui";
 
 const HIDDEN_KEY = "convention-explainer-hidden";
 

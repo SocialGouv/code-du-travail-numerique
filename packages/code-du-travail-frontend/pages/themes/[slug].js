@@ -1,6 +1,6 @@
 import React from "react";
 import getConfig from "next/config";
-import { Section } from "@cdt/ui-old";
+import { Section } from "@socialgouv/react-ui";
 import fetch from "isomorphic-unfetch";
 
 import { SearchResults } from "../../src/search/SearchResults";

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import { OnChange } from "react-final-form-listeners";
 
 import { Label, QuestionParagraphe } from "../common/stepStyles";

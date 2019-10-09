@@ -4,7 +4,8 @@ import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 
 import slugify from "@cdt/data/slugify";
-import { Accordion, Alert, Button, theme } from "@cdt/ui-old";
+import { Accordion, Alert } from "@cdt/ui-old";
+import { Button, theme } from "@socialgouv/react-ui";
 
 import SearchConvention from "../../src/conventions/Search/Form";
 import Mdx from "../../src/common/Mdx";

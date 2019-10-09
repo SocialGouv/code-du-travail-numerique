@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 /**
  * For now, only <Step /> are used but stepItems will
  * allows to navigate between form's steps

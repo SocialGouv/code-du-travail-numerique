@@ -2,14 +2,9 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import {
-  Container,
-  Grid,
-  Category,
-  GridCell,
-  Section,
-  theme
-} from "@cdt/ui-old";
+import { Grid, Category, GridCell } from "@cdt/ui-old";
+import { Container, Section, theme } from "@socialgouv/react-ui";
+
 import ConventionModal from "../conventions/Search/Modal";
 
 export const outils = [

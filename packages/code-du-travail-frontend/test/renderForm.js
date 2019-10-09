@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "../test/utils";
 import { Form } from "react-final-form";
 
 export function renderForm(Component, data) {

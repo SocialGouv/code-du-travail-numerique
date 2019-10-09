@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import { Container, Section, Wrapper, Grid, GridCell } from "@cdt/ui-old";
+import { Grid, GridCell } from "@cdt/ui-old";
+import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 import { Layout } from "../src/layout/Layout";
 
 const About = () => (

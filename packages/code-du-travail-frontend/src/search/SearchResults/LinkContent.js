@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import { SOURCES, getLabelBySource } from "@cdt/sources";
 
 export const LinkContent = ({ author, description = "", source, title }) => {

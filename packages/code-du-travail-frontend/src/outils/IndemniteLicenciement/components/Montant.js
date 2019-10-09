@@ -1,5 +1,5 @@
 import React from "react";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 function Montant({ value, primary, ratio = 1 }) {

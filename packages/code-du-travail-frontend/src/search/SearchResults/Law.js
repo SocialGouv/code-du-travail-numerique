@@ -1,14 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { getRouteBySource } from "@cdt/sources";
-import {
-  Container,
-  LargeLink,
-  List,
-  ListItem,
-  Section,
-  Wrapper
-} from "@cdt/ui-old";
+import { LargeLink, List, ListItem } from "@cdt/ui-old";
+import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 
 import { LinkContent } from "./LinkContent";
 

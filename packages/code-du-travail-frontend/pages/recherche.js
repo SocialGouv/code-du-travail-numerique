@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import { withRouter } from "next/router";
-import { Alert, Container, Section } from "@cdt/ui-old";
+import { Alert } from "@cdt/ui-old";
+import { Container, Section } from "@socialgouv/react-ui";
 
 import { fetchSearchResults } from "../src/search/search.service";
 import { SearchResults } from "../src/search/SearchResults";

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { List, ListItem, theme } from "@cdt/ui-old";
+import { List, ListItem } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "../typeReference";
 import ArticleIcon from "../../icons/ArticleIcon";

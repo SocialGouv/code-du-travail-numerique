@@ -4,7 +4,7 @@ import { required } from "../../common/validators";
 
 import { Input, QuestionLabel, InlineError } from "../../common/stepStyles";
 import { UID } from "react-uid";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 function TextQuestion({

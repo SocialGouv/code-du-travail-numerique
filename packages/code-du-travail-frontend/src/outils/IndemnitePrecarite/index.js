@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Container, Wrapper } from "@cdt/ui-old";
+import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 
 import { Wizard } from "../common/Wizard";
 
