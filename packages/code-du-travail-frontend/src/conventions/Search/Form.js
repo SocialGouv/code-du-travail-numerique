@@ -107,6 +107,7 @@ const Search = ({
         convention collective.
       </p>
       <Input
+        role="search"
         placeholder="Nom d'entreprise, SIRET, nom de convention collective"
         value={query}
         type="search"
@@ -159,7 +160,10 @@ const Search = ({
                             <SearchResult
                               key={result.id}
                               {...result}
-                              selectConvention={selectConvention}
+                              selectConvention={
+                                // only use callback when defined. otherwise, use <Link/>
+                                onSelectConvention && selectConvention
+                              }
                             />
                           ))}
                         </React.Fragment>
