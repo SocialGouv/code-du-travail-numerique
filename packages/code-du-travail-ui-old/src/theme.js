@@ -25,7 +25,6 @@ export const colors = {
 
   black: "#0c0c0e",
 
-  markBackground: "#fff28e",
   successBackground: "#e0f2bd",
   infoBackground: "#e5f1fe",
   warningBackground: "#fee5ad",
