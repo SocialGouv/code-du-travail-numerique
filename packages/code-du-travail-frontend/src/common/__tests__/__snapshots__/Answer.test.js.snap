@@ -1160,10 +1160,9 @@ exports[`<Answer /> should render a breadcrumbs 1`] = `
             class="c4"
           >
             <a
-              href="/themes"
-              title="Voir le theme Thèmes"
+              href="/"
             >
-              Thèmes
+              Accueil
             </a>
           </li>
           <li

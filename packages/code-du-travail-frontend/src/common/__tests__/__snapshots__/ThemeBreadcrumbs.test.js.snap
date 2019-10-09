@@ -71,10 +71,9 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
             class="c4"
           >
             <a
-              href="/themes"
-              title="Voir le theme Thèmes"
+              href="/"
             >
-              Thèmes
+              Accueil
             </a>
           </li>
           <li
@@ -187,10 +186,9 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
             class="c4"
           >
             <a
-              href="/themes"
-              title="Voir le theme Thèmes"
+              href="/"
             >
-              Thèmes
+              Accueil
             </a>
           </li>
           <li
