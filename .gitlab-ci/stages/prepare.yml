@@ -7,6 +7,7 @@
 
 #
 .monorepo_changes: &monorepo_changes
+  changes:
   - yarn.lock
   - package.json
   - packages/**/package.json
@@ -23,8 +24,7 @@ Register socialgouv/cdtn base image:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
   only:
-    changes:
-      <<: *monorepo_changes
+    <<: *monorepo_changes
   except:
     variables:
       - $PRODUCTION
@@ -36,8 +36,7 @@ Use latest socialgouv/cdtn base image:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
   except:
-    changes:
-      <<: *monorepo_changes
+    <<: *monorepo_changes
     variables:
       - $PRODUCTION
   script:
