@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, wait } from "@wrapped-testing-library/react";
+import { render, fireEvent, wait } from "@testing-library/react";
 
 import ListTextes from "../ListTextes";
 import { textesSalaires } from "../../__tests__/api.conventions.mock";

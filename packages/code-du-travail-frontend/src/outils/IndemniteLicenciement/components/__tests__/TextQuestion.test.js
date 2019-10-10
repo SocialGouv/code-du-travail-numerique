@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@wrapped-testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { TextQuestion } from "../TextQuestion";
 import { Form } from "react-final-form";
 

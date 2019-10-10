@@ -1,6 +1,6 @@
 import React from "react";
 import { AddressResults } from "../AddressResults";
-import { render } from "@wrapped-testing-library/react";
+import { render } from "@testing-library/react";
 
 const results = [
   {
