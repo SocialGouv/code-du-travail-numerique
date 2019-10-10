@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "../test/utils";
+import { render } from "@wrapped-testing-library/react";
 import FicheMT from "../pages/fiche-ministere-travail/[slug]";
 
 describe("<FicheMT />", () => {

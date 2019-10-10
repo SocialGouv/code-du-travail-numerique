@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "../../../../test/utils";
+import { render } from "@wrapped-testing-library/react";
 import { blocs } from "../../mapping";
 import TYPE_REFERENCE from "../../typeReference";
 import HierarchieBloc from "../HierarchieBloc";

@@ -1,5 +1,5 @@
 import React from "react";
-import { render, wait } from "../../../../../test/utils";
+import { render, wait } from "@wrapped-testing-library/react";
 import { Primes } from "../Primes";
 import { Form } from "react-final-form";
 import arrayMutators from "final-form-arrays";

@@ -1,6 +1,6 @@
 import React from "react";
 import SearchHero from "../SearchHero";
-import { render } from "../../../test/utils";
+import { render } from "@wrapped-testing-library/react";
 import { fetchSuggestResults } from "../search.service";
 
 jest.mock("../search.service.js", () => ({

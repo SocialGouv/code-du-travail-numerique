@@ -1,6 +1,10 @@
 import React from "react";
 import SearchBar from "../SearchBar";
-import { fireEvent, render, waitForElement } from "../../../test/utils";
+import {
+  fireEvent,
+  render,
+  waitForElement
+} from "@wrapped-testing-library/react";
 import { fetchSuggestResults } from "../search.service";
 
 jest.mock("../search.service.js", () => ({

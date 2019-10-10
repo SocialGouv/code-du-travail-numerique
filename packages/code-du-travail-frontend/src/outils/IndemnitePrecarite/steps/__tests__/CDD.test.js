@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "../../../../../test/utils";
+import { render, fireEvent } from "@wrapped-testing-library/react";
 import { StepCDD } from "../CDD";
 import { Form } from "react-final-form";
 

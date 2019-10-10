@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, wait } from "../../../../test/utils";
+import { fireEvent, render, wait } from "@wrapped-testing-library/react";
 import Explainer from "../Explainer";
 
 describe("<Explainer />", () => {

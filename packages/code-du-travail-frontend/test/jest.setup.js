@@ -1,5 +1,7 @@
 import "jest-styled-components";
 
+// jest.mock("@wrapped-testing-library/react");
+
 jest.mock("next/config", () => () => ({
   publicRuntimeConfig: {
     API_ADDRESS: "addresse-api.data",
