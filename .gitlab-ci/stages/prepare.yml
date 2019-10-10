@@ -45,14 +45,16 @@ Use latest socialgouv/cdtn base image:
         export TAG=$CI_COMMIT_REF_SLUG
       fi
     #
-    - docker pull $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA || true
-    - docker pull $IMAGE_NAME:master || true
+    - docker pull $IMAGE_NAME:master && { export CACHE_TAG=master } || true
+    - docker pull $IMAGE_NAME:$TAG && { export CACHE_TAG=$TAG } || true
+    - docker pull $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA && { export CACHE_TAG=$CI_COMMIT_BEFORE_SHA } || true
     #
-    - echo "> docker tag $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA $IMAGE_NAME:$CI_COMMIT_SHA"
-    - docker tag $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA $IMAGE_NAME:$CI_COMMIT_SHA
+    - echo "> docker tag $IMAGE_NAME:$CACHE_TAG $IMAGE_NAME:$CI_COMMIT_SHA"
+    - docker tag $IMAGE_NAME:$CACHE_TAG $IMAGE_NAME:$CI_COMMIT_SHA
     - docker push $IMAGE_NAME:$CI_COMMIT_SHA
     #
-    - docker tag $IMAGE_NAME:$CI_COMMIT_BEFORE_SHA $IMAGE_NAME:$TAG
+    - echo "> docker tag $IMAGE_NAME:$CACHE_TAG $IMAGE_NAME:$TAG"
+    - docker tag $IMAGE_NAME:$CACHE_TAG $IMAGE_NAME:$TAG
     - docker push $IMAGE_NAME:$TAG
 #
 
