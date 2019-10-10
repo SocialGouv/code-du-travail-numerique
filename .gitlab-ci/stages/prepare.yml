@@ -31,8 +31,9 @@ Use latest socialgouv/cdtn base image:
   except:
     changes:
       - yarn.lock
-      - package.lock
-      - packages/**/package.lock
+      - package.json
+      - packages/**/package.json
+      - packages/**/yarn.lock
       - packages/code-du-travail-data/**/*.js
     variables:
       - $PRODUCTION
