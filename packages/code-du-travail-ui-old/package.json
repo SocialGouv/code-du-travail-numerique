@@ -69,7 +69,8 @@
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.js"
-    ]
+    ],
+    "testPathIgnorePatterns": ["src/Toast/test.js"]
   },
   "browserslist": [
     "last 2 version",
