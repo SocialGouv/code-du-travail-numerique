@@ -75,7 +75,7 @@ const formatFullTextResults = async apiData => {
       };
     });
   }
-  return Promise.resolve();
+  return Promise.resolve([]);
 };
 
 const searchEntrepriseByName = debounce(apiEntrepriseFullText, 300);

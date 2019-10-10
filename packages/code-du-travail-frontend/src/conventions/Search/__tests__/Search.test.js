@@ -1,17 +1,15 @@
 import React from "react";
-import { fireEvent, render, wait, act } from "@testing-library/react";
+import { fireEvent, render, wait } from "@testing-library/react";
+import fetch from "isomorphic-unfetch";
 
 jest.mock("isomorphic-unfetch");
+jest.useFakeTimers();
 
 import Search from "../Form";
-
-import fetch from "isomorphic-unfetch";
 
 afterEach(() => {
   fetch.mockReset();
 });
-
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 function renderSearchForm({
   title = "Recherche de convention collective",
@@ -71,16 +69,15 @@ describe("<Search />", () => {
         ]
       }
     });
-    await act(async () => {
-      const { container, getByRole } = renderSearchForm({
-        onSelectConvention: null
-      });
-      fireEvent.change(getByRole("search"), { target: { value: "1234" } });
-      await sleep(400); // wait for debounce!
-      expect(container).toMatchSnapshot();
-      expect(fetch).toHaveBeenCalledTimes(1);
-      expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=1234");
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention: null
     });
+    fireEvent.change(getByRole("search"), { target: { value: "1234" } });
+    jest.runAllTimers();
+    await wait();
+    expect(container).toMatchSnapshot();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=1234");
   });
 
   it("when input is a valid IDCC, should show only the perfect match ", async () => {
@@ -106,16 +103,15 @@ describe("<Search />", () => {
         ]
       }
     });
-    await act(async () => {
-      const { container, getByRole } = renderSearchForm({
-        onSelectConvention: null
-      });
-      fireEvent.change(getByRole("search"), { target: { value: "4567" } });
-      await sleep(400); // wait for debounce!
-      expect(container).toMatchSnapshot();
-      expect(fetch).toHaveBeenCalledTimes(1);
-      expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=4567");
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention: null
     });
+    fireEvent.change(getByRole("search"), { target: { value: "4567" } });
+    jest.runAllTimers();
+    await wait();
+    expect(container).toMatchSnapshot();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=4567");
   });
 
   it("should show no results when no result", async () => {
@@ -124,16 +120,15 @@ describe("<Search />", () => {
         hits: []
       }
     });
-    await act(async () => {
-      const { container, getByRole } = renderSearchForm({
-        onSelectConvention: null
-      });
-      fireEvent.change(getByRole("search"), { target: { value: "9999" } });
-      await sleep(400); // wait for debounce!
-      expect(container).toMatchSnapshot();
-      expect(fetch).toHaveBeenCalledTimes(1);
-      expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=9999");
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention: null
     });
+    fireEvent.change(getByRole("search"), { target: { value: "9999" } });
+    jest.runAllTimers();
+    await wait();
+    expect(container).toMatchSnapshot();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith("api.url/idcc?q=9999");
   });
 
   it("should use onSelectConvention callback when given", async () => {
@@ -159,23 +154,22 @@ describe("<Search />", () => {
         ]
       }
     });
-    await act(async () => {
-      const onSelectConvention = jest.fn();
-      const { getByRole, getByText } = renderSearchForm({
-        onSelectConvention
-      });
-      fireEvent.change(getByRole("search"), { target: { value: "42" } });
-      await sleep(400); // wait for debounce!
-      expect(onSelectConvention).toHaveBeenCalledTimes(0);
-      const link = getByText("titre convention 2");
-      fireEvent.click(link);
-      expect(onSelectConvention).toHaveBeenCalledTimes(1);
-      expect(onSelectConvention).toHaveBeenCalledWith({
-        id: "KALICONT000000000002",
-        num: "4567",
-        slug: "slug-convention-2",
-        title: "titre convention 2"
-      });
+    const onSelectConvention = jest.fn();
+    const { getByRole, getByText } = renderSearchForm({
+      onSelectConvention
+    });
+    fireEvent.change(getByRole("search"), { target: { value: "42" } });
+    jest.runAllTimers();
+    await wait();
+    expect(onSelectConvention).toHaveBeenCalledTimes(0);
+    const link = getByText("titre convention 2");
+    fireEvent.click(link);
+    expect(onSelectConvention).toHaveBeenCalledTimes(1);
+    expect(onSelectConvention).toHaveBeenCalledWith({
+      id: "KALICONT000000000002",
+      num: "4567",
+      slug: "slug-convention-2",
+      title: "titre convention 2"
     });
   });
 
@@ -238,16 +232,15 @@ describe("<Search />", () => {
         }
       });
     });
-    await act(async () => {
-      const onSelectConvention = jest.fn();
-      const { container, getByRole } = renderSearchForm({
-        onSelectConvention
-      });
-      fireEvent.change(getByRole("search"), { target: { value: "hello" } });
-      await sleep(700); // wait for double-debounce!
-      expect(fetch).toHaveBeenCalledTimes(3);
-      expect(container).toMatchSnapshot();
+    const onSelectConvention = jest.fn();
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention
     });
+    fireEvent.change(getByRole("search"), { target: { value: "hello" } });
+    jest.runOnlyPendingTimers(); // run debounce timer
+    await wait(); // with for promise to resolve
+    expect(fetch).toHaveBeenCalledTimes(3);
+    expect(container).toMatchSnapshot();
   });
 
   it("should not use siret2idcc when no entreprise result", async () => {
@@ -281,16 +274,16 @@ describe("<Search />", () => {
         }
       });
     });
-    await act(async () => {
-      const onSelectConvention = jest.fn();
-      const { container, getByRole } = renderSearchForm({
-        onSelectConvention
-      });
-      fireEvent.change(getByRole("search"), { target: { value: "xxxx" } });
-      await sleep(700); // wait for double-debounce!
-      expect(fetch).toHaveBeenCalledTimes(2);
-      expect(container).toMatchSnapshot();
+
+    const onSelectConvention = jest.fn();
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention
     });
+    fireEvent.change(getByRole("search"), { target: { value: "xxxx" } });
+    jest.runOnlyPendingTimers(); // run debounce timer
+    await wait(); // with for promise to resolve
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(container).toMatchSnapshot();
   });
 
   it("when searching SIRET, should use API SIREN and siret2idcc", async () => {
@@ -335,17 +328,16 @@ describe("<Search />", () => {
         }
       });
     });
-    await act(async () => {
-      const onSelectConvention = jest.fn();
-      const { container, getByRole } = renderSearchForm({
-        onSelectConvention
-      });
-      fireEvent.change(getByRole("search"), {
-        target: { value: "01234567891011" }
-      });
-      await sleep(700); // wait for double-debounce!
-      expect(fetch).toHaveBeenCalledTimes(2);
-      expect(container).toMatchSnapshot();
+    const onSelectConvention = jest.fn();
+    const { container, getByRole } = renderSearchForm({
+      onSelectConvention
     });
+    fireEvent.change(getByRole("search"), {
+      target: { value: "01234567891011" }
+    });
+    jest.runOnlyPendingTimers(); // run debounce timer
+    await wait(); // with for promise to resolve
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(container).toMatchSnapshot();
   });
 });
