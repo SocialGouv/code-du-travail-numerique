@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  fireEvent,
-  render,
-  waitForElement
-} from "@wrapped-testing-library/react";
+import { fireEvent, render, waitForElement } from "@testing-library/react";
 
 import { Suggester } from "../Suggester";
 

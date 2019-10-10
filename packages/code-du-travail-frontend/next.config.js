@@ -1,6 +1,13 @@
 const withSourceMaps = require("@zeit/next-source-maps");
 
 module.exports = withSourceMaps({
+  webpack: (config, { dev }) => {
+    config.module.rules.push({
+      test: /\.test.js$/,
+      loader: "ignore-loader"
+    });
+    return config;
+  },
   // https://github.com/zeit/next.js/#disabling-file-system-routing
   useFileSystemPublicRoutes: true,
   publicRuntimeConfig: {

@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@wrapped-testing-library/react";
+import { render } from "@testing-library/react";
 import { StepIntro } from "../Introduction";
 
 describe("<StepIntro />", () => {
