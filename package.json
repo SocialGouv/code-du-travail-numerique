@@ -26,9 +26,9 @@
     "lerna": "^3.17.0"
   },
   "resolutions": {
-    "@babel/core": "7.6.2",
+    "@babel/core": "7.6.4",
     "@babel/plugin-proposal-class-properties": "7.5.5",
-    "@babel/preset-env": "7.6.2"
+    "@babel/preset-env": "7.6.3"
   },
   "workspaces": {
     "packages": ["packages/*", "packages/code-du-travail-data/dataset/*"]
