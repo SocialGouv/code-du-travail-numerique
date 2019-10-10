@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Button, Container, Section, theme, Wrapper } from "@cdt/ui-old";
+import {
+  Button,
+  Container,
+  Section,
+  theme,
+  Wrapper
+} from "@socialgouv/react-ui";
 import styled from "styled-components";
 import { matopush } from "../../piwik";
 

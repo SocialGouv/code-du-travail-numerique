@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Alert, Card, Cards, Container, Section, Wrapper } from "@cdt/ui-old";
+import { Alert, Card, Cards } from "@cdt/ui-old";
+import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 import { Feedback } from "../common/Feedback";
 import styled from "styled-components";
 

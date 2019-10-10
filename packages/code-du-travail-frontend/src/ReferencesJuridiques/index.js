@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Container, Section, theme, Wrapper } from "@cdt/ui-old";
+import { Container, Section, theme, Wrapper } from "@socialgouv/react-ui";
 import TYPE_REFERENCE from "./typeReference";
 import { mapReferencesToBlocs } from "./mapping";
 import HierarchieBloc from "./components/HierarchieBloc";

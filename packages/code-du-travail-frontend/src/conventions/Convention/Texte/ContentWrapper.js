@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Content from "./Content";
-import { Section, theme } from "@cdt/ui-old";
+import { Section, theme } from "@socialgouv/react-ui";
 
 const ContentWrapper = ({ node, title }) => {
   return (

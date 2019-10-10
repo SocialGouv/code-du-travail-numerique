@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepPrimes /> should render 1`] = `
+.c7 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:focus,
+.c7:hover,
+.c7:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c2 {
   padding: 0;
   font-size: 1.15rem;
@@ -95,81 +131,13 @@ exports[`<StepPrimes /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c7 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c8 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
 }
 
-.c7:focus,
-.c7:hover,
-.c7:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c9 {
   margin: 1.25rem 0;
-}
-
-.c8:focus,
-.c8:hover,
-.c8:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -232,16 +200,14 @@ exports[`<StepPrimes /> should render 1`] = `
       </span>
     </div>
     <button
-      aria-pressed="false"
-      class="c7"
+      class="c7 c8"
       type="button"
     >
       Supprimer
     </button>
   </div>
   <button
-    aria-pressed="false"
-    class="c8"
+    class="c7 c9"
     type="button"
   >
     Ajouter une prime

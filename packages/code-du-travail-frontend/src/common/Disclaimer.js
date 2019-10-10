@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Toast, theme } from "@cdt/ui-old";
+import { Toast } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 const Disclaimer = () => {
   const [isDisclaimerHidden, setDisclaimerHidden] = useState(true);

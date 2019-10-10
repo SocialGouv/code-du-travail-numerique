@@ -2,7 +2,7 @@
 
 exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
 .c3 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -11,48 +11,21 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #005994;
   border-color: #005994;
-  border-bottom-color: #003a61;
 }
 
 .c3:not([disabled]):hover,
+.c3:not([disabled]):active,
 .c3:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
-}
-
-.c3:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c3[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
 }
 
 .c3[disabled] {
@@ -164,7 +137,6 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
       class="c2"
     >
       <button
-        aria-pressed="false"
         class="c3"
       >
         Envoyer mon commentaire
@@ -179,7 +151,7 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
 
 exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
 .c3 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -188,48 +160,21 @@ exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #005994;
   border-color: #005994;
-  border-bottom-color: #003a61;
 }
 
 .c3:not([disabled]):hover,
+.c3:not([disabled]):active,
 .c3:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
-}
-
-.c3:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c3[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):hover,
-.c3[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c3[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
 }
 
 .c3[disabled] {
@@ -311,7 +256,6 @@ exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
       class="c2"
     >
       <button
-        aria-pressed="false"
         class="c3"
       >
         Envoyer mon commentaire

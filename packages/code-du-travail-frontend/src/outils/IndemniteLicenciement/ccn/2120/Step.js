@@ -1,7 +1,7 @@
 import React from "react";
 import { Field } from "react-final-form";
 import styled from "styled-components";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 import { SectionTitle, Label } from "../../../common/stepStyles";
 

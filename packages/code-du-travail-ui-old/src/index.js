@@ -1,18 +1,11 @@
 import * as icons from "./icons";
 import * as keyframes from "./keyframes";
-import * as theme from "./theme";
 import { Modal, ModalContentWrapper } from "./Modal";
 import { List, ListItem } from "./List";
 
-// Layout
-export { default as Container } from "./layout/Container";
-export { default as Section } from "./layout/Section";
-export { default as Wrapper } from "./layout/Wrapper";
-
-export { icons, keyframes, List, ListItem, Modal, ModalContentWrapper, theme };
+export { icons, keyframes, List, ListItem, Modal, ModalContentWrapper };
 export { default as Accordion } from "./Accordion";
 export { default as Alert } from "./Alert";
-export { default as Button } from "./Button";
 export { default as Cards } from "./Cards";
 export { default as Card } from "./Card";
 export { Category } from "./Category";

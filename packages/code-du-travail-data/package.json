@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/tree/master/packages/code-du-travail-data#readme",
   "dependencies": {
-    "@cdt/sources": "3.3.1",
+    "@cdt/sources": "^3.3.1",
     "@elastic/elasticsearch": "^7.4.0",
     "@socialgouv/kali-data": "1.2.13",
     "@socialgouv/legi-data": "^1.1.1",

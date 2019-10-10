@@ -9,21 +9,6 @@ exports[`<SearchResults/> should render results 1`] = `
   list-style-type: none;
 }
 
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  max-width: 46.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,6 +39,21 @@ exports[`<SearchResults/> should render results 1`] = `
 .c2:hover {
   color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 46.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
 }
 
 .c3 {

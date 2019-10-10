@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Router, { useRouter } from "next/router";
-import { Button, theme } from "@cdt/ui-old";
+import { Button, theme } from "@socialgouv/react-ui";
 
 import SearchIcon from "../../icons/SearchIcon";
 import { matopush } from "../../piwik";
@@ -97,7 +97,6 @@ const SearchForm = styled.form`
   position: relative;
   margin: 0 auto;
   padding: 0;
-  overflow: visible;
   @media (max-width: ${breakpoints.mobile}) {
     flex-direction: column;
     height: auto;
@@ -131,7 +130,7 @@ const SearchInput = styled(DocumentSuggester)`
   appearance: none;
   background: ${colors.lightBackground};
   border: ${box.border};
-  border-radius: ${box.borderRadius};
+  border-radius: ${spacing.xmedium};
   transition: border ${animations.transitionTiming} ease;
   &:focus {
     border-color: ${colors.blueLight};

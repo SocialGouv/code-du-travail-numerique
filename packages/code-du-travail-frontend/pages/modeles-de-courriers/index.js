@@ -3,7 +3,7 @@ import getConfig from "next/config";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import { Container, Section, theme } from "@cdt/ui-old";
+import { Container, Section, theme } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";

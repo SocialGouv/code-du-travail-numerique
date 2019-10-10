@@ -1,24 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ModelesDeCourriers /> should render 1`] = `
-.c12:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-.c51 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -33,12 +15,33 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c20 {
+.c21 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   padding: 0;
   max-width: 46.25rem;
+}
+
+.c21 > *:first-child {
+  margin-top: 0;
+}
+
+.c21 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c19 {
+  padding: 1.25rem 0;
+  color: #434956;
+}
+
+.c20 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background-color: #fff;
 }
 
 .c20 > *:first-child {
@@ -49,27 +52,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c18 {
-  padding: 1.25rem 0;
-}
-
-.c19 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #fff;
-}
-
-.c19 > *:first-child {
-  margin-top: 0;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c30 {
+.c31 {
   padding: 0.625rem 1.25rem;
   color: #434956;
   border: 1px solid #c9d3df;
@@ -77,16 +60,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background-color: #ebeff3;
 }
 
-.c30 > *:first-child {
+.c31 > *:first-child {
   margin-top: 0;
 }
 
-.c30 > *:last-child {
+.c31 > *:last-child {
   margin-bottom: 0;
 }
 
-.c46 {
-  padding: 0.625rem 1rem;
+.c15 {
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -95,82 +78,137 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
-}
-
-.c46:not([disabled]):hover,
-.c46:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c46:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c46[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c46[aria-pressed="true"]:not([disabled]):hover,
-.c46[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c46[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c46[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c42 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   padding: 1rem;
   color: #434956;
   line-height: 0;
+  background-color: transparent;
   border: none;
 }
 
-.c42:hover {
+.c15:hover {
   color: #8c94a6;
 }
 
-.c25 {
+.c34 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c34:not([disabled]):hover,
+.c34:not([disabled]):active,
+.c34:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c34[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c37 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c37:not([disabled]):hover,
+.c37:not([disabled]):active,
+.c37:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c37[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c48 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c48:not([disabled]):hover,
+.c48:not([disabled]):active,
+.c48:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c48[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c12:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.c53 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -190,19 +228,19 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   transition: 200ms color,200ms box-shadow;
 }
 
-.c25:visited {
+.c26:visited {
   color: #434956;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c25:active,
-.c25:hover {
+.c26:active,
+.c26:hover {
   color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c26 {
+.c27 {
   -webkit-flex: 0 0 3rem;
   -ms-flex: 0 0 3rem;
   flex: 0 0 3rem;
@@ -223,7 +261,33 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background: #e5f1fe;
 }
 
-.c37 {
+.c44 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.c44:hover {
+  color: #8c94a6;
+}
+
+.c39 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -245,7 +309,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c38 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -266,7 +330,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   background-color: #fee5ad;
 }
 
-.c39 {
+.c41 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -279,7 +343,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   text-align: left;
 }
 
-.c41 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -298,21 +362,21 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   justify-content: center;
 }
 
-.c27 {
+.c28 {
   color: #434956;
   font-weight: bold;
 }
 
-.c28 {
+.c29 {
   font-size: var(--font-size-xsmall);
 }
 
-.c21 {
+.c22 {
   position: relative;
   margin-bottom: 1.25rem;
 }
 
-.c22 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,16 +387,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c23 {
+.c24 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c24 {
+.c25 {
   margin-left: -10px;
 }
 
-.c36 {
+.c38 {
   position: fixed;
   bottom: 0;
   padding: 1rem;
@@ -340,15 +404,15 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   z-index: 1000;
 }
 
-.c40 {
+.c42 {
   padding: 0 0.25rem;
 }
 
-.c31 {
+.c32 {
   margin-bottom: 1rem;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -359,135 +423,15 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   justify-content: space-around;
 }
 
-.c34 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
+.c36 {
   min-width: 7rem;
 }
 
-.c34:not([disabled]):hover,
-.c34:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c34:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c34[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c34[aria-pressed="true"]:not([disabled]):hover,
-.c34[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c34[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c34[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c34 + .c33 {
+.c36 + .c35 {
   margin-left: 1rem;
 }
 
-.c35 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-  min-width: 7rem;
-}
-
-.c35:not([disabled]):hover,
-.c35:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c35:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c35[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c35[aria-pressed="true"]:not([disabled]):hover,
-.c35[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c35[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c35[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c35 + .c33 {
-  margin-left: 1rem;
-}
-
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -502,11 +446,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   padding: 0;
 }
 
-.c17 {
+.c18 {
   width: 80%;
 }
 
-.c29 {
+.c30 {
   margin-top: 2.5rem;
   padding: 1rem;
   background-color: #f9f9fc;
@@ -540,7 +484,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  overflow: visible;
 }
 
 .c13 {
@@ -559,7 +502,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
 }
@@ -569,26 +512,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   outline: none;
 }
 
-.c15 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
+.c16 {
   position: absolute;
   right: 1px;
   top: 1px;
@@ -596,10 +520,6 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   width: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-}
-
-.c15:hover {
-  color: #8c94a6;
 }
 
 .c0 {
@@ -682,16 +602,16 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   width: 350px;
 }
 
-.c44 {
+.c46 {
   text-align: center;
 }
 
-.c45 {
+.c47 {
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c47 {
+.c49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -702,21 +622,21 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c49 + .c48 {
+.c51 + .c50 {
   padding-left: 1rem;
 }
 
-.c50 {
+.c52 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c52 {
+.c54 {
   margin: 0.5rem 0;
 }
 
-.c52 a,
-.c52 a:visited {
+.c54 a,
+.c54 a:visited {
   color: #434956;
 }
 
@@ -728,46 +648,46 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
-  .c20 {
+  .c21 {
     max-width: 100%;
     padding: 0;
   }
 }
 
 @media (max-width:600px) {
-  .c19 {
+  .c20 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c19 {
+  .c20 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (max-width:600px) {
-  .c30 {
+  .c31 {
     padding: 0.625rem 1.25rem;
   }
 }
 
 @media print {
-  .c30 {
+  .c31 {
     border: none;
     padding: 0 5pt;
   }
 }
 
 @media (max-width:600px) {
-  .c26 {
+  .c27 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c22 {
+  .c23 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -779,7 +699,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c17 {
+  .c18 {
     width: 100%;
   }
 }
@@ -831,13 +751,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media print {
-  .c43 {
+  .c45 {
     display: none;
   }
 }
 
 @media (max-width:600px) {
-  .c47 {
+  .c49 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -845,7 +765,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c49 + .c48 {
+  .c51 + .c50 {
     padding-left: 0;
   }
 }
@@ -925,8 +845,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
             </div>
           </label>
           <button
-            aria-pressed="false"
-            class="c15"
+            class="c15 c16"
             type="submit"
           >
             <svg
@@ -948,52 +867,52 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     id="main"
   >
     <div
-      class="c1 c16"
+      class="c1 c17"
     >
       <div
-        class="c17"
+        class="c18"
       >
         <div
-          class="c18"
+          class="c19"
           data-main-content="true"
         >
           <div
             class="c1"
           >
             <div
-              class="c19"
+              class="c20"
             >
               <div
-                class="c18"
+                class="c19"
               >
                 <div
-                  class="c20 c21"
+                  class="c21 c22"
                 >
                   <h1>
                     Modèle de courrier :  undefined
                   </h1>
                   <div
-                    class="c22"
+                    class="c23"
                   >
                     <span
-                      class="c23"
+                      class="c24"
                     >
                       Modèle de document
                     </span>
                   </div>
                   <div
-                    class="c24"
+                    class="c25"
                   />
                 </div>
                 <div
-                  class="c20"
+                  class="c21"
                 >
                   
                   <div
-                    class="c18"
+                    class="c19"
                   >
                     <div
-                      class="c19"
+                      class="c20"
                     >
                       <div />
                     </div>
@@ -1002,12 +921,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     Télécharger le modèle
                   </h4>
                   <a
-                    class="c25"
+                    class="c26"
                     href="api.url/docs/undefined"
                     title="Télécharger le courrier type"
                   >
                     <span
-                      class="c26"
+                      class="c27"
                     >
                       <svg
                         viewBox="0 0 512 512"
@@ -1027,14 +946,14 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     </span>
                     <span>
                       <div
-                        class="c27"
+                        class="c28"
                       >
                         <span>
                           modele
                         </span>
                         <br />
                         <span
-                          class="c28"
+                          class="c29"
                         >
                           Modèle de document
                         </span>
@@ -1042,7 +961,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
                     </span>
                   </a>
                   <div
-                    class="c29"
+                    class="c30"
                   >
                     Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région
                   </div>
@@ -1052,31 +971,29 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           </div>
         </div>
         <div
-          class="c18"
+          class="c19"
         >
           <div
             class="c1"
           >
             <div
-              class="c30"
+              class="c31"
             >
               <h3
-                class="c31"
+                class="c32"
               >
                 Avez-vous trouvé la réponse à votre question ?
               </h3>
               <p
-                class="c32"
+                class="c33"
               >
                 <button
-                  aria-pressed="false"
-                  class="c33 c34"
+                  class="c34 c35 c36"
                 >
                   Non
                 </button>
                 <button
-                  aria-pressed="false"
-                  class="c33 c35"
+                  class="c37 c35 c36"
                 >
                   Oui
                 </button>
@@ -1087,13 +1004,13 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
       </div>
     </div>
     <div
-      class="c36"
+      class="c38"
     >
       <div
-        class="c37"
+        class="c39"
       >
         <div
-          class="c38"
+          class="c40"
         >
           <svg
             fill="none"
@@ -1124,12 +1041,12 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           </svg>
         </div>
         <div
-          class="c39"
+          class="c41"
           role="alert"
         >
           Ce site est en cours de construction, la fiabilité des réponses qui s’y trouvent ne sont pas garanties.
           <a
-            class="c40"
+            class="c42"
             href="https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=AE9DCF75DDCF0465784CEE0E7D62729F.tplgfr37s_2?idArticle=JORFARTI000035607420&cidTexte=JORFTEXT000035607388&dateTexte=29990101&categorieLien=id"
             rel="noopener noreferrer"
             target="_blank"
@@ -1140,12 +1057,11 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           est prévue pour 2020.
         </div>
         <div
-          class="c41"
+          class="c43"
         >
           <button
             aria-label="Fermer"
-            aria-pressed="false"
-            class="c42"
+            class="c44"
           >
             <svg
               fill="none"
@@ -1177,49 +1093,48 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c43"
+    class="c45"
   >
     <div
-      class="c18"
+      class="c19"
     >
       <div
-        class="c1 c44"
+        class="c1 c46"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c20 c45"
+          class="c21 c47"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          aria-pressed="false"
-          class="c46"
+          class="c48"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c18"
+      class="c19"
     >
       <div
-        class="c1 c47"
+        class="c1 c49"
       >
         <div
-          class="c48 c49"
+          class="c50 c51"
         >
           <h3
-            class="c50"
+            class="c52"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c51"
+            class="c53"
           >
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="/droit-du-travail"
@@ -1228,7 +1143,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="/glossaire"
@@ -1237,7 +1152,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="/a-propos"
@@ -1246,7 +1161,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="/mentions-legales"
@@ -1255,7 +1170,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="mailto:codedutravail@beta.gouv.fr"
@@ -1266,18 +1181,18 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c48 c49"
+          class="c50 c51"
         >
           <h3
-            class="c50"
+            class="c52"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c51"
+            class="c53"
           >
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -1288,7 +1203,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -1301,18 +1216,18 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c48 c49"
+          class="c50 c51"
         >
           <h3
-            class="c50"
+            class="c52"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c51"
+            class="c53"
           >
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -1323,7 +1238,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -1334,7 +1249,7 @@ exports[`<ModelesDeCourriers /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c52"
+              class="c54"
             >
               <a
                 href="https://beta.gouv.fr/"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Tooltip from "@reach/tooltip";
 import ReactDOM from "react-dom";

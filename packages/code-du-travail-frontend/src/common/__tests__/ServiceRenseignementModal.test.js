@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import { Button } from "@cdt/ui-old";
+import { render } from "@wrapped-testing-library/react";
+import { Button } from "@socialgouv/react-ui";
 import ServiceRenseignementModal from "../ServiceRenseignementModal";
 
 describe("<ServiceRenseignementModal />", () => {

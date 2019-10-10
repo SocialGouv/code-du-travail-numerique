@@ -17,6 +17,38 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin-bottom: 0;
 }
 
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 .c0 {
   border-bottom: 1px solid #adb9c9;
   margin-top: 1.25rem;
@@ -126,64 +158,8 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   display: flex;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c9 {
   margin-left: auto;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c8:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
 }
 
 .c6 {
@@ -234,8 +210,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       class="c5 c7"
     >
       <button
-        aria-pressed="false"
-        class="c8"
+        class="c8 c9"
       >
         Suivant
       </button>
@@ -259,6 +234,38 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 
 .c5 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
 }
 
 .c0 {
@@ -370,64 +377,8 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   display: flex;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
+.c9 {
   margin-right: auto;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c8:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
 }
 
 .c6 {
@@ -481,8 +432,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
       class="c5 c7"
     >
       <button
-        aria-pressed="false"
-        class="c8"
+        class="c8 c9"
         type="button"
       >
         Précédent
@@ -507,6 +457,38 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 
 .c5 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c0 {
@@ -618,64 +600,8 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   display: flex;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c9 {
   margin-left: auto;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c8:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
 }
 
 .c6 {
@@ -736,8 +662,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       class="c5 c7"
     >
       <button
-        aria-pressed="false"
-        class="c8"
+        class="c8 c9"
       >
         Suivant
       </button>
@@ -761,6 +686,38 @@ exports[`<Wizard /> should inject rules component 1`] = `
 
 .c5 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c0 {
@@ -872,64 +829,8 @@ exports[`<Wizard /> should inject rules component 1`] = `
   display: flex;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c9 {
   margin-left: auto;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c8:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
 }
 
 .c6 {
@@ -983,8 +884,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
       class="c5 c7"
     >
       <button
-        aria-pressed="false"
-        class="c8"
+        class="c8 c9"
       >
         Suivant
       </button>
@@ -1008,6 +908,38 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 
 .c5 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
 }
 
 .c0 {
@@ -1119,64 +1051,8 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   display: flex;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
+.c9 {
   margin-right: auto;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c8:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
 }
 
 .c6 {
@@ -1230,8 +1106,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       class="c5 c7"
     >
       <button
-        aria-pressed="false"
-        class="c8"
+        class="c8 c9"
         type="button"
       >
         Précédent
@@ -1256,6 +1131,38 @@ exports[`<Wizard /> should render a step 1`] = `
 
 .c5 > *:last-child {
   margin-bottom: 0;
+}
+
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c0 {
@@ -1367,64 +1274,8 @@ exports[`<Wizard /> should render a step 1`] = `
   display: flex;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c9 {
   margin-left: auto;
-}
-
-.c8:not([disabled]):hover,
-.c8:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c8:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c8[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):hover,
-.c8[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c8[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c8[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
 }
 
 .c6 {
@@ -1475,8 +1326,7 @@ exports[`<Wizard /> should render a step 1`] = `
       class="c5 c7"
     >
       <button
-        aria-pressed="false"
-        class="c8"
+        class="c8 c9"
       >
         Suivant
       </button>

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Accordion, Button, Modal, theme } from "@cdt/ui-old";
+import { Accordion, Modal } from "@cdt/ui-old";
+import { Button, theme } from "@socialgouv/react-ui";
 import ConventionForm from "../../conventions/Search/Form";
 import TYPE_REFERENCE from "../typeReference";
 import ReferenceList from "./ReferenceList";

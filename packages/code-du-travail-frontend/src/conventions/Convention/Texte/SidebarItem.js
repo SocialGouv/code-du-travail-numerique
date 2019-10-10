@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 // Beware, this one is recursive !
 const SidebarItem = ({ node }) => {

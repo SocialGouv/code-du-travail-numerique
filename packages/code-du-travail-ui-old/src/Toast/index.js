@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { AlertTriangle, Info, Check, X } from "react-feather";
+import { Button } from "@socialgouv/react-ui";
 
-import Button from "../Button";
 import { box, colors, spacing } from "../theme";
 import { fromTop, fromRight, fromBottom, fromLeft } from "../keyframes";
 

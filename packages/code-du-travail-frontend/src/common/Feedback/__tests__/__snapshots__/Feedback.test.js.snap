@@ -17,6 +17,7 @@ exports[`<Feedback/> should render 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c2 {
@@ -35,6 +36,70 @@ exports[`<Feedback/> should render 1`] = `
   margin-bottom: 0;
 }
 
+.c5 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #0c0c0e;
+  background: #ebeff3;
+  border-color: #ebeff3;
+}
+
+.c5:not([disabled]):hover,
+.c5:not([disabled]):active,
+.c5:not([disabled]):focus {
+  background: #fbfcfd;
+  color: #18181c;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  color: rgba(12,12,14,0.4);
+}
+
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 .c3 {
   margin-bottom: 1rem;
 }
@@ -50,131 +115,11 @@ exports[`<Feedback/> should render 1`] = `
   justify-content: space-around;
 }
 
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #0c0c0e;
-  background: #ebeff3;
-  border-color: #ebeff3;
-  border-bottom-color: #cbd6e0;
-  min-width: 7rem;
-}
-
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
-  background: #fbfcfd;
-  color: #18181c;
-}
-
-.c6:not([disabled]):active {
-  color: #242429;
-  background: #fff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  outline: none;
-}
-
-.c6[aria-pressed="true"] {
-  color: #18181c;
-  background: #fbfcfd;
-  border-width: 2px 1px 1px 1px;
-  border-color: #ebeff3;
-  border-top-color: #cbd6e0;
-  box-shadow: inset 0 1px 2px 0 #cbd6e0;
-}
-
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #ebeff3;
-}
-
-.c6[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #cbd6e0;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  color: rgba(12,12,14,0.4);
-}
-
-.c6 + .c5 {
-  margin-left: 1rem;
-}
-
 .c7 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
   min-width: 7rem;
 }
 
-.c7:not([disabled]):hover,
-.c7:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c7:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c7[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):hover,
-.c7[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c7[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
-}
-
-.c7 + .c5 {
+.c7 + .c6 {
   margin-left: 1rem;
 }
 
@@ -217,14 +162,12 @@ exports[`<Feedback/> should render 1`] = `
           class="c4"
         >
           <button
-            aria-pressed="false"
-            class="c5 c6"
+            class="c5 c6 c7"
           >
             Non
           </button>
           <button
-            aria-pressed="false"
-            class="c5 c7"
+            class="c8 c6 c7"
           >
             Oui
           </button>
@@ -252,6 +195,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c2 {
@@ -271,7 +215,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c7 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -280,48 +224,21 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #005994;
   border-color: #005994;
-  border-bottom-color: #003a61;
 }
 
 .c7:not([disabled]):hover,
+.c7:not([disabled]):active,
 .c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
-}
-
-.c7:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c7[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):hover,
-.c7[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
 }
 
 .c7[disabled] {
@@ -330,7 +247,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c9 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -339,9 +256,8 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
@@ -508,7 +424,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
             class="c6"
           >
             <button
-              aria-pressed="false"
               class="c7"
             >
               Envoyer mon commentaire
@@ -522,7 +437,6 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
           Pour obtenir une réponse à votre question de droit du travail, nous vous invitons à joindre les
            
           <button
-            aria-pressed="false"
             class="c9"
           >
             services de renseignement
@@ -552,6 +466,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c2 {
@@ -571,7 +486,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 .c7 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -580,48 +495,21 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #005994;
   border-color: #005994;
-  border-bottom-color: #003a61;
 }
 
 .c7:not([disabled]):hover,
+.c7:not([disabled]):active,
 .c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
-}
-
-.c7:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c7[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):hover,
-.c7[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c7[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
 }
 
 .c7[disabled] {
@@ -741,7 +629,6 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
             class="c6"
           >
             <button
-              aria-pressed="false"
               class="c7"
             >
               Envoyer mon commentaire

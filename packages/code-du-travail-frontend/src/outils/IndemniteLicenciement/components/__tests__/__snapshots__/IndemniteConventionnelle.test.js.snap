@@ -1,6 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndemniteCCn /> should render error 1`] = `
+.c6 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c6:not([disabled]):hover,
+.c6:not([disabled]):active,
+.c6:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
 .c1 {
   margin-bottom: 1rem;
   padding: 0.625rem 1.25rem;
@@ -17,65 +49,6 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 
 .c1 > *:last-child {
   margin-bottom: 0;
-}
-
-.c6 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #006be6;
-  border-color: #006be6;
-  border-bottom-color: #0053b3;
-}
-
-.c6:not([disabled]):hover,
-.c6:not([disabled]):focus {
-  background: #07f;
-  color: #fff;
-}
-
-.c6:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c6[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c6[aria-pressed="true"]:not([disabled]):hover,
-.c6[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c6[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
 }
 
 .c2 {
@@ -199,7 +172,6 @@ exports[`<IndemniteCCn /> should render error 1`] = `
     </div>
   </div>
   <button
-    aria-pressed="false"
     class="c6"
   >
     Recommencer une simulation
@@ -209,7 +181,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
 .c21 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -218,48 +190,21 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
-  border-bottom-color: #0053b3;
 }
 
 .c21:not([disabled]):hover,
+.c21:not([disabled]):active,
 .c21:not([disabled]):focus {
   background: #07f;
   color: #fff;
-}
-
-.c21:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c21[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c21[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
 }
 
 .c21[disabled] {
@@ -686,7 +631,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
     </div>
   </div>
   <button
-    aria-pressed="false"
     class="c21"
   >
     Recommencer une simulation
@@ -696,7 +640,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
 .c21 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -705,48 +649,21 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   color: #fff;
   background: #006be6;
   border-color: #006be6;
-  border-bottom-color: #0053b3;
 }
 
 .c21:not([disabled]):hover,
+.c21:not([disabled]):active,
 .c21:not([disabled]):focus {
   background: #07f;
   color: #fff;
-}
-
-.c21:not([disabled]):active {
-  color: #fff;
-  background: #1a85ff;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  outline: none;
-}
-
-.c21[aria-pressed="true"] {
-  color: #fff;
-  background: #07f;
-  border-width: 2px 1px 1px 1px;
-  border-color: #006be6;
-  border-top-color: #0053b3;
-  box-shadow: inset 0 1px 2px 0 #0053b3;
-}
-
-.c21[aria-pressed="true"]:not([disabled]):hover,
-.c21[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #006be6;
-}
-
-.c21[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #0053b3;
 }
 
 .c21[disabled] {
@@ -1173,7 +1090,6 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
     </div>
   </div>
   <button
-    aria-pressed="false"
     class="c21"
   >
     Recommencer une simulation

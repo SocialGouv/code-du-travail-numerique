@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, wait } from "@testing-library/react";
+import { fireEvent, render, wait } from "@wrapped-testing-library/react";
 
 import { FeedbackForm } from "../FeedbackForm";
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Field } from "react-final-form";
 import { isNumber } from "./validators";
 import { Input, InlineError } from "../common/stepStyles";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 
 function CurrencyField({ name, label, children = null, ...inputProps }) {
   return (

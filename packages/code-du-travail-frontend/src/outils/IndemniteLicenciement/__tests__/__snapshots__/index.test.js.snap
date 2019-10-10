@@ -33,6 +33,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c2 {
@@ -50,6 +51,38 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
 
 .c2 > *:last-child {
   margin-bottom: 0;
+}
+
+.c11 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #005994;
+  border-color: #005994;
+}
+
+.c11:not([disabled]):hover,
+.c11:not([disabled]):active,
+.c11:not([disabled]):focus {
+  background: #0068ae;
+  color: #fff;
+}
+
+.c11[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c3 {
@@ -161,64 +194,8 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
   display: flex;
 }
 
-.c11 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  color: #fff;
-  background: #005994;
-  border-color: #005994;
-  border-bottom-color: #003a61;
+.c12 {
   margin-left: auto;
-}
-
-.c11:not([disabled]):hover,
-.c11:not([disabled]):focus {
-  background: #0068ae;
-  color: #fff;
-}
-
-.c11:not([disabled]):active {
-  color: #fff;
-  background: #0078c7;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  outline: none;
-}
-
-.c11[aria-pressed="true"] {
-  color: #fff;
-  background: #0068ae;
-  border-width: 2px 1px 1px 1px;
-  border-color: #005994;
-  border-top-color: #003a61;
-  box-shadow: inset 0 1px 2px 0 #003a61;
-}
-
-.c11[aria-pressed="true"]:not([disabled]):hover,
-.c11[aria-pressed="true"]:not([disabled]):focus {
-  background-color: #005994;
-}
-
-.c11[aria-pressed="true"]:not([disabled]):active {
-  border-top-color: #003a61;
-}
-
-.c11[disabled] {
-  cursor: not-allowed;
-  color: rgba(255,255,255,0.4);
 }
 
 .c9 {
@@ -350,8 +327,7 @@ exports[`<CalculateurIndemnite /> should render 1`] = `
             class="c8 c10"
           >
             <button
-              aria-pressed="false"
-              class="c11"
+              class="c11 c12"
             >
               Suivant
             </button>

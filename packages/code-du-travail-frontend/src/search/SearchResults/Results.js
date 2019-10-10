@@ -3,7 +3,8 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
-import { Container, LargeLink, List, ListItem, theme } from "@cdt/ui-old";
+import { LargeLink, List, ListItem } from "@cdt/ui-old";
+import { Container, theme } from "@socialgouv/react-ui";
 
 import { LinkContent } from "./LinkContent";
 

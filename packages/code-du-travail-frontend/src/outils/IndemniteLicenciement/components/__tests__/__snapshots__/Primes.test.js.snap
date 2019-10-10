@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Primes /> should add a prime 1`] = `
+.c4 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4:focus,
+.c4:hover,
+.c4:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -55,81 +91,13 @@ exports[`<Primes /> should add a prime 1`] = `
   transform: translateY(-50%);
 }
 
-.c4 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c5 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
 }
 
-.c4:focus,
-.c4:hover,
-.c4:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c6 {
   margin: 1.25rem 0;
-}
-
-.c5:focus,
-.c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -156,16 +124,14 @@ exports[`<Primes /> should add a prime 1`] = `
       </span>
     </div>
     <button
-      aria-pressed="false"
-      class="c4"
+      class="c4 c5"
       type="button"
     >
       Supprimer
     </button>
   </div>
   <button
-    aria-pressed="false"
-    class="c5"
+    class="c4 c6"
     type="button"
   >
     Ajouter une prime
@@ -175,7 +141,7 @@ exports[`<Primes /> should add a prime 1`] = `
 
 exports[`<Primes /> should delete a primes 1`] = `
 .c0 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -184,9 +150,8 @@ exports[`<Primes /> should delete a primes 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
@@ -202,7 +167,6 @@ exports[`<Primes /> should delete a primes 1`] = `
   border-radius: 0;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  margin: 1.25rem 0;
 }
 
 .c0:focus,
@@ -212,13 +176,16 @@ exports[`<Primes /> should delete a primes 1`] = `
   text-decoration: none;
 }
 
+.c1 {
+  margin: 1.25rem 0;
+}
+
 <div>
   <p>
     Primes annuelles ou exceptionnelles perçues au cours des 3 derniers mois
   </p>
   <button
-    aria-pressed="false"
-    class="c0"
+    class="c0 c1"
     type="button"
   >
     Ajouter une prime
@@ -227,6 +194,42 @@ exports[`<Primes /> should delete a primes 1`] = `
 `;
 
 exports[`<Primes /> should render 1`] = `
+.c4 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4:focus,
+.c4:hover,
+.c4:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -281,81 +284,13 @@ exports[`<Primes /> should render 1`] = `
   transform: translateY(-50%);
 }
 
-.c4 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c5 {
   margin-left: 1.25rem;
   font-size: 0.875rem;
 }
 
-.c4:focus,
-.c4:hover,
-.c4:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c6 {
   margin: 1.25rem 0;
-}
-
-.c5:focus,
-.c5:hover,
-.c5:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <div>
@@ -382,16 +317,14 @@ exports[`<Primes /> should render 1`] = `
       </span>
     </div>
     <button
-      aria-pressed="false"
-      class="c4"
+      class="c4 c5"
       type="button"
     >
       Supprimer
     </button>
   </div>
   <button
-    aria-pressed="false"
-    class="c5"
+    class="c4 c6"
     type="button"
   >
     Ajouter une prime

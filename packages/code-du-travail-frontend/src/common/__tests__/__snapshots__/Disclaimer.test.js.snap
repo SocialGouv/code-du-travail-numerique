@@ -2,7 +2,7 @@
 
 exports[`<Disclaimer /> should render 1`] = `
 .c6 {
-  padding: 0.625rem 1rem;
+  padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -11,15 +11,15 @@ exports[`<Disclaimer /> should render 1`] = `
   font-size: 1rem;
   font-weight: 600;
   vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
   cursor: pointer;
   -webkit-transition: background-color 250ms ease;
   transition: background-color 250ms ease;
   padding: 1rem;
   color: #434956;
   line-height: 0;
+  background-color: transparent;
   border: none;
 }
 
@@ -173,7 +173,6 @@ exports[`<Disclaimer /> should render 1`] = `
       >
         <button
           aria-label="Fermer"
-          aria-pressed="false"
           class="c6"
         >
           <svg

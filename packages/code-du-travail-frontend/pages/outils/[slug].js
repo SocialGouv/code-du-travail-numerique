@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Alert, Container, theme } from "@cdt/ui-old";
+import { Alert } from "@cdt/ui-old";
+import { Container, theme } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";

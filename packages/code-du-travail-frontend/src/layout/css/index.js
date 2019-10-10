@@ -8,7 +8,6 @@ import Hr from "./Hr";
 import Img from "./Img";
 import Links from "./Links";
 import Lists from "./Lists";
-import Mark from "./Mark";
 import Reset from "./Reset";
 import Root from "./Root";
 
@@ -22,7 +21,6 @@ const GlobalStyles = () => (
     <Img />
     <Links />
     <Lists />
-    <Mark />
     <Reset />
     <Root />
   </>

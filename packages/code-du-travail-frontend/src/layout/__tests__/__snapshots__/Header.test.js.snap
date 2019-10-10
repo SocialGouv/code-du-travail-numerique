@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> should render 1`] = `
-.c12:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c1 {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,6 +13,44 @@ exports[`<Header /> should render 1`] = `
 
 .c1 > *:last-child {
   margin-bottom: 0;
+}
+
+.c15 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.c15:hover {
+  color: #8c94a6;
+}
+
+.c12:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 .c7 {
@@ -67,7 +93,6 @@ exports[`<Header /> should render 1`] = `
   position: relative;
   margin: 0 auto;
   padding: 0;
-  overflow: visible;
 }
 
 .c13 {
@@ -86,7 +111,7 @@ exports[`<Header /> should render 1`] = `
   appearance: none;
   background: #f9f9fc;
   border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
+  border-radius: 1.5rem;
   -webkit-transition: border 250ms ease;
   transition: border 250ms ease;
 }
@@ -96,26 +121,7 @@ exports[`<Header /> should render 1`] = `
   outline: none;
 }
 
-.c15 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 1rem;
-  color: #434956;
-  line-height: 0;
-  border: none;
+.c16 {
   position: absolute;
   right: 1px;
   top: 1px;
@@ -123,10 +129,6 @@ exports[`<Header /> should render 1`] = `
   width: calc(50px - 2px);
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
-}
-
-.c15:hover {
-  color: #8c94a6;
 }
 
 .c0 {
@@ -337,8 +339,7 @@ exports[`<Header /> should render 1`] = `
             </div>
           </label>
           <button
-            aria-pressed="false"
-            class="c15"
+            class="c15 c16"
             type="submit"
           >
             <svg

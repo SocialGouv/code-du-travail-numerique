@@ -17,6 +17,7 @@ exports[`<Outils /> should render 1`] = `
 
 .c0 {
   padding: 1.25rem 0;
+  color: #434956;
   background-color: #fff;
 }
 

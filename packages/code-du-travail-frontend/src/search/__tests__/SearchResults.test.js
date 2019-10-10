@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchResults } from "../SearchResults";
-import { render } from "@testing-library/react";
+import { render } from "@wrapped-testing-library/react";
 
 const items = [
   {

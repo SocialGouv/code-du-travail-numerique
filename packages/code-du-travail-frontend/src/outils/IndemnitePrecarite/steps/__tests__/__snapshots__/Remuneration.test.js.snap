@@ -1,6 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepRemuneration /> should render multiple inputs 1`] = `
+.c8 {
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 0;
+  vertical-align: initial;
+  text-align: left;
+  line-height: initial;
+  color: #005994;
+  font-weight: normal;
+  font-size: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c8:focus,
+.c8:hover,
+.c8:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c2 {
   padding: 0;
   font-size: 1.15rem;
@@ -99,84 +135,16 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
   margin-bottom: 0.25rem;
 }
 
-.c8 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c9 {
   margin-right: 1.25rem;
   font-size: 0.875rem;
 }
 
-.c8:focus,
-.c8:hover,
-.c8:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c9 {
-  padding: 0.625rem 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  text-align: center;
-  line-height: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  vertical-align: middle;
-  border-style: solid;
-  border-width: 1px 1px 2px 1px;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  padding: 0;
-  vertical-align: initial;
-  text-align: left;
-  line-height: initial;
-  color: #005994;
-  font-weight: normal;
-  font-size: inherit;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c10 {
   margin: 1.25rem 0;
 }
 
-.c9:focus,
-.c9:hover,
-.c9:active {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10 {
+.c11 {
   font-style: italic;
   font-size: 0.875rem;
 }
@@ -255,8 +223,7 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      aria-pressed="false"
-      class="c8"
+      class="c8 c9"
       type="button"
     >
       Supprimer
@@ -290,22 +257,20 @@ exports[`<StepRemuneration /> should render multiple inputs 1`] = `
       </span>
     </div>
     <button
-      aria-pressed="false"
-      class="c8"
+      class="c8 c9"
       type="button"
     >
       Supprimer
     </button>
   </div>
   <button
-    aria-pressed="false"
-    class="c9"
+    class="c8 c10"
     type="button"
   >
     Ajouter un salaire
   </button>
   <p
-    class="c10"
+    class="c11"
   >
     * Majorations, indemnités, primes et accessoires compris sauf les remboursements de frais et l’indemnité de congés payés.
   </p>

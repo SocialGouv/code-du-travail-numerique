@@ -1,0 +1,78 @@
+{
+  "name": "@socialgouv/react-ui",
+  "version": "3.3.1",
+  "private": true,
+  "description": "Composants ReactJS",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production rollup --config",
+    "lint": "eslint src/**/*.js",
+    "prepush": "yarn lint && yarn test",
+    "start": "start-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "prop-types": "15.x",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "styled-components": "4.x"
+  },
+  "dependencies": {
+    "polished": "^3.4.1",
+    "react-feather": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "@socialgouv/eslint-config-react": "^0.10.0",
+    "@storybook/addon-a11y": "^5.2.3",
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-viewport": "^5.2.3",
+    "@storybook/addon-contexts": "^5.2.3",
+    "@storybook/components": "^5.2.3",
+    "@storybook/react": "^5.2.3",
+    "@testing-library/react": "^9.3.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "jest-styled-components": "^6.3.3",
+    "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "rollup": "^1.23.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "styled-components": "^4.4.0"
+  },
+  "homepage": "https://github.com/SocialGouv/code-du-travail-numerique/packages/react-ui",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "ui"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ]
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1% in FR",
+    "ie 11",
+    "not dead"
+  ]
+}

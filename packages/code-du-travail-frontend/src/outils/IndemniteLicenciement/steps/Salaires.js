@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { theme } from "@cdt/ui-old";
+import { theme } from "@socialgouv/react-ui";
 import { differenceInMonths, subMonths, format } from "date-fns";
 import frLocale from "date-fns/locale/fr";
 import { Input, InlineError } from "../../common/stepStyles";

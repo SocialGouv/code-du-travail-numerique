@@ -3,6 +3,7 @@
 exports[`<Texte /> renders with a title 1`] = `
 .c1 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c3 {
@@ -1439,6 +1440,7 @@ La durée totale des congés pris à ce titre dans l'année par un salarié ne p
 exports[`<Texte /> renders without a title 1`] = `
 .c1 {
   padding: 1.25rem 0;
+  color: #434956;
 }
 
 .c3 {

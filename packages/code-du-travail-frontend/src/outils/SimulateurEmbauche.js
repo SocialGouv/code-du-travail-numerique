@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Section, Wrapper } from "@cdt/ui-old";
+import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 import styled from "styled-components";
 
 import { ErrorBoundary } from "../common/ErrorBoundary";

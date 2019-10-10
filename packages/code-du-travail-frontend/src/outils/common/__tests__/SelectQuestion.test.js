@@ -1,7 +1,7 @@
 import React from "react";
 import { SelectQuestion } from "../SelectQuestion";
 import { renderForm } from "../../../../test/renderForm";
-import { fireEvent } from "@testing-library/react";
+import { fireEvent } from "@wrapped-testing-library/react";
 
 const values = {
   foo: "label foo",

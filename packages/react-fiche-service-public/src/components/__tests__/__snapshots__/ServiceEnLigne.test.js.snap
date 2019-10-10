@@ -62,7 +62,7 @@ exports[`<ServiceEnLigne /> should render 1`] = `
       Se retrouve dans en entête
     </div>
     <a
-      class="c2"
+      class="c2 no-after"
       href="url à retoruver dans le lien"
       rel="noopener noreferrer"
       target="_blank"

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { theme } from "@cdt/ui-old/";
+import { theme } from "@socialgouv/react-ui";
 import Sidebar from "./Sidebar";
 import ContentWrapper from "./ContentWrapper";
 import styled from "styled-components";

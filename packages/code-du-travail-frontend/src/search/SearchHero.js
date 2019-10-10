@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container, theme, Section } from "@cdt/ui-old";
+import { Container, Section, theme } from "@socialgouv/react-ui";
 
 import SearchBar from "./SearchBar";
 
@@ -21,7 +21,7 @@ const SearchHero = () => (
           votre situation.
         </P>
       </Header>
-      <Label for={SEARCH_ID}> Recherchez par mots clefs</Label>
+      <Label htmlFor={SEARCH_ID}> Recherchez par mots clefs</Label>
       <SearchBarWrapper>
         <SearchBar inputId={SEARCH_ID} hasFocus hasButton />
       </SearchBarWrapper>

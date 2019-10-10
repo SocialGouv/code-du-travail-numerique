@@ -6,12 +6,12 @@
 
 ```js
 
-import { Container, Alert } "@cdt/ui-old"
+import { Alert } "@cdt/ui-old"
 
 const App = (
-  <Container>
+  <>
     <Alert primary>Primary alert message</Alert>
     <Alert secondary>Secondary alert message</Alert>
-  </Container>
+  </>
 )
 ```

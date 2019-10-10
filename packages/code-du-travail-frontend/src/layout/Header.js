@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { Container, Tag, theme } from "@cdt/ui-old";
+import { Tag } from "@cdt/ui-old";
+import { Container, theme } from "@socialgouv/react-ui";
 
 import SearchBar from "../search/SearchBar";
 

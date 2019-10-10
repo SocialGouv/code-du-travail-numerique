@@ -1,15 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Accordion,
-  Alert,
-  Container,
-  List,
-  ListItem,
-  Section,
-  theme,
-  Wrapper
-} from "@cdt/ui-old";
+import { Accordion, Alert, List, ListItem } from "@cdt/ui-old";
+
+import { Container, Section, theme, Wrapper } from "@socialgouv/react-ui";
 
 import { Layout } from "../src/layout/Layout";
 import Metas from "../src/common/Metas";
