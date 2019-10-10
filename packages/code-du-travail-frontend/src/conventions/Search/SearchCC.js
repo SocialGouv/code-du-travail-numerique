@@ -7,19 +7,21 @@ import { loadResults } from "./api";
 const SearchCC = ({ query, render }) => {
   const [results, setResults] = useState();
   const [status, setStatus] = useState("idle");
-
   // load results when query change
   useEffect(() => {
+    let shouldUpdate = true;
     async function load(query) {
       if (query) {
         setStatus("loading");
         setResults([]);
         const results = await loadResults(query);
-        setResults(results);
-        if (results && results.length) {
-          setStatus("success");
-        } else {
-          setStatus("error");
+        if (shouldUpdate) {
+          setResults(results);
+          if (results && results.length) {
+            setStatus("success");
+          } else {
+            setStatus("error");
+          }
         }
       } else {
         setResults([]);
@@ -27,6 +29,9 @@ const SearchCC = ({ query, render }) => {
       }
     }
     load(query);
+    return function() {
+      shouldUpdate = false;
+    };
   }, [query]);
 
   return render({ status, results });
