@@ -6,6 +6,18 @@
   dependencies: []
 
 #
+.monorepo_changes: &monorepo_changes
+  changes:
+  - yarn.lock
+  - package.json
+  - packages/**/package.json
+  - packages/**/yarn.lock
+  - packages/code-du-travail-data/**/*.js
+  - packages/code-du-travail-api/**/*.js
+  - packages/code-du-travail-frontend/**/*.js
+  - packages/code-du-travail-ui-old/**/*.js
+  - packages/react-ui/**/*.js
+  - packages/react-fiche-service-public/**/*.js
 
 Register socialgouv/cdtn base image:
   <<: *prepare_stage
@@ -13,11 +25,7 @@ Register socialgouv/cdtn base image:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
   only:
-    changes:
-      - yarn.lock
-      - package.lock
-      - packages/**/package.lock
-      - packages/code-du-travail-data/**/*.js
+    <<: *monorepo_changes
   except:
     variables:
       - $PRODUCTION
@@ -29,11 +37,7 @@ Use latest socialgouv/cdtn base image:
     CONTEXT: .
     IMAGE_NAME: $CI_REGISTRY_IMAGE
   except:
-    changes:
-      - yarn.lock
-      - package.lock
-      - packages/**/package.lock
-      - packages/code-du-travail-data/**/*.js
+    <<: *monorepo_changes
     variables:
       - $PRODUCTION
   script:
