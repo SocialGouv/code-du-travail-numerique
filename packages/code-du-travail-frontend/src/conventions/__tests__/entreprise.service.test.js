@@ -29,8 +29,9 @@ fetch.mockImplementation(url => {
   }
 });
 
+beforeEach(() => fetch.mockClear());
+
 describe("api entreprise", () => {
-  beforeEach(() => fetch.mockClear());
   it("can get entreprise data by name", async () => {
     const query = "Corso balard";
     const results = await searchEntrepriseByName(query);
