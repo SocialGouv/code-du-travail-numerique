@@ -10,7 +10,7 @@ describe("<Mdx />", () => {
   });
   it("should render custom components", () => {
     const markdown = `Hello **world**`;
-    const Strong = props => <div style={{ color: "red" }} {...props} />;
+    const Strong = props => <strong style={{ color: "red" }} {...props} />;
     const components = {
       strong: Strong
     };

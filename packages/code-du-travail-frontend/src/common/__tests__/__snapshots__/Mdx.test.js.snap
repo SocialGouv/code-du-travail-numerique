@@ -18,11 +18,11 @@ exports[`<Mdx /> should render custom components 1`] = `
   <div>
     <p>
       Hello 
-      <div
+      <strong
         style="color: red;"
       >
         world
-      </div>
+      </strong>
     </p>
   </div>
 </div>
