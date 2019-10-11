@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Breadcrumbs } from "./Breadcrumbs";
 
 const HomeLink = (
-  <Link key="home" href="/" title="Retour à l'accueil">
-    <a>Accueil</a>
+  <Link key="home" href="/">
+    <a title="Retour à l'accueil">Accueil</a>
   </Link>
 );
 
