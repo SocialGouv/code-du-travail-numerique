@@ -73,6 +73,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from breadcrumbs 
           >
             <a
               href="/"
+              title="Retour à l'accueil"
             >
               Accueil
             </a>
@@ -189,6 +190,7 @@ exports[`<ThemeBreadcrumbs /> should render a ThemeBreadcrumbs from theme 1`] = 
           >
             <a
               href="/"
+              title="Retour à l'accueil"
             >
               Accueil
             </a>
