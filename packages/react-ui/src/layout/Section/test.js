@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Section from ".";
+import { Section } from ".";
 
 describe("<Section />", () => {
   test.each([["default"], ["white"], ["dark"], ["light"]])(

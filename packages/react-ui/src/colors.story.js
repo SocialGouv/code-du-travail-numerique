@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
 export default {
-  title: "Theme"
+  title: "Theme|Colors"
 };
 
 export const Colors = () => {

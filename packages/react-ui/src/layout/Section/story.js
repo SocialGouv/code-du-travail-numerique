@@ -1,12 +1,12 @@
 import React from "react";
-import Section from ".";
+import { Section } from ".";
 
 export default {
   component: Section,
   title: "Layout|Components/Section"
 };
 
-export const section = () => (
+export const base = () => (
   <>
     <h1>Section</h1>
     <p>

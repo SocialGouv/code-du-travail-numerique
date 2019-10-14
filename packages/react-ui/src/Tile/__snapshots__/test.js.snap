@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tile /> renders 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #005994;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c1 {
+  overflow-y: scroll;
+}
+
+<div>
+  <button
+    class="c0"
+    href=""
+  >
+    <div
+      class="c1"
+    >
+      Hello !
+    </div>
+    
+  </button>
+</div>
+`;

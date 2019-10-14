@@ -3,7 +3,7 @@ import { action } from "@storybook/addon-actions";
 import { X, Maximize } from "react-feather";
 
 import { variants } from "../theme";
-import Section from "../layout/Section";
+import { Section } from "../layout/Section";
 import { Button } from ".";
 
 export default {
@@ -11,7 +11,7 @@ export default {
   title: "Components|Button"
 };
 
-export const text = () =>
+export const base = () =>
   ["default"].concat(variants).map(variant => (
     <Section key={variant}>
       <Button variant={variant} onClick={action("text button clicked")}>

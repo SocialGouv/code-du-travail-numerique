@@ -3,8 +3,10 @@
 exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
+  color: #434956;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
+  background-color: #ebeff3;
 }
 
 .c0 > *:first-child {
@@ -42,6 +44,7 @@ exports[`<Wrapper /> it renders a dark Wrapper 1`] = `
 exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
+  color: #434956;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   border-color: transparent;
@@ -82,8 +85,10 @@ exports[`<Wrapper /> it renders a default Wrapper 1`] = `
 exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
+  color: #434956;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
+  background-color: #fff;
 }
 
 .c0 > *:first-child {
@@ -121,6 +126,7 @@ exports[`<Wrapper /> it renders a light Wrapper 1`] = `
 exports[`<Wrapper /> should render a large wrapper 1`] = `
 .c0 {
   padding: 0.625rem 1.25rem;
+  color: #434956;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   padding: 2rem 2.5rem;

@@ -1,26 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { spacing } from "../../theme";
 
-const Section = ({ children, variant, ...props }) => (
-  <StyledSection variant={variant} {...props}>
-    {children}
-  </StyledSection>
-);
-
-Section.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  variant: PropTypes.oneOf(["default", "white", "light", "dark"])
-};
-
-Section.defaultProps = {
-  className: "",
-  variant: "default"
-};
-
-const StyledSection = styled.div`
+export const Section = styled.div`
   padding: ${spacing.interComponent} 0;
   color: ${({ theme }) => theme.darkText};
   ${props => {
@@ -42,4 +24,13 @@ const StyledSection = styled.div`
   }}
 `;
 
-export default Section;
+Section.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  variant: PropTypes.oneOf(["default", "white", "light", "dark"])
+};
+
+Section.defaultProps = {
+  className: "",
+  variant: "default"
+};

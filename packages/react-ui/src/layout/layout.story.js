@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "./Container";
-import Section from "./Section";
-import Wrapper from "./Wrapper";
+import { Container } from "./Container";
+import { Section } from "./Section";
+import { Wrapper } from "./Wrapper";
 
 export default {
-  title: "Layout"
+  title: "Layout|Readme"
 };
 
 export const readme = () => (
