@@ -10,6 +10,8 @@ import ErrorPage from "./_error";
 import { initPiwik } from "../src/piwik";
 import { initializeSentry } from "../src/sentry";
 
+import GlobalStyles from "../src/layout/css/index.js";
+
 const {
   publicRuntimeConfig: { PIWIK_URL, PIWIK_SITE_ID }
 } = getConfig();
@@ -63,12 +65,14 @@ export default class MyApp extends App {
     if (pageProps.statusCode) {
       return (
         <ThemeProvider theme={theme.colors}>
-          <ErrorPage statusCode={pageProps.statusCode} />{" "}
+          <GlobalStyles />
+          <ErrorPage statusCode={pageProps.statusCode} />
         </ThemeProvider>
       );
     }
     return (
       <ThemeProvider theme={theme.colors}>
+        <GlobalStyles />
         <Component {...pageProps} />
       </ThemeProvider>
     );
