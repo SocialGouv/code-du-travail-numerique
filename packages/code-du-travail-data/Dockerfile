@@ -20,7 +20,6 @@ COPY --from=cdtn-base-image /app/node_modules/@socialgouv/legi-data/package.json
 
 COPY ./dataset/stop_words/stop_words.json ./dataset/stop_words/stop_words.json
 COPY ./dataset/synonyms/synonyms.json ./dataset/synonyms/synonyms.json
-COPY ./dataset/annuaire/annuaire.data.json ./dataset/annuaire/annuaire.data.json
 COPY ./dataset/datafiller/themes.data.json ./dataset/datafiller/themes.data.json
 
 WORKDIR /app

@@ -5,7 +5,6 @@ const cors = require("@koa/cors");
 
 // const corsConf = require('./conf/cors')
 
-const annuaireRoutes = require("./routes/annuaire");
 const docsCount = require("./routes/docs-count");
 const idccRoutes = require("./routes/idcc");
 const conventionsRoutes = require("./routes/conventions");
@@ -48,7 +47,6 @@ app.use(async (ctx, next) => {
 
 app.use(bodyParser());
 
-app.use(annuaireRoutes.routes());
 app.use(docsCount.routes());
 app.use(idccRoutes.routes());
 app.use(conventionsRoutes.routes());
