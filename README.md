@@ -59,7 +59,11 @@ You have to populate data locally for the nlp api with this command
 
 ```sh
 # Populate data to nlp api
-$ docker run --rm --entrypoint cat registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:0d5b8065ca7df8b62827108f61e7168c4581c3ea  /app/dump.tf.json  > ./packages/code-du-travail-nlp/data/dump.data.json
+$ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
+$ docker run \
+        --rm \
+        --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master)/app/dump.tf.json \
+        > ./packages/code-du-travail-nlp/data/dump.data.json
 ```
 
 Then you can launch services using docker-compose
@@ -292,6 +296,19 @@ env:
 -  Work on feature branches
 -  Make [conventional commits](https://github.com/conventional-changelog/conventional-changelog)
 -  Submit PR on current's sprint branch
+
+<br>
+<br>
+<br>
+<br>
+
+## HOW TO
+
+To print SHA1 hashe to a given revision you can use :
+
+```ssh
+$ git rev-parse origin/master
+```
 
 <br>
 <br>
