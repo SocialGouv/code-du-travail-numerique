@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Toast } from "@cdt/ui-old";
-import { theme } from "@socialgouv/react-ui";
+import { Toast, theme } from "@socialgouv/react-ui";
+
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 

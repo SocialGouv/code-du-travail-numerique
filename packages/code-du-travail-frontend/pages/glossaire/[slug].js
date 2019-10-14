@@ -3,8 +3,7 @@ import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { Table } from "@cdt/ui-old";
-import { Container, Section } from "@socialgouv/react-ui";
+import { Table, Container, Section } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";

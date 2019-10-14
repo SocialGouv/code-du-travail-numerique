@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "react-final-form";
-import { Alert } from "@cdt/ui-old";
+import { Alert } from "@socialgouv/react-ui";
 
 function ErrorField({ name }) {
   return (

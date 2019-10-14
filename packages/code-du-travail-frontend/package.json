@@ -20,7 +20,6 @@
     "@cdt/data...datafiller": "^3.3.1",
     "@cdt/data...preavis-demission": "^3.3.1",
     "@cdt/sources": "^3.3.1",
-    "@cdt/ui-old": "^3.3.1",
     "@reach/tooltip": "^0.2.2",
     "@sentry/browser": "^5.7.0",
     "@socialgouv/react-fiche-service-public": "^3.3.1",

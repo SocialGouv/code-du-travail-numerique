@@ -1,5 +1,5 @@
 import React from "react";
-import { LargeLink, List, ListItem } from "@cdt/ui-old";
+import { LargeLink, List, ListItem } from "@socialgouv/react-ui";
 import Link from "next/link";
 import TYPE_REFERENCE from "./typeReference";
 

@@ -3,8 +3,13 @@ import glossary from "@cdt/data...datafiller/glossary.data.json";
 import Link from "next/link";
 
 import styled from "styled-components";
-import { List, ListItem } from "@cdt/ui-old";
-import { Container, Section, theme } from "@socialgouv/react-ui";
+import {
+  List,
+  ListItem,
+  Container,
+  Section,
+  theme
+} from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";

@@ -1,6 +1,6 @@
 import React from "react";
-import { Alert } from "@cdt/ui-old";
-import { Container, theme, Wrapper } from "@socialgouv/react-ui";
+import { Alert, Container, theme, Wrapper } from "@socialgouv/react-ui";
+
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";

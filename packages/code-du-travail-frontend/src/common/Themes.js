@@ -3,19 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
 
-import { Grid, Category, GridCell } from "@cdt/ui-old";
-import { Container, Section, theme } from "@socialgouv/react-ui";
-
-const iconsMap = {
-  1: "hiring-1.svg",
-  2: "remuneration.svg",
-  3: "time.svg",
-  4: "certificate.svg",
-  5: "shield.svg",
-  6: "handshake.svg",
-  7: "file-3.svg",
-  8: "book_web.svg"
-};
+import {
+  Grid,
+  GridCell,
+  Container,
+  Section,
+  theme,
+  Tile
+} from "@socialgouv/react-ui";
 
 export default class Themes extends React.Component {
   static propTypes = {
@@ -35,26 +30,19 @@ export default class Themes extends React.Component {
   };
 
   render() {
-    const { title, themes, isRoot } = this.props;
+    const { isRoot, title, themes } = this.props;
     if (!(themes.length > 0)) return null;
     return (
       <Section>
         <Container>
           <Title>{title}</Title>
           <Grid>
-            {themes.map(({ id, slug, title }) => (
-              <GridCell key={slug + title}>
+            {themes.map(({ slug, title }) => (
+              <StyledGridCell isRoot={isRoot} key={slug + title}>
                 <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
-                  <Tile title={title}>
-                    <Category
-                      small={!isRoot}
-                      title={title}
-                      icon={`/static/assets/icons/${iconsMap[id] ||
-                        "profiles.svg"}`}
-                    />
-                  </Tile>
+                  <Tile>{title}</Tile>
                 </Link>
-              </GridCell>
+              </StyledGridCell>
             ))}
           </Grid>
         </Container>
@@ -62,26 +50,13 @@ export default class Themes extends React.Component {
     );
   }
 }
-const { box, spacing, colors } = theme;
+const { spacing } = theme;
 
 const Title = styled.h2`
   text-align: center;
   margin-bottom: ${spacing.large};
 `;
 
-const Tile = styled.a`
-  text-decoration: none;
-  display: block;
-  height: 100%;
-  border-radius: ${box.borderRadius};
-  & > * {
-    transition: all 0.2s ease;
-  }
-  :focus > *,
-  :active > *,
-  :hover > * {
-    transform: scale(1.1);
-    border: 1px solid ${colors.focus};
-    box-shadow: 0 0 2px 2px ${colors.focusShadow};
-  }
+const StyledGridCell = styled(GridCell)`
+  height: ${({ isRoot }) => (isRoot ? "120px" : "auto")};
 `;

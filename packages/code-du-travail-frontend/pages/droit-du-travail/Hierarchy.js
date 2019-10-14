@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Accordion, List, ListItem, Modal, Toast } from "@cdt/ui-old";
-
-import { Button, Container, Section, theme } from "@socialgouv/react-ui";
+import {
+  Accordion,
+  List,
+  ListItem,
+  Modal,
+  Toast,
+  Button,
+  Container,
+  Section,
+  theme
+} from "@socialgouv/react-ui";
 
 const Hierarchy = () => {
   const [isModal13MatieresOpen, setModal13MatieresOpen] = useState(false);
