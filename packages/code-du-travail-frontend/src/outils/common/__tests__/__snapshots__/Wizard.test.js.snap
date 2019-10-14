@@ -1,23 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Wizard /> should call navigate the previous step when click on précédent 1`] = `
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -37,14 +22,14 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   border-color: #005994;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -150,7 +135,12 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   background-color: #adb9c9;
 }
 
-.c7 {
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -158,12 +148,40 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   display: flex;
 }
 
-.c9 {
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   margin-left: auto;
 }
 
-.c6 {
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media print {
@@ -200,17 +218,17 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
       </span>
     </div>
     <div
-      class="c5 c6"
+      class="c5"
     >
       <p>
         Premiere Etape
       </p>
     </div>
     <div
-      class="c5 c7"
+      class="c6"
     >
       <button
-        class="c8 c9"
+        class="c7 c8"
       >
         Suivant
       </button>
@@ -220,23 +238,8 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
 `;
 
 exports[`<Wizard /> should handle initialStepIndex 1`] = `
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -256,14 +259,14 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   border-color: #ebeff3;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
@@ -369,7 +372,12 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   background-color: #adb9c9;
 }
 
-.c7 {
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -377,12 +385,40 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   display: flex;
 }
 
-.c9 {
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   margin-right: auto;
 }
 
-.c6 {
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media print {
@@ -419,7 +455,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
       </span>
     </div>
     <div
-      class="c5 c6"
+      class="c5"
     >
       <p>
         Deuxieme Etape 
@@ -429,10 +465,10 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
       </p>
     </div>
     <div
-      class="c5 c7"
+      class="c6"
     >
       <button
-        class="c8 c9"
+        class="c7 c8"
         type="button"
       >
         Précédent
@@ -443,23 +479,8 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
 `;
 
 exports[`<Wizard /> should handle initialValues 1`] = `
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -479,14 +500,14 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   border-color: #005994;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -592,7 +613,12 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   background-color: #adb9c9;
 }
 
-.c7 {
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -600,12 +626,40 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   display: flex;
 }
 
-.c9 {
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   margin-left: auto;
 }
 
-.c6 {
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media print {
@@ -652,17 +706,17 @@ exports[`<Wizard /> should handle initialValues 1`] = `
       </span>
     </div>
     <div
-      class="c5 c6"
+      class="c5"
     >
       <p>
         Premiere Etape
       </p>
     </div>
     <div
-      class="c5 c7"
+      class="c6"
     >
       <button
-        class="c8 c9"
+        class="c7 c8"
       >
         Suivant
       </button>
@@ -672,23 +726,8 @@ exports[`<Wizard /> should handle initialValues 1`] = `
 `;
 
 exports[`<Wizard /> should inject rules component 1`] = `
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -708,14 +747,14 @@ exports[`<Wizard /> should inject rules component 1`] = `
   border-color: #005994;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -821,7 +860,12 @@ exports[`<Wizard /> should inject rules component 1`] = `
   background-color: #adb9c9;
 }
 
-.c7 {
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -829,12 +873,40 @@ exports[`<Wizard /> should inject rules component 1`] = `
   display: flex;
 }
 
-.c9 {
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   margin-left: auto;
 }
 
-.c6 {
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media print {
@@ -874,17 +946,17 @@ exports[`<Wizard /> should inject rules component 1`] = `
       </span>
     </div>
     <div
-      class="c5 c6"
+      class="c5"
     >
       <p>
         Premiere Etape
       </p>
     </div>
     <div
-      class="c5 c7"
+      class="c6"
     >
       <button
-        class="c8 c9"
+        class="c7 c8"
       >
         Suivant
       </button>
@@ -894,23 +966,8 @@ exports[`<Wizard /> should inject rules component 1`] = `
 `;
 
 exports[`<Wizard /> should navigate to the second step when click on Suivant 1`] = `
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -930,14 +987,14 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   border-color: #ebeff3;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
@@ -1043,7 +1100,12 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   background-color: #adb9c9;
 }
 
-.c7 {
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1051,12 +1113,40 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   display: flex;
 }
 
-.c9 {
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   margin-right: auto;
 }
 
-.c6 {
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media print {
@@ -1093,7 +1183,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       </span>
     </div>
     <div
-      class="c5 c6"
+      class="c5"
     >
       <p>
         Deuxieme Etape 
@@ -1103,10 +1193,10 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
       </p>
     </div>
     <div
-      class="c5 c7"
+      class="c6"
     >
       <button
-        class="c8 c9"
+        class="c7 c8"
         type="button"
       >
         Précédent
@@ -1117,23 +1207,8 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
 `;
 
 exports[`<Wizard /> should render a step 1`] = `
-.c5 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c5 > *:first-child {
-  margin-top: 0;
-}
-
-.c5 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c8 {
+.c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1153,14 +1228,14 @@ exports[`<Wizard /> should render a step 1`] = `
   border-color: #005994;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c7:not([disabled]):hover,
+.c7:not([disabled]):active,
+.c7:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c8[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
@@ -1266,7 +1341,12 @@ exports[`<Wizard /> should render a step 1`] = `
   background-color: #adb9c9;
 }
 
-.c7 {
+.c6 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1274,12 +1354,40 @@ exports[`<Wizard /> should render a step 1`] = `
   display: flex;
 }
 
-.c9 {
+.c6 > *:first-child {
+  margin-top: 0;
+}
+
+.c6 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c8 {
   margin-left: auto;
 }
 
-.c6 {
+.c5 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
+}
+
+.c5 > *:first-child {
+  margin-top: 0;
+}
+
+.c5 > *:last-child {
+  margin-bottom: 0;
+}
+
+@media print {
+  .c6 {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media print {
@@ -1316,17 +1424,17 @@ exports[`<Wizard /> should render a step 1`] = `
       </span>
     </div>
     <div
-      class="c5 c6"
+      class="c5"
     >
       <p>
         Premiere Etape
       </p>
     </div>
     <div
-      class="c5 c7"
+      class="c6"
     >
       <button
-        class="c8 c9"
+        class="c7 c8"
       >
         Suivant
       </button>

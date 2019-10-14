@@ -88,7 +88,7 @@ Outils.defaultProps = {
 
 export default React.memo(Outils);
 
-const { box, spacing, colors } = theme;
+const { spacing } = theme;
 
 const Title = styled.h2`
   text-align: center;

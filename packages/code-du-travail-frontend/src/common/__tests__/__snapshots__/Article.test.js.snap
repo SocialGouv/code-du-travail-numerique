@@ -15,7 +15,7 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c9 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
@@ -23,11 +23,11 @@ exports[`<Article /> should render 1`] = `
   max-width: 46.25rem;
 }
 
-.c3 > *:first-child {
+.c9 > *:first-child {
   margin-top: 0;
 }
 
-.c3 > *:last-child {
+.c9 > *:last-child {
   margin-bottom: 0;
 }
 
@@ -52,12 +52,25 @@ exports[`<Article /> should render 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c3 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   position: relative;
   margin-bottom: 1.25rem;
 }
 
-.c5 {
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,24 +81,24 @@ exports[`<Article /> should render 1`] = `
   align-items: flex-end;
 }
 
-.c6 {
+.c5 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c7 {
+.c6 {
   margin-left: 1rem;
   color: #4c5467;
   font-size: 0.875rem;
   display: inline-block;
 }
 
-.c8 {
+.c7 {
   color: #4c5467;
   font-weight: 600;
 }
 
-.c9 {
+.c8 {
   margin-left: -10px;
 }
 
@@ -97,7 +110,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media print {
-  .c3 {
+  .c9 {
     max-width: 100%;
     padding: 0;
   }
@@ -116,8 +129,15 @@ exports[`<Article /> should render 1`] = `
   }
 }
 
+@media print {
+  .c3 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
 @media (max-width:600px) {
-  .c5 {
+  .c4 {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
@@ -129,7 +149,7 @@ exports[`<Article /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c7 {
+  .c6 {
     margin-left: 0;
   }
 }
@@ -149,36 +169,36 @@ exports[`<Article /> should render 1`] = `
           class="c0"
         >
           <div
-            class="c3 c4"
+            class="c3"
           >
             <h1>
               Contrat de travail et formalités d'embauche de l'assistante maternelle
             </h1>
             <div
-              class="c5"
+              class="c4"
             >
               <span
-                class="c6"
+                class="c5"
               >
                 Fiche service public
               </span>
               <span
-                class="c7"
+                class="c6"
               >
                 Mis à jour le : 
                 <span
-                  class="c8"
+                  class="c7"
                 >
                   26/07/2018
                 </span>
               </span>
             </div>
             <div
-              class="c9"
+              class="c8"
             />
           </div>
           <div
-            class="c3"
+            class="c9"
           >
             this is an Article
           </div>

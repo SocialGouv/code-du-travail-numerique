@@ -1,7 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndemniteCCn /> should render error 1`] = `
+.c1 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
 .c6 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -33,24 +52,6 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
 .c2 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -63,7 +64,8 @@ exports[`<IndemniteCCn /> should render error 1`] = `
   justify-content: space-between;
   min-height: 48px;
   width: auto;
-  background-color: white;
+  color: #434956;
+  background-color: #fff;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
@@ -181,6 +183,7 @@ exports[`<IndemniteCCn /> should render error 1`] = `
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité conventionnelle 1`] = `
 .c21 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -224,7 +227,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
   justify-content: space-between;
   min-height: 48px;
   width: auto;
-  background-color: white;
+  color: #434956;
+  background-color: #fff;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
@@ -640,6 +644,7 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité con
 
 exports[`<IndemniteCCn /> should render results with highlight on indemnité legale 1`] = `
 .c21 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -683,7 +688,8 @@ exports[`<IndemniteCCn /> should render results with highlight on indemnité leg
   justify-content: space-between;
   min-height: 48px;
   width: auto;
-  background-color: white;
+  color: #434956;
+  background-color: #fff;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;

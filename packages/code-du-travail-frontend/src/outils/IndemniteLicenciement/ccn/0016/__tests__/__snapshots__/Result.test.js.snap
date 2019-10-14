@@ -2,6 +2,7 @@
 
 exports[`<Result /> should render 1`] = `
 .c21 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -33,22 +34,6 @@ exports[`<Result /> should render 1`] = `
   color: rgba(255,255,255,0.4);
 }
 
-.c0 {
-  font-size: 1.625rem;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-.c1 {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: #005994;
-}
-
-.c9 {
-  margin-bottom: 1rem;
-}
-
 .c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -61,7 +46,8 @@ exports[`<Result /> should render 1`] = `
   justify-content: space-between;
   min-height: 48px;
   width: auto;
-  background-color: white;
+  color: #434956;
+  background-color: #fff;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.25rem;
@@ -103,6 +89,22 @@ exports[`<Result /> should render 1`] = `
   padding: 1rem;
   color: #434956;
   text-align: left;
+}
+
+.c0 {
+  font-size: 1.625rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.c1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #005994;
+}
+
+.c9 {
+  margin-bottom: 1rem;
 }
 
 .c5 {

@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FicheServicePublic /> should render 1`] = `
-.c6:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
 .c11 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -114,6 +102,18 @@ exports[`<FicheServicePublic /> should render 1`] = `
   display: none;
 }
 
+.c6:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 .c2 {
   margin-bottom: 2rem;
 }
@@ -139,6 +139,7 @@ exports[`<FicheServicePublic /> should render 1`] = `
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.125rem;
+  color: #434956;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
@@ -154,6 +155,11 @@ exports[`<FicheServicePublic /> should render 1`] = `
 .c4[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
+}
+
+.c5 {
+  color: #434956;
+  background-color: #fff;
 }
 
 .c5.react-tabs__tab-panel--selected {

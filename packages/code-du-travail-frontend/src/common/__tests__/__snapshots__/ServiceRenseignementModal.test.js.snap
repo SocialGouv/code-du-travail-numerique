@@ -2,6 +2,7 @@
 
 exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -33,7 +34,34 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   color: rgba(255,255,255,0.4);
 }
 
-.c10:not(:focus):not(:active) {
+.c9 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  padding: 1rem;
+  color: #434956;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.c9:hover {
+  color: #8c94a6;
+}
+
+.c11:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -61,23 +89,17 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
   padding: 2rem;
   width: 50vw;
   max-height: calc(100vh - 2 * 10vh);
-  background: white;
+  color: #434956;
+  background: #fff;
   border-radius: 0.25rem;
   outline: none;
   overflow-y: auto;
 }
 
-.c9 {
+.c10 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.625rem;
-  color: #8393a7;
-  line-height: 0;
-  background: transparent;
-  border: none;
-  -webkit-appearance: none;
-  cursor: pointer;
 }
 
 .c4 {
@@ -168,7 +190,7 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
 }
 
 @media (max-width:600px) {
-  .c9 {
+  .c10 {
     position: fixed;
     top: 0.625rem;
     right: 0.625rem;
@@ -294,11 +316,11 @@ exports[`<ServiceRenseignementModal /> renders a popup when click on button 1`] 
               </ul>
             </small>
             <button
-              class="c9"
+              class="c9 c10"
               title="fermer la modale"
             >
               <div
-                class="c10"
+                class="c11"
               >
                 fermer la modale
               </div>

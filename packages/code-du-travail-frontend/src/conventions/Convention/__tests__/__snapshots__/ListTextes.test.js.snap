@@ -28,63 +28,65 @@ exports[`<ListTextes /> renders a list of textes 1`] = `
 `;
 
 exports[`<ListTextes /> renders a text 1`] = `
-.c2 {
-  padding: 1.25rem 0;
-  color: #434956;
-}
-
 .c4 {
-  padding: 0.625rem 1.25rem;
-  color: #434956;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background-color: #ebeff3;
-}
-
-.c4 > *:first-child {
-  margin-top: 0;
-}
-
-.c4 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c6 {
   font-size: 0.875rem;
 }
 
-.c7 {
+.c5 {
   display: block;
   padding: 0.25rem 0;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c7:hover {
+.c5:hover {
   font-weight: bold;
 }
 
-.c5 {
+.c2 {
+  padding: 1.25rem 0;
+  color: #434956;
+}
+
+.c3 {
+  padding: 0.625rem 1.25rem;
+  color: #434956;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  background-color: #ebeff3;
   max-height: 100%;
   overflow: auto;
 }
 
-.c11 {
+.c3 > *:first-child {
+  margin-top: 0;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
   margin-bottom: 0.625rem;
   font-style: italic;
   font-weight: bold;
   font-size: 1em;
 }
 
-.c12 {
+.c10 {
   margin-bottom: 0.625rem;
 }
 
-.c10 {
+.c8 {
   font-size: 1.625rem;
 }
 
-.c9 {
+.c6 {
+  padding: 1.25rem 0;
+  color: #434956;
+}
+
+.c7 {
   margin-top: 0;
   margin-bottom: 2rem;
 }
@@ -102,21 +104,8 @@ exports[`<ListTextes /> renders a text 1`] = `
   cursor: pointer;
 }
 
-@media (max-width:600px) {
-  .c4 {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-@media print {
-  .c4 {
-    border: none;
-    padding: 0 5pt;
-  }
-}
-
 @media (min-width:980px) {
-  .c3 {
+  .c2 {
     -webkit-flex: 0 1 35%;
     -ms-flex: 0 1 35%;
     flex: 0 1 35%;
@@ -128,8 +117,21 @@ exports[`<ListTextes /> renders a text 1`] = `
   }
 }
 
+@media (max-width:600px) {
+  .c3 {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media print {
+  .c3 {
+    border: none;
+    padding: 0 5pt;
+  }
+}
+
 @media (min-width:980px) {
-  .c8 {
+  .c6 {
     -webkit-flex: 0 1 65%;
     -ms-flex: 0 1 65%;
     flex: 0 1 65%;
@@ -161,47 +163,47 @@ exports[`<ListTextes /> renders a text 1`] = `
     class="c1"
   >
     <div
-      class="c2 c3"
+      class="c2"
     >
       <div
-        class="c4 c5"
+        class="c3"
       >
         <ol>
           <li
-            class="c6"
+            class="c4"
           >
             <a
-              class="c7"
+              class="c5"
               href="#KALIARTI000033084096"
             >
               Objet de l'avenant
             </a>
           </li>
           <li
-            class="c6"
+            class="c4"
           >
             <a
-              class="c7"
+              class="c5"
               href="#KALIARTI000033084097"
             >
               Revalorisation des salaires minima
             </a>
           </li>
           <li
-            class="c6"
+            class="c4"
           >
             <a
-              class="c7"
+              class="c5"
               href="#KALIARTI000033084098"
             >
               Date d'application
             </a>
           </li>
           <li
-            class="c6"
+            class="c4"
           >
             <a
-              class="c7"
+              class="c5"
               href="#KALIARTI000033084099"
             >
               Formalité, publicité
@@ -211,19 +213,19 @@ exports[`<ListTextes /> renders a text 1`] = `
       </div>
     </div>
     <div
-      class="c2 c8"
+      class="c6"
     >
       <h2
-        class="c9"
+        class="c7"
       >
         Avenant n° 0914 du 8 avril 2016 relatif aux rémunérations minimales au 1er mai 2016
       </h2>
       <h3
-        class="c10"
+        class="c8"
         id="KALIARTI000033084096"
       />
       <div
-        class="c11"
+        class="c9"
       >
         Article non étendu
       </div>
@@ -233,7 +235,7 @@ exports[`<ListTextes /> renders a text 1`] = `
         Objet de l'avenant
       </h5>
       <div
-        class="c12"
+        class="c10"
       >
         <p
           align="left"
@@ -243,11 +245,11 @@ exports[`<ListTextes /> renders a text 1`] = `
         </p>
       </div>
       <h3
-        class="c10"
+        class="c8"
         id="KALIARTI000033084097"
       />
       <div
-        class="c11"
+        class="c9"
       >
         Article non étendu
       </div>
@@ -257,7 +259,7 @@ exports[`<ListTextes /> renders a text 1`] = `
         Revalorisation des salaires minima
       </h5>
       <div
-        class="c12"
+        class="c10"
       >
         <p
           align="left"
@@ -429,11 +431,11 @@ exports[`<ListTextes /> renders a text 1`] = `
         <p />
       </div>
       <h3
-        class="c10"
+        class="c8"
         id="KALIARTI000033084098"
       />
       <div
-        class="c11"
+        class="c9"
       >
         Article non étendu
       </div>
@@ -443,7 +445,7 @@ exports[`<ListTextes /> renders a text 1`] = `
         Date d'application
       </h5>
       <div
-        class="c12"
+        class="c10"
       >
         <p
           align="left"
@@ -453,11 +455,11 @@ exports[`<ListTextes /> renders a text 1`] = `
         </p>
       </div>
       <h3
-        class="c10"
+        class="c8"
         id="KALIARTI000033084099"
       />
       <div
-        class="c11"
+        class="c9"
       >
         Article non étendu
       </div>
@@ -467,7 +469,7 @@ exports[`<ListTextes /> renders a text 1`] = `
         Formalité, publicité
       </h5>
       <div
-        class="c12"
+        class="c10"
       >
         <p
           align="left"

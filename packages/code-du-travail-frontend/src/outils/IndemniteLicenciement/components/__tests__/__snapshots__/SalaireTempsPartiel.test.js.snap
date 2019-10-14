@@ -2,6 +2,7 @@
 
 exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 .c10 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -239,6 +240,7 @@ exports[`<SalaireTempsPartiel /> should add a period 1`] = `
 
 exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 .c10 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -476,6 +478,7 @@ exports[`<SalaireTempsPartiel /> should delete a period 1`] = `
 
 exports[`<SalaireTempsPartiel /> should render 1`] = `
 .c10 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
