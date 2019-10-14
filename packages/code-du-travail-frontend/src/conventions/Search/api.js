@@ -13,28 +13,27 @@ export const loadResults = async query => {
   const type = getQueryType(query);
   // when text, combine local CCNs search + API sirene fulltext
   if (type === "text") {
-    const results = [];
     // local CCNS list search
-    // const ccs = fuseCCNames.search(query.trim());
-    const ccns = await searchConvention(query.trim());
-    if (ccns && ccns.length) {
-      results.push(
-        ...ccns.map(ccn => ({
-          type: "convention",
-          id: ccn.id,
-          idcc: formatIdcc(ccn.idcc),
-          conventions: [ccn]
-        }))
-      );
-    }
+    const promiseCCn = searchConvention(query.trim()).then(ccns =>
+      ccns.map(ccn => ({
+        type: "convention",
+        id: ccn.id,
+        idcc: formatIdcc(ccn.idcc),
+        conventions: [ccn]
+      }))
+    );
+
     // fulltext search API Sirene
-    const etablissements = await searchEntrepriseByName(query.trim());
-    if (etablissements && etablissements.length) {
-      results.push(
-        ...etablissements.filter(r => r.conventions && r.conventions.length)
-      );
-    }
-    return results;
+    const promiseEtablissements = searchEntrepriseByName(query.trim()).then(
+      etablissements =>
+        etablissements.filter(r => r.conventions && r.conventions.length)
+    );
+
+    const [ccn, etablissements] = await Promise.all([
+      promiseCCn,
+      promiseEtablissements
+    ]);
+    return ccn.concat(etablissements);
     // direct search by siret with API sirene
   }
   if (type === "siret") {

@@ -1,0 +1,1375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should not use siret2idcc when no entreprise result 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c3:before,
+.c3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c4 {
+  overflow-x: auto;
+}
+
+.c5 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c5 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c5 td,
+.c5 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c5 thead,
+.c5 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f9f9fc;
+}
+
+.c5 tfoot {
+  vertical-align: top;
+}
+
+.c6 {
+  font-weight: bold;
+  background: #e5f1fe;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c11 {
+  color: #4c5467;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c10 {
+  margin: 0.625rem 0;
+}
+
+.c9 {
+  margin-top: 0.625rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  fontsize: 1.375rem;
+  margin-right: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  max-width: calc(100% - 200px);
+  font-weight: bold;
+  color: #005994;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="xxxx"
+    />
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <table
+            class="c5"
+          >
+            <tbody>
+              <tr
+                class="c6"
+              >
+                <td>
+                  Conventions collectives
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    />
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                        >
+                          titre convention 1
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Search /> should render 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value=""
+    />
+    
+  </div>
+</div>
+`;
+
+exports[`<Search /> should show no results when no result 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c1 {
+  width: 100%;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="9999"
+    />
+    <div
+      class="c2"
+    >
+      <div>
+        Aucun résultat pour votre recherche.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Search /> should show spinner when loading 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c1 {
+  width: 100%;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="8888"
+    />
+    <div
+      class="c2"
+    >
+      <div>
+        <svg
+          aria-labelledby="title desc"
+          class="__react-svg-spinner_circle"
+          height="1em"
+          role="img"
+          style="animation-duration: 750ms;"
+          viewBox="0 0 32 32"
+          width="1em"
+        >
+          <title
+            id="title"
+          >
+            Circle loading spinner
+          </title>
+          <desc
+            id="desc"
+          >
+            Image of a partial circle indicating "loading."
+          </desc>
+          <style>
+            
+      .__react-svg-spinner_circle{
+          transition-property: transform;
+          animation-name: __react-svg-spinner_infinite-spin;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+      }
+      @keyframes __react-svg-spinner_infinite-spin {
+          from {transform: rotate(0deg)}
+          to {transform: rotate(360deg)}
+      }
+    
+          </style>
+          <circle
+            cx="16"
+            cy="16"
+            fill="none"
+            r="12"
+            role="presentation"
+            stroke="rgba(0,0,0,0.4)"
+            stroke-dasharray="43.982297150257104"
+            stroke-linecap="round"
+            stroke-width="4"
+          />
+        </svg>
+         Recherche des convention collectives...
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Search /> when input is IDCC, should search conventions 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c3:before,
+.c3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c4 {
+  overflow-x: auto;
+}
+
+.c5 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c5 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c5 td,
+.c5 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c5 thead,
+.c5 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f9f9fc;
+}
+
+.c5 tfoot {
+  vertical-align: top;
+}
+
+.c6 {
+  font-weight: bold;
+  background: #e5f1fe;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c11 {
+  color: #4c5467;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c10 {
+  margin: 0.625rem 0;
+}
+
+.c9 {
+  margin-top: 0.625rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  fontsize: 1.375rem;
+  margin-right: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  max-width: calc(100% - 200px);
+  font-weight: bold;
+  color: #005994;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="1234"
+    />
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <table
+            class="c5"
+          >
+            <tbody>
+              <tr
+                class="c6"
+              >
+                <td>
+                  Conventions collectives
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    />
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                          href="/convention-collective/0275-titre-convention-1"
+                        >
+                          titre convention 1
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    />
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                          href="/convention-collective/0276-titre-convention-2"
+                        >
+                          titre convention 2
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Search /> when input is a valid IDCC, should show only the perfect match  1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c3:before,
+.c3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c4 {
+  overflow-x: auto;
+}
+
+.c5 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c5 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c5 td,
+.c5 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c5 thead,
+.c5 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f9f9fc;
+}
+
+.c5 tfoot {
+  vertical-align: top;
+}
+
+.c6 {
+  font-weight: bold;
+  background: #e5f1fe;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c11 {
+  color: #4c5467;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c10 {
+  margin: 0.625rem 0;
+}
+
+.c9 {
+  margin-top: 0.625rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  fontsize: 1.375rem;
+  margin-right: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  max-width: calc(100% - 200px);
+  font-weight: bold;
+  color: #005994;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="4567"
+    />
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <table
+            class="c5"
+          >
+            <tbody>
+              <tr
+                class="c6"
+              >
+                <td>
+                  Conventions collectives
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      IDCC 4567
+                    </div>
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                          href="/convention-collective/4567-titre-convention-2"
+                        >
+                          titre convention 2
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Search /> when searching SIRET, should use API SIREN and siret2idcc 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c3:before,
+.c3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c4 {
+  overflow-x: auto;
+}
+
+.c5 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c5 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c5 td,
+.c5 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c5 thead,
+.c5 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f9f9fc;
+}
+
+.c5 tfoot {
+  vertical-align: top;
+}
+
+.c6 {
+  font-weight: bold;
+  background: #e5f1fe;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c11 {
+  color: #4c5467;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c10 {
+  margin: 0.625rem 0;
+}
+
+.c9 {
+  margin-top: 0.625rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  fontsize: 1.375rem;
+  margin-right: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  max-width: calc(100% - 200px);
+  font-weight: bold;
+  color: #005994;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="01234567891011"
+    />
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <table
+            class="c5"
+          >
+            <tbody>
+              <tr
+                class="c6"
+              >
+                <td>
+                  Entreprises
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      Entreprise 1 93100 Commune test
+                    </div>
+                    <a
+                      href="https://entreprise.data.gouv.fr/etablissement/01234567891011"
+                      rel="noopener noreferrer"
+                      style="font-size: 0.8em;"
+                      target="_blank"
+                      title="Ouvrir la fiche entreprise"
+                    >
+                      Fiche entreprise
+                    </a>
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                        >
+                          Convention 1
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Search /> when searching by text, should use ES, api SIREN and siret2idcc 1`] = `
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.c3:before,
+.c3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 4rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  background: radial-gradient( ellipse at center, #fff 15%, rgba(255,255,255,0) 80% );
+}
+
+.c3:before {
+  left: -2rem;
+}
+
+.c3:after {
+  right: -2rem;
+}
+
+.c4 {
+  overflow-x: auto;
+}
+
+.c5 {
+  text-align: left;
+  empty-cells: show;
+  background-color: #fff;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #c9d3df;
+}
+
+.c5 caption {
+  padding: 0.625rem 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.c5 td,
+.c5 th {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9d3df;
+}
+
+.c5 thead,
+.c5 tfoot {
+  padding: 0.625rem 1rem;
+  vertical-align: bottom;
+  background: #f9f9fc;
+}
+
+.c5 tfoot {
+  vertical-align: top;
+}
+
+.c6 {
+  font-weight: bold;
+  background: #e5f1fe;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+.c11 {
+  color: #4c5467;
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c10 {
+  margin: 0.625rem 0;
+}
+
+.c9 {
+  margin-top: 0.625rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  fontsize: 1.375rem;
+  margin-right: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  max-width: calc(100% - 200px);
+  font-weight: bold;
+  color: #005994;
+}
+
+@media print {
+  .c0 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h3>
+      Recherche de convention collective
+    </h3>
+    <p>
+      Afin de sélectionner votre convention collective, saisissez le nom de votre entreprise, son numéro SIRET, ou directement le nom de votre convention collective.
+    </p>
+    <input
+      class="c1"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value="hello"
+    />
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <div
+          class="c4"
+        >
+          <table
+            class="c5"
+          >
+            <tbody>
+              <tr
+                class="c6"
+              >
+                <td>
+                  Conventions collectives
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    />
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                        >
+                          titre convention 1
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr
+                class="c6"
+              >
+                <td>
+                  Entreprises
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div
+                    class="c7"
+                  >
+                    <div
+                      class="c8"
+                    >
+                      Entreprise 1 93100 Commune test
+                    </div>
+                    <a
+                      href="https://entreprise.data.gouv.fr/etablissement/44144914700020"
+                      rel="noopener noreferrer"
+                      style="font-size: 0.8em;"
+                      target="_blank"
+                      title="Ouvrir la fiche entreprise"
+                    >
+                      Fiche entreprise
+                    </a>
+                  </div>
+                  <div
+                    class="c9"
+                  >
+                    <div
+                      class="c10"
+                    >
+                      <div
+                        class="c7"
+                      >
+                        <a
+                          class="c11"
+                        >
+                          Convention 1
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

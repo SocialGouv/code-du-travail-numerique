@@ -362,19 +362,24 @@ export const siretPayload = {
 
 export const siretIdccPayload = [
   {
-    active: true,
-    date_publi: "1997-12-07T00:00:00.000Z",
-    etat: "VIGUEUR_ETEN",
-    id: "KALICONT000005635534",
-    mtime: 1562700340,
-    nature: "IDCC",
-    num: "1979",
-    texte_de_base: "KALITEXT000005670044",
-    title:
-      "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997",
-    effectif: 580085,
-    shortTitle: "Hôtels Cafés Restaurants (Hcr)",
-    url:
-      "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534"
+    siret: "80258570300027",
+    conventions: [
+      {
+        active: true,
+        date_publi: "1997-12-07T00:00:00.000Z",
+        etat: "VIGUEUR_ETEN",
+        id: "KALICONT000005635534",
+        mtime: 1562700340,
+        nature: "IDCC",
+        num: "1979",
+        texte_de_base: "KALITEXT000005670044",
+        title:
+          "Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997",
+        effectif: 580085,
+        shortTitle: "Hôtels Cafés Restaurants (Hcr)",
+        url:
+          "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635534"
+      }
+    ]
   }
 ];

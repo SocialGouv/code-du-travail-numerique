@@ -37,9 +37,10 @@ const apiEntrepriseSiret = memoizee(
       .then(r => r.json())
       .then(async data => {
         if (data.etablissement) {
+          const idcc = await apiSiret2idcc(data.etablissement.siret);
           return {
             ...formatEtablissement(data.etablissement),
-            conventions: await apiSiret2idcc(data.etablissement.siret)
+            conventions: (idcc.length && idcc[0].conventions) || []
           };
         }
       }),
@@ -74,7 +75,7 @@ const formatFullTextResults = async apiData => {
       };
     });
   }
-  return Promise.resolve();
+  return Promise.resolve([]);
 };
 
 const searchEntrepriseByName = debounce(apiEntrepriseFullText, 300);
