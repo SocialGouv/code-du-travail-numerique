@@ -15,7 +15,6 @@
   - packages/code-du-travail-data/**/*.js
   - packages/code-du-travail-api/**/*.js
   - packages/code-du-travail-frontend/**/*.js
-  - packages/code-du-travail-ui-old/**/*.js
   - packages/react-ui/**/*.js
   - packages/react-fiche-service-public/**/*.js
 
