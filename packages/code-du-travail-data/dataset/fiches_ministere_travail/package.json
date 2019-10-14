@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "google-spreadsheets": "^2.0.0",
-    "jsdom": "^15.1.1",
+    "jsdom": "^15.2.0",
     "ora": "^4.0.2",
     "p-limit": "^2.2.1",
     "superagent": "^5.1.0"
