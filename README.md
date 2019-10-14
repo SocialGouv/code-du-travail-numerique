@@ -23,7 +23,7 @@ Note: environment file are created at _postinstall_ (see [scripts/setup-env.js](
 
 ### Running nlp service locally using .dev config
 
-By default nlp api is mocked with our local node api. 
+By default nlp api is mocked with our local node api.
 To launch the nodejs API without mock, you should use
 
 ```sh
@@ -55,6 +55,13 @@ So let's build it.
 $ docker build . -t cdtn_master:local
 ```
 
+You have to populate data locally for the nlp api with this command
+
+```sh
+# Populate data to nlp api
+$ docker run --rm --entrypoint cat registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique/data:0d5b8065ca7df8b62827108f61e7168c4581c3ea  /app/dump.tf.json  > ./packages/code-du-travail-nlp/data/dump.data.json
+```
+
 Then you can launch services using docker-compose
 
 ```sh
@@ -74,7 +81,7 @@ elasticsearch_1  | [20XX-YY-XXT00:00:00,000][INFO ][o.e.n.Node               ] [
 
 # > In parallel, in another terminal <
 
-# Launch indexing script 
+# Launch indexing script
 $ yarn workspace @cdt/data populate-dev
 
 ```
@@ -240,13 +247,13 @@ env:
 
 ### Demos
 
--  Production 
+-  Production
   -  <https://code.travail.gouv.fr/> (previously codedutravail.num.social.gouv.fr )
 
--  master (dev) 
+-  master (dev)
   -  <http://master.code-du-travail-numerique.dev.factory.social.gouv.fr(previously> codedutravail-dev.num.social.gouv.fr)
 
--  staging (tag): 
+-  staging (tag):
   -  <https://v3-2-0.code-du-travail-numerique.incubateur.social.gouv.fr>
   -  <https://v3-1-0.code-du-travail-numerique.incubateur.social.gouv.fr>
 
