@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReferenceList /> should render 1`] = `
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f9f9fc;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+  -webkit-transition: 200ms color,200ms box-shadow;
+  transition: 200ms color,200ms box-shadow;
+}
+
+.c1:visited {
+  color: #434956;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:hover {
+  color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+<div>
+  <ul
+    class="c0"
+  >
+    <li
+      class=""
+    >
+      <a
+        class="c1"
+        href="/code-du-travail/xxx"
+      >
+        <span>
+          Article xxx du code du travail
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        class="c1"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span>
+          Autre: 
+          Article yyy du code du travail
+        </span>
+      </a>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        class="c1"
+        href="/convention-collective/zzz"
+      >
+        <span>
+          Convention collective: 
+          Article zzz du code du travail
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
+`;

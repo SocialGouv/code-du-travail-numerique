@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import TYPE_REFERENCE from "../../typeReference";
+import TYPE_REFERENCE from "../typeReference";
 import ReferenceList from "../ReferenceList";
 
 const references = [
