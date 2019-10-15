@@ -68,4 +68,19 @@ describe("<Answer />", () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it("should render tooltip without breaking previous word", () => {
+    const { container } = render(
+      <Answer
+        title="Article du code"
+        intro="intro de l'article"
+        html="<p class='test-content'>annualisation du temps de travail. Annualisation de l'annualisation.</p>"
+        footer="pied de page"
+        date="03/11/1979"
+        sourceType="social groove"
+      >
+        <div>Contenu supplémentaire</div>
+      </Answer>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

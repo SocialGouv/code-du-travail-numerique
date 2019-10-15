@@ -55,12 +55,13 @@ export default function useGlossary(children, html) {
         "[data-main-content] p, [data-main-content] li:not([role=tab])"
       )
     ).reduce((state, node) => {
+      const internalRefMap = new Map();
       glossary.forEach(item => {
         // we cannot use \b word boundary since \w does not match diacritics
         // So we do a kind of \b equivalent.
         // the main différence is that matched pattern can include a whitespace as first char
         const frDiacritics = "àâäçéèêëïîôöùûüÿœæÀÂÄÇÉÈÊËÎÏÔÖÙÛÜŸŒÆ";
-        const wordBoundaryStart = `(?:^|[^\\w${frDiacritics}])`;
+        const wordBoundaryStart = `(?!^|[^\\w${frDiacritics}])`;
         const wordBoundaryEnd = `(?![\\w${frDiacritics}])`;
         const patterns = [...new Set([item.title, ...item.variants])]
           .map(
@@ -69,26 +70,26 @@ export default function useGlossary(children, html) {
           )
           .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
 
-        patterns.forEach(pattern => {
-          node.innerHTML = node.innerHTML.replace(pattern, function(match) {
-            if (new RegExp(`^[^\\w${frDiacritics}]`).test(match)) {
-              // Since match string can start with a space, we trim it and insert the space before the tooltip markup
-              return `${match.slice(0, 1)}<span data-tooltip-slug="${
-                item.slug
-              }" data-tooltip-term="${match.slice(1)}"></span>`;
-            }
-            return `<span data-tooltip-slug="${item.slug}" data-tooltip-term="${match}"></span>`;
+        patterns.forEach((pattern, i) => {
+          //we use an internal ref to
+          node.innerHTML = node.innerHTML.replace(pattern, function(term) {
+            const internalRef = `__tt__${i}`;
+            internalRefMap.set(internalRef, { slug: item.slug, term });
+            return `<span data-tooltip-ref="${internalRef}"></span>`;
           });
         });
       });
-
       return state.concat(
-        Array.from(node.querySelectorAll("[data-tooltip-slug]")).map(node => ({
-          node,
-          term: node.getAttribute("data-tooltip-term"),
-          definition:
-            glossaryBySlug[node.getAttribute("data-tooltip-slug")].definition
-        }))
+        Array.from(node.querySelectorAll("[data-tooltip-ref]")).map(node => {
+          const { slug, term } = internalRefMap.get(
+            node.getAttribute("data-tooltip-ref")
+          );
+          return {
+            node,
+            term,
+            definition: glossaryBySlug[slug].definition
+          };
+        })
       );
     }, []);
     setPortalComponents(
