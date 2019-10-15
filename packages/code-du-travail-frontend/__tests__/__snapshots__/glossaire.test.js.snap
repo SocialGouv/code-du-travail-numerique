@@ -2831,7 +2831,7 @@ exports[`<Glossaire /> should render 1`] = `
               class="c31"
             >
               <a
-                href="mailto:codedutravail@beta.gouv.fr"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
               >
                 Contact
               </a>

@@ -825,11 +825,11 @@ exports[`<MentionLegales /> should render 1`] = `
                   Vous avez un droit d’accès, de rectification et de suppression de vos données. Pour l’exercer, faites-nous parvenir une demande en précisant la date et l’heure précise de la requête - ces éléments sont indispensables pour nous permettre de retrouver votre recherche - par voie électronique à l’adresse suivante :
                    
                   <a
-                    href="mailto:codedutravail@beta.gouv.fr"
+                    href="mailto:codedutravailnumerique@travail.gouv.fr"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    codedutravail@beta.gouv.fr
+                    codedutravailnumerique@travail.gouv.fr
                   </a>
                    
                   ou par voie postale :
@@ -1102,7 +1102,7 @@ exports[`<MentionLegales /> should render 1`] = `
               class="c39"
             >
               <a
-                href="mailto:codedutravail@beta.gouv.fr"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
               >
                 Contact
               </a>

@@ -1016,7 +1016,7 @@ exports[`<Home /> should render 1`] = `
               class="c44"
             >
               <a
-                href="mailto:codedutravail@beta.gouv.fr"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
               >
                 Contact
               </a>
