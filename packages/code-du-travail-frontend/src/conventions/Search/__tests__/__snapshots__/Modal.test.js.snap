@@ -35,6 +35,7 @@ exports[`<ConventionModal /> should render 1`] = `
 }
 
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,6 +72,7 @@ exports[`<ConventionModal /> should render 1`] = `
 }
 
 .c0:hover {
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
@@ -222,6 +224,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,6 +261,7 @@ exports[`<ConventionModal /> should render a popup when click on button 1`] = `
 }
 
 .c0:hover {
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 

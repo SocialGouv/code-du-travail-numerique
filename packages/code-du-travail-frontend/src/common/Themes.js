@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
+import { Layers } from "react-feather";
 
 import {
   Grid,
@@ -40,7 +41,7 @@ export default class Themes extends React.Component {
             {themes.map(({ slug, title }) => (
               <StyledGridCell isRoot={isRoot} key={slug + title}>
                 <Link href="/themes/[slug]" as={`/themes/${slug}`} passHref>
-                  <Tile>{title}</Tile>
+                  <Tile icon={Layers}>{title}</Tile>
                 </Link>
               </StyledGridCell>
             ))}

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tile /> renders 1`] = `
+exports[`<Tile /> renders a button tile 1`] = `
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,6 +39,7 @@ exports[`<Tile /> renders 1`] = `
 }
 
 .c0:hover {
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
@@ -52,6 +54,233 @@ exports[`<Tile /> renders 1`] = `
   >
     <div
       class="c1"
+    >
+      Hello !
+    </div>
+    
+  </button>
+</div>
+`;
+
+exports[`<Tile /> renders with a div fake button inside 1`] = `
+.c3 {
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
+}
+
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #005994;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.c0:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c1 {
+  overflow-y: scroll;
+}
+
+.c2 {
+  margin-top: 1.25rem;
+}
+
+<div>
+  <a
+    class="c0"
+    href="#"
+  >
+    <div
+      class="c1"
+    >
+      Hello !
+    </div>
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        bouton
+      </div>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`<Tile /> renders with an icon 1`] = `
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  height: 100%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #005994;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.c0:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c2 {
+  overflow-y: scroll;
+}
+
+.c1 {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+<div>
+  <button
+    class="c0"
+    href=""
+  >
+    <div
+      class="c1"
+    >
+      <svg
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="8"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="8"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="8"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+        <line
+          x1="3"
+          x2="3"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="3"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="3"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </div>
+    <div
+      class="c2"
     >
       Hello !
     </div>

@@ -5,6 +5,7 @@ import { animations, box, fonts, spacing } from "../theme";
 import styled from "styled-components";
 
 const StyledTile = styled.a`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -24,6 +25,7 @@ const StyledTile = styled.a`
   appearance: none;
   transition: ${animations.transitionTiming} all;
   &:hover {
+    border-color: ${({ theme }) => theme.blueDark};
     box-shadow: ${box.shadow};
   }
 `;
@@ -31,12 +33,24 @@ const StyledTile = styled.a`
 const OverflowWrapper = styled.div`
   overflow-y: scroll;
 `;
+
+const IconWrapper = styled.div`
+  position: absolute;
+  top: ${spacing.xsmall};
+  right: ${spacing.xsmall};
+`;
+
 const ButtonWrapper = styled.div`
   margin-top: ${spacing.medium};
 `;
 
-export const Tile = ({ button, children, ...props }) => (
+export const Tile = ({ button, children, icon: Icon, ...props }) => (
   <StyledTile as={props.href ? "a" : "button"} {...props}>
+    {Icon && (
+      <IconWrapper>
+        <Icon />
+      </IconWrapper>
+    )}
     <OverflowWrapper>{children}</OverflowWrapper>
     {button && (
       <ButtonWrapper>

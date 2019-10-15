@@ -30,6 +30,7 @@ exports[`<LargeLink /> should render 1`] = `
 
 .c0:active,
 .c0:hover {
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
@@ -37,9 +38,9 @@ exports[`<LargeLink /> should render 1`] = `
   <a
     class="c0"
   >
-    <span>
+    <div>
       Ok
-    </span>
+    </div>
   </a>
 </div>
 `;
@@ -74,6 +75,7 @@ exports[`<LargeLink /> should render highlighted 1`] = `
 
 .c0:active,
 .c0:hover {
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
@@ -81,9 +83,9 @@ exports[`<LargeLink /> should render highlighted 1`] = `
   <a
     class="c0"
   >
-    <span>
+    <div>
       Ok
-    </span>
+    </div>
   </a>
 </div>
 `;
@@ -118,6 +120,7 @@ exports[`<LargeLink /> should render light 1`] = `
 
 .c0:active,
 .c0:hover {
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
@@ -125,9 +128,9 @@ exports[`<LargeLink /> should render light 1`] = `
   <a
     class="c0"
   >
-    <span>
+    <div>
       Ok
-    </span>
+    </div>
   </a>
 </div>
 `;

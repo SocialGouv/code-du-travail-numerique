@@ -255,17 +255,6 @@ exports[`<About /> should render 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
-}
-
-.c3:link {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c4 {
@@ -276,9 +265,8 @@ exports[`<About /> should render 1`] = `
 
 .c5 {
   font-size: 1.125rem;
-  line-height: 1.4;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  line-height: 1.2;
+  font-weight: bold;
 }
 
 .c6 {

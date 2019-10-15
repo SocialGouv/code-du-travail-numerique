@@ -12,7 +12,7 @@ export const LargeLink = React.forwardRef(
           <Icon />
         </StyledSpan>
       )}
-      <span>{children}</span>
+      <div>{children}</div>
     </StyledLink>
   )
 );
@@ -57,6 +57,7 @@ const StyledLink = styled.a`
   }
   &:active,
   &:hover {
+    border-color: ${({ theme }) => theme.blueDark};
     box-shadow: ${box.shadow};
   }
 `;

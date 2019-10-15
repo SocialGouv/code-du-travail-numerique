@@ -1,4 +1,5 @@
 import React from "react";
+import { List } from "react-feather";
 
 import { Section } from "../layout/Section";
 import { Tile } from ".";
@@ -12,6 +13,11 @@ export const base = () => (
   <div style={{ width: "400px" }}>
     <Section>
       <Tile href="#">Embauche et contrat</Tile>
+    </Section>
+    <Section>
+      <Tile icon={List} href="#">
+        Embauche et contrat avec une icone
+      </Tile>
     </Section>
     <Section>
       <Tile href="#" button="click me">

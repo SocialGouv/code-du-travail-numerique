@@ -61,13 +61,6 @@ const LogoWrapper = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  cursor: pointer;
-  :link {
-    text-decoration: none;
-  }
-  :hover {
-    text-decoration: underline;
-  }
 `;
 
 const Logo = styled.img`
@@ -78,8 +71,8 @@ const Logo = styled.img`
 
 const Title = styled.span`
   font-size: ${fonts.sizeH5};
-  line-height: 1.4;
-  text-decoration: none;
+  line-height: 1.2;
+  font-weight: bold;
 `;
 
 const StyledTag = styled(Tag)`

@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ReferenceList /> should render 1`] = `
-.c0 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -17,14 +11,15 @@ exports[`<ReferenceList /> should render 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 1.25rem;
+  color: #005994;
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #f9f9fc;
   border: 1px solid #c9d3df;
   border-radius: 0.25rem;
   margin-bottom: 1.25rem;
-  -webkit-transition: 200ms color,200ms box-shadow;
-  transition: 200ms color,200ms box-shadow;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
 }
 
 .c1:visited {
@@ -35,8 +30,14 @@ exports[`<ReferenceList /> should render 1`] = `
 
 .c1:active,
 .c1:hover {
-  color: #005994;
+  border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c0 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 <div>
@@ -50,9 +51,9 @@ exports[`<ReferenceList /> should render 1`] = `
         class="c1"
         href="/code-du-travail/xxx"
       >
-        <span>
+        <div>
           Article xxx du code du travail
-        </span>
+        </div>
       </a>
     </li>
     <li
@@ -63,10 +64,10 @@ exports[`<ReferenceList /> should render 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        <span>
+        <div>
           Autre: 
           Article yyy du code du travail
-        </span>
+        </div>
       </a>
     </li>
     <li
@@ -76,10 +77,10 @@ exports[`<ReferenceList /> should render 1`] = `
         class="c1"
         href="/convention-collective/zzz"
       >
-        <span>
+        <div>
           Convention collective: 
           Article zzz du code du travail
-        </span>
+        </div>
       </a>
     </li>
   </ul>

@@ -3,7 +3,7 @@ import getConfig from "next/config";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
-import { Container, Section, theme } from "@socialgouv/react-ui";
+import { Container, LargeLink, Section, theme } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
 import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
@@ -53,34 +53,31 @@ const List = ({ items = [], ...props }) => (
           as={`modeles-de-courriers/${_source.slug}`}
           passHref
         >
-          <ModeleLink>
-            <ModeleCourrier modele={_source} />
-          </ModeleLink>
+          <ModeleCourrier modele={_source} />
         </Link>
       </li>
     ))}
   </ul>
 );
 
-const ModeleCourrier = ({ modele }) => {
+const ModeleCourrier = ({ modele, ...props }) => {
   const { filename, title, editor } = modele;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
-    <React.Fragment>
-      <Icon />
-      <TextWrapper>
+    <LargeLink variant={"light"} icon={ModeleCourrierIcon} {...props}>
+      <>
         <strong>{title}</strong>
         <P>
           <Label>Source</Label>: <Label>{editor}</Label>
           {extension && editor ? " - " : null}
           <Value>{extension}</Value>
         </P>
-      </TextWrapper>
-    </React.Fragment>
+      </>
+    </LargeLink>
   );
 };
 
-const { box, colors, spacing } = theme;
+const { colors } = theme;
 
 const ModeleCourrierList = styled(List)`
   list-style-type: none;
@@ -90,34 +87,9 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const ModeleLink = styled.a`
-  display: flex;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: ${box.borderRadius};
-  padding: ${spacing.base};
-  :link {
-    text-decoration: none;
-  }
-  :hover {
-    border-color: ${colors.lightGrey};
-    background: ${colors.darkBackground};
-  }
-  :hover strong {
-    text-decoration: underline;
-  }
-`;
-const TextWrapper = styled.div`
-  padding-left: 1rem;
-`;
 const P = styled.p`
   margin-bottom: 0;
   font-size: 0.9em;
-`;
-const Icon = styled(ModeleCourrierIcon)`
-  width: 25px;
-  flex-shrink: 0;
-  color: ${colors.darkGrey};
 `;
 
 const Label = styled.span`
