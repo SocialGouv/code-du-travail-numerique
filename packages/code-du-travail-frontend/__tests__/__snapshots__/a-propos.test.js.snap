@@ -687,7 +687,7 @@ exports[`<About /> should render 1`] = `
               class="c32"
             >
               <a
-                href="mailto:codedutravail@beta.gouv.fr"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
               >
                 Contact
               </a>

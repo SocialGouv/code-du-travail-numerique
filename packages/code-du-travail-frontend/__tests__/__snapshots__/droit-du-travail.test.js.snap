@@ -2480,7 +2480,7 @@ exports[`<DroitDuTravail /> should render 1`] = `
               class="c56"
             >
               <a
-                href="mailto:codedutravail@beta.gouv.fr"
+                href="mailto:codedutravailnumerique@travail.gouv.fr"
               >
                 Contact
               </a>

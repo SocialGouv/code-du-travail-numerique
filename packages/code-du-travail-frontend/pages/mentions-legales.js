@@ -35,11 +35,11 @@ const SearchPage = ({ pageUrl, ogImage }) => {
           indispensables pour nous permettre de retrouver votre recherche - par
           voie électronique à l’adresse suivante :{" "}
           <a
-            href="mailto:codedutravail@beta.gouv.fr"
+            href="mailto:codedutravailnumerique@travail.gouv.fr"
             target="_blank"
             rel="noopener noreferrer"
           >
-            codedutravail@beta.gouv.fr
+            codedutravailnumerique@travail.gouv.fr
           </a>{" "}
           ou par voie postale :
         </p>
