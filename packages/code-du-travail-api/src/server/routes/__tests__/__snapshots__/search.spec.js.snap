@@ -3,8 +3,8 @@
 exports[`return article results when searching with article id 1`] = `
 Array [
   Object {
-    "_id": "LMEzzG0BpOjghFhh1XfB",
-    "_index": "code_du_travail_numerique-1571088983811",
+    "_id": "Auqtzm0BmNudRMfOy8ba",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 62.384315,
     "_source": Object {
       "description": "Le salarié informe son employeur de sa démission, en application de l'article L. 1225-66 , par lettre recommandée avec avis de réception ou remise contre récépissé. Il adresse à l'employeur sa demande de réembauche, en application de l'article L. 1225-67 , par lettre recommandée avec avis de réception ou remise contre récépissé",
@@ -17,8 +17,8 @@ Array [
     "key": "code_du_travailr1225-18",
   },
   Object {
-    "_id": "9sEzzG0BpOjghFhhzGYA",
-    "_index": "code_du_travail_numerique-1571088983811",
+    "_id": "zOqtzm0BmNudRMfOvbU7",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 30.21421,
     "_source": Object {
       "description": "Lorsque des naissances multiples sont prévues, la période de congé de maternité varie dans les conditions suivantes : 1° Pour la naissance de deux enfants, cette période commence douze semaines avant la date présumée de l'accouchement et se termine vingt-deux semaines après la date de l'accouchement. La période de suspension antérieure à la date présumée de l'accouchement peut être augmentée d'une durée maximale de quatre semaines. La période de vingt-deux semaines postérieure à l'accouchement est alors réduite d'autant ; 2° Pour la naissance de trois enfants ou plus, cette période commence vingt-quatre semaines avant la date présumée de l'accouchement et se termine vingt-deux semaines après la date de l'accouchement",
@@ -31,8 +31,8 @@ Array [
     "key": "code_du_travaill1225-18",
   },
   Object {
-    "_id": "EMEzzG0BpOjghFhh13l6",
-    "_index": "code_du_travail_numerique-1571088983811",
+    "_id": "5uqtzm0BmNudRMfOzscs",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 10.562944,
     "_source": Object {
       "description": "Le mandataire prévu à l'article L. 1441-18 dépose la ou les listes de l'organisation pour chaque conseil de prud'hommes du département au titre duquel il est mandaté",
@@ -45,8 +45,8 @@ Array [
     "key": "code_du_travailr1441-18",
   },
   Object {
-    "_id": "kMEzzG0BpOjghFhh0m8d",
-    "_index": "code_du_travail_numerique-1571088983811",
+    "_id": "Zuqtzm0BmNudRMfOxr53",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 10.261175,
     "_source": Object {
       "description": "Les institutions mentionnées à l'article L. 3253-14 informent, en cas de demande, toutes autres institutions de garantie des Etats membres de la Communauté européenne ou de l'Espace économique européen sur la législation et la réglementation nationales applicables en cas de mise en œuvre d'une procédure d'insolvabilité définie aux articles L. 3253-18-1 et L. 3253-18-2",
@@ -59,8 +59,8 @@ Array [
     "key": "code_du_travaill3253-18-9",
   },
   Object {
-    "_id": "jsEzzG0BpOjghFhh0m8d",
-    "_index": "code_du_travail_numerique-1571088983811",
+    "_id": "ZOqtzm0BmNudRMfOxr53",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 10.088467,
     "_source": Object {
       "description": "Les articles L. 3253-7 , L. 3253-10 à L. 3253-13 et L. 3253-17 sont applicables aux procédures définies aux articles L. 3253-18-1 et L. 3253-18-2. Les jugements mentionnés à l'article L. 3253-12 s'entendent de toute décision équivalente prise par l'autorité étrangère compétente. Les institutions mentionnées à l'article L. 3253-14 sont subrogées dans les droits des salariés pour lesquels elles ont réalisé des avances",
@@ -72,14 +72,82 @@ Array [
     "_type": "_doc",
     "key": "code_du_travaill3253-18-7",
   },
+  Object {
+    "_id": "VOqtzm0BmNudRMfOycIy",
+    "_index": "code_du_travail_numerique-1571130522109",
+    "_score": 9.124884,
+    "_source": Object {
+      "description": "En cas de rupture du contrat d'apprentissage en application de l'article L. 6222-18 , le centre de formation dans lequel est inscrit l'apprenti prend les dispositions nécessaires pour lui permettre de suivre sa formation théorique pendant six mois et contribue à lui trouver un nouvel employeur susceptible de lui permettre d'achever son cycle de formation",
+      "slug": "l6222-18-2",
+      "source": "code_du_travail",
+      "title": "L6222-18-2",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000037386020&cidTexte=LEGITEXT000006072050",
+    },
+    "_type": "_doc",
+    "key": "code_du_travaill6222-18-2",
+  },
+  Object {
+    "_id": "YOqtzm0BmNudRMfOxr53",
+    "_index": "code_du_travail_numerique-1571130522109",
+    "_score": 9.008938,
+    "_source": Object {
+      "description": "La garantie due en application de l'article L. 3253-18-1 porte sur les créances impayées mentionnées à l'article L. 3253-8. Toutefois, les délais prévus aux 2° et 3° de l'article L. 3253-8 sont portés à trois mois à compter de toute décision équivalente à une décision de liquidation ou arrêtant un plan de redressement",
+      "slug": "l3253-18-3",
+      "source": "code_du_travail",
+      "title": "L3253-18-3",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018050550&cidTexte=LEGITEXT000006072050",
+    },
+    "_type": "_doc",
+    "key": "code_du_travaill3253-18-3",
+  },
+  Object {
+    "_id": "0eqtzm0BmNudRMfOvbQ3",
+    "_index": "code_du_travail_numerique-1571130522109",
+    "_score": 8.901258,
+    "_source": Object {
+      "slug": "1501-convention-collective-nationale-de-la-restauration-rapide-du-18-mars-1988",
+      "source": "conventions_collectives",
+      "title": "Convention collective nationale de la restauration rapide du 18 mars 1988",
+      "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635596",
+    },
+    "_type": "_doc",
+    "key": "conventions_collectives1501-convention-collective-nationale-de-la-restauration-rapide-du-18-mars-1988",
+  },
+  Object {
+    "_id": "e-qtzm0BmNudRMfOvbQ2",
+    "_index": "code_du_travail_numerique-1571130522109",
+    "_score": 8.901258,
+    "_source": Object {
+      "slug": "2264-convention-collective-nationale-de-lhospitalisation-privee-du-18-avril-200",
+      "source": "conventions_collectives",
+      "title": "Convention collective nationale de l'hospitalisation privée du 18 avril 2002",
+      "url": "https://www.legifrance.gouv.fr/affichIDCC.do?idConvention=KALICONT000005635813",
+    },
+    "_type": "_doc",
+    "key": "conventions_collectives2264-convention-collective-nationale-de-lhospitalisation-privee-du-18-avril-200",
+  },
+  Object {
+    "_id": "Zeqtzm0BmNudRMfOxr53",
+    "_index": "code_du_travail_numerique-1571130522109",
+    "_score": 8.865576,
+    "_source": Object {
+      "description": "Lorsque le syndic étranger ou toute personne exerçant une fonction similaire à celle du mandataire judiciaire, de l'administrateur judiciaire ou du liquidateur a cessé ses fonctions ou dans le cas mentionné au 2° de l'article L. 3253-18-2 , les institutions de garantie versent les sommes dues au salarié sur présentation, par celui-ci, des pièces justifiant du montant de sa créance. Dans ce cas, les dispositions relatives aux relevés des créances ne sont pas applicables",
+      "slug": "l3253-18-8",
+      "source": "code_du_travail",
+      "title": "L3253-18-8",
+      "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do;?idArticle=LEGIARTI000018050529&cidTexte=LEGITEXT000006072050",
+    },
+    "_type": "_doc",
+    "key": "code_du_travaill3253-18-8",
+  },
 ]
 `;
 
 exports[`return search results for demission from datafiller 1`] = `
 Array [
   Object {
-    "_id": "VzA3km0BfI8P84QL70Xg",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "cOqtzm0BmNudRMfO3-Bv",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 19.505245,
     "_source": Object {
       "date": "24/01/2019",
@@ -641,8 +709,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "LDA3km0BfI8P84QL-0iG",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "Reqtzm0BmNudRMfO7uMC",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 33.427307,
     "_source": Object {
       "anchor": "#Comment-presenter-une-demission",
@@ -1173,8 +1241,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "CzA3km0BfI8P84QL1Rs5",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "JOqtzm0BmNudRMfOvbY8",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 12.160313,
     "_source": Object {
       "description": "Le contrat de travail à durée indéterminée peut être rompu à l'initiative de l'employeur ou du salarié, ou d'un commun accord, dans les conditions prévues par les dispositions du présent titre. Ces dispositions ne sont pas applicables pendant la période d'essai",
@@ -1188,8 +1256,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "uTA3km0BfI8P84QL1Rs8",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "0uqtzm0BmNudRMfOvbY_",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 9.982857,
     "_source": Object {
       "description": "En cas de démission, l'existence et la durée du préavis sont fixées par la loi, ou par convention ou accord collectif de travail. En l'absence de dispositions légales, de convention ou accord collectif de travail relatifs au préavis, son existence et sa durée résultent des usages pratiqués dans la localité et dans la profession. Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
@@ -1203,8 +1271,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "fjA3km0BfI8P84QL70bm",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "l-qtzm0BmNudRMfO3-F0",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 32.330387,
     "_source": Object {
       "breadcrumbs": Array [
@@ -1760,8 +1828,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "EjA3km0BfI8P84QL70Xf",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "K-qtzm0BmNudRMfO3-Bu",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 30.589655,
     "_source": Object {
       "breadcrumbs": Array [
@@ -2338,8 +2406,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "azA3km0BfI8P84QL70Xh",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "hOqtzm0BmNudRMfO3-Bv",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 31.31614,
     "_source": Object {
       "breadcrumbs": Array [
@@ -2886,8 +2954,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "hDA3km0BfI8P84QL70bn",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "neqtzm0BmNudRMfO3-F0",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 30.55619,
     "_source": Object {
       "breadcrumbs": Array [
@@ -3434,8 +3502,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "MjA3km0BfI8P84QL-0iG",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "S-qtzm0BmNudRMfO7uMC",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 34.62175,
     "_source": Object {
       "anchor": "#Le-salarie-peut-il-lt-lt-demissionner-dans-le-cadre-d-un-contrat-a-nbsp",
@@ -3966,8 +4034,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "LzA3km0BfI8P84QL-0iG",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "SOqtzm0BmNudRMfO7uMC",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 29.414757,
     "_source": Object {
       "anchor": "#Faut-il-respecter-un-preavis",
@@ -4498,8 +4566,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "KjA3km0BfI8P84QL70bl",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "Q-qtzm0BmNudRMfO3-Fy",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 31.990374,
     "_source": Object {
       "breadcrumbs": Array [
@@ -5071,8 +5139,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "CDA3km0BfI8P84QL70bk",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "Ieqtzm0BmNudRMfO3-Fy",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 28.152678,
     "_source": Object {
       "breadcrumbs": Array [
@@ -5619,8 +5687,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "LjA3km0BfI8P84QL-0iG",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "R-qtzm0BmNudRMfO7uMC",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 40.60141,
     "_source": Object {
       "anchor": "#Le-refus-par-le-salarie-d-accepter-un-changement-des-conditions-de-nbsp",
@@ -6151,8 +6219,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "ujA3km0BfI8P84QL1Rs8",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "0-qtzm0BmNudRMfOvbY_",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 10.422405,
     "_source": Object {
       "description": "La rupture d'un contrat de travail à durée indéterminée à l'initiative du salarié ouvre droit, si elle est abusive, à des dommages et intérêts pour l'employeur. En cas de litige, le juge se prononce conformément aux dispositions de l'article L. 1235-1 . Un décret en Conseil d'Etat détermine les modalités d'application du présent article",
@@ -6166,8 +6234,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "jzA3km0BfI8P84QL70Xi",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "qOqtzm0BmNudRMfO3-Bw",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 32.24402,
     "_source": Object {
       "breadcrumbs": Array [
@@ -6734,8 +6802,8 @@ Array [
     "_type": "_doc",
   },
   Object {
-    "_id": "MDA3km0BfI8P84QL-0iG",
-    "_index": "code_du_travail_numerique-1570116170605",
+    "_id": "Seqtzm0BmNudRMfO7uMC",
+    "_index": "code_du_travail_numerique-1571130522109",
     "_score": 28.706734,
     "_source": Object {
       "anchor": "#Et-les-heures-pour-recherche-d-emploi",

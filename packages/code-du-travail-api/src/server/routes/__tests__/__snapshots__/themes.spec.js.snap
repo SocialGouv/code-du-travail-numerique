@@ -18,8 +18,8 @@ Object {
   "position": 1,
   "refs": Array [
     Object {
-      "_id": "vjA3km0BfI8P84QL70bo",
-      "_index": "code_du_travail_numerique-1570116170605",
+      "_id": "1-qtzm0BmNudRMfO3-F1",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 32.59869,
       "_source": Object {
         "breadcrumbs": Array [
@@ -556,8 +556,8 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "9zA3km0BfI8P84QL70bp",
-      "_index": "code_du_travail_numerique-1570116170605",
+      "_id": "EOqtzm0BmNudRMfO3-J2",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 33.072098,
       "_source": Object {
         "breadcrumbs": Array [
@@ -1094,8 +1094,8 @@ Object {
       "_type": "_doc",
     },
     Object {
-      "_id": "GjA3km0BfI8P84QL70fp",
-      "_index": "code_du_travail_numerique-1570116170605",
+      "_id": "M-qtzm0BmNudRMfO3-J2",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 35.03227,
       "_source": Object {
         "breadcrumbs": Array [
@@ -1677,24 +1677,9 @@ Object {
       "title": "Embauche et contrat de travail",
     },
     Object {
-      "position": 1,
-      "slug": "1-embauche-et-contrat-de-travail",
-      "title": "Embauche et contrat de travail",
-    },
-    Object {
       "position": 2,
       "slug": "2-salaire-et-remuneration",
       "title": "Salaire et Rémunération",
-    },
-    Object {
-      "position": 2,
-      "slug": "2-salaire-et-remuneration",
-      "title": "Salaire et Rémunération",
-    },
-    Object {
-      "position": 3,
-      "slug": "3-temps-de-travail",
-      "title": "Temps de travail",
     },
     Object {
       "position": 3,
@@ -1707,19 +1692,29 @@ Object {
       "title": "Congés et repos",
     },
     Object {
-      "position": 4,
-      "slug": "4-conges-et-repos",
-      "title": "Congés et repos",
-    },
-    Object {
       "position": 5,
       "slug": "5-emploi-et-formation-professionnelle",
       "title": "Emploi et formation professionnelle",
     },
     Object {
-      "position": 5,
-      "slug": "5-emploi-et-formation-professionnelle",
-      "title": "Emploi et formation professionnelle",
+      "position": 6,
+      "slug": "6-sante-securite-et-conditions-de-travail",
+      "title": "Santé, sécurité et conditions de travail",
+    },
+    Object {
+      "position": 7,
+      "slug": "7-representation-du-personnel-et-negociation-collective",
+      "title": "Représentation du personnel et négociation collective",
+    },
+    Object {
+      "position": 8,
+      "slug": "8-depart-de-lentreprise",
+      "title": "Départ de l'entreprise",
+    },
+    Object {
+      "position": 9,
+      "slug": "9-conflits-au-travail-et-controle-de-la-reglementation",
+      "title": "Conflits au travail et contrôle de la réglementation",
     },
   ],
 }

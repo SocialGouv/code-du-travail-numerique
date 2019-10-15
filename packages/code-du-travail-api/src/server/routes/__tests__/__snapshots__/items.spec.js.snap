@@ -38,8 +38,8 @@ Object {
 
 exports[`return item from source and slug  1`] = `
 Object {
-  "_id": "LDA3km0BfI8P84QL-0iG",
-  "_index": "code_du_travail_numerique-1570116170605",
+  "_id": "Reqtzm0BmNudRMfO7uMC",
+  "_index": "code_du_travail_numerique-1571130522109",
   "_score": 30.911184,
   "_source": Object {
     "date": "18/01/2019",
@@ -53,8 +53,8 @@ Object {
   "_type": "_doc",
   "relatedItems": Array [
     Object {
-      "_id": "b8EzzG0BpOjghFhh75SP",
-      "_index": "code_du_travail_numerique-1571088983811",
+      "_id": "Reqtzm0BmNudRMfO7uMC",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 86.2706,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
@@ -68,8 +68,8 @@ Object {
       "key": "fiches_ministere_travailla-demission-comment-presenter-une-demission",
     },
     Object {
-      "_id": "f8EzzG0BpOjghFhh9Zgp",
-      "_index": "code_du_travail_numerique-1571088983811",
+      "_id": "Veqtzm0BmNudRMfO9edD",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 40.036495,
       "_source": Object {
         "description": "Connaître la durée du préavis de démission",
@@ -81,8 +81,8 @@ Object {
       "key": "outilspreavis-demission",
     },
     Object {
-      "_id": "p8EzzG0BpOjghFhh9Zgp",
-      "_index": "code_du_travail_numerique-1571088983811",
+      "_id": "feqtzm0BmNudRMfO9edD",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 33.09464,
       "_source": Object {
         "slug": "mon-preavis-de-licenciement-ou-de-demission-doit-il-etre-execute-en-totalite",
@@ -93,8 +93,8 @@ Object {
       "key": "contributionsmon-preavis-de-licenciement-ou-de-demission-doit-il-etre-execute-en-totalite",
     },
     Object {
-      "_id": "wcEzzG0BpOjghFhh5JKS",
-      "_index": "code_du_travail_numerique-1571088983811",
+      "_id": "l-qtzm0BmNudRMfO3-F0",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 33.028248,
       "_source": Object {
         "description": "Le salarié peut démissionner pendant ses congés payés, mais le préavis commence à courir à l'issue de ses congés (sauf accord avec l'employeur).",
@@ -107,8 +107,8 @@ Object {
       "key": "fiches_service_publicpeut-on-demissionner-pendant-ses-conges-payes",
     },
     Object {
-      "_id": "TsEzzG0BpOjghFhh5JGM",
-      "_index": "code_du_travail_numerique-1571088983811",
+      "_id": "JOqtzm0BmNudRMfO3-Bu",
+      "_index": "code_du_travail_numerique-1571130522109",
       "_score": 32.97167,
       "_source": Object {
         "description": "Le salarié peut revenir sur sa démission. La rétractation s'impose à l'employeur si la volonté réelle de démissionner du salarié est remise en cause.",
@@ -119,6 +119,70 @@ Object {
       },
       "_type": "_doc",
       "key": "fiches_service_publicle-salarie-peut-il-revenir-sur-sa-demission",
+    },
+    Object {
+      "_id": "Y-qtzm0BmNudRMfO9edD",
+      "_index": "code_du_travail_numerique-1571130522109",
+      "_score": 31.991455,
+      "_source": Object {
+        "slug": "quelle-est-la-duree-du-preavis-a-respecter-en-cas-de-demission-pour-les-ouvriers",
+        "source": "contributions",
+        "title": "Quelle est la durée du préavis à respecter en cas de démission pour les ouvriers?",
+      },
+      "_type": "_doc",
+      "key": "contributionsquelle-est-la-duree-du-preavis-a-respecter-en-cas-de-demission-pour-les-ouvriers",
+    },
+    Object {
+      "_id": "bOqtzm0BmNudRMfO9edD",
+      "_index": "code_du_travail_numerique-1571130522109",
+      "_score": 31.991455,
+      "_source": Object {
+        "slug": "quelle-est-la-duree-du-preavis-a-respecter-en-cas-de-demission-pour-les-etam",
+        "source": "contributions",
+        "title": "Quelle est la durée du préavis à respecter en cas de démission pour les ETAM ?",
+      },
+      "_type": "_doc",
+      "key": "contributionsquelle-est-la-duree-du-preavis-a-respecter-en-cas-de-demission-pour-les-etam",
+    },
+    Object {
+      "_id": "cOqtzm0BmNudRMfO3-Bv",
+      "_index": "code_du_travail_numerique-1571130522109",
+      "_score": 31.659512,
+      "_source": Object {
+        "description": "La démission permet au salarié, à son initiative, de rompre son contrat de travail, sous conditions.",
+        "slug": "demission-dun-salarie",
+        "source": "fiches_service_public",
+        "title": "Démission d'un salarié",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F2883",
+      },
+      "_type": "_doc",
+      "key": "fiches_service_publicdemission-dun-salarie",
+    },
+    Object {
+      "_id": "K-qtzm0BmNudRMfO3-Bu",
+      "_index": "code_du_travail_numerique-1571130522109",
+      "_score": 31.28963,
+      "_source": Object {
+        "description": "Oui. Toute salariée peut démissionner pendant un congé maternité, dans les conditions habituelles prévues en matière de démission.",
+        "slug": "peut-on-demissionner-pendant-un-conge-maternite",
+        "source": "fiches_service_public",
+        "title": "Peut-on démissionner pendant un congé maternité ?",
+        "url": "https://www.service-public.fr/particuliers/vosdroits/F1730",
+      },
+      "_type": "_doc",
+      "key": "fiches_service_publicpeut-on-demissionner-pendant-un-conge-maternite",
+    },
+    Object {
+      "_id": "ZOqtzm0BmNudRMfO9edD",
+      "_index": "code_du_travail_numerique-1571130522109",
+      "_score": 31.06173,
+      "_source": Object {
+        "slug": "quelle-est-la-duree-du-preavis-a-respecter-en-cas-de-demission-pour-les-ingenieurs-et-cadres",
+        "source": "contributions",
+        "title": "Quelle est la durée du préavis à respecter en cas de démission pour les ingénieurs et cadres ?",
+      },
+      "_type": "_doc",
+      "key": "contributionsquelle-est-la-duree-du-preavis-a-respecter-en-cas-de-demission-pour-les-ingenieurs-et-cadres",
     },
   ],
 }
