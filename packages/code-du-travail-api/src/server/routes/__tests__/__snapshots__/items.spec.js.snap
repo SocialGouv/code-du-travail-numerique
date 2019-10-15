@@ -68,7 +68,7 @@ Object {
     Object {
       "_id": "2",
       "_index": "cdtn_document_test",
-      "_score": 21.238884,
+      "_score": 20.930048,
       "_source": Object {
         "anchor": "#Comment-presenter-une-demission",
         "breadcrumbs": Array [
@@ -97,7 +97,7 @@ Object {
     Object {
       "_id": "5",
       "_index": "cdtn_document_test",
-      "_score": 7.1408544,
+      "_score": 6.9938016,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
@@ -119,7 +119,7 @@ Object {
     Object {
       "_id": "6",
       "_index": "cdtn_document_test",
-      "_score": 5.7624264,
+      "_score": 6.0801697,
       "_source": Object {
         "slug": "dans-les-hcr-quel-est-le-preavis-de-demission",
         "source": "faq",
@@ -131,7 +131,7 @@ Object {
     Object {
       "_id": "4",
       "_index": "cdtn_document_test",
-      "_score": 5.177784,
+      "_score": 5.0822577,
       "_source": Object {
         "breadcrumbs": Array [
           Object {
@@ -159,7 +159,7 @@ Object {
     Object {
       "_id": "7",
       "_index": "cdtn_document_test",
-      "_score": 4.944805,
+      "_score": 4.865374,
       "_source": Object {
         "slug": "joccupe-un-poste-de-vendeuse-en-boulangerie-patisserie-et-je-viens-de-poser-ma-demission-quelles-sont-les-consequences-dun-arret-maladie-pendant-la-periode-de-preavis-est-ce-que-je-peux-etre-sanctionnee-en-cas-darret-de-travail",
         "source": "faq",
@@ -171,7 +171,7 @@ Object {
     Object {
       "_id": "3",
       "_index": "cdtn_document_test",
-      "_score": 2.8439517,
+      "_score": 2.7256262,
       "_source": Object {
         "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
         "breadcrumbs": Array [
