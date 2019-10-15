@@ -2,7 +2,6 @@ import { Client } from "@elastic/elasticsearch";
 
 import { logger } from "./logger";
 import { documentMapping } from "./document.mapping";
-import { annuaireMapping } from "./annuaire.mapping";
 import { conventionCollectiveMapping } from "./convention_collective.mapping";
 import { themesMapping } from "./themes.mapping";
 import {
@@ -14,20 +13,15 @@ import {
 import { cdtnCcnGen } from "./populate";
 
 import conventionList from "@socialgouv/kali-data/data/index.json";
-import annuaire from "../dataset/annuaire/annuaire.data.json";
 import themes from "../dataset/datafiller/themes.data.json";
 
 const CDTN_INDEX_NAME =
   process.env.ELASTICSEARCH_DOCUMENT_INDEX || "code_du_travail_numerique";
 
-const ANNUAIRE_INDEX_NAME =
-  process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_annuaire";
-
 const CDTN_CCN_NAME =
   process.env.ELASTICSEARCH_CONVENTION_INDEX || "conventions_collectives";
 
-const THEMES_INDEX_NAME =
-  process.env.ELASTICSEARCH_ANNUAIRE_INDEX || "cdtn_themes";
+const THEME_INDEX_NAME = process.env.ELASTICSEARCH_THEME_INDEX || "cdtn_themes";
 
 const ELASTICSEARCH_URL =
   process.env.ELASTICSEARCH_URL || "http://localhost:9200";
@@ -74,38 +68,22 @@ async function main() {
     documents
   });
 
-  // Indexing Annuaire data
-  await createIndex({
-    client,
-    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
-    mappings: annuaireMapping
-  });
-  await indexDocumentsBatched({
-    client,
-    indexName: `${ANNUAIRE_INDEX_NAME}-${ts}`,
-    documents: annuaire
-  });
-
   // Indexing Themes data
   await createIndex({
     client,
-    indexName: `${THEMES_INDEX_NAME}-${ts}`,
+    indexName: `${THEME_INDEX_NAME}-${ts}`,
     mappings: themesMapping
   });
   await indexDocumentsBatched({
     client,
-    indexName: `${THEMES_INDEX_NAME}-${ts}`,
+    indexName: `${THEME_INDEX_NAME}-${ts}`,
     documents: themes
   });
 
   // Creating alias
   await client.indices.putAlias({
-    index: `${ANNUAIRE_INDEX_NAME}-${ts}`,
-    name: ANNUAIRE_INDEX_NAME
-  });
-  await client.indices.putAlias({
-    index: `${THEMES_INDEX_NAME}-${ts}`,
-    name: THEMES_INDEX_NAME
+    index: `${THEME_INDEX_NAME}-${ts}`,
+    name: THEME_INDEX_NAME
   });
   await client.indices.putAlias({
     index: `${CDTN_CCN_NAME}-${ts}`,
@@ -116,12 +94,7 @@ async function main() {
     name: CDTN_INDEX_NAME
   });
 
-  const patterns = [
-    CDTN_INDEX_NAME,
-    THEMES_INDEX_NAME,
-    CDTN_CCN_NAME,
-    ANNUAIRE_INDEX_NAME
-  ];
+  const patterns = [CDTN_INDEX_NAME, THEME_INDEX_NAME, CDTN_CCN_NAME];
   await deleteOldIndex({ client, patterns, timestamp: ts });
 }
 
