@@ -171,6 +171,20 @@ Object {
       "_score": 2.7256262,
       "_source": Object {
         "anchor": "#L-absence-prolongee-du-salarie-est-elle-une-demission",
+        "breadcrumbs": Array [
+          Object {
+            "id": 7,
+            "label": "Départ de l'entreprise",
+            "parent": null,
+            "slug": "7-depart-de-lentreprise",
+          },
+          Object {
+            "id": 37,
+            "label": "Démission",
+            "parent": "7-depart-de-lentreprise",
+            "slug": "37-demission",
+          },
+        ],
         "description": "La démission permet au salarié de rompre son CDI de sa propre initiative. Si un délai de préavis est prévu, il doit être respecté.",
         "slug": "demission-labsence-prolongee-du-salarie-est-elle-une-demission",
         "source": "fiches_ministere_travail",
