@@ -38,6 +38,7 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.125rem;
+  color: #434956;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
@@ -53,6 +54,11 @@ exports[`<Tabulator /> should have two different levels of headings 1`] = `
 .c2[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
+}
+
+.c3 {
+  color: #434956;
+  background-color: #fff;
 }
 
 .c3.react-tabs__tab-panel--selected {
@@ -186,6 +192,7 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.125rem;
+  color: #434956;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
@@ -201,6 +208,11 @@ exports[`<Tabulator /> should incease heading levels if not 0 1`] = `
 .c2[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
+}
+
+.c3 {
+  color: #434956;
+  background-color: #fff;
 }
 
 .c3.react-tabs__tab-panel--selected {
@@ -334,6 +346,7 @@ exports[`<Tabulator /> should render 1`] = `
   margin-right: 0.25rem;
   padding: 0.625rem 1rem;
   font-size: 1.125rem;
+  color: #434956;
   background-color: #ebeff3;
   border: 1px solid #c9d3df;
   border-bottom: 1px solid #005994;
@@ -349,6 +362,11 @@ exports[`<Tabulator /> should render 1`] = `
 .c2[aria-selected="true"] {
   color: #fff;
   background-color: #005994;
+}
+
+.c3 {
+  color: #434956;
+  background-color: #fff;
 }
 
 .c3.react-tabs__tab-panel--selected {

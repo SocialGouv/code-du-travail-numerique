@@ -3,44 +3,6 @@
 exports[`<SearchResults/> should render no results 1`] = `<div />`;
 
 exports[`<SearchResults/> should render results 1`] = `
-.c1 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1.25rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fff;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  margin-bottom: 1.25rem;
-  -webkit-transition: 200ms color,200ms box-shadow;
-  transition: 200ms color,200ms box-shadow;
-}
-
-.c2:visited {
-  color: #434956;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2:active,
-.c2:hover {
-  color: #005994;
-  box-shadow: 0 5px 10px 0 #ebeff3;
-}
-
 .c0 {
   max-width: 1200px;
   margin: 0 auto;
@@ -54,6 +16,45 @@ exports[`<SearchResults/> should render results 1`] = `
 
 .c0 > *:last-child {
   margin-bottom: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1.25rem;
+  color: #005994;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+
+.c2:visited {
+  color: #434956;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2:active,
+.c2:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
+}
+
+.c1 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .c3 {
@@ -91,7 +92,7 @@ exports[`<SearchResults/> should render results 1`] = `
           class="c2"
           href="/undefined/mer-il-est-fou?q=search test"
         >
-          <span>
+          <div>
             <p
               class="c3"
             >
@@ -103,7 +104,7 @@ exports[`<SearchResults/> should render results 1`] = `
               Mer il est fou!
             </h3>
             
-          </span>
+          </div>
         </a>
       </li>
     </ul>

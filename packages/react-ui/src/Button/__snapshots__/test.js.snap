@@ -2,6 +2,7 @@
 
 exports[`<Button /> it renders a Button danger 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -46,6 +47,7 @@ exports[`<Button /> it renders a Button danger 1`] = `
 
 exports[`<Button /> it renders a Button icon 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -84,6 +86,7 @@ exports[`<Button /> it renders a Button icon 1`] = `
 
 exports[`<Button /> it renders a Button info 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -128,6 +131,7 @@ exports[`<Button /> it renders a Button info 1`] = `
 
 exports[`<Button /> it renders a Button link 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -176,6 +180,7 @@ exports[`<Button /> it renders a Button link 1`] = `
 
 exports[`<Button /> it renders a Button primary 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -220,6 +225,7 @@ exports[`<Button /> it renders a Button primary 1`] = `
 
 exports[`<Button /> it renders a Button secondary 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -264,6 +270,7 @@ exports[`<Button /> it renders a Button secondary 1`] = `
 
 exports[`<Button /> it renders a Button success 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -308,6 +315,7 @@ exports[`<Button /> it renders a Button success 1`] = `
 
 exports[`<Button /> it renders a Button warning 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -352,6 +360,7 @@ exports[`<Button /> it renders a Button warning 1`] = `
 
 exports[`<Button /> renders 1`] = `
 .c0 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;

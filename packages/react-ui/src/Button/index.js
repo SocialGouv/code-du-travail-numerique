@@ -5,13 +5,8 @@ import { lighten, transparentize } from "polished";
 
 import { animations, fonts, spacing, variants } from "../theme";
 
-// We don't want the variant prop to be passed down to the button
-// eslint-disable-next-line
-const RootButton = ({ variant, onClick, ...props }) => {
-  return <button {...props} onClick={onClick} />;
-};
-
-const StyledButton = styled(RootButton)`
+export const StyledButton = styled.button`
+  display: inline-block;
   padding: ${spacing.small} ${spacing.xmedium};
   appearance: none;
   text-align: center;
@@ -87,17 +82,19 @@ const StyledButton = styled(RootButton)`
   }}
 `;
 
-export const Button = ({ children, ...props }) => (
-  <StyledButton {...props}>{children}</StyledButton>
+export const Button = ({ noButton, ...props }) => (
+  <StyledButton as={noButton ? "div" : "button"} {...props} />
 );
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
+  noButton: PropTypes.bool,
   variant: PropTypes.oneOf(["default", "icon", "link"].concat(variants)),
   onClick: PropTypes.func
 };
 
 Button.defaultProps = {
-  variant: "default",
-  onClick: () => {}
+  noButton: false,
+  onClick: () => {},
+  variant: "default"
 };

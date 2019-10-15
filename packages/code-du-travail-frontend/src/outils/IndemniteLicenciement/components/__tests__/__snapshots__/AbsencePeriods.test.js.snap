@@ -2,6 +2,7 @@
 
 exports[`<AbsencePeriods /> should add a period 1`] = `
 .c5 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -188,6 +189,7 @@ exports[`<AbsencePeriods /> should add a period 1`] = `
 
 exports[`<AbsencePeriods /> should delete a period 1`] = `
 .c4 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -287,6 +289,7 @@ exports[`<AbsencePeriods /> should delete a period 1`] = `
 
 exports[`<AbsencePeriods /> should render 1`] = `
 .c5 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;

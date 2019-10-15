@@ -1,46 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StepSalaires /> should render lastSalaires 1`] = `
-.c2 {
-  padding: 0;
-  font-size: 1.15rem;
-  margin-right: 2em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 1.25rem;
-}
-
-.c0 {
-  font-size: 1.25rem;
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
-}
-
 .c3 {
   position: relative;
   overflow: hidden;
@@ -103,6 +63,46 @@ exports[`<StepSalaires /> should render lastSalaires 1`] = `
 
 .c5 tfoot {
   vertical-align: top;
+}
+
+.c2 {
+  padding: 0;
+  font-size: 1.15rem;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 
 .c6 tr > td:nth-child(2) {
@@ -768,6 +768,7 @@ exports[`<StepSalaires /> should render same salaire 1`] = `
 
 exports[`<StepSalaires /> should render tempsPartiel 1`] = `
 .c13 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;

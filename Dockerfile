@@ -33,7 +33,6 @@ COPY ./packages/sources/package.json /app/packages/sources/package.json
 # more often than the dataset.
 # Putting them after will optimise the native docker build cache of the image
 COPY ./packages/react-ui/package.json /app/packages/react-ui/package.json
-COPY ./packages/code-du-travail-ui-old/package.json /app/packages/code-du-travail-ui-old/package.json
 COPY ./packages/code-du-travail-api/package.json /app/packages/code-du-travail-api/package.json
 COPY ./packages/code-du-travail-frontend/package.json /app/packages/code-du-travail-frontend/package.json
 

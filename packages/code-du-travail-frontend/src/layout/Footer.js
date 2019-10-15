@@ -2,8 +2,14 @@ import React from "react";
 import getConfig from "next/config";
 import Link from "next/link";
 import styled from "styled-components";
-import { List, ListItem } from "@cdt/ui-old";
-import { Button, Container, Section, theme } from "@socialgouv/react-ui";
+import {
+  List,
+  ListItem,
+  Button,
+  Container,
+  Section,
+  theme
+} from "@socialgouv/react-ui";
 
 import ServiceRenseignementModal from "../common/ServiceRenseignementModal";
 

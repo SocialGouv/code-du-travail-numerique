@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Toast } from "@cdt/ui-old";
+import { Toast } from "@socialgouv/react-ui";
 
 import { SectionTitle } from "../../common/stepStyles";
 import { ccCriterionName, filterSituations, recapSituation } from "./situation";

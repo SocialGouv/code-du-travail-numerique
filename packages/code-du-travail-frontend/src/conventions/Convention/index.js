@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Tabs } from "@socialgouv/react-ui";
+
 import Info from "./Info";
 import Texte from "./Texte";
 import Explainer from "./Explainer";
 import ListTextes from "./ListTextes";
-import { Tabs } from "@cdt/ui-old";
 
 const Convention = ({ container }) => {
   return (

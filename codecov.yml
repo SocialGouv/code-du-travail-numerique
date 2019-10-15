@@ -8,9 +8,6 @@ coverage:
       api:
         target: 75%
         flags: api
-      ui-old:
-        target: 80%
-        flags: ui-old
       react-ui:
         target: 80%
         flags: react-ui
@@ -25,9 +22,6 @@ flags:
   frontend:
     paths:
       - packages/code-du-travail-frontend
-  ui-old:
-    paths:
-      - packages/code-du-travail-ui-old
   react-ui:
     paths:
       - packages/react-ui

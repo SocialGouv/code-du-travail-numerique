@@ -1,13 +1,13 @@
 import React from "react";
-import Section from "../Section";
-import Container from ".";
+import { Section } from "../Section";
+import { Container } from ".";
 
 export default {
   component: Container,
   title: "Layout|Components/Container"
 };
 
-export const container = () => (
+export const base = () => (
   <>
     <h1>Container</h1>
     <p>

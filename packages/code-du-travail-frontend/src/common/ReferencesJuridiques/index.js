@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Accordion } from "@cdt/ui-old";
-import { Container, Section, theme, Wrapper } from "@socialgouv/react-ui";
+import {
+  Accordion,
+  Container,
+  Section,
+  theme,
+  Wrapper
+} from "@socialgouv/react-ui";
 import ReferenceList from "./ReferenceList";
 import TYPE_REFERENCE from "./typeReference";
 

@@ -4,7 +4,6 @@ import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import Answer from "../../src/common/Answer";
-import ReponseIcon from "../../src/icons/ReponseIcon";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 import Html from "../../src/common/Html";
@@ -57,10 +56,9 @@ class Fiche extends React.Component {
           title={title}
           relatedItems={relatedItems}
           emptyMessage="Cette fiche n'a pas été trouvée"
-          intro={intro && <Intro>{intro} </Intro>}
+          intro={intro && <Intro>{intro}</Intro>}
           html={html}
           footer={footer}
-          icon={ReponseIcon}
           date={date}
           sourceType="Fiche ministère du Travail"
           breadcrumbs={breadcrumbs}

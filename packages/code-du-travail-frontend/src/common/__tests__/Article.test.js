@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Article from "../Article";
-import { icons } from "@cdt/ui-old/";
+import { icons } from "@socialgouv/react-ui/";
 
 const articleProps = {
   title:

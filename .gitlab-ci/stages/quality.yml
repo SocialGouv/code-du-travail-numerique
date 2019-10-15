@@ -22,11 +22,11 @@ Lint @cdtn/api:
   script:
     - yarn workspace @cdt/api lint
 
-Lint @cdtn/ui-old:
+Lint socialgouv/react-ui:
   <<: *quality_stage
   <<: *master_based_stage
   script:
-    - yarn workspace @cdt/ui-old lint
+    - yarn workspace @socialgouv/react-ui lint
 
 Lint @cdtn/frontend:
   <<: *quality_stage
@@ -57,11 +57,11 @@ Test @cdtn/frontend:
   script:
     - yarn workspace @cdt/frontend test --coverage
 
-Test @cdtn/ui-old:
+Test @socialgouv/react-ui:
   <<: *quality_stage
   <<: *master_based_stage
   script:
-    - yarn workspace @cdt/ui-old test --coverage
+    - yarn workspace @socialgouv/react-ui test --coverage
 
 Test @socialgouv/react-fiche-service-public:
   <<: *quality_stage

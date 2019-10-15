@@ -1,23 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PrevNextBar /> should render 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
+.c1 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -37,19 +22,20 @@ exports[`<PrevNextBar /> should render 1`] = `
   border-color: #ebeff3;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c2[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c4 {
+.c3 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -69,19 +55,24 @@ exports[`<PrevNextBar /> should render 1`] = `
   border-color: #005994;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,11 +80,19 @@ exports[`<PrevNextBar /> should render 1`] = `
   display: flex;
 }
 
-.c5 {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
   margin-left: auto;
 }
 
-.c3 {
+.c2 {
   margin-right: auto;
 }
 
@@ -106,16 +105,16 @@ exports[`<PrevNextBar /> should render 1`] = `
 
 <div>
   <div
-    class="c0 c1"
+    class="c0"
   >
     <button
-      class="c2 c3"
+      class="c1 c2"
       type="button"
     >
       Précédent
     </button>
     <button
-      class="c4 c5"
+      class="c3 c4"
     >
       Suivant
     </button>
@@ -124,23 +123,8 @@ exports[`<PrevNextBar /> should render 1`] = `
 `;
 
 exports[`<PrevNextBar /> should render disabled buttons 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
+.c1 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -160,19 +144,20 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   border-color: #ebeff3;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c2[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c4 {
+.c3 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -192,19 +177,24 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   border-color: #005994;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -212,11 +202,19 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
   display: flex;
 }
 
-.c5 {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
   margin-left: auto;
 }
 
-.c3 {
+.c2 {
   margin-right: auto;
 }
 
@@ -229,16 +227,16 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 
 <div>
   <div
-    class="c0 c1"
+    class="c0"
   >
     <button
-      class="c2 c3"
+      class="c1 c2"
       type="button"
     >
       Précédent
     </button>
     <button
-      class="c4 c5"
+      class="c3 c4"
       disabled=""
     >
       Suivant
@@ -248,23 +246,8 @@ exports[`<PrevNextBar /> should render disabled buttons 1`] = `
 `;
 
 exports[`<PrevNextBar /> should render only next button 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
+.c1 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -284,19 +267,20 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   border-color: #ebeff3;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c2[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c4 {
+.c3 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -316,19 +300,24 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   border-color: #005994;
 }
 
-.c4:not([disabled]):hover,
-.c4:not([disabled]):active,
-.c4:not([disabled]):focus {
+.c3:not([disabled]):hover,
+.c3:not([disabled]):active,
+.c3:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c1 {
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -336,11 +325,19 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
   display: flex;
 }
 
-.c5 {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
   margin-left: auto;
 }
 
-.c3 {
+.c2 {
   margin-right: auto;
 }
 
@@ -353,16 +350,16 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 
 <div>
   <div
-    class="c0 c1"
+    class="c0"
   >
     <button
-      class="c2 c3"
+      class="c1 c2"
       type="button"
     >
       Précédent
     </button>
     <button
-      class="c4 c5"
+      class="c3 c4"
     >
       Suivant
     </button>
@@ -371,23 +368,8 @@ exports[`<PrevNextBar /> should render only next button 1`] = `
 `;
 
 exports[`<PrevNextBar /> should render only prev button 1`] = `
-.c0 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c0 > *:first-child {
-  margin-top: 0;
-}
-
-.c0 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
+.c1 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -407,19 +389,24 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   border-color: #ebeff3;
 }
 
-.c2:not([disabled]):hover,
-.c2:not([disabled]):active,
-.c2:not([disabled]):focus {
+.c1:not([disabled]):hover,
+.c1:not([disabled]):active,
+.c1:not([disabled]):focus {
   background: #fbfcfd;
   color: #18181c;
 }
 
-.c2[disabled] {
+.c1[disabled] {
   cursor: not-allowed;
   color: rgba(12,12,14,0.4);
 }
 
-.c1 {
+.c0 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin: 2rem 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -427,7 +414,15 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
   display: flex;
 }
 
-.c3 {
+.c0 > *:first-child {
+  margin-top: 0;
+}
+
+.c0 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
   margin-right: auto;
 }
 
@@ -440,10 +435,10 @@ exports[`<PrevNextBar /> should render only prev button 1`] = `
 
 <div>
   <div
-    class="c0 c1"
+    class="c0"
   >
     <button
-      class="c2 c3"
+      class="c1 c2"
       type="button"
     >
       Précédent

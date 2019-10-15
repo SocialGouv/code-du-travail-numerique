@@ -2,6 +2,7 @@
 
 exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
 .c3 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -151,6 +152,7 @@ exports[`<FeedbackForm /> renders if user is no satisfied 1`] = `
 
 exports[`<FeedbackForm /> renders if user is satisfied 1`] = `
 .c3 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;

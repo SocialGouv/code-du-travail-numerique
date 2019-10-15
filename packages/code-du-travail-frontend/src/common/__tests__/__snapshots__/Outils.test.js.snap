@@ -21,30 +21,37 @@ exports[`<Outils /> should render 1`] = `
   background-color: #fff;
 }
 
-.c6 {
-  padding: 0.625rem 1rem;
-  border: 1px solid #c9d3df;
-  border-radius: 0.25rem;
-  background: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  height: 100%;
-}
-
-.c9 {
-  color: #4c5467;
-  font-size: 0.875rem;
-}
-
 .c8 {
-  color: #005994;
-  font-size: 1.125rem;
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  line-height: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  color: #fff;
+  background: #006be6;
+  border-color: #006be6;
 }
 
-.c7 {
-  width: 2.5rem;
-  display: inline-block;
-  margin: 1rem;
+.c8:not([disabled]):hover,
+.c8:not([disabled]):active,
+.c8:not([disabled]):focus {
+  background: #07f;
+  color: #fff;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  color: rgba(255,255,255,0.4);
 }
 
 .c3 {
@@ -82,62 +89,59 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c10 {
-  padding: 0;
-  width: 100%;
+.c5 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 1.25rem 1.5rem;
   height: 100%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #005994;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background: transparent;
-  border: none;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #c9d3df;
   border-radius: 0.25rem;
+  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  cursor: pointer;
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
 }
 
-.c10 > * {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.c5:hover {
+  border-color: #005994;
+  box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c10:focus > *,
-.c10:active > *,
-.c10:hover > * {
-  border: 1px solid #80bdff;
-  box-shadow: 0 0 2px 2px #e5f1fe;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+.c6 {
+  overflow-y: scroll;
+}
+
+.c7 {
+  margin-top: 1.25rem;
 }
 
 .c2 {
   text-align: center;
   margin-bottom: 2rem;
-}
-
-.c5 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-  height: 100%;
-  border-radius: 0.25rem;
-}
-
-.c5 > * {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.c5:focus > *,
-.c5:active > *,
-.c5:hover > * {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  border: 1px solid #80bdff;
-  box-shadow: 0 0 2px 2px #e5f1fe;
 }
 
 @media print {
@@ -189,21 +193,16 @@ exports[`<Outils /> should render 1`] = `
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/point-of-service_web.svg"
-              />
-              <h3
+              Simulateur d'indemnités de licenciements
+            </div>
+            <div
+              class="c7"
+            >
+              <div
                 class="c8"
               >
-                Simulateur d'indemnités de licenciements
-              </h3>
-              <p
-                class="c9"
-              >
-                Simulez simplement le montant d'une indemnité de licenciement en fonction de votre situation
-              </p>
+                Démarrer
+              </div>
             </div>
           </a>
         </li>
@@ -218,21 +217,16 @@ exports[`<Outils /> should render 1`] = `
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/outils.svg"
-              />
-              <h3
+              Simulateur de délais de préavis de démission
+            </div>
+            <div
+              class="c7"
+            >
+              <div
                 class="c8"
               >
-                Simulateur de délais de préavis de démission
-              </h3>
-              <p
-                class="c9"
-              >
-                Connaître la durée du préavis de démission.
-              </p>
+                Démarrer
+              </div>
             </div>
           </a>
         </li>
@@ -247,21 +241,16 @@ exports[`<Outils /> should render 1`] = `
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/message_web.svg"
-              />
-              <h3
+              Modèles de courriers
+            </div>
+            <div
+              class="c7"
+            >
+              <div
                 class="c8"
               >
-                Modèles de courriers
-              </h3>
-              <p
-                class="c9"
-              >
-                Utilisez des modèles pré-remplis pour vos courriers liés au droit du travail
-              </p>
+                Voir
+              </div>
             </div>
           </a>
         </li>
@@ -271,26 +260,21 @@ exports[`<Outils /> should render 1`] = `
           <a
             class="c5"
             href="/outils/simulateur-embauche"
-            title="Voir tous les modèles de courriers"
+            title="Démarrer une simulation de salaire lors d'une embauche"
           >
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/salary_web.svg"
-              />
-              <h3
+              Simulateur d'embauche
+            </div>
+            <div
+              class="c7"
+            >
+              <div
                 class="c8"
               >
-                Simulateur d'embauche
-              </h3>
-              <p
-                class="c9"
-              >
-                Estimez le salaire lors d'une embauche : total employeur, brut, net
-              </p>
+                Démarrer
+              </div>
             </div>
           </a>
         </li>
@@ -300,26 +284,21 @@ exports[`<Outils /> should render 1`] = `
           <a
             class="c5"
             href="/outils/indemnite-precarite"
-            title="Calculez la prime de précarité"
+            title="Démarrer une simulation de la prime de précarité"
           >
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/coins.svg"
-              />
-              <h3
+              Simulateur de prime de précarité
+            </div>
+            <div
+              class="c7"
+            >
+              <div
                 class="c8"
               >
-                Prime de précarité
-              </h3>
-              <p
-                class="c9"
-              >
-                Simulez la prime de précarité d’un salarié.
-              </p>
+                Démarrer
+              </div>
             </div>
           </a>
         </li>
@@ -327,55 +306,39 @@ exports[`<Outils /> should render 1`] = `
           class="c4"
         >
           <button
-            class="c10"
+            class="c5"
+            href=""
           >
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/book_web.svg"
-              />
-              <h3
+              Votre convention collective
+            </div>
+            <div
+              class="c7"
+            >
+              <div
                 class="c8"
               >
-                Votre convention collective
-              </h3>
-              <p
-                class="c9"
-              >
-                Trouvez simplement la convention collective dont vous dépendez
-              </p>
+                Rechercher
+              </div>
             </div>
           </button>
         </li>
         <li
           class="c4"
         >
-          <a
+          <button
             class="c5"
+            href=""
           >
             <div
               class="c6"
             >
-              <img
-                alt=""
-                class="c7"
-                src="/static/assets/icons/time.svg"
-              />
-              <h3
-                class="c8"
-              >
-                Prochainement
-              </h3>
-              <p
-                class="c9"
-              >
-                Bientôt d'autres outils disponibles...
-              </p>
+              Bientôt d'autres outils disponibles...
             </div>
-          </a>
+            
+          </button>
         </li>
       </ul>
     </div>

@@ -6,7 +6,6 @@ import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
 import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
 import Answer from "../../src/common/Answer";
-import ReponseIcon from "../../src/icons/ReponseIcon";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
 
@@ -75,7 +74,6 @@ class Fiche extends React.Component {
             html={html}
             footer={footer}
             date={date}
-            icon={ReponseIcon}
             sourceType="Fiche service-public.fr"
             additionalContent={
               <ReferencesJuridiques references={references_juridiques} />

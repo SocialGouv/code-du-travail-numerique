@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Wrapper from ".";
+import { Wrapper } from ".";
 
 describe("<Wrapper />", () => {
   test.each([["default"], ["dark"], ["light"]])(

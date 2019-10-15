@@ -1,57 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Recherche /> should render 1`] = `
-.c1 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-.c1 > *:first-child {
-  margin-top: 0;
-}
-
-.c1 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c18 {
+.c16 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 46.25rem;
 }
 
-.c18 > *:first-child {
+.c16 > *:first-child {
   margin-top: 0;
 }
 
-.c18 > *:last-child {
+.c16 > *:last-child {
   margin-bottom: 0;
 }
 
-.c22 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  padding: 0;
-  max-width: 46.25rem;
-}
-
-.c22 > *:first-child {
-  margin-top: 0;
-}
-
-.c22 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c17 {
+.c15 {
   padding: 1.25rem 0;
   color: #434956;
 }
 
-.c15 {
+.c17 {
+  margin-bottom: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #434956;
+  background: #ebeff3;
+  border-color: #cbd6e0;
+}
+
+.c17 > *:first-child {
+  margin-top: 0;
+}
+
+.c17 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c13 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -73,11 +62,12 @@ exports[`<Recherche /> should render 1`] = `
   border: none;
 }
 
-.c15:hover {
+.c13:hover {
   color: #8c94a6;
 }
 
-.c24 {
+.c21 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -97,19 +87,25 @@ exports[`<Recherche /> should render 1`] = `
   border-color: #005994;
 }
 
-.c24:not([disabled]):hover,
-.c24:not([disabled]):active,
-.c24:not([disabled]):focus {
+.c21:not([disabled]):hover,
+.c21:not([disabled]):active,
+.c21:not([disabled]):focus {
   background: #0068ae;
   color: #fff;
 }
 
-.c24[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c12:not(:focus):not(:active) {
+.c26 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c10:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -121,44 +117,7 @@ exports[`<Recherche /> should render 1`] = `
   border: 0;
 }
 
-.c29 {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.c19 {
-  margin-bottom: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  color: #434956;
-  background: #ebeff3;
-  border-color: #cbd6e0;
-}
-
-.c19 > *:first-child {
-  margin-top: 0;
-}
-
-.c19 > *:last-child {
-  margin-bottom: 0;
-}
-
-.c7 {
-  display: inline-block;
-  padding: 0.5rem 0.625rem;
-  font-size: 0.875rem;
-  font-weight: bold;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 1rem;
-  border-radius: 0.25rem;
-  color: #0c0c0e;
-  background: #e5f1fe;
-}
-
-.c11 {
+.c9 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -169,15 +128,15 @@ exports[`<Recherche /> should render 1`] = `
   text-align: left;
 }
 
-.c14 ul {
+.c12 ul {
   z-index: 100;
 }
 
-.c14 li[role="option"]:nth-child(2n + 1) {
+.c12 li[role="option"]:nth-child(2n + 1) {
   background: #f9f9fc;
 }
 
-.c10 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,7 +146,7 @@ exports[`<Recherche /> should render 1`] = `
   padding: 0;
 }
 
-.c13 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,12 +167,12 @@ exports[`<Recherche /> should render 1`] = `
   transition: border 250ms ease;
 }
 
-.c13:focus {
+.c11:focus {
   border-color: #006be6;
   outline: none;
 }
 
-.c16 {
+.c14 {
   position: absolute;
   right: 1px;
   top: 1px;
@@ -227,7 +186,10 @@ exports[`<Recherche /> should render 1`] = `
   background: #fff;
 }
 
-.c2 {
+.c1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,7 +205,15 @@ exports[`<Recherche /> should render 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c1 > *:first-child {
+  margin-top: 0;
+}
+
+.c1 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,7 +228,7 @@ exports[`<Recherche /> should render 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,50 +239,75 @@ exports[`<Recherche /> should render 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.c4:link {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c5 {
+.c4 {
   width: 5rem;
   height: 100%;
   margin-right: 1rem;
 }
 
-.c6 {
+.c5 {
   font-size: 1.125rem;
-  line-height: 1.4;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  line-height: 1.2;
+  font-weight: bold;
 }
 
-.c8 {
+.c6 {
+  display: inline-block;
+  padding: 0.5rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1rem;
+  border-radius: 0.25rem;
+  color: #0c0c0e;
+  background: #e5f1fe;
   margin-left: 1.25rem;
 }
 
-.c9 {
+.c7 {
   width: 350px;
 }
 
-.c21 {
+.c19 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
   text-align: center;
 }
 
-.c23 {
+.c19 > *:first-child {
+  margin-top: 0;
+}
+
+.c19 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c20 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 0;
+  max-width: 46.25rem;
   margin-bottom: 1.25rem;
   text-align: left;
 }
 
-.c25 {
+.c20 > *:first-child {
+  margin-top: 0;
+}
+
+.c20 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c22 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,22 +318,52 @@ exports[`<Recherche /> should render 1`] = `
   justify-content: space-between;
 }
 
-.c27 + .c26 {
+.c22 > *:first-child {
+  margin-top: 0;
+}
+
+.c22 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c24 + .c23 {
   padding-left: 1rem;
 }
 
-.c28 {
+.c25 {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.c30 {
+.c27 {
   margin: 0.5rem 0;
 }
 
-.c30 a,
-.c30 a:visited {
+.c27 a,
+.c27 a:visited {
   color: #434956;
+}
+
+@media print {
+  .c16 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:600px) {
+  .c8 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+@media (max-width:600px) {
+  .c11 {
+    padding: 0 1rem;
+  }
 }
 
 @media print {
@@ -348,8 +373,52 @@ exports[`<Recherche /> should render 1`] = `
   }
 }
 
+@media (max-width:980px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:600px) {
+  .c1 {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width:980px) {
+  .c7 {
+    margin-top: 1.25rem;
+    width: 70%;
+  }
+}
+
+@media (max-width:600px) {
+  .c7 {
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+}
+
 @media print {
   .c18 {
+    display: none;
+  }
+}
+
+@media print {
+  .c19 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media print {
+  .c20 {
     max-width: 100%;
     padding: 0;
   }
@@ -363,22 +432,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c10 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-  }
-}
-
-@media (max-width:600px) {
-  .c13 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:980px) {
-  .c2 {
+  .c22 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -386,44 +440,7 @@ exports[`<Recherche /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c2 {
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width:980px) {
-  .c9 {
-    margin-top: 1.25rem;
-    width: 70%;
-  }
-}
-
-@media (max-width:600px) {
-  .c9 {
-    margin-top: 1.25rem;
-    width: 100%;
-  }
-}
-
-@media print {
-  .c20 {
-    display: none;
-  }
-}
-
-@media (max-width:600px) {
-  .c25 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:600px) {
-  .c27 + .c26 {
+  .c24 + .c23 {
     padding-left: 0;
   }
 }
@@ -433,23 +450,23 @@ exports[`<Recherche /> should render 1`] = `
     class="c0"
   >
     <div
-      class="c1 c2"
+      class="c1"
     >
       <div
-        class="c3"
+        class="c2"
       >
         <a
-          class="c4"
+          class="c3"
           href="/"
           title="Code du travail numérique - retour à l'accueil"
         >
           <img
             alt="symbole de la Marianne, site officiel du gouvernement"
-            class="c5"
+            class="c4"
             src="/static/assets/img/marianne.svg"
           />
           <span
-            class="c6"
+            class="c5"
           >
             Code du travail
             <br />
@@ -457,23 +474,23 @@ exports[`<Recherche /> should render 1`] = `
           </span>
         </a>
         <div
-          class="c7 c8"
+          class="c6"
         >
           Version Bêta
         </div>
       </div>
       <div
-        class="c9"
+        class="c7"
       >
         <form
-          class="c10"
+          class="c8"
         >
           <label
-            class="c11"
+            class="c9"
             for="main-search-input"
           >
             <span
-              class="c12"
+              class="c10"
             >
               Rechercher
             </span>
@@ -488,7 +505,7 @@ exports[`<Recherche /> should render 1`] = `
                 aria-autocomplete="list"
                 aria-controls="react-autowhatever-cdtn-documents-suggester"
                 autocomplete="off"
-                class="c13"
+                class="c11"
                 id="main-search-input"
                 name="query"
                 placeholder="Recherche"
@@ -496,14 +513,14 @@ exports[`<Recherche /> should render 1`] = `
                 value=""
               />
               <div
-                class="c14"
+                class="c12"
                 id="react-autowhatever-cdtn-documents-suggester"
                 role="listbox"
               />
             </div>
           </label>
           <button
-            class="c15 c16"
+            class="c13 c14"
             type="submit"
           >
             <svg
@@ -525,13 +542,13 @@ exports[`<Recherche /> should render 1`] = `
     id="main"
   >
     <div
-      class="c17"
+      class="c15"
     >
       <div
-        class="c18"
+        class="c16"
       >
         <div
-          class="c19"
+          class="c17"
         >
           Nous n’avons pas trouvé de résultat pour votre recherche.
         </div>
@@ -539,48 +556,48 @@ exports[`<Recherche /> should render 1`] = `
     </div>
   </main>
   <footer
-    class="c20"
+    class="c18"
   >
     <div
-      class="c17"
+      class="c15"
     >
       <div
-        class="c1 c21"
+        class="c19"
       >
         <h2>
           Besoin d’un accompagnement personnalisé ?
         </h2>
         <div
-          class="c22 c23"
+          class="c20"
         >
           Les services de renseignement en droit du travail peuvent vous donner des informations juridiques générales relatives au Code du travail, aux conventions collectives, à la jurisprudence. Ils peuvent également vous conseiller et vous orienter dans vos démarches.
         </div>
         <button
-          class="c24"
+          class="c21"
         >
           Contacter les services de renseignement
         </button>
       </div>
     </div>
     <div
-      class="c17"
+      class="c15"
     >
       <div
-        class="c1 c25"
+        class="c22"
       >
         <div
-          class="c26 c27"
+          class="c23 c24"
         >
           <h3
-            class="c28"
+            class="c25"
           >
             Code du travail numérique
           </h3>
           <ul
-            class="c29"
+            class="c26"
           >
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="/droit-du-travail"
@@ -589,7 +606,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="/glossaire"
@@ -598,7 +615,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="/a-propos"
@@ -607,7 +624,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="/mentions-legales"
@@ -616,7 +633,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="mailto:codedutravailnumerique@travail.gouv.fr"
@@ -627,18 +644,18 @@ exports[`<Recherche /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c26 c27"
+          class="c23 c24"
         >
           <h3
-            class="c28"
+            class="c25"
           >
             Aidez-nous à améliorer cet outil
           </h3>
           <ul
-            class="c29"
+            class="c26"
           >
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/tree/vX.Y.Z"
@@ -649,7 +666,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="https://github.com/SocialGouv/code-du-travail-numerique/releases/tag/vX.Y.Z"
@@ -662,18 +679,18 @@ exports[`<Recherche /> should render 1`] = `
           </ul>
         </div>
         <div
-          class="c26 c27"
+          class="c23 c24"
         >
           <h3
-            class="c28"
+            class="c25"
           >
             En collaboration avec
           </h3>
           <ul
-            class="c29"
+            class="c26"
           >
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="https://travail-emploi.gouv.fr/ministere/organisation/article/dgt-direction-generale-du-travail"
@@ -684,7 +701,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="https://incubateur.social.gouv.fr/"
@@ -695,7 +712,7 @@ exports[`<Recherche /> should render 1`] = `
               </a>
             </li>
             <li
-              class="c30"
+              class="c27"
             >
               <a
                 href="https://beta.gouv.fr/"

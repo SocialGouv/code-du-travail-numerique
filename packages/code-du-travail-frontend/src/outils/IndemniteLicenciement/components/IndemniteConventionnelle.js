@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Alert, Toast } from "@cdt/ui-old";
-import { Button, theme } from "@socialgouv/react-ui";
+import { Alert, Toast, Button, theme } from "@socialgouv/react-ui";
 
 import { branches } from "../branches";
 import { SectionTitle, Highlight } from "../../common/stepStyles";

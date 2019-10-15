@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { Field } from "react-final-form";
 import { FieldArray } from "react-final-form-arrays";
 import styled from "styled-components";
-import { Table as UITable } from "@cdt/ui-old";
-import { theme } from "@socialgouv/react-ui";
+import { Table as UITable, theme } from "@socialgouv/react-ui";
 
 import { Input, InlineError } from "../../common/stepStyles";
 import { isNumber } from "../../common/validators";

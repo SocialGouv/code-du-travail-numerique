@@ -1,13 +1,13 @@
 import React from "react";
-import Section from "../Section";
-import Wrapper from ".";
+import { Section } from "../Section";
+import { Wrapper } from ".";
 
 export default {
   component: Wrapper,
   title: "Layout|Components/Wrapper"
 };
 
-export const wrapper = () => (
+export const base = () => (
   <>
     <h1>Wrapper</h1>
     <p>

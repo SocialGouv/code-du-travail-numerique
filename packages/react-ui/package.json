@@ -23,12 +23,16 @@
     "styled-components": "4.x"
   },
   "dependencies": {
+    "@reach/dialog": "^0.2.9",
     "polished": "^3.4.1",
-    "react-feather": "^2.0.3"
+    "react-accessible-accordion": "^3.0.0",
+    "react-feather": "^2.0.3",
+    "react-tabs": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@socialgouv/eslint-config-react": "^0.10.0",

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ScreenReaderOnly, Tabs } from "@cdt/ui-old";
+import { ScreenReaderOnly, Tabs } from "@socialgouv/react-ui";
 
 import { ElementBuilder } from "./ElementBuilder";
 import { ignoreParagraph } from "../utils";

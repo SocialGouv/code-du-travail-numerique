@@ -1,15 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { LargeLink } from "@cdt/ui-old";
-import { theme } from "@socialgouv/react-ui";
+import { LargeLink, theme } from "@socialgouv/react-ui";
 
-import ModeleCourrierIcon from "../icons/ModeleCourrierIcon";
-
-const DownloadFile = ({ title, type, file, icon }) => {
+const DownloadFile = ({ title, type, file }) => {
   const [, extension] = file.split(/\.([a-z]{2,4})$/);
   return (
-    <LargeLink title="Télécharger le courrier type" href={file} icon={icon}>
+    <LargeLink title="Télécharger le courrier type" href={file}>
       <DownloadLabel>
         <span>{title}</span>
         <br />
@@ -20,15 +17,10 @@ const DownloadFile = ({ title, type, file, icon }) => {
   );
 };
 
-DownloadFile.defaultProps = {
-  icon: ModeleCourrierIcon
-};
-
 DownloadFile.propTypes = {
   file: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  icon: PropTypes.func
+  type: PropTypes.string.isRequired
 };
 
 export { DownloadFile };

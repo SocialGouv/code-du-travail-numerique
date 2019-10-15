@@ -1,32 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { breakpoints, spacing } from "../../theme";
 
-const Container = ({ children, narrow, noPadding, ...props }) => {
-  return (
-    <StyledContainer narrow={narrow} noPadding={noPadding} {...props}>
-      {children}
-    </StyledContainer>
-  );
-};
-
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  narrow: PropTypes.bool,
-  noPadding: PropTypes.bool
-};
-
-Container.defaultProps = {
-  className: "",
-  narrow: false,
-  noPadding: false
-};
-
-export default Container;
-
-const StyledContainer = styled.div`
+export const Container = styled.div`
   max-width: ${breakpoints.desktop};
   margin: 0 auto;
   padding: 0 ${spacing.medium};
@@ -55,3 +31,16 @@ const StyledContainer = styled.div`
     padding: 0;
   }
 `;
+
+Container.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  narrow: PropTypes.bool,
+  noPadding: PropTypes.bool
+};
+
+Container.defaultProps = {
+  className: "",
+  narrow: false,
+  noPadding: false
+};

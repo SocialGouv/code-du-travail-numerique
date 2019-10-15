@@ -37,6 +37,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 .c5 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -69,6 +70,7 @@ exports[`<Feedback/> should render 1`] = `
 }
 
 .c8 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -215,6 +217,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -247,6 +250,7 @@ exports[`<Feedback/> should render form once user answer no 1`] = `
 }
 
 .c9 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -486,6 +490,7 @@ exports[`<Feedback/> should render form once user answer yes 1`] = `
 }
 
 .c7 {
+  display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;

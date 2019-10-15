@@ -1,30 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { box, breakpoints, spacing } from "../../theme";
 
-const Wrapper = ({ children, variant, ...props }) => {
-  return (
-    <StyledWrapper variant={variant} {...props}>
-      {children}
-    </StyledWrapper>
-  );
-};
-
-Wrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  size: PropTypes.oneOf(["default", "large"]),
-  variant: PropTypes.oneOf(["default", "light", "dark"])
-};
-
-Wrapper.defaultProps = {
-  className: "",
-  size: "default",
-  variant: "default"
-};
-
-const StyledWrapper = styled.div`
+export const Wrapper = styled.div`
   padding: ${spacing.small} ${spacing.medium};
   color: ${({ theme }) => theme.darkText};
   border: ${box.border};
@@ -68,4 +46,15 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default Wrapper;
+Wrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  size: PropTypes.oneOf(["default", "large"]),
+  variant: PropTypes.oneOf(["default", "light", "dark"])
+};
+
+Wrapper.defaultProps = {
+  className: "",
+  size: "default",
+  variant: "default"
+};
