@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Router, { useRouter } from "next/router";
 import { Button, theme } from "@socialgouv/react-ui";
@@ -15,10 +15,14 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
   // query in the input box
   const [query, setQuery] = useState(router.query.q || "");
   const [suggestions, setSuggestions] = useState([]);
+  const shouldUpdate = useRef(true);
 
   useEffect(() => {
     setQuery(router.query.q);
-  }, [router.query.q]);
+    return function() {
+      shouldUpdate.current = false;
+    };
+  }, [router.query.q, shouldUpdate]);
 
   const onFormSubmit = e => {
     e.preventDefault();
@@ -55,7 +59,9 @@ const SearchBar = ({ hasFocus = false, inputId, hasButton = false }) => {
       const results = await fetchSuggestResults(value).then(items =>
         items.slice(0, suggestMaxResults)
       );
-      setSuggestions(results);
+      if (shouldUpdate.current) {
+        setSuggestions(results);
+      }
     } catch (error) {
       console.error("fetch error", error);
     }
