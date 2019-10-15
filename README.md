@@ -62,7 +62,7 @@ You have to populate data locally for the nlp api with this command
 $ CDTN_REGISTRY=registry.gitlab.factory.social.gouv.fr/socialgouv/code-du-travail-numerique
 $ docker run \
         --rm \
-        --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master)/app/dump.tf.json \
+        --entrypoint cat $CDTN_REGISTRY/data:$(git rev-parse origin/master) /app/dump.tf.json \
         > ./packages/code-du-travail-nlp/data/dump.data.json
 ```
 
