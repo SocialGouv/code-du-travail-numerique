@@ -16,7 +16,6 @@ COPY ./scripts /app/scripts
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
 
-COPY ./packages/code-du-travail-data/dataset/annuaire/package.json /app/packages/code-du-travail-data/dataset/annuaire/package.json
 COPY ./packages/code-du-travail-data/dataset/courrier-type/package.json /app/packages/code-du-travail-data/dataset/courrier-type/package.json
 COPY ./packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json /app/packages/code-du-travail-data/dataset/fiches_ministere_travail/package.json
 COPY ./packages/code-du-travail-data/dataset/stop_words/package.json /app/packages/code-du-travail-data/dataset/stop_words/package.json
