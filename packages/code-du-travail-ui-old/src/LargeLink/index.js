@@ -20,12 +20,14 @@ LargeLink.displayName = "LargeLink";
 LargeLink.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
-  variant: PropTypes.string.isRequired
+  variant: PropTypes.string.isRequired,
+  as: PropTypes.string
 };
 
 LargeLink.defaultProps = {
   icon: false,
-  variant: "dark"
+  variant: "dark",
+  as: "a"
 };
 
 export default LargeLink;

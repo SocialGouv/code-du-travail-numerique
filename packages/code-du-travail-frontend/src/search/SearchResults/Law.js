@@ -4,7 +4,7 @@ import { getRouteBySource } from "@cdt/sources";
 import { LargeLink, List, ListItem } from "@cdt/ui-old";
 import { Container, Section, Wrapper } from "@socialgouv/react-ui";
 
-import { LinkContent } from "./LinkContent";
+import { ResultContent } from "./ResultContent";
 
 export const Law = ({ items, query }) => (
   <Section>
@@ -27,8 +27,8 @@ export const Law = ({ items, query }) => (
                 }`}
                 passHref
               >
-                <LargeLink>
-                  <LinkContent {...item} />
+                <LargeLink as="span">
+                  <ResultContent {...item} />
                 </LargeLink>
               </Link>
             </ListItem>

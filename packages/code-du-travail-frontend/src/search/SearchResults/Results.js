@@ -1,65 +1,13 @@
-import React, { useEffect, useRef } from "react";
-import Link from "next/link";
-import PropTypes from "prop-types";
+import React from "react";
+import { withRouter } from "next/router";
 import styled from "styled-components";
-import { SOURCES, getRouteBySource } from "@cdt/sources";
-import { LargeLink, List, ListItem } from "@cdt/ui-old";
+import { List, ListItem } from "@cdt/ui-old";
 import { Container, theme } from "@socialgouv/react-ui";
 
-import { LinkContent } from "./LinkContent";
+import { ResultContent } from "./ResultContent";
 
-const ListLink = ({
-  focused,
-  item: { source, slug, url },
-  query,
-  ...otherProps
-}) => {
-  const ref = useRef(null);
-  useEffect(() => {
-    if (focused && ref.current) {
-      ref.current.focus();
-    }
-  }, [focused]);
-  if (source === SOURCES.EXTERNALS) {
-    return (
-      <LargeLink
-        ref={ref}
-        href={url}
-        target="_blank"
-        className="no-after"
-        variant="light"
-        {...otherProps}
-      />
-    );
-  }
-
-  return (
-    <Link
-      href={{
-        pathname: `/${getRouteBySource(source)}/[slug]`,
-        query: { ...(query && { q: query }), slug: slug }
-      }}
-      as={`/${getRouteBySource(source)}/${slug}${query ? `?q=${query}` : ""}`}
-      passHref
-    >
-      <LargeLink
-        ref={ref}
-        variant={source === SOURCES.TOOLS ? "highlight" : "light"}
-        {...otherProps}
-      />
-    </Link>
-  );
-};
-
-ListLink.propTypes = {
-  focused: PropTypes.bool
-};
-
-ListLink.defaultProps = {
-  focused: false
-};
-
-export const Results = ({ id, isSearch, items, query }) => {
+export const Results = withRouter(({ id, isSearch, items, query, router }) => {
+  const isThemePage = router.pathname.match(/^\/themes\//);
   return (
     <Container narrow>
       {isSearch ? (
@@ -72,16 +20,19 @@ export const Results = ({ id, isSearch, items, query }) => {
           const { slug } = item;
           return (
             <ListItem key={slug}>
-              <ListLink focused={i === 0} item={item} query={query}>
-                <LinkContent {...item} />
-              </ListLink>
+              <ResultContent
+                {...item}
+                query={query}
+                focused={i === 0}
+                isThemePage={isThemePage}
+              />
             </ListItem>
           );
         })}
       </List>
     </Container>
   );
-};
+});
 
 const { spacing } = theme;
 
