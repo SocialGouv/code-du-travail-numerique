@@ -4,7 +4,7 @@ import fetch from "isomorphic-unfetch";
 import styled from "styled-components";
 import getConfig from "next/config";
 import FicheServicePublic from "@socialgouv/react-fiche-service-public";
-import ReferencesJuridiques from "../../src/ReferencesJuridiques";
+import ReferencesJuridiques from "../../src/common/ReferencesJuridiques";
 import Answer from "../../src/common/Answer";
 import ReponseIcon from "../../src/icons/ReponseIcon";
 import { Layout } from "../../src/layout/Layout";

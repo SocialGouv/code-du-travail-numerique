@@ -1,19 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import { List, ListItem } from "@cdt/ui-old";
-import { theme } from "@socialgouv/react-ui";
+import { LargeLink, List, ListItem } from "@cdt/ui-old";
 import Link from "next/link";
-import TYPE_REFERENCE from "../typeReference";
-import ArticleIcon from "../../icons/ArticleIcon";
-
-const { box, colors, spacing } = theme;
+import TYPE_REFERENCE from "./typeReference";
 
 const CodeDuTravailLink = ({ title, slug }) => (
   <Link href="/code-du-travail/[slug]" as={`/code-du-travail/${slug}`} passHref>
-    <ReferenceLink>
-      <Icon width={18} />
-      {title}
-    </ReferenceLink>
+    <LargeLink>{title}</LargeLink>
   </Link>
 );
 
@@ -23,18 +15,14 @@ const ConventionLink = ({ title, slug }) => (
     as={`/convention-collective/${slug}`}
     passHref
   >
-    <ReferenceLink>
-      <Icon width={18} />
-      Convention collective: {title}
-    </ReferenceLink>
+    <LargeLink>Convention collective: {title}</LargeLink>
   </Link>
 );
 
 const OtherLink = ({ title, url }) => (
-  <ReferenceLink href={url} rel="noopener noreferrer" target="_blank">
-    <Icon width="18" />
+  <LargeLink href={url} rel="noopener noreferrer" target="_blank">
     Autre: {title}
-  </ReferenceLink>
+  </LargeLink>
 );
 
 const getLink = reference => {
@@ -59,20 +47,3 @@ const ReferenceList = ({ references }) => {
 };
 
 export default ReferenceList;
-
-const ReferenceLink = styled.a`
-  display: block;
-  margin-top: ${spacing.base};
-  padding: ${spacing.base};
-  background-color: ${colors.lightBackground};
-  border: ${box.border};
-  border-radius: ${box.borderRadius};
-  cursor: pointer;
-`;
-
-const Icon = styled(ArticleIcon)`
-  position: relative;
-  top: 1px;
-  vertical-align: middle;
-  margin-right: ${spacing.base};
-`;
