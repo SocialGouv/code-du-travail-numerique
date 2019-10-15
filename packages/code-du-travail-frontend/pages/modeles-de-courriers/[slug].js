@@ -6,7 +6,6 @@ import { Section, Wrapper } from "@socialgouv/react-ui";
 
 import Html from "../../src/common/Html";
 import { DownloadFile } from "../../src/common/DownloadFile";
-import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import Answer from "../../src/common/Answer";
 import { Layout } from "../../src/layout/Layout";
 import Metas from "../../src/common/Metas";
@@ -39,12 +38,7 @@ class ModeleCourrier extends React.Component {
       ogImage
     } = this.props;
     if (status === 404) {
-      return (
-        <Answer
-          emptyMessage="Modèle de courrier introuvable"
-          icon={ModeleCourrierIcon}
-        />
-      );
+      return <Answer emptyMessage="Modèle de courrier introuvable" />;
     }
     return (
       <Layout>
@@ -62,7 +56,6 @@ class ModeleCourrier extends React.Component {
           emptyMessage="Modèle de courrier introuvable"
           intro={description}
           footer="Modèles de courrier fournis par vos services de renseignement des DIRECCTE en région"
-          icon={ModeleCourrierIcon}
           date={date}
           sourceType="Modèle de document"
         >

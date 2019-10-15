@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { Container, LargeLink, Section, theme } from "@socialgouv/react-ui";
 
 import { Layout } from "../../src/layout/Layout";
-import ModeleCourrierIcon from "../../src/icons/ModeleCourrierIcon";
 import Metas from "../../src/common/Metas";
 
 const {
@@ -64,7 +63,7 @@ const ModeleCourrier = ({ modele, ...props }) => {
   const { filename, title, editor } = modele;
   const [, extension] = filename.split(/\.([a-z]{2,4})$/);
   return (
-    <LargeLink variant={"light"} icon={ModeleCourrierIcon} {...props}>
+    <LargeLink variant={"light"} {...props}>
       <>
         <strong>{title}</strong>
         <P>
