@@ -100,7 +100,7 @@ async function main() {
 
 main().catch(response => {
   if (response.body) {
-    logger.error(response.body.error);
+    logger.error(response.body.error.reason);
   } else {
     logger.error(response);
   }
