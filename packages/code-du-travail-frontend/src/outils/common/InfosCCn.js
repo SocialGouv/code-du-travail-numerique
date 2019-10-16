@@ -4,9 +4,10 @@ import styled from "styled-components";
 import createPersistedState from "use-persisted-state";
 import { Button, Toast, theme } from "@socialgouv/react-ui";
 
-import { QuestionLabel } from "../../common/stepStyles";
-import Search from "../../../conventions/Search/Form";
-import { isNotYetProcessed } from "./situation";
+import { QuestionLabel } from "./stepStyles";
+import Search from "../../conventions/Search/Form";
+
+export const CCN = "ccn";
 
 // store selected convention in localStorage
 const useConventionState = createPersistedState("convention");
@@ -15,30 +16,17 @@ function StepInfoCCn({ form }) {
   const [ccInfo, setCcInfo] = useConventionState({});
   useEffect(() => {
     form.batch(() => {
-      [
-        "contract",
-        "criteria",
-        "missionFormation",
-        "ruptureContratFauteGrave",
-        "propositionCDIFinContrat",
-        "refusSouplesse",
-        "finContratPeriodeDessai",
-        "propositionCDIFindeContrat",
-        "refusCDIFindeContrat",
-        "interruptionFauteGrave",
-        "refusRenouvellementAuto",
-        "typeRemuneration",
-        "salaire",
-        "salaires"
-      ].forEach(key => form.change(key, undefined));
-      form.change("ccn", ccInfo.convention);
+      Object.keys(form.getState().values)
+        .filter(key => key !== CCN)
+        .forEach(key => form.change(key, undefined));
+      form.change(CCN, ccInfo.convention);
     });
   }, [ccInfo, form]);
   return (
     <>
       <Field
-        name="ccn"
-        render={({ input }) => {
+        name={CCN}
+        render={({ input, meta: { error } }) => {
           if (input.value) {
             return (
               <>
@@ -56,13 +44,7 @@ function StepInfoCCn({ form }) {
                 >
                   Changer de convention collective
                 </Button>
-                {isNotYetProcessed(input.value.num) && (
-                  <StyledToast>
-                    Nous n’avons pas encore traité votre convention collective
-                    mais nous vous invitons à poursuivre la simulation afin
-                    d’obtenir le montant défini par le Code du travail.
-                  </StyledToast>
-                )}
+                {error && <StyledToast>{error}</StyledToast>}
               </>
             );
           }
@@ -88,8 +70,8 @@ function StepInfoCCn({ form }) {
 export { StepInfoCCn };
 
 const SearchStyled = styled(Search)`
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 `;
 
 const { spacing } = theme;

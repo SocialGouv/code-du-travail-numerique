@@ -3,10 +3,9 @@ import {
   filterSituations,
   getNextQuestionKey,
   getOptions,
-  getPastQuestions,
-  validateSituation,
-  isNotYetProcessed
-} from "../situation";
+  getPastQuestions
+} from "../../../common/situations.utils";
+import { isNotYetProcessed, validateSituation } from "../situation";
 
 import data from "@cdt/data...prime-precarite/precarite.data.json";
 
@@ -42,7 +41,7 @@ describe("situations", () => {
   describe("getInitialSituations", () => {
     it("should return only situation with corresponding idcc", () => {
       const idcc = "10";
-      const situations = getSituationsFor({ idcc });
+      const situations = getSituationsFor(data, { idcc });
       expect(situations.length).toBe(3);
       expect(situations.every(situation => idcc === situation.idcc)).toBe(true);
     });
@@ -83,7 +82,7 @@ describe("situations", () => {
       ]);
     });
     it("should return options for a question key, given a situation", () => {
-      const situations = getSituationsFor({ idcc: "10" });
+      const situations = getSituationsFor(data, { idcc: "10" });
 
       expect(getOptions(situations, "foo")).toEqual([
         ["1| foo", "foo"],
@@ -94,12 +93,12 @@ describe("situations", () => {
 
   describe("getPastQuestions", () => {
     it("should return empty questions array", () => {
-      const situations = getSituationsFor({ idcc: "10" });
+      const situations = getSituationsFor(data, { idcc: "10" });
       expect(getPastQuestions(situations, {})).toEqual([]);
     });
 
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
-      const situations = getSituationsFor({ idcc: "10" });
+      const situations = getSituationsFor(data, { idcc: "10" });
       expect(getPastQuestions(situations, { foo: "2| baz" })).toEqual([
         ["foo", [["1| foo", "foo"], ["2| baz", "baz"]]]
       ]);
@@ -108,13 +107,13 @@ describe("situations", () => {
 
   describe("validateSituation", () => {
     it("should return correct error message", () => {
-      const situations = getSituationsFor({ idcc: "20" });
+      const situations = getSituationsFor(data, { idcc: "20" });
       expect(validateSituation(situations, { foo: "3| bar" })).toEqual({
         criteria: { foo: "nope" }
       });
     });
     it("should not touch error message if multiple situations match", () => {
-      const situations = getSituationsFor({ idcc: "20" });
+      const situations = getSituationsFor(data, { idcc: "20" });
       expect(
         validateSituation(situations, {}, { criteria: { foo: "yoyo" } })
       ).toEqual({
@@ -122,7 +121,7 @@ describe("situations", () => {
       });
     });
     it("should override previous error message", () => {
-      const situations = getSituationsFor({ idcc: "20" });
+      const situations = getSituationsFor(data, { idcc: "20" });
       expect(
         validateSituation(
           situations,

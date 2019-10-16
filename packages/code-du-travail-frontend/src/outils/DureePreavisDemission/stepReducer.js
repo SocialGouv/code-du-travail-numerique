@@ -1,4 +1,5 @@
 import { StepIntro } from "./steps/Introduction";
+import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepResult } from "./steps/Result";
 import { StepInformations } from "./steps/Informations";
 
@@ -7,6 +8,11 @@ export const initialSteps = [
     component: StepIntro,
     name: "intro",
     label: "Introduction"
+  },
+  {
+    component: StepInfoCCn,
+    name: "info_cc",
+    label: "Convention collective"
   },
   {
     component: StepInformations,

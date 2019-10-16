@@ -27,8 +27,8 @@ exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
 }
 
 .c3 {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }
 
 .c1 {

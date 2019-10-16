@@ -286,7 +286,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             <span
               class="c5"
             >
-              1/3
+              1/4
             </span>
           </span>
           <span
@@ -307,7 +307,7 @@ exports[`<DureePreavisDemission /> should render 1`] = `
             >
               2
             </span>
-            Informations
+            Convention collective
           </span>
           <span
             class="c8"
@@ -316,6 +316,16 @@ exports[`<DureePreavisDemission /> should render 1`] = `
               class="c9"
             >
               3
+            </span>
+            Informations
+          </span>
+          <span
+            class="c8"
+          >
+            <span
+              class="c9"
+            >
+              4
             </span>
             Durée du préavis
           </span>

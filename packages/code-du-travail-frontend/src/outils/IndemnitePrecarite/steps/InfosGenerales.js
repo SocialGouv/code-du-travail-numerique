@@ -1,5 +1,6 @@
 import React from "react";
 import { Field } from "react-final-form";
+import data from "@cdt/data...prime-precarite/precarite.data.json";
 
 import { TypeContrat, CONTRACT_TYPE } from "../components/TypeContrat";
 import { SelectQuestion } from "../../common/SelectQuestion";
@@ -8,14 +9,16 @@ import { StepCDD } from "./CDD";
 import { StepCTT } from "./CTT";
 
 import {
-  filterSituations,
-  questions,
   getOptions,
   getPastQuestions,
   getNextQuestionKey,
-  hasConventionalProvision,
-  validateSituation,
+  filterSituations,
   getSituationsFor
+} from "../../common/situations.utils";
+import {
+  questions,
+  hasConventionalProvision,
+  validateSituation
 } from "./situation";
 
 const excludeContracts = [
@@ -31,7 +34,7 @@ const excludeContracts = [
 function StepInfosGenerales({ form }) {
   const { values } = form.getState();
   const idcc = values.ccn ? values.ccn.num : "0000";
-  const initialSituations = getSituationsFor({ idcc });
+  const initialSituations = getSituationsFor(data, { idcc });
   const pastQuestions = getPastQuestions(initialSituations, values.criteria);
 
   const situations = filterSituations(initialSituations, values.criteria);
@@ -137,7 +140,7 @@ function StepInfosGenerales({ form }) {
 
 function validate(values) {
   const idcc = values.ccn ? values.ccn.num : "0000";
-  const initialSituations = getSituationsFor({ idcc });
+  const initialSituations = getSituationsFor(data, { idcc });
 
   const errors = {
     ...StepCDD.validate(values),

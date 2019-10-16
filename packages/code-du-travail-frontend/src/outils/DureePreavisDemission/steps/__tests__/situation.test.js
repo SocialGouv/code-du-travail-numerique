@@ -1,80 +1,78 @@
 import {
+  getSituationsFor,
   filterSituations,
   getNextQuestionKey,
   getOptions,
-  getPastQuestions,
-  recapSituation
-} from "../situation";
+  getPastQuestions
+} from "../../../common/situations.utils";
+
+import data from "@cdt/data...preavis-demission/data.json";
 
 jest.mock("@cdt/data...preavis-demission/data.json", () => [
+  { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
+  { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } },
+  { idcc: "10", criteria: { foo: "2| baz" } },
   {
-    criteria: { foo: "2| baz", bar: "baz", branche: { id: "10", label: "dix" } }
-  },
-  { criteria: { foo: "1| foo", branche: { id: "10", label: "dix" } } },
-  {
+    idcc: "20",
     criteria: {
-      foo: "3| bar",
-      bar: "foo",
-      branche: { id: "20", label: "vingt" }
+      foo: "3| bar"
+    },
+    endMessage: "nope"
+  },
+  {
+    idcc: "20",
+    criteria: {
+      foo: "4| baz"
     }
   }
 ]);
 
 describe("situations", () => {
+  describe("getInitialSituations", () => {
+    it("should return only situation with corresponding idcc", () => {
+      const idcc = "10";
+      const situations = getSituationsFor(data, { idcc });
+      expect(situations.length).toBe(3);
+      expect(situations.every(situation => idcc === situation.idcc)).toBe(true);
+    });
+  });
+
   describe("filterSituations", () => {
     it("should return all situations", () => {
-      expect(filterSituations().length).toEqual(3);
+      expect(filterSituations(data).length).toEqual(data.length);
     });
     it("should return no situation", () => {
-      expect(filterSituations({ foo: "bim" }).length).toBe(0);
+      expect(filterSituations(data, { foo: "no" }).length).toBe(0);
     });
-    it("should return only situation that match id:10", () => {
-      expect(filterSituations({ branche: "10" })).toEqual([
-        {
-          criteria: {
-            foo: "2| baz",
-            bar: "baz",
-            branche: { id: "10", label: "dix" }
-          }
-        },
-        { criteria: { foo: "1| foo", branche: { id: "10", label: "dix" } } }
-      ]);
-    });
-    it("should render only situation that match foo and branch", () => {
-      expect(filterSituations({ foo: "2| baz", branche: "10" })).toEqual([
-        {
-          criteria: {
-            foo: "2| baz",
-            bar: "baz",
-            branche: { id: "10", label: "dix" }
-          }
-        }
+    it("should render only situation that match foo", () => {
+      expect(filterSituations(data, { foo: "1| foo" })).toEqual([
+        { idcc: "10", criteria: { foo: "1| foo", bar: "baz" } },
+        { idcc: "10", criteria: { foo: "1| foo", bar: "bar" } }
       ]);
     });
   });
 
   describe("getNextQuestions", () => {
-    it("should return branche question key", () => {
-      const situations = filterSituations();
-      expect(getNextQuestionKey(situations)).toBe("branche");
-    });
     it("should return foo question key", () => {
-      const situations = filterSituations();
-      expect(getNextQuestionKey(situations, { branche: "10" })).toBe("foo");
+      expect(getNextQuestionKey(data)).toBe("foo");
+    });
+    it("should return bar question key", () => {
+      const situations = filterSituations(data, { foo: "1| foo" });
+      expect(getNextQuestionKey(situations, { foo: "1| foo" })).toBe("bar");
     });
   });
 
   describe("getOptions", () => {
     it("should return options for a question key", () => {
-      const situations = filterSituations();
-      expect(getOptions(situations, "foo")).toEqual([
+      expect(getOptions(data, "foo")).toEqual([
         ["1| foo", "foo"],
         ["2| baz", "baz"],
-        ["3| bar", "bar"]
+        ["3| bar", "bar"],
+        ["4| baz", "baz"]
       ]);
     });
     it("should return options for a question key, given a situation", () => {
-      const situations = filterSituations({ branche: "10" });
+      const situations = getSituationsFor(data, { idcc: "10" });
 
       expect(getOptions(situations, "foo")).toEqual([
         ["1| foo", "foo"],
@@ -82,33 +80,18 @@ describe("situations", () => {
       ]);
     });
   });
+
   describe("getPastQuestions", () => {
     it("should return empty questions array", () => {
-      expect(getPastQuestions({})).toEqual([]);
+      const situations = getSituationsFor(data, { idcc: "10" });
+      expect(getPastQuestions(situations, {})).toEqual([]);
     });
-    it("should return a tuple array of questions key and questions option for branche", () => {
-      expect(getPastQuestions({ branche: "10" })).toEqual([
-        ["branche", [["10", "dix"], ["20", "vingt"]]]
-      ]);
-    });
+
     it("should return a tuple array of questions key and questions option for branch and bar", () => {
-      expect(getPastQuestions({ branche: "10", foo: "2| baz" })).toEqual([
-        ["branche", [["10", "dix"], ["20", "vingt"]]],
+      const situations = getSituationsFor(data, { idcc: "10" });
+      expect(getPastQuestions(situations, { foo: "2| baz" })).toEqual([
         ["foo", [["1| foo", "foo"], ["2| baz", "baz"]]]
       ]);
-    });
-  });
-  describe("recapSituation", () => {
-    it("should return a text recap", () => {
-      expect(
-        recapSituation({
-          catégorie: "Etam",
-          ancienneté: "30",
-          groupe: "IV",
-          echelon: "375",
-          coefficient: "12"
-        })
-      ).toMatchSnapshot();
     });
   });
 });

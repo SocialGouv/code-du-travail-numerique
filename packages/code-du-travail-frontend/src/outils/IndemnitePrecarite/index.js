@@ -5,7 +5,7 @@ import { Wizard } from "../common/Wizard";
 
 import { StepIntro } from "./steps/Introduction";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
-import { StepInfoCCn } from "./steps/InfosCCn";
+import { StepInfoCCn } from "../common/InfosCCn";
 import { StepRemuneration } from "./steps/Remuneration";
 import { StepIndemnite } from "./steps/Indemnite";
 

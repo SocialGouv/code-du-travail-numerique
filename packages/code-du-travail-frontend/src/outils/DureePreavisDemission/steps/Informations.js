@@ -1,23 +1,37 @@
 import React from "react";
 import { Alert } from "@socialgouv/react-ui";
+import data from "@cdt/data...preavis-demission/data.json";
+
 import { SelectQuestion } from "../../common/SelectQuestion";
 import { SectionTitle } from "../../common/stepStyles";
-
 import {
-  filterSituations,
-  getNextQuestionKey,
+  isNotYetProcessed,
   getOptions,
   getPastQuestions,
-  questions,
-  labels
-} from "./situation";
+  getNextQuestionKey,
+  filterSituations,
+  getSituationsFor
+} from "../../common/situations.utils";
 
-function StepInformations({ form }) {
+import { questions, labels } from "./situation.js";
+
+function StepInformations({ form, nextStep }) {
   const { values } = form.getState();
-  const possibleSituations = filterSituations(values);
-  const nextQuestionKey = getNextQuestionKey(possibleSituations, values);
+  const { ccn, criteria = {} } = values;
+  const idcc = ccn ? ccn.num : "0000";
+
+  // Go to results when cc is not processed
+  if (isNotYetProcessed(data, idcc)) {
+    nextStep();
+    return null;
+  }
+
+  const initialSituations = getSituationsFor(data, { idcc });
+  const possibleSituations = filterSituations(initialSituations, criteria);
+  const nextQuestionKey = getNextQuestionKey(possibleSituations, criteria);
   const nextQuestionOptions = getOptions(possibleSituations, nextQuestionKey);
-  const pastQuestions = getPastQuestions(values);
+  const pastQuestions = getPastQuestions(initialSituations, criteria);
+
   const showHelp = ["groupe", "coefficient", "echelon"].includes(
     nextQuestionKey
   );
@@ -28,13 +42,13 @@ function StepInformations({ form }) {
       {pastQuestions.map(([key, answers]) => (
         <SelectQuestion
           key={key}
-          name={key}
+          name={`criteria.${key}`}
           options={answers}
           label={questions[key]}
           onChange={() => {
             form.batch(() => {
               // list keys that no longer exist
-              const resetFormProps = Object.keys(values)
+              const resetFormProps = Object.keys(initialSituations)
                 .filter(k => !pastQuestions.find(([key]) => k === key))
                 .concat(
                   // list keys that need to be reseted
@@ -48,11 +62,13 @@ function StepInformations({ form }) {
         />
       ))}
       {nextQuestionKey && nextQuestionOptions && (
-        <SelectQuestion
-          name={nextQuestionKey}
-          label={questions[nextQuestionKey]}
-          options={nextQuestionOptions}
-        />
+        <>
+          <SelectQuestion
+            name={`criteria.${nextQuestionKey}`}
+            label={questions[nextQuestionKey]}
+            options={nextQuestionOptions}
+          />
+        </>
       )}
       {showHelp && (
         <Alert>
