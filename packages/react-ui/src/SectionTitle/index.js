@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { fonts, colors, spacing } from "../theme";
+import { fonts, spacing } from "../theme";
 import { ChevronRight } from "react-feather";
 
 export const SectionTitle = React.forwardRef(
@@ -40,7 +40,7 @@ const Title = styled.h2`
   margin-bottom: 0;
   font-weight: 600;
   line-height: 1.275;
-  color: ${colors.blueDark};
+  color: ${({ theme }) => theme.blueDark};
   display: flex;
   align-items: flex-end;
 `;
@@ -51,18 +51,18 @@ const Subtitle = styled.div`
   font-size: ${fonts.sizeSmall};
   font-weight: 300;
   line-height: 1.1;
-  color: ${colors.blueDark};
+  color: ${({ theme }) => theme.blueDark};
 `;
 
 const StyledLink = styled.a`
   text-decoration: none;
-  color: ${colors.blueDark};
+  color: ${({ theme }) => theme.blueDark};
   &:hover {
-    color: ${colors.blueLight};
+    color: ${({ theme }) => theme.blueLight};
   }
 `;
 
 const Icon = styled(ChevronRight)`
-  color: ${colors.blueLight};
+  color: ${({ theme }) => theme.blueLight};
   margin-left: ${spacing.base};
 `;

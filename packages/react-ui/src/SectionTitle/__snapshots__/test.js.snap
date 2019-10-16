@@ -1,5 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<List /> should render title in a link 1`] = `
+.c0 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 1.375rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.275;
+  color: #005994;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c3 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #005994;
+}
+
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #005994;
+}
+
+.c1:hover {
+  color: #006be6;
+}
+
+.c2 {
+  color: #006be6;
+  margin-left: 1rem;
+}
+
+<div>
+  <div>
+    <h2
+      class="c0"
+    >
+      <a
+        class="c1"
+        href="https://code.travail.gouv.fr"
+        title="le code du travail numérique"
+      >
+        Lorem Ipsum
+      </a>
+      <svg
+        aria-hidden="true"
+        class="c2"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          points="9 18 15 12 9 6"
+        />
+      </svg>
+    </h2>
+    <div
+      class="c3"
+    >
+      le code du travail numérique
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<List /> should render title only 1`] = `
 .c0 {
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
