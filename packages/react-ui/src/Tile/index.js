@@ -46,12 +46,7 @@ const ButtonWrapper = styled.div`
 
 export const Tile = React.forwardRef(
   ({ button, children, icon: Icon, ...props }, ref) => (
-    <StyledTile
-      as={props.href ? "a" : "button"}
-      href={props.href}
-      ref={ref}
-      {...props}
-    >
+    <StyledTile as={props.href ? "a" : "button"} ref={ref} {...props}>
       {Icon && (
         <IconWrapper>
           <Icon />
