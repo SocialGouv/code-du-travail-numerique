@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should render title only 1`] = `
+.c0 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 1.375rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.275;
+  color: #005994;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+<div>
+  <div>
+    <h2
+      class="c0"
+    >
+      Lorem Ipsum
+    </h2>
+    
+  </div>
+</div>
+`;
+
+exports[`<List /> should render title with description 1`] = `
+.c0 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 1.375rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.275;
+  color: #005994;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #005994;
+}
+
+<div>
+  <div>
+    <h2
+      class="c0"
+    >
+      Lorem Ipsum
+    </h2>
+    <div
+      class="c1"
+    >
+      Hello
+    </div>
+  </div>
+</div>
+`;

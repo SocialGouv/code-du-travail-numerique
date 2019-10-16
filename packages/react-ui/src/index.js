@@ -17,6 +17,7 @@ export { List, ListItem } from "./List";
 export { Modal, ModalContentWrapper } from "./Modal";
 export { OverflowWrapper } from "./OverflowWrapper";
 export { ScreenReaderOnly } from "./ScreenReaderOnly";
+export { SectionTitle } from "./SectionTitle";
 export { Table } from "./Table";
 export { Tabs } from "./Tabs";
 export { Tag } from "./Tag";
