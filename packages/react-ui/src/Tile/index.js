@@ -44,26 +44,36 @@ const ButtonWrapper = styled.div`
   margin-top: ${spacing.medium};
 `;
 
-export const Tile = ({ button, children, icon: Icon, ...props }) => (
-  <StyledTile as={props.href ? "a" : "button"} {...props}>
-    {Icon && (
-      <IconWrapper>
-        <Icon />
-      </IconWrapper>
-    )}
-    <OverflowWrapper>{children}</OverflowWrapper>
-    {button && (
-      <ButtonWrapper>
-        <Button noButton>{button}</Button>
-      </ButtonWrapper>
-    )}
-  </StyledTile>
+export const Tile = React.forwardRef(
+  ({ button, children, icon: Icon, ...props }, ref) => (
+    <StyledTile
+      as={props.href ? "a" : "button"}
+      href={props.href}
+      ref={ref}
+      title={props.title}
+    >
+      {Icon && (
+        <IconWrapper>
+          <Icon />
+        </IconWrapper>
+      )}
+      <OverflowWrapper>{children}</OverflowWrapper>
+      {button && (
+        <ButtonWrapper>
+          <Button noButton>{button}</Button>
+        </ButtonWrapper>
+      )}
+    </StyledTile>
+  )
 );
+
+Tile.displayName = "Tile";
 
 Tile.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.elementType,
   href: PropTypes.string,
+  title: PropTypes.string,
   button: PropTypes.string
 };
 
