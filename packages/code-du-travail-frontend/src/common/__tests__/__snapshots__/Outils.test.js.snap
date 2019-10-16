@@ -21,7 +21,7 @@ exports[`<Outils /> should render 1`] = `
   background-color: #fff;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   padding: 0.625rem 1.5rem;
   -webkit-appearance: none;
@@ -42,19 +42,19 @@ exports[`<Outils /> should render 1`] = `
   border-color: #006be6;
 }
 
-.c8:not([disabled]):hover,
-.c8:not([disabled]):active,
-.c8:not([disabled]):focus {
+.c9:not([disabled]):hover,
+.c9:not([disabled]):active,
+.c9:not([disabled]):focus {
   background: #07f;
   color: #fff;
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   color: rgba(255,255,255,0.4);
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,7 +74,7 @@ exports[`<Outils /> should render 1`] = `
   margin: NaN;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
@@ -89,7 +89,32 @@ exports[`<Outils /> should render 1`] = `
   text-align: center;
 }
 
-.c5 {
+.c2 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 1.375rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.275;
+  color: #005994;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c3 {
+  font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #005994;
+}
+
+.c6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -126,22 +151,17 @@ exports[`<Outils /> should render 1`] = `
   transition: 250ms all;
 }
 
-.c5:hover {
+.c6:hover {
   border-color: #005994;
   box-shadow: 0 5px 10px 0 #ebeff3;
 }
 
-.c6 {
+.c7 {
   overflow-y: scroll;
 }
 
-.c7 {
+.c8 {
   margin-top: 1.25rem;
-}
-
-.c2 {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 @media print {
@@ -152,7 +172,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:980px) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: calc(100% / 3 - 2 * 0.625rem);
     -ms-flex-preferred-size: calc(100% / 3 - 2 * 0.625rem);
     flex-basis: calc(100% / 3 - 2 * 0.625rem);
@@ -160,7 +180,7 @@ exports[`<Outils /> should render 1`] = `
 }
 
 @media (max-width:600px) {
-  .c4 {
+  .c5 {
     -webkit-flex-basis: calc(100% - 2 * 0.625rem);
     -ms-flex-preferred-size: calc(100% - 2 * 0.625rem);
     flex-basis: calc(100% - 2 * 0.625rem);
@@ -174,32 +194,39 @@ exports[`<Outils /> should render 1`] = `
     <div
       class="c1"
     >
-      <h2
-        class="c2"
-      >
-        Découvrez nos outils
-      </h2>
+      <div>
+        <h2
+          class="c2"
+        >
+          Boîte à outils
+        </h2>
+        <div
+          class="c3"
+        >
+          Trouvez des réponses personnalisées selon votre situation
+        </div>
+      </div>
       <ul
-        class="c3"
+        class="c4"
       >
         <li
-          class="c4"
+          class="c5"
         >
           <a
-            class="c5"
+            class="c6"
             href="/outils/indemnite-licenciement"
             title="Démarrer une simulation d'indemnités de licenciements"
           >
             <div
-              class="c6"
+              class="c7"
             >
               Simulateur d'indemnités de licenciements
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <div
-                class="c8"
+                class="c9"
               >
                 Démarrer
               </div>
@@ -207,23 +234,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c4"
+          class="c5"
         >
           <a
-            class="c5"
+            class="c6"
             href="/outils/preavis-demission"
             title="Démarrer une simulation de durée de préavis de démission"
           >
             <div
-              class="c6"
+              class="c7"
             >
               Simulateur de délais de préavis de démission
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <div
-                class="c8"
+                class="c9"
               >
                 Démarrer
               </div>
@@ -231,23 +258,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c4"
+          class="c5"
         >
           <a
-            class="c5"
+            class="c6"
             href="/modeles-de-courriers"
             title="Voir tous les modèles de courriers"
           >
             <div
-              class="c6"
+              class="c7"
             >
               Modèles de courriers
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <div
-                class="c8"
+                class="c9"
               >
                 Voir
               </div>
@@ -255,23 +282,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c4"
+          class="c5"
         >
           <a
-            class="c5"
+            class="c6"
             href="/outils/simulateur-embauche"
             title="Démarrer une simulation de salaire lors d'une embauche"
           >
             <div
-              class="c6"
+              class="c7"
             >
               Simulateur d'embauche
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <div
-                class="c8"
+                class="c9"
               >
                 Démarrer
               </div>
@@ -279,23 +306,23 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c4"
+          class="c5"
         >
           <a
-            class="c5"
+            class="c6"
             href="/outils/indemnite-precarite"
             title="Démarrer une simulation de la prime de précarité"
           >
             <div
-              class="c6"
+              class="c7"
             >
               Simulateur de prime de précarité
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <div
-                class="c8"
+                class="c9"
               >
                 Démarrer
               </div>
@@ -303,22 +330,22 @@ exports[`<Outils /> should render 1`] = `
           </a>
         </li>
         <li
-          class="c4"
+          class="c5"
         >
           <button
-            class="c5"
+            class="c6"
             href=""
           >
             <div
-              class="c6"
+              class="c7"
             >
               Votre convention collective
             </div>
             <div
-              class="c7"
+              class="c8"
             >
               <div
-                class="c8"
+                class="c9"
               >
                 Rechercher
               </div>
@@ -326,14 +353,14 @@ exports[`<Outils /> should render 1`] = `
           </button>
         </li>
         <li
-          class="c4"
+          class="c5"
         >
           <button
-            class="c5"
+            class="c6"
             href=""
           >
             <div
-              class="c6"
+              class="c7"
             >
               Bientôt d'autres outils disponibles...
             </div>
