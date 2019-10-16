@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<List /> should render title in a link 1`] = `
+exports[`<SectionTitle /> should render title in a link 1`] = `
 .c0 {
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
   font-size: 1.375rem;
@@ -80,7 +80,7 @@ exports[`<List /> should render title in a link 1`] = `
 </div>
 `;
 
-exports[`<List /> should render title only 1`] = `
+exports[`<SectionTitle /> should render title only 1`] = `
 .c0 {
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
   font-size: 1.375rem;
@@ -110,7 +110,7 @@ exports[`<List /> should render title only 1`] = `
 </div>
 `;
 
-exports[`<List /> should render title with description 1`] = `
+exports[`<SectionTitle /> should render title with description 1`] = `
 .c0 {
   font-family: Muli,-apple-system,BlinkMacSystemFont,"Helvetica Neue", Helvetica,Arial,sans-serif;
   font-size: 1.375rem;
