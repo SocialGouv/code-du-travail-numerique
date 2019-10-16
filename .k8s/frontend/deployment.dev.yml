@@ -45,7 +45,7 @@ spec:
             - name: PIWIK_URL
               value: ${CI_PIWIK_URL}
             - name: SUGGEST_URL
-              value: "${NLP_URL}/api/suggest"
+              value: "http://ec2-54-171-134-242.eu-west-1.compute.amazonaws.com:8080/api/suggest"
             - name: VERSION
               value: "${VERSION}"
       initContainers:
