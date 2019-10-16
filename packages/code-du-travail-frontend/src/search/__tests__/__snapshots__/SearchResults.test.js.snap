@@ -397,7 +397,7 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
           <li
             class=""
           >
-            <span
+            <a
               class="c4"
               href="/themes/mer-il-est-fou4?q=search test"
             >
@@ -409,7 +409,7 @@ exports[`<SearchResults/> should render results with breadcrumbs 1`] = `
                 </h3>
                 
               </div>
-            </span>
+            </a>
           </li>
         </ul>
       </div>

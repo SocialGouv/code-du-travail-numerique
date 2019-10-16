@@ -33,7 +33,7 @@ export const Themes = ({ items, query }) => (
                 }`}
                 passHref
               >
-                <LargeLink as="span">
+                <LargeLink>
                   <LinkContent {...item} />
                 </LargeLink>
               </Link>

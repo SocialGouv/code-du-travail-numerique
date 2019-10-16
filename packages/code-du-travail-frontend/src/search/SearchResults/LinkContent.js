@@ -31,6 +31,7 @@ const { colors, fonts } = theme;
 const P = styled.p`
   margin: 0;
   font-size: ${fonts.sizeSmall};
+  color: ${({ theme }) => theme.darkText};
 `;
 
 const H3 = styled.h3`
