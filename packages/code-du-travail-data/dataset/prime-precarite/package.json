@@ -1,0 +1,13 @@
+{
+  "name": "@cdt/data...prime-precarite",
+  "version": "3.3.1",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index > ./precarite.data.json"
+  },
+  "dependencies": {
+    "google-spreadsheets": "^2.0.0"
+  }
+}

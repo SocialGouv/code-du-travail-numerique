@@ -166,10 +166,13 @@ describe("<Search />", () => {
     fireEvent.click(link);
     expect(onSelectConvention).toHaveBeenCalledTimes(1);
     expect(onSelectConvention).toHaveBeenCalledWith({
-      id: "KALICONT000000000002",
-      num: "4567",
-      slug: "slug-convention-2",
-      title: "titre convention 2"
+      convention: {
+        id: "KALICONT000000000002",
+        num: "4567",
+        slug: "slug-convention-2",
+        title: "titre convention 2"
+      },
+      label: undefined
     });
   });
 

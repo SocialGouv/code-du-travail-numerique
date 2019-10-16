@@ -1,35 +1,67 @@
 import React from "react";
 import Link from "next/link";
-import { Toast, theme } from "@socialgouv/react-ui";
-
+import { theme } from "@socialgouv/react-ui";
 import styled from "styled-components";
 import MathJax from "react-mathjax-preview";
 
 import { getIndemnitePrecarite } from "../indemnite";
-import { Summary, Highlight, SectionTitle } from "../../common/stepStyles";
+import { Summary, Highlight } from "../../common/stepStyles";
 import { ErrorBoundary } from "../../../common/ErrorBoundary";
+import { filterSituations, getSituationsFor } from "./situation";
+import { CONTRACT_TYPE } from "../components/TypeContrat";
 
 function StepIndemnite({ form }) {
   const state = form.getState();
-  const { contrat, typeRemuneration, salaires, salaire } = state.values;
+  const {
+    contractType,
+    typeRemuneration,
+    salaires,
+    salaire,
+    ccn,
+    criteria = {}
+  } = state.values;
+
+  const idcc = ccn ? ccn.num : "0000";
+  const initialSituations = getSituationsFor({ idcc, contractType });
+  const situations = filterSituations(initialSituations, criteria);
+
+  let rate = "10%";
+  let bonusAltName = "prime de précarité";
+  let references;
+
+  switch (situations.length) {
+    case 1: {
+      const [situation] = situations;
+      rate = situation.rate;
+      bonusAltName = situation.bonusLabel || bonusAltName;
+      references = getRef(situation);
+      break;
+    }
+    default: {
+      const situations = getSituationsFor({ idcc: "0000", contractType });
+      const [situation] = situations;
+      references = getRef(situation);
+    }
+  }
+
+  const [, value] = rate.match(/(\d+)%/);
+  const rateValue = parseInt(value) / 100;
+  const rateLabel = `${value}/100`;
+
   const { indemnite, formule, inputs } = getIndemnitePrecarite({
     typeRemuneration,
     salaire,
-    salaires
+    salaires,
+    rateValue,
+    rateLabel
   });
 
-  const altName =
-    contrat === "cdd"
-      ? "indemnité de fin de CDD"
-      : "indemnité de fin de mission";
   const entries = Object.entries(inputs);
 
   return (
     <>
-      <SectionTitle>Prime de précarité</SectionTitle>
       <p>
-        Votre prime de précarité (appelée également <em>{altName}</em>) est
-        estimée à <Highlight>{indemnite}</Highlight> €.
+        Votre {bonusAltName} est estimée à <Highlight>{indemnite}</Highlight> €.
       </p>
       <details>
         <Summary>Detail du calcul</Summary>
@@ -52,21 +84,10 @@ function StepIndemnite({ form }) {
           </ErrorBoundary>
         </div>
       </details>
-      {contrat === "cdd" && (
-        <Toast variant="info">
-          Attention : l’estimation est basée sur le montant de la prime de
-          précarité prévu par le code du travail qui est de 10% de la
-          rémunération totale brute perçue par le salarié. Une convention ou un
-          accord collectif de branche étendu ou une convention ou un accord
-          d’entreprise ou d’établissement peut prévoir de limiter le montant de
-          l’indemnité à hauteur de 6 %, dès lors que des contreparties sont
-          offertes à ces salariés, notamment sous la forme d’un accès privilégié
-          à la formation professionnelle.
-        </Toast>
-      )}
+      {references}
       <p>
         En savoir plus sur la prime de précarité d’un{" "}
-        {contrat === "cdd" ? (
+        {contractType === CONTRACT_TYPE.CDD ? (
           <Link
             href="/fiche-service-public/[slug]"
             as={"/fiche-service-public/fin-dun-contrat-a-duree-determinee-cdd"}
@@ -88,16 +109,40 @@ function StepIndemnite({ form }) {
 
 export { StepIndemnite };
 
+function getRef({ refLabel, refUrl }) {
+  if (!refLabel || !refUrl) {
+    return null;
+  }
+  const urls = refUrl.split(/\n/);
+  const labels = refLabel.split(/\n/);
+  const refs = urls.map((url, i) => [url, labels[i]]);
+  return (
+    <p>
+      {refs
+        .map(([url, label]) => (
+          <a key={url} href={url} title={`Consultez l’${label.toLowerCase()}`}>
+            {label}
+          </a>
+        ))
+        .reduce((state, item) => (
+          <>
+            {state}, {item}
+          </>
+        ))}
+    </p>
+  );
+}
+
 const { spacing, fonts } = theme;
 
 const Heading = styled.strong`
   font-weight: bold;
   font-size: ${fonts.sizeSmall};
 `;
+
+const dashSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 6 10"><path fill="currentColor" d="M0 4h5v1H0z"/></svg>`;
 const List = styled.ul`
-  list-style-image: url("data:image/svg+xml;,${encodeURIComponent(
-    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 6 10'><path fill='currentColor' d='M0 4h5v1H0z'/></svg>"
-  )}");
+  list-style-image: url("data:image/svg+xml;,${encodeURIComponent(dashSvg)}");
 `;
 const Item = styled.li`
   font-size: ${fonts.sizeSmall};

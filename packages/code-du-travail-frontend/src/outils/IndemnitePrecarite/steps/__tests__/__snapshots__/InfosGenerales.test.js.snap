@@ -54,9 +54,9 @@ exports[`<StepInfosGenerales /> should render 1`] = `
       class="c2"
     >
       <input
-        name="contrat"
+        name="contractType"
         type="radio"
-        value="cdd"
+        value="CDD"
       />
       <span>
         Contrat à durée déterminée (CDD)
@@ -66,9 +66,9 @@ exports[`<StepInfosGenerales /> should render 1`] = `
       class="c2"
     >
       <input
-        name="contrat"
+        name="contractType"
         type="radio"
-        value="ctt"
+        value="CTT"
       />
       <span>
         Contrat de travail temporaire (Contrat d’intérim)
@@ -112,18 +112,25 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c3 {
+.c0 {
   font-size: 1.25rem;
   display: block;
   margin-top: 1.25rem;
   margin-bottom: 0.625rem;
 }
 
-.c0 {
-  font-size: 1.25rem;
-  display: block;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
+.c4 {
+  margin-top: 0.625rem;
+  margin-right: 1.25rem;
+  -webkit-flex: 1 1 70%;
+  -ms-flex: 1 1 70%;
+  flex: 1 1 70%;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.c3 {
+  margin: 1.25rem 0;
 }
 
 <div>
@@ -140,9 +147,9 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
     >
       <input
         checked=""
-        name="contrat"
+        name="contractType"
         type="radio"
-        value="cdd"
+        value="CDD"
       />
       <span>
         Contrat à durée déterminée (CDD)
@@ -152,70 +159,76 @@ exports[`<StepInfosGenerales /> should render with CDD 1`] = `
       class="c2"
     >
       <input
-        name="contrat"
+        name="contractType"
         type="radio"
-        value="ctt"
+        value="CTT"
       />
       <span>
         Contrat de travail temporaire (Contrat d’intérim)
       </span>
     </label>
   </div>
-  <p
+  <div
     class="c3"
   >
-    Votre type de CDD fait-il partie de la liste suivante :
-  </p>
-  <ul>
-    <li>
-      CDD saisonnier ou CDD d’usage
-    </li>
-    <li>
-      Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)
-    </li>
-    <li>
-      Contrat de professionnalisation ou Contrat d’apprentissage
-    </li>
-    <li>
-      CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires
-    </li>
-    <li>
-      Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié
-    </li>
-    <li>
-      CCD dans le cadre d’un congé de mobilité
-    </li>
-  </ul>
-  <p
-    class="c0"
-  />
-  <div
-    class="c1"
-  >
     <label
       class="c2"
+      for="input-criteria.cddType"
     >
-      <input
-        name="typeCdd"
-        type="radio"
-        value="true"
-      />
-      <span>
-        Oui
-      </span>
+      Quelle est le type de votre cdd ?
     </label>
-    <label
-      class="c2"
+    <select
+      class="c4"
+      id="input-criteria.cddType"
+      name="criteria.cddType"
     >
-      <input
-        name="typeCdd"
-        type="radio"
-        value="false"
-      />
-      <span>
-        Non
-      </span>
-    </label>
+      <option
+        disabled=""
+        value=""
+      >
+        ...
+      </option>
+      <option
+        value="CDD saisonnier"
+      >
+        CDD saisonnier
+      </option>
+      <option
+        value="CDD d'usage"
+      >
+        CDD d'usage
+      </option>
+      <option
+        value="CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires"
+      >
+        CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires
+      </option>
+      <option
+        value="CCD dans le cadre d’un congé de mobilité"
+      >
+        CCD dans le cadre d’un congé de mobilité
+      </option>
+      <option
+        value="Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)"
+      >
+        Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)
+      </option>
+      <option
+        value="Contrat de professionnalisation ou Contrat d’apprentissage"
+      >
+        Contrat de professionnalisation ou Contrat d’apprentissage
+      </option>
+      <option
+        value="Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
+      >
+        Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié
+      </option>
+      <option
+        value="Autres"
+      >
+        Autres
+      </option>
+    </select>
   </div>
 </div>
 `;
@@ -274,9 +287,9 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
       class="c2"
     >
       <input
-        name="contrat"
+        name="contractType"
         type="radio"
-        value="cdd"
+        value="CDD"
       />
       <span>
         Contrat à durée déterminée (CDD)
@@ -287,9 +300,9 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <input
         checked=""
-        name="contrat"
+        name="contractType"
         type="radio"
-        value="ctt"
+        value="CTT"
       />
       <span>
         Contrat de travail temporaire (Contrat d’intérim)
@@ -303,6 +316,7 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
   </p>
   <div
     class="c1"
+    data-testid="cttFormation"
   >
     <label
       class="c2"
@@ -321,6 +335,108 @@ exports[`<StepInfosGenerales /> should render with CTT 1`] = `
     >
       <input
         name="cttFormation"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
+    Votre contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
+  </p>
+  <div
+    class="c1"
+    data-testid="ruptureContratFauteGrave"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="ruptureContratFauteGrave"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="ruptureContratFauteGrave"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
+    À la fin de votre contrat d'intérim, avez-vous été immédiatement embauché en CDI au sein de l'entreprise dans laquelle vous effectuiez votre mission ?
+  </p>
+  <div
+    class="c1"
+    data-testid="propositionCDIFinContrat"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="propositionCDIFinContrat"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="propositionCDIFinContrat"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
+    Avez-vous refusé la mise en œuvre de la souplesse prévue dans votre contrat d’intérim ?
+  </p>
+  <div
+    class="c1"
+    data-testid="refusSouplesse"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="refusSouplesse"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="refusSouplesse"
         type="radio"
         value="false"
       />

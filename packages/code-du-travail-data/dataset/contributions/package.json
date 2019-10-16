@@ -1,7 +1,8 @@
 {
-  "name": "contributions",
-  "version": "1.0.0",
+  "name": "@cdt/data...contributions",
+  "version": "3.3.1",
   "main": "index.js",
+  "private": true,
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0"
