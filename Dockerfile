@@ -25,6 +25,7 @@ COPY ./packages/code-du-travail-data/dataset/datafiller/package.json /app/packag
 COPY ./packages/code-du-travail-data/package.json /app/packages/code-du-travail-data/package.json
 COPY ./packages/react-fiche-service-public/package.json /app/packages/react-fiche-service-public/package.json
 COPY ./packages/code-du-travail-data/dataset/preavis-demission/package.json /app/packages/code-du-travail-data/dataset/preavis-demission/package.json
+COPY ./packages/code-du-travail-data/dataset/prime-precarite/package.json /app/packages/code-du-travail-data/dataset/prime-precarite/package.json
 COPY ./packages/sources/package.json /app/packages/sources/package.json
 
 
