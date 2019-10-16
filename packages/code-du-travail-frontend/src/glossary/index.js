@@ -56,6 +56,7 @@ export default function useGlossary(children, html) {
       )
     ).reduce((state, node) => {
       const internalRefMap = new Map();
+      let refCounter = 0;
       glossary.forEach(item => {
         // we cannot use \b word boundary since \w does not match diacritics
         // So we do a kind of \b equivalent.
@@ -70,10 +71,10 @@ export default function useGlossary(children, html) {
           )
           .concat(item.abbrs.map(abbr => new RegExp(`\\b${abbr}\\b`, "g")));
 
-        patterns.forEach((pattern, i) => {
+        patterns.forEach(pattern => {
           //we use an internal ref to
           node.innerHTML = node.innerHTML.replace(pattern, function(term) {
-            const internalRef = `__tt__${i}`;
+            const internalRef = `__tt__${refCounter++}`;
             internalRefMap.set(internalRef, { slug: item.slug, term });
             return `<span data-tooltip-ref="${internalRef}"></span>`;
           });

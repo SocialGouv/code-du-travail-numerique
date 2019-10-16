@@ -1966,7 +1966,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                     </strong>
                      contenant des tooltip sur certains mot comme 
                     <span
-                      data-tooltip-ref="__tt__0"
+                      data-tooltip-ref="__tt__2"
                     >
                       <span
                         aria-describedby="tooltip:1"
@@ -1979,7 +1979,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                     </span>
                     . match aussi les abbréviation comme 
                     <span
-                      data-tooltip-ref="__tt__2"
+                      data-tooltip-ref="__tt__1"
                     >
                       <span
                         aria-describedby="tooltip:2"
@@ -1992,7 +1992,7 @@ exports[`<Answer /> should render tooltip 1`] = `
                     </span>
                      mais pas ape ou ses variantes comme 
                     <span
-                      data-tooltip-ref="__tt__1"
+                      data-tooltip-ref="__tt__0"
                     >
                       <span
                         aria-describedby="tooltip:3"
@@ -2677,7 +2677,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                     Contenu au format 
                     <strong>
                       <span
-                        data-tooltip-ref="__tt__0"
+                        data-tooltip-ref="__tt__1"
                       >
                         <span
                           aria-describedby="tooltip:4"
@@ -2691,7 +2691,7 @@ exports[`<Answer /> should render tooltip for words with diacritics without brea
                     </strong>
                     comme 
                     <span
-                      data-tooltip-ref="__tt__1"
+                      data-tooltip-ref="__tt__0"
                     >
                       <span
                         aria-describedby="tooltip:5"
@@ -3375,7 +3375,7 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
                   >
                     annualisation du temps de travail. 
                     <span
-                      data-tooltip-ref="__tt__1"
+                      data-tooltip-ref="__tt__0"
                     >
                       <span
                         aria-describedby="tooltip:6"
@@ -3383,7 +3383,7 @@ exports[`<Answer /> should render tooltip without breaking previous word 1`] = `
                         data-reach-tooltip-trigger=""
                         tabindex="0"
                       >
-                        annualisation
+                        Annualisation
                       </span>
                     </span>
                      de l'
