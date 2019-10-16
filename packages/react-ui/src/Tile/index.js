@@ -50,7 +50,7 @@ export const Tile = React.forwardRef(
       as={props.href ? "a" : "button"}
       href={props.href}
       ref={ref}
-      title={props.title}
+      {...props}
     >
       {Icon && (
         <IconWrapper>
