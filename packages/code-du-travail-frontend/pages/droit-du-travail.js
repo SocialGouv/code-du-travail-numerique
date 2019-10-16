@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Section, theme, Wrapper } from "@socialgouv/react-ui";
 
-import { Layout } from "../../src/layout/Layout";
-import Metas from "../../src/common/Metas";
-import Origins from "./Origins";
-import Hierarchy from "./Hierarchy";
+import { Layout } from "../src/layout/Layout";
+import Metas from "../src/common/Metas";
+import Origins from "../src/droit-du-travail/Origins";
+import Hierarchy from "../src/droit-du-travail/Hierarchy";
 
 const DroitDuTravail = ({ ogImage, pageUrl }) => (
   <Layout>

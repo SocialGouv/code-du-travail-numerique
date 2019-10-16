@@ -3,20 +3,18 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Link from "next/link";
 import { Layers } from "react-feather";
-
 import {
   Grid,
   GridCell,
   Container,
   Section,
-  theme,
+  SectionTitle,
   Tile
 } from "@socialgouv/react-ui";
 
 export default class Themes extends React.Component {
   static propTypes = {
     isRoot: PropTypes.bool,
-    title: PropTypes.string,
     themes: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
@@ -26,17 +24,22 @@ export default class Themes extends React.Component {
   };
 
   static defaultProps = {
-    title: "Retrouvez nos réponses thématiques",
     isRoot: false
   };
 
   render() {
-    const { isRoot, title, themes } = this.props;
-    if (!(themes.length > 0)) return null;
+    const { isRoot, themes } = this.props;
+    if (!(themes.length > 0)) {
+      return null;
+    }
     return (
       <Section>
         <Container>
-          <Title>{title}</Title>
+          <Link href="/themes" passHref>
+            <SectionTitle desc="Retrouvez tous nos contenus autour de grands thèmes">
+              Thèmes
+            </SectionTitle>
+          </Link>
           <Grid>
             {themes.map(({ slug, title }) => (
               <StyledGridCell isRoot={isRoot} key={slug + title}>
@@ -51,12 +54,6 @@ export default class Themes extends React.Component {
     );
   }
 }
-const { spacing } = theme;
-
-const Title = styled.h2`
-  text-align: center;
-  margin-bottom: ${spacing.large};
-`;
 
 const StyledGridCell = styled(GridCell)`
   height: ${({ isRoot }) => (isRoot ? "120px" : "auto")};

@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import styled from "styled-components";
 
 import {
   Grid,
   GridCell,
   Container,
   Section,
-  theme,
+  SectionTitle,
   Tile
 } from "@socialgouv/react-ui";
 
@@ -57,40 +56,35 @@ export const outils = [
   }
 ];
 
-const Outils = ({ title }) => (
-  <Section variant="white">
-    <Container>
-      <Title>{title}</Title>
-      <Grid>
-        {outils.map(({ button, title, href, slug, hrefTitle }) => (
-          <GridCell key={slug || href}>
-            <Link href={href} as={slug} passHref>
-              <Tile button={button} title={hrefTitle}>
-                {title}
-              </Tile>
-            </Link>
+function Outils() {
+  return (
+    <Section variant="white">
+      <Container>
+        <Link passHref>
+          <SectionTitle desc="Trouvez des réponses personnalisées selon votre situation">
+            Boîte à outils
+          </SectionTitle>
+        </Link>
+        <Grid>
+          {outils.map(({ button, title, href, slug, hrefTitle }) => (
+            <GridCell key={slug || href}>
+              <Link href={href} as={slug} passHref>
+                <Tile button={button} title={hrefTitle}>
+                  {title}
+                </Tile>
+              </Link>
+            </GridCell>
+          ))}
+          <GridCell>
+            <ConventionModal />
           </GridCell>
-        ))}
-        <GridCell>
-          <ConventionModal />
-        </GridCell>
-        <GridCell>
-          <Tile>{"Bientôt d'autres outils disponibles..."}</Tile>
-        </GridCell>
-      </Grid>
-    </Container>
-  </Section>
-);
-
-Outils.defaultProps = {
-  title: "Découvrez nos outils"
-};
+          <GridCell>
+            <Tile>{"Bientôt d'autres outils disponibles..."}</Tile>
+          </GridCell>
+        </Grid>
+      </Container>
+    </Section>
+  );
+}
 
 export default React.memo(Outils);
-
-const { spacing } = theme;
-
-const Title = styled.h2`
-  text-align: center;
-  margin-bottom: ${spacing.large};
-`;
