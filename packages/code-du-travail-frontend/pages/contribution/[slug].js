@@ -26,14 +26,13 @@ class PageContribution extends React.Component {
 
   render() {
     const {
-      data = {
+      data: { _source: { title, answers, description }, relatedItems } = {
         _source: {}
       },
       pageUrl,
       ogImage
     } = this.props;
 
-    const { title, answers, description } = data._source;
     return (
       <div>
         <Layout>
@@ -45,6 +44,7 @@ class PageContribution extends React.Component {
           />
           <Answer
             title={title}
+            relatedItems={relatedItems}
             sourceType="Réponse personnalisée selon votre convention collective"
             emptyMessage="Cette question n'a pas été trouvée"
           >
