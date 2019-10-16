@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Link from "next/link";
 import { SOURCES, getRouteBySource } from "@cdt/sources";
 import {
   LargeLink,
@@ -78,7 +78,7 @@ export const Results = ({ id, isSearch, items, query }) => {
           return (
             <ListItem key={slug}>
               <ListLink focused={i === 0} item={item} query={query}>
-                <LinkContent {...item} />
+                <LinkContent isSearch={isSearch} {...item} />
               </ListLink>
             </ListItem>
           );
