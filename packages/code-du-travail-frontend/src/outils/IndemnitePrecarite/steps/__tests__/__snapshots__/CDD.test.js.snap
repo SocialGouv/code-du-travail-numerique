@@ -45,7 +45,7 @@ exports[`<StepCDD /> should render 1`] = `
   <p
     class="c0"
   >
-    Votre CDD a-t-il été rompu pendant votre période d’essai ?
+    Votre CDD a-t-il été rompu pendant votre période d’essai ?
   </p>
   <div
     class="c1"
@@ -79,7 +79,7 @@ exports[`<StepCDD /> should render 1`] = `
   <p
     class="c0"
   >
-    À la fin de votre CDD, avez-vous été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
+    À la fin de votre CDD, avez-vous été immédiatement embauché en CDI, sans interruption, sur un même poste ou sur un poste différent ?
   </p>
   <div
     class="c1"
@@ -113,7 +113,7 @@ exports[`<StepCDD /> should render 1`] = `
   <p
     class="c0"
   >
-    Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure ?
+    Votre CDD a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou faute lourde, en cas de force majeure ?
   </p>
   <div
     class="c1"
@@ -147,7 +147,7 @@ exports[`<StepCDD /> should render 1`] = `
   <p
     class="c0"
   >
-    Avez-vous refusé de renouveler votre CDD alors que votre CDD comportait une clause de renouvellement automatique ?
+    Avez-vous refusé de renouveler votre CDD alors que votre CDD comportait une clause de renouvellement automatique ?
   </p>
   <div
     class="c1"

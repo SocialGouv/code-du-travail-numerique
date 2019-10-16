@@ -60,6 +60,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   padding: 0 0.25rem;
   font-size: 0.875rem;
   text-align: left;
+  color: #006be6;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
@@ -108,6 +109,7 @@ exports[`<Wizard /> should call navigate the previous step when click on précé
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
+  background-color: #006be6;
 }
 
 .c4 {
@@ -297,6 +299,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   padding: 0 0.25rem;
   font-size: 0.875rem;
   text-align: left;
+  color: #006be6;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
@@ -345,6 +348,7 @@ exports[`<Wizard /> should handle initialStepIndex 1`] = `
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
+  background-color: #006be6;
 }
 
 .c2 {
@@ -538,6 +542,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   padding: 0 0.25rem;
   font-size: 0.875rem;
   text-align: left;
+  color: #006be6;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
@@ -586,6 +591,7 @@ exports[`<Wizard /> should handle initialValues 1`] = `
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
+  background-color: #006be6;
 }
 
 .c4 {
@@ -785,6 +791,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   padding: 0 0.25rem;
   font-size: 0.875rem;
   text-align: left;
+  color: #006be6;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
@@ -833,6 +840,7 @@ exports[`<Wizard /> should inject rules component 1`] = `
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
+  background-color: #006be6;
 }
 
 .c4 {
@@ -1025,6 +1033,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   padding: 0 0.25rem;
   font-size: 0.875rem;
   text-align: left;
+  color: #006be6;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
@@ -1073,6 +1082,7 @@ exports[`<Wizard /> should navigate to the second step when click on Suivant 1`]
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
+  background-color: #006be6;
 }
 
 .c2 {
@@ -1266,6 +1276,7 @@ exports[`<Wizard /> should render a step 1`] = `
   padding: 0 0.25rem;
   font-size: 0.875rem;
   text-align: left;
+  color: #006be6;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
@@ -1314,6 +1325,7 @@ exports[`<Wizard /> should render a step 1`] = `
   margin: 0.5rem 0.625rem;
   margin-left: 0;
   color: #fff;
+  background-color: #006be6;
 }
 
 .c4 {

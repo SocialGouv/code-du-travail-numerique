@@ -45,6 +45,40 @@ exports[`<StepCTT /> should render 1`] = `
   <p
     class="c0"
   >
+    Avez vous un contrat de mission-formation ?
+  </p>
+  <div
+    class="c1"
+    data-testid="cttFormation"
+  >
+    <label
+      class="c2"
+    >
+      <input
+        name="cttFormation"
+        type="radio"
+        value="true"
+      />
+      <span>
+        Oui
+      </span>
+    </label>
+    <label
+      class="c2"
+    >
+      <input
+        name="cttFormation"
+        type="radio"
+        value="false"
+      />
+      <span>
+        Non
+      </span>
+    </label>
+  </div>
+  <p
+    class="c0"
+  >
     Votre contrat d'intérim a-t-il été rompu avant la fin prévue pour une des raisons suivantes : votre propre initiative, votre faute grave ou en cas de force majeure ?
   </p>
   <div

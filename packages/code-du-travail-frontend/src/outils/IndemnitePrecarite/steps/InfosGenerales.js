@@ -1,66 +1,129 @@
 import React from "react";
-import { Toast } from "@socialgouv/react-ui";
 import { Field } from "react-final-form";
 
-import { TypeContrat } from "../components/TypeContrat";
-import { QuestionLabel } from "../../common/stepStyles";
-import { YesNoQuestion } from "../../IndemniteLicenciement/components/YesNoQuestion";
+import { TypeContrat, CONTRACT_TYPE } from "../components/TypeContrat";
+import { SelectQuestion } from "../../common/SelectQuestion";
 
-function StepInfosGenerales() {
+import { StepCDD } from "./CDD";
+import { StepCTT } from "./CTT";
+
+import {
+  filterSituations,
+  questions,
+  getOptions,
+  getPastQuestions,
+  getNextQuestionKey,
+  hasConventionalProvision,
+  validateSituation,
+  getSituationsFor
+} from "./situation";
+
+const excludeContracts = [
+  "CDD saisonnier",
+  "CDD d'usage",
+  "CDD conclu avec un jeune (mineur ou majeur) pendant ses vacances scolaires ou universitaires",
+  "CCD dans le cadre d’un congé de mobilité",
+  "Contrat unique d’insertion (CUI) ou Parcours emploi compétences (PEC)",
+  "Contrat de professionnalisation ou Contrat d’apprentissage",
+  "Contrat pour lequel l’employeur s’est engagé à assurer un complément de formation professionnelle au salarié"
+];
+
+function StepInfosGenerales({ form }) {
+  const { values } = form.getState();
+  const idcc = values.ccn ? values.ccn.num : "0000";
+  const initialSituations = getSituationsFor({ idcc });
+  const pastQuestions = getPastQuestions(initialSituations, values.criteria);
+
+  const situations = filterSituations(initialSituations, values.criteria);
+  const nextQuestionKey = getNextQuestionKey(situations, values.criteria);
+  let nextQuestionOptions = getOptions(situations, nextQuestionKey);
+
+  function concatenateCddType(additionnalTypes) {
+    return additionnalTypes
+      .filter(([a]) => !excludeContracts.find(label => a === label))
+      .concat(excludeContracts.map(a => [a, a]));
+  }
+
+  // update cddType list
+  if (nextQuestionKey === "cddType") {
+    nextQuestionOptions = concatenateCddType(nextQuestionOptions);
+  }
+  // update cddType in pastQuestions
+  const cddTypeTuple = pastQuestions.find(
+    ([questionKey]) => questionKey === "cddType"
+  );
+  if (cddTypeTuple) {
+    cddTypeTuple[1] = concatenateCddType(cddTypeTuple[1]);
+  }
+
   return (
     <>
-      <TypeContrat name="contrat" />
-      <Field name="contrat">
+      <TypeContrat name="contractType" />
+      <Field name="contractType">
         {({ input }) => {
           switch (input.value) {
-            case "cdd":
+            case CONTRACT_TYPE.CDD:
+              if (values.ccn && hasConventionalProvision(values.ccn.num)) {
+                return (
+                  <>
+                    {pastQuestions.map(([key, answers]) => (
+                      <SelectQuestion
+                        key={key}
+                        name={`criteria.${key}`}
+                        options={answers}
+                        label={questions[key]}
+                        onChange={() => {
+                          form.batch(() => {
+                            // list keys that no longer exist
+                            const resetFormProps = Object.keys(values.criteria)
+                              .filter(
+                                k => !pastQuestions.find(([key]) => k === key)
+                              )
+                              .concat(
+                                // list keys that need to be reseted
+                                pastQuestions
+                                  .slice(
+                                    pastQuestions.findIndex(
+                                      ([k]) => k === key
+                                    ) + 1
+                                  )
+                                  .map(([key]) => key)
+                              );
+                            resetFormProps.forEach(key =>
+                              form.change(`criteria.${key}`, undefined)
+                            );
+                          });
+                        }}
+                      />
+                    ))}
+                    {nextQuestionKey && nextQuestionOptions && (
+                      <SelectQuestion
+                        name={`criteria.${nextQuestionKey}`}
+                        label={questions[nextQuestionKey]}
+                        options={nextQuestionOptions}
+                      />
+                    )}
+                    {values.criteria &&
+                      values.criteria.cddType === "Autres" && <StepCDD />}
+                  </>
+                );
+              }
               return (
                 <>
-                  <QuestionLabel as="p">
-                    Votre type de CDD fait-il partie de la liste suivante&nbsp;:
-                  </QuestionLabel>
-                  <ul>
-                    <li>CDD saisonnier ou CDD d’usage</li>
-                    <li>
-                      Contrat unique d’insertion (CUI) ou Parcours emploi
-                      compétences (PEC)
-                    </li>
-                    <li>
-                      Contrat de professionnalisation ou Contrat d’apprentissage
-                    </li>
-                    <li>
-                      CDD conclu avec un jeune (mineur ou majeur) pendant ses
-                      vacances scolaires ou universitaires
-                    </li>
-                    <li>
-                      Contrat pour lequel l’employeur s’est engagé à assurer un
-                      complément de formation professionnelle au salarié
-                    </li>
-                    <li>CCD dans le cadre d’un congé de mobilité</li>
-                  </ul>
-                  <YesNoQuestion label="" name="typeCdd" />
+                  <SelectQuestion
+                    name="criteria.cddType"
+                    options={excludeContracts.concat("Autres")}
+                    label={questions.cddType}
+                  />
+                  {values.criteria && values.criteria.cddType === "Autres" && (
+                    <StepCDD />
+                  )}
                 </>
               );
-            case "ctt":
+            case CONTRACT_TYPE.CTT:
               return (
                 <>
-                  <YesNoQuestion
-                    label="Avez vous un contrat de mission-formation&nbsp;?"
-                    name="cttFormation"
-                  />
-                  <Field name="cttFormation">
-                    {({ input }) =>
-                      input.value === false ? (
-                        <Toast variant="info">
-                          Attention : si vous avez un contrat de travail
-                          temporaire saisonnier ou d’usage, un accord
-                          d’entreprise ou d’établissement peut dispenser votre
-                          entreprise de travail temporaire (l’entreprise
-                          d’intérim) de vous verser une prime de précarité.
-                        </Toast>
-                      ) : null
-                    }
-                  </Field>
+                  <StepCTT />
                 </>
               );
             default:
@@ -71,16 +134,28 @@ function StepInfosGenerales() {
     </>
   );
 }
-StepInfosGenerales.validate = function(values) {
-  const errors = {};
-  if (values.typeCdd === true) {
-    errors.typeCdd =
-      "Votre type de contrat ne vous permet pas d’avoir droit à une prime de précarité. ";
+
+function validate(values) {
+  const idcc = values.ccn ? values.ccn.num : "0000";
+  const initialSituations = getSituationsFor({ idcc });
+
+  const errors = {
+    ...StepCDD.validate(values),
+    ...StepCTT.validate(values)
+  };
+  // We need to performs these check before situation check
+  // since situation Check can overwrite generals checks
+  if (values.criteria && excludeContracts.includes(values.criteria.cddType)) {
+    errors.criteria = {
+      cddType:
+        "Votre type de contrat ne vous permet pas d’avoir droit à une prime de précarité."
+    };
   }
-  if (values.cttFormation === true) {
-    errors.cttFormation =
-      " Votre type de contrat ne vous permet pas d’avoir droit à une prime de précarité.";
-  }
-  return errors;
-};
+  return {
+    ...errors,
+    ...validateSituation(initialSituations, values.criteria, errors)
+  };
+}
+
 export { StepInfosGenerales };
+StepInfosGenerales.validate = validate;

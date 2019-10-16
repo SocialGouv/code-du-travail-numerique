@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Field } from "react-final-form";
-import { theme } from "@socialgouv/react-ui";
+import { Alert, theme } from "@socialgouv/react-ui";
 import { OnChange } from "react-final-form-listeners";
 
-import { Label, InlineError } from "../common/stepStyles";
+import { Label } from "../common/stepStyles";
 import { required } from "./validators";
 
 function SelectQuestion({ name, label, options, onChange }) {
@@ -42,7 +42,7 @@ function SelectQuestion({ name, label, options, onChange }) {
                 );
               })}
             </Select>
-            {error && dirty && <InlineError>{error}</InlineError>}
+            {error && dirty && <StyledAlert>{error}</StyledAlert>}
             {onChange && (
               <OnChange name={name}>{values => onChange(values)}</OnChange>
             )}
@@ -74,4 +74,8 @@ const Select = styled.select`
 
 const Wrapper = styled.div`
   margin: ${spacing.interComponent} 0;
+`;
+
+const StyledAlert = styled(Alert)`
+  margin-top: ${spacing.interComponent};
 `;

@@ -47,7 +47,7 @@ const StepWrapper = styled.span`
   padding: 0 ${spacing.tiny};
   font-size: ${fonts.sizeSmall};
   text-align: left;
-  color: ${props => (props.isActive ? colors.blue : colors.grey)};
+  color: ${props => (props.isActive ? colors.blueLight : colors.grey)};
   text-decoration: none;
   font-weight: 600;
   line-height: 1;
@@ -64,5 +64,6 @@ const IndexCircle = styled.span`
   margin: ${spacing.xsmall} ${spacing.small};
   margin-left: 0;
   color: ${colors.white};
-  background-color: ${props => (props.isActive ? colors.blue : colors.grey)};
+  background-color: ${props =>
+    props.isActive ? colors.blueLight : colors.grey};
 `;

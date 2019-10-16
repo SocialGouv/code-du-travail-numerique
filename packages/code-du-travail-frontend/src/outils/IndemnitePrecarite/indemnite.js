@@ -1,20 +1,26 @@
-import { sum } from "../common/math";
+import { sum, round } from "../common/math";
 
-function getIndemnitePrecarite({ salaire, salaires, typeRemuneration }) {
+function getIndemnitePrecarite({
+  salaire,
+  salaires,
+  typeRemuneration,
+  rateValue = 1 / 10,
+  rateLabel = "1/10"
+}) {
   switch (typeRemuneration) {
     case "mensuel": {
       const sommeSalaires = sum(salaires.map(s => s.salaire));
       return {
-        indemnite: (1 / 10) * sommeSalaires,
-        formule: `1/10 * somme(salaires)`,
+        indemnite: round(rateValue * sommeSalaires),
+        formule: `${rateLabel} * somme(salaires)`,
         inputs: { "somme des salaires": sommeSalaires }
       };
     }
     case "total": {
       return {
-        indemnite: (1 / 10) * salaire,
-        formule: `1/10 * somme(salaires)`,
-        inputs: { "somme des salaires": salaire }
+        indemnite: round(rateValue * salaire),
+        formule: `${rateLabel} * "totalSalaires"`,
+        inputs: { "total des salaires": salaire }
       };
     }
     default:

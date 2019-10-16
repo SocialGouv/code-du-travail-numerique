@@ -56,7 +56,7 @@ exports[`<TypeContrat /> should render 1`] = `
       <input
         name="contrat"
         type="radio"
-        value="cdd"
+        value="CDD"
       />
       <span>
         Contrat à durée déterminée (CDD)
@@ -68,7 +68,7 @@ exports[`<TypeContrat /> should render 1`] = `
       <input
         name="contrat"
         type="radio"
-        value="ctt"
+        value="CTT"
       />
       <span>
         Contrat de travail temporaire (Contrat d’intérim)

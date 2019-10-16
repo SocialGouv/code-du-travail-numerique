@@ -5,7 +5,7 @@ import { Wizard } from "../common/Wizard";
 
 import { StepIntro } from "./steps/Introduction";
 import { StepInfosGenerales } from "./steps/InfosGenerales";
-import { StepInfosSpecifiques } from "./steps/InfosSpecifiques";
+import { StepInfoCCn } from "./steps/InfosCCn";
 import { StepRemuneration } from "./steps/Remuneration";
 import { StepIndemnite } from "./steps/Indemnite";
 
@@ -16,14 +16,14 @@ export const initialSteps = [
     label: "Introduction"
   },
   {
+    component: StepInfoCCn,
+    name: "info_cc",
+    label: "Convention collective"
+  },
+  {
     component: StepInfosGenerales,
     name: "info_generales",
     label: "Informations générales"
-  },
-  {
-    component: StepInfosSpecifiques,
-    name: "info_specifique",
-    label: "Situations spécifiques"
   },
   {
     component: StepRemuneration,

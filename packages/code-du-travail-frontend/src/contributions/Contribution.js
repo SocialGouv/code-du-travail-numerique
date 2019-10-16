@@ -85,21 +85,24 @@ const AnswerConvention = ({ markdown }) => (
 
 // search CC + display filtered answer
 const AnswersConventions = ({ answers }) => {
-  const [convention, setConvention] = useConventionState(null);
-  const answer = convention && answers.find(a => a.idcc === convention.num);
+  const [ccInfo, setCcInfo] = useConventionState(null);
+  const answer = ccInfo && answers.find(a => a.idcc === ccInfo.convention.num);
 
   return (
     <React.Fragment>
-      {!convention && (
-        <StyledSearchConvention title="" onSelectConvention={setConvention} />
+      {!ccInfo && (
+        <StyledSearchConvention title="" onSelectConvention={setCcInfo} />
       )}
-      {convention && (
+      {ccInfo && (
         <React.Fragment>
-          <h6>{convention.title}</h6>
+          <h6>{ccInfo.convention.title}</h6>
           {(answer && (
             <React.Fragment>
               <AnswerConvention markdown={answer.markdown} />
-              <LinkConvention num={convention.num} title={convention.title} />
+              <LinkConvention
+                num={ccInfo.convention.num}
+                title={ccInfo.convention.title}
+              />
             </React.Fragment>
           )) || (
             <React.Fragment>
@@ -107,12 +110,15 @@ const AnswersConventions = ({ answers }) => {
                 Désolé nous n&apos;avons pas de réponse pour cette convention
                 collective
               </NoConventionAlert>
-              <LinkConvention num={convention.num} title={convention.title} />
+              <LinkConvention
+                num={ccInfo.convention.num}
+                title={ccInfo.convention.title}
+              />
             </React.Fragment>
           )}
           <br />
           <br />
-          <Button variant="primary" onClick={() => setConvention(null)}>
+          <Button variant="primary" onClick={() => setCcInfo(null)}>
             Changer de convention collective
           </Button>
         </React.Fragment>

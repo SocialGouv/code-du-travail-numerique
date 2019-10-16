@@ -59,7 +59,10 @@ const SearchResult = ({ label, siret, conventions, selectConvention }) => (
         {conventions && conventions.length ? (
           conventions.map(convention => (
             <Convention
-              onClick={selectConvention && (() => selectConvention(convention))}
+              onClick={
+                selectConvention &&
+                (() => selectConvention({ convention, label }))
+              }
               key={convention.id}
               {...convention}
             />
@@ -101,8 +104,7 @@ const Search = ({
     <Container style={style} className={className}>
       {title && <h3>{title}</h3>}
       <p>
-        Afin de sélectionner votre convention collective, saisissez le nom de
-        votre entreprise, son numéro SIRET, ou directement le nom de votre
+        Renseignez le nom de votre entreprise, son SIRET ou le nom de votre
         convention collective.
       </p>
       <Input

@@ -2,6 +2,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { StepInfosGenerales } from "../InfosGenerales";
 import { Form } from "react-final-form";
+import { CONTRACT_TYPE } from "../../components/TypeContrat";
 
 function renderForm(data) {
   return render(
@@ -22,38 +23,36 @@ describe("<StepInfosGenerales />", () => {
   });
 
   it("should render with CDD", () => {
-    const { container } = renderForm({ contrat: "cdd" });
+    const { container } = renderForm({
+      contractType: CONTRACT_TYPE.CDD
+    });
     expect(container).toMatchSnapshot();
   });
 
   it("should render with CTT", () => {
-    const { container } = renderForm({ contrat: "ctt" });
+    const { container } = renderForm({ contractType: CONTRACT_TYPE.CTT });
     expect(container).toMatchSnapshot();
   });
 
-  it("should display error if contrat cdd and belong to special cases", () => {
-    const { getByLabelText, getByText } = renderForm({ contrat: "cdd" });
-    //trigger validation
-    const specialCase = getByLabelText(/oui/i);
-    fireEvent.click(specialCase);
-    // blur is need to force validation in react-testing-lib
-    fireEvent.blur(specialCase);
-    expect(getByText(/ne vous permet pas/i)).toBeTruthy();
-  });
-
   it("should display and error if ctt and contrat is mission-formation", () => {
-    const { getByLabelText, getByText } = renderForm({ contrat: "ctt" });
-    const missionFormation = getByLabelText(/oui/i);
+    const { getByTestId, getByText } = renderForm({
+      contractType: CONTRACT_TYPE.CTT
+    });
+    const missionFormation = getByTestId("cttFormation").querySelector(
+      `input[value=true]`
+    );
     fireEvent.click(missionFormation);
     // blur is need to force validation in react-testing-lib
     fireEvent.blur(missionFormation);
     expect(getByText(/ne vous permet pas/i)).toBeTruthy();
   });
   it("should display and info alert if ctt and contrat is not mission-formation", () => {
-    const { getByLabelText, getByText } = renderForm({
-      contrat: "ctt"
+    const { getByTestId, getByText } = renderForm({
+      contractType: CONTRACT_TYPE.CTT
     });
-    const missionFormation = getByLabelText(/non/i);
+    const missionFormation = getByTestId("cttFormation").querySelector(
+      `input[value=false]`
+    );
     fireEvent.click(missionFormation);
     // blur is need to force validation in react-testing-lib
     fireEvent.blur(missionFormation);

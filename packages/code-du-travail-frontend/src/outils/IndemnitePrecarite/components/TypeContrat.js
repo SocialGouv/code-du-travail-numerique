@@ -9,6 +9,11 @@ import {
 } from "../../common/stepStyles";
 import { required } from "../../common/validators";
 
+export const CONTRACT_TYPE = {
+  CDD: "CDD",
+  CTT: "CTT"
+};
+
 function TypeContrat({ name }) {
   return (
     <>
@@ -21,7 +26,7 @@ function TypeContrat({ name }) {
             component="input"
             type="radio"
             name={name}
-            value="cdd"
+            value={CONTRACT_TYPE.CDD}
             validate={required}
           />
           <span>Contrat à durée déterminée (CDD)</span>
@@ -31,7 +36,7 @@ function TypeContrat({ name }) {
             component="input"
             type="radio"
             name={name}
-            value="ctt"
+            value={CONTRACT_TYPE.CTT}
             validate={required}
           />
           <span>Contrat de travail temporaire (Contrat d’intérim)</span>

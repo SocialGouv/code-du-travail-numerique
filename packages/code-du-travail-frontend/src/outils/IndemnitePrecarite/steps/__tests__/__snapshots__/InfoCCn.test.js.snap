@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepInfoCCn /> should render cdd infos step 1`] = `
+.c2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.c2 > *:first-child {
+  margin-top: 0;
+}
+
+.c2 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c0 {
+  font-size: 1.25rem;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.c1 {
+  font-style: italic;
+}
+
+@media print {
+  .c2 {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+<div>
+  <label
+    class="c0"
+  >
+    Quelle est votre convention collective ?
+  </label>
+  <p
+    class="c1"
+  >
+    <strong>
+      * optionnel
+    </strong>
+    , si vous ne connaissez pas votre convention collective, vous pouvez passer à l’étape suivante en cliquant sur le bouton Suivant.
+  </p>
+  <div
+    class="c2 c3"
+  >
+    
+    <p>
+      Renseignez le nom de votre entreprise, son SIRET ou le nom de votre convention collective.
+    </p>
+    <input
+      class="c4"
+      placeholder="Nom d'entreprise, SIRET, nom de convention collective"
+      role="search"
+      type="search"
+      value=""
+    />
+    
+  </div>
+</div>
+`;
