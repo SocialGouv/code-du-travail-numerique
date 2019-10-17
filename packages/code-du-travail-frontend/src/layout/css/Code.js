@@ -6,10 +6,10 @@ const { box, colors } = theme;
 export default createGlobalStyle`
   code {
     padding: 2px;
-    border-radius: 2px;
     font-family: "Consolas", "Monaco", "Menlo", monospace;
+    word-wrap: break-word;
     background: ${colors.lightBackground};
     border: ${box.border};
-    word-wrap: break-word;
+    border-radius: 2px;
   }
 `;

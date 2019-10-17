@@ -33,37 +33,37 @@ function Step({ label, index, activeIndex, ...props }) {
 const { colors, spacing, fonts } = theme;
 
 const StepItemsContainer = styled.div`
-  border-bottom: 1px solid ${colors.grey};
-  margin-top: ${spacing.interComponent};
-  padding-bottom: ${spacing.interComponent};
   display: flex;
   flex-wrap: wrap;
+  margin-top: ${spacing.interComponent};
+  padding-bottom: ${spacing.interComponent};
+  border-bottom: 1px solid ${colors.grey};
 `;
 
 const StepWrapper = styled.span`
   display: flex;
-  width: 8.4375rem; // 135px
   align-items: center;
+  width: 8.4375rem;
   padding: 0 ${spacing.tiny};
-  font-size: ${fonts.sizeSmall};
-  text-align: left;
   color: ${props => (props.isActive ? colors.blueLight : colors.grey)};
-  text-decoration: none;
   font-weight: 600;
+  font-size: ${fonts.sizeSmall};
   line-height: 1;
+  text-align: left;
+  text-decoration: none;
 `;
 
 const IndexCircle = styled.span`
-  border-radius: 49%;
-  flex-shrink: 0;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  height: 1.6rem;
   width: 1.6rem;
+  height: 1.6rem;
   margin: ${spacing.xsmall} ${spacing.small};
   margin-left: 0;
   color: ${colors.white};
   background-color: ${props =>
     props.isActive ? colors.blueLight : colors.grey};
+  border-radius: 49%;
 `;

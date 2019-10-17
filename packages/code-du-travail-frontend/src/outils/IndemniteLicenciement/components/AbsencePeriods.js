@@ -109,8 +109,8 @@ const AddButton = styled(Button)`
 `;
 const Row = styled.div`
   display: flex;
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
   margin-bottom: ${spacing.tiny};
 `;
 const MotifCell = styled.div`

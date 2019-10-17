@@ -43,13 +43,13 @@ const SearchSection = styled(Section)`
 
 const Header = styled.header`
   margin-top: 0;
-  line-height: ${fonts.lineHeight};
   color: ${colors.blueDark};
+  line-height: ${fonts.lineHeight};
 `;
 
 const H1 = styled.h1`
-  line-height: 1.1;
   margin-bottom: 0;
+  line-height: 1.1;
 `;
 
 const P = styled.p`
@@ -63,13 +63,13 @@ const Span = styled.span`
 const Label = styled.label`
   display: block;
   margin-bottom: ${spacing.small};
-  font-size: ${fonts.sizeH4};
   color: ${colors.blueDark};
+  font-size: ${fonts.sizeH4};
 `;
 
 const SearchBarWrapper = styled.div`
-  margin: 0;
   width: 750px;
+  margin: 0;
   @media (max-width: ${breakpoints.tablet}) {
     width: 100%;
   }

@@ -63,13 +63,13 @@ export default ListTextes;
 const { colors, spacing } = theme;
 
 const Button = styled.button`
-  padding: 0;
   margin: 0 0 ${spacing.xsmall} 0;
-  border: 0;
-  text-align: left;
-  background-color: inherit;
+  padding: 0;
   color: ${colors.blueDark};
-  text-decoration: underline;
   font-size: inherit;
+  text-align: left;
+  text-decoration: underline;
+  background-color: inherit;
+  border: 0;
   cursor: pointer;
 `;

@@ -178,8 +178,8 @@ const Category = styled.div`
 `;
 
 const CategoryTitle = styled.h3`
-  font-size: ${fonts.sizeBase};
   font-weight: bold;
+  font-size: ${fonts.sizeBase};
 `;
 
 const StyledListItem = styled(ListItem)`

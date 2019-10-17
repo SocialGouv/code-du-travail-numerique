@@ -80,16 +80,16 @@ const StyledContainer = styled(Container)`
 
 const BigBlock = styled.div`
   position: relative;
-  left: 4%
+  left: 4%;
   flex-basis: 80%;
   padding-right: 8%;
   background-color: ${colors.lightBackground};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
-    flex-basis: 100%;
     left: 0;
-    padding: 0;
+    flex-basis: 100%;
     margin-bottom: ${spacing.interComponent};
+    padding: 0;
   }
 `;
 
@@ -101,14 +101,14 @@ const SmallBlock = styled.div`
   position: relative;
   right: 4%;
   bottom: ${spacing.medium};
-  flex-shrink: 0;
   flex-basis: 410px;
+  flex-shrink: 0;
   background-color: ${colors.infoBackground};
   border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
-    flex-basis: 100%;
     right: 0;
     bottom: 0;
+    flex-basis: 100%;
     padding: 0;
   }
 `;

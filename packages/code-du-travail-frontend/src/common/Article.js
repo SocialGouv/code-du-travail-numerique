@@ -92,10 +92,10 @@ const Type = styled.span`
 `;
 
 const Date = styled.span`
+  display: inline-block;
   margin-left: ${spacing.base};
   color: ${colors.lightText};
   font-size: ${fonts.sizeSmall};
-  display: inline-block;
   @media (max-width: ${breakpoints.mobile}) {
     margin-left: 0;
   }

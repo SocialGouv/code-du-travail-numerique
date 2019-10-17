@@ -42,9 +42,9 @@ const StyledHeader = styled.header`
 
 const StyledContainer = styled(Container)`
   display: flex;
-  padding: ${spacing.medium};
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: ${spacing.medium};
   @media (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
   }
@@ -54,8 +54,8 @@ const StyledContainer = styled(Container)`
 `;
 const LeftWrapper = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 const LogoWrapper = styled.a`
   display: flex;
@@ -70,9 +70,9 @@ const Logo = styled.img`
 `;
 
 const Title = styled.span`
+  font-weight: bold;
   font-size: ${fonts.sizeH5};
   line-height: 1.2;
-  font-weight: bold;
 `;
 
 const StyledTag = styled(Tag)`
@@ -82,12 +82,12 @@ const StyledTag = styled(Tag)`
 const SearchBarWrapper = styled.div`
   width: 350px;
   @media (max-width: ${breakpoints.tablet}) {
-    margin-top: ${spacing.interComponent};
     width: 70%;
+    margin-top: ${spacing.interComponent};
   }
   @media (max-width: ${breakpoints.mobile}) {
-    margin-top: ${spacing.interComponent};
     width: 100%;
+    margin-top: ${spacing.interComponent};
   }
 `;
 export default Header;

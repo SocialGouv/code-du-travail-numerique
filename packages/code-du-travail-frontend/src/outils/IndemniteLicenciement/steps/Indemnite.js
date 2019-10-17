@@ -77,9 +77,9 @@ const SelectWrapper = styled.label`
 `;
 
 const Select = styled.select`
-  margin-right: ${spacing.interComponent};
   flex: 1 1 70%;
   min-width: 400px;
+  margin-right: ${spacing.interComponent};
 `;
 const CancelButton = styled(Button)`
   margin: ${spacing.interComponent} 0;

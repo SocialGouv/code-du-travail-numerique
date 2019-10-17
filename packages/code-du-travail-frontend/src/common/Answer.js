@@ -126,8 +126,8 @@ const StyledErrorContainer = styled(Container)`
 
 const StyledContainer = styled(Container)`
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding: 0;
 `;
 
@@ -139,21 +139,21 @@ const StyledContent = styled.div`
 `;
 
 const StyledMenu = styled.div`
-  padding: ${spacing.large} 0;
   width: 30%;
+  padding: ${spacing.large} 0;
   color: ${colors.blue};
   @media (max-width: ${breakpoints.tablet}) {
-    padding: ${spacing.large} 0;
-    margin: 0 ${spacing.medium};
     width: 100%;
+    margin: 0 ${spacing.medium};
+    padding: ${spacing.large} 0;
   }
 `;
 
 const StyledMenuList = styled.div`
   position: sticky;
   top: ${spacing.base};
-  border-left: 1px solid ${colors.blue};
   padding: 0 ${spacing.base};
+  border-left: 1px solid ${colors.blue};
   @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     margin-bottom: 4rem;
@@ -165,12 +165,12 @@ const StyledLi = styled.li`
 `;
 
 const StyledMenuTitle = styled.div`
-  font-size: ${fonts.sizeBase};
   font-weight: bold;
+  font-size: ${fonts.sizeBase};
   @media (max-width: ${breakpoints.tablet}) {
     padding-bottom: ${spacing.large};
-    font-size: ${fonts.sizeH2};
     font-weight: normal;
+    font-size: ${fonts.sizeH2};
   }
 `;
 

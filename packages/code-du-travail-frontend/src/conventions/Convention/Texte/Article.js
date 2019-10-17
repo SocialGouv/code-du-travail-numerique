@@ -41,9 +41,9 @@ const { spacing } = theme;
 
 const Status = styled.div`
   margin-bottom: ${spacing.small};
-  font-style: italic;
   font-weight: bold;
   font-size: 1em;
+  font-style: italic;
 `;
 
 const ArticleContent = styled(Html)`

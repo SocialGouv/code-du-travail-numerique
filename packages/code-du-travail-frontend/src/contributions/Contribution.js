@@ -161,13 +161,13 @@ const SectionCdt = styled.section`
 const SectionConvention = styled.section`
   padding: ${spacing.small} ${spacing.medium};
   background: ${colors.lightBackground};
-  border-radius: ${box.lightBorderRadius};
   border: ${box.border};
+  border-radius: ${box.lightBorderRadius};
 `;
 
 const StyledSearchConvention = styled(SearchConvention)`
-  padding: ${spacing.small};
   margin: ${spacing.medium} 0;
+  padding: ${spacing.small};
 `;
 
 const StyledAccordion = styled(Accordion)`

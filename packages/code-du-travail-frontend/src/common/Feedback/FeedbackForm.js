@@ -162,9 +162,9 @@ const { spacing } = theme;
 
 const StyledForm = styled.form`
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: stretch;
+  width: 100%;
 `;
 
 const StyledInput = styled.input`

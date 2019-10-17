@@ -120,8 +120,8 @@ const renderSuggestion = (suggestion, query) => {
   );
 };
 const Label = styled.label`
-  flex: 1;
   display: flex;
+  flex: 1;
   text-align: left;
 `;
 

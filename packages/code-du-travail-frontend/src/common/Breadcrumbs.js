@@ -55,6 +55,6 @@ const NavItem = styled(ListItem)`
 
 const Separator = styled.li`
   display: inline-block;
-  pointer-events: none;
   user-select: none;
+  pointer-events: none;
 `;

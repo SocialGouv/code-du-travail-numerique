@@ -28,14 +28,14 @@ const Wrapper = styled.div`
 `;
 
 const Bar = styled.div`
-  border-radius: ${box.borderRadius};
-  background-color: ${({ primary }) =>
-    primary ? colors.blue : colors.lightText};
-  width: ${({ ratio }) => `calc(50% * ${ratio})`};
+  position: relative;
   display: inline-flex;
   align-items: center;
-  position: relative;
+  width: ${({ ratio }) => `calc(50% * ${ratio})`};
   padding: 1em;
+  background-color: ${({ primary }) =>
+    primary ? colors.blue : colors.lightText};
+  border-radius: ${box.borderRadius};
   @media (max-width: ${breakpoints.tablet}) {
     width: ${({ ratio }) => `calc(100% * ${ratio})`};
   }
@@ -45,7 +45,7 @@ const Value = styled.span`
   color: ${({ primary }) => (primary ? colors.blue : colors.lightText)};
   font-size: ${({ primary }) => (primary ? fonts.sizeH2 : fonts.sizeH4)};
   @media (max-width: ${breakpoints.tablet}) {
-    margin-left: 0;
     width: 100%;
+    margin-left: 0;
   }
 `;

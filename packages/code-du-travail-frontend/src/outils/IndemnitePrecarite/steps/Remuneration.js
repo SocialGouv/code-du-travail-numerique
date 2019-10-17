@@ -56,6 +56,6 @@ export { StepRemuneration };
 const { fonts } = theme;
 
 const Info = styled.p`
-  font-style: italic;
   font-size: ${fonts.sizeSmall};
+  font-style: italic;
 `;
